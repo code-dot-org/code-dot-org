@@ -628,6 +628,7 @@ describe('entry tests', () => {
     essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
     jotformLoader: './src/sites/studio/pages/jotformLoader.js',
+    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the

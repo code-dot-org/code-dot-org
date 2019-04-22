@@ -644,6 +644,8 @@ bs:
     csp_variables: 'Varijable'
     csp_conditionals: 'Uvjeti'
     csp_functions: 'Funkcije'
+    csp_lists: 'Liste'
+    csp_loops: 'Petlje'
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od strane Code.org-a.
     disclaimer_text: Ova stranica može imati politike privatnosti koje se razlikuju od onih na Code.org-u. Mi smo izabrali ova sredstva od trećih strana zato što mislimo da će Vam biti od koristi. Iako mi nismo direktno odgovorni za sadržaj ove stranice, molimo<a href='%{support_url}'>kontaktirajke podršku</a> ako nađete sporni sadržaj, ili ako povezana stranice više nije dostupna.

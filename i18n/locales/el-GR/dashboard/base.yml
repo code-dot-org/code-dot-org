@@ -719,6 +719,8 @@ el:
     csp_variables: 'Μεταβλητές'
     csp_conditionals: 'Συνθήκες'
     csp_functions: 'Συναρτήσεις'
+    csp_lists: 'Λίστες'
+    csp_loops: 'Βρόχοι'
   view_teacher_guide: 'Προβολή Οδηγού Εκπαιδευτικού'
   pd:
     form_labels:

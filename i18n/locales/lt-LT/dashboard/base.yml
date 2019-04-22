@@ -683,6 +683,8 @@ lt:
     csp_variables: 'Kintamieji'
     csp_conditionals: 'Sąlyginiai sakiniai'
     csp_functions: 'Komandų kūrimas'
+    csp_lists: 'Sąrašai'
+    csp_loops: 'Kartojimas'
   hoc_download:
     title: '„Programavimo valandos” parsisiuntimai'
     capsule_title: 'Ar turite internetą?'

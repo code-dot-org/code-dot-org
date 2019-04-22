@@ -2,16 +2,14 @@
 de:
   data:
     long_instructions:
-      "'pre-assessment survey q25A'": 'Falls ja, welche Informatikkurse hattest du
+      "'pre-assessment survey q25A'": Falls ja, welche Informatikkurse hattest du
         bereits vor deinem aktuellen Informatikkurs besucht?
-
-'
       2-3 Artist 1 new: "Hallo, ich bin ein Künstler. Du kannst mich mit Code fast
         alles zeichnen lassen. Benutze ein paar Blöcke um mich dazu zu bringen über
-        die grauen Linien im Bild zu zeichnen. (Jede Linie ist 100 Pixel lang)\r\n\r\n"
+        die grauen Linien im Bild zu zeichnen. (Jede Linie ist 100 Pixel lang)\\\r\n\\\r"
       2-3 Artist 11: Gibt dem Stopp-Schild eine Umrandung, indem Du ein Achteck mit
         100 Pixeln Kantenlänge zeichnest.
-      2-3 Artist 12: "Zeichne einen Kreis, um den Augapfel fertigzustellen!\n\r\n\r\nWenn
+      2-3 Artist 12: "Zeichne einen Kreis, um den Augapfel fertigzustellen!\n\\\r\n\\\r\nWenn
         der Zeichner sich um 1 Grad mit jedem Schleifenschritt dreht, wie oft musst
         Du den Code dann wiederholen, um einen Kreis zu zeichnen? "
       2-3 Artist 2 new: Dieses Haus hat eine halbfertige Wand. Jede Seite ist 100
@@ -20,28 +18,28 @@ de:
         zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
         und \"bewegen\"-Blöcke."
       2-3 Artist 3new: "Der rote Hut ist 100 Pixel hoch. Zeichne einen schwarzen Hut
-        zu Ende, der 70 Pixel kleiner ist. \r \r\n*(Notiz: Die Breite der Hüte beträgt
-        je 50 Pixel.)*"
+        zu Ende, der 70 Pixel kleiner ist. \\\r \\\r\n_(Notiz: Die Breite der Hüte
+        beträgt je 50 Pixel.)_"
       2-3 Artist 4: Hilf mir, das Haus für diese Katze zu vervollständigen.
-      2-3 Artist 6: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \r \n\r \nHinweis:
-        \nalle drei Seiten sind gleich lang. \r\n\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      2-3 Artist 6: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \\\r \n\\\r
+        \nHinweis: \nalle drei Seiten sind gleich lang. \\\r\n\\\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       2-3 Artist 7: "Zeichne die letzten Fenster auf die Schule, so dass jeder heraus
-        sehen kann. \r\n\r\nDie Seiten jedes quadratischen Fensters sind 25 Pixel
+        sehen kann. \\\r\n\\\r\nDie Seiten jedes quadratischen Fensters sind 25 Pixel
         lang. "
-      2-3 Artist 8: "Zeit eine Scheune zu bauen.\r\n\r\nMache die Räume\nfür jedes
-        Tier, indem die Scheune in 2 gleich große Rechtecke aufgeteilt wird. \r\n\r\nHinweis:\nDie
-        Rechtecke sind 200 Pixel weit und 100 Pixel hoch.\r\n\r\nEs gibt viele verschiedene
-        Wege um das Rätsel zu lösen."
+      2-3 Artist 8: "Zeit eine Scheune zu bauen.\\\r\n\\\r\nMache die Räume\nfür jedes
+        Tier, indem die Scheune in 2 gleich große Rechtecke aufgeteilt wird. \\\r\n\\\r\nHinweis:\nDie
+        Rechtecke sind 200 Pixel weit und 100 Pixel hoch.\\\r\n\\\r\nEs gibt viele
+        verschiedene Wege um das Rätsel zu lösen."
       2-3 Artist 9 NEW: Vervollständige diesen Drachen
       2-3 Artist 9 REPLACEMENT: Zeichne die restlichen Stufen.
       2-3 Artist 9: Vervollständige diesen Drachen
       2-3 Artist Assessment 1: "**Prüfung**: Zeichne den letzten Zahn fertig. Er ist
         25 Pixel breit und 25 Pixel hoch."
-      2-3 Artist Debugging 1: "Dieser Hut sollte nur 50 Pixel breit sein.\n\r\nKannst
-        du das ändern?\r\n\r\n<br/>\r\n"
+      2-3 Artist Debugging 1: "Dieser Hut sollte nur 50 Pixel breit sein.\n\\\r\nKannst
+        du das ändern?\\\r\n\\\r\n<br/>\\\r"
       2-3 Artist Debugging 10: "Das Steuerkreuz auf meinem Game-Controller ist zu
-        klein. \r\n\r\nKannst Du es 10 Pixel breiter machen?.\r\n\r\nStarte das Programm
-        zuerst einmal, um zusehen, was du ändern musst."
+        klein. \\\r\n\\\r\nKannst Du es 10 Pixel breiter machen?.\\\r\n\\\r\nStarte
+        das Programm zuerst einmal, um zusehen, was du ändern musst."
       2-3 Artist Debugging 11: Hilf mir, meine schöne Schneeflocke zu beenden. Wie
         oft muss ich es „wiederholen“, um es zu beenden?
       2-3 Artist Debugging 2: 'Der Code für die drei Schnurrhaare, die du siehst,
@@ -54,7 +52,7 @@ de:
         falsch. Hinweis:  Der Fuß ist zu lang, wir müssen möglicherweise einen Schritt
         (Wortspiel beabsichtigt) löschen.'
       2-3 Artist Debugging 6: "Ich scheine auf einen Stuhl, dem ein Bein fehlt, zu
-        sitzen.\r\n\r\nÄndere den Code, um das letzte Bein zu zeichnen."
+        sitzen.\\\r\n\\\r\nÄndere den Code, um das letzte Bein zu zeichnen."
       2-3 Artist Debugging 7: Es sieht aus als ob C in Code spiegelverkehrt ist. Kannst
         du es wie ein C aussehen lassen?
       2-3 Artist Debugging 8: Mein Windrad ist noch nicht fertig. Wie oft muss ich
@@ -62,22 +60,20 @@ de:
       2-3 Artist Debugging 9: 'Der Code für diesen Stiel ist falsch. Hinweis:  Der
         Winkel weicht um 60 Grad ab.'
       2-3 Artist Debugging Assessment 1: "Warum ist das Quadrat um 75 Pixel zu klein
-        geraten?\r\n\r\nWo ist der Fehler? Kannst du es größer machen?"
+        geraten?\\\r\n\\\r\nWo ist der Fehler? Kannst du es größer machen?"
       2-3 Artist Free Play: Freies Spiel! Zeichne was du willst.
-      2-3 Artist Functions 1 a: |+
+      2-3 Artist Functions 1 a: |-
         Ich Zombie-Künstler. Ich zeichnen liebe!
 
         Hilf mir, eine quadratische Brille zu zeichnen.
 
         Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
-
-      2-3 Artist Functions 1: |+
+      2-3 Artist Functions 1: |-
         Ich Zombie-Künstler. Ich zeichnen liebe!
 
         Hilf mir, eine quadratische Brille zu zeichnen.
 
         Hinweis: Das Quadrat hat eine Seitenlänge von 100 Pixeln. Der Nasensteg zwischenbeiden Gläsern ist 25 Pixel kürzer als die Seitenlänge vom Quadrat.
-
       2-3 Artist Functions 11.5: Hier ist die gleiche „Zeichne ein Sechseck“-Funktion.
         Was passiert, wenn du bei jeder Wiederholung nur um 60 Grad drehst?
       2-3 Artist Functions 12 Mike: 'Funktionen sind für das mehrfache Zeichnen von
@@ -113,7 +109,7 @@ de:
         zeichnen, um die Zelle zu beenden? Bedenke, das du nur 60 Grad drehen musst!
       2-3 Artist Loops 2: Jetzt verwende einen Wiederholen-Block, um die Zelle zur
         Muschel zu machen.
-      2-3 Artist Loops New 1: |
+      2-3 Artist Loops New 1: |-
         Lasst uns den Kopf des Roboters malen! Kannst du ein Quadrat malen, dessen Seiten 100 Pixel lang sind?
 
         <br/>
@@ -122,7 +118,7 @@ de:
       2-3 Artist Loops New 12: Zeichne einen Diamanten mit einer Seitenlänge von 100
         Pixel.
       2-3 Artist Loops New 13: Zeichne nun den Diamanten 3 Mal in einer Schleife.
-      2-3 Artist Loops New 15: |
+      2-3 Artist Loops New 15: |-
         Zeichne etwas, wozu du gerade Lust hast!
         <br/><br/>
       2-3 Artist Loops New 2: Hier ist Teil des Codes, den du verwendet hast, um das
@@ -318,9 +314,15 @@ de:
         es diesmal mit der Solange-Schleife.'
       Artist Autorun Test: Verwende den „Wiederholen"-Block, um diese 3 Quadrate zu
         zeichnen.
-      CoureE_HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im Sandstein
+      Big Game Collision 4: |-
+        Die Funktion `distance` gibt die Distanz zwischen zwei Sprites zurück.
+
+        Vervollständige die Funktion `collide?` so, dass sie _true_ zurückgibt, wenn die Entfernung zwischen zwei Punkten weniger als 100 Pixel voneinander ist.
+
+        Wenn du erfolgreich bist, werden deine Sprites sofort kollidieren - warum ist das so?
+      CoureE_HOC 2018 Level_7a: Du hast die Unterwasserruine gefunden. Suche im Sandstein
         nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       Course 4 Artist 13: Soll es noch weiter gehen?  Hier ist eine leere Fläche,
         die Du frei gestalten kannst!
       Course 4 Artist 6: 'Vervollständige den Code, um diese Dreiecke zu zeichnen.
@@ -370,8 +372,20 @@ de:
       Course 4 Play Lab Params 8: Verwende den „Wenn Figur berührt"-Baustein, um den
         Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere
         Figur berührt.
+      Course 4 Play Lab Params 9: |-
+        Hier ist nochmal unser Spiel von vorhin, aber ein großer Teil des Codes ist versteckt. Wir haben eine neue Funktion namens 'score\_points' hinzugefügt.
+
+        * * *
+
+        #### Bearbeite die Funktion und füge einen neuem Parameter namens 'points' verwendet werden kann, um den 'player\_score' zu erhöhen.
+
+        #### Die Variable `player_score` soll jedes Mal um 1erhöht werden, wenn der Hund die Katze trifft. Wird der Hund von der Katze getroffen, soll sich die Punktzahl um 1 venrringern.
+
+        * * *
+
+         _Hinweis: Wenn du fertig bist, drücke "Run", um loszulegen. Wenn der Hund 6 Punkte erreicht hat, kannst du zum nächsten Level fortschreiten._
       Course 4 Play Lab Vars 2: Das Rennen im letzten Rätsel war nicht sehr fair!
-        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        Ändere die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
         kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Course 4 Play Labs For Loops 1: Lass den Hund von 1 bis 100 zählen. Verwende
         dazu eine „Zähle mit“-Schleife und den Zähler-Baustein, um bei jedem Schleifendurchlauf
@@ -385,45 +399,46 @@ de:
         bei x Pixeln vor und zurück zu springen und bei y Pixeln auch hoch und runter
         (und dabei positive und negative Zahlen nutzt).
       CourseD_Dance_Party_01: |-
-        *Los geht‘s mit der Tanzparty!*
+        _Los geht‘s mit der Tanzparty!_
 
         Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
 
-        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+        -   _Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten._
       CourseD_Dance_Party_02: |-
         Lassen Sie den Elch tanzen!
 
-        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
-
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       CourseD_Dance_Party_03: |-
-        *Jetzt grooven wir!*
+        _Jetzt grooven wir!_
 
         Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
       CourseD_Dance_Party_04: |-
-        *Dieser Tanz braucht etwas Pep!*
+        _Dieser Tanz braucht etwas Pep!_
 
         Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
       CourseD_Dance_Party_05: |-
         Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
 
-        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+        -   Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       CourseD_Dance_Party_06: |-
-        *Wir brauchen noch mehr Tänzer!*
+        _Wir brauchen noch mehr Tänzer!_
 
-        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+        Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1", der mit der Katze tanzt.
       CourseD_Dance_Party_08: |-
         Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
 
         Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
       CourseD_Dance_Party_09: |-
         Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
-        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+
+        -   Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
       CourseD_Dance_Party_10: |-
         Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_pineapple</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
@@ -452,12 +467,12 @@ de:
         Sie die rechte Pfeiltaste drücken.
       CourseD_Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und
         teilen Sie ihn mit Ihren Freunden.
-      CourseE_HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein
-        **Boot** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      CourseE_HOC 2018 Level_10: "Irgendwo in diesem Ozeanmonument versteckt sich
-        ein **Tintenfisch** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
-        Findest du ihn?\n\n"
+      CourseE_HOC 2018 Level_1: Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
+        ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Irgendwo in diesem Ozeanmonument versteckt sich ein
+        **Tintenfisch** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Findest du ihn?
       CourseE_HOC 2018 Level_11: Baue eine Mauer aus **Prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         um den schwarzen Beton. Dies aktiviert den **Aquisator** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         und schließt die Herausforderung ab!
@@ -471,64 +486,65 @@ de:
         versteckt! Erkunde das Schiffswrack, um die **Truhe** zu erreichen![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Sieht kalt aus! Fange auf dem Weg zu den Unterwasserruinen
         einen **Lachs** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
-      CourseE_HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im
-        Sandstein nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      CourseE_HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel,
+      CourseE_HOC 2018 Level_7a: Du hast die Unterwasserruine gefunden. Suche im Sandstein
+        nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_8: Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel,
         und finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        im Korallenriff.\n\n"
-      CourseE_HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem
-        **Herz des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+        im Korallenriff.
+      CourseE_HOC 2018 Level_9b: Du hast das Riff erreicht. Suche jetzt nach dem **Herz
+        des Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Das Rennen im letzten Rätsel war nicht sehr fair! Ändere
-        die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
+        die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln kannst
         als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       Dance_Party_01: |-
-        *Los geht‘s mit der Tanzparty!*
+        _Los geht‘s mit der Tanzparty!_
 
         Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
 
-        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+        -   _Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten._
       Dance_Party_01_low: |-
-        *Los geht‘s mit der Tanzparty!*
+        _Los geht‘s mit der Tanzparty!_
 
         Ziehen Sie den Block "einen Neuen erstellen" in den Arbeitsbereich, und verbinden Sie ihn mit dem "Setup" -Block, um Ihren ersten Tänzer zu erstellen.
 
-        * *Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten.*
+        -   _Sie können auch auf die Glühbirne links klicken, wenn Sie weitere Informationen oder zusätzliche Herausforderungen möchten._
       Dance_Party_02: |-
         Lassen Sie den Elch tanzen!
 
-        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
-
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
-        *Jetzt grooven wir!*
+        _Jetzt grooven wir!_
 
         Fügen Sie einen Block <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"Takte"</title></block></xml> zu Ihrem Arbeitsbereich hinzu. Lassen Sie den Tänzer nach 6 Takten einen neuen Tanzschritt beginnen.
       Dance_Party_04: |-
-        *Dieser Tanz braucht etwas Pep!*
+        _Dieser Tanz braucht etwas Pep!_
 
         Suchen Sie in Ihrer Toolbox nach einem neuen Block, der Ihrem Tänzer einen Hintergrundeffekt hinzufügt. Beobachten Sie, wie sich die Effekte passend zur Musik verändern.
       Dance_Party_05: |-
         Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
 
-        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+        -   Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       Dance_Party_06: |-
-        *Wir brauchen noch mehr Tänzer!*
+        _Wir brauchen noch mehr Tänzer!_
 
-        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+        Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1", der mit der Katze tanzt.
       Dance_Party_08: |-
         Jeder Tänzer hat eine Reihe von _Eigenschaften_, die steuern, wie er aussieht.
 
         Sie können es aussehen lassen, als befinde sich der Tänzer im Hintergrund, indem Sie seine _Größe_ kleiner machen. Können Sie beide Backup-Tänzer gleich groß machen?
       Dance_Party_09: |-
         Tänzer haben eine "Farbton" -Eigenschaft, mit der man eine Farbschicht hinzufügen kann. Versuchen Sie, den Farbton eines Ihrer Tänzer zu verändern.
-        * Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
+
+        -   Farbtöne mischen die gewählte Farbe mit den Farben des Tänzers.
       Dance_Party_10: |-
         Jetzt wissen wir, wie wir die Eigenschaften eines Tänzers ändern. Mit diesem Block können wir dafür sorgen, dass immer die gleichen Eigenschaften automatisch auf die Musik reagieren:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_pineapple</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
@@ -570,12 +586,12 @@ de:
         Sie die rechte Pfeiltaste drücken.
       Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
         Sie ihn mit Ihren Freunden.
-      Dance_Party_3: "*Jetzt grooven wir!* \n\nFüge einen zweiten <xml><block type=\"Dancelab_atTimestamp\"><title
+      Dance_Party_3: "_Jetzt grooven wir!_ \n\nFüge einen zweiten <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"Takt\"</title></block></xml>
         Block deinem Arbeitsbereich hinzu. Lass den Tänzer eine neue Bewegung machen,
         nach 6 Takten."
       Dance_Party_4: |-
-        *Dieser Tanz braucht mehr Biss*
+        _Dieser Tanz braucht mehr Biss_
 
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       Dance_Party_8: |-
@@ -587,9 +603,9 @@ de:
 
         Hier ist ein Tanzduell zwischen zwei Crews. Die Pfeiltasten steuern einen der Tänzer und die Tasten „w, a, s, d“ steuern den anderen. Liefere dir ein Tanzduell mit einem Freund, und versuche dann, dieses Tanzduell zu verbessern.
 
-        * Füge weitere Tasten zum Steuern der Tänzer hinzu
-        * Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
-        * Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
+        -   Füge weitere Tasten zum Steuern der Tänzer hinzu
+        -   Bringe die Backup-Tänzer dazu, ebenfalls zu reagieren, wenn die Tasten betätigt werden
+        -   Wechsle die Tänzer nach jeweils 4 Takten durch das Festlegen ihrer Sichtbarkeit
       Dance_Party_extras_every_beat: |-
         # Viertelnoten
 
@@ -597,17 +613,17 @@ de:
 
         Für diesen Tanz wird auch ein _vorbehaltlicher_Block verwendet, um zu kontrollieren, wann der „alle 0,25 Takte“-Block den Tanz ändern kann. Versuche, die Zahlen in dem vorbehaltlichen Block zu ändern, um zu sehen, wie es den Tanz verändert.
 
-        * Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
-        * Füge einige Events „nach dem Takt“ hinzu.
-        * Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
+        -   Experimentiere mit anderen Tondauern (wie 0,5 für eine halbe Note oder 0,125 für eine Achtelnote).
+        -   Füge einige Events „nach dem Takt“ hinzu.
+        -   Tausche „Takte“ und „Sekunden“ und versuche, deine Tänze auf diese Weise zeitlich abzustimmen.
       Dance_Party_extras_layout: |-
         # Nehmen wir die Formation ein!
 
         Schaue dir diesen Tanz an, der den „Layout“-Block verwendet, um die Formation der Backup-Tänzer während des Tanzes zu ändern. Probiere eine dieser Ideen aus, um ihn zu verlängern:
 
-        * Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
-        * Ändere das Layout, wenn eine Taste gedrückt wird
-        * Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
+        -   Erstelle eine zweite Gruppe von Tänzern in einem anderen Layout
+        -   Ändere das Layout, wenn eine Taste gedrückt wird
+        -   Ändere eine Eigenschaft, wenn die Tänzer ihre Formation ändern
       Dance_Party_extras_on_beat: |-
         # Bass, mittlerer Ton und Sopran
 
@@ -621,25 +637,25 @@ de:
 
         Dieser Tanz blendet zwei verschiedene Gruppen von Tänzern ein und aus. Sieh ihn dir an und versuche dann, dein eigenes Flair hinzuzufügen.
 
-        * Füge eine weitere Gruppe von Tänzern hinzu
-        * Blende Tänzer mithilfe der Pfeiltasten ein- und aus
-        * Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
+        -   Füge eine weitere Gruppe von Tänzern hinzu
+        -   Blende Tänzer mithilfe der Pfeiltasten ein- und aus
+        -   Blende alle der Tänzer aus und wechsle zu einem spannenden Hintergrundeffekt
       Function intro Ryan: "In deinem Arbeitsbereich befindet sich eine **Funktion**
         namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
-        des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
-        deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
+        des Flusses benötigst! \\\r\n \\\r\nDocke den kleinen, grünen Block zweimal
+        in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
         zur Redstone-Fackel [redstone_torch] zu bringen."
       Function intro Ryan_2019: "In deinem Arbeitsbereich befindet sich eine **Funktion**
         namens \"Brücke bauen\".  Sie umfasst den gesamten Code, den du zum Überqueren
-        des Flusses benötigst! \r\n \r\nDocke den kleinen, grünen Block zweimal in
-        deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
+        des Flusses benötigst! \\\r\n \\\r\nDocke den kleinen, grünen Block zweimal
+        in deinem Arbeitsbereich an, um den Weg zu reparieren und {currentPlayerName}
         zur Redstone-Fackel [redstone_torch] zu bringen."
-      HOC 2018 Level_1: "Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
+      HOC 2018 Level_1: Du benötigst für deine Reise Vorräte. Sammle ein **Boot**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "Irgendwo in diesem Ozeanmonument versteckt sich ein **Tintenfisch**
+        aus der **Truhe** ein![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Irgendwo in diesem Ozeanmonument versteckt sich ein **Tintenfisch**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
-        Findest du ihn?\n\n"
+        Findest du ihn?
       HOC 2018 Level_11: Baue eine Mauer aus **Prismarin** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         um den schwarzen Beton. Dies aktiviert den **Aquisator** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         und schließt die Herausforderung ab!
@@ -655,27 +671,27 @@ de:
         versteckt! Erkunde das Schiffswrack, um die **Truhe** zu erreichen![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       HOC 2018 Level_6: Sieht kalt aus! Fange auf dem Weg zu den Unterwasserruinen
         einen **Lachs** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
-      HOC 2018 Level_7a: "Du hast die Unterwasserruine gefunden. Suche im Sandstein
+      HOC 2018 Level_7a: Du hast die Unterwasserruine gefunden. Suche im Sandstein
         nach eine **Truhe** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      HOC 2018 Level_8: "Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel, und
+        mit **Prismarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      HOC 2018 Level_8: Erst Eisberge, nun Lava? Durchquere diese Vulkaninsel, und
         finde die **Tropenfische** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        im Korallenriff.\n\n"
-      HOC 2018 Level_9b: "Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
+        im Korallenriff.
+      HOC 2018 Level_9b: Du hast das Riff erreicht. Suche jetzt nach dem **Herz des
         Meeres** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+        Verwende blaue und rote Korallen, um die Schatz**truhe** zu erreichen![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       HOC Dance 3_draft: |-
-        *Dieser Tanz braucht mehr Biss*
+        _Dieser Tanz braucht mehr Biss_
 
         Suche nach dem neuen Block, welcher dir Hintergrundeffekte ermöglicht. Verfolge wie die Effekte sich im Takt der Musik ändern!
       HOC Dance 4_draft: |-
         Verwenden Sie einen weiteren neuen Block, damit der Tänzer **alle 2 Takte** den Tanzschritt wechselt!
 
-        * Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
+        -   Durch Auswahl von "(nächster)", "(vorheriger)" oder "(zufällig)" wird der Tänzer bei jeder Ausführung des Codes einen anderen Tanzschritt ausführen.
       HOC Dance 5_draft: |-
-        *Wir brauchen noch mehr Tänzer!*
+        _Wir brauchen noch mehr Tänzer!_
 
-        Erstellen Sie einen Backup-Tänzer namens "backup_dancer1", der mit der Katze tanzt.
+        Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1", der mit der Katze tanzt.
       HOC Dance 6_draft: |-
         Jeder Tänzer hat eine Sammlung von _Eigenschaften_, dies legt fest wie er aussieht.
 
@@ -712,11 +728,11 @@ de:
       MC Agent Freeplay: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
         des Agenten, um die Welt zu erkunden."
       MC_HOC_2017 Agent Test: "Klicke auf \"Ausführen\", um den Spieler mit den **Pfeiltasten**
-        zu bewegen.  \r\n\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
+        zu bewegen.  \\\r\n\\\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
         und diese öffnen (verwende die **Leertaste**). So kommst du zum orangenen
         Quadrat drinnen."
       MC_HOC_2017_01: "Klicke auf \"Ausführen\", um den Spieler mit den **Pfeiltasten**
-        zu bewegen.  \r\n\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
+        zu bewegen.  \\\r\n\\\r\nUm dieses Level zu bestehen, musst du zur Tür gelangen
         und diese öffnen (verwende die **Leertaste**). So kommst du zum orangenen
         Quadrat drinnen."
       MC_HOC_2017_01_Cole: Du musst auf deinem Weg alle Werkzeuge einsammeln. Bewege
@@ -725,118 +741,117 @@ de:
         unter dem Spielbereich, um dieses Level zu spielen. Bewege dann den Spieler
         mit den **Pfeiltasten**.  '
       MC_HOC_2017_01_RETRY: "{currentPlayerName} ist im Haus gefangen. Der Agent steht
-        jedoch zur Hilfe bereit!   \r\n \r\n   \r\nDocke im Arbeitsbereich einen \"vorwärts
-        bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den Agenten auf
-        die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\" aus
-        und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
-        und die **Truhe** [chest] einzusammeln.  "
-      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} ist im Haus gefangen. Der Agent
-        steht jedoch zur Hilfe bereit!   \r\n \r\n   \r\nDocke im Arbeitsbereich einen
+        jedoch zur Hilfe bereit!   \\\r\n \\\r\n   \\\r\nDocke im Arbeitsbereich einen
         \"vorwärts bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um den
         Agenten auf die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann \"Ausführen\"
         aus und verwende die Pfeiltasten, um {currentPlayerName} aus dem Haus zu bewegen
         und die **Truhe** [chest] einzusammeln.  "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} ist im Haus gefangen. Der Agent
+        steht jedoch zur Hilfe bereit!   \\\r\n \\\r\n   \\\r\nDocke im Arbeitsbereich
+        einen \"vorwärts bewegen\"-Block unter dem \"beim Ausführen\"-Block ein, um
+        den Agenten auf die Druckplatte [PressurePlate_Up] zu bringen. Wähle dann
+        \"Ausführen\" aus und verwende die Pfeiltasten, um {currentPlayerName} aus
+        dem Haus zu bewegen und die **Truhe** [chest] einzusammeln.  "
       MC_HOC_2017_02: Der Spieler muss in den verborgenen Hain gelangen.  Hilf dem
         Agenten, das Tor zu öffnen, indem du Code schreibst, mit dem er sich zur Druckplatte
         bewegt.
       MC_HOC_2017_02_Cole: "{currentPlayerName} geht auf Abenteuertour! Hol die **Karte**
-        [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke Code im Arbeitsbereich
-        an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up], damit
-        {currentPlayerName} durchkann. "
+        [map_empty] hinter der verschlossenen Tür rechts. \\\r\n \\\r\nDocke Code
+        im Arbeitsbereich an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up],
+        damit {currentPlayerName} durchkann. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} geht auf Abenteuertour! Hol die
-        **Karte** [map_empty] hinter der verschlossenen Tür rechts. \r\n \r\nDocke
+        **Karte** [map_empty] hinter der verschlossenen Tür rechts. \\\r\n \\\r\nDocke
         Code im Arbeitsbereich an, um den Agenten auf die Druckplatte zu bewegen [PressurePlate_Up],
         damit {currentPlayerName} durchkann. "
       MC_HOC_2017_02_Kiki: "Der Spieler zieht zu einem Abenteuer los. Zuerst benötigt
-        er jedoch die Fackel, die sich hinter der verschlossenen Tür befindet. \r\n\r\nProgrammiere
+        er jedoch die Fackel, die sich hinter der verschlossenen Tür befindet. \\\r\n\\\r\nProgrammiere
         den Agenten so, dass er sich zweimal vorwärts bewegt, um dem weißen Weg zu
         folgen und zur Druckplatte zu gelangen. So kann er dem Spieler die Tür öffnen."
       MC_HOC_2017_02_Will: "Um dieses Level abzuschließen, muss der Spieler zum orangefarbenen
-        Quadrat im verborgenen Hain gelangen. Es befindet sich hinter der Tür.  \r\n\r\nDer
+        Quadrat im verborgenen Hain gelangen. Es befindet sich hinter der Tür.  \\\r\n\\\r\nDer
         Code im Arbeitsbereich sorgt dafür, dass sich der Agent zweimal vorwärtsbewegt,
         um die Druckplatte zu erreichen und die Tür für Alex oder Steve zu öffnen."
       MC_HOC_2017_03_Cole: "{currentPlayerName} setzt sein Abenteuer fort und benötigt
-        den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n   \r\nProgrammiere
+        den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \\\r\n   \\\r\nProgrammiere
         den Agenten, um das Tor zu öffnen. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} setzt sein Abenteuer fort und
-        benötigt den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \r\n
-        \  \r\nProgrammiere den Agenten, um das Tor zu öffnen. "
+        benötigt den **Kompass** [compass], um sich auf die Reise vorzubereiten.  \\\r\n
+        \  \\\r\nProgrammiere den Agenten, um das Tor zu öffnen. "
       MC_HOC_2017_03_Kiki: "Das Abenteuer des Spielers beginnt hinter der verschlossenen
-        Tür im verborgenen Hain!  \r\n\r\n\r\nHilf dem Agenten beim Öffnen der Tür,
-        indem du ihn so programmierst, dass er die Druckplatte erreicht."
+        Tür im verborgenen Hain!  \\\r\n\\\r\n\\\r\nHilf dem Agenten beim Öffnen der
+        Tür, indem du ihn so programmierst, dass er die Druckplatte erreicht."
       MC_HOC_2017_04: Ändere die Schleife aus der letzten Aufgabe so, dass der Agent
         einen Weg über den breiteren Teil des Flusses baut.
       MC_HOC_2017_04POINT5_Cole: "Du hast es aus dem Sumpf geschafft!  Bringe jetzt
-        den Spieler sicher zum orangefarbenen Quadrat. \n\n\nHilf dem Agenten beim
-        Räumen des Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen
-        zum Überqueren der ersten beiden Druckplatten verwendest."
-      MC_HOC_2017_04POINT5_RYAN: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
-        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Du bist drüben! \r\n\r\nBringe {currentPlayerName}
-        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\r\n"
-      MC_HOC_2017_04_Cole: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
+        den Spieler sicher zum orangefarbenen Quadrat. \n\nHilf dem Agenten beim Räumen
+        des Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen zum
+        Überqueren der ersten beiden Druckplatten verwendest."
+      MC_HOC_2017_04POINT5_RYAN: "Du bist drüben! \\\r\n\\\r\nBringe {currentPlayerName}
+        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\\\r"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du bist drüben! \\\r\n\\\r\nBringe {currentPlayerName}
+        jetzt sicher durch das Labyrinth, um die **Axt** [diamond_axe] einzusammeln.\\\r"
+      MC_HOC_2017_04_Cole: "Der Agent kann sich über Wasser bewegen!  \\\r\n \\\r\nVerwende
         eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
         den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
-      MC_HOC_2017_04_Cole_2019: "Der Agent kann sich über Wasser bewegen!  \r\n \r\nVerwende
-        eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und {currentPlayerName}
-        den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
+      MC_HOC_2017_04_Cole_2019: "Der Agent kann sich über Wasser bewegen!  \\\r\n
+        \\\r\nVerwende eine \"wiederholen\"-Schleife, um diese Aufgabe zu lösen und
+        {currentPlayerName} den **Eimer** [bucket_empty] hinter der Tür holen zu lassen. "
       MC_HOC_2017_04_Kiki: "Der Eintritt in den verborgenen Hain hat zu dieser wunderschönen
         Oase geführt!  Um dieses Level zu bestehen, muss der Spieler das orangefarbene
-        Quadrat in der Hütte erreichen.  \r\n\r\nVerwende eine \"wiederholen\"-Schleife,
+        Quadrat in der Hütte erreichen.  \\\r\n\\\r\nVerwende eine \"wiederholen\"-Schleife,
         damit der Agent den Weg zur Druckplatte findet. Diese öffnet die Tür der Hütte."
-      MC_HOC_2017_05: "Schleifen sind nicht immer hilfreich. \n\n\nDiese Kakteen wachsen
+      MC_HOC_2017_05: "Schleifen sind nicht immer hilfreich. \n\nDiese Kakteen wachsen
         kreuz und quer. Eine Schleife bringt hier also nichts.  Wir haben dir stattdessen
         eine Funktion namens \"Zerstören und bewegen\" bereitgestellt. Diese erledigt
         den schwierigen Teil für dich, sobald der Agent ein Hindernis erreicht."
-      MC_HOC_2017_05_Cole: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere den
-        Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann kann
-        {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
-      MC_HOC_2017_05_Cole_2019: "Oh nein! Die Brücke ist kaputt! \r\n\r\nProgrammiere
+      MC_HOC_2017_05_Cole: "Oh nein! Die Brücke ist kaputt! \\\r\n\\\r\nProgrammiere
         den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann
         kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
-      MC_HOC_2017_05_Josh: "Oh nein! Die Brücke ist kaputt! \n\n\nProgrammiere den
-        Agenten, um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel**
-        erreichen."
+      MC_HOC_2017_05_Cole_2019: "Oh nein! Die Brücke ist kaputt! \\\r\n\\\r\nProgrammiere
+        den Agenten mit dem \"platzieren\"-Block, um die Brücke neu zu bauen. Dann
+        kann {currentPlayerName} die **Schaufel** [diamond_shovel] erreichen."
+      MC_HOC_2017_05_Josh: "Oh nein! Die Brücke ist kaputt! \n\nProgrammiere den Agenten,
+        um die Brücke neu zu bauen. Dann kann der Spieler die **Schaufel** erreichen."
       MC_HOC_2017_05_Kiki: "Jetzt muss der Spieler den verborgenen Hain verlassen
-        und sein Abenteuer fortsetzen. Die Brücke ist jedoch kaputt! \r\n\r\nHilf
+        und sein Abenteuer fortsetzen. Die Brücke ist jedoch kaputt! \\\r\n\\\r\nHilf
         dem Agenten beim Aufbauen der Brücke. Bewege dann das Holzbrett, damit der
         Spieler das orangefarbene Quadrat erreichen kann."
-      MC_HOC_2017_06_Cole: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n \r\nÄndere
+      MC_HOC_2017_06_Cole: "Noch ein Fluss. Aber dieser ist viel breiter! \\\r\n \\\r\nÄndere
         den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
         die **Spitzhacke** [diamond_pickaxe] erreichen. "
-      MC_HOC_2017_06_Cole_2019: "Noch ein Fluss. Aber dieser ist viel breiter! \r\n
-        \r\nÄndere den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
+      MC_HOC_2017_06_Cole_2019: "Noch ein Fluss. Aber dieser ist viel breiter! \\\r\n
+        \\\r\nÄndere den Code, damit der Agent eine Brücke baut. Dann kann {currentPlayerName}
         die **Spitzhacke** [diamond_pickaxe] erreichen. "
-      MC_HOC_2017_06_Josh: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n\r\nÄndere
+      MC_HOC_2017_06_Josh: "Noch ein Fluss. Aber dieser ist viel breiter!  \\\r\n\\\r\nÄndere
         den Code, damit der Agent eine Brücke über den Fluss baut."
-      MC_HOC_2017_06_Kiki: "Noch ein Fluss. Aber dieser ist viel breiter!  \r\n \r\nÄndere
-        den Code, damit der Agent eine Brücke über das Wasser baut."
-      MC_HOC_2017_07_Cole: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
+      MC_HOC_2017_06_Kiki: "Noch ein Fluss. Aber dieser ist viel breiter!  \\\r\n
+        \\\r\nÄndere den Code, damit der Agent eine Brücke über das Wasser baut."
+      MC_HOC_2017_07_Cole: "Da ist Eis im Weg!  \\\r\n \\\r\nDie \"Weg räumen\"-Funktion
         hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
         zu bringen! "
-      MC_HOC_2017_07_Cole_2019: "Da ist Eis im Weg!  \r\n \r\nDie \"Weg räumen\"-Funktion
+      MC_HOC_2017_07_Cole_2019: "Da ist Eis im Weg!  \\\r\n \\\r\nDie \"Weg räumen\"-Funktion
         hilft dir dabei, das Eis zu zerstören und {currentPlayerName} zur Lore [minecart_normal]
         zu bringen! "
       MC_HOC_2017_07_Kiki: "Schleifen sind nicht die einzige Möglichkeit, um Code
-        zu wiederholen!  \r\n\r\nHier hast du eine Funktion namens \"Kakteen räumen\".
+        zu wiederholen!  \\\r\n\\\r\nHier hast du eine Funktion namens \"Kakteen räumen\".
         Sie kümmert sich bei jeder Verwendung darum, drei Kakteen zu räumen.  Verwende
         zwei \"Kakteen räumen\"-Blöcke, um den Weg zum orangenen Quadrat frei zu machen. "
       MC_HOC_2017_07a_Kiki: Bearbeite jetzt die Schleife so, dass der Agent den Weg
         zum orangefarbenen Quadrat frei macht.
       MC_HOC_2017_08_Cole: "Statt vor sie dem Bewegen zu zerstören, musst du jetzt
-        einen Block platzieren.  \r\n\r\nÄndere die bereitgestellte Funktion so, dass
-        sie in der Wüste funktioniert."
+        einen Block platzieren.  \\\r\n\\\r\nÄndere die bereitgestellte Funktion so,
+        dass sie in der Wüste funktioniert."
       MC_HOC_2017_08_Kiki: "Statt die Kakteen vor dem Bewegen zu zerstören, platzierst
-        du jetzt Stein auf Lava. Dann zerstörst du den Sandstein.  \r\n\r\nÄndere
+        du jetzt Stein auf Lava. Dann zerstörst du den Sandstein.  \\\r\n\\\r\nÄndere
         die Funktion so, dass sie in diesem Level funktioniert."
-      MC_HOC_2017_08_RY: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\n\nVerwende
+      MC_HOC_2017_08_RY: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\nVerwende
         die Funktionen, um schnell für {currentPlayerName} eine Brücke über die Lava
         zu bauen."
-      MC_HOC_2017_08_Will: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\n\nVerwende
+      MC_HOC_2017_08_Will: "Jetzt gibt es **ZWEI** Funktionen zur Auswahl! \n\nVerwende
         die Funktionen, um dem Spieler schnell eine Brücke über die Lava zu bauen."
       MC_HOC_2017_09_Cole: Verwende die Funktionen, damit der Agent die riesigen Erdblöcke
         zerstört, die den Weg des Spielers zur Druckplatte blockieren.
-      MC_HOC_2017_09_Kiki: "Der Anfangscode kann nicht entfernt werden.\r\n\r\nFüge
+      MC_HOC_2017_09_Kiki: "Der Anfangscode kann nicht entfernt werden.\\\r\n\\\r\nFüge
         Befehle zur \"Pfad erstellen\"-Funktion hinzu, damit das Programm im Arbeitsbereich
         den Agenten zur Druckplatte lenkt. "
       MC_HOC_2017_09_RS_CLONE: Repariere diese Funktion, um die Löcher zu füllen,
@@ -849,13 +864,13 @@ de:
       MC_HOC_2017_10_Kiki: Versuche, eine Funktion neu zu erstellen, mit der der Agent
         die Lore einfacher erstellt und der Spieler das orangefarbene Quadrat erreicht.
       MC_HOC_2017_10_RETRY: "Siehst du den Unterschied zwischen den beiden Funktionen
-        im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
-        Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
-        [flint_and_steel] einzusammeln. \r\n "
+        im Arbeitsbereich? \\\r\n \\\r\nVerwende die Funktionen und anderen Code aus
+        der Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
+        [flint_and_steel] einzusammeln. \\\r\n "
       MC_HOC_2017_10_RETRY_2019: "Siehst du den Unterschied zwischen den beiden Funktionen
-        im Arbeitsbereich? \r\n \r\nVerwende die Funktionen und anderen Code aus der
-        Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
-        [flint_and_steel] einzusammeln. \r\n "
+        im Arbeitsbereich? \\\r\n \\\r\nVerwende die Funktionen und anderen Code aus
+        der Werkzeugkiste, um einen Pfad für die Lore zu räumen und dann das **Feuerzeug**
+        [flint_and_steel] einzusammeln. \\\r\n "
       MC_HOC_2017_10_RYAN: Versuche, Funktionen ganz neu zu erstellen, mit denen der
         Agent seine Lore einfacher erstellt und der Spieler das orangefarbene Quadrat
         erreicht.
@@ -867,8 +882,8 @@ de:
       MC_HOC_2017_13_Cole: "**Freies Spiel:** Jetzt bist du dran! Verwende den Code
         des Agenten, um die Welt zu erkunden."
       MC_HOC_2017_4.5v2: "Du hast es aus dem Sumpf geschafft!  Bringe jetzt den Spieler
-        sicher zum orangefarbenen Quadrat. \n\n\nHilf dem Agenten beim Räumen des
-        Weges, indem du ein einfaches Muster entwirfst und es mit Schleifen zum Überqueren
+        sicher zum orangefarbenen Quadrat. \n\nHilf dem Agenten beim Räumen des Weges,
+        indem du ein einfaches Muster entwirfst und es mit Schleifen zum Überqueren
         der ersten beiden Druckplatten verwendest."
       MC_HOC_2017_Ali: 'Sieh dir die Funktionen unten an. Wie kannst du diese verwenden,
         um die Ghasts zu vermeiden und {currentPlayerName} beim sicheren Erreichen
@@ -885,11 +900,11 @@ de:
       MC_HOC_2017_FP20x20_2019: "**Freies Spiel:** Jetzt bist du dran! Verwende den
         Code des Agenten, um die Welt zu erkunden."
       MC_HOC_2017_Ryan_03: "Wusstest du, dass du mehr als ein Code-Element in eine
-        Schleife packen kannst?  \r\n\r\nVerwende eine \"wiederholen\"-Schleife, um
-        den Agenten Blöcke im Wasser platzieren zu lassen. So entstehe eine Brücke
+        Schleife packen kannst?  \\\r\n\\\r\nVerwende eine \"wiederholen\"-Schleife,
+        um den Agenten Blöcke im Wasser platzieren zu lassen. So entstehe eine Brücke
         über den Fluss."
       MC_HOC_2017_Ryan_05: "Manchmal musst du Dinge beseitigen, die deinem Spieler
-        im Weg sind.  \r\nVerwende den \"zerstören\"-Block, um alle Kakteen zwischen
+        im Weg sind.  \\\r\nVerwende den \"zerstören\"-Block, um alle Kakteen zwischen
         dem Agenten und der Druckplatte zu räumen."
       MC_HOC_Kiki_02: Jemand muss auf die Druckplatte treten, damit sich die Tür öffnet.  Hilf
         dem Agenten dabei, die Platte zu erreichen. Dann kann der Spieler das Haus
@@ -927,8 +942,7 @@ de:
       Ryan_Demo: |-
         Lassen Sie den Elch tanzen!
 
-        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
-
+        Ziehen Sie den Block <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinden Sie ihn unterhalb des Blocks <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"Takte"</title></block></xml>. Ihr Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Testing Quantum Farmer: 'Wow, ich habe ein richtig tiefes Loch gefunden! Ich
@@ -950,7 +964,7 @@ de:
         ein bisschen herum."
       courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
-      courseB_maze_seq3: '*"Repariere den Code, damit ich das Schwein bekomme!*"'
+      courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
       courseD_bee_nestedLoops5: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
@@ -959,8 +973,8 @@ de:
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
       courseD_bee_nestedLoops8_2019: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.
-      courseD_bounce_events1: "Berühre die Fahne. \r\nHänge einen Baustein an den
-        „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \r\n\r\nKlicke
+      courseD_bounce_events1: "Berühre die Fahne. \\\r\nHänge einen Baustein an den
+        „wenn-Pfeil-nach-links“-Baustein und starte das Programm mit „Ausführen“ \\\r\n\\\r\nKlicke
         mit der Maus auf den Linkspfeil, um den Spieler zur Fahne zu bewegen."
       courseD_maze_nestedLoops4: |-
         Bring mich zu der Sonnenblume!
@@ -1191,8 +1205,8 @@ de:
       grade4_frozen_square_loop3: Kannst du eine Schneeflocke erstellen, indem du
         den „Wiederholen"-Baustein 10 mal benutzt, um ein Quadrat zu erstellen und
         nach jedem Quadrat den „Drehen"-Baustein mit 36° benutzt?
-      grade4_review_artist2: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \r
-        \n\r \nHinweis: \nalle drei Seiten sind gleich lang. \r\n\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      grade4_review_artist2: "Dieses Haus braucht ein Dach! Zeichne das Dreieck.  \\\r
+        \n\\\r \nHinweis: \nalle drei Seiten sind gleich lang. \\\r\n\\\r \n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: "Der \"springe\"-Block bewegt den Künstler, ohne eine
         Linie zu zeichnen. \nZeichne die gestrichelte Linie nach. Verwende dazu \"springe\"
         und \"bewegen\"-Blöcke."
@@ -1221,11 +1235,25 @@ de:
         So braucht man die Länge nur an einer Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!
       grade5_bee_parameters_new8a: Benutze deine neue Funktion um die Spirale zu lösen.
       grade5_bee_parameters_new9a: Benutze deine neue Funktion um die Spirale zu lösen.
+      grade5_playlab_parameters_points1: |-
+        Hier ist dasselbe Spiel, aber ein großer Teil des Codes ist versteckt. Wir haben eine neue Funktion namens 'score\_points' hinzugefügt.
+        <br/>
+
+        <hr>
+        <br/>
+        <h4>
+        Füge einen neuen Parameter mit dem Namen `points` zur `player_score` Funktion hinzu. <br/>
+        Die `score_points` Funktion soll sowohl Punkte zu 'player_score' hinzufügen, als auch abziehen können, abhängig davon, was die Figur berührt.<br>
+        Der Punktestand soll durch Subtraktion oder Addition von 1 verändert werden.
+        </h4>
+        <br/>
+        <hr>
+        *Hinweis: Wenn du fertig bist, drücke "Run", um loszulegen. Wenn der Hund 6 Punkte erreicht hat, kannst du zum nächsten Level fortschreiten.*
       grade5_playlab_variables13: Verwende den „Wenn Figur berührt"-Baustein, um den
         Hund nach links-oben zurückzuschicken; aber NUR wenn der Hund eine andere
         Figur berührt.
       grade5_playlab_variables2: Das Rennen im letzten Rätsel war nicht sehr fair!
-        Ändere die Variable „Hunde_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
+        Ändere die Variable „Hunde\_Geschwindigkeit“ so, dass du mehr Fahnen sammeln
         kannst als die Katze. Der erste, der 10 Fahnen hat, gewinnt!
       grade5_playlab_variables9: Hier ist eine Funktion namens „Patrouille“. Ändere
         sie so, dass die Katze sich 400 Pixel auf- und abwärts bewegt.
@@ -1237,3 +1265,5 @@ de:
         zu wiederholen. Vergiss nicht am Schluss Honig zu erzeugen!
       level 'grade3_Loops_7: Jede Blüte enthält eine Einheit Nektar. Sammle Nektar
         von jeder Blüte.
+      pre-assessment survey q25A: Falls ja, welche Informatikkurse hattest du bereits
+        vor deinem aktuellen Informatikkurs besucht?

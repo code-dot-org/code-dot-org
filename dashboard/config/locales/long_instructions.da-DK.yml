@@ -52,9 +52,7 @@ da:
         grader!
       2-3 Artist Loops New 10: Lad os forbinde en stak V'er, ved at tegne dem i en
         løkke.
-      2-3 Artist Loops New 12: 'Tegn en diamant hvor siderne er 100 pixels lange.
-
-'
+      2-3 Artist Loops New 12: Tegn en diamant hvor siderne er 100 pixels lange.
       2-3 Artist Loops New 13: Tegn nu diamanten 3 gange i en løkke.
       2-3 Artist Loops New 2: "Her er noget af den kode du brugte til at tegne kvadratet.
         \nHvad sker der mon hvis du bruger gentageblokken til at køre denne kode 4
@@ -169,8 +167,8 @@ da:
         blokkene for at få alt nektaren fra blomsten.
       4-5 Bee Nested Loops 4: 'Indsaml al nektar fra alle blomster, og lav honning
         i alle bikuber. Brug indlejrede løkker. '
-      4-5 Bee Nested Loops Assessment 1: "** Vurdering: ** Saml al nektaren og lav
-        al honningen ved hjælp af løkker."
+      4-5 Bee Nested Loops Assessment 1: "\\*\\* Vurdering: \\*\\* Saml al nektaren
+        og lav al honningen ved hjælp af løkker."
       4-5 Nested Loops 9: Tegn tænderne i alligatorens mund!
       Artist Autorun Test: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
       CoureE_HOC 2018 Level_7a: Du har fundet de undersøiske ruiner. Søg efter en
@@ -210,9 +208,9 @@ da:
 
         Her er en dansekonkurrence mellem to grupper. Piletasterne styrer en af danserne, og tasterne "w, a, s, d" kontrollere den anden. Dans mod en ven, og gør det endnu bedre i en revanche.
 
-        *Tilføj flere taster for at kontrollere dansene
-        *Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
-        *Forandr danseren hver 4. takt ved at indstille deres synlighed
+        \*Tilføj flere taster for at kontrollere dansene
+        \*Få også baggrundsdanserne til at reagere, når der trykkes på tasterne
+        \*Forandr danseren hver 4. takt ved at indstille deres synlighed
       Dance_Party_extras_every_beat: |-
         # Fjerdedelsnoder
 
@@ -220,17 +218,17 @@ da:
 
         Denne dans bruger også blokken _betingelse_ til at styre, hvornår blokken 'den enkelte 0,25-takt' skal ændre dansen. Prøv at ændre tallene i 'betinget'-blokken for at se, hvordan det ændrer dansen.
 
-        *Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
-        *Tilføj nogle 'eftertakt'-hændelser.
-        *Skift takter ud med sekunder, og prøv at time dine danse på den måde.
+        \*Eksperimentér med andre noder (såsom 0,5 for en halvnode eller 0,125 for en ottendedelsnode).
+        \*Tilføj nogle 'eftertakt'-hændelser.
+        \*Skift takter ud med sekunder, og prøv at time dine danse på den måde.
       Dance_Party_extras_layout: |-
         # Lad os tage stilling!
 
         Tjek denne dans, der bruger blokken 'layout' til at ændre baggrundsdansernes stilling igennem dansen. Prøv en af disse ideer til at udvidde projektet:
 
-        *Opret en anden gruppe dansere i et andet layout
-        *Skift layout, når der trykkes på en tast
-        *Skift en egenskab, når danserne ændrer stilling
+        \*Opret en anden gruppe dansere i et andet layout
+        \*Skift layout, når der trykkes på en tast
+        \*Skift en egenskab, når danserne ændrer stilling
       Dance_Party_extras_on_beat: |-
         # Lav, medio og høj
 
@@ -244,17 +242,17 @@ da:
 
         Denne dans viser og skjuler to forskellige dansegrupper. Tjek det ud, og giv det derefter dit eget udtryk.
 
-        *Tilføj en anden gruppe dansere
-        *Vis og skjul dansere ved hjælp af piletasterne
-        *Skjul alle danserne, og skift til en spændende baggrundseffekt
+        \*Tilføj en anden gruppe dansere
+        \*Vis og skjul dansere ved hjælp af piletasterne
+        \*Skjul alle danserne, og skift til en spændende baggrundseffekt
       Function intro Ryan: "Du har en **funktion**, der hedder \"byg bro\" i dit arbejdsområde.
-        \ Den indeholder al den nødvendige kode til at komme over floden! \r\n \r\nKlik
+        \ Den indeholder al den nødvendige kode til at komme over floden! \\\r\n \\\r\nKlik
         den lille grønne blok ind i dit arbejdsområde to gange for at bygge en vej
         hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       Function intro Ryan_2019: "Du har en **funktion**, der hedder \"byg bro\" i
         dit arbejdsområde.  Den indeholder al den nødvendige kode til at komme over
-        floden! \r\n \r\nKlik den lille grønne blok ind i dit arbejdsområde to gange
-        for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
+        floden! \\\r\n \\\r\nKlik den lille grønne blok ind i dit arbejdsområde to
+        gange for at bygge en vej hen til redstone-faklen [redstone_torch] for {currentPlayerName}."
       HOC 2018 Level_1: Du har brug for forsyninger til rejsen. Indsaml en **båd**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         fra **kisten** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -291,123 +289,123 @@ da:
       MC Agent Freeplay: "**Fri leg:** Nu er det op til dig! Brug agentens kode til
         at hjælpe dig med at udforske verden."
       MC_HOC_2017 Agent Test: "Klik på \"Kør\", så du kan flytte spilleren med **piletasterne**.
-        \ \r\n\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
+        \ \\\r\n\\\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
         så du kan komme ind til det orange felt indenfor."
       MC_HOC_2017_01: "Klik på \"Kør\", så du kan flytte spilleren med **piletasterne**.
-        \ \r\n\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
+        \ \\\r\n\\\r\nDu løser opgaven ved at nå frem til døren og åbne den (med **mellemrumstasten**),
         så du kan komme ind til det orange felt indenfor."
       MC_HOC_2017_01_Cole: Du skal indsamle alt værktøjet på rejsen. Bevæg dig rundt
         med **piletasterne**, og nå frem til kisten på stien for at vinde
       MC_HOC_2017_01_Kiki: 'Du kommer i gang ved at klikke på den orange "Kør" knap
         neden for spilleområdet. Derefter kan du flytte spilleren rundt med **piletasterne**.  '
       MC_HOC_2017_01_RETRY: "{currentPlayerName} er fanget inde i huset, men heldigvis
-        er agenten klar til at hjælpe!   \r\n \r\n   \r\nKlik en \"gå fremad\" blok
-        på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen til
-        trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
-        til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
-        \ "
-      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} er fanget inde i huset, men
-        heldigvis er agenten klar til at hjælpe!   \r\n \r\n   \r\nKlik en \"gå fremad\"
+        er agenten klar til at hjælpe!   \\\r\n \\\r\n   \\\r\nKlik en \"gå fremad\"
         blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til at gå hen
         til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og brug piletasterne
         til at flytte {currentPlayerName} ud af huset og hen til **kisten** [chest].
         \ "
+      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} er fanget inde i huset, men
+        heldigvis er agenten klar til at hjælpe!   \\\r\n \\\r\n   \\\r\nKlik en \"gå
+        fremad\" blok på \"ved kør\" blokken i arbejdsområdet for at få agenten til
+        at gå hen til trykpladen [PressurePlate_Up]. Tryk derefter på \"Kør\", og
+        brug piletasterne til at flytte {currentPlayerName} ud af huset og hen til
+        **kisten** [chest].  "
       MC_HOC_2017_02: Spilleren skal ind i den hemmelige lund.  Hjælp agenten med
         at åbne porten ved at skrive kode, der hjælper den hen til trykpladen.
       MC_HOC_2017_02_Cole: "{currentPlayerName} er på vej på eventyr! **Kortet** [map_empty]
-        bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik kode ind
-        i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
+        bag den låste dør til højre vil være en stor hjælp. \\\r\n \\\r\nKlik kode
+        ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
         og åbner op for {currentPlayerName}. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} er på vej på eventyr! **Kortet**
-        [map_empty] bag den låste dør til højre vil være en stor hjælp. \r\n \r\nKlik
+        [map_empty] bag den låste dør til højre vil være en stor hjælp. \\\r\n \\\r\nKlik
         kode ind i arbejdsområdet, så agenten bevæger sig hen til trykpladen [PressurePlate_Up]
         og åbner op for {currentPlayerName}. "
       MC_HOC_2017_02_Kiki: "Spilleren er på vej på eventyr, men først gælder det faklen,
-        der er skjult bag den låste dør. \r\n\r\nProgrammér agenten til gå fremad
+        der er skjult bag den låste dør. \\\r\n\\\r\nProgrammér agenten til gå fremad
         to gange på den hvide sti, så den når frem til trykpladen og åbner døren for
         spilleren."
       MC_HOC_2017_02_Will: "Opgaven er løst, når spilleren står på det orange felt
-        i den hemmelige lund bag den låste dør.  \r\n\r\nKoden i arbejdsområdet får
-        agenten til at gå fremad to gange, så den når trykpladen og åbner døren for
-        Alex eller Steve."
+        i den hemmelige lund bag den låste dør.  \\\r\n\\\r\nKoden i arbejdsområdet
+        får agenten til at gå fremad to gange, så den når trykpladen og åbner døren
+        for Alex eller Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} fortsætter sit eventyr og har nu brug
-        for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til at åbne
-        porten. "
+        for **kompasset** [compass] til turen.  \\\r\n   \\\r\nKod agenten til at
+        åbne porten. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} fortsætter sit eventyr og har
-        nu brug for **kompasset** [compass] til turen.  \r\n   \r\nKod agenten til
-        at åbne porten. "
+        nu brug for **kompasset** [compass] til turen.  \\\r\n   \\\r\nKod agenten
+        til at åbne porten. "
       MC_HOC_2017_03_Kiki: "Spillerens eventyr begynder i den hemmelige lund bag den
-        låste dør!  \r\n\r\n\r\nHjælp agenten med at åbne døren ved at skrive kode,
-        der får den hen til trykpladen."
+        låste dør!  \\\r\n\\\r\n\\\r\nHjælp agenten med at åbne døren ved at skrive
+        kode, der får den hen til trykpladen."
       MC_HOC_2017_04: Rediger loopet fra den seneste opgave, så agenten nu bygger
         en vej hen over den bredere del af floden.
       MC_HOC_2017_04POINT5_Cole: "Du slap ud af sumpen!  Nu gælder det om at få spilleren
-        sikkert frem til det orange felt. \n\n\nHjælp agenten med at rydde vejen ved
+        sikkert frem til det orange felt. \n\nHjælp agenten med at rydde vejen ved
         at finde et simpelt mønster og bruge loop til at krydse de første to trykplader."
-      MC_HOC_2017_04POINT5_RYAN: "Du slap over! \r\n\r\nNu gælder det om at få {currentPlayerName}
-        sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \r\n\r\nNu gælder det om at få
-        {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\r\n"
-      MC_HOC_2017_04_Cole: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
+      MC_HOC_2017_04POINT5_RYAN: "Du slap over! \\\r\n\\\r\nNu gælder det om at få
+        {currentPlayerName} sikkert igennem labyrinten og hen til **øksen** [diamond_axe]\\\r"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Du slap over! \\\r\n\\\r\nNu gælder det om
+        at få {currentPlayerName} sikkert igennem labyrinten og hen til **øksen**
+        [diamond_axe]\\\r"
+      MC_HOC_2017_04_Cole: "Agenten kan bevæge sig over vand!  \\\r\n \\\r\nLøs opgaven
         med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
         [bucket_empty] bag ved døren. "
-      MC_HOC_2017_04_Cole_2019: "Agenten kan bevæge sig over vand!  \r\n \r\nLøs opgaven
-        med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
+      MC_HOC_2017_04_Cole_2019: "Agenten kan bevæge sig over vand!  \\\r\n \\\r\nLøs
+        opgaven med et gentagelsesloop, så {currentPlayerName} kan nå fem til **spanden**
         [bucket_empty] bag ved døren. "
       MC_HOC_2017_04_Kiki: "Indgangen til den hemmelige lund førte til denne vidunderlige
         oase!  Du løser opgaven ved at få spilleren hen til det orange felt i hytten.
-        \ \r\n\r\nBrug et gentagelsesloop til at hjælpe agenten hele vejen op til
-        trykpladen, der åbner døren til hytten."
-      MC_HOC_2017_05: "Loop er ikke altid det rigtige. \n\n\nKaktusserne her gror
-        f.eks. ikke i noget indlysende mønster, så det vil være temmelig svært at
-        fjerne dem med et loop.  I stedet får du funktionen \"ødelæg og gå\" til at
-        klare det hårde arbejde for dig, når agenten støder ind i en forhindring."
-      MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \r\n\r\nKod agenten til at genopbygge
+        \ \\\r\n\\\r\nBrug et gentagelsesloop til at hjælpe agenten hele vejen op
+        til trykpladen, der åbner døren til hytten."
+      MC_HOC_2017_05: "Loop er ikke altid det rigtige. \n\nKaktusserne her gror f.eks.
+        ikke i noget indlysende mønster, så det vil være temmelig svært at fjerne
+        dem med et loop.  I stedet får du funktionen \"ødelæg og gå\" til at klare
+        det hårde arbejde for dig, når agenten støder ind i en forhindring."
+      MC_HOC_2017_05_Cole: "Åh nej, broen er væk! \\\r\n\\\r\nKod agenten til at genopbygge
         broen med \"placer\" blokken, så {currentPlayerName} kan nå frem til **skovlen**
         [diamond_shovel]."
-      MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \r\n\r\nKod agenten til at
-        genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå frem
-        til **skovlen** [diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Åh nej, broen er væk! \n\n\nHjælp agenten med at genopbygge
+      MC_HOC_2017_05_Cole_2019: "Åh nej, broen er væk! \\\r\n\\\r\nKod agenten til
+        at genopbygge broen med \"placer\" blokken, så {currentPlayerName} kan nå
+        frem til **skovlen** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Åh nej, broen er væk! \n\nHjælp agenten med at genopbygge
         broen, så spilleren kan nå frem til **skovlen**."
       MC_HOC_2017_05_Kiki: "Spilleren er klar til at forlade den hemmelige lund og
-        fortsætte eventyret, men broen er væk! \r\n\r\nHjælp agenten med at genopbygge
+        fortsætte eventyret, men broen er væk! \\\r\n\\\r\nHjælp agenten med at genopbygge
         broen og gå hen til træplanken, så spilleren kan nå frem til det orange felt."
-      MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
+      MC_HOC_2017_06_Cole: "Endnu en flod – og den er meget bredere! \\\r\n \\\r\nRet
         koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
         **hakken** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Cole_2019: "Endnu en flod – og den er meget bredere! \r\n \r\nRet
+      MC_HOC_2017_06_Cole_2019: "Endnu en flod – og den er meget bredere! \\\r\n \\\r\nRet
         koden, så agenten bygger en bro, der kan hjælpe {currentPlayerName} over til
         **hakken** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Endnu en flod – og den er meget bredere!  \r\n\r\nRet
+      MC_HOC_2017_06_Josh: "Endnu en flod – og den er meget bredere!  \\\r\n\\\r\nRet
         koden, så agenten bygger en bro over floden."
-      MC_HOC_2017_06_Kiki: "Endnu en flod – og den er meget bredere!  \r\n\r\nRet
+      MC_HOC_2017_06_Kiki: "Endnu en flod – og den er meget bredere!  \\\r\n\\\r\nRet
         koden, så agenten bygger en bro over vandet."
-      MC_HOC_2017_07_Cole: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen kan
-        hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til minevognen
-        [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "Der er is i vejen!  \r\n \r\n\"Ryd vej\" funktionen
+      MC_HOC_2017_07_Cole: "Der er is i vejen!  \\\r\n \\\r\n\"Ryd vej\" funktionen
         kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
         minevognen [minecart_normal]! "
-      MC_HOC_2017_07_Kiki: "Loop er ikke den eneste måde at gentage kode på!  \r\n\r\nHer
+      MC_HOC_2017_07_Cole_2019: "Der er is i vejen!  \\\r\n \\\r\n\"Ryd vej\" funktionen
+        kan hjælpe dig med at ødelægge isen, så {currentPlayerName} kan nå hen til
+        minevognen [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Loop er ikke den eneste måde at gentage kode på!  \\\r\n\\\r\nHer
         giver vi dig funktionen \"fjern kaktusser\", der fælder tre kaktusser, hver
         gang du bruger den.  Brug to \"fjern kaktusser\" blokke til at rydde vejen
         til det orange felt. "
       MC_HOC_2017_07a_Kiki: Rediger nu det aktuelle loop, så agenten rydder vejen
         hen til det orange felt.
       MC_HOC_2017_08_Cole: "I stedet for at ødelægge, før du går, skal du nu placere
-        en blok.  \r\n\r\nRet funktionen, så den virker i ørkenen."
+        en blok.  \\\r\n\\\r\nRet funktionen, så den virker i ørkenen."
       MC_HOC_2017_08_Kiki: "I stedet for at ødelægge kaktusser skal du nu placere
-        sten over lava og derefter ødelægge sandsten.  \r\n\r\nRet funktionen, så
-        den virker i den aktuelle opgave."
-      MC_HOC_2017_08_RY: "Nu har du **TO** funktioner at vælge imellem! \n\n\nBrug
-        funktionerne til at bygge en bro hen over lavaen for {currentPlayerName} i
-        en fart."
-      MC_HOC_2017_08_Will: "Nu har du **TO** funktioner at vælge imellem! \n\n\nBrug
+        sten over lava og derefter ødelægge sandsten.  \\\r\n\\\r\nRet funktionen,
+        så den virker i den aktuelle opgave."
+      MC_HOC_2017_08_RY: "Nu har du **TO** funktioner at vælge imellem! \n\nBrug funktionerne
+        til at bygge en bro hen over lavaen for {currentPlayerName} i en fart."
+      MC_HOC_2017_08_Will: "Nu har du **TO** funktioner at vælge imellem! \n\nBrug
         funktionerne til at bygge en bro hen over lavaen for spilleren i en fart."
       MC_HOC_2017_09_Cole: Brug funktionerne til at hjælpe agenten med at ødelægge
         de enorme jordblokke, der blokerer spillerens vej til trykpladen.
-      MC_HOC_2017_09_Kiki: "Startkoden kan ikke fjernes.\r\n\r\nTilføj kommandoer
+      MC_HOC_2017_09_Kiki: "Startkoden kan ikke fjernes.\\\r\n\\\r\nTilføj kommandoer
         til \"anlæg spor\" funktionen, så programmet i arbejdsområdet får agenten
         frem til trykpladen. "
       MC_HOC_2017_09_RS_CLONE: Ret funktionen, så hullerne udfyldes, og træd derefter
@@ -419,12 +417,13 @@ da:
       MC_HOC_2017_10_Kiki: Byg en funktion fra bunden, der gør det lettere for at
         agenten at færdiggøre minevognen og få spilleren hen til det orange felt.
       MC_HOC_2017_10_RETRY: "Kan du se forskellen mellem de to funktioner i dit arbejdsområde?
-        \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen, så du kan
-        rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel]. \r\n "
+        \\\r\n \\\r\nKombiner funktionerne med andre koder fra værktøjskassen, så
+        du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
+        \\\r\n "
       MC_HOC_2017_10_RETRY_2019: "Kan du se forskellen mellem de to funktioner i dit
-        arbejdsområde? \r\n \r\nKombiner funktionerne med andre koder fra værktøjskassen,
+        arbejdsområde? \\\r\n \\\r\nKombiner funktionerne med andre koder fra værktøjskassen,
         så du kan rydde vejen for minevognen og få fat i **fyrtøjet** [flint_and_steel].
-        \r\n "
+        \\\r\n "
       MC_HOC_2017_10_RYAN: Prøv at bygge funktioner fra bunden, der gør det lettere
         for at agenten at færdiggøre minevognen og få spilleren hen til det orange
         felt.
@@ -436,7 +435,7 @@ da:
       MC_HOC_2017_13_Cole: "**Fri leg:** Nu er det op til dig! Brug agentens kode
         til at hjælpe dig med at udforske verden."
       MC_HOC_2017_4.5v2: "Du slap ud af sumpen!  Nu gælder det om at få spilleren
-        sikkert frem til det orange felt. \n\n\nHjælp agenten med at rydde vejen ved
+        sikkert frem til det orange felt. \n\nHjælp agenten med at rydde vejen ved
         at finde et simpelt mønster og bruge loop til at krydse de første to trykplader."
       MC_HOC_2017_Ali: 'Se på funktionerne nedenfor.  Hvordan kan du bruge dem til
         at undgå ghasterne og hjælpe {currentPlayerName} sikkert frem til den **fortryllede
@@ -453,10 +452,10 @@ da:
       MC_HOC_2017_FP20x20_2019: "**Fri leg:** Nu er det op til dig! Brug agentens
         kode til at hjælpe dig med at udforske verden."
       MC_HOC_2017_Ryan_03: "Har du opdaget, at der kan være mere end ét kodestykke
-        i et loop?  \r\n\r\nBrug et gentagelsesloop til at hjælpe agenten med at bygge
-        en bro ved at placere blokke i vandet."
+        i et loop?  \\\r\n\\\r\nBrug et gentagelsesloop til at hjælpe agenten med
+        at bygge en bro ved at placere blokke i vandet."
       MC_HOC_2017_Ryan_05: "Nogle gange er du nødt til at fjerne ting, der står i
-        vejen for din spiller.  \r\nBrug \"ødelæg\" blokken til at fælde alle kaktusserne
+        vejen for din spiller.  \\\r\nBrug \"ødelæg\" blokken til at fælde alle kaktusserne
         mellem agenten og trykpladen."
       MC_HOC_Kiki_02: Nogen skal stå på trykpladen, hvis sidedøren skal åbnes.  Hjælp
         agenten hen til pladen, så spilleren kan komme ud af huset.

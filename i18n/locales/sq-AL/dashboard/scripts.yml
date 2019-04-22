@@ -1598,6 +1598,8 @@ sq:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Të shkruarit e Këngëve
         express-2019:
           stages:
             Relay Programming:
@@ -1686,3 +1688,11 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            Building a Foundation:
+              name: Krijimi i një fondacioni

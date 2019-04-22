@@ -417,8 +417,10 @@ fr:
       gumball: Le monde incroyable de Gumball
       iceage: L’âge de Glace
       infinity: Infini
+      makerlab: Outils de créateur
       minecraft_adventurer: Aventurier de Minecraft
       minecraft_aquatic: Minecraft Aquatique
+      minecraft_codebuilder: 'Minecraft : Connexion au code'
       minecraft_designer: Minecraft
       minecraft_hero: Héros de Minecraft
       playlab: Labo de jeux
@@ -1262,8 +1264,10 @@ fr:
     csf_f_2: Contenu du cours F
     csf_digcit: Citoyenneté numérique
     csf_jigsaw: Puzzle
+    csf_sequencing: Séquençage
     csf_loops: boucles
     csf_events: Événements
+    csf_online_safety: Sécurité en ligne
     csf_binary: Binaire
     csf_conditionals: Instructions conditionnelles
     csf_nested_loops: Boucles imbriquées
@@ -1304,7 +1308,17 @@ fr:
     csp_variables: variables
     csp_conditionals: Instructions conditionnelles
     csp_functions: fonctions
+    csp_project: Projet
+    csp_lists: Listes
+    csp_loops: boucles
+    csp_traversals: Parcours
+    csp_libraries: Bibliothèques
     dlp: Sujets de réflexion
+    time4cs_c1: Les Everglades et ses écosystèmes
+    time4cs_c2: Les chaînes alimentaires dans les Everglades
+    time4cs_c3: Vivre dans les Everglades
+    time4cs_c4: Impact Invasif sur les Everglades
+    time4cs_c5: Citoyens influent sur les changements dans les Everglades
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
@@ -1388,6 +1402,11 @@ fr:
     quelle leçon tu dois suivre.
   hidden_script: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
     quelle unité tu dois suivre.
+  no_script_access_student: Vous n'avez pas accès à cette unité. Veuillez demander
+    à votre enseignant sur quelle unité devriez-vous travailler.
+  no_script_access_teacher: Vous n'avez pas accès à cette unité. Si vous pensez que
+    vous devriez avoir accès à cette unité, veuillez écrire à support@code.org afin
+    que nous puissions corriger la situation.
   return_unit_overview: Accéder à la vue d'ensemble de l'unité
   return_course_overview: Accéder à la vue d'ensemble de l'unité
   view_all_units: Voir toutes les unités

@@ -351,8 +351,10 @@ zh-CN:
       gumball: 阿甘妙世界
       iceage: 冰河世纪
       infinity: 无限
+      makerlab: 制造商工具包
       minecraft_adventurer: "《我的世界》大冒险"
       minecraft_aquatic: 水上我的世界
+      minecraft_codebuilder: '我的世界: 代码连接'
       minecraft_designer: 我的世界
       minecraft_hero: "《我的世界》 英雄"
       playlab: 游戏实验室
@@ -698,6 +700,7 @@ zh-CN:
       title: 运动
       body: 创造一个篮球游戏或跨越各种运动的混合比赛。
     text-compression:
+      title: 文本压缩
       body: 在这节课中，学生们会通过符号替换模式的方法来使用文本压缩组件来压缩文本。
     unplugged:
       title: 离线课程
@@ -943,8 +946,10 @@ zh-CN:
     csf_f_2: 课程F的内容
     csf_digcit: 数字公民
     csf_jigsaw: 拼图
+    csf_sequencing: 排序
     csf_loops: 循环
     csf_events: 事件
+    csf_online_safety: 在线安全
     csf_binary: 二进制
     csf_conditionals: 条件语句
     csf_sprites: 精灵
@@ -988,7 +993,17 @@ zh-CN:
     csp_variables: 变量
     csp_conditionals: 条件语句
     csp_functions: 函数
+    csp_project: 项目
+    csp_lists: 列表
+    csp_loops: 循环
+    csp_traversals: 遍历
+    csp_libraries: 使用的开源库
     dlp: 反思提示
+    time4cs_c1: 湿地及其生态系统
+    time4cs_c2: 湿地里的食物链
+    time4cs_c3: 生活在湿地
+    time4cs_c4: 对湿地的入侵影响
+    time4cs_c5: 市民对湿地变化的影响
   external_links:
     disclaimer: 免责声明
     leaving_domain: 你现在正在离开code.org，访问一个不由我们创建的站点。

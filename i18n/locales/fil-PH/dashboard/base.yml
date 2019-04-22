@@ -898,6 +898,8 @@ fil:
     csp_variables: 'Mga variable'
     csp_conditionals: 'Mga conditional'
     csp_functions: 'Mga function'
+    csp_lists: 'Mga listahan'
+    csp_loops: 'Mga loop'
     dlp: 'Pagmunimuni na mga Prompt'
   external_links:
     disclaimer: Disclaimer

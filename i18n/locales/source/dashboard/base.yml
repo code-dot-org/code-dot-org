@@ -999,7 +999,16 @@ en:
     csp_conditionals: 'Conditionals'
     csp_functions: 'Functions'
     csp_project: 'Project'
+    csp_lists: 'Lists'
+    csp_loops: 'Loops'
+    csp_traversals: 'Traversals'
+    csp_libraries: 'Libraries'
     dlp: 'Reflection Prompts'
+    time4cs_c1: 'Everglades and Its Ecosystems'
+    time4cs_c2: 'Food Chains in the Everglades'
+    time4cs_c3: 'Living in the Everglades'
+    time4cs_c4: 'Invasive Impacts on the Everglades'
+    time4cs_c5: 'Citizens Affect Change in the Everglades'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1124,7 +1133,7 @@ en:
       workshop_facilitator: 'Workshop Facilitator'
       workshop_course: 'Workshop Course'
       email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Male'

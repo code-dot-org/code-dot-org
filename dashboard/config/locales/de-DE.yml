@@ -1098,6 +1098,8 @@ de:
     csp_variables: Variablen
     csp_conditionals: Bedingungen
     csp_functions: Funktionen
+    csp_lists: Listen
+    csp_loops: Schleifen
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-

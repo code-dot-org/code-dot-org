@@ -876,6 +876,8 @@ ne:
     csp_variables: Variables
     csp_conditionals: Conditionals
     csp_functions: Functions
+    csp_lists: Lists
+    csp_loops: Loops
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

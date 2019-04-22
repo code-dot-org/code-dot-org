@@ -87,6 +87,7 @@ sk:
       do something: urob niečo
       filter_pixel: filtruj_pixel
       draw_image: nakresli_obrázok
+      checkSimulationEnd: skontrolujKoniecSimulacie
       witch ending: koniec_bosorky
       story: príbeh
       starting path: začiatok cesty
@@ -240,7 +241,7 @@ sk:
       harvest: zožni
       get corn and come back: získaj kukuricu a vráť sa naspäť
       pick along path: pozbieraj popri ceste
-      check square for corn: skontroluj či je v štvorci kukurica
+      check square for corn: kukurica
       get all pumpkins: získaj všetky tekvice
       pumpkin square: štvorec s tekvicou
       navigate: naviguj

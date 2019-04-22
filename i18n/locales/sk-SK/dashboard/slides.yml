@@ -12,7 +12,7 @@ sk:
       5:
         text: "Program je súbor pokynov, ktoré tvoj počítač vykonáva."
       6:
-        text: "Cieľom tvojho prvého programu je dostať nahnevaného vtáka cez bludisko k zelenému prasaťu."
+        text: "Cieľom tvojho prvého programu je dostať nahnevaného vtáka cez bludisko k zelenému prasiatku."
       7:
         text: "Na ľavej strane je bludisko, kde program prebieha. Pokyny pre každý príkaz sú pod bludiskom."
       8:
@@ -26,7 +26,7 @@ sk:
       12:
         text: "Ak spustíš program a chceš ho upraviť a spustiť znovu, klikni na tlačítko \"Reset\". "
       13:
-        text: "Poďme na tie prasce!"
+        text: "Poďme na tie prasiatka!"
     artist_intro:
       1:
         text: "Ahoj, ja som JR ! Každý automobilový závodný tím potrebuje počítačového vedca, aby vyhral. Oni analyzujú údaje z auta, aby mohlo ísť rýchlejšie."
@@ -82,7 +82,7 @@ sk:
       1:
         text: "Ahoj, ja som Mark! Poďme sa naučiť niečo o cykloch. Používaním cyklov rozkážeš počítaču, aby opakoval znova a znova akékoľvek množstvo pokynov, tisíce, alebo dokonca aj miliardy krát."
       2:
-        text: "V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasa."
+        text: "V týchto puzzle chceme vtáka posunúť vpred o 5 políčok, aby dostal prasiatko."
       3:
         text: "Môžeme použiť nový \"opakovací\" blok, ktorý nám uľahčí prácu."
       4:
@@ -95,13 +95,13 @@ sk:
         text: "Uži si používanie nového \"repeat\" bloku!"
     loop_until:
       1:
-        text: "Ahoj, ja som Chris. Pred nástupom do Miami Heat som šiel študovať informatiku na Georgia Tech. Poďme si vyskúšať nový \"opakuj dovtedy\" blok."
+        text: "Ahoj, ja som Chris. Pred nástupom do Miami Heat som šiel študovať informatiku na Georgia Tech. Poďme si vyskúšať nový blok \"opakuj pokiaľ neplatí\"."
       2:
-        text: "Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasa?"
+        text: "Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasiatko?"
       3:
-        text: "Ak vložíme \"pohni sa vpred\" blok do \"opakuj dovtedy\" bloku, vták sa bude posúvať vpred, pokým nedosiahne prasa (alebo nenarazí do steny)."
+        text: "Ak vložíme blok \"pohni sa dopredu\" do bloku \"opakuj \"pokiaľ neplatí\", vták sa bude posúvať vpred, pokým nedosiahne prasiatko (alebo nenarazí do steny)."
       4:
-        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj dovtedy" môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
+        text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj pokiaľ neplatí" môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
     if:
       1:
         text: "Ahoj ja som Bill! Poďme sa naučiť niečo o podmienkach \"ak\". Prostredníctvom podmienok sa počítač vie rozhodovať."
@@ -145,7 +145,7 @@ sk:
       1:
         text: "Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som na množstve filmov, vrátane Šreka."
       2:
-        text: "Toto je náš nový cyklus \"počítadlo\". Bude dookola opakovať akcie dookola, pričom ich môžeme pri každom opakovaní mierne upraviť."
+        text: "Toto je náš nový cyklus \"počítadlo\". Bude dookola opakovať jednotlivé kroky, pričom ich môžeme pri každom opakovaní mierne upraviť."
       3:
         text: "V tomto prípade náš cyklus \"počítadlo\" hovorí \"počítaj od 50 do 90 v násobkoch 10tich\" a vo vnútri nej máme blok \"nakresli štvorec\". Presuň blok \"počítadlo\" zo sekcie \"Premenné\" do pozície \"dĺžka\"."
       4:
@@ -196,7 +196,7 @@ sk:
       1:
         text: "Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií. Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať do miliardy, alebo do triliónu. Nezačne sa nudiť a potrvá mu to len pár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače dokážu opakovať veci stovky, alebo dokonca miliardy krát."
       2:
-        text: "V programovaní toto voláme cyklus. Cyklus znamená, že Tvoj kód sa zopakuje znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Opakuj\"."
+        text: "V programovaní toto voláme cyklus. Cyklus znamená, že tvoj kód sa zopakuje znova a znova. V ďalšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec pomocou bloku \"Opakuj\"."
       3:
         text: "Akýkoľvek blok kódu, ktorý vložíš do bloku \"Opakuj\", sa bude opakovať v sekvencii toľkokrát, koľko len budeš chcieť."
       4:
