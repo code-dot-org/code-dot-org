@@ -1,7 +1,4 @@
-# This class provides the content for both the hamburger and the header.
-#
-# As part of this content, it also provides CSS classes which determine
-# responsive visibility for the header itself and the items inside it.
+# This class provides the content for help menu in the header.
 
 class HelpHeader
   def self.get_help_contents(options)
