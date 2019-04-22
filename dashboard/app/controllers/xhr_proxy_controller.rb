@@ -72,6 +72,7 @@ class XhrProxyController < ApplicationController
     random.org
     rhcloud.com
     runescape.com
+    samples.openweathermap.org
     sheets.googleapis.com
     spreadsheets.google.com
     stats.minecraftservers.org

@@ -147,6 +147,7 @@ class Script < ActiveRecord::Base
     is_stable
     supported_locales
     pilot_experiment
+    project_sharing
   )
 
   def self.twenty_hour_script
@@ -1330,7 +1331,8 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
-      show_assign_button: assignable?(user)
+      show_assign_button: assignable?(user),
+      project_sharing: project_sharing
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1407,13 +1409,22 @@ class Script < ActiveRecord::Base
     return [] unless family_name
     return [] unless courses.empty?
     with_hidden = user&.hidden_script_access?
-    Script.
+    scripts = Script.
       where(family_name: family_name).
       all.
       select {|script| with_hidden || !script.hidden}.
-      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
-      sort_by {|info| info[:version_year]}.
-      reverse
+      map do |s|
+        {
+          name: s.name,
+          version_year: s.version_year,
+          version_title: s.version_year,
+          can_view_version: s.can_view_version?(user),
+          is_stable: s.is_stable,
+          locales: s.supported_locale_names
+        }
+      end
+
+    scripts.sort_by {|info| info[:version_year]}.reverse
   end
 
   def self.clear_cache
@@ -1456,7 +1467,8 @@ class Script < ActiveRecord::Base
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment]
+      pilot_experiment: script_data[:pilot_experiment],
+      project_sharing: !!script_data[:project_sharing]
     }.compact
   end
 

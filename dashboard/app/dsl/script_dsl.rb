@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @is_stable = nil
     @supported_locales = []
     @pilot_experiment = nil
+    @project_sharing = nil
   end
 
   integer :id
@@ -47,6 +48,7 @@ class ScriptDSL < BaseDSL
   boolean :has_verified_resources
   boolean :has_lesson_plan
   boolean :is_stable
+  boolean :project_sharing
 
   string :wrapup_video
   string :script_announcements
@@ -115,7 +117,8 @@ class ScriptDSL < BaseDSL
       version_year: @version_year,
       is_stable: @is_stable,
       supported_locales: @supported_locales,
-      pilot_experiment: @pilot_experiment
+      pilot_experiment: @pilot_experiment,
+      project_sharing: @project_sharing
     }
   end
 
@@ -280,6 +283,7 @@ class ScriptDSL < BaseDSL
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << 'project_sharing true' if script.project_sharing
 
     s << '' unless s.empty?
     s << serialize_stages(script)
