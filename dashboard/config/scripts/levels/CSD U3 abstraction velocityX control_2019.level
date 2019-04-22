@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:49.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -86,10 +86,10 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Use conditionals to control the flow of a program; model two dimensional movement on a coordinate plane.",
-    "rubric_exceeds": "Pressing the right arrow key once causes the fish to swim to the right side of the screen, turn and swim to the left side of the screen, then stop.  There are no extra blocks in the program, and the counter pattern is not used.",
-    "rubric_meets": "Pressing the right arrow key once causes the fish sprite to swim right across the screen.  The counter pattern is not used.",
-    "rubric_approaches": "Pressing the right arrow key once causes the fish sprite to move across the screen in some way.",
-    "rubric_no_evidence": "Pressing the arrow key does not cause movement, or the movement stops as soon as the key is let up.",
+    "rubric_performance_level_1": "Pressing the right arrow key once causes the fish to swim to the right side of the screen, turn and swim to the left side of the screen, then stop.  There are no extra blocks in the program, and the counter pattern is not used.",
+    "rubric_performance_level_2": "Pressing the right arrow key once causes the fish sprite to swim right across the screen.  The counter pattern is not used.",
+    "rubric_performance_level_3": "Pressing the right arrow key once causes the fish sprite to move across the screen in some way.",
+    "rubric_performance_level_4": "Pressing the arrow key does not cause movement, or the movement stops as soon as the key is let up.",
     "preload_asset_list": null
   },
   "published": true,
