@@ -16,12 +16,13 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import {hasLockableStages} from '@cdo/apps/code-studio/progressRedux';
-import ScriptOverviewHeader, {scriptVersionShape} from './ScriptOverviewHeader';
+import ScriptOverviewHeader from './ScriptOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
 } from '@cdo/apps/util/dismissVersionRedirect';
+import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -35,8 +36,10 @@ class ScriptOverview extends React.Component {
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(scriptVersionShape).isRequired,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     courseName: PropTypes.string,
+    locale: PropTypes.string,
+    showAssignButton: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -100,7 +103,9 @@ class ScriptOverview extends React.Component {
       versions,
       hiddenStageState,
       selectedSectionId,
-      courseName
+      courseName,
+      locale,
+      showAssignButton
     } = this.props;
 
     const displayRedirectDialog =
@@ -138,6 +143,7 @@ class ScriptOverview extends React.Component {
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
               courseName={courseName}
+              locale={locale}
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&
@@ -155,6 +161,7 @@ class ScriptOverview extends React.Component {
               viewAs={viewAs}
               isRtl={isRtl}
               resources={teacherResources}
+              showAssignButton={showAssignButton}
             />
           </div>
         )}

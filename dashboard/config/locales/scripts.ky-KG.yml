@@ -1265,3 +1265,13 @@ ky:
           stages:
             The Internet:
               name: Интернет
+        time4csdemo:
+          stages:
+            Programming in Artist:
+              name: Сүрөтчүдөгү програмдоо
+            Loops in Artist:
+              name: Сүрөтчүдөгү циклдар
+            Nested Loops with Frozen:
+              name: Тоңгондогу салынган циклдар
+            Functions in Artist:
+              name: Сүрөтчүдөгү функциялар

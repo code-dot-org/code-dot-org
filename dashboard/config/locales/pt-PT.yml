@@ -876,6 +876,8 @@ pt:
     csp_variables: variáveis
     csp_conditionals: Condicionais
     csp_functions: Funções
+    csp_lists: Listas
+    csp_loops: ciclos
   hoc_download:
     title: Hora das transferências de Código
     capsule_title: Tem Internet?

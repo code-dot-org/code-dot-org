@@ -584,6 +584,8 @@ eu:
     csp_variables: 'Aldagaiak'
     csp_conditionals: 'Baldintzak'
     csp_functions: 'Funtzioak'
+    csp_lists: 'Zerrendak'
+    csp_loops: 'Itzuliak'
   pd:
     form_labels:
       email: 'E-posta'

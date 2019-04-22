@@ -1,3 +1,4 @@
+---
 cs:
   data:
     long_instructions:
@@ -6,195 +7,203 @@ cs:
       2-3 Artist 9 NEW: Dokončete tohoto draka
       2-3 Artist 9 REPLACEMENT: Dokresli schody!
       2-3 Artist 9: Dokončete tohoto draka
-      2-3 Artist Debugging 10: "Směrové tlačítka na mém herním ovladači jsou příliš úzká.\n\nMůžeš je udělat širší od 10 pixelů?\n\nZkus nejprve kód spustit, abys viděl(a), co je špatně."
-      2-3 Artist Debugging 11: |-
-        Pomoz mi dokončit mé krásné sněhové vločky. Kolikrát musím "opakovat", abych to dokončil?
-      2-3 Artist Debugging 2: "Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů."
-      2-3 Artist Debugging 3: "Moje loď má díru! Můžeš to opravit změnou úhlu čáry? Rada: poslední úhel je mimo o 15 stupňů."
-      2-3 Artist Debugging 5: "Kód pro nohy a chodidla, které vidíš, je špatný. Rada: Noha je příliš dlouhá, možná bude třeba odstranit nohu (slovní hříčka)"
-      2-3 Artist Debugging 6: |-
-        Vypadá to, že sedím na židli, které chybí noha. Upravte bloky k nakreslení nohy.
-      2-3 Artist Debugging 7: |-
-        Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš to udělat, aby to vypadalo jako C?
-      2-3 Artist Debugging 8: |-
-        Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
+      2-3 Artist Debugging 10: |-
+        Směrové tlačítka na mém herním ovladači jsou příliš úzká.
+
+        Můžeš je udělat širší od 10 pixelů?
+
+        Zkus nejprve kód spustit, abys viděl(a), co je špatně.
+      2-3 Artist Debugging 11: Pomoz mi dokončit mé krásné sněhové vločky. Kolikrát musím "opakovat", abych to dokončil?
+      2-3 Artist Debugging 2: 'Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů.'
+      2-3 Artist Debugging 3: 'Moje loď má díru! Můžeš to opravit změnou úhlu čáry? Rada: poslední úhel je mimo o 15 stupňů.'
+      2-3 Artist Debugging 5: 'Kód pro nohy a chodidla, které vidíš, je špatný. Rada: Noha je příliš dlouhá, možná bude třeba odstranit nohu (slovní hříčka)'
+      2-3 Artist Debugging 6: Vypadá to, že sedím na židli, které chybí noha. Upravte bloky k nakreslení nohy.
+      2-3 Artist Debugging 7: Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš to udělat, aby to vypadalo jako C?
+      2-3 Artist Debugging 8: Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
       2-3 Artist Debugging 9: |-
         Něco nefunguje!
 
         Kód pro tento stonek je chybný. Zvládneš vymyslet, jak umělce navést na správnou cestu?
       2-3 Artist Free Play: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
-      2-3 Artist Functions 11.5: "Tady je to stejné, funkce \"Nakreslit šestiúhelníku\". Co se stane, když se otočí jen o 60 stupňů při každém opakování?"
-      2-3 Artist Functions 12 Mike: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
-      2-3 Artist Functions 12 a: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
-      2-3 Artist Functions 12: "Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci \"nakreslit květinu\" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  "
-      2-3 Artist Functions 2: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
+      2-3 Artist Functions 11.5: Tady je to stejné, funkce "Nakreslit šestiúhelníku". Co se stane, když se otočí jen o 60 stupňů při každém opakování?
+      2-3 Artist Functions 12 Mike: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
+      2-3 Artist Functions 12 a: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
+      2-3 Artist Functions 12: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
+      2-3 Artist Functions 2: Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů.
       2-3 Artist Functions 3 a: "Upravte funkci \"nakreslit čtverec\" tak, aby nakreslila brýle s rámy, které jsou velké 115px po obou stranách. \n\nČtverce jsou nyní od sebe vzdálené 45 pixelů."
-      2-3 Artist Functions 3: "Uprav funkci nakreslit čtverec s délkou strany 115 a nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů."
+      2-3 Artist Functions 3: Uprav funkci nakreslit čtverec s délkou strany 115 a nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů.
       2-3 Artist Functions 4 a: Nyní vložte funkci dovnitř smyčky a přidejte tah navíc pro vykreslení těchto tří čtverců.
       2-3 Artist Functions 4: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       2-3 Artist Loops 1: Můžeš udělat šestiúhelník se stranami 100 pixelů dlouhé dokončené v buňce? Pamatuj si, že to znamená, že budeš potřebovat jen otočit o 60 stupňů!
       2-3 Artist Loops 2: Nyní použij blok opakování v buňce shell.
       2-3 Artist Loops New 10: Teď spojme v cyklu dohromady několik V.
       2-3 Artist Loops New 12: 'Nakresli diamant se stranou 100 pixelů. '
-      2-3 Artist Loops New 13: "Připravili jsme pro tebe kód (šedý), který vytvoří jeden diamant.\n\nOpakuj tento šedý kód, abys vytvořil zábavný vzor!"
-      2-3 Artist Loops New 2: |-
-        Zde je část kódu použitého k nakreslení čtverce. Co se stane, když použiješ blok opakování pro 4 krát spuštění tohoto kódu?
+      2-3 Artist Loops New 13: |-
+        Připravili jsme pro tebe kód (šedý), který vytvoří jeden diamant.
+
+        Opakuj tento šedý kód, abys vytvořil zábavný vzor!
+      2-3 Artist Loops New 2: Zde je část kódu použitého k nakreslení čtverce. Co se stane, když použiješ blok opakování pro 4 krát spuštění tohoto kódu?
       2-3 Artist Loops New 9: K dokončení šipky nakresli jednoduché V (kde obě strany jsou 50 pixelů).
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát k dokončení vzoru.
       2-3 Artist Nested Loops 11: Opakovat tento kód 4 krát k dokončení vzoru, otoč o 90 ° po každém průchodu.
       2-3 Artist Nested Loops 12: Opakovat tento kód 12 krát dokončit kudrlinek.
-      2-3 Artist Nested Loops 2: "Nyní zopakuj trojúhelník 6 krát. Po nakreslení každého trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího."
-      2-3 Artist Nested Loops 4: "Opakovat tento kosodélník 12 krát k nakreslení květiny. Rada: 12 kosodélníků je stejně udělaná jako 12 trojúhelníků, co jsi udělal - kolik musíš otočit po každém tvaru?"
-      2-3 Artist Nested Loops 5: "Vyplň okna budovy vnořeným cyklem. Okna jsou dlouhá 20 pixelů a od sebe 20 pixelů."
-      2-3 Artist Nested Loops 7: "Opakovat 10 krát tento trojúhelník k nakreslené slunce. Budeš se muset přesunout a otočit po každém trojúhelníku. Můžeš zjistit, kolik se musíš otočit vydělením počtu stupňů v kruhu počtem vytvořených obrazců."
-      2-3 Artist Nested Loops 8: "Přidejme nyní trochu trávy na náš obrázek. Každý trs trávy je od sebe 50 pixelů."
-      2-3 Artist Nested Loops 9: "Nyní dokončíme obrázek přidáním květiny. Květinu nakreslíš pomoci 12 diamantů."
+      2-3 Artist Nested Loops 2: Nyní zopakuj trojúhelník 6 krát. Po nakreslení každého trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího.
+      2-3 Artist Nested Loops 4: 'Opakovat tento kosodélník 12 krát k nakreslení květiny. Rada: 12 kosodélníků je stejně udělaná jako 12 trojúhelníků, co jsi udělal - kolik musíš otočit po každém tvaru?'
+      2-3 Artist Nested Loops 5: Vyplň okna budovy vnořeným cyklem. Okna jsou dlouhá 20 pixelů a od sebe 20 pixelů.
+      2-3 Artist Nested Loops 7: Opakovat 10 krát tento trojúhelník k nakreslené slunce. Budeš se muset přesunout a otočit po každém trojúhelníku. Můžeš zjistit, kolik se musíš otočit vydělením počtu stupňů v kruhu počtem vytvořených obrazců.
+      2-3 Artist Nested Loops 8: Přidejme nyní trochu trávy na náš obrázek. Každý trs trávy je od sebe 50 pixelů.
+      2-3 Artist Nested Loops 9: Nyní dokončíme obrázek přidáním květiny. Květinu nakreslíš pomoci 12 diamantů.
       2-3 Artist Nested Loops Free Play: Zahraj si zdarma, nakresli něco cool s vnořenými cykly.
-      2-3 Bee Conditionals 11: "Sbírej nektar, kde květy mají nektar."
-      2-3 Bee Conditionals 13: |-
-        Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?
-      2-3 Bee Conditionals 15: "Sbírej nektar ze všech čtyř květů."
-      2-3 Bee Conditionals 3: "Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus."
-      2-3 Bee Debugging 10: "S téhle hádanky se mi točí hlava!\n\nOprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu."
-      2-3 Bee Debugging 3: |-
-        Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
-      2-3 Bee Debugging 6: |-
-        Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
-      2-3 Bee Debugging 9: |-
-        Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      2-3 Bee Conditionals 11: Sbírej nektar, kde květy mají nektar.
+      2-3 Bee Conditionals 13: 'Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?'
+      2-3 Bee Conditionals 15: Sbírej nektar ze všech čtyř květů.
+      2-3 Bee Conditionals 3: Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus.
+      2-3 Bee Debugging 10: |-
+        S téhle hádanky se mi točí hlava!
+
+        Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
+      2-3 Bee Debugging 3: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      2-3 Bee Debugging 6: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      2-3 Bee Debugging 9: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       2-3 Bee Debugging Assessment 1: |-
         **Hodnocení:** Nyní je čas ukázat, co umíš!
 
         Oprav chybu/chyby k sesbírání všeho nektaru a vyrobení veškerého medu.
-      2-3 Bee Functions 10: "Fialové květiny mohou mít buď 1 nebo 0 nektaru.  Vytvoř funkci ke sběru nektaru pouze z fialových květy mající nektar."
-      2-3 Bee Functions 2: "Funkce jsou bloky kódu, provádějící úkol. Použij funkci \"dostat 5\" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků."
-      2-3 Bee Functions 4: "Funkce \"posunout a dostat nektar\" otočí včelu, sbírá nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar."
-      2-3 Bee Loops 1: |-
-        Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
+      2-3 Bee Functions 10: Fialové květiny mohou mít buď 1 nebo 0 nektaru.  Vytvoř funkci ke sběru nektaru pouze z fialových květy mající nektar.
+      2-3 Bee Functions 2: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
+      2-3 Bee Functions 4: Funkce "posunout a dostat nektar" otočí včelu, sbírá nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
+      2-3 Bee Loops 1: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. '
       2-3 Bee Loops 3A: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení veškerého medu.
-      2-3 Bee Loops 4A: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
-      2-3 Bee Loops 8: "Fialové květiny mají neznámé množství nektaru. Použij cyklus \"while nektar\" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho, pokud je podmínka pravdivá, v tomto případě nektar > 0."
+      2-3 Bee Loops 4A: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+      2-3 Bee Loops 8: Fialové květiny mají neznámé množství nektaru. Použij cyklus "while nektar" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho, pokud je podmínka pravdivá, v tomto případě nektar > 0.
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku pomocí co nejméně bloků!
-      2-3 Maze Loops 18: "Dostaň mě ke slunečnici!"
+      2-3 Maze Loops 18: Dostaň mě ke slunečnici!
       4-5 Artist 10: Stiskni tlačítko "Run" ke zkoušce kódu. Pak opakuj tolikrát, až se dokončí kresba. Barvy budou být pokaždé jiné.
       4-5 Artist 2: Dokážeš opakovat tento kód k dokončení čtverce?
-      4-5 Artist 3.5: "Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo to zkus stisknutím \"Spustit\").\n\nPak opakuj kód několikrát, aby se kresba dokončila!"
+      4-5 Artist 3.5: |-
+        Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo to zkus stisknutím "Spustit").
+
+        Pak opakuj kód několikrát, aby se kresba dokončila!
       4-5 Artist 5: Jaký úhel použiješ?
-      4-5 Artist 6: "Tento rovnostranný trojúhelník má úhly 60, 60,\na 60 stupňů. Každá strana má 200 pixelů. Dokonči kresbu."
+      4-5 Artist 6: |-
+        Tento rovnostranný trojúhelník má úhly 60, 60,
+        a 60 stupňů. Každá strana má 200 pixelů. Dokonči kresbu.
       4-5 Artist Free Draw 1: Volná kresba! Nakresli co tě napadne.
-      4-5 Artist Patterns 1: |-
-        Umíš nakreslit tento čtverec pomocí cyklu? Každá strana je dlouhá 20 pixelů.
-      4-5 Artist Patterns 12: "Když zkopíruješ tento cyklus a otočíš vlevo místo vpravo, co se stane? Můžeš to zopakovat k kreslení této vlny?"
-      4-5 Artist Patterns 13: "Teď musíme opakovat to celé čtyřikrát k vytvoření tento rámečku k obrázku. Pozor na rohy - nemůžeš je jen otočit o 90 stupňů! Pokud 60 krát se opakují 3 stupně udělá se půlkruh, který z těchto bloků kódu bude Čtvrtkruh pro rohy?"
+      4-5 Artist Patterns 1: Umíš nakreslit tento čtverec pomocí cyklu? Každá strana je dlouhá 20 pixelů.
+      4-5 Artist Patterns 12: Když zkopíruješ tento cyklus a otočíš vlevo místo vpravo, co se stane? Můžeš to zopakovat k kreslení této vlny?
+      4-5 Artist Patterns 13: Teď musíme opakovat to celé čtyřikrát k vytvoření tento rámečku k obrázku. Pozor na rohy - nemůžeš je jen otočit o 90 stupňů! Pokud 60 krát se opakují 3 stupně udělá se půlkruh, který z těchto bloků kódu bude Čtvrtkruh pro rohy?
       4-5 Artist Patterns 3: Teď pojďme hlouběji o jednu úroveň. Vnořili jsme celý blok kódu do jiného cyklu, ale umělec se musí dostat zpět na místo další řádky. Který z těchto bloků kódu můžeš umístit na konec vnějšího cyklu, aby nakreslil celou mřížku?
       4-5 Artist Patterns 8: Použij cyklus k nakreslení tohoto šestiúhelníku se stranami 40 pixelů a úhlu 60 stupňů.
-      4-5 Artist Patterns 9: "Zopakuj nyní tento kód 3 krát k nakreslení celé řádky. Rada: Každý šestiúhelník je 80 pixelů široký od nejvzdálenějších bodů zleva doprava."
+      4-5 Artist Patterns 9: 'Zopakuj nyní tento kód 3 krát k nakreslení celé řádky. Rada: Každý šestiúhelník je 80 pixelů široký od nejvzdálenějších bodů zleva doprava.'
       4-5 Artist Patterns Free Play: Zdarma si pohraj - zkus si od ruky udělat vlastní vzor!
-      4-5 Bee Conditionals 2: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
-      4-5 Bee Conditionals 5: |-
-        Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
-      4-5 Bee Conditionals 6: "Tento Fialový květ může mít buď 3, 2 nebo 1 nektar. Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if, else bloku. Dokonči řešení pro sběr neznámé množství nektaru."
-      4-5 Bee Conditionals 7: "Pamatujte si, že fialové květy mohou mít buď 3, 2 nebo 1 nektarů. Dokonči funkci \"kontrolovat fialový květ\" a použít ji sesbírat všechen nektar na květinách."
-      4-5 Bee Conditionals 8: "Napiš uvnitř funkce \"kontrolovat květinu k tvorbě medu\". Tvoje funkce by měla zkontrolovat, zda fialový květ má 3, 2 nebo 1 nektaru a sesbírat všechen nektar. Potom se přesuň vpřed a udělej med."
-      4-5 Bee Conditionals Assessment 1: "Hodnocení: Tento kód je chybný. Dokonči funkci \"získat nektar nebo med\" a potom ji vyvolej sesbírat všechen nektar a med. Pamatuj si, že fialové květy mohou mít, 3, 2 nebo 1 nektarů."
-      4-5 Bee Debugging 1: "Tyto bloky mě opravdu štvou. Umíš je opravit?"
-      4-5 Bee Debugging 6: "Fialový květ má neznámé množství nektaru. Oprav bloky sesbírat všechen nektar z květu."
-      4-5 Bee Nested Loops 4: "Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. "
-      4-5 Bee Nested Loops Assessment 1: "Hodnocení - sesbírat všechen nektar a udělat všechen med pomocí cyklů."
-      4-5 Maze 9: "Vytvoř smyčku s blokem \"opakovat do\"."
+      4-5 Bee Conditionals 2: Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      4-5 Bee Conditionals 5: Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
+      4-5 Bee Conditionals 6: Tento Fialový květ může mít buď 3, 2 nebo 1 nektar. Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if, else bloku. Dokonči řešení pro sběr neznámé množství nektaru.
+      4-5 Bee Conditionals 7: Pamatujte si, že fialové květy mohou mít buď 3, 2 nebo 1 nektarů. Dokonči funkci "kontrolovat fialový květ" a použít ji sesbírat všechen nektar na květinách.
+      4-5 Bee Conditionals 8: Napiš uvnitř funkce "kontrolovat květinu k tvorbě medu". Tvoje funkce by měla zkontrolovat, zda fialový květ má 3, 2 nebo 1 nektaru a sesbírat všechen nektar. Potom se přesuň vpřed a udělej med.
+      4-5 Bee Conditionals Assessment 1: 'Hodnocení: Tento kód je chybný. Dokonči funkci "získat nektar nebo med" a potom ji vyvolej sesbírat všechen nektar a med. Pamatuj si, že fialové květy mohou mít, 3, 2 nebo 1 nektarů.'
+      4-5 Bee Debugging 1: Tyto bloky mě opravdu štvou. Umíš je opravit?
+      4-5 Bee Debugging 6: Fialový květ má neznámé množství nektaru. Oprav bloky sesbírat všechen nektar z květu.
+      4-5 Bee Nested Loops 4: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
+      4-5 Bee Nested Loops Assessment 1: Hodnocení - sesbírat všechen nektar a udělat všechen med pomocí cyklů.
+      4-5 Maze 9: Vytvoř smyčku s blokem "opakovat do".
       4-5 Maze Conditionals 1: Použij bloku opakování až do dostat zombie ke slunečnici.
-      4-5 Maze Conditionals 10: "Dokážete přidat jen 3 bloky abyste pomohli zombiemu vyřešit více bludišť? \\r \\r pokud to uděláte správně, může chodit všechmi křivolakými cestami bez ohledu na délku!"
+      4-5 Maze Conditionals 10: Dokážete přidat jen 3 bloky abyste pomohli zombiemu vyřešit více bludišť? \\r \\r pokud to uděláte správně, může chodit všechmi křivolakými cestami bez ohledu na délku!
       4-5 Maze Conditionals 2: Použij bloku opakování až do dostat zombie ke slunečnici.
-      4-5 Maze Conditionals 3: "Použij blok \"if\" abych se rozhodoval, kdy se otočit. Rada: stačí ti pouze jeden další blok, ale naučit se, jak jsme ti to nachystali, aby si to příště dokázal sám."
+      4-5 Maze Conditionals 3: 'Použij blok "if" abych se rozhodoval, kdy se otočit. Rada: stačí ti pouze jeden další blok, ale naučit se, jak jsme ti to nachystali, aby si to příště dokázal sám.'
       4-5 Maze Conditionals 4: Dobře, tohle je stejné jako předchozí puzzle, ale musíš si pamatovat, jak jsi použil dohromady bloky "if" a "opakovat".
-      4-5 Maze Conditionals 5: "Já chci slunečnici! Použij blok \"if\" a dostaň mě tam s co nejmenším počtem bloků."
-      4-5 Maze Conditionals 6: |-
-        Já chci slunečnici! Použij blok "if" a dostaň mě tam s co nejmenším počtem bloků.
+      4-5 Maze Conditionals 5: Já chci slunečnici! Použij blok "if" a dostaň mě tam s co nejmenším počtem bloků.
+      4-5 Maze Conditionals 6: Já chci slunečnici! Použij blok "if" a dostaň mě tam s co nejmenším počtem bloků.
       4-5 Maze Conditionals 7: Dobře, pojďme to znova procvičit - není to příliš jiné, ale dávej pozor na masožravky!
-      4-5 Maze Conditionals 8: "Blok \"if/else\" ověřuje podmínku a poté udělá jednu NEBO druhou věc. Zkus použít tento blok, abys mě dostal ke slunečnici."
-      4-5 Maze Conditionals 9: |-
-        Další cvičení pro blok "if-else". Zvládneš to na první pokus?
-      4-5 Maze Conditionals Assessment 1: "Použij bloky \"opakovat až do\" a \"if-else\" dostat mne ke slunečnici pokud možná několika bloky."
+      4-5 Maze Conditionals 8: Blok "if/else" ověřuje podmínku a poté udělá jednu NEBO druhou věc. Zkus použít tento blok, abys mě dostal ke slunečnici.
+      4-5 Maze Conditionals 9: Další cvičení pro blok "if-else". Zvládneš to na první pokus?
+      4-5 Maze Conditionals Assessment 1: Použij bloky "opakovat až do" a "if-else" dostat mne ke slunečnici pokud možná několika bloky.
       4-5 Nested Loops 12: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
-      4-5 Nested Loops 3: |-
-        Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-
+      4-5 Nested Loops 3: Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \\r
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 6: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
-      4-5 Nested Loops 7: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
-      4-5 Nested Loops 8: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)"
+      4-5 Nested Loops 7: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)'
+      4-5 Nested Loops 8: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)'
       4-5 Nested Loops 9: Nakresli zuby v tlamě aligátora!
       4-5 While Loops 1: Přesuň mě do díry a naplň ji s dvěma lopatami špíny pomocí bloku "výplň".
       4-5 While Loops 2: Přesuň mě na hromadu kompostu a odstraň ji 5 lopatami na kopečky pomocí bloku 'odstranit'.
-      4-5 While Loops 3: "Přesuň mě na hromadu a odstraň všechno přesunutím do díry a vyplň ji zcela.  Rada: Použij pokud možno  pár bloků."
-      4-5 While Loops 4: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
+      4-5 While Loops 3: 'Přesuň mě na hromadu a odstraň všechno přesunutím do díry a vyplň ji zcela.  Rada: Použij pokud možno  pár bloků.'
+      4-5 While Loops 4: 'Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus.'
       Artist Autorun Test: Použij blok "opakování" k nakreslení těchto 3 čtverců.
-      CSD U3 Entertainment Sample 4: |
+      CSD U3 Entertainment Sample 4: |-
         # Razítkovací panel
 
         Pro spuštění programu klikněte "Spustit" a pak použijte razítkovací panel k nakreslení obrázků s jednoduchými barvami a razítky zvířat.
-      CSD U3 Entertainment Sample 4_2018: |
+      CSD U3 Entertainment Sample 4_2018: |-
         # Razítkovací panel
 
         Pro spuštění programu klikněte "Spustit" a pak použijte razítkovací panel k nakreslení obrázků s jednoduchými barvami a razítky zvířat.
-      CSD U3 Entertainment Sample 4_2019: |
+      CSD U3 Entertainment Sample 4_2019: |-
         # Razítkovací panel
 
         Pro spuštění programu klikněte "Spustit" a pak použijte razítkovací panel k nakreslení obrázků s jednoduchými barvami a razítky zvířat.
+      CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Calc Circles of Eval 2: K provedení tohoto kódu použijte blok násobení.
       Calc Circles of Eval 3: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 4: V tomto kódu chybí několik "výpočetních bloků" - ujistěte se, že vše umístíte ve správném pořadí.
       Calc Circles of Eval 7: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 8: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
       Calc Circles of Eval 9: Spojte "výpočetní bloky" tak aby odpovídaly tomuto výrazu.
-      CoureE_HOC 2018 Level_7a: "Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.\n\n"
+      CoureE_HOC 2018 Level_7a: Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.
       Course 4 Artist 13: Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout cokoliv chceš!
       Course 4 Artist 6: 'Dokonči kód k nakreslení těchto trojúhelníků. Rada: Jsou to 3 trojúhelníky v rozsahu otáčení o 360 stupňů... kolikrát se 3 vejde do 360?'
       Course 4 Artist 8: Nakresli slunce opakováním tohoto celého bloku kódu.
-      Course 4 Artist 8a: 'Nezapomeň na tento tvar?  Nyní umožníme  postavit bez udání bloky začít! \r Rada: existují 3 trojúhelníky v otáčení o 360 stupňů... kolikrát se 3 vejde do 360?'
-      Course 4 Artist Binary 1a: "Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \\r \\r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru."
+      Course 4 Artist 8a: 'Nezapomeň na tento tvar?  Nyní umožníme  postavit bez udání bloky začít! \\r Rada: existují 3 trojúhelníky v otáčení o 360 stupňů... kolikrát se 3 vejde do 360?'
+      Course 4 Artist Binary 1a: Zde je funkce přejímající binární řetězec 1 a 0 a pověřuje umělce, aby je sledoval  zleva doprava, od shora dolů.  Umělec vyplní čtverce, když vidí 1 a ignoruje čtverec s  0. \\r \\r Spusť tento kód, aby si viděl, jak umělec používá binárity ke kreslení tohoto  vzoru.
       Course 4 Artist For Loops 13: Hmmm tyto obrazce jsou čím dál pokaždé větší! Neměli jsme již vyřešit ten problém s proměnnými? Jak můžeme použít proměnné čítače, aby strany byly menší než jako jsou? Namísto přesunutí vpřed o stanovené množství, zkus přesunout vpřed (100 / počítadlo) pixelů.
       Course 4 Artist For Loops 4: 'Jak bys změnil, co jsi se naučil o kreslení těchto čtverců? Začíná se na délce 15 pixelů, největší má délku 300 pixelů, a každý čtverec je větší o 15 pixelů než ten poslední. '
       Course 4 Artist For Loops 6: Volná hra! Zkus použít for cyklus k nakreslení rostoucího tvaru vzorku vlastního návrhu.
       Course 4 Artist For Loops 6a: Udělej tři malé změny do kódu z poslední úrovni, abys to dosáhl!
       Course 4 Artist For Loops 8a: Jen jedna malá změna kódu z posledního obrázku může vytvořit tento obraz. Můžeš zjistit, jaká je to změna?
-      Course 4 Artist For Loops Challenge_a: "Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \\r \\r Potřebuješ radu? Klepni sem."
+      Course 4 Artist For Loops Challenge_a: Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \\r \\r Potřebuješ radu? Klepni sem.
       Course 4 Artist Vars 3: 'Zde je cyklus kreslící čtverec, ale něco chybí. Umíš to opravit tak, že použiješ proměnnou "Délka" na vyřešení, jak by měla být dlouhá každá strana? '
       Course 4 Bee 7: Použij vše, co jsi se až dosud naučil sesbírat všechen nektar. Fialový květ může mít 3, 2 nebo 1 nektary.
       Course 4 Bee For Loops 11: Co je špatného na tomto cyklu? Podívej se, jestli to umíš opravit a udělej, aby včela sesbírala všechen nektar.
       Course 4 Bee Params 1: Použijte funkci "dostat 3 nektary", která obrací, přesune se ke sběru nektaru a pak se vrací do původního umístění. Zapiš posloupnost sesbírat všechen nektar pomocí "dostat 3 nektary."
-      Course 4 Play Lab Params 4: "Zde je funkce nazvaná \"hlídka.\" Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů."
+      Course 4 Play Lab Params 4: Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.
       Course 4 Play Lab Params 8: Použij blok "když aktér se dotkne" pošle psa zpět do levého horního pouze když pes se dotkne některého z ostatních aktérů.
-      Course 4 Play Lab Vars 2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
+      Course 4 Play Lab Vars 2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes\_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
       Course 4 Play Labs For Loops 1: Udělejme, aby pes řekl každé číslo od 1 do 100. Použij for cyklus a čítač, aby řekl proměnnou čítače pokaždé, když běží cyklus.
       Course 4 Playlab For Loops 5b: Upravte rozsahy cyklů "počítat s" tak, aby obě postavy skončily přesně ve stejném místě.
       Course 4 SCFP 1: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       Course 4 SCVP 1: Vytvoř funkci s parametry, které umožní umělci skákat dozadu a dopředu o x pixelů a také nahoru a dolů y pixelů (pomocí kladných a záporných čísel).
       CourseD_Dance_Party_01: |-
-        *Pojďme uspořádat taneční večírek!*
+        _Pojďme uspořádat taneční večírek!_
 
         Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `nastavení`, abys vytvořil(a) svého prvního tanečníka.
 
-        * *Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo.*
+        -   _Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo._
       CourseD_Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
-
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
-      CourseD_Dance_Party_03: "*Nyní to rozhýbeme!*\n\nDo pracovního prostoru přidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb."
+      CourseD_Dance_Party_03: |-
+        _Nyní to rozhýbeme!_
+
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
       CourseD_Dance_Party_04: |-
-        *Tento tanec potřebuje trochu jiskry!*
+        _Tento tanec potřebuje trochu jiskry!_
 
         V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       CourseD_Dance_Party_05: |-
         Použij další nový blok, aby tanečník měnil pohyby **každé 2 takty**!
 
-        * Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
+        -   Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
       CourseD_Dance_Party_06: |-
-        *Potřebujeme více tanečníků!*
+        _Potřebujeme více tanečníků!_
 
         Vytvoř záložního tanečníka nazvaného `backup_dancer1`, který bude tančit s kočkou.
       CourseD_Dance_Party_08: |-
@@ -203,18 +212,23 @@ cs:
         Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
       CourseD_Dance_Party_09: |-
         Tanečníci mají vlastnost "odstín", která může přidat vrstvu barvy. Zkus změnit odstín jednoho z tanečníků.
-        * Odstíny smíchají barvu, kterou jsi zvolil(a), s barvou tanečníka.
+
+        -   Odstíny smíchají barvu, kterou jsi zvolil(a), s barvou tanečníka.
       CourseD_Dance_Party_10: |-
         Nyní víme, jak změnit vlastnosti tanečníka. Můžeme také nastavit, aby vlastnosti automaticky reagovaly na hudbu, pomocí tohoto bloku:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">pravý_jednorožec</title>
         <title name="PROPERTY">velikost</title>
         <title name="RANGE">basy</title>
         </block></xml>
 
         Tento program používá k ovládání výšky jednoho z tanečníků hlasitost "basů" (nízkých zvuků) v hudbě. Dokážeš přimět také dalšího tanečníka, aby reagoval na hudbu?
-      CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      CourseD_Dance_Party_11: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.
+
+        Můžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!
       CourseD_Dance_Party_11_5: |-
         Mrkni na tento blok:
 
@@ -233,48 +247,50 @@ cs:
 
         **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
       CourseD_Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
-      CourseE_HOC 2018 Level_1: "Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      CourseE_HOC 2018 Level_10: "V tomto Mořském monumentu se někde skrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Dokážeš ji najít?"
+      CourseE_HOC 2018 Level_1: Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: V tomto Mořském monumentu se někde skrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Dokážeš ji najít?
       CourseE_HOC 2018 Level_11: Postav zeď z **prismarinu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okolo černého betonu. Tak aktivuješ **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) a dokončíš tuto výzvu!
       CourseE_HOC 2018 Level_2: Lodě jsou pro pohyb na otevřené vodě mnohem lepší, než plavání! Vydej se na konec doku a naskoč na palubu.
       CourseE_HOC 2018 Level_3: Popadni vesla a naviguj svou loď přes otevřenou vodu tak, abys chytil **tresku** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       CourseE_HOC 2018 Level_4: Pojďme treskou nakrmit **delfína** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Použij blok opakuj do, aby ses dostal přes oceán rychleji.
       CourseE_HOC 2018 Level_5: Někde tady je ukrytá **ulita loděnky** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Prozkoumej vrak lodi a najdi **truhlu** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      CourseE_HOC 2018 Level_6: Vypadá to, že venku mrzne! Po cestě k podmořským ruinám chyť **lososa* ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
-      CourseE_HOC 2018 Level_7a: "Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.\n\n"
-      CourseE_HOC 2018 Level_8: "Nejdřív ledovce a teď láva? Dostaň se přes tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.\n\n"
-      CourseE_HOC 2018 Level_9b: "Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
-      CourseF_PlayLab_vars2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
+      CourseE_HOC 2018 Level_6: Vypadá to, že venku mrzne! Po cestě k podmořským ruinám chyť \*_lososa_ ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      CourseE_HOC 2018 Level_7a: Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.
+      CourseE_HOC 2018 Level_8: Nejdřív ledovce a teď láva? Dostaň se přes tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.
+      CourseE_HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      CourseF_PlayLab_vars2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes\_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
       Dance_Party_01: |-
-        *Pojďme uspořádat taneční večírek!*
+        _Pojďme uspořádat taneční večírek!_
 
         Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `nastavení`, abys vytvořil(a) svého prvního tanečníka.
 
-        * *Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo.*
+        -   _Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo._
       Dance_Party_01_low: |-
-        *Pojďme uspořádat taneční večírek!*
+        _Pojďme uspořádat taneční večírek!_
 
         Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `nastavení`, abys vytvořil(a) svého prvního tanečníka.
 
-        * *Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo.*
+        -   _Pokud chceš získat další informace nebo extra výzvy, můžeš také kliknout na žárovku vlevo._
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
-
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
-      Dance_Party_03: "*Nyní to rozhýbeme!*\n\nDo pracovního prostoru přidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb."
+      Dance_Party_03: |-
+        _Nyní to rozhýbeme!_
+
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
       Dance_Party_04: |-
-        *Tento tanec potřebuje trochu jiskry!*
+        _Tento tanec potřebuje trochu jiskry!_
 
         V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       Dance_Party_05: |-
         Použij další nový blok, aby tanečník měnil pohyby **každé 2 takty**!
 
-        * Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
+        -   Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
       Dance_Party_06: |-
-        *Potřebujeme více tanečníků!*
+        _Potřebujeme více tanečníků!_
 
         Vytvoř záložního tanečníka nazvaného `backup_dancer1`, který bude tančit s kočkou.
       Dance_Party_08: |-
@@ -283,28 +299,60 @@ cs:
         Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
       Dance_Party_09: |-
         Tanečníci mají vlastnost "odstín", která může přidat vrstvu barvy. Zkus změnit odstín jednoho z tanečníků.
-        * Odstíny smíchají barvu, kterou jsi zvolil(a), s barvou tanečníka.
+
+        -   Odstíny smíchají barvu, kterou jsi zvolil(a), s barvou tanečníka.
       Dance_Party_10: |-
         Nyní víme, jak změnit vlastnosti tanečníka. Můžeme také nastavit, aby vlastnosti automaticky reagovaly na hudbu, pomocí tohoto bloku:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">pravý_jednorožec</title>
         <title name="PROPERTY">velikost</title>
         <title name="RANGE">basy</title>
         </block></xml>
 
         Tento program používá k ovládání výšky jednoho z tanečníků hlasitost "basů" (nízkých zvuků) v hudbě. Dokážeš přimět také dalšího tanečníka, aby reagoval na hudbu?
-      Dance_Party_11.5_test: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
-      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
-      Dance_Party_11_5: "Mrkni na tento blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"DUCK\"</title>\n<title name=\"LAYOUT\">\"circle\"</title>\n</block></xml>\n\nNyní můžeš vytvořit několik tanečníků najednou!\n\nZkus použít některé z bloků \"všechny kachny\" k napsání kódu, který přiměje všechny kachny tančit společně."
+      Dance_Party_11.5_test: |-
+        Mrkni na tento blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nyní můžeš vytvořit několik tanečníků najednou!
+
+        Zkus použít některé z bloků "všechny kachny" k napsání kódu, který přiměje všechny kachny tančit společně.
+      Dance_Party_11: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.
+
+        Můžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!
+      Dance_Party_11_5: |-
+        Mrkni na tento blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"DUCK"</title>
+        <title name="LAYOUT">"circle"</title>
+        </block></xml>
+
+        Nyní můžeš vytvořit několik tanečníků najednou!
+
+        Zkus použít některé z bloků "všechny kachny" k napsání kódu, který přiměje všechny kachny tančit společně.
       Dance_Party_11b: |-
         Je čas na tanec! Když stiskneš šipku vlevo, kočka bude poklepávat. Přiměj Robota "klesnout", když stiskneš šipku vpravo a "zatleskat nahoře" při stisknutí šipky nahoru.
 
         **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
-      Dance_Party_3: "*Nyní to rozhýbeme!*\n\nDo pracovního prostoru přidej blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb."
+      Dance_Party_3: |-
+        _Nyní to rozhýbeme!_
+
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takty"</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
       Dance_Party_4: |-
-        *Tento tanec potřebuje jiskru!*
+        _Tento tanec potřebuje jiskru!_
 
         V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       Dance_Party_8: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
@@ -313,9 +361,9 @@ cs:
 
         Zde je tanec mezi dvěma tanečními skupinami. Klávesy se šipkami ovládají jednoho z tanečníků a klávesy „w, a, s, d“ ovládají ostatní. Zatanči si s kamarádem a poté zkus tento tanec vylepšit.
 
-        * Přidej další klávesy k ovládání tanců
-        * Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
-        * Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
+        -   Přidej další klávesy k ovládání tanců
+        -   Přiměj záložní tanečníky, aby reagovali také na stisknuté klávesy
+        -   Každé 4 takty vyměň tanečníka tak, že nastavíš viditelnost
       Dance_Party_extras_every_beat: |-
         # Čtvrťové noty
 
@@ -323,17 +371,17 @@ cs:
 
         Tento tanec používá také _podmíněný_ blok k ovládání, kdy může blok „každých 0,25 taktu“ změnit tanec. Zkus změnit čísla v podmíněném bloku, abys viděl(a), jak to změní tanec.
 
-        * Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
-        * Přidej nějaké události „po taktu“.
-        * Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
+        -   Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
+        -   Přidej nějaké události „po taktu“.
+        -   Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
       Dance_Party_extras_layout: |-
         # Pojďme utvořit sestavu!
 
         Zkontroluj tento tanec, který používá blok „rozvržení“, abys změnil(a) v průběhu tance sestavu záložních tanečníků. Zkus jeden z těchto nápadů na rozšíření:
 
-        * Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
-        * Změň rozvržení, když stiskneš klávesu
-        * Změň vlastnost, když tanečníci změní sestavy
+        -   Vytvoř druhou skupinu tanečníků v rozdílném rozvržení
+        -   Změň rozvržení, když stiskneš klávesu
+        -   Změň vlastnost, když tanečníci změní sestavy
       Dance_Party_extras_on_beat: |-
         # Basy, středy a výšky
 
@@ -347,37 +395,46 @@ cs:
 
         Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
 
-        * Přidej další skupinu tanečníků
-        * Zobraz a skryj tanečníky pomocí šipek s klávesami
-        * Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
-      Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
-      Function intro Ryan_2019: "Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r\n \\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch]."
-      HOC 2018 Level_1: "Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "V tomto Mořském monumentu se někde skrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Dokážeš ji najít?"
+        -   Přidej další skupinu tanečníků
+        -   Zobraz a skryj tanečníky pomocí šipek s klávesami
+        -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
+      Function intro Ryan: |-
+        Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r
+         \\r
+        Přichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch].
+      Function intro Ryan_2019: |-
+        Máte v pracovním prostoru **funkci** s názvem „postavit most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen! \\r
+         \\r
+        Přichyťte malý zelený blok dvakrát do pracovního prostoru, čímž opravíte cestu a dostanete hráče {currentPlayerName} k ruditové louči [redstone_torch].
+      HOC 2018 Level_1: Potřebuješ zásoby na nadcházející výpravu. Vezmi **loď** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) z **truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: V tomto Mořském monumentu se někde skrývá **chobotnice** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png). Dokážeš ji najít?
       HOC 2018 Level_11: Postav zeď z **prismarinu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) okolo černého betonu. Tak aktivuješ **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) a dokončíš tuto výzvu!
       HOC 2018 Level_12: Blahopřejeme! Čeká na tebe otevřený vodní svět. Vybuduj korálový útes! Sopku! Vrak! Záleží to na tobě
       HOC 2018 Level_2: Lodě jsou pro pohyb na otevřené vodě mnohem lepší, než plavání! Vydej se na konec doku a naskoč na palubu.
       HOC 2018 Level_3: Popadni vesla a naviguj svou loď přes otevřenou vodu tak, abys chytil **tresku** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
       HOC 2018 Level_4: Pojďme treskou nakrmit **delfína** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Použij blok opakuj do, aby ses dostal přes oceán rychleji.
       HOC 2018 Level_5: Někde tady je ukrytá **ulita loděnky** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)! Prozkoumej vrak lodi a najdi **truhlu** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      HOC 2018 Level_6: Vypadá to, že venku mrzne! Po cestě k podmořským ruinám chyť **lososa* ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
-      HOC 2018 Level_7a: "Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.\n\n"
-      HOC 2018 Level_8: "Nejdřív ledovce a teď láva? Dostaň se přes tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.\n\n"
-      HOC 2018 Level_9b: "Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
+      HOC 2018 Level_6: Vypadá to, že venku mrzne! Po cestě k podmořským ruinám chyť \*_lososa_ ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: Objevil jsi podvodní ruiny. Najdi cestu k **truhle** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) obsahující **prismarinový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) poklad.
+      HOC 2018 Level_8: Nejdřív ledovce a teď láva? Dostaň se přes tento vulkanický ostrov a najdi **tropickou rybu** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) v korálovém útesu.
+      HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       HOC Dance 3_draft: |-
-        *Tento tanec potřebuje jiskru!*
+        _Tento tanec potřebuje jiskru!_
 
         V panelu najdi nový blok, který přidá za tanečníka efekt pozadí. Sleduj, jak se efekt mění v čase podle hudby!
       HOC Dance 4_draft: |-
         Použij další nový blok, aby tanečník měnil pohyby **každé 2 takty**!
 
-        * Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
+        -   Volba `(Další)`, `(Předchozí)` nebo `(Náhodně)` říká tanečníkovi, aby po každém spuštění kódu provedl jiný pohyb.
       HOC Dance 5_draft: |-
-        *Potřebujeme více tanečníků!*
+        _Potřebujeme více tanečníků!_
 
         Vytvoř záložního tanečníka nazvaného `backup_dancer1`, který bude tančit s kočkou.
       HOC Dance 6_draft: Každý tanečník má sadu _vlastností_, které určují, jak vypadá. Můžeš zařídit, aby tanečník vypadal zdánlivě v pozadí, pokud zmenšíš jeho _velikost_. Dokážeš, aby oba záložní tanečníci měli stejnou velikost?
-      HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.\n\nMůžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!"
+      HOC Dance 9_draft: |-
+        Blok <xml><block type="Dancelab_whenKey"></block></xml> ti umožní spustit kód, když stiskneš šipku nahoru.
+
+        Můžeš změnit taneční pohyb, změnit vlastnosti tanečníka nebo udělat rychlý pohyb jen jednou. Buď kreativní a hledej nové bloky!
       HOC Dance Freeplay: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       HOC Dance Freeplay_draft: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       HOC Dance Predraw: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
@@ -386,111 +443,177 @@ cs:
       K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
       K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
       K-1 Bee Loops 6: Použij cykly, abys dostal nektar, zlato a k pohybu!
-      K-1 Maze Loops 11: "Dostaň mne k prasátku! Použij opakovací cykly."
-      K-1 Maze Loops 12: "Dostaň mne k prasátku! Použij opakovací cykly."
+      K-1 Maze Loops 11: Dostaň mne k prasátku! Použij opakovací cykly.
+      K-1 Maze Loops 12: Dostaň mne k prasátku! Použij opakovací cykly.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
       K-1 Maze Loops 8: Dostaň mne k prasátku! Použij opakovací cykly.
       MC Agent Freeplay: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
-      MC_HOC_2017 Agent Test: "Kliknutím na tlačítko „Spustit“ můžete pohybovat hráčem pomocí **kláves se šipkami**.  \\r\n\\r\nKe splnění této úrovně se musíte dostat ke dveřím, otevřít je (pomocí **mezerníku**) a dostat se na oranžové políčko za nimi."
-      MC_HOC_2017_01: "Kliknutím na tlačítko „Spustit“ můžete pohybovat hráčem pomocí **kláves se šipkami**.  \\r\n\\r\nKe splnění této úrovně se musíte dostat ke dveřím, otevřít je (pomocí **mezerníku**) a dostat se na oranžové políčko za nimi."
+      MC_HOC_2017 Agent Test: |-
+        Kliknutím na tlačítko „Spustit“ můžete pohybovat hráčem pomocí **kláves se šipkami**.  \\r
+        \\r
+        Ke splnění této úrovně se musíte dostat ke dveřím, otevřít je (pomocí **mezerníku**) a dostat se na oranžové políčko za nimi.
+      MC_HOC_2017_01: |-
+        Kliknutím na tlačítko „Spustit“ můžete pohybovat hráčem pomocí **kláves se šipkami**.  \\r
+        \\r
+        Ke splnění této úrovně se musíte dostat ke dveřím, otevřít je (pomocí **mezerníku**) a dostat se na oranžové políčko za nimi.
       MC_HOC_2017_01_Cole: Na této cestě musíte posbírat všechny nástroje. Pohybujte se pomocí **kláves se šipkami** a vítězství získáte, když se dostanete k truhle.
       MC_HOC_2017_01_Kiki: 'K hraní této úrovně klikněte na oranžové tlačítko „Spustit“ pod herním prostorem. Poté hráčem pohybujte pomocí **kláves se šipkami**.  '
       MC_HOC_2017_01_RETRY: |-
-        Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \r
-         \r
-           \r
+        Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \\r
+         \\r
+           \\r
         Přichyťte v pracovním prostoru blok „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou desku [PressurePlate_Up]. Poté stiskněte tlačítko „Spustit“ a odveďte hráče {currentPlayerName} pomocí kláves se šipkami mimo dům, aby sebral **truhlu** [chest].
       MC_HOC_2017_01_RETRY_2019: |-
-        Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \r
-         \r
-           \r
+        Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc mu přišel agent!   \\r
+         \\r
+           \\r
         Přichyťte v pracovním prostoru blok „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou desku [PressurePlate_Up]. Poté stiskněte tlačítko „Spustit“ a odveďte hráče {currentPlayerName} pomocí kláves se šipkami mimo dům, aby sebral **truhlu** [chest].
       MC_HOC_2017_02: Hráč se musí dostat do Tajného hájku. Pomozte agentovi otevřít bránu napsáním kódu, který ho dostane na nášlapnou desku.
-      MC_HOC_2017_02_Cole: "Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r\n \\r\nPřichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít."
-      MC_HOC_2017_02_Cole_2019: "Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r\n \\r\nPřichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít."
-      MC_HOC_2017_02_Kiki: "Hráč se vydává za dobrodružstvím, ale nejdříve musí získat pochodeň, která je ukryta za těmito zamčenými dveřmi. \\r\n\\r\nNaprogramujte agenta, aby se dvakrát pohnul vpřed po bílé cestě a stoupnul si na nášlapnou desku, která otevře hráči dveře."
-      MC_HOC_2017_02_Will: "Pro dokončení této úrovně se musí hráč dostat na oranžové políčko nacházející se v Tajném hájku, který je za zamčenými dveřmi.  \\r\n\\r\nPomocí kódu v pracovním prostoru se agent pohne dvakrát vpřed, stoupne na nášlapnou desku a otevře Alex nebo Stevovi dveře."
-      MC_HOC_2017_03_Cole: "Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r\n   \\r\nNapište pro agenta kód, aby otevřel bránu."
-      MC_HOC_2017_03_Cole_2019: "Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r\n   \\r\nNapište pro agenta kód, aby otevřel bránu."
-      MC_HOC_2017_03_Kiki: "Hráčovo dobrodružství začne za zamčenými dveřmi, v Tajném hájku!  \\r\n\\r\n\\r\nPomozte agentovi otevřít dveře napsáním kódu, který ho dostane na nášlapnou desku."
+      MC_HOC_2017_02_Cole: |-
+        Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r
+         \\r
+        Přichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít.
+      MC_HOC_2017_02_Cole_2019: |-
+        Hráč {currentPlayerName} se vydává za dobrodružstvím! Pomozte mu a vezměte **mapu** [map_empty] za zamčenými dveřmi vpravo. \\r
+         \\r
+        Přichyťte kód do pracovního prostoru a posuňte agenta na nášlapnou desku [PressurePlate_Up], aby mohl hráč {currentPlayerName} projít.
+      MC_HOC_2017_02_Kiki: |-
+        Hráč se vydává za dobrodružstvím, ale nejdříve musí získat pochodeň, která je ukryta za těmito zamčenými dveřmi. \\r
+        \\r
+        Naprogramujte agenta, aby se dvakrát pohnul vpřed po bílé cestě a stoupnul si na nášlapnou desku, která otevře hráči dveře.
+      MC_HOC_2017_02_Will: |-
+        Pro dokončení této úrovně se musí hráč dostat na oranžové políčko nacházející se v Tajném hájku, který je za zamčenými dveřmi.  \\r
+        \\r
+        Pomocí kódu v pracovním prostoru se agent pohne dvakrát vpřed, stoupne na nášlapnou desku a otevře Alex nebo Stevovi dveře.
+      MC_HOC_2017_03_Cole: |-
+        Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r
+           \\r
+        Napište pro agenta kód, aby otevřel bránu.
+      MC_HOC_2017_03_Cole_2019: |-
+        Hráč {currentPlayerName} pokračuje ve svém dobrodružství a potřebuje **kompas** [compass], aby se připravil na výlet.  \\r
+           \\r
+        Napište pro agenta kód, aby otevřel bránu.
+      MC_HOC_2017_03_Kiki: |-
+        Hráčovo dobrodružství začne za zamčenými dveřmi, v Tajném hájku!  \\r
+        \\r
+        \\r
+        Pomozte agentovi otevřít dveře napsáním kódu, který ho dostane na nášlapnou desku.
       MC_HOC_2017_04: Upravte cyklus z poslední hádanky tak, abyste pomohli agentovi udělat cestu přes širší část této řeky.
-      MC_HOC_2017_04POINT5_Cole: |-
-        Dostali jste se z bažiny! Nyní dostaňte hráče bezpečně na oranžové políčko. 
-
-
-        Pomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky.
-      MC_HOC_2017_04POINT5_RYAN: "Dokázali jste přejít! \\r\n\\r\nNyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r\n"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Dokázali jste přejít! \\r\n\\r\nNyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r\n"
-      MC_HOC_2017_04_Cole: "Agent se může pohybovat po vodě!  \\r\n \\r\nVyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi."
-      MC_HOC_2017_04_Cole_2019: "Agent se může pohybovat po vodě!  \\r\n \\r\nVyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi."
-      MC_HOC_2017_04_Kiki: "Vstup do Tajného hájku vás přivedl do této nádherné oázy! Pro absolvování této úrovně se musí hráč dostat na oranžové políčko v chatě.  \\r\n\\r\nPomocí cyklu „opakovat“ pomozte agentovi dostat se až nahoru na nášlapnou desku, která otevírá dveře do chaty."
-      MC_HOC_2017_05: |-
-        Ne vždy vám pomohou cykly. 
-
-
-        Tyto kaktusy nerostou podle žádného zřejmého vzorce, takže pomocí cyklu je správně neodstraníte. Namísto toho máte k dispozici funkci s názvem „zničit a pohyb“, která za vás udělá těžkou práci pokaždé, když agent narazí na překážku.
-      MC_HOC_2017_05_Cole: "Ale ne, most je zbořený! \\r\n\\r\nNaprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel]."
-      MC_HOC_2017_05_Cole_2019: "Ale ne, most je zbořený! \\r\n\\r\nNaprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel]."
-      MC_HOC_2017_05_Josh: |-
-        Ale ne, most je zbořený! 
-
-
-        Pomozte agentovi znovu postavit most, aby se hráč mohl dostat k **lopatě**.
-      MC_HOC_2017_05_Kiki: "Nastal čas, aby hráč opustil Tajný hájek a pokračoval v dobrodružství. Most je však zbořený! \\r\n\\r\nPomozte agentovi znovu postavit most a poté přesuňte dřevěná prkna, aby se hráč mohl dostat na oranžové políčko."
-      MC_HOC_2017_06_Cole: "Další řeka, ale tentokrát mnohem širší! \\r\n \\r\nOpravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe]."
-      MC_HOC_2017_06_Cole_2019: "Další řeka, ale tentokrát mnohem širší! \\r\n \\r\nOpravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe]."
-      MC_HOC_2017_06_Josh: "Další řeka, ale tentokrát mnohem širší! \\r\n\\r\nOpravte tento kód a pomozte agentovi postavit most přes tuto řeku."
-      MC_HOC_2017_06_Kiki: "Další řeka, ale tentokrát mnohem širší! \\r\n\\r\nOpravte tento kód a pomozte agentovi postavit most přes vodu."
-      MC_HOC_2017_07_Cole: "V cestě je led!  \\r\n \\r\nFunkce \"uvolnit cestu\" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!"
-      MC_HOC_2017_07_Cole_2019: "V cestě je led!  \\r\n \\r\nFunkce \"uvolnit cestu\" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!"
-      MC_HOC_2017_07_Kiki: "Kód lze opakovat i jinak než za využití cyklů!  \\r\n\\r\nDáváme vám k dispozici funkci s názvem „odstranit kaktusy“, která odstraní při každém použití tři kaktusy. Pomocí dvou bloků „odstranit kaktusy"
+      MC_HOC_2017_04POINT5_Cole: "Dostali jste se z bažiny! Nyní dostaňte hráče bezpečně na oranžové políčko. \n\nPomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky."
+      MC_HOC_2017_04POINT5_RYAN: |-
+        Dokázali jste přejít! \\r
+        \\r
+        Nyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r
+      MC_HOC_2017_04POINT5_RYAN_2019: |-
+        Dokázali jste přejít! \\r
+        \\r
+        Nyní proveďte hráče {currentPlayerName} bezpečně bludištěm a seberte **sekeru** [diamond_axe].\\r
+      MC_HOC_2017_04_Cole: |-
+        Agent se může pohybovat po vodě!  \\r
+         \\r
+        Vyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi.
+      MC_HOC_2017_04_Cole_2019: |-
+        Agent se může pohybovat po vodě!  \\r
+         \\r
+        Vyřešte tuto hádanku tím, že použijete cyklus „opakovat“ a pomůžete hráči {currentPlayerName} získat **kbelík** [bucket_empty] za dveřmi.
+      MC_HOC_2017_04_Kiki: |-
+        Vstup do Tajného hájku vás přivedl do této nádherné oázy! Pro absolvování této úrovně se musí hráč dostat na oranžové políčko v chatě.  \\r
+        \\r
+        Pomocí cyklu „opakovat“ pomozte agentovi dostat se až nahoru na nášlapnou desku, která otevírá dveře do chaty.
+      MC_HOC_2017_05: "Ne vždy vám pomohou cykly. \n\nTyto kaktusy nerostou podle žádného zřejmého vzorce, takže pomocí cyklu je správně neodstraníte. Namísto toho máte k dispozici funkci s názvem „zničit a pohyb“, která za vás udělá těžkou práci pokaždé, když agent narazí na překážku."
+      MC_HOC_2017_05_Cole: |-
+        Ale ne, most je zbořený! \\r
+        \\r
+        Naprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel].
+      MC_HOC_2017_05_Cole_2019: |-
+        Ale ne, most je zbořený! \\r
+        \\r
+        Naprogramujte kód pro agenta, aby znovu postavil most pomocí bloku „umístit“ a aby se hráč {currentPlayerName} dostal k **lopatě** [diamond_shovel].
+      MC_HOC_2017_05_Josh: "Ale ne, most je zbořený! \n\nPomozte agentovi znovu postavit most, aby se hráč mohl dostat k **lopatě**."
+      MC_HOC_2017_05_Kiki: |-
+        Nastal čas, aby hráč opustil Tajný hájek a pokračoval v dobrodružství. Most je však zbořený! \\r
+        \\r
+        Pomozte agentovi znovu postavit most a poté přesuňte dřevěná prkna, aby se hráč mohl dostat na oranžové políčko.
+      MC_HOC_2017_06_Cole: |-
+        Další řeka, ale tentokrát mnohem širší! \\r
+         \\r
+        Opravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe].
+      MC_HOC_2017_06_Cole_2019: |-
+        Další řeka, ale tentokrát mnohem širší! \\r
+         \\r
+        Opravte tento kód a pomozte agentovi postavit most, aby se mohl hráč {currentPlayerName} dostat ke **krumpáči** [diamond_pickaxe].
+      MC_HOC_2017_06_Josh: |-
+        Další řeka, ale tentokrát mnohem širší! \\r
+        \\r
+        Opravte tento kód a pomozte agentovi postavit most přes tuto řeku.
+      MC_HOC_2017_06_Kiki: |-
+        Další řeka, ale tentokrát mnohem širší! \\r
+        \\r
+        Opravte tento kód a pomozte agentovi postavit most přes vodu.
+      MC_HOC_2017_07_Cole: |-
+        V cestě je led!  \\r
+         \\r
+        Funkce "uvolnit cestu" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!
+      MC_HOC_2017_07_Cole_2019: |-
+        V cestě je led!  \\r
+         \\r
+        Funkce "uvolnit cestu" vám může pomoci led zničit a dostat hráče {currentPlayerName} k vozíku [minecart_normal]!
+      MC_HOC_2017_07_Kiki: |-
+        Kód lze opakovat i jinak než za využití cyklů!  \\r
+        \\r
+        Dáváme vám k dispozici funkci s názvem „odstranit kaktusy“, která odstraní při každém použití tři kaktusy. Pomocí dvou bloků „odstranit kaktusy
       MC_HOC_2017_07a_Kiki: Nyní upravte tento cyklus a pomozte agentovi uvolnit cestu k oranžovému políčku.
-      MC_HOC_2017_08_Cole: "Nyní je třeba namísto zničení před pohybem umístit blok.  \\r\n\\r\nZměňte uvedenou funkci, aby fungovala v poušti."
-      MC_HOC_2017_08_Kiki: "Nyní je třeba namísto zničení kaktusů umístit kámen na lávu a poté zničit pískovec.  \\r\n\\r\nZměňte funkci, aby fungovala v této úrovni."
-      MC_HOC_2017_08_RY: |-
-        Nyní máte k dispozici **DVĚ** funkce, ze kterých si můžete vybrat! 
-
-
-        Postavte pomocí těchto funkcí rychle most přes lávu pro hráče {currentPlayerName}.
-      MC_HOC_2017_08_Will: |-
-        Nyní máte k dispozici **DVĚ** funkce, ze kterých si můžete vybrat! 
-
-
-        Postavte pomocí těchto funkcí rychle most přes lávu pro hráče.
+      MC_HOC_2017_08_Cole: |-
+        Nyní je třeba namísto zničení před pohybem umístit blok.  \\r
+        \\r
+        Změňte uvedenou funkci, aby fungovala v poušti.
+      MC_HOC_2017_08_Kiki: |-
+        Nyní je třeba namísto zničení kaktusů umístit kámen na lávu a poté zničit pískovec.  \\r
+        \\r
+        Změňte funkci, aby fungovala v této úrovni.
+      MC_HOC_2017_08_RY: "Nyní máte k dispozici **DVĚ** funkce, ze kterých si můžete vybrat! \n\nPostavte pomocí těchto funkcí rychle most přes lávu pro hráče {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Nyní máte k dispozici **DVĚ** funkce, ze kterých si můžete vybrat! \n\nPostavte pomocí těchto funkcí rychle most přes lávu pro hráče."
       MC_HOC_2017_09_Cole: Pomozte pomocí funkcí agentovi zničit obrovské bloky hlíny, které blokují hráči cestu k nášlapné desce.
-      MC_HOC_2017_09_Kiki: "Tento kód na začátku nelze odebrat. \n\n\nVložte příkazy do funkce „vytvořit pěšinu“, aby program v pracovním prostoru přesunul agenta na nášlapnou desku."
+      MC_HOC_2017_09_Kiki: "Tento kód na začátku nelze odebrat. \n\nVložte příkazy do funkce „vytvořit pěšinu“, aby program v pracovním prostoru přesunul agenta na nášlapnou desku."
       MC_HOC_2017_09_RS_CLONE: Opravte tuto funkci, aby vyplnila díry. Poté stoupněte na nášlapnou desku a uvolněte cestu k pochodni.
       MC_HOC_2017_10_Cole: Pomocí funkcí uvolněte cestu k vozíku a vstupte do portálu do Netheru.
       MC_HOC_2017_10_Cole_old: Zkuste od začátku vytvořit funkci, která pomůže agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_10_Kiki: Zkuste od začátku vytvořit funkci, která pomůže agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
-      MC_HOC_2017_10_RETRY: "Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r\n \\r\nPoužijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r\n"
-      MC_HOC_2017_10_RETRY_2019: "Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r\n \\r\nPoužijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r\n"
+      MC_HOC_2017_10_RETRY: |-
+        Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r
+         \\r
+        Použijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r
+      MC_HOC_2017_10_RETRY_2019: |-
+        Dokážete najít rozdíl mezi dvěma funkcemi ve svém pracovním prostoru? \\r
+         \\r
+        Použijte tyto funkce a další kód z panelu nástrojů k uvolnění cesty pro vozík a seberte **křesadlo** [flint_and_steel]. \\r
       MC_HOC_2017_10_RYAN: Zkuste od začátku vytvořit funkce, které pomohou agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_10_RYAN2: Zkuste od začátku vytvořit funkce, které pomohou agentovi dokončit tento vozík a dostat hráče na oranžové políčko.
       MC_HOC_2017_11_Kiki: Teď je to na vás! Zkuste, co dokážete vytvořit kolem tohoto zamrzlého jezera.
       MC_HOC_2017_13_Cole: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
-      MC_HOC_2017_4.5v2: |-
-        Dostali jste se z bažiny! Nyní dostaňte hráče bezpečně na oranžové políčko. 
-
-
-        Pomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky.
-      MC_HOC_2017_Ali: 'Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?'
-      MC_HOC_2017_Ali_2019: 'Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?'
+      MC_HOC_2017_4.5v2: "Dostali jste se z bažiny! Nyní dostaňte hráče bezpečně na oranžové políčko. \n\nPomozte agentovi uvolnit cestu tím, že najdete jednoduchý vzorec a použijete cykly k přejití přes první dvě nášlapné desky."
+      MC_HOC_2017_Ali: Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?
+      MC_HOC_2017_Ali_2019: Podívejte se na funkce níže. Jak je můžete využít, abyste se vyhnuli ďasům a pomohli hráči {currentPlayerName} dostat se bezpečně ke **kouzelné knize** [book_enchanted]?
       MC_HOC_2017_FP10x10: "**Volná hra:** Teď je to na vás! Dokážete sebrat všechny diamanty v této úrovni?"
       MC_HOC_2017_FP10x10_RE: "**Volná hra:** Teď je to na vás! Dokážete sebrat všechny diamanty v této úrovni?"
       MC_HOC_2017_FP20x20: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
       MC_HOC_2017_FP20x20_2019: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
-      MC_HOC_2017_Ryan_03: "Věděli jste, že do cyklu můžete vložit více částí kódu?  \\r\n\\r\nPomocí cyklu „opakovat“ pomozte agentovi postavit most přes řeku tím, že umístíte bloky do vody."
-      MC_HOC_2017_Ryan_05: "Někdy je třeba zbourat vše, co se připlete vašemu hráči do cesty.  \\r\nPomocí bloku „zničit“ odstraňte všechny kaktusy mezi agentem a nášlapnou deskou."
+      MC_HOC_2017_Ryan_03: |-
+        Věděli jste, že do cyklu můžete vložit více částí kódu?  \\r
+        \\r
+        Pomocí cyklu „opakovat“ pomozte agentovi postavit most přes řeku tím, že umístíte bloky do vody.
+      MC_HOC_2017_Ryan_05: |-
+        Někdy je třeba zbourat vše, co se připlete vašemu hráči do cesty.  \\r
+        Pomocí bloku „zničit“ odstraňte všechny kaktusy mezi agentem a nášlapnou deskou.
       MC_HOC_Kiki_02: Někdo musí stát na nášlapné desce, než se otevřou boční dveře. Pomozte agentovi dostat se na desku, aby se mohl hráč dostat z domu.
       NEW Course 4 Artist Functions 10.1: Použij funkci z předchozích puzzlů k nakreslení tohoto vzoru.
       NEW Course 4 Artist Functions 12: Použij funkci "nakreslit čáru čtverců" z posledního puzzlu, abys nakreslil tento vzor."
-      NEW Course 4 Artist Functions 3: "Zde je nový typ bloku. Nazývá \"Funkce\" blok. Klepni na tlačítko \"Upravit\" a pak vyplň jej kódem pro kreslení čtverce o stranách 100 pixelů. Po dokončení úprav funkci, klepni na tlačítko \"Zavřít\" přejdi zpět do programu."
+      NEW Course 4 Artist Functions 3: Zde je nový typ bloku. Nazývá "Funkce" blok. Klepni na tlačítko "Upravit" a pak vyplň jej kódem pro kreslení čtverce o stranách 100 pixelů. Po dokončení úprav funkci, klepni na tlačítko "Zavřít" přejdi zpět do programu.
       NEW Course 4 Artist Functions 9: Umíš to vyřešit přidáním pouze jednoho bloku?
       NEW Course 4 Artist Params 4: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
       NEW Course 4 Artist Vars 12: Nyní znovu vytvoř algoritmus z poslední úrovně a vytvoř pětiúhelník se stranami 150.
-      NEW Course 4 Artist Vars 4: "Zkusme to znova. Lze nastavit proměnnou délka, abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10."
-      NEW Course 4 Artist Vars 6: "Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \\r \\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \\r \\r \\r\n"
+      NEW Course 4 Artist Vars 4: 'Zkusme to znova. Lze nastavit proměnnou délka, abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10.'
+      NEW Course 4 Artist Vars 6: 'Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \\r \\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \\r \\r \\r'
       New Minecraft Hero Project: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět pomocí agentova kódu."
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2018: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
@@ -498,11 +621,13 @@ cs:
       Ryan_Demo: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
-
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
-      Testing Quantum Farmer: "Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus."
+      Testing Quantum Farmer: 'Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada: Zkus tentokrát  použít while cyklus.'
+      U4 - Objects - Template Contacts: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       course2_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech **10** kousků pokladu?
       course2_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
@@ -519,7 +644,7 @@ cs:
       courseD_bee_conditionals_challenge1_2018: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       courseD_bee_conditionals_challenge1_2019: Sesbírej všechen nektar a vyrob všechen med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko, jestli je tam květina nebo plástev.
       courseD_bee_debugging3: |-
-        *"Tahle hádanka dá zabrat."*
+        _"Tahle hádanka dá zabrat."_
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a výrobě všeho medu.
       courseD_bee_debugging6: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
@@ -529,13 +654,13 @@ cs:
       courseD_bee_nestedLoops8_2019: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
       courseD_bounce_events1: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
       courseD_debugging_3: |-
-        *"Tyhle bloky mě vážně štvou."*
+        _"Tyhle bloky mě vážně štvou."_
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
       courseD_debugging_6: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
-      courseD_maze_nestedLoops4: 'Dostaň mě ke slunečnici!'
-      courseD_maze_nestedLoops4_2018: 'Dostaň mě ke slunečnici!'
-      courseD_maze_nestedLoops4_2019: 'Dostaň mě ke slunečnici!'
+      courseD_maze_nestedLoops4: Dostaň mě ke slunečnici!
+      courseD_maze_nestedLoops4_2018: Dostaň mě ke slunečnici!
+      courseD_maze_nestedLoops4_2019: Dostaň mě ke slunečnici!
       courseE_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       courseE_bee_functions3_2018: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       courseE_bee_ramp17: 'Pro poslední hádanku v této fázi, použij co si se naučil(a) a sesbírej veškerý nektar a vyrob všechen med.  '
@@ -545,113 +670,152 @@ cs:
       courseF_bee_for_challenge2_2019: Vyřeš tento puzzle s co nejmenším možným počtem bloků.
       frozen circle function in circle: Vytvořme 20 překrývajících se kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       frozen circle function with parameter: "Tady máš blok \"vytvoř kružnici\", \nkterý dokáže vyrobit kružnice různých velikostí. Dokážeš ho použít k vytvoření\nmalé kružnice o velikosti 5 a větší kružnice o velikosti 10?"
-      frozen circle function: "Použij nový blok \"vytvoř kružnici\" k vytvoření\ndeseti překrývajících se kružnic. Nezapomeň skočit vpřed po každé kružnici."
-      frozen circle: "Kružnice je zvláštní tvar. Dokážeš přijít na to,\njakým číslem nahradit otazníky, abys nakreslil kružnici?"
-      frozen cross rotate dense: "Pojďme to zopakovat 90krát! Kolikrát\nse 90 vejde do 360? Tip: Je to opravdu malé číslo."
-      frozen cross rotate: "Nyní to zkus zopakovat 10krát. O kolik stupňů\nse musíš otočit po každé čáře?"
+      frozen circle function: |-
+        Použij nový blok "vytvoř kružnici" k vytvoření
+        deseti překrývajících se kružnic. Nezapomeň skočit vpřed po každé kružnici.
+      frozen circle: |-
+        Kružnice je zvláštní tvar. Dokážeš přijít na to,
+        jakým číslem nahradit otazníky, abys nakreslil kružnici?
+      frozen cross rotate dense: |-
+        Pojďme to zopakovat 90krát! Kolikrát
+        se 90 vejde do 360? Tip: Je to opravdu malé číslo.
+      frozen cross rotate: |-
+        Nyní to zkus zopakovat 10krát. O kolik stupňů
+        se musíš otočit po každé čáře?
       frozen cross: Obal kolem bloku "Repeat" tyto příkazy k vytvoření znaménko plus. Všiml jsi si, že Elza se může pohybovat dopředu a dozadu?
-      frozen diamond mini snowflake: "Poznal jsi, že každá sněhová vločka má jiný tvar?\nVytvořme novou vločku s použitím bloku \"Repeat\" k 4 krát\nzopakování rovnoběžníku a otočením doprava o 90 stupňů mezi každým rovnoběžníkem."
-      frozen diamond snowflake: "Teď pojďme vytvořit novou vločku použitím\nbloku opakovat - zopakuj rovnoběžník 10krát a otoč se doprava o\n36 stupňů mezi každýma dvěma."
+      frozen diamond mini snowflake: |-
+        Poznal jsi, že každá sněhová vločka má jiný tvar?
+        Vytvořme novou vločku s použitím bloku "Repeat" k 4 krát
+        zopakování rovnoběžníku a otočením doprava o 90 stupňů mezi každým rovnoběžníkem.
+      frozen diamond snowflake: |-
+        Teď pojďme vytvořit novou vločku použitím
+        bloku opakovat - zopakuj rovnoběžník 10krát a otoč se doprava o
+        36 stupňů mezi každýma dvěma.
       frozen diamond: Použij opakování kolem těchto bloků k vytvoření rovnoběžníku. Je to zrovna jako obdélník, ale má různé úhly. Má úhly 60 stupňů a 120 stupňů místo úhlů s 90 stupnů.
-      frozen freeplay: "Oficiálně se stáváš mistrovským umělcem! Vytvoř\nledové království."
-      frozen perpendicular: "Teď se podíváme, jestli zvládneme vytvořit dvě čáry,\nkteré svírají úhel 90 stupňů. Budeš potřebovat blok \"otoč\"\ni blok \"posuň\"."
-      frozen snowflake branch: "Zkus použít blok \"vytvoř rameno vločky\"\nk vytvoření tří ramen, což začíná vypadat jako vločka."
+      frozen freeplay: |-
+        Oficiálně se stáváš mistrovským umělcem! Vytvoř
+        ledové království.
+      frozen perpendicular: |-
+        Teď se podíváme, jestli zvládneme vytvořit dvě čáry,
+        které svírají úhel 90 stupňů. Budeš potřebovat blok "otoč"
+        i blok "posuň".
+      frozen snowflake branch: |-
+        Zkus použít blok "vytvoř rameno vločky"
+        k vytvoření tří ramen, což začíná vypadat jako vločka.
       frozen snowflake full: Teď to zopakujme osmkrát k vytvoření krásné sněhové vločky!
-      frozen snowflower: "Složité sněhové vzory mohou být vytvořeny z\nvelmi jednoduchých tvarů. Zvládneš vyrobit vzor opakováním 5 kružnic velikosti\n5 a 5 kružnic velikosti 10?"
+      frozen snowflower: |-
+        Složité sněhové vzory mohou být vytvořeny z
+        velmi jednoduchých tvarů. Zvládneš vyrobit vzor opakováním 5 kružnic velikosti
+        5 a 5 kružnic velikosti 10?
       frozen square iterative: "Vypadá to, že jsme na půl cesty k vyrobení čtverce. \nSpojme 4 čáry dohromady, aby jsme vytvořili čtverec."
-      frozen square loop 3x: "Pojďme vytvořit tři čtverce, s otočením po\nkaždém čtverci. Nezapomeň se otočit o 120 stupňů před každým novým čtvercem."
+      frozen square loop 3x: |-
+        Pojďme vytvořit tři čtverce, s otočením po
+        každém čtverci. Nezapomeň se otočit o 120 stupňů před každým novým čtvercem.
       frozen square loop: "Ahoj, jsem Anna z Arendelle! Když vyrobme čtverec \nblokem \"opakuj\", budeme potřebovat méně bloků. Kolikrát (???) by měl\nblok \"opakuj\" zopakovat bloky uvnitř sebe k vytvoření čtverce?"
-      frozen square snowflake: "Dokážeš vytvořit sněhovou vločku s použitím\nbloku \"opakuj\" pro nakreslení čtverce 10 krát, a bloku \"otočit\" k otočení o 36\nstupňů mezi každými čtverci?"
+      frozen square snowflake: |-
+        Dokážeš vytvořit sněhovou vločku s použitím
+        bloku "opakuj" pro nakreslení čtverce 10 krát, a bloku "otočit" k otočení o 36
+        stupňů mezi každými čtverci?
       grade2_MakeDogTag_8: Teď spojme v cyklu dohromady několik V.
-      grade2_PuppyLoops_10: |-
-        Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
+      grade2_PuppyLoops_10: Můj Větrník není dokončen. Kolikrát je to třeba opakovat, aby se to dokončilo?
       grade2_PuppyLoops_4: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku pomocí co nejméně bloků!
-      grade2_PuppyLoops_8: "Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů."
-      grade2_PuppyLoops_9: |-
-        Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš to udělat, aby to vypadalo jako C?
+      grade2_PuppyLoops_8: 'Kód pro tři vousy, které vidíš, je špatný. Rada: každý vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů.'
+      grade2_PuppyLoops_9: Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš to udělat, aby to vypadalo jako C?
       grade2_puppy_loops4: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku pomocí co nejméně bloků!
-      grade3_ConditionalsElse_2: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
-      grade3_ConditionalsElse_5: |-
-        Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
-      grade3_ConditionalsElse_6: "Tento Fialový květ může mít buď 3, 2 nebo 1 nektar. Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if, else bloku. Dokonči řešení pro sběr neznámé množství nektaru."
-      grade3_ConditionalsElse_7: "Pamatujte si, že fialové květy mohou mít buď 3, 2 nebo 1 nektarů. Dokonči funkci \"kontrolovat fialový květ\" a použít ji sesbírat všechen nektar na květinách."
-      grade3_ConditionalsElse_8: "Napiš uvnitř funkce \"kontrolovat květinu k tvorbě medu\". Tvoje funkce by měla zkontrolovat, zda fialový květ má 3, 2 nebo 1 nektaru a sesbírat všechen nektar. Potom se přesuň vpřed a udělej med."
-      grade3_ConditionalsElse_9: "Hodnocení: Tento kód je chybný. Dokonči funkci \"získat nektar nebo med\" a potom ji vyvolej sesbírat všechen nektar a med. Pamatuj si, že fialové květy mohou mít, 3, 2 nebo 1 nektarů."
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
-      grade3_Conditionals_10: |-
-        Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?
-      grade3_Conditionals_12: "Sbírej nektar ze všech čtyř květů."
-      grade3_Conditionals_2: "Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus."
-      grade3_Conditionals_8: "Sbírej nektar, kde květy mají nektar."
+      grade3_ConditionalsElse_2: Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      grade3_ConditionalsElse_5: Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
+      grade3_ConditionalsElse_6: Tento Fialový květ může mít buď 3, 2 nebo 1 nektar. Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if, else bloku. Dokonči řešení pro sběr neznámé množství nektaru.
+      grade3_ConditionalsElse_7: Pamatujte si, že fialové květy mohou mít buď 3, 2 nebo 1 nektarů. Dokonči funkci "kontrolovat fialový květ" a použít ji sesbírat všechen nektar na květinách.
+      grade3_ConditionalsElse_8: Napiš uvnitř funkce "kontrolovat květinu k tvorbě medu". Tvoje funkce by měla zkontrolovat, zda fialový květ má 3, 2 nebo 1 nektaru a sesbírat všechen nektar. Potom se přesuň vpřed a udělej med.
+      grade3_ConditionalsElse_9: 'Hodnocení: Tento kód je chybný. Dokonči funkci "získat nektar nebo med" a potom ji vyvolej sesbírat všechen nektar a med. Pamatuj si, že fialové květy mohou mít, 3, 2 nebo 1 nektarů.'
+      grade3_ConditionalsElse_TeacherIDo: Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
+      grade3_Conditionals_10: 'Sbírej nektar a udělej med. Rada: co se stane, když používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?'
+      grade3_Conditionals_12: Sbírej nektar ze všech čtyř květů.
+      grade3_Conditionals_2: Pomoz mi sesbírat všechen nektar z květů a udělat med. Použij cyklus.
+      grade3_Conditionals_8: Sbírej nektar, kde květy mají nektar.
       grade3_Debugging_11: "**Výzva:** Oprav chyby k sesbírání všeho nektaru a vyrobení všeho medu."
       grade3_Debugging_4: |-
-        *"Tyhle bloky mě vážně štvou."*
+        _"Tyhle bloky mě vážně štvou."_
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
-      grade3_Debugging_6: |-
-        Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
-      grade3_Debugging_9: |-
-        Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      grade3_Debugging_6: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
+      grade3_Debugging_9: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral všechen nektar a udělal všechen med.
       grade3_Loops_3: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       grade3_Loops_4: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení veškerého medu.
-      grade3_Loops_6: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
-      grade3_Loops_7: |-
-        Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
-      grade3_Loops_TeacherIDo: |-
-        Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
-      grade3_bee_conditionals_quantum2: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
-      grade3_maze_loops2: 'Dostaň mě ke slunečnici!'
+      grade3_Loops_6: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+      grade3_Loops_7: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. '
+      grade3_Loops_TeacherIDo: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. '
+      grade3_bee_conditionals_quantum2: Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      grade3_maze_loops2: Dostaň mě ke slunečnici!
       grade3_maze_nestedLoops4: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku pomocí co nejméně bloků!
       grade4_arist_nested_loop_flags1: Zacykluj daný kód k vytvoření větrného mlýnu.
-      grade4_arist_nested_loop_polygons1: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
-      grade4_arist_nested_loop_polygons2: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)"
+      grade4_arist_nested_loop_polygons1: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)'
+      grade4_arist_nested_loop_polygons2: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co dává 360 děleno 10?)'
       grade4_arist_nested_loop_triangles3: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
       grade4_arist_nested_loop_triangles4: Nakresli zuby v tlamě aligátora!
-      grade4_arist_nested_loop_triangles5: |-
-        Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-
+      grade4_arist_nested_loop_triangles5: Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \\r
       grade4_arist_nested_loop_triangles6: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
-      grade4_artist_functions2: "Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané \"nakreslit čtverec\". Můžeš použít funkci \"nakreslit čtverec\" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů."
+      grade4_artist_functions2: Funkce ti umožňují definovat nové bloky! Přemístili jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe 75 pixelů.
       grade4_artist_nested_loop_flags1: Zacykluj daný kód k vytvoření větrného mlýnu.
-      grade4_artist_nested_loop_polygons1: "Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)"
-      grade4_artist_nested_loop_triangles5: |-
-        Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \r
-
+      grade4_artist_nested_loop_polygons1: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit při každém opakování? (Rada: Co je 360 děleno 10?)'
+      grade4_artist_nested_loop_triangles5: Vytvoř slunce vnořením počátečního kódu do jiného cyklu. Tomu se říká vnořené cykly. \\r
       grade4_artist_nested_loop_triangles6: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených cyklů?
       grade4_artist_parameters_triangles2: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
-      grade4_bee_conditionals_quantum2: "Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar."
-      grade4_bee_conditionals_quantum5: |-
-        Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
+      grade4_bee_conditionals_quantum2: Včela chce právě teď jen nektar. Všechny objekty jsou květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano, můžeš získat nektar.
+      grade4_bee_conditionals_quantum5: Může být květ nebo plástve pod těmito mraky. Použij if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože je to plástev).
       grade4_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus k získání ideálního počtu bloků.
       grade4_bee_nestedLoops4: 'Sesbírej všechen nektar z každého květu a udělej med na každé plástvi. Použij vnořené cykly. '
-      grade4_frozen_freeplay: "Oficiálně se stáváš mistrovským umělcem! Vytvoř\nledové království."
-      grade4_frozen_functions0: "Kružnice je zvláštní tvar. Dokážeš přijít na to,\njakým číslem nahradit otazníky, abys nakreslil kružnici?"
-      grade4_frozen_functions1a: "Použij nový blok \"vytvoř kružnici\" k vytvoření\ndeseti překrývajících se kružnic. Nezapomeň skočit vpřed po každé kružnici."
+      grade4_frozen_freeplay: |-
+        Oficiálně se stáváš mistrovským umělcem! Vytvoř
+        ledové království.
+      grade4_frozen_functions0: |-
+        Kružnice je zvláštní tvar. Dokážeš přijít na to,
+        jakým číslem nahradit otazníky, abys nakreslil kružnici?
+      grade4_frozen_functions1a: |-
+        Použij nový blok "vytvoř kružnici" k vytvoření
+        deseti překrývajících se kružnic. Nezapomeň skočit vpřed po každé kružnici.
       grade4_frozen_functions2: Vytvořme 20 překrývajících se kružnic tak, že je otočíme o 18 stupňů mezi každou kružnicí.
       grade4_frozen_functions3: "Tady máš blok \"vytvoř kružnici\", \nkterý dokáže vyrobit kružnice různých velikostí. Dokážeš ho použít k vytvoření\nmalé kružnice o velikosti 5 a větší kružnice o velikosti 10?"
-      grade4_frozen_functions4: "Složité sněhové vzory mohou být vytvořeny z\nvelmi jednoduchých tvarů. Zvládneš vyrobit vzor opakováním 5 kružnic velikosti\n5 a 5 kružnic velikosti 10?"
-      grade4_frozen_nested_loop_diamonds2: "Poznal jsi, že každá sněhová vločka má jiný tvar?\nVytvořme novou vločku s použitím bloku \"Repeat\" k 4 krát\nzopakování rovnoběžníku a otočením doprava o 90 stupňů mezi každým rovnoběžníkem."
-      grade4_frozen_nested_loop_diamonds3: "Teď pojďme vytvořit novou vločku použitím\nbloku opakovat - zopakuj rovnoběžník 10krát a otoč se doprava o\n36 stupňů mezi každýma dvěma."
+      grade4_frozen_functions4: |-
+        Složité sněhové vzory mohou být vytvořeny z
+        velmi jednoduchých tvarů. Zvládneš vyrobit vzor opakováním 5 kružnic velikosti
+        5 a 5 kružnic velikosti 10?
+      grade4_frozen_nested_loop_diamonds2: |-
+        Poznal jsi, že každá sněhová vločka má jiný tvar?
+        Vytvořme novou vločku s použitím bloku "Repeat" k 4 krát
+        zopakování rovnoběžníku a otočením doprava o 90 stupňů mezi každým rovnoběžníkem.
+      grade4_frozen_nested_loop_diamonds3: |-
+        Teď pojďme vytvořit novou vločku použitím
+        bloku opakovat - zopakuj rovnoběžník 10krát a otoč se doprava o
+        36 stupňů mezi každýma dvěma.
       grade4_frozen_square: "Ahoj, jsem Anna z Arendelle! Když vyrobme čtverec \nblokem \"opakuj\", budeme potřebovat méně bloků. Kolikrát (???) by měl\nblok \"opakuj\" zopakovat bloky uvnitř sebe k vytvoření čtverce?"
       grade4_frozen_square_loop1: "Ahoj, jsem Anna z Arendelle! Když vyrobme čtverec \nblokem \"opakuj\", budeme potřebovat méně bloků. Kolikrát (???) by měl\nblok \"opakuj\" zopakovat bloky uvnitř sebe k vytvoření čtverce?"
-      grade4_frozen_square_loop2: "Pojďme vytvořit tři čtverce, s otočením po\nkaždém čtverci. Nezapomeň se otočit o 120 stupňů před každým novým čtvercem."
-      grade4_frozen_square_loop3: "Dokážeš vytvořit sněhovou vločku s použitím\nbloku \"opakuj\" pro nakreslení čtverce 10 krát, a bloku \"otočit\" k otočení o 36\nstupňů mezi každými čtverci?"
+      grade4_frozen_square_loop2: |-
+        Pojďme vytvořit tři čtverce, s otočením po
+        každém čtverci. Nezapomeň se otočit o 120 stupňů před každým novým čtvercem.
+      grade4_frozen_square_loop3: |-
+        Dokážeš vytvořit sněhovou vločku s použitím
+        bloku "opakuj" pro nakreslení čtverce 10 krát, a bloku "otočit" k otočení o 36
+        stupňů mezi každými čtverci?
       grade4_review_artist3: Blok "skoč" přesune umělce bez toho aby kreslil. Vytvoř přerušovanou čáru za použití bloků "skoč" a "posuň".
       grade4_review_bee1: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení veškerého medu.
       grade5_artist_for_loops1: 'Nakresli tento trojúhelník, který je široký 50 pixelů. Rada: použij blok opakování.'
-      grade5_artist_for_loops10: "Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \\r \\r Potřebuješ radu? Klepni sem."
-      grade5_artist_for_loops5: |-
-        Jen jedna malá změna kódu z posledního obrázku může vytvořit tuto kresbu. Můžeš zjistit, jaká je to změna? \r \r Rada: musíš něco odstranit!
+      grade5_artist_for_loops10: Nevíš, jak využít všechny věci, co jsi se naučil k vytvoření tohoto obrázku? \\r \\r Potřebuješ radu? Klepni sem.
+      grade5_artist_for_loops5: 'Jen jedna malá změna kódu z posledního obrázku může vytvořit tuto kresbu. Můžeš zjistit, jaká je to změna? \\r \\r Rada: musíš něco odstranit!'
       grade5_artist_parameters_triangles2a: Všiml jsi si něčeho neobvyklého na těchto funkčních blocích? Klepni na "Run", abys vidělco se stane.
-      grade5_artist_variables_hexagons1: "Zkusme to znova. Lze nastavit proměnnou délka, abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10."
+      grade5_artist_variables_hexagons1: 'Zkusme to znova. Lze nastavit proměnnou délka, abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10.'
       grade5_artist_variables_pentagon9: Nyní znovu vytvoř algoritmus z poslední úrovně a vytvoř pětiúhelník se stranami 150.
-      grade5_artist_variables_pentagons1: "Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \\r \\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \\r \\r \\r\n"
+      grade5_artist_variables_pentagons1: 'Nakresli tento vzor do správných míst zavěšením proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek 10).  \\r \\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá všude správnou hodnotu? \\r \\r \\r'
       grade5_playlab_variables13: Použij blok "když aktér se dotkne" pošle psa zpět do levého horního pouze když pes se dotkne některého z ostatních aktérů.
-      grade5_playlab_variables2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
-      grade5_playlab_variables9: "Zde je funkce nazvaná \"hlídka.\" Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů."
+      grade5_playlab_variables2: Závod v tom posledním puzzle nebyl velmi fér! Změň proměnnou "pes\_rychlost", a ujisti se, že můžeš sesbírat více vlajek než kočka. Kdo první sesbírá 10 vyhrává!
+      grade5_playlab_variables9: Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí Kočky 400 pixelů a pak dolů 400 pixelů.
       level 'grade3_Loops_3: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       level 'grade3_Loops_4: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení veškerého medu.
-      level 'grade3_Loops_6: "Kolik smyček potřebuješ v této hádance?\n\nSmyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků."
-      level 'grade3_Loops_7: |-
-        Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. 
+      level 'grade3_Loops_6: |-
+        Kolik smyček potřebuješ v této hádance?
+
+        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+      level 'grade3_Loops_7: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar z každého květu. '

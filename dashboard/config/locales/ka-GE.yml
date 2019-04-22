@@ -1212,6 +1212,8 @@ ka:
     csp_variables: ცვლადები
     csp_conditionals: პირობითი ბრძანებები
     csp_functions: ფუნქციები
+    csp_lists: სიები
+    csp_loops: ციკლები
     dlp: კითხვები განვლილი მასალიდან
   external_links:
     disclaimer: უარყოფა

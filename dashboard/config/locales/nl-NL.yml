@@ -947,6 +947,8 @@ nl:
     csp_variables: Variabelen
     csp_conditionals: Voorwaardelijke instructies
     csp_functions: Functies
+    csp_lists: Lijsten
+    csp_loops: Lussen
   external_links:
     disclaimer: Disclaimer
   hoc_download:

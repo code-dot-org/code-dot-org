@@ -486,12 +486,23 @@ zh-CN:
         hoc_dance_congrats: 舞会 - 继续！
         c_and_c_great_to_create: 创建并实践公平非常的伟大。
         c_and_c_digital_sharing: 数字共享
+        teaching_csf_how_it_works: '教学计算机科学的基础知识: 课程的运作方式'
+        elem_pd_2: 小学计算机科学——PD视频2/2
+        what_is_cs: 什么是计算机科学？
         repeat_block: 使用循环块
         lesson_planning: 课程计划
         opd_closing: '教学 CS 基础知识: 关闭和下一步骤'
+        why_unplugged_lessons: 不插电
         writing_first_program: 编写你的第一个计算机程序
+        conditionals_with_cards: 不插电课程的实际运用 - 用卡片实现条件语句
+        songwriting_with_functions: 不插电课程的实际运用 - 用函数进行编曲
         what_is_an_event: 什么是事件？
+        teaching_cs_pair_programming: '教学计算机科学的基础知识: 配对编程'
+        teaching_problem_solving: '教学计算机科学的基础: 解决问题'
+        csd_applab_designmode: '计算机科学发现: 应用实验室-设计模式'
         csd_pair_programming: 结对编程
+        csd_gamelab_functions: 调用和定义函数
+        csd_applab_parameters: 有参数的函数
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

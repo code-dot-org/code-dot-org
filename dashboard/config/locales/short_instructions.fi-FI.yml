@@ -116,7 +116,7 @@ fi:
         vain kääntyä 60 astetta!
       2-3 Artist Loops 10: Mitä tapahtuu suunnittelemallemme  kuviolle,  kun teemme
         viimeisen askeleen eteenpäin vain puoleksi niin pitkänä?
-      2-3 Artist Loops 11: Laitetaan nyt *toinen* silmukka koko luomuksen ympärille!
+      2-3 Artist Loops 11: Laitetaan nyt _toinen_ silmukka koko luomuksen ympärille!
         Älä unohda lisätä kulmaa ulomman silmukan loppuun.
       2-3 Artist Loops 2: Käytä nyt toista-lohkoa tehdäksesi solusta kuoren.
       2-3 Artist Loops 4: Haluatko nähdä, mitä tapahtuu, kun toistamme tuota muotoa
@@ -129,16 +129,14 @@ fi:
         tehdä vinoneliön tämän kuusikulmion sisälle?
       2-3 Artist Loops 8: Laitetaan molemmat palat silmukan sisään.
       2-3 Artist Loops 9: "Aiomme laittaa silmukoihin samoja osia, mutta nyt me aiomme
-        lisätä niiden välistä eäisyyttä.\r Käytä samaa koodia kuin ennenkin, mutta
+        lisätä niiden välistä eäisyyttä.\\\r Käytä samaa koodia kuin ennenkin, mutta
         lisää askel eteenpäin ulomman silmukan loppuun."
       2-3 Artist Loops New 1: Piirretään tälle robotille pää. Voitko tehdä neliön,
         jonka sivut ovat 100 kuvapistettä?
       2-3 Artist Loops New 10: Nyt yhdistetään joukko V-kirjaimia, piirretään ne silmukassa.
       2-3 Artist Loops New 11: Tällä kertaa piirretään se 24 kertaa. Lisää käänny
         vasemmalle 30 astetta tähän koodiin ja laita kaikki se toista -lohkoon.
-      2-3 Artist Loops New 12: 'Piirrä timantti, jossa sivut on 100 kuvapistettä.
-
-'
+      2-3 Artist Loops New 12: Piirrä timantti, jossa sivut on 100 kuvapistettä.
       2-3 Artist Loops New 13: Nyt piirrä timantti 3 kertaa silmukassa.
       2-3 Artist Loops New 14: Nyt piirretään timantti 10 kertaa, mutta kierrä 90
         astetta jokaisen timantin välissä.
@@ -153,7 +151,7 @@ fi:
       2-3 Artist Match Sq Pic: 'Poiminta: Täydennä puuttuva koodi'
       2-3 Artist Match Tri pic: 'Poiminta: Täytä puuttuva koodi.'
       2-3 Artist Nested Loops 1: "Olet käyttänyt silmukoita piirtääksesi muotoja aiemmin,
-        mutta tiesitkö, että voit laittaa silmukan toisen silmukan sisään?\r\nSilmukoi
+        mutta tiesitkö, että voit laittaa silmukan toisen silmukan sisään?\\\r\nSilmukoi
         tätä koko koodilohkoa 3 kertaa piirtääksesi kuvion."
       2-3 Artist Nested Loops 10: Tee silmukka tälle koodille 12 kertaa täydentääksesi
         kuviosi.
@@ -188,7 +186,7 @@ fi:
         silmukoilla.
       2-3 Bee Conditionals 1: Hei! Olen mehiläinen. Auta minua saamaan mettä kukasta.
       2-3 Bee Conditionals 10: "Violetilla kukalla voi olla joko 1 tai 0 mettä.\nVaro
-        keräämästä mettä violetilta kukalta, jos sillä ei ole mitä kerätä.\r\n"
+        keräämästä mettä violetilta kukalta, jos sillä ei ole mitä kerätä.\\\r"
       2-3 Bee Conditionals 11: Kerää mettä siellä missä kukissa on mettä.
       2-3 Bee Conditionals 12: |-
         Käytä silmukkaa tarkistaaksesi ja kerätäksesi 
@@ -373,6 +371,8 @@ fi:
       2-3 maze sq15: Pääsetkö auringonkukan luo käyttämällä vain viittä lohkoa?
       2-3 maze sq16: Ok, tämä on melkein samanlainen. Pystytkö tekemään tämän käyttämällä
         vain viittä lohkoa?
+      2-3: "Violetilla kukalla voi olla joko 1 tai 0 mettä.\nVaro keräämästä mettä
+        violetilta kukalta, jos sillä ei ole mitä kerätä.\\\r"
       2-3level1: Auta lintua pyydystämään ilkeä possu liikuttamalla sitä eteenpäin
       20hr_farmer_stage9_1: Hei! Minä olen maanviljeliä. Tarvitsen apua maan tasoittamisessa,
         jotta voin istuttaa siihen kasveja. Siirrä minut maakasan luo ja käytä "poista"-lohkoa
@@ -555,8 +555,8 @@ fi:
         vasemmalle oiken sijaan? Osaatko toistaa tuon piirtääksesi aallon?
       4-5 Artist Patterns 13: "Kerrataanpa koko juttu neljä kertaa, jotta saadaan
         kehykset tähän piirustukseen. Ole tarkkaavainen kulmissa, et voi vain kääntyä
-        90 astetta!\r\n\r Jos 3 asteen silmukka pitää toistaa 60 kertaa, jotta saa
-        puoliympyrän, millä näistä koodipalikoista saa aikaan kulmaan neljännesympyrän?"
+        90 astetta!\\\r\n\\\r Jos 3 asteen silmukka pitää toistaa 60 kertaa, jotta
+        saa puoliympyrän, millä näistä koodipalikoista saa aikaan kulmaan neljännesympyrän?"
       4-5 Artist Patterns 2: Jos neliösilmukka laitetaan toisen silmukan sisään, sitä
         kutsutaan sisäkkäiseksi silmukaksi. Mitä on lisättävä ulommaiseksi silmukaksi,
         jotta varmistetaan, että kaikki 15 neliötä asettuvat suoraan jonoon?
@@ -568,11 +568,9 @@ fi:
         kulmat. Käytä silmukkaa piirtääksesi sen.
       4-5 Artist Patterns 5.5: Kuinka monta kertaa tämä palikka täytyy toistaa, jotta
         saadaan piirretyksi täysi timanttiruudukko?
-      4-5 Artist Patterns 5: "Toista tämä koodi ja tee 6 timantin rivi.\n\r\n\r\nHuomaa,
+      4-5 Artist Patterns 5: "Toista tämä koodi ja tee 6 timantin rivi.\n\\\r\n\\\r\nHuomaa,
         että timanttikoodia on muutettu. Se toistaa 3 kertaa 2 kerran sijaan - minkähän
-        takia niin käy?\r\n"
-      4-5 Artist Patterns 6: Kuinka monta kertaa tämä palikka täytyy toistaa, jotta
-        saadaan piirretyksi täysi timanttiruudukko?
+        takia niin käy?\\\r"
       4-5 Artist Patterns 7: Muokataanpa edellisen tehtävän koodia, jotta saadaan
         tästä monimutkaisempi malli. Huomaa, kuinka timantit menevät nyt osittain
         päällekkäin. Yritä muuttaa ensimmäistä 'hyppyä taaksepäin' sadasta viiteenkymmeneen
@@ -582,7 +580,7 @@ fi:
         40 kuvapisteen sivut ja 60 asteen kulmat.
       4-5 Artist Patterns 9.5: Tehdäänpä tähän koodiin silmukka, että saamme piirrettyä
         kaksi riviä kuusikulmioita. Huomaa, kuinka toinen rivimme on siirtynyt oikealle.
-      4-5 Artist Patterns 9: "Toista tämä koodi 3 kertaa ja piirrä kokonainen rivi.\r\n\r\nJokainen
+      4-5 Artist Patterns 9: "Toista tämä koodi 3 kertaa ja piirrä kokonainen rivi.\\\r\n\\\r\nJokainen
         kuusikulmio on 80 kuvapistettä mitattuna äärimmäisestä pisteestä vasemmalla
         oikean reunan äärimmäiseen pisteeseen."
       4-5 Artist Patterns Free Play: Vapaa peli - koeta piirtää oma kuvio!
@@ -593,32 +591,32 @@ fi:
         kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se voi muuttua!
       4-5 Bee Conditionals 2 (copy 1): Juuri nyt mehiläinen haluaa vain mettä. Muista,
         kaikki esineet eivät ole kukkia, joten tarkista, että keräät mettä vain kukista.
-      4-5 Bee Conditionals 2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi, jotta
-        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+      4-5 Bee Conditionals 2: "Lisää pilviä!\\\r\n\\\r\nTarkista jokainen pilvi, jotta
+        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\\r\n\\\r\nMuista:\nKaikki
         pilvet eivät piilottelee samaa asiaa!"
       4-5 Bee Conditionals 3: Nyt haluan tehdä hunajaa. Joidenkin näiden pilvien alla
         voi olla hunajakennoja. Tarkista jokainen pilvi!
       4-5 Bee Conditionals 4: Joskus pilvi peittää kukan, joskus hunajakennon! Jos
         löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa
         tehdäksesi hunajaa (koska löysit hunajakennon).
-      4-5 Bee Conditionals 5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\r\n\r\nJos
-        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\r\nMuussa tapauksessa,
-        tee hunajaa (koska pilven alla on hunajakenno)."
+      4-5 Bee Conditionals 5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\\\r\n\\\r\nJos
+        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\\\r\nMuussa
+        tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
       4-5 Bee Conditionals 6: "En ole varma, kuinka paljon mettä tässä kukassa on,
-        mutta tiedän, että sillä on 1, 2 tai 3 mettä.\r\n\r\nYhdistä vaihtoehtoiset
-        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\r\n\r\nMuista,
+        mutta tiedän, että sillä on 1, 2 tai 3 mettä.\\\r\n\\\r\nYhdistä vaihtoehtoiset
+        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\\\r\n\\\r\nMuista,
         meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
-      4-5 Bee Conditionals 7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\r\n\r\nTee
+      4-5 Bee Conditionals 7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\\\r\n\\\r\nTee
         valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien
         kaiken meden talteen."
-      4-5 Bee Conditionals 8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\r\n\r\nFunktiosi
-        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\r\nMene
+      4-5 Bee Conditionals 8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\\\r\n\\\r\nFunktiosi
+        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\\\r\nMene
         sitten eteenpäin ja tee hunajaa."
       4-5 Bee Conditionals Assessment 1: "Tehtävä: Tämä pilvi joko piilottelee kukkaa,
-        jossa on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\r\n\r\nTäydennä
+        jossa on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\\\r\n\\\r\nTäydennä
         'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai
-        hunaja.\r\n"
-      4-5 Bee Debugging 1: "Nämä palikat todellakin häiritsevät minua.\r\n\r\nOsaatko
+        hunaja.\\\r"
+      4-5 Bee Debugging 1: "Nämä palikat todellakin häiritsevät minua.\\\r\n\\\r\nOsaatko
         korjata ne?"
       4-5 Bee Debugging 10: Etsi virheet ja korjata ne.
       4-5 Bee Debugging 11: Laskeeko tämä oikein?
@@ -675,18 +673,18 @@ fi:
         lohkoja!
       4-5 Maze 7: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 8: "Käytä mahdollisimman vähän palikoita ja vie zombie auringonkukan
-        luo.\r\n(Vältä ahmijoita!)"
-      4-5 Maze 9: "Meillä on uusi palikka, 'toista kunnes'.\r\nSen kanssa voimme toistaa
-        käskyjä kunnes zombie pääsee auringonkukan luo.\r\n\r\nKäytä uutta 'toista
-        kunnes' -palikkaa tämän tehtävän ratkaisemiseen niin vähillä käskyillä kuin
-        mahdollista."
+        luo.\\\r\n(Vältä ahmijoita!)"
+      4-5 Maze 9: "Meillä on uusi palikka, 'toista kunnes'.\\\r\nSen kanssa voimme
+        toistaa käskyjä kunnes zombie pääsee auringonkukan luo.\\\r\n\\\r\nKäytä uutta
+        'toista kunnes' -palikkaa tämän tehtävän ratkaisemiseen niin vähillä käskyillä
+        kuin mahdollista."
       4-5 Maze Assessment 1: 'Tehtävä: Mene auringonkukan luo.'
       4-5 Maze Conditionals 1: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
         luo.
       4-5 Maze Conditionals 2: Käytä 'toista kunnes' -palikkaa ja vie zombie auringonkukan
         luo.
       4-5 Maze Conditionals 3: "Käytä 'jos'-palikkaa ja auta minua päättämään milloin
-        käännyt.\r\n"
+        käännyt.\\\r"
       4-5 Maze Conditionals 4: Ok, ratkaise tämä tehtävä samoin kuin edellinen. Sinun
         on muistettava, kuinka käytit 'jos' ja 'toista kunnes'-palikoita yhdessä.
       4-5 Maze Conditionals 5: Tahtoo auringonkukan! Käytä "jos"-lohkoa viedäksesi
@@ -696,9 +694,9 @@ fi:
       4-5 Maze Conditionals 7: Tämän tehtävän ratkaisu ei ole kovin erilainen, mutta
         varo ahmijoita!
       4-5 Maze Conditionals 8: "'Jos/muuten' -palikka tarkistaa ehdon, ja sitten se
-        tekee yhden asian TAI toisen.\r\n\r\nKäytä tätä uutta palikkaa ja vie minut
-        auringonkukan luo."
-      4-5 Maze Conditionals 9: "Vielä yksi harjoitustehtävä 'jos/muuten' -palikalla!\r\n\r\nKulje
+        tekee yhden asian TAI toisen.\\\r\n\\\r\nKäytä tätä uutta palikkaa ja vie
+        minut auringonkukan luo."
+      4-5 Maze Conditionals 9: "Vielä yksi harjoitustehtävä 'jos/muuten' -palikalla!\\\r\n\\\r\nKulje
         sitä pitkin sormellasi ja kokeile, saatko sen oikein sen ensi yrittämällä."
       4-5 Maze Conditionals Assessment 1: 'Tehtävä: Käytä ''toista kunnes'' ja ''jos/muuten''
         -palikoita ja vie minut auringonkukan luo. Käytä mahdollisimman vähiä palikoita.'
@@ -712,9 +710,9 @@ fi:
         kolmiota. Tätä kutsutaan sisäkkäiseksi silmukaksi.  '
       4-5 Nested Loops 5: Liitä annettu koodi silmukkaan. Tee tuulimylly.
       4-5 Nested Loops 6: Osaatko piirtää kuusikulmion kolmiokoodia toistamalla?
-      4-5 Nested Loops 7: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka monta astetta
+      4-5 Nested Loops 7: "Toista tämä kuvio 10 kertaa.\\\r\n\\\r\nKuinka monta astetta
         sinun on käännyttävä joka toistolla?"
-      4-5 Nested Loops 8: "Toista tämä kuvio 6 kertaa.\r\n\r\nKuinka monta astetta
+      4-5 Nested Loops 8: "Toista tämä kuvio 6 kertaa.\\\r\n\\\r\nKuinka monta astetta
         sinun on käännyttävä joka toistolla? "
       4-5 Nested Loops 9: Piirrä alligaattorin suuhun hampaat!
       4-5 Nested Loops Assessment 1: 'Tehtävä: Piirrä kuvio valmiiksi. Käytä sisäkkäistä
@@ -723,11 +721,11 @@ fi:
         käytä 'täytä'-palikkaa.
       4-5 While Loops 2: Liikuta minut multakasan luo. Poista kasa kauhomalla lapiolla
         5 kertaa. Käytä 'poista1'-palikkaa.
-      4-5 While Loops 3: "Tee tämä tehtävä käyttämällä niin vähän palikoita kuin mahdollista!\r\n\r\nLiikuta
+      4-5 While Loops 3: "Tee tämä tehtävä käyttämällä niin vähän palikoita kuin mahdollista!\\\r\n\\\r\nLiikuta
         minut kasan luo ja poista kaikki multa, siirry sitten kuopan luo ja täytä
         se kokonaan."
-      4-5 While Loops 4: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka monta multalapiollista
-        tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
+      4-5 While Loops 4: "Vau, katsohan!\\\r\n\\\r\nEn tiedä, kuinka monta multalapiollista
+        tähän kuoppaan tarvitaan.\\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
         kunnes maa on tasainen?  "
       4-5 While Loops 5: Vau, nyt tässä on kaksi syvää kuoppaa! Osaatko kirjoittaa
         ohjelman, joka täyttää ne molemmat, kunnes maa on tasainen?
@@ -782,7 +780,7 @@ fi:
         Sinun ei tarvitse onnistua täydellisesti ensimmäisellä kerralla. Haluatko
         nähdä lisää vinkkejä? Klikkaa tästä!
       Course 4 Artist 12: "Haluatko kurkistaa uudelleen suunnitteluapuun tai vinkkeihin?
-        Klikkaa tästä!\r\n\r\nJollet, tee kuvio aivan itse!"
+        Klikkaa tästä!\\\r\n\\\r\nJollet, tee kuvio aivan itse!"
       Course 4 Artist 13: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja, jolle
         voit piirtää, mitä haluat!
       Course 4 Artist 2: Osaatko käyttää silmukkaa  harmaan neliön piirtämiseen? (Jokainen
@@ -798,7 +796,7 @@ fi:
         symmetrinen. Kolmiot ovat tasasivuisia ja 50 kuvapistettä pitkiä. Vinkki:
         Voi olla, että koodi pitää suorittaa monta kertaa, jotta kaikki lisättävät
         palikat selviävät.'
-      Course 4 Artist 6: "Täydennä koodi ja piirrä nämä kolmiot. \r\n\r\nJokaisen
+      Course 4 Artist 6: "Täydennä koodi ja piirrä nämä kolmiot. \\\r\n\\\r\nJokaisen
         tasakylkisen kolmion sivut ovat 100 kuvapistettä pitkiä. "
       Course 4 Artist 8: Toista koko koodipalikka useita kertoja ja piirrä aurinko.
       Course 4 Artist 8a: Muistatko tämän muodon? Nyt saat rakentaa ilman valmiita
@@ -820,10 +818,10 @@ fi:
       Course 4 Artist For Loops 9: Osaatko tehdä kierteen? Siirry eteenpäin yhdestä
         75 kuvapisteeseen, lisää joka kerralla 1 kuvapiste.
       Course 4 Artist For Loops Challenge: "Keksitkö, kuinka voit käyttää kaikkia
-        oppimiasi asioita tämän kuvan luomiseen? \r\n\r\nJos haluat vinkin, napsauta
+        oppimiasi asioita tämän kuvan luomiseen? \\\r\n\\\r\nJos haluat vinkin, napsauta
         tästä."
       Course 4 Artist Inspire: "Haluatko kurkistaa uudelleen suunnitteluapuun tai
-        vinkkeihin? Klikkaa tästä!\r\n\r\nJollet, tee kuvio aivan itse!"
+        vinkkeihin? Klikkaa tästä!\\\r\n\\\r\nJollet, tee kuvio aivan itse!"
       Course 4 Maze 5: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
         määrän lohkoja?
       Course 4 Maze 6: Pystytkö selvittämään pulman käyttämällä pienimmän mahdollisen
@@ -1115,8 +1113,8 @@ fi:
         kukkaa. Jos löydät kukan, voit kerätä meden.
       Ryan_Demo: Laita hirvi aloittamaan uusi tanssiliike neljän tahdin jälkeen!
       SpecialFrozenLevel: Olet nyt virallisesti mestaritaiteilija! Luo talven ihmemaa.
-      Testing Quantum Farmer: "Vau, katsohan!\r\n\r\nEn tiedä, kuinka monta multalapiollista
-        tähän kuoppaan tarvitaan.\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
+      Testing Quantum Farmer: "Vau, katsohan!\\\r\n\\\r\nEn tiedä, kuinka monta multalapiollista
+        tähän kuoppaan tarvitaan.\\\r\nOsaatko kirjoittaa ohjelman, joka käyttää 'täytä'-palikkaa,
         kunnes maa on tasainen?  "
       The Vigenere Cipher Widget: Ohjeet
       The Vigenere Cipher Widget_2018: Ohjeet
@@ -1164,9 +1162,9 @@ fi:
       aE7: Mitä tapahtuu, jos kopioit tämän silmukan ja käännät vasemmalle oiken sijaan?
         Osaatko toistaa tuon piirtääksesi aallon?
       aE8: "Kerrataanpa koko juttu neljä kertaa, jotta saadaan kehykset tähän piirustukseen.
-        Ole tarkkaavainen kulmissa, et voi vain kääntyä 90 astetta!\r\n\r Jos 3 asteen
-        silmukka pitää toistaa 60 kertaa, jotta saa puoliympyrän, millä näistä koodipalikoista
-        saa aikaan kulmaan neljännesympyrän?"
+        Ole tarkkaavainen kulmissa, et voi vain kääntyä 90 astetta!\\\r\n\\\r Jos
+        3 asteen silmukka pitää toistaa 60 kertaa, jotta saa puoliympyrän, millä näistä
+        koodipalikoista saa aikaan kulmaan neljännesympyrän?"
       beeDebugVideo1: Osaatko käytää silmukkaa kaiken meden keräämiseen?
       birdsDebugVideo1: Seuraa polkua ja johda minut tuon typerän possun luo. Vältä
         TNT:tä tai höyhenet pöllyävät!
@@ -1513,34 +1511,34 @@ fi:
         kahta silmukkaa.
       grade3_ConditionalsElse_1: En näe, koska pilvi on edessä! Katso, onko pilven
         alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se voi muuttua!
-      grade3_ConditionalsElse_2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi, jotta
-        tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+      grade3_ConditionalsElse_2: "Lisää pilviä!\\\r\n\\\r\nTarkista jokainen pilvi,
+        jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\\r\n\\\r\nMuista:\nKaikki
         pilvet eivät piilottelee samaa asiaa!"
       grade3_ConditionalsElse_3: Nyt haluan tehdä hunajaa. Joidenkin näiden pilvien
         alla voi olla hunajakennoja. Tarkista jokainen pilvi!
       grade3_ConditionalsElse_4: Joskus pilvi peittää kukan, joskus hunajakennon!
         Jos löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa
         tehdäksesi hunajaa (koska löysit hunajakennon).
-      grade3_ConditionalsElse_5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\r\n\r\nJos
-        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\r\nMuussa tapauksessa,
-        tee hunajaa (koska pilven alla on hunajakenno)."
+      grade3_ConditionalsElse_5: "Noiden pilvien alta löytyy joko kukka tai hunajakenno!\\\r\n\\\r\nJos
+        löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi mettä.\\\r\nMuussa
+        tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
       grade3_ConditionalsElse_6: "En ole varma, kuinka paljon mettä tässä kukassa
-        on, mutta tiedän, että sillä on 1, 2 tai 3 mettä.\r\n\r\nYhdistä vaihtoehtoiset
-        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\r\n\r\nMuista,
+        on, mutta tiedän, että sillä on 1, 2 tai 3 mettä.\\\r\n\\\r\nYhdistä vaihtoehtoiset
+        palikat ('jos' ja/tai 'jos/muuten') saadaksesi kaiken kukan meden talteen.\n\\\r\n\\\r\nMuista,
         meden määrä voi muuttua joka kerta, kun suoritat tehtävää!"
-      grade3_ConditionalsElse_7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\r\n\r\nTee
+      grade3_ConditionalsElse_7: "Näillä kukilla voi olla 3, 2 tai 1 mettä.\n\\\r\n\\\r\nTee
         valmiiksi 'tarkasta violetti kukka' -funktio ja käytä sitä kerätessäsi kukkien
         kaiken meden talteen."
-      grade3_ConditionalsElse_8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\r\n\r\nFunktiosi
-        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\r\nMene
+      grade3_ConditionalsElse_8: "Kirjoita funktio ' tarkista kukka, tee hunajaa'.\\\r\n\\\r\nFunktiosi
+        pitäisi tarkistaa, onko kukalla 3, 2 vai 1 mettä ja kerätä kaikki mesi.\\\r\nMene
         sitten eteenpäin ja tee hunajaa."
       grade3_ConditionalsElse_9: "Tehtävä: Tämä pilvi joko piilottelee kukkaa, jossa
-        on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\r\n\r\nTäydennä
+        on yksi mesi tai sellaista hunajakennoa, joka tarvitsee yhden hunajan.\\\r\n\\\r\nTäydennä
         'hae mesi tai tee hunajaa' -funktio, pyydä sitten sitä keräämään mesi tai
-        hunaja.\r\n"
+        hunaja.\\\r"
       grade3_ConditionalsElse_TeacherIDo: "Noiden pilvien alta löytyy joko kukka tai
-        hunajakenno!\r\n\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
-        mettä.\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
+        hunajakenno!\\\r\n\\\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
+        mettä.\\\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
       grade3_Conditionals_1 BAD: Käytä silmukkaa kerätäksesi kaikki mesi.
       grade3_Conditionals_1: |-
         Hei, olen mehiläinen! Auta minua keräämään 
@@ -1610,8 +1608,8 @@ fi:
       grade3_Loops_9: Kerää mesi jokaisesta kukasta ja tee hunajaa jokaisessa hunajakennossa.
       grade3_Loops_TeacherIDo: 'Jokainen kukka sisältää yhden verran mettä. Kerää
         mesi jokaisesta kukasta. '
-      grade3_bee_conditionals_quantum2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi,
-        jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+      grade3_bee_conditionals_quantum2: "Lisää pilviä!\\\r\n\\\r\nTarkista jokainen
+        pilvi, jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\\r\n\\\r\nMuista:\nKaikki
         pilvet eivät piilottelee samaa asiaa!"
       grade3_maze_Loop1: 'Tehtävä: Hoida minut auringonkukan luo käyttäen vain viittä
         lohkoa!'
@@ -1638,9 +1636,9 @@ fi:
       grade4_arist_nested_loop_circles1: 'Tehtävä: Piirrä kuvio valmiiksi. Käytä sisäkkäistä
         silmukkaa.'
       grade4_arist_nested_loop_flags1: Liitä annettu koodi silmukkaan. Tee tuulimylly.
-      grade4_arist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
+      grade4_arist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\\\r\n\\\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla?"
-      grade4_arist_nested_loop_polygons2: "Toista tämä kuvio 6 kertaa.\r\n\r\nKuinka
+      grade4_arist_nested_loop_polygons2: "Toista tämä kuvio 6 kertaa.\\\r\n\\\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla? "
       grade4_arist_nested_loop_squares1: Osaatko piirtää tämän jalkakäytävän 10 neliötä
         käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
@@ -1663,7 +1661,7 @@ fi:
       grade4_artist_nested_loop_circles1: 'Tehtävä: Piirrä kuvio valmiiksi. Käytä
         sisäkkäistä silmukkaa.'
       grade4_artist_nested_loop_flags1: Liitä annettu koodi silmukkaan. Tee tuulimylly.
-      grade4_artist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\r\n\r\nKuinka
+      grade4_artist_nested_loop_polygons1: "Toista tämä kuvio 10 kertaa.\\\r\n\\\r\nKuinka
         monta astetta sinun on käännyttävä joka toistolla?"
       grade4_artist_nested_loop_squares1: Osaatko piirtää tämän jalkakäytävän 10 neliötä
         käyttäen sisäkkäistä silmukkaa? Jokainen neliö on 30 kuvapistettä.
@@ -1672,15 +1670,15 @@ fi:
       grade4_bee_conditionals_quantum1: En näe, koska pilvi on edessä! Katso, onko
         pilven alla kukka. Jos löydät kukan, voit kerätä meden. Ole varovainen, se
         voi muuttua!
-      grade4_bee_conditionals_quantum2: "Lisää pilviä!\r\n\r\nTarkista jokainen pilvi,
-        jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\r\n\r\nMuista:\nKaikki
+      grade4_bee_conditionals_quantum2: "Lisää pilviä!\\\r\n\\\r\nTarkista jokainen
+        pilvi, jotta tiedät, onko sen alla kukka. Jos löydät kukan, voit kerätä meden.\\\r\n\\\r\nMuista:\nKaikki
         pilvet eivät piilottelee samaa asiaa!"
       grade4_bee_conditionals_quantum4: Joskus pilvi peittää kukan, joskus hunajakennon!
         Jos löydät kukan, käytä jos/muuten -palikkaa kerätäksesi mettä tai muuten-palikkaa
         tehdäksesi hunajaa (koska löysit hunajakennon).
       grade4_bee_conditionals_quantum5: "Noiden pilvien alta löytyy joko kukka tai
-        hunajakenno!\r\n\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
-        mettä.\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
+        hunajakenno!\\\r\n\\\r\nJos löydät kukan, käytä 'jos/muuten' -palikkaa kerätäksesi
+        mettä.\\\r\nMuussa tapauksessa, tee hunajaa (koska pilven alla on hunajakenno)."
       grade4_bee_functions1: Kerää kaikki mesi kustakin kukasta.
       grade4_bee_functions2: Funktiot ovat koodilohkoja, jotka suoittavat tehtävän.
         Käytä "hae 2 mettä" -funktiota kerätäksesi meden joka kukasta.
@@ -1728,9 +1726,6 @@ fi:
         jälkeen. Pidä huolta että käännyt 120 astetta ennen kutakin uutta neliötä.
       grade4_frozen_square_loop3: Osaatko luoda lumihiutaleen käyttäen "toista"-lohkoa
         10 neliön tekemiseen ja "käänny"-lohkoa 36 asteen käännökseen neliöiden välillä?
-      grade4_review_artist1: Hei olen taiteilija. Voit kirjoittaa koodin, joka saa
-        minut tekemään melkein mitä tahansa. Käytä muutamia lohkoja, joilla saat minut
-        piirtämään kuvan harmaiden linjojen yli. (Jokainen linja on 100 pikseliä pitkä)
       grade4_review_artist2: 'Tämä talo tarvitsee katon. Piirrä kolmio. Vihje: kaikki
         kolme sivua ovat saman pituisia.'
       grade4_review_artist3: Hyppää-lohko siirtää taiteilijan ilman, että se piirtää.
@@ -1746,7 +1741,7 @@ fi:
         voit piirtää. Pidä hauskaa!'
       grade5_artist_binary8: Tee tämä piirustus valmiiksi.
       grade5_artist_variables_freeplay15: "Haluatko kurkistaa uudelleen suunnitteluapuun
-        tai vinkkeihin? Klikkaa tästä!\r\n\r\nJollet, tee kuvio aivan itse!"
+        tai vinkkeihin? Klikkaa tästä!\\\r\n\\\r\nJollet, tee kuvio aivan itse!"
       grade5_artist_variables_freeplay16: Pelaatko edelleen? Tässä sinulle tyhjä maalauspohja,
         jolle voit luoda, mitä haluat!
       level 'grade3_Loops_10: Käytä samanlaista silmukkaa kuin edellisessä tehtävässä,

@@ -55,6 +55,7 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csd_facilitator
     apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
+    apps_priority_deadline_date
     applications_principal_approval
     applications_decision_emails
     link_to_partner_application
@@ -95,6 +96,15 @@ class RegionalPartner < ActiveRecord::Base
     # Applications open, but not sure when.  (Not closed, not open, but we have no opening date yet.)
     else
       return WORKSHOP_APPLICATION_STATES[:opening_sometime]
+    end
+  end
+
+  # If there is a priority deadline date and it is still upcoming, then return it.  Otherwise return nil.
+  def upcoming_priority_deadline_date
+    if apps_priority_deadline_date && apps_priority_deadline_date > Time.zone.now
+      Date.parse(apps_priority_deadline_date).strftime('%B %e, %Y')
+    else
+      nil
     end
   end
 

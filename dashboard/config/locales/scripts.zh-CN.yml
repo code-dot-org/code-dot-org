@@ -534,6 +534,8 @@ zh-CN:
               name: 发送有格式的文本
             Sending Numbers:
               name: 发送数字
+            Text Compression:
+              name: 文本压缩
         algebraPD:
           stages:
             Course Overview:
@@ -572,6 +574,11 @@ zh-CN:
               name: 你的游戏-碰撞检测
             Your Game - Player Movement:
               name: 你的游戏-移动角色
+        text-compression:
+          title: 文本压缩
+          stages:
+            Text Compression:
+              name: 文本压缩
         CSPPD:
           stages:
             Exploring CSP Instructional Materials:
@@ -998,6 +1005,8 @@ zh-CN:
               name: 工作室
             Swapped Levels:
               name: 交换的级别
+            Text Compression:
+              name: 文本压缩
             TextMatch:
               name: 匹配的文本
             Web Lab:
@@ -1014,6 +1023,8 @@ zh-CN:
               name: 精灵实验室
             Dance Lab:
               name: 舞蹈实验室
+            Mini Rubric:
+              name: 迷你注释
         algebraPD2b:
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
@@ -1893,6 +1904,8 @@ zh-CN:
               name: 使数据可视化
             Practice PT - Tell a Data Story:
               name: 练习表演任务- 讲述一个数据故事
+            Text Compression:
+              name: 文本压缩
             Unit 2 Chapter 1 Assessment:
               name: 第2单元 第1章 评估
             Unit 2 Chapter 2 Assessment:
@@ -8114,6 +8127,8 @@ zh-CN:
           stages:
             Bytes and File Sizes:
               name: 字节和文件大小
+            Text Compression:
+              name: 文本压缩
             Encoding B&W Images:
               name: 编码一张黑白图片
             Encoding Color Images:
@@ -8183,6 +8198,8 @@ zh-CN:
               name: 请完成 计算机科学原理中期课程调查!
             Creating Functions with Parameters:
               name: 创建带参数的函数
+            Mid-Year Survey:
+              name: 中期调查
         csp-explore-2018:
           title: 探索 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
@@ -8195,6 +8212,8 @@ zh-CN:
               name: 探索 表演任务 - 制定计划
             Explore PT - Complete the Task:
               name: 探索 表演任务 - 完成任务
+            Mid-Year Survey:
+              name: 中期调查
         csp-create-2018:
           title: 创建 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和创建 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
@@ -8240,6 +8259,8 @@ zh-CN:
               name: 检查您的假设
             Unit 4 Assessment:
               name: 第4单元评估
+            Mid-Year Survey:
+              name: 中期调查
         csp5-2018:
           title: 计算机科学原理单元5 - 构建应用 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -8293,6 +8314,8 @@ zh-CN:
               name: 第5单元评估 5 - AP 伪代码练习题
             Participate in a longitudinal study!:
               name: 参与纵向研究!
+            Mid-Year Survey:
+              name: 中期调查
         csppostap-2018:
           title: Post AP - 数据工具 ('18-'19)
           description: "在本单元的第一章中，学生们开发了表达可视化数据的技能，并使用电子表格和可视化工具来创建自己的数字作品。通过进行的项目
@@ -8780,14 +8803,53 @@ zh-CN:
               name: Hannah的测试阶段
             Hannah Test Stage:
               name: Hannah 测试阶段
+            U4 L02 Variables Investigate:
+              name: U4 L02 变量调查
+            Variables Investigate:
+              name: 变量调查
+            Variables Explore:
+              name: 变量探索
+            Variables Practice:
+              name: 变量练习
+            Student Survey:
+              name: 学生调查
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Teacher Surveys:
+              name: 教师调查
+            Conditionals Practice:
+              name: 条件练习
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
             Unit 4 Assessment:
               name: 第4单元评估
+            Lists Explore:
+              name: 列表探索
           title: 计算机科学原理游戏板
         dance-extras:
           stages:
             Dance Party - Go Further:
               name: 舞会 - 继续
           title: 继续跳舞
+          description_short: 结束代码一小时活动后，请参照 Code.org的舞蹈聚会教程完成后续练习。
           description: 通过扩展项目创意，超越第一个小时。
         coursef-2019:
           title: 课程 F （2019）
@@ -8876,6 +8938,24 @@ zh-CN:
               name: 新的阶段
             The Artist:
               name: 小艺术家
+            Nested Loops in the Maze:
+              name: 迷宫里的嵌套循环
+            Sequencing in the Maze:
+              name: 迷宫中的序列
+            Programming and Loops with the Artist:
+              name: 艺术家的编程和循环
+            Events with Sprite Lab:
+              name: 精灵实验室的事件
+            Loops with the Artist:
+              name: 与艺术家的循环
+            Sprite Lab Behaviors:
+              name: 精灵实验室的行为
+            Editing Behaviors:
+              name: 编辑行为
+            Virtual Pet:
+              name: 虚拟宠物
+            Data from Sprite Lab:
+              name: 精灵实验室的数据
             Copyright and Creativity:
               name: 版权和创造力
             Internet:
@@ -8884,6 +8964,10 @@ zh-CN:
               name: 众包
             Digital Sharing:
               name: 数字共享
+            Running Simulations:
+              name: 运行模拟
+            Simulating Experiments:
+              name: 模拟实验
         dance-low:
           stages:
             Dance Party:
@@ -8891,6 +8975,7 @@ zh-CN:
           title: 舞会 (低带宽)
           description_short: 写出你自己的舞会代码，分享给你的朋友们！（这是低带宽版本）
         coursed-2019:
+          title: 课程 D (2019)
           description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
           description_short: 学习条件语句，并创建自己的艺术，故事或游戏。
           description_audience: 年龄：7-11
@@ -8938,6 +9023,7 @@ zh-CN:
             Dance Party:
               name: 舞蹈派对
         coursee-2019:
+          title: 课程 E (2019)
           description: 开始用算法，循环，条件和事件来编程，然后你会学习函数。在本课程的第二部分，设计并创建一个好项目，并共享给你的亲友们。
           description_short: 回顾课程 C 和 D 中的概念，然后继续学习函数。
           description_audience: 年龄：8-12
@@ -9034,11 +9120,28 @@ zh-CN:
               name: 艺术家中的嵌套循环
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
+            Sequencing in the Maze:
+              name: 迷宫中的序列
+            Programming and Loops with the Artist:
+              name: 艺术家的编程和循环
             Conditionals in Minecraft:
               name: "《我的世界》中的条件"
+            About Me:
+              name: 关于我
+            Aquatic Conditionals in Minecraft:
+              name: "《我的世界》中的水生条件"
             Digital Sharing:
               name: 数字共享
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: "《我的世界》的条件：水上航行"
+            Swimming Fish with Sprite Lab:
+              name: 精灵实验室的游泳鱼类
+            Designing for Accessibility:
+              name: 无障碍环境设计
+            Songwriting:
+              name: 写歌
         express-2019:
+          title: 速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
           description_audience: 年龄：9-18
@@ -9063,6 +9166,8 @@ zh-CN:
               name: 艺术家里的循环
             Copyright and Creativity:
               name: 版权和创造力
+            'Concept Practice with Minecraft ':
+              name: '用《我的世界》概念实践 '
             Nested Loops in Bee:
               name: 蜜蜂里的嵌套循环
             Nested Loops in Frozen:
@@ -9136,6 +9241,7 @@ zh-CN:
             Crowdsourcing:
               name: 众包
         csd1-2019:
+          title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\r\n"
           description_short: "  了解人类如何使用计算机来解决问题。"
           stages:
@@ -9195,21 +9301,31 @@ zh-CN:
               description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成,
                 并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成,
                 虽然也可以单独完成。
+            Post-Project Test:
+              name: 项目后测试
         andrea-test:
           stages:
             new stage:
               name: 新的阶段
+            module1:
+              name: 模块 1
+            module2:
+              name: 模块 2
             'null':
               name: 空
             Deeper Learning Overview:
               name: 更深的学习概览
+          description_short: 这是测试我的课程技能
+          description: 关于我创建课程的更长描述...  仍在疑惑概述，内容来自何处......
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
               name: 舞会 - 继续
           title: 继续跳舞
+          description_short: 结束代码一小时活动后，请参照 Code.org的舞蹈聚会教程完成后续练习。
           description: 通过扩展项目创意，超越第一个小时。
         coursec-2019:
+          title: 课程 C (2019)
           description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           description_audience: 年龄：6-10
@@ -9246,17 +9362,39 @@ zh-CN:
               name: 展望未来
             Binary Bracelets:
               name: 二进制的手镯
+            'End of Course Project: Play Lab':
+              name: '课程结束项目: 游戏实验室'
+            Create a Design with Loops:
+              name: 创建循环设计
+            'End of Course Project: Create a Play Lab Game':
+              name: '课程结束项目: 创建一个游戏实验室游戏'
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
             'Loops: My Loopy Robotic Friends':
               name: '循环: 我糊涂的机器人朋友'
+            Graphing Data:
+              name: 图形数据
             Sticker Art with Loops:
               name: 艺术家里的循环
         csp-mid-survey:
+          stages:
+            CSP Mid-year survey:
+              name: 计算机科学原理年中调查
+          title: 计算机科学原理学生年中调查
           description_audience: 计算机科学原理学生
+          description_short: 计算机科学原理学生年中调查
+          description: 欢迎参与 Code.org 计算机科学原则年中调查。本调查需要大约15分钟。你的回复是匿名且保密的 - 你的老师只能看见匿名的整个班级数据的聚合结果。此结果对你的老师和
+            Code.org 改进课程非常重要。谢谢你的时间和付出。
         gamelab:
+          stages:
+            Start and End Screens:
+              name: 开始和结束屏幕
+            Start and End Screens2:
+              name: 开始和结束屏幕2
           title: 游戏实验室
+          description: 游戏实验室里的教师面对面开发教程。这些教程超出了计算机科学发现课程覆盖的概念。
         coursea-2019:
+          title: 课程 A (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍
           description_audience: 年龄：4-7
@@ -9264,15 +9402,21 @@ zh-CN:
             'Debugging: Unspotted Bugs':
               name: '调试: 没有错误'
               description_teacher: 这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 坚持与挫折：史蒂夫和大项目。
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
               description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r\n"
+            Sequencing in Maze:
+              name: 迷宫中的序列
             'Programming: Happy Maps':
               name: '编程: 快乐地图'
               description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
             Programming in Maze:
               name: 迷宫编程
               description_teacher: 在这一系列的在线难题中，学生们会建立对算法的理解，调试程序，和一般的计算机素养。来自愤怒的小鸟游戏的角色，会让学生们开发序列算法来让小鸟在不碰到墙或TNT炸药的情况下抓住猪。调试难题也会混合在在一些关卡中，来增加解决问题和批判性性思维的练习。
+            Programming in Harvester:
+              name: 与收割者编程
             Going Places Safely:
               name: 去安全的地方
               description_teacher: 通过与[r 常识媒体] 合作，本课程帮助学生学习到许多网站会要求 提供私人信息，并讨论如何负责任的处理这类请求。学生们也会发现，它们可以去网上令人兴奋的地方，但也需要遵循一定的规则来保证安全。
@@ -9299,11 +9443,14 @@ zh-CN:
               name: 学习拖放
             Loops in Ice Age:
               name: 冰河时代里的循环
+            Programming in Ice Age:
+              name: 在冰河时代里编程
             Programming with Rey and BB-8:
               name: 与雷伊，BB-8一起编程
             Sequencing with Scrat:
               name: 斯奎特和序列
         courseb-2019:
+          title: 课程 B (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
           description_audience: 年龄： 5-8
@@ -9316,6 +9463,8 @@ zh-CN:
               name: 你的数字足迹
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
+            Programming in Ice Age:
+              name: 在冰河时代里编程
             Copyright and Creativity:
               name: 版权和创造力
             Programming with Rey and BB-8:
@@ -9334,17 +9483,26 @@ zh-CN:
               name: 游戏实验室中的事件
             'Loops: Getting Loopy':
               name: '循环: 变得糊涂'
+            The Right App:
+              name: 正确的应用程序
             Loops in Harvester:
               name: 收割者中的循环
             Programming in Maze:
               name: 迷宫编程
+            Programming in Harvester:
+              name: 与收割者编程
+            Sequencing in Maze:
+              name: 迷宫中的序列
         pre-express-2019:
+          title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 学龄前读者的计算机科学介绍：结合了我们最好的幼儿园和一年级的课程。
           description_audience: 年龄： 4-8
           stages:
             'Debugging: Unspotted Bugs':
               name: '调试: 没有错误'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 坚持与挫折：史蒂夫和大项目。
             Move It, Move It:
               name: 移动它，移动它！
             Sequencing with Scrat:
@@ -9353,6 +9511,8 @@ zh-CN:
               name: 你的数字足迹
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
+            Programming in Ice Age:
+              name: 在冰河时代里编程
             Copyright and Creativity:
               name: 版权和创造力
             Programming with Rey and BB-8:
@@ -9375,14 +9535,23 @@ zh-CN:
               name: 学习拖放
             Programming in Maze:
               name: 迷宫编程
+            Programming in Harvester:
+              name: 与收割者编程
+            Tell a Story in Play Lab:
+              name: 在游戏实验室中讲述一个故事
+            Make a Game in Play Lab:
+              name: 在游戏实验室中创建一个游戏
             Ocean Scene with Loops:
               name: 艺术家里的循环
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
               name: '调试: 没有错误'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 坚持与挫折：史蒂夫和大项目。
             'Real-life Algorithms: Plant a Seed':
               name: 真实算法： 播种一颗种子
+          title: 已从计算机科学基础 2019 中移除
         dani-test-script:
           stages:
             new stage:
@@ -9482,6 +9651,8 @@ zh-CN:
                 每个人都分享他们的项目以及他们是如何开发的。
               description_teacher: "学生们花了大量的时间在整个单位的个人网站上工作。在最后的几天里, 学生们最终完成了他们的网站。
                 他们与同事们一起工作以获得反馈, 在网站上完成润色, 回顾专栏并反思自己的过程。为了结束该单位, 他们将分享他们的项目, 并概述他们为实现最终设计所采取的过程。\r\n"
+            Post-Project Test:
+              name: 项目后测试
         csd3-2019:
           title: CSD单元 3 - 动画和游戏
           description: " 在单元3中，要利用你的代码技巧，在游戏实验室中给动画、交互艺术和游戏编程。像计算机科学家每天的工作一样，用同样的编程概念和设计流程。在本单元中，从简单的形状开始，然后构造出精巧的，基于精灵的游戏。在最后的项目中，会开发出一个个性化的交互程序。"
@@ -9620,6 +9791,8 @@ zh-CN:
                 一系列级别将提示他们使用可用于实现此计划的序列。完成后，学生将分享他们项目，并进行相互评审。在课程结束时, 学生们将与同学们分享他们完成的游戏。此项目将扩展到多个班级，可以轻松地在合适的场地支持3到5个班一起进行。
             CS Discoveries End of Semester Survey:
               name: 计算机科学发现期末调查
+            Post-Project Test:
+              name: 项目后测试
         csd4-2019:
           title: 计算机科学发现单元4 - 设计过程 ('18-'19)
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
@@ -9870,8 +10043,49 @@ zh-CN:
               name: 项目：创新原型
         csp4-pilot:
           stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey:
+              name: 学生调查
             Surveys:
               name: 调查
+            Student Surveys:
+              name: 学生调查
+            'Teacher Surveys: HIDE':
+              name: '教师调查: 隐藏'
+            Teacher Surveys:
+              name: 教师调查
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 4: 变量、条件、函数'
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
@@ -9918,6 +10132,8 @@ zh-CN:
           stages:
             Bytes and File Sizes:
               name: 字节和文件大小
+            Text Compression:
+              name: 文本压缩
             Encoding B&W Images:
               name: 编码一张黑白图片
             Encoding Color Images:
@@ -9955,6 +10171,8 @@ zh-CN:
               name: PT练习 - 设计一个数字场景
             Unit 3 Chapter 1 Assessment:
               name: 第3单元 第1章 评估
+            Mid-Year Survey:
+              name: 中期调查
         csp4-2019:
           title: 计算机科学原理单元4 - 大数据和隐私 ('18-'19)
           description: 我们生活的数据丰富的世界，同时也带来了很多复杂的问题，如公共政策，法律，道德和社会影响。本单元的目标是发展全面平衡的视角，来看待全球的数据，它的正面和反面影响，并理解现代加密技术工作的基础。
@@ -9982,6 +10200,10 @@ zh-CN:
               name: 快速研究-网络犯罪
             Unit 4 Assessment:
               name: 第4单元评估
+            Mid-Year Survey:
+              name: 中期调查
+            'Optional: Data Questions':
+              name: '可选: 数据问题'
         csp5-2019:
           title: 计算机科学原理单元5 - 构建应用 ('18-'19)
           description: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
@@ -10031,6 +10253,8 @@ zh-CN:
               name: 第5单元评估4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: 第5单元评估 5 - AP 伪代码练习题
+            Mid-Year Survey:
+              name: 中期调查
         csp-explore-2019:
           title: 探索 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和执行 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
@@ -10043,6 +10267,8 @@ zh-CN:
               name: 探索 表演任务 - 制定计划
             Explore PT - Complete the Task:
               name: 探索 表演任务 - 完成任务
+            Mid-Year Survey:
+              name: 中期调查
         csp-create-2019:
           title: 创建 - AP表演任务准备 ('18-'19)
           description: '这些课程是为了帮助你理解、准备和创建 AP 探索表演任务。 每个 "课程" 都包含指向有用文档的链接, 老师可以帮助你排练。注:
@@ -10099,7 +10325,450 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+          title: 计算机科学原理 单元1 试验
+        csd-tests:
+          stages:
+            Computers and Problem Solving:
+              name: 计算机与问题解决
+            Interactive Animations and Games:
+              name: 互动动画和游戏
+          title: CSD的项目后测试
         csd-videos:
           stages:
             new stage:
               name: 新的阶段
+            Problem Solving and Computers:
+              name: 问题解决与计算机
+            Games and Animations:
+              name: 游戏和动画
+            User Centered Design:
+              name: 用户居间设计
+            Data and Society:
+              name: 数据与社会
+            Physical Computing:
+              name: 物理计算
+          title: CSD 视频
+          description_short: 计算机科学发现中的所有视频
+          description: 计算机科学发现中的所有视频
+        time4csdemo:
+          stages:
+            Introduction to the Problem:
+              name: 问题介绍
+            Crowdsourcing:
+              name: 众包
+            Everglades Habitats:
+              name: 湿地栖息环境
+            Reviewing Projects:
+              name: 审查项目
+            Food Chains:
+              name: 食物链
+            Conditionals with Cards:
+              name: 用 扑克牌 的 条件子句
+            Alligator Holes:
+              name: 鳄鱼洞穴
+            Conditionals in Sprite Lab:
+              name: 精灵实验室的条件
+            'Programming: My Robotic Friends':
+              name: '编程: 我的机器人朋友'
+            Sequence in Maze:
+              name: 迷宫中的序列
+            Building a Foundation:
+              name: 打基础
+            Debugging with Scrat:
+              name: 斯奎特和调试
+            Programming in Artist:
+              name: 艺术家里的编程
+            'Loops: My Loopy Robotic Friends':
+              name: '循环: 我糊涂的机器人朋友'
+            Loops in Artist:
+              name: 艺术家里的循环
+            Nested Loops in Bee/Zombie:
+              name: 蜜蜂/僵尸里的嵌套循环
+            Nested Loops with Frozen:
+              name: 冰雪奇缘和嵌套循环
+            Learning Sprites with Sprite Lab:
+              name: 在精灵实验室学习精灵
+            Alien Dance Party with Sprite Lab:
+              name: 精灵实验室中的外星人舞蹈派对
+            Pet Giraffe with Sprite Lab:
+              name: 精灵实验室中的宠物长颈鹿
+            Build a Flappy Game:
+              name: 创作像素鸟游戏
+            Build a Star Wars Game:
+              name: 建立一个星球大战游戏!
+            'Events: The Big Event':
+              name: '事件: 大事件'
+            'Functions: Songwriting':
+              name: '功能: 作曲'
+            Functions in Minecraft:
+              name: "《我的世界》中的函数"
+            Functions in Harvester:
+              name: 收割者中的函数
+            Functions in Artist:
+              name: 艺术家之间的功能
+            Determine the Concept:
+              name: 确定概念
+          title: 计算机科学时间 佛罗里达的多样性
+          description_audience: 4年级
+          description_short: 该模块侧重于四年级的科学和社会学习标准。在科学方面，他们认为生命标准包括栖息地、生态系统、本地物种和入侵物种。在社会研究方面，学生们考虑佛罗里达州政府的分支，以及日常公民如何影响当地和州政策。
+          description: 该模块侧重于四年级的科学和社会学习标准。在科学方面，他们认为生命标准包括栖息地、生态系统、本地物种和入侵物种。在社会研究方面，学生们考虑佛罗里达州政府的分支，以及日常公民如何影响当地和州政策。
+        csp1-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: 单位 1：比特和字节
+        csp2-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: 单元 2︰ 互联网
+        csp3-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: 第3单元：应用开发简介
+        csp4-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 4: 变量、条件和函数'
+        csp5-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+            Lists Explore:
+              name: 列表探索
+            Lists Investigate:
+              name: 列表调查
+            Loops Explore:
+              name: 循环探索
+            Traversals Explore:
+              name: 遍历探索
+          title: '单元 5: 列表、循环和遍历'
+        csp6-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 6: 算法'
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: 新的阶段
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 7: 功能和库'
+        csp8-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 8: 创建 PT'
+        csp9-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 9: 数据'
+        csp10-pilot-staging:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Student Survey (Variables):
+              name: 学生调查 (变量)
+            Teacher Surveys (Variables):
+              name: 教师调查(变量)
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Student Survey (Conditionals):
+              name: 学生调查(条件)
+            Teacher Surveys (Conditionals):
+              name: 教师调查(条件)
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Practice PT Part 1:
+              name: 练习 PT 第1部分
+            Practice PT Part 2:
+              name: 练习 PT 第2部分
+            Practice PT Part 3:
+              name: 练习 PT 第3部分
+            Unit 4 Assessment:
+              name: 第4单元评估
+          title: '单元 10: 全局影响'

@@ -4,41 +4,44 @@ es-MX:
     game:
       name:
         Unplug1: Introducción a Ciencias de la Computación
-        Maze: El laberinto
-        Multi: Materias de elección múltiple
+        Maze: El Laberinto
+        Multi: Temas de opción múltiple
         Unplug2: Pensamiento computacional
         Unplug3: Programación con Papel Cuadriculado
-        Artist: El artista
+        Artist: El Artista
         Unplug4: Algoritmos
         Artist2: El artista 2
         Unplug5: Funciones
-        Farmer: El granjero
+        Farmer: La Granjera
         Unplug6: Condicionales
-        Artist3: El artista 3
-        Unplug7: Escribir canciones
-        Farmer2: El granjero 2
-        Unplug8: Liberación abstracta
-        Artist4: El artista 4
+        Artist3: El Artista 3
+        Unplug7: Composición de canciones
+        Farmer2: La granjera 2
+        Unplug8: Abstracción
+        Artist4: El Artista 4
         Unplug9: Programación de relevos
-        Farmer3: El granjero 3
+        Farmer3: 'La Granjera 3
+
+'
         Unplug10: Internet
-        Artist5: El artista 5
+        Artist5: El Artista 5
         Unplug11: Cierre
-        MazeEC: El laberinto
+        MazeEC: El Laberinto
         Bounce: Rebotar
-        Flappy: El Ave Flappy
+        Flappy: Ave Flappy
         Jigsaw: Rompecabezas
-        MazeStep: Modo paso a paso de laberinto
-        Wordsearch: Sopa de Letras
-        Webapp: Laboratorio de App
-        ArtistEC: El artista
-        TextMatch: Combinación de texto
+        MazeStep: Modo paso de laberinto
+        Wordsearch: Sopa de letras
+        Webapp: Laboratorio de aplicaciones
+        ArtistEC: El Artista
+        TextMatch: Coincidencia de texto
         StudioEC: Laboratorio de juegos
-        Applab: Laboratorio de App
+        Applab: Laboratorio de aplicaciones
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
         Gamelab: Laboratorio de juegos
+        Spritelab: Laboratorio de sprites
     trophy:
       name:
         Bronze: Bronce
@@ -48,9 +51,9 @@ es-MX:
       description:
         sequence: Secuencia
         if: Bloque si
-        if_else: Bloque si-sino
+        if_else: Bloque si-si no
         loop_times: Bloque repetir veces
-        loop_until: Bloque repetir hasta que
+        loop_until: Bloque repetir hasta
         loop_while: Bloque mientras
         loop_for: Bloque contador
         function: Funciones
@@ -197,100 +200,98 @@ es-MX:
           Sugerencia: podrías utilizar el control deslizante para hacerme ir más rápido.'
         turtle_2_5: Dibuja cuadrados con lados de 50, 60, 70, 80 y 90 píxeles. Necesitarás
           utilizar la función "dibujar un cuadrado" cinco veces.
-        turtle_2_6: 'Bien, este programa utilizará un contador, para dibujar los mismos
-          cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que
-          el contador, usando el bloque "contador". Sugerencia: Está en la categoría
-          Variables.'
-        turtle_2_7: Éste es un programa para dibujar un espiral, pero los bloques
-          están desactivados así que no funcionan. Haz un nuevo programa utilizando
-          un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la
-          categoría Variables) para dibujar el mismo espiral.
+        turtle_2_6: 'Este programa utilizará un contador, para dibujar los mismos
+          cuadrados que la última vez. Usa el bloque "contador" para que el cuadrado
+          sea del mismo tamaño que el contador. Pista: está en la categoría Variables.'
+        turtle_2_7: Este es un programa para dibujar una espiral, pero los bloques
+          no funcionan, porque están desactivados. Usa un bloque "desde" (en la categoría
+          Bucles) y un bloque "contador" (en la categoría Variables) para dibujar
+          la misma espiral.
         turtle_2_7_5: Hay una nueva función de "dibujar un muñeco de nieve" (en la
-          categoría de funciones). Dibuja dos muñecos de nieve, de 250 y 100 de altura.
-        turtle_2_8: Éste es un poco complicado. Utiliza la función "dibujar un muñeco
-          de nieve" y el bloque nuevo "saltar adelante" (en la categoría de Acciones).
-          Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.
-        turtle_2_9: Utiliza una iteración "contar con" para dibujar una familia de
-          muñecos de nieve, con alturas de 110, 100, 80, 90 y 70. Los muñecos de nieve
-          deberían estar separados por 60 píxeles.
+          categoría Funciones). Dibuja dos muñecos de nieve, con alturas de 250 y
+          100.
+        turtle_2_8: Este es más difícil. Utiliza la función "dibujar un muñeco de
+          nieve" y el nuevo bloque "saltar hacia adelante" (en la categoría Acciones).
+          Dibuja 3 muñecos de nieve de diferentes colores, separados por 100 pixeles.
+        turtle_2_9: Utiliza un bloque "desde" para dibujar una familia de muñecos
+          de nieve, con alturas de 110, 100, 90, 80 y 70. Los muñecos de nieve deberían
+          tener 60 pixeles de separación.
         turtle_2_10: Aquí hay algo de código para probar experimentando con diferentes
           espirales. ¿Qué sucede si cambias la cantidad del giro? O estableces un
           color al azar en la iteración. Dibuja cualquier cosa que quieras.
         maze_karel_2_1: 'Trata de usar los bloques para ayudarme a quitar todas las
-          pilas y llenar todos los agujeros del suelo. Intenta utilizar iteraciones
-          en lugar de usar demasiados bloques. Sugerencia: puedes poner una iteración
-          dentro de otra iteración.'
+          pilas y llenar todos los hoyos del suelo. Puedes usar bucles en lugar de
+          una gran cantidad de bloques. Pista: puedes poner un bucle dentro de otro.'
         maze_karel_2_2: Hemos definido nuestro propio bloque llamado "llenar 5", que
           está ahora en la categoría de Funciones. Úsalo para ayudarme a llenar este
           agujero.
-        maze_karel_2_3: Usa el nuevo bloque de función "llenar 5" para hacerme rellenar
-          todos los agujeros. Tendrás que arrastrar el bloque "llenar 5" de la categoría
+        maze_karel_2_3: Usa el nuevo bloque de función "llenar 5" para hacerme llenar
+          todos los hoyos. Tendrás que arrastrar el bloque "llenar 5" desde la categoría
           Funciones.
-        maze_karel_2_4: Define una nueva función que saque 7 paladas. Luego úsala
-          para escribir un programa que me ayuda a eliminar todas las pilas.
-        maze_karel_2_5: Crea una nueva función que elimine 6 paladas de una pila y
-          úsala para ayudarme a nivelar todas las pilas.
+        maze_karel_2_4: Define una nueva función que quite 7 paladas. Luego úsala
+          para escribir un programa que me ayude a quitar todas las pilas.
+        maze_karel_2_5: Crea una nueva función que quite 6 paladas de una pila y úsala
+          para ayudarme a nivelar todas las pilas.
         maze_karel_2_6: Usa dos nuevas funciones, "llenar 8" y "quitar 8", que me
-          ayuden a nivelar la pila y rellenar el agujero.
+          ayuden a nivelar la pila y llenar el hoyo.
         maze_karel_2_7: "¡Hay una vaca en mi campo! Escribe una nueva función que
-          me ayude a esquivar la vaca y quite la pila. Pon todos los bloques dentro
+          me ayude a evitar la vaca y quitar la pila. Pon todos tus bloques dentro
           de la nueva función."
         maze_karel_2_8: Usa la nueva función, "evitar la vaca y quitar 1", para ayudarme
-          a eliminar todas las pilas.
-        maze_karel_2_9: Ok, aquí hay una función que elimina 4 diferentes pilas de
-          tierra en una columna vertical. Intenta poner esta función dentro de una
-          iteración, para eliminar todas las pilas de tierra usando sólo unos pocos
-          bloques.
+          a quitar todas las pilas.
+        maze_karel_2_9: Esta es una función que elimina 4 diferentes pilas de tierra
+          en una columna vertical. Intenta poner esta función dentro de un bucle,
+          para eliminar todas las pilas de tierra con unos pocos bloques nuevos.
         maze_karel_2_10: Muéveme a través del campo y utiliza estas dos funciones
-          para ayudarme a quitar todas las pilas y tapar todos los agujeros.
+          para ayudarme a quitar todas las pilas y llenar todos los hoyos.
         turtle_3_1: Este puzzle te muestra cómo se definen las funciones "dibujar
           un cuadrado" y "dibujar un círculo". Definir una función no ejecuta sus
           bloques. Tienes que usar el bloque "dibujar un cuadrado" para realmente
           dibujar un cuadrado.
-        turtle_3_2: Usando la función "dibujar un cuadrado" como ejemplo, crea una
-          función "dibujar un triángulo" y úsala.
+        turtle_3_2: Puedes usar la función "dibujar un cuadrado" como ejemplo para
+          crear (y usar) una función "dibujar un triángulo".
         turtle_3_3: 'Dibuja cercas triangulares alrededor de los gatos y una cerca
           cuadrada alrededor de la vaca. Sugerencia: prueba el programa a medida que
           avanzas.'
-        turtle_3_4: Ve si puedes descubrir cómo usar "dibujar un cuadrado" y "dibujar
+        turtle_3_4: Mira si puedes descubrir cómo usar "dibujar un cuadrado" y "dibujar
           un triángulo" (y algunos otros bloques) para dibujar una casa alrededor
-          del León.
+          del león.
         turtle_3_5: 'Ahora crea una nueva función "dibujar una casa" y úsala para
-          albergar dos gatos. Sugerencia: crea una nueva función usando el bloque
-          "hacer algo" y escribe tu propio texto para nombrar el bloque.'
-        turtle_3_6: 'Usando "dibujar un cuadrado" como ejemplo, agrega una entrada
-          llamada "longitud" a "dibujar un triángulo". Luego, dibuja triángulos de
-          diferentes tamaños. (Sugerencia: haz clic en la estrella para agregar una
-          entrada a una función)'
+          albergar dos gatos. Pista: crea una nueva función con el bloque "hacer algo"
+          y escribe tu propio texto para dar un nombre al bloque.'
+        turtle_3_6: 'Puedes usar "dibujar un cuadrado" como ejemplo para agregar una
+          entrada llamada "longitud" a "dibujar un triángulo". Luego, dibuja triángulos
+          de diferentes tamaños (pista: haz clic en la estrella para agregar una entrada
+          a una función).'
         turtle_3_7: Agrega una entrada denominada "longitud" a "dibujar una casa"
-          y construye una casa grande para el elefante (con bordes de 150 píxeles
-          de largo)
+          y crea una casa grande para el elefante (con bordes de 150 pixeles de largo)
         turtle_3_8: Modificar "dibuja una casa" así que terminó en la esquina inferior
           derecha después de dibujar una nueva casa. Utilice esta función modificada
           para dibujar tres casas.
         turtle_3_9: ¿Puedes volver a crear la función "dibujar una casa" sin ayuda?
-          Pruébalo y luego dibuja una hilera de casas.
-        turtle_3_10: "¡Has aprendido mucho! Ahora úsalo para dibujar lo que quieras.
-          Intentar dibujar una estrella, o un espiral o un copo de nieve sofisticado."
+          Haz el intento y luego dibuja una hilera de casas.
+        turtle_3_10: "¡Has aprendido mucho! Ahora usa tus conocimientos para dibujar
+          lo que quieras. Intenta dibujar una estrella, una espiral o un copo de nieve
+          elegante."
         maze_karel_debug_seq_1: "¡Bienvenido a la depuración! Mi código no funciona
-          bien. ¿Puedes detectar el problema y arreglarlo para que pueda aplanar mi
+          bien. ¿Puedes detectar el problema y corregirlo para que pueda alisar mi
           campo y dejarlo listo para la siembra?"
-        maze_karel_debug_seq_2: "¿Qué funciona mal en este programa? ¿Cómo deberías
-          arreglarlo para quitar esa pila?"
+        maze_karel_debug_seq_2: "¿Cuál es el error en este programa? ¿Cómo deberías
+          corregirlo para que pueda quitar esa pila?"
         maze_karel_debug_repeat: Depura este programa por mí para que mi campo sea
-          agradable y plano.
+          lindo y plano.
         maze_karel_debug_while: "¿Cómo deberías cambiar este programa para ayudarme
-          a llenar el agujero?"
-        maze_karel_debug_if: "¡Ayuda! Arregla el programa para que mi campo esté completamente
-          plano."
-        maze_karel_debug_if_else: Depura este programa para que pueda llenar los agujeros
-          y quite todas las pilas.
+          a llenar el hoyo?"
+        maze_karel_debug_if: "¡Necesito ayuda! Corrige el programa para que mi campo
+          esté completamente plano."
+        maze_karel_debug_if_else: Depura este programa para que pueda llenar los hoyos
+          y quitar todas las pilas.
         maze_karel_debug_function_1: "¿Qué deberías cambiar en este programa para
-          ayudarme a eliminar todas las pilas?"
-        maze_karel_debug_function_2: "¿Puedes depurar este programa para mí así puedo
-          dejar mi campo plano?"
-        maze_karel_debug_function_3: 'Edita este programa para que pueda eliminar
-          todas las pilas de mi campo. '
+          ayudarme a quitar todas las pilas?"
+        maze_karel_debug_function_2: "¿Puedes depurar este programa por mí así puedo
+          alisar mi campo?"
+        maze_karel_debug_function_3: 'Edita este programa para que pueda quitar todas
+          las pilas de mi campo. '
         turtle_5_1: Intente ejecutar este programa y haga cambios para ver que ocurre.
           ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo con algo totalmente
           diferente)
@@ -315,9 +316,9 @@ es-MX:
         maze_3_3: "¿Cómo llego al cerdo? ¡Asegúrate de no pasar por la caja de TNT!"
         maze_3_4: "¡Argh! Escríbeme un programa que me haga esquivar al TNT y llegue
           hasta el cerdo."
-        Custom_builder: Arrastra los bloques desde la caja de herramientas al espacio
-          de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar" cuando
-          estés listo.
+        Custom_builder: Arrastra los bloques desde la caja de herramientas hacia el
+          espacio de trabajo para dibujar el nivel que deseas crear. Presiona "Ejecutar"
+          cuando estés listo.
         jigsaw_1: Haz clic en el bloque
         jigsaw_2: Arrastra el bloque al objetivo
         jigsaw_3: Acomoda los bloques para formar la imagen
@@ -328,23 +329,22 @@ es-MX:
         jigsaw_8: Acomoda los bloques para formar la imagen
         jigsaw_9: Acomoda los bloques para formar la imagen
         jigsaw_10: Acomoda los bloques para formar la imagen
-        jigsaw_11: Pon estos bloques en orden de número
-        jigsaw_12: Pon estos bloques en orden de número
-        jigsaw_13: "¡Arregla el desafío!"
+        jigsaw_11: Pon estos bloques en orden según el número
+        jigsaw_12: Pon estos bloques en orden según el número
+        jigsaw_13: "¡Corrige el desafío!"
         mazestep_1: Aquí va la descripción del paso del laberinto
         mazestep_2: Aquí va la descripción del paso del laberinto
         mazestep_3: Aquí va la descripción del paso del laberinto
         mazestep_4: Aquí va la descripción del paso del laberinto
         mazestep_5: Aquí va la descripción del paso del laberinto
-        studio_c2_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_c2_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste
-          algo?"
+        studio_c2_1: ¿Puedes hacer que este perro diga "Hola, mundo"?
+        studio_c2_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste?"
         studio_c2_3: "¿Puedes crear un programa que haga que el perro se mueva hacia
           el gato?"
         studio_c2_4: ¿Puedes escribir un programa que haga que el perro se mueva hacia
           el gato, y que el gato diga "hola" cuando el perro se acerque a él?
-        studio_c2_5: ¿Puedes escribir un programa para hacer que el pulpo diga "hola"
-          cuando se hace clic sobre él?
+        studio_c2_5: ¿Puedes escribir un programa para que el pulpo diga "hola" cuando
+          se hace clic sobre él?
         studio_c2_6: "¿Puedes escribir un programa que haga que este pingüino se mueva
           al presionar las teclas de flecha arriba/abajo/izquierda/derecha para alcanzar
           todos los objetivos?"
@@ -358,21 +358,21 @@ es-MX:
           choque con el pulpo?, hay que moverlo con las teclas de flecha para anotar
           un punto"
         studio_c2_10: "¿Puedes agregar bloques para cambiar el fondo y la velocidad
-          del pingüino y moverlo con las teclas de flecha hasta anotar?"
-        studio_c2_11: Crea tu propia historia. Cuando finalices, haz clic en Terminar
-          para que tus amigos prueben tu historia en sus teléfonos.
-        studio_c3_story_1: ¿Puedes hacer que este perro diga "Hola mundo"?
+          del pingüino y moverlo con las flechas hasta anotar?"
+        studio_c2_11: Crea tu propia historia. Cuando estés listo, haz clic en Finalizar
+          para que tus amigos la prueben en sus teléfonos.
+        studio_c3_story_1: ¿Puedes hacer que este perro diga "Hola, mundo"?
         studio_c3_story_2: "¿Puedes hacer que el perro diga algo y que el gato le
-          conteste algo?"
+          conteste?"
         studio_c3_story_3: "¿Puedes crear un programa que haga que el perro se mueva
           hacia el gato?"
         studio_c3_story_4: ¿Puedes escribir un programa que haga que el perro se mueva
           hacia el gato, y que el gato diga "hola" cuando el perro se acerque a él?
         studio_c3_story_5: "¿Puedes agregar un bloque para que el pulpo esté feliz?"
-        studio_c3_story_6: Crea tu propia historia. Cuando finalices, haz clic en
-          Terminar para que tus amigos prueben tu historia en sus teléfonos.
-        studio_c3_game_1: ¿Puedes escribir un programa para hacer que el pulpo diga
-          "hola" cuando se hace clic sobre él?
+        studio_c3_story_6: Crea tu propia historia. Cuando estés listo, haz clic en
+          Finalizar para que tus amigos la prueben en sus teléfonos.
+        studio_c3_game_1: ¿Puedes escribir un programa para que el pulpo diga "hola"
+          cuando se hace clic sobre él?
         studio_c3_game_2: "¿Puedes escribir un programa que haga que este pingüino
           se mueva al presionar las teclas de flecha arriba/abajo/izquierda/derecha
           para alcanzar todos los objetivos?"
@@ -386,34 +386,34 @@ es-MX:
           pingüino choque con el pulpo?, hay que moverlo con las teclas de flecha
           para anotar un punto"
         studio_c3_game_6: "¿Puedes agregar bloques para cambiar el fondo y la velocidad
-          del pingüino y moverlo con las teclas de flecha hasta anotar?"
-        studio_c3_game_7: Crea tu propio juego. Cuando hayas terminado, haz clic en
-          finalizar para que tus amigos prueben tu juego en sus teléfonos.
-        studio_playlab_1: El pingüino quiere decir "Hola" - ¿puedes ayudarlo?
+          del pingüino y moverlo con las flechas hasta anotar?"
+        studio_c3_game_7: Crea tu propio juego. Cuando estés listo, haz clic en Finalizar
+          para que tus amigos lo prueben en sus teléfonos.
+        studio_playlab_1: El pingüino quiere decir "Hola". ¿Puedes ayudarlo?
         studio_playlab_2: El Chico de la cueva (actor 1) y la Chica de la cueva (actor
           2) quieren decirse "Hola" el uno al otro. ¿Puedes ayudarlos utilizando el
           bloque de "decir" dos veces?
-        studio_playlab_3: "¿Puedes ayudar a la chica tenista a alcanzar la bandera?"
-        studio_playlab_4: "¿Puedes ayudar al chico tenista (actor 1) a alcanzar a
-          la chica tenista (actor 2) y reproducir un sonido cuando llegue?"
+        studio_playlab_3: "¿Puedes ayudar a la tenista a llegar hasta la bandera?"
+        studio_playlab_4: "¿Puedes ayudar al tenista (actor 1) a llegar hasta la tenista
+          (actor 2) y reproducir un sonido cuando lo logre?"
         studio_playlab_5: ¿Puedes ayudar al Robot espacial a decir "saludos terrícolas"
           cuando se hace clic en él? No te olvides de hacer clic en él después de
           hacer clic en Ejecutar
-        studio_playlab_6: "¿Puede ayudar a la bruja a moverse usando las teclas de
-          flecha arriba/abajo/derecha/izquierda para llegar a todas las bolas de fuego
+        studio_playlab_6: "¿Puedes usar las teclas de flecha arriba/abajo/derecha/izquierda
+          para ayudar a la bruja a moverse y llegar hasta todas las bolas de fuego
           mágicas?"
-        studio_playlab_7: El bloque "repetir por siempre" permite repetir la ejecución
-          del código continuamente. ¿Puedes conectar bloques para ayudar al mago a
-          moverse de izquierda a derecha repetidamente?
-        studio_playlab_8: "¿Puedes añadir un bloque para anotar un punto y un bloque
-          para reproducir un sonido cuando el unicornio corre hacia el mago y luego
-          moverlo con las flechas hasta que ganes un punto?"
+        studio_playlab_7: El bloque "repetir siempre" permite ejecutar el código de
+          forma continua. ¿Puedes unir bloques para ayudar al mago a moverse de izquierda
+          a derecha una y otra vez?
+        studio_playlab_8: "¿Puedes añadir un bloque para anotar un punto y otro para
+          reproducir un sonido cuando el unicornio se encuentre con el mago, y luego
+          moverlo con las flechas hasta que anotes un punto?"
         studio_playlab_9: Establece el fondo para esta invasión alienígena y ayuda
           al Robot espacial a alcanzar a los alienígenas más rápido cambiando su velocidad.
           Luego muévelo con las teclas de flechas para llegar al Robot espacial y
           alertar a los demás
-        studio_playlab_10: Crea tu propio juego. Cuando hayas terminado, haz clic
-          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_playlab_10: Crea tu propio juego. Cuando estés listo, haz clic en Finalizar
+          para que tus amigos lo prueben en sus teléfonos.
         studio_iceage_hello1: Sid quiere reunir a todos para una nueva aventura. ¿Puedes
           ayudarlo a decir '"Hola" arrastrando el bloque 'Decir' en el área de trabajo
           y tecleando la palabra "Hola" dentro de él?
@@ -490,16 +490,15 @@ es-MX:
           a Antón (actor 2)! Establece el humor de Antón en enfadado cuando reciba
           el impacto.
         studio_gumball_free_play: Crea tu propio juego o historia. ¡Cuando hayas terminado,
-          haz clic en finalizar para permitir que los amigos prueben tu juego en sus
-          teléfonos, tabletas o computadoras!
-        studio_full_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
-          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
-        studio_k1_1: ¿Puedes hacer que este perro diga "Hola mundo"?
-        studio_k1_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste
-          algo?"
+          haz clic en Finalizar para que tus amigos prueben tu juego en sus teléfonos,
+          tabletas o computadoras!
+        studio_full_sandbox: Crea tu propio juego. Cuando estés listo, haz clic en
+          Finalizar para que tus amigos lo prueben en sus teléfonos.
+        studio_k1_1: ¿Puedes hacer que este perro diga "Hola, mundo"?
+        studio_k1_2: "¿Puedes hacer que el perro diga algo y que el gato le conteste?"
         studio_k1_3: "¿Puedes crear un programa que haga que el perro se mueva hacia
           el gato?"
-        studio_k1_4: Haz que el perro se mueva hacia el gato y el gato diga "hola"
+        studio_k1_4: Haz que el perro se mueva hacia el gato y que el gato diga "hola"
           cuando llegue a él.
         studio_k1_5: "¿Puedes agregar un bloque para que el pulpo esté feliz?"
         studio_k1_6: "¡Crea tu propia historia! Mueve al gato y al perro alrededor,
@@ -520,30 +519,30 @@ es-MX:
           la palabra DEBAJO
         maze_wordsearch_k_20: "¡Ésta es una prueba! Muéveme en una dirección, y luego
           en otra para deletrear la palabra HISTORIA"
-        applab_ec_simple: Crea tu aplicación usando los bloques en la caja de herramientas.
+        applab_ec_simple: Crea tu aplicación con los bloques de la caja de herramientas.
         turtle_ec_1_2: 'Ahora, dibuja un cuadrado. Nota: usa tu color favorito eligiéndolo
           en el nuevo bloque "Color de Lapiz".'
         turtle_ec_1_10: '¡Lo lograste! Ahora, dibuja cualquier cosa que quieras. Algunas
           ideas divertidas: una de palotes, copos de nieve o espirales. Prueba también
           el nuevo bloque "Ancho del Lápiz". ¡Que te diviertas!'
-        studio_ec_sandbox: Crea tu propio juego. Cuando hayas terminado, haz clic
-          en finalizar para que tus amigos prueben tu juego en sus teléfonos.
+        studio_ec_sandbox: Crea tu propio juego. Cuando estés listo, haz clic en Finalizar
+          para que tus amigos lo prueben en sus teléfonos.
     video:
       name:
-        maze_intro: Introducción al Laberinto
+        maze_intro: Introducción al laberinto
         artist_intro: Introducción al Artista
-        farmer_intro: Introducción al Granjero
+        farmer_intro: Introducción a Granjera
         flappy_intro: Introducción a Flappy
-        loop_times: Bloque Repetir Veces
+        loop_times: Bloque repetir veces
         loop_until: Bloque Repetir Hasta
-        if: Bloque Si
+        if: Bloque si
         if_else: Bloque Si/Si no
         if_else_scrat: Bloque Si/Si no
         function: Funciones
         loop_while: Bloque Mientras
-        loop_for: Bloque Contador
+        loop_for: Bloque `contador`
         parameters: Funciones con parámetros
-        hoc_wrapup: Repaso de la Hora del Código
+        hoc_wrapup: Cierre de la Hora del Código
         Unplug1: "¿Qué son las CC?"
         Unplug2: Pensamiento computacional
         Unplug3: Programación con Papel Cuadriculado
@@ -551,28 +550,28 @@ es-MX:
         Unplug5: Funciones
         Unplug6: Condicionales
         Unplug7: Composición Musical
-        Unplug8: Liberación abstracta
+        Unplug8: Abstracción
         Unplug9: Programación de relevos
         Unplug10: Internet
         Unplug11: Cierre
         C1_happy_maps_unplugged: Mapas felices
-        C1_moveitmoveit_unplugged: Muévelo, Muévelo
+        C1_moveitmoveit_unplugged: Muévelo, muévelo
         C1_bigevent_unplugged: El gran evento
         C1_getting_loopy: Girar y girar
         C1_pair_programming: Programación en parejas
-        C1_maze_intro_sequencing: Introducción a Secuenciamiento del Laberinto
-        C1_maze_debugging: Depuración del Laberinto
+        C1_maze_intro_sequencing: Introducción a secuencias de Laberinto
+        C1_maze_debugging: Depuración de Laberinto
         C1_bee_level_intro: Nivel de Abeja - Introducción
         C1_artist_intro: Introducción al Artista
-        C1_spelling_bee_intro: Abeja de Deletreo - Introducción
+        C1_spelling_bee_intro: Introducción a Abeja de ortografía
         C1_zuck_repeat_loop: Bucles del laberinto
         C1_bee_loops: Bucles de abeja
         C1_maze_loops: Bucles del laberinto
-        C1_playlab_storytelling: Laboratorio de Juego - Crear una Historia
-        C1_planting_seed: Plantando una Semilla
+        C1_playlab_storytelling: Laboratorio de juegos - Crear una historia
+        C1_planting_seed: Plantar una semilla
         C1_building_foundation: Construir una base
         C1_going_places_safely: Ir a sitios seguros
-        C2_maze_intro: Introducción al Laberinto
+        C2_maze_intro: Introducción al laberinto
         C2_artist_intro: Introducción al Artista
         C2_zuck_repeat_loop: Bucles del laberinto
         C2_artist_loops: Ciclos del artista
@@ -580,12 +579,12 @@ es-MX:
         C2_bee_loops: Bucles de abeja
         C2_bee_debugging: Depuración abeja
         C2_bee_conditionals: Condiciones de la abeja
-        C2_playlab_createstory: Laboratorio de Juego - Crear una Historia
+        C2_playlab_createstory: Laboratorio de juegos - Crear una historia
         C2_graph_paper: Programación con Papel Cuadriculado
         C2_conditionals_with_cards: Condicionales
         C2_binary_bracelets: Pulseras binarias
         C2_relay_programming: Programación de relevos
-        C2_paper_airplanes: Aviones de Papel
+        C2_paper_airplanes: Aviones de papel
         C2_digital_footprint: Tu huella dactilar
         C2_digital_footprint_v2: Tu huella dactilar
         C3_maze_level_4: Bucles del laberinto
@@ -595,32 +594,32 @@ es-MX:
         C3_bee_conditionals: Condiciones de la abeja
         C3_maze_conditionals: Condicionales del laberinto
         C3_artist_nested_loops: Bucles anidados
-        C3_farmer_while: Bucles While
+        C3_farmer_while: Bucles `mientras`
         C3_bee_nested_loops: Bucles anidados
         C3_bee_debugging: Depuración abeja
         C3_bounce: Rebotar
-        C3_playlab_create_game: Laboratorio de Juego - Crear un Juego
+        C3_playlab_create_game: Laboratorio de juegos - Crear un juego
         C3_computational_thinking: Pensamiento computacional
         C3_dice_race: Carrera de dados
         C3_internet: Internet
         C3_crowdsourcing: Colaboración abierta
         C3_functional_suncatchers: Tragaluces funcionales
-        C3_songwriting_with_parameters: Composición Musical con Parámetros
+        C3_songwriting_with_parameters: Composición de canciones con parámetros
         C4_intro: Introducción
         C4_loops_zombie: Bucles
         C4_bee_conditional: Condiciones de la abeja
         C4_variables_artist: Variables - Artista
-        C4_variables_playlab: Variables - Laboratorio de juego
+        C4_variables_playlab: Variables - Laboratorio de juegos
         C4_for_loops: Bucles Para
         C4_for_loops_bee: Bucles Para
         C4_for_loops_no_bee: Bucles Para
-        C4_math_artist: Programando al Artista con matemáticas
-        C4_function_edit: Editando funciones
-        C4_function_create: Creando funciones
+        C4_math_artist: Programación del Artista con matemáticas
+        C4_function_edit: Editar funciones
+        C4_function_create: Crear funciones
         C4_function_parameters: Funciones con parámetros
         C4_conditionals: Condicionales
-        C4_unplugged_algorithms: Algoritmos con Tangramas
-        C4_unplugged_madlibs: Bibliotecas locas
+        C4_unplugged_algorithms: Algoritmos con tangrams
+        C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables en sobres
         C4_unplugged_forloops: Bucles Para
         C4_unplugged_parameters: Composicion musical con parámetros
@@ -639,49 +638,49 @@ es-MX:
         CSF_maze_intro_k1_blocks: Introducción a Code Studio
         CSF_maze_intro_text_blocks: Introducción a Code Studio
         CSF_my_robotic_friends: Mis amigos robóticos
-        CSF_Power_of_Words: Poder de las palabras
-        CSF_Super_Digital_Citizen: Super ciudadano digital
+        CSF_Power_of_Words: El poder de las palabras
+        CSF_Super_Digital_Citizen: Superciudadano digital
         CSF_stevie_big_project: Stevie y el Gran Proyecto
         CSF_unspotted_bugs: Errores no detectados
-        CSF_zuck_loops_short: Bucles de repetición
+        CSF_zuck_loops_short: Bucles repetir
         frozen_intro: Prueba la Hora del Código
         frozen_loops: Introducción a los bucles
-        frozen_functions: Introducción a las Funciones
-        playlab_intro: Introducción al laboratorio de juegos
-        playlab_events: Eventos del laboratorio de juegos
-        playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
-        tutorial_puzzle_challenge: Tutorial Desafío de rompecabezas
-        infinity_playlab_intro: Jugar Lab - introducción
-        infinity_playlab_events: Jugar Lab - eventos
+        frozen_functions: Introducción a las funciones
+        playlab_intro: Introducción al Laboratorio de juegos
+        playlab_events: Eventos del Laboratorio de juegos
+        playlab_repeat_forever: 'Laboratorio de juegos: repetir siempre'
+        tutorial_puzzle_challenge: Tutorial Desafío
+        infinity_playlab_intro: Laboratorio de juegos - Introducción
+        infinity_playlab_events: Laboratorio de juegos - Eventos
         infinity_playlab_repeat_forever: Jugar Lab - repetir para siempre
-        csd_concept_how_computers_work: Presentando cómo funcionan las computadoras
-        csd_concept_computer: 'Cómo funcionan las computadoras: ¿Qué hace a una computadora
-          una computadora?'
-        csd_concept_binary_data: 'Cómo funcionan las computadoras: Binario & Datos'
-        csd_concept_circuits_logic: 'Cómo funcionan las computadoras: Circuitos &
-          Lógica'
-        csd_concept_memory_cpu_input_output: 'Cómo funcionan las computadoras: Memoria,
-          CPU, Entrada y Salida'
-        csd_concept_hardware_software: 'Cómo funcionan las computadoras: Hardware
-          & Software'
+        csd_concept_how_computers_work: Introducción a cómo funcionan las computadoras
+        csd_concept_computer: 'Cómo funcionan las computadoras: ¿por qué son así?'
+        csd_concept_binary_data: 'Cómo funcionan las computadoras: código binario
+          y datos'
+        csd_concept_circuits_logic: 'Cómo funcionan las computadoras: circuitos y
+          lógica'
+        csd_concept_memory_cpu_input_output: 'Cómo funcionan las computadoras: memoria,
+          CPU, entrada y salida'
+        csd_concept_hardware_software: 'Cómo funcionan las computadoras: hardware
+          y software'
         csd_concept_search: Cómo funciona la búsqueda
         csd_external_amazon_data: Cómo se utilizan los grandes datos en los sistemas
           de recomendación de Amazon para cambiar nuestras vidas
-        csd_external_netflix_data: "¿Cómo hace Netflix sugerencias de programas de
+        csd_external_netflix_data: "¿Cómo hace Netflix para sugerirnos programas de
           televisión y películas?"
         csd_external_waze_data: "¿Por qué hay tantos usuarios obsesionados con Waze?"
-        csd_gamelab_animation_tab: La pestaña de animación
+        csd_gamelab_animation_tab: La pestaña de Animación
         csd_gamelab_velocity: Velocidad
-        csd_weblab_intro_1: Introducción a Web Lab - Parte 1
-        csd_weblab_intro_2: Introducción a Web Lab - Parte 2
+        csd_weblab_intro_1: Introducción al Laboratorio Web - Parte 1
+        csd_weblab_intro_2: Introducción al Laboratorio Web - Parte 2
         csd_weblab_css_1: Introducción a CSS - Parte 1
         csd_weblab_css_2: Introducción a CSS - Parte 2
-        csd_weblab_intro_3: Introducción a Web Lab - Parte 3
-        csp_applab_functions: Introducción a las Funciones
+        csd_weblab_intro_3: Introducción al Laboratorio Web - Parte 3
+        csp_applab_functions: Introducción a las funciones
         csp_applab_functions_parameters: Funciones con parámetros
         csp_applab_loops: Bucles
         csp_concept_rgb: Un poco más de píxeles
-        csp_cs_is_changing_everything: Las Ciencias de la Computación están cambiando
+        csp_cs_is_changing_everything: Las Ciencias de la Computación lo están cambiando
           todo
         csp_pixelation_color_1: Reproductor Color pixelación - parte 1
         csp_pixelation_color_2: Reproductor Color pixelación - parte 2
@@ -728,24 +727,26 @@ es-MX:
         iceage_intro: Hora de código Era del Hielo - Introducción
         iceage_events: Hora de Código Era del Hielo - Eventos
         iceage_repeat: Hora de Código Era del Hielo - Repetir comando
-        mc_2016_intro: Hora del código de Minecraft - Introducción
-        mc_2016_loops: Hora del código de Minecraft - Ciclos
-        mc_2016_events: Hora del código de Minecraft - Eventos
-        mc_2016_spawn: Hora del código de Minecraft - Generar
-        mc_2016_congrats: Hora del código de Minecraft - Felicidades
-        applab_hoc_welcome: Hora del código de App Lab - Bienvenida
-        applab_hoc_setproperty: Hora del código de App Lab - setProperty
-        applab_hoc_onevent: Hora del código de App Lab - onEvent
-        applab_hoc_designmode: Hora del código de App Lab - Modo de diseño
-        applab_hoc_share: Hora del código de App Lab - Compartir
-        mc_2017_agent_intro: Hora del código de Minecraft - El agente
-        mc_2017_repeat: Hora del código de Minecraft - Repetir ciclos
-        mc_2017_functions: Hora del código de Minecraft - Funciones
+        mc_2016_intro: Hora del Código de Minecraft - Introducción
+        mc_2016_loops: Hora del Código de Minecraft - Bucles
+        mc_2016_events: Hora del Código de Minecraft - Eventos
+        mc_2016_spawn: Hora del Código de Minecraft - Generar
+        mc_2016_congrats: Hora del Código de Minecraft - Felicitaciones
+        applab_hoc_welcome: Hora del Código del Laboratorio de aplicaciones - Bienvenidos
+        applab_hoc_setproperty: Hora del Código del Laboratorio de aplicaciones -
+          setProperty
+        applab_hoc_onevent: Hora del Código del Laboratorio de aplicaciones - onEvent
+        applab_hoc_designmode: Hora del Código del Laboratorio de aplicaciones - Modo
+          de diseño
+        applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
+        mc_2017_agent_intro: Hora del Código de Minecraft - El agente
+        mc_2017_repeat: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_functions: Hora del Código de Minecraft - Funciones
         mc_2017_congratulations: Hora del código de Minecraft - Felicidades
-        mc_2017_puzzle_1: Hora del código de Minecraft - El agente
-        mc_2017_puzzle_3: Hora del código de Minecraft - Repetir ciclos
-        mc_2017_puzzle_8: Hora del código de Minecraft - Funciones
-        mc_2017_puzzle_12: Hora del código de Minecraft - Juego libre
+        mc_2017_puzzle_1: Hora del Código de Minecraft - El agente
+        mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles repetir
+        mc_2017_puzzle_8: Hora del Código de Minecraft - Funciones
+        mc_2017_puzzle_12: Hora del Código de Minecraft - Juego libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
         hint_videos_d_11_3_last: 'Videos sugeridos: D.11.3 Último'
         hint_videos_d_11_4_first: 'Videos sugeridos: D.11.4 Primero'
@@ -760,170 +761,176 @@ es-MX:
         hint_videos_d_11_9_last: 'Videos sugeridos: D.11.9 Último'
         hint_videos_d_11_11_first: 'Videos sugeridos: D.11.11 Primero'
         hint_videos_d_11_11_last: 'Videos sugeridos: D.11.11 Último'
-        applab_intro_welcome: App Lab - Comenzando
-        applab_intro_events: App Lab - Hazlo interactivo
-        applab_intro_sounds: App Lab - Imágenes y sonidos
-        applab_intro_designmode: App Lab - Modo de diseño
-        applab_intro_share: App Lab - Comparte tu aplicación
-        csd_applab_arrays: Introducción a los Arrays
-        CSF_skinOverview_Harvester: El recolector
+        applab_intro_welcome: Laboratorio de aplicaciones - Primeros pasos
+        applab_intro_events: Laboratorio de aplicaciones - Haz que sea interactivo
+        applab_intro_sounds: Laboratorio de aplicaciones - Imágenes y sonidos
+        applab_intro_designmode: Laboratorio de aplicaciones - Modo de diseño
+        applab_intro_share: Laboratorio de aplicaciones - Comparte tu aplicación
+        csd_applab_arrays: Introducción a los arreglos
+        CSF_skinOverview_Harvester: La cosechadora
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Loops con BB-8
-        CSF_harvester_skinOverview_K-1: El recolector
+        CSF_harvester_skinOverview_K-1: La cosechadora
         CSF_harvester_loops_K1: Bucles en la cosechadora
         CSF_scrat_loops_K1: Bucles de la Era de Hielo
         CSF_scrat_loops_CF: Bucles de la Era de Hielo
-        CSF_if_allskins: El Bloque si
-        CSF_ifelse_allskins: Usando Bloques "Si/Más"
-        CSF_ifelseifelse_allskins: Usando Bloques Si/El mismo/Más
+        CSF_if_allskins: El bloque `si`
+        CSF_ifelse_allskins: Uso de bloques `si/si no`
+        CSF_ifelseifelse_allskins: Uso de bloques `si/sino si/si no`
         CSF_loops_AB: Bucles
-        csd_gamelab_booleans: Expresiones Booleanas
-        csd_gamelab_conditional_statements: Sentencias Condicionales
-        csd_gamelab_if_else: Sentencias Si/Más
-        CSF_SpriteLabIntro_CDEF: Esto es Sprite Lab
-        CSF_Spritelab_MakeSprite_CDEF: Cómo hacer un sprite en Sprite Lab
+        csd_gamelab_booleans: Expresiones booleanas
+        csd_gamelab_conditional_statements: Sentencias condicionales
+        csd_gamelab_if_else: Sentencias `si/si no`
+        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de sprites
+        CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
-        CSF_StarWars_ProjectIntro: Introducción al Proyecto de Star Wars
-        mc_2018_intro: 'Minecraft: Viaje Acuático Introducción'
-        MC_2018_loops: 'Minecraft: Viaje Acuático Repetir Hasta'
-        mc_2018_conditionals: 'Minecraft: Viaje Acuático Condicionales'
-        mc_2018_closing: 'Minecraft: Viaje Acuático Felicitaciones'
-        hoc_dance_warmup: Fiesta de Baile - Calentamiento
+        CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
+        mc_2018_intro: 'Minecraft: introducción al viaje acuático'
+        MC_2018_loops: 'Minecraft: bloque repetir hasta en viaje acuático'
+        mc_2018_conditionals: 'Minecraft: condicionales en viaje acuático'
+        mc_2018_closing: 'Minecraft: felicitaciones en viaje acuático'
+        hoc_dance_warmup: Fiesta de baile - Calentamiento
         hoc_dance_events: Fiesta de Baile - Eventos
         hoc_dance_properties: Fiesta de Baile - Propiedades
-        hoc_dance_congrats: Fiesta de Baile - ¡A la fiesta!
+        hoc_dance_congrats: Fiesta de baile - ¡Que comience la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
-        elem_pd_2: Informática de la Escuela Primaria - vídeo PD 2/2
-        what_is_cs: "¿Qué son las Ciencias de la computación?"
-        repeat_block: Usando el bloque de repetición
-        lesson_planning: Plan de clases
-        opd_closing: 'Enseñando Fundamentos CS: Cerrar y Siguiente pasos'
-        why_unplugged_lessons: Obteniendo "desconectado"
-        writing_first_program: Creando tu primer programa informático
-        conditionals_with_cards: Lección sin conexión en acción - Condicionales con
-          tarjetas
-        songwriting_with_functions: Lección sin conexión en Acción - Songwriting con
-          funciones
+        teaching_csf_how_it_works: 'Enseñanza de Fundamentos de Ciencias de la Computación:
+          cómo funciona el curso'
+        elem_pd_2: Ciencias de la Computación para escuelas primarias - Video PD 2/2
+        what_is_cs: "¿Qué son las Ciencias de la Computación?"
+        repeat_block: Uso del bloque 'repetir'
+        lesson_planning: Planificación de lecciones
+        opd_closing: 'Enseñanza de Fundamentos de Ciencias de la Computación: cierre
+          y próximos pasos'
+        why_unplugged_lessons: A "desconectarse"
+        writing_first_program: Escribir tu primer programa informático
+        conditionals_with_cards: 'Lección sin conexión en acción: condicionales con
+          naipes'
+        songwriting_with_functions: 'Lección sin conexión en acción: componer canciones
+          con funciones'
         what_is_an_event: "¿Qué es un evento?"
-        teaching_cs_pair_programming: 'Enseñando Fundamentos CS: Programación de Pares'
-        teaching_problem_solving: 'Enseñando Fundamentos CS: Enseñando resolución
-          de problemas'
-        csd_applab_designmode: 'Descubrimientos de CS: Laboratorio de aplicación -
-          modo de diseño'
+        teaching_cs_pair_programming: 'Enseñanza de Fundamentos de Ciencias de la
+          Computación: programación en pareja'
+        teaching_problem_solving: 'Enseñanza de Fundamentos de Ciencias de la Computación:
+          resolución de problemas'
+        csd_applab_designmode: 'Descubrimientos de Ciencias de la Computación: Laboratorio
+          de aplicaciones - Modo de diseño'
         csd_pair_programming: Programación en parejas
+        csd_gamelab_functions: Llamar y definir funciones
+        csd_applab_parameters: Funciones con parámetros
+        csd_applab_loops: Bucles en el Laboratorio de aplicaciones
     callout:
       text:
-        drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
+        drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
         run: Dale a "Ejecutar" para probar el programa.
-        watch_again: Haz clic aquí para ver el video otra vez
+        watch_again: Haz clic aquí para volver a ver el video
         gray_block_explanation: Los bloques que están de color gris no se pueden eliminar.
           ¿Puedes resolver el rompecabezas de todas formas?
-        show_code_explanation: Haz clic aquí para ver el código del programa que estas
-          haciendo
-        instructions_repeat_explanation: Las instrucciones para cada rompecabezas
-          se repiten aquí
-        category_explanation: Tienes todos los mismos bloques, pero ahora se han organizado
+        show_code_explanation: Haz clic aquí para ver el código del programa que estás
+          creando
+        instructions_repeat_explanation: Aquí se repiten las instrucciones para cada
+          desafío
+        category_explanation: Tienes los mismos bloques, pero ahora están organizados
           en categorías
-        set_sprite_image: Adjunta un bloque "fijar actor a imagen" al bloque "cuando
-          empieza la historia" para permitir que haya un actor en esta historia
-        studio_say_text: Escribe lo que quieres que diga tu actor entre comillas
+        set_sprite_image: Adjunta un bloque "definir actor en imagen" al bloque "cuando
+          empieza la historia" para que haya un actor en esta historia
+        studio_say_text: Escribe entre estas comillas lo que quieres que diga tu actor
         jigsaw_click: "¡Haz clic en este bloque!"
-        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por
-          debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
-        turn_elsa: Usa el bloque de "Girar" para que Elsa gire. El número en el menú
-          desplegable determina cuánto gira Elsa
+        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque
+          "cuando se ejecuta" para mover a Elsa hacia adelante
+        turn_elsa: Usa el bloque "girar" para que Elsa dé un giro. El número en el
+          menú desplegable determina cuánto gira Elsa
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
         replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
-          la cantidad correcta de grados a girar
-        repeat_blocks: Usa el bloque de "Repetir" y ponlo alrededor de los bloques
-          del espacio de trabajo
+          la cantidad correcta de grados por girar
+        repeat_blocks: Usa el bloque "repetir" y ponlo alrededor de los bloques del
+          espacio de trabajo
         repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises
-          en el espacio de trabajo."
-        repeat_blocks_2: (2) Mueve el bloque "Repetir" aquí, y coloca los bloques
-          grises dentro
+          en el espacio de trabajo"
+        repeat_blocks_2: (2) Mueve el bloque "repetir" aquí y coloca los bloques grises
+          dentro
         snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
           de nieve!"
-        degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño
+        degrees_per_side: Divide 360 por el número de lados para obtener el tamaño
           de cada ángulo en grados.
-        set_sides: Usa este bloque para dar a "lados" el valor necesario para completar
-          el rompecabezas.
-        set_length: Usa este bloque para fijar el valor correcto de "longitud".
-        which_equation: "¿Qué ecuación hace los lados más cortos para obtener formas
-          con más lados?"
-        get_nectar: Usa el bloque nuevo "obtener néctar".
-        actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Ahora están
-          aquí los bloques de "Acciones".
-        draw_square_hint: 'Sugerencia: Usa el bucle para hacer un cuadrado que creaste
-          en el último puzzle.'
+        set_sides: Usa este bloque para definir el número de "lados" necesarios para
+          completar el desafío.
+        set_length: Usa este bloque para establecer el valor correcto de "longitud".
+        which_equation: "¿Qué ecuación permite que los lados sean más cortos y así
+          obtener formas con más lados?"
+        get_nectar: Usa el nuevo bloque "obtener néctar".
+        actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Aquí están
+          los bloques de "Acciones".
+        draw_square_hint: 'Pista: usa el bucle para dibujar un cuadrado que creaste
+          en el último desafío.'
         edit_function: Haz clic aquí para editar tu función.
-        create_function: Haz clic aquí para abrir el desplegable "Funciones", luego
-          haz clic en el botón "Crear una función".
-        house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos
-          en el siguiente puzzle.
+        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones",
+          y luego haz clic en el botón "Crear una función".
+        house_hint: Está bien si la imagen aún no se ve como una casa. Lo solucionaremos
+          en el siguiente desafío.
         edit_draw_square: Usa este botón para editar la función y añadir el bucle.
         edit_get_nectar: Usa este botón para editar la función y cambiar la dirección
-          hacia la que la abeja girará para obtener el néctar.
+          en la que girará la abeja para obtener el néctar.
         logic_category: Abre el desplegable "Lógica" para encontrar el bloque "si/si
           no".
         length_parameter: ¿Puedes actualizar esta función para que utilice el parámetro
           "longitud"?
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
-        frozen_circle_function_in_circle_turn: No te olvides de girar después de crear
-          cada círculo.
-        frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear
-          un círculo" y cambia su tamaño.
-        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
+        frozen_circle_function_in_circle_turn: No olvides girar después de crear cada
+          círculo.
+        frozen_circle_function_with_parameter_circle: Utiliza el bloque "crear un
+          círculo" y cambia su tamaño.
+        frozen_snowflake_branch: Utiliza el bloque "crear una rama de copo de nieve"
         frozen_create_square: Añade más bloques aquí para crear un cuadrado
-        playlab_drag_say: Arrastra el bloque "decir" aquí y escribe "Hola"
+        playlab_drag_say: Arrastra el bloque "decir" aquí y escribe "hola"
         playlab_use_twice: Usa este bloque dos veces y recuerda cambiar el número
-          de actor
+          de actores
         playlab_move_girl: Utiliza el bloque "mover a la derecha" para mover a la
-          chica tenista
+          tenista
         playlab_play_sound: Añade el bloque "reproducir sonido" aquí
-        playlab_arrow_keys: Recuerda que debes utilizar esto para mover a la bruja
+        playlab_arrow_keys: Recuerda que debes utilizar estas para mover a la bruja
           después de hacer clic en Ejecutar
         playlab_add_move: Añade bloques "mover" dentro de este bloque repetir
         playlab_add_score: Agrega bloques de puntuación aquí
-        playlab_add_blocks: Añade tus bloques aquí
-        set_variable: Arrastra un bloque número aquí para definir tu variable
-        place_variable: Arrastra tu variable dentro de este bloque.
-        bee_for_loop: Arrastra la mayor cantidad de néctar que quieres que la abeja
-          recolecte aquí.
-        place_counter_variable: Arrastre la variable contador dentro de este bloque
+        playlab_add_blocks: Agrega tus bloques aquí
+        set_variable: Arrastra un bloque de número aquí para definir tu variable
+        place_variable: Arrastra tu variable dentro de este bloque
+        bee_for_loop: Arrastra aquí la mayor cantidad de néctar que quieres que recoja
+          la abeja
+        place_counter_variable: Arrastra la variable contador dentro de este bloque
         function_editor_draw_square: Ésta es tu definición de función. Estos bloques
           se ejecutan cada vez que usas el bloque "dibujar un cuadrado"
-        change_here: Haz tu cambio aquí.
+        change_here: Haz tu cambio aquí
         write_draw_square_function: Arrastra bloques de la caja de herramientas aquí
           que dibujen un cuadrado.
         write_draw_triangle_function: Arrastra bloques desde la caja de herramientas
-          aquí para que dibujen un triángulo
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+          hacia aquí para dibujar un triángulo
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
           agregar y luego arrastrarlo en la definición de la función
-        fill_in_actor: Rellene el ??? con números que corresponden a cada actor (1,
-          2 y 3)
-        repeat: Ponga bloques dentro del bucle para repetir comandos
-        if_bee_nectar: Utilice el bloque "si" para decidir si la abeja debe obtener
-          el néctar
+        fill_in_actor: Completa el ??? con los números que corresponden a cada actor
+          (1, 2 y 3)
+        repeat: Coloca bloques dentro del bucle para repetir comandos
+        if_bee_nectar: Usa el bloque "si" para decidir si la abeja debe obtener el
+          néctar
         if_else_bee: Use el bloque "si/si no" para que la abeja obtenga néctar de
           una flor, y haga miel si no es una flor
-        repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse
+        repeat_full_circle: Ingresa el número de veces que el zombie debe moverse
           para hacer un círculo completo
-        place_length_variable: Arrastre aquí la variable longitud para reemplazar
+        place_length_variable: Arrastra aquí la variable de longitud para reemplazar
           los signos de interrogación
         arrows_move_actor: Usa las flechas para mover al actor
-        right_arrow_fireball: Use la flecha derecha para disparar bolas de fuego
-        name_function: Escriba el nombre de su función aquí
-        Infinity_move_right_runbutton: Añadir movimiento bloque aquí
+        right_arrow_fireball: Usa la flecha derecha para disparar bolas de fuego
+        name_function: Escribe aquí el nombre de tu función
+        Infinity_move_right_runbutton: Agrega un bloque de movimiento aquí
         Infinity_move_directions_callout: "¿Qué bloque hará que Baymax suba cuando
           se presiona la flecha hacia arriba?"
-        Infinity_move_directions_callout_arrow: Utilice las flechas para dirigir
-        Infinity_move_collide_callout: Reproducir un sonido cuando se produce este
-          evento.
-        Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
+        Infinity_move_directions_callout_arrow: Usa las flechas para conducir
+        Infinity_move_collide_callout: Reproduce un sonido cuando ocurra este evento.
+        Infinity_repeat_callout: Coloca los bloques de movimiento aquí adentro
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y acóplalo bajo otro
           bloque.

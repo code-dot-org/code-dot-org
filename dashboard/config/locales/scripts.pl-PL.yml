@@ -4338,6 +4338,8 @@ pl:
               name: Praca w grupie (Crowdsourcing)
             Nested Loops in Bee:
               name: Zagnieżdżone pętle w pszczole
+            Songwriting:
+              name: Pisanie piosenek
         express-2019:
           description_audience: W wieku 9-18
           stages:
@@ -4721,6 +4723,22 @@ pl:
             new stage:
               name: nowy etap
         csd-videos:
+          stages:
+            new stage:
+              name: nowy etap
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Sequence in Maze:
+              name: Sekwencje w labiryncie
+            Building a Foundation:
+              name: Kładąc podwaliny (Building a Foundation)
+            Build a Flappy Game:
+              name: Budowanie gry Flappy Bird
+        csp7-pilot-staging:
           stages:
             new stage:
               name: nowy etap

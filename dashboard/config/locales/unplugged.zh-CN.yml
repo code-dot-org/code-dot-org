@@ -375,3 +375,10 @@ zh-CN:
       courseB_unplugged_CnC_2019:
         title: 创建并实践公平非常的伟大。
         desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解共享和灵感的创新过程。同时也促进了创新的表达，以及创新中的公平。
+      timeforcs_demo_crowdsourcing:
+        title: 众包
+      timeforcs_demo_conditionals:
+        title: 条件语句
+        desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
+      TheRightApp_2019:
+        title: 正确的应用程序

@@ -479,6 +479,7 @@ sl:
         mc_2016_spawn: Minecraft Ura za kodo - Kreiranje
         CSF_loops_AB: Zanke
         csd_pair_programming: Programiranje parov
+        csd_applab_parameters: Funkcije s parametri
     callout:
       text:
         drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok

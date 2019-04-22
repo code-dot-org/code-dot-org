@@ -8,7 +8,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
@@ -194,26 +194,79 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      classic: color.applab_button_teal,
-      dark: color.yellow
+      ...themeColor.dropdownBackground
     },
     borderRadius: {
-      classic: 0,
-      dark: 10
+      default: 4,
+      orange: 0,
+      citrus: 2,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 6,
+      watermelon: 10,
+      area51: 10,
+      polar: 100,
+      glowInTheDark: 10,
+      bubblegum: 100,
+      millennial: 100,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
-      classic: 0,
-      dark: 0
+      default: 1,
+      orange: 2,
+      citrus: 2,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 4,
+      area51: 2,
+      polar: 2,
+      glowInTheDark: 2,
+      bubblegum: 2,
+      millennial: 0,
+      robot: 2,
+      classic: 0
     },
     borderColor: {
       type: 'color',
-      classic: color.black,
-      dark: color.white
+      ...themeColor.dropdownBorder
     },
     textColor: {
       type: 'color',
-      classic: color.white,
-      dark: color.black
+      ...themeColor.dropdownText
+    },
+    fontFamily: {
+      default: 'Arial',
+      orange: 'Verdana',
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Arial Black',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Verdana',
+      robot: 'Arial Black',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 
@@ -221,18 +274,18 @@ export default {
     const element = document.createElement('select');
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     element.style.margin = '0';
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.color = color.white;
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
+      element.style.color = themeColor.dropdownText.classic;
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
       );
-      element.style.backgroundColor = color.applab_button_teal;
+      element.style.backgroundColor = themeColor.dropdownBackground.classic;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 

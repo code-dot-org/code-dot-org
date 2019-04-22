@@ -25,7 +25,7 @@ lt:
         2-3_Artist_4_a: Norint pabaigti namą, viskas ką mums reikia padaryti, tai
           nupiešti kvadratą!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti *daugiau*
+        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti _daugiau_
           laipsnių.   '
         2-3_Artist_6_b: Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų
           pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.
@@ -48,8 +48,8 @@ lt:
 
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Prisimink, kad tau reikia 10 pikselių *platesnio*
-          pliuso. Taigi, *pridėk* 10 prie skaičiaus, kurį jau naudoji.
+        2-3_Artist_Debugging_10_a: Prisimink, kad tau reikia 10 pikselių _platesnio_
+          pliuso. Taigi, _pridėk_ 10 prie skaičiaus, kurį jau naudoji.
         2-3_Artist_Debugging_10_b: |-
           **Klaidų ieškojimas jau čia!**
           Pradėk ieškoti klaidų pakeisdama(-s) po vieną skaičių.
@@ -67,7 +67,7 @@ lt:
       2-3 Artist Debugging 8_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kiek kartų buvo nupiešta ta pati figūra?
-          Kiek kartų figūra *turėtų* būti nupiešta?
+          Kiek kartų figūra _turėtų_ būti nupiešta?
           Kurioje programos vietoje tai galima pakeisti?
       2-3 Artist Debugging 9_authored_hint:
         2-3_Artist_Debugging_9_a: Prieš pradėdamas piešti, menininkas turi pasisukti
@@ -126,6 +126,7 @@ lt:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat">
+
           <title name="TIMES">8</title>
           <statement name="DO">
           <block type="draw_colour" inline="true">
@@ -162,7 +163,7 @@ lt:
           </next>
           </block>
           </xml>
-        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti *paskutinis* kartojimo
+        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti _paskutinis_ kartojimo
           viduje.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Prieš brėždamas rombą, menininkas turi pasisukti
@@ -252,7 +253,7 @@ lt:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -271,7 +272,7 @@ lt:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -290,7 +291,7 @@ lt:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -309,7 +310,7 @@ lt:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -456,7 +457,7 @@ lt:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -475,7 +476,7 @@ lt:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -494,7 +495,7 @@ lt:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -513,7 +514,7 @@ lt:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -679,12 +680,12 @@ lt:
         2-3_Artist_1_new_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn
           bloką.
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti *paskutinis* kartojimo
+        2-3_Artist_Loops_New_11_b: Naujas posūkis turi būti _paskutinis_ kartojimo
           viduje.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Kiek kartų buvo nupiešta ta pati figūra?
-          Kiek kartų figūra *turėtų* būti nupiešta?
+          Kiek kartų figūra _turėtų_ būti nupiešta?
           Kurioje programos vietoje tai galima pakeisti?
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Sufleris: kiekvienas ūsas yra 75 pikselių ilgio.'
@@ -713,7 +714,7 @@ lt:
         2-3_Artist_1_new_b: Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn
           bloką.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti *daugiau*
+        2-3_Artist_6_a: 'Norint padaryti mažesnius kampus, reikia pasisukti _daugiau_
           laipsnių.   '
         2-3_Artist_6_b: Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų
           pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.

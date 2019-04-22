@@ -751,6 +751,7 @@ ga:
         CSF_harvester_skinOverview_K-1: An Buainteoir
         CSF_loops_AB: Lúba
         csd_pair_programming: Códáil Bheirte
+        csd_applab_parameters: Feidhmeanna a ghlacann le Paraiméadair
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile

@@ -1663,6 +1663,8 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+            Songwriting:
+              name: Ceapadh Ceoil
         express-2019:
           stages:
             Relay Programming:
@@ -1765,3 +1767,11 @@ ga:
           stages:
             While Loops:
               name: Lúba "Chomh fada is"
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Sluafhoinsiú
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            Building a Foundation:
+              name: Dúshraith a Leagan

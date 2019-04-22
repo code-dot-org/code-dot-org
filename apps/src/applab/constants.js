@@ -18,9 +18,42 @@ export const CAPTURE_TICK_COUNT = 300;
 
 export const defaultFontSizeStyle = '14px';
 
-export const themeOptions = ['classic', 'dark'];
+export const DEFAULT_THEME_INDEX = 0;
+export const CLASSIC_THEME_INDEX = 1;
 
-export const themeDisplayNames = ['Classic', 'Dark'];
+export const themeOptions = [
+  'default',
+  'classic',
+  'orange',
+  'citrus',
+  'ketchupAndMustard',
+  'lemonade',
+  'forest',
+  'watermelon',
+  'area51',
+  'polar',
+  'glowInTheDark',
+  'bubblegum',
+  'millennial',
+  'robot'
+];
+
+export const themeDisplayNames = [
+  'Default',
+  'Classic',
+  'Orange',
+  'Citrus',
+  'Ketchup and Mustard',
+  'Lemonade',
+  'Forest',
+  'Watermelon',
+  'Area 51',
+  'Polar',
+  'Glow in the Dark',
+  'Bubblegum',
+  'Millennial',
+  'Robot'
+];
 
 if (themeOptions.length !== themeDisplayNames.length) {
   throw new Error('themeOptions length must equal themeDisplayNames length');

@@ -1,18 +1,21 @@
+---
 sk:
   data:
     short_instructions:
       2-3 Artist 1 new: Ahoj, ja som umelec. Napíš program a môžeš ma naučiť kresliť takmer všetko. Pomocou pár blokov ma nauč kresliť sivé čiary na obrázku. (Každá z čiar je 100 pixelov dlhá)
-      2-3 Artist 11: "Daj značke \"Stop\" okraj tým,\nže vytvoríš pravidelný osemuholník so 100 pixelovými stranami.\n"
+      2-3 Artist 11: |-
+        Daj značke "Stop" okraj tým,
+        že vytvoríš pravidelný osemuholník so 100 pixelovými stranami.
       2-3 Artist 12: |-
         Nakresli kruh, aby si dokončil oko!
 
         Ak sa umelec otočí o 1 stupeň v každom cykle, tak koľko krát musíš opakovať ten cyklus, aby si nakreslil kruh?
         180? 360? 500?
-      2-3 Artist 2 new: 'Tento dom ma polovične-dostavanú stenu. Každá strana je 100, ale polovične-dostavaná je iba 50. Dostavaj stenu.'
-      2-3 Artist 2: 'Tento dom ma polovične-dostavanú stenu. Každá strana je 100, ale polovične-dostavaná je iba 50. Dostavaj stenu.'
+      2-3 Artist 2 new: Tento dom ma polovične-dostavanú stenu. Každá strana je 100, ale polovične-dostavaná je iba 50. Dostavaj stenu.
+      2-3 Artist 2: Tento dom ma polovične-dostavanú stenu. Každá strana je 100, ale polovične-dostavaná je iba 50. Dostavaj stenu.
       2-3 Artist 3.4: Blok so skokom posunie umelca bez toho, aby niečo nakreslil. Nakresli prerušovanú čiaru použitím blokov "skoč dopredu" a "posuň sa dopredu". Každá čiara má dĺžku 50 pixelov.
       2-3 Artist 3: Táto čiapka má 100 pixelov na výšku. Nakresli čiapku, ktorá má o 70 pixelov menej.
-      2-3 Artist 3new: "Červený klobúk je 100 pixelov vysoký. Dokončite čierny klobúk, ktorý je o 70 pixelov nižší. \\r (Poznámka: šírka oboch klobúkov je 50 pixelov)"
+      2-3 Artist 3new: 'Červený klobúk je 100 pixelov vysoký. Dokončite čierny klobúk, ktorý je o 70 pixelov nižší. \\r (Poznámka: šírka oboch klobúkov je 50 pixelov)'
       2-3 Artist 4: Pomôž mi dokončiť tento dom pre mačku.
       2-3 Artist 5: Premiestni tento kód s blokom "opakuj", aby si nakreslil rovnaký dom s použitím len 3 blokov.
       2-3 Artist 6: 'Tento dom potrebuje strechu! Nakresli trojuholník. Pomôcka: všetky tri strany majú rovnakú dĺžku.'
@@ -23,16 +26,27 @@ sk:
       2-3 Artist 9: Dokonči tohto šarkana
       2-3 Artist Assessment 1: "Hodnotenie: Dokonči posledný zub. \nJe 25 pixelov široký a 25 pixelov dlhý."
       2-3 Artist Debugging 1: Tento klobúk by mal byť len 50 pixelov široký. Dokážeš to opraviť?
-      2-3 Artist Debugging 10: "Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.\n\nVieš ju rozšíriť o 10 pixelov?\n\nSkús najprv spustiť kód, aby si videl, čo je pokazené."
+      2-3 Artist Debugging 10: |-
+        Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.
+
+        Vieš ju rozšíriť o 10 pixelov?
+
+        Skús najprv spustiť kód, aby si videl, čo je pokazené.
       2-3 Artist Debugging 11: |-
         Moja snehová vločka sa rozpadá!
 
         Zistíš, čo je zle?
       2-3 Artist Debugging 12: Do tohto obrázku by som mal pridať vlnu z oceánu. Pomôžete mi?
-      2-3 Artist Debugging 2: "Tento kód na kreslenie mačacích fúzov je zlý.\n\nOprav ho tak, aby všetky fúzy mali rovnakú dĺžku."
+      2-3 Artist Debugging 2: |-
+        Tento kód na kreslenie mačacích fúzov je zlý.
+
+        Oprav ho tak, aby všetky fúzy mali rovnakú dĺžku.
       2-3 Artist Debugging 3: "Moja loď je deravá! \n\nČo potrebuješ na jej opravu?"
       2-3 Artist Debugging 4: Aký obrázok sa snažíme nakresliť? Dokonči spájanie bodiek použitím správnych čiar a uhlov.
-      2-3 Artist Debugging 5: "Kód, ktorý máme na nakreslenie nohy a chodidla je zlý.\n\nVieš ho opraviť?"
+      2-3 Artist Debugging 5: |-
+        Kód, ktorý máme na nakreslenie nohy a chodidla je zlý.
+
+        Vieš ho opraviť?
       2-3 Artist Debugging 6: |-
         Vyzerá, že sedím na stoličke, ktorej chýba noha!
 
@@ -49,29 +63,41 @@ sk:
         Niečo nie je v poriadku!
 
         Kód pre túto stonku je zlý. Vieš zistiť, ako by Umelec nakreslil stonku správnym spôsobom?
-      2-3 Artist Debugging Assessment 1: "Hodnotenie\" Prečo je tento štvorec nakoniec o 75 pixelov menší na každej strane? \n\nKde robí kód chybu?"
+      2-3 Artist Debugging Assessment 1: "Prečo je tento štvorec na každej strane o 75 pixelov menší? \n\nKde robí kód chybu?"
       2-3 Artist Free Play: Voľná hra! Možeš si nakresliť čokoľvek.
       2-3 Artist Functions 1 a: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôžte zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
       2-3 Artist Functions 1: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôžte zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
       2-3 Artist Functions 10: 'Voľná hra: Tu sú dve funkcie, jedna na nakreslenie veľkého kolesa a jedna na nakreslenie malého kolesa. Použite ich pre kresbu vo vnútri prístroja!'
-      2-3 Artist Functions 11 a: "Premenovali sme funkciu `nakresli štvorec ` na `nakresli šesťuholník `, ale stále kreslí štvorce! Vieš túto funkciu upraviť tak, aby nakreslila šesťuholník so stranou 50 pixelov?\n\nNakresli s jej pomocou obrázok!"
+      2-3 Artist Functions 11 a: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále kreslí štvorce! Vieš túto funkciu upraviť tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli s jej pomocou obrázok!
       2-3 Artist Functions 11.5 a: "Tu je rovnaká funkcia \"nakresli šesťuholník\". \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom po každom zopakovaní sa otočíte o 60 stupňov?"
       2-3 Artist Functions 11.5: "Tu je rovnaká funkcia \"nakresli šesťuholník\". \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom po každom zopakovaní sa otočíte o 60 stupňov?"
-      2-3 Artist Functions 11: "Premenovali sme funkciu `nakresli štvorec ` na `nakresli šesťuholník `, ale stále kreslí štvorce! Vieš túto funkciu upraviť tak, aby nakreslila šesťuholník so stranou 50 pixelov?\n\nNakresli s jej pomocou obrázok!"
-      2-3 Artist Functions 12 Mike: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
-      2-3 Artist Functions 12 a: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
-      2-3 Artist Functions 12: "Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov."
+      2-3 Artist Functions 11: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále kreslí štvorce! Vieš túto funkciu upraviť tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli s jej pomocou obrázok!
+      2-3 Artist Functions 12 Mike: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
+      2-3 Artist Functions 12 a: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
+      2-3 Artist Functions 12: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
       2-3 Artist Functions 13: Poskytli sme ti štyri funkcie. Použi ich podľa vlastného uváženia v jednom alebo viacerých cykloch na nakreslenie obrázkov, ktoré môžeš zdieľať s kamarátmi. Ak chceš vidieť ukážku, stlač "Spustiť".
       2-3 Artist Functions 2 a: 'Použite malý zelený blok "nakresli štvorec" pre zavolanie tejto novej funkcie a vytvorte okuliare. '
       2-3 Artist Functions 2: "Funkcie vám umožnia definovať nové bloky! \n\nPresunuli sme bloky potrebné na nakreslenie štvorca do funkcie \"nakresli štvorec\". Tentokrát použite funkciu \"nakresli štvorec\" pre nakreslenie okuliarí.\n\nŠtvorce sú od seba vzdialené 75 pixelov."
-      2-3 Artist Functions 3 a: "Uprav funkciu \"nakresliť štvorec\" tak, aby Umelec nakreslil okuliare s rámami dlhými 115 pixelov na každej strane.\n\nŠtvorce sú od seba vzdialené 45 pixelov."
-      2-3 Artist Functions 3: "Uprav funkciu tak, aby Umelec nakreslil väčšie okuliare s rámami dlhými 115 pixelov na každej strane.\n\nŠtvorce sú od seba vzdialené 45 pixelov."
+      2-3 Artist Functions 3 a: |-
+        Uprav funkciu "nakresliť štvorec" tak, aby Umelec nakreslil okuliare s rámami dlhými 115 pixelov na každej strane.
+
+        Štvorce sú od seba vzdialené 45 pixelov.
+      2-3 Artist Functions 3: |-
+        Uprav funkciu tak, aby Umelec nakreslil väčšie okuliare s rámami dlhými 115 pixelov na každej strane.
+
+        Štvorce sú od seba vzdialené 45 pixelov.
       2-3 Artist Functions 4 a: Teraz vložme funckiu dovnútra cyklu a pridajme ďalšiu otočku, aby sme nakreslili tieto tri štvorce.
       2-3 Artist Functions 4: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
       2-3 Artist Functions 7: 'Použi funkciu "nakresli dom", aby si nakreslil dva domy, s dvomi rôznymi parametrami. (Nápoveda: prvý dom má 100 pixelov).'
       2-3 Artist Functions 9: 'Voľná hra: Pripravili sme ti funkciu na nakreslenie snehovej vločky. Experimentuj s ňou a vytvor zimnú scenériu! Toto je voľná disciplína, takže nemáš žiadne konkrétne zadanie. Zabav sa!'
       2-3 Artist Loops 10: Čo sa stane s kresbou, keď spravíme posledný krok dopredu o polovicu kratší?
-      2-3 Artist Loops 11: Teraz pridajme *ďalší* cyklus okolo celého nášho výtvoru! Nezabudni na konci každého vonkajšieho cyklu pridať uhol.
+      2-3 Artist Loops 11: Teraz pridajme _ďalší_ cyklus okolo celého nášho výtvoru! Nezabudni na konci každého vonkajšieho cyklu pridať uhol.
       2-3 Artist Loops 4: Chcete vedieť, čo sa stane keď keď budeme opakovať ten tvar dookola použitím cyklu?
       2-3 Artist Loops 5: Teraz spravme malú zmenu v cykle a pozrime sa ako sa zmení náš obrázok.
       2-3 Artist Loops 6: Pridaj jeden pohyb a ďalšiu otočku do vnútra cyklu a pozri sa ako sa zmení tvoja kresba.
@@ -82,8 +108,8 @@ sk:
         Použi rovnaký kód ako predtým, ale pridaj krok dopredu na koniec vonkajšieho cyklu.
       2-3 Artist Loops New 1: Poďme nakresliť hlavu tohto robota! Viete spraviť štvorec so stranou dlhou 100 pixelov?
       2-3 Artist Loops New 10: A teraz spojme niekoľko Véčiek spolu do cyklu.
-      2-3 Artist Loops New 11: Prerobte kód z poslednej úlohy tak, že pridáte otočku o 30 stupňov dovnútra cyklu. A teraz to zopakujte 24krát namiesto 8.
-      2-3 Artist Loops New 12: "Nakresli kosoštvorec so stranami dlhými 100 pixelov.\n"
+      2-3 Artist Loops New 11: Prerob kód z poslednej úlohy tak, že na koniec cyklu pridáš otočku o 30 stupňov. A teraz to zopakuj 24krát namiesto 8.
+      2-3 Artist Loops New 12: Nakresli kosoštvorec so stranami dlhými 100 pixelov.
       2-3 Artist Loops New 13: "Začneme s časťou kódu (v šedom), s ktorým vytvoríme jeden kosoštvorec. \n\nZopakuj šedý kód viackrát a vytvor zábavný vzor!"
       2-3 Artist Loops New 14: Pohraj sa trochu s kódom, ktorým si nakreslil diamant. Vieš nakresliť aj iné vzory? Skús zmeniť počet stupňov o ktoré sa otočíš aj počty opakovaní.
       2-3 Artist Loops New 15: Nakresli niečo zábavné.
@@ -100,65 +126,63 @@ sk:
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát na dokončenie vzoru.
       2-3 Artist Nested Loops 11: Opakuj tento kód 4 krát na dokončenie vzoru, otoč o 90 stupňov po každom kruhu.
       2-3 Artist Nested Loops 12: Opakuj tento kód 12 krát na dokončenie kučery.
-      2-3 Artist Nested Loops 2: "Teraz opakuj trojuholník 6 krát. Po každom trojuholníku sa musíš otočiť o 60 stupňov aby si mohol nakresliť ďalší."
+      2-3 Artist Nested Loops 2: Teraz opakuj trojuholník 6 krát. Po každom trojuholníku sa musíš otočiť o 60 stupňov aby si mohol nakresliť ďalší.
       2-3 Artist Nested Loops 3: "Aby si získal tento vzor, ten trojuholník musíš zopakovať 12 krát. \n\nVydeľ počet stupňov v kruhu (360) počtom tvarov ktoré kreslíš (12), aby si zistil, o koľko stupňov sa po každom tvare musíš otočiť."
-      2-3 Artist Nested Loops 4: "Opakuj tento kosoštvorec 12 krát a nakreslíš kvetinu. Tip: 12 kosoštvorcov je ako 12 trojuholníkov ktoré si urobil - o koľko sa musíš otočiť po každom tvare?"
+      2-3 Artist Nested Loops 4: 'Opakuj tento kosoštvorec 12 krát a nakreslíš kvetinu. Tip: 12 kosoštvorcov je ako 12 trojuholníkov ktoré si urobil - o koľko sa musíš otočiť po každom tvare?'
       2-3 Artist Nested Loops 5: "Vyplň okná tejto budovy vnorenými cyklami. \n\nOkná sú dlhé 20 pixelov a umiestnené 20 pixelov od seba."
-      2-3 Artist Nested Loops 6: |-
-        Tento dinosaurus má na svojom chvoste 8 hrotov. 
-        Každý hrot je dlhý 30 pixelov. Zopakuj trojuholník 8 krát, ale uisti sa, že sa po každom pohneš vpred!
+      2-3 Artist Nested Loops 6: "Tento dinosaurus má na svojom chvoste 8 hrotov. \nKaždý hrot je dlhý 30 pixelov. Zopakuj trojuholník 8 krát, ale uisti sa, že sa po každom pohneš vpred!"
       2-3 Artist Nested Loops 7: "Opakuj tento trojuholník 10 krát aby si nakreslil slnko. \n\nBudeš sa musieť presunúť a otočiť po každom trojuholníku. \n\nO koľko sa musíš otočiť zistíš vydelením počtu stupňov v kruhu počtom tvarov, ktoré ho tvoria."
       2-3 Artist Nested Loops 8: "Teraz do nášho obrazu pridajme nejakú trávu. \n\nZväzky trávy sú umiestnené 50 pixelov od seba."
       2-3 Artist Nested Loops 9: "Dokončime tento obrázok pridaním kvetu. \n\nOpakuj kosoštvorec 12 krát aby si nakreslil svoj kvet."
       2-3 Artist Nested Loops Free Play: Máš voľné ruky, nakresli niečo zaujímavé s vnorenými cyklami.
       2-3 Bee Conditionals 1: Ahoj! Ja som včela. Pomôž mi získať nektár z kvetu.
-      2-3 Bee Conditionals 10: 'Fialové kvety môžu mať buď 1 alebo žiaden nektár. Buď opatrný a nezbieraj nektár z kvetov, ak žiaden nemajú.  '
-      2-3 Bee Conditionals 11: "Zbieraj nektár, kde kvety majú nektár."
+      2-3 Bee Conditionals 10: Fialové kvety môžu mať buď 1 alebo žiaden nektár. Buď opatrný a nezbieraj nektár z kvetov, ak žiaden nemajú.
+      2-3 Bee Conditionals 11: Zbieraj nektár, kde kvety majú nektár.
       2-3 Bee Conditionals 12: Pomôž mi nájsť všetok nektár s použitím, čo najmenšieho počtu blokov!
-      2-3 Bee Conditionals 13: |-
-        Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?
+      2-3 Bee Conditionals 13: 'Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?'
       2-3 Bee Conditionals 14: |-
         A teraz dajme všetko dokopy!
 
         Použi, čo si sa naučil a pomôž mi zbierať nektár iba z kvetov, ktoré ho majú, s použitím čo najmenšieho počtu blokov. Nakonci nezabudni vyrobiť med.
-      2-3 Bee Conditionals 15: "Pozbieraj nektár zo všetkých štyroch kvetov."
-      2-3 Bee Conditionals 2: "Ja som hladná včela!\nPomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov."
-      2-3 Bee Conditionals 3: "Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku."
+      2-3 Bee Conditionals 15: Pozbieraj nektár zo všetkých štyroch kvetov.
+      2-3 Bee Conditionals 2: |-
+        Ja som hladná včela!
+        Pomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov.
+      2-3 Bee Conditionals 3: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku.
       2-3 Bee Conditionals 4: Pomôž mi pozbierať všetok nektár z kvetov a vyrobiť všetok med.
-      2-3 Bee Conditionals 5: "Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.\nNajskôr musíš skontrolovať, či je tam nektár s použitím bloku \"ak nektár\"."
+      2-3 Bee Conditionals 5: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
       2-3 Bee Conditionals 6: Skontroluj tento kvet s blokom "ak", či sa v ňom nachádza nejaký nektár.
       2-3 Bee Conditionals 7: Zozbieraj nektár z každého kvetu, ak nejaký má.
       2-3 Bee Conditionals 8: Toto pole má červené a fialové kvety. Červené kvety majú známe množstvo nektáru ale nektár fialových je neznámy. Zozbieraj všetok nektár.
       2-3 Bee Conditionals 9: Zozbieraj všetok nektár z každého kvetu.
       2-3 Bee Conditionals Assessment 1: 'Hodnotenie: Zozbieraj všetok nektár. Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú.'
       2-3 Bee Debugging 1: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      2-3 Bee Debugging 10: "Z tejto úlohy sa mi točí hlava!\nOprav chyby aby si získal všetok nektár a vyrobil všetok med."
-      2-3 Bee Debugging 2: |-
-        Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      2-3 Bee Debugging 3: |-
-        Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      2-3 Bee Debugging 10: |-
+        Z tejto úlohy sa mi točí hlava!
+        Oprav chyby aby si získal všetok nektár a vyrobil všetok med.
+      2-3 Bee Debugging 2: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      2-3 Bee Debugging 3: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       2-3 Bee Debugging 4: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      2-3 Bee Debugging 5: "Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.  Teraz môžeš použiť \"run\" a \"step\"."
-      2-3 Bee Debugging 6: |-
-        Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
+      2-3 Bee Debugging 5: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.  Teraz môžeš použiť "run" a "step".
+      2-3 Bee Debugging 6: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
       2-3 Bee Debugging 7: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      2-3 Bee Debugging 8: |-
-        Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      2-3 Bee Debugging 8: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       2-3 Bee Debugging 9: |-
         Snaž sa usilovne ako včelička!
 
         V tomto programe budeš musieš opraviť niekoľko chýb na to, aby si získal všetok nektár a vyrobil všetok med.
-      2-3 Bee Debugging Assessment 1: |-
-        Hodnotenie: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
+      2-3 Bee Debugging Assessment 1: 'Hodnotenie: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.'
       2-3 Bee Functions 1: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 2 nectar" aby si zozbieral nektár z každého kvetu.
-      2-3 Bee Functions 10: "Fialové kvety môžu mať 1 alebo 0 nektáru.  Vytvor funkciu, ktorá zhromažďuje nektár iba z fialových kvetov, ktoré majú nektár."
-      2-3 Bee Functions 2: "Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu \"get 5\" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov."
+      2-3 Bee Functions 10: Fialové kvety môžu mať 1 alebo 0 nektáru.  Vytvor funkciu, ktorá zhromažďuje nektár iba z fialových kvetov, ktoré majú nektár.
+      2-3 Bee Functions 2: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si mal ideálny počet blokov.
       2-3 Bee Functions 3: Zozbieraj všetok nektár z každého kvetu.
-      2-3 Bee Functions 4: "Funkcia \"move and get nectar\" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár."
+      2-3 Bee Functions 4: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       2-3 Bee Functions 5: Teraz je na kvetoch viac nektáru. Uprav danú funkciu tak, že získa 4 nektáru a použi ju na zozbieranie všetkého nektáru z kvetov.
       2-3 Bee Functions 6: Teraz použi rovnakú funkciu a získaj nektár z troch kvetov.
       2-3 Bee Functions 7: Kvety sú teraz ďalej. Upraviť danú funkciu a použi ju na zozbieranie všetkého nektáru z kvetov.
-      2-3 Bee Functions 8: Vytvor vlastnú funkciu, ktorá získa 7 nektáru, pohne sa dopredu a urobí 7 medu. Použi funkciu na zozbieranie nektáru v každom kvete a urobí med na každom pláste.
+      2-3 Bee Functions 8: Vytvor vlastnú funkciu, ktorá získa 7 nektárov, pohne sa dopredu a vyrobí 7 medov. Použi funkciu na zozbieranie nektáru z každého kvetu a výrobu medu v každom pláste.
       2-3 Bee Functions 9: Vytvor vlastnú funkciu, ktorá prejde po ceste, pozbiera nektár, vyrobí med a potom vráti včelu na začiatok cesty.
       2-3 Bee Functions Assessment 1: 'Hodnotenie: Použi danú funkciu pre pozbieranie nektáru z každej kvetiny.'
       2-3 Bee Functions Assessment 2: 'Hodnotenie: Vytvorte funkciu pre zabočenie, posun dopredu a výrobu 3 medov, potom vráťte včeličku na miesto, z ktorého začala a otočte ju.'
@@ -192,25 +216,25 @@ sk:
       2-3 Maze 11: Dostaň ma ku kvetine, som hladný. Koľkokrát musíš ten blok zopakovať?
       2-3 Maze 12 (copy 1): 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda: Vytvor cyklus s použitím bloku "opakuj x krát")'
       2-3 Maze 12 (copy 2): 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda: Vytvor cyklus s použitím bloku "opakuj x krát")'
-      2-3 Maze 12 (old): Dostaň ma k prasaťu, tentokrát s blokom "Opakuj"!
-      2-3 Maze 12 - One Move Block: Dostaň sa k prasaťu! Tentokrát však môžeš použiť iba jeden blok `posuň sa dopredu`. Vidíš aj nejaké iné bloky, ktoré by ti mohli pomôcť?
-      2-3 Maze 12: Vieš sa dostať k prasaťu použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
-      2-3 Maze 13 (old): Dostaň ma k prasaťu, tentokrát s blokom "Opakuj dovtedy (kým)"!
-      2-3 Maze 13: Dostaň ma k prasaťu! Teraz môžeš použiť len jeden blok na posunutie dopredu
-      2-3 Maze 14 (old): Dostaň ma k prasaťu pomocou bloku "opakuj dovtedy (kým)"!
+      2-3 Maze 12 (old): Dostaň ma k prasiatku, tentokrát s blokom "Opakuj"!
+      2-3 Maze 12 - One Move Block: Dostaň sa k prasiatku! Tentokrát však môžeš použiť iba jeden blok `posuň sa dopredu`. Vidíš aj nejaké iné bloky, ktoré by ti mohli pomôcť?
+      2-3 Maze 12: Vieš sa dostať k prasiatku použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
+      2-3 Maze 13 (old): Dostaň ma k prasiatku, tentokrát s blokom "Opakuj pokiaľ neplatí"!
+      2-3 Maze 13: Dostaň ma k prasiatku! Teraz môžeš použiť len jeden blok na posunutie dopredu
+      2-3 Maze 14 (old): Dostaň ma k prasiatku pomocou bloku "opakuj pokiaľ neplatí"!
       2-3 Maze 14: Dostaň ma k slnečnici! (Kde je blok "opakuj", keď ho potrebujem?)
-      2-3 Maze 15 (old): Dostaň ma k prasaťu pomocou bloku "opakuj dovtedy (kým)"!
-      2-3 Maze 15: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
-      2-3 Maze 16 (old): Dostaň ma k prasaťu pomocou bloku "opakuj dovtedy (kým)"!
+      2-3 Maze 15 (old): Dostaň ma k prasiatku pomocou bloku "opakuj pokiaľ neplatí"!
+      2-3 Maze 15: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasiatko najmenším možným počtom blokov!
+      2-3 Maze 16 (old): Dostaň ma k prasiatku pomocou bloku "opakuj pokiaľ neplatí"!
       2-3 Maze 16 before: Viete nájsť najrýchlejšiu cestu k prasiatku?
       2-3 Maze 16: Cykly fungujú dokonca aj s viac ako jedným vsunutým blokom. Vieš zopakovať tento postup tak, aby sa zombie dostal k slnečnici?
-      2-3 Maze 2: To prasa mi pije krv! Pomôž mi dostať sa k nemu!
-      2-3 Maze 3: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      2-3 Maze 2: To prasiatko mi pije krv! Pomôž mi dostať sa k nemu!
+      2-3 Maze 3: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       2-3 Maze 4: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
       2-3 Maze 5: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-      2-3 Maze 6: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa rozhnevám!
+      2-3 Maze 6: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!
       2-3 Maze 7: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-      2-3 Maze 8: Dostaň ma k tomu prasaťu!
+      2-3 Maze 8: Dostaň ma k tomu prasiatku!
       2-3 Maze 9: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
       2-3 Maze Loops 1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
       2-3 Maze Loops 17: Ukáž, čo si sa naučil a dostaň ma k slnečnici!
@@ -219,25 +243,25 @@ sk:
       2-3 Maze Loops 20: Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!
       2-3 Maze Loops 21: Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!
       2-3 Maze Loops Assessment 1: 'Hodnotenie: Dostaňte ma k slnečnici použitím len 5 blokov! '
-      2-3 Maze sq1: To prasa mi pije krv. Pomôž mi ho nájsť!
-      2-3 Maze sq10: Dostaň ma k tomu prasaťu! Ktoré bloky sa opakujú?
-      2-3 Maze sq10v2: Dostaň ma k tomu prasaťu! Ktoré bloky sa opakujú?
-      2-3 Maze sq2: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      2-3 Maze sq1: To prasiatko mi pije krv. Pomôž mi ho nájsť!
+      2-3 Maze sq10: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
+      2-3 Maze sq10v2: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
+      2-3 Maze sq2: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       2-3 Maze sq3: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-      2-3 Maze sq4: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa rozhnevám!
-      2-3 Maze sq5: Dostaň ma k tomu prasaťu! Koľko krát musíš ten blok zopakovať?
+      2-3 Maze sq4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa rozhnevám!
+      2-3 Maze sq5: Dostaň ma k tomu prasiatku! Koľko krát musíš ten blok zopakovať?
       2-3 Maze sq6: 'Dokážeš nahradiť predošlu odpoveď iba dvomi blokmi? (Nápoveda: Vytvor cyklus s použitím bloku "opakuj x krát")'
       2-3 Maze sq7: Dostaňte ma k zelenému votrelcovi použitím len troch blokov.
-      2-3 Maze sq8: Dostaň ma k prasaťu! (Kde je ten blok "opakuj" práve keď ho potrebujem?)
+      2-3 Maze sq8: Dostaň ma k prasiatku! (Kde je ten blok "opakuj" práve keď ho potrebujem?)
       2-3 Maze sq9: Vytvor cykly, aby si sa dostal k prasiatku s použitím menej blokov.
-      2-3 maze sq11: Dostaň ma k tomu prasaťu! Ktoré bloky sa opakujú?
+      2-3 maze sq11: Dostaň ma k tomu prasiatku! Ktoré bloky sa opakujú?
       2-3 maze sq12: Dokážeš nahradiť predošlé riešenie s cyklom použitím bloku "opakuj x krát"?
-      2-3 maze sq13: Dráhá osoba. Ja zombík. Musieť... dostať... k slnečnica. Vytvor cyklus s blokom "opakuj dovtedy (kým)".
+      2-3 maze sq13: Dráhá osoba. Ja zombík. Musieť... dostať... k slnečnica. Vytvor cyklus s blokom "opakuj pokiaľ neplatí".
       2-3 maze sq14: Viete sa dostať k slnečnici použitím len štyroch blokov?
       2-3 maze sq15: Viete sa dostať k slnečnici použitím len piatich blokov?
       2-3 maze sq16: Ok, toto je podobné, ale mierne rozdielne. Spravíš to použitím len piatich blokov?
       2-3: Fialové kvety môžu mať buď 1 alebo žiaden nektár. Buď opatrný a nezbieraj nektár z kvetov, ak žiaden nemajú.
-      2-3level1: Pomôžte vtáčikovi chytiť nezbedné prasiatko posúvanim ho dopredu
+      2-3level1: Posúvaj vtáka dopredu a pomôž mu chytiť to nezbedné prasiatko.
       20hr_farmer_stage9_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu hliny a použi blok "odstráň", aby si ju odstránil.
       20hr_farmer_stage9_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tam je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "ak".'
       20hr_farmer_stage9_2: Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny, použitím bloku "vyplň".
@@ -248,7 +272,7 @@ sk:
       20hr_farmer_stage9_7: Wow, našiel som vážne hlbokú dieru! Neviem koľko plných lopát hliny je treba. Dokážeš napísať program, ktorý ju vypĺňa dokiaľ je pod zemou?
       20hr_farmer_stage9_8: Pomôž mi vyplniť dieru na konci poľa použitím toľko blokov ako je len možné.
       20hr_farmer_stage9_9: 'Nechaj ma odstrániť všetky hromady hliny. Skús použiť tak málo blokov ako je len možné. Poznámka: skús použiť blok "pokiaľ".'
-      20hr_maze_stage2_10: V poriadku, skús nový blok "opakuj dovtedy (kým)" - tento blok bude akciu opakovať až dovtedy, kým neprídem k tomu otravnému prasaťu.
+      20hr_maze_stage2_10: V poriadku, vyskúšaj nový blok "opakuj pokiaľ neplatí" - tento blok bude akciu opakovať až dovtedy, kým neprídem k tomu mrzutému prasiatku.
       20hr_maze_stage2_11: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
       20hr_maze_stage2_13: Dobre, toto je podobné, len trošku iné. Zvládneš to len s 5 blokmi?
       20hr_maze_stage2_14: 'Použi nový blok "ak", aby som sa sám mohol rozhodnúť, kedy sa otočiť. Tip: Pre splnenie úlohy ti stačí pridať jediný blok, ale zapamätaj si, ako sme ho nastavili, aby si to nabudúce zvládol aj sám.'
@@ -257,12 +281,12 @@ sk:
       20hr_maze_stage2_17: Dobre, precvičme si to ešte raz - nie je to veľmi odlišné, ale dávaj pozor na mäsožravky!
       20hr_maze_stage2_18: Blok "ak-inak" overuje podmienku a potom vykoná jednu ALEBO druhú vec. Skús využiť tento nový blok, aby si ma dostal k slnečnici.
       20hr_maze_stage2_19: Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
-      20hr_maze_stage2_2: To prasa mi pije krv. Pomôž mi ho nájsť!
+      20hr_maze_stage2_2: To prasiatko mi pije krv. Pomôž mi ho nájsť!
       20hr_maze_stage2_20: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku.
-      20hr_maze_stage2_3: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      20hr_maze_stage2_3: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       20hr_maze_stage2_4: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
-      20hr_maze_stage2_5: Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Ináč sa rozhnevám!
-      20hr_maze_stage2_6: K zelenému prasaťu sa dá dostať použitím len 2 blokov. Zistíš ktorých?
+      20hr_maze_stage2_5: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
+      20hr_maze_stage2_6: K zelenému prasiatku sa dá dostať použitím len 2 blokov. Zistíš ktorých?
       20hr_maze_stage2_7: Dostaň ma k zelenému votrelcovi použitím troch blokov.
       20hr_maze_stage2_8: Pomôž sa mi zbaviť toho zlého prasaťa pomocou čo najmenšieho počtu blokov. Skús použiť niekoľko blokov "opakuj".
       20hr_maze_stage2_9: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj", ktorý akciu zopakuje 3 krát. Vlož do neho 3 bloky: "posuň sa dopredu", "posuň sa dopredu", a "otoč sa" a nastav blok "opakuj", aby to zopakoval trikrát.'
@@ -297,23 +321,22 @@ sk:
         Nakresli tento štvorec použitím cyklu.
 
         Každá strana je dlhá 20 pixelov.
-      4-5 Artist Patterns 10: "Tento kód nakreslí dva riadky šesťuholníkov - zopakujte to celé 4 krát pre nakreslenie celého plástu. \n\nBudete sa musieť vrátiť späť o 120 pixelov vo Vašej najkrajnejšej slučke, aby umelec nekreslil mimo obrazovky.\n"
+      4-5 Artist Patterns 10: "Tento kód nakreslí dva riadky šesťuholníkov - zopakujte to celé 4 krát pre nakreslenie celého plástu. \n\nBudete sa musieť vrátiť späť o 120 pixelov vo Vašej najkrajnejšej slučke, aby umelec nekreslil mimo obrazovky."
       4-5 Artist Patterns 11: 'Koľkokrát musíme toto zopakovať pre nakreslenie polkruhu? '
       4-5 Artist Patterns 12: "Ak spravíš ďaľší podobný cyklus, ale namiesto doľava zabočíš doprava čo sa stane? \n\nVieš to celé zopakovať tak, aby si nakreslil túto vlnu?"
       4-5 Artist Patterns 13: "A teraz zopakujme celú vec štyrikrát pre vytvorenie tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť o 90 stupňov! \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov spraví dodatočný štvrťkruh pre rohy?"
       4-5 Artist Patterns 3: A poďme o level hlbšie! Vložili sme celý blok s kódom do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej slučky, aby nakreslil celú mriežku?
       4-5 Artist Patterns 4: Tento diamant má stranu o veľkosti 50 pixelov a uhly o veľkosti 120 a 60 stupňov. Použite slučku pre jeho nakreslenie.
       4-5 Artist Patterns 5.5: Koľkokrát musíme zopakovať tento blok, aby sme nakreslili ceú mriežku kosoštvorcov?
-      4-5 Artist Patterns 5: "Zopakujte tento kód pre vytvorenie riadku so 6 diamantmi. \n\nVšimnite si, že sme zmenili náš diamantový kód, aby sa zopakoval 3krát namiesto 2krát - čo myslíte, prečo sme to urobili?\n"
-      4-5 Artist Patterns 6: Koľkokrát musíme zopakovať tento blok, aby sme nakreslili ceú mriežku kosoštvorcov?
+      4-5 Artist Patterns 5: "Zopakujte tento kód pre vytvorenie riadku so 6 diamantmi. \n\nVšimnite si, že sme zmenili náš diamantový kód, aby sa zopakoval 3krát namiesto 2krát - čo myslíte, prečo sme to urobili?"
       4-5 Artist Patterns 8: Použi cyklus na nakreslenie šesťuholníka so stranami dlhými 40 pixelov a uhlami 60 stupňov.
       4-5 Artist Patterns 9.5: Zopakujme tento kód pre nakreslenie dvoch radov šesťuholníkov. Všimnite si, že druhý rad je posunutý doprava.
       4-5 Artist Patterns 9: "A teraz tento kód zopakuj 3x a nakresli celý riadok. \n\nKaždý šesťuholník je v najširšom mieste zľava doprava široký 80 stupňov."
       4-5 Artist Patterns Free Play: Voľná hra - vyskúšaj svoju ruku nakreslením vlastného vzoru!
       4-5 Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       4-5 Bee Conditionals 2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      4-5 Bee Conditionals 3: Ja chcem len spraviť med. Niektoré z týchto oblakov môžu schovávať úle. Uistite sa, že ste skontrolovali každý oblak!
-      4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      4-5 Bee Conditionals 3: Teraz chcem len vyrábať med. Pod niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
+      4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       4-5 Bee Conditionals 5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 
@@ -322,14 +345,20 @@ sk:
       4-5 Bee Conditionals 6: "Nie som si istý, koľko nektáru má táto kvetina, ale viem, že to budú 1, 2 alebo 3 nektáre. \n\nSkombinuj podmieňovacie bloky (\"if\" a/alebo \"if/else\") pre získanie práve toľko nektáru, koľko ho je na kvetine. \n\nZapamätajte si, množstvo nektáru sa môže pri každom spustení programu zmeniť!"
       4-5 Bee Conditionals 7: "Tieto kvety môžu mať 3, 2 alebo 1 nektár. \n\nDokonči funkciu \"skontrolovať fialovú kvetinu\" a použi ju na pozbieranie všetkého nektáru z kvetov."
       4-5 Bee Conditionals 8: "Napíšte funkciu na \"skontrolovať kvetinku spraviť med\". \n\nVaša funkcia by mala skontrolovať, či má fialová kvetinka 3, 2 alebo 1 nektár a pozbierať všetok nektár. \nPotom sa posuňte dopredu a spravte med."
-      4-5 Bee Debugging 1: "Tieto bloky ma naozaj trápia.\n\nVieš ich opraviť?"
+      4-5 Bee Debugging 1: |-
+        Tieto bloky ma naozaj trápia.
+
+        Vieš ich opraviť?
       4-5 Bee Debugging 10: Nájdite chyby a opravte ich.
       4-5 Bee Debugging 11: Počíta toto správne?
       4-5 Bee Debugging 2: Pomôžte včeličke pobrať nektár a spraviť med.
       4-5 Bee Debugging 3: Nájdite chyby a opravte ich.
       4-5 Bee Debugging 4: Tieto bloky nebudú fungovať. Aký je vzor?
       4-5 Bee Debugging 5: Niečo tu nie je v poriadku...
-      4-5 Bee Debugging 6: "Fialová kvetinka má pri každom spustení cvičenia iný počet nektáru.\n\nOpravte bloky tak, aby ste vždy pozbierali všetok nektár."
+      4-5 Bee Debugging 6: |-
+        Fialová kvetinka má pri každom spustení cvičenia iný počet nektáru.
+
+        Opravte bloky tak, aby ste vždy pozbierali všetok nektár.
       4-5 Bee Debugging 7: V tejto funkcií niečo chýba...
       4-5 Bee Debugging 8: Táto funkcia je v poriadku, ale je použitá nesprávnym spôsobom.
       4-5 Bee Debugging 9: Prečo nerobí včielka dostatok medu?
@@ -350,8 +379,8 @@ sk:
       4-5 Maze 10: Viete sa dostať k slnečnici použitím len štyroch blokov?
       4-5 Maze 11: Viete sa dostať k slnečnici použitím len šesť blokov?
       4-5 Maze 12: Dobre, toto je trošku odlišné. Viete to spraviť len so šiestimi blokmi?
-      4-5 Maze 13: Dostaň ma k tomu prasaťu!
-      4-5 Maze 14: Dostaň ma k prasaťu. Použi blok "opakuj dovtedy (kým)".
+      4-5 Maze 13: Dostaň ma k tomu prasiatku!
+      4-5 Maze 14: Dostaň ma k prasiatku. Použi blok "opakuj pokiaľ neplatí".
       4-5 Maze 2 (copy 1): Dostaňte zombíka k slnečnici, ale vyhnite sa chomperu!
       4-5 Maze 2: Dostaňte zombíka k slnečnici, ale vyhnite sa chomperu!
       4-5 Maze 3 (copy 1): Musieť... dostať... k slnečnici.
@@ -364,19 +393,22 @@ sk:
       4-5 Maze 6: Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!
       4-5 Maze 7: Dostaňte zombíka rýchlo k slnečnici! Viete vyriešiť túto úlohu s menej ako 11 blokmi?
       4-5 Maze 8: "Dostaňte zombíka k slnečnici použitím čo najmenšieho počtu blokov.  \n(Vyhnite sa chomperom!)"
-      4-5 Maze 9: "Teraz tu máme nový blok \"opakuj dovtedy (kým)\".  \nToto nám umožní opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok \"opakuj dokiaľ\" pre vyriešenie tejto úlohy s čo najmenším možným počtom príkazov."
-      4-5 Maze Conditionals 1: Použi blok "opakuj dovtedy", aby sa zombík dostal k slnečnici.
+      4-5 Maze 9: "Teraz tu máme nový blok `opakuj pokiaľ neplatí`.  \nToto nám umožní opakovať príkazy až kým sa zombík nedostane k slnečnici.  \n\nPouži nový blok \"opakuj pokiaľ neplatí\" pre vyriešenie tejto úlohy s čo najmenším možným počtom príkazov."
+      4-5 Maze Conditionals 1: Použi blok `opakuj pokiaľ neplatí`, aby sa zombík dostal k slnečnici.
       4-5 Maze Conditionals 10: "Viete pridať len 3 bloky a pomôcť zombíkovi dostať sa cez zložitejšie bludisko? \n\nAk to urobíte správne, môže prejsť všetkými krivolakými cestami bez ohľadu na ich dĺžku!"
-      4-5 Maze Conditionals 2: Použi blok "opakuj dovtedy", aby sa zombík dostal k slnečnici.
-      4-5 Maze Conditionals 3: "Použite blok \"if\" pre pomoc s rozhodnutím sa, kedy mám zabočiť.\n"
-      4-5 Maze Conditionals 4: Ok, toto vyriešiš podobne ako predchádzajúcu úlohu, len si musíš spomenúť, ako si spolu použil bloky "ak" a "opakuj dovtedy".
-      4-5 Maze Conditionals 5: "\"Ja chcieť slnečnica!\"\n\nPoužite výraz \"if\", aby sa zombík dostal k slnečnici s čo najmenším počtom blokov."
+      4-5 Maze Conditionals 2: Použi blok `opakuj pokiaľ neplatí`, aby sa zombík dostal k slnečnici.
+      4-5 Maze Conditionals 3: Použite blok "if" pre pomoc s rozhodnutím sa, kedy mám zabočiť.
+      4-5 Maze Conditionals 4: Ok, toto vyriešiš podobne ako predchádzajúcu úlohu, len si musíš spomenúť, ako si spolu použil bloky `ak` a `opakuj pokiaľ neplatí`.
+      4-5 Maze Conditionals 5: |-
+        "Ja chcieť slnečnica!"
+
+        Použite výraz "if", aby sa zombík dostal k slnečnici s čo najmenším počtom blokov.
       4-5 Maze Conditionals 6: |-
         "Zjedzte slnečnicu!"
 
         Použite výraz "if", aby sa zombík dostal k slnečnici s čo najmenším počtom blokov.
       4-5 Maze Conditionals 7: Riešenie tejto úlohy nie je až tak odlišné, ale pozor na zloduchov!
-      4-5 Maze Conditionals 8: "Blok \"if/else\" skontroluje podmienku a potom spraví jednu alebo druhú vec. \n\nPoužite tento nový blok, aby ste ma dostali k slnečnici."
+      4-5 Maze Conditionals 8: "Blok \"ak/inak\" skontroluje podmienku a potom spraví jednu alebo druhú vec. \n\nPouži tento nový blok a dostaň ma k slnečnici."
       4-5 Maze Conditionals 9: |-
         Ešte jedna cvičná úloha s blokom "if/else"!
 
@@ -433,7 +465,9 @@ sk:
       Course 4 Artist Binary Free Play 2b: Kliknite sem pre zobrazenie nápovady.
       Course 4 Artist Binary Free Play: 'Voľná hra: Nakreslite čo len chcete s binárnymi číslami!'
       Course 4 Artist Binary pre1: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
-      Course 4 Artist Binary ryan: "Binárny spôsob reprezentácie používa len dve možnosti. My budeme používať možnosť \"vypnuté\" (reprezentovaná číslom 0) a \"zapnuté\" (reprezentovana číslom 1).\nPredstav si, že máš štvorcovú mriežku, cez ktorú sa môžeš pohybovať a kresliť obrazce zapínaním len určitých štvorcov. Vieš pomôcť umelcovi nakresliť v prvom riadku \"01010101\" v binárnej reprezentácii?"
+      Course 4 Artist Binary ryan: |-
+        Binárny spôsob reprezentácie používa len dve možnosti. My budeme používať možnosť "vypnuté" (reprezentovaná číslom 0) a "zapnuté" (reprezentovana číslom 1).
+        Predstav si, že máš štvorcovú mriežku, cez ktorú sa môžeš pohybovať a kresliť obrazce zapínaním len určitých štvorcov. Vieš pomôcť umelcovi nakresliť v prvom riadku "01010101" v binárnej reprezentácii?
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto trojuholníka, ktorý je 50 pixelov široký.
       Course 4 Artist Functions 1: Vieš nakresliť štvorec dlhý 100 pixelov použitím cyklu?
       Course 4 Artist Functions Inspiration: Kliknite sem pre opakované zobrazenie nápovedy.
@@ -456,9 +490,9 @@ sk:
       Course 4 EC 2c: Žiadne pravidlá. Žiadna nápoveda. Len hra samotná!
       Course 4 EC 2d: Žiadne pravidlá. Žiadna nápoveda. Len hra samotná!
       Course 4 EC 3a: 'Extrémna výzva: Žiadne pravidlá. Žiadne stopy. Len úloha!'
-      Course 4 Maze 1: Dostaň vtáka k prasaťu!
+      Course 4 Maze 1: Dostaň vtáka k prasiatku!
       Course 4 Maze 2: Vyhnite sa dynamitu!
-      Course 4 Maze 3: 'Naprogramuj cestu nahnevaného vtáka k prasaťu. '
+      Course 4 Maze 3: 'Naprogramuj cestu nahnevaného vtáka k prasiatku. '
       Course 4 Maze 5: Viete vyriešiť túto úlohu použitím čo najmenšieho možného počtu blokov?
       Course 4 Maze 6: Viete vyriešiť túto úlohu použitím čo najmenšieho možného počtu blokov?
       Course 4 Play Lab For Loops 2: Tentokrát vyskúšajme rozpočítanie nepárnych čísiel od 1 do 100.
@@ -479,7 +513,7 @@ sk:
       CourseD_Dance_Party_03: Teraz donúť tanečníka začať nový krok po 6 taktoch!
       CourseD_Dance_Party_04: Pridaj efekt pozadia do svojho programu.
       CourseD_Dance_Party_05: Použi ďalší nový blok, aby tanečník zmenil kroky každé 2 takty.
-      CourseD_Dance_Party_06: Vytvor záložného tanečníka s menom 'backup_dancer1', ktorý bude tancovať s mačkou.
+      CourseD_Dance_Party_06: Vytvor záložného tanečníka s menom 'backup\_dancer1', ktorý bude tancovať s mačkou.
       CourseD_Dance_Party_08: Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
       CourseD_Dance_Party_09: Použi blok `nastav sfarbenie` na zmenu farby tanečníka.
       CourseD_Dance_Party_10: Prikáž aj ďalšiemu tanečníkovi reagovať na hudbu použitím bloku `začne nasledovať`.
@@ -496,10 +530,11 @@ sk:
       Crack a Caesar Cipher_2019: Inštrukcie
       D_Frozen_nested5: Zahraj sa so snehovými vločkami!
       D_Frozen_nested9: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       Dance Party 1-validated: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 1-validated_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party 1-validated_simple: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
@@ -540,7 +575,7 @@ sk:
       Dance_Party_03: Teraz donúť tanečníka začať nový krok po 6 taktoch!
       Dance_Party_04: Pridaj efekt pozadia do svojho programu.
       Dance_Party_05: Použi ďalší nový blok, aby tanečník zmenil kroky každé 2 takty.
-      Dance_Party_06: Vytvor záložného tanečníka s menom 'backup_dancer1', ktorý bude tancovať s mačkou.
+      Dance_Party_06: Vytvor záložného tanečníka s menom 'backup\_dancer1', ktorý bude tancovať s mačkou.
       Dance_Party_08: Vieš spraviť oboch záložných tanečníkov rovnako veľkých?
       Dance_Party_09: Použi blok `nastav sfarbenie` na zmenu farby tanečníka.
       Dance_Party_10: Prikáž aj ďalšiemu tanečníkovi reagovať na hudbu použitím bloku `začne nasledovať`.
@@ -597,11 +632,11 @@ sk:
       K-1 Artist1 3: Nakreslite dve čiary východne a dve západne pre dokončenie domu!
       K-1 Bee Puzzle 12: Zoberte tri nektáre a potom spravte dva medy
       K-1 Building a Foundation Assessment: Postav trojposchodovú pyramídu. Nemáš žiadne ďalšie inštrukcie - pohraj sa teda s pomôckami až kým nezistíš ako na to!
-      K-1 Maze 11: 'Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie! Pomôcka: Je na Juh odo mňa.'
-      K-1 Maze Loops 1: Dostaň ma k tomu prasaťu!
-      K-1 Maze Loops 4: Dostaň ma k tomu prasaťu!
-      K-1 Maze Loops 9: Dostaň ma k tomu prasaťu!
-      KTest2: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      K-1 Maze 11: 'Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie! Pomôcka: Je na Juh odo mňa.'
+      K-1 Maze Loops 1: Dostaň ma k tomu prasiatku!
+      K-1 Maze Loops 4: Dostaň ma k tomu prasiatku!
+      K-1 Maze Loops 9: Dostaň ma k tomu prasiatku!
+      KTest2: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       Kiki_StarWars_Test_3: Text
       Kiki_StarWars_Test_4: Text
       Kiki_StarWars_Test_5: Text
@@ -609,7 +644,7 @@ sk:
       MC Agent Freeplay: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       MC HOC 2016 Level 10: Je čas vytvoriť si vlastný Minecraft! Vytváraj postavy a nauč ich robiť čokoľvek. Zabav sa!
       MC HOC 2016 Level 2-2: Kurča je zmrazené. Umiestni bloky 'posuň sa' a 'otoč sa' do časti 'pri vytvorení', aby sa pohlo.
-      MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách kurčatá kráčajú stále. Použi cyklus ''nekonečne vykonaj'', aby si udržal kurčatá v pohybe.  '
+      MC HOC 2016 Level 3: Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách kurčatá kráčajú stále. Použi cyklus 'nekonečne vykonaj', aby si udržal kurčatá v pohybe.
       MC HOC 2016 Level 4: Teraz sa ale všetky kurčatá hýbu rovnako a vyzerá to čudne. Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá vykonať pohyb 'otoč sa náhodne'.
       MC HOC 2016 Level 5: Tieto kravy sú stratené! Priveď ich k tráve pomocou bloku 'posuň sa o krok dopredu' v cykle 'nekonečne vykonaj'.
       MC HOC 2016 Level 6: Teraz vytvoríš zombíkov. Použi blok 'vytvor' pre vytvorenie 3 zombíkov, keď je noc. Naprogramuj ich tak, aby sa hýbali smerom k tebe. Preži do rána.
@@ -687,9 +722,15 @@ sk:
       New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
       New Sports Project: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.'
-      Overworld Avoid Monsters: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
-      Overworld Avoid Monsters_2018: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
-      Overworld Avoid Monsters_2019: "Naraziť do Creepera nie je dobrý nápad.\nOpatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova."
+      Overworld Avoid Monsters: |-
+        Naraziť do Creepera nie je dobrý nápad.
+        Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
+      Overworld Avoid Monsters_2018: |-
+        Naraziť do Creepera nie je dobrý nápad.
+        Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
+      Overworld Avoid Monsters_2019: |-
+        Naraziť do Creepera nie je dobrý nápad.
+        Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
       Overworld Chop Tree - allthethings: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Tree: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
       Overworld Chop Tree_2018: Drevo je veľmi dôležitý zdroj. Vyrába sa z neho veľa vecí. Kráčaj ku stromu a použi príkaz "znič blok" na to, aby si ho vyrúbal.
@@ -719,7 +760,9 @@ sk:
       Overworld Shear Sheep_2018: Je čas na strihanie oviec! Použi príkaz “ostrihaj“ na to, aby si z oviec zozbieral vlnu.
       Overworld Shear Sheep_2019: Je čas na strihanie oviec! Použi príkaz “ostrihaj“ na to, aby si z oviec zozbieral vlnu.
       PS - test - pixelation: Dokončite tvar X písaním núl a jednotiek
-      PS copy 2-3 Bee Conditionals 5: "Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.\nNajskôr musíš skontrolovať, či je tam nektár s použitím bloku \"ak nektár\"."
+      PS copy 2-3 Bee Conditionals 5: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
       Ryan_Demo: Donúť soba začať nový krok po 4 taktoch!
       SpecialFrozenLevel: Oficiálne se z teba stal majster umelec! Vytvor zimnú krajinu zázrakov.
       Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana má mať 100 pixelov.
@@ -761,7 +804,7 @@ sk:
       aE8: "A teraz zopakujme celú vec štyrikrát pre vytvorenie tohto rámika obrázku. Pozor na rohy - nemôžete jednoducho zabočiť o 90 stupňov! \n\nAk zopakovanie 3 otočiek o 60 stupňov spraví polkruh, ktorý z týchto blokov spraví dodatočný štvrťkruh pre rohy?"
       artistLoopsK1: Toto je nový typ úlohy nazývaný "Umelec". V tomto leveli sa trochu pohraj a nakresli niečo zábavné.
       beeDebugVideo1: Použi cyklus "opakuj" a pozbieraj všetok nektár.
-      birdsDebugVideo1: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      birdsDebugVideo1: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       bounce_10_basketball: Teraz máme na ihrisku kôš! Použi bloky "pridaj bod" a "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
       bounce_10_sports: Teraz máme na ihrisku bránku! Použi bloky "pridaj bod" a "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body!
       bounce_11_basketball: Teraz môžeš pridávať bloky aj ku bloku "pri spustení". Musíš tiež viackrát pridať blok "vhoď novú loptu". Pokús sa zmeniť scénu, alebo rýchlosť ruky a lopty a skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body!
@@ -780,10 +823,10 @@ sk:
       bounce_7_sports: Pripoj správne bloky ku každému z "keď..." blokov. Odrážaj loptu až kým sa nedotkne vlajky.
       course1_artist_loops_challenge4: '"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"'
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne bloky, ale sú v nesprávnom poradí!
-      course1_maze_seq_challenge1: '"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!"'
+      course1_maze_seq_challenge1: '"Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!"'
       course2_collector_loops_challenge2: Pozbieraj všetky drahokamy!
-      course2_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých *10* drahokamov?
-      course2_maze_seq_challenge1: Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      course2_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých _10_ drahokamov?
+      course2_maze_seq_challenge1: Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       course2_playlab_stage17_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
       course2_playlab_stage17_3: Podarí sa ti napísať program, ktorým sa Jorge (postava 1) posunie smerom k mačke Olive?
       course3_playlab_stage16_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
@@ -815,20 +858,20 @@ sk:
       courseA_maze_ramp4a_2018: Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp5_2018: Vyhni sa TNT.
-      courseA_maze_seq12: 'Dostaň to prasa! '
-      courseA_maze_seq12_2018: 'Dostaň to prasa! '
-      courseA_maze_seq12_2019: 'Dostaň to prasa! '
-      courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni sa TNT, lebo bude lietať perie!
-      courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni sa TNT, lebo bude lietať perie!
-      courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasaťu. Vyhni sa TNT, lebo bude lietať perie!
+      courseA_maze_seq12: 'Dostaň to prasiatko! '
+      courseA_maze_seq12_2018: 'Dostaň to prasiatko! '
+      courseA_maze_seq12_2019: 'Dostaň to prasiatko! '
+      courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni sa TNT, lebo bude lietať perie!
+      courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni sa TNT, lebo bude lietať perie!
+      courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni sa TNT, lebo bude lietať perie!
       courseB_Scrat_ramp1_2018: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       courseB_Scrat_ramp1_2019: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       courseB_Scrat_ramp2_2018: Spoj všetky bloky dokopy, aby si dokončil tvoj kód, potom stlač "▶ Spustiť".
       courseB_Scrat_ramp2_2019: Spoj všetky bloky dokopy, aby si dokončil tvoj kód, potom stlač "▶ Spustiť".
       courseB_Scrat_ramp3a_2018: Pridaj blok `Sever` na spodok ostatných blokov, aby si dokončil tento kód, potom klikni "▶ Spustiť".
       courseB_Scrat_ramp3a_2019: Pridaj blok `Sever` na spodok ostatných blokov, aby si dokončil tento kód, potom klikni "▶ Spustiť".
-      courseB_Scrat_ramp3b_2018: "Potiahni zvyšný blok naspať do panelu s nástrojmi, aby si sa ho zbavil.\n\n"
-      courseB_Scrat_ramp3b_2019: "Potiahni zvyšný blok naspať do panelu s nástrojmi, aby si sa ho zbavil.\n\n"
+      courseB_Scrat_ramp3b_2018: Potiahni zvyšný blok naspať do panelu s nástrojmi, aby si sa ho zbavil.
+      courseB_Scrat_ramp3b_2019: Potiahni zvyšný blok naspať do panelu s nástrojmi, aby si sa ho zbavil.
       courseB_Scrat_ramp4a_2018: Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať na spodok ostatných blokov, aby si dokončíl tento kód?
       courseB_Scrat_ramp5a_2018: Vyskúšaj vyriešiť celú túto úlohu sám!
@@ -896,12 +939,12 @@ sk:
       courseB_collector_loops7: Napíš kód na pozbieranie všetkých týchto drahokamov.
       courseB_collector_loops7_2018: Napíš kód na pozbieranie všetkých týchto drahokamov.
       courseB_collector_loops7_2019: Napíš kód na pozbieranie všetkých týchto drahokamov.
-      courseB_collector_loops8: "**Výzva:** Drahokami idú dolu po týchto schodoch! Napíš kód, ktorý Laurel pomôže pozbierať všetky."
-      courseB_collector_loops8_2018: "**Výzva:** Drahokami idú dolu po týchto schodoch! Napíš kód, ktorý Laurel pomôže pozbierať všetky."
-      courseB_collector_loops8_2019: "**Výzva:** Drahokami idú dolu po týchto schodoch! Napíš kód, ktorý Laurel pomôže pozbierať všetky."
-      courseB_collector_loops9: '*"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."*'
-      courseB_collector_loops9_2018: '*"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."*'
-      courseB_collector_loops9_2019: '*"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."*'
+      courseB_collector_loops8: "**Výzva:** Drahokamy sú na týchto schodoch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseB_collector_loops8_2018: "**Výzva:** Drahokamy sú na týchto schodoch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseB_collector_loops8_2019: "**Výzva:** Drahokamy sú na týchto schodoch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseB_collector_loops9: _"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."_
+      courseB_collector_loops9_2018: _"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."_
+      courseB_collector_loops9_2019: _"Pomôž mi pozbierať drahokamy z tohto hlbokého údolia."_
       courseB_collector_loops_challenge1: 'Tentokrát máš obmedzený počet blokov. Pozbieraj všetky drahokamy! '
       courseB_collector_loops_challenge1_2018: 'Tentokrát máš obmedzený počet blokov. Pozbieraj všetky drahokamy! '
       courseB_collector_loops_challenge1_2019: 'Tentokrát máš obmedzený počet blokov. Pozbieraj všetky drahokamy! '
@@ -928,10 +971,10 @@ sk:
       courseB_iceage_loops5: Vieš pridať ešte jeden cyklus, aby si sa dostal k žaluďu?
       courseB_iceage_loops6: Vieš pridať jeden cyklus a dostať sa k žaluďu?
       courseB_iceage_loops6_2019: Vieš pridať jeden cyklus a dostať sa k žaluďu?
-      courseB_iceage_loops7: 'Scrat naozaj chce ten žaluď!'
-      courseB_iceage_loops7_2019: 'Scrat naozaj chce ten žaluď!'
-      courseB_iceage_loops8: 'Dokážeš opraviť tento kód?'
-      courseB_iceage_loops8_2019: 'Dokážeš opraviť tento kód?'
+      courseB_iceage_loops7: Scrat naozaj chce ten žaluď!
+      courseB_iceage_loops7_2019: Scrat naozaj chce ten žaluď!
+      courseB_iceage_loops8: Dokážeš opraviť tento kód?
+      courseB_iceage_loops8_2019: Dokážeš opraviť tento kód?
       courseB_iceage_loops9: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť Scratovi sa poň dostať?
       courseB_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť Scratovi sa poň dostať?
       courseB_maze_seq10_2018: Oprav chyby, aby sa Scrat dostal k žaluďu.
@@ -940,8 +983,12 @@ sk:
       courseB_maze_seq11_2019: To si celý ty! Dostaň Scrata k žaluďu.
       courseB_maze_seq12_2018: A teraz získaj ten žaluď hocijakým spôsobom!
       courseB_maze_seq12_2019: A teraz získaj ten žaluď hocijakým spôsobom!
-      courseB_maze_seq1_2018: "Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.\nNa dokončenie levelu dostaň Scrata k žaluďu."
-      courseB_maze_seq1_2019: "Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.\nNa dokončenie levelu dostaň Scrata k žaluďu."
+      courseB_maze_seq1_2018: |-
+        Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.
+        Na dokončenie levelu dostaň Scrata k žaluďu.
+      courseB_maze_seq1_2019: |-
+        Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.
+        Na dokončenie levelu dostaň Scrata k žaluďu.
       courseB_maze_seq2_2018: Chyba! Oprav kód, aby sa Scrat dostal k žaluďu!
       courseB_maze_seq4_2018: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
       courseB_maze_seq4_2019: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
@@ -988,8 +1035,8 @@ sk:
         Pomôž tvojmu rytierovi získať všetky vlajky!
 
         Aby si to spravil, tak budeš potebovať pridať udalosti, ktoré pomôžu rytierovi hýbať sa hore, dole, doľava a doprava.
-      courseB_playlab_events7_2018: "1) Nastav rytiera, aby zmizol, keď narazí do draka.  \n2) Prehraj zvuk, keď sa zrazia, aby to znelo reálnejšie.  "
-      courseB_playlab_events7_2019: "1) Nastav rytiera, aby zmizol, keď narazí do draka.  \n2) Prehraj zvuk, keď sa zrazia, aby to znelo reálnejšie.  "
+      courseB_playlab_events7_2018: "1.  Nastav rytiera, aby zmizol, keď narazí do draka.  \n2.  Prehraj zvuk, keď sa zrazia, aby to znelo reálnejšie.  "
+      courseB_playlab_events7_2019: "1.  Nastav rytiera, aby zmizol, keď narazí do draka.  \n2.  Prehraj zvuk, keď sa zrazia, aby to znelo reálnejšie.  "
       courseB_playlab_eventsFP_2018: "**Voľná zábava:** Použi svoju predstavivosť. Ako možěs spraviť túto hru viac zábavnou?"
       courseB_playlab_eventsFP_2019: "**Voľná zábava:** Použi svoju predstavivosť. Ako možěs spraviť túto hru viac zábavnou?"
       courseB_playlab_events_challenge1: 'Prikáž zviaratám hýbať sa dole, keď stlačíš `▼`. '
@@ -1053,12 +1100,24 @@ sk:
       courseC_PlayLab_events7: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
       courseC_PlayLab_events7_2018: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
       courseC_PlayLab_events7_2019: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
-      courseC_PlayLab_events8: "Tučniak Waddles (postava 1) musí prehrať zvuk \"úderu\" a povedať \"Au!\" keď narazí do Chompa (postava 2).\nKeď to nastavíš, hraj hru tak, aby sa to stalo."
-      courseC_PlayLab_events8_2018: "Tučniak Waddles (postava 1) musí prehrať zvuk \"úderu\" a povedať \"Au!\" keď narazí do Chompa (postava 2).\nKeď to nastavíš, hraj hru tak, aby sa to stalo."
-      courseC_PlayLab_events8_2019: "Tučniak Waddles (postava 1) musí prehrať zvuk \"úderu\" a povedať \"Au!\" keď narazí do Chompa (postava 2).\nKeď to nastavíš, hraj hru tak, aby sa to stalo."
-      courseC_PlayLab_events9: "Pridaj blok \"pridaj bod\", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).\nZahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!"
-      courseC_PlayLab_events9_2018: "Pridaj blok \"pridaj bod\", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).\nZahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!"
-      courseC_PlayLab_events9_2019: "Pridaj blok \"pridaj bod\", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).\nZahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!"
+      courseC_PlayLab_events8: |-
+        Tučniak Waddles (postava 1) musí prehrať zvuk "úderu" a povedať "Au!" keď narazí do Chompa (postava 2).
+        Keď to nastavíš, hraj hru tak, aby sa to stalo.
+      courseC_PlayLab_events8_2018: |-
+        Tučniak Waddles (postava 1) musí prehrať zvuk "úderu" a povedať "Au!" keď narazí do Chompa (postava 2).
+        Keď to nastavíš, hraj hru tak, aby sa to stalo.
+      courseC_PlayLab_events8_2019: |-
+        Tučniak Waddles (postava 1) musí prehrať zvuk "úderu" a povedať "Au!" keď narazí do Chompa (postava 2).
+        Keď to nastavíš, hraj hru tak, aby sa to stalo.
+      courseC_PlayLab_events9: |-
+        Pridaj blok "pridaj bod", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).
+        Zahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!
+      courseC_PlayLab_events9_2018: |-
+        Pridaj blok "pridaj bod", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).
+        Zahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!
+      courseC_PlayLab_events9_2019: |-
+        Pridaj blok "pridaj bod", keď sa tučniak Waddles (postava 1) dotkne chobotnice Octavie (postava 3).
+        Zahraj si túto hru a ovládaj tučniaka šípkami, až kým nezískaš bod!
       courseC_PlayLab_eventsA: |-
         Pridaj bloky `nastav pozadie` a `nastav rýchlosť` tučniaka pod blok `pri spustení`.
 
@@ -1075,9 +1134,15 @@ sk:
       courseC_PlayLab_eventsFP: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
       courseC_PlayLab_eventsFP_2018: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
       courseC_PlayLab_eventsFP_2019: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
-      courseC_PlayLab_events_challenge1: "Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.\nZahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov."
-      courseC_PlayLab_events_challenge1_2018: "Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.\nZahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov."
-      courseC_PlayLab_events_challenge1_2019: "Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.\nZahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov."
+      courseC_PlayLab_events_challenge1: |-
+        Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.
+        Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov.
+      courseC_PlayLab_events_challenge1_2018: |-
+        Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.
+        Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov.
+      courseC_PlayLab_events_challenge1_2019: |-
+        Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.
+        Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov.
       courseC_PlayLab_events_challenge1_xy_blocks: |-
         Máme tu nový blok, ktorý je trošku komplikovaný. Použi ho tak, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod. Tvoja hra tak bude náročnejšia a zábavnejšia.
 
@@ -1085,7 +1150,7 @@ sk:
       courseC_artist_loop1: Pridajme tomu trochu štýlu!
       courseC_artist_loop1_2018: Pridajte tomu trochu štýlu s blokom 'nastav vzor'.
       courseC_artist_loop1_2019: Pridajte tomu trochu štýlu s blokom 'nastav vzor'.
-      courseC_artist_loops1: "*\"Zombie. Kresliť!\"*\n\nZombie chce nakresliť čiaru z miesta, na ktorom stojí, až po záhradu so slnečnicami. Pomôžeš mu?\n*(Záhrada je od neho vzdialená 250 pixelov)*  "
+      courseC_artist_loops1: "_\"Zombie. Kresliť!\"_\n\nZombie chce nakresliť čiaru z miesta, na ktorom stojí, až po záhradu so slnečnicami. Pomôžeš mu?\n_(Záhrada je od neho vzdialená 250 pixelov)_  "
       courseC_artist_loops1a: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
       courseC_artist_loops1a_2018: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
       courseC_artist_loops1a_2019: 'Premiestni umelca do stredu hracej plochy a potom pomocou nálepky nakresli vtáčika. '
@@ -1100,14 +1165,14 @@ sk:
       courseC_artist_loops4a: Skús skočiť dopredu o 75 pixelov.
       courseC_artist_loops4a_2018: Skús skočiť dopredu o 75 pixelov.
       courseC_artist_loops4a_2019: Skús skočiť dopredu o 75 pixelov.
-      courseC_artist_loops5: "Skvelé! Teraz musíš postaviť plot, aby sa zvieratá nedostali dnu.\n\n"
+      courseC_artist_loops5: Skvelé! Teraz musíš postaviť plot, aby sa zvieratá nedostali dnu.
       courseC_artist_loops5a: Vyskúšaj nové nálepky!
       courseC_artist_loops5a_2018: Vyskúšaj nové nálepky!
       courseC_artist_loops5a_2019: Vyskúšaj nové nálepky!
       courseC_artist_loops5b: Vyskúšajte pridať riadky!
       courseC_artist_loops5b_2018: Vyskúšajte pridať riadky!
       courseC_artist_loops5b_2019: Vyskúšajte pridať riadky!
-      courseC_artist_loops6: "Čo by mal Zombie dať do vnútra záhradky?\n\n\n"
+      courseC_artist_loops6: Čo by mal Zombie dať do vnútra záhradky?
       courseC_artist_loops6a: Pridaj ďalšiu pečiatku!
       courseC_artist_loops6a_2018: Pridaj ďalšiu pečiatku!
       courseC_artist_loops6a_2019: Pridaj ďalšiu pečiatku!
@@ -1139,15 +1204,9 @@ sk:
       courseC_artist_prog4: Dokonči Starlinu raketu, aby mohla dobehnúť svojho mimozemšťana.
       courseC_artist_prog4_2018: Dokonči Starlinu raketu, aby mohla dobehnúť svojho mimozemšťana.
       courseC_artist_prog4_2019: Dokonči Starlinu raketu, aby mohla dobehnúť svojho mimozemšťana.
-      courseC_artist_prog5: |-
-        Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. 
-        (Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)
-      courseC_artist_prog5_2018: |-
-        Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. 
-        (Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)
-      courseC_artist_prog5_2019: |-
-        Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. 
-        (Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)
+      courseC_artist_prog5: "Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. \n(Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)"
+      courseC_artist_prog5_2018: "Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. \n(Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)"
+      courseC_artist_prog5_2019: "Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. \n(Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)"
       courseC_artist_prog6: Nakresli tento diamant, ktorý strany dlhé 200 pixelov.
       courseC_artist_prog6_2018: Nakresli tento diamant, ktorý strany dlhé 200 pixelov.
       courseC_artist_prog6_2019: Nakresli tento diamant, ktorý strany dlhé 200 pixelov.
@@ -1167,9 +1226,9 @@ sk:
       courseC_artist_prog_challenge1: 'Nakresli izbu pre každé zo zvieratiek. '
       courseC_artist_prog_challenge1_2018: 'Nakresli izbu pre každé zo zvieratiek. '
       courseC_artist_prog_challenge1_2019: 'Nakresli izbu pre každé zo zvieratiek. '
-      courseC_artist_prog_challenge2a: '*"Pomôž mi na túto cestu dokresliť žlté čiary!"*'
-      courseC_artist_prog_challenge2a_2018: '*"Pomôž mi na túto cestu dokresliť žlté čiary!"*'
-      courseC_artist_prog_challenge2a_2019: '*"Pomôž mi na túto cestu dokresliť žlté čiary!"*'
+      courseC_artist_prog_challenge2a: _"Pomôž mi na túto cestu dokresliť žlté čiary!"_
+      courseC_artist_prog_challenge2a_2018: _"Pomôž mi na túto cestu dokresliť žlté čiary!"_
+      courseC_artist_prog_challenge2a_2019: _"Pomôž mi na túto cestu dokresliť žlté čiary!"_
       courseC_collector_loops_challenge2: Získaj aspoň **5** drahokamov!
       courseC_collector_loops_challenge2_2018: Získaj aspoň **5** drahokamov!
       courseC_collector_loops_challenge2_2019: Získaj aspoň **5** drahokamov!
@@ -1194,12 +1253,12 @@ sk:
       courseC_collector_prog7: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
       courseC_collector_prog7_2018: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
       courseC_collector_prog7_2019: Použi bloky z panela nástrojov a pozbieraj všetky drahokamy.
-      courseC_collector_prog8: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
-      courseC_collector_prog8_2018: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
-      courseC_collector_prog8_2019: '*"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."*'
-      courseC_collector_prog9: '*"Pozbierajme všetky drahokamy!"*'
-      courseC_collector_prog9_2018: '*"Pozbierajme všetky drahokamy!"*'
-      courseC_collector_prog9_2019: '*"Pozbierajme všetky drahokamy!"*'
+      courseC_collector_prog8: _"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."_
+      courseC_collector_prog8_2018: _"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."_
+      courseC_collector_prog8_2019: _"Pokračuj v dobrej práci! Pomôž mi pozbierať všetky drahokamy."_
+      courseC_collector_prog9: _"Pozbierajme všetky drahokamy!"_
+      courseC_collector_prog9_2018: _"Pozbierajme všetky drahokamy!"_
+      courseC_collector_prog9_2019: _"Pozbierajme všetky drahokamy!"_
       courseC_collector_progA: Pomôž Laurel pozbierať všetky drahokamy.
       courseC_collector_progB: Na dokončenie úrovne musíš pozbierať čo najviac mincí!
       courseC_collector_prog_challenge2: Pozbieraj aspoň **10** drahokamov, aby si dokončil túto výzvu!
@@ -1294,20 +1353,20 @@ sk:
       courseC_maze_debugging8: Oprav tento program tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging9: Oprav tento program tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging9_2018: Oprav tento program tak, aby sa Scrat dostal k žaluďu.
-      courseC_maze_debugging9_2019: Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň vtáka k prasaťu.
+      courseC_maze_debugging9_2019: Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň vtáka k prasiatku.
       courseC_maze_debugging_challenge1: Pomôž Scratovi rozhodnúť sa, ktorým smerom sa má vybrať, aby sa dostal k žaluďu.
       courseC_maze_debugging_challenge1_2018: Pomôž Scratovi rozhodnúť sa, ktorým smerom sa má vybrať, aby sa dostal k žaluďu.
       courseC_maze_debugging_challenge1_2019: Pomôž Scratovi rozhodnúť sa, ktorým smerom sa má vybrať, aby sa dostal k žaluďu.
       courseC_maze_debugging_challenge2: Pomôž Scratovi dostať sa k žaluďu tak, že použiješ iba 4 príkazy `otoč sa`.
       courseC_maze_debugging_challenge2_2018: Pomôž Scratovi dostať sa k žaluďu tak, že použiješ iba 4 príkazy `otoč sa`.
       courseC_maze_debugging_challenge2_2019: Pomôž Scratovi dostať sa k žaluďu tak, že použiješ iba 4 príkazy `otoč sa`.
-      courseC_maze_loops1: Dokážeš dostať vtáka k prasaťu?
+      courseC_maze_loops1: Dokážeš dostať vtáka k prasiatku?
       courseC_maze_loops10: Ide ti to výborne! Pokračuj!
       courseC_maze_loops11: Už si skoro tam! Tentoraz si môžeš vybrať akúkoľvek cestu chceš!
-      courseC_maze_loops2: Dostaň vtáka k prasaťu! Vytvor opakovanie, v ktorom použiješ len jeden blok `posuň sa dopredu`.
+      courseC_maze_loops2: Dostaň vtáka k prasiatku! Vytvor opakovanie, v ktorom použiješ len jeden blok `posuň sa dopredu`.
       courseC_maze_loops3: Vyrieš túto úlohu pomocou opakovacieho cyklu!
-      courseC_maze_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať vtáčika k prasaťu, s najmenším možným počtom blokov!
-      courseC_maze_loops5: '*"Dostaň ma k prasaťu čo najrýchlejšie!"*'
+      courseC_maze_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať vtáka k prasiatku, s najmenším možným počtom blokov!
+      courseC_maze_loops5: _"Dostaň ma k prasiatku čo najrýchlejšie!"_
       courseC_maze_loops6: Opakovania fungujú aj keď dnu vložíš viac ako jeden blok! Vieš zopakovať celú  túto sekvenciu?
       courseC_maze_loops7: Použi, čo si sa naučil pri riešení predchádzajúcich úloh!
       courseC_maze_loops8: 'Výzva: Na vyriešenie tejto úlohy skombinuj nápady z predchádzajúcich levelov.'
@@ -1325,24 +1384,24 @@ sk:
       courseC_maze_programming5: Vyhni sa TNT.
       courseC_maze_programming5_2018: Vyhni sa TNT.
       courseC_maze_programming5_2019: Vyhni sa TNT.
-      courseC_maze_programming6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseC_maze_programming6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseC_maze_programming6_2019: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseC_maze_programming7: "** Výzva: ** V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
-      courseC_maze_programming7_2018: "** Výzva: ** V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
-      courseC_maze_programming7_2019: "** Výzva: ** V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
-      courseC_maze_programming8: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming8_2018: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming8_2019: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming8_predict1: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming8_predict1_2018: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming8_predict1_2019: '*"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."*'
-      courseC_maze_programming9: '*"A teraz ma dostaň k prasaťu cestou, ktorou len chceš!"*'
-      courseC_maze_programming9_2018: '*"A teraz ma dostaň k prasaťu cestou, ktorou len chceš!"*'
-      courseC_maze_programming9_2019: '*"A teraz ma dostaň k prasaťu cestou, ktorou len chceš!"*'
-      courseC_maze_programming_challenge1: 'Prasa sa schováva a cieľ je nájsť ho. '
-      courseC_maze_programming_challenge1_2018: 'Prasa sa schováva a cieľ je nájsť ho. '
-      courseC_maze_programming_challenge1_2019: 'Prasa sa schováva a cieľ je nájsť ho. '
+      courseC_maze_programming6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseC_maze_programming6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseC_maze_programming6_2019: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseC_maze_programming7: "\\*\\* Výzva: \\*\\* V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
+      courseC_maze_programming7_2018: "\\*\\* Výzva: \\*\\* V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
+      courseC_maze_programming7_2019: "\\*\\* Výzva: \\*\\* V tomto kóde je veľa chýb. Niektoré bloky budeš musieť odstrániť a iné zas pridať."
+      courseC_maze_programming8: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming8_2018: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming8_2019: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming8_predict1: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming8_predict1_2018: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming8_predict1_2019: _"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."_
+      courseC_maze_programming9: _"A teraz ma dostaň k prasiatku cestou, ktorou len chceš!"_
+      courseC_maze_programming9_2018: _"A teraz ma dostaň k prasiatku cestou, ktorou len chceš!"_
+      courseC_maze_programming9_2019: _"A teraz ma dostaň k prasiatku cestou, ktorou len chceš!"_
+      courseC_maze_programming_challenge1: 'Prasiatko sa schováva a cieľ je nájsť ho. '
+      courseC_maze_programming_challenge1_2018: 'Prasiatko sa schováva a cieľ je nájsť ho. '
+      courseC_maze_programming_challenge1_2019: 'Prasiatko sa schováva a cieľ je nájsť ho. '
       courseC_playLab_embedded: |-
         Zahraj si hru! Ak chceš vyhrať, musíš pomocou šípok presunúť tučniaka tak, aby narazil do chobotnice.
 
@@ -1389,27 +1448,29 @@ sk:
       courseD_Frozen_nested2: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
       courseD_Frozen_nested5: Zahraj sa so snehovými vločkami!
       courseD_Frozen_nested9: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
-      courseD_artist_1_2018: "Nakresli šesťuholník so stranami dlhými **50** pixelov.\n"
-      courseD_artist_1_2018_2019: "Nakresli šesťuholník so stranami dlhými **50** pixelov.\n"
-      courseD_artist_2_2018: 'Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.  '
-      courseD_artist_2_2018_2019: 'Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.  '
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+      courseD_artist_1_2018: Nakresli šesťuholník so stranami dlhými **50** pixelov.
+      courseD_artist_1_2018_2019: Nakresli šesťuholník so stranami dlhými **50** pixelov.
+      courseD_artist_2_2018: Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.
+      courseD_artist_2_2018_2019: Teraz sa otoč o **60** stupňov, nakresli rovnú čiaru dlhú **150** pixelov a skoč späť do stredu hracej plochy.
       courseD_artist_3_2018: 'Vnor celý kód dovnútra ďalšieho cyklu ''opakuj'' a nastav ho aby zbehol celkovo **6** krát. '
       courseD_artist_3_2018_2019: 'Vnor celý kód dovnútra ďalšieho cyklu ''opakuj'' a nastav ho aby zbehol celkovo **6** krát. '
       courseD_artist_4_2018: Pridaj malý geometrický tvar na koniec tvojho riadku!
       courseD_artist_4_2018_2019: Pridaj malý geometrický tvar na koniec tvojho riadku!
       courseD_artist_5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_5_2018_2019: Zahraj sa so snehovými vločkami!
-      courseD_artist_6_2018: 'Zmeň tvoju čiaru dlhú 150 pixelov na 6 krátkych čiar po **25** pixelov a na konci každej z nich sa trochu otoč.  '
-      courseD_artist_6_2018_2019: 'Zmeň tvoju čiaru dlhú 150 pixelov na 6 krátkych čiar po **25** pixelov a na konci každej z nich sa trochu otoč.  '
+      courseD_artist_6_2018: Zmeň tvoju čiaru dlhú 150 pixelov na 6 krátkych čiar po **25** pixelov a na konci každej z nich sa trochu otoč.
+      courseD_artist_6_2018_2019: Zmeň tvoju čiaru dlhú 150 pixelov na 6 krátkych čiar po **25** pixelov a na konci každej z nich sa trochu otoč.
       courseD_artist_9_2018: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       courseD_artist_binary1: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2018: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
       courseD_artist_binary1_2019: Použite bloky nižšie, aby umelec nakreslil "01010101" v binárnom kóde v prvom riadku.
@@ -1422,9 +1483,18 @@ sk:
       courseD_artist_binary4: Dokážes nakresliť tento obrazec len s použitím troch binárnych číslic (0 alebo 1)?
       courseD_artist_binary4_2018: Dokážes nakresliť tento obrazec len s použitím troch binárnych číslic (0 alebo 1)?
       courseD_artist_binary4_2019: Dokážes nakresliť tento obrazec len s použitím troch binárnych číslic (0 alebo 1)?
-      courseD_artist_binary5: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
-      courseD_artist_binary5_2018: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
-      courseD_artist_binary5_2019: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_artist_binary5: |-
+        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+
+        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+      courseD_artist_binary5_2018: |-
+        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+
+        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+      courseD_artist_binary5_2019: |-
+        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+
+        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
       courseD_artist_binary7: Aký je najkratší binárny reťazec, ktorého opakovaním nakreslíš tento obrazec?
       courseD_artist_binary7_2018: Aký je najkratší binárny reťazec, ktorého opakovaním nakreslíš tento obrazec?
       courseD_artist_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním nakreslíš tento obrazec?
@@ -1451,7 +1521,7 @@ sk:
       courseD_artist_embed_frozen: Stlač tlačidlo "Spustiť" aby sa ti ukázal dizajn snehovej vločky!
       courseD_artist_embed_frozen2: Stlač tlačidlo"Spustiť", aby sa ti ukázal dizajn tvojej snehovej vločky.
       courseD_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
-      courseD_artist_functions2: "Tentokrát použi na vytvorenie okuliarov funkciu ' nakresli štvorec '.\n"
+      courseD_artist_functions2: Tentokrát použi na vytvorenie okuliarov funkciu ' nakresli štvorec '.
       courseD_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       courseD_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
       courseD_artist_functions5: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby si dokončil túto úlohu.
@@ -1496,12 +1566,12 @@ sk:
       courseD_artist_nestedLoops8: Využi, čo si sa naučil v predchádzajúcich úlohách a nakresli tento obrázok úplne od začiatku.
       courseD_artist_nestedLoops8_2018: Využi, čo si sa naučil v predchádzajúcich úlohách a nakresli tento obrázok úplne od začiatku.
       courseD_artist_nestedLoops8_2019: Využi, čo si sa naučil v predchádzajúcich úlohách a nakresli tento obrázok úplne od začiatku.
-      courseD_artist_nestedLoops9: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
-      courseD_artist_nestedLoops9_2018: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
-      courseD_artist_nestedLoops9_2019: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
-      courseD_artist_nestedLoops9_predict1: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
-      courseD_artist_nestedLoops9_predict1_2018: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
-      courseD_artist_nestedLoops9_predict1_2019: "Výzva: Prídeš na to, ako nakresliť takýto obrázok?"
+      courseD_artist_nestedLoops9: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
+      courseD_artist_nestedLoops9_2018: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
+      courseD_artist_nestedLoops9_2019: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
+      courseD_artist_nestedLoops9_predict1: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
+      courseD_artist_nestedLoops9_predict1_2018: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
+      courseD_artist_nestedLoops9_predict1_2019: 'Výzva: Prídeš na to, ako nakresliť takýto obrázok?'
       courseD_artist_nestedLoopsFP: Teraz si na rade ty. Využi všetko čo si sa doteraz naučil a nakresli niečo, čo sa ti bude naozaj páčiť!
       courseD_artist_nestedLoopsFP_2018: Teraz si na rade ty. Využi všetko čo si sa doteraz naučil a nakresli niečo, čo sa ti bude naozaj páčiť!
       courseD_artist_nestedLoopsFP_2019: Teraz si na rade ty. Využi všetko čo si sa doteraz naučil a nakresli niečo, čo sa ti bude naozaj páčiť!
@@ -1516,20 +1586,23 @@ sk:
       courseD_artist_project2_2018: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
       courseD_artist_project2_2019: Teraz vezmi svoj geometrický tvar a nakresli dva alebo tri za sebou!
       courseD_artist_project4a: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       courseD_artist_project4a_2018: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       courseD_artist_project4a_2019: |-
-        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľek chceš!
-        - Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
-        - Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
-        - Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
+        Skús sa pohrať s kódom, ktorý už máš vytvorený. Nakresli čokoľvek len chceš!
+
+        -   Čo sa stane, keď použiješ dva rôzne uhly pri kreslení schodového vzoru?
+        -   Čo sa stane, keď diamantový vzor predĺžiš alebo skrátiš?
+        -   Ako to vyzerá, ak nakreslíš druhú vločku cez prvú?
       courseD_artist_project5: Zahraj sa so snehovými vločkami!
       courseD_artist_project5_2018: Zahraj sa so snehovými vločkami!
       courseD_artist_project5_2019: Zahraj sa so snehovými vločkami!
@@ -1538,7 +1611,10 @@ sk:
       courseD_autorun_binary2_2019: Spusti si tento kód, aby si videl, ako umelec používa binárne čísla na nakreslenie tohto vzoru.
       courseD_autorun_binary3_2019: Ktorý z binárnych obrázkov nižšie by si mohol 8 krát zopakovať nato, aby si nakreslil tento obrázok?
       courseD_autorun_binary4_2019: Dokážes nakresliť tento obrazec len s použitím troch binárnych číslic (0 alebo 1)?
-      courseD_autorun_binary5_2019: "Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.\n\nVieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?"
+      courseD_autorun_binary5_2019: |-
+        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+
+        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
       courseD_autorun_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním nakreslíš tento obrazec?
       courseD_autorun_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
       courseD_autorun_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
@@ -1562,9 +1638,9 @@ sk:
       courseD_bee_conditionals5: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseD_bee_conditionals5_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseD_bee_conditionals5_2019: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
-      courseD_bee_conditionals6: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
-      courseD_bee_conditionals6_2018: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
-      courseD_bee_conditionals6_2019: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
+      courseD_bee_conditionals6: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
+      courseD_bee_conditionals6_2018: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
+      courseD_bee_conditionals6_2019: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
       courseD_bee_conditionals_challenge1: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals_challenge1_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals_challenge1_2019: Pozbieraj všetok nektár a vyrob všetok med.
@@ -1600,8 +1676,12 @@ sk:
       courseD_bee_nestedLoops9_predict2: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob všetok med.
-      courseD_bee_nested_loops_challenge1: "Poďme pátrať po poklade - pomocou cyklov!\nPomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov."
-      courseD_bee_nested_loops_challenge2: "Poďme pátrať po poklade - pomocou cyklov!\nPomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov."
+      courseD_bee_nested_loops_challenge1: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
+      courseD_bee_nested_loops_challenge2: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
       courseD_bounce_embed_endgame: Pohybuj pálkou pomocou ľavej a pravej šípky. Koľko bodov nazbieraš predtým, ako tvoj súper získa 2 body?
       courseD_bounce_embedded: Inštrukcie zapíš sem
       courseD_bounce_events12s: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť", nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
@@ -1656,9 +1736,9 @@ sk:
       courseD_debugging_4: Oprav chybu (chyby) v kóde tak, aby si vyrobil všetok med.
       courseD_debugging_5: 'Výzva: Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.'
       courseD_debugging_6: 'Výzva: Oprav chyby, aby si získal všetok nektár a vyrobil všetok med.'
-      courseD_farmer_condLoops3: '*"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."*'
-      courseD_farmer_condLoops3_2018: '*"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."*'
-      courseD_farmer_condLoops3_2019: '*"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."*'
+      courseD_farmer_condLoops3: _"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."_
+      courseD_farmer_condLoops3_2018: _"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."_
+      courseD_farmer_condLoops3_2019: _"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."_
       courseD_farmer_condLoops5: Pozbieraj všetku kukuricu a šalát a nakoniec zober aj tekvicu.
       courseD_farmer_condLoops5_2018: Pozbieraj všetku kukuricu a šalát a nakoniec zober aj tekvicu.
       courseD_farmer_condLoops5_2019: Pozbieraj všetku kukuricu a šalát a nakoniec zober aj tekvicu.
@@ -1737,14 +1817,16 @@ sk:
       courseD_iceage_loops4_2019: Pridaj ešte jeden blok, aby sa Scrat dostal až k žaluďu!
       courseD_iceage_loops6: Vieš pridať jeden cyklus a dostať sa k žaluďu?
       courseD_iceage_loops6_2019: Vieš pridať jeden cyklus a dostať sa k žaluďu?
-      courseD_iceage_loops7: 'Scrat naozaj chce ten žaluď!'
-      courseD_iceage_loops7_2019: 'Scrat naozaj chce ten žaluď!'
-      courseD_iceage_loops8: 'Dokážeš opraviť tento kód?'
-      courseD_iceage_loops8_2019: 'Dokážeš opraviť tento kód?'
+      courseD_iceage_loops7: Scrat naozaj chce ten žaluď!
+      courseD_iceage_loops7_2019: Scrat naozaj chce ten žaluď!
+      courseD_iceage_loops8: Dokážeš opraviť tento kód?
+      courseD_iceage_loops8_2019: Dokážeš opraviť tento kód?
       courseD_iceage_loops9: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť Scratovi sa poň dostať?
       courseD_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť Scratovi sa poň dostať?
-      courseD_maze_intro4_2019: Pomôž Redovi dostať sa ku prasaťu.
-      courseD_maze_loops_challenge1: "Poďme pátrať po poklade - pomocou cyklov!\nPomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov."
+      courseD_maze_intro4_2019: Pomôž Redovi dostať sa k prasiatku.
+      courseD_maze_loops_challenge1: |-
+        Poďme pátrať po poklade - pomocou cyklov!
+        Pomôž zberateľke získať aspoň 2 drahokamy len s blokmi, ktoré máš v paneli nástrojov.
       courseD_maze_nestedLoops3: Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
       courseD_maze_nestedLoops3_2018: Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
       courseD_maze_nestedLoops3_2019: Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
@@ -1770,25 +1852,25 @@ sk:
       courseD_maze_ramp5: Vyhni sa TNT.
       courseD_maze_ramp5_2018: Vyhni sa TNT.
       courseD_maze_ramp5_2019: Vyhni sa TNT.
-      courseD_maze_ramp5a: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
-      courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasaťu!
-      courseD_maze_ramp5b: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!
-      courseD_maze_ramp5b_2018: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!
-      courseD_maze_ramp5b_2019: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasaťu!
-      courseD_maze_ramp5c: Pomôž vtákovi dostať sa k prasaťu.
-      courseD_maze_ramp5c_2018: Pomôž vtákovi dostať sa k prasaťu.
+      courseD_maze_ramp5a: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasiatku!
+      courseD_maze_ramp5a_2018: Sústreď sa na správne poradie krokov a nájdi cestu k tomu prasiatku!
+      courseD_maze_ramp5b: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasiatku!
+      courseD_maze_ramp5b_2018: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasiatku!
+      courseD_maze_ramp5b_2019: Prejdi týmto bludiskom a pomôž vtákovi dostať sa k prasiatku!
+      courseD_maze_ramp5c: Pomôž vtákovi dostať sa k prasiatku.
+      courseD_maze_ramp5c_2018: Pomôž vtákovi dostať sa k prasiatku.
       courseD_maze_ramp5c_2019: Pozor na praskajúci ľad! Pomôž Scratovi dostať sa k žaluďu.
-      courseD_maze_ramp5d: Dostaň vtáka k prasaťú.
-      courseD_maze_ramp5d_2018: Dostaň vtáka k prasaťú.
-      courseD_maze_ramp5d_2019: Dostaň vtáka k prasaťú.
-      courseD_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseD_maze_ramp6a: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseD_maze_until1: Dostaň nahnevaného vtáka k prasaťu.
-      courseD_maze_until1_2018: Dostaň nahnevaného vtáka k prasaťu.
-      courseD_maze_until1_2019: Dostaň nahnevaného vtáka k prasaťu.
-      courseD_maze_until3: Dostaň vtáka k prasaťú.
-      courseD_maze_until3_2018: Dostaň vtáka k prasaťú.
-      courseD_maze_until3_2019: Dostaň vtáka k prasaťú.
+      courseD_maze_ramp5d: Dostaň vtáka k prasiatku.
+      courseD_maze_ramp5d_2018: Dostaň vtáka k prasiatku.
+      courseD_maze_ramp5d_2019: Dostaň vtáka k prasiatku.
+      courseD_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseD_maze_ramp6a: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseD_maze_until1: Dostaň nahnevaného vtáka k prasiatku.
+      courseD_maze_until1_2018: Dostaň nahnevaného vtáka k prasiatku.
+      courseD_maze_until1_2019: Dostaň nahnevaného vtáka k prasiatku.
+      courseD_maze_until3: Dostaň vtáka k prasiatku.
+      courseD_maze_until3_2018: Dostaň vtáka k prasiatku.
+      courseD_maze_until3_2019: Dostaň vtáka k prasiatku.
       courseD_maze_until4: Vieš dostať zombíka k slnečnici použitím dostupných blokov?
       courseD_maze_until4_2018: Vieš dostať zombíka k slnečnici použitím dostupných blokov?
       courseD_maze_until4_2019: Vieš dostať zombíka k slnečnici použitím dostupných blokov?
@@ -1805,16 +1887,16 @@ sk:
       courseD_playLab_cond3a: Nastav to tak, aby keď sa Pegleg dostane k drakovi, dostal 2 body keď je drak šťastný a 1 keď nie je.
       courseD_playLab_cond3a_2018: Nastav to tak, aby keď sa Pegleg dostane k drakovi, dostal 2 body keď je drak šťastný a 1 keď nie je.
       courseD_playLab_cond3a_2019: Nastav to tak, aby keď sa Pegleg dostane k drakovi, dostal 2 body keď je drak šťastný a 1 keď nie je.
-      courseD_playLab_cond3b: "1) Nastav draka tak, aby každú sekundu náhodne menil emócie.  \n2) Nastav to tak, aby keď sa Pegleg dostane k drakovi, dostal 2 body keď je drak šťastný a 1 keď nie je."
+      courseD_playLab_cond3b: "1.  Nastav draka tak, aby každú sekundu náhodne menil emócie.  \n2.  Nastav to tak, aby keď sa Pegleg dostane k drakovi, dostal 2 body keď je drak šťastný a 1 keď nie je."
       courseD_playLab_cond4: Pridaj kód, aby nindža (postava 3) začal prenasledovať Peglega hneď na začiatku hry. Ukonči hru ako prehru, ak ho nindža chytí.
       courseD_playLab_cond4_2018: Pridaj kód, aby nindža (postava 3) začal prenasledovať Peglega hneď na začiatku hry. Ukonči hru ako prehru, ak ho nindža chytí.
       courseD_playLab_cond4_2019: Pridaj kód, aby nindža (postava 3) začal prenasledovať Peglega hneď na začiatku hry. Ukonči hru ako prehru, ak ho nindža chytí.
       courseD_playLab_cond5: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
       courseD_playLab_cond5_2018: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
       courseD_playLab_cond5_2019: Pridaj cyklus 'opakuj donekonečna', ktorý bude opakovane kontrolovať či je skóre väčšie ako 5. Keď bude, hra skončí ako výhra.
-      courseD_playLab_cond6: "1) Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
-      courseD_playLab_cond6_2018: "1) Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
-      courseD_playLab_cond6_2019: "1) Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2) Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
+      courseD_playLab_cond6: "1.  Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2.  Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
+      courseD_playLab_cond6_2018: "1.  Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2.  Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
+      courseD_playLab_cond6_2019: "1.  Spomaľ nindžu (postavu 3) pred tým, ako ho nastavíš, nech naháňa piráta. \n2.  Ak je pirát pod úrovňou 225 pixelov, nastav nindžu, aby **utekal** pirátovi. V opačnom prípade nastav nindžu, aby **naháňal** piráta.  "
       courseD_playLab_cond6a: Ak sa pirát (postava 1) nachádza v bezpečnej zóne, 1 sekundu počkaj. Potom, v prípade, ak sa nachádza pod chobodnicami, odčítaj bod.
       courseD_playLab_cond6a_2018: Ak sa pirát (postava 1) nachádza v bezpečnej zóne, 1 sekundu počkaj. Potom, v prípade, ak sa nachádza pod chobodnicami, odčítaj bod.
       courseD_playLab_cond6a_2019: Ak sa pirát (postava 1) nachádza v bezpečnej zóne, 1 sekundu počkaj. Potom, v prípade, ak sa nachádza pod chobodnicami, odčítaj bod.
@@ -1840,6 +1922,7 @@ sk:
       courseE_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
       courseE_artist_functions10_2018: Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
       courseE_artist_functions10_2019: Tento krát použi rad zložený z 8 šesťuholníkov so stranami dlhými 25 pixelov.
+      courseE_artist_functions2: Tentokrát použi na vytvorenie okuliarov funkciu ' nakresli štvorec '.
       courseE_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
       courseE_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
       courseE_artist_functions4_2018: Teraz keď už vieš nakresliť hviezdu, skús nakresliť štyri hviezdy!
@@ -1890,8 +1973,8 @@ sk:
       courseE_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
       courseE_maze_ramp5: Vyhni sa TNT.
       courseE_maze_ramp5_2018: Vyhni sa TNT.
-      courseE_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseE_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
+      courseE_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseE_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
       courseE_multi_maze_ramp5: Vyhni sa TNT.
       courseF_IceAge_7: Napíš kód, ktorý pomôže Scratovi pozbierať všetky žalude!
       courseF_IceAge_template: Napíš kód, ktorý pomôže Scratovi pozbierať všetky žalude!
@@ -1907,8 +1990,8 @@ sk:
       courseF_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals1_predict1: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.
       courseF_bee_conditionals1_predict1_2018: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.
-      courseF_bee_conditionals3: 'Pomôž včele pozbierať všetok nektár.'
-      courseF_bee_conditionals3_2018: 'Pomôž včele pozbierať všetok nektár.'
+      courseF_bee_conditionals3: Pomôž včele pozbierať všetok nektár.
+      courseF_bee_conditionals3_2018: Pomôž včele pozbierať všetok nektár.
       courseF_bee_conditionals4: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov.
       courseF_bee_conditionals4_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov.
       courseF_bee_conditionals5: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
@@ -1919,8 +2002,8 @@ sk:
       courseF_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
       courseF_maze_ramp5: Vyhni sa TNT.
       courseF_maze_ramp5_2018: Vyhni sa TNT.
-      courseF_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      courseF_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
+      courseF_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      courseF_maze_ramp6_2018: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
       flappy_1: Ku bloku "keď klikneš" pripoj blok "mávni" a potom stlač "Spustiť". Klikaj myšou, alebo na obrazovku, aby sa Flappy dostal ku cieľu.
       flappy_11: A teraz si vytvor tvoju vlastnú hru Flappy. Môžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu. Keď škončíš, klikni na "Dokončiť" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti.
       flappy_11_2018: A teraz si vytvor tvoju vlastnú hru Flappy. Môžeš zmeniť celý výzor hry a vymyslieť si vlastné pravidlá, dokonca aj zmeniť gravitáciu. Keď škončíš, klikni na "Dokončiť" a tvoju hru si na mobile budú môcť zahrať aj tvoji kamaráti.
@@ -1954,20 +2037,20 @@ sk:
       frozen circle_b: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil kružnicu?
       frozen circle_test: Prídeš na to, akou hodnotou nahradiť **"???"**, aby si nakreslil kružnicu?
       frozen cross rotate dense: 'Zopakujme to 90-krát! Koľkokrát sa 90 vojde do 360? Tip: Je to naozaj malé číslo.'
-      frozen cross rotate dense_b: Zopakujme čiaru ** 90 ** krát!
-      frozen cross rotate dense_test: Zopakujme čiaru ** 90 ** krát!
+      frozen cross rotate dense_b: Zopakujme čiaru \*\* 90 \*\* krát!
+      frozen cross rotate dense_test: Zopakujme čiaru \*\* 90 \*\* krát!
       frozen cross rotate: Teraz to skús zopakovať 10-krát. O koľko stupňov sa musíš otočiť medzi jednotlivými čiarami?
       frozen cross rotate_b: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
       frozen cross rotate_test: Teraz to skús zopakovať **10-krát**. **O koľko stupňov** sa musíš otočiť medzi jednotlivými čiarami?
       frozen cross: Vytvor znamienko plus pomocou bloku "Opakuj". Všimol si si, že Elsa sa môže pohybovať dopredu i dozadu?
-      frozen cross_b: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa vráť do stredu a otoč sa o ** 90 stupňov **. Zopakuj ** 4 ** krát.
-      frozen cross_test: Nakresli čiaru, ktorá je dlhá ** 100 ** pixelov, potom sa vráť do stredu a otoč sa o ** 90 stupňov **. Zopakuj ** 4 ** krát.
+      frozen cross_b: Nakresli čiaru, ktorá je dlhá \*\* 100 \*\* pixelov, potom sa vráť do stredu a otoč sa o \*\* 90 stupňov \*\*. Zopakuj \*\* 4 \*\* krát.
+      frozen cross_test: Nakresli čiaru, ktorá je dlhá \*\* 100 \*\* pixelov, potom sa vráť do stredu a otoč sa o \*\* 90 stupňov \*\*. Zopakuj \*\* 4 \*\* krát.
       frozen diamond mini snowflake: Vedel si, že každá snehová vločka má iný tvar? Vytvorme novú vločku pomocou ďaľšieho bloku "Opakuj", ktorým kosoštvorec zopakujeme 4-krát. Po každom kosoštvorci sa otočíme o 90 stupňov.
       frozen diamond mini snowflake_b: Opakovaním tohto diamantu 4-krát, urob novú vločku.
       frozen diamond mini snowflake_test: Opakovaním tohto diamantu 4-krát, urob novú vločku.
       frozen diamond snowflake: Teraz vytvor novú vločku pomocou bloku "Opakuj" tak, že kosoštvorec zopakuješ 10-krát a po každom z nich sa otočíš vpravo o 36 stupňov.
-      frozen diamond snowflake_b: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant ** 10 ** krát.
-      frozen diamond snowflake_test: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant ** 10 ** krát.
+      frozen diamond snowflake_b: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant \*\* 10 \*\* krát.
+      frozen diamond snowflake_test: Tvoja snehová vločka bude úžasná, keď zopakovuješ diamant \*\* 10 \*\* krát.
       frozen diamond: Použi opakovanie okolo týchto blokov pre vytvorenie kosoštvorca. Vyzerá ako štvorec, ale má iné uhly. Tento má uhly 60 a 120 stupňov namiesto 90 stupňov v každom rohu.
       frozen diamond_b: 'Pridaj jeden blok do tohto kódu aby si vytvoril rovnobežník. '
       frozen diamond_test: 'Pridaj jeden blok do tohto kódu aby si vytvoril rovnobežník. '
@@ -1989,20 +2072,20 @@ sk:
       frozen snowflake full_test: A teraz to zopakuj 8 krát, aby si nakreslil prekrásnu vločku!
       frozen snowflake fuller_b: Čo sa stane, ak skočíš späť skôr, než nakreslíš každé rameno vločky?
       frozen snowflower: Zložité snehové vzory je možné vytvoriť pomocou veľmi jednoduchých tvarov. Dokážeš vytvoriť vzor opakovaním 5 kružníc s veľkosťou 5 a 5 kružníc s veľkosťou 10?
-      frozen snowflower_b: Dokážeš vytvoriť novú vločku opakovaním tohto kódu ** 5 ** krát a otočením o  ** 72 ** stupňov medzi každým setom?
-      frozen snowflower_test: Dokážeš vytvoriť novú vločku opakovaním tohto kódu ** 5 ** krát a otočením o  ** 72 ** stupňov medzi každým setom?
+      frozen snowflower_b: Dokážeš vytvoriť novú vločku opakovaním tohto kódu \*\* 5 \*\* krát a otočením o  \*\* 72 \*\* stupňov medzi každým setom?
+      frozen snowflower_test: Dokážeš vytvoriť novú vločku opakovaním tohto kódu \*\* 5 \*\* krát a otočením o  \*\* 72 \*\* stupňov medzi každým setom?
       frozen square iterative: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
       frozen square iterative_b: Pridaj dalšie štyri bloky kódu a dokonči štvorec.
       frozen square iterative_test: Pridaj dalšie štyri bloky kódu a dokonči štvorec.
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
-      frozen square loop 3x_b: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o ** 120 stupňov **. '
-      frozen square loop 3x_test: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o ** 120 stupňov **. '
+      frozen square loop 3x_b: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o \*\* 120 stupňov \*\*. '
+      frozen square loop 3x_test: 'Pomôž Anne nakresliť tri štvorce a po každom sa otoč o \*\* 120 stupňov \*\*. '
       frozen square loop: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       frozen square loop_b: Koľkokrát (???) by sa mal spustiť kód vo vnútri príkazu "Opakuj", ak chceme vytvoriť štvorec?
       frozen square loop_test: Koľkokrát (???) by sa mal spustiť kód vo vnútri príkazu "Opakuj", ak chceme vytvoriť štvorec?
       frozen square snowflake: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
-      frozen square snowflake_b: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z ** 10 ** štvorcov s otočkami o ** 36 stupňov **.
-      frozen square snowflake_test: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z ** 10 ** štvorcov s otočkami o ** 36 stupňov **.
+      frozen square snowflake_b: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z \*\* 10 \*\* štvorcov s otočkami o \*\* 36 stupňov \*\*.
+      frozen square snowflake_test: Zmeň kód z poslednej úlohy tak, aby si vločku vytvoril z \*\* 10 \*\* štvorcov s otočkami o \*\* 36 stupňov \*\*.
       grade1_adventurer_loops1: Štyri kopy zlata! Pozbieraj všetky štyri.
       grade1_adventurer_loopsPre: Toto je Laurel Dobrodružka. Posúvaj ju naokolo a pozbieraj zlato.
       grade1_artist_loops2: Pomôž umelcovi nakresliť čiaru 7 krát, aby vytvoril záhradný múr.
@@ -2014,35 +2097,36 @@ sk:
       grade1_playlab_events1: Táto hra sa volá "Play Lab". Pozrime sa, či prídeš na to, čo každý blok robí.
       grade2_CaringForNewPet_0: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko "Spustiť" a sleduj, čo sa stane!
       grade2_CaringForNewPet_1: Na dokončenie kódu vytiahni z panela nástrojov ešte jeden blok `posuň sa dopredu` a pripoj ho ku kódu.
-      grade2_CaringForNewPet_10: Dostaň ma k tomu prasaťu!
-      grade2_CaringForNewPet_11: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa."'
+      grade2_CaringForNewPet_10: Dostaň ma k tomu prasiatku!
+      grade2_CaringForNewPet_11: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko."'
       grade2_CaringForNewPet_2: |-
-        *"To prasa mi pije krv."*
+        _"To prasiatko mi pije krv."_
 
         Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
-      grade2_CaringForNewPet_3: '"Nájdi cestu a priveď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo bude lietať perie!"'
-      grade2_CaringForNewPet_4: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasa. Inak sa môžem rozhnevať!"'
-      grade2_CaringForNewPet_5: Dostaň ma k tomu prasaťu!
+      grade2_CaringForNewPet_3: '"Nájdi cestu a priveď ma k tomu nezbednému prasiatku. Vyhni sa TNT, lebo bude lietať perie!"'
+      grade2_CaringForNewPet_4: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak sa môžem rozhnevať!"'
+      grade2_CaringForNewPet_5: Dostaň ma k tomu prasiatku!
       grade2_MakeDogTag_1: Presuň bloky na pracovnú plochu a pomocou umelca prekresli sivé čiary na obrázku. (Každá z čiar má 100 pixelov)
       grade2_MakeDogTag_10: Nakresli niečo zábavné.
-      grade2_MakeDogTag_4: |-
-        Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. 
-        (Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)
+      grade2_MakeDogTag_4: "Dokonči túto ceduľku tak, že okolo nej nakreslíš obdĺžnik. \n(Dlhšia strana má 200 pixelov a kratšia má 100 pixelov)"
       grade2_MakeDogTag_7: |-
         Ešte jedna ceduľka. Toto je trojuholník pre Pi.
         (Každá strana má 150 pixelov)
       grade2_MakeDogTag_8: A teraz spojme niekoľko Véčiek spolu do cyklu.
-      grade2_MakeDogTag_9: Prerobte kód z poslednej úlohy tak, že pridáte otočku o 30 stupňov dovnútra cyklu. A teraz to zopakujte 24krát namiesto 8.
+      grade2_MakeDogTag_9: Prerob kód z poslednej úlohy tak, že na koniec cyklu pridáš otočku o 30 stupňov. A teraz to zopakuj 24krát namiesto 8.
       grade2_PuppyLoops_1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
       grade2_PuppyLoops_10: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
 
         Pomôž mi dokončiť môj veterník. Vieš zistiť, čo je zle?
-      grade2_PuppyLoops_2: Vieš sa dostať k prasaťu použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
-      grade2_PuppyLoops_4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
+      grade2_PuppyLoops_2: Vieš sa dostať k prasiatku použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
+      grade2_PuppyLoops_4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasiatko najmenším možným počtom blokov!
       grade2_PuppyLoops_5: Viete nájsť najrýchlejšiu cestu k prasiatku?
       grade2_PuppyLoops_7: Ukáž, čo si sa naučil a dostaň ma k slnečnici!
-      grade2_PuppyLoops_8: "Tento kód na kreslenie mačacích fúzov je zlý.\n\nOprav ho tak, aby všetky fúzy mali rovnakú dĺžku."
+      grade2_PuppyLoops_8: |-
+        Tento kód na kreslenie mačacích fúzov je zlý.
+
+        Oprav ho tak, aby všetky fúzy mali rovnakú dĺžku.
       grade2_PuppyLoops_9: |-
         Vyzerá, že C v kóde je nakreslené naopak!
 
@@ -2055,13 +2139,13 @@ sk:
       grade2_collector_A: Pomôž Laurel pozbierať všetky drahokamy.
       grade2_collector_A_2018: Pomôž Laurel pozbierať všetky drahokamy.
       grade2_collector_A_2019: Pomôž Laurel pozbierať všetky drahokamy.
-      grade2_maze_debuggingFP: '"A teraz ma dostaň k prasaťu cestou, ktorou len chceš!"'
-      grade2_puppy_loops2: Vieš sa dostať k prasaťu použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
-      grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
+      grade2_maze_debuggingFP: '"A teraz ma dostaň k prasiatku cestou, ktorou len chceš!"'
+      grade2_puppy_loops2: Vieš sa dostať k prasiatku použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
+      grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasiatko najmenším možným počtom blokov!
       grade3_ConditionalsElse_1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       grade3_ConditionalsElse_2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      grade3_ConditionalsElse_3: Ja chcem len spraviť med. Niektoré z týchto oblakov môžu schovávať úle. Uistite sa, že ste skontrolovali každý oblak!
-      grade3_ConditionalsElse_4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      grade3_ConditionalsElse_3: Teraz chcem len vyrábať med. Pod niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
+      grade3_ConditionalsElse_4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       grade3_ConditionalsElse_5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 
@@ -2076,30 +2160,32 @@ sk:
         Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetina.
         V opačnom prípade vyrob med (keďže tam bude úľ).
       grade3_Conditionals_1 BAD: Použite slučku pre pozbieranie všetkého nektáru.
-      grade3_Conditionals_1: "Ja som hladná včela!\nPomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov."
+      grade3_Conditionals_1: |-
+        Ja som hladná včela!
+        Pomôž mi pozbierať všetok nektár z kvetov s použitím čo najmenšieho počtu blokov.
       grade3_Conditionals_10 BAD: Pozbierajte nektár z radov s kvetinkami! Použite vnorenú slučku.
-      grade3_Conditionals_10: |-
-        Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?
+      grade3_Conditionals_10: 'Zbieraj nektár a urob med. Tip: čo sa stane, ak použiješ podmienku "if nectar" na červený kvet? Dokážeš to dokončiť so slučkou?'
       grade3_Conditionals_11 BAD: 'Hodnotenie: Použi cyklus "pokiaľ", aby si pozbieral všetok nektár z týchto kvetín.'
       grade3_Conditionals_11: |-
         A teraz dajme všetko dokopy!
 
         Použi, čo si sa naučil a pomôž mi zbierať nektár iba z kvetov, ktoré ho majú, s použitím čo najmenšieho počtu blokov. Nakonci nezabudni vyrobiť med.
-      grade3_Conditionals_12: "Pozbieraj nektár zo všetkých štyroch kvetov."
+      grade3_Conditionals_12: Pozbieraj nektár zo všetkých štyroch kvetov.
       grade3_Conditionals_13: 'Hodnotenie: Zozbieraj všetok nektár. Pozor, nezbieraj nektár z fialových kvetov, ak ho nemajú.'
-      grade3_Conditionals_2: "Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku."
-      grade3_Conditionals_3: "Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.\nNajskôr musíš skontrolovať, či je tam nektár s použitím bloku \"ak nektár\"."
+      grade3_Conditionals_2: Pomôž mi zozbierať všetok nektár z kvetov a urobiť med. Použiť slučku.
+      grade3_Conditionals_3: |-
+        Buď opatrný, nezbieraj nektár z fialového kvetu, ak práve žiadny nemá.
+        Najskôr musíš skontrolovať, či je tam nektár s použitím bloku "ak nektár".
       grade3_Conditionals_4: Skontroluj tento kvet s blokom "ak", či sa v ňom nachádza nejaký nektár.
       grade3_Conditionals_5: Zozbieraj nektár z každého kvetu, ak nejaký má.
       grade3_Conditionals_6: Toto pole má červené a fialové kvety. Červené kvety majú známe množstvo nektáru ale nektár fialových je neznámy. Zozbieraj všetok nektár.
       grade3_Conditionals_7: Zozbieraj všetok nektár z každého kvetu.
-      grade3_Conditionals_8: "Zbieraj nektár, kde kvety majú nektár."
+      grade3_Conditionals_8: Zbieraj nektár, kde kvety majú nektár.
       grade3_Conditionals_9: Pomôž mi nájsť všetok nektár s použitím, čo najmenšieho počtu blokov!
       grade3_Conditionals_TeacherIDo: Skontroluj tento kvet s blokom "ak", či sa v ňom nachádza nejaký nektár.
       grade3_Debugging_1: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
-      grade3_Debugging_5: "Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.  Teraz môžeš použiť \"run\" a \"step\"."
-      grade3_Debugging_6: |-
-        Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
+      grade3_Debugging_5: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.  Teraz môžeš použiť "run" a "step".
+      grade3_Debugging_6: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár.
       grade3_Debugging_7: Tieto bloky ma naozaj štvú. Oprav chyby aby si získal všetok nektár a urobil celý med.
       grade3_Debugging_9: |-
         Snaž sa usilovne ako včelička!
@@ -2127,23 +2213,24 @@ sk:
         Tieto kvetinky vyzerajú lákavo!
 
         Pozbieraj nektár z každého kvetu použitím čo možno najmenej blokov.
-      grade3_RunningFarm_3: '*"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."*'
+      grade3_RunningFarm_3: _"Kukurica, šalát a tekvice! Pomôž mi pozbierať všetky."_
       grade3_RunningFarm_6: Zistíš, ako zobrať tekvicu? Určite po ceste pozbieraj všetku kukuricu!
       grade3_bee_conditionals_new1a: "Pomôž včele pozbierať všetok nektár. \n\nNektár môžeš zbierať len z kvetov, ale musíš skontrolovať každé miestečko, aby si overil, či sa tam nenachádza kvet."
       grade3_bee_conditionals_new2: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       grade3_bee_conditionals_new2a: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov.
       grade3_bee_conditionals_new3b: Pozbieraj všetok nektár a vyrob všetok med.
       grade3_bee_conditionals_quantum1: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.
-      grade3_bee_conditionals_quantum3: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
+      grade3_bee_conditionals_quantum2: 'Skontroluj každý oblak, či sa pod ním nenachádza kvet predtým, ako pozbieraš nektár.  '
+      grade3_bee_conditionals_quantum3: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
       grade3_maze_Loop1: 'Hodnotenie: Dostaňte ma k slnečnici použitím len 5 blokov! '
       grade3_maze_loops2: 'Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov!  '
       grade3_maze_loops2a: Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
       grade3_maze_loops3: Dostaň zombíka k slnečnici pomocou dostupných blokov.
       grade3_maze_loops5: Dostaňte ma k slnečnici použitím čo najmenšieho možného počtu blokov!
       grade3_maze_nestedLoops1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
-      grade3_maze_nestedLoops2: Vieš sa dostať k prasaťu použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
-      grade3_maze_nestedLoops3: Dostaň ma k prasaťu! Teraz môžeš použiť len jeden blok na posunutie dopredu
-      grade3_maze_nestedLoops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasa s najmenším možným počtom blokov!
+      grade3_maze_nestedLoops2: Vieš sa dostať k prasiatku použitím cyklu, ktorý používa len jeden blok "posuň sa dopredu" vo vnútri bloku "opakuj"?
+      grade3_maze_nestedLoops3: Dostaň ma k prasiatku! Teraz môžeš použiť len jeden blok na posunutie dopredu
+      grade3_maze_nestedLoops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasiatko najmenším možným počtom blokov!
       grade3_robotFarmer_ConditionalsIntro4: Pomôž farmárke odstrániť celú túto kopu použitím cyklu "pokiaľ".
       grade3_robotFarmer_ConditionalsIntro_10a: 'Zarovnaj všetky tieto kopy použitím čo najmenšieho počtu blokov. '
       grade3_robotFarmer_ConditionalsIntro_11: 'Ešte stále je vonku tma. Posúvaj ma po poli. Ak tam je hromada, odstráň ju a ak tam je diera, vyplň ju. Poznámka: použi možnosti z rozbaľovacieho menu v bloku "ak".'
@@ -2167,7 +2254,7 @@ sk:
       grade4_artist_nested_loop_polygons1: "Zopakuj tento dizajn 10 krát. \n\nO koľko sa musíš otočiť pri každom opakovaní?"
       grade4_bee_conditionals_quantum1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       grade4_bee_conditionals_quantum2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      grade4_bee_conditionals_quantum4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      grade4_bee_conditionals_quantum4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       grade4_bee_conditionals_quantum5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 
@@ -2198,7 +2285,6 @@ sk:
       grade4_frozen_square_loop1: Ahoj, som Anna z Arendelle! Vytvorme štvorec pomocou bloku "Opakuj", vďaka ktorému nám stačí použiť menej blokov. Koľkokrát (???) musí blok "Opakuj" vykonať príkazy na vnútorných blokoch pre to, aby vznikol štvorec?
       grade4_frozen_square_loop2: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
       grade4_frozen_square_loop3: Dokážeš vytvoriť snehovú vločku pomocou blokov "Opakuj" a "Otoč sa" tak, že nakreslíš 10-krát štvorec a medzi štvorcami sa vždy o 36 stupňov otočíš?
-      grade4_review_artist1: Ahoj, ja som umelec. Napíš program a môžeš ma naučiť kresliť takmer všetko. Pomocou pár blokov ma nauč kresliť sivé čiary na obrázku. (Každá z čiar je 100 pixelov dlhá)
       grade4_review_artist2: 'Tento dom potrebuje strechu! Nakresli trojuholník. Pomôcka: všetky tri strany majú rovnakú dĺžku.'
       grade4_review_artist3: Blok so skokom posunie umelca bez toho, aby niečo nakreslil. Nakresli prerušovanú čiaru použitím blokov "skoč dopredu" a "posuň sa dopredu". Každá čiara má dĺžku 50 pixelov.
       grade4_review_bee1: Teraz použi blok "opakuj" na pozbieranie všetkého nektáru a vyrobenie všetkého medu.
@@ -2207,7 +2293,9 @@ sk:
         Aká usilovná včela!
 
         Pomôž včele pozbierať všetok nektár a spraviť všetok med s čo najmenším počtom blokov.
-      grade5_artist_binary1: "Binárny spôsob reprezentácie používa len dve možnosti. My budeme používať možnosť \"vypnuté\" (reprezentovaná číslom 0) a \"zapnuté\" (reprezentovana číslom 1).\nPredstav si, že máš štvorcovú mriežku, cez ktorú sa môžeš pohybovať a kresliť obrazce zapínaním len určitých štvorcov. Vieš pomôcť umelcovi nakresliť v prvom riadku \"01010101\" v binárnej reprezentácii?"
+      grade5_artist_binary1: |-
+        Binárny spôsob reprezentácie používa len dve možnosti. My budeme používať možnosť "vypnuté" (reprezentovaná číslom 0) a "zapnuté" (reprezentovana číslom 1).
+        Predstav si, že máš štvorcovú mriežku, cez ktorú sa môžeš pohybovať a kresliť obrazce zapínaním len určitých štvorcov. Vieš pomôcť umelcovi nakresliť v prvom riadku "01010101" v binárnej reprezentácii?
       grade5_artist_binary10: Kliknite sem pre zobrazenie nápovady.
       grade5_artist_binary11: 'Voľná hra: Tu máte prázdne plátno na kreslenie. Veľa zábavy!'
       grade5_artist_binary4: Dokážes nakresliť tento obrazec len s použitím troch binárnych číslic (0 alebo 1)?
@@ -2263,4 +2351,13 @@ sk:
       scrat 19 (copy 1): Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
       scrat 19: Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
       scrat 20: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku. Ponáhľaj sa! Ľad sa už topí!
+      timeforcs_demo_sl_1: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      timeforcs_demo_sl_2: Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan začal točiť dokola.
+      timeforcs_demo_sl_4: 'Vytvor novú postavičku s menom `alien2` a potom mu prikáž zmeniť tanečný krok, keď na neho klikneš.  '
+      timeforcs_demo_sl_5: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie. '
+      timeforcs_demo_sl_6: Pridaj kód, aby sa zmenila farba mimozemšťana, keď na neho klikneš.
+      timeforcs_demo_sl_7: Použi blok `prestane všetko` na zastavenie pohybu mimozemšťana, keď na neho klikneš.
+      timeforcs_demo_sl_8: Pridaj zvonček nazvaný `myBell`, ktorý donúti všetkých mimozemšťanov robiť rovnaký krok keď na neho klikneš.
+      timeforcs_demo_sl_9: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
+      timeforcs_demo_sl_predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       valentine_artist_03: Teraz skús vytvoriť niečo vlastné!

@@ -828,6 +828,8 @@ de:
     csp_variables: 'Variablen'
     csp_conditionals: 'Bedingungen'
     csp_functions: 'Funktionen'
+    csp_lists: 'Listen'
+    csp_loops: 'Schleifen'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."

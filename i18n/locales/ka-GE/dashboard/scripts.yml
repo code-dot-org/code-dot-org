@@ -4971,6 +4971,8 @@ ka:
               name: პირობითი წინადადებები Minecraft-ში
             Digital Sharing:
               name: ციფრული გაზიარება
+            Songwriting:
+              name: სიმღერის დაწერა
         express-2019:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
@@ -5439,6 +5441,40 @@ ka:
             new stage:
               name: ახალი დონე
         csd-videos:
+          stages:
+            new stage:
+              name: ახალი დონე
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: ქრაუდსორსინგი
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+            'Programming: My Robotic Friends':
+              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+            Building a Foundation:
+              name: ფუნდამენტის აშენება
+            Debugging with Scrat:
+              name: გამართვა სკრეტთან ერთად
+            Programming in Artist:
+              name: პროგრამირება მსახიობში
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops in Bee/Zombie:
+              name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+            Build a Star Wars Game:
+              name: ააწყვეთ ვარსკვლავური ომების თამაში
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            'Functions: Songwriting':
+              name: 'ფუნქციები: სიმღერების დაწერა'
+            Functions in Artist:
+              name: ფუნქციები მხატვარში
+        csp7-pilot-staging:
           stages:
             new stage:
               name: ახალი დონე

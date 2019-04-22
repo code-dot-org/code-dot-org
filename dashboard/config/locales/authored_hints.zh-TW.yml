@@ -35,7 +35,7 @@ zh-TW:
 
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: 記得，你想要讓控制面板 *寬* 10 像素......所以確保要 **增加** 10 到任何你想要改變的數字。
+        2-3_Artist_Debugging_10_a: 記得，你想要讓控制面板 _寬_ 10 像素......所以確保要 **增加** 10 到任何你想要改變的數字。
         2-3_Artist_Debugging_10_b: "**錯誤嘗試在這裡完全沒關係！**  \n\n可以從一次改變一個數字開始。\n\n每個數字會有什麼效果？\n\n如果你有點混淆了，只要按下「重新開始」，然後你的程式碼就會被重置。"
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 提示：每個鬍鬚長度為 75 像素。
@@ -48,7 +48,7 @@ zh-TW:
         2-3_Artist_Debugging_8_a: |-
           我的形狀重複了幾次？
 
-          形狀 *應該* 要重複幾次？
+          形狀 _應該_ 要重複幾次？
 
           怎樣在你的程式裡做出對應的改變？
       2-3 Artist Debugging 9_authored_hint:
@@ -71,19 +71,21 @@ zh-TW:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
+        2-3_Artist_Functions_3_a: "-   -   115 + 45 = 160 \\* \\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
+        2-3_Artist_Functions_3_a: "-   -   115 + 45 = 160 \\* \\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: 藝術家需要在每個正方形之間轉 120 度才能完成這個設計。
       2-3 Artist Functions 4_authored_hint:
@@ -105,10 +107,11 @@ zh-TW:
           因為這樣，我們不需要增加額外的`轉向-左方`積木。
         2-3_Artist_Loops_New_13_b: |-
           要做出每個菱形，藝術家需要：
-          - 移動
-          - 向右轉 120 度
-          - 移動
-          - 向右轉 60 度
+
+          -   移動
+          -   向右轉 120 度
+          -   移動
+          -   向右轉 60 度
 
           然後再做一次相同的動作！
       2-3 Artist Loops New 9_authored_hint:
@@ -143,9 +146,24 @@ zh-TW:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: 想不到要如何減少積木的使用量？試著把用在紫花上的程式套用到紅花上。
         2-3_Bee_Conditionals_14_b: 如果紅花變成紫花，想一想，要怎麼另外使用`重複`迴圈來減少代碼的使用？
-        2-3_Bee_Conditionals_14_c: "試試把它分成兩塊來完成：\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          收集花蜜 3 次\n - 向前移動 5 次\n - 檢查是否為花蜜，如果是就採集\n - 向左轉\n \n2) 釀造蜂蜜\n - 向前移動 1
-          次\n - 釀造 2 個蜂蜜"
+        2-3_Bee_Conditionals_14_c: |-
+          試試把它分成兩塊來完成：
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  收集花蜜 3 次
+
+          2.  向前移動 5 次
+
+          3.  檢查是否為花蜜，如果是就採集
+
+          4.  向左轉
+
+          5.  釀造蜂蜜
+
+          6.  向前移動 1 次
+
+          7.  釀造 2 個蜂蜜
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 請記住：每次你運行程式後，紫花的花蜜數會變成 0 或 1！
       2-3 Bee Conditionals 3_authored_hint:
@@ -243,7 +261,7 @@ zh-TW:
         4-5_Artist_5_a: |-
           錯中學、學中錯…要解決這個問題的話，可以把 90 度除以 3。
 
-          **90 / 3 = _____**
+          **90 / 3 = **\_****
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: '哪個角度最小？小藝術家面對的角度是多少？ '
       4-5 Artist 8_authored_hint:
@@ -251,13 +269,12 @@ zh-TW:
           是多少呢？ "
         4-5_Artist_8_b: |-
           這個圖案可以用 2 個方式畫出來！
-          - 畫出二個長方形，長是 **120** 高是 **160**，然後部分重疊在一塊。
 
-          - 畫出一個長方式，長是 **240** 高是 **160** ，接著在中間加上一條線。
+          -   畫出二個長方形，長是 **120** 高是 **160**，然後部分重疊在一塊。
+
+          -   畫出一個長方式，長是 **240** 高是 **160** ，接著在中間加上一條線。
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: '當一個三角形是等邊時，所有的邊的長度和所有角的角度都會一樣。
-
-'
+        4-5_Artist_9_a: 當一個三角形是等邊時，所有的邊的長度和所有角的角度都會一樣。
         4-5_Artist_9_b: 你需要畫出三相同尺寸的三角形，別忘了每畫完一個就要跳到下一個新的位置。
       4-5 Artist Assessment 1_authored_hint:
         4-5_Artist_Assessment_1_a: 你只要畫出外部的三角形就可以完成這關。
@@ -343,7 +360,6 @@ zh-TW:
         solution: |-
           **解決方案：**
 
-
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: 要使用`移動-向前`積木的方式是，從工具箱把它拖曳到工作區中，並把它連接在`當運行時`積木下方。
@@ -353,8 +369,8 @@ zh-TW:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: '每個重複的圖形都是**半六邊形**的組合，跟著**2/3 三角形**。 '
         Course_4_Artist_12_b: '部分圖形和上個關卡有些類似，除了半六邊形大了一點以外。 '
-        Course_4_Artist_12_c: "1) 開始的三個線段為 60 像素長，你需要轉向 60 度。\n\n2) 接著的二個線段為 80 像素長，你需要轉向
-          120 度。 "
+        Course_4_Artist_12_c: "1.  開始的三個線段為 60 像素長，你需要轉向 60 度。\n\n2.  接著的二個線段為 80
+          像素長，你需要轉向 120 度。 "
         Course_4_Artist_12_d: |-
           **解決方案：**
 
@@ -382,10 +398,10 @@ zh-TW:
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **解決方案：**
 
-
           ![solution](https://images.code.org/b282dd6324910b7d604e24182cbbccbb-image-1469641477135.png)
       Course 4 Artist For Loops 11_authored_hint:
-        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
+        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\\\r\n使用運算類別積木，並輸入 360
+          除以邊數來產生圖形要轉向的角度。 "
       Course 4 Artist For Loops 11a_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 除以多邊形的邊數，就是你要轉向的度數。 '
         Course_4_Artist_For_Loops_11a_b: '每一次你需要向前移動，共 10 次。移動的長度相當於多邊形的邊數。 '
@@ -546,7 +562,7 @@ zh-TW:
         Course_4_SCFL_1a_d: |-
           **解決方案：**
 
-          ![Solution Blocks\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
+          ![Solution Blocks\\t](https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)
       Course 4 SCFL 1b_authored_hint:
         Course_4_SCFL_1b_a: 試著使用一個`計數迴圈`。
         Course_4_SCFL_1b_b: |-
@@ -670,7 +686,7 @@ zh-TW:
           以及向右曲折的是紫色 (rgb = 100, 50, 150)。
         Course_4_SCV_6_d: 要向左曲折的話，向左轉`360`/`sides`。要向右曲折的話，向右轉`360`/`sides`。
         Course_4_SCV_6_e: '程式的其它部分很基礎，就是要在一個形狀上製作出一個 360 的迴轉，不同之處在於我們將這些形狀重疊一半，所以我們要向右轉
-          180 ÷ sides（邊數）度，意思是我們必須要比平常還要多 2 倍（sides*2 重複） '
+          180 ÷ sides（邊數）度，意思是我們必須要比平常還要多 2 倍（sides\*2 重複） '
         Course_4_SCV_6_f: |-
           **解決方案：**
 
@@ -682,34 +698,36 @@ zh-TW:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **我要怎麼過關？**
-          * 確定有個舞者在畫面。
 
-          *這個關卡會在 4 個小節後結束。*
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
         challenges: |-
           **額外挑戰**
-          * 選擇不同的歌曲播放。
-          * 重新命名你的舞者。
+
+          -   選擇不同的歌曲播放。
+          -   重新命名你的舞者。
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 舞者要在 4 小節後換個新的舞姿。
+          -   舞者要在 4 小節後換個新的舞姿。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
+          -   在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *這個關卡會在 11 小節後結束。*
+          _這個關卡會在 11 小節後結束。_
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 9 小節後結束。*
+          _這個關卡會在 9 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -718,63 +736,63 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少添加兩個舞者。
+          -   你至少添加兩個舞者。
 
-          *這個關卡會在 5 小節後結束。*
+          _這個關卡會在 5 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 新增第三個舞者（或按需求盡量增加！）
-          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+          -   新增第三個舞者（或按需求盡量增加！）
+          -   讓所有舞者在歌曲的不同時間點執行不同的動作。
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個舞者的尺寸必須超過 100。
+          -   兩個舞者的尺寸必須超過 100。
 
-          *這個關卡會在 5 小節後結束。*
+          _這個關卡會在 5 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+          -   變更其他屬性（寬度、高度、旋轉等）以進行實驗
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少要添加一個舞者。
+          -   你至少要添加一個舞者。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個以上的舞者屬性必須有變化。
+          -   兩個以上的舞者屬性必須有變化。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 7 個小節。*
+          _這個關卡最多可以有 7 個小節。_
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 7 個小節。*
+          _這個關卡最多可以有 7 個小節。_
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
+          -   使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
-          了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
+        voyage_aquatic_10a: 看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
+          了嗎？如何有條件地使用它們以穿越海洋遺址？
       CourseE_HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       CourseF_PlayLab_vars2_authored_hint:
@@ -783,9 +801,9 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 10 小節後結束。*
+          _這個關卡會在 10 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -794,9 +812,9 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 10 小節後結束。*
+          _這個關卡會在 10 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -804,45 +822,49 @@ zh-TW:
       Dance_Party_01_authored_hint:
         validation: |-
           **我要怎麼過關？**
-          * 確定有個舞者在畫面。
 
-          *這個關卡會在 4 個小節後結束。*
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
         challenges: |-
           **額外挑戰**
-          * 選擇不同的歌曲播放。
-          * 重新命名你的舞者。
+
+          -   選擇不同的歌曲播放。
+          -   重新命名你的舞者。
       Dance_Party_01_low_authored_hint:
         validation: |-
           **我要怎麼過關？**
-          * 確定有個舞者在畫面。
 
-          *這個關卡會在 4 個小節後結束。*
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
         challenges: |-
           **額外挑戰**
-          * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名你的舞者。
+
+          -   選擇不同的歌曲播放。
+          -   選擇一個看起來像麋鹿的不同項目！
+          -   重新命名你的舞者。
       Dance_Party_02_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 舞者要在 4 小節後換個新的舞姿。
+          -   舞者要在 4 小節後換個新的舞姿。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       Dance_Party_03_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
+          -   在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *這個關卡會在 11 小節後結束。*
+          _這個關卡會在 11 小節後結束。_
       Dance_Party_04_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 9 小節後結束。*
+          _這個關卡會在 9 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -851,99 +873,101 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少添加兩個舞者。
+          -   你至少添加兩個舞者。
 
-          *這個關卡會在 5 小節後結束。*
+          _這個關卡會在 5 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 新增第三個舞者（或按需求盡量增加！）
-          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+          -   新增第三個舞者（或按需求盡量增加！）
+          -   讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_08_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個舞者的尺寸必須超過 100。
+          -   兩個舞者的尺寸必須超過 100。
 
-          *這個關卡會在 5 小節後結束。*
+          _這個關卡會在 5 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+          -   變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_09_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少要添加一個舞者。
+          -   你至少要添加一個舞者。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       Dance_Party_1_authored_hint:
         validation: |-
           **我要怎麼過關？**
-          * 確定有個舞者在畫面。
 
-          *這個關卡會在 4 個小節後結束。*
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
         challenges: |-
           **額外挑戰**
-          * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名你的舞者。
+
+          -   選擇不同的歌曲播放。
+          -   選擇一個看起來像麋鹿的不同項目！
+          -   重新命名你的舞者。
       Dance_Party_10_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個以上的舞者屬性必須有變化。
+          -   兩個以上的舞者屬性必須有變化。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 7 個小節。*
+          _這個關卡最多可以有 7 個小節。_
       Dance_Party_11_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 7 個小節。*
+          _這個關卡最多可以有 7 個小節。_
       Dance_Party_11_5_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 7 個小節。*
+          _這個關卡最多可以有 7 個小節。_
       Dance_Party_11b_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
+          -   使用 `當左鍵被按下` 積木讓舞者在你按下按鍵時跳個舞。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       Dance_Party_2_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 舞者要在 4 小節後換個新的舞姿。
+          -   舞者要在 4 小節後換個新的舞姿。
 
-          *這個關卡會在 8 小節後結束。*
+          _這個關卡會在 8 小節後結束。_
       Dance_Party_3_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
+          -   在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *這個關卡會在 12 小節後結束。*
+          _這個關卡會在 12 小節後結束。_
       Dance_Party_4_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 10 小節後結束。*
+          _這個關卡會在 10 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -952,45 +976,45 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
+          -   你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *這個關卡會在 12 小節後結束。*
+          _這個關卡會在 12 小節後結束。_
       Dance_Party_6_authored_hint:
         challenges: |-
           **可選挑戰**
 
-          * 新增第三個舞者（或按需求盡量增加！）
-          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+          -   新增第三個舞者（或按需求盡量增加！）
+          -   讓所有舞者在歌曲的不同時間點執行不同的動作。
       Dance_Party_8_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個舞者的尺寸必須超過 100。
+          -   兩個舞者的尺寸必須超過 100。
 
-          *這個關卡會在 6 小節後結束。*
+          _這個關卡會在 6 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+          -   變更其他屬性（寬度、高度、旋轉等）以進行實驗
       Dance_Party_9_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少要添加一個舞者。
+          -   你至少要添加一個舞者。
 
-          *這個關卡會在 8 小節後結束。*
+          _這個關卡會在 8 小節後結束。_
       Farmer for Authored Hint testing_authored_hint:
         first_hint: |-
           這是第一個提示。
 
-          它有*某種* **基本的** `標記`
+          它有_某種_ **基本的** `標記`
         second_hint: 這是第二個提示，我們用影片來說明。
         last_hint: 這是第三個提示，也是最後的提示了。它沒有什麼特別的東西。
       Farmer for TTS testing_authored_hint:
         first_hint: |-
           這是第一個提示。
 
-          它有*某種* **基本的** `標記`
+          它有_某種_ **基本的** `標記`
         second_hint: |-
           這是第二個提示，我們用圖來說明。
 
@@ -1003,42 +1027,44 @@ zh-TW:
         Function_intro_Ryan_b: 如果您正確地調用了函數, 那麼這就是您要移動的路徑...
         Function_intro_Ryan_a: 您可以在自己的程式中呼叫使用功能多次！請嘗試呼叫兩次以解決此版圖。
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
-          了嗎？如何有條件地使用它們以穿越海洋遺址？\n\n"
+        voyage_aquatic_10a: 看到**海燈籠** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)
+          了嗎？如何有條件地使用它們以穿越海洋遺址？
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: 真是美麗的珊瑚礁！藍色珊瑚應該要在**右**，還有紅色珊瑚應該要在**左**！
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **我要怎麼過關？**
-          * 確定有個舞者在畫面。
 
-          *這個關卡會在 4 個小節後結束。*
+          -   確定有個舞者在畫面。
+
+          _這個關卡會在 4 個小節後結束。_
         challenges: |-
           **額外挑戰**
-          * 選擇不同的歌曲播放。
-          * 選擇一個看起來像麋鹿的不同項目！
-          * 重新命名你的舞者。
+
+          -   選擇不同的歌曲播放。
+          -   選擇一個看起來像麋鹿的不同項目！
+          -   重新命名你的舞者。
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 舞者要在 4 小節後換個新的舞姿。
+          -   舞者要在 4 小節後換個新的舞姿。
 
-          *這個關卡會在 8 小節後結束。*
+          _這個關卡會在 8 小節後結束。_
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
+          -   在 6 小節後，你的舞者必須做個不同的舞姿並持續 4 小節。
 
-          *這個關卡會在 12 小節後結束。*
+          _這個關卡會在 12 小節後結束。_
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你必須在歌曲的 7 個小節內讓背景效果有變化。
+          -   你必須在歌曲的 7 個小節內讓背景效果有變化。
 
-          *這個關卡會在 10 小節後結束。*
+          _這個關卡會在 10 小節後結束。_
         challenges: |-
           **可選挑戰**
 
@@ -1047,54 +1073,54 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
+          -   你的舞蹈必須在歌曲的前 12 小節當中有不同的舞姿。
 
-          *這個關卡會在 12 小節後結束。*
+          _這個關卡會在 12 小節後結束。_
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **可選挑戰**
 
-          * 新增第三個舞者（或按需求盡量增加！）
-          * 讓所有舞者在歌曲的不同時間點執行不同的動作。
+          -   新增第三個舞者（或按需求盡量增加！）
+          -   讓所有舞者在歌曲的不同時間點執行不同的動作。
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個舞者的尺寸必須超過 100。
+          -   兩個舞者的尺寸必須超過 100。
 
-          *這個關卡會在 6 小節後結束。*
+          _這個關卡會在 6 小節後結束。_
         challenges: |-
           **可選挑戰**
 
-          * 變更其他屬性（寬度、高度、旋轉等）以進行實驗
+          -   變更其他屬性（寬度、高度、旋轉等）以進行實驗
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 你至少要添加一個舞者。
+          -   你至少要添加一個舞者。
 
-          *這個關卡會在 8 小節後結束。*
+          _這個關卡會在 8 小節後結束。_
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 兩個以上的舞者屬性必須有變化。
+          -   兩個以上的舞者屬性必須有變化。
 
-          *這個關卡會在 8 小節後結束。*
+          _這個關卡會在 8 小節後結束。_
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 8 個小節。*
+          _這個關卡最多可以有 8 個小節。_
       HOC Dance make group_authored_hint:
         validation: |-
           **我要如何通過這一關？**
 
-          * 自由發揮就可以囉！
+          -   自由發揮就可以囉！
 
-          *這個關卡最多可以有 8 個小節。*
+          _這個關卡最多可以有 8 個小節。_
       Harvesting_authored_hint:
         pointer_harvester_test: 哪種積木可以幫助我判斷（檢查還有做決定）？
       Inspirational Artwork_authored_hint:
@@ -1107,7 +1133,6 @@ zh-TW:
         after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **解決方案：**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       MC Agent Freeplay_authored_hint:
@@ -1167,10 +1192,10 @@ zh-TW:
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: 您知道嗎？您可以將代碼的多個部分放在循環中。請嘗試放置木板**並**向前移動至「重複」內以完成此版圖。
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？*應該*重複多少次呢？
+        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？_應該_重複多少次呢？
         MC_HOC_2017_06_Cole_b: '幫助特工在水面上架起一座橋！ '
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？*應該*重複多少次呢？
+        MC_HOC_2017_06_Cole_a: 這個迴圈會循環多少次？_應該_重複多少次呢？
         MC_HOC_2017_06_Cole_b: '幫助特工在水面上架起一座橋！ '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: 請嘗試在「重複」循環中放置多個指令！
@@ -1240,7 +1265,6 @@ zh-TW:
         after: 當你完成每個「花瓣」時，請檢查是否在你轉彎 60 度之前`移動-向前`了 20 像素。
         solution: |-
           **解決方案：**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       NEW Course 4 Bee For Loops 8_authored_hint:
@@ -1348,15 +1372,15 @@ zh-TW:
         mc_3_c: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
-          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
+          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你_判斷_你是在花朵還是在蜂窩上？
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+          ![](<https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png>)
         turn_at_honeycomb_pointer: 除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？
       Planning Farmer_authored_hint:
         conditional_pointer: |-
-          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你*判斷*你是在花朵還是在蜂窩上？
+          先思考一下這個：每個步驟之間有什麼不同處？哪種積木可以幫你_判斷_你是在花朵還是在蜂窩上？
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+          ![](<https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png>)
         turn_at_honeycomb_pointer: 除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？
       Quantum Bee - Ryan_authored_hint:
         test_hint: 這是測試用提示。
@@ -1364,9 +1388,9 @@ zh-TW:
         validation: |-
           **我要怎麼通過這個關卡？**
 
-          * 舞者要在 4 小節後換個新的舞姿。
+          -   舞者要在 4 小節後換個新的舞姿。
 
-          *這個關卡會在 7 小節後結束。*
+          _這個關卡會在 7 小節後結束。_
       Underground Avoiding Lava_authored_hint:
         mc_11_a: 所有的代碼都是用來檢查熔岩並處理它的。您所需要做的就是添加一個程式積木來移動。
         mc_11_b: 你的“前進”命令是否應該進入“if”語句或之後再進入？
@@ -1418,6 +1442,7 @@ zh-TW:
         Valentine_artist2_01_c: |-
           試一下這個迴圈
           <xml><block type="controls_repeat">
+
           <title name="TIMES">8</title>
           <statement name="DO">
           <block type="draw_move_by_constant">
@@ -1461,9 +1486,10 @@ zh-TW:
           別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
 
           移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
+
+          -   轉向 90 度（讓他面朝下）
+          -   跳躍 20 像素（讓他到新的一列）
+          -   轉回 90 度（讓他再次面朝右）
         aE3_c: 當你都做完了，你的**巢狀迴圈**應該會有三層深。
         aE3_d: 如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！
       aE3alternate_authored_hint:
@@ -1472,9 +1498,10 @@ zh-TW:
           別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
 
           移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
+
+          -   轉向 90 度（讓他面朝下）
+          -   跳躍 20 像素（讓他到新的一列）
+          -   轉回 90 度（讓他再次面朝右）
         aE3alternate_c: 當你都做完了，你的**巢狀迴圈**應該會有三層深。
         aE3alternate_d: 如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！
       aE3alternateB_authored_hint:
@@ -1483,9 +1510,10 @@ zh-TW:
           別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
 
           移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
+
+          -   轉向 90 度（讓他面朝下）
+          -   跳躍 20 像素（讓他到新的一列）
+          -   轉回 90 度（讓他再次面朝右）
         aE4alternateB_c: 當你都做完了，你的**巢狀迴圈**應該會有三層深。
         aE4alternateB_d: 如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！
       aE4_authored_hint:
@@ -1494,9 +1522,10 @@ zh-TW:
           別忘了在你開始畫一列形狀前，先讓小藝術家向下移動！
 
           移動小藝術家，並讓他面對正確的方向：
-          - 轉向 90 度（讓他面朝下）
-          - 跳躍 20 像素（讓他到新的一列）
-          - 轉回 90 度（讓他再次面朝右）
+
+          -   轉向 90 度（讓他面朝下）
+          -   跳躍 20 像素（讓他到新的一列）
+          -   轉回 90 度（讓他再次面朝右）
         aE4_c: 當你都做完了，你的**巢狀迴圈**應該會有三層深。
         aE4_d: 如果你的程式變得太雜亂，你可以點擊「重新開始」恢復成原狀，然後重新再一次！
       aE6_authored_hint:
@@ -1510,9 +1539,10 @@ zh-TW:
       aE8_authored_hint:
         aE8_a: |-
           要製作出一個正方形，你需要：
-          - 畫出線條
 
-          - 使用轉向來轉彎
+          -   畫出線條
+
+          -   使用轉向來轉彎
 
           重複這些步驟 4 次。
       allHallows2017_authored_hint:
@@ -1553,7 +1583,7 @@ zh-TW:
         courseC_maze_programming4_a: 當其他人試圖閱讀你的代碼時，評論也很有用。
         courseC_maze_programming4_b: 當你改變方向時添加一條評論-如果你轉向另一個方向，會發生什麼？
       course1_artist_loops_challenge1_authored_hint:
-        courseA_artist_loops_challenge1_a: |
+        courseA_artist_loops_challenge1_a: |-
           你可以使用像這樣的迴圈來創建圍牆和屋頂。試試重複不同的積木。
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
@@ -1579,20 +1609,20 @@ zh-TW:
         courseA_collector_loops_challenge1_b: 如果你只要執行某段指令一次，就不需要用到迴圈。
         courseA_collector_loops_challenge1_c: 右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？
       course1_collector_loops_challenge2_authored_hint:
-        courseA_collector_loops_challenge2_b: 只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png) 積木就可以解決囉！
+        courseA_collector_loops_challenge2_b: 只要一個 ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) 積木就可以解決囉！
         courseA_collector_loops_challenge2_a: |-
           在往南移動之前，你可以重複移動到相同路徑。
 
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3_authored_hint:
-        courseB_collector_loops_challenge1_a: |
+        courseB_collector_loops_challenge1_a: |-
           北方模式與南方模式略有不同。
           <xml>
           <block type="collector_collect"/><next>
           <block type="maze_moveNorth"/></next>next>
           </xml>
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           在每個路徑之間向東邊移動兩次。
           <xml>
             <block type="maze_moveEast"/><next>
@@ -1605,6 +1635,7 @@ zh-TW:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -1677,15 +1708,25 @@ zh-TW:
         courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
-          type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n
-          \         </block>\n        </next>\n\n  </block></xml>"
+          \         </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          你可以讓機器人發出嗶嗶聲.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">得分</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -1711,11 +1752,12 @@ zh-TW:
         courseD_artist_nestedLoops_challenge1_b: 添加代碼，在嵌套循環中繪製一個三角形。用120度的角度來改變你的三角形。
         courseD_artist_nestedLoops_challenge1_c: |-
           使用嵌套循環：
-          - 重複8次
-          - 繪製一個八邊形
-          - 繪製一個三角形
-          - 向前跳50個像素
-          - 向右轉90度
+
+          -   重複8次
+          -   繪製一個八邊形
+          -   繪製一個三角形
+          -   向前跳50個像素
+          -   向右轉90度
       course2_artist_nestedLoops_challenge2_authored_hint:
         courseD_artist_nestedLoops_challenge2_a: 要畫出八邊形，藝術家需要轉向 45 度 8 次。
         courseD_artist_nestedLoops_challenge2_b: 要畫出正方形，藝術家需要轉向 90 度 4 次。
@@ -1768,9 +1810,9 @@ zh-TW:
         courseC_maze_loops_challenge1_c: |-
           你只需`左轉`然後`向前走`幾次就能完成，別放棄！
 
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2_authored_hint:
-        courseC_maze_programming_challenge2_a: "*如果你把我倒過來，要格外小心我的方向是否是正確的！*"
+        courseC_maze_programming_challenge2_a: _如果你把我倒過來，要格外小心我的方向是否是正確的！_
         courseC_maze_programming_challenge2_b: 最短的解決方案只使用5個程式積木，但它使用的是“重複”程式積木！
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: 試著用你的手指頭點出要移動的空格數（你站的那一格不要算！）
@@ -1917,17 +1959,17 @@ zh-TW:
         courseA_artist_loops3_b: |-
           你會想要用一個像這樣的程式積木來過這個關卡。
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_b: |-
           你會想要用一個像這樣的程式積木來過這個關卡。
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2019_authored_hint:
         courseA_artist_loops3_b: |-
           你會想要用一個像這樣的程式積木來過這個關卡。
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
         courseA_artist_loops4_b: 因為你只能用一個 <xml><block type="simple_move_right"/></xml>程式積木，所以試試將它放在
@@ -1968,24 +2010,28 @@ zh-TW:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops7_2019_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops7_forVideo_authored_hint:
         courseA_artist_loops7_a: 不知道該把這個環放在哪裡？嘗試一步一步地編寫代碼，並尋找模式。
         courseA_artist_loops7_c: |-
           記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml>迴圈裡。
       courseA_artist_loops9_authored_hint:
@@ -2066,7 +2112,7 @@ zh-TW:
         courseA_collector_loops_challenge2_a: |-
           在往南移動之前，你可以重複移動到相同路徑。
 
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_b: 試試用這條路解決問題。
         courseA_collector_loops_challenge2kp_a: 你能用迴圈過關嗎？
@@ -2145,7 +2191,7 @@ zh-TW:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2164,7 +2210,7 @@ zh-TW:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2183,7 +2229,7 @@ zh-TW:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2202,7 +2248,7 @@ zh-TW:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2403,15 +2449,25 @@ zh-TW:
         courseA_playlab_events_challenge1_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
-          type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n
-          \         </block>\n        </next>\n\n  </block></xml>"
+          \         </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: |-
+          你可以讓機器人發出嗶嗶聲.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">得分</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge1_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -2436,15 +2492,25 @@ zh-TW:
         courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
-          type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n
-          \         </block>\n        </next>\n\n  </block></xml>"
+          \         </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          你可以讓機器人發出嗶嗶聲.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">得分</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -2469,15 +2535,25 @@ zh-TW:
         courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
-          type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n
-          \         </block>\n        </next>\n\n  </block></xml>"
+          \         </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          你可以讓機器人發出嗶嗶聲.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">得分</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -2502,15 +2578,25 @@ zh-TW:
         courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
-          type=\"studio_playSound\">\n            <title name=\"SOUND\">得分</title>\n
-          \         </block>\n        </next>\n\n  </block></xml>"
+          \         </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          你可以讓機器人發出嗶嗶聲.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">得分</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -2599,7 +2685,7 @@ zh-TW:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2618,7 +2704,7 @@ zh-TW:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2637,7 +2723,7 @@ zh-TW:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2656,7 +2742,7 @@ zh-TW:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2815,7 +2901,7 @@ zh-TW:
       courseB_collector_loops5_2019_authored_hint:
         courseB_collector_loops5_a: 用一個以上的迴圈來完成。
       courseB_collector_loops_challenge1_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           從重複以下指令開始：
 
           <xml>
@@ -2825,19 +2911,27 @@ zh-TW:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block
-          type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n
-          \       <statement name=\"DO\">\n          \n              <block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block></next></statement></block></xml>"
+        courseB_collector_loops_challenge1_c: |-
+          只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。
+          <xml>
+          <block type="controls_repeat_simplified">
+                  <title name="TIMES">?</title>
+                  <statement name="DO">
+
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block><next><block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block></next></statement></block></xml>
         courseB_collector_loops_challenge1_d: |-
           試試這個！
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -2868,7 +2962,7 @@ zh-TW:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2018_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           從重複以下指令開始：
 
           <xml>
@@ -2878,19 +2972,27 @@ zh-TW:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block
-          type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n
-          \       <statement name=\"DO\">\n          \n              <block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block></next></statement></block></xml>"
+        courseB_collector_loops_challenge1_c: |-
+          只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。
+          <xml>
+          <block type="controls_repeat_simplified">
+                  <title name="TIMES">?</title>
+                  <statement name="DO">
+
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block><next><block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block></next></statement></block></xml>
         courseB_collector_loops_challenge1_d: |-
           試試這個！
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -2921,7 +3023,7 @@ zh-TW:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2019_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           從重複以下指令開始：
 
           <xml>
@@ -2931,19 +3033,27 @@ zh-TW:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block
-          type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n
-          \       <statement name=\"DO\">\n          \n              <block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n
-          \               <title name=\"TIMES\">?</title>\n                <statement
-          name=\"DO\">\n                </statement></block></next></statement></block></xml>"
+        courseB_collector_loops_challenge1_c: |-
+          只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。
+          <xml>
+          <block type="controls_repeat_simplified">
+                  <title name="TIMES">?</title>
+                  <statement name="DO">
+
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block><next><block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block></next></statement></block></xml>
         courseB_collector_loops_challenge1_d: |-
           試試這個！
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -2988,12 +3098,12 @@ zh-TW:
       courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_a: 如果出現問題，試著把錯誤找出來，不要輕言放棄！
       courseB_collector_loops_challenge`_authored_hint:
-        courseA_collector_loops_challenge2_b: 只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
-          PM.png) 積木就可以解決囉！
+        courseA_collector_loops_challenge2_b: 只要一個 ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) 積木就可以解決囉！
         courseA_collector_loops_challenge2_a: |-
           在往南移動之前，你可以重複移動到相同路徑。
 
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       courseB_collector_prog3_authored_hint:
         courseB_collector_prog3_a: 試試用`重複`積木來收集黃金。
       courseB_iceage_loops10_authored_hint:
@@ -3131,10 +3241,11 @@ zh-TW:
               <title name="VALUE">down</title>
             </block>
           </xml>
-        courseB_playlab_events_challenge1_b: |
+        courseB_playlab_events_challenge1_b: |-
           利用這個程式積木改變動物的速度
           <xml>
           <block type="studio_setSpriteSpeed">
+
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
           </block></xml>
@@ -3142,6 +3253,7 @@ zh-TW:
           當比賽結束時，大家會說些什麼？讓牠們說些話吧：
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">2</title>
           <next>
           <block type="studio_saySpriteChoices">
@@ -3159,10 +3271,11 @@ zh-TW:
               <title name="VALUE">down</title>
             </block>
           </xml>
-        courseB_playlab_events_challenge1_b: |
+        courseB_playlab_events_challenge1_b: |-
           利用這個程式積木改變動物的速度
           <xml>
           <block type="studio_setSpriteSpeed">
+
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
           </block></xml>
@@ -3170,6 +3283,7 @@ zh-TW:
           當比賽結束時，大家會說些什麼？讓牠們說些話吧：
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">2</title>
           <next>
           <block type="studio_saySpriteChoices">
@@ -3187,10 +3301,11 @@ zh-TW:
               <title name="VALUE">down</title>
             </block>
           </xml>
-        courseB_playlab_events_challenge1_b: |
+        courseB_playlab_events_challenge1_b: |-
           利用這個程式積木改變動物的速度
           <xml>
           <block type="studio_setSpriteSpeed">
+
           <title name="SPRITE">0</title>
           <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
           </block></xml>
@@ -3198,6 +3313,7 @@ zh-TW:
           當比賽結束時，大家會說些什麼？讓牠們說些話吧：
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">2</title>
           <next>
           <block type="studio_saySpriteChoices">
@@ -3213,6 +3329,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3220,6 +3337,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3235,6 +3353,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3242,6 +3361,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3257,6 +3377,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3264,6 +3385,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3279,6 +3401,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3286,6 +3409,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3301,6 +3425,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3308,6 +3433,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3323,6 +3449,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3330,6 +3457,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3345,6 +3473,7 @@ zh-TW:
           使用其他的事件類型積木來讓其他的動物消失！
           <xml>
           <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">1</title>
           </block>
           </xml>
@@ -3352,6 +3481,7 @@ zh-TW:
           當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
           <xml>
           <block type="studio_playSound">
+
           <title name="SOUND">slap</title>
           </block>
           <block type="studio_changeScore"/></xml>
@@ -3408,17 +3538,11 @@ zh-TW:
         courseB_starWars_prog9_a: 不要害怕犯錯！運行代碼看看會發生什麼，即使您還沒有解決這個難題。
         courseB_starWars_prog9_b: 有很多方法可以完成這個關卡。
       courseC_PlayLab_events_challenge1_authored_hint:
-        courseC_PlayLab_events_challenge_a: '試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
-
-'
+        courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_PlayLab_events_challenge1_2018_authored_hint:
-        courseC_PlayLab_events_challenge_a: '試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
-
-'
+        courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_PlayLab_events_challenge1_2019_authored_hint:
-        courseC_PlayLab_events_challenge_a: '試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
-
-'
+        courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
       courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
         courseC_PlayLab_events_challenge_a: 在積木上的這二個值可以讓你將角色在舞台間移動，你可以輸入 0 到 400 間的數字。
       courseC_artist_loops5_authored_hint:
@@ -3432,7 +3556,7 @@ zh-TW:
           </block>
           </xml>
       courseC_artist_loops6_authored_hint:
-        courseC_artist_loops6_a: |
+        courseC_artist_loops6_a: |-
           試試這朵三角形樣式的花朵：
           <img src="https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png" width="150px" />
 
@@ -3442,7 +3566,7 @@ zh-TW:
         courseC_artist_loopsPrePre1a_b: |-
           要向前移動 50 像素，請使用這個積木：
 
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: 如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。
         courseC_artist_prog2_b: 要如何才能轉彎？試試`轉向-右方 90 度`積木。
@@ -3511,9 +3635,9 @@ zh-TW:
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
       courseC_flappy_events1_2018_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_b: 你必須在後面加上`重複`積木。
       courseC_harvester_loops2_2018_authored_hint:
@@ -3752,9 +3876,10 @@ zh-TW:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       courseD_artist_functions4_authored_hint:
         courseD_artist_functions4_a: 試著使用函式！
       courseD_artist_functions5_authored_hint:
@@ -3908,6 +4033,7 @@ zh-TW:
           替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
 
           <xml><block type="controls_repeat">
+
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
@@ -4033,21 +4159,24 @@ zh-TW:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       courseE_artist_functions4_authored_hint:
         courseD_artist_functions4_a: 試著使用函式！
       courseE_artist_functions4_2018_authored_hint:
@@ -4064,9 +4193,9 @@ zh-TW:
       courseE_artist_functions8_authored_hint:
         courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions8_2018_authored_hint:
-        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019_authored_hint:
-        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_a: 別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？
       courseE_artist_ramp11_authored_hint:
@@ -4095,11 +4224,11 @@ zh-TW:
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_a: 這和正方形有什麼類似的地方？又有哪些不同呢？
       courseE_bee_concept1_authored_hint:
-        courseE_bee_concept1_b: 有沒有*重複*的積木規律的執行著？
+        courseE_bee_concept1_b: 有沒有_重複_的積木規律的執行著？
       courseE_bee_concept1_2018_authored_hint:
-        courseE_bee_concept1_b: 有沒有*重複*的積木規律的執行著？
+        courseE_bee_concept1_b: 有沒有_重複_的積木規律的執行著？
       courseE_bee_concept1_2019_authored_hint:
-        courseE_bee_concept1_b: 有沒有*重複*的積木規律的執行著？
+        courseE_bee_concept1_b: 有沒有_重複_的積木規律的執行著？
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: 看看`當條件為`迴圈在這會不會有幫助？
         courseE_bee_concept2_c: 在每個路徑的最後，蜜蜂應該轉哪個方向？
@@ -4177,6 +4306,7 @@ zh-TW:
           替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
 
           <xml><block type="controls_repeat">
+
           <title name="TIMES">4</title>
           <statement name="DO">
           <block type="maze_moveForward"/>
@@ -4330,7 +4460,7 @@ zh-TW:
         courseF_artist_for_challenge2_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為
           255、G（Green，綠）的值為 `counter`、B（Blue，藍）的值為 `255 - counter`。
         courseF_artist_for_challenge2_b: 這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。
-        courseF_artist_for_challenge2_d: |
+        courseF_artist_for_challenge2_d: |-
           **解決方案：**
 
           ![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)
@@ -4362,13 +4492,13 @@ zh-TW:
       courseF_artist_fwp9_authored_hint:
         courseF_artist_fwp9_a: |-
           試試底下的這些圖案。
-          ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
+          ![](<https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png>)
       courseF_artist_fwp9_2018_authored_hint:
         courseF_artist_fwp9_a: |-
           試試底下的這些圖案。
-          ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
+          ![](<https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png>)
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: '這是一系列的八邊形，計數 `counter` 使用了 `sides` ，並當作每個形狀的邊長。 '
         courseF_artist_fwp_challenge1_c: '每個八邊形都是由每次的循環構成，迴圈的計數方式是從 200 算到 2，間隔數是
           2。 '
@@ -4379,7 +4509,7 @@ zh-TW:
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: '這是一系列的八邊形，計數 `counter` 使用了 `sides` ，並當作每個形狀的邊長。 '
         courseF_artist_fwp_challenge1_c: '每個八邊形都是由每次的循環構成，迴圈的計數方式是從 200 算到 2，間隔數是
           2。 '
@@ -4388,7 +4518,7 @@ zh-TW:
         courseF_artist_fwp_challenge1_f: |-
           **解決方案：**
 
-          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
+          ![Solution Blocks](https://images.code.org/d64a0e22c1db1d98c35b243bca6460ab-image-1469727090121.png)
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: 別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？
       courseF_artist_ramp10_2018_authored_hint:
@@ -4406,9 +4536,9 @@ zh-TW:
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2018_authored_hint:
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019_authored_hint:
-        courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables7_authored_hint:
         courseF_artist_variables7_c: 要左轉 120 度才能做出三角形的角。
       courseF_artist_variables7_2018_authored_hint:
@@ -4418,17 +4548,17 @@ zh-TW:
       courseF_artist_variablesFP_authored_hint:
         courseF_artist_variablesFP_a: |-
           試試下方的三個圖案。
-          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
       courseF_artist_variablesFP_2018_authored_hint:
         courseF_artist_variablesFP_a: |-
           試試下方的三個圖案。
-          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
       courseF_artist_variablesFP_2019_authored_hint:
         courseF_artist_variablesFP_a: |-
           試試下方的三個圖案。
-          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
       courseF_artist_variables_4_authored_hint:
-        courseF_artist_variables_4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_a: '變數非常有用，因為你每循環一次就可以加一個數值上去。 '
         courseF_artist_variables_challenge1_b: 這個關卡有個畫出多邊形的迴圈，一個用來重複多邊形 `sides` 次，另一個在
@@ -4555,7 +4685,6 @@ zh-TW:
 
           添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
 
-
           <xml>
             <block type="procedures_defnoreturn" editable="false">
               <mutation/>
@@ -4669,7 +4798,7 @@ zh-TW:
         2-3_Artist_Debugging_8_a: |-
           我的形狀重複了幾次？
 
-          形狀 *應該* 要重複幾次？
+          形狀 _應該_ 要重複幾次？
 
           怎樣在你的程式裡做出對應的改變？
       grade2_PuppyLoops_3_authored_hint:
@@ -4795,9 +4924,10 @@ zh-TW:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           你的程式應該要：
-          - 使用函式
-          - 向前移動 100 + 75 像素
-          - 使用函式
+
+          -   使用函式
+          -   向前移動 100 + 75 像素
+          -   使用函式
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: 每個六邊形的邊長都是 40 像素。
         Course_4_SCF_1_b: 每個六邊形之間的水平距離是 120 像素。
@@ -4902,7 +5032,8 @@ zh-TW:
 
           這些問題是你每次在使用`計數`迴圈要思考的。
       grade5_artist_for_loops8_authored_hint:
-        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\r\n使用運算類別積木，並輸入 360 除以邊數來產生圖形要轉向的角度。 "
+        Course_4_Artist_For_Loops_11_a: "每個圖形之後轉向的角度都會改變！\n\\\r\n使用運算類別積木，並輸入 360
+          除以邊數來產生圖形要轉向的角度。 "
       grade5_artist_for_loops9_authored_hint:
         Course_4_Artist_For_Loops_11a_a: '360 除以多邊形的邊數，就是你要轉向的度數。 '
         Course_4_Artist_For_Loops_11a_b: '每一次你需要向前移動，共 10 次。移動的長度相當於多邊形的邊數。 '

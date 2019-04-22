@@ -210,6 +210,7 @@ en:
       CSD U2 lists map: Lists in HTML
       CSD U2 lists map_2018: Lists in HTML
       CSD U2 lists map_2019: Lists in HTML
+      CSD U2 publish video: Publishing Your Website
       CSD U2L01 TFMD_2018: Lesson Overview
       CSD U2L01 TFMD_2019: Lesson Overview
       CSD U2L02 TFMD_2018: Lesson Overview
@@ -275,6 +276,7 @@ en:
       CSD U3 Entertainment Sample 4: Sprite Scenes
       CSD U3 Entertainment Sample 4_2018: Sprite Scenes
       CSD U3 Entertainment Sample 4_2019: Sprite Scenes
+      CSD U3 Functions Call Function_2019: 'Video: Calling and Defining Functions'
       CSD U3 Interactive Card Exemplar_2018: Interactive Card
       CSD U3 Interactive Card Exemplar_2019: Interactive Card
       CSD U3 Keyboard Input Challenge-2018: 'Challenge: Add More Inputs'
@@ -380,10 +382,12 @@ en:
       CSD U3 finishing touches: Project - Finishing Touches
       CSD U3 finishing touches_2018: Project - Finishing Touches
       CSD U3 finishing touches_2019: Project - Finishing Touches
+      CSD U3 function video: 'Video: Functions'
       CSD U3 functions map: Functions
       CSD U3 functions review: Functions Review
       CSD U3 functions review_2018: Functions Review
       CSD U3 functions review_2019: Functions Review
+      CSD U3 if else predict: Predict
       CSD U3 interactions map: Sprite Interactions Review
       CSD U3 interactions map_2018: Sprite Interactions Review
       CSD U3 interactions map_2019: Sprite Interactions Review
@@ -1147,9 +1151,12 @@ en:
       U5 AP Practice Create Process: "(new) AP Practice Response - Describe Your Process"
       U5 AP Practice Create Process_2018: "(new) AP Practice Response - Describe Your Process"
       U5 AP Practice Create Process_2019: "(new) AP Practice Response - Describe Your Process"
+      U5 L01 Introduction to Lists: 'Conditionals: Boolean Expressions'
+      U5 L09 Traversals Exit Ticket: Check Your Understanding
       U5-AP-Algorithm-Does-It-Count: AP Practice Response - Score the Response
       U5-AP-Algorithm-Does-It-Count_2018: AP Practice Response - Score the Response
       U5-AP-Algorithm-Does-It-Count_2019: AP Practice Response - Score the Response
+      U7 L01 More with Functions: 'Conditionals: Boolean Expressions'
       Using Accelerometer Events_2018: Using Accelerometer Events
       Using Accelerometer Events_2019: Using Accelerometer Events
       'Video: Intro to CSS Part 2_2018': 'Video: Intro to CSS Part 2'
@@ -1299,3 +1306,6 @@ en:
       okToDelete: Tester
       scrat_loops_C-F_video: Loops in Ice Age Video
       scrat_loops_C-F_video_2019: Loops in Ice Age Video
+      timeforcs_demo_c1_5_journal: Evaluate
+      timeforcs_demo_sl_3: How to Make a Sprite
+      timeforcs_demo_spritelab_1: Sprite Lab Example Project

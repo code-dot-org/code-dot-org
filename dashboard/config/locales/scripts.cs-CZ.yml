@@ -1616,6 +1616,8 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Skládání písniček
         express-2019:
           stages:
             Relay Programming:
@@ -1716,3 +1718,11 @@ cs:
           stages:
             While Loops:
               name: While (zatímco) cykly
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            Building a Foundation:
+              name: Budování nadace

@@ -294,7 +294,8 @@ EOS
 
   test 'updating ContractMatch level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+    # mock file so we don't actually write a file
+    File.expects(:write).twice # once for create and once for save
 
     update_contract_match
   end

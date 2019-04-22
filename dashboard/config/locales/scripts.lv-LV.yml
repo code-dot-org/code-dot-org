@@ -1271,6 +1271,8 @@ lv:
               name: Internets
             Crowdsourcing:
               name: Pūļa ieguve
+            Songwriting:
+              name: Dziesmu rakstīšana
         express-2019:
           stages:
             Relay Programming:
@@ -1357,3 +1359,11 @@ lv:
           stages:
             While Loops:
               name: Nosacījuma cikli
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Building a Foundation:
+              name: Veidot pamatus

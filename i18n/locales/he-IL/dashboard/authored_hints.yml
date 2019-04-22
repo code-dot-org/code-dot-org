@@ -1,3 +1,4 @@
+---
 he:
   data:
     authored_hints:
@@ -16,7 +17,7 @@ he:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: כדי לסיים את ציור הבית, כל שצריך לעשות הוא לצייר ריבוע!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'כדי לייצר את הזוויות הקטנות הללו, אתה צריך לפנות *רחוק יותר* בכל פעם יותר מאשר עשית זאת עם ריבוע.   '
+        2-3_Artist_6_a: 'כדי לייצר את הזוויות הקטנות הללו, אתה צריך לפנות _רחוק יותר_ בכל פעם יותר מאשר עשית זאת עם ריבוע.   '
         2-3_Artist_6_b: מכיוון שאני כבר פונה לימין, קל יותר להתחיל על ידי תנועה קדימה ואז פניות שמאלה כדי ליצור את המשולש.
         2-3_Artist_6_c: כל צד של המשולש זהה באורכו לכל צד של המרובע...100 פיקסלים!
       2-3 Artist 7_authored_hint:
@@ -29,11 +30,17 @@ he:
         step_size: כל צעד הוא ברוחב 100 פיקסלים ובגובה 100 פיקסלים.
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: המעוין הזה הוא בסך הכל מרובע המוטה ב45 מעלות.
-        2-3_Artist_9_b: |-
-          אל תשכח לסובב את האומן 45 מעלות שמאלה לפני תחילת ציור המרובע ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+        2-3_Artist_9_b: אל תשכח לסובב את האומן 45 מעלות שמאלה לפני תחילת ציור המרובע ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: זכור שלוח הבקרה רוחבו 10 פיקסלים...כך שיש להוסיף 10 לכל ערך שתשנה.
-        2-3_Artist_Debugging_10_b: "**ניסוי וטעייה עם בסדר גמור כאן!**\n\nהתחל בשינוי מספר יחיד בכל פעם.\n\nאילו מספרים מבצעים איזו פעולה?\n\nאם הלכת לאיבוד, לחץ על \"התחל מחדש\" וכל הקוד יאופס מחדש."
+        2-3_Artist_Debugging_10_b: |-
+          **ניסוי וטעייה עם בסדר גמור כאן!**
+
+          התחל בשינוי מספר יחיד בכל פעם.
+
+          אילו מספרים מבצעים איזו פעולה?
+
+          אם הלכת לאיבוד, לחץ על "התחל מחדש" וכל הקוד יאופס מחדש.
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'רמז: כל פער קטן הוא באורך 75 פיקסלים.'
       2-3 Artist Debugging 3_authored_hint:
@@ -45,7 +52,7 @@ he:
         2-3_Artist_Debugging_8_a: |-
           כמה פעמים הצורה שלי חזרה על עצמה?
 
-          כמה פעמים על הצורה הזו *צריכה* לחזור על עצמה?
+          כמה פעמים על הצורה הזו _צריכה_ לחזור על עצמה?
 
           היכן תוכל לשנות את זה בתוכנית?
       2-3 Artist Debugging 9_authored_hint:
@@ -68,19 +75,21 @@ he:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           התוכנית שלך זקוקה:
-          - להשתמש בפונקציה
-          - לזוז קידמה 100 + 75 פיקסלים
-          - להשתמש בפונקציה
+
+          -   להשתמש בפונקציה
+          -   לזוז קידמה 100 + 75 פיקסלים
+          -   להשתמש בפונקציה
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           התוכנית שלך זקוקה:
-          - להשתמש בפונקציה
-          - לזוז קידמה 100 + 75 פיקסלים
-          - להשתמש בפונקציה
+
+          -   להשתמש בפונקציה
+          -   לזוז קידמה 100 + 75 פיקסלים
+          -   להשתמש בפונקציה
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
+        2-3_Artist_Functions_3_a: "-   -   115 + 45 = 160 \\* \\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "* * 115 + 45 = 160 * *"
+        2-3_Artist_Functions_3_a: "-   -   115 + 45 = 160 \\* \\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: האמן צריך להסתובב 120 מעלות בין כל ריבוע כדי להשלים את העיצוב הזה.
       2-3 Artist Functions 4_authored_hint:
@@ -136,7 +145,7 @@ he:
         2-3_Artist Loops_New_12_c: האמן יצטרך לפנות ימינה רק ב60 מעלות כדי ליצור פינה רחבה.
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "בסיום כל יהלום, האמן כבר נמצא עם הפנים לכיוון הנכון כדי להתחיל את היהלום הבא. \n\nבגלל זה, אין צורך להוסיף בלוק של \"פנה שמאלה\" עודף לפני שהוא מתחיל שוב."
-        2-3_Artist_Loops_New_13_b: "כדי לייצר כל יהלום האמן צריך:\n- לזוז\n- לפנות ב120 מעלות\n- לזוז\n- לפנות ימינה ב60 מעלות \n\nואז לעשות את כל זה שוב!"
+        2-3_Artist_Loops_New_13_b: "כדי לייצר כל יהלום האמן צריך:\n\n-   לזוז\n-   לפנות ב120 מעלות\n-   לזוז\n-   לפנות ימינה ב60 מעלות \n\nואז לעשות את כל זה שוב!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: האמן צריך להסתובב בזוית 45 מעלות ימינה לפני שהוא מתחיל לצייר.
         2-3_Artist_Loops_New_9_b: הצורה V זה בסה"כ רק חציר ריבוע. מה צריך להיות בקוד כדי לצייר חצי ריבוע?
@@ -159,20 +168,7 @@ he:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: מתקשה בלהבין כיצד להוריד את הבלוקים למטה? נסה להתייחס לפרח האדום בדיוק כמו לפרח הסגול!
         2-3_Bee_Conditionals_14_b: אם הפרח האדום היה סגול, היית מצליח לחשוב על דרך כיצד להשתמש בלולאת ה"חזור" כדי לחסוך בכמות הבלוקים בקוד?
-        2-3_Bee_Conditionals_14_c: |-
-          נסה לחלק את זה ל2 חלקים שונים: 
-
-
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1) הבא צוף 3 פעמים
-           - זוז קדימה 5 פעמים
-           - בדוק אם מדובר בצוף, אם כן: קח אותו
-           - הסתובב שמאלה
-
-          2) צור דבש
-           - זוז קדימה פעם אחת
-           - צור 2 דבש
+        2-3_Bee_Conditionals_14_c: "נסה לחלק את זה ל2 חלקים שונים: \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  הבא צוף 3 פעמים\n\n2.  זוז קדימה 5 פעמים\n\n3.  בדוק אם מדובר בצוף, אם כן: קח אותו\n\n4.  הסתובב שמאלה\n\n5.  צור דבש\n\n6.  זוז קדימה פעם אחת\n\n7.  צור 2 דבש"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'זכור: פרחים סגולים יכולים להכיל או 0 או 1 צופים והם יכולים להשתנות בכל פעם שתפעיל את התוכנית.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -192,7 +188,10 @@ he:
       2-3 Bee Functions 8_authored_hint:
         2-3_Bee_Functions_8_a: "האם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך כל פעם צעד אחד. \n\nהוסף כמה בלוקים ואז נסה אותה. הוסף בלוק נוסף ואז נסה שוב. מה מאוד אתה תגיע לפתרון!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        2-3_Bee_Functions_8_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
         2-3_Bee_Functions_8_b: |-
           זכור כי עליך לבנות את הקוד שלך בתוך בלוק הפונקציה הירוק.
 
@@ -221,7 +220,10 @@ he:
         2-3_Maze_1_a: כדי להשתמש בבלוק "זוז קדימה", גרור אותו מאזור סרגל הכלים לתוך סביבת העבודה וחבר אותו לבלוק "כשהריצה מתחילה".
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
-        2-3_Maze_16_b: "כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.\n\nחבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!"
+        2-3_Maze_16_b: |-
+          כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.
+
+          חבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: ישנן 2 דרכים לפתור את החידה הזו!
       2-3 Maze Loops 17_authored_hint:
@@ -256,14 +258,18 @@ he:
         4-5_Artist_5_a: |-
           ניסוי וטעיה זוהי שיטה מעולה, אבל תוכל לפתור את החידה ע"י חילוק את זווית 90 המעלות לשלושה חלקים.
 
-          **90 / 3 = _____**
+          **90 / 3 = **\_****
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'מהי הזווית הקטנה ביותר? באיזו זווית על האמן לעמוד? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "אורך כל אחד מהצדדים הארוכים הוא 240 פיקסלים. זה אומר שסך האורך של שני הצדדים הקצרים חייב להסתכם ל:\n\n**800 - 240 - 240 = 320**\n\nכמה זה  **320/2** ? "
-        4-5_Artist_8_b: "לציור זה ניתן להגיע ב-2 דרכים!\n- ציור 2 מלבנים שהם באורך **120** ובגובה **160** עם צד אחד חופף.\n- ציור מלבן אחד שהוא באורך **240** ובגובה **160**, ואז להוסיף קוד בודד באמצע."
+        4-5_Artist_8_b: |-
+          לציור זה ניתן להגיע ב-2 דרכים!
+
+          -   ציור 2 מלבנים שהם באורך **120** ובגובה **160** עם צד אחד חופף.
+          -   ציור מלבן אחד שהוא באורך **240** ובגובה **160**, ואז להוסיף קוד בודד באמצע.
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: "כאשר משולש הוא שווה-צלעות, כל הצדדים וכל הזוויות הם בגודל שווה.\n"
+        4-5_Artist_9_a: כאשר משולש הוא שווה-צלעות, כל הצדדים וכל הזוויות הם בגודל שווה.
         4-5_Artist_9_b: עליך לצייר 3 משולשים בגודל זהה. אל תשכח לקפוץ למיקום החדש אחרי כל ציור כל אחד מהם.
       4-5 Artist Assessment 1_authored_hint:
         4-5_Artist_Assessment_1_a: עליך לצייר את המשולש החיצוני כדי להשלים את החידה הזו.
@@ -300,7 +306,7 @@ he:
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "נסה לעקוב אחר הדרך בעזרת האצבע שלך. \nהאם זו הדרך הקצרה ביותר שניתן למצוא?"
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "** רוצה לצמצם את הקוד שלך כדי שיהיה הכי קצר שניתן?** \n\nחפש אחר תבניות בקוד שלך. האם אתה רואה חלקים שחוזרים על עצמם? נסה לשים לולאה מסביב לחלק שחוזר על עצמו!"
+        4-5_Maze_7_a: "\\*\\* רוצה לצמצם את הקוד שלך כדי שיהיה הכי קצר שניתן?\\*\\* \n\nחפש אחר תבניות בקוד שלך. האם אתה רואה חלקים שחוזרים על עצמם? נסה לשים לולאה מסביב לחלק שחוזר על עצמו!"
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 6_authored_hint:
@@ -327,7 +333,10 @@ he:
       Artist Inspiration_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
-        specifics: "לולאת \"עם\" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.\n\nהבלוק \"הגדר אלפא\" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל."
+        specifics: |-
+          לולאת "עם" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.
+
+          הבלוק "הגדר אלפא" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל.
         after: לאחר שתסיים עם כל "עלעל", אל תשכח ל-"זוז קדימה" 20 פיקסלים לפני שתבצע סיבוב ב60 מעלות.
         solution: |-
           **פתרון**
@@ -344,8 +353,8 @@ he:
         Course_4_Artist_12_a: 'כל צורה החוזרת על עצמה היא שילוב של **חצי משושה**, ולאחר מכן **שני שלישים של משולש**. '
         Course_4_Artist_12_b: 'הצורה המצוירת דומה מאוד כמו לזו בחידה הקודמת למעט כך שחצי המשושה הוא מעט גדול יותר. '
         Course_4_Artist_12_c: |-
-          1) שלוש הקווים הראשונים הם באורך 60 פיקסלים וצריך לסובב את האמן ב-60 מעלות.
-          2) שני הקווים הבאים הם באורך 80 פיקסלים ועליך לסובב את האמן ב-120 מעלות.
+          1.  שלוש הקווים הראשונים הם באורך 60 פיקסלים וצריך לסובב את האמן ב-60 מעלות.
+          2.  שני הקווים הבאים הם באורך 80 פיקסלים ועליך לסובב את האמן ב-120 מעלות.
         Course_4_Artist_12_d: |-
           **פתרון:**
 
@@ -411,7 +420,10 @@ he:
 
           כמה פעמים נכנס 3 בתוך 360?
       Course 4 Artist 9_authored_hint:
-        Course_4_Artist_9_a: "רוצה לדעת בכמה להסתובב?\n\nכמה זה 360 לחלק ב10?"
+        Course_4_Artist_9_a: |-
+          רוצה לדעת בכמה להסתובב?
+
+          כמה זה 360 לחלק ב10?
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: הקוד משתמש בלולאות "עבור". אחד סופר מעלה מ-1 עד 8, השני סופר מטה מ-8 עד 1.
         Course_4_Artist_Binary_Free_Play_2b_b: כל לולאת 'עבור' צריכה לבצע שלושה דברים. בהתחלה היא מציירת את החלק השמאלי עם 1, אז היא מייצרת את החלק האמצעי עם 0 ובחלק האחרון מציירת שוב 1 בחלק הימני.
@@ -428,7 +440,12 @@ he:
       Course 4 Artist For Loops 3_authored_hint:
         Course_4_Artist_For_Loops_3_a: בכדי לוודא שלולאת ה-for מובילה את התנועה, וודאו שאתם משתמשים ב-counter למרחק.
       Course 4 Artist For Loops 4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
+        Course_4_Artist_For_Loops_4_a: |-
+          **מה הספר הקטן ביותר שתצטרכו?
+          מה המספר הגדול ביותר?
+          כמה יש להוסיף כל פעם?**
+
+          אלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'.
       Course 4 Artist For Loops Challenge_authored_hint:
         Course_4_Artist_For_Loops_Challenge_a: לצורה הגדולה ביותר יש 19 צדדים. לקטנה ביותר יש רק שתיים.
         Course_4_Artist_For_Loops_Challenge_b: הלולאה 'עבור' מונה מספרים בעליה בקפיצות של 2 בכל פעם.
@@ -439,75 +456,198 @@ he:
         Course_4_Artist_For_Loops_inspire_a: הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.
         Course_4_Artist_For_Loops_inspire_b: נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.
         Course_4_Artist_For_Loops_inspire_c: ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.
-        Course_4_Artist_For_Loops_inspire_d: "**פתרון**\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">מינוס</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">סופר</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">זוז קדימה</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">פנה ימינה</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">חילוק</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">סופר</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        Course_4_Artist_For_Loops_inspire_d: |-
+          **פתרון**
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for_counter" inline="true" movable="false">
+                <mutation counter="counter"></mutation>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">10</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="math_arithmetic" inline="true">
+                          <title name="OP">מינוס</title>
+                          <value name="A">
+                            <block type="variables_get">
+                              <title name="VAR">סופר</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <title name="NUM">1</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="draw_move" inline="true">
+                          <title name="DIR">זוז קדימה</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">40</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" inline="true">
+                              <title name="DIR">פנה ימינה</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" inline="true">
+                                  <title name="OP">חילוק</title>
+                                  <value name="A">
+                                    <block type="math_number">
+                                      <title name="NUM">360</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="variables_get">
+                                      <title name="VAR">סופר</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">MINUS</title>
+                              <value name="A">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move" inline="true">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">40</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn" inline="true">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_arithmetic" inline="true">
+                                      <title name="OP">DIVIDE</title>
+                                      <value name="A">
+                                        <block type="math_number">
+                                          <title name="NUM">360</title>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <block type="variables_get">
+                                          <title name="VAR">counter</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: התחילו עם הקוד מהחידה הקודמת והוסיפו 'פנה ימינה' בשלוש מעלות לתוך הלולאה.
         Course_4_Artist_Functions_Inspiration_b: נסו לפנות ביותר מ90 מעלות מחוץ ל'לולאת חזרה', אבל עדיין בתוך 'לולאת הfor'.
         Course_4_Artist_Functions_Inspiration_c: |-
-          * * פתרון: * *
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">מונה</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          -<title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
+          -   -   פתרון: \* \*
+                  <xml>
+                  <block type="when_run" deletable="false" movable="false">
+                  <next>
+                  <block type="controls_for_counter" inline="true">
+                  <mutation counter="counter"></mutation>
+                  <value name="FROM">
+                  <block type="math_number">
+                  <title name="NUM">1</title>
+                  </block>
+                  </value>
+                  <value name="TO">
+                  <block type="math_number">
+                  <title name="NUM">14</title>
+                  </block>
+                  </value>
+                  <value name="BY">
+                  <block type="math_number">
+                  <title name="NUM">1</title>
+                  </block>
+                  </value>
+                  <statement name="DO">
+                  <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                  <block type="colour_random"/>
+                  </value>
+                  <next>
+                  <block type="controls_repeat_ext" inline="true">
+                  <value name="TIMES">
+                  <block type="variables_get">
+                  <title name="VAR">מונה</title>
+                  </block>
+                  </value>
+                  <statement name="DO">
+                  <block type="procedures_callnoreturn">
+                  <mutation name="draw a square 20"></mutation>
+                  <next>
+                  <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">20</title>
+                  <next>
+                  <block type="draw_turn_by_constant">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE">3</title>
+                  </block>
+                  </next>
+                  </block>
+                  </next>
+                  </block>
+                  </statement>
+                  <next>
+                  <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  -<title name="VALUE">100</title>
+                  </block>
+                  </next>
+                  </block>
+                  </next>
+                  </block>
+                  </statement>
+                  </block>
+                  </next>
+                  </block>
+                  </xml>
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: חלק מהלמידה וההבנה כיצד להשתמש בפונקציות היא ההבנה לאיזה מהן אתה נדרש ולאיזה מהן אתה לא זקוק.
         Course_4_Artist_Functions_challenge_b: השתמשו בלולאת for ואז השתמשו במשתנה counter בתוך לולאת repeat מקוננת.
@@ -692,13 +832,17 @@ he:
           </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
-        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_b: |-
+          לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).
+          לאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית.
         Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
       Course 4 Artist Vars 6_authored_hint:
         Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       Course 4 SCF 1_authored_hint:
         Course_4_SCF_1_a: לכל משושה אורך כל פאה הוא 40 פיקסלים.
         Course_4_SCF_1_b: יש לקפוץ 120 פיקסלים בין כל משושה ומשושה בכל שורה אופקית.
+      Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Course E MC Conditionals1_authored_hint:
         mc_9_a: האם אתם פונים לכיוון הנכון? פקודת ה-`השמד בלוק` חוצבת את הלבנה שנמצאת מולכם.
         mc_9_b: הכתמים השחורים שעל הקיר הם פחם! השתמשו בפקודת `השמד בלוק` עליהם כדי לכרות את הפחם.
@@ -706,34 +850,37 @@ he:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * ודאו שהרקדן מופיע על גבי המסך.
 
-          *השלב הזה מסתיים אחרי 4 תיבות.*
+          -   ודאו שהרקדן מופיע על גבי המסך.
+
+          _השלב הזה מסתיים אחרי 4 תיבות._
         challenges: |-
           **אתגרי רשות**
-          * בחרו שיר אחר לנגן.
-          * בחרו רקדן אחר שנראה כמו מוּס!
-          * תנו שם חדש לרקדן שלכם.
+
+          -   בחרו שיר אחר לנגן.
+          -   בחרו רקדן אחר שנראה כמו מוּס!
+          -   תנו שם חדש לרקדן שלכם.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          -   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
+          -   אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -743,62 +890,63 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים שיהיו לכם לפחות שני רקדנים.
+          -   אתם צריכים שיהיו לכם לפחות שני רקדנים.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *הוסיפו רקדן שלישי (או כמה שבא לכם!)
-          * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
+          \*הוסיפו רקדן שלישי (או כמה שבא לכם!)
+
+          -   גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שני רקדנים חייבים להיות בגודל שונה מ-100.
+          -   שני רקדנים חייבים להיות בגודל שונה מ-100.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
+          \*התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שנו את הגוון של רקדן אחד לפחות.
+          -   שנו את הגוון של רקדן אחד לפחות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
+          -   המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **איך  עוברים את השלב הזה?**
 
-          * השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
+          -   השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?\n\n"
+        voyage_aquatic_10a: רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?
       CourseE_HOC 2018 Level_7a_authored_hint:
         aquatic7: אתם יכולים להשתמש בבלוק "אִם יש נתיב" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה.
       CourseE_HOC 2018 Level_9b_authored_hint:
@@ -807,9 +955,9 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -819,9 +967,9 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -830,45 +978,50 @@ he:
       Dance_Party_01_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * ודאו שהרקדן מופיע על גבי המסך.
 
-          *השלב הזה מסתיים אחרי 4 תיבות.*
+          -   ודאו שהרקדן מופיע על גבי המסך.
+
+          _השלב הזה מסתיים אחרי 4 תיבות._
         challenges: |-
           **אתגרי רשות**
-          * בחרו שיר אחר לנגן.
-          * בחרו רקדן אחר שנראה כמו מוּס!
-          * תנו שם חדש לרקדן שלכם.
+
+          -   בחרו שיר אחר לנגן.
+          -   בחרו רקדן אחר שנראה כמו מוּס!
+          -   תנו שם חדש לרקדן שלכם.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * ודאו שהרקדן מופיע על גבי המסך.
 
-          *השלב הזה מסתיים אחרי 4 תיבות.*
+          -   ודאו שהרקדן מופיע על גבי המסך.
+
+          _השלב הזה מסתיים אחרי 4 תיבות._
         challenges: |-
           **אתגרי רשות**
-          * בחרו שיר אחר לנגן.
-          * בחרו רקדן אחר שנראה כמו מוּס!
-          * תנו שם חדש לרקדן שלכם.
+
+          -   בחרו שיר אחר לנגן.
+          -   בחרו רקדן אחר שנראה כמו מוּס!
+          -   תנו שם חדש לרקדן שלכם.
       Dance_Party_02_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          -   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_03_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
+          -   אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       Dance_Party_04_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -878,98 +1031,102 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים שיהיו לכם לפחות שני רקדנים.
+          -   אתם צריכים שיהיו לכם לפחות שני רקדנים.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *הוסיפו רקדן שלישי (או כמה שבא לכם!)
-          * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
+          \*הוסיפו רקדן שלישי (או כמה שבא לכם!)
+
+          -   גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       Dance_Party_08_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שני רקדנים חייבים להיות בגודל שונה מ-100.
+          -   שני רקדנים חייבים להיות בגודל שונה מ-100.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
+          \*התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
       Dance_Party_09_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שנו את הגוון של רקדן אחד לפחות.
+          -   שנו את הגוון של רקדן אחד לפחות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_1_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * ודאו שהרקדן מופיע על גבי המסך.
 
-          *השלב הזה מסתיים אחרי 4 תיבות.*
+          -   ודאו שהרקדן מופיע על גבי המסך.
+
+          _השלב הזה מסתיים אחרי 4 תיבות._
         challenges: |-
           **אתגרי רשות**
-          * בחרו שיר אחר לנגן.
-          * בחרו רקדן אחר שנראה כמו מוּס!
-          * תנו שם חדש לרקדן שלכם.
+
+          -   בחרו שיר אחר לנגן.
+          -   בחרו רקדן אחר שנראה כמו מוּס!
+          -   תנו שם חדש לרקדן שלכם.
       Dance_Party_10_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
+          -   המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_11_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_11b_authored_hint:
         validation: |-
           **איך  עוברים את השלב הזה?**
 
-          * השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
+          -   השתמשו בבלוק ה-"כאשר החץ השמאלי לחוץ" כדי לגרום לרובוט לעשות צעד ריקוד כשאתם לוחצים עליו.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_2_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          -   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Dance_Party_3_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
+          -   אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       Dance_Party_4_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -979,35 +1136,36 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * הרקדן שלכם חייב לרקוד צעדים שונים לאורך כל 12 התיבות הראשונות של השיר.
+          -   הרקדן שלכם חייב לרקוד צעדים שונים לאורך כל 12 התיבות הראשונות של השיר.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       Dance_Party_6_authored_hint:
         challenges: |-
           **אתגר רשות**
 
-          *הוסיפו רקדן שלישי (או כמה שבא לכם!)
-          * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
+          \*הוסיפו רקדן שלישי (או כמה שבא לכם!)
+
+          -   גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       Dance_Party_8_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שני רקדנים חייבים להיות בגודל שונה מ-100.
+          -   שני רקדנים חייבים להיות בגודל שונה מ-100.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
+          \*התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
       Dance_Party_9_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שנו את הגוון של רקדן אחד לפחות.
+          -   שנו את הגוון של רקדן אחד לפחות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?\n\n"
+        voyage_aquatic_10a: רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?
       HOC 2018 Level_7a_authored_hint:
         aquatic7: אתם יכולים להשתמש בבלוק "אִם יש נתיב" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה.
       HOC 2018 Level_9b_authored_hint:
@@ -1015,34 +1173,37 @@ he:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * ודאו שהרקדן מופיע על גבי המסך.
 
-          *השלב הזה מסתיים אחרי 4 תיבות.*
+          -   ודאו שהרקדן מופיע על גבי המסך.
+
+          _השלב הזה מסתיים אחרי 4 תיבות._
         challenges: |-
           **אתגרי רשות**
-          * בחרו שיר אחר לנגן.
-          * בחרו רקדן אחר שנראה כמו מוּס!
-          * תנו שם חדש לרקדן שלכם.
+
+          -   בחרו שיר אחר לנגן.
+          -   בחרו רקדן אחר שנראה כמו מוּס!
+          -   תנו שם חדש לרקדן שלכם.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          -   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          _השלב הזה מסתיים אחרי 8 תיבות._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
+          -   אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
+          -   אתם צריכים לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר.
 
-          *השלב הזה מסתיים אחרי 10 תיבות.*
+          _השלב הזה מסתיים אחרי 10 תיבות._
         challenges: |-
           **אתגר רשות**
 
@@ -1052,58 +1213,62 @@ he:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * הרקדן שלכם חייב לרקוד צעדים שונים לאורך כל 12 התיבות הראשונות של השיר.
+          -   הרקדן שלכם חייב לרקוד צעדים שונים לאורך כל 12 התיבות הראשונות של השיר.
 
-          *השלב הזה מסתיים אחרי 12 תיבות.*
+          _השלב הזה מסתיים אחרי 12 תיבות._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **אתגר רשות**
 
-          *הוסיפו רקדן שלישי (או כמה שבא לכם!)
-          * גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
+          \*הוסיפו רקדן שלישי (או כמה שבא לכם!)
+
+          -   גרמו לכל הרקדנים שלכם לבצע צעדים אחרים בנקודות שונות במהלך השיר.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שני רקדנים חייבים להיות בגודל שונה מ-100.
+          -   שני רקדנים חייבים להיות בגודל שונה מ-100.
 
-          *השלב הזה מסתיים אחרי 6 תיבות.*
+          _השלב הזה מסתיים אחרי 6 תיבות._
         challenges: |-
           **אתגר רשות**
 
-          *התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
+          \*התנסו בשינוי המאפיינים האחרים (רוחב, גובה, סיבוב וכו'...)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * שנו את הגוון של רקדן אחד לפחות.
+          -   שנו את הגוון של רקדן אחד לפחות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
+          -   המאפיינים עבור שני רקדנים או יותר חייבים להשתנות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       HOC Dance make group_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
 
-          * פשוט היו יצירתיים!
+          -   פשוט היו יצירתיים!
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Inspirational Artwork_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
-        specifics: "לולאת \"עם\" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.\n\nהבלוק \"הגדר אלפא\" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל."
+        specifics: |-
+          לולאת "עם" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.
+
+          הבלוק "הגדר אלפא" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל.
         after: לאחר שתסיים עם כל "עלעל", אל תשכח ל-"זוז קדימה" 20 פיקסלים לפני שתבצע סיבוב ב60 מעלות.
         solution: |-
           **פתרון**
@@ -1184,10 +1349,10 @@ he:
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: הידעתם שאתם יכולים לשים יותר מפיסת קוד אחת בתוך לולאה? נסו  להציב קרש **וגם** לזוז קדימה בתוך `חזור על` כדי להשלים את החידה הזו.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: כמה פעמים הלולאה הזו רצה? כמה פעמים היא *צריכה* לרוץ?
+        MC_HOC_2017_06_Cole_a: כמה פעמים הלולאה הזו רצה? כמה פעמים היא _צריכה_ לרוץ?
         MC_HOC_2017_06_Cole_b: 'עזרו לסוכן לבנות גשר כל הדרך על פני המים! '
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: כמה פעמים הלולאה הזו רצה? כמה פעמים היא *צריכה* לרוץ?
+        MC_HOC_2017_06_Cole_a: כמה פעמים הלולאה הזו רצה? כמה פעמים היא _צריכה_ לרוץ?
         MC_HOC_2017_06_Cole_b: 'עזרו לסוכן לבנות גשר כל הדרך על פני המים! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: נסו לשים יותר מהוראה אחת בתוך לולאת `חזור על`!
@@ -1247,7 +1412,10 @@ he:
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
-        specifics: "לולאת \"עם\" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.\n\nהבלוק \"הגדר אלפא\" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל."
+        specifics: |-
+          לולאת "עם" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.
+
+          הבלוק "הגדר אלפא" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל.
         after: לאחר שתסיים עם כל "עלעל", אל תשכח ל-"זוז קדימה" 20 פיקסלים לפני שתבצע סיבוב ב60 מעלות.
       New Minecraft Hero Project_authored_hint:
         MC_HOC_2017_13_Cole_a: נסו לגרום לסוכן לבנות כמה גשרים כדי שאלכס או סטיב יוכלו לחצות את גבולות המפה.
@@ -1264,22 +1432,22 @@ he:
         mc_8_b: השתמשו בלולאות `חזור שוב` כדי לפשט את הקוד שלכם.
         mc_8_c: המטרה שלכם היא להיכנס לבית דרך דלת הכניסה, הנמצאת בצידו העליון של המסך.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: 'אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.  '
+        mc_2_a: אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.
         mc_2_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: 'אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.  '
+        mc_2_a: אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.
         mc_2_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld Chop Tree_2019_authored_hint:
-        mc_2_a: 'אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.  '
+        mc_2_a: אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.
         mc_2_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld Chop Trees_authored_hint:
-        mc_4_a: 'אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?  '
+        mc_4_a: אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?
         mc_4_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: 'אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?  '
+        mc_4_a: אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?
         mc_4_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld Chop Trees_2019_authored_hint:
-        mc_4_a: 'אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?  '
+        mc_4_a: אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?
         mc_4_b: פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: לחצו על החץ שעל בלוק ה`הנח`כדי לבחור מה ברצונכם למקם.
@@ -1294,24 +1462,24 @@ he:
         mc_6_b: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
         mc_6_c: אתם יכולים להניח יותר מבלוק אחד בתוך לולאת `חזור שוב`.
       Overworld Move to Sheep_authored_hint:
-        mc_1_a: 'בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.  '
-        mc_1_b: 'ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-`כשהריצה מתחילה`.  '
+        mc_1_a: בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.
+        mc_1_b: ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-'התחל ריצה'.
       Overworld Move to Sheep_2018_authored_hint:
-        mc_1_a: 'בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.  '
-        mc_1_b: 'ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-`כשהריצה מתחילה`.  '
+        mc_1_a: בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.
+        mc_1_b: ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-'התחל ריצה'.
       Overworld Move to Sheep_2019_authored_hint:
-        mc_1_a: 'בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.  '
-        mc_1_b: 'ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-`כשהריצה מתחילה`.  '
+        mc_1_a: בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.
+        mc_1_b: ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-'התחל ריצה'.
       Overworld Place Wall_authored_hint:
-        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה`.
+        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה\`.
         mc_5_b: ודאו ששני הבלוקים נמצאים בתוך לולאת ה-`חזור שוב` כדי להריץ את הקוד יותר מפעם אחת.
         mc_5_c: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       Overworld Place Wall_2018_authored_hint:
-        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה`.
+        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה\`.
         mc_5_b: ודאו ששני הבלוקים נמצאים בתוך לולאת ה-`חזור שוב` כדי להריץ את הקוד יותר מפעם אחת.
         mc_5_c: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       Overworld Place Wall_2019_authored_hint:
-        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה`.
+        mc_5_a: הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה\`.
         mc_5_b: ודאו ששני הבלוקים נמצאים בתוך לולאת ה-`חזור שוב` כדי להריץ את הקוד יותר מפעם אחת.
         mc_5_c: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       Overworld Plant Crops_authored_hint:
@@ -1336,23 +1504,24 @@ he:
         mc_13_a: השתמשו ב-`הנח מסילה` כדי להניח מסילה בריבוע שאתם עומדים עליו.
         mc_13_b: השתמשו בלולאות `חזור שוב` כדי לקצר את הקוד שלכם.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: 'בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  '
-        mc_3_b: 'אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  '
-        mc_3_c: 'אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.  '
+        mc_3_a: בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?
+        mc_3_b: אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.
+        mc_3_c: אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: 'בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  '
-        mc_3_b: 'אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  '
-        mc_3_c: 'אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.  '
+        mc_3_a: בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?
+        mc_3_b: אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.
+        mc_3_c: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       Overworld Shear Sheep_2019_authored_hint:
-        mc_3_a: 'בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  '
-        mc_3_b: 'אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  '
-        mc_3_c: 'אל תפחדו מטעויות! הריצו את הקוד ותראו מה קורה, גם אם עוד לא פתרתם את החידה.  '
+        mc_3_a: בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?
+        mc_3_b: אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.
+        mc_3_c: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       Ryan_Demo_authored_hint:
         validation: |-
           **איך עוברים את השלב הזה?**
-          * הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
 
-          *השלב הזה מסתיים אחרי 8 תיבות.*
+          -   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.
+
+          _השלב הזה מסתיים אחרי 8 תיבות._
       Underground Avoiding Lava_authored_hint:
         mc_11_a: כל הקוד מוכן ומזומן לבדוק האם יש בשטח לבה, ולהתמודד איתה. כל שעליכם לעשות הוא להוסיף בלוק כדי לזוז.
         mc_11_b: האם פקודת ה`זוז קדימה` שהצבתם צריכה להיות בתוך הצהרת ה`אם` - או אחריה?
@@ -1406,22 +1575,33 @@ he:
         aE4alternateB_d: אם הקוד שלך הופך להיות מסורבל ומבלבל, אתה תמיד יכול ללחוץ על כפתור "התחל מחדש" ולנסות שוב!
       aE4_authored_hint:
         aE4_d: אם הקוד שלך הופך להיות מסורבל ומבלבל, אתה תמיד יכול ללחוץ על כפתור "התחל מחדש" ולנסות שוב!
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course2_maze_loops_challenge1_authored_hint:
         courseC_maze_loops_challenge1_b: בכל בלוק 'חזור' עליך להשתמש ב- 'פנה שמאלה' או 'פנה ימינה' כדי להכין את סקראט אל התבנית הבאה.
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'לחצי המשושה יש **אורך של 30** וזוויות של **60 מעלות**.  '
         courseE_artist_concept_challenge1_b: '2 שלישים המשולש הוא **באורך 80** עם זווית של **120 מעלות**. '
       course3_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       course3_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       course3_bee_functions_challenge4_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           אם יש דרך ימינה, אז תצטרך לבצע את הצעדים הבאים:
-          * אסוף כל צוף או יצר כל דבש.
-          * פנה ימינה לעבר צד הדרך.
-          * זוז אל סוף הדרך הצידית.
-          * פנה ימינה.
+
+          -   אסוף כל צוף או יצר כל דבש.
+          -   פנה ימינה לעבר צד הדרך.
+          -   זוז אל סוף הדרך הצידית.
+          -   פנה ימינה.
 
           אם תחזור על הפעולות הבאות פעמיים, אתה תהיה מוכן לחזור אחורה לדרך הראשית.
 
@@ -1430,15 +1610,24 @@ he:
         courseC_maze_debugging_challenge2_c: |-
           ישנם שני נתיבים שונים שתוכל ללכת בהן רק בעזרת 'זוז קדימה', ורק 4 פניות. אם מצאת דרך להשתמש בבלוק 'חזור', יתכן ותמצא אפילו דרכים נוספות!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_collector_nested_loops_challenge2_authored_hint:
-        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseA_artist_loops8_authored_hint:
-        courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        courseA_artist_loops8_c: |-
+          מה הקוד עושה?
+          מה הוא אמור לעשות?
+          מה זה אומר לך?
       courseA_artist_loops8_2018_authored_hint:
-        courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        courseA_artist_loops8_c: |-
+          מה הקוד עושה?
+          מה הוא אמור לעשות?
+          מה זה אומר לך?
       courseA_artist_loops8_2019_authored_hint:
-        courseA_artist_loops8_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        courseA_artist_loops8_c: |-
+          מה הקוד עושה?
+          מה הוא אמור לעשות?
+          מה זה אומר לך?
       courseA_collector_loops_challenge2kp_authored_hint:
         courseA_collector_loops_challenge2kp_a: האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?
       courseA_collector_loops_challenge2kp_2018_authored_hint:
@@ -1506,9 +1695,9 @@ he:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1527,7 +1716,7 @@ he:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1546,7 +1735,7 @@ he:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           הקוד שלך צריך להיראות כך:
 
           <xml>
@@ -1565,7 +1754,7 @@ he:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           הקוד שלך צריך להיראות כך:
 
           <xml>
@@ -1724,7 +1913,7 @@ he:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1743,7 +1932,7 @@ he:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1762,7 +1951,7 @@ he:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           הקוד שלך צריך להיראות כך:
 
           <xml>
@@ -1781,7 +1970,7 @@ he:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           הקוד שלך צריך להיראות כך:
 
           <xml>
@@ -1962,13 +2151,13 @@ he:
       courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseC_artist_prog2_authored_hint:
-        courseC_artist_prog2_a: 'אם תשתמש בבלוק ''הזז קדימה ב 100 פיקסלים'', אני אצייר קו בצורה אוטומטית.'
+        courseC_artist_prog2_a: אם תשתמש בבלוק 'הזז קדימה ב 100 פיקסלים', אני אצייר קו בצורה אוטומטית.
         courseC_artist_prog2_b: אם יש לך בעיה לבצע פנייה, השתמש בבלוק 'פנה ימינה 90 מעלות'.
       courseC_artist_prog2_2018_authored_hint:
-        courseC_artist_prog2_a: 'אם תשתמש בבלוק ''הזז קדימה ב 100 פיקסלים'', אני אצייר קו בצורה אוטומטית.'
+        courseC_artist_prog2_a: אם תשתמש בבלוק 'הזז קדימה ב 100 פיקסלים', אני אצייר קו בצורה אוטומטית.
         courseC_artist_prog2_b: אם יש לך בעיה לבצע פנייה, השתמש בבלוק 'פנה ימינה 90 מעלות'.
       courseC_artist_prog2_2019_authored_hint:
-        courseC_artist_prog2_a: 'אם תשתמש בבלוק ''הזז קדימה ב 100 פיקסלים'', אני אצייר קו בצורה אוטומטית.'
+        courseC_artist_prog2_a: אם תשתמש בבלוק 'הזז קדימה ב 100 פיקסלים', אני אצייר קו בצורה אוטומטית.
         courseC_artist_prog2_b: אם יש לך בעיה לבצע פנייה, השתמש בבלוק 'פנה ימינה 90 מעלות'.
       courseC_artist_prog5_authored_hint:
         courseC_artist_prog5_a: השתמש במחוון כדי להאט הכל עד אשר תוכל לראות כיצד הקוד שלך רץ שורה-אחר-שורה ואז תוכל לראות מה השתבש.
@@ -2021,6 +2210,12 @@ he:
         courseC_collector_prog7_c: מתקשה למצוא את הדרך לאסוף את כל האוצר? נסה את הדרך הזו!
       courseC_collector_prog7_2019_authored_hint:
         courseC_collector_prog7_c: מתקשה למצוא את הדרך לאסוף את כל האוצר? נסה את הדרך הזו!
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_a: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseC_harvester_loops3_2018_authored_hint:
@@ -2028,32 +2223,11 @@ he:
       courseC_harvester_loops3_2019_authored_hint:
         courseC_harvester_loops3_a: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseC_maze_debugging3_authored_hint:
-        courseC_maze_debugging3_a: |-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_a: "כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
       courseC_maze_debugging3_2018_authored_hint:
-        courseC_maze_debugging3_a: |-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_a: "כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
       courseC_maze_debugging3_2019_authored_hint:
-        courseC_maze_debugging3_a: |-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
-
-          ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
+        courseC_maze_debugging3_a: "כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
       courseC_maze_debugging5_authored_hint:
         courseC_maze_debugging5_b: נסה לומר בקול מה סקראט צריך לעשות. האם זה גם מה שהקוד בסביבת העבודה אומר? מה השתבש?
       courseC_maze_debugging5_2018_authored_hint:
@@ -2062,24 +2236,24 @@ he:
         courseC_maze_debugging5_b: נסה לומר בקול מה סקראט צריך לעשות. האם זה גם מה שהקוד בסביבת העבודה אומר? מה השתבש?
       courseC_maze_debugging6_authored_hint:
         courseC_maze_debugging6_a: |-
-          - מה סקראט צריך לעשות?
-          - מה סקראט עושה?
-          - מה זה אומר לך?
+          -   מה סקראט צריך לעשות?
+          -   מה סקראט עושה?
+          -   מה זה אומר לך?
       courseC_maze_debugging6_2018_authored_hint:
         courseC_maze_debugging6_a: |-
-          - מה סקראט צריך לעשות?
-          - מה סקראט עושה?
-          - מה זה אומר לך?
+          -   מה סקראט צריך לעשות?
+          -   מה סקראט עושה?
+          -   מה זה אומר לך?
       courseC_maze_debugging6_2019_authored_hint:
         courseC_maze_debugging6_a: |-
-          - מה סקראט צריך לעשות?
-          - מה סקראט עושה?
-          - מה זה אומר לך?
+          -   מה סקראט צריך לעשות?
+          -   מה סקראט עושה?
+          -   מה זה אומר לך?
       courseC_maze_debugging8_authored_hint:
         courseC_maze_debugging8_a: |-
-          - מה סקראט צריך לעשות?
-          - מה סקראט עושה?
-          - מה זה אומר לך?
+          -   מה סקראט צריך לעשות?
+          -   מה סקראט עושה?
+          -   מה זה אומר לך?
       courseC_maze_debugging_challenge1_authored_hint:
         courseC_maze_debugging_challenge1_b: הדרך של סקראט היא בצורת מלבן! הוא זקוק להסתובב באותו כיוון בכל פעם.
       courseC_maze_debugging_challenge1_2018_authored_hint:
@@ -2090,19 +2264,22 @@ he:
         courseC_maze_debugging_challenge2_c: |-
           ישנן שתי דרכים שונות שתוכל ללכת בדרכם רק על ידי תנועה קדימה ופניה 4 פעמים. אם תמצא דרך אחת לעשות זאת בעזרת לולאה, יתכן ותמצא אפילו עוד דרכים!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2018_authored_hint:
         courseC_maze_debugging_challenge2_c: |-
           ישנן שתי דרכים שונות שתוכל ללכת בדרכם רק על ידי תנועה קדימה ופניה 4 פעמים. אם תמצא דרך אחת לעשות זאת בעזרת לולאה, יתכן ותמצא אפילו עוד דרכים!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_c: |-
           ישנן שתי דרכים שונות שתוכל ללכת בדרכם רק על ידי תנועה קדימה ופניה 4 פעמים. אם תמצא דרך אחת לעשות זאת בעזרת לולאה, יתכן ותמצא אפילו עוד דרכים!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_loops6_authored_hint:
-        courseC_maze_loops6_b: "כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.\n\nחבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!"
+        courseC_maze_loops6_b: |-
+          כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.
+
+          חבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
       courseC_maze_loops_challenge1_authored_hint:
@@ -2120,56 +2297,38 @@ he:
       courseC_maze_programming2_2019_authored_hint:
         courseC_maze_programming2_b: בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על "הרץ".
       courseC_maze_programming3_authored_hint:
-        courseC_maze_programming3_b: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
+        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."
       courseC_maze_programming3_2018_authored_hint:
-        courseC_maze_programming3_b: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
+        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."
       courseC_maze_programming3_2019_authored_hint:
-        courseC_maze_programming3_b: |-
-          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
-
-          כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. 
-
-          גרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. 
-
-          לבסוף, חבר בחזרה את הבלוקים למקום שלהם.
+        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."
       courseC_maze_programming4_authored_hint:
         courseC_maze_programming4_b: |-
           כדי ללכת בדרך:
-          - זוז קדימה
-          - פנה לכיוון המתאים
-          - זוז קדימה
-          - פנה בכיווך ההופכי
-          - זוז קדימה
+
+          -   זוז קדימה
+          -   פנה לכיוון המתאים
+          -   זוז קדימה
+          -   פנה בכיווך ההופכי
+          -   זוז קדימה
       courseC_maze_programming4_2018_authored_hint:
         courseC_maze_programming4_b: |-
           כדי ללכת בדרך:
-          - זוז קדימה
-          - פנה לכיוון המתאים
-          - זוז קדימה
-          - פנה בכיווך ההופכי
-          - זוז קדימה
+
+          -   זוז קדימה
+          -   פנה לכיוון המתאים
+          -   זוז קדימה
+          -   פנה בכיווך ההופכי
+          -   זוז קדימה
       courseC_maze_programming4_2019_authored_hint:
         courseC_maze_programming4_b: |-
           כדי ללכת בדרך:
-          - זוז קדימה
-          - פנה לכיוון המתאים
-          - זוז קדימה
-          - פנה בכיווך ההופכי
-          - זוז קדימה
+
+          -   זוז קדימה
+          -   פנה לכיוון המתאים
+          -   זוז קדימה
+          -   פנה בכיווך ההופכי
+          -   זוז קדימה
       courseC_maze_programming5_authored_hint:
         courseC_maze_programming5_a: נסה להשתמש בכפתור "צעד" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?
       courseC_maze_programming5_2018_authored_hint:
@@ -2258,9 +2417,10 @@ he:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           התוכנית שלך זקוקה:
-          - להשתמש בפונקציה
-          - לזוז קידמה 100 + 75 פיקסלים
-          - להשתמש בפונקציה
+
+          -   להשתמש בפונקציה
+          -   לזוז קידמה 100 + 75 פיקסלים
+          -   להשתמש בפונקציה
       courseD_artist_nestedLoops2_authored_hint:
         courseD_artist_nestedLoops2_b: זכור לשים בלוק 'פנה' בתוך הלולאה כך שהאמן יפנה לאחר כל משולש.
       courseD_artist_nestedLoops2_2018_authored_hint:
@@ -2317,7 +2477,10 @@ he:
         courseD_bee_conditionals8_a: "**זכור:** החידה הזו משתנה בכל ריצה חדשה. \n\nאתה תזדקק להשתמש בבלוק התניה (\"אם\" או \"אם/אחרת\") כדי לפתור את החידה."
       courseD_bee_debugging4_authored_hint:
         courseD_bee_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_bee_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_bee_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_bee_debugging5_authored_hint:
         courseD_bee_debugging5_a: |-
           התחל בצפייה בלולאה הראשונה.
@@ -2333,26 +2496,21 @@ he:
 
           אם לא, מה עדיין משתבש?
       courseD_bee_debugging6_authored_hint:
-        courseD_bee_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_bee_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       courseD_bee_debugging7_authored_hint:
         courseD_bee_debugging7_a: "נסה להשתמש בכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?  "
       courseD_bee_nested_loops_challenge1_authored_hint:
-        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseD_collector_debugging1_authored_hint:
-        courseD_collector_debugging1_c: 'זכור להשתמש בבלוק ''אסוף'' כדי לאסוף אוצר ברגע שהגעת אליו.  '
+        courseD_collector_debugging1_c: זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.
       courseD_collector_debugging1_2018_authored_hint:
-        courseD_collector_debugging1_c: 'זכור להשתמש בבלוק ''אסוף'' כדי לאסוף אוצר ברגע שהגעת אליו.  '
+        courseD_collector_debugging1_c: זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.
       courseD_collector_debugging1a_authored_hint:
-        courseD_collector_debugging1_c: 'זכור להשתמש בבלוק ''אסוף'' כדי לאסוף אוצר ברגע שהגעת אליו.  '
+        courseD_collector_debugging1_c: זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.
       courseD_collector_debugging1a_2018_authored_hint:
-        courseD_collector_debugging1_c: 'זכור להשתמש בבלוק ''אסוף'' כדי לאסוף אוצר ברגע שהגעת אליו.  '
+        courseD_collector_debugging1_c: זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.
       courseD_collector_debugging1a_2019_authored_hint:
-        courseD_collector_debugging1_c: 'זכור להשתמש בבלוק ''אסוף'' כדי לאסוף אוצר ברגע שהגעת אליו.  '
+        courseD_collector_debugging1_c: זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.
       courseD_collector_debugging3_authored_hint:
         courseD_collector_debugging3_a: האם יש מקום בו לורל עושה משהו לא הגיוני? מה קורה כשאתה מחליף את הבלוקים הללו?
       courseD_collector_debugging3_2018_authored_hint:
@@ -2365,19 +2523,34 @@ he:
         courseD_collector_debugging3_a: האם יש מקום בו לורל עושה משהו לא הגיוני? מה קורה כשאתה מחליף את הבלוקים הללו?
       courseD_collector_debugging4_authored_hint:
         courseD_collector_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_collector_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_collector_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_collector_debugging4_2018_authored_hint:
         courseD_collector_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_collector_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_collector_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_collector_debugging4a_authored_hint:
         courseD_collector_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_collector_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_collector_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_collector_debugging4a_2018_authored_hint:
         courseD_collector_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_collector_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_collector_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_collector_debugging4a_2019_authored_hint:
         courseD_collector_debugging4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_collector_debugging4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_collector_debugging4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_collector_debugging5_authored_hint:
         courseD_collector_debugging5_a: |-
           התחל בצפייה בלולאה הראשונה.
@@ -2423,59 +2596,32 @@ he:
           מה זה אומר לך?
         courseD_collector_debugging5a_b: ברגע שאספת את שורת האוצרות הראשונה, מה נשאר בקוד שלך?
       courseD_collector_debugging6_authored_hint:
-        courseD_collector_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       courseD_collector_debugging6_2018_authored_hint:
-        courseD_collector_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       courseD_collector_debugging6a_authored_hint:
-        courseD_collector_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
         courseD_collector_debugging6_b: נראה שכל הבלוקים כבר נמצאים בסביבת העבודה שלך. נסה ללחוץ על "התחל מחדש" אם דברים מתחילים להיות מבלבלים מדי.
       courseD_collector_debugging6a_2018_authored_hint:
-        courseD_collector_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
         courseD_collector_debugging6_b: נראה שכל הבלוקים כבר נמצאים בסביבת העבודה שלך. נסה ללחוץ על "התחל מחדש" אם דברים מתחילים להיות מבלבלים מדי.
       courseD_collector_debugging6a_2019_authored_hint:
-        courseD_collector_debugging6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
         courseD_collector_debugging6_b: נראה שכל הבלוקים כבר נמצאים בסביבת העבודה שלך. נסה ללחוץ על "התחל מחדש" אם דברים מתחילים להיות מבלבלים מדי.
       courseD_collector_debugging7_authored_hint:
-        courseD_collector_debugging7_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_collector_debugging7_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       courseD_collector_nested_loops_challenge2_authored_hint:
-        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseD_collector_nested_loops_challenge2_2018_authored_hint:
-        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseD_collector_nested_loops_challenge2_2019_authored_hint:
-        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge2_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseD_debugging_4_authored_hint:
         courseD_debugging_4_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        courseD_debugging_4_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        courseD_debugging_4_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       courseD_debugging_5_authored_hint:
         courseD_debugging_5_a: |-
           התחל בצפייה בלולאה הראשונה.
@@ -2491,12 +2637,7 @@ he:
 
           אם לא, מה עדיין משתבש?
       courseD_debugging_6_authored_hint:
-        courseD_debugging_6_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        courseD_debugging_6_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       courseD_farmer_condLoops4_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4_c: באפשרותך להשתמש או בלולאת "כל עוד דרך לפניך" או בעזרת לולאת "חזור" כדי לעבור דרך כל התבואה.
       courseD_farmer_condLoops4_2018_authored_hint:
@@ -2572,7 +2713,7 @@ he:
         courseC_maze_programming5_a: נסה להשתמש בכפתור "צעד" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?
         courseC_maze_programming5_c: אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה.
       courseD_maze_loops_challenge1_authored_hint:
-        courseD_bee_nested_loops_challenge1_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז *בכל* המערה!
+        courseD_bee_nested_loops_challenge1_b: כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!
       courseD_maze_ramp1_authored_hint:
         courseC_maze_programming1_b: אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה.
       courseD_maze_ramp1_2018_authored_hint:
@@ -2586,11 +2727,11 @@ he:
       courseD_maze_ramp2_2019_authored_hint:
         courseC_maze_programming2_b: בדוק שכל 3 הבלוקים מחוברים יחד וכולם מחוברים לבלוק 'כשהריצה מתחילה'.
       courseD_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       courseD_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       courseD_maze_ramp3_2019_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       courseD_maze_ramp4_2019_authored_hint:
         courseC_maze_programming4_a: אתה יכול לפנות ימינה או שמאלה מנקודת המבט של סקראט. אם אתה מביט ימינה, אז פניה ימינה תכוון אותך כלפי מטה.
         courseC_maze_programming4_b: כדי להגיע ליעד, זוז קדימה ופנה לכיוון המתאים, אז זוז קדימה שוב ופנה לכיוון ההפוך. זוז קדימה צעד אחד נוסף כדי להגיע לבלוט.
@@ -2634,28 +2775,28 @@ he:
         courseC_maze_programming6_a: ישנן 2 דרכים לפתור את החידה הזו!
       courseD_maze_until3_authored_hint:
         courseD_maze_until3_a: |-
-          - מה הקוד שלך עושה?
-          - מה הוא אמור לעשות?
-          - מה זה אומר לך?
+          -   מה הקוד שלך עושה?
+          -   מה הוא אמור לעשות?
+          -   מה זה אומר לך?
       courseD_maze_until3_2018_authored_hint:
         courseD_maze_until3_a: |-
-          - מה הקוד שלך עושה?
-          - מה הוא אמור לעשות?
-          - מה זה אומר לך?
+          -   מה הקוד שלך עושה?
+          -   מה הוא אמור לעשות?
+          -   מה זה אומר לך?
       courseD_maze_until3_2019_authored_hint:
         courseD_maze_until3_a: |-
-          - מה הקוד שלך עושה?
-          - מה הוא אמור לעשות?
-          - מה זה אומר לך?
+          -   מה הקוד שלך עושה?
+          -   מה הוא אמור לעשות?
+          -   מה זה אומר לך?
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_b: אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה.
       courseD_scrat_ramp1_2018_authored_hint:
         courseC_maze_programming1_b: אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה.
       courseD_scrat_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
         courseC_maze_programming3_b: זכור כי הפניה ימינה או שמאלה הם מנקודת המבט של סקראט.
       courseD_scrat_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
         courseC_maze_programming3_b: זכור כי הפניה ימינה או שמאלה הם מנקודת המבט של סקראט.
       courseD_scrat_ramp4_authored_hint:
         courseC_maze_programming4_a: אתה יכול לפנות ימינה או שמאלה מנקודת המבט של סקראט. אם אתה מביט ימינה, אז פניה ימינה תכוון אותך כלפי מטה.
@@ -2699,13 +2840,20 @@ he:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           התוכנית שלך זקוקה:
-          - להשתמש בפונקציה
-          - לזוז קידמה 100 + 75 פיקסלים
-          - להשתמש בפונקציה
+
+          -   להשתמש בפונקציה
+          -   לזוז קידמה 100 + 75 פיקסלים
+          -   להשתמש בפונקציה
       courseE_artist_functions6_authored_hint:
         grade4_artist_functions_windows0_c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseE_artist_functions6_2018_authored_hint:
         grade4_artist_functions_windows0_c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_concept5_authored_hint:
         courseE_bee_concept5_a: הפרחים נמצאים בשביל בצורה מלבנית. תוכל לעקוב אחר המלבן בעזרת "כל עוד דרך לפניך" גם אם יש מספר משבצות שונה בכל צד.
       courseE_bee_concept5_2018_authored_hint:
@@ -2725,25 +2873,43 @@ he:
       courseE_bee_functions6test_authored_hint:
         courseE_bee_functions6_a: "האם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך כל פעם צעד אחד. \n\nהוסף כמה בלוקים ואז נסה אותה. הוסף בלוק נוסף ואז נסה שוב. מה מאוד אתה תגיע לפתרון!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions7_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
         courseE_bee_functions7_b: |-
           זכור כי עליך לבנות את הקוד שלך בתוך בלוק הפונקציה הירוק.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions7_2018_authored_hint:
-        courseE_bee_functions7_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions7_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
         courseE_bee_functions7_b: |-
           זכור כי עליך לבנות את הקוד שלך בתוך בלוק הפונקציה הירוק.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseE_bee_functions_challenge1_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseE_bee_functions_challenge2_2018_authored_hint:
-        courseE_bee_functions_challenge1_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseE_bee_functions_challenge1_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseE_bee_ramp17_authored_hint:
         courseE_bee_ramp17_b: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseE_farmer_concept3_authored_hint:
@@ -2776,10 +2942,10 @@ he:
       courseE_farmer_ramp12a_2018_authored_hint:
         courseE_farmer_ramp12c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseE_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
         courseC_maze_programming3_b: זכור כי הפניה ימינה או שמאלה הם מנקודת המבט של הציפור.
       courseE_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
         courseC_maze_programming3_b: זכור כי הפניה ימינה או שמאלה הם מנקודת המבט של הציפור.
       courseE_maze_ramp4_authored_hint:
         courseC_maze_programming4_c: אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה.
@@ -2808,14 +2974,41 @@ he:
       courseF_artist_for3_2019_authored_hint:
         courseF_artist_for3_b: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseF_artist_for4_authored_hint:
-        courseF_artist_for4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
+        courseF_artist_for4_a: |-
+          **מה הספר הקטן ביותר שתצטרכו?
+          מה המספר הגדול ביותר?
+          כמה יש להוסיף כל פעם?**
+
+          אלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'.
         courseF_artist_for4_c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseF_artist_for4_2018_authored_hint:
-        courseF_artist_for4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
+        courseF_artist_for4_a: |-
+          **מה הספר הקטן ביותר שתצטרכו?
+          מה המספר הגדול ביותר?
+          כמה יש להוסיף כל פעם?**
+
+          אלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'.
         courseF_artist_for4_c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
       courseF_artist_for4_2019_authored_hint:
-        courseF_artist_for4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
+        courseF_artist_for4_a: |-
+          **מה הספר הקטן ביותר שתצטרכו?
+          מה המספר הגדול ביותר?
+          כמה יש להוסיף כל פעם?**
+
+          אלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'.
         courseF_artist_for4_c: אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.
+      courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals4_authored_hint:
         courseF_bee_conditionals4_c: בעזרת הבלוק "כל עוד דרך לפניך", עליך ל-"זוז קדימה" ולבדוק האם קיים פרח. "אם קיים פרח" מה צריכה הדבורה לעשות?
       courseF_bee_conditionals4_2018_authored_hint:
@@ -2843,20 +3036,33 @@ he:
       courseF_bee_functions6_2018_authored_hint:
         courseF_bee_functions6_a: "האם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך כל פעם צעד אחד. \n\nהוסף כמה בלוקים ואז נסה אותה. הוסף בלוק נוסף ואז נסה שוב. מה מאוד אתה תגיע לפתרון!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseF_bee_functions8a_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseF_bee_functions8a_2018_authored_hint:
-        courseF_bee_functions8a_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseF_bee_functions8a_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseF_bee_functions7_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseF_bee_functionsPre7_2018_authored_hint:
-        courseF_bee_functions7_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseF_bee_functions7_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseF_bee_functions_challenge2_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           אם יש דרך ימינה, אז תצטרך לבצע את הצעדים הבאים:
-          * אסוף כל צוף או יצר כל דבש.
-          * פנה ימינה לעבר צד הדרך.
-          * זוז אל סוף הדרך הצידית.
-          * פנה ימינה.
+
+          -   אסוף כל צוף או יצר כל דבש.
+          -   פנה ימינה לעבר צד הדרך.
+          -   זוז אל סוף הדרך הצידית.
+          -   פנה ימינה.
 
           אם תחזור על הפעולות הבאות פעמיים, אתה תהיה מוכן לחזור אחורה לדרך הראשית.
 
@@ -2864,16 +3070,20 @@ he:
       courseF_bee_functions_challenge2_2018_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           אם יש דרך ימינה, אז תצטרך לבצע את הצעדים הבאים:
-          * אסוף כל צוף או יצר כל דבש.
-          * פנה ימינה לעבר צד הדרך.
-          * זוז אל סוף הדרך הצידית.
-          * פנה ימינה.
+
+          -   אסוף כל צוף או יצר כל דבש.
+          -   פנה ימינה לעבר צד הדרך.
+          -   זוז אל סוף הדרך הצידית.
+          -   פנה ימינה.
 
           אם תחזור על הפעולות הבאות פעמיים, אתה תהיה מוכן לחזור אחורה לדרך הראשית.
 
           **לחץ לרמז נוסף רק אם ברצונך לצפות על הפתרון המלא!**
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        courseF_bee_functions8a_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: אם הציפור לא מגיעה אל החזיר, בדוק שוב שכל הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
       courseF_maze_ramp13_authored_hint:
@@ -2915,11 +3125,11 @@ he:
         courseC_maze_programming1_a: אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ "הרץ" שוב.
         courseC_maze_programming1_b: אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       coursef_maze_ramp3_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       coursef_maze_ramp3_2018_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם.\n"
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: ישנן 2 דרכים לפתור את החידה הזו!
       grade2_MakeDogTag_1_authored_hint:
@@ -2931,12 +3141,15 @@ he:
         2-3_Artist_Debugging_8_a: |-
           כמה פעמים הצורה שלי חזרה על עצמה?
 
-          כמה פעמים על הצורה הזו *צריכה* לחזור על עצמה?
+          כמה פעמים על הצורה הזו _צריכה_ לחזור על עצמה?
 
           היכן תוכל לשנות את זה בתוכנית?
       grade2_PuppyLoops_6_authored_hint:
         2-3_Maze_16_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
-        2-3_Maze_16_b: "כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.\n\nחבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!"
+        2-3_Maze_16_b: |-
+          כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.
+
+          חבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
         2-3_Maze_Loops_17_b: קרה שכל הקוד נמחק? לחץ על "התחלה מחדש" כדי להחזיר אותו!
@@ -2946,7 +3159,10 @@ he:
         2-3_Artist_Debugging_7_a: מה קורה אם גרמת לאמן לזוז או לקפוץ אחורה מיד לאחר שהוא צייר את השורה הראשונה?
       grade2_puppy_loops6_authored_hint:
         2-3_Maze_16_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
-        2-3_Maze_16_b: "כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.\n\nחבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!"
+        2-3_Maze_16_b: |-
+          כדי לשים בלוקים בתוך לולאת 'חזור' רק גרור לולאה לתוך סביבת העבודה, ואז גרור את כל הבלוקים מהתוכנית הראשית לתוכנה.
+
+          חבר את כל קבוצת הבלוקים בחזרה לבלוק 'כשהריצה מתחילה' ואתה מוכן לדרך!
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: אם קשה לראות את התבנית, נסה לקודד קודם את הכל וראה אילו דברים חוזרים על עצמם שוב ושוב לפני שתכניס אותם לתוך הלולאה.
       grade3_ConditionalsElse_4_authored_hint:
@@ -2985,15 +3201,13 @@ he:
 
           אם לא, מה עדיין משתבש?
       grade3_Debugging_11_authored_hint:
-        grade3_Debugging_11_a: |-
-          נסה להריץ את הקוד בעזרת הכפתור "צעד". האם הכל תקין בצעד הראשון? 
-
-          מה לגבי הצעד השני? 
-
-          איפה הכל משתבש?
+        grade3_Debugging_11_a: "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?"
       grade3_Debugging_8_authored_hint:
         grade3_Debugging_8_a: "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?"
-        grade3_Debugging_8_b: "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        grade3_Debugging_8_b: |-
+          אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.
+
+          אל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!
       grade3_Debugging_TeacherIDo_authored_hint:
         2-3_Bee_Debugging_4_a: האם יש מקום בו הדבורה עושה משהו לא הגיוני? מה קורה כשאתה משנה את הבלוק?
       grade3_Loops_10_authored_hint:
@@ -3052,9 +3266,10 @@ he:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           התוכנית שלך זקוקה:
-          - להשתמש בפונקציה
-          - לזוז קידמה 100 + 75 פיקסלים
-          - להשתמש בפונקציה
+
+          -   להשתמש בפונקציה
+          -   לזוז קידמה 100 + 75 פיקסלים
+          -   להשתמש בפונקציה
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: לכל משושה אורך כל פאה הוא 40 פיקסלים.
         Course_4_SCF_1_b: יש לקפוץ 120 פיקסלים בין כל משושה ומשושה בכל שורה אופקית.
@@ -3083,7 +3298,10 @@ he:
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: "האם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך כל פעם צעד אחד. \n\nהוסף כמה בלוקים ואז נסה אותה. הוסף בלוק נוסף ואז נסה שוב. מה מאוד אתה תגיע לפתרון!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.\n\nהוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!"
+        2-3_Bee_Functions_8_a: |-
+          אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.
+
+          הוסף כמה בלוקים ואז נסה אותה, הוסף כמה בלוקים נוספים ואז נסה שוב. מה מאוד אתה תצליח!
         2-3_Bee_Functions_8_b: |-
           זכור כי עליך לבנות את הקוד שלך בתוך בלוק הפונקציה הירוק.
 
@@ -3092,7 +3310,7 @@ he:
         2-3_Artist_1_new_a: אם תשתמש בבלוק 'הזז קדימה ב 100 פיקסלים', אני אצייר קו בצורה אוטומטית.
         2-3_Artist_1_new_b: אם יש לך בעיה לבצע פנייה, השתמש בבלוק 'פנה ימינה 90 מעלות'.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'כדי לייצר את הזוויות הקטנות הללו, אתה צריך לפנות *רחוק יותר* בכל פעם יותר מאשר עשית זאת עם ריבוע.   '
+        2-3_Artist_6_a: 'כדי לייצר את הזוויות הקטנות הללו, אתה צריך לפנות _רחוק יותר_ בכל פעם יותר מאשר עשית זאת עם ריבוע.   '
         2-3_Artist_6_b: מכיוון שאני כבר פונה לימין, קל יותר להתחיל על ידי תנועה קדימה ואז פניות שמאלה כדי ליצור את המשולש.
         2-3_Artist_6_c: כל צד של המשולש זהה באורכו לכל צד של המרובע...100 פיקסלים!
       grade4_review_bee1_authored_hint:
@@ -3109,7 +3327,12 @@ he:
         Course_4_Artist_For_Loops_Challenge_a: למצולע הגדול ביותר יש 19 צדדים.
         Course_4_Artist_For_Loops_Challenge_b: כל אחד מהמצולעים לא שלם. לכל אחד מהם יש פאה אחת פחות ממה שצריך להיות לו.
       grade5_artist_for_loops4_authored_hint:
-        Course_4_Artist_For_Loops_4_a: "**מה הספר הקטן ביותר שתצטרכו?\nמה המספר הגדול ביותר?\nכמה יש להוסיף כל פעם?**\n\nאלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'."
+        Course_4_Artist_For_Loops_4_a: |-
+          **מה הספר הקטן ביותר שתצטרכו?
+          מה המספר הגדול ביותר?
+          כמה יש להוסיף כל פעם?**
+
+          אלו השאלות שאתם צריכים לשאול על מנת לכתוב לולאת 'for'.
       grade5_artist_for_loops8_authored_hint:
         Course_4_Artist_For_Loops_11_a: "זווית הפניה משתנה עבור כל צורה! \n\nהשתמש בבלוק המתמטי להכניס 360 בחלוקה למספר הפאות שיש לצורה כדי לקבל את הזווית המתאימה. "
       grade5_artist_for_loops9_authored_hint:
@@ -3122,7 +3345,10 @@ he:
       grade5_artist_functionparameters10_authored_hint:
         brush_width: הגדרנו לעובי 1 את רוחב המברשת, ואז את צבע המברשת לכחול לפני שהתחלנו לעשות כל דבר אחר.
         double_loop: נסה לשים לולאת "עם" בתוך לולאת "חזור".
-        specifics: "לולאת \"עם\" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.\n\nהבלוק \"הגדר אלפא\" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל."
+        specifics: |-
+          לולאת "עם" רצה ממספר 3 עד 17 עבור כל 6 עלי הכותרת בטרם האמן זז ליצור את הבא אחריו, ציור מספר רק עם מספר זוגי של פאות.
+
+          הבלוק "הגדר אלפא" (שקיפות) משתמש בחילוק כדי לעמעם את הצבע ככל ש-counter של הלולאה גדל.
         after: לאחר שתסיים עם כל "עלעל", אל תשכח ל-"זוז קדימה" 20 פיקסלים לפני שתבצע סיבוב ב60 מעלות.
       grade5_artist_variables_freeplay15_authored_hint:
         Course_4_Artist_Inspire_a: אחרי שתשלים ריבוע אחד, נסה לקפוץ קדימה חצי מהאורך שלו לפני שתסתובב כדי לייצר אחד נוסף.
@@ -3130,12 +3356,17 @@ he:
         Course_4_Artist_Inspire_c: כל לשבשבת חוזרת על עצמה עם פניה ימינה של **360/מס' הצדדים**.
       grade5_artist_variables_octagons13_authored_hint:
         Course_4_Artist_Vars_13_a: אתה זקוק לשתי לולאות חזור (אחד בתוך השני) כאשר שניהם חוזרים על עצמם `sides` פעמים.
-        Course_4_Artist_Vars_13_b: "לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).\nלאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית."
+        Course_4_Artist_Vars_13_b: |-
+          לולאת החזרה הפנימית מציירת מתומן (בפניה לשמאל).
+          לאחר מכן, צריך לנוע קדימה ולפנות ימינה רק בלולאה החיצונית.
         Course_4_Artist_Vars_13_c: בכדי להתאים את הצורה להישאר באותו גודל כאשר מספר הצדדים משתנה, השתמש בבלוק חשבון בכדי לחלק את הארוך (בפיקסלים) במספר הצדדים.
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: בכדי לצייר מצולע רגיל, יש לפנות ב-**360/מספר הצדדים** בכל פעם.
       gradek_artist_loops7_authored_hint:
-        gradek_artist_loops7_c: "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        gradek_artist_loops7_c: |-
+          מה הקוד עושה?
+          מה הוא אמור לעשות?
+          מה זה אומר לך?
       level 'grade3_Loops_10_authored_hint:
         2-3_Bee_Loops_4_a: אתה צריך לסיים עם חמש בלוקים בתוך הלולאה שלך.
       level 'grade3_Loops_11_authored_hint:
