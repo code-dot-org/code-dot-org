@@ -21,7 +21,7 @@ export const initHamburger = function() {
 
       var helpbutton = $('#help-button');
 
-      // If we didn't click the hamburger itself, and also nothing inside it,
+      // If we didn't click the help button itself, and also nothing inside it,
       // then hide it.
       if (!helpbutton.is(e.target) && helpbutton.has(e.target).length === 0) {
         helpbutton.children('#help-contents').slideUp();
