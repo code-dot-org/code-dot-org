@@ -42,6 +42,6 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
   end
 
   def allow_sending_principal_email
-    object.try(:allow_sending_principal_email)
+    object.try(:allow_sending_principal_email?)
   end
 end

@@ -330,7 +330,7 @@ module Pd::Application
       end
     end
 
-    def allow_sending_principal_email
+    def allow_sending_principal_email?
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       principal_approval_email = emails.where(email_type: 'principal_approval').last
       last_principal_approval_email_sent_at = principal_approval_email&.sent_at
