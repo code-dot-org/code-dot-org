@@ -1003,14 +1003,14 @@ module Pd::Application
       create :pd_principal_approval1920_application, teacher_application: application
       refute application.allow_sending_principal_email?
 
-      # If we sent a principal email < 5 days ago, we can't send.
+      # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher1920_application
-      create :pd_application_email, application: application, email_type: 'principal_approval', sent_at: 1.day.ago
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
       refute application.allow_sending_principal_email?
 
-      # If we sent a principal email >= 5 days ago, we can send.
+      # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher1920_application
-      create :pd_application_email, application: application, email_type: 'principal_approval', sent_at: 6.days.ago
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_email?
     end
 
