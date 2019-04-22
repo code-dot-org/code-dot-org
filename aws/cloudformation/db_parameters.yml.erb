@@ -154,6 +154,8 @@ AuroraCluster:
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
 
+  # Enable slow query log.
+  slow_query_log: 1
 
 # System variables for the Aurora DB writer.
 AuroraWriter:
