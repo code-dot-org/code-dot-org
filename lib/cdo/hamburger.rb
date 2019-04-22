@@ -11,7 +11,7 @@ class Hamburger
   SHOW_MOBILE = "show-mobile".freeze
 
   def self.get_divider_visibility(above_section_visibility, below_section_visibility)
-    return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visiblity == HIDE_ALWAYS
+    return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
     return SHOW_MOBILE if above_section_visibility == SHOW_MOBILE || below_section_visibility == SHOW_MOBILE
     return SHOW_ALWAYS
   end

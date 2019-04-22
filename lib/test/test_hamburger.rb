@@ -2,54 +2,6 @@ require_relative 'test_helper'
 require_relative '../../lib/cdo/hamburger'
 require 'active_support/i18n'
 
-class Level
-  def report_bug_url(request)
-    "url"
-  end
-
-  def try(property)
-    false
-  end
-end
-
-class LevelAppLab
-  def report_bug_url(request)
-    "url"
-  end
-
-  def try(property)
-    property == :is_project_level
-  end
-
-  def game
-    "AppLab"
-  end
-end
-
-class LevelGameLab
-  def report_bug_url(request)
-    "url"
-  end
-
-  def try(property)
-    property == :is_project_level
-  end
-
-  def game
-    "GameLab"
-  end
-end
-
-class Game
-  def self.gamelab
-    "GameLab"
-  end
-
-  def self.applab
-    "AppLab"
-  end
-end
-
 class HamburgerTest < Minitest::Test
   def assert_includes_id(items, id)
     assert items.find {|e| e[:id] == id}
