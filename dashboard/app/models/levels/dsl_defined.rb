@@ -34,6 +34,16 @@ class DSLDefined < Level
     "Enter the level definition here.\n"
   end
 
+  def localized_text(text)
+    I18n.t(
+      text,
+      scope: ['data', type.underscore, name],
+      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
+      default: text,
+      smart: true
+    )
+  end
+
   def self.setup(data)
     level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})

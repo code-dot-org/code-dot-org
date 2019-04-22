@@ -563,7 +563,7 @@ export default function loadAppOptions() {
     }
     const appOptions = getAppOptions();
     if (appOptions.embedded) {
-      // when we just "embed" an app (i.e. via LevelsHelper#string_or_image),
+      // when we just "embed" an app (i.e. via LevelsHelper#match_answer_as_iframe),
       // we don't need to load anything else onto appOptions, so just resolve
       // immediately
       resolve(appOptions);
