@@ -22,24 +22,18 @@ class Concept < ActiveRecord::Base
   include Seeded
   has_and_belongs_to_many :levels
   belongs_to :video
-  # Can't call static from filter. Leaving in place for fixing later
-  #after_save :expire_cache
 
   def self.by_name(name)
     (@@name_cache ||= Concept.all.index_by(&:name))[name].try(:id)
-    Rails.cache.fetch('concepts/names/{name}') do
+    Rails.cache.fetch("concepts/names/#{name}") do
       Concept.find_by_name(name).try(:id)
     end
   end
 
   def self.cached
-    Rails.cache.fetch('concepts/all') do
+    Rails.cache.fetch("concepts/all") do
       Script.all
     end
-  end
-
-  def self.expire_cache
-    Rails.cache.delete_if {|key, _| key.start_with?("concepts/")}
   end
 
   CONCEPT_NAMES_BY_INDEX = %w(
