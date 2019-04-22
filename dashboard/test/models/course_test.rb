@@ -144,7 +144,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
-                  :has_verified_resources, :versions], summary.keys
+                  :has_verified_resources, :versions, :show_assign_button], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]

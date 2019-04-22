@@ -28,20 +28,17 @@ SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
-# Run UI tests against ChromeLatestWin7
+# Run UI tests against Chrome
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
-# Run UI tests against Chrome44Win7
-TEST_CHROME_44_TAG = 'test chrome 44'.freeze
-
-# Run UI tests against Firefox45Win7
+# Run UI tests against Firefox
 TEST_FIREFOX_TAG = 'test firefox'.freeze
 
-# Run UI tests against IE11Win10
+# Run UI tests against IE11
 TEST_IE_TAG = 'test ie'.freeze
 TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 
-# Run UI tests against SafariYosemite
+# Run UI tests against Safari
 TEST_SAFARI_TAG = 'test safari'.freeze
 
 # Run UI tests against iPad, iPhone or both
@@ -119,7 +116,7 @@ namespace :circle do
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
             " --feature #{container_eyes_features.join(',')}" \
-            " --config ChromeLatestWin7,iPhone,IE11Win10" \
+            " --config Chrome,iPhone,IE11" \
             " --pegasus localhost.code.org:3000" \
             " --dashboard localhost-studio.code.org:3000" \
             " --circle" \
@@ -183,11 +180,10 @@ end
 # @return [Array<String>] names of browser configurations for this test run
 def browsers_to_run
   browsers = []
-  browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Chrome44Win7' if CircleUtils.tagged?(TEST_CHROME_44_TAG)
-  browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
-  browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
-  browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
+  browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
+  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
+  browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG)
   browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers

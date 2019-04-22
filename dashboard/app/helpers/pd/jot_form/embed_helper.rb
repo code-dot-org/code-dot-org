@@ -1,14 +1,11 @@
 module Pd
   module JotForm
     module EmbedHelper
-      BASE_URL = 'https://form.jotform.com/jsform/'.freeze
-
-      # Generates a script tag that will render a JotForm form in place
+      # Generates an iframe tag that will render a JotForm form
       # @param form_id [Integer]
       # @param params [Hash] parameters to pass to the form, shaped {question_name => initial value}
-      def embed_jotform(form_id, params)
-        url = "#{BASE_URL}#{form_id}?#{format_url_params(params)}"
-        javascript_include_tag url, extname: false
+      def jotform_iframe(form_id, params)
+        content_tag :iframe, nil, id: "JotFormIFrame-#{form_id}", onload: "window.parent.scrollTo(0,0)", allowtransparency: "true", allowfullscreen: "true", allow: "geolocation; microphone; camera", src: "https://form.jotform.com/#{form_id}?#{format_url_params(params)}", frameborder: "0", style: "width: 1px; min-width: 100%; height:539px; border:none;", scrolling: "no"
       end
 
       def format_url_params(hash)

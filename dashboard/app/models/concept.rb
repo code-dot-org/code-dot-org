@@ -6,6 +6,7 @@
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  video_id   :integer
 #  video_key  :string(255)
 #
 # Indexes
@@ -53,7 +54,7 @@ class Concept < ActiveRecord::Base
   def self.setup_with_concepts(concepts_by_index)
     videos_by_concept = Video.where(key: concepts_by_index).index_by(&:key)
     concepts = concepts_by_index.map.with_index(1) do |concept, id|
-      {id: id, name: concept, video_key: videos_by_concept[concept]&.key}
+      {id: id, name: concept, video_id: videos_by_concept[concept]&.id, video_key: videos_by_concept[concept]&.key}
     end
     transaction do
       reset_db

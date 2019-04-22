@@ -26,7 +26,7 @@ Scenario: Losing the first level
   And element "#resetButton" is visible
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
-  And element ".uitest-topInstructions-inline-feedback" has text "Keep coding! Something's not quite right yet."
+  And element ".uitest-topInstructions-inline-feedback" has escaped text "Keep coding! Something's not quite right yet.\n"
   And I press "resetButton"
   And element "#runButton" is visible
   And element "#resetButton" is hidden
