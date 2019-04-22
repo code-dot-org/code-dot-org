@@ -217,6 +217,7 @@ class ScriptsControllerTest < ActionController::TestCase
       login_required true
       hideable_stages true
       wrapup_video 'hoc_wrapup'
+      project_sharing true
 
     TEXT
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
