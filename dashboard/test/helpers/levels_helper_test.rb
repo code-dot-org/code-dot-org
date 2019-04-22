@@ -647,12 +647,13 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal new_start, options[:level]["startBlocks"]
   end
 
-  test 'string_or_image can retrieve plain text' do
-    assert_equal string_or_image('match', "test"), "test"
+  test 'render_multi_or_match_content can retrieve plain text' do
+    @level = create :multi, name: "test render_multi_or_match_content plain text"
+    assert_equal render_multi_or_match_content("test"), "test"
   end
 
-  test 'string_or_image can retrieve translated text' do
-    @level = create :multi, name: "test string_or_image translation"
+  test 'render_multi_or_match_content can retrieve translated text' do
+    @level = create :multi, name: "test render_multi_or_match_content translation"
     input = "test text"
     expected = "translated test text"
 
@@ -669,14 +670,14 @@ class LevelsHelperTest < ActionView::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    assert_equal string_or_image('multi', input), expected
+    assert_equal render_multi_or_match_content(input), expected
   end
 
-  test 'string_or_image will prefer english translations over raw string even in english' do
+  test 'render_multi_or_match_content will prefer english translations over raw string even in english' do
     # Note that this isn't necessarily functionality we care about preserving,
     # but it is how our system currently works
 
-    @level = create :multi, name: "test string_or_image english"
+    @level = create :multi, name: "test render_multi_or_match_content english"
     input = "test text"
     expected = "stored source test text"
 
@@ -691,14 +692,14 @@ class LevelsHelperTest < ActionView::TestCase
     }
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
-    assert_equal string_or_image('multi', input), expected
+    assert_equal render_multi_or_match_content(input), expected
   end
 
-  test 'string_or_image can generate images' do
-    assert_equal string_or_image('multi', "example.png"), "<img src='example.png' ></img>"
+  test 'render_multi_or_match_content can generate images' do
+    assert_equal render_multi_or_match_content("example.png"), "<img src='example.png' ></img>"
   end
 
-  test 'string_or_image can generate embedded blockly' do
+  test 'render_multi_or_match_content can generate embedded blockly' do
     create :level,
       name: "embedded blockly test",
       start_blocks: "<xml><block type='embedded_block' /></xml>"
@@ -709,7 +710,7 @@ class LevelsHelperTest < ActionView::TestCase
     mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
     stubs(:request).returns(mock_request)
 
-    assert_equal string_or_image('multi', "embedded blockly test.start_blocks"),
+    assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
       "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
       "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
       "<style>.blocklySvg { background: none; }</style>"\
@@ -723,11 +724,11 @@ class LevelsHelperTest < ActionView::TestCase
     unstub(:request)
   end
 
-  test 'string_or_image can generate iframes' do
+  test 'render_multi_or_match_content can generate iframes' do
     test_level = create :level,
       name: "embedded iframe test"
 
-    assert_equal string_or_image('multi', "embedded iframe test.level"),
+    assert_equal render_multi_or_match_content("embedded iframe test.level"),
       "<div class=\"aspect-ratio\">"\
       "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
       "</div>"
