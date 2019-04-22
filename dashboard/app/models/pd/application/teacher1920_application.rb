@@ -146,7 +146,7 @@ module Pd::Application
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
 
-      principal_approval_email = emails.where(email_type: 'principal_approval').last
+      principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
         return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
@@ -332,8 +332,8 @@ module Pd::Application
 
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
-      principal_approval_email = emails.where(email_type: 'principal_approval').last
-      last_principal_approval_email_sent_at = principal_approval_email&.sent_at
+      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email_created_at = last_principal_approval_email&.created_at
 
       # Do we allow manually sending/resending the principal email?
 
@@ -346,8 +346,8 @@ module Pd::Application
       # Only if we haven't gotten a principal response yet.
       return false if response
 
-      # Only if it's been more than 5 days since we last sent the principal an email.
-      return false if last_principal_approval_email_sent_at && last_principal_approval_email_sent_at > 5.days.ago
+      # Only if it's been more than 5 days since we last created an email for the principal.
+      return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
 
       true
     end
