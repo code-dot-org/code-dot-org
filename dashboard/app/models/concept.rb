@@ -63,7 +63,7 @@ class Concept < ActiveRecord::Base
   end
 
   def related_video
-    Rails.cache.fetch('concepts/videos/{video_key}/{I18n.locale.to_s}') do
+    Rails.cache.fetch("concepts/videos/#{video_key}/#{I18n.locale.to_s}") do
       Video.current_locale.find_by_key(video_key)
     end
   end
