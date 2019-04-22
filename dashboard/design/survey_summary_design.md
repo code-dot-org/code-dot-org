@@ -2,6 +2,7 @@
 
 April 18, 2019
 
+- [Summary](#summary)
 - [Problem](#problem)
 - [Motivation](#motivation)
 - [Options](#options)
@@ -12,10 +13,15 @@ April 18, 2019
     - [Detail design](#detail-design)
     - [Building from the end](#building-from-the-end)
 - [Recommendation](#recommendation)
+  - [Rollout plan](#rollout-plan)
+  - [5 components to build for 2019 surveys](#5-components-to-build-for-2019-surveys)
 
-This technical design doc explores options we have to create and present summaries of JotForm surveys in workshop dashboard. Its purpose is to gather feedbacks from the team to decide what is the best option to invest in right now.
+
+# Summary
+This technical design doc explores 3 options we have to create and present summaries of JotForm surveys in workshop dashboard. Its purpose is to gather feedbacks from the team to decide what is the best option to invest in right now.
 
 This design is not about embedding JotForm survey in our site or preparing survey data for analysis in Tableau.
+
 
 # Problem
 Currently it takes quite a lot of work to create and present summary for a new survey in our workshop dashboard.
@@ -50,7 +56,6 @@ This option is based on `local_workshop_daily_survey_report` pipeline. We reuse 
 
 **Cost Estimate:** 5 ± 1 days.
 
-
 ## 2. Create survey report in JotForm
 JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to-Create-a-Visual-Report-with-Your-Form-Submissions) ([example](https://www.jotform.com/report/91067837377065)). We can then embed this report as an iframe into workshop dashboard. Authentication and authorization before showing report will be handled by our side.
 
@@ -80,7 +85,7 @@ The pipeline has 4 main actions
 
 ![Diagram](survey_summary_diagram.png)
 
-Some patterns that this design follow
+Some patterns this design follows
 - _Open-Closed Principle_\
   The pipeline is open for extension such as adding new components or adding different implementation of a component. However, it avoids, as best as it could, modifying existing code which could introduce regression. Following Single Responsibility principle will help with this.
 - _Single Responsibility Principle_\
@@ -88,10 +93,9 @@ Some patterns that this design follow
 - _Dependency Inversion Principle_\
   High-level modules (complex logic) should not depend on low-level modules (primary operations). Both should depend on abstractions. This allows high-level modules to easily switch to different low-level modules implementation.
 - _Template Method Pattern_\
-  Define the skeleton of an algorithm, deferring some steps. E.g. Query module (step 2) could use different implementations of Parser, Indexer and Filter depends on how data is stored in database. The specific implementations of those child components will be send to Query component as input parameters (dependency injection). Strategy pattern enable switching among implementations of the same component.
+  Define the skeleton of an algorithm, deferring some steps to other components. E.g. Query module (step 2) could use different implementations of Parser, Indexer and Filter depends on how data is stored in database. The specific implementations of those child components will be send to Query component as input parameters (dependency injection). Strategy pattern enables switching among implementations of the same component.
 - _Strategy Pattern_\
   Define an interface common to a family of algorithms, e.g. survey result reducers, and make them interchangeable. This lets the algorithm vary independently from clients that use it.
-
 
 ### Building from the end
 We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline.
@@ -100,4 +104,35 @@ Specifically for CSF survey work, we will create an input adapter to retrieve su
 
 
 # Recommendation
-Option 3. Build a new generic survey pipeline, starting from step 3(Summarize module) first and create adapters to plug it in the current pipeline. This approach allows us to take advantage of existing work and support 2019 CSF survey first. Then, gradually build out the rest of the pipeline later.
+Option 3. Build a new generic survey pipeline, starting from step 3 (Summarize module) first and create adapters to plug it in the current pipeline. This approach allows us to support 2019 CSF survey sooner by taking advantage of the existing work. Then, gradually build out the rest of the pipeline later.
+
+## Rollout plan
+1. Build 5 components just enough to support 2019 surveys: Retriever (for current db), Transformer, Mapper, Reducer and Decorator (for current UI view). They are components in step 3 and 4 of the above diagram.
+2. Build Fetcher (step 1) to download survey submissions from JotForm to our database.
+3. Build Parser, Indexer and Filter (step 4) to allow quick submission search.
+4. Build another implementation of Retriever (in step 3) which will read from the new db created in step 2 & 3.
+5. Build Presenter (in step 4) that can display result from a single query (e.g. summary results of 1 JotForm survey of a specific workshop)
+6. Build Decorator (in step 4) to provide enough information for the Presenter built in step 5.
+7. Switch 2019 surveys to use the new pipeline. It should then be completely independent from the older pipeline.
+8. All new surveys will use the new pipeline form this point forward.
+9. Migrate surveys using older pipeline to newer one when we think it's worth to do so.
+
+## 5 components to build for 2019 surveys
+
+1. Retriever
+  - Retrieve survey data from existing tables (`SurveyQuestion, WorkshopDailySurvey`) and convert data to `submission_content_array` format.
+  - Estimate: TBA
+2. Transformer
+  - Convert survey data from submission centric to question centric. At high level: {submission_id, submission_data} --> {question_name, question_and_answer_data}.
+  - Estimate: TBA
+3. Mapper
+  - Go through question data, send it to suited Reducer based on question name and type. E.g. text -> text collector, number -> histogram/count/avg reducers.
+  - Estimate: TBA
+4. Reducer(s)
+  - Produce a summary result from list of input question data. E.g. text collector, histogram, avg, count, distribution reducers.
+  - Estimate: TBA
+5. Decorator
+  - Compile minimum information needed for the current UI view (`local_summer_workshop_daily_survey/results.jsx`) to display summary results.
+  - Estimate: TBA
+
+Note, we skip Modifier component because it's an optional feature.
