@@ -29,6 +29,7 @@ class DslTest < ActiveSupport::TestCase
     is_stable: nil,
     supported_locales: [],
     pilot_experiment: nil,
+    project_sharing: nil,
   }
 
   test 'test Script DSL' do
@@ -597,6 +598,31 @@ DSL
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'Script DSL with project_sharing' do
+    input_dsl = 'project_sharing true'
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [],
+        project_sharing: true
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize project_sharing' do
+    script = create :script, project_sharing: true
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+project_sharing true
+
+SCRIPT
+
+    assert_equal expected, script_text
   end
 
   test 'Script DSL with new_name, family_name, version_year and is_stable' do

@@ -4,7 +4,9 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import {assignmentId, assignmentFamilyFields} from './teacherSectionsRedux';
-import AssignmentVersionSelector from './AssignmentVersionSelector';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from './AssignmentVersionSelector';
 
 const styles = {
   family: {
@@ -96,29 +98,11 @@ export default class AssignmentSelector extends Component {
       .reverse()
       .value();
 
-    // We recommend the user use the latest stable version that is supported in their
-    // locale. If no versions support their locale, we recommend the latest stable version.
-    // Versions are sorted from most to least recent, so the first stable version will be the latest.
-    let recommendedVersion = versions.find(v => {
-      const localeSupported =
-        (v.locales || []).includes(this.props.locale) ||
-        this.props.locale === 'English';
-
-      return v.isStable && localeSupported;
-    });
-    recommendedVersion = recommendedVersion || versions.find(v => v.isStable);
-    if (recommendedVersion) {
-      recommendedVersion.isRecommended = true;
-    }
-
-    const selectedVersion =
-      versions.find(v => v.year === selectedVersionYear) ||
-      recommendedVersion ||
-      versions[0];
-    if (selectedVersion) {
-      selectedVersion.isSelected = true;
-    }
-    return versions;
+    return setRecommendedAndSelectedVersions(
+      versions,
+      this.props.locale,
+      selectedVersionYear
+    );
   };
 
   constructor(props) {
