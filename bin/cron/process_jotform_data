@@ -1,65 +1,134 @@
 #!/usr/bin/env ruby
 
-# This script reshapes survey data collected via Jotform into a form more accessible for analysis.
-# To do:
-#   currently stores value of submission (e.g., 7 for "strongly agree")
-#   doesn't process data for facilitator-specific questions
-#   doesn't process other places where we're collecting jotform data (e.g., PostCourseSurvey for teachers)
-#   create tables to store this information permanently
-
 require_relative '../../dashboard/config/environment'
 require 'cdo/only_one'
 
-# @param question_key [String] the hash key
-# @param question [Hash] the questions asked as part of a survey, with the
-#   text of the question as well as some additional metadata.
-# @returns [String] the text of the question that was asked
-def get_question_details(question_key, questions)
-  return questions[question_key][:text], questions[question_key][:options].to_s
-end
+TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.to_s.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
-end
-
-def write_file(processed_answers)
-  CSV.open("jotform_daily_surveys.tsv", "w", headers: processed_answers.first.keys, col_sep: "\t") do |csv|
-    processed_answers.each do |h|
-      csv << h.values
-    end
-  end
+  unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
 end
 
 def main
-  processed_answers = []
+  # Get list of hashes containing survey questions themselves.
+  # One hash per question.
+  survey_questions = []
+  Pd::SurveyQuestion.find_each do |survey|
+    survey.summarize.each do |key, value|
+      row = {
+        form_id: survey.form_id,
+        question_id: key.to_s,
+        question_text: sanitize_string_for_db(value[:text]),
+        answer_type: value[:answer_type],
+        answer_options: sanitize_string_for_db(value[:options].to_s),
+        min_value: value[:min_value].to_i,
+        max_value: value[:max_value].to_i,
+        has_parent: (value.key?(:parent) ? 1 : 0)
+      }
+      survey_questions << row
+    end
+  end
+
+  CSV.open("survey_questions.csv", "wb") do |csv|
+    csv << survey_answers.first.keys
+    survey_answers.each do |hash|
+      csv << hash.values
+    end
+  end
+
+  # Get list of hashes containing responses to survey questions.
+  # One row per question answered.
+  survey_answers = []
   Pd::WorkshopDailySurvey.find_each do |submission|
     answers = submission.form_data_hash
-    questions = submission.questions.summarize
     answers.each do |question_key, answer_value|
-      question_text, question_options = get_question_details(question_key, questions)
-
-      # known issues:
-      # whatLicense52 resulting in new line?
-      # answer options has double quotes in it, resulting in huge white spaces I can't trim via strip?
-      processed_answers << {
-        user_id: sanitize_string_for_db(submission.user_id),
-        pd_workshop_id: sanitize_string_for_db(submission.pd_workshop_id),
-        pd_session_id: sanitize_string_for_db(submission.pd_session_id),
-        day: sanitize_string_for_db(submission.day),
-        form_id: sanitize_string_for_db(submission.form_id),
-        submission_id: sanitize_string_for_db(submission.submission_id),
-        question_id: sanitize_string_for_db(question_key),
-        question_text: sanitize_string_for_db(question_text),
-        answer_options: sanitize_string_for_db(question_options),
-        answer_value:  sanitize_string_for_db(answer_value)
+      survey_answers << {
+        user_id: submission.user_id,
+        form_id: submission.form_id,
+        submission_id: submission.submission_id,
+        question_id: question_key,
+        answer_value:  sanitize_string_for_db(answer_value.to_s)
       }
     end
   end
-  write_file(processed_answers)
+
+  raise "processed_answers too big: #{survey_answers.size} rows exceeds limit of 100,000,000" if survey_answers.size > 100_000_000
+  raise "processed_surveys too big: #{survey_questions.size} rows exceeds limit of 10,000" if survey_questions.size > 10_000
+
+  # Truncate the existing tables.
+  %w(
+    survey_questions
+    survey_answers
+  ).each do |table_name|
+    ActiveRecord::Base.connection.execute(
+      "TRUNCATE #{table_name}"
+    )
+  end
+
+  # Write the data to the DB tables.
+  ActiveRecord::Base.transaction do
+    survey_answers.each do |survey_answer_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO survey_answers (
+            user_id,
+            form_id,
+            submission_id,
+            question_id,
+            answer_value,
+            created_at,
+            updated_at
+          )
+          VALUES (
+            "#{survey_answer_row[:user_id]}",
+            "#{survey_answer_row[:form_id]}",
+            "#{survey_answer_row[:submission_id]}",
+            "#{survey_answer_row[:question_id]}",
+            "#{survey_answer_row[:answer_value]}",
+            "#{TIME_NOW}",
+            "#{TIME_NOW}"
+          )
+SQL
+      )
+    end
+  end
+
+  ActiveRecord::Base.transaction do
+    survey_questions.each do |survey_question_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO survey_questions (
+            form_id,
+            question_id,
+            question_text,
+            answer_type,
+            answer_options,
+            min_value,
+            max_value,
+            has_parent,
+            created_at,
+            updated_at
+          )
+          VALUES (
+            "#{survey_question_row[:form_id]}",
+            "#{survey_question_row[:question_id]}",
+            "#{survey_question_row[:question_text]}",
+            "#{survey_question_row[:answer_type]}",
+            "#{survey_question_row[:answer_options]}",
+            "#{survey_question_row[:min_value]}",
+            "#{survey_question_row[:max_value]}",
+            "#{survey_question_row[:has_parent]}",
+            "#{TIME_NOW}",
+            "#{TIME_NOW}"
+          )
+SQL
+      )
+    end
+  end
 end
 
 main if only_one_running?(__FILE__)
