@@ -1,10 +1,10 @@
-class CreateUsersViews < ActiveRecord::Migration[5.0]
+class CreateUsersView < ActiveRecord::Migration[5.0]
   DASHBOARD_REPORTING_DB_WRITER = sequel_connect(CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader)
   def up
     # Remove existing users_view, which was provisioned manually (20180428013942_add_multi_auth_view_to_reporting_db.rb)
     DASHBOARD_REPORTING_DB_WRITER.run "DROP VIEW IF EXISTS users_view"
     # Re-provision users_view using the Scenic gem
-    create_view :users_views
+    create_view :users_view
   end
 
   def down
