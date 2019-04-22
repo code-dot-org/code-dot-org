@@ -54,7 +54,7 @@ class Concept < ActiveRecord::Base
   def self.setup_with_concepts(concepts_by_index)
     videos_by_concept = Video.where(key: concepts_by_index).index_by(&:key)
     concepts = concepts_by_index.map.with_index(1) do |concept, id|
-      {id: id, name: concept, video_id: videos_by_concept[concept]&.id, video_key: videos_by_concept[concept]&.key}
+      {id: id, name: concept, video_key: videos_by_concept[concept]&.key}
     end
     transaction do
       reset_db
@@ -63,7 +63,7 @@ class Concept < ActiveRecord::Base
   end
 
   def related_video
-    Rails.cache.fetch("concepts/videos/#{video_key}/#{I18n.locale.to_s}") do
+    Rails.cache.fetch("concepts/videos/#{video_key}/#{I18n.locale}") do
       Video.current_locale.find_by_key(video_key)
     end
   end
