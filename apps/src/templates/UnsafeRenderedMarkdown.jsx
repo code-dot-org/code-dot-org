@@ -37,7 +37,18 @@ export default class UnsafeRenderedMarkdown extends React.Component {
     const parser = this.props.openExternalLinksInNewTab
       ? extendedParser
       : remarkParser;
-    const processedMarkdown = parser.sourceToHtml(this.props.markdown);
+    let processedMarkdown = parser.sourceToHtml(this.props.markdown);
+
+    if (this.props.openExternalLinksInNewTab) {
+      processedMarkdown = processedMarkdown.replace(
+        /^<p>/,
+        '<p style="display: inline;">'
+      );
+
+      /* eslint-disable react/no-danger */
+      return <span dangerouslySetInnerHTML={{__html: processedMarkdown}} />;
+      /* eslint-enable react/no-danger */
+    }
 
     /* eslint-disable react/no-danger */
     return <div dangerouslySetInnerHTML={{__html: processedMarkdown}} />;
