@@ -10,6 +10,7 @@ new_name 'csd2-2017'
 family_name 'csd2'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2 L1 Overview', named: true
