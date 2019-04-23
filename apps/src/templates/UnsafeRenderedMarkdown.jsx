@@ -7,10 +7,32 @@ import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
+import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import externalLinks from './plugins/externalLinks';
+
+// create custom sanitization schema as per
+// https://github.com/syntax-tree/hast-util-sanitize#schema
+// to support our custom syntaxes
+const schema = Object.assign({}, defaultSanitizationSchema);
+
+// Add support for expandableImages
+schema.tagNames.push('span');
+schema.attributes.span = ['dataUrl', 'className'];
+
+// Add support for Blockly XML
+schema.tagNames.push(
+  'block',
+  'functional_input',
+  'mutation',
+  'next',
+  'statement',
+  'title',
+  'value',
+  'xml'
+);
 
 const markdownToReact = Parser.create()
   .getParser()
@@ -24,7 +46,7 @@ const markdownToReact = Parser.create()
   // parse the raw HTML nodes in the HAST to actual HAST nodes
   .use(rehypeRaw)
   // sanitize the HAST
-  .use(rehypeSanitize)
+  .use(rehypeSanitize, schema)
   // convert the HAST to React
   .use(rehypeReact, {
     createElement: React.createElement
