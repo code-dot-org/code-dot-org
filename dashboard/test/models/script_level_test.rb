@@ -81,22 +81,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, summary[:title]
   end
 
-  # TODO: (dmcavoy) delete when move completely over
-  test 'named level summarize - old way' do
-    sl = create(:script_level)
-    sl.update(named_level: true)
-
-    summary = sl.summarize
-    assert_equal sl.level.name, summary[:name]
-
-    sl.level.display_name = 'Test Display Name Override'
-    summary = sl.summarize
-    assert_equal 'Test Display Name Override', summary[:name]
-  end
-
   test 'named level summarize' do
     sl = create(:script_level)
-    sl.update(named: true)
+    sl.update(named_level: true)
 
     summary = sl.summarize
     assert_equal sl.level.name, summary[:name]
