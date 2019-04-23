@@ -1650,6 +1650,8 @@ el:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Σύνθεση τραγουδιού
         express-2019:
           stages:
             Relay Programming:
@@ -1757,3 +1759,11 @@ el:
           stages:
             While Loops:
               name: Βρόχοι με «Όσο»
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'

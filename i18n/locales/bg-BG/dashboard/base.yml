@@ -17,6 +17,7 @@ bg:
         name: 'Показвано име'
         name_example: 'Показвано име <br/> (например готин програмист или Джейн S.)'
         email: 'Имейл'
+        personal_email: "Личен имейл адрес <a href=\"%{url}\">(щракнете тук, ако не разполагате с имейл адрес)</a>"
         username: 'Потребителско име'
         password: 'Парола'
         password_confirmation: 'Потвърждение на паролата'
@@ -25,6 +26,9 @@ bg:
         age: 'Възраст'
         gender: 'Пол'
         edit_header: 'Редактиране на данните за акаунта'
+        finish_sign_up_header: 'Завършете създаването на профила си'
+        finish_sign_up_subheader: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт за <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Попълнете следната информация, за да приключите създаването на Code.org акаунт с <strong>%{provider}</strong> за <strong>%{email}</strong>.'
         error:
           future: не може да бъде в бъдещето
   hello: "Здравей, свят"
@@ -85,6 +89,7 @@ bg:
     not_linked: "За съжаление, твоят Code.org акаунт не е свързан с %{provider}. Ще се наложи да влезеш като въведеш паролата си по-долу."
     use_clever: "За съжаление, този Code.org акаунт не е свързан с вашият %{provider}. Моля, влезте през вашия умен портал."
   signup_form:
+    email_signup: 'Влезте с вашия имейл адрес'
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
     overview: 'Регистрирайте се, за да следите напредъка си или да управлявате вашата класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a> и без регистрация, но няма да запазите вашия напредък и проекти.'
@@ -111,6 +116,7 @@ bg:
     student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'> условията за ползване</a>. Ако аз съм на възраст под 13 години, потвърждавам с подаването на този формуляр, че имам разрешението на моя родител или законен настойник за използване на услугите на Code.org. <br/> <br/> Имейл адресите не се съхраняват във форма, която да позволява да се свързваме с учениците. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href='http://code.org/privacy'> декларация за поверителност</a> за повече информация."
     teacher_terms: "Съгласен съм да се обвържа с Code.org условията за ползване. За повече информация за поверителност вижте нашата <a href='http://code.org/privacy'> политика за поверителност</a>."
     additional_information: "Ние изискваме  допълнителна информация за да продължим  вписването ви."
+    user_type_label: "Тип акаунт"
     user_type_teacher: "Учител"
     user_type_student: "Ученик"
     field_is_required: "е задължително"
@@ -287,12 +293,28 @@ bg:
       driver: 'Шофьор'
       navigator: 'Навигатор'
       create: 'Създай'
+      algebra_game: 'Алгебра'
       applab: 'Лаборатория за приложения'
       artist: 'Художник'
-      gamelab: 'Играта лаборатория'
-      playlab: 'Театрална лаборатория'
-      minecraft: 'Minecraft'
+      bounce: 'Bounce'
+      calc: 'Calc'
+      eval: 'Оценяване'
       flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Играта лаборатория'
+      gamelab_jr: 'Game Lab (beta)'
+      gumball: 'Гъмбол'
+      iceage: 'Ледена епоха'
+      infinity: 'Инфинити'
+      minecraft_adventurer: 'Minecraft авантюрист'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft герой'
+      playlab: 'Театрална лаборатория'
+      sports: 'Спорт'
+      starwars: 'Междузвездни войни'
+      starwarsblocks: 'Междузвездни войни (блокове)'
+      starwarsblocks_hour: 'Междузвездни войни (блокове)'
+      weblab: 'Web Lab'
     popup:
       progress_for_user: "на %{name} в прогрес"
       progress: 'Вашият напредък'
@@ -779,10 +801,27 @@ bg:
     practice: 'Учителски практики'
     peer_review: 'Вашаят отзив'
     extra_course_content: 'Допълнително учебно съдържание'
+    csf_digcit: 'Цифрови граждани'
+    csf_jigsaw: 'Мозайка'
+    csf_loops: 'Повторения'
+    csf_events: 'Събития'
+    csf_binary: 'Двоичен код'
+    csf_data: 'Данни'
+    csf_conditionals: 'Условия'
+    csf_nested_loops: 'Вмъкнати цикли'
+    csf_functions: 'Функции'
+    csf_variables: 'Променливи'
+    csf_for_loops: 'За циклите'
+    csf_internet: 'Интернет'
     csp5_2: 'Глава 2: Програмиране със структури от данни'
     cspSurvey: 'Проучване'
     csp_ap_1: 'Глава 1: AP техническа настройка'
     csp2_1_2018: 'Част 1 - Дигитална информация'
+    csp_variables: 'Променливи'
+    csp_conditionals: 'Условия'
+    csp_functions: 'Функции'
+    csp_lists: 'Списъци'
+    csp_loops: 'Повторения'
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се управлява от Code.org.

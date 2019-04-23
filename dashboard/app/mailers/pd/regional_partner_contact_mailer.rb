@@ -1,6 +1,7 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
   default from: 'Anthonette Peña <partner@code.org>'
+  default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def matched(form, rp_pm)
     @form = form
@@ -9,7 +10,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     @name = pm.name
 
     subject = if form[:mini]
-                "Submitted question about 6-12 PL program from Code.org site"
+                "Question about Code.org program"
               else
                 "A teacher and/or administrator would like to connect with you"
               end

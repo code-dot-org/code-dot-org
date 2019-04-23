@@ -129,6 +129,7 @@ export default class LinkCleverAccountModal extends React.Component {
         <div style={styles.footer}>
           {!this.props.forceConnect && (
             <button
+              type="button"
               onClick={this.cancel}
               style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
             >
@@ -136,6 +137,7 @@ export default class LinkCleverAccountModal extends React.Component {
             </button>
           )}
           <button
+            type="button"
             onClick={this.ok}
             style={Object.assign({}, styles.buttonPrimary)}
           >

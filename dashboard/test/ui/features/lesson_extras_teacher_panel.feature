@@ -1,4 +1,5 @@
 @dashboard_db_access
+@no_mobile
 Feature: Lesson extras teacher panel
 
   Scenario: View student lesson extras progress
@@ -18,9 +19,9 @@ Feature: Lesson extras teacher panel
 
     # Lesson extras individual puzzle page
     And I click selector "button:contains(Try it):eq(0)" once I see it
+    When I wait for the page to fully load
     And I wait until element ".teacher-panel" is visible
     And check that the URL contains "section_id="
     And check that the URL contains "user_id="
     And I wait until element "h4:contains(Untitled Section)" is visible
-    And I wait until element ".students h4:contains(Student)" is visible
-    And I wait until element ".students a:contains(Sally)" is visible
+    And I wait until element ".section-student a:contains(Sally)" is visible

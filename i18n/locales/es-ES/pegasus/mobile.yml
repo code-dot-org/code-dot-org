@@ -9,7 +9,7 @@
   upgrade_ie_link: "Aprende más"
   en: "Ciencias de la computación"
   computer_science_edweek: "Semana de Educación en Ciencias de la Computación"
-  csedweek_dates: "8-14 de Diciembre, 2014"
+  csedweek_dates: "Del 3 al 9 de Diciembre de 2018"
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifica tu Hora de Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Code</h2><h3># intentaron</h3>"
@@ -1504,6 +1504,7 @@
   applab_tile_subtitle: "Crea tu propia aplicación en JavaScript usando programación basada en bloques. O lleva tus habilidades al siguiente nivel con la programación basada en texto. (Sólo en inglés)"
   applab_tile_start_tutorial: "Inicio"
   applab_tile_teacher_guide: "Ver la guía del profesor"
+  aquatic_name: 'Minecraft: Travesía Aquática'
   account_sign_up_email_opt_in: "¿Podemos enviarte por correo electrónico actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática? (aproximadamente una vez al mes)"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
   hoc_overview_dance_title: "Fiesta para bailar"

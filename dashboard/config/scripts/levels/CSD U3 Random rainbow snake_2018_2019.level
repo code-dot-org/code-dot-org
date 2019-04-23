@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:28.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -60,11 +60,11 @@
     "mini_rubric": "true",
     "parent_level_id": 11456,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
-    "rubric_exceeds": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions, and some circles have a random size.",
-    "rubric_meets": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions",
-    "rubric_approaches": "At least one student-created circle has a new color, appears at a random vertical position, and has a different horizontal position than any others.",
-    "rubric_no_evidence": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code."
+    "rubric_performance_level_1": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions, and some circles have a random size.",
+    "rubric_performance_level_2": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions",
+    "rubric_performance_level_3": "At least one student-created circle has a new color, appears at a random vertical position, and has a different horizontal position than any others.",
+    "rubric_performance_level_4": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

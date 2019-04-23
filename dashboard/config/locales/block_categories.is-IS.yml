@@ -23,13 +23,13 @@ is:
       Text: texti
       Picker: Veljari
       Comment: Athugasemd
-      'Variables ': 'Breytur '
-      Default: Sjálfgefið
-      Behaviors: Hegðun
-      Locations: Staðir
-      everythingelse: alltannað
       World: Heimur
       Sprites: Kvikar
+      Behaviors: Hegðun
+      'Variables ': 'Breytur '
+      Default: Sjálfgefið
+      Locations: Staðir
+      everythingelse: alltannað
       Location: Staður
       numbers: tölur
       Numbers: Tölur

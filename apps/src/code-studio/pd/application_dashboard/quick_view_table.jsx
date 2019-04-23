@@ -95,6 +95,15 @@ export class QuickViewTable extends React.Component {
     let columns = [];
     columns.push(
       {
+        property: 'id',
+        header: {
+          label: 'Actions'
+        },
+        cell: {
+          format: this.formatActionsCell
+        }
+      },
+      {
         property: 'created_at',
         header: {
           label: 'Submitted',
@@ -246,16 +255,6 @@ export class QuickViewTable extends React.Component {
       });
     });
 
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'Actions'
-      },
-      cell: {
-        format: this.formatActionsCell
-      }
-    });
-
     this.columns = columns;
   }
 
@@ -328,7 +327,16 @@ export class QuickViewTable extends React.Component {
 
   formatPrincipalApprovalCell = (principal_approval_state, props) => {
     if (principal_approval_state) {
-      return <span>{principal_approval_state}</span>;
+      return (
+        <div>
+          <span>{principal_approval_state}</span>
+          <PrincipalApprovalButtons
+            applicationId={props.rowData.id}
+            showResendEmailButton={props.rowData.allow_sending_principal_email}
+            onChange={this.handlePrincipalApprovalButtonsChange}
+          />
+        </div>
+      );
     }
 
     return (

@@ -25,7 +25,7 @@ var StudioVisualizationColumn = function(props) {
 
         {props.finishButton && (
           <div id="share-cell" className="share-cell-none">
-            <button id="finishButton" className="share">
+            <button type="button" id="finishButton" className="share">
               <img src="/blockly/media/1x1.gif" />
               {msg.finish()}
             </button>

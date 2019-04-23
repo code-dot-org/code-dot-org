@@ -71,10 +71,11 @@ export default class PopUpMenu extends Component {
           targetPoint={this.props.targetPoint}
           offset={this.props.offset}
           className={this.props.className}
-          children={this.props.children}
           showTail={this.props.showTail}
           style={this.props.style}
-        />
+        >
+          {this.props.children}
+        </MenuBubble>
       </Portal>
     );
   }

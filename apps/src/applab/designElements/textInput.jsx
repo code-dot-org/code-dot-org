@@ -15,9 +15,10 @@ import designMode from '../designMode';
 import {
   defaultFontSizeStyle,
   fontFamilyStyles,
-  themeOptions
+  themeOptions,
+  CLASSIC_THEME_INDEX
 } from '../constants';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
 
@@ -211,26 +212,79 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      classic: color.white,
-      dark: color.applab_dark_background
+      ...themeColor.textInputBackground
     },
     borderRadius: {
-      classic: 0,
-      dark: 10
+      default: 4,
+      orange: 0,
+      citrus: 4,
+      ketchupAndMustard: 5,
+      lemonade: 4,
+      forest: 4,
+      watermelon: 0,
+      area51: 10,
+      polar: 4,
+      glowInTheDark: 0,
+      bubblegum: 4,
+      millennial: 4,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
-      classic: 1,
-      dark: 1
+      default: 1,
+      orange: 1,
+      citrus: 1,
+      ketchupAndMustard: 1,
+      lemonade: 1,
+      forest: 1,
+      watermelon: 2,
+      area51: 1,
+      polar: 1,
+      glowInTheDark: 1,
+      bubblegum: 1,
+      millennial: 2,
+      robot: 1,
+      classic: 1
     },
     borderColor: {
       type: 'color',
-      classic: color.text_input_default_border_color,
-      dark: color.applab_dark_border
+      ...themeColor.textInputBorder
     },
     textColor: {
       type: 'color',
-      classic: color.black,
-      dark: color.white
+      ...themeColor.textInput
+    },
+    fontFamily: {
+      default: 'Arial',
+      orange: 'Arial',
+      citrus: 'Palatino',
+      ketchupAndMustard: 'Tahoma',
+      lemonade: 'Arial',
+      forest: 'Arial',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Trebuchet',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 
@@ -239,13 +293,13 @@ export default {
     element.style.margin = '0px';
     element.style.width = '200px';
     element.style.height = '30px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.color = '#000000';
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
+      element.style.color = themeColor.textInput.classic;
       element.style.backgroundColor = '';
       elementUtils.setDefaultBorderStyles(element, {
         forceDefaults: true,
@@ -265,7 +319,7 @@ export default {
       // Set the background color for older projects that didn't set it on create:
       if (element.style.backgroundColor === '') {
         element.style.backgroundColor = this.themeValues.backgroundColor[
-          themeOptions[0]
+          themeOptions[CLASSIC_THEME_INDEX]
         ];
       }
     }

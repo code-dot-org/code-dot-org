@@ -23,13 +23,13 @@ nn:
       Text: Tekst
       Picker: Veljar
       Comment: Kommentar
-      'Variables ': 'Variablar '
-      Default: Standard
-      Behaviors: Atferd
-      Locations: Stadar
-      everythingelse: resten
       World: Verd
       Sprites: Sprites
+      Behaviors: Atferd
+      'Variables ': 'Variablar '
+      Default: Standard
+      Locations: Stadar
+      everythingelse: resten
       Location: Stad
       numbers: tal
       Numbers: Tal

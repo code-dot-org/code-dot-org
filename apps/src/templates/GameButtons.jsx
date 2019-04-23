@@ -20,7 +20,7 @@ const styles = {
 };
 
 export const FinishButton = () => (
-  <button id="finishButton" className="share">
+  <button type="button" id="finishButton" className="share">
     <img src="/blockly/media/1x1.gif" />
     {msg.finish()}
   </button>
@@ -29,6 +29,7 @@ export const FinishButton = () => (
 export const RunButton = Radium(props => (
   <span id="runButtonWrapper">
     <button
+      type="button"
       id="runButton"
       className={classNames([
         'launch',
@@ -51,6 +52,7 @@ RunButton.displayName = 'RunButton';
 
 export const ResetButton = Radium(props => (
   <button
+    type="button"
     id="resetButton"
     // See apps/style/common.scss for these class definitions
     className={classNames([

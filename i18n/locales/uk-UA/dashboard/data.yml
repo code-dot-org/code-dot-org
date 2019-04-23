@@ -500,6 +500,8 @@ uk:
         mc_2018_closing: 'Minecraft: Водний Вояж Вітання'
         hoc_dance_warmup: Танцювальна вечірка - Розминка
         hoc_dance_congrats: Танцювальна вечірка - Вечірка Почалась!
+        csd_pair_programming: Парне програмування
+        csd_applab_parameters: Функції з параметрами
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

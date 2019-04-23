@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import RegionalPartnerContact from '@cdo/apps/code-studio/pd/regional_partner_contact/RegionalPartnerContact';
 
 describe('RegionalPartnerContactTest', () => {
@@ -25,6 +25,18 @@ describe('RegionalPartnerContactTest', () => {
     optIn: {type: 'ButtonList', expectRequired: true}
   };
 
+  let windowDashboard;
+  before(() => {
+    windowDashboard = window.dashboard;
+    window.dashboard = {
+      CODE_ORG_URL: '//test.code.org'
+    };
+  });
+
+  after(() => {
+    window.dashboard = windowDashboard;
+  });
+
   describe('Required fields', () => {
     Object.keys(FIELD_EXPECTATIONS).forEach(fieldName => {
       const expectRequired = FIELD_EXPECTATIONS[fieldName].expectRequired;
@@ -38,7 +50,7 @@ describe('RegionalPartnerContactTest', () => {
         );
 
         const field = findField(wrapper, fieldName);
-        expect(field).to.have.prop('required', expectRequired);
+        expect(field.prop('required')).to.equal(expectRequired);
       });
     });
   });

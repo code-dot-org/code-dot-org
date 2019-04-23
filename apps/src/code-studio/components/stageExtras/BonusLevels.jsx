@@ -70,9 +70,13 @@ class BonusLevelButton extends React.Component {
 
   render() {
     return this.props.perfected ? (
-      <button className="btn btn-large">{i18n.review()}</button>
+      <button type="button" className="btn btn-large">
+        {i18n.review()}
+      </button>
     ) : (
-      <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
+      <button type="button" className="btn btn-large btn-primary">
+        {i18n.tryIt()}
+      </button>
     );
   }
 }

@@ -21,7 +21,8 @@ const defaultProps = {
       type: ResourceType.teacherForum,
       link: 'https://forum.code.org/'
     }
-  ]
+  ],
+  showAssignButton: true
 };
 
 describe('CourseOverviewTopRow', () => {
