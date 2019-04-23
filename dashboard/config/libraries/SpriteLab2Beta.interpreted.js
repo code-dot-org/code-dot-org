@@ -193,6 +193,13 @@ function checkTouching(condition, a, b, event) {
   collisionEvents.push({condition: condition, a: a, b: b, event: event});
 }
 
+// Temporary block while this feature is being prototyped
+function whenTouchingSet(condition, a, b, alpha, beta, event) {
+  //Alpha and Beta parameters catch the 'subject' and 'object', which are
+  //later derived from a and b and act as a toolbox here
+  collisionEvents.push({condition: condition, a: a, b: b, event: event});
+}
+
 // Loops
 function repeatWhile(condition, loop) {
   loops.push({'condition': condition, 'loop': loop});
