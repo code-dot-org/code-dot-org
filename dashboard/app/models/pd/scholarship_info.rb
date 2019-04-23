@@ -10,6 +10,7 @@
 #  pd_enrollment_id   :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  course             :string(255)
 #
 # Indexes
 #
