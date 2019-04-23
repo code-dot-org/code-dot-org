@@ -31,7 +31,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'non-logged-in users cannot enroll in csf workshop' do
-    workshop = create :pd_workshop
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :logged_out
@@ -53,7 +53,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'logged-in users can enroll in csf workshop' do
     sign_in @teacher
-    workshop = create :pd_workshop
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
