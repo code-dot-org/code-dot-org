@@ -680,6 +680,45 @@ SCRIPT
     assert_equal expected, script_text
   end
 
+  test 'serialize named_level' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script, hidden: true
+    stage = create :stage, name: 'stage 1', script: script
+    script_level = create(
+      :script_level,
+      levels: [level],
+      named_level: true,
+      stage: stage,
+      script: script
+    )
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<-SCRIPT
+stage 'stage 1'
+level 'maze 1', named: true
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
+  test 'Script DSL with named: true' do
+    input_dsl = <<DSL
+stage 'stage 1'
+level 'maze 1', named: true
+DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "stage 1",
+            scriptlevels: [{stage: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
   test 'remove property' do
     # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
     input_dsl = "
