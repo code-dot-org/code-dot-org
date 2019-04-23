@@ -48,7 +48,7 @@ import {FacilitatorScoringFields} from './detail_view/facilitator_scoring_fields
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
-import MarkdownSpan from '../components/markdownSpan';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   notes: {
@@ -1076,10 +1076,13 @@ export class DetailViewContents extends React.Component {
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
                           <td style={styles.questionColumn}>
-                            <MarkdownSpan>
-                              {this.labelOverrides[key] ||
-                                this.pageLabels[header][key]}
-                            </MarkdownSpan>
+                            <UnsafeRenderedMarkdown
+                              openExternalLinksInNewTab
+                              markdown={
+                                this.labelOverrides[key] ||
+                                this.pageLabels[header][key]
+                              }
+                            />
                           </td>
                           <td style={styles.answerColumn}>
                             {this.renderAnswer(

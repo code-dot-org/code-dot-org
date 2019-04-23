@@ -14,7 +14,7 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
 
@@ -195,23 +195,81 @@ export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
   themeValues: {
+    backgroundColor: {
+      type: 'color',
+      ...themeColor.labelBackground
+    },
     borderRadius: {
-      classic: 0,
-      dark: 10
+      default: 0,
+      orange: 0,
+      citrus: 2,
+      ketchupAndMustard: 200,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 0,
+      area51: 20,
+      polar: 2,
+      glowInTheDark: 0,
+      bubblegum: 100,
+      millennial: 4,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
-      classic: 0,
-      dark: 0
+      default: 0,
+      orange: 0,
+      citrus: 0,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 0,
+      watermelon: 0,
+      area51: 0,
+      polar: 0,
+      glowInTheDark: 0,
+      bubblegum: 0,
+      millennial: 0,
+      robot: 0,
+      classic: 0
     },
     borderColor: {
       type: 'color',
-      classic: color.text_input_default_border_color,
-      dark: color.applab_dark_border
+      ...themeColor.textInputBorder
     },
     textColor: {
       type: 'color',
-      classic: color.default_text,
-      dark: color.white
+      ...themeColor.labelText
+    },
+    fontFamily: {
+      default: 'Arial Black',
+      orange: 'Arial',
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial Black',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 
@@ -220,18 +278,18 @@ export default {
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
-    element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-    element.style.fontSize = applabConstants.defaultFontSizeStyle;
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
-    element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.color = '#333333';
+      element.style.backgroundColor = themeColor.labelBackground.classic;
+      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
+      element.style.fontSize = applabConstants.defaultFontSizeStyle;
+      element.style.color = themeColor.labelText.classic;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 
@@ -240,6 +298,10 @@ export default {
   },
 
   onDeserialize: function(element) {
+    // Set background color style for older projects that didn't set them on create:
+    if (!element.style.backgroundColor) {
+      element.style.backgroundColor = themeColor.labelBackground.classic;
+    }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:

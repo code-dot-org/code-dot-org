@@ -1,3 +1,10 @@
+stage 'Functions with Parameters and Return Explore', flex_category: 'csp_more_with_functions'
+level 'U7 L01 More with Functions', progression: 'More with Functions'
+
+stage 'Libraries', flex_category: 'csp_libraries'
+level 'U7 L01 More with Functions', progression: 'Intro to Libraries'
+assessment 'U7 L05 Exit Ticket', progression: 'Check Your Understanding'
+
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'

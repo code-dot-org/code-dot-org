@@ -48,20 +48,6 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
-    ],
-    'text/ng-template' => %w[
-      code.org/teacher-dashboard/section_projects
-      code.org/teacher-dashboard/section_stats
-      code.org/teacher-dashboard/section
-      code.org/teacher-dashboard/section_progress
-      code.org/teacher-dashboard/sections
-      code.org/teacher-dashboard/section_assessments
-      code.org/teacher-dashboard/nav
-      code.org/teacher-dashboard/landing
-      code.org/teacher-dashboard/student
-      code.org/teacher-dashboard/section_responses
-      code.org/teacher-dashboard/signin_cards
-      code.org/teacher-dashboard/section_manage
     ]
   }
 

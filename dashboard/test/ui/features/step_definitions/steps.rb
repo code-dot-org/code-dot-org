@@ -5,24 +5,29 @@ SHORT_WAIT_TIMEOUT = 30.seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
 def http_client
-  @browser.send(:bridge).http.send(:http)
+  $browser.send(:bridge).http.send(:http)
+rescue
+  nil
 end
 
-# Set HTTP read timeout greater than the wait timeout during the block.
+# Set HTTP read timeout to the specified wait timeout during the block.
 def with_read_timeout(timeout)
-  http = http_client
-  if (read_timeout = http.read_timeout) < (timeout + 5.seconds)
-    http.read_timeout = timeout + 5.seconds
+  if (http = http_client)
+    read_timeout = http.read_timeout
+    http.read_timeout = timeout
   end
   yield
 ensure
-  http.read_timeout = read_timeout
+  http.read_timeout = read_timeout if http
 end
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
     yield
-  rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+  rescue Selenium::WebDriver::Error::UnknownError => e
+    puts "Unknown error: #{e}"
+    false
+  rescue  Selenium::WebDriver::Error::StaleElementReferenceError
     false
   end
 end
@@ -36,7 +41,10 @@ def element_stale?(element)
   false
 rescue Selenium::WebDriver::Error::JavascriptError => e
   e.message.starts_with? 'Element does not exist in cache'
-rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+rescue Selenium::WebDriver::Error::UnknownError => e
+  puts "Unknown error: #{e}"
+  true
+rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
 
@@ -45,6 +53,7 @@ def page_load(wait_until_unload)
     html = @browser.find_element(tag_name: 'html')
     yield
     wait_until {element_stale?(html)}
+    navigate_to(@browser.current_url)
   else
     yield
   end
@@ -69,9 +78,7 @@ def individual_steps(steps)
   end
 end
 
-Given /^I am on "([^"]*)"$/ do |url|
-  check_window_for_js_errors('before navigation')
-  url = replace_hostname(url)
+def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
       @browser.navigate.to url
@@ -79,6 +86,11 @@ Given /^I am on "([^"]*)"$/ do |url|
     refute_bad_gateway_or_site_unreachable
   end
   install_js_error_recorder
+end
+
+Given /^I am on "([^"]*)"$/ do |url|
+  check_window_for_js_errors('before navigation')
+  navigate_to replace_hostname(url)
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -911,7 +923,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click "#signin-button"
+    And I click "#signin-button" to load a new page
     And I wait to see ".header_user"
   }
 end

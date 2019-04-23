@@ -1598,7 +1598,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops in Maze:
@@ -1640,9 +1640,9 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals with Bee:
-              name: Podmienky so Včelou
+              name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Conditionals & Loops in Farmer:
               name: Podmienky a cykly so Záhradníčkou
             Impacts of Computing:
@@ -2051,7 +2051,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops in Maze:
@@ -2129,7 +2129,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Conditionals & Loops in Farmer:
               name: Podmienky a cykly so Záhradníčkou
             Digital Citizenship:
@@ -2328,7 +2328,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2477,7 +2477,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2528,7 +2528,7 @@ sk:
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Envelope Variables:
               name: Premenné v obálkach
             Variables in Artist:
@@ -2566,7 +2566,7 @@ sk:
             'Conditionals: Conditionals with Cards':
               name: 'Podmienky: Podmienky s kartami'
             Conditional Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             'Variables: Envelope Variables':
               name: 'Premenné: Premenné v obálkach'
             'For Loops: For Loop Fun':
@@ -2639,7 +2639,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -2705,7 +2705,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Digital Citizenship:
               name: Digitálne občianstvo
             Build a Play Lab Game:
@@ -2792,7 +2792,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2838,7 +2838,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -2937,7 +2937,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -2986,7 +2986,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -3271,7 +3271,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s Umelecom
+              name: Binárne obrázky s Umelcom
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3353,7 +3353,7 @@ sk:
             Conditionals in Bee:
               name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Maze:
-              name: Podmienky & Cykly v Bludisku
+              name: Podmienky & cykly v bludisku
             Digital Citizenship:
               name: Digitálne občianstvo
             Build a Play Lab Game:
@@ -3361,7 +3361,7 @@ sk:
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
-              name: Binárne obrázky s Umelecom
+              name: Binárne obrázky s Umelcom
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Nested Loops in Frozen:
@@ -3507,7 +3507,7 @@ sk:
                 študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do
                 funkcií tak užitočné.
             Functions in Artist:
-              name: Funkcie s Umelecom
+              name: Funkcie s Umelcom
               description_student: Vytvor zložitejšie kresby s funkciami!
               description_teacher: Študenti sa oboznámia s používaním funkcií na stránke
                 Code.org. S Umelcom vytvoríme a upravíme veľkolepé obrázky. Študenti
@@ -3958,7 +3958,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops with Frozen:
@@ -4128,7 +4128,7 @@ sk:
             Debugging with Scrat:
               name: Odstraňovanie chýb so Scratom
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Nested Loops:
@@ -4279,7 +4279,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
@@ -4405,7 +4405,7 @@ sk:
             Programming in Collector:
               name: Programovanie so zberateľkou
             Programming in Artist:
-              name: Programovanie s Umelecom
+              name: Programovanie s Umelcom
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
@@ -4687,3 +4687,33 @@ sk:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Podmienky s kartami
+            'Programming: My Robotic Friends':
+              name: 'Programovanie: Moji robotickí kamaráti'
+            Building a Foundation:
+              name: Budovanie základov
+            Debugging with Scrat:
+              name: Odstraňovanie chýb so Scratom
+            Programming in Artist:
+              name: Programovanie s Umelcom
+            'Loops: My Loopy Robotic Friends':
+              name: 'Cykly: Moji zacyklení robotickí kamaráti'
+            Nested Loops with Frozen:
+              name: Vnorené cykly s Frozen
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Pet Giraffe with Sprite Lab:
+              name: Moja malá žirafa so Sprite Labom
+            Build a Flappy Game:
+              name: Vytvor si vlastnú hru Flappy
+            Build a Star Wars Game:
+              name: Vytvor hru Star Wars
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+            'Functions: Songwriting':
+              name: 'Funkcie: Písanie pesničiek'
+            Functions in Minecraft:
+              name: Funkcie v Minecrafte
+            Functions in Artist:
+              name: Funkcie s Umelcom
+            Determine the Concept:
+              name: Urči správny koncept

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id  (game_id)
 #  index_levels_on_name     (name)
 #
+require 'cdo/script_constants'
 
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
@@ -31,6 +32,16 @@ class DSLDefined < Level
 
   def dsl_default
     "Enter the level definition here.\n"
+  end
+
+  def localized_text(text)
+    I18n.t(
+      text,
+      scope: ['data', type.underscore, name],
+      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
+      default: text,
+      smart: true
+    )
   end
 
   def self.setup(data)
@@ -74,7 +85,7 @@ class DSLDefined < Level
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
         level.rewrite_dsl_file(text)
-        rewrite_i18n_file(i18n)
+        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| ScriptConstants.i18n? sl.script.name}
       end
 
       level

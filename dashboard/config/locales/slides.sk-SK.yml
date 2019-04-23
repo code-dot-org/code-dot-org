@@ -181,8 +181,8 @@ sk:
         text: Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som
           na množstve filmov, vrátane Šreka.
       2:
-        text: Toto je náš nový cyklus "počítadlo". Bude dookola opakovať akcie dookola,
-          pričom ich môžeme pri každom opakovaní mierne upraviť.
+        text: Toto je náš nový cyklus "počítadlo". Bude dookola opakovať jednotlivé
+          kroky, pričom ich môžeme pri každom opakovaní mierne upraviť.
       3:
         text: V tomto prípade náš cyklus "počítadlo" hovorí "počítaj od 50 do 90 v
           násobkoch 10tich" a vo vnútri nej máme blok "nakresli štvorec". Presuň blok
@@ -257,8 +257,8 @@ sk:
           sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače
           dokážu opakovať veci stovky, alebo dokonca miliardy krát.
       2:
-        text: V programovaní toto voláme cyklus. Cyklus znamená, že Tvoj kód sa zopakuje
-          znova a znova. V ďaľšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec
+        text: V programovaní toto voláme cyklus. Cyklus znamená, že tvoj kód sa zopakuje
+          znova a znova. V ďalšom cvičení máš za úlohu pomôcť Anne vytvoriť štvorec
           pomocou bloku "Opakuj".
       3:
         text: Akýkoľvek blok kódu, ktorý vložíš do bloku "Opakuj", sa bude opakovať

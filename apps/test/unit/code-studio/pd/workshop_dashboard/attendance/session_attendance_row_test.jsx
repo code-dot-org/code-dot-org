@@ -1,4 +1,4 @@
-import {expect} from '../../../../../util/configuredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import React from 'react';
 import SessionAttendanceRow from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance_row';
@@ -31,19 +31,21 @@ const DEFAULT_PROPS = {
 describe('SessionAttendanceRow', () => {
   it('renders default (unattended) row', () => {
     const wrapper = shallow(<SessionAttendanceRow {...DEFAULT_PROPS} />);
-    expect(wrapper).to.containMatchingElement(
-      <tr className={null}>
-        <td>{FAKE_FIRST_NAME}</td>
-        <td>{FAKE_LAST_NAME}</td>
-        <td>{FAKE_EMAIL}</td>
-        <td>No</td>
-        <td>
-          <div>
-            <i className="fa fa-square-o" />
-          </div>
-        </td>
-      </tr>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <tr className={null}>
+          <td>{FAKE_FIRST_NAME}</td>
+          <td>{FAKE_LAST_NAME}</td>
+          <td>{FAKE_EMAIL}</td>
+          <td>No</td>
+          <td>
+            <div>
+              <i className="fa fa-square-o" />
+            </div>
+          </td>
+        </tr>
+      )
+    ).to.be.ok;
   });
 
   it('renders attended row', () => {
@@ -56,19 +58,21 @@ describe('SessionAttendanceRow', () => {
         }}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <tr className="success">
-        <td>{FAKE_FIRST_NAME}</td>
-        <td>{FAKE_LAST_NAME}</td>
-        <td>{FAKE_EMAIL}</td>
-        <td>No</td>
-        <td>
-          <div>
-            <i className="fa fa-check-square-o" />
-          </div>
-        </td>
-      </tr>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <tr className="success">
+          <td>{FAKE_FIRST_NAME}</td>
+          <td>{FAKE_LAST_NAME}</td>
+          <td>{FAKE_EMAIL}</td>
+          <td>No</td>
+          <td>
+            <div>
+              <i className="fa fa-check-square-o" />
+            </div>
+          </td>
+        </tr>
+      )
+    ).to.be.ok;
   });
 
   it('renders extra column when account is required for attendance', () => {
@@ -78,40 +82,44 @@ describe('SessionAttendanceRow', () => {
         accountRequiredForAttendance={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <tr>
-        <td>{FAKE_FIRST_NAME}</td>
-        <td>{FAKE_LAST_NAME}</td>
-        <td>{FAKE_EMAIL}</td>
-        <td>Yes</td>
-        <td>No</td>
-        <td>
-          <div>
-            <i className="fa fa-square-o" />
-          </div>
-        </td>
-      </tr>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <tr>
+          <td>{FAKE_FIRST_NAME}</td>
+          <td>{FAKE_LAST_NAME}</td>
+          <td>{FAKE_EMAIL}</td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>
+            <div>
+              <i className="fa fa-square-o" />
+            </div>
+          </td>
+        </tr>
+      )
+    ).to.be.ok;
   });
 
   it('renders extra column to show completed puzzles', () => {
     const wrapper = shallow(
       <SessionAttendanceRow {...DEFAULT_PROPS} showPuzzlesCompleted={true} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <tr>
-        <td>{FAKE_FIRST_NAME}</td>
-        <td>{FAKE_LAST_NAME}</td>
-        <td>{FAKE_EMAIL}</td>
-        <td>No</td>
-        <td />
-        <td>
-          <div>
-            <i className="fa fa-square-o" />
-          </div>
-        </td>
-      </tr>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <tr>
+          <td>{FAKE_FIRST_NAME}</td>
+          <td>{FAKE_LAST_NAME}</td>
+          <td>{FAKE_EMAIL}</td>
+          <td>No</td>
+          <td />
+          <td>
+            <div>
+              <i className="fa fa-square-o" />
+            </div>
+          </td>
+        </tr>
+      )
+    ).to.be.ok;
   });
 
   it('renders shows completed puzzle count for user only if they attended', () => {
@@ -125,19 +133,21 @@ describe('SessionAttendanceRow', () => {
         }}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <tr className="success">
-        <td>{FAKE_FIRST_NAME}</td>
-        <td>{FAKE_LAST_NAME}</td>
-        <td>{FAKE_EMAIL}</td>
-        <td>No</td>
-        <td>{42}</td>
-        <td>
-          <div>
-            <i className="fa fa-check-square-o" />
-          </div>
-        </td>
-      </tr>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <tr className="success">
+          <td>{FAKE_FIRST_NAME}</td>
+          <td>{FAKE_LAST_NAME}</td>
+          <td>{FAKE_EMAIL}</td>
+          <td>No</td>
+          <td>{42}</td>
+          <td>
+            <div>
+              <i className="fa fa-check-square-o" />
+            </div>
+          </td>
+        </tr>
+      )
+    ).to.be.ok;
   });
 });

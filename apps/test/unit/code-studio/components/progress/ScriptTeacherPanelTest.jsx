@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedScriptTeacherPanel as ScriptTeacherPanel} from '@cdo/apps/code-studio/components/progress/ScriptTeacherPanel';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import TeacherPanel from '@cdo/apps/code-studio/components/TeacherPanel';
@@ -41,14 +41,16 @@ describe('ScriptTeacherPanel', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
-        <div>
-          <ViewAsToggle />
-          <div>{commonMsg.loading()}</div>
-        </div>
-      </TeacherPanel>
+    assert(
+      wrapper.containsMatchingElement(
+        <TeacherPanel>
+          <h3>{commonMsg.teacherPanel()}</h3>
+          <div>
+            <ViewAsToggle />
+            <div>{commonMsg.loading()}</div>
+          </div>
+        </TeacherPanel>
+      )
     );
   });
 
@@ -56,30 +58,28 @@ describe('ScriptTeacherPanel', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
-    expect(wrapper).to.containMatchingElement(<div>{commonMsg.loading()}</div>);
+    assert(wrapper.containsMatchingElement(<div>{commonMsg.loading()}</div>));
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={true} />
     );
-    expect(wrapper).not.to.containMatchingElement(
-      <div>{commonMsg.loading()}</div>
-    );
+    assert(!wrapper.containsMatchingElement(<div>{commonMsg.loading()}</div>));
   });
 
   it('shows SectionSelector if scriptHasLockableStages', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} scriptHasLockableStages={true} />
     );
-    expect(wrapper).to.containMatchingElement(<SectionSelector />);
+    assert(wrapper.containsMatchingElement(<SectionSelector />));
   });
 
   it('shows SectionSelector if scriptAllowsHiddenStages', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} scriptAllowsHiddenStages={true} />
     );
-    expect(wrapper).to.containMatchingElement(<SectionSelector />);
+    assert(wrapper.containsMatchingElement(<SectionSelector />));
   });
 
   it('hides SectionSelector if neither scriptAllowsHiddenStages nor scriptHasLockableStages', () => {
@@ -90,7 +90,7 @@ describe('ScriptTeacherPanel', () => {
         scriptAllowsHiddenStages={false}
       />
     );
-    expect(wrapper).not.to.containMatchingElement(<SectionSelector />);
+    assert(!wrapper.containsMatchingElement(<SectionSelector />));
   });
 
   it('shows section selection instructions if viewing as a teacher, and has sections and lockable stages', () => {
@@ -102,10 +102,12 @@ describe('ScriptTeacherPanel', () => {
         hasSections={true}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>{commonMsg.selectSectionInstructions()}</div>
-      </div>
+    assert(
+      wrapper.containsMatchingElement(
+        <div>
+          <div>{commonMsg.selectSectionInstructions()}</div>
+        </div>
+      )
     );
   });
 
@@ -119,23 +121,25 @@ describe('ScriptTeacherPanel', () => {
         unlockedStageNames={['stage1', 'stage2']}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <div>{commonMsg.selectSectionInstructions()}</div>
+    assert(
+      wrapper.containsMatchingElement(
         <div>
+          <div>{commonMsg.selectSectionInstructions()}</div>
           <div>
-            <FontAwesome icon="exclamation-triangle" />
-            <div>{commonMsg.dontForget()}</div>
-          </div>
-          <div>
-            {commonMsg.lockFollowing()}
-            <ul>
-              <li>stage1</li>
-              <li>stage2</li>
-            </ul>
+            <div>
+              <FontAwesome icon="exclamation-triangle" />
+              <div>{commonMsg.dontForget()}</div>
+            </div>
+            <div>
+              {commonMsg.lockFollowing()}
+              <ul>
+                <li>stage1</li>
+                <li>stage2</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      )
     );
   });
 
@@ -152,7 +156,7 @@ describe('ScriptTeacherPanel', () => {
           getSelectedUserId={() => {}}
         />
       );
-      expect(wrapper.find('StudentTable')).to.exist;
+      expect(wrapper.find('StudentTable')).to.have.length(1);
     });
 
     it('does not display StudentTable for teacher with no students', () => {
@@ -163,7 +167,7 @@ describe('ScriptTeacherPanel', () => {
           students={[]}
         />
       );
-      expect(wrapper.find('StudentTable')).to.not.exist;
+      expect(wrapper.find('StudentTable')).to.have.length(0);
     });
 
     it('does not display StudentTable for student', () => {
@@ -174,7 +178,7 @@ describe('ScriptTeacherPanel', () => {
           students={students}
         />
       );
-      expect(wrapper.find('StudentTable')).to.not.exist;
+      expect(wrapper.find('StudentTable')).to.have.length(0);
     });
   });
 });

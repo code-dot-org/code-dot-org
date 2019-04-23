@@ -498,11 +498,13 @@ export const getAssessmentsFreeResponseResults = state => {
     responsesArray
       .filter(result => result.type === QuestionType.FREE_RESPONSE)
       .forEach((response, index) => {
-        questionsAndResults[index].responses.push({
-          id: studentId,
-          name: studentObject.student_name,
-          response: response.student_result
-        });
+        if (questionsAndResults[index]) {
+          questionsAndResults[index].responses.push({
+            id: studentId,
+            name: studentObject.student_name,
+            response: response.student_result
+          });
+        }
       });
   });
   return questionsAndResults;

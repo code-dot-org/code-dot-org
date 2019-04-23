@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-02-14T01:24:29.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -21,11 +21,11 @@
     "map_reference": "/docs/csd-1718/images-in-html/index.html",
     "encrypted": "false",
     "rubric_key_concept": "Structure content on a web page using HTML. (Add an image to a web page.)",
-    "rubric_exceeds": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.",
-    "rubric_meets": "The image displays properly.",
-    "rubric_approaches": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.",
-    "rubric_no_evidence": "The `img` tag is not used or is not a source address given for the image.",
-    "mini_rubric": "true"
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The image displays properly and an `alt` attribute gives a reasonable test description of the image.  No unnecessary code is included in the`img` tag.",
+    "rubric_performance_level_2": "The image displays properly.",
+    "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.",
+    "rubric_performance_level_4": "The `img` tag is not used or is not a source address given for the image."
   },
   "published": true,
   "notes": "",

@@ -18,7 +18,7 @@ Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
-  And element "#rubric-input-exceeds" does not exist
+  And element "#rubric-input-performanceLevel1" does not exist
   And element "#ui-test-submit-feedback" does not exist
   And element "#ui-test-feedback-time" does not exist
   And element "ui-test-feedback-input" does not exist
@@ -50,7 +50,7 @@ Otherwise don't show feedback tab
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
-  And element "#rubric-input-exceeds" does not exist
+  And element "#rubric-input-performanceLevel1" does not exist
   And element "#ui-test-submit-feedback" does not exist
   And element "#ui-test-feedback-time" does not exist
   And element "ui-test-feedback-input" does not exist
@@ -64,14 +64,14 @@ Otherwise don't show feedback tab
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
   And element "#ui-test-submit-feedback" contains text "Save and share"
   And element "#ui-test-feedback-time" does not exist
-  And I wait to see "#rubric-input-exceeds"
-  And I press "#rubric-input-exceeds" using jQuery
+  And I wait to see "#rubric-input-performanceLevel1"
+  And I press "#rubric-input-performanceLevel1" using jQuery
   And I wait to see "#ui-test-feedback-input"
   And I press the first "#ui-test-feedback-input" element
   And I press keys "Nice!" for element "#ui-test-feedback-input"
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
-  And element "#rubric-input-exceeds" is checked
+  And element "#rubric-input-performanceLevel1" is checked
   And I wait until "#ui-test-feedback-time" contains text "Last updated"
   And element "#ui-test-submit-feedback" contains text "Update"
 
@@ -79,8 +79,8 @@ Otherwise don't show feedback tab
   And I reload the page
   And I wait for the page to fully load
   And I wait until ".editor-column" contains text "Nice!"
-  And I wait to see "#rubric-input-exceeds"
-  And element "#rubric-input-exceeds" is checked
+  And I wait to see "#rubric-input-performanceLevel1"
+  And element "#rubric-input-performanceLevel1" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"
   And element "#ui-test-submit-feedback" contains text "Update"
 
@@ -95,7 +95,7 @@ Otherwise don't show feedback tab
   Then I click selector ".section-student .name a"
   And I wait to see ".uitest-feedback"
   And I wait until ".editor-column" contains text "Nice!"
-  And element "#rubric-input-exceeds" is not visible
+  And element "#rubric-input-performanceLevel1" is not visible
   And I wait to see "#ui-test-submit-feedback"
   And element "#ui-test-submit-feedback" contains text "Update"
   And element ".editor-column" contains text matching "Last updated .* ago"
@@ -107,5 +107,5 @@ Otherwise don't show feedback tab
   And I wait to see ".uitest-feedback"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"
-  And element "#rubric-input-exceeds" is checked
+  And element "#rubric-input-performanceLevel1" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"

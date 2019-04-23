@@ -14,7 +14,8 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
-    When I click selector "a:contains(Sally)" once I see it
+    And I wait until element "a:contains(Sally)" is visible
+    When I click selector "a:contains(Sally)" to load a new page
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "/s/allthethings"
     And check that the URL contains "viewAs=Teacher"
