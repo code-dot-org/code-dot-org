@@ -352,6 +352,18 @@ module Pd::Application
       true
     end
 
+    def allow_sending_application_reminder_email?
+      reminder_emails = emails.where(email_type: 'application_receipt_reminder')
+
+      # Do we allow the cron job to send a reminder email to the teacher?
+
+      # Only if we haven't already sent one.
+      return false if reminder_emails.any?
+
+      # If it's valid to send another principal email at this time.
+      return allow_sending_principal_email?
+    end
+
     # memoize in a hash, per course
     FILTERED_LABELS = Hash.new do |h, key|
       labels_to_remove = (
