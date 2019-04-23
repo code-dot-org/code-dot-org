@@ -83,24 +83,33 @@ def plugins_to_arg(plugins)
   plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
 end
 
-def redact(source, dest, *plugins)
-  return unless File.exist? source
-  FileUtils.mkdir_p File.dirname(dest)
-
+def redact_string(string, *plugins)
   plugins = plugins_to_arg(plugins)
-  data = YAML.load_file(source)
   args = ['bin/i18n/node_modules/.bin/redact',
           '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
   args.push('-p ' + plugins) unless plugins.empty?
 
   stdout, _status = Open3.capture2(
     args.join(" "),
-    stdin_data: JSON.generate(data)
+    stdin_data: string
   )
-  data = JSON.parse(stdout)
+  stdout
+end
+
+def redact(source, dest, *plugins)
+  return unless File.exist? source
+  FileUtils.mkdir_p File.dirname(dest)
+
+  data = YAML.load_file(source)
+  json_data = JSON.generate(data)
+  redacted = JSON.parse(redact_string(json_data, *plugins))
+
   File.open(dest, "w+") do |file|
-    file.write(to_crowdin_yaml(data))
+    file.write(to_crowdin_yaml(redacted))
   end
+end
+
+def restore_string(source, redacted, *plugins)
 end
 
 def restore(source, redacted, dest, *plugins)
