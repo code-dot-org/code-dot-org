@@ -1507,6 +1507,7 @@
   syncing_students: "Actualiza tus estudiantes"
   syncing_students_instructions: 'Si su sección de Code.org no está actualizada con su lista de alumnos en Google Classroom, haga clic en el botón "Sincronizar estudiantes de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una cuenta de Google":'
+  hero_name: 'Minecraft: Viaje del héroe'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
   applab_tile_title: "Introducción a App Lab (edades 13+)"
   applab_tile_subtitle: "Crea tu propia aplicación en JavaScript usando la programación en bloque. O aplica tus habilidades en el siguiente nivel con la programación basada en texto. (Sólo en inglés)"
@@ -1585,6 +1586,7 @@
   hoc2018_mc_homepage_watch_video: "Mira nuestro video"
   hoc2018_mc_homepage_join_us: "Únete"
   hoc2018_mc_homepage_try_it: "Pruébalo"
+  hoc2018_mc_back: "¡Minecraft está de vuelta con una nueva actividad para la Hora del Código!"
   hoc2018_mc_back_journey: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
   hoc2018_mc_teacher_guide: "Ver la guía del profesor"
   hoc2018_mc_minecraft_education: "Educacion Minecraft"

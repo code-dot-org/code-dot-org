@@ -8,12 +8,21 @@ pl:
       draw a flower: narysuj kwiatka
       draw a square: narysuj kwadrat
       draw a snowflake: narysuj płatek śniegu
+      get 2 nectar: zbierz 2 nektary
+      move and get nectar: idź i zbierz nektar
+      get 7 nectar make 7 honey: zbierz 7 nektarów zrób 7 miodów
+      get 7 make 7: zbierz 7 zrób 7
       draw a tree: narysuj drzewo
       draw a triangle: narysuj trójkąt
       draw a house: narysuj dom
+      check purple flower: sprawdź fioletowy kwiat
+      get nectar or make honey: zbierz nektar lub zrób miód
+      get 5 nectar: zbierz 5 nektarów
       draw a star: narysuj gwiazdę
       do something: wykonaj coś
       jump: skocz
+      get 3 nectar: zbierz 3 nektary
+      get nectar make honey: zbierz nektar zrób miód
       set score: ustaw wynik
       get nectar: pobierz nektar
       test: test
@@ -23,6 +32,7 @@ pl:
       move up: idź w górę
       move down: idź w dół
       move left: idź w lewo
+      check nectar or honey: sprawdź nektar czy miód
       collect: zbierz
       turn left: skręć w lewo
       move forward: idź do przodu
