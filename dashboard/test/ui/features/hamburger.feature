@@ -7,7 +7,7 @@ Feature: Hamburger dropdown
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
 
-  Scenario: Student viewing hamburger dropdown in English on desktop
+  Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
     Given I create a student named "Sally Student"
     Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
@@ -24,7 +24,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
 
-  Scenario: Teacher viewing hamburger dropdown (with expanded options) in English on desktop
+  Scenario: Teacher viewing hamburger dropdown (with expanded options) and help button dropdown in English on desktop
     Given I create a teacher named "Tessa Teacher"
     Then I wait until I am on "http://studio.code.org/home"
     Then I wait to see "#hamburger-icon"
@@ -63,7 +63,7 @@ Feature: Hamburger dropdown
     Then I wait to see "#help-contents"
     And I see "#gamelab-docs"
 
-  Scenario: Student viewing hamburger dropdown in English on desktop on level
+  Scenario: Student viewing hamburger dropdown and help button in English on desktop on level
     Given I create a student named "Sally Student"
     And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
@@ -83,7 +83,7 @@ Feature: Hamburger dropdown
     And I see "#support"
   
 
-  Scenario: Teacher viewing hamburger dropdown in English on desktop on level
+  Scenario: Teacher viewing hamburger dropdown and help button in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
     Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
@@ -103,11 +103,11 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see "#teacher-community"
  
-Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
+Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
   And I dismiss the language selector
-  Then I wait to see "#help-button"
+  And I wait to see "#help-button"
   Then I click selector "#help-button"
   Then I wait to see "#help-contents"
   And I see "#report-bug"
@@ -116,7 +116,7 @@ Scenario: Signed out user viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-Scenario: Student viewing hamburger dropdown in Spanish on desktop
+Scenario: Student viewing help dropdown in Spanish on desktop
   Given I create a student named "Eva Estudiante"
   Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
@@ -131,7 +131,7 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
+Scenario: Teacher viewing help dropdown in Spanish on desktop
   Given I create a teacher named "Pabla Profesora"
   Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
@@ -145,7 +145,7 @@ Scenario: Teacher viewing hamburger dropdown in Spanish on desktop
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
+Scenario: Student viewing help dropdown in Spanish on desktop on level
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
   Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
@@ -157,7 +157,7 @@ Scenario: Student viewing hamburger dropdown in Spanish on desktop on level
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
 
-Scenario: Teacher viewing hamburger dropdown in Spanish on desktop on level
+Scenario: Teacher viewing help dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
   Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
