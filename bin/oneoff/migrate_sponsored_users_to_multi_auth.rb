@@ -17,5 +17,5 @@ end
 # directly with SQL
 User.
   where(provider: User::PROVIDER_SPONSORED).
-  in_batches(of: 100_000).
+  in_batches(of: 10_000).
   update_all(provider: User::PROVIDER_MIGRATED)
