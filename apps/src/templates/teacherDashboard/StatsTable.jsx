@@ -56,7 +56,7 @@ class StatsTable extends Component {
         </a>
       );
     } else {
-      return <span>{name}</span>;
+      return <span className="uitest-name-cell">{name}</span>;
     }
   };
 
