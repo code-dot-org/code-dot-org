@@ -182,30 +182,30 @@ level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT', progression: 'How Comp
 assessment 'U5-AP-Algorithm-Does-It-Count', progression: '(new) AP Practice Response - Score the Response'
 
 stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
-named_level 'Unit 5 Lesson 10 Introduction', progression: 'Lesson Vocabulary & Resources'
-named_level 'Color Sleuth - Planning the App', progression: 'Color Sleuth - Planning the App'
-named_level 'How Set Property Works', progression: 'How Set Property Works'
+level 'Unit 5 Lesson 10 Introduction', progression: 'Lesson Vocabulary & Resources', named: true
+level 'Color Sleuth - Planning the App', progression: 'Color Sleuth - Planning the App', named: true
+level 'How Set Property Works', progression: 'How Set Property Works', named: true
 level 'U5 ColorSleuth part 1', progression: 'Using setProperty'
 level 'U5 ColorSleuth part 2 small color change', progression: 'Using setProperty'
-named_level 'How to pick a random button', progression: 'How to Pick a Random Button'
+level 'How to pick a random button', progression: 'How to Pick a Random Button', named: true
 level 'U5 ColorSleuth part 3 pick random button', progression: 'How to Pick a Random Button'
-named_level 'How to make a random color', progression: 'How to Make a Random Color'
+level 'How to make a random color', progression: 'How to Make a Random Color', named: true
 level 'U5 ColorSleuth part 4 make random RGB string', progression: 'How to Make a Random Color'
 level 'U5 ColorSleuth part 5 make setBoard function', progression: 'Functions in Your Color Sleuth App'
 level 'U5 ColorSleuth add global var correct plus console.log', progression: 'Functions in Your Color Sleuth App'
-named_level 'U5 color sleuth check correct', progression: 'Activating Buttons'
+level 'U5 color sleuth check correct', progression: 'Activating Buttons', named: true
 level 'U5 ColorSleuth checkCorrect make global var', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part1 link to event handlers', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part2 add if statement to check correct', progression: 'Activating Buttons'
-named_level 'Color Sleuth - How to switch player turns', progression: 'How to Switch Player Turns'
+level 'Color Sleuth - How to switch player turns', progression: 'How to Switch Player Turns', named: true
 level 'U5 ColorSleuth nextTurn pt1 add var and function and console.log', progression: 'How to Switch Player Turns'
 level 'U5 ColorSleuth nextTurn pt2 update UI to indicate turn', progression: 'How to Switch Player Turns'
-named_level 'Color Sleuth - Keeping score', progression: 'Updating the Score'
+level 'Color Sleuth - Keeping score', progression: 'Updating the Score', named: true
 level 'U5 ColorSleuth scoring pt1 vars function stub console', progression: 'Updating the Score'
 level 'U5 ColorSleuth scoring pt3 update UI for scoring', progression: 'Updating the Score'
-named_level 'Color Sleuth - How does it end?', progression: 'Color Sleuth - How Does It End?'
-named_level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth'
-named_level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue'
+level 'Color Sleuth - How does it end?', progression: 'Color Sleuth - How Does It End?', named: true
+level 'Project: Finish Color Sleuth', progression: 'Project: Color Sleuth', named: true
+level 'Color Sleuth - Epilogue', progression: 'Color Sleuth - Epilogue', named: true
 assessment 'U5 AP Practice Create Abstraction Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
 assessment 'CSP U5 AP Practice Choose the Algorithm', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
 assessment 'U5 AP Practice Create Algorithm Color Sleuth', progression: '(new) AP Practice Responses - Algorithms and Abstraction'
@@ -332,7 +332,7 @@ level 'CSPU5_U3 - Return Values - constrainTurtle', progression: 'Return Values 
 level 'CSPU5_U3 - Return Values - wrapTurtle', progression: 'Return Values in Apps'
 
 stage 'Building an App: Canvas Painter', flex_category: 'csp5_2'
-named_level 'Unit 5 Lesson 17 Introduction', progression: 'Lesson Vocabulary & Resources'
+level 'Unit 5 Lesson 17 Introduction', progression: 'Lesson Vocabulary & Resources', named: true
 level 'CSPU5_U3 - Canvas - introCanvas', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - 200dots', progression: 'Canvas Painter Introduction'
 level 'CSPU5_U3 - Canvas - transparentDots', progression: 'Canvas Painter Introduction'
@@ -351,7 +351,7 @@ level 'CSPU5_U3 - Canvas - movementFunction fix Orig', progression: 'Adding More
 level 'CSPU5_U3 - Canvas - One Dot sprayPaint', progression: 'Adding More Features to Your App'
 level 'CSPU5_U3 - Canvas - sprayPaint', progression: 'Adding More Features to Your App'
 level 'CSPU5_U3 - Canvas - sketch', progression: 'Using Stored Information'
-named_level 'CSPU5_U3 - Canvas - freePlay', progression: 'Project: Canvas Painter'
+level 'CSPU5_U3 - Canvas - freePlay', progression: 'Project: Canvas Painter', named: true
 
 stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
 assessment 'CSP Unit 5 Cumulative Assessment 4 MC'

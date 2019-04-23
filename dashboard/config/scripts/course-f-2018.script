@@ -266,22 +266,22 @@ bonus 'courseF_bee_fwp_challenge1_2018'
 bonus 'courseF_bee_fwp_challenge2_2018'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters_2018'
-named_level 'InspirationalArtwork_2018'
-named_level 'FoodFight_2018'
-named_level 'Guess The Number_2018'
-named_level 'Choose Your Own Adventure_2018'
+level 'courseF_video_csMatters_2018', named: true
+level 'InspirationalArtwork_2018', named: true
+level 'FoodFight_2018', named: true
+level 'Guess The Number_2018', named: true
+level 'Choose Your Own Adventure_2018', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project_2018'
+level 'Begin planning your project_2018', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+level 'Course F: Artist Project_2018', named: true
+level 'Course F: Play Lab Project_2018', named: true
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+level 'Course F: Artist Project - Revise_2018', named: true
+level 'Course F: Play Lab Project - Revise_2018', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation_2018'
+level 'Prepare for your presentation_2018', named: true
