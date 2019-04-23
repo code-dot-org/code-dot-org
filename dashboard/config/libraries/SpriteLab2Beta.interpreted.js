@@ -817,6 +817,7 @@ function unitVectorTowards(from, to) {
 function drawBackground() {
   background(World.background_color || "white");
   if (typeof(World.background_image) === "object") {
+    World.background_image.resize(400,400);
     image(World.background_image);
   }
 }
