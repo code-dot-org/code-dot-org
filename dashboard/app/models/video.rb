@@ -24,6 +24,7 @@ class Video < ActiveRecord::Base
   scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.english_locale).unscope(:order).order("(case when locale = 'en-US' then 0 else 1 end) desc")}
 
   validates_uniqueness_of :key, scope: [:locale]
+  validates :key, format: {with: /\A[a-zA-Z0-9\-_]+\z/}
   validates_presence_of :download
 
   before_save :fetch_thumbnail

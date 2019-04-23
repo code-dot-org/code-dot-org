@@ -159,14 +159,21 @@ class AdvancedShareOptions extends React.Component {
   publishExpoExport = async () => {
     this.setState({exportingExpo: 'publish'});
     try {
-      const {expoUri, expoSnackId} = await this.props.exportApp({
+      const {
+        expoUri,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      } = await this.props.exportApp({
         mode: 'expoPublish'
       });
       this.setState({
         exportingExpo: null,
         exportExpoError: null,
         expoUri,
-        expoSnackId
+        expoSnackId,
+        iconUri,
+        splashImageUri
       });
     } catch (e) {
       this.setState({
@@ -180,12 +187,14 @@ class AdvancedShareOptions extends React.Component {
   };
 
   generateExpoApk = async () => {
-    const {expoSnackId} = this.state;
+    const {expoSnackId, iconUri, splashImageUri} = this.state;
     this.setState({generatingExpoApk: true});
     try {
       const expoApkUri = await this.props.exportApp({
         mode: 'expoGenerateApk',
-        expoSnackId
+        expoSnackId,
+        iconUri,
+        splashImageUri
       });
       this.setState({
         generatingExpoApk: false,
@@ -199,6 +208,11 @@ class AdvancedShareOptions extends React.Component {
           'Failed to create Android app. Please try again later.'
       });
     }
+  };
+
+  visitExpoSite = () => {
+    const {expoSnackId} = this.state;
+    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
   };
 
   renderEmbedTab() {
@@ -260,7 +274,11 @@ class AdvancedShareOptions extends React.Component {
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
-        <button onClick={this.downloadExport} style={{marginLeft: 0}}>
+        <button
+          type="button"
+          onClick={this.downloadExport}
+          style={{marginLeft: 0}}
+        >
           {spinner}
           Export
         </button>
@@ -317,11 +335,16 @@ class AdvancedShareOptions extends React.Component {
         </p>
         <div style={style.expoContainer}>
           <div style={[style.expoExportRow, style.expoExportButtonRow]}>
-            <button onClick={this.publishExpoExport} style={style.expoButton}>
+            <button
+              type="button"
+              onClick={this.publishExpoExport}
+              style={style.expoButton}
+            >
               {publishSpinner}
               Test in Expo App
             </button>
             <button
+              type="button"
               onClick={this.downloadExpoExport}
               style={[style.expoButton, style.expoButtonLast]}
             >
@@ -357,11 +380,19 @@ class AdvancedShareOptions extends React.Component {
                     style={style.expoInput}
                   />
                   <button
+                    type="button"
                     onClick={this.generateExpoApk}
                     style={[style.expoButton, style.expoButtonApk]}
                   >
                     {generateApkSpinner}
                     Create Android App
+                  </button>
+                  <button
+                    type="button"
+                    onClick={this.visitExpoSite}
+                    style={[style.expoButton, style.expoButtonApk]}
+                  >
+                    Visit Expo Site
                   </button>
                   <p style={style.p}>{apkStatusString}</p>
                   {!!expoApkUri && (

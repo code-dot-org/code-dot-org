@@ -35,13 +35,15 @@ theme: responsive
 
 ## Why should I apply?
 
-The majority of our workshop attendees rank it the **best professional development ever.** Over 90% of attendees would recommend our program to another teacher. 
+The majority of our workshop attendees rank it the **best professional development ever.** Over 90% of attendees would recommend our program to another teacher.
 
 **No experience needed!** Whether you are new to teaching computer science (CS) or have experience teaching other CS courses, the Code.org Professional Learning Program offers year round support. We’ve designed this program to promote growth by providing space for you to become comfortable with curricular materials, CS content, and pedagogy.
 
 **Over a third of schools** use Code.org's curriculum, including the largest school districts in the U.S., such as LAUSD, Broward, and Dallas ISD. And, over a quarter of our teachers come from rural schools.
 
-**Proven results** - peer reviewed research shows that school participation in the Code.org program causes an estimated 5x increase in students that take and pass the AP Computer Science Principles exam. 
+**Proven results** - peer reviewed research shows that school participation in the Code.org program causes an estimated 5x increase in students that take and pass the AP Computer Science Principles exam.
+
+**Every Student Succeeds Act**. The Code.org program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA). Learn more in our [Program Brochure](/files/programs/codeorg-program-brochure.pdf).
 
 ## Find the right course for your classroom
 
@@ -152,13 +154,15 @@ Check out these 3 key benefits of ISTE membership:
 
 </details>
 
-[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. Interested in sharing details about the program with teachers and administrators at your school? <a href="https://code.org/files/PLProgramsOverview_1-Pager.pdf", target=_"blank">Print a flyer!</a>
+[Check out our professional learning values](/educate/professional-learning/values) for more information about our goals and approach to professional learning. <br><br>
+**Administrator Information**: [Share this flyer](/files/programs/codeorg-program-brochure.pdf) with your principal or administrators to encourage their support for your professional learning and expanding computer science opportunities at your school. See how this program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA).<br><br>
+Want to help spread the word? [Print a flyer](https://code.org/files/PLProgramsOverview_1-Pager.pdf) to share with teachers.
 
 ## <a name="participate"></a>Who can participate?
 
 The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior computer science experience required! In order to participate in this program, we ask that applicants:
 
-* Commit to participating in the full, year-long professional learning program 
+* Commit to participating in the full, year-long professional learning program
 * Plan to teach the course in the 2019-20 school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
@@ -166,7 +170,7 @@ The Code.org Professional Learning Program is open to educators who are interest
 
 ## Have questions?
 
-<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "middle-high", notes: "Please tell me more about the professional learning program!" %>
+<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "middle-high", notes: "Please tell me more about the professional learning program for grades 6-12!" %>
 
 <br/>
 

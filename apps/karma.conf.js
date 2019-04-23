@@ -50,7 +50,7 @@ module.exports = function(config) {
       'test/scratch-tests.js': ['webpack']
     },
 
-    webpack: webpackConfig,
+    webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
     webpackMiddleware: {
       noInfo: true,
       stats: {
@@ -85,6 +85,8 @@ module.exports = function(config) {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
       showDiff: true
     },
+
+    hostname: 'localhost-studio.code.org',
 
     // web server port
     port: PORT,

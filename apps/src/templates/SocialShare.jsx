@@ -54,6 +54,7 @@ export default class SocialShare extends Component {
             onClick={dashboard.popupWindow}
           >
             <button
+              type="button"
               style={{background: color.facebook_blue, ...styles.shareButton}}
             >
               <i className="fa fa-facebook" />
@@ -67,6 +68,7 @@ export default class SocialShare extends Component {
             onClick={dashboard.popupWindow}
           >
             <button
+              type="button"
               style={{background: color.twitter_blue, ...styles.shareButton}}
             >
               <i className="fa fa-twitter" />
@@ -74,7 +76,10 @@ export default class SocialShare extends Component {
           </a>
         )}
         <a href={this.props.print}>
-          <button style={{background: color.charcoal, ...styles.shareButton}}>
+          <button
+            type="button"
+            style={{background: color.charcoal, ...styles.shareButton}}
+          >
             <i className="fa fa-print" />
             {' ' + i18n.print()}
           </button>

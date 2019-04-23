@@ -29,6 +29,9 @@
         = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
         = f.text_field "apps_close_date_#{course}_#{role}".to_sym
   .field
+    = f.label nil, "Apps Priority Deadline Date (YYYY-MM-DD)"
+    = f.text_field :apps_priority_deadline_date
+  .field
     = f.label nil, "Applications Principal Approval"
     .applications_principal_approval
       %label

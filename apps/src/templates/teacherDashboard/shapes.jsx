@@ -88,8 +88,24 @@ export const assignmentVersionShape = PropTypes.shape({
   isStable: PropTypes.bool.isRequired,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
-  locales: PropTypes.arrayOf(PropTypes.string).isRequired
+  locales: PropTypes.arrayOf(PropTypes.string).isRequired,
+  canViewVersion: PropTypes.bool
 });
+
+// Converts the shape of an array of assignment versions that comes from the server for a script
+// to the shape outlined in assignmentVersionShape above.
+export const convertAssignmentVersionShapeFromServer = serverVersions => {
+  return serverVersions.map(v => {
+    return {
+      name: v.name,
+      year: v.version_year,
+      title: v.version_title,
+      isStable: v.is_stable,
+      locales: v.locales || [],
+      canViewVersion: v.can_view_version
+    };
+  });
+};
 
 export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,

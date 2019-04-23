@@ -42,7 +42,6 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
-
       // A markdown parser that supports a subset of rules; specifically,
       // those rules that we feel comfortable entrusting to translators
       var limitedMarked = (function () {
@@ -72,6 +71,7 @@
         form_container: "#all_authored_hints_editor",
         wrapper: ".json_editor",
         onNewSpace: function (space) {
+          space.find('.hint_id').get(0).setAttribute("required", "");
           levelbuilder.initializeCodeMirror(
             space.find('.hint_markdown').get(0),
             'markdown',

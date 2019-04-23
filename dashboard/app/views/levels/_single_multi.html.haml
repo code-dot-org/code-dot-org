@@ -20,7 +20,7 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
   - if data['questions']
-    - question_text = multi_t(level, data['questions'][0]['text'])
+    - question_text = render_multi_or_match_content(data['questions'][0]['text'], level)
     .multi-question!= question_text
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
@@ -77,7 +77,7 @@
                 ="#{multi_answer_characters[i]}. "
                 &nbsp;
             %label.item-label{style: "height: #{height}"}
-              != multi_t(level, answer['text'])
+              != render_multi_or_match_content(answer['text'], level)
           - if use_tight_layout && !force_wrap_layout
             %br/
 

@@ -3,12 +3,12 @@
 @dashboard_db_access
 @as_student
 @no_mobile
-@no_older_chrome
 Feature: App Lab Embed
 
   Background:
     Given I start a new Applab project
     And I wait for the page to fully load
+
 
   Scenario: App Lab Embed
     Given I ensure droplet is in text mode

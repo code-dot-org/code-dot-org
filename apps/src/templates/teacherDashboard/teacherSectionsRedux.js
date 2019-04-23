@@ -414,6 +414,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
 }
 
 const defaultVersionYear = '2017';
+const defaultStageExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
@@ -653,8 +654,6 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_PROPERTIES) {
-    const stageExtraSettings = {};
-
     if (!state.sectionBeingEdited) {
       throw new Error(
         'Cannot edit section properties; no section is' +
@@ -668,13 +667,14 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    // Selecting Course 1-4 or A-F should auto-enable Stage Extras.
+    const stageExtraSettings = {};
     if (action.props.scriptId) {
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
-      stageExtraSettings.stageExtras = !!(
-        script && /course[1-4a-f]/.test(script.script_name)
-      );
+      if (script) {
+        stageExtraSettings.stageExtras =
+          script.stage_extras_available || defaultStageExtras;
+      }
     }
 
     return {

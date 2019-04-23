@@ -63,10 +63,10 @@ class Level < ActiveRecord::Base
     short_instructions
     long_instructions
     rubric_key_concept
-    rubric_exceeds
-    rubric_meets
-    rubric_approaches
-    rubric_no_evidence
+    rubric_performance_level_1
+    rubric_performance_level_2
+    rubric_performance_level_3
+    rubric_performance_level_4
     mini_rubric
     encrypted
   )
@@ -104,7 +104,7 @@ class Level < ActiveRecord::Base
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
+    @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def summarize_concepts
@@ -216,8 +216,8 @@ class Level < ActiveRecord::Base
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers must be able to seed levels without properties_encryption_key
-      raise unless rack_env?(:development)
+      # developers and adhoc environments must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development) || rack_env?(:adhoc)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
@@ -468,6 +468,11 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
+  def can_have_feedback?
+    ["Applab", "Gamelab", "Weblab"].include?(type)
+  end
+
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
@@ -491,7 +496,7 @@ class Level < ActiveRecord::Base
     summary = summarize
 
     %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
-       rubric_key_concept rubric_exceeds rubric_meets rubric_approaches rubric_no_evidence mini_rubric).each do |key|
+       rubric_key_concept rubric_performance_level_1 rubric_performance_level_2 rubric_performance_level_3 rubric_performance_level_4 mini_rubric).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end

@@ -545,7 +545,11 @@ function makeNewGroup() {
   // Map sprite methods to group each methods
   group.destroy = group.destroyEach;
   group.setTint = group.setTintEach;
-  group.setScale = group.setScaleEach;
+  group.setScale = function (scale) {
+    group.forEach(function (sprite) {
+      sprite.scale = scale * sprite.baseScale;
+    });
+  };
   group.setVisible = group.setVisibleEach;
 
   group.setSpeed = function (speed) {
@@ -813,6 +817,7 @@ function unitVectorTowards(from, to) {
 function drawBackground() {
   background(World.background_color || "white");
   if (typeof(World.background_image) === "object") {
+    World.background_image.resize(400,400);
     image(World.background_image);
   }
 }
