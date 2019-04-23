@@ -992,6 +992,12 @@ exports.createJsWrapperBlockCreator = function(
         if (blockText === 'clicked sprite') {
           this.setParentForCopyOnDrag('gamelab_spriteClickedSet');
         }
+        if (blockText === 'subject sprite') {
+          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+        }
+        if (blockText === 'object sprite') {
+          this.setParentForCopyOnDrag('gamelab_whenTouchingSet');
+        }
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
