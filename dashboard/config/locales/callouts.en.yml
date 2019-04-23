@@ -1102,11 +1102,16 @@ en:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
       behaviors 1_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a_callout:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
       behaviors 4_callout:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 4a_callout:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 5_callout:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play_callout:
         behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}
       comment_intro_maze_2018_2019_callout: {}
