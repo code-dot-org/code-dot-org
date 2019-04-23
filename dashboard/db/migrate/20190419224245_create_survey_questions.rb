@@ -3,12 +3,12 @@ class CreateSurveyQuestions < ActiveRecord::Migration[5.0]
     create_table :survey_questions do |t|
       t.integer :form_id
       t.string :question_id
+      t.text :preamble
       t.text :question_text
       t.string :answer_type
       t.text :answer_options
       t.integer :min_value
       t.integer :max_value
-      t.boolean :has_parent
       t.timestamps
     end
 

@@ -22,21 +22,14 @@ def main
       row = {
         form_id: survey.form_id,
         question_id: key.to_s,
+        preamble: (value.key?(:parent) ? sanitize_string_for_db(survey[value[:parent]].text) : nil),
         question_text: sanitize_string_for_db(value[:text]),
         answer_type: value[:answer_type],
         answer_options: sanitize_string_for_db(value[:options].to_s),
         min_value: value[:min_value].to_i,
-        max_value: value[:max_value].to_i,
-        has_parent: (value.key?(:parent) ? 1 : 0)
+        max_value: value[:max_value].to_i
       }
       survey_questions << row
-    end
-  end
-
-  CSV.open("survey_questions.csv", "wb") do |csv|
-    csv << survey_answers.first.keys
-    survey_answers.each do |hash|
-      csv << hash.values
     end
   end
 
@@ -61,8 +54,8 @@ def main
 
   # Truncate the existing tables.
   %w(
-    survey_questions
     survey_answers
+    survey_questions
   ).each do |table_name|
     ActiveRecord::Base.connection.execute(
       "TRUNCATE #{table_name}"
@@ -104,24 +97,24 @@ SQL
           INSERT INTO survey_questions (
             form_id,
             question_id,
+            preamble,
             question_text,
             answer_type,
             answer_options,
             min_value,
             max_value,
-            has_parent,
             created_at,
             updated_at
           )
           VALUES (
             "#{survey_question_row[:form_id]}",
             "#{survey_question_row[:question_id]}",
+            "#{survey_question_row[:preamble]}",
             "#{survey_question_row[:question_text]}",
             "#{survey_question_row[:answer_type]}",
             "#{survey_question_row[:answer_options]}",
             "#{survey_question_row[:min_value]}",
             "#{survey_question_row[:max_value]}",
-            "#{survey_question_row[:has_parent]}",
             "#{TIME_NOW}",
             "#{TIME_NOW}"
           )
