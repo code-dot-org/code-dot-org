@@ -16,6 +16,8 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
+import experiments from '../../../util/experiments';
+import Inspector from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -114,7 +116,9 @@ export default connect(
     static propTypes = {
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
-      logOutput: PropTypes.string.isRequired,
+      logOutput: experiments.isEnabled('react-inspector')
+        ? PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
+        : PropTypes.string.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -205,6 +209,17 @@ export default connect(
       }
     }
 
+    displayOutputToConsole() {
+      if (this.props.logOutput.size > 0) {
+        return this.props.logOutput.map((output, i) => {
+          if (typeof output === 'object') {
+            output = output.toJS();
+          }
+          return <Inspector key={i} data={output} />;
+        });
+      }
+    }
+
     render() {
       let classes = 'debug-console';
       if (!this.props.debugButtons) {
@@ -242,7 +257,9 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            {this.props.logOutput}
+            {experiments.isEnabled('react-inspector')
+              ? this.displayOutputToConsole()
+              : this.props.logOutput}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>
