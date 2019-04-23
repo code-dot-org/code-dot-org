@@ -39,7 +39,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
    
-Next, read our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## OS-specific prerequisites
 
