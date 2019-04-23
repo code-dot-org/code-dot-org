@@ -205,32 +205,38 @@ describe('UnsafeRenderedMarkdown', () => {
     ).to.equal(true);
   });
 
-  // TODO let's make this test not be true anymore
-  it('is vulnerable to JS injection', () => {
+  it('is resistant to JS injection', () => {
     const scriptTagInjection = shallow(
       <UnsafeRenderedMarkdown markdown='<script type="text/javascript">alert(&#x22;hello!&#x22;)</script>' />
     );
-
-    expect(scriptTagInjection.html()).to.equal(
-      '<div><script type="text/javascript">alert(&quot;hello!&quot;)</script></div>'
-    );
+    expect(
+      scriptTagInjection.equals(<div />),
+      'script tags are ignored'
+    ).to.equal(true);
 
     const inlineEventInjection = shallow(
       <UnsafeRenderedMarkdown markdown='<div onMouseOver="alert("hello!")"></div>' />
     );
-
-    expect(inlineEventInjection.html()).to.equal(
-      '<div><div onMouseOver="alert(&quot;hello!&quot;)"></div></div>'
-    );
+    expect(
+      inlineEventInjection.equals(<div />),
+      'event attributes are ignored'
+    ).to.equal(true);
 
     const iframeInjection = shallow(
       <UnsafeRenderedMarkdown
         markdown={`<iframe src="javascript:alert('hello')"></iframe>`}
       />
     );
-
-    expect(iframeInjection.html()).to.equal(
-      '<div><iframe src="javascript:alert(\'hello\')"></iframe></div>'
+    expect(iframeInjection.equals(<div />), 'iframes are ignored').to.equal(
+      true
     );
+
+    const miscInjection = shallow(
+      <UnsafeRenderedMarkdown markdown='<div><math><mi xlink:href="data:x,<script>alert(&#x22;foxtrot&#x22;)</script>"></mi></math></div>' />
+    );
+    expect(
+      miscInjection.equals(<div>{'">'}</div>),
+      'arbitrary unsupported tags are ignored and/or escaped'
+    ).to.equal(true);
   });
 });
