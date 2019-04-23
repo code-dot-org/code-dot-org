@@ -154,10 +154,10 @@ assessment 'Test longassessment levelgroup split new'
 stage 'Star wars'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_events'
-level_concept_difficulty '{}'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 skin 'hoc2015x'
-level_concept_difficulty '{}'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_5'
 
 stage 'Minecraft'
@@ -248,8 +248,8 @@ level 'allthethings HOC Dance 10 Measures'
 
 stage 'Mini Rubric'
 assessment 'allthethings-mini-rubric'
-assessment 'allthethings-mini-rubric-weblab'
-assessment 'allthethings-mini-rubric-gamelab'
+level 'allthethings-mini-rubric-weblab', named: true
+level 'allthethings-mini-rubric-gamelab'
 
 stage 'Pluralsight Test', lockable: true
 assessment 'Pluralsight LevelGroup Test'
