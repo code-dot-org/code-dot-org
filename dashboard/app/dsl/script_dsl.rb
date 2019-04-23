@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @is_stable = nil
     @supported_locales = []
     @pilot_experiment = nil
+    @project_sharing = nil
   end
 
   integer :id
@@ -47,6 +48,7 @@ class ScriptDSL < BaseDSL
   boolean :has_verified_resources
   boolean :has_lesson_plan
   boolean :is_stable
+  boolean :project_sharing
 
   string :wrapup_video
   string :script_announcements
@@ -115,7 +117,8 @@ class ScriptDSL < BaseDSL
       version_year: @version_year,
       is_stable: @is_stable,
       supported_locales: @supported_locales,
-      pilot_experiment: @pilot_experiment
+      pilot_experiment: @pilot_experiment,
+      project_sharing: @project_sharing
     }
   end
 
@@ -135,6 +138,9 @@ class ScriptDSL < BaseDSL
     level(name, properties)
   end
 
+  # If someone forgets we moved away from named_level and puts
+  # named_level it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the named: true syntax
   def named_level(name, properties = {})
     properties[:named_level] = true
     level(name, properties)
@@ -152,6 +158,10 @@ class ScriptDSL < BaseDSL
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
     named = properties.delete(:named)
+
+    if named
+      properties[:named_level] = true
+    end
 
     level = {
       name: name,
@@ -193,19 +203,15 @@ class ScriptDSL < BaseDSL
       if challenge
         @current_scriptlevel[:properties][:challenge] = challenge
       end
-      if named
-        @current_scriptlevel[:properties][:named] = named
-      end
     else
       script_level = {
         stage: @stage,
         levels: [level]
       }
 
-      if progression || target || challenge || named
+      if progression || target || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
-        script_level[:properties][:named] = true if named
         script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
@@ -280,6 +286,7 @@ class ScriptDSL < BaseDSL
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << 'project_sharing true' if script.project_sharing
 
     s << '' unless s.empty?
     s << serialize_stages(script)
@@ -296,7 +303,6 @@ class ScriptDSL < BaseDSL
       stage.script_levels.each do |sl|
         type = 'level'
         type = 'assessment' if sl.assessment
-        type = 'named_level' if sl.named_level
         type = 'bonus' if sl.bonus
 
         if sl.levels.count > 1
@@ -308,7 +314,7 @@ class ScriptDSL < BaseDSL
                 type,
                 sl.active?(level),
                 sl.progression,
-                sl.named,
+                sl.named_level?,
                 sl.target,
                 sl.challenge,
                 sl.experiments(level)
@@ -317,7 +323,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge, sl.named))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.target, sl.challenge))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
