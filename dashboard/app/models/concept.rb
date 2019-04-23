@@ -24,7 +24,6 @@ class Concept < ActiveRecord::Base
   belongs_to :video
 
   def self.by_name(name)
-    (@@name_cache ||= Concept.all.index_by(&:name))[name].try(:id)
     Rails.cache.fetch("concepts/names/#{name}") do
       Concept.find_by_name(name).try(:id)
     end
@@ -32,7 +31,7 @@ class Concept < ActiveRecord::Base
 
   def self.cached
     Rails.cache.fetch("concepts/all") do
-      Script.all
+      Concept.all
     end
   end
 
