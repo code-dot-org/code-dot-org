@@ -179,7 +179,7 @@ class ScriptLevelsController < ApplicationController
       flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
     end
 
-    if params[:section_id]
+    if current_user&.teacher? && params[:section_id]
       @section = current_user.sections.find_by(id: params[:section_id])
       @user = @section&.students&.find_by(id: params[:user_id])
     end

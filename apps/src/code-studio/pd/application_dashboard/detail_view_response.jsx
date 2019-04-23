@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
-import MarkdownSpan from '../components/markdownSpan';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
   lineItem: {
@@ -22,7 +22,10 @@ const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
   return (
-    <MarkdownSpan style={props.style}>{`${props.text}${suffix}`}</MarkdownSpan>
+    <UnsafeRenderedMarkdown
+      openExternalLinksInNewTab
+      markdown={`${props.text}${suffix}`}
+    />
   );
 };
 Question.propTypes = {
@@ -85,7 +88,9 @@ export default class DetailViewResponse extends React.Component {
       if (this.props.layout === 'lineItem') {
         return (
           <div>
-            <Question text={this.props.question} style={styles.lineItem} />
+            <div style={styles.lineItem}>
+              <Question text={this.props.question} />
+            </div>
             {renderedValue}
           </div>
         );

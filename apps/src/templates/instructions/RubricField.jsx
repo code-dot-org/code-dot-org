@@ -19,7 +19,10 @@ const styles = {
     fontSize: 12,
     marginLeft: 10,
     color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    // Don't show default summary tag outline and background on hover or focus
+    outline: 'none',
+    background: 'none'
   },
   performanceLevelHeader: {
     display: 'flex',
@@ -59,17 +62,18 @@ const styles = {
   }
 };
 
-const rubricLevelHeaders = {
-  exceeds: i18n.rubricExceedsHeader(),
-  meets: i18n.rubricMeetsHeader(),
-  approaches: i18n.rubricApproachesHeader(),
-  noEvidence: i18n.rubricNoEvidenceHeader()
+const rubricPerformanceHeaders = {
+  performanceLevel1: i18n.rubricLevelOneHeader(),
+  performanceLevel2: i18n.rubricLevelTwoHeader(),
+  performanceLevel3: i18n.rubricLevelThreeHeader(),
+  performanceLevel4: i18n.rubricLevelFourHeader()
 };
 
 class RubricField extends Component {
   static propTypes = {
     showFeedbackInputAreas: PropTypes.bool,
-    rubricLevel: PropTypes.oneOf(Object.keys(rubricLevelHeaders)).isRequired,
+    rubricLevel: PropTypes.oneOf(Object.keys(rubricPerformanceHeaders))
+      .isRequired,
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
@@ -97,7 +101,7 @@ class RubricField extends Component {
 
     const tooltipId = _.uniqueId();
     return (
-      <div style={styles.rubricLevelHeaders}>
+      <div style={styles.rubricPerformanceHeaders}>
         <div
           style={performanceHeaderStyle}
           data-tip
@@ -120,7 +124,7 @@ class RubricField extends Component {
             onClick={this.updateToggle}
           >
             <summary style={styles.rubricHeader}>
-              {rubricLevelHeaders[this.props.rubricLevel]}
+              {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
             <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
           </details>

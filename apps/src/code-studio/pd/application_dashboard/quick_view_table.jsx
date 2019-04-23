@@ -95,6 +95,15 @@ export class QuickViewTable extends React.Component {
     let columns = [];
     columns.push(
       {
+        property: 'id',
+        header: {
+          label: 'Actions'
+        },
+        cell: {
+          format: this.formatActionsCell
+        }
+      },
+      {
         property: 'created_at',
         header: {
           label: 'Submitted',
@@ -244,16 +253,6 @@ export class QuickViewTable extends React.Component {
           ]
         }
       });
-    });
-
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'Actions'
-      },
-      cell: {
-        format: this.formatActionsCell
-      }
     });
 
     this.columns = columns;
