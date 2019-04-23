@@ -36,8 +36,8 @@ assessment 'U1L14 - Assessment 2', progression: 'Check Your Understanding'
 
 stage 'Encoding Color Images', flex_category: 'csp2_1'
 level 'v2 U2L4 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
-level 'Images, Pixels, and RGB', progression: 'Images, Pixels, and RGB'
-level 'Pixelation - Lesson 15 - Complete 3-bit color', progression: 'Pixelation', named: true
+level 'Images, Pixels, and RGB', progression: 'Images, Pixels, and RGB', named: true
+level 'Pixelation - Lesson 15 - Complete 3-bit color', progression: 'Pixelation'
 level 'Pixelation - Lesson 15 - Color Shades', progression: 'Pixelation'
 level 'Pixelation - Lesson 15 - Color Shades 4x4', progression: 'Pixelation'
 level 'Pixelation Flappy', progression: 'Pixelation'

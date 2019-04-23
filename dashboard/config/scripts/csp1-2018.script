@@ -105,9 +105,9 @@ assessment 'U2L05 Assessment 2_2018', progression: 'Check Your Understanding'
 assessment 'U2L3 Assessment_2018', progression: 'Check Your Understanding'
 
 stage 'The Need for DNS', flex_category: 'csp1_2'
-level 'CSP U1L12 SFLP'
-level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS'
-level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS'
+level 'CSP U1L12 SFLP', named: true
+level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS', named: true
+level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS', named: true
 assessment 'U2L09 Assessment1_2018', progression: 'Check Your Understanding'
 assessment 'U2L09 Assessment2_2018', progression: 'Check Your Understanding'
 assessment 'U2L09 Free Response Wrap Up_2018', progression: 'Check Your Understanding'
