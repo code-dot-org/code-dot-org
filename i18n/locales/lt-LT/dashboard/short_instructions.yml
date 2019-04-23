@@ -1,34 +1,52 @@
+---
 lt:
   data:
     short_instructions:
       2-3 Artist 1 new: Sveiki, aš esu menininkas. Tau parašius kodą, aš galiu nupiešti beveik viską. Panaudok keletą blokų, kad aš pieščiau per pilkas linijas paveikslėlyje. (Kiekviena linija yra 100 pikselių ilgio)
-      2-3 Artist 11: "Padaryk STOP ženklui sieneles, nupiešdamas aštuonkampį, kurio kiekviena kraštinė būtų 100 pikselių ilgio. Kiek laipsnių turėtum jas pasukti? (Užuomina: padalink 360 iš 8) "
-      2-3 Artist 12: |-
-        Pasirink kartojimo blokelį, kad sukurtum apskritimą, kuris užbaigtų akies obuolį. Jei kiekvienu judesiu pasisuksi dešinėn po vieną laipsnį, kiek judesių prireiks pakartoti, kad užbaigtum apskritimą? 180? 360? 500?
+      2-3 Artist 11: 'Padaryk STOP ženklui sieneles, nupiešdamas aštuonkampį, kurio kiekviena kraštinė būtų 100 pikselių ilgio. Kiek laipsnių turėtum jas pasukti? (Užuomina: padalink 360 iš 8) '
+      2-3 Artist 12: Pasirink kartojimo blokelį, kad sukurtum apskritimą, kuris užbaigtų akies obuolį. Jei kiekvienu judesiu pasisuksi dešinėn po vieną laipsnį, kiek judesių prireiks pakartoti, kad užbaigtum apskritimą? 180? 360? 500?
       2-3 Artist 2 new: 'Šis namas turi nepabaigtą sieną. Abi pusės yra 100, bet nepabaigta yra tik 50. Užbaik sieną. '
       2-3 Artist 2: 'Šis namas turi nepabaigtą sieną. Abi pusės yra 100, bet nepabaigta yra tik 50. Užbaik sieną. '
       2-3 Artist 3.4: Naudodamas naują peršokimo blokelį, gali padaryti taip, kad menininkas judėtų nepiešdamas. Nubrėžk punktyrinę liniją naudodamas peršokimo ir piešimo mygtukus.
       2-3 Artist 3: Ši skrybėlė yra 100 pikselių aukščio. Nupiešk kepurę, kuri būtų 70 pikselių mažesnė.
-      2-3 Artist 3new: "Raudona skrybėlė yra 100 pikselių aukščio. Baik piešti juodą skrybėlę, kuri yra 70 pikselių mažesnė. Juodos skrybėlės plotis yra 50 pikselių."
+      2-3 Artist 3new: Raudona skrybėlė yra 100 pikselių aukščio. Baik piešti juodą skrybėlę, kuri yra 70 pikselių mažesnė. Juodos skrybėlės plotis yra 50 pikselių.
       2-3 Artist 4: Padėk man užbaigti namą šiai katei.
-      2-3 Artist 5: "Pakeisk šį kodą su \"kartoti kartų\" bloku,\nkad nupieštum tą patį namą naudodamas tik 3 blokus."
+      2-3 Artist 5: |-
+        Pakeisk šį kodą su "kartoti kartų" bloku,
+        kad nupieštum tą patį namą naudodamas tik 3 blokus.
       2-3 Artist 6: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
       2-3 Artist 7: "Pabaik piešti paskutinio lango dešinės pusės pusę.\nKiekvienas kvadratinis lango dydis yra 25 pikseliai. "
-      2-3 Artist 8: "Užbaik kambarius kiekvienam gyvūnui padalindamas\nstačiakampį į 2 vienodo dydžio kvadratus. Stačiakampis yra 200 pikselių pločio\nir 100 pikselių aukščio."
+      2-3 Artist 8: |-
+        Užbaik kambarius kiekvienam gyvūnui padalindamas
+        stačiakampį į 2 vienodo dydžio kvadratus. Stačiakampis yra 200 pikselių pločio
+        ir 100 pikselių aukščio.
       2-3 Artist 9 NEW: Užbaik šį aitvarą
       2-3 Artist 9 REPLACEMENT: Baikite piešti šiuos laiptus!
       2-3 Artist 9: Užbaik šį aitvarą
       2-3 Artist Assessment 1: 'Įvertink duotą situaciją: užbaik piešti dantį, kurio plotis ir aukštis yra po 25 pikselius.'
       2-3 Artist Debugging 1: Ar gali padaryti šią kepurę 100 pikselių ilgio?
-      2-3 Artist Debugging 10: "Pliuso mygtukai yra per siauri.\nPatarimas: Padaryk ji platesnį 10 pikselių"
+      2-3 Artist Debugging 10: |-
+        Pliuso mygtukai yra per siauri.
+        Patarimas: Padaryk ji platesnį 10 pikselių
       2-3 Artist Debugging 11: |-
         Padėk man pabaigti šią gražią snaigę.
         Kiek kartų turiu aš "kartoti", kad ją pabaigčiau?
-      2-3 Artist Debugging 12: "Aš turėčiau įtraukti jūros bangą\nšiai scenai. Ar gali man padėti?"
-      2-3 Artist Debugging 2: "Kodas trims ūsams, kurį\ndabar matai yra blogas. Patarimas: kiekvienas ūsas yra 75 pikselių ilgumo.\nPataisyk šį kodą, kad nupieštum ūsus."
-      2-3 Artist Debugging 3: "Mano valtyje yra skylė! Ar galėtum ją sutaisyti\npakeisdamas linijos kryptį? Patarimas: paskutinis kampas buvo 15 laipsnių."
-      2-3 Artist Debugging 4: "Koks yra vaizdas, kurį mes bandom\nnupiešti? Pabaik tai sujungdamas taškus naudodamas tam tikras linijas ir kampus."
-      2-3 Artist Debugging 5: "Kodas kojai ir pėdai, kurią tu matai\nyra blogas. Patarimas: pėda yra per ilga, mums derėtų ištrinti žingsnį"
+      2-3 Artist Debugging 12: |-
+        Aš turėčiau įtraukti jūros bangą
+        šiai scenai. Ar gali man padėti?
+      2-3 Artist Debugging 2: |-
+        Kodas trims ūsams, kurį
+        dabar matai yra blogas. Patarimas: kiekvienas ūsas yra 75 pikselių ilgumo.
+        Pataisyk šį kodą, kad nupieštum ūsus.
+      2-3 Artist Debugging 3: |-
+        Mano valtyje yra skylė! Ar galėtum ją sutaisyti
+        pakeisdamas linijos kryptį? Patarimas: paskutinis kampas buvo 15 laipsnių.
+      2-3 Artist Debugging 4: |-
+        Koks yra vaizdas, kurį mes bandom
+        nupiešti? Pabaik tai sujungdamas taškus naudodamas tam tikras linijas ir kampus.
+      2-3 Artist Debugging 5: |-
+        Kodas kojai ir pėdai, kurią tu matai
+        yra blogas. Patarimas: pėda yra per ilga, mums derėtų ištrinti žingsnį
       2-3 Artist Debugging 6: |-
         Man atrodo, kad aš sėdžiu ant kėdės,
         kuriai trūksta kojos. Pakeisk blokus, kad nupieštum koją.
@@ -41,27 +59,37 @@ lt:
       2-3 Artist Debugging 9: |-
         Kodas šiam kotui yra neteisingas.
         Patarimas: Kampas yra 60 laipsnių
-      2-3 Artist Debugging Assessment 1: "Ši forma yra per maža. Ar\ngali ją padaryti didesnę? Patarimas: ant kiekvienos pusės ji turėtų būti\n75 pikseliais ilgesnė."
+      2-3 Artist Debugging Assessment 1: |-
+        Ši forma yra per maža. Ar
+        gali ją padaryti didesnę? Patarimas: ant kiekvienos pusės ji turėtų būti
+        75 pikseliais ilgesnė.
       2-3 Artist Free Play: O dabar gali nupiešti ką tik nori.
-      2-3 Artist Functions 1 a: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
-      2-3 Artist Functions 1: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
-      2-3 Artist Functions 10: 'Štai dvi komandos – viena piešia didelį dantratį, o kita – mažą. Panaudok jas savo piešiniui. Gali pamėginti jas perprasti!'
-      2-3 Artist Functions 11 a: "Aš pervadinau komandą „nubrėžk kvadratą“ į „nubrėžk šešiakampį“, bet ji vis vien piešia kvadratus! Ar gali pataisyti komandą „nubrėžk šešiakampį“, kad ji nubrėžtų šešiakampį, kurio kraštinės yra po 50 pikselių? Panaudok savo pataisytą komandą ir nupiešk pavaizduotą piešinį."
-      2-3 Artist Functions 11.5 a: "Štai tau ta pati komanda „nubrėžk šešiakampį“. Kas nutiks, jei kiekvieną kartą pasisuksi po 60 laipsnių, nubrėžęs kiekvieną šešiakampį?"
-      2-3 Artist Functions 11.5: "Štai tau ta pati komanda „nubrėžk šešiakampį“. Kas nutiks, jei kiekvieną kartą pasisuksi po 60 laipsnių, nubrėžęs kiekvieną šešiakampį?"
-      2-3 Artist Functions 11: "Aš pervadinau komandą „nubrėžk kvadratą“ į „nubrėžk šešiakampį“, bet ji vis vien piešia kvadratus! Ar gali pataisyti komandą „nubrėžk šešiakampį“, kad ji nubrėžtų šešiakampį, kurio kraštinės yra po 50 pikselių? Panaudok savo pataisytą komandą ir nupiešk pavaizduotą piešinį."
-      2-3 Artist Functions 12 Mike: "Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  "
-      2-3 Artist Functions 12 a: "Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  "
-      2-3 Artist Functions 12: "Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  "
-      2-3 Artist Functions 13: "Tau duotos keturios sudėtinės komandos.\nPanaudok jas kaip tik nori ir gauk piešinius,\nkuriuos galėsi parodyti savo draugams. Paspausk „Paleisti“, kad pamatytum pavyzdį."
+      2-3 Artist Functions 1 a: |-
+        Labas. Aš zombis menininkas. Aš mėgstu piešti!
+        Padėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis.
+      2-3 Artist Functions 1: |-
+        Labas. Aš zombis menininkas. Aš mėgstu piešti!
+        Padėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis.
+      2-3 Artist Functions 10: Štai dvi komandos – viena piešia didelį dantratį, o kita – mažą. Panaudok jas savo piešiniui. Gali pamėginti jas perprasti!
+      2-3 Artist Functions 11 a: Aš pervadinau komandą „nubrėžk kvadratą“ į „nubrėžk šešiakampį“, bet ji vis vien piešia kvadratus! Ar gali pataisyti komandą „nubrėžk šešiakampį“, kad ji nubrėžtų šešiakampį, kurio kraštinės yra po 50 pikselių? Panaudok savo pataisytą komandą ir nupiešk pavaizduotą piešinį.
+      2-3 Artist Functions 11.5 a: Štai tau ta pati komanda „nubrėžk šešiakampį“. Kas nutiks, jei kiekvieną kartą pasisuksi po 60 laipsnių, nubrėžęs kiekvieną šešiakampį?
+      2-3 Artist Functions 11.5: Štai tau ta pati komanda „nubrėžk šešiakampį“. Kas nutiks, jei kiekvieną kartą pasisuksi po 60 laipsnių, nubrėžęs kiekvieną šešiakampį?
+      2-3 Artist Functions 11: Aš pervadinau komandą „nubrėžk kvadratą“ į „nubrėžk šešiakampį“, bet ji vis vien piešia kvadratus! Ar gali pataisyti komandą „nubrėžk šešiakampį“, kad ji nubrėžtų šešiakampį, kurio kraštinės yra po 50 pikselių? Panaudok savo pataisytą komandą ir nupiešk pavaizduotą piešinį.
+      2-3 Artist Functions 12 Mike: 'Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  '
+      2-3 Artist Functions 12 a: 'Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  '
+      2-3 Artist Functions 12: 'Sudėtinės komandos labai praverčia, jei norime nupiešti daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį. (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  '
+      2-3 Artist Functions 13: |-
+        Tau duotos keturios sudėtinės komandos.
+        Panaudok jas kaip tik nori ir gauk piešinius,
+        kuriuos galėsi parodyti savo draugams. Paspausk „Paleisti“, kad pamatytum pavyzdį.
       2-3 Artist Functions 2 a: 'Naudokite mažą žalią „piešti kvadratą“ bloką, kad galėtumėte paskambinti šią naują funkciją ir sukurti akinius. '
-      2-3 Artist Functions 2: "Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas."
-      2-3 Artist Functions 3: "Pataisyk komandą, kad piešiamo kvadrato kraštinės ilgis būtų 115 ir nupiešk didesnius akinius. Atstumas tarp stiklų dabar yra 45 pikseliai."
+      2-3 Artist Functions 2: Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas.
+      2-3 Artist Functions 3: Pataisyk komandą, kad piešiamo kvadrato kraštinės ilgis būtų 115 ir nupiešk didesnius akinius. Atstumas tarp stiklų dabar yra 45 pikseliai.
       2-3 Artist Functions 4: Panaudok kartojimo blokelį ir nupiešk tris kvadratus.
       2-3 Artist Functions 7: 'Panaudok komandą „namas“, kad nupieštum du namus su dviem skirtingais parametrais. (Sufleris: pirmojo namo dydis yra 100 pikselių).'
-      2-3 Artist Functions 9: 'Štai nauja komanda „nupiešk snaigę“. Paeksperimentuok su ja ir nupiešk gražų žieminį paveikslą. Čia ne galvosūkis, o kūrybinė užduotis. Pasismagink!'
+      2-3 Artist Functions 9: Štai nauja komanda „nupiešk snaigę“. Paeksperimentuok su ja ir nupiešk gražų žieminį paveikslą. Čia ne galvosūkis, o kūrybinė užduotis. Pasismagink!
       2-3 Artist Loops 10: Kas atsitiks su dizainas, kai mes darome mūsų galutinis žingsnis į priekį pusę tol, kol?
-      2-3 Artist Loops 11: Dabar galime įdėti * kitą * kilpą aplink mūsų visas kūrinys!  Nepamirškite pridėti kampu išorinės linijos pabaigoje.
+      2-3 Artist Loops 11: Dabar galime įdėti \* kitą \* kilpą aplink mūsų visas kūrinys!  Nepamirškite pridėti kampu išorinės linijos pabaigoje.
       2-3 Artist Loops 4: Norite pamatyti, kas atsitinka, kai mes pakartoti tą figūrą, vėl ir vėl naudojant kilpą?
       2-3 Artist Loops 5: Dabar galime padaryti nedidelių pakeitimų prie linijos ir pamatyti, kaip skirtingi mūsų nuotrauka tampa.
       2-3 Artist Loops 6: Pridėti vienu ėjimu ir kito posūkio viduje kilpa ir matyti, kaip keičiasi jūsų dizainas.
@@ -79,21 +107,24 @@ lt:
       2-3 Artist Match Sq Pic: 'Rungtynės: Baigti trūkstamą kodą'
       2-3 Artist Match Tri pic: 'Rungtynės: Baigti trūkstamą kodą.'
       2-3 Artist Nested Loops 1: Uždėkite „pakartoti“ bloką aplink visą visą kodo kaminą, kad pieštumėte modelį.
-      2-3 Artist Nested Loops 3: "Kad pieštumėte šį modelį, jums reikės 12 kartų trikampis.\n\nPadalinkite laipsnių skaičių apskritime (360) pagal piešinių skaičių (12), kad išsiaiškintumėte, kiek teks pasukti po kiekvienos formos."
+      2-3 Artist Nested Loops 3: |-
+        Kad pieštumėte šį modelį, jums reikės 12 kartų trikampis.
+
+        Padalinkite laipsnių skaičių apskritime (360) pagal piešinių skaičių (12), kad išsiaiškintumėte, kiek teks pasukti po kiekvienos formos.
       2-3 Artist Nested Loops 6: |-
         Šis dinozauras turi 8 smaigalius, einančius savo uodegą.
         Kiekvienas smaigalys yra 30 pikselių. Pasukite trikampį 8 kartus, bet įsitikinkite, kad po kiekvieno šokinėjate pirmyn!
       2-3 Artist Nested Loops Free Play: Nupiešk ką nors įdomaus, naudodamas kartojimą kartojime.
       2-3 Bee Conditionals 1: Labas! Aš esu bitė. Padėk man surinkti nektarą iš gėlės.
-      2-3 Bee Conditionals 10: 'Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.  '
-      2-3 Bee Conditionals 11: "Rinkti nektarą, kur gėlės turi nektaro."
-      2-3 Bee Conditionals 15: "Surink nektarą iš visų keturių gėlių."
+      2-3 Bee Conditionals 10: Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.
+      2-3 Bee Conditionals 11: Rinkti nektarą, kur gėlės turi nektaro.
+      2-3 Bee Conditionals 15: Surink nektarą iš visų keturių gėlių.
       2-3 Bee Conditionals 9: Surink visą nektarą iš kiekvienos gėlės.
       2-3 Bee Conditionals Assessment 1: 'Iššūkis: surink visą nektarą. Atsargiai, neimk nektaro iš violetinių gėlių, jei nektaro jos neturi.'
       2-3 Bee Functions 1: Funkcijos yra kodo blokeliai kurie vykdo užduotį. Panaudok "paimk 2 nektarus" funkciją ir surink nektarą iš kiekvienos gėlės.
       2-3 Bee Functions 3: Surink visą nektarą iš kiekvienos gėlės.
       2-3 Bee Loops 13: 'Iššūkis: panaudok kartojimo blokelį ir surink visą nektarą.'
-      2-3 Bee Loops 1A: 'Labas, aš esu bitė. Ar padėsi man surinkti nektarą iš šių gėlių?'
+      2-3 Bee Loops 1A: Labas, aš esu bitė. Ar padėsi man surinkti nektarą iš šių gėlių?
       2-3 Maze 10: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
       2-3 Maze 16 before: Nuvesk mane pas kiaulę.
       2-3 Maze 4: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
@@ -103,7 +134,7 @@ lt:
       2-3 Maze 9: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
       2-3 Maze Loops 1: Ar gali nuvesti mane pas kiaulę naudodamas 5 blokelius?
       2-3 Maze Loops 17: Nuvesk mane prie saulėgrąžų!
-      2-3 Maze Loops 19: "Nuvesk mane prie saulėgrąžų!"
+      2-3 Maze Loops 19: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops 20: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops 21: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops Assessment 1: 'Iššūkis: nuvesk mane pas saulėgrąžą naudodamas tik 5 blokelius! '
@@ -115,6 +146,7 @@ lt:
       2-3 maze sq14: Ar gali nuvesti prie saulėgrąžos naudpdamas tik 4 blokelius?
       2-3 maze sq15: Ar gali nuvesti iki saulėgrąžos naudodamas tik 5 blokelius?
       2-3 maze sq16: Puiku, šis bus panašus, tačiau šiek tiek kitoks. Ar gali įveikti naudodamas tik 5 blokelius?
+      2-3: Violetinės gėlės gali turėti 1 arba 0 nektarų. Būk atsargus, nerink nektaro iš violetinės gėlės, jei ji jo neturi.
       20hr_farmer_stage9_1: Labas, aš esu ūkininkė. Man reikia išlyginti žemę, kad ji būtų paruošta sodinimui. Pajudink mane iki tos purvo krūvos ir panaudok blokelį „pašalink 1“, kad jį pašalinti.
       20hr_farmer_stage9_11: 'Vis dar tamsu lauke. Judink mane lauku. Jeigu rasi purvo krūvą, pašalink ją, o jei rasi duobę, užpildyk ją. Sufleris: ant blokelio „Jei“ yra tam tikrų pasirinkimų, nuspaudus ant mažos rodyklėlės.'
       20hr_farmer_stage9_2: Man reikia nueiti prie duobės ir užpildyti ją su dviem kastuvais, pilnais žemių. Tam naudok blokelį „užpildyk 1“.
@@ -152,12 +184,12 @@ lt:
       4-5 Artist 5: Kokį kampą reikėtų įrašyti?
       4-5 Artist 6: Štai lygiakraštis trikampis. Kiekvienas jo kampas yra po 60 laipsnių, o kiekviena jo kraštinė po 200 pikselių. Užbaik piešinį.
       4-5 Artist 7: Šio stačiojo trikampio kampų dydžiai yra 30, 60 ir 90 laipsnių. Trūkstamos linijos ilgis yra dvigubai didesnis už 100 pikselių. Užbaik piešinį.
-      4-5 Artist 8: "Futbolo aikštės vidurio linija yra lygiagreti kraštinėms linijoms. Aikštės perimetras yra 800, o ilgis 240 pikselių. Koks jo plotis? Nupiešk trūkstamas linijas."
+      4-5 Artist 8: Futbolo aikštės vidurio linija yra lygiagreti kraštinėms linijoms. Aikštės perimetras yra 800, o ilgis 240 pikselių. Koks jo plotis? Nupiešk trūkstamas linijas.
       4-5 Artist 9: Nupiešk likusią piešinio dalį, kad piešinys būtų simetriškas. Visi trikampiai yra lygiakraščiai, o jų kraštinės yra po 50 pikselių ilgio.
       4-5 Artist Assessment 1: 'Iššūkis: panaudodamas kartojimo komandą nubrėžk lygiakraštį trikampį. Kiekviena jo kraštinė lygi 300 pikselių.'
       4-5 Artist Patterns Free Play: Pamėgink sukurti savo ornamentą!
       4-5 Bee Debugging Assessment 1: 'Iššūkis: pataisyk kodą.'
-      4-5 Bee Nested Loops Assessment 1: "Iššūkis – surink visą nektarą ir pagamink medų visuose koriuose naudodamas kartojimą."
+      4-5 Bee Nested Loops Assessment 1: Iššūkis – surink visą nektarą ir pagamink medų visuose koriuose naudodamas kartojimą.
       4-5 Maze 10: Ar gali nuvesti prie saulėgrąžos naudpdamas tik 4 blokelius?
       4-5 Maze 13: Nuvesk mane pas kiaulę!
       4-5 Maze 14: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
@@ -168,27 +200,24 @@ lt:
       4-5 Maze 6: Nuvesk mane prie saulėgrąžų!
       4-5 Maze Assessment 1: 'Iššūkis: nueik pas saulėgrąžą.'
       4-5 Maze Conditionals 7: Pamėginkime dar kartą – užduotis labai panaši, bet šį kartą saugokis piktų gėlių!
-      4-5 Maze Conditionals 8: "Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to atlieka vieną ARBA kitą veiksmą. Padėk man pasiekti saulėgrąžą, panaudodamas šį blokelį."
-      4-5 Maze Conditionals 9: |-
-        Pamėgink dar kartą panaudoti blokelį „jei-kitu atveju“. Ar sugebėsi išspręsti užduotį iš pirmo karto?
+      4-5 Maze Conditionals 8: Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to atlieka vieną ARBA kitą veiksmą. Padėk man pasiekti saulėgrąžą, panaudodamas šį blokelį.
+      4-5 Maze Conditionals 9: Pamėgink dar kartą panaudoti blokelį „jei-kitu atveju“. Ar sugebėsi išspręsti užduotį iš pirmo karto?
       4-5 Maze Conditionals Assessment 1: "**Užduotis:** Panaudok blokelius „kartok kol...“ ir „jei...“. Naudojant juos reikės žymiai mažiau blokelių."
       4-5 Nested Loops 1: 'Užbaik kodą, kad gautum šiuos trikampius. Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360 laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
       4-5 Nested Loops 2: 'Įdėk visą šį kodą į kartojimo blokelį, kad gautum 10 trikampių. Tai yra vadinama „kartojimu kartojime“.  '
-      4-5 Nested Loops 3: |-
-        Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
+      4-5 Nested Loops 3: Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
       4-5 Nested Loops 5: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       4-5 Nested Loops 7: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       4-5 Nested Loops 8: "Pakartok šį kodą 6 kartus. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime? "
       4-5 Nested Loops 9: Nupiešk krokodilo dantis!
-      4-5 Nested Loops Assessment 1: 'Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.'
+      4-5 Nested Loops Assessment 1: Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.
       4-5 While Loops Assessment 1: Lauke yra daug duobių ir žemių. Padėk man išlyginti lauką.
       App Lab test: sąlyga
-      Artist - Nested Loops 1: 'Užbaik kodą, kad gautum šiuos trikampius. Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360 laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
       Artist - Nested Loops 5: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       Artist - Nested Loops 9: Nupiešk krokodilo dantis!
       Artist Autorun Test: Panaudok kartojimo blokelį ir nupiešk tris kvadratus.
       C3-Farmer While Loops Assessment 1: Lauke yra daug duobių ir žemių. Padėk man išlyginti lauką.
-      Course 2 Bee Loops 1: 'Labas, aš esu bitė. Ar padėsi man surinkti nektarą iš šių gėlių?'
+      Course 2 Bee Loops 1: Labas, aš esu bitė. Ar padėsi man surinkti nektarą iš šių gėlių?
       Course 2 Bee Loops 13: 'Iššūkis: panaudok kartojimo blokelį ir surink visą nektarą.'
       Course 2 Maze Loops 1: Ar gali nuvesti mane pas kiaulę naudodamas 5 blokelius?
       Course 4 Maze 2: Saugokis TNT!
@@ -264,7 +293,7 @@ lt:
       K-1 Bee Loops Assessment 2: Surink nektarą medui naudodamas ciklus (kartojimo blokelius)!
       K-1 Bee Puzzle 12: Gauk tris nektarus ir pagamink du korius medaus
       K-1 Maze 10: 'Apeik aplink sprogmenų dėžę (TNT) ir nuvesk mane pas kiaulę! '
-      K-1 Maze 11: 'Atsek kelią iki kiaulės ir saugokis TNT dežių. Jei paliesiu jas, susprogsiu!'
+      K-1 Maze 11: Atsek kelią iki kiaulės ir saugokis TNT dežių. Jei paliesiu jas, susprogsiu!
       K-1 Maze 2: Pajudink mane į rytus, kad pasiekčiau kiaulę!
       K-1 Maze 3: Pajudink mane į pietus, kad pagaučiau kiaulę!
       K-1 Maze 4: Pajudink mane į šiaurę, kad pagaučiau kiaulę!
@@ -279,7 +308,7 @@ lt:
       K-1 Maze Assessment 2: Iššūkis – nuvesk mane pas kiaulę!
       K-1 Maze Loops 1: Nuvesk mane pas kiaulę!
       K-1 Maze Loops 10: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
-      K-1 Maze Loops 11: "Nuvesk mane pas kiaulę! Naudok kartojimo blokelį."
+      K-1 Maze Loops 11: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
       K-1 Maze Loops 12: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
       K-1 Maze Loops 2: Naudok kartojimo blokelį ir nuvesk mane pas kiaulę!
       K-1 Maze Loops 3: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
@@ -293,20 +322,14 @@ lt:
       K-1 Maze Loops Assessment 2: Iššūkis – panaudok kartojimo blokelį ir nuvesk mane pas kiaulę!
       K-1 Maze Multi 14: Iššūkis
       K-1 Maze Multi 15: Iššūkis
-      K-1 Maze Sequence Assessment 1: |-
-        Metu tau iššūkį!\r
-        Pajudink mane į vieną, 
-        o po to į kitą pusę, kad pasiekčiau kiaulę
-      K-1 Maze Sequence Assessment 2: "Metu tau iššūkį!\\r\nPajudink mane į vieną, \no po to į kitą pusę, kad pasiekčiau kiaulę."
+      K-1 Maze Sequence Assessment 1: "Metu tau iššūkį!\\\\r\nPajudink mane į vieną, \no po to į kitą pusę, kad pasiekčiau kiaulę"
+      K-1 Maze Sequence Assessment 2: "Metu tau iššūkį!\\\\r\nPajudink mane į vieną, \no po to į kitą pusę, kad pasiekčiau kiaulę."
       K-1 Maze debug Assessment 1: Įvertink situaciją – Surask ir ištaisyk klaidas, kad galėčiau pasiekti kiaulę!
       K-1 artist 1 level 10: Nupiešk punktyrinę liniją naudodamas piešimo ir šokinėjimo blokelius
       K-1 artist 1 level 9: Nupiešk šį piešinį panaudodamas tris linijas
       K-1 maze debug 1: Pakeisk blokelių seką, kad pasiekčiau kiaulę!
       K-1 maze debug 10: Surask ir ištaisyk klaidas, kad galėčiau pasiekti kiaulę!
-      K-1 maze debug 11: |-
-        Iššūkis tau!\r
-        Surask ir ištaisyk klaidas, 
-        kad galėčiau pasiekti kiaulę
+      K-1 maze debug 11: "Iššūkis tau!\\\\r\nSurask ir ištaisyk klaidas, \nkad galėčiau pasiekti kiaulę"
       K-1 maze debug 2: Išsiaiškink, kokių blokelių trūksta ir juos pridėk!
       K-1 maze debug 3: Išsiaiškink, kurie blokeliai NETINKA ir pašalink juos!
       K-1 maze debug 4: Pataisyk, kurie blokeliai netinka. Man atrodo, kad aš judėsiu visai ne į tą pusę.
@@ -327,16 +350,22 @@ lt:
       Kiki_StarWars_Test_5_Example: Tekstas
       MC HOC 2016 Level 10: Metas sukurti savo Minecraft žaidimą! Aktyvuok įvairias būtybes ir priversk jas daryti tai, ko nori tu. Pasilinksmink!
       MC HOC 2016 Level 2-2: Viščiukas nejuda. Padaryk taip, kad jis judėtų ir sukinėtųsi – įdėk tinkamus blokelius į blokelį „Kai atsiradęs“.
-      MC HOC 2016 Level 3: "Puiku, viščiukas pajudėjo! Deja, vėliau jis sustojo.\nŽaidimuose viščiukai vaikšto nuolat. Panaudok \"amžinai\" bloką, kad viščiukai toliau judėtų."
+      MC HOC 2016 Level 3: |-
+        Puiku, viščiukas pajudėjo! Deja, vėliau jis sustojo.
+        Žaidimuose viščiukai vaikšto nuolat. Panaudok "amžinai" bloką, kad viščiukai toliau judėtų.
       MC HOC 2016 Level 4: Dabar viščiukai atrodo keistai, judėdami nuolat tuo pačiu keliu. Žaidimuose naudojami atsitiktiniai judesiai, kad būtų panašesni į realybę. Pasuk viščiukus į atsitiktinę pusę.
       MC HOC 2016 Level 5: Šios karvės pasiklydo! Nuvesk jas iki žolės, įkeldamas "ženk žingsnį link..." į "amžinai" bloką.
       MC HOC 2016 Level 6: Dabar tu kursi zombius. Kai ateis naktis, padaryk taip, kad atsirastų 3 zombiai, kurie gaudys žaidėją. Bėk nuo zombių, kol išauš rytas.
-      MC HOC 2016 Level 8: "Kelią iki tavo avies blokuoja akmeninė siena. Laimei, čia yra Pasalūnas (Creeper). Pasalūnai, juos palietus, sprogsta.\nPadaryk taip, kad Pasalūnas susprogdintų sieną ir galėtum pasiekti savo avį!"
+      MC HOC 2016 Level 8: |-
+        Kelią iki tavo avies blokuoja akmeninė siena. Laimei, čia yra Pasalūnas (Creeper). Pasalūnai, juos palietus, sprogsta.
+        Padaryk taip, kad Pasalūnas susprogdintų sieną ir galėtum pasiekti savo avį!
       MC HOC 2016 New Drop: Minecraft žaidime avys meta vilną. Įkelk "išmesti" bloką į "kai naudojamas", tada prieik prie avies ir paliesk ją (paspausdamas tarpo mygtuką), kad ji numestų vilną.
       MC HOC 2016 New Spawn: Dabar gali užpildyti pasaulį kuo tik panorėsi! Panaudok blokelį „atsiras“, kad žaidimui prasidėjus, atsirastų įvairių būtybių.
       MC HOC 2016 New Walk: Ištyrinėkime savo pasaulį! Judėk naudodamas rodykles, ir spustelėk tarpo klavišą arba pelės mytuką ant žaidimo lauko, kad galėtum panaudoti kai kuriuos elementus. Naudok duris, kad galėtum patekti į namą.
       MC HOC 2016 SCORE LEVEL: Kai kurie žaidimai leidžia skaičiuoti taškus. Žaisk gaudynes su šiais Geležiniais Golemais ir naudok blokelį „pridėk tašką“, kad gautum tašką kiekvieną kartą juos palietęs. Surink 5 taškus, kad laimėtum!
-      MC HOC 2016 Village Test: "O ne! Zombiai įviliojo tave į spąstus!\nUžprogramuok Geležinį Golemą persekioti ir atakuoti zombius!"
+      MC HOC 2016 Village Test: |-
+        O ne! Zombiai įviliojo tave į spąstus!
+        Užprogramuok Geležinį Golemą persekioti ir atakuoti zombius!
       New Basketball Project: Sukurk savo krepšinio žaidimą - gali keisti visas taisykles. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.
       New Bounce Project: Sukurk savo "Pong" žaidimą. Tu gali pakeisti išvaizdą bei taisykles. Kai pabaigsi, spustelk "Finišas", ir draugai galės išbandyti jį savo telefonuose (ar pan.).
       New Sports Project: 'Sukurk savo žaidimą! Dabar tu čia šeimininkas: gali pakeisti visas taisykles, panaudoti kelias sporto rūšis - būk kūrybingas!. Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.'
@@ -365,12 +394,27 @@ lt:
       Overworld Plant Crops: Yra svarbu planuoti į priekį. Pasodink pasėlius iš abiejų vandens telkinio pusių, kad nereikėtų būti alkanam.
       Overworld Plant Crops_2018: Yra svarbu planuoti į priekį. Pasodink pasėlius iš abiejų vandens telkinio pusių, kad nereikėtų būti alkanam.
       Overworld Plant Crops_2019: Yra svarbu planuoti į priekį. Pasodink pasėlius iš abiejų vandens telkinio pusių, kad nereikėtų būti alkanam.
-      Overworld Powered Minecart: "Puikiai padirbėta! Tu surinkai daugybę\ništeklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki\nsavo namo durų."
-      Overworld Powered Minecart_2018: "Puikiai padirbėta! Tu surinkai daugybę\ništeklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki\nsavo namo durų."
-      Overworld Powered Minecart_2019: "Puikiai padirbėta! Tu surinkai daugybę\ništeklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki\nsavo namo durų."
-      Overworld Shear Sheep: "Avių kirpimo metas! Naudokis \"kirpti\" komanda,\nkad surinktum vilną iš abiejų avių."
-      Overworld Shear Sheep_2018: "Avių kirpimo metas! Naudokis \"kirpti\" komanda,\nkad surinktum vilną iš abiejų avių."
-      Overworld Shear Sheep_2019: "Avių kirpimo metas! Naudokis \"kirpti\" komanda,\nkad surinktum vilną iš abiejų avių."
+      Overworld Powered Minecart: |-
+        Puikiai padirbėta! Tu surinkai daugybę
+        išteklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki
+        savo namo durų.
+      Overworld Powered Minecart_2018: |-
+        Puikiai padirbėta! Tu surinkai daugybę
+        išteklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki
+        savo namo durų.
+      Overworld Powered Minecart_2019: |-
+        Puikiai padirbėta! Tu surinkai daugybę
+        išteklių ir pastatei nedidelį namą. Dabar patiesk geležinkelį nuo žemėlapio krašto iki
+        savo namo durų.
+      Overworld Shear Sheep: |-
+        Avių kirpimo metas! Naudokis "kirpti" komanda,
+        kad surinktum vilną iš abiejų avių.
+      Overworld Shear Sheep_2018: |-
+        Avių kirpimo metas! Naudokis "kirpti" komanda,
+        kad surinktum vilną iš abiejų avių.
+      Overworld Shear Sheep_2019: |-
+        Avių kirpimo metas! Naudokis "kirpti" komanda,
+        kad surinktum vilną iš abiejų avių.
       PDK5 Functions 2: Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas.
       Ryan_Demo: Padaryk taip, kad briedis pradėtų naują judesį po 4 taktų!
       SpecialFrozenLevel: Sveikinu! Tu tapai meistriškas menininkas! O dabar gali nupiešti ką tik nori.
@@ -448,12 +492,9 @@ lt:
       course4_artist_fwp_challenge1: Pamėgink paleisti šią programą, po to šiek tiek ją pakeisk ir stebėk, kas darosi. Ar sugebėsi išsiaiškinti, kaip ji veikia? (Taip pat galima ją visai pašalinti ir pakeisti kuo nors kitu)
       courseA_maze_seq2: Pakeisk blokelių seką, kad pasiekčiau kiaulę!
       courseA_maze_seq2_2018: Pakeisk blokelių seką, kad pasiekčiau kiaulę!
-      courseC_artist_prog5: |-
-        Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
-      courseC_artist_prog5_2018: |-
-        Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
-      courseC_artist_prog5_2019: |-
-        Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
+      courseC_artist_prog5: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
+      courseC_artist_prog5_2018: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
+      courseC_artist_prog5_2019: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
       courseC_maze_debugging10: Surask ir ištaisyk klaidas, kad galėčiau pasiekti kiaulę!
       courseD_bee_nestedLoops6_2018: Nuvesk mane prie saulėgrąžų!
       courseD_bounce_events10: Dabar viršuje yra taikinys. Pridėk „pelnyti tašką“ ir „pelnyti tašką priešininkui“  komandas  prie „kai kamuolys pataiko į tikslą“ ir „kai kamuolys nepataiko į raketę“, kad sukurtum žaidimą. Išbandyk, kiek taškų surinksi, kol "priešininkas" surinks dvigubai daugiau.
@@ -470,8 +511,12 @@ lt:
       courseD_maze_nestedLoops6: Nuvesk mane prie saulėgrąžų!
       courseD_maze_nestedLoops6_2018: Nuvesk mane prie saulėgrąžų!
       courseD_maze_nestedLoops6_2019: Nuvesk mane prie saulėgrąžų!
-      courseE_artist_functions1: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
-      courseE_artist_functions1_2018: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
+      courseE_artist_functions1: |-
+        Labas. Aš zombis menininkas. Aš mėgstu piešti!
+        Padėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis.
+      courseE_artist_functions1_2018: |-
+        Labas. Aš zombis menininkas. Aš mėgstu piešti!
+        Padėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis.
       courseE_bee_functions1: Surink visą nektarą iš kiekvienos gėlės.
       courseE_bee_functions1_2018: Surink visą nektarą iš kiekvienos gėlės.
       flappy_1: Pridėk reikiamą blokelį prie blokelio „kai nuspausta“, o tada nuspausk „Paleisti“. Spustelk pelės klavišą arba ekraną, kad Flappy skristų į tikslą.
@@ -498,7 +543,7 @@ lt:
       frozen circle function with parameter: Štai tau naujas blokelis „sukurk apskritimą“, su kuriuo galima nubrėžti skirtingų dydžių apskritimus. Pamėgink jį panaudoti ir sukurti apskritimus, kurių dydžiai yra 5 ir 10.
       frozen circle function: Panaudok naują blokelį „sukurk apskritimą“. Iš viso bus 10 apskritimų, o tarp jų reikės šuoliuoti su blokeliu „peršok“.
       frozen circle: Apskritimas yra įdomi figūra. Ar sugalvosi, kiek kartų reikės pakartoti veiksmus, kad nupieštum apskritimą?
-      frozen cross rotate dense: 'Pakartokime tą patį 90 kartų! 360 laipsnių apskritime turės įtilpti 90 linijų. Koks kampas tarp jų turės būti?'
+      frozen cross rotate dense: Pakartokime tą patį 90 kartų! 360 laipsnių apskritime turės įtilpti 90 linijų. Koks kampas tarp jų turės būti?
       frozen cross rotate: O dabar pamėgink pakartoti tą patį 10 kartų. Sugalvok, kiek laipsnių reikės pasisukti piešiant linijas.
       frozen cross: Panaudok kartojimo blokelį piešdamas pliuso ženklą. Ar pastebėjai, kad Elsa gali judėti ne tik į priekį, bet ir atgal?
       frozen diamond mini snowflake: Ar žinojai, kad visos snaigės turi kitokią formą? Pamėginkime sukurti snaigę, sudarytą iš lygiagretainių. Tarp kiekvieno lygiagretainio bus 90 laipsnių kampas, o kadangi jų bus 4, turėsime savo veiksmus kartoti keturis kartus.
@@ -522,11 +567,9 @@ lt:
       grade2_CaringForNewPet_10: Nuvesk mane pas kiaulę!
       grade2_CaringForNewPet_5: Nuvesk mane pas kiaulę!
       grade2_MakeDogTag_10: Nupiešk ką nors smagaus.
-      grade2_MakeDogTag_3: |-
-        Padėk man užbaigti namą šiai katei.
-      grade2_MakeDogTag_4: |-
-        Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.
-      grade2_MakeDogTag_6: 'O dabar gali nupiešti ką tik nori.'
+      grade2_MakeDogTag_3: Padėk man užbaigti namą šiai katei.
+      grade2_MakeDogTag_4: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
+      grade2_MakeDogTag_6: O dabar gali nupiešti ką tik nori.
       grade2_MakeDogTag_9: Atstatyti kodą iš paskutinio galvosūkį, bet šiuo metu, pridėti kairę 30 laipsnių viduje į kilpą. Dabar, pakartoti tai 24 kartus vietoj 8.
       grade2_PuppyLoops_1: Ar gali nuvesti mane pas kiaulę naudodamas 5 blokelius?
       grade2_PuppyLoops_10: |-
@@ -534,14 +577,17 @@ lt:
         aš turiu kartoti, kad jį pabaigčiau?
       grade2_PuppyLoops_5: Nuvesk mane pas kiaulę.
       grade2_PuppyLoops_7: Nuvesk mane prie saulėgrąžų!
-      grade2_PuppyLoops_8: "Kodas trims ūsams, kurį\ndabar matai yra blogas. Patarimas: kiekvienas ūsas yra 75 pikselių ilgumo.\nPataisyk šį kodą, kad nupieštum ūsus."
+      grade2_PuppyLoops_8: |-
+        Kodas trims ūsams, kurį
+        dabar matai yra blogas. Patarimas: kiekvienas ūsas yra 75 pikselių ilgumo.
+        Pataisyk šį kodą, kad nupieštum ūsus.
       grade2_PuppyLoops_9: |-
         Atrodo, kad šiame kode C raidė yra nupiešta priešingai.
         Ar gali ją pakeisti, kad ji būtų panaši į C?
-      grade3_Conditionals_12: "Surink nektarą iš visų keturių gėlių."
+      grade3_Conditionals_12: Surink nektarą iš visų keturių gėlių.
       grade3_Conditionals_13: 'Iššūkis: surink visą nektarą. Atsargiai, neimk nektaro iš violetinių gėlių, jei nektaro jos neturi.'
       grade3_Conditionals_7: Surink visą nektarą iš kiekvienos gėlės.
-      grade3_Conditionals_8: "Rinkti nektarą, kur gėlės turi nektaro."
+      grade3_Conditionals_8: Rinkti nektarą, kur gėlės turi nektaro.
       grade3_maze_Loop1: 'Iššūkis: nuvesk mane pas saulėgrąžą naudodamas tik 5 blokelius! '
       grade3_maze_loops3: Nuvesk mane prie saulėgrąžų!
       grade3_maze_loops4: Nuvesk mane prie saulėgrąžų!
@@ -550,22 +596,21 @@ lt:
       grade3_robotFarmer_ConditionalsIntro_11: 'Vis dar tamsu lauke. Judink mane lauku. Jeigu rasi purvo krūvą, pašalink ją, o jei rasi duobę, užpildyk ją. Sufleris: ant blokelio „Jei“ yra tam tikrų pasirinkimų, nuspaudus ant mažos rodyklėlės.'
       grade3_robotFarmer_ConditionalsIntro_6: Atsikratyk visomis purvo krūvomis, panaudodamas kuo mažiau blokų. Nauji pasirinkimai „Kol“ blokelyje pasako man, ar aš stoviu ant purvo krūvos, ar ant duobės.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Padėk man užpildyti visas šias duobes su 5 kastuvais žemių. Sufleris: galima įdėti kartojimo blokelį į „Kol“ blokelio vidų.'
-      grade4_arist_nested_loop_circles1: 'Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.'
+      grade4_arist_nested_loop_circles1: Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.
       grade4_arist_nested_loop_flags1: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       grade4_arist_nested_loop_polygons1: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
       grade4_arist_nested_loop_polygons2: "Pakartok šį kodą 6 kartus. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime? "
       grade4_arist_nested_loop_triangles2: 'Įdėk visą šį kodą į kartojimo blokelį, kad gautum 10 trikampių. Tai yra vadinama „kartojimu kartojime“.  '
       grade4_arist_nested_loop_triangles4: Nupiešk krokodilo dantis!
-      grade4_arist_nested_loop_triangles5: |-
-        Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
-      grade4_artist_functions1: "Labas. Aš zombis menininkas. Aš mėgstu piešti!\nPadėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis."
-      grade4_artist_functions2: "Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas."
-      grade4_artist_nested_loop_circles1: 'Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.'
+      grade4_arist_nested_loop_triangles5: Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
+      grade4_artist_functions1: |-
+        Labas. Aš zombis menininkas. Aš mėgstu piešti!
+        Padėk man nupiešti kvadratinius akinius. Sufleris: atstumas tarp stiklų yra 25 pikseliais trumpesnis nei kvadrato kraštinės ilgis.
+      grade4_artist_functions2: Sudėtinės komandos (arba funkcijos) leidžia susikurti naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“. Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų yra 75 pikselių atstumas.
+      grade4_artist_nested_loop_circles1: Įdėk kartojimą į kartojimą, kad užbaigtum šį raštą.
       grade4_artist_nested_loop_flags1: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       grade4_artist_nested_loop_polygons1: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia pasisukti kiekviename kartojime?"
-      grade4_artist_nested_loop_triangles1: 'Užbaik kodą, kad gautum šiuos trikampius. Pirmasis trikampis tau jau yra duotas. Patarimas: apskritimo ilgis yra 360 laipsnių. Įsivaizduok, kad šie trikampiai yra apskritimo viduje.'
-      grade4_artist_nested_loop_triangles5: |-
-        Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
+      grade4_artist_nested_loop_triangles5: Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
       grade4_bee_functions1: Surink visą nektarą iš kiekvienos gėlės.
       grade4_bee_functions2: Funkcijos yra kodo blokeliai kurie vykdo užduotį. Panaudok "paimk 2 nektarus" funkciją ir surink nektarą iš kiekvienos gėlės.
       grade4_frozen_freeplay: Sveikinu! Tu tapai meistriškas menininkas! O dabar gali nupiešti ką tik nori.
@@ -580,7 +625,6 @@ lt:
       grade4_frozen_square_loop1: Labas! Aš Anna iš Arendelės! Dabar panaudosime naują blokelį „kartok“ tam pačiam kvadratui nupiešti. Jis padės panaudoti mažiau blokelių. Sugalvok, kiek kartų reikės kartoti tuos pačius veiksmus, kad pavyktų nubrėžti kvadratą.
       grade4_frozen_square_loop2: Pamėginkime nubrėžti tris kvadratus. Po kiekvieno jų reikės pasisukti po 120 laipsnių.
       grade4_frozen_square_loop3: Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų, o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.
-      grade4_review_artist1: Sveiki, aš esu menininkas. Tau parašius kodą, aš galiu nupiešti beveik viską. Panaudok keletą blokų, kad aš pieščiau per pilkas linijas paveikslėlyje. (Kiekviena linija yra 100 pikselių ilgio)
       grade4_review_artist2: 'Šiam namui trūksta stogo! Nupiešk trikampį. Sufleris: visos trys kraštinės yra tokio pat ilgio.'
       grade4_review_artist3: Naudodamas naują peršokimo blokelį, gali padaryti taip, kad menininkas judėtų nepiešdamas. Nubrėžk punktyrinę liniją naudodamas peršokimo ir piešimo mygtukus.
       k-1 maze 1: Padėk man žingsniuoti į vakarus, kad pasiekčiau kiaulę.

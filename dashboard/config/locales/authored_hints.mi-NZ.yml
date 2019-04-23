@@ -5,9 +5,9 @@ mi:
       CoureE_HOC 2018 Level_7a_authored_hint:
         aquatic7: whakamahia te paraka ara hei awhina ki te ara tika.
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: 'Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga
-          Moana?  \n\n"
+          Moana?  '
       CourseE_HOC 2018 Level_7a_authored_hint:
         aquatic7: whakamahia te paraka ara hei awhina ki te ara tika.
       CourseE_HOC 2018 Level_9b_authored_hint:
@@ -15,9 +15,9 @@ mi:
           era hei pou kia huri  maui, huri matau ranei kia whakawhiti pai ai i te
           ākau.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: 'Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga
-          Moana?  \n\n"
+          Moana?  '
       HOC 2018 Level_7a_authored_hint:
         aquatic7: whakamahia te paraka ara hei awhina ki te ara tika.
       HOC 2018 Level_9b_authored_hint:
@@ -59,7 +59,7 @@ mi:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -78,7 +78,7 @@ mi:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -97,7 +97,7 @@ mi:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -116,7 +116,7 @@ mi:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -263,7 +263,7 @@ mi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -282,7 +282,7 @@ mi:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -301,7 +301,7 @@ mi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -320,7 +320,7 @@ mi:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>

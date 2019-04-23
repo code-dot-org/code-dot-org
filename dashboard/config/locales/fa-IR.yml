@@ -703,6 +703,8 @@ fa:
     csp_variables: متغیرها
     csp_conditionals: شرطی ها
     csp_functions: توابع
+    csp_lists: فهرست‌ها
+    csp_loops: حلقه‌ها
   hoc_download:
     minecraft_name: ساعتی با کد ماینکرفت
   pd:

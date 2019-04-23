@@ -1655,6 +1655,8 @@ ko:
               name: 인터넷
             Crowdsourcing:
               name: 클라우드소싱
+            Songwriting:
+              name: 노래 만들기
         express-2019:
           stages:
             Relay Programming:
@@ -1756,3 +1758,11 @@ ko:
           stages:
             While Loops:
               name: '~인 동안 반복'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: 클라우드소싱
+            Conditionals with Cards:
+              name: 조건선택 카드
+            Building a Foundation:
+              name: 건물 기초 만들기

@@ -1500,6 +1500,8 @@ si:
               name: අන්තර්ජාලය
             Crowdsourcing:
               name: Crowdsourcing වැඩසටහන
+            Songwriting:
+              name: ගීත ලිවීම
         express-2019:
           stages:
             Relay Programming:
@@ -1589,3 +1591,11 @@ si:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing වැඩසටහන
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+            Building a Foundation:
+              name: පදනමක් තැනීම

@@ -706,6 +706,8 @@ sl:
     csp_variables: Spremenljivke
     csp_conditionals: Pogoji
     csp_functions: Funkcije
+    csp_lists: Seznami
+    csp_loops: Zanke
   hoc_download:
     minecraft_name: Minecraft Ura za kodo
     download_in_Albanian: 'Prenesi v albanskem jeziku:'

@@ -1736,3 +1736,23 @@ th:
           stages:
             The Internet:
               name: อินเทอร์เน็ต
+        time4csdemo:
+          stages:
+            Conditionals with Cards:
+              name: เงื่อนไข
+            Sequence in Maze:
+              name: การจัดลำดับก่อนหลังกับเขาวงกต
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+            Programming in Artist:
+              name: การเขียนโปรแกรมในเรื่องศิลปิน
+            Loops in Artist:
+              name: ลูปกับศิลปิน
+            Nested Loops in Bee/Zombie:
+              name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
+            Nested Loops with Frozen:
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร

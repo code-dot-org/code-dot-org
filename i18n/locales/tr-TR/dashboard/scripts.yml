@@ -7330,6 +7330,8 @@ tr:
               name: Minecraft' da Koşullar
             Digital Sharing:
               name: Dijital Paylaşım
+            Songwriting:
+              name: Şarkı yazma
         express-2019:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
           description_short: 'Bilgisayar bilimlerine giriş: ilköğretim müfredatımızın en iyilerini daha eski öğrenciler için birleştirir.'
@@ -8119,6 +8121,40 @@ tr:
             new stage:
               name: yeni kademe
         csd-videos:
+          stages:
+            new stage:
+              name: yeni kademe
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Conditionals with Cards:
+              name: Kartlarla Koşullu Önermeler
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Sequence in Maze:
+              name: Labirentte dizi
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            Build a Star Wars Game:
+              name: Star Wars oyunu oluştur
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+            Determine the Concept:
+              name: Kavramı Belirme
+        csp7-pilot-staging:
           stages:
             new stage:
               name: yeni kademe

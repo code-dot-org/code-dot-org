@@ -1,6 +1,6 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_match.js')}
 
-= render partial: 'levels/single_match', locals: {standalone: true, level: @level}
+= render partial: 'levels/single_match', locals: {standalone: true, level: @level, last_attempt: @last_attempt}
 
 = render partial: 'levels/common_audio'

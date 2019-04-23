@@ -891,6 +891,8 @@ ja:
     csp_variables: '変数'
     csp_conditionals: '条件'
     csp_functions: '関数(かんすう) '
+    csp_lists: 'リスト'
+    csp_loops: 'くりかえし'
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。

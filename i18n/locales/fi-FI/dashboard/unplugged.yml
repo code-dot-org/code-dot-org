@@ -291,3 +291,8 @@ fi:
       DigitalFootprint_2019:
         title: Digitaalinen jalanjälkesi
         desc: Opettajat kertovat oppilailleen, että omien tietojensa lisääminen verkkoon luo digitaalisen jalanjäljen tai "polun" jolla on seurauksensa.
+      timeforcs_demo_crowdsourcing:
+        title: Joukkoistaminen
+      timeforcs_demo_conditionals:
+        title: Ehtolausekkeet
+        desc: Ehtolausekkeiden oppimiseksi opiskeliat pelaavat korttipeliä ja luovat sääntöjä kuten "Jos saan punaisen kortin, saan pisteen" ja "Jos saan mustan kortin, sinä saat pisteen."

@@ -4597,22 +4597,25 @@ en:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: There should be 3 blocks inside of your loop to solve this puzzle.
       artistLoopsKFP_authored_hint: {}
-      behaviors 1_authored_hint:
-        behavior hint: "Try editing the behaviors! \n\n* Which direction does the bird need to move?"
+      behaviors 1_authored_hint: {}
       behaviors 2_authored_hint:
-        behavior hint: "Try editing the behaviors! \n\n* Which direction does the bird need to move?"
+        behavior hint: "Try editing the behaviors! \n\n* Which direction does the rocket need to move?"
       behaviors 3_authored_hint:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
-      behaviors 4_authored_hint:
-        behavior hint: "Try editing the behaviors! \n\n* Which direction does the bird need to move?"
+      behaviors 3a_authored_hint:
+        behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors 4_authored_hint: {}
       behaviors 4a_authored_hint: {}
       behaviors 5_authored_hint:
-        target hint: You can pick any of the four toys. Which one does the pet want?
-        behavior hint: Edit the behavior to solve this puzzle. The pet sprite needs to move in two different directions to end up going diagonally.
+        target hint: You can pick any of the four ships. Which one does the astronaut want?
+        behavior hint: Edit the behavior to solve this puzzle. The astronaut sprite needs to move in two different directions to end up going diagonally.
       behaviors 5a_authored_hint:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
       behaviors 6_authored_hint:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors 7_authored_hint:
+        behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors free play_authored_hint: {}
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Comments are also helpful when other people try to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what would have happened if you turned the other way?

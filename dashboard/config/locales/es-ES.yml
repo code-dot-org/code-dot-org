@@ -1273,7 +1273,16 @@ es:
     csp_conditionals: Condicionales
     csp_functions: funciones
     csp_project: Proyecto
+    csp_lists: Listas
+    csp_loops: vuelta
+    csp_traversals: Recorridos
+    csp_libraries: Librerías
     dlp: Preguntas para Reflexionar
+    time4cs_c1: Everglades y sus Ecosistemas
+    time4cs_c2: Cadenas de comida en Everglades
+    time4cs_c3: Vivir en Everglades
+    time4cs_c4: Impactos Invasivos en Everglades
+    time4cs_c5: Los ciudadanos afectan el cambio en Everglades
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia un sitio que no es operado

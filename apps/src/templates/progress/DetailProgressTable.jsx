@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ProgressLesson from './ProgressLesson';
 import {levelType, lessonType} from './progressTypes';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * A component that shows progress in a course with more detail than the summary
@@ -14,6 +15,9 @@ export default class DetailProgressTable extends React.Component {
   };
 
   render() {
+    const inMiniRubricExperiment = experiments.isEnabled(
+      experiments.MINI_RUBRIC_2019
+    );
     const {lessons, levelsByLesson} = this.props;
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
@@ -26,6 +30,7 @@ export default class DetailProgressTable extends React.Component {
             key={index}
             lesson={lesson}
             levels={levelsByLesson[index]}
+            inMiniRubricExperiment={inMiniRubricExperiment}
           />
         ))}
       </div>

@@ -1,3 +1,4 @@
+---
 bs:
   data:
     long_instructions:
@@ -5,167 +6,152 @@ bs:
       2-3 Artist 4: Pomozi mi da završim kuću za ovu mačku.
       2-3 Artist 9 NEW: Završi ovog zmaja
       2-3 Artist 9: Završi ovog zmaja
-      2-3 Artist Debugging 10: "Platforma za smjer na mom joystick-u je preuska. Savjet: Neka bude šira za 10 piksela"
-      2-3 Artist Debugging 11: |-
-        Pomozi mi da dovršim moju prelijepu pahuljicu snijega. Koliko puta trebam ponavljati da bi pahuljica bila završena?
-      2-3 Artist Debugging 2: "Kod za tri brka koji vidiš je pogrešan. Savjet: svaki brk je dug 70 piksela. Popravi ovaj kod da bi se nacrtali brkovi."
-      2-3 Artist Debugging 3: "Moj čamac ima rupu na dnu! Možeš li to popraviti tako što ćeš promijeniti ugao linije? Savjet: zadnji ugao je pomaknut za 15 stepeni."
-      2-3 Artist Debugging 5: "Kod za nogu i stopalo koji vidiš ovdje je pogrešan. Savjet: Stopalo je predugo, i trebali bismo možda izbrisati jedan korak (\"korak\", smiješno zar ne? :))"
-      2-3 Artist Debugging 6: |-
-        Izgleda da sjedim na stolici kojoj fali noga. Uredi blokove da bi se nacrtala noga.
-      2-3 Artist Debugging 7: |-
-        Izgleda da je C u kodu nacrtano naopačke. Možeš li to popraviti da izgleda kao C?
-      2-3 Artist Debugging 8: |-
-        Moja vjetrenjača od papira nije završena. Koliko puta trebam ponoviti da bi bila završena?
-      2-3 Artist Debugging 9: |-
-        Kod za ovu stabljiku je pogrešan. Savjet: Ugao je pomjeren za 60 stepeni
+      2-3 Artist Debugging 10: 'Platforma za smjer na mom joystick-u je preuska. Savjet: Neka bude šira za 10 piksela'
+      2-3 Artist Debugging 11: Pomozi mi da dovršim moju prelijepu pahuljicu snijega. Koliko puta trebam ponavljati da bi pahuljica bila završena?
+      2-3 Artist Debugging 2: 'Kod za tri brka koji vidiš je pogrešan. Savjet: svaki brk je dug 70 piksela. Popravi ovaj kod da bi se nacrtali brkovi.'
+      2-3 Artist Debugging 3: 'Moj čamac ima rupu na dnu! Možeš li to popraviti tako što ćeš promijeniti ugao linije? Savjet: zadnji ugao je pomaknut za 15 stepeni.'
+      2-3 Artist Debugging 5: 'Kod za nogu i stopalo koji vidiš ovdje je pogrešan. Savjet: Stopalo je predugo, i trebali bismo možda izbrisati jedan korak ("korak", smiješno zar ne? :))'
+      2-3 Artist Debugging 6: Izgleda da sjedim na stolici kojoj fali noga. Uredi blokove da bi se nacrtala noga.
+      2-3 Artist Debugging 7: Izgleda da je C u kodu nacrtano naopačke. Možeš li to popraviti da izgleda kao C?
+      2-3 Artist Debugging 8: Moja vjetrenjača od papira nije završena. Koliko puta trebam ponoviti da bi bila završena?
+      2-3 Artist Debugging 9: 'Kod za ovu stabljiku je pogrešan. Savjet: Ugao je pomjeren za 60 stepeni'
       2-3 Artist Free Play: Vrijeme za slobodno igranje! Nacrtaj šta god želiš.
-      2-3 Artist Functions 11.5: "Pogledaj ovu istu \"Nacrtaj šestouagonik\" funkciju. Šta će se dogoditi ako izvršiš okretaj za samo 60 stepeni pri svakom prolazu kroz petlju?"
-      2-3 Artist Functions 12 Mike: "Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi \"nacrtaj cvijet\" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  "
-      2-3 Artist Functions 12 a: "Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi \"nacrtaj cvijet\" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  "
-      2-3 Artist Functions 12: "Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi \"nacrtaj cvijet\" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  "
-      2-3 Artist Functions 2: "Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom \"nacrtaj kvadrat\". Možeš li iskoristiti funkciju \"nacrtaj kvadrat\" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela."
-      2-3 Artist Functions 3: "Promijeni funkciju da bi se nacrtao kvadrat sa stranicama od 115 i onda nacrtaj veće naočale. Kvadrati su sada odmaknuti za 45 piksela."
+      2-3 Artist Functions 11.5: Pogledaj ovu istu "Nacrtaj šestouagonik" funkciju. Šta će se dogoditi ako izvršiš okretaj za samo 60 stepeni pri svakom prolazu kroz petlju?
+      2-3 Artist Functions 12 Mike: 'Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  '
+      2-3 Artist Functions 12 a: 'Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  '
+      2-3 Artist Functions 12: 'Funkcije su stvarno super ako želiš nacrtati komplikovane stvari više puta. Možeš li iskorisititi "nacrtaj cvijet" funkciju da bi napunio ostatak kutije plantažera?(Savjet: Sve su biljke odvojene za 100 piksela dužine)  '
+      2-3 Artist Functions 2: Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom "nacrtaj kvadrat". Možeš li iskoristiti funkciju "nacrtaj kvadrat" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela.
+      2-3 Artist Functions 3: Promijeni funkciju da bi se nacrtao kvadrat sa stranicama od 115 i onda nacrtaj veće naočale. Kvadrati su sada odmaknuti za 45 piksela.
       2-3 Artist Functions 4: Iskoristi blok "ponavljaj" da bi se dobila ova 3 kvadrata.
       2-3 Artist Loops 1: Da bi se dovršila ćelija, možeš li napraviti šestougaonik sa stranicama dugim 100 piksela? Zapamti da ovo znači da trebaš okrenuti za 60 stepeni!
       2-3 Artist Loops 2: Sada iskoristi blok za ponavljanje da bi napravio oklop za ćeliju.
       2-3 Artist Loops New 10: Hajde da spojimo nekoliko V-ova zajedno tako što ćemo ih crtati koristeći petlju.
-      2-3 Artist Loops New 12: "Nacrtaj dijamant sa stranicama od 100 piksela.\n"
-      2-3 Artist Loops New 13: "Sada nacrtaj dijamant 3 puta koristeći petlju."
-      2-3 Artist Loops New 2: |-
-        Evo dio koda koji si koristio/la za crtanje kvadrata. Šta se desi ako pokreneš ovaj kod 4 puta koristeći blok ponavljanja?
+      2-3 Artist Loops New 12: Nacrtaj dijamant sa stranicama od 100 piksela.
+      2-3 Artist Loops New 13: Sada nacrtaj dijamant 3 puta koristeći petlju.
+      2-3 Artist Loops New 2: Evo dio koda koji si koristio/la za crtanje kvadrata. Šta se desi ako pokreneš ovaj kod 4 puta koristeći blok ponavljanja?
       2-3 Artist Loops New 9: Nacrtaj jednostavno slovo V koje ima obje strane od 50 piksela.
       2-3 Artist Nested Loops 10: Ponavljaj ovaj kod 12 puta da bi se uzorak dovršio.
       2-3 Artist Nested Loops 11: Ponavljaj ovaj kod 4 puta da bi se uzorak dovršio. Okreni za 90 stepeni nakon svakog kruga.
       2-3 Artist Nested Loops 12: Ponavljaj ovaj kod 12 puta da vi se kovrdže dovršile.
-      2-3 Artist Nested Loops 2: "Sada ponovi trokut 6 puta. Nakon svakog trokuta, morati ćeš okrenuti za 60 stepeni prije nego nacrtaš slijedeći trokut."
-      2-3 Artist Nested Loops 4: "Ponovi ovaj dijamant 12 puta da bi se nacrtao cvijet. Savjet: 12 dijamanata je identično sa crtanjem 12 trokuta koje smo već izvršili - za koliko trebaš rotirati nakon svakog oblika?"
-      2-3 Artist Nested Loops 5: "Nacrtaj prozore za ovu zgradu koristeći ugniježdenu petlju. Prozori su dugi 20 piksela i razmaknuti za 20 piksela."
-      2-3 Artist Nested Loops 7: "Ponovi ovaj trokut 10 puta da bi nacrtao sunce. Morati ćeš se pomaknuti i rotirati nakon svakog trokuta. Možeš skužiti za koliko stepeni trebaš rotirati tako što ćeš podijeliti broj stepeni kruga sa brojem oblika koje crtaš."
-      2-3 Artist Nested Loops 8: "Hajmo dodati malo trave u našu sliku. Buseni trave su razmaknuti za 50 piksela."
-      2-3 Artist Nested Loops 9: "Završiti ćemo ovu sliku tako što ćemo dodati svijet. Ponovi dijamant 12 puta da bi se nacrtao tvoj cvijet."
+      2-3 Artist Nested Loops 2: Sada ponovi trokut 6 puta. Nakon svakog trokuta, morati ćeš okrenuti za 60 stepeni prije nego nacrtaš slijedeći trokut.
+      2-3 Artist Nested Loops 4: 'Ponovi ovaj dijamant 12 puta da bi se nacrtao cvijet. Savjet: 12 dijamanata je identično sa crtanjem 12 trokuta koje smo već izvršili - za koliko trebaš rotirati nakon svakog oblika?'
+      2-3 Artist Nested Loops 5: Nacrtaj prozore za ovu zgradu koristeći ugniježdenu petlju. Prozori su dugi 20 piksela i razmaknuti za 20 piksela.
+      2-3 Artist Nested Loops 7: Ponovi ovaj trokut 10 puta da bi nacrtao sunce. Morati ćeš se pomaknuti i rotirati nakon svakog trokuta. Možeš skužiti za koliko stepeni trebaš rotirati tako što ćeš podijeliti broj stepeni kruga sa brojem oblika koje crtaš.
+      2-3 Artist Nested Loops 8: Hajmo dodati malo trave u našu sliku. Buseni trave su razmaknuti za 50 piksela.
+      2-3 Artist Nested Loops 9: Završiti ćemo ovu sliku tako što ćemo dodati svijet. Ponovi dijamant 12 puta da bi se nacrtao tvoj cvijet.
       2-3 Artist Nested Loops Free Play: A sada slobodno igranje. Nacrtaj nešto zabavno koristeći ugniježdene petlje.
-      2-3 Bee Conditionals 11: "Pokupi nektar iz cvjetova koji ga imaju."
-      2-3 Bee Conditionals 13: |-
-        Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?
-
-      2-3 Bee Conditionals 15: "Pokupi nektar iz svih naših cvjetova."
-      2-3 Bee Conditionals 3: "Pomozi mi da pokupim sav nektar iz cvjetova i napravim med. Koristi petlju."
-      2-3 Bee Debugging 3: |-
-        Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
-      2-3 Bee Debugging 6: |-
-        Ovi blokovi me stvarno muče. Popravi grešku(e) da bi se pokupio sav nektar i napravio sav med. 
-      2-3 Bee Debugging 9: |-
-        Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
-      2-3 Bee Functions 10: "Ljubičasti cvjetovi mogu imati 1 ili 0 za nektar. Kreiraj funkciju kojom će se pokupiti nektar iz ljubičastog cvijeta samo onda kada ga on ima."
-      2-3 Bee Functions 2: "Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi \"pokupi 5\" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja."
-      2-3 Bee Functions 4: "Funkcije \"pokreni se i pokupi nektar\" funkcije čine da se pčela okrene, pokupi nektar i onda vrati odakle je krenula. Upotrijebi ovu funkciju da bi se pokupio sav nektar."
-      2-3 Bee Loops 1: |-
-        Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. 
+      2-3 Bee Conditionals 11: Pokupi nektar iz cvjetova koji ga imaju.
+      2-3 Bee Conditionals 13: 'Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?'
+      2-3 Bee Conditionals 15: Pokupi nektar iz svih naših cvjetova.
+      2-3 Bee Conditionals 3: Pomozi mi da pokupim sav nektar iz cvjetova i napravim med. Koristi petlju.
+      2-3 Bee Debugging 3: Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
+      2-3 Bee Debugging 6: 'Ovi blokovi me stvarno muče. Popravi grešku(e) da bi se pokupio sav nektar i napravio sav med. '
+      2-3 Bee Debugging 9: Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
+      2-3 Bee Functions 10: Ljubičasti cvjetovi mogu imati 1 ili 0 za nektar. Kreiraj funkciju kojom će se pokupiti nektar iz ljubičastog cvijeta samo onda kada ga on ima.
+      2-3 Bee Functions 2: Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja.
+      2-3 Bee Functions 4: Funkcije "pokreni se i pokupi nektar" funkcije čine da se pčela okrene, pokupi nektar i onda vrati odakle je krenula. Upotrijebi ovu funkciju da bi se pokupio sav nektar.
+      2-3 Bee Loops 1: 'Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. '
       2-3 Bee Loops 3A: Možeš li upotrijebiti petlju da sakupiš sav taj nektar?
       2-3 Bee Loops 3B: Sada upotrijevi novi blok za ponavljanje da bi sakupio/la sav nektar i napravio/la sav med.
-      2-3 Bee Loops 4A: "Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!"
-      2-3 Bee Loops 8: "Ovi ljubičasti cvjetovi imaju nepoznatu količinu nektra. Upotrijebi \"dok nektar\" petlju za sakupljanje svog nektra. Ova petlja će se izvršavati sve dok je uslov istinit. U ovom slučaju uslov je Nektar > 0."
+      2-3 Bee Loops 4A: Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!
+      2-3 Bee Loops 8: Ovi ljubičasti cvjetovi imaju nepoznatu količinu nektra. Upotrijebi "dok nektar" petlju za sakupljanje svog nektra. Ova petlja će se izvršavati sve dok je uslov istinit. U ovom slučaju uslov je Nektar > 0.
       2-3 Maze 15: Upotrijebi dvije petlje za dolaženje do svinje koristeći manji broj blokova.
-      2-3 Maze Loops 18: "Dovedi me do suncokreta!"
+      2-3 Maze Loops 18: Dovedi me do suncokreta!
       4-5 Artist 10: Pritisni "Pokreni" da bi provjerio/la svoj kod. Onda ga ponovi dovoljno puta da bi se crtanje dovršilo. Boje će biti različite pri svakom pokretanju.
       4-5 Artist 2: Možeš li ponoviti ovaj kod da bi dovršio/la kvadrat?
       4-5 Artist 5: Koji ugao koristiš?
       4-5 Artist 6: Ovaj jednakostranični trougao ima sva tri ugla od 60 stepeni. Svaka strana ima 200 piksela. Dovrši crtanje.
       4-5 Artist Free Draw 1: Vrijeme za slobodno crtanje! Nacrtaj bilo šta što ti padne na pamet.
-      4-5 Artist Patterns 1: |-
-        Možeš li nacrtati ovaj kvadrat korištenjem petlje? Svaka stranica je 20 piksela duga.
-      4-5 Artist Patterns 12: "Ako kopiraš tu petlju i okreneš lijevo umjesto desno, šta će se desiti? Možeš li to ponoviti da bi nacrtao/la ovaj talas?"
-      4-5 Artist Patterns 13: "Hajde sada da ponovimo u petlji ovo sve 4 puta da bismo napravili okvir za ovu sliku. Pazi na čoškove - ne možeš samo jednostavno okrenuti za 90 stepeni! Ako u petlji vršimo pomak za 3 stepena i okretanje 60 puta čini pola kruga, koji od ovih blokova koda će napraviti četvrtinu kruga kojeg trebamo za uglove?"
+      4-5 Artist Patterns 1: Možeš li nacrtati ovaj kvadrat korištenjem petlje? Svaka stranica je 20 piksela duga.
+      4-5 Artist Patterns 12: Ako kopiraš tu petlju i okreneš lijevo umjesto desno, šta će se desiti? Možeš li to ponoviti da bi nacrtao/la ovaj talas?
+      4-5 Artist Patterns 13: Hajde sada da ponovimo u petlji ovo sve 4 puta da bismo napravili okvir za ovu sliku. Pazi na čoškove - ne možeš samo jednostavno okrenuti za 90 stepeni! Ako u petlji vršimo pomak za 3 stepena i okretanje 60 puta čini pola kruga, koji od ovih blokova koda će napraviti četvrtinu kruga kojeg trebamo za uglove?
       4-5 Artist Patterns 3: Hajde sada da idemo za jedan nivo dublje! Ugnijezdili smo čitav blok koda unutar druge petlje, ali moraš vratiti umjetnika na mjesto da bi nacrtao/la slijedeću liniju. Koji od ovih blokova koda možeš postaviti na kraj vanjske petlje da bi nacrtao/la čitavu mrežu?
       4-5 Artist Patterns 8: Upotrijebi petlju za crtanje ovog šestougaonika sa dužinom stranice od 40 piksela i uglovima od 60 stepeni.
-      4-5 Artist Patterns 9: "Sada ponovi ovaj kod 3 puta da bi nacrtao/la čitav red. Savjet: svaki šestougaonike je 80 piksela širok od najdalje tačke idući s lijeva na desno."
+      4-5 Artist Patterns 9: 'Sada ponovi ovaj kod 3 puta da bi nacrtao/la čitav red. Savjet: svaki šestougaonike je 80 piksela širok od najdalje tačke idući s lijeva na desno.'
       4-5 Artist Patterns Free Play: Vrijeme za slobodno igranje - iskušaj svoju vještinu u kreiranju uzoraka po tvom izboru!
-      4-5 Bee Conditionals 2: "Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet."
-      4-5 Bee Conditionals 5: |-
-        Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
-      4-5 Bee Conditionals 6: "Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za količinu nektra. Ovdje kombinujemo ako-inače blok sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra."
-      4-5 Bee Conditionals 7: "Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra. Dovrši \"provjeri ljubičasti cvijet\" funkciju i upotrijebi je za sakupljanje svog nektra iz cvjetova."
-      4-5 Bee Conditionals 8: "Napiši funkciju unutar bloka pod nazivom \"provjeri cvijet napravi med\". Tvoja funkcija bi trebala provjeriti koliko nektra ljubičasti cvijet ima, a zatim ga sakupiti, pomjeriti se naprijed, i onda napraviti med."
-      4-5 Bee Conditionals Assessment 1: "Procjena: Ovaj kod je pogrešan. Dovrši \"sakupi nektar ili napravi med\" funkciju, i onda je pozovi da bi sakupio/la sav nektar i med. Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra."
-      4-5 Bee Debugging 1: "Ovi blokovi me stvarno muče. Možeš li ih popraviti?"
-      4-5 Bee Debugging 6: "Ljubičasti cvjetovi imaju neposnatu količinu nektra. Popravi ove blokove da bi se sakupio sav nektar iz cvijeta."
-      4-5 Bee Nested Loops 4: "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. "
-      4-5 Bee Nested Loops Assessment 1: "Procjena: Sakupi sav nektar i napravi sav med koristeći petlje."
-      4-5 Maze 9: "Napravi petlju sa \"ponavljaj dok\" blokom."
+      4-5 Bee Conditionals 2: Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet.
+      4-5 Bee Conditionals 5: Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
+      4-5 Bee Conditionals 6: Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za količinu nektra. Ovdje kombinujemo ako-inače blok sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra.
+      4-5 Bee Conditionals 7: Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra. Dovrši "provjeri ljubičasti cvijet" funkciju i upotrijebi je za sakupljanje svog nektra iz cvjetova.
+      4-5 Bee Conditionals 8: Napiši funkciju unutar bloka pod nazivom "provjeri cvijet napravi med". Tvoja funkcija bi trebala provjeriti koliko nektra ljubičasti cvijet ima, a zatim ga sakupiti, pomjeriti se naprijed, i onda napraviti med.
+      4-5 Bee Conditionals Assessment 1: 'Procjena: Ovaj kod je pogrešan. Dovrši "sakupi nektar ili napravi med" funkciju, i onda je pozovi da bi sakupio/la sav nektar i med. Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra.'
+      4-5 Bee Debugging 1: Ovi blokovi me stvarno muče. Možeš li ih popraviti?
+      4-5 Bee Debugging 6: Ljubičasti cvjetovi imaju neposnatu količinu nektra. Popravi ove blokove da bi se sakupio sav nektar iz cvijeta.
+      4-5 Bee Nested Loops 4: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
+      4-5 Bee Nested Loops Assessment 1: 'Procjena: Sakupi sav nektar i napravi sav med koristeći petlje.'
+      4-5 Maze 9: Napravi petlju sa "ponavljaj dok" blokom.
       4-5 Maze Conditionals 1: Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.
       4-5 Maze Conditionals 2: Upotrijebi "ponavljaj dok" blok da bi doveo/la zombija do suncokreta.
-      4-5 Maze Conditionals 3: "Upotrijebi \"ako\" blok da bi odredio kada trebam skrenuti. Savjet: trebaš samo još jedan blok, ali nauči kako da ga postaviš tako da to možeš odraditi samostalno slijedeći put."
+      4-5 Maze Conditionals 3: 'Upotrijebi "ako" blok da bi odredio kada trebam skrenuti. Savjet: trebaš samo još jedan blok, ali nauči kako da ga postaviš tako da to možeš odraditi samostalno slijedeći put.'
       4-5 Maze Conditionals 4: Ok, ovo je isto kao i posljednji zadatak, ali se moraš sjetiti kako si koristio/la "ako" i "ponavljaj" blokove zajedno.
-      4-5 Maze Conditionals 5: "Ja željeti suncokret! Upotrijebi \"ako\" blok da me dovedeš do tamo u najmanjem mogućem broju blokova."
-      4-5 Maze Conditionals 6: |-
-        Ja željeti suncokret! Upotrijebi "ako" blok da me dovedeš do tamo u najmanjem mogućem broju blokova.
+      4-5 Maze Conditionals 5: Ja željeti suncokret! Upotrijebi "ako" blok da me dovedeš do tamo u najmanjem mogućem broju blokova.
+      4-5 Maze Conditionals 6: Ja željeti suncokret! Upotrijebi "ako" blok da me dovedeš do tamo u najmanjem mogućem broju blokova.
       4-5 Maze Conditionals 7: Ok, hajde da to ponovimo za vježbu - ovo nije puno drugačije, ali pazi na mljackala!
-      4-5 Maze Conditionals 8: "\"Ako-inače\" blokovi provjeravaju uslov, i onda izvršavaju jednu naredbu ili drugu. Da bi me doveo/la do suncokreta, pokušaj koristiti ovaj novi blok."
-      4-5 Maze Conditionals 9: |-
-        Još jedna vježba za "ako-inače" blok. Možeš li to dobro odraditi pri prvom pokušaju?
-      4-5 Maze Conditionals Assessment 1: "Upotrijebi \"ponavljaj dok\" i \"ako-inače\" blok da bi me doveo/la do suncokreta koristeći što manje blokova."
+      4-5 Maze Conditionals 8: '"Ako-inače" blokovi provjeravaju uslov, i onda izvršavaju jednu naredbu ili drugu. Da bi me doveo/la do suncokreta, pokušaj koristiti ovaj novi blok.'
+      4-5 Maze Conditionals 9: Još jedna vježba za "ako-inače" blok. Možeš li to dobro odraditi pri prvom pokušaju?
+      4-5 Maze Conditionals Assessment 1: Upotrijebi "ponavljaj dok" i "ako-inače" blok da bi me doveo/la do suncokreta koristeći što manje blokova.
       4-5 Nested Loops 12: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu petlju?
-      4-5 Nested Loops 3: |-
-        Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-
+      4-5 Nested Loops 3: Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\r
       4-5 Nested Loops 5: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
       4-5 Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod za trokut u petlji?
-      4-5 Nested Loops 7: "Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)"
-      4-5 Nested Loops 8: "Ponavljaj ovaj dizajn 6 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)"
+      4-5 Nested Loops 7: 'Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
+      4-5 Nested Loops 8: 'Ponavljaj ovaj dizajn 6 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)'
       4-5 Nested Loops 9: Nacrtaj zube u ustima aligatora!
       4-5 While Loops 1: Pomjeri me do rupe i napuni je sa dvije lopate zemlje koristeći "napuni" blok.
       4-5 While Loops 2: Pomjeri me do hrpe zemlje i ukloni je sa 5 zahvata lopate koristeći "ukloni" blok.
-      4-5 While Loops 3: "Pokreni me do hrpe i ukloni je do kraja, a onda se pomjeri do rupe i popuni je do kraja. Savjet: Koristi što manje blokova."
-      4-5 While Loops 4: "Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti \"dok\" petlju ovaj put."
+      4-5 While Loops 3: 'Pokreni me do hrpe i ukloni je do kraja, a onda se pomjeri do rupe i popuni je do kraja. Savjet: Koristi što manje blokova.'
+      4-5 While Loops 4: 'Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti "dok" petlju ovaj put.'
       Artist Autorun Test: Iskoristi blok "ponavljaj" da bi se dobila ova 3 kvadrata.
       Big Game Booleans 1: Kada si zadnji put radio/la na tvojoj igrici imali smo da naša meta i opasnost lete preko ekrana, ali se nikada ne vrate. Klikni na "Pokreni" da vidiš kako tvoja igra radi u ovom trenutku, i onda klikni na završi. Kasnije ćemo raditi na tome da se tvoji likovi pojave opet na ekranu nakon što su otišli.
       Big Game Vars 1: Hajde da počnemo sa svojom Velikom Igrom! Ovdje ćeš naći puno baznog koda kojeg češ eventualno zamijeniti svojim kodom, ali za sada ćemo samo brinuti oko toga kako definirati varijable. Klikni na "Pokreni" da vidiš kako igra izgleda sa podrazumijevanim vrijednostima.
-      Calc Circles of Eval .2: Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 * 5
+      Calc Circles of Eval .2: Ovaj Blok Izvršenja je funkcija za množenje koja uzima dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži 2 \* 5
       Calc Circles of Eval .4: Ovdje smo ugnijezdili Blok Sabiranja unutar Bloka Množenja. Dovrši ovaj kod da bi pomnožio/la 3 sa (4 + 1)
       Calc Circles of Eval 3: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 4: Ovom kodu nedostaje nekoliko Blokova Izvršenja - pobrini se da staviš sve u pravilnom redu.
       Calc Circles of Eval 7: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 8: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 9: Dovrši Blok Izvršenja da ogovara ovom izrazu.
-      Calc Circles of Eval Free Play: 'Vrijeme za slobodno igranje! Pokušaj upotrijebiti Blokove Izvršenja da bi napisao nekoliko svojih jednačina. Kako ugniježdavanje blokova na različite načine utiče na njihovo izvršenje?'
+      Calc Circles of Eval Free Play: Vrijeme za slobodno igranje! Pokušaj upotrijebiti Blokove Izvršenja da bi napisao nekoliko svojih jednačina. Kako ugniježdavanje blokova na različite načine utiče na njihovo izvršenje?
       Calc Rocket 2: Odlično! Hadje da uradimo još jedan primjer prije nego napišemo funkciju. Koju visinu bi raketa trebala imati nakon 30 sekundi?
       Course 4 Artist 6: 'Dovrši kod za crtanje ovih trokutova. Savjet: 3 trokuta koji zatvaraju ugao od 360 stepeni.'
       Course 4 Artist 8: Nacrtaj ovo sunce tako što ćeš ponoviti ovaj čitav blok u petlji 12 puta.
-      Course 4 Artist Binary 1a: "Evo funkcija koja uzima binarni niz jedinica i nula i upućuje umjetnika da se okrene kada ide s lijeva na desno, sa vrha na dno, i da se popunjava kvadrate kada vidi 1, a ignoriše kvadrate koji sadrže 0. Pokreni ovaj kod da vidiš kako umjetnik koristi binarni sistem da nacrta ovaj uzorak."
+      Course 4 Artist Binary 1a: Evo funkcija koja uzima binarni niz jedinica i nula i upućuje umjetnika da se okrene kada ide s lijeva na desno, sa vrha na dno, i da se popunjava kvadrate kada vidi 1, a ignoriše kvadrate koji sadrže 0. Pokreni ovaj kod da vidiš kako umjetnik koristi binarni sistem da nacrta ovaj uzorak.
       Course 4 Artist For Loops 13: Hmmm, ovi oblici postaju sve veći i veći! Zar već nismo prethodno riješili ovaj problem koristeći varijable? Kako možemo upotrijebiti brojač varijablu za smanjivanje dužine stranica pri rastu njihovog broja? Umjesto kretanja naprijed za određenu vrijednost, pokušaj se kretati za (100 / brojač) piksela.
-      Course 4 Artist For Loops 4: 'Upotrijebi "od-do" petlju za crtanje ovih kvadrata. Trokutovi su u početku 50 piksela dugi. Najveći je dug 300 piksela. Svaki kvadrat je za 25 piksela veći od prethodnog. Dao sam ti skoro sav kod koji trebaš. Međutim, nedostaje jedan blok. Koji blok nedostaje?'
+      Course 4 Artist For Loops 4: Upotrijebi "od-do" petlju za crtanje ovih kvadrata. Trokutovi su u početku 50 piksela dugi. Najveći je dug 300 piksela. Svaki kvadrat je za 25 piksela veći od prethodnog. Dao sam ti skoro sav kod koji trebaš. Međutim, nedostaje jedan blok. Koji blok nedostaje?
       Course 4 Artist For Loops 6: Vrijeme slobodnog igranja! Pokušaj upotrijebiti "od-do" petlju za crtanje rastućeg oblika po tvom izboru.
       Course 4 Artist For Loops 8a: Najmanja linija ovog kvadrata je 10, najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
       Course 4 Artist Vars 3: 'Evo petlja za crtanje kvadrata, ali nešto nedostaje. Možeš li je popraviti tako da koristi varijablu "dužina" za računanje koliko svaka od stranica mora biti duga? '
       Course 4 Bee Params 1: Upotrijebi funkciju "sakupi 3 nektra" koja okreće, kontroliše pokret za sakupljanje nektra, i onda vraća pčelu na početno mjesto. Napiši niz radnji pomoću kojih će se sakupiti sav nektar korištenjem "sakupi 2 nektra"
-      Course 4 Play Lab Params 4: "Evo funkcija pod nazivom \"izvidnica\". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela."
+      Course 4 Play Lab Params 4: Evo funkcija pod nazivom "izvidnica". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
       Course 4 Play Lab Params 8: Upotrijebi "pri dodiru" blok da bi poslao/la Psa nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
-      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
+      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
       Course 4 Play Labs For Loops 1: Hajde da učinimo da ovaj pas izgovori svaki broj od 1 do 100. Upotrijebi petlju i brojač blok za izgovaranje svake brojač varijable pri svakom prolasku kroz petlju.
       CourseD_Dance_Party_01: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       CourseD_Dance_Party_02: |-
         Hajde da pokrenemo ovog losa!
 
         Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
 
         **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
-      CourseD_Dance_Party_03: "*Sada smo napredovali!*\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova."
+      CourseD_Dance_Party_03: |-
+        _Sada smo napredovali!_
+
+        Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       CourseD_Dance_Party_04: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potražite novi blok u vašim blokovima koji dodaje pozadinski efekat vašem plesaču. Posmatrajte kako se efekat mijenja sa muzikom!
       CourseD_Dance_Party_05: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       CourseD_Dance_Party_06: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
       CourseD_Dance_Party_08: |-
@@ -175,18 +161,19 @@ bs:
       CourseD_Dance_Party_09: |-
         Plesači imaju osobine "nijanse" koje dodaju novu boju. Probajte da izmjenite nijansu boje jednog od vaših igrača.
 
-        * Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
+        -   Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
       CourseD_Dance_Party_10: |-
         Sada kada znamo kako da promjenimo osobinu plesača. Možemo napraviti i iste osobine automatski reaguju na muziku korištenjem ovog bloka:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
 
         Ovaj program koristi razinu "basova" (niski tonovi) da bi kontrolisao visinu plesača. Možete li učiniti da i drugi plesač reaguje na muziku takođe?
-      CourseD_Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!"
+      CourseD_Dance_Party_11: Blok <xml><block type="Dancelab_whenKey"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!
       CourseD_Dance_Party_11_5: |-
         Pogledajte ovaj blok:
 
@@ -202,36 +189,39 @@ bs:
         Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
 
         **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
-      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
+      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
       Dance_Party_01: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       Dance_Party_01_low: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       Dance_Party_02: |-
         Hajde da pokrenemo ovog losa!
 
         Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
 
         **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
-      Dance_Party_03: "*Sada smo napredovali!*\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova."
+      Dance_Party_03: |-
+        _Sada smo napredovali!_
+
+        Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       Dance_Party_04: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potražite novi blok u vašim blokovima koji dodaje pozadinski efekat vašem plesaču. Posmatrajte kako se efekat mijenja sa muzikom!
       Dance_Party_05: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       Dance_Party_06: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
       Dance_Party_08: |-
@@ -241,38 +231,65 @@ bs:
       Dance_Party_09: |-
         Plesači imaju osobine "nijanse" koje dodaju novu boju. Probajte da izmjenite nijansu boje jednog od vaših igrača.
 
-        * Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
+        -   Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
       Dance_Party_10: |-
         Sada kada znamo kako da promjenimo osobinu plesača. Možemo napraviti i iste osobine automatski reaguju na muziku korištenjem ovog bloka:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
 
         Ovaj program koristi razinu "basova" (niski tonovi) da bi kontrolisao visinu plesača. Možete li učiniti da i drugi plesač reaguje na muziku takođe?
-      Dance_Party_11.5_test: "Pogledajte ovaj blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"PATKA\"</title>\n<title name=\"LAYOUT\">\"krug\"</title>\n</block></xml>\n\nSada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova \"sve patke\" kako bi napravili da sve patke plešu skupa."
-      Dance_Party_11: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!"
-      Dance_Party_11_5: "Pogledajte ovaj blok:\n\n<xml>\n<block type=\"Dancelab_makeNewDanceSpriteGroup\">\n<title name=\"N\">6</title>\n<title name=\"COSTUME\">\"PATKA\"</title>\n<title name=\"LAYOUT\">\"krug\"</title>\n</block></xml>\n\nSada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova \"sve patke\" kako bi napravili da sve patke plešu skupa."
+      Dance_Party_11.5_test: |-
+        Pogledajte ovaj blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"PATKA"</title>
+        <title name="LAYOUT">"krug"</title>
+        </block></xml>
+
+        Sada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova "sve patke" kako bi napravili da sve patke plešu skupa.
+      Dance_Party_11: Blok <xml><block type="Dancelab_whenKey"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!
+      Dance_Party_11_5: |-
+        Pogledajte ovaj blok:
+
+        <xml>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+        <title name="N">6</title>
+        <title name="COSTUME">"PATKA"</title>
+        <title name="LAYOUT">"krug"</title>
+        </block></xml>
+
+        Sada možete napraviti mnogo plesača odjednom! Pokušajte upotrijebiti neke od blokova "sve patke" kako bi napravili da sve patke plešu skupa.
       Dance_Party_11b: |-
         Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
 
         **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
-      Dance_Party_3: "*Sada smo napredovali!*\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova."
+      Dance_Party_3: |-
+        _Sada smo napredovali!_
+
+        Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       Dance_Party_4: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potraži novi blok u blokovima i upotrijebi ga za dodavanje efekta pozadine iza plesača. Posmatraj kako se efekti mijenjaju vremenom uz muziku!
-      Dance_Party_8: "Svaki plesač ima skup _osobenosti_ koje kontrolišu konačni izgled.\n\nMožete napraviti da izgleda kao da je plesač u pozadini tako što ga _umanjite_. Možete li napraviti da su oba plesača iste veličine?"
+      Dance_Party_8: |-
+        Svaki plesač ima skup _osobenosti_ koje kontrolišu konačni izgled.
+
+        Možete napraviti da izgleda kao da je plesač u pozadini tako što ga _umanjite_. Možete li napraviti da su oba plesača iste veličine?
       Dance_Party_extras_battle: |-
         # Plesne skupine
 
         Ovdje se radi o takmičenju između dvije skupine. Tipke sa strelicama kontrolišu jednog od plesača a tipke "w, a, s, d" kontrolišu drugog. Takmiči se sa prijateljem, i probaj da unaprijediš takmičenje.
 
-        * Dodaj dodatne tipke da bi kontrolisao plesanje
-        * Napravi da i dodatni igrači reaguje na pritiskanje tipki
-        * Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
+        -   Dodaj dodatne tipke da bi kontrolisao plesanje
+        -   Napravi da i dodatni igrači reaguje na pritiskanje tipki
+        -   Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
       Dance_Party_extras_every_beat: |-
         # Četvrtina note
 
@@ -280,17 +297,17 @@ bs:
 
         Ovaj ples isto tako koristi i _uslovni_ blok koji kontroliše `taktove od svako 0,25` kako bi se promjenio ples. Probaj da mijenjaš blok uslova da bi vidio kako se ples mijenja.
 
-        * Ekperimentiši sa dužinama drugih nota (kao 0,5 za pola note, 0,125 za osminu note).
-        * Dodaj i neka `naknadne taktove`
-        * izmjeni "taktove" na "sekunde" i probaj da mjeriš ples na taj način.
+        -   Ekperimentiši sa dužinama drugih nota (kao 0,5 za pola note, 0,125 za osminu note).
+        -   Dodaj i neka `naknadne taktove`
+        -   izmjeni "taktove" na "sekunde" i probaj da mjeriš ples na taj način.
       Dance_Party_extras_layout: |-
         # Uspostavimo formacije
 
         Pogledaj ovaj ples koji koristi blok za `postavke` da bi se promijenila formacija dodatnih plesača. Probaj neku od ovih ideja kako bi proširio:
 
-        * Kreiraj drugu grupu plesača kako u drugoj postavci
-        * Promjeni postavku kada se klikne tipka
-        * Promijeni osobinu kada plesači promjene formaciju
+        -   Kreiraj drugu grupu plesača kako u drugoj postavci
+        -   Promjeni postavku kada se klikne tipka
+        -   Promijeni osobinu kada plesači promjene formaciju
       Dance_Party_extras_on_beat: |-
         # Basovi, Mid i Trebl
 
@@ -304,42 +321,45 @@ bs:
 
         Ovaj ples prikazuje i skriva dvije različite skupine plesača. Testiraj i dodaj nešto po svom ukusu.
 
-        * Dodaj drugu skupinu plesača
-        * Prikaži i sakrij drugu skupinu plesača koristeći strelice
-        * Sakrij sve plesače i promjeni uzbudljive efekte pozadine
-      Eval Design Recipe Free Play: 'Vrijeme za slobodno igranje! Upotrijevi recept za crtež da napraviš vlastitu funkciju po svom izboru'
+        -   Dodaj drugu skupinu plesača
+        -   Prikaži i sakrij drugu skupinu plesača koristeći strelice
+        -   Sakrij sve plesače i promjeni uzbudljive efekte pozadine
+      Eval Design Recipe Free Play: Vrijeme za slobodno igranje! Upotrijevi recept za crtež da napraviš vlastitu funkciju po svom izboru
       Eval Strings Images .1: Do sada smo se samo bavili sa jednom vrstom podataka, Brojevima. Drugi tip podataka je Niz Karaktera, koji je kombinacija slova, brojeva ili ostalih karaktera koji su pod navodnicima. Pokreni Niz Karaktera "Zdravo svijete!" da vidiš šta se dešava.
       Eval Strings Images 6: Upotrijebi funkciju prekrivanja da postaviš žutu zvijezdu od 75 piksela preko plavog pravougaonika dugog 150 piksela.
       HOC Dance 3_draft: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potraži novi blok u blokovima i upotrijebi ga za dodavanje efekta pozadine iza plesača. Posmatraj kako se efekti mijenjaju vremenom uz muziku!
       HOC Dance 4_draft: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       HOC Dance 5_draft: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
-      HOC Dance 6_draft: "Svaki plesač ima skup _osobenosti_ koje kontrolišu konačni izgled.\n\nMožete napraviti da izgleda kao da je plesač u pozadini tako što ga _umanjite_. Možete li napraviti da su oba plesača iste veličine?"
-      HOC Dance 9_draft: "Blok <xml><block type=\"Dancelab_whenKey\"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!"
+      HOC Dance 6_draft: |-
+        Svaki plesač ima skup _osobenosti_ koje kontrolišu konačni izgled.
+
+        Možete napraviti da izgleda kao da je plesač u pozadini tako što ga _umanjite_. Možete li napraviti da su oba plesača iste veličine?
+      HOC Dance 9_draft: Blok <xml><block type="Dancelab_whenKey"></block></xml> omogućava vam da se kod pokrene kada kliknete strelicu gore. Možete mijenjati i pokrete, osobine plesača ili da ubrzate jedan pokret jednom. Budite kreativni i potražite i nove blokove!
       K-1 Bee Loops 2: Upotrijebi petlju za pomjeranje a onda pokupi nektar i napravi med!
       K-1 Bee Loops 3: Upotrijebi petlje za skupljanje nektra i pravljenje meda!
       K-1 Bee Loops 4: Upotrijebi petlje za skupljanje nektra, pravljenje meda i pokretanje!
       K-1 Bee Loops 5: Koristi petlje za skupljanje nektra i meda!
       K-1 Bee Loops 6: Upotrijebi petlje za skupljanje nektra, pravljenja meda i pokretanja!
-      K-1 Maze Loops 11: "Dovedi me do svinje! Upotrijebi petlju ponavljanja."
-      K-1 Maze Loops 12: "Dovedi me do svinje! Upotrijebi petlju ponavljanja."
+      K-1 Maze Loops 11: Dovedi me do svinje! Upotrijebi petlju ponavljanja.
+      K-1 Maze Loops 12: Dovedi me do svinje! Upotrijebi petlju ponavljanja.
       K-1 Maze Loops 2: Upotrijebi blok Ponavljanja da me dovedeš do svinje!
       K-1 Maze Loops 8: Dovedi me do svinje! Upotrijebi petlju ponavljanja.
       NEW Course 4 Artist Functions 12: Upotrijebi "nacrtaj liniju od kvadrata" funkciju iz posljednjeg zadatka da bi nacrtao/la ovaj uzorak.
-      NEW Course 4 Artist Functions 3: "Evo novi tip Bloka pod nazivom \"Funkcijski blok\". Klikni na \"POKRENI\" da vidiš šta može. "
+      NEW Course 4 Artist Functions 3: 'Evo novi tip Bloka pod nazivom "Funkcijski blok". Klikni na "POKRENI" da vidiš šta može. '
       NEW Course 4 Artist Functions 9: Koji blok trebaš dodati da bi dobio/la trokut na vrhu kvadrata?
       NEW Course 4 Artist Params 4: Primjetiš li nešto drugačije u vezi ovih funkcijskih blokova? Klikni na "Pokreni" da vidiš šta će se desiti.
       NEW Course 4 Artist Vars 12: Pogledaj ovaj kod. Možeš li vidjeti kako "postavi dužinu" i "dužina" blok rade zajedno? Klikni na "Pokreni" da ih vidiš u akciji. Zamijeni broj 5 sa "stranice" varijablom, i upotrijebi "postavi stranice na" blok.
-      NEW Course 4 Artist Vars 4: "Hajde da pokušamo ponovo. Hajde sada da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela."
-      NEW Course 4 Artist Vars 6: "Možeš li mi pomoći da nacrtam ovaj cool uzorak tako što ćeš ubaciti \"dužina\" varijablu u ispravno mjesto?"
+      NEW Course 4 Artist Vars 4: Hajde da pokušamo ponovo. Hajde sada da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela.
+      NEW Course 4 Artist Vars 6: Možeš li mi pomoći da nacrtam ovaj cool uzorak tako što ćeš ubaciti "dužina" varijablu u ispravno mjesto?
       Play Lab Rocket 3: Odlično. Možeš li sada ažurirati tu funkciju tako da se naša raketa kreće brzo? Pobrini se da su izjave svrhe, primjeri, i definicija funkcije ažurirani da bi se raketa lansirala pri 40 metara u sekundi.
       Ryan_Demo: |-
         Hajde da pokrenemo ovog losa!
@@ -347,15 +367,15 @@ bs:
         Prevucite blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE"> novog plesača</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> unutar radnog prostora. Spojite ga ispod bloka <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"takta"</title></block></xml>. Vaš plesač bi trebao da započne sa novim pokretom nakon četvrtog takta.
 
         **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
-      Testing Quantum Farmer: "Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti \"dok\" petlju ovaj put."
+      Testing Quantum Farmer: 'Wow, pronašao sam stvarno duboku rupu! Ne znam koliko će mi zahvata lopatom trebati. Možeš li napraviti program koji je popunjava sve dok se zemlja ne izjednači? Savjet: Pokušaj koristiti "dok" petlju ovaj put.'
       course4_artist_fwp_challenge1: Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)
       courseD_bee_nestedLoops5: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bee_nestedLoops8: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bee_nestedLoops8_2018: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       courseD_bee_nestedLoops8_2019: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
-      courseD_maze_nestedLoops4: 'Dovedi me do suncokreta!'
-      courseD_maze_nestedLoops4_2018: 'Dovedi me do suncokreta!'
-      courseD_maze_nestedLoops4_2019: 'Dovedi me do suncokreta!'
+      courseD_maze_nestedLoops4: Dovedi me do suncokreta!
+      courseD_maze_nestedLoops4_2018: Dovedi me do suncokreta!
+      courseD_maze_nestedLoops4_2019: Dovedi me do suncokreta!
       courseE_bee_functions3: Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja.
       courseE_bee_functions3_2018: Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja.
       courseE_farmer_concept4: Hajde sada da idemo za jedan nivo dublje! Ugnijezdili smo čitav blok koda unutar druge petlje, ali moraš vratiti umjetnika na mjesto da bi nacrtao/la slijedeću liniju. Koji od ovih blokova koda možeš postaviti na kraj vanjske petlje da bi nacrtao/la čitavu mrežu?
@@ -376,65 +396,50 @@ bs:
       frozen snowflower: Zamršeni sniježni uzorci mogu biti napravljeni pomoću vrlo jednostavnih oblika. Možeš li napraviti uzorak ponavljajući 5 krugova veličine 5 i 5 krugova veličine 10?
       frozen square iterative: Izgleda da smo na pola puta za pravljenje kvadrata. Hajde da sastavimo 4 linije da bismo dobili kvadrat.
       frozen square loop 3x: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
-      frozen square loop: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? 
+      frozen square loop: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat?
       frozen square snowflake: Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?
       grade2_MakeDogTag_8: Hajde da spojimo nekoliko V-ova zajedno tako što ćemo ih crtati koristeći petlju.
-      grade2_PuppyLoops_10: |-
-        Moja vjetrenjača od papira nije završena. Koliko puta trebam ponoviti da bi bila završena?
+      grade2_PuppyLoops_10: Moja vjetrenjača od papira nije završena. Koliko puta trebam ponoviti da bi bila završena?
       grade2_PuppyLoops_4: Upotrijebi dvije petlje za dolaženje do svinje koristeći manji broj blokova.
-      grade2_PuppyLoops_8: "Kod za tri brka koji vidiš je pogrešan. Savjet: svaki brk je dug 70 piksela. Popravi ovaj kod da bi se nacrtali brkovi."
-      grade2_PuppyLoops_9: |-
-        Izgleda da je C u kodu nacrtano naopačke. Možeš li to popraviti da izgleda kao C?
+      grade2_PuppyLoops_8: 'Kod za tri brka koji vidiš je pogrešan. Savjet: svaki brk je dug 70 piksela. Popravi ovaj kod da bi se nacrtali brkovi.'
+      grade2_PuppyLoops_9: Izgleda da je C u kodu nacrtano naopačke. Možeš li to popraviti da izgleda kao C?
       grade2_puppy_loops4: Upotrijebi dvije petlje za dolaženje do svinje koristeći manji broj blokova.
-      grade3_ConditionalsElse_2: "Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet."
-      grade3_ConditionalsElse_5: |-
-        Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
-      grade3_ConditionalsElse_6: "Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za količinu nektra. Ovdje kombinujemo ako-inače blok sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra."
-      grade3_ConditionalsElse_7: "Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra. Dovrši \"provjeri ljubičasti cvijet\" funkciju i upotrijebi je za sakupljanje svog nektra iz cvjetova."
-      grade3_ConditionalsElse_8: "Napiši funkciju unutar bloka pod nazivom \"provjeri cvijet napravi med\". Tvoja funkcija bi trebala provjeriti koliko nektra ljubičasti cvijet ima, a zatim ga sakupiti, pomjeriti se naprijed, i onda napraviti med."
-      grade3_ConditionalsElse_9: "Procjena: Ovaj kod je pogrešan. Dovrši \"sakupi nektar ili napravi med\" funkciju, i onda je pozovi da bi sakupio/la sav nektar i med. Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra."
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
-      grade3_Conditionals_10: |-
-        Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?
-
-      grade3_Conditionals_12: "Pokupi nektar iz svih naših cvjetova."
-      grade3_Conditionals_2: "Pomozi mi da pokupim sav nektar iz cvjetova i napravim med. Koristi petlju."
-      grade3_Conditionals_8: "Pokupi nektar iz cvjetova koji ga imaju."
-      grade3_Debugging_6: |-
-        Ovi blokovi me stvarno muče. Popravi grešku(e) da bi se pokupio sav nektar i napravio sav med. 
-      grade3_Debugging_9: |-
-        Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
+      grade3_ConditionalsElse_2: Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet.
+      grade3_ConditionalsElse_5: Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
+      grade3_ConditionalsElse_6: Ovaj ljubičasti cvijet može imati 3, 2 ili 1 za količinu nektra. Ovdje kombinujemo ako-inače blok sa drugim ako-inače blokom za kreiranje ako, inače-ako i inače bloka. Dovrši rješenje za sakupljanje nepoznate količine nektra.
+      grade3_ConditionalsElse_7: Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra. Dovrši "provjeri ljubičasti cvijet" funkciju i upotrijebi je za sakupljanje svog nektra iz cvjetova.
+      grade3_ConditionalsElse_8: Napiši funkciju unutar bloka pod nazivom "provjeri cvijet napravi med". Tvoja funkcija bi trebala provjeriti koliko nektra ljubičasti cvijet ima, a zatim ga sakupiti, pomjeriti se naprijed, i onda napraviti med.
+      grade3_ConditionalsElse_9: 'Procjena: Ovaj kod je pogrešan. Dovrši "sakupi nektar ili napravi med" funkciju, i onda je pozovi da bi sakupio/la sav nektar i med. Sjeti se da ljubičasti cvjetovi mogu imati 3, 2 ili 1 za količinu nektra.'
+      grade3_ConditionalsElse_TeacherIDo: Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
+      grade3_Conditionals_10: 'Pokupi nektar i napravi med. Savjet: šta se desi ako upotrijebiš "ako nektar" uvjet na crvenom cvijetu? Možeš li ovo izvršiti sa petljom?'
+      grade3_Conditionals_12: Pokupi nektar iz svih naših cvjetova.
+      grade3_Conditionals_2: Pomozi mi da pokupim sav nektar iz cvjetova i napravim med. Koristi petlju.
+      grade3_Conditionals_8: Pokupi nektar iz cvjetova koji ga imaju.
+      grade3_Debugging_6: 'Ovi blokovi me stvarno muče. Popravi grešku(e) da bi se pokupio sav nektar i napravio sav med. '
+      grade3_Debugging_9: Ovi blokovi me stvarno muče. Popravi grešku/greške da bi se pokupio sav nektar i napravio sav med.
       grade3_Loops_3: Možeš li upotrijebiti petlju da sakupiš sav taj nektar?
       grade3_Loops_4: Sada upotrijevi novi blok za ponavljanje da bi sakupio/la sav nektar i napravio/la sav med.
-      grade3_Loops_6: "Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!"
-      grade3_Loops_7: |-
-        Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. 
-      grade3_Loops_TeacherIDo: |-
-        Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. 
-      grade3_bee_conditionals_quantum2: "Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet."
-      grade3_maze_loops2: 'Dovedi me do suncokreta!'
+      grade3_Loops_6: Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!
+      grade3_Loops_7: 'Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. '
+      grade3_Loops_TeacherIDo: 'Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. '
+      grade3_bee_conditionals_quantum2: Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet.
+      grade3_maze_loops2: Dovedi me do suncokreta!
       grade3_maze_nestedLoops4: Upotrijebi dvije petlje za dolaženje do svinje koristeći manji broj blokova.
       grade4_arist_nested_loop_flags1: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
-      grade4_arist_nested_loop_polygons1: "Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)"
-      grade4_arist_nested_loop_polygons2: "Ponavljaj ovaj dizajn 6 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)"
+      grade4_arist_nested_loop_polygons1: 'Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
+      grade4_arist_nested_loop_polygons2: 'Ponavljaj ovaj dizajn 6 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 6?)'
       grade4_arist_nested_loop_triangles3: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod za trokut u petlji?
       grade4_arist_nested_loop_triangles4: Nacrtaj zube u ustima aligatora!
-      grade4_arist_nested_loop_triangles5: |-
-        Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-
+      grade4_arist_nested_loop_triangles5: Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\r
       grade4_arist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu petlju?
-      grade4_artist_functions2: "Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom \"nacrtaj kvadrat\". Možeš li iskoristiti funkciju \"nacrtaj kvadrat\" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela."
+      grade4_artist_functions2: Funkcije ti omogućuju da definiraš nove blokove! Premjestili smo blokove za crtanje kvadrata u funkciju sa nazivom "nacrtaj kvadrat". Možeš li iskoristiti funkciju "nacrtaj kvadrat" da bi napravio/la naočale? Kvadrati su odvojeni jedan od drugog za 75 piksela.
       grade4_artist_nested_loop_flags1: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
-      grade4_artist_nested_loop_polygons1: "Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)"
-      grade4_artist_nested_loop_triangles5: |-
-        Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r
-
+      grade4_artist_nested_loop_polygons1: 'Ponavljaj ovaj dizajn 10 puta. Za koliko moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
+      grade4_artist_nested_loop_triangles5: Napravi sunce tako što ćeš ugnijezditi početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\r
       grade4_artist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu petlju?
       grade4_artist_parameters_triangles2: Primjetiš li nešto drugačije u vezi ovih funkcijskih blokova? Klikni na "Pokreni" da vidiš šta će se desiti.
-      grade4_bee_conditionals_quantum2: "Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet."
-      grade4_bee_conditionals_quantum5: |-
-        Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
+      grade4_bee_conditionals_quantum2: Pčela sada želi samo nektar. Zapamti, nisu svi objekti cvijeće. Prije nego što odlučiš skupiti nektar prvo provjeri da li je u pitanju cvijet.
+      grade4_bee_conditionals_quantum5: Ispod tih oblaka imamo cvijeće ili saće meda. Koristi ako/inače blok za sakupljanje nektra u slučaju cvijeta, ili za pravljenje meda u slučaju saće meda.
       grade4_bee_functions3: Funkcije su blokovi koda koji izvršavaju određeni zadatak. Upotrijebi "pokupi 5" funkciju da bi se pokupilo 5 nektara. Sjeti se da upotrijebiš petlju da bi se postigao blok brojanja.
       grade4_bee_nestedLoops4: 'Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. '
       grade4_frozen_freeplay: Službeno si postao/postala majstor-umjetnik! Napravi snježnu bajku.
@@ -445,24 +450,24 @@ bs:
       grade4_frozen_functions4: Zamršeni sniježni uzorci mogu biti napravljeni pomoću vrlo jednostavnih oblika. Možeš li napraviti uzorak ponavljajući 5 krugova veličine 5 i 5 krugova veličine 10?
       grade4_frozen_nested_loop_diamonds2: Znaš li da svaka pahulja ima drugačiji oblik? Hajde da napravimo novu pahulju snijega koristeći "Ponavljaj" blok za ponavljanje paralelograma 4 puta, okrećući za 90 stepeni između svakog od paralelograma.
       grade4_frozen_nested_loop_diamonds3: Hajde sada da napravimo novu pahulju koristeći blok ponavljanja za ponavljanje paralelograma 10 puta, okrećući udesno za 36 stepeni između svakog oblika.
-      grade4_frozen_square: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? 
-      grade4_frozen_square_loop1: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat? 
+      grade4_frozen_square: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat?
+      grade4_frozen_square_loop1: Zdravo, ja sam Anna od Arendelle! Hajde da napravimo kvadrat sa "Ponavljaj" blokom koji koristi manje blokova. Koliko puta (???) bi trebao "Ponavljaj" blok izvršiti blokove unutar sebe da bi se napravio kvadrat?
       grade4_frozen_square_loop2: Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.
       grade4_frozen_square_loop3: Možeš li napraviti pahulju snijega koristeći "Ponavljaj" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti "Okreni" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?
       grade4_review_artist3: Blok za skakanje pokreće umjetnika bez crtanja. Nacrtaj isprekidanu liniju koristeći u isto vrijeme blokove za crtanje i skakanje.
       grade4_review_bee1: Sada upotrijevi novi blok za ponavljanje da bi sakupio/la sav nektar i napravio/la sav med.
-      grade5_artist_for_loops1: "Nacrtaj ovaj trokut koji ima veličinu\nof 50 piksela. Savjet: koristi blok ponavljanja."
-      grade5_artist_for_loops5: |-
-        Najmanja linija ovog kvadrata je 10, najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
+      grade5_artist_for_loops1: |-
+        Nacrtaj ovaj trokut koji ima veličinu
+        of 50 piksela. Savjet: koristi blok ponavljanja.
+      grade5_artist_for_loops5: Najmanja linija ovog kvadrata je 10, najveća je 200 i svaka linija je za 10 piksela duža od prethodne. Možeš li popuniti blokove koji nedostaju da bi ova fantastična slika bila dovršena?
       grade5_artist_parameters_triangles2a: Primjetiš li nešto drugačije u vezi ovih funkcijskih blokova? Klikni na "Pokreni" da vidiš šta će se desiti.
-      grade5_artist_variables_hexagons1: "Hajde da pokušamo ponovo. Hajde sada da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela."
+      grade5_artist_variables_hexagons1: Hajde da pokušamo ponovo. Hajde sada da napravimo ovaj cool crtež sa šestougaonicima od 60 piksela.
       grade5_artist_variables_pentagon9: Pogledaj ovaj kod. Možeš li vidjeti kako "postavi dužinu" i "dužina" blok rade zajedno? Klikni na "Pokreni" da ih vidiš u akciji. Zamijeni broj 5 sa "stranice" varijablom, i upotrijebi "postavi stranice na" blok.
-      grade5_artist_variables_pentagons1: "Možeš li mi pomoći da nacrtam ovaj cool uzorak tako što ćeš ubaciti \"dužina\" varijablu u ispravno mjesto?"
+      grade5_artist_variables_pentagons1: Možeš li mi pomoći da nacrtam ovaj cool uzorak tako što ćeš ubaciti "dužina" varijablu u ispravno mjesto?
       grade5_playlab_variables13: Upotrijebi "pri dodiru" blok da bi poslao/la Psa nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
-      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
-      grade5_playlab_variables9: "Evo funkcija pod nazivom \"izvidnica\". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela."
+      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa" varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji prikupi 10 zastava je pobjednik!
+      grade5_playlab_variables9: Evo funkcija pod nazivom "izvidnica". Preuredi je da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
       level 'grade3_Loops_3: Možeš li upotrijebiti petlju da sakupiš sav taj nektar?
       level 'grade3_Loops_4: Sada upotrijevi novi blok za ponavljanje da bi sakupio/la sav nektar i napravio/la sav med.
-      level 'grade3_Loops_6: "Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!"
-      level 'grade3_Loops_7: |-
-        Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. 
+      level 'grade3_Loops_6: Šta će se dogoditi ako ponoviš ovaj slijed 3 puta? Ne zaboravi napraviti med na kraju!
+      level 'grade3_Loops_7: 'Svaki cvijet sadrži jedinicu nektra. Sakupi nektar iz svakog od cvjetova. '

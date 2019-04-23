@@ -22,12 +22,12 @@ bg:
       Text: Текст
       Picker: Избор
       Comment: Коментар
+      Sprites: Спрайт
+      Behaviors: Поведения
       'Variables ': 'Променливи '
       Default: По подразбиране
-      Behaviors: Поведения
       Locations: Места
       everythingelse: всичко останало
-      Sprites: Спрайт
       Location: Адрес
       numbers: числа
       Numbers: Числа

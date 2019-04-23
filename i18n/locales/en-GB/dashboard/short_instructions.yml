@@ -1,169 +1,417 @@
+---
 en-GB:
   data:
     short_instructions:
-      2-3 Artist 1 new: "Hi, I'm an artist. You can write code to make\nme draw almost anything. Use a few blocks to make me draw over the grey lines\nin the picture. (Each line is 100 pixels long)"
-      2-3 Artist 11: "Give the stop sign a border by making an octagon\nwith 100 pixels sides. \\r\n\\r\n"
+      2-3 Artist 1 new: |-
+        Hi, I'm an artist. You can write code to make
+        me draw almost anything. Use a few blocks to make me draw over the grey lines
+        in the picture. (Each line is 100 pixels long)
+      2-3 Artist 11: |-
+        Give the stop sign a border by making an octagon
+        with 100 pixels sides. \\r
+        \\r
       2-3 Artist 12: |-
-        Create a circle to finish the eyeball!\r
-        \r
+        Create a circle to finish the eyeball!\\r
+        \\r
         If
         the artist turns 1 degree with each loop, how many times do you need to repeat
         the code to draw a circle? 180? 360? 500?
       2-3 Artist 2 new: "This house has a half-finished wall. Each side\nis 100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 2: "This house has a half-finished wall. Each side\nis 100, but the half-finished wall is only 50. Complete the wall. "
-      2-3 Artist 3.4: "The jump block moves the artist without drawing.\nDraw the dashed line using both the `jump forward` and `move forward` blocks.\nEach line is 50 pixels long."
-      2-3 Artist 3: "This hat is 100 pixels high. Draw a hat that is\n70 pixels less."
-      2-3 Artist 3new: "The red hat is 100 pixels tall. Finish drawing\na black hat that is 70 pixels shorter. \\r\n(Note: The width of each hat is\n50 pixels.)"
+      2-3 Artist 3.4: |-
+        The jump block moves the artist without drawing.
+        Draw the dashed line using both the `jump forward` and `move forward` blocks.
+        Each line is 50 pixels long.
+      2-3 Artist 3: |-
+        This hat is 100 pixels high. Draw a hat that is
+        70 pixels less.
+      2-3 Artist 3new: |-
+        The red hat is 100 pixels tall. Finish drawing
+        a black hat that is 70 pixels shorter. \\r
+        (Note: The width of each hat is
+        50 pixels.)
       2-3 Artist 4: Help me complete the house for this cat.
-      2-3 Artist 5: "Replace this code with a \"repeat times\" block\nto draw the same house using only 3 blocks."
-      2-3 Artist 6: "This house needs a roof! Draw the triangle.  Hint:\nall three sides are the same length."
+      2-3 Artist 5: |-
+        Replace this code with a "repeat times" block
+        to draw the same house using only 3 blocks.
+      2-3 Artist 6: |-
+        This house needs a roof! Draw the triangle.  Hint:
+        all three sides are the same length.
       2-3 Artist 7: "Finish drawing the last set of windows on the school\nso that everyone in class can see outside. The sides of each square window\npane are 25 pixels long. "
-      2-3 Artist 8: "Complete the rooms for each of the animals by splitting\nthe rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide\nand 100 pixels tall. There are many different ways to solve this puzzle, so\nhave some fun!"
+      2-3 Artist 8: |-
+        Complete the rooms for each of the animals by splitting
+        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
+        and 100 pixels tall. There are many different ways to solve this puzzle, so
+        have some fun!
       2-3 Artist 9 NEW: Finish this kite
       2-3 Artist 9 REPLACEMENT: Finish drawing these stairs!
       2-3 Artist 9: Finish this kite
-      2-3 Artist Assessment 1: "Assessment: Finish drawing the last tooth.\nIt is 25 pixels wide and 25 pixels tall."
-      2-3 Artist Debugging 1: "This hat should only be 50 pixels wide.  Can\nyou fix it?"
-      2-3 Artist Debugging 10: "The direction pad on my game controller\nis too narrow. \\r\n\\r\nCan you make it wider by 10 pixels?\\r\n\\r\nTry running\nthe code first to see what's wrong."
+      2-3 Artist Assessment 1: |-
+        Assessment: Finish drawing the last tooth.
+        It is 25 pixels wide and 25 pixels tall.
+      2-3 Artist Debugging 1: |-
+        This hat should only be 50 pixels wide.  Can
+        you fix it?
+      2-3 Artist Debugging 10: |-
+        The direction pad on my game controller
+        is too narrow. \\r
+        \\r
+        Can you make it wider by 10 pixels?\\r
+        \\r
+        Try running
+        the code first to see what's wrong.
       2-3 Artist Debugging 11: |-
-        My snowflake is falling apart!\r
-        \r
+        My snowflake is falling apart!\\r
+        \\r
         Can
         you figure out what's going wrong?
-      2-3 Artist Debugging 12: "I'm supposed to add an ocean wave to\nthis scene.  Can you help me?"
-      2-3 Artist Debugging 2: "This code for the cat's whiskers is wrong.\n\\r\n\\r\nFix this code to draw whiskers that are all the same length."
-      2-3 Artist Debugging 3: "My boat has a hole! \\r\n\\r\nWhat do you\nneed to fix to make the ends meet?"
-      2-3 Artist Debugging 5: "The code that we have for the leg and\nfoot is wrong. \\r\n\\r\nCan you fix it?"
+      2-3 Artist Debugging 12: |-
+        I'm supposed to add an ocean wave to
+        this scene.  Can you help me?
+      2-3 Artist Debugging 2: |-
+        This code for the cat's whiskers is wrong.
+        \\r
+        \\r
+        Fix this code to draw whiskers that are all the same length.
+      2-3 Artist Debugging 3: |-
+        My boat has a hole! \\r
+        \\r
+        What do you
+        need to fix to make the ends meet?
+      2-3 Artist Debugging 5: |-
+        The code that we have for the leg and
+        foot is wrong. \\r
+        \\r
+        Can you fix it?
       2-3 Artist Debugging 6: |-
         Looks like I'm sitting on a chair that’s
-        missing a leg!\r
-        \r
+        missing a leg!\\r
+        \\r
         Edit the code to draw the last leg.
       2-3 Artist Debugging 7: |-
-        Looks like the C in code is drawn backwards!\r
-        \r
+        Looks like the C in code is drawn backwards!\\r
+        \\r
         Can
         you make it look like a C again?
       2-3 Artist Debugging 8: |-
         My teacher says that I should finish what
-        I start!\r
-        \r
+        I start!\\r
+        \\r
         Help me finish my pinwheel. Can you figure out what's wrong?
       2-3 Artist Debugging 9: |-
-        Something is off!\r
-        \r
+        Something is off!\\r
+        \\r
         The code for
         this stem is wrong. Can you figure out how to get the artist to trace the
         stem the right way?
-      2-3 Artist Debugging Assessment 1: "Assessment: Why does this square\nend up being 75 pixels too small on each side?  \\r\n\\r\nWhere does the code\ngo wrong?"
+      2-3 Artist Debugging Assessment 1: |-
+        Assessment: Why does this square
+        end up being 75 pixels too small on each side?  \\r
+        \\r
+        Where does the code
+        go wrong?
       2-3 Artist Free Play: Free-play! Draw anything you'd like.
-      2-3 Artist Functions 1 a: "\"Me zombie artist. Me love drawing!\"  \\r\n\\r\nHelp\nthe zombie draw square glasses.  \\r\n\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares, which is 100 pixels."
-      2-3 Artist Functions 1: "\"Me zombie artist. Me love drawing!\"  \\r\n\\r\nHelp\nthe zombie draw square glasses.  \\r\n\\r\nThe bridge between the glasses is\n25 pixels shorter than the width of the squares, which is 100 pixels."
-      2-3 Artist Functions 10: "Freeplay: Here are two functions, one\nto draw a big gear and one to draw a small gear. Use them to draw the inside\nof a machine!"
-      2-3 Artist Functions 11 a: "We've renamed the `draw a square` function\nto `draw a hexagon`, but it's still giving us squares! Can you modify the\n`draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r\n\\r\nDraw\nthe image using the new function!"
-      2-3 Artist Functions 11.5 a: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you loop the main program 6 times, turning\n60 degrees each time you loop?"
-      2-3 Artist Functions 11.5: "Here's that same `draw a hexagon`\nfunction. \\r\n\\r\nWhat happens if you loop the main program 6 times, turning\n60 degrees each time you loop?"
-      2-3 Artist Functions 11: "We've renamed the `draw a square` function\nto `draw a hexagon`, but it's still giving us squares! Can you modify the\n`draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r\n\\r\nDraw\nthe image using the new function!"
-      2-3 Artist Functions 12 Mike: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 12 a: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 12: "Functions are really great for drawing\ncomplex things multiple times. \\r\n\\r\nCan you use the `draw a flower` function\nto fill the rest of the planter box?\\r\nThe plants are all 100 pixels apart."
-      2-3 Artist Functions 13: "We've provided you with four functions.\nUse them any way you like inside of one or more loops to make pictures that\nyou can share with your friends. Press run to see an example."
-      2-3 Artist Functions 2: "Functions let you define new blocks! \\r\n\\r\nWe've\nmoved the blocks needed for drawing a square into a function called `draw\na square`. This time, use the `draw a square` function to create the glasses.\n\\r\n\\r\nThe squares are 75 pixels apart."
-      2-3 Artist Functions 3: "Edit the function to draw a square with\na side length of 115 to draw the bigger glasses. \\r\n\\r\nThe squares are now\n45 pixels apart."
-      2-3 Artist Functions 4: "Now, put the function inside of a loop\nto draw these three squares."
-      2-3 Artist Functions 9: "Freeplay: Here is a snowflake function.\nExperiment with it to create a winter scene! This is a free play level, so\nthere is no puzzle to solve. Have fun!"
-      2-3 Artist Loops 11: "Now let's put *another* loop around our\nwhole creation!  Don't forget to add an angle at the end of the outer loop."
-      2-3 Artist Loops 4: "Want to see what happens when we repeat that\nshape over and over again using a loop?"
+      2-3 Artist Functions 1 a: |-
+        "Me zombie artist. Me love drawing!"  \\r
+        \\r
+        Help
+        the zombie draw square glasses.  \\r
+        \\r
+        The bridge between the glasses is
+        25 pixels shorter than the width of the squares, which is 100 pixels.
+      2-3 Artist Functions 1: |-
+        "Me zombie artist. Me love drawing!"  \\r
+        \\r
+        Help
+        the zombie draw square glasses.  \\r
+        \\r
+        The bridge between the glasses is
+        25 pixels shorter than the width of the squares, which is 100 pixels.
+      2-3 Artist Functions 10: |-
+        Freeplay: Here are two functions, one
+        to draw a big gear and one to draw a small gear. Use them to draw the inside
+        of a machine!
+      2-3 Artist Functions 11 a: |-
+        We've renamed the `draw a square` function
+        to `draw a hexagon`, but it's still giving us squares! Can you modify the
+        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r
+        \\r
+        Draw
+        the image using the new function!
+      2-3 Artist Functions 11.5 a: |-
+        Here's that same `draw a hexagon`
+        function. \\r
+        \\r
+        What happens if you loop the main program 6 times, turning
+        60 degrees each time you loop?
+      2-3 Artist Functions 11.5: |-
+        Here's that same `draw a hexagon`
+        function. \\r
+        \\r
+        What happens if you loop the main program 6 times, turning
+        60 degrees each time you loop?
+      2-3 Artist Functions 11: |-
+        We've renamed the `draw a square` function
+        to `draw a hexagon`, but it's still giving us squares! Can you modify the
+        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \\r
+        \\r
+        Draw
+        the image using the new function!
+      2-3 Artist Functions 12 Mike: |-
+        Functions are really great for drawing
+        complex things multiple times. \\r
+        \\r
+        Can you use the `draw a flower` function
+        to fill the rest of the planter box?\\r
+        The plants are all 100 pixels apart.
+      2-3 Artist Functions 12 a: |-
+        Functions are really great for drawing
+        complex things multiple times. \\r
+        \\r
+        Can you use the `draw a flower` function
+        to fill the rest of the planter box?\\r
+        The plants are all 100 pixels apart.
+      2-3 Artist Functions 12: |-
+        Functions are really great for drawing
+        complex things multiple times. \\r
+        \\r
+        Can you use the `draw a flower` function
+        to fill the rest of the planter box?\\r
+        The plants are all 100 pixels apart.
+      2-3 Artist Functions 13: |-
+        We've provided you with four functions.
+        Use them any way you like inside of one or more loops to make pictures that
+        you can share with your friends. Press run to see an example.
+      2-3 Artist Functions 2: |-
+        Functions let you define new blocks! \\r
+        \\r
+        We've
+        moved the blocks needed for drawing a square into a function called `draw
+        a square`. This time, use the `draw a square` function to create the glasses.
+        \\r
+        \\r
+        The squares are 75 pixels apart.
+      2-3 Artist Functions 3: |-
+        Edit the function to draw a square with
+        a side length of 115 to draw the bigger glasses. \\r
+        \\r
+        The squares are now
+        45 pixels apart.
+      2-3 Artist Functions 4: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
+      2-3 Artist Functions 9: |-
+        Freeplay: Here is a snowflake function.
+        Experiment with it to create a winter scene! This is a free play level, so
+        there is no puzzle to solve. Have fun!
+      2-3 Artist Loops 11: |-
+        Now let's put _another_ loop around our
+        whole creation!  Don't forget to add an angle at the end of the outer loop.
+      2-3 Artist Loops 4: |-
+        Want to see what happens when we repeat that
+        shape over and over again using a loop?
       2-3 Artist Loops 8: Let's put both elements inside a loop.
-      2-3 Artist Loops New 1: "Let's draw this robot's head! Can you\nmake a square with sides that are 100 pixels?"
-      2-3 Artist Loops New 10: "Now let's connect a bunch of V's together\nin a loop."
-      2-3 Artist Loops New 11: "Rebuild the code from the last puzzle,\nbut this time, add a left turn of 30 degrees inside the loop. Now, repeat\nit 24 times instead of 8."
-      2-3 Artist Loops New 12: "Draw a diamond with sides of 100 pixels.\n"
-      2-3 Artist Loops New 13: "We are going to start you with some code\n(in grey) to make one diamond. \\r\n\\r\nLoop the grey code to create a fun\npattern!"
-      2-3 Artist Loops New 14: "Play around with the code for the diamond\nand see what other patterns you can make. Try changing how many degrees you\nturn and how many times you loop."
+      2-3 Artist Loops New 1: |-
+        Let's draw this robot's head! Can you
+        make a square with sides that are 100 pixels?
+      2-3 Artist Loops New 10: |-
+        Now let's connect a bunch of V's together
+        in a loop.
+      2-3 Artist Loops New 11: |-
+        Rebuild the code from the last puzzle,
+        but this time, add a left turn of 30 degrees inside the loop. Now, repeat
+        it 24 times instead of 8.
+      2-3 Artist Loops New 12: Draw a diamond with sides of 100 pixels.
+      2-3 Artist Loops New 13: |-
+        We are going to start you with some code
+        (in grey) to make one diamond. \\r
+        \\r
+        Loop the grey code to create a fun
+        pattern!
+      2-3 Artist Loops New 14: |-
+        Play around with the code for the diamond
+        and see what other patterns you can make. Try changing how many degrees you
+        turn and how many times you loop.
       2-3 Artist Loops New 15: Now, draw anything you like!
       2-3 Artist Loops New 2: |-
         Here is the same puzzle that we just solved,
         but this time, we can only use one `move forward` block and one `turn` block
-        this time.\r
-        \r
+        this time.\\r
+        \\r
         Can you use a `repeat` to solve this puzzle?
-      2-3 Artist Loops New 9: "Draw a simple V (where both sides are\n50 pixels) to complete the arrow."
-      2-3 Bee Functions 8: "Create your own function that gets 7 nectar,\nmoves forward, and makes 7 honey. Use the function to collect nectar at each\nflower and make honey at each honeycomb."
-      2-3 Bee Functions 9: "Create your own function that goes down a\npath, gets nectar, makes honey, and then returns the bee to the top of the\npath."
-      2-3 Bee Functions Assessment 1: "Assessment: Use the given function\nto collect nectar from each flower."
-      2-3 Bee Functions Assessment 2: "Assessment: Create a function\nto turn, move forward and make 3 honey, then return the bee to where it started\nand turn back."
+      2-3 Artist Loops New 9: |-
+        Draw a simple V (where both sides are
+        50 pixels) to complete the arrow.
+      2-3 Bee Functions 8: |-
+        Create your own function that gets 7 nectar,
+        moves forward, and makes 7 honey. Use the function to collect nectar at each
+        flower and make honey at each honeycomb.
+      2-3 Bee Functions 9: |-
+        Create your own function that goes down a
+        path, gets nectar, makes honey, and then returns the bee to the top of the
+        path.
+      2-3 Bee Functions Assessment 1: |-
+        Assessment: Use the given function
+        to collect nectar from each flower.
+      2-3 Bee Functions Assessment 2: |-
+        Assessment: Create a function
+        to turn, move forward and make 3 honey, then return the bee to where it started
+        and turn back.
       2-3 Bee Loops 1: |-
-        Those flowers look tasty!\r
-        \r
+        Those flowers look tasty!\\r
+        \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 10: "Can you use a while loop inside of two other\nloops to collect all of the nectar?"
-      2-3 Bee Loops 11: "Use while loops to collect all of the nectar\nfrom the flowers in this field."
-      2-3 Bee Loops 12: "Use while loops to collect all of the nectar\nfrom the flowers in this field."
-      2-3 Bee Loops 13: "Assessment: Collect all of the nectar using\nthe fewest blocks possible."
+      2-3 Bee Loops 10: |-
+        Can you use a while loop inside of two other
+        loops to collect all of the nectar?
+      2-3 Bee Loops 11: |-
+        Use while loops to collect all of the nectar
+        from the flowers in this field.
+      2-3 Bee Loops 12: |-
+        Use while loops to collect all of the nectar
+        from the flowers in this field.
+      2-3 Bee Loops 13: |-
+        Assessment: Collect all of the nectar using
+        the fewest blocks possible.
       2-3 Bee Loops 1A: "Hi, I'm a bee. Can you help me collect the\nnectar from these flowers? "
-      2-3 Bee Loops 2: "Collect all the nectar and make all of the honey\nusing the fewest blocks possible."
+      2-3 Bee Loops 2: |-
+        Collect all the nectar and make all of the honey
+        using the fewest blocks possible.
       2-3 Bee Loops 2A: This time, use a loop to gather all of the nectar.
-      2-3 Bee Loops 3: "Collect nectar from each flower and make honey\nat each honeycomb using the fewest blocks possible."
+      2-3 Bee Loops 3: |-
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
       2-3 Bee Loops 3A: Use a `repeat` loop to collect all of the nectar.
-      2-3 Bee Loops 3B: "Now use the `repeat` block to collect all of\nthe nectar and make all of the honey."
+      2-3 Bee Loops 3B: |-
+        Now use the `repeat` block to collect all of
+        the nectar and make all of the honey.
       2-3 Bee Loops 4: |-
-        Such a busy bee!\r
-        \r
+        Such a busy bee!\\r
+        \\r
         Help bee collect all
         of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
-      2-3 Bee Loops 5: "The shape of this path is different than the\nothers. \\r\n\\r\nCan you collect all of the nectar using as few blocks as possible?"
-      2-3 Bee Loops 6: "Can you find the quickest way for the bee to\ncollect all of the nectar and make all of the honey?"
-      2-3 Bee Loops 7: "What a beautiful field of flowers!   Help the\nbee visit each one.  Can you find a way to do it with fewer than 7 blocks?"
-      2-3 Bee Loops 8: "These purple flowers have a different amount of\nnectar each time you run the puzzle. \\r\n\\r\nUse the `while nectar` loop to\ncollect all of the nectar. \\r\n\\r\nThis loop will run as long as the condition\nis true, in this case `nectar > 0`."
-      2-3 Bee Loops Assessment 1: "Assessment: Use a `while` loop to\ncollect all of the nectar from these flowers."
+      2-3 Bee Loops 4A: |-
+        How many times can loops help you in this puzzle?  \\r
+        \\r
+        Loops
+        are your friend! Use a few of them to complete this puzzle with the fewest
+        blocks possible.
+      2-3 Bee Loops 5: |-
+        The shape of this path is different than the
+        others. \\r
+        \\r
+        Can you collect all of the nectar using as few blocks as possible?
+      2-3 Bee Loops 6: |-
+        Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?
+      2-3 Bee Loops 7: |-
+        What a beautiful field of flowers!   Help the
+        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      2-3 Bee Loops 8: |-
+        These purple flowers have a different amount of
+        nectar each time you run the puzzle. \\r
+        \\r
+        Use the `while nectar` loop to
+        collect all of the nectar. \\r
+        \\r
+        This loop will run as long as the condition
+        is true, in this case `nectar > 0`.
+      2-3 Bee Loops Assessment 1: |-
+        Assessment: Use a `while` loop to
+        collect all of the nectar from these flowers.
       2-3 Maze 1: "Can you help me catch the naughty pig? Stack a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
-      2-3 Maze 11: "Get me to the flower I'm hungry! How many times\ndo you have to repeat a block?"
-      2-3 Maze 12 (old): "Get me to the pig, now with the Repeat times\nblock!"
-      2-3 Maze 12 - One Move Block: "Get to the pig! But this time, you\ncan only use one `move forward` block. Do you see any other blocks that could\nhelp you?"
-      2-3 Maze 12: "Can you get to the pig by creating a loop that uses\nonly one `move forward` block inside of a `repeat`?"
-      2-3 Maze 13 (old): "Get me to the pig, now with the Repeat until\nblock!"
-      2-3 Maze 13: "Get me to the pig! You can only use one move forward\nblock this time"
+      2-3 Maze 11: |-
+        Get me to the flower I'm hungry! How many times
+        do you have to repeat a block?
+      2-3 Maze 12 (old): |-
+        Get me to the pig, now with the Repeat times
+        block!
+      2-3 Maze 12 - One Move Block: |-
+        Get to the pig! But this time, you
+        can only use one `move forward` block. Do you see any other blocks that could
+        help you?
+      2-3 Maze 12: |-
+        Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?
+      2-3 Maze 13 (old): |-
+        Get me to the pig, now with the Repeat until
+        block!
+      2-3 Maze 13: |-
+        Get me to the pig! You can only use one move forward
+        block this time
       2-3 Maze 14 (old): Get me to the pig with the Repeat until block!
-      2-3 Maze 14: "Get me to the sunflower! (Where is that \"repeat\ntimes\" block when I need it?)"
+      2-3 Maze 14: |-
+        Get me to the sunflower! (Where is that "repeat
+        times" block when I need it?)
       2-3 Maze 15 (old): Get me to the pig with the Repeat until block!
-      2-3 Maze 15: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
+      2-3 Maze 15: |-
+        In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!
       2-3 Maze 16 (old): Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before: "Can you figure out the fastest way to get\nme to the pig?"
-      2-3 Maze 16: "Loops even work with more than one block inside!  Can\nyou loop this sequence to get the zombie to the sunflower?"
+      2-3 Maze 16 before: |-
+        Can you figure out the fastest way to get
+        me to the pig?
+      2-3 Maze 16: |-
+        Loops even work with more than one block inside!  Can
+        you loop this sequence to get the zombie to the sunflower?
       2-3 Maze 2: This pig is ruffling my feathers. Help me get to him!
-      2-3 Maze 3: "Trace the path and lead me to the silly pig. Avoid\nTNT or feathers will fly!"
-      2-3 Maze 6: "Keep calm and help me find the bad pig. Otherwise\nI might get angry!"
+      2-3 Maze 3: |-
+        Trace the path and lead me to the silly pig. Avoid
+        TNT or feathers will fly!
+      2-3 Maze 6: |-
+        Keep calm and help me find the bad pig. Otherwise
+        I might get angry!
       2-3 Maze 8: Get me to the pig!
-      2-3 Maze Loops 1: "Can you get me to the pig using 5 of the same\nkind of blocks?"
+      2-3 Maze Loops 1: |-
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       2-3 Maze Loops 17: Use what you learned to get me to the sunflower!
-      2-3 Maze Loops 18: "Get me to the sunflower using the fewest blocks\npossible!  \\r\n\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
-      2-3 Maze Loops 19: "Let's take this to another level! \\r\nUse\nloops to get me to the sunflower with the fewest loops possible."
-      2-3 Maze Loops 20: "Get me to the sunflower using the fewest number\nof blocks possible!"
-      2-3 Maze Loops 21: "Get me to the sunflower using the fewest blocks\npossible!"
+      2-3 Maze Loops 18: |-
+        Get me to the sunflower using the fewest blocks
+        possible!  \\r
+        \\r
+        Try using one `repeat` loop inside of another to cut down
+        on the amount of code you need.
+      2-3 Maze Loops 19: |-
+        Let's take this to another level! \\r
+        Use
+        loops to get me to the sunflower with the fewest loops possible.
+      2-3 Maze Loops 20: |-
+        Get me to the sunflower using the fewest number
+        of blocks possible!
+      2-3 Maze Loops 21: |-
+        Get me to the sunflower using the fewest blocks
+        possible!
       2-3 Maze Loops Assessment 1: "Assessment:  Get me to the sunflower\nusing only 5 blocks! "
-      2-3 Maze sq4: "Keep calm and help me find the bad pig. Otherwise\nI might get angry!"
-      2-3 maze sq13: "Dear person. Me zombie. Must... get... to sunflower.\nCreate loop with \"repeat until\" block."
+      2-3 Maze sq4: |-
+        Keep calm and help me find the bad pig. Otherwise
+        I might get angry!
+      2-3 maze sq13: |-
+        Dear person. Me zombie. Must... get... to sunflower.
+        Create loop with "repeat until" block.
       4-5 Maze 13: Get me to the pig!
-      4-5 Maze 6: "Get me to the sunflower using the fewest number\nof blocks possible!"
+      4-5 Maze 6: |-
+        Get me to the sunflower using the fewest number
+        of blocks possible!
       App Lab test: test
-      Artist Autorun Test: "Now, put the function inside of a loop\nto draw these three squares."
+      Artist Autorun Test: |-
+        Now, put the function inside of a loop
+        to draw these three squares.
       Bergeron Robot Maze1: "Can you help me catch the naughty pig? Stack a couple\nof `move forward` blocks below the `when run` block and press \"Run\". "
       Course 2 Bee Loops 1: "Hi, I'm a bee. Can you help me collect the\nnectar from these flowers? "
       Course E MC Conditionals1: You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.
-      CourseE_HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.'
-      CourseE_HOC 2018 Level_2: 'Head to the end of the dock.'
-      CourseE_HOC 2018 Level_3: 'Head across the open seas to the cod.'
-      CourseE_HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.'
+      CourseE_HOC 2018 Level_11: Build a conduit with Prismarine inside the Ocean Monument.
+      CourseE_HOC 2018 Level_2: Head to the end of the dock.
+      CourseE_HOC 2018 Level_3: Head across the open seas to the cod.
+      CourseE_HOC 2018 Level_9b: Use the coral as waypoints to reach the treasure.
       Function intro Ryan: Use the `build bridge` function twice to make a path to the torch.
       Function intro Ryan_2019: Use the `build bridge` function twice to make a path to the torch.
-      HOC 2018 Level_11: 'Build a conduit with Prismarine inside the Ocean Monument.'
-      HOC 2018 Level_12: 'Design your own underwater environment, it’s up to you!'
-      HOC 2018 Level_2: 'Head to the end of the dock.'
-      HOC 2018 Level_3: 'Head across the open seas to the cod.'
-      HOC 2018 Level_9b: 'Use the coral as waypoints to reach the treasure.'
+      HOC 2018 Level_11: Build a conduit with Prismarine inside the Ocean Monument.
+      HOC 2018 Level_12: Design your own underwater environment, it’s up to you!
+      HOC 2018 Level_2: Head to the end of the dock.
+      HOC 2018 Level_3: Head across the open seas to the cod.
+      HOC 2018 Level_9b: Use the coral as waypoints to reach the treasure.
       K-1 Maze Loops 1: Get me to the pig!
       K-1 Maze Loops 4: Get me to the pig!
       K-1 Maze Loops 9: Get me to the pig!
@@ -245,89 +493,178 @@ en-GB:
       Underground Mining Coal_2018: You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.
       Underground Mining Coal_2019: You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.
       beeDebugVideo1: Use a `repeat` loop to collect all of the nectar.
-      birdsDebugVideo1: "Trace the path and lead me to the silly pig. Avoid\nTNT or feathers will fly!"
+      birdsDebugVideo1: |-
+        Trace the path and lead me to the silly pig. Avoid
+        TNT or feathers will fly!
       grade2_CaringForNewPet_10: Get me to the pig!
       grade2_CaringForNewPet_5: Get me to the pig!
       grade2_MakeDogTag_10: Now, draw anything you like!
-      grade2_MakeDogTag_8: "Now let's connect a bunch of V's together\nin a loop."
-      grade2_MakeDogTag_9: "Rebuild the code from the last puzzle,\nbut this time, add a left turn of 30 degrees inside the loop. Now, repeat\nit 24 times instead of 8."
-      grade2_PuppyLoops_1: "Can you get me to the pig using 5 of the same\nkind of blocks?"
+      grade2_MakeDogTag_8: |-
+        Now let's connect a bunch of V's together
+        in a loop.
+      grade2_MakeDogTag_9: |-
+        Rebuild the code from the last puzzle,
+        but this time, add a left turn of 30 degrees inside the loop. Now, repeat
+        it 24 times instead of 8.
+      grade2_PuppyLoops_1: |-
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
       grade2_PuppyLoops_10: |-
         My teacher says that I should finish what
-        I start!\r
-        \r
+        I start!\\r
+        \\r
         Help me finish my pinwheel. Can you figure out what's wrong?
-      grade2_PuppyLoops_2: "Can you get to the pig by creating a loop that uses\nonly one `move forward` block inside of a `repeat`?"
-      grade2_PuppyLoops_4: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
-      grade2_PuppyLoops_5: "Can you figure out the fastest way to get\nme to the pig?"
+      grade2_PuppyLoops_2: |-
+        Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?
+      grade2_PuppyLoops_4: |-
+        In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!
+      grade2_PuppyLoops_5: |-
+        Can you figure out the fastest way to get
+        me to the pig?
       grade2_PuppyLoops_7: Use what you learned to get me to the sunflower!
-      grade2_PuppyLoops_8: "This code for the cat's whiskers is wrong.\n\\r\n\\r\nFix this code to draw whiskers that are all the same length."
+      grade2_PuppyLoops_8: |-
+        This code for the cat's whiskers is wrong.
+        \\r
+        \\r
+        Fix this code to draw whiskers that are all the same length.
       grade2_PuppyLoops_9: |-
-        Looks like the C in code is drawn backwards!\r
-        \r
+        Looks like the C in code is drawn backwards!\\r
+        \\r
         Can
         you make it look like a C again?
-      grade2_puppy_loops2: "Can you get to the pig by creating a loop that uses\nonly one `move forward` block inside of a `repeat`?"
-      grade2_puppy_loops4: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
-      grade3_Conditionals_11 BAD: "Assessment: Use a `while` loop to\ncollect all of the nectar from these flowers."
+      grade2_puppy_loops2: |-
+        Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?
+      grade2_puppy_loops4: |-
+        In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!
+      grade3_Conditionals_11 BAD: |-
+        Assessment: Use a `while` loop to
+        collect all of the nectar from these flowers.
       grade3_Loops_10: |-
-        Such a busy bee!\r
-        \r
+        Such a busy bee!\\r
+        \\r
         Help bee collect all
         of the nectar and make all of the honey with the fewest blocks possible.
-      grade3_Loops_11: "The shape of this path is different than the\nothers. \\r\n\\r\nCan you collect all of the nectar using as few blocks as possible?"
-      grade3_Loops_12: "Can you find the quickest way for the bee to\ncollect all of the nectar and make all of the honey?"
+      grade3_Loops_11: |-
+        The shape of this path is different than the
+        others. \\r
+        \\r
+        Can you collect all of the nectar using as few blocks as possible?
+      grade3_Loops_12: |-
+        Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?
       grade3_Loops_2: This time, use a loop to gather all of the nectar.
       grade3_Loops_3: Use a `repeat` loop to collect all of the nectar.
-      grade3_Loops_4: "Now use the `repeat` block to collect all of\nthe nectar and make all of the honey."
-      grade3_Loops_5: "What a beautiful field of flowers!   Help the\nbee visit each one.  Can you find a way to do it with fewer than 7 blocks?"
-      grade3_Loops_6: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
+      grade3_Loops_4: |-
+        Now use the `repeat` block to collect all of
+        the nectar and make all of the honey.
+      grade3_Loops_5: |-
+        What a beautiful field of flowers!   Help the
+        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      grade3_Loops_6: |-
+        How many times can loops help you in this puzzle?  \\r
+        \\r
+        Loops
+        are your friend! Use a few of them to complete this puzzle with the fewest
+        blocks possible.
       grade3_Loops_7: |-
-        Those flowers look tasty!\r
-        \r
+        Those flowers look tasty!\\r
+        \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
-      grade3_Loops_8: "Collect all the nectar and make all of the honey\nusing the fewest blocks possible."
-      grade3_Loops_9: "Collect nectar from each flower and make honey\nat each honeycomb using the fewest blocks possible."
+      grade3_Loops_8: |-
+        Collect all the nectar and make all of the honey
+        using the fewest blocks possible.
+      grade3_Loops_9: |-
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
       grade3_Loops_TeacherIDo: |-
-        Those flowers look tasty!\r
-        \r
+        Those flowers look tasty!\\r
+        \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
       grade3_maze_Loop1: "Assessment:  Get me to the sunflower\nusing only 5 blocks! "
-      grade3_maze_loops5: "Get me to the sunflower using the fewest blocks\npossible!"
-      grade3_maze_nestedLoops1: "Can you get me to the pig using 5 of the same\nkind of blocks?"
-      grade3_maze_nestedLoops2: "Can you get to the pig by creating a loop that uses\nonly one `move forward` block inside of a `repeat`?"
-      grade3_maze_nestedLoops3: "Get me to the pig! You can only use one move forward\nblock this time"
-      grade3_maze_nestedLoops4: "In this puzzle, two `repeat` loops will help you\nget to the pig with the fewest number of blocks!"
-      grade4_artist_functions2: "Functions let you define new blocks! \\r\n\\r\nWe've\nmoved the blocks needed for drawing a square into a function called `draw\na square`. This time, use the `draw a square` function to create the glasses.\n\\r\n\\r\nThe squares are 75 pixels apart."
-      grade4_review_artist1: "Hi, I'm an artist. You can write code to make\nme draw almost anything. Use a few blocks to make me draw over the grey lines\nin the picture. (Each line is 100 pixels long)"
-      grade4_review_artist2: "This house needs a roof! Draw the triangle.  Hint:\nall three sides are the same length."
-      grade4_review_artist3: "The jump block moves the artist without drawing.\nDraw the dashed line using both the `jump forward` and `move forward` blocks.\nEach line is 50 pixels long."
-      grade4_review_bee1: "Now use the `repeat` block to collect all of\nthe nectar and make all of the honey."
-      grade4_review_bee2: "Collect nectar from each flower and make honey\nat each honeycomb using the fewest blocks possible."
+      grade3_maze_loops5: |-
+        Get me to the sunflower using the fewest blocks
+        possible!
+      grade3_maze_nestedLoops1: |-
+        Can you get me to the pig using 5 of the same
+        kind of blocks?
+      grade3_maze_nestedLoops2: |-
+        Can you get to the pig by creating a loop that uses
+        only one `move forward` block inside of a `repeat`?
+      grade3_maze_nestedLoops3: |-
+        Get me to the pig! You can only use one move forward
+        block this time
+      grade3_maze_nestedLoops4: |-
+        In this puzzle, two `repeat` loops will help you
+        get to the pig with the fewest number of blocks!
+      grade4_artist_functions2: |-
+        Functions let you define new blocks! \\r
+        \\r
+        We've
+        moved the blocks needed for drawing a square into a function called `draw
+        a square`. This time, use the `draw a square` function to create the glasses.
+        \\r
+        \\r
+        The squares are 75 pixels apart.
+      grade4_review_artist2: |-
+        This house needs a roof! Draw the triangle.  Hint:
+        all three sides are the same length.
+      grade4_review_artist3: |-
+        The jump block moves the artist without drawing.
+        Draw the dashed line using both the `jump forward` and `move forward` blocks.
+        Each line is 50 pixels long.
+      grade4_review_bee1: |-
+        Now use the `repeat` block to collect all of
+        the nectar and make all of the honey.
+      grade4_review_bee2: |-
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
       grade4_review_bee3: |-
-        Such a busy bee!\r
-        \r
+        Such a busy bee!\\r
+        \\r
         Help bee collect all
         of the nectar and make all of the honey with the fewest blocks possible.
       level 'grade3_Loops_10: |-
-        Such a busy bee!\r
-        \r
+        Such a busy bee!\\r
+        \\r
         Help bee collect all
         of the nectar and make all of the honey with the fewest blocks possible.
-      level 'grade3_Loops_11: "The shape of this path is different than the\nothers. \\r\n\\r\nCan you collect all of the nectar using as few blocks as possible?"
-      level 'grade3_Loops_12: "Can you find the quickest way for the bee to\ncollect all of the nectar and make all of the honey?"
+      level 'grade3_Loops_11: |-
+        The shape of this path is different than the
+        others. \\r
+        \\r
+        Can you collect all of the nectar using as few blocks as possible?
+      level 'grade3_Loops_12: |-
+        Can you find the quickest way for the bee to
+        collect all of the nectar and make all of the honey?
       level 'grade3_Loops_2: This time, use a loop to gather all of the nectar.
       level 'grade3_Loops_3: Use a `repeat` loop to collect all of the nectar.
-      level 'grade3_Loops_4: "Now use the `repeat` block to collect all of\nthe nectar and make all of the honey."
-      level 'grade3_Loops_5: "What a beautiful field of flowers!   Help the\nbee visit each one.  Can you find a way to do it with fewer than 7 blocks?"
-      level 'grade3_Loops_6: "How many times can loops help you in this puzzle?  \\r\n\\r\nLoops\nare your friend! Use a few of them to complete this puzzle with the fewest\nblocks possible."
+      level 'grade3_Loops_4: |-
+        Now use the `repeat` block to collect all of
+        the nectar and make all of the honey.
+      level 'grade3_Loops_5: |-
+        What a beautiful field of flowers!   Help the
+        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      level 'grade3_Loops_6: |-
+        How many times can loops help you in this puzzle?  \\r
+        \\r
+        Loops
+        are your friend! Use a few of them to complete this puzzle with the fewest
+        blocks possible.
       level 'grade3_Loops_7: |-
-        Those flowers look tasty!\r
-        \r
+        Those flowers look tasty!\\r
+        \\r
         Collect nectar
         from each of the flowers using the fewest blocks possible.
-      level 'grade3_Loops_8: "Collect all the nectar and make all of the honey\nusing the fewest blocks possible."
-      level 'grade3_Loops_9: "Collect nectar from each flower and make honey\nat each honeycomb using the fewest blocks possible."
+      level 'grade3_Loops_8: |-
+        Collect all the nectar and make all of the honey
+        using the fewest blocks possible.
+      level 'grade3_Loops_9: |-
+        Collect nectar from each flower and make honey
+        at each honeycomb using the fewest blocks possible.
       level grade3_Loops_2: This time, use a loop to gather all of the nectar.

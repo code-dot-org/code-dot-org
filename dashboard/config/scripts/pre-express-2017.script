@@ -46,7 +46,7 @@ level 'blockly:Jigsaw:11'
 skin 'jigsaw'
 level 'blockly:Jigsaw:12'
 skin 'jigsaw'
-assessment 'blockly:Jigsaw:13'
+level 'blockly:Jigsaw:13'
 
 stage 'Online Safety: Your Digital Footprint'
 level 'DigitalFootprint'

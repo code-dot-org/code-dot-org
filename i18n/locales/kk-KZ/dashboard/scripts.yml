@@ -1450,6 +1450,8 @@ kk:
               name: Ғаламтор
             Crowdsourcing:
               name: Кроудсорсинг
+            Songwriting:
+              name: Ән Жазу
         express-2019:
           stages:
             Relay Programming:
@@ -1536,3 +1538,11 @@ kk:
           stages:
             While Loops:
               name: Шарт орындалғанша Циклдері
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Кроудсорсинг
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+            Building a Foundation:
+              name: Ғимарат Салу

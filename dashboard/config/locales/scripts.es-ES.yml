@@ -2378,10 +2378,14 @@ es:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
+            Loops in Artist:
+              name: Bucles en Artista
             Going Places Safely:
               name: Ir a Sitios Seguro
         courseb-draft:
           stages:
+            Loops in Artist:
+              name: Bucles en Artista
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Your Digital Footprint:
@@ -2664,6 +2668,8 @@ es:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
+            Loops in Artist:
+              name: Bucles en Artista
           title: Curso A
           assignment_family_title: Curso A
           description_short: Una introducción a la informática para pre-lectores.
@@ -2671,6 +2677,8 @@ es:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
+            Loops in Artist:
+              name: Bucles en Artista
           title: Curso B
           assignment_family_title: Curso B
           description_short: Una introducción a la informática para pre-lectores.
@@ -2679,6 +2687,8 @@ es:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
+            Loops in Artist:
+              name: Bucles en Artista
           title: Curso C
           assignment_family_title: Curso C
           description_audience: Edades de 6 a 10 años
@@ -2714,6 +2724,8 @@ es:
                 su propio juego.
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Nested Loops:
               name: Bucles anidados
           title: Curso E
@@ -2725,6 +2737,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
           title: Curso F
           assignment_family_title: Curso F
           description_audience: Edades de 9 a 13 años
@@ -2740,6 +2754,8 @@ es:
               name: Introducción
             Debugging in Collector:
               name: Introducción a la depuración
+            Loops in Artist:
+              name: Bucles en Artista
             Internet:
               name: Internet
             Digital Citizenship:
@@ -2770,6 +2786,8 @@ es:
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             'Programming: Star Wars':
               name: 'Programando: La Guerra de las Galaxias'
+            Loops in Artist:
+              name: Bucles en Artista
             Spelling Bee:
               name: Concurso de Ortografía
           description_short: 'Una introducción a las ciencias de la computación para
@@ -2810,6 +2828,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Nested Loops:
               name: Bucles anidados
             Conditionals:
@@ -2836,22 +2856,32 @@ es:
               name: Artista binario
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
         new-express:
           stages:
             Introduction:
               name: Introducción
+            Loops in Artist:
+              name: Bucles en Artista
             Events in Star Wars:
               name: Eventos en la Guerra de las Galaxias
             Building a Foundation:
               name: Construyendo una Base
             Nested Loops:
               name: Bucles anidados
+        new-stages-sept-2017:
+          stages:
+            Loops in Artist:
+              name: Bucles en Artista
         new-e:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Conditionals:
               name: Condicionales
             Build a Star Wars Game:
@@ -2864,6 +2894,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Ice Age Play Lab:
               name: Laboratorio de juegos de la Edad de hielo
             Envelope Variables:
@@ -2934,6 +2966,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Nested Loops:
               name: Bucles anidados
             Introduction:
@@ -2950,6 +2984,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Introduction:
               name: Introducción
             Ice Age Play Lab:
@@ -3565,6 +3601,8 @@ es:
           stages:
             Artist:
               name: Artista
+        aquatic:
+          title: 'Minecraft: Travesía Aquática'
         dance--draft:
           stages:
             Dance Party:
@@ -3583,6 +3621,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Envelope Variables:
@@ -3608,6 +3648,8 @@ es:
               name: Programación de Relevos
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
+            Loops in Artist:
+              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Digital Citizenship:
@@ -3625,6 +3667,8 @@ es:
           stages:
             Building a Foundation:
               name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
             Nested Loops:
               name: Bucles anidados
             Conditionals with Cards:
@@ -3650,10 +3694,14 @@ es:
               name: Compartir digital
             Simon Says:
               name: Simón dice
+            Songwriting:
+              name: Composición Musical
         express-2019:
           stages:
             Relay Programming:
               name: Programación de Relevos
+            Loops in Artist:
+              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Envelope Variables:
@@ -3743,6 +3791,8 @@ es:
               name: Construyendo una Base
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
+            Loops in Artist:
+              name: Bucles en Artista
             Looking Ahead:
               name: Observando hacia el futuro
             Binary Bracelets:
@@ -3751,6 +3801,8 @@ es:
               name: Datos de gráfico
             Powerful Passwords:
               name: Contraseñas fuertes
+            Picturing Data:
+              name: Datos de gráfico
         gamelab:
           title: Laboratorio de juego
         coursea-2019:
@@ -3760,6 +3812,8 @@ es:
               name: 'Algoritmos de la Vida Real: Planta una Semilla'
             Going Places Safely:
               name: Ir a Sitios Seguro
+            Loops in Artist:
+              name: Bucles en Artista
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
         courseb-2019:
@@ -3770,6 +3824,8 @@ es:
               name: Tu huella Digital
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
+            Loops in Artist:
+              name: Bucles en Artista
         pre-express-2019:
           description_short: 'Introducción a las ciencias de la computación para preescolar:
             combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
@@ -3780,6 +3836,8 @@ es:
               name: Tu huella Digital
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
+            Loops in Artist:
+              name: Bucles en Artista
             Spelling Bee:
               name: Concurso de Ortografía
         removed19:
@@ -4099,3 +4157,15 @@ es:
               name: Importación y exportación de datos
             Sample Apps:
               name: Aplicaciones de ejemplo
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            Building a Foundation:
+              name: Construyendo una Base
+            Loops in Artist:
+              name: Bucles en Artista
+            Build a Star Wars Game:
+              name: Construye un juego de la Guerra de las Galaxias

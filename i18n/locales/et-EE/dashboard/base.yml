@@ -744,6 +744,8 @@ et:
     csp_variables: 'Muutujad'
     csp_conditionals: 'Tingimuslaused'
     csp_functions: 'Funktsioonid'
+    csp_lists: 'Loendid'
+    csp_loops: 'Tsüklid'
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
