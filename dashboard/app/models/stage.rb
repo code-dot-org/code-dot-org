@@ -185,7 +185,7 @@ class Stage < ActiveRecord::Base
         level_json = {
           id: script_level.id,
           position: script_level.position,
-          named_level: script_level.named_level? || script_level.named,
+          named_level: script_level.named_level?,
           bonus_level: !!script_level.bonus,
           assessment: script_level.assessment,
           progression: script_level.progression,
