@@ -61,6 +61,10 @@ Scenario: Toggle on Lockable Level
   And element "#locked-stage" is not visible
   And I see no difference for "view as teacher while locked"
 
+  And I click selector ".section-student .name a" to load a new page
+  And I wait until element "#locked-stage" is visible
+  And element ".level-group" is not visible
+
   Then I am on "http://studio.code.org/s/allthethings"
   And I select the first section
   Then I open the stage lock dialog
@@ -73,5 +77,12 @@ Scenario: Toggle on Lockable Level
   Then I click selector ".uitest-viewAsStudent"
   And element "#locked-stage" is not visible
   And I see no difference for "view as student while unlocked"
+
+  Then I click selector ".uitest-viewAsTeacher"
+  And element "#locked-stage" is not visible
+
+  And I click selector ".section-student .name a" to load a new page
+  And I wait until element "#locked-stage" is visible
+  And element ".level-group" is not visible
 
   And I close my eyes
