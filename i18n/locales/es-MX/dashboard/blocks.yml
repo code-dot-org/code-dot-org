@@ -750,6 +750,7 @@ es-MX:
         options:
           CHOICE:
             '"this"': este
+            '"other"': otro
       gamelab_groupLength:
         text: número de {THIS}
       gamelab_hasBehavior:
@@ -1426,6 +1427,7 @@ es-MX:
         options:
           CHOICE:
             '"this"': este
+            '"other"': otro
       aalab_jumpTo:
         text: aalab {SPRITE} saltar a {LOCATION}
       aalab_keyPressed:
