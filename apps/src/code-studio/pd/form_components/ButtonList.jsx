@@ -15,6 +15,11 @@ const styles = {
   inputLabel: {
     verticalAlign: 'top',
     marginRight: 15
+  },
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
   }
 };
 
@@ -154,8 +159,8 @@ class ButtonList extends React.Component {
         validationState={validationState}
       >
         <ControlLabel>
+          {this.props.required && <span style={styles.required}>*</span>}
           {this.props.label}
-          {this.props.required && <span style={{color: 'red'}}> *</span>}
         </ControlLabel>
         <FormGroup style={{columnCount: columnCount}}>
           {this.renderInputComponents()}

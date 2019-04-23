@@ -266,8 +266,8 @@ const NameInput = ({
 }) => (
   <FormGroup controlId={id} validationState={validationState}>
     <ControlLabel>
-      {label}
       {REQUIRED}
+      {label}
     </ControlLabel>
     <FormControl
       type="text"
@@ -288,4 +288,12 @@ NameInput.propTypes = {
   handleChange: PropTypes.func
 };
 
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;

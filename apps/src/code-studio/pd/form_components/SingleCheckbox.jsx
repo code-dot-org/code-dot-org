@@ -2,7 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Checkbox} from 'react-bootstrap';
 
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;
 
 export default class SingleCheckbox extends React.Component {
   static propTypes = {
@@ -32,8 +40,8 @@ export default class SingleCheckbox extends React.Component {
         validationState={this.props.validationState}
         style={this.props.style}
       >
-        {this.props.label}
         {this.props.required && REQUIRED}
+        {this.props.label}
       </Checkbox>
     );
   }

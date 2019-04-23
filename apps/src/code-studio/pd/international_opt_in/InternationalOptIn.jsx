@@ -9,6 +9,16 @@ import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;
+
 export default class InternationalOptIn extends FormController {
   static propTypes = {
     accountEmail: PropTypes.string.isRequired,
@@ -172,8 +182,8 @@ class InternationalOptInComponent extends FormComponent {
           <Row>
             <Col md={6}>
               <ControlLabel>
+                {REQUIRED}
                 {i18n.workshopDate()}
-                <span style={{color: 'red'}}> *</span>
               </ControlLabel>
             </Col>
           </Row>

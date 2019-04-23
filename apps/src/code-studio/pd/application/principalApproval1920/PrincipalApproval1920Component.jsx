@@ -55,6 +55,16 @@ const REPLACE_COURSE_FIELDS = [
 const IMPLEMENTATION_FIELDS = ['csdImplementation', 'cspImplementation'];
 const YEAR = '2019-20';
 
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;
+
 export default class PrincipalApproval1920Component extends LabeledFormComponent {
   static labels = PageLabels;
 
@@ -101,8 +111,8 @@ export default class PrincipalApproval1920Component extends LabeledFormComponent
           <Row>
             <Col md={6}>
               <ControlLabel>
+                {REQUIRED}
                 School
-                <span style={{color: 'red'}}> *</span>
               </ControlLabel>
             </Col>
           </Row>

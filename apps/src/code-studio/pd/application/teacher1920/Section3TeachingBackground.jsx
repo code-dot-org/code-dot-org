@@ -11,6 +11,16 @@ import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDr
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {styles} from './TeacherApplicationConstants';
 
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;
+
 export default class Section3TeachingBackground extends LabeledFormComponent {
   static labels = {
     ...PageLabels.section3TeachingBackground,
@@ -59,8 +69,8 @@ export default class Section3TeachingBackground extends LabeledFormComponent {
           <Row>
             <Col md={6}>
               <ControlLabel>
+                {REQUIRED}
                 School
-                <span style={{color: 'red'}}> *</span>
               </ControlLabel>
             </Col>
           </Row>

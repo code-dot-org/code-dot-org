@@ -9,7 +9,15 @@ import {
   Col
 } from 'react-bootstrap';
 
-const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
+const style = {
+  required: {
+    color: 'red',
+    float: 'left',
+    marginLeft: -8
+  }
+};
+
+const REQUIRED = <span style={style.required}>*</span>;
 
 export default class FieldGroup extends React.Component {
   constructor(props) {
@@ -71,8 +79,8 @@ export default class FieldGroup extends React.Component {
         <Row>
           <Col {...labelWidth}>
             <ControlLabel>
-              {label}
               {required && REQUIRED}
+              {label}
             </ControlLabel>
           </Col>
           {inlineControl && this.renderControl(controlWidth, children, props)}
