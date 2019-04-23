@@ -34,17 +34,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           workshop_enrollment_status: "full"
         }.to_json
       }
-    elsif (csd_or_csp_workshop || @workshop.subject == Pd::Workshop::SUBJECT_CSF_201) && !current_user
+    elsif !current_user
       render :logged_out
-    elsif csd_or_csp_workshop && current_user && current_user.teacher? && !current_user.email.present?
+    elsif current_user.teacher? && !current_user.email.present?
       render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
-      if current_user
-        @enrollment.full_name = current_user.name
-        @enrollment.email = current_user.email
-        @enrollment.email_confirmation = current_user.email
-      end
+      @enrollment.full_name = current_user.name
+      @enrollment.email = current_user.email
+      @enrollment.email_confirmation = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
@@ -61,11 +59,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           bio: File.exist?(bio_file) ? File.open(bio_file, "r").read : nil
         }
       end
-
-      sign_in_prompt_data = {
-        info_icon: ActionController::Base.helpers.asset_url("info_icon.png", type: :image),
-        sign_in_url: CDO.studio_url("/users/sign_in?user_return_to=#{request.url}")
-      }
 
       # We only want to ask each signed-in teacher about demographics once a year.
       # In this enrollment, we'll only ask if they haven't already submitted a
@@ -88,7 +81,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
-          sign_in_prompt_data: sign_in_prompt_data,
           workshop_enrollment_status: "unsubmitted",
           previous_courses: Pd::TeacherCommonApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics

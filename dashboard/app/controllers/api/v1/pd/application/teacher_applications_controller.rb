@@ -12,7 +12,7 @@ module Api::V1::Pd::Application
     end
 
     def send_principal_approval
-      unless @application.emails.exists?(email_type: 'principal_approval')
+      if @application.allow_sending_principal_email?
         @application.queue_email :principal_approval, deliver_now: true
       end
       render json: {principal_approval: @application.principal_approval_state}
