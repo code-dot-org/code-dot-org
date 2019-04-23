@@ -62,7 +62,7 @@ stage 'Encryption with Keys and Passwords', flex_category: 'csp4_1_2018'
 level 'CSP U4L06 SFLP_2019', named: true
 level 'The Vigenere Cipher Widget_2019', progression: 'The Vigenere Cipher Widget', named: true
 level 'How Secure Is Your Password?_2018_2019', progression: 'How Secure Is Your Password?', named: true
-level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys'
+level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys', named: true
 assessment 'U2L14 Free Response Getting Started_2019', progression: 'Check Your Understanding'
 assessment 'U2L14 Assessment_2018_2019', progression: 'Check Your Understanding'
 assessment 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding'
