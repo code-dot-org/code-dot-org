@@ -130,6 +130,24 @@ Resources:
       Description: !Sub "Reporting Read Replica DB Parameters for ${AWS::StackName}."
       Family: mysql5.7
       Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['Replica'].compact.to_json %>
+  AuroraClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraCluster'].compact.to_json %>
+  AuroraWriterDBParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Aurora Writer Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraWriter'].compact.to_json %>
+  AuroraReportingReplicaDBParameters:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: !Sub "Aurora Reporting Replica Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingReplica'].compact.to_json %>
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
