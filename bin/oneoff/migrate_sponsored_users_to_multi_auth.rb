@@ -2,6 +2,11 @@
 
 require_relative '../../dashboard/config/environment'
 
+# Extend max query execution time; the default 30sec timeout is too short for
+# our purposes
+MAX_QUERY_EXECUTION_TIME = 1_200_000
+ActiveRecord::Base.connection.execute "SET SESSION MAX_EXECUTION_TIME=#{MAX_QUERY_EXECUTION_TIME};"
+
 # The only effect that user.migrate_to_multi_auth has on sponsored users is to
 # update the "provider" field to "migrated", so for simplicity we do all those
 # directly with SQL
