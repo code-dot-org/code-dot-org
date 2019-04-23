@@ -13,6 +13,7 @@ assessment 'U3L07 Free Response Reflection_2018', progression: 'Check Your Under
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
+assessment 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'

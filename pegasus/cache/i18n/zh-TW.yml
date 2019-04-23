@@ -1641,6 +1641,7 @@ zh-TW:
   hoc2018_mc_journey: 用程式在 Minecraft 中旅行。
   hoc2018_dance_party_main_heading: 舞蹈派對
   hoc2018_dance_party_landing_title: 舞蹈
+  hoc2018_dance_party_subheading: 協助翻譯舞蹈派對
   hoc2018_dance_create_your_own_dance_title: 創建屬於你的舞蹈派對
   hoc2018_dance_party_box_title: 舞蹈派對
   hoc2018_dance_party_box_description: 編寫一個舞蹈派對程式與你的朋友分享！
@@ -1664,5 +1665,9 @@ zh-TW:
   hoc2018_aquatic_video2: Minecraft 水上巡航 - 迴圈（Loops）
   hoc2018_aquatic_video3: Minecraft 水上巡航 - 條件式（Conditionals）
   hoc2018_aquatic_video4: 'Minecraft: 水上巡航 - 恭喜'
+  hoc2018_dance_video1: 舞蹈派對 - 入門
+  hoc2018_dance_video2: 舞蹈派對 - 事件（Evnets）
+  hoc2018_dance_video3: 舞蹈派對 - 屬性（Properties）
+  hoc2018_dance_video4: 舞蹈派對 - 恭喜
   page_not_found_title: 找不到頁面
   page_not_found_header: " 404：找不到頁面"
