@@ -6,7 +6,7 @@
   z-index: 99;
 }
 
-#hamburger {
+#hamburger, #help-button {
 
   &.hide-always {
     display: none;
@@ -96,7 +96,7 @@
     }
   }
 
-  #hamburger-contents {
+  #hamburger-contents, #help-contents {
     font-size: 14px;
     list-style: none;
     margin: 0;
@@ -250,34 +250,13 @@
     .show-mobile {
       display: block;
     }
-    #hamburger-contents {
+    #hamburger-contents, #help-contents {
       font-size: 18px;
     }
   }
 }
 
 #help-button {
-  &.hide-always {
-    display: none;
-  }
-
-  &.show-always {
-    display: block;
-  }
-
-  .hide-always {
-    display: none;
-  }
-
-  .show-always {
-    display: block;
-  }
-
-  display: inline-block;
-  float: right;
-  z-index: 99;
-  position: relative;
-  font-size: 14px;
   padding-left: 20px;
   padding-top: 4px;
 
@@ -335,74 +314,4 @@
     }
   }
 
-  #help-contents {
-    font-size: 14px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    right: 0;
-    position: absolute;
-    top: 55px;
-    background-color: $teal;
-    z-index: 99;
-    max-height: 100;
-    overflow-y: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    .item {
-
-      html[dir=rtl] & {
-        margin-left: 0px;
-        margin-right: 25px;
-      }
-
-      color: $white;
-      line-height: 20px;
-      padding: 4px;
-      text-indent: 0;
-      list-style-type: none;
-      border-radius: 2px;
-      padding-bottom: 10px;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      margin-left: 25px;
-      display: block;
-      float: none;
-
-      max-width: 240px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-
-      &:last-of-type {
-        border-bottom: none;
-      }
-      &::before {
-        content: none;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      a {
-        font-family: $gotham-regular;
-        color: $white;
-        text-decoration: none;
-      }
-      @media(max-width: 400px) {
-        .item {
-          max-width: 240px;
-        }
-      }
-    }
-    &.hide-responsive-menu {
-      display: none;
-    }
-  }
-
-  @media(max-width: 970px) {
-    #help-contents {
-      font-size: 18px;
-    }
-  }
 }
