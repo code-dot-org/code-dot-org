@@ -126,18 +126,4 @@ legend center
   |<#white>| View |
 end legend
 
-'left footer
-'  <color:#black><size:14>__**Example (Outdated)**__
-'  <color:#black><size:14>**Request:**
-'  <color:#black><size:14>Display summaries of all surveys for CSF 201 workshop id 10240.
-'  <color:#black><size:14>(Each survey is a Jotform form.)
-'
-'  <color:#black><size:14>**Assembly line:**
-'  <color:#black><size:14>1. FilterWorkshop, FilterInvalidSubmission, FilterDuplicateSubmission
-'  <color:#black><size:14>2. TransformInconsitentMaxValue
-'  <color:#black><size:14>3. AggregateAverageValue, AggregateLatestQuestionText
-'  <color:#black><size:14>4. DecorateCategorizeAndSortQuestion, DecorateWorkshopInfo
-'  <color:#black><size:14>5. PresentSingleWorkshopView
-'end footer
-
 @enduml
