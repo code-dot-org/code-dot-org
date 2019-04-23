@@ -89,7 +89,7 @@ level 'CSD U2 header footer_2019', progression: 'Website Project'
 level 'CSD U2 project review_2019', progression: 'Website Project'
 level 'CSD U2 publish video', named: true
 level 'CSD U2 project share_2019', progression: 'Publishing Your Website', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019', progression: 'Reflection', named: true
+assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019', progression: 'Reflection'
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 level 'CSD U2L10 TFMD_2019', named: true
