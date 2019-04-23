@@ -7,6 +7,7 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csp1'
 version_year '2019'
+project_sharing true
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 assessment 'csp-pre-survey-2017-levelgroup_2018_2019'

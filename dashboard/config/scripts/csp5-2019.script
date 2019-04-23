@@ -7,6 +7,7 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csp5'
 version_year '2019'
+project_sharing true
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSP U5L01 SFLP_2019', named: true

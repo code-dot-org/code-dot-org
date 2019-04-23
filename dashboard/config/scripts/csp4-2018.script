@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"CS Principles Mid-Year Survey Now Open!", "det
 family_name 'csp4'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'What is Big Data?', flex_category: 'csp4_1_2018'
 level 'CSP U4L01 SFLP', named: true
