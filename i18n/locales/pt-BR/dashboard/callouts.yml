@@ -471,6 +471,8 @@ pt-BR:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 5_callout:
         behaviors_edit: Adicione código para esse comportamento.
+      behaviors free play_callout:
+        behaviors_edit: Adicione código para esse comportamento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Use este laço para coletar todo o néctar (ou mel) de uma flor (ou favo de mel).
       course3_artist_functions_challenge1_callout:

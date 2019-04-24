@@ -4,84 +4,84 @@ login_required true
 student_detail_progress_view true
 
 stage 'Unit 2 Overview', flex_category: 'required'
-named_level 'What\'s inside and how is it organized?'
-named_level 'Introduction to Unit 2'
-named_level 'Curriculum Framework Connections in Unit 2'
-named_level 'Unit 2 Tool Talk'
-named_level 'Practice Performance Tasks in Unit 2'
-named_level 'Unit 2 Self-Assessment'
+level 'What\'s inside and how is it organized?', named: true
+level 'Introduction to Unit 2', named: true
+level 'Curriculum Framework Connections in Unit 2', named: true
+level 'Unit 2 Tool Talk', named: true
+level 'Practice Performance Tasks in Unit 2', named: true
+level 'Unit 2 Self-Assessment', named: true
 
 stage 'AP Preparation and Support', flex_category: 'required'
-named_level 'Unit 2 Vocab and Concept Review Activity'
-named_level 'AP Test Prep Guidance'
+level 'Unit 2 Vocab and Concept Review Activity', named: true
+level 'AP Test Prep Guidance', named: true
 
 stage 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression', flex_category: 'content'
-named_level '2.1 and 2.2 Lesson Connections'
-named_level 'Overview of File Sizes and Metrics'
-named_level 'Introduction to Lossless Compression and the Text Compression Widget'
-named_level 'What is a Heuristic?'
-named_level 'How to: Text Compression Widget'
-named_level 'Widget: Text Compression'
-named_level 'Task: Write your own Heuristic'
-named_level 'U2 L1 - 2: Teaching and Student Support Plan'
+level '2.1 and 2.2 Lesson Connections', named: true
+level 'Overview of File Sizes and Metrics', named: true
+level 'Introduction to Lossless Compression and the Text Compression Widget', named: true
+level 'What is a Heuristic?', named: true
+level 'How to: Text Compression Widget', named: true
+level 'Widget: Text Compression', named: true
+level 'Task: Write your own Heuristic', named: true
+level 'U2 L1 - 2: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 3 - 4 : Encoding Images', flex_category: 'content'
-named_level '2.3 and 2.4 Lesson Connections'
-named_level 'How are Images Encoded?'
-named_level 'A Note On Metadata in the Curriculum Framework'
-named_level 'Widget: Black and White Pixelation'
-named_level 'Binary, Hex, and Images'
-named_level 'Widget: Color Pixelation'
-named_level 'Task: Make your own Favicon'
-named_level 'U2 L3 - 4: Teaching and Student Support Plan'
+level '2.3 and 2.4 Lesson Connections', named: true
+level 'How are Images Encoded?', named: true
+level 'A Note On Metadata in the Curriculum Framework', named: true
+level 'Widget: Black and White Pixelation', named: true
+level 'Binary, Hex, and Images', named: true
+level 'Widget: Color Pixelation', named: true
+level 'Task: Make your own Favicon', named: true
+level 'U2 L3 - 4: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme', flex_category: 'content'
-named_level '2.5 and 2.6 Lesson Connections'
-named_level 'Introduction to Lossy Compression'
-named_level 'Lossy vs. Lossless Compression'
-named_level 'Task: Encode an Experience'
-named_level 'U2 L5 - 6: Teaching and Student Support Plan'
+level '2.5 and 2.6 Lesson Connections', named: true
+level 'Introduction to Lossy Compression', named: true
+level 'Lossy vs. Lossless Compression', named: true
+level 'Task: Encode an Experience', named: true
+level 'U2 L5 - 6: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 7 - 10: Interpreting Visual Data', flex_category: 'content'
-named_level '2.7 -  10 Lesson Connections'
-named_level 'How to: Setup your Class Data Tracker'
-named_level 'Correlation vs Causation'
-named_level 'How to: Use Google Trends'
-named_level 'Task: Explore Google Trends'
-named_level 'What Makes an Effective Visualization?'
-named_level 'Data Visualizations 101'
-named_level 'U2 L7 - 10: Teaching and Student Support Plan'
+level '2.7 -  10 Lesson Connections', named: true
+level 'How to: Setup your Class Data Tracker', named: true
+level 'Correlation vs Causation', named: true
+level 'How to: Use Google Trends', named: true
+level 'Task: Explore Google Trends', named: true
+level 'What Makes an Effective Visualization?', named: true
+level 'Data Visualizations 101', named: true
+level 'U2 L7 - 10: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 11 - 15: Communicating with Visualizations', flex_category: 'content'
-named_level '2.11 - 15 Lesson Connections'
-named_level 'How to: Make Charts from your Data'
-named_level 'Selecting an Appropriate Visualization for your Data'
-named_level 'Cleaning Data'
-named_level 'Summary Tables 101'
-named_level 'U2 L11 - 15: Teaching and Student Support Plan'
+level '2.11 - 15 Lesson Connections', named: true
+level 'How to: Make Charts from your Data', named: true
+level 'Selecting an Appropriate Visualization for your Data', named: true
+level 'Cleaning Data', named: true
+level 'Summary Tables 101', named: true
+level 'U2 L11 - 15: Teaching and Student Support Plan', named: true
 
 stage 'Group Work and Peer Learning', flex_category: 'practice'
-named_level 'Overview: Group Work and Peer Learning'
-named_level 'Collaborative Learning and Group Work: Description and Strategies'
-named_level 'The Official Peer Instruction Blog'
-named_level 'the Journal of Peer Learning'
-named_level 'Unit 2 Teaching Practice Plan: Group Work and Peer Learning'
+level 'Overview: Group Work and Peer Learning', named: true
+level 'Collaborative Learning and Group Work: Description and Strategies', named: true
+level 'The Official Peer Instruction Blog', named: true
+level 'the Journal of Peer Learning', named: true
+level 'Unit 2 Teaching Practice Plan: Group Work and Peer Learning', named: true
 
 stage 'Balancing Teachers and Tools', flex_category: 'practice'
-named_level 'Overview: Balancing Teachers and Tools'
-named_level 'Classroom Management Tips for School Computer Labs'
-named_level 'Considerations for the 1-to-1 Classroom'
-named_level 'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools'
+level 'Overview: Balancing Teachers and Tools', named: true
+level 'Classroom Management Tips for School Computer Labs', named: true
+level 'Considerations for the 1-to-1 Classroom', named: true
+level 'Unit 2 Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
 stage 'Discovery Learning', flex_category: 'practice'
-named_level 'Overview: Discovery Learning'
-named_level 'Discovery learning definition and history'
-named_level 'Discovery learning techniques'
-named_level 'Unit 2 Teaching Practice Plan: Discovery Learning'
+level 'Overview: Discovery Learning', named: true
+level 'Discovery learning definition and history', named: true
+level 'Discovery learning techniques', named: true
+level 'Unit 2 Teaching Practice Plan: Discovery Learning', named: true
 
 stage 'Measuring Student Learning', flex_category: 'practice'
-named_level 'Overview: Capturing Student Learning'
-named_level 'What is the difference between formative and summative assessment?'
-named_level 'Designing Assessment Questions'
-named_level 'Classroom Assessment Techniques'
-named_level 'Unit 2 Teaching Practice Plan: Assessing Student Learning'
+level 'Overview: Capturing Student Learning', named: true
+level 'What is the difference between formative and summative assessment?', named: true
+level 'Designing Assessment Questions', named: true
+level 'Classroom Assessment Techniques', named: true
+level 'Unit 2 Teaching Practice Plan: Assessing Student Learning', named: true

@@ -204,6 +204,9 @@ es-MX:
       CSD U2 formatting map: Formatear HTML
       CSD U2 formatting map_2018: Formatear HTML
       CSD U2 formatting map_2019: Formatear HTML
+      CSD U2 images map: Imágenes en HTML
+      CSD U2 images map_2018: Imágenes en HTML
+      CSD U2 images map_2019: Imágenes en HTML
       CSD U2 lists map: Listas en HTML
       CSD U2 lists map_2018: Listas en HTML
       CSD U2 lists map_2019: Listas en HTML
@@ -369,6 +372,9 @@ es-MX:
       CSD U3 challenge new shape: 'Desafío: forma de formas'
       CSD U3 challenge new shape_2018: 'Desafío: forma de formas'
       CSD U3 challenge new shape_2019: 'Desafío: forma de formas'
+      CSD U3 collisions build isTouching: Detección de colisiones
+      CSD U3 collisions build isTouching_2018: Detección de colisiones
+      CSD U3 collisions build isTouching_2019: Detección de colisiones
       CSD U3 collisions car intro: Juego de muestra
       CSD U3 collisions car intro_2018: Juego de muestra
       CSD U3 collisions car intro_2019: Juego de muestra
@@ -604,6 +610,7 @@ es-MX:
       CSD U6 analog challenge_2019: 'Desafío: entender los sensores'
       CSD U6 arrays intro: Introducción a los arreglos
       CSD U6 arrays intro_2018: Introducción a los arreglos
+      CSD U6 arrays intro_2019: Arreglos
       CSD U6 arrays video: 'Video: introducción a arreglos'
       CSD U6 challenge motorcycle: 'Desafío: motocicleta'
       CSD U6 challenge motorcycle_2018: 'Desafío: motocicleta'
@@ -659,6 +666,9 @@ es-MX:
       CSD U6 sensor experiment embedded: Experimento con sensores
       CSD U6 sensor experiment embedded_2018: Experimento con sensores
       CSD U6 sensor experiment embedded_2019: Experimento con sensores
+      CSD U6 setProperty Map: Diseñar pantallas con código
+      CSD U6 setProperty Map_2018: Diseñar pantallas con código
+      CSD U6 setProperty Map_2019: Diseñar pantallas con código
       CSD U6 tugowar conditional map: Actualización de condicionales
       CSD U6 tugowar demo: Demo - Capturar error
       CSD U6 tugowar demo_2018: Demo - Capturar error
@@ -1198,6 +1208,7 @@ es-MX:
       U5-AP-Algorithm-Does-It-Count: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2018: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2019: Respuesta de práctica AP - Puntuar la respuesta
+      U7 L01 More with Functions: 'Condicionales: expresiones booleanas'
       Using Accelerometer Events_2018: Usar eventos del acelerómetro
       Using Accelerometer Events_2019: Usar eventos del acelerómetro
       'Video: Intro to CSS Part 2_2018': 'Video: introducción a CSS - Parte 2'

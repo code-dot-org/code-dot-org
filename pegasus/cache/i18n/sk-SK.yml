@@ -23,7 +23,7 @@ sk-SK:
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
-  petition_message: Každý študent v každej škole by mal mať možnosť naučiť sa informatiku
+  petition_message: Aby každý študent na každej škole dostal možnosť študovať informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
     spolu s # ďalšími.'
   petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu
@@ -1899,6 +1899,7 @@ sk-SK:
   full_course_category_name: Všetky kurzy
   user_header_label: Ahoj %{username}
   user_header_team: Tím
+  user_header_my_projects: Moje projekty
   user_header_settings: Nastavenia účtu
   user_header_logout: Odhlásiť sa
   user_header_signin: Prihlásiť sa
