@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:51.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -91,10 +91,10 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Model complex movement on a coordinate plane",
-    "rubric_exceeds": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.  The rock reaches a reasonable height, and there are no extra blocks of code.",
-    "rubric_meets": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.",
-    "rubric_approaches": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
-    "rubric_no_evidence": "There is no change to the rock's velocity as the program is run.",
+    "rubric_performance_level_1": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.  The rock reaches a reasonable height, and there are no extra blocks of code.",
+    "rubric_performance_level_2": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.",
+    "rubric_performance_level_3": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
+    "rubric_performance_level_4": "There is no change to the rock's velocity as the program is run.",
     "preload_asset_list": null
   },
   "published": true,

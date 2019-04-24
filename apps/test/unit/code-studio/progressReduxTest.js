@@ -466,19 +466,19 @@ describe('progressReduxTest', () => {
         const status = statusForLevel(level, levelProgress);
         assert.strictEqual(status, LevelStatus.perfect);
       });
-      it('returns LevelStatus.completed_assessment for assessment level when experiment is on', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
-        const level = {
-          ids: [123],
-          kind: LevelKind.assessment
-        };
-        const levelProgress = {
-          123: TestResults.ALL_PASS
-        };
-        const status = statusForLevel(level, levelProgress);
-        assert.strictEqual(status, LevelStatus.completed_assessment);
-        experiments.isEnabled.restore();
-      });
+      // it('returns LevelStatus.completed_assessment for assessment level when experiment is on', () => {
+      //   sinon.stub(experiments, 'isEnabled').returns(true);
+      //   const level = {
+      //     ids: [123],
+      //     kind: LevelKind.assessment
+      //   };
+      //   const levelProgress = {
+      //     123: TestResults.ALL_PASS
+      //   };
+      //   const status = statusForLevel(level, levelProgress);
+      //   assert.strictEqual(status, LevelStatus.completed_assessment);
+      //   experiments.isEnabled.restore();
+      // });
 
       it('does not return LevelStatus.completed_assessment for assessment level when experiment is off', () => {
         sinon.stub(experiments, 'isEnabled').returns(false);

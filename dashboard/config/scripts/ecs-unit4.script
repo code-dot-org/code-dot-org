@@ -41,12 +41,12 @@ level 'ECSPD U4 D 25-30 Intro'
 stage 'Unit 4 Challenge'
 level 'ecspd-unit 4 what is the challenge'
 level 'ECSPD U4 Challenges'
-named_level 'ECS Unit 4 Challenge Selection'
+level 'ECS Unit 4 Challenge Selection', named: true
 level 'ECSD3-u5 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
-named_level 'ECS Unit 4 Challenge Submission'
+level 'ECS Unit 4 Challenge Submission', named: true
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'

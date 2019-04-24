@@ -13,6 +13,7 @@ assessment 'U3L07 Free Response Reflection_2018', progression: 'Check Your Under
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
+assessment 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
@@ -55,11 +56,11 @@ stage 'Teacher Surveys (Variables)', lockable: true, flex_category: 'csp_variabl
 assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)'
 
 stage 'Conditionals Explore', flex_category: 'csp_conditionals'
-named_level 'U4 L06 Introduction to Conditionals: Boolean Expressions'
+level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
 level 'U4 L05 CYU Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Conditionals Investigate', flex_category: 'csp_conditionals'
-named_level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements'
+level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
 level 'U4 L06 Thermostat App v4', progression: 'If-Statements'
 level 'U4 L06 Thermostat App v4 Code', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements', progression: 'If-Else Statements'
