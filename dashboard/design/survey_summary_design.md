@@ -13,7 +13,7 @@ Last updated: April 22, 2019
   - [4.3. Build generic survey pipeline](#43-build-generic-survey-pipeline)
     - [A. Overview](#a-overview)
     - [B. Detail design](#b-detail-design)
-    - [C. Build from the end](#c-build-from-the-end)
+    - [C. Start with a hybrid solution](#c-start-with-a-hybrid-solution)
 - [5. Recommendation](#5-recommendation)
   - [5.1. Rollout plan](#51-rollout-plan)
   - [5.2 Five components to build first](#52-five-components-to-build-first)
@@ -22,41 +22,44 @@ Last updated: April 22, 2019
 
 
 # 1. Summary
-This technical design doc explores 3 options we have to create and present summaries of JotForm surveys in workshop dashboard. Its purpose is to gather feedbacks from the team to decide what is the best option to invest in right now.
+This technical design doc explores 3 options we have to create and present summaries of JotForm surveys in workshop dashboard. Its purposes are
+1. To get the team on the same page on the problem space
+2. To gather feedbacks to decide what is the best option for us to invest in.
 
-This design is not about embedding JotForm survey in our site or preparing survey data for analysis in Tableau.
+What it is not:
+- The design is at architectural level, not at component level. It aims to provide enough data to make decision, not yet enough to implement immediately.
+- This design is not about embedding JotForm survey in our site or preparing survey data for analysis in Tableau.
 
 
 # 2. Problem
-Currently it takes quite a lot of work to create and present summary for a new survey in our workshop dashboard.
+Currently it takes quite a lot of work to calculate summary for new JotForm survey and present results in our workshop dashboard. Specifically, we want to add 2 new CSF 201 (Deep Dive) surveys and 1 CSF 101 (Intro) survey this summer.
 
-The reason is that components in the processing pipeline are tightly coupled together. The current data models, controller actions, helpers and views are built for a few specific type of workshop surveys such as local-summer-workshop and post-course surveys. Adding support for a new survey means creating new model, controller, view, and a lot of tests.
+The difficulty is that components in the current survey summary pipeline are tightly coupled together. The data models, controller actions, helpers and views are built for a few specific type of workshop surveys such as local-summer-workshop and post-course surveys. Adding support for a new survey means creating new model, controller, view, and a lot of tests.
 
-In the case of new CSF Deep Dive surveys (pre and post-workshop), we try to reuse data model and UI view from local summer workshop, which already has pre-workshop, daily and post-workshop surveys. However, we cannot directly reuse the logic to create survey summary because of its tight coupling to context of summer workshop. We have 2 approaches to solve this which are discussed in Option 1 below. Both approaches are not cheap and not sustainable if we want to support more JotForm surveys in the future.
+In the case of new CSF 201 surveys (pre and post-workshop), we try to reuse data model and UI view from local summer workshop, which already has pre-workshop, daily and post-workshop surveys. However, we cannot directly reuse the logic to create survey summary because of its tight coupling to summer workshop context. We have 2 approaches to solve this issue and will discuss them in section 4.1. Both approaches are not cheap and not sustainable if we want to support more JotForm surveys in the future.
 
 
 # 3. Motivation
-- How to reduce the engineering cost to support 100+ JotForm workshop surveys? (Right now I think we have about 5 to 10.)
-- Can we build a generic pipeline to ingest survey submissions, summarize them, and present the result in workshop dashboard for any survey?
-- How much of the current pipeline will still be relevant if we decide to switch to a different survey platform (Qualtrics, SurveyMonkey etc.) in the future?
+- Can we support several order of magnitude number of JotForm surveys? (Which in turn will help us make more data-driven decisions.)
+- Can we build a generic pipeline that can support any new survey (from ingesting survey submissions, summarizing them, and presenting the result in workshop dashboard)?
+- How much of the pipeline we build will still be relevant if we decide to switch to a different survey platform (Qualtrics, SurveyMonkey etc.)?
 
 
 # 4. Options
-We have 3 following options to create and present JotForm survey summaries in workshop dashboard.\
-Specifically, we need to support at least 3 new surveys in 2019, CSF Deep Dive pre & post workshop surveys and CSF Intro survey.
+We have 3 following options to calculate and present JotForm survey summaries in workshop dashboard.
 
 ## 4.1. Update current pipeline to support 2019 surveys
 We will reuse the current pipeline as much as possible to support 3 new CSF surveys in 2019.
 
-This option is based on `local_workshop_daily_survey_report` pipeline. We reuse its data model `WorkshopDailySurvey` and UI view `local_summer_workshop_daily_survey/results.jsx`. We will modify its logic in to retrieve and summarize survey results, which is currently tightly coupled to summer workshop context. This logic lives in `WorkshopSurveyReportController` and `WorkshopSurveyResultsHelper`.
+This option is based on `local_workshop_daily_survey_report` pipeline. We reuse its data model `WorkshopDailySurvey` and UI view `local_summer_workshop_daily_survey/results.jsx`. We will modify the parts that retrieve and summarize survey results, which are currently tightly coupled to summer workshop context. This logic lives in `WorkshopSurveyReportController` and `WorkshopSurveyResultsHelper`.
 
 2 approaches:
 - Modify this logic to make it more generic with the risk of introducing regression (the code is complex).
 - Create a new path separate from the existing one, which means adding substantial duplicated code.
 
-**Pros:** Risk is small (if creating a new path). Amount of new code could is not small but manageable. We do just enough to support 3 new surveys in 2019.
+**Pros:** Risk is small (if creating a new path). Amount of new code is not small but manageable. We do just enough to support 3 new surveys in 2019.
 
-**Cons:** Not scalable when we have more surveys. Could become thrown-away work if we decide to move to generic pipeline later.
+**Cons:** Not scalable when we have more surveys. Could become thrown-away work if we decide to move to a generic pipeline later.
 
 **Estimated Cost:** 5 ± 1 days.
 
@@ -65,7 +68,7 @@ JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to
 
 **Pros:** The cheapest option in term of engineering cost to enable. Survey owners can create report themselves. Report is automatically updated (don't need to download data locally and upload to Tableau).
 
-**Cons:** Only suited for very basic reporting with simple calculation and visualization (not the same level as Tableau or PowerBI). User can not interact with the report. Cannot pass parameters to personalize the report. Cannot support our current complex scenarios such as showing facilitators their averages scores across all workshops they've facilitated.
+**Cons:** Only suited for very basic reporting with simple calculation and visualization (not the same level as Tableau or PowerBI). User can not interact with the report. Cannot pass parameters to personalize the report. Cannot support complex scenarios such as showing facilitators their averages scores across all workshops they've facilitated.
 
 **Estimated Cost:** 3 ± 1 days.
 
@@ -74,11 +77,11 @@ JotForm support creating [Visual Report](https://www.jotform.com/help/187-How-to
 Creating a generic pipeline that starts from ingesting survey data, making data searchable, summarizing data, to presenting result in our site.\
 Key features of the new pipeline is the decoupling of code from specific survey or workshop context, and modular design that allows more flexibility to adapt to future requirements.
 
-**Pros:** Minimize work to support new survey. Open for extensions, flexible to change such as adding/removing/updating components because of modular design. Enable new scenarios such as A/B testing in Survey.
+**Pros:** Minimize work to support future surveys. Open for extensions, flexible for changes such as adding/removing/updating components. Enable new scenarios such as A/B testing in Survey.
 
-**Cons:** Expensive. (This could be mitigated by building the pipeline from the end first as discussed below.)
+**Cons:** Expensive. (This could be mitigated by building a hybrid solution first as presented in section C.)
 
-**Estimated Cost:** 3-4 weeks for the complete pipeline. 7 ± 2 days to implement step 3 (Summarize) and the first component of step 4 (Present) first, enough to support CSF 2019 surveys.
+**Estimated Cost:** 3-4 weeks for the complete pipeline. 5 ± 1 days for the hybrid solution.
 
 ### B. Detail design
 The pipeline has 4 main actions
@@ -101,34 +104,27 @@ Some patterns this design follows
 - _Strategy Pattern_\
   Define an interface common to a family of algorithms, e.g. survey result reducers, and make them interchangeable. This lets the algorithm vary independently from clients that use it.
 
-### C. Build from the end
-We don't have to start from step 1 (Ingest), we can start from step 3 (Summarize) and create adapters to connect it to the current pipeline.
-
-Specifically for CSF survey work, we will create an input adapter to retrieve survey data from the current data model, and an output adapter to convert summary result to format that the current UI view understands. Looking at it from a different angle, these adapters are just concrete implementations of Retriever and Decorator.
+### C. Start with a hybrid solution
+We can create a hybrid solution, combining existing pipeline and necessary new components, to quickly support 2019 surveys first. We will focus on step 3 (Summarize) and skip components in step 1, 2, and the last part of step 4. Components in step 3 will read from the current data models and return results to the current UI view.
 
 
 # 5. Recommendation
-Option 3. Build a new generic survey pipeline, starting from step 3 (Summarize module) first and create adapters to plug it in the current pipeline. This approach allows us to support 2019 CSF survey sooner by taking advantage of the existing work. Then, gradually build out the rest of the pipeline later.
+Option 3. Build a new generic survey pipeline starting from step 3 (Summarize module)and connect it to existing pipeline. This approach allows us to support 2019 CSF surveys sooner by taking advantage of the existing work. Then, gradually build out the rest of the pipeline later. Eventually retire the current pipeline.
 
 ## 5.1. Rollout plan
 1. Build 5 components just enough to support 2019 surveys
 * The 5: Retriever (for current db), Transformer, Mapper, Reducer and Decorator (for current UI view). They are components in step 3 and 4 of the above diagram. The path to process 2019 surveys is a hybrid of older and newer pipelines.
 
-1. Build Fetcher (step 1) to download survey submissions from JotForm to our database.
+2. Build Fetcher (step 1) to download survey submissions from JotForm to our database.
+3. Build Parser, Indexer and Filter (step 4) to allow quick submission search.
+4. Build another implementation of Retriever (in step 3) which will read from the new db created in step 2 & 3.
+5. Build Presenter (in step 4) that can display result from a single query (e.g. summary results of 1 JotForm survey of a specific workshop)
+6. Build another implementation of Decorator (in step 4) to provide enough information for the Presenter built in step 5.
+7. Switch 2019 surveys to use the new pipeline. It should then be completely independent from the older pipeline.
 
-2. Build Parser, Indexer and Filter (step 4) to allow quick submission search.
+8. All new surveys will use the new pipeline form this point forward.
 
-3. Build another implementation of Retriever (in step 3) which will read from the new db created in step 2 & 3.
-
-4. Build Presenter (in step 4) that can display result from a single query (e.g. summary results of 1 JotForm survey of a specific workshop)
-
-5. Build another implementation of Decorator (in step 4) to provide enough information for the Presenter built in step 5.
-
-6. Switch 2019 surveys to use the new pipeline. It should then be completely independent from the older pipeline.
-
-7. All new surveys will use the new pipeline form this point forward.
-
-8. Migrate surveys using older pipeline to the newer one when we think it's worth to do so.
+9.  Migrate surveys using older pipeline to the newer one when we think it's worth to do so.
 
 ## 5.2 Five components to build first
 This is step 1 in the rollout plan.\
