@@ -6,7 +6,7 @@ az:
         şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir neçə
         blokdan istifadə edin (hər xəttin uzunluğu 100 piksledir).
       2-3 Artist 11: "Stop işarəsini eni 100 piksel olan səkkizbucaqlı çəkməklə, haşiyəyə
-        al. \r\n\r\n"
+        al. \\\r\n\\\r"
       2-3 Artist 3: Bu papağın hündürlüyü 100 pikseldir. Bundan 70 piksel kiçik bir
         papaq çəkin.
       2-3 Artist 3new: 'Qırmızı papaq 100 piksel uzunluğundadır. Bundan 70 piksel
@@ -126,7 +126,7 @@ az:
         3 dəfə icra olunan "təkrar et" blokundan istifadə etməklə həll edin. Növbəti
         3 bloku boz "təkrar et" blokunun içinə yerləşdirməklə cəhd edin: get, get,
         dön.'
-      4-5 Maze Conditionals 9: "\"Əgər-əks halda\" bloklu bir məşq tapmacası daha!\r\n\r\nBarmağınızı
+      4-5 Maze Conditionals 9: "\"Əgər-əks halda\" bloklu bir məşq tapmacası daha!\\\r\n\\\r\nBarmağınızı
         üzərində gəzdirin, görün, birinci cəhddən bunu edə bilərsinizmi."
       App Lab test: yoxla
       Course 4 Artist Binary 7: Bu rəsmi bitirin.
@@ -261,9 +261,9 @@ az:
         Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.
       grade4_frozen_functions0: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz
         etmək lazım olduğunu tapa bilərsinizmi?
-      grade4_review_artist1: Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar,
-        hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün bir
-        neçə blokdan istifadə edin (hər xəttin uzunluğu 100 piksledir).
+      grade4_review_artist1: "Salam, mən rəssamam. Siz kod yazmaqla mənə, demək olar
+        ki, hər şey çəkdirə bilərsiniz. Şəkildəki boz xətlərin üzərini cızmağım üçün
+        bir neçə blokdan istifadə edin (Hər xəttin uzunluğu 100 pikseldir)\\\r\n\\\r"
       grade5_artist_binary10: İpuclarını görmək üçün buraya basın.
       grade5_artist_binary8: Bu rəsmi bitirin.
       scrat 16 (copy 1): Palıd qozası! Palıd qozası! Palıd qozası! Mənim oraya ən

@@ -1579,6 +1579,8 @@ fi:
               name: Internet
             Crowdsourcing:
               name: Joukkoistaminen
+            Songwriting:
+              name: Säveltäminen
         express-2019:
           stages:
             Relay Programming:
@@ -1674,3 +1676,11 @@ fi:
           stages:
             While Loops:
               name: Niin kauan kuin -silmukat
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Joukkoistaminen
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            Building a Foundation:
+              name: Rakennetaan perustus

@@ -24,8 +24,8 @@ nl:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Om het huis af te maken moet je een vierkant tekenen!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens * verder *
-          draaien dan je met het vierkant deed.   '
+        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens \* verder
+          \* draaien dan je met het vierkant deed.   '
         2-3_Artist_6_b: Omdat ik al naar rechts kijk, kun je het best eerst vooruit
           bewegen, en dan naar links draaien om de driehoek te maken.
         2-3_Artist_6_c: Elke zijde van de driehoek heeft dezelfde lengte als elke
@@ -49,9 +49,9 @@ nl:
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Denk eraan, je wilt het controle paneel 10 pixels
-          * breder *... dus zorg ervoor dat je 10 tot welk nummer je wilt veranderen
-          * toevoegt *.
-        2-3_Artist_Debugging_10_b: "** Proberen en fouten maken is prima hier!**."
+          \* breder \*... dus zorg ervoor dat je 10 tot welk nummer je wilt veranderen
+          \* toevoegt \*.
+        2-3_Artist_Debugging_10_b: "\\*\\* Proberen en fouten maken is prima hier!\\*\\*."
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
       2-3 Artist Debugging 3_authored_hint:
@@ -98,19 +98,21 @@ nl:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "** 115 + 45 = 160 **"
+        2-3_Artist_Functions_3_a: "\\*\\* 115 + 45 = 160 \\*\\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: De kunstenaar moet 120 graden draaien tussen elk
           vierkant om dit ontwerp te voltooien.
@@ -121,8 +123,8 @@ nl:
         2-3_Artist_Loops_New_11_a: |-
           Vergeet niet dat de code van de laatste puzzel was:
 
-          ![] (https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
-        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het ** einde **
+          \!\[] (<https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png>)
+        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het \*\* einde \*\*
           van de code binnen de lus.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Voordat je begint met de diamant, moet de kunstenaar
@@ -137,10 +139,11 @@ nl:
           Daarom hoeven we geen extra 'draai links met' blok toe te voegen voor we weer starten.
         2-3_Artist_Loops_New_13_b: |-
           Voor elke diamant moet de kunstenaar:
-          - bewegen
-          - 120 graden naar rechts draaien
-          - bewegen
-          - 60 graden naar rechts draaien.
+
+          -   bewegen
+          -   120 graden naar rechts draaien
+          -   bewegen
+          -   60 graden naar rechts draaien.
 
           En het dan opnieuw doen!
       2-3 Artist Loops New 9_authored_hint:
@@ -152,11 +155,13 @@ nl:
         2-3_Artist_Nested_Loops_1_a: Vergeet niet om alle grijze blokken binnen je
           lus te plaatsen.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   ** 360/12 = 30 **
+        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   \*\* 360/12 = 30
+          \*\*
         2-3_Artist_Nested_Loops_3_b: Vergeet niet om alle grijze blokken en je draai
           blok binnen een lus te plaatsen.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   ** 360/12 = 30 **
+        2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   \*\* 360/12 = 30
+          \*\*
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: |-
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
@@ -166,7 +171,7 @@ nl:
         2-3_Artist_Nested_Loops_7_a: Hoe ver moet je draaien in elke lus?
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: Hulp nodig bij het vinden van de juiste hoek?
-          ** 360 / 12 = 30 **
+          \*\* 360 / 12 = 30 \*\*
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Vind je het lastig om te bedenken hoe je de blokken
           beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te
@@ -178,14 +183,19 @@ nl:
 
           ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
 
-          1) Haal 3 keer nectar op
-          - Beweeg 5 keer vooruit
-          - Controleer of het nectar is, als dat zo is, haal het op
-          - Draai naar links
+          1.  Haal 3 keer nectar op
 
-          2) Maak honing
-          - Beweeg één keer vooruit
-          - Maak twee honing
+          2.  Beweeg 5 keer vooruit
+
+          3.  Controleer of het nectar is, als dat zo is, haal het op
+
+          4.  Draai naar links
+
+          5.  Maak honing
+
+          6.  Beweeg één keer vooruit
+
+          7.  Maak twee honing
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Denk er aan: Paarse bloemen hebben 0 of 1 nectar
           en ze kunnen veranderen, iedere keer dat je het programma uitvoert.'
@@ -318,7 +328,7 @@ nl:
         4-5_Artist_5_a: |-
           Vallen en opstaan (trial and error) is een geweldige methode, maar je kan het probleem ook oplossen door 90 graden te delen door drie.
 
-          **90 / 3 = _____**
+          **90 / 3 = **\_****
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: Welke hoek is het kleinst? In welke hoek staat de kunstenaar?
       4-5 Artist 8_authored_hint:
@@ -326,14 +336,13 @@ nl:
           de 2 korte zijden:\n\n**800 - 240 - 240 = 320**\n\nWat is **320/2** ? "
         4-5_Artist_8_b: |-
           Deze afbeelding kan op 2 manieren gemaakt worden!
-          - Teken 2 rechthoeken die **120** lang en **160** breed zijn, met een overlappende zijde
 
-          - Teken één rechthoek die **240** lang en **160** breed is, en voeg dan een lijn in het midden toe.
+          -   Teken 2 rechthoeken die **120** lang en **160** breed zijn, met een overlappende zijde
+
+          -   Teken één rechthoek die **240** lang en **160** breed is, en voeg dan een lijn in het midden toe.
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'Wanneer een driehoek gelijkzijdig is, zijn alle zijden en
+        4-5_Artist_9_a: Wanneer een driehoek gelijkzijdig is, zijn alle zijden en
           hoeken hetzelfde.
-
-'
         4-5_Artist_9_b: Je moet 3 driehoeken van dezelfde grootte tekenen. Vergeet
           niet achter elke driehoek naar de nieuwe positie te springen.
       4-5 Artist Assessment 1_authored_hint:
@@ -437,24 +446,23 @@ nl:
         solution: |-
           **Oplossing**
 
-
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Om het "beweeg vooruit" blok te gebruiken, sleep je het vanuit
           het blokken gebied naar de werkplaats en plak je het direct onder het blok
           "als gestart".
       Course 4 Artist 11_authored_hint:
-        Course_4_Artist_11_a: De halve zeshoek heeft een ** lengte van 30 ** en draait
-          rechts met ** 60 graden **.
-        Course_4_Artist_11_b: De driehoek heeft een ** lengte van 80 ** en draait
-          naar rechts met ** 120 graden **.
+        Course_4_Artist_11_a: De halve zeshoek heeft een \*\* lengte van 30 \*\* en
+          draait rechts met \*\* 60 graden \*\*.
+        Course_4_Artist_11_b: De driehoek heeft een \*\* lengte van 80 \*\* en draait
+          naar rechts met \*\* 120 graden \*\*.
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Elke herhaalde vorm is de combinatie van een **halve
           zeshoek**, gevolgd door **2/3 van een driehoek**. '
         Course_4_Artist_12_b: Het patroon is bijna hetzelfde als in de laatste puzzel.
           De halve achthoek is enkel een beetje groter.
-        Course_4_Artist_12_c: "1) De eerste drie lijnen zijn 60 pixels lang en je
-          moet 60 graden draaien.\n2) De volgende twee lijnen zijn 80 pixels lang
+        Course_4_Artist_12_c: "1.  De eerste drie lijnen zijn 60 pixels lang en je
+          moet 60 graden draaien.\n2.  De volgende twee lijnen zijn 80 pixels lang
           en je moet 120 graden draaien. "
         Course_4_Artist_12_d: |-
           **Oplossing:**
@@ -621,6 +629,7 @@ nl:
           <mutation counter="counter"></mutation>
           <value name="FROM">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -1562,6 +1571,7 @@ nl:
           </block>
           </xml>
       Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         Course_4_SCF_3_f: |-
           **Oplossing:**
 
@@ -1712,7 +1722,7 @@ nl:
         Course_4_SCFL_1_c: |-
           Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.
 
-          De andere 'voor` lus heeft slechts één standaard lus nodig om `counter` keer honing te maken.
+          De andere 'voor`lus heeft slechts één standaard lus nodig om`counter\` keer honing te maken.
         Course_4_SCFL_1_d: |-
           **Oplossing:**
 
@@ -2114,8 +2124,8 @@ nl:
           </block>
           </xml>
       Course 4 SCFL 3_authored_hint:
-        Course_4_SCFL_3_a: De `pendikte ` is 1. De eerste vierkant heeft en zijde
-          van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.
+        Course_4_SCFL_3_a: De `pendikte` is 1. De eerste vierkant heeft en zijde van
+          50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.
         Course_4_SCFL_3_b: De ondoorzichtigheid van de brush is telkens `teller`/2.
         Course_4_SCFL_3_c: Vergeet niet om, nadat je elk vierkant maakt, terug te
           springen, te draaien, opnieuw terug te springen en nog eens te draaien!
@@ -3006,6 +3016,7 @@ nl:
 
           <xml><block type="when_run"><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_number"><title name="NUM">0</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">up</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">down</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">4</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">left</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">8</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">2</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">1</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">2</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">3</title></block></value></block></value></block></next></block>
           <block type="studio_whenSpriteCollided">
+
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">2</title>
           <next>
@@ -3594,34 +3605,37 @@ nl:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          * Dit level eindigt na 4 maten.*
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
         challenges: |-
           **Extra uitdagingen**
-          * Kies een ander lied om te spelen.
-          * Kies een ander die eruitziet als een eland!
-          * Verander de naam van je danser.
+
+          -   Kies een ander lied om te spelen.
+          -   Kies een ander die eruitziet als een eland!
+          -   Verander de naam van je danser.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * De danser moet na 4 maten een nieuwe move doen.
 
-          *Dit level eindigt na 8 maten.*
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Na 6 maten moet je danser een andere move doen dan na 4 maten.
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3630,74 +3644,75 @@ nl:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet minstens twee dansers hebben.
+          -   Je moet minstens twee dansers hebben.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Voeg een derde danser toe (of zoveel als je wilt!)
-          * Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
+          -   Voeg een derde danser toe (of zoveel als je wilt!)
+          -   Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Twee dansers moeten een andere grootte hebben dan 100.
+          -   Twee dansers moeten een andere grootte hebben dan 100.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Verander de tint van minstens een danser.
+          -   Verander de tint van minstens een danser.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * De eigenschappen van twee of meer dansers moeten wijzigen.
+          -   De eigenschappen van twee of meer dansers moeten wijzigen.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
+          -   Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       CourseE_HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: Zie je de **zeelantaarns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Hoe kun je een voorwaardelijk opdrachtblok met ze combineren om door het
           Oceaanmonument te komen?
       CourseE_HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de ** rechte
-          ** manier aan, en zorg ervoor dat je rood koraal niet ** links ** laat liggen!
+        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de \*\*
+          rechte \*\* manier aan, en zorg ervoor dat je rood koraal niet \*\* links
+          \*\* laat liggen!
       Dance short test 2_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3706,9 +3721,9 @@ nl:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3716,45 +3731,50 @@ nl:
       Dance_Party_01_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          * Dit level eindigt na 4 maten.*
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
         challenges: |-
           **Extra uitdagingen**
-          * Kies een ander lied om te spelen.
-          * Kies een ander die eruitziet als een eland!
-          * Verander de naam van je danser.
+
+          -   Kies een ander lied om te spelen.
+          -   Kies een ander die eruitziet als een eland!
+          -   Verander de naam van je danser.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          * Dit level eindigt na 4 maten.*
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
         challenges: |-
           **Extra uitdagingen**
-          * Kies een ander lied om te spelen.
-          * Kies een ander die eruitziet als een eland!
-          * Verander de naam van je danser.
+
+          -   Kies een ander lied om te spelen.
+          -   Kies een ander die eruitziet als een eland!
+          -   Verander de naam van je danser.
       Dance_Party_02_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * De danser moet na 4 maten een nieuwe move doen.
 
-          *Dit level eindigt na 8 maten.*
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
       Dance_Party_03_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Na 6 maten moet je danser een andere move doen dan na 4 maten.
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       Dance_Party_04_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3763,98 +3783,101 @@ nl:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet minstens twee dansers hebben.
+          -   Je moet minstens twee dansers hebben.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Voeg een derde danser toe (of zoveel als je wilt!)
-          * Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
+          -   Voeg een derde danser toe (of zoveel als je wilt!)
+          -   Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
       Dance_Party_08_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Twee dansers moeten een andere grootte hebben dan 100.
+          -   Twee dansers moeten een andere grootte hebben dan 100.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Verander de tint van minstens een danser.
+          -   Verander de tint van minstens een danser.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_1_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          * Dit level eindigt na 4 maten.*
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
         challenges: |-
           **Extra uitdagingen**
-          * Kies een ander lied om te spelen.
-          * Kies een ander die eruitziet als een eland!
-          * Verander de naam van je danser.
+
+          -   Kies een ander lied om te spelen.
+          -   Kies een ander die eruitziet als een eland!
+          -   Verander de naam van je danser.
       Dance_Party_10_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * De eigenschappen van twee of meer dansers moeten wijzigen.
+          -   De eigenschappen van twee of meer dansers moeten wijzigen.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_11_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
+          -   Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Dance_Party_2_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * De danser moet na 4 maten een nieuwe move doen.
 
-          *Dit level eindigt na 8 maten.*
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
       Dance_Party_3_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Na 6 maten moet je danser een andere move doen dan na 4 maten.
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       Dance_Party_4_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3863,33 +3886,33 @@ nl:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je danser moet verschillende moves doen gedurende de eerste 12 maten van het liedje.
+          -   Je danser moet verschillende moves doen gedurende de eerste 12 maten van het liedje.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Extra uitdaging**
 
-          * Voeg een derde danser toe (of zoveel als je wilt!)
-          * Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
+          -   Voeg een derde danser toe (of zoveel als je wilt!)
+          -   Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
       Dance_Party_8_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Twee dansers moeten een andere grootte hebben dan 100.
+          -   Twee dansers moeten een andere grootte hebben dan 100.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Verander de tint van minstens een danser.
+          -   Verander de tint van minstens een danser.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_b: Als je de functies correct aanroept, dan is dit het
           pad dat je zal volgen...
@@ -3907,39 +3930,43 @@ nl:
           Hoe kun je een voorwaardelijk opdrachtblok met ze combineren om door het
           Oceaanmonument te komen?
       HOC 2018 Level_9b_authored_hint:
-        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de ** rechte
-          ** manier aan, en zorg ervoor dat je rood koraal niet ** links ** laat liggen!
+        voyage_aquatic_9a: Wat een prachtig koraalrif! Blauw koraal geeft de \*\*
+          rechte \*\* manier aan, en zorg ervoor dat je rood koraal niet \*\* links
+          \*\* laat liggen!
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          * Dit level eindigt na 4 maten.*
+          -   Zorg ervoor dat er een danser op het scherm verschijnt.
+
+          -   Dit level eindigt na 4 maten.\*
         challenges: |-
           **Extra uitdagingen**
-          * Kies een ander lied om te spelen.
-          * Kies een ander die eruitziet als een eland!
-          * Verander de naam van je danser.
+
+          -   Kies een ander lied om te spelen.
+          -   Kies een ander die eruitziet als een eland!
+          -   Verander de naam van je danser.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * De danser moet na 4 maten een nieuwe move doen.
 
-          *Dit level eindigt na 8 maten.*
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Na 6 maten moet je danser een andere move doen dan na 4 maten.
+          -   Na 6 maten moet je danser een andere move doen dan na 4 maten.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
+          -   Je moet het achtergrondeffect ergens tijdens de zevende maat van het lied veranderen.
 
-          *Dit level eindigt na 10 maten.*
+          _Dit level eindigt na 10 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -3948,54 +3975,54 @@ nl:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Je danser moet verschillende moves doen gedurende de eerste 12 maten van het liedje.
+          -   Je danser moet verschillende moves doen gedurende de eerste 12 maten van het liedje.
 
-          *Dit level eindigt na 12 maten.*
+          _Dit level eindigt na 12 maten._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Extra uitdaging**
 
-          * Voeg een derde danser toe (of zoveel als je wilt!)
-          * Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
+          -   Voeg een derde danser toe (of zoveel als je wilt!)
+          -   Zorg ervoor dat al je dansers verschillende moves doen op verschillende momenten tijdens het liedje.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Twee dansers moeten een andere grootte hebben dan 100.
+          -   Twee dansers moeten een andere grootte hebben dan 100.
 
-          *Dit level eindigt na 6 maten.*
+          _Dit level eindigt na 6 maten._
         challenges: |-
           **Extra uitdaging**
 
-          * Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
+          -   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Verander de tint van minstens een danser.
+          -   Verander de tint van minstens een danser.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * De eigenschappen van twee of meer dansers moeten wijzigen.
+          -   De eigenschappen van twee of meer dansers moeten wijzigen.
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       HOC Dance make group_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
 
-          * Wees creatief!
+          -   Wees creatief!
 
-          *Dit level eindigt na 8 maten.*
+          _Dit level eindigt na 8 maten._
       Inspirational Artwork_authored_hint:
         brush_width: We zetten de penseelbreedte op 1 en de kleur op blauw vooraleer
           iets anders te doen.
@@ -4009,7 +4036,6 @@ nl:
           na het tekenen van ieder "bloemblad".
         solution: |-
           **Oplossing**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       MC Agent Freeplay_authored_hint:
@@ -4114,10 +4140,10 @@ nl:
           plaatsen?  Probeer een plank **en** naar voren in een 'herhalen'-lus te
           plaatsen om deze puzzel op te lossen.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak *moet*
+        MC_HOC_2017_06_Cole_a: Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_
           deze worden uitgevoerd?
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak *moet*
+        MC_HOC_2017_06_Cole_a: Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_
           deze worden uitgevoerd?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Probeer meerdere instructies in een 'herhalen'-lus
@@ -4202,7 +4228,6 @@ nl:
           na het tekenen van ieder "bloemblad".
         solution: |-
           **Oplossing**
-
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -4368,9 +4393,10 @@ nl:
       Ryan_Demo_authored_hint:
         validation: |-
           **Hoe haal ik dit level?**
-          * De danser moet na 4 maten een nieuwe move doen.
 
-          *Dit level eindigt na 8 maten.*
+          -   De danser moet na 4 maten een nieuwe move doen.
+
+          _Dit level eindigt na 8 maten._
       aE3_authored_hint:
         aE3_d: Als jouw programma te verwarrend wordt, kun je altijd op "Begin opnieuw"
           klikken en het opnieuw proberen!
@@ -4401,8 +4427,8 @@ nl:
           rekenen om deze puzzel op te lossen!"'
         allHallows2017_e: 'Dani zegt: "Ik ben niet goed in woordspelingen. Probeer
           een herhaal blok te gebruiken!"'
-        allHallows2017_b: 'Baker zegt: "Het Chicago krijt werkt enkel op de *groene
-          lijn*."'
+        allHallows2017_b: 'Baker zegt: "Het Chicago krijt werkt enkel op de _groene
+          lijn_."'
         allHallows2017_f: 'Amy zegt: "Je kan het! Denk gewoon buiten de doos!"'
       artistLoopsK4_authored_hint:
         artistLoopsK4_a: Zit je vast? Probeer dan de code uit te voeren om te zien
@@ -4416,8 +4442,12 @@ nl:
       artistLoopsK8_authored_hint:
         artistLoopsK8_a: Probeer deze code uit te voeren om uit te zoeken waar de
           fout zit.
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_collector_loops_challenge3_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Beweeg tweemaal naar het oosten tussen elk pad.
           <xml>
             <block type="maze_moveEast"/><next>
@@ -4433,6 +4463,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified_dropdown">
+
           <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="maze_moveEast">
@@ -4477,6 +4508,7 @@ nl:
           Je kan een boos monster laten grommen.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -4500,11 +4532,12 @@ nl:
       course2_artist_nestedLoops_challenge1_authored_hint:
         courseD_artist_nestedLoops_challenge1_c: |-
           Gebruik een geneste lus:
-          - Herhaal 8 keer
-          - teken een achthoek
-          - teken een driehoek
-          - spring 50 pixels voorwaarts
-          - beweeg 90 graden naar rechts
+
+          -   Herhaal 8 keer
+          -   teken een achthoek
+          -   teken een driehoek
+          -   spring 50 pixels voorwaarts
+          -   beweeg 90 graden naar rechts
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: De rechthoek is 200 pixels breed en 100
           pixels hoog.
@@ -4525,10 +4558,10 @@ nl:
           deze keer.
         courseB_maze_seq_challenge1_b: Probeer om te beginnen naar het westen te bewegen.
       course3_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
-          van 30 ** en draait rechts met ** 60 graden **.
-        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
-          ** en draait naar rechts met ** 120 graden **.
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een \*\* lengte
+          van 30 \*\* en draait rechts met \*\* 60 graden \*\*.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een \*\* lengte van
+          80 \*\* en draait naar rechts met \*\* 120 graden \*\*.
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: "Als de puzzel moeilijk lijkt, probeer
           dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en
@@ -4542,10 +4575,11 @@ nl:
       course3_bee_functions_challenge4_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           Als er een pad is naar rechts, moet je het volgende doen:
-          * Neem nectar of maak honing.
-          * Beweeg naar rechts, in de richting van het zijpad.
-          * Beweeg naar het einde van het zijpad.
-          * Beweeg rechts.
+
+          -   Neem nectar of maak honing.
+          -   Beweeg naar rechts, in de richting van het zijpad.
+          -   Beweeg naar het einde van het zijpad.
+          -   Beweeg rechts.
 
           Als je de bovenstaande acties tweemaal herhaalt, zal je klaar zijn om terug te keren via het hoofdpad.
 
@@ -4868,7 +4902,7 @@ nl:
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
       course4_bee_fwp_challenge1_authored_hint:
-        courseF_bee_fwp_challenge1_e: |
+        courseF_bee_fwp_challenge1_e: |-
           **Oplossing:**
 
           <xml>
@@ -4946,6 +4980,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_dropdown">
+
           <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
           <block type="maze_move">
@@ -5060,7 +5095,7 @@ nl:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5079,7 +5114,7 @@ nl:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5098,7 +5133,7 @@ nl:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5117,7 +5152,7 @@ nl:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5232,6 +5267,7 @@ nl:
           Je kan een boos monster laten grommen.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -5257,6 +5293,7 @@ nl:
           Je kan een boos monster laten grommen.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -5282,6 +5319,7 @@ nl:
           Je kan een boos monster laten grommen.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -5307,6 +5345,7 @@ nl:
           Je kan een boos monster laten grommen.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -5370,7 +5409,7 @@ nl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5389,7 +5428,7 @@ nl:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5408,7 +5447,7 @@ nl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5427,7 +5466,7 @@ nl:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5564,7 +5603,7 @@ nl:
         courseB_collector_loops9_b: Je hebt 3 `herhaal` lussen nodig. De één achter
           de andere.
       courseB_collector_loops_challenge1_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Beweeg tweemaal naar het oosten tussen elk pad.
           <xml>
             <block type="maze_moveEast"><next>
@@ -5572,7 +5611,7 @@ nl:
             </xml>
           Je kan dit doen met slechts 14 blokken. De volgende hint bevat de oplossing.
       courseB_collector_loops_challenge1_2018_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Beweeg tweemaal naar het oosten tussen elk pad.
           <xml>
             <block type="maze_moveEast"><next>
@@ -5580,7 +5619,7 @@ nl:
             </xml>
           Je kan dit doen met slechts 14 blokken. De volgende hint bevat de oplossing.
       courseB_collector_loops_challenge1_2019_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Beweeg tweemaal naar het oosten tussen elk pad.
           <xml>
             <block type="maze_moveEast"><next>
@@ -5596,6 +5635,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified_dropdown">
+
           <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="maze_moveEast">
@@ -5637,6 +5677,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified_dropdown">
+
           <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="maze_moveEast">
@@ -5822,6 +5863,12 @@ nl:
       courseC_collector_prog1_2019_authored_hint:
         courseC_collector_prog1_b: De simpelste oplossing is éénmaal voorwaarts te
           bewegen, en de schat te nemen.
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_harvester_loops_challenge2_authored_hint:
         courseC_harvester_loops_challenge2_a: Een oplossing van deze puzzel lijkt
           op een zig-zag. Een andere manier lijkt op een spiraal! Er zijn vele verschillende
@@ -5893,9 +5940,10 @@ nl:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
@@ -6025,6 +6073,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_dropdown">
+
           <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
           <block type="maze_move">
@@ -6081,6 +6130,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_dropdown">
+
           <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
           <block type="maze_move">
@@ -6137,6 +6187,7 @@ nl:
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_dropdown">
+
           <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
           <block type="maze_move">
@@ -6193,20 +6244,20 @@ nl:
       courseD_scrat_ramp7_2018_authored_hint:
         courseD_scrat_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseE_artist_concept_challenge1_authored_hint:
-        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
-          van 30 ** en draait rechts met ** 60 graden **.
-        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
-          ** en draait naar rechts met ** 120 graden **.
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een \*\* lengte
+          van 30 \*\* en draait rechts met \*\* 60 graden \*\*.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een \*\* lengte van
+          80 \*\* en draait naar rechts met \*\* 120 graden \*\*.
       courseE_artist_concept_challenge1_2018_authored_hint:
-        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
-          van 30 ** en draait rechts met ** 60 graden **.
-        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
-          ** en draait naar rechts met ** 120 graden **.
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een \*\* lengte
+          van 30 \*\* en draait rechts met \*\* 60 graden \*\*.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een \*\* lengte van
+          80 \*\* en draait naar rechts met \*\* 120 graden \*\*.
       courseE_artist_concept_challenge1_2019_authored_hint:
-        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een ** lengte
-          van 30 ** en draait rechts met ** 60 graden **.
-        courseE_artist_concept_challenge1_b: De driehoek heeft een ** lengte van 80
-          ** en draait naar rechts met ** 120 graden **.
+        courseE_artist_concept_challenge1_a: De halve zeshoek heeft een \*\* lengte
+          van 30 \*\* en draait rechts met \*\* 60 graden \*\*.
+        courseE_artist_concept_challenge1_b: De driehoek heeft een \*\* lengte van
+          80 \*\* en draait naar rechts met \*\* 120 graden \*\*.
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: De vierkanten hebben elk zijden van 100 pixels,
           dat betekent dat je 175 pixels vooruit moet bewegen voor je je tweede vierkant
@@ -6222,21 +6273,30 @@ nl:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_c: |-
           De artiest zal 6 driehoeken in totaal tekenen:
@@ -6331,7 +6391,7 @@ nl:
 
           Dit zijn vragen die je jezelf moet stellen wanneer je de leegtes in de `herhaal` lus invult.
       courseF_artist_for_challenge1_authored_hint:
-        courseF_artist_for_challenge1_a: De `pendikte ` is 1. De eerste vierkant heeft
+        courseF_artist_for_challenge1_a: De `pendikte` is 1. De eerste vierkant heeft
           en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het
           vorige.
         courseF_artist_for_challenge1_b: De ondoorzichtigheid van de brush is telkens
@@ -6473,7 +6533,7 @@ nl:
           </block>
           </xml>
       courseF_artist_for_challenge1_2018_authored_hint:
-        courseF_artist_for_challenge1_a: De `pendikte ` is 1. De eerste vierkant heeft
+        courseF_artist_for_challenge1_a: De `pendikte` is 1. De eerste vierkant heeft
           en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het
           vorige.
         courseF_artist_for_challenge1_b: De ondoorzichtigheid van de brush is telkens
@@ -6615,7 +6675,7 @@ nl:
           </block>
           </xml>
       courseF_artist_for_challenge1_2019_authored_hint:
-        courseF_artist_for_challenge1_a: De `pendikte ` is 1. De eerste vierkant heeft
+        courseF_artist_for_challenge1_a: De `pendikte` is 1. De eerste vierkant heeft
           en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het
           vorige.
         courseF_artist_for_challenge1_b: De ondoorzichtigheid van de brush is telkens
@@ -6849,11 +6909,11 @@ nl:
           </block>
           </xml>
 
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
+          ![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'De `for lus` gaat van 5 tot 250 in stappen
           van 2. '
-        courseF_artist_for_challenge2_d: |
+        courseF_artist_for_challenge2_d: |-
           **Oplossing:**
 
           <xml>
@@ -7035,17 +7095,15 @@ nl:
           </block>
           </xml>
 
-          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
+          ![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)
       courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_f: |-
           **Oplossing:**
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_f: |-
-          **Oplossing:**
-
-          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_c: |-
           Voor deze uitdaging moet je 6 driehoeken in totaal tekenen:
@@ -7056,6 +7114,14 @@ nl:
           Voor deze uitdaging moet je 6 driehoeken in totaal tekenen:
 
           ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge1_authored_hint:
         courseF_artist_variables_challenge1_e: |-
           **Oplossing:**
@@ -7587,7 +7653,7 @@ nl:
         courseF_bee_for_challenge2_c: |-
           Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.
 
-          De andere 'voor` lus heeft slechts één standaard lus nodig om `counter` keer honing te maken.
+          De andere 'voor`lus heeft slechts één standaard lus nodig om`counter\` keer honing te maken.
         courseF_bee_for_challenge2_d: |-
           **Oplossing:**
 
@@ -7725,7 +7791,7 @@ nl:
         courseF_bee_for_challenge2_c: |-
           Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.
 
-          De andere 'voor` lus heeft slechts één standaard lus nodig om `counter` keer honing te maken.
+          De andere 'voor`lus heeft slechts één standaard lus nodig om`counter\` keer honing te maken.
         courseF_bee_for_challenge2_d: |-
           **Oplossing:**
 
@@ -7863,7 +7929,7 @@ nl:
         courseF_bee_for_challenge2_c: |-
           Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.
 
-          De andere 'voor` lus heeft slechts één standaard lus nodig om `counter` keer honing te maken.
+          De andere 'voor`lus heeft slechts één standaard lus nodig om`counter\` keer honing te maken.
         courseF_bee_for_challenge2_d: |-
           **Oplossing:**
 
@@ -8001,7 +8067,7 @@ nl:
         courseF_bee_for_challenge2_c: |-
           Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.
 
-          De andere 'voor` lus heeft slechts één standaard lus nodig om `counter` keer honing te maken.
+          De andere 'voor`lus heeft slechts één standaard lus nodig om`counter\` keer honing te maken.
         courseF_bee_for_challenge2_d: |-
           **Oplossing:**
 
@@ -8163,10 +8229,11 @@ nl:
       courseF_bee_functions_challenge2_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           Als er een pad is naar rechts, moet je het volgende doen:
-          * Neem nectar of maak honing.
-          * Beweeg naar rechts, in de richting van het zijpad.
-          * Beweeg naar het einde van het zijpad.
-          * Beweeg rechts.
+
+          -   Neem nectar of maak honing.
+          -   Beweeg naar rechts, in de richting van het zijpad.
+          -   Beweeg naar het einde van het zijpad.
+          -   Beweeg rechts.
 
           Als je de bovenstaande acties tweemaal herhaalt, zal je klaar zijn om terug te keren via het hoofdpad.
 
@@ -8275,10 +8342,11 @@ nl:
       courseF_bee_functions_challenge2_2018_authored_hint:
         courseF_bee_functions_challenge2_a: |-
           Als er een pad is naar rechts, moet je het volgende doen:
-          * Neem nectar of maak honing.
-          * Beweeg naar rechts, in de richting van het zijpad.
-          * Beweeg naar het einde van het zijpad.
-          * Beweeg rechts.
+
+          -   Neem nectar of maak honing.
+          -   Beweeg naar rechts, in de richting van het zijpad.
+          -   Beweeg naar het einde van het zijpad.
+          -   Beweeg rechts.
 
           Als je de bovenstaande acties tweemaal herhaalt, zal je klaar zijn om terug te keren via het hoofdpad.
 
@@ -8390,7 +8458,7 @@ nl:
           Voeg daarna weer een paar blokken toe en test dan opnieuw. Zo kom je er
           wel!"
       courseF_bee_fwp_challenge1_authored_hint:
-        courseF_bee_fwp_challenge1_e: |
+        courseF_bee_fwp_challenge1_e: |-
           **Oplossing:**
 
           <xml>
@@ -8462,7 +8530,7 @@ nl:
           </statement>
           </block></xml>
       courseF_bee_fwp_challenge1_2018_authored_hint:
-        courseF_bee_fwp_challenge1_e: |
+        courseF_bee_fwp_challenge1_e: |-
           **Oplossing:**
 
           <xml>
@@ -8795,7 +8863,7 @@ nl:
         2-3_Artist_1_new_b: Problemen met het draaien van de hoek? Gebruik het blok
           'rechts 90 graden'.
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het ** einde **
+        2-3_Artist_Loops_New_11_b: Je nieuwe bocht moet komen aan het \*\* einde \*\*
           van de code binnen de lus.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: Hoeveel keer werd mijn vorm herhaald?
@@ -8946,18 +9014,19 @@ nl:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Je programma: moet:
-          - functie gebruiken
-          - 100 + 75 pixels vooruit bewegen
-          - functie gebruiken
+
+          -   functie gebruiken
+          -   100 + 75 pixels vooruit bewegen
+          -   functie gebruiken
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Elke zeshoek heeft een zijde van 40 pixels.
       grade4_artist_functions_challenge2_authored_hint:
         Course_4_SCF_1_a: Elke zeshoek heeft een zijde van 40 pixels.
       grade4_artist_nestedLoops_challenge2_authored_hint:
-        Course_4_Artist_11_a: De halve zeshoek heeft een ** lengte van 30 ** en draait
-          rechts met ** 60 graden **.
-        Course_4_Artist_11_b: De driehoek heeft een ** lengte van 80 ** en draait
-          naar rechts met ** 120 graden **.
+        Course_4_Artist_11_a: De halve zeshoek heeft een \*\* lengte van 30 \*\* en
+          draait rechts met \*\* 60 graden \*\*.
+        Course_4_Artist_11_b: De driehoek heeft een \*\* lengte van 80 \*\* en draait
+          naar rechts met \*\* 120 graden \*\*.
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Dit design maakt 10 keer een volledige loop in 360 graden.
@@ -8998,8 +9067,8 @@ nl:
         2-3_Artist_1_new_b: Problemen met het draaien van de hoek? Gebruik het blok
           'rechts 90 graden'.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens * verder *
-          draaien dan je met het vierkant deed.   '
+        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens \* verder
+          \* draaien dan je met het vierkant deed.   '
         2-3_Artist_6_b: Omdat ik al naar rechts kijk, kun je het best eerst vooruit
           bewegen, en dan naar links draaien om de driehoek te maken.
         2-3_Artist_6_c: Elke zijde van de driehoek heeft dezelfde lengte als elke

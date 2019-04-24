@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:50.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -72,10 +72,10 @@
     "expand_debugger": "false",
     "encrypted": "false",
     "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements. ",
-    "rubric_exceeds": "The horse turns into a unicorn when the rainbow touches it.  There are no extra blocks in the program.",
-    "rubric_meets": "The program reacts in some way when the rainbow touches the horse.",
-    "rubric_approaches": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
-    "rubric_no_evidence": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program.",
+    "rubric_performance_level_1": "The horse turns into a unicorn when the rainbow touches it.  There are no extra blocks in the program.",
+    "rubric_performance_level_2": "The program reacts in some way when the rainbow touches the horse.",
+    "rubric_performance_level_3": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
+    "rubric_performance_level_4": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program.",
     "preload_asset_list": null
   },
   "published": true,

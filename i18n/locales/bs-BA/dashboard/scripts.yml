@@ -1971,6 +1971,8 @@ bs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Pisanje pjesama
         express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2094,3 +2096,11 @@ bs:
               name: Primjeri aplikacija
             Final Project:
               name: Završni projekat
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Building a Foundation:
+              name: Izrada Temelja

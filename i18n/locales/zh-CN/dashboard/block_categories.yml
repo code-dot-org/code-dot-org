@@ -22,13 +22,13 @@ zh-CN:
       Text: 文本
       Picker: 选取器
       Comment: 注释
-      'Variables ': '变量 '
-      Default: 默认
-      Behaviors: 行为
-      Locations: 位置
-      everythingelse: 其它东西
       World: 世界
       Sprites: 精灵
+      Behaviors: 行为
+      'Variables ': '变量 '
+      Default: 默认
+      Locations: 位置
+      everythingelse: 其它东西
       Location: 所在地区
       numbers: 数字
       Numbers: 数字

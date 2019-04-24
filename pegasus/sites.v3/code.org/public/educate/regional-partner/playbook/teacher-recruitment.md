@@ -1,8 +1,8 @@
 ---
 title: Teacher and District Recruitment
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Teacher and District Recruitment
@@ -33,25 +33,25 @@ ________________
 Review the <a href="https://docs.google.com/document/d/1Bx-o1kRCKZxM_prrQqxQH7mXp9jXY0vT_eufgNpkKYM/edit?usp=sharing", target=_"blank">2019-20 Teacher Application Process Document</a> for everything you need to know about the Code.org teacher application process including finalizing your Local Summer Workshop dates, the list of teacher application questions and how they map to the rubrics, using the Code.org teacher applications system, and FAQs.
 
 ### What are the important dates I need to know about?
-- **Two weeks** before your application open date your set-up forms are due. <a href="https://drive.google.com/file/d/1_wJkryXiRLnH2tTaKMURR7x_LDmXq6zU/view", target=_"blank">Save this table</a> for a quick way to reference these important dates. 
+- **Two weeks** before your application open date your set-up forms are due. <a href="https://drive.google.com/file/d/1_wJkryXiRLnH2tTaKMURR7x_LDmXq6zU/view", target=_"blank">Save this table</a> for a quick way to reference these important dates.
 - **Two months** prior to your Local Summer Workshops is the deadline for accepting a minimum cohort of teachers. This is to allow adequate time to go through the process of cancelling a workshop, if absolutely necessary, and reaccommodating teachers into another workshop outside your region.
-- **Four weeks** prior to your Local Summer Workshop is the deadline for accepting teachers as this is also the deadline for ordering workshop supplies.  
+- **Four weeks** prior to your Local Summer Workshop is the deadline for accepting teachers as this is also the deadline for ordering workshop supplies.
 
 ### Application Links
 - <a href="https://code.org/educate/professional-learning/program-information", target=_"blank">Landing page</a> for school ZIP code lookup
 - <a href="https://studio.code.org/pd/application/teacher", target=_"blank">2019-20 Professional Learning Program Teacher Application</a>
 
 ### Where can I find some resources to help with recruitment?
-- Visit the [Curriculum Tile](https://code.org/educate/regional-partner/playbook/curriculum) for one-pagers on each program as well as a overview of the professional learning program that you can share with administrators and potential applications.  
+- Visit the [Curriculum Tile](https://code.org/educate/regional-partner/playbook/curriculum) for one-pagers on each program as well as a overview of the professional learning program that you can share with administrators and potential applications.
 - Teachers and administrators can visit https://code.org/educate/professional-learning/middle-high to start learning about CS Discoveries, CS Principles and the program requirements.
 - Encourage teachers to check out our <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">course and Professional Learning Program options</a> to determine the best fit for their teaching situation.
 
 <a id="recruitment"></a>
 
 ### Teacher Recruitment Fund
-In order to support teacher recruitment efforts and increase the number of submitted teacher applications, Code.org will reimburse each Regional Partner a maximum of $1,000 towards the costs of teacher recruitment that you incur between March 8 and 8-weeks prior to your Local Summer Workshop. 
+In order to support teacher recruitment efforts and increase the number of submitted teacher applications, Code.org will reimburse each Regional Partner a maximum of $1,000 towards the costs of teacher recruitment that you incur between March 8 and 8-weeks prior to your Local Summer Workshop.
 
-This additional funding may be used for: 
+This additional funding may be used for:
 
 - Registration fees for a booth at education leadership/educator conferences
 - Travel for on-the-ground recruitment, including mileage, hotels, flights, and meals
@@ -106,7 +106,7 @@ The K–12 Computer Science Framework is a high-level guide for states, district
 
 <a href="https://www.ncwit.org/sites/default/files/resources/microsoft_digitalskills_cs_toolkit_092018.pdf", target=_"blank">Microsoft Digital Skills Toolkit</a><br/>
 A toolkit for middle and high schools to increase
-diversity in computer science education. 
+diversity in computer science education.
 
 
 ### Agreeing to Terms

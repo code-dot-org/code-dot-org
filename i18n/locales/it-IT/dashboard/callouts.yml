@@ -454,6 +454,8 @@ it:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseA_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq1_2018_callout:
@@ -580,6 +582,12 @@ it:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseC_maze_programming2_2019_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseC_maze_programming3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseC_maze_programming3_2019_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono essere gettati via.
       courseC_maze_programming7_2018_callout:
@@ -642,6 +650,12 @@ it:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseD_maze_ramp3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseD_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseD_maze_ramp3_2019_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_maze_ramp6a_callout:
@@ -664,6 +678,10 @@ it:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseD_scrat_ramp2_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseD_scrat_ramp3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseD_scrat_ramp3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_scrat_ramp6_2018_callout:
@@ -672,8 +690,6 @@ it:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_scrat_ramp7_2018_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Clicca qui!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il primo quadrato.
       courseE_artist_functions1_2018_callout:
@@ -742,6 +758,10 @@ it:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseE_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseE_maze_ramp3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseE_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseE_maze_ramp6_2018_callout:
@@ -850,6 +870,10 @@ it:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi "Esegui" per far partire il tuo programma.
       coursea_maze_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi "Esegui" per far partire il tuo programma.
+      coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      coursef_maze_ramp3_2018_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: Usa il blocco "disegna un cerchio" e modifica le dimensioni.
       frozen cross rotate_callout:
@@ -918,6 +942,10 @@ it:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       grade2_CaringForNewPet_1_callout:
         grade2_CaringForNewPet_1_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
+      grade2_CaringForNewPet_2_callout:
+        grade2_CaringForNewPet_2_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      grade2_CaringForNewPet_2courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
       grade2_collector_7_callout:
         grade2_collector_7_1: Se necessario, puoi prendere altri blocchi dalla cassetta degli attrezzi!
       grade3_ConditionalsElse_2_callout:

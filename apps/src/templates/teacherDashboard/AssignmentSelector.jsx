@@ -4,7 +4,9 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import {assignmentId, assignmentFamilyFields} from './teacherSectionsRedux';
-import AssignmentVersionSelector from './AssignmentVersionSelector';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from './AssignmentVersionSelector';
 
 const styles = {
   family: {
@@ -67,7 +69,8 @@ export default class AssignmentSelector extends Component {
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    locale: PropTypes.string
   };
 
   /**
@@ -95,20 +98,11 @@ export default class AssignmentSelector extends Component {
       .reverse()
       .value();
 
-    // Because the versions are sorted most recent first, we can just look for
-    // the first stable version.
-    const recommendedVersion = versions.find(v => v.isStable);
-    if (recommendedVersion) {
-      recommendedVersion.isRecommended = true;
-    }
-    const selectedVersion =
-      versions.find(v => v.year === selectedVersionYear) ||
-      recommendedVersion ||
-      versions[0];
-    if (selectedVersion) {
-      selectedVersion.isSelected = true;
-    }
-    return versions;
+    return setRecommendedAndSelectedVersions(
+      versions,
+      this.props.locale,
+      selectedVersionYear
+    );
   };
 
   constructor(props) {

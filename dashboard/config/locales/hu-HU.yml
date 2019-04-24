@@ -896,6 +896,8 @@ hu:
     csp_variables: változók
     csp_conditionals: Feltételek
     csp_functions: funkciók
+    csp_lists: Listák
+    csp_loops: hurkok
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
   hoc_download:

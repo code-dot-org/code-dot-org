@@ -45,8 +45,8 @@ hr:
         pomoći?
       2-3 Artist Debugging 2: 'Kod tri brka koja vidiš je pogrešan. Savjet: svaki
         brk je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove.'
-      2-3 Artist Debugging 3: "Moj čamac ima rupu. \r \n\r\nŠto treba ispraviti da
-        bi se crte spojile?"
+      2-3 Artist Debugging 3: "Moj čamac ima rupu. \\\r \n\\\r\nŠto treba ispraviti
+        da bi se crte spojile?"
       2-3 Artist Debugging 4: Kakvu sliku pokušavamo nacrtati? Dovrši spajanje točaka
         koristeći odgovarajuće linije i kuteve.
       2-3 Artist Debugging 5: 'Kod za nogu i stopalo koji vidiš je pogrešan. Savjet:
@@ -109,7 +109,7 @@ hr:
         kako bi dovršio ćeliju? Zapamti, to znači da se trebaš zakrenuti za 60 stupnjeva!
       2-3 Artist Loops 10: Što se događa sa ovim dizajnom ako načinimo zadnji korak
         upola manjim?
-      2-3 Artist Loops 11: Sada postavimo *još jednu* petlju koja će obuhvatiti našu
+      2-3 Artist Loops 11: Sada postavimo _još jednu_ petlju koja će obuhvatiti našu
         čitavu kreaciju! Ne zaboravi dodati kut na kraju vanjske petlje.
       2-3 Artist Loops 4: Želiš vidjeti što se događa kada ponavljamo taj oblik ponovno,
         koristeći petlju?
@@ -121,7 +121,7 @@ hr:
         li napraviti romb unutar ovog šestokutnika?
       2-3 Artist Loops 8: Stavi oba elementa unutar naredbe ponavljanja.
       2-3 Artist Loops 9: "Sada ćemo prolaziti kroz iste elemente, ali ćemo ovaj put
-        dodati određeni razmak između njih.\r Koristite isti kod kao i prije, ali
+        dodati određeni razmak između njih.\\\r Koristite isti kod kao i prije, ali
         dodajte korak naprijed na kraju vanjske petlje."
       2-3 Artist Loops New 1: Nacrtaj robotu glavu! Možeš li napraviti kvadrat sa
         stranicama dužine 100 piksela?
@@ -129,9 +129,7 @@ hr:
       2-3 Artist Loops New 11: Ponovo napiši kȏd kao u prethodnom zadatku, ali ovaj
         put dodaj okret ulijevo za 30 stupnjeva, unutar petlje. Zatim ponovi to 24
         puta, umjesto 7.
-      2-3 Artist Loops New 12: 'Nacrtaj dijamant sa stranicama od 100 piksela.
-
-'
+      2-3 Artist Loops New 12: Nacrtaj dijamant sa stranicama od 100 piksela.
       2-3 Artist Loops New 14: Igraj se s kodom za dijamant i vidi koje još uzorke
         možeš napraviti. Pokušaj promijeniti za koliko ćeš se stupnjeva okrenuti i
         koliko ćeš petlji imati.
@@ -151,30 +149,31 @@ hr:
       2-3 Artist Nested Loops 11: Ponovi ovaj kod 4 puta kako bi dovršio uzorak; okreni
         90 stupnjeva nakon svakog kruga.
       2-3 Artist Nested Loops 12: Ponovi ovaj kod 12 puta kako bi dovršio kovrče.
-      2-3 Artist Nested Loops 2: "Sada ponovi ovaj trokut 6 puta. \r \n\r\nNakon svakog
-        trokuta morat ćeš zaokrenuti 60 stupnjeva, prije nego kreneš crtati sljedeći."
-      2-3 Artist Nested Loops 4: "Ponovi ovaj dijamant 12 puta da nacrtaš cvijet!\r\n\r\nPazi:
+      2-3 Artist Nested Loops 2: "Sada ponovi ovaj trokut 6 puta. \\\r \n\\\r\nNakon
+        svakog trokuta morat ćeš zaokrenuti 60 stupnjeva, prije nego kreneš crtati
+        sljedeći."
+      2-3 Artist Nested Loops 4: "Ponovi ovaj dijamant 12 puta da nacrtaš cvijet!\\\r\n\\\r\nPazi:
         Upotrijebit ćemo isti kut da ponovimo 12 dijamanata kao što smo učinili za
-        12 trokuta. \r \nKoliko okret trebaš načiniti nakon svakog oblika?"
+        12 trokuta. \\\r \nKoliko okret trebaš načiniti nakon svakog oblika?"
       2-3 Artist Nested Loops 5: "Popuni prozore zgrade koristeći ugniježđene petlje.
-        \r\n\r \nProzori su dugi 20 piksela te udaljeni jedan od drugoga 20 piksela."
-      2-3 Artist Nested Loops 6: "Ovaj dinosaur ima 8 šiljaka na repu.\r \nSvaki šiljak
-        dug je 30 piksela. Ponovi trokut 8 puta, no pripazi da skučiš naprijed nakon
-        svakoga!"
+        \\\r\n\\\r \nProzori su dugi 20 piksela te udaljeni jedan od drugoga 20 piksela."
+      2-3 Artist Nested Loops 6: "Ovaj dinosaur ima 8 šiljaka na repu.\\\r \nSvaki
+        šiljak dug je 30 piksela. Ponovi trokut 8 puta, no pripazi da skučiš naprijed
+        nakon svakoga!"
       2-3 Artist Nested Loops 7: Ponovi trokut u petlji 10 puta da bi nacrtao sunce.
         Trebat ćeš se pomaknuti i okrenuti nakon svakog trokuta. Koliko se trebaš
         okrenuti izračunaj tako da podijeliš broj stupnjeva za puni krug s brojem
         likova koji ti trebaju.
       2-3 Bee Conditionals 1: Bok! Ja sam pčela. Pomozi mi prikupiti nektar iz cvijeta.
-      2-3 Bee Conditionals 11: "Pitam se što se ondje nalazi!\r\n\r\nPomozi\nmi letjeti
-        po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
+      2-3 Bee Conditionals 11: "Pitam se što se ondje nalazi!\\\r\n\\\r\nPomozi\nmi
+        letjeti po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
       2-3 Bee Conditionals 12: |-
         Pomozi mi pronaći sav nektar koristeći
         čim je moguće manje blokova!
-      2-3 Bee Conditionals 2: "Ja sam gladna pčela! \r Pomozi mi prikupiti sav nektar
+      2-3 Bee Conditionals 2: "Ja sam gladna pčela! \\\r Pomozi mi prikupiti sav nektar
         iz cvijeća koristeći najmanji mogući broj blokova."
-      2-3 Bee Conditionals 3: "Pogledaj sav taj nektar! \r \r Pomozi mi skupiti nektar
-        i proizvesti med koristeći čim manje blokova.  "
+      2-3 Bee Conditionals 3: "Pogledaj sav taj nektar! \\\r \\\r Pomozi mi skupiti
+        nektar i proizvesti med koristeći čim manje blokova.  "
       2-3 Bee Conditionals 4: Pomozi mi prikupiti sav nektar iz cvijeća i proizvesti
         sav med.
       2-3 Bee Loops 13: 'Procjena: Pokupi sav nektar koristeći što je moguće manje
@@ -184,7 +183,7 @@ hr:
       2-3 Bee Loops 2: Pokupi sav nektar i napravi sav med koristeći što je moguće
         manje blokova.
       2-3 Bee Loops 2A: Ovaj put upotrijebi petlju da pokupiš sav nektar.
-      2-3 Bee Loops 4A: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \r\n\r
+      2-3 Bee Loops 4A: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\\r\n\\\r
         Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak
         koristeći što manje blokova."
       2-3 Maze 10: Vodi me do zelene zloće! (Pazi se TNT-a)
@@ -329,7 +328,7 @@ hr:
       Kiki_StarWars_Test_5_Example: tekst
       MC HOC 2016 Level 3: "Odlično, pile se pomaklo! Ali tada je stalo. \nU igrama,
         pilići hodaju zauvijek. Koristi 'zauvijek radi' petlju da bi se pilići nastavili
-        gibati.\n"
+        gibati."
       New Bounce Project: Napravi vlastitu igru Odbijanja. Možeš promijeniti sav izgled
         i pravila. Kad završiš, klikni na Kraj da bi omogućio prijateljima da isprobaju
         tvoju igru na svojim mobitelima.
@@ -654,19 +653,19 @@ hr:
         je dugačak 75 piksela. Popravi ovaj kod da nacrtaš brkove.'
       grade2_PuppyLoops_9: Izgleda da se C u riječi Code crta naopačke. Možeš li napraviti
         da izgleda kao C?
-      grade3_Conditionals_1: "Ja sam gladna pčela! \r Pomozi mi prikupiti sav nektar
+      grade3_Conditionals_1: "Ja sam gladna pčela! \\\r Pomozi mi prikupiti sav nektar
         iz cvijeća koristeći najmanji mogući broj blokova."
-      grade3_Conditionals_2: "Pogledaj sav taj nektar! \r \r Pomozi mi skupiti nektar
-        i proizvesti med koristeći čim manje blokova.  "
-      grade3_Conditionals_8: "Pitam se što se ondje nalazi!\r\n\r\nPomozi\nmi letjeti
-        po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
+      grade3_Conditionals_2: "Pogledaj sav taj nektar! \\\r \\\r Pomozi mi skupiti
+        nektar i proizvesti med koristeći čim manje blokova.  "
+      grade3_Conditionals_8: "Pitam se što se ondje nalazi!\\\r\n\\\r\nPomozi\nmi
+        letjeti po dvorištu i prikupiti nektar samo iz onih cvjetova koji ga\nimaju. "
       grade3_Conditionals_9: |-
         Pomozi mi pronaći sav nektar koristeći
         čim je moguće manje blokova!
       grade3_Loops_2: Ovaj put upotrijebi petlju da pokupiš sav nektar.
-      grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \r\n\r Petlje
-        su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak koristeći
-        što manje blokova."
+      grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\\r\n\\\r
+        Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak
+        koristeći što manje blokova."
       grade3_Loops_8: Pokupi sav nektar i napravi sav med koristeći što je moguće
         manje blokova.
       grade3_maze_loops2: Odvedi me do suncokreta!
@@ -691,15 +690,12 @@ hr:
         Kvadrati su udaljeni 75 piksela.
       grade4_frozen_functions0: Možeš li otkriti s kojim brojem treba zamijeniti upitnik
         da bi nacrtao krug?
-      grade4_review_artist1: Bok, ja sam umjetnik. Možeš napisati kod pomoću kojeg
-        ću nacrtati skoro sve što želiš. Koristi nekoliko blokova kako bih crtao preko
-        sivih linija na slici. (Svaka je linija duljine100 piksela)
       grade4_review_artist2: 'Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri
         strane su iste dužine.'
       grade4_review_artist3: "Blok Skoči pomiče umjetnika bez crtanja. \nNacrtaj isprekidanu
         liniju koristeći i blokove za skakanje i blokove za crtanje."
       level 'grade3_Loops_2: Ovaj put upotrijebi petlju da pokupiš sav nektar.
-      level 'grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \r\n\r
+      level 'grade3_Loops_6: "Koliko ti puta mogu petlje pomoći u ovom zadatku? \\\r\n\\\r
         Petlje su ti prijatelji! Upotrijebi nekoliko njih da dovršiš ovaj zadatak
         koristeći što manje blokova."
       level 'grade3_Loops_8: Pokupi sav nektar i napravi sav med koristeći što je

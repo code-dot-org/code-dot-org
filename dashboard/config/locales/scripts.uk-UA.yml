@@ -1761,6 +1761,8 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+            Songwriting:
+              name: Написання пісень
         express-2019:
           stages:
             Relay Programming:
@@ -1872,3 +1874,11 @@ uk:
           stages:
             While Loops:
               name: Цикли "поки"
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Краудсорсинг
+            Conditionals with Cards:
+              name: Листівки та умови
+            Building a Foundation:
+              name: Закладання основ

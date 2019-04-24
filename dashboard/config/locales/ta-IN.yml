@@ -145,6 +145,8 @@ ta:
     csf_variables: மாறிலிகள்
     csp_variables: மாறிலிகள்
     csp_functions: செயல்பாடுகள்
+    csp_lists: பட்டியல்கள்
+    csp_loops: சுழற்சிகள்
   pd:
     form_labels:
       email: மின்னஞ்சல்

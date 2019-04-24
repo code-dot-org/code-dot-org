@@ -603,7 +603,7 @@ module Api::V1::Pd
 
     test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
-      teacher_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
+      teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
       TEACHER_APPLICATION_CLASS.statuses.each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
@@ -624,7 +624,7 @@ module Api::V1::Pd
 
     test 'cohort view returns facilitator applications of correct statuses' do
       expected_applications = []
-      facilitator_cohort_view_statuses = Api::V1::Pd::ApplicationsController::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
+      facilitator_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
       FACILITATOR_APPLICATION_CLASS.statuses.each do |status|
         application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)

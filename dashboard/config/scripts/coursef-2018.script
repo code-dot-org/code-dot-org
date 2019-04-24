@@ -42,7 +42,7 @@ level 'courseC_maze_debugging4_2018'
 level 'courseC_maze_debugging5_2018'
 level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
-assessment 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging8_predict1_2018'
 level 'courseC_maze_debugging9_2018'
 level 'courseF_markdown_debugging_end'
 
@@ -56,7 +56,7 @@ level 'courseC_artist_prog5_2018'
 level 'courseC_artist_prog6_2018'
 level 'courseC_artist_prog7_2018', challenge: true
 level 'courseC_artist_prog8_2018'
-assessment 'courseC_artist_prog6_predict1_2018'
+level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
@@ -92,7 +92,7 @@ level 'courseD_maze_nestedLoops6_2018'
 level 'courseD_bee_nestedLoops7_2018', challenge: true
 level 'courseD_bee_nestedLoops8_2018'
 level 'courseD_bee_nestedLoops9_2018'
-assessment 'courseD_bee_nestedLoops9_predict2_2018'
+level 'courseD_bee_nestedLoops9_predict2_2018'
 level 'courseF_markdown_nestedloops_end'
 
 stage 'Nested Loops with Frozen', flex_category: 'csf_f_1'
@@ -166,7 +166,7 @@ level 'courseF_bee_variables_4_2018'
 level 'courseF_bee_variables_5_2018'
 level 'courseF_bee_variables_6_2018', challenge: true
 level 'courseF_bee_variables_7_2018'
-assessment 'courseF_bee_variables_8_2018'
+level 'courseF_bee_variables_8_2018'
 
 stage 'Variables that Change in Artist', flex_category: 'csf_f_2'
 level 'courseF_artist_variables7_2018'
@@ -210,7 +210,7 @@ level 'courseF_artist_for6_2018'
 level 'courseF_artist_for7_2018'
 level 'courseF_artist_for8_2018'
 level 'courseF_artist_for9_2018'
-assessment 'courseF_artist_for10_predict1_2018'
+level 'courseF_artist_for10_predict1_2018'
 level 'courseF_artist_for10_2018'
 bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
@@ -247,20 +247,20 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters_2018'
-named_level 'InspirationalArtwork_2018'
-named_level 'courseF_project_1'
+level 'courseF_video_csMatters_2018', named: true
+level 'InspirationalArtwork_2018', named: true
+level 'courseF_project_1', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project_2018'
+level 'Begin planning your project_2018', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project_2018'
-named_level 'CourseF_Project_SpriteLab'
+level 'Course F: Artist Project_2018', named: true
+level 'CourseF_Project_SpriteLab', named: true
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project - Revise_2018'
-named_level 'CourseF_Project_Revise_SpriteLab'
+level 'Course F: Artist Project - Revise_2018', named: true
+level 'CourseF_Project_Revise_SpriteLab', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation_2018'
+level 'Prepare for your presentation_2018', named: true

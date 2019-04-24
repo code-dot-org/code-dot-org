@@ -1820,7 +1820,7 @@ en:
       Dance Party 1-validated_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party 1-validated_simple: 'What do you think will happen when you click on the alien?  '
       Dance Party 2: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
-      Dance Party 2_2019: Change the behavior inside the `sprite begins` block to make the alien start spinning around.
+      Dance Party 2_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning around!
       Dance Party 2_simple: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
       Dance Party 3 - Validated: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 3 Ram: Make the sprite do something different when you press the up arrow.
@@ -3607,18 +3607,19 @@ en:
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
+      Virtual Pet 1_2019: Read and run the code below, then observe what the pet does. Try changing some of the code to produce different results! When you're done, click **Finish**.
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Use the **Costumes** tab to create or select a new costume for your virtual pet.
+      Virtual Pet 2_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add an event that makes the food jump to a random location when your pet touches it.
+      Virtual Pet 4_2019: Let's make it so your pet can "eat" its food. Add an event that makes the food jump to a random location when your pet touches it.
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
@@ -3627,7 +3628,26 @@ en:
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 7_2019: Create an event that prints your pet's happiness value when your pet is clicked.
+      Virtual Pet 7_2019: |-
+        Print your pet's happiness level each time it eats food. Use this block, found in the "World" toolbox category:
+        <xml>
+        <block type="gamelab_printText" block-text="print text block">
+                <value name="TEXT">
+                  <block type="text_join_simple" inputcount="2">
+                    <value name="ADD0">
+                      <block type="text">
+                        <title name="TEXT">My happiness level: </title>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get">
+                        <title name="VAR">happiness</title>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block></xml>
+      Virtual Pet 8_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
@@ -3683,19 +3703,22 @@ en:
       beeDebugVideo1: Use a `repeat` loop to collect all of the nectar.
       behavior bash mary: Clone this level and make your own blocks!
       behaviors 1: Make a prediction!
-      behaviors 2: Help the baby bird fly!
-      behaviors 3: Help the tortoise beat the hare!
+      behaviors 2: Fly the rocket to the stars!
+      behaviors 3: Help the rover outrun the robot!
+      behaviors 3a: 'Debug: Make all of the stars spin the same way!'
       behaviors 4: Make a prediction!
       behaviors 4a: Give the dog a behavior to help her find her bone.
-      behaviors 5: Move the pet diagonally.
+      behaviors 5: Move the astronaut diagonally.
       behaviors 5a: Make the ball roll.
       behaviors 6: Make the ball roll.
+      behaviors 7: Drive off into the sunset!
       behaviors clone me 2: Clone this level and make your own blocks!
       behaviors clone me Ram: Clone this level and make your own blocks!
       behaviors clone me joshl: Clone this level and make your own blocks!
       behaviors clone me nk: Clone this level and make your own blocks!
       behaviors clone me tanya: Clone this level and make your own blocks!
       behaviors clone me: Clone this level and make your own blocks!
+      behaviors free play: 'Free play: Create your own outer space scene!'
       behaviors pet test 123 copy: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
       behaviors pet test 123: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
       behaviors pet test 2: When Daisy gets a carrot, she gets excited. Use the **"when touches"** event and the "add behavior" block to make Daisy do something fun when she gets the carrot.
@@ -5338,30 +5361,18 @@ en:
       courseD_scrat_ramp7_2018: Help Scrat get to the acorn!
       courseD_scrat_ramp8: Use what you've learned to get Scrat to the acorn!
       courseD_scrat_ramp8_2018: Use what you've learned to get Scrat to the acorn!
-      courseE_aboutme_1: |-
+      courseE_aboutme_1: Play with Rikki's poster and code for a bit, then click **Finish**.
+      courseE_aboutme_1_old: |-
         Rikki is using SpriteLab to create an **interactive poster** that she can share on the web. She has chosen this sprite to represent her!
 
         Run the code below and click Rikki's sprite to see what she's done so far!
-      courseE_aboutme_2: |-
-        Rikki has so many cool things to share! In addition to her greeting, let's make her share some **Personal Information** when she is clicked.
-
-        Feel free to use your imagination to help Rikki. Just be careful that she doesn't accidentally share any **Private Information** as well!
-      courseE_aboutme_4: |-
-        Here is Rikki's best friend Thuy!
-
-        When Thuy is clicked, make Rikki share some SAFE information about her!
-      courseE_aboutme_5: "Rikki loves ice cream! She searched for an ice cream cone costume, but the closest thing she could find was... soap. Yuck! \n\nLet's surprise her by **drawing an ice cream cone costume** that she can use for that sprite.\n\n**Create an Ice Cream Cone Costume**\n\n* Click the **Costumes** tab.\n \n* Draw an ice cream cone!\n \n* Replace the soap sprite's costume with your ice cream cone costume in the code below!"
-      courseE_aboutme_6: |-
-        Rikki's poster is looking good, but it could use more action!
-
-        **Three Tasks to Complete Rikki's Poster**
-
-        * Make Rikki begin wandering when she's clicked. She loves exploring!
-
-        * Make Thuy begin jittering when Rikki touches her. Tickle tickle!
-
-        * Remove the ice cream cone when Rikki touches it. Yummy!
-      courseE_aboutme_freeplay: "Thanks for helping Rikki. Now it's your turn to **make your own interactive poster**! \n\nUse costumes, messages, events, and behaviors to tell the world about yourself! \n\nJust as with Rikki, remember to share SAFE information!"
+      courseE_aboutme_2: Use the **Costumes** tab to create or select a new costume for your sprite!
+      courseE_aboutme_3: When your character is clicked, share something SAFE about yourself using the <xml><block type="gamelab_printText" block-text="print"></block></xml> block in the `World` toolbox category!
+      courseE_aboutme_4: Add at least two new sprites to your poster. These sprite should represent something about yourself. Assign custom costumes to these sprites, then test it out!
+      courseE_aboutme_5: Share information about the sprites you just added! When they are clicked, print some SAFE information about them.
+      courseE_aboutme_6: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
+      courseE_aboutme_7: Play with Rikki's poster and code for a bit, then click **Finish**.
+      courseE_aboutme_freeplay: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '
@@ -6863,6 +6874,15 @@ en:
       template test: what's up
       testArtistForTestK: The Artist is trying to draw a line five times, but can't get it right.  Can you help?
       test_sarah: hi hi
+      timeforcs_demo_sl_1: 'What do you think will happen when you click on the alien?  '
+      timeforcs_demo_sl_2: Change the behavior inside the `sprite begins` block to make the alien start spinning around.
+      timeforcs_demo_sl_4: 'Create a new sprite that looks like a pink alien, then make it do a different dance move when it''s clicked.  '
+      timeforcs_demo_sl_5: 'Create a third sprite that looks like a yellow alien, and get all of your aliens to stand in a line. '
+      timeforcs_demo_sl_6: Add code to change the color of each alien when it gets clicked.
+      timeforcs_demo_sl_7: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      timeforcs_demo_sl_8: Add a new sprite that looks like a bell. Make all the aliens start doing the same dance move when the bell is clicked.
+      timeforcs_demo_sl_9: Now create your own alien disco!
+      timeforcs_demo_sl_predict: 'What do you think will happen when you click on the alien?  '
       u3-old-drawing-view: DO This
       valentine_artist_03: Now try something on your own!
       weird_playLab: About My Robot Project! Write code so that clicking on each bird shows a new fact about your robot.

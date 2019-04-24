@@ -686,3 +686,10 @@ pt-BR:
       courseE_simon_says_2019:
         desc: Jogue um jogo e pense sobre quais comandos são necessários para obter
           o resultado certo.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Condições
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
+          cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
+          ponto", e "se eu comprar uma carta preta, você ganha um ponto".

@@ -1982,6 +1982,8 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Songwriting
         express-2019:
           stages:
             Relay Programming:
@@ -2111,3 +2113,11 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            Building a Foundation:
+              name: Een Basis Bouwen

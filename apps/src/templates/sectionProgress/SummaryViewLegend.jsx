@@ -25,16 +25,21 @@ const styles = {
   },
   boxStyle: {
     margin: '0 auto'
+  },
+  completedBoxes: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 };
 
 export default class SummaryViewLegend extends Component {
   static propTypes = {
-    showCSFProgressBox: PropTypes.bool
+    showCSFProgressBox: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
-    const {showCSFProgressBox} = this.props;
+    const {showCSFProgressBox, inMiniRubricExperiment} = this.props;
     const headerColSpan = showCSFProgressBox ? 2 : 3;
 
     return (
@@ -81,6 +86,7 @@ export default class SummaryViewLegend extends Component {
                   incomplete={20}
                   imperfect={0}
                   perfect={0}
+                  stageIsAllAssessment={false}
                 />
               </td>
               <td style={styles.td}>
@@ -90,16 +96,31 @@ export default class SummaryViewLegend extends Component {
                   incomplete={20}
                   imperfect={0}
                   perfect={0}
+                  stageIsAllAssessment={false}
                 />
               </td>
               <td style={styles.td}>
-                <ProgressBox
-                  style={styles.boxStyle}
-                  started={true}
-                  incomplete={0}
-                  imperfect={0}
-                  perfect={20}
-                />
+                <div style={styles.completedBoxes}>
+                  <ProgressBox
+                    style={styles.boxStyle}
+                    started={true}
+                    incomplete={0}
+                    imperfect={0}
+                    perfect={20}
+                    stageIsAllAssessment={false}
+                  />
+                  {inMiniRubricExperiment && (
+                    <ProgressBox
+                      style={styles.boxStyle}
+                      started={true}
+                      incomplete={0}
+                      imperfect={0}
+                      perfect={20}
+                      stageIsAllAssessment={true}
+                      inMiniRubricExperiment={inMiniRubricExperiment}
+                    />
+                  )}
+                </div>
               </td>
               {showCSFProgressBox && (
                 <td style={styles.td}>
@@ -109,6 +130,7 @@ export default class SummaryViewLegend extends Component {
                     incomplete={0}
                     imperfect={20}
                     perfect={0}
+                    stageIsAllAssessment={false}
                   />
                 </td>
               )}

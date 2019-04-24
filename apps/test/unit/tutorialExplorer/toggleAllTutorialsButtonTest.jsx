@@ -18,7 +18,7 @@ describe('ToggleAllTutorialsButton', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <button onClick={FAKE_HIDE_ALL}>
+        <button type="button" onClick={FAKE_HIDE_ALL}>
           {i18n.hideAllTutorialsButton()}
           &nbsp;
           <i className="fa fa-caret-up" />
@@ -36,7 +36,7 @@ describe('ToggleAllTutorialsButton', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <button onClick={FAKE_SHOW_ALL}>
+        <button type="button" onClick={FAKE_SHOW_ALL}>
           {i18n.showAllTutorialsButton()}
           &nbsp;
           <i className="fa fa-caret-down" />

@@ -5,7 +5,7 @@ import {
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup, Row, Col} from 'react-bootstrap';
 import {PROGRAM_CSD, PROGRAM_CSP} from './TeacherApplicationConstants';
 
 export default class Section2ChooseYourProgram extends LabeledFormComponent {
@@ -26,6 +26,40 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
   }
 
   render() {
+    // This should be kept consistent with the calculation logic in
+    // dashboard/app/models/pd/application/teacher1920_application.rb.
+    const csHowManyMinutes = parseInt(this.props.data.csHowManyMinutes, 10);
+    const csHowManyDaysPerWeek = parseInt(
+      this.props.data.csHowManyDaysPerWeek,
+      10
+    );
+    const csHowManyWeeksPerYear = parseInt(
+      this.props.data.csHowManyWeeksPerYear,
+      10
+    );
+    let courseHours = null;
+    if (
+      !isNaN(csHowManyMinutes) &&
+      !isNaN(csHowManyDaysPerWeek) &&
+      !isNaN(csHowManyWeeksPerYear)
+    ) {
+      courseHours =
+        (csHowManyMinutes * csHowManyDaysPerWeek * csHowManyWeeksPerYear) / 60;
+    }
+
+    let courseNotes = null;
+    if (this.props.data.program && courseHours !== null) {
+      if (this.props.data.program.includes('Discoveries')) {
+        if (courseHours < 50) {
+          courseNotes = 'csd';
+        }
+      } else if (this.props.data.program.includes('Principles')) {
+        if (courseHours < 100) {
+          courseNotes = 'csp';
+        }
+      }
+    }
+
     return (
       <FormGroup>
         <h3>Section 3: {SectionHeaders.section2ChooseYourProgram}</h3>
@@ -76,33 +110,76 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
           follow up if your responses below don't meet the requirements, or if
           they have additional questions.
         </p>
-        {this.inputFor('csHowManyMinutes', {
+        <br />
+        {this.numberInputFor('csHowManyMinutes', {
           style: {
             width: '100px'
           },
           label: PageLabels.section2ChooseYourProgram.csHowManyMinutes.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
-        {this.inputFor('csHowManyDaysPerWeek', {
+        {this.numberInputFor('csHowManyDaysPerWeek', {
           style: {
             width: '100px'
           },
           label: PageLabels.section2ChooseYourProgram.csHowManyDaysPerWeek.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
-        {this.inputFor('csHowManyWeeksPerYear', {
+        {this.numberInputFor('csHowManyWeeksPerYear', {
           style: {
             width: '100px'
           },
           label: PageLabels.section2ChooseYourProgram.csHowManyWeeksPerYear.replace(
             'program',
             this.getNameForSelectedProgram()
-          )
+          ),
+          labelWidth: {md: 8},
+          controlWidth: {md: 4},
+          inlineControl: true
         })}
+        {courseHours && (
+          <div style={{marginBottom: 30}}>
+            <Row>
+              <Col md={8}>
+                <div style={{textAlign: 'right'}}>
+                  <strong>Course hours</strong>
+                </div>
+              </Col>
+              <Col md={4}>
+                <strong>{courseHours.toFixed(2)}</strong>
+              </Col>
+            </Row>
+          </div>
+        )}
+        {courseNotes === 'csd' && (
+          <p style={{color: 'red'}}>
+            Note: 50 or more hours of instruction per section for a
+            semester-long course are required to participate in the Professional
+            Learning Program. We suggest checking with your school
+            administration to see if 50 course hours can be allotted for this
+            course in 2019-20.
+          </p>
+        )}
+        {courseNotes === 'csp' && (
+          <p style={{color: 'red'}}>
+            Note: 100 or more hours of CS Principles instruction per section are
+            required to participate in the Professional Learning Program. We
+            suggest checking with your school administration to see if 100
+            course hours can be allotted in 2019-20. You may consider teaching
+            CS Discoveries for 9th-10th grade students instead if you can
+            accommodate at least 50 hours per section.
+          </p>
+        )}
         {this.radioButtonsWithAdditionalTextFieldsFor(
           'csTerms',
           {
