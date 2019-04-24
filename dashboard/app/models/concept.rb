@@ -20,20 +20,17 @@
 class Concept < ActiveRecord::Base
   include Seeded
   has_and_belongs_to_many :levels
-  # Can't call static from filter. Leaving in place for fixing later
-  #after_save :expire_cache
 
   def self.by_name(name)
-    (@@name_cache ||= Concept.all.index_by(&:name))[name].try(:id)
+    Rails.cache.fetch("concepts/names/#{name}") do
+      Concept.find_by_name(name).try(:id)
+    end
   end
 
   def self.cached
-    @@all_cache ||= Concept.all
-  end
-
-  def self.expire_cache
-    @@all_cache = nil
-    @@name_cache = nil
+    Rails.cache.fetch("concepts/all") do
+      Concept.all
+    end
   end
 
   CONCEPT_NAMES_BY_INDEX = %w(
