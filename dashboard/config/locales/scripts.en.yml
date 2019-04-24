@@ -10068,7 +10068,7 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals:
-              name: Conditionals
+              name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
@@ -10083,7 +10083,7 @@ en:
               description_student: Feel the force as you build your own Star Wars game in this lesson.
               description_teacher: In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.
             'Functions: Songwriting':
-              name: 'Functions: Songwriting'
+              name: Songwriting
               description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
             Functions in Minecraft:
@@ -10091,7 +10091,7 @@ en:
               description_student: ''
               description_teacher: ''
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Copyright and Creativity:
@@ -10099,7 +10099,7 @@ en:
               description_student: ''
               description_teacher: ''
             Functions in Artist:
-              name: Functions in Artist
+              name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
               description_teacher: Students will be introduced to using functions on Code.org. Magnificent images will be created and modified with functions in Artist. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
             Determine the Concept:
@@ -10107,7 +10107,7 @@ en:
               description_student: "We aren't giving away any secrets! \nThis lesson could use any of the skills you've learned so far."
               description_teacher: This lesson brings together concepts from the previous lessons and gives students a chance to think critically about how they would solve each problem, but without telling them which concept to apply. Students will review basic algorithms, debugging, `repeat` loops, conditionals, `while` loops, and functions.
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Swimming Fish with Sprite Lab
               description_student: ''
               description_teacher: ''
             Alien Dance Party with Sprite Lab:
@@ -10143,25 +10143,25 @@ en:
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Fancy Shapes using Nested Loops
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Nested Loops with Frozen
             Sequencing in the Maze:
               name: Sequencing in the Maze
             Programming and Loops with the Artist:
-              name: Programming and Loops with the Artist
+              name: Drawing with Loops
             End of Course Project:
               name: End of Course Project
             Conditionals in Minecraft:
               name: Conditionals in Minecraft
             About Me:
-              name: About Me
+              name: About Me with Sprite Lab
             Aquatic Conditionals in Minecraft:
               name: Aquatic Conditionals in Minecraft
             Access Ability:
-              name: Access Ability
+              name: Designing for Accessibility
             Digital Sharing:
               name: Digital Sharing
             Simon Says:
