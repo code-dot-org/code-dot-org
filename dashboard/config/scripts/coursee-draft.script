@@ -80,7 +80,7 @@ level 'courseE_artist_functions7'
 level 'courseE_artist_functions8', challenge: true
 level 'courseE_artist_functions9'
 level 'courseE_artist_functions10'
-assessment 'courseE_artist_functions_predict2'
+level 'courseE_artist_functions_predict2', assessment: true
 
 stage 'Functions in Bee'
 level 'courseE_bee_functions1'
@@ -95,7 +95,7 @@ level 'courseE_bee_functions7'
 level 'courseE_bee_functions8', challenge: true
 level 'courseE_bee_functions9'
 level 'courseE_bee_functions10'
-assessment 'courseE_bee_functions11_predict1'
+level 'courseE_bee_functions11_predict1', assessment: true
 
 stage 'Functions in Farmer'
 level 'courseE_farmer_functions1'
@@ -110,7 +110,7 @@ level 'courseE_farmer_functions7b'
 level 'courseE_farmer_functions8b', challenge: true
 level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
-assessment 'courseE_farmer_functions11_predict'
+level 'courseE_farmer_functions11_predict', assessment: true
 
 stage 'Determine the Concept'
 level 'courseE_bee_concept1'
