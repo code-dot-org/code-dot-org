@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/components/spinner';
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';
-import Pagination from './Pagination';
+import Pagination from '../../lib/ui/Pagination';
 import $ from 'jquery';
 
 class PeerReviewSubmissions extends React.Component {
