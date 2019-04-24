@@ -30,6 +30,7 @@ describe('PeerReviewSubmissions', () => {
       }
     ],
     pagination: {
+      total_results: 2,
       total_pages: 1,
       current_page: 1,
       next_page: null,
