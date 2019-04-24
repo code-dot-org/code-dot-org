@@ -7,6 +7,7 @@ import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
 import experiments from '@cdo/apps/util/experiments';
+import {Goal, show} from './AnimationPicker/animationPickerModule';
 
 export function sprites() {
   const animationList = getStore().getState().animationList;
@@ -166,7 +167,7 @@ const customInputTypes = {
           {
             text: 'More',
             action: () => {
-              console.log('Add a new animation');
+              getStore().dispatch(show(Goal.NEW_ANIMATION));
             }
           }
         ];
