@@ -46,10 +46,7 @@
     "validation_code": "var ball = allSpritesWithAnimation(\"soccer\");\r\nif(ball.x>350 && ball.rotation != 0){levelSuccess();}",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
