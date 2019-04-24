@@ -2,124 +2,128 @@
 es-MX:
   data:
     display_name:
-      AB_Debug_Artist1: 'Artista de la depuración #1 (AB)'
+      AB_Debug_Artist1: Depuración del Artista 1 (AB)
       Alien Defender: Defensor alienígena
       Alien Defender_2018: Defensor alienígena
-      App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo diseño'
-      App Lab Intro 8 - Video Getting Started: 'Vídeo: Cómo empezar'
-      App Lab Intro 8 - Video Images and Sounds: 'Vídeo: Imágenes y sonidos'
-      App Lab Intro 8 - Video Make It Interactive: 'Vídeo: Hazlo interactivo'
-      App Lab Intro 8 - Video Share Your App: 'Vídeo: Comparte tu aplicación'
-      AppLab Intro 3 - Change Screen Color: Cambiar color de la pantalla
-      AppLab Intro 3 - Change Text 2: Cambiar texto
-      AppLab Intro 3 - Change Text: Cambiar texto
+      App Lab Intro 8 - Video Design Mode: 'Video: modo de diseño'
+      App Lab Intro 8 - Video Getting Started: 'Video: primeros pasos'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: imágenes y sonidos'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: haz que sea interactivo'
+      App Lab Intro 8 - Video Share Your App: 'Video: comparte tu aplicación'
+      AppLab Intro 3 - Change Screen Color: Cambiar el color de la pantalla
+      AppLab Intro 3 - Change Text 2: Cambiar el texto
+      AppLab Intro 3 - Change Text: Cambiar el texto
       AppLab Intro 3 - Change Two Buttons: Dos botones
       AppLab Intro 3 - Full Text: Dos botones
-      AppLab Intro 3 - onEvent before: Mas practica onEvent
+      AppLab Intro 3 - onEvent before: Más práctica onEvent
       AppLab Intro 3 - onEvent intro: Hacer que funcionen los botones
-      AppLab Intro 3 - onEvent mouseInOut: Mas practica onEvent
-      AppLab Intro 3 - onEvent mouseOut: Usar mouseout
+      AppLab Intro 3 - onEvent mouseInOut: Más práctica onEvent
+      AppLab Intro 3 - onEvent mouseOut: Usar mouseOut
       AppLab Intro 3 - onEvent mouseOver: Usar mouseOver
-      AppLab Intro 3 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 3 - onEvent twoButtons: Más práctica onEvent
       AppLab Intro 3 - playSound: Usar playSound
-      AppLab Intro 3 - share and keep going: Tal o cual
+      AppLab Intro 3 - share and keep going: Esto o aquello
       AppLab Intro 3 - stopSound: Usar playSound
-      AppLab Intro 3 - thisOrThat: Tal o cual
-      AppLab Intro 4 - Change Screen Color: Cambiar color de la pantalla
-      AppLab Intro 4 - Change Text 2: Cambiar texto
-      AppLab Intro 4 - Change Text: Cambiar texto
+      AppLab Intro 3 - thisOrThat: Esto o aquello
+      AppLab Intro 4 - Change Screen Color: Cambiar el color de la pantalla
+      AppLab Intro 4 - Change Text 2: Cambiar el texto
+      AppLab Intro 4 - Change Text: Cambiar el texto
       AppLab Intro 4 - Change Two Buttons: Dos botones
       AppLab Intro 4 - Full Text: Dos botones
-      AppLab Intro 4 - Video Welcome: Bienvenido a la Hora del Código
-      AppLab Intro 4 - Video designMode: Vistazo al modo de diseño
+      AppLab Intro 4 - Video Welcome: Bienvenidos a la Hora del Código
+      AppLab Intro 4 - Video designMode: Vistazo rápido del modo de diseño
       AppLab Intro 4 - Video onEvent: Usar onEvent
-      AppLab Intro 4 - Video setProperty: Iniciando
-      AppLab Intro 4 - Video share thisThat: Comparte tu diseño
-      AppLab Intro 4 - Video share your work: Comparte tu diseño
-      AppLab Intro 4 - Video share: Comparte tu diseño
-      AppLab Intro 4 - Video sneak designMode: Vistazo al modo de diseño
+      AppLab Intro 4 - Video setProperty: Primeros pasos
+      AppLab Intro 4 - Video share thisThat: Compartir tu trabajo
+      AppLab Intro 4 - Video share your work: Compartir tu trabajo
+      AppLab Intro 4 - Video share: Compartir tu trabajo
+      AppLab Intro 4 - Video sneak designMode: Vistazo rápido del modo de diseño
       AppLab Intro 4 - Video using onEvent: Usar onEvent
-      AppLab Intro 4 - onEvent before: Mas practica onEvent
+      AppLab Intro 4 - onEvent before: Más práctica onEvent
       AppLab Intro 4 - onEvent intro: Hacer que funcionen los botones
       AppLab Intro 4 - onEvent mouseOver: Usar mouseOver
-      AppLab Intro 4 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 4 - onEvent twoButtons: Más práctica onEvent
       AppLab Intro 4 - playSound: Usar playSound
       AppLab Intro 4 - stopSound: Usar playSound
-      AppLab Intro 4 - thisOrThat design: Tal o cual diseño
-      AppLab Intro 4 - thisOrThat template: Tal o cual diseño
-      AppLab Intro 4 - thisOrThat: Tal o cual
-      AppLab Intro 5 - Change Screen Color: Cambiar color de la pantalla
-      AppLab Intro 5 - Change Text 2: Cambiar texto
-      AppLab Intro 5 - Change Text: Cambiar texto
+      AppLab Intro 4 - thisOrThat design: Este diseño o aquel
+      AppLab Intro 4 - thisOrThat template: Este diseño o aquel
+      AppLab Intro 4 - thisOrThat: Esto o aquello
+      AppLab Intro 5 - Change Screen Color: Cambiar el color de la pantalla
+      AppLab Intro 5 - Change Text 2: Cambiar el texto
+      AppLab Intro 5 - Change Text: Cambiar el texto
       AppLab Intro 5 - Change Two Buttons: Dos botones
       AppLab Intro 5 - Full Text: Dos botones
       AppLab Intro 5 - addButton: Usar playSound
       AppLab Intro 5 - go further: Usar playSound
       AppLab Intro 5 - onEvent intro: Hacer que funcionen los botones
-      AppLab Intro 5 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 5 - onEvent twoButtons: Más práctica onEvent
       AppLab Intro 5 - playSound: Usar playSound
       AppLab Intro 5 - rate it app: Usar playSound
       AppLab Intro 5 - setScreen: Usar playSound
       AppLab Intro 5 - share keep going: Usar playSound
       AppLab Intro 5 - socialTemplate: Usar playSound
-      AppLab Intro 6 - Change Screen Color: Cambiar color de la pantalla
-      AppLab Intro 6 - Change Text 2: Cambiar texto
+      AppLab Intro 6 - Change Screen Color: Cambiar el color de la pantalla
+      AppLab Intro 6 - Change Text 2: Cambiar el texto
       AppLab Intro 6 - Full Text: Dos botones
-      AppLab Intro 6 - Video welcome: Iniciando
+      AppLab Intro 6 - Video welcome: Primeros pasos
       AppLab Intro 6 - animalSoundBoard: Usar playSound
       AppLab Intro 6 - blankApp: Usar playSound
       AppLab Intro 6 - onEvent intro: Hacer que funcionen los botones
-      AppLab Intro 6 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 6 - onEvent twoButtons: Más práctica onEvent
       AppLab Intro 6 - playSound Template: Usar playSound
       AppLab Intro 6 - playSound: Usar playSound
       AppLab Intro 6 - quizApp: Usar playSound
-      AppLab Intro 6 - thisOrThatAddButton Template: Tal o cual
-      AppLab Intro 6 - thisOrThatAddButton: Tal o cual
-      AppLab Intro 6 - thisOrThatAddScreen: Tal o cual
-      AppLab Intro 6 - thisOrThatPersonalize: Tal o cual
-      AppLab Intro 6 - thisOrThatSetScreen: Tal o cual
-      AppLab Intro 7 - Change Screen Color: Cambiar color de la pantalla
-      AppLab Intro 7 - Change Text 2: Cambiar texto
+      AppLab Intro 6 - thisOrThatAddButton Template: Esto o aquello
+      AppLab Intro 6 - thisOrThatAddButton: Esto o aquello
+      AppLab Intro 6 - thisOrThatAddScreen: Esto o aquello
+      AppLab Intro 6 - thisOrThatPersonalize: Esto o aquello
+      AppLab Intro 6 - thisOrThatSetScreen: Esto o aquello
+      AppLab Intro 7 - Change Screen Color: Cambiar el color de la pantalla
+      AppLab Intro 7 - Change Text 2: Cambiar el texto
       AppLab Intro 7 - Full Text: Dos botones
       AppLab Intro 7 - onEvent intro: Hacer que funcionen los botones
-      AppLab Intro 7 - onEvent twoButtons: Mas practica onEvent
+      AppLab Intro 7 - onEvent twoButtons: Más práctica onEvent
       AppLab Intro 7 - playSound: Usar playSound
-      AppLab Intro 7 - thisOrThatAddButton: Tal o cual
-      AppLab Intro 7 - thisOrThatAddScreen: Tal o cual
-      AppLab Intro 7 - thisOrThatPersonalize: Tal o cual
-      AppLab Intro 7 - thisOrThatSetScreen: Tal o cual
-      CDEF_video_SpritesInAction: Como hacer un sprite
-      CDEF_video_SpritesInAction_2019: Como hacer un sprite
+      AppLab Intro 7 - thisOrThatAddButton: Esto o aquello
+      AppLab Intro 7 - thisOrThatAddScreen: Esto o aquello
+      AppLab Intro 7 - thisOrThatPersonalize: Esto o aquello
+      AppLab Intro 7 - thisOrThatSetScreen: Esto o aquello
+      CDEF_video_SpritesInAction: Cómo crear un sprite
+      CDEF_video_SpritesInAction_2019: Cómo crear un sprite
       CSD Board Buttons Map: Botones e interruptores
       CSD Board Buttons Map_2018: Botones e interruptores
       CSD Board Buttons Map_2019: Botones e interruptores
-      CSD Board Sensors Map: Sensores análogos
-      CSD Board Sensors Map_2018: Sensores análogos
-      CSD Board Sensors Map_2019: Sensores análogos
-      CSD Booleans Map: Booleanos y operadores de comparación
-      CSD Booleans Map_2018: Booleanos y operadores de comparación
-      CSD Booleans Map_2019: Booleanos y operadores de comparación
-      CSD Buzzer Map: 'Circuit Playground: Buzzer'
-      CSD Buzzer Map_2018: 'Circuit Playground: Buzzer'
-      CSD Buzzer Map_2019: 'Circuit Playground: Buzzer'
+      CSD Board Sensors Map: Sensores analógicos
+      CSD Board Sensors Map_2018: Sensores analógicos
+      CSD Board Sensors Map_2019: Sensores analógicos
+      CSD Booleans Map: Operadores booleanos y de comparación
+      CSD Booleans Map_2018: Operadores booleanos y de comparación
+      CSD Booleans Map_2019: Operadores booleanos y de comparación
+      CSD Buzzer Map: 'Circuit Playground: timbres'
+      CSD Buzzer Map_2018: 'Circuit Playground: timbres'
+      CSD Buzzer Map_2019: 'Circuit Playground: timbres'
       CSD Counter Pattern Map: El patrón del contador
       CSD Counter Pattern Map_2018: El patrón del contador
       CSD Counter Pattern Map_2019: El patrón del contador
-      CSD For Loops - Check For Understanding: Comprobar comprensión
-      CSD If Else Map: Sentencias If-Else
-      CSD If Else Map_2018: Sentencias If-Else
-      CSD If Else Map_2019: Sentencias If-Else
-      CSD If Statements Map: Instrucciones "si"
-      CSD If Statements Map_2018: Instrucciones "si"
-      CSD If Statements Map_2019: Instrucciones "si"
+      CSD For Loops - Check For Understanding: Comprueba tu comprensión
+      CSD If Else Map: Sentencias si-si no
+      CSD If Else Map_2018: Sentencias si-si no
+      CSD If Else Map_2019: Sentencias si-si no
+      CSD If Statements Map: Sentencias si
+      CSD If Statements Map_2018: Sentencias si
+      CSD If Statements Map_2019: Sentencias si
       CSD Introduction to Lists - Length: Introducción a las listas - Longitud
-      CSD LEDs Map: 'Circuit Playground: LEDs'
-      CSD LEDs Map_2018: 'Circuit Playground: LEDs'
-      CSD LEDs Map_2019: 'Circuit Playground: LEDs'
-      CSD Set Scale Map: Cambiar escala de sensor
-      CSD Set Scale Map_2018: Cambiar escala de sensor
-      CSD Set Scale Map_2019: Cambiar escala de sensor
-      CSD Timed For Loop Map: Bucles con tiempo
+      CSD LEDs Map: 'Circuit Playground: LED'
+      CSD LEDs Map_2018: 'Circuit Playground: LED'
+      CSD LEDs Map_2019: 'Circuit Playground: LED'
+      CSD Polling Events Map: Eventos de encuestas
+      CSD Polling Events Map_2018: Eventos de encuestas
+      CSD Polling Events Map_2019: Eventos de encuestas
+      CSD Set Scale Map: Cambiar la escala del sensor
+      CSD Set Scale Map_2018: Cambiar la escala del sensor
+      CSD Set Scale Map_2019: Cambiar la escala del sensor
+      CSD Timed For Loop Map: Bucles 'desde' cronometrados
+      CSD Timed Loop Map: Bucles cronometrados
       CSD U1 Feedback FR: Pregunta 6
       CSD U1 Test Collaborate FR: Pregunta 7
       CSD U1 Test Feedback FR: Pregunta 6
@@ -148,27 +152,27 @@ es-MX:
       CSD U2 CSS Classes Map: Clases CSS
       CSD U2 CSS Classes Map_2018: Clases CSS
       CSD U2 CSS Classes Map_2019: Clases CSS
-      CSD U2 CSS explore CSS: 'Exploración: Añadir estilo'
-      CSD U2 CSS explore CSS_2018: 'Exploración: Añadir estilo'
-      CSD U2 CSS explore CSS_2019: 'Exploración: Añadir estilo'
+      CSD U2 CSS explore CSS: 'Exploración: añadir estilo'
+      CSD U2 CSS explore CSS_2018: 'Exploración: añadir estilo'
+      CSD U2 CSS explore CSS_2019: 'Exploración: añadir estilo'
       CSD U2 HTML Tags Map: Etiquetas HTML
       CSD U2 HTML Tags Map_2018: Etiquetas HTML
       CSD U2 HTML Tags Map_2019: Etiquetas HTML
-      CSD U2 Header Demo: Introducción a cabeceras
-      CSD U2 Header Sizes: Tamaño de las cabeceras
-      CSD U2 Header Test: Cabeceras y párrafos
-      CSD U2 Headers map: Encabezados en HTML
-      CSD U2 Headers map_2018: Encabezados en HTML
-      CSD U2 Headers map_2019: Encabezados en HTML
-      CSD U2 Heading Demo: Introducción a encabezados
-      CSD U2 Heading Demo_2018: Introducción a encabezados
-      CSD U2 Heading Demo_2019: Introducción a encabezados
-      CSD U2 Heading Sizes: Tamaño de los encabezados
-      CSD U2 Heading Sizes_2018: Tamaño de los encabezados
-      CSD U2 Heading Sizes_2019: Tamaño de los encabezados
-      CSD U2 Heading Test: Encabezados y párrafos
-      CSD U2 Heading Test_2018: Encabezados y párrafos
-      CSD U2 Heading Test_2019: Encabezados y párrafos
+      CSD U2 Header Demo: Introducción a los encabezados
+      CSD U2 Header Sizes: Tamaños de los encabezados
+      CSD U2 Header Test: Encabezados y párrafos
+      CSD U2 Headers map: Títulos en HTML
+      CSD U2 Headers map_2018: Títulos en HTML
+      CSD U2 Headers map_2019: Títulos en HTML
+      CSD U2 Heading Demo: Introducción a los títulos
+      CSD U2 Heading Demo_2018: Introducción a los títulos
+      CSD U2 Heading Demo_2019: Introducción a los títulos
+      CSD U2 Heading Sizes: Tamaños de los títulos
+      CSD U2 Heading Sizes_2018: Tamaños de los títulos
+      CSD U2 Heading Sizes_2019: Tamaños de los títulos
+      CSD U2 Heading Test: Títulos y párrafos
+      CSD U2 Heading Test_2018: Títulos y párrafos
+      CSD U2 Heading Test_2019: Títulos y párrafos
       CSD U2 Inspector Warm Up: Explorar HTML
       CSD U2 Inspector Warm Up_2018: Explorar HTML
       CSD U2 Inspector Warm Up_2019: Explorar HTML
@@ -197,12 +201,16 @@ es-MX:
       CSD U2 challenge: Desafío
       CSD U2 challenge_2018: Desafío
       CSD U2 challenge_2019: Desafío
-      CSD U2 formatting map: Formateando HTML
-      CSD U2 formatting map_2018: Formateando HTML
-      CSD U2 formatting map_2019: Formateando HTML
+      CSD U2 formatting map: Formatear HTML
+      CSD U2 formatting map_2018: Formatear HTML
+      CSD U2 formatting map_2019: Formatear HTML
+      CSD U2 images map: Imágenes en HTML
+      CSD U2 images map_2018: Imágenes en HTML
+      CSD U2 images map_2019: Imágenes en HTML
       CSD U2 lists map: Listas en HTML
       CSD U2 lists map_2018: Listas en HTML
       CSD U2 lists map_2019: Listas en HTML
+      CSD U2 publish video: Publicar tu sitio web
       CSD U2L01 TFMD_2018: Resumen de la lección
       CSD U2L01 TFMD_2019: Resumen de la lección
       CSD U2L02 TFMD_2018: Resumen de la lección
@@ -231,21 +239,21 @@ es-MX:
       CSD U2L13 TFMD_2019: Resumen de la lección
       CSD U2L14 TFMD_2018: Resumen de la lección
       CSD U2L14 TFMD_2019: Resumen de la lección
-      CSD U3 - Booleans Video: 'Vídeo: Booleanos'
-      CSD U3 - Booleans Video_2018: 'Vídeo: Booleanos'
-      CSD U3 - Booleans Video_2019: 'Vídeo: Booleanos'
-      CSD U3 - Conditionals Video: 'Vídeo: Condicionales'
-      CSD U3 - Conditionals Video_2018: 'Vídeo: Condicionales'
-      CSD U3 - Conditionals Video_2019: 'Vídeo: Condicionales'
+      CSD U3 - Booleans Video: 'Video: booleanos'
+      CSD U3 - Booleans Video_2018: 'Video: booleanos'
+      CSD U3 - Booleans Video_2019: 'Video: booleanos'
+      CSD U3 - Conditionals Video: 'Video: condicionales'
+      CSD U3 - Conditionals Video_2018: 'Video: condicionales'
+      CSD U3 - Conditionals Video_2019: 'Video: sentencias si/si no'
       CSD U3 - conditionals - first conditional 2-2018: Desafío de visibilidad
       CSD U3 - conditionals - first conditional 2_2018: Desafío de visibilidad
       CSD U3 - conditionals - first conditional 2_2018_2019: Desafío de visibilidad
-      CSD U3 Animation Edit Map: Editando imágenes
-      CSD U3 Animation Edit Map_2018: Editando imágenes
-      CSD U3 Animation Edit Map_2019: Editando imágenes
-      CSD U3 Animation Tab Map: La pestaña de animación
-      CSD U3 Animation Tab Map_2018: La pestaña de animación
-      CSD U3 Animation Tab Map_2019: La pestaña de animación
+      CSD U3 Animation Edit Map: Editar imágenes
+      CSD U3 Animation Edit Map_2018: Editar imágenes
+      CSD U3 Animation Edit Map_2019: Editar imágenes
+      CSD U3 Animation Tab Map: La pestaña de Animación
+      CSD U3 Animation Tab Map_2018: La pestaña de Animación
+      CSD U3 Animation Tab Map_2019: La pestaña de Animación
       CSD U3 AnimationsMulti Play Defender: Juego de muestra
       CSD U3 AnimationsMulti Play Defender_2018: Juego de muestra
       CSD U3 AnimationsMulti Play Defender_2019: Juego de muestra
@@ -254,27 +262,29 @@ es-MX:
         del contador
       CSD U3 Complex Movement counter prediction gamelab_2019: Velocidad y patrón
         del contador
-      CSD U3 Compound Nested Challenge: 'Desafío: Comprobando múltiples condiciones'
-      CSD U3 Compound Nested Challenge_2018: 'Desafío: Comprobando múltiples condiciones'
-      CSD U3 Compound Nested Challenge_2019: 'Desafío: Comprobando múltiples condiciones'
-      CSD U3 Draw Loop Plugged update your scene: 'Desafío: Extender tu escena'
-      CSD U3 Draw Loop Plugged update your scene_2018: 'Desafío: Extender tu escena'
-      CSD U3 Draw Loop Plugged update your scene_2019: 'Desafío: Extender tu escena'
-      CSD U3 Drawing Squares to Corners: Usando la tabla
-      CSD U3 Drawing Squares to Corners_2018: Usando la tabla
-      CSD U3 Drawing Squares to Corners_2019: Usando la tabla
-      CSD U3 Entertainment Sample 3: Escenas de gráfico
-      CSD U3 Entertainment Sample 3_2018: Escenas de gráfico
-      CSD U3 Entertainment Sample 3_2019: Escenas de gráfico
-      CSD U3 Entertainment Sample 4: Escenas de gráfico
-      CSD U3 Entertainment Sample 4_2018: Escenas de gráfico
-      CSD U3 Entertainment Sample 4_2019: Escenas de gráfico
+      CSD U3 Compound Nested Challenge: 'Desafío: comprobar condiciones múltiples'
+      CSD U3 Compound Nested Challenge_2018: 'Desafío: comprobar condiciones múltiples'
+      CSD U3 Compound Nested Challenge_2019: 'Desafío: comprobar condiciones múltiples'
+      CSD U3 Draw Loop Map: El bucle 'dibujar'
+      CSD U3 Draw Loop Plugged update your scene: 'Desafío: extender tu escena'
+      CSD U3 Draw Loop Plugged update your scene_2018: 'Desafío: extender tu escena'
+      CSD U3 Draw Loop Plugged update your scene_2019: 'Desafío: extender tu escena'
+      CSD U3 Drawing Squares to Corners: Usar la cuadrícula
+      CSD U3 Drawing Squares to Corners_2018: Usar la cuadrícula
+      CSD U3 Drawing Squares to Corners_2019: Usar la cuadrícula
+      CSD U3 Entertainment Sample 3: Escenas de sprites
+      CSD U3 Entertainment Sample 3_2018: Escenas de sprites
+      CSD U3 Entertainment Sample 3_2019: Escenas de sprites
+      CSD U3 Entertainment Sample 4: Escenas de sprites
+      CSD U3 Entertainment Sample 4_2018: Escenas de sprites
+      CSD U3 Entertainment Sample 4_2019: Escenas de sprites
+      CSD U3 Functions Call Function_2019: 'Video: llamar y definir funciones'
       CSD U3 Interactive Card Exemplar_2018: Tarjeta interactiva
       CSD U3 Interactive Card Exemplar_2019: Tarjeta interactiva
-      CSD U3 Keyboard Input Challenge-2018: 'Desafío: Añadir más entradas'
-      CSD U3 Keyboard Input Challenge: 'Desafío: Añadir más entradas'
-      CSD U3 Keyboard Input Challenge_2018: 'Desafío: Añadir más entradas'
-      CSD U3 Keyboard Input Challenge_2018_2019: 'Desafío: Añadir más entradas'
+      CSD U3 Keyboard Input Challenge-2018: 'Desafío: añadir más entradas'
+      CSD U3 Keyboard Input Challenge: 'Desafío: añadir más entradas'
+      CSD U3 Keyboard Input Challenge_2018: 'Desafío: añadir más entradas'
+      CSD U3 Keyboard Input Challenge_2018_2019: 'Desafío: añadir más entradas'
       CSD U3 L11 Freeplay: Juego libre
       CSD U3 L11 Freeplay_2018: Juego libre
       CSD U3 L11 Freeplay_2019: Juego libre
@@ -325,89 +335,97 @@ es-MX:
       CSD U3 Random Number Map Level_2018: Números aleatorios
       CSD U3 Random Number Map Level_2019: Números aleatorios
       CSD U3 Random Number Map: Números aleatorios
-      CSD U3 Scene Example-2018: Escenas de gráfico
-      CSD U3 Scene Example: Escenas de gráfico
-      CSD U3 Scene Example_2018: Escenas de gráfico
-      CSD U3 Scene Example_2018_2019: Escenas de gráfico
+      CSD U3 Scene Example-2018: Escenas de sprites
+      CSD U3 Scene Example: Escenas de sprites
+      CSD U3 Scene Example_2018: Escenas de sprites
+      CSD U3 Scene Example_2018_2019: Escenas de sprites
       CSD U3 Sprite Properties Map: Propiedades de Sprite
       CSD U3 Sprite Properties Map_2018: Propiedades de Sprite
       CSD U3 Sprite Properties Map_2019: Propiedades de Sprite
-      CSD U3 Sprites Map: Creando gráficos
-      CSD U3 Sprites Map_2018: Creando gráficos
-      CSD U3 Sprites Map_2019: Creando gráficos
-      CSD U3 Sprites scene challenge: 'Desafío: Extender tu escena'
-      CSD U3 Sprites scene challenge_2018: 'Desafío: Extender tu escena'
-      CSD U3 Sprites scene challenge_2019: 'Desafío: Extender tu escena'
-      CSD U3 Variables Challenge: 'Desafío: Actualizando Variables'
-      CSD U3 Variables Challenge_2018: 'Desafío: Actualizando Variables'
-      CSD U3 Variables Challenge_2019: 'Desafío: Actualizando Variables'
-      CSD U3 Variables Draw Challenge: 'Desafío: Dibujar una imagen'
-      CSD U3 Variables Draw Challenge_2018: 'Desafío: Dibujar una imagen'
-      CSD U3 Variables Draw Challenge_2019: 'Desafío: Dibujar una imagen'
+      CSD U3 Sprites Map: Crear sprites
+      CSD U3 Sprites Map_2018: Crear sprites
+      CSD U3 Sprites Map_2019: Crear sprites
+      CSD U3 Sprites scene challenge: 'Desafío: extender tu escena'
+      CSD U3 Sprites scene challenge_2018: 'Desafío: extender tu escena'
+      CSD U3 Sprites scene challenge_2019: 'Desafío: extender tu escena'
+      CSD U3 The Draw Loop Map: El bucle 'dibujar'
+      CSD U3 The Draw Loop Map_2018: El bucle 'dibujar'
+      CSD U3 The Draw Loop Map_2019: El bucle 'dibujar'
+      CSD U3 Variables Challenge: 'Desafío: actualizar variables'
+      CSD U3 Variables Challenge_2018: 'Desafío: actualizar variables'
+      CSD U3 Variables Challenge_2019: 'Desafío: actualizar variables'
+      CSD U3 Variables Draw Challenge: 'Desafío: dibujar una imagen'
+      CSD U3 Variables Draw Challenge_2018: 'Desafío: dibujar una imagen'
+      CSD U3 Variables Draw Challenge_2019: 'Desafío: dibujar una imagen'
       CSD U3 Variables Map: Variables
       CSD U3 Variables Map_2018: Variables
       CSD U3 Variables Map_2019: Variables
-      CSD U3 Watchers Map: Depurando con Observadores
-      CSD U3 Watchers Map_2018: Depurando con Observadores
-      CSD U3 Watchers Map_2019: Depurando con Observadores
-      CSD U3 acceleration map: Velocidad y la revisión del patrón del contador
-      CSD U3 acceleration map_2018: Velocidad y la revisión del patrón del contador
-      CSD U3 acceleration map_2019: Velocidad y la revisión del patrón del contador
-      CSD U3 challenge face: 'Desafío: Cara'
-      CSD U3 challenge face_2018: 'Desafío: Cara'
-      CSD U3 challenge face_2019: 'Desafío: Cara'
-      CSD U3 challenge new shape: 'Desafío: Forma de Formas'
-      CSD U3 challenge new shape_2018: 'Desafío: Forma de Formas'
-      CSD U3 challenge new shape_2019: 'Desafío: Forma de Formas'
+      CSD U3 Watchers Map: Depurar con observadores
+      CSD U3 Watchers Map_2018: Depurar con observadores
+      CSD U3 Watchers Map_2019: Depurar con observadores
+      CSD U3 acceleration map: Velocidad y revisión del patrón del contador
+      CSD U3 acceleration map_2018: Velocidad y revisión del patrón del contador
+      CSD U3 acceleration map_2019: Velocidad y revisión del patrón del contador
+      CSD U3 challenge face: 'Desafío: cara'
+      CSD U3 challenge face_2018: 'Desafío: cara'
+      CSD U3 challenge face_2019: 'Desafío: cara'
+      CSD U3 challenge new shape: 'Desafío: forma de formas'
+      CSD U3 challenge new shape_2018: 'Desafío: forma de formas'
+      CSD U3 challenge new shape_2019: 'Desafío: forma de formas'
+      CSD U3 collisions build isTouching: Detección de colisiones
+      CSD U3 collisions build isTouching_2018: Detección de colisiones
+      CSD U3 collisions build isTouching_2019: Detección de colisiones
       CSD U3 collisions car intro: Juego de muestra
       CSD U3 collisions car intro_2018: Juego de muestra
       CSD U3 collisions car intro_2019: Juego de muestra
-      CSD U3 collisions predict set velocity code: Interacciones de gráficos
-      CSD U3 collisions predict set velocity code_2018: Interacciones de gráficos
-      CSD U3 collisions predict set velocity code_2019: Interacciones de gráficos
-      CSD U3 finishing touches: Proyecto - Finalizando Toques
-      CSD U3 finishing touches_2018: Proyecto - Finalizando Toques
-      CSD U3 finishing touches_2019: Proyecto - Finalizando Toques
+      CSD U3 collisions predict set velocity code: Interacciones de sprites
+      CSD U3 collisions predict set velocity code_2018: Interacciones de sprites
+      CSD U3 collisions predict set velocity code_2019: Interacciones de sprites
+      CSD U3 finishing touches: Proyecto - Toques finales
+      CSD U3 finishing touches_2018: Proyecto - Toques finales
+      CSD U3 finishing touches_2019: Proyecto - Toques finales
+      CSD U3 function video: 'Video: funciones'
       CSD U3 functions map: Funciones
       CSD U3 functions review: Revisión de funciones
       CSD U3 functions review_2018: Revisión de funciones
       CSD U3 functions review_2019: Revisión de funciones
-      CSD U3 interactions map: Revisión de interacciones de gráficos
-      CSD U3 interactions map_2018: Revisión de interacciones de gráficos
-      CSD U3 interactions map_2019: Revisión de interacciones de gráficos
+      CSD U3 if else predict: Predecir
+      CSD U3 interactions map: Revisión de interacciones de sprites
+      CSD U3 interactions map_2018: Revisión de interacciones de sprites
+      CSD U3 interactions map_2019: Revisión de interacciones de sprites
       CSD U3 istouching map: Revisión de detección de colisiones
       CSD U3 istouching map_2018: Revisión de detección de colisiones
       CSD U3 istouching map_2019: Revisión de detección de colisiones
-      CSD U3 naming map: Nombrar Variables
-      CSD U3 naming map_2018: Nombrar Variables
-      CSD U3 naming map_2019: Nombrar Variables
-      CSD U3 picture: 'Desafío: Dibujar una imagen'
-      CSD U3 picture_2018: 'Desafío: Dibujar una imagen'
-      CSD U3 picture_2019: 'Desafío: Dibujar una imagen'
+      CSD U3 naming map: Nombrar variables
+      CSD U3 naming map_2018: Nombrar variables
+      CSD U3 naming map_2019: Nombrar variables
+      CSD U3 picture: 'Desafío: dibujar una imagen'
+      CSD U3 picture_2018: 'Desafío: dibujar una imagen'
+      CSD U3 picture_2019: 'Desafío: dibujar una imagen'
       CSD U3 platform challenge: Mejora tu juego
       CSD U3 platform challenge_2018: Mejora tu juego
       CSD U3 platform challenge_2019: Mejora tu juego
-      CSD U3 platform sample1: Plataforma de ejemplo - Juego de saltos
-      CSD U3 platform sample1_2018: Plataforma de ejemplo - Juego de saltos
-      CSD U3 platform sample1_2019: Plataforma de ejemplo - Juego de saltos
+      CSD U3 platform sample1: Muestra del juego de salto de plataformas
+      CSD U3 platform sample1_2018: Muestra del juego de salto de plataformas
+      CSD U3 platform sample1_2019: Muestra del juego de salto de plataformas
       CSD U3 platform sample2: Salto de avión
       CSD U3 platform sample2_2018: Salto de avión
       CSD U3 platform sample2_2019: Salto de avión
       CSD U3 platform sample3: Salto de conejito
       CSD U3 platform sample3_2018: Salto de conejito
       CSD U3 platform sample3_2019: Salto de conejito
-      CSD U3 plotting shapes map: Trazar Formas en Laboratorio de juego
-      CSD U3 plotting shapes map_2018: Trazar Formas en Laboratorio de juego
-      CSD U3 plotting shapes map_2019: Trazar Formas en Laboratorio de juego
-      CSD U3 rect: Introducción al laboratorio de juegos
-      CSD U3 rect_2018: Introducción al laboratorio de juegos
-      CSD U3 rect_2019: Introducción al laboratorio de juegos
+      CSD U3 plotting shapes map: Trazar formas en el Laboratorio de juegos
+      CSD U3 plotting shapes map_2018: Trazar formas en el Laboratorio de juegos
+      CSD U3 plotting shapes map_2019: Trazar formas en el Laboratorio de juegos
+      CSD U3 rect: Introducción al Laboratorio de juegos
+      CSD U3 rect_2018: Introducción al Laboratorio de juegos
+      CSD U3 rect_2019: Introducción al Laboratorio de juegos
       CSD U3 shape size map: Formas y parámetros
       CSD U3 shape size map_2018: Formas y parámetros
       CSD U3 shape size map_2019: Formas y parámetros
-      CSD U3 velocity map: Velocidad de gráficos
-      CSD U3 velocity map_2018: Velocidad de gráficos
-      CSD U3 velocity map_2019: Velocidad de gráficos
+      CSD U3 velocity map: Velocidad de sprites
+      CSD U3 velocity map_2018: Velocidad de sprites
+      CSD U3 velocity map_2019: Velocidad de sprites
       CSD U3L01 TFMD_2018: Resumen de la lección
       CSD U3L01 TFMD_2019: Resumen de la lección
       CSD U3L02 TFMD_2018: Resumen de la lección
@@ -452,24 +470,27 @@ es-MX:
       CSD U3L21 TFMD_2019: Resumen de la lección
       CSD U3L22 TFMD_2018: Resumen de la lección
       CSD U3L22 TFMD_2019: Resumen de la lección
-      CSD U4 - Design Mode Project: 'Proyecto de aplicación: Diseño de pantalla'
-      CSD U4 - Design Mode Project_2018: 'Proyecto de aplicación: Diseño de pantalla'
-      CSD U4 - Design Mode Project_2019: 'Proyecto de aplicación: Diseño de pantalla'
+      CSD U4 - Design Mode Project: 'Proyecto de aplicación: diseño de pantalla'
+      CSD U4 - Design Mode Project_2018: 'Proyecto de aplicación: diseño de pantalla'
+      CSD U4 - Design Mode Project_2019: 'Proyecto de aplicación: diseño de pantalla'
       CSD U4 Change Screen Map: Cambiar pantallas
       CSD U4 Change Screen Map_2018: Cambiar pantallas
       CSD U4 Change Screen Map_2019: Cambiar pantallas
-      CSD U4 Design Elements Map: Elementos de modo de diseño
-      CSD U4 Design Elements Map_2018: Elementos de modo de diseño
-      CSD U4 Design Elements Map_2019: Elementos de modo de diseño
-      CSD U4 Design Mode Map: Visita del Modo de diseño
-      CSD U4 Design Mode Map_2018: Visita del Modo de diseño
-      CSD U4 Design Mode Map_2019: Visita del Modo de diseño
+      CSD U4 Design Elements Map: Elementos del modo de diseño
+      CSD U4 Design Elements Map_2018: Elementos del modo de diseño
+      CSD U4 Design Elements Map_2019: Elementos del modo de diseño
+      CSD U4 Design Mode Map: Recorrido por el modo de diseño
+      CSD U4 Design Mode Map_2018: Recorrido por el modo de diseño
+      CSD U4 Design Mode Map_2019: Recorrido por el modo de diseño
       CSD U4 Importing Screens Map: Importar pantallas
       CSD U4 Importing Screens Map_2018: Importar pantallas
       CSD U4 Importing Screens Map_2019: Importar pantallas
-      CSD U4 User Input Map: Responder a la entrada del usuario
-      CSD U4 User Input Map_2018: Responder a la entrada del usuario
-      CSD U4 User Input Map_2019: Responder a la entrada del usuario
+      CSD U4 Mult Screen Map: Aplicaciones con varias pantallas
+      CSD U4 Mult Screen Map_2018: Aplicaciones con varias pantallas
+      CSD U4 Mult Screen Map_2019: Aplicaciones con varias pantallas
+      CSD U4 User Input Map: Responder a las contribuciones de los usuarios
+      CSD U4 User Input Map_2018: Responder a las contribuciones de los usuarios
+      CSD U4 User Input Map_2019: Responder a las contribuciones de los usuarios
       CSD U4L01 SFLP_2018: Resumen de la lección
       CSD U4L01 autoSFLP_2018: Resumen de la lección
       CSD U4L01 autoSFLP_2019: Resumen de la lección
@@ -520,11 +541,11 @@ es-MX:
       CSD U4L16 autoSFLP_2019: Resumen de la lección
       CSD U5 Amazon Data Video: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2018: Recopilar información sobre los usuarios
-      CSD U5 Amazon Data Video_2019: Recopilar información sobre los usuarios
-      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza datos
+      CSD U5 Amazon Data Video_2019: Cómo Amazon utiliza los datos
+      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza los datos
       CSD U5 Waze Data Video: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2018: Recopilar información sobre los usuarios
-      CSD U5 Waze Data Video_2019: Recopilar información sobre los usuarios
+      CSD U5 Waze Data Video_2019: Cómo Waze utiliza los datos
       CSD U5 binary video: Binario y datos
       CSD U5 binary video_2018: Binario y datos
       CSD U5 binary video_2019: Binario y datos
@@ -581,71 +602,80 @@ es-MX:
       CSD U5L14 autoSFLP_2019: Resumen de la lección
       CSD U5L15 autoSFLP_2018: Resumen de la lección
       CSD U5L15 autoSFLP_2019: Resumen de la lección
-      CSD U6 analog challenge: 'Desafío: Entendiendo los sensores'
-      CSD U6 analog challenge_2018: 'Desafío: Entendiendo los sensores'
-      CSD U6 analog challenge_2019: 'Desafío: Entendiendo los sensores'
-      CSD U6 arrays intro: Introducción a los Arrays
-      CSD U6 arrays intro_2018: Introducción a los Arrays
-      CSD U6 arrays video: 'Vídeo: Introducción a matrices'
-      CSD U6 challenge motorcycle: 'Desafío: Motocicleta'
-      CSD U6 challenge motorcycle_2018: 'Desafío: Motocicleta'
-      CSD U6 challenge motorcycle_2019: 'Desafío: Motocicleta'
-      CSD U6 circuit LED map: Circuitos y LEDs
-      CSD U6 circuit LED map_2018: Circuitos y LEDs
-      CSD U6 circuit LED map_2019: Circuitos y LEDs
-      CSD U6 circuit button map: Circuito de Botón
-      CSD U6 circuit button map_2018: Circuito de Botón
-      CSD U6 circuit button map_2019: Circuito de Botón
+      CSD U6 Event Types: Tipos de eventos
+      CSD U6 Event Types_2018: Tipos de eventos
+      CSD U6 Event Types_2019: Tipos de eventos
+      CSD U6 analog challenge: 'Desafío: entender los sensores'
+      CSD U6 analog challenge_2018: 'Desafío: entender los sensores'
+      CSD U6 analog challenge_2019: 'Desafío: entender los sensores'
+      CSD U6 arrays intro: Introducción a los arreglos
+      CSD U6 arrays intro_2018: Introducción a los arreglos
+      CSD U6 arrays intro_2019: Arreglos
+      CSD U6 arrays video: 'Video: introducción a arreglos'
+      CSD U6 challenge motorcycle: 'Desafío: motocicleta'
+      CSD U6 challenge motorcycle_2018: 'Desafío: motocicleta'
+      CSD U6 challenge motorcycle_2019: 'Desafío: motocicleta'
+      CSD U6 circuit LED map: Circuitos y LED
+      CSD U6 circuit LED map_2018: Circuitos y LED
+      CSD U6 circuit LED map_2019: Circuitos y LED
+      CSD U6 circuit button map: Circuitos de botones
+      CSD U6 circuit button map_2018: Circuitos de botones
+      CSD U6 circuit button map_2019: Circuitos de botones
       CSD U6 circuit logic video: Circuitos y lógica
       CSD U6 circuit logic video_2018: Circuitos y lógica
       CSD U6 circuit logic video_2019: Circuitos y lógica
-      CSD U6 emoji race demo: Programa de ejemplo
-      CSD U6 emoji race demo_2018: Programa de ejemplo
-      CSD U6 emoji race demo_2019: Programa de ejemplo
-      CSD U6 emotion machine example: Ejemplo de máquina de Emoción
-      CSD U6 emotion machine example_2018: Ejemplo de máquina de Emoción
-      CSD U6 emotion machine example_2019: Ejemplo de máquina de Emoción
-      CSD U6 for loop led bonus 1: 'Desafío: Añadir más botones'
-      CSD U6 for loop led bonus 1_2018: 'Desafío: Añadir más botones'
-      CSD U6 for loop led bonus 1_2019: 'Desafío: Añadir más botones'
-      CSD U6 for loop led bonus 2: 'Desafío: Patrones de color'
-      CSD U6 for loop led bonus 2_2018: 'Desafío: Patrones de color'
-      CSD U6 for loop led bonus 2_2019: 'Desafío: Patrones de color'
-      CSD U6 for loop led bonus 3: 'Desafío: Música'
-      CSD U6 for loop led bonus 3_2018: 'Desafío: Música'
-      CSD U6 for loop led bonus 3_2019: 'Desafío: Música'
+      CSD U6 emoji race demo: Programa de muestra
+      CSD U6 emoji race demo_2018: Programa de muestra
+      CSD U6 emoji race demo_2019: Programa de muestra
+      CSD U6 emotion machine example: Ejemplo de máquina de emociones
+      CSD U6 emotion machine example_2018: Ejemplo de máquina de emociones
+      CSD U6 emotion machine example_2019: Ejemplo de máquina de emociones
+      CSD U6 for loop led bonus 1: 'Desafío: añadir más botones'
+      CSD U6 for loop led bonus 1_2018: 'Desafío: añadir más botones'
+      CSD U6 for loop led bonus 1_2019: 'Desafío: añadir más botones'
+      CSD U6 for loop led bonus 2: 'Desafío: patrones de color'
+      CSD U6 for loop led bonus 2_2018: 'Desafío: patrones de color'
+      CSD U6 for loop led bonus 2_2019: 'Desafío: patrones de color'
+      CSD U6 for loop led bonus 3: 'Desafío: música'
+      CSD U6 for loop led bonus 3_2018: 'Desafío: música'
+      CSD U6 for loop led bonus 3_2019: 'Desafío: música'
       CSD U6 for loop map: Bucles Para
       CSD U6 for loop map_2018: Bucles Para
       CSD U6 for loop map_2019: Bucles Para
       CSD U6 functions paramters video: Funciones con parámetros
       CSD U6 functions paramters video_2018: Funciones con parámetros
       CSD U6 functions paramters video_2019: Funciones con parámetros
-      CSD U6 getProperty Map: getProperty
-      CSD U6 getProperty Map_2018: getProperty
-      CSD U6 getProperty Map_2019: getProperty
-      CSD U6 getProperty xy challenge: 'Desafío: Obtener y configurar'
+      CSD U6 getProperty Map: obtenerPropiedad
+      CSD U6 getProperty Map_2018: obtenerPropiedad
+      CSD U6 getProperty Map_2019: obtenerPropiedad
+      CSD U6 getProperty xy challenge: 'Desafío: obtener y configurar'
       CSD U6 hardware software video: Hardware y software
       CSD U6 hardware software video_2018: Hardware y software
       CSD U6 hardware software video_2019: Hardware y software
-      CSD U6 light pattern challenge: Espectáculo de luz mejorada
-      CSD U6 light pattern challenge_2018: Espectáculo de luz mejorada
-      CSD U6 light pattern challenge_2019: Espectáculo de luz mejorada
-      CSD U6 params starchaser challenge 1: Starchaser - Añadir vidas
-      CSD U6 params starchaser challenge 1_2018: Starchaser - Añadir vidas
-      CSD U6 params starchaser challenge 1_2019: Starchaser - Añadir vidas
-      CSD U6 params starchaser challenge 2: Starchaser - Reiniciar jugador
-      CSD U6 params starchaser challenge 2_2018: Starchaser - Reiniciar jugador
-      CSD U6 params starchaser challenge 2_2019: Starchaser - Reiniciar jugador
-      CSD U6 sensor experiment embedded: Experimento de Sensor
-      CSD U6 sensor experiment embedded_2018: Experimento de Sensor
-      CSD U6 sensor experiment embedded_2019: Experimento de Sensor
-      CSD U6 tugowar conditional map: Actualización de Condicionales
-      CSD U6 tugowar demo: Demo - Grabar error
-      CSD U6 tugowar demo_2018: Demo - Grabar error
-      CSD U6 tugowar demo_2019: Demo - Grabar error
-      CSD U6 tugowar final: Hazlo por ti mismo
-      CSD U6 tugowar final_2018: Hazlo por ti mismo
-      CSD U6 tugowar final_2019: Hazlo por ti mismo
+      CSD U6 light pattern challenge: Espectáculo de luces mejorado
+      CSD U6 light pattern challenge_2018: Espectáculo de luces mejorado
+      CSD U6 light pattern challenge_2019: Espectáculo de luces mejorado
+      CSD U6 params starchaser challenge 1: Cazador de estrellas - Añadir vidas
+      CSD U6 params starchaser challenge 1_2018: Cazador de estrellas - Añadir vidas
+      CSD U6 params starchaser challenge 1_2019: Cazador de estrellas - Añadir vidas
+      CSD U6 params starchaser challenge 2: Cazador de estrellas - Reiniciar jugador
+      CSD U6 params starchaser challenge 2_2018: Cazador de estrellas - Reiniciar
+        jugador
+      CSD U6 params starchaser challenge 2_2019: Cazador de estrellas - Reiniciar
+        jugador
+      CSD U6 sensor experiment embedded: Experimento con sensores
+      CSD U6 sensor experiment embedded_2018: Experimento con sensores
+      CSD U6 sensor experiment embedded_2019: Experimento con sensores
+      CSD U6 setProperty Map: Diseñar pantallas con código
+      CSD U6 setProperty Map_2018: Diseñar pantallas con código
+      CSD U6 setProperty Map_2019: Diseñar pantallas con código
+      CSD U6 tugowar conditional map: Actualización de condicionales
+      CSD U6 tugowar demo: Demo - Capturar error
+      CSD U6 tugowar demo_2018: Demo - Capturar error
+      CSD U6 tugowar demo_2019: Demo - Capturar error
+      CSD U6 tugowar final: Hazlo tuyo
+      CSD U6 tugowar final_2018: Hazlo tuyo
+      CSD U6 tugowar final_2019: Hazlo tuyo
       CSD U6L01 TFMD clone: Resumen de la lección
       CSD U6L01 TFMD: Resumen de la lección
       CSD U6L01 TFMD_2018: Resumen de la lección
@@ -695,86 +725,84 @@ es-MX:
       CSD U6L16 TFMD: Resumen de la lección
       CSD U6L16 TFMD_2018: Resumen de la lección
       CSD U6L16 TFMD_2019: Resumen de la lección
-      CSD What Makes a Computer a Computer Video: 'Vídeo: ¿Qué hace un ordenador,
-        un ordenador?'
-      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: ¿Qué hace un ordenador,
-        un ordenador?'
-      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: ¿Qué hace un ordenador,
-        un ordenador?'
-      CSD colorLed Map: 'Circuit Playground: LEDs de color'
-      CSD colorLed Map_2018: 'Circuit Playground: LEDs de color'
-      CSD colorLed Map_2019: 'Circuit Playground: LEDs de color'
-      CSD onBoardEvent Map: Respondendo a eventos de la placa
-      CSD onBoardEvent Map_2018: Respondendo a eventos de la placa
-      CSD onBoardEvent Map_2019: Respondendo a eventos de la placa
-      CSD-Arrays: Modificar y crear matrices
-      CSD-Arrays_2018: Modificar matrices
-      CSD-Arrays_2019: Modificar matrices
-      'CSD: Animating Sprite Movement': 'Vídeo: Movimiento de gráficos'
-      'CSD: Animating Sprite Movement_2018': 'Vídeo: Movimiento de gráficos'
-      'CSD: Animating Sprite Movement_2019': 'Vídeo: Movimiento de gráficos'
-      'CSD: Animation Tab': 'Video: La pestaña de animación'
-      'CSD: Animation Tab_2018': 'Video: La pestaña de animación'
-      'CSD: Animation Tab_2019': 'Video: La pestaña de animación'
-      'CSD: Drawing in Game Lab 1': 'Vídeo: Dibujando en Laboratorio de juego - Parte
-        1'
-      'CSD: Drawing in Game Lab 1_2018': 'Vídeo: Dibujando en Laboratorio de juego
+      CSD What Makes a Computer a Computer Video: 'Video: ¿por qué las computadoras
+        son así?'
+      CSD What Makes a Computer a Computer Video_2018: 'Video: ¿por qué las computadoras
+        son así?'
+      CSD What Makes a Computer a Computer Video_2019: 'Video: ¿por qué las computadoras
+        son así?'
+      CSD colorLed Map: 'Circuit Playground: LED de color'
+      CSD colorLed Map_2018: 'Circuit Playground: LED de color'
+      CSD colorLed Map_2019: 'Circuit Playground: LED de color'
+      CSD onBoardEvent Map: Responder a los eventos del tablero
+      CSD onBoardEvent Map_2018: Responder a los eventos del tablero
+      CSD onBoardEvent Map_2019: Responder a los eventos del tablero
+      CSD-Arrays: Modificar y crear arreglos
+      CSD-Arrays_2018: Modificar arreglos
+      CSD-Arrays_2019: Modificar arreglos
+      'CSD: Animating Sprite Movement': 'Video: movimiento de sprites'
+      'CSD: Animating Sprite Movement_2018': 'Video: movimiento de sprites'
+      'CSD: Animating Sprite Movement_2019': 'Video: movimiento de sprites'
+      'CSD: Animation Tab': 'Video: pestaña de animación'
+      'CSD: Animation Tab_2018': 'Video: pestaña de animación'
+      'CSD: Animation Tab_2019': 'Video: pestaña de animación'
+      'CSD: Drawing in Game Lab 1': 'Video: dibujar en el Laboratorio de juegos -
+        Parte 1'
+      'CSD: Drawing in Game Lab 1_2018': 'Video: dibujar en el Laboratorio de juegos
         - Parte 1'
-      'CSD: Drawing in Game Lab 1_2019': 'Vídeo: Dibujando en Laboratorio de juego
+      'CSD: Drawing in Game Lab 1_2019': 'Video: dibujar en el Laboratorio de juegos
         - Parte 1'
-      'CSD: Drawing in Game Lab 2': 'Vídeo: Dibujando en Laboratorio de juego - Parte
-        2'
-      'CSD: Drawing in Game Lab 2_2018': 'Vídeo: Dibujando en Laboratorio de juego
+      'CSD: Drawing in Game Lab 2': 'Video: dibujar en el Laboratorio de juegos -
+        Parte 2'
+      'CSD: Drawing in Game Lab 2_2018': 'Video: dibujar en el Laboratorio de juegos
         - Parte 2'
-      'CSD: Drawing in Game Lab 2_2019': 'Vídeo: Dibujando en Laboratorio de juego
+      'CSD: Drawing in Game Lab 2_2019': 'Video: dibujar en el Laboratorio de juegos
         - Parte 2'
       'CSD: For Loop_2018': Bucles Para
       'CSD: For Loop_2019': Bucles Para
-      'CSD: Introduction to the Draw Loop': 'Vídeo: Introducción al bucle de dibujo'
-      'CSD: Introduction to the Draw Loop_2018': 'Vídeo: Introducción al bucle de
-        dibujo'
-      'CSD: Introduction to the Draw Loop_2019': 'Vídeo: Introducción al bucle de
-        dibujo'
-      'CSD: Sprite Velocity': 'Vídeo: velocidad'
-      'CSD: Sprite Velocity_2018': 'Vídeo: velocidad'
-      'CSD: Sprite Velocity_2019': 'Vídeo: velocidad'
-      'CSD: Sprites in Game Lab': 'Vídeo: Introducción a gráficos'
-      'CSD: Sprites in Game Lab_2018': 'Vídeo: Introducción a gráficos'
-      'CSD: Sprites in Game Lab_2019': 'Vídeo: Introducción a gráficos'
-      CSDU4 Design Mode Video: Introducción a Modo de Diseño
-      CSDU4 Design Mode Video_2018: Introducción a Modo de Diseño
-      CSDU4 Design Mode Video_2019: Introducción a Modo de Diseño
+      'CSD: Introduction to the Draw Loop': 'Video: introducción al bucle dibujar'
+      'CSD: Introduction to the Draw Loop_2018': 'Video: introducción al bucle dibujar'
+      'CSD: Introduction to the Draw Loop_2019': 'Video: introducción al bucle dibujar'
+      'CSD: Sprite Velocity': 'Video: velocidad'
+      'CSD: Sprite Velocity_2018': 'Video: velocidad'
+      'CSD: Sprite Velocity_2019': 'Video: velocidad'
+      'CSD: Sprites in Game Lab': 'Video: introducción a los sprites'
+      'CSD: Sprites in Game Lab_2018': 'Video: introducción a los sprites'
+      'CSD: Sprites in Game Lab_2019': 'Video: introducción a los sprites'
+      CSDU4 Design Mode Video: Introducción al modo de diseño
+      CSDU4 Design Mode Video_2018: Introducción al modo de diseño
+      CSDU4 Design Mode Video_2019: Introducción al modo de diseño
       CSDU4 Project Bug Feature: 'Proyecto de aplicación: errores y características'
       CSDU4 Project Bug Feature_2018: 'Proyecto de aplicación: errores y características'
       CSDU4 Project Bug Feature_2019: 'Proyecto de aplicación: errores y características'
-      CSDU4 Project Events: 'Proyecto de aplicación: Vincular pantallas'
-      CSDU4 Project Events_2018: 'Proyecto de aplicación: Vincular pantallas'
-      CSDU4 Project Events_2019: 'Proyecto de aplicación: Vincular pantallas'
-      CSDU4 Project Functionality: 'Proyecto de aplicación: Añadir funcionalidad'
-      CSDU4 Project Import: 'Proyecto de aplicación: Importación de pantalla'
-      CSDU4 Project Import_2018: 'Proyecto de aplicación: Importación de pantalla'
-      CSDU4 Project Import_2019: 'Proyecto de aplicación: Importación de pantalla'
+      CSDU4 Project Events: 'Proyecto de aplicación: vincular pantallas'
+      CSDU4 Project Events_2018: 'Proyecto de aplicación: vincular pantallas'
+      CSDU4 Project Events_2019: 'Proyecto de aplicación: vincular pantallas'
+      CSDU4 Project Functionality: 'Proyecto de aplicación: añadir funcionalidad'
+      CSDU4 Project Import: 'Proyecto de aplicación: importación de pantallas'
+      CSDU4 Project Import_2018: 'Proyecto de aplicación: importación de pantallas'
+      CSDU4 Project Import_2019: 'Proyecto de aplicación: importación de pantallas'
       CSDU6 - UI and Inputs - event type testing: Prueba de eventos
-      CSDU6 - UI and Inputs - getNumber: conseguirNúmero
-      CSDU6 - board event challenge: Tabla de sonido
-      CSDU6 - board event challenge_2018: Tabla de sonido
-      CSDU6 - board event challenge_2019: Tabla de sonido
-      CSDU6 - button tug o war challenge: 'Desafío: Juego de la soga'
-      CSDU6 - ch 1 exemplar LEDs: Ejemplo de LEDs de color
-      CSDU6 - ch 1 project template: 'Desafío: Obtener Loopy'
-      CSDU6 - sensor love tester demo: Demo del testador de amor
-      CSDU6 - sensor theremin demo: Demo Light Theremin
-      CSDU6 - sensor vu meter demo: Demo de metro UV
-      CSDU6 - sensors challenge: 'Desafío: Entendiendo los sensores'
-      CSDU6 - sensors experiment: Experimento de Sensor
-      CSDU6 - timed loop challenge: 'Desafío: Obtener Loopy'
-      CSDU6 buzzer 2d arrays: Vectores 2D
-      CSDU6 buzzer 2d arrays_2018: Vectores 2D
-      CSDU6 buzzer 2d arrays_2019: Vectores 2D
+      CSDU6 - UI and Inputs - getNumber: obtenerNúmero
+      CSDU6 - board event challenge: Tarjeta de sonido
+      CSDU6 - board event challenge_2018: Tarjeta de sonido
+      CSDU6 - board event challenge_2019: Tarjeta de sonido
+      CSDU6 - button tug o war challenge: 'Desafío: juego de la cuerda'
+      CSDU6 - ch 1 exemplar LEDs: Ejemplo de LED de color
+      CSDU6 - ch 1 project template: 'Desafío: ser repetitivo'
+      CSDU6 - sensor love tester demo: Demostración del evaluador del amor
+      CSDU6 - sensor theremin demo: Demostración del eterófono de luz
+      CSDU6 - sensor vu meter demo: Demostración del vúmetro
+      CSDU6 - sensors challenge: 'Desafío: entender los sensores'
+      CSDU6 - sensors experiment: Experimento con sensores
+      CSDU6 - timed loop challenge: 'Desafío: ser repetitivo'
+      CSDU6 buzzer 2d arrays: Arreglos 2D
+      CSDU6 buzzer 2d arrays_2018: Arreglos 2D
+      CSDU6 buzzer 2d arrays_2019: Arreglos 2D
       CSDU6 buzzer.stop: Detener la música
       CSDU6 buzzer.stop_2018: Detener la música
       CSDU6 buzzer.stop_2019: Detener la música
-      CSDU6 challenge play songs: Música Bot
+      CSDU6 challenge play songs: Bot de canciones
       CSDu2 IP CC Search: Búsqueda de Creative Commons
       CSP CreateL01 SFLP: Resumen de la lección
       CSP CreateL01 SFLP_2019: Resumen de la lección
@@ -920,8 +948,8 @@ es-MX:
       CSP U5L17 SFLP: Resumen de la lección
       CSP U5L17 SFLP_2019: Resumen de la lección
       CSP U5L18 SFLP: Resumen de la lección
-      CSPU5_U3 - Canvas - freePlay_2018: 'Proyecto: Pintor de lienzo'
-      CSPU5_U3 - Canvas - freePlay_2019: 'Proyecto: Pintor de lienzo'
+      CSPU5_U3 - Canvas - freePlay_2018: 'Proyecto: pintor de lienzo'
+      CSPU5_U3 - Canvas - freePlay_2019: 'Proyecto: pintor de lienzo'
       CSPU5_U3L15 full clicker app: Crea tu propio juego Clicker
       CSPU5_U3L15 full clicker app_2018: Crea tu propio juego Clicker
       CSPU5_U3L15 full clicker app_2019: Crea tu propio juego Clicker
@@ -931,24 +959,25 @@ es-MX:
       'Course E: Artist Project': Proyecto de Artista del Curso E
       'Course E: Artist Project_2018': Proyecto de Artista del Curso E
       'Course E: Artist Project_2019': Proyecto de Artista del Curso E
-      'Course F: Artist Project - Revise_2018': Revisar Proyecto Artista
-      'Course F: Artist Project - Revise_2019': Revisar Proyecto Artista
+      'Course F: Artist Project - Revise_2018': Revisar el proyecto de Artista
+      'Course F: Artist Project - Revise_2019': Revisar el proyecto de Artista
       'Course F: Artist Project_2018': Proyecto de Artista del Curso F
       'Course F: Artist Project_2019': Proyecto de Artista del Curso F
-      CourseEF_video_IntroSpriteLab: Esto es Sprite Lab
-      CourseEF_video_IntroSpriteLab_2019: Esto es Sprite Lab
-      CourseEF_video_MakeSprite: Como hacer un sprite
-      CourseEF_video_MakeSprite_2019: Como hacer un sprite
-      CourseE_Project_SpriteLab: Proyecto de Sprite Lab del Curso E
-      CourseE_Project_SpriteLab_2019: Proyecto de Sprite Lab del Curso E
+      CourseEF_video_IntroSpriteLab: Esto es Laboratorio de sprites
+      CourseEF_video_IntroSpriteLab_2019: Esto es Laboratorio de sprites
+      CourseEF_video_MakeSprite: Cómo crear un sprite
+      CourseEF_video_MakeSprite_2019: Cómo crear un sprite
+      CourseE_Project_SpriteLab: Proyecto del Laboratorio de sprites del Curso E
+      CourseE_Project_SpriteLab_2019: Proyecto del Laboratorio de sprites del Curso
+        E
       CourseE_hoops - take2: Aros
       CourseE_hoops: Conejito
       CourseE_hoops_2019: Conejito
-      CourseF_Project_Revise_SpriteLab: Revisar el proyecto de Laboratorio de Sprite
-      CourseF_Project_Revise_SpriteLab_2019: Revisar el proyecto de Laboratorio de
-        Sprite
-      CourseF_Project_SpriteLab: Proyecto de Laboratorio de Sprite del Curso F
-      CourseF_Project_SpriteLab_2019: Proyecto de Laboratorio de Sprite del Curso
+      CourseF_Project_Revise_SpriteLab: Revisar el proyecto del Laboratorio de sprites
+      CourseF_Project_Revise_SpriteLab_2019: Revisar el proyecto del Laboratorio de
+        sprites
+      CourseF_Project_SpriteLab: Proyecto del Laboratorio de sprites del Curso F
+      CourseF_Project_SpriteLab_2019: Proyecto del Laboratorio de sprites del Curso
         F
       Dance_Party_extras_battle: Grupos de baile
       Dance_Party_extras_every_beat: Negras
@@ -956,46 +985,46 @@ es-MX:
       Dance_Party_extras_on_beat: Bajos, medios y agudos
       Dance_Party_extras_speed: Acelera, reduce la velocidad
       Dance_Party_extras_visible: "¿A dónde fueron?"
-      Final Personal Website - OLD: Sitio web Personal final
-      Final Personal Website: Sitio web Personal final
-      Final Personal Website_2018: Sitio web Personal final
-      Final Personal Website_2019: Sitio web Personal final
+      Final Personal Website - OLD: Sitio web personal final
+      Final Personal Website: Sitio web personal final
+      Final Personal Website_2018: Sitio web personal final
+      Final Personal Website_2019: Sitio web personal final
       Geometric Sun_2018: Sol geométrico
       Geometric Sun_2019: Sol geométrico
-      Images, Pixels, and RGB_2018: Imágenes, píxeles y RGB
-      Images, Pixels, and RGB_2019: Imágenes, píxeles y RGB
+      Images, Pixels, and RGB_2018: Imágenes, pixeles y RGB
+      Images, Pixels, and RGB_2019: Imágenes, pixeles y RGB
       InspirationalArtwork_2018: "¡Inspiración!"
       InspirationalArtwork_2019: "¡Inspiración!"
-      'Internet Simulator: Broadcast_2018': 'Simulador de Internet: Difusión'
-      'Internet Simulator: Broadcast_2019': 'Simulador de Internet: Difusión'
+      'Internet Simulator: Broadcast_2018': 'Simulador de Internet: difusión'
+      'Internet Simulator: Broadcast_2019': 'Simulador de Internet: difusión'
       'Internet Simulator: DNS_2018': 'Simulador de Internet: DNS'
       'Internet Simulator: DNS_2019': 'Simulador de Internet: DNS'
-      'Internet Simulator: Packets_2018': 'Simulador de Internet: Paquetes'
-      'Internet Simulator: Packets_2019': 'Simulador de Internet: Paquetes'
-      'Internet Simulator: Routers_2018': 'Simulador de Internet: Routers'
-      'Internet Simulator: Routers_2019': 'Simulador de Internet: Routers'
+      'Internet Simulator: Packets_2018': 'Simulador de Internet: paquetes'
+      'Internet Simulator: Packets_2019': 'Simulador de Internet: paquetes'
+      'Internet Simulator: Routers_2018': 'Simulador de Internet: enrutadores'
+      'Internet Simulator: Routers_2019': 'Simulador de Internet: enrutadores'
       'Internet Simulator: Sending Binary Messages_2018': 'Simulador de Internet:
-        Envío de mensajes binarios'
+        envío de mensajes binarios'
       'Internet Simulator: Sending Binary Messages_2019': 'Simulador de Internet:
-        Envío de mensajes binarios'
-      'Internet Simulator: Sending Numbers_2018': 'Simulador de Internet: Envío de
+        envío de mensajes binarios'
+      'Internet Simulator: Sending Numbers_2018': 'Simulador de Internet: envío de
         números'
-      'Internet Simulator: Sending Numbers_2019': 'Simulador de Internet: Envío de
+      'Internet Simulator: Sending Numbers_2019': 'Simulador de Internet: envío de
         números'
-      'Internet Simulator: Sending Text_2018': 'Simulador de Internet: Envío de texto'
-      'Internet Simulator: Sending Text_2019': 'Simulador de Internet: Envío de texto'
-      Intro to Web Lab - Part 1: 'Vídeo: Introducción a Laboratorio Web - Parte 1'
-      Intro to Web Lab - Part 1_2018: 'Vídeo: Introducción a Laboratorio Web - Parte
+      'Internet Simulator: Sending Text_2018': 'Simulador de Internet: envío de texto'
+      'Internet Simulator: Sending Text_2019': 'Simulador de Internet: envío de texto'
+      Intro to Web Lab - Part 1: 'Video: introducción al Laboratorio web - Parte 1'
+      Intro to Web Lab - Part 1_2018: 'Video: introducción al Laboratorio web - Parte
         1'
-      Intro to Web Lab - Part 1_2019: 'Vídeo: Introducción a Laboratorio Web - Parte
+      Intro to Web Lab - Part 1_2019: 'Video: introducción al Laboratorio web - Parte
         1'
-      Intro to Web Lab - Part 2: 'Vídeo: Introducción a Laboratorio Web - Parte 2'
-      Intro to Web Lab - Part 2_2018: 'Vídeo: Introducción a Laboratorio Web - Parte
+      Intro to Web Lab - Part 2: 'Video: introducción al Laboratorio web - Parte 2'
+      Intro to Web Lab - Part 2_2018: 'Video: introducción al Laboratorio web - Parte
         2'
-      Intro to Web Lab - Part 2_2019: 'Vídeo: Introducción a Laboratorio Web - Parte
+      Intro to Web Lab - Part 2_2019: 'Video: introducción al Laboratorio web - Parte
         2'
-      Introduction to Variables - Part 1_2018: Introducción a Variables
-      Introduction to Variables - Part 1_2019: Introducción a Variables
+      Introduction to Variables - Part 1_2018: Introducción a las variables
+      Introduction to Variables - Part 1_2019: Introducción a las variables
       Kiki_StarWars_Test: Prototipo del proyecto Star Wars
       Kiki_StarWars_Test_2: Prototipo del proyecto Star Wars
       Kiki_StarWars_Test_3: Prototipo del proyecto Star Wars
@@ -1003,17 +1032,17 @@ es-MX:
       Kiki_StarWars_Test_5: Prototipo del proyecto Star Wars
       Kiki_StarWars_Test_5_Example: Prototipo del proyecto Star Wars
       MC Agent Freeplay: Juego libre
-      MC_HOC_2017 Agent Test: Homestead
+      MC_HOC_2017 Agent Test: Hogar
       MC_HOC_2017_01: Prólogo
-      MC_HOC_2017_01_Cole: Homestead
-      MC_HOC_2017_01_Kiki: Homestead
-      MC_HOC_2017_01_RETRY: Homestead
-      MC_HOC_2017_01_RETRY_2019: Homestead
+      MC_HOC_2017_01_Cole: Hogar
+      MC_HOC_2017_01_Kiki: Hogar
+      MC_HOC_2017_01_RETRY: Hogar
+      MC_HOC_2017_01_RETRY_2019: Hogar
       MC_HOC_2017_02: Conoce al agente
-      MC_HOC_2017_02_Cole: La Granja
-      MC_HOC_2017_02_Cole_2019: La Granja
-      MC_HOC_2017_02_Kiki: La Granja
-      MC_HOC_2017_02_Will: La Granja
+      MC_HOC_2017_02_Cole: La granja
+      MC_HOC_2017_02_Cole_2019: La granja
+      MC_HOC_2017_02_Kiki: La granja
+      MC_HOC_2017_02_Will: La granja
       MC_HOC_2017_03: Un río...
       MC_HOC_2017_03_Cole: El bosque
       MC_HOC_2017_03_Cole_2019: El bosque
@@ -1030,18 +1059,18 @@ es-MX:
       MC_HOC_2017_05_Cole_2019: El río
       MC_HOC_2017_05_Josh: El río
       MC_HOC_2017_05_Kiki: El río
-      MC_HOC_2017_06: Sólo desiertos
+      MC_HOC_2017_06: Nada más que desiertos
       MC_HOC_2017_06_Cole: Marea alta
       MC_HOC_2017_06_Cole_2019: Marea alta
       MC_HOC_2017_06_Josh: Marea alta
       MC_HOC_2017_06_Kiki: Marea alta
-      MC_HOC_2017_07_Cole: Paso Nevado
-      MC_HOC_2017_07_Cole_2019: Paso Nevado
+      MC_HOC_2017_07_Cole: Paso nevado
+      MC_HOC_2017_07_Cole_2019: Paso nevado
       MC_HOC_2017_07_Kiki: Desierto
       MC_HOC_2017_07a_Kiki: Desierto
       MC_HOC_2017_08_Cole: El templo del desierto
       MC_HOC_2017_08_Kiki: El templo del desierto
-      MC_HOC_2017_08_RY: La fortaleza Nether
+      MC_HOC_2017_08_RY: La fortaleza del Nether
       MC_HOC_2017_08_Will: El templo del desierto
       MC_HOC_2017_09_Cole: La cueva
       MC_HOC_2017_09_Kiki: La cueva
@@ -1058,8 +1087,8 @@ es-MX:
       MC_HOC_2017_12_Cole: El Nether
       MC_HOC_2017_13_Cole: Juego libre
       MC_HOC_2017_4.5v2: El bosque
-      MC_HOC_2017_Ali: La fortaleza Nether
-      MC_HOC_2017_Ali_2019: La fortaleza Nether
+      MC_HOC_2017_Ali: La fortaleza del Nether
+      MC_HOC_2017_Ali_2019: La fortaleza del Nether
       MC_HOC_2017_FP10x10: Juego libre
       MC_HOC_2017_FP10x10_RE: Juego libre
       MC_HOC_2017_FP20x20: Juego libre
@@ -1067,126 +1096,131 @@ es-MX:
       MC_HOC_2017_Ryan_03: Un río...
       MC_HOC_2017_Ryan_05: Templo del desierto
       MC_HOC_Kiki_02: Conoce al agente
-      Making Music_2018: Haciendo música
-      Making Music_2019: Haciendo música
-      New Dance Lab Project: Nuevo proyecto de Fiesta de Baile
+      Making Music_2018: Crear música
+      Making Music_2019: Crear música
+      New Dance Lab Project: Nuevo proyecto de Fiesta de baile
       New Minecraft Hero Project: Juego libre
-      OPD-K5 S2L2: "¿Qué son las Ciencias de la computación?"
-      OPD-K5 WhatIsCS: "¿Qué son las Ciencias de la computación?"
-      OPD-K5S2L2: "¿Qué son las Ciencias de la computación?"
+      OPD-K5 S2L2: "¿Qué son las Ciencias de la Computación?"
+      OPD-K5 WhatIsCS: "¿Qué son las Ciencias de la Computación?"
+      OPD-K5S2L2: "¿Qué son las Ciencias de la Computación?"
       PS - test - pixelation: Widget de pixelación en negro y blanco
-      Revisiting the Counter Pattern_2018: Volviendo a visitar el patrón del contador
-      Revisiting the Counter Pattern_2019: Volviendo a visitar el patrón del contador
-      Robot Doodle_2018: Robot
-      Robot Doodle_2019: Robot
+      Revisiting the Counter Pattern_2018: Volver al patrón del contador
+      Revisiting the Counter Pattern_2019: Volver al patrón del contador
+      Robot Doodle_2018: Dibujo de robot
+      Robot Doodle_2019: Dibujo de robot
       SG U3L07 More Subgoals: Documentación
       SG U3L08 comments: Comentar el código
       SG U3L08 how to add comments: Comentar el código
-      SGU3L2A Introducing Subgoals: Introducción objetivos secundarios
+      SGU3L2A Introducing Subgoals: Introducción a objetivos secundarios
       Text Compression_2018: Compresión de texto
       Text Compression_2019: Compresión de texto
-      The Accelerometer_2018: El Acelerómetro
-      The Accelerometer_2019: El Acelerómetro
+      The Accelerometer_2018: El acelerómetro
+      The Accelerometer_2019: El acelerómetro
       TraceySconyers_Level1_Test: Mejor nombre nivel 1
       TraceySconyers_Level2_Test: Mejor nombre nivel 1
-      U1 L01 CYU: Compruebe su comprensión
-      U1L11 Abstraction Reflection_2018: Reflexión de abstracción
-      U1L11 Abstraction Reflection_2019: Reflexión de abstracción
-      U1L11 Reflection Multiple Representations_2018: Reflexión de múltiples - Representaciones
-      U1L11 Reflection Multiple Representations_2019: Reflexión de múltiples - Representaciones
-      U2L05 Lossy vs. Lossless FR 1_2018: 'Respuesta gratuita: Compresión perdida
-        vs pérdida'
-      U2L05 Lossy vs. Lossless FR 1_2018_2019: 'Respuesta gratuita: Compresión perdida
-        vs pérdida'
+      U1 L01 CYU: Comprueba tu comprensión
+      U1L11 Abstraction Reflection_2018: Reflexión sobre la abstracción
+      U1L11 Abstraction Reflection_2019: Reflexión sobre la abstracción
+      U1L11 Reflection Multiple Representations_2018: Reflexión sobre representaciones
+        múltiples
+      U1L11 Reflection Multiple Representations_2019: Reflexión sobre representaciones
+        múltiples
+      U2L05 Lossy vs. Lossless FR 1_2018: 'Respuesta libre: compresión perdida o compresión
+        sin pérdidas'
+      U2L05 Lossy vs. Lossless FR 1_2018_2019: 'Respuesta libre: compresión perdida
+        o compresión sin pérdidas'
       U3L08 how to add comments: Comentar el código
       U3L08 how to add comments_2018: Comentar el código
       U3L08 how to add comments_2019: Comentar el código
-      U4 Counter Pattern with Event: Patrón de contador con Evento
+      U4 Counter Pattern with Event: Patrón de contador con evento
       U4 Counter Patterns: Patrones del contador
-      U4 L01 Poetry App: Aplicación de Poesía
+      U4 L01 Poetry App: Aplicación de poesía
       U4 L01 Thermostat App: Aplicación de termostato
-      U4 L02 CYU Exit Ticket: Compruebe su comprensión
-      U4 L02 Thermostat App v1 Code: Aplicación de Termostato v.1
-      U4 L02 Thermostat App v1: Aplicación de Termostato v.1
-      U4 L02 Thermostat App v3 pt2: Aplicación de Termostato v.1
-      U4 L02 Thermostat App v3 pt3: Aplicación de Termostato v.3
-      U4 L02 Thermostat App v3: Aplicación de Termostato v.1
-      U4 L03 Scope Issue: Aplicación de Termostato v.1
-      U4 L03 Thermostat App Modify 1: Aplicación de Termostato v.1
-      U4 L03 Thermostat App Modify 2: Aplicación de Termostato v.1
-      U4 L04 Variables Make Project 1: Hacer, pt 1
-      U4 L04 Variables Make Project 2: Hacer, pt 1
-      U4 L04 Variables Make Project 3: Hacer, pt 1
-      U4 L04 Variables Make Project 4: Hacer, pt 1
+      U4 L02 CYU Exit Ticket: Comprueba tu comprensión
+      U4 L02 Thermostat App v1 Code: Aplicación de termostato v.1
+      U4 L02 Thermostat App v1: Aplicación de termostato v.1
+      U4 L02 Thermostat App v3 pt2: Aplicación de termostato v.1
+      U4 L02 Thermostat App v3 pt3: Aplicación de termostato v.3
+      U4 L02 Thermostat App v3: Aplicación de termostato v.1
+      U4 L03 Scope Issue: Aplicación de termostato v.1
+      U4 L03 Thermostat App Modify 1: Aplicación de termostato v.1
+      U4 L03 Thermostat App Modify 2: Aplicación de termostato v.1
+      U4 L04 Variables Make Project 1: Crear, pt 1
+      U4 L04 Variables Make Project 2: Crear, pt 1
+      U4 L04 Variables Make Project 3: Crear, pt 1
+      U4 L04 Variables Make Project 4: Crear, pt 1
       U4 L04 Variables Make Project Sample: Aplicación Photo Liker
-      U4 L05 CYU Exit Ticket: Compruebe su comprensión
-      U4 L06 CYU Exit Ticket: Compruebe su comprensión
+      U4 L05 CYU Exit Ticket: Comprueba tu comprensión
+      U4 L06 CYU Exit Ticket: Comprueba tu comprensión
       'U4 L06 Introduction to Conditionals: Boolean Expressions': 'Condicionales:
-        Expresiones booleanas'
-      U4 L06 Thermostat App v4 Code: Aplicación de Termostato v.4
-      U4 L06 Thermostat App v4: Aplicación de Termostato v.4
-      U4 L06 Thermostat App v5 Code: Aplicación de Termostato v.5
-      U4 L06 Thermostat App v5: Aplicación de Termostato v.5
-      U4 L06 Thermostat App v6 Code: Aplicación de Termostato v.5
-      U4 L06 Thermostat App v6: Aplicación de Termostato v6
-      U4 L08 Conditionals Make Project Flowchart: Aplicación de entrada de Museo
-      U4 L08 Conditionals Make Project Sample: Aplicación de entrada de Museo
-      U4 L09 Score Clicker Investigate: Puntuación de Clicker
-      U4 L09 Thermostat App v7: Aplicación de Termostato v6
+        expresiones booleanas'
+      U4 L06 Thermostat App v4 Code: Aplicación de termostato v.4
+      U4 L06 Thermostat App v4: Aplicación de termostato v.4
+      U4 L06 Thermostat App v5 Code: Aplicación de termostato v.5
+      U4 L06 Thermostat App v5: Aplicación de termostato v.5
+      U4 L06 Thermostat App v6 Code: Aplicación de termostato v.5
+      U4 L06 Thermostat App v6: Aplicación de termostato v.6
+      U4 L08 Conditionals Make Project Flowchart: Aplicación de entradas a museos
+      U4 L08 Conditionals Make Project Sample: Aplicación de entradas a museos
+      U4 L09 Score Clicker Investigate: Score Clicker
+      U4 L09 Thermostat App v7: Aplicación de termostato v.6
       U4 My Pet Rock Example App: Mi aplicación Pet Rock
       U4 String Concatenation Pattern: Patrones del contador
-      U4 Variable with String Concatenation Pattern: Variable con Patrón de Concatenación
-        de Cadena
-      U4-AP-Practice-Choose-The-Data-Concern: "(nuevo) Respuesta de Práctica AP -
-        Identificar la preocupación de Datos"
-      U4-AP-Practice-Choose-The-Data-Concern_2018: Respuesta práctica AP - Identificar
-        la preocupación de datos
-      U4-AP-Practice-Choose-The-Data-Concern_2019: Respuesta práctica AP - Identificar
-        la preocupación de datos
+      U4 Variable with String Concatenation Pattern: Variable con patrón de concatenación
+        de cadenas
+      U4-AP-Practice-Choose-The-Data-Concern: "(nuevo) Respuesta de práctica AP -
+        Identificar la preocupación en los datos"
+      U4-AP-Practice-Choose-The-Data-Concern_2018: Respuesta de práctica AP - Identificar
+        la preocupación en los datos
+      U4-AP-Practice-Choose-The-Data-Concern_2019: Respuesta de práctica AP - Identificar
+        la preocupación en los datos
       U4-AP-Practice-Choose-The-Harmful-Effect: "(nuevo) Elegir el efecto nocivo"
       U4-AP-Practice-Device-or-Data?: "(nuevo) ¿Dispositivo o datos?"
-      U4-AP-Practice-Justify-the-Score: "(nuevo) Respuesta práctica AP - justificar
+      U4-AP-Practice-Justify-the-Score: "(nuevo) Respuesta de práctica AP - Justificar
         la puntuación"
-      U4-AP-Practice-Justify-the-Score_2018: Respuesta práctica AP - justificar la
-        puntuación
-      U4-AP-Practice-Justify-the-Score_2019: Respuesta práctica AP - justificar la
-        puntuación
+      U4-AP-Practice-Justify-the-Score_2018: Respuesta de práctica AP - Justificar
+        la puntuación
+      U4-AP-Practice-Justify-the-Score_2019: Respuesta de práctica AP - Justificar
+        la puntuación
       'U4L06 Introduction to Conditionals: Compound Boolean Expressions': 'Condicionales:
-        Expresiones booleanas compuestas'
-      'U4L06 Introduction to Conditionals: if Statements': 'Condicionales: Declaraciones
-        Si'
-      'U4L06 Introduction to Conditionals: if-else Statements': 'Condicionales: Declaraciones
-        Si-Else'
+        expresiones booleanas compuestas'
+      'U4L06 Introduction to Conditionals: if Statements': 'Condicionales: sentencias
+        si'
+      'U4L06 Introduction to Conditionals: if-else Statements': 'Condicionales: sentencias
+        si-si no'
       'U4L06 Introduction to Conditionals: if-else-if Statements': 'Condicionales:
-        Declaraciones Si-Else-Si'
+        sentencias si-si no-si'
       U4L10 My Pet Rock Example App: Mi aplicación Pet Rock
-      U5 AP Create Practice onEvent Doesnt Count: "(nuevo) Respuesta práctica AP -
-        elegir una abstracción"
-      U5 AP Create Practice onEvent Doesnt Count_2018: "(nuevo) Respuesta práctica
-        AP - elegir una abstracción"
-      U5 AP Create Practice onEvent Doesnt Count_2019: "(nuevo) Respuesta práctica
-        AP - elegir una abstracción"
-      U5 AP Practice Create Process: "(nuevo) AP la práctica respuesta - describir
+      U5 AP Create Practice onEvent Doesnt Count: "(nuevo) Respuesta de práctica AP
+        - Elegir una abstracción"
+      U5 AP Create Practice onEvent Doesnt Count_2018: "(nuevo) Respuesta de práctica
+        AP - Elegir una abstracción"
+      U5 AP Create Practice onEvent Doesnt Count_2019: "(nuevo) Respuesta de práctica
+        AP - Elegir una abstracción"
+      U5 AP Practice Create Process: "(nuevo) Respuesta de práctica AP - Describir
         tu proceso"
-      U5 AP Practice Create Process_2018: "(nuevo) AP la práctica respuesta - describir
+      U5 AP Practice Create Process_2018: "(nuevo) Respuesta de práctica AP - Describir
         tu proceso"
-      U5 AP Practice Create Process_2019: "(nuevo) AP la práctica respuesta - describir
+      U5 AP Practice Create Process_2019: "(nuevo) Respuesta de práctica AP - Describir
         tu proceso"
-      U5-AP-Algorithm-Does-It-Count: Respuesta de Práctica AP - Puntuar la respuesta
-      U5-AP-Algorithm-Does-It-Count_2018: Respuesta de Práctica AP - Puntuar la respuesta
-      U5-AP-Algorithm-Does-It-Count_2019: Respuesta de Práctica AP - Puntuar la respuesta
-      Using Accelerometer Events_2018: Usando Eventos de Acelerómetro
-      Using Accelerometer Events_2019: Usando Eventos de Acelerómetro
-      'Video: Intro to CSS Part 2_2018': 'Vídeo: Intro a CSS Parte 2'
-      'Video: Intro to CSS Part 2_2019': 'Vídeo: Intro a CSS Parte 2'
-      'Video: Intro to CSS_2018': 'Vídeo: Intro a CSS'
-      'Video: Intro to CSS_2019': 'Vídeo: Intro a CSS'
+      U5 L01 Introduction to Lists: 'Condicionales: expresiones booleanas'
+      U5 L09 Traversals Exit Ticket: Comprueba tu comprensión
+      U5-AP-Algorithm-Does-It-Count: Respuesta de práctica AP - Puntuar la respuesta
+      U5-AP-Algorithm-Does-It-Count_2018: Respuesta de práctica AP - Puntuar la respuesta
+      U5-AP-Algorithm-Does-It-Count_2019: Respuesta de práctica AP - Puntuar la respuesta
+      U7 L01 More with Functions: 'Condicionales: expresiones booleanas'
+      Using Accelerometer Events_2018: Usar eventos del acelerómetro
+      Using Accelerometer Events_2019: Usar eventos del acelerómetro
+      'Video: Intro to CSS Part 2_2018': 'Video: introducción a CSS - Parte 2'
+      'Video: Intro to CSS Part 2_2019': 'Video: introducción a CSS - Parte 2'
+      'Video: Intro to CSS_2018': 'Video: introducción a CSS'
+      'Video: Intro to CSS_2019': 'Video: introducción a CSS'
       'Widget: Black and White Pixelation_2018': 'Widget: pixelación en negro y blanco'
       'Widget: Black and White Pixelation_2019': 'Widget: pixelación en negro y blanco'
-      'Widget: Color Pixelation_2018': 'Widget: pixelación de color'
-      'Widget: Color Pixelation_2019': 'Widget: pixelación de color'
-      'Widget: Text Compression_2018': 'Widget: Compresión de texto'
-      'Widget: Text Compression_2019': 'Widget: Compresión de texto'
+      'Widget: Color Pixelation_2018': 'Widget: pixelación en color'
+      'Widget: Color Pixelation_2019': 'Widget: pixelación en color'
+      'Widget: Text Compression_2018': 'Widget: compresión de texto'
+      'Widget: Text Compression_2019': 'Widget: compresión de texto'
       allthethings-playlab-project-backed: Juego libre del Laboratorio de juegos
       andrea_test1: Aprendizaje más profundo
       courseA_bee_intro: cambiar mi video
@@ -1201,125 +1235,129 @@ es-MX:
       courseF_artist_for1: Juego libre de bucles 'desde' (inicio)
       courseF_artist_for1_2018: Juego libre de bucles 'desde' (inicio)
       courseF_artist_for1_2019: Juego libre de bucles 'desde' (inicio)
-      courseF_project_1: Ejemplo de proyecto de Laboratorio de Sprite
-      courseF_project_1_2019: Ejemplo de proyecto de Laboratorio de Sprite
+      courseF_project_1: Ejemplo de proyecto del Laboratorio de sprites
+      courseF_project_1_2019: Ejemplo de proyecto del Laboratorio de sprites
       courseF_video_csMatters: Proyectos de final de curso
-      courseF_video_csMatters_2018: 'Video: Asuntos de las Ciencias de la Computación'
-      courseF_video_csMatters_2019: 'Video: Asuntos de las Ciencias de la Computación'
+      courseF_video_csMatters_2018: 'Video: asuntos de las Ciencias de la Computación'
+      courseF_video_csMatters_2019: 'Video: asuntos de las Ciencias de la Computación'
       coursee_explore_4: Defensor alienígena
-      cp1dlp-q1: Conexiones de Lección y Filosofía
-      csd U3 conditional statements video: 'Vídeo: Declaraciones "If/Else"'
-      csd U3 conditional statements video_2019: 'Vídeo: Declaraciones "If/Else"'
-      csd u5 recommender sample: Aplicación de ejemplo
-      csd u5 recommender sample_2019: Aplicación de ejemplo
-      csd-thursday-facilitation: Reflexión de Facilitación
-      csd-thursday-pedagogy: Reflexión pedagógica del profesor
+      cp1dlp-q1: Conexiones y filosofía de las lecciones
+      csd U3 conditional statements video: 'Video: sentencias "si/si no"'
+      csd U3 conditional statements video_2019: 'Video: sentencias condicionales'
+      csd u5 recommender sample: Aplicación de muestra
+      csd u5 recommender sample_2019: Aplicación de muestra
+      csd-thursday-facilitation: Reflexión sobre facilitación
+      csd-thursday-pedagogy: Reflexión pedagógica del docente
       csd-thursday-pedagogy2: Reflexión pedagógica
-      csd-thursday-unit: Reflexión de la unidad
-      csd-thursday-unit2: Reflexión de la unidad
-      csd-tuesday-facilitation: Reflexión de Facilitación
-      csd-tuesday-pedagogy: Reflexión pedagógica del profesor
-      csd-tuesday-unit: Reflexión de la unidad
-      csd-tuesday-unit2: Reflexión de la unidad
-      csd-wednesday-facilitation: Reflexión de Facilitación
-      csd-wednesday-pedagogy: Reflexión pedagógica del profesor
-      csd-wednesday-unit: Reflexión de la unidad
-      csd-wednesday-unit2: Reflexión de la unidad
+      csd-thursday-unit: Reflexión sobre la unidad
+      csd-thursday-unit2: Reflexión sobre la unidad
+      csd-tuesday-facilitation: Reflexión sobre facilitación
+      csd-tuesday-pedagogy: Reflexión pedagógica del docente
+      csd-tuesday-unit: Reflexión sobre la unidad
+      csd-tuesday-unit2: Reflexión sobre la unidad
+      csd-wednesday-facilitation: Reflexión sobre facilitación
+      csd-wednesday-pedagogy: Reflexión pedagógica del docente
+      csd-wednesday-unit: Reflexión sobre la unidad
+      csd-wednesday-unit2: Reflexión sobre la unidad
       csd1dlp-assessment: Evaluación
-      csd1dlp-lessons: Conexiones de Lección y Filosofía
-      csd1dlp-q1: Conexiones de Lección y Filosofía
-      csd1dlp-q2: Conexiones de Lección y Filosofía
-      csd1dlp-q3: Conexiones de Lección y Filosofía
+      csd1dlp-lessons: Conexiones y filosofía de las lecciones
+      csd1dlp-q1: Conexiones y filosofía de las lecciones
+      csd1dlp-q2: Conexiones y filosofía de las lecciones
+      csd1dlp-q3: Conexiones y filosofía de las lecciones
       csd1dlp-tools: Filosofía y uso de herramientas
       csd2dlp-assessment: Evaluación
-      csd2dlp-lessons: Conexiones de Lección y Filosofía
-      csd2dlp-q1: Conexiones de Lección y Filosofía
-      csd2dlp-q2: Conexiones de Lección y Filosofía
-      csd2dlp-q3: Conexiones de Lección y Filosofía
+      csd2dlp-lessons: Conexiones y filosofía de las lecciones
+      csd2dlp-q1: Conexiones y filosofía de las lecciones
+      csd2dlp-q2: Conexiones y filosofía de las lecciones
+      csd2dlp-q3: Conexiones y filosofía de las lecciones
       csd2dlp-tools: Filosofía y uso de herramientas
       csd3dlp-assessment: Evaluación
-      csd3dlp-lessons: Conexiones de Lección y Filosofía
-      csd3dlp-q1: Conexiones de Lección y Filosofía
-      csd3dlp-q2: Conexiones de Lección y Filosofía
-      csd3dlp-q3: Conexiones de Lección y Filosofía
+      csd3dlp-lessons: Conexiones y filosofía de las lecciones
+      csd3dlp-q1: Conexiones y filosofía de las lecciones
+      csd3dlp-q2: Conexiones y filosofía de las lecciones
+      csd3dlp-q3: Conexiones y filosofía de las lecciones
       csd3dlp-tools: Filosofía y uso de herramientas
       csd4dlp-assessment: Evaluación
-      csd4dlp-lessons: Conexiones de Lección y Filosofía
-      csd4dlp-q1: Conexiones de Lección y Filosofía
-      csd4dlp-q2: Conexiones de Lección y Filosofía
-      csd4dlp-q3: Conexiones de Lección y Filosofía
+      csd4dlp-lessons: Conexiones y filosofía de las lecciones
+      csd4dlp-q1: Conexiones y filosofía de las lecciones
+      csd4dlp-q2: Conexiones y filosofía de las lecciones
+      csd4dlp-q3: Conexiones y filosofía de las lecciones
       csd4dlp-tools: Filosofía y uso de herramientas
       csd5dlp-assessment: Evaluación
-      csd5dlp-lessons: Conexiones de Lección y Filosofía
-      csd5dlp-q1: Conexiones de Lección y Filosofía
-      csd5dlp-q2: Conexiones de Lección y Filosofía
-      csd5dlp-q3: Conexiones de Lección y Filosofía
+      csd5dlp-lessons: Conexiones y filosofía de las lecciones
+      csd5dlp-q1: Conexiones y filosofía de las lecciones
+      csd5dlp-q2: Conexiones y filosofía de las lecciones
+      csd5dlp-q3: Conexiones y filosofía de las lecciones
       csd5dlp-tools: Filosofía y uso de herramientas
       csd6dlp-assessment: Evaluación
-      csd6dlp-lessons: Conexiones de Lección y Filosofía
-      csd6dlp-q1: Conexiones de Lección y Filosofía
-      csd6dlp-q2: Conexiones de Lección y Filosofía
-      csd6dlp-q3: Conexiones de Lección y Filosofía
+      csd6dlp-lessons: Conexiones y filosofía de las lecciones
+      csd6dlp-q1: Conexiones y filosofía de las lecciones
+      csd6dlp-q2: Conexiones y filosofía de las lecciones
+      csd6dlp-q3: Conexiones y filosofía de las lecciones
       csd6dlp-tools: Filosofía y uso de herramientas
-      csp-create-dlp-q1: Conexiones de Lección y Filosofía
-      csp-create-dlp-q2: Conexiones de Lección y Filosofía
-      csp-create-dlp-q3: Conexiones de Lección y Filosofía
-      csp-explore-dlp-q1: Conexiones de Lección y Filosofía
-      csp-explore-dlp-q2: Conexiones de Lección y Filosofía
-      csp-explore-dlp-q3: Conexiones de Lección y Filosofía
-      csp-thursday-facilitation: Reflexión de Facilitación
+      csp-create-dlp-q1: Conexiones y filosofía de las lecciones
+      csp-create-dlp-q2: Conexiones y filosofía de las lecciones
+      csp-create-dlp-q3: Conexiones y filosofía de las lecciones
+      csp-explore-dlp-q1: Conexiones y filosofía de las lecciones
+      csp-explore-dlp-q2: Conexiones y filosofía de las lecciones
+      csp-explore-dlp-q3: Conexiones y filosofía de las lecciones
+      csp-thursday-facilitation: Reflexión sobre facilitación
       csp-thursday-pedagogy: Reflexión pedagógica
       csp-thursday-pedagogy2: Reflexión pedagógica
-      csp-thursday-unit: Reflexión de la unidad
-      csp-thursday-unit2: Reflexión de la unidad
-      csp-tuesday-facilitation: Reflexión de Facilitación
+      csp-thursday-unit: Reflexión sobre la unidad
+      csp-thursday-unit2: Reflexión sobre la unidad
+      csp-tuesday-facilitation: Reflexión sobre facilitación
       csp-tuesday-pedagogy: Reflexión pedagógica
-      csp-tuesday-unit: Reflexión de la unidad
-      csp-tuesday-unit2: Reflexión de la unidad
-      csp-wednesday-facilitation: Reflexión de Facilitación
+      csp-tuesday-unit: Reflexión sobre la unidad
+      csp-tuesday-unit2: Reflexión sobre la unidad
+      csp-wednesday-facilitation: Reflexión sobre facilitación
       csp-wednesday-pedagogy: Reflexión pedagógica
-      csp-wednesday-unit: Reflexión de la unidad
-      csp-wednesday-unit2: Reflexión de la unidad
-      csp1-dlp-q1: Conexiones de Lección y Filosofía
-      csp1-dlp-q2: Conexiones de Lección y Filosofía
-      csp1-dlp-q3: Conexiones de Lección y Filosofía
+      csp-wednesday-unit: Reflexión sobre la unidad
+      csp-wednesday-unit2: Reflexión sobre la unidad
+      csp1-dlp-q1: Conexiones y filosofía de las lecciones
+      csp1-dlp-q2: Conexiones y filosofía de las lecciones
+      csp1-dlp-q3: Conexiones y filosofía de las lecciones
       csp1dlp-assessment: Evaluación
-      csp1dlp-lessons: Conexiones de Lección y Filosofía
+      csp1dlp-lessons: Conexiones y filosofía de las lecciones
       csp1dlp-tools: Filosofía y uso de herramientas
-      csp2-dlp-q1: Conexiones de Lección y Filosofía
-      csp2-dlp-q2: Conexiones de Lección y Filosofía
-      csp2-dlp-q3: Conexiones de Lección y Filosofía
-      csp2020-applab-test: "¡Bienvenido a Applab!"
+      csp2-dlp-q1: Conexiones y filosofía de las lecciones
+      csp2-dlp-q2: Conexiones y filosofía de las lecciones
+      csp2-dlp-q3: Conexiones y filosofía de las lecciones
+      csp2020-applab-test: "¡Bienvenidos al Laboratorio de aplicaciones!"
       csp2dlp-assessment: Evaluación
-      csp2dlp-lessons: Conexiones de Lección y Filosofía
+      csp2dlp-lessons: Conexiones y filosofía de las lecciones
       csp2dlp-tools: Filosofía y uso de herramientas
-      csp3-dlp-q1: Conexiones de Lección y Filosofía
-      csp3-dlp-q2: Conexiones de Lección y Filosofía
-      csp3-dlp-q3: Conexiones de Lección y Filosofía
+      csp3-dlp-q1: Conexiones y filosofía de las lecciones
+      csp3-dlp-q2: Conexiones y filosofía de las lecciones
+      csp3-dlp-q3: Conexiones y filosofía de las lecciones
       csp3dlp-assessment: Evaluación
-      csp3dlp-lessons: Conexiones de Lección y Filosofía
+      csp3dlp-lessons: Conexiones y filosofía de las lecciones
       csp3dlp-tools: Filosofía y uso de herramientas
-      csp4-dlp-q1: Conexiones de Lección y Filosofía
-      csp4-dlp-q2: Conexiones de Lección y Filosofía
-      csp4-dlp-q3: Conexiones de Lección y Filosofía
+      csp4-dlp-q1: Conexiones y filosofía de las lecciones
+      csp4-dlp-q2: Conexiones y filosofía de las lecciones
+      csp4-dlp-q3: Conexiones y filosofía de las lecciones
       csp4dlp-assessment: Evaluación
-      csp4dlp-lessons: Conexiones de Lección y Filosofía
+      csp4dlp-lessons: Conexiones y filosofía de las lecciones
       csp4dlp-tools: Filosofía y uso de herramientas
-      csp5-dlp-q1: Conexiones de Lección y Filosofía
-      csp5-dlp-q2: Conexiones de Lección y Filosofía
-      csp5-dlp-q3: Conexiones de Lección y Filosofía
+      csp5-dlp-q1: Conexiones y filosofía de las lecciones
+      csp5-dlp-q2: Conexiones y filosofía de las lecciones
+      csp5-dlp-q3: Conexiones y filosofía de las lecciones
       csp5dlp-assessment: Evaluación
-      csp5dlp-lessons: Conexiones de Lección y Filosofía
+      csp5dlp-lessons: Conexiones y filosofía de las lecciones
       csp5dlp-tools: Filosofía y uso de herramientas
-      csp_applab_turtle: 'Vídeo: Programación de tortugas'
-      csp_applab_turtle_2018: 'Vídeo: Programación de tortugas'
-      csp_applab_turtle_2019: 'Vídeo: Programación de tortugas'
+      csp_applab_turtle: 'Video: programación con la tortuga'
+      csp_applab_turtle_2018: 'Video: programación con la tortuga'
+      csp_applab_turtle_2019: 'Video: programación con la tortuga'
       expresslink: Curso Express
-      fit-dlp-example-2: Conexiones de Lección y Filosofía
-      fit-dlp-example: Conexiones de Lección y Filosofía
-      harvey_snowflake_artist1: 'Copo de nieve #1 (Convertido al Artista)'
-      harvey_snowflake_artist2: 'Copo de nieve #2 (Convertido al Artista)'
-      maker workshop final: 'Desafío: ¡Explorar!'
+      fit-dlp-example-2: Conexiones y filosofía de las lecciones
+      fit-dlp-example: Conexiones y filosofía de las lecciones
+      harvey_pixelation: Widget de pixelado
+      harvey_snowflake_artist1: Copo de nieve 1 (convertido al Artista)
+      harvey_snowflake_artist2: Copo de nieve 2 (convertido al Artista)
+      maker workshop final: 'Desafío: ¡explorar!'
       okToDelete: Evaluador
       scrat_loops_C-F_video: Video de bucles en la Era de Hielo
       scrat_loops_C-F_video_2019: Video de bucles en la Era de Hielo
+      timeforcs_demo_c1_5_journal: Evaluar
+      timeforcs_demo_sl_3: Cómo crear un sprite
+      timeforcs_demo_spritelab_1: Ejemplo de proyecto del Laboratorio de sprites

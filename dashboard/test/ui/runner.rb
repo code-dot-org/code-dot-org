@@ -251,10 +251,10 @@ end
 def select_browser_configs(options)
   if options.local
     return [{
-      'browser': 'local',
-      'name': 'ChromeDriver',
-      'browserName': 'chrome',
-      'version': 'latest'
+      'browser' => options.browser || 'chrome',
+      'name' => 'LocalBrowser',
+      'browserName' => options.browser || 'chrome',
+      'version' => options.browser_version || 'latest'
     }]
   end
 
@@ -342,7 +342,7 @@ end
 # Example result:
 # [
 #   [
-#     { 'browser': 'local', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
+#     { 'browser': 'chrome', 'name': 'ChromeDriver', 'browserName': 'chrome', 'version': 'latest' },
 #     'features/bee.feature'
 #   ],
 #   ...
@@ -638,10 +638,8 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
-  arguments += skip_tag('@chrome_before_62') if browser['browserName'] != 'chrome' || browser['version'].to_i == 0 || browser['version'].to_i >= 62
-  # browser version 0 implies the latest version.
-  arguments += skip_tag('@no_older_chrome') if browser['browserName'] == 'chrome' && (browser['version'].to_i != 0 && browser['version'].to_i <= 67)
-  arguments += skip_tag('@no_safari_yosemite') if browser['browserName'] == 'Safari' && browser['platform'] == 'OS X 10.10'
+  arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
+  arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
@@ -655,7 +653,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
   arguments += " --fail-fast" if options.fail_fast
 
-  # if autorertrying, output a rerun file so on retry we only run failed tests
+  # if auto-retrying, output a rerun file so on retry we only run failed tests
   if max_reruns > 0
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
@@ -690,7 +688,7 @@ def run_feature(browser, feature, options)
   puts "#{log_prefix}Starting UI tests for #{test_run_string}"
 
   run_environment = {}
-  run_environment['BROWSER_CONFIG'] = browser_name
+  run_environment['BROWSER_CONFIG'] = options.local ? browser['browser'] : browser_name
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
@@ -752,9 +750,9 @@ def run_feature(browser, feature, options)
       log_browser_error prefix_string(browser.to_yaml, log_prefix)
     end
 
-    rerun_arguments = File.exist?(rerun_file) ? " @#{rerun_file}" : ''
+    rerun_feature = File.exist?(rerun_file) ? File.read(rerun_file).split.join(' ') : feature
 
-    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments + rerun_arguments, log_prefix)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, arguments, log_prefix)
     feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,

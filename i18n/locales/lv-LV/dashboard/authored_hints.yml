@@ -1,3 +1,4 @@
+---
 lv:
   data:
     authored_hints:
@@ -39,15 +40,17 @@ lv:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -57,65 +60,26 @@ lv:
       2-3 Artist Functions 4_authored_hint:
         2-3_Artist_Functions_4_a: Māksliniekam starp katru kvadrātu nepieciešams pagriezties par 120 grādiem, lai pabeigtu zīmējumu.
       2-3 Artist Loops New 11_authored_hint:
-        2-3_Artist_Loops_New_11_a: |-
-          Atceries, ka iepriekšējā uzdevuma kods ir:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
-           
-          root -> data -> authored_hints -> 2-3 Artist Loops New 11_authored_hint -> 2-3_Artist_Loops_New_11_a
-          https://studio.code.org/s/course2/stage/7/puzzle/9
+        2-3_Artist_Loops_New_11_a: "Atceries, ka iepriekšējā uzdevuma kods ir:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">8</title>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\">\n<value name=\"COLOUR\">\n<block type=\"colour_random\"/>\n</value>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnRight</title>\n<title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n<next>\n<block type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnLeft</title>\n<title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>\n \nroot -> data -> authored_hints -> 2-3 Artist Loops New 11_authored_hint -> 2-3_Artist_Loops_New_11_a\nhttps://studio.code.org/s/course2/stage/7/puzzle/9"
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_c: Māksliniekam jāpagriežas pa labi tikai par 60 grādiem, lai veidotos plats leņķis.
       2-3 Artist Nested Loops 1_authored_hint:
         2-3_Artist_Nested_Loops_1_a: Atceries ciklā ievietot visus pelēkos blokus.
       2-3 Artist Nested Loops 3_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Vajadzīga palīdzība ar leņķiem? **360/12=30**"
+        2-3_Artist_Nested_Loops_3_a: Vajadzīga palīdzība ar leņķiem? **360/12=30**
         2-3_Artist_Nested_Loops_3_b: Atceries ievietot ciklā visu pelēko kodu kopā ar savu pagriešanās bloku.
       2-3 Artist Nested Loops 4_authored_hint:
-        2-3_Artist_Nested_Loops_3_a: "Vajadzīga palīdzība ar leņķiem? **360/12=30**"
+        2-3_Artist_Nested_Loops_3_a: Vajadzīga palīdzība ar leņķiem? **360/12=30**
       2-3 Artist Nested Loops 5_authored_hint:
-        2-3_Artist_Nested_Loops_5_a: "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        2-3_Artist_Nested_Loops_5_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
       2-3 Artist Nested Loops 7_authored_hint:
-        2-3_Artist_Nested_Loops_7_a: "Cik tālu nepieciešams pagriezties katrā ciklā?\n\nCik ir 360/10?"
+        2-3_Artist_Nested_Loops_7_a: |-
+          Cik tālu nepieciešams pagriezties katrā ciklā?
+
+          Cik ir 360/10?
       2-3 Artist Nested Loops 9_authored_hint:
         2-3_Artist_Nested_Loops_9_a: |-
           Vajadzīga palīdzība atrodot pareizo leņķi?
@@ -134,7 +98,7 @@ lv:
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Garākās malas katra ir 240 punktus gara.  Tas nozīmē, ka 2 īsākās malas kopā ir:\n\n**800 - 240 - 240 = 320**\n\nCik ir **320/2** ? "
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: "Ja trīsstūris ir vienādmalu, tad tā visas malas un visi leņķi ir vienādi.\n"
+        4-5_Artist_9_a: Ja trīsstūris ir vienādmalu, tad tā visas malas un visi leņķi ir vienādi.
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       Artist Autorun Test_authored_hint:
@@ -189,7 +153,7 @@ lv:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -208,7 +172,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -227,7 +191,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -246,7 +210,7 @@ lv:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -389,7 +353,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -408,7 +372,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -427,7 +391,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -446,7 +410,7 @@ lv:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -541,15 +505,25 @@ lv:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       courseD_artist_nestedLoops3_authored_hint:
-        courseD_artist_nestedLoops3_a: "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
       courseD_artist_nestedLoops3_2018_authored_hint:
-        courseD_artist_nestedLoops3_a: "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
       courseD_artist_nestedLoops3_2019_authored_hint:
-        courseD_artist_nestedLoops3_a: "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        courseD_artist_nestedLoops3_a: |-
+          Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.
+
+          Ja kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.
         courseE_artist_functions1_b: Tas nekas, ja zīmējot brilles līnijas pārklājas.
@@ -559,9 +533,10 @@ lv:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       grade1_adventurer_loops3_authored_hint:
         grade1_adventurer_loops3_a: Vai kaut kas nav labi? Mēģini izmantot soļu pogu, lai izdomātu, kur ir problēma.
       grade1_adventurer_loops4_authored_hint:
@@ -591,9 +566,10 @@ lv:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Tavai programmai nepieciešams:
-           - izmantot funkciju
-           - pārvietoties uz priekšu 100+75 punktus
-           - izmantot funkciju
+
+          -   izmantot funkciju
+          -   pārvietoties uz priekšu 100+75 punktus
+          -   izmantot funkciju
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Katram sešstūrim mala ir 40 punktus gara.
       grade4_artist_functions_challenge2_authored_hint:

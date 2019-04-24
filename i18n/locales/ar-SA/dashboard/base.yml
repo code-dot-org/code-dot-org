@@ -283,8 +283,11 @@ ar:
       course_catalog: "فهرس الدورة"
       project_gallery: "المشاريع"
       sections: "الأقسام"
+      help_support: "مساعدة ودعم"
       report_bug: "أبلغ عن وجود خلل"
       teacher_community: "مجتمع المدرسين"
+      documentation: "الوثائق"
+      tutorials: "الدروس"
       educate_overview: "لمحة عن المعلم"
       educate_elementary: "المدرسة الابتدائية"
       educate_middle: "المرحلة المتوسطة"
@@ -336,7 +339,9 @@ ar:
       gumball: 'جومبول'
       iceage: 'العصر الجليدي'
       infinity: 'ما لانهاية'
+      makerlab: 'صانع الأدوات'
       minecraft_adventurer: 'مغامر في Minecraft'
+      minecraft_codebuilder: 'Minecraft: كود الاتصال'
       minecraft_designer: 'Minecraft'
       playlab: 'مختبر اللعب'
       starwars: 'حرب النجوم "Star Wars"'
@@ -490,6 +495,8 @@ ar:
   gender:
     male: 'ذكر'
     female: 'أنثى'
+    non_binary: 'غير ثنائي'
+    not_listed: 'المصطلح المفضل غير مدرج'
     none: 'أفضل عدم الإجابة'
   user_type:
     student: 'طالب'
@@ -603,6 +610,7 @@ ar:
       audience: "للأعمار 13 +"
       cta: "تعلم كيف"
     weblab:
+      title: "مختبر الويب (التجريبي)"
       audience: "للأعمار 13 +"
       cta: "تعلم كيف"
     frozen:
@@ -629,6 +637,8 @@ ar:
     unplugged_conditionals:
       title: "الجمل الشرطية"
     widgets:
+      title: "الأدوات"
+      audience: "الأعمار +14"
       cta: "تعلم كيف"
   gallery:
     students_drew_these_with_code: "قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!"
@@ -636,6 +646,7 @@ ar:
     picture_count: "في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة برسم <b>%{count}</b> لوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل."
     activity_count: "في الأيام الـ <b>%{days}</b> الماضية، قام الطلبة بإنتاج <b>%{count}</b> تطبيقات ولوحات من خلال كتابة برامج الكمبيوتر الخاصة بهم. انقر على الصورة لترى البرنامج وهو يعمل."
     want_to_make_your_own: "هل ترغب في إنجاز مشروعك الخاص؟"
+    how_to_save: "في المرحلة الأخيرة من هذه الدروس، انقر \"إنهاء\" و\"حفظ\" لحفظ عملك في المعرض."
     more: "المزيد من &rarr;"
     caption_by_name_age: "من قِبل %{name}، العمر %{age}"
     caption_time_ago: "من قبل %{time_ago}"
@@ -650,6 +661,9 @@ ar:
     support: "للحصول على المساعدة"
     support_url: "support.code.org"
     help_resources: "المساعدة والموارد"
+    help_support: "مساعدة ودعم"
+    documentation: "الوثائق"
+    tutorials: "الدروس"
   multi:
     wrong_title: "الإجابة غير صحيحة"
     wrong_body: "أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!"
@@ -670,7 +684,9 @@ ar:
     wrong_body: "شكرا لك على تقديم الإجابات."
     correct_title: "شكراً"
     correct_body: "شكرا لك على تقديم الإجابات."
+    submit-incomplete-title: "سجل تقديرك"
     submit-incomplete-body: "تركت بعض الأسئلة غير مكتملة.  لا يمكنك تحرير مشروعكم بعد تقديمه.  هل أنت متأكد؟"
+    submit-complete-title: "سجل تقديرك"
     submit-complete-body: "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟"
   match:
     wrong_title: "الحل غير صحيح"
@@ -723,8 +739,11 @@ ar:
     races:
       white: "أبيض"
       black: "أسود أو أمريكي من أصل أفريقي"
+      hispanic: "اسباني أو لاتيني"
       asian: "آسيوي"
+      hawaiian: "أصلي من هاواي أو من جزيرة أخرى أطلنتية"
       other: "الأخرى"
+      opt_out: "أفضل عدم الإجابة"
     submit: "تسجيل"
     decline: "إغلاق"
   zendesk_too_young_message: 'عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.'
@@ -756,6 +775,8 @@ ar:
     exit: "العودة إلى الدورة التدريبية"
     my_projects: "مشاريعي"
     project_gallery: "المشاريع"
+    publish: "انشر"
+    unpublish: "إلغاء النشر"
     share: "المشاركة"
     share_title: شارك مشاريعك
     share_copy_link: "إنسخ الرابط:"
@@ -812,6 +833,7 @@ ar:
     escalated:
       name: 'تم تصعيدها'
       description: 'أود أن يقوم مدرب بمراجعة هذا الإرسال'
+    peer_feedback: 'ردود القرين'
   flex_category:
     required: 'لمحة عامة'
     content: 'محتوى'
@@ -830,6 +852,8 @@ ar:
     csp_variables: 'المتغيرات'
     csp_conditionals: 'الجمل الشرطية'
     csp_functions: 'دوال'
+    csp_lists: 'القوائم'
+    csp_loops: 'الحلقات'
   hoc_download:
     title: 'ساعة تحميل التعليمات البرمجية'
     capsule_title: 'هل لديك إنترنت؟'
@@ -849,6 +873,8 @@ ar:
       gender:
         male: 'ذكر'
         female: 'أنثى'
+        non_binary: 'غير ثنائي'
+        not_listed: 'المصطلح المفضل غير مدرج'
         none: 'أفضل عدم الإجابة'
       subjects:
         cs: 'علوم الكمبيوتر'

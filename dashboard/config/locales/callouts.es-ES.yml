@@ -600,6 +600,8 @@ es:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
         behaviors_edit: Añadir código a este comportamiento.
+      behaviors free play_callout:
+        behaviors_edit: Añadir código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo
           el néctar (o miel) de una flor (o panal).
@@ -830,6 +832,11 @@ es:
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Este bloque es muy importante para este proyecto. ¡Asegúrate
+          de usarlo!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Añade esto en el medio de tu programa.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comience usando este bloque para llevar al
           artista al centro de la pantalla.
@@ -1114,8 +1121,6 @@ es:
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
           hechos para ser díficiles y pueden implicar varios intentos."
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Pulse aquí!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Empieza usando este bloque para ayudar a crear
           el primer cuadrado.

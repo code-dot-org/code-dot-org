@@ -402,6 +402,11 @@ pt-BR:
         desc: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta aula existe para ajudar os estudantes a entenderem o processo criativo de compartilhar e inspiração. Junto disso vem a promoção da expressão criativa e a necessidade de ser justo com o trabalho criativo.
       GraphingData_2019:
         title: Gerando Gráficos a partir de dados
-        desc: " Nesta aula, os alunos irão coletar dados de um projeto Laboratório ou de um cenário real e usá-lo para fazer previsões."
+        desc: ' Nesta aula, os alunos irão coletar dados de um projeto Laboratório ou de um cenário real e usá-lo para fazer previsões.'
       courseE_simon_says_2019:
-        desc: Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo.
+        desc: "Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo."
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Condições
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".

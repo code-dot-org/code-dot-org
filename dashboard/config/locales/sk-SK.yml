@@ -1195,6 +1195,7 @@ sk:
     csf_jigsaw: Skladačka
     csf_loops: Cykly
     csf_events: Udalosti
+    csf_online_safety: Bezpečnosť na internete
     csf_binary: Binárny
     csf_conditionals: Podmienky
     csf_nested_loops: Vnorené cykly
@@ -1217,6 +1218,7 @@ sk:
     csd6_2: 'Kapitola 2: Vytváranie fyzických prototypov'
     csd_survey: Hodnotenie kurzu
     csp1_1: 'Kapitola 1: Predstavenie a prenos informácií'
+    csp1_2: 'Kapitola 2: Vymýšľanie internetu'
     csp2_1: 'Kapitola 1: Zakódovanie a kompresia komplexných informácií'
     csp2_2: 'Kapitola 2: Manipulácia a vizualizácia dát'
     csp3_1: 'Kapitola 1: Programovacie jazyky a algoritmy'
@@ -1235,7 +1237,15 @@ sk:
     csp_variables: Premenné
     csp_conditionals: Podmienky
     csp_functions: Funkcie
+    csp_project: Projekt
+    csp_lists: Zoznamy
+    csp_loops: Cykly
+    csp_libraries: Knižnice
     dlp: Výzvy na zhodnotenie
+    time4cs_c1: Everglades a jeho ekosystémy
+    time4cs_c2: Potravové reťazce v Everglades
+    time4cs_c3: Život v Everglades
+    time4cs_c4: Invazívne vplyvy na Everglades
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou
@@ -1315,6 +1325,10 @@ sk:
     sa svojho učiteľa na ktorú lekciu sa máš podľa správnosti prihlásiť.
   hidden_script: Podľa tvojho učiteľa by si tu nemal byť. Opýtaj sa ho prosím, na
     ktorej kapitole by si sa mal nachádzať.
+  no_script_access_student: Nemáš prístup k tejto lekcii. Opýtaj sa svojho učiteľa,
+    na ktorej lekcii by si mal pracovať.
+  no_script_access_teacher: Nemáte prístup k tejto lekcii. Ak si myslíte, že by ste
+    ho mali mať, napíšte prosím na support@code.org, aby sme túto situáciu mohli vyriešiť.
   return_unit_overview: Prejsť na prehľad lekcie
   return_course_overview: Prejsť na prehľad kurzu
   view_all_units: Zobraziť všetky kapitoly

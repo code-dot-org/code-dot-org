@@ -4088,6 +4088,8 @@ pt-BR:
               name: Crowdsourcing
             Digital Sharing:
               name: Compartilhamento Digital
+            Songwriting:
+              name: Composição
         express-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           stages:
@@ -4141,6 +4143,8 @@ pt-BR:
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
             Graphing Data:
+              name: Gerando Gráficos a partir de dados
+            Picturing Data:
               name: Gerando Gráficos a partir de dados
         gamelab:
           title: Laboratório de Jogos
@@ -4291,6 +4295,8 @@ pt-BR:
           stages:
             Surveys:
               name: Pesquisas
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
         csp1-2019:
           stages:
             Personal Innovations:
@@ -4429,3 +4435,55 @@ pt-BR:
               name: Apps de exemplo
             Final Project:
               name: Projeto final
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+            Building a Foundation:
+              name: Criando uma base
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+        csp1-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp2-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp3-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp4-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp5-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp6-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp7-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp8-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp9-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação
+        csp10-pilot-staging:
+          stages:
+            Unit 4 Assessment:
+              name: Unidade 4 Avaliação

@@ -715,6 +715,7 @@ tr:
         CSF_loops_AB: Döngüler
         c_and_c_digital_sharing: Dijital Paylaşım
         csd_pair_programming: Eşli Programlama
+        csd_applab_parameters: Fonksiyon parametreleri
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

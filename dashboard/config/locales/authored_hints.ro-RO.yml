@@ -27,7 +27,7 @@ ro:
           un pătrat!
       2-3 Artist 6_authored_hint:
         2-3_Artist_6_a: 'Pentru a face aceste unghiuri mici, trebuie să virați de
-          fiecare dată *mai departe * decât ați făcut-o cu pătratul.   '
+          fiecare dată \*mai departe \* decât ați făcut-o cu pătratul.   '
         2-3_Artist_6_b: Din moment ce stau deja cu fața către dreapta, este mai uşor
           să încep prin a merge înainte și, apoi, să fac întoarceri către stânga pentru
           a crea triunghiul.
@@ -51,10 +51,10 @@ ro:
           de grade, înainte să începeți să desenați pătratul dumneavoastră! \n\n![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)"
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Rețineți că doriți ca panoul de control să fie
-          de 10 pixeli *mai larg *...deci asigurați-vă că ** adăugați ** 10 la orice
-          număr schimbați.
-        2-3_Artist_Debugging_10_b: "** Încercare şi eroare este perfect în regulă
-          aici! ** \nÎncepeți prin schimbarea unui număr la un moment dat.  \nCare
+          de 10 pixeli \*mai larg \*...deci asigurați-vă că \*\* adăugați \*\* 10
+          la orice număr schimbați.
+        2-3_Artist_Debugging_10_b: "\\*\\* Încercare şi eroare este perfect în regulă
+          aici! \\*\\* \nÎncepeți prin schimbarea unui număr la un moment dat.  \nCare
           numere fac ce? \nDacă vă pierdeți prea tare, faceţi doar clic pe \"Începe
           din nou\" şi codul dvs. va fi resetat."
       2-3 Artist Debugging 2_authored_hint:
@@ -70,7 +70,7 @@ ro:
         2-3_Artist_Debugging_8_a: |-
           De câte ori s-a repetat forma mea?
 
-          De câte ori *ar trebui* să se repete forma?
+          De câte ori _ar trebui_ să se repete forma?
 
           Unde puteți schimba acest lucru în program?
       2-3 Artist Debugging 9_authored_hint:
@@ -108,19 +108,21 @@ ro:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Programul dvs. ar trebui să:
-          - Utilizeze funcția
-          - Mute înainte cu 100 + 75 pixeli
-          - Utilizeze funcția
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Programul dvs. ar trebui să:
-          - Utilizeze funcția
-          - Mute înainte cu 100 + 75 pixeli
-          - Utilizeze funcția
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "***115 + 45 = 160***"
+        2-3_Artist_Functions_3_a: "**_115 + 45 = 160_**"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "***115 + 45 = 160***"
+        2-3_Artist_Functions_3_a: "**_115 + 45 = 160_**"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: Artistul trebuie să întoarcă la 120 de grade între
           fiecare pătrat pentru a finaliza acest design.
@@ -187,10 +189,11 @@ ro:
           Din acest motiv, nu mai trebuie să adăugăm un bloc suplimentar "întoarce la stânga" înainte de a începe din nou.
         2-3_Artist_Loops_New_13_b: |-
           Pentru a face fiecare romb, artistul trebuie să facă următorii pași:
-          - mută
-          - întoarce la dreapta 120 de grade
-          - mută
-          - întoarce la dreapta 60 de grade!
+
+          -   mută
+          -   întoarce la dreapta 120 de grade
+          -   mută
+          -   întoarce la dreapta 60 de grade!
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Artistul trebuie să se rotească la 45 de grade către
           dreapta înainte de a începe să deseneze.
@@ -202,13 +205,13 @@ ro:
       2-3 Artist Nested Loops 3_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
           Aveți nevoie de ajutor la unghiuri?
-          ** 360/12 = 30**
+          \*\* 360/12 = 30\*\*
         2-3_Artist_Nested_Loops_3_b: Nu uitați să puneți tot codul gri și blocul dvs.
           de întoarcere în interiorul unei bucle.
       2-3 Artist Nested Loops 4_authored_hint:
         2-3_Artist_Nested_Loops_3_a: |-
           Aveți nevoie de ajutor la unghiuri?
-          ** 360/12 = 30**
+          \*\* 360/12 = 30\*\*
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: |-
           Încercați să utilizați blocul "sări înainte" pentru a ajunge din partea de sus a unui pătrat în locul de unde veți începe următorul.
@@ -231,11 +234,11 @@ ro:
         2-3_Bee_Conditionals_14_b: Dacă floarea roşie ar fi fost violetă, vă puteți
           da seama cum se utilizează o buclă `repetă` suplimentară pentru a reduce
           pe codul?
-        2-3_Bee_Conditionals_14_c: "Încercați să rupeți codul în două bucăți separate:\n\n\n!
-          [] (Https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Adună nectar de 3 ori\n  - Mută înainte de 5 ori\n  - Verifică să vezi dacă
-          este nectar, dacă da: obțineți-l\n  - Întoarce la stânga\n  \n2) Fă miere
-          \n  - Mută înainte o dată\n  - Fă două (bucați de) miere"
+        2-3_Bee_Conditionals_14_c: "Încercați să rupeți codul în două bucăți separate:\n\n!
+          \\[] (Https\\://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
+          \ Adună nectar de 3 ori\n\n2.  Mută înainte de 5 ori\n\n3.  Verifică să
+          vezi dacă este nectar, dacă da: obțineți-l\n\n4.  Întoarce la stânga\n\n5.
+          \ Fă miere \n\n6.  Mută înainte o dată\n\n7.  Fă două (bucați de) miere"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Amintiți-vă: florile mov au doar 0 sau 1 nectar
           și se pot modifica de fiecare dată când executați programul.'
@@ -312,7 +315,7 @@ ro:
           încercați să o codificați pe calea lungă, apoi căutați un tipar structural.  '
       2-3 Maze 1_authored_hint:
         2-3_Maze_1_a: Pentru a utiliza un bloc "mută înainte", glisați-l din zona
-          barei de instrumente în spațiul de lucru și conectați-l la blocul `când
+          barei de instrumente în spațiul de lucru și conectați-l la blocul \`când
           rulează '.
       2-3 Maze 16_authored_hint:
         2-3_Maze_16_a: Dacă modelul structural este greu de identificat, încercați
@@ -321,7 +324,7 @@ ro:
         2-3_Maze_16_b: |-
           Pentru a plasa o mulțime de blocuri într-o buclă `repetă`, glisați o buclă afară în spațiul de lucru, apoi glisați toate blocurile din programul de pornire în interiorul acesteia.
 
-          Conectați totul înapoi la blocul `când rulează 'și gata, totul s-a rezolvat!
+          Conectați totul înapoi la blocul \`când rulează 'și gata, totul s-a rezolvat!
       2-3 Maze 6_authored_hint:
         2-3_Maze_6_a: Există două metode de a rezolva acest puzzle!
       2-3 Maze Loops 17_authored_hint:
@@ -358,7 +361,7 @@ ro:
 
           Asta înseamnă că ambele laturi scurte însumează o lungime de 200 de pixeli.
 
-          ** Cât este 200/2?**
+          \*\* Cât este 200/2?\*\*
         4-5_Artist_3_b: Dacă nu puteți vizualiza imediat unde merge bucla "repetă",
           încercați să codificați întreaga soluție și să căutați un model repetitiv
           structural.
@@ -370,7 +373,7 @@ ro:
         4-5_Artist_5_a: |-
           Încercare și eroare este o metodă excelentă, dar puteți rezolva problema și împărțind unghiul de 90 de grade în treimi.
 
-          **90 / 3 = _____**
+          **90 / 3 = **\_****
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Care unghi este cel mai mic? La ce unghi stă artistul în
           picioare? '
@@ -378,15 +381,13 @@ ro:
         4-5_Artist_8_a: "Laturile lungi sunt de 240 de pixeli fiecare. Aceasta înseamnă
           că cele 2 laturi scurte trebuie să totalizeze:\n\n**800 - 240 - 240 = 320**\n\nCât
           este **320/2**? "
-        4-5_Artist_8_b: "Această imagine poate fi făcută în 2 moduri!  \n- Desenați
+        4-5_Artist_8_b: "Această imagine poate fi făcută în 2 moduri!  \n\n-   Desenați
           două dreptunghiuri care sunt de **120** lungime și **160** înălțime, cu
-          o latură suprapusă\n\n- Desenați un dreptunghi care are **240** lungime
+          o latură suprapusă\n\n-   Desenați un dreptunghi care are **240** lungime
           și **160** înălțime, și apoi adăugați o linie în mijloc."
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'Când un triunghi este echilateral, toate laturile și unghiurile
+        4-5_Artist_9_a: Când un triunghi este echilateral, toate laturile și unghiurile
           acestuia sunt egale.
-
-'
         4-5_Artist_9_b: Va trebui să desenați trei triunghiuri de aceeași mărime.
           Nu uitați să săriți la noua poziție după fiecare dintre ele.
       4-5 Artist Assessment 1_authored_hint:
@@ -479,34 +480,32 @@ ro:
           de a face orice altceva.
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle
           "repetă".
-        specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare
-          dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme
-          doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește
-          diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine
-          mai mare."
+        specifics: |-
+          Bucla "pentru" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase "petale" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.
+
+          Blocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare.
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte"
           cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
         solution: |-
           **Soluție**
 
-
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
         2-3_Maze_1_a: Pentru a utiliza un bloc "mută înainte", glisați-l din zona
-          barei de instrumente în spațiul de lucru și conectați-l la blocul `când
+          barei de instrumente în spațiul de lucru și conectați-l la blocul \`când
           rulează '.
       Course 4 Artist 11_authored_hint:
         Course_4_Artist_11_a: 'Jumătatea de hexagon are o **lungime de 30** și se
           întoarce la dreapta cu **60 grade**.  '
-        Course_4_Artist_11_b: 'Cele 2/3 din triunghi au o lungime ** de 80 ** și se
-          întorc spre dreapta de **120 grade**. '
+        Course_4_Artist_11_b: 'Cele 2/3 din triunghi au o lungime \*\* de 80 \*\*
+          și se întorc spre dreapta de **120 grade**. '
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Fiecare formă repetată este o combinație de **jumătate
           de hexagon**, urmată de **2/3 din triunghi**. '
         Course_4_Artist_12_b: 'Forma unității este aproape identică cu cea din ultimul
           puzzle, cu excepția faptului că jumătatea de hexagon este puțin mai mare. '
-        Course_4_Artist_12_c: "1) Primele trei linii au lungimea de 60 de pixeli și
-          trebuie să întoarceți 60 de grade.  \n 2) Următoarele două linii au lungimea
+        Course_4_Artist_12_c: "1.  Primele trei linii au lungimea de 60 de pixeli
+          și trebuie să întoarceți 60 de grade.  \n2.  Următoarele două linii au lungimea
           de 80 de pixeli și trebuie să întoarceți 120 de grade "
         Course_4_Artist_12_d: |-
           **Soluție:**
@@ -686,7 +685,7 @@ ro:
         Course_4_Artist_Functions_Inspiration_a: Începeți cu codul din ultimul puzzle
           și adăugați un extra "întoarce la dreapta" de trei grade în bucla repetitivă.
         Course_4_Artist_Functions_Inspiration_b: Încercați să vă întoarceți cu mai
-          mult de 90 de grade în afara "buclei repetă", dar încă în interiorul `buclei
+          mult de 90 de grade în afara "buclei repetă", dar încă în interiorul \`buclei
           pentru '.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Soluție:**
@@ -697,6 +696,7 @@ ro:
           <mutation counter="counter"></mutation>
           <value name="FROM">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -758,7 +758,7 @@ ro:
           a funcțiilor constă în identificarea celor de care aveți nevoie și a celor
           de care nu aveți nevoie.
         Course_4_Artist_Functions_challenge_b: Folosiți o `buclă pentru ', apoi folosiți
-          variabila numărătoare în interiorul unei bucle`repetă` imbricate.
+          variabila numărătoare în interiorul unei bucle`repetă\` imbricate.
         Course_4_Artist_Functions_challenge_c: La fiecare iterație, ar trebui să desenați
           un pătrat apoi săriți înainte.
         Course_4_Artist_Functions_challenge_d: Va trebui să întoarceți la stânga cu
@@ -1208,6 +1208,8 @@ ro:
           să rotiți la dreapta cu 45 de grade și să săriți 96 de pixeli înainte.  \n\nOdată
           ce vă aflați în poziția verticală corectă, trebuie să întoarceți artistul
           înapoi din nou și să-l faceți să sară înapoi 408 de pixeli. "
+      Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       Course 4 SCFL 1_authored_hint:
         Course_4_SCFL_1_b: 'Încercați să folosiți două bucle `pentru`: una pentru
           a urca și a aduna nectar, iar cealaltă pentru a coborî și a face miere.'
@@ -1852,33 +1854,36 @@ ro:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi sigur că un dansator apare pe ecran.
 
-          *Nivelul se termină după 4 măsuri.*
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
         challenges: |-
           **Provocări suplimentare**
-          * Alege să se audă un alt song.
-          * Redenumeşte-ţi dansatorul.
+
+          -   Alege să se audă un alt song.
+          -   Redenumeşte-ţi dansatorul.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          _Nivelul se termină după 7 măsuri._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
 
-          *Nivelul se termină după 11 măsuri.*
+          _Nivelul se termină după 11 măsuri._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
+          -   Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
 
-          *Nivelul se termină după 9 măsuri.*
+          _Nivelul se termină după 9 măsuri._
         challenges: |-
           **Provocări suplimentare**
 
@@ -1887,54 +1892,60 @@ ro:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * Trebuie să ai cel puţin doi dansatori.
+          -   Trebuie să ai cel puţin doi dansatori.
 
-          *Nivelul se termină după 5 măsuri.*
+          _Nivelul se termină după 5 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Doi dansatori trebuie să aibă o dimensiune diferită de 100.
 
-          *Nivelul se termină după 5 măsuri.*
+          -   Doi dansatori trebuie să aibă o dimensiune diferită de 100.
+
+          _Nivelul se termină după 5 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Schimbă nuanţa a cel puţin un caracter.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Schimbă nuanţa a cel puţin un caracter.
+
+          _Nivelul se termină după 7 măsuri._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+
+          _Nivelul se termină după 7 măsuri._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi creativ!
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Fi creativ!
+
+          _Nivelul se termină după 7 măsuri._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi creativ!
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Fi creativ!
+
+          _Nivelul se termină după 7 măsuri._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+
+          _Nivelul se termină după 7 măsuri._
       CourseF_PlayLab_vars2_authored_hint:
         Course_4_Play_Lab_Vars_2_a: Asigurați-vă că setați numărul pentru "viteză_câine"
           la ceva mai mare decât "viteză_pisică".
@@ -1943,8 +1954,8 @@ ro:
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
           în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
-          \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
-          Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       Dance short test 2_authored_hint:
         challenges: |-
           **Provocări suplimentare**
@@ -1958,39 +1969,43 @@ ro:
       Dance_Party_01_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi sigur că un dansator apare pe ecran.
 
-          *Nivelul se termină după 4 măsuri.*
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
         challenges: |-
           **Provocări suplimentare**
-          * Alege să se audă un alt song.
-          * Redenumeşte-ţi dansatorul.
+
+          -   Alege să se audă un alt song.
+          -   Redenumeşte-ţi dansatorul.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi sigur că un dansator apare pe ecran.
 
-          *Nivelul se termină după 4 măsuri.*
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
       Dance_Party_02_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_03_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
+          -   După 6 măsuri, dansatorul trebuie să facă alt dans decât cel cel făcut după 4 măsuri.
 
-          *Nivelul se termină după 11 măsuri.*
+          _Nivelul se termină după 11 măsuri._
       Dance_Party_04_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
+          -   Trebuie să faci să se schimbe efectul de fundal cândva înainte de măsura 7 a cântecului.
 
-          *Nivelul se termină după 9 măsuri.*
+          _Nivelul se termină după 9 măsuri._
         challenges: |-
           **Provocări suplimentare**
 
@@ -1999,78 +2014,88 @@ ro:
         validation: |-
           **Cum trec de acest nivel?**
 
-          * Trebuie să ai cel puţin doi dansatori.
+          -   Trebuie să ai cel puţin doi dansatori.
 
-          *Nivelul se termină după 5 măsuri.*
+          _Nivelul se termină după 5 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
       Dance_Party_08_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Doi dansatori trebuie să aibă o dimensiune diferită de 100.
 
-          *Nivelul se termină după 5 măsuri.*
+          -   Doi dansatori trebuie să aibă o dimensiune diferită de 100.
+
+          _Nivelul se termină după 5 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
       Dance_Party_09_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Schimbă nuanţa a cel puţin un caracter.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Schimbă nuanţa a cel puţin un caracter.
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_1_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi sigur că un dansator apare pe ecran.
 
-          *Nivelul se termină după 4 măsuri.*
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
       Dance_Party_10_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Proprietăţile a doi sau mai mulţi dansatori trebuie să fie schimbate.
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi creativ!
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Fi creativ!
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_11_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi creativ!
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Fi creativ!
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi creativ!
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Fi creativ!
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Foloseşte blocul `când săgeata stângă este apăsată` pentru a face Robotul să facă o mişcare de dans când apeşi pe ea.
+
+          _Nivelul se termină după 7 măsuri._
       Dance_Party_2_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
 
-          *Nivelul se termină după 8 măsuri.*
+          -   Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
+
+          _Nivelul se termină după 8 măsuri._
       Dance_Party_3_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
 
-          *Nivelul se termină după 12 măsuri.*
+          -   Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
+
+          _Nivelul se termină după 12 măsuri._
       Dance_Party_4_authored_hint:
         challenges: |-
           **Provocări suplimentare**
@@ -2079,49 +2104,55 @@ ro:
       Dance_Party_5_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
 
-          *Nivelul se termină după 12măsuri.*
+          -   Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
+
+          _Nivelul se termină după 12măsuri._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Optional Challenge**
 
-          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
       Dance_Party_8_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
 
-          *Nivelul se termină după 6 măsuri.*
+          -   Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
+
+          _Nivelul se termină după 6 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
       Dance_Party_9_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Schimbă nunaţa la cel puţin un dansator.
 
-          *Nivelul se termină după 8 măsuri.*
+          -   Schimbă nunaţa la cel puţin un dansator.
+
+          _Nivelul se termină după 8 măsuri._
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Fi sigur că un dansator apare pe ecran.
 
-          *Nivelul se termină după 4 măsuri.*
+          -   Fi sigur că un dansator apare pe ecran.
+
+          _Nivelul se termină după 4 măsuri._
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
 
-          *Nivelul se termină după 8 măsuri.*
+          -   Dansatorul trebuie să schimbe cu o altă mişcare dup 4 măsuri.
+
+          _Nivelul se termină după 8 măsuri._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
 
-          *Nivelul se termină după 12 măsuri.*
+          -   Dup 6 măsuri dansatorul trebuie să facă un dans diferit decât cel făcut după 4 măsuri.
+
+          _Nivelul se termină după 12 măsuri._
       HOC Dance 3_draft_authored_hint:
         challenges: |-
           **Provocări suplimentare**
@@ -2130,46 +2161,47 @@ ro:
       HOC Dance 4_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
 
-          *Nivelul se termină după 12măsuri.*
+          -   Dansatorul tău trebuie să facă diferite mutări în primele 12 măsuri ale cântecului.
+
+          _Nivelul se termină după 12măsuri._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Optional Challenge**
 
-          * Adaugă un al treilea dansator (sau cât de mulţi vrei!)
-          * Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
+          -   Adaugă un al treilea dansator (sau cât de mulţi vrei!)
+          -   Fă ca dansatorii tăi să realizeze diferite mişcări la diferite momente din cântec.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
 
-          *Nivelul se termină după 6 măsuri.*
+          -   Cei doi dansatori trebuie să aibă o altă dimensiune decât 100.
+
+          _Nivelul se termină după 6 măsuri._
         challenges: |-
           **Optional Challenge**
 
-          * Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
+          -   Experimentează schimbând alte proprietăţi (lăţimea, înălţimea, rotaţie, etc)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Schimbă nunaţa la cel puţin un dansator.
 
-          *Nivelul se termină după 8 măsuri.*
+          -   Schimbă nunaţa la cel puţin un dansator.
+
+          _Nivelul se termină după 8 măsuri._
       Inspirational Artwork_authored_hint:
         brush_width: Am setat lățimea periei la 1 apoi culoarea la albastru, înainte
           de a face orice altceva.
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle
           "repetă".
-        specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare
-          dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme
-          doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește
-          diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine
-          mai mare."
+        specifics: |-
+          Bucla "pentru" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase "petale" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.
+
+          Blocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare.
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte"
           cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
         solution: |-
           **Soluție**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       NEW Course 4 Artist Params inspire_authored_hint:
@@ -2177,19 +2209,19 @@ ro:
           de a face orice altceva.
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle
           "repetă".
-        specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare
-          dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme
-          doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește
-          diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine
-          mai mare."
+        specifics: |-
+          Bucla "pentru" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase "petale" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.
+
+          Blocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare.
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte"
           cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
       Ryan_Demo_authored_hint:
         validation: |-
           **Cum trec de acest nivel?**
-          * Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
 
-          *Nivelul se termină după 7 măsuri.*
+          -   Dansatorul trebuie să treacă la o nouă mişcare după 4 măsuri.
+
+          _Nivelul se termină după 7 măsuri._
       aE3_authored_hint:
         aE3_d: Dacă codul dvs. devine prea confuz, puteți oricând să faceți clic pe
           "Începeți din nou" și să o luați de la capăt!
@@ -2212,14 +2244,15 @@ ro:
         artistLoopsKA_a: Utilizați blocul de salt pentru a vă deplasa înainte fără
           a trasa o linie.
       course1_artist_loops_challenge1_authored_hint:
-        courseA_artist_loops_challenge1_a: |
+        courseA_artist_loops_challenge1_a: |-
           Puteți folosi bucle de acest fel pentru a crea pereții și acoperișul. Încercați să repetați blocuri diferite.
-
-
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
           Creați-vă propriile bucle sau faceți clic pe ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pentru câteva idei!
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_c: Veţi avea nevoie de o MULȚIME de blocuri
           în interiorul buclei pentru această provocare.
@@ -2227,9 +2260,9 @@ ro:
         courseA_collector_loops_challenge2_a: |-
           Puteți să mergeți înapoi pe cale a doua oară înainte de a vă deplasa spre sud.
 
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
           <xml>
           <block type="maze_moveEast"/><next>
@@ -2242,17 +2275,18 @@ ro:
           triunghiul dvs.
         courseD_artist_nestedLoops_challenge1_c: |-
           Utilizați o buclă imbricată:
-          - Repetă de 8 ori
-          - desenează un octogon
-          - desenează un triunghi
-          - sări 50 de pixeli înainte
-          - întoarce 90 de grade la dreapta
+
+          -   Repetă de 8 ori
+          -   desenează un octogon
+          -   desenează un triunghi
+          -   sări 50 de pixeli înainte
+          -   întoarce 90 de grade la dreapta
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_b: Puteți repeta "mută înainte" și "culege
           porumb" ori de câte ori aveți nevoie, apoi "întoarce la dreapta" la fiecare
           colț.
         courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -2285,12 +2319,12 @@ ro:
         courseC_maze_loops_challenge1_c: |-
           Dacă ajungeți până aici, trebuie doar să "întoarceți la stânga", apoi să "mergeți înainte" de câteva ori. Nu renunţați!
 
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
           de 30** și se întoarce la dreapta cu **60 grade**.  '
-        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
-          de 80 ** și se întorc spre dreapta de **120 grade**. '
+        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime \*\*
+          de 80 \*\* și se întorc spre dreapta de **120 grade**. '
       course3_bee_functions_challenge1_authored_hint:
         courseE_bee_functions_challenge1_a: |-
           Dacă puzzle-ul pare a fi o provocare, încercați să vă construiți funcția câte puțin de fiecare dată.
@@ -2306,7 +2340,7 @@ ro:
           în fiecare spațiu variază. Utilizați bucle "în timp ce" pentru acestea.
       course4_bee_fwp_challenge1_authored_hint:
         courseF_bee_fwp_challenge1_d: |-
-          În interiorul `buclei pentru ', veți dori să' mutați înainte ', apoi să obțineți nectar **de atâtea ori numărător**.
+          În interiorul \`buclei pentru ', veți dori să' mutați înainte ', apoi să obțineți nectar **de atâtea ori numărător**.
           După "bucla pentru" puteți doar să "mutați înapoi" **de atâtea ori cât arată lungimea**.
 
           Este posibil să fie nevoie să citiți acest indiciu de mai multe ori pentru a-l înțelege. Partea în **bold** este un indiciu despre cum să folosiți cele două bucle `repetă` de care veți avea nevoie.
@@ -2452,7 +2486,7 @@ ro:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2471,7 +2505,7 @@ ro:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2490,7 +2524,7 @@ ro:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2509,7 +2543,7 @@ ro:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2656,7 +2690,7 @@ ro:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2675,7 +2709,7 @@ ro:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2694,7 +2728,7 @@ ro:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2713,7 +2747,7 @@ ro:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -2807,11 +2841,13 @@ ro:
       courseB_artist_loops3_2018_authored_hint:
         courseB_artist_loops3_a: |-
           Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
+
           <title name="TIMES">???</title>
           </block></xml> pentru un cod mai bun!
       courseB_artist_loops3_2019_authored_hint:
         courseB_artist_loops3_a: |-
           Amintiți-vă să utilizați o buclă `repetă` <xml><block type="controls_repeat_simplified">
+
           <title name="TIMES">???</title>
           </block></xml> pentru un cod mai bun!
       courseB_artist_loops4_authored_hint:
@@ -2896,7 +2932,7 @@ ro:
         courseB_collector_loops9_b: Veți avea nevoie de 3 bucle de repetare, una după
           alta, pentru această soluție.
       courseB_collector_loops_challenge1_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
           <xml>
           <block type="maze_moveEast"><next>
@@ -2904,7 +2940,7 @@ ro:
           </xml>
           Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
       courseB_collector_loops_challenge1_2018_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
           <xml>
           <block type="maze_moveEast"><next>
@@ -2912,7 +2948,7 @@ ro:
           </xml>
           Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
       courseB_collector_loops_challenge1_2019_authored_hint:
-        courseB_collector_loops_challenge1_c: |
+        courseB_collector_loops_challenge1_c: |-
           Mutați Est de două ori între fiecare traseu.
           <xml>
           <block type="maze_moveEast"><next>
@@ -2932,7 +2968,7 @@ ro:
         courseA_collector_loops_challenge2_a: |-
           Puteți să mergeți înapoi pe cale a doua oară înainte de a vă deplasa spre sud.
 
-          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: Ferește-te de gheață! Scrat va cădea prin ea!
       courseB_iceage_loops10_authored_hint:
@@ -3019,12 +3055,13 @@ ro:
         courseC_artist_loopsPrePre1a_b: |-
           Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
 
-          ![](https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_b: |-
           Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
 
           <xml><block type="draw_move_by_constant">
+
           <title name="DIR">mutăÎnainte</title>
           <title name="VALUE">50</title>
           </block></xml>
@@ -3033,6 +3070,7 @@ ro:
           Pentru a vă deplasa înainte cu 50 de pixeli, utilizați acest bloc:
 
           <xml><block type="draw_move_by_constant">
+
           <title name="DIR">mutăÎnainte</title>
           <title name="VALUE">50</title>
           </block></xml>
@@ -3051,21 +3089,27 @@ ro:
           cu 100 pixeli', voi trasa automat o linie.
         courseC_artist_prog2_b: Probleme la cotitură? Folosiți blocul "întoarce la
           dreapta cu 90 de grade".
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_harvester_loops2_authored_hint:
         courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
           pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
-          cealaltă va repeta comanda`culege dovleac`.
+          cealaltă va repeta comanda`culege dovleac\`.
       courseC_harvester_loops2_2018_authored_hint:
         courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
           pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
-          cealaltă va repeta comanda`culege dovleac`.
+          cealaltă va repeta comanda`culege dovleac\`.
       courseC_harvester_loops2_2019_authored_hint:
         courseC_harvester_loops2_a: Dacă vă împotmoliți, încercați să scrieți pașii
           pe hârtie și să căutați modele repetate.
         courseC_harvester_loops2_c: O buclă va repeta comanda `mută înainte ', iar
-          cealaltă va repeta comanda`culege dovleac`.
+          cealaltă va repeta comanda`culege dovleac\`.
       courseC_harvester_loops3_authored_hint:
         courseC_harvester_loops3_b: Pentru primii dovleci, puteți folosi un cod foarte
           asemănător cu ultimul puzzle. În ce parte trebuie să întorci după aceea?
@@ -3098,7 +3142,7 @@ ro:
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
         courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3129,9 +3173,10 @@ ro:
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
         courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
 
           <xml><block type="controls_repeat">
+
           <title name="TIMES">2</title>
           <statement name="DO">
           <block type="controls_repeat">
@@ -3157,9 +3202,10 @@ ro:
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
         courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
 
           <xml><block type="controls_repeat">
+
           <title name="TIMES">2</title>
           <statement name="DO">
           <block type="controls_repeat">
@@ -3185,9 +3231,10 @@ ro:
           și "culege porumb" ori de câte ori aveți nevoie, apoi "întoarceți la dreapta"
           la fiecare colț.
         courseC_harvester_loops_challenge1_c: |-
-          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc` repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
+          Cea mai bună modalitate de a colecta primii patru porumbi folosește un bloc `repetă` în interiorul unui alt bloc`repetă`. Puteți folosi acest model și pentru restul puzzle-ului!
 
           <xml><block type="controls_repeat">
+
           <title name="TIMES">2</title>
           <statement name="DO">
           <block type="controls_repeat">
@@ -3230,7 +3277,7 @@ ro:
         courseC_maze_loops6_b: |-
           Pentru a plasa o mulțime de blocuri într-o buclă `repetă`, glisați o buclă afară în spațiul de lucru, apoi glisați toate blocurile din programul de pornire în interiorul acesteia.
 
-          Conectați totul înapoi la blocul `când rulează 'și gata, totul s-a rezolvat!
+          Conectați totul înapoi la blocul \`când rulează 'și gata, totul s-a rezolvat!
       courseC_maze_loops7_authored_hint:
         courseC_maze_loops7_a: Dacă modelul structural este greu de identificat, încercați
           să îl codificați în întregime mai întâi și să observați ce anume se repetă
@@ -3254,8 +3301,8 @@ ro:
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
           în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
-          \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
-          Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
@@ -3265,9 +3312,10 @@ ro:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Programul dvs. ar trebui să:
-          - Utilizeze funcția
-          - Mute înainte cu 100 + 75 pixeli
-          - Utilizeze funcția
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
       courseD_artist_functions7_authored_hint:
         courseD_artist_functions7_b: Nu trebuie să adăugați bucle suplimentare. Doar
           faceți artistul să sară cu 100 de pixeli înainte pentru fiecare fereastră
@@ -3300,57 +3348,60 @@ ro:
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           Utilizați două bucle imbricate:
-          - Repetă de 8 ori
-          - desenează un pătrat
-          - sari înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
-          - Repetă de 8 ori
-          - desenează un triunghi
-          - sări înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
+
+          -   Repetă de 8 ori
+          -   desenează un pătrat
+          -   sari înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
+          -   Repetă de 8 ori
+          -   desenează un triunghi
+          -   sări înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
       courseD_artist_nestedLoops9_2018_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           Utilizați două bucle imbricate:
-          - Repetă de 8 ori
-          - desenează un pătrat
-          - sari înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
-          - Repetă de 8 ori
-          - desenează un triunghi
-          - sări înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
+
+          -   Repetă de 8 ori
+          -   desenează un pătrat
+          -   sari înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
+          -   Repetă de 8 ori
+          -   desenează un triunghi
+          -   sări înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
       courseD_artist_nestedLoops9_2019_authored_hint:
         courseD_artist_nestedLoops9_c: |-
           Utilizați două bucle imbricate:
-          - Repetă de 8 ori
-          - desenează un pătrat
-          - sari înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
-          - Repetă de 8 ori
-          - desenează un triunghi
-          - sări înainte 50 de pixeli
-          - întoarce la dreapta cu 45 de grade
+
+          -   Repetă de 8 ori
+          -   desenează un pătrat
+          -   sari înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
+          -   Repetă de 8 ori
+          -   desenează un triunghi
+          -   sări înainte 50 de pixeli
+          -   întoarce la dreapta cu 45 de grade
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
           în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
-          \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
-          Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_artist_project3_2018_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
           în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
-          \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
-          Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_artist_project3_2019_authored_hint:
         courseD_artist_project3_b: "Încercați buclele imbricate!\n\nUtilizați codul
           pe care l-ați creat pentru a desena o linie de forme și pentru imbricați-o
           în interiorul unei alte bucle. În partea de jos, înainte ca bucla exterioară
           să se termine, adăugați un bloc care o va întoarce pe Elsa de jur împrejur.
-          \ \n\n- Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
-          Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
+          \ \n\n-   Încercați 72 de grade dacă repetați bucla exterioară de 5 ori\n-
+          \  Încercați 60 de grade dacă repetați bucla exterioară de 6 ori"
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: "**Amintiți-vă:** Acest puzzle se schimbă de
           fiecare dată când este executat.  \n\nVeți dori să utilizați un bloc condițional
@@ -3442,18 +3493,18 @@ ro:
       courseE_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
           de 30** și se întoarce la dreapta cu **60 grade**.  '
-        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
-          de 80 ** și se întorc spre dreapta de **120 grade**. '
+        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime \*\*
+          de 80 \*\* și se întorc spre dreapta de **120 grade**. '
       courseE_artist_concept_challenge1_2018_authored_hint:
         courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
           de 30** și se întoarce la dreapta cu **60 grade**.  '
-        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
-          de 80 ** și se întorc spre dreapta de **120 grade**. '
+        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime \*\*
+          de 80 \*\* și se întorc spre dreapta de **120 grade**. '
       courseE_artist_concept_challenge1_2019_authored_hint:
         courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
           de 30** și se întoarce la dreapta cu **60 grade**.  '
-        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime **
-          de 80 ** și se întorc spre dreapta de **120 grade**. '
+        courseE_artist_concept_challenge1_b: 'Cele 2/3 din triunghi au o lungime \*\*
+          de 80 \*\* și se întorc spre dreapta de **120 grade**. '
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Pătratele au, fiecare, laturi de câte 100 de
           pixeli, ceea ce înseamnă că va trebui să mutați înainte cu 175 de pixeli,
@@ -3469,9 +3520,16 @@ ro:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Programul dvs. ar trebui să:
-          - Utilizeze funcția
-          - Mute înainte cu 100 + 75 pixeli
-          - Utilizeze funcția
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_concept3_authored_hint:
         courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
           încercați să vă scrieți codul pas cu pas și să căutați modele.
@@ -3569,6 +3627,18 @@ ro:
           \nCare este cel mai mare număr? \nCât de mare este creșterea de fiecare
           dată?**\n\nAcestea sunt întrebările pe care trebuie să vi le puneți pentru
           a completa spațiile goale din interiorul  buclei imbricate `pentru`."
+      courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals5_authored_hint:
         courseF_bee_conditionals5_c: 'Există 3 laturi cu flori ale dreptunghiului,
           deci, codul trebuie să se "repete de 3 ori". La fiecare repetare, albina
@@ -3588,15 +3658,15 @@ ro:
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și
           blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate,
-          ambele în interiorul aceleiași bucle imbricate`pentru`.
+          ambele în interiorul aceleiași bucle imbricate`pentru\`.
       courseF_bee_for5_2018_authored_hint:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și
           blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate,
-          ambele în interiorul aceleiași bucle imbricate`pentru`.
+          ambele în interiorul aceleiași bucle imbricate`pentru\`.
       courseF_bee_for5_2019_authored_hint:
         courseF_bee_for5_a: De data aceasta, blocul dvs. "mută înainte" precum și
           blocul dvs. "obține nectar" vor trebui să fie în bucle `repetă ' separate,
-          ambele în interiorul aceleiași bucle imbricate`pentru`.
+          ambele în interiorul aceleiași bucle imbricate`pentru\`.
       courseF_bee_for_challenge2_authored_hint:
         courseF_bee_for_challenge2_b: 'Încercați să folosiți două bucle `pentru`:
           una pentru a urca și a aduna nectar, iar cealaltă pentru a coborî și a face
@@ -3700,7 +3770,7 @@ ro:
         2-3_Artist_Debugging_8_a: |-
           De câte ori s-a repetat forma mea?
 
-          De câte ori *ar trebui* să se repete forma?
+          De câte ori _ar trebui_ să se repete forma?
 
           Unde puteți schimba acest lucru în program?
       grade2_PuppyLoops_6_authored_hint:
@@ -3710,7 +3780,7 @@ ro:
         2-3_Maze_16_b: |-
           Pentru a plasa o mulțime de blocuri într-o buclă `repetă`, glisați o buclă afară în spațiul de lucru, apoi glisați toate blocurile din programul de pornire în interiorul acesteia.
 
-          Conectați totul înapoi la blocul `când rulează 'și gata, totul s-a rezolvat!
+          Conectați totul înapoi la blocul \`când rulează 'și gata, totul s-a rezolvat!
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: Dacă modelul structural este greu de identificat, încercați
           să îl codificați în întregime mai întâi și să observați ce anume se repetă
@@ -3732,7 +3802,7 @@ ro:
         2-3_Maze_16_b: |-
           Pentru a plasa o mulțime de blocuri într-o buclă `repetă`, glisați o buclă afară în spațiul de lucru, apoi glisați toate blocurile din programul de pornire în interiorul acesteia.
 
-          Conectați totul înapoi la blocul `când rulează 'și gata, totul s-a rezolvat!
+          Conectați totul înapoi la blocul \`când rulează 'și gata, totul s-a rezolvat!
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: Dacă modelul structural este greu de identificat, încercați
           să îl codificați în întregime mai întâi și să observați ce anume se repetă
@@ -3854,9 +3924,10 @@ ro:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Programul dvs. ar trebui să:
-          - Utilizeze funcția
-          - Mute înainte cu 100 + 75 pixeli
-          - Utilizeze funcția
+
+          -   Utilizeze funcția
+          -   Mute înainte cu 100 + 75 pixeli
+          -   Utilizeze funcția
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Fiecare hexagon are laturi de 40 de pixeli.
         Course_4_SCF_1_b: În fiecare linie orizontală, există un salt de 120 de pixeli
@@ -3891,8 +3962,8 @@ ro:
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_a: 'Jumătatea de hexagon are o **lungime de 30** și se
           întoarce la dreapta cu **60 grade**.  '
-        Course_4_Artist_11_b: 'Cele 2/3 din triunghi au o lungime ** de 80 ** și se
-          întorc spre dreapta de **120 grade**. '
+        Course_4_Artist_11_b: 'Cele 2/3 din triunghi au o lungime \*\* de 80 \*\*
+          și se întorc spre dreapta de **120 grade**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
           Acest design va fi de circa 10 ori peste 360 ​​de grade.
@@ -3939,7 +4010,7 @@ ro:
           cu 90 de grade".
       grade4_review_artist2_authored_hint:
         2-3_Artist_6_a: 'Pentru a face aceste unghiuri mici, trebuie să virați de
-          fiecare dată *mai departe * decât ați făcut-o cu pătratul.   '
+          fiecare dată \*mai departe \* decât ați făcut-o cu pătratul.   '
         2-3_Artist_6_b: Din moment ce stau deja cu fața către dreapta, este mai uşor
           să încep prin a merge înainte și, apoi, să fac întoarceri către stânga pentru
           a crea triunghiul.
@@ -3996,11 +4067,10 @@ ro:
           de a face orice altceva.
         double_loop: Încercați să puneți o buclă "pentru" în interiorul unei bucle
           "repetă".
-        specifics: "Bucla \"pentru\" rulează de la trei la șaptesprezece pentru fiecare
-          dintre cele șase \"petale\" înainte de a trece la următoarea, desenând forme
-          doar cu un număr impar de laturi.\n        \nBlocul `setează alfa` folosește
-          diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine
-          mai mare."
+        specifics: |-
+          Bucla "pentru" rulează de la trei la șaptesprezece pentru fiecare dintre cele șase "petale" înainte de a trece la următoarea, desenând forme doar cu un număr impar de laturi.
+
+          Blocul `setează alfa` folosește diviziunea pentru a decolora culoarea, pe măsură ce numărul de cadre devine mai mare.
         after: După ce ați terminat cu fiecare "petală", asigurați-vă că "mutați înainte"
           cu 20 de pixeli înainte de a efectua o rotație de 60 de grade.
       grade5_artist_variables_freeplay10_authored_hint:

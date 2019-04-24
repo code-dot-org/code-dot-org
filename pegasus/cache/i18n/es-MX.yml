@@ -593,12 +593,12 @@ es-MX:
   sports_og_title: Esfuérzate. Cualquiera puede aprender.
   sports_og_description: Campeones y medallistas de oro te animan a probar la hora
     del código. Escribe tu propio juego deportivo.
-  sports_title: Programa tu propio juego de deporte
+  sports_title: Programa tu propio juego de deportes
   sports_watch_video: Mira el Video
   sports_video_title: Esfuérzate. Cualquiera puede aprender.
   sports_select_theme: Selecciona el tema del tutorial
   sports_basketball_title: Crea un juego de baloncesto
-  sports_all_sports_title: Multideporte
+  sports_all_sports_title: Combina deportes
   sports_featured_athletes: Revisa los atletas destacados
   sports_athletes_title: Atletas destacados
   sports_athlete_Draymond: Draymond Green, medallista de oro olímpico y campeón de
@@ -631,7 +631,8 @@ es-MX:
   sports_athlete_Harrison: Harrison Barnes, medallista de oro olímpico y campeón de
     la NBA, Dallas Mavericks
   watch_inspirational_videos: Antes de empezar, ve uno de estos videos inspiradores
-  video_title_cs_is_everything: Las Ciencias de la Computación están cambiando todo
+  video_title_cs_is_everything: Las Ciencias de la Computación lo están cambiando
+    todo
   video_title_inspire_girl: Inspira a una chica
   video_title_cs_intro: Introducción a las Ciencias de la Computación
   video_title_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No Enseña
@@ -1341,10 +1342,10 @@ es-MX:
   csp17_category_name: "'16-'17 Principios de CS"
   csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
   cspexams_category_name: Prueba de práctica de principios de CS
-  applab_name: Laboratorio de App
+  applab_name: Laboratorio de aplicaciones
   gamelab_name: Laboratorio de juegos
   basketball_name: Crea un juego de baloncesto
-  sports_name: Programa tu propio juego de deporte
+  sports_name: Programa tu propio juego de deportes
   applab_gradelevel: Desde 13 años
   applab_shortdescription_congrats: App Lab es un entorno de programación donde hacer
     aplicaciones simples. Diseña una aplicación, codifica con bloques o JavaScript
@@ -2167,7 +2168,7 @@ es-MX:
   csd_name: Descubrimientos de Ciencias de la Computación
   csd_2018_name: Descubrimientos de Ciencias de la Computación
   full_course_category_name: Cursos Completos
-  user_header_label: Hola %{username}
+  user_header_label: Hola, %{username}
   user_header_team: Equipo
   user_header_settings: Configuración de la cuenta
   user_header_logout: Cerrar sesión
@@ -2178,6 +2179,7 @@ es-MX:
   user_header_gamelab: Laboratorio de juegos
   user_header_playlab: Laboratorio de juegos
   user_header_dance: Fiesta de baile
+  user_header_spritelab: Laboratorio de sprites
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Ver todos los proyectos...
@@ -2234,6 +2236,7 @@ es-MX:
     de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una
     cuenta de Google":'
+  hero_name: 'Minecraft: Viaje del héroe'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
   applab_tile_title: Introducción a App Lab (edades 13+)
   applab_tile_subtitle: Crea tu propia aplicación en JavaScript usando la programación
@@ -2241,6 +2244,7 @@ es-MX:
     basada en texto. (Sólo en inglés)
   applab_tile_start_tutorial: Inicio
   applab_tile_teacher_guide: Ver la guía del profesor
+  aquatic_name: 'Minecraft: Travesía Aquática'
   account_sign_up_email_opt_in: "¿Podemos enviarte actualizaciones de nuestros cursos,
     oportunidades en tu zona u otras noticias sobre ciencias de la computación por
     correo electrónico? (aproximadamente una vez al mes)"
@@ -2330,8 +2334,8 @@ es-MX:
   hoc2018_mc_video_5min: 5 minutos
   hoc2018_mc_video_title_steph_curry: Hora de código con Steph Curry
   hoc2018_mc_video_title_sports: Esfuérzate. Cualquiera puede aprender.
-  hoc2018_mc_video_title_cs_is_everything: Las Ciencias de la Computación están cambiando
-    todo
+  hoc2018_mc_video_title_cs_is_everything: Las Ciencias de la Computación lo están
+    cambiando todo
   hoc2018_mc_video_title_inspire_girl: Inspira a una chica
   hoc2018_mc_video_title_cs_intro: Introducción a las Ciencias de la Computación
   hoc2018_mc_video_title_schools_dont_teach: Lo Que La Mayoría De Las Escuelas No
@@ -2349,6 +2353,8 @@ es-MX:
   hoc2018_mc_homepage_watch_video: Mira nuestro video
   hoc2018_mc_homepage_join_us: Únete
   hoc2018_mc_homepage_try_it: Pruébalo
+  hoc2018_mc_back: "¡Minecraft está de vuelta con una nueva actividad para la Hora
+    del Código!"
   hoc2018_mc_back_journey: "¡Minecraft está de vuelta para la Hora del Código con
     una actividad nueva! Viaja a través de Minecraft con códigos."
   hoc2018_mc_teacher_guide: Ver la guía del profesor
@@ -2412,7 +2418,7 @@ es-MX:
     de $10,000 por año para estudiantes desfavorecidos que han completado con éxito
     o actualmente están inscritos en un curso de AP CS y la intención de estudiar
     una licenciatura de CS en un Colegio de 4 años o Universidad en Estados Unidos.
-  hoc2018_dance_amazon_scholarship_programs_button: Aplicar
+  hoc2018_dance_amazon_scholarship_programs_button: Enviar solicitud
   hoc2018_dance_amazon_internships_title: Sea Becario en Amazon
   hoc2018_dance_amazon_internships_description: Las inscripciones ya están abiertas
     para los residentes de Amazon Future Engineer del verano de 2019. Los residentes

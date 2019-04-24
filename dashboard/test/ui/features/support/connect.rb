@@ -49,11 +49,8 @@ def saucelabs_browser(test_run_name)
     begin
       http_client = Selenium::WebDriver::Remote::Http::Persistent.new
 
-      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
-      if slow_browser?
-        http_client.read_timeout = 5.minutes
-        http_client.open_timeout = 5.minutes
-      end
+      # Temporarily increase read timeout to acquire a new browser session.
+      http_client.read_timeout = 5.minutes
 
       browser = Selenium::WebDriver.for(:remote,
         url: url,
@@ -61,8 +58,11 @@ def saucelabs_browser(test_run_name)
         http_client: http_client
       )
 
-      # Maximum time a single execute_script or execute_async_script command may take
-      browser.manage.timeouts.script_timeout = 30.seconds
+      # Time to wait for any page loading to complete (default 5 minutes).
+      browser.manage.timeouts.page_load = 2.minutes
+
+      # Time to wait for any command (default 1 minute).
+      http_client.send(:http).read_timeout = 2.minutes
 
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
@@ -85,49 +85,45 @@ def saucelabs_browser(test_run_name)
     browser.manage.window.resize_to(max_width, max_height)
   end
 
+  $session_id = browser.session_id
+  visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
+  puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
+
   browser
 end
 
 def get_browser(test_run_name)
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
-    # This drives a local installation of ChromeDriver running on port 9515, instead of Saucelabs.
-    SeleniumBrowser.local_browser(headless)
+    # Run a local headless browser instead of Saucelabs.
+    SeleniumBrowser.local_browser(headless, ENV['BROWSER_CONFIG'])
   else
     saucelabs_browser test_run_name
   end
 end
 
-browser = nil
+$browser = nil
 
 Before do |scenario|
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
   if slow_browser?
-    browser ||= get_browser ENV['TEST_RUN_NAME']
+    $browser ||= get_browser ENV['TEST_RUN_NAME']
     very_verbose 'slow browser, using existing'
-    @browser ||= browser
+    @browser ||= $browser
   else
     very_verbose 'fast browser, getting a new one'
-    @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
+    $browser = @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
   @browser.manage.delete_all_cookies
 
   debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
-
-  unless ENV['TEST_LOCAL'] == 'true'
-    unless @sauce_session_id
-      @sauce_session_id = @browser.send(:bridge).capabilities["webdriver.remote.sessionid"]
-      visual_log_url = 'https://saucelabs.com/tests/' + @sauce_session_id
-      puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
-    end
-  end
 end
 
 def log_result(result)
-  return if ENV['TEST_LOCAL'] == 'true' || @sauce_session_id.nil?
+  return unless $session_id
 
-  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{@sauce_session_id}"
+  url = "https://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@saucelabs.com/rest/v1/#{CDO.saucelabs_username}/jobs/#{$session_id}"
   HTTParty.put(
     url,
     body: {"passed" => result}.to_json,
@@ -135,31 +131,67 @@ def log_result(result)
   )
 end
 
-all_passed = true
-
-After do |scenario|
-  # log to saucelabs
-  all_passed &&= scenario.passed?
-  log_result all_passed
+# Quit current browser session.
+def quit_browser
+  with_read_timeout(5.seconds) do
+    $browser&.quit
+  rescue => e
+    puts "Error quitting browser session: #{e}"
+  end
+  $browser = @browser = nil
 end
 
-After do |_s|
-  unless @browser.nil?
-    # clear session state (or get a new browser)
-    if slow_browser?
-      unless @browser.current_url.include?('studio')
-        steps 'Then I am on "http://studio.code.org/"'
-      end
-      @browser.execute_script 'sessionStorage.clear()'
-      @browser.execute_script 'localStorage.clear()'
-    else
-      @browser.quit unless @browser.nil?
+$all_passed = true
+
+After do |scenario|
+  if slow_browser?
+    $all_passed &&= scenario.passed?
+    # clear session state
+    unless @browser.current_url.include?('studio')
+      steps 'Then I am on "http://studio.code.org/"'
     end
+    @browser.execute_script 'sessionStorage.clear()'
+    @browser.execute_script 'localStorage.clear()'
+  else
+    log_result scenario.passed?
+    quit_browser
+  end
+end
+
+def context(str)
+  unless ENV['TEST_LOCAL'] == 'true'
+    $browser&.execute_script("sauce:context=#{str}")
+  end
+rescue => e
+  puts "Context error: #{e}"
+end
+
+failed = false
+AfterConfiguration do |config|
+  config.on_event :test_case_started do |event|
+    context "Scenario: #{event.test_case.name}"
+  end
+  config.on_event :test_step_started do |event|
+    last = event.test_step.source.last
+    # Don't record context for (skipped) steps in scenario after failure.
+    next if failed && last.is_a?(Cucumber::Core::Ast::Step)
+    context last
+  end
+  config.on_event :test_step_finished do |event|
+    if event.result.failed?
+      failed = true
+      context "Failed: #{event.result.exception}"
+    end
+  end
+  config.on_event :test_case_finished do |_|
+    context 'Passed' unless failed
+    failed = false
   end
 end
 
 at_exit do
-  browser.quit unless browser.nil?
+  log_result $all_passed if slow_browser?
+  quit_browser
 end
 
 def very_verbose(msg)

@@ -1,17 +1,24 @@
+---
 et:
   data:
     short_instructions:
       2-3 Artist 1 new: Tere, olen kunstnik. Sa saad kirjutada koodi, et panna mind peaaegu kõike joonistama. Kasuta mõndasid plokke et panna mind joonistama hallidele joontele mis on pildil. (Iga joon on 100 pikslit pikk)
-      2-3 Artist 11: "Et stopp-märgile ääred teha, ehita kaheksanurk, mille iga külg on 100 piksli pikkune.\\r\n\\r\n"
+      2-3 Artist 11: |-
+        Et stopp-märgile ääred teha, ehita kaheksanurk, mille iga külg on 100 piksli pikkune.\\r
+        \\r
       2-3 Artist 12: |-
-        Tee ring, et silmamuna lõpetada! \r
-        \r
+        Tee ring, et silmamuna lõpetada! \\r
+        \\r
         Kui kunstnik pöörab iga tsükliga 1 kraadi võrra, siis kui palju pead sa koodi kordama, et kunstnik joonistaks ringi? 180? 360? 500?
       2-3 Artist 2 new: 'Sellel majal on üks pooleliolev sein. Iga külg on 100 aga pooleliolev on 50. Lõpeta sein. '
       2-3 Artist 2: 'Sellel majal on üks pooleliolev sein. Iga külg on 100 aga pooleliolev on 50. Lõpeta sein. '
-      2-3 Artist 3.4: "'Hüppa' plokk liigutab kunstnikku ilma et ta joonistaks. Joonista katkendlik joon kasutades 'hüppa edasi' ja 'liigu edasi' plokke.\nIga joon on 50 piksli pikkune."
+      2-3 Artist 3.4: |-
+        'Hüppa' plokk liigutab kunstnikku ilma et ta joonistaks. Joonista katkendlik joon kasutades 'hüppa edasi' ja 'liigu edasi' plokke.
+        Iga joon on 50 piksli pikkune.
       2-3 Artist 3: See müts on 100 pikslit kõrge. Joonista müts mis on 70 pikslit väiksem.
-      2-3 Artist 3new: "Punane müts on 100 pikslit kõrge. Lõpeta musta mütsi joonistus, mis on 70 pikslit lühem. \\r\n (Määrkus: Iga mütsi laius on 50 pikslit.)"
+      2-3 Artist 3new: |-
+        Punane müts on 100 pikslit kõrge. Lõpeta musta mütsi joonistus, mis on 70 pikslit lühem. \\r
+         (Määrkus: Iga mütsi laius on 50 pikslit.)
       2-3 Artist 4: Aita mul selle kassi jaoks maja teha.
       2-3 Artist 5: Asendada see kood "repeat times" blokiga, et joonistada sama maja, kasutades ainult kolme blokki.
       2-3 Artist 6: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
@@ -22,70 +29,78 @@ et:
       2-3 Artist 9: Lõpeta see tuulelohe
       2-3 Artist Assessment 1: 'Hindamine: Lõpeta viimase hamba joonistus, mis on 25 pikslit lai ja 25 pikslit kõrge.'
       2-3 Artist Debugging 1: See müts peaks olema 50 pikslit lai.  Saad sa seda parandada?
-      2-3 Artist Debugging 10: "Minu mängupuldi suunaklahvid on liiga kitsad. \\r\\r Kas sa oskad need 10 piksli võrra laiemaks teha?\\r\\r Proovi kõigepealt seda koodi kasutads, et välja mõelda, mis valesti on."
+      2-3 Artist Debugging 10: Minu mängupuldi suunaklahvid on liiga kitsad. \\r\\r Kas sa oskad need 10 piksli võrra laiemaks teha?\\r\\r Proovi kõigepealt seda koodi kasutads, et välja mõelda, mis valesti on.
       2-3 Artist Debugging 11: |-
-        Minu lumehelves laguneb!\r
-        \r
+        Minu lumehelves laguneb!\\r
+        \\r
         Kas sa aitad mul välja mõelda, mis on valesti?
       2-3 Artist Debugging 12: Ma peaksin sellele stseenile merelaine lisama. Kas sa saaksid mind aidata?
-      2-3 Artist Debugging 2: "See kood kassi vurrude jaoks on vale.\n\\r\n\\r\nParanda kood, et joonistada vurrud, mis on ühepikkused."
-      2-3 Artist Debugging 3: "Minu paadis on auk!\\r\n\\r \nMida sa pead parandama, et see korda teha?"
+      2-3 Artist Debugging 2: |-
+        See kood kassi vurrude jaoks on vale.
+        \\r
+        \\r
+        Paranda kood, et joonistada vurrud, mis on ühepikkused.
+      2-3 Artist Debugging 3: "Minu paadis on auk!\\\\r\n\\\\r \nMida sa pead parandama, et see korda teha?"
       2-3 Artist Debugging 4: Millist pilti me proovime joonistada? Lõpeta joonis ühendades punktid õigete joonte ja nurkadega.
-      2-3 Artist Debugging 5: "Meie kood sääre ja jalalaba\njaoks on vale.\\r\n\\r \nKas sa saad selle korda teha?"
-      2-3 Artist Debugging 6: |-
-        Tundub et ma istun toolil, millel on üks jalg puudu.\r
-        \r 
-        Muuda koodi, et toolile üks jalg juurde joonistada.
+      2-3 Artist Debugging 5: "Meie kood sääre ja jalalaba\njaoks on vale.\\\\r\n\\\\r \nKas sa saad selle korda teha?"
+      2-3 Artist Debugging 6: "Tundub et ma istun toolil, millel on üks jalg puudu.\\\\r\n\\\\r \nMuuda koodi, et toolile üks jalg juurde joonistada."
       2-3 Artist Debugging 7: |-
-        Tundub et C on tagurpidi joonistatud.\r
-        \r
+        Tundub et C on tagurpidi joonistatud.\\r
+        \\r
          Kas sa saad C õigetpidi joonistada?
       2-3 Artist Debugging 8: |-
-        Õpetaja ütleb, et pean alustatu lõpule viima!\r
-        \r
+        Õpetaja ütleb, et pean alustatu lõpule viima!\\r
+        \\r
         Aita mul tuulevurr valmis teha. Kas sa mõtled välja, mis valesti on?
       2-3 Artist Debugging 9: |-
-        Midagi on valesti!\r
-        \r
+        Midagi on valesti!\\r
+        \\r
         Kood selle varre jaoks on vale. Kas sa mõtled välja, kuidas panna kunstnik vart õigesti joonistama?
-      2-3 Artist Debugging Assessment 1: "Hindamine: Miks on see ruut igast küljest 75 piksli võrra liig väike?\\r\n\\r\nKus on koodis viga?"
+      2-3 Artist Debugging Assessment 1: |-
+        Hindamine: Miks on see ruut igast küljest 75 piksli võrra liig väike?\\r
+        \\r
+        Kus on koodis viga?
       2-3 Artist Free Play: Mängu aeg! Joonista mida ise tahad.
-      2-3 Artist Functions 1 a: "\"Mina zombi kunstnik. Mulle meeldima joonistamine!\"\\r\n\\r\nAita \nzombil joonistada ruudukujulised prillid\\r\n\\r\nklaaside vahe on 25 pikslit lühem kui ruudu pikkus, mis on 100 pikslit."
-      2-3 Artist Functions 1: "\"Mina zombi kunstnik. Mulle meeldima joonistamine!\"\\r\n\\r\nAita \nzombil joonistada ruudukujulised prillid\\r\n\\r\nklaaside vahe on 25 pikslit lühem kui ruudu pikkus, mis on 100 pikslit."
-      2-3 Artist Functions 10: 'Siin on kaks funktsiooni, üks suure hammasratta joonistamiseks ja teine väikse hammasratta joonistamiseks. Kasuta neid, et joonistada masina sisemust!'
-      2-3 Artist Functions 11 a: "Oleme \"joonista ruut\" funktsiooni nimetanud ümber \"joonista kuusnurk\" funktsiooniks, kuid see teeb ikka ainult ruute! Kas te saaksite muuta \"joonista kuusnurk\" funktsiooni nõnda, et see teeks kuusnurga, mille ühe külje pikkus on 50 pikslit?\\r\\r Joonistada seejärel kujutis uue funktsiooni abil!"
-      2-3 Artist Functions 11.5 a: "Siin on seesama \"joonista kuusnurk\" funktsioon.\\r\n\\r\nMis juhtub, kui kordate põhiprogrammi 6 korda, pöörates 60 kraadi iga kord?"
-      2-3 Artist Functions 11.5: "Siin on seesama \"joonista kuusnurk\" funktsioon.\\r\n\\r\nMis juhtub, kui kordate põhiprogrammi 6 korda, pöörates 60 kraadi iga kord?"
-      2-3 Artist Functions 11: "Oleme \"joonista ruut\" funktsiooni nimetanud ümber \"joonista kuusnurk\" funktsiooniks, kuid see teeb ikka ainult ruute! Kas te saaksite muuta \"joonista kuusnurk\" funktsiooni nõnda, et see teeks kuusnurga, mille ühe külje pikkus on 50 pikslit?\\r\\r Joonistada seejärel kujutis uue funktsiooni abil!"
-      2-3 Artist Functions 12 Mike: "Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada \"joonista lill\" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel)."
-      2-3 Artist Functions 12 a: "Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada \"joonista lill\" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel)."
-      2-3 Artist Functions 12: "Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada \"joonista lill\" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel)."
+      2-3 Artist Functions 1 a: "\"Mina zombi kunstnik. Mulle meeldima joonistamine!\"\\\\r\n\\\\r\nAita \nzombil joonistada ruudukujulised prillid\\\\r\n\\\\r\nklaaside vahe on 25 pikslit lühem kui ruudu pikkus, mis on 100 pikslit."
+      2-3 Artist Functions 1: "\"Mina zombi kunstnik. Mulle meeldima joonistamine!\"\\\\r\n\\\\r\nAita \nzombil joonistada ruudukujulised prillid\\\\r\n\\\\r\nklaaside vahe on 25 pikslit lühem kui ruudu pikkus, mis on 100 pikslit."
+      2-3 Artist Functions 10: Siin on kaks funktsiooni, üks suure hammasratta joonistamiseks ja teine väikse hammasratta joonistamiseks. Kasuta neid, et joonistada masina sisemust!
+      2-3 Artist Functions 11 a: Oleme "joonista ruut" funktsiooni nimetanud ümber "joonista kuusnurk" funktsiooniks, kuid see teeb ikka ainult ruute! Kas te saaksite muuta "joonista kuusnurk" funktsiooni nõnda, et see teeks kuusnurga, mille ühe külje pikkus on 50 pikslit?\\r\\r Joonistada seejärel kujutis uue funktsiooni abil!
+      2-3 Artist Functions 11.5 a: |-
+        Siin on seesama "joonista kuusnurk" funktsioon.\\r
+        \\r
+        Mis juhtub, kui kordate põhiprogrammi 6 korda, pöörates 60 kraadi iga kord?
+      2-3 Artist Functions 11.5: |-
+        Siin on seesama "joonista kuusnurk" funktsioon.\\r
+        \\r
+        Mis juhtub, kui kordate põhiprogrammi 6 korda, pöörates 60 kraadi iga kord?
+      2-3 Artist Functions 11: Oleme "joonista ruut" funktsiooni nimetanud ümber "joonista kuusnurk" funktsiooniks, kuid see teeb ikka ainult ruute! Kas te saaksite muuta "joonista kuusnurk" funktsiooni nõnda, et see teeks kuusnurga, mille ühe külje pikkus on 50 pikslit?\\r\\r Joonistada seejärel kujutis uue funktsiooni abil!
+      2-3 Artist Functions 12 Mike: 'Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada "joonista lill" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel).'
+      2-3 Artist Functions 12 a: 'Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada "joonista lill" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel).'
+      2-3 Artist Functions 12: 'Funktsioonide abil on kergem joonistada keerulisi kujutisi mitu korda.\\r\\r Kas te saate kasutada "joonista lill" funktsiooni, et täita kogu ülejäänud istutuskast?\\r (Vihje: taimed on kõik üksteisest 100 piksli kaugusel).'
       2-3 Artist Functions 13: Oleme andnud teile neli funktsiooni. Kasutage neid, nagu teile meeldib, ühe või mitme tsükli sees, et teha pilte, mida sõpradega jagada. Vajutage "käivita" ja vaadake näidist.
-      2-3 Artist Functions 2: "Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega \"joonista ruut\". Kas te saate kasutada \"joonista ruut\" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel."
-      2-3 Artist Functions 3: "Muuda funktsiooni et joonistada ruutu küljepikkusega 115 ja joonista suuremad prillid.\\r Ruutude vahe on nüüd 45 pikslit."
+      2-3 Artist Functions 2: Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega "joonista ruut". Kas te saate kasutada "joonista ruut" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel.
+      2-3 Artist Functions 3: Muuda funktsiooni et joonistada ruutu küljepikkusega 115 ja joonista suuremad prillid.\\r Ruutude vahe on nüüd 45 pikslit.
       2-3 Artist Functions 4: Nüüd pane funktsioon tsükli sisse, et joonistada 3 ruutu.
       2-3 Artist Functions 7: 'Kasuta "joonista maja" funktsiooni et joonistada kaks erineva suurusega maja. (vihje: esimene maja on 100 pikslit).'
       2-3 Artist Functions 9: 'Vabamäng: See siin on lumehelbe funktsioon. Katseta sellega, et luua talve pilti! See on vaba mängimise tase, seega siin ei ole vaja ühtegi ülesannet lahendada. Lõbutse!'
       2-3 Artist Loops 1: Kas te saate teha kuusnurga 100 piksli pikkuste külgedega, et lõpetada raku kujund? Pidage meeles, et teil on vaja pöörata vaid 60 kraadi!
       2-3 Artist Loops 10: Mis juhtub meie projektiga kui teeme oma viimase käigu edasi poole lühemaks?
-      2-3 Artist Loops 11: Paneme nüüd *veel ühe* tsükli kogu meie koodi ümber! Ära unusta välimisele tsüklile nurka lõppu panna.
+      2-3 Artist Loops 11: Paneme nüüd _veel ühe_ tsükli kogu meie koodi ümber! Ära unusta välimisele tsüklile nurka lõppu panna.
       2-3 Artist Loops 2: Nüüd kasutage korduse blokki, et teha rakust kest.
       2-3 Artist Loops 4: Tahad näha, mis juhtub kui me kordame seda kujundit tsüklit kasutades uuesti ja uuesti?
       2-3 Artist Loops 5: Teeme tsüklile väikesed muudatused ja vaatame kui erinev meie pilt tuleb.
       2-3 Artist Loops 6: Lisa tsüklisse veel üks liikumine ja veel üks pööramine ning vaata kuidas sinu töö muutub.
       2-3 Artist Loops 7: Me saame kasutada tsükleid et teha igasuguseid hulknurki. Kas suudad luua rombi selle kuusnurga sisse?
       2-3 Artist Loops 8: Paneme mõlemad elemendid tsüklisse.
-      2-3 Artist Loops 9: |-
-        Me hakkame samu elemente kordama aga nüüd lisame nende vahele natuke distantsi.\r  Kasuta sama koodi mida ennegi aga lisa tsükli lõppu samm edasi.
+      2-3 Artist Loops 9: Me hakkame samu elemente kordama aga nüüd lisame nende vahele natuke distantsi.\\r  Kasuta sama koodi mida ennegi aga lisa tsükli lõppu samm edasi.
       2-3 Artist Loops New 1: Joonistame sellele roboti pea! Kas sa suudad teha ruudu mille küljed on 100 pikslit?
       2-3 Artist Loops New 10: Nüüd ühendame omavahel tsüklisse mitu V-tähte.
       2-3 Artist Loops New 11: Koosta eelmise ülesande kood uuesti. Seekord lisa aga tsüklisse 30 kraadine pööre. Korda seda 24 korda 8 asemel.
-      2-3 Artist Loops New 12: "Joonista teemant, mille küljed on 100 pikslit.\n"
-      2-3 Artist Loops New 13: "Me alustame (halli) koodiga ja teeme teemanti.\\r\\r Korda halli koodi, et luua lõbus muster!"
+      2-3 Artist Loops New 12: Joonista teemant, mille küljed on 100 pikslit.
+      2-3 Artist Loops New 13: Me alustame (halli) koodiga ja teeme teemanti.\\r\\r Korda halli koodi, et luua lõbus muster!
       2-3 Artist Loops New 14: Nüüd võib teemanti koodi katsetada, et näha milliseid mustreid sellega joonistada saab. Proovi muuta pöörde kraade ja tsükli kordamise arvu.
       2-3 Artist Loops New 15: Joonista nüüd ükskõik mida soovid!
-      2-3 Artist Loops New 2: |-
-        Siin on sama mõistatus, mille me just lahendasime, kuid seekord tohime kasutada ainult 'liigu edasi' ja 'pööra' plokke.\r\r Kas sa saad kasutada 'korda' plokki, et seda ülesannet lahendada?
+      2-3 Artist Loops New 2: Siin on sama mõistatus, mille me just lahendasime, kuid seekord tohime kasutada ainult 'liigu edasi' ja 'pööra' plokke.\\r\\r Kas sa saad kasutada 'korda' plokki, et seda ülesannet lahendada?
       2-3 Artist Loops New 9: Et noolt lõpetada, tuleb sul joonistada V, mille mõlemad küljed on 50 piksli pikkused.
       2-3 Artist Match Hex Pic: 'Sobivus: aidake lõpetada kuusnurk.'
       2-3 Artist Match Rho Pic: 'Sobivus: Lõpeta puuduv kood.'
@@ -95,56 +110,47 @@ et:
       2-3 Artist Nested Loops 10: Korrake seda koodi 12 korda, et muster lõpetada.
       2-3 Artist Nested Loops 11: Korrake seda koodi 4 korda, et muster lõpetada, ning pöörake 90 kraadi pärast igat ringi.
       2-3 Artist Nested Loops 12: Korrake seda koodi 12 korda, et lõpetada lokid.
-      2-3 Artist Nested Loops 2: "Nüüd korrake kolmnurka 6 korda.\\r\\r Pärast igat kolmnurka tuleb 60 kraadi pöörata, enne kui saad järgmist alustada."
-      2-3 Artist Nested Loops 3: "Selle mustri joonistamiseks peab kolmnurka 12 korda kordama.\\r\\r Jaga täispöörde kraadide hulk (360 kraadi) kujundite arvuga (12), mida joonistad, et teada saada kui kaugele peab peale iga kolmnurga joonistamist pöörama."
-      2-3 Artist Nested Loops 4: "Korrake teemanti-kujutist 12 korda, et joonistada lill!\\r\\r Vihje: Kasutame 12 teemanti kordamiseks sama suurusega nurka nagu 12 kolmnurga tegemiseks.\\r kui palju on vaja iga kujundi järgselt pöörata?"
-      2-3 Artist Nested Loops 5: "Täitke selle hoone aknad pesastatud tsükli abil.\\r\\r Aknad on 20 pikslit kõrged ja üksteisest 20 piksli kaugusel."
-      2-3 Artist Nested Loops 6: |-
-        Sel dinosaurusel on saba peal 8 teravikku\r Iga teravik on 30 pikslit kõrge. Korda kolmnurka 8 korda ja liigu pärast iga kordust ka edasi!
-      2-3 Artist Nested Loops 7: "Korda kolmnurka 10 korda ja joonista päike.\\r\\r Pärast iga kolmnurka tuleb edasi liikuda ja pöörata.\\r\\r Mõtle välja kui palju pöörata kui jagad täisringi kraadide arvu kolmnurkade arvuga, millest see koosneb."
-      2-3 Artist Nested Loops 8: "Nüüd paigutame pildile muru.\\r\\r Iga rohututt on teisest 50 pikslit eemal."
-      2-3 Artist Nested Loops 9: "Me lõpetame teie pildi lisades sellele lille.\\r\\r Korrake teemanti-kujundit 12 korda, et joonistada lill."
+      2-3 Artist Nested Loops 2: Nüüd korrake kolmnurka 6 korda.\\r\\r Pärast igat kolmnurka tuleb 60 kraadi pöörata, enne kui saad järgmist alustada.
+      2-3 Artist Nested Loops 3: Selle mustri joonistamiseks peab kolmnurka 12 korda kordama.\\r\\r Jaga täispöörde kraadide hulk (360 kraadi) kujundite arvuga (12), mida joonistad, et teada saada kui kaugele peab peale iga kolmnurga joonistamist pöörama.
+      2-3 Artist Nested Loops 4: 'Korrake teemanti-kujutist 12 korda, et joonistada lill!\\r\\r Vihje: Kasutame 12 teemanti kordamiseks sama suurusega nurka nagu 12 kolmnurga tegemiseks.\\r kui palju on vaja iga kujundi järgselt pöörata?'
+      2-3 Artist Nested Loops 5: Täitke selle hoone aknad pesastatud tsükli abil.\\r\\r Aknad on 20 pikslit kõrged ja üksteisest 20 piksli kaugusel.
+      2-3 Artist Nested Loops 6: Sel dinosaurusel on saba peal 8 teravikku\\r Iga teravik on 30 pikslit kõrge. Korda kolmnurka 8 korda ja liigu pärast iga kordust ka edasi!
+      2-3 Artist Nested Loops 7: Korda kolmnurka 10 korda ja joonista päike.\\r\\r Pärast iga kolmnurka tuleb edasi liikuda ja pöörata.\\r\\r Mõtle välja kui palju pöörata kui jagad täisringi kraadide arvu kolmnurkade arvuga, millest see koosneb.
+      2-3 Artist Nested Loops 8: Nüüd paigutame pildile muru.\\r\\r Iga rohututt on teisest 50 pikslit eemal.
+      2-3 Artist Nested Loops 9: Me lõpetame teie pildi lisades sellele lille.\\r\\r Korrake teemanti-kujundit 12 korda, et joonistada lill.
       2-3 Artist Nested Loops Free Play: Mängi nagu soovid! Joonista midagi lahedat kihiliste kordustsüklite abil.
       2-3 Bee Conditionals 1: Tervist! Olen mesimumm. Aidake mul lillelt õietolmu koguda.
-      2-3 Bee Conditionals 10: 'Lilladel õitel on kas 1 või 0 väärtuses õietolmu. Olge hoolsad, et mitte koguda õietolmu lillalt õielt, kui seal seda ei ole'
-      2-3 Bee Conditionals 11: "Mis seal aias küll on?\\r\\r Aita mul aias ringi lennata ja koguda nektarit ainult neilt lilledelt, millel seda on. "
+      2-3 Bee Conditionals 10: Lilladel õitel on kas 1 või 0 väärtuses õietolmu. Olge hoolsad, et mitte koguda õietolmu lillalt õielt, kui seal seda ei ole
+      2-3 Bee Conditionals 11: 'Mis seal aias küll on?\\r\\r Aita mul aias ringi lennata ja koguda nektarit ainult neilt lilledelt, millel seda on. '
       2-3 Bee Conditionals 12: Aita mul kogu nektar ülesse leida, kasutades võimalikult vähe plokke!
-      2-3 Bee Conditionals 13: |-
-        Siis toimub väga palju asju korraga!\r\r Kasuta seda, mis sa just õppisid, et koguda kokku kogu nektar ja valmista mett.
-      2-3 Bee Conditionals 14: |-
-        Paneme kõik kokku!\r\r Kasuta neid teaddmisi, mis sa just õppisid, et aidata mul nektarit koguda ainult nendelt lilledelt, millel on nektarit. Kasuta võimalikult vähe plokke. Ära unusta lõpus mett teha.
-      2-3 Bee Conditionals 15: "See trepimuster peaks olema sulle tuttav.\\r\\r Kas oskad koguda nektarit ainult lilledelt, millel seda on? Kasuta nii vähe plokke kui võimalik."
-      2-3 Bee Conditionals 2: "Mina olen näljane mesilane!\\r Aita mul lilledelt kogu nektar kokku koguda, kasutades võimalikult vähe plokke."
-      2-3 Bee Conditionals 3: "Vaata kui palju nektarit!\\r\\r Aita mul lilledelt nektarit koguda ja mett valmistada, kasutades nii vähe plokke kui võimalik.  "
+      2-3 Bee Conditionals 13: Siis toimub väga palju asju korraga!\\r\\r Kasuta seda, mis sa just õppisid, et koguda kokku kogu nektar ja valmista mett.
+      2-3 Bee Conditionals 14: Paneme kõik kokku!\\r\\r Kasuta neid teaddmisi, mis sa just õppisid, et aidata mul nektarit koguda ainult nendelt lilledelt, millel on nektarit. Kasuta võimalikult vähe plokke. Ära unusta lõpus mett teha.
+      2-3 Bee Conditionals 15: See trepimuster peaks olema sulle tuttav.\\r\\r Kas oskad koguda nektarit ainult lilledelt, millel seda on? Kasuta nii vähe plokke kui võimalik.
+      2-3 Bee Conditionals 2: Mina olen näljane mesilane!\\r Aita mul lilledelt kogu nektar kokku koguda, kasutades võimalikult vähe plokke.
+      2-3 Bee Conditionals 3: 'Vaata kui palju nektarit!\\r\\r Aita mul lilledelt nektarit koguda ja mett valmistada, kasutades nii vähe plokke kui võimalik.  '
       2-3 Bee Conditionals 4: Aidake mul lilledelt kokku korjata kogu õietolm ja teha kogu mesi.
-      2-3 Bee Conditionals 5: "Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki."
+      2-3 Bee Conditionals 5: Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki.
       2-3 Bee Conditionals 6: Kontrollige seda lille "kui"-blokiga, et saada teada, kas seal on õietolmu.
       2-3 Bee Conditionals 7: Koguge lilledelt nektarit ainult siis kui neil on nektarit.
       2-3 Bee Conditionals 8: Sellel põllul on punased ja lillad lilled. Punastel lilledel on teada hulk õietolmu, kuid lillade lillede õietolm ei ole teada. Koguge kogu õietolm.
       2-3 Bee Conditionals 9: Kogu kogu nektar igalt lillelt.
       2-3 Bee Conditionals Assessment 1: 'Hindamine: Koguge kokku kogu õietolm. Ole ettevaatlik ja ära kogu õietolmu lillalt õielt, kui seal seda ei ole.'
       2-3 Bee Debugging 1: Need blokid on vigased. Parandage viga(vead) ja koguge kokku kogu õietolm.
-      2-3 Bee Debugging 10: "Need blokid on vigased.\\r Parandage viga(vead), et kogu nektar kokku koguda ja kogu mesi valmis teha."
-      2-3 Bee Debugging 2: |-
-        Kas sa oskad selle vea parandada?\r Paranda kõik vead, et kogu nektar kokku koguda.
-      2-3 Bee Debugging 3: |-
-        Oih, see nõelab!\r\r Paranda vead, et kogu nektar kokku koguda.
+      2-3 Bee Debugging 10: Need blokid on vigased.\\r Parandage viga(vead), et kogu nektar kokku koguda ja kogu mesi valmis teha.
+      2-3 Bee Debugging 2: Kas sa oskad selle vea parandada?\\r Paranda kõik vead, et kogu nektar kokku koguda.
+      2-3 Bee Debugging 3: Oih, see nõelab!\\r\\r Paranda vead, et kogu nektar kokku koguda.
       2-3 Bee Debugging 4: Need blokid on veaga(vigadega). Parandage viga(vead) ja koguge kokku kogu nektar ning teha valmis kogu mesi.
-      2-3 Bee Debugging 5: "See lill näeb maitsev välja!\\r\\r Paranda vead, et kogu nektar kokku koguda. Võid kasutada nii käivitamist kui astumist."
-      2-3 Bee Debugging 6: |-
-        Milline tore ülesanne!\r\r Paranda viga(vead), et nektarit koguda.
+      2-3 Bee Debugging 5: See lill näeb maitsev välja!\\r\\r Paranda vead, et kogu nektar kokku koguda. Võid kasutada nii käivitamist kui astumist.
+      2-3 Bee Debugging 6: Milline tore ülesanne!\\r\\r Paranda viga(vead), et nektarit koguda.
       2-3 Bee Debugging 7: Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
-      2-3 Bee Debugging 8: |-
-        Nii palju ilusaid lilli!\r\r Parandage viga(vead) ja koguge kokku kogu õietolm.
-      2-3 Bee Debugging 9: |-
-        Ole siin kannatlik! \r\r Siin programmis pead mõned asjad ära parandama, et kogu nektar kokku koguda ja mett teha.
-      2-3 Bee Debugging Assessment 1: |-
-        Ülesanne: Nüüd on aeg näidata, mida oled õppinud!\r\r Paranda viga(vead), et kogu nektar kokku koguda nektar ning mett teha.
+      2-3 Bee Debugging 8: Nii palju ilusaid lilli!\\r\\r Parandage viga(vead) ja koguge kokku kogu õietolm.
+      2-3 Bee Debugging 9: Ole siin kannatlik! \\r\\r Siin programmis pead mõned asjad ära parandama, et kogu nektar kokku koguda ja mett teha.
+      2-3 Bee Debugging Assessment 1: 'Ülesanne: Nüüd on aeg näidata, mida oled õppinud!\\r\\r Paranda viga(vead), et kogu nektar kokku koguda nektar ning mett teha.'
       2-3 Bee Functions 1: Funktsioonid on koodide blokid, mis ülesande täidavad. Kasuta "kogu 2 nektarit" ("get 2 nectar") funktsiooni et koguda õietolm igalt lillelt.
-      2-3 Bee Functions 10: "Lilladel lilledel võib olla kas 1 või 0 nektarit. \\r\\r Koosta funktsioon, mis kogub nektarit ainult nendelt lilladelt lilledelt, millel on nektarit."
-      2-3 Bee Functions 2: "Funktsioonid on programmi plokid, mis täidavad mingit ülesannet.\\r\\r Kasuta \"võta 5\" funktsiooni, et koguda 5 nektarit korraga."
+      2-3 Bee Functions 10: Lilladel lilledel võib olla kas 1 või 0 nektarit. \\r\\r Koosta funktsioon, mis kogub nektarit ainult nendelt lilladelt lilledelt, millel on nektarit.
+      2-3 Bee Functions 2: Funktsioonid on programmi plokid, mis täidavad mingit ülesannet.\\r\\r Kasuta "võta 5" funktsiooni, et koguda 5 nektarit korraga.
       2-3 Bee Functions 3: Kogu kogu nektar igalt lillelt.
-      2-3 Bee Functions 4: "Funktsioon \"liiguta ja kogu nektarit\" pöörab mesilast, kogub nektarit ja viib mesilase algpunkti tagasi.\\r\\r Kasuta seda funktsiooni kogu nektari kogumiseks."
+      2-3 Bee Functions 4: Funktsioon "liiguta ja kogu nektarit" pöörab mesilast, kogub nektarit ja viib mesilase algpunkti tagasi.\\r\\r Kasuta seda funktsiooni kogu nektari kogumiseks.
       2-3 Bee Functions 5: Nüüd on lilledes veelgi enam nektarit. Muuda funktsiooni nii, et see koguks 4 nektarit ning kasuta seda kogu nektari kogumiseks.
       2-3 Bee Functions 6: Nüüd kasuta sama funktsiooni, et koguda nektarit kolmelt lillelt.
       2-3 Bee Functions 7: Lilled on nüüd kaugemalt. Muuda funktsiooni ja kasuta seda kõigilt lilledelt nektari kogumiseks.
@@ -152,8 +158,7 @@ et:
       2-3 Bee Functions 9: Koosta oma funktsioon, mis liigub mööda rada, kogub nektarit, teeb mett ning seejärel viib mesilase raja algusesse tagasi.
       2-3 Bee Functions Assessment 1: 'Ülesanne: kasuta seda funktsiooni, et koguda nektarit igalt lillelt.'
       2-3 Bee Functions Assessment 2: 'Ülesanne: koosta funktsioon, et pöörata, edasi liikuda ja teha 3 mett, siis too mesilane alguspunkti tagasi ja pööra tagasi.'
-      2-3 Bee Loops 1: |-
-        Need lilled näevad maitsvad välja!\r\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
+      2-3 Bee Loops 1: Need lilled näevad maitsvad välja!\\r\\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
       2-3 Bee Loops 10: Kas saad kasutada kordust teise kahe korduse sees, et koguda kokku kogu nektar?
       2-3 Bee Loops 11: Kasuta kordusi, et koguda kokku nektar kogu väljalt.
       2-3 Bee Loops 12: Kasuta kordusi, et koguda kokku nektar kogu väljalt.
@@ -164,13 +169,12 @@ et:
       2-3 Bee Loops 3: Kogu nektarit igalt lillelt ning tee mett igas kärjes, kasutades võimalikult vähe plokke.
       2-3 Bee Loops 3A: Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.
       2-3 Bee Loops 3B: Kasuta plokki 'korda', et kogu nektar kokku koguda ja teha kogu mesi.
-      2-3 Bee Loops 4: |-
-        Kui usin mesilane!\r\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
-      2-3 Bee Loops 4A: "Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke."
-      2-3 Bee Loops 5: "Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?"
+      2-3 Bee Loops 4: Kui usin mesilane!\\r\\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
+      2-3 Bee Loops 4A: Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke.
+      2-3 Bee Loops 5: Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?
       2-3 Bee Loops 6: Leia kõige kiirem viis selleks, et mesilane koguks kokku kogu nektari ja valmistaks kogu mee!
       2-3 Bee Loops 7: Kui ilus lillepõld! Aita mesilane iga õieni. Tee seda vähem kui 7 ploki abil.
-      2-3 Bee Loops 8: "Nendel lilladel lilledel on erinev hulk nektarit iga kord kui ülesande käivitad.\\r\\r Kasuta tsüklit nimega 'kui on nektarit', et kõgu nektar kokku koguda.\\r\\r See tsükkel toimib kuni tingimus on täidetud `nektar > 0`."
+      2-3 Bee Loops 8: Nendel lilladel lilledel on erinev hulk nektarit iga kord kui ülesande käivitad.\\r\\r Kasuta tsüklit nimega 'kui on nektarit', et kõgu nektar kokku koguda.\\r\\r See tsükkel toimib kuni tingimus on täidetud `nektar > 0`.
       2-3 Bee Loops 9: Tsükkel „kuni“ saab sooritada sama toimingut nagu üks tsükli avaldis „kui“. Lisa sama toimingu sooritamiseks sellele koodile tsükkel „kuni“.
       2-3 Bee Loops Assessment 1: 'Ülesanne: kasuta ''kui'' tsüklit, et nendelt lilledelt nektar kokku koguda.'
       2-3 Maze 1: 'Kas aitad mul ulaka põrsa kinni püüda? Liiguta mõned "liigu edasi" plokid käskluse "kui käivitatakse" alla kokku ja vajuta "Käivita". '
@@ -189,7 +193,9 @@ et:
       2-3 Maze 15: Selles ülesandes aitavad sind sea juurde kaks 'korda' tsüklit, milles võid kasutada vähe plokke!
       2-3 Maze 16 (old): Vii mind põrsa juurde "Korda kuni" plokki kasutades!
       2-3 Maze 16 before: Mõtle välja, kuidas kõige kiiremini sea juurde saab!
-      2-3 Maze 16: "Tsüklid töötavad ka siis kui nende sees on rhkem kui üks plokk!\nKas saas seda käskluste jada korrata ja zombi päevalilleni viia?"
+      2-3 Maze 16: |-
+        Tsüklid töötavad ka siis kui nende sees on rhkem kui üks plokk!
+        Kas saas seda käskluste jada korrata ja zombi päevalilleni viia?
       2-3 Maze 2: See siga ajab mul suled turri. Aita mul ta kätte saada!
       2-3 Maze 3: Jälgi rada ja juhata mind rumala seani. Väldi TNT-d või muidu suled lendavad!
       2-3 Maze 4: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
@@ -200,8 +206,8 @@ et:
       2-3 Maze 9: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
       2-3 Maze Loops 1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       2-3 Maze Loops 17: Kasuta seda, mida õppisid, et mind päevalilleni aidata!
-      2-3 Maze Loops 18: "Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi."
-      2-3 Maze Loops 19: "Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia."
+      2-3 Maze Loops 18: Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.
+      2-3 Maze Loops 19: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
       2-3 Maze Loops 20: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       2-3 Maze Loops 21: Aita mind päevalilleni, kasutades võimalikult vähe plokke!
       2-3 Maze Loops Assessment 1: 'Ülesanne: Vii mind päevalilleni, kuid kasuta ainult 5 plokki! '
@@ -221,6 +227,7 @@ et:
       2-3 maze sq14: Kas sa saad mind päevalilleni aidata, ainult nelja plokki kasutades?
       2-3 maze sq15: Kas sa saad mind päevalilleni aidata ainult viite plokki kasutades?
       2-3 maze sq16: Okei, see on üsna sarnane aga natuke erinev. Kas sa suudad seda ainult viie plokiga teha?
+      2-3: Lilladel õitel on kas 1 või 0 väärtuses õietolmu. Olge hoolsad, et mitte koguda õietolmu lillalt õielt, kui seal seda ei ole
       2-3level1: Aita linnul kinni püüda ulakas põrsas - selleks liigu edasi
       20hr_farmer_stage9_1: Tere, mina olen talunik. Mul on vaja su abi, et sa aitaksid mu talu põldu siluda, nii et sinna saaks midagi istutada. Liiguta mind mullahunniku juurde ja kasuta selle eemaldamiseks plokki „eemalda“.
       20hr_farmer_stage9_11: 'Väljas on ikka pime. Liigu minuga väljal ringi. Kui seal on kuhi, siis eemalda see, ja kui seal on auk, siis täida see. Vihje: kasuta avanevat valikute menüüd "kui" bloki juures.'
@@ -260,7 +267,7 @@ et:
       4-5 Artist 5: Mis tuleb kirjutada "???" küsimärkide asemele, et zombi lõpetaks selle joonistuse selle tsükkli abil?
       4-5 Artist 6: Võrdkülgse kolmnurga nurgad on 60, 60 ja 60 kraadi. Iga külg on 200 pikslit. Lõpeta joonistus.
       4-5 Artist 7: Selle täisnurkse kolmnurga nurgad on 30, 60 ja 90 kraadi. Kaldus külje (hüpotenuusi) pikkus on 200 pikslit. Lõpeta joonistus.
-      4-5 Artist 8: "Jalgpalliväljaku keskjoon on äärejoontega risti. \\r Selle väljaku ümbermõõt on 800 pikslit ja see on 240 piksli pikkune. Kui lai see on? \\r\\r Joonista piirid ja keskjoon."
+      4-5 Artist 8: Jalgpalliväljaku keskjoon on äärejoontega risti. \\r Selle väljaku ümbermõõt on 800 pikslit ja see on 240 piksli pikkune. Kui lai see on? \\r\\r Joonista piirid ja keskjoon.
       4-5 Artist 9: Joonista kujundi teine pool, joonis peab olema sümeetriline. Kolmnurgad on võrdkülgsed ja küljepikkuseks on 50 pikslit.
       4-5 Artist Assessment 1: 'Ülesanne: kasuta kordust, et joonistada võrdkülgne kolmnurk. Iga külg on 300 pikslit.'
       4-5 Artist For Loops 1: Lisa numbrid 1 kuni 10 laiuse plokkidesse ning käivita kood.
@@ -295,43 +302,40 @@ et:
       4-5 Artist Functions 7: Kasuta funktsiooni „joonista maja“ 100 pikslist ja 50 pikslist koosnevate majade joonistamiseks. Kahe maja vahel on 50 pikslit.
       4-5 Artist Functions 8: Funktsioonil „joonista lill“ on parameeter, millega saab määrata varre kõrguse. Määra selleks 200 ja vaata, mis juhtub.
       4-5 Artist Functions 9: Joonista need 3 lille. Esimese kõrgus on 100 ja järgmine lill on alati eelmisest 50 pikslist kõrgem. Lillede vahel on 100 pikslit.
-      4-5 Artist Patterns 1: |-
-        Joonista see ruut tsükli abil.\r\r Iga külg on 20 piksli pikkune.
-      4-5 Artist Patterns 10: "See kood joonistab kaks kuusnurkade rida. Korrake kogu koodi 4 korda, et joonistada terve meekärg. \\r\\r Vihje: kõige äärmises tsüklis pead 120 pikslit tagasi hüppama, et kunstnik ei joonistaks ekraanist välja poole\n"
+      4-5 Artist Patterns 1: Joonista see ruut tsükli abil.\\r\\r Iga külg on 20 piksli pikkune.
+      4-5 Artist Patterns 10: 'See kood joonistab kaks kuusnurkade rida. Korrake kogu koodi 4 korda, et joonistada terve meekärg. \\r\\r Vihje: kõige äärmises tsüklis pead 120 pikslit tagasi hüppama, et kunstnik ei joonistaks ekraanist välja poole'
       4-5 Artist Patterns 11: 'Mitu korda pead sa seda kordama, et joonistada poolring? Vihje: kui ring koosneb 360 kraadist ja iga tsükkel liigub 3 kraadi, mitu korda tuleb siis täisringi joonistamiseks tsüklit korrata?'
-      4-5 Artist Patterns 12: "Mis juhtub, kui kopeerid selle tsükli ja pöörad vasakule, mitte paremale?\\r\\r Kas oskad seda korrata selle laine joonistamiseks?"
-      4-5 Artist Patterns 13: "Nüüd kordame kõike neli korda, et luua see pildiraam. Ole nurkade juures tähelepanelik – sa ei saa pöörata lihtsalt 90 kraadi!\\r\\r Kui 3-kraadist pööret 60 korda korrates saame poolringi, siis millised neist koodiplokkidest teevad nurkades veerandringi?"
+      4-5 Artist Patterns 12: Mis juhtub, kui kopeerid selle tsükli ja pöörad vasakule, mitte paremale?\\r\\r Kas oskad seda korrata selle laine joonistamiseks?
+      4-5 Artist Patterns 13: Nüüd kordame kõike neli korda, et luua see pildiraam. Ole nurkade juures tähelepanelik – sa ei saa pöörata lihtsalt 90 kraadi!\\r\\r Kui 3-kraadist pööret 60 korda korrates saame poolringi, siis millised neist koodiplokkidest teevad nurkades veerandringi?
       4-5 Artist Patterns 2: Kui paned oma ruudu tsükli teise tsükli sisse, nimetatakse seda pesastatud tsükliks. Mis sa pead välimisele tsüklile lisama, et kõik 15 ruutu seataks üksteise kõrvale ritta?
       4-5 Artist Patterns 3: Lähme nüüd rohkem süvitsi. Pesastasime terve koodiploki teises tsüklis, kuid sul on vaja kunstnik saada tagasi järgmise joone joonistamise kohta. Millised neist koodiplokkidest saad panna kõige välimise tsükli lõppu, et joonistada terve ruudustik?
       4-5 Artist Patterns 4: Selle teemandi küljed on 50 piksli pikkused ja selle nurgad on 120 ja 60 kraadi. Kasuta tsüklit selle joonistamiseks.
       4-5 Artist Patterns 5.5: Mitu korda pead sa seda plokki kordama, et joonistada terve teemandiruudustik?
-      4-5 Artist Patterns 5: "Kordame seda, et teha 6 teemandist rida.\\r\\r Pane tähele, et muutsime oma teemandi koodi, et korrata 2 korra asemel 3 korda. Mis sa arvad, miks me seda tegime?\\r\n"
-      4-5 Artist Patterns 6: Mitu korda pead sa seda plokki kordama, et joonistada terve teemandiruudustik?
+      4-5 Artist Patterns 5: Kordame seda, et teha 6 teemandist rida.\\r\\r Pane tähele, et muutsime oma teemandi koodi, et korrata 2 korra asemel 3 korda. Mis sa arvad, miks me seda tegime?\\r
       4-5 Artist Patterns 7: Muudame koos viimase mõistatuse koodi, et teha see keerukam muster. Pane tähele, kuidas teemandid nüüd kattuvad. Proovi muuta esimese funktsiooni „hüppa tagasi“ väärtust 100 pealt 50 peale (poole lähemale). Kui kaugele peab kunstnik nüüd teises funktsioonis „hüppa tagasi“ minema?
       4-5 Artist Patterns 8: Kasuta tsüklit, et joonista see kuusnurk 40-piksliste külgede ja 60-kraadiste nurkadega.
       4-5 Artist Patterns 9.5: Kordame seda koodi, et joonistada kaks kuusnurkade rida. Pane tähele, kuidas meie teine rida nihkub paremale.
-      4-5 Artist Patterns 9: "Nüüd korda seda koodi kolm korda, et joonistada terve rida.\\r\\r Vihje: iga kuusnurga laius on kõige laiemas kohas vasakult paremale 80 pikslit."
+      4-5 Artist Patterns 9: 'Nüüd korda seda koodi kolm korda, et joonistada terve rida.\\r\\r Vihje: iga kuusnurga laius on kõige laiemas kohas vasakult paremale 80 pikslit.'
       4-5 Artist Patterns Free Play: Vaba mäng - proovi luua oma muster!
       4-5 Bee Conditionals - FC Test: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       4-5 Bee Conditionals 1: See pilv takistab minu vaadet! Vaata, kas pilve all on lill ja korja nektarit ainult siis kui seal on lill. Ole ettevaatlik, see võib muutuda!
       4-5 Bee Conditionals 2 (copy 1): Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
-      4-5 Bee Conditionals 2: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
+      4-5 Bee Conditionals 2: 'Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!'
       4-5 Bee Conditionals 3: Nüüd tahan ma mett teha. Mõne pilve all võib olla meekärg. Kontrolli igat pilve!
       4-5 Bee Conditionals 4: Mõnikord katab pilv lille ja mõnikord meekärge! Kasuta kui/muidu plokki, et nektarit koguda kui seal on lill, muidu tee mett (sest seal on meekärg).
-      4-5 Bee Conditionals 5: |-
-        Nende pilvede taga võib olla kas lill või meekärg.\r\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\r Muidu tee mett (sest tegu on meekärjega).
-      4-5 Bee Conditionals 6: "Ma ei ole kindel kui palju nektarit sellel lillel on, uid ma tean, et siin on kas 1, 2 või 3 nektarit.\\r\\r Ühenda muutuva väärtusega plokid ('kui' ja/või 'kui/muidu'), et koguda nii palju nektarit kui lillel parasjagu on. \\r\\r Jäta meelde, nektari hulk võib muutuda iga kord kui sa ülesande käivitad!"
-      4-5 Bee Conditionals 7: "Pea meeles, et lilledel võib olla 3, 2 või 1 nektarit.\\r\\r Lõpeta \"kontrolli lillat lille\" funktsioon ning kasuta seda, et lilledelt kogu nektar kokku koguda."
-      4-5 Bee Conditionals 8: "Kirjuta funktsioon \"kontrolli lille tee mett\"\\r\\r. Sinu funktsioon peaks kontrollima, kas lillal lillel on 3, 2 või 1 nektarit ning selle kokku koguma.\\r Seejärel liigu edasi ning valmista mett."
-      4-5 Bee Conditionals Assessment 1: "**Ülesanne:** Selles pilves on peidus 1 nektar või üks meekärg, mis vajab mett.\\r\\r Täida \"kogu nektarit või valmista mett\" funktsioon ja siis kogu kokku kogu nektar ja kogu mesi.\\r\n"
-      4-5 Bee Debugging 1: "Need plokid teevad mulle muret.\\r\\r Kas saaksid need korda teha?"
+      4-5 Bee Conditionals 5: Nende pilvede taga võib olla kas lill või meekärg.\\r\\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\\r Muidu tee mett (sest tegu on meekärjega).
+      4-5 Bee Conditionals 6: Ma ei ole kindel kui palju nektarit sellel lillel on, uid ma tean, et siin on kas 1, 2 või 3 nektarit.\\r\\r Ühenda muutuva väärtusega plokid ('kui' ja/või 'kui/muidu'), et koguda nii palju nektarit kui lillel parasjagu on. \\r\\r Jäta meelde, nektari hulk võib muutuda iga kord kui sa ülesande käivitad!
+      4-5 Bee Conditionals 7: Pea meeles, et lilledel võib olla 3, 2 või 1 nektarit.\\r\\r Lõpeta "kontrolli lillat lille" funktsioon ning kasuta seda, et lilledelt kogu nektar kokku koguda.
+      4-5 Bee Conditionals 8: Kirjuta funktsioon "kontrolli lille tee mett"\\r\\r. Sinu funktsioon peaks kontrollima, kas lillal lillel on 3, 2 või 1 nektarit ning selle kokku koguma.\\r Seejärel liigu edasi ning valmista mett.
+      4-5 Bee Conditionals Assessment 1: '**Ülesanne:** Selles pilves on peidus 1 nektar või üks meekärg, mis vajab mett.\\r\\r Täida "kogu nektarit või valmista mett" funktsioon ja siis kogu kokku kogu nektar ja kogu mesi.\\r'
+      4-5 Bee Debugging 1: Need plokid teevad mulle muret.\\r\\r Kas saaksid need korda teha?
       4-5 Bee Debugging 10: Leia vead ja paranda need.
       4-5 Bee Debugging 11: Kas see arvutab õigesti?
       4-5 Bee Debugging 2: Aita mesilasel koguda nektarit ning valmistada mett.
       4-5 Bee Debugging 3: Leia vead ja paranda need.
       4-5 Bee Debugging 4: Need plokid ei tööta. Milline on muster?
       4-5 Bee Debugging 5: Miski siin ei ole päris õige...
-      4-5 Bee Debugging 6: "Lillal lillel on iga kord kui sa ülesande käivitad erinev kogus nektarit.\\r\\r Paranda plokke nii, et koguksid iga kord kokku kogu nektari."
+      4-5 Bee Debugging 6: Lillal lillel on iga kord kui sa ülesande käivitad erinev kogus nektarit.\\r\\r Paranda plokke nii, et koguksid iga kord kokku kogu nektari.
       4-5 Bee Debugging 7: Selles funktsioonis on midagi puudu...
       4-5 Bee Debugging 8: See funktsioon on korras, kuid seda ei kasutata õigesti.
       4-5 Bee Debugging 9: Miks ei valmista mesilane piisavalt mett?
@@ -339,7 +343,7 @@ et:
       4-5 Bee Nested Loops 1: Kasuta kordust, et koguda kogu nektar.
       4-5 Bee Nested Loops 2: 'Kogu nektarit igalt lillelt. Kasuta korduse pesa. '
       4-5 Bee Nested Loops 3: Kogu kokku kogu nektar, selleks pane stardikood teise tsükli sisse.
-      4-5 Bee Nested Loops 4: "Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. "
+      4-5 Bee Nested Loops 4: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
       4-5 Bee Nested Loops 5: Kogu kokku kogu nektar, loo selleks korduste pesa.
       4-5 Bee Nested Loops 6: Kogu kogu nektar.
       4-5 Bee Nested Loops 7: Pane see kordus teise korduse sisse ning loo korduste pesa, millega saad koguda kogu nektari lilledelt.
@@ -365,39 +369,39 @@ et:
       4-5 Maze 6 (copy 1): Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       4-5 Maze 6: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       4-5 Maze 7: Kallis inimene. Mina zombie. Pean.. jõudma... päevalilleni.
-      4-5 Maze 8: "Aita zombi päevalille juurde kasutades nii vähe plokke kui võimalik.\\r (Hoidu taimedest!)"
-      4-5 Maze 9: "Meil on uus plokk nimega „korda kuni“.\\r See laseb meil käsklusi korrata kuni zombi jõuab päevalilleni.\\r\\r Kasuta uut käsklust 'korda kuni', et seda ülesannet lahendada, kasutades nii vähe käsklusi kui võimalik."
+      4-5 Maze 8: Aita zombi päevalille juurde kasutades nii vähe plokke kui võimalik.\\r (Hoidu taimedest!)
+      4-5 Maze 9: Meil on uus plokk nimega „korda kuni“.\\r See laseb meil käsklusi korrata kuni zombi jõuab päevalilleni.\\r\\r Kasuta uut käsklust 'korda kuni', et seda ülesannet lahendada, kasutades nii vähe käsklusi kui võimalik.
       4-5 Maze Assessment 1: 'Ülesanne: Mine päevalilleni, kasutades nii vähe käsklusi kui võimalik.'
       4-5 Maze Conditionals 1: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
-      4-5 Maze Conditionals 10: "Kas sa saad lisada 3 plokki, et aidata zombil keerulisemat labürinti lahendada? \\r\n\\r\nKui sa seda õigesti teed, saab ta kõndida ükskõik kui pikal kurvilisel rajal!"
+      4-5 Maze Conditionals 10: |-
+        Kas sa saad lisada 3 plokki, et aidata zombil keerulisemat labürinti lahendada? \\r
+        \\r
+        Kui sa seda õigesti teed, saab ta kõndida ükskõik kui pikal kurvilisel rajal!
       4-5 Maze Conditionals 2: Kasuta plokki „korda kuni“, et aidata zombi päevalille juurde.
-      4-5 Maze Conditionals 3: "Kasuta uut „kui“ plokki, et ma saaksin otsustada, millal keerama pean. \\r\n"
+      4-5 Maze Conditionals 3: Kasuta uut „kui“ plokki, et ma saaksin otsustada, millal keerama pean. \\r
       4-5 Maze Conditionals 4: Hea küll, lahenda see ülesanne nagu sa lahendasid eelmise, aga sa pead meelde tuletama, kuidas kasutada „kui“ plokki ja „korda“ plokki koos.
-      4-5 Maze Conditionals 5: "\"Ma tahan päevalille!\"\\r\\r Kasuta \"kui\" plokki, et jõuaksin lilleni nii, et kasutaksin võimalikult vähe plokke."
-      4-5 Maze Conditionals 6: |-
-        "Söö päevalille!"\r\r Kasuta "kui" plokki, et zombi jõuaks päevalilleni nii, et kasutaksid võimalikult vähe plokke.
+      4-5 Maze Conditionals 5: '"Ma tahan päevalille!"\\r\\r Kasuta "kui" plokki, et jõuaksin lilleni nii, et kasutaksin võimalikult vähe plokke.'
+      4-5 Maze Conditionals 6: '"Söö päevalille!"\\r\\r Kasuta "kui" plokki, et zombi jõuaks päevalilleni nii, et kasutaksid võimalikult vähe plokke.'
       4-5 Maze Conditionals 7: Harjutame veidi veel - see ei ole väga erinev, kuid hoidu taimede eest!
-      4-5 Maze Conditionals 8: "„Kui/muidu“ plokk kontrollib tingimust ja teeb vastavalt ühte VÕI teist asja.\\r\\r Kasuta seda uut plokki, et aidata mind päevalilleni."
-      4-5 Maze Conditionals 9: |-
-        Üks harjutus veel „kui/muidu“ plokiga!\r\r Proovi näpuga järge pidada, et näha, kas sul õnnestub see kohe esimesel katsel õigesti lahendada.
+      4-5 Maze Conditionals 8: "„Kui/muidu“ plokk kontrollib tingimust ja teeb vastavalt ühte VÕI teist asja.\\\\r\\\\r Kasuta seda uut plokki, et aidata mind päevalilleni."
+      4-5 Maze Conditionals 9: Üks harjutus veel „kui/muidu“ plokiga!\\r\\r Proovi näpuga järge pidada, et näha, kas sul õnnestub see kohe esimesel katsel õigesti lahendada.
       4-5 Maze Conditionals Assessment 1: "**Ülesanne** Kasuta plokki „korda kuni“ ja „kui/muidu“, et aidata mind päevalilleni võimalikult vähe plokke kasutades."
       4-5 Nested Loops 1: 'Lõpeta kood nende kolmnurkade joonistamiseks. Esimene on juba valmis. Vihje: kolm kolmnurka 360-kraadises pöördes.'
       4-5 Nested Loops 10: Joonista selle lipu viimane tähtede rida, korrates antud plokke. Tähtede vahekaugus on 50 pikslit, kuid pea meeles, et tähtede laius on 30 pikslit.
       4-5 Nested Loops 11: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
       4-5 Nested Loops 12: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
       4-5 Nested Loops 2: 'Nüüd istuta see korduse tsükkel teise korduse tsükli sisse, et joonistada 10 kolmnurka. Seda nimetatakse "pesaga"tsükliks.  '
-      4-5 Nested Loops 3: |-
-        Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      4-5 Nested Loops 3: Tee päike, asetades alguskood teise tsüklisse.\\r\\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
       4-5 Nested Loops 5: Korda antud koodi, et teha tuuleveski.
       4-5 Nested Loops 6: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
-      4-5 Nested Loops 7: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
-      4-5 Nested Loops 8: "Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? "
+      4-5 Nested Loops 7: Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?
+      4-5 Nested Loops 8: 'Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? '
       4-5 Nested Loops 9: Joonista alligaatori suhu hambad!
       4-5 Nested Loops Assessment 1: 'Ülesanne: Kasuta projekti lõpetamiseks pesastatud tsüklit.'
       4-5 While Loops 1: Liiguta mind augu juurde ja täida see kahe labidatäie mullaga, kasutades plokki „täida“.
       4-5 While Loops 2: Liiguta mind mullahunniku juurde ja eemalda see viie labidatäiega, kasutades plokki „eemalda“.
-      4-5 While Loops 3: "Kasuta võimalikult vähe plokke, et seda ülesannet täita.\\r\\r Liiguta mind hunniku juurde ja eemalda see täielikult, seejärel liigu augu juurde ja täida auk."
-      4-5 While Loops 4: "Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
+      4-5 While Loops 3: Kasuta võimalikult vähe plokke, et seda ülesannet täita.\\r\\r Liiguta mind hunniku juurde ja eemalda see täielikult, seejärel liigu augu juurde ja täida auk.
+      4-5 While Loops 4: 'Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  '
       4-5 While Loops 5: Ohoh, nüüd on meil kaks sügavat auku! Kas oskad kirjutada programmi, mis täidab need mõlemad, kuni maapind on tasane?
       4-5 While Loops 6: Ohoh, nüüd on meil suur mullahunnik! Kas oskad kirjutada programmi, mis selle täielikult eemaldab, kuni maapind on tasane?
       4-5 While Loops 7: Ohoh, nüüd on meil kolm mullahunnikut! Kas oskad kirjutada programmi, mis need täielikult eemaldab, kuni maapind on tasane?
@@ -406,7 +410,6 @@ et:
       Alien Defender: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       Alien Defender_2018: 'Projekti idee: Tee kaitsmäng Play Lab''is!'
       App Lab test: test
-      Artist - Nested Loops 1: 'Lõpeta kood nende kolmnurkade joonistamiseks. Esimene on juba valmis. Vihje: kolm kolmnurka 360-kraadises pöördes.'
       Artist - Nested Loops 10: Joonista selle lipu viimane tähtede rida, korrates antud plokke. Tähtede vahekaugus on 50 pikslit, kuid pea meeles, et tähtede laius on 30 pikslit.
       Artist - Nested Loops 11: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
       Artist - Nested Loops 12: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
@@ -415,7 +418,7 @@ et:
       Artist - Nested Loops 9: Joonista alligaatori suhu hambad!
       Artist - Nested Loops Assessment 1: Kasuta projekti lõpetamiseks pesastatud tsüklit.
       Artist Autorun Test: Nüüd pane funktsioon tsükli sisse, et joonistada 3 ruutu.
-      Artist Inspiration: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
+      Artist Inspiration: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? '
       Auto Open Function Editor: 'Saad kutsuda funktsioone teiste funktsioonide seest! Võta aluseks oma funktsioon „kujund“ ja loo 3 majakujundit, millest esimene on 50 piksli suurune ja igaüks on eelmisest 20 pikslit suurem. Abiks võib olla loenduri tsükli kasutamine. '
       Bee Recommended Blocks test: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       Bergeron Robot Maze1: 'Kas aitad mul ulaka põrsa kinni püüda? Liiguta mõned "liigu edasi" plokid käskluse "kui käivitatakse" alla kokku ja vajuta "Käivita". '
@@ -437,11 +440,9 @@ et:
       Course 2 Maze Loops 1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       Course 4 2: Mesilane tahab praegu ainult nektarit. Pea meeles, et kõik objektid pole lilled, seega jälgi, et nektarit kogutaks vaid lilledest.
       Course 4 Artist 1: 'Aita mul joonistada kast. (Iga joon on 200 piksli pikkune) '
-      Course 4 Artist 10: |-
-        Klõpsa siia, et uuesti vihjeid vaadata!\r \r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale.
+      Course 4 Artist 10: Klõpsa siia, et uuesti vihjeid vaadata!\\r \\r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale.
       Course 4 Artist 11: Nüüd aga väljakutse! Kasuta katse-eksitus meetodit. Sa ei pea kohe esimesel korral ideaalset tulemust saama. Tahad rohkem vihjeid näha? Klõpsa siia!
-      Course 4 Artist 12: |-
-        Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\r \r Võid aga ka teha täiesti omaenda disaini!
+      Course 4 Artist 12: Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\\r \\r Võid aga ka teha täiesti omaenda disaini!
       Course 4 Artist 13: Kas mängid ikka veel? Siin on tühi lõuend, kus saad disainida ükskõik mida!
       Course 4 Artist 2: Kas oskad tsüklit kasutada, et joonistada tumendatud ruutu? (Iga külg on 300 pikslit pikk)
       Course 4 Artist 20: Kas mängid ikka veel? Siin on tühi lõuend, kus saad luua ükskõik mida!
@@ -452,9 +453,9 @@ et:
       Course 4 Artist 7: 'Nüüd pesasta see kordus teise korduse sisse, et joonistada 10 kolmnurka. Seda nimetatakse korduvaks tsükliks. Vihje: kõik 10 kolmnurka annavad 360-kraadise pöörde.'
       Course 4 Artist 8: Joonista see päike, korrates seda koodiplokki mitu korda.
       Course 4 Artist 8a: Kas mäletad seda kujundit? Nüüd laseme sul selle luua nii, et me ei anna sulle alguses ette ühtegi plokki!
-      Course 4 Artist 9: "Korda seda disaini 10 korda ja pööra kindlasti iga joonistatud kujundi järel.\\r\n"
-      Course 4 Artist Binary 1: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
-      Course 4 Artist Binary 1a: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
+      Course 4 Artist 9: Korda seda disaini 10 korda ja pööra kindlasti iga joonistatud kujundi järel.\\r
+      Course 4 Artist Binary 1: Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks.
+      Course 4 Artist Binary 1a: Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks.
       Course 4 Artist Binary 2: Millist neist kahendstringidest saad sa 8 korda korrata, et joonistada see pilt?
       Course 4 Artist Binary 3: Kas oskad selle mustri joonistada, korrates kolme kahekohalist arvu?
       Course 4 Artist Binary 4: Iga kahendstring tähistab üht selle pildi rida. Kas oskad need ümber korraldada nii, et see joonistaks kurva näo asemel naeratava näo?
@@ -462,57 +463,52 @@ et:
       Course 4 Artist Binary 6: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       Course 4 Artist Binary 7: Lõpeta see joonistus.
       Course 4 Artist Binary Free Play 2: 'Vaba mäng: Siin on valge leht, millele saad joonistada. Hea joonistamist!'
-      Course 4 Artist Binary Free Play 2a: |-
-        Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\r \r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?
+      Course 4 Artist Binary Free Play 2a: Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\\r \\r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?
       Course 4 Artist Binary Free Play 2b: Kliki siia, et näha vihjeid.
       Course 4 Artist Binary Free Play: 'Vaba mäng: Joonista ükskõik mida soovid, kuid kasuta selleks binaarseid võimalusi!'
       Course 4 Artist Binary pre1: Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“.
-      Course 4 Artist Binary ryan: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
+      Course 4 Artist Binary ryan: Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?
       Course 4 Artist For  Functions 10: Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista sirgjoon“? Jõudu tööle!
       Course 4 Artist For  Functions 11: Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista sirgjoon“? Jõudu tööle!
       Course 4 Artist For Loops 1: Kasuta korduste plokki, et joonistada see kolmnurk, mis on 50 pikslit lai.
       Course 4 Artist For Loops 10: Vaba mäng! Joonista mida iganes soovid plokkidega, mille kasutamise oled selgeks saanud
       Course 4 Artist For Loops 11: 'Kas mäletad, kui kasutasime ühes eelmises etapis muutujat kujundi külgede arvu juhtimiseks? Nüüd teeme sama muutujaga „loendur“. See muster alustab kolmnurgaga ja lisab korraga ühe külje, kuni valmib kümmenurk (10 külge). Iga külg peab olema 100 piksli pikkune. Vihje: 360 jagatud kujundi külgede arvuga annab kraadide arvu, mille võrra tuleb pöörata.'
-      Course 4 Artist For Loops 11a: |-
-        Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\r \r Pisut koodi on sulle juba ette antud.
+      Course 4 Artist For Loops 11a: Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\\r \\r Pisut koodi on sulle juba ette antud.
       Course 4 Artist For Loops 12: 'See oli päris äge, aga nüüd tahaksin joonistada kõik kujundid eelmise kujundi kõrvale. Iga külje pikkus on nüüd 20 pikslit. Kasuta plokki „hüppa“, et hüpata iga kujundi järel 40 pikslit edasi. '
       Course 4 Artist For Loops 13: Need kujundid lähevad iga korraga aina suuremaks! Kas me juba ei lahendanud seda probleemi muutujatega? Kuidas saame kasutada loenduri muutujat, et muuta küljed väiksemaks, kuna neid on rohkem? Määratud hulga võrra edasi liikumise asemel proovi liikuda edasi (100/loendur) piksli võrra.
       Course 4 Artist For Loops 14: Kui pöörate kujundit tehes natuke rohkem või vähem, saad kena efekti. Proovi kasutada osa eelmise taseme koodi, kuid pööra 89 kraadi, et luua see väänatud ruuduspiraal.
       Course 4 Artist For Loops 15: 'Vaba mäng: proovi korduste arvu tsüklite abil teha omaenda joonistusi. Lisasime sinu jaoks ka paar kasulikku muutujat.'
-      Course 4 Artist For Loops 2: 'Panin tsükli sisse kolmnurga joonistamise koodi, mis loendab kümne kaupa 50...100. MÄRKUS. Vaata kood kindlasti üle, enne kui klõpsad käsku „Käivita“.'
-      Course 4 Artist For Loops 3: 'Kasuta selle mõistatuse lahendamiseks abimaterjalina eelmist mõistatust. Kõige väiksema kolmnurga külgede pikkus on 20 pikslit, kõige suurema külgede pikkus on 200 pikslit ja iga kolmnurk on eelmisest 20 piksli võrra pikem.'
-      Course 4 Artist For Loops 4: 'Kuidas muudaksid õpitut nende ruutude joonistamiseks? Need algavad 15 piksli pikkuse küljega, kõige suurem küljepikkus on 300 pikslit ja iga ruudu küljepikkus on eelmisest 15 pikslit suurem.'
+      Course 4 Artist For Loops 2: Panin tsükli sisse kolmnurga joonistamise koodi, mis loendab kümne kaupa 50...100. MÄRKUS. Vaata kood kindlasti üle, enne kui klõpsad käsku „Käivita“.
+      Course 4 Artist For Loops 3: Kasuta selle mõistatuse lahendamiseks abimaterjalina eelmist mõistatust. Kõige väiksema kolmnurga külgede pikkus on 20 pikslit, kõige suurema külgede pikkus on 200 pikslit ja iga kolmnurk on eelmisest 20 piksli võrra pikem.
+      Course 4 Artist For Loops 4: Kuidas muudaksid õpitut nende ruutude joonistamiseks? Need algavad 15 piksli pikkuse küljega, kõige suurem küljepikkus on 300 pikslit ja iga ruudu küljepikkus on eelmisest 15 pikslit suurem.
       Course 4 Artist For Loops 5: 'Olid viimase mõistatuse lahendamisel väga tubli! Kasutame nüüd uuesti seda loenduri muutuja plokki, et joonistada see äge pilt. '
       Course 4 Artist For Loops 6: Vaba mäng! Kasuta kordust, et joonistada kasvav muster.
       Course 4 Artist For Loops 6a: Selleks tee kolm väikest muudatust eelmise taseme koodis!
       Course 4 Artist For Loops 7: Mis juhtub, kui eemaldad sellest algoritmist osa „Korda 3 korda“, säilitades korduste arvu tsüklis plokid „liiguta“ ja „pööra“? Selles kolmnurgaspiraalis on iga külg eelmisest 20 pikslit pikem.
-      Course 4 Artist For Loops 8: |-
-        Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\r \r Vihje: sa pead midagi eemaldama!
+      Course 4 Artist For Loops 8: 'Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\\r \\r Vihje: sa pead midagi eemaldama!'
       Course 4 Artist For Loops 8a: Selle pildi saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?
       Course 4 Artist For Loops 9: Kas oskad spiraali teha? Liigu edasi 1-st 75 pikslini, lisades iga kord ühe piksli.
       Course 4 Artist For Loops Challenge: "**Väljakutse** Kas saad aru, kuidas kasutada kõiki õpitud asju selle hulknurga joonistamiseks, mille küljed on 40 piksli pikkused?"
       Course 4 Artist For Loops Challenge_a: |-
-        Mõtled välja, kuidas kasutada kõiki neid asju, et selline pilt luua! \r
-        \r
+        Mõtled välja, kuidas kasutada kõiki neid asju, et selline pilt luua! \\r
+        \\r
         Soovid vihjet? Kliki siia.
-      Course 4 Artist For Loops inspire: |-
-        Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\r \r Vajad vihjet? Klõpsa siia.
+      Course 4 Artist For Loops inspire: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Vajad vihjet? Klõpsa siia.'
       Course 4 Artist Functions 1: Kas oskad joonistada 100 piksli pikkuse ruudu, kasutades tsüklit?
       Course 4 Artist Functions 10: Milline plokk tuleb lisada, et saada kolmnurk ruudu peale?
       Course 4 Artist Functions 11: Vaata koodi, mis joonistab kuubi - saad selle liigutada funktsiooni "Joonista kuub"
       Course 4 Artist Functions 12.1: Loome funktsiooni nimega „joonista kaheksanurk 20“, mis joonistab kaheksanurga, kus iga külje pikkus on 20 pikslit.
       Course 4 Artist Functions 12: Kasuta ruudu funktsiooniga tsüklit joone joonistamiseks
-      Course 4 Artist Functions 13.1: |-
-        Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.\r \r Vihje: ülemisse parempoolsesse nurka jõudmiseks proovi hüpata mustris, mis moodustab ainult 3/8 kaheksanurgast.
+      Course 4 Artist Functions 13.1: 'Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.\\r \\r Vihje: ülemisse parempoolsesse nurka jõudmiseks proovi hüpata mustris, mis moodustab ainult 3/8 kaheksanurgast.'
       Course 4 Artist Functions 13: Vaata, meil on uus funktsioon nimega „joonista ruutude rida“! Vaata funktsiooniplokist, kuidas me seda tegime. Kui oled järgmiseks mõistatuseks valmis, klõpsa käsku „Käivita“.
       Course 4 Artist Functions 14.1: Teeme nüüd funktsiooni nimega „hüppa üles paremale“, mis liigutab kunstniku just joonistatud kaheksanurga ülemisse parempoolsesse nurka, nii et saame selle mustri lõpetada.
       Course 4 Artist Functions 14: Sa oled tubli! Kasuta nüüd oma uut funktsiooni „joonista ruutude rida“, et joonistada ruudu kujund. Pea meeles, et iga ruudu pikkus on 40 pikslit.
       Course 4 Artist Functions 15: 'Proovime nüüd midagi pisut raskemat. Kas oskad joonistada tähe, kasutades funktsiooni „joonista ruutude rida“? Jõudu tööle! Vihje: vajadusel pead pöörama 144 kraadi.'
       Course 4 Artist Functions 2: 'Kas oskad joonistada 3 ruutu, mis asuvad üksteisest 20 piksli kaugusel? Vihje: iga ruudu suurus on 100 pikslit'
-      Course 4 Artist Functions 3: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\r'
+      Course 4 Artist Functions 3: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\\r'
       Course 4 Artist Functions 4: 'Kas oled valmis looma omaenda funktsiooniplokki? Klõpsa tööriistakastis plokki „Funktsioonid“, pane sellele nimeks „joonista kolmnurk“ ja loo siis kolmnurk, nagu sa tegid varem tegevuse ja tsüklite plokkidega. Seejärel klõpsake parempoolses ülemises nurgas käsku Salvesta ja sule. Vihje: loo 100-pikslise küljepikkusega kolmnurk. Jõudu!'
       Course 4 Artist Functions 5 OLD: Proovime kasutada meie kaht funktsiooni maja joonistamiseks. Mida peab selles koodis parandama, et joonistada korralik maja?
-      Course 4 Artist Functions 5: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\r'
+      Course 4 Artist Functions 5: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 120 pikslit.\\r'
       Course 4 Artist Functions 6: Milline plokk tuleb lisada, et saada kolmnurk ruudu peale?
       Course 4 Artist Functions 7: Kas oskad joonistada ruutudest joone, kasutades ruudu funktsiooni? Iga ruudu pikkus on 40 pikslit.
       Course 4 Artist Functions 8: 'Kas saad aru, kuidas kasutada funktsiooniplokke? Muudame seda ruutu nii, et selle suurus oleks 200 pikslit. Vihje: klõpsa nuppu „redigeeri“, et muuta funktsiooniredaktori „joonista ruut“ suurust. Funktsiooniredaktorist väljumiseks klõpsa käsku „salvesta ja sule“.'
@@ -520,38 +516,37 @@ et:
       Course 4 Artist Functions Inspiration: Kliki siia ja vaata vihjeid uuesti.
       Course 4 Artist Functions challenge: Kliki siia ja vaata vihjeid uuesti.
       Course 4 Artist Functions inspire: Klõpsa siia, et näidispilti uuesti vaadata.
-      Course 4 Artist Inspire: |-
-        Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\r \r Võid aga ka teha täiesti omaenda disaini!
+      Course 4 Artist Inspire: Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\\r \\r Võid aga ka teha täiesti omaenda disaini!
       Course 4 Artist Params 1: Muudame funktsiooni, mis joonistab ruudu, mille külg on 50 pikslit
       Course 4 Artist Params 10: 'Saad kutsuda funktsioone teiste funktsioonide seest! Võta aluseks oma funktsioon „kujund“ ja loo 3 majakujundit, millest esimene on 50 piksli suurune ja igaüks on eelmisest 20 pikslit suurem. Abiks võib olla loenduri tsükli kasutamine. '
       Course 4 Artist Params 12: Kasuta nende kujundite joonistamiseks oma funktsiooni „tuuleratas“. Iga pildi küljepikkus on 50.
       Course 4 Artist Params 13: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat!'
       Course 4 Artist Params 3: 'Tore! Kas oskad selle uue funktsiooniga joonistada neid kolmnurki? Esimese pikkus on 25, teise pikkus 50 ja kolmanda pikkus 75 pikslit. '
       Course 4 Artist Params 4: Kas oskad lisada uue funktsiooni nimega „ruut“? Sarnaselt kolmnurgaga peaks selles kasutama ka pikkuse parameetrit. See kord joonista 3 ruutu küljepikkustega 25, 50 ja 75, ruutude vahekaugus 100 pikslit.
-      Course 4 Artist Params 5: 'Kasuta selle pildi joonistamiseks oma mõlemat uut funktsiooni. Saad seda lihtsamalt teha, kasutades tsüklit parameetriga „loendur“.'
+      Course 4 Artist Params 5: Kasuta selle pildi joonistamiseks oma mõlemat uut funktsiooni. Saad seda lihtsamalt teha, kasutades tsüklit parameetriga „loendur“.
       Course 4 Artist Params 6: 'Muudame seda kujundi joonistamise funktsiooni. Selles on juba parameeter „pikkus“. Lisame nüüd funktsioonile ka parameetri „küljed“. Pea meeles, et pöördenurk on antud kujundi puhul 360 jagatuna kujundi külgede arvuga. Vihje: kujundite pikkused: kolmnurk 100 pikslit, kuusnurk 25 pikslit ja ruut 50 pikslit. '
       Course 4 Artist Params 7: 'Kas oskad need kujundid joonistada koha „???“ täitmise teel? Ruudu ja kolmnurga suurus on 100 pikslit, kuusnurga suurus on 75 pikslit. '
       Course 4 Artist Params 8: 'Kas oskad välja mõelda, kuidas seda kujundit joonistada? Väike vihje: loo uus 6 küljega funktsioon, mille nimi on kuusnurk.'
       Course 4 Artist Params 9: Kas mäletad, kui me kasutasime loenduri tsüklit, kuid eemaldasime sisemise tsükli? Teeme asja huvitavamaks ja kasutame kujundi joonistamise funktsiooni parameetritega „küljed“ ja „pikkus“. Kas oskad need kujundid uuesti luua? Ruudu loendur peab olema 5/100/5, kolmnurga loendur 10/100/10 ja kuusnurga loendur 2/100/2.
       Course 4 Artist Var 9: 'Siin on algoritm kolmnurga joonistamiseks. Muuda seda nii, et see kasutaks hoopis muutujat „küljed“. Asenda number 3 muutujaga „küljed“. Vihje: kasuta plokki „määra küljed“.'
-      Course 4 Artist Vars 1: "Joonistame võrdkülgse kolmnurga?\\r\\r Selle kõigi külgede pikkus peab olema 100 pikslit."
+      Course 4 Artist Vars 1: Joonistame võrdkülgse kolmnurga?\\r\\r Selle kõigi külgede pikkus peab olema 100 pikslit.
       Course 4 Artist Vars 10: Siin on algoritm, mis joonistab väiksematest kolmnurkadest kolmnurga. Kas oskad seda nii muuta, et see kasutaks iga kolmnurga joonistamiseks muutujat „küljed“? Vaata kood läbi ja iga kord, kui näed numbrit 3, asenda see oma muutujaga „küljed“. Kasuta kindlasti plokki „määra küljed“.
       Course 4 Artist Vars 11: Siin on keerulisem kood, mis kasutab eelmise mõistatuse põhimõtteid. Mis sa peaksid määrama muutujaks „küljed“, et joonistada see pilt ruutudest?
       Course 4 Artist Vars 12: Määrame muutuja „küljed“ väärtuseks 5. Mida rohkem külgi me sellele algoritmile lisame, seda suuremaks kogu muster muutub! Pane tähele, et seal on ka teine muutuja nimega „pikkus“. Saame seda nüüd kasutada igal pool, kus meil on funktsioon „liigu edasi“. Määra selle kujundi muutuja „pikkus“ väärtuseks 75.
-      Course 4 Artist Vars 13: "Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \\r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\\r Kas vajad vihjeid? Klõpsa siia."
-      Course 4 Artist Vars 14: |-
-        Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\r \r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab.
+      Course 4 Artist Vars 13: Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \\r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\\r Kas vajad vihjeid? Klõpsa siia.
+      Course 4 Artist Vars 14: 'Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\\r \\r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab.'
       Course 4 Artist Vars 2: Funktsiooni „liigu edasi 150 võrra“ viitab plokk „liigu“ nüüd muutujale „pikkus“. Kas oskad määrata muutuja „pikkus“ väärtuseks 150, et joonistada see uus kolmnurk?
       Course 4 Artist Vars 3: 'Siin on tsükkel, mis joonistab ruudu, kuid midagi on puudu. Kas oskad selle korda teha, nii et see kasutaks muutujat „pikkust“ külgede pikkuse määramiseks? '
       Course 4 Artist Vars 4: Nüüd soovin teha nelinurga, mille kõrgus oleks laiusest kaks korda suurem. Meil on muutuja nimega „laius“, mille väärtuseks peab määrama 100. Kas oskad selle koodi lõpetamiseks kasutada matemaatikaplokke?
       Course 4 Artist Vars 5: Kasuta muutujat „küljed“, et juhtida selle tsükli käivitamiste arvu.
-      Course 4 Artist Vars 6: |-
-        Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\r \r Klõpsa siia, et minna tagasi vihje juurde!
-      Course 4 Artist Vars 7: |-
-        Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\r \r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?
+      Course 4 Artist Vars 6: Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\\r \\r Klõpsa siia, et minna tagasi vihje juurde!
+      Course 4 Artist Vars 7: Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\\r \\r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?
       Course 4 Artist Vars 8: 'Vaba mäng: katseta selle kujundi külgede arvuga. Kas oskad algoritmi nii muuta, et kujundi üldine suurus jääks samaks olenemata sellest, kui palju külgi sellel on? Vihje: kui jagad oma lähtepikkuse külgede arvuga, muutub iga külje pikkus külgede arvu suurenedes lühemaks.'
       Course 4 Artist Vars 9: Muuda seda algoritmi nii, et see kasutaks kolmnurga joonistamiseks kindla arvu asemel muutujat „küljed“. Ära unusta kasutada plokki „määra küljed“.
-      Course 4 Bee 1: "Mesilane ei tea, mis on pilve all! \\r\n\\r Kasuta plokki „kui“, et kontrollida, kas pilve all on lill.\\r\n\\r Kogu nektarit AINULT siis, kui seal on lill."
+      Course 4 Bee 1: |-
+        Mesilane ei tea, mis on pilve all! \\r
+        \\r Kasuta plokki „kui“, et kontrollida, kas pilve all on lill.\\r
+        \\r Kogu nektarit AINULT siis, kui seal on lill.
       Course 4 Bee 2: Kasuta „kui/teine“ plokki, et kontrollida iga objekti puhul, kas see on lill või meekärg. Kui see on lill, kogu nektarit; kui ei ole, tee mett!
       Course 4 Bee 3: Tundmatu objekt on kas lill või meekärg. See kord kasuta "kui/muidu" plokki, et koguda nektarit, kui tegemist on lillega; muidu tee mett (kuna siis on tegu meekärjega).
       Course 4 Bee 4: Sellel lillal lillel on kas 3, 2 või 1 nektarit. Siin on „kui/teine“ plokk kombineeritud teise „kui/teine“ plokiga, et luua avaldis „kui/teine-kui/teine“. Lõpeta ülesanne, et koguda tundmatu hulk nektarit.
@@ -615,46 +610,43 @@ et:
       Course 4 Maze 6: Kas oskad lahendada selle mõistatuse kasutades võimalikult vähe plokke?
       Course 4 Play Lab For Loops 2: See kord proovime loendada paarisarve 1...100.
       Course 4 Play Lab Params 1: Siin on funktsioon nimega „hüppa“, millega su peategelane hüppab 100 piksli võrra üles. Kasuta hüppamise funktsiooni, et liigutada koera nooleklahvide abil ja koguda kokku kõik lipud.
-      Course 4 Play Lab Params 10: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
-      Course 4 Play Lab Params 2: "Nüüd on meil lipud, mis on praeguse hüppe jaoks liiga kõrgel! Kasutame nooli „üles“ ja „alla“, et saada mitu hüppekõrgust.  \\r \\r Peame lisama oma hüppefunktsioonile parameetri nimega „kõrgus“.  Ülesnoolega peab koer hüppama 200 pikslit ja allanoolega ainult 100 pikslit. \\r \\r Vihje: pead klõpsama hüppefunktsioonil käsku „redigeeri“ ja funktsiooni uuendama nii, et see kasutaks parameetrit „kõrgus“."
+      Course 4 Play Lab Params 10: 'Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija\_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. '
+      Course 4 Play Lab Params 2: 'Nüüd on meil lipud, mis on praeguse hüppe jaoks liiga kõrgel! Kasutame nooli „üles“ ja „alla“, et saada mitu hüppekõrgust.  \\r \\r Peame lisama oma hüppefunktsioonile parameetri nimega „kõrgus“.  Ülesnoolega peab koer hüppama 200 pikslit ja allanoolega ainult 100 pikslit. \\r \\r Vihje: pead klõpsama hüppefunktsioonil käsku „redigeeri“ ja funktsiooni uuendama nii, et see kasutaks parameetrit „kõrgus“.'
       Course 4 Play Lab Params 3: 'Lisasime hüppefunktsioonile veel ühe parameetri, et saaksime seda kasutada teiste tegelastega. Iga tegelane on tähistatud numbriga (alates ühest). Muuda funktsiooni „hüppa“ nii, et see kasutaks parameetrit „tegelane“, pannes hüppama õige tegelase. '
-      Course 4 Play Lab Params 4: "Siin on funktsioon nimega „patrull“. \\r\\r Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla."
+      Course 4 Play Lab Params 4: Siin on funktsioon nimega „patrull“. \\r\\r Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
       Course 4 Play Lab Params 5: Muuda funktsiooni „patrull“, lisades parameetri „tegelane“, nii et me saame selle kutsuda iga ekraanil oleva tegelase jaoks. Pea meeles, et tegelastele vastavad numbrid 1, 2 ja 3.
       Course 4 Play Lab Params 6: Lisa funktsioonile „patrull“ teine parameeter nimega „kiirus“. Proovi kasutada kiiruse määramise plokki uue parameetriga „kiirus“, et aidata pingviinil kätte saada mõlemad lipud enne, kui teised tegelased jõuavad esimese lipuni.
-      Course 4 Play Lab Params 7: "Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \\r \\r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks.\\r MÄRKUS: Sa ei pea programmi muutma"
+      Course 4 Play Lab Params 7: 'Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \\r \\r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks.\\r MÄRKUS: Sa ei pea programmi muutma'
       Course 4 Play Lab Params 8: Kasuta plokki „kui tegelane puudutab“, et saata koer tagasi ülesse ja vasakule AINULT siis, kui koer puudutab mõnda muud tegelast.
-      Course 4 Play Lab Params 9: "Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\\r \\r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \\r \\r Muutuja „mängija_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\\r \\r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. "
+      Course 4 Play Lab Params 9: 'Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\\r \\r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \\r \\r Muutuja „mängija\_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\\r \\r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. '
       Course 4 Play Lab Vars 1: See kord sa ei pea koodi kirjutama, klõpsa mängu mängimiseks lihtsalt nuppu „Käivita“! Selles mängus oled sa koer, kes püüab saada rohkem lippe kui kass. Kasuta koera juhtimiseks allanoolt. Kui oled mängimise lõpetanud, klõpsa nuppu „Lõpeta“.
-      Course 4 Play Lab Vars 2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
+      Course 4 Play Lab Vars 2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera\_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       Course 4 Play Lab Vars 3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
       Course 4 Play Lab Vars 4: Nüüd kasutame muutujat nimega „kõrgus“, et juhtida, kui kõrgele saab koer hüpata. Muuda muutujat „kõrgus“ nii, et koer saaks hüpata piisavalt kõrgele kõigi lippude kättesaamiseks.
       Course 4 Play Lab Vars 5: 'Teeme ühe mängu! Kõigepealt on meil vaja koodi. Koosta uuesti kood, mida sa nägid eelmisel tasemel, et määrata skooriks 10. '
       Course 4 Play Lab Vars 6 (copy 1): Hästi, nüüd on meil skoori muutuja, aga kuidas seda kasutada? Kui suurendaksime skoori muutujat iga kord, kui sa saad vaenlasele tulekeraga pihta? Kasuta sündmust „kui tegelane 2 puudutab midagi“, et suurendada skoori, kui kass saab sinu tulekeraga pihta. Saad skoori suurendada, määrates väärtuse skoor = skoor + 1. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
-      Course 4 Play Lab Vars 6: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      Course 4 Play Lab Vars 6: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
       Course 4 Play Lab Vars 7: Tore! Teeme nüüd mängu natuke raskemaks. Iga kord, kui koer (tegelane 1) saab kassi (tegelane 2) võileivaga pihta, kaotad sina punkti. Alusta 10 punktiga, et mäng ei läheks liiga raskeks. Taseme läbimiseks lase oma skoor langeda kümnelt nullile.
       Course 4 Play Lab Vars 8 (copy 1): 'Nüüd veel üks asi: teeme nii, et mängija saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane pildilt. Kui skoor on väiksem kui 0, kaota mängija pildilt. Kui mäng töötab nii, nagu sa tahad, klõpsa käsku „Lõpeta“.'
       Course 4 Play Lab Vars 8: Teeme nii, et koer saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane (kass) pildilt. Kui skoor on väiksem kui 0, kaota mängija (koer) pildilt. Kui mäng töötab nii, nagu sa tahad, klõpsa käsku „Lõpeta“.
-      Course 4 Play Lab Vars 9: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
+      Course 4 Play Lab Vars 9: 'Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla.'
       Course 4 Play Lab Vars: 'Nüüd veel üks asi: teeme nii, et mängija saab võita (või kaotada). Kasuta igavest tsüklit, et kontrollida skoori väärtust. Kui skoor on suurem kui 20, kaota vaenlane pildilt. Kui skoor on väiksem kui 0, kaota mängija pildilt.'
       Course 4 Play Labs For Loops 1: Teeme nii, et koer ütleks kõik numbrid 1...100. Kasuta korduste arvu tsüklit ja loenduri plokki, et öelda loenduri muutuja väärtus iga kord, kui tsüklit käitatakse.
       Course 4 Play Labs For Loops 2: Seekord aita kass Olivel loendada paaritud numbrid 1st 101ni.
       Course 4 Play Labs For Loops 3: Kui loendame suuremate arvude kaupa, jõuame sama aja jooksul loendada suurema numbrini. Proovi panna koer loendama kümne kaupa 10st 1000ni.
       Course 4 Play Labs For Loops 4: Juurdekasvu muutmine võib olla kasulik, kuid me loendame endiselt lineaarselt (iga number erineb eelmisest ühepalju). Aga kui tahame loendada eksponentsiaalselt? Kas saad korduste arvu tsükli väärtusi muutmata loendada 1, 4, 5, 16, 25... (loendur ruudus)?
-      Course 4 Play Labs For Loops 4a: "Kombineerime nüüd 7. etapi muutujad sinu muutujaga „loendur“, et teha midagi ägedat.   \\r \\r Selles mõistatuses loendab koer 0...1000 „juurdekasvu“ võrra. Määra oma koodi alguses muutuja „juurdekasv“ väärtuseks 10, et näha, mis juhtub."
+      Course 4 Play Labs For Loops 4a: Kombineerime nüüd 7. etapi muutujad sinu muutujaga „loendur“, et teha midagi ägedat.   \\r \\r Selles mõistatuses loendab koer 0...1000 „juurdekasvu“ võrra. Määra oma koodi alguses muutuja „juurdekasv“ väärtuseks 10, et näha, mis juhtub.
       Course 4 Play Labs For Loops 5: Eelmises etapis loendasime iga arvu ruutudega. Proovi muuta „loendur ^ 2“ väärtusele „loendur ^ 3“, et loendada iga arvu kuupi (1, 8, 27, 64, 125, 216, 343…)
-      Course 4 Play Labs For Loops 6: Võib-olla mäletad, et algarv on mis tahes arv, mis jagub ainult iseenda ja ühega. Kasuta funktsiooni „on_algarv“, et öelda ainult algarvud 1 kuni 100.
-      Course 4 Play Labs For Loops 6a: |-
-        Koer jätkab aja arvestamist, loendades meie korduste arvu tsükliga juurdekasvu võrra, kuid see kord lisame võluri. Kas oskad koodi nii muuta, et iga kord, kui võlurit klõpsatakse, suureneks muutuja „juurdekasv“ väärtus kahe võrra?\r \r Vaata ette! Võlur liigub kiiresti!
+      Course 4 Play Labs For Loops 6: Võib-olla mäletad, et algarv on mis tahes arv, mis jagub ainult iseenda ja ühega. Kasuta funktsiooni „on\_algarv“, et öelda ainult algarvud 1 kuni 100.
+      Course 4 Play Labs For Loops 6a: Koer jätkab aja arvestamist, loendades meie korduste arvu tsükliga juurdekasvu võrra, kuid see kord lisame võluri. Kas oskad koodi nii muuta, et iga kord, kui võlurit klõpsatakse, suureneks muutuja „juurdekasv“ väärtus kahe võrra?\\r \\r Vaata ette! Võlur liigub kiiresti!
       Course 4 Play Labs For Loops 7: Kas oskad kasutada korduste arvu tsüklit, et aidata mul ette lugeda jada 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a: "Asi hakkab ilmet võtma!  Mis oleks, kui hakkaksime loendama, mitu korda saab võlurit klõpsata, enne kui koer jõuab 30-ni?  \\r \\r Lõpetuseks lisa võlurile sellised plokid, et iga kord, kui teda klõpsatakse, suureneb muutuja „klõpsatud“ väärtus ühe võrra. Praegu võid muutujat „juurdekasv“ eirata.\\r \\r Koer alustab loendamist, kui klõpsad käsku „Käivita“."
-      Course 4 Play Labs For Loops 8: "Aita nüüd tegelastel loendamise ajal liikuda.  \\r \\r Koer peab liikuma ja loendama, liites iga kord 2 (loendur + 2).  Kass liigub ja loendab, korrutades iga kord kahega (loendur * 2). Pingviin liigub ja loendab iga kord astmes kaks (loendur ^ 2). Kes jõuab esimesena oma lipuni?"
-      Course 4 Play Labs For Loops 8a: |-
-        Mängu lõpetamiseks peame tooma tagasi muutuja „juurdekasv“!    Seome selle mängu tasemega.\r \r 1) Pea arvestust selle üle, mitu korda on võlurit klõpsatud.\r 2) Kui võlurit klõpsatakse vähemalt 10 korda, enne kui koer jõuab loendamisega 30-ni, suurenda väärtust „juurdekasv“ ühe võrra ja alusta uuesti.\r 3) Kui võlurit ei klõpsata vähemalt 10 korda, on mäng läbi.
+      Course 4 Play Labs For Loops 7a: Asi hakkab ilmet võtma!  Mis oleks, kui hakkaksime loendama, mitu korda saab võlurit klõpsata, enne kui koer jõuab 30-ni?  \\r \\r Lõpetuseks lisa võlurile sellised plokid, et iga kord, kui teda klõpsatakse, suureneb muutuja „klõpsatud“ väärtus ühe võrra. Praegu võid muutujat „juurdekasv“ eirata.\\r \\r Koer alustab loendamist, kui klõpsad käsku „Käivita“.
+      Course 4 Play Labs For Loops 8: Aita nüüd tegelastel loendamise ajal liikuda.  \\r \\r Koer peab liikuma ja loendama, liites iga kord 2 (loendur + 2).  Kass liigub ja loendab, korrutades iga kord kahega (loendur \* 2). Pingviin liigub ja loendab iga kord astmes kaks (loendur ^ 2). Kes jõuab esimesena oma lipuni?
+      Course 4 Play Labs For Loops 8a: Mängu lõpetamiseks peame tooma tagasi muutuja „juurdekasv“!    Seome selle mängu tasemega.\\r \\r 1) Pea arvestust selle üle, mitu korda on võlurit klõpsatud.\\r 2) Kui võlurit klõpsatakse vähemalt 10 korda, enne kui koer jõuab loendamisega 30-ni, suurenda väärtust „juurdekasv“ ühe võrra ja alusta uuesti.\\r 3) Kui võlurit ei klõpsata vähemalt 10 korda, on mäng läbi.
       Course 4 Playlab For Loop Freeplay: 'Vaba mäng: kasuta kõike, mida oled siiani õppinud, et teha üks mäng, milles kasutatakse `korduste arvu` tsüklit!'
       Course 4 Playlab For Loops 4b: Kas sa saad muuta lisa ühes tsüklis, et võistlus jääks viiki?
       Course 4 Playlab For Loops 5b: Kohalda 'korduste arvu' tsüklit, et kaks tegelast lõpetaksid samas kohas.
-      Course 4 Playlab For Loops 6b: "Muuda seda 'korduste arvu' tsüklit, et luua\nmäng, mida sul on lõbus mängida! \\r\nVajuta \"Käivita\" ja klõpsa Emand Ükssarvikul\nnii palju kordi kui saad. Kas sa suudad purustada meie rekordi, milleks on 24 korda? "
+      Course 4 Playlab For Loops 6b: "Muuda seda 'korduste arvu' tsüklit, et luua\nmäng, mida sul on lõbus mängida! \\\\r\nVajuta \"Käivita\" ja klõpsa Emand Ükssarvikul\nnii palju kordi kui saad. Kas sa suudad purustada meie rekordi, milleks on 24 korda? "
       Course 4 SCF 1: Kasuta soovitatud funktsioone nelja kuusnurkade rea joonistamiseks. Pane tähele, kuidas meie paariarvulised read nihkuvad paremale?
       Course 4 SCF 1a: Kas saad aru, kuidas kogu nektar kokku koguda võimalikult väheste plokkidega?
       Course 4 SCF 1b: Kas saad aru, kuidas kogu nektar kokku koguda võimalikult väheste plokkidega?
@@ -674,8 +666,7 @@ et:
       Course 4 SCFP 1: Loo funktsioon parameetritega, mis võimaldavad kunstnikul hüpata edasi ja tagasi x piksli võrra ning üles ja alla y piksli võrra (kasutades positiivseid ja negatiivseid arve).
       Course 4 SCV 1: Klõpsa siia, et uuesti juhiseid vaadata.
       Course 4 SCV 2: Klõpsa siia, et uuesti juhiseid vaadata.
-      Course 4 SCV 3: |-
-        Hakkame nüüd kulli mängima!  Puuduta kassi, et saada 2 punkti. Puuduta pingviini, et saada 3 punkti.  Võitmiseks pead koguma 10 punkti!\r Ole ettevaatlik: kui kass ja pingviin puudutavad teineteist, võtab see punkte vähemaks.\r \r Lisa vajalikud plokid, et panna see mäng kirjeldatud viisil tööle. Kuidas panna koer kõigis suundades liikuma, kasutades selleks nooleklahve?  Kuidas lisada punkte, kui koer puudutab kassi või pingviini?  Kuidas võtta punkte ära punkte, kui kass ja pingviin puutuvad omavahel kokku?
+      Course 4 SCV 3: 'Hakkame nüüd kulli mängima!  Puuduta kassi, et saada 2 punkti. Puuduta pingviini, et saada 3 punkti.  Võitmiseks pead koguma 10 punkti!\\r Ole ettevaatlik: kui kass ja pingviin puudutavad teineteist, võtab see punkte vähemaks.\\r \\r Lisa vajalikud plokid, et panna see mäng kirjeldatud viisil tööle. Kuidas panna koer kõigis suundades liikuma, kasutades selleks nooleklahve?  Kuidas lisada punkte, kui koer puudutab kassi või pingviini?  Kuidas võtta punkte ära punkte, kui kass ja pingviin puutuvad omavahel kokku?'
       Course 4 SCV 4: Lahenda see mõistatus võimalikult väheste plokkidega.
       Course 4 SCV 5: Lahenda see mõistatus võimalikult väheste plokkidega.
       Course 4 SCV 6: Klõpsa siia, et uuesti juhiseid vaadata.
@@ -697,25 +688,22 @@ et:
       CourseD_Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
       CourseE_HOC 2018 Level_1: Võta laev kirstust.
       CourseE_HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu juurde.
-      CourseE_HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
-      CourseE_HOC 2018 Level_2: 'Mine sadamakai lõppu.  '
-      CourseE_HOC 2018 Level_3: 'Mine avamerele tursa juurde.  '
+      CourseE_HOC 2018 Level_11: Ehitage koos Prismarine kanal Ocean Monument sisse.
+      CourseE_HOC 2018 Level_2: Mine sadamakai lõppu.
+      CourseE_HOC 2018 Level_3: Mine avamerele tursa juurde.
       CourseE_HOC 2018 Level_4: Kasutage delfiini saamiseks tsüklit.
       CourseE_HOC 2018 Level_5: Uuri laevahuku kohta, et jõuda kirstuni.
       CourseE_HOC 2018 Level_6: Liigu läbi jää, et jõuda lõheni.
       CourseE_HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
-      CourseE_HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
-      CourseF_PlayLab_vars10: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
-      CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
+      CourseE_HOC 2018 Level_9b: Et jõuda aardeni, kasuta koralle asukohapunktidena.
+      CourseF_PlayLab_vars10: 'Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla.'
+      CourseF_PlayLab_vars2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera\_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       CourseF_PlayLab_vars3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
       CourseF_PlayLab_vars4: Nüüd kasutame muutujat nimega „kõrgus“, et juhtida, kui kõrgele saab koer hüpata. Muuda muutujat „kõrgus“ nii, et koer saaks hüpata piisavalt kõrgele kõigi lippude kättesaamiseks.
       CourseF_PlayLab_vars5: 'Teeme ühe mängu! Kõigepealt on meil vaja koodi. Koosta uuesti kood, mida sa nägid eelmisel tasemel, et määrata skooriks 10. '
-      CourseF_PlayLab_vars6: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
-      CourseF_PlayLab_vars7: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
-      CourseF_PlayLab_vars8: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars6: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars7: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      CourseF_PlayLab_vars8: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
       CourseF_PlayLab_vars9: Tore! Teeme nüüd mängu natuke raskemaks. Iga kord, kui koer (tegelane 1) saab kassi (tegelane 2) võileivaga pihta, kaotad sina punkti. Alusta 10 punktiga, et mäng ei läheks liiga raskeks. Taseme läbimiseks lase oma skoor langeda kümnelt nullile.
       Crack Random Substitution: Juhised
       Crack Random Substitution_2018: Juhised
@@ -738,21 +726,21 @@ et:
       Dance_Party_11_5: Kasuta "kõik pardid" plokke, et panna kõik pardid koos tantsima.
       Dance_Party_11b: Pane Robot üks kord "kükitama", kui vajutatakse paremat nooleklahvi ja tegema ühe "kõrge plaksu", kui vajutatakse ülemist nooleklahvi. Kükita-plaksuta nii kiiresti kui võimalik!
       Dance_Party_12: Hakka gruuvima! Loo omaenda tants, mida sõpradega jagada.
-      Food Fight!: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
+      Food Fight!: 'Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija\_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. '
       Frequency Analysis: Test
       Function intro Ryan: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
       Function intro Ryan_2019: Kasutage funktsiooni "ehitada sild" kaks korda, et teha tee Redstone Torchini.
       HOC 2018 Level_1: Võta laev kirstust.
       HOC 2018 Level_10: Mine selle Ocean Monument (ookeani monumendi) sissepääsu juurde.
-      HOC 2018 Level_11: 'Ehitage koos Prismarine kanal Ocean Monument sisse.  '
-      HOC 2018 Level_12: 'Kujunda ise oma enda veealune keskkond!  '
-      HOC 2018 Level_2: 'Mine sadamakai lõppu.  '
-      HOC 2018 Level_3: 'Mine avamerele tursa juurde.  '
+      HOC 2018 Level_11: Ehitage koos Prismarine kanal Ocean Monument sisse.
+      HOC 2018 Level_12: Kujunda ise oma enda veealune keskkond!
+      HOC 2018 Level_2: Mine sadamakai lõppu.
+      HOC 2018 Level_3: Mine avamerele tursa juurde.
       HOC 2018 Level_4: Kasutage delfiini saamiseks tsüklit.
       HOC 2018 Level_5: Uuri laevahuku kohta, et jõuda kirstuni.
       HOC 2018 Level_6: Liigu läbi jää, et jõuda lõheni.
       HOC 2018 Level_7a: Kirstu leidmiseks otsi läbi need veealused varemed.
-      HOC 2018 Level_9b: 'Et jõuda aardeni, kasuta koralle asukohapunktidena.  '
+      HOC 2018 Level_9b: Et jõuda aardeni, kasuta koralle asukohapunktidena.
       Infinity_catch: Kas oskad aidata Elsal („tegelane 2“) Annale järele jõuda, kasutades nooleklahve?
       Infinity_finale: Loo midagi vabal valikul ning jaga seda!
       Infinity_move_collide: Hiro on "näitleja 1". Liiguta ta Baymaxi juurde ning käivita heli, kui nad kokku puutuvad.
@@ -765,7 +753,7 @@ et:
       Infinity_touch_faster: Puuduta veel rohkemaid lumehelbeid!
       Infinity_touch_four: Liiguta Annat üles, alla vasakule ja paremale, et puudutada kõiki nelja lumehelvest.
       Infinity_touch_score: Tee nii, et Anna saaks punkti iga kord, kui ta puudutab lumehelvest. Siis klõpsa käsku „Käivita“ ja juhi teda, et ta puudutaks ühe korra iga lumehelvest.
-      Inspirational Artwork: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
+      Inspirational Artwork: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? '
       K-1 Artist 1 Assessment 1: Joonista lühike joon üles ja lühike paremale!
       K-1 Artist Loops 1: Joonista see joon, liikudes itta 4 korda.
       K-1 Artist Loops 2: Kas sa saad joonistada sama joone, kasutades tsüklit.
@@ -848,7 +836,7 @@ et:
       K-1 Maze Assessment 2: Ülesanne -- Liiguta mind põrsa juurde!
       K-1 Maze Loops 1: Aita mind seani!
       K-1 Maze Loops 10: Vii mind põrsa juurde! Korduste tsükli kasutamine teeb selle lihtsamaks.
-      K-1 Maze Loops 11: "Vii mind põrsa juurde!\\r 'Korduste' tsükli kasutamine muudab selle lihtsamaks."
+      K-1 Maze Loops 11: Vii mind põrsa juurde!\\r 'Korduste' tsükli kasutamine muudab selle lihtsamaks.
       K-1 Maze Loops 12: Vii mind põrsa juurde! 'Korduste' pesa kasutamine muudab selle lihtsamaks.
       K-1 Maze Loops 2: Kasuta 'korduse' plokki, et viia mind põrsa juurde!
       K-1 Maze Loops 3: Vii mind põrsa juurde! Kasuta 'korduste' tsüklit.
@@ -863,7 +851,7 @@ et:
       K-1 Maze Multi 14: Hindamise tase
       K-1 Maze Multi 15: Hindamise tase
       K-1 Maze Sequence Assessment 1: |-
-        Vaatame, mida sa õppinud oled!\r
+        Vaatame, mida sa õppinud oled!\\r
         Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani.
       K-1 Maze Sequence Assessment 2: Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani.
       K-1 Maze debug Assessment 1: 'Ülesanne: paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani!'
@@ -871,8 +859,7 @@ et:
       K-1 artist 1 level 9: Joonista see kolme joonega
       K-1 maze debug 1: Muud koodi, et jõuaksin põrsani!
       K-1 maze debug 10: Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani!
-      K-1 maze debug 11: |-
-        See on test!\r Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani
+      K-1 maze debug 11: See on test!\\r Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani
       K-1 maze debug 2: Uuri välja, mis on puudu, ja lisa siis plokke, et aidata mind põrsani!
       K-1 maze debug 3: Uuri välja, mis on puudu, ja EEMALDA siis plokke, et aidata mind põrsani!
       K-1 maze debug 4: Vaata need plokid läbi ja tee korda! Ma liigun vist vales suunas.
@@ -891,10 +878,10 @@ et:
       Kiki_StarWars_Test_4: Tekst
       Kiki_StarWars_Test_5: Tekst
       Kiki_StarWars_Test_5_Example: Tekst
-      MC Agent Freeplay: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC Agent Freeplay: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
       MC HOC 2016 Level 10: On aeg teha oma Minecraft! Loo olendeid ja pane nad tegema seda, mida soovid. Lõbusat ehitamist!
       MC HOC 2016 Level 2-2: Kana on tardunud. Lisa 'liigu' ja 'pööra' plokke 'when spawned' pessa, et ta liikuma panna.
-      MC HOC 2016 Level 3: "Suurepärane, kana liikus! Kuid siis jäi ta seisma. \nMängudes liiguvad kanad igavesti. Kasuta 'tee igavesti' tsüklit, et kanu liikumas hoida.\\r\n"
+      MC HOC 2016 Level 3: "Suurepärane, kana liikus! Kuid siis jäi ta seisma. \nMängudes liiguvad kanad igavesti. Kasuta 'tee igavesti' tsüklit, et kanu liikumas hoida.\\\\r"
       MC HOC 2016 Level 4: Nüüd näevad kanad ühes ja samas suunas liikudes veidrad välja. Mängud kasutavad juhuslikke liigutusi, et need näeksid realistlikud välja. Kasuta kanade jaoks 'pööra juhuslikult' plokki.
       MC HOC 2016 Level 5: Need lehmad on eksinud! Juhata nad rohuni kasutades "liigu edasi" ja "igavesti täida" plokke tsüklis.
       MC HOC 2016 Level 6: Nüüd loo zombid. Kasuta 'loo' plokki, et teha 3 zombit siis kui öö tuleb. Pane nad enda poole liikuma. Jää hommikuni ellu.
@@ -906,7 +893,7 @@ et:
       MC HOC 2016 Village Test: Oh ei! Oled Zombide tõttu lõksus! Programmeeri Raud Golem zombisid taga ajama ja neid ründama!
       MC_HOC_2017 Agent Test: Kliki "Kävita", et liigutada mängija oranži kasti sisse maja sees.
       MC_HOC_2017_01: Kliki "Kävita", et liigutada mängija oranži kasti sisse maja sees.
-      MC_HOC_2017_01_Cole: Sa pead koguma kõik vahendid sellel teekonnal. Liigu ringi kasutades ** nooleklahve ** ja mine kirstu juurde oma rajal, et võita
+      MC_HOC_2017_01_Cole: Sa pead koguma kõik vahendid sellel teekonnal. Liigu ringi kasutades \*\* nooleklahve \*\* ja mine kirstu juurde oma rajal, et võita
       MC_HOC_2017_01_Kiki: Kliki "Kävita", et liigutada mängija oranži kasti sisse maja sees.
       MC_HOC_2017_01_RETRY: 'Kirjutage kood, et saada Agent surveplaadile, siis vajutage "Käivita" ja kasutage nooleklahve, et viia mängija majast välja, et ta saaks saaks kätte kirstu. '
       MC_HOC_2017_01_RETRY_2019: 'Kirjutage kood, et saada Agent surveplaadile, siis vajutage "Käivita" ja kasutage nooleklahve, et viia mängija majast välja, et ta saaks saaks kätte kirstu. '
@@ -951,29 +938,29 @@ et:
       MC_HOC_2017_10_RETRY_2019: Kasutage funktsioone, et saaksid lõpetada selle minecart'i loo.
       MC_HOC_2017_10_RYAN: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
       MC_HOC_2017_10_RYAN2: Koosta funktsioon, mis aitavad teil lõpetada selle minecart'i.
-      MC_HOC_2017_13_Cole: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_13_Cole: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
       MC_HOC_2017_4.5v2: Liiguta Agent surveplaadile.
       MC_HOC_2017_Ali: Kasutage funktsioone, et leida viis minna üle laava.
       MC_HOC_2017_Ali_2019: Kasutage funktsioone, et leida viis minna üle laava.
       MC_HOC_2017_FP10x10: "**Vaba mängimine:** kas suudad kokku koguda kõik teemandid sellel mängutasemel? "
       MC_HOC_2017_FP10x10_RE: "**Vaba mängimine:** kas suudad kokku koguda kõik teemandid sellel mängutasemel? "
-      MC_HOC_2017_FP20x20: "** Vabamäng: ** Aeg uurida ise edasi!"
-      MC_HOC_2017_FP20x20_2019: "** Vabamäng: ** Aeg uurida ise edasi!"
+      MC_HOC_2017_FP20x20: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
+      MC_HOC_2017_FP20x20_2019: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
       MC_HOC_2017_Ryan_03: Nüüd kasuta tsüklied, et aidata Agendil ehitada silda üle jõe pannes vette plokke.
       MC_HOC_2017_Ryan_05: Hävitada kaktused, et mängija saaks minna sihtmärgini.
       Mike Test Bee Conditionals 1: See pilv takistab minu vaadet! Vaata, kas pilve all on lill ja korja nektarit ainult siis kui seal on lill. Ole ettevaatlik, see võib muutuda!
       NEW Course 4 Artist Functions 1: Kas saad joonistada 100 piksli pikkuse ruudu kasutades kordusi?
       NEW Course 4 Artist Functions 10.1: Kasuta eelmise pusle funktsioone selle mustri joonistamiseks.
       NEW Course 4 Artist Functions 10: Klõpsa nuppu „redigeeri“, et täita funktsiooni määratluses kõik plokid 40-pikslise ruudu tegemiseks.
-      NEW Course 4 Artist Functions 11: Nüüd soovime luua uue funktsiooni nimega „joonista ruutude rida“, mis joonistab kuus ruutu ühes reas. Kas oskad selle funktsiooni koostada, kasutades funktsiooni „joonista ruut 20“, mille me oleme juba valmis teinud? Märkus. Pane tähele, et muutsime pliiatsijoone palju peenemaks. Klõpsa funktsioonil „joonista ruut 20“ käsku „redigeeri“, et näha, kuidas me seda tegime!\r
+      NEW Course 4 Artist Functions 11: Nüüd soovime luua uue funktsiooni nimega „joonista ruutude rida“, mis joonistab kuus ruutu ühes reas. Kas oskad selle funktsiooni koostada, kasutades funktsiooni „joonista ruut 20“, mille me oleme juba valmis teinud? Märkus. Pane tähele, et muutsime pliiatsijoone palju peenemaks. Klõpsa funktsioonil „joonista ruut 20“ käsku „redigeeri“, et näha, kuidas me seda tegime!\\r
       NEW Course 4 Artist Functions 12: Kasuta selle mustri joonistamiseks viimase ülesande funktsiooni „joonista ruutude rida“.
       NEW Course 4 Artist Functions 13: 'Kas oskad joonistada funktsiooni „joonista ruutude rida“ abil tähe kujundi? Vihje: muuda funktsiooni „joonista ruutude rida“ nii, et sa ei peaks seda kaks korda kutsuma. Pane tähele, et sa pead liikuma edasi teatud arvu pikslite võrra ja pöörama 144 kraadi.'
       NEW Course 4 Artist Functions 14: 'Vaba mängu aeg! '
       NEW Course 4 Artist Functions 2: 'Kas oskad joonistada 3 ruutu, mis asuvad üksteisest 20 piksli kaugusel? Vihje: iga ruudu suurus on 100 pikslit'
-      NEW Course 4 Artist Functions 3: "Siin on uut tüüpi plokk nimega „Funktsioon“. Klõpsa käsku „redigeeri“ ja täida see siis koodiga, et joonistada 100 piksli pikkuste külgedega ruut.\\r\\r Kui oled funktsiooni muutmise lõpetanud, klõpsa käsku „Sule“ oma programmi naasmiseks."
+      NEW Course 4 Artist Functions 3: Siin on uut tüüpi plokk nimega „Funktsioon“. Klõpsa käsku „redigeeri“ ja täida see siis koodiga, et joonistada 100 piksli pikkuste külgedega ruut.\\r\\r Kui oled funktsiooni muutmise lõpetanud, klõpsa käsku „Sule“ oma programmi naasmiseks.
       NEW Course 4 Artist Functions 4: Kasuta funktsiooni „joonista ruut“ selle mustri joonistamiseks.
       NEW Course 4 Artist Functions 5: Kuidas teadis plokk „joonista ruut“, milliseid käske käivitada? Klõpsa funktsiooniplokis „joonista ruut“ käsku „redigeeri“. Funktsiooniredaktoris olevad plokid on määratlus, millest koosneb funktsioon „joonista ruut“. Kui oled selle uurimise lõpetanud, klõpsa käsku „Salvesta ja sule“ ning seejärel „Käivita“.
-      NEW Course 4 Artist Functions 6: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 20 pikslit.\r'
+      NEW Course 4 Artist Functions 6: 'Kas oskad joonistada selle pildi, kasutades funktsiooniplokki „joonista ruut“? Vihje: ruutude vahe on 20 pikslit.\\r'
       NEW Course 4 Artist Functions 7: 'Kas saad aru, kuidas kasutada funktsiooniplokke? Muudame seda ruutu nii, et selle suurus oleks 200 pikslit. Vihje: klõpsa nuppu „redigeeri“, et avada funktsiooni „joonista ruut“ redaktor. Funktsiooniredaktorist väljumiseks klõpsa käsku „Sule“. '
       NEW Course 4 Artist Functions 8: Lõime sinu jaoks uue funktsiooni nimega „joonista kolmnurk“. Kas oskad muuta funktsiooni määratlust nii, et see joonistaks 100-piksliste külgedega kolmnurga?
       NEW Course 4 Artist Functions 9: Kas oskad selle lahendada, lisades ainult ühe ploki?
@@ -983,27 +970,27 @@ et:
       NEW Course 4 Artist Params 11: Mõtle välja, kuidas seda kujundit joonistada. Lisa funktsioonile parameeter „küljed“.
       NEW Course 4 Artist Params 12: Kas oskad selle joonistuse lõpetada? Kõigi kujundite küljepikkus on 100 pikslit.
       NEW Course 4 Artist Params 12a: See pilt on eelmise sarnane. Kas oskad selle pildi tegemiseks kasutada koos oma funktsiooniga korduste arvu tsüklit?
-      NEW Course 4 Artist Params 13: "Muudame seda hulknurga joonistamise funktsiooni. Selles on juba parameeter „küljed“. Lisame nüüd parameetri „pikkus“. \\r Vihje: iga kujundi ümbermõõt on 200 pikslit. Kas mäletad võrrandit, millega teha ühesuuruseid kujundeid, kui neil on erinev külgede arv?"
+      NEW Course 4 Artist Params 13: 'Muudame seda hulknurga joonistamise funktsiooni. Selles on juba parameeter „küljed“. Lisame nüüd parameetri „pikkus“. \\r Vihje: iga kujundi ümbermõõt on 200 pikslit. Kas mäletad võrrandit, millega teha ühesuuruseid kujundeid, kui neil on erinev külgede arv?'
       NEW Course 4 Artist Params 14: Redigeeri funktsiooni „joonista spiraali serv“ nii, et see kasutaks parameetreid „pikkus“ ja „küljed“, ning loo siis need kujundid uuesti.
       NEW Course 4 Artist Params 15: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
-      NEW Course 4 Artist Params 3: 'Kasutame nüüd seda funktsiooni viie kolmnurga joonistamiseks ühes reas. Vihje: kolmnurkade vahekaugus on 30 pikslit.\r'
+      NEW Course 4 Artist Params 3: 'Kasutame nüüd seda funktsiooni viie kolmnurga joonistamiseks ühes reas. Vihje: kolmnurkade vahekaugus on 30 pikslit.\\r'
       NEW Course 4 Artist Params 4: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       NEW Course 4 Artist Params 5: 'Täida ploki pikkuseparameetri sisend "???" Vihje: viisnurga külg on 100 pikslit. '
       NEW Course 4 Artist Params 6: Täida nende kujundite joonistamiseks parameeter „pikkus“, asendades koha „???“ õigete arvudega. Ruudu ja kolmnurga küljepikkus on 100 pikslit, kuusnurga küljepikkus on 75 pikslit.
       NEW Course 4 Artist Params 7: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
       NEW Course 4 Artist Params 8: Selle kolmnurgafunktsiooni kood on katki. Kas oskad funktsiooni parandada ja teha kolmnurgad küljepikkusega 25, 50 ja 75?
-      NEW Course 4 Artist Params 9: 'Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.'
-      NEW Course 4 Artist Params inspire: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
+      NEW Course 4 Artist Params 9: Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.
+      NEW Course 4 Artist Params inspire: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? '
       NEW Course 4 Artist Vars 1.5: 'Vaata koodi. Kas näed, kuidas plokk „määra pikkus“ ja „pikkus“ koos toimivad? Klõpsa käsku „Käivita“, et näha, kuidas see töötab. '
       NEW Course 4 Artist Vars 12: Nüüd koosta uuesti eelmise taseme algoritm ja loo viisnurk küljepikkusega 150.
       NEW Course 4 Artist Vars 2.5: 'Vaata koodi. Kas näed, kuidas plokk „määra pikkus“ ja „pikkus“ koos toimivad? Klõpsa käsku „Käivita“, et näha, kuidas see töötab. '
       NEW Course 4 Artist Vars 2: 'Lohista numbriplokk plokki „määra pikkus“, et joonistada 50-piksliste kolmnurkade komplekt. '
       NEW Course 4 Artist Vars 4 5: Tubli töö eelmises mõistatuses! Proovime seda uuesti, aga teeme nüüd selle ägeda 60-piksliste kuusnurkadega disaini.
-      NEW Course 4 Artist Vars 4: "Proovime uuesti!\\r\n\\r \nKas oskad määrata pikkuse muutujaks 60, et teha see äge kuusnurkadega disain?"
-      NEW Course 4 Artist Vars 6: "Joonista see muster 100 piksli pikkuste külgedega viisnurkadest, määrates õige 'pikkuse' ja langetades 'pikkuse' muutuja õigetesse kohtadesse.\\r\\r \nKas märkasid, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?"
+      NEW Course 4 Artist Vars 4: "Proovime uuesti!\\\\r\n\\\\r \nKas oskad määrata pikkuse muutujaks 60, et teha see äge kuusnurkadega disain?"
+      NEW Course 4 Artist Vars 6: "Joonista see muster 100 piksli pikkuste külgedega viisnurkadest, määrates õige 'pikkuse' ja langetades 'pikkuse' muutuja õigetesse kohtadesse.\\\\r\\\\r \nKas märkasid, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?"
       NEW Course 4 Bee For Loops 1: Kasuta tsüklit, et koguda nektarit igalt lillelt.
       NEW Course 4 Bee For Loops 10: Kasuta oma korduste arvu tsükli muutujat „loendur“, et määrata, kui kaugele liigutakse horisontaalsuunas.
-      NEW Course 4 Bee For Loops 10a: 'Kas oled valmis väljakutseks? Kasuta tsüklite kohta õpitut, et proovida lahendada seda ülesannet. Pea meeles, et võib-olla pead oma lahendust käivitama mitu korda, enne kui saad kõik vajalikud sammud valmis.'
+      NEW Course 4 Bee For Loops 10a: Kas oled valmis väljakutseks? Kasuta tsüklite kohta õpitut, et proovida lahendada seda ülesannet. Pea meeles, et võib-olla pead oma lahendust käivitama mitu korda, enne kui saad kõik vajalikud sammud valmis.
       NEW Course 4 Bee For Loops 11: Kas oskad kasutada tsükli muutujat, et juhtida liikumist ja nektari kogumist?
       NEW Course 4 Bee For Loops 2: Lisa vajalik kood, et mesilane koguks kindlasti kokku kogu nektari. Vaata, kui palju koodi on sul selle mõistatuse jaoks vaja! (Järgmises mõistatuses õpime lihtsama meetodi.)
       NEW Course 4 Bee For Loops 3: 'Oh, kordus teeb selle palju lihtsamaks! Kogu kood, mida sul vaja on, on seal, vaata kuidas see kokku panna ja siis vajuta "Käivita" et näha kuidas see töötab. '
@@ -1012,9 +999,8 @@ et:
       NEW Course 4 Bee For Loops 5 5: Kas sul on korduste arvu tsükli kasutamine juba selge? Aitame mesilasel kokku koguda ülejäänud nektari.
       NEW Course 4 Bee For Loops 5: Saad korduste arvu tsüklit kasutada ka kahanevaks loenduseks. Proovi nektarit koguda, loendades ühe kaupa 5...1.
       NEW Course 4 Bee For Loops 6: Sinu korduste arvu tsükli viimane number on nimega „juurdekasv“. Iga kord, kui tsüklit käitatakse, muutub loenduri muutuja selle väärtuse võrra. Proovi neist lilledest nektarit koguda, kasutades juurdekasvu 2.
-      NEW Course 4 Bee For Loops 7: |-
-        Kombineerime nüüd loenduri muutuja matemaatikaplokiga! Kuidas saaksid kasutada loenduri muutujat, et liikuda selles aias võimalikult väikese arvu plokkidega? Mida sa pead tegema, et koguda see kord 3, 6, 9, 12, 15 nektarit? Saladus peitub muutujas „loendur“!\r \r Pea meeles, et kui su loendur loendab kasvavalt, lisatakse juurdekasv loenduri muutujale iga korra lõpus.
-      NEW Course 4 Bee For Loops 8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
+      NEW Course 4 Bee For Loops 7: Kombineerime nüüd loenduri muutuja matemaatikaplokiga! Kuidas saaksid kasutada loenduri muutujat, et liikuda selles aias võimalikult väikese arvu plokkidega? Mida sa pead tegema, et koguda see kord 3, 6, 9, 12, 15 nektarit? Saladus peitub muutujas „loendur“!\\r \\r Pea meeles, et kui su loendur loendab kasvavalt, lisatakse juurdekasv loenduri muutujale iga korra lõpus.
+      NEW Course 4 Bee For Loops 8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
       NEW Course 4 Bee For Loops 9: Kui tsüklis loendatakse kahanevalt, lahutatakse juurdekasv igas tsüklis sinu loenduri muutujast. Milline peab juurdekasv olema, et koguda 15, siis 12, 9, 6 ja 3 nektarit?
       NEW Course 4 Bee For Loops 95: Vaata kõiki korduste arvu osi, mille sa just lõid. Kas saad aru, milliseid arve tuleb selle mõistatuse lahendamiseks kahega korrutada? Miks see töötab?
       NEW Course 4 Play Lab Params 11: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
@@ -1030,7 +1016,7 @@ et:
       New Gumball Project: Loo midagi vabal valikul ning jaga seda!
       New Ice Age Project: Loo midagi vabal valikul ning jaga seda!
       New Infinity Project: Loo midagi vabal valikul ning jaga seda!
-      New Minecraft Hero Project: "** Vabamäng: ** Aeg uurida ise edasi!"
+      New Minecraft Hero Project: "\\*\\* Vabamäng: \\*\\* Aeg uurida ise edasi!"
       New Sports Project: 'Loo oma mäng! Sina otsustad: sa võid kõiki reegleid muuta, spordialasid omavahel siduda, ole loov! Kui lõpetad, klõpsa "Lõpeta" ja lase sõpradel oma mängu nende telefonis proovida.'
       Overworld Avoid Monsters: Kreeperiga ei tasu kokku põrgata. Liigu kollidest ettevaatlikult mööda, et jõuda oma turvalisse koju.
       Overworld Avoid Monsters_2018: Kreeperiga ei tasu kokku põrgata. Liigu kollidest ettevaatlikult mööda, et jõuda oma turvalisse koju.
@@ -1065,7 +1051,7 @@ et:
       Overworld Shear Sheep_2019: Aeg lambaid pügada! Kasuta käsku „püga“, et koguda mõlemalt lambalt villa.
       PDK5 Conditionals 1: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       PDK5 Functions 2: Funktsioonide abil saate määrata uued plokid! Me liigutasime plokke, et joonistada ruutfunktsiooni nimega "joonista ruut". Kas te saate kasutada "joonista ruut" funktsiooni ja teha prillid? Ruudud on üksteisest 75 piksli kaugusel.
-      PS copy 2-3 Bee Conditionals 5: "Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki."
+      PS copy 2-3 Bee Conditionals 5: Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki.
       Play Lab Rocket 4 (copy 1): Päris rakettide starikiirus on üsna aeglane, alles hiljem hakkavad nad kiirust koguma- paneme enda oma ka! Kirjuta astmeline funktsioon mis kirjeldab seda raketti mis liigub "sekundeid" ruudus meetrit sekundis.
       Quantum Bee: Lilladel õitel on kas 1 või 0 väärtuses nektarit, kuid sa ei tea, kumb väärtus parasjagu kehtib! Ole tähelepanelik, et mitte koguda nektarit lillalt õielt, kui seal seda ei ole. Kontrolli, kas nektari arv võrdub 1, kasutades plokki „kui“.
       Ryan - 4-5 Bee Conditionals 2: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
@@ -1084,7 +1070,7 @@ et:
       Standalone_Artist_8: Siin on funktsioon "joonista kujund" mille me programmeerisime kuusnurki joonistama.  Käivita kood et näha mida see teeb, seejärel eksperimenteeri funktsiooniga ja vaata mis juhtub.  Kas sa suudad selle panna nelinurki, kolmnurki või kaheksanurki joonistama panna?
       Standalone_Artist_9: Lase nüüd käia ja joonista, mida aga tahad! Sul on isegi üks tühi funktsioon, mida võid panna tegema ükskõik mida!
       Standalone_Artist_v2: Tere tulemast rakendusse Kunstnik! Proovime kõigepealt teha lihtsa ruudu, kasutades paremale pööramise plokki ja edasiliikumise plokki. Iga külg peab olema 100 piksli pikkune.
-      Testing Quantum Farmer: "Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  "
+      Testing Quantum Farmer: 'Uskumatu, ma leidsin tõeliselt sügava augu!\\r\\rMa ei tea, kui mitu labidatäit mulda selle täitmiseks vaja on. \\r Kas sa saaksid kirjutada programmi, millega täidetakse auk, kuni maapind on tasane? Vihje: proovi see kord kasutada tsüklit „kuni“?  '
       The Vigenere Cipher Widget: Juhised
       The Vigenere Cipher Widget_2018: Juhised
       The Vigenere Cipher Widget_2019: Juhised
@@ -1112,8 +1098,8 @@ et:
       Underground Mining Coal_2018: Kõige väärtuslikumad maavarad leiad maa alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt kaks sütt.
       Underground Mining Coal_2019: Kõige väärtuslikumad maavarad leiad maa alt, kuid seal võib pimedaks minna. Pane paika vähemalt kaks tõrvikut ja kaevanda vähemalt kaks sütt.
       Vigenere: Test
-      aE7: "Mis juhtub, kui kopeerid selle tsükli ja pöörad vasakule, mitte paremale?\\r\\r Kas oskad seda korrata selle laine joonistamiseks?"
-      aE8: "Nüüd kordame kõike neli korda, et luua see pildiraam. Ole nurkade juures tähelepanelik – sa ei saa pöörata lihtsalt 90 kraadi!\\r\\r Kui 3-kraadist pööret 60 korda korrates saame poolringi, siis millised neist koodiplokkidest teevad nurkades veerandringi?"
+      aE7: Mis juhtub, kui kopeerid selle tsükli ja pöörad vasakule, mitte paremale?\\r\\r Kas oskad seda korrata selle laine joonistamiseks?
+      aE8: Nüüd kordame kõike neli korda, et luua see pildiraam. Ole nurkade juures tähelepanelik – sa ei saa pöörata lihtsalt 90 kraadi!\\r\\r Kui 3-kraadist pööret 60 korda korrates saame poolringi, siis millised neist koodiplokkidest teevad nurkades veerandringi?
       beeDebugVideo1: Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.
       birdsDebugVideo1: Jälgi rada ja juhata mind rumala seani. Väldi TNT-d või muidu suled lendavad!
       bounce_1: Lisa ploki „kui hoitakse vasaknoolt“ külge plokk ja vajuta nuppu „Käivita“. Kasuta sihtmärgini jõudmiseks vasaknoolt.
@@ -1154,19 +1140,17 @@ et:
       bounce_7_sports: Kinnita kummagi "kui" ploki külge teisi plokke. Põrgata palli kuni see lipu pihta läheb.
       course2_maze_seq_challenge1: Jälgi rada ja juhi mind tobeda sea juurde. Väldi dünamiiti või suled lendavad!
       course2_playlab_stage17_1: Kas sa saad teha nii, et koer Jorge (tegelane 1) ütleks "Tere"?
-      course2_playlab_stage17_10: |-
-        Lisa plokke "kui käivitatakse" sündmusele, 
-        et muuta tausta ja pingviini kiirust.\r
-        \rMängi mängu 
-        ja liiguta pingviini nooleklahvidega kuni saad punkti.
+      course2_playlab_stage17_10: "Lisa plokke \"kui käivitatakse\" sündmusele, \net muuta tausta ja pingviini kiirust.\\\\r\n\\\\rMängi mängu \nja liiguta pingviini nooleklahvidega kuni saad punkti."
       course2_playlab_stage17_11: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase sõpradel nende telefonis oma lugu proovida.
-      course2_playlab_stage17_2: "Kas sa saad teha nii, et Jorge (tegelane 1) ütleks midagi\nja siis ütleks midagi kass Olive (tegelane 2)?"
+      course2_playlab_stage17_2: |-
+        Kas sa saad teha nii, et Jorge (tegelane 1) ütleks midagi
+        ja siis ütleks midagi kass Olive (tegelane 2)?
       course2_playlab_stage17_3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
       course2_playlab_stage17_4: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole, ja paneks Olive ütlema "Tere" kui Jorge temani jõuab?
       course2_playlab_stage17_5: Kas sa saad kirjutada programmi, mis paneks Octavia "Tere" ütlema kui temal klõpsata?
       course2_playlab_stage17_6: Nüüd kirjuta programm, mis paneb Waddlesi üles /alla/vasakule/paremale nooleklahvide abil liikuma ja märke püüdma!
-      course2_playlab_stage17_8: "Kas sa saad panna pingviini (tegelane 1) \"Ai!\" ütlema ja mängida \"löö\" heli kui ta Chompiga kokku põrkab. \\r\n\\r\nKui valmis saad \nsiis mängi mängu, et see juhtuks."
-      course2_playlab_stage17_9: "Kas sa saad lisada ploki, et punkti skoorida \nkui pingviin kasiga (tegelane 3) kokku põrkab? \\r\nMängi mängu ja liiguta pingviini nooltega kuni punkti saad!"
+      course2_playlab_stage17_8: "Kas sa saad panna pingviini (tegelane 1) \"Ai!\" ütlema ja mängida \"löö\" heli kui ta Chompiga kokku põrkab. \\\\r\n\\\\r\nKui valmis saad \nsiis mängi mängu, et see juhtuks."
+      course2_playlab_stage17_9: "Kas sa saad lisada ploki, et punkti skoorida \nkui pingviin kasiga (tegelane 3) kokku põrkab? \\\\r\nMängi mängu ja liiguta pingviini nooltega kuni punkti saad!"
       course3_playlab_stage16_1: Kas oskad panna koera ütlema "tere maailm"?
       course3_playlab_stage16_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks kass midagi?
       course3_playlab_stage16_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi juurde?
@@ -1184,26 +1168,23 @@ et:
       courseA_collector_loops8: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2018: Kirjutage kood, et saada kätte kõik aare.
       courseA_collector_loops8_2019: Kirjutage kood, et saada kätte kõik aare.
-      courseA_collector_loops9: "** Väljakutse: ** Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
-      courseA_collector_loops9_2018: "** Väljakutse: ** Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
-      courseA_collector_loops9_2019: "** Väljakutse: ** Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9: "\\*\\* Väljakutse: \\*\\* Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9_2018: "\\*\\* Väljakutse: \\*\\* Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      courseA_collector_loops9_2019: "\\*\\* Väljakutse: \\*\\* Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       courseA_maze_seq2: Muud koodi, et jõuaksin põrsani!
       courseA_maze_seq2_2018: Muud koodi, et jõuaksin põrsani!
       courseB_collector_loops7: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops7_2018: Kirjutage kood, et saada kätte kõik aare.
       courseB_collector_loops7_2019: Kirjutage kood, et saada kätte kõik aare.
-      courseB_collector_loops8: "** Väljakutse: ** Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
-      courseB_collector_loops8_2018: "** Väljakutse: ** Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
-      courseB_collector_loops8_2019: "** Väljakutse: ** Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2018: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
+      courseB_collector_loops8_2019: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et aidata Laurelil see kõik kätte saada."
       courseC_PlayLab_events3: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
       courseC_PlayLab_events3_2018: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
       courseC_PlayLab_events3_2019: Kas sa saad kirjutada programmi, mis paneks Jorge (tegelane 1) liikuma kass Olive poole?
-      courseC_artist_prog5: |-
-        Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.
-      courseC_artist_prog5_2018: |-
-        Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.
-      courseC_artist_prog5_2019: |-
-        Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.
+      courseC_artist_prog5: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
+      courseC_artist_prog5_2018: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
+      courseC_artist_prog5_2019: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
       courseC_maze_debugging10: Paranda selle taseme vead, seades ja lisades plokke nii, et jõuaksin põrsani!
       courseD_artist_binary1: Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“.
       courseD_artist_binary1_2018: Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“.
@@ -1221,12 +1202,12 @@ et:
       courseD_autorun_binary6_2019: Milline kuuekohaline kahendstring joonistab 11 korda korratuna selle pildi?
       courseD_autorun_binary7_2019: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       courseD_bee_debugging3: Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
-      courseD_bee_nestedLoops3: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
-      courseD_bee_nestedLoops5: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
-      courseD_bee_nestedLoops6_2018: Teeme asja keerulisemaks!\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
-      courseD_bee_nestedLoops8: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
-      courseD_bee_nestedLoops8_2018: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
-      courseD_bee_nestedLoops8_2019: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
+      courseD_bee_nestedLoops3: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
+      courseD_bee_nestedLoops5: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
+      courseD_bee_nestedLoops6_2018: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
+      courseD_bee_nestedLoops8: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
+      courseD_bee_nestedLoops8_2018: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
+      courseD_bee_nestedLoops8_2019: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
       courseD_bounce_events10: Nüüd on üleval värav. Mängu loomiseks kinnita plokid „lisa punkt“ ja „lisa vastase punkt“ plokkide "kui pall läheb väravasse" ja "kui pall läheb reketist mööda" külge. Vaata, mitu punkti saad sina, enne kui sinu vastane saab kaks punkti.
       courseD_bounce_events11: Nüüd saad kinnitada ploki „pärast käivitamist“ külge plokid. Sa pead kinnitama uue ploki „viska uus pall“ rohkem kui ühte kohta. Lisaks proovi muuta stseeni või reketi ja palli kiirust ning vaata, mitu punkti sa saad, enne kui sinu vastane saab kaks punkti.
       courseD_bounce_events12: Loo oma Bounce'i mäng. Võid kõiki visuaalseid elemente ja reegleid muuta. Kui oled valmis, vajuta nuppu "Valmis" ning lase sõpradel telefoni peal mängu proovida.
@@ -1239,17 +1220,21 @@ et:
       courseD_bounce_events6: Sihtmärk on nüüd üleval. Selle mõistatuse lahendamiseks pead kinnitama plokid mõlema „kui pall puudutab“ ploki külge.
       courseD_bounce_events7: Lisa plokk mõlema ploki „kui“ külge. Põrgata palli, kuni see jõuab sihtmärgini.
       courseD_debugging_3: Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
-      courseD_maze_nestedLoops4: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
-      courseD_maze_nestedLoops4_2018: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
-      courseD_maze_nestedLoops4_2019: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
-      courseD_maze_nestedLoops6: Teeme asja keerulisemaks!\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
-      courseD_maze_nestedLoops6_2018: Teeme asja keerulisemaks!\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
-      courseD_maze_nestedLoops6_2019: Teeme asja keerulisemaks!\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
-      courseE_artist_functions1: "Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r\nKaar klaaside vahel on 75 piksli pikkune."
-      courseE_artist_functions1_2018: "Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r\nKaar klaaside vahel on 75 piksli pikkune."
-      courseE_bee_concept1: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
-      courseE_bee_concept1_2018: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
-      courseE_bee_concept1_2019: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
+      courseD_maze_nestedLoops4: Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.
+      courseD_maze_nestedLoops4_2018: Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.
+      courseD_maze_nestedLoops4_2019: Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.
+      courseD_maze_nestedLoops6: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
+      courseD_maze_nestedLoops6_2018: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
+      courseD_maze_nestedLoops6_2019: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
+      courseE_artist_functions1: |-
+        Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r
+        Kaar klaaside vahel on 75 piksli pikkune.
+      courseE_artist_functions1_2018: |-
+        Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r
+        Kaar klaaside vahel on 75 piksli pikkune.
+      courseE_bee_concept1: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
+      courseE_bee_concept1_2018: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
+      courseE_bee_concept1_2019: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
       courseE_bee_functions1: Kogu kogu nektar igalt lillelt.
       courseE_bee_functions1_2018: Kogu kogu nektar igalt lillelt.
       courseE_bee_functions3: Ehita 'võta 5' funktsiooni, mida selles ülesandes kasutada.
@@ -1268,9 +1253,9 @@ et:
       courseF_artist_for_challenge2: Kas saad aru, kuidas saaks selle joonistuse uuesti luua ühe tsükliga?
       courseF_artist_for_challenge2_2018: Kas saad aru, kuidas saaks selle joonistuse uuesti luua ühe tsükliga?
       courseF_artist_for_challenge2_2019: Kas saad aru, kuidas saaks selle joonistuse uuesti luua ühe tsükliga?
-      courseF_bee_for8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
-      courseF_bee_for8_2018: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
-      courseF_bee_for8_2019: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
+      courseF_bee_for8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
+      courseF_bee_for8_2018: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
+      courseF_bee_for8_2019: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
       courseF_bee_for_challenge2: Lahenda see mõistatus, kasutades võimalikult vähe plokke.
       courseF_bee_for_challenge2_2018: Lahenda see mõistatus, kasutades võimalikult vähe plokke.
       courseF_bee_for_challenge2_2019: Lahenda see mõistatus, kasutades võimalikult vähe plokke.
@@ -1318,7 +1303,7 @@ et:
       frozen square loop: Tere, olen Anna! Teeme ruudu kasutades "Korda" blokki, sellega kasutame teisi blokke vähem. Kui palju kordi (???) peaks "Korda" blokki kasutama, et teha valmis ruut?
       frozen square snowflake: Kas sa saad luua lumehelbe kasutades "Korda" blokki, et joonistada ruutu 10 korda ja "Keera" blokki", et keerata iga ruudu vahel 36 kraadi?
       grade1_adventurer_loops6: Kirjutage kood, mille abil saab kõik kulla kätte.
-      grade1_adventurer_loops7_challenge: "** Väljakutse: ** Aare läheb treppidest alla välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      grade1_adventurer_loops7_challenge: "\\*\\* Väljakutse: \\*\\* Aare läheb treppidest alla välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       grade1_maze_sequence1: Muud koodi, et jõuaksin põrsani!
       grade1_maze_sequence2: Muud koodi, et jõuaksin põrsani!
       grade1_maze_sequence5: Liigu ühte suunda ja siis teise suunda, et jõuaksin põrsani!
@@ -1327,95 +1312,84 @@ et:
       grade2_CaringForNewPet_10: Aita mind seani!
       grade2_CaringForNewPet_5: Aita mind seani!
       grade2_MakeDogTag_10: Joonista nüüd ükskõik mida soovid!
-      grade2_MakeDogTag_3: |-
-        Aita mul selle kassi jaoks maja teha.
-      grade2_MakeDogTag_4: |-
-        Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.
-      grade2_MakeDogTag_6: 'Mängu aeg! Joonista mida ise tahad.'
+      grade2_MakeDogTag_3: Aita mul selle kassi jaoks maja teha.
+      grade2_MakeDogTag_4: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
+      grade2_MakeDogTag_6: Mängu aeg! Joonista mida ise tahad.
       grade2_MakeDogTag_8: Nüüd ühendame omavahel tsüklisse mitu V-tähte.
       grade2_MakeDogTag_9: Koosta eelmise ülesande kood uuesti. Seekord lisa aga tsüklisse 30 kraadine pööre. Korda seda 24 korda 8 asemel.
       grade2_PuppyLoops_1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
       grade2_PuppyLoops_10: |-
-        Õpetaja ütleb, et pean alustatu lõpule viima!\r
-        \r
+        Õpetaja ütleb, et pean alustatu lõpule viima!\\r
+        \\r
         Aita mul tuulevurr valmis teha. Kas sa mõtled välja, mis valesti on?
       grade2_PuppyLoops_2: Mine sea juurde nii, et teed tsükli, milles kasutad ainult ühte 'liigu edasi' plokki 'korda' tsükli sees!
       grade2_PuppyLoops_4: Selles ülesandes aitavad sind sea juurde kaks 'korda' tsüklit, milles võid kasutada vähe plokke!
       grade2_PuppyLoops_5: Mõtle välja, kuidas kõige kiiremini sea juurde saab!
       grade2_PuppyLoops_7: Kasuta seda, mida õppisid, et mind päevalilleni aidata!
-      grade2_PuppyLoops_8: "See kood kassi vurrude jaoks on vale.\n\\r\n\\r\nParanda kood, et joonistada vurrud, mis on ühepikkused."
+      grade2_PuppyLoops_8: |-
+        See kood kassi vurrude jaoks on vale.
+        \\r
+        \\r
+        Paranda kood, et joonistada vurrud, mis on ühepikkused.
       grade2_PuppyLoops_9: |-
-        Tundub et C on tagurpidi joonistatud.\r
-        \r
+        Tundub et C on tagurpidi joonistatud.\\r
+        \\r
          Kas sa saad C õigetpidi joonistada?
       grade2_playlab_project_1: Nüüd kirjuta programm, mis paneb Waddlesi üles /alla/vasakule/paremale nooleklahvide abil liikuma ja märke püüdma!
-      grade2_playlab_project_3: "Kas sa saad panna pingviini (tegelane 1) \"Ai!\" ütlema ja mängida \"löö\" heli kui ta Chompiga kokku põrkab. \\r\n\\r\nKui valmis saad \nsiis mängi mängu, et see juhtuks."
-      grade2_playlab_project_4: "Kas sa saad lisada ploki, et punkti skoorida \nkui pingviin kasiga (tegelane 3) kokku põrkab? \\r\nMängi mängu ja liiguta pingviini nooltega kuni punkti saad!"
-      grade2_playlab_project_5: |-
-        Lisa plokke "kui käivitatakse" sündmusele, 
-        et muuta tausta ja pingviini kiirust.\r
-        \rMängi mängu 
-        ja liiguta pingviini nooleklahvidega kuni saad punkti.
+      grade2_playlab_project_3: "Kas sa saad panna pingviini (tegelane 1) \"Ai!\" ütlema ja mängida \"löö\" heli kui ta Chompiga kokku põrkab. \\\\r\n\\\\r\nKui valmis saad \nsiis mängi mängu, et see juhtuks."
+      grade2_playlab_project_4: "Kas sa saad lisada ploki, et punkti skoorida \nkui pingviin kasiga (tegelane 3) kokku põrkab? \\\\r\nMängi mängu ja liiguta pingviini nooltega kuni punkti saad!"
+      grade2_playlab_project_5: "Lisa plokke \"kui käivitatakse\" sündmusele, \net muuta tausta ja pingviini kiirust.\\\\r\n\\\\rMängi mängu \nja liiguta pingviini nooleklahvidega kuni saad punkti."
       grade2_puppy_loops2: Mine sea juurde nii, et teed tsükli, milles kasutad ainult ühte 'liigu edasi' plokki 'korda' tsükli sees!
       grade2_puppy_loops4: Selles ülesandes aitavad sind sea juurde kaks 'korda' tsüklit, milles võid kasutada vähe plokke!
       grade3_ConditionalsElse_1: See pilv takistab minu vaadet! Vaata, kas pilve all on lill ja korja nektarit ainult siis kui seal on lill. Ole ettevaatlik, see võib muutuda!
-      grade3_ConditionalsElse_2: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
+      grade3_ConditionalsElse_2: 'Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!'
       grade3_ConditionalsElse_3: Nüüd tahan ma mett teha. Mõne pilve all võib olla meekärg. Kontrolli igat pilve!
       grade3_ConditionalsElse_4: Mõnikord katab pilv lille ja mõnikord meekärge! Kasuta kui/muidu plokki, et nektarit koguda kui seal on lill, muidu tee mett (sest seal on meekärg).
-      grade3_ConditionalsElse_5: |-
-        Nende pilvede taga võib olla kas lill või meekärg.\r\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\r Muidu tee mett (sest tegu on meekärjega).
-      grade3_ConditionalsElse_6: "Ma ei ole kindel kui palju nektarit sellel lillel on, uid ma tean, et siin on kas 1, 2 või 3 nektarit.\\r\\r Ühenda muutuva väärtusega plokid ('kui' ja/või 'kui/muidu'), et koguda nii palju nektarit kui lillel parasjagu on. \\r\\r Jäta meelde, nektari hulk võib muutuda iga kord kui sa ülesande käivitad!"
-      grade3_ConditionalsElse_7: "Pea meeles, et lilledel võib olla 3, 2 või 1 nektarit.\\r\\r Lõpeta \"kontrolli lillat lille\" funktsioon ning kasuta seda, et lilledelt kogu nektar kokku koguda."
-      grade3_ConditionalsElse_8: "Kirjuta funktsioon \"kontrolli lille tee mett\"\\r\\r. Sinu funktsioon peaks kontrollima, kas lillal lillel on 3, 2 või 1 nektarit ning selle kokku koguma.\\r Seejärel liigu edasi ning valmista mett."
-      grade3_ConditionalsElse_9: "**Ülesanne:** Selles pilves on peidus 1 nektar või üks meekärg, mis vajab mett.\\r\\r Täida \"kogu nektarit või valmista mett\" funktsioon ja siis kogu kokku kogu nektar ja kogu mesi.\\r\n"
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Nende pilvede taga võib olla kas lill või meekärg.\r\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\r Muidu tee mett (sest tegu on meekärjega).
+      grade3_ConditionalsElse_5: Nende pilvede taga võib olla kas lill või meekärg.\\r\\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\\r Muidu tee mett (sest tegu on meekärjega).
+      grade3_ConditionalsElse_6: Ma ei ole kindel kui palju nektarit sellel lillel on, uid ma tean, et siin on kas 1, 2 või 3 nektarit.\\r\\r Ühenda muutuva väärtusega plokid ('kui' ja/või 'kui/muidu'), et koguda nii palju nektarit kui lillel parasjagu on. \\r\\r Jäta meelde, nektari hulk võib muutuda iga kord kui sa ülesande käivitad!
+      grade3_ConditionalsElse_7: Pea meeles, et lilledel võib olla 3, 2 või 1 nektarit.\\r\\r Lõpeta "kontrolli lillat lille" funktsioon ning kasuta seda, et lilledelt kogu nektar kokku koguda.
+      grade3_ConditionalsElse_8: Kirjuta funktsioon "kontrolli lille tee mett"\\r\\r. Sinu funktsioon peaks kontrollima, kas lillal lillel on 3, 2 või 1 nektarit ning selle kokku koguma.\\r Seejärel liigu edasi ning valmista mett.
+      grade3_ConditionalsElse_9: '**Ülesanne:** Selles pilves on peidus 1 nektar või üks meekärg, mis vajab mett.\\r\\r Täida "kogu nektarit või valmista mett" funktsioon ja siis kogu kokku kogu nektar ja kogu mesi.\\r'
+      grade3_ConditionalsElse_TeacherIDo: Nende pilvede taga võib olla kas lill või meekärg.\\r\\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\\r Muidu tee mett (sest tegu on meekärjega).
       grade3_Conditionals_1 BAD: Kasuta kordust, et koguda kogu nektar.
-      grade3_Conditionals_1: "Mina olen näljane mesilane!\\r Aita mul lilledelt kogu nektar kokku koguda, kasutades võimalikult vähe plokke."
+      grade3_Conditionals_1: Mina olen näljane mesilane!\\r Aita mul lilledelt kogu nektar kokku koguda, kasutades võimalikult vähe plokke.
       grade3_Conditionals_10 BAD: Kogu nektarit nendelt lillede ridadelt!  Kasuta korduste pesa.
-      grade3_Conditionals_10: |-
-        Siis toimub väga palju asju korraga!\r\r Kasuta seda, mis sa just õppisid, et koguda kokku kogu nektar ja valmista mett.
+      grade3_Conditionals_10: Siis toimub väga palju asju korraga!\\r\\r Kasuta seda, mis sa just õppisid, et koguda kokku kogu nektar ja valmista mett.
       grade3_Conditionals_11 BAD: 'Ülesanne: kasuta ''kui'' tsüklit, et nendelt lilledelt nektar kokku koguda.'
-      grade3_Conditionals_11: |-
-        Paneme kõik kokku!\r\r Kasuta neid teaddmisi, mis sa just õppisid, et aidata mul nektarit koguda ainult nendelt lilledelt, millel on nektarit. Kasuta võimalikult vähe plokke. Ära unusta lõpus mett teha.
-      grade3_Conditionals_12: "See trepimuster peaks olema sulle tuttav.\\r\\r Kas oskad koguda nektarit ainult lilledelt, millel seda on? Kasuta nii vähe plokke kui võimalik."
+      grade3_Conditionals_11: Paneme kõik kokku!\\r\\r Kasuta neid teaddmisi, mis sa just õppisid, et aidata mul nektarit koguda ainult nendelt lilledelt, millel on nektarit. Kasuta võimalikult vähe plokke. Ära unusta lõpus mett teha.
+      grade3_Conditionals_12: See trepimuster peaks olema sulle tuttav.\\r\\r Kas oskad koguda nektarit ainult lilledelt, millel seda on? Kasuta nii vähe plokke kui võimalik.
       grade3_Conditionals_13: 'Hindamine: Koguge kokku kogu õietolm. Ole ettevaatlik ja ära kogu õietolmu lillalt õielt, kui seal seda ei ole.'
-      grade3_Conditionals_2: "Vaata kui palju nektarit!\\r\\r Aita mul lilledelt nektarit koguda ja mett valmistada, kasutades nii vähe plokke kui võimalik.  "
-      grade3_Conditionals_3: "Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki."
+      grade3_Conditionals_2: 'Vaata kui palju nektarit!\\r\\r Aita mul lilledelt nektarit koguda ja mett valmistada, kasutades nii vähe plokke kui võimalik.  '
+      grade3_Conditionals_3: Ole ettevaatik ja ära korja nektarit lillat värvi õielt kui seal ei ole nektarit.\\r Esmalt pead kontrollima, et õiel oleks vähemalt 1 nektar. Selleks kasuta 'kui on nektarit' plokki.
       grade3_Conditionals_4: Kontrollige seda lille "kui"-blokiga, et saada teada, kas seal on õietolmu.
       grade3_Conditionals_5: Koguge lilledelt nektarit ainult siis kui neil on nektarit.
       grade3_Conditionals_6: Sellel põllul on punased ja lillad lilled. Punastel lilledel on teada hulk õietolmu, kuid lillade lillede õietolm ei ole teada. Koguge kogu õietolm.
       grade3_Conditionals_7: Kogu kogu nektar igalt lillelt.
-      grade3_Conditionals_8: "Mis seal aias küll on?\\r\\r Aita mul aias ringi lennata ja koguda nektarit ainult neilt lilledelt, millel seda on. "
+      grade3_Conditionals_8: 'Mis seal aias küll on?\\r\\r Aita mul aias ringi lennata ja koguda nektarit ainult neilt lilledelt, millel seda on. '
       grade3_Conditionals_9: Aita mul kogu nektar ülesse leida, kasutades võimalikult vähe plokke!
       grade3_Conditionals_TeacherIDo: Kontrollige seda lille "kui"-blokiga, et saada teada, kas seal on õietolmu.
       grade3_Debugging_1: Need blokid on vigased. Parandage viga(vead) ja koguge kokku kogu õietolm.
-      grade3_Debugging_5: "See lill näeb maitsev välja!\\r\\r Paranda vead, et kogu nektar kokku koguda. Võid kasutada nii käivitamist kui astumist."
-      grade3_Debugging_6: |-
-        Milline tore ülesanne!\r\r Paranda viga(vead), et nektarit koguda.
+      grade3_Debugging_5: See lill näeb maitsev välja!\\r\\r Paranda vead, et kogu nektar kokku koguda. Võid kasutada nii käivitamist kui astumist.
+      grade3_Debugging_6: Milline tore ülesanne!\\r\\r Paranda viga(vead), et nektarit koguda.
       grade3_Debugging_7: Parandage viga(vead) ja koguge kokku kogu õietolm ning tehke kogu mesi.
-      grade3_Debugging_9: |-
-        Ole siin kannatlik! \r\r Siin programmis pead mõned asjad ära parandama, et kogu nektar kokku koguda ja mett teha.
+      grade3_Debugging_9: Ole siin kannatlik! \\r\\r Siin programmis pead mõned asjad ära parandama, et kogu nektar kokku koguda ja mett teha.
       grade3_Debugging_TeacherIDo: Need blokid on veaga(vigadega). Parandage viga(vead) ja koguge kokku kogu nektar ning teha valmis kogu mesi.
-      grade3_Loops_10: |-
-        Kui usin mesilane!\r\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
-      grade3_Loops_11: "Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?"
+      grade3_Loops_10: Kui usin mesilane!\\r\\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
+      grade3_Loops_11: Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?
       grade3_Loops_12: Leia kõige kiirem viis selleks, et mesilane koguks kokku kogu nektari ja valmistaks kogu mee!
       grade3_Loops_2: Seekord kasuta kogu nektari kokku kogumiseks tsüklit.
       grade3_Loops_3: Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.
       grade3_Loops_4: Kasuta plokki 'korda', et kogu nektar kokku koguda ja teha kogu mesi.
       grade3_Loops_5: Kui ilus lillepõld! Aita mesilane iga õieni. Tee seda vähem kui 7 ploki abil.
-      grade3_Loops_6: "Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke."
-      grade3_Loops_7: |-
-        Need lilled näevad maitsvad välja!\r\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
+      grade3_Loops_6: Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke.
+      grade3_Loops_7: Need lilled näevad maitsvad välja!\\r\\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
       grade3_Loops_8: Kogu kokku kogu nektar ja valmist kogu mesi, kasutades võimalikult vähe plokke.
       grade3_Loops_9: Kogu nektarit igalt lillelt ning tee mett igas kärjes, kasutades võimalikult vähe plokke.
-      grade3_Loops_TeacherIDo: |-
-        Need lilled näevad maitsvad välja!\r\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
-      grade3_bee_conditionals_quantum2: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
+      grade3_Loops_TeacherIDo: Need lilled näevad maitsvad välja!\\r\\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
+      grade3_bee_conditionals_quantum2: 'Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!'
       grade3_maze_Loop1: 'Ülesanne: Vii mind päevalilleni, kuid kasuta ainult 5 plokki! '
-      grade3_maze_loops2: 'Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\r\rProovi kasutada ''korda'' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.'
-      grade3_maze_loops3: Teeme asja keerulisemaks!\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
+      grade3_maze_loops2: Aita mind päevalilleni, kasutades nii vähe plokke kui võimalik!\\r\\rProovi kasutada 'korda' tsüklit mõne teise tsükli sees, et kasutada vähem koodi.
+      grade3_maze_loops3: Teeme asja keerulisemaks!\\r Kasuta võimalikult vähe tsükleid, et mind päevalilleni viia.
       grade3_maze_loops4: Aita mind päevalilleni, kasutades võimalikult vähe plokke!
       grade3_maze_loops5: Aita mind päevalilleni, kasutades võimalikult vähe plokke!
       grade3_maze_nestedLoops1: Kas oskad mind viit plokki kasutades põrsa juurde viia?
@@ -1427,49 +1401,46 @@ et:
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Aita mul täita kõik need augud 5 labidatäie mullaga. Vihje: sa võid ploki „tingimusel“ sisse lisada ploki „korda“.'
       grade4_arist_nested_loop_circles1: 'Ülesanne: Kasuta projekti lõpetamiseks pesastatud tsüklit.'
       grade4_arist_nested_loop_flags1: Korda antud koodi, et teha tuuleveski.
-      grade4_arist_nested_loop_polygons1: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
-      grade4_arist_nested_loop_polygons2: "Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? "
+      grade4_arist_nested_loop_polygons1: Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?
+      grade4_arist_nested_loop_polygons2: 'Korda seda disaini 6 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama? '
       grade4_arist_nested_loop_squares1: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
       grade4_arist_nested_loop_triangles2: 'Nüüd istuta see korduse tsükkel teise korduse tsükli sisse, et joonistada 10 kolmnurka. Seda nimetatakse "pesaga"tsükliks.  '
       grade4_arist_nested_loop_triangles3: Kas oskad joonistada kuusnurga, korrates kolmnurga koodi?
       grade4_arist_nested_loop_triangles4: Joonista alligaatori suhu hambad!
-      grade4_arist_nested_loop_triangles5: |-
-        Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_arist_nested_loop_triangles5: Tee päike, asetades alguskood teise tsüklisse.\\r\\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
       grade4_arist_nested_loop_triangles6: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
-      grade4_artist_functions1: "Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r\nKaar klaaside vahel on 75 piksli pikkune."
-      grade4_artist_functions2: "Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega \"joonista ruut\". Kas te saate kasutada \"joonista ruut\" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel."
+      grade4_artist_functions1: |-
+        Aita zombile joonistada prilid, kasutades 100 piksli pikkuste külgedega ruute.\\r
+        Kaar klaaside vahel on 75 piksli pikkune.
+      grade4_artist_functions2: Funktsioonide abil saate uusi plokke määratleda! \\r\\r Me liigutasime ruudu joonistamiseks vajalikud plokid funktsiooni nimega "joonista ruut". Kas te saate kasutada "joonista ruut" funktsiooni ja teha prillid?\\r\\r Ruudud on üksteisest 75 piksli kaugusel.
       grade4_artist_functions_challenge: Kasuta soovitatud funktsioone nelja kuusnurkade rea joonistamiseks. Pane tähele, kuidas meie paariarvulised read nihkuvad paremale?
       grade4_artist_functions_challenge2: Kasuta soovitatud funktsioone nelja kuusnurkade rea joonistamiseks. Pane tähele, kuidas meie paariarvulised read nihkuvad paremale?
-      grade4_artist_nestedLoops_challenge: |-
-        Klõpsa siia, et uuesti vihjeid vaadata!\r \r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale.
+      grade4_artist_nestedLoops_challenge: Klõpsa siia, et uuesti vihjeid vaadata!\\r \\r Siin on kood huvitava kuju tegemiseks.  Mis juhtub, kui kordad seda mitu korda, pöörates iga korduse järel?   Arvesta sellega, et selle kujundi pöörded annavad kokku 420 kraadi, nii et kunstnik on joonistamist lõpetades näoga teise suunda kui alguses.  See uus suund on täpselt 60 kraadi algsuunast paremale.
       grade4_artist_nestedLoops_challenge2: Nüüd aga väljakutse! Kasuta katse-eksitus meetodit. Sa ei pea kohe esimesel korral ideaalset tulemust saama. Tahad rohkem vihjeid näha? Klõpsa siia!
       grade4_artist_nested_loop_circles1: 'Ülesanne: Kasuta projekti lõpetamiseks pesastatud tsüklit.'
       grade4_artist_nested_loop_flags1: Korda antud koodi, et teha tuuleveski.
-      grade4_artist_nested_loop_polygons1: "Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?"
+      grade4_artist_nested_loop_polygons1: Korda seda disaini 10 korda.\\r\\r Kui palju pead sa iga korduse ajal pöörama?
       grade4_artist_nested_loop_squares1: Kas oskad joonistada need kõnnitee 10 ruutu, kasutades pesastatud tsüklit? Iga ruudu pikkus on 30 pikslit.
-      grade4_artist_nested_loop_triangles1: 'Lõpeta kood nende kolmnurkade joonistamiseks. Esimene on juba valmis. Vihje: kolm kolmnurka 360-kraadises pöördes.'
-      grade4_artist_nested_loop_triangles5: |-
-        Tee päike, asetades alguskood teise tsüklisse.\r\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
+      grade4_artist_nested_loop_triangles5: Tee päike, asetades alguskood teise tsüklisse.\\r\\r Sellise ägeda disaini saamiseks, millel on tühi keskpaik, pead õhe kolmnurga pikkuse võrra otse edasi hüppama enne kui pöörad.
       grade4_artist_nested_loop_triangles6: Kas oskad joonistada need 36 kolmnurka, kasutades pesastatud tsüklit?
-      grade4_artist_parameters_squares1: 'Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.'
+      grade4_artist_parameters_squares1: Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.
       grade4_artist_parameters_triangles2: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       grade4_artist_parameters_triangles2b: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
       grade4_artist_parameters_triangles3: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
       grade4_artist_parameters_triangles4: Selle kolmnurgafunktsiooni kood on katki. Kas oskad funktsiooni parandada ja teha kolmnurgad küljepikkusega 25, 50 ja 75?
       grade4_artist_parameters_trianglesx: 'Kas oskad selle joonistuse lõpetada? Vihje: iga kolmnurga küljed on eelmisest 25 pikslit pikemad. Esimese kolmnurga küljepikkus on 25 pikslit.'
       grade4_bee_conditionals_quantum1: See pilv takistab minu vaadet! Vaata, kas pilve all on lill ja korja nektarit ainult siis kui seal on lill. Ole ettevaatlik, see võib muutuda!
-      grade4_bee_conditionals_quantum2: "Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!"
+      grade4_bee_conditionals_quantum2: 'Veel pilvi!\\r\\r Kontrolli iga pilve alla, et näha, kas seal all on lill peidus, enne kui sa nektarit korjad. \\r\\r Pea meeles: kõikide pilvede all ei ole sama asi!'
       grade4_bee_conditionals_quantum4: Mõnikord katab pilv lille ja mõnikord meekärge! Kasuta kui/muidu plokki, et nektarit koguda kui seal on lill, muidu tee mett (sest seal on meekärg).
-      grade4_bee_conditionals_quantum5: |-
-        Nende pilvede taga võib olla kas lill või meekärg.\r\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\r Muidu tee mett (sest tegu on meekärjega).
+      grade4_bee_conditionals_quantum5: Nende pilvede taga võib olla kas lill või meekärg.\\r\\r Kasuta "kui/muidu" plokki, et koguda nektarit, kui tegu on lillega.\\r Muidu tee mett (sest tegu on meekärjega).
       grade4_bee_functions1: Kogu kogu nektar igalt lillelt.
       grade4_bee_functions2: Funktsioonid on koodide blokid, mis ülesande täidavad. Kasuta "kogu 2 nektarit" ("get 2 nectar") funktsiooni et koguda õietolm igalt lillelt.
       grade4_bee_functions3: Ehita 'võta 5' funktsiooni, mida selles ülesandes kasutada.
       grade4_bee_functions4: Funktsioon "liiguta ja kogu nektarit" pöörab mesilast, kogub nektarit ja viib mesilase algpunkti tagasi. Kasuta seda funktsiooni kogu nektari kogumiseks.
       grade4_bee_nestedLoops0: Kasuta kordust, et koguda kogu nektar.
-      grade4_bee_nestedLoops1: Kogu nektarit igalt lillelt. Kasuta korduse pesa. 
+      grade4_bee_nestedLoops1: Kogu nektarit igalt lillelt. Kasuta korduse pesa.
       grade4_bee_nestedLoops3: Kogu kokku kogu nektar, loo selleks korduste pesa.
-      grade4_bee_nestedLoops4: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\r\r Kasuta pesaga tsüklit. '
+      grade4_bee_nestedLoops4: 'Kogu kõikidest lilledest kogu nektar kokku ja tee meekärje juures mett.\\r\\r Kasuta pesaga tsüklit. '
       grade4_frozen_freeplay: Sa oled ametlikult meister kunstnik! Loo talve võlumaa.
       grade4_frozen_functions0: Nuputa välja, mis numbriga asendada küsimärk, et joonistada ring?
       grade4_frozen_functions1a: Kasuta uut "Loo ring" blokk, et luua 10 kattuvat ringi. Ära unusta ringide vahel hüpata edasi.
@@ -1483,108 +1454,95 @@ et:
       grade4_frozen_square_loop2: Loome kolm ruutu, peale igat ruutu peaks aga keerama. Keera peale igat ruutu 120 kraadi.
       grade4_frozen_square_loop3: Kas sa saad luua lumehelbe kasutades "Korda" blokki, et joonistada ruutu 10 korda ja "Keera" blokki", et keerata iga ruudu vahel 36 kraadi?
       grade4_playlab_freeplay: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
-      grade4_playlab_test: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      grade4_playlab_test: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
       grade4_playlab_test2: Siin on funktsioon nimega „hüppa“, millega su peategelane hüppab 100 piksli võrra üles. Kasuta hüppamise funktsiooni, et liigutada koera nooleklahvide abil ja koguda kokku kõik lipud.
-      grade4_review_artist1: Tere, olen kunstnik. Sa saad kirjutada koodi, et panna mind peaaegu kõike joonistama. Kasuta mõndasid plokke et panna mind joonistama hallidele joontele mis on pildil. (Iga joon on 100 pikslit pikk)
       grade4_review_artist2: 'Sellele majale on katust vaja! Joonista kolmnurk. Vihje: kõik kolm külge on sama pikad.'
-      grade4_review_artist3: "'Hüppa' plokk liigutab kunstnikku ilma et ta joonistaks. Joonista katkendlik joon kasutades 'hüppa edasi' ja 'liigu edasi' plokke.\nIga joon on 50 piksli pikkune."
+      grade4_review_artist3: |-
+        'Hüppa' plokk liigutab kunstnikku ilma et ta joonistaks. Joonista katkendlik joon kasutades 'hüppa edasi' ja 'liigu edasi' plokke.
+        Iga joon on 50 piksli pikkune.
       grade4_review_bee1: Kasuta plokki 'korda', et kogu nektar kokku koguda ja teha kogu mesi.
       grade4_review_bee2: Kogu nektarit igalt lillelt ning tee mett igas kärjes, kasutades võimalikult vähe plokke.
-      grade4_review_bee3: |-
-        Kui usin mesilane!\r\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
-      grade5_artist_binary1: "Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?"
+      grade4_review_bee3: Kui usin mesilane!\\r\\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
+      grade5_artist_binary1: Kahendkood ehk binaar võimaldab andmeid tähistada, kasutades selleks ainult kaht olekut või tähist. Siin kasutame olekuid „väljas“ (tähistatuna numbriga 0) ja „sees“ (tähistatuna numbriga 1).  \\r \\r Tegime sulle „pikslitest“ koosneva ruudustiku, millel sa saad liikuda ja disaine luua, pöörates ainult teatud ruutudel.  Kas oskad teha nii, et kunstnik joonistaks esimesel real kahendkoodis „01010101“?
       grade5_artist_binary10: Kliki siia, et näha vihjeid.
       grade5_artist_binary11: 'Vaba mäng: Siin on valge leht, millele saad joonistada. Hea joonistamist!'
-      grade5_artist_binary2: "Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks."
+      grade5_artist_binary2: Siin on funktsioon, mis võtab ühtedest ja nullidest koosneva kahendstringi ja juhendab kunstnikku neid järgima vasakult paremale, ülevalt alla.  Kui kunstnik näeb ühte, täidab ta ruudud, ja kui ta näeb nulli, jätab ta need vahele. \\r \\r Käivita see kood, et näha, kuidas kunstnik kasutab kahendkoodi selle mustri joonistamiseks.
       grade5_artist_binary3: Millist neist kahendstringidest saad sa 8 korda korrata, et joonistada see pilt?
       grade5_artist_binary4: Kas oskad selle mustri joonistada, korrates kolme kahekohalist arvu?
       grade5_artist_binary5: Iga kahendstring tähistab üht selle pildi rida. Kas oskad need ümber korraldada nii, et see joonistaks kurva näo asemel naeratava näo?
       grade5_artist_binary6: Milline kuuekohaline kahendstring joonistab 11 korda korratuna selle pildi?
       grade5_artist_binary7: Milline on lühim kahendstring, mida sa saad selle pildi joonistamiseks korrata?
       grade5_artist_binary8: Lõpeta see joonistus.
-      grade5_artist_binary9: |-
-        Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\r \r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?
+      grade5_artist_binary9: Siin on joonistamiseks suurema eraldusvõimega lõuend – 16 korda 16 pikslit!\\r \\r Kas näed, mis juhtub, kui hakkame bittidesse loominguliselt suhtuma?
       grade5_artist_for_loops1: Kasuta 'korduste arvu' tsüklit 50 piksli laiuse kolmnurga joonistamiseks. Kui sa oskad ühe kaupa 1st 3ni loendada võid seda kasutada nagu 'korda' tsüklit.
       grade5_artist_for_loops10: |-
-        Mõtled välja, kuidas kasutada kõiki neid asju, et selline pilt luua! \r
-        \r
+        Mõtled välja, kuidas kasutada kõiki neid asju, et selline pilt luua! \\r
+        \\r
         Soovid vihjet? Kliki siia.
-      grade5_artist_for_loops5: |-
-        Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\r \r Vihje: sa pead midagi eemaldama!
+      grade5_artist_for_loops5: 'Selle joonistuse saab luua, muutes eelmise pildi koodis ainult üht väikest asja. Kas saad aru, mida peaks muutma?\\r \\r Vihje: sa pead midagi eemaldama!'
       grade5_artist_for_loops6: Kui pöörate kujundit tehes natuke rohkem või vähem, saad kena efekti. Proovi kasutada osa eelmise taseme koodi, kuid pööra 89 kraadi, et luua see väänatud ruuduspiraal.
       grade5_artist_for_loops7: Selleks tee kolm väikest muudatust eelmise taseme koodis!
       grade5_artist_for_loops8: 'Kas mäletad, kui kasutasime ühes eelmises etapis muutujat kujundi külgede arvu juhtimiseks? Nüüd teeme sama muutujaga „loendur“. See muster alustab kolmnurgaga ja lisab korraga ühe külje, kuni valmib kümmenurk (10 külge). Iga külg peab olema 100 piksli pikkune. Vihje: 360 jagatud kujundi külgede arvuga annab kraadide arvu, mille võrra tuleb pöörata.'
-      grade5_artist_for_loops9: |-
-        Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\r \r Pisut koodi on sulle juba ette antud.
-      grade5_artist_for_loopsfreeplay11: |-
-        Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\r \r Vajad vihjet? Klõpsa siia.
-      grade5_artist_functionparameters10: "Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? "
+      grade5_artist_for_loops9: Paneme nüüd kõik selle kokku! Kasuta oma teadmisi korduste arvu tsüklite ja loenduri kohta, et luua see joonistus, kus igal kujundil on eelmisega võrreldes kaks külge rohkem. Iga külg peab olema 10 korda pikem kui hulknurga külgede arv.\\r \\r Pisut koodi on sulle juba ette antud.
+      grade5_artist_for_loopsfreeplay11: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Vajad vihjet? Klõpsa siia.'
+      grade5_artist_functionparameters10: 'Vaba mängu inspiratsioon: oled nüüd õppinud kõike, mida on vaja sellise mustri tegemiseks! Kui see pilt sulle meeldib, proovi luua midagi sarnast. Muidugi võid ka luua täiesti omaenda disaini.\\r \\r Kas tahad teada, kuidas on tehtud meie näidismuster? '
       grade5_artist_functionparameters11: 'Vaba mäng: Siin on funktsioonid, mille oled kirjutanud ning veel mõned, millega saad mängida. Joonista midagi ägedat! Katseta pliiatsijoone laiusega, et näha, kuidas see sinu joonistusi muudab!'
       grade5_artist_functionparameters7: See pilt on eelmise sarnane. Kas oskad selle pildi tegemiseks kasutada koos oma funktsiooniga korduste arvu tsüklit?
       grade5_artist_functionparameters8: Kolmnurgal on 21 piksli pikkused küljed ja iga järgneva kujundi küljed on 7 pikslit pikemad eelneva kujundi külgedest. Kasuta "korrutamise" plokki, et seda teha ainult ühe funktsiooniga. Tee hulknurkade vahel kindlasti 100 piksli suurune hüpe.
-      grade5_artist_functionparameters_6: |-
-        Kas oskad selle joonistuse lõpetada? Kõigi kujundite küljepikkus on 100 pikslit.
-      grade5_artist_parameters_squares1: 'Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.'
+      grade5_artist_functionparameters_6: Kas oskad selle joonistuse lõpetada? Kõigi kujundite küljepikkus on 100 pikslit.
+      grade5_artist_parameters_squares1: Klõpsa käsku „redigeeri“, et täita funktsiooni „joonista ruut“ määratlus ja lisada üks parameeter. Selleks on vaja pikkuse parameetrit, just nagu kolmnurga puhul. See kord joonista kolm ruutu küljepikkusega 25, 50 ja 75, vahekaugus 100 pikslit.
       grade5_artist_parameters_triangles2a: Kas märkad nende funktsiooniplokkide juures mingit erinevust? Klõpsa käsku „Käivita“ ja vaata, mis juhtub.
       grade5_artist_parameters_triangles4: Selle kolmnurgafunktsiooni kood on katki. Kas oskad funktsiooni parandada ja teha kolmnurgad küljepikkusega 25, 50 ja 75?
       grade5_artist_variables_freeplay10: 'Vaba mäng: katseta selle kujundi külgede arvuga. Kas oskad algoritmi nii muuta, et kujundi üldine suurus jääks samaks olenemata sellest, kui palju külgi sellel on? Vihje: kui jagad oma lähtepikkuse külgede arvuga, muutub iga külje pikkus külgede arvu suurenedes lühemaks.'
-      grade5_artist_variables_freeplay14: |-
-        Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\r \r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab.
-      grade5_artist_variables_freeplay15: |-
-        Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\r \r Võid aga ka teha täiesti omaenda disaini!
+      grade5_artist_variables_freeplay14: 'Vaba mäng: katseta! Nüüd on sinu algoritm pesastatud veel ühes tsüklis. Proovi muuta oma kahe muutuja väärtusi, et joonistada ägedaid mustreid.\\r \\r Veel uhkema efekti saamiseks proovi lisada ka värve!  Kasuta tsüklites juhuslikke värve, et näha, kuidas see su disaini muudab.'
+      grade5_artist_variables_freeplay15: Kas soovid veel korra vaadata näidisdisaini või vihjeid?  Klõpsa siia!\\r \\r Võid aga ka teha täiesti omaenda disaini!
       grade5_artist_variables_freeplay16: Kas mängid ikka veel? Siin on tühi lõuend, kus saad luua ükskõik mida!
-      grade5_artist_variables_hexagons1: "Proovime uuesti!\\r\n\\r \nKas oskad määrata pikkuse muutujaks 60, et teha see äge kuusnurkadega disain?"
+      grade5_artist_variables_hexagons1: "Proovime uuesti!\\\\r\n\\\\r \nKas oskad määrata pikkuse muutujaks 60, et teha see äge kuusnurkadega disain?"
       grade5_artist_variables_letterT11: Siin on keerulisem kood, mis kasutab eelmise mõistatuse põhimõtteid. Mis sa peaksid määrama muutujaks „küljed“, et joonistada see pilt ruutudest?
-      grade5_artist_variables_octagons13: "Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \\r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\\r Kas vajad vihjeid? Klõpsa siia."
-      grade5_artist_variables_pentagon8: |-
-        Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\r \r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?
+      grade5_artist_variables_octagons13: Kui kujundil on palju külgi, siis kogu mustri ekraanile mahutamiseks peab iga külg olema lühem. \\r Loome uuesti selle võrratu mustri algoritmi, kuid käsitsi määratava muutuja „pikkus“ asemel kasutame matemaatikaplokki muutujaga „küljed“, et kõik kujundid mahuksid ekraanile ära. Iga hulknurga ümbermõõt on 300 pikslit.\\r Kas vajad vihjeid? Klõpsa siia.
+      grade5_artist_variables_pentagon8: Kasuta seda, mis sa eelmises mõistatuses õppisid, et luua see kuusnurk muutuja „küljed“ abil.\\r \\r Kas näed, kuidas saad ainult üht väärtust muutes joonistada kolmnurga, nelinurga, viisnurga või kaheksanurga?
       grade5_artist_variables_pentagon9: Nüüd koosta uuesti eelmise taseme algoritm ja loo viisnurk küljepikkusega 150.
-      grade5_artist_variables_pentagons1: "Joonista see muster 100 piksli pikkuste külgedega viisnurkadest, määrates õige 'pikkuse' ja langetades 'pikkuse' muutuja õigetesse kohtadesse.\\r\\r \nKas märkasid, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?"
+      grade5_artist_variables_pentagons1: "Joonista see muster 100 piksli pikkuste külgedega viisnurkadest, määrates õige 'pikkuse' ja langetades 'pikkuse' muutuja õigetesse kohtadesse.\\\\r\\\\r \nKas märkasid, kuidas saad määrata pikkuse väärtuse vaid ühe korra ja kood kasutab igal pool õiget väärtust?"
       grade5_artist_variables_pentagons12: Määrame muutuja „küljed“ väärtuseks 5. Mida rohkem külgi me sellele algoritmile lisame, seda suuremaks kogu muster muutub! Pane tähele, et seal on ka teine muutuja nimega „pikkus“. Saame seda nüüd kasutada igal pool, kus meil on funktsioon „liigu edasi“. Määra selle kujundi muutuja „pikkus“ väärtuseks 75.
       grade5_artist_variables_rectangle6: Nüüd soovin teha nelinurga, mille kõrgus oleks laiusest kaks korda suurem. Meil on muutuja nimega „laius“, mille väärtuseks peab määrama 100. Kas oskad selle koodi lõpetamiseks kasutada matemaatikaplokke?
-      grade5_artist_variables_square7: |-
-        Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\r \r Klõpsa siia, et minna tagasi vihje juurde!
+      grade5_artist_variables_square7: Siin on kood, millega saab joonistada korrapäraseid hulknurki. Siin on uus muutuja nimega „küljed“, mille väärtuseks on määratud 4. Kas oskad kasutada külgede muutujat (koos matemaatikaplokiga), et pöörata õige nurga võrra olenemata sellest, kui palju külgesid hulknurgal on?\\r \\r Klõpsa siia, et minna tagasi vihje juurde!
       grade5_artist_variables_triangles2: Funktsiooni „liigu edasi 150 võrra“ viitab plokk „liigu“ nüüd muutujale „pikkus“. Kas oskad määrata muutuja „pikkus“ väärtuseks 150, et joonistada see uus kolmnurk?
       grade5_artist_variables_triangles3: 'Lohista numbriplokk plokki „määra pikkus“, et joonistada 50-piksliste kolmnurkade komplekt. '
       grade5_bee_for_loops1: Kasuta tsüklit, et koguda nektarit igalt lillelt.
       grade5_bee_for_loops2: Lisa vajalik kood, et mesilane koguks kindlasti kokku kogu nektari. Vaata, kui palju koodi on sul selle mõistatuse jaoks vaja! (Järgmises mõistatuses õpime lihtsama meetodi.)
       grade5_bee_for_loops6: Saad korduste arvu tsüklit kasutada ka kahanevaks loenduseks. Proovi nektarit koguda, loendades ühe kaupa 5...1.
-      grade5_bee_for_loops8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
+      grade5_bee_for_loops8: 'Sul on see selge! Millist juurdekasvu on vaja, et koguda 3, 6, 9, 12, 15 nektarit?\\r Vihje: mille peab igale arvule lisama, et saada sellele järgnev arv?'
       grade5_playlab_freeplay: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
       grade5_playlab_variables1: See kord sa ei pea koodi kirjutama, klõpsa mängu mängimiseks lihtsalt nuppu „Käivita“! Selles mängus oled sa koer, kes püüab saada rohkem lippe kui kass. Kasuta koera juhtimiseks allanoolt. Kui oled mängimise lõpetanud, klõpsa nuppu „Lõpeta“.
       grade5_playlab_variables10: Muuda funktsiooni „patrull“, lisades parameetri „tegelane“, nii et me saame selle kutsuda iga ekraanil oleva tegelase jaoks. Pea meeles, et tegelastele vastavad numbrid 1, 2 ja 3.
       grade5_playlab_variables11: Lisa funktsioonile „patrull“ teine parameeter nimega „kiirus“. Proovi kasutada kiiruse määramise plokki uue parameetriga „kiirus“, et aidata pingviinil kätte saada mõlemad lipud enne, kui teised tegelased jõuavad esimese lipuni.
-      grade5_playlab_variables12: "Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \\r \\r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks.\\r MÄRKUS: Sa ei pea programmi muutma"
+      grade5_playlab_variables12: 'Hakkame nüüd lõbutsema! Vaata seda koodi ja proovi ära arvata, mida iga plokk teeb.  \\r \\r Kui oled lõpetanud, kasuta nooleklahve koera juhtimiseks ja kõigi lippude korjamiseks.\\r MÄRKUS: Sa ei pea programmi muutma'
       grade5_playlab_variables13: Kasuta plokki „kui tegelane puudutab“, et saata koer tagasi ülesse ja vasakule AINULT siis, kui koer puudutab mõnda muud tegelast.
       grade5_playlab_variables14: 'Vaba mängu aeg! Nüüd saad katsetada kõigi oma tööriistakastis olevate plokkidega. '
-      grade5_playlab_variables2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
+      grade5_playlab_variables2: Võidujooks viimases ülesandes ei olnud kuigi aus! Muuda muutujat „koera\_kiirus“, et saaksid koguda kassist rohkem lippe. Võidab see, kes kogub esimesena 10 lippu!
       grade5_playlab_variables3: Kasuta liikumiseks vasak- ja paremnoolt ning hüppamiseks ülesnoolt. Vaata, kas sul õnnestub kõik lipud kätte saada.
       grade5_playlab_variables4: Nüüd kasutame muutujat nimega „kõrgus“, et juhtida, kui kõrgele saab koer hüpata. Muuda muutujat „kõrgus“ nii, et koer saaks hüpata piisavalt kõrgele kõigi lippude kättesaamiseks.
-      grade5_playlab_variables6: |-
-        Kasuta paremnoolt koogitüki viskamiseks.\r \r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
+      grade5_playlab_variables6: Kasuta paremnoolt koogitüki viskamiseks.\\r \\r Kuidas peaksime oma mängus punkte lugema? Lisa oma muutujale „punktid“ 1 iga kord, kui koer saab kassile koogitükiga pihta. Kasuta skoori suurendamiseks sündmust „kui tegelane 2 puudutab midagi“. Saad muutujat suurendada, määrates „punktid = punktid + 1“. Taseme läbimiseks suurenda skoori kümneni (ühekaupa!).
       grade5_playlab_variables7: Tore! Teeme nüüd mängu natuke raskemaks. Iga kord, kui koer (tegelane 1) saab kassi (tegelane 2) võileivaga pihta, kaotad sina punkti. Alusta 10 punktiga, et mäng ei läheks liiga raskeks. Taseme läbimiseks lase oma skoor langeda kümnelt nullile.
-      grade5_playlab_variables71: "Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\\r \\r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \\r \\r Muutuja „mängija_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\\r \\r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. "
-      grade5_playlab_variables81: "Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. "
-      grade5_playlab_variables9: "Siin on funktsioon nimega „patrull“. \\r\\r Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla."
-      grade5_playlab_variables_freeplay: "Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla."
+      grade5_playlab_variables71: 'Siin on meie mäng varasemast etapist, kuid enamik koodi on peidetud. Seal on uus funktsioon nimega „skoori_punktid“.\\r \\r Muuda funktsiooni nii, et parameeter „punktid“ lisatakse muutujale „mängija_skoor“. \\r \\r Muutuja „mängija\_skoor“ väärtus peab suurenema iga kord, kui koer saab kassile südametega pihta, ja vähenema iga kord, kui kass saab koerale südametega pihta.\\r \\r Märkus: kui oled lõpetanud, klõpsa mängimiseks käsku „Käivita“. Kui koer saab 6 punkti, viiakse sind edasi järgmise mõistatuse juurde. '
+      grade5_playlab_variables81: 'Lisasime sinu jaoks ühe viimase funktsiooni. \\r \\r Kasuta avaldist „kui“, et sinu mäng kasutaks funktsiooni „tase_üles“ ainult siis, kui „mängija_skoor“ ületab teatud arvu.\\r \\r Näide: „mängija\_skoor“ 6 > 6\\r \\r Mängi mängu ja jõua 4. tasemelt edasi, et liikuda järgmisele mõistatusele. '
+      grade5_playlab_variables9: Siin on funktsioon nimega „patrull“. \\r\\r Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
+      grade5_playlab_variables_freeplay: 'Vaba mängu aeg! Siin on kõik muutujad, millega me oleme selles etapis seni mänginud, ja veel mõni juhuks, kui sa neid soovid. \\r \\r Pane tähele, et meie tööriistakastis on nüüd nii palju plokke, et neid on vaja korrastada! Siin panime iga tüki sobivasse kategooriasse.  Vaata kõik pakutav läbi. Kui oled sirvimise lõpetanud, loo mäng või lugu, kasutades kordusi, muutujaid ja sündmusi.  \\r \\r Vihje: kõigi tööruumi käskude nägemiseks keri alla.'
       gradek_adventurer_loops6: Kirjutage kood, mille abil saab kõik kulla kätte.
       gradek_adventurer_loops7: Kirjutage kood, mille abil saab kõik kulla kätte.
-      gradek_adventurer_loops7_challenge: "** Väljakutse: ** Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
+      gradek_adventurer_loops7_challenge: "\\*\\* Väljakutse: \\*\\* Aare läheb treppide üles välja! Kirjutage kood, et  aidata Laurelil see kõik kätte saada."
       iceage_move_events: Kirjutage kood, mille abil saab Scrat kõik tammetõrud kätte!
       iceage_move_events_2018: Kirjutage kood, mille abil saab Scrat kõik tammetõrud kätte!
       k-1 maze 1: Kas oskad mind läände liigutada, et jõuaksin põrsani?
-      level 'grade3_Loops_10: |-
-        Kui usin mesilane!\r\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
-      level 'grade3_Loops_11: "Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?"
+      level 'grade3_Loops_10: Kui usin mesilane!\\r\\r Aita mesilasel kogu nektar kokku koguda ja kogu mesi valmis teha, kasutades nii vähe plokke kui võimalik.
+      level 'grade3_Loops_11: Selle raja kuju on teistsugune kui teistel radadel.\\r\\r Kogu kokku kogu nektar, kasutades võimalikult vähe plokke?
       level 'grade3_Loops_12: Leia kõige kiirem viis selleks, et mesilane koguks kokku kogu nektari ja valmistaks kogu mee!
       level 'grade3_Loops_2: Seekord kasuta kogu nektari kokku kogumiseks tsüklit.
       level 'grade3_Loops_3: Kasuta 'korda' tsüklit, et kogu nektar kokku koguda.
       level 'grade3_Loops_4: Kasuta plokki 'korda', et kogu nektar kokku koguda ja teha kogu mesi.
       level 'grade3_Loops_5: Kui ilus lillepõld! Aita mesilane iga õieni. Tee seda vähem kui 7 ploki abil.
-      level 'grade3_Loops_6: "Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke."
-      level 'grade3_Loops_7: |-
-        Need lilled näevad maitsvad välja!\r\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
+      level 'grade3_Loops_6: Mitu korda võid selles ülesandes tsükleid abiks võtta?\\r\\r Tsüklid on sinu sõbrad! Kasuta neid, et see ülesanne lahendada, kasutades võimalikult vähe plokke.
+      level 'grade3_Loops_7: Need lilled näevad maitsvad välja!\\r\\r Kogu nektarit kõikidelt lilledelt, kasutades nii vähe plokke kui võimalik.
       level 'grade3_Loops_8: Kogu kokku kogu nektar ja valmist kogu mesi, kasutades võimalikult vähe plokke.
       level 'grade3_Loops_9: Kogu nektarit igalt lillelt ning tee mett igas kärjes, kasutades võimalikult vähe plokke.
       level grade3_Loops_2: Seekord kasuta kogu nektari kokku kogumiseks tsüklit.

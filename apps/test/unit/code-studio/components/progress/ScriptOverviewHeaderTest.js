@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert, expect} from '../../../../util/configuredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
@@ -223,5 +223,51 @@ describe('ScriptOverviewHeader', () => {
             node.visibility === NotificationType.teacherAndStudent
         );
       });
+  });
+
+  it('passes properly-formatted versions to AssignmentVersionSelector', () => {
+    const versions = [
+      {
+        name: 'coursea-2017',
+        year: '2017',
+        title: '2017',
+        isStable: true,
+        locales: ['English', 'Italian'],
+        canViewVersion: true
+      },
+      {
+        name: 'coursea-2018',
+        year: '2018',
+        title: '2018',
+        isStable: true,
+        locales: ['English'],
+        canViewVersion: true
+      },
+      {
+        name: 'coursea-2019',
+        year: '2019',
+        title: '2019',
+        isStable: false,
+        locales: [],
+        canViewVersion: false
+      }
+    ];
+    const wrapper = shallow(
+      <ScriptOverviewHeader
+        {...defaultProps}
+        scriptName="coursea-2018"
+        versions={versions}
+        locale="Italian"
+      />
+    );
+
+    const versionSelector = wrapper.find('AssignmentVersionSelector');
+    assert.equal(1, versionSelector.length);
+    const renderedVersions = versionSelector.props().versions;
+    assert.equal(2, renderedVersions.length);
+    const coursea2017 = renderedVersions.find(v => v.name === 'coursea-2017');
+    assert.equal(true, coursea2017.isRecommended);
+    const coursea2018 = renderedVersions.find(v => v.name === 'coursea-2018');
+    assert.equal(true, coursea2018.isSelected);
   });
 });

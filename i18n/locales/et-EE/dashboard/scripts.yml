@@ -1716,6 +1716,8 @@ et:
               name: Internet
             Crowdsourcing:
               name: Ühistegevused
+            Songwriting:
+              name: Laulude kirjutamine
         express-2019:
           stages:
             Relay Programming:
@@ -1819,3 +1821,11 @@ et:
           stages:
             While Loops:
               name: '„Kui“ tsüklid'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Building a Foundation:
+              name: Vundamendi ehitus

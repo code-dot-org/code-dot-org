@@ -18,7 +18,6 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -44,12 +43,7 @@ const styles = {
       'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
-    position: 'relative',
-    // ReactTooltip sets a zIndex of 999. However, because in some cases for us
-    // the ReactTooltip is inside of a rotated div, it ends up in a different
-    // stacking context, and the zIndex doesn't work. Instead we set it here on
-    // the top component
-    zIndex: 999
+    position: 'relative'
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
@@ -122,7 +116,8 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   static defaultProps = {
@@ -138,7 +133,8 @@ class ProgressBubble extends React.Component {
       currentLocation,
       stageTrophyEnabled,
       pairingIconEnabled,
-      hideAssessmentIcon
+      hideAssessmentIcon,
+      inMiniRubricExperiment
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -196,6 +192,7 @@ class ProgressBubble extends React.Component {
         icon={levelIcon}
         text={tooltipText}
         includeAssessmentIcon={levelIsAssessment}
+        inMiniRubricExperiment={inMiniRubricExperiment}
       />
     );
 
@@ -206,6 +203,7 @@ class ProgressBubble extends React.Component {
           text={i18n.unpluggedActivity()}
           fontSize={16}
           tooltip={this.props.hideToolTips ? null : tooltip}
+          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       );
     }
@@ -247,7 +245,7 @@ class ProgressBubble extends React.Component {
                 </span>
               )}
             </div>
-            {experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
+            {inMiniRubricExperiment &&
               levelIsAssessment &&
               !smallBubble &&
               !hideAssessmentIcon && (

@@ -335,3 +335,8 @@ ro:
       DigitalFootprint_2019:
         title: Amprenta ta Digitală
         desc: Profesorii introduc elevilor ideea că postarea informațiilor online despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+      timeforcs_demo_crowdsourcing:
+        title: Obţinând Informaţii/Critici
+      timeforcs_demo_conditionals:
+        title: Condiţionale
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'

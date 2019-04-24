@@ -153,6 +153,8 @@ ku:
     csf_loops: گرێکان
     csf_variables: گۆڕاوەکان
     csp_variables: گۆڕاوەکان
+    csp_lists: لیستەکان
+    csp_loops: گرێکان
   pd:
     form_labels:
       email: ئیمەیڵ

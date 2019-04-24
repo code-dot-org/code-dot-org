@@ -86,7 +86,7 @@ class SectionProgress extends Component {
     this.props.setLessonOfInterest(lessonOfInterest);
   };
 
-  renderTooltips() {
+  renderTooltips(inMiniRubricExperiment) {
     return this.props.scriptData.stages.map(stage => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
@@ -95,10 +95,9 @@ class SectionProgress extends Component {
         wrapper="span"
         effect="solid"
       >
-        {stageIsAllAssessment(stage.levels) &&
-          experiments.isEnabled(experiments.MINI_RUBRIC_2019) && (
-            <FontAwesome icon="check-circle" style={styles.icon} />
-          )}
+        {stageIsAllAssessment(stage.levels) && inMiniRubricExperiment && (
+          <FontAwesome icon="check-circle" style={styles.icon} />
+        )}
         {stage.name}
       </ReactTooltip>
     ));
@@ -123,6 +122,10 @@ class SectionProgress extends Component {
       scriptData,
       isLoadingProgress
     } = this.props;
+
+    const inMiniRubricExperiment = experiments.isEnabled(
+      experiments.MINI_RUBRIC_2019
+    );
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const linkToOverview = this.getLinkToOverview();
@@ -171,9 +174,11 @@ class SectionProgress extends Component {
                 section={section}
                 scriptData={scriptData}
                 onScroll={this.afterScroll}
+                inMiniRubricExperiment={inMiniRubricExperiment}
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
+                inMiniRubricExperiment={inMiniRubricExperiment}
               />
             </div>
           )}
@@ -184,6 +189,7 @@ class SectionProgress extends Component {
                 stageExtrasEnabled={section.stageExtras}
                 scriptData={scriptData}
                 onScroll={this.afterScroll}
+                inMiniRubricExperiment={inMiniRubricExperiment}
               />
               <ProgressLegend
                 excludeCsfColumn={scriptData.excludeCsfColumnInLegend}
@@ -191,7 +197,7 @@ class SectionProgress extends Component {
             </div>
           )}
         </div>
-        {levelDataInitialized && this.renderTooltips()}
+        {levelDataInitialized && this.renderTooltips(inMiniRubricExperiment)}
       </div>
     );
   }

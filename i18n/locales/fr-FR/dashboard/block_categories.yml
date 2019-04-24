@@ -22,12 +22,12 @@ fr:
       Text: Texte
       Picker: Sélecteur
       Comment: Commentaire
+      World: Monde
+      Behaviors: Comportements
       'Variables ': 'Variables '
       Default: Par défaut
-      Behaviors: Comportements
       Locations: Emplacements
       everythingelse: toutlereste
-      World: Monde
       Location: Localisation
       numbers: nombres
       Numbers: Nombres

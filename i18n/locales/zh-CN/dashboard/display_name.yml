@@ -2,6 +2,8 @@ zh-CN:
   data:
     display_name:
       AB_Debug_Artist1: '小艺术家调试模式 #1 (AB)'
+      Alien Defender: 外星人辩护人
+      Alien Defender_2018: 外星人辩护人
       App Lab Intro 8 - Video Design Mode: '视频：设计模式'
       App Lab Intro 8 - Video Getting Started: '视频：开始'
       App Lab Intro 8 - Video Images and Sounds: '视频：图像和声音'
@@ -28,8 +30,13 @@ zh-CN:
       AppLab Intro 4 - Change Two Buttons: 两个按钮
       AppLab Intro 4 - Full Text: 两个按钮
       AppLab Intro 4 - Video Welcome: 欢迎来到《编程一小时》
+      AppLab Intro 4 - Video designMode: '# 设计模式抢先看'
       AppLab Intro 4 - Video onEvent: 使用 onEvent
       AppLab Intro 4 - Video setProperty: 开始
+      AppLab Intro 4 - Video share thisThat: 分享你的作品
+      AppLab Intro 4 - Video share your work: 分享你的作品
+      AppLab Intro 4 - Video share: 分享你的作品
+      AppLab Intro 4 - Video sneak designMode: '# 设计模式抢先看'
       AppLab Intro 4 - Video using onEvent: 使用 onEvent
       AppLab Intro 4 - onEvent before: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 4 - onEvent intro: 使按钮工作
@@ -37,6 +44,8 @@ zh-CN:
       AppLab Intro 4 - onEvent twoButtons: 更多 当事件发生时(onEvent) 的练习
       AppLab Intro 4 - playSound: 使用 播放声音
       AppLab Intro 4 - stopSound: 使用 播放声音
+      AppLab Intro 4 - thisOrThat design: 这个或那个设计
+      AppLab Intro 4 - thisOrThat template: 这个或那个设计
       AppLab Intro 4 - thisOrThat: 交替摆臂
       AppLab Intro 5 - Change Screen Color: 更改屏幕颜色
       AppLab Intro 5 - Change Text 2: 更改文本
@@ -78,22 +87,85 @@ zh-CN:
       AppLab Intro 7 - thisOrThatAddScreen: 交替摆臂
       AppLab Intro 7 - thisOrThatPersonalize: 交替摆臂
       AppLab Intro 7 - thisOrThatSetScreen: 交替摆臂
+      CDEF_video_SpritesInAction: 如何制作精灵
+      CDEF_video_SpritesInAction_2019: 如何制作精灵
+      CSD Board Buttons Map: 按钮和开关
+      CSD Board Buttons Map_2018: 按钮和开关
+      CSD Board Buttons Map_2019: 按钮和开关
+      CSD Board Sensors Map: 模拟传感器
+      CSD Board Sensors Map_2018: 模拟传感器
+      CSD Board Sensors Map_2019: 模拟传感器
+      CSD Booleans Map: 布尔值和比较运算符
+      CSD Booleans Map_2018: 布尔值和比较运算符
+      CSD Booleans Map_2019: 布尔值和比较运算符
+      CSD Buzzer Map: '电路播放场：模糊'
+      CSD Buzzer Map_2018: '电路播放场：模糊'
+      CSD Buzzer Map_2019: '电路播放场：模糊'
+      CSD Counter Pattern Map: 计数器模式
+      CSD Counter Pattern Map_2018: 计数器模式
+      CSD Counter Pattern Map_2019: 计数器模式
+      CSD For Loops - Check For Understanding: 检查您的理解
       CSD If Else Map: If-else 语句
       CSD If Else Map_2018: If-else 语句
       CSD If Else Map_2019: If-else 语句
+      CSD If Statements Map: If 语句
+      CSD If Statements Map_2018: If 语句
+      CSD If Statements Map_2019: If 语句
+      CSD Introduction to Lists - Length: 列表简介-长度
+      CSD LEDs Map: '电路播放场：LED'
+      CSD LEDs Map_2018: '电路播放场：LED'
+      CSD LEDs Map_2019: '电路播放场：LED'
       CSD Polling Events Map: 轮询事件
       CSD Polling Events Map_2018: 轮询事件
       CSD Polling Events Map_2019: 轮询事件
+      CSD Set Scale Map: 改变传感器的级别
+      CSD Set Scale Map_2018: 改变传感器的级别
+      CSD Set Scale Map_2019: 改变传感器的级别
+      CSD Timed For Loop Map: 定时的循环
       CSD Timed Loop Map: 定时的循环
+      CSD U1 Feedback FR: 问题 6
+      CSD U1 Test Collaborate FR: 问题7
+      CSD U1 Test Feedback FR: 问题 6
+      CSD U1 Test Iteration FR: 问题8
+      CSD U1 Test storage FR: 问题5
+      CSD U1L01 TFMD_2018: 课程概述
+      CSD U1L01 TFMD_2019: 课程概述
+      CSD U1L02 TFMD_2018: 课程概述
+      CSD U1L02 TFMD_2019: 课程概述
+      CSD U1L03 TFMD_2018: 课程概述
+      CSD U1L03 TFMD_2019: 课程概述
+      CSD U1L04 TFMD_2018: 课程概述
+      CSD U1L04 TFMD_2019: 课程概述
+      CSD U1L05 TFMD_2018: 课程概述
+      CSD U1L05 TFMD_2019: 课程概述
+      CSD U1L06 TFMD_2018: 课程概述
+      CSD U1L06 TFMD_2019: 课程概述
+      CSD U1L07 TFMD_2018: 课程概述
+      CSD U1L07 TFMD_2019: 课程概述
+      CSD U1L08 TFMD_2018: 课程概述
+      CSD U1L09 TFMD_2018: 课程概述
+      CSD U1L09 TFMD_2019: 课程概述
       CSD U2 CC Search Map: 知识共享检索
       CSD U2 CC Search Map_2018: 知识共享检索
       CSD U2 CC Search Map_2019: 知识共享检索
       CSD U2 CSS Classes Map: CSS 类
       CSD U2 CSS Classes Map_2018: CSS 类
       CSD U2 CSS Classes Map_2019: CSS 类
+      CSD U2 CSS explore CSS: '探索: 添加样式'
+      CSD U2 CSS explore CSS_2018: '探索: 添加样式'
+      CSD U2 CSS explore CSS_2019: '探索: 添加样式'
       CSD U2 HTML Tags Map: HTML 标签
       CSD U2 HTML Tags Map_2018: HTML 标签
       CSD U2 HTML Tags Map_2019: HTML 标签
+      CSD U2 Header Demo: 标题简介
+      CSD U2 Header Sizes: 标题大小
+      CSD U2 Header Test: 标题和段落
+      CSD U2 Headers map: HTML中的标题
+      CSD U2 Headers map_2018: HTML中的标题
+      CSD U2 Headers map_2019: HTML中的标题
+      CSD U2 Heading Demo: 标题简介
+      CSD U2 Heading Demo_2018: 标题简介
+      CSD U2 Heading Demo_2019: 标题简介
       CSD U2 Heading Sizes: 标题大小
       CSD U2 Heading Sizes_2018: 标题大小
       CSD U2 Heading Sizes_2019: 标题大小
@@ -115,18 +187,66 @@ zh-CN:
       CSD U2 Style Sheet Map: CSS和样式表
       CSD U2 Style Sheet Map_2018: CSS和样式表
       CSD U2 Style Sheet Map_2019: CSS和样式表
+      CSD U2 Test Bug FR: 问题8
+      CSD U2 Test Bug: 问题8
+      CSD U2 Test Copyright FR: 问题9
+      CSD U2 Test DigCit FR: 问题10
+      CSD U2 Text Properties Map: CSS 文本属性
+      CSD U2 Text Properties Map_2018: CSS 文本属性
+      CSD U2 Text Properties Map_2019: CSS 文本属性
       CSD U2 a tag map: 超链接
       CSD U2 a tag map_2018: 超链接
       CSD U2 a tag map_2019: 超链接
+      CSD U2 challenge: 挑战
+      CSD U2 challenge_2018: 挑战
+      CSD U2 challenge_2019: 挑战
+      CSD U2 formatting map: 格式化 HTML
+      CSD U2 formatting map_2018: 格式化 HTML
+      CSD U2 formatting map_2019: 格式化 HTML
       CSD U2 images map: HTML 中的图像
       CSD U2 images map_2018: HTML 中的图像
       CSD U2 images map_2019: HTML 中的图像
+      CSD U2 lists map: HTML 中的列表
+      CSD U2 lists map_2018: HTML 中的列表
+      CSD U2 lists map_2019: HTML 中的列表
+      CSD U2 publish video: 发布您的网站
+      CSD U2L01 TFMD_2018: 课程概述
+      CSD U2L01 TFMD_2019: 课程概述
+      CSD U2L02 TFMD_2018: 课程概述
+      CSD U2L02 TFMD_2019: 课程概述
+      CSD U2L03 TFMD_2018: 课程概述
+      CSD U2L03 TFMD_2019: 课程概述
+      CSD U2L04 TFMD_2018: 课程概述
+      CSD U2L04 TFMD_2019: 课程概述
+      CSD U2L05 TFMD_2018: 课程概述
+      CSD U2L05 TFMD_2019: 课程概述
+      CSD U2L06 TFMD_2018: 课程概述
+      CSD U2L06 TFMD_2019: 课程概述
+      CSD U2L07 TFMD_2018: 课程概述
+      CSD U2L07 TFMD_2019: 课程概述
+      CSD U2L08 TFMD_2018: 课程概述
+      CSD U2L08 TFMD_2019: 课程概述
+      CSD U2L09 TFMD_2018: 课程概述
+      CSD U2L09 TFMD_2019: 课程概述
+      CSD U2L10 TFMD_2018: 课程概述
+      CSD U2L10 TFMD_2019: 课程概述
+      CSD U2L11 TFMD_2018: 课程概述
+      CSD U2L11 TFMD_2019: 课程概述
+      CSD U2L12 TFMD_2018: 课程概述
+      CSD U2L12 TFMD_2019: 课程概述
+      CSD U2L13 TFMD_2018: 课程概述
+      CSD U2L13 TFMD_2019: 课程概述
+      CSD U2L14 TFMD_2018: 课程概述
+      CSD U2L14 TFMD_2019: 课程概述
       CSD U3 - Booleans Video: '视频: 布尔值'
       CSD U3 - Booleans Video_2018: '视频: 布尔值'
       CSD U3 - Booleans Video_2019: '视频: 布尔值'
       CSD U3 - Conditionals Video: '视频：条件'
       CSD U3 - Conditionals Video_2018: '视频：条件'
       CSD U3 - Conditionals Video_2019: '视频：条件'
+      CSD U3 - conditionals - first conditional 2-2018: 可见性挑战
+      CSD U3 - conditionals - first conditional 2_2018: 可见性挑战
+      CSD U3 - conditionals - first conditional 2_2018_2019: 可见性挑战
       CSD U3 Animation Edit Map: 编辑图像
       CSD U3 Animation Edit Map_2018: 编辑图像
       CSD U3 Animation Edit Map_2019: 编辑图像
@@ -136,7 +256,32 @@ zh-CN:
       CSD U3 AnimationsMulti Play Defender: 示例游戏
       CSD U3 AnimationsMulti Play Defender_2018: 示例游戏
       CSD U3 AnimationsMulti Play Defender_2019: 示例游戏
+      CSD U3 Complex Movement counter prediction gamelab: 速度和计数模式
+      CSD U3 Complex Movement counter prediction gamelab_2018: 速度和计数模式
+      CSD U3 Complex Movement counter prediction gamelab_2019: 速度和计数模式
+      CSD U3 Compound Nested Challenge: '挑战：检查多重条件'
+      CSD U3 Compound Nested Challenge_2018: '挑战：检查多重条件'
+      CSD U3 Compound Nested Challenge_2019: '挑战：检查多重条件'
       CSD U3 Draw Loop Map: 绘制循环
+      CSD U3 Draw Loop Plugged update your scene: '挑战：扩展您的场景'
+      CSD U3 Draw Loop Plugged update your scene_2018: '挑战：扩展您的场景'
+      CSD U3 Draw Loop Plugged update your scene_2019: '挑战：扩展您的场景'
+      CSD U3 Drawing Squares to Corners: 使用网格
+      CSD U3 Drawing Squares to Corners_2018: 使用网格
+      CSD U3 Drawing Squares to Corners_2019: 使用网格
+      CSD U3 Entertainment Sample 3: 精灵场景
+      CSD U3 Entertainment Sample 3_2018: 精灵场景
+      CSD U3 Entertainment Sample 3_2019: 精灵场景
+      CSD U3 Entertainment Sample 4: 精灵场景
+      CSD U3 Entertainment Sample 4_2018: 精灵场景
+      CSD U3 Entertainment Sample 4_2019: 精灵场景
+      CSD U3 Functions Call Function_2019: '视频：调用和定义函数'
+      CSD U3 Interactive Card Exemplar_2018: 互动卡
+      CSD U3 Interactive Card Exemplar_2019: 互动卡
+      CSD U3 Keyboard Input Challenge-2018: '挑战: 添加更多输入'
+      CSD U3 Keyboard Input Challenge: '挑战: 添加更多输入'
+      CSD U3 Keyboard Input Challenge_2018: '挑战: 添加更多输入'
+      CSD U3 Keyboard Input Challenge_2018_2019: '挑战: 添加更多输入'
       CSD U3 L11 Freeplay: 自由发挥
       CSD U3 L11 Freeplay_2018: 自由发挥
       CSD U3 L11 Freeplay_2019: 自由发挥
@@ -179,65 +324,873 @@ zh-CN:
       CSD U3 L9 Freeplay: 自由发挥
       CSD U3 L9 Freeplay_2018: 自由发挥
       CSD U3 L9 Freeplay_2019: 自由发挥
+      CSD U3 Plotting Shapes Shape Lab Open: 绘制形状
+      CSD U3 Plotting Shapes Shape Lab: 绘制形状
+      CSD U3 Plotting Shapes Shape Lab_2018: 绘制形状
+      CSD U3 Plotting Shapes Shape Lab_2019: 绘制形状
       CSD U3 Random Number Map Level: 随机数
       CSD U3 Random Number Map Level_2018: 随机数
       CSD U3 Random Number Map Level_2019: 随机数
       CSD U3 Random Number Map: 随机数
+      CSD U3 Scene Example-2018: 精灵场景
+      CSD U3 Scene Example: 精灵场景
+      CSD U3 Scene Example_2018: 精灵场景
+      CSD U3 Scene Example_2018_2019: 精灵场景
       CSD U3 Sprite Properties Map: 精灵属性
       CSD U3 Sprite Properties Map_2018: 精灵属性
       CSD U3 Sprite Properties Map_2019: 精灵属性
+      CSD U3 Sprites Map: 创建精灵
+      CSD U3 Sprites Map_2018: 创建精灵
+      CSD U3 Sprites Map_2019: 创建精灵
+      CSD U3 Sprites scene challenge: '挑战：扩展您的场景'
+      CSD U3 Sprites scene challenge_2018: '挑战：扩展您的场景'
+      CSD U3 Sprites scene challenge_2019: '挑战：扩展您的场景'
       CSD U3 The Draw Loop Map: 绘制循环
       CSD U3 The Draw Loop Map_2018: 绘制循环
       CSD U3 The Draw Loop Map_2019: 绘制循环
+      CSD U3 Variables Challenge: '挑战：更新变量'
+      CSD U3 Variables Challenge_2018: '挑战：更新变量'
+      CSD U3 Variables Challenge_2019: '挑战：更新变量'
+      CSD U3 Variables Draw Challenge: '挑战：绘制图像'
+      CSD U3 Variables Draw Challenge_2018: '挑战：绘制图像'
+      CSD U3 Variables Draw Challenge_2019: '挑战：绘制图像'
       CSD U3 Variables Map: 变量
       CSD U3 Variables Map_2018: 变量
       CSD U3 Variables Map_2019: 变量
+      CSD U3 Watchers Map: 使用监视器调试
+      CSD U3 Watchers Map_2018: 使用监视器调试
+      CSD U3 Watchers Map_2019: 使用监视器调试
+      CSD U3 acceleration map: 速度和计数模式回顾
+      CSD U3 acceleration map_2018: 速度和计数模式回顾
+      CSD U3 acceleration map_2019: 速度和计数模式回顾
+      CSD U3 challenge face: '挑战: 面对'
+      CSD U3 challenge face_2018: '挑战: 面对'
+      CSD U3 challenge face_2019: '挑战: 面对'
+      CSD U3 challenge new shape: '挑战: 形状'
+      CSD U3 challenge new shape_2018: '挑战: 形状'
+      CSD U3 challenge new shape_2019: '挑战: 形状'
       CSD U3 collisions build isTouching: 碰撞检测
       CSD U3 collisions build isTouching_2018: 碰撞检测
       CSD U3 collisions build isTouching_2019: 碰撞检测
       CSD U3 collisions car intro: 示例游戏
       CSD U3 collisions car intro_2018: 示例游戏
       CSD U3 collisions car intro_2019: 示例游戏
+      CSD U3 collisions predict set velocity code: 精灵互动
+      CSD U3 collisions predict set velocity code_2018: 精灵互动
+      CSD U3 collisions predict set velocity code_2019: 精灵互动
+      CSD U3 finishing touches: 项目 - 最后的点缀
+      CSD U3 finishing touches_2018: 项目 - 最后的点缀
+      CSD U3 finishing touches_2019: 项目 - 最后的点缀
+      CSD U3 function video: '视频: 功能'
       CSD U3 functions map: 函数
+      CSD U3 functions review: 功能回顾
+      CSD U3 functions review_2018: 功能回顾
+      CSD U3 functions review_2019: 功能回顾
+      CSD U3 if else predict: 预测
+      CSD U3 interactions map: 精灵互动回顾
+      CSD U3 interactions map_2018: 精灵互动回顾
+      CSD U3 interactions map_2019: 精灵互动回顾
+      CSD U3 istouching map: 碰撞检测回顾
+      CSD U3 istouching map_2018: 碰撞检测回顾
+      CSD U3 istouching map_2019: 碰撞检测回顾
+      CSD U3 naming map: 命名变量
+      CSD U3 naming map_2018: 命名变量
+      CSD U3 naming map_2019: 命名变量
+      CSD U3 picture: '挑战：绘制图像'
+      CSD U3 picture_2018: '挑战：绘制图像'
+      CSD U3 picture_2019: '挑战：绘制图像'
+      CSD U3 platform challenge: 改善您的游戏
+      CSD U3 platform challenge_2018: 改善您的游戏
+      CSD U3 platform challenge_2019: 改善您的游戏
+      CSD U3 plotting shapes map: 在游戏实验室中绘制形状
+      CSD U3 plotting shapes map_2018: 在游戏实验室中绘制形状
+      CSD U3 plotting shapes map_2019: 在游戏实验室中绘制形状
+      CSD U3 rect: 游戏实验室简介
+      CSD U3 rect_2018: 游戏实验室简介
+      CSD U3 rect_2019: 游戏实验室简介
+      CSD U3 shape size map: 形状和参数
+      CSD U3 shape size map_2018: 形状和参数
+      CSD U3 shape size map_2019: 形状和参数
+      CSD U3 velocity map: 精灵速度
+      CSD U3 velocity map_2018: 精灵速度
+      CSD U3 velocity map_2019: 精灵速度
+      CSD U3L01 TFMD_2018: 课程概述
+      CSD U3L01 TFMD_2019: 课程概述
+      CSD U3L02 TFMD_2018: 课程概述
+      CSD U3L02 TFMD_2019: 课程概述
+      CSD U3L03 TFMD_2018: 课程概述
+      CSD U3L03 TFMD_2019: 课程概述
+      CSD U3L04 TFMD_2018: 课程概述
+      CSD U3L04 TFMD_2019: 课程概述
+      CSD U3L05 TFMD_2018: 课程概述
+      CSD U3L05 TFMD_2019: 课程概述
+      CSD U3L06 TFMD_2018: 课程概述
+      CSD U3L06 TFMD_2019: 课程概述
+      CSD U3L07 TFMD_2018: 课程概述
+      CSD U3L07 TFMD_2019: 课程概述
+      CSD U3L08 TFMD_2018: 课程概述
+      CSD U3L08 TFMD_2019: 课程概述
+      CSD U3L09 TFMD_2018: 课程概述
+      CSD U3L09 TFMD_2019: 课程概述
+      CSD U3L10 TFMD_2018: 课程概述
+      CSD U3L10 TFMD_2019: 课程概述
+      CSD U3L11 TFMD_2018: 课程概述
+      CSD U3L11 TFMD_2019: 课程概述
+      CSD U3L12 TFMD_2018: 课程概述
+      CSD U3L12 TFMD_2019: 课程概述
+      CSD U3L13 TFMD_2018: 课程概述
+      CSD U3L13 TFMD_2019: 课程概述
+      CSD U3L14 TFMD_2018: 课程概述
+      CSD U3L14 TFMD_2019: 课程概述
+      CSD U3L15 TFMD_2018: 课程概述
+      CSD U3L15 TFMD_2019: 课程概述
+      CSD U3L16 TFMD_2018: 课程概述
+      CSD U3L16 TFMD_2019: 课程概述
+      CSD U3L17 TFMD_2018: 课程概述
+      CSD U3L17 TFMD_2019: 课程概述
+      CSD U3L18 TFMD_2018: 课程概述
+      CSD U3L18 TFMD_2019: 课程概述
+      CSD U3L19 TFMD_2018: 课程概述
+      CSD U3L19 TFMD_2019: 课程概述
+      CSD U3L20 TFMD_2018: 课程概述
+      CSD U3L20 TFMD_2019: 课程概述
+      CSD U3L21 TFMD_2018: 课程概述
+      CSD U3L21 TFMD_2019: 课程概述
+      CSD U3L22 TFMD_2018: 课程概述
+      CSD U3L22 TFMD_2019: 课程概述
+      CSD U4 - Design Mode Project: '应用程序项目：屏幕设计'
+      CSD U4 - Design Mode Project_2018: '应用程序项目：屏幕设计'
+      CSD U4 - Design Mode Project_2019: '应用程序项目：屏幕设计'
+      CSD U4 Change Screen Map: 更改屏幕
+      CSD U4 Change Screen Map_2018: 更改屏幕
+      CSD U4 Change Screen Map_2019: 更改屏幕
+      CSD U4 Design Elements Map: 设计模式元素
+      CSD U4 Design Elements Map_2018: 设计模式元素
+      CSD U4 Design Elements Map_2019: 设计模式元素
+      CSD U4 Design Mode Map: 设计模式简介
+      CSD U4 Design Mode Map_2018: 设计模式简介
+      CSD U4 Design Mode Map_2019: 设计模式简介
+      CSD U4 Importing Screens Map: 导入屏幕
+      CSD U4 Importing Screens Map_2018: 导入屏幕
+      CSD U4 Importing Screens Map_2019: 导入屏幕
       CSD U4 Mult Screen Map: 多屏幕应用程序
       CSD U4 Mult Screen Map_2018: 多屏幕应用程序
       CSD U4 Mult Screen Map_2019: 多屏幕应用程序
+      CSD U4 User Input Map: 响应用户输入
+      CSD U4 User Input Map_2018: 响应用户输入
+      CSD U4 User Input Map_2019: 响应用户输入
+      CSD U4L01 SFLP_2018: 课程概述
+      CSD U4L01 autoSFLP_2018: 课程概述
+      CSD U4L01 autoSFLP_2019: 课程概述
+      CSD U4L02 SFLP_2018: 课程概述
+      CSD U4L02 autoSFLP_2018: 课程概述
+      CSD U4L02 autoSFLP_2019: 课程概述
+      CSD U4L03 SFLP_2018: 课程概述
+      CSD U4L03 autoSFLP_2018: 课程概述
+      CSD U4L03 autoSFLP_2019: 课程概述
+      CSD U4L04 SFLP_2018: 课程概述
+      CSD U4L04 autoSFLP_2018: 课程概述
+      CSD U4L04 autoSFLP_2019: 课程概述
+      CSD U4L05 SFLP_2018: 课程概述
+      CSD U4L05 autoSFLP_2018: 课程概述
+      CSD U4L05 autoSFLP_2019: 课程概述
+      CSD U4L06 SFLP_2018: 课程概述
+      CSD U4L06 autoSFLP_2018: 课程概述
+      CSD U4L06 autoSFLP_2019: 课程概述
+      CSD U4L07 SFLP_2018: 课程概述
+      CSD U4L07 autoSFLP_2018: 课程概述
+      CSD U4L07 autoSFLP_2019: 课程概述
+      CSD U4L08 SFLP_2018: 课程概述
+      CSD U4L08 autoSFLP_2018: 课程概述
+      CSD U4L08 autoSFLP_2019: 课程概述
+      CSD U4L09 SFLP_2018: 课程概述
+      CSD U4L09 autoSFLP_2018: 课程概述
+      CSD U4L09 autoSFLP_2019: 课程概述
+      CSD U4L10 SFLP_2018: 课程概述
+      CSD U4L10 autoSFLP_2018: 课程概述
+      CSD U4L10 autoSFLP_2019: 课程概述
+      CSD U4L11 SFLP_2018: 课程概述
+      CSD U4L11 autoSFLP_2018: 课程概述
+      CSD U4L11 autoSFLP_2019: 课程概述
+      CSD U4L12 SFLP_2018: 课程概述
+      CSD U4L12 autoSFLP_2018: 课程概述
+      CSD U4L12 autoSFLP_2019: 课程概述
+      CSD U4L13 SFLP_2018: 课程概述
+      CSD U4L13 autoSFLP_2018: 课程概述
+      CSD U4L13 autoSFLP_2019: 课程概述
+      CSD U4L14 SFLP_2018: 课程概述
+      CSD U4L14 autoSFLP_2018: 课程概述
+      CSD U4L14 autoSFLP_2019: 课程概述
+      CSD U4L15 SFLP_2018: 课程概述
+      CSD U4L15 autoSFLP_2018: 课程概述
+      CSD U4L15 autoSFLP_2019: 课程概述
+      CSD U4L16 SFLP_2018: 课程概述
+      CSD U4L16 autoSFLP_2018: 课程概述
+      CSD U4L16 autoSFLP_2019: 课程概述
+      CSD U5 Amazon Data Video: 收集用户信息
+      CSD U5 Amazon Data Video_2018: 收集用户信息
+      CSD U5 Amazon Data Video_2019: 亚马逊如何使用数据
+      CSD U5 Netflix Data Video_2019: Netflix 如何使用数据
+      CSD U5 Waze Data Video: 收集用户信息
+      CSD U5 Waze Data Video_2018: 收集用户信息
+      CSD U5 Waze Data Video_2019: Waze 如何使用数据
+      CSD U5 binary video: 二进制和数据
+      CSD U5 binary video_2018: 二进制和数据
+      CSD U5 binary video_2019: 二进制和数据
+      CSD U5 black white images pixelation 2: 黑白像素化小工具
+      CSD U5 black white images pixelation 2_2018: 黑白像素化小工具
+      CSD U5 black white images pixelation 2_2019: 黑白像素化小工具
+      CSD U5 black white images pixelation 3: 黑白像素化小工具
+      CSD U5 black white images pixelation 3_2018: 黑白像素化小工具
+      CSD U5 black white images pixelation 3_2019: 黑白像素化小工具
+      CSD U5 black white images pixelation 4: 黑白像素化小工具
+      CSD U5 black white images pixelation 4_2018: 黑白像素化小工具
+      CSD U5 black white images pixelation 4_2019: 黑白像素化小工具
+      CSD U5 black white images pixelation 5: 黑白像素化小工具
+      CSD U5 black white images pixelation 5_2018: 黑白像素化小工具
+      CSD U5 black white images pixelation 5_2019: 黑白像素化小工具
+      CSD U5 black white images pixelation: 黑白像素化小工具
+      CSD U5 black white images pixelation_2018: 黑白像素化小工具
+      CSD U5 black white images pixelation_2019: 黑白像素化小工具
+      CSD U5L01 autoSFLP_2018: 课程概述
+      CSD U5L01 autoSFLP_2019: 课程概述
+      CSD U5L02 autoSFLP_2018: 课程概述
+      CSD U5L02 autoSFLP_2019: 课程概述
+      CSD U5L03 autoSFLP_2018: 课程概述
+      CSD U5L03 autoSFLP_2019: 课程概述
+      CSD U5L04 autoSFLP_2018: 课程概述
+      CSD U5L04 autoSFLP_2019: 课程概述
+      CSD U5L05 autoSFLP_2018: 课程概述
+      CSD U5L05 autoSFLP_2019: 课程概述
+      CSD U5L06 autoSFLP_2018: 课程概述
+      CSD U5L06 autoSFLP_2019: 课程概述
+      CSD U5L07 autoSFLP_2018: 课程概述
+      CSD U5L07 autoSFLP_2019: 课程概述
+      CSD U5L08 autoSFLP_2018: 课程概述
+      CSD U5L08 autoSFLP_2019: 课程概述
+      CSD U5L09 autoSFLP_2018: 课程概述
+      CSD U5L09 autoSFLP_2019: 课程概述
+      CSD U5L10 autoSFLP_2018: 课程概述
+      CSD U5L10 autoSFLP_2019: 课程概述
+      CSD U5L11 autoSFLP_2018: 课程概述
+      CSD U5L11 autoSFLP_2019: 课程概述
+      CSD U5L12 autoSFLP_2018: 课程概述
+      CSD U5L12 autoSFLP_2019: 课程概述
+      CSD U5L13 autoSFLP_2018: 课程概述
+      CSD U5L13 autoSFLP_2019: 课程概述
+      CSD U5L14 autoSFLP_2018: 课程概述
+      CSD U5L14 autoSFLP_2019: 课程概述
+      CSD U5L15 autoSFLP_2018: 课程概述
+      CSD U5L15 autoSFLP_2019: 课程概述
       CSD U6 Event Types: 事件类型
       CSD U6 Event Types_2018: 事件类型
       CSD U6 Event Types_2019: 事件类型
       CSD U6 arrays intro: 数组的简介
       CSD U6 arrays intro_2018: 数组的简介
       CSD U6 arrays intro_2019: 数组
+      CSD U6 arrays video: '视频：数组的简介'
+      CSD U6 challenge motorcycle: '挑战: 摩托车'
+      CSD U6 challenge motorcycle_2018: '挑战: 摩托车'
+      CSD U6 challenge motorcycle_2019: '挑战: 摩托车'
+      CSD U6 circuit LED map: 电路和 LED
+      CSD U6 circuit LED map_2018: 电路和 LED
+      CSD U6 circuit LED map_2019: 电路和 LED
+      CSD U6 circuit button map: 按钮电路
+      CSD U6 circuit button map_2018: 按钮电路
+      CSD U6 circuit button map_2019: 按钮电路
+      CSD U6 circuit logic video: 电路和逻辑
+      CSD U6 circuit logic video_2018: 电路和逻辑
+      CSD U6 circuit logic video_2019: 电路和逻辑
+      CSD U6 emoji race demo: 示例程序
+      CSD U6 emoji race demo_2018: 示例程序
+      CSD U6 emoji race demo_2019: 示例程序
+      CSD U6 emotion machine example: 情绪机器示例
+      CSD U6 emotion machine example_2018: 情绪机器示例
+      CSD U6 emotion machine example_2019: 情绪机器示例
+      CSD U6 for loop led bonus 1: '挑战: 添加更多按钮'
+      CSD U6 for loop led bonus 1_2018: '挑战: 添加更多按钮'
+      CSD U6 for loop led bonus 1_2019: '挑战: 添加更多按钮'
+      CSD U6 for loop led bonus 2: '挑战: 颜色模式'
+      CSD U6 for loop led bonus 2_2018: '挑战: 颜色模式'
+      CSD U6 for loop led bonus 2_2019: '挑战: 颜色模式'
+      CSD U6 for loop led bonus 3: '挑战: 音乐'
+      CSD U6 for loop led bonus 3_2018: '挑战: 音乐'
+      CSD U6 for loop led bonus 3_2019: '挑战: 音乐'
       CSD U6 for loop map: 计数循环
       CSD U6 for loop map_2018: 计数循环
       CSD U6 for loop map_2019: 计数循环
       CSD U6 functions paramters video: 有参数的函数
       CSD U6 functions paramters video_2018: 有参数的函数
       CSD U6 functions paramters video_2019: 有参数的函数
+      CSD U6 getProperty Map: getProperty
+      CSD U6 getProperty Map_2018: getProperty
+      CSD U6 getProperty Map_2019: getProperty
+      CSD U6 getProperty xy challenge: '挑战: 获取和设置'
+      CSD U6 hardware software video: 硬件和软件
+      CSD U6 hardware software video_2018: 硬件和软件
+      CSD U6 hardware software video_2019: 硬件和软件
+      CSD U6 light pattern challenge: 改进的灯光显示
+      CSD U6 light pattern challenge_2018: 改进的灯光显示
+      CSD U6 light pattern challenge_2019: 改进的灯光显示
       CSD U6 setProperty Map: 使用代码设计屏幕
       CSD U6 setProperty Map_2018: 使用代码设计屏幕
       CSD U6 setProperty Map_2019: 使用代码设计屏幕
+      CSD U6 tugowar demo: 演示-错误抓取
+      CSD U6 tugowar demo_2018: 演示-错误抓取
+      CSD U6 tugowar demo_2019: 演示-错误抓取
+      CSD U6 tugowar final: 让它成为你自己的
+      CSD U6 tugowar final_2018: 让它成为你自己的
+      CSD U6 tugowar final_2019: 让它成为你自己的
+      CSD U6L01 TFMD clone: 课程概述
+      CSD U6L01 TFMD: 课程概述
+      CSD U6L01 TFMD_2018: 课程概述
+      CSD U6L01 TFMD_2019: 课程概述
+      CSD U6L02 TFMD: 课程概述
+      CSD U6L02 TFMD_2018: 课程概述
+      CSD U6L02 TFMD_2019: 课程概述
+      CSD U6L03 TFMD: 课程概述
+      CSD U6L03 TFMD_2018: 课程概述
+      CSD U6L03 TFMD_2019: 课程概述
+      CSD U6L04 TFMD: 课程概述
+      CSD U6L04 TFMD_2018: 课程概述
+      CSD U6L04 TFMD_2019: 课程概述
+      CSD U6L05 TFMD: 课程概述
+      CSD U6L05 TFMD_2018: 课程概述
+      CSD U6L05 TFMD_2019: 课程概述
+      CSD U6L06 TFMD: 课程概述
+      CSD U6L06 TFMD_2018: 课程概述
+      CSD U6L06 TFMD_2019: 课程概述
+      CSD U6L07 TFMD: 课程概述
+      CSD U6L07 TFMD_2018: 课程概述
+      CSD U6L07 TFMD_2019: 课程概述
+      CSD U6L08 TFMD: 课程概述
+      CSD U6L08 TFMD_2018: 课程概述
+      CSD U6L08 TFMD_2019: 课程概述
+      CSD U6L09 TFMD: 课程概述
+      CSD U6L09 TFMD_2018: 课程概述
+      CSD U6L09 TFMD_2019: 课程概述
+      CSD U6L10 TFMD: 课程概述
+      CSD U6L10 TFMD_2018: 课程概述
+      CSD U6L10 TFMD_2019: 课程概述
+      CSD U6L11 TFMD: 课程概述
+      CSD U6L11 TFMD_2018: 课程概述
+      CSD U6L11 TFMD_2019: 课程概述
+      CSD U6L12 TFMD: 课程概述
+      CSD U6L12 TFMD_2018: 课程概述
+      CSD U6L12 TFMD_2019: 课程概述
+      CSD U6L13 TFMD: 课程概述
+      CSD U6L13 TFMD_2018: 课程概述
+      CSD U6L13 TFMD_2019: 课程概述
+      CSD U6L14 TFMD: 课程概述
+      CSD U6L14 TFMD_2018: 课程概述
+      CSD U6L14 TFMD_2019: 课程概述
+      CSD U6L15 TFMD: 课程概述
+      CSD U6L15 TFMD_2018: 课程概述
+      CSD U6L15 TFMD_2019: 课程概述
+      CSD U6L16 TFMD: 课程概述
+      CSD U6L16 TFMD_2018: 课程概述
+      CSD U6L16 TFMD_2019: 课程概述
+      CSD What Makes a Computer a Computer Video: '视频：什么使计算机成为计算机？'
+      CSD What Makes a Computer a Computer Video_2018: '视频：什么使计算机成为计算机？'
+      CSD What Makes a Computer a Computer Video_2019: '视频：什么使计算机成为计算机？'
+      CSD colorLed Map: '电路播放场：彩色LED'
+      CSD colorLed Map_2018: '电路播放场：彩色LED'
+      CSD colorLed Map_2019: '电路播放场：彩色LED'
+      CSD onBoardEvent Map: 响应主板事件
+      CSD onBoardEvent Map_2018: 响应主板事件
+      CSD onBoardEvent Map_2019: 响应主板事件
+      CSD-Arrays: 修改和创建数组
+      CSD-Arrays_2018: 修改数组
+      CSD-Arrays_2019: 修改数组
+      'CSD: Animating Sprite Movement': '视频：精灵运动'
+      'CSD: Animating Sprite Movement_2018': '视频：精灵运动'
+      'CSD: Animating Sprite Movement_2019': '视频：精灵运动'
+      'CSD: Animation Tab': '视频: "动画" 选项卡'
+      'CSD: Animation Tab_2018': '视频: "动画" 选项卡'
+      'CSD: Animation Tab_2019': '视频: "动画" 选项卡'
+      'CSD: Drawing in Game Lab 1': '视频: 在游戏实验室中绘图-第1部分'
+      'CSD: Drawing in Game Lab 1_2018': '视频: 在游戏实验室中绘图-第1部分'
+      'CSD: Drawing in Game Lab 1_2019': '视频: 在游戏实验室中绘图-第1部分'
+      'CSD: Drawing in Game Lab 2': '视频: 在游戏实验室中绘图-第2部分'
+      'CSD: Drawing in Game Lab 2_2018': '视频: 在游戏实验室中绘图-第2部分'
+      'CSD: Drawing in Game Lab 2_2019': '视频: 在游戏实验室中绘图-第2部分'
       'CSD: For Loop_2018': 计数循环
       'CSD: For Loop_2019': 计数循环
+      'CSD: Introduction to the Draw Loop': '视频: 绘制循环简介'
+      'CSD: Introduction to the Draw Loop_2018': '视频: 绘制循环简介'
+      'CSD: Introduction to the Draw Loop_2019': '视频: 绘制循环简介'
+      'CSD: Sprite Velocity': '视频: 速度'
+      'CSD: Sprite Velocity_2018': '视频: 速度'
+      'CSD: Sprite Velocity_2019': '视频: 速度'
+      'CSD: Sprites in Game Lab': '视频: 精灵简介'
+      'CSD: Sprites in Game Lab_2018': '视频: 精灵简介'
+      'CSD: Sprites in Game Lab_2019': '视频: 精灵简介'
+      CSDU4 Design Mode Video: 设计模式简介
+      CSDU4 Design Mode Video_2018: 设计模式简介
+      CSDU4 Design Mode Video_2019: 设计模式简介
+      CSDU4 Project Bug Feature: '应用程序项目: 错误和功能'
+      CSDU4 Project Bug Feature_2018: '应用程序项目: 错误和功能'
+      CSDU4 Project Bug Feature_2019: '应用程序项目: 错误和功能'
+      CSDU4 Project Events: '应用程序项目：链接屏幕'
+      CSDU4 Project Events_2018: '应用程序项目：链接屏幕'
+      CSDU4 Project Events_2019: '应用程序项目：链接屏幕'
+      CSDU4 Project Functionality: '应用程序项目：添加功能'
+      CSDU4 Project Import: '应用程序项目：屏幕导入'
+      CSDU4 Project Import_2018: '应用程序项目：屏幕导入'
+      CSDU4 Project Import_2019: '应用程序项目：屏幕导入'
+      CSDU6 - UI and Inputs - event type testing: 事件测试
+      CSDU6 - UI and Inputs - getNumber: getNumber
+      CSDU6 - board event challenge: 音效主板
+      CSDU6 - board event challenge_2018: 音效主板
+      CSDU6 - board event challenge_2019: 音效主板
+      CSDU6 - button tug o war challenge: '挑战: 拔河赛'
+      CSDU6 - ch 1 exemplar LEDs: 彩色LED示例
+      CSDU6 - ch 1 project template: '挑战: 变得疯癫'
+      CSDU6 - sensor love tester demo: 爱情测试演示
+      CSDU6 - sensor theremin demo: 灯光特技演示
+      CSDU6 - sensor vu meter demo: 声音测量仪表演示
+      CSDU6 - timed loop challenge: '挑战: 变得疯癫'
+      CSDU6 buzzer 2d arrays: 二维数组
+      CSDU6 buzzer 2d arrays_2018: 二维数组
+      CSDU6 buzzer 2d arrays_2019: 二维数组
+      CSDU6 buzzer.stop: 停止音乐
+      CSDU6 buzzer.stop_2018: 停止音乐
+      CSDU6 buzzer.stop_2019: 停止音乐
       CSDu2 IP CC Search: 知识共享检索
+      CSP CreateL01 SFLP: 课程概述
+      CSP CreateL01 SFLP_2019: 课程概述
+      CSP CreateL02 SFLP_2018: 课程概述
+      CSP CreateL02 SFLP_2018_2019: 课程概述
+      CSP CreateL03 SFLP: 课程概述
+      CSP CreateL03 SFLP_2019: 课程概述
+      CSP ExploreL01 SFLP: 课程概述
+      CSP ExploreL01 SFLP_2019: 课程概述
+      CSP ExploreL02 SFLP_2018: 课程概述
+      CSP ExploreL02 SFLP_2018_2019: 课程概述
+      CSP ExploreL03 SFLP: 课程概述
+      CSP ExploreL03 SFLP_2019: 课程概述
+      CSP U1L01 SFLP: 课程概述
+      CSP U1L01 SFLP_2019: 课程概述
+      CSP U1L02 SFLP: 课程概述
+      CSP U1L02 SFLP_2019: 课程概述
+      CSP U1L03 SFLP: 课程概述
+      CSP U1L03 SFLP_2019: 课程概述
+      CSP U1L04 SFLP: 课程概述
+      CSP U1L04 SFLP_2019: 课程概述
+      CSP U1L05 SFLP: 课程概述
+      CSP U1L05 SFLP_2019: 课程概述
+      CSP U1L06 SFLP: 课程概述
+      CSP U1L06 SFLP_2019: 课程概述
+      CSP U1L07 SFLP: 课程概述
+      CSP U1L07 SFLP_2019: 课程概述
+      CSP U1L08 SFLP: 课程概述
+      CSP U1L08 SFLP_2019: 课程概述
+      CSP U1L09 SFLP: 课程概述
+      CSP U1L09 SFLP_2019: 课程概述
+      CSP U1L10 SFLP: 课程概述
+      CSP U1L10 SFLP_2019: 课程概述
+      CSP U1L11 SFLP: 课程概述
+      CSP U1L11 SFLP_2019: 课程概述
+      CSP U1L12 SFLP: 课程概述
+      CSP U1L12 SFLP_2019: 课程概述
+      CSP U1L13 SFLP: 课程概述
+      CSP U1L13 SFLP_2019: 课程概述
+      CSP U1L14 SFLP: 课程概述
+      CSP U1L14 SFLP_2019: 课程概述
+      CSP U2L01 SFLP: 课程概述
+      CSP U2L01 SFLP_2019: 课程概述
+      CSP U2L02 SFLP: 课程概述
+      CSP U2L02 SFLP_2019: 课程概述
+      CSP U2L03 SFLP: 课程概述
+      CSP U2L03 SFLP_2019: 课程概述
+      CSP U2L04 SFLP: 课程概述
+      CSP U2L04 SFLP_2019: 课程概述
+      CSP U2L05 SFLP: 课程概述
+      CSP U2L05 SFLP_2019: 课程概述
+      CSP U2L06 SFLP: 课程概述
+      CSP U2L06 SFLP_2019: 课程概述
+      CSP U2L07 SFLP: 课程概述
+      CSP U2L07 SFLP_2019: 课程概述
+      CSP U2L08 SFLP: 课程概述
+      CSP U2L08 SFLP_2019: 课程概述
+      CSP U2L09 SFLP: 课程概述
+      CSP U2L09 SFLP_2019: 课程概述
+      CSP U2L10 SFLP: 课程概述
+      CSP U2L10 SFLP_2019: 课程概述
+      CSP U2L11 SFLP: 课程概述
+      CSP U2L11 SFLP_2019: 课程概述
+      CSP U2L12 SFLP: 课程概述
+      CSP U2L12 SFLP_2019: 课程概述
+      CSP U2L13 SFLP: 课程概述
+      CSP U2L13 SFLP_2019: 课程概述
+      CSP U2L14 SFLP: 课程概述
+      CSP U2L14 SFLP_2019: 课程概述
+      CSP U2L15 SFLP: 课程概述
+      CSP U2L15 SFLP_2019: 课程概述
+      CSP U3L01 SFLP: 课程概述
+      CSP U3L01 SFLP_2019: 课程概述
+      CSP U3L02 SFLP: 课程概述
+      CSP U3L02 SFLP_2019: 课程概述
+      CSP U3L03 SFLP: 课程概述
+      CSP U3L03 SFLP_2019: 课程概述
+      CSP U3L04 SFLP: 课程概述
+      CSP U3L04 SFLP_2019: 课程概述
+      CSP U3L05 SFLP: 课程概述
+      CSP U3L05 SFLP_2019: 课程概述
+      CSP U3L06 SFLP: 课程概述
+      CSP U3L06 SFLP_2019: 课程概述
+      CSP U3L07 SFLP: 课程概述
+      CSP U3L07 SFLP_2019: 课程概述
+      CSP U3L08 SFLP: 课程概述
+      CSP U3L08 SFLP_2019: 课程概述
+      CSP U3L09 SFLP: 课程概述
+      CSP U3L09 SFLP_2019: 课程概述
+      CSP U3L10 SFLP: 课程概述
+      CSP U3L10 SFLP_2019: 课程概述
+      CSP U4L01 SFLP: 课程概述
+      CSP U4L01 SFLP_2019: 课程概述
+      CSP U4L02 SFLP: 课程概述
+      CSP U4L02 SFLP_2019: 课程概述
+      CSP U4L03 SFLP: 课程概述
+      CSP U4L03 SFLP_2019: 课程概述
+      CSP U4L04 SFLP: 课程概述
+      CSP U4L04 SFLP_2019: 课程概述
+      CSP U4L05 SFLP: 课程概述
+      CSP U4L05 SFLP_2019: 课程概述
+      CSP U4L06 SFLP: 课程概述
+      CSP U4L06 SFLP_2019: 课程概述
+      CSP U4L07 SFLP: 课程概述
+      CSP U4L07 SFLP_2019: 课程概述
+      CSP U4L08 SFLP: 课程概述
+      CSP U4L08 SFLP_2019: 课程概述
+      CSP U4L09 SFLP: 课程概述
+      CSP U4L10 SFLP: 课程概述
+      CSP U5L01 SFLP: 课程概述
+      CSP U5L01 SFLP_2019: 课程概述
+      CSP U5L02 SFLP: 课程概述
+      CSP U5L02 SFLP_2019: 课程概述
+      CSP U5L03 SFLP: 课程概述
+      CSP U5L03 SFLP_2019: 课程概述
+      CSP U5L04 SFLP: 课程概述
+      CSP U5L04 SFLP_2019: 课程概述
+      CSP U5L05 SFLP: 课程概述
+      CSP U5L05 SFLP_2019: 课程概述
+      CSP U5L06 SFLP: 课程概述
+      CSP U5L06 SFLP_2019: 课程概述
+      CSP U5L07 SFLP: 课程概述
+      CSP U5L07 SFLP_2019: 课程概述
+      CSP U5L08 SFLP: 课程概述
+      CSP U5L08 SFLP_2019: 课程概述
+      CSP U5L09 SFLP: 课程概述
+      CSP U5L09 SFLP_2019: 课程概述
+      CSP U5L10 SFLP: 课程概述
+      CSP U5L10 SFLP_2019: 课程概述
+      CSP U5L11 SFLP: 课程概述
+      CSP U5L11 SFLP_2019: 课程概述
+      CSP U5L12 SFLP: 课程概述
+      CSP U5L12 SFLP_2019: 课程概述
+      CSP U5L13 SFLP: 课程概述
+      CSP U5L13 SFLP_2019: 课程概述
+      CSP U5L14 SFLP: 课程概述
+      CSP U5L14 SFLP_2019: 课程概述
+      CSP U5L15 SFLP: 课程概述
+      CSP U5L15 SFLP_2019: 课程概述
+      CSP U5L16 SFLP: 课程概述
+      CSP U5L16 SFLP_2019: 课程概述
+      CSP U5L17 SFLP: 课程概述
+      CSP U5L17 SFLP_2019: 课程概述
+      CSP U5L18 SFLP: 课程概述
+      'Course E: Artist Project': 课程E 艺术家项目
+      'Course E: Artist Project_2018': 课程E 艺术家项目
+      'Course E: Artist Project_2019': 课程E 艺术家项目
+      'Course F: Artist Project - Revise_2018': 修改艺术家项目
+      'Course F: Artist Project - Revise_2019': 修改艺术家项目
+      'Course F: Artist Project_2018': 课程 F 艺术家项目
+      'Course F: Artist Project_2019': 课程 F 艺术家项目
       CourseEF_video_IntroSpriteLab: 这是精灵实验室
       CourseEF_video_IntroSpriteLab_2019: 这是精灵实验室
+      CourseEF_video_MakeSprite: 如何制作精灵
+      CourseEF_video_MakeSprite_2019: 如何制作精灵
+      CourseE_Project_SpriteLab: 课程 E 精灵实验室项目
+      CourseE_Project_SpriteLab_2019: 课程 E 精灵实验室项目
+      CourseE_hoops - take2: Hoops
+      CourseE_hoops: '兔子 '
+      CourseE_hoops_2019: '兔子 '
+      CourseF_Project_Revise_SpriteLab: 修改精灵实验室项目
+      CourseF_Project_Revise_SpriteLab_2019: 修改精灵实验室项目
+      CourseF_Project_SpriteLab: 课程 F 精灵实验室项目
+      CourseF_Project_SpriteLab_2019: 课程 F 精灵实验室项目
       Dance_Party_extras_battle: 舞蹈团队
       Dance_Party_extras_every_beat: 四分注释
       Dance_Party_extras_layout: 进入阵型
       Dance_Party_extras_on_beat: 低音、中音和高音
       Dance_Party_extras_speed: 加速、 减速
       Dance_Party_extras_visible: 让他们去哪儿？
+      Final Personal Website - OLD: 最后个人主页
+      Final Personal Website: 最后个人主页
+      Final Personal Website_2018: 最后个人主页
+      Final Personal Website_2019: 最后个人主页
+      Geometric Sun_2018: 几何太阳
+      Geometric Sun_2019: 几何太阳
+      Images, Pixels, and RGB_2018: 图像、像素和 RGB配色
+      Images, Pixels, and RGB_2019: 图像、像素和 RGB配色
+      InspirationalArtwork_2018: 激励！
+      InspirationalArtwork_2019: 激励！
+      'Internet Simulator: Broadcast_2018': '互联网模拟器：广播'
+      'Internet Simulator: Broadcast_2019': '互联网模拟器：广播'
+      'Internet Simulator: DNS_2018': '互联网模拟器：域名系统'
+      'Internet Simulator: DNS_2019': '互联网模拟器：域名系统'
+      'Internet Simulator: Packets_2018': '互联网模拟器：包'
+      'Internet Simulator: Packets_2019': '互联网模拟器：包'
+      'Internet Simulator: Routers_2018': '互联网模拟器：路由器'
+      'Internet Simulator: Routers_2019': '互联网模拟器：路由器'
+      'Internet Simulator: Sending Binary Messages_2018': '互联网模拟器：发送二进制消息'
+      'Internet Simulator: Sending Binary Messages_2019': '互联网模拟器：发送二进制消息'
+      'Internet Simulator: Sending Numbers_2018': '互联网模拟器：发送数字'
+      'Internet Simulator: Sending Numbers_2019': '互联网模拟器：发送数字'
+      'Internet Simulator: Sending Text_2018': '互联网模拟器：发送文本'
+      'Internet Simulator: Sending Text_2019': '互联网模拟器：发送文本'
+      Intro to Web Lab - Part 1: '视频：网络实验室简介 - 第一部分'
+      Intro to Web Lab - Part 1_2018: '视频：网络实验室简介 - 第一部分'
+      Intro to Web Lab - Part 1_2019: '视频：网络实验室简介 - 第一部分'
+      Intro to Web Lab - Part 2: '视频：网络实验室简介 - 第二部分'
+      Intro to Web Lab - Part 2_2018: '视频：网络实验室简介 - 第二部分'
+      Intro to Web Lab - Part 2_2019: '视频：网络实验室简介 - 第二部分'
+      Introduction to Variables - Part 1_2018: 变量简介
+      Introduction to Variables - Part 1_2019: 变量简介
+      Kiki_StarWars_Test: 星球大战项目原型
+      Kiki_StarWars_Test_2: 星球大战项目原型
+      Kiki_StarWars_Test_3: 星球大战项目原型
+      Kiki_StarWars_Test_4: 星球大战项目原型
+      Kiki_StarWars_Test_5: 星球大战项目原型
+      Kiki_StarWars_Test_5_Example: 星球大战项目原型
+      MC Agent Freeplay: 自由游戏
+      MC_HOC_2017 Agent Test: Homestead
+      MC_HOC_2017_01: 序幕
+      MC_HOC_2017_01_Cole: Homestead
+      MC_HOC_2017_01_Kiki: Homestead
+      MC_HOC_2017_01_RETRY: Homestead
+      MC_HOC_2017_01_RETRY_2019: Homestead
+      MC_HOC_2017_02: 与代理见面
+      MC_HOC_2017_02_Cole: 农场
+      MC_HOC_2017_02_Cole_2019: 农场
+      MC_HOC_2017_02_Kiki: 农场
+      MC_HOC_2017_02_Will: 农场
+      MC_HOC_2017_03: 一条河..。
+      MC_HOC_2017_03_Cole: 森林
+      MC_HOC_2017_03_Cole_2019: 森林
+      MC_HOC_2017_03_Kiki: 森林
+      MC_HOC_2017_04: "...通过它。"
+      MC_HOC_2017_04POINT5_Cole: 森林
+      MC_HOC_2017_04POINT5_RYAN: 沙漠
+      MC_HOC_2017_04POINT5_RYAN_2019: 沙漠
+      MC_HOC_2017_04_Cole: 沼泽
+      MC_HOC_2017_04_Cole_2019: 沼泽
+      MC_HOC_2017_04_Kiki: 沼泽
+      MC_HOC_2017_05: 沙漠寺庙
+      MC_HOC_2017_05_Cole: 这条河
+      MC_HOC_2017_05_Cole_2019: 这条河
+      MC_HOC_2017_05_Josh: 这条河
+      MC_HOC_2017_05_Kiki: 这条河
+      MC_HOC_2017_06: 只是沙漠
+      MC_HOC_2017_06_Cole: 高潮流
+      MC_HOC_2017_06_Cole_2019: 高潮流
+      MC_HOC_2017_06_Josh: 高潮流
+      MC_HOC_2017_06_Kiki: 高潮流
+      MC_HOC_2017_07_Kiki: 沙漠
+      MC_HOC_2017_07a_Kiki: 沙漠
+      MC_HOC_2017_08_Cole: 沙漠寺庙
+      MC_HOC_2017_08_Kiki: 沙漠寺庙
+      MC_HOC_2017_08_Will: 沙漠寺庙
+      MC_HOC_2017_09_Cole: 洞穴
+      MC_HOC_2017_09_Kiki: 洞穴
+      MC_HOC_2017_09_RS_CLONE: 洞穴
+      MC_HOC_2017_10_Cole: 洞穴
+      MC_HOC_2017_10_Cole_old: 洞穴
+      MC_HOC_2017_10_Kiki: 洞穴
+      MC_HOC_2017_10_RETRY: 洞穴
+      MC_HOC_2017_10_RETRY_2019: 洞穴
+      MC_HOC_2017_10_RYAN: 洞穴
+      MC_HOC_2017_10_RYAN2: 洞穴
+      MC_HOC_2017_11_Cole: 冰湖
+      MC_HOC_2017_11_Kiki: 冰湖
+      MC_HOC_2017_13_Cole: 自由游戏
+      MC_HOC_2017_4.5v2: 森林
       MC_HOC_2017_FP10x10: 自由发挥
       MC_HOC_2017_FP10x10_RE: 自由发挥
+      MC_HOC_2017_FP20x20: 自由游戏
+      MC_HOC_2017_FP20x20_2019: 自由游戏
+      MC_HOC_2017_Ryan_03: 一条河..。
+      MC_HOC_2017_Ryan_05: 沙漠寺庙
+      MC_HOC_Kiki_02: 与代理见面
       Making Music_2018: 制作音乐
       Making Music_2019: 制作音乐
+      New Minecraft Hero Project: 自由游戏
+      OPD-K5 S2L2: 什么是计算机科学？
+      OPD-K5 WhatIsCS: 什么是计算机科学？
+      OPD-K5S2L2: 什么是计算机科学？
+      PS - test - pixelation: 黑白像素化小工具
       SG U3L07 More Subgoals: 使用文档
+      SG U3L08 comments: 添加代码批注
+      SG U3L08 how to add comments: 添加代码批注
+      SGU3L2A Introducing Subgoals: 介绍子目标
+      Text Compression_2018: 文本压缩
+      Text Compression_2019: 文本压缩
+      The Accelerometer_2018: 加速传感器
+      The Accelerometer_2019: 加速传感器
+      U1 L01 CYU: 检查您的理解
+      U1L11 Abstraction Reflection_2018: 抽象反射
+      U1L11 Abstraction Reflection_2019: 抽象反射
+      U3L08 how to add comments: 添加代码批注
+      U3L08 how to add comments_2018: 添加代码批注
+      U3L08 how to add comments_2019: 添加代码批注
+      U4 Counter Patterns: 计数器模式
+      U4 L01 Poetry App: 诗歌应用
+      U4 L01 Thermostat App: 恒温器应用程序
+      U4 L02 CYU Exit Ticket: 检查您的理解
+      U4 L02 Thermostat App v1 Code: 恒温器应用程序 v.1
+      U4 L02 Thermostat App v1: 恒温器应用程序 v.1
+      U4 L02 Thermostat App v3 pt2: 恒温器应用程序 v.1
+      U4 L02 Thermostat App v3 pt3: 恒温器应用程序 v.3
+      U4 L02 Thermostat App v3: 恒温器应用程序 v.1
+      U4 L03 Scope Issue: 恒温器应用程序 v.1
+      U4 L03 Thermostat App Modify 1: 恒温器应用程序 v.1
+      U4 L03 Thermostat App Modify 2: 恒温器应用程序 v.1
+      U4 L04 Variables Make Project Sample: 照片点赞应用程序
+      U4 L05 CYU Exit Ticket: 检查您的理解
+      U4 L06 CYU Exit Ticket: 检查您的理解
+      'U4 L06 Introduction to Conditionals: Boolean Expressions': '条件: 布尔表达式'
+      U4 L06 Thermostat App v4 Code: 恒温器应用程序 v.4
+      U4 L06 Thermostat App v4: 恒温器应用程序 v.4
+      U4 L06 Thermostat App v5 Code: 恒温器应用程序 v.5
+      U4 L06 Thermostat App v5: 恒温器应用程序 v.5
+      U4 L06 Thermostat App v6 Code: 恒温器应用程序 v.5
+      U4 L06 Thermostat App v6: 恒温器应用程序 v.6
+      U4 L08 Conditionals Make Project Flowchart: 博物馆门票应用程序
+      U4 L08 Conditionals Make Project Sample: 博物馆门票应用程序
+      U4 L09 Score Clicker Investigate: 分数单击器
+      U4 L09 Thermostat App v7: 恒温器应用程序 v.6
+      U4 String Concatenation Pattern: 计数器模式
+      U4 Variable with String Concatenation Pattern: 具有字符串连接模式的变量
+      U4-AP-Practice-Choose-The-Harmful-Effect: "(新) 选择有害的效果"
+      U4-AP-Practice-Device-or-Data?: "(新) 设备或数据？"
+      U4-AP-Practice-Justify-the-Score: "(新的) AP 实践反应——确定得分数"
+      'U4L06 Introduction to Conditionals: if Statements': '条件: If 语句'
+      'U4L06 Introduction to Conditionals: if-else Statements': '条件: If-Else 语句'
+      'U4L06 Introduction to Conditionals: if-else-if Statements': '条件: If-Else-If 语句'
+      U5 L01 Introduction to Lists: '条件: 布尔表达式'
+      U5 L09 Traversals Exit Ticket: 检查您的理解
+      U7 L01 More with Functions: '条件: 布尔表达式'
+      'Video: Intro to CSS Part 2_2018': '视频: CSS 简介第2部分'
+      'Video: Intro to CSS Part 2_2019': '视频: CSS 简介第2部分'
+      'Video: Intro to CSS_2018': '视频：CSS简介'
+      'Video: Intro to CSS_2019': '视频：CSS简介'
+      'Widget: Black and White Pixelation_2018': '小工具: 黑白像素化'
+      'Widget: Black and White Pixelation_2019': '小工具: 黑白像素化'
+      'Widget: Color Pixelation_2018': '小工具: 颜色像素化'
+      'Widget: Color Pixelation_2019': '小工具: 颜色像素化'
+      'Widget: Text Compression_2018': '小部件: 文本压缩'
+      'Widget: Text Compression_2019': '小部件: 文本压缩'
+      allthethings-playlab-project-backed: 游戏实验室自由播放
+      andrea_test1: 深度学习
+      courseA_bee_intro: 更改我的视频
       courseA_video_Stevie: 斯蒂夫和大项目
       courseA_video_Stevie_2018: 斯蒂夫和大项目
       courseA_video_Stevie_2019: 斯蒂夫和大项目
       courseB_video_Unspotted: 没有斑点的Bug
       courseB_video_Unspotted_2018: 没有斑点的Bug
       courseB_video_Unspotted_2019: 没有斑点的Bug
+      courseF_artist_for1: For 循环自由游戏 (开始)
+      courseF_artist_for1_2018: For 循环自由游戏 (开始)
+      courseF_artist_for1_2019: For 循环自由游戏 (开始)
+      courseF_video_csMatters: 课程项目结束
+      courseF_video_csMatters_2018: '视频：CS 事项'
+      courseF_video_csMatters_2019: '视频：CS 事项'
+      coursee_explore_4: 外星人辩护人
+      cp1dlp-q1: 课程联系与理念
+      csd U3 conditional statements video: '视频: "If/else" 声明'
+      csd U3 conditional statements video_2019: '视频：条件表达式'
+      csd u5 recommender sample: 示例应用程序
+      csd u5 recommender sample_2019: 示例应用程序
+      csd1dlp-assessment: 测验
+      csd1dlp-lessons: 课程联系与理念
+      csd1dlp-q1: 课程联系与理念
+      csd1dlp-q2: 课程联系与理念
+      csd1dlp-q3: 课程联系与理念
+      csd1dlp-tools: 工具的理念和使用
+      csd2dlp-assessment: 测验
+      csd2dlp-lessons: 课程联系与理念
+      csd2dlp-q1: 课程联系与理念
+      csd2dlp-q2: 课程联系与理念
+      csd2dlp-q3: 课程联系与理念
+      csd2dlp-tools: 工具的理念和使用
+      csd3dlp-assessment: 测验
+      csd3dlp-lessons: 课程联系与理念
+      csd3dlp-q1: 课程联系与理念
+      csd3dlp-q2: 课程联系与理念
+      csd3dlp-q3: 课程联系与理念
+      csd3dlp-tools: 工具的理念和使用
+      csd4dlp-assessment: 测验
+      csd4dlp-lessons: 课程联系与理念
+      csd4dlp-q1: 课程联系与理念
+      csd4dlp-q2: 课程联系与理念
+      csd4dlp-q3: 课程联系与理念
+      csd4dlp-tools: 工具的理念和使用
+      csd5dlp-assessment: 测验
+      csd5dlp-lessons: 课程联系与理念
+      csd5dlp-q1: 课程联系与理念
+      csd5dlp-q2: 课程联系与理念
+      csd5dlp-q3: 课程联系与理念
+      csd5dlp-tools: 工具的理念和使用
+      csd6dlp-assessment: 测验
+      csd6dlp-lessons: 课程联系与理念
+      csd6dlp-q1: 课程联系与理念
+      csd6dlp-q2: 课程联系与理念
+      csd6dlp-q3: 课程联系与理念
+      csd6dlp-tools: 工具的理念和使用
+      csp-create-dlp-q1: 课程联系与理念
+      csp-create-dlp-q2: 课程联系与理念
+      csp-create-dlp-q3: 课程联系与理念
+      csp-explore-dlp-q1: 课程联系与理念
+      csp-explore-dlp-q2: 课程联系与理念
+      csp-explore-dlp-q3: 课程联系与理念
+      csp1-dlp-q1: 课程联系与理念
+      csp1-dlp-q2: 课程联系与理念
+      csp1-dlp-q3: 课程联系与理念
+      csp1dlp-assessment: 测验
+      csp1dlp-lessons: 课程联系与理念
+      csp1dlp-tools: 工具的理念和使用
+      csp2-dlp-q1: 课程联系与理念
+      csp2-dlp-q2: 课程联系与理念
+      csp2-dlp-q3: 课程联系与理念
+      csp2020-applab-test: 欢迎来到 Applab！
+      csp2dlp-assessment: 测验
+      csp2dlp-lessons: 课程联系与理念
+      csp2dlp-tools: 工具的理念和使用
+      csp3-dlp-q1: 课程联系与理念
+      csp3-dlp-q2: 课程联系与理念
+      csp3-dlp-q3: 课程联系与理念
+      csp3dlp-assessment: 测验
+      csp3dlp-lessons: 课程联系与理念
+      csp3dlp-tools: 工具的理念和使用
+      csp4-dlp-q1: 课程联系与理念
+      csp4-dlp-q2: 课程联系与理念
+      csp4-dlp-q3: 课程联系与理念
+      csp4dlp-assessment: 测验
+      csp4dlp-lessons: 课程联系与理念
+      csp4dlp-tools: 工具的理念和使用
+      csp5-dlp-q1: 课程联系与理念
+      csp5-dlp-q2: 课程联系与理念
+      csp5-dlp-q3: 课程联系与理念
+      csp5dlp-assessment: 测验
+      csp5dlp-lessons: 课程联系与理念
+      csp5dlp-tools: 工具的理念和使用
       expresslink: 快速课程
+      fit-dlp-example-2: 课程联系与理念
+      fit-dlp-example: 课程联系与理念
       harvey_pixelation: 像素化的部件
+      maker workshop final: '挑战: 探索!'
+      scrat_loops_C-F_video: 冰河时代视频中的循环
+      scrat_loops_C-F_video_2019: 冰河时代视频中的循环
+      timeforcs_demo_c1_5_journal: 评估
+      timeforcs_demo_sl_3: 如何制作精灵

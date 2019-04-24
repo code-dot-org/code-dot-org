@@ -315,3 +315,8 @@
       DigitalFootprint_2019:
         title: Dine digitale fotavtrykk
         desc: Lærere introdusere elever ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Betingelser
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis jeg tegner et svart kort, får du et poeng."

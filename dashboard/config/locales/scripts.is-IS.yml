@@ -4502,6 +4502,8 @@ is:
               name: Internet
             Crowdsourcing:
               name: Hópvistun
+            Songwriting:
+              name: Lagasmíð
         express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
             Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -5050,6 +5052,18 @@ is:
             new stage:
               name: nýr áfangi
         csd-videos:
+          stages:
+            new stage:
+              name: nýr áfangi
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Hópvistun
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            Building a Foundation:
+              name: Að byggja grunn
+        csp7-pilot-staging:
           stages:
             new stage:
               name: nýr áfangi

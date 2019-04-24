@@ -110,10 +110,10 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       GettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       RelayProgramming:
         title: Programmazione a Staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
@@ -127,37 +127,36 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: |-
-          Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale" target="_blank">versione italiana del video e della relativa lezione</a>.
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
+          introduce come navigare su Internet in modo sicuro.
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       PaperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       BinaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
         title: La tua impronta digitale
-        desc: |-
-          L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online" target="_blank">versione italiana della canzone</a> proposta nel seguente video.
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
+          le loro informazioni personali crea un'impronta digitale che lascia tracce
+          riconoscibili e sfruttabili.
       ComputationalThinking:
         title: Pensiero computazionale
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione,
@@ -304,20 +303,19 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: |-
-          Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale" target="_blank">versione italiana del video e della relativa lezione</a>.
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
+          introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua impronta digitale
-        desc: |-
-          L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online" target="_blank">versione italiana della canzone</a> proposta nel seguente video.
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
+          le loro informazioni personali crea un'impronta digitale che lascia tracce
+          riconoscibili e sfruttabili.
       courseC_unplugged_buildingAFoundation:
         title: Costruire le Fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile.
@@ -325,18 +323,18 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       courseC_unplugged_gettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_unplugged_binaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -428,14 +426,13 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: |-
-          Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale" target="_blank">versione italiana del video e della relativa lezione</a>.
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
+          introduce come navigare su Internet in modo sicuro.
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
@@ -459,9 +456,9 @@ it:
           e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
         title: La tua impronta digitale
-        desc: |-
-          L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online" target="_blank">versione italiana della canzone</a> proposta nel seguente video.
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
+          le loro informazioni personali crea un'impronta digitale che lascia tracce
+          riconoscibili e sfruttabili.
       BinaryImages_2018:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente
@@ -471,18 +468,18 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       PaperPlanes_2018:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       GettingLoopy_2018:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       BinaryBracelets_2018:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -551,27 +548,27 @@ it:
           i diritti degli artisti come parte integrante dell'etica di un buon cittadino
           digitale.
       GettingLoopy_2019:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
           rete.
       BigEvent_2019:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       BinaryBracelets_2019:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       PaperPlanes_2019:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -588,9 +585,8 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: |-
-          Internet è un luogo potente, ma alle volte pericoloso. L'insegnante introduce come navigare su Internet in modo sicuro.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo.it/come/cittadinanza-digitale/il-mio-quartiere-digitale" target="_blank">versione italiana del video e della relativa lezione</a>.
+        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
+          introduce come navigare su Internet in modo sicuro.
       courseA_unplugged_loops_2019:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -598,12 +594,19 @@ it:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
         title: La tua impronta digitale
-        desc: |-
-          L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.<br>
-          Sul sito di Programma il Futuro è disponibile la <a href="https://programmailfuturo. it/come/cittadinanza-digitale/fermati-e-pensa-online" target="_blank">versione italiana della canzone</a> proposta nel seguente video.
+        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
+          le loro informazioni personali crea un'impronta digitale che lascia tracce
+          riconoscibili e sfruttabili.
       courseB_unplugged_CnC_2019:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
           Code.org e serve per aiutare gli studenti a capire il processo di condivisione
           e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
+      timeforcs_demo_crowdsourcing:
+        title: Intelligenza Collettiva
+      timeforcs_demo_conditionals:
+        title: Istruzioni condizionali
+        desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
+          carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
+          e "SE estraggo una carta nera tu ottieni un punto".

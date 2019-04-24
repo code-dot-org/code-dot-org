@@ -390,6 +390,7 @@ ne:
         mc_2017_congratulations: Minecraft Hour of Code - Congratulations
         CSF_loops_AB: Loops
         csd_pair_programming: Pair Programming
+        csd_applab_parameters: Functions with Parameters
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
