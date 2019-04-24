@@ -62,11 +62,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     # Verify expected pagination metadata
     assert_equal(
       {
-        "total_results" => 2,
         "total_pages" => 1,
-        "current_page" => 1,
-        "next_page" => nil,
-        "prev_page" => nil
+        "current_page" => 1
       },
       response['pagination']
     )
@@ -94,11 +91,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     # Verify expected pagination metadata
     assert_equal(
       {
-        "total_results" => PeerReview.count,
         "total_pages" => 1,
-        "current_page" => 1,
-        "next_page" => nil,
-        "prev_page" => nil
+        "current_page" => 1
       },
       response['pagination']
     )
@@ -120,11 +114,8 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     # Verify expected pagination metadata
     assert_equal(
       {
-        "total_results" => PeerReview.count,
         "total_pages" => 6,
-        "current_page" => 3,
-        "next_page" => 4,
-        "prev_page" => 2
+        "current_page" => 3
       },
       response['pagination']
     )
