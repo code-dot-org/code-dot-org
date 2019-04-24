@@ -38,6 +38,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
     reviews = reviews.distinct {|review| [review.submitter, review.level]}
 
+    review_count = reviews.count
     reviews = reviews.page(page).per(per)
 
     reviews.each do |review|
@@ -47,6 +48,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     render json: {
       submissions: submissions.values,
       pagination: {
+        total_results: review_count,
         total_pages: reviews.total_pages,
         current_page: reviews.current_page,
         next_page: reviews.next_page,
