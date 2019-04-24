@@ -10566,24 +10566,12 @@ en:
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Debugging: Unspotted Bugs'
-              description_student: ''
-              description_teacher: 'This lesson will guide students through the steps of debugging.  Students will learn the mantra: "What happened?  What was supposed to happen? What does that tell you?"'
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: 'Persistence & Frustration: Stevie and the Big Project'
-              description_student: ''
-              description_teacher: ''
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
-              description_student: ''
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\r\n"
             Sequencing in Maze:
               name: Sequencing in Maze
               description_student: ''
               description_teacher: ''
             'Programming: Happy Maps':
-              name: 'Programming: Happy Maps'
+              name: Happy Maps
               description_student: ''
               description_teacher: The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.
             Programming in Maze:
@@ -10599,15 +10587,11 @@ en:
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
-              name: 'Loops: Happy Loops'
+              name: Happy Loops
               description_student: ''
               description_teacher: Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.
-            Loops in Harvester:
-              name: Loops in Harvester
-              description_student: ''
-              description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to collect treasure more efficiently on Code.org.
             Loops in Artist:
@@ -10615,11 +10599,11 @@ en:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: 'The Big Event Jr.'
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
-              name: Events in Play Lab
+              name: On the Move with Events
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Ocean Scene with Loops:
@@ -10627,9 +10611,9 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
             Programming in Ice Age:
-              name: Programming in Ice Age
+              name: Programming with Scrat
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
             Sequencing with Scrat:
