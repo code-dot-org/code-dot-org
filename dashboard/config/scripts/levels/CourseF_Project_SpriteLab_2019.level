@@ -49,7 +49,6 @@
     "block_pool": "gamelab",
     "include_shared_functions": "true",
     "name_suffix": "_2019",
-    "contained_level_names": null,
     "preload_asset_list": null
   },
   "published": true,
