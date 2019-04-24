@@ -9942,7 +9942,7 @@ en:
           description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algorithms: Graph Paper Programming'
+              name: Graph Paper Programming
               description_student: ''
               description_teacher: ''
             Introduction to Online Puzzles:
@@ -9954,7 +9954,7 @@ en:
               description_student: ''
               description_teacher: ''
             Debugging in Collector:
-              name: Debugging in Collector
+              name: Debugging with Laurel
               description_student: ''
               description_teacher: ''
             Events in Bounce:
@@ -9966,11 +9966,11 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Shapes with Loops
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Artist:
@@ -9994,11 +9994,11 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: 'If/Else with Bee'
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
               description_student: ''
               description_teacher: ''
             Digital Citizenship:
@@ -10010,7 +10010,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary Images
               description_student: ''
               description_teacher: ''
             Artist Binary:
