@@ -28,6 +28,8 @@ class StageLockTest < ActionDispatch::IntegrationTest
     # will see the locked-stage message via the ViewAsToggle.
     assert_select "#locked-stage[data-hidden]", 1
 
+    # This needs to be an integration test rather than a controller test in
+    # order to follow the redirect which adds the /page/1 suffix.
     get build_script_level_path(@lockable_level_group_sl)
     follow_redirect!
     assert_response :success
