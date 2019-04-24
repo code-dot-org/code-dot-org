@@ -13,13 +13,13 @@ is_stable true
 
 stage 'Intro to Data', flex_category: 'csp_postap_1'
 level 'CSP U2L07 SFLP', named: true
-assessment 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In'
+level 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In', assessment: true
 
 stage 'Good and Bad Data Visualizations', flex_category: 'csp_postap_1'
 level 'CSP U2L10 SFLP', named: true
 level 'Collection A: Good and Bad Visualizations_2018', progression: 'Collection A: Good and Bad Visualizations', named: true
 level 'Collection B: Good and Bad Visualizations_2018', progression: 'Collection B: Good and Bad Visualizations', named: true
-assessment 'U2L10 FR why best worst viz_2018', progression: 'Check Your Understanding'
+level 'U2L10 FR why best worst viz_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Making Data Visualizations', flex_category: 'csp_postap_1'
 level 'CSP U2L11 SFLP', named: true
@@ -29,26 +29,26 @@ level 'Making a Line Chart_2018', progression: 'Making a Line Chart', named: tru
 level 'Making a Bar Chart_2018', progression: 'Making a Bar Chart', named: true
 level 'Editing Chart Appearance_2018', progression: 'Editing Chart Appearance', named: true
 level 'U4 - Making Data Visualizations - Free Play_2018', progression: 'Making Data Visualizations - Free Play'
-assessment 'U2L10 FR describe what you made from lesson prompt_2018', progression: 'Check Your Understanding'
+level 'U2L10 FR describe what you made from lesson prompt_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Discover a Data Story', flex_category: 'csp_postap_1'
 level 'CSP U2L12 SFLP', named: true
-assessment 'U2L12 FR reflection on collaboration_2018', progression: 'Check Your Understanding'
+level 'U2L12 FR reflection on collaboration_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Cleaning Data', flex_category: 'csp_postap_1'
 level 'CSP U2L13 SFLP', named: true
 level 'Getting to Know Your Data_2018', progression: 'Getting to Know Your Data', named: true
 level 'Cleaning Data_2018', progression: 'Cleaning Data', named: true
 level 'Categorizing Data_2018', progression: 'Categorizing Data', named: true
-assessment 'U2L13 Cleaning Data MC_2018', progression: 'Check Your Understanding'
-assessment 'U2L13 FR Reflection data analysis objective_2018', progression: 'Check Your Understanding'
+level 'U2L13 Cleaning Data MC_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L13 FR Reflection data analysis objective_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Creating Summary Tables', flex_category: 'csp_postap_1'
 level 'CSP U2L14 SFLP', named: true
 level 'Making Pivot Tables Part 1 - The Basics_2018', progression: 'Making Pivot Tables Part 1 - The Basics', named: true
 level 'Making Pivot Tables Part 2 - Manipulation and Visualization_2018', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations', named: true
 level 'U4L08v2 Making Pivot Tables Part 3_2018', progression: 'Making Pivot Tables Part 3'
-assessment 'U2L14 Summary Tables MC_2018', progression: 'Check Your Understanding'
+level 'U2L14 Summary Tables MC_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
 level 'CSP U2L15 SFLP', named: true
@@ -58,7 +58,7 @@ variants
   level 'csp_affirmation_control_2_2018', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_2_2018', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
-assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018'
+level 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018', assessment: true
 
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
 level 'U4L02 Student Lesson Introduction_2018'

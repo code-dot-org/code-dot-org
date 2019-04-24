@@ -47,7 +47,7 @@ level 'CSD U5 student record_2018_2019', progression: 'Combining Representations
 
 stage 'Project - Create a Representation', flex_category: 'csd5_1'
 level 'CSD U5L08 autoSFLP_2019', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019', progression: 'Reflection', assessment: true
 
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 level 'CSD U5L09 autoSFLP_2019', named: true
@@ -77,4 +77,4 @@ level 'CSD U5L14 autoSFLP_2019', named: true
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 level 'CSD U5L15 autoSFLP_2019', named: true
 level 'csd u5 recommender sample_2019', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019', progression: 'Reflection', assessment: true
