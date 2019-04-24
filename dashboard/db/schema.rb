@@ -245,9 +245,7 @@ ActiveRecord::Schema.define(version: 20190416234333) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "video_id"
     t.string   "video_key"
-    t.index ["video_id"], name: "index_concepts_on_video_id", using: :btree
     t.index ["video_key"], name: "index_concepts_on_video_key", using: :btree
   end
 

@@ -107,7 +107,7 @@ bonus 'courseB_artist_loops_challenge1_2019'
 bonus 'courseB_artist_loops_challenge2_2019'
 
 stage 'The Right App', flex_category: 'csf_impacts'
-level 'BigEvent_2019'
+level 'TheRightAppMarkdownLevel_2019', progression: 'Unplugged Activity'
 
 stage 'Events: The Big Event', flex_category: 'csf_events'
 level 'BigEvent_2019'
