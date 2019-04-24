@@ -1,6 +1,6 @@
 module Pd::Application
   module RegionalPartnerTeacherconMapping
-    THIS_YEAR = 2018
+    THIS_YEAR = 2019
 
     # This is the 2018 mapping. We can update this for next year's applications.
     TEACHERCONS = [
