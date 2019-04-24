@@ -16,7 +16,8 @@ class PeerReviewSubmissions extends React.Component {
     loading: true,
     emailFilter: '',
     plcCourseId: '',
-    plcCourseUnitId: ''
+    plcCourseUnitId: '',
+    pagination: {}
   };
 
   componentWillMount() {
@@ -30,20 +31,27 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults(
       this.state.emailFilter,
       this.state.plcCourseId,
-      event.target.value
+      event.target.value,
+      this.state.pagination.current_page
     );
   };
 
   handleCourseFilterChange = event => {
     if (event.target.value === '') {
       this.setState({plcCourseId: '', plcCourseUnitId: ''});
-      this.getFilteredResults(this.state.emailFilter, '', '');
+      this.getFilteredResults(
+        this.state.emailFilter,
+        '',
+        '',
+        this.state.pagination.current_page
+      );
     } else {
       this.setState({plcCourseId: event.target.value});
       this.getFilteredResults(
         this.state.emailFilter,
         event.target.value,
-        this.state.plcCourseUnitId
+        this.state.plcCourseUnitId,
+        this.state.pagination.current_page
       );
     }
   };
@@ -53,7 +61,17 @@ class PeerReviewSubmissions extends React.Component {
     this.getFilteredResults(
       event.target.value,
       this.state.plcCourseId,
-      this.state.plcCourseUnitId
+      this.state.plcCourseUnitId,
+      this.state.pagination.current_page
+    );
+  };
+
+  handlePageChange = newPageNumber => {
+    this.getFilteredResults(
+      this.state.emailFilter,
+      this.state.plcCourseId,
+      this.state.plcCourseUnitId,
+      newPageNumber
     );
   };
 
@@ -65,14 +83,20 @@ class PeerReviewSubmissions extends React.Component {
     );
   };
 
-  getFilteredResults = (emailFilter, plcCourseId, plcCourseUnitId) => {
+  getFilteredResults = (
+    emailFilter,
+    plcCourseId,
+    plcCourseUnitId,
+    pageNumber
+  ) => {
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/peer_review_submissions/index?email=${emailFilter ||
         ''}&plc_course_id=${plcCourseId ||
-        ''}&plc_course_unit_id=${plcCourseUnitId || ''}`,
+        ''}&plc_course_unit_id=${plcCourseUnitId || ''}&page=${pageNumber ||
+        1}&per=30`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -164,7 +188,11 @@ class PeerReviewSubmissions extends React.Component {
         {this.state.loading ? (
           <Spinner />
         ) : (
-          <PeerReviewSubmissionData submissions={this.state.submissions} />
+          <PeerReviewSubmissionData
+            submissions={this.state.submissions}
+            pagination={this.state.pagination}
+            onChangePage={this.handlePageChange}
+          />
         )}
       </div>
     );
