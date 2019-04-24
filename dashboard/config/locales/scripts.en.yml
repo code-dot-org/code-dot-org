@@ -10460,12 +10460,8 @@ en:
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
           stages:
-            Building a Foundation:
-              name: Building a Foundation
-              description_student: ''
-              description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
@@ -10477,11 +10473,11 @@ en:
               description_student: ''
               description_teacher: ''
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -10497,11 +10493,11 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Harvester:
-              name: Loops in Harvester
+              name: Harvesting Crops with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: The Big Event
               description_student: ''
               description_teacher: ''
             Build a Flappy Game:
@@ -10513,27 +10509,25 @@ en:
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
-              name: Events in Play Lab
+              name: Chase Game with Events
               description_student: ''
               description_teacher: ''
             Looking Ahead:
-              name: Looking Ahead
+              name: Looking Ahead with Minecraft
               description_student: ''
               description_teacher: ''
             Binary Bracelets:
               name: Binary Bracelets
               description_student: ''
               description_teacher: ''
-            'End of Course Project: Play Lab':
-              name: 'End of Course Project: Play Lab'
             Create a Design with Loops:
               name: Create a Design with Loops
             'End of Course Project: Create a Play Lab Game':
-              name: 'End of Course Project: Create a Play Lab Game'
+              name: End of Course Project
             'Programming: My Robotic Friends':
-              name: 'Programming: My Robotic Friends'
+              name: 'My Robotic Friends Jr.'
             'Loops: My Loopy Robotic Friends':
-              name: 'Loops: My Loopy Robotic Friends'
+              name: 'My Loopy Robotic Friends Jr.'
             Graphing Data:
               name: Graphing Data
             Powerful Passwords:
