@@ -17,6 +17,9 @@ class ScriptTest < ActiveSupport::TestCase
     @script_in_course = create(:script, hidden: true)
     create(:course_script, position: 1, course: @course, script: @script_in_course)
 
+    @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
+    @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
+
     # ensure that we have freshly generated caches with this course/script
     Course.clear_cache
     Script.clear_cache
@@ -27,6 +30,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Script.script_cache_to_cache
     Script.script_cache
+    Script.script_family_cache
 
     # Also populate course_cache, as it's used by course_link
     Course.stubs(:should_cache?).returns true
@@ -310,6 +314,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal frozen, Script.get_from_cache(frozen_id)
   end
 
+  test 'get_family_from_cache uses script_family_cache' do
+    family_scripts = Script.where(family_name: 'family-cache-test')
+    assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
+
+    populate_cache_and_disconnect_db
+
+    cached_family_scripts = Script.get_family_from_cache('family-cache-test')
+    assert_equal [@script_2017.name, @script_2018.name], cached_family_scripts.map(&:name).uniq
+  end
+
   test 'cache_find_script_level uses cache' do
     script_level = Script.first.script_levels.first
 
@@ -386,6 +400,46 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises(ActiveRecord::RecordNotFound) do
       Script.get_from_cache(bad_id)
     end
+  end
+
+  test 'get_script_family_redirect_for_user returns latest user assigned script in family if user' do
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    section = create :section, script: csp1_2017
+    student = create :student
+    section.students << student
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2017.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: false)
+    assert_nil Script.get_script_family_redirect_for_user('csp')
+  end
+
+  test 'get_script_family_redirect_for_user returns latest version supported in locale if available' do
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'es-MX')
+    assert_equal csp1_2017.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable version if no user or locale' do
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp')
+    assert_equal csp1_2018.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable version if no versions supported in locale' do
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true, supported_locales: ['es-MX'])
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', locale: 'it-IT')
+    assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
   test 'redirect_to_script_url returns nil unless user can view script version' do

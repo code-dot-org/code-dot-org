@@ -4,11 +4,11 @@
     %h3= t('teacher.answer')
     .content
       .column
-        %ul#questions
+        %ul.match_questions
           - level.questions.each do |question|
-            %li{style: "height: #{level.height}px"}!= match_t(question['text'], level)
-      .column#answerdest
-        %ul#answers
+            %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'], level)
+      .column.match_answerdest
+        %ul.match_answers
           - level.answers.each do |answer|
-            %li.answer.answerlist{style: "height: #{level.height}px"}!= match_t(answer['text'], level)
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= render_multi_or_match_content(answer['text'], level)
       .clear

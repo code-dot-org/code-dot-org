@@ -4345,20 +4345,20 @@ es:
         artistLoopsKA_a: Usa el bloque de salto para avanzar sin dibujar una línea.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del bucle para resolver este rompecabezas.
-      behaviors 1_authored_hint:
-        behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion necesita el pjaro moverse?"
       behaviors 2_authored_hint:
         behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
-      behaviors 4_authored_hint:
-        behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion necesita el pjaro moverse?"
+      behaviors 3a_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere la mascota?
         behavior hint: Edita el comportamiento para resolver el puzzle. El personaje debe moverse en dos direcciones diferentes para moverse en diagonal.
       behaviors 5a_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 6_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
+      behaviors 7_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras personas intentan leer tu código.

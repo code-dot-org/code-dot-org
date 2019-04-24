@@ -4330,16 +4330,16 @@ pt-BR:
         artistLoopsKA_a: O bloco de pulo te permite andar para frente sem desenhar uma linha.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deve haver 3 blocos dentro de seu loop para resolver este enigma.
-      behaviors 1_authored_hint:
-        behavior hint: "Tente editar os comportamentos! \n\n-   Qual direção o pássaro precisa mover?"
       behaviors 2_authored_hint:
         behavior hint: "Tente editar os comportamentos! \n\n-   Qual direção o pássaro precisa mover?"
       behaviors 3_authored_hint:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
-      behaviors 4_authored_hint:
-        behavior hint: "Tente editar os comportamentos! \n\n-   Qual direção o pássaro precisa mover?"
+      behaviors 3a_authored_hint:
+        behavior hint: |-
+          Tente editar os comportamentos!
+          \*Qual valor controla a velocidade de cada sprite?
       behaviors 5_authored_hint:
         target hint: Você pode escolher qualquer um dos quatro brinquedos. Qual deles o animal de estimação quer?
         behavior hint: Edite o comportamento para resolver este desafio. O sprite do animal de estimação precisa mover-se em duas direções diferentes para conseguir se mover na diagonal.
@@ -4348,6 +4348,10 @@ pt-BR:
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
       behaviors 6_authored_hint:
+        behavior hint: |-
+          Tente editar os comportamentos!
+          \*Qual valor controla a velocidade de cada sprite?
+      behaviors 7_authored_hint:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?

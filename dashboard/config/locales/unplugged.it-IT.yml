@@ -110,10 +110,10 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       GettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       RelayProgramming:
         title: Programmazione a Staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
@@ -127,7 +127,7 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
@@ -142,13 +142,13 @@ it:
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       PaperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       BinaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -306,7 +306,7 @@ it:
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
           introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
@@ -323,18 +323,18 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       courseC_unplugged_gettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_unplugged_binaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -432,7 +432,7 @@ it:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
@@ -468,18 +468,18 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       PaperPlanes_2018:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       GettingLoopy_2018:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       BinaryBracelets_2018:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -548,27 +548,27 @@ it:
           i diritti degli artisti come parte integrante dell'etica di un buon cittadino
           digitale.
       GettingLoopy_2019:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
           rete.
       BigEvent_2019:
-        title: Gli Eventi
+        title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       BinaryBracelets_2019:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       PaperPlanes_2019:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una

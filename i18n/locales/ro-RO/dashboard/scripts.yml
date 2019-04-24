@@ -4603,6 +4603,8 @@ ro:
               name: Obţinând Informaţii/Critici
             Conditionals with Cards:
               name: Condiționale cu Carduri
+            Building a Foundation:
+              name: Construirea unei Fundaţii
         csp1-pilot-staging:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'

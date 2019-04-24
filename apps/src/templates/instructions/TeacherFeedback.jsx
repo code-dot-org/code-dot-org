@@ -54,7 +54,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 16px 16px'
+    margin: '0px 16px 8px 16px'
   },
   keyConceptArea: {
     marginRight: 28,
@@ -69,7 +69,7 @@ const styles = {
     flexBasis: '60%'
   },
   commentAndFooter: {
-    margin: '0px 16px 8px 16px'
+    margin: '8px 16px 8px 16px'
   },
   form: {
     margin: 0
@@ -88,10 +88,10 @@ export class TeacherFeedback extends Component {
     disabledMode: PropTypes.bool.isRequired,
     rubric: PropTypes.shape({
       keyConcept: PropTypes.string,
-      exceeds: PropTypes.string,
-      meets: PropTypes.string,
-      approaches: PropTypes.string,
-      noEvidence: PropTypes.string
+      performanceLevel1: PropTypes.string,
+      performanceLevel2: PropTypes.string,
+      performanceLevel3: PropTypes.string,
+      performanceLevel4: PropTypes.string
     }),
     visible: PropTypes.bool.isRequired,
     //Provided by Redux
@@ -229,7 +229,12 @@ export class TeacherFeedback extends Component {
       !this.props.displayKeyConcept &&
       !(!this.state.performance && this.props.viewAs === ViewType.Student);
 
-    const rubricLevels = ['exceeds', 'meets', 'approaches', 'noEvidence'];
+    const rubricLevels = [
+      'performanceLevel1',
+      'performanceLevel2',
+      'performanceLevel3',
+      'performanceLevel4'
+    ];
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs

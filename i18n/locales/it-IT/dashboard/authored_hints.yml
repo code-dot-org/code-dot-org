@@ -6408,15 +6408,15 @@ it:
       courseB_collector_loops_challenge2a_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare gli errori (debugging). Non arrenderti!
         courseB_collector_loops_challenge2a_b: Guarda questo possibile percorso. Riesci a notare uno schema da ripetere?
-        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2018_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare gli errori (debugging). Non arrenderti!
         courseB_collector_loops_challenge2a_b: Guarda questo possibile percorso. Riesci a notare uno schema da ripetere?
-        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare gli errori (debugging). Non arrenderti!
         courseB_collector_loops_challenge2a_b: Guarda questo possibile percorso. Riesci a notare uno schema da ripetere?
-        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+        courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
@@ -8662,19 +8662,19 @@ it:
       courseC_maze_debugging_challenge2_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2018_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_loops6_authored_hint:

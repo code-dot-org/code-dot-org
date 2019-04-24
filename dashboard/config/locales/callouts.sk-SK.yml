@@ -13,10 +13,10 @@ sk:
           do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
       4-5 Bee Conditionals - FC Test_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Kliknite a presuňte "Textové pole" na obrazovku
         screenSelectorCallout3: Vyberte si Vami vytvorenú obrazovku
@@ -508,10 +508,10 @@ sk:
           ktorú vidíte na obrazovke využíva Vašu funkciu pre pohyb rakety!
       Ryan - 4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       Ryan - Bee Conditionals_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       Ryan_Demo_callout:
         dance_callout_02: Pridaj tento blok do svojho programu!
       SG U3L08 how to add comments_callout:
@@ -587,6 +587,8 @@ sk:
       behaviors 4a_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 5_callout:
+        behaviors_edit: Pridaj kód k tomuto správaniu.
+      behaviors free play_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral
@@ -809,6 +811,10 @@ sk:
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Tento blok vám umožní presunúť hercov
           do rôznych častí hracieho poľa.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Tento blok je pre projekt veľmi dôležitý. Určite ho použi!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Toto pridaj do stredu tvojho programu.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie
           herca do stredu obrazovky.
@@ -934,17 +940,17 @@ sk:
         courseD_artist_ramp11_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete pomoc?  Kliknite sem pre videonápovedu!
       courseD_bee_conditionals2_2018_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       courseD_bee_conditionals2_2019_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       courseD_bee_conditionals2_test_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete trochu pomôcť? Kliknite sem pre naše
           nové VIDEONÁPOVEDY!
       courseD_bee_conditionals_challenge2_callout:
@@ -1588,13 +1594,13 @@ sk:
         grade2_puppy_loops2_callout1: V tejto hre máte iba jeden takýto blok k dispozícií.
       grade3_ConditionalsElse_2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: Fialové kvety môžu mať 1 alebo 0 nektárov... dozvieš sa to,
           až keď spustíš kód!
       grade3_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       grade4_artist_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané
           do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
@@ -1614,7 +1620,7 @@ sk:
           a potom ho presuňte do definície Vašej funkcie
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU.
-          Nemusíš vôbec vyhľadávať včelie plásty.
+          Nemusíš vôbec vyhľadávať plásty.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
           snehových vločiek!

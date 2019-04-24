@@ -11894,6 +11894,30 @@ tr:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
+            'Programming: My Robotic Friends':
+              name: 'Programlama: Robot dostlarım'
+            Sequence in Maze:
+              name: Labirentte dizi
+            Building a Foundation:
+              name: Bir Temel Oluşturma
+            Programming in Artist:
+              name: Sanatçı Programlama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Build a Flappy Game:
+              name: Bir Kanat Çırpma Oyunu Oluşturmak
+            Build a Star Wars Game:
+              name: Star Wars oyunu oluştur
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            'Functions: Songwriting':
+              name: 'Fonksiyonlar: şarkı yazma'
+            Functions in Artist:
+              name: Sanatçı- Fonksiyonlar
+            Determine the Concept:
+              name: Kavramı Belirme
         csp7-pilot-staging:
           stages:
             new stage:

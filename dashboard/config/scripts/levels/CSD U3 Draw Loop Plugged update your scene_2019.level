@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:32.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -88,15 +88,12 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "rubric_key_concept": "Use loops to repeat behavior within a program.",
-    "rubric_exceeds": "The sprite animates as described in the instructions.  Other set up, such as creating the sprite, happen outside of the draw loop, and there are no extra blocks.",
-    "rubric_meets": "The sprite animates, but there may be small problems with the scene, such the wrong sprite or text being in front.  There may be other errors, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
-    "rubric_approaches": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or text or other parts of the scene disappearing.",
-    "rubric_no_evidence": "The sprite does not animate.",
     "mini_rubric": "true",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "rubric_performance_level_1": "The sprite animates as described in the instructions.  Other set up, such as creating the sprite, happen outside of the draw loop, and there are no extra blocks.",
+    "rubric_performance_level_2": "The sprite animates, but there may be small problems with the scene, such the wrong sprite or text being in front.  There may be other errors, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
+    "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or text or other parts of the scene disappearing.",
+    "rubric_performance_level_4": "The sprite does not animate.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

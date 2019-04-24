@@ -6014,9 +6014,38 @@ pt-BR:
       PDAlg 8-12 ex dr 1: A definição nesta Receita de Design não corresponde a ambos
         exemplos. Teste cada exemplo para ver qual está falhando e, em seguida, corrija
         a definição para corresponder.
+      PDAlg 8-12 ex dr 2: Este estudante criou dois exemplos para a função "maçãs",
+        mas algo não está certo. Como você direcionaria esse estudante para corrigir
+        o erro dele?
+      PDAlg Big Game History: Agora que você jogou em um nível do Jogão, você deverá
+        ver uma nova entrada no seu histórico. Clique no botão Histórico de Versões
+        e você deverá ver pelo menos uma versão. Cada vez que você voltar a um nível
+        do Jogão, você obterá um novo registro no seu histórico de versões para o
+        qual poderá voltar.
+      PDAlg Big Game Remix: |-
+        Aqui está o seu Jogão como você deixou por último. Tente clicar no botão Remix para criar um novo remix do seu projeto.
+
+        Quaisquer alterações feitas após você clicar em Remix serão salvas em seu novo remix e não em seu Jogão principal.
+      PDAlg Design Recipe Delete: Clique no botão excluir para se livrar dessa função,
+        então tente criar e excluir algumas de suas próprias funções.
       PDAlg Design Recipe Examples: A definição nesta Receita de Design não corresponde
         a ambos exemplos. Teste cada exemplo para ver qual está falhando e, em seguida,
         corrija a definição para corresponder.
+      PDAlg Design Recipe Required: Complete a Receita de Projeto para a função "ovos",
+        Assegurando-se de criar e testar seus exemplos.
+      PDAlg Updates Cond: Quando você foi ao PD no verão, o bloco Condicional, ao
+        qual você foi introduzido, era preto e permitia qualquer tipo de dados. Isso
+        acabou ficando confuso, dado que todas as funções que vimos sempre produzem
+        o mesmo tipo de dado. Para ajudar a tornar as condicionais mais claras e consistentes
+        nós trocamos o bloco simples preto por um bloco separado para cada tipo de
+        dado.
+      PDAlg Updates Errors: Rode o programa disponibilizado e use as mensagens de
+        erro para tentar encontrar os bugs.
+      PDAlg Updates Space: Fazer uso de espaço limitado de programação (especialmente
+        em telas pequenas) é um desafio em uma linguagem baseada em blocos. Para ajudar
+        com isto nós adicionamos algumas funcionalidades. Experimente com o código
+        fornecido para ver como o espaço pode ser manipulado para tratar programas
+        maiores.
       PDK5 Conditionals 1: |-
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa
@@ -6046,6 +6075,7 @@ pt-BR:
         se você usar o bloco repita para executar o código fornecido na área de trabalho
         4 vezes?
       PS - test - pixelation: Complete a forma X digitando 0s e 1s
+      PS FR test 7-25: 'Aqui estão suas instruções para esta reposta livre.  '
       PS Log test - Define and use turnAround: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito.
@@ -6053,6 +6083,26 @@ pt-BR:
         roxas que não o têm. \\\r\nPrimeiro, veja se o néctar\né igual a 1 usando
         o bloco \"se néctar\"."
       PS predictive Applab level test: 'Veja aqui algumas instruções. '
+      Pattern Bee 1: Que campo de guloseimas estranho! Me pergunto se tem um padrão
+        aqui...
+      Pixelation - AllTheThings 4: Este nível de pixelização demonstra o uso da opção
+        `hide_encoding_controls`. Note que o nível mostra os dados da imagem em hexadecimal
+        e não o deixa alterar de volta para binário.
+      Pixelation - AllTheThings 5: Este nível de pixelização demonstra o uso da opção
+        "Deslize para Ocultar". Note que o comprimento e altura do controle de deslize
+        não está disponível, e os campos de comprimento e altura não são editáveis.
+      Pixelation - Lesson 14 - Fix bit offset: Um bit simples extra foi inserido na
+        sequência de bits que criam o C da logo do Code.org. Este bit extra atrapalha
+        todos os bits subsequentes que fazem a logo parecer bagunçada. Encontre o
+        bit extra e remova ele para corrigir a logo do Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2018: Um bit simples extra foi inserido
+        na sequência de bits que criam o C da logo do Code.org. Este bit extra atrapalha
+        todos os bits subsequentes que fazem a logo parecer bagunçada. Encontre o
+        bit extra e remova ele para corrigir a logo do Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2019: Um bit simples extra foi inserido
+        na sequência de bits que criam o C da logo do Code.org. Este bit extra atrapalha
+        todos os bits subsequentes que fazem a logo parecer bagunçada. Encontre o
+        bit extra e remova ele para corrigir a logo do Code.org.
       Pixelation - Lesson 14 - Make the Letter A: 'Faça uma letra ''A'' 3x5. O widget
         está configurado com as dimensões incorretas. Sua primeira tarefa é definir
         o segundo byte do código binário de 8-bits para o número 5: 0000 0101. Então
@@ -6071,6 +6121,10 @@ pt-BR:
       Pixelation - Lesson 14 - Make your own B&W Image: Agora, crie sua própria imagem!
         Começamos com uma tela de 10x10, mas você pode deixá-la do tamanho que você
         quiser. Feliz pixelização!
+      Pixelation - Lesson 15 - Color Free Play: 'Requisitos: O ícone deve ter 16x16
+        pixels. Você deve usar a Ferramenta de Pixelização para codificar os bits
+        de informação de cor. A imagem deve ser codificada com pelo menos 12 bits
+        por pixel.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Vamos começar com a imagem 4x4 que
         Maddie criou no vídeo. Sua tarefa é preencher uma grade 4x4 com cores usando
         12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com sombras
@@ -6086,6 +6140,18 @@ pt-BR:
         usando 12-bits por pixel. Aqui estão os requisitos: Linha 1 - preencha com
         sombras de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul.
         Linha 4 - sombras de cinza.'
+      Pixelation - Lesson 15 - Color Shades: Vamos começar com uma linha de tons de
+        vermelho que a Maddie criou no video. Experimente com uma cor de 6-bits preenchendo
+        a linha de baixo da imagem com tons de uma cor diferente. Aqui está um exemplo
+        com alguns tons de azul. Test com sua própria cor!
+      Pixelation - Lesson 15 - Color Shades_2018: Vamos começar com uma linha de tons
+        de vermelho que a Maddie criou no video. Experimente com uma cor de 6-bits
+        preenchendo a linha de baixo da imagem com tons de uma cor diferente. Aqui
+        está um exemplo com alguns tons de azul. Test com sua própria cor!
+      Pixelation - Lesson 15 - Color Shades_2019: Vamos começar com uma linha de tons
+        de vermelho que a Maddie criou no video. Experimente com uma cor de 6-bits
+        preenchendo a linha de baixo da imagem com tons de uma cor diferente. Aqui
+        está um exemplo com alguns tons de azul. Test com sua própria cor!
       Pixelation - Lesson 15 - Complete 3-bit color: Vamos começar com você com a
         imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
         quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
@@ -6098,6 +6164,38 @@ pt-BR:
         a imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
         quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
         codifique-as.
+      Pixelation Bee: 'Esta imagem maior de uma abelha codifica cores com 12 bits
+        por pixel, mas visualizando em hexadecimal faz com que seja mais fácil ver
+        as cores de cada pixel. Se você alterar para o modo binário - se prepare -
+        são muitos bits. Aqui está outra coisa surpreendente para tentar: deslize
+        os bits por pixel até 24 bits por pixel. O que acontece? Você pode explicar
+        este comportamento?'
+      Pixelation Bee_2018: 'Esta imagem maior de uma abelha codifica cores com 12
+        bits por pixel, mas visualizando em hexadecimal faz com que seja mais fácil
+        ver as cores de cada pixel. Se você alterar para o modo binário - se prepare
+        - são muitos bits. Aqui está outra coisa surpreendente para tentar: deslize
+        os bits por pixel até 24 bits por pixel. O que acontece? Você pode explicar
+        este comportamento?'
+      Pixelation Bee_2019: 'Esta imagem maior de uma abelha codifica cores com 12
+        bits por pixel, mas visualizando em hexadecimal faz com que seja mais fácil
+        ver as cores de cada pixel. Se você alterar para o modo binário - se prepare
+        - são muitos bits. Aqui está outra coisa surpreendente para tentar: deslize
+        os bits por pixel até 24 bits por pixel. O que acontece? Você pode explicar
+        este comportamento?'
+      Pixelation Flappy: Aqui está uma imagem maior em 9 bits por pixel. Com 9 bits
+        por pixel você expressar 512 cores diferentes. Clique para ver a próxima imagem
+        que é ainda mais sofisticada, mas mais fácil de entender.
+      Pixelation Flappy_2018: Aqui está uma imagem maior em 9 bits por pixel. Com
+        9 bits por pixel você expressar 512 cores diferentes. Clique para ver a próxima
+        imagem que é ainda mais sofisticada, mas mais fácil de entender.
+      Pixelation Flappy_2019: Aqui está uma imagem maior em 9 bits por pixel. Com
+        9 bits por pixel você expressar 512 cores diferentes. Clique para ver a próxima
+        imagem que é ainda mais sofisticada, mas mais fácil de entender.
+      Pizza on a Plate: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
+        real. Isto necessita persistência e planegamento!'
+      Planning Farmer: Que campo de guloseimas estranho! Me pergunto se tem um padrão
+        aqui...
+      Planter Test: Ajude-me plantar meus campos!
       Play Lab Rocket 1: |-
         Um foguete é lançado, viajando a 15 metros
         por segundo... clique em "Executar" para ver como é esse problema em forma de animação.
@@ -6135,6 +6233,8 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
         inicial da tartaruga.
+      Poorva-test: Aqui estão as instruções regulares para um nível. Não há nada de
+        especial acontecendo aqui.
       Practice Create Performance Task: Projete e implemente sua prática Criar tarefa
         de desempenho. (Clique para ver instruções completas)
       Practice Create Performance Task_2018: Projete e implemente sua prática Criar
@@ -6159,12 +6259,25 @@ pt-BR:
         para ver as instruções completas).
       Prompt Test: Construa o que você quiser. Este é um exemplo de um jogo de adivinhação
         de números!
+      Quantum Bee - Ryan: Estas nuvems estão me incomodando! Algumas das nuvens têm
+        flores dentro, outras não. Eu deveria verificar cada nuvem, e somente retirar
+        o néctar das flores.
       Quantum Bee: |-
         As flores roxas podem ter 1 ou 0 néctar,
         mas você não sabe quanto ela tem! Tome cuidado para não coletar néctar de uma flor roxa
         que não tenha néctar algum. Verifique se o néctar é igual a 1 usando
         o bloco se.
       Ram Spritelab Validation Test: Pressione a seta para cima
+      Robot Doodle: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
+        real. Isto necessita persistência e planegamento!'
+      Robot Doodle_2018: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
+        real. Isto necessita persistência e planegamento!'
+      Robot Doodle_2019: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
+        real. Isto necessita persistência e planegamento!'
+      Robot Drawing: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
+        real. Isto necessita persistência e planegamento!'
+      Robot: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo real. Isto
+        necessita persistência e planegamento!'
       Rocket Height Course A: Siga a receita de design para criar uma função foguete-altura.
       Ryan - 4-5 Bee Conditionals 2: |-
         Agora, a abelha só quer néctar.
@@ -6174,6 +6287,9 @@ pt-BR:
         Agora, a abelha só quer néctar.
         Nem todos os objetos são flores, então olhe embaixo de TODAS AS NUVENS para ver se
         ela está escondendo uma flor. Se estiver, então você pode coletar o néctar.
+      Ryan App Lab: Resolva esta!
+      Ryan Doily Step 1: Agora iremos desenhar um guardanapo passo a passo. Primeiro,
+        desenhe um quadrado.
       Ryan Doily Step 2: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos
         graus se obter 360 depois de 20 iterações?
       Ryan Doily Step 3: Agora, você precisa ativar e repeti-lo 20 vezes! Quantos
@@ -6181,6 +6297,13 @@ pt-BR:
       Ryan Test Locked Blocks: |-
         Aqui temos uma função chamada "patrulhe".
         Edite-a para mover o gato 400 pixels para cima, e então 400 pixels para baixo.
+      Ryan's clone of C4S15P10: "Nós adicionamos uma última função para você.\n\nUse
+        uma declaração \"se\" no programa do seu jogo para chamar a função \"level_up\"
+        somente quando \"player_score\" se tornar maior que um certo número.\n\nPor
+        exemplo: \"player\\_score\" > 6\n\nJogo o jogo, e consiga passar do nível
+        4 para ir para o próximo desafio. "
+      RyanTest3: Este nível tem a mudança de forma ligada! Atualize para ver diferentes
+        formas.
       Ryan_Demo: Faça o alce iniciar um novo movimento após quatro compassos!
       SG Add Subgoals practice: |-
         Desenhe uma grade 3x3 acima e à direita da
@@ -6188,6 +6311,11 @@ pt-BR:
         Esse problema é bastante desafiador. Você deve precisar passar um tempo resolvendo-o
         e ajustando-o.  Você também deve considerar usar lápis e papel para esboçar
         suas ideias.
+      SG U3L03 - draw rect function: |-
+        Escreva uma função chamada drawRectangle().
+        (Clique para ver as instruções completas)
+      SG U3L03 - draw step: Escreva a função desenhaPasso. (Clique para ver instruções
+        completas)
       SG U3L03 Define and use turnAround: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito.
@@ -6813,6 +6941,21 @@ pt-BR:
       U313 eventsDetails: Execute um programa com dois botões que possuem o mesmo
         id para ver a mensagem de aviso no console. Altere os ids para fazer o programa
         funcionar sem receber uma mensagem de aviso.
+      U3L03 - draw rect function: |-
+        Escreva uma função chamada drawRectangle().
+        (Clique para ver as instruções completas)
+      U3L03 - draw rect function_2018: |-
+        Escreva uma função chamada drawRectangle().
+        (Clique para ver as instruções completas)
+      U3L03 - draw rect function_2019: |-
+        Escreva uma função chamada drawRectangle().
+        (Clique para ver as instruções completas)
+      U3L03 - draw step: Escreva a função desenhaPasso. (Clique para ver instruções
+        completas)
+      U3L03 - draw step_2018: Escreva a função desenhaPasso. (Clique para ver instruções
+        completas)
+      U3L03 - draw step_2019: Escreva a função desenhaPasso. (Clique para ver instruções
+        completas)
       U3L03 Creating Procedures 1: |-
         Escreva a função virar() e
         use-a para fazer a tartaruga se mover como descrito. Veja: U3L03-turnAndDown.gif
@@ -7547,6 +7690,15 @@ pt-BR:
       'Widget: Black and White Pixelation_2019': Agora, crie sua própria imagem! Começamos
         com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
         Feliz pixelização!
+      'Widget: Color Pixelation': 'Requisitos: O ícone deve ter 16x16 pixels. Você
+        deve usar a Ferramenta de Pixelização para codificar os bits de informação
+        de cor. A imagem deve ser codificada com pelo menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2018': 'Requisitos: O ícone deve ter 16x16 pixels.
+        Você deve usar a Ferramenta de Pixelização para codificar os bits de informação
+        de cor. A imagem deve ser codificada com pelo menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2019': 'Requisitos: O ícone deve ter 16x16 pixels.
+        Você deve usar a Ferramenta de Pixelização para codificar os bits de informação
+        de cor. A imagem deve ser codificada com pelo menos 12 bits por pixel.'
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
       aE6: 'Quantas vezes você precisa repetir isto para desenhar metade de um círculo? '
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés
