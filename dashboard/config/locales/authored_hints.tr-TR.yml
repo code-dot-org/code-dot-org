@@ -1947,12 +1947,22 @@ tr:
           Davranışları düzenlemeyi deneyin!
 
           -   Hangi değer hareket hızını kontrol ediyor?
+      behaviors 3a_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+
+          -   Hangi değer hareket hızını kontrol ediyor?
       behaviors 5a_authored_hint:
         behavior hint: |-
           Davranışları düzenlemeyi deneyin!
 
           -   Hangi değer hareket hızını kontrol ediyor?
       behaviors 6_authored_hint:
+        behavior hint: |-
+          Davranışları düzenlemeyi deneyin!
+
+          -   Hangi değer hareket hızını kontrol ediyor?
+      behaviors 7_authored_hint:
         behavior hint: |-
           Davranışları düzenlemeyi deneyin!
 

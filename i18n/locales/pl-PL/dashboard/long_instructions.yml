@@ -778,6 +778,9 @@ pl:
       course3_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź zombie do słonecznika.
       course4_artist_binary_challenge1: Możesz użyć tylko binarnych wartości (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń go i zastąp go czymś zupełnie inny)
+      courseA_bee_seq1: Pomóż pszczółce zebrać jeden nektar!
+      courseA_bee_seq10: Spróbuj sam! Zbierz cały nektar.
+      courseA_bee_seq12: Pomóż pszczółce zebrać jeden nektar!
       courseA_collector_loops_challenge1: _"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
       courseA_collector_loops_challenge1_2018: _"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
       courseA_collector_loops_challenge1_2019: _"Czy możesz mi pomóc znaleźć błędy? Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
@@ -1141,6 +1144,7 @@ pl:
       grade5_artist_variables_hexagons1: Spróbuj ponownie. \\r \\r Czy mógłbyś ustawić wartość zmiennej "length" (długość) na 60, aby utworzyć ten fajny wzór z sześciokątów?
       grade5_artist_variables_pentagon9: Zmodyfikuj algorytm z poprzedniej łamigłówki i utwórz pięciokąt o bokach długości 150.
       grade5_artist_variables_pentagons1: Narysuj ten wzór pięciokątów o bokach 100 pikseli ustalając odpowiednią wartość zmiennej "length" (długość) i umieszczając tę zmienną w odpowiednich miejscach. \\r \\r Zauważ, że tylko raz musisz ustalić wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości.
+      grade5_bee_for_loops4: Pomóż pszczółce zebrać cały nektar.
       grade5_bee_parameters_new8a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_bee_parameters_new9a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_playlab_variables13: Użyj bloku "kiedy postać dotyka", by wysłać Psa z powrotem do góry po lewej tylko wtedy, kiedy dotknie on jakąkolwiek inną postać.

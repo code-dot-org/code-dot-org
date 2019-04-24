@@ -4894,6 +4894,9 @@ es:
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
           la velocidad de cada sprite?"
+      behaviors 3a_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
+          la velocidad de cada sprite?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere
           la mascota?
@@ -4903,6 +4906,9 @@ es:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
           la velocidad de cada sprite?"
       behaviors 6_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
+          la velocidad de cada sprite?"
+      behaviors 7_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
           la velocidad de cada sprite?"
       comment_intro_maze_2018_authored_hint:
