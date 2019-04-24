@@ -16,6 +16,7 @@ import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
+import TextConsole from './TextConsole';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -48,7 +49,8 @@ class GameLabVisualizationColumn extends React.Component {
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
-    updatePicker: PropTypes.func.isRequired
+    updatePicker: PropTypes.func.isRequired,
+    consoleMessages: PropTypes.array.isRequired
   };
 
   // Cache app-space mouse coordinates, which we get from the
@@ -146,6 +148,9 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
+        <TextConsole
+          consoleMessages={this.props.consoleMessages}
+        />
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -202,7 +207,8 @@ export default connect(
     spriteLab: state.pageConstants.isBlockly,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
-    pickingLocation: isPickingLocation(state.locationPicker)
+    pickingLocation: isPickingLocation(state.locationPicker),
+    consoleMessages: state.textConsole
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
