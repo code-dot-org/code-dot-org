@@ -713,7 +713,11 @@ FactoryGirl.define do
   factory :concept do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
-      video
+      after(:create) do |concept|
+        video = create(:video)
+        concept.video_key = video.key
+        concept.save!
+      end
     end
   end
 
