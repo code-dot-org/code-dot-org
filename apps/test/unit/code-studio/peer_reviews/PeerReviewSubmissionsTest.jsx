@@ -10,24 +10,32 @@ describe('PeerReviewSubmissions', () => {
   let debounceStub;
   let peerReviewSubmissions;
 
-  const fakePeerReviewData = [
-    {
-      submitter: 'User 1',
-      course_name: 'Course 1',
-      review_ids: [
-        [1, 'accepted', '2019-03-05T01:11:50Z'],
-        [2, 'accepted', '2019-03-05T01:11:50Z']
-      ]
-    },
-    {
-      submitter: 'User 2',
-      course_name: 'Course 2',
-      review_ids: [
-        [3, 'accepted', '2019-03-05T01:11:50Z'],
-        [4, 'accepted', '2019-03-05T01:11:50Z']
-      ]
+  const fakePeerReviewData = {
+    submissions: [
+      {
+        submitter: 'User 1',
+        course_name: 'Course 1',
+        review_ids: [
+          [1, 'accepted', '2019-03-05T01:11:50Z'],
+          [2, 'accepted', '2019-03-05T01:11:50Z']
+        ]
+      },
+      {
+        submitter: 'User 2',
+        course_name: 'Course 2',
+        review_ids: [
+          [3, 'accepted', '2019-03-05T01:11:50Z'],
+          [4, 'accepted', '2019-03-05T01:11:50Z']
+        ]
+      }
+    ],
+    pagination: {
+      total_pages: 1,
+      current_page: 1,
+      next_page: null,
+      prev_page: null
     }
-  ];
+  };
 
   before(() => {
     // stub out debounce to return the original function, so it's called immediately
@@ -73,7 +81,8 @@ describe('PeerReviewSubmissions', () => {
       emailFilter: '',
       plcCourseId: '',
       plcCourseUnitId: '',
-      submissions: fakePeerReviewData
+      submissions: fakePeerReviewData.submissions,
+      pagination: fakePeerReviewData.pagination
     });
     expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
       .be.true;
