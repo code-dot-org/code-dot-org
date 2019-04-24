@@ -82,7 +82,7 @@ stage 'The Need for Addressing', flex_category: 'csp1_2'
 level 'v2 U1L9 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Internet Simulator: Broadcast', progression: 'Internet Simulator: Broadcast', named: true
 level 'The Internet: IP Addresses & DNS', progression: 'The Internet: IP Addresses & DNS', named: true
-level 'U2L02 Free Response Reflection', progression: 'Check Your Understanding'
+level 'U2L02 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 level 'U2L02 Assessment 3', progression: 'Check Your Understanding', assessment: true
 level 'U2L02 Assessment 4', progression: 'Check Your Understanding', assessment: true
 level 'U2L02 Assessment 5', progression: 'Check Your Understanding', assessment: true
