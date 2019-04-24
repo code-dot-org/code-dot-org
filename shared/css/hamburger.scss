@@ -38,64 +38,6 @@
   position: relative;
   font-size: 14px;
 
-  #hamburger-icon {
-    cursor: pointer;
-    padding: 10px 35px 16px 0;
-    height: 20px;
-    vertical-align: middle;
-    text-decoration: none;
-    float: right;
-    margin-top: 8px;
-    display: inline-block;
-
-    %extend_burger {
-      cursor: pointer;
-      height: 3px;
-      width: 25px;
-      border-radius: 2px;
-      background: $white;
-      position: absolute;
-      display: block;
-      content: '';
-      margin-top: 2px;
-      margin-bottom: 2px;
-    }
-    span {
-      @extend %extend_burger;
-      transition: all 500ms ease-in-out;
-      html[dir=rtl] & {
-        margin-right: -25px;
-        &::before {
-          margin-right: 0;
-        }
-        &::after {
-          margin-right: 0;
-        }
-      }
-      &::before {
-        @extend %extend_burger;
-        transition: all 500ms ease-in-out;
-        top: -10px;
-      }
-      &::after {
-        @extend %extend_burger;
-        transition: all 500ms ease-in-out;
-        bottom: -10px;
-      }
-    }
-    &.active span {
-      background-color: transparent;
-      &::before {
-        top: 0;
-        transform: rotate(45deg);
-      }
-      &::after {
-        top: 0;
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
   #hamburger-contents, #help-contents {
     font-size: 14px;
     list-style: none;
@@ -252,6 +194,66 @@
     }
     #hamburger-contents, #help-contents {
       font-size: 18px;
+    }
+  }
+}
+
+#hamburger {
+  #hamburger-icon {
+    cursor: pointer;
+    padding: 10px 35px 16px 0;
+    height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+    float: right;
+    margin-top: 8px;
+    display: inline-block;
+
+    %extend_burger {
+      cursor: pointer;
+      height: 3px;
+      width: 25px;
+      border-radius: 2px;
+      background: $white;
+      position: absolute;
+      display: block;
+      content: '';
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+    span {
+      @extend %extend_burger;
+      transition: all 500ms ease-in-out;
+      html[dir=rtl] & {
+        margin-right: -25px;
+        &::before {
+          margin-right: 0;
+        }
+        &::after {
+          margin-right: 0;
+        }
+      }
+      &::before {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        top: -10px;
+      }
+      &::after {
+        @extend %extend_burger;
+        transition: all 500ms ease-in-out;
+        bottom: -10px;
+      }
+    }
+    &.active span {
+      background-color: transparent;
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
