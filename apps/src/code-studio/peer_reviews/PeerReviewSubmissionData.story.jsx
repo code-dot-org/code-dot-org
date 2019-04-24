@@ -40,11 +40,6 @@ export default storybook => {
                 escalated_review_id: 5
               }
             ]}
-            pagination={{
-              total_pages: 1,
-              current_page: 1
-            }}
-            onPageChange={() => {}}
           />
         )
       }

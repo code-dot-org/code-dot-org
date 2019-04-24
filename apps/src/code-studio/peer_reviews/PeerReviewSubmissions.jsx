@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/components/spinner';
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';
+import Pagination from './Pagination';
 import $ from 'jquery';
 
 class PeerReviewSubmissions extends React.Component {
@@ -17,7 +18,10 @@ class PeerReviewSubmissions extends React.Component {
     emailFilter: '',
     plcCourseId: '',
     plcCourseUnitId: '',
-    pagination: {}
+    pagination: {
+      current_page: 1,
+      total_pages: 1
+    }
   };
 
   componentWillMount() {
@@ -104,6 +108,16 @@ class PeerReviewSubmissions extends React.Component {
         pagination: data.pagination,
         loading: false
       });
+
+      // REACT <16 WORKAROUND
+      // The react-paginate library depends on the React 16 rename of componentWillReceiveProps
+      // to UNSAFE_componentWillReceiveProps to implement its forcePage prop.  See:
+      // https://github.com/AdeleD/react-paginate/blob/master/react_components/PaginationBoxView.js#L86-L93
+      // This is a temporary workaround while we're still on 15.x.
+      // We should remove this when we upgrade to React 16.
+      [this.upperPagination, this.lowerPagination].forEach(ref =>
+        ref.forcePage(data.pagination.current_page)
+      );
     });
   };
 
@@ -182,18 +196,27 @@ class PeerReviewSubmissions extends React.Component {
   }
 
   render() {
+    const {current_page, total_pages} = this.state.pagination;
     return (
       <div>
         {this.renderFilterOptions()}
+        <Pagination
+          currentPage={current_page}
+          totalPages={total_pages}
+          onPageChange={this.handlePageChange}
+          ref={ref => (this.upperPagination = ref)}
+        />
         {this.state.loading ? (
           <Spinner />
         ) : (
-          <PeerReviewSubmissionData
-            submissions={this.state.submissions}
-            pagination={this.state.pagination}
-            onPageChange={this.handlePageChange}
-          />
+          <PeerReviewSubmissionData submissions={this.state.submissions} />
         )}
+        <Pagination
+          currentPage={current_page}
+          totalPages={total_pages}
+          onPageChange={this.handlePageChange}
+          ref={ref => (this.lowerPagination = ref)}
+        />
       </div>
     );
   }

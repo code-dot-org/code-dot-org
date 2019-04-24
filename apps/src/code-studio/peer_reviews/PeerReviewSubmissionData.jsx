@@ -1,17 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Table} from 'react-bootstrap';
-import Pagination from './Pagination';
 import PeerReviewLinkSection from './PeerReviewLinkSection';
 
 class PeerReviewSubmissionData extends React.Component {
   static propTypes = {
-    submissions: PropTypes.arrayOf(PropTypes.object).isRequired,
-    pagination: PropTypes.shape({
-      total_pages: PropTypes.number,
-      current_page: PropTypes.number
-    }).isRequired,
-    onPageChange: PropTypes.func.isRequired
+    submissions: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
   renderTableHeader() {
@@ -53,27 +47,12 @@ class PeerReviewSubmissionData extends React.Component {
     );
   }
 
-  renderPagination() {
-    const {pagination, onPageChange} = this.props;
-    return (
-      <Pagination
-        currentPage={pagination.current_page}
-        totalPages={pagination.total_pages}
-        onPageChange={onPageChange}
-      />
-    );
-  }
-
   render() {
     return (
-      <div>
-        {this.renderPagination()}
-        <Table striped>
-          {this.renderTableHeader()}
-          {this.renderTableBody()}
-        </Table>
-        {this.renderPagination()}
-      </div>
+      <Table striped>
+        {this.renderTableHeader()}
+        {this.renderTableBody()}
+      </Table>
     );
   }
 }
