@@ -285,20 +285,14 @@ The following supplies are completely optional but will be useful to have on han
 - Markers
 - Post-it notes
 
-<br />
-
 ### How can I access answer keys?
 With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
 
 Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
-
-<br />
 	
 ### <a name="standards"></a>Is CS Principles mapped to standards?
 
 CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The course has also been aligned to the newly revised 2017 CSTA standards. A summary of standards mappings can be found at [curriculum.code.org/csp/standards](https://curriculum.code.org/csp/standards)
-	
-<br />
 
 ### What is the recommended timing for teaching CS Principles?
 
@@ -306,33 +300,29 @@ We recommend that CS Principles be taught as a full year course, assuming that y
 
 It is possible to teach the course on a semester block schedule, though we highly recommend this implementation only be used in the fall semester. Since the AP Performance Tasks are due in late April and require 20 dedicated hours of class time to complete, most schools find there is not enough time to complete the course on a block schedule in the spring.
 
-<br />
+### Are there supports in CS Principles for students with learning differences or disabilities?
+
+Yes. Code.org has collaborated closely with partners to make our CS Principles curriculum accessible. Every lesson includes detailed recommendations from the <a href="http://outlier.uchicago.edu/accessCSP/", target=_"blank">accessCSP project from Outlier Research</a> on how activities can be supplemented and modified to meet the needs of students with learning disabilities and attention deficit disorders, including reading disorders, written expression disorders, math disorders, and language disorders. In addition, the Lesson-Specific Adjustment Guides identify the underlying psychological process that each adjustment addresses, including processes related to: aspects of reasoning; areas of language; different types of memory; fine motor; processing, timing, and pacing; aspects of visual processing; and executive functioning, attention, and social skills.
+
+### Do you have blind or visually impaired students in your class? 
+
+Our partners at <a href="https://www.washington.edu/accesscomputing/accesscsforall", target=_"blank">AccessCSforAll</a> have created an <a href="https://quorumlanguage.com/lessons/code.html", target=_"blank">accessible version of the curriculum and online tools</a> designed specifically for students with these disabilities. AccessCSforAll also runs a <a href="https://quorumlanguage.com/epiq.html", target=_"blank">summer professional development</a> to help teachers learn how to support these students. 
 
 ### How can I communicate with other teachers who are using the curriculum?
 
 Check out our forum at <a href="https://forum.code.org" target=_blank>https://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
-<br />
-
 ### Can I give feedback on the lessons?
 
 Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.
 
-<br />
-
 ### How/Where can I get professional development for this course?
 
-Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here](/educate/professional-learning/cs-principles) to learn more.
-
-Want to get notified when applications open for the 2019-2020 school year? [Provide your contact information](https://studio.code.org/pd/regional_partner_contact/new) to a Regional Partner.
-
-<br />
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here](/educate/professional-learning/middle-high) to learn more.
 
 ### How can I learn about what's new or changing with the curriculum?
 
 We send out monthly updates! [Sign up for future emails](http://code.org/educate/csp/CSPStatus_Signup).
-
-<br />
 
 ### Ideas and Inspirations
 

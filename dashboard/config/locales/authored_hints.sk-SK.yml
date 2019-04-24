@@ -905,9 +905,15 @@ sk:
         courseC_maze_loops_challenge1_b: Medzi každým blokom `opakuj`, potrebuješ
           blok `otoč sa vľavo` alebo `otoč sa vpravo`, aby sa Scrat pripravil na ďalší
           vzorec.
+        courseC_maze_loops_challenge1_c: |-
+          Ak si sa dostal až sem, stačí už len použiť `otoč sa vľavo` a potom pár krát `posuň sa dopredu`. Nevzdávaj sa!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: _Ak ma necháš cúvať, uisti sa, že zabočím
           správnym smerom!"_
+        courseC_maze_programming_challenge2_b: Najkratšie riešenie používa len 5 blokov,
+          avšak obsahuje aj blok `opakuj`!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: Tentokrát nemusí fungovať najkratšia cesta.
       course3_collector_debugging_challenge2_authored_hint:
@@ -1071,6 +1077,15 @@ sk:
         courseA_collector_loops5_c: Môžeš začať cyklom <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>, ktorý posunie Laurel
           na západ (vľavo) a pozbiera drahokamy.
+      courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
+      courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús
           si zapísať všetky kroky na papier a pohľadať v nich vzor.
@@ -2884,7 +2899,75 @@ sk:
         courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus <xml><block type="controls_repeat_simplified">
           <title name="TIMES">3</title> </block></xml>?
+      courseC_PlayLab_events1_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events1_2018_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events2_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
+      courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
+      courseC_PlayLab_events2_2019_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
       courseC_PlayLab_events3_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
         courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
           našu postavu?
         courseC_PlayLab_events3_c: |-
@@ -2898,6 +2981,8 @@ sk:
           </block>
           </xml>
       courseC_PlayLab_events3_2018_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
         courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
           našu postavu?
         courseC_PlayLab_events3_c: |-
@@ -2911,6 +2996,8 @@ sk:
           </block>
           </xml>
       courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
         courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
           našu postavu?
         courseC_PlayLab_events3_c: |-
@@ -2923,15 +3010,90 @@ sk:
           <title name="DISTANCE">25</title>
           </block>
           </xml>
+      courseC_PlayLab_events4_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
+      courseC_PlayLab_events4_2018_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
       courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
         courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
           si zistil, či funguje!
       courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
         courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
           si zistil, či funguje!
       courseC_PlayLab_events5_2019_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
         courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
           si zistil, či funguje!
+      courseC_PlayLab_events6_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events6_2018_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events7_authored_hint:
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events8_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events8_2019_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events9_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
+      courseC_PlayLab_events9_2018_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_b: |-
           Použi tento blok na nakreslenie nálepky!
@@ -3968,6 +4130,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -3975,6 +4139,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging2_2019_authored_hint:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -3982,6 +4148,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -3991,6 +4159,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_2018_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -4000,6 +4170,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -4009,6 +4181,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
           o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?

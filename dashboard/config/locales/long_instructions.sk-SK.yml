@@ -840,16 +840,26 @@ sk:
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
         hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
-      comment_intro_maze_2018: "_\"Hmm, čo robí tento program?\"_  \n\n* * *\n\nVyrieš
-        úlohu a použi nový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
-        </title>\n  </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť
-        si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.\n\nKomentáre slúžia
-        len pre **teba** a nijako neovplyvnia vykonávanie programu."
-      comment_intro_maze_2018_2019: "_\"Hmm, čo robí tento program?\"_  \n\n* * *\n\nVyrieš
-        úlohu a použi nový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
-        </title>\n  </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť
-        si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.\n\nKomentáre slúžia
-        len pre **teba** a nijako neovplyvnia vykonávanie programu."
+      comment_intro_maze_2018: |-
+        _"Hmm, čo robí tento program?"_
+
+        * * *
+
+        Vyrieš úlohu a použi nový blok <xml><block type="comment">
+            <title name="TEXT"> </title>
+          </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.
+
+        Komentáre slúžia len pre **teba** a nijako neovplyvnia vykonávanie programu.
+      comment_intro_maze_2018_2019: |-
+        _"Hmm, čo robí tento program?"_
+
+        * * *
+
+        Vyrieš úlohu a použi nový blok <xml><block type="comment">
+            <title name="TEXT"> </title>
+          </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.
+
+        Komentáre slúžia len pre **teba** a nijako neovplyvnia vykonávanie programu.
       course1_artist_loops_challenge4: _"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"_
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne
         bloky, ale sú v nesprávnom poradí!

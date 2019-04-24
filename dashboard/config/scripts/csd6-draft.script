@@ -125,7 +125,7 @@ level 'CSD U6 game project board events', progression: 'Events'
 level 'CSD U6 game project functions define', progression: 'Functions'
 level 'CSD U6 game project functions call', progression: 'Functions'
 level 'CSD U6 game project finish', progression: 'Finishing Touches'
-assessment 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection', assessment: true
 
 stage 'Arrays', flex_category: 'csd6_2'
 level 'CSD U6L10 TFMD', named: true
@@ -244,4 +244,4 @@ level 'CSDU6 - final project 3', progression: 'Board Input and Output'
 level 'CSDU6 - final project 5', progression: 'Board Input and Output'
 level 'CSDU6 - final project 4', progression: 'Finishing Touches'
 level 'CSDU6 - final project 6', progression: 'Finishing Touches'
-assessment 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection', assessment: true

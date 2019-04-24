@@ -325,7 +325,9 @@ lt:
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
             '"w"': V
+            '"a"': A
             '"s"': P
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -334,7 +336,9 @@ lt:
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
             '"w"': V
+            '"a"': A
             '"s"': P
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
