@@ -352,8 +352,8 @@ module Pd::Application
       true
     end
 
-    def allow_sending_application_reminder_email?
-      reminder_emails = emails.where(email_type: 'application_receipt_reminder')
+    def allow_sending_principal_approval_teacher_reminder_email?
+      reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
