@@ -9836,15 +9836,15 @@ en:
               description_student: 'Envelopes and variables have something in common: both can hold valuable things. Here you will learn what variables are and the awesome things they can do.'
               description_teacher: Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
               description_student: ''
               description_teacher: ''
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
               description_student: ''
               description_teacher: ''
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
               description_student: ''
               description_teacher: ''
             For Loop Fun:
@@ -9852,15 +9852,15 @@ en:
               description_student: You're going to have loads of fun learning about `for` loops!
               description_teacher: 'We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
               description_teacher: Featuring Bee, this lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then walked through using for loops to more effectively solve complicated problems.
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Swimming Fish with Sprite Lab
               description_student: ''
               description_teacher: ''
             Alien Dance Party with Sprite Lab:
@@ -9891,26 +9891,24 @@ en:
               name: Present Your Project
               description_student: Time to show your work! Here you will be presenting your awesome project to your peers.
               description_teacher: Over the course of five lessons, students will be building up to building a project of their own design using either Play Lab or Artist as their programming environment. Finally, students will be able to present their finished work to their peers or share with their loved ones with a special link. The lesson guide overviewing all five stages of the process can be found in the beginning of the project process, [here](https://curriculum.code.org/csf/coursef/15/).
-            new stage:
-              name: new stage
             The Artist:
               name: The Artist
             Nested Loops in the Maze:
-              name: Nested Loops in the Maze
+              name: Nested Loops in Maze
             Sequencing in the Maze:
               name: Sequencing in the Maze
             Programming and Loops with the Artist:
               name: Programming and Loops with the Artist
             Events with Sprite Lab:
-              name: Events with Sprite Lab
+              name: Alien Dance Party with Sprite Lab
             Loops with the Artist:
-              name: Loops with the Artist
+              name: Drawing with Loops
             Sprite Lab Behaviors:
               name: Sprite Lab Behaviors
             Editing Behaviors:
-              name: Editing Behaviors
+              name: Behaviors in Sprite Lab
             Virtual Pet:
-              name: Virtual Pet
+              name: Virtual Pet with Sprite Lab
             Data from Sprite Lab:
               name: Data from Sprite Lab
             End of Course Project:
@@ -9918,7 +9916,7 @@ en:
             Copyright and Creativity:
               name: Copyright and Creativity
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
             Digital Sharing:
