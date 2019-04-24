@@ -8,8 +8,8 @@ def queue_pd_reminder_emails
   # For each teacher application, queue up one reminder email if their principal
   # hasn't yet responded.
   Pd::Application::Teacher1920Application.all.each do |teacher_application|
-    if teacher_application.allow_sending_application_reminder_email?
-      teacher_application.queue_email :application_receipt_reminder
+    if teacher_application.allow_sending_principal_approval_teacher_reminder_email?
+      teacher_application.queue_email :principal_approval_teacher_reminder
     end
   end
 end
