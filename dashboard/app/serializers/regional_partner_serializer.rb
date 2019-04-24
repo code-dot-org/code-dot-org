@@ -26,7 +26,6 @@
 #
 
 class RegionalPartnerSerializer < ActiveModel::Serializer
-  include Pd::Application::RegionalPartnerTeacherconMapping
   include Pd::SharedWorkshopConstants
 
   attributes :id, :name, :group, :workshop_type
