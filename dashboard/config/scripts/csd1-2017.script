@@ -13,7 +13,7 @@ version_year '2017'
 is_stable true
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-pre-survey-2017-levelgroup'
+level 'csd-pre-survey-2017-levelgroup', assessment: true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 level 'Unit 1 Lesson 1 Overview', named: true
@@ -42,4 +42,4 @@ level 'CSD U1 Lesson 8 Overview', named: true
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 level 'CSD U1 Lesson 9 Overview', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection', assessment: true

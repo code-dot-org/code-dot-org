@@ -182,7 +182,7 @@ level 'CSD U3 Interactive Card Sprites', progression: 'Project Work'
 level 'CSD U3 Interactive Card User Input', progression: 'Project Work'
 level 'CSD U3 Interactive Card Other Conditionals', progression: 'Project Work'
 level 'CSD U3 Interactive Card Final', progression: 'Project Work'
-assessment 'csd-pulse-check-survey-1-levelgroup U3Ch1', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch1', progression: 'Reflection', assessment: true
 
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD U3 SFLP Velocity', named: true
@@ -320,10 +320,10 @@ level 'CSD U3 game sprite movement', progression: 'Project - Sprites and Interac
 level 'CSD U3 game user controls', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 finishing touches', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch2', progression: 'Reflection', assessment: true
 
 stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-post-survey-2017-levelgroup'
+level 'csd-post-survey-2017-levelgroup', assessment: true
 
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
-assessment 'csd-post-survey-2018-markdown-with-link-to-survey'
+level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true
