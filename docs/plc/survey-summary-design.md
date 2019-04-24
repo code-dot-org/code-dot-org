@@ -90,7 +90,7 @@ The pipeline has 4 main actions
 3. Summarize: Aggregate survey data.
 4. Present: Display survey summaries in dashboard.
 
-![Diagram](survey_summary_diagram.png)
+![Diagram](survey-summary-diagram.png)
 
 Some patterns this design follows
 - _Open-Closed Principle_\
