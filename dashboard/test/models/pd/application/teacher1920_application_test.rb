@@ -430,41 +430,6 @@ module Pd::Application
       refute Email.exists?(associated_unsent_email.id)
     end
 
-    test 'formatted_partner_contact_email' do
-      application = create :pd_teacher1920_application
-
-      partner = create :regional_partner, contact: nil
-      contact = create :teacher
-
-      # no partner
-      assert_nil application.formatted_partner_contact_email
-
-      # partner w no contact info
-      application.regional_partner = partner
-      assert_nil application.formatted_partner_contact_email
-
-      # name only? still nil
-      partner.contact_name = 'We Teach Code'
-      assert_nil application.formatted_partner_contact_email
-
-      # email only? still nil
-      partner.contact_name = nil
-      assert_nil application.formatted_partner_contact_email
-
-      # old contact field
-      partner.contact = contact
-      assert_equal "\"#{contact.name}\" <#{contact.email}>", application.formatted_partner_contact_email
-
-      # program manager but no contact_name or contact_email
-      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
-      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
-
-      # name and email
-      partner.contact_name = 'We Teach Code'
-      partner.contact_email = 'we_teach_code@ex.net'
-      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
-    end
-
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher1920_application_hash,
         completing_on_behalf_of_someone_else: YES,
@@ -1017,6 +982,37 @@ module Pd::Application
     end
 
     private
+
+    test 'test allow_sending_principal_email' do
+      # By default we can send.
+      application = create :pd_teacher1920_application
+      assert application.allow_sending_principal_email?
+
+      # If we're no longer unreviewed/pending, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'accepted_no_cost_registration')
+      refute application.allow_sending_principal_email?
+
+      # If principal approval is not required, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(principal_approval_not_required: true)
+      refute application.allow_sending_principal_email?
+
+      # If we already have a principal response, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_principal_approval1920_application, teacher_application: application
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email < 5 days ago, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email >= 5 days ago, we can send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_email?
+    end
 
     def assert_status_log(expected, application)
       assert_equal JSON.parse(expected.to_json), application.status_log

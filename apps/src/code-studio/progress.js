@@ -6,6 +6,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
@@ -150,6 +151,11 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+  initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
@@ -172,8 +178,10 @@ progress.renderCourseProgress = function(scriptData) {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.versions}
+        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
+        locale={scriptData.locale}
+        showAssignButton={scriptData.show_assign_button}
       />
     </Provider>,
     mountPoint
@@ -213,17 +221,7 @@ progress.renderMiniView = function(
   });
 };
 
-/**
- * Query the server for user_progress data for this script, and update the store
- * as appropriate
- */
-function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
+function initViewAs(store, scriptData) {
   // Set our initial view type from current user's user_type or our query string.
   let initialViewAs = ViewType.Student;
   if (scriptData.user_type === 'teacher') {
@@ -231,6 +229,14 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     initialViewAs = query.viewAs || ViewType.Teacher;
   }
   store.dispatch(setViewType(initialViewAs));
+}
+
+/**
+ * Query the server for user_progress data for this script, and update the store
+ * as appropriate
+ */
+function queryUserProgress(store, scriptData, currentLevelId) {
+  const onOverviewPage = !currentLevelId;
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
@@ -270,15 +276,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       }
 
       store.dispatch(showTeacherInfo());
-
-      const viewAs =
-        queryString.parse(location.search).viewAs || ViewType.Teacher;
-      if (viewAs !== initialViewAs) {
-        // We don't want to redispatch if our viewAs is the same as the initial
-        // one, since the user might have manually changed the view while making
-        // our async call
-        store.dispatch(setViewType(viewAs));
-      }
 
       renderTeacherPanel(store, scriptData.id, scriptData.section);
     }

@@ -31,7 +31,7 @@ describe('FilterHeader', () => {
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
     );
     expect(wrapper).to.containMatchingElement(
-      <button onClick={FAKE_SHOW_MODAL_FILTERS}>
+      <button type="button" onClick={FAKE_SHOW_MODAL_FILTERS}>
         {i18n.filterHeaderShowFilters()}
       </button>
     );
@@ -49,7 +49,7 @@ describe('FilterHeader', () => {
       <span>{i18n.filterHeaderTutorialCountPlural({tutorial_count: 5})}</span>
     );
     expect(wrapper).to.containMatchingElement(
-      <button onClick={FAKE_HIDE_MODAL_FILTERS}>
+      <button type="button" onClick={FAKE_HIDE_MODAL_FILTERS}>
         {i18n.filterHeaderHideFilters()}
       </button>
     );

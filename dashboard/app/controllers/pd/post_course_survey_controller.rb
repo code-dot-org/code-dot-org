@@ -21,7 +21,8 @@ module Pd
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
-        csp_or_csd: course
+        userEmail: current_user.email,
+        csp_or_csd: course,
       }
 
       @form_id = PostCourseSurvey.form_id

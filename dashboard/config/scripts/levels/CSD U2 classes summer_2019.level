@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-02-14T01:24:44.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -20,11 +20,11 @@
     "map_reference": "/docs/concepts/css/classes/",
     "encrypted": "false",
     "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
-    "rubric_exceeds": "The summer class and rule-set are created correctly and all text in the summer section of the website is the chosen color, as indicated by the RGB code.",
-    "rubric_meets": "The summer class and rule-set are created and most text in the summer section of the website is affected by this class, but there may be a few minor errors for some parts of text.",
-    "rubric_approaches": "The summer class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
-    "rubric_no_evidence": "The summer class or rule set are not created, or no website elements are put in the class.",
-    "mini_rubric": "true"
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The summer class and rule-set are created correctly and all text in the summer section of the website is the chosen color, as indicated by the RGB code.",
+    "rubric_performance_level_2": "The summer class and rule-set are created and most text in the summer section of the website is affected by this class, but there may be a few minor errors for some parts of text.",
+    "rubric_performance_level_3": "The summer class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+    "rubric_performance_level_4": "The summer class or rule set are not created, or no website elements are put in the class."
   },
   "published": true,
   "notes": "",

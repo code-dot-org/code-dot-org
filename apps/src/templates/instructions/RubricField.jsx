@@ -19,18 +19,21 @@ const styles = {
     fontSize: 12,
     marginLeft: 10,
     color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
+    // Don't show default summary tag outline and background on hover or focus
+    outline: 'none',
+    background: 'none'
   },
   performanceLevelHeader: {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-
     margin: '0px 8px',
     padding: 4,
+    borderRadius: 4,
+    border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 4
+      border: `solid 1px ${color.light_cyan}`
     }
   },
   performanceLevelHeaderSelected: {
@@ -41,9 +44,9 @@ const styles = {
     padding: 4,
     backgroundColor: color.lightest_cyan,
     borderRadius: 4,
+    border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-      borderRadius: 4
+      border: `solid 1px ${color.light_cyan}`
     }
   },
   tooltip: {
@@ -59,21 +62,36 @@ const styles = {
   }
 };
 
-const rubricLevelHeaders = {
-  exceeds: i18n.rubricExceedsHeader(),
-  meets: i18n.rubricMeetsHeader(),
-  approaches: i18n.rubricApproachesHeader(),
-  noEvidence: i18n.rubricNoEvidenceHeader()
+const rubricPerformanceHeaders = {
+  performanceLevel1: i18n.rubricLevelOneHeader(),
+  performanceLevel2: i18n.rubricLevelTwoHeader(),
+  performanceLevel3: i18n.rubricLevelThreeHeader(),
+  performanceLevel4: i18n.rubricLevelFourHeader()
 };
 
 class RubricField extends Component {
   static propTypes = {
     showFeedbackInputAreas: PropTypes.bool,
-    rubricLevel: PropTypes.oneOf(Object.keys(rubricLevelHeaders)).isRequired,
+    rubricLevel: PropTypes.oneOf(Object.keys(rubricPerformanceHeaders))
+      .isRequired,
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
-    currentlyChecked: PropTypes.bool
+    currentlyChecked: PropTypes.bool,
+    expandByDefault: PropTypes.bool
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      detailsOpen: this.props.expandByDefault
+    };
+  }
+
+  updateToggle = event => {
+    event.preventDefault();
+    this.setState({detailsOpen: !this.state.detailsOpen});
   };
 
   render() {
@@ -83,7 +101,7 @@ class RubricField extends Component {
 
     const tooltipId = _.uniqueId();
     return (
-      <div style={styles.rubricLevelHeaders}>
+      <div style={styles.rubricPerformanceHeaders}>
         <div
           style={performanceHeaderStyle}
           data-tip
@@ -99,9 +117,14 @@ class RubricField extends Component {
               disabledMode={this.props.disabledMode}
             />
           )}
-          <details style={styles.detailsArea}>
+          <details
+            id={`rubric-details-${this.props.rubricLevel}`}
+            style={styles.detailsArea}
+            open={this.state.detailsOpen}
+            onClick={this.updateToggle}
+          >
             <summary style={styles.rubricHeader}>
-              {rubricLevelHeaders[this.props.rubricLevel]}
+              {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
             <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
           </details>
@@ -111,6 +134,7 @@ class RubricField extends Component {
           role="tooltip"
           wrapper="div"
           effect="solid"
+          disable={this.state.detailsOpen}
         >
           <div style={styles.tooltip}>{this.props.rubricValue}</div>
         </ReactTooltip>
@@ -118,5 +142,5 @@ class RubricField extends Component {
     );
   }
 }
-
+export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);

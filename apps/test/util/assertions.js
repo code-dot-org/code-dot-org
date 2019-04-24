@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {assert} from './configuredChai';
+import {assert} from './reconfiguredChai';
 
 /**
  * Uses jQuery to locate an element matching the given selector and check that
