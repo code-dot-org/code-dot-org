@@ -191,7 +191,7 @@ class PeerReviewSubmissions extends React.Component {
           <PeerReviewSubmissionData
             submissions={this.state.submissions}
             pagination={this.state.pagination}
-            onChangePage={this.handlePageChange}
+            onPageChange={this.handlePageChange}
           />
         )}
       </div>

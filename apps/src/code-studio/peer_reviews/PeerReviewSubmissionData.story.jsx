@@ -44,7 +44,7 @@ export default storybook => {
               total_pages: 1,
               current_page: 1
             }}
-            onChangePage={() => {}}
+            onPageChange={() => {}}
           />
         )
       }
