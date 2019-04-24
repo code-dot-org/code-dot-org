@@ -30,7 +30,7 @@ level 'CSD U4L06 autoSFLP_2018', named: true
 
 stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 level 'CSD U4L07 autoSFLP_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018', progression: 'Reflection', assessment: true
 
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 level 'CSD U4L08 autoSFLP_2018', named: true
@@ -62,7 +62,7 @@ level 'U4 Model Design 5_2018', progression: 'Finish a Screen'
 level 'U4 Model Design 6_2018', progression: 'Finish a Screen'
 level 'U4 Model Design 7_2018', progression: 'Finish a Screen'
 level 'Design a Screen for your App_2018', named: true
-assessment 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design'
+level 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design', assessment: true
 
 stage 'Linking Screens', flex_category: 'csd4_2'
 level 'CSD U4L13 autoSFLP_2018', named: true
@@ -89,4 +89,4 @@ level 'CSDU4 Project Bug Feature_2018', named: true
 
 stage 'Project - App Presentation', flex_category: 'csd4_2'
 level 'CSD U4L16 autoSFLP_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018', progression: 'Reflection', assessment: true

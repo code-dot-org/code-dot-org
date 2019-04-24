@@ -13,7 +13,7 @@ level 'U4 Model Design 5_2018', progression: 'Finish a Screen'
 level 'U4 Model Design 6_2018', progression: 'Finish a Screen'
 level 'U4 Model Design 7_2018', progression: 'Finish a Screen'
 level 'Design a Screen for your App_2018', named: true
-assessment 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design'
+level 'CSD U4 - Design Mode Project_2018', progression: 'App Project: Screen Design', assessment: true
 
 stage 'Linking Screens'
 level 'CSD U4L13 autoSFLP_2018', named: true
