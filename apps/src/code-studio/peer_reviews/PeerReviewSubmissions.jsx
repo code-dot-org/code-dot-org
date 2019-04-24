@@ -76,7 +76,8 @@ class PeerReviewSubmissions extends React.Component {
       dataType: 'json'
     }).done(data => {
       this.setState({
-        submissions: data,
+        submissions: data.submissions,
+        pagination: data.pagination,
         loading: false
       });
     });

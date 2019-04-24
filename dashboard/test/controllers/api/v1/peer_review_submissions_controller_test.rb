@@ -57,7 +57,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
         [submissions.first.id, nil, submissions.first.updated_at],
         [submissions.second.id, 'escalated', submissions.second.updated_at]
       ]
-    ], response.map {|submission| submission['review_ids']}
+    ], response['submissions'].map {|submission| submission['review_ids']}
   end
 
   test 'All peer reviews gets all peer reviews submissions' do
@@ -77,8 +77,10 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
         [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
         [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
       ],
-    ], response.map {|submission| submission['review_ids']}
+    ], response['submissions'].map {|submission| submission['review_ids']}
   end
+
+  # Test pagination here
 
   [:admin, :teacher, :facilitator, :student].each do |user|
     test_user_gets_response_for(
