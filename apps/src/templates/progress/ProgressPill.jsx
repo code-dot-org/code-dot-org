@@ -7,6 +7,7 @@ import {levelType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
+import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 
 const styles = {
   levelPill: {
@@ -38,21 +39,6 @@ const styles = {
   },
   iconMargin: {
     marginLeft: 10
-  },
-  iconContainer: {
-    position: 'absolute',
-    top: -6,
-    right: -6,
-    fontSize: 10
-  },
-  assessmentIconBackground: {
-    color: color.purple
-  },
-  assessmentIconBorder: {
-    color: color.white
-  },
-  assessmentIconCheck: {
-    color: color.white
   }
 };
 
@@ -131,23 +117,7 @@ class ProgressPill extends React.Component {
           )}
           {tooltip}
           {inMiniRubricExperiment && levelIsAssessment && (
-            <span className="fa-stack" style={styles.iconContainer}>
-              <FontAwesome
-                icon="circle"
-                className="fa-stack-2x"
-                style={styles.assessmentIconBackground}
-              />
-              <FontAwesome
-                icon="circle-thin"
-                className="fa-stack-2x"
-                style={styles.assessmentIconBorder}
-              />
-              <FontAwesome
-                icon="check"
-                className="fa-stack-1x"
-                style={styles.assessmentIconCheck}
-              />
-            </span>
+            <SmallAssessmentIcon />
           )}
         </div>
       </a>
