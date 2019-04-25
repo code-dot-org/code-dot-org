@@ -7,11 +7,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  video_id   :integer
-#  video_key  :string
+#  video_key  :string(255)
 #
 # Indexes
 #
-#  index_concepts_on_video_id  (video_id)
 #  index_concepts_on_video_key  (video_key)
 #
 
@@ -21,21 +20,17 @@
 class Concept < ActiveRecord::Base
   include Seeded
   has_and_belongs_to_many :levels
-  belongs_to :video
-  # Can't call static from filter. Leaving in place for fixing later
-  #after_save :expire_cache
 
   def self.by_name(name)
-    (@@name_cache ||= Concept.all.index_by(&:name))[name].try(:id)
+    Rails.cache.fetch("concepts/names/#{name}") do
+      Concept.find_by_name(name).try(:id)
+    end
   end
 
   def self.cached
-    @@all_cache ||= Concept.all
-  end
-
-  def self.expire_cache
-    @@all_cache = nil
-    @@name_cache = nil
+    Rails.cache.fetch("concepts/all") do
+      Concept.all
+    end
   end
 
   CONCEPT_NAMES_BY_INDEX = %w(
@@ -56,11 +51,17 @@ class Concept < ActiveRecord::Base
   def self.setup_with_concepts(concepts_by_index)
     videos_by_concept = Video.where(key: concepts_by_index).index_by(&:key)
     concepts = concepts_by_index.map.with_index(1) do |concept, id|
-      {id: id, name: concept, video_id: videos_by_concept[concept]&.id}
+      {id: id, name: concept, video_key: videos_by_concept[concept]&.key}
     end
     transaction do
       reset_db
       Concept.import! concepts
+    end
+  end
+
+  def related_video
+    Rails.cache.fetch("concepts/videos/#{video_key}/#{I18n.locale}") do
+      Video.current_locale.find_by_key(video_key)
     end
   end
 end

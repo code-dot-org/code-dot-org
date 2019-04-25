@@ -198,9 +198,13 @@ class Section < ActiveRecord::Base
     return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
+  def summarize_without_students
+    summarize(include_students: false)
+  end
+
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
-  def summarize
+  def summarize(include_students: true)
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
     title = ''
@@ -258,7 +262,7 @@ class Section < ActiveRecord::Base
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: unique_students.map(&:summarize),
+      students: include_students ? unique_students.map(&:summarize) : nil,
     }
   end
 
