@@ -1,0 +1,13 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "subjectSprite",
+    "blockText": "subject sprite",
+    "returnType": "Sprite",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ]
+  }
+}

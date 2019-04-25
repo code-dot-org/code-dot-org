@@ -157,6 +157,9 @@ AuroraCluster:
   # Enable slow query log.
   slow_query_log: 1
 
+  # Enable InnoDB monitoring counters: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Monitoring.html
+  innodb_monitor_enable: all
+
 # System variables for the Aurora DB writer.
 AuroraWriter:
   # Enable Performance Schema.

@@ -13,6 +13,7 @@ script_announcements [{"notice"=>"CS Discoveries End of Semester Survey Now Open
 family_name 'csd3'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_2018', named: true
