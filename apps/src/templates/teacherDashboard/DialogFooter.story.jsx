@@ -19,6 +19,20 @@ export default storybook =>
       )
     },
     {
+      name: 'One button Right Aligned',
+      description: 'One child at the right of the footer',
+      story: () => (
+        <DialogFooter rightAlign>
+          <Button
+            href="#"
+            text="Cancel"
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
+          />
+        </DialogFooter>
+      )
+    },
+    {
       name: 'Two buttons',
       description: 'Two children are put at opposite sides of the footer',
       story: () => (

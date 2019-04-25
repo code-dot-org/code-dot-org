@@ -2,12 +2,7 @@
  * @file Defines a function for initializing an embedded markdown editor using
  *       CodeMirror and marked.
  */
-var marked = require('marked');
 var initializeCodeMirror = require('./initializeCodeMirror');
-
-marked.setOptions({
-  sanitize: true
-});
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into
@@ -34,10 +29,8 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 
-  var mdEditor = initializeCodeMirror(
-    markdownTextArea,
-    'markdown',
-    function(editor, change) {
+  var mdEditor = initializeCodeMirror(markdownTextArea, 'markdown', {
+    callback: function(editor, change) {
       var editorText = editor.getValue();
       var dslText = dslElement.val();
       var replacedText;
@@ -57,8 +50,8 @@ module.exports = function(embeddedElement, markdownTextArea, markdownProperty) {
       }
       dslElement.val(replacedText);
     },
-    true
-  );
+    attachments: true
+  });
 
   // Match against markdown heredoc syntax and capture contents in [2].
   var match = regex.exec(dslText);

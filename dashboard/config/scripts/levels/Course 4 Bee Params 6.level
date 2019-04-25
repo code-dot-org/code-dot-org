@@ -21,7 +21,7 @@
     "short_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
-    "long_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\\\r\n\\\r\n\\\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
+    "long_instructions": "Wouldn't it be nice if we could collect all of these nectars with a single function?\r\n\r\nTry adding a new parameter to your function called `nectar units` to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,19 +33,19 @@
     "examples_required": "false",
     "fast_get_nectar_animation": "true",
     "hint_prompt_attempts_threshold": 7,
-    "contained_level_names": null,
-    "preload_asset_list": null,
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-28 22:45:09 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 22:45:09 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-18 19:06:28 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "functions_with_params": 5

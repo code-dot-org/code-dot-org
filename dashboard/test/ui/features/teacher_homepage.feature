@@ -10,6 +10,9 @@ Feature: Using the teacher homepage sections feature
     And I create a new section
     Then the section table should have 1 row
 
+    And I wait until element "a:contains(Untitled Section)" is visible
+    And the href of selector "a:contains(Untitled Section)" contains "/teacher_dashboard/sections/"
+
     # Create my second section (via the button in OwnedSections)
     When I create a new section
     Then the section table should have 2 rows
@@ -159,10 +162,12 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
     And check that the URL contains "/courses/csp-2018"
 
-    When I select the "'17-'18" option in dropdown "version-selector" to load a new page
+    And element "#uitest-version-selector" is visible
+    And I click selector "#assignment-version-year" once I see it
+    And I wait until element ".assignment-version-title" is visible
+    When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 

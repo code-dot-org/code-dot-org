@@ -7,18 +7,22 @@ import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionCont
 class ManageStudents extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
+    pegasusUrlPrefix: PropTypes.string,
 
     // Provided by redux
     sectionId: PropTypes.number
   };
 
   render() {
-    const {sectionId, studioUrlPrefix} = this.props;
+    const {sectionId, studioUrlPrefix, pegasusUrlPrefix} = this.props;
 
     return (
       <div>
         <SyncOmniAuthSectionControl sectionId={sectionId} />
-        <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
+        <ManageStudentsTable
+          studioUrlPrefix={studioUrlPrefix}
+          pegasusUrlPrefix={pegasusUrlPrefix}
+        />
       </div>
     );
   }

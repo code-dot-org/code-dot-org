@@ -1,5 +1,5 @@
 {
-  "category": "Groups",
+  "category": "Experimental",
   "config": {
     "func": "forEachSpriteWithCostume",
     "blockText": "for each {VALUE} sprite\n do {STATEMENT}",

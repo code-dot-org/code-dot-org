@@ -19,7 +19,7 @@ FactoryGirl.define do
     trait :local_summer_workshop_upcoming do
       local_summer_workshop
       num_sessions 5
-      sessions_from {Date.today + 3.months}
+      sessions_from {Date.current + 3.months}
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
@@ -29,7 +29,7 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       num_facilitators 0
-      sessions_from {Date.today + 9.hours} # Start time of the first session, then one per day after that.
+      sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
@@ -108,10 +108,10 @@ FactoryGirl.define do
 
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {Date.today - 5.days}
-    apps_open_date_csd_teacher {Date.today - 6.days}
-    apps_close_date_csp_teacher {Date.today - 2.days}
-    apps_close_date_csd_teacher {Date.today - 3.days}
+    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -129,19 +129,19 @@ FactoryGirl.define do
 
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {Date.today + 5.days}
-    apps_open_date_csd_teacher {Date.today + 6.days}
-    apps_close_date_csp_teacher {Date.today + 14.days}
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
     # CSD dates but no CSP dates.
     apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
     apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -161,7 +161,7 @@ FactoryGirl.define do
       duration_hours 6
     end
     association :workshop, factory: :pd_workshop
-    start {Date.today + 9.hours}
+    start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
@@ -224,7 +224,7 @@ FactoryGirl.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Date.today}
+    start_date {Date.current}
     fixed_payment 50
   end
 
@@ -780,6 +780,23 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
+    user nil
+    regional_partner nil
+    form_data {build(:pd_regional_partner_mini_contact_hash).to_json}
+  end
+
+  factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        name: 'name',
+        email: 'foo@bar.com',
+        zip: '45242',
+        notes: 'Sample notes to regional partner'
+      }
+    end
+  end
+
   factory :pd_international_opt_in, class: 'Pd::InternationalOptIn' do
     user nil
     form_data nil
@@ -1125,8 +1142,7 @@ FactoryGirl.define do
     cs_total_course_hours 75
     cs_terms '1 quarter'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school or I will be able to pay the full program fee.'
-    what_license_required 'CSTA'
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
     plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
     interested_in_online_program 'Yes'
   end
@@ -1184,7 +1200,6 @@ FactoryGirl.define do
       committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
-      how_heard Pd::Application::PrincipalApproval1920Application.options[:how_heard][0]
     end
 
     trait :replace_course_yes_csp do

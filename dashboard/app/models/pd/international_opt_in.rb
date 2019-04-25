@@ -31,12 +31,24 @@ class Pd::InternationalOptIn < ApplicationRecord
       :school_country,
       :ages,
       :subjects,
+      :date,
       :workshop_organizer,
       :workshop_facilitator,
       :workshop_course,
       :email_opt_in,
       :legal_opt_in
     ]
+  end
+
+  def validate_required_fields
+    super
+
+    # Check that the workshop date provided is actually a date.
+    begin
+      Date.parse(form_data_hash['date']) if form_data_hash['date'].present?
+    rescue ArgumentError
+      errors.add(:form_data, :invalid)
+    end
   end
 
   def self.options

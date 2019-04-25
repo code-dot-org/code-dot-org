@@ -67,10 +67,16 @@
     "encrypted_examples": "w6AGaFEDxPuV5vunHjxCr0aKFlZFsI+sXT8/grC0WylC9eCYGL5pE9kzyjNg\nYMP+\n",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-14 13:39:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-14 13:39:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -6,18 +6,12 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
 require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 
 require 'csv'
-require 'yaml'
+require 'cdo/yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
-require 'cdo/aws/cdo_google_credentials'
 require 'cdo/git_utils'
 require 'uri'
-
-def load_yaml_file(path)
-  return nil unless File.file?(path)
-  YAML.load(IO.read(path))
-end
 
 def load_languages(path)
   [].tap do |results|
@@ -49,8 +43,8 @@ def load_configuration
 
   hostname = `hostname`.strip
 
-  global_config = load_yaml_file(File.join(root_dir, 'globals.yml')) || {}
-  local_config = load_yaml_file(File.join(root_dir, 'locals.yml')) || {}
+  global_config = YAML.load_file(File.join(root_dir, 'globals.yml')) || {}
+  local_config = YAML.load_file(File.join(root_dir, 'locals.yml')) || {}
 
   env = local_config['env'] || global_config['env'] || ENV['RACK_ENV'] || ENV['RAILS_ENV'] || 'development'
 
@@ -131,7 +125,8 @@ def load_configuration
     'stub_school_data'            => [:adhoc, :development, :test].include?(rack_env),
     'stack_name'                  => rack_env == :production ? 'autoscale-prod' : rack_env.to_s,
     'videos_s3_bucket'            => 'videos.code.org',
-    'videos_url'                  => '//videos.code.org'
+    'videos_url'                  => '//videos.code.org',
+    'google_safe_browsing_key'    => 'fake_api_key'
   }.tap do |config|
     raise "'#{rack_env}' is not known environment." unless config['rack_envs'].include?(rack_env)
     ENV['RACK_ENV'] = rack_env.to_s unless ENV['RACK_ENV']
@@ -263,11 +258,15 @@ class CDOImpl < OpenStruct
   end
 
   # NOTE: When a new language is added to this set, make sure to also update
-  # the redirection rules for the cdo-curriculum S3 bucket. Otherwise, all
-  # links to CB for that language will attempt to point to the
-  # language-specific version of that content, even if we haven't translated
-  # that content yet.
-  CURRICULUM_LANGUAGES = Set['es-mx']
+  # the redirection rules for the cdo-curriculum S3 bucket by running the
+  # aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
+  # CB for that language will attempt to point to the language-specific version
+  # of that content, even if we haven't translated that content yet.
+  #
+  # See the LANGUAGES setting in
+  # https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
+  # for the languages currently supported in CurriculumBuilder itself
+  CURRICULUM_LANGUAGES = Set['es-mx', 'it-it', 'th-th', 'sk-sk']
 
   def curriculum_url(locale, path = '')
     locale = locale.downcase.to_s
@@ -387,6 +386,8 @@ class CDOImpl < OpenStruct
 end
 
 CDO ||= CDOImpl.new
+
+require 'cdo/aws/cdo_google_credentials'
 
 ####################################################################################################
 ##

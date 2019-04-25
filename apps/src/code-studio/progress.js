@@ -6,6 +6,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
@@ -25,6 +26,7 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
+  setIsSummaryView,
   setCurrentStageId,
   setScriptCompleted,
   setStageExtrasEnabled,
@@ -149,6 +151,11 @@ progress.renderStageProgress = function(
 progress.renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
+
+  if (scriptData.student_detail_progress_view) {
+    store.dispatch(setStudentDefaultsSummaryView(false));
+  }
+  initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
   const teacherResources = (scriptData.teacher_resources || []).map(
@@ -171,8 +178,10 @@ progress.renderCourseProgress = function(scriptData) {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.versions}
+        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
+        locale={scriptData.locale}
+        showAssignButton={scriptData.show_assign_button}
       />
     </Provider>,
     mountPoint
@@ -212,25 +221,22 @@ progress.renderMiniView = function(
   });
 };
 
+function initViewAs(store, scriptData) {
+  // Set our initial view type from current user's user_type or our query string.
+  let initialViewAs = ViewType.Student;
+  if (scriptData.user_type === 'teacher') {
+    const query = queryString.parse(location.search);
+    initialViewAs = query.viewAs || ViewType.Teacher;
+  }
+  store.dispatch(setViewType(initialViewAs));
+}
+
 /**
  * Query the server for user_progress data for this script, and update the store
  * as appropriate
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const onOverviewPage = !currentLevelId;
-
-  if (scriptData.student_detail_progress_view) {
-    store.dispatch(setStudentDefaultsSummaryView(false));
-  }
-
-  // Set our initial view type
-  const query = queryString.parse(location.search);
-  let initialViewAs = ViewType.Student;
-  if (clientState.getUserIsTeacher() && query.viewAs !== ViewType.Student) {
-    // query param viewAs takes precedence over whether or not user is a teacher
-    initialViewAs = ViewType.Teacher;
-  }
-  store.dispatch(setViewType(initialViewAs));
 
   $.ajax('/api/user_progress/' + scriptData.name, {
     data: {
@@ -259,19 +265,19 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     // Show lesson plan links and other teacher info if teacher and on unit
     // overview page
-    if (data.isTeacher && !data.professionalLearningCourse && onOverviewPage) {
+    if (
+      (data.isTeacher || data.teacherViewingStudent) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to progress summary view if teacher is viewing their student's progress.
+      if (data.teacherViewingStudent) {
+        store.dispatch(setIsSummaryView(true));
+      }
+
       store.dispatch(showTeacherInfo());
 
-      const viewAs =
-        queryString.parse(location.search).viewAs || ViewType.Teacher;
-      if (viewAs !== initialViewAs) {
-        // We don't want to redispatch if our viewAs is the same as the initial
-        // one, since the user might have manually changed the view while making
-        // our async call
-        store.dispatch(setViewType(viewAs));
-      }
-      renderTeacherPanel(store, scriptData.id);
-      clientState.cacheUserIsTeacher(true);
+      renderTeacherPanel(store, scriptData.id, scriptData.section);
     }
 
     if (data.focusAreaStageIds) {
@@ -347,10 +353,15 @@ function initializeStoreWithProgress(
     store.dispatch(disablePostMilestone());
   }
 
-  // Merge in progress saved on the client.
-  store.dispatch(
-    mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-  );
+  // Determine if we are viewing student progress.
+  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
+
+  // Merge in progress saved on the client, unless we are viewing student's work.
+  if (!isViewingStudentAnswer) {
+    store.dispatch(
+      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
+    );
+  }
 
   if (scriptData.hideable_stages) {
     // Note: This call is async
@@ -361,7 +372,6 @@ function initializeStoreWithProgress(
 
   // Progress from the server should be written down locally, unless we're a teacher
   // viewing a student's work.
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
   if (!isViewingStudentAnswer) {
     let lastProgress;
     store.subscribe(() => {

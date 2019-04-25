@@ -3,6 +3,7 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedVirtualizedSummaryView} from '@cdo/apps/templates/sectionProgress/VirtualizedSummaryView';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import {
   getStore,
   registerReducers,
@@ -22,7 +23,7 @@ describe('VirtualizedSummaryView', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({sectionProgress});
+    registerReducers({sectionProgress, scriptSelection});
     defaultProps = {
       getLevels: () => {
         return [{id: 789, status: 'perfect'}];

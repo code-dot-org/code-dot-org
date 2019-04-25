@@ -130,9 +130,13 @@ export default class JSInterpreter {
    * @param {Function} [options.initGlobals] when supplied, this function will
    *        be called during interpreter initialization so that additional globals
    *        can be added with calls to createGlobalProperty()
+   * @param {number} [options.userCodeStartOffset] - offset in the code string where
+   *        the user's created code begins. Allows other code to be injected before
+   *        the user's program without disrupting line number calculations for
+   *        debugging (default 0)
    */
   parse(options) {
-    this.calculateCodeInfo(options.code);
+    this.calculateCodeInfo(options);
 
     if (!this.studioApp.hideSource && this.studioApp.editor) {
       const session = this.studioApp.editor.aceEditor.getSession();
@@ -239,14 +243,22 @@ export default class JSInterpreter {
 
   /**
    * Init `this.codeInfo` with cumulative length info (used to locate breakpoints).
-   * @param code
+   * @param {!Object} options
+   * @param {!string} options.code - Code to be executed by the interpreter.
+   * @param {number} [options.userCodeStartOffset] - offset in the code string where
+   *        the user's created code begins. Allows other code to be injected before
+   *        the user's program without disrupting line number calculations for
+   *        debugging (default 0)
    */
-  calculateCodeInfo(code) {
+  calculateCodeInfo(options) {
+    const {code, userCodeStartOffset = 0} = options;
     this.codeInfo = {};
     this.codeInfo.code = code;
-    this.codeInfo.userCodeStartOffset = 0;
-    this.codeInfo.userCodeLength = code.length;
-    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
+    this.codeInfo.userCodeStartOffset = userCodeStartOffset;
+    this.codeInfo.userCodeLength = code.length - userCodeStartOffset;
+    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(
+      code.slice(userCodeStartOffset)
+    );
   }
 
   /**

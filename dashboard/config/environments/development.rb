@@ -30,10 +30,12 @@ Dashboard::Application.configure do
   #config.action_mailer.perform_deliveries = false
   #config.action_mailer.raise_delivery_errors = false
 
-  # If you want to use mailcatcher, use these options instead:
-  #   config.action_mailer.perform_deliveries = true
-  #   config.action_mailer.delivery_method = :smtp
-  #   config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }
+  # If you want to use mailcatcher, specify `use_mailcatcher: true` in locals.yml.
+  if CDO.use_mailcatcher
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {address: 'localhost', port: 1025}
+  end
   # and run:
   #   `gem install mailcatcher`
   #   `mailcatcher --ip=0.0.0.0`

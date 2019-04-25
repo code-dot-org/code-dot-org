@@ -55,6 +55,7 @@ class RegionalPartner < ActiveRecord::Base
     apps_close_date_csd_facilitator
     apps_close_date_csp_teacher
     apps_close_date_csp_facilitator
+    apps_priority_deadline_date
     applications_principal_approval
     applications_decision_emails
     link_to_partner_application
@@ -95,6 +96,15 @@ class RegionalPartner < ActiveRecord::Base
     # Applications open, but not sure when.  (Not closed, not open, but we have no opening date yet.)
     else
       return WORKSHOP_APPLICATION_STATES[:opening_sometime]
+    end
+  end
+
+  # If there is a priority deadline date and it is still upcoming, then return it.  Otherwise return nil.
+  def upcoming_priority_deadline_date
+    if apps_priority_deadline_date && apps_priority_deadline_date > Time.zone.now
+      Date.parse(apps_priority_deadline_date).strftime('%B %e, %Y')
+    else
+      nil
     end
   end
 
@@ -176,6 +186,48 @@ class RegionalPartner < ActiveRecord::Base
 
     # prefer match by zip code when multiple partners cover the same state
     return find_by_region_query.order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').first
+  end
+
+  # Find a Regional Partner that services a particular ZIP.
+  # This works similarly to find_by_region, above, but it does one extra thing: if a US ZIP is provided
+  # and we don't find a partner with that ZIP, we geocode that ZIP to get a state and try with that
+  # state.
+  # @param [String] zip_code
+  def self.find_by_zip(zip_code)
+    partner = nil
+    state = nil
+
+    if RegexpUtils.us_zip_code?(zip_code)
+      # Try to find the matching partner using the ZIP code.
+      partner = RegionalPartner.find_by_region(zip_code, nil)
+
+      # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
+      unless partner
+        begin
+          Geocoder.with_errors do
+            # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+            # See https://github.com/alexreisner/geocoder#error-handling
+            Retryable.retryable(on: StandardError) do
+              state = Geocoder.search({zip: zip_code})&.first&.state_code
+            end
+          end
+        rescue StandardError => e
+          # Log geocoding errors to honeybadger but don't fail
+          Honeybadger.notify(e,
+            error_message: 'Error geocoding regional partner workshop zip_code',
+            context: {
+              zip_code: zip_code
+            }
+          )
+        end
+
+        if state
+          partner = RegionalPartner.find_by_region(nil, state)
+        end
+      end
+    end
+
+    return partner, state
   end
 
   CSV_IMPORT_OPTIONS = {col_sep: "\t", headers: true}.freeze

@@ -57,17 +57,17 @@ const createCommonStore = function(options = {}) {
         [
           {
             hintId: 'first',
-            content:
-              '<p>this is the first hint. It has <strong>some</strong> <em>simple</em> formatting</p>'
+            markdown:
+              'this is the first hint. It has **some** _simple_ formatting'
           },
           {
             hintId: 'second',
-            content:
-              '<p>This is the second hint. It has an image.</p><p><img src="https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png" alt=""></p>'
+            markdown:
+              'This is the second hint. It has an image.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)'
           },
           {
             hintId: 'third',
-            content: '<p>This is the third hint. It has a Blockly block',
+            markdown: 'This is the third hint. It has a Blockly block',
             block: (
               <xml>
                 <block type="maze_moveForward" />

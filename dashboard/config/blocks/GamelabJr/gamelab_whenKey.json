@@ -1,5 +1,5 @@
 {
-  "category": "Events",
+  "category": "Unused",
   "config": {
     "func": "whenKey",
     "blockText": "when {KEY} pressed",

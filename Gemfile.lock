@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/Clever/omniauth-clever.git
-  revision: b15a87fde9dec2658e9c131c95c6890b145f8060
+  revision: 586c2ed1e308a6d563e00a85f24e3c87b0e58788
   specs:
-    omniauth-clever (1.2.1)
-      omniauth-oauth2 (~> 1.1)
+    omniauth-clever (1.2.2)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/code-dot-org/petit.git
@@ -257,20 +257,23 @@ GEM
       activerecord (>= 3.0)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    aes_key_wrap (1.0.1)
     afm (0.2.2)
     annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     ansi (1.5.0)
-    archive-zip (0.7.0)
-      io-like (~> 0.3.0)
     arel (7.1.4)
     ast (2.3.0)
     attr_required (1.0.1)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-eventstream (1.0.1)
-    aws-partitions (1.104.0)
+    aws-eventstream (1.0.2)
+    aws-google (0.1.2)
+      aws-sdk-core (~> 3)
+      google-api-client (~> 0.23)
+      launchy (~> 2)
+    aws-partitions (1.144.0)
     aws-sdk-acm (1.9.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
@@ -286,10 +289,10 @@ GEM
     aws-sdk-cloudwatchlogs (1.4.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sdk-core (3.27.0)
-      aws-eventstream (~> 1.0)
+    aws-sdk-core (3.48.1)
+      aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
-      aws-sigv4 (~> 1.0)
+      aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
     aws-sdk-dynamodb (1.9.0)
       aws-sdk-core (~> 3)
@@ -316,14 +319,15 @@ GEM
     aws-sdk-sqs (1.4.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
-    aws-sigv4 (1.0.3)
+    aws-sigv4 (1.1.0)
+      aws-eventstream (~> 1.0, >= 1.0.2)
     backports (3.11.3)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
-    bindata (2.3.1)
+    bindata (2.4.4)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
@@ -331,18 +335,8 @@ GEM
     brakeman (4.3.1)
     builder (3.2.3)
     cancancan (1.15.0)
-    capybara (2.17.0)
-      addressable
-      mini_mime (>= 0.1.3)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (>= 2.0, < 4.0)
-    childprocess (0.8.0)
+    childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (0.0.9)
-      archive-zip (~> 0.7.0)
-      nokogiri (~> 1.6)
     chronic (0.10.2)
     chunky_png (1.3.6)
     climate_control (0.0.3)
@@ -364,6 +358,8 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
+    css_parser (1.7.0)
+      addressable
     cucumber (3.1.1)
       builder (>= 2.1.2)
       cucumber-core (~> 3.1.0)
@@ -404,16 +400,15 @@ GEM
     eventmachine (1.2.5)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (3.14.2)
+    eyes_core (3.14.10)
       chunky_png (= 1.3.6)
       faraday
       oily_png (~> 1.2)
       oj
-    eyes_selenium (3.14.2)
-      capybara
-      eyes_core (= 3.14.2)
+    eyes_selenium (3.14.10)
+      css_parser
+      eyes_core (= 3.14.10)
       selenium-webdriver
-      watir
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.7.0)
@@ -424,9 +419,9 @@ GEM
       sinatra
     fakeredis (0.6.0)
       redis (~> 3.2)
-    faraday (0.9.2)
+    faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.23)
+    ffi (1.10.0)
     firebase (0.2.6)
       httpclient
       json
@@ -439,25 +434,24 @@ GEM
     gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    google-api-client (0.23.8)
+    google-api-client (0.28.4)
       addressable (~> 2.5, >= 2.5.1)
-      googleauth (>= 0.5, < 0.7.0)
+      googleauth (>= 0.5, < 0.10.0)
       httpclient (>= 2.8.1, < 3.0)
       mime-types (~> 3.0)
       representable (~> 3.0)
       retriable (>= 2.0, < 4.0)
-      signet (~> 0.9)
+      signet (~> 0.10)
     google_drive (2.1.3)
       google-api-client (>= 0.11.0, < 1.0.0)
       googleauth (>= 0.5.0, < 1.0.0)
       nokogiri (>= 1.5.3, < 2.0.0)
-    googleauth (0.5.1)
-      faraday (~> 0.9)
-      jwt (~> 1.4)
-      logging (~> 2.0)
-      memoist (~> 0.12)
+    googleauth (0.8.0)
+      faraday (~> 0.12)
+      jwt (>= 1.4, < 3.0)
+      memoist (~> 0.16)
       multi_json (~> 1.11)
-      os (~> 0.9)
+      os (>= 0.9, < 2.0)
       signet (~> 0.7)
     haml-rails (1.0.0)
       actionpack (>= 4.0.1)
@@ -475,7 +469,7 @@ GEM
       gnista (~> 1.0.1)
     hashdiff (0.3.7)
     hashery (2.1.2)
-    hashie (3.4.6)
+    hashie (3.6.0)
     highline (1.6.21)
     honeybadger (3.3.0)
     html2haml (2.2.0)
@@ -491,7 +485,6 @@ GEM
     httpclient (2.8.3)
     image_size (1.5.0)
     in_threads (1.4.0)
-    io-like (0.3.0)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -503,16 +496,14 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (1.8.6)
-    json-jwt (1.6.3)
-      activesupport
+    json-jwt (1.10.0)
+      activesupport (>= 4.2)
+      aes_key_wrap
       bindata
-      multi_json (>= 1.3)
-      securecompare
-      url_safe_base64
     jsonapi-serializers (1.0.0)
       activesupport
     jumphash (0.1.0)
-    jwt (1.5.6)
+    jwt (2.1.0)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -525,11 +516,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    little-plugger (1.1.4)
-    logging (2.2.2)
-      little-plugger (~> 1.1)
-      multi_json (~> 1.10)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -544,7 +531,7 @@ GEM
     mime-types-data (3.2018.0812)
     mini_magick (4.5.1)
     mini_mime (1.0.0)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     minitest-around (0.4.1)
       minitest (~> 5.0)
@@ -563,19 +550,21 @@ GEM
     mysql2 (0.5.2)
     nakayoshi_fork (0.0.4)
     naturally (2.1.0)
-    net-http-persistent (2.9.4)
+    net-http-persistent (3.0.0)
+      connection_pool (~> 2.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
+    net_http_ssl_fix (0.0.10)
     netrc (0.11.0)
     newrelic_rpm (4.8.0.341)
     nio4r (2.3.1)
-    nokogiri (1.8.4)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.2)
+      mini_portile2 (~> 2.4.0)
     oauth (0.5.1)
-    oauth2 (1.2.0)
-      faraday (>= 0.8, < 0.10)
-      jwt (~> 1.0)
+    oauth2 (1.4.1)
+      faraday (>= 0.8, < 0.16.0)
+      jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
@@ -584,18 +573,17 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.3.10)
-    omniauth (1.3.2)
-      hashie (>= 1.2, < 4)
-      rack (>= 1.0, < 3)
+    omniauth (1.9.0)
+      hashie (>= 3.4.6, < 3.7.0)
+      rack (>= 1.6.2, < 3)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.3.1)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
+    omniauth-google-oauth2 (0.6.0)
+      jwt (>= 2.0)
       omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.3.1)
-    omniauth-oauth2 (1.4.0)
-      oauth2 (~> 1.0)
+      omniauth-oauth2 (>= 1.5)
+    omniauth-oauth2 (1.5.0)
+      oauth2 (~> 1.1)
       omniauth (~> 1.2)
     omniauth-openid (1.0.1)
       omniauth (~> 1.0)
@@ -613,7 +601,7 @@ GEM
       validate_url
       webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
-    os (0.9.6)
+    os (1.0.0)
     parallel (1.12.1)
     parallel_tests (2.27.0)
       parallel
@@ -700,6 +688,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-readline (0.5.5)
     rdoc (4.2.2)
       json (~> 1.4)
     recaptcha (4.6.3)
@@ -754,27 +743,32 @@ GEM
     ruby_dep (1.3.1)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
+    scenic (1.5.1)
+      activerecord (>= 4.0.0)
+      railties (>= 4.0.0)
+    scenic-mysql_adapter (1.0.1)
+      mysql2
+      scenic (>= 1.4.0)
     scss_lint (0.49.0)
       rake (>= 0.9, < 12)
       sass (~> 3.4.20)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    securecompare (1.0.0)
-    selenium-webdriver (3.8.0)
+    selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
-      rubyzip (~> 1.0)
+      rubyzip (~> 1.2, >= 1.2.2)
     sequel (5.9.0)
     sexp_processor (4.10.1)
     shotgun (0.9.1)
       rack (>= 1.0)
-    signet (0.9.1)
+    signet (0.11.0)
       addressable (~> 2.3)
       faraday (~> 0.9)
       jwt (>= 1.5, < 3.0)
@@ -822,10 +816,10 @@ GEM
     tilt (2.0.8)
     timecop (0.8.1)
     ttfunk (1.4.0)
-    twilio-ruby (4.11.1)
-      builder (>= 2.1.2)
-      jwt (~> 1.0)
-      multi_json (>= 1.3.0)
+    twilio-ruby (5.20.1)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
@@ -840,7 +834,6 @@ GEM
       kgio (~> 2.6)
       raindrops (~> 0.7)
     url (0.3.2)
-    url_safe_base64 (0.2.2)
     user_agent_parser (2.3.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
@@ -853,13 +846,16 @@ GEM
     vcr (3.0.3)
     warden (1.2.7)
       rack (>= 1.0)
-    watir (6.10.3)
-      selenium-webdriver (~> 3.4, >= 3.4.1)
     web-console (3.3.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       debug_inspector
       railties (>= 5.0)
+    webdrivers (3.7.2)
+      net_http_ssl_fix
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webfinger (1.0.2)
       activesupport
       httpclient (>= 2.4)
@@ -871,8 +867,6 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    xpath (2.1.0)
-      nokogiri (~> 1.3)
     xxhash (0.4.0)
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
@@ -890,6 +884,7 @@ DEPENDENCIES
   addressable
   annotate
   auto_strip_attributes (~> 2.1)
+  aws-google
   aws-sdk-acm (~> 1)
   aws-sdk-cloudformation (~> 1)
   aws-sdk-cloudfront (~> 1)
@@ -909,7 +904,6 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.2.2)
   brakeman
   cancancan (~> 1.15.0)
-  chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
   codecov
   codemirror-rails
@@ -922,7 +916,7 @@ DEPENDENCIES
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
   execjs
-  eyes_selenium (= 3.14.2)
+  eyes_selenium
   factory_girl_rails
   fake_sqs
   fakeredis
@@ -955,7 +949,6 @@ DEPENDENCIES
   jumphash
   jwt
   kaminari
-  launchy
   le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)
@@ -973,12 +966,12 @@ DEPENDENCIES
   net-scp
   net-ssh
   newrelic_rpm (~> 4.8.0)
-  nokogiri (~> 1.8.2)
+  nokogiri (>= 1.10.0)
   octokit
   oj
   omniauth-clever (~> 1.2.1)!
   omniauth-facebook (~> 4.0.0)
-  omniauth-google-oauth2 (~> 0.3.1)
+  omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
   omniauth-openid
   omniauth-openid-connect!
@@ -1003,6 +996,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-controller-testing
   rambling-trie
+  rb-readline
   recaptcha
   redcarpet (~> 3.3.4)
   redis (~> 3.3.3)
@@ -1020,10 +1014,12 @@ DEPENDENCIES
   ruby-progressbar
   ruby_dep (~> 1.3.1)
   sass-rails!
+  scenic
+  scenic-mysql_adapter
   scss_lint
   sdoc
   seamless_database_pool!
-  selenium-webdriver (= 3.8.0)
+  selenium-webdriver
   sequel
   shotgun
   simplecov (~> 0.9)
@@ -1046,6 +1042,7 @@ DEPENDENCIES
   validates_email_format_of
   vcr
   web-console
+  webdrivers (~> 3.0)
   webmock
   xxhash
   youtube-dl.rb

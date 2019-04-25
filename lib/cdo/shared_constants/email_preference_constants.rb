@@ -18,6 +18,7 @@ module EmailPreferenceConstants
     FORM_PD_INTERNATIONAL_OPT_IN = 'FORM_PD_INTERNATIONAL_OPT_IN'.freeze,
     # A one-time automated script sets all Petition submissions younger than 16 and older than 13 to opted out to comply
     # with GDPR.
-    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze
+    AUTOMATED_OPT_OUT_UNDER_16 = 'AUTOMATED_OPT_OUT_UNDER_16'.freeze,
+    FORM_PD_REGIONAL_PARTNER_MINI_CONTACT = 'FORM_PD_REGIONAL_PARTNER_MINI_CONTACT'.freeze
   ].freeze
 end

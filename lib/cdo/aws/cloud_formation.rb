@@ -191,18 +191,22 @@ module AWS
             }
           ],
         }.merge(string_or_url(template)).tap do |options|
-          if %w[IAM lambda].include? stack_name
-            options[:capabilities] = %w[
-              CAPABILITY_IAM
-              CAPABILITY_NAMED_IAM
-            ]
-          end
+          options[:capabilities] = %w[
+            CAPABILITY_IAM
+            CAPABILITY_NAMED_IAM
+          ]
           if rack_env?(:adhoc)
             options[:tags].push(
               key: 'owner',
               value: Aws::STS::Client.new.get_caller_identity.arn
             )
           end
+
+          # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
+          # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
+          role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
+          account = Aws::STS::Client.new.get_caller_identity.account
+          options[:role_arn] = "arn:aws:iam::#{account}:role/admin/#{role_name}"
         end
       end
 
@@ -218,12 +222,8 @@ module AWS
           options[:stack_policy_body] = stack_policy
           options[:stack_policy_during_update_body] = stack_policy if action == :update
         end
-        if action == :create
-          options[:on_failure] = 'DO_NOTHING'
-          if daemon
-            options[:role_arn] = "arn:aws:iam::#{Aws::STS::Client.new.get_caller_identity.account}:role/CloudFormationRole"
-          end
-        end
+        options[:on_failure] = 'DO_NOTHING' if action == :create
+
         begin
           updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         rescue Aws::CloudFormation::Errors::ValidationError => e
@@ -601,6 +601,18 @@ module AWS
           local_binding.local_variable_set(key, value)
         end
         ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(local_binding)
+      end
+
+      # Generate boilerplate Trust Policy for an AWS Service Role.
+      def service_role(service)
+        document = {
+          Statement: [
+            Effect: 'Allow',
+            Action: 'sts:AssumeRole',
+            Principal: {Service: ["#{service}.amazonaws.com"]}
+          ]
+        }
+        "AssumeRolePolicyDocument: #{document.to_json}"
       end
     end
   end

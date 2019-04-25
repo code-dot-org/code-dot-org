@@ -2,7 +2,18 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
-exports.defineForAce = function(dropletConfig, unusedConfig, dropletEditor) {
+/**
+ * @param {dropletConfig} Required
+ * @param {unusedConfig} array of function names to be ignored by the linter. Optional.
+ * @param {dropletEditor} Required
+ * @param {appType} string, either 'Applab' or 'Gamelab'. Optional.
+ */
+exports.defineForAce = function(
+  dropletConfig,
+  unusedConfig,
+  dropletEditor,
+  appType
+) {
   // define ourselves for ace, so that it knows where to get us
   ace.define(
     'ace/mode/javascript_codeorg',
@@ -106,7 +117,9 @@ exports.defineForAce = function(dropletConfig, unusedConfig, dropletEditor) {
 
           worker.send('changeOptions', [newOptions]);
 
-          worker.on('jslint', annotationList.setJSLintAnnotations);
+          worker.on('jslint', function(results) {
+            annotationList.setJSLintAnnotations(results, appType);
+          });
 
           worker.on('terminate', function() {
             session.clearAnnotations();

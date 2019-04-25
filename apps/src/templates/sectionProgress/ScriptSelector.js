@@ -12,7 +12,8 @@ export const dropdownStyles = {
     fontSize: 'medium',
     height: 34,
     paddingLeft: 5,
-    paddingRight: 5
+    paddingRight: 5,
+    width: 300
   }
 };
 

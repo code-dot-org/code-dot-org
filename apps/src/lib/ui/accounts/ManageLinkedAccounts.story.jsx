@@ -16,7 +16,11 @@ const mockAuthenticationOptions = {
   1: {id: 1, credentialType: 'google_oauth2', email: 'google@email.com'},
   2: {id: 2, credentialType: 'facebook', email: 'facebook@email.com'},
   3: {id: 3, credentialType: 'clever', email: 'clever@email.com'},
-  4: {id: 4, credentialType: 'windowslive', email: 'windowslive@email.com'}
+  4: {
+    id: 4,
+    credentialType: 'microsoft_v2_auth',
+    email: 'microsoft@email.com'
+  }
 };
 
 export default storybook =>

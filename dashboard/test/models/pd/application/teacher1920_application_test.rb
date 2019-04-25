@@ -319,12 +319,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher1920Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 107, csv_header_csd.length
+      assert_equal 100, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher1920Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2019-20 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2019-20 school year?"
-      assert_equal 109, csv_header_csp.length
+      assert_equal 102, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -430,55 +430,32 @@ module Pd::Application
       refute Email.exists?(associated_unsent_email.id)
     end
 
-    test 'formatted_partner_contact_email' do
-      application = create :pd_teacher1920_application
-
-      partner = create :regional_partner, contact: nil
-      contact = create :teacher
-
-      # no partner
-      assert_nil application.formatted_partner_contact_email
-
-      # partner w no contact info
-      application.regional_partner = partner
-      assert_nil application.formatted_partner_contact_email
-
-      # name only? still nil
-      partner.contact_name = 'We Teach Code'
-      assert_nil application.formatted_partner_contact_email
-
-      # email only? still nil
-      partner.contact_name = nil
-      assert_nil application.formatted_partner_contact_email
-
-      # old contact field
-      partner.contact = contact
-      assert_equal "\"#{contact.name}\" <#{contact.email}>", application.formatted_partner_contact_email
-
-      # program manager but no contact_name or contact_email
-      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
-      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
-
-      # name and email
-      partner.contact_name = 'We Teach Code'
-      partner.contact_email = 'we_teach_code@ex.net'
-      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
-    end
-
     test 'test non course dynamically required fields' do
       application_hash = build :pd_teacher1920_application_hash,
         completing_on_behalf_of_someone_else: YES,
-        does_school_require_cs_license: YES,
         pay_fee: TEXT_FIELDS[:no_pay_fee_1920],
         regional_partner_workshop_ids: [1, 2, 3],
-        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]],
-        what_license_required: nil
+        able_to_attend_multiple: [TEXT_FIELDS[:unable_to_attend_1920]]
 
       application = build :pd_teacher1920_application, form_data_hash: application_hash
       assert_nil application.formatted_partner_contact_email
 
       refute application.valid?
-      assert_equal %w(completingOnBehalfOfName whatLicenseRequired travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+      assert_equal %w(completingOnBehalfOfName travelToAnotherWorkshop scholarshipReasons), application.errors.messages[:form_data]
+    end
+
+    # We changed the possible answers to this question after opening the application,
+    # including removing some possible answers.  Since we can't reasonably backfill those,
+    # we are clearing them and making this field not required on the server (it's still
+    # required on the client for new applications).
+    test 'does not require pay_fee' do
+      application_hash = build :pd_teacher1920_application_hash,
+        regional_partner_id: create(:regional_partner).id,
+        pay_fee: nil
+      application = build :pd_teacher1920_application, form_data_hash: application_hash
+      assert_nil application.sanitize_form_data_hash[:pay_fee]
+      assert application.valid?
+      assert_equal %w(), application.errors.messages[:form_data]
     end
 
     test 'test csd dynamically required fields' do
@@ -569,8 +546,7 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
-        taught_in_past: [options[:taught_in_past].last],
+        taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
@@ -632,8 +608,7 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].last,
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
-        taught_in_past: [options[:taught_in_past].last],
+        taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
@@ -693,7 +668,6 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].last,
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
-        have_cs_license: options[:have_cs_license].first,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
         willing_to_travel: options[:willing_to_travel].first,
@@ -739,8 +713,7 @@ module Pd::Application
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        have_cs_license: options[:have_cs_license].second,
-        taught_in_past: [options[:taught_in_past].first],
+        taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
@@ -801,8 +774,7 @@ module Pd::Application
         csp_how_offer: options[:csp_how_offer].first,
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
-        have_cs_license: options[:have_cs_license].second,
-        taught_in_past: [options[:taught_in_past].first],
+        taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
         willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
@@ -982,16 +954,18 @@ module Pd::Application
       end
     end
 
-    test 'test scholarship statuses' do
+    test 'test update scholarship status' do
       application = create :pd_teacher1920_application
       assert_nil application.scholarship_status
 
-      application.scholarship_status = 'no'
-      application.save
-      assert_equal 'no', application.scholarship_status
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
 
-      application.scholarship_status = 'invalid status'
-      refute application.save
+      refute application.update_scholarship_status 'invalid status'
+      assert_equal Pd::ScholarshipInfoConstants::NO, application.scholarship_status
+
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+      assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
     end
 
     test 'associated models cache prefetch' do
@@ -1008,6 +982,73 @@ module Pd::Application
     end
 
     private
+
+    test 'test allow_sending_principal_email?' do
+      # By default we can send.
+      application = create :pd_teacher1920_application
+      assert application.allow_sending_principal_email?
+
+      # If we're no longer unreviewed/pending, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'accepted_no_cost_registration')
+      refute application.allow_sending_principal_email?
+
+      # If principal approval is not required, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(principal_approval_not_required: true)
+      refute application.allow_sending_principal_email?
+
+      # If we already have a principal response, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_principal_approval1920_application, teacher_application: application
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email < 5 days ago, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email >= 5 days ago, we can send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_email?
+    end
+
+    test 'test allow_sending_principal_approval_teacher_reminder_email?' do
+      # By default we can send.
+      application = create :pd_teacher1920_application
+      assert application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a teacher reminder email any time before, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval_teacher_reminder', created_at: 14.days.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we're no longer unreviewed/pending, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'accepted_no_cost_registration')
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If principal approval is not required, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(principal_approval_not_required: true)
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we already have a principal response, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_principal_approval1920_application, teacher_application: application
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a principal email < 5 days ago, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a principal email >= 5 days ago, we can send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_approval_teacher_reminder_email?
+    end
 
     def assert_status_log(expected, application)
       assert_equal JSON.parse(expected.to_json), application.status_log

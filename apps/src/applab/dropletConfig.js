@@ -80,7 +80,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['id', 'type', 'callback'],
-    params: ['"id"', '"click"', 'function(event) {\n  \n}'],
+    params: ['"id"', '"click"', 'function( ) {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: idDropdownWithSelector(),
@@ -337,6 +337,13 @@ export var blocks = [
     params: ['250', '0', '75', '0.5'],
     type: 'value'
   },
+  {
+    func: 'open',
+    parent: api,
+    category: 'UI controls',
+    paletteParams: ['url'],
+    params: ['"https://code.org"']
+  },
 
   {
     func: 'createCanvas',
@@ -583,7 +590,7 @@ export var blocks = [
     params: [
       '"mytable"',
       '{}',
-      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    textLabel('id', records[i].id + ': ' + records[i].name);\n  }\n}"
+      "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
   },

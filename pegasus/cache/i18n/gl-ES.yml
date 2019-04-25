@@ -1535,6 +1535,9 @@ gl-ES:
   user_header_view_my_projects: Ver os meus proxectos
   view_all_sections: Ver todos os grupos
   applab_tile_start_tutorial: Comezar
+  account_sign_up_email_opt_in: Marca esta casilla para recibir correos sobre melloras
+    nos nosos cursos, oportunidades locales, ou outras noticias de informática. (aproximadamente
+    unha ao mes)
   account_sign_up_child_accept_terms: Confirmo que teño autorización de meus pais
     ou titores legais para empregrar os servizos de Code.org.
   hoc_overview_start_tutorial: Comezar

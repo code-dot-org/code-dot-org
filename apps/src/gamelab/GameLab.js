@@ -4,7 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import {
+  GameLabInterfaceMode,
+  GAME_WIDTH,
+  SpritelabReservedWords
+} from './constants';
 import experiments from '../util/experiments';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -62,6 +66,7 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
+import {generateExpoApk} from '../util/exporter';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -260,7 +265,7 @@ GameLab.prototype.init = function(config) {
   config.centerEmbedded = false;
   config.wireframeShare = true;
   config.responsiveEmbedded = true;
-  config.noHowItWorks = true;
+  config.noHowItWorks = config.droplet;
 
   config.shareWarningInfo = {
     hasDataAPIs: function() {
@@ -354,6 +359,11 @@ GameLab.prototype.init = function(config) {
     }
   }
 
+  // ToDo: Remove experiment flag and turn on allAnimationsSingleFrame and hideAnimationMode for Spritelab Levels
+  let showCostumeTab =
+    experiments.isEnabled('sprite-costumes') &&
+    this.studioApp_.isUsingBlockly();
+
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
@@ -364,9 +374,10 @@ GameLab.prototype.init = function(config) {
     showDebugWatch:
       config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: experiments.isEnabled('showDebugSlider'),
-    showAnimationMode: !config.level.hideAnimationMode,
+    showAnimationMode: !config.level.hideAnimationMode || showCostumeTab,
     startInAnimationTab: config.level.startInAnimationTab,
-    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
+    allAnimationsSingleFrame:
+      config.level.allAnimationsSingleFrame || showCostumeTab,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -420,8 +431,24 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName =
+    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
+  if (mode === 'expoGenerateApk') {
+    return generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      this.studioApp_.config
+    );
+  }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
+    appName,
     getStore().getState().animationList,
     expoOpts
   );
@@ -429,24 +456,29 @@ GameLab.prototype.exportApp = async function(expoOpts) {
 
 /**
  * Export the project for web or use within Expo.
+ * @param {string} appName
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportAppWithAnimations = function(animationList, expoOpts) {
+GameLab.prototype.exportAppWithAnimations = function(
+  appName,
+  animationList,
+  expoOpts
+) {
   const {pauseAnimationsByDefault} = this.level;
   const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
     getStore().getState()
   );
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     this.studioApp_.editor.getValue(),
     {
       animationList,
       allAnimationsSingleFrame,
       pauseAnimationsByDefault
     },
-    expoOpts
+    expoOpts,
+    this.studioApp_.config
   );
 };
 
@@ -577,6 +609,7 @@ GameLab.prototype.afterInject_ = function(config) {
         'levelFailure'
       ].join(',')
     );
+    Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
@@ -649,7 +682,7 @@ GameLab.prototype.startTickTimer = function() {
  */
 GameLab.prototype.resetHandler = function(ignore) {
   if (this.shouldAutoRunSetup) {
-    this.execute(false /* keepTicking */);
+    this.execute(false /* shouldLoop */);
   } else {
     this.reset();
   }
@@ -709,7 +742,9 @@ GameLab.prototype.rerunSetupCode = function() {
   ) {
     return;
   }
+  Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
+  delete this.gameLabP5.p5.World.background_color;
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
   this.onP5Setup();
@@ -839,8 +874,15 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
+ * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
+ * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function(keepTicking = true) {
+GameLab.prototype.execute = function(shouldLoop = true) {
+  if (shouldLoop) {
+    Sounds.getSingleton().unmuteURLs();
+  } else {
+    Sounds.getSingleton().muteURLs();
+  }
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -861,7 +903,7 @@ GameLab.prototype.execute = function(keepTicking = true) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(keepTicking);
+  this.gameLabP5.setLoop(shouldLoop);
 
   if (
     !this.JSInterpreter ||
@@ -871,12 +913,12 @@ GameLab.prototype.execute = function(keepTicking = true) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && keepTicking) {
+  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (keepTicking) {
+  if (shouldLoop) {
     this.startTickTimer();
   }
 };
@@ -937,13 +979,15 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
   if (this.level.customHelperLibrary) {
     code += this.level.customHelperLibrary + '\n';
   }
+  const userCodeStartOffset = code.length;
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
-    initGlobals: injectGamelabGlobals
+    initGlobals: injectGamelabGlobals,
+    userCodeStartOffset
   });
   if (!this.JSInterpreter.initialized()) {
     return;

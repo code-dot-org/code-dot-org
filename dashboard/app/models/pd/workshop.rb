@@ -311,6 +311,15 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
+  # returns the school year the summer workshop is preparing for, in
+  # the form "2019-2020", like application_year on Pd Applications
+  def summer_workshop_school_year
+    if local_summer?
+      y = year
+      "#{y}-#{y.to_i + 1}"
+    end
+  end
+
   # Suppress 3 and 10-day reminders for certain workshops
   def suppress_reminders?
     [
@@ -322,16 +331,27 @@ class Pd::Workshop < ActiveRecord::Base
     ].include? subject
   end
 
+  def self.csf_201_pilot?(workshop)
+    workshop.csf? &&
+      workshop.subject == SUBJECT_CSF_201 &&
+      workshop.sessions.present? &&
+      workshop.sessions.first.start < CSF_201_PILOT_END_DATE
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      # Don't send emails to CSF 201 pilot workshops
+      next if csf_201_pilot?(workshop)
+
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
       rescue => e
         errors << "teacher enrollment #{enrollment.id} - #{e.message}"
       end
+
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
@@ -340,6 +360,7 @@ class Pd::Workshop < ActiveRecord::Base
           errors << "facilitator #{facilitator.id} - #{e.message}"
         end
       end
+
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => e
@@ -361,14 +382,42 @@ class Pd::Workshop < ActiveRecord::Base
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
+  # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
+  def self.send_follow_up_after_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+
+    scheduled_end_in_days(-days).each do |workshop|
+      next unless workshop.course == COURSE_CSF && workshop.subject == SUBJECT_CSF_101
+      attended_teachers = workshop.attending_teachers
+
+      workshop.enrollments.each do |enrollment|
+        next unless attended_teachers.include?(enrollment.user)
+
+        email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+        Honeybadger.notify(e,
+          error_message: 'Failed to send follow up email to teacher',
+          context: {pd_enrollment_id: enrollment.id}
+        )
+      end
+    end
+
+    raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
+    send_follow_up_after_days(30)
   end
 
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
+    return if csf_201_pilot?(workshop)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
@@ -529,6 +578,10 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSD_FIT,
       SUBJECT_CSF_FIT
     ].include?(subject)
+  end
+
+  def csf?
+    course == COURSE_CSF
   end
 
   def funded_csf?

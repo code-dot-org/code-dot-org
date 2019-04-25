@@ -130,7 +130,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add 50 pieces of seagrass to the image by writing drawAllSeagrass with a loop. (Click to see full instructions)",
-    "long_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.",
+    "long_instructions": "# Add Seagrass\r\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42 PM.png\" style=\"width: 200px; float: right\">\r\n\r\nOur new version of `drawSeagrass` now draws a single piece of seagrass with a random height.  Now let's use a loop in `drawAllSeagrass` to fill the sea floor with it.\r\n\r\n# Do This:\r\n\r\n* **Add a `for` loop** to `drawAllSeagrass` that draws about **50 pieces** of seagrass using your updated `drawSeagrass` function.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -260,11 +260,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-09 16:52:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 21:33:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-09 16:52:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-15 21:33:44 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2019-02-15 03:30:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

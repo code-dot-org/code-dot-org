@@ -102,6 +102,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'section_responses'
         get 'section_surveys'
+        get 'section_feedback'
       end
     end
   end
@@ -198,7 +199,6 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
-      get '/angular', to: 'projects#angular'
     end
   end
 
@@ -221,9 +221,11 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
+    get 'get_rubric', to: 'levels#get_rubric'
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
+    post 'update_properties'
     post 'clone', to: 'levels#clone'
   end
 
@@ -406,6 +408,7 @@ Dashboard::Application.routes.draw do
       resources :workshop_organizers, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
+      post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'
@@ -420,6 +423,7 @@ Dashboard::Application.routes.draw do
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
       post :regional_partner_contacts, to: 'regional_partner_contacts#create'
+      post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
@@ -450,6 +454,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
+  post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -473,6 +478,8 @@ Dashboard::Application.routes.draw do
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+    get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
+    get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
 
     get 'post_course_survey/thanks', to: 'post_course_survey#thanks'
@@ -524,6 +531,9 @@ Dashboard::Application.routes.draw do
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
     get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
+
+    get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
+    get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
 
     get 'international_workshop', to: 'international_opt_in#new'
     get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
@@ -578,6 +588,8 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+      get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/:user_id/school_name', to: 'users#get_school_name'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
@@ -612,6 +624,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
@@ -629,4 +642,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
+
+  post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 end

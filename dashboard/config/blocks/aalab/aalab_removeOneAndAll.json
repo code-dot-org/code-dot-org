@@ -7,7 +7,7 @@
       0.74
     ],
     "func": "removeOneAndAll",
-    "blockText": "aalab remove {THIS}",
+    "blockText": "remove {THIS}",
     "args": [
       {
         "name": "THIS",

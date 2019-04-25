@@ -11,9 +11,13 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "optional": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 02:56:18 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

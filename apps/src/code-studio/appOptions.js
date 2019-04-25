@@ -29,7 +29,6 @@
  * @property {string} channel
  * @property {boolean} readonlyWorkspace
  * @property {boolean} isExternalProjectLevel
- * @property {boolean} isChannelBacked
  * @property {boolean} isLegacyShare
  * @property {boolean} legacyShareStyle
  * @property {PostMileStoneMode} postMilestoneMode

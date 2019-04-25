@@ -469,6 +469,30 @@ module Api::V1::Pd
       assert_equal expected_log, @csp_facilitator_application.sanitize_status_timestamp_change_log
     end
 
+    test 'do not re-lock locked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined', locked_at: Time.zone.now)
+      @csp_facilitator_application.reload
+      assert @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:lock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: true}}
+    end
+
+    test 'do not re-unlock unlocked applications on update' do
+      sign_in @workshop_admin
+      @csp_facilitator_application.update(status: 'declined')
+      @csp_facilitator_application.reload
+      refute @csp_facilitator_application.locked?
+
+      Pd::Application::Facilitator1920Application.any_instance.expects(:unlock!).never
+
+      # edit locked application
+      post :update, params: {id: @csp_facilitator_application.id, application: {locked: false}}
+    end
+
     test 'workshop admins can lock and unlock applications' do
       sign_in @workshop_admin
       put :update, params: {id: @csf_facilitator_application_no_partner, application: {status: 'accepted', locked: 'true'}}
@@ -577,12 +601,13 @@ module Api::V1::Pd
       refute response_csv.first.include?(column)
     end
 
-    test 'cohort view returns applications that are accepted and withdrawn' do
+    test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
-      (Pd::Application::ApplicationBase.statuses - ['interview']).each do |status|
+      teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
+      TEACHER_APPLICATION_CLASS.statuses.each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
-        if ['accepted', 'withdrawn'].include? status
+        if teacher_cohort_view_statuses.include? status
           expected_applications << application
         end
       end
@@ -592,8 +617,29 @@ module Api::V1::Pd
       assert_response :success
 
       assert_equal(
-        expected_applications.map {|application| application[:id]}.sort,
-        JSON.parse(@response.body).map {|application| application['id']}.sort
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
+      )
+    end
+
+    test 'cohort view returns facilitator applications of correct statuses' do
+      expected_applications = []
+      facilitator_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
+      FACILITATOR_APPLICATION_CLASS.statuses.each do |status|
+        application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
+        application.update_column(:status, status)
+        if facilitator_cohort_view_statuses.include? status
+          expected_applications << application
+        end
+      end
+
+      sign_in @workshop_admin
+      get :cohort_view, params: {role: 'csp_facilitators', regional_partner_value: 'none'}
+      assert_response :success
+
+      assert_equal(
+        expected_applications.map {|application| application[:status]}.sort,
+        JSON.parse(@response.body).map {|application| application['status']}.sort
       )
     end
 
@@ -742,9 +788,9 @@ module Api::V1::Pd
           course: 'csp',
           regional_partner: @regional_partner,
           user: @serializing_teacher,
-          pd_workshop_id: workshop.id,
-          scholarship_status: 'no'
+          pd_workshop_id: workshop.id
         )
+        application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.status = 'accepted_not_notified'
@@ -884,7 +930,6 @@ module Api::V1::Pd
         "Notes 3",
         "Notes 4",
         "Notes 5",
-        "Title",
         "First name",
         "Last name",
         "Account email",
@@ -901,10 +946,7 @@ module Api::V1::Pd
         "Regional Partner",
         "Link to Application",
         "Home or cell phone",
-        "Home address",
-        "City",
-        "State",
-        "Zip code",
+        "Home zip code",
         "Country",
         "Principal's first name",
         "Principal's last name",
@@ -926,19 +968,14 @@ module Api::V1::Pd
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "If yes, please describe the course it will be replacing and why:",
         "What subjects are you teaching this year (2018-19)?",
-        "Does your school district require any specific licenses, certifications, or endorsements to teach computer science?",
-        "What license, certification, or endorsement is required?",
-        "Do you have the required licenses, certifications, or endorsements to teach computer science in your district?",
-        "Which subject area(s) are you currently licensed to teach?",
         "Have you taught computer science courses or activities in the past?",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
-        "What computer science courses or activities are currently offered at your school?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
         "Are you interested in this online program for school year workshops?",
-        "Will you or your school be able to pay the fee?",
+        "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
@@ -970,6 +1007,8 @@ module Api::V1::Pd
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "How did you hear about this program? (Principal's response)",
         "Principal authorizes college board to send AP Scores",
+        "Contact name for invoicing",
+        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
         "Total student enrollment (NCES data)",
         "Percentage of students who are eligible to receive free or reduced lunch (NCES data)",

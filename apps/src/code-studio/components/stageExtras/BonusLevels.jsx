@@ -70,9 +70,13 @@ class BonusLevelButton extends React.Component {
 
   render() {
     return this.props.perfected ? (
-      <button className="btn btn-large">{i18n.review()}</button>
+      <button type="button" className="btn btn-large">
+        {i18n.review()}
+      </button>
     ) : (
-      <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
+      <button type="button" className="btn btn-large btn-primary">
+        {i18n.tryIt()}
+      </button>
     );
   }
 }
@@ -80,13 +84,27 @@ class BonusLevelButton extends React.Component {
 class BonusLevel extends React.Component {
   static propTypes = {
     ...bonusLevel,
-    perfected: PropTypes.bool.isRequired
+    perfected: PropTypes.bool.isRequired,
+    sectionId: PropTypes.number,
+    userId: PropTypes.number
+  };
+
+  getQueryString = () => {
+    const {id, sectionId, userId} = this.props;
+    let url = `?id=${id}`;
+    if (sectionId && userId) {
+      // Both sectionId and userId are required to link to a student's work on a bonus level.
+      url += `&section_id=${sectionId}&user_id=${userId}`;
+    } else if (sectionId) {
+      url += `&section_id=${sectionId}`;
+    }
+    return url;
   };
 
   renderWithMazeThumbnail() {
     return (
       <div style={styles.bonusLevel}>
-        <a href={`?id=${this.props.id}`}>
+        <a href={this.getQueryString()}>
           <CompletableLevelThumbnail
             size={THUMBNAIL_IMAGE_SIZE}
             completed={this.props.perfected}
@@ -102,7 +120,7 @@ class BonusLevel extends React.Component {
   renderSolutionImageThumbnail(src) {
     return (
       <div style={styles.bonusLevel}>
-        <a href={`?id=${this.props.id}`}>
+        <a href={this.getQueryString()}>
           <CompletableLevelThumbnail
             size={THUMBNAIL_IMAGE_SIZE}
             completed={this.props.perfected}
@@ -123,7 +141,7 @@ class BonusLevel extends React.Component {
     } else if (this.props.solutionImageUrl) {
       return this.renderSolutionImageThumbnail(this.props.solutionImageUrl);
     } else {
-      return <a href={`?id=${this.props.id}`}>{this.props.name}</a>;
+      return <a href={this.getQueryString()}>{this.props.name}</a>;
     }
   }
 }
@@ -135,7 +153,9 @@ const ConnectedBonusLevel = connect((state, ownProps) => ({
 export default Radium(
   class BonusLevels extends React.Component {
     static propTypes = {
-      bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels))
+      bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
+      sectionId: PropTypes.number,
+      userId: PropTypes.number
     };
 
     constructor(props) {
@@ -206,7 +226,12 @@ export default Radium(
                   })}
                 </h3>
                 {stage.levels.map(level => (
-                  <ConnectedBonusLevel key={level.id} {...level} />
+                  <ConnectedBonusLevel
+                    key={level.id}
+                    {...level}
+                    sectionId={this.props.sectionId}
+                    userId={this.props.userId}
+                  />
                 ))}
               </div>
             ))}

@@ -6,6 +6,6 @@ class TeacherDashboardController < ApplicationController
     return head :forbidden unless section
 
     @section = section.summarize
-    @all_sections = sections.map(&:summarize)
+    @visible_sections = sections.where(hidden: false).map(&:summarize)
   end
 end

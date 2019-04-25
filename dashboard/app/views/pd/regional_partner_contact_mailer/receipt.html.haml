@@ -1,4 +1,4 @@
-%p= "Hello #{@form[:first_name]},"
+%p= "Hello #{@form[:first_name] || @form[:name]},"
 %p Thank you for your interest in supporting computer science education in your region!
 
 -if @regional_partner

@@ -198,11 +198,30 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes(level.related_videos, video)
   end
 
+  test 'returns locale-specific video with related videos' do
+    level = create(:level)
+    en_video = create(:video)
+    es_video = create(:video)
+    es_video.locale = 'es-MX'
+    es_video.key = en_video.key
+    es_video.save!
+    level.update(properties: {video_key: en_video.key})
+
+    with_locale('es-MX') do
+      assert_includes(level.related_videos, es_video)
+      refute_includes(level.related_videos, en_video)
+    end
+    with_locale('en-US') do
+      assert_includes(level.related_videos, en_video)
+      refute_includes(level.related_videos, es_video)
+    end
+  end
+
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
-    assert_includes(level.related_videos, level.concepts.first.video)
-    assert_includes(level.related_videos, level.concepts.second.video)
+    assert_includes(level.related_videos, level.concepts.first.related_video)
+    assert_includes(level.related_videos, level.concepts.second.related_video)
   end
 
   test 'update custom level from file' do
@@ -275,7 +294,8 @@ EOS
 
   test 'updating ContractMatch level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+    # mock file so we don't actually write a file
+    File.expects(:write).twice # once for create and once for save
 
     update_contract_match
   end
@@ -345,6 +365,33 @@ EOS
     LevelLoader.load_custom_level_xml level_xml, level
 
     assert_nil level.embed
+  end
+
+  test 'encrypted level properties are preserved after export and import' do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    level = Level.create(name: 'test encrypted properties', short_instructions: 'test', type: 'Artist', encrypted: true, disable_sharing: true, notes: 'original notes')
+    assert level.disable_sharing
+    assert level.encrypted
+
+    level_xml = level.to_xml
+    n = Nokogiri::XML(level_xml, &:noblanks)
+    level_config = n.xpath('//../config').first.child
+    encrypted_hash = JSON.parse(level_config.text)
+    assert encrypted_hash['encrypted_properties']&.is_a? String
+    refute encrypted_hash['properties']
+    assert encrypted_hash['encrypted_notes']&.is_a? String
+    refute encrypted_hash['notes']
+
+    level.disable_sharing = false
+    level.notes = nil
+    decrypted_hash = level.load_level_xml(n)
+    refute decrypted_hash['encrypted_properties']
+    assert decrypted_hash['properties']
+    assert decrypted_hash['properties']['disable_sharing']
+    assert decrypted_hash['properties']['encrypted']
+    refute decrypted_hash['encrypted_notes']
+    assert_equal decrypted_hash['notes'], 'original notes'
   end
 
   test 'project template level' do
@@ -711,6 +758,40 @@ EOS
     new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
+  end
+
+  test 'can clone multi level and preserve encrypted flag' do
+    dsl_text = <<EOS
+name 'old multi level'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(dsl_text)
+
+    new_level = old_level.clone_with_name('new multi level')
+    assert_equal 'new multi level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    refute new_level.encrypted
+
+    old_level.encrypted = true
+    new_level = old_level.clone_with_name('encrypted level')
+    assert_equal 'encrypted level', new_level.name
+    assert_equal 1, new_level.properties['questions'].length
+    assert_equal 3, new_level.properties['answers'].length
+    assert_equal 'Blue', new_level.properties['answers'].last['text']
+    assert new_level.encrypted, 'clone_with_name preserves encrypted flag'
+
+    new_level = old_level.clone_with_suffix(' copy')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 3, new_level.properties['answers'].length
+    assert new_level.encrypted, 'clone_with_suffix preserves encrypted flag'
   end
 
   test 'can clone with suffix' do

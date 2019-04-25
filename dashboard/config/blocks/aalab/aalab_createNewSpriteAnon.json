@@ -3,7 +3,7 @@
   "config": {
     "func": "createNewSpriteAnon",
     "inline": false,
-    "blockText": "aalab make new {ANIMATION_NAME} sprite at {LOCATION}",
+    "blockText": "make new {ANIMATION_NAME} sprite at {LOCATION}",
     "color": [
       355,
       ".7",

@@ -1,6 +1,8 @@
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
 
+  default bcc: MailerConstants::PLC_EMAIL_LOG
+
   SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.
@@ -36,6 +38,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @details_partial = get_details_partial @workshop.course, @workshop.subject
     @online_url = ONLINE_URL
+    @is_enrollment_receipt = true
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -61,7 +64,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.full_name, @enrollment.email)
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -150,10 +154,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
 
     mail content_type: 'text/html',
-         from: from_teacher,
-         subject: detail_change_notification_subject(@workshop),
-         to: email_address(@user.name, @user.email),
-         reply_to: email_address(@user.name, @user.email)
+      from: from_teacher,
+      subject: detail_change_notification_subject(@workshop),
+      to: email_address(@user.name, @user.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_detail_change_notification(workshop)
@@ -165,6 +169,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
          subject: detail_change_notification_subject(@workshop),
          to: email_address(@workshop.organizer.name, @workshop.organizer.email),
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def teacher_survey_reminder(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    # Pre-workshop survey reminder
+    mail content_type: 'text/html',
+      from: from_survey,
+      subject: 'Please complete the survey before your workshop!',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   # Exit survey email
@@ -187,6 +203,17 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_survey,
       subject: 'How was your Code.org workshop?',
+      to: email_address(@enrollment.full_name, @enrollment.email)
+  end
+
+  def teacher_follow_up(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    # The subject below is only applicable for CSF Intro
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Having fun with CS Fundamentals?',
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
@@ -236,7 +263,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
-      "Your upcoming #{workshop.course} workshop and next steps"
+      if @is_first_pre_survey_email
+        "Your upcoming #{workshop.course} workshop and next steps"
+      else
+        "See you soon for your upcoming #{workshop.course} workshop!"
+      end
     else
       'Your upcoming Code.org workshop and next steps'
     end

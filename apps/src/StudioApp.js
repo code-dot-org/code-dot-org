@@ -222,7 +222,7 @@ StudioApp.prototype.configure = function(options) {
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
   // Set default speed
-  if (options.level && options.level.sliderSpeed) {
+  if (options.level) {
     getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
   }
 };
@@ -2217,7 +2217,12 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
+  aceMode.defineForAce(
+    config.dropletConfig,
+    config.unusedConfig,
+    this.editor,
+    config.levelGameName
+  );
   // Now set the editor to that mode:
   var aceEditor = this.editor.aceEditor;
   aceEditor.session.setMode('ace/mode/javascript_codeorg');

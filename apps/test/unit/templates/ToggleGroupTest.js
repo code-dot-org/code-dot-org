@@ -12,9 +12,15 @@ describe('ToggleGroup', function() {
     onChange = sinon.spy();
     const group = (
       <ToggleGroup selected="one" onChange={onChange}>
-        <button value="one">One</button>
-        <button value="two">Two</button>
-        <button value="three">Three</button>
+        <button type="button" value="one">
+          One
+        </button>
+        <button type="button" value="two">
+          Two
+        </button>
+        <button type="button" value="three">
+          Three
+        </button>
       </ToggleGroup>
     );
 

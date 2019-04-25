@@ -183,4 +183,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
       assert links_are_complete_urls?(mail)
     end
   end
+
+  test 'default bcc' do
+    enrollment = create :pd_enrollment
+
+    mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
+
+    assert_equal MailerConstants::PLC_EMAIL_LOG, mail.bcc.first
+  end
 end

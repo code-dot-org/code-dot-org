@@ -9,7 +9,6 @@ export const assetButtonStyles = {
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 5,
-    borderRadius: 4,
     fontSize: 'large',
     fontWeight: 'lighter',
     marginRight: 10
@@ -72,7 +71,7 @@ export default class AddAssetButtonRow extends React.Component {
         {!this.props.hideAudioRecording && (
           <RecordButton
             onSelectRecord={this.props.onSelectRecord}
-            disabled={this.props.recordDisabled}
+            disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
           />
         )}
         <span id="manage-asset-status">{this.props.statusMessage}</span>

@@ -10,20 +10,21 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   # - Date it was escalated
   # - ID of review
 
+  # GET /api/v1/peer_review_submissions/index
+  #
+  # Optional queryparams:
+  #   page:               Which page of results to return.  Default: 1 (first page)
+  #   per -or- limit:     How many results to return. Default: 50. Maximum: 500
+  #   emailFilter:        Filters results by submitter email
+  #   plc_course_id:      Filters results by course id
+  #   plc_course_unit_id: Filters results by unit id
   def index
     # Get a list of submissions that are currently open
     submissions = Hash.new
-    limit = params[:limit] || 50
+    page = params[:page] || 1
+    per = params[:per] || params[:limit] || 50
 
-    reviews =
-      case params[:filter]
-      when 'escalated'
-        PeerReview.escalated.where(reviewer: nil).limit(limit)
-      when 'open'
-        PeerReview.where(reviewer: nil).limit(limit)
-      else
-        PeerReview.all.limit(limit)
-      end
+    reviews = PeerReview.all
 
     if params[:email].presence
       reviews = reviews.where(submitter: User.find_by_email(params[:email]))
@@ -35,13 +36,21 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
     end
 
-    reviews.distinct! {|review| [review.submitter, review.level]}
+    reviews = reviews.distinct {|review| [review.submitter, review.level]}
+
+    reviews = reviews.page(page).per(per)
 
     reviews.each do |review|
       submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
     end
 
-    render json: submissions.values
+    render json: {
+      submissions: submissions.values,
+      pagination: {
+        total_pages: reviews.total_pages,
+        current_page: reviews.current_page
+      }
+    }
   end
 
   def report_csv

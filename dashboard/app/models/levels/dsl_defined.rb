@@ -22,6 +22,7 @@
 #  index_levels_on_game_id  (game_id)
 #  index_levels_on_name     (name)
 #
+require 'cdo/script_constants'
 
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
@@ -31,6 +32,16 @@ class DSLDefined < Level
 
   def dsl_default
     "Enter the level definition here.\n"
+  end
+
+  def localized_text(text)
+    I18n.t(
+      text,
+      scope: ['data', type.underscore, name],
+      separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
+      default: text,
+      smart: true
+    )
   end
 
   def self.setup(data)
@@ -74,7 +85,7 @@ class DSLDefined < Level
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
         level.rewrite_dsl_file(text)
-        rewrite_i18n_file(i18n)
+        rewrite_i18n_file(i18n) if level.script_levels.any? {|sl| ScriptConstants.i18n? sl.script.name}
       end
 
       level
@@ -83,7 +94,7 @@ class DSLDefined < Level
 
   # Write the specified text to the dsl level definition file for this level.
   def rewrite_dsl_file(text)
-    File.write(file_path, (encrypted ? encrypted_dsl_text(text) : text))
+    File.write(file_path, (level_encrypted? ? encrypted_dsl_text(text) : text))
   end
 
   def self.rewrite_i18n_file(i18n)
@@ -126,7 +137,6 @@ class DSLDefined < Level
 
   def clone_with_name(new_name)
     raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
-    level = super(new_name)
     old_dsl = dsl_text
     new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
 
@@ -134,8 +144,9 @@ class DSLDefined < Level
     # name 'level-name', or the dsl_text is entirely blank as during unit tests
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
-    level.update!(dsl_text: new_dsl) if new_dsl
-    level
+    level_params = {}
+    level_params[:encrypted] = level_encrypted? if level_encrypted?
+    self.class.create_from_level_builder({dsl_text: new_dsl}, level_params) if new_dsl
   end
 
   def dsl_text
@@ -150,7 +161,9 @@ class DSLDefined < Level
     end
   end
 
-  def encrypted
+  # The name of this method must not collide with 'encrypted?' or 'encrypted'
+  # which are automatically generated on the Level class via serialized_attrs
+  def level_encrypted?
     properties['encrypted'].present? && properties['encrypted'] != "false"
   end
 

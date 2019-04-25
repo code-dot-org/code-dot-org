@@ -7,6 +7,7 @@
 #  student_id :integer
 #  level_id   :integer
 #  teacher_id :integer
+#  performance :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -17,7 +18,7 @@
 #
 
 class Api::V1::TeacherFeedbackSerializer < ActiveModel::Serializer
-  attributes :id, :teacher_name, :student_id, :level_id, :comment, :created_at
+  attributes :id, :teacher_name, :student_id, :level_id, :comment, :performance, :created_at
 
   private
 

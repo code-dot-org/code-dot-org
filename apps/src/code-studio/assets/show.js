@@ -49,16 +49,17 @@ module.exports = function showAssetManager(
       uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
       useFilesApi: !!options.useFilesApi,
       assetChosen: showChoseImageButton
-        ? function(fileWithPath) {
+        ? function(fileWithPath, timestamp) {
             dialog.hide();
-            assetChosen(fileWithPath);
+            assetChosen(fileWithPath, timestamp);
           }
         : null,
       showUnderageWarning: !!options.showUnderageWarning,
       projectId: dashboard.project.getCurrentId(),
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
-      elementId: options.elementId
+      elementId: options.elementId,
+      libraryOnly: options.libraryOnly
     }),
     codeDiv
   );

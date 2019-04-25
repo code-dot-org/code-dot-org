@@ -52,9 +52,11 @@ export default class ScriptEditor extends React.Component {
     hasVerifiedResources: PropTypes.bool,
     hasLessonPlan: PropTypes.bool,
     curriculumPath: PropTypes.string,
+    pilotExperiment: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
-    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired
+    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    projectSharing: PropTypes.bool
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -152,6 +154,20 @@ export default class ScriptEditor extends React.Component {
           </p>
         </label>
         <label>
+          Display project sharing column in Teacher Dashboard
+          <input
+            name="project_sharing"
+            type="checkbox"
+            defaultChecked={this.props.projectSharing}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked, the "Sharing" column in the "Manage Students" tab of
+            Teacher Dashboard will be displayed by default for sections assigned
+            to this script.
+          </p>
+        </label>
+        <label>
           Login Required
           <input
             name="login_required"
@@ -226,6 +242,16 @@ export default class ScriptEditor extends React.Component {
             Check if this course has lesson plans (on Curriculum Builder or in
             PDF form) that we should provide links to.
           </p>
+        </label>
+        <label>
+          Pilot Experiment. If specified, this script will only be accessible to
+          levelbuilders, or to classrooms whose teacher has this user experiment
+          enabled.
+          <input
+            name="pilot_experiment"
+            defaultValue={this.props.pilotExperiment}
+            style={styles.input}
+          />
         </label>
         <label>
           Curriculum Path

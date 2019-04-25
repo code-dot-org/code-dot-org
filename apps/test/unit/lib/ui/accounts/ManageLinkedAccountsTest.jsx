@@ -69,12 +69,28 @@ describe('ManageLinkedAccounts', () => {
 
   it('renders teacher email for authentication options', () => {
     const authOptions = {
-      id: {
+      1: {
         id: 1,
         credentialType: 'google_oauth2',
-        email: 'teacher@email.com'
+        email: 'teacher@google.com'
+      },
+      2: {
+        id: 2,
+        credentialType: 'microsoft_v2_auth',
+        email: 'teacher@microsoft.com'
+      },
+      4: {
+        id: 4,
+        credentialType: 'clever',
+        email: 'teacher@clever.com'
+      },
+      3: {
+        id: 3,
+        credentialType: 'facebook',
+        email: 'teacher@facebook.com'
       }
     };
+
     const wrapper = mount(
       <ManageLinkedAccounts
         {...DEFAULT_PROPS}
@@ -82,17 +98,37 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const googleEmailCell = wrapper
-      .find('OauthConnection')
-      .at(0)
-      .find('td')
-      .at(1);
-    expect(googleEmailCell).to.have.text('teacher@email.com');
+
+    const oauthConnections = wrapper.find('OauthConnection');
+
+    const googleConnection = oauthConnections.at(0);
+    expect(googleConnection.find('td').at(1)).to.have.text(
+      'teacher@google.com'
+    );
+    expect(googleConnection.find('td').at(2)).to.have.text('Disconnect');
+
+    const microsoftConnection = oauthConnections.at(1);
+    expect(microsoftConnection.find('td').at(1)).to.have.text(
+      'teacher@microsoft.com'
+    );
+    expect(microsoftConnection.find('td').at(2)).to.have.text('Disconnect');
+
+    const cleverConnection = oauthConnections.at(2);
+    expect(cleverConnection.find('td').at(1)).to.have.text(
+      'teacher@clever.com'
+    );
+    expect(cleverConnection.find('td').at(2)).to.have.text('Disconnect');
+
+    const facebookConnection = oauthConnections.at(3);
+    expect(facebookConnection.find('td').at(1)).to.have.text(
+      'teacher@facebook.com'
+    );
+    expect(facebookConnection.find('td').at(2)).to.have.text('Disconnect');
   });
 
   it('renders authentication option error', () => {
     const authOptions = {
-      id: {
+      1: {
         id: 1,
         credentialType: 'google_oauth2',
         error: 'Oh no!'

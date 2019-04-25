@@ -2,14 +2,15 @@
 #
 # Table name: teacher_feedbacks
 #
-#  id         :integer          not null, primary key
-#  comment    :text(65535)
-#  student_id :integer
-#  level_id   :integer
-#  teacher_id :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  deleted_at :datetime
+#  id          :integer          not null, primary key
+#  comment     :text(65535)
+#  student_id  :integer
+#  level_id    :integer
+#  teacher_id  :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  deleted_at  :datetime
+#  performance :string(255)
 #
 # Indexes
 #
@@ -24,6 +25,24 @@ class TeacherFeedback < ApplicationRecord
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
+
+  def self.get_student_level_feedback(student_id, level_id, teacher_id)
+    where(
+      student_id: student_id,
+      level_id: level_id,
+      teacher_id: teacher_id
+    ).latest
+  end
+
+  def self.get_all_feedback_for_section(student_ids, level_ids, teacher_id)
+    find(
+      where(
+        student_id: student_ids,
+        level_id: level_ids,
+        teacher_id: teacher_id
+      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
+    )
+  end
 
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled

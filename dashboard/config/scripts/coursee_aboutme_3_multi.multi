@@ -1,6 +1,14 @@
 name 'courseE_aboutme_3_multi'
-question 'Help! Rikki doesn\'t know what other information is safe for her to share. Which ONE of the following would you recommend? '
-wrong 'Rikki could share her student ID number.', feedback: 'No! Someone could steal Rikki\'s identity with her student ID number!'
-wrong 'Rikki could share a photograph of her family.', feedback: 'No! Someone could steal the photograph and say its a picture of THEIR family. Yikes!'
-right 'Rikki could share cartoon drawings of herself.', feedback: 'Great idea! Rikki can\'t be identified through cartoon drawings.'
-wrong 'Rikki could share her email address', feedback: 'No! Rikki\'s email address should only be shared directly with people or websites she can trust.'
+title 'About Me Multiple Choice'
+
+content1 'https://images.code.org/a7ad0ae3e5509311e6a93ac4bd186a75-image-1551979796927.png'
+
+question 'Look at Rikki\'s code. She can\'t decide what to print next! Choose the information that is SAFE for her to share!'
+
+wrong 'My phone number is...'
+wrong 'My last name is...'
+right 'My best friend\'s name is...'
+wrong 'My address is...'
+markdown <<MARKDOWN
+
+MARKDOWN

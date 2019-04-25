@@ -1,5 +1,5 @@
 {
-  "category": "Actions",
+  "category": "Unused",
   "config": {
     "func": "moveInDirection2",
     "blockText": "move {SPRITE} pixels {DISTANCE} toward {DIRECTION}",

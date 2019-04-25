@@ -15,35 +15,44 @@ Scenario: Basic teacher application submission
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
     And I press keys "5558675309" for element "input#phone"
-    And I press keys "123 Fake Street" for element "input#address"
-    And I press keys "Seattle" for element "input#city"
-    And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
-    And I press keys "nonexistent" for element "#school input"
-
-    # School: select other and enter manual data
-    Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-      And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-      Then I wait until element "input#schoolName" is visible
-      And I press keys "Code.org" for element "input#schoolName"
-      And I press keys "Code.org District" for element "input#schoolDistrictName"
-      And I press keys "1501 4th Ave" for element "input#schoolAddress"
-      And I press keys "Seattle" for element "input#schoolCity"
-      And I select the "Washington" option in dropdown "schoolState"
-      And I press keys "98101" for element "input#schoolZipCode"
-      And I press the first "input[name='schoolType'][value='Other']" element
-    Then I press keys "Albus" for element "input#principalFirstName"
-    And I press keys "Dumbledore" for element "input#principalLastName"
-    And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
-    And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
-    And I press keys "5555882300" for element "input#principalPhoneNumber"
-    And I press the first "input[name='currentRole']" element
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
     Then I see no difference for "Section 1: About You"
     And I press the first "button#next" element
 
+
   # Section 2
-  Then I wait until element "h3" contains text "Section 2: Choose Your Program"
+  Then I wait until element "h3" contains text "Section 2: Teaching Background"
+  And I press "input[name='subjectsTeaching']:first" using jQuery
+  And I press the first "input[name='taughtInPast']" element
+  And I press the first "input[name='previousYearlongCdoPd']" element
+
+  And I press keys "nonexistent" for element "#school input"
+
+  # School: select other and enter manual data
+  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+    Then I wait until element "input#schoolName" is visible
+    And I press keys "Code.org" for element "input#schoolName"
+    And I press keys "Code.org District" for element "input#schoolDistrictName"
+    And I press keys "1501 4th Ave" for element "input#schoolAddress"
+    And I press keys "Seattle" for element "input#schoolCity"
+    And I select the "Washington" option in dropdown "schoolState"
+    And I press keys "98101" for element "input#schoolZipCode"
+    And I press the first "input[name='schoolType'][value='Other']" element
+  Then I press keys "Albus" for element "input#principalFirstName"
+  And I press keys "Dumbledore" for element "input#principalLastName"
+  And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
+  And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
+  And I press keys "5555882300" for element "input#principalPhoneNumber"
+  And I press the first "input[name='currentRole']" element
+
+  Then I see no difference for "Section 2: Teaching Background"
+  And I press the first "button#next" element
+
+
+  # Section 3
+  Then I wait until element "h3" contains text "Section 3: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
   And I press keys "50" for element "input#csHowManyMinutes"
@@ -55,44 +64,26 @@ Scenario: Basic teacher application submission
   Then I wait until element "textarea#replaceWhichCourse" is visible
     And I press keys "Replacing existing CS Course" for element "textarea#replaceWhichCourse"
 
-  Then I see no difference for "Section 2: Your School"
+  Then I see no difference for "Section 3: Choose Your Program"
   And I press the first "button#next" element
 
-  # Section 3
-  Then I wait until element "h3" contains text "Section 3: Teaching Background"
-  And I press "input[name='subjectsTeaching']:first" using jQuery
-  And I press the first "input[name='doesSchoolRequireCsLicense']" element
-  Then I wait until element "textarea#whatLicenseRequired" is visible
-    And I press keys "license" for element "textarea#whatLicenseRequired"
-  And I press the first "input[name='haveCsLicense']" element
-  And I press the first "input[name='subjectsLicensedToTeach']" element
-  And I press the first "input[name='taughtInPast']" element
-  And I press the first "input[name='previousYearlongCdoPd']" element
-  And I press the first "input[name='csOfferedAtSchool']" element
-
-  Then I see no difference for "Section 3: Teaching Background"
-  And I press the first "button#next" element
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Professional Learning Program Requirements"
   And I press "input[name='committed']:first" using jQuery
-  And I press the first "input[name='payFee']" element
+  And I click selector "input[name='payFee']" if I see it
   And I press the first "input[name='willingToTravel']" element
   And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
 
   # Section 5
-  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information"
+  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and submission"
   And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
-  Then I see no difference for "Section 5: Submission"
-  And I press the first "button#next" element
-
-  # Section 6
-  Then I wait until element "h3" contains text "Section 6: Submission"
   And I press the first "input#agree" element
+  Then I see no difference for "Section 5: Submission"
   And I press the first "button[type='submit']" element
 
   # Confirmation page
@@ -106,7 +97,7 @@ Scenario: Basic teacher application submission
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
   Then I press the first "input[name='planToTeach']" element
 
-  And I press keys "nonexistent" for element "#school input"
+  And I press keys "nonexistent" for element "#nces_school"
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
   And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
   Then I wait until element "input#schoolName" is visible
@@ -135,7 +126,6 @@ Scenario: Basic teacher application submission
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
-  Then I press the first "input[name='howHeard']" element
   Then I press the first "#confirmPrincipal" element
 
   Then I see no difference for "Principal approval form"

@@ -1,14 +1,15 @@
 ---
 title: training materials
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Training Materials
 
 ## Table of Contents
 - [Virtual Trainings](#virtual)
+- [Regional Partner Summit - Feb 2019](#feb19)
 - [Regional Partner Summit - Sept 2018](#sept18)
 - [Regional Partner Summit - Mar 2018](#mar18)
 - [Regional Partner Summit - Sept 2017](#sept17)
@@ -73,7 +74,7 @@ January 2018
     <summary>**2017 Virtual Trainings**</summary>
     <p>
 
-December 2017  
+December 2017
 
   - Dec 12 TEALS & the CS Principles Classroom ([Video](https://code.zoom.us/recording/play/7YH4DmJAL5OutCqgRsE5-YORNg0RUP5Uu-c_KtcX0P-LS-ohu9wUfXJS-K_URZz6))
 
@@ -107,7 +108,7 @@ March 2017:
   - Guest Speaker Series: NCWIT [Video](http://videos.code.org/plp/NCWIT_March17.mp4), [Slides](https://docs.google.com/presentation/d/1nxC--kbLdFF41laOZqKFmKjMZmfsFUMAwf2VZkF59q4/edit)
   - CS Principles Webinar for Teachers [Video](http://videos.code.org/plp/3-28-2017_CSPrinciples_Webinar.mp4)
 
-January 2017:                                            
+January 2017:
 
   - How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4), [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
   - CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4), [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
@@ -163,6 +164,12 @@ January 2017:
 [**Back to the top**](#top)
 <br/>
 
+________________
+<a id="feb19"></a>
+<br/>
+
+## Regional Partner Summit (February 2019)
+- [Regional Partner Summit Digest](https://bit.ly/addisondigest)
 
 ________________
 <a id="sept18"></a>
@@ -170,9 +177,7 @@ ________________
 
 ## Regional Partner Summit (September 2018)
 
-- [Regional Partner Summit Resources](https://bit.ly/dallasdigest)
-- <a href="https://drive.google.com/file/d/1tESjpvPuryIMeCidrjrWNGOdYSiND0qn/view">Session Teasers</a>
-
+- [Regional Partner Summit Digest](https://bit.ly/dallasdigest)
 
 
 <a id="mar18"></a>
@@ -181,7 +186,7 @@ ________________
 ## Regional Partner Summit (March 2018)
 
 
-- [Regional Partner Summit Resources](http://bit.ly/marchsummit" target=_blank>bit.ly/marchsummit)
+- [Regional Partner Summit Resources](http://bit.ly/marchsummit)
 - [High Level Agenda](https://docs.google.com/document/d/1FH4zGhL-zrP5dP6KyLspZ5xWWAV1-ApLxWGavyw0Z2U/edit)
 
 [**Back to the top**](#top)

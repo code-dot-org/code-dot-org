@@ -105,28 +105,32 @@ class AssignToSection extends Component {
 
     return (
       <div style={styles.main}>
-        <DropdownButton
-          text={courseId && scriptId ? i18n.assignUnit() : i18n.assignCourse()}
-          color={Button.ButtonColor.orange}
-        >
-          {[]
-            .concat(
-              <a key={-1} href={`/home?${queryParams}`}>
-                {i18n.newSectionEllipsis()}
-              </a>
-            )
-            .concat(
-              sectionsInfo.map((section, index) => (
-                <a
-                  key={index}
-                  data-section-index={index}
-                  onClick={this.onClickCourse}
-                >
-                  {section.name}
+        <div style={{marginRight: 10}}>
+          <DropdownButton
+            text={
+              courseId && scriptId ? i18n.assignUnit() : i18n.assignCourse()
+            }
+            color={Button.ButtonColor.orange}
+          >
+            {[]
+              .concat(
+                <a key={-1} href={`/home?${queryParams}`}>
+                  {i18n.newSectionEllipsis()}
                 </a>
-              ))
-            )}
-        </DropdownButton>
+              )
+              .concat(
+                sectionsInfo.map((section, index) => (
+                  <a
+                    key={index}
+                    data-section-index={index}
+                    onClick={this.onClickCourse}
+                  >
+                    {section.name}
+                  </a>
+                ))
+              )}
+          </DropdownButton>
+        </div>
         {sectionIndexToAssign !== null && (
           <ConfirmAssignment
             sectionName={section.name}
