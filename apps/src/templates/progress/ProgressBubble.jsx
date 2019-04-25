@@ -80,20 +80,20 @@ const styles = {
     backgroundColor: color.lighter_gray,
     color: color.white
   },
-  assessmentIconCheck: {
+  iconContainer: {
     position: 'absolute',
-    top: -3,
-    right: -3,
-    width: 14,
-    height: 14,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: color.white,
-    borderStyle: 'solid',
-    backgroundColor: color.white,
-    color: color.purple,
-    fontSize: 14,
-    lineHeight: '14px'
+    top: -6,
+    right: -6,
+    fontSize: 10
+  },
+  assessmentIconBackground: {
+    color: color.purple
+  },
+  assessmentIconBorder: {
+    color: color.white
+  },
+  assessmentIconCheck: {
+    color: color.white
   }
 };
 
@@ -251,10 +251,23 @@ class ProgressBubble extends React.Component {
               levelIsAssessment &&
               !smallBubble &&
               !hideAssessmentIcon && (
-                <FontAwesome
-                  icon="check-circle"
-                  style={styles.assessmentIconCheck}
-                />
+                <span className="fa-stack" style={styles.iconContainer}>
+                  <FontAwesome
+                    icon="circle"
+                    className="fa-stack-2x"
+                    style={styles.assessmentIconBackground}
+                  />
+                  <FontAwesome
+                    icon="circle-thin"
+                    className="fa-stack-2x"
+                    style={styles.assessmentIconBorder}
+                  />
+                  <FontAwesome
+                    icon="check"
+                    className="fa-stack-1x"
+                    style={styles.assessmentIconCheck}
+                  />
+                </span>
               )}
           </div>
           {!this.props.hideToolTips && tooltip}

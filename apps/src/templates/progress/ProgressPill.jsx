@@ -39,18 +39,20 @@ const styles = {
   iconMargin: {
     marginLeft: 10
   },
-  assessmentIcon: {
+  iconContainer: {
     position: 'absolute',
-    top: -12,
-    right: -12
+    top: -6,
+    right: -6,
+    fontSize: 10
+  },
+  assessmentIconBackground: {
+    color: color.purple
+  },
+  assessmentIconBorder: {
+    color: color.white
   },
   assessmentIconCheck: {
-    color: color.purple,
-    fontSize: 16
-  },
-  assessmentIconCircle: {
-    color: color.white,
-    fontSize: 18
+    color: color.white
   }
 };
 
@@ -129,14 +131,19 @@ class ProgressPill extends React.Component {
           )}
           {tooltip}
           {inMiniRubricExperiment && levelIsAssessment && (
-            <span className="fa-stack" style={styles.assessmentIcon}>
+            <span className="fa-stack" style={styles.iconContainer}>
               <FontAwesome
                 icon="circle"
-                className="fa-stack-1x"
-                style={styles.assessmentIconCircle}
+                className="fa-stack-2x"
+                style={styles.assessmentIconBackground}
               />
               <FontAwesome
-                icon="check-circle"
+                icon="circle-thin"
+                className="fa-stack-2x"
+                style={styles.assessmentIconBorder}
+              />
+              <FontAwesome
+                icon="check"
                 className="fa-stack-1x"
                 style={styles.assessmentIconCheck}
               />
