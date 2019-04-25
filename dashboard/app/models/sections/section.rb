@@ -224,17 +224,6 @@ class Section < ActiveRecord::Base
       link_to_assigned = script_path(script)
     end
 
-    # Some scripts are associated with a course (e.g. csp1-2018 is the script for "CSP Unit 1 - The Internet ('18-'19)",
-    # which is part of the csp18-19 # course. Courses have different versions based on year; similar courses
-    # across years have a family_name (either CSD or CSP). We want to pass the family_name associated with a script, if there is one,
-    # so that we can determine whether to show the sharing column on the Manage Students Table of Teacher Dashboard.
-    course_family_name =
-      if course
-        course.family_name
-      elsif script
-        script.course&.family_name
-      end
-
     unique_students = students.uniq(&:id)
     {
       id: id,
@@ -256,7 +245,7 @@ class Section < ActiveRecord::Base
       script: {
         id: script_id,
         name: script.try(:name),
-        course_family_name: course_family_name
+        project_sharing: script.try(:project_sharing)
       },
       studentCount: unique_students.size,
       grade: grade,

@@ -10,6 +10,7 @@ new_name 'csd5-2017'
 family_name 'csd5'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD-U5-SFLP Representation Matters', named: true
