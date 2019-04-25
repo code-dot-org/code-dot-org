@@ -471,6 +471,8 @@ es:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
         behaviors_edit: Añadir código a este comportamiento.
+      behaviors free play_callout:
+        behaviors_edit: Añadir código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo el néctar (o miel) de una flor (o panal).
       course3_artist_functions_challenge1_callout:

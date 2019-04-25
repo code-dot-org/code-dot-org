@@ -4602,6 +4602,8 @@ en:
         behavior hint: "Try editing the behaviors! \n\n* Which direction does the rocket need to move?"
       behaviors 3_authored_hint:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors 3a_authored_hint:
+        behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
       behaviors 4_authored_hint: {}
       behaviors 4a_authored_hint: {}
       behaviors 5_authored_hint:
@@ -4611,6 +4613,9 @@ en:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
       behaviors 6_authored_hint:
         behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors 7_authored_hint:
+        behavior hint: "Try editing the behaviors! \n* Which value is controlling the speed of each sprite?"
+      behaviors free play_authored_hint: {}
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Comments are also helpful when other people try to read your code.
         courseC_maze_programming4_b: Add a comment when you change directions- what would have happened if you turned the other way?

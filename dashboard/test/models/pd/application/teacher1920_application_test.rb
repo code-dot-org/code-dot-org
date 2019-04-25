@@ -983,6 +983,73 @@ module Pd::Application
 
     private
 
+    test 'test allow_sending_principal_email?' do
+      # By default we can send.
+      application = create :pd_teacher1920_application
+      assert application.allow_sending_principal_email?
+
+      # If we're no longer unreviewed/pending, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'accepted_no_cost_registration')
+      refute application.allow_sending_principal_email?
+
+      # If principal approval is not required, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(principal_approval_not_required: true)
+      refute application.allow_sending_principal_email?
+
+      # If we already have a principal response, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_principal_approval1920_application, teacher_application: application
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email < 5 days ago, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      refute application.allow_sending_principal_email?
+
+      # If we created a principal email >= 5 days ago, we can send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_email?
+    end
+
+    test 'test allow_sending_principal_approval_teacher_reminder_email?' do
+      # By default we can send.
+      application = create :pd_teacher1920_application
+      assert application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a teacher reminder email any time before, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval_teacher_reminder', created_at: 14.days.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we're no longer unreviewed/pending, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'accepted_no_cost_registration')
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If principal approval is not required, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(principal_approval_not_required: true)
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we already have a principal response, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_principal_approval1920_application, teacher_application: application
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a principal email < 5 days ago, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a principal email >= 5 days ago, we can send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_approval_teacher_reminder_email?
+    end
+
     def assert_status_log(expected, application)
       assert_equal JSON.parse(expected.to_json), application.status_log
     end

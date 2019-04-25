@@ -2,7 +2,7 @@ login_required true
 
 stage 'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment'
 level 'CSP_Final_instructions'
-assessment 'CSP Culminating Assessment'
+level 'CSP Culminating Assessment', assessment: true
 
 stage 'RQB Questions test'
-assessment 'RQB test levelgroup'
+level 'RQB test levelgroup', assessment: true

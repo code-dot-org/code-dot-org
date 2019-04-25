@@ -9,6 +9,7 @@ new_name 'csppostap-2017'
 family_name 'csppostap'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Creating Javascript Objects'
 level 'U4L02 Student Lesson Introduction'

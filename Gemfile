@@ -331,6 +331,9 @@ install_if require_pg do
 end
 
 gem 'activerecord-import'
+gem 'scenic'
+gem 'scenic-mysql_adapter'
+
 gem 'colorize'
 
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true

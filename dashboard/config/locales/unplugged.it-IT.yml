@@ -112,8 +112,8 @@ it:
       GettingLoopy:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       RelayProgramming:
         title: Programmazione a Staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
@@ -331,8 +331,8 @@ it:
       courseC_unplugged_gettingLoopy:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_unplugged_binaryBracelets:
         title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
@@ -476,8 +476,8 @@ it:
       GettingLoopy_2018:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       BinaryBracelets_2018:
         title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
@@ -550,8 +550,8 @@ it:
       GettingLoopy_2019:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
