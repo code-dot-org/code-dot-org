@@ -103,6 +103,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   scholarshipInfo(enrollment) {
+    if (enrollment.new_facilitator) {
+      return <td>No (New Facilitator)</td>;
+    }
+
     if (
       this.props.permissionList.has(ProgramManager) ||
       this.props.permissionList.has(WorkshopAdmin)
