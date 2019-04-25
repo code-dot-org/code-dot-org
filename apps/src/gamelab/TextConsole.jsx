@@ -62,10 +62,7 @@ export default class TextConsole extends React.Component {
   };
 
   state = {
-    open: false,
-    duration: 1000,
-    spokenLines: [],
-    timeout: 0
+    open: false
   };
 
   timeout = 0;
