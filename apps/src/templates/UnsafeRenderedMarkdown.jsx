@@ -18,6 +18,10 @@ import externalLinks from './plugins/externalLinks';
 // to support our custom syntaxes
 const schema = Object.assign({}, defaultSanitizationSchema);
 
+// We use a _lot_ of image formatting stuff in our
+// instructions, particularly in CSP
+schema.attributes.img.push('style', 'height', 'width');
+
 // Add support for expandableImages
 schema.tagNames.push('span');
 schema.attributes.span = ['dataUrl', 'className'];
