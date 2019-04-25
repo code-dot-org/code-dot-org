@@ -1670,10 +1670,6 @@ function logWebRequest(url) {
   });
 }
 
-applabCommands.getList = function(tableName, columnName) {
-  console.log('getList!');
-};
-
 applabCommands.startWebRequest = function(opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
@@ -1791,6 +1787,20 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
+};
+
+applabCommands.getList = function(opts) {
+  var onSuccess = handleGetListSync.bind(this, opts);
+  var onError = handleGetListSyncError.bind(this, opts);
+  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
+};
+var handleGetListSync = function(opts, values) {
+  let l = [];
+  values.forEach(x => l.push(x[opts.columnName]));
+  opts.callback(l);
+};
+var handleGetListSyncError = function(opts, values) {
+  console.log('handleGetListSyncError');
 };
 
 applabCommands.getKeyValueSync = function(opts) {
