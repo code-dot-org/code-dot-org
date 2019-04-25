@@ -12,7 +12,8 @@ cs.level_id as level_group_level_id,
 cs.level_name as level_group_level_name,
 cl.contained_level_id as level_id,
 l2.name as level_name, 
-cs.level_number,
+cl.contained_level_page,
+cl.contained_level_position,
 cl.contained_level_text
 from analysis.course_structure cs
 join dashboard_production.levels l
