@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+count = 0
+Pd::ScholarshipInfo.find_each do |si|
+  course = nil
+  app = Pd::Application::Teacher1920Application.find_by(user_id: si.user_id)
+  if app
+    course = app.course
+  else
+    # get enrollment in local summer workshop for this year
+    enrollments = Pd::Enrollment.where(user_id: si.user_id)
+    enrollments.each do |e|
+      if e.workshop.local_summer? && e.workshop.summer_workshop_school_year == "2019-2020"
+        if e.workshop.course == "CS Discoveries"
+          course = 'csd'
+        elsif e.workshop.course == 'CS Principles'
+          course = 'csp'
+        end
+      end
+    end
+  end
+
+  if course
+    si.update!(course: course)
+  else
+    puts "no application or enrollment found for user #{si.user_id}"
+  end
+  count += 1
+end
+
+puts "#{count} scholarshipInfos updated with course"
