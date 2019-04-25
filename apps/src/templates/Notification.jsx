@@ -155,7 +155,7 @@ class Notification extends Component {
         newWindow: PropTypes.bool,
         onClick: PropTypes.func,
         className: PropTypes.string
-      })
+      }),
     ),
 
     // Optionally can provide children, such as one or more buttons.
@@ -209,7 +209,7 @@ class Notification extends Component {
       width,
       buttonClassName,
       buttons,
-      responsiveSize
+      responsiveSize,
     } = this.props;
 
     const desktop = responsiveSize === undefined || responsiveSize === 'lg';

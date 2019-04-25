@@ -31,6 +31,11 @@ function initPage() {
   if (scriptData.has_verified_resources) {
     store.dispatch(setVerifiedResources(true));
   }
+  console.log("scriptData.script_announcements in scriptOverview.js", scriptData.script_announcements)
+
+  console.log("scriptData.dismissed_announcements in scriptOverview.js", scriptData.dismissed_announcements)
+
+  console.log("scriptData.user_id in scriptOverview.js", scriptData.user_id)
 
   if (scriptData.script_announcements) {
     registerReducers({scriptAnnouncements: scriptAnnouncementReducer});

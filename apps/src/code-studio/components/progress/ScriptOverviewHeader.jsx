@@ -84,7 +84,8 @@ class ScriptOverviewHeader extends Component {
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    locale: PropTypes.string
+    locale: PropTypes.string,
+    userId: PropTypes.number
   };
 
   componentDidMount() {
@@ -123,6 +124,8 @@ class ScriptOverviewHeader extends Component {
   Lastly checks if the non-verified teacher announcement should be shown to a teacher and
   adds the announcement if needed.
    */
+
+   /* Filter out any announcements that have already been dismissed by checking the users dismissed announcements property*/
   filterAnnouncements = currentView => {
     const currentAnnouncements = [];
     this.props.announcements.forEach(element => {
@@ -170,7 +173,8 @@ class ScriptOverviewHeader extends Component {
       showRedirectWarning,
       versions,
       showHiddenUnitWarning,
-      courseName
+      courseName,
+      userId
     } = this.props;
 
     const displayVersionWarning =
@@ -207,6 +211,7 @@ class ScriptOverviewHeader extends Component {
           <ScriptAnnouncements
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
+            userId={userId}
           />
         )}
         {displayVersionWarning && (
@@ -217,6 +222,7 @@ class ScriptOverviewHeader extends Component {
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
             onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
+            userId={userId}
           />
         )}
         {versionWarningDetails && (

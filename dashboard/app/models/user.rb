@@ -144,6 +144,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_kind
     data_transfer_agreement_at
     seen_oauth_connect_dialog
+    dismissed_announcements
   )
 
   # Include default devise modules. Others available are:

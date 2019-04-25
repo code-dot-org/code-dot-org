@@ -40,6 +40,7 @@ class ScriptOverview extends React.Component {
     courseName: PropTypes.string,
     locale: PropTypes.string,
     showAssignButton: PropTypes.bool,
+    userId: PropTypes.number,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -91,6 +92,7 @@ class ScriptOverview extends React.Component {
       scriptTitle,
       professionalLearningCourse,
       viewAs,
+      userId,
       isRtl,
       sectionsInfo,
       currentCourseId,
@@ -144,6 +146,7 @@ class ScriptOverview extends React.Component {
               versions={versions}
               courseName={courseName}
               locale={locale}
+              userId={userId}
             />
             {!professionalLearningCourse &&
               viewAs === ViewType.Teacher &&

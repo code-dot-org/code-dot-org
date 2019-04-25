@@ -97,4 +97,10 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
     render status: 200, json: {next_census_display: @user.next_census_display}
   end
+
+  # POST /api/v1/users/<user_id>/dismiss_announcement/<announcement_id>
+  def dismiss_announcement
+    # If the user doesn't yet have a dismissed annoucement, put the announcement currently being dismissed into an array; if they already have a dismissed announcement, shovel into the array and de-dupe
+    render status: 200, json: {dismissed_announcements: @user.dismissed_announcements}
+  end
 end
