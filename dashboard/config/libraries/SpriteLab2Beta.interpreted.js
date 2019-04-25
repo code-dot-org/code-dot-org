@@ -611,7 +611,7 @@ function makeNewGroup() {
   };
 
   group.say = function (text) {
-    appendSpriteConsole({sprite: group.get(0).getAnimationLabel(), text: text});
+    appendSpriteConsole({name: group.get(0).getAnimationLabel(), text: text});
     
     // Temporarily leave this here
     console_queue.push({sprite: group.get(0), txt: text, time: millis() + 2000});
