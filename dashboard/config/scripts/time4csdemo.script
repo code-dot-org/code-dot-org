@@ -32,7 +32,7 @@ level 'courseC_maze_debugging4_2018'
 level 'courseC_maze_debugging5_2018'
 level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
-assessment 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging8_predict1_2018', assessment: true
 level 'courseC_maze_debugging9_2018'
 level 'courseF_markdown_debugging_end'
 
@@ -46,7 +46,7 @@ level 'courseC_artist_prog5_2018'
 level 'courseC_artist_prog6_2018'
 level 'courseC_artist_prog7_2018', challenge: true
 level 'courseC_artist_prog8_2018'
-assessment 'courseC_artist_prog6_predict1_2018'
+level 'courseC_artist_prog6_predict1_2018', assessment: true
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
@@ -82,7 +82,7 @@ level 'courseD_maze_nestedLoops6_2018'
 level 'courseD_bee_nestedLoops7_2018', challenge: true
 level 'courseD_bee_nestedLoops8_2018'
 level 'courseD_bee_nestedLoops9_2018'
-assessment 'courseD_bee_nestedLoops9_predict2_2018'
+level 'courseD_bee_nestedLoops9_predict2_2018', assessment: true
 level 'courseF_markdown_nestedloops_end'
 
 stage 'Nested Loops with Frozen', flex_category: 'ramp_up'
