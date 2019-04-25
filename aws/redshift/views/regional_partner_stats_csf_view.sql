@@ -1,6 +1,7 @@
-drop table if exists analysis_pii.regional_partner_stats_csf;
-create table analysis_pii.regional_partner_stats_csf AS
+DROP VIEW IF EXISTS analysis_pii.regional_partner_stats_csf_view CASCADE;
 
+create view analysis_pii.regional_partner_stats_csf_view 
+AS
 with 
 completed as
 (
@@ -59,7 +60,8 @@ pd_enrollments_with_year as
     last_name, 
     email, 
     user_id, 
-    school_year
+    school_year,
+    json_extract_path_text(properties, 'role') as role
   from dashboard_production_pii.pd_enrollments pde
     join dashboard_production_pii.pd_workshops pw
         on pde.pd_workshop_id = pw.id
@@ -85,6 +87,7 @@ select
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
          FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
+         FIRST_VALUE(pde.role) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as role,
          'CS Fundamentals'::varchar as course,
          sy.school_year as school_year_trained,
          month_trained,
@@ -136,12 +139,9 @@ select
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
-         sa.students_total,   
-         sa.students_started_total, 
-         sa.students_completed_total,      
+         sa.students_total,         
          sa.sections_of_course,
          sa.students_in_course,
-         sa.students_completed_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
           tmp.stage_name_most_progress,
           tmp.stage_number_most_progress, 
@@ -194,12 +194,10 @@ select
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
          and tmp.school_year = sa.school_year
+WITH NO SCHEMA BINDING
+
 ;
 
-GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;
-GRANT SELECT ON analysis_pii.regional_partner_stats_csf TO GROUP reader_pii;
-
--- ISSUES
--- right now this analysis depends primarily on the teachers_trained views, which contain one entry per person, with the corresponding 'first year trained' as the school_year
-      -- this means that if teachers are trained in multiple years then only info from their first year of training will get joined
-      -- to Mary, this does not seem ideal 
+GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csf_view TO dev;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csf_view TO GROUP reader_pii;
+GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csf_view TO GROUP admin;
