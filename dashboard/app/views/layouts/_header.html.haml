@@ -88,17 +88,6 @@
                   %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
           .header_right
-            %span.freeplay_links
-              %a.header_status_bar.level_free_play.playlab_free_play{title: t('nav.header.free_play.playlab'), href: playlab_project_projects_path, style: 'display: none;'}
-                %i.fa.fa-rocket
-              %a.header_status_bar.level_free_play.artist_free_play{title: t('nav.header.free_play.artist'), href: artist_project_projects_path, style: 'display: none;'}
-                %i.fa.fa-pencil
-              %a.header_status_bar.level_free_play.calc_free_play{title: t('nav.header.free_play.calculate'), href: calc_project_create_new_projects_path, style: 'display: none;'}
-                %i.fa.fa-calculator
-              %a.header_status_bar.level_free_play.eval_free_play{title: t('nav.header.free_play.artist'), href: eval_project_create_new_projects_path, style: 'display: none;'}
-                %i.fa.fa-pencil
-              %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
-                %i.fa.fa-mobile
             - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
                 = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options

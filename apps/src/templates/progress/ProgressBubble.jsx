@@ -18,6 +18,7 @@ import {
 } from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 import TooltipWithIcon from './TooltipWithIcon';
+import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -79,19 +80,6 @@ const styles = {
   disabledStageExtras: {
     backgroundColor: color.lighter_gray,
     color: color.white
-  },
-  assessmentIcon: {
-    position: 'absolute',
-    top: -12,
-    right: -12
-  },
-  assessmentIconCheck: {
-    color: color.purple,
-    fontSize: 16
-  },
-  assessmentIconCircle: {
-    color: color.white,
-    fontSize: 18
   }
 };
 
@@ -248,20 +236,7 @@ class ProgressBubble extends React.Component {
             {inMiniRubricExperiment &&
               levelIsAssessment &&
               !smallBubble &&
-              !hideAssessmentIcon && (
-                <span className="fa-stack" style={styles.assessmentIcon}>
-                  <FontAwesome
-                    icon="circle"
-                    className="fa-stack-1x"
-                    style={styles.assessmentIconCircle}
-                  />
-                  <FontAwesome
-                    icon="check-circle"
-                    className="fa-stack-1x"
-                    style={styles.assessmentIconCheck}
-                  />
-                </span>
-              )}
+              !hideAssessmentIcon && <SmallAssessmentIcon />}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>
