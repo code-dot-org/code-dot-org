@@ -12245,3 +12245,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        pluralsight:
+          stages:
+            Pluralsight LevelGroup:
+              name: Pluralsight LevelGroup
+          title: Get access to Pluralsight One
+          description_audience: ''
+          description_short: ''
+          description: ''
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Programming in Maze:
+              name: Programming in Maze
+          title: CSF Express 2018 For Vietnam
+          description_audience: ''
+          description_short: ''
+          description: ''
