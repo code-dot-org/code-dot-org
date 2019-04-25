@@ -155,7 +155,7 @@ var GameLab = function() {
     );
   };
 
-  this.appendSpriteConsole = (spriteMessage) => {
+  this.appendSpriteConsole = spriteMessage => {
     getStore().dispatch(addConsoleMessage(spriteMessage));
   };
 };
