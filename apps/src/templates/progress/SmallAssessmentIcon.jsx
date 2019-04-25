@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 
@@ -13,6 +14,14 @@ const styles = {
     right: -6,
     fontSize: 10
   },
+  iconContainerDiamond: {
+    position: 'absolute',
+    top: -14,
+    right: 2,
+    fontSize: 10,
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
+  },
   assessmentIconBackground: {
     color: color.purple
   },
@@ -25,9 +34,20 @@ const styles = {
 };
 
 export class SmallAssessmentIcon extends React.Component {
+  static propTypes = {
+    isDiamond: PropTypes.bool
+  };
+
   render() {
     return (
-      <span className="fa-stack" style={styles.iconContainer}>
+      <span
+        className="fa-stack"
+        style={
+          this.props.isDiamond
+            ? styles.iconContainerDiamond
+            : styles.iconContainer
+        }
+      >
         <FontAwesome
           icon="circle"
           className="fa-stack-2x"
