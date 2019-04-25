@@ -324,10 +324,11 @@ export function open(url) {
   return Applab.executeCmd(null, 'openUrl', {url: url});
 }
 
-export function getList(tableName, columnName) {
+export function getList(tableName, columnName, callback) {
   return Applab.executeCmd(null, 'getList', {
     tableName: tableName,
-    columnName: columnName
+    columnName: columnName,
+    callback: callback
   });
 }
 
