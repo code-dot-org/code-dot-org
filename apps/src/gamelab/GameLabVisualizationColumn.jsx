@@ -148,9 +148,7 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        <TextConsole
-          consoleMessages={this.props.consoleMessages}
-        />
+        <TextConsole consoleMessages={this.props.consoleMessages} />
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
