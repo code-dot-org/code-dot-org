@@ -1,8 +1,8 @@
-drop table if exists analysis_pii.regional_partner_stats_csp_csd;
+DROP VIEW IF EXISTS analysis_pii.regional_partner_stats_csp_csd_view CASCADE;
 
-create table analysis_pii.regional_partner_stats_csp_csd 
+create view analysis_pii.regional_partner_stats_csp_csd_view 
 AS
-with completed ask
+with completed as
 (
   select 
     studio_person_id,
@@ -117,7 +117,9 @@ select tt17.*, u.studio_person_id
   LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
          ON tmp.studio_person_id = d.studio_person_id
          AND tmp.school_year = sa.school_year
-;
+WITH NO SCHEMA BINDING;
 
-GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;
-GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd TO GROUP reader_pii;
+
+GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csp_csd_view TO dev;
+GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd_view  TO GROUP reader_pii;
+GRANT REFERENCES, TRIGGER, UPDATE, SELECT, INSERT, RULE, DELETE ON analysis_pii.regional_partner_stats_csp_csd_view  TO GROUP admin;
