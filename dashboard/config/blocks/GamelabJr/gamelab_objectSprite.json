@@ -1,0 +1,13 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "objectSprite",
+    "blockText": "object sprite",
+    "returnType": "Sprite",
+    "color": [
+      5,
+      ".7",
+      ".7"
+    ]
+  }
+}

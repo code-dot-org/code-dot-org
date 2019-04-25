@@ -55,7 +55,8 @@ export default class ScriptEditor extends React.Component {
     pilotExperiment: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
-    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired
+    locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    projectSharing: PropTypes.bool
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -150,6 +151,20 @@ export default class ScriptEditor extends React.Component {
           <p>
             If checked this script will show up in the dropdown on the Teacher
             Dashboard, for teachers to assign to students.
+          </p>
+        </label>
+        <label>
+          Display project sharing column in Teacher Dashboard
+          <input
+            name="project_sharing"
+            type="checkbox"
+            defaultChecked={this.props.projectSharing}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked, the "Sharing" column in the "Manage Students" tab of
+            Teacher Dashboard will be displayed by default for sections assigned
+            to this script.
           </p>
         </label>
         <label>

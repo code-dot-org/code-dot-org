@@ -77,7 +77,7 @@ stage 'Variables in Play Lab'
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
-assessment 'courseF_playlab_variables4c_predictive1'
+level 'courseF_playlab_variables4c_predictive1', assessment: true
 level 'courseF_playlab_variables4b'
 level 'courseF_playlab_variables5b'
 level 'courseF_playlab_variables6b'
@@ -111,7 +111,7 @@ level 'courseF_artist_for6'
 level 'courseF_artist_for7'
 level 'courseF_artist_for8'
 level 'courseF_artist_for9'
-assessment 'courseF_artist_for10_predict1'
+level 'courseF_artist_for10_predict1', assessment: true
 level 'courseF_artist_for10'
 
 stage 'Songwriting with Parameters'
@@ -163,25 +163,25 @@ level 'courseF_bee_fwp5'
 level 'courseF_bee_fwp6'
 level 'courseF_bee_fwp7', challenge: true
 level 'courseF_bee_fwp8'
-assessment 'courseF_bee_fwp9_predict1'
+level 'courseF_bee_fwp9_predict1', assessment: true
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters'
-named_level 'InspirationalArtwork'
-named_level 'FoodFight'
-named_level 'Guess The Number'
-named_level 'Choose Your Own Adventure'
+level 'courseF_video_csMatters', named: true
+level 'InspirationalArtwork', named: true
+level 'FoodFight', named: true
+level 'Guess The Number', named: true
+level 'Choose Your Own Adventure', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project'
+level 'Begin planning your project', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project'
-named_level 'Course F: Play Lab Project'
+level 'Course F: Artist Project', named: true
+level 'Course F: Play Lab Project', named: true
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project - Revise'
-named_level 'Course F: Play Lab Project - Revise'
+level 'Course F: Artist Project - Revise', named: true
+level 'Course F: Play Lab Project - Revise', named: true
 
 stage 'Presentation Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation'
+level 'Prepare for your presentation', named: true

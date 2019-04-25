@@ -9,6 +9,7 @@ new_name 'csp-explore-2017'
 family_name 'csp-explore'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
 level 'U6 Explore PT Review - Student Links', progression: 'Explore PT - Review the Task'

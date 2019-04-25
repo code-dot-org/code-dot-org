@@ -8,7 +8,7 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import EnumPropertyRow from './EnumPropertyRow';
 import BorderProperties from './BorderProperties';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
@@ -194,48 +194,79 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.applab_default_dropdown_background_color,
-      classic: color.applab_button_teal,
-      orange: color.applab_orange_dropdown_background_color,
-      citrus: color.applab_citrus_dropdown_background_color
+      ...themeColor.dropdownBackground
     },
     borderRadius: {
       default: 4,
-      classic: 0,
       orange: 0,
-      citrus: 2
+      citrus: 2,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 6,
+      watermelon: 10,
+      area51: 10,
+      polar: 100,
+      glowInTheDark: 10,
+      bubblegum: 100,
+      millennial: 100,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
       default: 1,
-      classic: 0,
       orange: 2,
-      citrus: 2
+      citrus: 2,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 4,
+      area51: 2,
+      polar: 2,
+      glowInTheDark: 2,
+      bubblegum: 2,
+      millennial: 0,
+      robot: 2,
+      classic: 0
     },
     borderColor: {
       type: 'color',
-      default: color.applab_default_dropdown_border_color,
-      classic: color.black,
-      orange: color.applab_orange_dropdown_border_color,
-      citrus: color.applab_citrus_dropdown_border_color
+      ...themeColor.dropdownBorder
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_text_color,
-      classic: color.white,
-      orange: color.applab_orange_dropdown_text_color,
-      citrus: color.applab_citrus_dropdown_text_color
+      ...themeColor.dropdownText
     },
     fontFamily: {
       default: 'Arial',
-      classic: 'Arial',
       orange: 'Verdana',
-      citrus: 'Georgia'
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Arial Black',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Verdana',
+      robot: 'Arial Black',
+      classic: 'Arial'
     },
     fontSize: {
       default: 15,
-      classic: 14,
       orange: 15,
-      citrus: 15
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
 
@@ -250,11 +281,11 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = color.white;
+      element.style.color = themeColor.dropdownText.classic;
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
       );
-      element.style.backgroundColor = color.applab_button_teal;
+      element.style.backgroundColor = themeColor.dropdownBackground.classic;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
 
