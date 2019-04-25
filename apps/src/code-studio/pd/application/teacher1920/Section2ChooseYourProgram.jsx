@@ -164,20 +164,21 @@ export default class Section2ChooseYourProgram extends LabeledFormComponent {
         {courseNotes === 'csd' && (
           <p style={{color: 'red'}}>
             Note: 50 or more hours of instruction per section for a
-            semester-long course are required to participate in the Professional
-            Learning Program. We suggest checking with your school
-            administration to see if 50 course hours can be allotted for this
-            course in 2019-20.
+            semester-long CS Discoveries course are normally required to
+            participate in the Professional Learning Program, though we will
+            consider applications with at least 30 hours for a limited number of
+            seats. We suggest checking with your school administration to see if
+            additional time can be allotted for this course in 2019-20.
           </p>
         )}
         {courseNotes === 'csp' && (
           <p style={{color: 'red'}}>
             Note: 100 or more hours of CS Principles instruction per section are
-            required to participate in the Professional Learning Program. We
-            suggest checking with your school administration to see if 100
-            course hours can be allotted in 2019-20. You may consider teaching
-            CS Discoveries for 9th-10th grade students instead if you can
-            accommodate at least 50 hours per section.
+            normally required to participate in the Professional Learning
+            Program, though we will consider applications for non-AP classes
+            with at least 50 hours for a limited number of seats. We suggest
+            checking with your school administration to see if additional time
+            can be allotted for this course in 2019-20.
           </p>
         )}
         {this.radioButtonsWithAdditionalTextFieldsFor(
