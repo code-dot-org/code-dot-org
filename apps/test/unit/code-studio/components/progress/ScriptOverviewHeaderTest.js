@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert, expect} from '../../../../util/configuredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';

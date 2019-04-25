@@ -1,6 +1,7 @@
 module Pd::Application
   class Teacher1920ApplicationMailer < ActionMailer::Base
     default from: 'Code.org <noreply@code.org>'
+    default bcc: MailerConstants::PLC_EMAIL_LOG
 
     def confirmation(teacher_application)
       @application = teacher_application
@@ -16,6 +17,24 @@ module Pd::Application
           from: 'Code.org <teacher@code.org>',
           to: @application.formatted_applicant_email,
           subject: "We've received your application for Code.org's Professional Learning Program!"
+        )
+      end
+    end
+
+    def principal_approval_teacher_reminder(teacher_application)
+      @application = teacher_application
+
+      if @application.regional_partner
+        mail(
+          to: @application.formatted_applicant_email,
+          reply_to: @application.formatted_partner_contact_email,
+          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
+        )
+      else
+        mail(
+          from: 'Code.org <teacher@code.org>',
+          to: @application.formatted_applicant_email,
+          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
         )
       end
     end

@@ -97,7 +97,7 @@ select
          completed_365,
          started_365_or_before,
          completed_365_or_before,
-         s.school_year as school_year_taught,
+         sa.school_year as school_year_taught,
          s.script_name,
          CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,        
          rp.id as regional_partner_id,
@@ -136,9 +136,12 @@ select
          case when s.user_id is not null then 1 else 0 end as started,
          case when c.user_id is not null then 1 else 0 end as completed,
          -- sections and students   
-         sa.students_total,         
+         sa.students_total,   
+         sa.students_started_total, 
+         sa.students_completed_total,      
          sa.sections_of_course,
          sa.students_in_course,
+         sa.students_completed_in_course,
          -- stage number and stage name reached by the majority of students, and number of students who reached the stage in each STARTED course
           tmp.stage_name_most_progress,
           tmp.stage_number_most_progress, 
@@ -173,9 +176,13 @@ select
         ON pde.user_id = d.user_id
         AND pde.school_year = sy.school_year 
 -- analysis tables 
+  LEFT JOIN analysis.student_activity_csf sa 
+         ON sa.user_id = d.user_id
+         AND sa.school_year >= sy.school_year 
   LEFT JOIN started s
        ON s.user_id = d.user_id
-      AND s.school_year >= sy.school_year 
+      AND s.school_year = sa.school_year 
+      AND s.script_name = sa.script_name
   LEFT JOIN completed c
          ON c.user_id = d.user_id
          AND c.script_name = s.script_name
@@ -186,11 +193,7 @@ select
   LEFT JOIN analysis.teacher_most_progress_csf tmp
          ON tmp.user_id = d.user_id
          and tmp.script_name = s.script_name
-         and tmp.school_year = s.school_year
-  LEFT JOIN analysis.student_activity_csf sa 
-         ON sa.user_id = d.user_id
-         AND sa.school_year = s.school_year
-         AND sa.script_name = s.script_name
+         and tmp.school_year = sa.school_year
 ;
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csf TO GROUP admin;

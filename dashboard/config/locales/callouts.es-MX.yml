@@ -596,11 +596,18 @@ es-MX:
           en este desafío.
       behaviors 1_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
+      behaviors 3a_callout:
+        behavior_callout: "¿Por qué este comportamiento no funciona para la estrella
+          del medio?"
+        star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este
+          sprite".
       behaviors 4_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
+        behaviors_edit: Agrega código a este comportamiento.
+      behaviors free play_callout:
         behaviors_edit: Agrega código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
