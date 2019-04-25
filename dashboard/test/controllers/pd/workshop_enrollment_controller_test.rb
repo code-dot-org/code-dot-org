@@ -30,15 +30,48 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     )
   end
 
-  test 'non-logged-in users can enroll' do
-    get :new, params: {workshop_id: @workshop.id}
+  test 'non-logged-in users cannot enroll in csf workshop' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :logged_out
+  end
+
+  test 'non-logged-in users cannot enroll in csd workshop' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :logged_out
+  end
+
+  test 'non-logged-in users cannot enroll in csp workshop' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :logged_out
+  end
+
+  test 'logged-in users can enroll in csf workshop' do
+    sign_in @teacher
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+    get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
   end
 
-  test 'logged-in users can enroll' do
+  test 'logged-in users can enroll in csd workshop' do
     sign_in @teacher
-    get :new, params: {workshop_id: @workshop.id}
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+  end
+
+  test 'logged-in users can enroll in csp workshop' do
+    sign_in @teacher
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
     assert_template :new
   end
 
@@ -150,7 +183,31 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
   end
 
-  test 'confirm_join_session upgrades student account if emails match' do
+  test 'confirm_join_session upgrades migrated student account if emails match' do
+    @workshop.start!
+    email = 'accidental_student@example.net'
+    student = create :student, email: email
+    student.migrate_to_multi_auth
+    student.reload
+
+    sign_in student
+
+    assert_creates Pd::Enrollment do
+      post :confirm_join_session, params: {
+        session_code: @workshop.sessions.first.code,
+        pd_enrollment: enrollment_test_params(student).merge(
+          email: email,
+          email_confirmation: email
+        ),
+        school_info: school_info_params
+      }
+    end
+
+    assert student.reload.teacher?
+    assert_redirected_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  test 'confirm_join_session upgrades unmigrated student account if emails match' do
     @workshop.start!
     email = 'accidental_student@example.net'
     student = create :student, email: email
@@ -193,6 +250,34 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     assert_redirected_to controller: 'pd/session_attendance', action: 'upgrade_account'
   end
 
+  test 'demographic questions added (for teachers, without application, for local summer workshop)' do
+    sign_in @teacher
+    workshop = create :pd_workshop, :local_summer_workshop
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    assert prop('collect_demographics')
+  end
+
+  test 'demographic questions not added (for teachers, with application, for local summer workshop)' do
+    sign_in @teacher
+    workshop = create :pd_workshop
+    create Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, user: @teacher
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    refute prop('collect_demographics')
+  end
+
+  test 'demographic questions not added (for teachers, without application, for non-local summer workshop)' do
+    sign_in @teacher
+    workshop = create :pd_workshop
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_template :new
+    refute prop('collect_demographics')
+  end
+
   private
 
   def enrollment_test_params(teacher = nil)
@@ -220,5 +305,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       school_district_id: @school_district.id,
       school_id: @school.id
     }
+  end
+
+  def prop(name)
+    JSON.parse(assigns(:script_data).try(:[], :props)).try(:[], name)
   end
 end

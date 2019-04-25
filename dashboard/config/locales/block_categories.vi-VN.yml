@@ -23,17 +23,18 @@ vi:
       Text: văn bản
       Picker: Chọn
       Comment: Bình luận
-      'Variables ': 'Các biến '
-      everythingelse: thứ khác
-      numbers: các con số
-      Numbers: Các con số
-      Default: Mặc định
       World: Thế giới
       Behaviors: Hành vi
-      Advanced: Nâng cao
-      Start: Bắt đầu
+      'Variables ': 'Các biến '
+      Default: Mặc định
+      everythingelse: thứ khác
+      Location: Địa điểm
+      numbers: các con số
+      Numbers: Các con số
       Dancers: Vũ công
       Groups: Nhóm
+      Advanced: Nâng cao
+      Start: Bắt đầu
       Sprite: Ma
       Brush: Chải
       Make Sprite: Tạo ma

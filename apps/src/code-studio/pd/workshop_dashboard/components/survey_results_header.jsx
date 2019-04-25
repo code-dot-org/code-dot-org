@@ -530,6 +530,7 @@ export default class SurveyResultsHeader extends React.Component {
     return (
       <div>
         <div> View Survey Results </div>
+
         <Row>
           <Col sm={2}>
             <select
@@ -552,6 +553,20 @@ export default class SurveyResultsHeader extends React.Component {
           </Col>
         </Row>
         <br />
+        {/* Temporary warning about missing data until we fix this view to include new results! */}
+        {['CS Discoveries', 'CS Principles'].includes(
+          this.state.selectedCourse
+        ) && (
+          <div style={{padding: '0em 4em 1em'}}>
+            <strong>
+              Averages displayed below only include results from June 2018 or
+              earlier.
+            </strong>{' '}
+            More recent results are available when viewing surveys for an
+            individual workshop. This page will be updated to include recent
+            survey results soon. Thank you for your patience!
+          </div>
+        )}
         {this.renderSurveyPanel()}
         {this.renderFreeResponseAnswers()}
         {this.renderDownloadCsvButton()}

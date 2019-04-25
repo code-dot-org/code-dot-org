@@ -366,6 +366,7 @@ ro:
             The Design Recipe:
               name: Rețeta pentru design
         K5PD:
+          description_short: "[șir gol]"
           description_audience: "[șir gol]"
           stages:
             Computer Science Pedagogy:
@@ -1538,7 +1539,7 @@ ro:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Laborator de jocuri
+              name: Game Lab
         cspunit1-support-test:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -2422,6 +2423,8 @@ ro:
               name: Binar cu artist
             Building a Foundation:
               name: Construirea unei Fundaţii
+            Loops in Ice Age:
+              name: Bucle în Ice Age
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
@@ -2821,6 +2824,8 @@ ro:
               name: Obţinând Informaţii/Critici
             Relay Programming:
               name: Programare de releu
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
         courseb-2018:
           assignment_family_title: Curs B
           stages:
@@ -2928,6 +2933,8 @@ ro:
               name: Binar cu artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Loops in Ice Age:
+              name: Bucle în Ice Age
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
             Relay Programming:
@@ -3631,6 +3638,10 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         dance:
+          stages:
+            Dance Party:
+              name: Petrecere cu dans
+          title: Petrecere cu dans
           description_audience: "[șir gol]"
         frozen-2018-test-b:
           description: "[șir gol]"
@@ -3654,6 +3665,7 @@ ro:
           description_audience: "[șir gol]"
           stages:
             Dance Party:
+              name: Petrecere cu dans
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         dance-draft:
@@ -3662,6 +3674,7 @@ ro:
           description_audience: "[șir gol]"
           stages:
             Dance Party:
+              name: Petrecere cu dans
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         cspplayground:
@@ -3669,7 +3682,9 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         dance-extras:
+          title: Continuă să dansezi
           description_audience: "[șir gol]"
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursef-2019:
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
@@ -3736,7 +3751,14 @@ ro:
               description_teacher: "[șir gol]"
             The Artist:
               name: Artistul
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
         dance-low:
+          stages:
+            Dance Party:
+              name: Petrecere cu dans
           description_audience: "[șir gol]"
           description: "[șir gol]"
         coursed-2019:
@@ -3758,6 +3780,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Artist:
@@ -3803,6 +3826,8 @@ ro:
               name: Binar cu artist
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Dance Party:
+              name: Petrecere cu dans
         coursee-2019:
           stages:
             'Programming: My Robotic Friends':
@@ -3862,6 +3887,8 @@ ro:
               name: Internet
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
+            Songwriting:
+              name: Compunând Cântece
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4025,7 +4052,9 @@ ro:
             'null':
               name: nul
         dance-extras-gallery:
+          title: Continuă să dansezi
           description_audience: "[șir gol]"
+          description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursec-2019:
           stages:
             Building a Foundation:
@@ -4080,7 +4109,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
         gamelab:
-          title: Laborator de jocuri
+          title: Game Lab
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
         coursea-2019:
@@ -4120,6 +4149,8 @@ ro:
               description_student: "[șir gol]"
             Events in Play Lab:
               description_student: "[șir gol]"
+            Loops in Ice Age:
+              name: Bucle în Ice Age
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4149,6 +4180,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Collector:
@@ -4198,6 +4230,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Ice Age:
+              name: Bucle în Ice Age
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Loops in Collector:
@@ -4225,6 +4258,500 @@ ro:
           description: "[șir gol]"
         dani-test-script:
           title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd2-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Lists:
+              name: Liste
+        csd3-2019:
+          description_short: Programare
+          description_audience: "[șir gol]"
+          stages:
+            Shapes and Randomization:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            CS Discoveries End of Semester Survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd4-2019:
+          description_audience: "[șir gol]"
+        csd5-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Representing Images:
+              description_teacher: În această lecţie elevii învață cum calculatoarele
+                reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea
+                transformării complexității viziunii într-un model binar. Printr-o
+                serie de imagini care arată cum se face această transformare, eleviilor
+                li se prezintă conceptul de împărțire a imaginilor în pătrate sau
+                "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru
+                a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări
+                folosind widget-ul de pixelare pentru a desena imagini alb-negru.
+                Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării
+                imaginilor în acest fel. În încheiere, elevii fac conexiuni între
+                sistemul de reprezentare a imaginilor și sistemul de reprezentare
+                a textului pe care l-au învățat în lecția anterioară.
+        csd6-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Innovations in Computing:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Designing Screens with Code:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Circuit Playground:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Input Unplugged:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Board Events:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Getting Properties:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Analog Input:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Program Design Process:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Project: Make a Game':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Arrays and Color LEDs:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Making Music:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Arrays and For Loops:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Accelerometer:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions with Parameters:
+              name: Funcții cu Parametrii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Circuits and Physical Prototypes:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Project: Prototype an Innovation':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Sondaje
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp1-2019:
+          description_audience: "[șir gol]"
+          stages:
+            CS Principles Pre-survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Personal Innovations:
+              name: Inovații personale
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Number Systems:
+              name: Sisteme de numere
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Binary Numbers:
+              name: Numerele binare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sending Numbers:
+              name: Transmiterea numerelor
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sending Text:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 1 Chapter 1 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Internet:
+              name: Internetul
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Need for Addressing:
+              name: Nevoia de adresare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Routers and Redundancy:
+              name: Routere și redundanță
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Packets and Making a Reliable Internet:
+              name: Pachete și construcția unui internet fiabil
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Need for DNS:
+              name: Nevoia de DNS
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            HTTP and Abstraction:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Practice PT - The Internet and Society:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 1 Chapter 2 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp2-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Bytes and File Sizes:
+              name: Octeți și dimensiunile fișierelor
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Text Compression:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Encoding B&W Images:
+              name: Codificarea imaginilor în alb și negru
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Encoding Color Images:
+              name: Codificarea imaginilor color
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Lossy vs Lossless Compression:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Rapid Research - Format Showdown:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 2 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp3-2019:
+          description_short: Invata bazele programarii JavaScript printr-un design
+            usor folosind desenul.
+          description_audience: "[șir gol]"
+          stages:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Need for Algorithms:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creativity in Algorithms:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating Functions:
+              name: Crearea de funcții
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions and Top-Down Design:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            APIs and Function Parameters:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating functions with Parameters:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Practice PT - Design a Digital Scene:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 3 Chapter 1 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Mid-Year Survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp4-2019:
+          description_audience: "[șir gol]"
+          stages:
+            What is Big Data?:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Finding Trends with Visualizations:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Check Your Assumptions:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Rapid Research - Data Innovations:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Identifying People with Data:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Cost of Free:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Simple Encryption:
+              name: Criptare simplă
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Encryption with Keys and Passwords:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Public Key Crypto:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Rapid Research - Cybercrime:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 4 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Mid-Year Survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp5-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Buttons and Events:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Multi-screen Apps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Multi-Screen App':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Clicker Game':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 1:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            '"If" Statements Unplugged':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Boolean Expressions and "If" Statements:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            '"if-else-if" and Conditional Logic':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Color Sleuth':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 2:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            While Loops:
+              name: Repetiții While
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops and Simulations:
+              name: Bucle și simulări
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Introduction to Arrays:
+              name: Introducere în matrice
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Image Scroller':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 3:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Processing Arrays:
+              name: Matrice de prelucrare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions with Return Values:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Canvas Painter':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 4:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Mid-Year Survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp-explore-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Explore PT - Making a Plan:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Explore PT - Complete the Task:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Mid-Year Survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp-create-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Create PT Prep - Reviewing the Task:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Create PT Prep - Making a Plan:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Create PT - Complete the Task:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csppostap-2019:
+          description_audience: "[șir gol]"
+          stages:
+            Intro to Data:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Good and Bad Data Visualizations:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Making Data Visualizations:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Discover a Data Story:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Cleaning Data:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating Summary Tables:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Project - Tell a Data Story:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Chapter 1 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating Javascript Objects:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Permanent Data Storage:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Reading Records:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Deleting Records:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Updating Records:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Importing and Exporting Data:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Visualizing Data:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sample Apps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Final Project:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp1-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd-tests:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd-videos:
+          description_audience: "[șir gol]"
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            Building a Foundation:
+              name: Construirea unei Fundaţii
+        csp1-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp2-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp3-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp4-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp5-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp6-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp7-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp8-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp9-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp10-pilot-staging:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

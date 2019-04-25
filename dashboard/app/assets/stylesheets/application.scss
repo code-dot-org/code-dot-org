@@ -331,12 +331,6 @@ img.video_thumbnail {
     }
   }
 
-  #sign_in_or_user {
-    html[dir=rtl] & {
-      padding-right: 20px;
-    }
-  }
-
   .user_menu, .create_menu {
     margin-top: 6px;
     height: 38px;
@@ -349,6 +343,10 @@ img.video_thumbnail {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+
+      html[dir=rtl] & {
+        float: right;
+      }
     }
 
     .pairing_icon {
@@ -383,19 +381,17 @@ img.video_thumbnail {
       border: 1px solid $charcoal;
       border-bottom: 0;
       a {
-        color: $teal;
+        color: $charcoal;
         font-family: 'Gotham 5r', sans-serif;
         min-width: 240px;
         font-size: 14px;
         border-bottom: 1px solid $charcoal;
         box-sizing: content-box;
         white-space: nowrap;
+        cursor: pointer;
       }
       a:hover {
-        color: $teal;
-        font-weight: 900;
-        background-color: $white;
-        cursor: pointer;
+        background-color: $lightest_gray;
       }
       img {
         height: 70px;
@@ -460,11 +456,6 @@ img.video_thumbnail {
   .freeplay_links {
     float: left;
     padding-top: 13px;
-  }
-
-  .project_list {
-    float: left;
-    margin-top: 6px;
   }
 }
 
@@ -934,6 +925,9 @@ $default-modal-width: 640px;
   .header_text, .header_button {
     float: left;
   }
+  .project_name_wrapper {
+    min-width: 160px;
+  }
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
@@ -1390,15 +1384,6 @@ a.download-video {
   padding-left: 5px;
 }
 
-#section-management {
-  #edit_teachers {
-    .padtopbottom {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
-
 #landingpage {
   .welcome {
     background-color: $light_purple;
@@ -1525,14 +1510,6 @@ a.download-video {
       border: 1px solid $cyan;
     }
   }
-
-  #edit_teachers {
-    background-color: $lightest_gray;
-    margin: 20px 0 20px -20px;
-    form {
-      margin: 0;
-    }
-  }
 }
 
 .gallery {
@@ -1562,10 +1539,6 @@ a.download-video {
       background-color: $white;
     }
   }
-}
-
-#angular-my-projects-wrapper .gallery {
-  margin-left: 45px;
 }
 
 .course_progress {
@@ -1617,7 +1590,12 @@ a.download-video {
   justify-content: space-between;
 }
 
-#signin {
+#change-password {
+  max-width: 600px;
+}
+
+#signin,
+#change-password {
   $field-width: 310px;
   $button-width: 324px;
 
@@ -2005,35 +1983,9 @@ a.download-video {
       border: 1px solid $facebook_blue;
     }
 
-    &.with-windowslive {
+    &.with-microsoft_v2_auth {
       background-color: $microsoft_blue;
       border: 1px solid $microsoft_blue;
-    }
-  }
-}
-
-// OLD STYLES FOR devise/shared/_old_links
-.devise_link_section {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  .or_break {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    margin-left: -20px;
-    .vertical_bar {
-      width: 2px;
-      height: 100%;
-      background-color: $light_gray;
-    }
-    p {
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      color: $teal;
-      font-weight: bolder;
     }
   }
 }
@@ -2059,9 +2011,17 @@ a.download-video {
   transform: translateY($offset);
 }
 
+/* overrides .unplugged for match levels in level groups */
+.level-group-content .unplugged.match {
+  width: auto;
+}
+
 .match {
   .mainblock {
     margin-left: 0;
+    .level-group-content & {
+      margin-left: 50px;
+    }
   }
   .column {
     width: 260px;
@@ -2094,7 +2054,7 @@ a.download-video {
     border-color: transparent;
     border-width: 6px;
   }
-  #questions {
+  .match_questions {
     list-style-type: none;
     margin-left: 0;
     li {
@@ -2105,7 +2065,7 @@ a.download-video {
   li {
     text-align: center;
   }
-  #slots {
+  .match_slots {
     list-style-type: none;
     margin-left: 0;
     .emptyslot {
@@ -2127,6 +2087,12 @@ a.download-video {
       background-color: $lighter_yellow;
     }
   }
+  .question {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   .answer {
     background-color: $white;
     border-color: $lighter_cyan;
@@ -2135,7 +2101,7 @@ a.download-video {
     border-color: $light_green;
     cursor: move;
   }
-  #answerdest {
+  .match_answerdest {
     width: 240px;
   }
   .answerlist {
@@ -2145,7 +2111,7 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #answers {
+  .match_answers {
     list-style-type: none;
     margin-left: 0;
   }
@@ -2156,11 +2122,11 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #correctmarkscolumn {
+  .match_correctmarkscolumn {
     width: 20px;
     padding-right: 20px;
   }
-  #correctmarks {
+  .match_correctmarks {
     margin-left: 0;
   }
   .correctmark {
@@ -2274,6 +2240,9 @@ a.download-video {
     background-color: $lightest_cyan;
     border-radius: 5px;
     margin: 10px auto;
+    .level-group-content & {
+      margin-left: 50px;
+    }
     .content {
       padding: 10px;
     }

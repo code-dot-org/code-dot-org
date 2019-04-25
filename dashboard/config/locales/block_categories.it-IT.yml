@@ -22,23 +22,25 @@ it:
       Text: Testo
       Picker: Selezione
       Comment: Commento
-      'Variables ': 'Variabili '
-      everythingelse: qualunque altra cosa
-      numbers: numeri
-      Numbers: Numeri
-      Default: Impostazione predefinita
       World: Ambiente
       Sprites: Personaggi
       Behaviors: Comportamenti
+      'Variables ': 'Variabili '
+      Default: Impostazione predefinita
+      everythingelse: qualunque altra cosa
+      Location: Luogo
+      numbers: numeri
+      Numbers: Numeri
+      Dancers: Ballerini
+      Groups: Gruppi
       Start: Inizia
       Music: Musica
       Dancing: Danza
-      Dancers: Ballerini
-      Groups: Gruppi
       Sprite: Personaggio
       Brush: Pennello
       Booleans: Valori Booleani
       test: test
+      Do Not Use: Non usare
       Name: Nome
       'Functions ': 'Funzioni '
       Function: Funzione

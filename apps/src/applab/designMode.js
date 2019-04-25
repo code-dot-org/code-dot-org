@@ -7,6 +7,7 @@ import 'jquery-ui/ui/widgets/resizable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+import RGBColor from 'rgbcolor';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
@@ -174,14 +175,24 @@ function appendPx(input) {
 }
 designMode.appendPx = appendPx;
 
+designMode.fontFamilyStyleFromOption = function(option) {
+  const fontIndex = applabConstants.fontFamilyOptions.indexOf(option);
+  return applabConstants.fontFamilyStyles[fontIndex === -1 ? 0 : fontIndex];
+};
+
+designMode.fontFamilyOptionFromStyle = function(style) {
+  const fontIndex = applabConstants.fontFamilyStyles.indexOf(style);
+  return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
+};
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value) {
-  designMode.updateProperty(element, name, value);
+designMode.onPropertyChange = function(element, name, value, timestamp) {
+  designMode.updateProperty(element, name, value, timestamp);
   designMode.editElementProperties(element);
 };
 
@@ -192,13 +203,17 @@ designMode.onPropertyChange = function(element, name, value) {
  * @param name
  * @param value
  */
-designMode.updateProperty = function(element, name, value) {
+designMode.updateProperty = function(element, name, value, timestamp) {
   // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
   // ignored.
   var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
+  var cacheBustSuffix = '';
+  if (timestamp) {
+    cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
+  }
   switch (name) {
     case 'id':
       value = value.trim();
@@ -257,6 +272,18 @@ designMode.updateProperty = function(element, name, value) {
     case 'backgroundColor':
       element.style.backgroundColor = value;
       break;
+    case 'borderWidth':
+      element.style.borderWidth = appendPx(value);
+      break;
+    case 'borderColor':
+      element.style.borderColor = value;
+      break;
+    case 'borderRadius':
+      element.style.borderRadius = appendPx(value);
+      break;
+    case 'fontFamily':
+      element.style.fontFamily = designMode.fontFamilyStyleFromOption(value);
+      break;
     case 'fontSize':
       element.style.fontSize = appendPx(value);
       break;
@@ -303,7 +330,7 @@ designMode.updateProperty = function(element, name, value) {
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = assetPrefix.fixPath(value);
+      backgroundImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -325,7 +352,7 @@ designMode.updateProperty = function(element, name, value) {
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = assetPrefix.fixPath(value);
+        screenImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url("' + url + '")';
@@ -341,7 +368,9 @@ designMode.updateProperty = function(element, name, value) {
         element.src = assetPrefix.renderIconToString(value, element);
       } else {
         element.src =
-          value === '' ? '/blockly/media/1x1.gif' : assetPrefix.fixPath(value);
+          value === ''
+            ? '/blockly/media/1x1.gif'
+            : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       }
       break;
     case 'hidden':
@@ -487,6 +516,14 @@ designMode.readProperty = function(element, name) {
       return element.style.color;
     case 'backgroundColor':
       return element.style.backgroundColor;
+    case 'borderWidth':
+      return parseFloat(element.style.borderWidth);
+    case 'borderColor':
+      return element.style.borderColor;
+    case 'borderRadius':
+      return parseFloat(element.style.borderRadius);
+    case 'fontFamily':
+      return designMode.fontFamilyOptionFromStyle(element.style.fontFamily);
     case 'fontSize':
       return parseFloat(element.style.fontSize);
     case 'textAlign':
@@ -555,6 +592,55 @@ designMode.onDuplicate = function(element, event) {
   designMode.editElementProperties(duplicateElement);
 
   return duplicateElement;
+};
+
+designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
+  const currentScreen = $(
+    elementUtils.getPrefixedElementById(
+      getStore().getState().screens.currentScreenId
+    )
+  );
+
+  // Unwrap the draggable wrappers around the elements in the source screen:
+  const madeUndraggable = makeUndraggable(currentScreen.children());
+
+  const screenAndChildren = [
+    currentScreen[0],
+    ...currentScreen.children().toArray()
+  ];
+
+  // Modify each element in the screen (including the screen itself):
+  screenAndChildren.forEach(element => {
+    const themeValues = elementLibrary.getThemeValues(element);
+    let modifiedProperty = false;
+    for (const propName in themeValues) {
+      const propTheme = themeValues[propName];
+      const prevDefault = propTheme[prevThemeValue];
+      const newDefault = propTheme[themeValue];
+      const currentPropValue = designMode.readProperty(element, propName);
+      const {type} = propTheme;
+      let propIsDefault = false;
+      if (type === 'color') {
+        propIsDefault =
+          new RGBColor(currentPropValue).toHex() ===
+          new RGBColor(prevDefault).toHex();
+      } else {
+        propIsDefault = currentPropValue === prevDefault;
+      }
+      if (propIsDefault) {
+        designMode.updateProperty(element, propName, newDefault);
+        modifiedProperty = true;
+      }
+    }
+    if (modifiedProperty) {
+      designMode.renderDesignWorkspace(element);
+    }
+  });
+
+  // Restore the draggable wrappers on the elements in the source screen:
+  if (madeUndraggable) {
+    makeDraggable(currentScreen.children());
+  }
 };
 
 function duplicateScreen(element) {

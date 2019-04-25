@@ -14,9 +14,15 @@ class SampleData
     @@rng ||= Random.new(0)
   end
 
+  # Raise if run outside of a development environment.  Add this check at the top of any
+  # public methods that can mutate data.
+  def self.environment_check!
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
+  end
+
   # Creates sample data
   def self.seed
-    raise "Should not be run outside of development" unless CDO.rack_env?(:development)
+    environment_check!
 
     # Create a test teacher
     teacher = create_teacher SAMPLE_TEACHER_EMAIL, SAMPLE_TEACHER_PASSWORD,
@@ -72,7 +78,7 @@ class SampleData
   # dependency when we delete the teacher; but to not leave a trail of
   # old test data behind, we explictly hard-delete.
   def self.create_teacher(email, password, name)
-    raise "Should not be run outside of development" unless CDO.rack_env?(:development)
+    environment_check!
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(email)
     unless user.nil?
@@ -80,7 +86,7 @@ class SampleData
         # Hard-delete all students in each section.
         section.students.each do |student_user|
           raise "Not a sample student - #{student_user.name}" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
-          raise "Should not be run outside of development" unless CDO.rack_env?(:development)
+          environment_check!
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
         end
@@ -92,7 +98,7 @@ class SampleData
       unless (user.name.eql? SAMPLE_TEACHER_NAME) && (user.email.eql? SAMPLE_TEACHER_EMAIL)
         raise "Not a sample teacher - #{user.name}"
       end
-      raise "Should not be run outside of development" unless CDO.rack_env?(:development)
+      environment_check!
       user.really_destroy!
     end
     # Create the test teacher
@@ -190,12 +196,58 @@ class SampleData
         # Save progress for this level if not skipping
         if best_result
           create :user_level, user: student_user, script_id: script.id,
-            level_id: script_level.level_id, attempts: 1,
+            level_id: script_level.levels.first.id, attempts: 1,
             best_result: best_result
+
+          # Create a backing channel for this level if it's a type that needs it
+          if script_level.levels.first.channel_backed?
+            ChannelToken.find_or_create_channel_token(
+              script_level.levels.first,
+              '127.0.0.1',
+              find_or_create_storage_id_for_user_id(student_user.id),
+              {
+                hidden: true
+              }
+            )
+          end
+
+          # Roll the dice to decide whether the teacher left feedback on this level
+          feedback_rand = rng.rand(100)
+          if feedback_rand < 20
+            create :teacher_feedback,
+              student: student_user,
+              teacher: options[:teacher],
+              level: script_level.levels.first,
+              comment: tiny_lipsum
+          end
         end
 
         current_level += 1
       end
     end
+  end
+
+  # For the given user id, looks up the storage id, or creates a new one if the user doesn't have one.
+  def self.find_or_create_storage_id_for_user_id(user_id)
+    environment_check!
+    row = user_storage_ids_table.where(user_id: user_id)
+    return row[:id] if row
+    user_storage_ids_table.insert(user_id: user_id)
+  end
+
+  # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
+  # fake text data.
+  def self.tiny_lipsum
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
+    " labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" \
+    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" \
+    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" \
+    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+      split(/[.,]/).
+      sample(rng.rand(3..6)).
+      map(&:strip).
+      compact.
+      map(&:capitalize).
+      join('. ') + '.'
   end
 end

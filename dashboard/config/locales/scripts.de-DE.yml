@@ -933,6 +933,8 @@ de:
           stages:
             Functions:
               name: Funktionen
+            Velocity:
+              name: Geschwindigkeit
         2016_sciencePD_phase1:
           stages:
             The Tutorial:
@@ -1009,6 +1011,8 @@ de:
               name: Schleifen
             Programming:
               name: Programmierung
+            Unspotted Bugs:
+              name: Unentdeckte Bugs
         grade5:
           stages:
             'Artist: For Loops':
@@ -1056,6 +1060,8 @@ de:
         csd3-2017:
           description_short: Programmierung
           stages:
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
             Variables:
@@ -1301,10 +1307,14 @@ de:
               name: Variablen
             Conditionals:
               name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
         csd3-old:
           stages:
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
         csd2-draft:
@@ -1317,6 +1327,8 @@ de:
               name: Variablen
             Conditionals:
               name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
             'null':
@@ -1518,6 +1530,8 @@ de:
               name: Variablen
             Conditionals:
               name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
           description_short: Programmierung
@@ -1528,6 +1542,8 @@ de:
               name: Variablen
             Conditionals:
               name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
             Functions:
               name: Funktionen
         csd2-2018:
@@ -1536,10 +1552,16 @@ de:
               name: Listen
         coursea-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: Unentdeckte Bugs
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie und das große Projekt
             'Programming: Happy Maps':
               name: Glücklich Karten
             Going Places Safely:
               name: Sicher unterwegs
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie und das große Projekt
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1574,6 +1596,8 @@ de:
               name: Crowdsourcing
             Relay Programming:
               name: Relais-Programmierung
+            Graph Paper Programming:
+              name: Programmieren auf Millimeterpapier
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1687,6 +1711,10 @@ de:
               name: Einführung in Arrays
         pre-express-2018:
           stages:
+            'Debugging: Unspotted Bugs':
+              name: Unentdeckte Bugs
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie und das große Projekt
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Spelling Bee:
@@ -1695,6 +1723,8 @@ de:
               name: Bewegung, Bewegung
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie und das große Projekt
         frozen-2018:
           stages:
             Artist:
@@ -1739,6 +1769,10 @@ de:
               name: "„Zähle mit“-Schleifenspaß"
             The Artist:
               name: Der Künstler
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         dance-low:
           stages:
             Dance Party:
@@ -1755,6 +1789,8 @@ de:
               name: 'Offline: Binär'
             Artist Binary:
               name: Künstler Binär
+            Dance Party:
+              name: Tanzparty
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1769,6 +1805,8 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Songschreiben
         express-2019:
           stages:
             Relay Programming:
@@ -1830,3 +1868,67 @@ de:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Listen
+        csd3-2019:
+          description_short: Programmierung
+          stages:
+            Variables:
+              name: Variablen
+            Conditionals:
+              name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
+            Functions:
+              name: Funktionen
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funktionen mit Parametern
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: Umfragen
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Binäre Nachrichten senden
+            Sending Binary Messages with the Internet Simulator:
+              name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Binary Numbers:
+              name: Binärzahlen
+            Sending Numbers:
+              name: Zahlen senden
+            The Internet:
+              name: das Internet
+        csp2-2019:
+          stages:
+            Bytes and File Sizes:
+              name: Bytes und Dateigrößen
+        csp3-2019:
+          description_short: Programmierung
+          stages:
+            Creating Functions:
+              name: Funktionen erstellen
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Einfache Verschlüsselung
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Solange-Schleifen
+            Loops and Simulations:
+              name: Schleifen und Simulationen
+            Introduction to Arrays:
+              name: Einführung in Arrays
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Building a Foundation:
+              name: Grundlagen aufbauen

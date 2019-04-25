@@ -24,6 +24,25 @@ class LevelsControllerTest < ActionController::TestCase
     }
   end
 
+  test "should get rubric" do
+    level = create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_performance_level_1: 'This is great',
+      rubric_performance_level_2: 'This is good',
+      rubric_performance_level_3: 'This is okay',
+      rubric_performance_level_4: 'This is bad'
+    )
+    get :get_rubric, params: {level_id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "performanceLevel1" => "This is great",
+      "performanceLevel2" => "This is good",
+      "performanceLevel3" => "This is okay",
+      "performanceLevel4" => "This is bad"
+    }
+  end
+
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
@@ -303,6 +322,20 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal @program, level.properties['toolbox_blocks']
     assert_nil level.properties['solution_image_url']
+  end
+
+  test "should update App Lab starter code and starter HTML" do
+    post :update_properties, params: {
+      level_id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>',
+      start_blocks: 'console.log("hello world");',
+    }.to_json
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>foo</h1>', level.properties['start_html']
+    assert_equal 'console.log("hello world");', level.properties['start_blocks']
   end
 
   test "should update solution image when updating solution blocks" do

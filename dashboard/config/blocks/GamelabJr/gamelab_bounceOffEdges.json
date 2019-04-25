@@ -1,5 +1,5 @@
 {
-  "category": "Sprites",
+  "category": "Unused",
   "config": {
     "func": "bounceOffEdges",
     "blockText": "{SPRITE} bounces off of edges",

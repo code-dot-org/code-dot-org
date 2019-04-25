@@ -218,9 +218,9 @@
         title: Låtskriving med parametere
         desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
       swipeRightPassThrough:
-        title: Økt med rekruttering rekrutterings scenarier
+        title: Økt med rekrutteringsscenarier
       swipeRightPassThrough-test123:
-        title: Økt med rekruttering rekrutterings scenarier
+        title: Økt med rekrutteringsscenarier
       courseB_unplugged_MRF_2018:
         title: Mine robotliknende venner
       PlantASeed_2018:
@@ -315,3 +315,8 @@
       DigitalFootprint_2019:
         title: Dine digitale fotavtrykk
         desc: Lærere introdusere elever ideen at sette informasjon om seg selv online skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Betingelser
+        desc: For å lære om betingete instruksjoner skal elevene spille et kortspill og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis jeg tegner et svart kort, får du et poeng."

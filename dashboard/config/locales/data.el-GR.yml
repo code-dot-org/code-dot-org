@@ -30,15 +30,16 @@ el:
         Jigsaw: Παζλ
         MazeStep: Κατάσταση Βήμα Λαβυρίνθου
         Wordsearch: Αναζήτηση Λέξεων
-        Webapp: Εργαστήριο εφαρμογών
+        Webapp: App Lab
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
         StudioEC: Εργαστήριο Παιχνιδιού
-        Applab: Εργαστήριο εφαρμογών
+        Applab: App Lab
         NetSim: Προσομοιωτής Διαδικτύου
         Custom: Καλλιτέχνης
         CustomStudio: Εργαστήριο Παιχνιδιού
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Χάλκινο
@@ -709,6 +710,7 @@ el:
         csp_applab_functions_parameters: Συναρτήσεις με παραμέτρους
         csp_applab_loops: Βρόχοι
         csp_concept_rgb: Λίγα για τα Εικονοστοιχεία
+        csp_cs_is_changing_everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
         csp_pixelation_color_1: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 1
         csp_pixelation_color_2: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 2
         csp_pixelation_color_3: Βοήθημα εικονοστοιχειοποίησης Χρώματος - Μέρος 3
@@ -825,6 +827,8 @@ el:
         mc_2018_closing: 'Minecraft: Υδάτινο Ταξίδι Συγχαρητήρια'
         hoc_dance_warmup: Πάρτυ Χορού - Ζέσταμα
         hoc_dance_congrats: Πάρτυ Χορού - Συνέχισε το πάρτυ!
+        csd_pair_programming: Προγραμματισμός κατά ζεύγη
+        csd_applab_parameters: Συναρτήσεις με παραμέτρους
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

@@ -22,20 +22,22 @@ es:
       Text: Texto
       Picker: Seleccionador
       Comment: Comentario
-      'Variables ': 'Variables'
-      everythingelse: todolodemás
-      numbers: Numeros
-      Numbers: Numeros
-      Default: Por defecto
       World: Mundo
       Behaviors: Comportamientos
-      Advanced: Avanzado
-      Start: Inicio
+      'Variables ': 'Variables'
+      Default: Por defecto
       Locations: Ubicaciones
-      Music: Musica
-      Dancing: Bailando
+      Bunny Game: Juego del conejo
+      everythingelse: todolodemás
+      Location: Ubicación
+      numbers: Numeros
+      Numbers: Numeros
       Dancers: Bailarines
       Groups: Grupos
+      Advanced: Avanzado
+      Start: Inicio
+      Music: Musica
+      Dancing: Bailando
       Sprite: Sprite
       Brush: Pincel
       Make Sprite: Hacer sprite

@@ -23,22 +23,24 @@ sk:
       Text: Text
       Picker: Nástroj výberu
       Comment: Komentár
-      'Variables ': 'Premenné '
-      everythingelse: všetko ostatné
-      numbers: čisla
-      Numbers: Čísla
-      Input: Vstup
-      Default: Predvolené
       World: Prostredie
       Sprites: Postavy
       Behaviors: Správanie
-      Advanced: Pokročilé
-      Start: Spustiť
+      'Variables ': 'Premenné '
+      Default: Predvolené
       Locations: Miesta
-      Music: Hudba
-      Dancing: Tancovanie
+      Bunny Game: Hra so zajačikmi
+      everythingelse: všetko ostatné
+      Location: Miesto
+      numbers: čisla
+      Numbers: Čísla
+      Input: Vstup
       Dancers: Tanečníci
       Groups: Skupiny
+      Advanced: Pokročilé
+      Start: Spustiť
+      Music: Hudba
+      Dancing: Tancovanie
       Sprite: Postavy
       Brush: Štetec
       Make Sprite: Vytvoriť postavu

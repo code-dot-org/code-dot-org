@@ -46,12 +46,6 @@ const styles = {
     borderColor: color.border_gray,
     height: 42
   },
-  lessonLabelContainer: {
-    borderBottom: '2px solid',
-    borderColor: color.border_gray,
-    height: 44,
-    paddingTop: 8
-  },
   // Arrow ---> built with CSS requires negative margin
   lessonLine: {
     marginTop: 18,
@@ -66,6 +60,7 @@ const styles = {
     display: 'inline-block',
     padding: 3,
     marginTop: 15,
+    marginRight: 2,
     transform: 'rotate(-45deg)',
     WebkitTransform: 'rotate(-45deg)'
   },
@@ -82,7 +77,9 @@ class VirtualizedDetailView extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
+    stageExtrasEnabled: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   state = {
@@ -134,7 +131,7 @@ class VirtualizedDetailView extends Component {
     return (
       <div className={progressStyles.Cell} key={key} style={cellStyle}>
         {rowIndex === 0 && columnIndex === 0 && (
-          <div style={styles.lessonLabelContainer}>
+          <div style={progressStyles.lessonLabelContainer}>
             <span style={progressStyles.lessonHeading}>{i18n.lesson()}</span>
           </div>
         )}
@@ -168,13 +165,17 @@ class VirtualizedDetailView extends Component {
           </div>
         )}
         {rowIndex === 1 && columnIndex === 0 && (
-          <div style={progressStyles.lessonHeading}>{i18n.levelType()}</div>
+          <div style={progressStyles.lessonLabelContainer}>
+            <div style={progressStyles.lessonHeading}>{i18n.levelType()}</div>
+          </div>
         )}
         {rowIndex === 1 && columnIndex >= 1 && (
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
-                icon={getIconForLevel(level)}
+                // NOTE: When we remove mini rubrics experiment we will still need to have optional
+                // param to tell getIconForLevel that we are in the detailed progress view
+                icon={getIconForLevel(level, this.props.inMiniRubricExperiment)}
                 style={
                   level.isUnplugged
                     ? progressStyles.unpluggedIcon
@@ -190,7 +191,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, scriptData, getLevels} = this.props;
+    const {section, getLevels, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -209,7 +210,6 @@ class VirtualizedDetailView extends Component {
             name={student.name}
             studentId={student.id}
             sectionId={section.id}
-            scriptId={scriptData.id}
           />
         )}
         {stageIdIndex >= 0 && (
@@ -217,7 +217,9 @@ class VirtualizedDetailView extends Component {
             studentId={student.id}
             sectionId={section.id}
             stageId={stageIdIndex}
+            stageExtrasEnabled={stageExtrasEnabled}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
+            inMiniRubricExperiment={this.props.inMiniRubricExperiment}
           />
         )}
       </div>

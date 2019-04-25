@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-02-14T01:29:37.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "video_key": "csd_gamelab_conditional_statements",
+    "instructions_important": "false",
+    "display_name": "Video: Conditional Statements",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 14346,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "long_instructions": "## Question to Consider\r\n\r\n* When would you want to use an if statement?",
+    "encrypted_teacher_markdown": "J6hgYYC6Y8KN70lRIyQDN7ra0IP99J1Mdj1u2YMvmH7CUTJztuMcx5y5GtKK\nzAYWoLGBfyxYeg3sARWvd8YAZMsQL909rgGLWoPciizL8DBzSONKdZp29CmJ\n57H5Vnv4q6bedKBe3kcVmSx3Geopvbd5jKXuiLWEjq1ekM9Xy45IyYd3NccT\n8mmZZ82BWPKJ/0j0w13u2HqKjfNnIFfoJwMY9R/Y+djQYpVAF1KMwoI9lD6N\nWlHmVUeExjbUXbwG6wquRnYDhk6BFPzJHSFmsg/mGJ7qq6o4KT0nBxBPgjDo\n3cgpgm/Nno2pS0VrUeUP2a9ERhabBZTTCNuct5ANI99CFauMlob5U0Ytlk9M\nZKXL3l5ktwQ6G0nkJxXpKN4+Q2sH/YuSnL227KIVms9bULcj/YPB7Nh7uFHX\njnwEzjPCnB78yWMNMBIEvO2ay36LKGtvHDl00Qr8nJB1Wr+8t8fYlu+E/4Cv\nrSuIEPYWMaoXaHr35XQ/WNFmXZK8iz7T3vsoBzEwAd3PTrfmirDexk/D4dHW\nHUXmrMVKKkDQ31jCAhI/mbPKsMYPZ5NTK+2j3EAosx7ZoxsAU+4ZcfqAhHaQ\n8pwXsN4+8bskSJ01ApofnIsDKg736J+YRJJclZo8N2NldCKvsv/0EECpBMeB\n5Gy1JhnBN4WG3L4vTzGFiFK21mmdVmjxHm5ECbpR3wXzysYwK9MKs3dM6Tdi\nYRZNtqX4ZBiET3TXImfPGl0/pIexTIAWHij7Utenvvq/jFkss2Hpm7HdMJMZ\n4W+b7ae0CPNi4gUKnWzcgXWFK7gqxwJgCgRJ91yyJbzu33Cp0kiU\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-07 22:15:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-11 02:39:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:18:49 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:36:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:57:59 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:58:28 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

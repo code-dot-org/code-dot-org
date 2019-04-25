@@ -11,6 +11,17 @@ th:
         Course 4 Maze 1_callout1: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน
       Course 4 Maze 4_callout:
         repeat: ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: เพิ่มนักเต้นใหม่ของคุณที่นี่
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: บล็อกใหม่!
+        dance_callout_11_b: บล็อกใหม่!
       Dance_Party_01_callout:
         dance_callout_01: เพิ่มบล็อกนี้ในโปรแกรมของคุณ!
       Dance_Party_01_low_callout:

@@ -23,20 +23,21 @@ hu:
       Text: szöveg
       Picker: Választó
       Comment: Megjegyzés
-      'Variables ': 'Változók '
-      everythingelse: minden más
-      numbers: számok
-      Numbers: Számok
-      Default: Alapértelmezett
       World: Világ
       Sprites: Sprite-ok
       Behaviors: Viselkedések
-      Advanced: Haladó
-      Start: Kezdés
+      'Variables ': 'Változók '
+      Default: Alapértelmezett
       Locations: Helyek
-      Dancing: Tánc
+      everythingelse: minden más
+      Location: Helyszín
+      numbers: számok
+      Numbers: Számok
       Dancers: Táncosok
       Groups: Csoportok
+      Advanced: Haladó
+      Start: Kezdés
+      Dancing: Tánc
       Sprite: Sprite
       Brush: Ecset
       Make Sprite: Sprite készítése

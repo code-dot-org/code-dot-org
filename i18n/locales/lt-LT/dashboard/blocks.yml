@@ -146,6 +146,11 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       gamelab_debugSprite:
         options:
           VAL:
@@ -157,6 +162,22 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': atsitiktinis
       gamelab_locationDelta:
         options:
           DIR:
@@ -170,6 +191,10 @@ lt:
         text: Atsitiktinė spalva
       gamelab_randomColor:
         text: Atsitiktinė spalva
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
       gamelab_setPosition:
         options:
           POSITION:
@@ -185,6 +210,11 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -295,7 +325,9 @@ lt:
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
             '"w"': V
+            '"a"': A
             '"s"': P
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -304,7 +336,9 @@ lt:
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
             '"w"': V
+            '"a"': A
             '"s"': P
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -324,6 +358,11 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      aalab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       aalab_clickedOn:
         options:
           CONDITION:
@@ -344,11 +383,26 @@ lt:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
-      aalab_whenTouching:
+      aalab_setCollidable:
         options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
+          VAL:
+            '"true"': Taip
+            '"false"': klaida
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"x"': x pozicija
+            '"y"': y pozicija
+      aalab_showCustomText:
+        options:
+          DURATION:
+            '"0"': amžinai
+      aalab_toggleHideCustomText:
+        options:
+          OPTION:
+            '"show"': parodyk
+            '"hide"': pa(si)slėpk
       binary_move:
         options:
           DIR:

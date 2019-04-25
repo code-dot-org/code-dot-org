@@ -12,7 +12,6 @@ module ViewOptionsHelper
     :channel,
     :readonly_workspace,
     :is_external_project_level,
-    :is_channel_backed,
     :is_legacy_share,
     :legacy_share_style,
     :is_challenge_level,

@@ -24,16 +24,25 @@ nl:
         grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: Klik hier om het raster te tonen.
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY_callout:
         grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: Klik hier om het raster te tonen.
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: Klik hier om het raster te tonen.
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Wijzig het nummer hier
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: Wijzig het nummer hier
       CSD U3 debug_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 ellipse_callout:
@@ -42,10 +51,16 @@ nl:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 fill_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 my-rect_callout:
@@ -56,10 +71,15 @@ nl:
         CSD_U3_rect_c2: Hier is de "Uitvoeren" knop.
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: Hier is de code
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Hier is de code
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Hier is de code
+        CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
+      CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: Hier is de code
         CSD_U3_rect_c2: Sleep dit blok in de code-gebied.
       Counting_callout:
@@ -128,6 +148,17 @@ nl:
         Course_4_Playlab_For_Loops_4b_2: In deze puzzel mogen je alleen het "aantal" van de 'voor' luste wijzigen.
       Course 4 SCV 6_callout:
         Course_4_SCV_6: Met dit blok kun je je kleur aanpassen aan bijna alles wat je wil zien!  Verander de getallen om te zien wat er gebeurt!
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: Voeg dit blok toe aan je programma!
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Voeg hier je nieuwe danser toe
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Nieuw blok!
+        dance_callout_11_b: Nieuw blok!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Gebruik de pijltjestoetsen om de acteur te bewegen
       CourseF_PlayLab_vars10_callout:

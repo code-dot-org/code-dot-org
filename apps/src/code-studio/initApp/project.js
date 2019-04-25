@@ -1343,7 +1343,7 @@ var projects = (module.exports = {
         isEditing = true;
         deferred.resolve();
       }
-    } else if (appOptions.isChannelBacked) {
+    } else if (appOptions.channel) {
       isEditing = true;
       channels.fetch(appOptions.channel, (err, data) => {
         if (err) {

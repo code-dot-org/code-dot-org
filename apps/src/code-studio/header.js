@@ -327,6 +327,21 @@ function remixProject() {
   }
 }
 
+function saveStartCode(getChanges) {
+  $('.project_updated_at').text('Saving...');
+
+  $.ajax({
+    type: 'POST',
+    url: '../update_properties',
+    data: JSON.stringify(getChanges()),
+    dataType: 'json',
+    error: header.showProjectSaveError,
+    success: () => {
+      $('.project_updated_at').text('Saved');
+    }
+  });
+}
+
 // Minimal project header for viewing channel shares and legacy /c/ share pages.
 header.showMinimalProjectHeader = function() {
   var projectName = $('<div class="project_name_wrapper header_text">')
@@ -349,6 +364,24 @@ header.showMinimalProjectHeader = function() {
       )
     );
   $('.project_remix').click(remixProject);
+};
+
+// Levelbuilder-only UI for saving changes to a level.
+header.showLevelBuilderSaveButton = function(getChanges) {
+  var projectName = $('<div class="project_name_wrapper header_text">')
+    .append(
+      $('<div class="project_name header_text">').text(
+        'Levelbuilder: edit start code'
+      )
+    )
+    .append(
+      $('<div class="project_updated_at header_text">').text('Not saved')
+    );
+
+  $('.project_info')
+    .append(projectName)
+    .append($('<div class="project_remix header_button">').text('Save'));
+  $('.project_remix').click(saveStartCode.bind(null, getChanges));
 };
 
 // Project header for script levels that are backed by a project. Shows a
@@ -455,11 +488,6 @@ header.showProjectHeader = function() {
       $('<div class="project_remix header_button header_button_light">').text(
         dashboard.i18n.t('project.remix')
       )
-    )
-    .append(
-      $('<div class="project_new header_button header_button_light">').text(
-        dashboard.i18n.t('project.new')
-      )
     );
 
   // For Minecraft Code Connection (aka CodeBuilder) projects, add the option to
@@ -480,13 +508,6 @@ header.showProjectHeader = function() {
   }
 
   projectNameShow();
-  $('.freeplay_links')
-    .empty()
-    .before(
-      $('<div class="project_list header_button header_button_light">').text(
-        dashboard.i18n.t('project.my_projects')
-      )
-    );
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
@@ -538,12 +559,6 @@ header.showProjectHeader = function() {
   });
   $projectMorePopup.click(function(e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it.
-  });
-
-  $('.project_new').click(dashboard.project.createNew);
-
-  $(document).on('click', '.project_list', function() {
-    location.href = '/projects';
   });
 };
 

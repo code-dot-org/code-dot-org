@@ -2,7 +2,10 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode, except: :show
   before_action :authenticate_user!, except: :show
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:edit, :update, :destroy]
+  # params[:id] in :show action may be a family name rather than a script,
+  # so differentiate how we set the script for this action.
+  before_action :set_script_for_show, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
 
@@ -35,9 +38,10 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this script, we will
     # ask if they want to be redirected to the newer version.
-    redirect_script_url = @script.redirect_to_script_url(@current_user, locale: request.locale)
+    @redirect_script_url = @script.redirect_to_script_url(current_user, locale: request.locale)
 
-    render 'show', locals: {show_redirect_warning: params[:redirect_warning] == 'true', redirect_script_url: redirect_script_url}
+    @show_redirect_warning = params[:redirect_warning] == 'true'
+    @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
   end
 
   def index
@@ -115,6 +119,15 @@ class ScriptsController < ApplicationController
 
   def set_script
     @script = Script.get_from_cache(params[:id])
+    if current_user && @script&.pilot? && !@script.has_pilot_access?(current_user)
+      render :no_access
+    end
+  end
+
+  def set_script_for_show
+    is_family_name = ScriptConstants::FAMILY_NAMES.include?(params[:id])
+    return set_script unless is_family_name
+    @script = Script.get_script_family_redirect_for_user(params[:id], user: current_user, locale: request.locale)
   end
 
   def script_params
@@ -124,6 +137,7 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :project_sharing,
       :login_required,
       :hideable_stages,
       :curriculum_path,
@@ -137,6 +151,7 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :script_announcements,
+      :pilot_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],

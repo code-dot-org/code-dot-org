@@ -23,22 +23,24 @@ en:
       Text: Text
       Picker: Picker
       Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
       World: World
       Sprites: Sprites
       Behaviors: Behaviors
-      Advanced: Advanced
-      Start: Start
+      'Variables ': 'Variables '
+      Default: Default
       Locations: Locations
-      Music: Music
-      Dancing: Dancing
+      Bunny Game: Bunny Game
+      everythingelse: everythingelse
+      Location: Location
+      numbers: numbers
+      Numbers: Numbers
+      Input: Input
       Dancers: Dancers
       Groups: Groups
+      Advanced: Advanced
+      Start: Start
+      Music: Music
+      Dancing: Dancing
       Sprite: Sprite
       Brush: Brush
       Make Sprite: Make Sprite
@@ -47,6 +49,7 @@ en:
       Functional: Functional
       While Events: While Events
       Sprite Properties: Sprite Properties
+      Merge with Behaviors: Merge with Behaviors
       Predefined: Predefined
       test: test
       test2: test2

@@ -18,7 +18,7 @@ describe('The JSInterpreter class', function() {
     });
 
     // Initialize a test program
-    jsInterpreter.calculateCodeInfo(code);
+    jsInterpreter.calculateCodeInfo({code});
     jsInterpreter.parse({code: code});
 
     assert(jsInterpreter.initialized());

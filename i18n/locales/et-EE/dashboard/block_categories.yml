@@ -11,6 +11,7 @@ et:
       Conditionals: Tingimuslaused
       Events: Sündmused
       Text: Tekst
+      Location: Asukoht
       Start: Alusta
       Booleans: Booleans
       test: test

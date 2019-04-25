@@ -3549,18 +3549,7 @@ fr:
           c''est ainsi que nous avons tous appris à compter. Dans le système binaire,
           nous n''avons que deux chiffres : zéro et un. Avec ces deux chiffres, on
           peut compter jusqu''à n''importe quel nombre.'
-      8: 
-      9: 
-      10: 
-      11: 
-      12: 
-      13: 
     csd_concept_circuits_logic:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         image: notes/csd_concept_circuits_logic_6.png
       7:
@@ -3710,41 +3699,13 @@ fr:
     hoc_dance_warmup:
       1:
         text: 'Heure de Code | Fête dansante : Échauffement'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
-      11: 
-      12: 
-      13: 
     hoc_dance_events:
       1:
         text: 'Heure de Code | Fête dansante : Événements'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
     hoc_dance_congrats:
       1:
         text: 'Heure de Code | Fête dansante : C’est la fête !'
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
     MC_2018_loops:
-      1: 
       2:
         text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
           utilisiez le même ensemble de commandes à plusieurs reprises dans certains
@@ -3752,18 +3713,6 @@ fr:
           souhaité pouvoir faire encore et encore quelque chose comme, vous savez,
           laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous
           ennuyer ? Ce serait bien.
-      3: 
-      4: 
-      5: 
-      6: 
     mc_2018_closing:
-      1: 
       2:
         text: 'Poulpe : Félicitations !'
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 

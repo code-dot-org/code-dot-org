@@ -15,8 +15,9 @@ az:
       Events: Hadisələr
       Text: mətn
       Comment: Şərh
-      Numbers: Ədədlər
       World: Dünya
+      Location: Yer
+      Numbers: Ədədlər
       Start: Başlayın
       Brush: Fırça
       test: yoxla

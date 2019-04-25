@@ -42,7 +42,7 @@
     "CONTROLS_FOREACH_TOOLTIP": "リストの各項目に対してアイテムに変数 '%1' を設定し、いくつかのステートメントをしてください。",
     "CONTROLS_FOR_HELPURL": "",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "%1から%2まで%3ずつ",
-    "CONTROLS_FOR_INPUT_WITH": "まつ",
+    "CONTROLS_FOR_INPUT_WITH": "くりかえす",
     "CONTROLS_FOR_TOOLTIP": "変数%1は、始めの数字から終わりの数字まで指定した間隔で値をとり、指定したブロックを実行します。",
     "CONTROLS_IF_ELSEIF_TOOLTIP": "「もし」ブロックに条件を追加します。",
     "CONTROLS_IF_ELSE_TOOLTIP": "Ifブロックに、すべてをキャッチする条件を追加。",

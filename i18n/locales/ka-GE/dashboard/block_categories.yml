@@ -22,21 +22,22 @@ ka:
       Text: ტექსტი
       Picker: ამომრჩევი
       Comment: კომენტარი
-      'Variables ': 'ცვლადები '
-      everythingelse: ყველაფერი სხვა
-      numbers: რიცხვები
-      Numbers: რიცხვები
-      Input: შემომავალი ინფორმაცია
-      Default: ნაგულისხმევი
       World: სამყარო
       Sprites: სპრაიტები
       Behaviors: ქცევა
+      'Variables ': 'ცვლადები '
+      Default: ნაგულისხმევი
+      Locations: მდებარეობები
+      everythingelse: ყველაფერი სხვა
+      Location: ადგილმდებარეობა
+      numbers: რიცხვები
+      Numbers: რიცხვები
+      Input: შემომავალი ინფორმაცია
+      Groups: ჯგუფები
       Advanced: დამატებით
       Start: დაწყება
-      Locations: მდებარეობები
       Music: მუსიკა
       Dancing: ცეკვა
-      Groups: ჯგუფები
       Sprite: სპრაიტი
       Brush: ფუნჯი
       Make Sprite: სპრაიტის შექმნა

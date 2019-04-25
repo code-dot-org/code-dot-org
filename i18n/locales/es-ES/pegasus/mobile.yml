@@ -9,7 +9,7 @@
   upgrade_ie_link: "Aprende más"
   en: "Ciencias de la computación"
   computer_science_edweek: "Semana de Educación en Ciencias de la Computación"
-  csedweek_dates: "8-14 de Diciembre, 2014"
+  csedweek_dates: "Del 3 al 9 de Diciembre de 2018"
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifica tu Hora de Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Code</h2><h3># intentaron</h3>"
@@ -1504,7 +1504,7 @@
   applab_tile_subtitle: "Crea tu propia aplicación en JavaScript usando programación basada en bloques. O lleva tus habilidades al siguiente nivel con la programación basada en texto. (Sólo en inglés)"
   applab_tile_start_tutorial: "Inicio"
   applab_tile_teacher_guide: "Ver la guía del profesor"
-  aquatic_name: 'Minecraft: Udhëtimi ujor'
+  aquatic_name: 'Minecraft: Travesía Aquática'
   account_sign_up_email_opt_in: "¿Podemos enviarte por correo electrónico actualizaciones a nuestros cursos, oportunidades locales u otras noticias de informática? (aproximadamente una vez al mes)"
   account_sign_up_child_accept_terms: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
   hoc_overview_dance_title: "Fiesta para bailar"
@@ -1586,6 +1586,7 @@
   hoc2018_mc_short_description_shorter: "Use su creatividad y habilidades en resolución de problemas para explorar y construir mundos acuáticos con código."
   hoc2018_mc_journey: "Viaje a través de Minecraft con código."
   hoc2018_dance_party_main_heading: "Fiesta para bailar"
+  hoc2018_dance_party_landing_title: "Bailar"
   hoc2018_dance_party_subheading: "Ayude a traducir Fiesta de Baile"
   hoc2018_dance_create_your_own_dance_title: "Crea tu propio baile"
   hoc2018_dance_party_box_title: "Fiesta para bailar"
@@ -1638,3 +1639,5 @@
   page_not_found_header: '404: Página no encontrada'
   page_not_found_description: "La página que busca no existe en esta dirección. Verifique la dirección web y vuelva a enviarla. O regrese nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
+  hoc2018_mc_with_microsoft: "En asociación con"
+  hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft el apoyo a nuestra visión y misión para asegurar que cada niño tenga la oportunidad de aprender Ciencias de la Computación y las habilidades para tener éxito en el siglo XXI."

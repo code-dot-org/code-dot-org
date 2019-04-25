@@ -1,5 +1,5 @@
 {
-  "category": "Behaviors",
+  "category": "SL1",
   "config": {
     "func": "draggable",
     "blockText": "being draggable",

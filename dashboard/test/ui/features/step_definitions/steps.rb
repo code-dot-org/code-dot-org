@@ -1,13 +1,33 @@
 require 'cdo/url_converter'
 
-DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
-SHORT_WAIT_TIMEOUT = 30 # 30 seconds
+DEFAULT_WAIT_TIMEOUT = 2.minutes
+SHORT_WAIT_TIMEOUT = 30.seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
+
+def http_client
+  $browser.send(:bridge).http.send(:http)
+rescue
+  nil
+end
+
+# Set HTTP read timeout to the specified wait timeout during the block.
+def with_read_timeout(timeout)
+  if (http = http_client)
+    read_timeout = http.read_timeout
+    http.read_timeout = timeout
+  end
+  yield
+ensure
+  http.read_timeout = read_timeout if http
+end
 
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
     yield
-  rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+  rescue Selenium::WebDriver::Error::UnknownError => e
+    puts "Unknown error: #{e}"
+    false
+  rescue  Selenium::WebDriver::Error::StaleElementReferenceError
     false
   end
 end
@@ -21,7 +41,10 @@ def element_stale?(element)
   false
 rescue Selenium::WebDriver::Error::JavascriptError => e
   e.message.starts_with? 'Element does not exist in cache'
-rescue Selenium::WebDriver::Error::UnknownError, Selenium::WebDriver::Error::StaleElementReferenceError
+rescue Selenium::WebDriver::Error::UnknownError => e
+  puts "Unknown error: #{e}"
+  true
+rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
 
@@ -30,6 +53,7 @@ def page_load(wait_until_unload)
     html = @browser.find_element(tag_name: 'html')
     yield
     wait_until {element_stale?(html)}
+    navigate_to(@browser.current_url)
   else
     yield
   end
@@ -54,14 +78,19 @@ def individual_steps(steps)
   end
 end
 
-Given /^I am on "([^"]*)"$/ do |url|
-  check_window_for_js_errors('before navigation')
-  url = replace_hostname(url)
+def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
-    @browser.navigate.to url
+    with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      @browser.navigate.to url
+    end
     refute_bad_gateway_or_site_unreachable
   end
   install_js_error_recorder
+end
+
+Given /^I am on "([^"]*)"$/ do |url|
+  check_window_for_js_errors('before navigation')
+  navigate_to replace_hostname(url)
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -243,10 +272,6 @@ When /^I wait for (\d+(?:\.\d*)?) seconds?$/ do |seconds|
   sleep seconds.to_f
 end
 
-When /^I submit$/ do
-  @element.submit
-end
-
 When /^I rotate to landscape$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
@@ -257,11 +282,6 @@ When /^I rotate to portrait$/ do
   if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:portrait)
   end
-end
-
-When /^I inject simulation$/ do
-  #@browser.execute_script('$("body").css( "background-color", "black")')
-  @browser.execute_script("var fileref=document.createElement('script');  fileref.setAttribute('type','text/javascript'); fileref.setAttribute('src', '/assets/jquery.simulate.js'); document.getElementsByTagName('head')[0].appendChild(fileref)")
 end
 
 When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
@@ -903,7 +923,7 @@ Given(/^I sign in as "([^"]*)"$/) do |name|
     Then I click ".header_user"
     And I wait to see "#signin"
     And I fill in username and password for "#{name}"
-    And I click "#signin-button"
+    And I click "#signin-button" to load a new page
     And I wait to see ".header_user"
   }
 end
@@ -1346,8 +1366,8 @@ def press_keys(element, key)
   end
 end
 
-# Known issue: ie does not register the key presses in this step.
-# Add @no_ie tag to your scenario to skip ie when using this step
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
 And(/^I press keys "([^"]*)" for element "([^"]*)"$/) do |key, selector|
   element = @browser.find_element(:css, selector)
   press_keys(element, key)
@@ -1362,6 +1382,16 @@ end
 When /^I press keys "([^"]*)"$/ do |keys|
   # Note: Safari webdriver does not support actions API
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
+end
+
+# Press backspace repeatedly to clear an element.  Handy for React.
+# Known issue: IE does not register the key presses in this step.
+# Add @no_ie tag to your scenario to skip IE when using this step.
+When /^I press backspace to clear element "([^"]*)"$/ do |selector|
+  element = @browser.find_element(:css, selector)
+  while @browser.execute_script("return $('#{selector}').val()") != ""
+    press_keys(element, ":backspace")
+  end
 end
 
 When /^I press enter key$/ do
@@ -1633,6 +1663,25 @@ Then /^the href of selector "([^"]*)" contains the section id$/ do |selector|
   expect(href.split('#')[0]).to include("?section_id=#{@section_id}")
 end
 
+Then /^the href of selector "([^"]*)" contains "([^"]*)"$/ do |selector, matcher|
+  href = @browser.execute_script("return $(\"#{selector}\").attr('href');")
+  expect(href).to include(matcher)
+end
+
+Then /^I navigate to teacher dashboard for the section I saved$/ do
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}"
+  }
+end
+
+Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+  }
+end
+
 Then /^I hide unit "([^"]+)"$/ do |unit_name|
   selector = ".uitest-CourseScript:contains(#{unit_name}) .fa-eye-slash"
   @browser.execute_script("$(#{selector.inspect}).click();")
@@ -1649,7 +1698,7 @@ end
 
 # @return [Number] the section id for the corresponding row in the sections table
 def get_section_id_from_table(row_index)
-  # e.g. https://code.org/teacher-dashboard#/sections/54
+  # e.g. https://studio-code.org/teacher_dashboard/sections/54
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
   )

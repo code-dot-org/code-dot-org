@@ -32,7 +32,7 @@ export default class Releases extends LabeledFormComponent {
               photo release.
             </a>
           </ControlLabel>
-          {this.singleCheckboxFor('photoRelease')}
+          {this.singleCheckboxFor('photoRelease', {required: false})}
           <ControlLabel>
             Please read this{' '}
             <a

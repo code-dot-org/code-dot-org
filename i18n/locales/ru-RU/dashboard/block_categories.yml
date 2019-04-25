@@ -19,19 +19,20 @@ ru:
       Category: Категория
       Text: Текст
       Comment: Комментарий
+      World: Мир
       'Variables ': 'Переменные '
+      Default: По умолчанию
+      Locations: Места
+      Location: Место
       numbers: числа
       Numbers: Числа
       Input: Ввод
-      Default: По умолчанию
-      World: Мир
-      Advanced: Расширенный
-      Start: Начать
-      Locations: Места
-      Music: Музыка
-      Dancing: Танцы
       Dancers: Танцоры
       Groups: Группы
+      Advanced: Расширенный
+      Start: Начать
+      Music: Музыка
+      Dancing: Танцы
       Brush: Кисть
       Movement: Движение
       Booleans: Логические выражения

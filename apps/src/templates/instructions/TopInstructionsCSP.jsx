@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import FeedbacksList from './FeedbacksList';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
@@ -26,6 +25,8 @@ import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
+import queryString from 'query-string';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -98,7 +99,7 @@ const audioStyle = {
   }
 };
 
-class TopInstructions extends Component {
+class TopInstructionsCSP extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
@@ -127,6 +128,8 @@ class TopInstructions extends Component {
 
   constructor(props) {
     super(props);
+    //Pull the student id from the url
+    const studentId = queryString.parse(window.location.search).user_id;
 
     const teacherViewingStudentWork =
       this.props.viewAs === ViewType.Teacher &&
@@ -138,7 +141,11 @@ class TopInstructions extends Component {
         ? TabType.COMMENTS
         : TabType.INSTRUCTIONS,
       feedbacks: [],
-      displayFeedbackTeacherFacing: teacherViewingStudentWork
+      rubric: null,
+      studentId: studentId,
+      teacherViewingStudentWork: teacherViewingStudentWork,
+      fetchingData: true,
+      token: null
     };
   }
 
@@ -146,6 +153,9 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
+    const {user, serverLevelId} = this.props;
+    const {studentId} = this.state;
+
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
     const maxNeededHeight = this.adjustMaxNeededHeight();
@@ -154,19 +164,55 @@ class TopInstructions extends Component {
     // adjusts max height.
     this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
 
+    const promises = [];
+
     if (this.props.viewAs === ViewType.Student) {
-      $.ajax({
-        url:
-          '/api/v1/teacher_feedbacks/get_feedbacks?student_id=' +
-          this.props.user +
-          '&level_id=' +
-          this.props.serverLevelId,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({feedbacks: data});
-      });
+      promises.push(
+        $.ajax({
+          url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done(data => {
+          // If student has feedback make their default tab the feedback tab instead of instructions
+          if (data[0] && (data[0].comment || data[0].performance)) {
+            this.setState({feedbacks: data, tabSelected: TabType.COMMENTS});
+          }
+        })
+      );
     }
+    //While this is behind an experiment flag we will only pull the rubric
+    //if the experiment is enable. This should prevent us from showing the
+    //rubric if not in the experiment.
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      promises.push(
+        $.ajax({
+          url: `/levels/${serverLevelId}/get_rubric/`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done(data => {
+          this.setState({rubric: data});
+        })
+      );
+    }
+
+    if (this.state.teacherViewingStudentWork) {
+      promises.push(
+        $.ajax({
+          url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${user}`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done((data, textStatus, request) => {
+          this.setState({
+            feedbacks: request.status === 204 ? [] : [data],
+            token: request.getResponseHeader('csrf-token')
+          });
+        })
+      );
+    }
+
+    Promise.all(promises).then(() => {
+      this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
+    });
   }
 
   componentWillUnmount() {
@@ -188,6 +234,18 @@ class TopInstructions extends Component {
       );
     }
   }
+
+  /**
+   * Function to force the height of the instructions area to be the
+   * full size of the content for that area. This is used when the comment
+   * tab loads in order to make the instructions area show the whole
+   * contents of the comment tab.
+   */
+  forceTabResizeToMaxHeight = () => {
+    if (this.state.tabSelected === TabType.COMMENTS) {
+      this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
+    }
+  };
 
   /**
    * Given a prospective delta, determines how much we can actually change the
@@ -266,7 +324,10 @@ class TopInstructions extends Component {
   };
 
   handleCommentTabClick = () => {
-    this.setState({tabSelected: TabType.COMMENTS});
+    this.setState(
+      {tabSelected: TabType.COMMENTS},
+      this.forceTabResizeToMaxHeight
+    );
   };
 
   render() {
@@ -290,13 +351,35 @@ class TopInstructions extends Component {
       (this.props.referenceLinks && this.props.referenceLinks.length > 0);
 
     const displayHelpTab = videosAvailable || levelResourcesAvailable;
-    const displayFeedbackStudent =
-      this.props.viewAs === ViewType.Student && this.state.feedbacks.length > 0;
+
+    const studentHasFeedback =
+      this.props.viewAs === ViewType.Student &&
+      this.state.feedbacks.length > 0 &&
+      (this.state.feedbacks[0].comment || this.state.feedbacks[0].performance);
+
+    /*
+     * The feedback tab will be the Key Concept tab if there is a mini rubric and:
+     * 1) Teacher is viewing the level but not giving feedback to the student
+     * 2) Student does not have any feedback for that level
+     * The Key Concept tab shows the Key Concept and Rubric for the level in a view
+     * only form
+     */
+    const displayKeyConcept =
+      this.state.rubric &&
+      ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
+        (this.props.viewAs === ViewType.Teacher &&
+          !this.state.teacherViewingStudentWork));
+    const feedbackTabText = displayKeyConcept ? 'Key Concept' : msg.feedback();
+
     const displayFeedback =
-      displayFeedbackStudent || this.state.displayFeedbackTeacherFacing;
+      displayKeyConcept ||
+      this.state.teacherViewingStudentWork ||
+      studentHasFeedback;
+
+    // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
-      this.state.displayFeedbackTeacherFacing;
+      this.state.teacherViewingStudentWork;
 
     return (
       <div style={mainStyle} className="editor-column">
@@ -332,12 +415,12 @@ class TopInstructions extends Component {
                   teacherOnly={teacherOnly}
                 />
               )}
-              {displayFeedback && (
+              {displayFeedback && (!this.state.fetchingData || teacherOnly) && (
                 <InstructionsTab
                   className="uitest-feedback"
                   onClick={this.handleCommentTabClick}
                   selected={this.state.tabSelected === TabType.COMMENTS}
-                  text={msg.feedback()}
+                  text={feedbackTabText}
                   teacherOnly={teacherOnly}
                 />
               )}
@@ -381,18 +464,20 @@ class TopInstructions extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {this.state.tabSelected === TabType.COMMENTS && (
-              <div>
-                {this.props.viewAs === ViewType.Teacher && (
-                  <TeacherFeedback ref="commentTab" />
-                )}
-                {this.props.viewAs === ViewType.Student && (
-                  <FeedbacksList
-                    feedbacks={this.state.feedbacks}
-                    ref="commentTab"
-                  />
-                )}
-              </div>
+            {displayFeedback && !this.state.fetchingData && (
+              <TeacherFeedback
+                user={this.props.user}
+                visible={this.state.tabSelected === TabType.COMMENTS}
+                displayKeyConcept={displayKeyConcept}
+                disabledMode={
+                  this.props.viewAs === ViewType.Student ||
+                  !this.state.teacherViewingStudentWork
+                }
+                rubric={this.state.rubric}
+                ref="commentTab"
+                latestFeedback={this.state.feedbacks}
+                token={this.state.token}
+              />
             )}
           </div>
           {!this.props.isEmbedView && (
@@ -406,6 +491,7 @@ class TopInstructions extends Component {
     );
   }
 }
+export const UnconnectedTopInstructionsCSP = TopInstructionsCSP;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -447,4 +533,4 @@ export default connect(
   }),
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(TopInstructionsCSP));

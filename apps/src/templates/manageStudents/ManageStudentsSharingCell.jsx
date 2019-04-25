@@ -2,15 +2,18 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {editStudent} from './manageStudentsRedux';
-import {Checkbox} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 
 const styles = {
-  checkmark: {
+  checkboxIcon: {
     color: color.lighter_gray
+  },
+  checkbox: {
+    height: 20,
+    width: 20
   }
 };
 
@@ -33,10 +36,12 @@ class ManageStudentsSharingCell extends Component {
 
   renderCheckbox = () => {
     return (
-      <Checkbox
+      <input
+        type="checkbox"
         disabled={this.props.disabled}
         checked={this.props.editedValue}
         onChange={this.changeSharing}
+        style={styles.checkbox}
       />
     );
   };
@@ -53,7 +58,7 @@ class ManageStudentsSharingCell extends Component {
               <FontAwesome
                 icon="check"
                 className="fa-check"
-                style={styles.checkmark}
+                style={styles.checkboxIcon}
               />
             )}
           </div>
@@ -71,7 +76,7 @@ class ManageStudentsSharingCell extends Component {
                   role="tooltip"
                   effect="solid"
                   place="top"
-                  offset={{bottom: 10, right: 50}}
+                  offset={{bottom: 5}}
                   delayHide={1000}
                 >
                   <div>{i18n.sharingAgePrompt()}</div>

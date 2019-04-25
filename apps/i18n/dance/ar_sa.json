@@ -9,6 +9,5 @@
   "danceFeedbackStartNewMove": "الراقص الخاص بك لم يقم بخطوة جديدة بعد الإجراء الرابع.",
   "danceFeedbackNeedDifferentDance": "تحتاج إلى استخدام رقصة مختلفة.",
   "danceFeedbackNeedEveryTwoMeasures": "تأكد من أنك تستخدم الكتلة البرمجية \"كل 2 إجراء\"",
-  "danceFeedbackNeedMakeANewDancer": "استخدم الكتلة البرمجية \"اصنع جديداً\" لإنشاء راقص ثانٍ.",
-  "measure": ""
+  "danceFeedbackNeedMakeANewDancer": "استخدم الكتلة البرمجية \"اصنع جديداً\" لإنشاء راقص ثانٍ."
 }

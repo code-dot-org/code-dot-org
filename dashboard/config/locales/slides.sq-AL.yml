@@ -2209,26 +2209,14 @@ sq:
           interneti. Ne shpjegojmë të gjithë terminologjinë që ju do të duhet në terma
           të thjeshtë në mënyrë që studentët mund të simulojnë mesazhet e transmetimit,
           si një e-mail.
-      2: 
-      3: 
     starwars_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Kjo fushë e mesit është toolboxi dhe secili nga këto blloqe është një
           veprim që mund të kuptojë BB-8.
       6:
         text: Pjesa e bardhë në të djathtë është hapësira e punës dhe aty do të ndërtojmë
           programin.
-      7: 
-      8: 
-      9: 
-      10: 
     starwars_events:
-      1: 
-      2: 
       3:
         text: 'Për të krijuar një lojë, ne do të mësojmë rreth diçkaje që të gjithë
           programuesit e lojërave përdorin çdo ditë: ato quhen evente. Një event i
@@ -2237,30 +2225,16 @@ sq:
       4:
         text: Disa shembuj eventesh janë klikimi i mouse, një butoni shigjete ose
           një prekje në ekran.
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
     starwars_blocks_intro:
-      1: 
-      2: 
-      3: 
-      4: 
       5:
         text: Kjo fushë e mesit është toolboxi dhe secili nga këto blloqe është një
           veprim që mund të kuptojë BB-8.
       6:
         text: Pjesa në të djathtë është hapësira e punës dhe aty do të ndërtojmë programin.
-      7: 
-      8: 
       9:
         text: Nëse ndonjëherë të dëshironi të fshini një bllok, vetëm hiqeni atë nga
           grumbulli dhe tërhiqeni pas në mjetet ndihmëse.
-      10: 
     starwars_blocks_events:
-      1: 
-      2: 
       3:
         text: 'Për të krijuar një lojë, ne do të mësojmë rreth diçkaje që të gjithë
           programuesit e lojërave përdorin çdo ditë: ato quhen evente. Një event i
@@ -2269,12 +2243,9 @@ sq:
       4:
         text: Disa shembuj eventesh janë klikimi i mouse, një butoni shigjete ose
           një prekje në ekran.
-      5: 
-      6: 
       7:
         text: Hap pas hapi loja juaj po bëhet më interaktive.
     mc_intro:
-      1: 
       2:
         text: Në orën në vazhdim do të msojmë bazat e shkencave kompjuterike duke
           programuar Alex ose Steve që të lëvizin përmes një pjese të simuluar të
@@ -2379,17 +2350,10 @@ sq:
     mc_congrats_share:
       1:
         text: Urime! Ju sapo mësuat blloqet kryesore të programimit në shkenca kompjuterike.
-      2: 
-      3: 
-      4: 
     mc_congrats_no_share:
       1:
         text: Urime! Ju sapo mësuat blloqet kryesore të programimit në shkenca kompjuterike.
-      2: 
-      3: 
-      4: 
     gumball_intro:
-      1: 
       2:
         text: A keni një video lojë të preferuar? Tani do të hedhim një hap drejt
           krijimit të lojërave ashtu si ato në laboratorin e lojërave. Lojërat e mira
@@ -2416,7 +2380,6 @@ sq:
         text: Për të filluar, ti duhet të lidhësh blloqet e tua tek blloku portokalli
           "when run". Ti mund të lidhësh shumë blloqe bashkë duke i lëvizur ato derisa
           ti të shohësh vijën e verdhë dhe më pas ato do të lidhen bashkë.
-      8: 
       9:
         text: Vazhdoni dhe në fund ju do të jeni në gjendje të krijoni lojën tuaj
           dhe të bëni këto personazhe të ndërveprojnë, shënojnë pikë, hedhin akull,
@@ -2439,14 +2402,11 @@ sq:
           ti mund të fillosh ti lëvizësh aktorët lart, poshtë, majtas ose djathtas.
           Hap pas hapi, loja jote është duke u bërë më interaktive.
     gumball_repeat:
-      1: 
-      2: 
       3:
         text: Në këtë formues tjetër, qëllimi jonë është të ndihmojmë personazhin
           të realizojë punën në vazhdimësi. Duke mësuar se si komandat repeat punojnë,
           do t'ju kursejë shumë kohë kur të të ndërtoni lojën tuaj.
     iceage_intro:
-      1: 
       2:
         text: A keni një video lojë të preferuar? Tani do të hedhim një hap drejt
           krijimit të lojërave ashtu si ato në laboratorin e lojërave. Lojërat e mira
@@ -2473,7 +2433,6 @@ sq:
         text: Për të filluar, ti duhet të lidhësh blloqet e tua tek blloku portokalli
           "when run". Ti mund të lidhësh shumë blloqe bashkë duke i lëvizur ato derisa
           ti të shohësh vijën e verdhë dhe më pas ato do të lidhen bashkë.
-      8: 
       9:
         text: Vazhdoni dhe në fund ju do të jeni në gjendje të krijoni lojën tuaj
           dhe të bëni këto personazhe të ndërveprojnë, shënojnë pikë, hedhin akull,
@@ -2496,8 +2455,6 @@ sq:
           ti mund të fillosh ti lëvizësh aktorët lart, poshtë, majtas ose djathtas.
           Hap pas hapi, loja jote është duke u bërë më interaktive.
     iceage_repeat:
-      1: 
-      2: 
       3:
         text: Në këtë formues tjetër, qëllimi jonë është të ndihmojmë personazhin
           të realizojë punën në vazhdimësi. Duke mësuar se si komandat repeat punojnë,
@@ -2527,27 +2484,20 @@ sq:
           programin.
       6:
         text: Nëse harroni cfarë do të bëni instruksionet për cdo nivel gjenden lart.
-      7: 
       8:
         text: Nëse ndonjëherë të dëshironi të fshini një bllok, vetëm hiqeni atë nga
           grumbulli dhe tërhiqeni pas në mjetet ndihmëse.
-      9: 
     mc_2016_loops:
       1:
         text: Përshëndetje, unë jam Lisa. Unë jam një zhvilluese software tek Minecraft
           dhe kam punuar në disa nga kafshët dhe armiqtë në lojë. Një prej kafshëve
           që kam punuar është Ocelot. Kam punuar në pjesën ku mund të ushqeni një
           Ocelot me peshk për ta bërë atë macen tuaj.
-      2: 
-      3: 
     mc_2016_events:
-      1: 
       2:
         text: Nëse jeni duke përdorur një ekran me prekje, rrëshqitni lart, poshtë,
           majtas, dhe djathtas për të lëvizur përreth. Pastaj trokitni lehtë lojën
           për të përdorur mjetet para jush.
-      3: 
-      4: 
     mc_2016_spawn:
       1:
         text: Në lojë, pjell do të thotë të njëjtën gjë si krijoj. Në këtë nivel,
@@ -2568,16 +2518,5 @@ sq:
           cilin mund ta ndani me miqtë tuaj ose ta luani lojën në telefon. Bëfshi
           qef! Po pres të luaj versionin tënd të Minecraft.
     mc_2017_agent_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
       11:
         text: Nëse harroni cfarë do të bëni instruksionet për cdo nivel gjenden lart.
-      12: 

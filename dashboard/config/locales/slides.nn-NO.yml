@@ -2052,8 +2052,6 @@ nn:
           det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan
           finne det ut sammen.
     unplug9:
-      1: 
-      2: 
       3:
         text: Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt
           eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig
@@ -2082,7 +2080,6 @@ nn:
           å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom
           er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene
           enn de fleste voksne har fått med seg gjennom hele sitt liv.
-      2: 
       3:
         text: Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro
           i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke
@@ -2494,7 +2491,6 @@ nn:
       6:
         text: Det kvite området til høgre er arbeidsområdet, og det er her vi bygger
           opp programmet.
-      7: 
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2561,7 +2557,6 @@ nn:
       6:
         text: Det kvite området til høgre er arbeidsområdet, og det er her vi bygger
           opp programmet.
-      7: 
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2701,20 +2696,9 @@ nn:
           som du kan dele med venene dine eller for å spele spelet ditt på telefonen.
           Ha det gøy! Eg gler meg til å spele din versjon av Minecraft.
     mc_2017_agent_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
       11:
         text: Dersom du gløymer kva du skal gjere, finst instruksjonane for kvart
           nivå øvst på sida.
-      12: 
     csd_concept_binary_data:
       1:
         text: Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries.
@@ -2873,14 +2857,3 @@ nn:
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
-      11: 
-      12: 

@@ -33,7 +33,6 @@ ms:
         text: Setiap blok adalah satu arahan. Jika anda seret blok "maju kehadapan"
           ke ruang kerja anda dan tekan "Mainkan Program", burung itu akan bergerak
           satu ruang pada maze.
-      11: 
       12:
         text: Jika anda menjalankan aturcara dan ingin betulkan dan cuba lagi, tekan
           butang "Set Semula".

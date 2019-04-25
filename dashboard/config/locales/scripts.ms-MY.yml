@@ -381,6 +381,8 @@ ms:
               name: Internet
             Relay Programming:
               name: Pengaturcaraan penyampai
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -407,6 +409,8 @@ ms:
           stages:
             The Artist:
               name: Pelukis
+            Internet:
+              name: Internet
         coursed-2019:
           stages:
             Relay Programming:
@@ -431,3 +435,21 @@ ms:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+        csd2-2019:
+          stages:
+            Lists:
+              name: Senarai
+        csd3-2019:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+        csp1-2019:
+          stages:
+            Sending Numbers:
+              name: Menghantar nombor
+            The Internet:
+              name: Internet

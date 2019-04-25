@@ -21,19 +21,20 @@ ar:
       Prebuilt: معدّة مسبقاً
       Text: النص
       Comment: تعليق
-      'Variables ': 'المتغيرات '
-      everythingelse: كل شيء اخر
-      numbers: أرقام
-      Numbers: أرقام
-      Default: الافتراضي
       World: العالم
       Behaviors: السلوك
-      Advanced: مُتقدم
-      Start: إبدأ
+      'Variables ': 'المتغيرات '
+      Default: الافتراضي
       Locations: مواقع
-      Dancing: رقص
+      everythingelse: كل شيء اخر
+      Location: الموقع
+      numbers: أرقام
+      Numbers: أرقام
       Dancers: الراقصون
       Groups: المجموعات
+      Advanced: مُتقدم
+      Start: إبدأ
+      Dancing: رقص
       Brush: فرشاة
       Movement: حركة
       Booleans: القيم المنطقية

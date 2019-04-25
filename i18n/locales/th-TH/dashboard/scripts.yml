@@ -1280,6 +1280,8 @@ th:
               name: อินเทอร์เน็ต
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Graph Paper Programming:
+              name: การเขียนกระดาษกราฟ
         courseb-2018:
           assignment_family_title: คอร์ส B
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
@@ -1497,6 +1499,8 @@ th:
               name: ลูป For ในเรื่องผึ้ง
             The Artist:
               name: ศิลปิน
+            Internet:
+              name: อินเทอร์เน็ต
         dance-low:
           stages:
             Dance Party:
@@ -1529,6 +1533,8 @@ th:
               name: พลเมืองดิจิทัล
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
+            Dance Party:
+              name: งานเต้นรำ
         coursee-2019:
           stages:
             Sequence in Maze:
@@ -1654,6 +1660,10 @@ th:
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
+            Loops in Ice Age:
+              name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+            Programming with Rey and BB-8:
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
         courseb-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           stages:
@@ -1671,6 +1681,8 @@ th:
               name: อีเวนต์กับเพลย์แลป
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops in Harvester:
+              name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
         pre-express-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           stages:
@@ -1690,9 +1702,57 @@ th:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
+            Ocean Scene with Loops:
+              name: ฉากมหาสมุทรกับลูป
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+        csd2-2019:
+          stages:
+            Lists:
+              name: รายการ
+            Clean Code and Debugging:
+              name: โค้ดที่หมดจดและการดีบั๊ก
+        csd3-2019:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: ฟังก์ชันกับพารามิเตอร์
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: แบบสำรวจ
+        csp1-2019:
+          stages:
+            The Internet:
+              name: อินเทอร์เน็ต
+        time4csdemo:
+          stages:
+            Conditionals with Cards:
+              name: เงื่อนไข
+            Sequence in Maze:
+              name: การจัดลำดับก่อนหลังกับเขาวงกต
+            Building a Foundation:
+              name: สร้างพื้นฐาน
+            Programming in Artist:
+              name: การเขียนโปรแกรมในเรื่องศิลปิน
+            Loops in Artist:
+              name: ลูปกับศิลปิน
+            Nested Loops in Bee/Zombie:
+              name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
+            Nested Loops with Frozen:
+              name: ลูปซ้อนลูป กับเกม Frozen
+            Functions in Minecraft:
+              name: ฟังก์ชั่นในไมน์คราฟท์
+            Functions in Harvester:
+              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร

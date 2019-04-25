@@ -117,6 +117,9 @@ class Ability
         if user.regional_partners.any?
           can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
           can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id), ended_at: nil
+          can :update_scholarship_info, Pd::Enrollment do |enrollment|
+            !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
+          end
         end
 
         can :read, Pd::CourseFacilitator
@@ -169,15 +172,19 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    if user.persisted?
-      can :read, Script
-      can :read, ScriptLevel
-    else
-      can :read, Script do |script|
-        !script.login_required?
+    can :read, Script do |script|
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
-      can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required?
+    end
+    can :read, ScriptLevel do |script_level|
+      script = script_level.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        user.persisted? || !script.login_required?
       end
     end
 

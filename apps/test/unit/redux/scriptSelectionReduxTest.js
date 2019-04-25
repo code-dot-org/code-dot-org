@@ -1,7 +1,8 @@
 import {assert} from '../../util/configuredChai';
 import scriptSelection, {
   setValidScripts,
-  setScriptId
+  setScriptId,
+  getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -34,9 +35,9 @@ const fakeValidScripts = [
     category: 'CS Fundamentals',
     category_priority: 1,
     id: 182,
-    name: 'Express Course',
+    name: 'Corso Rapido',
     position: 6,
-    script_name: 'express'
+    script_name: 'express-2017'
   }
 ];
 
@@ -67,6 +68,34 @@ const fakeValidCourses = [
 
 describe('scriptSelectionRedux', () => {
   const initialState = scriptSelection(undefined, {});
+
+  describe('getSelectedScriptName', () => {
+    it('returns the script name of the selected script', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: 2,
+          validScripts: [
+            {id: 1, script_name: 'Wrong script!'},
+            {id: 2, script_name: 'Right script!'}
+          ]
+        }
+      };
+      assert.equal(getSelectedScriptName(state), 'Right script!');
+    });
+
+    it('returns null if no script is selected', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: null,
+          validScripts: [
+            {id: 1, script_name: 'Wrong script!'},
+            {id: 2, script_name: 'Right script!'}
+          ]
+        }
+      };
+      assert.equal(getSelectedScriptName(state), null);
+    });
+  });
 
   describe('setScriptId', () => {
     it('sets the script id', () => {
@@ -113,7 +142,7 @@ describe('scriptSelectionRedux', () => {
       assert.deepEqual(nextState.scriptId, 100);
     });
 
-    it('includes Express Course if nothing assigned and no progress', () => {
+    it('includes express-2017 if nothing assigned and no progress', () => {
       const studentScriptIds = [];
       const validCourses = [];
       const action = setValidScripts(
@@ -124,7 +153,7 @@ describe('scriptSelectionRedux', () => {
       const nextState = scriptSelection(initialState, action);
       assert.deepEqual(
         nextState.validScripts,
-        fakeValidScripts.filter(script => script.name === 'Express Course')
+        fakeValidScripts.filter(script => script.script_name === 'express-2017')
       );
     });
 

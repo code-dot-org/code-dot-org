@@ -4,19 +4,20 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
-  SectionHeaders,
-  TextFields
+  SectionHeaders
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {
-  Row,
-  Col,
-  ControlLabel,
   FormGroup,
   Modal,
-  Button
+  Button,
+  ControlLabel,
+  FormControl,
+  HelpBlock,
+  Row,
+  Col
 } from 'react-bootstrap';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import _ from 'lodash';
@@ -25,7 +26,6 @@ const CSD_URL = 'https://code.org/educate/professional-learning/cs-discoveries';
 const CSP_URL = 'https://code.org/educate/professional-learning/cs-principles';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
-const REGIONAL_PARTNER_URL = '/pd/regional_partner_contact/new';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
 const INTERNATIONAL = 'Other country';
 const US = 'United States';
@@ -40,15 +40,29 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
   static associatedFields = [
     // Gender Identity and Race are things we want rendered in Section 1 in the detail view
-    // but we want to ask in section 5. So they need to be removed here
+    // but we want to ask in section 5. So they need to be removed here.
+    // Also remove a whole mess of fields (from school to principal to role) which we have
+    // moved to Section 3, and therefore don't want to validate here in Section 1.
     ..._.difference(Object.keys(PageLabels.section1AboutYou), [
       'genderIdentity',
-      'race'
+      'race',
+      'school',
+      'schoolName',
+      'schoolDistrictName',
+      'schoolAddress',
+      'schoolCity',
+      'schoolState',
+      'schoolZipCode',
+      'schoolType',
+      'principalTitle',
+      'principalFirstName',
+      'principalLastName',
+      'principalEmail',
+      'principalConfirmEmail',
+      'principalPhoneNumber',
+      'currentRole'
     ])
   ];
-
-  handleSchoolChange = selectedSchool =>
-    this.handleChange({school: selectedSchool && selectedSchool.value});
 
   resetCountry = () => this.handleChange({country: US});
   exitApplication = () => (window.location = PD_RESOURCES_URL);
@@ -84,30 +98,65 @@ export default class Section1AboutYou extends LabeledFormComponent {
     );
   }
 
+  nameInput(id) {
+    return (
+      <NameInput
+        id={id}
+        label={this.labelFor(id)}
+        validationState={this.getValidationState(id)}
+        errorMessage={this.props.errorMessages[id]}
+        value={this.props.data[id] || ''}
+        handleChange={this.handleChange}
+      />
+    );
+  }
+
   render() {
     const nominated = queryString.parse(window.location.search).nominated;
 
     return (
       <FormGroup>
-        {!nominated && (
-          <p>
-            Thanks for your interest in the Code.org Professional Learning
-            Program! This application should take 10 - 15 minutes to complete.
-            Fields marked with a <span style={{color: 'red'}}>*</span> are
-            required.
-          </p>
-        )}
         {nominated && (
           <p>
             Congratulations on your nomination for a scholarship to the Code.org
-            Professional Learning Program! This application should take 10 - 15
-            minutes to complete. Fields marked with a{' '}
-            <span style={{color: 'red'}}>*</span> are required. We will let your
-            local partner know that you’ve been nominated as they consider your
-            application for the regional scholarships or discounts they have
-            available.
+            Professional Learning Program! We will let your local partner know
+            that you’ve been nominated as they consider your application for the
+            regional scholarship or discounts they have available.
           </p>
         )}
+
+        <p>
+          Thanks for your interest in the Professional Learning Program! This
+          application should take 10 - 15 minutes to complete. Fields marked
+          with a <span style={{color: 'red'}}>*</span> are required.
+        </p>
+
+        {!nominated && (
+          <div>
+            <h3> When will I hear back?</h3>
+            <p>
+              In most regions, applications are accepted on a rolling basis. And
+              in most cases, our local partner will get back to you within 2
+              weeks to let you know your application status.
+            </p>
+          </div>
+        )}
+
+        {nominated && (
+          <div>
+            <h3>When will I hear back about the scholarships and discounts?</h3>
+            <p>
+              In most regions, applications are accepted on a rolling basis. And
+              in most cases, our local partner will get back to you within 2
+              weeks to let you know your application status. Even if you don’t
+              get selected for the scholarship, you will still be able to attend
+              if you are an eligible teacher and your school can pay a
+              discounted price (thanks to generous donors).
+            </p>
+          </div>
+        )}
+
+        <h3>Need more information? </h3>
         <p>
           If you need more information about the program before you apply,
           please visit{' '}
@@ -126,26 +175,15 @@ export default class Section1AboutYou extends LabeledFormComponent {
           >
             check out our course and professional learning options.
           </a>{' '}
-          For additional questions regarding the program or application, please
-          <a href={REGIONAL_PARTNER_URL} target="_blank">
-            {' '}
-            contact your Regional Partner.
-          </a>
+          For additional questions regarding the program or application, please{' '}
+          <RegionalPartnerMiniContactPopupLink
+            sourcePageId="teacher-application-first-page"
+            notes="Please tell me more about the professional learning program for grades 6-12!"
+          >
+            <span style={styles.linkLike}>contact your Regional Partner</span>
+          </RegionalPartnerMiniContactPopupLink>
+          .
         </p>
-
-        {nominated && (
-          <div>
-            <h4>When will I hear back about the scholarships and discounts?</h4>
-            <p>
-              In most regions, applications are accepted on a rolling basis. And
-              in most cases, our local partner will get back to you within 2
-              weeks to let you know your application status. Even if you don’t
-              get selected for the scholarship, you will still be able to attend
-              if you are an eligible teacher and your school can pay a
-              discounted price (thanks to our generous donors).
-            </p>
-          </div>
-        )}
 
         <h3>Section 1: {SectionHeaders.section1AboutYou}</h3>
 
@@ -153,13 +191,10 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {this.renderInternationalModal()}
 
-        {this.selectFor('title', {
-          required: false,
-          placeholder: 'Select a title'
-        })}
-
-        {this.inputFor('firstName')}
-        {this.inputFor('lastName')}
+        <Row>
+          <Col md={3}>{this.nameInput('firstName')}</Col>
+          <Col md={3}>{this.nameInput('lastName')}</Col>
+        </Row>
 
         {this.inputFor('accountEmail', {
           value: this.props.accountEmail,
@@ -170,67 +205,8 @@ export default class Section1AboutYou extends LabeledFormComponent {
 
         {this.usPhoneNumberInputFor('phone')}
 
-        {this.inputFor('address')}
-        {this.inputFor('city')}
-        {this.selectFor('state', {placeholder: 'Select a state'})}
         {this.inputFor('zipCode')}
 
-        <p>
-          If you work in a school district, please select your district and
-          school below:
-        </p>
-
-        <FormGroup
-          id="school"
-          controlId="school"
-          validationState={this.getValidationState('school')}
-        >
-          <Row>
-            <Col md={6}>
-              <ControlLabel>
-                School
-                <span style={{color: 'red'}}> *</span>
-              </ControlLabel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <SchoolAutocompleteDropdown
-                value={this.props.data.school}
-                onChange={this.handleSchoolChange}
-              />
-            </Col>
-          </Row>
-        </FormGroup>
-
-        {this.props.data.school && this.props.data.school === '-1' && (
-          <div style={styles.indented}>
-            {this.inputFor('schoolName')}
-            {this.inputFor('schoolDistrictName')}
-            {this.inputFor('schoolAddress')}
-            {this.inputFor('schoolCity')}
-            {this.selectFor('schoolState', {placeholder: 'Select a state'})}
-            {this.inputFor('schoolZipCode')}
-            {this.radioButtonsFor('schoolType')}
-          </div>
-        )}
-
-        {
-          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
-          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
-          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
-        }
-        {this.inputFor('principalFirstName', {autoComplete: 'never'})}
-        {this.inputFor('principalLastName', {autoComplete: 'never'})}
-        {this.inputFor('principalEmail', {autoComplete: 'never'})}
-        {this.inputFor('principalConfirmEmail', {autoComplete: 'never'})}
-        {this.usPhoneNumberInputFor('principalPhoneNumber', {
-          autoComplete: 'never'
-        })}
-
-        {this.radioButtonsWithAdditionalTextFieldsFor('currentRole', {
-          [TextFields.otherPleaseList]: 'other'
-        })}
         {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
         {this.props.data.completingOnBehalfOfSomeoneElse === 'Yes' &&
           this.largeInputFor('completingOnBehalfOfName')}
@@ -276,19 +252,40 @@ export default class Section1AboutYou extends LabeledFormComponent {
       formatErrors.phone = 'Must be a valid phone number including area code';
     }
 
-    if (!UsPhoneNumberInput.isValid(data.principalPhoneNumber)) {
-      formatErrors.principalPhoneNumber =
-        'Must be a valid phone number including area code';
-    }
-
-    if (!isEmail(data.principalEmail)) {
-      formatErrors.principalEmail = 'Must be a valid email address';
-    }
-
-    if (data.principalEmail !== data.principalConfirmEmail) {
-      formatErrors.principalConfirmEmail = 'Must match above email';
-    }
-
     return formatErrors;
   }
 }
+
+const NameInput = ({
+  id,
+  validationState,
+  label,
+  value,
+  handleChange,
+  errorMessage
+}) => (
+  <FormGroup controlId={id} validationState={validationState}>
+    <ControlLabel>
+      {label}
+      {REQUIRED}
+    </ControlLabel>
+    <FormControl
+      type="text"
+      componentClass="input"
+      bsClass="form-control"
+      value={value}
+      onChange={e => handleChange({[id]: e.target.value})}
+    />
+    <HelpBlock>{errorMessage}</HelpBlock>
+  </FormGroup>
+);
+NameInput.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.node,
+  value: PropTypes.any,
+  validationState: PropTypes.any,
+  errorMessage: PropTypes.node,
+  handleChange: PropTypes.func
+};
+
+const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;

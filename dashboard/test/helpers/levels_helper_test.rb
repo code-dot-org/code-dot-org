@@ -646,4 +646,91 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
   end
+
+  test 'render_multi_or_match_content can retrieve plain text' do
+    @level = create :multi, name: "test render_multi_or_match_content plain text"
+    assert_equal render_multi_or_match_content("test"), "test"
+  end
+
+  test 'render_multi_or_match_content can retrieve translated text' do
+    @level = create :multi, name: "test render_multi_or_match_content translation"
+    input = "test text"
+    expected = "translated test text"
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      "data" => {
+        "multi" => {
+          @level.name => {
+            input => expected
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal render_multi_or_match_content(input), expected
+  end
+
+  test 'render_multi_or_match_content will prefer english translations over raw string even in english' do
+    # Note that this isn't necessarily functionality we care about preserving,
+    # but it is how our system currently works
+
+    @level = create :multi, name: "test render_multi_or_match_content english"
+    input = "test text"
+    expected = "stored source test text"
+
+    custom_i18n = {
+      "data" => {
+        "multi" => {
+          @level.name => {
+            input => expected
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
+
+    assert_equal render_multi_or_match_content(input), expected
+  end
+
+  test 'render_multi_or_match_content can generate images' do
+    assert_equal render_multi_or_match_content("example.png"), "<img src='example.png' ></img>"
+  end
+
+  test 'render_multi_or_match_content can generate embedded blockly' do
+    create :level,
+      name: "embedded blockly test",
+      start_blocks: "<xml><block type='embedded_block' /></xml>"
+
+    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
+    #correctly set up in this test context, so we have to mock it.
+    mock_request = mock
+    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    stubs(:request).returns(mock_request)
+
+    assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
+      "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
+      "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
+      "<style>.blocklySvg { background: none; }</style>"\
+      "<script src=\"/js/blockly.js\"></script>"\
+      "<script src=\"/js/en_us/blockly_locale.js\"></script>"\
+      "<script src=\"#{minifiable_asset_path('js/common.js')}\"></script>"\
+      "<script src=\"/js/en_us/maze_locale.js\"></script>"\
+      "<script src=\"#{minifiable_asset_path('js/maze.js')}\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<script src=\"#{minifiable_asset_path('js/embedBlocks.js')}\"></script>"
+
+    unstub(:request)
+  end
+
+  test 'render_multi_or_match_content can generate iframes' do
+    test_level = create :level,
+      name: "embedded iframe test"
+
+    assert_equal render_multi_or_match_content("embedded iframe test.level"),
+      "<div class=\"aspect-ratio\">"\
+      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
+      "</div>"
+  end
 end

@@ -7,9 +7,16 @@ import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
+import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import BorderProperties from './BorderProperties';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
+import designMode from '../designMode';
+import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import themeColor from '../themeColor';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -34,36 +41,36 @@ class TextAreaProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'text'}
-          isMultiLine={true}
+          isMultiLine
           initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -77,9 +84,15 @@ class TextAreaProperties extends React.Component {
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
+        <FontFamilyPropertyRow
+          initialValue={designMode.fontFamilyOptionFromStyle(
+            element.style.fontFamily
+          )}
+          handleChange={this.props.handleChange.bind(this, 'fontFamily')}
+        />
         <PropertyRow
           desc={'font size (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
@@ -88,6 +101,21 @@ class TextAreaProperties extends React.Component {
           initialValue={element.style.textAlign || 'left'}
           options={['left', 'right', 'center', 'justify']}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'read only'}
@@ -151,7 +179,7 @@ class TextAreaEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow />
         <EventRow
@@ -167,15 +195,103 @@ class TextAreaEvents extends React.Component {
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      ...themeColor.textAreaBackground
+    },
+    borderRadius: {
+      default: 2,
+      orange: 2,
+      citrus: 4,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 8,
+      watermelon: 20,
+      area51: 20,
+      polar: 8,
+      glowInTheDark: 0,
+      bubblegum: 8,
+      millennial: 8,
+      robot: 0,
+      classic: 0
+    },
+    borderWidth: {
+      default: 1,
+      orange: 0,
+      citrus: 0,
+      ketchupAndMustard: 2,
+      lemonade: 0,
+      forest: 0,
+      watermelon: 0,
+      area51: 0,
+      polar: 2,
+      glowInTheDark: 0,
+      bubblegum: 0,
+      millennial: 0,
+      robot: 1,
+      classic: 1
+    },
+    borderColor: {
+      type: 'color',
+      ...themeColor.textAreaBorder
+    },
+    textColor: {
+      type: 'color',
+      ...themeColor.textArea
+    },
+    fontFamily: {
+      default: 'Arial',
+      orange: 'Arial',
+      citrus: 'Palatino',
+      ketchupAndMustard: 'Tahoma',
+      lemonade: 'Arial',
+      forest: 'Arial',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Arial',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Trebuchet',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
+    }
+  },
 
   create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    element.style.fontSize = '14px';
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#ffffff';
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
+      element.style.color = themeColor.textArea.classic;
+      element.style.backgroundColor = themeColor.textAreaBackground.classic;
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     $(element).addClass('textArea');
 
@@ -185,6 +301,11 @@ export default {
   },
 
   onDeserialize: function(element) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element, {textInput: true});
+    // Set the font family for older projects that didn't set them on create:
+    elementUtils.setDefaultFontFamilyStyle(element);
+
     $(element).addClass('textArea');
 
     $(element).on('mousedown', function(e) {

@@ -90,7 +90,7 @@ it:
           a rivivere i momenti migliori, mentre indica loro i prossimi passi da intraprendere
           se sono interessati a continuare la loro escursione nell'informatica.
       UnplugHappyMaps:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       MoveIt:
@@ -110,10 +110,10 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       GettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       RelayProgramming:
         title: Programmazione a Staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
@@ -127,13 +127,13 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       BigEvent:
-        title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+        title: Gli eventi
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
           introduce come navigare su Internet in modo sicuro.
       GraphPaperProgramming:
@@ -142,18 +142,18 @@ it:
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       PaperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       BinaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
-        title: La tua Impronta Digitale
+        title: La tua impronta digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
           le loro informazioni personali crea un'impronta digitale che lascia tracce
           riconoscibili e sfruttabili.
@@ -285,7 +285,7 @@ it:
         title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseE_unplugged_privateInformation:
-        title: 'Cittadinanza Digitale: Dati Personali'
+        title: 'Cittadinanza digitale: Dati personali '
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
@@ -298,21 +298,21 @@ it:
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       courseA_unplugged_happyMaps:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
           introduce come navigare su Internet in modo sicuro.
       courseABC_unplugged_bigEvent:
-        title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+        title: Gli eventi
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
-        title: La tua Impronta Digitale
+        title: La tua impronta digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
           le loro informazioni personali crea un'impronta digitale che lascia tracce
           riconoscibili e sfruttabili.
@@ -323,18 +323,18 @@ it:
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
           di insistere quando i problemi sono complicati.
       courseC_unplugged_paperPlanes:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       courseC_unplugged_gettingLoopy:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_unplugged_binaryBracelets:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
@@ -412,7 +412,7 @@ it:
           gli studenti a comprendere intuitivamente perché raggruppare blocchi di
           codice all'interno di funzioni è un'utile pratica.
       courseB_unplugged_MRF_2018:
-        title: I Miei Amici Robotici
+        title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       PlantASeed_2018:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
@@ -421,19 +421,19 @@ it:
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       UnplugHappyMaps_2018:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
           introduce come navigare su Internet in modo sicuro.
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
-        title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+        title: Gli eventi
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
@@ -455,7 +455,7 @@ it:
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
-        title: La tua Impronta Digitale
+        title: La tua impronta digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
           le loro informazioni personali crea un'impronta digitale che lascia tracce
           riconoscibili e sfruttabili.
@@ -468,25 +468,25 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       PaperPlanes_2018:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       GettingLoopy_2018:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       BinaryBracelets_2018:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       MoveItMoveIt_2018:
         title: Muovilo, muovilo
       courseB_unplugged_CnC_2018:
-        title: È Fantastico Creare e Comportarsi Lealmente
+        title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
           Code.org e serve per aiutare gli studenti a capire il processo di condivisione
           e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
@@ -506,8 +506,10 @@ it:
           tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
           un programma un''istruzione alla volta.'
       courseB_unplugged_MRF_2019:
-        title: I Miei Amici Robotici
+        title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
+      courseB_unplugged_loopyMRF_2019:
+        title: 'Cicli: I miei ciclici amici robotici'
       Conditionals_2019:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -535,6 +537,8 @@ it:
           lezione sviluppa ulteriormente questo concetto illustrando come un computer
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
+      courseE_unplugged_privateInformation_2019:
+        title: Cittadinanza digitale - Dati personali
       courseE_unplugged_CnC_2019:
         title: Condivisione Digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
@@ -544,27 +548,27 @@ it:
           i diritti degli artisti come parte integrante dell'etica di un buon cittadino
           digitale.
       GettingLoopy_2019:
-        title: Diventare Ripetitivi
+        title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
-          (istruzioni ripetute) attraverso una danza. Gli studenti imparano una semplice
-          coreografia e sono istruiti a ripeterla.
+          (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
+          una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
           rete.
       BigEvent_2019:
-        title: Gli Eventi
-        desc: Gli studenti vengono introdotti al concetto di "eventi" nella programmazione.
+        title: Gli eventi
+        desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
           Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
           o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       BinaryBracelets_2019:
-        title: Braccialetti Binari
+        title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
           binario la prima lettera del loro nome. Imparano quindi che i dati possono
           essere rappresentati e memorizzati in più di un modo.
       PaperPlanes_2019:
-        title: 'Algoritmi della Vita Reale: Aeroplani di Carta'
+        title: 'Algoritmi della vita reale: aeroplani di carta'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, nel caso
           specifico costruire un aeroplano di carta. Viene discussa anche una visione
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
@@ -576,11 +580,11 @@ it:
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       UnplugHappyMaps_2019:
-        title: Mappe Felici
+        title: Mappe felici
         desc: Gli studenti creano semplici algoritmi (sequenze di istruzioni) per
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
-        title: Cittadinanza Digitale - Visitare Luoghi in Modo Sicuro
+        title: Cittadinanza digitale - Visitare luoghi in modo sicuro
         desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
           introduce come navigare su Internet in modo sicuro.
       courseA_unplugged_loops_2019:
@@ -589,13 +593,20 @@ it:
       MoveItMoveIt_2019:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
-        title: La tua Impronta Digitale
+        title: La tua impronta digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
           le loro informazioni personali crea un'impronta digitale che lascia tracce
           riconoscibili e sfruttabili.
       courseB_unplugged_CnC_2019:
-        title: È Fantastico Creare e Comportarsi Lealmente
+        title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
           Code.org e serve per aiutare gli studenti a capire il processo di condivisione
           e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
+      timeforcs_demo_crowdsourcing:
+        title: Intelligenza Collettiva
+      timeforcs_demo_conditionals:
+        title: Istruzioni condizionali
+        desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
+          carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
+          e "SE estraggo una carta nera tu ottieni un punto".

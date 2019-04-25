@@ -10,6 +10,7 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import {ICON_PREFIX_REGEX} from '../constants';
 import EnumPropertyRow from './EnumPropertyRow';
+import BorderProperties from './BorderProperties';
 import * as elementUtils from './elementUtils';
 import {applabObjectFitImages} from '../applabObjectFitImages';
 
@@ -51,29 +52,29 @@ class ImageProperties extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <PropertyRow
           desc={'width (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
           desc={'height (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
           desc={'x position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
           desc={'y position (px)'}
-          isNumber={true}
+          isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
@@ -89,6 +90,21 @@ class ImageProperties extends React.Component {
           initialValue={element.style.objectFit || 'fill'}
           options={['fill', 'cover', 'contain', 'none']}
           handleChange={this.props.handleChange.bind(this, 'objectFit')}
+        />
+        <BorderProperties
+          element={element}
+          handleBorderWidthChange={this.props.handleChange.bind(
+            this,
+            'borderWidth'
+          )}
+          handleBorderColorChange={this.props.handleChange.bind(
+            this,
+            'borderColor'
+          )}
+          handleBorderRadiusChange={this.props.handleChange.bind(
+            this,
+            'borderRadius'
+          )}
         />
         <BooleanPropertyRow
           desc={'hidden'}
@@ -140,7 +156,7 @@ class ImageEvents extends React.Component {
           desc={'id'}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
-          isIdRow={true}
+          isIdRow
         />
         <EventHeaderRow />
         <EventRow
@@ -180,6 +196,7 @@ export default {
     const element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
+    elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
 
@@ -191,6 +208,9 @@ export default {
     return element;
   },
   onDeserialize: function(element, updateProperty) {
+    // Set border styles for older projects that didn't set them on create:
+    elementUtils.setDefaultBorderStyles(element);
+
     const url = element.getAttribute('data-canonical-image-url') || '';
     if (url) {
       updateProperty(element, 'picture', url);

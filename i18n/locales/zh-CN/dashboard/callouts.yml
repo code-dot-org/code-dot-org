@@ -42,16 +42,25 @@ zh-CN:
         grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY Embed_2018_callout:
         grid: 点击这里显示网格。
+      CSD U3 Variables Predict Where XY Embed_2019_callout:
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY_callout:
         grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY_2018_callout:
         grid: 点击这里显示网格。
+      CSD U3 Variables Predict Where XY_2019_callout:
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: 改动这里的数字
+      CSD U3 Variables Predict Where X_2019_callout:
         CSD_U3_variables: 改动这里的数字
       CSD U3 debug_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U3 debug_2019_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 ellipse_callout:
@@ -60,10 +69,16 @@ zh-CN:
       CSD U3 ellipse_2018_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 fill_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U3 fill_2019_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 my-rect_callout:
@@ -74,35 +89,52 @@ zh-CN:
         CSD_U3_rect_c2: 这是"运行"按钮。
       CSD U3 rect_2018_callout:
         CSD_U3_rect_c1: 这是代码
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: 这是代码
       CSD U3 sequence_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 sequence_2018_callout:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U6 colorLeds intensity_callout:
         CSDU6L10_rainbow: 在此处添加代码
       CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: 在此处添加代码
+      CSD U6 colorLeds intensity_2019_callout:
         CSDU6L10_rainbow: 在此处添加代码
       CSD U6 light show predict_callout:
         CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show predict_2018_callout:
         CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show predict_2019_callout:
+        CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show_callout:
         CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show_2018_callout:
+        CSDUDL03P09: 这条线是做什么用的？
+      CSD U6 light show_2019_callout:
         CSDUDL03P09: 这条线是做什么用的？
       CSD U6 tugowar variables 1_callout:
         CSD_U6_startGame: 在此处定义 开始游戏
       CSD U6 tugowar variables 1_2018_callout:
         CSD_U6_startGame: 在此处定义 开始游戏
+      CSD U6 tugowar variables 1_2019_callout:
+        CSD_U6_startGame: 在此处定义 开始游戏
       CSD U6 tugowar variables 2_callout:
         CSD_U6_movePlayer: 在这里定义 移动玩家 ()
       CSD U6 tugowar variables 2_2018_callout:
         CSD_U6_movePlayer: 在这里定义 移动玩家 ()
+      CSD U6 tugowar variables 2_2019_callout:
+        CSD_U6_movePlayer: 在这里定义 移动玩家 ()
       CSD U6 tugowar variables 3_callout:
         CSD_U6_checkWin: 检查玩家是否赢了
       CSD U6 tugowar variables 3_2018_callout:
+        CSD_U6_checkWin: 检查玩家是否赢了
+      CSD U6 tugowar variables 3_2019_callout:
         CSD_U6_checkWin: 检查玩家是否赢了
       Counting_callout:
         New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
@@ -176,6 +208,17 @@ zh-CN:
         Course_4_Playlab_For_Loops_4b_2: 在这道关卡中，你只允许修改“计数循环”中的“增量”。
       Course 4 SCV 6_callout:
         Course_4_SCV_6: 这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！
+      CourseD_Dance_Party_01_callout:
+        dance_callout_01: 向程序里增加这个模块！
+      CourseD_Dance_Party_02_callout:
+        dance_callout_02: 向程序里增加这个模块！
+      CourseD_Dance_Party_04_callout:
+        dance_callout_04: 向程序里增加这个模块！
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: 在这里添加新的跳舞者
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: 新模块！
+        dance_callout_11_b: 新模块！
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 使用箭头移动演员
       CourseF_PlayLab_vars10_callout:
@@ -375,6 +418,8 @@ zh-CN:
       U3L08 how to add comments_callout:
         comment_highlight: 将注释块从这里拖到代码中
       U3L08 how to add comments_2018_callout:
+        comment_highlight: 将注释块从这里拖到代码中
+      U3L08 how to add comments_2019_callout:
         comment_highlight: 将注释块从这里拖到代码中
       Underground Avoiding Lava_callout:
         craft_callout_moveforward: 此代码会检查岩浆，你能添加一条向前移动的命令吗？

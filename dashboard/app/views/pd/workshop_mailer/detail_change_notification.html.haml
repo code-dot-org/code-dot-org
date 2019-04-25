@@ -8,10 +8,11 @@
   = @enrollment.first_name + ','
 
 %p
-  Some details about your upcoming
+  This is a quick email to let you know some details about your upcoming
   = @workshop.course_name
   = @workshop.subject
   workshop have changed.
+  %br We look forward to seeing you there and hope these changes don’t impact your availability.
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'

@@ -25,7 +25,8 @@ class GameLabVisualizationHeader extends React.Component {
       GameLabInterfaceMode.ANIMATION
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
-    onInterfaceModeChange: PropTypes.func.isRequired
+    onInterfaceModeChange: PropTypes.func.isRequired,
+    spriteLab: PropTypes.bool.isRequired
   };
 
   render() {
@@ -37,12 +38,16 @@ class GameLabVisualizationHeader extends React.Component {
     return (
       <div style={styles.main} id="playSpaceHeader">
         <ToggleGroup selected={interfaceMode} onChange={onInterfaceModeChange}>
-          <button value={GameLabInterfaceMode.CODE} id="codeMode">
+          <button type="button" value={GameLabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
           {allowAnimationMode && (
-            <button value={GameLabInterfaceMode.ANIMATION} id="animationMode">
-              {msg.animationMode()}
+            <button
+              type="button"
+              value={GameLabInterfaceMode.ANIMATION}
+              id="animationMode"
+            >
+              {this.props.spriteLab ? msg.costumeMode() : msg.animationMode()}
             </button>
           )}
         </ToggleGroup>
@@ -53,7 +58,8 @@ class GameLabVisualizationHeader extends React.Component {
 export default connect(
   state => ({
     interfaceMode: state.interfaceMode,
-    allowAnimationMode: allowAnimationMode(state)
+    allowAnimationMode: allowAnimationMode(state),
+    spriteLab: state.pageConstants.isBlockly
   }),
   dispatch => ({
     onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))

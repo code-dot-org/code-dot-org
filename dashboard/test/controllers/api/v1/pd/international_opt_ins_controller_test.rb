@@ -15,6 +15,7 @@ class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestC
     subjects: ['ICT'],
     resources: ['Kodable'],
     robotics: ['LEGO Education'],
+    date: '2019-02-18',
     workshop_organizer: 'Workshop Organizer',
     workshop_facilitator: 'Workshop Facilitator',
     workshop_course: 'Workshop Course',

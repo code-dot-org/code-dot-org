@@ -9,7 +9,7 @@ theme: responsive
 
 <div class="col-66" style="padding-right: 20px;">
 
-The Circuit Playground Classic is a small microcontroller board with LEDs, buttons, and sensors built in. Based on the popular Arduino platform, the Circuit Playground Classic enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
+The Circuit Playground is family of small microcontroller boards with LEDs, buttons, and sensors built in. Designed specifically for novice programmers, the Circuit Playground enables students to get up and running quickly with physical computing without worrying about many of the traditional barriers to entry. Developed by our friends at <a href="//adafruit.com">Adafruit</a>, the Circuit Playground is the core tool used in <a href="//studio.code.org/s/csd6">CS Discoveries Unit 6, Physical Computing</a>.
 
 </div>
 
@@ -27,7 +27,7 @@ The Circuit Playground Classic is a small microcontroller board with LEDs, butto
 
 <div class="col-66" style="padding-left: 20px;">
 
-The Circuit Playground is built on the popular Arduino family of microcontrollers. This meas that there are a variety of options for programming the Circuit Playground, including using the standard Arduino IDE. Code.org, however, has developed a special set of commands for <a href="/applab/">App Lab</a>, our block-to-text app development environment, called the Maker Toolkit. Using App Lab and the Maker Toolkit, students can quickly build apps that communicate with external hardware using the same language and environment they've already become comfortable with.
+Code.org has developed a special set of commands for <a href="/applab/">App Lab</a>, our block-to-text app development environment, called the Maker Toolkit. Using App Lab and the Maker Toolkit, students can quickly build apps that communicate with external hardware using the same language and environment they've already become comfortable with.
 
 </div>
 
@@ -36,13 +36,18 @@ The Circuit Playground is built on the popular Arduino family of microcontroller
 
 ## <a name="requirements"></a>Software Requirements
 
-One of our primary goals in integrating the Circuit Playground into CS Discoveries is to remove the barriers that teachers often encounter attempting to teach physical computing. To that end, we've developed a system that requires only minimal software installation and wide platform compatibility. If using Chromebooks, we've provided a browser extension to install. For all other platforms, we've created a standalone app that allows the programming tools on our website to communicate with the Circuit Playground over USB. Visit the [Maker Toolkit setup page](//studio.code.org/maker/setup) for more details on how to get your computers set up.
+One of our primary goals in integrating the Circuit Playground into CS Discoveries is to reduce the barriers that teachers often encounter attempting to teach physical computing. To that end, we've developed a system that requires only minimal software installation and wide platform compatibility. If using Chromebooks, we've provided a browser extension to install. For all other platforms, we've created a standalone app that allows the programming tools on our website to communicate with the Circuit Playground over USB. Visit the [Maker Toolkit setup page](//studio.code.org/maker/setup) for more details on how to get your computers set up.
 
 ### <a name="difference"></a>What’s the difference between App Lab, Circuit Playground, and Maker Toolkit?
 
 **App Lab** is a web-based programming environment for building apps using Javascript with either blocks or text. App Lab features prominently in both CS Principles and CS Discoveries
 
-The **Circuit Playground** is an Arduino-based circuit board produced by Adafruit. It has a variety of sensors and ouputs built in.
+The **Circuit Playground** is an series of circuit boards produced by Adafruit with a variety of sensors and ouputs built in. There are two variants of the Circuit Playground, both compatible with CS Discoveries:
+
+* The Circuit Playground Classic - the first version of this board which can be programmed with either Maker Toolkit or the Arduino IDE
+* The Circuit Playground Express - the newer version of this board which can be programmed with the Maker Toolkit, Microsoft Makecode, Scratch 3.0, Circuit Python, and more .
+
+_Wondering which version you have? Check out [Adafruit's guide](https://learn.adafruit.com/introducing-circuit-playground/classic-vs-express)._
 
 The **Maker Toolkit** is an additional set of commands in App Lab that allow you to communicate with and control a Circuit Playground plugged into USB. You can enable the Maker Toolkit in any App Lab project by clicking the settings gear above the toolbox and selecting "Enable Maker Toolkit."
 
@@ -54,21 +59,21 @@ The **Maker App** is a standalone app that allows the Circuit Playground to comm
 
 Code.org has partnered with Adafruit to create a <a href="//www.adafruit.com/product/3399", target="_blank">classroom kit</a> of Circuit Playground boards and accessories necessary for implementing CS Discoveries Unit 6, Physical Computing. The kit contains 15 Circuit Playground boards,
  15 Micro USB cables to connect the board to a computer, and a few other accessories. The curriculum is designed for a 2:1 student to board ratio, so a single classroom kit supports a classroom of 30 students.
- 
+
  </div>
- 
+
  <div class="col-33">
  <img src="/images/cp_class_pack.jpg" style="max-width: 90%; margin: 0 0 20px 20px;">
  </div>
- 
+
 ### <a name="subsidy"></a> For teachers in Code.org's 2018-19 CS Discoveries Professional Learning Program
-For teachers participating in the 2018-19 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we 
-will be subsidizing the cost of a single classroom kit for each teacher. 
+For teachers participating in the 2018-19 CS Discoveries Professional Learning Program and implementing the full-year version of the course, we're happy to announce that we
+will be subsidizing the cost of a single classroom kit for each teacher.
 
 To receive a fully subsidized circuit playground, teachers must meet **all** of the following requirements:
 
-* Be a "qualified teacher" in the 2018-19 Code.org Profesional Learning Program for CS Discoveries. Qualified teachers must have either: attended a 5-day summer workshop for CS Discoveries in 2018 as a participant, OR are participating in the 2018-19 Facilitator Development Program as a new CS Discoveries facilitator.
-* Completed the first semester of the CS Discoveries curriculum with students. Qualified teachers mus have at least one section of CS Discoveries on Code.org with at least 10 students who have made measureable progress in Units 2 **and** 3. (Note: content learned in Unit 3 is a prerequisite for Unit 6)
+* Be a "qualified teacher" in the 2018-19 Code.org Professional Learning Program for CS Discoveries. Qualified teachers must have either: attended a 5-day summer workshop for CS Discoveries in 2018 as a participant, OR are participating in the 2018-19 Facilitator Development Program as a new CS Discoveries facilitator.
+* Completed the first semester of the CS Discoveries curriculum with students. Qualified teachers must have at least one section of CS Discoveries on Code.org with at least 10 students who have made measurable progress in Units 2 **and** 3. (Note: content learned in Unit 3 is a prerequisite for Unit 6)
 * Will teach Unit 6 by the end of the 2019-20 school year.
 
 If you meet **all** of the eligibility requirements, you will qualify for a subsidy based on the free and reduced price meal rates at your school (based on data from the <a href="https://nces.ed.gov/", target="_blank">National Center for Education Statistics</a>):
@@ -82,5 +87,4 @@ If a teacher has a smaller class size and does not qualify for or need a full 15
 
 ### For teachers independently using the CS Discoveries curriculum
 
-While teachers not in the 2018-19 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on <a href="https://www.adafruit.com/product/3399", target="_blank">Adafruit's website</a>. 
-
+While teachers not in the 2018-19 CS Discoveries Professional Learning Program are not eligible for the subsidized cost of the kit, the classroom kit can still be purchased directly on <a href="https://www.adafruit.com/product/3399", target="_blank">Adafruit's website</a>.

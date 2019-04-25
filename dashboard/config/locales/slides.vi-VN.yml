@@ -1132,8 +1132,6 @@ vi:
           dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1
           mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi
           là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình.
-      3: 
-      4: 
       5:
         text: Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến
           thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút "Thiết lập lại"
@@ -1280,26 +1278,10 @@ vi:
       4:
         text: Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!
     gumball_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
-      7: 
-      8: 
-      9: 
     iceage_intro:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
-      7: 
-      8: 
-      9: 

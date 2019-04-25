@@ -6,7 +6,7 @@ import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
-import {getIconForLevel} from './progressHelpers';
+import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {levelType} from './progressTypes';
 import {
   DOT_SIZE,
@@ -43,11 +43,7 @@ const styles = {
       'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
     marginBottom: 3,
-    // ReactTooltip sets a zIndex of 999. However, because in some cases for us
-    // the ReactTooltip is inside of a rotated div, it ends up in a different
-    // stacking context, and the zIndex doesn't work. Instead we set it here on
-    // the top component
-    zIndex: 999
+    position: 'relative'
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
@@ -79,6 +75,23 @@ const styles = {
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
+  },
+  disabledStageExtras: {
+    backgroundColor: color.lighter_gray,
+    color: color.white
+  },
+  assessmentIcon: {
+    position: 'absolute',
+    top: -12,
+    right: -12
+  },
+  assessmentIconCheck: {
+    color: color.purple,
+    fontSize: 16
+  },
+  assessmentIconCircle: {
+    color: color.white,
+    fontSize: 18
   }
 };
 
@@ -101,7 +114,10 @@ class ProgressBubble extends React.Component {
     currentLocation: PropTypes.object.isRequired,
     stageTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
-    hideToolTips: PropTypes.bool
+    hideToolTips: PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool,
+    hideAssessmentIcon: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   static defaultProps = {
@@ -116,8 +132,12 @@ class ProgressBubble extends React.Component {
       selectedStudentId,
       currentLocation,
       stageTrophyEnabled,
-      pairingIconEnabled
+      pairingIconEnabled,
+      hideAssessmentIcon,
+      inMiniRubricExperiment
     } = this.props;
+
+    const levelIsAssessment = isLevelAssessment(level);
 
     const number = level.levelNumber;
     const url = level.url;
@@ -125,7 +145,7 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
-    const hideNumber = levelIcon === 'lock' || level.paired;
+    const hideNumber = levelIcon === 'lock' || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -133,12 +153,14 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled)
+      ...levelProgressStyle(level, disabled),
+      ...(disabled && level.bonus && styles.disabledStageExtras)
     };
 
     let href = '';
     if (!disabled && url) {
       const queryParams = queryString.parse(currentLocation.search);
+
       if (selectedSectionId) {
         queryParams.section_id = selectedSectionId;
       }
@@ -148,7 +170,12 @@ class ProgressBubble extends React.Component {
       const paramString = queryString.stringify(queryParams);
       href = url;
       if (paramString.length > 0) {
-        href += '?' + paramString;
+        // If href already has 1 or more query params, our delimiter will be '&'.
+        // If href has no query params, our delimiter is '?'.
+        // TODO: (madelynkasula) Refactor this logic to use queryString.parseUrl(href)
+        // instead. Our current version of query-string (4.1.0) does not yet have this method.
+        const delimiter = /\?/.test(href) ? '&' : '?';
+        href += delimiter + paramString;
       }
     }
 
@@ -164,6 +191,8 @@ class ProgressBubble extends React.Component {
         tooltipId={tooltipId}
         icon={levelIcon}
         text={tooltipText}
+        includeAssessmentIcon={levelIsAssessment}
+        inMiniRubricExperiment={inMiniRubricExperiment}
       />
     );
 
@@ -174,6 +203,7 @@ class ProgressBubble extends React.Component {
           text={i18n.unpluggedActivity()}
           fontSize={16}
           tooltip={this.props.hideToolTips ? null : tooltip}
+          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       );
     }
@@ -196,7 +226,7 @@ class ProgressBubble extends React.Component {
           <div style={style} className="uitest-bubble">
             <div
               style={{
-                fontSize: level.paired ? 14 : 16,
+                fontSize: level.paired || level.bonus ? 14 : 16,
                 ...styles.contents,
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
@@ -205,15 +235,33 @@ class ProgressBubble extends React.Component {
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
+              {level.bonus && <FontAwesome icon="flag-checkered" />}
               {!hideNumber && (
                 <span>
-                  {/*Text will not show up for smallBubble, but it's presence
+                  {/*Text will not show up for smallBubble, but its presence
                     causes bubble to be properly aligned vertically
                     */}
                   {smallBubble ? '' : number}
                 </span>
               )}
             </div>
+            {inMiniRubricExperiment &&
+              levelIsAssessment &&
+              !smallBubble &&
+              !hideAssessmentIcon && (
+                <span className="fa-stack" style={styles.assessmentIcon}>
+                  <FontAwesome
+                    icon="circle"
+                    className="fa-stack-1x"
+                    style={styles.assessmentIconCircle}
+                  />
+                  <FontAwesome
+                    icon="check-circle"
+                    className="fa-stack-1x"
+                    style={styles.assessmentIconCheck}
+                  />
+                </span>
+              )}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>

@@ -9,7 +9,7 @@ import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {StatusColors} from './constants';
+import {StatusColors, ApplicationStatuses} from './constants';
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
@@ -102,6 +102,15 @@ export class CohortViewTable extends React.Component {
 
     let columns = [
       {
+        property: 'id',
+        header: {
+          label: 'View Application'
+        },
+        cell: {
+          format: this.formatViewButton
+        }
+      },
+      {
         property: 'date_accepted',
         header: {
           label: 'Date Accepted',
@@ -146,9 +155,9 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: status => {
-            return _.upperFirst(status);
-          },
+          format: status =>
+            ApplicationStatuses[this.props.viewType][status] ||
+            _.upperFirst(status),
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -243,16 +252,6 @@ export class CohortViewTable extends React.Component {
           ]
         }
       });
-    });
-
-    columns.push({
-      property: 'id',
-      header: {
-        label: 'View Application'
-      },
-      cell: {
-        format: this.formatViewButton
-      }
     });
 
     this.columns = columns;

@@ -23,20 +23,21 @@ he:
       Text: טקסט
       Picker: בוחר
       Comment: תגובה
-      'Variables ': 'משתנים '
-      everythingelse: כלהשאר
-      numbers: מספרים
-      Numbers: מספרים
-      Default: ברירת מחדל
       World: עולם
       Behaviors: התנהגויות
-      Advanced: מתקדם
-      Start: התחל
+      'Variables ': 'משתנים '
+      Default: ברירת מחדל
       Locations: מיקומים
-      Music: מוסיקה
-      Dancing: ריקוד
+      everythingelse: כלהשאר
+      Location: מיקום
+      numbers: מספרים
+      Numbers: מספרים
       Dancers: רקדנים
       Groups: קבוצות
+      Advanced: מתקדם
+      Start: התחל
+      Music: מוסיקה
+      Dancing: ריקוד
       Sprite: ספרייט
       Brush: מברשת
       Make Sprite: צור ספרייט

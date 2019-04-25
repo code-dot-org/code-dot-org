@@ -278,7 +278,7 @@ export default class FormController extends React.Component {
 
     if (shouldShowError) {
       return (
-        <Alert bsStyle="danger">
+        <Alert key="error-header" bsStyle="danger">
           <h3>{this.state.errorHeader}</h3>
         </Alert>
       );
@@ -363,10 +363,14 @@ export default class FormController extends React.Component {
    * @return {boolean} true if this page is valid, false if any required fields
    *         are missing
    */
-  validateCurrentPageRequiredFields() {
-    const currentPage = this.getCurrentPageComponent();
+  validatePageRequiredFields(pageIndex) {
+    if (pageIndex < 0 || pageIndex >= this.getPageComponents().length) {
+      throw `Invalid page index ${pageIndex}`;
+    }
+
+    const page = this.getPageComponents()[pageIndex];
     const requiredFields = this.getRequiredFields();
-    const pageFields = currentPage.associatedFields;
+    const pageFields = page.associatedFields;
 
     // Trim string values on page, and set empty strings to null
     let pageData = {};
@@ -380,7 +384,7 @@ export default class FormController extends React.Component {
       }
     });
 
-    pageData = Object.assign(pageData, currentPage.processPageData(pageData));
+    pageData = Object.assign(pageData, page.processPageData(pageData));
     this.setState({
       data: {
         ...this.state.data,
@@ -392,7 +396,7 @@ export default class FormController extends React.Component {
       requiredFields.includes(f)
     );
     const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
-    const formatErrors = currentPage.getErrorMessages(pageData);
+    const formatErrors = page.getErrorMessages(pageData);
 
     if (missingRequiredFields.length || Object.keys(formatErrors).length) {
       this.setState({
@@ -407,6 +411,13 @@ export default class FormController extends React.Component {
     }
 
     return true;
+  }
+
+  /**
+   * validate the current page
+   */
+  validateCurrentPageRequiredFields() {
+    return this.validatePageRequiredFields(this.state.currentPage);
   }
 
   /**
@@ -492,7 +503,7 @@ export default class FormController extends React.Component {
     );
 
     return (
-      <FormGroup className="text-center">
+      <FormGroup key="control-buttons" className="text-center">
         {backButton}
         {pageButtons}
         {nextButton}

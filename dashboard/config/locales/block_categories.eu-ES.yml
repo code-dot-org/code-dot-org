@@ -23,19 +23,20 @@ eu:
       Text: Testua
       Picker: Hautatzailea
       Comment: Iruzkina
-      'Variables ': 'Aldagaiak '
-      everythingelse: besteguztia
-      numbers: zenbakiak
-      Numbers: Zenbakiak
-      Default: Lehenetsia
       World: Mundua
       Behaviors: Jokabideak
-      Advanced: Aurreratua
-      Start: Hasiera
+      'Variables ': 'Aldagaiak '
+      Default: Lehenetsia
       Locations: Kokalekuak
-      Dancing: Dantzan
+      everythingelse: besteguztia
+      Location: Kokalekua
+      numbers: zenbakiak
+      Numbers: Zenbakiak
       Dancers: Dantzariak
       Groups: Taldeak
+      Advanced: Aurreratua
+      Start: Hasiera
+      Dancing: Dantzan
       Sprite: Sprite
       Brush: Pintzela
       Make Sprite: Pribatu egin

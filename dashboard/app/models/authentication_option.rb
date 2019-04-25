@@ -29,6 +29,9 @@ class AuthenticationOption < ApplicationRecord
   before_validation :normalize_email, :hash_email,
     :remove_student_cleartext_email, :fill_authentication_id
 
+  validates :email, no_utf8mb4: true
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
+
   validate :email_must_be_unique, :hashed_email_must_be_unique,
     :cred_type_and_auth_id_must_be_unique
 
@@ -54,7 +57,9 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    WINDOWS_LIVE
+    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
+    WINDOWS_LIVE,
+    MICROSOFT
   ]
 
   def oauth?
@@ -62,7 +67,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def remove_student_cleartext_email
-    self.email = '' if user.student?
+    self.email = '' if user&.student?
   end
 
   def fill_authentication_id

@@ -214,11 +214,15 @@
     "display_name": "Sample Game",
     "parent_level_id": 5639,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted_examples": "MotG4NpN9JfYk9bZbK5W4kbkbmhM93FJ5T11cfOjs74kjgyPIX0VqhQS/T4b\nhBhGfwAqFIo66U9nBLbpvH5IuQ==\n",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 16:34:23 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 16:43:14 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 16:34:23 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 16:43:14 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-01 20:22:10 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

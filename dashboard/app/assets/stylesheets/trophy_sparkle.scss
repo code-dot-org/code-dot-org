@@ -1,0 +1,39 @@
+.sparkle {
+  position: absolute;
+  animation: loop 5s infinite linear;
+}
+.sparkle1 {
+  left: 251px;
+  top: 66px;
+  width: 20px;
+}
+.sparkle2 {
+  left: 281px;
+  top: 8px;
+  width: 30px;
+  animation-delay: 500ms;
+}
+.sparkle3 {
+  left: 286px;
+  top: 91px;
+  width: 25px;
+  animation-delay: 1000ms;
+}
+
+@keyframes loop {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}

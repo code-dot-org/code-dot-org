@@ -1,5 +1,5 @@
 {
-  "category": "Location",
+  "category": "Math",
   "config": {
     "func": "distance",
     "blockText": "distance from {LOCATION1} to {LOCATION2}",

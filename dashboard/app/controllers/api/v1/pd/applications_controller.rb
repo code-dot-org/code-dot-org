@@ -7,6 +7,7 @@ module Api::V1::Pd
     # Api::CsvDownload must be included after load_and_authorize_resource so the auth callback runs first
     include Api::CsvDownload
     include Pd::Application::ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     REGIONAL_PARTNERS_ALL = "all"
     REGIONAL_PARTNERS_NONE = "none"
@@ -76,15 +77,6 @@ module Api::V1::Pd
       end
     end
 
-    COHORT_VIEW_STATUSES = %w(
-      accepted
-      accepted_not_notified
-      accepted_notified_by_partner
-      accepted_no_cost_registration
-      paid
-      withdrawn
-    )
-
     # GET /api/v1/pd/applications/cohort_view?role=:role&regional_partner_value=:regional_partner
     def cohort_view
       role = params[:role]
@@ -145,6 +137,11 @@ module Api::V1::Pd
         summer_workshop_changed = true
       end
 
+      if @application.application_type == TEACHER_APPLICATION && application_data[:scholarship_status] != @application.scholarship_status
+        scholarship_status_changed = true
+      end
+      scholarship_status = application_data.delete(:scholarship_status)
+
       if application_data[:response_scores]
         application_data[:response_scores] = JSON.parse(application_data[:response_scores]).transform_keys {|x| x.to_s.underscore}.to_json
       end
@@ -175,9 +172,8 @@ module Api::V1::Pd
 
             if locked_param != @application.locked?
               lock_changed = true
+              locked_param ? @application.lock! : @application.unlock!
             end
-
-            locked_param ? @application.lock! : @application.unlock!
           end
         end
 
@@ -187,6 +183,8 @@ module Api::V1::Pd
       unless @application.update(application_data)
         return render status: :bad_request, json: {errors: @application.errors.full_messages}
       end
+
+      @application.update_scholarship_status(scholarship_status) if scholarship_status_changed
 
       @application.update_status_timestamp_change_log(current_user) if status_changed
       @application.log_fit_workshop_change(current_user) if fit_workshop_changed

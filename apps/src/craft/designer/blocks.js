@@ -627,7 +627,6 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput().appendTitle(i18n.forever());
       this.appendStatementInput('DO').appendTitle(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
-      this.setNextStatement(true);
     }
   };
 

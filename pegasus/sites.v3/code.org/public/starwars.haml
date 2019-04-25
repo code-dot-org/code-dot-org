@@ -24,8 +24,6 @@ style_min: true
 %link{href: "/css/starwars.css", rel: "stylesheet"}
 
 :ruby
-  display_second_tutorial = !("#{request.locale}" == "en-US") ? 'none' : ''
-
   tutorial = {
     heading: I18n.t(:starwars_subtitle),
     background_image: "/images/fit-1940/sw_landingpage.jpg",
@@ -40,7 +38,6 @@ style_min: true
     right_button_link: '/api/hour/begin/starwarsblocks',
     right_button_text: I18n.t(:try_now),
     id_for_mobile_image: "starwars-mobile-image",
-    display_second_tutorial: display_second_tutorial
   }
 
 = view :tutorial_promo, tutorial: tutorial

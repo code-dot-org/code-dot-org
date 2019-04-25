@@ -40,6 +40,7 @@ export default class SoundPicker extends React.Component {
     uploadsEnabled: PropTypes.bool.isRequired,
     showUnderageWarning: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
+    libraryOnly: PropTypes.bool,
     //For logging upload failures
     projectId: PropTypes.string,
     soundPlayer: PropTypes.object
@@ -80,41 +81,46 @@ export default class SoundPicker extends React.Component {
     let title = <p>{i18n.chooseSounds()}</p>;
 
     modeSwitch = (
-      <div>
+      <div id="modeSwitch">
         <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
           {i18n.soundLibrary()}
         </p>
         <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
           {i18n.makeNewSounds()}
         </p>
-        <hr style={styles.divider} />
       </div>
     );
 
-    const displayFilesTab = this.state.mode === MODE.files;
-    const body = displayFilesTab ? (
-      <AssetManager
-        assetChosen={this.props.assetChosen}
-        assetsChanged={this.props.assetsChanged}
-        allowedExtensions={audioExtension}
-        uploadsEnabled={this.props.uploadsEnabled}
-        useFilesApi={this.props.useFilesApi}
-        projectId={this.props.projectId}
-        soundPlayer={this.props.soundPlayer}
-      />
-    ) : (
-      <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
-    );
-
+    const displaySoundLibraryTab = this.state.mode === MODE.sounds;
+    const body =
+      this.libraryOnly || displaySoundLibraryTab ? (
+        <SoundLibrary assetChosen={this.getAssetNameWithPrefix} />
+      ) : (
+        <AssetManager
+          assetChosen={this.props.assetChosen}
+          assetsChanged={this.props.assetsChanged}
+          allowedExtensions={audioExtension}
+          uploadsEnabled={this.props.uploadsEnabled}
+          useFilesApi={this.props.useFilesApi}
+          projectId={this.props.projectId}
+          soundPlayer={this.props.soundPlayer}
+        />
+      );
     return (
       <div className="modal-content" style={styles.root}>
         {title}
-        {this.props.showUnderageWarning && (
-          <p style={styles.warning}>
-            Warning: Do not upload anything that contains personal information.
-          </p>
+        {!this.props.libraryOnly && (
+          <div>
+            {this.props.showUnderageWarning && (
+              <p style={styles.warning}>
+                Warning: Do not upload anything that contains personal
+                information.
+              </p>
+            )}
+            {modeSwitch}
+          </div>
         )}
-        {modeSwitch}
+        <hr style={styles.divider} />
         {body}
       </div>
     );

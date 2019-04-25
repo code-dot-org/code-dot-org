@@ -35,7 +35,7 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "long_instructions": "# Changing Elements on Screen \r\n\r\nThere's another way to display text in your app besides `console.log` and `write`.  \r\n\r\nThere is a command called `setText` which will **change the text of a component on screen** given its id. This is a very powerful technique and one that you will use a lot. Here's what it looks like in action....\r\n\r\n<img src=\"https://images.code.org/3e5dd320801720d5c62a49146d9ee3d2-image-1446056202170.gif\" style=\"width: 500px\">\r\n\r\nLet's do a **very simple** example of using `setText`.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/5fc22aef5e8f5161f95a2507c1ec006b-image-1446056758249.gif\" style=\"float: right; width: 175px; border: solid 1px #AAAAAA\">\r\n* **Run the code** in the app.\r\n \r\n Look at the code for the \"upArrow\" event handler and how it sets the text of the label.\r\n \r\n* **Modify the code.**\r\n \r\n When the down arrow is clicked, set the text of the label to something else.\r\n\r\n* **GOAL:**\r\n  * Your only goal is to successfully use `setText` in this example app.\r\n  * The app should do something similar to the animated example at right.\r\n\r\nOnce you've got it functional, click Finish to move on.\r\n \r\n\r\n",
+    "long_instructions": "# Changing Elements on Screen \r\n\r\nThere's another way to display text in your app besides `console.log` and `write`.  \r\n\r\nThere is a command called `setText` which will **change the text of a component on screen** given its id. This is a very powerful technique and one that you will use a lot. Here's what it looks like in action....\r\n\r\n<img src=\"https://images.code.org/3e5dd320801720d5c62a49146d9ee3d2-image-1446056202170.gif\" style=\"width: 500px\">\r\n\r\nLet's do a **very simple** example of using `setText`.\r\n\r\n# Do This:\r\n<img src=\"https://images.code.org/5fc22aef5e8f5161f95a2507c1ec006b-image-1446056758249.gif\" style=\"float: right; width: 175px; border: solid 1px #AAAAAA\">\r\n\r\n* **Run the code** in the app.\r\n \r\n Look at the code for the \"upArrow\" event handler and how it sets the text of the label.\r\n \r\n* **Modify the code.**\r\n \r\n When the down arrow is clicked, set the text of the label to something else.\r\n\r\n* **GOAL:**\r\n  * Your only goal is to successfully use `setText` in this example app.\r\n  * The app should do something similar to the animated example at right.\r\n\r\nOnce you've got it functional, click Finish to move on.\r\n \r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -50,7 +50,20 @@
     "start_blocks": "onEvent(\"upButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Up Arrow!\");\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n \r\n});\r\n",
     "execute_palette_apis_only": "false",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": "uMpoKfzuZiDDkkhvCCXxc12dT6BdI9io8b7QqWC51Vy3vYtG+xI80IiGZnjM\nMbwa\n"
+    "encrypted_examples": "uMpoKfzuZiDDkkhvCCXxc12dT6BdI9io8b7QqWC51Vy3vYtG+xI80IiGZnjM\nMbwa\n",
+    "preload_asset_list": null,
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-14 13:38:09 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

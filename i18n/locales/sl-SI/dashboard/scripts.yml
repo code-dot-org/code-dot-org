@@ -935,6 +935,8 @@ sl:
               name: Crowdsourcing
             Relay Programming:
               name: Relejsko programiranje
+            Graph Paper Programming:
+              name: Obarvajmo kvadratke
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1045,6 +1047,10 @@ sl:
               name: Zabava s "for" zankami
             The Artist:
               name: Umetnik
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
         coursed-2019:
           stages:
             Relay Programming:
@@ -1071,6 +1077,8 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Napiši pesem
         express-2019:
           stages:
             Relay Programming:
@@ -1119,3 +1127,35 @@ sl:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Življenjski algoritmi: Zasadi seme'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Seznami
+        csd3-2019:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funkcije s parametri
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet
+        csp5-2019:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Building a Foundation:
+              name: Graditi temelje

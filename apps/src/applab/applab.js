@@ -70,9 +70,10 @@ import {makeDisabledConfig} from '../dropletUtils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
-
+import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
+import {generateExpoApk} from '../util/exporter';
 
 /**
  * Create a namespace for the application.
@@ -124,7 +125,8 @@ var twitterOptions = {
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
-  return 300 * Math.pow(1 - stepSpeed, 2);
+  // 1.5 sec per socket in turtle mode
+  return 1500 * Math.pow(1 - stepSpeed, 2);
 }
 
 function loadLevel() {
@@ -376,7 +378,12 @@ Applab.init = function(config) {
     throw 'App Lab requires Droplet';
   }
 
-  if (!config.channel) {
+  if (config.level.editBlocks) {
+    header.showLevelBuilderSaveButton(() => ({
+      start_blocks: Applab.getCode(),
+      start_html: Applab.getHtml()
+    }));
+  } else if (!config.channel) {
     throw new Error(
       'Cannot initialize App Lab without a channel id. ' +
         'You may need to sign in to your code studio account first.'
@@ -803,7 +810,7 @@ Applab.reactMountPoint_ = null;
  */
 Applab.render = function() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
-    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
+    isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
     handleVersionHistory: Applab.handleVersionHistory
@@ -820,12 +827,29 @@ Applab.exportApp = function(expoOpts) {
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
+
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName = project.getCurrentName() || 'my-app';
+
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
+  if (mode === 'expoGenerateApk') {
+    return generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      studioApp().config
+    );
+  }
+
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     studioApp().editor.getValue(),
     html,
-    expoOpts
+    expoOpts,
+    studioApp().config
   );
 };
 

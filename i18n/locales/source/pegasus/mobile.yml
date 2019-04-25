@@ -1520,6 +1520,7 @@
   full_course_category_name: "Full Courses"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"
+  user_header_my_projects: "My projects"
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
@@ -1651,6 +1652,7 @@
   hoc2018_mc_short_description_shorter: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
   hoc2018_mc_journey: "Journey through Minecraft with code."
   hoc2018_dance_party_main_heading: "Dance Party"
+  hoc2018_dance_party_landing_title: "Dance"
   hoc2018_dance_party_subheading: "Help translate Dance Party"
   hoc2018_dance_create_your_own_dance_title: "Create Your Own Dance Party"
   hoc2018_dance_party_box_title: "Dance Party"
@@ -1703,3 +1705,5 @@
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."

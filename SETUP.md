@@ -12,7 +12,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```
      ruby --version  # --> ruby 2.5.0
      node --version  # --> v8.15.0
-     npm --version   # --> 3.10.8
      yarn --version  # --> 1.6.0
      ```
 1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
@@ -36,11 +35,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     </details>
 
 1. `rake install`
-1. [Enable JavaScript builds](#enabling-javascript-builds)
-    1. Note: You can skip this step if not editing javascript frequently.
 1. `rake build`
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
+   
+After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## OS-specific prerequisites
 
@@ -87,7 +86,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         ```
 
     1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node, npm, and yarn
+1. Install Node and yarn
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
     1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.6.0`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
@@ -112,18 +111,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
               check to make sure XCode is downloaded and up to date manually.
 
     </details>
+1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 ### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv npm`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
-    1. Type `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
-    1. And then `sudo apt-get install -y nodejs`
+    1. `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -`
+    1. `sudo apt-get install -y nodejs`
 1. Ensure rbenv and ruby-build are properly installed
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#installation) to verify rbenv is set up correctly.
+    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
+        1. curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
@@ -132,11 +134,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
-    1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-    1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
+    1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+    1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+    1. `sudo apt-get update && sudo apt-get install yarn=1.6.0-1`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
-   1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
+   1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
    1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
@@ -163,7 +165,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
      * **Step 4: Storage**: Increase storage to 32GiB
-     * **Step 6: Configure Security Group**: Under "Source", use the IP address of the machine you will be connecting from. (Optional, as long as you use a key pair in the next step).
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
@@ -179,13 +180,14 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * run `ssh yourname-ec2` to connect to your instance
   1. Go back up to the [overview](#overview) and run the commands there.
   1. Once you have successfully completed `rake build`, you can connect to it as follows:
-     * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2 ~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your dashboard server is running.
+     * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
 ## Enabling JavaScript builds
-The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+**Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
 
-1. (OS X) Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+If you want to make JavaScript changes and have them take effect locally, you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
+
 1. Edit locals.yml and enable the following options:
 
    ```
@@ -267,8 +269,8 @@ If you run into an issue about therubyracer while running `bundle install` try :
 
 #### bundler gem
 
-If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try:
-- `gem install bundler -v 1.17.0`, where the version is the one specified in `Gemlock.file`
+If you run into the error message `can't find gem bundler (>= 0.a) with executable bundler (Gem::GemNotFoundException)` while running `bundle install` try (as seen in this [StackOverflow](https://stackoverflow.com/questions/47026174/find-spec-for-exe-cant-find-gem-bundler-0-a-gemgemnotfoundexception)):
+- `gem install bundler -v BUNDLED_WITH_VERSION`, where the version is the `BUNDLED WITH` version in [Gemfile.lock](./Gemfile.lock)).
 - `bundle install`
 
 #### Xcode Set Up
