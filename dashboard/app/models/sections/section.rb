@@ -198,6 +198,10 @@ class Section < ActiveRecord::Base
     return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
+  def owns_section?(user)
+    self.user == user
+  end
+
   def summarize_without_students
     summarize(include_students: false)
   end
@@ -205,6 +209,10 @@ class Section < ActiveRecord::Base
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
+    if include_students && !owns_section?(current_user)
+      raise "cannot summarize students unless owns section"
+    end
+
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
     title = ''
