@@ -365,9 +365,10 @@ class Pardot
 
     @consecutive_errors = 0
 
-    # Pardot POST requests sometimes fail with a timeout. This happens
-    # frequently enough that we can't let this be fatal for the entire process.
-    # As long as we don't get too many timeouts in a row, keep going.
+    # Pardot POST requests sometimes fail with a timeout or other known
+    # exception. This happens frequently enough that we can't let this be fatal
+    # for the entire process. As long as we don't get too many such errors in a
+    # row, keep going.
   rescue Net::ReadTimeout, KnownPardotErrorException => e
     @consecutive_errors = (@consecutive_errors || 0) + 1
     log "Pardot API request failed with #{e.message} "\
@@ -478,10 +479,11 @@ class Pardot
 
     response = Net::HTTP.post_form(uri, params)
 
-    # Log a known pardot failure but don't abort.
+    # Post to chat channel when known Pardot error occurs, then raise exception
+    # to be caught by calling functions.
     if PARDOT_ERROR_CODES.include?(response.code)
       ChatClient.message(CHAT_CHANNEL, "Pardot request failed with HTTP #{response.code}")
-      raise "KnownPardotErrorException"
+      raise KnownPardotErrorException
     end
 
     # Do common error handling for Pardot response.
