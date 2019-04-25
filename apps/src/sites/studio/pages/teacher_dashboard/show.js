@@ -22,9 +22,7 @@ import stats, {
 import textResponses, {
   asyncLoadTextResponses
 } from '@cdo/apps/templates/textResponses/textResponsesRedux';
-import sectionAssessments, {
-  asyncLoadAssessments
-} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection, {
   loadValidScripts
@@ -88,7 +86,6 @@ $(document).ready(function() {
     store.dispatch(loadValidScripts(section, validScripts)).then(() => {
       const scriptId = store.getState().scriptSelection.scriptId;
       store.dispatch(asyncLoadTextResponses(section.id, scriptId));
-      store.dispatch(asyncLoadAssessments(section.id, scriptId));
 
       renderTeacherDashboard();
     });
