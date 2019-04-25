@@ -3,6 +3,9 @@ require 'net/http'
 require 'net/http/responses'
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
+require 'cdo/chat_client'
+
+CHAT_CHANNEL = "cron-daily".freeze
 
 # Global variable for Pardot API key. This can become invalid and need to be refreshed
 # and replaced midstream.
@@ -23,6 +26,7 @@ class Pardot
   PARDOT_PROSPECT_DELETION_URL = "#{PARDOT_API_V4_BASE}/do/delete/id".freeze
 
   PARDOT_SUCCESS_HTTP_CODES = %w(200 201 204).freeze
+  PARDOT_ERROR_HTTP_CODES = %w(503).freeze
 
   # Max # of prospects allowed in one batch
   MAX_PROSPECT_BATCH_SIZE = 50
@@ -64,6 +68,11 @@ class Pardot
   # Exception to throw to ourselves if Pardot API key is invalid (which probably
   # means it needs to be re-authed)
   class InvalidApiKeyException < RuntimeError
+  end
+
+  # Exception to throw to ourselves if Pardot failed with a known error code
+  # and we want to continue the run.
+  class KnownPardotErrorException < RuntimeError
   end
 
   # Deletes a list of prospects from Pardot. For Pardot API documentation, see
@@ -354,16 +363,16 @@ class Pardot
         update(email_malformed: true, pardot_sync_at: DateTime.now)
     end
 
-    @consecutive_timeout_errors = 0
+    @consecutive_errors = 0
 
     # Pardot POST requests sometimes fail with a timeout. This happens
     # frequently enough that we can't let this be fatal for the entire process.
     # As long as we don't get too many timeouts in a row, keep going.
-  rescue Net::ReadTimeout => e
-    @consecutive_timeout_errors =  (@consecutive_timeout_errors || 0) + 1
-    log "Pardot API request failed with Net::ReadTimeout "\
-      "(#{@consecutive_timeout_errors} errors)."
-    if @consecutive_timeout_errors >= 3
+  rescue Net::ReadTimeout, KnownPardotErrorException => e
+    @consecutive_errors = (@consecutive_errors || 0) + 1
+    log "Pardot API request failed with #{e.message} "\
+      "(#{@consecutive_errors} errors)."
+    if @consecutive_errors >= 3
       log "Too many consecutive errors, halting the process."
       raise e
     end
@@ -468,6 +477,12 @@ class Pardot
     uri = URI(url)
 
     response = Net::HTTP.post_form(uri, params)
+
+    # Log a known pardot failure but don't abort.
+    if PARDOT_ERROR_CODES.include?(response.code)
+      ChatClient.message(CHAT_CHANNEL, "Pardot request failed with HTTP #{response.code}")
+      raise "KnownPardotErrorException"
+    end
 
     # Do common error handling for Pardot response.
     unless PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
