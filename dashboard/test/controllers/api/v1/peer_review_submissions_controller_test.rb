@@ -57,10 +57,19 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
         [submissions.first.id, nil, submissions.first.updated_at],
         [submissions.second.id, 'escalated', submissions.second.updated_at]
       ]
-    ], response.map {|submission| submission['review_ids']}
+    ], response['submissions'].map {|submission| submission['review_ids']}
+
+    # Verify expected pagination metadata
+    assert_equal(
+      {
+        "total_pages" => 1,
+        "current_page" => 1
+      },
+      response['pagination']
+    )
   end
 
-  test 'All peer reviews gets all peer reviews submissions' do
+  test 'All peer reviews gets the first page of peer reviews submissions' do
     get :index
     assert_response :success
     response = JSON.parse(@response.body)
@@ -77,7 +86,39 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
         [@level_3_reviews.first.id, nil, @level_3_reviews.first.updated_at],
         [@level_3_reviews.second.id, 'escalated', @level_3_reviews.second.updated_at]
       ],
-    ], response.map {|submission| submission['review_ids']}
+    ], response['submissions'].map {|submission| submission['review_ids']}
+
+    # Verify expected pagination metadata
+    assert_equal(
+      {
+        "total_pages" => 1,
+        "current_page" => 1
+      },
+      response['pagination']
+    )
+  end
+
+  test 'can retrieve a different page of peer review results' do
+    test_page_size = 5
+
+    # Create many peer reviews to test pagination
+    create_list :peer_review, 20, reviewer: @submitter, script: @course_unit.script
+
+    get :index, params: {page: 3, per: test_page_size}
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    # Verify expected number of results per page
+    assert_equal test_page_size, response['submissions'].count
+
+    # Verify expected pagination metadata
+    assert_equal(
+      {
+        "total_pages" => 6,
+        "current_page" => 3
+      },
+      response['pagination']
+    )
   end
 
   [:admin, :teacher, :facilitator, :student].each do |user|

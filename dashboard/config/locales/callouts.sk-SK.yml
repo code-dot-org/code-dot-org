@@ -588,6 +588,8 @@ sk:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 5_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
+      behaviors free play_callout:
+        behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral
           všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
@@ -809,6 +811,10 @@ sk:
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Tento blok vám umožní presunúť hercov
           do rôznych častí hracieho poľa.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Tento blok je pre projekt veľmi dôležitý. Určite ho použi!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Toto pridaj do stredu tvojho programu.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie
           herca do stredu obrazovky.

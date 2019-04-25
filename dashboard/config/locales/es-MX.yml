@@ -1242,6 +1242,7 @@ es-MX:
     csf_binary: Binario
     csf_data: Datos
     csf_conditionals: Condicionales
+    csf_sprites: Sprites
     csf_spritelab: Laboratorio de sprites
     csf_nested_loops: Bucles anidados
     csf_functions: Funciones

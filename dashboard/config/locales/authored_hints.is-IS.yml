@@ -2567,6 +2567,9 @@ is:
       behaviors 3_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
           hraða hverrar veru?"
+      behaviors 3a_authored_hint:
+        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
+          hraða hverrar veru?"
       behaviors 5_authored_hint:
         target hint: Þú getur valið milli fjögurra leikfanga. Hvert af þeim vill gæludýrið?
         behavior hint: Breytu atferlinu til að leysa þessa þraut. Gæludýrið þarf að
@@ -2575,6 +2578,9 @@ is:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
           hraða hverrar veru?"
       behaviors 6_authored_hint:
+        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
+          hraða hverrar veru?"
+      behaviors 7_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
           hraða hverrar veru?"
       comment_intro_maze_2018_authored_hint:
