@@ -2,7 +2,7 @@ drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
 create table analysis_pii.regional_partner_stats_csp_csd 
 AS
-with completed as
+with completed ask
 (
   select 
     studio_person_id,
@@ -117,7 +117,6 @@ select tt17.*, u.studio_person_id
   LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
          ON tmp.studio_person_id = d.studio_person_id
          AND tmp.school_year = sa.school_year
-
 ;
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;
