@@ -21,7 +21,7 @@ Feature: Complete a simple maze level
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet.\n"
+    And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet."
 
   Scenario: Submit a program with an empty repeat
     Then element "#runButton" is visible
@@ -32,7 +32,7 @@ Feature: Complete a simple maze level
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".uitest-topInstructions-inline-feedback" has escaped text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.\n"
+    And element ".uitest-topInstructions-inline-feedback" has escaped text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
     And I press "resetButton"
     Then element "#runButton" is visible
     And element "#resetButton" is hidden

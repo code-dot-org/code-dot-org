@@ -34,7 +34,7 @@ Scenario: Losing the first level
   And I press "runButton"
   And element "#resetButton" is visible
   Then I wait until element ".uitest-topInstructions-inline-feedback" is visible
-  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet.\n"
+  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet."
   And I press "resetButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
