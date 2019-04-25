@@ -1,7 +1,10 @@
-/** @file Grid over visualization */
+/** @file Text display over sprite lab visualization column */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Transition} from 'react-transition-group';
+
+const lineHeight = 18;
+const maxHeight = lineHeight * 6;
 
 export const styles = {
   hide: {
@@ -9,49 +12,50 @@ export const styles = {
   },
   console: {
     display: '',
-    background: 'rgba(128,128,128,0.3)',
+    background: 'rgba(200,200,200,0.5)',
     position: 'absolute',
     top: 0,
     left: 0,
     zIndex: 2,
     width: '100%',
+    lineHeight: lineHeight,
     transitionProperty: 'max-height',
-    transitionDuration: '1s'
+    transitionDuration: '1000ms'
   },
   expandButton: {
     position: 'absolute',
-    right: '0',
+    right: 0,
     zIndex: 3,
-    minWidth: '16px',
-    margin: '0px',
-    border: '0px',
-    padding: '0px',
+    minWidth: lineHeight,
+    margin: 0,
+    border: 0,
+    padding: 0,
     fontSize: 'inherit',
     lineHeight: 'inherit',
-    borderRadius: '0px',
+    borderRadius: 0,
     fontFamily: 'monospace'
   },
   paragraphStyle: {
-    margin: '0px'
+    margin: 0
   }
 };
 
 export const transitionStyles = {
   entering: {
     overflow: 'auto',
-    maxHeight: '108px'
+    maxHeight: maxHeight
   },
   entered: {
     overflow: 'auto',
-    maxHeight: '108px'
+    maxHeight: maxHeight
   },
   exiting: {
     overflow: 'auto',
-    maxHeight: '18px'
+    maxHeight: lineHeight
   },
   exited: {
-    maxHeight: '18px',
     overflow: 'hidden',
+    maxHeight: lineHeight,
     whiteSpace: 'nowrap'
   }
 };
