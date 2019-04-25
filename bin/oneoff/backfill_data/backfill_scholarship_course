@@ -38,7 +38,7 @@ ActiveRecord::Base.transaction do
       # si.update!(course: course)
       count += 1
     else
-      puts "no application or enrollment found for user #{si.user_id}"
+      puts "no current teacher application or teacher lsw enrollment found for user #{si.user_id}"
     end
   end
 
