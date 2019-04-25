@@ -263,7 +263,7 @@ class Section < ActiveRecord::Base
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
-    }.compact
+    }
   end
 
   def self.valid_grades
