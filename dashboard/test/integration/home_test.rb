@@ -12,19 +12,23 @@ class StageLockTest < ActionDispatch::IntegrationTest
     Follower.create!(section_id: @section_of_teachers.id, student_user_id: @teacher.id, user: @teacher_of_teachers)
   end
 
-  test 'student homepage contains secret words' do
+  test 'student homepage does not contain secret words' do
     sign_in @student
     get '/home'
     assert_select 'script[data-homepage]' do |elements|
-      assert_includes elements.first['data-homepage'], 'secret_words'
+      data = elements.first['data-homepage']
+      assert_includes data, 'numberOfStudents'
+      refute_includes data, 'secret_words'
     end
   end
 
-  test 'teacher homepage contains secret words' do
+  test 'teacher homepage does not contain secret words' do
     sign_in @teacher
     get '/home'
     assert_select 'script[data-homepage]' do |elements|
-      assert_includes elements.first['data-homepage'], 'secret_words'
+      data = elements.first['data-homepage']
+      assert_includes data, 'numberOfStudents'
+      refute_includes data, 'secret_words'
     end
   end
 end
