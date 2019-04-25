@@ -1,3 +1,5 @@
+project_sharing true
+
 stage 'Functions with Parameters and Return Explore', flex_category: 'csp_more_with_functions'
 level 'U7 L01 More with Functions', progression: 'More with Functions'
 
