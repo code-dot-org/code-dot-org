@@ -1591,6 +1591,15 @@ Then /^I wait for initial project save to complete$/ do
   end
 end
 
+Then /^I save the timestamp from "([^"]*)"$/ do |css|
+  @timestamp = @browser.find_element(css: css)['timestamp']
+end
+
+Then /^"([^"]*)" contains the saved timestamp$/ do |css|
+  timestamp = @browser.find_element(css: css)['timestamp']
+  expect(@timestamp).to eq(timestamp)
+end
+
 When /^I switch to text mode$/ do
   steps <<-STEPS
     When I press "show-code-header"
