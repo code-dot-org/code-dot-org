@@ -35,8 +35,16 @@ class AnimationList extends React.Component {
   };
 
   render() {
+    let addAnimation = (
+      <NewListItem
+        key="new_animation"
+        label={this.props.spriteLab ? i18n.newCostume() : i18n.newAnimation()}
+        onClick={this.props.onNewItemClick}
+      />
+    );
     return (
       <ScrollableList style={styles.root} className="animationList">
+        {this.props.spriteLab && addAnimation}
         {this.props.animationList.orderedKeys.map(key => (
           <AnimationListItem
             key={key}
@@ -46,11 +54,7 @@ class AnimationList extends React.Component {
             animationList={this.props.animationList}
           />
         ))}
-        <NewListItem
-          key="new_animation"
-          label={this.props.spriteLab ? i18n.newCostume() : i18n.newAnimation()}
-          onClick={this.props.onNewItemClick}
-        />
+        {!this.props.spriteLab && addAnimation}
       </ScrollableList>
     );
   }

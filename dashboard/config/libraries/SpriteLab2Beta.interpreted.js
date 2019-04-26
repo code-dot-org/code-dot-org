@@ -160,15 +160,6 @@ function spriteClicked(condition, sprite, event) {
   }
 }
 
-// Temporary block while this feature is being prototyped
-function spriteClickedSet(condition, sprite, clicked, event) {
-  if (condition === "when") {
-    inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
-  } else {
-    inputEvents.push({type: mousePressedOver, event: event, param: sprite});
-  }
-}
-
 function whenSpriteClicked(sprite) {
   return mouseWentDown("leftButton") && mouseIsOver(sprite);
 }
@@ -190,13 +181,6 @@ function whenStartAndStopTouching(a, b, startHandler, stopHandler) {
 }
 
 function checkTouching(condition, a, b, event) {
-  collisionEvents.push({condition: condition, a: a, b: b, event: event});
-}
-
-// Temporary block while this feature is being prototyped
-function whenTouchingSet(condition, a, b, alpha, beta, event) {
-  //Alpha and Beta parameters catch the 'subject' and 'object', which are
-  //later derived from a and b and act as a toolbox here
   collisionEvents.push({condition: condition, a: a, b: b, event: event});
 }
 
@@ -239,7 +223,7 @@ function setAnimation(sprite, animation) {
     sprite.scale *= sprite.baseScale;
     addToAnimationGroup(sprite);
   };
-  if (!Array.isArray(sprite)) {
+  if (!sprite.isGroup) {
     // If the sprite already has an animation, remove that sprite from the animation group.
     if (sprite.getAnimationLabel()) {
       removeFromAnimationGroup(sprite, sprite.getAnimationLabel());
@@ -540,6 +524,9 @@ function makeNewSprite(animation, x, y) {
     return sprite.scale / sprite.baseScale;
   };
   sprite.say = function (text) {
+    appendSpriteConsole({name: sprite.getAnimationLabel(), text: text});
+
+    // Temporarily leave this here
     console_queue.push({sprite: sprite, txt: text, time: millis() + 2000});
   };
   sprite.stop_say = function () {
@@ -624,6 +611,9 @@ function makeNewGroup() {
   };
 
   group.say = function (text) {
+    appendSpriteConsole({name: group.get(0).getAnimationLabel(), text: text});
+    
+    // Temporarily leave this here
     console_queue.push({sprite: group.get(0), txt: text, time: millis() + 2000});
   };
 
@@ -783,6 +773,9 @@ function debugSprite(sprite, val) {
 // Helper functions
 
 function printText(text) {
+  appendSpriteConsole({text: text});
+  
+  // Temporarily leave this here
   console_queue.push({txt: text, time: millis() + 2000});
 }
 
@@ -1082,5 +1075,7 @@ function draw() {
   drawSprites();
   updateHUDText();
   printCustomText();
+  
+  // Temporarily leave this here
   printConsoleText();
 }
