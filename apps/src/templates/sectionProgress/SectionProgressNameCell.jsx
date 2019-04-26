@@ -21,9 +21,12 @@ class SectionProgressNameCell extends Component {
 
     return (
       <div style={progressStyles.nameCell}>
-        <a href={studentUrl} style={progressStyles.link}>
-          {name}
-        </a>
+        {studentUrl && (
+          <a href={studentUrl} style={progressStyles.link}>
+            {name}
+          </a>
+        )}
+        {!studentUrl && <span>{name}</span>}
       </div>
     );
   }

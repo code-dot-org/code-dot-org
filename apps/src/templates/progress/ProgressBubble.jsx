@@ -236,7 +236,9 @@ class ProgressBubble extends React.Component {
             {inMiniRubricExperiment &&
               levelIsAssessment &&
               !smallBubble &&
-              !hideAssessmentIcon && <SmallAssessmentIcon />}
+              !hideAssessmentIcon && (
+                <SmallAssessmentIcon isDiamond={level.isConceptLevel} />
+              )}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>
