@@ -27,6 +27,7 @@ schema.tagNames.push('span');
 schema.attributes.span = ['dataUrl', 'className'];
 
 // Add support for Blockly XML
+schema.clobber = [];
 schema.tagNames.push(
   'block',
   'functional_input',
