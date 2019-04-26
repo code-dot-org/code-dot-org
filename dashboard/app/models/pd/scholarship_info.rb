@@ -10,13 +10,15 @@
 #  pd_enrollment_id   :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  course             :string(255)
 #
 # Indexes
 #
-#  index_pd_scholarship_infos_on_pd_application_id             (pd_application_id)
-#  index_pd_scholarship_infos_on_pd_enrollment_id              (pd_enrollment_id)
-#  index_pd_scholarship_infos_on_user_id                       (user_id)
-#  index_pd_scholarship_infos_on_user_id_and_application_year  (user_id,application_year) UNIQUE
+#  index_pd_scholarship_infos_on_pd_application_id                (pd_application_id)
+#  index_pd_scholarship_infos_on_pd_enrollment_id                 (pd_enrollment_id)
+#  index_pd_scholarship_infos_on_user_id                          (user_id)
+#  index_pd_scholarship_infos_on_user_id_and_app_year_and_course  (user_id,application_year,course) UNIQUE
+#  index_pd_scholarship_infos_on_user_id_and_application_year     (user_id,application_year) UNIQUE
 #
 
 class Pd::ScholarshipInfo < ActiveRecord::Base

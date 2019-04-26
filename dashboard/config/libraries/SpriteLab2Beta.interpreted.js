@@ -524,6 +524,9 @@ function makeNewSprite(animation, x, y) {
     return sprite.scale / sprite.baseScale;
   };
   sprite.say = function (text) {
+    appendSpriteConsole({name: sprite.getAnimationLabel(), text: text});
+
+    // Temporarily leave this here
     console_queue.push({sprite: sprite, txt: text, time: millis() + 2000});
   };
   sprite.stop_say = function () {
@@ -608,6 +611,9 @@ function makeNewGroup() {
   };
 
   group.say = function (text) {
+    appendSpriteConsole({name: group.get(0).getAnimationLabel(), text: text});
+    
+    // Temporarily leave this here
     console_queue.push({sprite: group.get(0), txt: text, time: millis() + 2000});
   };
 
@@ -767,6 +773,9 @@ function debugSprite(sprite, val) {
 // Helper functions
 
 function printText(text) {
+  appendSpriteConsole({text: text});
+  
+  // Temporarily leave this here
   console_queue.push({txt: text, time: millis() + 2000});
 }
 
@@ -1066,5 +1075,7 @@ function draw() {
   drawSprites();
   updateHUDText();
   printCustomText();
+  
+  // Temporarily leave this here
   printConsoleText();
 }
