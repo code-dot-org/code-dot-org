@@ -10,7 +10,7 @@ Feature: Using the teacher dashboard
     And I sign out
 
     When I sign in as "Teacher_Sally"
-    When I click selector "a:contains(Untitled Section)" once I see it
+    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
@@ -91,9 +91,9 @@ Feature: Using the teacher dashboard
     Then I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
-    And I click selector "a:contains('thumb wars')" once I see it
-    And I go to the newly opened tab
-    And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
+    And I click selector "a:contains('thumb wars')" once I see it to load a new tab
+    And I wait until element ".project_name.header_text" is visible
+    And element ".project_name.header_text" contains text "thumb wars"
 
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"

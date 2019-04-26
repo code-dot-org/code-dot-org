@@ -22,7 +22,7 @@ Feature: Script overview page
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
     Then I verify progress for stage 29 level 4 is "perfect"
-    When I click selector ".teacher-panel table td:contains(Sally)" once I see it
+    When I click selector ".teacher-panel table td:contains(Sally)" once I see it to load a new page
     And I wait until element "td:contains(Maze)" is visible
     Then I verify progress for stage 2 level 1 is "perfect"
     Then I verify progress for stage 2 level 2 is "not_tried"
