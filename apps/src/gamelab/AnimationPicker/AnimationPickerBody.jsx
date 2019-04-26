@@ -121,7 +121,7 @@ class AnimationPickerBody extends React.Component {
     return (
       <div>
         <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
-        {this.props.is13Plus || (
+        {!this.props.is13Plus && !hideUploadOption && (
           <WarningLabel>{gamelabMsg.animationPicker_warning()}</WarningLabel>
         )}
         <AnimationPickerSearchBar
