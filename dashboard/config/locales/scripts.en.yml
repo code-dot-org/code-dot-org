@@ -6985,6 +6985,10 @@ en:
               name: CSP mid survey 2018 stagin
             CSP mid survey 2018 staging:
               name: CSP mid survey 2018 staging
+            CSP post course survey 2019 staging:
+              name: CSP post course survey 2019 staging
+            CSD post course survey 2019 staging:
+              name: CSD post course survey 2019 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
