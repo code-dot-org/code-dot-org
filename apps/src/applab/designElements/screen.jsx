@@ -178,10 +178,11 @@ export default {
     element.style.position = 'absolute';
     element.style.zIndex = 0;
     if (experiments.isEnabled('applabThemes')) {
-      element.setAttribute(
-        'data-theme',
-        applabConstants.themeOptions[applabConstants.DEFAULT_THEME_INDEX]
+      // New screens are created with the same theme as is currently active
+      const currentTheme = elementLibrary.getCurrentTheme(
+        designMode.activeScreen()
       );
+      element.setAttribute('data-theme', currentTheme);
       elementLibrary.applyCurrentTheme(element, element);
     }
 
