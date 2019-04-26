@@ -16,7 +16,6 @@ export const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    zIndex: 2,
     width: '100%',
     lineHeight: lineHeight,
     transitionProperty: 'max-height',
@@ -25,7 +24,7 @@ export const styles = {
   expandButton: {
     position: 'absolute',
     right: 0,
-    zIndex: 3,
+    top: 0,
     minWidth: lineHeight,
     margin: 0,
     border: 0,
@@ -35,7 +34,7 @@ export const styles = {
     borderRadius: 0,
     fontFamily: 'monospace'
   },
-  paragraphStyle: {
+  text: {
     margin: 0
   }
 };
@@ -108,15 +107,13 @@ export default class TextConsole extends React.Component {
       );
     }
 
-    return this.props.consoleMessages.map((message, index) =>
-      this.renderLine(message, index)
-    );
+    return this.props.consoleMessages.map(this.renderLine);
   }
 
   renderLine(message, index = 0) {
     return (
-      <p style={styles.paragraphStyle} key={index}>
-        {message.name && <b>{message.name}: </b>}
+      <p style={styles.text} key={index}>
+        {message.name && <strong>{message.name}: </strong>}
         {message.text}
       </p>
     );
@@ -139,12 +136,10 @@ export default class TextConsole extends React.Component {
       <div>
         <Transition in={this.state.open} timeout={1000}>
           {state => (
-            <span
-              id="text-console"
-              className="text-console"
+            <div
               onClick={() => this.toggleConsole()}
-              ref={span => {
-                this.messageList = span;
+              ref={div => {
+                this.messageList = div;
               }}
               style={{
                 ...styles.console,
@@ -152,12 +147,11 @@ export default class TextConsole extends React.Component {
               }}
             >
               {this.getLines(state)}
-            </span>
+            </div>
           )}
         </Transition>
         <button
           type="button"
-          id="expand-collapse"
           style={this.getButtonStyle()}
           onClick={() => this.openThenClose()}
         >
