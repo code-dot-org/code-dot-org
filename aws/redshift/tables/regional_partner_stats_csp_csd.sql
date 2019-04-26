@@ -2,7 +2,7 @@ drop table if exists analysis_pii.regional_partner_stats_csp_csd;
 
 create table analysis_pii.regional_partner_stats_csp_csd 
 AS
-with completed as
+with completed ask
 (
   select 
     studio_person_id,
@@ -52,7 +52,7 @@ select tt17.*, u.studio_person_id
          coalesce(tt18.email, tt17.email, pd16.email) as email,
          d.course,
          d.school_year as school_year_trained,
-         s.school_year as school_year_taught,
+         sa.school_year as school_year_taught,
          CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
          rp.id as regional_partner_id,
          d.school_id school_id,
@@ -74,6 +74,8 @@ select tt17.*, u.studio_person_id
          tmp.students_script_most_progress,
          sa.sections,
          sa.students,
+         sa.students_started,
+         sa.students_completed,
          sa.students_female,
          sa.students_gender,
          sa.students_urm,
@@ -101,20 +103,20 @@ select tt17.*, u.studio_person_id
   LEFT JOIN dashboard_production_pii.regional_partners rp  
        ON d.regional_partner_id = rp.id 
 -- analysis tables
- LEFT JOIN started s
+  LEFT JOIN analysis.student_activity_csp_csd sa 
+         ON sa.studio_person_id = d.studio_person_id 
+         AND sa.school_year >= d.school_year 
+  LEFT JOIN started s
        ON s.studio_person_id = d.studio_person_id
       AND s.course = d.course
-      AND s.school_year >= d.school_year
+      AND s.school_year = sa.school_year
   LEFT JOIN completed c
          ON c.studio_person_id = d.studio_person_id
         AND c.course = d.course   
         AND c.school_year  = s.school_year  
   LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
          ON tmp.studio_person_id = d.studio_person_id
-         AND tmp.school_year = s.school_year
-  LEFT JOIN analysis.student_activity_csp_csd sa 
-         ON sa.studio_person_id = d.studio_person_id 
-         AND sa.school_year = s.school_year
+         AND tmp.school_year = sa.school_year
 ;
 
 GRANT ALL PRIVILEGES ON analysis_pii.regional_partner_stats_csp_csd TO GROUP admin;

@@ -91,15 +91,14 @@ describe('ProgressPill', () => {
         inMiniRubricExperiment={true}
       />
     );
-    const assessmentIcon = wrapper.find('FontAwesome').at(2);
-    assert.equal(assessmentIcon.props().icon, 'check-circle');
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
   });
 
   it('does not have an assessment icon when single level is assessment and not in experiment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when single level is not assessment and in experiment', () => {
@@ -110,7 +109,7 @@ describe('ProgressPill', () => {
         inMiniRubricExperiment={true}
       />
     );
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels and in experiment', () => {
@@ -121,6 +120,6 @@ describe('ProgressPill', () => {
         inMiniRubricExperiment={true}
       />
     );
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 });

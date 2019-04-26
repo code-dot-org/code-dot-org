@@ -4,7 +4,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Novice Reflection Overview', flex_category: 'required'
-named_level 'welcome-novice-18'
+level 'welcome-novice-18', named: true
 
 stage 'Day 1'
 level 'novice-monday-1'
@@ -27,4 +27,4 @@ level 'novice-thursday-2'
 level 'csd-pushDL-unit3'
 
 stage 'Wrap Up'
-named_level 'novice-congrats'
+level 'novice-congrats', named: true

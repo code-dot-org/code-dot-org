@@ -248,19 +248,6 @@ img.video_thumbnail {
     }
   }
 
-  .header_status_bar {
-    background-color: $dark_color;
-    border-radius: 5px;
-    min-width: 20px;
-    padding: 3px;
-    font-size: 16px;
-    display: inline-block;
-  }
-
-  a.header_status_bar:hover {
-    background-color: $orange;
-  }
-
   .header_text {
     font-size: 16px;
     display: inline-block;
@@ -451,11 +438,6 @@ img.video_thumbnail {
 
   #signin_button .header_button {
     margin-top: 6px;
-  }
-
-  .freeplay_links {
-    float: left;
-    padding-top: 13px;
   }
 }
 
@@ -1036,11 +1018,6 @@ $default-modal-width: 640px;
   right: 16px;
 }
 
-.freeplay_links {
-  display: inline-block;
-  text-align: center;
-}
-
 input.header_input {
   font-size: 14px;
   line-height: 20px;
@@ -1384,15 +1361,6 @@ a.download-video {
   padding-left: 5px;
 }
 
-#section-management {
-  #edit_teachers {
-    .padtopbottom {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
-
 #landingpage {
   .welcome {
     background-color: $light_purple;
@@ -1519,14 +1487,6 @@ a.download-video {
       border: 1px solid $cyan;
     }
   }
-
-  #edit_teachers {
-    background-color: $lightest_gray;
-    margin: 20px 0 20px -20px;
-    form {
-      margin: 0;
-    }
-  }
 }
 
 .gallery {
@@ -1556,10 +1516,6 @@ a.download-video {
       background-color: $white;
     }
   }
-}
-
-#angular-my-projects-wrapper .gallery {
-  margin-left: 45px;
 }
 
 .course_progress {
