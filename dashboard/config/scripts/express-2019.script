@@ -275,8 +275,8 @@ level 'Fish Tank 7-validated_2019'
 
 stage 'Alien Dance Party with Sprite Lab'
 level 'Dance Party 1-validated_2019'
-level 'Dance Party 2_2019'
 level 'CDEF_video_SpritesInAction_2019'
+level 'Dance Party 2_2019'
 level 'Dance Party 3_2019'
 level 'Dance Party 4_2019'
 level 'Dance Party 5_2019'
@@ -377,10 +377,10 @@ bonus 'courseD_artist_binary_challenge1_2019'
 bonus 'courseD_artist_binary_challenge2_2019'
 
 stage 'Explore Project Ideas'
-named_level 'courseF_video_csMatters_2019'
-named_level 'InspirationalArtwork_2019'
-named_level 'courseF_project_1_2019'
+level 'courseF_video_csMatters_2019', named: true
+level 'InspirationalArtwork_2019', named: true
+level 'courseF_project_1_2019', named: true
 
 stage 'Build Your Project'
-named_level 'Course F: Artist Project_2019'
-named_level 'CourseF_Project_SpriteLab_2019'
+level 'Course F: Artist Project_2019', named: true
+level 'CourseF_Project_SpriteLab_2019', named: true

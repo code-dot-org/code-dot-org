@@ -124,9 +124,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.4.3":
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.3.tgz#02d420e11110af644b4f1035786dc7f42e09f10b"
+"@code-dot-org/blockly@3.4.6":
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.6.tgz#cb501b02171169d78bbfa24271f70cc0fe40f8e5"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -10672,6 +10672,12 @@ react-overlays@^0.6.6:
     dom-helpers "^2.4.0"
     react-prop-types "^0.4.0"
     warning "^3.0.0"
+
+react-paginate@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/react-paginate/-/react-paginate-6.3.0.tgz#29cbb5d1645227f4e4f959b9d7f43cfae603f801"
+  dependencies:
+    prop-types "^15.6.1"
 
 react-pointable@^1.1.1:
   version "1.1.3"

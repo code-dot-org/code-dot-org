@@ -7,93 +7,94 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csp4'
 version_year '2019'
+project_sharing true
 
 stage 'What is Big Data?', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L01 SFLP_2019'
-assessment 'U4L1 - MC moores law_2018_2019', progression: 'Check Your Understanding'
-assessment 'U4L1 - MC big data def_2018_2019', progression: 'Check Your Understanding'
-assessment 'csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019', progression: 'Quick Check-In'
+level 'CSP U4L01 SFLP_2019', named: true
+level 'U4L1 - MC moores law_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U4L1 - MC big data def_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'csp-pulse-check-survey-5-levelgroup-U4Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
 stage 'Finding Trends with Visualizations', flex_category: 'csp4_1_2018'
-named_level 'CSP U2L08 SFLP_2019'
-assessment 'U2L8 google trends MC_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L8 google trends hypothesis_2019', progression: 'Check Your Understanding'
-assessment 'CSP Unit 4 google trends MC_2018_2019', progression: 'Check Your Understanding'
-assessment 'CSP Unit 4 trends as predictors_2018_2019', progression: 'Check Your Understanding'
+level 'CSP U2L08 SFLP_2019', named: true
+level 'U2L8 google trends MC_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L8 google trends hypothesis_2019', progression: 'Check Your Understanding', assessment: true
+level 'CSP Unit 4 google trends MC_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'CSP Unit 4 trends as predictors_2018_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Check Your Assumptions', flex_category: 'csp4_1_2018'
-named_level 'CSP U2L09 SFLP_2019'
-assessment 'U2L9 What is digital divide MC_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L9 FR digital divide issue_2019', progression: 'Check Your Understanding'
-assessment 'CSP Unit 4 MC data bias_2018_2019', progression: 'Check Your Understanding'
+level 'CSP U2L09 SFLP_2019', named: true
+level 'U2L9 What is digital divide MC_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L9 FR digital divide issue_2019', progression: 'Check Your Understanding', assessment: true
+level 'CSP Unit 4 MC data bias_2018_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Rapid Research - Data Innovations', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L02 SFLP_2019'
+level 'CSP U4L02 SFLP_2019', named: true
 level 'Video - Data and Medicine_2019', progression: 'Data and Medicine'
 level 'Video - CS is Changing Everything_2019', progression: 'CS is Changing Everything'
-assessment 'U4L2 - FR Practice AP response about data_2019', progression: 'Check Your Understanding'
+level 'U4L2 - FR Practice AP response about data_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Identifying People with Data', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L03 SFLP_2019'
-named_level 'U4-AP-Practice-Choose-The-Data-Concern_2019'
-assessment 'U4L3 - FR Identifying people_2019', progression: 'Check Your Understanding'
+level 'CSP U4L03 SFLP_2019', named: true
+level 'U4-AP-Practice-Choose-The-Data-Concern_2019', named: true
+level 'U4L3 - FR Identifying people_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'The Cost of Free', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L04 SFLP_2019'
-named_level 'U4-AP-Practice-Justify-the-Score_2019'
-assessment 'U4L4 - MC cost of free_2018_2019', progression: 'Check Your Understanding'
-assessment 'U4L4 - FR cost of free_2019', progression: 'Check Your Understanding'
+level 'CSP U4L04 SFLP_2019', named: true
+level 'U4-AP-Practice-Justify-the-Score_2019', named: true
+level 'U4L4 - MC cost of free_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U4L4 - FR cost of free_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Simple Encryption', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L05 SFLP_2019'
-named_level 'Crack a Caesar Cipher_2019', progression: 'Crack a Caesar Cipher'
-named_level 'Terminology Recap_2018_2019', progression: 'Terminology Recap'
-named_level 'New Challenge Introduction_2018_2019', progression: 'New Challenge Introduction'
-named_level 'Crack Random Substitution_2019', progression: 'Crack Random Substitution'
-named_level 'Technique: Frequency Analysis_2018_2019', progression: 'Technique: Frequency Analysis'
-assessment 'U2L13 Free Response Getting Started_2019', progression: 'Check Your Understanding'
-assessment 'U2L13 Assessment1_2019', progression: 'Check Your Understanding'
-assessment 'U2L13 Assessment3_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L13 Assessment4_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L13 Free Response Wrap Up_2019', progression: 'Check Your Understanding'
-assessment 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding'
+level 'CSP U4L05 SFLP_2019', named: true
+level 'Crack a Caesar Cipher_2019', progression: 'Crack a Caesar Cipher', named: true
+level 'Terminology Recap_2018_2019', progression: 'Terminology Recap', named: true
+level 'New Challenge Introduction_2018_2019', progression: 'New Challenge Introduction', named: true
+level 'Crack Random Substitution_2019', progression: 'Crack Random Substitution', named: true
+level 'Technique: Frequency Analysis_2018_2019', progression: 'Technique: Frequency Analysis', named: true
+level 'U2L13 Free Response Getting Started_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L13 Assessment1_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L13 Assessment3_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L13 Assessment4_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L13 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Encryption with Keys and Passwords', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L06 SFLP_2019'
-named_level 'The Vigenere Cipher Widget_2019', progression: 'The Vigenere Cipher Widget'
-named_level 'How Secure Is Your Password?_2018_2019', progression: 'How Secure Is Your Password?'
-named_level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys'
-assessment 'U2L14 Free Response Getting Started_2019', progression: 'Check Your Understanding'
-assessment 'U2L14 Assessment_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding'
-assessment 'U2L14 Assessment2_2019', progression: 'Check Your Understanding'
-assessment 'U2L15 Assessment1_2018_2019', progression: 'Check Your Understanding'
-assessment 'CB_Question_12_2018_2019', progression: 'Check Your Understanding'
+level 'CSP U4L06 SFLP_2019', named: true
+level 'The Vigenere Cipher Widget_2019', progression: 'The Vigenere Cipher Widget', named: true
+level 'How Secure Is Your Password?_2018_2019', progression: 'How Secure Is Your Password?', named: true
+level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys', named: true
+level 'U2L14 Free Response Getting Started_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L14 Assessment_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L14 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L14 Assessment2_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L15 Assessment1_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'CB_Question_12_2018_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Public Key Crypto', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L07 SFLP_2019'
-named_level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys'
-named_level 'Cups and Beans Activity_2018_2019', progression: 'Cups and Beans Activity'
-named_level 'Modulo Clock Instructions_2018_2019', progression: 'Modulo Clock Instructions'
-named_level 'The Modulo Clock_2019', progression: 'The Modulo Clock'
-named_level 'Public Key Crypto Widget Instructions_2018_2019', progression: 'Public Key Crypto Widget Instructions'
-named_level 'Public Key Cryptography Widget_2019', progression: 'Public Key Cryptography Widget'
-assessment 'U2L18 Free Response Assessment 1_2019', progression: 'Check Your Understanding'
-assessment 'U2L18 Match terms to cups and beans analogy_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L19 Free Response Getting Started_2019', progression: 'Check Your Understanding'
-assessment 'U2L19 mutlichoice 20 mod 15_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L19 multichoice 13 MOD 17_2018_2019', progression: 'Check Your Understanding'
-assessment 'U2L19 Free Response Wrap Up_2019', progression: 'Check Your Understanding'
+level 'CSP U4L07 SFLP_2019', named: true
+level 'Video - Encryption and Public Keys_2019', progression: 'Encryption and Public Keys', named: true
+level 'Cups and Beans Activity_2018_2019', progression: 'Cups and Beans Activity', named: true
+level 'Modulo Clock Instructions_2018_2019', progression: 'Modulo Clock Instructions', named: true
+level 'The Modulo Clock_2019', progression: 'The Modulo Clock', named: true
+level 'Public Key Crypto Widget Instructions_2018_2019', progression: 'Public Key Crypto Widget Instructions', named: true
+level 'Public Key Cryptography Widget_2019', progression: 'Public Key Cryptography Widget', named: true
+level 'U2L18 Free Response Assessment 1_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L18 Match terms to cups and beans analogy_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L19 Free Response Getting Started_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L19 mutlichoice 20 mod 15_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L19 multichoice 13 MOD 17_2018_2019', progression: 'Check Your Understanding', assessment: true
+level 'U2L19 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
 stage 'Rapid Research - Cybercrime', flex_category: 'csp4_1_2018'
-named_level 'CSP U4L08 SFLP_2019'
-named_level 'Video - Cybersecurity and Crime_2019', progression: 'Cybersecurity and Crime'
+level 'CSP U4L08 SFLP_2019', named: true
+level 'Video - Cybersecurity and Crime_2019', progression: 'Cybersecurity and Crime', named: true
 
 stage 'Unit 4 Assessment', lockable: true, flex_category: 'cspAssessment'
-assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019'
+level 'CSP Unit 4 Ch1 Cumulative Assessment MC_2018_2019', assessment: true
 
 stage 'Optional: Data Questions', lockable: true, flex_category: 'optional'
-assessment 'CSP 18-19 Unit 4 Data Questions'
+level 'CSP 18-19 Unit 4 Data Questions', assessment: true
 
 stage 'Mid-Year Survey', flex_category: 'cspSurvey'
-assessment 'csp-mid-survey-2018-markdown-with-link-to-survey_2019', progression: 'Click here! Complete the CS Principles Mid-year survey'
+level 'csp-mid-survey-2018-markdown-with-link-to-survey_2019', progression: 'Click here! Complete the CS Principles Mid-year survey', assessment: true
