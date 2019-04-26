@@ -10,7 +10,7 @@ import sectionAssessments, {
   getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
-  getStudentsMCSummaryForCurrentAssessment,
+  getStudentsMCandMatchSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
@@ -1374,9 +1374,9 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    describe('getStudentsMCSummaryForCurrentAssessment', () => {
+    describe('getStudentsMCandMatchSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
-        const result = getStudentsMCSummaryForCurrentAssessment({
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
           sectionData: {
             section: {
@@ -1422,7 +1422,7 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentsMCSummaryForCurrentAssessment(
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment(
           stateWithAssessment
         );
         assert.deepEqual(result, [
@@ -1480,7 +1480,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         }
       };
-      const result = getStudentsMCSummaryForCurrentAssessment(
+      const result = getStudentsMCandMatchSummaryForCurrentAssessment(
         stateWithAssessment
       );
       assert.deepEqual(result, [

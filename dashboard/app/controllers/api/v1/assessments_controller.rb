@@ -44,6 +44,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         summary = level.question_summary
         summary[:question_index] = index
         questions.push(summary)
+        # Except match has many "questions"
+        if level.type == "Match"
+          summary[:questions] = level.questions
+        end
       end
 
       assessments[level_group.id] = {
@@ -105,6 +109,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         # Summarize some key data.
         multi_count = 0
         multi_count_correct = 0
+        match_count = 0
+        match_count_correct = 0
 
         # And construct a listing of all the individual levels and their results.
         level_results = []
@@ -112,6 +118,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         level_group.levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
+          elsif level.is_a? Match
+            match_count += level.questions.length
           end
 
           level_response = response_parsed[level.id.to_s]
@@ -123,6 +131,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             level_result[:type] = "FreeResponse"
           when Multi
             level_result[:type] = "Multi"
+          when Match
+            level_result[:type] = "Match"
           end
 
           if level_response
@@ -146,6 +156,19 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               else
                 level_result[:status] = "incorrect"
               end
+            when Match
+              student_result = level_response["result"].split(",").map(&:to_i)
+              level_result[:student_result] = student_result
+              question_results = []
+              student_result.each_with_index do |answer, index|
+                if answer == index
+                  match_count_correct += 1
+                  question_results.push("correct")
+                else
+                  question_results.push("incorrect")
+                end
+              end
+              level_result[:status] = question_results
             end
           else
             level_result[:status] = "unsubmitted"
@@ -164,6 +187,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
+          match_correct: match_count_correct,
+          match_count: match_count,
           submitted: submitted,
           timestamp: timestamp,
           level_results: level_results

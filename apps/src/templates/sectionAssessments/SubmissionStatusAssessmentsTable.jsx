@@ -11,9 +11,10 @@ import color from '@cdo/apps/util/color';
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 3,
-  numMultipleChoiceCorrect: TABLE_WIDTH / 8,
-  numMultipleChoice: TABLE_WIDTH / 8,
-  percentCorrect: TABLE_WIDTH / 8,
+  numMultipleChoiceCorrect: TABLE_WIDTH / 12,
+  numMultipleChoice: TABLE_WIDTH / 12,
+  numMatchCorrect: TABLE_WIDTH / 12,
+  numMatch: TABLE_WIDTH / 12,
   submissionTimeStamp: TABLE_WIDTH / 5
 };
 
@@ -46,7 +47,9 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  SUBMISSION_TIMESTAMP: 3
+  NUM_MATCH_CORRECT: 3,
+  NUM_MATCH: 4,
+  SUBMISSION_TIMESTAMP: 5
 };
 
 export const studentOverviewDataPropType = PropTypes.shape({
@@ -54,6 +57,8 @@ export const studentOverviewDataPropType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
   numMultipleChoice: PropTypes.number,
+  numMatchCorrect: PropTypes.number,
+  numMatch: PropTypes.number,
   submissionTimeStamp: PropTypes.string.isRequired,
   isSubmitted: PropTypes.bool.isRequired,
   url: PropTypes.string
@@ -172,6 +177,36 @@ class SubmissionStatusAssessmentsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatchCorrect',
+        header: {
+          label: i18n.numMatchCorrect(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatchCorrect}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatch',
+        header: {
+          label: i18n.numMatch(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatch}
             }
           }
         },
