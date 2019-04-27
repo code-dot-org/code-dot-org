@@ -48,6 +48,7 @@ Scenario: Project Load and Reload
   And I wait for the page to fully load
   And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
+  And I save the timestamp from ".versionTimestamp"
 
   # There is currently no guarantee that Version History will initially be
   # empty, because we don't necessarily clear past project data from S3 between
@@ -67,7 +68,10 @@ Scenario: Project Load and Reload
   And element ".project_updated_at" eventually contains text "Saved"
   And I press "versions-header"
   And I wait until element "button:contains(Current Version)" is visible
-  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
+
+  Then ".versionRow:nth-child(2) .versionTimestamp" contains the saved timestamp
+  And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
+
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
 @no_ie
@@ -89,6 +93,7 @@ Scenario: Project Version Checkpoints
   # The dialog contains only the initial version and the current version, and
   # possibly some versions created more than 90 seconds ago which we ignore.
   Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version)" is not visible
+  And I save the timestamp from ".versionTimestamp"
 
   When I close the dialog
   And I set the project version interval to 1 second
@@ -102,7 +107,8 @@ Scenario: Project Version Checkpoints
   And I wait until element "button:contains(Current Version)" is visible
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
-  Then element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(0)" is visible
+  Then ".versionRow:nth-child(2) .versionTimestamp" contains the saved timestamp
+  And element ".versionRow:nth-child(2) .btn-info" contains text "Restore this Version"
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore this Version):eq(1)" is not visible
 
 # Brad (2018-11-14) Skip on IE due to blocked pop-ups
@@ -121,8 +127,7 @@ Scenario: Project page refreshes when other client adds a newer version
   And I press "runButton"
   Then element ".project_updated_at" eventually contains text "Saved"
 
-  When I open a new tab
-  And I go to the newly opened tab
+  When I go to a new tab
   And I am on "http://studio.code.org/projects/applab/"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I wait for the page to fully load
@@ -136,7 +141,6 @@ Scenario: Project page refreshes when other client adds a newer version
   And element ".project_updated_at" eventually contains text "Saved"
 
   When I close the current tab
-  And I switch to tab index 0
   Then ace editor code is equal to "// comment X"
 
   # Browser tab 0 tries to write version Z, which fails because tab 1 has
@@ -164,8 +168,7 @@ Scenario: Project page refreshes when other client replaces current version
   And I press "resetButton"
 
   # Browser tab 1 loads version Alpha
-  When I open a new tab
-  And I go to the newly opened tab
+  When I go to a new tab
   And I am on "http://studio.code.org/projects/applab/"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I wait for the page to fully load
@@ -173,7 +176,7 @@ Scenario: Project page refreshes when other client replaces current version
   And ace editor code is equal to "// Alpha"
 
   # Browser tab 0 writes version Bravo.
-  When I switch to tab index 0
+  When I switch tabs
   And ace editor code is equal to "// Alpha"
   And I add code "// Bravo" to ace editor
   And ace editor code is equal to "// Alpha// Bravo"
@@ -185,7 +188,7 @@ Scenario: Project page refreshes when other client replaces current version
 
   # Browser tab 1 tries to write version Charlie, which fails because
   # tab 0 has already replaced the latest version known to tab 1.
-  When I switch to tab index 1
+  When I switch tabs
   And ace editor code is equal to "// Alpha"
   And I add code "// Charlie" to ace editor
   And I click selector "#runButton" to load a new page
