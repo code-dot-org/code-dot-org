@@ -22,11 +22,14 @@ require 'parallel'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'
 require_relative '../../lib/cdo/png_utils'
+require_relative './constants'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
 DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
+SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
+SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -64,8 +67,10 @@ class ManifestBuilder
     alias_map = build_alias_map(animation_metadata)
     info "Mapped #{alias_map.size} aliases."
 
+    output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
+
     # Write result to file
-    File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
+    File.open(output_file, 'w') do |file|
       file.write(
         JSON.pretty_generate(
           {
@@ -91,7 +96,7 @@ class ManifestBuilder
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
     info <<-EOS.unindent
-      Manifest written to #{DEFAULT_OUTPUT_FILE}.
+      Manifest written to #{output_file}.
 
         #{dim 'd[ o_0 ]b'}
     EOS
@@ -213,7 +218,8 @@ The animation has been skipped.
   # Load metadata from previously-generated file, which we'll use later to
   # skip update work if it's unchanged.
   def read_old_metadata
-    File.open(DEFAULT_OUTPUT_FILE, 'r') do |file|
+    output_file = @options[:spritelab] ? SPRITELAB_OUTPUT_FILE : DEFAULT_OUTPUT_FILE
+    File.open(output_file, 'r') do |file|
       old_manifest = JSON.parse(file.read)
 
       # Build reverse alias map
@@ -262,6 +268,10 @@ The animation has been skipped.
         next "Animation #{name} does not have a JSON file and was skipped."
       elsif objects['png'].nil?
         next "Animation #{name} does not have a PNG file and was skipped."
+      end
+
+      if @options[:spritelab] && !(SPRITE_COSTUME_LIST.include? name)
+        next "Did not include #{name}"
       end
 
       # Before we do anything else, check the last modify times on both files.
@@ -367,6 +377,10 @@ cli_parser = OptionParser.new do |opts|
   opts.banner = "Usage: ./rebuildAnimationLibraryManifest.rb [options]"
   opts.separator ""
   opts.separator "Options:"
+
+  opts.on('-s', '--spritelab', 'Build costumeLibrary for Sprite Lab') do
+    options[:spritelab] = true
+  end
 
   opts.on('--download-all', "Download entire animation library to #{DOWNLOAD_DESTINATION}") do
     options[:download_all] = true
