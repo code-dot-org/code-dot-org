@@ -4,23 +4,6 @@ DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
 MODULE_PROGRESS_COLOR_MAP = {not_started: 'rgb(255, 255, 255)', in_progress: 'rgb(239, 205, 28)', completed: 'rgb(14, 190, 14)'}
 
-def http_client
-  $browser.send(:bridge).http.send(:http)
-rescue
-  nil
-end
-
-# Set HTTP read timeout to the specified wait timeout during the block.
-def with_read_timeout(timeout)
-  if (http = http_client)
-    read_timeout = http.read_timeout
-    http.read_timeout = timeout
-  end
-  yield
-ensure
-  http.read_timeout = read_timeout if http
-end
-
 def wait_until(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout).until do
     yield
