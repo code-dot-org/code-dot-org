@@ -48,12 +48,23 @@ rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
 end
 
-def page_load(wait_until_unload)
-  if wait_until_unload
-    html = @browser.find_element(tag_name: 'html')
+def page_load(wait = true, blank_tab: false)
+  if wait
+    root = @browser.find_element(css: ':root')
+    tabs = @browser.window_handles if wait == 'tab'
     yield
-    wait_until {element_stale?(html)}
-    navigate_to(@browser.current_url)
+    if tabs
+      new_tab = wait_until {(@browser.window_handles - tabs).first}
+      @browser.switch_to.window(new_tab)
+    end
+    wait_until {element_stale?(root)}
+    unless blank_tab
+      wait_until do
+        (url = @browser.current_url) != '' &&
+           url != 'about:blank' &&
+          @browser.execute_script('return document.readyState;') == 'complete'
+      end
+    end
   else
     yield
   end
@@ -98,26 +109,21 @@ When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   wait_until {!@browser.find_elements(selection_criteria).empty?}
 end
 
-When /^I go to the newly opened tab$/ do
-  wait_short_until {@browser.window_handles.length > 1}
-
-  @browser.switch_to.window(@browser.window_handles.last)
-
-  # Wait for Safari to finish switching to the new tab. We can't wait_short
-  # because @browser.title takes 30 seconds to timeout.
-  wait_until {@browser.title rescue nil}
-end
-
-When /^I open a new tab$/ do
-  @browser.execute_script('window.open();')
+When /^I go to a new tab$/ do
+  page_load('tab', blank_tab: true) do
+    @browser.execute_script('window.open();')
+  end
 end
 
 When /^I close the current tab$/ do
   @browser.close
+  tabs = @browser.window_handles
+  @browser.switch_to.window(tabs.first) if tabs.any?
 end
 
-When /^I switch to tab index (\d+)$/ do |tab_index|
-  @browser.switch_to.window(@browser.window_handles[tab_index.to_i])
+When /^I switch tabs$/ do
+  tab = @browser.window_handle
+  @browser.switch_to.window(@browser.window_handles.detect {|handle| handle != tab})
 end
 
 When /^I switch to the first iframe$/ do
@@ -127,7 +133,7 @@ end
 
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
-  @browser.switch_to.window $default_window
+  @browser.switch_to.default_content
 end
 
 When /^I close the instructions overlay if it exists$/ do
@@ -284,7 +290,7 @@ When /^I rotate to portrait$/ do
   end
 end
 
-When /^I press "([^"]*)"( to load a new page)?$/ do |button, load|
+When /^I press "([^"]*)"(?: to load a new (page|tab))?$/ do |button, load|
   wait_short_until do
     @button = @browser.find_element(id: button)
   end
@@ -306,7 +312,7 @@ When /^I press the child number (.*) of class "([^"]*)"( to load a new page)?$/ 
   end
 end
 
-When /^I press the first "([^"]*)" element( to load a new page)?$/ do |selector, load|
+When /^I press the first "([^"]*)" element(?: to load a new (page|tab))?$/ do |selector, load|
   wait_short_until do
     @element = @browser.find_element(:css, selector)
   end
@@ -336,9 +342,11 @@ When /^I press SVG selector "([^"]*)"$/ do |selector|
   @browser.execute_script("$(#{selector.dump}).simulate('drag', function(){});")
 end
 
-When /^I press the last button with text "([^"]*)"$/ do |name|
+When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |name, load|
   name_selector = "button:contains(#{name})"
-  @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+  page_load(load) do
+    @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+  end
 end
 
 When /^I (?:open|close) the small footer menu$/ do
@@ -373,11 +381,13 @@ When /^I press the settings cog menu item "([^"]*)"$/ do |item_text|
   }
 end
 
-When /^I select the "([^"]*)" small footer item$/ do |menu_item_text|
-  steps %{
-    Then I open the small footer menu
-    And I press menu item "#{menu_item_text}"
-  }
+When /^I select the "([^"]*)" small footer item( to load a new page)?$/ do |menu_item_text, load|
+  page_load(load) do
+    steps %{
+      Then I open the small footer menu
+      And I press menu item "#{menu_item_text}"
+    }
+  end
 end
 
 When /^I press the SVG text "([^"]*)"$/ do |name|
@@ -450,13 +460,13 @@ end
 
 # Prefer clicking with selenium over jquery, since selenium clicks will fail
 # if the target element is obscured by another element.
-When /^I click "([^"]*)"( to load a new page)?$/ do |selector, load|
-  page_load(load) do
-    @browser.find_element(:css, selector).click
-  end
+When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |selector, wait, load|
+  find = -> {@browser.find_element(:css, selector)}
+  element = wait ? wait_until(&find) : find.call
+  page_load(load) {element.click}
 end
 
-When /^I click selector "([^"]*)"( to load a new page)?$/ do |jquery_selector, load|
+When /^I click selector "([^"]*)"(?: to load a new (page|tab))?$/ do |jquery_selector, load|
   # normal a href links can only be clicked this way
   page_load(load) do
     @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
@@ -469,11 +479,13 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
   end
 end
 
-When /^I click selector "([^"]*)" once I see it$/ do |selector|
+When /^I click selector "([^"]*)" once I see it(?: to load a new (page|tab))?$/ do |selector, load|
   wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
   end
-  @browser.execute_script("$(\"#{selector}\")[0].click();")
+  page_load(load) do
+    @browser.execute_script("$(\"#{selector}\")[0].click();")
+  end
 end
 
 When /^I click selector "([^"]*)" if I see it$/ do |selector|
