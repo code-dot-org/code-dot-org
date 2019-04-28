@@ -1,5 +1,4 @@
 require 'selenium/webdriver'
-require 'selenium/webdriver/remote/http/persistent'
 require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
@@ -7,7 +6,7 @@ require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
-$browser_configs = JSON.load(open("browsers.json"))
+$browser_config = JSON.load(open("browsers.json")).detect {|b| b['name'] == ENV['BROWSER_CONFIG']}
 
 MAX_CONNECT_RETRIES = 3
 
@@ -16,23 +15,13 @@ def slow_browser?
 end
 
 def saucelabs_browser(test_run_name)
-  if CDO.saucelabs_username.blank?
-    raise "Please define CDO.saucelabs_username"
-  end
-
-  if CDO.saucelabs_authkey.blank?
-    raise "Please define CDO.saucelabs_authkey"
-  end
+  raise "Please define CDO.saucelabs_username" if CDO.saucelabs_username.blank?
+  raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
 
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new
-  browser_config = $browser_configs.detect {|b| b['name'] == ENV['BROWSER_CONFIG']}
-
-  browser_config.each do |key, value|
-    capabilities[key] = value
-  end
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config)
 
   capabilities[:javascript_enabled] = 'true'
   capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
@@ -40,66 +29,48 @@ def saucelabs_browser(test_run_name)
   capabilities[:tags] = [ENV['GIT_BRANCH']]
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
   capabilities[:idleTimeout] = 600
-
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
-  browser = nil
-  Time.now.to_i.tap do |start_time|
-    retries = 0
-    begin
-      http_client = Selenium::WebDriver::Remote::Http::Persistent.new
-
-      # Temporarily increase read timeout to acquire a new browser session.
-      http_client.read_timeout = 5.minutes
-
-      browser = Selenium::WebDriver.for(:remote,
-        url: url,
-        desired_capabilities: capabilities,
-        http_client: http_client
-      )
-
-      # Time to wait for any page loading to complete (default 5 minutes).
-      browser.manage.timeouts.page_load = 2.minutes
-
-      # Time to wait for any command (default 1 minute).
-      http_client.send(:http).read_timeout = 2.minutes
-
-      # Shorter idle_timeout to avoid "too many connection resets" error
-      # and generally increases stability, reduces re-runs.
-      # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
-      http_client.send(:http).idle_timeout = 3
-    rescue StandardError
-      raise if retries >= MAX_CONNECT_RETRIES
-      puts 'Failed to get browser, retrying...'
-      retries += 1
-      retry
-    end
-    very_verbose "DEBUG: Got browser in #{Time.now.to_i - start_time}s with #{retries} retries"
+  $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+  with_read_timeout(5.minutes) do
+    Selenium::WebDriver.for(:remote,
+      url: url,
+      desired_capabilities: capabilities,
+      http_client: $http_client
+    )
   end
+end
 
-  very_verbose "DEBUG: Browser: #{CGI.escapeHTML browser.inspect}"
-
-  # Maximize the window on desktop, as some tests require 1280px width.
-  unless ENV['MOBILE']
-    max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
-    browser.manage.window.resize_to(max_width, max_height)
-  end
-
-  $session_id = browser.session_id
-  visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
-  puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
-
-  browser
+# Set HTTP read timeout to the specified value during the block.
+def with_read_timeout(timeout, &block)
+  $http_client ?
+    $http_client.with_read_timeout(timeout, &block) :
+    yield
 end
 
 def get_browser(test_run_name)
+  browser = nil
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
-    # Run a local headless browser instead of Saucelabs.
-    SeleniumBrowser.local_browser(headless, ENV['BROWSER_CONFIG'])
+    browser = SeleniumBrowser.local(headless, ENV['BROWSER_CONFIG'])
   else
-    saucelabs_browser test_run_name
+    browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+      saucelabs_browser(test_run_name)
+    end
+    $session_id = browser.session_id
+    visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
+    puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
   end
+
+  # Time to wait for page loads to complete (default 5 minutes).
+  browser.manage.timeouts.page_load = 2.minutes
+
+  # Maximize the window on desktop, as some tests require 1280px width.
+  unless ENV['MOBILE']
+    max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
+    browser.manage.window.resize_to(max_width, max_height)
+  end
+  browser
 end
 
 $browser = nil
