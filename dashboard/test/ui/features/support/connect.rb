@@ -65,6 +65,10 @@ def get_browser(test_run_name)
   # Time to wait for page loads to complete (default 5 minutes).
   browser.manage.timeouts.page_load = 2.minutes
 
+  # Time to wait for any async script to timeout (default 30 seconds).
+  # IE11 requires this to be explicitly set.
+  browser.manage.timeouts.script_timeout = 30.seconds
+
   # Maximize the window on desktop, as some tests require 1280px width.
   unless ENV['MOBILE']
     max_width, max_height = browser.execute_script('return [window.screen.availWidth, window.screen.availHeight];')
@@ -74,6 +78,10 @@ def get_browser(test_run_name)
 end
 
 $browser = nil
+
+Before('@dashboard_db_access') do
+  require_rails_env
+end
 
 Before do |scenario|
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
@@ -86,7 +94,6 @@ Before do |scenario|
     very_verbose 'fast browser, getting a new one'
     $browser = @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
-  @browser.manage.delete_all_cookies
 
   debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
 end
@@ -118,11 +125,11 @@ After do |scenario|
   if slow_browser?
     $all_passed &&= scenario.passed?
     # clear session state
-    unless @browser.current_url.include?('studio')
-      steps 'Then I am on "http://studio.code.org/"'
+    with_read_timeout(10) do
+      steps 'Then I sign out' if $browser
+    rescue => e
+      puts "Session reset error: #{e}"
     end
-    @browser.execute_script 'sessionStorage.clear()'
-    @browser.execute_script 'localStorage.clear()'
   else
     log_result scenario.passed?
     quit_browser
