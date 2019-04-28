@@ -1,4 +1,3 @@
-@dashboard_db_access
 @no_mobile
 
 Feature: Personal Project Gallery
