@@ -19,8 +19,7 @@ Scenario: Signed out user in English should see 6 header links
   And element "#header-en-projects" contains text "Projects"
 
 Scenario: Student in English should see 2 header links
-  Given I create a student named "Sally Student"
-  Then check that I am on "http://studio.code.org/home"
+  Given I create a student named "Sally Student" and go home
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Course Catalog"
@@ -28,8 +27,7 @@ Scenario: Student in English should see 2 header links
   And element "#header-student-projects" contains text "Projects"
 
 Scenario: Teacher in English should see 5 header links
-  Given I create a teacher named "Tessa Teacher"
-  Then check that I am on "http://studio.code.org/home"
+  Given I create a teacher named "Tessa Teacher" and go home
   And I wait to see ".headerlinks"
   And I see "#header-teacher-home"
   And element "#header-teacher-home" contains text "My Dashboard"
@@ -55,7 +53,6 @@ Scenario: Signed out user in Spanish should see 3 header links
 
 Scenario: Student in Spanish should see 3 header links
   Given I create a student named "Eva Estudiante"
-  Then check that I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/courses/lang/es"
   Then check that I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
@@ -68,7 +65,6 @@ Scenario: Student in Spanish should see 3 header links
 
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
-  Then check that I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"

@@ -1,9 +1,7 @@
-@dashboard_db_access
 Feature: Script overview page
 
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
 
     # Make progress as student
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
