@@ -1,4 +1,3 @@
-@dashboard_db_access
 @no_mobile
 
 Feature: GDPR Dialog - data transfer agreement
@@ -43,7 +42,6 @@ Feature: GDPR Dialog - data transfer agreement
     Then I click selector ".ui-test-gdpr-dialog-accept"
     Then element ".ui-test-gdpr-dialog" is not visible
     Then I sign out
-    Given I sign in as "Madame Maxime"
-    Given I am on "http://studio.code.org/home"
+    Given I sign in as "Madame Maxime" and go home
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible

@@ -63,6 +63,14 @@ class SessionsController < Devise::SessionsController
     end
   end
 
+  # GET /reset_session
+  def reset
+    client_state.reset
+    sign_out if current_user
+    reset_session
+    render layout: false
+  end
+
   private
 
   # Override default Devise sign_out path method
