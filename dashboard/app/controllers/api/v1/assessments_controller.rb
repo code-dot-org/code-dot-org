@@ -46,7 +46,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         questions.push(summary)
         # Except match has many "questions"
         if level.type == "Match"
-          summary[:questions] = level.questions
+          summary[:options] = level.questions
+          summary[:question] = level.question
         end
       end
 
@@ -157,18 +158,28 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                 level_result[:status] = "incorrect"
               end
             when Match
-              student_result = level_response["result"].split(",").map(&:to_i)
-              level_result[:student_result] = student_result
-              question_results = []
-              student_result.each_with_index do |answer, index|
-                if answer == index
-                  match_count_correct += 1
-                  question_results.push("correct")
+              student_result = level_response["result"].split(",", -1)
+              # If a student did not answer some of the matching question we will record that as nil
+              student_result = student_result.map do |result|
+                if result == ""
+                  nil
                 else
-                  question_results.push("incorrect")
+                  result.to_i
                 end
               end
-              level_result[:status] = question_results
+              level_result[:student_result] = student_result
+              option_status = []
+              student_result.each_with_index do |answer, index|
+                if answer.nil?
+                  option_status[index] = "unsubmitted"
+                else
+                  option_status[index] = "submitted"
+                  if answer == index
+                    match_count_correct += 1
+                  end
+                end
+              end
+              level_result[:status] = option_status
             end
           else
             level_result[:status] = "unsubmitted"

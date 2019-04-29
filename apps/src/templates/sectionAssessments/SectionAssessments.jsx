@@ -21,6 +21,8 @@ import i18n from '@cdo/locale';
 import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
 import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
+import MatchAssessmentsOverviewContainer from './MatchAssessmentsOverviewContainer';
+import MatchByStudentContainer from './MatchByStudentContainer';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
 import FreeResponsesAssessmentsContainer from './FreeResponsesAssessmentsContainer';
 import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
@@ -220,6 +222,10 @@ class SectionAssessments extends Component {
                       openDialog={this.showMulitpleChoiceDetailDialog}
                     />
                     <MultipleChoiceByStudentContainer />
+                    <MatchAssessmentsOverviewContainer
+                      openDialog={this.showMulitpleChoiceDetailDialog}
+                    />
+                    <MatchByStudentContainer />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />

@@ -39,6 +39,7 @@ const initialState = {
 // Question types for assessments.
 const QuestionType = {
   MULTI: 'Multi',
+  MATCH: 'Match',
   FREE_RESPONSE: 'FreeResponse'
 };
 
@@ -761,6 +762,77 @@ export const getMultipleChoiceSectionSummary = state => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
+    });
+  });
+
+  return results;
+};
+
+// Returns an array of objects corresponding to each match question and the
+// number of students who answered each answer.
+export const getMatchSectionSummary = state => {
+  // Set up an initial structure based on the match assessment questions.
+  // Initialize numAnswered for each answer to 0, and totalAnswered for each
+  // question to 0.
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+  const questionData = assessmentsStructure.questions;
+  const matchQuestions = questionData.filter(
+    question => question.type === QuestionType.MATCH
+  );
+
+  const results = matchQuestions.map(question => {
+    return {
+      id: question.level_id,
+      question: question.question,
+      questionNumber: question.question_index + 1,
+      options: question.options.map((option, indexO) => {
+        return {
+          option: question.options[indexO].text,
+          totalAnswered: 0,
+          notAnswered: 0,
+          answers: question.answers.map((answer, indexA) => {
+            return {
+              answer: question.answers[indexA].text,
+              isCorrect: indexA === indexO,
+              numAnswered: 0
+            };
+          })
+        };
+      })
+    };
+  });
+
+  // Calculate the number of students who answered each option and fill
+  // in the initialized results structure above.
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return [];
+  }
+
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = parseInt(studentId, 10);
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentAssessment =
+      studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const studentResults = studentAssessment.level_results || [];
+    const matchResults = studentResults.filter(
+      result => result.type === QuestionType.MATCH
+    );
+
+    matchResults.forEach((response, questionIndex) => {
+      (response.student_result || []).forEach((answer, index) => {
+        results[questionIndex].options[index].totalAnswered++;
+        if (response.status[index] === 'unsubmitted') {
+          results[questionIndex].options[index].notAnswered++;
+        } else {
+          results[questionIndex].options[index].answers[answer].numAnswered++;
+        }
+      });
     });
   });
 
