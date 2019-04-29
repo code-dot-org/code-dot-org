@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 @eyes
 Feature: Opening the contract editor

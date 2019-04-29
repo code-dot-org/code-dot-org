@@ -30,8 +30,9 @@ MEM_PROCS=$(awk "/MemFree/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/m
 PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
 
 if [ $PROCS -eq 0 ]; then
-  echo "Error: Not enough available memory available to run tests"
-  exit 1
+  FREE_KB=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
+  echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${FREE_KB}KB"
+  PROCS=1
 fi
 
 $GRUNT_CMD preconcat

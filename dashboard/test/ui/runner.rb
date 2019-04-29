@@ -31,7 +31,7 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] = `git rev-parse --short HEAD`
+ENV['BUILD'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
@@ -200,8 +200,8 @@ def parse_options
       opts.on("-V", "--verbose", "Verbose") do
         options.verbose = true
       end
-      opts.on("-VV", "--very-verbose", "Very verbose, extra debug logging") do
-        ENV['VERY_VERBOSE'] = true
+      opts.on("--very-verbose", "Very verbose, extra debug logging") do
+        ENV['VERY_VERBOSE'] = '1'
       end
       opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
         options.fail_fast = true
@@ -216,6 +216,9 @@ def parse_options
       end
       opts.on('--output-synopsis', 'Print a synopsis of failing scenarios') do
         options.output_synopsis = true
+      end
+      opts.on("--dry-run", "Process features without running any actual steps.") do
+        options.dry_run = true
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -461,14 +464,22 @@ def browser_name_or_unknown(browser)
   browser['name'] || 'UnknownBrowser'
 end
 
-# Retrieves / calculates flakiness for given test run identifier, giving up for
-# the rest of this script execution if an error occurs during calculation.
-# returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
+# Returns the flakiness from 0.0 to 1.0 or nil if flakiness is unknown
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
-  TestFlakiness.test_flakiness[test_run_identifier]
+  TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
 rescue Exception => e
-  puts "Error calculating flakinesss: #{e.message}. Will stop calculating test flakiness for this run."
+  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+  $stop_calculating_flakiness = true
+  nil
+end
+
+# Returns the estimated duration in seconds or nil if unknown
+def estimate_for_test(test_run_identifier)
+  return nil if $stop_calculating_flakiness
+  TestFlakiness.summary_for(:test_estimate, test_run_identifier)
+rescue Exception => e
+  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -478,10 +489,11 @@ end
 def browser_feature_generator
   return $browser_feature_generator if $browser_feature_generator
 
-  # Sort by flakiness (most flaky at end of array, will get run first)
+  # Sort by estimated duration (longest at end of array, will get run first)
   browser_features_left = browser_features.sort! do |browser_feature_a, browser_feature_b|
-    (flakiness_for_test(test_run_identifier(browser_feature_b[0], browser_feature_b[1])) || 1.0) <=>
-      (flakiness_for_test(test_run_identifier(browser_feature_a[0], browser_feature_a[1])) || 1.0)
+    estimate_b = estimate_for_test(test_run_identifier(*browser_feature_b)) || Float::INFINITY
+    estimate_a = estimate_for_test(test_run_identifier(*browser_feature_a)) || Float::INFINITY
+    estimate_a <=> estimate_b
   end
 
   $browser_feature_generator = lambda do
@@ -652,6 +664,7 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   arguments += " --format html --out #{html_output_filename(test_run_string, options)}" if options.html
   arguments += ' -f pretty' if options.html # include the default (-f pretty) formatter so it does both
   arguments += " --fail-fast" if options.fail_fast
+  arguments += " --dry-run" if options.dry_run
 
   # if auto-retrying, output a rerun file so on retry we only run failed tests
   if max_reruns > 0

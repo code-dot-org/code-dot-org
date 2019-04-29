@@ -34,7 +34,8 @@ class PiskelEditor extends React.Component {
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     onNewFrameClick: PropTypes.func.isRequired,
     pendingFrames: PropTypes.object,
-    removePendingFrames: PropTypes.func.isRequired
+    removePendingFrames: PropTypes.func.isRequired,
+    isBlockly: PropTypes.bool
   };
 
   componentDidMount() {
@@ -181,6 +182,9 @@ class PiskelEditor extends React.Component {
 
   onPiskelReady = () => {
     this.isPiskelReady_ = true;
+    if (this.props.isBlockly) {
+      this.piskel.restrictTools();
+    }
     if (this.props.allAnimationsSingleFrame) {
       this.piskel.toggleFrameColumn(true);
     }
@@ -217,7 +221,8 @@ export default connect(
     animationList: state.animationList,
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
-    pendingFrames: state.animationList.pendingFrames
+    pendingFrames: state.animationList.pendingFrames,
+    isBlockly: state.pageConstants.isBlockly
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),
