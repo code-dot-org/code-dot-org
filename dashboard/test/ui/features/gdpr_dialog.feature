@@ -1,4 +1,3 @@
-@dashboard_db_access
 @no_mobile
 
 Feature: GDPR Dialog - data transfer agreement
@@ -33,8 +32,7 @@ Feature: GDPR Dialog - data transfer agreement
     Given I am a teacher
     Given I am on "http://studio.code.org/home?force_in_eu=1"
     Then element ".ui-test-gdpr-dialog" is visible
-    Then I click selector ".ui-test-gdpr-dialog-privacy-link"
-    Then I go to the newly opened tab
+    Then I press the first ".ui-test-gdpr-dialog-privacy-link" element to load a new tab
     Then check that I am on "http://code.org/privacy"
 
   Scenario: Accept, sign out, sign in again, no dialog
@@ -44,7 +42,6 @@ Feature: GDPR Dialog - data transfer agreement
     Then I click selector ".ui-test-gdpr-dialog-accept"
     Then element ".ui-test-gdpr-dialog" is not visible
     Then I sign out
-    Given I sign in as "Madame Maxime"
-    Given I am on "http://studio.code.org/home"
+    Given I sign in as "Madame Maxime" and go home
     Then I wait to see ".header_user"
     Then element ".ui-test-gdpr-dialog" is not visible
