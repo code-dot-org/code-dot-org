@@ -6985,6 +6985,10 @@ en:
               name: CSP mid survey 2018 stagin
             CSP mid survey 2018 staging:
               name: CSP mid survey 2018 staging
+            CSP post course survey 2019 staging:
+              name: CSP post course survey 2019 staging
+            CSD post course survey 2019 staging:
+              name: CSD post course survey 2019 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -9992,7 +9996,7 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: 'If/Else with Bee'
+              name: If/Else with Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Harvester:
@@ -10523,9 +10527,9 @@ en:
             'End of Course Project: Create a Play Lab Game':
               name: End of Course Project
             'Programming: My Robotic Friends':
-              name: 'My Robotic Friends Jr.'
+              name: My Robotic Friends Jr.
             'Loops: My Loopy Robotic Friends':
-              name: 'My Loopy Robotic Friends Jr.'
+              name: My Loopy Robotic Friends Jr.
             Graphing Data:
               name: Graphing Data
             Powerful Passwords:
@@ -10591,7 +10595,7 @@ en:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'The Big Event Jr.'
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -10661,7 +10665,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
-              name: 'The Big Event Jr.'
+              name: The Big Event Jr.
               description_student: ''
               description_teacher: ''
             Events in Play Lab:
@@ -12218,6 +12222,24 @@ en:
             Unit 4 Assessment:
               name: Unit 4 Assessment
           title: 'Unit 10: Global Impact'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        pluralsight:
+          stages:
+            Pluralsight LevelGroup:
+              name: Pluralsight LevelGroup
+          title: Get access to Pluralsight One
+          description_audience: ''
+          description_short: ''
+          description: ''
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Programming in Maze:
+              name: Programming in Maze
+          title: CSF Express 2018 For Vietnam
           description_audience: ''
           description_short: ''
           description: ''

@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"No Lesson Plans for Chapter 2", "details"=>"Ch
 family_name 'csppostap'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Intro to Data', flex_category: 'csp_postap_1'
 level 'CSP U2L07 SFLP', named: true

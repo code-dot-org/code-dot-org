@@ -11,6 +11,7 @@ import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './locationPickerModule';
+import textConsole from './textConsoleModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
@@ -58,5 +59,6 @@ module.exports = {
   interfaceMode,
   animationJsonViewer,
   gridOverlay,
-  locationPicker
+  locationPicker,
+  textConsole
 };

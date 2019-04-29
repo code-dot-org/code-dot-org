@@ -108,8 +108,8 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
-      @sections = current_user.sections.map(&:summarize)
-      @student_sections = current_user.sections_as_student.map(&:summarize)
+      @sections = current_user.sections.map(&:summarize_without_students)
+      @student_sections = current_user.sections_as_student.map(&:summarize_without_students)
 
       # Students and teachers will receive a @top_course for their primary
       # script, so we don't want to include that script (if it exists) in the

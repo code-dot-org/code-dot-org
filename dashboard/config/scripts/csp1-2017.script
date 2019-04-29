@@ -10,6 +10,7 @@ new_name 'csp1-2017'
 family_name 'csp1'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-pre-survey-2017-levelgroup', assessment: true
