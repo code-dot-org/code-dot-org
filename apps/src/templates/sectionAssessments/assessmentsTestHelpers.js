@@ -1,5 +1,13 @@
 import i18n from '@cdo/locale';
 
+/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
+export const inProgressFakeTimestamp = new Date(
+  '1990-01-01T20:52:05.000+00:00'
+);
+export const notStartedFakeTimestamp = new Date(
+  '1980-01-01T20:52:05.000+00:00'
+);
+
 export const testDataTimestamps = {
   newest: new Date('2019-04-09T20:52:05.000+00:00'),
   newer: new Date('2019-04-09T20:40:05.000+00:00'),
