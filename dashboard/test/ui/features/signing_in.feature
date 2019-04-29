@@ -1,5 +1,5 @@
 # @no_mobile
-
+@single_session
 Feature: Signing in and signing out
 
 Scenario: Student sign in from code.org
