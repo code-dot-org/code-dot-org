@@ -45,8 +45,10 @@ Scenario: Async progress write followed by a stale read
   And I wait for the page to fully load
   And I verify progress in the header of the current page is "not_tried" for level 20
   Then mark the current level as completed on the client
+  And I wait for 3 seconds
   And I reload the page
   And I verify progress in the header of the current page is "perfect" for level 20
+  And I wait for 3 seconds
   And I navigate to the course page for "hourofcode"
   And I verify progress for stage 1 level 20 is "perfect"
 
