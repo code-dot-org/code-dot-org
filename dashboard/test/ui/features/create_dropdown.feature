@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: Create Dropdown in Header
 
 Scenario: Create Dropdown does NOT show on level pages

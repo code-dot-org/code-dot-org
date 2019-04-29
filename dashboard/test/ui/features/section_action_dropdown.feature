@@ -1,3 +1,4 @@
+@single_session
 Feature: Using the SectionActionDropdown
 
   @no_ie
