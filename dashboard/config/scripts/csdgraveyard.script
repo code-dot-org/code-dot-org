@@ -1,5 +1,5 @@
 stage 'Introduction to Styling with CSS'
-named_level 'Unit 2 Lesson 7 Overview'
+level 'Unit 2 Lesson 7 Overview', named: true
 level 'CSDU2 - Intro to CSS'
 level 'CSDU2 - Selector and Property'
 level 'CSDU2 - p tags'
@@ -9,11 +9,11 @@ level 'CSDU2 - body tags'
 level 'CSDU2 - text properties'
 level 'CSDU2 - font properties'
 level 'CSDU2 - image properties'
-named_level 'Stop: Intro to CSS'
+level 'Stop: Intro to CSS', named: true
 level 'CSDU2 - About Me Page Styling'
 
 stage 'External Style Sheets'
-named_level 'Brand Book Example'
+level 'Brand Book Example', named: true
 level 'CSDU2 Pick Your Fonts'
 level 'CSDU2 Pick Your Colors'
 level 'CSDU2 - External Style Sheets'

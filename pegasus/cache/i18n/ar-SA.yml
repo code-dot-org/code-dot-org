@@ -1710,6 +1710,8 @@ ar-SA:
   header_about: حول
   header_teacher_community: مجتمع المدرسين
   header_report_bug: أبلغ عن وجود خلل
+  header_tutorials: الدروس
+  header_documentation: الوثائق
   user_header_label: مرحباً %{username}
   user_header_team: فريق
   user_header_settings: حسابي

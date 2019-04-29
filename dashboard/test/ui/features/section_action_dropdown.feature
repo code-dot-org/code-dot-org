@@ -1,16 +1,16 @@
+@single_session
 Feature: Using the SectionActionDropdown
 
   @no_ie
   # * Check that we get redirected to the right page
   Scenario: Viewing progress from SectionActionDropdown
     Given I create a teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
     And I sign out
 
-    When I sign in as "Teacher_Sally"
+    When I sign in as "Teacher_Sally" and go home
     And I open the section action dropdown
     And I press the child number 0 of class ".pop-up-menu-item"
     And I wait until current URL contains "/progress"
@@ -18,8 +18,7 @@ Feature: Using the SectionActionDropdown
   # * Check that we get redirected to the right page
   Scenario: Managing students from SectionActionDropdown
     Given I am a teacher
-    And I am on "http://studio.code.org/"
-    And I create a new section
+    And I create a new section and go home
     And I open the section action dropdown
     And I press the child number 1 of class ".pop-up-menu-item"
     And I wait until current URL contains "/manage"
@@ -27,8 +26,7 @@ Feature: Using the SectionActionDropdown
   # * Check that we get redirected to the right page
   Scenario: Printing Login Cards from SectionActionDropdown
     Given I am a teacher
-    And I am on "http://studio.code.org/"
-    And I create a new section
+    And I create a new section and go home
     And I open the section action dropdown
     And I press the child number 2 of class ".pop-up-menu-item"
     And I wait until current URL contains "/login_info"
@@ -38,8 +36,7 @@ Feature: Using the SectionActionDropdown
   #     * If the save button cannot be pressed, we do not have focus in the right dialog.
   Scenario: Editing Section Information from SectionActionDropdown
     Given I am a teacher
-    And I am on "http://studio.code.org/"
-    And I create a new section
+    And I create a new section and go home
     And I open the section action dropdown
     And I press the child number 3 of class ".pop-up-menu-item"
     And I press the first ".uitest-saveButton" element
@@ -52,8 +49,7 @@ Feature: Using the SectionActionDropdown
   #   * Check that the option to hide the section is available again
   Scenario: Hiding/Showing Section from SectionActionDropdown
     Given I am a teacher
-    And I am on "http://studio.code.org/"
-    And I create a new section
+    And I create a new section and go home
     And I open the section action dropdown
     And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-section-dropdown"

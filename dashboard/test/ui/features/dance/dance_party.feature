@@ -1,10 +1,6 @@
-# Brad 2018-11-15 Known crash on SafariYosemite
-@no_safari
 Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CircleCI.
-  @no_firefox
-  @no_safari
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
@@ -86,7 +82,7 @@ Feature: Dance Party
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
 
-    And I select the "How it Works (View Code)" small footer item
+    And I select the "How it Works (View Code)" small footer item to load a new page
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 

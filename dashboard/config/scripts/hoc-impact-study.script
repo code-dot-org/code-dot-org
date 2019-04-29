@@ -2,7 +2,7 @@ hidden false
 login_required true
 
 stage 'Pre Hour of Code Survey'
-assessment 'HOC pre-survey 2016 levelgroup'
+level 'HOC pre-survey 2016 levelgroup', assessment: true
 
 stage 'Hour of Code 2013'
 skin 'birds'
@@ -90,4 +90,4 @@ level_concept_difficulty '{"sequencing":5,"repeat_until_while":4,"conditionals":
 level 'blockly:Maze:2_19'
 
 stage 'Post Hour of Code Survey'
-assessment 'HOC post-survey 2016 levelgroup'
+level 'HOC post-survey 2016 levelgroup', assessment: true

@@ -1,4 +1,7 @@
 @no_mobile
+# Dropdown hidden in 1024x768 Safari with fixed scrollbar due to media query.
+@no_safari
+@single_session
 Feature: Create Dropdown in Header
 
 Scenario: Create Dropdown does NOT show on level pages
@@ -20,7 +23,7 @@ Scenario: Signed Out - Correct Create Links
   And I wait until element "#view_all_projects" is visible
 
 Scenario: Teacher - Correct Create Links
-  Given I am a teacher
+  Given I am a teacher and go home
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_spritelab" is visible
@@ -32,7 +35,7 @@ Scenario: Teacher - Correct Create Links
   And I wait until element "#view_all_projects" is visible
 
 Scenario: Student, Age 13+ - Correct Create Links
-  Given I create a student named "16 Year Old"
+  Given I create a student named "16 Year Old" and go home
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_spritelab" is visible
@@ -44,7 +47,7 @@ Scenario: Student, Age 13+ - Correct Create Links
   And I wait until element "#view_all_projects" is visible
 
 Scenario: Young Student, Not in Section - Correct Create Links
-  Given I create a young student named "10 Year Old"
+  Given I create a young student named "10 Year Old" and go home
   And I wait until element ".create_menu" is visible
   And I click selector ".create_menu"
   And I wait until element "#create_dropdown_spritelab" is visible
@@ -57,10 +60,7 @@ Scenario: Young Student, Not in Section - Correct Create Links
 
 Scenario: Young Student, In Section - Correct Create Links
   Given I create a teacher named "Ms_Frizzle"
-  Then I see the section set up box
   And I create a new section
-  And I save the section url
-  Then I sign out
   Given I create a young student named "Young Student - In Section"
   And I navigate to the section url
   And I wait until element ".create_menu" is visible
