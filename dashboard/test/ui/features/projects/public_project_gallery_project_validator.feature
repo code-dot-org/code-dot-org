@@ -17,7 +17,7 @@ Scenario: Published Projects Show In Recency Order
   Given I am on "http://studio.code.org/projects/public"
   Then I wait until element ".project_card" is in the DOM
   Then I scroll the Play Lab gallery section into view
-  And element ".ui-project-name-playlab:eq(0)" contains text "Older Published"
+  And element ".ui-project-name-playlab:contains('Published'):eq(0)" contains text "Older Published"
   Then I make a playlab project named "Newer Published"
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
@@ -27,7 +27,7 @@ Scenario: Published Projects Show In Recency Order
   Then I debug element ".ui-project-name-playlab:eq(1)" text content
   Then I debug element ".ui-project-name-playlab:eq(2)" text content
   Then I debug element ".ui-project-name-playlab:eq(3)" text content
-  Then element ".ui-project-name-playlab:eq(0)" contains text "Newer Published"
+  Then element ".ui-project-name-playlab:contains('Published'):eq(0)" contains text "Newer Published"
 
 Scenario: Featured Projects Show Before Published Projects
   Then I make a playlab project named "First Featured"
@@ -37,7 +37,7 @@ Scenario: Featured Projects Show Before Published Projects
   Then I wait until element ".project_card" is in the DOM
   Then I wait until element ".ui-project-name-playlab" is in the DOM
   Then I scroll the Play Lab gallery section into view
-  Then element ".ui-project-name-playlab:eq(0)" contains text "First Featured"
+  Then element ".ui-project-name-playlab:contains('Featured'):eq(0)" contains text "First Featured"
   Then I make a playlab project named "Published, NOT Featured"
   Then I publish the project
   Given I am on "http://studio.code.org/projects/public"
@@ -46,7 +46,7 @@ Scenario: Featured Projects Show Before Published Projects
   Then I debug element ".ui-project-name-playlab:eq(1)" text content
   Then I debug element ".ui-project-name-playlab:eq(2)" text content
   Then I debug element ".ui-project-name-playlab:eq(3)" text content
-  And element ".ui-project-name-playlab:eq(0)" contains text "First Featured"
+  And element ".ui-project-name-playlab:contains('Featured'):eq(0)" contains text "First Featured"
 
 Scenario: UnPublished, Featured Projects Do Not Show
   Then I make a playlab project named "Published, Featured"
@@ -61,7 +61,7 @@ Scenario: UnPublished, Featured Projects Do Not Show
   Then I debug element ".ui-project-name-playlab:eq(1)" text content
   Then I debug element ".ui-project-name-playlab:eq(2)" text content
   Then I debug element ".ui-project-name-playlab:eq(3)" text content
-  And element ".ui-project-name-playlab:eq(0)" contains text "Published, Featured"
+  And element ".ui-project-name-playlab:contains('Featured'):eq(0)" contains text "Published, Featured"
 
 Scenario: Can Toggle to the Personal Project Gallery
   Given I am on "http://studio.code.org/projects/public"
