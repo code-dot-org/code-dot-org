@@ -480,9 +480,11 @@ class Documents < Sinatra::Base
         cache :static
         send_file(cache_file)
       when '.md', '.txt'
-        preprocessed = erb body, options
+        preprocessed = body
         preprocessed = preprocess_markdown preprocessed
-        markdown preprocessed, options
+        #markdown preprocessed, options
+        m = ::TextRender::MustacheEngine.new(preprocessed).result({})
+        markdown m, options
       when '.redirect', '.moved', '.301'
         redirect erb(body, options), 301
       when '.found', '.302'

@@ -4,6 +4,8 @@ require 'ostruct'
 require 'redcarpet'
 require 'yaml'
 
+require_relative 'mustache_view'
+
 module TextRender
   class Locals
     def initialize(locals={})
@@ -97,6 +99,17 @@ module TextRender
     f(HamlEngine, path, locals)
   end
 
+  class MustacheEngine
+    def initialize(template)
+      @engine = MustacheMarkdown.new
+      @engine.set_template(template)
+    end
+
+    def result(binding=nil)
+      @engine.render
+    end
+  end
+
   #
   # Markdown
   #
@@ -104,6 +117,10 @@ module TextRender
     class HTMLWithDivBrackets < Redcarpet::Render::HTML
       def postprocess(full_document)
         process_div_brackets(full_document)
+      end
+
+      def preprocess(full_document)
+        full_document
       end
 
       private

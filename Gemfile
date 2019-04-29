@@ -195,6 +195,8 @@ gem 'newrelic_rpm', '~> 4.8.0', group: [:staging, :development, :production] # p
 
 gem 'redcarpet', '~> 3.3.4'
 
+gem 'mustache', '~> 1.0' 
+
 # Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
 gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 

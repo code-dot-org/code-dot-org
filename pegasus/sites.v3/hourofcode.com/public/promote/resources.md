@@ -3,7 +3,6 @@ title: <%= hoc_s(:title_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
-
 <%= view :signup_button %>
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
@@ -44,7 +43,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="logo"></a>
 ## Use the Hour of Code logo to spread the word
-[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![image]({{#localized_image}}/images/fit-200/hour-of-code-logo.png{{/localized_image}})](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
@@ -67,7 +66,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 <a id="sample-emails"></a>
 ## Invite people in your community to your Hour of Code and promote your event through email
 
-### Find <a href="<%= resolve_url('/promote/stats') %>">more information and language you can use</a> when talking about the Hour of Code.
+### Find <a href="{{#resolve_url}}/promote/stats{{/resolve_url}}">more information and language you can use</a> when talking about the Hour of Code.
 
 ***
 <a id="email"></a>
@@ -80,11 +79,11 @@ Computers are everywhere, changing every industry on the planet. But only 35% of
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code {{campaigndateyear}}. Please get involved with an Hour of Code event during Computer Science Education Week, {{campaigndatefull}}.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/<%= @country %>
+Get started at http://hourofcode.com/{{country}}
 <br>
 
 ***
@@ -94,7 +93,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Can we help you host an Hour of Code?
 
-Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between {{campaigndateshort}}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer. 
 
@@ -117,11 +116,11 @@ We live in a world surrounded by technology. And we know that whatever field our
 
 But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{campaigndatefull}}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+See http://hourofcode.com/{{country}} for details, and help spread the word.
 <br>
 *** 
 
@@ -161,7 +160,7 @@ Did you know that computing is the #1 source of wages in the U.S.? There are mor
 
 Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{campaigndatefull}}). More than 100 million students worldwide have already tried an Hour of Code.
 
 I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
