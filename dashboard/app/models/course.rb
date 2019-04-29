@@ -37,6 +37,7 @@ class Course < ApplicationRecord
     has_verified_resources
     family_name
     version_year
+    is_stable
   )
 
   def to_param
