@@ -22,9 +22,7 @@ import stats, {
 import textResponses, {
   asyncLoadTextResponses
 } from '@cdo/apps/templates/textResponses/textResponsesRedux';
-import sectionAssessments, {
-  asyncLoadAssessments
-} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection, {
   loadValidScripts
@@ -58,12 +56,7 @@ $(document).ready(function() {
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(asyncSetCompletedLevelCount(section.id));
 
-  // Show share column by default for CSD and CSP courses,
-  // or any script in either course.
-  const courseFamiliesToShowShareColumn = ['csd', 'csp'];
-  if (
-    courseFamiliesToShowShareColumn.includes(section.script.course_family_name)
-  ) {
+  if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
   }
 
@@ -88,7 +81,6 @@ $(document).ready(function() {
     store.dispatch(loadValidScripts(section, validScripts)).then(() => {
       const scriptId = store.getState().scriptSelection.scriptId;
       store.dispatch(asyncLoadTextResponses(section.id, scriptId));
-      store.dispatch(asyncLoadAssessments(section.id, scriptId));
 
       renderTeacherDashboard();
     });

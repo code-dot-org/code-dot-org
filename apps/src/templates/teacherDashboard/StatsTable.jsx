@@ -44,16 +44,20 @@ class StatsTable extends Component {
     const {section, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
 
-    return (
-      <a
-        className="uitest-name-cell"
-        style={tableLayoutStyles.link}
-        href={studentUrl}
-        target="_blank"
-      >
-        {name}
-      </a>
-    );
+    if (studentUrl) {
+      return (
+        <a
+          className="uitest-name-cell"
+          style={tableLayoutStyles.link}
+          href={studentUrl}
+          target="_blank"
+        >
+          {name}
+        </a>
+      );
+    } else {
+      return <span className="uitest-name-cell">{name}</span>;
+    }
   };
 
   getSortingColumns = () => {

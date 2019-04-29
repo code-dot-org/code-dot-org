@@ -1484,6 +1484,9 @@ pl:
       courseA_artist_loops_challenge3: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
+      courseA_bee_seq10: Spróbuj sam! Zbierz cały nektar.
+      courseA_bee_seq11: Zbierz cały nektar.
+      courseA_bee_seq2: Pomóż pszczółce zebrać nektar!
       courseA_collector_loops7: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops7_2018: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
       courseA_collector_loops7_2019: Co powinieneś dodać do tego kodu, aby zebrać wszystkie skarby?
@@ -1697,6 +1700,12 @@ pl:
       courseD_bee_debugging_challenge1_2018: Zobacz, jak pszczółka zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_debugging_challenge1a: Zobacz, jak pszczółka zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_debugging_challenge2: Zobacz, jak pszczółka zbiera nektar. Czy dasz radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
+      courseD_bee_nestedLoops1: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1_2018: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1_2019: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1a: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1a_2018: Pomóż pszczółce zebrać cały nektar.
+      courseD_bee_nestedLoops1a_2019: Pomóż pszczółce zebrać cały nektar.
       courseD_bee_nestedLoops2: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2018: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops2_2019: Tym raze, pomóż pszczołom zebrać cały nektar używając jak najmniejszej liczby bloków.
@@ -1841,6 +1850,9 @@ pl:
         Pomóż pszczółce zebrać cały nektar.
         \\r
         \\r
+      courseF_bee_for4: Pomóż pszczółce zebrać cały nektar.
+      courseF_bee_for4_2018: Pomóż pszczółce zebrać cały nektar.
+      courseF_bee_for4_2019: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for8: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
       courseF_bee_for8_2018: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
       courseF_bee_for8_2019: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
@@ -2180,6 +2192,7 @@ pl:
       grade5_artist_variables_triangles3: Przeciągnij blok z liczbą do bloku "przypisz length wartość" i "powtórz \_ razy", aby narysować rząd trójkątów o bokach 50 pikseli.
       grade5_bee_for_loops1: Użyj pętli, by zebrać cały nektar z każdego kwiatka.
       grade5_bee_for_loops2: Dodaj kod, aby być pewnym, że pszczółka zbierze cały nektar. Zorientuj się, ile potrzebujesz dodatkowego kodu dla tej łamigłówki! (W następnej łamigłówce poznasz łatwiejszy sposób.)
+      grade5_bee_for_loops4: Pomóż pszczółce zebrać cały nektar.
       grade5_bee_for_loops6: Możesz również użyć pętli "ile/dla", by odliczać do dołu. Spróbuj zebrać ten nektar odliczając w dół od 5 co 1 do 1.
       grade5_bee_for_loops8: Masz teraz to! Jaki powinien być przyrost, aby zebrać 3, 6, 9, 12, 15 nektarów?
       grade5_playlab_freeplay: 'Czas na zabawę! Miłej zabawy z wszystkimi blokami. '

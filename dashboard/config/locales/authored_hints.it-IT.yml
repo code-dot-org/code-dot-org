@@ -7676,7 +7676,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2018_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare
           gli errori (debugging). Non arrenderti!
@@ -7684,7 +7684,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare
           gli errori (debugging). Non arrenderti!
@@ -7692,7 +7692,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!

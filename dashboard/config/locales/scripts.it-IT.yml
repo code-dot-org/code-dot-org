@@ -1140,7 +1140,7 @@ it:
             Programming:
               name: Programmazione
             Unspotted Bugs:
-              name: Fastidiosi insetti nascosti
+              name: Quei fastidiosi insetti nascosti
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Events Unplugged: The Big Event':
@@ -1247,6 +1247,14 @@ it:
               name: La Ricetta della Progettazione
             Welcome!:
               name: Benvenuto!
+        csd1-2017:
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La classe lavora in gruppi per progettare barche
+                di "carta stagnola" che dovranno reggere il maggior numero possibile
+                di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
+                fatta, con particolare riferimento alle strategie di problem solving
+                che utilizzeranno nel resto del corso. '
         basketball:
           title: Scegli la tua squadra e fai una partita di basket
           description_short: Scegli la tua squadra e fai una partita di basket
@@ -1672,7 +1680,7 @@ it:
                 il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
                 cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il grande progetto'
+              name: 'Perseveranza: Stefi e il grande progetto'
               description_teacher: Quando gli studenti si imbattono in una difficoltà
                 mentre rispondono a una domanda o lavorano su un progetto, è molto
                 facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce
@@ -1766,7 +1774,7 @@ it:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il grande progetto'
+              name: 'Perseveranza: Stefi e il grande progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -2436,7 +2444,7 @@ it:
             'Debugging: Unspotted Bugs':
               name: Correzione Errori (Debugging)
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Perseveranza: Stevie e il grande progetto'
+              name: 'Perseveranza: Stefi e il grande progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -2931,13 +2939,13 @@ it:
           description_audience: 'Età: da 4 a 7 anni'
           stages:
             'Debugging: Unspotted Bugs':
-              name: Fastidiosi insetti nascosti
+              name: Quei fastidiosi insetti nascosti
               description_teacher: 'Questa lezione guiderà gli studenti attraverso
                 le fasi di ricerca degli errori (debugging).  Gli studenti impareranno
                 il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo
                 cosa ti suggerisce?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie e il grande progetto
+              name: Stefi e il grande progetto
               description_teacher: Quando gli studenti si imbattono in una difficoltà
                 mentre rispondono a una domanda o lavorano su un progetto, è molto
                 facile per loro sentirsi frustrati e rinunciare. Questa lezione introduce
@@ -3027,7 +3035,7 @@ it:
             Sequencing in Maze:
               name: Sequenze di istruzioni con Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie e il grande progetto
+              name: Stefi e il grande progetto
         express-2018:
           title: Corso Rapido
           assignment_family_title: Corso Rapido
@@ -3638,6 +3646,14 @@ it:
               name: Sistema di numerazione
             The Internet:
               name: Internet
+        csd1-2018:
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La classe lavora in gruppi per progettare barche
+                di "carta stagnola" che dovranno reggere il maggior numero possibile
+                di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
+                fatta, con particolare riferimento alle strategie di problem solving
+                che utilizzeranno nel resto del corso. '
         csp2-2018:
           stages:
             Text Compression:
@@ -3677,9 +3693,9 @@ it:
             condividere.
           stages:
             'Debugging: Unspotted Bugs':
-              name: Fastidiosi insetti nascosti
+              name: Quei fastidiosi insetti nascosti
             'Persistence & Frustration: Stevie and the Marbles':
-              name: Stevie e il grande progetto
+              name: Stefi e il grande progetto
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Learn to Drag and Drop:
@@ -3715,7 +3731,7 @@ it:
             Loops in Ice Age:
               name: Cicli con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
-              name: Stevie e il grande progetto
+              name: Stefi e il grande progetto
         spritelab-validated:
           stages:
             Alien Dance Party - Input:
@@ -4233,6 +4249,14 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza Collettiva
+        csd1-2019:
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La classe lavora in gruppi per progettare barche
+                di "carta stagnola" che dovranno reggere il maggior numero possibile
+                di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
+                fatta, con particolare riferimento alle strategie di problem solving
+                che utilizzeranno nel resto del corso. '
         andrea-test:
           stages:
             'null':
