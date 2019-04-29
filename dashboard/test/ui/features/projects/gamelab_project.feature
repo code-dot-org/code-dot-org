@@ -1,6 +1,6 @@
 Feature: Gamelab Projects
 
-@dashboard_db_access @as_student @no_mobile
+@as_student @no_mobile
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
@@ -101,7 +101,7 @@ Scenario: Gamelab Flow
   And I wait to see "#codeWorkspace"
   And selector "#codeWorkspace" has class "readonly"
 
-@dashboard_db_access @as_student
+@as_student
 @no_mobile
 Scenario: Remix project creates and redirects to new channel
   Given I am on "http://studio.code.org/projects/gamelab"
