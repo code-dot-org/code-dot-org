@@ -1,5 +1,5 @@
 @no_mobile
-
+@single_session
 Feature: Personal Project Gallery
 
 Background:

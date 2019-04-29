@@ -10,8 +10,9 @@ $browser_config = JSON.load(open("browsers.json")).detect {|b| b['name'] == ENV[
 
 MAX_CONNECT_RETRIES = 3
 
-def slow_browser?
-  ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
+# Run all feature scenarios in a single session.
+def single_session?
+  $browser_config['mobile'] || $single_session
 end
 
 def saucelabs_browser(test_run_name)
@@ -84,14 +85,16 @@ Before('@dashboard_db_access') do
 end
 
 Before do |scenario|
+  @tags = scenario.source_tag_names
+  $single_session = true if @tags.include?('@single_session')
+
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
 
-  if slow_browser?
+  if single_session?
+    very_verbose('Single session, using existing browser') if $browser
     $browser ||= get_browser ENV['TEST_RUN_NAME']
-    very_verbose 'slow browser, using existing'
     @browser ||= $browser
   else
-    very_verbose 'fast browser, getting a new one'
     $browser = @browser = get_browser "#{ENV['TEST_RUN_NAME']}_#{scenario.name}"
   end
 
@@ -122,7 +125,7 @@ end
 $all_passed = true
 
 After do |scenario|
-  if slow_browser?
+  if single_session?
     $all_passed &&= scenario.passed?
     # clear session state
     with_read_timeout(10) do
@@ -168,7 +171,7 @@ AfterConfiguration do |config|
 end
 
 at_exit do
-  log_result $all_passed if slow_browser?
+  log_result $all_passed if single_session?
   quit_browser
 end
 
