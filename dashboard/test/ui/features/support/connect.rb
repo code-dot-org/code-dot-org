@@ -29,7 +29,7 @@ def saucelabs_browser(test_run_name)
   capabilities[:name] = test_run_name
   capabilities[:tags] = [ENV['GIT_BRANCH']]
   capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
-  capabilities[:idleTimeout] = 600
+  capabilities[:idleTimeout] = 30
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
   $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
