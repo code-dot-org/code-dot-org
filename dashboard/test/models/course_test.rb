@@ -372,21 +372,22 @@ class CourseTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
       @student = create :student
     end
 
-    test 'latest version returns nil if course family does not exist' do
-      assert_nil Course.latest_version('fake-family')
+    test 'latest_stable_version returns nil if course family does not exist' do
+      assert_nil Course.latest_stable_version('fake-family')
     end
 
-    test 'latest version returns latest course version' do
-      latest_version = Course.latest_version('csp')
+    test 'latest_stable_version returns latest course version' do
+      latest_version = Course.latest_stable_version('csp')
       assert_equal @csp_2018, latest_version
     end
 
-    test 'latest assigned version returns latest version in family assigned to student' do
+    test 'latest_assigned_version returns latest version in family assigned to student' do
       create :follower, section: create(:section, course: @csp_2017), student_user: @student
       latest_assigned_version = Course.latest_assigned_version('csp', @student)
       assert_equal @csp_2017, latest_assigned_version
