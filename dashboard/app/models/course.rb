@@ -57,10 +57,11 @@ class Course < ApplicationRecord
   end
 
   # Any course with a plc_course or no family_name is considered stable.
-  # All other courses should specify an is_stable boolean property.
+  # All other courses must specify an is_stable boolean property.
   def stable_or_default
     return true if plc_course || !family_name
-    is_stable
+
+    is_stable || false
   end
 
   def self.file_path(name)
