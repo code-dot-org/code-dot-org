@@ -108,6 +108,7 @@ def parse_options
     options.magic_retry = false
     options.parallel_limit = 1
     options.abort_when_failures_exceed = Float::INFINITY
+    options.priority = '99'
 
     # start supporting some basic command line filtering of which browsers we run against
     opt_parser = OptionParser.new do |opts|
@@ -219,6 +220,9 @@ def parse_options
       end
       opts.on("--dry-run", "Process features without running any actual steps.") do
         options.dry_run = true
+      end
+      opts.on("--priority priority", "Set priority level for Sauce Labs jobs.") do |priority|
+        options.priority = priority
       end
       opts.on_tail("-h", "--help", "Show this message") do
         puts opts
@@ -715,6 +719,7 @@ def run_feature(browser, feature, options)
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
   run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
+  run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.

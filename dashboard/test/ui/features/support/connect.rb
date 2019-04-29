@@ -40,6 +40,7 @@ def saucelabs_browser(test_run_name)
     idleTimeout: 30
   }
   sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
+  sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
 
   # Use w3c-spec sauce:options capabilities format for compatible browsers.
   # Ref: https://wiki.saucelabs.com/display/DOCS/Selenium+W3C+Capabilities+Support+-+Beta
