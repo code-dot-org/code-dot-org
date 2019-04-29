@@ -1,6 +1,6 @@
 Feature: Starwars Project
 
-@dashboard_db_access @as_student @no_mobile
+@as_student @no_mobile
 Scenario: Starwars Flow
   Given I am on "http://studio.code.org/projects/starwars"
   And I get redirected to "/projects/starwars/([^\/]*?)/edit" via "dashboard"

@@ -35,8 +35,7 @@ Feature: Manage Assets
     And I upload the file named "artist_image_1.png"
     And I wait until element ".assetRow td:contains(artist_image_1.png)" is visible
 
-    And I press "ui-image-thumbnail"
-    And I go to the newly opened tab
+    And I press "ui-image-thumbnail" to load a new tab
     And check that the URL matches "/v3/assets/.*/artist_image_1.png"
 
   Scenario: From WebLab, the manage assets dialog does not contain the option to record audio.

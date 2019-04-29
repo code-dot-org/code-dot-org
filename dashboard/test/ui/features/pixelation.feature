@@ -1,4 +1,3 @@
-@dashboard_db_access
 @no_mobile
 Feature: Pixelation levels
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups

@@ -54,6 +54,7 @@ Feature: Using the Internet Simulator Lobby
 
     # Join a router and click the side instructions to re-open the dialog
     When I enter the netsim name "Greg"
+    And I wait until element ".join-button" is visible
     And I press the first ".join-button" element
     And I wait until element "#tab_instructions" is visible
     And I press the first ".netsim-bubble" element
