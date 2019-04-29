@@ -1,4 +1,5 @@
 @no_circle
+@single_session
 Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
 
 Scenario: HoC tutorial in Spanish

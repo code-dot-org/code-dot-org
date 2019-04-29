@@ -4,7 +4,6 @@ Feature: Looking at hourofcode.com with Applitools Eyes
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-@dashboard_db_access
 Scenario Outline: Logged in simple page view
   Given I am on "http://studio.code.org/"
   And I am a student
