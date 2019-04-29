@@ -252,6 +252,18 @@ Title 1 schools—which receive extra funding based on the number of students fr
 
 <div style="clear: both;"></div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/CSF-teachers-70.png"></a>
+
+<br>
+
+Our CS teachers are everywhere! More than 70% of counties in the US have trained CS Fundamentals teachers. Does your school teach CS? <a href="https://code.org/yourschool">Tell us here!</a> And if not, encourage a teacher to <a href="https://code.org/apply">apply for our professional development</a> to bring CS to your area. </a>
+
+</div>
+
+<div style="clear: both;"></div>
+
 <br>
 
 ## Statistics at a glance

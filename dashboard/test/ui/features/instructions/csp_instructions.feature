@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: CSP Instructions
 
 Background:
