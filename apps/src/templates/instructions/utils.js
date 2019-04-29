@@ -76,14 +76,13 @@ function removeCommentNodes(root) {
   );
   // commentWalker.currentNode will always equal the root to start with, so
   // call nextNode to move it on to the first Comment node
-  commentWalker.nextNode();
+  let last = commentWalker.nextNode();
   // if there are any Comment nodes in the tree, the first one will now be
   // found at commentWalker.currentNode. If we remove it right away, then
   // commentWalker won't be able to find the next node, since it tries to do so
   // by walking the actual DOM tree from its current. Therefore we only remove
   // nodes as commentWalker _passes_ them, not once it arrives.
-  if (commentWalker.currentNode) {
-    let last = commentWalker.currentNode;
+  if (last) {
     while (commentWalker.nextNode()) {
       last.remove();
       last = commentWalker.currentNode;
