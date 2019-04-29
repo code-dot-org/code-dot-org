@@ -1,12 +1,8 @@
 import i18n from '@cdo/locale';
-
-/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
-export const inProgressFakeTimestamp = new Date(
-  '1990-01-01T20:52:05.000+00:00'
-);
-export const notStartedFakeTimestamp = new Date(
-  '1980-01-01T20:52:05.000+00:00'
-);
+import {
+  inProgressFakeTimestamp,
+  notStartedFakeTimestamp
+} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
 export const testDataTimestamps = {
   newest: new Date('2019-04-09T20:52:05.000+00:00'),
@@ -15,8 +11,8 @@ export const testDataTimestamps = {
   old: new Date('2018-12-09T20:52:05.000+00:00'),
   older: new Date('2018-10-09T20:52:05.000+00:00'),
   oldest: new Date('2018-10-07T20:52:05.000+00:00'),
-  notStarted: new Date('1980-01-01T20:52:05.000+00:00'),
-  inProgress: new Date('1990-01-01T20:52:05.000+00:00')
+  notStarted: notStartedFakeTimestamp,
+  inProgress: inProgressFakeTimestamp
 };
 
 // Data for students' assessments multiple choice table
