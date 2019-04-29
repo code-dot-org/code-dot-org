@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 Feature: Droplet levels work as expected
   Background:
