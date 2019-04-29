@@ -28,12 +28,12 @@ import sectionAssessments, {
   setFeedback,
   doesCurrentCourseUseFeedback,
   getExportableFeedbackData,
-  isCurrentScriptCSD
+  isCurrentScriptCSD,
+  notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import experiments from '@cdo/apps/util/experiments';
-import {notStartedFakeTimestamp} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});

@@ -4,10 +4,6 @@ import {
   getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  inProgressFakeTimestamp,
-  notStartedFakeTimestamp
-} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -59,6 +55,14 @@ const MultiAnswerStatus = {
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
+
+/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
+export const inProgressFakeTimestamp = new Date(
+  '1990-01-01T20:52:05.000+00:00'
+);
+export const notStartedFakeTimestamp = new Date(
+  '1980-01-01T20:52:05.000+00:00'
+);
 
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
