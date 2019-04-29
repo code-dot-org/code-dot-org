@@ -74,6 +74,7 @@ assessments as
         on plg.level_group_level_id = cls.level_group_level_id
     left join non_programming_level_groups  nplg
         on nplg.level_group_level_id = cls.level_group_level_id
+     where is_programming_level_group is not null
   group by 1,2,3, 4
 )
 select 
