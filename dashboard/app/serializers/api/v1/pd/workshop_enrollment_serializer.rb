@@ -1,10 +1,9 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  include Pd::Application::ActiveApplicationModels
   attributes :id, :first_name, :last_name, :email, :district_name, :school, :role,
     :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
     :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
     :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
-    :scholarship_status, :new_facilitator
+    :scholarship_status, :scholarship_ineligible_reason
 
   def user_id
     user = object.resolve_user
@@ -35,9 +34,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
     object.attendances.count
   end
 
-  def new_facilitator
-    object.workshop.local_summer? &&
-      object.workshop.summer_workshop_school_year == APPLICATION_CURRENT_YEAR &&
-      FACILITATOR_APPLICATION_CLASS.where(user_id: object.user_id).first&.status == 'accepted'
+  def scholarship_ineligible_reason
+    object.newly_accepted_facilitator? ? "No (New Facilitator)" : nil
   end
 end

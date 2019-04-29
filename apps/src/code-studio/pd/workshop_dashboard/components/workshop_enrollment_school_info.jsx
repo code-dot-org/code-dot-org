@@ -103,8 +103,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   scholarshipInfo(enrollment) {
-    if (enrollment.new_facilitator) {
-      return <td>No (New Facilitator)</td>;
+    if (enrollment.scholarship_ineligible_reason) {
+      return <td>{enrollment.scholarship_ineligible_reason}</td>;
     }
 
     if (
