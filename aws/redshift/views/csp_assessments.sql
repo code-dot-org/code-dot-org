@@ -1,7 +1,7 @@
 -- potential to dos:
 ---- zero out classrooms where everyone gets 100%?
 ---- divide by assessment denominator (instead of questions answered)?
-create or replace view public.mb_csp_assessments_structure  as
+create or replace view analysis.csp_assessments  as
 with 
 deduped_level_sources as
 (
