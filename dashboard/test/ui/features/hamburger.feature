@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: Hamburger dropdown
 
   Scenario: Signed out user in English should not see hamburger on desktop

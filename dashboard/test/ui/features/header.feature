@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: Header navigation bar
 
 Scenario: Signed out user in English should see 6 header links
