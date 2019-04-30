@@ -335,6 +335,8 @@ ka:
         artistLoopsK2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში.
+      behaviors 3a_callout:
+        this_sprite_callout: გატესტვა
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან).
       course3_artist_functions_challenge1_callout:
