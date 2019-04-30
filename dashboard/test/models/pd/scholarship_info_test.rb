@@ -35,6 +35,7 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
 
     scholarship_info = Pd::ScholarshipInfo.where(user: user, application_year: application_year, course: course).first
     assert_equal Pd::ScholarshipInfoConstants::NO, scholarship_info.scholarship_status
+    assert_equal course, scholarship_info.course
 
     refute Pd::ScholarshipInfo.update_or_create(user, application_year, course, 'invalid status')
 
