@@ -37,7 +37,7 @@ def saucelabs_browser(test_run_name)
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
-    idleTimeout: 30
+    idleTimeout: $eyes ? 60 : 30
   }
   sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
@@ -108,6 +108,7 @@ end
 
 Before do |scenario|
   @tags = scenario.source_tag_names
+  $eyes = true if @tags.include?('@eyes')
   $single_session = true if @tags.include?('@single_session')
 
   very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
