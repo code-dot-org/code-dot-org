@@ -686,7 +686,14 @@ sv:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': öken
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rutnät
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbåge
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': under
+              vatten
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
       gamelab_setPosition:
         text: flytta {THIS} till positionen av {POSITION}
         options:
@@ -720,6 +727,11 @@ sv:
       gamelab_setup:
         text: ställ in
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': när
@@ -761,6 +773,11 @@ sv:
             "'down'": ner
             "'left'": vänster
             "'right'": höger
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': när
+            '"while"': medan
       gamelab_whileKey:
         options:
           KEY:
