@@ -38,6 +38,6 @@ class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCa
     fac_app.update(status: 'accepted')
 
     serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(summer_workshop.enrollments.first).attributes
-    assert_equal NO_NEW_FACILITATOR, serialized[:scholarship_ineligible_reason]
+    assert_equal SCHOLARSHIP_INELIGIBLE_NEW_FACILITATOR, serialized[:scholarship_ineligible_reason]
   end
 end
