@@ -274,12 +274,6 @@ ru:
     header:
       finished_hoc: "Я закончил свой час кода"
       sign_in_to_save: 'Войдите для сохранения результатов'
-      free_play:
-        playlab: 'Создать приложение'
-        artist: 'Нарисуйте что-нибудь'
-        applab: 'Создать приложение'
-        gamelab: 'Создать проект Игровой Лаборатории'
-        weblab: 'Создать проект Web-Лаборатории (beta)'
       my_dashboard: "Моя доска"
       course_catalog: "Каталог курсов"
       project_gallery: "Проекты"

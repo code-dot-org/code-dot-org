@@ -2623,8 +2623,10 @@ ru:
               name: Цикл for в Художнике
             The Artist:
               name: Художник
+            Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
             Internet:
-              name: интернет
+              name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
         dance-low:
@@ -2633,6 +2635,8 @@ ru:
               name: Танцевальная вечеринка
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
             Loops in Ice Age:
@@ -2640,7 +2644,7 @@ ru:
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             While Loops in Farmer:
@@ -2650,7 +2654,7 @@ ru:
             Digital Citizenship:
               name: Цифровое гражданство
             'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
             Artist Binary:
               name: 'Художник: двоичная система'
             Dance Party:
@@ -2666,14 +2670,14 @@ ru:
               name: Вложенные циклы
             Conditionals with Cards:
               name: Условные выражения с картами
-            Conditionals:
-              name: Условные команды
+            'Functions: Songwriting':
+              name: Написание песен
             Internet:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             Songwriting:
@@ -2719,12 +2723,12 @@ ru:
             часа.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Создание основы
             'Real-life Algorithms: Paper Planes':
               name: 'Реальные алгоритмы: Бумажные самолетики'
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
             Binary Bracelets:
               name: Двоичные браслеты
             Sticker Art with Loops:
@@ -2734,8 +2738,8 @@ ru:
         coursea-2019:
           description_audience: 'Возраст: 4-7'
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            'Programming: Happy Maps':
+              name: Весёлые карты
             Going Places Safely:
               name: Безопасное путешествие
             'Loops: Happy Loops':
@@ -2749,8 +2753,6 @@ ru:
               name: Циклы в исполнителе Художник
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2763,6 +2765,8 @@ ru:
               name: Циклы в Собирателе
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            'Loops: Getting Loopy':
+              name: Зацикливание
         pre-express-2019:
           description_audience: 'Возраст: 4-8'
           stages:
@@ -2901,3 +2905,7 @@ ru:
               name: Создание основы
             Loops in Artist:
               name: Циклы в исполнителе Художник
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Программирование на бумаге в клеточку
