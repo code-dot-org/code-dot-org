@@ -2013,14 +2013,14 @@ bs:
               name: Plesna zabava
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papirno Programiranje Grafikona
             Relay Programming:
               name: Prijenos programiranja
             Conditionals with Cards:
               name: Uvjeti s Kartama
             Digital Citizenship:
               name: Digitalno Državljanstvo
-            'Unplugged: Binary':
-              name: 'Izvanmrežno: Binarni'
             Artist Binary:
               name: Umjetnik Binarno
             Dance Party:
@@ -2033,8 +2033,8 @@ bs:
               name: Ugniježdene Petlje
             Conditionals with Cards:
               name: Uvjeti s Kartama
-            Conditionals:
-              name: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -2076,19 +2076,18 @@ bs:
           description: Izađite iz okvira prvog sata sa proširenim idejama o projektu.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Izrada Temelja
             'Real-life Algorithms: Paper Planes':
               name: 'Stvarni algoritmi: Papirni Planovi'
+            'Events: The Big Event':
+              name: Veliki Događaj
             Binary Bracelets:
               name: Binarne narukvice
         coursea-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
             'Programming: Happy Maps':
+              name: Vesele Mape
               description_teacher: Most od algoritama do programiranja može biti veoma
                 kratak ako učenici razumiju razliku između planiranja redoslijeda
                 i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će
@@ -2104,6 +2103,8 @@ bs:
               name: Pomakni, Pomakni
             Your Digital Footprint:
               name: Digitalni otisak stopala
+            'Loops: Getting Loopy':
+              name: Zapetljavanje
         pre-express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2185,3 +2186,7 @@ bs:
               name: Uvjeti s Kartama
             Building a Foundation:
               name: Izrada Temelja
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Papirno Programiranje Grafikona
