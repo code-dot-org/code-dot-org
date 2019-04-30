@@ -592,7 +592,14 @@ bg:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': пещера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустиня
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': мрежа
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': дъга
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под
+              вода
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
       gamelab_setPosition:
         options:
           POSITION:
@@ -613,6 +620,11 @@ bg:
             '"scale"': размер
             '"height"': височина
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': когато
@@ -658,6 +670,11 @@ bg:
             "'down'": надолу
             "'left'": наляво
             "'right'": надясно
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': когато
+            '"while"': докато
       gamelab_whileKey:
         options:
           KEY:
