@@ -7,13 +7,8 @@ import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {
-  getCurrentQuestion,
-  getStudentAnswersForCurrentQuestion
-} from './sectionAssessmentsRedux';
+import {getCurrentQuestion} from './sectionAssessmentsRedux';
 import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const styles = {
@@ -46,16 +41,15 @@ const styles = {
   }
 };
 
-class MultipleChoiceDetailsDialog extends Component {
+class MatchDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: PropTypes.object,
-    studentAnswers: PropTypes.array
+    questionAndAnswers: PropTypes.object
   };
 
   render() {
-    const {questionAndAnswers, studentAnswers} = this.props;
+    const {questionAndAnswers} = this.props;
 
     // Questions are in markdown format and should not display as plain text in the dialog.
 
@@ -66,39 +60,34 @@ class MultipleChoiceDetailsDialog extends Component {
         style={styles.dialog}
         handleClose={this.props.closeDialog}
       >
-        {questionAndAnswers.questionType === 'Multi' && (
+        {questionAndAnswers.questionType === 'Match' && (
           <div>
             <h2>{i18n.questionDetails()}</h2>
             <div style={styles.instructions}>
               <UnsafeRenderedMarkdown markdown={questionAndAnswers.question} />
             </div>
             {questionAndAnswers.answers &&
+              questionAndAnswers.options &&
               questionAndAnswers.answers.length > 0 && (
-                <div>
-                  {questionAndAnswers.answers.map((answer, index) => {
-                    return (
-                      <div key={index} style={styles.answerBlock}>
-                        <div style={styles.iconSpace}>
-                          {answer.correct && (
-                            <FontAwesome
-                              icon="check-circle"
-                              style={styles.icon}
-                            />
-                          )}
-                          {!answer.correct && <span>&nbsp;</span>}
-                        </div>
-                        <div style={styles.answerLetter}>{answer.letter}</div>
-                        <div style={styles.answers} />
-                        <UnsafeRenderedMarkdown markdown={answer.text} />
-                        <div style={{clear: 'both'}} />
-                      </div>
-                    );
-                  })}
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Option</th>
+                      <th>Answer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {questionAndAnswers.answers.map((answer, index) => {
+                      return (
+                        <tr key={index}>
+                          <td>{questionAndAnswers.options[index]}</td>
+                          <td>{answer}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               )}
-            {studentAnswers && studentAnswers.length > 0 && (
-              <MultipleChoiceByQuestionTable studentAnswers={studentAnswers} />
-            )}
           </div>
         )}
         <DialogFooter>
@@ -113,9 +102,8 @@ class MultipleChoiceDetailsDialog extends Component {
   }
 }
 
-export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
+export const UnconnectedMatchDetailsDialog = MatchDetailsDialog;
 
 export default connect(state => ({
-  questionAndAnswers: getCurrentQuestion(state),
-  studentAnswers: getStudentAnswersForCurrentQuestion(state)
-}))(MultipleChoiceDetailsDialog);
+  questionAndAnswers: getCurrentQuestion(state)
+}))(MatchDetailsDialog);

@@ -335,16 +335,32 @@ export const getCurrentQuestion = state => {
       ? assessmentQuestions[state.sectionAssessments.questionIndex]
       : null;
     if (question) {
-      const answers =
-        question.type === QuestionType.MULTI &&
-        (question.answers || []).map((answer, index) => {
-          return {...answer, letter: ANSWER_LETTERS[index]};
-        });
+      if (question.type === 'Multi') {
+        const answers =
+          question.type === QuestionType.MULTI &&
+          (question.answers || []).map((answer, index) => {
+            return {...answer, letter: ANSWER_LETTERS[index]};
+          });
 
-      return {
-        question: question.question_text,
-        answers: answers
-      };
+        return {
+          question: question.question_text,
+          answers: answers,
+          questionType: 'Multi'
+        };
+      } else if (question.type === 'Match') {
+        const answers = question.answers.map(answer => {
+          return answer.text;
+        });
+        const options = question.options.map(option => {
+          return option.text;
+        });
+        return {
+          question: question.question,
+          answers: answers,
+          options: options,
+          questionType: 'Match'
+        };
+      }
     } else {
       return emptyQuestion;
     }

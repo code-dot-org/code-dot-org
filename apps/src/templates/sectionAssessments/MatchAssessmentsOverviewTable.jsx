@@ -137,7 +137,7 @@ class MatchAssessmentsOverviewTable extends Component {
   getAnswerColumn = columnLabel => ({
     property: 'percentAnswered',
     header: {
-      label: columnLabel,
+      label: `${columnLabel.slice(0, 25)}...`,
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
