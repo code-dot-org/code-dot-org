@@ -341,7 +341,7 @@ hi:
       Dancelab_setBackground:
         text: पृष्ठभूमि का रंग {COLOR} सेट करें
       Dancelab_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें
+        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -372,7 +372,7 @@ hi:
             '"vintage"': विंटेज
             '"warm"': गरम
       Dancelab_setBackgroundEffectWithPalette:
-        text: पृष्ठभूमि प्रभाव सेट करें
+        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -434,6 +434,7 @@ hi:
             '0.5': धीमा
             '0.25': अत्‍यधिक धीमा
       Dancelab_setForegroundEffect:
+        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -447,9 +448,11 @@ hi:
             '"rain"': बारिश
             '"floating_rainbows"': इंद्रधनुष
             '"smile_face"': इंद्रधनुष
+            '"spotlight"': स्पॉटलाइट
             '"color_lights"': स्टेज लाइटें
             '"raining_tacos"': टैको
       Dancelab_setForegroundEffectExtended:
+        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
@@ -464,6 +467,7 @@ hi:
             '"rain"': बारिश
             '"floating_rainbows"': इंद्रधनुष
             '"smile_face"': इंद्रधनुष
+            '"spotlight"': स्पॉटलाइट
             '"color_lights"': स्टेज लाइटें
             '"raining_tacos"': टैको
       Dancelab_setProp:
@@ -708,7 +712,15 @@ hi:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुफा
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': रेगिस्तान
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इंद्रधनुष
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पानी
+              के नीचे
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी
+              का मोसम
       gamelab_setPosition:
         text: "{THIS} को {POSITION} पोजीशन में मूव करें"
         options:
@@ -743,6 +755,11 @@ hi:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -764,6 +781,11 @@ hi:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_whileKey:
         options:
           KEY:
