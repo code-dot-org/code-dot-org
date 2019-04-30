@@ -35,6 +35,7 @@ class Pd::Enrollment < ActiveRecord::Base
   include Pd::SharedWorkshopConstants
   include Pd::WorkshopSurveyConstants
   include SerializedProperties
+  include Pd::Application::ActiveApplicationModels
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -267,6 +268,14 @@ class Pd::Enrollment < ActiveRecord::Base
     if workshop.local_summer?
       Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year)&.scholarship_status
     end
+  end
+
+  # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
+  # attending a local summer workshop as a participant to observe the facilitation techniques
+  def newly_accepted_facilitator?
+    workshop.local_summer? &&
+      workshop.summer_workshop_school_year == APPLICATION_CURRENT_YEAR &&
+      FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
