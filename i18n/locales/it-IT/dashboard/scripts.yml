@@ -3192,14 +3192,22 @@ it:
               name: Variabili e Buste
               description_student: 'Buste e variabili hanno qualcosa in comune: entrambe contengono cose importanti. In questa lezione impari cosa sono le variabili e quante cose importante puoi fare con esse.'
               description_teacher: Le variabili sono usate come contenitori per valori quali numeri o parole. Le variabili consentono molta libertà al programmatore. Invece di dover scrivere una frase molte volte o di ricordarsi un numero complicato, gli informatici usano le variabili per far riferimento a queste informazione. Questa lezione spiega cosa sono le variabili e come possiamo usarle in molti modi differenti. Il concetto di "variabile" non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio tempo per la discussione alla fine della lezione.
+            Variables as Constant in Artist:
+              name: Variabili con l'Artista
+            Variables that Change in Bee:
+              name: Modifica delle Variabili con l'Ape
+            Variables that Change in Artist:
+              name: Modifica delle Variabili con l'Artista
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
               description_student: Ti divertirai moltissimo imparando i cicli con contatore!
               description_teacher: 'Sappiamo che i cicli ci permettono di ripetere più e più volte le stesse azioni, ma ora impareremo come usare i cicli con strutture aggiuntive. Queste nuove strutture permetteranno agli studenti di creare un codice più potente e dinamico. '
             For Loops in Bee:
+              name: Cicli con Contatore con l'Ape
               description_student: Zzz Zzz. In questi esercizi guiderai l'ape fino al nettare e al miele usando i cicli con contatore!
               description_teacher: Questa lezione con l'Ape è dedicata ai cicli con contatore e l'uso di una variabile incrementale per risolvere esercizi più complicati. Gli studenti inizieranno ripassando i cicli delle lezioni precedenti, poi proseguiranno usando i cicli con contatore per risolvere più efficacemente problemi più complicati.
             For Loops in Artist:
+              name: Cicli con contatore con l'artista
               description_student: Preparati a creare il tuo prossimo capolavoro. Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi con i cicli, questa volta con l'Artista. Gli studenti completeranno gli esercizi combinando i concetti di variabili, cicli e cicli con contatore per creare progetti complessi. Alla fine avranno la possibilità di creare il proprio progetto in un esercizio libero.
             Alien Dance Party with Sprite Lab:
@@ -3226,6 +3234,8 @@ it:
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             The Artist:
               name: L'artista
+            Nested Loops in the Maze:
+              name: Cicli Annidati nel Labirinto
             Events with Sprite Lab:
               name: Eventi con il Laboratorio dei personaggi
             Loops with the Artist:
@@ -3256,7 +3266,7 @@ it:
           description_audience: 'Da 7 a 11 anni'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmi: Programmazione su carta a quadretti'
+              name: Programmazione su carta a quadretti
             Introduction to Online Puzzles:
               name: Introduzione agli Esercizi Online
             Relay Programming:
@@ -3270,7 +3280,7 @@ it:
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee:
-              name: Cicli Annidati con l'Ape
+              name: Cicli Annidati nel Labirinto
             Nested Loops in Artist:
               name: Cicli annidati con l'artista
             Nested Loops in Frozen:
@@ -3290,7 +3300,7 @@ it:
             Build a Play Lab Game:
               name: Realizzare un gioco col Laboratorio
             'Unplugged: Binary':
-              name: 'Binario'
+              name: Immagini binarie
             Artist Binary:
               name: 'Artista: Binario'
             Build a Star Wars Game:
@@ -3322,7 +3332,7 @@ it:
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals:
-              name: Istruzioni condizionali
+              name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali
@@ -3334,12 +3344,12 @@ it:
               name: Realizza un gioco con Star Wars
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             'Functions: Songwriting':
-              name: 'Funzioni: Composizione di Canzoni'
+              name: Composizione di canzoni
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Minecraft:
               name: Funzioni con Minecraft
             Functions in Harvester:
-              name: Funzioni con la Contadina
+              name: Funzioni con la contadina
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Functions in Artist:
@@ -3370,7 +3380,7 @@ it:
               name: Intelligenza Collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
             Nested Loops in Bee:
-              name: Cicli Annidati con l'Ape
+              name: Cicli Annidati nel Labirinto
             Nested Loops in Artist:
               name: Cicli annidati con l'artista
             Nested Loops in Frozen:
@@ -3483,8 +3493,6 @@ it:
           description_short: Impara le basi dell'informatica e crea disegni, storie animate o giochi interattivi.
           description_audience: 'Da 6 a 10 anni'
           stages:
-            Building a Foundation:
-              name: Costruire le Fondamenta
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
@@ -3504,7 +3512,7 @@ it:
             Loops in Harvester:
               name: Cicli con la contadina
             'Events: The Big Event':
-              name: 'Eventi'
+              name: Gli eventi
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Screen Out the Mean:
@@ -3512,15 +3520,15 @@ it:
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             Looking Ahead:
-              name: Uno Sguardo Avanti
+              name: Uno sguardo avanti con Minecraft
             Binary Bracelets:
               name: Braccialetti binari
-            'End of Course Project: Play Lab':
-              name: 'Progetto di fine corso: Laboratorio'
+            'End of Course Project: Create a Play Lab Game':
+              name: Progetto di Fine Corso
             'Programming: My Robotic Friends':
-              name: 'I miei amici robotici'
+              name: I miei amici robotici (per i più piccoli)
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
             Sticker Art with Loops:
               name: Cicli con l'artista
         gamelab:
@@ -3530,14 +3538,8 @@ it:
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Correzione Errori (Debugging)'
-              description_teacher: 'Questa lezione guiderà gli studenti attraverso le fasi di ricerca degli errori (debugging).  Gli studenti impareranno il mantra: "Cos''è successo? Che cosa sarebbe dovuto succedere? Questo cosa ti suggerisce?"'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmi della Vita Reale: Piantare un Seme'
-              description_teacher: "In questa lezione, gli studenti metteranno in relazione il concetto di algoritmo con le attività di ogni giorno, nella vita reale, piantando un vero seme. L'obiettivo è quello di iniziare a costruire le competenze per tradurre le situazioni del mondo reale in algoritmi e viceversa."
             'Programming: Happy Maps':
-              name: 'Programmazione: Mappe felici'
+              name: Mappe felici
               description_teacher: Il passaggio da algoritmo a programmazione può essere più immediato se gli studenti capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
               name: Programmazione nel labirinto
@@ -3546,10 +3548,8 @@ it:
               name: Cittadinanza digitale - Visitare luoghi in modo sicuro
               description_teacher: In collaborazione con Common-Sense-Media, questa lezione aiuta gli studenti a imparare che molti siti Web richiedono informazioni private e spiega come gestire responsabilmente tali richieste. Gli studenti scoprono anche che possono raggiungere luoghi interessanti online, ma devono seguire alcune regole per essere al sicuro.
             'Loops: Happy Loops':
-              name: 'Cicli felici'
+              name: Cicli felici
               description_teacher: I cicli sono uno strumento molto utile e potente nella programmazione. Per capire quanto utili possono essere, gli studenti dovranno essere condotti a desiderare un modo più semplice per risolvere problemi banali.
-            Loops in Harvester:
-              name: Cicli con la contadina
             Loops in Collector:
               name: Cicli con la collezionista
               description_teacher: Basandosi sul concetto di istruzioni ripetute appreso in "Cicli Felici", in questa lezione gli studenti utilizzeranno i cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
@@ -3557,17 +3557,19 @@ it:
               name: Cicli con l'artista
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.
             'Events: The Big Event':
-              name: 'Eventi'
+              name: Gli eventi (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: In movimento con gli eventi
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!
             Ocean Scene with Loops:
               name: Al mare con i cicli
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Loops in Ice Age:
-              name: Cicli con l'Era glaciale
+              name: Cicli con Scrat
+            Programming in Ice Age:
+              name: Programmare con Scrat
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             Sequencing with Scrat:
@@ -3598,15 +3600,19 @@ it:
             Loops in Artist:
               name: Cicli con l'artista
             'Events: The Big Event':
-              name: 'Eventi'
+              name: Gli eventi (per i più piccoli)
             Events in Play Lab:
               name: 'Laboratorio: Eventi'
             'Loops: Getting Loopy':
-              name: 'Cicli: diventare ripetitivi'
+              name: Diventare ripetitivi
             Loops in Harvester:
               name: Cicli con la contadina
             Programming in Maze:
               name: Programmazione nel labirinto
+            Programming in Harvester:
+              name: Programmazione con la contadina
+            Sequencing in Maze:
+              name: Sequenze di istruzioni con Angry Birds
         pre-express-2019:
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
           stages:
@@ -3869,3 +3875,9 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmazione su carta a quadretti
+            Programming in Maze:
+              name: Programmazione nel labirinto

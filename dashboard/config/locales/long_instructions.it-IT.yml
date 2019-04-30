@@ -4,6 +4,8 @@ it:
     long_instructions:
       "'pre-assessment survey q25A'": 'Se sì, a quale corso/i di informatica hai preso
         parte prima di questa lezione di informatica? '
+      "(joshl) Dance Party 1-validated_2019": "**Fai una previsione:** Ecco un personaggio
+        chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       2-3 Artist 1 new: Ciao, io sono un artista. Puoi scrivere del codice per farmi
         disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le
         linee grigie dell'immagine. (Ciascuna riga è lunga 100 pixel)
@@ -1445,6 +1447,7 @@ it:
         \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party Predict_2019: "**Fai una previsione:** Ecco un personaggio chiamato
         `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Usa gli eventi per rendere il tuo ballo interattivo!
       Dance_Party_01: |-
         _Organizziamo una festa e balliamo alla grande!_
@@ -2276,6 +2279,9 @@ it:
       Virtual Pet Predict: '**Fai una previsione:** Questa è Geraldine, la tua nuova
         giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai
         su di lei?'
+      Virtual Pet Template_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea
+        un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera,
+        il suo colore diventi marrone."
       beeDebugVideo1: Raccogli tutto il nettare.
       comment_intro_maze_2018: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_
         \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche
