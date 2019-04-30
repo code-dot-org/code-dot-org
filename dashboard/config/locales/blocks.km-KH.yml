@@ -242,7 +242,12 @@ km:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': រូង​ភ្នំ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': វាលខ្សាច់
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
       gamelab_setPosition:
         options:
           POSITION:
@@ -259,6 +264,11 @@ km:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': នៅ​ពេល
@@ -295,6 +305,11 @@ km:
             "'down'": ចុះ
             "'left'": ឆ្វេង
             "'right'": ស្តាំ
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': នៅ​ពេល
       gamelab_whileKey:
         options:
           KEY:
