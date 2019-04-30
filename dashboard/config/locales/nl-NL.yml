@@ -281,12 +281,6 @@ nl:
     header:
       finished_hoc: Ik heb mijn Uur Code afgemaakt
       sign_in_to_save: Log in om je vooruitgang op te slaan
-      free_play:
-        playlab: Maak een App
-        artist: Teken iets
-        applab: Maak een App
-        gamelab: Maak een Game Lab project
-        weblab: Maak een Web Lab (beta) project
       my_dashboard: Mijn Dashboard
       course_catalog: Cursuscatalogus
       project_gallery: Projecten overzicht
