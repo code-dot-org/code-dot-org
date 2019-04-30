@@ -2685,7 +2685,7 @@ fr:
             The Artist:
               name: L'Artiste
             Internet:
-              name: Internet
+              name: Internet et les réseaux connectés
             Crowdsourcing:
               name: Financement participatif
             Digital Sharing:
@@ -2696,6 +2696,8 @@ fr:
               name: Fête dansante
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmation sur papier quadrillé
             Relay Programming:
               name: Programmation de relais
             Loops in Ice Age:
@@ -2705,7 +2707,7 @@ fr:
             Digital Citizenship:
               name: Citoyenneté numérique
             'Unplugged: Binary':
-              name: 'Débranché: Binaire'
+              name: Les images binaires
             Artist Binary:
               name: Artiste binaire
             Dance Party:
@@ -2718,8 +2720,8 @@ fr:
               name: Boucles imbriquées
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
-            Conditionals:
-              name: Instructions conditionnelles
+            'Functions: Songwriting':
+              name: Écriture de chansons
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2758,12 +2760,10 @@ fr:
         coursec-2019:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
-            Building a Foundation:
-              name: Construire une fondation
             'Real-life Algorithms: Paper Planes':
               name: 'Algorithmes du monde réel: Avions en papier'
-            Looking Ahead:
-              name: Regarder en avant
+            'Events: The Big Event':
+              name: Le Grand Événement
             Binary Bracelets:
               name: Bracelets binaires
         gamelab:
@@ -2771,13 +2771,10 @@ fr:
         coursea-2019:
           description_short: Une introduction à l’informatique pour les primo-lecteurs.
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algorithmes du monde réel: Planter une graine'
-              description_teacher: "In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r\n"
+            'Programming: Happy Maps':
+              name: Cartes Joyeuses
             Going Places Safely:
               name: Se déplacer en toute sécurité
-            Loops in Ice Age:
-              name: Boucles dans l'Âge de Glace
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2786,6 +2783,8 @@ fr:
               name: Ton empreinte numérique
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
+            'Loops: Getting Loopy':
+              name: Tourner en rond
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2938,3 +2937,11 @@ fr:
               name: Instructions conditionnelles avec des cartes
             Building a Foundation:
               name: Construire une fondation
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Bibliothèques
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmation sur papier quadrillé

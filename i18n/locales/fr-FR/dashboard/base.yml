@@ -276,13 +276,6 @@ fr:
     header:
       finished_hoc: "J'ai fini mon Heure de Code"
       sign_in_to_save: 'Connecte-toi pour enregistrer tes progrès.'
-      free_play:
-        playlab: 'Crée une application'
-        artist: 'Dessine quelque chose'
-        calculate: 'Calculer quelque chose'
-        applab: 'Crée une application'
-        gamelab: 'Créer un projet Game Lab'
-        weblab: 'Créer un projet Web Lab (bêta)'
       my_dashboard: "Mon tableau de bord"
       course_catalog: "Catalogue des cours"
       project_gallery: "Projets"
