@@ -523,6 +523,8 @@ ga:
         artistLoopsK2_1: Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo.
       behaviors 1_callout:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
+      behaviors 3a_callout:
+        this_sprite_callout: Tástáil
       behaviors 4_callout:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
       behaviors 4a_callout:
@@ -595,8 +597,6 @@ ga:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp2a_2018_callout:
@@ -604,6 +604,8 @@ ga:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.
         stone_block_2: Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat.
       courseA_maze_seq1_callout:
@@ -642,6 +644,8 @@ ga:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil "Rith" chun an clár a thosú.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Níl ach bloc amháin den sórt seo sa mbosca uirlisí. Cén chaoi a n-úsáidfidh tú é?
       courseB_artist_loops3_2018_callout:
