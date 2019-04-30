@@ -37,6 +37,7 @@ class Course < ApplicationRecord
     has_verified_resources
     family_name
     version_year
+    is_stable
   )
 
   def to_param
@@ -53,6 +54,14 @@ class Course < ApplicationRecord
 
   def localized_version_title
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
+  end
+
+  # Any course with a plc_course or no family_name is considered stable.
+  # All other courses must specify an is_stable boolean property.
+  def stable?
+    return true if plc_course || !family_name
+
+    is_stable || false
   end
 
   def self.file_path(name)
@@ -188,8 +197,7 @@ class Course < ApplicationRecord
     info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
-    # For now, all course versions visible in the UI are stable.
-    info[:is_stable] = true
+    info[:is_stable] = stable?
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -296,9 +304,7 @@ class Course < ApplicationRecord
           version_year: c.version_year,
           version_title: c.localized_version_title,
           can_view_version: c.can_view_version?(user),
-          # TODO: (madelynkasula) Update is_stable to no longer be hard-coded once
-          # properties[:is_stable] is implemented for courses.
-          is_stable: true
+          is_stable: stable?
         }
       end
 
