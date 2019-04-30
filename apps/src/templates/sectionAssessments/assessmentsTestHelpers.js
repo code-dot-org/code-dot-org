@@ -1,4 +1,19 @@
 import i18n from '@cdo/locale';
+import {
+  inProgressFakeTimestamp,
+  notStartedFakeTimestamp
+} from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+
+export const testDataTimestamps = {
+  newest: new Date('2019-04-09T20:52:05.000+00:00'),
+  newer: new Date('2019-04-09T20:40:05.000+00:00'),
+  new: new Date('2019-02-09T20:52:05.000+00:00'),
+  old: new Date('2018-12-09T20:52:05.000+00:00'),
+  older: new Date('2018-10-09T20:52:05.000+00:00'),
+  oldest: new Date('2018-10-07T20:52:05.000+00:00'),
+  notStarted: notStartedFakeTimestamp,
+  inProgress: inProgressFakeTimestamp
+};
 
 // Data for students' assessments multiple choice table
 export const studentOverviewData = [
@@ -7,8 +22,9 @@ export const studentOverviewData = [
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
-    isSubmitted: true,
-    submissionTimeStamp: '2/16/18 - 7:41 AM'
+    isSubmitted: false,
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.notStarted
   },
   {
     id: 2,
@@ -16,7 +32,8 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
     isSubmitted: false,
-    submissionTimeStamp: ''
+    inProgress: true,
+    submissionTimeStamp: testDataTimestamps.inProgress
   },
   {
     id: 3,
@@ -24,7 +41,8 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 7:41 AM'
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.newest
   },
   {
     id: 4,
@@ -32,15 +50,17 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 8:00 AM'
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.newer
   },
   {
     id: 5,
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
-    isSubmitted: false,
-    submissionTimeStamp: ''
+    isSubmitted: true,
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.new
   },
   {
     id: 6,
@@ -48,7 +68,44 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
     isSubmitted: true,
-    submissionTimeStamp: '5/29/18 - 8:05 AM'
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.old
+  },
+  {
+    id: 7,
+    name: 'Dani',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    isSubmitted: true,
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.older
+  },
+  {
+    id: 8,
+    name: 'Amanda',
+    numMultipleChoiceCorrect: 0,
+    numMultipleChoice: 10,
+    isSubmitted: true,
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.oldest
+  },
+  {
+    id: 9,
+    name: 'Nkiru',
+    numMultipleChoiceCorrect: 7,
+    numMultipleChoice: 10,
+    isSubmitted: false,
+    inProgress: true,
+    submissionTimeStamp: testDataTimestamps.inProgress
+  },
+  {
+    id: 10,
+    name: 'Karis',
+    numMultipleChoiceCorrect: 7,
+    numMultipleChoice: 10,
+    isSubmitted: false,
+    inProgress: false,
+    submissionTimeStamp: testDataTimestamps.notStarted
   }
 ];
 
