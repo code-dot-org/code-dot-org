@@ -1733,6 +1733,8 @@ et:
               name: Tantsuõhtu
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeetripaberi programmeerimine
             Relay Programming:
               name: Relee programmeerimine
             Loops in Ice Age:
@@ -1742,7 +1744,7 @@ et:
             Digital Citizenship:
               name: Digitaalne kodakondsus
             'Unplugged: Binary':
-              name: 'Unplugged: Binaar'
+              name: Binaarsed pildid
             Artist Binary:
               name: Kunstnik Binaar
             Dance Party:
@@ -1755,8 +1757,8 @@ et:
               name: Korduvad tsüklid
             Conditionals with Cards:
               name: Tingimuslaused kaartidel
-            Conditionals:
-              name: Tingimuslaused
+            'Functions: Songwriting':
+              name: Laulude kirjutamine
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1792,22 +1794,20 @@ et:
           description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Vundamendi ehitus
             'Real-life Algorithms: Paper Planes':
               name: 'Päris elu algoritmid: paberlennukid'
+            'Events: The Big Event':
+              name: Suursündmus
             Binary Bracelets:
               name: Binaarsed käevõrud
         gamelab:
           title: Game Lab
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Päris elu algoritmid: Seemenda'
+            'Programming: Happy Maps':
+              name: Happy Maps
             Going Places Safely:
               name: Läheb asukohta turvaliselt
-            Loops in Ice Age:
-              name: Tsüklik - Jääaeg
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1816,6 +1816,8 @@ et:
               name: Sinu digitaalne jalajälg
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
+            'Loops: Getting Loopy':
+              name: Muutub tsükliliseks
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1874,3 +1876,7 @@ et:
               name: Tingimuslaused kaartidel
             Building a Foundation:
               name: Vundamendi ehitus
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Millimeetripaberi programmeerimine
