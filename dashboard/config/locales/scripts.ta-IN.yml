@@ -242,8 +242,16 @@ ta:
           stages:
             The Artist:
               name: கலைஞர்
+            Internet:
+              name: இணையம்
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: வரைதாள் செய்நிரல்
         coursee-2019:
           stages:
+            'Functions: Songwriting':
+              name: பாடல் எழுதுதல்
             Songwriting:
               name: பாடல் எழுதுதல்
         andrea-test:
@@ -264,3 +272,7 @@ ta:
           stages:
             The Internet:
               name: இணையம்
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: வரைதாள் செய்நிரல்
