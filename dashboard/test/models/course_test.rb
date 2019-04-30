@@ -74,27 +74,27 @@ class CourseTest < ActiveSupport::TestCase
     assert obj['properties']['is_stable']
   end
 
-  test "stable_or_default: true if course has plc_course" do
+  test "stable?: true if course has plc_course" do
     course = Course.new(family_name: 'plc')
     course.plc_course = Plc::Course.new(course: course)
     course.save
 
-    assert course.stable_or_default
+    assert course.stable?
   end
 
-  test "stable_or_default: true if course is not in a family" do
+  test "stable?: true if course is not in a family" do
     course = create :course
-    assert course.stable_or_default
+    assert course.stable?
   end
 
-  test "stable_or_default: true if course in family has is_stable set" do
+  test "stable?: true if course in family has is_stable set" do
     course = create :course, family_name: 'csd', is_stable: true
-    assert course.stable_or_default
+    assert course.stable?
   end
 
-  test "stable_or_default: defaults to false if course in family does not have is_stable set" do
+  test "stable?: defaults to false if course in family does not have is_stable set" do
     course = create :course, family_name: 'csd'
-    refute course.stable_or_default
+    refute course.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase

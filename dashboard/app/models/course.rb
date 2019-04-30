@@ -58,7 +58,7 @@ class Course < ApplicationRecord
 
   # Any course with a plc_course or no family_name is considered stable.
   # All other courses must specify an is_stable boolean property.
-  def stable_or_default
+  def stable?
     return true if plc_course || !family_name
 
     is_stable || false
@@ -197,7 +197,7 @@ class Course < ApplicationRecord
     info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
-    info[:is_stable] = stable_or_default
+    info[:is_stable] = stable?
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -304,7 +304,7 @@ class Course < ApplicationRecord
           version_year: c.version_year,
           version_title: c.localized_version_title,
           can_view_version: c.can_view_version?(user),
-          is_stable: stable_or_default
+          is_stable: stable?
         }
       end
 
