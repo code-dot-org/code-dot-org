@@ -325,12 +325,6 @@ cs:
     header:
       finished_hoc: Dokončil jsem Hodinu Kódu
       sign_in_to_save: Přihlaš se pro uložení pokroku
-      free_play:
-        playlab: Vytvořit aplikaci
-        artist: Nakresli něco
-        applab: Vytvořit aplikaci
-        gamelab: Vytvořit projekt Game Lab
-        weblab: Vytvořit Web Lab (beta) projekt
       my_dashboard: Můj přehled
       course_catalog: Katalog kurzů
       project_gallery: Projekty

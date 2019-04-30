@@ -737,7 +737,13 @@ cs:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jeskyně
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': město
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': poušť
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mřížka
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duha
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
       gamelab_setPosition:
         text: přesunout {THIS} na pozici {POSITION}
         options:
@@ -771,6 +777,11 @@ cs:
       gamelab_setup:
         text: nastavení
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': když
@@ -820,6 +831,11 @@ cs:
         text: |-
           když {SPRITE1} se začne dotýkat {SPRITE2} {STATEMENT1}když se přestanou dotýkat
           {STATEMENT2}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': když
+            '"while"': dokud
       gamelab_whileKey:
         options:
           KEY:
