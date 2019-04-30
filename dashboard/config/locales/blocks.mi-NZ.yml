@@ -194,8 +194,13 @@ mi:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ana
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': tāone
               nui
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': koraha
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kahukura
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': takerewai
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hōtoke
       gamelab_setProp:
         options:
           PROPERTY:
@@ -206,6 +211,11 @@ mi:
             '"scale"': rahinga
             '"height"': teitei
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': ina
@@ -238,6 +248,11 @@ mi:
             "'down'": raro
             "'left'": mauī
             "'right'": matau
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': ina
+            '"while"': i te
       gamelab_whileKey:
         options:
           KEY:
