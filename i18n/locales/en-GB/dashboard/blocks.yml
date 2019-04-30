@@ -142,7 +142,12 @@ en-GB:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
       gamelab_setPosition:
         options:
           POSITION:
@@ -156,10 +161,20 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_whenKey:
         options:
           KEY:
             '"space"': space
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_whileKey:
         options:
           KEY:
