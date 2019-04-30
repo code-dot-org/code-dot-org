@@ -9,5 +9,6 @@
   "danceFeedbackStartNewMove": "Dansarinn þinn var ekki að gera nýja hreyfingu eftir fjórða taktinn.",
   "danceFeedbackNeedDifferentDance": "Þú þarft að nota annan dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Gættu þess að nota `á 2ja takta fresti` kubbinn",
-  "danceFeedbackNeedMakeANewDancer": "Notaðu `búa til nýjan` kubbinn til að búa til annan dansara."
+  "danceFeedbackNeedMakeANewDancer": "Notaðu `búa til nýjan` kubbinn til að búa til annan dansara.",
+  "danceFeedbackKeyEvent": "Gættu þess að tengja einhvern kóða við `þegar keyrt` kubbinn og ýta á lykilinn á meðan dansinn er í gangi."
 }
