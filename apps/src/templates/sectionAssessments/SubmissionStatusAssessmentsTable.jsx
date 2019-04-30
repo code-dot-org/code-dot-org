@@ -54,8 +54,10 @@ export const studentOverviewDataPropType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
   numMultipleChoice: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired,
+  /* timestamp is passed in as a Date so the column can be sorted accurately. See note in sectionAssessmentsRedux for details*/
+  submissionTimeStamp: PropTypes.instanceOf(Date).isRequired,
   isSubmitted: PropTypes.bool.isRequired,
+  inProgress: PropTypes.bool.isRequired,
   url: PropTypes.string
 });
 
@@ -114,10 +116,22 @@ class SubmissionStatusAssessmentsTable extends Component {
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.isSubmitted;
+    const inProgress = rowData.inProgress;
+    var submissionTimeStampText;
+    switch (true) {
+      case isSubmitted:
+        submissionTimeStampText = rowData.submissionTimeStamp.toLocaleString();
+        break;
+      case inProgress:
+        submissionTimeStampText = i18n.inProgress();
+        break;
+      default:
+        submissionTimeStampText = i18n.notStarted();
+    }
 
     return (
-      <div style={styles.main}>
-        <div style={styles.text}>{submissionTimeStamp}</div>
+      <div style={styles.main} id="timestampCell">
+        <div style={styles.text}>{submissionTimeStampText}</div>
         {isSubmitted && (
           <div style={styles.icon}>
             <FontAwesome id="checkmark" icon="check-circle" />
@@ -189,7 +203,8 @@ class SubmissionStatusAssessmentsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.timeStamp}
-            }
+            },
+            id: 'timestampHeaderCell'
           },
           transforms: [sortable]
         },
