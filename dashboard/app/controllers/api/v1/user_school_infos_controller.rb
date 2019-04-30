@@ -7,7 +7,6 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
-    puts "Inside controller - current user - #{@user_school_info.user.inspect}"
     if @user_school_info.user.id == current_user.id
       if @user_school_info.update(last_confirmation_date: DateTime.now)
         head :no_content
