@@ -1653,6 +1653,8 @@
               name: Dansefest
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeterpapirprogrammering
             Relay Programming:
               name: Relé programmering
             Conditionals with Cards:
@@ -1660,7 +1662,7 @@
             Digital Citizenship:
               name: Digitalt statsborgerskap
             'Unplugged: Binary':
-              name: 'Frakoblet: Binær'
+              name: Binære Bilder
             Artist Binary:
               name: Kunstner Binær
             Dance Party:
@@ -1673,8 +1675,8 @@
               name: Løkker i løkker
             Conditionals with Cards:
               name: Betingelser med kort
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Låtskriving
             Internet:
               name: Internett
             Crowdsourcing:
@@ -1712,18 +1714,18 @@
           description: Fortsett etter den første timen med større prosjektideer.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Bygg ett grunnlag
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer fra virkeligheten: Papirfly'
+            'Events: The Big Event':
+              name: Den store begivenheten
             Binary Bracelets:
               name: Binær armbånd
         gamelab:
           title: Spill-lab
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Virkelige algoritmer: Plante et frø'
+            'Programming: Happy Maps':
+              name: Glade Kart
             Going Places Safely:
               name: Trygg reise
         courseb-2019:
@@ -1732,6 +1734,8 @@
               name: Flytt den, flytt den
             Your Digital Footprint:
               name: Dine digitale fotavtrykk
+            'Loops: Getting Loopy':
+              name: Gå i spinn
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1794,3 +1798,7 @@
               name: Bygg ett grunnlag
             Nested Loops in Bee/Zombie:
               name: Løkker i løkker i Bie/Zombie
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Millimeterpapirprogrammering

@@ -269,12 +269,6 @@
     header:
       finished_hoc: "Jeg har fullført Kodetimen min"
       sign_in_to_save: 'Logg inn for å lagre fremdrift'
-      free_play:
-        playlab: 'Lag en app'
-        artist: 'Tegn noe'
-        applab: 'Lag en app'
-        gamelab: 'Opprett et Spill-lab prosjekt'
-        weblab: 'Opprett et Web-lab (beta) prosjekt'
       my_dashboard: "Mitt Kontrollpanel"
       course_catalog: "Kurskatalog"
       project_gallery: "Prosjekter"
