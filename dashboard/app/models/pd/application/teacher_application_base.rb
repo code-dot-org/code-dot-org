@@ -65,11 +65,11 @@ module Pd::Application
     end
 
     def update_scholarship_status(scholarship_status)
-      Pd::ScholarshipInfo.update_or_create(user, application_year, scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, course_name, scholarship_status)
     end
 
     def scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course_name)&.scholarship_status
     end
 
     # Implement in derived class.
