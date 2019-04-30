@@ -244,7 +244,12 @@ fil:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': kuweba
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': siyudad
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': bahaghari
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa ilalim ng tubig
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
       gamelab_setPosition:
         options:
           POSITION:
@@ -261,6 +266,11 @@ fil:
             '"scale"': sukat
             '"height"': taas
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': kelan
@@ -297,6 +307,11 @@ fil:
             "'down'": baba
             "'left'": kaliwa
             "'right'": kanan
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': kelan
+            '"while"': habang
       gamelab_whileKey:
         options:
           KEY:

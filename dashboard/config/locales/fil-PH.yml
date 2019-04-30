@@ -306,12 +306,6 @@ fil:
     header:
       finished_hoc: Natapos ko ang aking Hour of Code
       sign_in_to_save: Mag-sign in para i-save ang progreso
-      free_play:
-        playlab: Lumikha ng App
-        artist: Gumuhit ng isang bagay
-        applab: Lumikha ng App
-        gamelab: Gumawa ng Game Lab na proyekto
-        weblab: Gumawa ng Web Lab (beta) na proyekto
       my_dashboard: Aking Dashboard
       course_catalog: Katalogo ng Kurso
       project_gallery: Mga Proyekto

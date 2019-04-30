@@ -11228,18 +11228,18 @@ fil:
                 mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin
                 na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring
                 makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
-            new stage:
-              name: bagong yugto
             The Artist:
               name: The Artist
+            Nested Loops in the Maze:
+              name: Naka-nest na mga Loops sa Maze
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
             Introduction to Online Puzzles:
               name: Pambungad sa mga Online na mga Palaisipan
             Relay Programming:
@@ -11249,7 +11249,7 @@ fil:
             Events in Bounce:
               name: Mga Pangyayari sa Bounce
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
@@ -11267,7 +11267,7 @@ fil:
             Build a Play Lab Game:
               name: Bumuo ng Play Lab na Laro
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
             Artist Binary:
               name: Artist na Binary
             Build a Star Wars Game:
@@ -11298,7 +11298,6 @@ fil:
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
             Conditionals:
-              name: Mga conditional
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung
                 ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya
                 at mahirap na mga seryeng ito.
@@ -11332,7 +11331,7 @@ fil:
                 Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos
                 ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
               description_student: Kahit ang mga rockstar ay nangangailangan ng mga
                 kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol
                 sa mga kakayahan gamit ang mga titik mula sa mga awitin.
@@ -11448,11 +11447,11 @@ fil:
                 ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong
                 ang pagtutulungan sa industriya ng computer science.
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
-              name: Naka-nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
             Conditionals in Minecraft:
               name: Mga Kondisyonal sa Minecraft
             Songwriting:
@@ -11718,8 +11717,6 @@ fil:
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
           stages:
-            Building a Foundation:
-              name: Gumawa ng Foundation
             Programming in Maze:
               name: Pag-Program sa Maze
             Debugging in Maze:
@@ -11736,6 +11733,8 @@ fil:
               name: Mga Loops kasama sina Rey at BB-8
             Loops in Harvester:
               name: Mga Loops sa Harvester
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
             Screen Out the Mean:
@@ -11760,22 +11759,8 @@ fil:
             pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
-              description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa
-                mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan
-                na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin
-                nito?"'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay
-                sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay
-                na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
-                Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
-                ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r\n"
             'Programming: Happy Maps':
-              name: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
               description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program
                 ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa
                 kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod
@@ -11807,8 +11792,6 @@ fil:
                 ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin
                 ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga
                 problema.
-            Loops in Harvester:
-              name: Mga Loops sa Harvester
             Loops in Collector:
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga
                 instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok
@@ -11854,7 +11837,7 @@ fil:
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
             Loops in Harvester:
               name: Mga Loops sa Harvester
             Programming in Maze:
@@ -13575,3 +13558,9 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Programming in Maze:
+              name: Pag-Program sa Maze

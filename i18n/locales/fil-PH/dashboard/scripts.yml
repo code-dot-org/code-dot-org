@@ -7443,18 +7443,18 @@ fil:
               name: Ipakita ang Iyong Proyekto
               description_student: Oras na para ipakita ang iyong gawain! Diyo ipapakita mo ang iyong kamangha-mangha na proyekto sa iyong mga kasamahan.
               description_teacher: Sa loob ng limang mga aralin, ang mga estudyante ay bubuo hanggang sa maubo nila ang proyekto na sarili nilang disenyo gamit ang alinman sa Play Lab o Artist bilang kapaligiran sa kanilang pag-program. Sa wakas, ang mga estudyante ay maaaring makakapakita sa kanilang natapos na gawain sa kanilang mga kasamahan at sa mga mahal sa buhay gamit ang isang espesyal na link. Ang gabay ng aralin na nagpapakita sa lahat ng limang mga yugto ng proseso ay maaaring makita sa simula ng proseso ng proyekto, [here](https://curriculum.code.org/csf/coursef/15/).
-            new stage:
-              name: bagong yugto
             The Artist:
               name: The Artist
+            Nested Loops in the Maze:
+              name: Naka-nest na mga Loops sa Maze
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
             Introduction to Online Puzzles:
               name: Pambungad sa mga Online na mga Palaisipan
             Relay Programming:
@@ -7464,7 +7464,7 @@ fil:
             Events in Bounce:
               name: Mga Pangyayari sa Bounce
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
@@ -7482,7 +7482,7 @@ fil:
             Build a Play Lab Game:
               name: Bumuo ng Play Lab na Laro
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
             Artist Binary:
               name: Artist na Binary
             Build a Star Wars Game:
@@ -7510,7 +7510,6 @@ fil:
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
             Conditionals:
-              name: Mga conditional
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
               description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
             Private and Personal Information:
@@ -7525,7 +7524,7 @@ fil:
               description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
               description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
               description_student: Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin.
               description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.
             Functions in Artist:
@@ -7561,11 +7560,11 @@ fil:
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
               description_teacher: Sa computer science, makakaharap tayo ng iilang mga malalaki, nakakatakot na mga problema. Mga hamon gaya ng paghahanap sa pinakamalaking prime na numero o pagsunod-sunod sa DNA ay halos imposibleng magawa bilang isang indibidwal. Ang pagdadagdag ng kapangyarihan ng iba ay nagpapagawa sa gawaing mga ito na mapapamahalaan. Ang araling ito ay magpapakita sa mga estudyante kung paano maaring nakakatulong ang pagtutulungan sa industriya ng computer science.
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
-              name: Naka-nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
             Conditionals in Minecraft:
               name: Mga Kondisyonal sa Minecraft
             Songwriting:
@@ -7691,8 +7690,6 @@ fil:
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
           stages:
-            Building a Foundation:
-              name: Gumawa ng Foundation
             Programming in Maze:
               name: Pag-Program sa Maze
             Debugging in Maze:
@@ -7709,6 +7706,8 @@ fil:
               name: Mga Loops kasama sina Rey at BB-8
             Loops in Harvester:
               name: Mga Loops sa Harvester
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
             Screen Out the Mean:
@@ -7730,14 +7729,8 @@ fil:
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Pag-dedebug: Hindi nakitang mga Bug'
-              description_teacher: 'Ang araling ito ay gagabay sa mga estudyante sa mga hakbang sa pag-debug. Ang mga estudya ay matututo nang isang kasabihan na: "Anong nangyari? Ano ang dapat mangyari? Ano ang ibig sabihin nito?"'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-              description_teacher: "Sa araling ito, ang mga estudyante ay mag-uugnay sa konsepto ng mga algoritmo pabalik sa araw-araw, tunay na buhay na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto. Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon at ang kabaliktaran nito.\\r\n"
             'Programming: Happy Maps':
-              name: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
               description_teacher: Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.
             Programming in Maze:
               name: Pag-Program sa Maze
@@ -7747,8 +7740,6 @@ fil:
               description_teacher: Sa pakikipagtulungan sa [r common-sense-media], ang araling ito ay nakakatulong sa mga estudyante na matututo na maraming mga website ang nagtatanong ng mga impormasyon na mga pribado at nagtatalakay kung paano responsableng harapin ang mga ganong kahilingan. Makikita din ng mga estudyante na sila ay maaaring makakapunta sa nakakatuwang mga lugar online, ngunit kailangan nilang sumunod sa iilang mga tutunin para manatiling ligtas.
             'Loops: Happy Loops':
               description_teacher: Ang mga loop ay lubhang nakakatulong at makapangyarihan na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga problema.
-            Loops in Harvester:
-              name: Mga Loops sa Harvester
             Loops in Collector:
               description_teacher: Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa "Masayang mga Loop", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org.
             Loops in Artist:
@@ -7776,7 +7767,7 @@ fil:
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
             Loops in Harvester:
               name: Mga Loops sa Harvester
             Programming in Maze:
@@ -8377,3 +8368,9 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Programming in Maze:
+              name: Pag-Program sa Maze
