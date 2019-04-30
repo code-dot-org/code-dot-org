@@ -527,8 +527,6 @@ nn:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseA_maze_ramp2a_2018_callout:
@@ -536,6 +534,8 @@ nn:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.
         stone_block_2: Grå blokker er laga av stein og kan ikkje bli kasta.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke.
       courseA_maze_seq1_callout:
@@ -574,6 +574,8 @@ nn:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Etter du har koblet sammen alle blokkene, klikk på "Kjør" for å starte programmet.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?
       courseB_artist_loops3_2018_callout:

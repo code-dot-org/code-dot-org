@@ -2225,6 +2225,8 @@ nn:
               name: Dansefest
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
             Relay Programming:
               name: Programmeringsstafett
             Conditionals with Cards:
@@ -2234,7 +2236,7 @@ nn:
             Build a Play Lab Game:
               name: Bygg eit spel i Spellab
             'Unplugged: Binary':
-              name: 'Trådlaust: Binær'
+              name: Binære bilete
             Artist Binary:
               name: 'Kunstnar: binær'
             Dance Party:
@@ -2247,8 +2249,8 @@ nn:
               name: Løkker i løkke
             Conditionals with Cards:
               name: Vilkår med kort
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Låtskriving
             Internet:
               name: Internett
             Crowdsourcing:
@@ -2286,12 +2288,12 @@ nn:
           description: Fortsett etter den første timen med større prosjektideer.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Bygge eit fundament
             'Real-life Algorithms: Paper Planes':
               name: 'Verkelege algoritmar: Papirfly'
+            'Events: The Big Event':
+              name: Den store hendinga
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
             Binary Bracelets:
               name: Binær armbånd
         gamelab:
@@ -2300,12 +2302,12 @@ nn:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan
             lese.
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Verkelege algoritmar: Plante eit frø'
+            'Programming: Happy Maps':
+              name: Glade Kart
             Going Places Safely:
               name: Går stader trygt
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
         courseb-2019:
           stages:
             Move It, Move It:
@@ -2313,7 +2315,9 @@ nn:
             Your Digital Footprint:
               name: Dine digitale fotspor
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
+            'Loops: Getting Loopy':
+              name: Me blir sløyfete
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2396,3 +2400,7 @@ nn:
               name: Bygge eit fundament
             Nested Loops in Bee/Zombie:
               name: Løkker i løkker i Bie/Zombie
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
