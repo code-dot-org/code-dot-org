@@ -189,10 +189,6 @@ lv:
     header:
       finished_hoc: "Esmu pabeidzis savu \"Programmēšanas Stundu\""
       sign_in_to_save: 'Pierakstieties, lai saglabātu savus panākumus'
-      free_play:
-        playlab: 'Izveidot aplikāciju'
-        artist: 'Uzzīmēt kaut ko'
-        applab: 'Izveidot aplikāciju'
       course_catalog: "Kursu katalogs"
       help_support: "Palīdzība un atbalsts"
       documentation: "Dokumentācija"
