@@ -280,12 +280,6 @@ zh-TW:
     header:
       finished_hoc: 我完成了一小時玩程式活動
       sign_in_to_save: 登入以儲存進度
-      free_play:
-        playlab: 製作一個 Play Lab App
-        artist: 畫些什麼
-        applab: 製作一個 App Lab app
-        gamelab: 創建一個 Game Lab 專案
-        weblab: 創建一個 Web Lab 專案
       my_dashboard: 我的控制台
       course_catalog: 課程目錄
       project_gallery: 所有專案

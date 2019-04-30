@@ -4599,16 +4599,18 @@ zh-TW:
               name: 建立你的專案
             Present Your Project:
               name: 說明你的專案
-            new stage:
-              name: 新的階段
             The Artist:
               name: 藝術家
+            Nested Loops in the Maze:
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
+            Events with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
             Sprite Lab Behaviors:
               name: Sprite Lab 中的行為
             Editing Behaviors:
               name: 行為的修改
             Internet:
-              name: 網際網路 Internet
+              name: 網際網路
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
         dance-low:
@@ -4620,16 +4622,16 @@ zh-TW:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 方格紙編程
             Relay Programming:
               name: 接力編程
             Debugging in Collector:
-              name: 和收藏家學除錯（Debug）
+              name: 和 Laurel 學除錯（Debug）
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
@@ -4637,7 +4639,7 @@ zh-TW:
             Digital Citizenship:
               name: 數位公民
             'Unplugged: Binary':
-              name: 不插電活動 - 二進制
+              name: 二進制圖像
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
             Dance Party:
@@ -4653,8 +4655,8 @@ zh-TW:
               name: 巢狀迴圈
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
-            Conditionals:
-              name: 條件判斷（Conditionals）
+            'Functions: Songwriting':
+              name: 歌曲創作
             Functions in Minecraft:
               name: Minecraft 中的函式
             Alien Dance Party with Sprite Lab:
@@ -4670,7 +4672,7 @@ zh-TW:
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
             Conditionals in Minecraft:
@@ -4679,8 +4681,6 @@ zh-TW:
               name: 關於我
             Aquatic Conditionals in Minecraft:
               name: Minecraft 水上巡航的條件式
-            Access Ability:
-              name: 輔助功能
             Songwriting:
               name: 歌曲創作
         express-2019:
@@ -4758,18 +4758,20 @@ zh-TW:
         coursec-2019:
           title: 課程 C（2019）
           stages:
-            Building a Foundation:
-              name: 打好基礎
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
             'Real-life Algorithms: Paper Planes':
               name: 生活中的演算法 - 紙飛機
             Programming in Collector:
-              name: 和收藏家學編程（Program）
+              name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: 迴圈：學習迴圈
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+            'Events: The Big Event':
+              name: 大事件
+            Looking Ahead:
+              name: 與 Minecraft 一起展望未來
             Binary Bracelets:
               name: 二進制手環
             Create a Design with Loops:
@@ -4781,16 +4783,8 @@ zh-TW:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           description_short: 為學齡前兒童設計的計算機科學指引。
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 除錯（Debug）- 沒被發現的蟲蟲
-              description_teacher: 本課將指導學生除錯的步驟。學生會學到步驟「目前發生的事？應該發生的事？這代表什麼？」
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: 堅持與挫折：Stevie 和 Big Project
-            'Real-life Algorithms: Plant a Seed':
-              name: 生活中的演算法 - 植物種植
-              description_teacher: "在本課中，學生將通過實際種植，將演算法的概念與現實生活的活動關聯。這裡的目標是開始培養技能，將現實世界的情況轉化為線上場景，或是相反。\r\n"
             'Programming: Happy Maps':
-              name: 程式設計 - 快樂地圖
+              name: 快樂地圖
               description_teacher: 如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
@@ -4801,16 +4795,14 @@ zh-TW:
               name: 迴圈（Loops） - 快樂迴圈
               description_teacher: 迴圈是程式設計中非常有用且強大的工具。為了理解迴圈的用處，就必須逼著學生去思考更簡潔的方式來解決平凡的問題。
             Loops in Collector:
-              name: 收藏家中的迴圈（Loops）
+              name: 與 Laurel 一起學習迴圈
               description_teacher: 從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
-            Loops in Ice Age:
-              name: 冰河歷險紀中的迴圈
             Programming in Ice Age:
-              name: 在冰河歷險紀裡編程
+              name: 和鼠奎特一起寫程式
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
             Sequencing with Scrat:
@@ -4836,9 +4828,15 @@ zh-TW:
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
             'Loops: Getting Loopy':
-              name: 迴圈：學習迴圈
+              name: 學習迴圈
+            Loops in Harvester:
+              name: 與農夫一起學迴圈（Loops）
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
+            Programming in Harvester:
+              name: 和農夫一起學程式
+            Sequencing in Maze:
+              name: 迷宮中的循序（Sequence）
         pre-express-2019:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
@@ -5220,3 +5218,9 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: 方格紙編程
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
