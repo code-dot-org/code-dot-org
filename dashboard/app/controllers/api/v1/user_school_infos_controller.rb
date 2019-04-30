@@ -7,14 +7,11 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
-    if @user_school_info.user.id == current_user.id
-      if @user_school_info.update(last_confirmation_date: DateTime.now)
-        head :no_content
-      else
-        render json: @user_school_info.errors, status: :unprocessable_entity
-      end
+    render head :forbidden unless current_user
+    if @user_school_info.update(last_confirmation_date: DateTime.now)
+      head :no_content
     else
-      render json: {error: "Sorry, you cant update last_confirmation_date for another User"}, status: 401
+      render json: @user_school_info.errors, status: :unprocessable_entity
     end
   end
 
