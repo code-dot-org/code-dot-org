@@ -104,7 +104,12 @@ uz:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': g‘or
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sahro
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kamalak
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suvosti
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qish
       gamelab_setPosition:
         options:
           POSITION:
