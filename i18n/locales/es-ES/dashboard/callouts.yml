@@ -537,8 +537,6 @@ es:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: '¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo usarlos más adelante en el escenario.'
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas.
       courseA_maze_ramp2a_2018_callout:
@@ -546,6 +544,8 @@ es:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Puedes arrastras los bloques extra a la caja de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos bloques te quedan por usar.
       courseA_maze_seq1_callout:
@@ -584,6 +584,8 @@ es:
         grade2_CaringForNewPet_0_1: Después de conectar todos los bloques, pulsa "Ejecutar" para iniciar el programa.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Después de conectar todos los bloques, pulsa "Ejecutar" para iniciar el programa.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas. ¿Cómo se usará?
       courseB_artist_loops3_2018_callout:
