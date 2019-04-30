@@ -139,6 +139,14 @@ my:
         options:
           CONDITION:
             '"when"': အချိန်
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': အချိန်
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': အချိန်
       Mikelab_groupChangeAnim:
         options:
           SELECT:
