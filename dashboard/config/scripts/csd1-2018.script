@@ -9,9 +9,10 @@ has_lesson_plan true
 family_name 'csd1'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-pre-survey-2017-levelgroup_2018'
+level 'csd-pre-survey-2017-levelgroup_2018', assessment: true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 level 'CSD U1L01 TFMD_2018', named: true
@@ -37,4 +38,4 @@ level 'CSD U1L07 TFMD_2018', named: true
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 level 'CSD U1L09 TFMD_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018', progression: 'Reflection', assessment: true

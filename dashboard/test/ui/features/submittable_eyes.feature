@@ -1,5 +1,4 @@
 @eyes
-@dashboard_db_access
 @as_authorized_taught_student
 Feature: Submittable level
 

@@ -12,8 +12,9 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "platform": "OS X 10.11",
-    "version": "10.0"
+    "platform": "macOS 10.14",
+    "version": "12.0",
+    "w3c": true
   },
   {
     "name": "IE11",
@@ -24,8 +25,9 @@
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "version": "45.0",
-    "platform": "Windows 10"
+    "version": "latest",
+    "platform": "Windows 10",
+    "w3c": true
   },
   {
     "name": "iPhone",

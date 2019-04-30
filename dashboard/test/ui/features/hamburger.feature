@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: Hamburger dropdown
 
   Scenario: Signed out user in English should not see hamburger on desktop
@@ -8,8 +9,7 @@ Feature: Hamburger dropdown
     Then element "#hamburger-icon" is not visible
 
   Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
-    Given I create a student named "Sally Student"
-    Then I wait until I am on "http://studio.code.org/home"
+    Given I create a student named "Sally Student" and go home
     Then I wait to see "#hamburger-icon"
     Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
@@ -25,8 +25,7 @@ Feature: Hamburger dropdown
     And I see "#support"
 
   Scenario: Teacher viewing hamburger dropdown (with expanded options) and help button dropdown in English on desktop
-    Given I create a teacher named "Tessa Teacher"
-    Then I wait until I am on "http://studio.code.org/home"
+    Given I create a teacher named "Tessa Teacher" and go home
     Then I wait to see "#hamburger-icon"
     Then I wait to see "#help-button"
     And I click selector "#hamburger-icon"
@@ -118,7 +117,6 @@ Scenario: Signed out user viewing help dropdown in Spanish on desktop
 
 Scenario: Student viewing help dropdown in Spanish on desktop
   Given I create a student named "Eva Estudiante"
-  Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/home"
   And I wait to see "#help-contents"
@@ -133,7 +131,6 @@ Scenario: Student viewing help dropdown in Spanish on desktop
 
 Scenario: Teacher viewing help dropdown in Spanish on desktop
   Given I create a teacher named "Pabla Profesora"
-  Then I wait until I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/home"
   Then I wait to see "#help-button"

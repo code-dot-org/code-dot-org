@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"CS Principles Mid-Year Survey Now Open!", "det
 family_name 'csp5'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSP U5L01 SFLP', named: true
@@ -34,7 +35,7 @@ level 'CSPU5_U3L16 - setPosition to move button_2018', progression: 'How setPosi
 level 'CSPU5_AddLabelToChaserGame_2018', progression: 'Using Labels'
 level 'How Images Work_2018', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1_2018', progression: 'Chaser Game v.1'
-assessment 'csp-pulse-check-survey-6-levelgroup-U5Ch1_2018', progression: 'Quick Check-In'
+level 'csp-pulse-check-survey-6-levelgroup-U5Ch1_2018', progression: 'Quick Check-In', assessment: true
 
 stage 'Multi-screen Apps', flex_category: 'csp5_1'
 level 'CSP U5L02 SFLP', named: true
@@ -58,7 +59,7 @@ level 'CSP U5L03 SFLP', named: true
 level 'Event Driven Programming Recap_2018', progression: 'Event Driven Programming Recap'
 level 'Tips For Working on Your Own_2018', progression: 'Tips For Working on Your Own'
 level 'Project - Your Own Multi Screen App_2018', progression: 'Project - Your Own Multi-Screen App'
-assessment 'U5 AP Practice Create Process_2018', progression: 'AP Practice Response - Describe Your Process'
+level 'U5 AP Practice Create Process_2018', progression: 'AP Practice Response - Describe Your Process', assessment: true
 
 stage 'Controlling Memory with Variables', flex_category: 'csp5_1'
 level 'CSP U5L04 SFLP', named: true
@@ -87,7 +88,7 @@ level 'CSPU5_U3L14 - moving memory challenge4_2018', progression: 'The Mental Mo
 level 'CSPU5_U3L14 - moving memory challenge5_2018', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L14 - moving memory challenge6_2018', progression: 'The Mental Model for Variables'
 level 'CSPU5_U3L19 - variable reassignment challenge pt2_2018', progression: 'The Mental Model for Variables'
-assessment 'CSPU5_U3L14 - MC variable reassignment_2018', progression: 'Check Your Understanding'
+level 'CSPU5_U3L14 - MC variable reassignment_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Building an App: Clicker Game', flex_category: 'csp5_1'
 level 'CSP U5L05 SFLP', named: true
@@ -111,10 +112,10 @@ level 'CSPU5_U3L15 - Debugging Simple If-statements =v==_2018', progression: 'Si
 level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown app_2018', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 - Debug if never triggers in UpDown app_2018', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 full clicker app_2018', progression: 'Project: Clicker App'
-assessment 'U5 AP Create Practice onEvent Doesnt Count_2018', progression: 'AP Practice Response - Choosing an Abstraction'
+level 'U5 AP Create Practice onEvent Doesnt Count_2018', progression: 'AP Practice Response - Choosing an Abstraction', assessment: true
 
 stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
-assessment 'CSP Unit 5 Cumulative Assessment 1 MC_2018'
+level 'CSP Unit 5 Cumulative Assessment 1 MC_2018', assessment: true
 
 stage 'User Input and Strings', flex_category: 'csp5_1'
 level 'CSP U5L06 SFLP', named: true
@@ -175,7 +176,7 @@ level 'How Compound Boolean Expressions Work_2018', progression: 'How Compound B
 level 'CSPU5_U3 - Conditionals - Combine AND OR Simple_2018', progression: 'How Compound Boolean Expressions Work'
 level 'U5 compound boolean museum example_2018', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT_2018', progression: 'How Compound Boolean Expressions Work'
-assessment 'U5-AP-Algorithm-Does-It-Count_2018', progression: 'AP Practice Response - Score the Response'
+level 'U5-AP-Algorithm-Does-It-Count_2018', progression: 'AP Practice Response - Score the Response', assessment: true
 
 stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
 level 'CSP U5L10 SFLP', named: true
@@ -202,12 +203,12 @@ level 'U5 ColorSleuth scoring pt3 update UI for scoring_2018', progression: 'Upd
 level 'Color Sleuth - How does it end?_2018', progression: 'Color Sleuth - How Does It End?', named: true
 level 'Project: Finish Color Sleuth_2018', progression: 'Project: Color Sleuth', named: true
 level 'Color Sleuth - Epilogue_2018', progression: 'Color Sleuth - Epilogue', named: true
-assessment 'U5 AP Practice Create Abstraction Color Sleuth_2018', progression: 'AP Practice Responses - Algorithms and Abstraction'
-assessment 'CSP U5 AP Practice Choose the Algorithm_2018', progression: 'AP Practice Responses - Algorithms and Abstraction'
-assessment 'U5 AP Practice Create Algorithm Color Sleuth_2018', progression: 'AP Practice Responses - Algorithms and Abstraction'
+level 'U5 AP Practice Create Abstraction Color Sleuth_2018', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
+level 'CSP U5 AP Practice Choose the Algorithm_2018', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
+level 'U5 AP Practice Create Algorithm Color Sleuth_2018', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
 
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
-assessment 'CSP Unit 5 Cumulative Assessment 2 MC_2018'
+level 'CSP Unit 5 Cumulative Assessment 2 MC_2018', assessment: true
 
 stage 'While Loops', flex_category: 'csp5_2'
 level 'CSP U5L11 SFLP', named: true
@@ -231,7 +232,7 @@ level 'CSPU5_U3 - Loops - plus and minus = operator_2018', progression: 'Loops C
 level 'CSPU5_U3 - Loops - minus = operator_2018', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 14_2018', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15_2018', progression: 'Loops Continued'
-assessment 'csp-pulse-check-survey-7-levelgroup-U5Ch2_2018', progression: 'Quick Check-In'
+level 'csp-pulse-check-survey-7-levelgroup-U5Ch2_2018', progression: 'Quick Check-In', assessment: true
 
 stage 'Loops and Simulations', flex_category: 'csp5_2'
 level 'CSP U5L12 SFLP', named: true
@@ -294,7 +295,7 @@ level 'Project - Final Image Scroller_2018', progression: 'Project: Image Scroll
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket_2018', progression: 'My Favorite Things Reflection Question'
 
 stage 'Unit 5 Assessment 3', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Unit 5 Cumulative Assessment 3 MC_2018'
+level 'CSP Unit 5 Cumulative Assessment 3 MC_2018', assessment: true
 
 stage 'Processing Arrays', flex_category: 'csp5_2'
 level 'CSP U5L15 SFLP', named: true
@@ -346,10 +347,10 @@ level 'CSPU5_U3 - Canvas - sketch_2018', progression: 'Using Stored Information'
 level 'CSPU5_U3 - Canvas - freePlay_2018', progression: 'Project: Canvas Painter', named: true
 
 stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Unit 5 Cumulative Assessment 4 MC_2018'
+level 'CSP Unit 5 Cumulative Assessment 4 MC_2018', assessment: true
 
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
-assessment 'CSP Cumulative Assess A_2018'
+level 'CSP Cumulative Assess A_2018', assessment: true
 
 stage 'Mid-Year Survey', flex_category: 'cspSurvey'
 level 'csp-mid-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles Mid-year survey'
