@@ -1428,7 +1428,7 @@ ar:
             The Artist:
               name: الاعب
             Internet:
-              name: الإنترنت
+              name: الانترنت
             Crowdsourcing:
               name: حشد المصادر
         dance-low:
@@ -1437,6 +1437,8 @@ ar:
               name: حفلة رقص
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: برمجة ورقة الرسم البياني
             Relay Programming:
               name: برمجة السباق
             Conditionals with Cards:
@@ -1444,7 +1446,7 @@ ar:
             Digital Citizenship:
               name: المواطنة الرقمية
             'Unplugged: Binary':
-              name: 'موصول: ثنائي'
+              name: صور ثنائية
             Artist Binary:
               name: ثنائي الفنان
             Dance Party:
@@ -1457,8 +1459,8 @@ ar:
               name: الحلقات المتداخلة
             Conditionals with Cards:
               name: الشرطية مع بطاقات
-            Conditionals:
-              name: الجمل الشرطية
+            'Functions: Songwriting':
+              name: تأليف الأغاني
             Internet:
               name: الإنترنت
             Crowdsourcing:
@@ -1494,16 +1496,16 @@ ar:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: بناء قاعدة
             'Real-life Algorithms: Paper Planes':
               name: 'خوارزميات من واقع الحياة : طائرات ورقية'
+            'Events: The Big Event':
+              name: الحدث الكبير
             Binary Bracelets:
               name: أساور الثنائية
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'خوارزميات الحياة الحقيقية: زراعة البذور'
+            'Programming: Happy Maps':
+              name: الخرائط السعيدة
             Going Places Safely:
               name: الذهاب للأماكن بأمان
         courseb-2019:
@@ -1512,6 +1514,8 @@ ar:
               name: حركها , حركها
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+            'Loops: Getting Loopy':
+              name: القبض على المعتوهون
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1566,3 +1570,7 @@ ar:
               name: الشرطية مع بطاقات
             Building a Foundation:
               name: بناء قاعدة
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: برمجة ورقة الرسم البياني
