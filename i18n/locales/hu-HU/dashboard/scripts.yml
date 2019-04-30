@@ -1746,7 +1746,7 @@ hu:
             Sprite Lab Behaviors:
               name: Sprite labor viselkedések
             Internet:
-              name: Internet
+              name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
         dance-low:
@@ -1755,6 +1755,8 @@ hu:
               name: Táncos buli
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
             Conditionals with Cards:
@@ -1762,7 +1764,7 @@ hu:
             Digital Citizenship:
               name: Digitális állampolgárság
             'Unplugged: Binary':
-              name: 'Gép nélküli feladatok: kettes számrendszer'
+              name: Bináris képek
             Artist Binary:
               name: 'Művész: a kettes számrendszer'
             Dance Party:
@@ -1775,8 +1777,8 @@ hu:
               name: Egymásba ágyazott ciklusok
             Conditionals with Cards:
               name: Feltételek kártyákkal
-            Conditionals:
-              name: Feltételek
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1824,16 +1826,16 @@ hu:
           description: Egy óra elteltével is folytathatod a bulit további projektötletekkel.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Alapozás
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
+            'Events: The Big Event':
+              name: A nagy esemény
             Binary Bracelets:
               name: Bináris karkötők
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Valós algoritmusok: Ültess el egy magot!'
+            'Programming: Happy Maps':
+              name: Vidám térképek
             Going Places Safely:
               name: Biztonságos utazás
         courseb-2019:
@@ -1842,6 +1844,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            'Loops: Getting Loopy':
+              name: Ciklikusság
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1902,3 +1906,7 @@ hu:
               name: Feltételek kártyákkal
             Building a Foundation:
               name: Alapozás
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Grafikus programozás

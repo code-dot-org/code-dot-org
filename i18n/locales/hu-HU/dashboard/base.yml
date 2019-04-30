@@ -244,10 +244,6 @@ hu:
     header:
       finished_hoc: "Befejeztem a Kódolás Óráját"
       sign_in_to_save: 'Jelentkezz be, hogy később ugyaninnen folytathasd'
-      free_play:
-        playlab: 'Készíts egy Játéklabor applikációt'
-        artist: 'Rajzolj valamit'
-        applab: 'Készíts egy App Lab applikációt'
       my_dashboard: "Vezérlőpult"
       course_catalog: "Tanfolyamaink"
       project_gallery: "Projektek"
