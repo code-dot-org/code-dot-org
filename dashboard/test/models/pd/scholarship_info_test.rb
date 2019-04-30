@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
   include Pd::ScholarshipInfoConstants
+  include Pd::WorkshopConstants
   include Pd::Application::ActiveApplicationModels
 
   self.use_transactional_test_case = true
@@ -27,7 +28,7 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
   test 'update or create' do
     user = create :teacher
     application_year = APPLICATION_CURRENT_YEAR
-    course = Pd::WorkshopConstants::COURSE_CSD
+    course = COURSE_KEY_MAP[COURSE_CSD]
 
     assert_creates(Pd::ScholarshipInfo) do
       Pd::ScholarshipInfo.update_or_create(user, application_year, course, Pd::ScholarshipInfoConstants::NO)
