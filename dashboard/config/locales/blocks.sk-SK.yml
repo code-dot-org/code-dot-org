@@ -744,7 +744,14 @@ sk:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskyňa
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': púšť
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mriežka
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': dúha
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
+              vodou
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
       gamelab_setPosition:
         options:
           POSITION:
@@ -772,6 +779,11 @@ sk:
       gamelab_setup:
         text: nastavenie
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': keď
@@ -819,6 +831,11 @@ sk:
             "'down'": dole
             "'left'": vľavo
             "'right'": vpravo
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': keď
+            '"while"': pokiaľ
       gamelab_whenUpArrow:
         text: pri stlačení šípky hore
       gamelab_whileKey:

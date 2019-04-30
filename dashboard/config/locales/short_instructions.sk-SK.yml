@@ -2,6 +2,8 @@
 sk:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'Čo si myslíte, že sa stane, keď kliknete
+        na mimozemšťana?  '
       2-3 Artist 1 new: Ahoj, ja som umelec. Napíš program a môžeš ma naučiť kresliť
         takmer všetko. Pomocou pár blokov ma nauč kresliť sivé čiary na obrázku. (Každá
         z čiar je 100 pixelov dlhá)
@@ -891,8 +893,8 @@ sk:
         všetkých svojich mimozemšťanov do jednej línie. '
       Dance Party 4: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých
         svojich mimozemšťanov do jednej línie. '
-      Dance Party 4_2019: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých
-        svojich mimozemšťanov do jednej línie. '
+      Dance Party 4_2019: Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých
+        svojich mimozemšťanov do jednej línie.
       Dance Party 4_simple: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni
         všetkých svojich mimozemšťanov do jednej línie. '
       Dance Party 5 - Validated: Pridaj kód, aby sa zmenila farba mimozemšťana, keď
@@ -3218,6 +3220,15 @@ sk:
         s jedinou slučkou?
       courseF_artist_ramp8: Teraz s pomocu Umelca nakresli štvorec!
       courseF_artist_ramp8_2018: Teraz s pomocu Umelca nakresli štvorec!
+      courseF_artist_variables3: Presuň dĺžku 50 do premennej, takže ju budeme môcť
+        využívať v zopár ďalších úlohách.
+      courseF_artist_variables3_2018: Presuň dĺžku 50 do premennej, takže ju budeme
+        môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables3_2019: Presuň dĺžku 50 do premennej, takže ju budeme
+        môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables_2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+        Môžeš doň vložiť kód z predošlej úlohy.
       courseF_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals1_predict1: Skontroluj, či je pod oblakom kvet. Ak tam

@@ -276,12 +276,6 @@ sk:
     header:
       finished_hoc: "Hotovo!"
       sign_in_to_save: 'Pre uloženie pokroku je nutné sa prihlásiť'
-      free_play:
-        playlab: 'Vytvor appku v Play Labe'
-        artist: 'Nakresliť niečo'
-        applab: 'Vytvor appku v App Labe'
-        gamelab: 'Vytvor projekt v Game Labe'
-        weblab: 'Vytvor projekt vo Web Labe (beta verzia)'
       my_dashboard: "Môj hlavný panel"
       course_catalog: "Katalóg kurzov"
       project_gallery: "Projekty"
@@ -322,6 +316,7 @@ sk:
       district_dashboard: 'Prehľad pre školský okres'
       label: 'Ahoj %{username}'
       stats: 'Code Studio'
+      my_projects: 'Moje projekty'
       settings: 'Nastavenia účtu'
       logout: 'Odhlásiť sa'
       signin: 'Prihlásiť sa'
@@ -348,8 +343,10 @@ sk:
       gumball: 'Úžasný svet s Gumball'
       iceage: 'Doba ľadová'
       infinity: 'Infinity'
+      makerlab: 'Výrobcovo náradie'
       minecraft_adventurer: 'Minecraft Objavovateľ'
       minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Prepájanie kódu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft hrdina'
       playlab: 'Play Lab'
@@ -905,6 +902,7 @@ sk:
     csf_f_2: 'Obsah kurzu F'
     csf_digcit: 'Digitálne občianstvo'
     csf_jigsaw: 'Skladačka'
+    csf_sequencing: 'Postupnosť'
     csf_loops: 'Cykly'
     csf_events: 'Udalosti'
     csf_online_safety: 'Bezpečnosť na internete'
@@ -952,12 +950,14 @@ sk:
     csp_project: 'Projekt'
     csp_lists: 'Zoznamy'
     csp_loops: 'Cykly'
+    csp_traversals: 'Prechody'
     csp_libraries: 'Knižnice'
     dlp: 'Výzvy na zhodnotenie'
     time4cs_c1: 'Everglades a jeho ekosystémy'
     time4cs_c2: 'Potravové reťazce v Everglades'
     time4cs_c3: 'Život v Everglades'
     time4cs_c4: 'Invazívne vplyvy na Everglades'
+    time4cs_c5: 'Občania ovplyvňujú zmeny v Everglades'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.

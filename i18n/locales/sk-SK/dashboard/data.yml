@@ -388,6 +388,7 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
@@ -482,13 +483,24 @@ sk:
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
         c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
+        teaching_csf_how_it_works: 'Vyučujeme základy informatiky: Ako funguje tento kurz'
+        elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
+        repeat_block: Používanie bloku opakuj
+        lesson_planning: Plánovanie hodín
+        opd_closing: 'Učenie základov IT: ukončovanie & ďalšie kroky'
+        why_unplugged_lessons: Práca bez počítača
+        writing_first_program: Napíš svoj prvý počítačový program
         conditionals_with_cards: Bez počítača - Podmienky s kartami
         songwriting_with_functions: 'Lekcia bez počítača v akcii: Písanie pesničiek s funkciami'
+        what_is_an_event: Čo je to udalosť?
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
+        csd_applab_designmode: 'Informatické objavy: App Lab - režim návrhov'
         csd_pair_programming: Programovanie v páre
+        csd_gamelab_functions: Názvy a definície funkcií
         csd_applab_parameters: Funkcie s parametrami
+        csd_applab_loops: Cykly v App Labe
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
@@ -511,7 +523,7 @@ sk:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
         which_equation: Aká rovnica zmenší každu stranu viacstranného útvaru?
         get_nectar: Použi nový blok "Získaj nektár".
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz tu.

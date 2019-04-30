@@ -2,6 +2,7 @@
 sk:
   data:
     long_instructions:
+      "(joshl) Dance Party 1-validated_2019": "**Skús predvídať:** Tu je postavička s menom `alien1`! \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
       2-3 Artist 3.4: Blok so skokom posunie umelca bez toho, aby niečo nakreslil. Nakresli prerušovanú čiaru použitím blokov "skoč dopredu" a "posuň sa dopredu". Každá čiara má dĺžku 50 pixelov.
       2-3 Artist 4: Pomôž mi dokončiť tento dom pre mačku.
       2-3 Artist 9 NEW: Dokonči tohto šarkana
@@ -2344,6 +2345,39 @@ sk:
         _"Nasleduj cestu a priveď ma k prasiatku"_
 
         Vyhni sa TNT.
+      courseF_artist_variables2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables2_2018: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables2_2019: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables3: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables3_2018: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables3_2019: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables_2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables_3: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+        <br/>
+
+        <img src="https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif" width="65%"/>
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
@@ -2667,6 +2701,18 @@ sk:
         Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
 
         \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
+      grade5_artist_variables_triangles1: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      grade5_artist_variables_triangles1_2018: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      grade5_artist_variables_triangles1_2019: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
       harvester_Kahoot: |-
         \_"Joj, všade samá zelenina!"-
 
