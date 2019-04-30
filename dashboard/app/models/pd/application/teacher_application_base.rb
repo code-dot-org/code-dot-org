@@ -69,7 +69,9 @@ module Pd::Application
     end
 
     def scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course_name)&.scholarship_status
+      if user && application_year && course_name
+        Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course_name)&.scholarship_status
+      end
     end
 
     # Implement in derived class.
