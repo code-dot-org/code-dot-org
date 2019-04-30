@@ -48,11 +48,11 @@ export const initHamburger = function() {
       e.preventDefault();
     });
 
-    $('#hamburger #report-bug').click(function() {
+    $('#help-icon #report-bug').click(function() {
       trackEvent('help_ui', 'report-bug', 'hamburger');
     });
 
-    $('#hamburger #support').click(function() {
+    $('#help-icon #support').click(function() {
       trackEvent('help_ui', 'support', 'hamburger');
     });
 
