@@ -630,7 +630,13 @@ ca:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': quadrícula
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Arc de Sant Martí
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sota l'aigua
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': l'hivern
       gamelab_setPosition:
         text: moure {THIS} a la posició {POSITION}
         options:
@@ -661,6 +667,11 @@ ca:
       gamelab_setup:
         text: configuració
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quan
+            '"while"': mentres
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': quan
@@ -696,6 +707,11 @@ ca:
             "'down'": avall
             "'left'": esquerra
             "'right'": dret
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': quan
+            '"while"': mentres
       gamelab_whileKey:
         options:
           KEY:

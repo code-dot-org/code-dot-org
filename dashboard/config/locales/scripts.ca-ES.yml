@@ -1262,6 +1262,8 @@ ca:
               name: Festa amb ball
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
             Relay Programming:
               name: Programació en relleus
             Conditionals with Cards:
@@ -1269,7 +1271,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             'Unplugged: Binary':
-              name: 'Sense connexió: Binari'
+              name: Imatges binàries
             Artist Binary:
               name: Artista binari
             Dance Party:
@@ -1282,8 +1284,8 @@ ca:
               name: Bucles imbricats
             Conditionals with Cards:
               name: Condicionals amb targetes
-            Conditionals:
-              name: Condicionals
+            'Functions: Songwriting':
+              name: Composició de cançons
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1316,16 +1318,16 @@ ca:
             del projecte.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Posant les bases
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
+            'Events: The Big Event':
+              name: El gran esdeveniment
             Binary Bracelets:
               name: Polseres binàries
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmes reals: Planta una llavor'
+            'Programming: Happy Maps':
+              name: Mapes feliços
             Going Places Safely:
               name: Anant a llocs segurs
         courseb-2019:
@@ -1334,6 +1336,8 @@ ca:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
               name: La vostra empremta digital
+            'Loops: Getting Loopy':
+              name: Fent bucles
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1382,3 +1386,7 @@ ca:
               name: Condicionals amb targetes
             Building a Foundation:
               name: Posant les bases
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programació de paper quadriculat
