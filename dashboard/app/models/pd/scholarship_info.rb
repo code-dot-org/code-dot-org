@@ -39,7 +39,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
   validates_inclusion_of :scholarship_status, in: SCHOLARSHIP_STATUSES
-  validates_inclusion_of :course, in: [COURSE_CSD, COURSE_CSP]
+  validates_inclusion_of :course, in: COURSE_KEY_MAP.values
 
   def self.update_or_create(user, application_year, course, scholarship_status)
     scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course) || Pd::ScholarshipInfo.new(user: user)
