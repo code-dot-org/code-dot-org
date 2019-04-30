@@ -763,7 +763,13 @@ he:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': מערה
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': עיר
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': מדבר
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': רשת
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
       gamelab_setPosition:
         text: העבר את {THIS} לעמדה {POSITION}
         options:
@@ -798,6 +804,11 @@ he:
       gamelab_setup:
         text: הגדרה
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': כאשר
@@ -855,6 +866,11 @@ he:
             "'down'": למטה
             "'left'": שמאלה
             "'right'": ימינה
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': כאשר
+            '"while"': כאשר
       gamelab_whileKey:
         options:
           KEY:

@@ -1643,14 +1643,12 @@ he:
               name: התניות עם כרטיסים
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            For Loops in Bee:
-              name: לולאות עבור עם הדבורה
-            For Loops in Artist:
-              name: לולאות עבור עם האמן
             The Artist:
               name: האמן
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
             Internet:
-              name: אינטרנט
+              name: האינטרנט
         dance-low:
           stages:
             Dance Party:
@@ -1659,18 +1657,26 @@ he:
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
             Relay Programming:
               name: הרץ פעולה בשנית
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
+            'Unplugged: Binary':
+              name: תמונות בינאריות
             Artist Binary:
               name: אמן בינארי
             Dance Party:
@@ -1684,15 +1690,18 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals:
-              name: תנאים
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
                 _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
                 מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים
                 הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
                 בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
                 הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            'Functions: Songwriting':
+              name: כתיבת שירים
             Internet:
               name: אינטרנט
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
             Songwriting:
               name: כתיבת שירים
         express-2019:
@@ -1729,17 +1738,19 @@ he:
         coursec-2019:
           stages:
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Events: The Big Event':
+              name: האירוע הגדול
             Binary Bracelets:
               name: צמידים בינארים
         gamelab:
           title: מעבדת המשחקים
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'אלגוריתמים מהחיים: שתול זרעון'
+            'Programming: Happy Maps':
+              name: מפות שמחות
             Programming in Maze:
               name: תכנות במבוך
             Loops in Artist:
@@ -1752,7 +1763,7 @@ he:
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
             Loops in Ice Age:
-              name: לולאות בעידן הקרח
+              name: לולאות עם סקראט
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1760,7 +1771,9 @@ he:
             Loops in Ice Age:
               name: לולאות בעידן הקרח
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1837,3 +1850,9 @@ he:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: תכנות לנייר משבצות
+            Programming in Maze:
+              name: תכנות במבוך
