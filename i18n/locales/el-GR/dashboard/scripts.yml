@@ -1558,7 +1558,7 @@ el:
             The Artist:
               name: Ο Καλλιτέχνης
             Internet:
-              name: Διαδίκτυο
+              name: Το Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
@@ -1567,6 +1567,8 @@ el:
               name: Πάρτι Χορού
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
             Relay Programming:
               name: Προγραμματισμός Ρελέ
             Loops in Ice Age:
@@ -1576,7 +1578,7 @@ el:
             Digital Citizenship:
               name: Ψηφιακή υπηκοότητα
             'Unplugged: Binary':
-              name: 'Εκτός Σύνδεσης: Δυαδικοί'
+              name: Δυαδικές Εικόνες
             Artist Binary:
               name: Δυαδικοί Καλλιτέχνη
             Dance Party:
@@ -1589,8 +1591,8 @@ el:
               name: Φωλιασμένες Επαναλήψεις
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
-            Conditionals:
-              name: Συνθήκες
+            'Functions: Songwriting':
+              name: Σύνθεση τραγουδιού
             Internet:
               name: Διαδίκτυο
             Crowdsourcing:
@@ -1626,22 +1628,20 @@ el:
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             'Real-life Algorithms: Paper Planes':
               name: 'Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια'
+            'Events: The Big Event':
+              name: Το Μεγάλο Γεγονός
             Binary Bracelets:
               name: Δυαδικά Βραχιόλια
         gamelab:
           title: Game Lab
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+            'Programming: Happy Maps':
+              name: Χαρούμενοι Χάρτες
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
-            Loops in Ice Age:
-              name: Βρόχοι στην Εποχή των Παγετώνων
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1650,6 +1650,8 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
+            'Loops: Getting Loopy':
+              name: Επαναλαμβανόμαστε
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1712,3 +1714,7 @@ el:
               name: Υποθέσεις με Κάρτες
             Building a Foundation:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
