@@ -289,13 +289,6 @@ ko:
     header:
       finished_hoc: Hour of Code 완료
       sign_in_to_save: 로그인(진도 저장)
-      free_play:
-        playlab: Play Lab 앱 만들기
-        artist: 아무거나 그리기
-        calculate: 어떤 것을 계산하기
-        applab: Play Lab 앱 만들기
-        gamelab: 게임 연구소 프로젝트 만들기
-        weblab: 웹 연구소(베타) 프로젝트 만들기
       my_dashboard: 대시보드
       course_catalog: 강의 목록
       project_gallery: 프로젝트

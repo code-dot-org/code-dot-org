@@ -1629,6 +1629,8 @@ ko:
               name: 댄스 파티
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 모눈 종이 프로그래밍
             Relay Programming:
               name: 릴레이 프로그래밍
             Conditionals with Cards:
@@ -1636,7 +1638,7 @@ ko:
             Digital Citizenship:
               name: 디지털 시민의식
             'Unplugged: Binary':
-              name: '언플러그드: 2진'
+              name: 2진 이미지
             Artist Binary:
               name: 화가 2진
             Dance Party:
@@ -1649,8 +1651,8 @@ ko:
               name: 중첩 반복
             Conditionals with Cards:
               name: 조건선택 카드
-            Conditionals:
-              name: 조건
+            'Functions: Songwriting':
+              name: 노래 만들기
             Internet:
               name: 인터넷
             Crowdsourcing:
@@ -1686,18 +1688,18 @@ ko:
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: 건물 기초 만들기
             'Real-life Algorithms: Paper Planes':
               name: '실시간 알고리즘: 종이 비행기'
+            'Events: The Big Event':
+              name: 큰 이벤트
             Binary Bracelets:
               name: 2진 팔찌
         gamelab:
           title: Game Lab
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: '실시간 알고리즘: 씨앗 심기'
+            'Programming: Happy Maps':
+              name: 즐거운 맵
             Going Places Safely:
               name: 안전하게 자리잡기
         courseb-2019:
@@ -1706,6 +1708,8 @@ ko:
               name: 빨리 빨리 움직이자!
             Your Digital Footprint:
               name: 디지털 개인정보 흔적
+            'Loops: Getting Loopy':
+              name: 반복시키기
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1766,3 +1770,7 @@ ko:
               name: 조건선택 카드
             Building a Foundation:
               name: 건물 기초 만들기
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: 모눈 종이 프로그래밍
