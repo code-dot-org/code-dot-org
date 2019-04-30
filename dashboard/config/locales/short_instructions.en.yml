@@ -2,6 +2,7 @@
 en:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'What do you think will happen when you click on the alien?  '
       2-3 Artist 1 new: Hi, I'm an artist. You can write code to make me draw almost anything. Use a few blocks to make me draw over the grey lines in the picture. (Each line is 100 pixels long)
       2-3 Artist 11: "Give the stop sign a border by making an octagon with 100 pixels sides. \n\n"
       2-3 Artist 12: |-
@@ -1820,7 +1821,7 @@ en:
       Dance Party 1-validated_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party 1-validated_simple: 'What do you think will happen when you click on the alien?  '
       Dance Party 2: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
-      Dance Party 2_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning around!
+      Dance Party 2_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!
       Dance Party 2_simple: Change the behavior inside the `___ begins ___` block to make the alien start spinning around.
       Dance Party 3 - Validated: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 3 Ram: Make the sprite do something different when you press the up arrow.
@@ -1829,7 +1830,7 @@ en:
       Dance Party 3_simple: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 4 Validated: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 4: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
-      Dance Party 4_2019: 'Create a third sprite that looks like a yellow alien, and get all of your aliens to stand in a line. '
+      Dance Party 4_2019: Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.
       Dance Party 4_simple: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 5 - Validated: Add code to change the color of each alien when it gets clicked.
       Dance Party 5: Add code to change the color of each alien when it gets clicked.
@@ -1849,6 +1850,8 @@ en:
       Dance Party Predict: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_simple: 'What do you think will happen when you click on the alien?  '
+      Dance Party Template 1_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning around!
+      Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Use events to make your dance party interactive!
       Dance_Party_01: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
       Dance_Party_01_low: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
@@ -3651,6 +3654,7 @@ en:
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
+      Virtual Pet Template_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
       WhileAdventure: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3711,7 +3715,7 @@ en:
       behaviors 5: Move the astronaut diagonally.
       behaviors 5a: Make the ball roll.
       behaviors 6: Make the ball roll.
-      behaviors 7: Drive off into the sunset!
+      behaviors 7: Drive off into the horizon!
       behaviors clone me 2: Clone this level and make your own blocks!
       behaviors clone me Ram: Clone this level and make your own blocks!
       behaviors clone me joshl: Clone this level and make your own blocks!
@@ -5373,6 +5377,7 @@ en:
       courseE_aboutme_6: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
       courseE_aboutme_7: Play with Rikki's poster and code for a bit, then click **Finish**.
       courseE_aboutme_freeplay: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
+      courseE_aboutme_template: Use the **Costumes** tab to create or select a new costume for your sprite!
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '
