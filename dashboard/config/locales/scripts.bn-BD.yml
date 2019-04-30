@@ -880,10 +880,14 @@ bn:
               name: ইন্টারনেট
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ছক-কাগজে প্রোগ্রামিং
             Relay Programming:
               name: রিলে-স্যুইচ প্রোগ্রামিং
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            'Unplugged: Binary':
+              name: দ্বিমিক ছবি
             Artist Binary:
               name: শিল্পী দ্বিমিক
         coursee-2019:
@@ -892,8 +896,8 @@ bn:
               name: নেষ্টেড লুপ
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
-            Conditionals:
-              name: শর্তযুক্ত
+            'Functions: Songwriting':
+              name: গান লিখা
             Internet:
               name: ইন্টারনেট
             Songwriting:
@@ -912,6 +916,14 @@ bn:
           stages:
             'null':
               name: শূন্য
+        coursec-2019:
+          stages:
+            'Events: The Big Event':
+              name: বড় ঘটনা
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: আনন্দের মানচিত্র
         pre-express-2019:
           stages:
             Spelling Bee:
@@ -947,3 +959,7 @@ bn:
           stages:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: ছক-কাগজে প্রোগ্রামিং

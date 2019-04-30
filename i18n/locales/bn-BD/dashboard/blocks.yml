@@ -190,7 +190,12 @@ bn:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': গুহা
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': মরুভূমি
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': রামধনু
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির নিচে
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
       gamelab_setPosition:
         options:
           POSITION:
@@ -205,6 +210,11 @@ bn:
             '"scale"': আকার
             '"height"': উচ্চতা
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': যখন
@@ -237,6 +247,11 @@ bn:
             "'down'": নিচে
             "'left'": বামে
             "'right'": ডানে
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
       gamelab_whileKey:
         options:
           KEY:

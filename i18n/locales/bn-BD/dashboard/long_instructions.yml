@@ -2,6 +2,7 @@
 bn:
   data:
     long_instructions:
+      Dance Party Template 2_2019: টেমপ্লেট
       frozen circle function in circle: এখন চলুন 18 ডিগ্রি তফাতে 20 টি উপরিপাতিত বৃত্ত তৈরি করা যাক।
       frozen circle function with parameter: '"Create Circle" একটি ব্লক যা বিভিন্ন আকারের বৃত্ত তৈরি করে । আপনি এই ব্লক ব্যবহার করে কি একটি ছোটো বৃত্ত যার আকার ৫ এবং একটি বড় বৃত্ত যার আকার ১০ বানাতে পারবেন ?'
       frozen circle function: নতুন "Create a circle" ব্লক ব্যবহার করে ১০ টি উপরিপাতিত বৃত্ত তৈরি করেন । বৃত্তের মাঝে লাফ দিয়ে এগিয়ে যেতে ভুলবেন না।

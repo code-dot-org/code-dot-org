@@ -167,9 +167,6 @@ bn:
     confirm: 'আপনি কি নিশ্চিত?'
   nav:
     header:
-      free_play:
-        playlab: 'একটি অ্যাপ তৈরি করুন'
-        applab: 'একটি অ্যাপ তৈরি করুন'
       project_gallery: "প্রকল্প"
       educate_hoc: "এক ঘন্টার কোড"
       stats: "পরিসংখ্যান"
