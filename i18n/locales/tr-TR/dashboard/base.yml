@@ -254,13 +254,6 @@ tr:
     header:
       finished_hoc: "Kod Saati'ni tamamladım"
       sign_in_to_save: 'İlerleme kaydetmek için oturum açın'
-      free_play:
-        playlab: 'Oyun Laboratuvarında Uygulama oluşturun'
-        artist: 'Bir şeyler çizin'
-        calculate: 'Bir şey hesaplamak'
-        applab: 'Uygulama oluşturun'
-        gamelab: 'Bir Oyun Laboratuvarı projesi yap'
-        weblab: 'Bir Web Lab (beta) projesi yap'
       my_dashboard: "Kontrol panelim"
       course_catalog: "Kurs Kataloğu"
       project_gallery: "Projeler"
