@@ -202,13 +202,25 @@ designMode.onPropertyChange = function(element, name, value, timestamp) {
  * @param element
  * @param name
  * @param value
+ * @param timestamp
+ * @param batchChangeId
  */
-designMode.updateProperty = function(element, name, value, timestamp) {
+designMode.updateProperty = function(
+  element,
+  name,
+  value,
+  timestamp,
+  batchChangeId
+) {
   // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
   // ignored.
-  var preChangeData = elementLibrary.getPreChangeData(element, name);
+  var preChangeData = elementLibrary.getPreChangeData(
+    element,
+    name,
+    batchChangeId
+  );
   var handled = true;
   var cacheBustSuffix = '';
   if (timestamp) {
@@ -280,6 +292,9 @@ designMode.updateProperty = function(element, name, value, timestamp) {
       break;
     case 'borderRadius':
       element.style.borderRadius = appendPx(value);
+      break;
+    case 'padding':
+      element.style.padding = value;
       break;
     case 'fontFamily':
       element.style.fontFamily = designMode.fontFamilyStyleFromOption(value);
@@ -522,6 +537,8 @@ designMode.readProperty = function(element, name) {
       return element.style.borderColor;
     case 'borderRadius':
       return parseFloat(element.style.borderRadius);
+    case 'padding':
+      return element.style.padding;
     case 'fontFamily':
       return designMode.fontFamilyOptionFromStyle(element.style.fontFamily);
     case 'fontSize':
@@ -594,6 +611,8 @@ designMode.onDuplicate = function(element, event) {
   return duplicateElement;
 };
 
+var batchChangeId = 1;
+
 designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
   const currentScreen = $(
     elementUtils.getPrefixedElementById(
@@ -613,22 +632,30 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
   screenAndChildren.forEach(element => {
     const themeValues = elementLibrary.getThemeValues(element);
     let modifiedProperty = false;
+    // Start a new batched set of updateProperty() calls:
+    batchChangeId++;
     for (const propName in themeValues) {
       const propTheme = themeValues[propName];
       const prevDefault = propTheme[prevThemeValue];
       const newDefault = propTheme[themeValue];
       const currentPropValue = designMode.readProperty(element, propName);
       const {type} = propTheme;
-      let propIsDefault = false;
+      let propShouldUpdate;
       if (type === 'color') {
-        propIsDefault =
+        propShouldUpdate =
           new RGBColor(currentPropValue).toHex() ===
           new RGBColor(prevDefault).toHex();
       } else {
-        propIsDefault = currentPropValue === prevDefault;
+        propShouldUpdate = currentPropValue === prevDefault;
       }
-      if (propIsDefault) {
-        designMode.updateProperty(element, propName, newDefault);
+      if (propShouldUpdate) {
+        designMode.updateProperty(
+          element,
+          propName,
+          newDefault,
+          null,
+          batchChangeId
+        );
         modifiedProperty = true;
       }
     }
