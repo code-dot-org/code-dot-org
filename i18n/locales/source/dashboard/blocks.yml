@@ -731,6 +731,8 @@ en:
             '"while"': while
       gamelab_clickedOn:
         text: when [SPRITE][0] clicked
+      gamelab_clickedSpritePointer:
+        text: clicked sprite
       gamelab_comment:
         text: 'comment: [COMMENT][0]'
       gamelab_console.log:
@@ -942,6 +944,8 @@ en:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
       gamelab_moveUp:
         text: "[THIS][0] move up"
+      gamelab_objectSprite:
+        text: object sprite
       gamelab_playSound:
         text: playSound [SOUND][0]
       gamelab_pointInDirection:
@@ -980,25 +984,35 @@ en:
         text: set background to [IMG][0]
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': continuous grass
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': court
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': desert road
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': farm land
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': floating grass
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': front of house
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxy
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'kitchen '
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': living room
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': meadow
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park view
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pine trees
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': stage
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stars
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sun and rainbow
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': sunshine showers
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennis court
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': tree island
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': underground
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: none
       gamelab_setDirection:
         text: set [SPRITE][0] movement direction [DIRECTION][1]
@@ -1054,6 +1068,12 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteClickedSet:
+        text: "[CONDITION][0] [SPRITE][1] clicked set [CLICK][2]"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_spriteCostume:
         text: "[COSTUME][0]"
       gamelab_spriteDirection:
@@ -1096,6 +1116,8 @@ en:
         text: last [VALUE][0]
       gamelab_spritesWhereRandom:
         text: random in group [VALUE][0]
+      gamelab_subjectSprite:
+        text: subject sprite
       gamelab_thisBeginsBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
         options:
@@ -1146,6 +1168,12 @@ en:
         text: when [SPRITE1][0] touches [SPRITE2][1]
       gamelab_whenTouchingAny:
         text: when [SPRITE][0] touches any [GROUP][1]
+      gamelab_whenTouchingSet:
+        text: "[CONDITION][0] [SPRITE1][1] touches [SPRITE2][2] set [SPRITEA][3] and set [SPRITEB][4]"
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_whenTrue:
         text: when [CONDITION][0] true
       gamelab_whenUpArrow:

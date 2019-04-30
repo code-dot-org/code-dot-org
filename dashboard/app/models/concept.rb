@@ -6,7 +6,6 @@
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  video_id   :integer
 #  video_key  :string(255)
 #
 # Indexes
