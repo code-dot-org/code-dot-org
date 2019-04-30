@@ -122,7 +122,8 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test "a get request to get school_name returns school object" do
     sign_in(@user)
-    get :get_school_name, params: {user_id: 'me'}
+    # get :get_school_name, params: {user_id: 'me'}
+    get :get_school_name, params: {user_id: '2'}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal @user.school, response["school_name"]
