@@ -465,6 +465,8 @@ pt-BR:
         artistLoopsK2_1: Este número te diz quantos destes blocos você pode usar neste quebra-cabeças.
       behaviors 1_callout:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
+      behaviors 3a_callout:
+        this_sprite_callout: Testando
       behaviors 4_callout:
         behaviors_edit: Clique aqui para ver como funciona esse comportamento.
       behaviors 4a_callout:
@@ -537,8 +539,6 @@ pt-BR:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Você vê alguns novos blocos na caixa de ferramentas?  Não se preocupe, mostraremos como usá-los mais tarde no palco.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp2a_2018_callout:
@@ -546,6 +546,8 @@ pt-BR:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Você pode arrastar blocos extras para a caixa de ferramentas para jogá-los fora.
         stone_block_2: Blocos cinzas são feitos de pedra e não podem ser jogados fora.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos você ainda pode usar.
       courseA_maze_seq1_callout:
@@ -584,6 +586,8 @@ pt-BR:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar" para rodar o programa.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Essa é a caixa de ferramentas. É onde você encontrará blocos extras para completar seus quebra-cabeças.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Há apenas um desses blocos na caixa de ferramentas.  Como você vai usá-lo?
       courseB_artist_loops3_2018_callout:

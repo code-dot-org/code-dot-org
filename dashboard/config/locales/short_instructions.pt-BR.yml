@@ -2,6 +2,8 @@
 pt-BR:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'O que acha que vai acontecer quando
+        você clicar no alienígena?  '
       2-3 Artist 1 new: Oi, eu sou um artista. Você pode escrever códigos para me
         fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
         sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
@@ -4540,8 +4542,8 @@ pt-BR:
         que todos os seus alienígenas formem uma fila. '
       Dance Party 4: 'Crie um terceiro sprite chamado `alien3` e faça com que todos
         os seus alienígenas formem uma fila. '
-      Dance Party 4_2019: 'Crie um terceiro sprite que se pareça com um alien amarelo
-        e faça com que todos os seus alienígenas formem uma fila. '
+      Dance Party 4_2019: Crie um terceiro sprite que se pareça com um alien amarelo
+        e faça com que todos os seus alienígenas formem uma fila.
       Dance Party 4_simple: 'Crie um terceiro sprite chamado `alien3` e faça com que
         todos os seus alienígenas formem uma fila. '
       Dance Party 5 - Validated: Adicione código para alterar a cor de cada alienígena
@@ -4580,6 +4582,7 @@ pt-BR:
         alienígena?  '
       Dance Party Predict_simple: 'O que acha que vai acontecer quando você clicar
         no alienígena?  '
+      Dance Party Template 2_2019: Modelo
       Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
         dentro do bloco de 'configuração'.
       Dance_Party_01_low: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
@@ -6325,11 +6328,23 @@ pt-BR:
         Desenhe 3 "passos", movendo para cima e para a direita. Observe
         o padrão do movimento. Você deve definir uma função chamada desenharPasso()
         que desenha um dos passos e então chamá-la 3 vezes para obter o efeito desejado.
+      SG U3L03 define turnRight and draw a rectangle: Defina uma função chamada direita
+        () que gira a tartaruga para a direita. Em seguida, use essa função para desenhar
+        um retângulo, conforme mostrado abaixo. (Clique para ver instruções completas)
       SG U3L03 draw diamond: "Use qualquer função que você escreveu\nantes para fazer
         uma forma de \"diamante\" conforme mostrado na imagem.\\\r\n\\\r\nOBSERVAÇÃO:\nessa
         é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
         função que desenha um lado do diamante. "
+      SG U3L04 - 3 by 3 with functions: Faça o quadrado 3x3 com a maior eficiência
+        possível. (Clique para ver instruções completas)
+      SG U3L04 - snowflake: Crie o design dividindo-o em camadas de funções. (Clique
+        para ver instruções completas)
+      SG U3L06 - moveForwardwithParams: Use um único comando para mover a tartaruga
+        para a borda da tela. (Clique para ver instruções completas)
+      SG U3L06 Challenge 1 triangle: Use as versões parametrizadas dos comandos da
+        tartaruga para criar um triângulo com lados de 100 pixels de comprimento.
+        (Clique para ver instruções completas)
       SG U3L06 Challenge 2 purple square: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -6373,12 +6388,30 @@ pt-BR:
       SG U3L07 - Free Play Loops and Random: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      SG U3L07 - createTriangleParam: Defina uma função que aceite um parâmetro para
+        corresponder às chamadas da função e conclua a imagem. (Clique para ver instruções
+        completas)
+      SG U3L07 - randomDots1: Aumente o número de iterações para preencher completamente
+        a tela com pontos aleatórios. (Clique para ver instruções completas)
       SG U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
         as instruções)
       SG U3L07 More Subgoals: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
         larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
+      SG U3L08 - createTwoParamTriangle: Defina uma função chamada desenharTriangulo
+        () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
+        (Clique para ver instruções completas)
+      SG U3L08 - drawSquareWithParam: Use desenharQuadrado () para recriar a imagem
+        de ambos os quadrados, desta vez usando parâmetros. (Clique para ver instruções
+        completas)
+      SG U3L08 - fish: Adicione um parâmetro a desenharPeixe que altera o tamanho
+        do peixe desenhado. (Clique para ver instruções completas)
+      SG U3L08 - freePlay: Continue adicionando à sua imagem fazendo mais chamadas
+        para suas novas funções com parâmetros. (Clique para ver instruções completas)
+      SG U3L08 - multiParamFish: Adicione três parâmetros à sua função desenharPeixe
+        para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
+        diferentes. (Clique para ver instruções completas)
       SG U3L2 Using Simple Commands part 1: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
@@ -6403,6 +6436,8 @@ pt-BR:
         Desenhe um quadrado usando apenas avance
         e vireEsquerda, mas, desta vez, faça o quadrado aparecer ACIMA e À DIREITA
         da posição inicial.
+      SGU3L07 - randomDots1: Aumente o número de iterações para preencher completamente
+        a tela com pontos aleatórios. (Clique para ver instruções completas)
       Sam the Butterfly 1 (copy 1): |-
         Essa borboleta se chama Sam e
         a área do jogo é o quintal de Sam. O quintal de Sam tem 400 pixels de largura por 400 de
@@ -6992,6 +7027,17 @@ pt-BR:
         inteligentes sobre como dividir o problema em funções reutilizáveis.  Você vai revisar seu
         trabalho com um colega usando os "procedimentos para a rubrica de revisão em pares".
         Verifique os procedimentos para ver os requisitos.  GIF: U3L3-ProceduresChooseOne.png
+      U3L03 define turnRight and draw a rectangle: Defina uma função chamada direita
+        () que gira a tartaruga para a direita. Em seguida, use essa função para desenhar
+        um retângulo, conforme mostrado abaixo. (Clique para ver instruções completas)
+      U3L03 define turnRight and draw a rectangle_2018: Defina uma função chamada
+        direita () que gira a tartaruga para a direita. Em seguida, use essa função
+        para desenhar um retângulo, conforme mostrado abaixo. (Clique para ver instruções
+        completas)
+      U3L03 define turnRight and draw a rectangle_2019: Defina uma função chamada
+        direita () que gira a tartaruga para a direita. Em seguida, use essa função
+        para desenhar um retângulo, conforme mostrado abaixo. (Clique para ver instruções
+        completas)
       U3L03 draw diamond: "Use qualquer função que você escreveu\nantes para fazer
         uma forma de \"diamante\" conforme mostrado na imagem.\\\r\n\\\r\nOBSERVAÇÃO:\nessa
         é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
@@ -7007,6 +7053,18 @@ pt-BR:
         é mais uma pegadinha.  Os 4 lados do diamante são feitos desenhando\ntrês
         etapas com outro movimento feito entre as chamadas.  Dica: você deve criar\noutra
         função que desenha um lado do diamante. "
+      U3L04 - 3 by 3 with functions: Faça o quadrado 3x3 com a maior eficiência possível.
+        (Clique para ver instruções completas)
+      U3L04 - 3 by 3 with functions_2018: Faça o quadrado 3x3 com a maior eficiência
+        possível. (Clique para ver instruções completas)
+      U3L04 - 3 by 3 with functions_2019: Faça o quadrado 3x3 com a maior eficiência
+        possível. (Clique para ver instruções completas)
+      U3L04 - snowflake: Crie o design dividindo-o em camadas de funções. (Clique
+        para ver instruções completas)
+      U3L04 - snowflake_2018: Crie o design dividindo-o em camadas de funções. (Clique
+        para ver instruções completas)
+      U3L04 - snowflake_2019: Crie o design dividindo-o em camadas de funções. (Clique
+        para ver instruções completas)
       U3L04 choose your own drawing: |-
         Agora escolha o seu!  Escolha um dos
         três desenhos mostrados aqui e tente criá-lo você mesmo, tomando decisões
@@ -7032,6 +7090,21 @@ pt-BR:
         OBSERVAÇÃO: esse problema é bastante desafiador. Você deve precisar passar um tempo
         resolvendo-o e ajustando-o. Você também deve considerar usar lápis e papel para esboçar
         suas ideias.
+      U3L06 - moveForwardwithParams: Use um único comando para mover a tartaruga para
+        a borda da tela. (Clique para ver instruções completas)
+      U3L06 - moveForwardwithParams_2018: Use um único comando para mover a tartaruga
+        para a borda da tela. (Clique para ver instruções completas)
+      U3L06 - moveForwardwithParams_2019: Use um único comando para mover a tartaruga
+        para a borda da tela. (Clique para ver instruções completas)
+      U3L06 Challenge 1 triangle: Use as versões parametrizadas dos comandos da tartaruga
+        para criar um triângulo com lados de 100 pixels de comprimento. (Clique para
+        ver instruções completas)
+      U3L06 Challenge 1 triangle_2018: Use as versões parametrizadas dos comandos
+        da tartaruga para criar um triângulo com lados de 100 pixels de comprimento.
+        (Clique para ver instruções completas)
+      U3L06 Challenge 1 triangle_2019: Use as versões parametrizadas dos comandos
+        da tartaruga para criar um triângulo com lados de 100 pixels de comprimento.
+        (Clique para ver instruções completas)
       U3L06 Challenge 2 purple square: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
@@ -7168,12 +7241,69 @@ pt-BR:
         a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,\nlinhas
         e cores da tartaruga.  Para começar, siga a série de etapas sugerida na\nplanilha
         de acompanhamento. "
+      U3L07 - createTriangleParam: Defina uma função que aceite um parâmetro para
+        corresponder às chamadas da função e conclua a imagem. (Clique para ver instruções
+        completas)
+      U3L07 - createTriangleParam_2018: Defina uma função que aceite um parâmetro
+        para corresponder às chamadas da função e conclua a imagem. (Clique para ver
+        instruções completas)
+      U3L07 - createTriangleParam_2019: Defina uma função que aceite um parâmetro
+        para corresponder às chamadas da função e conclua a imagem. (Clique para ver
+        instruções completas)
+      U3L07 - randomDots1: Aumente o número de iterações para preencher completamente
+        a tela com pontos aleatórios. (Clique para ver instruções completas)
+      U3L07 - randomDots1_2018: Aumente o número de iterações para preencher completamente
+        a tela com pontos aleatórios. (Clique para ver instruções completas)
+      U3L07 - randomDots1_2019: Aumente o número de iterações para preencher completamente
+        a tela com pontos aleatórios. (Clique para ver instruções completas)
       U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
         as instruções)
       U3L07 - randomSquare_2018: Desenhe a figura usando um laço. (Clique para ver
         todas as instruções)
       U3L07 - randomSquare_2019: Desenhe a figura usando um laço. (Clique para ver
         todas as instruções)
+      U3L08 - createTwoParamTriangle: Defina uma função chamada desenharTriangulo
+        () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
+        (Clique para ver instruções completas)
+      U3L08 - createTwoParamTriangle_2018: Defina uma função chamada desenharTriangulo
+        () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
+        (Clique para ver instruções completas)
+      U3L08 - createTwoParamTriangle_2019: Defina uma função chamada desenharTriangulo
+        () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
+        (Clique para ver instruções completas)
+      U3L08 - drawSquareWithParam - for video: Use desenharQuadrado () para recriar
+        a imagem de ambos os quadrados, desta vez usando parâmetros. (Clique para
+        ver instruções completas)
+      U3L08 - drawSquareWithParam: Use desenharQuadrado () para recriar a imagem de
+        ambos os quadrados, desta vez usando parâmetros. (Clique para ver instruções
+        completas)
+      U3L08 - drawSquareWithParam_2018: Use desenharQuadrado () para recriar a imagem
+        de ambos os quadrados, desta vez usando parâmetros. (Clique para ver instruções
+        completas)
+      U3L08 - drawSquareWithParam_2019: Use desenharQuadrado () para recriar a imagem
+        de ambos os quadrados, desta vez usando parâmetros. (Clique para ver instruções
+        completas)
+      U3L08 - fish: Adicione um parâmetro a desenharPeixe que altera o tamanho do
+        peixe desenhado. (Clique para ver instruções completas)
+      U3L08 - fish_2018: Adicione um parâmetro a desenharPeixe que altera o tamanho
+        do peixe desenhado. (Clique para ver instruções completas)
+      U3L08 - fish_2019: Adicione um parâmetro a desenharPeixe que altera o tamanho
+        do peixe desenhado. (Clique para ver instruções completas)
+      U3L08 - freePlay: Continue adicionando à sua imagem fazendo mais chamadas para
+        suas novas funções com parâmetros. (Clique para ver instruções completas)
+      U3L08 - freePlay_2018: Continue adicionando à sua imagem fazendo mais chamadas
+        para suas novas funções com parâmetros. (Clique para ver instruções completas)
+      U3L08 - freePlay_2019: Continue adicionando à sua imagem fazendo mais chamadas
+        para suas novas funções com parâmetros. (Clique para ver instruções completas)
+      U3L08 - multiParamFish: Adicione três parâmetros à sua função desenharPeixe
+        para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
+        diferentes. (Clique para ver instruções completas)
+      U3L08 - multiParamFish_2018: Adicione três parâmetros à sua função desenharPeixe
+        para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
+        diferentes. (Clique para ver instruções completas)
+      U3L08 - multiParamFish_2019: Adicione três parâmetros à sua função desenharPeixe
+        para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
+        diferentes. (Clique para ver instruções completas)
       U3L13 - Button with ID: |-
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
@@ -7681,6 +7811,39 @@ pt-BR:
         arrastável e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo
         arrastável e, em seguida, arraste-o para limpar a girafa!
+      Virtual Pet 6_2019: Defina a variável `felicidade` para 0 quando o programa
+        for iniciado. Quando o seu animal de estimação comer comida que gosta, altere
+        a `felicidade` em 1. Quando o seu animal de estimação comer comida que não
+        gosta, altere a `felicidade` em -1.
+      Virtual Pet 7_2019: |-
+        Imprima o nível de felicidade de seu animal cada vez que ele comer comida. Use este bloco, encontrado na categoria "World" da caixa de ferramentas:
+        <xml>
+        <block type="gamelab_printText" block-text="print text block">
+        <value name="TEXT">
+        <block type="text_join_simple" inputcount="2">
+        <value name="ADD0">
+        <block type="text">
+
+        <title name="TEXT">Meu nível de felicidade:</title>
+        </block>
+        </value>
+        <value name="ADD1">
+        <block type="variables_get">
+        <title name="VAR">felicidade</title>
+        </block>
+        </value>
+        </block>
+        </value>
+        </block></xml>
+      Virtual Pet 8_2019: "**Jogo Livre:** O que mais você pode fazer seu animal de
+        estimação fazer? Experimente o que quiser!"
+      Virtual Pet Freeplay: 'Jogo livre: O que mais você pode fazer sua girafa fazer? '
+      Virtual Pet Freeplay_2019: "**Jogo Livre:** O que mais você pode fazer seu animal
+        de estimação fazer? Experimente o que quiser!"
+      Virtual Pet Freeplay_simple: 'Jogo livre: O que mais você pode fazer sua girafa
+        fazer? '
+      WhileAdventure: Nosso aventureiro quer coletar moedas. Você pode ajudá-la a
+        pegar o máximo que puder usando apenas um bloco remover 1?
       'Widget: Black and White Pixelation': Agora, crie sua própria imagem! Começamos
         com uma tela de 10x10, mas você pode deixá-la do tamanho que você quiser.
         Feliz pixelização!
@@ -7700,6 +7863,18 @@ pt-BR:
         Você deve usar a Ferramenta de Pixelização para codificar os bits de informação
         de cor. A imagem deve ser codificada com pelo menos 12 bits por pixel.'
       XML Scratchpad: Use este nível de teste para pegar xml para testes de unidade
+      aE1: "Você escolheu fazer um guardanapo quadrado! \n\nPara finalizar, desenhe
+        um quadrado com lados de 20 de pixels. "
+      aE2: Se você colocar o laço quadrado dentro de outro laço, chamamos isso de
+        laço aninhado. O que você precisa adicionar como um laço externo para garantir
+        que todos os 14 guardanapos estejam alinhados um ao lado do outro?
+      aE3: "Temos que ter uma toalha de mesa!  \n\nPegue a sua linha de 14 guardanapos
+        e costure 14 deles juntos com outro **laço externo** para fazer uma cobertura
+        para a nossa mesa."
+      aE3alternate: Alternativa
+      aE3alternateB: Alternativa
+      aE4: Alternativa
+      aE5: Exemplo de quebra-cabeça usando a forma de nível de dificuldade mais alta.
       aE6: 'Quantas vezes você precisa repetir isto para desenhar metade de um círculo? '
       aE7: "Se você criar outro laço como este,\nmas virar para a esquerda ao invés
         da direita, o que acontece? \\\r\n\\\r\nVocê pode repetir tudo\nisso para
@@ -7709,6 +7884,9 @@ pt-BR:
         repetir uma ação de virar 3 graus 60 vezes faz um\nsemicírculo, qual desses
         blocos de código vai fazer um outro quarto\nde círculo para os cantos?"
       aEfreeplay: Atividade Livre!
+      aalevelcopy: Adicionar instruções
+      allHallows2017: Prenda os funcionários da Code.org dentro da caixa de giz desenhando
+        um quadrado com 320 pixels de lado!
       allthethings data blocks test: Por favor, faça o login para testar os níveis
         do applab (Por design, os níveis do applab só funcionam se estiverem conectados.
         Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
@@ -7722,14 +7900,22 @@ pt-BR:
         Normalmente, fazemos com que as pessoas façam login, mas isso só é aplicável
         para um script inteiro e seria chato de fazer para o script todasascoisas).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
+      allthethings_moviebot: Este nível clonado do "U3 Alvo Assistente Digital"
       allthethings_ttscsp: Analise o programa corrigindo o erro lógico dentro do programa.
         (Clique para ver as instruções completas)
+      artistDebugVideo1: Use o laço `repetir` para adicionar ondas à água.
       artistFunctionsVideo1: Siga as instruções para fazer sua própria função.
       artistLoopsK1: Este é um novo tipo de quebra-cabeça chamado "Artista". Brinque
         com o nível e desenhe algo divertido.
       artistLoopsK2: Agora, use o laço `repetir` para desenhar esta linha cinco vezes!
       artistLoopsK2gradek_artist_loops3: Agora, use o laço `repetir` para desenhar
         esta linha cinco vezes!
+      artistLoopsK3: Desenhe uma linha com oito passos de comprimento. Esta se tornará
+        a terra para nosso reino!
+      artistLoopsK4: Agora precisamos de um castelo com uma ponte levadiça. Corrija
+        o código para que a ponte fique reta ao invés de cair.
+      artistLoopsK5: Agora precisamos consertar o topo do castelo. Você pode fazer
+        um laço de três repetições para o código?
       asteroids: Este Corgi foi um bom menino! Arraste esta cenoura para ele como
         uma recompensa especial.
       beeDebugVideo1: Use um laço "repita" para coletar todo o néctar.
@@ -8071,6 +8257,11 @@ pt-BR:
       courseA_artist_loops6: Vamos colocar uma boa colina atrás.
       courseA_artist_loops6_2018: Vamos colocar uma boa colina atrás.
       courseA_artist_loops6_2019: Vamos colocar uma boa colina atrás.
+      courseA_artist_loops7: Use o laço `repetir` para adicionar ondas à água.
+      courseA_artist_loops7_2018: Use o laço `repetir` para adicionar ondas à água.
+      courseA_artist_loops7_2019: Use o laço `repetir` para adicionar ondas à água.
+      courseA_artist_loops7_forVideo: Use o laço `repetir` para adicionar ondas à
+        água.
       courseA_artist_loops8: Precisamos de uma escada até o barco.
       courseA_artist_loops8_2018: Precisamos de uma escada até o barco.
       courseA_artist_loops8_2019: Precisamos de uma escada até o barco.
@@ -8182,6 +8373,7 @@ pt-BR:
       courseA_collector_preLoops7: Pegue todas as três pilhas para passar esse nível.
       courseA_data widget: "Pressione Executar. \nO feiticeiro fará os animais aparecerem.
         \n\nConte-os. \nO que você notou?"
+      courseA_forVideoTest_artist: Use o laço `repetir` para adicionar ondas à água.
       courseA_harvester_forVideo: Você consegue pegar todo o milho usando apenas \*\*
         um \*\* bloco de movimento?
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!
@@ -11316,6 +11508,7 @@ pt-BR:
       gradek_artist_loops4: Desenhe uma linha com sete passos de comprimento. Isso
         se tornará nosso horizonte.
       gradek_artist_loops5: Vamos colocar uma boa colina atrás.
+      gradek_artist_loops6: Use o laço `repetir` para adicionar ondas à água.
       gradek_artist_loops7: Precisamos de uma escada até o barco.
       gradek_artist_loopsA: Ajude-me a construir passos para ver o navio navegar por
         ai.

@@ -6448,7 +6448,342 @@ pt-BR:
         -   Encontre a propriedade "text-align" na tag parágrafo.
         -   Altere o alinhamento do parágrafo.
         -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 un_ordered lists: "# Combining Lists\n\n<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Quais são os dois tipos de lista?</strong>\n</summary>\nExistem dois tipos de listas em HTML, listas ordenadas e não ordenadas.\n</details>\n<details>\n<summary>\n<strong>\nO que é uma lista não ordenada?</strong>\n</summary>\n\nUm lista não ordenada é somente um conjunto de itens com marcadores. \n<br /><br /> Um lista não ordenada tem a tag \\<ul> . \nEsta é uma abreviação para <strong>U</strong> não ordenada <strong>L</strong>ista. \nCada item na lista é marcado por um elemento de item de lista \\<li>. Esta é uma abreviação de <strong>L</strong>ista <strong>I</strong>tem. O item elemento da lista é um elemento filho, o que significa que ele está dentro do elemento pai, a lista não ordenada. (\\<ul>).\n\n</details>\n\n<details>\n<summary>\n<strong>Como faço uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não ordenada tem dois passos: fazer a lista e adicionar os itens da lista. Para criar uma lista não ordenada, escreva as tags de listas não ordenadas `<ul></ul>`.  \n\nEm seguida, adicione seus itens de lista \\*\\* dentro \\*\\* das tags de lista não ordenada. Para criar cada item da lista, use as tags `<li></li>` e escreva o item da lista dentro das tags. \n<br /><br />\nPode ser útil recuar as tags \\\\ <li> para que fique claro que elas estão contidas na tag \\\\ <ul>.\n\n</details>\n\n<details>\n<summary>\n<strong>O que é uma lista ordenada?</strong>\n</summary>\n\nUma lista ordenada é um conjunto de itens com marcadores que são numerados.\n<br /><br />\nUm elemento da lista ordenada tem a tag `<ol>` . Esta é uma abreviação para <strong>O</strong>rdenada <strong>L</strong>ista. Cada item da lista é marcado por um elemento de item de lista `<li>`;.  Esta é uma abreviação para <strong>L</strong>ista <strong>I</strong>tem.  O elemento item da lista é um elemento filho, o que significa que ele está dentro de seu elemento pai, a lista ordenada. (`<ol>`).\n\n</details>\n\n<details>\n<summary>\n<strong>Como eu faço uma lista ordenada?</strong>\n</summary>\n\nCriar uma lista ordenada tem dois passos: fazer a lista e adicionar os itens da lista. Para criar a lista ordenada, escreva as tags da lista ordenada `<ol></ol>`.  Em seguida, adicione os itens da sua lista \\*\\* dentro \\*\\* das tags da lista ordenada. Para criar cada item da lista, use as tags de item de lista `<li> </ li>` e escreva o item da lista dentro das tags.\n<br /><br />\nPode ser útil recuar as suas tags  `<li>` para que fique claro que elas estão contidas na tag `<ol>`.\n\n</details>\n\n<details>\n<summary>\n<strong>Me mostre o código.</strong>\n</summary>\n\n<table border=\"1\">\n<tr>\n<td>Exemplo</td>\n<td>Resultado</td>\n</tr>\n<tr>\n<td><pre> &lt;ul&gt; <br>   &lt;li&gt;Vermelho &lt;/li&gt; <br>   &lt;li&gt;Verde &lt;/li&gt; <br>   &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n<table border=\"1\">\n<tr>\n<td>Exemplo</td>\n<td>Resultado</td>\n</tr>\n<tr>\n<td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1&lt;/li&gt; <br>   &lt;li&gt;Passo 2&lt;/li&gt; <br>   &lt;li&gt;Passo 3&lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\nEsta página deve incluir uma lista não ordenada e uma lista ordenada.\n\n# Faça isso\n\n-   Use as tags de lista para estruturar esse conteúdo em duas listas que se parecem com as abaixo.\n\n_Hint: Não haverá NUMEROS no seu código._ \n\n![](https://images.code.org/c9c002b39893ab09e8bc6be4b20ad7c2-image-1553714125509.png)\n\nroot -> data -> long_instructions -> CSD U2 un_ordered lists\n<strong>Quais são os dois tipos de lista?</strong>"
+      CSD U2 unordered list: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary><strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary><strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary><strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 unordered list_2018: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+        <br /><br />
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 unordered list_2019: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+        <br /><br />
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 upload image: |-
+        # Carregue uma nova imagem
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+
+        **Como eu acrescento imagens?**
+
+        </summary>
+        A tag `<img>` permite a você mostrar imagens na sua página web.<br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cachorro pulando"/&gt;</pre><br><br>
+
+        Para indicar ao browser qual arquivo usar, uma informação a mais, denominada um **atributo**, é adicionada à tag \<img> dentro dos colchetes. O atributo `src` significa **s**ou**rc**e (origem) e contém o nome da imagem. Nomes de arquivos de imagem incluem extensões que dizem ao computador qual o tipo da imagem com que estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além de possuir o atributo src, elementos de imagens também têm o atributo `alt` que descreve a imagem. Isto é importante no caso de a imagem não carregar, ou para pessoas que tenham problemas visuais.<br><br>
+
+        Uma tag `<img>` é um exemplo de um **elemento vazio** porque ela começa e termina em uma única tag. Para indicar isto nós colocamos o `/` que normalmente é colocado na tag de fechamento, ao final da tag de imagem.
+
+        </details>
+        <details>
+        <summary>
+
+        **O que é um elemento vazio?**
+
+        </summary>
+        Uma tag `<img>` é um exemplo de um **elemento vazio** porque ela inicia e termina em uma mesma tag. Para indicar isto nós colocamos o `/` que normalmente é colocado na tag de fechamento, ao final da tag de imagem. Tags vazias não necessitam de uma tag de fechamento porque não existe conteúdo de texto que precisa ser envolvido em tags. O conteúdo que é exibido na tela é descrito através dos atributos da tag.
+        </details>
+        <details>
+        <summary>
+
+        **Por que uma imagem não tem uma tag de fechamento?**
+
+        </summary>
+        Uma tag de imagem é uma tag vazia, e uma tag vazia não precisa de tag de fechamento porque não existe conteúdo de texto que deve ser envolvido por tags. O conteúdo que é exibido na tela é definido através dos atributos da tag.
+        </details>
+        <details>
+        <summary>
+
+        **O que é um atributo?**
+
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação que está sendo fornecido, e então os valores fornecem a informação específicas para aquela tag.
+
+        Por exemplo, tags \<img> têm dois atributos, src e alt. src especifica o nome do arquivo de imagem, e alt diz ao browser, em texto legível, o que a imagem é.
+
+        </details>
+        </div>
+
+        Agora você pode adicionar suas próprias imagens ao seu website pessoal. Se você não tiver as imagens que você deseja em seu computador, você pode procurá-las aqui e baixá-las.
+
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type=hidden name=site value="imghp" />
+        <input type=hidden name=tbm value=isch />
+        <input type=hidden name=tbs value="sur:fmc" />
+        <input name=q />
+        <input type=submit value="search">
+        <br />
+        </form>
+
+        Assim que você tiver suas imagens, clique ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) e carregue a image do seu computador para o seu projeto.
+
+        # Faça Isto
+
+        -   Carregue pelo menos duas imagens para o seu projeto.
+        -   Use a tag `<img>` para mostrar as imagens no seu website.
+      CSD U2 upload images: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
+      CSD U2 upload images_2018: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
+      CSD U2 upload images_2019: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
       CSD U3 - Booleans Video: "# Video de Expressões Booleanas"
+      CSD U3 - Booleans Video_2019: |-
+        ## Perguntas para Consideração
+
+        -   O que é uma expressão booleana?
+        -   Qual é uma expressão que resultaria em verdadeiro?
+        -   Qual é uma expressão que resultaria em falso?
+      CSD U3 - Conditionals Video_2019: |-
+        ## Perguntas para Consideração
+
+        -   O que é um exemplo de quando você precisaria de uma declaração "if/else"?
+      CSD U3 - Simple Counter Predict: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 - Simple Counter Predict_2018: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 - Simple Counter Predict_2019: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
       CSD U3 - Sprites - Sprite v Rect: |-
         # Sprites vs Rect
 
@@ -6476,6 +6811,274 @@ pt-BR:
 
         -   Crie um sprite
         -   Adicione a animação.
+      CSD U3 - images - review: |-
+        Revisão de Sprites
+
+        Você já aprendeu muito sobre sprites e condicionais. Você pode usar essas habilidades para criar um quadrado que se mova em todas as quatro direções em resposta às teclas de seta?
+
+        # Faça isso
+
+        -   Crie um sprite
+        -   Faça o sprite se mover para cima, para baixo, para a esquerda e para a direita em resposta às teclas de seta
+      CSD U3 - images - scale: |-
+        Envie sua própria imagem
+
+        Então a imagem que você enviou provavelmente não era do tamanho que você queria? Você pode consertar isso! Existe uma propriedade para sprites chamada `escala`. **Escala controla a largura e a altura do sprite de uma só vez.**Usar escala é melhor do que usar largura e altura para imagens porque...
+
+        1.  É uma propriedade em vez de duas.
+        2.  Você mantém a proporção da imagem e não a distorce.
+
+        **Para tornar a imagem menor, você deseja usar uma escala menor que 1. Para aumentar a imagem, você deseja usar um número maior que 1. Uma escala de 1 manteria o mesmo.**
+
+        # Faça isso
+
+        -   Redimensione seu kite usando `scale` para melhor encaixar na imagem.
+      CSD U3 - images - visible: |-
+        # Visível
+
+        Agora que você tem condicionais e imagens, às vezes, é apropriado ocultar a imagem por um tempo e, em seguida, mostrá-la novamente. Você pode fazer isso usando a propriedade `visível`. A propriedade visível é um pouco diferente de algumas das outras propriedades que você viu no passado. É um valor booleano. Então visível é verdadeiro ou falso. Por padrão, visível é definido como verdadeiro.
+
+        # Faça isso
+
+        -   Em resposta a algo, defina o sprite para visível e invisível.
+      CSD U3 AnimationsMulti Play Defender: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti Play Defender_2018: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti Play Defender_2019: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti defender animate player: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender animate player_2018: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender animate player_2019: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender template: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti defender template_2018: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti defender template_2019: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti introducing multiframe template: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti introducing multiframe template_2018: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti introducing multiframe template_2019: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti play pause: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 Complex Movement counter prediction: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2018: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2019: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Compound Nested Challenge: |-
+        # Desafio: Verificação de várias condições
+
+        _Verifique com seu professor antes de aceitar este desafio._
+
+        Até agora, analisamos várias maneiras de verificar se uma única condição é verdadeira, mas geralmente um programa precisa verificar o estado de muitas condições simultaneamente antes de tomar uma decisão. Para este desafio, vamos supor o seguinte cenário:
+
+        -   O sprite deve se mover para cima, para baixo, para a esquerda e para a direita se a tecla de seta correspondente for pressionada.
+        -   O sprite não deve ir até a tela em qualquer direção.
+
+        # Faça isso juntos
+
+        Antes de começar a escrever este programa, você precisará descobrir como verificar várias condições de uma só vez.
+
+        -   \*\* Brainstorm \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
+        -   \*\* Compartilhe \*\* de volta com toda a turma para ver outras abordagens em potencial.
+        -   \*\* Explore \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
+        -   \*\* Programa \*\* sua solução proposta.
+        -   \*\* Teste \*\* seu programa para verificar se ele está realmente verificando todas as condições desejadas.
+      CSD U3 Counters explaining counters contained 2: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters contained 2_2018: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters contained 2_2019: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
       CSD U3 Random random ellipse-2018: |-
         # Números aleatórios
 
@@ -7038,6 +7641,7 @@ pt-BR:
         muito justa! Altere a variável "velocidade\_cão" para garantir que você possa coletar mais
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       Craft Aquatic - allthethings: Chegue ao Farol do Mar.
+      Dance Party Template 2_2019: Modelo
       Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -7265,6 +7869,24 @@ pt-BR:
       K-1 Maze Loops 2: Use o bloco "repita" para me levar até o porco!
       K-1 Maze Loops 8: Use o laço "repita" para me levar até o porco.
       KIKI GLJ Test Response: Olhe cuidadosamente para o código abaixo. O que você acha que acontecerá com o avião quando você clicar "Executar"?
+      Luigi's Pizza 1: |-
+        Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
+        digite o nome de um sabor na função "custo" e vamos retornar o
+        preço da pizza. Tente pedir uma pizza de pepperoni para começar.
+      Luigi's Pizza 2: Agora há apenas quatro opções disponíveis na pizzaria do Luigi - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional na função "custo". Quando adicionar seus sabores, teste a função para ver se ela funciona.
+      Luigi's Pizza 3: |-
+        Assim está melhor, todos adoram uma maior variedade nos
+        sabores de pizza! Mas você ainda não consegue agradar a todos, e algumas pessoas estão
+        vindo pedir sabores que Luigi não tem. Ao invés de dizer não
+        a essas pessoas, você poderia atualizar a cláusula "senão" para que possamos cobrar a
+        mais deles por sabores que normalmente não oferecemos? Vamos cobrar R$10.000
+        por um sabor que não está disponível.
+      Luigi's Pizza 4: |-
+        Prática Livre: O que você pode fazer para tornar a função de custo de Luigi ainda mais útil? Tente um (ou mais) dos seguintes itens:
+
+        -   Crie uma nova função para exibir uma imagem da pizza escolhida
+        -   Crie uma função que permita encomendar várias pizzas (iguais ou com sabores diferentes)
+        -   Crie uma função que permita adicionar o código de um cupom com 30% de desconto
       MC Agent Freeplay: "**Jogo Livre:** Agora é com você! Use o código do Agent para ajudá-lo a explorar este mundo."
       MC_HOC_2017 Agent Test: |-
         Clique em "Executar" para mover o jogador usando as **teclas de seta**. \\r

@@ -1093,6 +1093,8 @@ pt-BR:
               name: Laboratório de Sprite
             Dance Lab:
               name: Tapete de Dança
+            Mini Rubric:
+              name: Mini Rubrica
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1342,6 +1344,8 @@ pt-BR:
               name: Lição-parte 3 - Codificando e enviando texto
             Lesson Chunk 4- Compressing and Storing Information:
               name: Lição-parte 4 - Compactando e armazenando informações
+            Practice PT:
+              name: Prática PT
             Welcome to the Course!:
               name: Bem-vindo ao curso!
             Wrap Up and Next Steps:
@@ -1689,6 +1693,8 @@ pt-BR:
               name: Compartilhar e submeter
         ScienceP3OLPT3:
           stages:
+            "(optional) Refresh your connection to Complex Adaptive Systems":
+              name: "(opcional) Atualize sua conexão para Sistemas Adaptativos Complexos"
             Assessing Computer Models:
               name: Avaliando Modelos de Computador
             Welcome!:
@@ -1813,6 +1819,8 @@ pt-BR:
               name: 'Laboratório: definição de funções'
             'Unplugged: Contracts':
               name: 'Offline: contratos'
+            'Unplugged: Fast Functions':
+              name: 'Desconectado: Funções Rápidas'
             'Unplugged: The Design Recipe':
               name: 'Offline: a receita de design'
         AlgebraB:
@@ -1960,6 +1968,7 @@ pt-BR:
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp4-2017:
+          description: "O mundo rico em dados em que vivemos introduz muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão equilibrada e balanceada sobre os dados no mundo, incluindo os efeitos positivos e negativos da mesma, e entender os fundamentos de como e por que a criptografia moderna funciona.\n\\r\n\\r\nEsta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates."
           stages:
             Alice and Bob and Asymmetric Keys:
               name: Alice e Bob e chaves assimétricas
@@ -2043,6 +2052,8 @@ pt-BR:
               name: Unidade 3 - Avaliação 3
             Unit 3 Assessment 4:
               name: Unidade 3 - Avaliação 4
+            If-else-if and Conditional Logic:
+              name: If-else-if e lógica condicional
             Possibly use later:
               name: Possivelmente usar mais tarde
             Unit 5 Assessment 3:
@@ -2051,6 +2062,8 @@ pt-BR:
               name: Unidade 5 Avaliação 4
             Multi-Screen Apps:
               name: Aplicativos Multiplas Telas
+            Boolean Expressions and "if" Statements:
+              name: Expressões Booleanas e Declarações "if"
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         CSDU3-Draft:
@@ -2088,6 +2101,10 @@ pt-BR:
               name: 'Projeto: Construir um Jogo'
             Velocity:
               name: Velocidade
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
         2016_sciencePD_phase1:
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -2121,6 +2138,9 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
         CSF_Secret_Sample:
           description_audience: 8-18 anos de idade
+          stages:
+            Sample Stage:
+              name: Estágio de amostra
         ECSPD1:
           description_short: 'Em parceria com o Projeto GUTS'
           stages:
@@ -2205,10 +2225,16 @@ pt-BR:
           stages:
             Peer Review:
               name: Revisão em grupo
+        CSF_Secret_Sample_Story:
+          stages:
+            Sample Stage:
+              name: Estágio de amostra
         MikeTest:
           stages:
             Artist Functions:
               name: Funções do artista
+            Sample Stage:
+              name: Estágio de amostra
         artistExemplar:
           description_audience: 8-18 anos de idade
         teachercon:
@@ -2452,6 +2478,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
             'Project: Build a Game':
               name: 'Projeto: Construir um Jogo'
             Variables:
@@ -2905,6 +2935,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
         csd3-old:
           stages:
             Drawing in Game Lab:
@@ -2935,6 +2969,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
         csd2-draft:
           stages:
             Images in HTML:
@@ -2975,6 +3013,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
             'null':
               name: 'nulo'
         coursef-ramp:
@@ -3404,6 +3446,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
           description_short: "Programação"
         csd3-2018:
           description_short: "Programação"
@@ -3426,6 +3472,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
         csd2-2018:
           stages:
             Intro to HTML:
@@ -4041,7 +4091,7 @@ pt-BR:
             Copyright and Creativity:
               name: Copyright e Direitos Autorais
             Internet:
-              name: Internet
+              name: A Internet
             Crowdsourcing:
               name: Crowdsourcing
             Digital Sharing:
@@ -4052,6 +4102,8 @@ pt-BR:
               name: Festa dançante
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programação em papel quadriculado
             Relay Programming:
               name: Programação por revezamento
             Loops in Ice Age:
@@ -4061,7 +4113,7 @@ pt-BR:
             Digital Citizenship:
               name: Cidadania digital
             'Unplugged: Binary':
-              name: 'Offline: binário'
+              name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
             Dance Party:
@@ -4078,10 +4130,12 @@ pt-BR:
               name: Laços aninhados
             Conditionals with Cards:
               name: Condicionais com cartas
-            Conditionals:
-              name: Condições
+            'Functions: Songwriting':
+              name: Composição
             Copyright and Creativity:
               name: Copyright e Direitos Autorais
+            Functions in Artist:
+              name: Funções com Artista
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4128,20 +4182,18 @@ pt-BR:
           description: Vá além da primeira hora com ideias de projeto estendido.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Criando uma base
             Programming in Maze:
-              name: Programação no labirinto
+              name: Programando com Angry Birds
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: aviões de papel'
-            Looking Ahead:
-              name: Olhando para o futuro
+            'Events: The Big Event':
+              name: O grande evento
             Binary Bracelets:
               name: Pulseiras binárias
             'Programming: My Robotic Friends':
-              name: 'Programando: Meus amigos robôs'
+              name: Meus Amigos Robôs Jr.
             'Loops: My Loopy Robotic Friends':
-              name: 'Repetições: Meus amigos robôs esquisitos'
+              name: Meus Amigos Robôs Malucos Jr.
             Graphing Data:
               name: Gerando Gráficos a partir de dados
             Picturing Data:
@@ -4153,14 +4205,8 @@ pt-BR:
           description_short: Uma introdução à ciência da computação para pré-leitores.
           description_audience: 'Idade: de 4 a 7 anos'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Depuração: Bugs não encontrados'
-              description_teacher: 'Essa aula irá guiar os estudantes em uma série de etapas sobre depuração. Os estudantes irão aprender o mantra: "O que aconteceu? O que esperavamos que acontecesse? O que isso significa?"'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da vida real: plante uma semente'
-              description_teacher: "Nesta lição, os alunos relacionarão o conceito de algoritmos às atividades cotidianas da vida real, plantando uma semente real. O objetivo aqui é começar a construir as habilidades para traduzir situações do mundo real para cenários on-line e vice-versa.\\r\n"
             'Programming: Happy Maps':
-              name: 'Programação: Mapas felizes'
+              name: Mapas divertidos
               description_teacher: A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.
             Programming in Maze:
               name: Programação no labirinto
@@ -4169,21 +4215,26 @@ pt-BR:
               name: Navegando com segurança
               description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos aprenderem que muitos websites pedem informações que são privadas e discute como lidar de forma responsável com tais situações. Os alunos também descobrem que podem ir a lugares incríveis online, mas que eles precisam de seguir certas regras para se manterem seguros.
             'Loops: Happy Loops':
+              name: Repetições Felizes
               description_teacher: Repetições são uma ferramenta muito útil e poderosa em programação. Para entender como repetições úteis podem ser, os alunos precisarão ser levados a desejar uma maneira mais fácil de resolver problemas mundanos.
             Loops in Collector:
+              name: Repetições com Laurel
               description_teacher: Aproveitando o conceito de repetição de instruções da aula "Repetições Felizes", este nível os alunos irão usar repetições para coletar tesouro de uma forma mais eficiente no Code.org.
             Loops in Artist:
               description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
             'Events: The Big Event':
               description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
             Events in Play Lab:
+              name: Em Movimento com os Eventos
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Repetições com Scrat
+            Programming in Ice Age:
+              name: Programação com Scrat
             Programming with Rey and BB-8:
               name: Programação com Rey e BB-8
             Sequencing with Scrat:
@@ -4209,8 +4260,20 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Ice Age:
               name: Repetições na Era do gelo
+            Loops in Collector:
+              name: Repetições com Laurel
+            Events in Play Lab:
+              name: Um Battle Royal com eventos
+            'Loops: Getting Loopy':
+              name: Repetindo
+            Loops in Harvester:
+              name: Repetições com Colheitadeira
             Programming in Maze:
-              name: Programação no labirinto
+              name: Programando com Angry Birds
+            Programming in Harvester:
+              name: Programação com Colheitadeira
+            Sequencing in Maze:
+              name: Sequenciando com Angry Birds
         pre-express-2019:
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           stages:
@@ -4273,6 +4336,10 @@ pt-BR:
               name: Colisões
             Functions:
               name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
         csd4-2019:
           stages:
             User Interfaces:
@@ -4475,6 +4542,8 @@ pt-BR:
           stages:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+            Libraries:
+              name: Bibliotecas
         csp8-pilot-staging:
           stages:
             Unit 4 Assessment:
@@ -4487,3 +4556,9 @@ pt-BR:
           stages:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programação em papel quadriculado
+            Programming in Maze:
+              name: Programação no labirinto
