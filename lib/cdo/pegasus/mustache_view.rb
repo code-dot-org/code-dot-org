@@ -58,5 +58,12 @@ class MustacheMarkdown < Mustache
       File.join(['/', (@company || @country), @user_language, url].reject(&:nil_or_empty?))
     end
   end
+
+  def hoc_s(id)
+    id = id.to_s
+    #language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
+    language = 'es'
+    HOC_I18N[language][id] || HOC_I18N['en'][id]
+  end
 end
 
