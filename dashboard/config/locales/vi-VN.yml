@@ -335,12 +335,6 @@ vi:
     header:
       finished_hoc: Tôi đã hoàn thành giờ mã của tôi
       sign_in_to_save: Đăng nhập để lưu lại những tiến bộ của bạn
-      free_play:
-        playlab: Tạo một ứng dụng
-        artist: Vẽ một cái gì đó
-        applab: Tạo một ứng dụng
-        gamelab: Tạo một dự án trò chơi
-        weblab: Tạo một dự án Web thử nghiệm (beta)
       my_dashboard: Bảng điều khiển của tôi
       course_catalog: Danh mục khóa học
       project_gallery: chương trình
