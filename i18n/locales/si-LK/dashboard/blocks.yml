@@ -190,7 +190,12 @@ si:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ගුහාව
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': කාන්තාරය
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': දේදුන්න
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': දිය යට
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ශීත ඍතුව
       gamelab_setPosition:
         options:
           POSITION:
@@ -205,6 +210,11 @@ si:
             '"scale"': විශාලත්වය
             '"height"': උස
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': විට
@@ -237,6 +247,11 @@ si:
             "'down'": යට
             "'left'": වම
             "'right'": දකුණ
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': විට
+            '"while"': while
       gamelab_whileKey:
         options:
           KEY:

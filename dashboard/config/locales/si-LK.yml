@@ -230,11 +230,6 @@ si:
     header:
       finished_hoc: මා Hour of Code අවසන් කරන ලදි
       sign_in_to_save: කරන ලද වැඩ කොටස සුරැකීමට නම් ඇතුලු වන්න
-      free_play:
-        playlab: App එකක් හදන්න
-        artist: යමක් අඳින්න
-        calculate: යමක් ගණනය කරන්න
-        applab: App එකක් හදන්න
       project_gallery: ව්යාපෘති
       educate_hoc: Hour of Code
       stats: සංඛ්‍යාන
