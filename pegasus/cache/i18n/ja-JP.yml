@@ -187,7 +187,7 @@ ja-JP:
   share_on_facebook: Facebook 上で共有する
   share_on_twitter: ツイッターで共有する
   beyond_an_hour: Hour of Codeとさらにその先へ
-  get_started: 始める
+  get_started: はじめる
   i_agree: 賛成する
   participant_select: "-選択-"
   participant_student: 生徒
@@ -322,7 +322,7 @@ ja-JP:
   homepage_action_text_teachervideo: ビデオを見る
   homepage_action_text_watchvideo: ビデオを見る
   homepage_action_text_girlvideo: 女子生徒を応援する
-  homepage_action_text_learn: 学習開始
+  homepage_action_text_learn: 学習をはじめる
   homepage_action_text_signpetition: 請願書に署名します。
   homepage_action_text_wincelebritychat: 著名人とのチャットを勝ち取りましょう
   homepage_signpetition_dropdown: 請願書に署名します &#x25BE;
@@ -437,11 +437,11 @@ ja-JP:
   minecraft_specs: 多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上
   minecraft_start_tutorial: チュートリアルを開始します
   minecraft_agent_description: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ
-  minecraft_agent_button: 始める
+  minecraft_agent_button: はじめる
   minecraft_designer_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
-  minecraft_designer_button: 始める
+  minecraft_designer_button: はじめる
   minecraft_adventurer_description: プログラムをして、スティーブかアレックスにMinecraftの世界を冒険させよう！
-  minecraft_adventurer_button: 始める
+  minecraft_adventurer_button: はじめる
   minecraft_no_internet: インターネットが無い？
   minecraft_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   minecraft_subtitle: Minecraft Hour of Code プログラミング入門
@@ -492,7 +492,7 @@ ja-JP:
   sports_athlete_John: ジョン・ウォール、NBA オールスター、 ワシントン ・ ウィザーズ
   sports_athlete_Chris: クリス ・ ボッシュ、オリンピック金メダリストおよびNBA チャンピオン、マイアミ ・ ヒート
   sports_athlete_Harrison: ハリソン ・ バーンズ、オリンピック金メダリストおよびNBA チャンピオン、ダラス · マーベリックス
-  watch_inspirational_videos: 始める前に、以下のビデオのうち1つを見てみましょう
+  watch_inspirational_videos: はじめる前に、以下のビデオのうち1つを見てみましょう
   video_title_inspire_girl: 女子生徒を応援する
   video_title_cs_intro: コンピュータサイエンス入門
   video_title_schools_dont_teach: 多くの学校が教えていないこと
@@ -1590,7 +1590,7 @@ ja-JP:
     で作成することができます。生徒はメールアドレスとパスワード、またはボタンを押すことでGoogle, Facebook, Microsoft経由で登録することができます。
   joining_section_instruct_account: 彼らのCode.orgアカウントにサインインしてください。
   joining_section_instruct_code: "%{code_org_url} へ案内し、セクションコード %{section_code} を入力してください。"
-  joining_section_instruct_button: 生徒は「始める」ボタンを押すことであなたのセクションに追加されます。
+  joining_section_instruct_button: 生徒は「はじめる」ボタンを押すことであなたのセクションに追加されます。
   signing_in_single_instruct: 生徒は、 https://code.org/ へ行き右上の「サインイン」ボタンをクリックすることでCode.orgアカウントにサインインすることができます。
   reset_student_password_email: 生徒が (Google, Facebook, Microsoft, Cleverのアカウントでのサインインではなく)
     自分のメールアドレスとパスワードでアカウントを作成した場合、セクションの「生徒を管理する」タブへ行き「パスワード」列の下の「パスワードをリセットする」ボタンをクリックすることでパスワードをリセットすることができます。
@@ -1601,7 +1601,7 @@ ja-JP:
   applab-intro_name: App Labの紹介
   applab_tile_title: アプリラボの紹介（１３歳以上）
   applab_tile_subtitle: ブロック用プログラミングを使ってJavaScriptで自分のアプリを作成します。それともテキスト用プログラミングで能力を向上させます。（英語のみ）
-  applab_tile_start_tutorial: 始める
+  applab_tile_start_tutorial: はじめる
   applab_tile_teacher_guide: 教師用ガイドを表示
   account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
   hoc_overview_dance_title: ダンスパーティー
@@ -1609,7 +1609,7 @@ ja-JP:
   hoc_overview_partner_activities_body: Hour of Codeウェブサイトは、年齢や経験レベルを問わずに利用可能な、Code.org
     とパートナーが開発した 100 以上のコンピューター科学のアクティビティを掲載しています。
   hoc_overview_partner_activities_link: アクティビティを表示
-  hoc_overview_start_tutorial: 始める
+  hoc_overview_start_tutorial: はじめる
   hoc_overview_view_teacher_guide: 教師用ガイドを表示
   hoc2018_creativity_create: つくる
   hoc2018_creativity_hoc_coming: もうすぐHour of Codeです...
@@ -1627,14 +1627,14 @@ ja-JP:
   hoc2018_mc_designer_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
   hoc2018_mc_adventurer_title: Minecraftアドベンチャー
   hoc2018_mc_adventurer_description: プログラムをして、スティーブかアレックスにMinecraftの世界を冒険させよう！
-  hoc2018_mc_start: 始める
+  hoc2018_mc_start: はじめる
   hoc2018_mc_no_internet: インターネットが無い？
   hoc2018_mc_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   hoc2018_mc_educators: 教育者の方向け
   hoc2018_mc_educators_box1_button: 開始しましょう
   hoc2018_mc_educators_box2_title: ファシリテーターの方向けのガイドをダウンロードします
   hoc2018_mc_educators_box2_button: ダウンロード
-  hoc2018_mc_watch_videos: 始める前に、以下のビデオのうち1つを見てみましょう
+  hoc2018_mc_watch_videos: はじめる前に、以下のビデオのうち1つを見てみましょう
   hoc2018_mc_videos_more: その他の、模範となる人々や有名人による <a href='%{inspiring_videos_playlist}'>
     心に訴えるビデオ</a>
   hoc2018_mc_careers_more: その他の、技術分野の専門家による <a href='%{careers_url}' target='_blank'>
@@ -1666,11 +1666,11 @@ ja-JP:
   hoc2018_dance_create_your_own_dance_title: 自分だけのダンスパーティーを作成しよう
   hoc2018_dance_party_box_title: ダンスパーティー
   hoc2018_dance_party_box_description: ダンスパーティーをプログラムして友達と共有しましょう。
-  hoc2018_dance_party_button: 始める
+  hoc2018_dance_party_button: はじめる
   hoc2018_dance_keep_on_dancing_box_title: ダンスを続ける
   hoc2018_dance_keep_on_dancing_description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
   hoc2018_dance_keep_on_dancing_specs: 言語 | フォーマット | １３歳以上
-  hoc2018_dance_keep_on_dancing_button: パート 2を開始する
+  hoc2018_dance_keep_on_dancing_button: パート 2を はじめる
   hoc2018_dance_teacher_resources_title: 教師向けのリソース
   hoc2018_dance_teacher_resources_tile1_description: レッスンプラン、証明書、音楽のフィルタリング。
   hoc2018_dance_teacher_resources_tile1_button: 学習計画

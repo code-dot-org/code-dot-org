@@ -1276,6 +1276,7 @@ es-MX:
   pre-express_name: 'Curso Express pre-lectores:'
   express-2017_name: Curso Express (2017)
   pre-express-2017_name: Curso Express pre-lectores
+  express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express pre-lectores
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
@@ -2244,7 +2245,7 @@ es-MX:
     basada en texto. (Sólo en inglés)
   applab_tile_start_tutorial: Inicio
   applab_tile_teacher_guide: Ver la guía del profesor
-  aquatic_name: 'Minecraft: Travesía Aquática'
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: "¿Podemos enviarte actualizaciones de nuestros cursos,
     oportunidades en tu zona u otras noticias sobre ciencias de la computación por
     correo electrónico? (aproximadamente una vez al mes)"
