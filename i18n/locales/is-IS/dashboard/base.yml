@@ -275,12 +275,6 @@ is:
     header:
       finished_hoc: "Ég kláraði!"
       sign_in_to_save: 'Skráðu þig inn til að vista framvinduna'
-      free_play:
-        playlab: 'Búa til Leikjasmiðju-app'
-        artist: 'Teikna eitthvað'
-        applab: 'Búa til forrit í App Lab'
-        gamelab: 'Búa til Leikjasmiðjuverkefni'
-        weblab: 'Búa til Vefsmiðju (beta) verkefni'
       my_dashboard: "Stjórnborðið mitt"
       course_catalog: "Námskeiðalisti"
       project_gallery: "Verkefni"

@@ -682,9 +682,6 @@ is:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Sérðu einhverja nýja kubba í verkfærakassanum?
           Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
-          kubba til að klára þrautirnar.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
           kubba til að klára þrautirnar.
@@ -695,6 +692,9 @@ is:
         courseC_maze_programming3_2: Dragðu óþarfa kubba aftur í verkfærakassann til
           að losa þig við þá.
         stone_block_2: Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
+          kubba til að klára þrautirnar.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Þetta sýnir fjölda kubbanna. Þá veistu hvað þú
           átt marga svona kubba eftir til að nota.
@@ -743,6 +743,9 @@ is:
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Þegar búið er að tengja alla kubbana er ýtt á
           "Keyra" til að ræsa forritið.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Þetta er Verkfærakassinn. Þar finnur þú fleiri
+          kubba til að klára þrautirnar.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig
           ætlar þú að nota hann?

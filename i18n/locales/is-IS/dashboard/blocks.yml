@@ -923,7 +923,13 @@ is:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hellir
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': eyðimörk
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': fylking
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbogi
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
       gamelab_setDirection:
         text: láta {SPRITE} hreyfast í stefnu {DIRECTION}
       gamelab_setFrameDelay:
@@ -967,6 +973,11 @@ is:
         text: sýna titilskjá {BREAK} titill {TITLE} texti {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} ef smellt"
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': þegar
@@ -1063,6 +1074,11 @@ is:
         text: þegar {SPRITE1} snertir {SPRITE2}
       gamelab_whenTouchingAny:
         text: þegar {SPRITE} snertir einhvern {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': þegar
+            '"while"': meðan
       gamelab_whenTrue:
         text: þegar {CONDITION} er satt
       gamelab_whenUpArrow:

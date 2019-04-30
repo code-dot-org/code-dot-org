@@ -3954,18 +3954,12 @@ is:
               name: Umslagabreytur
             For Loop Fun:
               name: Fyndnar frá lykkjur
-            For Loops in Bee:
-              name: Frá-lykkjur með Býflugu
-            For Loops in Artist:
-              name: Frá-lykkjur með Listamanni
             Revise Your Project:
               name: Fara yfir verkefnið
-            new stage:
-              name: nýr áfangi
             The Artist:
               name: Listamaðurinn
             Internet:
-              name: Internet
+              name: Internetið
             Crowdsourcing:
               name: Hópvistun
         dance-low:
@@ -3975,6 +3969,8 @@ is:
         coursed-2019:
           description_audience: 'Aldur: 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Forritun rúðublaða
             Relay Programming:
               name: Boðhlaupsforritun
             Loops in Ice Age:
@@ -3984,7 +3980,7 @@ is:
             Digital Citizenship:
               name: Stafrænn borgari
             'Unplugged: Binary':
-              name: 'Verkefni án tölvu: Tvíundir'
+              name: Tvíundarmyndir
             Artist Binary:
               name: 'Listamaður: Tvíundir'
             Dance Party:
@@ -3998,8 +3994,8 @@ is:
               name: Innri lykkjur
             Conditionals with Cards:
               name: Skilyrði með kortum
-            Conditionals:
-              name: Skilyrði
+            'Functions: Songwriting':
+              name: Lagasmíð
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4059,10 +4055,10 @@ is:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
           stages:
-            Building a Foundation:
-              name: Að byggja grunn
             'Real-life Algorithms: Paper Planes':
               name: 'Algrím úr raunheimi: Pappírsskutlur'
+            'Events: The Big Event':
+              name: Stórviðburður
             Looking Ahead:
               name: Horft fram á við
             Binary Bracelets:
@@ -4075,20 +4071,19 @@ is:
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
           description_audience: 'Aldur: 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Kembing: Ófundnir böggar'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algrím úr raunheimi: Sá fræi'
             Sequencing in Maze:
               name: Röð aðgerða í Völundarhúsi
+            'Programming: Happy Maps':
+              name: Krúttleg kort
             Programming in Harvester:
               name: Forritun með Hirðinum
             Going Places Safely:
               name: Ferðast í öryggi
             'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni.
-            Loops in Ice Age:
-              name: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
         courseb-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4098,10 +4093,16 @@ is:
               name: Stafræna fótsporið þitt
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
+            'Loops: Getting Loopy':
+              name: Lykkjulæti
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
             Programming in Harvester:
               name: Forritun með Hirðinum
             Sequencing in Maze:
-              name: Röð aðgerða í Völundarhúsi
+              name: Röð aðgerða með Angry Birds
         pre-express-2019:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           stages:
@@ -4359,3 +4360,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Forritun rúðublaða
