@@ -69,7 +69,9 @@ class AssignToSection extends Component {
       })
     })
       .done(result => {
-        updateHiddenScript(section.id, scriptId, false);
+        if (scriptId) {
+          updateHiddenScript(section.id, scriptId, false);
+        }
         this.setState({
           sectionIndexToAssign: null
         });

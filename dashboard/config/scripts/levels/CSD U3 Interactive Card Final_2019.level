@@ -175,7 +175,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text\r\n* Additional images for your sprites\r\n* Subtle animation in the background\r\n* Sound effects  (Can you figure out now to do this?)\r\n* More ways for a user to interact with your card",
+    "long_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text\r\n* Additional images for your sprites\r\n* Subtle animation in the background\r\n* Sound effects  (Can you figure out how to do this?)\r\n* More ways for a user to interact with your card",
     "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -211,7 +211,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11310,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/drawing-shapes/",
       "/docs/concepts/game-lab/shapes-and-parameters/",
@@ -221,11 +220,13 @@
       "/docs/concepts/javascript/if-statements/",
       "/docs/concepts/javascript/if-else-statements/"
     ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:29:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:13:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:29:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:13:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-30 17:22:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
