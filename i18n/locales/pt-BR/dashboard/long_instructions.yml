@@ -5798,6 +5798,196 @@ pt-BR:
 
         -   Quais você acha que são suas responsabilidades como editor de um site web?
         -   Por que você poderia querer ver o código ou reaproveitar código de alguma outra pessoa?
+      CSD U2 style background: |-
+        <div style="float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;">
+        <details>
+
+        <summary>
+
+        **O que é um conjunto de regras de CSS?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um seletor?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um bloco de declaração?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um par de propriedade-valor?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio um novo conjunto de regras?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+
+        blá blá resposta
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        -   Localize a propriedade "text-align" na tag de parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left" (esquerda), "right" (direita), e "center" (centro)
+      CSD U2 text style bgcolor: |-
+        <div style="float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;">
+        <details>
+
+        <summary>
+
+        **Que cores eu posso escolher?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Como o código funciona?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+
+        blá blá resposta
+
+        </details>
+        </div>
+
+        # Cor de Fundo
+
+        -   Localize o código em 'style.css' que torna a cor de fundo azul claro para a página toda.
+        -   Altere o código para que a página fique de uma cor diferente.
+        -   Tente alterar a cor de fundo somente para os parágrafos.
+      CSD U2 text style decoration: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que faz os elementos `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration: underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-   `text-decoration` é a _propriedade_. Ela indica do que se trata a regra, neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n    </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis para decoração de texto?</strong></summary>\n    Você pode escolher entre \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\", \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto para o parágrafo ou tag h3."
+      CSD U2 text style decoration_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que faz os elementos `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration: underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-   `text-decoration` é a _propriedade_. Ela indica do que se trata a regra, neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n    </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis para decoração de texto?</strong></summary>\n    Você pode escolher entre \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\", \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto para o parágrafo ou tag h3."
+      CSD U2 text style decoration_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que faz os elementos `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration: underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-   `text-decoration` é a _propriedade_. Ela indica do que se trata a regra, neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n    </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis para decoração de texto?</strong></summary>\n    Você pode escolher entre \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\", \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto para o parágrafo ou tag h3."
+      CSD U2 text style font family: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\n\nAqui está o código que está controlando a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-   `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;` é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-   `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary><strong>Quais são os valores possíveis para família de fontes?</strong></summary>\n\nVocê pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize o conjunto de regras CSS na folha de estilos que define o estilo para tags de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-   Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-   Adicione uma regra de família de fontes para as tags h1 ou h3."
+      CSD U2 text style font family_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está controlando a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-   `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;` é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-   `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary>\n<strong>Quais são os valores possíveis para família de fontes?</strong>\n</summary>\n\nVocê pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize o conjunto de regras CSS na folha de estilos que define o estilo para tags de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-   Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-   Adicione uma regra de família de fontes para as tags h1 ou h3."
+      CSD U2 text style font family_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está controlando a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-   `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;` é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-   `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary>\n<strong>Quais são os valores possíveis para família de fontes?</strong>\n</summary>\n\nVocê pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize o conjunto de regras CSS na folha de estilos que define o estilo para tags de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-   Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-   Adicione uma regra de família de fontes para as tags h1 ou h3."
       CSD U2 text style freeplay - OLD: |-
         # Adicionando Estilos
 
@@ -5866,6 +6056,398 @@ pt-BR:
         -   `text-align`
 
         Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U2 text style h1: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Que cores eu posso usar em CSS?</strong></summary>\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n</details><details>\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n    </details>\n    <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo específico. A folha de estilos contém informações sobre como cada um dos elementos HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar vermelho.\n-   Troque o código para a cor do cabeçalho h1 de \"red\" para uma cor diferente."
+      CSD U2 text style h1_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que cores eu posso usar em CSS?</strong>\n</summary>\n\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n\n</details><details>\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo específico. A folha de estilos contém informações sobre como cada um dos elementos HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar vermelho.\n-   Troque o código para a cor do cabeçalho `h1` de \"red\" para uma cor diferente."
+      CSD U2 text style h1_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que cores eu posso usar em CSS?</strong>\n</summary>\n\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n\n</details><details>\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo específico. A folha de estilos contém informações sobre como cada um dos elementos HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar vermelho.\n-   Troque o código para a cor do cabeçalho `h1` de \"red\" para uma cor diferente."
+      CSD U2 text style h3: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Que cores eu posso usar em CSS?</strong></summary>\n\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n\n</details>\n<details>\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n    </details>\n    <details>\n\n<summary><strong>Como eu crio um novo conjunto de regras?</strong></summary>\n\nPara criar um novo conjunto de regras, você irá precisar de um seletor e uma lista de regras. O seletor é o nome da tag em que você que as regras sejam aplicadas. As regras são a lista de pares de propriedades e valores. Você também precisa prestar atenção na pontuação usada no conjunto de regras. Veja o código abaixo para ter um exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n    </details>\n    <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize o conjunto de regras de CSS da folha de estilos que determina os estilos para a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS que irá definir os estilos para a tag h3.\n-   Acrescente código para definir uma cor diferente para as tags h3."
+      CSD U2 text style h3_2018: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que cores eu posso usar em CSS?</strong>\n</summary>\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n</details>\n<details>\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Como eu crio um novo conjunto de regras?</strong>\n</summary>\n\nPara criar um novo conjunto de regras, você irá precisar de um seletor e uma lista de regras. O seletor é o nome da tag em que você que as regras sejam aplicadas. As regras são a lista de pares de propriedades e valores. Você também precisa prestar atenção na pontuação usada no conjunto de regras. Veja o código abaixo para ter um exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize o conjunto de regras de CSS da folha de estilos que determina os estilos para a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS que irá definir os estilos para a tag h3.\n-   Acrescente código para definir uma cor diferente para as tags h3."
+      CSD U2 text style h3_2019: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que cores eu posso usar em CSS?</strong>\n</summary>\nCSS inclui a maioria dos nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools - HTML Color Names</a>. Você pode também usar cores que não estão incluídas na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools - CSS Legal Color Values</a>\n</details>\n<details>\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo o cabeçalho `h1` ficar vermelho:\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Como eu crio um novo conjunto de regras?</strong>\n</summary>\n\nPara criar um novo conjunto de regras, você irá precisar de um seletor e uma lista de regras. O seletor é o nome da tag em que você que as regras sejam aplicadas. As regras são a lista de pares de propriedades e valores. Você também precisa prestar atenção na pontuação usada no conjunto de regras. Veja o código abaixo para ter um exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize o conjunto de regras de CSS da folha de estilos que determina os estilos para a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS que irá definir os estilos para a tag h3.\n-   Acrescente código para definir uma cor diferente para as tags h3."
+      CSD U2 text style sample: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**O que é uma folha de estilos?**\n\n</summary>\nUma folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary>\n\n**O que é CSS?**\n\n</summary>\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n<details>\n<summary>\n\n**Por que o arquivo \"style.css\" está em uma linguagem diferente?**\n\n</summary>\nDesenvolvedores web intencionalmente separam conteúdo e estilo para tornar seu código mais fácil de manter. HTML é a linguagem usada para dar estrutura ao conteúdo de uma página web. CSS é a linguagem que acrescenta estilo à página web.\n</details>\n<details>\n<summary>\n\n**O que significa `px` / O que é um pixel?**\n\n</summary>\nPixel, que é abreviado por `px`, é a forma como elementos são medidos em CSS. É o tamanho de um único ponto de luz na tela.\n</details>\n<details>\n<summary>\n\n**Para que serve a propriedade `text-decoration`?**\n\n</summary>\nA propriedade `text-decoration` coloca uma linha acima, abaixo, ou no meio de um trecho de texto. Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools - CSS text-decoration Property</a>\n</details>\n<details>\n<summary>\n\n**Para que serve a propriedade `text-align`?**\n\n</summary>\nA propriedade `text-align` alinha o texto à esquerda, à direita, ou ao centro. Você pode ler mais em <a href=\"http://www.w3schools.com/cssref/pr_text_text-align.asp\">W3Schools - CSS text-align Property</a>\n</details>\n<details>\n<summary>\n\n**Para que serve a propriedade `font-family`?**\n\n</summary>\n\nA propriedade `font-family` altera a fonte do texto. Ela fornece uma descrição geral do tipo de fonte que deve ser usado, mas cada browser pode exibir a fonte de forma um pouco diferente. Leia mais em <a href=\"http://www.w3schools.com/cssref/pr_font_font-family.asp\">W3Schools - CSS font-family Property</a>\n\n</details>\n</div>\n\n# CSS e Folhas de Estilo\n\n-   Observe a página web abaixo e localize alguns tipos diferentes de estilos de texto que você ainda não conhece.\n-   Clique na folha de estilos (\"style.css\" na área de arquivos) e observe o texto no interior do arquivo.\n-   Com seu parceiro, discuta quais as partes do código que você acha que estão fazendo o texto parecer um pouco diferente do que antes.\n\nNas próximas lições, você irá alterar e adicionar novos estilos a esta página."
+      CSD U2 text style size: "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como o código funciona?</strong></summary>\nAqui está o código que está controlando o tamanho da fonte usada no parágrafo:\n\n<pre>p {\nfont-size: 14px; \n}</pre>\n\n-   `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.\n-   `font-size: 14px;` é a regra que faz o texto no interior da tag `p` usar um tamanho de fonte específico.\n-   `font-size` é a _propriedade_. Ela indica do que se trata a regra, neste caso a fonte que deve ser usada.\n-   `14px` é o _valor_. Ele explica como a regra deve ser aplicada, neste caso fazendo que o tamanho do texto tenha 14px.\n    </details>\n    <details>\n    <summary><strong>O que significa `px` / O que é um pixel?</strong></summary>\n\nPixel, que é abreviado como `px`, é a forma como elementos são mensurados em CSS. É o tamanho de um único ponto de luz na tela.\n\n</details>\n<details>\n<summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves contém todas as regras para um seletor em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um documento que controla como uma página web será exibida. Folhas de estilo externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras possui um seletor, que especifica quais elementos na página serão afetados, e as regras, que explicam como exibir os elementos. Cada regra consiste em uma propriedade e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n</div>\n\n# Alterando o Tamanho da Fonte\n\nVocê pode alterar outras coisas além de cores utilizando outras propriedades.\n\n-   Localize o conjunto de regras CSS na folha de estilos que define o estilo para tags de parágrafos.\n-   Altere o tamanho do texto dos parágrafos para que fiquem maiores.\n-   Adicione uma nova regra ao seu conjunto de regras para as tags h3, para fazer os textos ficarem maiores ou menores."
+      CSD U2 text style size_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Esse é o código que controla o tamanho do texto do parágrafo:
+
+        <pre>p {
+        font-size: 14px;
+        }</pre>
+
+        -   `p` é o _seletor_.  Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.
+        -   `font-size: 14px;` é a regra que faz o texto dentro das tags `p` ter um tamanho específico.
+        -   `font-size` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o tamanho (size) da fonte.
+        -   `14px` é o _valor_.  Ele explica como a regra deve ser aplicada, nesse caso fazendo o tamanho do texto ser 14 pixels.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que <code>px</code> significa / O que é um pixel?</strong>
+        </summary>
+
+        Pixel, abreviado como `px`, é como os elementos são medidos em CSS. É o tamanho de um único ponto de luz na tela.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+        </div>
+
+        # Alterando o tamanho do texto
+
+        Você pode controlar outras coisas além das cores ao usar outras propriedades.
+
+        -   Encontre o conjunto de regras CSS na folha de estilos que determina o estilo para a tag parágrafo.
+        -   Faça o texto dos parágrafos ser maior.
+        -   Adicione uma regra para sua tag h3 ao seu conjuntos de regras e faça o texto dela ser maior ou menor.
+      CSD U2 text style size_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Esse é o código que controla o tamanho do texto do parágrafo:
+
+        <pre>p {
+        font-size: 14px;
+        }</pre>
+
+        -   `p` é o _seletor_.  Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.
+        -   `font-size: 14px;` é a regra que faz o texto dentro das tags `p` ter um tamanho específico.
+        -   `font-size` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o tamanho (size) da fonte.
+        -   `14px` é o _valor_.  Ele explica como a regra deve ser aplicada, nesse caso fazendo o tamanho do texto ser 14 pixels.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que <code>px</code> significa / O que é um pixel?</strong>
+        </summary>
+
+        Pixel, abreviado como `px`, é como os elementos são medidos em CSS. É o tamanho de um único ponto de luz na tela.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+        </div>
+
+        # Alterando o tamanho do texto
+
+        Você pode controlar outras coisas além das cores ao usar outras propriedades.
+
+        -   Encontre o conjunto de regras CSS na folha de estilos que determina o estilo para a tag parágrafo.
+        -   Faça o texto dos parágrafos ser maior.
+        -   Adicione uma regra para sua tag h3 ao seu conjuntos de regras e faça o texto dela ser maior ou menor.
+      CSD U2 text style text align: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **Como o código funciona?**
+
+        </summary>
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+            </details>
+            <details>
+            <summary>
+
+        **Por que `text-align: left;` não faz nada?**
+
+        </summary>
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+        </details>
+        <details>
+        <summary>
+
+        **Quais são os valores possíveis para o alinhamento do texto?**
+
+        </summary>
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+        </details>
+        <details>
+        <summary>
+
+        **Por que preciso de toda essa pontuação?**
+
+        </summary>
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+        </details>
+        <details>
+        <summary>
+
+        **O que é uma folha de estilos?**
+
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+
+        **O que é CSS?**
+
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 text style text align_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que <code>text-align: left;</code> não faz nada?</strong>
+        </summary>
+
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quais são os valores possíveis para o alinhamento do texto?</strong>
+        </summary>
+
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+        <br/><br/>
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 text style text align_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que <code>text-align: left;</code> não faz nada?</strong>
+        </summary>
+
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quais são os valores possíveis para o alinhamento do texto?</strong>
+        </summary>
+
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+        <br/><br/>
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
       CSD U3 - Booleans Video: "# Video de Expressões Booleanas"
       CSD U3 - Sprites - Sprite v Rect: |-
         # Sprites vs Rect

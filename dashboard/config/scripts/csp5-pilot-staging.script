@@ -1,7 +1,9 @@
+project_sharing true
+
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
-assessment 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding'
+level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
 
 stage 'Lists Investigate', flex_category: 'csp_lists'
 level 'Introduction to Lists - Part 3_2018', progression: 'Lists: Assigning and Updating'
@@ -9,11 +11,11 @@ level 'Introduction to Lists - Part 4_2018', progression: 'Lists: Length'
 
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
-assessment 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding'
+level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
-assessment 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding'
+level 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
@@ -50,10 +52,10 @@ level 'U4 L04 Variables Make Project 3', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 4', progression: 'Make the Photo Liker App'
 
 stage 'Student Survey (Variables)', lockable: true, flex_category: 'csp_variables'
-assessment 'Pilot Student Survey', progression: 'Student Survey (Variables)'
+level 'Pilot Student Survey', progression: 'Student Survey (Variables)', assessment: true
 
 stage 'Teacher Surveys (Variables)', lockable: true, flex_category: 'csp_variables'
-assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)'
+level 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)', assessment: true
 
 stage 'Conditionals Explore', flex_category: 'csp_conditionals'
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
@@ -94,10 +96,10 @@ level 'U4L08 Museum Ticket Generator 4', progression: 'Make the Museum Ticket Ge
 level 'U4L08 Museum Ticket Generator 5', progression: 'Make the Museum Ticket Generator App'
 
 stage 'Student Survey (Conditionals)', lockable: true, flex_category: 'csp_conditionals'
-assessment 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)'
+level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)', assessment: true
 
 stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'csp_conditionals'
-assessment 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)'
+level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true
 
 stage 'Functions Explore / Investigate', flex_category: 'csp_functions'
 level 'U4 L09 Functions Song', progression: 'Explore Functions'
@@ -142,4 +144,4 @@ level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App'
 
 stage 'Unit 4 Assessment', lockable: true
-assessment 'CSP 20-21 Unit 4 Assessment'
+level 'CSP 20-21 Unit 4 Assessment', assessment: true

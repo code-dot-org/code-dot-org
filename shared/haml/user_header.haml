@@ -59,6 +59,7 @@
         - else
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
             = I18n.t("#{loc_prefix}pair_programming")
+      %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
       %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
       %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else

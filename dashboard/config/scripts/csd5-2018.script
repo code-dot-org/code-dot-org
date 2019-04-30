@@ -9,6 +9,7 @@ has_lesson_plan true
 family_name 'csd5'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD U5L01 autoSFLP_2018', named: true
@@ -49,7 +50,7 @@ level 'CSD U5 student record_2018', progression: 'Combining Representations'
 
 stage 'Project - Create a Representation', flex_category: 'csd5_1'
 level 'CSD U5L08 autoSFLP_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018', progression: 'Reflection', assessment: true
 
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 level 'CSD U5L09 autoSFLP_2018', named: true
@@ -79,4 +80,4 @@ level 'CSD U5L14 autoSFLP_2018', named: true
 stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 level 'CSD U5L15 autoSFLP_2018', named: true
 level 'csd u5 recommender sample', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018', progression: 'Reflection', assessment: true

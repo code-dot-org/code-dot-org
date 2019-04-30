@@ -9,6 +9,7 @@ has_lesson_plan true
 family_name 'csd2'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_2018', named: true
@@ -87,7 +88,7 @@ level 'CSD U2 add content_2018', progression: 'Website Project'
 level 'CSD U2 header footer_2018', progression: 'Website Project'
 level 'CSD U2 project review_2018', progression: 'Website Project'
 level 'CSD U2 project share_2018', progression: 'Website Project'
-assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018', progression: 'Reflection', assessment: true
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 level 'CSD U2L10 TFMD_2018', named: true
@@ -138,4 +139,4 @@ level 'CSDU2 - PW - Class Style Personal Site_2018', progression: 'Styling with 
 stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 level 'CSD U2L14 TFMD_2018', named: true
 level 'Final Personal Website_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018', progression: 'Reflection', assessment: true

@@ -1,28 +1,34 @@
 login_required true
 
+stage 'CSP post course survey 2019 staging'
+level 'csp-post-survey-levelgroup-2019', assessment: true
+
+stage 'CSD post course survey 2019 staging'
+level 'csd-post-survey-2019', assessment: true
+
 stage 'CSP pre survey 2017 staging'
-assessment 'csp-pre-survey-2017-levelgroup'
+level 'csp-pre-survey-2017-levelgroup', assessment: true
 
 stage 'CSD pre survey 2017 staging'
-assessment 'csd-pre-survey-2017-levelgroup'
+level 'csd-pre-survey-2017-levelgroup', assessment: true
 
 stage 'CSD/P pulse check survey 2017'
-assessment 'csd-pulse-check-survey-1-levelgroup', progression: 'pulse check model'
+level 'csd-pulse-check-survey-1-levelgroup', progression: 'pulse check model', assessment: true
 
 stage 'CSD mid and post survey 2017 staging'
-assessment 'csd-post-survey-2017-levelgroup'
+level 'csd-post-survey-2017-levelgroup', assessment: true
 
 stage 'CSP mid and post survey 2017 staging'
-assessment 'csp-post-survey-2017-levelgroup'
+level 'csp-post-survey-2017-levelgroup', assessment: true
 
 stage 'CSP post survey 2018 staging'
-assessment 'csp-post-survey-2018-levelgroup'
+level 'csp-post-survey-2018-levelgroup', assessment: true
 
 stage 'CSD post survey 2018 staging'
-assessment 'csd-post-survey-2017-levelgroup-2018-2nd-semester'
+level 'csd-post-survey-2017-levelgroup-2018-2nd-semester', assessment: true
 
 stage 'CSP pre survey 2018 staging'
-assessment 'csp-pre-survey-2017-levelgroup_2018'
+level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
 stage 'CSP mid survey 2018 staging'
-assessment 'csp-post-survey-2017-levelgroup_2018'
+level 'csp-post-survey-2017-levelgroup_2018', assessment: true
