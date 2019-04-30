@@ -4221,10 +4221,10 @@ pl:
               name: Odkrywanie pomysłów na projekt
             Build Your Project:
               description_student: Nareszcie możesz zacząć budować swój projekt!
-            new stage:
-              name: nowy etap
             The Artist:
               name: Artysta/Postać
+            Nested Loops in the Maze:
+              name: Zagnieżdżone pętle w labiryncie
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4236,6 +4236,8 @@ pl:
         coursed-2019:
           description_audience: 'Wiek 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programowanie na papierze milimetrowym
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
             Relay Programming:
@@ -4243,7 +4245,7 @@ pl:
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Bee:
@@ -4251,7 +4253,7 @@ pl:
             Digital Citizenship:
               name: Cyfrowe obywatelstwo
             'Unplugged: Binary':
-              name: 'Bez komputera: Binarny'
+              name: Binarne obrazy (Binary Images)
             Artist Binary:
               name: 'Artysta: Binarny'
             Dance Party:
@@ -4267,8 +4269,8 @@ pl:
               name: Zagnieżdżające się  pętle
             Conditionals with Cards:
               name: Warunkowe z kartami
-            Conditionals:
-              name: Zdania z warunkami
+            'Functions: Songwriting':
+              name: Pisanie piosenek
             Explore Project Ideas:
               name: Odkrywanie pomysłów na projekt
             Internet:
@@ -4276,7 +4278,7 @@ pl:
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Songwriting:
               name: Pisanie piosenek
         express-2019:
@@ -4349,8 +4351,6 @@ pl:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: 'Wiek 6-10'
           stages:
-            Building a Foundation:
-              name: Kładąc podwaliny (Building a Foundation)
             Programming in Maze:
               name: Programowanie w labiryncie
             Debugging in Maze:
@@ -4359,6 +4359,8 @@ pl:
               name: 'Rzeczywiste algorytmy: Papierowe samoloty'
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+            'Events: The Big Event':
+              name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
             Looking Ahead:
@@ -4371,10 +4373,8 @@ pl:
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: 'Wiek 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Debugowanie: Nie wykryte błędy'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algorytmy z życia wzięte: sadź nasiona'
+            'Programming: Happy Maps':
+              name: Szczęśliwe Mapy (Happy Maps)
             Programming in Maze:
               name: Programowanie w labiryncie
             Going Places Safely:
@@ -4383,8 +4383,6 @@ pl:
               name: 'Pętle: Szczęśliwe pętle'
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
-            Loops in Ice Age:
-              name: Pętle w Epoce Lodowcowej
         courseb-2019:
           description_audience: 'Wiek 5-8'
           stages:
@@ -4394,6 +4392,8 @@ pl:
               name: Twój cyfrowy ślad
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+            'Loops: Getting Loopy':
+              name: Poznając pętle
             Programming in Maze:
               name: Programowanie w labiryncie
         pre-express-2019:
@@ -4679,3 +4679,9 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programowanie na papierze milimetrowym
+            Programming in Maze:
+              name: Programowanie w labiryncie

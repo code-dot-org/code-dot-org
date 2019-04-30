@@ -897,6 +897,7 @@ pl:
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
       Crack a Caesar Cipher_2019: Instrukcje
+      Dance Party Template 2_2019: Szablon
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz go w bloku "układ".
       Dance_Party_01_low: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz go w bloku "układ".
       Dance_Party_02: Spraw, aby łoś rozpoczął nowy ruch po 4 taktach!
@@ -1685,6 +1686,21 @@ pl:
       courseD_bee_conditionals1_predict1: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_2018: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
       courseD_bee_conditionals1_predict1_2019: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
+      courseD_bee_conditionals7: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_2018: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_2019: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_predict2: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_predict2_2018: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals7_predict2_2019: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseD_bee_conditionals8: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
+      courseD_bee_conditionals8_2018: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
+      courseD_bee_conditionals8_2019: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
       courseD_bee_conditionals9: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals9_2018: Zbierz cały nektar i zrób cały miód.
       courseD_bee_conditionals9_2019: Zbierz cały nektar i zrób cały miód.
@@ -1805,6 +1821,8 @@ pl:
       courseE_bee_functions10: Rozwiąż tę zagadkę, tworząc funkcję, która pomaga pszczółce zrobić cały miód przed powrotem do głównej ścieżki.
       courseE_bee_functions10_2018: Rozwiąż tę zagadkę, tworząc funkcję, która pomaga pszczółce zrobić cały miód przed powrotem do głównej ścieżki.
       courseE_bee_functions1_2018: Zbierz cały nektar z każdego kwiatka.
+      courseE_bee_functions2: Użyj funkcji `zbierz 2 nektary` (`get 2 nectar`) żeby zebrać nektar z każdego kwiatka.
+      courseE_bee_functions2_2018: Użyj funkcji `zbierz 2 nektary` (`get 2 nectar`) żeby zebrać nektar z każdego kwiatka.
       courseE_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej łamigłówce.
       courseE_bee_functions3_2018: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej łamigłówce.
       courseE_bee_functions4: Użyj funkcji "move and get nectar" (przejdź i pobierz nektar), aby zebrać cały nektar.
@@ -1850,6 +1868,14 @@ pl:
         Pomóż pszczółce zebrać cały nektar.
         \\r
         \\r
+      courseF_bee_conditionals7_predict2: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseF_bee_conditionals7_predict2_2018: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
+      courseF_bee_conditionals8: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
+      courseF_bee_conditionals8_2018: |-
+        Zbierz nektar jeśli to kwiatek.
+        W przeciwnym razie zrób miód (ponieważ jest to plaster miodu).
       courseF_bee_for4: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for4_2018: Pomóż pszczółce zebrać cały nektar.
       courseF_bee_for4_2019: Pomóż pszczółce zebrać cały nektar.
@@ -2002,7 +2028,7 @@ pl:
       grade3_ConditionalsElse_6: Nie jestem pewien, ile nektaru ma ten kwiat, ale wiem, że ma 1, 2 lub 3 nektary. \\r \\r Połącz bloki warunkowe ("jeśli" i/lub "jeśli-w przeciwnym razie"), aby zebrać tylko tyle nektaru, ile ma kwiat. \\r \\r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu łamigłówki!
       grade3_ConditionalsElse_7: Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \\r \\r Ukończ funkcję "check purple flower" (sprawdź fioletowy kwiat) i użyj jej, by zebrać cały nektar z kwiatów.
       grade3_ConditionalsElse_8: Wypełnij wnętrze funkcji "check flower make honey" (sprawdź kwiat zrób miód). \\r \\r Twoja funkcja powinna sprawdzać, czy fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\r Następnie. przejdź dalej i zrób miód.
-      grade3_ConditionalsElse_9: '**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\r \\r Ukończ funkcję "get nectar or make honey" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. \\r'
+      grade3_ConditionalsElse_9: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu. \n\nUkończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. "
       grade3_ConditionalsElse_TeacherIDo: To może być kwiat lub plaster miodu pod każdą z tych chmurek. \\r \\r Użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli jest to kwiat, \\r W przeciwnym razie zrób miód (bo to jest plaster miodu).
       grade3_Conditionals_1 BAD: Użyj pętli, by zebrać cały nektar.
       grade3_Conditionals_1: Jestem głodną pszczółką! \\r Pomóż mi zebrać cały nektar z kwiatów używając możliwie najmniejszej liczby bloków.
@@ -2041,6 +2067,7 @@ pl:
       grade3_Loops_TeacherIDo: Te kwiaty wyglądaj smacznie! \\r \\r Zbierz nektar z każdego z kwiatów używając możliwie najmniejszej liczby bloków.
       grade3_bee_conditionals_quantum1: Sprawdź, czy pod chmurką jest kwiat. Jeśli jest, zbierz nektar.
       grade3_bee_conditionals_quantum2: 'Więcej chmur!  \\r \\r Sprawdź, czy pod każdą z nich jest kwiat zanim zbierzesz nektar. \\r \\r Pamiętaj: nie wszystkie chmurki coś ukrywają!'
+      grade3_bee_conditionals_quantum4: Użyj bloku 'jeśli/w przeciwnym razie', żeby zebrać nektar z kwiatów i zrobić miód na plastrze.
       grade3_maze_Loop1: 'Sprawdzian: Doprowadź mnie do słonecznika przy użyciu tylko 5 bloków! '
       grade3_maze_loops2: Doprowadź mnie do słonecznika używając możliwie najmniejszej liczby bloków! \\r \\r Spróbuj użyć pętli "powtórz" wewnątrz innej pętli, aby zmniejszyć liczbę potrzebnych bloków.
       grade3_maze_loops3: Sprowadźmy to na inny poziom! \\r Użyj pętli, aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby bloków.

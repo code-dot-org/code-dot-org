@@ -201,6 +201,7 @@ pl:
     student_associated_subject: 'Informacje logowania Code.org'
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
+    delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
   section:
     your_section:
       one: 'Twoja sekcja:'
@@ -258,13 +259,6 @@ pl:
     header:
       finished_hoc: "Skończyłem moją Godzinę Kodowania (Hour of Code)"
       sign_in_to_save: 'Zaloguj się, by zapisać postępy'
-      free_play:
-        playlab: 'Utwórz aplikację w Play Lab'
-        artist: 'Narysuj cokolwiek'
-        calculate: 'Obliczyć coś'
-        applab: 'Utwórz aplikację w App Lab'
-        gamelab: 'Utwórz projekt w Game Lab'
-        weblab: 'Wykonaj projekt Laboratorium Sieci (beta)'
       my_dashboard: "Pulpit"
       course_catalog: "Katalog Kursów"
       project_gallery: "Galeria Projektów"
