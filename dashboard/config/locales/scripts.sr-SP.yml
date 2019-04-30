@@ -1252,6 +1252,8 @@ sr:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Графиконско - Папирно Програмирање
             Relay Programming:
               name: Relay programming
             Conditionals with Cards:
@@ -1259,7 +1261,7 @@ sr:
             Digital Citizenship:
               name: Дигитално држављанство
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binarne slike
             Artist Binary:
               name: Уметник Бинарно
         coursee-2019:
@@ -1268,8 +1270,6 @@ sr:
               name: Изградња темеља
             Conditionals with Cards:
               name: Услови са картама
-            Conditionals:
-              name: Кондиционали
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -1296,22 +1296,24 @@ sr:
               name: ништа
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Изградња темеља
             'Real-life Algorithms: Paper Planes':
               name: 'Стварни алгоритми: Папирни авиони'
+            'Events: The Big Event':
+              name: Велики догађај
             Binary Bracelets:
               name: Бинарне наруквице
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Прави алгоритми: Засади семе'
+            'Programming: Happy Maps':
+              name: Веселе мапе
             Going Places Safely:
               name: Сигурна путања
         courseb-2019:
           stages:
             Your Digital Footprint:
               name: Твој дигитални траг
+            'Loops: Getting Loopy':
+              name: Запетљанције
         pre-express-2019:
           stages:
             Your Digital Footprint:
@@ -1359,3 +1361,7 @@ sr:
               name: Услови са картама
             Building a Foundation:
               name: Изградња темеља
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Графиконско - Папирно Програмирање
