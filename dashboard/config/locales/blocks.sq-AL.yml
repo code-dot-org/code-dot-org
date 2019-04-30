@@ -190,7 +190,13 @@ sq:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': shpellë
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': shkretëtirë
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën
+              ujë
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
       gamelab_setPosition:
         options:
           POSITION:
@@ -205,6 +211,11 @@ sq:
             '"scale"': madhësia
             '"height"': gjatësia
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': kur
@@ -237,6 +248,11 @@ sq:
             "'down'": poshtë
             "'left'": majtas
             "'right'": djathtas
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': kur
+            '"while"': ndërsa
       gamelab_whileKey:
         options:
           KEY:

@@ -1569,11 +1569,13 @@ sq:
             The Artist:
               name: Artisti
             Internet:
-              name: Internet
+              name: Interneti
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programimi Grafik me Letër
             Relay Programming:
               name: Programimi i Besuar
             Conditionals with Cards:
@@ -1581,7 +1583,7 @@ sq:
             Digital Citizenship:
               name: Shtetësi Dixhitale
             'Unplugged: Binary':
-              name: 'Unplugged: Binare'
+              name: Imazhet Binare
             Artist Binary:
               name: Artist Binar
         coursee-2019:
@@ -1592,8 +1594,8 @@ sq:
               name: Përsëritjet e Mbivendosura
             Conditionals with Cards:
               name: Kushtoret me Karta
-            Conditionals:
-              name: Kushtet
+            'Functions: Songwriting':
+              name: Të shkruarit e Këngëve
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1626,16 +1628,16 @@ sq:
               name: 'pa vlerë'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Krijimi i një fondacioni
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmet e Jetës-Reale: Planet në Letër'
+            'Events: The Big Event':
+              name: Eventi i Madh
             Binary Bracelets:
               name: Byzylykët Binarë
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
+            'Programming: Happy Maps':
+              name: Hartat e Gëzuara
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         courseb-2019:
@@ -1644,6 +1646,8 @@ sq:
               name: Lëvize atë, lëvize atë
             Your Digital Footprint:
               name: Gjurmët e Tua Dixhitale
+            'Loops: Getting Loopy':
+              name: Duke u Çmëndur
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1696,3 +1700,7 @@ sq:
               name: Kushtoret me Karta
             Building a Foundation:
               name: Krijimi i një fondacioni
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programimi Grafik me Letër
