@@ -2,6 +2,7 @@
 zh-CN:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": '当点击这个外星人的时候, 你认为会发生什么？  '
       2-3 Artist 1 new: 您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。 (每一行是100个像素长)
       2-3 Artist 11: 为停止标志画一个八边形的边界，八边形每条边长100像素。每次需要转多少度？（提示：360除以8是多少？）
       2-3 Artist 12: |-
@@ -1325,7 +1326,7 @@ zh-CN:
       Dance Party 3_simple: '先创造一个叫`外星人2`的图形，然后让它在被点击时完成一个新的舞步。  '
       Dance Party 4 Validated: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
       Dance Party 4: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
-      Dance Party 4_2019: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
+      Dance Party 4_2019: 创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。
       Dance Party 4_simple: '创建一个名为 `alien3` 的第三个精灵, 并让所有的外星人站在一条线上。 '
       Dance Party 5 - Validated: 添加代码以在单击时更改每个外星人的颜色。
       Dance Party 5: 添加代码以在单击时更改每个外星人的颜色。
@@ -1345,6 +1346,7 @@ zh-CN:
       Dance Party Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_2019: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party Template 2_2019: 模板
       Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
       Dance_Party_01_low: 将`新建`模块拖到工作区，并关联到`设置`模块。
       Dance_Party_02: 让驼鹿在 4 个小节后做新动作！
@@ -1389,6 +1391,7 @@ zh-CN:
       Food Fight!: "我们已为你添加了上一关的函数。\\\\r\n\\\\r\n用“如果”模块来编写你的游戏，当play_score(玩家分数) 大于某个值时，调用level_up(升级) 函数。\\\\r\n\\\\r\n例如：“play\\_score” > 6\\\\r\n\\\\r\n玩游戏，并且达到第3级来到达下一关。 "
       FoodFight: 这是一个可以在游戏实验室里玩的游戏的示例。
       FoodFight_2018: 这是一个可以在游戏实验室里玩的游戏的示例。
+      Frequency Analysis: 测试
       Function intro Ryan: 使用"建造桥梁"功能两次，制造一条通往红石火把的路径。
       Function intro Ryan_2019: 使用"建造桥梁"功能两次，制造一条通往红石火把的路径。
       GLJ Drag and fall: 柯基犬是个好孩子！作为特殊的款待，拖出这个胡萝卜给它。
@@ -1888,9 +1891,11 @@ zh-CN:
       The Vigenere Cipher Widget_2019: 说明
       The Vigenere Cipher: 说明
       Total Artist Clone Me: 自由发挥：这里除了你写的函数，还有更多的函数让你发挥。画些令人惊叹的东西吧！用不同的笔宽度来看看你能画出什么不一样的图形！
+      U2 Vigenere: 测试
       U2 frequency caesar: 说明
       U2 frequency random sub: 说明
       U2 vigenere cipher: 说明
+      U2L14 frequency random: 测试
       U3 - Arrays - expressionsAsIndexes: 编写一个程序, 从数组中显示随机选择的颜色。（点击查看完整说明)
       U3 - Arrays - indexPractice: 按数字顺序将数组的内容写入屏幕。(点击查看完整说明)
       U3 - Canvas - freePlay: 扩展其中一个效果的功能, 或创建一个全新的。(点击查看完整说明)
@@ -2042,6 +2047,7 @@ zh-CN:
       Valentine_artist2_01: 编辑程序让艺术家为可爱的小虫画一些草。
       Valentine_artist_01: 帮助艺术家完成大羊驼的心。
       Valentine_playlab_01: '编辑程序让Kiki（演员1）在左右箭头被按下的时候向左和向右移动。当Kiki被点击时, 她应该把心投向她的朋友们。 '
+      Vigenere: 测试
       Virtual Pet 1 Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 Predict_2019: '当点击这个外星人的时候, 你认为会发生什么？  '
       Virtual Pet 1 Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
@@ -2071,6 +2077,7 @@ zh-CN:
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay_simple: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      Virtual Pet Template_2019: 创建 **事件** 使杰拉尔丁掉到泥坑时，她的颜色变成褐色。
       aE3alternate: 交替
       aE3alternateB: 交替
       aE4: 交替

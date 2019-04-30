@@ -8934,8 +8934,6 @@ zh-CN:
               name: 介绍您的项目
               description_student: 是时间展示你的工作了！这里，你会给你的同伴展示你的令人惊奇的项目。
               description_teacher: 通过这五节课，学生们能够用剧本实验室或小艺术家作为编程环境来创建自己的设计项目。最后，学生们能向同伴们展示他们完成的工作，或者通过链接分享给亲友们。这堂课指导的这五个阶段可以项目过程开始的[这里](https://curriculum.code.org/csf/coursef/15/)找到。
-            new stage:
-              name: 新的阶段
             The Artist:
               name: 小艺术家
             Nested Loops in the Maze:
@@ -8981,7 +8979,7 @@ zh-CN:
           description_audience: 年龄：7-11
           stages:
             'Algorithms: Graph Paper Programming':
-              name: '算法: 图纸编程'
+              name: 方格纸编程
             Introduction to Online Puzzles:
               name: 在线拼图简介
             Relay Programming:
@@ -8995,7 +8993,7 @@ zh-CN:
             Loops in Artist:
               name: 艺术家里的循环
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
             Nested Loops in Artist:
               name: 艺术家中的嵌套循环
             Nested Loops in Frozen:
@@ -9015,7 +9013,7 @@ zh-CN:
             Build a Play Lab Game:
               name: 建立一个剧本实验室游戏
             'Unplugged: Binary':
-              name: 离线：二进制
+              name: 二进制图像
             Artist Binary:
               name: 小艺术家：二进制
             Build a Star Wars Game:
@@ -9049,7 +9047,7 @@ zh-CN:
             Conditionals with Cards:
               name: 用 扑克牌 的 条件子句
             Conditionals:
-              name: 条件语句
+              name: 农夫和条件
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
               description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Private and Personal Information:
@@ -9064,7 +9062,7 @@ zh-CN:
               description_student: 在这堂课程，创建自己的星球大战游戏来体会原力吧。
               description_teacher: 在这堂课中，学生们会练习使用事件来创建一个能在线共享的游戏。学生们会被引导学习事件，用R2-D2和其它星球大战的角色，来创造他们自己的游戏。
             'Functions: Songwriting':
-              name: '功能: 作曲'
+              name: 写歌
               description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
               description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
             Functions in Minecraft:
@@ -9115,11 +9113,11 @@ zh-CN:
               description_student: 这堂课会教你众包的概念，这是通过团队来完成一个项目的过程。
               description_teacher: 在计算机科学中，我们面对一些很大的，令人气馁的问题。这些挑战像是找到最大的质数，或给DNS测序，这些基本上不可能由人来完成。增加一些来自其它人的力量会让这些任务可以被管理。这堂课会给你的学生展示团队合作如何在计算机科学的工业中有帮助的。
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
             Nested Loops in Artist:
               name: 艺术家中的嵌套循环
             Nested Loops in Frozen:
-              name: 冰雪奇缘里的嵌套循环
+              name: 冰雪奇缘和嵌套循环
             Sequencing in the Maze:
               name: 迷宫中的序列
             Programming and Loops with the Artist:
@@ -9330,8 +9328,6 @@ zh-CN:
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           description_audience: 年龄：6-10
           stages:
-            Building a Foundation:
-              name: 打基础
             Programming in Maze:
               name: 迷宫编程
             Debugging in Maze:
@@ -9351,7 +9347,7 @@ zh-CN:
             Loops in Harvester:
               name: 收割者中的循环
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
             Build a Flappy Game:
               name: 创作像素鸟游戏
             Screen Out the Mean:
@@ -9359,11 +9355,9 @@ zh-CN:
             Events in Play Lab:
               name: 游戏实验室中的事件
             Looking Ahead:
-              name: 展望未来
+              name: 与《我的世界》往前看
             Binary Bracelets:
               name: 二进制的手镯
-            'End of Course Project: Play Lab':
-              name: '课程结束项目: 游戏实验室'
             Create a Design with Loops:
               name: 创建循环设计
             'End of Course Project: Create a Play Lab Game':
@@ -9399,18 +9393,10 @@ zh-CN:
           description_short: 为学前学生准备的计算机科学介绍
           description_audience: 年龄：4-7
           stages:
-            'Debugging: Unspotted Bugs':
-              name: '调试: 没有错误'
-              description_teacher: 这一个会引导学生完成调试的步骤。学生会学习到这个咒语：“发生什么了？应该发生什么？这告诉了你什么？”
-            'Persistence & Frustration: Stevie and the Big Project':
-              name: 坚持与挫折：史蒂夫和大项目。
-            'Real-life Algorithms: Plant a Seed':
-              name: 真实算法： 播种一颗种子
-              description_teacher: "在这堂课中，学生们将会将算法的概念带到每一天，与种植真实种子的现实活动联系起来。目标是开始构建将现实世界的状况转换为在线场景，以及反过来转换的能力。\r\n"
             Sequencing in Maze:
               name: 迷宫中的序列
             'Programming: Happy Maps':
-              name: '编程: 快乐地图'
+              name: 快乐地图
               description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
             Programming in Maze:
               name: 迷宫编程
@@ -9423,8 +9409,6 @@ zh-CN:
             'Loops: Happy Loops':
               name: '循环: 快乐循环'
               description_teacher: 循环是编程中非常有用而又强大的工具。为了理解循环的用处，学生们需要被驱动去用简单的方法来解决单调的问题。
-            Loops in Harvester:
-              name: 收割者中的循环
             Loops in Collector:
               name: 收集器中的循环
               description_teacher: 基于"快乐循环"中重复指令的概念，这个阶段会让学生用循环来在Code.org上更有效的收集宝藏。
@@ -9432,7 +9416,7 @@ zh-CN:
               name: 艺术家里的循环
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件少儿版。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               name: 游戏实验室中的事件
@@ -9442,9 +9426,9 @@ zh-CN:
             Learn to Drag and Drop:
               name: 学习拖放
             Loops in Ice Age:
-              name: 冰河时代里的循环
+              name: 斯奎特和循环
             Programming in Ice Age:
-              name: 在冰河时代里编程
+              name: 与斯奎特一起编程
             Programming with Rey and BB-8:
               name: 与雷伊，BB-8一起编程
             Sequencing with Scrat:
@@ -9478,11 +9462,11 @@ zh-CN:
             Loops in Artist:
               name: 艺术家里的循环
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件少儿版。
             Events in Play Lab:
               name: 游戏实验室中的事件
             'Loops: Getting Loopy':
-              name: '循环: 变得糊涂'
+              name: 越来越糊涂
             The Right App:
               name: 正确的应用程序
             Loops in Harvester:
@@ -9492,7 +9476,7 @@ zh-CN:
             Programming in Harvester:
               name: 与收割者编程
             Sequencing in Maze:
-              name: 迷宫中的序列
+              name: 愤怒的小鸟中的序列
         pre-express-2019:
           title: 学前儿童的速学课程 (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -10666,6 +10650,8 @@ zh-CN:
               name: 练习 PT 第3部分
             Unit 4 Assessment:
               name: 第4单元评估
+            Libraries:
+              name: 使用的开源库
           title: '单元 7: 功能和库'
         csp8-pilot-staging:
           stages:
@@ -10772,3 +10758,9 @@ zh-CN:
             Unit 4 Assessment:
               name: 第4单元评估
           title: '单元 10: 全局影响'
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: 方格纸编程
+            Programming in Maze:
+              name: 迷宫编程
