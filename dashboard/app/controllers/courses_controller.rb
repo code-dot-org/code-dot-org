@@ -62,7 +62,8 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if redirect_course = redirect_course(course)
+    # Do not redirect users that have added the 'no_redirect' query parameter to the request.
+    if !params[:no_redirect] && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
