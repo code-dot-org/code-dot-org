@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
   include Pd::ScholarshipInfoConstants
+  include Pd::WorkshopConstants
   include Pd::Application::ActiveApplicationModels
 
   self.use_transactional_test_case = true
@@ -16,18 +17,19 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
     assert_equal(APPLICATION_CURRENT_YEAR, scholarship_info.application_year)
   end
 
-  test 'cannot create multiple scholarship infos with same user and year' do
-    Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
+  test 'cannot create multiple scholarship infos with same user, year, and course' do
+    course = COURSE_KEY_MAP[COURSE_CSD]
+    Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO, course: course)
 
     assert_raises(ActiveRecord::RecordNotUnique) do
-      Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO)
+      Pd::ScholarshipInfo.create(user: @user, scholarship_status: YES_CDO, course: course)
     end
   end
 
   test 'update or create' do
     user = create :teacher
     application_year = APPLICATION_CURRENT_YEAR
-    course = Pd::WorkshopConstants::COURSE_CSD
+    course = COURSE_KEY_MAP[COURSE_CSD]
 
     assert_creates(Pd::ScholarshipInfo) do
       Pd::ScholarshipInfo.update_or_create(user, application_year, course, Pd::ScholarshipInfoConstants::NO)
