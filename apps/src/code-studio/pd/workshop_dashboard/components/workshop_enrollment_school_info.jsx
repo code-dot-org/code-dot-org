@@ -103,6 +103,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   scholarshipInfo(enrollment) {
+    if (enrollment.scholarship_ineligible_reason) {
+      return <td>{enrollment.scholarship_ineligible_reason}</td>;
+    }
+
     if (
       this.props.permissionList.has(ProgramManager) ||
       this.props.permissionList.has(WorkshopAdmin)
