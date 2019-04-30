@@ -56,7 +56,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
 
-    assert_difference UserSchoolInfo.count, 1
     assert_not_equal new_user_school_info.id, user_school_info.id
     assert new_user_school_info.school_info_id, user_school_info.school_info_id
   end
