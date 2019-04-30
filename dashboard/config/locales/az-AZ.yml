@@ -185,8 +185,6 @@ az:
     header:
       finished_hoc: Kod Saatımı bitirdim
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
-      free_play:
-        artist: Nə isə çəkin
       project_gallery: Layihə qalereyası
       sections: Bölmələr
       teacher_community: Müəllim icması
