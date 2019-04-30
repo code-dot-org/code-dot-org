@@ -299,13 +299,6 @@ en:
     header:
       finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
-      free_play:
-        playlab: 'Make a Play Lab app'
-        artist: 'Draw something'
-        calculate: 'Calculate something'
-        applab: 'Make an App Lab app'
-        gamelab: 'Make a Game Lab project'
-        weblab: 'Make a Web Lab (beta) project'
       my_dashboard: "My Dashboard"
       course_catalog: "Course Catalog"
       project_gallery: "Projects"
@@ -347,6 +340,7 @@ en:
       district_dashboard: 'District Dashboard'
       label: 'Hi %{username}'
       stats: 'Code Studio'
+      my_projects: 'My projects'
       settings: 'Account settings'
       logout: 'Sign out'
       signin: 'Sign in'
