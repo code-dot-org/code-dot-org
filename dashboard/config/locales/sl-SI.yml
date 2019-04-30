@@ -210,10 +210,6 @@ sl:
     header:
       finished_hoc: Končal sem mojo uro za programiranje
       sign_in_to_save: Vpiši se, da shraniš napredek
-      free_play:
-        playlab: Ustvari Play Lab app
-        artist: Nariši kaj
-        applab: Ustvari App Lab app
       my_dashboard: Moja nadzorna plošča
       course_catalog: Katalog tečajev
       project_gallery: Projekti

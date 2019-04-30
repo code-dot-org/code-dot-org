@@ -1053,6 +1053,8 @@ sl:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
             Relay Programming:
               name: Relejsko programiranje
             Conditionals with Cards:
@@ -1060,7 +1062,7 @@ sl:
             Digital Citizenship:
               name: Digitalno državljanstvo
             'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
+              name: Binarne slike
             Artist Binary:
               name: Umetnik Binarno
         coursee-2019:
@@ -1071,8 +1073,8 @@ sl:
               name: Gnezdenje zank
             Conditionals with Cards:
               name: Pogojniki s kartami
-            Conditionals:
-              name: Pogoji
+            'Functions: Songwriting':
+              name: Napiši pesem
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1103,14 +1105,14 @@ sl:
               name: 'prazno'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Graditi temelje
             'Real-life Algorithms: Paper Planes':
               name: 'Življenjski algoritmi: Papirnata letala'
+            'Events: The Big Event':
+              name: Veliki dogodek
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Življenjski algoritmi: Zasadi seme'
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
             Going Places Safely:
               name: Kako varno potovati
         courseb-2019:
@@ -1159,3 +1161,7 @@ sl:
               name: Pogojniki s kartami
             Building a Foundation:
               name: Graditi temelje
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Obarvajmo kvadratke
