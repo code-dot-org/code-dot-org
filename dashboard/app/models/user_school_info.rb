@@ -17,12 +17,4 @@ class UserSchoolInfo < ApplicationRecord
 
   belongs_to :user
   belongs_to :school_info
-
-  #solution - 2 (check end date was updated before updating last seen school info interstitial)
-
-  # after_update :update_last_seen_school_info_interstitial, if: :end_date_changed?
-
-  # def update_last_seen_school_info_interstitial
-  #   user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
-  # end
 end
