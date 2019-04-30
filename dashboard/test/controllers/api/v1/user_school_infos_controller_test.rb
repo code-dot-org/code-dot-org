@@ -1,16 +1,11 @@
 require 'test_helper'
 
-# to do
-#  testing controller
-#  authenticating user
-# creating another school_id
-
 class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test "last confirmation date in user school infos table is updated" do
     user_school_info = create :user_school_info
     puts 'Before sign in'
     sign_in user_school_info.user
-    # puts user_school_info.inspect
+    puts user_school_info.inspect
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_last_confirmation_date"
     assert_response :success
 
@@ -19,17 +14,17 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   test "last confirmation date is not updated for a user that is not signed in" do
     patch "/api/v1/user_school_infos/-1/update_last_confirmation_date"
-    assert_response 404
+    assert_response 302
   end
 
-  test "update last confirmation will 404 if user id does not exist" do
+  test "update last confirmation date will 404 if user id does not exist" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/-1/update_last_confirmation_date"
     assert_response 404
   end
 
-  test 'update last confirmation date will 403 if given a user id other than the person logged in' do
+  test 'update last confirmation date will 401 if given a user id other than the person logged in' do
     user_school_info1 = create :user_school_info
     user_school_info2 = create :user_school_info
     sign_in user_school_info2.user
@@ -42,7 +37,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_end_date"
     updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
-    #puts updated_user_school_info.inspect
+
     assert_response :success
 
     assert updated_user_school_info.end_date.to_datetime, Date.current
@@ -56,7 +51,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
       school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii'},
       school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
     }
-    #updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
+
     new_user_school_info = UserSchoolInfo.last
 
     assert_response :success
@@ -65,19 +60,4 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_not_equal new_user_school_info.id, user_school_info.id
     assert new_user_school_info.school_info_id, user_school_info.school_info_id
   end
-
-  # tests validating that non-whitelisted params are ignored
-  test "non-whitelisted params are ignored when school_info_id is updated" do
-    user_school_info = create :user_school_info
-    sign_in user_school_info.user
-    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id", params: {
-      school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii', phone: '123'},
-      school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
-    }
-    assert_response :success
-  end
-
-  # these tests should all also verify that the actual data has been updated,
-
-  # not just that the endpoint reported success
 end
