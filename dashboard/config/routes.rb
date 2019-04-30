@@ -13,10 +13,6 @@ Dashboard::Application.routes.draw do
 
   patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
-  patch '/api/v1/user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
-
-  patch '/api/v1/user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
-
   patch '/api/v1/user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
 
   get '/download/:product', to: 'hoc_download#index'
@@ -596,6 +592,10 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
+
+      patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
+
+      patch 'user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
