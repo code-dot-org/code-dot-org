@@ -24,6 +24,7 @@
 class Pd::ScholarshipInfo < ActiveRecord::Base
   include Pd::Application::ActiveApplicationModels
   include Pd::Application::ApplicationConstants
+  include Pd::WorkshopConstants
   include Pd::ScholarshipInfoConstants
 
   # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
@@ -38,6 +39,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
   validates_inclusion_of :scholarship_status, in: SCHOLARSHIP_STATUSES
+  validates_inclusion_of :course, in: [COURSE_CSD, COURSE_CSP]
 
   def self.update_or_create(user, application_year, course, scholarship_status)
     scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course) || Pd::ScholarshipInfo.new(user: user)
