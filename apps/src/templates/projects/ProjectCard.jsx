@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import $ from 'jquery';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
@@ -120,7 +121,7 @@ export default class ProjectCard extends React.Component {
         <div style={styles.card}>
           <div style={thumbnailStyle}>
             <a
-              href={url}
+              href={studio(url)}
               style={{width: '100%'}}
               target={isPublicGallery ? '_blank' : undefined}
             >
