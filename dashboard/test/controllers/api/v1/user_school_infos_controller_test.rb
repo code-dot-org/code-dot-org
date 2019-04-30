@@ -32,7 +32,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 401
   end
 
-  test "end_date and last_seen_school_info_interstitial is updated" do
+  test "end_date and last_seen_school_info_interstitial are updated" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_end_date"
@@ -44,7 +44,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert updated_user_school_info.user.last_seen_school_info_interstitial.to_datetime, Date.current
   end
 
-  test "school_info_id is updated" do
+  test "end_date and last_seen_school_info_interstitial are not updated if user id other than the person logged in is used." do
+    user_school_info3 = create :user_school_info
+    user_school_info4 = create :user_school_info
+    sign_in user_school_info4.user
+    patch "/api/v1/user_school_infos/#{user_school_info3.id}/update_end_date"
+
+    assert_response 401
+  end
+
+  test "school_info_id is not updated when " do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id", params: {
