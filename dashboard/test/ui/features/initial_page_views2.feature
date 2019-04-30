@@ -5,7 +5,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @dashboard_db_access
   Scenario Outline: Logged in simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a student

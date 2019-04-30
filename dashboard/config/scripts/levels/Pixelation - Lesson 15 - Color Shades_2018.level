@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "short_instructions": "We start you out with the row of shades of red that Maddie created in the video. Experiment with 6-bit color by filling in the bottom row of the image with shades of a different color. Here is an example with some shades of blue. Try your own color!",
-    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style=\"width: 150px;\" align=right>We start you out with the row of shades of red that Maddie created in the video. Experiment with 6-bit color by filling in the bottom row of the image with shades of a different color.  Here is an example with some shades of blue.  Try your own color!",
+    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style=\"width: 150px; float:right\">We start you out with the row of shades of red that Maddie created in the video. Experiment with 6-bit color by filling in the bottom row of the image with shades of a different color.  Here is an example with some shades of blue.  Try your own color!",
     "version": "3",
     "data": "0000 0100\r\n0000 0010\r\n0000 0110\r\n110000 100000 010000 000000\r\n",
     "href": "pixelation/pixelation.html",

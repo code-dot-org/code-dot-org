@@ -14,6 +14,7 @@ Scenario: Export library animation
   And I wait until element ".icon-settings-export-white" is visible within element "iframe[src='/blockly/js/piskel/index.html']"
   And I switch to the first iframe
   And I wait until I don't see selector "#loadingMask"
+  And I click selector ".unsupported-browser .dialog-close" if it exists
   And I press the first ".icon-settings-export-white" element
   And I press the first ".gif-download-button" element
   And I switch to the default content

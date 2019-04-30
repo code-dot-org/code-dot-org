@@ -153,7 +153,7 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes @dashboard_db_access @as_student
+  @eyes @as_student
   Scenario: Desktop Applab share small footer
     Given I start a new Applab project
     And I navigate to the shared version of my project
@@ -228,7 +228,7 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes_mobile @dashboard_db_access @as_student
+  @eyes_mobile @as_student
   Scenario: Mobile Applab share small footer
     Given I am on "http://studio.code.org/home"
     And I rotate to landscape
