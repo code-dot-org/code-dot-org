@@ -194,7 +194,13 @@ lt:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': uola
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': dykuma
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vaivorykštė
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
+              vandeniu
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
       gamelab_setPosition:
         options:
           POSITION:
@@ -211,6 +217,11 @@ lt:
             '"scale"': dydis
             '"height"': aukštis
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': kada
@@ -247,6 +258,11 @@ lt:
             "'down'": žemyn
             "'left'": kairėn
             "'right'": dešinėn
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': kada
+            '"while"': kol
       gamelab_whileKey:
         options:
           KEY:

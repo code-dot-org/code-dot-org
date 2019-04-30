@@ -233,10 +233,6 @@ lt:
     header:
       finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
       sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
-      free_play:
-        playlab: Sukurk programėlę
-        artist: Nupiešk ką nors
-        applab: Sukurk programėlę
       my_dashboard: Valdymo skydelis
       course_catalog: Kurso katalogas
       project_gallery: Projektai
