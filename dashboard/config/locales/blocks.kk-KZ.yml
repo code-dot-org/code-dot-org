@@ -190,7 +190,13 @@ kk:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': үңгір
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': шөлдала
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': кемпірқосақ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': су
+              асты
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': қыс
       gamelab_setPosition:
         options:
           POSITION:
@@ -205,6 +211,11 @@ kk:
             '"scale"': шама
             '"height"': биіктік
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': кезде
@@ -237,6 +248,11 @@ kk:
             "'down'": төмен
             "'left'": солға
             "'right'": оңға
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       gamelab_whileKey:
         options:
           KEY:
