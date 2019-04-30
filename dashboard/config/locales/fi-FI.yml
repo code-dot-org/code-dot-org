@@ -267,12 +267,6 @@ fi:
     header:
       finished_hoc: Olen suorittanut Koodituntini
       sign_in_to_save: Kirjaudu, jos haluat tallentaa edistymisesi
-      free_play:
-        playlab: Tee sovellus
-        artist: Piirrä jotakin
-        applab: Tee sovellus
-        gamelab: Tee Pelilabra projekti
-        weblab: Tee Nettilabra (beta) projekti
       my_dashboard: Kojelauta
       course_catalog: Kurssiluettelo
       project_gallery: Projektit

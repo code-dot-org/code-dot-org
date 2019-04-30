@@ -1550,11 +1550,13 @@ fi:
             The Artist:
               name: Taiteilija
             Internet:
-              name: Internet
+              name: Internetti
             Crowdsourcing:
               name: Joukkoistaminen
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
             Relay Programming:
               name: Releohjelmointi
             Conditionals with Cards:
@@ -1562,7 +1564,7 @@ fi:
             Digital Citizenship:
               name: Digitaalinen kansalaisuus
             'Unplugged: Binary':
-              name: 'Tietokoneeton tekeminen: binääri'
+              name: Binäärikuvat
             Artist Binary:
               name: 'Taiteilija: binääri'
         coursee-2019:
@@ -1573,8 +1575,8 @@ fi:
               name: Sisäkkäiset silmukat
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
-            Conditionals:
-              name: Ehtolausekkeet
+            'Functions: Songwriting':
+              name: Säveltäminen
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1610,18 +1612,18 @@ fi:
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Rakennetaan perustus
             'Real-life Algorithms: Paper Planes':
               name: 'Tosielämän algoritmit: paperilentokoneet'
+            'Events: The Big Event':
+              name: Suuri tapahtuma
             Binary Bracelets:
               name: Binäärikorut
         gamelab:
           title: Pelilabra
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Tosielämän algoritmit: kylvä siemen'
+            'Programming: Happy Maps':
+              name: Iloiset kartat
             Going Places Safely:
               name: Menossa turvallisesti
         courseb-2019:
@@ -1630,6 +1632,8 @@ fi:
               name: Liikuta, liikuta
             Your Digital Footprint:
               name: Digitaalinen jalanjälkesi
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1684,3 +1688,7 @@ fi:
               name: Ehtolauseet pelikorteilla
             Building a Foundation:
               name: Rakennetaan perustus
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Ruutupaperiohjelmointi
