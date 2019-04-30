@@ -814,7 +814,13 @@ ro:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': peșteră
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': oraș
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deșert
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rețea
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': curcubeu
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
       gamelab_setPosition:
         text: mută {THIS} la poziţia {POSITION}
         options:
@@ -847,6 +853,11 @@ ro:
       gamelab_setup:
         text: configurare
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': când
+            '"while"': în timp ce
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': când
@@ -916,6 +927,11 @@ ro:
             "'right'": dreapta
       gamelab_whenRightArrow:
         text: când săgeata dreapta este apăsată
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': când
+            '"while"': în timp ce
       gamelab_whenUpArrow:
         text: când săgeata sus este apăsată
       gamelab_whileDownArrow:

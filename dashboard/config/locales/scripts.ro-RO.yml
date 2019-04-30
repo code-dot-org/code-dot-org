@@ -3752,7 +3752,7 @@ ro:
             The Artist:
               name: Artistul
             Internet:
-              name: Internet
+              name: Internetul
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
         dance-low:
@@ -3764,6 +3764,7 @@ ro:
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
+              name: Programare pe Hârtie Milimetrică
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Introduction to Online Puzzles:
@@ -3819,7 +3820,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             'Unplugged: Binary':
-              name: 'Fără calculator: Binar'
+              name: Imagini binare
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Artist Binary:
@@ -3863,8 +3864,8 @@ ro:
               name: Condiționale cu Carduri
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
-            Conditionals:
-              name: Condiţionale
+            'Functions: Songwriting':
+              name: Compunând Cântece
             Functions in Minecraft:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -4057,10 +4058,6 @@ ro:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Construirea unei Fundaţii
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Programming in Maze:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -4090,6 +4087,7 @@ ro:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             'Events: The Big Event':
+              name: Marele eveniment
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Build a Flappy Game:
@@ -4115,18 +4113,11 @@ ro:
         coursea-2019:
           description_short: O introducere în informatică pentru preșcolari.
           stages:
-            'Debugging: Unspotted Bugs':
-              description_student: "[șir gol]"
-            'Persistence & Frustration: Stevie and the Big Project':
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
-              description_student: "[șir gol]"
             Sequencing in Maze:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             'Programming: Happy Maps':
+              name: Hărţi Fericite
               description_student: "[șir gol]"
             Programming in Maze:
               description_student: "[șir gol]"
@@ -4138,9 +4129,6 @@ ro:
               description_student: "[șir gol]"
             'Loops: Happy Loops':
               description_student: "[șir gol]"
-            Loops in Harvester:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Loops in Collector:
               description_student: "[șir gol]"
             Loops in Artist:
@@ -4149,8 +4137,6 @@ ro:
               description_student: "[șir gol]"
             Events in Play Lab:
               description_student: "[șir gol]"
-            Loops in Ice Age:
-              name: Bucle în Ice Age
         courseb-2019:
           stages:
             Move It, Move It:
@@ -4195,6 +4181,8 @@ ro:
             Events in Play Lab:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            'Loops: Getting Loopy':
+              name: Transformând în Buclă
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4752,6 +4740,17 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         csp10-pilot-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        pluralsight:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
