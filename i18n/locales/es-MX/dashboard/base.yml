@@ -270,12 +270,6 @@ es-MX:
     header:
       finished_hoc: "¡He terminado!"
       sign_in_to_save: 'Inicia sesión para guardar tu progreso'
-      free_play:
-        playlab: 'Crear una aplicación en el Laboratorio de juegos'
-        artist: 'Dibuja algo'
-        applab: 'Crear una aplicación en el Laboratorio de aplicaciones'
-        gamelab: 'Crear un proyecto en el Laboratorio de juegos'
-        weblab: 'Crear un proyecto en el Laboratorio Web (beta)'
       my_dashboard: "Mi panel de control"
       course_catalog: "Catálogo de cursos"
       project_gallery: "Proyectos"

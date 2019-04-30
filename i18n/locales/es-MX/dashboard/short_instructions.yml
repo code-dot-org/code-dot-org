@@ -2,6 +2,7 @@
 es-MX:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       2-3 Artist 1 new: Hola, soy un artista. Puedes escribir código para hacerme dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
       2-3 Artist 11: 'Dale un borde a la señal de alto haciendo un octágono con ocho lados, cada uno de 100 píxeles de largo. ¿Cuántos grados debes girar? (Pista: ¿Cuánto es 360 dividido entre 8?) '
       2-3 Artist 12: Configura el bloque "repetir" de tal forma que cree un "círculo" para terminar el globo ocular. Si cada movimiento gira un grado a la derecha, ¿cuántas veces necesitas repetir para completar el círculo? ¿180? ¿360? ¿500?
@@ -1662,7 +1663,7 @@ es-MX:
       Dance Party 3_simple: 'Crea un nuevo sprite llamado `extraterrestre2`, luego haz que haga un movimiento de danza diferente cuando se haga clic.  '
       Dance Party 4 Validated: 'Crea un tercer sprite llamado `extraterrestre3` y haz que todos tus extraterrestres se pongan en una línea. '
       Dance Party 4: 'Crea un tercer sprite llamado `extraterrestre3` y haz que todos tus extraterrestres se pongan en una línea. '
-      Dance Party 4_2019: 'Crea un tercer sprite que parezca un extraterrestre amarillo, y haz que todos tus extraterrestres se pongan en una línea. '
+      Dance Party 4_2019: Crea un tercer sprite que parezca un extraterrestre amarillo, y haz que todos tus extraterrestres se pongan en una línea.
       Dance Party 4_simple: 'Crea un tercer sprite llamado `extraterrestre3` y haz que todos tus extraterrestres se pongan en una línea. '
       Dance Party 5 - Validated: Añade código para cambiar el color de cada extraterrestre cuando se le haga clic.
       Dance Party 5: Añade código para cambiar el color de cada extraterrestre cuando se le haga clic.
@@ -1682,6 +1683,8 @@ es-MX:
       Dance Party Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_2019: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_simple: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
+      Dance Party Template 1_2019: Reemplaza el bloque de comportamiento en el bloque `sprite comienza` con uno diferente que haga que el extraterrestre comience a girar.
+      Dance Party Template 2_2019: Plantilla
       Dance_Party_01: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación'.
       Dance_Party_01_low: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo y conéctalo dentro del bloque de 'instalación'.
       Dance_Party_02: Haz que el alce comience un nuevo movimiento después de 4 medidas.
@@ -2836,6 +2839,7 @@ es-MX:
       U3L07 - topDownDesign: Ponte cómodo con la estructura de este programa, luego avanza al siguiente ejercicio. (Haz clic para ver las instrucciones completas)
       U3L07 - topDownDesign_2018: Ponte cómodo con la estructura de este programa, luego avanza al siguiente ejercicio. (Haz clic para ver las instrucciones completas)
       U3L07 - topDownDesign_2019: Ponte cómodo con la estructura de este programa, luego avanza al siguiente ejercicio. (Haz clic para ver las instrucciones completas)
+      U3L08 - Enchantment Under the Sea: Te han brindado un código de arranque para una escena de "Under de Sea" que incluye tres funciones, una para la estrella de mar, otra para la hierba marina, y otra para el pez. Crea versiones de estas funciones que acepten parámetros para permitirte agregar más variación a tu escena. La hoja de trabajo del estudiante brinda más detalles y guía.
       U3L08 - createTwoParamTriangle: Define una función llamada drawTriangle() que acepta dos parámetros para establecer el tamaño y el ancho del triángulo. (Haz clic para ver las instrucciones completas)
       U3L08 - createTwoParamTriangle_2018: Define una función llamada drawTriangle() que acepta dos parámetros para establecer el tamaño y el ancho del triángulo. (Haz clic para ver las instrucciones completas)
       U3L08 - createTwoParamTriangle_2019: Define una función llamada drawTriangle() que acepta dos parámetros para establecer el tamaño y el ancho del triángulo. (Haz clic para ver las instrucciones completas)
@@ -2846,6 +2850,7 @@ es-MX:
       U3L08 - drawSquareWithParam: Usa drawSquare() para recrear la imagen de ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones completas)
       U3L08 - drawSquareWithParam_2018: Usa drawSquare() para recrear la imagen de ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones completas)
       U3L08 - drawSquareWithParam_2019: Usa drawSquare() para recrear la imagen de ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones completas)
+      U3L08 - drawSquaresWithParams: Escribe drawSmallSquare() para dibujar un cuadrado de 25 pixeles. (Haz clic para ver las instrucciones completas)
       U3L08 - fish: Agrega un parámetro para dibujar drawFish que controla el tamaño de los peces dibujados. (Haz clic para ver las instrucciones completas)
       U3L08 - fish_2018: Agrega un parámetro para dibujar drawFish que controla el tamaño de los peces dibujados. (Haz clic para ver las instrucciones completas)
       U3L08 - fish_2019: Agrega un parámetro para dibujar drawFish que controla el tamaño de los peces dibujados. (Haz clic para ver las instrucciones completas)
@@ -2862,6 +2867,7 @@ es-MX:
       U3L08 - multiParamFish: Agrega tres parámetros a tu función drawFish para aceptar los valores rojos, verdes y azules para hacer que tus peces tengan colores diferentes. (Haz clic para ver las instrucciones completas)
       U3L08 - multiParamFish_2018: Agrega tres parámetros a tu función drawFish para aceptar los valores rojos, verdes y azules para hacer que tus peces tengan colores diferentes. (Haz clic para ver las instrucciones completas)
       U3L08 - multiParamFish_2019: Agrega tres parámetros a tu función drawFish para aceptar los valores rojos, verdes y azules para hacer que tus peces tengan colores diferentes. (Haz clic para ver las instrucciones completas)
+      U3L08 - multipleLayersofParams: Llama drawPlusSign() para completar la imagen. (Haz clic para ver las instrucciones completas)
       U3L08 - paramsToStarfish: Agrega un parámetro para drawStarfish que controla el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones completas)
       U3L08 - paramsToStarfish_2018: Agrega un parámetro para drawStarfish que controla el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones completas)
       U3L08 - paramsToStarfish_2019: Agrega un parámetro para drawStarfish que controla el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones completas)
@@ -2881,7 +2887,12 @@ es-MX:
       U3L08 how to add comments_2019: Usa los bloques randomNumber() para probar las funciones que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones completas)
       U3L1 - Simulation - Template: Usa un bucle `mientras` para "lanzar 10 monedas" y escríbelas en la pantalla. (Haz clic para ver las instrucciones completas)
       U3L12 Chaser Template: "¡Esta es una plantilla de proyecto!"
+      U3L13 - Button with ID: Arrastra un botón a la pantalla y establece el texto en "¡Avanzar!". Ejecuta el programa para asegurarte de que puedes ver el botón.
       U3L13 - Debug Id Problem: Elige un ID descriptivo y significativo para mejorar el botón. (Haz clic para ver las instrucciones completas)
+      U3L13 - Debug Id plus logic problem: |-
+        El último problema fue un ejemplo de error de sintaxis.  El Laboratorio de aplicaciones no entendió qué objeto se debe oír para un evento de "clic", de modo que mostró un mensaje de error en la consola para notificártelo. Otra clase de error es un error lógico; el programa es válido, pero no está haciendo lo que quieres que haga.
+
+        Este programa tiene 2 errores. Un error de sintaxis (engañoso) y un error lógico. Encuéntralos, arréglalos y haz que el programa funcione como se espera.
       U3L13 - Debugging 1: Depura el programa mediante la verificación de que sus identificadores están siendo referenciados correctamente. (Haz clic para ver instrucciones completas)
       U3L13 - Debugging 2: Ordena correctamente los comandos de los botones y los gestores de eventos para depurar el programa. (Haz clic para ver las instrucciones completas)
       U3L13 - Debugging 3: Corrige el error lógico dentro del programa para depurar el programa. (Haz clic para ver las instrucciones completas)
@@ -2891,6 +2902,7 @@ es-MX:
       U3L13 eventsDetails: Añade un controlar de eventos al botón para mover la tortuga hacia adelante. (Haz clic para ver las instrucciones completas)
       U3L14 - Assigning Random Value: Escribe un programa que simula el lanzamiento de dos dados e informa sus valores individuales, además de la suma. (Haz clic para ver las instrucciones completas)
       U3L14 - Mini Calculator embed: Se te pedirán dos números; uno justo después del otro. Mira lo que sucede. Introduce diferentes números hasta que entiendas la idea.
+      U3L14 - Unfortunate Events Free Play: Sigan la Hoja de trabajo de "Eventos Desafortunados" e ingresa tu código aquí para experimentar. Hemos precargado el código que necesitas para comenzar.
       U3L14 - User Input Division calculator: Escribe un programa que actúe como una calculadora simple. (Haz clic para ver las instrucciones completas)
       U3L14 - Variable ReAssignment pt2: Rastrea el código y haz una predicción de lo que piensas que se escribirá en la consola. Luego añade una sentencia console.log al final del programa para ver el último valor de algúnNúm para ver si tu predicción completa es correcta. (Haz clic para ver las instrucciones completas)
       U3L14 - concatenate simple: Modifica la sentencia de escritura en la línea 3 para combinar texto y variables para que la aplicación muestre una sola línea de texto que muestre las vidas y la puntuación del jugador. (Haz clic para ver las instrucciones completas)
@@ -2921,6 +2933,11 @@ es-MX:
       U3L16 - chaserApp: Crea tu propio juego "Chaser". (Haz clic para ver las instrucciones completas)
       U3L16 - chooseImages: Reemplaza la imagen en tu aplicación con uno de tus imágenes propias. (Haz clic para ver las instrucciones completas)
       U3L16 - doubleQuotes: Guarda una cadena dentro de una variable y regístrala en la consola. (Haz clic para ver las instrucciones completas)
+      U3L16 - hideAndShow: 'Introducción a Entradatexto, obtenerTexto y escribir.  Primero ejecuta el código de arranque varias veces. Intenta cambiar lo que está escrito en el pantalla cuando el botón está presionado. Luego usa obtenerTexto para escribir en la pantalla lo que el usuario a ingresado en la caja de texto. GIF: U3L16 - useGetText.gif'
+      U3L16 - hideAndShowPractice: 'Has recibido un código de arranque que pone una imagen y dos botones en la pantalla. La imagen inicialmente se esconde. Agrega dos nuevos controladores de eventos: uno por cada botón, que cuando están presionados ocultan y muestran la imagen.'
+      U3L16 - image and text labels: Presentación del comando establecerPosición. Reemplaza el moverA en el controlador de eventos de clic en el botón para usar establecerPosición para mover el botón mismo a una ubicación aleatoria cuando se haga clic.
+      U3L16 - images and text labels: 'Introducción a objetos que no sean botones: etiquetasdeTexto e imágenes. Primero intenta reemplazar tu botón con una etiquetadeTexto. ¿El texto responderá a eventos de la misma manera que el botón? Intenta conectar un controlador de eventos a esto. Inicialmente, te hemos brindado código similar al resultado del último nivel; puedes copiar tu código de ese nivel aquí si prefieres. '
+      U3L16 - images: Presentación de Imágenes. Intenta reemplazar la etiquetadeTexto con una imagen. ¿La imagen responderá a eventos de la misma manera que el botón? Intenta conectar un controlador de eventos a esto. Inicialmente, te hemos brindado código similar al resultado del último nivel; puedes copiar código de ese nivel aquí si prefieres.
       U3L16 - intro getText: Añade un gestor de eventos al botón Enviar para que cuando el botón sea pulsado aparezca el nombre introducido en el cuadro de texto a la consola. Utiliza obtenerTexto para obtener el valor fuera del cuadro de texto. (Haz clic para ver las instrucciones completas)
       U3L16 - introSetPosition: Mueve los botones al fondo de la pantalla. (Haz clic para ver las instrucciones completas)
       U3L16 - introStrings: Guarda una cadena dentro de una variable y regístrala en la consola. (Haz clic para ver las instrucciones completas)
@@ -2932,7 +2949,10 @@ es-MX:
       U3L16 - projectTemplate: Crea tu propia aplicación "Chaser". (Haz clic para ver las instrucciones completas)
       U3L16 - quick double click: Mini proyecto. El juego del doble clic rápido. En este juego sencillo, un objeto (una imagen) se mueve, o aparece aleatoriamente en la pantalla, a medida que el usuario hace clic. El objetivo de nuestro juego será hacer doble clic en el objeto antes de que se mueva. Parte del desafío (y de la diversión) es crear esta aplicación desde cero. Puedes ver tu trabajo anterior en busca de ejemplos, pero también es divertido crear algo desde cero. ¡Pruébalo! Si quieres obtener más detalles, consulta la guía de actividades para esta lección.
       U3L16 - setPosition to move button: Presentación del comando establecerPosición. Reemplaza el moverA en el controlador de eventos de clic en el botón para usar establecerPosición para mover el botón mismo a una ubicación aleatoria cuando se haga clic.
+      U3L16 - setPositionMoveButton: Usa establecerPosición para moverBotón
+      U3L16 - setupMoveToRandom: Modifica el código para que la tortuga se mueva a una ubicación aleatoria de pantalla cuando el botón esté presionado. (Haz clic para ver las instrucciones completas)
       U3L16 - singleSetPosition: Mueve el botón a la mitad de la pantalla. (Haz clic para ver las instrucciones completas)
+      U3L16 - stringsVsNumbers: Ejecuta el programa para ver cómo las cadenas y los números se comportan con diferentes operadores aritméticos. (Haz clic para ver las instrucciones completas)
       U3L16 - text labels: Usa el comando textoEtiqueta para reemplazar el botón de tu programa con una etiqueta de texto. (Haz clic para ver las instrucciones completas)
       U3L16 - textInput getText write: Añade un cuadro de entrada de texto para el nombre y la edad. (Haz clic para ver las instrucciones completas)
       U3L16 - toUpper: Haz que el nombre del usuario aparezca en mayúscula. (Haz clic para ver las instrucciones completas)
@@ -2943,14 +2963,28 @@ es-MX:
       U3L16 Mad Lib getText: 'Antes de establecer el área de texto con tu esquema de Mad Libs, obtén el texto del usuario e incorpora sus respuestas. (Haz clic para ver las instrucciones completas) '
       U3L16 Mad Lib setText: 'Cuando se haga clic en el botón "Siguiente", configura el área de texto para tener el diseño principal de tu "Lista de procedimientos de Mad Libs" (sin la entrada del usuario). (Haz clic para ver las instrucciones completas) '
       U3L16 Mad Lib toUpper: 'Aplica las funciones de cadena de paraMayúscula y paraMinúscula al texto del usuario. (Haz clic para ver las instrucciones completas) '
+      U3L17 - getKeyValue: Ejecuta el programa varias veces para observar cómo ahora los comandos establecerValorClave siempre llegan en orden. (Haz clic para ver las instrucciones completas)
+      U3L17 - introCallbacks: Ejecuta el programa varias veces para observar cómo ahora los comandos establecerValorClave siempre llegan en orden. (Haz clic para ver las instrucciones completas)
+      U3L17 - introKeyValue: Explora tus pares de valor clave con el Visor de Datos. (Haz clic para ver las instrucciones completas)
+      U3L17 - readKeyValue: Explora tus pares de valor clave con el Visor de Datos. (Haz clic para ver las instrucciones completas)
+      U3L17 - setKeyValue: Crea y actualiza tus pares de valor clave mediante el uso de establecerValorClave. (Haz clic para ver las instrucciones completas)
+      U3L17 - twoSetKeyValue: Ejecuta el programa varias veces para observar cómo, a menudo, los comandos establecerValorClave llegan desordenados. (Haz clic para ver las instrucciones completas)
       U3L18 comparison operators: Usa console.log para imprimir las diferentes expresiones booleanas abajo para ver qué información devuelven. (Haz clic para ver las instrucciones completas)
+      U3L18 comparison operators_for_video: Usa `console.log` para imprimir las diferentes expresiones booleanas a continuación para ver qué información devuelven. (Haz clic para ver las instrucciones completas)
+      U3L19 - Clicker Game Freeplay Area: Usa esta área de Laboratorio de aplicaciones para mejorar tu juego de clics. Deberías comenzar copiando/pegando aquí el código de tu juego anterior. Mostramos un conjunto de bloques más completo en la caja de herramientas; algunas de las cosas que podrías no haber usado aún. Con total confianza, explora y experimenta si lo deseas. Se debería mostrar el resto de lo que necesitas. ¡Diviértete!
       U3L19 - DEMO up down count practice app: Prueba la aplicación de demostración. (Haz clic para ver las instrucciones completas)
+      U3L19 - Debugging with consoleLog: Agrega sentencias console.log() para descubrir el valor de a y b luego de la primera sentencia de reasignación a = b; (Haz clic para ver las instrucciones completas)
       U3L19 - Simple If-statements in UpDown App: Añade una sentencia `si` para que la aplicación cambie las pantallas cuando el conteo alcance -5. (Haz clic para ver las instrucciones completas)
+      U3L19 - Target Clicker App: Investiga los nuevos elementos del juego "Chaser"
+      U3L19 - do concatenate string with var: "Te hemos brindado una porción de código de la pantalla anterior. Intenta cambiar el valor asignado a foo para ver el cambio de cadena. \nHaz esto: \n\n1.  Intenta cambiar el valor asignado a foo para ver el cambio de cadena. \n2.  Solo mediante la modificación de las líneas del código que fueron brindadas, intenta hacer que la salida diga: \"El valor de foo es: 9. Eso está bien.\""
       U3L19 - fix the var name syntax error v2: Corrige el error y logra que imprima el valor de ambas variables. (Haz clic para ver las instrucciones completas)
       U3L19 - fix the var name syntax error: Corrige el error y logra que imprima el valor de ambas variables. (Haz clic para ver las instrucciones completas)
       U3L19 - global var example count up: Mira el código de esta aplicación y observa cómo funciona para actualizar la variable de conteo cuando se hace clic en la flecha arriba. (Haz clic para ver las instrucciones completas).
+      U3L19 - practice with setText: Agrega otro botón que cambia el texto al valor de la nueva variable. (Haz clic para ver las instrucciones completas)
       U3L19 - test reassignment of two vars: Haz una predicción del valor de a y b. Agrega sentencias console.log para averiguar el valor real de a y b. (Haz clic para obtener las instrucciones completas)
       U3L19 - three basic ops of variables: Añade otra variable llamada "vidas" y configura el valor a 3. Escribe el valor de la variable a la consola. (Haz clic para ver las instrucciones completas)
+      U3L19 - try out console log: "Prueba console.log.  Haz esto: reemplaza la sentencia escribir(\"foo es: \" + foo) con console.log(\"foo es: \" + foo). Ejecuta el programa y deberías ver que la salida se muestra en el área de la consola, debajo del espacio de trabajo. Luego intenta agregar algunas sentencias console.log más. Muestra un poco de texto. Haz otra variable y muestra eso.  \nLa pantalla de la aplicación estará en blanco: ese es el punto. Con console.log, puedes probar la salida detrás de las escenas sin que el usuario lo vea.  \n\nGIF: U3L19-useconsolelog.gif"
+      U3L19 - up down count practice app: Configura el botón abajo para disminuir el valor de conteo en 1 cada vez que esté presionado. (Haz clic para ver las instrucciones completas)
       U3L19 - updating variables pt1: 'Esta aplicación sólo es LEVEMENTE diferente de la anterior, pero mucho más dinámica. Fíjate si puedes averiguar cómo y por qué el recuento está creciendo. Una vez que lo hayas configurado, entonces deberías poder HACER ESTO: añadir un botón a la aplicación que, al hacerle clic, haga que el recuento baje y actualice la etiqueta. Cuando hayas terminado, la aplicación debe funcionar como se muestra en la demostración.  GIF: U3L19 - upDownCountApp.gif'
       U3L19 - variable reassignment challenge pt2: Haz una predicción sobre los valores finales de a, b y c. Luego usa console.log para ver si has comprendido. (Haz clic para ver las instrucciones completas)
       U3L19 - variable reassignment part 1: Haz una predicción del valor de a y b. Agrega sentencias console.log para averiguar el valor real de a y b. (Haz clic para obtener las instrucciones completas)
@@ -3058,13 +3092,95 @@ es-MX:
       U4 - CreateRecord - 2: Cambia el nombre de "Alicia" a otra cosa en el comando crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios en tu tabla. (Haz clic para ver las instrucciones completas)
       U4 - CreateRecord - 2_2018: Cambia el nombre de "Alicia" a otra cosa en el comando crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios en tu tabla. (Haz clic para ver las instrucciones completas)
       U4 - CreateRecord - 2_2019: Cambia el nombre de "Alicia" a otra cosa en el comando crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios en tu tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3_2018: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3_2019: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4: Ejecuta el programa. Verifica que el objeto canción fue agregado a la base de datos. Observa que la función de devolución de llamada ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4_2018: Ejecuta el programa. Verifica que el objeto canción fue agregado a la base de datos. Observa que la función de devolución de llamada ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4_2019: Ejecuta el programa. Verifica que el objeto canción fue agregado a la base de datos. Observa que la función de devolución de llamada ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 5: Agrega una propiedad al objeto de JavaScript, y luego ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar el objeto afecta a la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 5_2018: Agrega una propiedad al objeto de JavaScript, y luego ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar el objeto afecta a la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 5_2019: Agrega una propiedad al objeto de JavaScript, y luego ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar el objeto afecta a la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Edit Data Table by Hand: Visualiza la tabla de datos y haz clic en editar siguiente a cada fila. Agrega los nombres de artistas para cada canción en forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Edit Data Table by Hand_2018: Visualiza la tabla de datos y haz clic en editar siguiente a cada fila. Agrega los nombres de artistas para cada canción en forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Edit Data Table by Hand_2019: Visualiza la tabla de datos y haz clic en editar siguiente a cada fila. Agrega los nombres de artistas para cada canción en forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Exploring Data Tools - Template: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Exploring Data Tools - Template_2018: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Exploring Data Tools - Template_2019: Usa crearRegistro para agregar el objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - accessingPropertiesInArray: Accede a las propiedades de los objetos almacenados en un arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - accessingPropertiesInArray_2018: Accede a las propiedades de los objetos almacenados en un arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - accessingPropertiesInArray_2019: Accede a las propiedades de los objetos almacenados en un arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - arraysOfObjects: Crea un arreglo llamado "estudiantes" y agrega los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - arraysOfObjects_2018: Crea un arreglo llamado "estudiantes" y agrega los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - arraysOfObjects_2019: Crea un arreglo llamado "estudiantes" y agrega los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactObject: Construye un nuevo objeto de las entradas de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactObject_2018: Construye un nuevo objeto de las entradas de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactObject_2019: Construye un nuevo objeto de las entradas de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactsData: Agrega valores los tres objetos de contacto brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactsData_2018: Agrega valores los tres objetos de contacto brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactsData_2019: Agrega valores los tres objetos de contacto brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation: Crea un objeto de estudiante propio. Agrega propiedades a tu objeto, de a uno a la vez, mediante notación de puntos. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation_2018: Crea un objeto de estudiante propio. Agrega propiedades a tu objeto, de a uno a la vez, mediante notación de puntos. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation_2019: Crea un objeto de estudiante propio. Agrega propiedades a tu objeto, de a uno a la vez, mediante notación de puntos. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createObject: Crea un objeto con, al menos, 3 propiedades y muéstralo en la Consola de depuración. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation: Usa la notación de puntos para mostrar propiedades individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation_2018: Usa la notación de puntos para mostrar propiedades individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation_2019: Usa la notación de puntos para mostrar propiedades individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - eventHandlersToSwitchScreen: Adjunta controladores de eventos a los botones "Agregar contacto" y "Atrás" que le permitan al usuario alternar pantallas. (Haz clic para ver las instrucciones completas)
       U4 - Objects - eventParameter: Activa el evento del teclado y del ratón, y examina los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede ser la mejor manera de almacenar esta información? (Haz clic para ver las instrucciones completas)
       U4 - Objects - eventParameter_2018: Activa el evento del teclado y del ratón, y examina los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede ser la mejor manera de almacenar esta información? (Haz clic para ver las instrucciones completas)
       U4 - Objects - eventParameter_2019: Activa el evento del teclado y del ratón, y examina los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede ser la mejor manera de almacenar esta información? (Haz clic para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp: Usa la aplicación Contactos y luego agrega un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp_2018: Usa la aplicación Contactos y luego agrega un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp_2019: Usa la aplicación Contactos y luego agrega un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - loopingArray: Haz un bucle sobre tu arreglo de estudiantes e imprime el nombre de cada estudiante. (Haz clic para ver las instrucciones completas).
+      U4 - Objects - loopingArray2: Haz un bucle sobre tu arreglo de estudiantes e imprime el nombre y califica a cada estudiante. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - loopingCompoundConditions: Haz un bucle sobre el arreglo de estudiantes y muestra la información de estudiantes que están presentes y en el grado 11. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - loopingConditions: Haz un bucle sobre el arreglo de objetos de estudiantes y muestra los nombres de cada estudiante que está presente en clase. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues: Crea un controlador de eventos para el botón "Guardar contacto" que muestre los contenidos de los 4 campos de entrada de texto en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues_2018: Crea un controlador de eventos para el botón "Guardar contacto" que muestre los contenidos de los 4 campos de entrada de texto en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues_2019: Crea un controlador de eventos para el botón "Guardar contacto" que muestre los contenidos de los 4 campos de entrada de texto en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode: Familiarízate con el código de arranque y los elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode_2018: Familiarízate con el código de arranque y los elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode_2019: Familiarízate con el código de arranque y los elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow: Agrega un código a tu controlador de eventos para el botón "Guardar contacto" para que cuando se agregue un nuevo contacto, las entradas se eliminen, la pantalla cambie y se muestre el contacto correcto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow_2018: Agrega un código a tu controlador de eventos para el botón "Guardar contacto" para que cuando se agregue un nuevo contacto, las entradas se eliminen, la pantalla cambie y se muestre el contacto correcto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow_2019: Agrega un código a tu controlador de eventos para el botón "Guardar contacto" para que cuando se agregue un nuevo contacto, las entradas se eliminen, la pantalla cambie y se muestre el contacto correcto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1: Agrega un código a la función mostrarContactoActual para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1_2018: Agrega un código a la función mostrarContactoActual para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1_2019: Agrega un código a la función mostrarContactoActual para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2: Agrega un número de teléfono y texto de fecha de cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2_2018: Agrega un número de teléfono y texto de fecha de cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2_2019: Agrega un número de teléfono y texto de fecha de cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3: Muestra la información de imagen para cada contacto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3_2018: Muestra la información de imagen para cada contacto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3_2019: Muestra la información de imagen para cada contacto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showSampleImage: Adjunta un controlador de eventos a la entrada de texto de la URL de la imagen para que el usuario pueda confirmar que su imagen funcionará según lo esperado. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showSampleImage_2018: Adjunta un controlador de eventos a la entrada de texto de la URL de la imagen para que el usuario pueda confirmar que su imagen funcionará según lo esperado. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showSampleImage_2019: Adjunta un controlador de eventos a la entrada de texto de la URL de la imagen para que el usuario pueda confirmar que su imagen funcionará según lo esperado. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - writeWrap: Usa la función de envolver para impedir que índiceActual abandone los límites de tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2: Coloca un comando de console.log debajo del comando leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2_2018: Coloca un comando de console.log debajo del comando leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2_2019: Coloca un comando de console.log debajo del comando leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3: Agrega un comando de console.log dentro de la función de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3_2018: Agrega un comando de console.log dentro de la función de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3_2019: Agrega un comando de console.log dentro de la función de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1_2018: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1_2019: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2: Cambia el nombre de la tabla para que los registros sean leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2_2018: Cambia el nombre de la tabla para que los registros sean leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2_2019: Cambia el nombre de la tabla para que los registros sean leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 3: Cambia el nombre de la tabla en un comando leerRegistros para leer desde una tabla que no existe. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 3_2018: Cambia el nombre de la tabla en un comando leerRegistros para leer desde una tabla que no existe. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 3_2019: Cambia el nombre de la tabla en un comando leerRegistros para leer desde una tabla que no existe. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 4.1: Usa índices y notación de puntos para referir valores en la respuesta de la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 4.1_2018: Usa índices y notación de puntos para referir valores en la respuesta de la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 4.1_2019: Usa índices y notación de puntos para referir valores en la respuesta de la base de datos. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 4: Imprime cada retorno de registro desde la llamada leerRegistros individualmente. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - part 1 - template: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - part 1 - template_2018: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - part 1 - template_2019: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
       U4 Model App: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
       U4 Model App_2018: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
       U4 Model App_2019: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
@@ -3175,6 +3291,7 @@ es-MX:
       Virtual Pet Freeplay: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
       Virtual Pet Freeplay_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga? ¡Prueba lo que quieras!"
       Virtual Pet Freeplay_simple: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
+      Virtual Pet Template_2019: "¡Crea tu propia mascota virtual! Haz clic en la pestaña **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota virtual. En el código a continuación, cambia el disfraz de la mascota sprite por el tuyo."
       WhileAdventure: Nuestra aventurera quiere recoger monedas. ¿Puedes ayudarla a agarrar la mayor cantidad que pueda usando solo un `eliminar 1 bloque`?
       'Widget: Black and White Pixelation': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
       'Widget: Black and White Pixelation_2018': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
@@ -4834,11 +4951,8 @@ es-MX:
         ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
 
         Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
-      courseE_aboutme_4: |-
-        ¡Aquí está Thuy, el mejor amigo de Rikki!
-
-        Haz que Rikki comparta información SEGURA sobre ella cuando se hace clic en Thuy.
-      courseE_aboutme_5: "¡A Rikki le encanta el helado! Ella estaba buscando un disfraz de cono de helado, pero lo más parecido que pudo encontrar fue... un jabón. ¡Puaj! \n\nVamos a sorprenderla: **dibuja un traje de cono de helado** que puede utilizar para ese sprite.\n\n**Crea un disfraz de cono de helado**\n\n-   Haz clic en la pestaña **Disfraces**.\n\n-   ¡Dibuja un cono de helado!\n\n-   ¡Reemplaza el disfraz de jabón del sprite con tu disfraz de cono de helado en el código de abajo!"
+      courseE_aboutme_4: Agrega, al menos, dos nuevos sprites a tu póster. Estos sprites deberían representar algo sobre ti mismo. Asigna disfraces personalizados a estos sprites y luego haz una prueba.
+      courseE_aboutme_5: "¡Comparte información acerca de los sprites que acabas de agregar! Cuando se les haga clic, imprime un poco de información SEGURA sobre ellos."
       courseE_aboutme_6: |-
         El póster de Rikki se ve bien, ¡pero puede ser aún mejor!
 
@@ -4854,6 +4968,10 @@ es-MX:
 
         ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
       courseE_aboutme_freeplay: "Gracias por ayudar a Rikki. Ahora es tu turno de **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki, ¡recuerda compartir información SEGURA!"
+      courseE_aboutme_template: |-
+        ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
+
+        Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
       courseE_artist_concept1: 'Recrea esta imagen. '
       courseE_artist_concept1_2018: 'Recrea esta imagen. '
       courseE_artist_concept1_2019: 'Recrea esta imagen. '
