@@ -45,6 +45,7 @@
     %i.user_menu_arrow_down{class: "fa fa-caret-down"}
     %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
     .user_options{style: 'display: none'}
+      %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
       - if current_user.can_pair?
         - if session_pairings.present?
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
@@ -59,7 +60,6 @@
         - else
           = link_to '#', {id: 'pairing_link', style: 'display: none'} do
             = I18n.t("#{loc_prefix}pair_programming")
-      %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
       %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
       %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
