@@ -239,7 +239,9 @@ class SectionAssessments extends Component {
                     <MatchAssessmentsOverviewContainer
                       openDialog={this.showMatchDetailDialog}
                     />
-                    <MatchByStudentContainer />
+                    <MatchByStudentContainer
+                      openDialog={this.showMatchDetailDialog}
+                    />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />

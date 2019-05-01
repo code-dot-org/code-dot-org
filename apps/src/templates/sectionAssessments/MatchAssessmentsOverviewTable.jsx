@@ -71,15 +71,9 @@ const answerColumnsFormatter = (
   );
 };
 
-/**
- *  A single table that shows students' responses to each multiple choice question.
- * The table displays the percent of students that select an answer choice and
- * percent of students that did not answer the question.
- */
 class MatchAssessmentsOverviewTable extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.array,
-    openDialog: PropTypes.func.isRequired,
     setQuestionIndex: PropTypes.func.isRequired
   };
 

@@ -435,6 +435,74 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
   };
 };
 
+/**
+ * Returns an array of objects, each of type questionStructurePropType
+ * indicating the question and correct answers for each multiple choice
+ * question in the currently selected assessment.
+ */
+export const getMatchStructureForCurrentAssessment = state => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  const questionData = assessmentsStructure.questions;
+
+  // Transform that data into what we need for this particular table, in this case
+  // questionStructurePropType structure.
+  return questionData
+    .filter(question => question.type === QuestionType.MATCH)
+    .map(question => {
+      return {
+        id: question.level_id,
+        question: question.question,
+        questionNumber: question.question_index + 1,
+        answers: question.answers,
+        options: question.options
+      };
+    });
+};
+
+/**
+ * Returns an array of objects, each of type studentAnswerDataPropType
+ * indicating the student responses to multiple choice questions for the
+ * currently selected assessment.
+ */
+export const getStudentMatchResponsesForCurrentAssessment = state => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
+  }
+
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment =
+    studentObject.responses_by_assessment[currentAssessmentId];
+
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
+  }
+
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results
+      .filter(answer => answer.type === QuestionType.MATCH)
+      .map(answer => {
+        return {
+          responses: answer.student_result
+        };
+      })
+  };
+};
+
 // Get an array of objects indicating what each student answered for the current
 // question in view.
 export const getStudentAnswersForCurrentQuestion = state => {

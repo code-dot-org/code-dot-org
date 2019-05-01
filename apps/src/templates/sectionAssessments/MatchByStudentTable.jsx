@@ -6,18 +6,14 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
-import {
-  studentWithResponsesPropType,
-  multipleChoiceQuestionPropType
-} from './assessmentDataShapes';
 
 export const COLUMNS = {
-  QUESTION: 0,
+  OPTION: 0,
   STUDENT_ANSWER: 1,
   CORRECT_ANSWER: 2
 };
 
-const ANSWER_COLUMN_WIDTH = 80;
+const ANSWER_COLUMN_WIDTH = 200;
 
 const styles = {
   answerColumnHeader: {
@@ -27,7 +23,7 @@ const styles = {
   answerColumnCell: {
     width: ANSWER_COLUMN_WIDTH
   },
-  questionCell: {
+  optionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -35,14 +31,10 @@ const styles = {
   }
 };
 
-// Single table for individual student and individual assessment
-// multiple choice assessment. Each row is a single question,
-// the students response to that question, and whether the student got
-// the correct answer.
 class MatchByStudentTable extends Component {
   static propTypes = {
-    questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: studentWithResponsesPropType
+    questionAnswerData: PropTypes.object,
+    studentAnswerData: PropTypes.object
   };
 
   state = {
@@ -71,8 +63,8 @@ class MatchByStudentTable extends Component {
     });
   };
 
-  questionCellFormatter = (question, {rowData, rowIndex}) => {
-    return <div>{`${rowData.questionNumber}. ${question}`}</div>;
+  optionCellFormatter = (question, {rowData, rowIndex}) => {
+    return <div>{`${question}`}</div>;
   };
 
   correctAnswerColumnFormatter = (responses, {rowData, columnIndex}) => {
@@ -88,8 +80,8 @@ class MatchByStudentTable extends Component {
     return (
       <MultipleChoiceAnswerCell
         id={rowData.id}
-        displayAnswer={studentAnswer.responses || '-'}
-        isCorrectAnswer={studentAnswer.isCorrect}
+        displayAnswer={rowData.studentAnswer || '-'}
+        isCorrectAnswer={rowData.studentAnswer === rowData.correctAnswer}
       />
     );
   };
@@ -97,17 +89,17 @@ class MatchByStudentTable extends Component {
   getColumns = sortable => {
     let dataColumns = [
       {
-        property: 'question',
+        property: 'option',
         header: {
-          label: i18n.question(),
+          label: i18n.option(),
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          format: this.questionCellFormatter,
+          format: this.optionCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.questionCell
+              ...styles.optionCell
             }
           }
         }
@@ -168,12 +160,18 @@ class MatchByStudentTable extends Component {
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
-    const rowData = this.props.questionAnswerData.map((question, index) => {
-      return {
-        ...question,
-        studentAnswer: this.props.studentAnswerData.studentResponses[index]
-      };
-    });
+    const rowData = this.props.questionAnswerData.options.map(
+      (option, index) => {
+        return {
+          id: index,
+          option: option.text,
+          correctAnswer: this.props.questionAnswerData.answers[index].text,
+          studentAnswer: this.props.questionAnswerData.answers[
+            this.props.studentAnswerData.responses[index]
+          ].text
+        };
+      }
+    );
 
     const sortedRows = sort.sorter({
       columns,

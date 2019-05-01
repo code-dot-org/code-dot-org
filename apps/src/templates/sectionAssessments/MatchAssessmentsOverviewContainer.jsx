@@ -31,7 +31,7 @@ class MatchAssessmentsOverviewContainer extends Component {
   };
 
   selectQuestion = index => {
-    this.props.setQuestionIndex(index); // need to pull in this prop from FreeResponse
+    this.props.setQuestionIndex(index);
     this.props.openDialog();
   };
 
@@ -72,7 +72,6 @@ class MatchAssessmentsOverviewContainer extends Component {
                 </div>
                 <MatchAssessmentsOverviewTable
                   questionAnswerData={question.options}
-                  openDialog={this.props.openDialog}
                 />
               </div>
             ))}

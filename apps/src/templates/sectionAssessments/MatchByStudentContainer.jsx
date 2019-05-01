@@ -2,29 +2,42 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import MatchByStudentTable from './MatchByStudentTable';
 import {
-  studentWithResponsesPropType,
-  multipleChoiceQuestionPropType
-} from './assessmentDataShapes';
-import {
-  getMultipleChoiceStructureForCurrentAssessment,
-  getStudentMCResponsesForCurrentAssessment,
+  getMatchStructureForCurrentAssessment,
+  getStudentMatchResponsesForCurrentAssessment,
   ALL_STUDENT_FILTER,
-  currentStudentHasResponses
+  currentStudentHasResponses,
+  setQuestionIndex
 } from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20
+  }
+};
 
 class MatchByStudentContainer extends Component {
   static propTypes = {
-    multipleChoiceStructure: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: studentWithResponsesPropType,
+    matchStructure: PropTypes.array,
+    studentAnswerData: PropTypes.object,
     studentId: PropTypes.number,
-    currentStudentHasResponses: PropTypes.bool
+    currentStudentHasResponses: PropTypes.bool,
+    openDialog: PropTypes.func.isRequired,
+    setQuestionIndex: PropTypes.func.isRequired
+  };
+
+  selectQuestion = index => {
+    this.props.setQuestionIndex(index);
+    this.props.openDialog();
   };
 
   render() {
     const {
-      multipleChoiceStructure,
+      matchStructure,
       studentAnswerData,
       studentId,
       currentStudentHasResponses
@@ -38,10 +51,29 @@ class MatchByStudentContainer extends Component {
                 studentName: studentAnswerData.name
               })}
             </h2>
-            <MatchByStudentTable
-              questionAnswerData={multipleChoiceStructure}
-              studentAnswerData={studentAnswerData}
-            />
+            {matchStructure.map((question, index) => (
+              <div key={index}>
+                <div style={styles.text}>
+                  {`${question.questionNumber}. ${question.question.slice(
+                    0,
+                    QUESTION_CHARACTER_LIMIT
+                  )}`}
+                  {question.question.length >= QUESTION_CHARACTER_LIMIT && (
+                    <a
+                      onClick={() => {
+                        this.selectQuestion(question.questionNumber - 1);
+                      }}
+                    >
+                      <span>{i18n.seeFullQuestion()}</span>
+                    </a>
+                  )}
+                </div>
+                <MatchByStudentTable
+                  questionAnswerData={question}
+                  studentAnswerData={studentAnswerData.studentResponses[index]}
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>
@@ -51,11 +83,16 @@ class MatchByStudentContainer extends Component {
 
 export const UnconnectedMatchByStudentContainer = MatchByStudentContainer;
 
-export default connect(state => ({
-  multipleChoiceStructure: getMultipleChoiceStructureForCurrentAssessment(
-    state
-  ),
-  studentAnswerData: getStudentMCResponsesForCurrentAssessment(state),
-  studentId: state.sectionAssessments.studentId,
-  currentStudentHasResponses: currentStudentHasResponses(state)
-}))(MatchByStudentContainer);
+export default connect(
+  state => ({
+    matchStructure: getMatchStructureForCurrentAssessment(state),
+    studentAnswerData: getStudentMatchResponsesForCurrentAssessment(state),
+    studentId: state.sectionAssessments.studentId,
+    currentStudentHasResponses: currentStudentHasResponses(state)
+  }),
+  dispatch => ({
+    setQuestionIndex(questionIndex) {
+      dispatch(setQuestionIndex(questionIndex));
+    }
+  })
+)(MatchByStudentContainer);
