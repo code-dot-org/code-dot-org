@@ -166,9 +166,12 @@ class MatchByStudentTable extends Component {
           id: index,
           option: option.text,
           correctAnswer: this.props.questionAnswerData.answers[index].text,
-          studentAnswer: this.props.questionAnswerData.answers[
-            this.props.studentAnswerData.responses[index]
-          ].text
+          studentAnswer:
+            this.props.studentAnswerData.responses[index] !== null
+              ? this.props.questionAnswerData.answers[
+                  this.props.studentAnswerData.responses[index]
+                ].text
+              : null
         };
       }
     );
