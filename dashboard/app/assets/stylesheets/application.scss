@@ -292,7 +292,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 300px;
+      padding-right: 350px;
     }
   }
 
@@ -432,6 +432,11 @@ img.video_thumbnail {
   }
 
   #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+  }
+
+  #help-button {
     padding-top: 4px;
     padding-left: 20px;
   }

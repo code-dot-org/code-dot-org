@@ -249,6 +249,10 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_URLS_MAP[course]
   end
 
+  def course_key
+    COURSE_KEY_MAP[course]
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
