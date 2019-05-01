@@ -22,8 +22,10 @@ module ScriptConstants
     full_course: [
       CSP_2017 = 'csp-2017'.freeze,
       CSP_2018 = 'csp-2018'.freeze,
+      CSP_2019 = 'csp-2019'.freeze,
       CSD_2017 = 'csd-2017'.freeze,
       CSD_2018 = 'csd-2018'.freeze,
+      CSD_2019 = 'csd-2019'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
