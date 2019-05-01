@@ -1,8 +1,18 @@
 ---
-title: Continuing Education
+title: High School Grads
 video_player: true
 theme: responsive
 style_min: true
+social:
+  "og:title": "Computer Science Beyond High School"
+  "og:description": "After graduation, advance your computer science learning by exploring pathways, job opportunities, and online courses."
+  "og:image": "http://code.org/images/2018-hoc-325.jpg"
+  "og:image:width": 850
+  "og:image:height": 502
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 #  Computer Science Beyond High School
 
