@@ -6,7 +6,6 @@ import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
-import experiments from '@cdo/apps/util/experiments';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
 
 export function sprites() {
@@ -154,7 +153,7 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (experiments.isEnabled('sprite-costumes')) {
+      if (getStore().getState().pageConstants.showAnimationMode) {
         buttons = [
           {
             text: 'Draw',
