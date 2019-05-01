@@ -260,13 +260,13 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def update_scholarship_status(scholarship_status)
     if workshop.local_summer?
-      Pd::ScholarshipInfo.update_or_create(user, workshop.summer_workshop_school_year, scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, workshop.summer_workshop_school_year, workshop.course_key, scholarship_status)
     end
   end
 
   def scholarship_status
     if workshop.local_summer?
-      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year)&.scholarship_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year, course: workshop.course_key)&.scholarship_status
     end
   end
 
