@@ -64,7 +64,7 @@ const answerColumnsFormatter = (
 
   return (
     <MultipleChoiceAnswerCell
-      id={rowIndex}
+      id={rowData.id}
       percentValue={percentValue}
       isCorrectAnswer={!!answerResults.isCorrect}
     />

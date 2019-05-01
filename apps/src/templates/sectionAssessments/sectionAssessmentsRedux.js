@@ -807,6 +807,7 @@ export const getMatchSectionSummary = state => {
       options: question.options.map((option, indexO) => {
         return {
           option: question.options[indexO].text,
+          id: indexO,
           totalAnswered: 0,
           notAnswered: 0,
           answers: question.answers.map((answer, indexA) => {
