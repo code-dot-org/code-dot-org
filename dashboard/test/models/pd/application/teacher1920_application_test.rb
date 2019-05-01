@@ -984,9 +984,9 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      # By default we can't send.
+      # By default we can send.
       application = create :pd_teacher1920_application
-      refute application.allow_sending_principal_email?
+      assert application.allow_sending_principal_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher1920_application
