@@ -30,7 +30,6 @@ Scenario: Submit three answers.
   And element ".level-group-content:nth(2) #checked_0" is visible
 
 @no_ie
-@dashboard_db_access
 Scenario: Match levels within level group
   Given I create a teacher-associated student named "Lilian"
   Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"

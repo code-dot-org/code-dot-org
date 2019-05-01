@@ -1,11 +1,8 @@
 @no_mobile
-@dashboard_db_access
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:
     Given I create an authorized teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
-    And I sign out
 
   Scenario: Assessments tab has feedback download
     # Assign a script with a survey but no assessment
@@ -42,8 +39,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab does not have feedback download
 
    # Assign a script without feedback
-    When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home"
+    When I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
     And I wait until element "#uitest-assignment-family" is visible

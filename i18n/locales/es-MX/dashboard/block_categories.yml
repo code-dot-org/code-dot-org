@@ -23,6 +23,7 @@ es-MX:
       Picker: Rocolector/a
       Comment: Comentario
       World: Mundo
+      Sprites: Sprites
       Behaviors: Comportamientos
       'Variables ': 'Variables '
       Default: Incumplimiento
@@ -32,6 +33,7 @@ es-MX:
       Location: Ubicación
       numbers: números
       Numbers: Números
+      Input: Entrada
       Dancers: Bailarines
       Groups: Grupos
       Advanced: Avanzado

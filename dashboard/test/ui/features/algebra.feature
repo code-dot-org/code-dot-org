@@ -4,7 +4,6 @@ Feature: Looking at Algebra levels with Applitools Eyes
 Background:
   Given I am on "http://studio.code.org/reset_session"
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "embedded ninjacat"
@@ -21,7 +20,6 @@ Scenario:
   And I close my eyes
   And I sign out
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "calc expression evaluation"
@@ -37,14 +35,13 @@ Scenario:
   And I close my eyes
   And I sign out
 
-@dashboard_db_access
 Scenario:
   Given I am a student
   And I open my eyes to test "calc variable"
   When I am on "http://studio.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose > .blocklyText" element
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
 
