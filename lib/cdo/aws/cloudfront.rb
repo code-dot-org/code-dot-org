@@ -91,6 +91,7 @@ module AWS
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id = get_distribution_id(cloudfront, hostname)
+        next unless id
         invalidation = cloudfront.create_invalidation(
           {
             distribution_id: id,
@@ -105,7 +106,8 @@ module AWS
         ).invalidation.id
         [app, id, invalidation]
       end
-      puts 'Invalidations created.'
+      invalidations.compact!
+      puts "Invalidations created: #{invalidations.count}"
       invalidations.map do |app, id, invalidation|
         cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
           waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
