@@ -984,9 +984,9 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      # By default we can send.
+      # By default we can't send.
       application = create :pd_teacher1920_application
-      assert application.allow_sending_principal_email?
+      refute application.allow_sending_principal_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher1920_application
@@ -1015,9 +1015,9 @@ module Pd::Application
     end
 
     test 'test allow_sending_principal_approval_teacher_reminder_email?' do
-      # By default we can send.
+      # By default we can't send.
       application = create :pd_teacher1920_application
-      assert application.allow_sending_principal_approval_teacher_reminder_email?
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we created a teacher reminder email any time before, we can't send.
       application = create :pd_teacher1920_application
