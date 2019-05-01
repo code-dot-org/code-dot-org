@@ -335,7 +335,7 @@ export const getCurrentQuestion = state => {
       ? assessmentQuestions[state.sectionAssessments.questionIndex]
       : null;
     if (question) {
-      if (question.type === 'Multi') {
+      if (question.type === QuestionType.MULTI) {
         const answers =
           question.type === QuestionType.MULTI &&
           (question.answers || []).map((answer, index) => {
@@ -345,9 +345,9 @@ export const getCurrentQuestion = state => {
         return {
           question: question.question_text,
           answers: answers,
-          questionType: 'Multi'
+          questionType: QuestionType.MULTI
         };
-      } else if (question.type === 'Match') {
+      } else if (question.type === QuestionType.MATCH) {
         const answers = question.answers.map(answer => {
           return answer.text;
         });
@@ -358,7 +358,7 @@ export const getCurrentQuestion = state => {
           question: question.question,
           answers: answers,
           options: options,
-          questionType: 'Match'
+          questionType: QuestionType.MATCH
         };
       }
     } else {
@@ -435,11 +435,6 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
   };
 };
 
-/**
- * Returns an array of objects, each of type questionStructurePropType
- * indicating the question and correct answers for each multiple choice
- * question in the currently selected assessment.
- */
 export const getMatchStructureForCurrentAssessment = state => {
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
@@ -463,11 +458,6 @@ export const getMatchStructureForCurrentAssessment = state => {
     });
 };
 
-/**
- * Returns an array of objects, each of type studentAnswerDataPropType
- * indicating the student responses to multiple choice questions for the
- * currently selected assessment.
- */
 export const getStudentMatchResponsesForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -694,14 +684,6 @@ export const isCurrentAssessmentSurvey = state => {
   return Object.keys(surveysStructure).includes(currentAssessmentId + '');
 };
 
-/** Get data for students assessments multiple choice table
- * Returns an object, each of type studentOverviewDataPropType with
- * the value of the key being an object that contains the number
- * of multiple choice answered correctly by a student, total number
- * of multiple choice options, check for if the student submitted the
- * assessment and a timestamp that indicates when a student submitted
- * the assessment.
- */
 export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -855,9 +837,6 @@ export const getMultipleChoiceSectionSummary = state => {
 // Returns an array of objects corresponding to each match question and the
 // number of students who answered each answer.
 export const getMatchSectionSummary = state => {
-  // Set up an initial structure based on the match assessment questions.
-  // Initialize numAnswered for each answer to 0, and totalAnswered for each
-  // question to 0.
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
     return [];

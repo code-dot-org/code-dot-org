@@ -47,7 +47,7 @@ ruby
   end
 
   def question
-    properties['content1'] || properties['content2'] || properties['content3'].blank? || properties['markdown'] || ''
+    properties['content1'] || properties['content2'] || properties['content3'] || properties['markdown'] || ''
   end
 
   def question_content_class

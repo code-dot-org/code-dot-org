@@ -8,7 +8,6 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 import ReactTooltip from 'react-tooltip';
 
@@ -16,7 +15,7 @@ export const COLUMNS = {
   OPTION: 0
 };
 
-const ANSWER_COLUMN_WIDTH = 70;
+const ANSWER_COLUMN_WIDTH = 100;
 const PADDING = 20;
 
 const styles = {
@@ -37,9 +36,6 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap'
-  },
-  link: {
-    color: color.teal
   }
 };
 
@@ -132,7 +128,10 @@ class MatchAssessmentsOverviewTable extends Component {
   getAnswerColumn = columnLabel => ({
     property: 'percentAnswered',
     header: {
-      label: `${columnLabel.slice(0, 25)}...`,
+      label:
+        columnLabel.length < 30
+          ? `${columnLabel}`
+          : `${columnLabel.slice(0, 30)}...`,
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
