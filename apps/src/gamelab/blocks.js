@@ -9,7 +9,7 @@ import {changeInterfaceMode} from './actions';
 import experiments from '@cdo/apps/util/experiments';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
 
-export function sprites() {
+function sprites() {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -254,6 +254,7 @@ const customInputTypes = {
 };
 
 export default {
+  sprites,
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
