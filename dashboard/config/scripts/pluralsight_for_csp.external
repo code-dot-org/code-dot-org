@@ -5,10 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Go further with _Pluralsight One_ computer science courses!
 
-Having fun learning computer science? Now you can get access to _Pluralsight One_ courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more! With _Pluralsight One_, you can try courses like **"Example 1"**; **"Example 2"**; and **"Example 3"**, pick up new skills, and test out what you've learned through Code.org.
+Having fun learning computer science? Now you can get access to **Pluralsight One** courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more! 
+
+With Pluralsight One, you can try courses like **"Introduction to Web Development"**; **"Game Prototyping in Unity"**; and **"Getting Started in UX Design"**, pick up new skills, and test out what you've learned through Code.org.
 
 
-To get access to the specially-curated catalog of _Pluralsight One_ courses for a year, click the "Get started" button below. You'll be asked to sign up for Pluralsight One and will receive a redemption code to your email that you can use to access the courses.
+To get access to the specially-curated catalog of Pluralsight One courses for a year, **click the "Get started" button** below. You'll be asked to sign up for Pluralsight One and will receive a redemption code to your email that you can use to access the courses.
 
 
 <a class=“btn btn-large btn-primary” href="https://www.pluralsight.com/redeem"> Get started </a>

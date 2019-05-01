@@ -35,7 +35,6 @@ var show_score = false;
 var title = '';
 var subTitle = '';
 var customText = [];
-var console_queue = [];
 var animationGroups = {};
 var emptyGroup = makeNewGroup();
 var thisSprite;
@@ -223,7 +222,7 @@ function setAnimation(sprite, animation) {
     sprite.scale *= sprite.baseScale;
     addToAnimationGroup(sprite);
   };
-  if (!Array.isArray(sprite)) {
+  if (!sprite.isGroup) {
     // If the sprite already has an animation, remove that sprite from the animation group.
     if (sprite.getAnimationLabel()) {
       removeFromAnimationGroup(sprite, sprite.getAnimationLabel());
@@ -524,7 +523,7 @@ function makeNewSprite(animation, x, y) {
     return sprite.scale / sprite.baseScale;
   };
   sprite.say = function (text) {
-    console_queue.push({sprite: sprite, txt: text, time: millis() + 2000});
+    appendSpriteConsole({name: sprite.getAnimationLabel(), text: text});
   };
   sprite.stop_say = function () {
     sprite.things_to_say = [];
@@ -608,7 +607,7 @@ function makeNewGroup() {
   };
 
   group.say = function (text) {
-    console_queue.push({sprite: group.get(0), txt: text, time: millis() + 2000});
+    appendSpriteConsole({name: group.get(0).getAnimationLabel(), text: text});
   };
 
   group.collisionObjects = [];
@@ -767,7 +766,7 @@ function debugSprite(sprite, val) {
 // Helper functions
 
 function printText(text) {
-  console_queue.push({txt: text, time: millis() + 2000});
+  appendSpriteConsole({text: text});
 }
 
 function randomLoc() {
@@ -817,6 +816,7 @@ function unitVectorTowards(from, to) {
 function drawBackground() {
   background(World.background_color || "white");
   if (typeof(World.background_image) === "object") {
+    World.background_image.resize(400,400);
     image(World.background_image);
   }
 }
@@ -985,36 +985,6 @@ function runLoops() {
 
 // Text display functions
 
-// Temporary RPG-like console display
-function printConsoleText() {
-    if (console_queue.length > 0) {
-    var txt = "";
-    var time = millis();
-    for (var j = 0; j<console_queue.length; j++) {
-      var line = console_queue[j];
-      if (line.hasOwnProperty("sprite")) {
-        txt = txt + line.sprite.getAnimationLabel() + ": ";
-      }
-      txt += line.txt;
-      if (j < (console_queue.length - 1)) {
-        txt += '\n';
-      }
-      if (time > line.time) {
-        console_queue.splice(console_queue.indexOf(line), 1);
-      }
-    }
-    push();
-    fill(200, 200, 200, 127);
-    noStroke();
-    var h = Math.min((console_queue.length * 15), 100) + 10;
-    rect(0, 0, World.width, h);
-    fill("black");
-    textAlign(BOTTOM, LEFT);
-    text(txt, 5, 5, World.width - 10, h);
-    pop();
-  }
-}
-
 // V1 text output
 function updateHUDText() {
   if (show_score) {
@@ -1065,5 +1035,4 @@ function draw() {
   drawSprites();
   updateHUDText();
   printCustomText();
-  printConsoleText();
 }

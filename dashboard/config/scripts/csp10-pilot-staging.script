@@ -1,3 +1,5 @@
+project_sharing true
+
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'
@@ -33,17 +35,17 @@ level 'U4 L04 Variables Make Project 3', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 4', progression: 'Make the Photo Liker App'
 
 stage 'Student Survey (Variables)', lockable: true, flex_category: 'csp_variables'
-assessment 'Pilot Student Survey', progression: 'Student Survey (Variables)'
+level 'Pilot Student Survey', progression: 'Student Survey (Variables)', assessment: true
 
 stage 'Teacher Surveys (Variables)', lockable: true, flex_category: 'csp_variables'
-assessment 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)'
+level 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)', assessment: true
 
 stage 'Conditionals Explore', flex_category: 'csp_conditionals'
-named_level 'U4 L06 Introduction to Conditionals: Boolean Expressions'
+level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
 level 'U4 L05 CYU Exit Ticket', progression: 'Check Your Understanding'
 
 stage 'Conditionals Investigate', flex_category: 'csp_conditionals'
-named_level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements'
+level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
 level 'U4 L06 Thermostat App v4', progression: 'If-Statements'
 level 'U4 L06 Thermostat App v4 Code', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements', progression: 'If-Else Statements'
@@ -77,10 +79,10 @@ level 'U4L08 Museum Ticket Generator 4', progression: 'Make the Museum Ticket Ge
 level 'U4L08 Museum Ticket Generator 5', progression: 'Make the Museum Ticket Generator App'
 
 stage 'Student Survey (Conditionals)', lockable: true, flex_category: 'csp_conditionals'
-assessment 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)'
+level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)', assessment: true
 
 stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'csp_conditionals'
-assessment 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)'
+level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true
 
 stage 'Functions Explore / Investigate', flex_category: 'csp_functions'
 level 'U4 L09 Functions Song', progression: 'Explore Functions'
@@ -125,4 +127,4 @@ level 'U4 L14 Practice PT 1', progression: 'Test Your Decision Maker App'
 level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App'
 
 stage 'Unit 4 Assessment', lockable: true
-assessment 'CSP 20-21 Unit 4 Assessment'
+level 'CSP 20-21 Unit 4 Assessment', assessment: true

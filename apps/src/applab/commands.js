@@ -9,7 +9,7 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../util/color';
+import themeColor from './themeColor';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -205,8 +205,8 @@ applabCommands.button = function(opts) {
   } else {
     newButton.style.fontSize = defaultFontSizeStyle;
     newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = color.white;
-    newButton.style.backgroundColor = color.applab_button_teal;
+    newButton.style.color = themeColor.buttonText.classic;
+    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
     elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
   }
 
@@ -944,8 +944,7 @@ applabCommands.textLabel = function(opts) {
   } else {
     newLabel.style.fontSize = defaultFontSizeStyle;
     newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor =
-      color.applab_classic_label_background_color;
+    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
@@ -1016,13 +1015,13 @@ applabCommands.dropdown = function(opts) {
   } else {
     newSelect.style.fontSize = defaultFontSizeStyle;
     newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = color.white;
+    newSelect.style.color = themeColor.dropdownText.classic;
     elementLibrary.typeSpecificPropertyChange(
       newSelect,
       'textColor',
       newSelect.style.color
     );
-    newSelect.style.backgroundColor = color.applab_button_teal;
+    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
     elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
   }
 
@@ -1788,6 +1787,23 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
+};
+
+applabCommands.getList = function(opts) {
+  var onSuccess = handleGetListSync.bind(this, opts);
+  var onError = handleGetListSyncError.bind(this, opts);
+  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
+};
+
+var handleGetListSync = function(opts, values) {
+  let columnList = [];
+  values.forEach(row => columnList.push(row[opts.columnName]));
+  opts.callback(columnList);
+};
+
+var handleGetListSyncError = function(opts, values) {
+  console.log('handleGetListSyncError');
+  opts.callback();
 };
 
 applabCommands.getKeyValueSync = function(opts) {
