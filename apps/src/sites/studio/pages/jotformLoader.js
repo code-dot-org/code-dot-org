@@ -59,6 +59,7 @@ function checkJotFormFrameLoaded(context) {
 
     const timeoutKey = setTimeout(function() {
       console.log(`JotForm failed to load in 5s`);
+      showHelp();
       resolve(false);
     }, 5000);
   });
@@ -82,6 +83,21 @@ function checkReachability(url) {
     const startTime = performance.now();
     img.src = `${url}?__cacheBust=${Math.random()}`;
   });
+}
+
+function showHelp() {
+  const iframe = document.querySelector('iframe');
+  const helpText = document.createElement('div');
+  helpText.innerHTML = `
+    <div style="text-align: center;">
+      Having trouble loading the survey?
+      <a href="javascript:location.reload()">Reload to try again.</a>
+      <br/>
+      If that doesn't work, please try another browser,
+      or temporarily disable your adblocker on our site.
+    </div>
+  `;
+  iframe.parentNode.insertBefore(helpText, iframe);
 }
 
 main(window);
