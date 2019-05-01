@@ -1,7 +1,10 @@
 :ruby
+  require 'cdo/help_header'
+
   options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
 
   contents = Hamburger.get_hamburger_contents(options)
+  help_items = HelpHeader.get_help_contents(options)
 
 #hamburger{class: contents[:visibility]}
   #hamburger-contents.hide-responsive-menu
@@ -25,3 +28,16 @@
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}
+
+#help-button{class: "show-always"}
+  #help-contents.hide-responsive-menu
+    - help_items.each do |entry|
+      %div{class: "show-always"}
+        .item
+          - target = entry[:target] ? entry[:target] : "_self"
+          %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
+
+  %i#help-icon.clicktag{class: "fa fa-question-circle show-always"}
+    %span{style: "pointer-events: none"}
+
+
