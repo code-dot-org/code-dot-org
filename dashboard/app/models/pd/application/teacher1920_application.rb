@@ -142,6 +142,8 @@ module Pd::Application
       Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
     end
 
+    # Return a string if the principal approval state is complete, in-progress, or not required.
+    # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
@@ -337,16 +339,19 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed or pending.
+      # Don't allow unless this teacher application is currently unreviewed or pending.
       return false unless unreviewed? || pending?
 
-      # Only if the principal approval is required.
+      # Don't allow if the principal approval is required.
       return false if principal_approval_not_required
 
-      # Only if we haven't gotten a principal response yet.
+      # Don't allow if we haven't gotten a principal response yet.
       return false if response
 
-      # Only if it's been more than 5 days since we last created an email for the principal.
+      # Don't allow unless we've sent at least one principal approval email before.
+      return false unless last_principal_approval_email_created_at
+
+      # Don't allow if it's been more than 5 days since we last created an email for the principal.
       return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
 
       true
