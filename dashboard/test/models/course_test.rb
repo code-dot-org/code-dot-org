@@ -335,10 +335,11 @@ class CourseTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
       @student = create :student
     end
 
