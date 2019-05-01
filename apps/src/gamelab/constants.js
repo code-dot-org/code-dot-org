@@ -232,5 +232,7 @@ module.exports.SpritelabReservedWords = [
   'setBackgroundImage',
   'singleOrGroup',
   'spriteClicked',
-  'updateHUDText'
+  'updateHUDText',
+  'i',
+  'j'
 ];
