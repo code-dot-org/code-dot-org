@@ -33,6 +33,11 @@
   #audit_log_info.collapse
     = render partial: 'levels/editors/audit_log', locals: {f: f}
 
+  - if @level.is_a?(External)
+    .field
+      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :display_as_unplugged, description: "Display as Unplugged"}
+      %p If set, this level's bubble will appear as an "Unplugged" level
+
 .field
   = f.label 'concepts'
   %p
