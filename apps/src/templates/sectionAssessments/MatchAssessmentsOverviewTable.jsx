@@ -10,6 +10,7 @@ import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
+import ReactTooltip from 'react-tooltip';
 
 export const COLUMNS = {
   OPTION: 0
@@ -63,7 +64,7 @@ const answerColumnsFormatter = (
 
   return (
     <MultipleChoiceAnswerCell
-      id={rowData.id}
+      id={rowIndex}
       percentValue={percentValue}
       isCorrectAnswer={!!answerResults.isCorrect}
     />
@@ -142,7 +143,9 @@ class MatchAssessmentsOverviewTable extends Component {
         style: {
           ...tableLayoutStyles.headerCell,
           ...styles.answerColumnHeader
-        }
+        },
+        'data-for': `tooltipForOption${columnLabel}`,
+        'data-tip': true
       }
     },
     cell: {
@@ -178,8 +181,8 @@ class MatchAssessmentsOverviewTable extends Component {
 
   getColumns = sortable => {
     const columnLabelNames = this.props.questionAnswerData[0].answers.map(
-      option => {
-        return this.getAnswerColumn(option.answer);
+      answer => {
+        return this.getAnswerColumn(answer.answer);
       }
     );
 
@@ -190,6 +193,19 @@ class MatchAssessmentsOverviewTable extends Component {
       this.getNotAnsweredColumn()
     ];
   };
+
+  renderTooltips() {
+    return this.props.questionAnswerData[0].answers.map(answer => (
+      <ReactTooltip
+        id={`tooltipForOption${answer.answer}`}
+        key={`tooltipForOption${answer.answer}`}
+        role="tooltip"
+        effect="solid"
+      >
+        {answer.answer}
+      </ReactTooltip>
+    ));
+  }
 
   render() {
     // Define a sorting transform that can be applied to each column
@@ -208,10 +224,13 @@ class MatchAssessmentsOverviewTable extends Component {
     })(this.props.questionAnswerData);
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
+      <div>
+        <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
+        {this.props.questionAnswerData[0].answers && this.renderTooltips()}
+      </div>
     );
   }
 }
