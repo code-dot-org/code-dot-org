@@ -16,7 +16,6 @@ import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -300,17 +299,8 @@ export default {
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.padding = CLASSIC_LABEL_PADDING;
-      element.style.backgroundColor = themeColor.labelBackground.classic;
-      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-      element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = themeColor.labelText.classic;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
 
     this.resizeToFitText(element);
     return element;
