@@ -113,7 +113,9 @@
           $(document).on('click', hideUserOptions);
           hideCreateOptions()
           $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
         }
       });
       $('.user_options').click(function (e) {
@@ -148,7 +150,9 @@
           $(document).on('click', hideCreateOptions);
           hideUserOptions()
           $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
           $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
         }
       });
       $('.create_options').click(function (e) {
