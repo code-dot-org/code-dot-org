@@ -61,7 +61,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    course = create(:course, name: 'my-course')
+    course = create(:course, name: 'my-course', is_stable: true)
     create(:course_script, course: course, position: 1, script: create(:script, name: "script1"))
     create(:course_script, course: course, position: 2, script: create(:script, name: "script2"))
     create(:course_script, course: course, position: 3, script: create(:script, name: "script3"))
@@ -71,6 +71,30 @@ class CourseTest < ActiveSupport::TestCase
     obj = JSON.parse(serialization)
     assert_equal 'my-course', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
+    assert obj['properties']['is_stable']
+  end
+
+  test "stable?: true if course has plc_course" do
+    course = Course.new(family_name: 'plc')
+    course.plc_course = Plc::Course.new(course: course)
+    course.save
+
+    assert course.stable?
+  end
+
+  test "stable?: true if course is not in a family" do
+    course = create :course
+    assert course.stable?
+  end
+
+  test "stable?: true if course in family has is_stable set" do
+    course = create :course, family_name: 'csd', is_stable: true
+    assert course.stable?
+  end
+
+  test "stable?: defaults to false if course in family does not have is_stable set" do
+    course = create :course, family_name: 'csd'
+    refute course.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
