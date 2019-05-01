@@ -20,9 +20,11 @@ def saucelabs_browser(test_run_name)
   raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
 
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
-  url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
+  url = is_tunnel ?
+    'http://localhost:4445/wd/hub' :
+    'https://ondemand.saucelabs.com:443/wd/hub'
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config)
+  capabilities = Selenium::WebDriver::Remote::Capabilities.json_create($browser_config)
   capabilities[:javascript_enabled] = 'true'
 
   if ENV['BROWSER_CONFIG'] == 'Firefox'
@@ -34,6 +36,8 @@ def saucelabs_browser(test_run_name)
   end
 
   sauce_capabilities = {
+    username: CDO.saucelabs_username,
+    accessKey: CDO.saucelabs_authkey,
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
@@ -41,15 +45,21 @@ def saucelabs_browser(test_run_name)
   }
   sauce_capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   sauce_capabilities[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
+  sauce_capabilities[:seleniumVersion] = '3.141.59'
+
+  if ENV['BROWSER_CONFIG'] == 'IE11'
+    sauce_capabilities['iedriverVersion'] = '3.12.0'
+  end
 
   # Use w3c-spec sauce:options capabilities format for compatible browsers.
   # Ref: https://wiki.saucelabs.com/display/DOCS/Selenium+W3C+Capabilities+Support+-+Beta
   if $browser_config['w3c']
-    sauce_capabilities['seleniumVersion'] = Selenium::WebDriver::VERSION
     capabilities['sauce:options'] = sauce_capabilities
     capabilities['platformName'] = capabilities['platform']
+    capabilities['browserVersion'] = capabilities['version']
   else
     capabilities.merge!(sauce_capabilities)
+    capabilities.platform = $browser_config['platform']
   end
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"

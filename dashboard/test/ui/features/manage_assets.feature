@@ -1,6 +1,8 @@
 @no_mobile
 Feature: Manage Assets
 
+  # Edge browser pops up a modal dialog on audio-access attempt.
+  @no_edge
   Scenario: The manage assets dialog contains the option to record audio.
     Given I am a student
     And I start a new Game Lab project

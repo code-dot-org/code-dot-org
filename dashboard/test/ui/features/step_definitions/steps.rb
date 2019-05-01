@@ -390,8 +390,17 @@ When /^I press the SVG text "([^"]*)"$/ do |name|
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
 end
 
+def scroll_into_view(element)
+  if @browser.browser == :MicrosoftEdge
+    # Edge driver doesn't support location_once_scrolled_into_view.
+    element.send_keys([''])
+  else
+    element.location_once_scrolled_into_view
+  end
+end
+
 And(/^I scroll to "([^"]*)"$/) do |selector|
-  @browser.find_element(:css, selector).location_once_scrolled_into_view
+  scroll_into_view(@browser.find_element(:css, selector))
 end
 
 When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
@@ -403,7 +412,7 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
 end
 
 def select_dropdown(element, option_text, load)
-  element.location_once_scrolled_into_view
+  scroll_into_view(element)
   page_load(load) do
     select = Selenium::WebDriver::Support::Select.new(element)
     select.select_by(:text, option_text)

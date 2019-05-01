@@ -647,6 +647,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_mobile') unless browser['mobile']
   arguments += skip_tag('@no_circle') if options.is_circle
   arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
+  arguments += skip_tag('@no_edge') if browser['browserName'] == 'MicrosoftEdge'
 
   # Only run in IE during a DTT. always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags

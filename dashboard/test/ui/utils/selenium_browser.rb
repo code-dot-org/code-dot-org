@@ -17,38 +17,8 @@ module SeleniumBrowser
     Selenium::WebDriver.for browser, options
   end
 
-  require 'net/http/persistent'
-  # Replaces the misleading 'too many connection resets' error message for read timeouts.
-  class HttpClient < Net::HTTP::Persistent
-    def request_failed(exception, req, connection)
-      if exception.is_a?(Net::ReadTimeout)
-        backtrace = exception.backtrace
-        exception = Net::ReadTimeout.new("No response after #{read_timeout} seconds")
-        exception.set_backtrace(backtrace)
-      end
-      finish connection
-      raise exception
-    end
-  end
-
-  require 'selenium/webdriver/remote/http/persistent'
-  class Client < Selenium::WebDriver::Remote::Http::Persistent
-    # Replaces 'unexpected response' message with the actual parsed error from the JSON response, if provided.
-    def create_response(code, body, content_type)
-      super
-    rescue Selenium::WebDriver::Error::WebDriverError => e
-      if (msg = e.message.match(/unexpected response, code=(?<code>\d+).*\n(?<error>.*)/))
-        error = msg[:error]
-        error = JSON.parse(error)['value']['error'] rescue error
-        e.message.replace("Error #{msg[:code]}: #{error}")
-      end
-      raise
-    end
-
-    def new_http_client
-      HttpClient.new name: 'webdriver'
-    end
-
+  require 'selenium/webdriver/remote/http/default'
+  class Client < Selenium::WebDriver::Remote::Http::Default
     def read_timeout=(timeout)
       super
       @http&.read_timeout = timeout

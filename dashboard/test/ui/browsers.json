@@ -20,7 +20,8 @@
     "name": "IE11",
     "browserName": "Internet Explorer",
     "version": "11.0",
-    "platform": "Windows 10"
+    "platform": "Windows 10",
+    "w3c": true
   },
   {
     "name": "Firefox",
@@ -28,6 +29,12 @@
     "version": "latest",
     "platform": "Windows 10",
     "w3c": true
+  },
+  {
+    "name": "Edge",
+    "browserName": "MicrosoftEdge",
+    "version": "latest",
+    "platform": "Windows 10"
   },
   {
     "name": "iPhone",
