@@ -20,11 +20,18 @@ export default class ProgressLessonContent extends React.Component {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
-    const {description, levels, disabled, selectedSectionId} = this.props;
+    const {
+      description,
+      levels,
+      disabled,
+      selectedSectionId,
+      inMiniRubricExperiment
+    } = this.props;
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
@@ -34,6 +41,7 @@ export default class ProgressLessonContent extends React.Component {
           levels={progressions[0].levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
+          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       );
     } else {
@@ -44,6 +52,7 @@ export default class ProgressLessonContent extends React.Component {
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
+          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       ));
     }

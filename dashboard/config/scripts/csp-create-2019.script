@@ -7,14 +7,15 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csp-create'
 version_year '2019'
+project_sharing true
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL01 SFLP_2019'
+level 'CSP CreateL01 SFLP_2019', named: true
 level 'csp-pt-tech-setup-and-tools_2018_2019', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
 stage 'Create PT Prep - Making a Plan', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL02 SFLP_2018_2019'
+level 'CSP CreateL02 SFLP_2018_2019', named: true
 
 stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL03 SFLP_2019'
+level 'CSP CreateL03 SFLP_2019', named: true
 level 'Practice Create Performance Task_2019', progression: 'Create PT - Complete the Task'

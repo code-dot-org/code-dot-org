@@ -1,5 +1,3 @@
-@dashboard_db_access
-
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 
@@ -18,6 +16,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip
   And I wait until element "#regional-partner-mini-contact-error-zip" is visible
 
   # Submit again with the ZIP.
+  Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press "#submit" using jQuery
   And I wait until element "#regional-partner-mini-contact-thanks-middle-high" is visible
@@ -30,6 +29,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip and email
   And I wait until element "#regional-partner-mini-contact-form-middle-high" is visible
 
   # Let's clear out the email to make sure that it's required.
+  Given I scroll the "#email" element into view
   And I press backspace to clear element "#email"
   And I press "#submit" using jQuery
 
@@ -38,6 +38,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip and email
   And element "#regional-partner-mini-contact-error-email" is visible
 
   # Submit again with a ZIP and an email.
+  Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press keys "test-email@code.org" for element "#email"
   And I press "#submit" using jQuery
@@ -58,6 +59,7 @@ Scenario: Signed-out user submits pop-up mini-contact form after adding zip and 
   And element "#regional-partner-mini-contact-error-email" is visible
 
   # Submit again with a ZIP and an email.
+  Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press keys "test-email@code.org" for element "#email"
   And I press "#submit" using jQuery

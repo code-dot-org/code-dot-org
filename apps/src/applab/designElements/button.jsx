@@ -11,7 +11,7 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import {
   ICON_PREFIX_REGEX,
   defaultFontSizeStyle,
@@ -208,26 +208,79 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      classic: color.applab_button_teal,
-      dark: color.yellow
+      ...themeColor.buttonBackground
     },
     borderRadius: {
-      classic: 0,
-      dark: 10
+      default: 4,
+      orange: 0,
+      citrus: 2,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 6,
+      watermelon: 20,
+      area51: 10,
+      polar: 20,
+      glowInTheDark: 10,
+      bubblegum: 20,
+      millennial: 20,
+      robot: 0,
+      classic: 0
     },
     borderWidth: {
-      classic: 0,
-      dark: 0
+      default: 1,
+      orange: 2,
+      citrus: 2,
+      ketchupAndMustard: 0,
+      lemonade: 0,
+      forest: 2,
+      watermelon: 4,
+      area51: 2,
+      polar: 2,
+      glowInTheDark: 2,
+      bubblegum: 2,
+      millennial: 0,
+      robot: 2,
+      classic: 0
     },
     borderColor: {
       type: 'color',
-      classic: color.black,
-      dark: color.white
+      ...themeColor.buttonBorder
     },
     textColor: {
       type: 'color',
-      classic: color.white,
-      dark: color.black
+      ...themeColor.buttonText
+    },
+    fontFamily: {
+      default: 'Arial Black',
+      orange: 'Verdana',
+      citrus: 'Georgia',
+      ketchupAndMustard: 'Georgia',
+      lemonade: 'Arial',
+      forest: 'Verdana',
+      watermelon: 'Georgia',
+      area51: 'Arial Black',
+      polar: 'Verdana',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Georgia',
+      millennial: 'Verdana',
+      robot: 'Arial Black',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
+      classic: 14
     }
   },
   create: function() {
@@ -235,17 +288,25 @@ export default {
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
     element.style.margin = '0px';
-    element.style.height = '30px';
-    element.style.width = '80px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
+      const currentTheme = elementLibrary.getCurrentTheme(
+        designMode.activeScreen()
+      );
+      const fontSize = this.themeValues.fontSize[currentTheme];
+      // Initial button size when fontSize is 14 or smaller is 80x30 (classic theme)
+      // Initial button size when fontSize is 15 or greater is 100x40 (new themes)
+      element.style.height = fontSize <= 14 ? '30px' : '40px';
+      element.style.width = fontSize <= 14 ? '80px' : '100px';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
+      element.style.height = '30px';
+      element.style.width = '80px';
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-      element.style.color = color.white;
-      element.style.backgroundColor = color.applab_button_teal;
+      element.style.color = themeColor.buttonText.classic;
+      element.style.backgroundColor = themeColor.buttonBackground.classic;
     }
 
     return element;

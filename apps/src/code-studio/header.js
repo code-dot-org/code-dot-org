@@ -72,9 +72,6 @@ header.build = function(
   }
   if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-    stageData.freeplay_links.forEach(function(item) {
-      $('.' + item + '_free_play').show();
-    });
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
@@ -87,16 +84,6 @@ header.build = function(
     signedIn,
     stageExtrasEnabled
   );
-
-  $('.level_free_play').qtip({
-    content: {
-      attr: 'title'
-    },
-    position: {
-      my: 'top center',
-      at: 'bottom center'
-    }
-  });
 
   /**
    * Track boolean "visible" state of header popup to avoid

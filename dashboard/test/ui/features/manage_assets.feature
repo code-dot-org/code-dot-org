@@ -9,8 +9,6 @@ Feature: Manage Assets
     Then I click selector "#record-asset" once I see it
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
 
-  @no_safari_yosemite
-  #ToDo: epeach - solve safari specific failure
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
     And I start a new Game Lab project
@@ -24,7 +22,7 @@ Feature: Manage Assets
     And element ".fa-play-circle" is visible
 
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
-  @no_safari_yosemite @no_ie
+  @no_ie
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student
     And I start a new Game Lab project
@@ -35,8 +33,7 @@ Feature: Manage Assets
     And I upload the file named "artist_image_1.png"
     And I wait until element ".assetRow td:contains(artist_image_1.png)" is visible
 
-    And I press "ui-image-thumbnail"
-    And I go to the newly opened tab
+    And I press "ui-image-thumbnail" to load a new tab
     And check that the URL matches "/v3/assets/.*/artist_image_1.png"
 
   Scenario: From WebLab, the manage assets dialog does not contain the option to record audio.

@@ -713,7 +713,11 @@ FactoryGirl.define do
   factory :concept do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
-      video
+      after(:create) do |concept|
+        video = create(:video)
+        concept.video_key = video.key
+        concept.save!
+      end
     end
   end
 
@@ -1017,15 +1021,19 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {Date.today - 1.day}
-    apps_open_date_csd_teacher {Date.today - 2.days}
-    apps_close_date_csp_teacher {Date.today + 3.days}
-    apps_close_date_csd_teacher {Date.today + 4.days}
+    apps_open_date_csp_teacher {(Date.current - 1.day).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current + 4.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
     additional_program_information "Additional program information will be here."
     pd_workshops {[create(:pd_workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+
+    trait :with_apps_priority_deadline_date do
+      apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    end
   end
 
   factory :regional_partner_program_manager do

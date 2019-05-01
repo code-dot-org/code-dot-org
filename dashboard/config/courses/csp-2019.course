@@ -1,0 +1,28 @@
+{
+  "name": "csp-2019",
+  "script_names": [
+    "csp1-2019",
+    "csp2-2019",
+    "csp3-2019",
+    "csp4-2019",
+    "csp-explore-2019",
+    "csp5-2019",
+    "csp-create-2019",
+    "csppostap-2019"
+  ],
+  "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csp-19"
+      ],
+      [
+        "teacherForum",
+        "https://forum.code.org/c/csp"
+      ]
+    ],
+    "has_verified_resources": true,
+    "family_name": "csp",
+    "version_year": "2019"
+  }
+}

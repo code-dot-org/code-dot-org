@@ -147,6 +147,7 @@ class Script < ActiveRecord::Base
     is_stable
     supported_locales
     pilot_experiment
+    project_sharing
   )
 
   def self.twenty_hour_script
@@ -245,6 +246,15 @@ class Script < ActiveRecord::Base
       Rails.cache.fetch('valid_scripts/valid') do
         Script.all.reject(&:hidden)
       end
+    end
+  end
+
+  # @param user [User]
+  # @returns [Boolean] Whether the user can assign this script.
+  # Users should only be able to assign one of their valid scripts.
+  def assignable?(user)
+    if user&.teacher?
+      Script.valid_script_id?(user, id)
     end
   end
 
@@ -348,6 +358,18 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # Returns a cached map from family_name to scripts, or nil if caching is disabled.
+  def self.script_family_cache
+    return nil unless should_cache?
+    @@script_family_cache ||= {}.tap do |cache|
+      family_scripts = script_cache.values.group_by(&:family_name)
+      # Not all scripts have a family_name, and thus will be grouped as family_scripts[nil].
+      # We do not want to store this key-value pair in the cache.
+      family_scripts.delete(nil)
+      cache.merge!(family_scripts)
+    end
+  end
+
   # Find the script level with the given id from the cache, unless the level build mode
   # is enabled in which case it is always fetched from the database. If we need to fetch
   # the script and we're not in level mode (for example because the script was created after
@@ -434,6 +456,53 @@ class Script < ActiveRecord::Base
       # Populate cache on miss.
       script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
     end
+  end
+
+  def self.get_family_without_cache(family_name)
+    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+  end
+
+  # Returns all scripts within a family from the Rails cache.
+  # Populates the cache with scripts in that family upon cache miss.
+  # @param family_name [String] Family name for the desired scripts.
+  # @return [Array<Script>] Scripts within the specified family.
+  def self.get_family_from_cache(family_name)
+    return Script.get_family_without_cache(family_name) unless should_cache?
+
+    script_family_cache.fetch(family_name) do
+      # Populate cache on miss.
+      script_family_cache[family_name] = Script.get_family_without_cache(family_name)
+    end
+  end
+
+  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+    return nil unless family_name
+
+    family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+
+    if user
+      assigned_script_ids = user.section_scripts.pluck(:id)
+      script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
+      return Script.new(redirect_to: script_name) if script_name
+    end
+
+    locale_str = locale&.to_s
+    latest_version = nil
+    family_scripts.each do |script|
+      next unless script.is_stable
+      latest_version ||= script
+
+      # All English-speaking locales are supported, so we check that the locale starts with 'en' rather
+      # than matching en-US specifically.
+      is_supported = script.supported_locales&.include?(locale_str) || locale_str&.downcase&.start_with?('en')
+      if is_supported
+        latest_version = script
+        break
+      end
+    end
+
+    script_name = latest_version&.name
+    script_name ? Script.new(redirect_to: script_name) : nil
   end
 
   # Given a script family name, return a dummy Script with redirect_to field
@@ -769,14 +838,6 @@ class Script < ActiveRecord::Base
       Script::CSP_UNIT2_NAME,
       Script::CSP_UNIT3_NAME,
     ].include?(name)
-  end
-
-  def freeplay_links
-    if cs_in_a?
-      ['calc', 'eval']
-    else
-      []
-    end
   end
 
   def has_peer_reviews?
@@ -1262,6 +1323,8 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
+      show_assign_button: assignable?(user),
+      project_sharing: project_sharing
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1338,13 +1401,22 @@ class Script < ActiveRecord::Base
     return [] unless family_name
     return [] unless courses.empty?
     with_hidden = user&.hidden_script_access?
-    Script.
+    scripts = Script.
       where(family_name: family_name).
       all.
       select {|script| with_hidden || !script.hidden}.
-      map {|s| {name: s.name, version_year: s.version_year, version_title: s.version_year, can_view_version: s.can_view_version?(user)}}.
-      sort_by {|info| info[:version_year]}.
-      reverse
+      map do |s|
+        {
+          name: s.name,
+          version_year: s.version_year,
+          version_title: s.version_year,
+          can_view_version: s.can_view_version?(user),
+          is_stable: s.is_stable,
+          locales: s.supported_locale_names
+        }
+      end
+
+    scripts.sort_by {|info| info[:version_year]}.reverse
   end
 
   def self.clear_cache
@@ -1387,7 +1459,8 @@ class Script < ActiveRecord::Base
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment]
+      pilot_experiment: script_data[:pilot_experiment],
+      project_sharing: !!script_data[:project_sharing]
     }.compact
   end
 
@@ -1442,6 +1515,7 @@ class Script < ActiveRecord::Base
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:stage_extras_available] = stage_extras_available
 
     info
   end
@@ -1470,24 +1544,53 @@ class Script < ActiveRecord::Base
   end
 
   def get_feedback_for_section(section)
+    rubric_performance_headers = {
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
+    }
+
+    rubric_performance_json_to_ruby = {
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
+    }
+
     feedback = {}
+
+    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
+    student_ids = section.students.map(&:id)
+    all_feedback = TeacherFeedback.get_all_feedback_for_section(student_ids, level_ids, section.user_id)
+
+    feedback_hash = {}
+    all_feedback.each do |feedback_element|
+      feedback_hash[feedback_element.student_id] ||= {}
+      feedback_hash[feedback_element.student_id][feedback_element.level_id] = feedback_element
+    end
+
     script_levels.each do |script_level|
+      next unless script_level.oldest_active_level.can_have_feedback?
       section.students.each do |student|
-        temp_feedback = TeacherFeedback.get_student_level_feedback(student.id, script_level.level.id, section.user_id)
+        current_level = script_level.oldest_active_level
+        next unless feedback_hash[student.id]
+        temp_feedback = feedback_hash[student.id][current_level.id]
         next unless temp_feedback
         feedback[temp_feedback.id] = {
           studentName: student.name,
           stageNum: script_level.stage.relative_position.to_s,
           stageName: script_level.stage.localized_title,
           levelNum: script_level.position.to_s,
-          keyConcept: (script_level.level.rubric_key_concept || ''),
-          performanceLevelDetails: (script_level.level.properties["rubric_#{temp_feedback.performance}"] || ''),
-          performance: temp_feedback.performance,
+          keyConcept: (current_level.rubric_key_concept || ''),
+          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
+          performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
         }
       end
     end
+
     return feedback
   end
 

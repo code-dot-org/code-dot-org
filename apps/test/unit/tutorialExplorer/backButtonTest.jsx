@@ -9,7 +9,7 @@ describe('BackButton', () => {
     const wrapper = shallow(<BackButton />);
     expect(wrapper).to.containMatchingElement(
       <a href="/learn">
-        <button>
+        <button type="button">
           <i className="fa fa-arrow-left" />
           &nbsp;
           {i18n.backButtonBack()}

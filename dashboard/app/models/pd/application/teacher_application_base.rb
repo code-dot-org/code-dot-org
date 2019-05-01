@@ -65,11 +65,13 @@ module Pd::Application
     end
 
     def update_scholarship_status(scholarship_status)
-      Pd::ScholarshipInfo.update_or_create(user, application_year, scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, course, scholarship_status)
     end
 
     def scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
+      if user && application_year && course
+        Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.scholarship_status
+      end
     end
 
     # Implement in derived class.
@@ -457,10 +459,6 @@ module Pd::Application
 
     def last_name
       sanitize_form_data_hash[:last_name]
-    end
-
-    def teacher_full_name
-      "#{first_name} #{last_name}"
     end
 
     def state_code

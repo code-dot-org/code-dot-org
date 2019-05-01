@@ -46,6 +46,16 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  def self.mysql_multi_connection
+    # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
+    sequel_connect(
+      CDO.pegasus_reporting_db_writer,
+      CDO.pegasus_reporting_db_writer,
+      query_timeout: MAX_EXECUTION_TIME_SEC,
+      multi_statements: true
+    )
+  end
+
   # Columns to disregard
   EXCLUDED_COLUMNS = %w(id pardot_id pardot_sync_at updated_at).freeze
 
@@ -678,11 +688,6 @@ class ContactRollups
       ELSE #{DEST_TABLE_NAME}.professional_learning_attended
     END
     WHERE #{DEST_TABLE_NAME}.email = src.email"
-  end
-
-  def self.mysql_multi_connection
-    # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
-    Sequel.connect(CDO.pegasus_reporting_db_writer.sub('mysql:', 'mysql2:'), flags: ::Mysql2::Client::MULTI_STATEMENTS)
   end
 
   # Extracts and formats address data from form data

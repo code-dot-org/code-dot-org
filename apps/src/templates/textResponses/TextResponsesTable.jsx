@@ -24,31 +24,33 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptId: PropTypes.number,
     scriptName: PropTypes.string
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptId, scriptName} = this.props;
+    const {sectionId, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(
       sectionId,
-      scriptId,
       scriptName,
       rowData.studentId
     );
 
-    return (
-      <a
-        className="uitest-name-cell"
-        style={tableLayoutStyles.link}
-        href={studentUrl}
-        target="_blank"
-      >
-        {name}
-      </a>
-    );
+    if (studentUrl) {
+      return (
+        <a
+          className="uitest-name-cell"
+          style={tableLayoutStyles.link}
+          href={studentUrl}
+          target="_blank"
+        >
+          {name}
+        </a>
+      );
+    } else {
+      return <span className="uitest-name-cell">{name}</span>;
+    }
   };
 
   responseFormatter = (_, {rowData}) => {
