@@ -21,7 +21,6 @@ import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
-import {growToGridSize} from '../gridUtils';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
@@ -218,12 +217,12 @@ export default {
       ketchupAndMustard: 5,
       lemonade: 6,
       forest: 6,
-      watermelon: 10,
+      watermelon: 20,
       area51: 10,
-      polar: 100,
+      polar: 20,
       glowInTheDark: 10,
-      bubblegum: 100,
-      millennial: 100,
+      bubblegum: 20,
+      millennial: 20,
       robot: 0,
       classic: 0
     },
@@ -268,19 +267,19 @@ export default {
       classic: 'Arial'
     },
     fontSize: {
-      default: 18,
-      orange: 18,
-      citrus: 18,
-      ketchupAndMustard: 18,
-      lemonade: 18,
-      forest: 18,
-      watermelon: 18,
-      area51: 18,
-      polar: 18,
-      glowInTheDark: 18,
-      bubblegum: 18,
-      millennial: 18,
-      robot: 18,
+      default: 15,
+      orange: 15,
+      citrus: 15,
+      ketchupAndMustard: 15,
+      lemonade: 15,
+      forest: 15,
+      watermelon: 15,
+      area51: 15,
+      polar: 15,
+      glowInTheDark: 15,
+      bubblegum: 15,
+      millennial: 15,
+      robot: 15,
       classic: 14
     }
   },
@@ -291,13 +290,14 @@ export default {
     element.style.margin = '0px';
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
-      // Roughly scale default size based on the current theme's font size:
       const currentTheme = elementLibrary.getCurrentTheme(
         designMode.activeScreen()
       );
       const fontSize = this.themeValues.fontSize[currentTheme];
-      element.style.height = `${growToGridSize(fontSize * 2)}px`;
-      element.style.width = `${10 + growToGridSize(fontSize * 5)}px`;
+      // Initial button size when fontSize is 14 or smaller is 80x30 (classic theme)
+      // Initial button size when fontSize is 15 or greater is 100x40 (new themes)
+      element.style.height = fontSize <= 14 ? '30px' : '40px';
+      element.style.width = fontSize <= 14 ? '80px' : '100px';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
       element.style.height = '30px';
