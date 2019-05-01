@@ -808,11 +808,10 @@ class ContactRollups
         raise
       end
 
-      # Discard the connection and get a new one after each batch. Currently, if you use multiple statements in a batch, the first call will succeed; the next call on
-      # the same connection AFTER you do a multi-statement call will fail with a MySQL error that commands are out of order. The innertubes suggest that this may be a problem in mysql2 gem.
-      # Fortunately, it is fairly cheap to get a new connection for each batch (time to get new connection is negligible compared to batch time).
-      conn.disconnect
-      conn = mysql_multi_connection
+      # https://www.rubydoc.info/github/brianmario/mysql2/Mysql2%2FClient:abandon_results!
+      # When using MULTI_STATEMENTS support, calling this will throw away any unprocessed results as fast as it can in
+      # order to put the connection back into a state where queries can be issued again.
+      conn.abandon_results!
 
       update_batch = ""
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
