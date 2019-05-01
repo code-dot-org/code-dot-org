@@ -1693,6 +1693,8 @@ he:
                 הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Internet:
               name: אינטרנט
+            Songwriting:
+              name: כתיבת שירים
         express-2019:
           stages:
             Programming in Maze:
@@ -1827,3 +1829,11 @@ he:
           stages:
             While Loops:
               name: לולאות "כל עוד"
+        time4csdemo:
+          stages:
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+            Sequence in Maze:
+              name: רצף במבוך
+            Debugging with Scrat:
+              name: ניפוי שגיאות עם סקראט

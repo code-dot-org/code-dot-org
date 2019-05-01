@@ -4,12 +4,12 @@ pl:
     long_instructions:
       2-3 Artist 1 new: "Witam, jestem artystą. Jeżeli napiszesz mi kod \nnarysuję
         prawie wszystko. Użyj kilku bloków, abym rysował wzdłuż \nszarych linii na
-        obrazku. (Każda linia ma długość 100 pikseli)\r\n\r"
+        obrazku. (Każda linia ma długość 100 pikseli)\\\r\n\\\r"
       2-3 Artist 11: 'Utwórz obramowanie dla znaku stop, tworząc ośmiokąt z bokami
         o długości 100 pikseli. '
-      2-3 Artist 12: "Utwórz okrąg, aby ukończyć gałkę oczną!\n\r\n\r\nJeżeli artysta
-        obróci się o 1 stopień w każdej pętli, ile razy musisz powtórzyć kod, aby
-        narysować okrąg? "
+      2-3 Artist 12: "Utwórz okrąg, aby ukończyć gałkę oczną!\n\\\r\n\\\r\nJeżeli
+        artysta obróci się o 1 stopień w każdej pętli, ile razy musisz powtórzyć kod,
+        aby narysować okrąg? "
       2-3 Artist 2 new: |-
         Ten dom ma w połowie skończoną ścianę.
         Każda ściana ma długość 100, ale ściana która jest nie skończona ma tylko 50. Ukończ tą ścianę.
@@ -17,16 +17,16 @@ pl:
         za pomocą obu bloków, "skocz do przodu" i "idź do przodu". Każda linia ma
         długość 50 pikseli.
       2-3 Artist 3new: "Czerwony kapelusz ma wysokość 100 pikseli. Ukończ rysowanie
-        czarnego kapelusza, który jest o 70 pikseli krótszy.\r\n\r\n*(Zauważ, że szerokość
-        każdego kapelusza wynosi 50 pikseli.)*"
+        czarnego kapelusza, który jest o 70 pikseli krótszy.\\\r\n\\\r\n_(Zauważ,
+        że szerokość każdego kapelusza wynosi 50 pikseli.)_"
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
-      2-3 Artist 6: "Ten dom potrzebuje dachu! Narysuj trójkąt. \r\n\r\nWskazówka:\nwszystkie
-        boki mają taką samą długość.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      2-3 Artist 6: "Ten dom potrzebuje dachu! Narysuj trójkąt. \\\r\n\\\r\nWskazówka:\nwszystkie
+        boki mają taką samą długość.\\\r\n\\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       2-3 Artist 7: "Skończ rysować ostatni zestaw okien w szkole, aby każdy w klasie
-        mógł zobaczyć na zewnątrz.\r\n\r\nKażdy bok okna ma długość 25 pikseli. "
-      2-3 Artist 8: "Czas aby zbudować stajnię!\r\n\r\nZrób pomieszczenie dla każdego
-        zwierzaka, dzieląc stajnie na 2 równe kwadraty. \r\n\r\nWskazówka:\nProstokąt
-        jest 200 pikseli szeroki i 100 pikseli długi. \r\n\r\nZagadkę można rozwiązać
+        mógł zobaczyć na zewnątrz.\\\r\n\\\r\nKażdy bok okna ma długość 25 pikseli. "
+      2-3 Artist 8: "Czas aby zbudować stajnię!\\\r\n\\\r\nZrób pomieszczenie dla
+        każdego zwierzaka, dzieląc stajnie na 2 równe kwadraty. \\\r\n\\\r\nWskazówka:\nProstokąt
+        jest 200 pikseli szeroki i 100 pikseli długi. \\\r\n\\\r\nZagadkę można rozwiązać
         na kilka sposobów."
       2-3 Artist 9 NEW: Dokończ ten latawiec
       2-3 Artist 9 REPLACEMENT: Zakończ rysowanie tych schodów!
@@ -34,59 +34,61 @@ pl:
       2-3 Artist Assessment 1: 'Sprawdzian: Zakończ rysowanie ostatniego zęba, szerokiego
         na 25 pikseli i wysokiego na 25 pikseli.'
       2-3 Artist Debugging 1: "Kapelusz powinien mieć tylko 50 pikseli szerokości.
-        \r\nCzy możesz to poprawić?\r\n\r\n<br/>\r\n"
+        \\\r\nCzy możesz to poprawić?\\\r\n\\\r\n<br/>\\\r"
       2-3 Artist Debugging 10: "Podkładka kierunkowa mojego kontrolera gier jest zbyt
-        wąska. \r \r Czy możesz ja poszerzyć o 10 pikseli? \r \r Spróbuj najpierw
+        wąska. \\\r \\\r Czy możesz ja poszerzyć o 10 pikseli? \\\r \\\r Spróbuj najpierw
         uruchomić kod, aby zobaczyć, co źle działa."
-      2-3 Artist Debugging 11: "Moja śnieżynka się rozpada! \r \r Czy mógłbyś zobaczyć,
-        co się złego dzieje?"
-      2-3 Artist Debugging 2: "Ten kod dla wąsów kota jest zły. \r \r Napraw ten kod,
-        by rysował wąsy, które są tej samej długości."
-      2-3 Artist Debugging 3: "Moja łódź ma dziurę! \r \r Co potrzebujesz, by ją zatkać?"
-      2-3 Artist Debugging 5: "Kod nogi i stopy, które mamy, jest zły. \r \r Czy możesz
-        go naprawić?"
+      2-3 Artist Debugging 11: "Moja śnieżynka się rozpada! \\\r \\\r Czy mógłbyś
+        zobaczyć, co się złego dzieje?"
+      2-3 Artist Debugging 2: "Ten kod dla wąsów kota jest zły. \\\r \\\r Napraw ten
+        kod, by rysował wąsy, które są tej samej długości."
+      2-3 Artist Debugging 3: "Moja łódź ma dziurę! \\\r \\\r Co potrzebujesz, by
+        ją zatkać?"
+      2-3 Artist Debugging 5: "Kod nogi i stopy, które mamy, jest zły. \\\r \\\r Czy
+        możesz go naprawić?"
       2-3 Artist Debugging 6: "Wygląda na to, że siedzę na krześle, któremu brakuje
-        nogi. \r \r Popraw kod, aby narysować ostatnią nogę."
+        nogi. \\\r \\\r Popraw kod, aby narysować ostatnią nogę."
       2-3 Artist Debugging 7: "Wygląda na to, że C w kodzie jest rysowane odwrotnie.
-        \r \r Czy mógłbyś je poprawić, by wyglądało jak C?"
+        \\\r \\\r Czy mógłbyś je poprawić, by wyglądało jak C?"
       2-3 Artist Debugging 8: "Mój nauczyciel mówi, że powinienem skończyć to, co
-        zacząłem! \r \r Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?"
-      2-3 Artist Debugging 9: "Coś nie tak! \r \r Kod tej łodygi nie jest prawidłowy.
+        zacząłem! \\\r \\\r Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest
+        źle?"
+      2-3 Artist Debugging 9: "Coś nie tak! \\\r \\\r Kod tej łodygi nie jest prawidłowy.
         Czy wiesz, jak spowodować, by artysta poprowadził łodygę we właściwy sposób?"
-      2-3 Artist Debugging Assessment 1: "**Sprawdzian:** \r\nDlaczego ten kwadrat
-        jest o 75 pikseli za mały z każdej strony? \r\n\r\nCo w kodzie poszło nie
-        tak?"
+      2-3 Artist Debugging Assessment 1: "**Sprawdzian:** \\\r\nDlaczego ten kwadrat
+        jest o 75 pikseli za mały z każdej strony? \\\r\n\\\r\nCo w kodzie poszło
+        nie tak?"
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
-      2-3 Artist Functions 1 a: "\"Ja być zombie! Ja lubię rysować!\"\n\r\n\r\nPomóż
-        zombie narysować kwadratowe okulary. \r\n\r\nMostek między okularami jest
-        25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\r\n\r\n"
-      2-3 Artist Functions 1: "\"Ja być zombie! Ja lubię rysować!\"\n\r\n\r\nPomóż
-        zombie narysować kwadratowe okulary. \r\n\r\nMostek między okularami jest
-        25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\r\n\r\n"
+      2-3 Artist Functions 1 a: "\"Ja być zombie! Ja lubię rysować!\"\n\\\r\n\\\r\nPomóż
+        zombie narysować kwadratowe okulary. \\\r\n\\\r\nMostek między okularami jest
+        25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\\\r\n\\\r"
+      2-3 Artist Functions 1: "\"Ja być zombie! Ja lubię rysować!\"\n\\\r\n\\\r\nPomóż
+        zombie narysować kwadratowe okulary. \\\r\n\\\r\nMostek między okularami jest
+        25 pikseli krótszy niż szerokość okularów, która wynosi 100 pikseli.\\\r\n\\\r"
       2-3 Artist Functions 10: "**Czas na zabawę:** Oto dwie funkcje, jedna do rysowania
-        dużego koła zębatego, a druga do rysowania małego. \r\n\r\nUżyj ich, by narysować
-        wnętrze maszyny!"
+        dużego koła zębatego, a druga do rysowania małego. \\\r\n\\\r\nUżyj ich, by
+        narysować wnętrze maszyny!"
       2-3 Artist Functions 11.5: "Tutaj jest ta sama funkcja \"draw a hexagon\" (rysuj
-        sześciokąt). \r \r Co się stanie, jeśli powtórzysz główny program 6 razy,
+        sześciokąt). \\\r \\\r Co się stanie, jeśli powtórzysz główny program 6 razy,
         obracając się o 60 stopni w każdej iteracji?"
       2-3 Artist Functions 12 Mike: "Funkcje są naprawdę świetne do rysowania złożonych
-        obiektów wiele razy. \r \r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj
-        kwiat), aby wypełnić resztę pola plantatora? \r Rośliny są oddalone od siebie
-        o 100 pikseli."
+        obiektów wiele razy. \\\r \\\r Czy mógłbyś użyć funkcji \"draw a flower\"
+        (rysuj kwiat), aby wypełnić resztę pola plantatora? \\\r Rośliny są oddalone
+        od siebie o 100 pikseli."
       2-3 Artist Functions 12 a: "Funkcje są naprawdę świetne do rysowania złożonych
-        obiektów wiele razy. \r \r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj
-        kwiat), aby wypełnić resztę pola plantatora? \r Rośliny są oddalone od siebie
-        o 100 pikseli."
+        obiektów wiele razy. \\\r \\\r Czy mógłbyś użyć funkcji \"draw a flower\"
+        (rysuj kwiat), aby wypełnić resztę pola plantatora? \\\r Rośliny są oddalone
+        od siebie o 100 pikseli."
       2-3 Artist Functions 12: "Funkcje są naprawdę świetne do rysowania złożonych
-        obiektów wiele razy. \r \r Czy mógłbyś użyć funkcji \"draw a flower\" (rysuj
-        kwiat), aby wypełnić resztę pola plantatora? \r Rośliny są oddalone od siebie
-        o 100 pikseli."
-      2-3 Artist Functions 2: "Funkcje umożliwiają definiowanie nowych bloków! \r
-        \r Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie \"draw
-        a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji, aby narysować okulary.
-        \r \r Kwadraty są oddalone od siebie o 75 pikseli."
+        obiektów wiele razy. \\\r \\\r Czy mógłbyś użyć funkcji \"draw a flower\"
+        (rysuj kwiat), aby wypełnić resztę pola plantatora? \\\r Rośliny są oddalone
+        od siebie o 100 pikseli."
+      2-3 Artist Functions 2: "Funkcje umożliwiają definiowanie nowych bloków! \\\r
+        \\\r Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie
+        \"draw a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji, aby narysować
+        okulary. \\\r \\\r Kwadraty są oddalone od siebie o 75 pikseli."
       2-3 Artist Functions 3: "Zmodyfikuj funkcję, aby narysować kwadrat o boku długości
-        115 i narysuj większe okulary. \r \r Kwadraty są teraz oddalone od siebie
+        115 i narysuj większe okulary. \\\r \\\r Kwadraty są teraz oddalone od siebie
         o 45 pikseli."
       2-3 Artist Functions 4: Teraz, umieść funkcję w pętli, aby narysować te 3 kwadraty.
       2-3 Artist Loops 1: Czy mógłbyś utworzyć sześciokąt o bokach długości 100 pikseli,
@@ -94,130 +96,131 @@ pl:
         obracać się o 60 stopni!
       2-3 Artist Loops 2: Teraz użyj bloku "powtórz", aby z komórki utworzyć powłokę.
       2-3 Artist Loops New 1: "Narysujmy głowę tego robota!\nCzy możesz narysować
-        kwadrat o bokach 100 pikseli?\r\n\r\n<br/>\r\n"
+        kwadrat o bokach 100 pikseli?\\\r\n\\\r\n<br/>\\\r"
       2-3 Artist Loops New 10: Teraz połączmy kilka V rysując je w pętli.
-      2-3 Artist Loops New 11: "Czas zrobić coś odlotowego!\n\r\n\r\nPrzebuduj kod
-        z ostatniej łamigłówki, ale tym razem dodaj w pętli skręt w lewo o 30 stopni.
-        Teraz, powtórz to 24 razy zamiast 8."
-      2-3 Artist Loops New 12: 'Narysuj diament o bokach 100 pikseli.
-
-'
+      2-3 Artist Loops New 11: "Czas zrobić coś odlotowego!\n\\\r\n\\\r\nPrzebuduj
+        kod z ostatniej łamigłówki, ale tym razem dodaj w pętli skręt w lewo o 30
+        stopni. Teraz, powtórz to 24 razy zamiast 8."
+      2-3 Artist Loops New 12: Narysuj diament o bokach 100 pikseli.
       2-3 Artist Loops New 13: "Zacznij z kodem (na szaro), by narysować diament.
-        \r \r Powtórz szary kod, aby utworzyć zabawny wzór!"
-      2-3 Artist Loops New 15: "Teraz, narysuj to, co chcesz!\r\n<br/><br/>\r\n\r\n\n"
+        \\\r \\\r Powtórz szary kod, aby utworzyć zabawny wzór!"
+      2-3 Artist Loops New 15: "Teraz, narysuj to, co chcesz!\\\r\n<br/><br/>\\\r\n\\\r"
       2-3 Artist Loops New 2: Tutaj jest taka sama łamigłówka, którą właśnie rozwiązaliśmy,
         ale tym razem możemy użyć tylko jednego bloku "idź do przodu" i jednego bloku
-        "skręć". r\ r\ Czy mógłbyś użyć bloku "powtórz", by rozwiązać tę łamigłówkę?
+        "skręć". r\\ r\\ Czy mógłbyś użyć bloku "powtórz", by rozwiązać tę łamigłówkę?
       2-3 Artist Loops New 9: Narysuj prosty V, gdzie oba boki mają długość 50 pikseli,
         aby wykonać strzałkę.
       2-3 Artist Nested Loops 1: "Wcześniej do rysowania kształtów używaliśmy pętel,
-        teraz umieścimy pętle w innych pętlach!\r\n\r\nUmieść blok `repeat` wokół
-        tego całego stosu kodu, aby narysować wzór.\r\n\r\n<br/>\r\n\r\n\n"
+        teraz umieścimy pętle w innych pętlach!\\\r\n\\\r\nUmieść blok `repeat` wokół
+        tego całego stosu kodu, aby narysować wzór.\\\r\n\\\r\n<br/>\\\r\n\\\r"
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
         rysunek.
       2-3 Artist Nested Loops 11: Powtórz w pętli ten kod 4 razy, aby ukończyć ten
         obrazek, obróć się o 90 stopni po każdym obiegu.
       2-3 Artist Nested Loops 12: Powtórz w pętli ten kod 12 razy, aby otrzymać te
         loki.
-      2-3 Artist Nested Loops 2: "Teraz powtórz w pętli trójkąt 6 razy. \r \r Po każdym
-        trójkącie, musisz wykonać obrót o 60 stopni przed narysowaniem kolejnego trójkąta."
+      2-3 Artist Nested Loops 2: "Teraz powtórz w pętli trójkąt 6 razy. \\\r \\\r
+        Po każdym trójkącie, musisz wykonać obrót o 60 stopni przed narysowaniem kolejnego
+        trójkąta."
       2-3 Artist Nested Loops 3: "Musisz powtórzyć twój trójkąt w pętli 12 razy, aby
-        narysować ten wzór. \r \r \nPodziel liczbę stopni w okręgu (360) przez liczbę
-        kształtów do narysowania (12), aby określić, ile powinien wynieść obrót po
-        każdym kształcie."
+        narysować ten wzór. \\\r \\\r \nPodziel liczbę stopni w okręgu (360) przez
+        liczbę kształtów do narysowania (12), aby określić, ile powinien wynieść obrót
+        po każdym kształcie."
       2-3 Artist Nested Loops 4: "Powtórz w pętli ten diament 12 razy, aby narysować
-        kwiat. \r \r Wskazówka: Użyjemy tego samego kąta przy powtarzaniu 12 diamentów,
-        jaki użyliśmy dla 12 trójkątów. \r Ile powinien wynosić obrót po każdym kształcie?"
+        kwiat. \\\r \\\r Wskazówka: Użyjemy tego samego kąta przy powtarzaniu 12 diamentów,
+        jaki użyliśmy dla 12 trójkątów. \\\r Ile powinien wynosić obrót po każdym
+        kształcie?"
       2-3 Artist Nested Loops 5: "Wypełnij okna w tym budynku przy użyciu zagnieżdżającej
-        się pętli. \r \r Okna mają długość 20 pikseli i znajdują się 20 pikseli od
-        siebie."
+        się pętli. \\\r \\\r Okna mają długość 20 pikseli i znajdują się 20 pikseli
+        od siebie."
       2-3 Artist Nested Loops 6: "Ten dinozaur ma 8 kolców wystających z jego ogona.
-        \r\n\r\nKażdy kolec ma długość 30 pikseli. \r\n\r\nPowtórz trójkąt 8 razy
-        w pętli, ale upewnij się, aby skoczyć w przód po każdym z nich!"
+        \\\r\n\\\r\nKażdy kolec ma długość 30 pikseli. \\\r\n\\\r\nPowtórz trójkąt
+        8 razy w pętli, ale upewnij się, aby skoczyć w przód po każdym z nich!"
       2-3 Artist Nested Loops 7: "Powtórz w pętli ten trójkąt 10 razy, aby narysować
-        słońce. \r \r Po każdym trójkącie będziesz musiał wykonać ruch i obrót. \r
-        \r Aby określić, ile ma wynieść obrót, podziel liczbę stopni w okręgu przez
-        liczbę kształtów, które go tworzą."
-      2-3 Artist Nested Loops 8: "Teraz dodajmy trochę trawy do naszego obrazka. \r
-        \r Kępy trawy są oddalone od siebie o 50 pikseli."
-      2-3 Artist Nested Loops 9: "Ukończymy ten obrazek dodając kwiat. \r \r Powtórz
+        słońce. \\\r \\\r Po każdym trójkącie będziesz musiał wykonać ruch i obrót.
+        \\\r \\\r Aby określić, ile ma wynieść obrót, podziel liczbę stopni w okręgu
+        przez liczbę kształtów, które go tworzą."
+      2-3 Artist Nested Loops 8: "Teraz dodajmy trochę trawy do naszego obrazka. \\\r
+        \\\r Kępy trawy są oddalone od siebie o 50 pikseli."
+      2-3 Artist Nested Loops 9: "Ukończymy ten obrazek dodając kwiat. \\\r \\\r Powtórz
         diament 12 razy w pętli, aby narysować kwiat."
       2-3 Artist Nested Loops Free Play: Masz wolną rękę, narysuj coś fajnego używając
         zagnieżdżonych pętli.
-      2-3 Bee Conditionals 11: "Jestem ciekaw, co tutaj jest! \r \r pomóż mi oblecieć
+      2-3 Bee Conditionals 11: "Jestem ciekaw, co tutaj jest! \\\r \\\r pomóż mi oblecieć
         cały teren i zebrać nektar tylko z kwiatów, które go mają. "
-      2-3 Bee Conditionals 13: "Wiele się tutaj dzieje!\r \r Skorzystaj z tego, czego
-        się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód."
-      2-3 Bee Conditionals 14: "Połączmy wszystko razem!\r\n\r\nWykorzystaj to, czego
-        nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które
-        go mają, używając jak najmniejszej liczby bloków. \r\n\r\nNie zapomnij na
-        koniec zrobić miodu."
-      2-3 Bee Conditionals 15: "Te schody wyglądają znajomo. \r \r Czy potrafisz zebrać
-        nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej
+      2-3 Bee Conditionals 13: "Wiele się tutaj dzieje!\\\r \\\r Skorzystaj z tego,
+        czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód."
+      2-3 Bee Conditionals 14: "Połączmy wszystko razem!\\\r\n\\\r\nWykorzystaj to,
+        czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów,
+        które go mają, używając jak najmniejszej liczby bloków. \\\r\n\\\r\nNie zapomnij
+        na koniec zrobić miodu."
+      2-3 Bee Conditionals 15: "Te schody wyglądają znajomo. \\\r \\\r Czy potrafisz
+        zebrać nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej
         liczby bloków?"
-      2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \r\r\r Pomóż mi zebrać cały
-        nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
-      2-3 Bee Conditionals 3: "Patrz na cały nektar! \r \r Pomóż mi zebrać nektar
+      2-3 Bee Conditionals 2: "Jestem głodną pszczółką! \\\r\\\r\\\r Pomóż mi zebrać
+        cały nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
+      2-3 Bee Conditionals 3: "Patrz na cały nektar! \\\r \\\r Pomóż mi zebrać nektar
         i zrobić miód używając możliwie najmniejszej liczby bloków.  "
-      2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\r\n\r\nZa
+      2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\\\r\n\\\r\nZa
         każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1
-        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\r\n\r\nBądź
-        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r\nMusisz
+        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\\\r\n\\\r\nBądź
+        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\\\r\nMusisz
         sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if
         nectar`."
-      2-3 Bee Conditionals Assessment 1: "**Sprawdzian:** Zbierz cały nektar. \r\nUważaj,
+      2-3 Bee Conditionals Assessment 1: "**Sprawdzian:** Zbierz cały nektar. \\\r\nUważaj,
         aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
-      2-3 Bee Debugging 1: "Te bloki naprawdę mnie męczą! \r\r\nNapraw błędy, aby
-        zebrać cały nektar."
-      2-3 Bee Debugging 10: "Jestem zakręcony tą łamigłówką! \r \r \nNapraw błędy,
-        aby zebrać cały nektar i zrobić miód."
-      2-3 Bee Debugging 2: "Czy mógłbyś znaleźć tutaj problem? \r \r\nNapraw błędy,
+      2-3 Bee Debugging 1: "Te bloki naprawdę mnie męczą! \\\r\\\r\nNapraw błędy,
         aby zebrać cały nektar."
-      2-3 Bee Debugging 3: "Ooh, to jedno użądlenie! \r \r Napraw błędy, aby zebrać
+      2-3 Bee Debugging 10: "Jestem zakręcony tą łamigłówką! \\\r \\\r \nNapraw błędy,
+        aby zebrać cały nektar i zrobić miód."
+      2-3 Bee Debugging 2: "Czy mógłbyś znaleźć tutaj problem? \\\r \\\r\nNapraw błędy,
+        aby zebrać cały nektar."
+      2-3 Bee Debugging 3: "Ooh, to jedno użądlenie! \\\r \\\r Napraw błędy, aby zebrać
         cały nektar."
-      2-3 Bee Debugging 6: "Jakie słodkie wyzwanie! \r \r Napraw błędy, aby zebrać
+      2-3 Bee Debugging 6: "Jakie słodkie wyzwanie! \\\r \\\r Napraw błędy, aby zebrać
         cały nektar."
-      2-3 Bee Debugging 9: "Pszczółka cierpliwa w tej łamigłówce! \r \r Musisz naprawić
-        kilka miejsc w tym programie, aby zebrać cały nektar i zrobić miód."
+      2-3 Bee Debugging 9: "Pszczółka cierpliwa w tej łamigłówce! \\\r \\\r Musisz
+        naprawić kilka miejsc w tym programie, aby zebrać cały nektar i zrobić miód."
       2-3 Bee Debugging Assessment 1: "**Sprawdzian:** Czas, byś pokazał, co wiesz!
-        \r \r \nNapraw błędy, aby zebrać cały nektar i zrobić miód."
+        \\\r \\\r \nNapraw błędy, aby zebrać cały nektar i zrobić miód."
       2-3 Bee Functions 1: "Funkcje są blokami kodu, które wykonują określone zadanie.
-        \r\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+        \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       2-3 Bee Functions 10: "Fioletowe kwiaty mogą mieć 1 lub 0 nektaru za każdym
-        razem, gdy rozwiązujesz tę łamigłówkę \r \r  Utwórz funkcję \"collect purple
-        nectar\" (zbierz fioletowy nektar), która zbiera nektar tylko z tych fioletowych
-        kwiatów, które mają nektar."
+        razem, gdy rozwiązujesz tę łamigłówkę \\\r \\\r  Utwórz funkcję \"collect
+        purple nectar\" (zbierz fioletowy nektar), która zbiera nektar tylko z tych
+        fioletowych kwiatów, które mają nektar."
       2-3 Bee Functions 2: "Funkcje są blokami kodu, które wykonują określone zadanie.
-        \r \r Użyj funkcji \"get 5\" (pobierz 5), aby pobrać 5 nektarów."
+        \\\r \\\r Użyj funkcji \"get 5\" (pobierz 5), aby pobrać 5 nektarów."
       2-3 Bee Functions 4: "Funkcja \"move and get nectar\" (przejdź i pobierz nektar)
         uruchamia pszczołę, zbiera nektar, a następnie prowadzi pszczołę do miejsca,
-        gdzie zaczęła. \r \r Użyj tej funkcji, aby zebrać cały nektar."
+        gdzie zaczęła. \\\r \\\r Użyj tej funkcji, aby zebrać cały nektar."
       2-3 Bee Functions Assessment 1: "**Sprawdzian:** Użyj danej funkcji, aby zebrać
         nektar z każdego kwiatka."
-      2-3 Bee Loops 1: "Te kwiaty wyglądaj smacznie! \r \r Zbierz nektar z każdego
+      2-3 Bee Loops 1: "Te kwiaty wyglądaj smacznie! \\\r \\\r Zbierz nektar z każdego
         z kwiatów używając możliwie najmniejszej liczby bloków."
       2-3 Bee Loops 13: "**Sprawdzian:** Zbierz cały nektar używając możliwie najmniejszej
         liczby bloków."
       2-3 Bee Loops 3A: Użyj pętli "powtórz", by zebrać cały nektar.
       2-3 Bee Loops 3B: Teraz użyj nowego bloku "powtórz", aby zebrać cały nektar
         i zrobić cały miód.
-      2-3 Bee Loops 4: "Jaka pracowita pszczółka! \r \r \nPomóż pszczółce zebrać cały
-        nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby bloków."
-      2-3 Bee Loops 4A: "Ile razy w tej łamigłówce pomogły Ci pętle? \r \r Pętle to
-        Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę
+      2-3 Bee Loops 4: "Jaka pracowita pszczółka! \\\r \\\r \nPomóż pszczółce zebrać
+        cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby
+        bloków."
+      2-3 Bee Loops 4A: "Ile razy w tej łamigłówce pomogły Ci pętle? \\\r \\\r Pętle
+        to Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę
         za pomocą możliwie najmniejszej liczby bloków."
-      2-3 Bee Loops 5: "Kształt tej drogi jest inny od pozostałych. \r \r \nCzy potrafisz
-        zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
-      2-3 Bee Loops 7: "Jakie piękne pole kwiatów! \r \r\nPomóż pszczółce odwiedzić
-        każdy z nich. \r \r\nCzy potrafisz to zrobić za pomocą mniej niż 7 bloków?"
+      2-3 Bee Loops 5: "Kształt tej drogi jest inny od pozostałych. \\\r \\\r \nCzy
+        potrafisz zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
+      2-3 Bee Loops 7: "Jakie piękne pole kwiatów! \\\r \\\r\nPomóż pszczółce odwiedzić
+        każdy z nich. \\\r \\\r\nCzy potrafisz to zrobić za pomocą mniej niż 7 bloków?"
       2-3 Bee Loops 8: "Te fioletowe kwiaty zawierają inną ilość nektaru za każdym
-        razem, gdy rozwiązujesz tę łamigłówkę. \r \r Użyj pętli \"dopóki nektar\",
-        aby zebrać cały nektar. \r \r Ta pętla działa tak długo, jak długo warunek
+        razem, gdy rozwiązujesz tę łamigłówkę. \\\r \\\r Użyj pętli \"dopóki nektar\",
+        aby zebrać cały nektar. \\\r \\\r Ta pętla działa tak długo, jak długo warunek
         jest spełniony, w tym przypadku nektar > 0."
       2-3 Maze 15: W tej łamigłówce, dwie pętle "powtórz" pomogą Ci dotrzeć do świnki
         za pomocą najmniejszej liczby bloków!
       2-3 Maze Loops 18: "Doprowadź mnie do słonecznika używając możliwie najmniejszej
-        liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz innej pętli,
+        liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz innej pętli,
         aby zmniejszyć liczbę potrzebnych bloków."
       4-5 Artist 10: Naciśnij przycisk "Uruchom", aby sprawdzić kod. Następnie, powtórz
         to tyle razy, aby zakończyć rysowanie. Kolory będą różne za każdym razem.
@@ -228,14 +231,14 @@ pl:
         ma długość 200 pikseli. Ukończ rysunek.
       4-5 Artist Free Draw 1: Wolny wybór!  Narysuj cokolwiek, co inspiruje Cię do
         kreatywności.
-      4-5 Artist Patterns 1: "Narysuj ten kwadrat używając pętli. \r \r Każdy bok
-        ma długość 20 pikseli."
+      4-5 Artist Patterns 1: "Narysuj ten kwadrat używając pętli. \\\r \\\r Każdy
+        bok ma długość 20 pikseli."
       4-5 Artist Patterns 12: "Jeśli skopiujesz tę pętlę i zamiast skrętu w lewo wykonasz
-        skręt w prawo, to co się stanie? \r \r Czy możesz to powtórzyć, by narysować
+        skręt w prawo, to co się stanie? \\\r \\\r Czy możesz to powtórzyć, by narysować
         tę falę?"
       4-5 Artist Patterns 13: "Teraz powtórz to wszystko 4 razy w pętli, aby utworzyć
         ramkę na obrazek. Uważaj na rogi - nie możesz tak po prostu obrócić się o
-        90 stopni! \r \r Jeśli powtórzenie w pętli 3 stopni 60 razy tworzy półokrąg,
+        90 stopni! \\\r \\\r Jeśli powtórzenie w pętli 3 stopni 60 razy tworzy półokrąg,
         to które z tych bloków kodu spowodują utworzenie ćwiartki okręgu na rogach?"
       4-5 Artist Patterns 3: Przejdźmy teraz jeden poziom dalej! Zagnieździliśmy cały
         blok kodu w innej pętli, ale teraz musisz wydostać artystę z powrotem do miejsca,
@@ -244,89 +247,93 @@ pl:
       4-5 Artist Patterns 8: Użyj pętli, by narysować ten sześciokąt z bokami o długości
         40 pikseli i kątami 60 stopni.
       4-5 Artist Patterns 9: "Teraz powtórz ten kod 3 razy, aby narysować cały rząd.
-        \r \r Każdy sześciokąt jest szeroki na 80 pikseli od lewej do prawej."
+        \\\r \\\r Każdy sześciokąt jest szeroki na 80 pikseli od lewej do prawej."
       4-5 Artist Patterns Free Play: Czas na zabawę - spróbuj swoich sił tworząc własny
         wzór!
-      4-5 Bee Conditionals 2: "Więcej chmur!  \r \r Sprawdź, czy pod każdą z nich
-        jest kwiat zanim zbierzesz nektar. \r \r Pamiętaj: nie wszystkie chmurki coś
-        ukrywają!"
+      4-5 Bee Conditionals 2: "Więcej chmur!  \\\r \\\r Sprawdź, czy pod każdą z nich
+        jest kwiat zanim zbierzesz nektar. \\\r \\\r Pamiętaj: nie wszystkie chmurki
+        coś ukrywają!"
       4-5 Bee Conditionals 5: "To może być kwiat lub plaster miodu pod każdą z tych
-        chmurek. \r \r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać nektar,
-        jeśli jest to kwiat, \r W przeciwnym razie zrób miód (bo to jest plaster miodu)."
+        chmurek. \\\r \\\r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać nektar,
+        jeśli jest to kwiat, \\\r W przeciwnym razie zrób miód (bo to jest plaster
+        miodu)."
       4-5 Bee Conditionals 6: "Nie jestem pewien, ile nektaru ma ten kwiat, ale wiem,
-        że ma 1, 2 lub 3 nektary. \r \r Połącz bloki warunkowe (\"jeśli\" i/lub \"jeśli-w
-        przeciwnym razie\"), aby zebrać tylko tyle nektaru, ile ma kwiat. \r \r Pamiętaj,
-        że ilość nektaru może być inna przy ponownym uruchomieniu łamigłówki!"
-      4-5 Bee Conditionals 7: "Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \r \r Ukończ
-        funkcję \"check purple flower\" (sprawdź fioletowy kwiat) i użyj jej, by zebrać
-        cały nektar z kwiatów."
+        że ma 1, 2 lub 3 nektary. \\\r \\\r Połącz bloki warunkowe (\"jeśli\" i/lub
+        \"jeśli-w przeciwnym razie\"), aby zebrać tylko tyle nektaru, ile ma kwiat.
+        \\\r \\\r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu
+        łamigłówki!"
+      4-5 Bee Conditionals 7: "Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \\\r \\\r
+        Ukończ funkcję \"check purple flower\" (sprawdź fioletowy kwiat) i użyj jej,
+        by zebrać cały nektar z kwiatów."
       4-5 Bee Conditionals 8: "Wypełnij wnętrze funkcji \"check flower make honey\"
-        (sprawdź kwiat zrób miód). \r \r Twoja funkcja powinna sprawdzać, czy fioletowy
-        kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \r Następnie. przejdź dalej
-        i zrób miód."
+        (sprawdź kwiat zrób miód). \\\r \\\r Twoja funkcja powinna sprawdzać, czy
+        fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\\r Następnie.
+        przejdź dalej i zrób miód."
       4-5 Bee Conditionals Assessment 1: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat
-        z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \r \r
-        Ukończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód),
-        a następnie zbierz nektar i miód. \r\n"
-      4-5 Bee Debugging 1: "Te bloki naprawdę męczą mnie. \r \r Czy mógłbyś je naprawić?"
+        z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\\r
+        \\\r Ukończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód),
+        a następnie zbierz nektar i miód. \\\r"
+      4-5 Bee Debugging 1: "Te bloki naprawdę męczą mnie. \\\r \\\r Czy mógłbyś je
+        naprawić?"
       4-5 Bee Debugging 6: "Fioletowy kwiatek zawiera inną ilość nektaru za każdym
-        razem, gdy rozwiązujesz tę łamigłówkę. \r \r Napraw bloki, aby za każdym razem
-        zebrać cały nektar z kwiatka."
+        razem, gdy rozwiązujesz tę łamigłówkę. \\\r \\\r Napraw bloki, aby za każdym
+        razem zebrać cały nektar z kwiatka."
       4-5 Bee Debugging Assessment 1: "**Sprawdzian:** Popraw kod."
-      4-5 Bee Nested Loops 2: "Zbierz cały nektar z każdego kwiatka. \r\r\nUżyj zagnieżdżonej
-        pętli. "
+      4-5 Bee Nested Loops 2: "Zbierz cały nektar z każdego kwiatka. \\\r\\\r\nUżyj
+        zagnieżdżonej pętli. "
       4-5 Bee Nested Loops 4: "Zbierz cały nektar z każdego kwiatka i zrób miód na
-        plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       4-5 Bee Nested Loops Assessment 1: "**Sprawdzian:** Zbierz cały nektar i zrób
         cały miód używając pętli."
-      4-5 Maze 9: "Teraz mamy nowy blok o nazwie \"powtarzaj aż\".  \r Umożliwia on
-        powtarzanie poleceń, aż zombie dotrze do słonecznika.  \r \r Użyj tego bloku,
-        aby rozwiązać tę łamigłówkę z możliwie najmniejszą liczbą bloków."
+      4-5 Maze 9: "Teraz mamy nowy blok o nazwie \"powtarzaj aż\".  \\\r Umożliwia
+        on powtarzanie poleceń, aż zombie dotrze do słonecznika.  \\\r \\\r Użyj tego
+        bloku, aby rozwiązać tę łamigłówkę z możliwie najmniejszą liczbą bloków."
       4-5 Maze Assessment 1: "**Sprawdzian:** Dojdź do słonecznika używając możliwie
         najmniejszej liczby bloków."
       4-5 Maze Conditionals 1: Użyj bloku "powtarzaj aż", by doprowadzić zombie do
         słonecznika.
       4-5 Maze Conditionals 10: "Czy mógłbyś dodać tylko 3 bloki, aby pomóc zombie
-        rozwiązać tę bardziej złożoną łamigłówkę? \r \r Jeśli zrobisz to właściwie,
+        rozwiązać tę bardziej złożoną łamigłówkę? \\\r \\\r Jeśli zrobisz to właściwie,
         to on będzie mógł spacerować jakąkolwiek drogą, bez względu na jej długość!"
       4-5 Maze Conditionals 2: Użyj bloku "powtarzaj aż", by doprowadzić zombie do
         słonecznika.
-      4-5 Maze Conditionals 3: "Użyj bloku \"jeśli\", aby mi pomóc zadecydować, kiedy
-        skręcić. \r\n"
+      4-5 Maze Conditionals 3: "Użyj bloku `if`, aby mi pomóc zadecydować, kiedy skręcać.
+        \\\r"
       4-5 Maze Conditionals 4: Ok, rozwiąż tę łamigłówkę podobnie, jak poprzednią,
         ale musisz pamiętać, jak użyłeś bloków "jeśli" i "powtarzaj aż" razem.
-      4-5 Maze Conditionals 5: "Potrzeba mi słonecznik! \r \r Użyj bloku \"jeśli\",
+      4-5 Maze Conditionals 5: "Potrzeba mi słonecznik! \\\r \\\r Użyj bloku \"jeśli\",
         aby doprowadzić mnie tam z najmniejszą liczbę bloków."
-      4-5 Maze Conditionals 6: "\"Jeść słonecznik!\" \r \r Użyj bloku \"jeśli\", aby
-        doprowadzić zombie do słonecznika z najmniejszą liczbą bloków."
+      4-5 Maze Conditionals 6: "\"Jeść słonecznik!\" \\\r \\\r Użyj bloku \"jeśli\",
+        aby doprowadzić zombie do słonecznika z najmniejszą liczbą bloków."
       4-5 Maze Conditionals 7: Rozwiązanie tej łamigłówki nie jest specjalnie inne,
         ale uważaj na chrupaczy!
       4-5 Maze Conditionals 8: "Blok \"jeśli-w przeciwnym razie\" sprawdza warunek,
-        a następnie wykonuje jedno albo drugie. \r \r Użyj tego nowego bloku, aby
-        doprowadzić mnie do słonecznika."
+        a następnie wykonuje jedno albo drugie. \\\r \\\r Użyj tego nowego bloku,
+        aby doprowadzić mnie do słonecznika."
       4-5 Maze Conditionals 9: "Jeszcze jedno ćwiczenie z wykorzystaniem bloku \"Jeśli-w
-        przeciwnym razie\". \r \r Wytycz drogę palcem i spróbuj wykonać ją za pierwszym
-        razem."
+        przeciwnym razie\". \\\r \\\r Wytycz drogę palcem i spróbuj wykonać ją za
+        pierwszym razem."
       4-5 Maze Conditionals Assessment 1: '**Sprawdzian:** Użyj bloków "powtarzaj
         aż" i "jeśli-w przeciwnym razie", aby doprowadzić mnie do słonecznika za pomocą
         możliwie najmniejszej liczby bloków.'
       4-5 Nested Loops 1: "Uzupełnij kod do rysowania tych trójkątów.  Pierwszy z
-        nich już wykonano dla Ciebie.  Wskazówka: 3 trójkąty w rotacji 360 stopni.\r\r\n"
+        nich już wykonano dla Ciebie.  Wskazówka: 3 trójkąty w rotacji 360 stopni.\\\r\\\r"
       4-5 Nested Loops 11: "Czy potrafisz narysować te 10 kwadratów na tym chodniku
-        przy użyciu zagnieżdżonej pętli? \r\rKażdy kwadrat ma bok długości 30 pikseli."
+        przy użyciu zagnieżdżonej pętli? \\\r\\\rKażdy kwadrat ma bok długości 30
+        pikseli."
       4-5 Nested Loops 12: Czy potrafisz narysować tych 36 trójkątów za pomocą zagnieżdżonej
         pętli?
       4-5 Nested Loops 2: "Teraz umieść tę pętlę wewnątrz innej pętli, by narysować
-        10 trójkątów. \r To się nazywa \"zagnieżdżona\" pętla.  "
+        10 trójkątów. \\\r To się nazywa \"zagnieżdżona\" pętla.  "
       4-5 Nested Loops 3: "Utwórz słońce zagnieżdżając początkowy kod w innej pętli.
-        \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz musiał skoczyć
+        \\\r \\\r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz musiał skoczyć
         do przodu na długość boku trójkąta przed wykonaniem skrętu."
       4-5 Nested Loops 5: Umieść w pętli dany kod, aby utworzyć wiatrak.
       4-5 Nested Loops 6: Czy potrafisz narysować sześciokąt powtarzając kod trójkąta?
-      4-5 Nested Loops 7: "Powtórz ten wzór 10 razy. \r \r O ile trzeba skręcić w
-        każdym obrocie pętli?"
-      4-5 Nested Loops 8: "Powtórz ten wzór 6 razy. \r \r O ile trzeba skręcić w każdym
-        obrocie pętli? "
+      4-5 Nested Loops 7: "Powtórz ten wzór 10 razy. \\\r \\\r O ile trzeba skręcić
+        w każdym obrocie pętli?"
+      4-5 Nested Loops 8: "Powtórz ten wzór 6 razy. \\\r \\\r O ile trzeba skręcić
+        w każdym obrocie pętli? "
       4-5 Nested Loops 9: Narysuj zęby w paszczy aligatora!
       4-5 Nested Loops Assessment 1: "**Sprawdzian:** Użyj zagnieżdżonej pętli, aby
         ukończyć wzór."
@@ -335,47 +342,47 @@ pl:
       4-5 While Loops 2: Doprowadź mnie do kupy śmieci i usuń je za pomocą 5 szufelek
         przy użyciu bloku "usuń 1".
       4-5 While Loops 3: "Użyj możliwie jak najmniej bloków, aby ukończyć tę łamigłówkę!
-        \r \r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź do otworu
-        i wypełnij go całkowicie."
-      4-5 While Loops 4: "Wow, popatrz! \r \r Nie wiem, ile szufelek śmieci potrzebuje
-        ten otwór.  \r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\"
+        \\\r \\\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź
+        do otworu i wypełnij go całkowicie."
+      4-5 While Loops 4: "Wow, popatrz! \\\r \\\r Nie wiem, ile szufelek śmieci potrzebuje
+        ten otwór.  \\\r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\"
         aż wypełni ten otwór do poziomu ziemi?  "
       Alien Defender: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
       Alien Defender_2018: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
       Artist Autorun Test: Teraz, umieść funkcję w pętli, aby narysować te 3 kwadraty.
-      CSD U3 Entertainment Sample 3: "# Animowany Komiks\r \n\r \nŁączenie obrazów,
+      CSD U3 Entertainment Sample 3: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie obrazów,
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
-        przykład. \r\n"
-      CSD U3 Entertainment Sample 3_2018: "# Animowany Komiks\r \n\r \nŁączenie obrazów,
-        tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
-        komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
-        przykład. \r\n"
-      CSD U3 Entertainment Sample 3_2019: "# Animowany Komiks\r \n\r \nŁączenie obrazów,
-        tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
-        komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
-        przykład. \r\n"
-      CSD U3 Random background: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić kolorem
-        cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa ono wszystko
-        na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
-        kod aby zobaczyć, czy funkcja `background` działa.\r\n* Zmień tło z koloru
-        żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
-        zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
-        i niebieski kwadrat?*"
-      CSD U3 Random background_2018: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić
+        przykład. \\\r"
+      CSD U3 Entertainment Sample 3_2018: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie
+        obrazów, tekstu i niektórych subtelnych animacji może naprawdę doprowadzić
+        do ciekawych komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\",
+        aby zobaczyć przykład. \\\r"
+      CSD U3 Entertainment Sample 3_2019: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie
+        obrazów, tekstu i niektórych subtelnych animacji może naprawdę doprowadzić
+        do ciekawych komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\",
+        aby zobaczyć przykład. \\\r"
+      CSD U3 Random background: "# Tło\\\r\n\n\\\r\nCzasami będziesz chciał wypełnić
         kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa
-        ono wszystko na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
-        kod aby zobaczyć, czy funkcja `background` działa.\r\n* Zmień tło z koloru
-        żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
-        zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
-        i niebieski kwadrat?*"
-      CSD U3 Random background_2019: "#Tło\r\n\r\nCzasami będziesz chciał wypełnić
+        ono wszystko na ekranie kolorem, który wybierzesz.\\\r\n\\\r\n\n# \n\nWykonaj
+        to\\\r\n\\\r\n\\*Uruchom kod aby zobaczyć, czy funkcja `background` działa.\\\r\n\n-
+        \  Zmień tło z koloru żółtego na pomarańczowy.\\\r\n    \\\r\n    _Zadanie:
+        Fioletowy kwadrat jest w całości zakryty tłem. Czy możesz zmień kolejność
+        kodu, aby zobaczyć jednocześnie fioletowy i niebieski kwadrat?_"
+      CSD U3 Random background_2018: "# Tło\\\r\n\n\\\r\nCzasami będziesz chciał wypełnić
         kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa
-        ono wszystko na ekranie kolorem, który wybierzesz.\r\n\r\n#\nWykonaj to\r\n\r\n*Uruchom
-        kod aby zobaczyć, czy funkcja `background` działa.\r\n* Zmień tło z koloru
-        żółtego na pomarańczowy.\r\n\r\n*Zadanie: Fioletowy kwadrat jest w całości
-        zakryty tłem. Czy możesz zmień kolejność kodu, aby zobaczyć jednocześnie fioletowy
-        i niebieski kwadrat?*"
+        ono wszystko na ekranie kolorem, który wybierzesz.\\\r\n\\\r\n\n# \n\nWykonaj
+        to\\\r\n\\\r\n\\*Uruchom kod aby zobaczyć, czy funkcja `background` działa.\\\r\n\n-
+        \  Zmień tło z koloru żółtego na pomarańczowy.\\\r\n    \\\r\n    _Zadanie:
+        Fioletowy kwadrat jest w całości zakryty tłem. Czy możesz zmień kolejność
+        kodu, aby zobaczyć jednocześnie fioletowy i niebieski kwadrat?_"
+      CSD U3 Random background_2019: "# Tło\\\r\n\n\\\r\nCzasami będziesz chciał wypełnić
+        kolorem cały ekran. Aby to zrobić, możesz wykorzystać `background`. Pokrywa
+        ono wszystko na ekranie kolorem, który wybierzesz.\\\r\n\\\r\n\n# \n\nWykonaj
+        to\\\r\n\\\r\n\\*Uruchom kod aby zobaczyć, czy funkcja `background` działa.\\\r\n\n-
+        \  Zmień tło z koloru żółtego na pomarańczowy.\\\r\n    \\\r\n    _Zadanie:
+        Fioletowy kwadrat jest w całości zakryty tłem. Czy możesz zmień kolejność
+        kodu, aby zobaczyć jednocześnie fioletowy i niebieski kwadrat?_"
       CSD U5 Amazon Data Video: Obejrzyj ten film, aby nauczyć się jak z tym problemem
         radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane są dane oraz
         skąd pochodzą.
@@ -385,18 +392,21 @@ pl:
       CSD U5 Amazon Data Video_2019: Obejrzyj ten film, aby nauczyć się jak z tym
         problemem radzi sobie Amazon. Podczas oglądania filmu, pomyśl jak zbierane
         są dane oraz skąd pochodzą.
-      CSD U6 getProperty var: "# Pobieranie właściwości oraz zmiennych\r\n\r\nW poprzednim
-        poziomie mogłeś zauważyć, że użyliśmy _variable_ aby przechowywać wartości
-        zebrane poprzez `getProperty()`. Wykorzystanie zmiennych w ten sposób pozwoliło
-        nam pobrać właściwości elementów i wykorzystać je później.\r\n\r\n#Zrób\r\n\r\nProgram
-        powinien pobierać tekst wpisany w \"name_input\", po naciśnięciu przycisku
-        Submit. Następnie ustawić go jako właściwość \"name_output\". Wykonuje to
-        poprzez przechowywanie tekstu w zmiennej `name`, ale to nie koniec.\r\n\r\nKorzystając
-        z bloku `getProperty()` przypisz zmienną `name` do właściwości tekstu \"name_input\".
+      CSD U6 getProperty var: "# Pobieranie właściwości oraz zmiennych\\\r\n\n\\\r\nW
+        poprzednim poziomie mogłeś zauważyć, że użyliśmy _variable_ aby przechowywać
+        wartości zebrane poprzez `getProperty()`. Wykorzystanie zmiennych w ten sposób
+        pozwoliło nam pobrać właściwości elementów i wykorzystać je później.\\\r\n\\\r\n\n#
+        Zrób\\\r\n\n\\\r\nProgram powinien pobierać tekst wpisany w \"name_input\",
+        po naciśnięciu przycisku Submit. Następnie ustawić go jako właściwość \"name_output\".
+        Wykonuje to poprzez przechowywanie tekstu w zmiennej `name`, ale to nie koniec.\\\r\n\\\r\nKorzystając
+        z bloku `getProperty()` przypisz zmienną `name` do właściwości tekstu \"name\\_input\".
         Przetestuj swój program wpisując swoje imię i klikając \"Zapisz.\""
-      CoureE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,
-        by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CoureE_HOC 2018 Level_7a: Znalazłeś podwodne ruiny. Przeszukaj piaskowiec, by
+        odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       Course 4 Artist 13: Nadal grasz? Tutaj jest czyste płótno, na którym możesz
         zaprojektować cokolwiek chcesz!
       Course 4 Artist 6: Uzupełnij kod, aby narysować te trzy równoboczne trójkąty.
@@ -407,8 +417,8 @@ pl:
       Course 4 Artist Binary 1a: "Oto funkcja, która na podstawie binarnego łańcucha
         złożonego z jedynek i zer kieruje artystę od lewej do prawej, od góry do dołu.
         Artysta wypełnia kwadraty, kiedy widzi 1, a ignoruje kwadraty, gdy widzi 0.
-        \r\n\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny łańcuch,
-        by narysować ten wzorek."
+        \\\r\n\\\r\nUruchom ten kod, aby zobaczyć, jak artysta wykorzystuje binarny
+        łańcuch, by narysować ten wzorek."
       Course 4 Artist For Loops 13: Hmmm, te kształty stają się coraz większe za każdym
         razem! Czy nie rozwiązaliśmy już tego problemu z użyciem zmiennych? Jak można
         użyć zmiennej będącej licznikiem, aby zmniejszać boki, gdy jest ich więcej?
@@ -437,13 +447,13 @@ pl:
         pszczółka skręca, porusza się i zbiera nektar, a następnie wraca do początkowej
         lokalizacji.
       Course 4 Play Lab Params 4: "Mamy tu funkcję, która nosi nazwę \"patrol\" (patrol).
-        \r \r\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli
-        w dół."
+        \\\r \\\r\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400
+        pikseli w dół."
       Course 4 Play Lab Params 8: Użyj bloku "kiedy postać dotyka", by wysłać Psa
         z powrotem do góry po lewej tylko wtedy, kiedy dotknie on jakąkolwiek inną
         postać.
       Course 4 Play Lab Vars 2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
-        Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz
+        Zmień wartość zmiennej "dog\_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       Course 4 Play Labs For Loops 1: Spowoduj, aby Pies wypowiadał każdą liczbę między
         1 i 100. Użyj pętli i bloku "counter" (licznik), aby wartość "counter" była
@@ -458,45 +468,47 @@ pl:
         do przodu i do tyłu o x pikseli oraz w górę i w dół o y pikseli (stosując
         liczby dodatnie i ujemne).
       CourseD_Dance_Party_01: |-
-        *Urządźmy potańcówkę!*
+        _Urządźmy potańcówkę!_
 
         Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
 
-        * *Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+        -   _Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej._
       CourseD_Dance_Party_02: |-
         Stwórzmy ten taniec łosi!
 
-        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       CourseD_Dance_Party_03: |-
-        *Teraz się bawimy!*
+        _Teraz się bawimy!_
 
         Dodaj do swojego obszaru roboczego blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach.
       CourseD_Dance_Party_04: |-
-        *Ten taniec wymaga trochę świateł!*
+        _Ten taniec wymaga trochę świateł!_
 
         W swoim zestawie narzędzi znajdź blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
       CourseD_Dance_Party_05: |-
         Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
 
-        *Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+        \*Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
       CourseD_Dance_Party_06: |-
-        *Potrzebujemy więcej tancerzy!*
+        _Potrzebujemy więcej tancerzy!_
 
-        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia\_tancerza1”.
       CourseD_Dance_Party_08: |-
         Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
 
         Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
       CourseD_Dance_Party_09: |-
         Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
-        * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
+
+        -   Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
       CourseD_Dance_Party_10: |-
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
         <block type="Dancelab_startMapping">
-        < nazwa tytuł = "SPRITE" > right_pineapple < / title >
+        \< nazwa tytuł = "SPRITE" > right\_pineapple \< / title >
+
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
@@ -529,9 +541,9 @@ pl:
       CourseE_HOC 2018 Level_1: Potrzebujesz zapasów na czekającą Cię wyprawę. Weź**łódkę**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         z **kufra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
-      CourseE_HOC 2018 Level_10: "Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica**
+      CourseE_HOC 2018 Level_10: Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
-        czy potrafisz ją znaleźć?\n\n"
+        czy potrafisz ją znaleźć?
       CourseE_HOC 2018 Level_11: Zbuduj mur z **pryzmarynu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         wokół czarnego betonu. Spowoduje to uaktywnienie **kanału** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         i zakończy Twoje wyzwanie!
@@ -545,72 +557,74 @@ pl:
         Zbadaj wrak i postaraj się dostać do **komody** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Wygląda na to, że marzną! Złów **łososia** ![](Https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         na swojej drodze do podwodnych ruin.
-      CourseE_HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,
+      CourseE_HOC 2018 Level_7a: Znalazłeś podwodne ruiny. Przeszukaj piaskowiec,
         by odnaleźć **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      CourseE_HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę
-        wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
+        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_8: Najpierw góry lodowe, a teraz lawa? Przeszukaj tę
+        wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).
       CourseE_HOC 2018 Level_9b: Zrobiłeś to na rafie, teraz przeszukaj **Serce morza**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
-        Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz
+        Zmień wartość zmiennej "dog\_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       Dance_Party_01: |-
-        *Urządźmy potańcówkę!*
+        _Urządźmy potańcówkę!_
 
         Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
 
-        * *Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+        -   _Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej._
       Dance_Party_01_low: |-
-        *Urządźmy potańcówkę!*
+        _Urządźmy potańcówkę!_
 
         Przeciągnij blok „utwórz nowego” do obszaru roboczego i połącz go wewnątrz bloku „układ”, aby utworzyć pierwszego tancerza.
 
-        * *Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej.*
+        -   _Jeśli chcesz uzyskać dodatkowe informacje lub potrzebujesz ekstra wyzwań, możesz także kliknąć żarówkę po lewej._
       Dance_Party_02: |-
         Stwórzmy ten taniec łosi!
 
-        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Dance_Party_03: |-
-        *Teraz się bawimy!*
+        _Teraz się bawimy!_
 
         Dodaj do swojego obszaru roboczego blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz zaczął nowy ruch po 6 taktach.
       Dance_Party_04: |-
-        *Ten taniec wymaga trochę świateł!*
+        _Ten taniec wymaga trochę świateł!_
 
         W swoim zestawie narzędzi znajdź blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
       Dance_Party_05: |-
         Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
 
-        *Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+        \*Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
       Dance_Party_06: |-
-        *Potrzebujemy więcej tancerzy!*
+        _Potrzebujemy więcej tancerzy!_
 
-        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia\_tancerza1”.
       Dance_Party_08: |-
         Każdy tancerz odznacza się zestawem _właściwości_, które decydują o tym, jak wygląda.
 
         Zmniejszając _wielkość_ tancerza możesz spowodować, że będzie wyglądał, jak gdyby był tancerzem drugiego planu. Czy możesz sprawić, by obie kopie tancerzy były tej samej wielkości?
       Dance_Party_09: |-
         Tancerze mają właściwość „odcień”, która pozwala dodać warstwę koloru. Spróbuj zmienić odcień jednego ze swoich tancerzy.
-        * Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
-      Dance_Party_1: "*Zróbmy potańcówkę!*\n\nPrzeciągnij blok <xml><block type=\"Dancelab_makeNewDanceSprite\"><title
+
+        -   Wybór odcienia spowoduje zmieszanie wybranego koloru z kolorami tancerza.
+      Dance_Party_1: "_Zróbmy potańcówkę!_\n\nPrzeciągnij blok <xml><block type=\"Dancelab_makeNewDanceSprite\"><title
         name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title
-        name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x:
-        200, y: 200}</title></block></xml> do obszaru roboczego. \n\nWłącz go do bloku
+        name=\"NAME\">my\\_first\\_dancer</title><title name=\"LOCATION\">{x: 200,
+        y: 200}</title></block></xml> do obszaru roboczego. \n\nWłącz go do bloku
         <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement
-        name=\"DO\"></statement></block></xml>, aby utworzyć swojego pierwszego tancerza.\n\n*
-        * Możesz kliknąć na żarówce z lewej strony, jeśli chcesz więcej informacji
-        lub dodatkowe wyzwania.*"
+        name=\"DO\"></statement></block></xml>, aby utworzyć swojego pierwszego tancerza.\n\n-
+        \  -   Możesz kliknąć na żarówce z lewej strony, jeśli chcesz więcej informacji
+        lub dodatkowe wyzwania.\\*"
       Dance_Party_10: |-
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
         <block type="Dancelab_startMapping">
-        < nazwa tytuł = "SPRITE" > right_pineapple < / title >
+        \< nazwa tytuł = "SPRITE" > right\_pineapple \< / title >
+
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
         </block></xml>
@@ -653,7 +667,7 @@ pl:
         jak potrafisz!**"
       Dance_Party_12: Dobrej zabawy! Utwórz własny taniec i udostępnij go znajomym.
       Dance_Party_2: "Spowodujmy, że łoś zatańczy! \n\nPrzeciągnij blok <xml><block
-        type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new&#95;dancer</title><title
+        type=\"Dancelab_changeMoveLR\"><title name=\"SPRITE\">new\\_dancer</title><title
         name=\"MOVE\" config=\"MOVES.Dab, MOVES.Drop, MOVES.Floss\">MOVES.Floss</title><title
         name=\"DIR\">-1</title></block></xml> do obszaru roboczego. Podłącz go pod
         blokiem <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
@@ -661,84 +675,95 @@ pl:
         nowy ruch po czwartym takcie.\n\n**Takty** są używane w muzyce do odmierzania
         czasu. W tym samouczku takt składa się z czterech uderzeń."
       Dance_Party_3: |-
-        *Teraz się bawimy!*
+        _Teraz się bawimy!_
 
         Dodaj do swojego pola roboczego drugi blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Spraw, aby tancerz rozpoczynał nowy ruch po 6 taktach.
       Dance_Party_4: |-
-        *Ten taniec wymaga trochę świateł!*
+        _Ten taniec wymaga trochę świateł!_
 
         W swoim zestawie narzędzi znajdź nowy blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
       Dance_Party_5: |-
         Możesz powtórzyć kod w czasie piosenki używając bloku <xml>
         <block type="Dancelab_everySeconds">
+
         <title name="N">2</title>
         <title name="UNIT">"measures"</title>
         </block></xml>.
 
         Użyj bloku <xml>
         <block type="Dancelab_changeMoveLR">
+
         <title name="SPRITE">dancer1</title>
         <title name="MOVE">"next"</title>
         <title name="DIR">-1</title>
         </block></xml>, aby tancerz co dwa takty wykonywał inny ruch.
       Dance_Party_6: |-
-        *Potrzebujemy więcej tancerzy!*
+        _Potrzebujemy więcej tancerzy!_
 
-        Użyj bloku <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup&#95;dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml>, aby utworzyć kopię tancerza "kopia_tancerza1" do tańca z kotem.
+        Użyj bloku <xml><block type="Dancelab_makeNewDanceSprite"><title name="COSTUME">"DUCK"</title><title name="NAME">backup\_dancer1</title><title name="LOCATION">{x: 300, y: 200}</title></block></xml>, aby utworzyć kopię tancerza "kopia\_tancerza1" do tańca z kotem.
       Dance_Party_8: Każdy tancerz odznacza się zestawem _właściwości_, które decydują
         o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować, że będzie
         wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by obie kopie
         tancerzy były tej samej wielkości?
       Dance_Party_9: Tancerze mają właściwość "odcień", która może dodać warstwę koloru.
         Spróbuj zmienić odcień jednego z Twoich tancerzy.
-      Dance_Party_extras_battle: "# Zespoły taneczne \n\nOto taniec między dwoma zespołami.
-        Klawisze ze strzałkami sterują jednym z tancerzy, a klawisze \"w, a, s, d\"
-        sterują drugim. Zatańcz z przyjacielem, a następnie spróbuj udoskonalić ten
-        taniec.\n \n* Dodaj więcej klawiszy, aby sterować tańcami \n* Spraw, aby kopie
-        tancerzy również reagowały po naciśnięciu klawiszy\n* Zmieniaj tancerza co
-        4 takty, ustawiając jego widoczność"
-      Dance_Party_extras_every_beat: "# Ćwierć nuty \n\nWiększość naszych tańców wykorzystuje
-        całe takty, ale każdy takt składa się z 4 ćwierćnut. Ten taniec używa \"co
-        0,25 taktu\", aby tancerz klasnął co ćwierćnuty. \n\nTen taniec wykorzystuje
-        także blok warunkowy do sterowania, kiedy blok \"co 0,25 taktu\" może zmienić
-        taniec. Spróbuj zmieniać liczby w bloku warunkowym, aby zobaczyć, jak zmienia
-        on taniec. \n\n* Eksperymentuj z innymi czasami trwania nut (np. 0,5 dla półnuty
-        lub 0,125 dla ósemki). \n* Dodaj jakieś zdarzenia \"po zakończeniu taktu\".
-        \n* Przełącz \"takty\" na \"sekundy\" i spróbuj w ten sposób taktować swoje
-        tańce."
-      Dance_Party_extras_layout: "# Twórzmy formację\n\nSprawdź ten taniec, który
-        wykorzystuje blok \"formacja tancerzy\", aby zmienić ustawienie tancerzy drugiego
-        planu podczas tańca. Wypróbuj jeden z następujących pomysłów, aby go rozszerzyć:
-        \n\n* Twórz drugą grupę tancerzy w innej formacji\n* Zmieniaj formację tancerzy
-        po naciśnięciu klawisza \n* Zmieniaj właściwość, gdy tancerze zmieniają formację"
+      Dance_Party_extras_battle: |-
+        # Grupy taneczne
+
+        To bitwa taneczna pomiędzy dwiema grupami. Klawisze ze strzałkami służą do sterowania pierwszym tancerzem, a klawisze w, a, s, d do kontrolowania drugiego tancerza. Zagraj w taneczną bitwę z przyjacielem, a potem spróbuj udoskonalić ten taniec.
+
+        -   Dodaj kolejne przyciski kontroli tańca
+        -   Spraw, aby tancerze zapasowi reagowali na wciskanie klawiszy
+        -   Zmieniaj tancerza co 4 takty poprzez ustawienia ich widoczności
+      Dance_Party_extras_every_beat: |-
+        # Ćwierćnuty
+
+        Większość naszych tancerzy używało pełnych taktów, ale każdy takt składa się z 4 ćwierćnut. W tym tańcu użyto „co 0,25 taktu”, aby tancerz klaskał na każdą ćwierćnutę.
+
+        W tańcu wykorzystano także blok\_warunkowy do kontrolowania, kiedy blok „co 0,25 taktu” może zmienić taniec. Spróbuj zmieniać liczby w bloku warunkowym i zobaczyć, jak wpływa to na taniec.
+
+        -   Poeksperymentuj z długościami innych nut (np. 0,5 dla półnuty lub 0,125 dla ósemki).
+        -   Dodaj wydarzenia „po takcie”.
+        -   Przełącz „takty” na „sekundy” i spróbuj w ten sposób zmierzyć czas swojego tańca.
+      Dance_Party_extras_layout: |-
+        # Przejdźmy do formacji!
+
+        Obejrzyj taniec, w którym użyto bloku „układ” do zmieniania formacji tancerzy zapasowych w trakcie tańca. Wypróbuj któregoś z pomysłów na rozbudowanie tańca:
+
+        -   Utwórz drugą grupę tancerzy w innym układzie
+        -   Zmień układ po naciśnięciu klawisza
+        -   Zmień właściwość, gdy tancerze zmieniają formację
       Dance_Party_extras_on_beat: |-
         # Bas, średni i wysoki ton
 
         Ten taniec wykorzystuje zdarzenia "szczyt" do wywołania kodu, gdy różne partie muzyki stają się głośne. Spróbuj pomajsterkować z różnymi piosenkami, aby zobaczyć, jak one zmieniają taniec.
-      Dance_Party_extras_speed: "# Przyspiesz, spowolnij \n\nTen ostatni taniec wykorzystuje
-        blok \"ustaw prędkość\" do sterowania szybkością poruszania się tancerzy.
-        Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów
-        piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek
-        z poprzednich tańców, aby uczynić je bardziej porywającymi."
-      Dance_Party_extras_visible: "# Gdzie oni poszli? \n\nTen taniec pokazuje i ukrywa
-        dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać coś od siebie.
-        \n\n* Dodaj kolejną grupę tancerzy \n* Pokazuj i ukrywaj tancerzy za pomocą
-        klawiszy strzałek \n* Ukryj wszystkich tancerzy i przełącz się na ekscytujący
-        efekt tła"
+      Dance_Party_extras_speed: |-
+        # Przyspiesz, spowolnij
+
+        Ten ostatni taniec wykorzystuje blok "ustaw prędkość" do sterowania szybkością poruszania się tancerzy. Spróbuj poeksperymentować z różnymi prędkościami podczas różnych fragmentów piosenki. Nie przestawaj majstrować przy tym tańcu lub powróć do któregokolwiek z poprzednich tańców, aby uczynić je bardziej porywającymi.
+      Dance_Party_extras_visible: |-
+        # Dokąd pójdą?
+
+        Ten taniec pokazuje i ukrywa dwie różne grupy tancerzy. Sprawdź to, a następnie spróbuj dodać własne ulepszenia.
+
+        -   Dodaj kolejną grupę tancerzy
+        -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
+        -   Ukryj wszystkich tancerzy i przełącz na super efekty tła
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
-        bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \r\n \r\nUmieść
-        zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę, by doprowadzić
-        {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
+        bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
+        \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
+        by doprowadzić {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
       Function intro Ryan_2019: "W Twoim polu roboczym znajduje się funkcja o nazwie
         \"build bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki!
-        \r\n \r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
-        by doprowadzić {currentPlayerName} do pochodni z czerwonego kamienia [redstone_torch]."
+        \\\r\n \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić
+        ścieżkę, by doprowadzić {currentPlayerName} do pochodni z czerwonego kamienia
+        [redstone_torch]."
       HOC 2018 Level_1: Potrzebujesz zapasów na czekającą Cię wyprawę. Weź**łódkę**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         z **kufra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
-      HOC 2018 Level_10: "Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica**
+      HOC 2018 Level_10: Gdzieś w tym Monumencie oceanicznym ukrywa się **kałamarnica**
         ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png),
-        czy potrafisz ją znaleźć?\n\n"
+        czy potrafisz ją znaleźć?
       HOC 2018 Level_11: Zbuduj mur z **pryzmarynu** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         wokół czarnego betonu. Spowoduje to uaktywnienie **kanału** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         i zakończy Twoje wyzwanie!
@@ -754,26 +779,26 @@ pl:
         Zbadaj wrak i postaraj się dostać do **komody** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       HOC 2018 Level_6: Wygląda na to, że marzną! Złów **łososia** ![](Https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         na swojej drodze do podwodnych ruin.
-      HOC 2018 Level_7a: "Znalazłeś podwodne ruiny. Przeszukaj piaskowiec, by odnaleźć
+      HOC 2018 Level_7a: Znalazłeś podwodne ruiny. Przeszukaj piaskowiec, by odnaleźć
         **kufer** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      HOC 2018 Level_8: "Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną
-        wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).\n\n"
+        zawierający **pryzmaryn** skarb ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      HOC 2018 Level_8: Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną
+        wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).
       HOC 2018 Level_9b: Zrobiłeś to na rafie, teraz przeszukaj **Serce morza** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       HOC Dance 3_draft: |-
-        *Ten taniec wymaga trochę świateł!*
+        _Ten taniec wymaga trochę świateł!_
 
         W swoim zestawie narzędzi znajdź nowy blok, który dodaje efekt tła za twoim tancerzem. Zobacz, jak w rytm muzyki zmieniają się efekty!
       HOC Dance 4_draft: |-
         Użyj kolejnego nowego bloku, aby tancerz zmieniał ruchy **co 2 takty**!
 
-        *Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
+        \*Wybranie (Następny), (Poprzedni), or (Losowy) mówi tancerzowi, aby za każdym razem, gdy uruchamiany jest kod, wykonywał inny ruch.
       HOC Dance 5_draft: |-
-        *Potrzebujemy więcej tancerzy!*
+        _Potrzebujemy więcej tancerzy!_
 
-        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia_tancerza1”.
+        Utwórz kopię tancerza do tańca z kotem i nazwij go „kopia\_tancerza1”.
       HOC Dance 6_draft: Każdy tancerz odznacza się zestawem _właściwości_, które
         decydują o tym, jak wygląda. Zmniejszając wielkość tancerza możesz spowodować,
         że będzie wyglądał, jak gdyby był na drugim planie. Czy możesz sprawić, by
@@ -794,132 +819,135 @@ pl:
       K-1 Bee Loops 5: Użyj pętli "powtórz", aby zebrać nektar i zrobić miód!
       K-1 Bee Loops 6: Użyj pętli "powtórz", aby zebrać nektar, zrobić miód i przesunąć
         się!
-      K-1 Maze Loops 11: "Doprowadź mnie do świnki! \r Użycie pętli \"powtórz\" ułatwi
-        Ci zadanie."
-      K-1 Maze Loops 12: "Doprowadź mnie do świnki! \r Użycie pętli \"powtórz\" ułatwi
-        Ci zadanie."
+      K-1 Maze Loops 11: "Doprowadź mnie do świnki! \\\r Użycie pętli \"powtórz\"
+        ułatwi Ci zadanie."
+      K-1 Maze Loops 12: "Doprowadź mnie do świnki! \\\r Użycie pętli \"powtórz\"
+        ułatwi Ci zadanie."
       K-1 Maze Loops 2: Użyj bloku "powtórz", aby doprowadzić mnie do świnki!
       K-1 Maze Loops 8: Użyj pętli "powtórz", aby doprowadzić mnie do świnki.
       MC Agent Freeplay: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie eksplorację
         tego świata.'
       MC_HOC_2017 Agent Test: "Kliknij \"Uruchom\", by przesunąć gracza\nużywając
-        klawiszy strzałek. \r\n\r\nBy przejść ten poziom, będziesz musiał\ndostać
+        klawiszy strzałek. \\\r\n\\\r\nBy przejść ten poziom, będziesz musiał\ndostać
         się do drzwi i je otworzyć (używając spacji) tak, by dostać się do\npomarańczowego
         kwadratu wewnątrz."
       MC_HOC_2017_01: "Kliknij \"Uruchom\", by przesunąć gracza\nużywając klawiszy
-        strzałek. \r\n\r\nBy przejść ten poziom, będziesz musiał\ndostać się do drzwi
-        i je otworzyć (używając spacji) tak, by dostać się do\npomarańczowego kwadratu
-        wewnątrz."
+        strzałek. \\\r\n\\\r\nBy przejść ten poziom, będziesz musiał\ndostać się do
+        drzwi i je otworzyć (używając spacji) tak, by dostać się do\npomarańczowego
+        kwadratu wewnątrz."
       MC_HOC_2017_01_Cole: |-
         Musisz zbierać narzędzia podczas podróży.
         Poruszaj się używając klawiszy strzałek i dostań się do skrzyni wewnątrz domu, aby wygrać
       MC_HOC_2017_01_Kiki: 'Aby zagrać na tym poziomie, naciśnij przycisk "Uruchom"
         znajdujący się pod polem gry, a następnie poruszaj graczem używając klawiszy
         strzałek.  '
-      MC_HOC_2017_01_RETRY: "Drzwi są zamknięte, ale Agent jest, by Ci pomóc! \r \r
-        Przenieś blok \"idź do przodu\" poniżej bloku \"po uruchomieniu\" w obszarze
+      MC_HOC_2017_01_RETRY: "Drzwi są zamknięte, ale Agent jest, by Ci pomóc! \\\r
+        \\\r Przenieś blok \"idź do przodu\" poniżej bloku \"po uruchomieniu\" w obszarze
         roboczym, aby przenieść Agenta na płytę naciskową [PressurePlate_Up], a następnie
         naciśnij przycisk \"Uruchom\", użyj klawiszy strzałek i wyjdź z domu, aby
         zebrać skrzynię [chest]."
       MC_HOC_2017_01_RETRY_2019: "Drzwi są zamknięte, ale Agent jest, by Ci pomóc!
-        \r \r Przenieś blok \"idź do przodu\" poniżej bloku \"po uruchomieniu\" w
-        obszarze roboczym, aby przenieść Agenta na płytę naciskową [PressurePlate_Up],
+        \\\r \\\r Przenieś blok \"idź do przodu\" poniżej bloku \"po uruchomieniu\"
+        w obszarze roboczym, aby przenieść Agenta na płytę naciskową [PressurePlate_Up],
         a następnie naciśnij przycisk \"Uruchom\", użyj klawiszy strzałek i wyjdź
         z domu, aby zebrać skrzynię [chest]."
       MC_HOC_2017_02: Gracz musi dostać się do Tajemnego Zagajnika.  Pomóż Agentowi
         otworzyć bramę pisząc kod, dzięki któremu dotrze do płyty naciskowej.
       MC_HOC_2017_02_Cole: "{currentPlayerName} wyrusza na spotkanie z przygodą! Możesz
         w tym pomóc – trzeba zdobyć mapę [map_empty] znajdującą się za zamkniętymi
-        drzwiami po prawej. \r\n \r\nUtwórz kod w polu roboczym, aby doprowadzić Agenta
-        do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName} mógł przejść. "
+        drzwiami po prawej. \\\r\n \\\r\nUtwórz kod w polu roboczym, aby doprowadzić
+        Agenta do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName}
+        mógł przejść. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} wyrusza na spotkanie z przygodą!
         Możesz w tym pomóc – trzeba zdobyć mapę [map_empty] znajdującą się za zamkniętymi
-        drzwiami po prawej. \r\n \r\nUtwórz kod w polu roboczym, aby doprowadzić Agenta
-        do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName} mógł przejść. "
+        drzwiami po prawej. \\\r\n \\\r\nUtwórz kod w polu roboczym, aby doprowadzić
+        Agenta do płyty naciskowej [PressurePlate_Up] tak, aby {currentPlayerName}
+        mógł przejść. "
       MC_HOC_2017_02_Kiki: "Gracz wyrusza na spotkanie przygody, ale najpierw musi
-        zdobyć pochodnię schowaną za zamkniętymi drzwiami. \r\n\r\nZaprogramuj Agenta
-        w taki sposób, aby wykonał dwa ruchy do przodu wzdłuż białej ścieżki, dotarł
-        do płyty naciskowej i wtedy otworzył drzwi dla gracza."
+        zdobyć pochodnię schowaną za zamkniętymi drzwiami. \\\r\n\\\r\nZaprogramuj
+        Agenta w taki sposób, aby wykonał dwa ruchy do przodu wzdłuż białej ścieżki,
+        dotarł do płyty naciskowej i wtedy otworzył drzwi dla gracza."
       MC_HOC_2017_02_Will: "Aby ukończyć ten poziom, gracz musi znaleźć się na pomarańczowym
         kwadracie w Tajemnym Zagajniku, który znajduje się za zamkniętymi drzwiami.
-        \ \r\n\r\nKod w polu roboczym ma sprawić, że Agent wykona dwa ruchy do przodu,
-        aby znaleźć się na płycie naciskowej i otworzyć drzwi dla Alexa lub Stevea."
+        \ \\\r\n\\\r\nKod w polu roboczym ma sprawić, że Agent wykona dwa ruchy do
+        przodu, aby znaleźć się na płycie naciskowej i otworzyć drzwi dla Alexa lub
+        Stevea."
       MC_HOC_2017_03_Cole: "{currentPlayerName} kontynuuje podróż i potrzebuje jeszcze
-        kompasu [compass], aby przygotować się do podróży.  \r\n   \r\nZakoduj Agenta,
-        aby otworzył bramę. "
+        kompasu [compass], aby przygotować się do podróży.  \\\r\n   \\\r\nZakoduj
+        Agenta, aby otworzył bramę. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} kontynuuje podróż i potrzebuje
-        jeszcze kompasu [compass], aby przygotować się do podróży.  \r\n   \r\nZakoduj
+        jeszcze kompasu [compass], aby przygotować się do podróży.  \\\r\n   \\\r\nZakoduj
         Agenta, aby otworzył bramę. "
       MC_HOC_2017_03_Kiki: "Przygoda gracza zaczyna się w Tajemnym Zagajniku za zamkniętymi
-        drzwiami!  \r\n\r\n\r\nPomóż Agentowi je otworzyć: napisz dla niego kod, aby
-        dotarł do płyty naciskowej."
+        drzwiami!  \\\r\n\\\r\n\\\r\nPomóż Agentowi je otworzyć: napisz dla niego
+        kod, aby dotarł do płyty naciskowej."
       MC_HOC_2017_04: Zmień pętlę z poprzedniej łamigłówki, aby pomóc Agentowi przerzucić
         pomost nad szerszą częścią tej rzeki.
       MC_HOC_2017_04POINT5_Cole: "Udało Ci się wydostać z bagien!  Teraz poprowadź
-        gracza w bezpieczne miejsce na pomarańczowy kwadrat. \r\n\r\nPomóż Agentowi
+        gracza w bezpieczne miejsce na pomarańczowy kwadrat. \\\r\n\\\r\nPomóż Agentowi
         oczyścić ścieżkę: znajdź prosty schemat działania i użyj pętli, by przeszedł
         dwie pierwsze płyty naciskowe."
-      MC_HOC_2017_04POINT5_RYAN: "Udało Ci się! \r\n\r\nTeraz przeprowadź {currentPlayerName}
+      MC_HOC_2017_04POINT5_RYAN: "Udało Ci się! \\\r\n\\\r\nTeraz przeprowadź {currentPlayerName}
         bezpiecznie przez labirynt, aby zdobył siekierę [diamond_axe]"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Udało Ci się! \r\n\r\nTeraz przeprowadź {currentPlayerName}
-        bezpiecznie przez labirynt, aby zdobył siekierę [diamond_axe]"
-      MC_HOC_2017_04_Cole: "Agent może przechodzić przez wodę!  \r\n \r\nUżyj pętli
-        \"powtórz\", aby rozwiązać tę łamigłówkę i pomóż {currentPlayerName} dostać
-        się do wiadra [bucket_empty] schowanego za drzwiami. "
-      MC_HOC_2017_04_Cole_2019: "Agent może przechodzić przez wodę!  \r\n \r\nUżyj
+      MC_HOC_2017_04POINT5_RYAN_2019: "Udało Ci się! \\\r\n\\\r\nTeraz przeprowadź
+        {currentPlayerName} bezpiecznie przez labirynt, aby zdobył siekierę [diamond_axe]"
+      MC_HOC_2017_04_Cole: "Agent może przechodzić przez wodę!  \\\r\n \\\r\nUżyj
+        pętli \"powtórz\", aby rozwiązać tę łamigłówkę i pomóż {currentPlayerName}
+        dostać się do wiadra [bucket_empty] schowanego za drzwiami. "
+      MC_HOC_2017_04_Cole_2019: "Agent może przechodzić przez wodę!  \\\r\n \\\r\nUżyj
         pętli \"powtórz\", aby rozwiązać tę łamigłówkę i pomóż {currentPlayerName}
         dostać się do wiadra [bucket_empty] schowanego za drzwiami. "
       MC_HOC_2017_04_Kiki: "Wejście do Tajemnego Zagajnika prowadzi do tej pięknej
         Oazy!  Aby przejść ten poziom, gracza musi dostać się na pomarańczowy kwadrat
-        w altance.  \r\n\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi dostać się
-        na samą górę do płyty naciskowej, która otwiera drzwi altanki."
-      MC_HOC_2017_05: "Pętle nie zawsze się przydają. \r\n\r\nTe kaktusy nie rosną
+        w altance.  \\\r\n\\\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi dostać
+        się na samą górę do płyty naciskowej, która otwiera drzwi altanki."
+      MC_HOC_2017_05: "Pętle nie zawsze się przydają. \\\r\n\\\r\nTe kaktusy nie rosną
         według jakiegoś schematu, więc pętla nie usunie ich poprawnie.  Dlatego dajemy
         Ci funkcję \"destroy and move\", która wykona całą ciężką pracę za ciebie
         za każdym razem, gdy Agent natrafi na przeszkodę."
-      MC_HOC_2017_05_Cole: "Ojej, nie ma mostu! \r\n\r\nZakoduj Agenta, aby go odbudował
-        używając bloku \"umieść\" tak, że {currentPlayerName} może dostać się do łopaty
-        [diamond_shovel]."
-      MC_HOC_2017_05_Cole_2019: "Ojej, nie ma mostu! \r\n\r\nZakoduj Agenta, aby go
+      MC_HOC_2017_05_Cole: "Ojej, nie ma mostu! \\\r\n\\\r\nZakoduj Agenta, aby go
         odbudował używając bloku \"umieść\" tak, że {currentPlayerName} może dostać
         się do łopaty [diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Ojej, nie ma mostu! \r\n\r\nPomóż Agentowi odbudować most,
-        aby gracz mógł dostać się do łopaty."
+      MC_HOC_2017_05_Cole_2019: "Ojej, nie ma mostu! \\\r\n\\\r\nZakoduj Agenta, aby
+        go odbudował używając bloku \"umieść\" tak, że {currentPlayerName} może dostać
+        się do łopaty [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Ojej, nie ma mostu! \\\r\n\\\r\nPomóż Agentowi odbudować
+        most, aby gracz mógł dostać się do łopaty."
       MC_HOC_2017_05_Kiki: "Pora, by gracz opuścił Tajemny Zagajnik i ruszyć w dalszą
-        drogę, ale nie ma mostu! \r\n\r\nPomóż Agentowi go odbudować i przejść na
-        drewnianą deskę, aby gracz mógł dostać się na pomarańczowy kwadrat."
-      MC_HOC_2017_06_Cole: "Kolejna rzeka, tym razem znacznie szersza! \r\n \r\nPopraw
+        drogę, ale nie ma mostu! \\\r\n\\\r\nPomóż Agentowi go odbudować i przejść
+        na drewnianą deskę, aby gracz mógł dostać się na pomarańczowy kwadrat."
+      MC_HOC_2017_06_Cole: "Kolejna rzeka, tym razem znacznie szersza! \\\r\n \\\r\nPopraw
         ten kod, aby pomóc Agentowi zbudować most tak, że {currentPlayerName} będzie
         mógł dostać się do kilofa [diamond_pickaxe]. "
-      MC_HOC_2017_06_Cole_2019: "Kolejna rzeka, tym razem znacznie szersza! \r\n \r\nPopraw
-        ten kod, aby pomóc Agentowi zbudować most tak, że {currentPlayerName} będzie
-        mógł dostać się do kilofa [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Kolejna rzeka, tym razem znacznie szersza!  \r\n\r\nPopraw
+      MC_HOC_2017_06_Cole_2019: "Kolejna rzeka, tym razem znacznie szersza! \\\r\n
+        \\\r\nPopraw ten kod, aby pomóc Agentowi zbudować most tak, że {currentPlayerName}
+        będzie mógł dostać się do kilofa [diamond_pickaxe]. "
+      MC_HOC_2017_06_Josh: "Kolejna rzeka, tym razem znacznie szersza!  \\\r\n\\\r\nPopraw
         ten kod, aby pomóc Agentowi przerzucić most przez rzekę."
-      MC_HOC_2017_06_Kiki: "Kolejna rzeka, tym razem znacznie szersza!  \r\n\r\nPopraw
+      MC_HOC_2017_06_Kiki: "Kolejna rzeka, tym razem znacznie szersza!  \\\r\n\\\r\nPopraw
         ten kod, aby pomóc Agentowi zbudować most przez rzekę."
-      MC_HOC_2017_07_Cole: "Drogę skuwa lód!  \r\n \r\nFunkcja \"clear path\" pomoże
-        Ci usunąć lód i dostać się {currentPlayerName} do Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "Drogę skuwa lód!  \r\n \r\nFunkcja \"clear path\"
+      MC_HOC_2017_07_Cole: "Drogę skuwa lód!  \\\r\n \\\r\nFunkcja \"clear path\"
         pomoże Ci usunąć lód i dostać się {currentPlayerName} do Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Kiki: "Pętle nie są jedynym sposobem powtórzenia kodu!  \r\n\r\nDajemy
+      MC_HOC_2017_07_Cole_2019: "Drogę skuwa lód!  \\\r\n \\\r\nFunkcja \"clear path\"
+        pomoże Ci usunąć lód i dostać się {currentPlayerName} do Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Kiki: "Pętle nie są jedynym sposobem powtórzenia kodu!  \\\r\n\\\r\nDajemy
         Ci tutaj funkcję \"clear cacti\", która za każdym użyciem usuwa trzy kaktusy.
         Użyj dwa takie bloki, aby oczyścić ścieżkę prowadzącą do pomarańczowego kwadratu. "
       MC_HOC_2017_07a_Kiki: A teraz wyedytuj tę pętlę tak, aby pomóc Agentowi oczyścić
         ścieżkę prowadzącą do pomarańczowego kwadratu.
       MC_HOC_2017_08_Cole: "Teraz, zamiast niszczenia czegoś przed wykonaniem ruchu,
-        trzeba umieścić jakiś blok.  \r\n\r\nZmień przedstawioną funkcję, aby działała
-        na pustyni."
+        trzeba umieścić jakiś blok.  \\\r\n\\\r\nZmień przedstawioną funkcję, aby
+        działała na pustyni."
       MC_HOC_2017_08_Kiki: "Teraz, zamiast niszczyć kaktusy, trzeba umieścić kamień
-        nad lawą, a potem zniszczyć piaskowiec.  \r\n\r\nZmień funkcję, aby działała
+        nad lawą, a potem zniszczyć piaskowiec.  \\\r\n\\\r\nZmień funkcję, aby działała
         na tym poziomie."
-      MC_HOC_2017_08_RY: "Teraz masz DWIE funkcje do wyboru!\r \n\r\nUżyj ich, aby
-        szybko przerzucić most przez lawę dla {currentPlayerName}."
-      MC_HOC_2017_08_Will: "Teraz masz DWIE funkcje do wyboru!\r \n\r\nUżyj ich, aby
-        szybko przerzucić most przez lawę dla gracza."
+      MC_HOC_2017_08_RY: "Teraz masz DWIE funkcje do wyboru!\\\r \n\\\r\nUżyj ich,
+        aby szybko przerzucić most przez lawę dla {currentPlayerName}."
+      MC_HOC_2017_08_Will: "Teraz masz DWIE funkcje do wyboru!\\\r \n\\\r\nUżyj ich,
+        aby szybko przerzucić most przez lawę dla gracza."
       MC_HOC_2017_09_Cole: Użyj funkcji, aby pomóc Agentowi zniszczyć ogromne bloki
         ziemi, blokujące graczowi dojście do płyty naciskowej.
-      MC_HOC_2017_09_Kiki: "Ten kod startowy nie może być usunięty.\r\n\r\nDodawaj
+      MC_HOC_2017_09_Kiki: "Ten kod startowy nie może być usunięty.\\\r\n\\\r\nDodawaj
         polecenia do funkcji \"create trail\", aby program w polu roboczym pomógł
         Agentowi dotrzeć do płyty naciskowej. "
       MC_HOC_2017_09_RS_CLONE: Popraw tę funkcję, aby zapełnić dziury, a następnie
@@ -931,12 +959,12 @@ pl:
       MC_HOC_2017_10_Kiki: Spróbuj utworzyć od podstaw taką funkcję, która ułatwi
         Agentowi ukończenie tego wagonika i doprowadzi gracza na pomarańczowy kwadrat.
       MC_HOC_2017_10_RETRY: "Czy widzisz, czym się różnią te dwie funkcje w polu roboczym?
-        \r\n \r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami, aby oczyścić
-        drogę dla Minecart a następnie zabrać krzesiwo [flint_and_steel]. \r\n "
+        \\\r\n \\\r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami, aby oczyścić
+        drogę dla Minecart a następnie zabrać krzesiwo [flint_and_steel]. \\\r\n "
       MC_HOC_2017_10_RETRY_2019: "Czy widzisz, czym się różnią te dwie funkcje w polu
-        roboczym? \r\n \r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami,
+        roboczym? \\\r\n \\\r\nUżyj ich wraz z innym kodem ze skrzynki z narzędziami,
         aby oczyścić drogę dla Minecart a następnie zabrać krzesiwo [flint_and_steel].
-        \r\n "
+        \\\r\n "
       MC_HOC_2017_10_RYAN: Spróbuj utworzyć od podstaw takie funkcje, które ułatwią
         Agentowi ukończenie wagonika i pomogą graczowi dostać się na pomarańczowy
         kwadrat.
@@ -948,7 +976,7 @@ pl:
       MC_HOC_2017_13_Cole: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie eksplorację
         tego świata.'
       MC_HOC_2017_4.5v2: "Udało Ci się wydostać z bagien!  Teraz poprowadź gracza
-        w bezpieczne miejsce na pomarańczowy kwadrat. \r\n\r\nPomóż Agentowi oczyścić
+        w bezpieczne miejsce na pomarańczowy kwadrat. \\\r\n\\\r\nPomóż Agentowi oczyścić
         ścieżkę: znajdź prosty schemat działania i użyj pętli, by przeszedł dwie pierwsze
         płyty naciskowe."
       MC_HOC_2017_Ali: 'Spójrz na funkcje poniżej.  Jak je użyjesz, aby uniknąć Ghasts
@@ -956,39 +984,35 @@ pl:
       MC_HOC_2017_Ali_2019: 'Spójrz na funkcje poniżej.  Jak je użyjesz, aby uniknąć
         Ghasts i pomóc {currentPlayerName}, by bezpiecznie dotarł do Zaklętej Księgi  [book_enchanted]?  '
       MC_HOC_2017_FP10x10: 'Czas na zabawę: Czy podejmiesz wyzwanie, by zebrać wszystkie
-        diamenty znajdujące się na tym poziomie?
-
-'
+        diamenty znajdujące się na tym poziomie?'
       MC_HOC_2017_FP10x10_RE: 'Czas na zabawę: Czy podejmiesz wyzwanie, by zebrać
-        wszystkie diamenty znajdujące się na tym poziomie?
-
-'
+        wszystkie diamenty znajdujące się na tym poziomie?'
       MC_HOC_2017_FP20x20: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie eksplorację
         tego świata.'
       MC_HOC_2017_FP20x20_2019: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
         eksplorację tego świata.'
       MC_HOC_2017_Ryan_03: "Czy wiesz, że można umieścić więcej niż jeden fragment
-        kodu w pętli?  \r\n\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi przerzucić
+        kodu w pętli?  \\\r\n\\\r\nUżyj pętli \"powtórz\", aby pomóc Agentowi przerzucić
         most przez rzekę umieszczając bloki w rzece."
       MC_HOC_2017_Ryan_05: "Czasem trzeba zniszczyć to, co blokuje ruch Twojego gracza.
-        \ \r\nUżyj bloku \"zniszcz\", aby usunąć wszystkie kaktusy znajdujące się
+        \ \\\r\nUżyj bloku \"zniszcz\", aby usunąć wszystkie kaktusy znajdujące się
         między Agentem a płytą naciskową."
       MC_HOC_Kiki_02: Ktoś musi stanąć na płycie naciskowej, aby boczne drzwi się
         otworzyły.  Pokieruj Agentem tak, aby na niej stanął. Wówczas gracz będzie
         mógł opuścić dom.
-      Mike Test Bee Conditionals 2: "**Sprawdzian:** Zbierz cały nektar. \r\nUważaj,
+      Mike Test Bee Conditionals 2: "**Sprawdzian:** Zbierz cały nektar. \\\r\nUważaj,
         aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
       NEW Course 4 Artist Functions 10.1: Użyj funkcji z poprzednich łamigłówek, aby
         narysować ten wzór.
       NEW Course 4 Artist Functions 10: "Kliknij na \"edytuj\", by wypełnić bloki
-        w definicji funkcji, aby utworzyć kwadrat boku 40 pikseli.\r\r\n"
+        w definicji funkcji, aby utworzyć kwadrat boku 40 pikseli.\\\r\\\r"
       NEW Course 4 Artist Functions 12: Użyj funkcji "draw a line of squares" (rysuj
         rząd kwadratów) z poprzedniej łamigłówki, by narysować ten wzór.
       NEW Course 4 Artist Functions 2: "Czy mógłbyś narysować 3 kwadraty oddalone
-        od siebie o 20 pikseli? \r\r\nBok każdego kwadratu wynosi 100 pikseli."
+        od siebie o 20 pikseli? \\\r\\\r\nBok każdego kwadratu wynosi 100 pikseli."
       NEW Course 4 Artist Functions 3: "Oto nowy typ bloku. Nazywa się \"funkcja\".
         Kliknij przycisk \"edytuj\" a następnie wypełnij go kodem do rysowania kwadratu
-        o boku 100 pikseli. \r \r Po zakończeniu edycji funkcji, kliknij przycisk
+        o boku 100 pikseli. \\\r \\\r Po zakończeniu edycji funkcji, kliknij przycisk
         \"Zamknij\", aby wrócić do programu."
       NEW Course 4 Artist Functions 4: 'Użyj funkcji `draw a square` do narysowania
         tego wzoru. '
@@ -998,12 +1022,13 @@ pl:
         Kliknij przycisk "Uruchom", aby zobaczyć co się dzieje.
       NEW Course 4 Artist Vars 12: Zmodyfikuj algorytm z poprzedniej łamigłówki i
         utwórz pięciokąt o bokach długości 150.
-      NEW Course 4 Artist Vars 4: "Spróbuj ponownie. \r \r Czy mógłbyś ustawić wartość
-        zmiennej \"length\" (długość) na 60, aby utworzyć ten fajny wzór z sześciokątów?"
+      NEW Course 4 Artist Vars 4: "Spróbuj ponownie. \\\r \\\r Czy mógłbyś ustawić
+        wartość zmiennej \"length\" (długość) na 60, aby utworzyć ten fajny wzór z
+        sześciokątów?"
       NEW Course 4 Artist Vars 6: "Narysuj ten wzór pięciokątów o bokach 100 pikseli
         ustalając odpowiednią wartość zmiennej \"length\" (długość) i umieszczając
-        tę zmienną w odpowiednich miejscach. \r \r Zauważ, że tylko raz musisz ustalić
-        wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości."
+        tę zmienną w odpowiednich miejscach. \\\r \\\r Zauważ, że tylko raz musisz
+        ustalić wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości."
       New Minecraft Hero Project: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
         eksplorację tego świata.'
       Overworld Move to Sheep: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
@@ -1018,39 +1043,42 @@ pl:
         zebrać wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
         zebrać wełnę z obu owiec.
-      PS copy 2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\r\n\r\nZa
+      PS copy 2-3 Bee Conditionals 5: "Te magiczne, fioletowe kwiatki się zmieniają!\\\r\n\\\r\nZa
         każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1
-        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\r\n\r\nBądź
-        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r\nMusisz
+        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\\\r\n\\\r\nBądź
+        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\\\r\nMusisz
         sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if
         nectar`."
       Ryan_Demo: |-
         Stwórzmy ten taniec łosi!
 
-        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
+        Przeciągnij do pola roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Podłącz go pod blokiem <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Twój tancerz powinien zacząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
-      Testing Quantum Farmer: "Wow, popatrz! \r \r Nie wiem, ile szufelek śmieci potrzebuje
-        ten otwór.  \r Czy potrafisz napisać program, który wykonuje blok \"wypełnij\"
-        aż wypełni ten otwór do poziomu ziemi?  "
+      Testing Quantum Farmer: "Wow, popatrz! \\\r \\\r Nie wiem, ile szufelek śmieci
+        potrzebuje ten otwór.  \\\r Czy potrafisz napisać program, który wykonuje
+        blok \"wypełnij\" aż wypełni ten otwór do poziomu ziemi?  "
+      U4 - Objects - Template Contacts: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      U4 - Objects - Template Contacts_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       beeDebugVideo1: Zbierz cały nektar.
       course1_artist_loops_challenge2: |-
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       course1_maze_debugging_challenge2: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
-      course1_playlab_events_challenge1: "*\"Gdzie ukrywają się moi przyjaciele? W
-        tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+      course1_playlab_events_challenge1: "_\"Gdzie ukrywają się moi przyjaciele? W
+        tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
-        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
+        postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       course2_artist_prog_challenge1: Narysuj pomieszczenia dla każdego ze zwierząt.
         Istnieje wiele sposobów, aby rozwiązać tę zagadkę, więc pobaw się!
-      course2_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
-      course2_collector_loops_challenge2: "*Zapolujmy na skarb - używając pętli!*\r\r\nPomóż
+      course2_artist_prog_challenge2: _Pomóż mi narysować żółte linie na tej drodze!_
+      course2_collector_loops_challenge2: "_Zapolujmy na skarb - używając pętli!_\\\r\\\r\nPomóż
         zbieraczowi poprzez debugowanie tego kodu. Zbierz cały skarb!"
       course2_collector_prog_challenge1: Spójrz uważnie! Czy potrafisz zebrać wszystkie
-        *10* części skarbu?
+        _10_ części skarbu?
       course2_collector_prog_challenge2: W tej jaskini znajduje się **20** części
         skarbu. Zbierz przynajmniej połowę aby ukończyć to wyzwanie!
       course2_harvester_loops_challenge1: Zbierz całą kukurydzę.
@@ -1065,7 +1093,7 @@ pl:
         aby rozwiązać tą zagadkę!
       course3_collector_debugging_challenge2: Czy jesteś ekspertem od zagnieżdżonych
         pętli? Pokaż czego nauczyłeś się do tej pory i zbierz cały skarb!
-      course3_maze_debugging_challenge1: '*"Czy ja właśnie chodzę w kółko?"*'
+      course3_maze_debugging_challenge1: _"Czy ja właśnie chodzę w kółko?"_
       course3_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
       course4_artist_binary_challenge1: Możesz użyć tylko binarnych wartości (0 lub
@@ -1073,27 +1101,30 @@ pl:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby
         zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń
         go i zastąp go czymś zupełnie inny)
-      courseA_collector_loops_challenge1: '*"Czy możesz mi pomóc znaleźć błędy? Wiem
-        którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
-      courseA_collector_loops_challenge1_2018: '*"Czy możesz mi pomóc znaleźć błędy?
-        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
-      courseA_collector_loops_challenge1_2019: '*"Czy możesz mi pomóc znaleźć błędy?
-        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."*'
-      courseA_playlab_events_challenge1: "*\"Gdzie ukrywają się moi przyjaciele? W
-        tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+      courseA_bee_seq1: Pomóż pszczółce zebrać jeden nektar!
+      courseA_bee_seq10: Spróbuj sam! Zbierz cały nektar.
+      courseA_bee_seq12: Pomóż pszczółce zebrać jeden nektar!
+      courseA_collector_loops_challenge1: _"Czy możesz mi pomóc znaleźć błędy? Wiem
+        którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
+      courseA_collector_loops_challenge1_2018: _"Czy możesz mi pomóc znaleźć błędy?
+        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
+      courseA_collector_loops_challenge1_2019: _"Czy możesz mi pomóc znaleźć błędy?
+        Wiem którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
+      courseA_playlab_events_challenge1: "_\"Gdzie ukrywają się moi przyjaciele? W
+        tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
-        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
-      courseA_playlab_events_challenge1_2018: "*\"Gdzie ukrywają się moi przyjaciele?
-        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+        postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+      courseA_playlab_events_challenge1_2018: "_\"Gdzie ukrywają się moi przyjaciele?
+        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
-        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
-      courseA_playlab_events_challenge1_2019: "*\"Gdzie ukrywają się moi przyjaciele?
-        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"*\r\n\r\nKlikając
+        postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+      courseA_playlab_events_challenge1_2019: "_\"Gdzie ukrywają się moi przyjaciele?
+        W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
-        postaci?\r\n\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png)"
+        postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz
         wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów.
@@ -1113,29 +1144,29 @@ pl:
         pięć stosów złota używając tylko bloku `E-->`?
       courseB_collector_prog3: W jaki sposób Laurel może zebrać wszystkie pięć stosów
         złota używając tylko bloku `E-->`?
-      courseB_maze_seq3: '*"Napraw kod, aby doprowadzić mnie do świnki!"*'
-      courseB_maze_seq9_challenge1: "*Gdzie ukrywa się teraz świnia?*"
+      courseB_maze_seq3: _"Napraw kod, aby doprowadzić mnie do świnki!"_
+      courseB_maze_seq9_challenge1: _Gdzie ukrywa się teraz świnia?_
       courseB_playlab_events_challenge1: "Czas na Wielki Wyścig Zwierząt! Zrób aby
-        zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
-        szybciej?\r\n"
+        zwierzęta po naciśnięciu `▼` poruszały się na dół.\\\r\n\\\r\nKto będzie biegł
+        szybciej?\\\r"
       courseB_playlab_events_challenge1_2018: "Czas na Wielki Wyścig Zwierząt! Zrób
-        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
-        szybciej?\r\n"
+        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\\\r\n\\\r\nKto będzie
+        biegł szybciej?\\\r"
       courseB_playlab_events_challenge1_2019: "Czas na Wielki Wyścig Zwierząt! Zrób
-        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\r\n\r\nKto będzie biegł
-        szybciej?\r\n"
+        aby zwierzęta po naciśnięciu `▼` poruszały się na dół.\\\r\n\\\r\nKto będzie
+        biegł szybciej?\\\r"
       courseB_playlab_events_challenge2: "Zrób tak, aby zwierzęta po kliknięciu na
         nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
-        do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
-        Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+        do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
+        Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_playlab_events_challenge2_2018: "Zrób tak, aby zwierzęta po kliknięciu
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
-        do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
-        Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+        do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
+        Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseB_playlab_events_challenge2_2019: "Zrób tak, aby zwierzęta po kliknięciu
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
-        do gry/\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
-        Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+        do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
+        Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
       courseC_artist_loopsPrePre1a: Użyj bloku `jump to 200 over 200 down`aby artysta
         znalazł się w centrum obszaru gry, następnie narysuj linię o długości 50 pikseli
         za pomocą bloku `move forward 50 pixels`.
@@ -1154,10 +1185,10 @@ pl:
       courseC_artist_prog_challenge1_2019: Narysuj pomieszczenia dla każdego ze zwierząt.
         Istnieje wiele sposobów, aby rozwiązać tą zagadkę, więc zabaw się! Każdy kwadrat
         ma bok o długości 100 pikseli.
-      courseC_artist_prog_challenge2: "*Pomóż mi narysować żółte linie na tej drodze!*"
-      courseC_collector_prog9: '*"Zbierzmy cały skarb!"*'
-      courseC_collector_prog9_2018: '*"Zbierzmy cały skarb!"*'
-      courseC_collector_prog9_2019: '*"Zbierzmy cały skarb!"*'
+      courseC_artist_prog_challenge2: _Pomóż mi narysować żółte linie na tej drodze!_
+      courseC_collector_prog9: _"Zbierzmy cały skarb!"_
+      courseC_collector_prog9_2018: _"Zbierzmy cały skarb!"_
+      courseC_collector_prog9_2019: _"Zbierzmy cały skarb!"_
       courseC_collector_prog_challenge2: W tej jaskini znajduje się 20 części skarbu.
         Zbierz przynajmniej **10** aby ukończyć to wyzwanie!
       courseC_collector_prog_challenge2_2018: W tej jaskini znajduje się 20 części
@@ -1217,17 +1248,17 @@ pl:
       courseD_artist_binary_challenge1_2019: Możesz użyć tylko binarnych wartości
         (0 lub 1). Spróbuj użyć zagnieżdżonych pętli, aby ukończyć ten rysunek.
       courseD_bee_conditionals7_predict2: "Czasami chmura zakrywa kwiatka, a czasami
-        zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar z kwiatków
-        i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko *jeden* plaster
-        miodu lub *jeden* kwiat."
+        zakrywa plaster miodu! \\\r\n\\\r\nUżyj bloku `if/else` aby zebrać nektar
+        z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko
+        _jeden_ plaster miodu lub _jeden_ kwiat."
       courseD_bee_conditionals7_predict2_2018: "Czasami chmura zakrywa kwiatka, a
-        czasami zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar
-        z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko
-        *jeden* plaster miodu lub *jeden* kwiat."
+        czasami zakrywa plaster miodu! \\\r\n\\\r\nUżyj bloku `if/else` aby zebrać
+        nektar z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie
+        tylko _jeden_ plaster miodu lub _jeden_ kwiat."
       courseD_bee_conditionals7_predict2_2019: "Czasami chmura zakrywa kwiatka, a
-        czasami zakrywa plaster miodu! \r\n\r\nUżyj bloku `if/else` aby zebrać nektar
-        z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie tylko
-        *jeden* plaster miodu lub *jeden* kwiat."
+        czasami zakrywa plaster miodu! \\\r\n\\\r\nUżyj bloku `if/else` aby zebrać
+        nektar z kwiatków i miód z plastrów miodu. Pamiętaj:\nza każdą chmurą będzie
+        tylko _jeden_ plaster miodu lub _jeden_ kwiat."
       courseD_bee_debugging_challenge1: Zobacz, jak pszczółka zbiera nektar. Czy dasz
         radę użyć tego samego wzorca, żeby pomóc pszczółce zrobić cały miód?
       courseD_bee_debugging_challenge1_2018: Zobacz, jak pszczółka zbiera nektar.
@@ -1249,24 +1280,24 @@ pl:
       courseD_bee_nestedLoops2_predict1_2019: Tym raze, pomóż pszczołom zebrać cały
         nektar używając jak najmniejszej liczby bloków.
       courseD_bee_nestedLoops5: "Zbierz cały nektar z każdego kwiatka i zrób miód
-        na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8: "Zbierz cały nektar z każdego kwiatka i zrób miód
-        na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_2018: "Zbierz cały nektar z każdego kwiatka i zrób
-        miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bee_nestedLoops8_2019: "Zbierz cały nektar z każdego kwiatka i zrób
-        miód na plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        miód na plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       courseD_bounce_events1: Osiągnij flagę! Dołącz blok do bloku "kiedy strzałka
         w lewo" i naciśnij "Uruchom", aby przesunąć gracza ku fladze.
-      courseD_collector_debugging1: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw błąd(błędy)
-        aby zebrać cały skarb."
-      courseD_collector_debugging1_2018: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
+      courseD_collector_debugging1: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
-      courseD_collector_debugging1a: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
+      courseD_collector_debugging1_2018: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
-      courseD_collector_debugging1a_2018: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
+      courseD_collector_debugging1a: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
-      courseD_collector_debugging1a_2019: "*\"O nie! Zauważyłem błąd.\"*\r\n\r\nNapraw
+      courseD_collector_debugging1a_2018: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw
+        błąd(błędy) aby zebrać cały skarb."
+      courseD_collector_debugging1a_2019: "_\"O nie! Zauważyłem błąd.\"_\\\r\n\\\r\nNapraw
         błąd(błędy) aby zebrać cały skarb."
       courseD_collector_debugging6: "**Wyzwanie:** Wszystkie bloki których potrzebujesz
         już tutaj są...Wykorzystaj swoje umiejętności debugowania aby naprawić błąd
@@ -1293,13 +1324,13 @@ pl:
       courseD_farmer_while_challenge2_2018: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
       courseD_maze_nestedLoops4: "Doprowadź mnie do słonecznika używając możliwie
-        najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz
+        najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_nestedLoops4_2018: "Doprowadź mnie do słonecznika używając możliwie
-        najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz
+        najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_nestedLoops4_2019: "Doprowadź mnie do słonecznika używając możliwie
-        najmniejszej liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz
+        najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
@@ -1309,9 +1340,10 @@ pl:
       courseD_scrat_ramp4_2018: Unikaj nadpękniętego lodu, aby Scratowi nic się nie
         stało!
       courseE_bee_functions2: "Funkcje są blokami kodu, które wykonują określone zadanie.
-        \r\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+        \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       courseE_bee_functions2_2018: "Funkcje są blokami kodu, które wykonują określone
-        zadanie. \r\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+        zadanie. \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego
+        kwiatka."
       courseE_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej
         łamigłówce.
       courseE_bee_functions3_2018: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej
@@ -1329,19 +1361,19 @@ pl:
       courseF_bee_for_challenge2_2019: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_functions4: "Czy wiedziałeś, że możesz wywołać funkcję wewnątrz
-        innej funkcji? \r\n\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
+        innej funkcji? \\\r\n\\\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
         funkcji `move and check,`aby pomóc pszczole skręcić, zebrać to co jest pod
         chmurą i zawrócić!"
       courseF_bee_functions4_2018: "Czy wiedziałeś, że możesz wywołać funkcję wewnątrz
-        innej funkcji? \r\n\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
+        innej funkcji? \\\r\n\\\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
         funkcji `move and check,`aby pomóc pszczole skręcić, zebrać to co jest pod
         chmurą i zawrócić!"
       courseF_bee_functions7: "Przebuduj funkcję z ostatniej zagadki, aby rozwiązać
-        ten labirynt.\r\n\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
-        \r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
+        ten labirynt.\\\r\n\\\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
+        \\\r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
       courseF_bee_functions7_2018: "Przebuduj funkcję z ostatniej zagadki, aby rozwiązać
-        ten labirynt.\r\n\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
-        \r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
+        ten labirynt.\\\r\n\\\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
+        \\\r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś,
         aby rozwiązać tą zagadkę!
       courseF_bee_functions_challenge2_2018: Wykorzystaj wszystko czego się nauczyłeś,
@@ -1395,154 +1427,159 @@ pl:
       grade1_adventurer_loops2: W jaki sposób Laurel może zebrać wszystkie pięć stosów
         złota używając tylko bloku `E-->`?
       grade2_MakeDogTag_8: Teraz połączmy kilka V rysując je w pętli.
-      grade2_MakeDogTag_9: "Czas zrobić coś odlotowego!\n\r\n\r\nPrzebuduj kod z ostatniej
-        łamigłówki, ale tym razem dodaj w pętli skręt w lewo o 30 stopni. Teraz, powtórz
-        to 24 razy zamiast 8."
+      grade2_MakeDogTag_9: "Czas zrobić coś odlotowego!\n\\\r\n\\\r\nPrzebuduj kod
+        z ostatniej łamigłówki, ale tym razem dodaj w pętli skręt w lewo o 30 stopni.
+        Teraz, powtórz to 24 razy zamiast 8."
       grade2_PuppyLoops_10: "Mój nauczyciel mówi, że powinienem skończyć to, co zacząłem!
-        \r \r Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?"
+        \\\r \\\r Pomóż mi ukończyć mój wiatraczek. Czy widzisz, co jest źle?"
       grade2_PuppyLoops_4: W tej łamigłówce, dwie pętle "powtórz" pomogą Ci dotrzeć
         do świnki za pomocą najmniejszej liczby bloków!
-      grade2_PuppyLoops_8: "Ten kod dla wąsów kota jest zły. \r \r Napraw ten kod,
-        by rysował wąsy, które są tej samej długości."
+      grade2_PuppyLoops_8: "Ten kod dla wąsów kota jest zły. \\\r \\\r Napraw ten
+        kod, by rysował wąsy, które są tej samej długości."
       grade2_PuppyLoops_9: "Wygląda na to, że C w kodzie jest rysowane odwrotnie.
-        \r \r Czy mógłbyś je poprawić, by wyglądało jak C?"
+        \\\r \\\r Czy mógłbyś je poprawić, by wyglądało jak C?"
       grade2_puppy_loops4: W tej łamigłówce, dwie pętle "powtórz" pomogą Ci dotrzeć
         do świnki za pomocą najmniejszej liczby bloków!
-      grade3_ConditionalsElse_2: "Więcej chmur!  \r \r Sprawdź, czy pod każdą z nich
-        jest kwiat zanim zbierzesz nektar. \r \r Pamiętaj: nie wszystkie chmurki coś
-        ukrywają!"
+      grade3_ConditionalsElse_2: "Więcej chmur!  \\\r \\\r Sprawdź, czy pod każdą
+        z nich jest kwiat zanim zbierzesz nektar. \\\r \\\r Pamiętaj: nie wszystkie
+        chmurki coś ukrywają!"
       grade3_ConditionalsElse_5: "To może być kwiat lub plaster miodu pod każdą z
-        tych chmurek. \r \r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać nektar,
-        jeśli jest to kwiat, \r W przeciwnym razie zrób miód (bo to jest plaster miodu)."
+        tych chmurek. \\\r \\\r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać
+        nektar, jeśli jest to kwiat, \\\r W przeciwnym razie zrób miód (bo to jest
+        plaster miodu)."
       grade3_ConditionalsElse_6: "Nie jestem pewien, ile nektaru ma ten kwiat, ale
-        wiem, że ma 1, 2 lub 3 nektary. \r \r Połącz bloki warunkowe (\"jeśli\" i/lub
-        \"jeśli-w przeciwnym razie\"), aby zebrać tylko tyle nektaru, ile ma kwiat.
-        \r \r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu
+        wiem, że ma 1, 2 lub 3 nektary. \\\r \\\r Połącz bloki warunkowe (\"jeśli\"
+        i/lub \"jeśli-w przeciwnym razie\"), aby zebrać tylko tyle nektaru, ile ma
+        kwiat. \\\r \\\r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu
         łamigłówki!"
-      grade3_ConditionalsElse_7: "Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \r \r Ukończ
-        funkcję \"check purple flower\" (sprawdź fioletowy kwiat) i użyj jej, by zebrać
-        cały nektar z kwiatów."
+      grade3_ConditionalsElse_7: "Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \\\r \\\r
+        Ukończ funkcję \"check purple flower\" (sprawdź fioletowy kwiat) i użyj jej,
+        by zebrać cały nektar z kwiatów."
       grade3_ConditionalsElse_8: "Wypełnij wnętrze funkcji \"check flower make honey\"
-        (sprawdź kwiat zrób miód). \r \r Twoja funkcja powinna sprawdzać, czy fioletowy
-        kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \r Następnie. przejdź dalej
-        i zrób miód."
+        (sprawdź kwiat zrób miód). \\\r \\\r Twoja funkcja powinna sprawdzać, czy
+        fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\\r Następnie.
+        przejdź dalej i zrób miód."
       grade3_ConditionalsElse_9: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym
-        nektarem lub plaster miodu, który potrzebuje jednego miodu.  \r \r Ukończ
+        nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\\r \\\r Ukończ
         funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie
-        zbierz nektar i miód. \r\n"
+        zbierz nektar i miód. \\\r"
       grade3_ConditionalsElse_TeacherIDo: "To może być kwiat lub plaster miodu pod
-        każdą z tych chmurek. \r \r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać
-        nektar, jeśli jest to kwiat, \r W przeciwnym razie zrób miód (bo to jest plaster
-        miodu)."
-      grade3_Conditionals_1: "Jestem głodną pszczółką! \r\r\r Pomóż mi zebrać cały
-        nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
-      grade3_Conditionals_10: "Wiele się tutaj dzieje!\r \r Skorzystaj z tego, czego
-        się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód."
-      grade3_Conditionals_11: "Połączmy wszystko razem!\r\n\r\nWykorzystaj to, czego
-        nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów, które
-        go mają, używając jak najmniejszej liczby bloków. \r\n\r\nNie zapomnij na
-        koniec zrobić miodu."
-      grade3_Conditionals_12: "Te schody wyglądają znajomo. \r \r Czy potrafisz zebrać
-        nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej
+        każdą z tych chmurek. \\\r \\\r Użyj bloku \"jeśli-w przeciwnym razie\", by
+        zebrać nektar, jeśli jest to kwiat, \\\r W przeciwnym razie zrób miód (bo
+        to jest plaster miodu)."
+      grade3_Conditionals_1: "Jestem głodną pszczółką! \\\r\\\r\\\r Pomóż mi zebrać
+        cały nektar z kwiatów, używając możliwie najmniejszej liczby bloków."
+      grade3_Conditionals_10: "Wiele się tutaj dzieje!\\\r \\\r Skorzystaj z tego,
+        czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód."
+      grade3_Conditionals_11: "Połączmy wszystko razem!\\\r\n\\\r\nWykorzystaj to,
+        czego nauczyłeś się wcześniej aby pomóc mi zebrać nektar tylko z tych kwiatów,
+        które go mają, używając jak najmniejszej liczby bloków. \\\r\n\\\r\nNie zapomnij
+        na koniec zrobić miodu."
+      grade3_Conditionals_12: "Te schody wyglądają znajomo. \\\r \\\r Czy potrafisz
+        zebrać nektar tylko z tych kwiatów, które go mają, używając możliwie najmniejszej
         liczby bloków?"
-      grade3_Conditionals_13: "**Sprawdzian:** Zbierz cały nektar. \r\nUważaj, aby
+      grade3_Conditionals_13: "**Sprawdzian:** Zbierz cały nektar. \\\r\nUważaj, aby
         nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
-      grade3_Conditionals_2: "Patrz na cały nektar! \r \r Pomóż mi zebrać nektar i
-        zrobić miód używając możliwie najmniejszej liczby bloków.  "
-      grade3_Conditionals_3: "Te magiczne, fioletowe kwiatki się zmieniają!\r\n\r\nZa
+      grade3_Conditionals_2: "Patrz na cały nektar! \\\r \\\r Pomóż mi zebrać nektar
+        i zrobić miód używając możliwie najmniejszej liczby bloków.  "
+      grade3_Conditionals_3: "Te magiczne, fioletowe kwiatki się zmieniają!\\\r\n\\\r\nZa
         każdym razem, gdy próbujesz rozwiązać zagadkę, kwiatki mogą mieć zarówno 1
-        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\r\n\r\nBądź
-        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\r\nMusisz
+        nektar jak i żadnego... nie dowiesz się tego, póki nie uruchomisz kodu!\\\r\n\\\r\nBądź
+        ostrożny, nie zbieraj nektaru z fioletowych kwiatków, jeśli nie mają żadnego.\\\r\nMusisz
         sprawdzić czy nektar w kwiatku jest równy 1, aby to zrobić użyj bloku `if
         nectar`."
-      grade3_Conditionals_8: "Jestem ciekaw, co tutaj jest! \r \r pomóż mi oblecieć
+      grade3_Conditionals_8: "Jestem ciekaw, co tutaj jest! \\\r \\\r pomóż mi oblecieć
         cały teren i zebrać nektar tylko z kwiatów, które go mają. "
-      grade3_Debugging_1: "Te bloki naprawdę mnie męczą! \r\r\nNapraw błędy, aby zebrać
+      grade3_Debugging_1: "Te bloki naprawdę mnie męczą! \\\r\\\r\nNapraw błędy, aby
+        zebrać cały nektar."
+      grade3_Debugging_6: "Jakie słodkie wyzwanie! \\\r \\\r Napraw błędy, aby zebrać
         cały nektar."
-      grade3_Debugging_6: "Jakie słodkie wyzwanie! \r \r Napraw błędy, aby zebrać
-        cały nektar."
-      grade3_Debugging_9: "Pszczółka cierpliwa w tej łamigłówce! \r \r Musisz naprawić
-        kilka miejsc w tym programie, aby zebrać cały nektar i zrobić miód."
-      grade3_Loops_10: "Jaka pracowita pszczółka! \r \r \nPomóż pszczółce zebrać cały
-        nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby bloków."
-      grade3_Loops_11: "Kształt tej drogi jest inny od pozostałych. \r \r \nCzy potrafisz
-        zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
+      grade3_Debugging_9: "Pszczółka cierpliwa w tej łamigłówce! \\\r \\\r Musisz
+        naprawić kilka miejsc w tym programie, aby zebrać cały nektar i zrobić miód."
+      grade3_Loops_10: "Jaka pracowita pszczółka! \\\r \\\r \nPomóż pszczółce zebrać
+        cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby
+        bloków."
+      grade3_Loops_11: "Kształt tej drogi jest inny od pozostałych. \\\r \\\r \nCzy
+        potrafisz zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
       grade3_Loops_3: Użyj pętli "powtórz", by zebrać cały nektar.
       grade3_Loops_4: Teraz użyj nowego bloku "powtórz", aby zebrać cały nektar i
         zrobić cały miód.
-      grade3_Loops_6: "Ile razy w tej łamigłówce pomogły Ci pętle? \r \r Pętle to
-        Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę
+      grade3_Loops_6: "Ile razy w tej łamigłówce pomogły Ci pętle? \\\r \\\r Pętle
+        to Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę
         za pomocą możliwie najmniejszej liczby bloków."
-      grade3_Loops_7: "Te kwiaty wyglądaj smacznie! \r \r Zbierz nektar z każdego
+      grade3_Loops_7: "Te kwiaty wyglądaj smacznie! \\\r \\\r Zbierz nektar z każdego
         z kwiatów używając możliwie najmniejszej liczby bloków."
-      grade3_Loops_TeacherIDo: "Te kwiaty wyglądaj smacznie! \r \r Zbierz nektar z
-        każdego z kwiatów używając możliwie najmniejszej liczby bloków."
-      grade3_bee_conditionals_quantum2: "Więcej chmur!  \r \r Sprawdź, czy pod każdą
-        z nich jest kwiat zanim zbierzesz nektar. \r \r Pamiętaj: nie wszystkie chmurki
-        coś ukrywają!"
+      grade3_Loops_TeacherIDo: "Te kwiaty wyglądaj smacznie! \\\r \\\r Zbierz nektar
+        z każdego z kwiatów używając możliwie najmniejszej liczby bloków."
+      grade3_bee_conditionals_quantum2: "Więcej chmur!  \\\r \\\r Sprawdź, czy pod
+        każdą z nich jest kwiat zanim zbierzesz nektar. \\\r \\\r Pamiętaj: nie wszystkie
+        chmurki coś ukrywają!"
       grade3_maze_loops2: "Doprowadź mnie do słonecznika używając możliwie najmniejszej
-        liczby bloków! \r \r Spróbuj użyć pętli \"powtórz\" wewnątrz innej pętli,
+        liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz innej pętli,
         aby zmniejszyć liczbę potrzebnych bloków."
       grade3_maze_nestedLoops4: W tej łamigłówce, dwie pętle "powtórz" pomogą Ci dotrzeć
         do świnki za pomocą najmniejszej liczby bloków!
       grade4_arist_nested_loop_circles1: "**Sprawdzian:** Użyj zagnieżdżonej pętli,
         aby ukończyć wzór."
       grade4_arist_nested_loop_flags1: Umieść w pętli dany kod, aby utworzyć wiatrak.
-      grade4_arist_nested_loop_polygons1: "Powtórz ten wzór 10 razy. \r \r O ile trzeba
-        skręcić w każdym obrocie pętli?"
-      grade4_arist_nested_loop_polygons2: "Powtórz ten wzór 6 razy. \r \r O ile trzeba
-        skręcić w każdym obrocie pętli? "
+      grade4_arist_nested_loop_polygons1: "Powtórz ten wzór 10 razy. \\\r \\\r O ile
+        trzeba skręcić w każdym obrocie pętli?"
+      grade4_arist_nested_loop_polygons2: "Powtórz ten wzór 6 razy. \\\r \\\r O ile
+        trzeba skręcić w każdym obrocie pętli? "
       grade4_arist_nested_loop_squares1: "Czy potrafisz narysować te 10 kwadratów
-        na tym chodniku przy użyciu zagnieżdżonej pętli? \r\rKażdy kwadrat ma bok
-        długości 30 pikseli."
+        na tym chodniku przy użyciu zagnieżdżonej pętli? \\\r\\\rKażdy kwadrat ma
+        bok długości 30 pikseli."
       grade4_arist_nested_loop_triangles2: "Teraz umieść tę pętlę wewnątrz innej pętli,
-        by narysować 10 trójkątów. \r To się nazywa \"zagnieżdżona\" pętla.  "
+        by narysować 10 trójkątów. \\\r To się nazywa \"zagnieżdżona\" pętla.  "
       grade4_arist_nested_loop_triangles3: Czy potrafisz narysować sześciokąt powtarzając
         kod trójkąta?
       grade4_arist_nested_loop_triangles4: Narysuj zęby w paszczy aligatora!
       grade4_arist_nested_loop_triangles5: "Utwórz słońce zagnieżdżając początkowy
-        kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz
-        musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem skrętu."
+        kod w innej pętli. \\\r \\\r Aby utworzyć ten fajny wzór z pustym środkiem,
+        będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem
+        skrętu."
       grade4_arist_nested_loop_triangles6: Czy potrafisz narysować tych 36 trójkątów
         za pomocą zagnieżdżonej pętli?
-      grade4_artist_functions2: "Funkcje umożliwiają definiowanie nowych bloków! \r
-        \r Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie \"draw
-        a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji, aby narysować okulary.
-        \r \r Kwadraty są oddalone od siebie o 75 pikseli."
+      grade4_artist_functions2: "Funkcje umożliwiają definiowanie nowych bloków! \\\r
+        \\\r Przenieśliśmy bloki służące do rysowania kwadratu do funkcji o nazwie
+        \"draw a square\" (rysuj kwadrat). Tym razem, użyj tej funkcji, aby narysować
+        okulary. \\\r \\\r Kwadraty są oddalone od siebie o 75 pikseli."
       grade4_artist_nested_loop_circles1: "**Sprawdzian:** Użyj zagnieżdżonej pętli,
         aby ukończyć wzór."
       grade4_artist_nested_loop_flags1: Umieść w pętli dany kod, aby utworzyć wiatrak.
-      grade4_artist_nested_loop_polygons1: "Powtórz ten wzór 10 razy. \r \r O ile
-        trzeba skręcić w każdym obrocie pętli?"
+      grade4_artist_nested_loop_polygons1: "Powtórz ten wzór 10 razy. \\\r \\\r O
+        ile trzeba skręcić w każdym obrocie pętli?"
       grade4_artist_nested_loop_squares1: "Czy potrafisz narysować te 10 kwadratów
-        na tym chodniku przy użyciu zagnieżdżonej pętli? \r\rKażdy kwadrat ma bok
-        długości 30 pikseli."
+        na tym chodniku przy użyciu zagnieżdżonej pętli? \\\r\\\rKażdy kwadrat ma
+        bok długości 30 pikseli."
       grade4_artist_nested_loop_triangles1: "Uzupełnij kod do rysowania tych trójkątów.
         \ Pierwszy z nich już wykonano dla Ciebie.  Wskazówka: 3 trójkąty w rotacji
-        360 stopni.\r\r\n"
+        360 stopni.\\\r\\\r"
       grade4_artist_nested_loop_triangles5: "Utwórz słońce zagnieżdżając początkowy
-        kod w innej pętli. \r \r Aby utworzyć ten fajny wzór z pustym środkiem, będziesz
-        musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem skrętu."
+        kod w innej pętli. \\\r \\\r Aby utworzyć ten fajny wzór z pustym środkiem,
+        będziesz musiał skoczyć do przodu na długość boku trójkąta przed wykonaniem
+        skrętu."
       grade4_artist_nested_loop_triangles6: Czy potrafisz narysować tych 36 trójkątów
         za pomocą zagnieżdżonej pętli?
       grade4_artist_parameters_triangles2: Czy zauważyłeś jakieś różnice w tych blokach
         funkcji? Kliknij przycisk "Uruchom", aby zobaczyć co się dzieje.
-      grade4_bee_conditionals_nested_loops: "**Sprawdzian:** Zbierz cały nektar. \r\nUważaj,
+      grade4_bee_conditionals_nested_loops: "**Sprawdzian:** Zbierz cały nektar. \\\r\nUważaj,
         aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
-      grade4_bee_conditionals_new1: "**Sprawdzian:** Zbierz cały nektar. \r\nUważaj,
+      grade4_bee_conditionals_new1: "**Sprawdzian:** Zbierz cały nektar. \\\r\nUważaj,
         aby nie próbować zbierać nektaru z fioletowego kwiatka, jeśli go nie ma."
-      grade4_bee_conditionals_quantum2: "Więcej chmur!  \r \r Sprawdź, czy pod każdą
-        z nich jest kwiat zanim zbierzesz nektar. \r \r Pamiętaj: nie wszystkie chmurki
-        coś ukrywają!"
+      grade4_bee_conditionals_quantum2: "Więcej chmur!  \\\r \\\r Sprawdź, czy pod
+        każdą z nich jest kwiat zanim zbierzesz nektar. \\\r \\\r Pamiętaj: nie wszystkie
+        chmurki coś ukrywają!"
       grade4_bee_conditionals_quantum5: "To może być kwiat lub plaster miodu pod każdą
-        z tych chmurek. \r \r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać nektar,
-        jeśli jest to kwiat, \r W przeciwnym razie zrób miód (bo to jest plaster miodu)."
+        z tych chmurek. \\\r \\\r Użyj bloku \"jeśli-w przeciwnym razie\", by zebrać
+        nektar, jeśli jest to kwiat, \\\r W przeciwnym razie zrób miód (bo to jest
+        plaster miodu)."
       grade4_bee_functions2: "Funkcje są blokami kodu, które wykonują określone zadanie.
-        \r\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
+        \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       grade4_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej
         łamigłówce.
       grade4_bee_nestedLoops4: "Zbierz cały nektar z każdego kwiatka i zrób miód na
-        plastrze miodu. \r \r Użyj zagnieżdżonej pętli. "
+        plastrze miodu. \\\r \\\r Użyj zagnieżdżonej pętli. "
       grade4_frozen_freeplay: Oficjalnie stałeś się mistrzem artystą! Utwórz zimową
         krainę cudów.
       grade4_frozen_functions0: Okrąg ma specjalny kształt. Czy domyślisz się, jaką
@@ -1575,14 +1612,14 @@ pl:
       grade4_frozen_square_loop3: Czy potrafisz narysować śnieżynkę używając bloku
         "powtórz", powtarzając tworzenie kwadratu 10 razy i bloku "skręć" aby obrócić
         się o 36 stopni po każdym kwadracie?
-      grade4_review_artist2: "Ten dom potrzebuje dachu! Narysuj trójkąt. \r\n\r\nWskazówka:\nwszystkie
-        boki mają taką samą długość.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
+      grade4_review_artist2: "Ten dom potrzebuje dachu! Narysuj trójkąt. \\\r\n\\\r\nWskazówka:\nwszystkie
+        boki mają taką samą długość.\\\r\n\\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
       grade4_review_artist3: Blok "skocz" przesuwa artystę bez rysowania. Narysuj
         linię przerywaną za pomocą obu bloków, "skocz do przodu" i "idź do przodu".
         Każda linia ma długość 50 pikseli.
       grade4_review_bee1: Teraz użyj nowego bloku "powtórz", aby zebrać cały nektar
         i zrobić cały miód.
-      grade4_review_bee3: "Jaka pracowita pszczółka! \r \r \nPomóż pszczółce zebrać
+      grade4_review_bee3: "Jaka pracowita pszczółka! \\\r \\\r \nPomóż pszczółce zebrać
         cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby
         bloków."
       grade5_artist_for_loops1: Użyj pętli "dla", aby narysować ten trójkąt, który
@@ -1592,42 +1629,44 @@ pl:
         nauczyłeś się, aby utworzyć ten obraz złożony z wielokątów, każdy z bokami
         o długości 40 pikseli?"
       grade5_artist_for_loops5: "Tylko jedna niewielka zmiana kodu ostatniego obrazu
-        spowoduje utworzenie tego obrazu. Czy mógłbyś określić, co to za zmiana?\r\n\r\nWskazówka:
+        spowoduje utworzenie tego obrazu. Czy mógłbyś określić, co to za zmiana?\\\r\n\\\r\nWskazówka:
         Powinieneś coś usunąć!"
       grade5_artist_parameters_triangles2a: Czy zauważyłeś jakieś różnice w tych blokach
         funkcji? Kliknij przycisk "Uruchom", aby zobaczyć co się dzieje.
-      grade5_artist_variables_hexagons1: "Spróbuj ponownie. \r \r Czy mógłbyś ustawić
-        wartość zmiennej \"length\" (długość) na 60, aby utworzyć ten fajny wzór z
-        sześciokątów?"
+      grade5_artist_variables_hexagons1: "Spróbuj ponownie. \\\r \\\r Czy mógłbyś
+        ustawić wartość zmiennej \"length\" (długość) na 60, aby utworzyć ten fajny
+        wzór z sześciokątów?"
       grade5_artist_variables_pentagon9: Zmodyfikuj algorytm z poprzedniej łamigłówki
         i utwórz pięciokąt o bokach długości 150.
       grade5_artist_variables_pentagons1: "Narysuj ten wzór pięciokątów o bokach 100
         pikseli ustalając odpowiednią wartość zmiennej \"length\" (długość) i umieszczając
-        tę zmienną w odpowiednich miejscach. \r \r Zauważ, że tylko raz musisz ustalić
-        wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości."
+        tę zmienną w odpowiednich miejscach. \\\r \\\r Zauważ, że tylko raz musisz
+        ustalić wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości."
+      grade5_bee_for_loops4: Pomóż pszczółce zebrać cały nektar.
       grade5_bee_parameters_new8a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_bee_parameters_new9a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_playlab_variables13: Użyj bloku "kiedy postać dotyka", by wysłać Psa
         z powrotem do góry po lewej tylko wtedy, kiedy dotknie on jakąkolwiek inną
         postać.
       grade5_playlab_variables2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
-        Zmień wartość zmiennej "dog_speed" (prędkość psa), aby być pewnym, że możesz
+        Zmień wartość zmiennej "dog\_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
       grade5_playlab_variables9: "Mamy tu funkcję, która nosi nazwę \"patrol\" (patrol).
-        \r \r\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400 pikseli
-        w dół."
-      level 'grade3_Loops_10: "Jaka pracowita pszczółka! \r \r \nPomóż pszczółce zebrać
-        cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej liczby
-        bloków."
-      level 'grade3_Loops_11: "Kształt tej drogi jest inny od pozostałych. \r \r \nCzy
-        potrafisz zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
+        \\\r \\\r\nZmień ją tak, by Kot poruszał się 400 pikseli w górę, po czym 400
+        pikseli w dół."
+      level 'grade3_Loops_10: "Jaka pracowita pszczółka! \\\r \\\r \nPomóż pszczółce
+        zebrać cały nektar i zrobić cały miód z wykorzystaniem możliwie najmniejszej
+        liczby bloków."
+      level 'grade3_Loops_11: "Kształt tej drogi jest inny od pozostałych. \\\r \\\r
+        \nCzy potrafisz zebrać cały nektar używając możliwie najmniejszej liczby bloków?"
       level 'grade3_Loops_3: Użyj pętli "powtórz", by zebrać cały nektar.
       level 'grade3_Loops_4: Teraz użyj nowego bloku "powtórz", aby zebrać cały nektar
         i zrobić cały miód.
-      level 'grade3_Loops_5: "Jakie piękne pole kwiatów! \r \r\nPomóż pszczółce odwiedzić
-        każdy z nich. \r \r\nCzy potrafisz to zrobić za pomocą mniej niż 7 bloków?"
-      level 'grade3_Loops_6: "Ile razy w tej łamigłówce pomogły Ci pętle? \r \r Pętle
-        to Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę łamigłówkę
-        za pomocą możliwie najmniejszej liczby bloków."
-      level 'grade3_Loops_7: "Te kwiaty wyglądaj smacznie! \r \r Zbierz nektar z każdego
-        z kwiatów używając możliwie najmniejszej liczby bloków."
+      level 'grade3_Loops_5: "Jakie piękne pole kwiatów! \\\r \\\r\nPomóż pszczółce
+        odwiedzić każdy z nich. \\\r \\\r\nCzy potrafisz to zrobić za pomocą mniej
+        niż 7 bloków?"
+      level 'grade3_Loops_6: "Ile razy w tej łamigłówce pomogły Ci pętle? \\\r \\\r
+        Pętle to Twoi przyjaciele! Użyj możliwie najmniej z nich, aby ukończyć tę
+        łamigłówkę za pomocą możliwie najmniejszej liczby bloków."
+      level 'grade3_Loops_7: "Te kwiaty wyglądaj smacznie! \\\r \\\r Zbierz nektar
+        z każdego z kwiatów używając możliwie najmniejszej liczby bloków."

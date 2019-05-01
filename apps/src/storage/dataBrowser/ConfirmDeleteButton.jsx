@@ -42,6 +42,7 @@ class ConfirmDeleteButton extends React.Component {
           {...otherProps}
         />
         <button
+          type="button"
           id={this.props.buttonId}
           onClick={() => this.setState({open: true})}
           style={dataStyles.redButton}

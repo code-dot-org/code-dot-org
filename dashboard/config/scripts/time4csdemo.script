@@ -1,25 +1,151 @@
 stage_extras_available true
 has_lesson_plan true
 
+stage 'Programming: My Robotic Friends', flex_category: 'ramp_up'
+level 'courseB_unplugged_MRF_2018'
+
+stage 'Sequence in Maze', flex_category: 'ramp_up'
+level 'courseF_markdown_algorithms_intro'
+level 'courseD_video_ramp1_2018'
+level 'courseD_maze_ramp1_2018'
+level 'courseD_maze_ramp2_2018'
+level 'courseD_maze_ramp3_2018'
+level 'comment_intro_maze_2018'
+level 'courseD_maze_ramp4_2018'
+level 'courseD_maze_ramp5_2018'
+level 'courseD_maze_ramp5a_2018'
+level 'courseD_maze_ramp5b_2018', challenge: true
+level 'courseD_maze_ramp5c_2018'
+level 'courseD_maze_ramp5d_2018'
+level 'courseF_markdown_algorithms_end'
+
+stage 'Building a Foundation', flex_category: 'ramp_up'
+level 'BuildingAFoundation_2018'
+
+stage 'Debugging with Scrat', flex_category: 'ramp_up'
+level 'courseF_markdown_debugging_intro'
+level 'courseC_video_debugging_2018'
+level 'courseC_maze_debugging1_2018'
+level 'courseC_maze_debugging2_2018'
+level 'courseC_maze_debugging3_2018'
+level 'courseC_maze_debugging4_2018'
+level 'courseC_maze_debugging5_2018'
+level 'courseC_maze_debugging6_2018'
+level 'courseC_maze_debugging7_2018', challenge: true
+level 'courseC_maze_debugging8_predict1_2018', assessment: true
+level 'courseC_maze_debugging9_2018'
+level 'courseF_markdown_debugging_end'
+
+stage 'Programming in Artist', flex_category: 'ramp_up'
+level 'courseC_video_artist_2018'
+level 'courseC_artist_prog1_2018'
+level 'courseC_artist_prog2_2018'
+level 'courseC_artist_prog3_2018'
+level 'courseC_artist_prog4_2018'
+level 'courseC_artist_prog5_2018'
+level 'courseC_artist_prog6_2018'
+level 'courseC_artist_prog7_2018', challenge: true
+level 'courseC_artist_prog8_2018'
+level 'courseC_artist_prog6_predict1_2018', assessment: true
+bonus 'courseC_artist_prog_challenge1_2018'
+bonus 'courseC_artist_prog_challenge2a_2018'
+
+stage 'Loops: My Loopy Robotic Friends', flex_category: 'ramp_up'
+level 'courseB_unplugged_loopyMRF_2018'
+
+stage 'Loops in Artist', flex_category: 'ramp_up'
+level 'courseF_markdown_loops_intro'
+level 'ramp_video_artistIntro_2018'
+level 'ramp_artist_loops1_2018'
+level 'ramp_artist_loops2_2018'
+level 'ramp_video_loopsArtist_2018'
+level 'ramp_artist_loops3_2018'
+level 'ramp_artist_loops4_2018'
+level 'ramp_artist_loops5_2018'
+level 'ramp_artist_loops6_2018'
+level 'ramp_artist_loops7_2018'
+level 'ramp_artist_loops8_2018', challenge: true
+level 'ramp_artist_loops9_2018'
+level 'courseF_markdown_loops_end'
+
+stage 'Nested Loops in Bee/Zombie', flex_category: 'ramp_up'
+level 'courseD_bee_nestedLoops1a_2018'
+level 'courseD_bee_nestedLoops1_2018'
+level 'courseF_markdown_nestedloops_intro'
+level 'courseD_video_nestedLoops_2018'
+level 'courseD_bee_nestedLoops2_predict1_2018'
+level 'courseD_bee_nestedLoops2_2018'
+level 'courseD_maze_nestedLoops3_2018'
+level 'courseD_maze_nestedLoops4_2018'
+level 'courseD_maze_nestedLoops5_2018'
+level 'courseD_maze_nestedLoops6_2018'
+level 'courseD_bee_nestedLoops7_2018', challenge: true
+level 'courseD_bee_nestedLoops8_2018'
+level 'courseD_bee_nestedLoops9_2018'
+level 'courseD_bee_nestedLoops9_predict2_2018', assessment: true
+level 'courseF_markdown_nestedloops_end'
+
+stage 'Nested Loops with Frozen', flex_category: 'ramp_up'
+level 'courseD_artist_project1_2018'
+level 'courseD_artist_project2_2018'
+level 'courseD_artist_project3_2018'
+level 'courseD_artist_project4_2018'
+level 'courseD_artist_project5_2018'
+level 'courseD_artist_project1a_2018'
+level 'courseD_artist_project2a_2018'
+level 'courseD_artist_project3a_2018'
+level 'courseD_artist_project4a_2018'
+
+stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_sprites'
+level 'CourseEF_video_IntroSpriteLab'
+level 'Fish Tank 1-validated'
+level 'Fish Tank 2-validated'
+level 'Fish Tank 3-validated'
+level 'Fish Tank 4-validated'
+level 'CourseEF_video_MakeSprite'
+level 'Fish Tank 5-validated'
+level 'Fish Tank 6-validated'
+level 'Fish Tank 7-validated'
+
+stage 'Alien Dance Party with Sprite Lab', flex_category: 'csf_sprites'
+level 'Dance Party 1-validated'
+level 'Dance Party 2'
+level 'CDEF_video_SpritesInAction'
+level 'Dance Party 3'
+level 'Dance Party 4'
+level 'Dance Party 5'
+level 'Dance Party 6'
+level 'Dance Party 7'
+level 'Dance Party Freeplay'
+
+stage 'Pet Giraffe with Sprite Lab', flex_category: 'csf_sprites'
+level 'Virtual Pet 1'
+level 'Virtual Pet 2'
+level 'Virtual Pet 3'
+level 'Virtual Pet 4'
+level 'Virtual Pet 5'
+level 'Virtual Pet 6'
+level 'Virtual Pet Freeplay'
+
 stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c1_1'
-named_level 'timeforcs_demo_c1_2'
-named_level 'timeforcs_demo_c1_3'
-named_level 'timeforcs_demo_c1_4'
-named_level 'timeforcs_demo_c1_5_journal'
+level 'timeforcs_demo_c1_1', named: true
+level 'timeforcs_demo_c1_2', named: true
+level 'timeforcs_demo_c1_3', named: true
+level 'timeforcs_demo_c1_4', named: true
+level 'timeforcs_demo_c1_5_journal', named: true
 
 stage 'Crowdsourcing', flex_category: 'time4cs_c1'
 level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
 
 stage 'Everglades Habitats', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Reviewing Projects', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c3_1'
+level 'timeforcs_demo_c3_1', named: true
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
@@ -28,21 +154,21 @@ level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_c2_1', progression: 'Rubric'
 
 stage 'Food Chains', flex_category: 'time4cs_c2'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Conditionals with Cards', flex_category: 'time4cs_c2'
 level 'timeforcs_demo_conditionals', progression: 'Conditionals'
 
 stage 'Alligator Holes', flex_category: 'time4cs_c2'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Conditionals in Sprite Lab', flex_category: 'time4cs_c2'
 level 'timeforcs_demo_sl_1', progression: 'Engage'
@@ -54,3 +180,180 @@ level 'timeforcs_demo_sl_6', progression: 'Elaborate/Extend'
 level 'timeforcs_demo_sl_7', progression: 'Elaborate/Extend'
 level 'timeforcs_demo_sl_8', progression: 'Evaluate'
 level 'timeforcs_demo_sl_9', progression: 'Evaluate'
+
+stage 'Invasive Species', flex_category: 'time4cs_c3'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Events: The Big Event', flex_category: 'time4cs_c3'
+level 'BigEvent_2019'
+
+stage 'Build a Flappy Game', flex_category: 'time4cs_c3'
+level 'courseC_video_flappyIntro_2019', progression: 'Code Your Own Flappy Game'
+level 'courseC_flappy_events1_2019', progression: 'Practice'
+level 'courseC_flappy_events2_2019', progression: 'Practice'
+level 'courseC_flappy_events3_2019', progression: 'Practice'
+level 'courseC_flappy_events4_2019', progression: 'Practice'
+level 'courseC_flappy_events5_2019', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events6_2019', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events7_2019', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events8_2019', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events9_2019', progression: 'Mini-project: Flappy Game'
+level 'courseC_flappy_events10_2019', progression: 'Mini-project: Flappy Game'
+
+stage 'Build a Star Wars Game', flex_category: 'time4cs_c3'
+level 'courseE_video_StarWarsProject_2019', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_7_no_video', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_8', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_9', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_10', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_11', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_12', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_13', progression: 'Practice'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_14', progression: 'Practice'
+skin 'hoc2015'
+video_key_for_next_level 'starwars_blocks_congrats'
+level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
+
+stage 'I am in Big Trouble', flex_category: 'time4cs_c3'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Events in Sprite Lab', flex_category: 'time4cs_c3'
+level 'timeforcs_demo_sl_1', progression: 'Engage'
+level 'timeforcs_demo_sl_2', progression: 'Explore'
+level 'timeforcs_demo_sl_3', progression: 'Explore'
+level 'timeforcs_demo_sl_4', progression: 'Explain'
+level 'timeforcs_demo_sl_5', progression: 'Explain'
+level 'timeforcs_demo_sl_6', progression: 'Elaborate/Extend'
+level 'timeforcs_demo_sl_7', progression: 'Elaborate/Extend'
+level 'timeforcs_demo_sl_8', progression: 'Evaluate'
+level 'timeforcs_demo_sl_9', progression: 'Evaluate'
+
+stage 'Fishy Business', flex_category: 'time4cs_c4'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Broadcast a Message', flex_category: 'time4cs_c4'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Pythons & Mammals', flex_category: 'time4cs_c4'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Broadcast in Scratch', flex_category: 'time4cs_c4'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Current Solutions', flex_category: 'time4cs_c5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Functions: Songwriting', flex_category: 'time4cs_c5'
+level 'SongwritingParameters_2019'
+
+stage 'Functions in Minecraft', flex_category: 'time4cs_c5'
+level 'MC_HOC_2017_01_RETRY_2019', progression: 'Practice'
+level 'MC_HOC_2017_02_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_03_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_04_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_04POINT5_RYAN_2019', progression: 'Practice'
+level 'MC_HOC_2017_05_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_06_Cole_2019', progression: 'Practice'
+level 'Function intro Ryan_2019', progression: 'Practice'
+level 'MC_HOC_2017_07_Cole_2019', progression: 'Practice'
+level 'MC_HOC_2017_10_RETRY_2019', progression: 'Practice'
+level 'MC_HOC_2017_Ali_2019', progression: 'Practice'
+level 'MC_HOC_2017_FP20x20_2019', progression: 'Free Play'
+
+stage 'Functions in Harvester', flex_category: 'time4cs_c5'
+level 'harvester_skinOverview_video_2019', progression: 'The Harvester'
+level 'courseE_farmer_functions1_2019', progression: 'Practice'
+level 'courseE_farmer_functions1a_2019', progression: 'Practice'
+level 'courseE_farmer_functions2b_2019', progression: 'Practice'
+level 'courseE_farmer_functions2ba_2019', progression: 'Practice'
+level 'courseE_farmer_functions3c_2019', progression: 'Practice'
+level 'courseE_farmer_functions3c1_2019', progression: 'Practice'
+level 'courseE_video_createFunctions2_2019', progression: 'How to Create a Simple Function'
+level 'courseE_farmer_functions7a1_2019', progression: 'Practice'
+level 'courseE_farmer_functions8a1_2019', progression: 'Practice'
+level 'courseE_farmer_functions9a1_2019', progression: 'Practice'
+level 'courseE_farmer_functions10a1_2019', progression: 'Challenge', challenge: true
+level 'courseE_farmer_functions13_2019', progression: 'Practice'
+level 'courseE_farmer_functions11_predict_2019', progression: 'Prediction'
+
+stage 'Functions in Artist', flex_category: 'time4cs_c5'
+level 'courseE_artist_functions_predict1_2019', progression: 'Prediction'
+level 'courseE_artist_functions2_2019', progression: 'Practice'
+level 'courseE_artist_functions3_2019', progression: 'Practice'
+level 'courseE_artist_functions5_2019', progression: 'Practice'
+level 'courseE_artist_functions7_2019', progression: 'Practice'
+level 'courseE_artist_functions8a_2019', progression: 'Practice'
+level 'courseE_artist_functions8b_2019', progression: 'Practice'
+level 'courseE_artist_functions8c_2019', progression: 'Practice'
+level 'courseE_artist_functions8_2019', progression: 'Practice'
+level 'courseE_artist_functions9_2019', progression: 'Challenge', challenge: true
+level 'courseE_artist_functions10_2019', progression: 'Practice'
+level 'courseE_artist_functions_predict2_2019', progression: 'Prediction'
+level 'courseE_artist_functionsProj_2019', progression: 'Practice'
+bonus 'courseE_artist_functions_challenge1_2019'
+bonus 'courseE_artist_functions_challenge2_2019'
+
+stage 'Determine the Concept', flex_category: 'time4cs_c5'
+level 'courseE_bee_concept1_2018'
+level 'courseE_farmer_concept1_2018'
+level 'courseE_bee_concept2_2018'
+level 'courseE_bee_concept3_2018'
+level 'courseE_artist_concept1_2018'
+level 'courseE_bee_concept4_2018'
+level 'courseE_farmer_concept2_2018'
+level 'courseE_bee_concept5_2018'
+level 'courseE_farmer_concept3_2018'
+level 'courseE_artist_concept4_2018'
+bonus 'courseE_artist_concept_challenge1_2018'
+bonus 'courseE_artist_concept_challenge2_2018'
+
+stage 'Debate', flex_category: 'time4cs_c5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
+
+stage 'Functions in Sprite Lab', flex_category: 'time4cs_c5'
+level 'behaviors 1', progression: 'Prediction'
+level 'behaviors 2', progression: 'Practice'
+level 'behaviors 3', progression: 'Practice'
+level 'behaviors 4', progression: 'Practice'
+level 'behaviors 5', progression: 'Practice'
+level 'behaviors 6', progression: 'Challenge', challenge: true

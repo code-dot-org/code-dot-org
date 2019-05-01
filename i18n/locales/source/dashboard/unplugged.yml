@@ -444,14 +444,23 @@ en:
         title: It's Great to Create and Play Fair
         desc: Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the creative process of sharing and inspiration.  Along with that comes the promotion of creative expression and the need to be fair with creative work.
       GraphingData_2019:
-        title: Graphing Data
-        desc: " In this lesson, students will collect data from a Play Lab project or real world scenario and use it to make predictions."
+        title: Picturing Data
+        desc: In this lesson, students will collect data from a Play Lab project or real world scenario and use it to make predictions.
       courseE_unplugged_accessAbility_2019:
         title: Access Ability
         desc: Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.
       courseE_simon_says_2019:
         title: Simon Says
-        desc: Play a game and think about what commands are needed to get the right result.
+        desc: "Play a game and think about what commands are needed to get the right result.\r\n\r\n![test image](https://code.org/images/logo.png)"
       courseB_unplugged_passwords_2019:
         title: Powerful Passwords
         desc: Explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+        desc: '_Josh note: in contrast with the first lesson, I''ve formatted this one just like a typical unplugged lesson._'
+      timeforcs_demo_conditionals:
+        title: Conditionals
+        desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
+      TheRightApp_2019:
+        title: The Right App
+        desc: "* Everyone uses computers these days, especially smartphones. \r\n* Smartphone applications, or \"apps\", help people do things like talk to friends, listen to music, shop, or just explore the web.\r\n* It is important for programmers to understand others' needs and design apps with them in mind!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -127,11 +127,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
 
     refute fit_enrollment.should_send_exit_survey?
-
-    csf_201_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_201
-    csf_201_enrollment = create :pd_enrollment, user: create(:teacher), workshop: csf_201_workshop
-
-    refute csf_201_enrollment.should_send_exit_survey?
   end
 
   test 'send_exit_survey does not send mail when the survey was already sent' do

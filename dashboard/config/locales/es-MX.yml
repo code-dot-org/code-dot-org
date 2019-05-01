@@ -11,7 +11,7 @@ es-MX:
         Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón
         "Revisar términos actualizados" cerca de la parte superior de la página de
         inicio de Code Studio.
-      pair_programmer: En este momento, estás programando en pareja con un estudiante
+      pair_programmer: En este momento, estás programando de a pares con un estudiante
         que no tiene acceso a este contenido. Para acceder a este contenido, detén
         la programación en pareja e inténtalo nuevamente.
   activerecord:
@@ -297,7 +297,7 @@ es-MX:
       section_not_found: No pudimos encontrar una sección con el código '%{section_code}'.
       blank_code: Ingresa un código de sección
       cant_join_own_section: Lo sentimos, no te puedes unir a tu propia sección.
-      provider_managed_section: No puedes unirte a esta sección porque está a cargo
+      provider_managed_section: No puedes unirte a esta sección, porque está a cargo
         de otro proveedor. Consulta con tu docente para que te agregue a través de
         %{provider} y vuelve a sincronizar la sección.
     mail:
@@ -339,7 +339,7 @@ es-MX:
         artist: Dibuja algo
         applab: Crear una aplicación en el Laboratorio de aplicaciones
         gamelab: Crear un proyecto en el Laboratorio de juegos
-        weblab: Crear un proyecto en el Laboratorio web (beta)
+        weblab: Crear un proyecto en el Laboratorio Web (beta)
       my_dashboard: Mi panel de control
       course_catalog: Catálogo de cursos
       project_gallery: Proyectos
@@ -378,7 +378,7 @@ es-MX:
     user:
       classroom: Página de inicio del maestro
       district_dashboard: Panel del distrito
-      label: Hola %{username}
+      label: Hola, %{username}
       stats: Code Studio
       settings: Configuración de la cuenta
       logout: Cerrar sesión
@@ -391,7 +391,7 @@ es-MX:
       navigator: Socio
       create: Crear
       algebra_game: Álgebra
-      applab: Laboratorio de App
+      applab: Laboratorio de aplicaciones
       artist: Artista
       artist_k1: Artista ( Pre-lector)
       basketball: Baloncesto
@@ -415,7 +415,8 @@ es-MX:
       playlab: Laboratorio de juegos
       playlab_k1: Play Lab ( Pre-lector)
       scratch: Scratch
-      sports: Спорт
+      sports: Deportes
+      spritelab: Laboratorio de sprites
       starwars: Star Wars
       starwarsblocks: Star Wars (bloques)
       starwarsblocks_hour: Star Wars (bloques)
@@ -430,7 +431,7 @@ es-MX:
       puzzle_map: Etapas
       prizes: "¡Recoger todos los %{total_trophies} trofeos y ganar premios!"
       prize_earned: Haz recogido los %{total_trophies} trofeos. ¡Ganaste un premio!
-      prize_us_only: "(para estudiantes de EE. UU. únicamente)"
+      prize_us_only: "(para estudiantes de los EE. UU. únicamente)"
       prizes_link: más información
   teacher:
     answer: Respuesta
@@ -472,14 +473,14 @@ es-MX:
     delete: Eliminar cuenta
     delete_text: Al eliminar tu cuenta, borrarás toda la información y el progreso
       asociados.
-    delete_text_teacher_managed_note: No tienes permiso para eliminar esta cuenta
-      por que es administrada por tu docente. Necesitas que tu docente la elimine
-      primero desde su cuenta.
+    delete_text_teacher_managed_note: No tienes permiso para eliminar esta cuenta,
+      porque es administrada por tu docente. Necesitas que tu docente la elimine primero
+      desde su cuenta.
     delete_text_teacher_note: 'Nota: Al eliminar tu cuenta no eliminarás la cuenta
       de tus alumnos.'
     delete_confirm: "¿Está seguro de que desea eliminar su cuenta?"
     deleted_user: usuario eliminado
-    no_password_because_oauth: No necesitas contraseña porque iniciaste sesión con
+    no_password_because_oauth: No necesitas contraseña, porque iniciaste sesión con
       un proveedor externo.
     no_password_because_sponsored: Habla con tu docente para administrar tu contraseña.
     create_personal_login: Crea un inicio de sesión propio con contraseña
@@ -499,7 +500,7 @@ es-MX:
       de Code.org. Confirmo que tengo el permiso de mis padres o de mi tutor legal
       para usar los servicios de Code.org, incluso sin asistencia de un docente.
     create_personal_login_email_note: 'Importante: las direcciones de correo electrónico
-      no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes.
+      no se almacenan de forma tal que nos permitan ponernos en contacto con los estudiantes.
       Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en
       caso de que necesiten recuperar la contraseña. Consulta nuestra <a href=''%{privacy_policy_url}'',
       target=''_blank''>política de privacidad</a> para obtener más información.'
@@ -521,13 +522,13 @@ es-MX:
     lines_of_code: "%{lines_count} LÍNEAS DE CÓDIGO ESCRITAS POR ESTUDIANTES"
     lines_of_code_linebreak: "%{lines_count} LÍNEAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
       MILLONES DE ALUMNOS"
-    all_courses: Descripción de los cursos 1, 2 y 3
+    all_courses: Descripción general de los cursos 1, 2 y 3
     lesson_plans: Planes de estudio
     signin_message: "¿Ya estás registrado? %{link}"
     student_reg_link: Registrarse como estudiante
     teacher_reg_link: Registro de maestros
-    signin_directions: Usa una cuenta para ver tu progreso.<br/> Si eres docente puedes
-      seguir el progreso de toda tu clase.
+    signin_directions: Usa una cuenta para ver tu progreso.<br/> Si eres docente,
+      puedes seguir el progreso de toda tu clase.
     teacher_dashboard: Ver el panel de progreso
     teacher_student_count_one: Tienes %{count} estudiantes.
     teacher_student_count: Tienes %{count} estudiantes.
@@ -575,13 +576,13 @@ es-MX:
     announcement_title: Anuncios
     announcement_message_fall2016_features: Nos tomamos el verano para convertir tus
       comentarios en nuevas características. Ahora, puedes <a href="%{pp_url}" target="_blank">seguir
-      el progreso de varios estudiantes</a>, aún si programan en parejas en un mismo
+      el progreso de varios estudiantes</a>, aun si programan en parejas en un mismo
       dispositivo. Puedes usar <a href="%{csp_widgets_url}" target="_blank">las mejores
       herramientas interactivas</a> de nuestro curso de Principios de Ciencias de
       la Computación en <i>cualquier</i> aula. ¡Y tus estudiantes pueden <a href="%{unused_code_url}"
       target="_blank">mantener código sin usar</a> en sus espacios de trabajo para
-      experimentar cada vez más! Echa un vistazo a las nuevas características y déjanos
-      saber qué piensas de ellas.
+      experimentar cada vez más! Echa un vistazo a las nuevas características y cuéntanos  qué
+      piensas de ellas.
     announcement_csp_widgets_message: "¿Estás buscando maneras divertidas de enseñar
       cómo funciona Internet, por qué la criptografía mantiene seguros los datos y
       otros conceptos a tus estudiantes? ¡Hemos tomado las mejores herramientas interactivas
@@ -593,14 +594,14 @@ es-MX:
     announcement_watch_video_button: Ver el video
     announcement_petition: Como docente, estás liderando un movimiento para brindar
       a cada estudiante, de cada escuela, la oportunidad de aprender ciencias de la
-      computación. Ahora, es tiempo de que tus representantes te escuchen. Esta semana,
+      computación. Ahora es tiempo de que tus representantes te escuchen. Esta semana,
       líderes de la educación, 28 gobernadores y CEO de las compañías más grandes
-      de EE. UU. pidieron al Congreso de ese país, a través de una carta abierta,
+      de los EE. UU. pidieron al Congreso de ese país, a través de una carta abierta,
       que financie la enseñanza de ciencias de la computación a niños de escuelas
       primarias y secundarias.
     announcement_petition_button: Agrega tu nombre
     announcement_go_beyond_button: Ir más allá
-    announcement_apply_now: Aplicar
+    announcement_apply_now: Enviar solicitud
     announcement_all: Conoce las nuevas características y actualizaciones en nuestro
       blog para docentes. <a href='%{teacher_blog_url}' target='_blank'>Mira los anuncios
       anteriores.</a>
@@ -652,7 +653,7 @@ es-MX:
       el próximo video viral de Code.org, para alentar a otros compañeros a que completen
       el examen del curso este año. Invitamos a todos los estudiantes de Principios
       Avanzados de Ciencias de la Computación a enviar un video de 10-20 segundos
-      con el mensaje: "Estoy tomando el examen #APCSP porque..." en Twitter, Instagram
+      con el mensaje: "Estoy tomando el examen #APCSP, porque..." en Twitter, Instagram
       o Facebook. ¡Los mejores serán incluidos en nuestro video y los estudiantes
       ganadores recibirán regalos de Code.org!'
     announcement_apcsp_recruitment2: 'Este año, el examen de Principios Avanzados
@@ -705,7 +706,7 @@ es-MX:
     student_not_found: No se pudo encontrar a uno o más estudiantes.
     all_students_must_be_in_current_section: Todos los estudiantes deben estar inscritos
       en tu sección.
-    already_enrolled_in_new_section: No puedes mover a estos estudiantes porque ya
+    already_enrolled_in_new_section: No puedes mover a estos estudiantes, porque ya
       están en la nueva sección.
     third_party_login: No puedes mover estudiantes a una sección sincronizada con
       una herramienta de otro proveedor.
@@ -841,7 +842,7 @@ es-MX:
       unused: Niveles no utilizados
   upsell:
     applab:
-      title: Laboratorio de App
+      title: Laboratorio de aplicaciones
       body: El Laboratorio de aplicaciones es un entorno de programación donde puedes
         crear aplicaciones sencillas. Diseña una aplicación, programa con bloques
         o JavaScript para que funcione, y luego comparte tu aplicación en cuestión
@@ -914,7 +915,7 @@ es-MX:
       body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva!
         Viaja a través de Minecraft con códigos."
     sports:
-      title: Спорт
+      title: Deportes
       body: Elige entre un partido de baloncesto o una combinación de deportes.
     text-compression:
       title: Compresión de texto
@@ -931,7 +932,7 @@ es-MX:
         tu aula.
     unplugged_conditionals:
       title: Condicionales
-      body: En esta actividad "sin conexión" utilizarás una baraja de naipes para
+      body: En esta actividad "sin conexión", utilizarás una baraja de naipes para
         aprender sobre algoritmos y sentencias condicionales.
     widgets:
       title: Widgets
@@ -942,9 +943,8 @@ es-MX:
       audience: Desde 14 años
       cta: Aprende cómo
   gallery:
-    students_drew_these_with_code: "¡Los estudiantes usaron el código para dibujar
-      esto!"
-    students_made_these_with_code: "¡Los estudiantes usaron el código para crear estos!"
+    students_drew_these_with_code: "¡Los estudiantes usaron código para dibujar esto!"
+    students_made_these_with_code: "¡Los estudiantes usaron código para crear estos!"
     picture_count: En los pasados <b>%{days}</b> días, los estudiantes han dibujado
       <b>%{count}</b> imágenes con programas escritos por ellos mismos. Haz clic en
       las imágenes para ver cada programa en acción.
@@ -964,11 +964,11 @@ es-MX:
     report_abuse: Reportar Abuso
   landing:
     prerelease: Este curso está en su versión <span class='betatext'>beta</span>.
-      Esto significa que no es la versión final sino que está sujeta a revisión a
+      Esto significa que no es la versión final, sino que está sujeta a revisión a
       medida que se reciben comentarios y se realizan mejoras.
     prerelease_hoc2014: Este tutorial está en <span class='betatext'> beta</span>.
       Es objeto de revisión a medida que se reciben comentarios y se hacen mejoras.
-    report_bug: Reportar un error
+    report_bug: Informar un error
     support: Obtener ayuda
     support_url: "//support.code.org"
     help_resources: Ayuda y recursos
@@ -1002,8 +1002,8 @@ es-MX:
     correct_title: Gracias
     correct_body: Gracias por enviar respuestas.
     unsubmit-title: Cancelar tu evaluación
-    unsubmit-body: Al cancelar tu evaluación se restablecerá la hora y fecha de envío.
-      ¿Estás seguro?
+    unsubmit-body: Al cancelar tu evaluación, se restablecerá la hora y la fecha de
+      envío. ¿Estás seguro?
     submit-incomplete-title: Enviar tu evaluación
     submit-incomplete-body: No has respondido algunas preguntas. No podrás editar
       tu evaluación luego de enviarla. ¿Estás seguro?
@@ -1089,7 +1089,7 @@ es-MX:
   race_interstitial:
     title: 'Opcional: ayúdanos a seguir nuestro progreso hacia una mayor diversidad
       en las ciencias de la computación'
-    message: Por favor, cuéntanos sobre tu origen étnico (selecciona todo lo que aplique)
+    message: Por favor, cuéntanos sobre tu origen étnico (selecciona todo lo que corresponda)
     races:
       white: Blanco
       black: Negro o afroamericano
@@ -1242,6 +1242,8 @@ es-MX:
     csf_binary: Binario
     csf_data: Datos
     csf_conditionals: Condicionales
+    csf_sprites: Sprites
+    csf_spritelab: Laboratorio de sprites
     csf_nested_loops: Bucles anidados
     csf_functions: Funciones
     csf_variables: Variables
@@ -1282,16 +1284,25 @@ es-MX:
     csp_conditionals: Condicionales
     csp_functions: Funciones
     csp_project: Proyecto
+    csp_lists: Listas
+    csp_loops: Bucles
+    csp_traversals: Recorridos
+    csp_libraries: Bibliotecas
     dlp: Preguntas para reflexionar
+    time4cs_c1: Everglades y sus ecosistemas
+    time4cs_c2: Cadenas de comida en Everglades
+    time4cs_c3: Vivir en Everglades
+    time4cs_c4: Impactos invasivos en Everglades
+    time4cs_c5: Los ciudadanos efectúan cambios en Everglades
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada
       por Code.org.
     disclaimer_text: Este sitio podría tener políticas de privacidad diferentes a
-      las de Code.org. Hemos seleccionado estos recursos externos porque creemos que
-      te serán útiles. En tanto no somos responsables directos del contenido de este
-      sitio, por favor <a href='%{support_url}'>contacta al área de soporte</a> si
-      encuentras contenido ofensivo o si el enlace al sitio no está disponible.
+      las de Code.org. Hemos seleccionado estos recursos externos, porque creemos
+      que te serán útiles. Si bien no somos responsables directos del contenido de
+      este sitio, por favor <a href='%{support_url}'>contacta al área de soporte</a>
+      si encuentras contenido ofensivo o si el enlace al sitio no está disponible.
   hoc_download:
     title: Descargas de la Hora del Código
     capsule_title: "¿Tienes Internet?"

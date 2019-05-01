@@ -349,6 +349,7 @@
   homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: "T 恤，帽子，还有更多的东西"
   homepage_slot_text_link_administrators: "带到您的学校或地区"
+  homepage_gallery_header: "已创建了 %{project_count} 万个 Code.org 项目"
   homepage_header_donors: "Code.org 感谢各位支持者"
   homepage_donors_seall: "查看全部"
   homepage_donors_donate: "捐赠"
@@ -974,6 +975,7 @@
   minecraft_name: "我的世界"
   starwarsblocks_name: "星球大战(块)"
   hoc-encryption_name: 简单加密
+  text-compression_name: 文本压缩
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
@@ -1570,6 +1572,7 @@
   hoc2018_mc_short_description_shorter: "用你的创造力和解决问题的技能来用代码探索并构建水下世界。"
   hoc2018_mc_journey: "用代码在《我的世界》中旅行。"
   hoc2018_dance_party_main_heading: "舞蹈派对"
+  hoc2018_dance_party_landing_title: "舞蹈"
   hoc2018_dance_party_subheading: "帮助翻译舞蹈派对"
   hoc2018_dance_create_your_own_dance_title: "创建自己的舞会"
   hoc2018_dance_party_box_title: "舞蹈派对"
@@ -1623,3 +1626,4 @@
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
   hoc2018_mc_with_microsoft: "与以下机构合作: "
+  hoc2018_mc_thank_microsoft: "我们感谢微软支持我们的设想和使命，以确保每个儿童有机会学习计算机科学和在21世纪取得成功的技能。"

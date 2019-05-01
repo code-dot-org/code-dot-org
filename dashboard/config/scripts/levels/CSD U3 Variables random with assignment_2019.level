@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:29.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -69,11 +69,11 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "rubric_key_concept": "Use variables to store and update information",
-    "rubric_exceeds": "The eyeSize variable is used such that the two eyes have the same random size as instructed, with no other unexpected changes.",
-    "rubric_meets": "The eyeSize variable is used such that the two eyes have the same random size, but other changes to the code may have introduced other unexpected behaviors.",
-    "rubric_approaches": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
-    "rubric_no_evidence": "There are no changes to the code, or the changes appear unrelated to the eyeSize variable, or the variable is used in a way that prevents the program from running.",
     "mini_rubric": "true",
+    "rubric_performance_level_1": "The eyeSize variable is used such that the two eyes have the same random size as instructed, with no other unexpected changes.",
+    "rubric_performance_level_2": "The eyeSize variable is used such that the two eyes have the same random size, but other changes to the code may have introduced other unexpected behaviors.",
+    "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
+    "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to the eyeSize variable, or the variable is used in a way that prevents the program from running.",
     "preload_asset_list": null
   },
   "published": true,

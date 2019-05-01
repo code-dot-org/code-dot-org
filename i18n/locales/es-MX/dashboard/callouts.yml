@@ -141,15 +141,15 @@ es-MX:
         New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar tu programa
         sign_in_to_save_project: '¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!'
       Course 4 Artist 4_callout:
-        repeat_full_circle: Introduce el número de veces que el zombie tiene que moverse para hacer un círculo completo
+        repeat_full_circle: Ingresa el número de veces que el zombie debe moverse para hacer un círculo completo
       Course 4 Artist 7_callout:
-        repeat_blocks: Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo
+        repeat_blocks: Usa el bloque "repetir" y ponlo alrededor de los bloques del espacio de trabajo
       Course 4 Artist For Loops 4_callout:
-        place_counter_variable: Arrastre la variable contador dentro de este bloque
+        place_counter_variable: Arrastra la variable contador dentro de este bloque
       Course 4 Artist Functions 4_callout:
-        create_function: Haz clic aquí para abrir el desplegable "Funciones", luego haz clic en el botón "Crear una función".
+        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones", y luego haz clic en el botón "Crear una función".
       Course 4 Artist Functions 5 OLD_callout:
-        house_hint: Está bien si la imagen no se ve como una casa todavía. Lo solucionaremos en el siguiente puzzle.
+        house_hint: Está bien si la imagen aún no se ve como una casa. Lo solucionaremos en el siguiente desafío.
       Course 4 Artist Functions 8_callout:
         edit_function: Haz clic aquí para editar tu función.
       Course 4 Artist Functions challenge_callout:
@@ -157,46 +157,46 @@ es-MX:
       Course 4 Artist Params 2_callout:
         length_parameter: '¿Puedes actualizar esta función para que utilice el parámetro "longitud"?'
       Course 4 Artist Params 4_callout:
-        create_function: Haz clic aquí para abrir el desplegable "Funciones", luego haz clic en el botón "Crear una función".
+        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones", y luego haz clic en el botón "Crear una función".
       Course 4 Artist Vars 1_callout:
-        repeat_blocks: Usa el bloque de "Repetir" y ponlo alrededor de los bloques del espacio de trabajo
+        repeat_blocks: Usa el bloque "repetir" y ponlo alrededor de los bloques del espacio de trabajo
       Course 4 Artist Vars 10_callout:
-        set_sides: Usa este bloque para dar a "lados" el valor necesario para completar el rompecabezas.
+        set_sides: Usa este bloque para definir el número de "lados" necesarios para completar el desafío.
       Course 4 Artist Vars 12_callout:
-        set_length: Usa este bloque para fijar el valor correcto de "longitud".
+        set_length: Usa este bloque para establecer el valor correcto de "longitud".
       Course 4 Artist Vars 2_callout:
-        set_length: Usa este bloque para fijar el valor correcto de "longitud".
+        set_length: Usa este bloque para establecer el valor correcto de "longitud".
       Course 4 Artist Vars 3_callout:
-        place_variable: Arrastra tu variable dentro de este bloque.
+        place_variable: Arrastra tu variable dentro de este bloque
       Course 4 Artist Vars 6_callout:
-        degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño de cada ángulo en grados.
+        degrees_per_side: Divide 360 por el número de lados para obtener el tamaño de cada ángulo en grados.
       Course 4 Artist Vars 8_callout:
         Course_4_Artist_Vars_8_a: '¿Necesitas más espacio? Arrastra esta barra para ampliar el área de programación.'
       Course 4 Artist Vars 9_callout:
-        set_sides: Usa este bloque para dar a "lados" el valor necesario para completar el rompecabezas.
+        set_sides: Usa este bloque para definir el número de "lados" necesarios para completar el desafío.
       Course 4 Bee 1_callout:
         if_bee_nectar: Usa el bloque "si" para decidir si la abeja debe recoger el néctar o hacer la miel
       Course 4 Bee 3_callout:
-        if_else_bee: Usa el bloque "si/si no" para que la abeja recoja el néctar de una flor y haga la miel si no hay una flor
+        if_else_bee: Usa el bloque "si/si no" para que la abeja recoja el néctar de una flor y haga la miel si no es una flor
       Course 4 Bee For Loops 1_callout:
-        get_nectar: Usa el bloque nuevo "obtener néctar".
+        get_nectar: Usa el nuevo bloque "obtener néctar".
       Course 4 Bee For Loops 6_callout:
-        actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Ahora están aquí los bloques de "Acciones".'
+        actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Aquí están los bloques de "Acciones".'
       Course 4 Bee Params 2_callout:
-        edit_get_nectar: Usa este botón para editar la función y cambiar la dirección hacia la que la abeja girará para obtener el néctar.
+        edit_get_nectar: Usa este botón para editar la función y cambiar la dirección en la que girará la abeja para obtener el néctar.
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Al configurar estas variables a "0" o "1", estamos estableciendo una "bandera". Esta bandera puede indicar a la función hacia qué dirección debe ir nuestra abeja.
+        Course_4_Bee_Params_4: Al configurar estas variables a "0" o "1", estamos estableciendo un "indicador". Este indicador puede indicar a la función hacia qué dirección debe ir nuestra abeja.
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: Dale a "Ejecutar" para probar el programa.
         Course 4 Maze 1_callout2: Arrastra el bloque "mover" y colócalo debajo de los otros bloques en el área de trabajo
       Course 4 Maze 4_callout:
-        repeat: Ponga bloques dentro del bucle para repetir comandos
+        repeat: Coloca bloques dentro del bucle para repetir comandos
       Course 4 Play Lab Params 2_callout:
         Course_4 _Play_Lab_Params_2_1: Haz clic en "editar" para actualizar esta función y que utilice el parámetro de altura.
       Course 4 Play Lab Params 3_callout:
         edit_function: Haz clic aquí para editar tu función.
       Course 4 Play Lab Params 6_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
       Course 4 Play Lab Vars 1_callout:
         arrows_move_actor: Usa las flechas para mover al actor
       Course 4 Play Lab Vars 9_callout:
@@ -261,14 +261,14 @@ es-MX:
       Geometric Sun_2019_callout:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan en categorías.  ¡Haz click sobre estas palabras para verlo todo!
       Infinity_move_collide_callout:
-        Infinity_move_collide_callout: Reproducir un sonido cuando se produce este evento.
+        Infinity_move_collide_callout: Reproduce un sonido cuando ocurra este evento.
       Infinity_move_directions_callout:
         Infinity_move_directions_callout: '¿Qué bloque hará que Baymax suba cuando se presiona la flecha hacia arriba?'
-        Infinity_move_directions_callout_arrow: Utilice las flechas para dirigir
+        Infinity_move_directions_callout_arrow: Usa las flechas para conducir
       Infinity_move_right_callout:
-        Infinity_move_right_runbutton: Añadir movimiento bloque aquí
+        Infinity_move_right_runbutton: Agrega un bloque de movimiento aquí
       Infinity_repeat_callout:
-        Infinity_repeat_callout: Lugar para mover bloques dentro de aquí
+        Infinity_repeat_callout: Coloca los bloques de movimiento aquí adentro
       InspirationalArtwork_callout:
         InspirationalArtwork_1: '¡Prueba el nuevo bloque `comentario` debajo de esta etiqueta para dejarte notas dentro de tu programa!'
       InspirationalArtwork_2018_callout:
@@ -319,16 +319,16 @@ es-MX:
       NEW Course 4 Artist Functions 8_callout:
         edit_function: Haz clic aquí para editar tu función.
       NEW Course 4 Artist Params 10_callout:
-        create_function: Haz clic aquí para abrir el desplegable "Funciones", luego haz clic en el botón "Crear una función".
+        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones", y luego haz clic en el botón "Crear una función".
       NEW Course 4 Artist Params 9_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función
       NEW Course 4 Artist Vars 6_callout:
-        place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación
+        place_length_variable: Arrastra aquí la variable de longitud para reemplazar los signos de interrogación
       NEW Course 4 Bee For Loops 4_callout:
         bee_for_loop: Introduce aquí la mayor cantidad de néctar que quieres que recoja la abeja
       NEW Course 4 Bee For Loops 5_callout:
-        actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Ahora están aquí los bloques de "Acciones".'
+        actions_category: '¡La caja de herramientas tiene un nuevo aspecto! Aquí están los bloques de "Acciones".'
       New Artist Project_callout:
         New Artist Project_callout1: '¡Haz clic en las categorías para ver los bloques de tu caja de herramientas! Puedes arrastrar los bloques al área de trabajo para añadirlos a tu programa'
         New Artist Project_callout2: Presiona "Ejecutar" para guardar y ejecutar tu programa
@@ -465,11 +465,16 @@ es-MX:
         artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar en este desafío.
       behaviors 1_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
+      behaviors 3a_callout:
+        behavior_callout: '¿Por qué este comportamiento no funciona para la estrella del medio?'
+        star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este sprite".
       behaviors 4_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
+        behaviors_edit: Agrega código a este comportamiento.
+      behaviors free play_callout:
         behaviors_edit: Agrega código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo el néctar (o miel) de una flor (o panal).
@@ -630,6 +635,10 @@ es-MX:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores a diferentes partes del espacio del juego.
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores a diferentes partes del espacio del juego.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Este bloque es muy importante para este proyecto. ¡Asegúrate de usarlo!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Añade esto en el medio de tu programa.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Comienza usando este bloque para llevar al artista al centro de la pantalla.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -822,8 +831,6 @@ es-MX:
         courseD_maze_ramp7_1: '¡Este es tu primer desafío de rompecabezas! Estos están hechos para que sean díficiles y pueden implicar varios intentos.'
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: '¡Este es tu primer súper desafío! Estos están hechos difíciles a propósito y pueden implicar varios intentos.'
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: '¡Haz clic aquí!'
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear el primer cuadrado.
       courseE_artist_functions1_2018_callout:
@@ -1107,7 +1114,7 @@ es-MX:
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Así es como estableces el valor de tu variable. Cambia el texto que va conectado a este bloque para cambiar lo que está siendo retenido en tu variable.
       course_playlab_variables3_callout:
-        course_playlab_variables3_1: Así es cómo se establece el valor de tu variable.
+        course_playlab_variables3_1: Así es como se establece el valor de tu variable.
       coursea_maze_ramp1_2018_callout:
         grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona "Ejecutar" para iniciar tu programa.
       coursea_maze_ramp1_2019_callout:
@@ -1119,7 +1126,7 @@ es-MX:
       express_maze_debugging9_2019_callout:
         express_maze_debugging9_2019_1: Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo.
       frozen circle function with parameter_callout:
-        frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear un círculo" y cambia su tamaño.
+        frozen_circle_function_with_parameter_circle: Utiliza el bloque "crear un círculo" y cambia su tamaño.
       frozen circle function with parameter_b_callout:
         frozen_circle_function_with_parameter_circle: Usa el bloque `crear un círculo` y cambia el tamaño.
       frozen circle function with parameter_test_callout:
@@ -1131,12 +1138,12 @@ es-MX:
       frozen cross rotate_test_callout:
         replace_questions_degree: Usa el menú desplegable para reemplazar "???" con un número
       frozen cross_callout:
-        repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo."
-        repeat_blocks_2: (2) Mueve el bloque "Repetir" aquí, y coloca los bloques grises dentro
+        repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises en el espacio de trabajo"
+        repeat_blocks_2: (2) Mueve el bloque "repetir" aquí y coloca los bloques grises dentro
       frozen diamond snowflake_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
       frozen diamond_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
       frozen freeplay_callout:
         snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
       frozen freeplay_b_callout:
@@ -1145,25 +1152,25 @@ es-MX:
         snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
       frozen line_callout:
         run: '¡Presiona "Ejecutar" para probar tu programa!'
-        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque "cuando se ejecuta" para mover a Elsa hacia adelante
       frozen line_b_callout:
         run: '¡Presiona "Ejecutar" para probar tu programa!'
-        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque "cuando se ejecuta" para mover a Elsa hacia adelante
       frozen line_test_callout:
         run: '¡Presiona "Ejecutar" para probar tu programa!'
-        move_elsa_forward: Arrastra un bloque "Mover hacia adelante" y pégalo por debajo del bloque "Cuando se ejecuta" para mover a Elsa hacia adelante
+        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque "cuando se ejecuta" para mover a Elsa hacia adelante
       frozen perpendicular_callout:
-        turn_elsa: Usa el bloque de "Girar" para que Elsa gire. El número en el menú desplegable determina cuánto gira Elsa
+        turn_elsa: Usa el bloque "girar" para que Elsa dé un giro. El número en el menú desplegable determina cuánto gira Elsa
       frozen perpendicular_b_callout:
         turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
       frozen perpendicular_test_callout:
         turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
       frozen snowflake branch_callout:
-        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+        frozen_snowflake_branch: Utiliza el bloque "crear una rama de copo de nieve"
       frozen snowflake branch_b_callout:
         frozen_snowflake_branch: Usa la función "crear un brazo de copo de nieve"
       frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: Utiliza el bloque de "crear una rama de copo de nieve"
+        frozen_snowflake_branch: Utiliza el bloque "crear una rama de copo de nieve"
       frozen square iterative_callout:
         frozen_create_square: Añade más bloques aquí para crear un cuadrado
       frozen square iterative_b_callout:
@@ -1221,20 +1228,20 @@ es-MX:
       grade4_artist_functions_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan en categorías.  ¡Haz click sobre estas palabras para verlo todo!
       grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función
       grade4_bee_conditionals_quantum2_callout:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No tienes que revisar las colmenas.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: '¡Usa este menú desplegable para crear diferentes copos de nieve!'
       grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: Utiliza el bloque de "crear un círculo" y cambia su tamaño.
+        frozen_circle_function_with_parameter_circle: Utiliza el bloque "crear un círculo" y cambia su tamaño.
       grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
       grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
       grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta figura.
+        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
       grade4_frozen_square_callout:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
       grade4_frozen_square_loop1_callout:
@@ -1257,23 +1264,23 @@ es-MX:
       grade5_artist_functionparameters_6_callout:
         grade5_artist_functionparameters_6_1: Para completar tu polígono, asegúrate que siempre estás girando en 360 grados ÷ "lados".
       grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función
       grade5_artist_parameters_squares1a_callout:
         grade5_artist_parameters_triangles1_1: Haz click en el botón "editar" para cambiar el código dentro de la función.
       grade5_artist_parameters_triangles1_callout:
         grade5_artist_parameters_triangles1_1: Haz click en el botón "editar" para cambiar el código dentro de la función.
       grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en agregar y luego arrastrarlo en la definición de la función
       grade5_artist_variables_freeplay10_callout:
         Course_4_Artist_Vars_8_a: '¿Necesitas más espacio? Arrastra esta barra para ampliar el área de programación.'
       grade5_artist_variables_pentagons1_callout:
-        place_length_variable: Arrastre aquí la variable longitud para reemplazar los signos de interrogación
+        place_length_variable: Arrastra aquí la variable de longitud para reemplazar los signos de interrogación
       grade5_artist_variables_pentagons12_callout:
-        set_length: Usa este bloque para fijar el valor correcto de "longitud".
+        set_length: Usa este bloque para establecer el valor correcto de "longitud".
       grade5_artist_variables_square7_callout:
-        degrees_per_side: Divide 360 entre el número de lados para obtener el tamaño de cada ángulo en grados.
+        degrees_per_side: Divide 360 por el número de lados para obtener el tamaño de cada ángulo en grados.
       grade5_artist_variables_triangles1_callout:
         grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos" se pueden sacar y mover!
       grade5_artist_variables_triangles1_2018_callout:
@@ -1281,7 +1288,7 @@ es-MX:
       grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos" se pueden sacar y mover!
       grade5_artist_variables_triangles2_callout:
-        set_length: Usa este bloque para fijar el valor correcto de "longitud".
+        set_length: Usa este bloque para establecer el valor correcto de "longitud".
       grade5_bee_parameters_new1_callout:
         grade5_bee_parameters_new1_a: Aquí puedes encontrar las declaraciones "sí".
       grade5_bee_parameters_new3_callout:
@@ -1291,7 +1298,7 @@ es-MX:
       grade5_playlab_variables1_callout:
         arrows_move_actor: Usa las flechas para mover al actor
       grade5_playlab_variables11_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en la función
+        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
       grade5_playlab_variables1ask_callout:
         arrows_move_actor: Usa las flechas para mover al actor
       grade5_playlab_variables_freeplay_callout:

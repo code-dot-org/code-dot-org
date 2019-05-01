@@ -1,14 +1,14 @@
 ---
 title: FAQ
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Regional Partner FAQs
 
 
-Still have questions? See below for answers to commonly asked questions or email [partner@code.org](partner@code.org). 
+Still have questions? See below for answers to commonly asked questions or email [partner@code.org](partner@code.org).
 <br/><br/>
 **General questions:**<br/>
 
@@ -24,7 +24,7 @@ Still have questions? See below for answers to commonly asked questions or email
 
 **Questions about the budget:**<br/>
 
-- [Where can I find a breakdown of what Code.org provides?](#pay)	
+- [Where can I find a breakdown of what Code.org provides?](#pay)
 
 <br/>
 
@@ -57,7 +57,7 @@ ________________
 <br/>
 ### **Does my organization need to provide facilitators for CS Principles and CS Discoveries?**
 
-Your organization does not need to have its own facilitators. Code.org Regional Partners contracts with facilitators and alumni from Code.org's [facilitator development program](https://code.org/facilitator). 
+Your organization does not need to have its own facilitators. Code.org Regional Partners contracts with facilitators and alumni from Code.org's [facilitator development program](https://code.org/facilitator).
 <br/>
 
 

@@ -1,0 +1,27 @@
+name 'courseE_project_exemplars_2019'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# Project Examples
+
+You are about to start your final project. Before you begin, spend some time looking at the example projects.
+
+## Sprite Lab
+
+| Bunny Game (Sprite Lab) | Virtual Bunny (Sprite Lab) |
+|---|---|
+| [![#Bunny Game (Sprite Lab)](https://images.code.org/f4cabb697e43f86c294ab381b51c7125-image-1556308786330.png "Bunny Game (Sprite Lab")](https://studio.code.org/) | [![#Virtual Bunny (Sprite Lab)](https://images.code.org/3266962009b527dcb598fb837c1b6b41-image-1556311958281.png "Virtual Bunny (Sprite Lab")](https://studio.code.org/) |
+| Collect the carrots to win the game! | Learn about something new! |
+
+## Artist
+
+| Spiral | Design |
+|---|---|
+| [![Spirtal](https://images.code.org/248f29de4e41f31ca7d90b2512bce633-image-1556311826890.png "Spiral (Artist)")](https://studio.code.org/) | [![Design (Artist)](https://images.code.org/98f560f6c03f179f7f8090316e2385a0-image-1556311823972.png "Design (Artist)")](https://studio.code.org/) |
+| Let's get creative! | Let's get creative! |
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

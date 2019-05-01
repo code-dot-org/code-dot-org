@@ -146,7 +146,7 @@ module Pd::Application
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
 
-      principal_approval_email = emails.find_by(email_type: 'principal_approval')
+      principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
         return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
@@ -155,11 +155,6 @@ module Pd::Application
       return NOT_REQUIRED if principal_approval_not_required
 
       nil
-    end
-
-    def formatted_teacher_email
-      teacher_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
-      "\"#{teacher_full_name}\" <#{teacher_email}>"
     end
 
     def formatted_principal_email
@@ -333,6 +328,40 @@ module Pd::Application
       if scholarship_status
         Pd::ScholarshipInfoConstants::SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == scholarship_status}[:label]
       end
+    end
+
+    def allow_sending_principal_email?
+      response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
+      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email_created_at = last_principal_approval_email&.created_at
+
+      # Do we allow manually sending/resending the principal email?
+
+      # Only if this teacher application is currently unreviewed or pending.
+      return false unless unreviewed? || pending?
+
+      # Only if the principal approval is required.
+      return false if principal_approval_not_required
+
+      # Only if we haven't gotten a principal response yet.
+      return false if response
+
+      # Only if it's been more than 5 days since we last created an email for the principal.
+      return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
+
+      true
+    end
+
+    def allow_sending_principal_approval_teacher_reminder_email?
+      reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
+
+      # Do we allow the cron job to send a reminder email to the teacher?
+
+      # Only if we haven't already sent one.
+      return false if reminder_emails.any?
+
+      # If it's valid to send another principal email at this time.
+      return allow_sending_principal_email?
     end
 
     # memoize in a hash, per course

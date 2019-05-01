@@ -366,6 +366,8 @@ ms:
     csp_variables: Pembolehubah
     csp_conditionals: Bersyarat
     csp_functions: Fungsi
+    csp_lists: Senarai
+    csp_loops: Gelung
   pd:
     form_labels:
       email: E-mel

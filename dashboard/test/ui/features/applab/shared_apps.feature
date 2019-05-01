@@ -1,4 +1,4 @@
-@dashboard_db_access
+@single_session
 @as_student
 Feature: App Lab Scenarios
 

@@ -203,6 +203,7 @@ es:
       CSD U2 lists map: Listas en HTML
       CSD U2 lists map_2018: Listas en HTML
       CSD U2 lists map_2019: Listas en HTML
+      CSD U2 publish video: Publicando tu sitio web
       CSD U2L01 TFMD_2018: Resumen de la lección
       CSD U2L01 TFMD_2019: Resumen de la lección
       CSD U2L02 TFMD_2018: Resumen de la lección
@@ -269,6 +270,7 @@ es:
       CSD U3 Entertainment Sample 4: Escenas de gráfico
       CSD U3 Entertainment Sample 4_2018: Escenas de gráfico
       CSD U3 Entertainment Sample 4_2019: Escenas de gráfico
+      CSD U3 Functions Call Function_2019: 'Vídeo: Llamar y definir funciones'
       CSD U3 Interactive Card Exemplar_2018: Tarjeta interactiva
       CSD U3 Interactive Card Exemplar_2019: Tarjeta interactiva
       CSD U3 Keyboard Input Challenge-2018: 'Desafío: Añadir más entradas'
@@ -368,10 +370,12 @@ es:
       CSD U3 finishing touches: Proyecto - Finalizando Toques
       CSD U3 finishing touches_2018: Proyecto - Finalizando Toques
       CSD U3 finishing touches_2019: Proyecto - Finalizando Toques
+      CSD U3 function video: 'Vídeo: Funciones'
       CSD U3 functions map: funciones
       CSD U3 functions review: Revisión de funciones
       CSD U3 functions review_2018: Revisión de funciones
       CSD U3 functions review_2019: Revisión de funciones
+      CSD U3 if else predict: Predecir
       CSD U3 interactions map: Revisión de interacciones de gráficos
       CSD U3 interactions map_2018: Revisión de interacciones de gráficos
       CSD U3 interactions map_2019: Revisión de interacciones de gráficos
@@ -1172,9 +1176,12 @@ es:
         tu proceso"
       U5 AP Practice Create Process_2019: "(nuevo) AP la práctica respuesta - describir
         tu proceso"
+      U5 L01 Introduction to Lists: 'Condicionales: Expresiones booleanas'
+      U5 L09 Traversals Exit Ticket: Compruebe su comprensión
       U5-AP-Algorithm-Does-It-Count: Respuesta de Práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2018: Respuesta de Práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2019: Respuesta de Práctica AP - Puntuar la respuesta
+      U7 L01 More with Functions: 'Condicionales: Expresiones booleanas'
       Using Accelerometer Events_2018: Usando Eventos de Acelerómetro
       Using Accelerometer Events_2019: Usando Eventos de Acelerómetro
       'Video: Intro to CSS Part 2_2018': 'Vídeo: Intro a CSS Parte 2'
@@ -1323,3 +1330,6 @@ es:
       okToDelete: Evaluador
       scrat_loops_C-F_video: Bucles en la Edad del Hielo - Vídeo
       scrat_loops_C-F_video_2019: Bucles en la Edad del Hielo - Vídeo
+      timeforcs_demo_c1_5_journal: Evaluar
+      timeforcs_demo_sl_3: Como hacer un sprite
+      timeforcs_demo_spritelab_1: Proyecto de ejemplo de Laboratorio de gráficos

@@ -21,21 +21,40 @@ export default class ProgressBox extends Component {
     incomplete: PropTypes.number,
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
-    style: PropTypes.object
+    style: PropTypes.object,
+    stageIsAllAssessment: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
-    const {started, incomplete, imperfect, perfect} = this.props;
+    const {
+      started,
+      incomplete,
+      imperfect,
+      perfect,
+      stageIsAllAssessment,
+      inMiniRubricExperiment
+    } = this.props;
 
     const boxWithBorderStyle = {
       ...styles.box,
-      borderColor: started ? color.level_perfect : color.light_gray,
+      borderColor: started
+        ? stageIsAllAssessment && inMiniRubricExperiment
+          ? color.level_submitted
+          : color.level_perfect
+        : color.light_gray,
       ...this.props.style
     };
 
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
+      height: perfect
+    };
+
+    const assessmentLevels = {
+      ...styles.filler,
+      backgroundColor: color.level_submitted,
       height: perfect
     };
 
@@ -55,7 +74,14 @@ export default class ProgressBox extends Component {
       <div style={boxWithBorderStyle}>
         <div style={incompleteLevels} />
         <div style={imperfectLevels} />
-        <div className={'uitest-perfect-bar'} style={perfectLevels} />
+        <div
+          className={'uitest-perfect-bar'}
+          style={
+            stageIsAllAssessment && inMiniRubricExperiment
+              ? assessmentLevels
+              : perfectLevels
+          }
+        />
       </div>
     );
   }

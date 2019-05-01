@@ -3,9 +3,13 @@
 import {SVG_NS} from '../constants';
 import {getStore} from '../redux';
 import {getLocation} from './locationPickerModule';
-import {GAME_HEIGHT} from './constants';
+import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
+import {animationSourceUrl} from './animationListModule';
+import {changeInterfaceMode} from './actions';
+import experiments from '@cdo/apps/util/experiments';
+import {Goal, show} from './AnimationPicker/animationPickerModule';
 
-let sprites = () => {
+export function sprites() {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -13,9 +17,18 @@ let sprites = () => {
   }
   return animationList.orderedKeys.map(key => {
     const animation = animationList.propsByKey[key];
-    return [animation.sourceUrl, `"${animation.name}"`];
+    if (animation.sourceUrl) {
+      return [animation.sourceUrl, `"${animation.name}"`];
+    } else {
+      const url = animationSourceUrl(
+        key,
+        animation,
+        getStore().getState().pageConstants.channelId
+      );
+      return [url, `"${animation.name}"`];
+    }
   });
-};
+}
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -140,10 +153,29 @@ const customInputTypes = {
   },
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      let buttons;
+      if (experiments.isEnabled('sprite-costumes')) {
+        buttons = [
+          {
+            text: 'Draw',
+            action: () => {
+              getStore().dispatch(
+                changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
+              );
+            }
+          },
+          {
+            text: 'More',
+            action: () => {
+              getStore().dispatch(show(Goal.NEW_ANIMATION));
+            }
+          }
+        ];
+      }
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(
-          new Blockly.FieldImageDropdown(sprites(), 32, 32),
+          new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
           inputConfig.name
         );
     },

@@ -200,6 +200,7 @@ hi:
   nav:
     user:
       create: 'बनाए'
+      dance: 'डांस पार्टी'
       infinity: 'अनंत'
   teacher:
     panel:
@@ -224,6 +225,8 @@ hi:
     upgrade:
       link: "अधिक जानें"
   upsell:
+    dance:
+      title: 'डांस पार्टी'
     minecraft:
       body: "कोड के जरिए Minecraft की दुनिया का पता लगाएँ"
     unplugged_conditionals:
@@ -289,6 +292,8 @@ hi:
     csp_variables: 'चर'
     csp_conditionals: 'शर्तें'
     csp_functions: 'कार्य'
+    csp_lists: 'सूचियाँ'
+    csp_loops: 'फंदे'
   pd:
     form_labels:
       email: 'ईमेल'

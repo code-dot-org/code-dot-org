@@ -2,47 +2,287 @@
 hi:
   data:
     blocks:
-      Dancelab_changeMoveEachLR:
+      Dancelab_atTimestamp:
+        text: "{TIMESTAMP} {UNIT} के बाद"
         options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
+      Dancelab_changeColorBy:
+        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
+        options:
+          METHOD:
+            '"hue"': रंगत
+            '"saturation"': संतृप्तीकरण
+            '"brightness"': चमक
+      Dancelab_changeMoveEachLR:
+        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+        options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
+          MOVE:
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
+            MOVES.Roll: बॉडी रोल
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} हमेशा {MOVE} {DIR} करता है"
         options:
+          MOVE:
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
+            MOVES.Roll: बॉडी रोल
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
       Dancelab_doMoveEachLR:
+        text: "{GROUP} एक बार {MOVE} {DIR} करता है"
         options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
+          MOVE:
+            '"rand"': "(बेतरतीब)"
+            MOVES.XBend: झुकें
+            MOVES.Roll: बॉडी रोल
+            MOVES.XClapSide: ताली बजाएं
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.XFever: डिस्को
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.XHeadHips: सिर + कूल्हे
+            MOVES.XHop: एक पैर से कूदें
+            MOVES.XHighKick: ठोकर मारें
+            MOVES.XKnee: घुटना
+            MOVES.XKneel: घुटनों के बल बैठें
+            MOVES.XOle: पुराना
+            MOVES.XArmsSide: पहुंचें
+            MOVES.XSlide: सरकें
+            MOVES.Kick: स्टार
+            MOVES.XArmsUp: ज़ोर से खींचें
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
+        text: "{SPRITE} एक बार {MOVE} {DIR} करता है"
         options:
+          MOVE:
+            '"rand"': "(बेतरतीब)"
+            MOVES.XBend: झुकें
+            MOVES.Roll: बॉडी रोल
+            MOVES.XClapSide: ताली बजाएं
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Dab: हाथ फेरें
+            MOVES.XFever: डिस्को
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गंगनम
+            MOVES.XHeadHips: सिर + कूल्हे
+            MOVES.XHop: एक पैर से कूदें
+            MOVES.XHighKick: ठोकर मारें
+            MOVES.XKnee: घुटना
+            MOVES.XKneel: घुटनों के बल बैठें
+            MOVES.XOle: पुराना
+            MOVES.XArmsSide: पहुंचें
+            MOVES.XSlide: सरकें
+            MOVES.Kick: स्टार
+            MOVES.XArmsUp: ज़ोर से खींचें
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everySeconds:
+        text: 'प्रत्येक {N} {UNIT} '
+        options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
+      Dancelab_everySecondsRange:
+        text: 'प्रत्येक {N} {UNIT} {START} से {STOP} तक '
+        options:
+          UNIT:
+            measures: संगीत प्रविधियां
+            seconds: सेकंड
+      Dancelab_everyVerseChorus:
+        text: 'प्रत्येक {UNIT} '
+        options:
+          UNIT:
+            '"verse"': पद्य
+            '"chorus"': समूहगान
+      Dancelab_getEnergy:
+        text: "{RANGE} पाएं"
+        options:
+          RANGE:
+            '"low"': मंद
+            '"mid"': मध्य
+            '"high"': ऊंची ध्वनि
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"tint"': रंगत
+      Dancelab_getTime:
+        text: "{UNIT} में वर्तमान समय"
+        options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
+      Dancelab_ifDanceIs:
+        text: |-
+          क्या {SPRITE}, {DANCE}
+          {DO1} {DO2} कर रहा है
+        options:
+          DANCE:
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Clown: गंगनम
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Roll: बॉडी रोल
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
+      Dancelab_ifTime:
+        text: |-
+          क्या {UNIT} {OP} {N}
+          {DO1} {DO2} है
+        options:
+          UNIT:
+            '"measures"': संगीत प्रविधियां
+            '"seconds"': सेकंड
       Dancelab_jumpTo:
+        text: "{SPRITE} {LOCATION} पर कूदते हैं"
         options:
           LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_layoutSprites:
+        text: "{GROUP} को {FORMAT} के रूप में लेआउट दें"
         options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
           FORMAT:
+            '"border"': बॉर्डर
+            '"inner"': अंदर वर्ग
+            '"circle"': गोला
+            '"grid"': ग्रिड
+            '"row"': पंक्ति
+            '"column"': कॉलम
+            '"x"': आड़ा-तिरछा
+            '"plus"': जोड़
             '"random"': यादृच्छिक
       Dancelab_makeNewDanceSprite:
+        text: "{LOCATION} पर {NAME} नामक {COSTUME} बनाएं"
         options:
+          COSTUME:
+            '"ALIEN"': एलियन
+            '"BEAR"': भालू
+            '"CAT"': बिल्ली
+            '"DOG"': कुत्ता
+            '"DUCK"': बत्तख
+            '"FROG"': मेंढक
+            '"MOOSE"': अमरीकी हिरण
+            '"PINEAPPLE"': अनानास
+            '"ROBOT"': रोबोट
+            '"SHARK"': शार्क
+            '"UNICORN"': गेंडा
           LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": यादृच्छिक
       Dancelab_makeNewDanceSpriteGroup:
+        text: "{LAYOUT} में {N} नया {COSTUME} बनाएं"
         options:
           'N':
             '2': '2'
@@ -64,50 +304,338 @@ hi:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': एलियन्स
+            '"BEAR"': भालू
+            '"CAT"': बिल्लियां
+            '"DOG"': कुत्ते
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
+            '"MOOSE"': अमरीकी हिरण
+            '"PINEAPPLE"': अनानास
+            '"ROBOT"': रोबोट
+            '"SHARK"': संगीत प्रविधियां
+            '"UNICORN"': गेंडा
           LAYOUT:
+            '"border"': बॉर्डर
+            '"inner"': अंदर वर्ग
+            '"circle"': गोला
+            '"grid"': ग्रिड
+            '"row"': पंक्ति
+            '"column"': कॉलम
+            '"x"': आड़ा-तिरछा
+            '"plus"': जोड़
             '"random"': यादृच्छिक
+      Dancelab_mixColors:
+        text: "{COLOR1} और {COLOR2} को मिलाएं"
+      Dancelab_nMeasures:
+        text: "{N} संगीत प्रविधियां"
+      Dancelab_onPointerDown:
+        text: "\"संकेतक के नीचे करने पर"
+      Dancelab_onPointerDrag:
+        text: संकेतक को खींचने पर
+      Dancelab_onPointerUp:
+        text: संकेतक को ऊपर करने पर
       Dancelab_randomColor:
         text: यादृच्छिक रंग
+      Dancelab_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
+      Dancelab_setBackgroundEffect:
+        text: पृष्ठभूमि प्रभाव सेट करें
+        options:
+          EFFECT:
+            '"none"': कोई नहीं
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"splatter"': पेंट का छिड़काव
+            '"rainbow"': इंद्रधनुष
+            '"snowflakes"': हिमपात
+            '"text"': गाने के नाम
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"disco"': चोकोण
+            '"stars"': स्टार
+          PALETTE:
+            '"rave"': काला व सफेद
+            '"cool"': शांत!
+            '"electronic"': इलेक्ट्रोनिक
+            '"iceCream"': आईस क्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"tropical"': उष्णकटिबंधी
+            '"vintage"': विंटेज
+            '"warm"': गरम
+      Dancelab_setBackgroundEffectWithPalette:
+        text: पृष्ठभूमि प्रभाव सेट करें
+        options:
+          EFFECT:
+            '"none"': कोई नहीं
+            '"rand"': "(बेतरतीब)"
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"splatter"': पेंट का छिड़काव
+            '"rainbow"': इंद्रधनुष
+            '"snowflakes"': हिमपात
+            '"text"': गाने के नाम
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"disco"': चोकोण
+            '"stars"': स्टार
+          PALETTE:
+            '"rave"': काला व सफेद
+            '"cool"': शांत!
+            '"electronic"': इलेक्ट्रोनिक
+            '"iceCream"': आईस क्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"tropical"': उष्णकटिबंधी
+            '"vintage"': विंटेज
+            '"warm"': गरम
       Dancelab_setDanceSpeed:
+        text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': तेज़
+            '4': अत्‍यधिक तेज़
+            '0.5': धीमा
+            '0.25': अत्‍यधिक धीमा
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
         options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': तेज़
+            '4': अत्‍यधिक तेज़
+            '0.5': धीमा
+            '0.25': अत्‍यधिक धीमा
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': कोई नहीं
+            '"bubbles"': बुलबुले
+            '"confetti"': कॉन्फेटी
+            '"hearts_red"': दिल
+            '"music_notes"': संगीत के नोट्स
+            '"pineapples"': अनानास
+            '"pizzas"': पिज़्ज़ा
+            '"smiling_poop"': पूप
+            '"rain"': बारिश
+            '"floating_rainbows"': इंद्रधनुष
+            '"smile_face"': इंद्रधनुष
+            '"color_lights"': स्टेज लाइटें
+            '"raining_tacos"': टैको
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': कोई नहीं
+            '"rand"': "(बेतरतीब)"
+            '"bubbles"': बुलबुले
+            '"confetti"': कॉन्फेटी
+            '"hearts_red"': दिल
+            '"music_notes"': संगीत के नोट्स
+            '"pineapples"': अनानास
+            '"pizzas"': पिज़्ज़ा
+            '"smiling_poop"': पूप
+            '"rain"': बारिश
+            '"floating_rainbows"': इंद्रधनुष
+            '"smile_face"': इंद्रधनुष
+            '"color_lights"': स्टेज लाइटें
+            '"raining_tacos"': टैको
       Dancelab_setProp:
+        text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें "
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"tint"': रंगत
       Dancelab_setPropEach:
+        text: "{GROUP} {PROPERTY} को {VAL} पर सेट करें"
         options:
+          GROUP:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"tint"': रंगत
       Dancelab_setPropRandom:
+        text: बेतरतीब{SPRITE} {PROPERTY}
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"tint"': रंगत
+      Dancelab_setTint:
+        text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
+      Dancelab_setTintEach:
+        text: "{THIS} रंगत को {VAL} पर सेट करें"
+        options:
+          THIS:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+      Dancelab_setTintInline:
+        text: "{SPRITE} की रंगत को {VAL} पर सेट करें"
+      Dancelab_setVisible:
+        text: "{SPRITE} के दृश्य को {VISIBILITY} पर सेट करें"
+        options:
+          VISIBILITY:
+            'true': दृश्य
+            'false': अदृश्य
+      Dancelab_setVisibleEach:
+        text: "{THIS} दृश्यता को {VISIBILITY} पर सेट करें"
+        options:
+          THIS:
+            '"ALIEN"': सभी एलियन्स
+            '"BEAR"': सभी भालू
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
+            '"DUCK"': सभी बत्तखें
+            '"FROG"': सभी मेंढक
+            '"MOOSE"': सभी अमरीकी हिरण
+            '"PINEAPPLE"': सभी अनानास
+            '"ROBOT"': सभी रोबोट
+            '"SHARK"': सभी शार्क्स
+            '"UNICORN"': सभी गेंडे
+          VISIBILITY:
+            'true': दृश्य
+            'false': अदृश्य
       Dancelab_startMapping:
+        text: "{SPRITE} {PROPERTY} {RANGE} के बाद शुरू होता है"
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"tint"': रंगत
+          RANGE:
+            '"bass"': मंद
+            '"mid"': मध्य
+            '"treble"': ऊंची ध्वनि
       Dancelab_stopMapping:
+        text: "{SPRITE} {PROPERTY} {RANGE} के बाद रुकता है"
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+            '"rotation"': आवर्तन
+            '"x"': क्षैतिज स्थिति
+            '"y"': लंबवत स्थिति
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
+          RANGE:
+            '"bass"': मंद
+            '"mid"': मध्य
+            '"treble"': ऊंची ध्वनि
       Dancelab_whenKey:
+        text: जब {KEY} को दबाया हो
         options:
           KEY:
             '"space"': अंतरिक्ष
+            '"enter"': दर्ज करें
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+      Dancelab_whenPeak:
+        text: जब {RANGE} सबसे अधिक
+        options:
+          RANGE:
+            '0': मंद
+            '1': मध्य
+            '2': ऊंची ध्वनि
+      Dancelab_whenSetup:
+        text: सेटअप
+      gamelab_changeColor:
+        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
+        options:
+          METHOD:
+            '"tint"': रंगत
+      gamelab_changeColorBy:
+        text: "{COLOR} {METHOD} को {AMOUNT} में बदलें"
+        options:
+          METHOD:
+            '"hue"': रंगत
+            '"saturation"': संतृप्तीकरण
+            '"brightness"': चमक
+      gamelab_changePropBy:
+        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -118,6 +646,16 @@ hi:
           VAL:
             'true': 'सही '
             'false': 'गलत '
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
+      gamelab_jumpTo:
+        text: "{SPRITE} {LOCATION} पर कूदते हैं"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -125,50 +663,206 @@ hi:
             '"while"': जबकि
           KEY:
             '"space"': अंतरिक्ष
+            '"a"': a
+            '"d"': d
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
       gamelab_layoutSprites:
         options:
           FORMAT:
+            '"border"': बॉर्डर
+            '"inner"': अंदर वर्ग
+            '"circle"': गोला
+            '"grid"': ग्रिड
+            '"row"': पंक्ति
+            '"column"': कॉलम
+            '"x"': आड़ा-तिरछा
+            '"plus"': जोड़
             '"random"': यादृच्छिक
       gamelab_locationDelta:
         options:
           DIR:
             "'random'": यादृच्छिक
+      gamelab_mixColors:
+        text: "{COLOR1} और {COLOR2} को मिलाएं"
       gamelab_randColor:
         text: यादृच्छिक रंग
       gamelab_randomColor:
         text: यादृच्छिक रंग
+      gamelab_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
       gamelab_setPosition:
+        text: "{THIS} को {POSITION} पोजीशन में मूव करें"
         options:
           POSITION:
+            "{x: 50, y: 50}": ऊपर बाएं
+            "{x: 200, y: 50}": ऊपर बीच में
+            "{x: 350, y: 50}": ऊपर दाएं
+            "{x: 50, y: 200}": बीच मे बाएं
+            "{x: 200, y: 200}": बीच में
+            "{x: 350, y: 200}": बीच में दाएं
+            "{x: 50, y: 350}": नीचे बाएं
+            "{x: 200, y: 350}": नीचे बीच में
+            "{x: 350, y: 350}": नीचे दाएं
             '"random"': यादृच्छिक
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
       gamelab_setSizes:
         options:
           PROPERTY:
+            '"scale"': आकार
+            '"width"': चौड़ाई
             '"height"': ऊँचाई
+      gamelab_setup:
+        text: सेटअप
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_spritesWhere:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
+      gamelab_spritesWhereGenerator:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
       gamelab_whenKey:
+        text: जब {KEY} को दबाया हो
         options:
           KEY:
             '"space"': अंतरिक्ष
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
             '"space"': अंतरिक्ष
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_ifDanceIs:
+        text: |-
+          क्या {SPRITE}, {DANCE}
+          {DO1} {DO2} कर रहा है
+        options:
+          DANCE:
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Clown: गंगनम
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Roll: बॉडी रोल
+            MOVES.Kick: स्टार
+            MOVES.ThisOrThat: यह या वह
+            MOVES.Rest: कोई नहीं
       Mikelab_randomColor:
         text: यादृच्छिक रंग
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": ऊपर
+            "{x: 200, y: 300}": नीचे
+            "{x: 200, y: 200}": बीच में
+            "{x: 100, y: 100}": ऊपर बाएं
+            "{x: 300, y: 100}": ऊपर दाएं
+            "{x: 100, y: 300}": नीचे बाएं
+            "{x: 300, y: 300}": नीचे दाएं
       Mikelab_whenKeyPressed:
+        text: जब {KEY} को दबाया हो
         options:
           KEY:
             '"up"': ऊपर तीर
@@ -205,6 +899,15 @@ hi:
         text: बाएँ मुड़ें
       RyanLab_turnRight:
         text: दाएँ मुड़ें
+      Vector_positionCenter:
+        text: बीच में
+      aalab_changePropByFlexible:
+        text: "{SPRITE} {PROPERTY} को {VAL} द्वारा बदलें"
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
       aalab_checkTouching:
         options:
           CONDITION:
@@ -231,6 +934,13 @@ hi:
           VAL:
             '"true"': 'सही '
             '"false"': 'गलत '
+      aalab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+            '"rotation"': आवर्तन
+            '"direction"': गतिविधि की दिशा
+            '"tint"': रंगत
       aalab_showCustomText:
         options:
           DURATION:
@@ -240,9 +950,14 @@ hi:
           OPTION:
             '"hide"': छुपाएँ
       binary_whenKey:
+        text: जब {KEY} को दबाया हो
         options:
           KEY:
             '"space"': अंतरिक्ष
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

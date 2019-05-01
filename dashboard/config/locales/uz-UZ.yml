@@ -181,6 +181,8 @@ uz:
     csp_variables: O‘zgaruvchilar
     csp_conditionals: Shart buyruqlari
     csp_functions: Funksiyalar
+    csp_lists: Ro‘yxatlar
+    csp_loops: Sikllar
   pd:
     form_labels:
       email: Elektron pochta

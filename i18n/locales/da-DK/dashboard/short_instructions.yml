@@ -1,15 +1,15 @@
+---
 da:
   data:
     short_instructions:
       2-3 Artist 1 new: Hej, er jeg en kunstner. Du kan få mig til at tegne næsten hvad som helst, hvis bare du skriver koden . Brug et par blokke til, at tegne over de grå linier i billedet. (Hver linje er 100 pixels lang)
-      2-3 Artist 11: "Giv stopskiltet en kant ved at lave en ottekant med 8 sider, hver 100 pixel lang. Hvor mange grader skal du dreje? (Hint: Hvad er 360 divideret med 8?) "
-      2-3 Artist 12: |-
-        Angiv "repeat times" blokken, så det skaber en "circle" for at lave øjet. Hvis hver bevægelse drejer en grad til højre, hvor mange gange du skal gentage den for at fuldende cirklen? 180? 360? 500?
+      2-3 Artist 11: 'Giv stopskiltet en kant ved at lave en ottekant med 8 sider, hver 100 pixel lang. Hvor mange grader skal du dreje? (Hint: Hvad er 360 divideret med 8?) '
+      2-3 Artist 12: Angiv "repeat times" blokken, så det skaber en "circle" for at lave øjet. Hvis hver bevægelse drejer en grad til højre, hvor mange gange du skal gentage den for at fuldende cirklen? 180? 360? 500?
       2-3 Artist 2 new: 'Dette hus har en halv-færdig væg. Hver side er 100, men den halvfærdige væg er kun 50. Færdiggør væggen. '
       2-3 Artist 2: 'Dette hus har en halv-færdig væg. Hver side er 100, men den halvfærdige væg er kun 50. Færdiggør væggen. '
       2-3 Artist 3.4: Hop blokken flytter kunstneren uden at tegne. Tegn de stiplede linjer ved hjælp af både hoppe- og tegneblokkene.
       2-3 Artist 3: Denne hat er 100 pixels høj. Tegn en hat, der er 70 pixels mindre.
-      2-3 Artist 3new: "Den røde hat er 100 pixels høj. Tegn en sort hat, der er 70 pixels kortere. Bredden af den sorte hat er 50 pixel."
+      2-3 Artist 3new: Den røde hat er 100 pixels høj. Tegn en sort hat, der er 70 pixels kortere. Bredden af den sorte hat er 50 pixel.
       2-3 Artist 4: Hjælp mig færdigøre huset for denne kat.
       2-3 Artist 5: Erstat denne kode med en "gentag gange" blok til at tegne det samme hus ved hjælp af kun 3 blokke.
       2-3 Artist 6: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
@@ -20,121 +20,126 @@ da:
       2-3 Artist 9: Færdiggør dragen
       2-3 Artist Assessment 1: 'Vurdering: Færdiggør tegningen af den sidste tand, 25 pixel bred og 25 pixel høj.'
       2-3 Artist Debugging 1: Kan du lave dette hat med en top længde på 100?
-      2-3 Artist Debugging 10: "Piltasterne på min konsol er for små. Tip: Gør det 10 pixel større"
-      2-3 Artist Debugging 11: |-
-        Hjælp mig med at afslutte mit smukke snefnug. Hvor mange gange skal jeg "gentage" for at færdiggøre det?
+      2-3 Artist Debugging 10: 'Piltasterne på min konsol er for små. Tip: Gør det 10 pixel større'
+      2-3 Artist Debugging 11: Hjælp mig med at afslutte mit smukke snefnug. Hvor mange gange skal jeg "gentage" for at færdiggøre det?
       2-3 Artist Debugging 12: Jeg skal tilføje en bølge til denne scene. Kan du hjælpe mig?
-      2-3 Artist Debugging 2: "Koden du ser for de tre knurhår er forkert. Tip: Hvert knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene."
-      2-3 Artist Debugging 3: "Min båd har et hul! Kan du reparere de ved at ændre vinklen på linjen? Tip: den sidste vinkel er er 15 grader for stor."
+      2-3 Artist Debugging 2: 'Koden du ser for de tre knurhår er forkert. Tip: Hvert knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene.'
+      2-3 Artist Debugging 3: 'Min båd har et hul! Kan du reparere de ved at ændre vinklen på linjen? Tip: den sidste vinkel er er 15 grader for stor.'
       2-3 Artist Debugging 4: Hvilket billede prøvede vi at tegne? Færdiggør billedet ved at forbinde prikkerne med linjerne og vinklerne.
-      2-3 Artist Debugging 5: "Koden for foden og benet, er forkert. Tip: Foden er for lang, vi bliver nødt til at slette et trin (Ordspillet er med vilje)"
-      2-3 Artist Debugging 6: |-
-        Det ser ud til at jeg sidder på en stol, hvor der mangler et ben. Ændr blokkene for at tegne benet.
-      2-3 Artist Debugging 7: |-
-        Det ser ud til at K'et i koden er tegnet baglæns. Kan du få det til at ligne et K?
-      2-3 Artist Debugging 8: |-
-        Min vindmølle er ikke færdig. Hvor mange gange skal jeg gentage, for at lave den færdig?
-      2-3 Artist Debugging 9: |-
-        Koden til denne stilk er forkert. Tip: 
-        Vinklen har en 60 graders fejl
-      2-3 Artist Debugging Assessment 1: "Denne figure er for lille. Kan du lave den større? Hint: Den skal være 75 pixels længere på hver side."
+      2-3 Artist Debugging 5: 'Koden for foden og benet, er forkert. Tip: Foden er for lang, vi bliver nødt til at slette et trin (Ordspillet er med vilje)'
+      2-3 Artist Debugging 6: Det ser ud til at jeg sidder på en stol, hvor der mangler et ben. Ændr blokkene for at tegne benet.
+      2-3 Artist Debugging 7: Det ser ud til at K'et i koden er tegnet baglæns. Kan du få det til at ligne et K?
+      2-3 Artist Debugging 8: Min vindmølle er ikke færdig. Hvor mange gange skal jeg gentage, for at lave den færdig?
+      2-3 Artist Debugging 9: "Koden til denne stilk er forkert. Tip: \nVinklen har en 60 graders fejl"
+      2-3 Artist Debugging Assessment 1: 'Denne figure er for lille. Kan du lave den større? Hint: Den skal være 75 pixels længere på hver side.'
       2-3 Artist Free Play: Fri leg! Tegn lige hvad du har lyst til.
-      2-3 Artist Functions 1 a: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
-      2-3 Artist Functions 1: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
+      2-3 Artist Functions 1 a: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde.'
+      2-3 Artist Functions 1: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde.'
       2-3 Artist Functions 10: "Her er to funktioner, en til at tegne et \nstort tandhjul, og en til at tegne en lille tandhjul. Brug dem til at tegne indersiden af en maskine!"
-      2-3 Artist Functions 11 a: "Vi har omdøbt funktionen \"tegn en kvadrat\" for at \"tegne en sekskant\", men den tegner stadig kun kvadrater! Kan du redigere funktionen \"tegn en sekskant\" til at tegne en sekskant med 50 pixel sider, og tegne billedet ved hjælp af funktionen?"
-      2-3 Artist Functions 11.5 a: "Her er det samme \"Tegne en sekskant\"-funktion. Hvad sker der, hvis du kun drejer 60 grader hver gang du looper?"
-      2-3 Artist Functions 11.5: "Her er det samme \"Tegne en sekskant\"-funktion. Hvad sker der, hvis du kun drejer 60 grader hver gang du looper?"
-      2-3 Artist Functions 11: "Vi har omdøbt funktionen \"tegn en kvadrat\" for at \"tegne en sekskant\", men den tegner stadig kun kvadrater! Kan du redigere funktionen \"tegn en sekskant\" til at tegne en sekskant med 50 pixel sider, og tegne billedet ved hjælp af funktionen?"
-      2-3 Artist Functions 12 Mike: "Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen \"tegn en blomst\" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  "
-      2-3 Artist Functions 12 a: "Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen \"tegn en blomst\" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  "
-      2-3 Artist Functions 12: "Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen \"tegn en blomst\" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  "
+      2-3 Artist Functions 11 a: Vi har omdøbt funktionen "tegn en kvadrat" for at "tegne en sekskant", men den tegner stadig kun kvadrater! Kan du redigere funktionen "tegn en sekskant" til at tegne en sekskant med 50 pixel sider, og tegne billedet ved hjælp af funktionen?
+      2-3 Artist Functions 11.5 a: Her er det samme "Tegne en sekskant"-funktion. Hvad sker der, hvis du kun drejer 60 grader hver gang du looper?
+      2-3 Artist Functions 11.5: Her er det samme "Tegne en sekskant"-funktion. Hvad sker der, hvis du kun drejer 60 grader hver gang du looper?
+      2-3 Artist Functions 11: Vi har omdøbt funktionen "tegn en kvadrat" for at "tegne en sekskant", men den tegner stadig kun kvadrater! Kan du redigere funktionen "tegn en sekskant" til at tegne en sekskant med 50 pixel sider, og tegne billedet ved hjælp af funktionen?
+      2-3 Artist Functions 12 Mike: 'Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
+      2-3 Artist Functions 12 a: 'Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
+      2-3 Artist Functions 12: 'Funktioner er rigtig god til at tegne komplekse ting flere gange. Kan du bruge funktionen "tegn en blomst" til at fylde resten af plantageejer boksen  (Hint: Planterne er alle adskilt med 100 pixel længde)  '
       2-3 Artist Functions 13: Vi har givet dig fire funktioner. Bruge dem som du vil inde i en eller flere "loops" til at lave billeder, som du kan dele med dine venner. Tryk på "run" for at se et eksempel.
-      2-3 Artist Functions 2: "Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet \"tegn en firkant\". Kan du bruge \"tegn en firkant\"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden."
-      2-3 Artist Functions 3: "Rediger funktionen til at tegne en firkant til en sidelængde på 115 og tegn de større briller. Firkanterne er nu 45 pixel fra hinanden."
+      2-3 Artist Functions 2: Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet "tegn en firkant". Kan du bruge "tegn en firkant"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden.
+      2-3 Artist Functions 3: Rediger funktionen til at tegne en firkant til en sidelængde på 115 og tegn de større briller. Firkanterne er nu 45 pixel fra hinanden.
       2-3 Artist Functions 4: Brug "gentagelsesblokken" til at tegne disse tre firkanter.
       2-3 Artist Functions 7: 'Brug "tegn et hus"-funktionen til at tegne to huse ved brug af to forskellige parametre. (Hint: det første hus er 100 pixel).'
-      2-3 Artist Functions 9: 'Her er en funktion for et snefnug. Eksperimentér med den, så du skaber et vinterlandskab! Dette level er fri leg, så der er ikke nogen opgave at løse. Ha'' det sjovt!'
+      2-3 Artist Functions 9: Her er en funktion for et snefnug. Eksperimentér med den, så du skaber et vinterlandskab! Dette level er fri leg, så der er ikke nogen opgave at løse. Ha' det sjovt!
       2-3 Artist Loops 1: Kan du afslutte cellen ved at lave en sekskant med sider der er 100 pixels lang. Bemærk - det betyder at du kun behøver at dreje 60 grader!
       2-3 Artist Loops 10: Hvad sker der med udseendet hvis vi laver det sidste skridt halvt så langt?
       2-3 Artist Loops 11: Nu skal vi prøve at sætte en "ekstra" loop rundt om hele figuren! Husk at tilføje en  vinkel i slutningen af det yderste loop.
       2-3 Artist Loops 4: Vil du se hvad der sker hvis vi laver figuren flere gange med en løkke?
       2-3 Artist Loops 5: Lad os lave en lille ændring i løkken for at se hvor anderledes figuren så bliver.
       2-3 Artist Loops 6: Tilføj endnu en flyt-blok og en drej-blok inde i løkken, og se hvordan dit mønster ændres.
-      2-3 Artist Loops 7: "Vi kan bruge løkker til at lave alle muligt typer figurer.\nKan du lave en rhombe indeni denne sekskant?"
+      2-3 Artist Loops 7: |-
+        Vi kan bruge løkker til at lave alle muligt typer figurer.
+        Kan du lave en rhombe indeni denne sekskant?
       2-3 Artist Loops 8: Lad os sætte begge bokse ind i en gentagelse.
       2-3 Artist Loops 9: |-
-        We vil lave en løkke over de samme elementer, men nu vil vi tilføje noget afstand imellem dem.\r
+        We vil lave en løkke over de samme elementer, men nu vil vi tilføje noget afstand imellem dem.\\r
         Brug den samme kode som før, men tilføj et skridt i bunden af den ydre løkke.
-      2-3 Artist Loops New 1: "Lad os tegne robottens hoved! Kan du\nlave et kvadrat, hvor siderne er 100 pixel?"
+      2-3 Artist Loops New 1: |-
+        Lad os tegne robottens hoved! Kan du
+        lave et kvadrat, hvor siderne er 100 pixel?
       2-3 Artist Loops New 10: Lad os forbinde en stak V'er, ved at tegne dem i en løkke.
-      2-3 Artist Loops New 11: "Lad os nu tegne det 24 gange. Tilføj et\nvenstre drej på 30 grader og læg det ind i en gentage-blok."
-      2-3 Artist Loops New 12: "Tegn en diamant hvor siderne er 100 pixels lange.\n"
-      2-3 Artist Loops New 13: "Tegn nu diamanten 3 gange i en løkke."
+      2-3 Artist Loops New 11: |-
+        Lad os nu tegne det 24 gange. Tilføj et
+        venstre drej på 30 grader og læg det ind i en gentage-blok.
+      2-3 Artist Loops New 12: Tegn en diamant hvor siderne er 100 pixels lange.
+      2-3 Artist Loops New 13: Tegn nu diamanten 3 gange i en løkke.
       2-3 Artist Loops New 14: "Let os tegne diamanten 10 gange, men \ndrej 90 grader mellem hver diamant."
       2-3 Artist Loops New 15: Tegn noget sjovt.
-      2-3 Artist Loops New 2: |-
-        Her er noget af den kode du brugte til at tegne kvadratet. 
-        Hvad sker der mon hvis du bruger gentageblokken til at køre denne kode 4 gange?
+      2-3 Artist Loops New 2: "Her er noget af den kode du brugte til at tegne kvadratet. \nHvad sker der mon hvis du bruger gentageblokken til at køre denne kode 4 gange?"
       2-3 Artist Loops New 9: "Tegn et simpelt V hvor begge sider er \n50 pixels for at færdiggøre pilen."
       2-3 Artist Match Hex Pic: 'Mission: Hjælp med at fuldføre sekskanten.'
       2-3 Artist Match Rho Pic: 'Match:  Afslut den manglende kode.'
       2-3 Artist Match Sq Pic: 'Match: Færdiggør den manglende kode'
       2-3 Artist Match Tri pic: 'Matchende: Indsæt den manglende kode.'
-      2-3 Artist Nested Loops 1: "Du har brugt løkker til at tegne former før, men vidste du, at du kan lave en løkke inden i en anden løkke?\\r\nGentag hele koden 3 gange med en løkke for at tegne mønsteret."
+      2-3 Artist Nested Loops 1: |-
+        Du har brugt løkker til at tegne former før, men vidste du, at du kan lave en løkke inden i en anden løkke?\\r
+        Gentag hele koden 3 gange med en løkke for at tegne mønsteret.
       2-3 Artist Nested Loops 10: Gentag denne kode 12 gange for at gøre mønsteret færdigt.
-      2-3 Artist Nested Loops 11: "Gentag denne kode 4 gange for at fuldføre\nmønstret, drej 90 grader efter hver omgang."
+      2-3 Artist Nested Loops 11: |-
+        Gentag denne kode 4 gange for at fuldføre
+        mønstret, drej 90 grader efter hver omgang.
       2-3 Artist Nested Loops 12: Gentag 12 gange for at afslutte krøllerne.
-      2-3 Artist Nested Loops 2: "Nu skal du loope trekanten 6 gange. Efter hver trekant skal du dreje 60 grader før du tegner en ny."
-      2-3 Artist Nested Loops 3: "Du får brug for at gentage trekanten 12 gange for at tegne dette mønster. Del grad-tallet for en cirkel (360) med antallet af de former/figurer du tegner (12), for at finde ud af hvor maget du skal dreje efter hver form/figur."
-      2-3 Artist Nested Loops 4: "Gentag denne rombe 12 gange for at tegne en blomst. Tip: 12 romber er ligesom de 12 trekanter du lavede før - Hvor mange grader skal du mon dreje efter hver form/figur?"
-      2-3 Artist Nested Loops 5: "Udfyld denne bygnings vinduer ved hjælp af en fastgjort løkke. Vinduerne er 20 pixels brede. Afstanden imellem vinduerne er 20 pixels."
-      2-3 Artist Nested Loops 6: |-
-        Denne dinosaur har 8 pigge ned af halen; Hver pig er 30 pixels bred. Gentag trekanten i en løkke 8 gange, men husk, at du skal bevæge dig fremad efter hver trekant, du har tegnet.
-      2-3 Artist Nested Loops 7: "Gentag denne trekant i en løkke 10 gange for at tegne solen. Husk at rykke fremad og dreje efter hver trekant. Du kan regne ud, hvor meget du skal dreje ved at dividere gradtallet af en cirkel (360) med antallet af figurer du vil bruge for at skabe solen."
-      2-3 Artist Nested Loops 8: "Lad os tilføje lidt græs til billedet.\nHvert stykke græs er 50 pixel fra hinanden."
-      2-3 Artist Nested Loops 9: "Vi vil færdiggøre dette billede ved at tilføje en blomst.\nGentag diamanten 12 gange for at tegne blomsten."
+      2-3 Artist Nested Loops 2: Nu skal du loope trekanten 6 gange. Efter hver trekant skal du dreje 60 grader før du tegner en ny.
+      2-3 Artist Nested Loops 3: Du får brug for at gentage trekanten 12 gange for at tegne dette mønster. Del grad-tallet for en cirkel (360) med antallet af de former/figurer du tegner (12), for at finde ud af hvor maget du skal dreje efter hver form/figur.
+      2-3 Artist Nested Loops 4: 'Gentag denne rombe 12 gange for at tegne en blomst. Tip: 12 romber er ligesom de 12 trekanter du lavede før - Hvor mange grader skal du mon dreje efter hver form/figur?'
+      2-3 Artist Nested Loops 5: Udfyld denne bygnings vinduer ved hjælp af en fastgjort løkke. Vinduerne er 20 pixels brede. Afstanden imellem vinduerne er 20 pixels.
+      2-3 Artist Nested Loops 6: Denne dinosaur har 8 pigge ned af halen; Hver pig er 30 pixels bred. Gentag trekanten i en løkke 8 gange, men husk, at du skal bevæge dig fremad efter hver trekant, du har tegnet.
+      2-3 Artist Nested Loops 7: Gentag denne trekant i en løkke 10 gange for at tegne solen. Husk at rykke fremad og dreje efter hver trekant. Du kan regne ud, hvor meget du skal dreje ved at dividere gradtallet af en cirkel (360) med antallet af figurer du vil bruge for at skabe solen.
+      2-3 Artist Nested Loops 8: |-
+        Lad os tilføje lidt græs til billedet.
+        Hvert stykke græs er 50 pixel fra hinanden.
+      2-3 Artist Nested Loops 9: |-
+        Vi vil færdiggøre dette billede ved at tilføje en blomst.
+        Gentag diamanten 12 gange for at tegne blomsten.
       2-3 Artist Nested Loops Free Play: Fri leg, tegn noget sejt hvor du bruger flere løkker indeni hinanden.
       2-3 Bee Conditionals 1: Hej! Jeg er en bi. Hjælp mig med at hente nektar fra blomsten.
-      2-3 Bee Conditionals 10: "Lilla blomster kan have enten 1 eller 0 portioner nektar. Pas på du ikke prøver at hente nektar fra en lilla blomst, hvis den ikke har noget.\\r\n"
-      2-3 Bee Conditionals 11: "Hent nektar når blomsterne har noget."
+      2-3 Bee Conditionals 10: Lilla blomster kan have enten 1 eller 0 portioner nektar. Pas på du ikke prøver at hente nektar fra en lilla blomst, hvis den ikke har noget.\\r
+      2-3 Bee Conditionals 11: Hent nektar når blomsterne har noget.
       2-3 Bee Conditionals 12: Brug en løkke til at tjekke for og hente nektar fra alle blomsterne.
-      2-3 Bee Conditionals 13: |-
-        Saml nektar og lav honning. Tip: Hvad mon der sker, hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig med en løkke?
-      2-3 Bee Conditionals 14: |-
-        Saml nektar og lav honning. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.
-      2-3 Bee Conditionals 15: "Saml nektaren fra alle fire blomster."
+      2-3 Bee Conditionals 13: 'Saml nektar og lav honning. Tip: Hvad mon der sker, hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig med en løkke?'
+      2-3 Bee Conditionals 14: Saml nektar og lav honning. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.
+      2-3 Bee Conditionals 15: Saml nektaren fra alle fire blomster.
       2-3 Bee Conditionals 2: "Hej, jeg er en bi! Hjælp mig med at samle al \nnektaren fra alle blomsterne. Brug en løkke."
-      2-3 Bee Conditionals 3: "Hjælp mig med at samle al nektaren fra blomsterne og lave honning af den. Brug en løkke."
+      2-3 Bee Conditionals 3: Hjælp mig med at samle al nektaren fra blomsterne og lave honning af den. Brug en løkke.
       2-3 Bee Conditionals 4: Hjælp mig med at samle al nektaren fra blomsterne og lave al honningen.
-      2-3 Bee Conditionals 5: "Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken."
+      2-3 Bee Conditionals 5: Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken.
       2-3 Bee Conditionals 6: Brug en "hvis"-blok til denne blomst for at undersøge om den har nektar til rådighed.
-      2-3 Bee Conditionals 7: "Indsaml nektaren fra hver blomst,\nhvis den har noget."
-      2-3 Bee Conditionals 8: "Marken har røde og lilla blomster.\nDe røde blomster har en kendt mængde nektar, men de lilla blomster har en ukendt mængde.\nIndsaml al nektaren."
+      2-3 Bee Conditionals 7: |-
+        Indsaml nektaren fra hver blomst,
+        hvis den har noget.
+      2-3 Bee Conditionals 8: |-
+        Marken har røde og lilla blomster.
+        De røde blomster har en kendt mængde nektar, men de lilla blomster har en ukendt mængde.
+        Indsaml al nektaren.
       2-3 Bee Conditionals 9: Saml al nektaren fra alle blomster.
       2-3 Bee Conditionals Assessment 1: 'Vurdér: Saml al nektaren. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.'
       2-3 Bee Debugging 1: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging 10: "Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen."
-      2-3 Bee Debugging 2: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging 3: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 10: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 2: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 3: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
       2-3 Bee Debugging 4: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging 5: "Disse blokke driller mig virkelig.\nRet fejlene for at samle al nektaren og lave det til honning.\nDu kan nu bruge løb og skridt."
-      2-3 Bee Debugging 6: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 5: |-
+        Disse blokke driller mig virkelig.
+        Ret fejlene for at samle al nektaren og lave det til honning.
+        Du kan nu bruge løb og skridt.
+      2-3 Bee Debugging 6: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
       2-3 Bee Debugging 7: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging 8: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging 9: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      2-3 Bee Debugging Assessment 1: |-
-        Vurdér: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 8: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging 9: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      2-3 Bee Debugging Assessment 1: 'Vurdér: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.'
       2-3 Bee Functions 1: Funktioner er blokke/klodser af code som udfører en arbejdsopgave. Brug "saml 2 nektarer"-funktionen for at samle nektar fra alle blomsterne.
       2-3 Bee Functions 10: "Lilla blomster kan have enten 1 eller 0 nektar. Lav en funktion, \nsom kun samler nektar fra de lilla blomster, som har nektar."
-      2-3 Bee Functions 2: "Funktioner er blokke/klodser af code som udfører en arbejdsopgave. Brug \"saml 5\"-funktionen for at samle nektar fra 5 blomster ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser."
+      2-3 Bee Functions 2: Funktioner er blokke/klodser af code som udfører en arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
       2-3 Bee Functions 3: Saml al nektaren fra alle blomster.
-      2-3 Bee Functions 4: "Funktionen \"flytte og få nektar\" vender bien, indsamler nektar, og returnerer derefter bien til hvor den startede. Brug funktionen til at samle alt nektaren."
+      2-3 Bee Functions 4: Funktionen "flytte og få nektar" vender bien, indsamler nektar, og returnerer derefter bien til hvor den startede. Brug funktionen til at samle alt nektaren.
       2-3 Bee Functions 5: Der er nu mere nektar på blomsterne. Rediger en given funktion, så den indsamler 4 nektar og bruger det til at samle alle nektaren fra blomsterne.
       2-3 Bee Functions 6: Brug nu den samme funktion til at indsamle nektar fra de tre blomster.
       2-3 Bee Functions 7: Blomsterne er nu længere væk. rediger den givne funktion og brug den til at indsamle alt nektaren fra blomsterne.
@@ -142,8 +147,7 @@ da:
       2-3 Bee Functions 9: Lav din egen funktion der går ned af stien, skaffer nektar, laver honning, og så returnere bien til toppen af stien.
       2-3 Bee Functions Assessment 1: 'Vurdering: Brug den givne funktion til at indsamle nektar fra hver blomst.'
       2-3 Bee Functions Assessment 2: 'Opgave: Lav en funktion, som laver 3 honning på en gang.'
-      2-3 Bee Loops 1: |-
-        Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. 
+      2-3 Bee Loops 1: 'Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. '
       2-3 Bee Loops 10: Kan du bruge en mens sløjfet inden i to andre sløjfer for at indsamle nektar?
       2-3 Bee Loops 11: Bruge mens løkker til at indsamle alt nektaren fra blomsterne i dette felt.
       2-3 Bee Loops 12: Bruge mens løkker til at indsamle alt nektaren fra blomsterne i dette felt.
@@ -154,15 +158,14 @@ da:
       2-3 Bee Loops 3: Hent nektar fra alle blomsterne og lav honning på bistaderne.
       2-3 Bee Loops 3A: Kan du bruge en løkke til at indsamle al nektaren?
       2-3 Bee Loops 3B: Brug gentag-blokken til både at samle al nektaren og lave honning.
-      2-3 Bee Loops 4: |-
-        Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
-      2-3 Bee Loops 4A: "Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!"
-      2-3 Bee Loops 5: "Brug en løkke til at gå ned ad trappen og samle nektar."
+      2-3 Bee Loops 4: Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
+      2-3 Bee Loops 4A: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!
+      2-3 Bee Loops 5: Brug en løkke til at gå ned ad trappen og samle nektar.
       2-3 Bee Loops 6: Brug en løkke til at samle nektar fra alle blomster og lave honning på hvert bistade.
       2-3 Bee Loops 7: Lav en løkke (gentag), som samler nektar fra alle blomsterne.
-      2-3 Bee Loops 8: "Disse lilla blomster har en ukendt mængde nektar. Brug \"mens nektar løkke\" til at indsamle alt nektaren. Denne løkke vil køre så længe betingelsen er sand, i dette tilfælde nektar > 0."
+      2-3 Bee Loops 8: Disse lilla blomster har en ukendt mængde nektar. Brug "mens nektar løkke" til at indsamle alt nektaren. Denne løkke vil køre så længe betingelsen er sand, i dette tilfælde nektar > 0.
       2-3 Bee Loops 9: Mens løkke kan udføre den samme handling som en hvis-sætning i en løkke. Tilføje en mens løkke til denne kode for at udføre den samme opgave.
-      2-3 Bee Loops Assessment 1: 'Vurdering - brug en mens løkke til at indsamle alt nektaren fra denne blomst.'
+      2-3 Bee Loops Assessment 1: Vurdering - brug en mens løkke til at indsamle alt nektaren fra denne blomst.
       2-3 Maze 1: 'Kan du hjælpe mig med at fange den frække gris? Sæt nogle "flyt fremad"- blokke sammen og tryk "Kør". '
       2-3 Maze 10: Før mig til det grønne ondskab! (Men pas på TNT)
       2-3 Maze 11: Flyt mig hen til blomsten for jeg er sulten! Hvor mange gange skal du gentage blokken?
@@ -190,8 +193,8 @@ da:
       2-3 Maze 9: Før mig til det grønne ondskab! (Men pas på TNT)
       2-3 Maze Loops 1: Kan du får mig til grisen ved at bruge 5 blokke?
       2-3 Maze Loops 17: Få mig til solsikken!
-      2-3 Maze Loops 18: "Få mig til solsikken!"
-      2-3 Maze Loops 19: "Få mig til solsikken!"
+      2-3 Maze Loops 18: Få mig til solsikken!
+      2-3 Maze Loops 19: Få mig til solsikken!
       2-3 Maze Loops 20: Få mig til solsikken!
       2-3 Maze Loops 21: Få mig til solsikken!
       2-3 Maze Loops Assessment 1: 'Vurdering: Få mig til solsikken ved hjælp af kun 5 blokke! '
@@ -211,6 +214,7 @@ da:
       2-3 maze sq14: Kan du komme hen til solsikken med kun fire blokke?
       2-3 maze sq15: Kan du komme hen til solsikken med kun 5 blokke/klodser?
       2-3 maze sq16: Ok, dette ligner meget, men er lidt anderledes. Kan du gøre det med kun fem blokke?
+      2-3: Lilla blomster kan have enten 1 eller 0 portioner nektar. Pas på du ikke prøver at hente nektar fra en lilla blomst, hvis den ikke har noget.\\r
       2-3level1: Hjælp fuglen med at fange den frække gris ved at flytte den fremad
       20hr_farmer_stage9_1: Hej, jeg er en landmand. Jeg har brug for din hjælp til at tromle marken på min gård, så den er klar til at blive plantet. Flyt mig til bunken af snavs og brug "Fjern" blok til at fjerne den.
       20hr_farmer_stage9_11: 'Det er stadig mørkt udenfor. Flyt mig hen ad marken. Hvis der er en bunke så fjern den, og hvis der er et hul så fyld det op. Tip: Brug rullemenuen med indstillinger på "hvis"-blokken.'
@@ -250,7 +254,7 @@ da:
       4-5 Artist 5: Hvad vinkel bruger du?
       4-5 Artist 6: Denne ligesidet trekant har vinkler på 60, 60 og 60 grader. Hver side er 200 pixels. Færdigør tegningen.
       4-5 Artist 7: Denne retvinklet trekant har vinkler på 30, 60 og 90 grader. Den skrå sides længde er dobbelt af højden af 100 pixel. Færdiggør tegningen.
-      4-5 Artist 8: "Midterlinjen på en fodboldbane er vinkelret på sidelinjen. Denne bane har en omkreds på 800 pixels og den er 240 pixel lang. Hvor bred er den? Tegn banens afgrænsninger og midterlinje."
+      4-5 Artist 8: Midterlinjen på en fodboldbane er vinkelret på sidelinjen. Denne bane har en omkreds på 800 pixels og den er 240 pixel lang. Hvor bred er den? Tegn banens afgrænsninger og midterlinje.
       4-5 Artist 9: Tegn den anden halvdel, sådan at designet er symmetrisk. Trekanterne er ligesidede og siderne er 50 pixels lange.
       4-5 Artist Assessment 1: 'Vurdér: Brug en løkke-klods for at tegne den ligesidede trekant. Alle sider i trekanten er 300 pixels.'
       4-5 Artist For Loops 1: Sæt tallene fra 1-10 ind i bredde-blokkene og afspil coden.
@@ -285,42 +289,39 @@ da:
       4-5 Artist Functions 7: Brug funktionen "tegne et hus" til at tegne huse, der er 100 pixels og 50 pixels. De to huse er adskilt af 50 pixel.
       4-5 Artist Functions 8: Funktionen "tegn en blomst" har en parameter, der tillader dig at indstille stilk højden.  Sæt den til 200 og se hvad der sker.
       4-5 Artist Functions 9: Tegn disse 3 blomster. Den førstes højde er 100 og den næste blomst er altid 50 pixels højere end højden af den foregående. Blomsterne er også 100 pixel fra hinanden.
-      4-5 Artist Patterns 1: |-
-        Kan du tegne denne firkant ved hjælp af en løkke? Hver side er 20 pixels lang.
+      4-5 Artist Patterns 1: Kan du tegne denne firkant ved hjælp af en løkke? Hver side er 20 pixels lang.
       4-5 Artist Patterns 10: "Denne kode tegner to rækker af sekskanter - \ngentag det hele 4 gange for at tegne hele honning-cellen. Tip: Du bliver nødt til at hoppe 120 pixels tilbage i dit yderste loop, for at sørge for kunstneren ikke tegner ud over skærmen."
       4-5 Artist Patterns 11: 'Hvor mange gange har du brug for at gentage dette, for at tegne en halv cirkel? Tip: Hvis der er 360 grader i en cirkel og hver gentagelse rykker 3 grader, hvor mange gange bliver du nødt til at gentage for at tegne en fuld cirkel?'
-      4-5 Artist Patterns 12: "Hvis du kopierer denne løkke og drejer til venstre i stedet for højre, hvad der sker så? Kan du gentage det for at tegne denne bølge?"
-      4-5 Artist Patterns 13: "Lad os nu gentage det hele fire gange for at oprette denne billedramme. Hold øje med hjørnerne - du ikke kan bare dreje 90 grader! Hvis 60 gentagende 3 graders drej giver en halv cirkel, hvilke af disse blokke af kode vil lave en kvart cirkel til hjørnerne?"
+      4-5 Artist Patterns 12: Hvis du kopierer denne løkke og drejer til venstre i stedet for højre, hvad der sker så? Kan du gentage det for at tegne denne bølge?
+      4-5 Artist Patterns 13: Lad os nu gentage det hele fire gange for at oprette denne billedramme. Hold øje med hjørnerne - du ikke kan bare dreje 90 grader! Hvis 60 gentagende 3 graders drej giver en halv cirkel, hvilke af disse blokke af kode vil lave en kvart cirkel til hjørnerne?
       4-5 Artist Patterns 2: Hvis du placerer din firkant løkke inde i en anden løkke, kalder vi det en indlejret løkke. Hvad har du brug at tilføje til din ydre løkke for at sikre alle 15 firkanter støder op mod hinanden?
       4-5 Artist Patterns 3: Lad os nu gå et niveau dybere! Vi har indlejret hele blokken af kode inde i en anden løkke, men du skal få kunstneren tilbage på plads for at trække den næste linje. Hvilke af disse kodeblokke kan du placere i slutningen af den yderste loop for at tegne hele nettet?
       4-5 Artist Patterns 4: Denne diamant har 50 pixel sider og vinkler af 120 og 60 grader. Brug en løkke til at tegne den.
       4-5 Artist Patterns 5.5: Hvor mange gange har du brug at gentage denne blok for at tegne det fulde net af diamanter?
-      4-5 Artist Patterns 5: "Lad os gentage dette, for at lave en række af 6 diamanter. Bemærk, at vi ændret vores diamant kode til gentag 3 gange i stedet for 2 - Hvorfor tror du at det er sådan?"
-      4-5 Artist Patterns 6: Hvor mange gange har du brug at gentage denne blok for at tegne det fulde net af diamanter?
+      4-5 Artist Patterns 5: Lad os gentage dette, for at lave en række af 6 diamanter. Bemærk, at vi ændret vores diamant kode til gentag 3 gange i stedet for 2 - Hvorfor tror du at det er sådan?
       4-5 Artist Patterns 7: Lad os ændre koden fra den sidste puslespil for at lave dette mere komplekse mønster. Bemærk, hvordan diamanter nu overlapper, prøv at ændre, den første "hop baglæns" fra 100 til 50 (halvt så langt) - hvor langt bør kunstneren nu gå i den anden "hop baglæns"?
       4-5 Artist Patterns 8: Brug en løkke til at tegne denne sekskant med 40 pixels sider og 60 graders vinkler.
       4-5 Artist Patterns 9.5: Lad os gentage denne kode for at tegne to rækker af sekskanter. Bemærk, hvordan vores anden række er flyttet til højre.
-      4-5 Artist Patterns 9: "Gentag nu koden 3 gange for at tegne hele rækken. Tip, hver sekskant er 80 pixels bred fra længst punkterne til venstre mod højre."
+      4-5 Artist Patterns 9: Gentag nu koden 3 gange for at tegne hele rækken. Tip, hver sekskant er 80 pixels bred fra længst punkterne til venstre mod højre.
       4-5 Artist Patterns Free Play: Fri leg - prøv at lave dit eget mønster!
       4-5 Bee Conditionals - FC Test: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       4-5 Bee Conditionals 1: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
-      4-5 Bee Conditionals 2: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
+      4-5 Bee Conditionals 2: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       4-5 Bee Conditionals 3: Bien vil bare lave honning nu. Kontroller for kun at lave honning på honning celler.
       4-5 Bee Conditionals 4: Det ukendte objekt er enten en blomst eller en honning celle. Brug hvis/ellers blokken for at samle nektar hvis det er en blomst, ellers lav honning (fordi det så er en honning celle).
-      4-5 Bee Conditionals 5: |-
-        Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
-      4-5 Bee Conditionals 6: "Denne lilla blomst kan have 3, 2 eller 1 nektar. Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette en \"hvis, ellers-hvis, ellers\" blok. Færdiggør løsning til at indsamle den ukendte mængde nektar."
-      4-5 Bee Conditionals 7: "Husk at lilla blomster kan have 3, 2 eller 1 nektar. Færdiggør funktionen \"tjek lilla blomst\" og bruge det til at samle alt nektaren på blomsterne."
-      4-5 Bee Conditionals 8: "Skrive inde i funktionen \"tjek blomst lave honning\". Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle alt nektaren. Derefter, gå videre og lav honning."
-      4-5 Bee Conditionals Assessment 1: "Vurdering: Denne kode er forkert. Færdiggør funktionen \"saml nektar eller lav honning\", kald den derefter for at indsamle alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar."
-      4-5 Bee Debugging 1: "Disse blokke driller mig virkelig. Kan du lave dem?"
+      4-5 Bee Conditionals 5: Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
+      4-5 Bee Conditionals 6: Denne lilla blomst kan have 3, 2 eller 1 nektar. Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette en "hvis, ellers-hvis, ellers" blok. Færdiggør løsning til at indsamle den ukendte mængde nektar.
+      4-5 Bee Conditionals 7: Husk at lilla blomster kan have 3, 2 eller 1 nektar. Færdiggør funktionen "tjek lilla blomst" og bruge det til at samle alt nektaren på blomsterne.
+      4-5 Bee Conditionals 8: Skrive inde i funktionen "tjek blomst lave honning". Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle alt nektaren. Derefter, gå videre og lav honning.
+      4-5 Bee Conditionals Assessment 1: 'Vurdering: Denne kode er forkert. Færdiggør funktionen "saml nektar eller lav honning", kald den derefter for at indsamle alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar.'
+      4-5 Bee Debugging 1: Disse blokke driller mig virkelig. Kan du lave dem?
       4-5 Bee Debugging 10: Find fejlene, og afhjælp dem.
       4-5 Bee Debugging 11: Tæller dette korrekt?
       4-5 Bee Debugging 2: Hjælpe bien med at samle nektar og lave honning.
       4-5 Bee Debugging 3: Find fejlene, og afhjælp dem.
       4-5 Bee Debugging 4: Disse blokke virker ikke. Hvad er mønsteret?
       4-5 Bee Debugging 5: Noget er ikke korrekt her...
-      4-5 Bee Debugging 6: "Den lilla blomst har en ukendt mængde nektar. Reparere blokkene for at få alt nektaren fra blomsten."
+      4-5 Bee Debugging 6: Den lilla blomst har en ukendt mængde nektar. Reparere blokkene for at få alt nektaren fra blomsten.
       4-5 Bee Debugging 7: Funktionen mangler noget...
       4-5 Bee Debugging 8: Denne funktion er lavet korrekt, men den bliver ikke brugt korrekt.
       4-5 Bee Debugging 9: Hvorfor laver bien ikke nok honning?
@@ -328,13 +329,13 @@ da:
       4-5 Bee Nested Loops 1: Bruge en løkke til at indsamle al nektaren.
       4-5 Bee Nested Loops 2: "Saml al nektaren fra hver blomst.\nBrug et indlejret loop. "
       4-5 Bee Nested Loops 3: "Saml al nektaren ved at sætte \nstartkoden ind i en indlejret løkke."
-      4-5 Bee Nested Loops 4: "Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. "
+      4-5 Bee Nested Loops 4: 'Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. '
       4-5 Bee Nested Loops 5: Indsaml al nektar ved hjælp af indlejrede løkker.
       4-5 Bee Nested Loops 6: Indsaml al nektar.
       4-5 Bee Nested Loops 7: Sæt denne løkke ind i en anden løkke for at lave en indlejret løkke, og indsaml al nektar fra blomsterne.
       4-5 Bee Nested Loops 8: 'Indsamle alt nektar fra disse blomster ved at indlejre en løkke. Erstat inderste "Gentagne gange blok" med et "Hvis blok". '
       4-5 Bee Nested Loops 9: Du skal samle alt nektar fra disse blomster ved at indlejre et "Hvis løkke" inde i en gentagelse.
-      4-5 Bee Nested Loops Assessment 1: "** Vurdering: ** Saml al nektaren og lav al honningen ved hjælp af løkker."
+      4-5 Bee Nested Loops Assessment 1: "\\*\\* Vurdering: \\*\\* Saml al nektaren og lav al honningen ved hjælp af løkker."
       4-5 Bee Nested Loops Rows: Saml nektar fra rækkerne af blomster! Brug en indlejret løkke.
       4-5 Maze 1 (copy 1): Kære person. Mig zombie. Skal... hen.. til solsikke.
       4-5 Maze 1: Kære person. Mig zombie. Skal... hen.. til solsikke.
@@ -370,21 +371,21 @@ da:
       Course 4 Maze 6: Kan du løse denne opgave ved brug af færrest muligt antal blokke?
       Course E MC Conditionals1: Du finder de mest værdifulde ressourcer under jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker kul.
       Course1MazeAssessment1: |-
-        En lille test!\r
+        En lille test!\\r
         Flyt mig først i een retning, og så en anden, for at komme hen til grisen
       Course1MazeAssessment2: |-
-        En lille test!\r
+        En lille test!\\r
         Flyt mig først i een retning, og så en anden, for at komme hen til grisen.
       CourseE_HOC 2018 Level_1: Indsaml en båd fra kisten.
       CourseE_HOC 2018 Level_10: Gå til indgangen af havmonumentet.
-      CourseE_HOC 2018 Level_11: 'Byg en kanal med prismarine inde i havmonumentet.'
-      CourseE_HOC 2018 Level_2: 'Gå til enden af molen.'
-      CourseE_HOC 2018 Level_3: 'Tag over det åbne hav, og find til torsken.'
+      CourseE_HOC 2018 Level_11: Byg en kanal med prismarine inde i havmonumentet.
+      CourseE_HOC 2018 Level_2: Gå til enden af molen.
+      CourseE_HOC 2018 Level_3: Tag over det åbne hav, og find til torsken.
       CourseE_HOC 2018 Level_4: Brug en løkke til at komme hen til delfinen.
       CourseE_HOC 2018 Level_5: Udforsk skibsvraget for at finde kisten.
       CourseE_HOC 2018 Level_6: Navigér gennem isen for at nå hen til laksen.
       CourseE_HOC 2018 Level_7a: Led efter en kiste i disse undersøiske ruiner.
-      CourseE_HOC 2018 Level_9b: 'Brug korallerne som styringspunkter for at nå frem til skatten.'
+      CourseE_HOC 2018 Level_9b: Brug korallerne som styringspunkter for at nå frem til skatten.
       Crack Random Substitution: Instruktioner
       Crack Random Substitution_2018: Instruktioner
       Crack Random Substitution_2019: Instruktioner
@@ -395,15 +396,15 @@ da:
       Function intro Ryan_2019: Brug "byg bro" funktionen to gange for at bygge en vej hen til faklen.
       HOC 2018 Level_1: Indsaml en båd fra kisten.
       HOC 2018 Level_10: Gå til indgangen af havmonumentet.
-      HOC 2018 Level_11: 'Byg en kanal med prismarine inde i havmonumentet.'
-      HOC 2018 Level_12: 'Design dit eget undervandsmiljø, du bestemmer!'
-      HOC 2018 Level_2: 'Gå til enden af molen.'
-      HOC 2018 Level_3: 'Tag over det åbne hav, og find til torsken.'
+      HOC 2018 Level_11: Byg en kanal med prismarine inde i havmonumentet.
+      HOC 2018 Level_12: Design dit eget undervandsmiljø, du bestemmer!
+      HOC 2018 Level_2: Gå til enden af molen.
+      HOC 2018 Level_3: Tag over det åbne hav, og find til torsken.
       HOC 2018 Level_4: Brug en løkke til at komme hen til delfinen.
       HOC 2018 Level_5: Udforsk skibsvraget for at finde kisten.
       HOC 2018 Level_6: Navigér gennem isen for at nå hen til laksen.
       HOC 2018 Level_7a: Led efter en kiste i disse undersøiske ruiner.
-      HOC 2018 Level_9b: 'Brug korallerne som styringspunkter for at nå frem til skatten.'
+      HOC 2018 Level_9b: Brug korallerne som styringspunkter for at nå frem til skatten.
       Infinity_catch: Kan du få Elsa ("figur 2") til at indhente Anna ved hjælp af piletasterne?
       Infinity_finale: Lav noget du kan lide og del det!
       Infinity_move_collide: Hiro er "figur 1".  Flyt ham mod højre til Baymax, og afspil en lyd, når de rører hinanden.
@@ -454,7 +455,7 @@ da:
       K-1 Maze Assessment 2: Opgave -- Få mig hen til grisen!
       K-1 Maze Loops 1: Få mig hen til grisen!
       K-1 Maze Loops 10: Få mig hen til grisen! Brug gentag-blokken.
-      K-1 Maze Loops 11: "Få mig hen til grisen! Brug gentag-blokken."
+      K-1 Maze Loops 11: Få mig hen til grisen! Brug gentag-blokken.
       K-1 Maze Loops 12: Få mig hen til grisen! Brug gentag-blokken.
       K-1 Maze Loops 2: Brug gentag-blokken for at få mig hen til grisen!
       K-1 Maze Loops 3: Få mig hen til grisen! Brug gentag-blokken.
@@ -467,10 +468,13 @@ da:
       K-1 Maze Loops Assessment 1: Opgave -- Brug løkker (gentag-blokke) for at få mig hen til grisen!
       K-1 Maze Loops Assessment 2: Opgave -- Brug løkker for at få mig hen til grisen!
       K-1 Maze Sequence Assessment 1: |-
-        En lille test!\r
+        En lille test!\\r
         Flyt i en retning,
         så en anden, for at komme hen til grisen
-      K-1 Maze Sequence Assessment 2: "En lille test!\\r\nFlyt i en retning,\nså en anden, for at komme hen til grisen."
+      K-1 Maze Sequence Assessment 2: |-
+        En lille test!\\r
+        Flyt i en retning,
+        så en anden, for at komme hen til grisen.
       K-1 Maze debug Assessment 1: Opgave -- Find fejlen i koden ved at flytte på og tilføje blokke, så jeg kommer hen til grisen!
       K-1 artist 1 level 10: Tegn den stiplede linje ved brug af både hoppe- og tegneblokke
       K-1 artist 1 level 9: Tegn dette ved brug af tre streger
@@ -573,7 +577,7 @@ da:
       Overworld Shear Sheep_2018: Nu skal der klippes får! Brug "klip"-kommandoen for at samle uld fra begge får.
       Overworld Shear Sheep_2019: Nu skal der klippes får! Brug "klip"-kommandoen for at samle uld fra begge får.
       PDK5 Functions 2: Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet "tegn en firkant". Kan du bruge "tegn en firkant"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden.
-      PS copy 2-3 Bee Conditionals 5: "Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken."
+      PS copy 2-3 Bee Conditionals 5: Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken.
       Ryan - 4-5 Bee Conditionals 2: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       Ryan - Bee Conditionals: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       SpecialFrozenLevel: Du er nu officielt en stor kunstner! Lav et vinterdrømmeland.
@@ -597,8 +601,8 @@ da:
       Underground Mining Coal: Du finder de mest værdifulde ressourcer under jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker kul.
       Underground Mining Coal_2018: Du finder de mest værdifulde ressourcer under jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker kul.
       Underground Mining Coal_2019: Du finder de mest værdifulde ressourcer under jorden, men der kan være mørkt. Placér mindst to fakler, og udvind mindst to stykker kul.
-      aE7: "Hvis du kopierer denne løkke og drejer til venstre i stedet for højre, hvad der sker så? Kan du gentage det for at tegne denne bølge?"
-      aE8: "Lad os nu gentage det hele fire gange for at oprette denne billedramme. Hold øje med hjørnerne - du ikke kan bare dreje 90 grader! Hvis 60 gentagende 3 graders drej giver en halv cirkel, hvilke af disse blokke af kode vil lave en kvart cirkel til hjørnerne?"
+      aE7: Hvis du kopierer denne løkke og drejer til venstre i stedet for højre, hvad der sker så? Kan du gentage det for at tegne denne bølge?
+      aE8: Lad os nu gentage det hele fire gange for at oprette denne billedramme. Hold øje med hjørnerne - du ikke kan bare dreje 90 grader! Hvis 60 gentagende 3 graders drej giver en halv cirkel, hvilke af disse blokke af kode vil lave en kvart cirkel til hjørnerne?
       beeDebugVideo1: Kan du bruge en løkke til at indsamle al nektaren?
       birdsDebugVideo1: Følg sporet og før mig til den tåbelige gris. Undgå TNT ellers vil fjerene flyve væk!
       bounce_1: Vedhæft en blok til "når venstre pil"-blokken og tryk på "Kør Program". Flyt battet ved hjælp af venstre pil for at nå slut-målet.
@@ -637,12 +641,9 @@ da:
       course3_playlab_stage17_6: Kan du tilføje blokke til at ændre baggrunden og hastigheden af pingvinen, og derefter flytte ham med pilene indtil du scorer?
       course3_playlab_stage17_7: Opret din egen historie. Når du er færdig, skal du klikke på "Udfør" for at lade dine venner prøve din historie på deres telefoner.
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet det og erstat det med noget helt andet)
-      courseC_artist_prog5: |-
-        Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.
-      courseC_artist_prog5_2018: |-
-        Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.
-      courseC_artist_prog5_2019: |-
-        Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.
+      courseC_artist_prog5: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
+      courseC_artist_prog5_2018: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
+      courseC_artist_prog5_2019: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
       courseD_bee_debugging3: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
       courseD_bee_nestedLoops3: "Saml al nektaren fra hver blomst.\nBrug et indlejret loop. "
       courseD_bee_nestedLoops5: 'Indsaml al nektar fra alle blomster, og lav honning i alle bikuber. Brug indlejrede løkker. '
@@ -662,14 +663,14 @@ da:
       courseD_bounce_events6: Nu er målet øverst. Du skal knytte blokke til begge "når bold rammer"-blokkene for at løse denne opgave.
       courseD_bounce_events7: Tilføj blokke til hver af "når"-blokkene. Ram bolden indtil den rammer slut-målet.
       courseD_debugging_3: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      courseD_maze_nestedLoops4: 'Få mig til solsikken!'
-      courseD_maze_nestedLoops4_2018: 'Få mig til solsikken!'
-      courseD_maze_nestedLoops4_2019: 'Få mig til solsikken!'
+      courseD_maze_nestedLoops4: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2018: Få mig til solsikken!
+      courseD_maze_nestedLoops4_2019: Få mig til solsikken!
       courseD_maze_nestedLoops6: Få mig til solsikken!
       courseD_maze_nestedLoops6_2018: Få mig til solsikken!
       courseD_maze_nestedLoops6_2019: Få mig til solsikken!
-      courseE_artist_functions1: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
-      courseE_artist_functions1_2018: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
+      courseE_artist_functions1: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde.'
+      courseE_artist_functions1_2018: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde.'
       courseE_bee_concept1: "Saml al nektaren fra hver blomst.\nBrug et indlejret loop. "
       courseE_bee_concept1_2018: "Saml al nektaren fra hver blomst.\nBrug et indlejret loop. "
       courseE_bee_concept1_2019: "Saml al nektaren fra hver blomst.\nBrug et indlejret loop. "
@@ -725,82 +726,79 @@ da:
       grade2_CaringForNewPet_10: Få mig hen til grisen!
       grade2_CaringForNewPet_5: Få mig hen til grisen!
       grade2_MakeDogTag_10: Tegn noget sjovt.
-      grade2_MakeDogTag_3: |-
-        Hjælp mig færdigøre huset for denne kat.
-      grade2_MakeDogTag_4: |-
-        Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.
-      grade2_MakeDogTag_6: 'Fri leg! Tegn lige hvad du har lyst til.'
+      grade2_MakeDogTag_3: Hjælp mig færdigøre huset for denne kat.
+      grade2_MakeDogTag_4: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
+      grade2_MakeDogTag_6: Fri leg! Tegn lige hvad du har lyst til.
       grade2_MakeDogTag_8: Lad os forbinde en stak V'er, ved at tegne dem i en løkke.
-      grade2_MakeDogTag_9: "Lad os nu tegne det 24 gange. Tilføj et\nvenstre drej på 30 grader og læg det ind i en gentage-blok."
+      grade2_MakeDogTag_9: |-
+        Lad os nu tegne det 24 gange. Tilføj et
+        venstre drej på 30 grader og læg det ind i en gentage-blok.
       grade2_PuppyLoops_1: Kan du får mig til grisen ved at bruge 5 blokke?
-      grade2_PuppyLoops_10: |-
-        Min vindmølle er ikke færdig. Hvor mange gange skal jeg gentage, for at lave den færdig?
+      grade2_PuppyLoops_10: Min vindmølle er ikke færdig. Hvor mange gange skal jeg gentage, for at lave den færdig?
       grade2_PuppyLoops_2: 'Kan du erstatte disse fem blokke med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
       grade2_PuppyLoops_4: Bruge to løkker til at komme hen til grisen med færre blokke.
       grade2_PuppyLoops_5: Få mig hen til grisen.
       grade2_PuppyLoops_7: Få mig til solsikken!
-      grade2_PuppyLoops_8: "Koden du ser for de tre knurhår er forkert. Tip: Hvert knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene."
-      grade2_PuppyLoops_9: |-
-        Det ser ud til at K'et i koden er tegnet baglæns. Kan du få det til at ligne et K?
+      grade2_PuppyLoops_8: 'Koden du ser for de tre knurhår er forkert. Tip: Hvert knurhår er 75 pixel lang. Ret denne kode for at tegne knurhårene.'
+      grade2_PuppyLoops_9: Det ser ud til at K'et i koden er tegnet baglæns. Kan du få det til at ligne et K?
       grade2_puppy_loops2: 'Kan du erstatte disse fem blokke med kun to blokke? (Tip: Opret en løkke ved hjælp af en "gentage gange" blok.)'
       grade2_puppy_loops4: Bruge to løkker til at komme hen til grisen med færre blokke.
       grade3_ConditionalsElse_1: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
-      grade3_ConditionalsElse_2: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
+      grade3_ConditionalsElse_2: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       grade3_ConditionalsElse_3: Bien vil bare lave honning nu. Kontroller for kun at lave honning på honning celler.
       grade3_ConditionalsElse_4: Det ukendte objekt er enten en blomst eller en honning celle. Brug hvis/ellers blokken for at samle nektar hvis det er en blomst, ellers lav honning (fordi det så er en honning celle).
-      grade3_ConditionalsElse_5: |-
-        Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
-      grade3_ConditionalsElse_6: "Denne lilla blomst kan have 3, 2 eller 1 nektar. Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette en \"hvis, ellers-hvis, ellers\" blok. Færdiggør løsning til at indsamle den ukendte mængde nektar."
-      grade3_ConditionalsElse_7: "Husk at lilla blomster kan have 3, 2 eller 1 nektar. Færdiggør funktionen \"tjek lilla blomst\" og bruge det til at samle alt nektaren på blomsterne."
-      grade3_ConditionalsElse_8: "Skrive inde i funktionen \"tjek blomst lave honning\". Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle alt nektaren. Derefter, gå videre og lav honning."
-      grade3_ConditionalsElse_9: "Vurdering: Denne kode er forkert. Færdiggør funktionen \"saml nektar eller lav honning\", kald den derefter for at indsamle alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar."
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
+      grade3_ConditionalsElse_5: Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
+      grade3_ConditionalsElse_6: Denne lilla blomst kan have 3, 2 eller 1 nektar. Her er en hvis-ellers blok kombineret med en anden hvis-ellers blok for at oprette en "hvis, ellers-hvis, ellers" blok. Færdiggør løsning til at indsamle den ukendte mængde nektar.
+      grade3_ConditionalsElse_7: Husk at lilla blomster kan have 3, 2 eller 1 nektar. Færdiggør funktionen "tjek lilla blomst" og bruge det til at samle alt nektaren på blomsterne.
+      grade3_ConditionalsElse_8: Skrive inde i funktionen "tjek blomst lave honning". Din funktion bør tjekke hvis den lilla blomst har 3, 2 eller 1 nektar og indsamle alt nektaren. Derefter, gå videre og lav honning.
+      grade3_ConditionalsElse_9: 'Vurdering: Denne kode er forkert. Færdiggør funktionen "saml nektar eller lav honning", kald den derefter for at indsamle alt nektar og honning. Husk at lilla blomster kan have 3, 2 eller 1 nektar.'
+      grade3_ConditionalsElse_TeacherIDo: Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
       grade3_Conditionals_1 BAD: Bruge en løkke til at indsamle al nektaren.
       grade3_Conditionals_1: "Hej, jeg er en bi! Hjælp mig med at samle al \nnektaren fra alle blomsterne. Brug en løkke."
       grade3_Conditionals_10 BAD: Saml nektar fra rækkerne af blomster! Brug en indlejret løkke.
-      grade3_Conditionals_10: |-
-        Saml nektar og lav honning. Tip: Hvad mon der sker, hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig med en løkke?
-      grade3_Conditionals_11 BAD: 'Vurdering - brug en mens løkke til at indsamle alt nektaren fra denne blomst.'
-      grade3_Conditionals_11: |-
-        Saml nektar og lav honning. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.
-      grade3_Conditionals_12: "Saml nektaren fra alle fire blomster."
+      grade3_Conditionals_10: 'Saml nektar og lav honning. Tip: Hvad mon der sker, hvis du benytter "hvis nektar"-blokken på en rød blomst? Kan du gøre den færdig med en løkke?'
+      grade3_Conditionals_11 BAD: Vurdering - brug en mens løkke til at indsamle alt nektaren fra denne blomst.
+      grade3_Conditionals_11: Saml nektar og lav honning. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.
+      grade3_Conditionals_12: Saml nektaren fra alle fire blomster.
       grade3_Conditionals_13: 'Vurdér: Saml al nektaren. Pas på du ikke samler nektar fra en lilla blomst, som ikke har noget nektar.'
-      grade3_Conditionals_2: "Hjælp mig med at samle al nektaren fra blomsterne og lave honning af den. Brug en løkke."
-      grade3_Conditionals_3: "Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken."
+      grade3_Conditionals_2: Hjælp mig med at samle al nektaren fra blomsterne og lave honning af den. Brug en løkke.
+      grade3_Conditionals_3: Lilla blomster har enten 1 eller 0 nektar, men du ved ikke hvilken det er. Vær forsigtig med at hente nektar fra lilla blomster, hvis de ikke har noget. Tjek om nektar er lig med 1 ved at bruge if -blokken.
       grade3_Conditionals_4: Brug en "hvis"-blok til denne blomst for at undersøge om den har nektar til rådighed.
-      grade3_Conditionals_5: "Indsaml nektaren fra hver blomst,\nhvis den har noget."
-      grade3_Conditionals_6: "Marken har røde og lilla blomster.\nDe røde blomster har en kendt mængde nektar, men de lilla blomster har en ukendt mængde.\nIndsaml al nektaren."
+      grade3_Conditionals_5: |-
+        Indsaml nektaren fra hver blomst,
+        hvis den har noget.
+      grade3_Conditionals_6: |-
+        Marken har røde og lilla blomster.
+        De røde blomster har en kendt mængde nektar, men de lilla blomster har en ukendt mængde.
+        Indsaml al nektaren.
       grade3_Conditionals_7: Saml al nektaren fra alle blomster.
-      grade3_Conditionals_8: "Hent nektar når blomsterne har noget."
+      grade3_Conditionals_8: Hent nektar når blomsterne har noget.
       grade3_Conditionals_9: Brug en løkke til at tjekke for og hente nektar fra alle blomsterne.
       grade3_Conditionals_TeacherIDo: Brug en "hvis"-blok til denne blomst for at undersøge om den har nektar til rådighed.
       grade3_Debugging_1: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      grade3_Debugging_5: "Disse blokke driller mig virkelig.\nRet fejlene for at samle al nektaren og lave det til honning.\nDu kan nu bruge løb og skridt."
-      grade3_Debugging_6: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      grade3_Debugging_5: |-
+        Disse blokke driller mig virkelig.
+        Ret fejlene for at samle al nektaren og lave det til honning.
+        Du kan nu bruge løb og skridt.
+      grade3_Debugging_6: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
       grade3_Debugging_7: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      grade3_Debugging_9: |-
-        Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
+      grade3_Debugging_9: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
       grade3_Debugging_TeacherIDo: Disse blokke irriterer mig virkelig. Ret fejlen(e) for at samle al nektaren og lave al honningen.
-      grade3_Loops_10: |-
-        Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
-      grade3_Loops_11: "Brug en løkke til at gå ned ad trappen og samle nektar."
+      grade3_Loops_10: Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
+      grade3_Loops_11: Brug en løkke til at gå ned ad trappen og samle nektar.
       grade3_Loops_12: Brug en løkke til at samle nektar fra alle blomster og lave honning på hvert bistade.
       grade3_Loops_2: Kan du løse samme opgave lettere med en løkke?
       grade3_Loops_3: Kan du bruge en løkke til at indsamle al nektaren?
       grade3_Loops_4: Brug gentag-blokken til både at samle al nektaren og lave honning.
       grade3_Loops_5: Lav en løkke (gentag), som samler nektar fra alle blomsterne.
-      grade3_Loops_6: "Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!"
-      grade3_Loops_7: |-
-        Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. 
+      grade3_Loops_6: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!
+      grade3_Loops_7: 'Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. '
       grade3_Loops_8: Brug en løkke (gentag-blok) til at hente nektaren og lave honning.
       grade3_Loops_9: Hent nektar fra alle blomsterne og lav honning på bistaderne.
-      grade3_Loops_TeacherIDo: |-
-        Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. 
-      grade3_bee_conditionals_quantum2: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
+      grade3_Loops_TeacherIDo: 'Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. '
+      grade3_bee_conditionals_quantum2: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       grade3_maze_Loop1: 'Vurdering: Få mig til solsikken ved hjælp af kun 5 blokke! '
-      grade3_maze_loops2: 'Få mig til solsikken!'
+      grade3_maze_loops2: Få mig til solsikken!
       grade3_maze_loops3: Få mig til solsikken!
       grade3_maze_loops4: Få mig til solsikken!
       grade3_maze_loops5: Få mig til solsikken!
@@ -812,13 +810,12 @@ da:
       grade3_robotFarmer_ConditionalsIntro_6: Fjern alle bunker jord, ved at bruge så få blokke som muligt. De nye muligheder i dropdown-menuen på "imens" blokken fortæller mig om jeg står på en bunke eller et hul.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Hjælpe mig med at fylde alle disse huller med 5 skovlfulde jord. Tip: du kan sætte en "gentag" blok i en "imens" blok.'
       grade4_arist_nested_loop_triangles4: Tegn tænderne i alligatorens mund!
-      grade4_artist_functions1: "Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde."
-      grade4_artist_functions2: "Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet \"tegn en firkant\". Kan du bruge \"tegn en firkant\"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden."
+      grade4_artist_functions1: 'Hej. Mig zombie kunstner. Mig elske tegning. Hjælp mig tegne de firkantede briller.  Hint: broen imellem glassene er 25 pixels kortere end firkantens længde.'
+      grade4_artist_functions2: Funktioner lader dig definere nye blokke! Vi har flyttet blokkene for at tegne en firkant til en funktion kaldet "tegn en firkant". Kan du bruge "tegn en firkant"-funktionen til at lave brillerne? Firkanterne er 75 pixel fra hinanden.
       grade4_bee_conditionals_quantum1: Bien kan ikke fortælle, hvis dette er en blomst eller en honning celle. Samle nektar fra blomster, men tjek først om det er en blomst eller en honning celle.
-      grade4_bee_conditionals_quantum2: "Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar."
+      grade4_bee_conditionals_quantum2: Bien ønsker kun nektar lige nu. Alle objekter er ikke blomster, så tjek nedenunder hver sky for at se hvis den gemmer en blomst. Hvis der er, kan du samle nektar.
       grade4_bee_conditionals_quantum4: Det ukendte objekt er enten en blomst eller en honning celle. Brug hvis/ellers blokken for at samle nektar hvis det er en blomst, ellers lav honning (fordi det så er en honning celle).
-      grade4_bee_conditionals_quantum5: |-
-        Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
+      grade4_bee_conditionals_quantum5: Der kan være en blomst eller en honning celle under disse skyer. Brug hvis/ellers blokken for at samle nektar hvis der er en blomst, ellers lav honning (fordi det så er en honning celle).
       grade4_bee_functions1: Saml al nektaren fra alle blomster.
       grade4_bee_functions2: Funktioner er blokke/klodser af code som udfører en arbejdsopgave. Brug "saml 2 nektarer"-funktionen for at samle nektar fra alle blomsterne.
       grade4_bee_functions3: Funktioner er blokke/klodser af code som udfører en arbejdsopgave. Brug "saml 5"-funktionen for at samle nektar fra 5 blomster ad gangen. Husk at bruge en løkke-blok/klods, for at bruge et minimum af blokke/klodser.
@@ -839,24 +836,20 @@ da:
       grade4_frozen_square_loop1: Hej, er jeg Anna af Arendelle! Lad os lave et kvadrat med "Gentagelse" blokken, som bruger færre blokke. Hvor mange gange skal "Gentagelse" blokken, gentage blokkene indeni for at lave en firkant?
       grade4_frozen_square_loop2: Lad os lave tre kvadrater, og dreje efter hvert kvadrat. Sørg for at at dreje 120 grader før hvert nyt kvadrat.
       grade4_frozen_square_loop3: Kan du lave et snefnug, ved at bruge "Gentagelse" blokken og lave en firkant 10 gange. Og ved at bruge "Dreje" blokken for at dreje 36 grader mellem hvert kvadrat?
-      grade4_review_artist1: Hej, er jeg en kunstner. Du kan få mig til at tegne næsten hvad som helst, hvis bare du skriver koden . Brug et par blokke til, at tegne over de grå linier i billedet. (Hver linje er 100 pixels lang)
       grade4_review_artist2: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle tre sider er den samme længde.'
       grade4_review_artist3: Hop blokken flytter kunstneren uden at tegne. Tegn de stiplede linjer ved hjælp af både hoppe- og tegneblokkene.
       grade4_review_bee1: Brug gentag-blokken til både at samle al nektaren og lave honning.
       grade4_review_bee2: Hent nektar fra alle blomsterne og lav honning på bistaderne.
-      grade4_review_bee3: |-
-        Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
-      level 'grade3_Loops_10: |-
-        Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
-      level 'grade3_Loops_11: "Brug en løkke til at gå ned ad trappen og samle nektar."
+      grade4_review_bee3: Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
+      level 'grade3_Loops_10: Bruge en løkke næsten som i sidste opgave, men få også en drej-blok med.
+      level 'grade3_Loops_11: Brug en løkke til at gå ned ad trappen og samle nektar.
       level 'grade3_Loops_12: Brug en løkke til at samle nektar fra alle blomster og lave honning på hvert bistade.
       level 'grade3_Loops_2: Kan du løse samme opgave lettere med en løkke?
       level 'grade3_Loops_3: Kan du bruge en løkke til at indsamle al nektaren?
       level 'grade3_Loops_4: Brug gentag-blokken til både at samle al nektaren og lave honning.
       level 'grade3_Loops_5: Lav en løkke (gentag), som samler nektar fra alle blomsterne.
-      level 'grade3_Loops_6: "Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!"
-      level 'grade3_Loops_7: |-
-        Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. 
+      level 'grade3_Loops_6: Hvad sker der hvis du gentager denne sekvens 3 gange? Glem ikke at lave honning til sidst!
+      level 'grade3_Loops_7: 'Hver blomst indeholder én portion nektar. Hent nektar fra alle blomsterne. '
       level 'grade3_Loops_8: Brug en løkke (gentag-blok) til at hente nektaren og lave honning.
       level 'grade3_Loops_9: Hent nektar fra alle blomsterne og lav honning på bistaderne.
       level grade3_Loops_2: Kan du løse samme opgave lettere med en løkke?

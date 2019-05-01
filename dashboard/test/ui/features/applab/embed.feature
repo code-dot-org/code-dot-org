@@ -1,9 +1,7 @@
 # Brad (2018-11-14) Skip on IE due to blocked pop-ups and possible "new document" issues
 @no_ie
-@dashboard_db_access
 @as_student
 @no_mobile
-@no_older_chrome
 Feature: App Lab Embed
 
   Background:
@@ -27,9 +25,8 @@ Feature: App Lab Embed
     Then I wait until element "a.more-link" is visible
     And I click selector "a.more-link"
     Then I wait until element "a:contains('How it Works (View Code)')" is visible
-    And I click selector "a:contains('How it Works (View Code)')"
+    And I click selector "a:contains('How it Works (View Code)')" to load a new tab
 
-    And I go to the newly opened tab
     And I wait for the page to fully load
     And I wait to see Applab code mode
 

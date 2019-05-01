@@ -7568,6 +7568,8 @@ fil:
               name: Naka-nest na mga Loop sa Frozen
             Conditionals in Minecraft:
               name: Mga Kondisyonal sa Minecraft
+            Songwriting:
+              name: Pagsusulat ng Awit
         express-2019:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
@@ -8336,6 +8338,42 @@ fil:
             new stage:
               name: bagong yugto
         csd-videos:
+          stages:
+            new stage:
+              name: bagong yugto
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Pag-crowdsourcing
+            Conditionals with Cards:
+              name: Mga Conditional gamit ang mga Card
+            'Programming: My Robotic Friends':
+              name: 'Pag-Program: Ang Aking mga Robotik na mga Kaibigan'
+            Sequence in Maze:
+              name: Pagkakasunod-sunod sa Maze
+            Building a Foundation:
+              name: Gumawa ng Foundation
+            Debugging with Scrat:
+              name: Pagde-debug gamit ang Scrat
+            Programming in Artist:
+              name: Pag-program sa Artist
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Nested Loops in Bee/Zombie:
+              name: Naka-Nest na mga Loops sa Bee/Zombie
+            Nested Loops with Frozen:
+              name: Naka-Nest na mga Loops sa Frozen
+            Build a Flappy Game:
+              name: Bumuo ng Flappy na Laro
+            Build a Star Wars Game:
+              name: Bumuo ng Star Wars na Laro
+            'Functions: Songwriting':
+              name: 'Mga Function: Pagsusulat ng Awit'
+            Functions in Artist:
+              name: Mga Function sa Artist
+            Determine the Concept:
+              name: Tukuyin ang Konsepto
+        csp7-pilot-staging:
           stages:
             new stage:
               name: bagong yugto

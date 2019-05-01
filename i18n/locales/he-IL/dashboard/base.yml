@@ -885,6 +885,8 @@ he:
     csp_variables: 'משתנים'
     csp_conditionals: 'תנאים'
     csp_functions: 'פונקציות'
+    csp_lists: 'רשימות'
+    csp_loops: 'חזרות'
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.

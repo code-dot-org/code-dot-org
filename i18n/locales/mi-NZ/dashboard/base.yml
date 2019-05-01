@@ -670,6 +670,8 @@ mi:
     csp_variables: 'Ngā Taurangi'
     csp_conditionals: 'Ngā Here'
     csp_functions: 'Ngā Taumahi'
+    csp_lists: 'Ngā Rārangi'
+    csp_loops: 'Ngā Koromeke'
   external_links:
     disclaimer: Karo
     leaving_domain: E puta ana koe i tēnei rohe ināianei ki tētahi pae kāore i te whakahaerehia e Code.org.

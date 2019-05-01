@@ -471,6 +471,8 @@ is:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
       behaviors 5_callout:
         behaviors_edit: Bættu kóða í þessa hegðun.
+      behaviors free play_callout:
+        behaviors_edit: Bættu kóða í þessa hegðun.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi).
       course3_artist_functions_challenge1_callout:
@@ -822,8 +824,6 @@ is:
         courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
       courseD_scrat_ramp8_2018_callout:
         courseD_maze_ramp7_1: Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.
-      courseE_aboutme_5_callout:
-        courseE_aboutme_4_callout_1: Smelltu hér!
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Við skulum nota þennan kubb til að byrja að búa til fyrsta ferninginn.
       courseE_artist_functions1_2018_callout:

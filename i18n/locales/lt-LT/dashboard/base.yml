@@ -110,6 +110,7 @@ lt:
     user_type_student: "Mokinys"
     field_is_required: "reikalingas"
     accept_terms: "Turite sutikti, norint sukurti paskyrą"
+    email_preference_privacy: "Tikrinti savo privatumą"
     email_preference_yes: "Taip"
     email_preference_no: "Ne"
   school_info:
@@ -219,6 +220,7 @@ lt:
         artist: 'Nupiešk ką nors'
         applab: 'Sukurk programėlę'
       my_dashboard: "Valdymo skydelis"
+      course_catalog: "Kurso katalogas"
       project_gallery: "Projektai"
       report_bug: "Pranešti apie klaidą"
       teacher_community: "Mokytojų bendruomenė"
@@ -683,6 +685,8 @@ lt:
     csp_variables: 'Kintamieji'
     csp_conditionals: 'Sąlyginiai sakiniai'
     csp_functions: 'Komandų kūrimas'
+    csp_lists: 'Sąrašai'
+    csp_loops: 'Kartojimas'
   hoc_download:
     title: '„Programavimo valandos” parsisiuntimai'
     capsule_title: 'Ar turite internetą?'

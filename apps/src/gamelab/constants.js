@@ -41,6 +41,19 @@ module.exports.AnimationCategories = {
   category_all: 'All'
 };
 
+module.exports.CostumeCategories = {
+  category_animals: 'Animals',
+  category_generic_items: 'Generic items',
+  category_vehicles: 'Vehicles',
+  category_characters: 'Characters',
+  category_environment: 'Environment',
+  category_food: 'Food',
+  category_tools: 'Tools',
+  category_gameplay: 'Board games',
+  category_obstacles: 'Obstacles',
+  category_all: 'All'
+};
+
 module.exports.SpritelabReservedWords = [
   // Gamelab globals
   'CENTER',

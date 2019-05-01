@@ -25,6 +25,8 @@ bg:
         name: Показвано име
         name_example: Показвано име <br/> (например готин програмист или Джейн S.)
         email: Имейл
+        personal_email: Личен имейл адрес <a href="%{url}">(щракнете тук, ако не разполагате
+          с имейл адрес)</a>
         username: Потребителско име
         password: Парола
         password_confirmation: Потвърждение на паролата
@@ -33,6 +35,11 @@ bg:
         age: Възраст
         gender: Пол
         edit_header: Редактиране на данните за акаунта
+        finish_sign_up_header: Завършете създаването на профила си
+        finish_sign_up_subheader: Попълнете следната информация, за да приключите
+          създаването на Code.org акаунт за <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider: Попълнете следната информация, за да приключите
+          създаването на Code.org акаунт с <strong>%{provider}</strong> за <strong>%{email}</strong>.
         error:
           future: не може да бъде в бъдещето
   hello: Здравей, свят
@@ -97,6 +104,7 @@ bg:
     use_clever: За съжаление, този Code.org акаунт не е свързан с вашият %{provider}.
       Моля, влезте през вашия умен портал.
   signup_form:
+    email_signup: Влезте с вашия имейл адрес
     student_count: "%{count} ученици вече са се регистрирали."
     teacher_count: "%{count} учители вече са се регистрирали."
     overview: Регистрирайте се, за да следите напредъка си или да управлявате вашата
@@ -146,6 +154,7 @@ bg:
       политика за поверителност</a>.
     additional_information: Ние изискваме  допълнителна информация за да продължим  вписването
       ви.
+    user_type_label: Тип акаунт
     user_type_teacher: Учител
     user_type_student: Ученик
     field_is_required: е задължително
@@ -1035,6 +1044,8 @@ bg:
     csp_variables: Променливи
     csp_conditionals: Условия
     csp_functions: Функции
+    csp_lists: Списъци
+    csp_loops: Повторения
   external_links:
     disclaimer: Отказ от отговорност
     leaving_domain: Сега напускате този домейн, преминавайки към сайт, който не се
