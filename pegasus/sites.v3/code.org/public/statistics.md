@@ -254,7 +254,7 @@ Title 1 schools—which receive extra funding based on the number of students fr
 
 <div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
 
-<a href="" target="_blank"><img src="/images/statistics/fit-250/CSF-teachers-70.png"></a>
+<a href="https://twitter.com/codeorg/status/1122575212933836801" target="_blank"><img src="/images/statistics/fit-250/CSF-teachers-70.png"></a>
 
 <br>
 
@@ -270,14 +270,14 @@ Our CS teachers are everywhere! More than 70% of counties in the US have trained
 Code.org partners with researchers on a variety of studies. Want more? <a href="https://code.org/research" target=_"blank">View Code.org's in-depth research and data.</a>
 
 ### Teachers are taking on computer science
-Over 800,000 teachers have taken steps to bring computer science to their schools.
+Over 1 million teachers have taken steps to bring computer science to their schools.
 <%= view :display_chart, id: "chart1", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=A2:B65&headers=1", width: 1000, height: 500 %>
 Does your local school teach computer science? [Encourage them to start today](/yourschool)!  
 
 <br>
 
 ### The Hour of Code goes global
-With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 10% of students around the world.
+With over [200 partners](https://hourofcode.com/partners), since 2013, the [Hour of Code](https://hourofcode.com) has reached 15% of students around the world.
 <%= view :display_chart, id: "chart2", type: "ColumnChart", query_url: "https://docs.google.com/spreadsheets/d/1zXQWidXlgOB38o5thwtgfiT_JGnhhH9GhHSdlRYfVfo/gviz/tq?gid=0&range=D2:E65&headers=1", width: 1000, height: 500 %>
 
 ## What we're doing

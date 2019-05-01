@@ -1513,6 +1513,10 @@
   header_help_support: 'Help and support '
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
+  app_lab_documentation: "App Lab Documentation"
+  app_lab_tutorials: "App Lab Tutorials"
+  game_lab_documentation: "Game Lab Documentation"
+  game_lab_tutorials: "Game Lab Tutorials"
   header_documentation: "Documentation"
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
