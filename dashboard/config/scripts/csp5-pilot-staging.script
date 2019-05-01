@@ -9,6 +9,13 @@ stage 'Lists Investigate', flex_category: 'csp_lists'
 level 'Introduction to Lists - Part 3_2018', progression: 'Lists: Assigning and Updating'
 level 'Introduction to Lists - Part 4_2018', progression: 'Lists: Length'
 
+stage 'Lists Practice', flex_category: 'csp_lists'
+level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
+level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
+level 'U5 L03 Lists Practice 3', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 3.5', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 4', progression: 'List Operations'
+
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
 level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
