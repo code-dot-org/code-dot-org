@@ -348,9 +348,6 @@ module Pd::Application
       # Only if we haven't gotten a principal response yet.
       return false if response
 
-      # Only if we've sent at least one principal approval email before.
-      return false unless last_principal_approval_email_created_at
-
       # Only if it's been more than 5 days since we last created an email for the principal.
       return false if last_principal_approval_email_created_at && last_principal_approval_email_created_at > 5.days.ago
 
@@ -358,12 +355,18 @@ module Pd::Application
     end
 
     def allow_sending_principal_approval_teacher_reminder_email?
+      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
+      last_principal_approval_email_created_at = last_principal_approval_email&.created_at
+
       reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
+
+      # Only if we've sent at least one principal approval email before.
+      return false unless last_principal_approval_email_created_at
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
