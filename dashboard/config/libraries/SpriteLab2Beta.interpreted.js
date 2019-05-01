@@ -147,8 +147,11 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+//This exists for backcompat purposes with the first release of SpriteLab.
+//This version of the block is no longer provided, but it may exist in student code.
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  //touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
 }
 
 function spriteClicked(condition, sprite, event) {
