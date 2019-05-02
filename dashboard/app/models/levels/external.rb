@@ -55,10 +55,6 @@ class External < DSLDefined
     true
   end
 
-  def display_as_unplugged
-    properties.merge({'display_as_unplugged' => !properties['display_as_unplugged']})
-  end
-
   # returns a properties hash in which USER_ID_REPLACE_STRING is replaced by the current user's id
   # in markdown
   def properties_with_replaced_markdown(user)
