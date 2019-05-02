@@ -1,3 +1,4 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
@@ -10,6 +11,7 @@ project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
 version_year '2019'
+project_sharing true
 
 stage 'Innovations in Computing', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD_2019', named: true

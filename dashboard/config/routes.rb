@@ -152,6 +152,7 @@ Dashboard::Application.routes.draw do
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
+    get '/reset_session', to: 'sessions#reset'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -273,8 +274,6 @@ Dashboard::Application.routes.draw do
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
   get '/beta', to: redirect('/')
-
-  get 'reset_session', to: 'application#reset_session_endpoint'
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
@@ -579,6 +578,17 @@ Dashboard::Application.routes.draw do
   namespace :api do
     api_methods.each do |action|
       get action, action: action
+    end
+  end
+
+  if rack_env?(:development, :test)
+    scope '/api' do
+      namespace :test, defaults: {format: 'json'} do
+        TestController.instance_methods(false).each do |action|
+          method = action.to_s.start_with?('get') ? :get : :post
+          send(method, action, action: action)
+        end
+      end
     end
   end
 

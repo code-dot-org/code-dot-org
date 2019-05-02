@@ -151,4 +151,5 @@ Dashboard::Application.configure do
       'post_workshop' => 12
     }
   }
+  config.experiment_cache_time_seconds = 0
 end

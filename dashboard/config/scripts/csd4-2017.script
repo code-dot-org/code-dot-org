@@ -10,6 +10,7 @@ new_name 'csd4-2017'
 family_name 'csd4'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Analysis of Design', flex_category: 'csd4_1'
 level 'CSD U4L01 SFLP', named: true

@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"
 family_name 'csp2'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1_2018'
 level 'CSP U2L01 SFLP', named: true

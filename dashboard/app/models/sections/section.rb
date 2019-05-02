@@ -198,9 +198,13 @@ class Section < ActiveRecord::Base
     return course.try(:default_course_scripts).try(:first).try(:script)
   end
 
+  def summarize_without_students
+    summarize(include_students: false)
+  end
+
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
-  def summarize
+  def summarize(include_students: true)
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
     title = ''
@@ -219,17 +223,6 @@ class Section < ActiveRecord::Base
       title = script.localized_title
       link_to_assigned = script_path(script)
     end
-
-    # Some scripts are associated with a course (e.g. csp1-2018 is the script for "CSP Unit 1 - The Internet ('18-'19)",
-    # which is part of the csp18-19 # course. Courses have different versions based on year; similar courses
-    # across years have a family_name (either CSD or CSP). We want to pass the family_name associated with a script, if there is one,
-    # so that we can determine whether to show the sharing column on the Manage Students Table of Teacher Dashboard.
-    course_family_name =
-      if course
-        course.family_name
-      elsif script
-        script.course&.family_name
-      end
 
     unique_students = students.uniq(&:id)
     {
@@ -252,13 +245,13 @@ class Section < ActiveRecord::Base
       script: {
         id: script_id,
         name: script.try(:name),
-        course_family_name: course_family_name
+        project_sharing: script.try(:project_sharing)
       },
       studentCount: unique_students.size,
       grade: grade,
       providerManaged: provider_managed?,
       hidden: hidden,
-      students: unique_students.map(&:summarize),
+      students: include_students ? unique_students.map(&:summarize) : nil,
     }
   end
 

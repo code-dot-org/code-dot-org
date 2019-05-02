@@ -1789,6 +1789,23 @@ applabCommands.handleReadValue = function(opts, value) {
   }
 };
 
+applabCommands.getList = function(opts) {
+  var onSuccess = handleGetListSync.bind(this, opts);
+  var onError = handleGetListSyncError.bind(this, opts);
+  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
+};
+
+var handleGetListSync = function(opts, values) {
+  let columnList = [];
+  values.forEach(row => columnList.push(row[opts.columnName]));
+  opts.callback(columnList);
+};
+
+var handleGetListSyncError = function(opts, values) {
+  console.log('handleGetListSyncError');
+  opts.callback();
+};
+
 applabCommands.getKeyValueSync = function(opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);

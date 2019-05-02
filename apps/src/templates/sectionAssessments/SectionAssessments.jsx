@@ -107,6 +107,11 @@ class SectionAssessments extends Component {
     multipleChoiceDetailDialogOpen: false
   };
 
+  componentWillMount() {
+    const {scriptId, asyncLoadAssessments, sectionId} = this.props;
+    asyncLoadAssessments(sectionId, scriptId);
+  }
+
   onChangeScript = scriptId => {
     const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
     asyncLoadAssessments(sectionId, scriptId);
