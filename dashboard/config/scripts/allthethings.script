@@ -149,15 +149,15 @@ level 'Resizing Test'
 
 stage 'Multi page assessment'
 level 'K-1 Maze 11'
-level 'Test longassessment levelgroup split new', assessment: true
+assessment 'Test longassessment levelgroup split new'
 
 stage 'Star wars'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_events'
-level_concept_difficulty '{"sequencing":1}'
+level_concept_difficulty '{}'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 skin 'hoc2015x'
-level_concept_difficulty '{"sequencing":1}'
+level_concept_difficulty '{}'
 level 'blockly:Studio:hoc2015_blockly_5'
 
 stage 'Minecraft'
@@ -166,13 +166,13 @@ level 'MC Agent Freeplay'
 level 'Craft Aquatic - allthethings'
 
 stage 'Rich long assessment'
-level 'PS U3 Assessment1 new', assessment: true
+assessment 'PS U3 Assessment1 new'
 
 stage 'Free Response'
 level 'Sample Free Response'
 
 stage 'Sample PLC Assessment'
-level 'Sample CSP Assessment', assessment: true
+assessment 'Sample CSP Assessment'
 
 stage 'Swapped Levels'
 variants
@@ -217,10 +217,10 @@ variants
 endvariants
 
 stage 'Anonymous student survey'
-level 'Test anonymous student survey', assessment: true
+assessment 'Test anonymous student survey'
 
 stage 'Anonymous student survey 2', lockable: true
-level 'CSP pre-assessment survey', assessment: true
+assessment 'CSP pre-assessment survey'
 
 stage 'Public Key Cryptography'
 level 'AllTheThings Modulo Clock'
@@ -230,7 +230,7 @@ stage 'Web Lab'
 level 'Web Lab 1'
 
 stage 'Single page assessment'
-level 'Test longassessment levelgroup new', assessment: true
+assessment 'Test longassessment levelgroup new'
 
 stage 'Standalone video'
 level 'AllTheThings_StandaloneVideo'
@@ -247,10 +247,13 @@ level 'allthethings HOC Dance 1'
 level 'allthethings HOC Dance 10 Measures'
 
 stage 'Mini Rubric'
-level 'allthethings-mini-rubric', assessment: true
-level 'allthethings-mini-rubric-weblab', assessment: true
-level 'allthethings-mini-rubric-gamelab', assessment: true
+assessment 'allthethings-mini-rubric'
+assessment 'allthethings-mini-rubric-weblab'
+assessment 'allthethings-mini-rubric-gamelab'
 
-stage 'Externals Displayed as Unplugged'
+stage 'Pluralsight Test', lockable: true
+assessment 'Pluralsight LevelGroup Test'
+
+stage 'Externals Optionally Displayed as Unplugged'
 level 'allthethings_external_displayed_as_unplugged'
 level 'allthethings_external_not_displayed_as_unplugged'

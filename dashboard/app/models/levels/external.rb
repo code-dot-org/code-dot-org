@@ -24,9 +24,6 @@
 #
 
 class External < DSLDefined
-  serialized_attrs %w(
-    display_as_unplugged
-  )
   # This string gets replaced with the user's id in markdown.
   USER_ID_REPLACE_STRING = '<user_id/>'.freeze
 
@@ -53,10 +50,6 @@ class External < DSLDefined
 
   def concept_level?
     true
-  end
-
-  def display_as_unplugged
-    properties.merge({'display_as_unplugged' => !properties['display_as_unplugged']})
   end
 
   # returns a properties hash in which USER_ID_REPLACE_STRING is replaced by the current user's id
