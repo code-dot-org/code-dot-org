@@ -856,12 +856,14 @@ function runInputEvents() {
         if(eventType(param)) {
           thisSprite = param;
           event();
+          thisSprite = null;
         }
       } else {
         for(var j = 0; j < param.length; j++) {
           if(eventType(param[j])) {
             thisSprite = param[j];
             event();
+            thisSprite = null;
           }
         }
       }
@@ -878,6 +880,8 @@ function createCollisionHandler (collisionEvent) {
     if (!collisionEvent.touching || collisionEvent.keepFiring) {
       collisionEvent.event(sprite1, sprite2);
     }
+    thisSprite = null;
+    otherSprite = null;
   };
 }
 
