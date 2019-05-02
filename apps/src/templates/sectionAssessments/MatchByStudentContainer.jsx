@@ -10,7 +10,11 @@ import {
 } from './sectionAssessmentsRedux';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
+import {
+  QUESTION_CHARACTER_LIMIT,
+  matchQuestionPropType,
+  studentWithMatchResponsesPropType
+} from './assessmentDataShapes';
 
 const styles = {
   text: {
@@ -22,8 +26,8 @@ const styles = {
 
 class MatchByStudentContainer extends Component {
   static propTypes = {
-    matchStructure: PropTypes.array,
-    studentAnswerData: PropTypes.object,
+    matchStructure: PropTypes.arrayOf(matchQuestionPropType),
+    studentAnswerData: studentWithMatchResponsesPropType,
     studentId: PropTypes.number,
     currentStudentHasResponses: PropTypes.bool,
     openDialog: PropTypes.func.isRequired,

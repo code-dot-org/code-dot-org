@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import SubmissionStatusAssessmentsTable, {
-  studentOverviewDataPropType
-} from './SubmissionStatusAssessmentsTable';
+import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
+import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
   getStudentsMCandMatchSummaryForCurrentAssessment,
   getExportableSubmissionStatusData

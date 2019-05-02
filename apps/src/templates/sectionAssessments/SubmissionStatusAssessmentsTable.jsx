@@ -7,6 +7,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import {studentOverviewDataPropType} from './assessmentDataShapes';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -51,18 +52,6 @@ export const COLUMNS = {
   NUM_MATCH: 4,
   SUBMISSION_TIMESTAMP: 5
 };
-
-export const studentOverviewDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  numMultipleChoiceCorrect: PropTypes.number,
-  numMultipleChoice: PropTypes.number,
-  numMatchCorrect: PropTypes.number,
-  numMatch: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired,
-  isSubmitted: PropTypes.bool.isRequired,
-  url: PropTypes.string
-});
 
 /**
  * A table that shows the summary data for each student in a section.

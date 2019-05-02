@@ -10,6 +10,7 @@ import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import styleConstants from '@cdo/apps/styleConstants';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 import ReactTooltip from 'react-tooltip';
+import {optionDataPropTypeMatch} from './assessmentDataShapes';
 
 export const COLUMNS = {
   OPTION: 0
@@ -69,7 +70,7 @@ const answerColumnsFormatter = (
 
 class MatchAssessmentsOverviewTable extends Component {
   static propTypes = {
-    questionAnswerData: PropTypes.array,
+    questionAnswerData: PropTypes.arrayOf(optionDataPropTypeMatch),
     setQuestionIndex: PropTypes.func.isRequired
   };
 

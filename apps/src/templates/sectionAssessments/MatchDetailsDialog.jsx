@@ -10,6 +10,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getCurrentQuestion} from './sectionAssessmentsRedux';
 import color from '@cdo/apps/util/color';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 
 const styles = {
   dialog: {
@@ -45,13 +46,11 @@ class MatchDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: PropTypes.object
+    questionAndAnswers: matchDetailsQuestionPropType
   };
 
   render() {
     const {questionAndAnswers} = this.props;
-
-    // Questions are in markdown format and should not display as plain text in the dialog.
 
     return (
       <BaseDialog

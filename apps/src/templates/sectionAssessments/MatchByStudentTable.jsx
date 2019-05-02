@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -6,6 +5,10 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import {
+  matchQuestionPropType,
+  studentMatchResponsePropType
+} from './assessmentDataShapes';
 
 export const COLUMNS = {
   OPTION: 0,
@@ -33,8 +36,8 @@ const styles = {
 
 class MatchByStudentTable extends Component {
   static propTypes = {
-    questionAnswerData: PropTypes.object,
-    studentAnswerData: PropTypes.object
+    questionAnswerData: matchQuestionPropType,
+    studentAnswerData: studentMatchResponsePropType
   };
 
   state = {

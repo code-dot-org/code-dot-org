@@ -53,7 +53,7 @@ export const studentOverviewData = [
 ];
 
 // Data for single student assessments table
-// type: studentWithResponsesPropType
+// type: studentWithMCResponsesPropType
 export const studentData = {
   id: 1,
   name: 'Caley',

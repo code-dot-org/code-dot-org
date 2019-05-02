@@ -8,7 +8,10 @@ import {
   setQuestionIndex
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
-import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
+import {
+  QUESTION_CHARACTER_LIMIT,
+  matchDataPropType
+} from './assessmentDataShapes';
 import i18n from '@cdo/locale';
 import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -22,7 +25,7 @@ const styles = {
 
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {
-    questionAnswerData: PropTypes.array,
+    questionAnswerData: PropTypes.arrayOf(matchDataPropType),
     totalStudentCount: PropTypes.number,
     totalStudentSubmissions: PropTypes.number,
     studentId: PropTypes.number,
