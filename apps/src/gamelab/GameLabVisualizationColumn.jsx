@@ -148,7 +148,6 @@ class GameLabVisualizationColumn extends React.Component {
 
     return (
       <span>
-        <TextConsole consoleMessages={this.props.consoleMessages} />
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -168,6 +167,7 @@ class GameLabVisualizationColumn extends React.Component {
             <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
           </VisualizationOverlay>
         </ProtectedVisualizationDiv>
+        <TextConsole consoleMessages={this.props.consoleMessages} />
         <GameButtons>
           <ArrowButtons />
 

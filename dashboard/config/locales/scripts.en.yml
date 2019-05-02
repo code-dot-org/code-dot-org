@@ -6985,6 +6985,10 @@ en:
               name: CSP mid survey 2018 stagin
             CSP mid survey 2018 staging:
               name: CSP mid survey 2018 staging
+            CSP post course survey 2019 staging:
+              name: CSP post course survey 2019 staging
+            CSD post course survey 2019 staging:
+              name: CSD post course survey 2019 staging
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -11991,6 +11995,8 @@ en:
               name: Loops Explore
             Traversals Explore:
               name: Traversals Explore
+            Lists Practice:
+              name: Lists Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12221,3 +12227,37 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        pluralsight:
+          stages:
+            Pluralsight LevelGroup:
+              name: Pluralsight LevelGroup
+          title: Get access to Pluralsight One
+          description_audience: ''
+          description_short: ''
+          description: ''
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming
+            Programming in Maze:
+              name: Programming in Maze
+          title: CSF Express 2018 For Vietnam
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd-post-survey-2018:
+          stages:
+            CSD post-course survey:
+              name: CSD post-course survey
+          title: CSD Student Post-Course Survey
+          description_audience: CSD Students
+          description_short: CSD Student Post-Course Survey
+          description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csp-post-survey-2018:
+          stages:
+            CSP post-course survey:
+              name: CSP post-course survey
+          title: CSP Student Post-Course Survey ('17-'18)
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.

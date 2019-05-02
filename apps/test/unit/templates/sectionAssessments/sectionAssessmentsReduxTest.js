@@ -30,7 +30,8 @@ import sectionAssessments, {
   setFeedback,
   doesCurrentCourseUseFeedback,
   getExportableFeedbackData,
-  isCurrentScriptCSD
+  isCurrentScriptCSD,
+  notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -1722,14 +1723,16 @@ describe('sectionAssessmentsRedux', () => {
             numMatchCorrect: 2,
 
             isSubmitted: true,
-            submissionTimeStamp: date.toLocaleString(),
+            inProgress: false,
+            submissionTimeStamp: date,
             url: 'code.org'
           },
           {
             id: 99,
             name: 'Issac',
             isSubmitted: false,
-            submissionTimeStamp: 'Not started'
+            inProgress: false,
+            submissionTimeStamp: notStartedFakeTimestamp
           }
         ]);
       });
@@ -1778,7 +1781,8 @@ describe('sectionAssessmentsRedux', () => {
           id: 99,
           name: 'Issac',
           isSubmitted: false,
-          submissionTimeStamp: 'Not started'
+          inProgress: false,
+          submissionTimeStamp: notStartedFakeTimestamp
         }
       ]);
     });

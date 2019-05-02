@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 /**
  * If custom PropType shapes are required in more than one file,
  * we define them here.
@@ -128,8 +129,10 @@ export const studentOverviewDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number,
   numMatchCorrect: PropTypes.number,
   numMatch: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired,
+  /* timestamp is passed in as a Date so the column can be sorted accurately. See note in sectionAssessmentsRedux for details*/
+  submissionTimeStamp: PropTypes.instanceOf(Date).isRequired,
   isSubmitted: PropTypes.bool.isRequired,
+  inProgress: PropTypes.bool.isRequired,
   url: PropTypes.string
 });
 

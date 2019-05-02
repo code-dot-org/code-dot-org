@@ -4,7 +4,6 @@ Feature: Looking at a few things with Applitools Eyes - CSF Levels
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @dashboard_db_access
   Scenario Outline: Simple blockly level page view
     Given I am on "http://studio.code.org/"
     And I am a student
