@@ -276,8 +276,8 @@ class ScriptLevel < ActiveRecord::Base
       ids.concat(l.contained_levels.map(&:id))
     end
 
-    # Levelbuilders can select some External/
-    # Markdown levels to display as Unplugged.
+    # Levelbuilders can select if External/
+    # Markdown levels should display as Unplugged.
     display_as_unplugged =
       level.unplugged? ||
       level.properties["display_as_unplugged"] == "true"
