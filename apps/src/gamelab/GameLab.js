@@ -206,6 +206,13 @@ GameLab.prototype.init = function(config) {
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
     );
+
+    // OnLoad and when switching between costume/code modes, four gray sprites
+    // are added to the screen. The setup code removes these sprites.
+    // TODO (STAR-404): Investigate why the four sprites are added to the screen.
+    window.addEventListener('resize', () => {
+      this.rerunSetupCode();
+    });
   } else {
     this.skin.smallStaticAvatar = null;
     this.skin.staticAvatar = null;
