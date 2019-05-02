@@ -25,8 +25,6 @@ Curated by expert technologists, the library features over 150 courses totaling 
 
 ![AP Computer Science Principles](/images/fit-600/browse-pluralsight-screenshot-2019.png)
 
-As the AP CS Principles exam approaches, Code.org teachers will be notified through email newsletters on how to get access the Pluralsight One offering. 
-
 
 ***
 #### About Pluralsight

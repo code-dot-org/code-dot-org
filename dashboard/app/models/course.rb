@@ -395,7 +395,7 @@ class Course < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
-    latest_course_version = Course.latest_version(family_name)
+    latest_course_version = Course.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 
     # All users can see the latest course version.
@@ -410,14 +410,15 @@ class Course < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
-  # @return [Course] Returns the latest version in a course family.
-  # TODO: (madelynkasula) Refactor to latest_stable_version once properties[:is_stable] is implemented for courses.
-  def self.latest_version(family_name)
+  # @return [Course] Returns the latest stable version in a course family.
+  def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
     Course.
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
+      # select only stable courses.
+      where("properties -> '$.is_stable'").
       # order by version year.
       order("properties -> '$.version_year' DESC")&.
       first
