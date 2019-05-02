@@ -23,7 +23,7 @@ level 'MC_HOC_2017_Ali_2019', progression: 'Practice'
 level 'MC_HOC_2017_FP20x20_2019', progression: 'Free Play'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'ramp_up'
-level 'CourseEF_video_IntroSpriteLab_2019', progression: 'Introducing Sprite LAb'
+level 'CourseEF_video_IntroSpriteLab_2019', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_2019', progression: 'Prediction'
 level 'Fish Tank 2-validated_2019', progression: 'Mini-Project: Swimming Fish'
 level 'Fish Tank 3-validated_2019', progression: 'Mini-Project: Swimming Fish'
