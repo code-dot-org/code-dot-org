@@ -17,6 +17,7 @@ level 'U5 L03 Lists Practice 3.5', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 3.75', progression: 'Accessing Elements in a List'
 level 'U5 L03 Lists Practice 4', progression: 'List Operations'
 level 'U5 L03 Lists Practice 5', progression: 'List Operations'
+level 'U5 L03 Lists Practice 6', progression: 'List Operations'
 
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
