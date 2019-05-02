@@ -811,7 +811,7 @@ class ContactRollups
       # https://www.rubydoc.info/github/brianmario/mysql2/Mysql2%2FClient:abandon_results!
       # When using MULTI_STATEMENTS support, calling this will throw away any unprocessed results as fast as it can in
       # order to put the connection back into a state where queries can be issued again.
-      conn.abandon_results!
+      conn.pool.hold(&:abandon_results!)
 
       update_batch = ""
       if Time.now - time_last_output > LOG_OUTPUT_INTERVAL
