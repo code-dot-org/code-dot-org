@@ -1,4 +1,4 @@
-name 'courseE_project_exemplars_2019'
+name 'courseF_project_exemplars_2019'
 title 'Test Markdown Textbook Page'
 description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
@@ -17,7 +17,7 @@ You are about to start your final project. Before you begin, spend some time loo
 
 | Flowers (Artist) | Spiral (Arist) |
 |---|---|
-| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flowers (Artist)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Spiral (Artist)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flowers (Artist)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Spiral (Artist)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
 | Let's get creative with variables! | Let's get creative with For Loops! |
 
 MARKDOWN
