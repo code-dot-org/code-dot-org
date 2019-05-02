@@ -59,10 +59,13 @@ Scenario: Toggle on Lockable Level
   And I see no difference for "view as student while locked"
   Then I click selector ".uitest-viewAsTeacher"
   And element "#locked-stage" is not visible
+  And element ".level-group" is visible
   And I see no difference for "view as teacher while locked"
 
   And I click selector ".section-student .name a" to load a new page
-  And I wait until element "#locked-stage" is visible
+  And I wait until element "#level-body" is visible
+  And element "#level-body" contains text "This survey is anonymous"
+  And element "#locked-stage" is not visible
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
@@ -82,7 +85,9 @@ Scenario: Toggle on Lockable Level
   And element "#locked-stage" is not visible
 
   And I click selector ".section-student .name a" to load a new page
-  And I wait until element "#locked-stage" is visible
+  And I wait until element "#level-body" is visible
+  And element "#level-body" contains text "This survey is anonymous"
+  And element "#locked-stage" is not visible
   And element ".level-group" is not visible
 
   And I close my eyes
