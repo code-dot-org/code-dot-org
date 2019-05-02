@@ -435,6 +435,9 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
   };
 };
 
+/*
+ * Get the match questions in the current assessment
+ */
 export const getMatchStructureForCurrentAssessment = state => {
   const assessmentsStructure = getCurrentAssessmentQuestions(state);
   if (!assessmentsStructure) {
@@ -458,6 +461,9 @@ export const getMatchStructureForCurrentAssessment = state => {
     });
 };
 
+/*
+ * Get the match questions responses in the current assessment
+ */
 export const getStudentMatchResponsesForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
@@ -684,6 +690,10 @@ export const isCurrentAssessmentSurvey = state => {
   return Object.keys(surveysStructure).includes(currentAssessmentId + '');
 };
 
+/*
+ * Get summary of the match and multiple choice responses for each student
+ * for the current assessment.
+ */
 export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
