@@ -41,6 +41,19 @@ module.exports.AnimationCategories = {
   category_all: 'All'
 };
 
+module.exports.CostumeCategories = {
+  category_animals: 'Animals',
+  category_generic_items: 'Generic items',
+  category_vehicles: 'Vehicles',
+  category_characters: 'Characters',
+  category_environment: 'Environment',
+  category_food: 'Food',
+  category_tools: 'Tools',
+  category_gameplay: 'Board games',
+  category_obstacles: 'Obstacles',
+  category_all: 'All'
+};
+
 module.exports.SpritelabReservedWords = [
   // Gamelab globals
   'CENTER',
@@ -191,5 +204,35 @@ module.exports.SpritelabReservedWords = [
   'whileRightArrow',
   'whileUpArrow',
   'xLocationOf',
-  'yLocationOf'
+  'yLocationOf',
+  // SpriteLab2Beta.interpreted.js
+  'customText',
+  'animationGroups',
+  'emptyGroup',
+  'thisSprite',
+  'otherSprite',
+  'addToAnimationGroup',
+  'allSpritesWithAnimation',
+  'checkTouching',
+  'countByCostume',
+  'createCollisionHandler',
+  'drawBackground',
+  'keyPressed',
+  'layoutSprites',
+  'makeNewSpriteAnon',
+  'printCustomText',
+  'printText',
+  'removeFromAnimationGroup',
+  'runCallbacks',
+  'runCollisionEvents',
+  'runCollisionEventsExperimental',
+  'runInputEvents',
+  'runLoops',
+  'runSpriteBehaviors',
+  'setBackgroundImage',
+  'singleOrGroup',
+  'spriteClicked',
+  'updateHUDText',
+  'i',
+  'j'
 ];

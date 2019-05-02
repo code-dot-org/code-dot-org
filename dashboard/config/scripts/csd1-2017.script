@@ -11,6 +11,7 @@ new_name 'csd1-2017'
 family_name 'csd1'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-pre-survey-2017-levelgroup', assessment: true

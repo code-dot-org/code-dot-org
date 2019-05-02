@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"CS Principles Mid-Year Survey Now Open!", "det
 family_name 'csp3'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1_2018'
 level 'CSP U3L01 SFLP', named: true

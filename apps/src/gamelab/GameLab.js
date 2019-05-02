@@ -49,6 +49,7 @@ import {
 } from '../containedLevels';
 import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import {addConsoleMessage, clearConsole} from './textConsoleModule';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
@@ -152,6 +153,10 @@ var GameLab = function() {
       mobileControlsConfig,
       getStore().getState().pageConstants.isShareView
     );
+  };
+
+  this.appendSpriteConsole = spriteMessage => {
+    getStore().dispatch(addConsoleMessage(spriteMessage));
   };
 };
 
@@ -732,6 +737,8 @@ GameLab.prototype.reset = function() {
     defaultMobileControlsConfig,
     getStore().getState().pageConstants.isShareView
   );
+
+  getStore().dispatch(clearConsole());
 };
 
 GameLab.prototype.rerunSetupCode = function() {
@@ -943,6 +950,12 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
     this.JSInterpreter.createGlobalProperty(
       'showMobileControls',
       this.showMobileControls,
+      null
+    );
+
+    this.JSInterpreter.createGlobalProperty(
+      'appendSpriteConsole',
+      this.appendSpriteConsole,
       null
     );
   };

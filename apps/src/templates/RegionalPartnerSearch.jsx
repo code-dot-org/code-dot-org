@@ -336,48 +336,56 @@ class RegionalPartnerSearch extends Component {
                 )}
             </div>
 
-            <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-            {workshopCollections[0].workshops.length === 0 &&
-              workshopCollections[1].workshops.length === 0 && (
-                <div>Workshop date and location information coming soon.</div>
-              )}
+            {appState !== WorkshopApplicationStates.now_closed && (
+              <div>
+                <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
+                {workshopCollections[0].workshops.length === 0 &&
+                  workshopCollections[1].workshops.length === 0 && (
+                    <div>
+                      Workshop date and location information coming soon.
+                    </div>
+                  )}
 
-            {workshopCollections.map(
-              (collection, collectionIndex) =>
-                collection.workshops.length > 0 && (
-                  <div
-                    key={collectionIndex}
-                    style={{
-                      ...styles.workshopCollection,
-                      ...workshopCollectionStyle
-                    }}
-                  >
-                    <h4>{collection.heading}</h4>
-                    {collection.workshops.map((workshop, index) => (
-                      <div key={index} style={styles.workshop}>
-                        <div>{workshop.workshop_date_range_string}</div>
-                        <div>{workshop.location_name}</div>
-                        <div>{workshop.location_address}</div>
+                {workshopCollections.map(
+                  (collection, collectionIndex) =>
+                    collection.workshops.length > 0 && (
+                      <div
+                        key={collectionIndex}
+                        style={{
+                          ...styles.workshopCollection,
+                          ...workshopCollectionStyle
+                        }}
+                      >
+                        <h4>{collection.heading}</h4>
+                        {collection.workshops.map((workshop, index) => (
+                          <div key={index} style={styles.workshop}>
+                            <div>{workshop.workshop_date_range_string}</div>
+                            <div>{workshop.location_name}</div>
+                            <div>{workshop.location_address}</div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                )
+                    )
+                )}
+              </div>
             )}
+
             <div style={styles.clear} />
 
             <div style={styles.action}>
-              {(workshopCollections[0].workshops.length > 0 ||
-                workshopCollections[1].workshops.length > 0) && (
-                <div>
-                  In addition to attending a five-day summer workshop, the
-                  professional learning program includes up to 4 required
-                  one-day, in-person academic year workshops during the 2019-20
-                  school year.
-                </div>
-              )}
+              {appState !== WorkshopApplicationStates.now_closed &&
+                (workshopCollections[0].workshops.length > 0 ||
+                  workshopCollections[1].workshops.length > 0) && (
+                  <div>
+                    In addition to attending a five-day summer workshop, the
+                    professional learning program includes up to 4 required
+                    one-day, in-person academic year workshops during the
+                    2019-20 school year.
+                  </div>
+                )}
 
               {appState === WorkshopApplicationStates.now_closed && (
-                <div>Applications are now closed.</div>
+                <h3>Applications are now closed.</h3>
               )}
 
               {appState === WorkshopApplicationStates.opening_at && (

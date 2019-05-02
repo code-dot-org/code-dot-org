@@ -1,3 +1,4 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
@@ -7,6 +8,7 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csp1'
 version_year '2019'
+project_sharing true
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-pre-survey-2017-levelgroup_2018_2019', assessment: true

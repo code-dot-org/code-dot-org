@@ -3,7 +3,7 @@ title 'Course Progress'
 css 'unplugged'
 markdown <<MARKDOWN
 
-<img align="left" src="//code.org/images/teacher-dashboard/lesson-plans.png" height="200" width="250" hspace="20" vspace="20">
+<img style="float:left; margin: 20px" src="//code.org/images/teacher-dashboard/lesson-plans.png" height="200" width="250">
 
 
 </br>
