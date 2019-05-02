@@ -5,7 +5,7 @@ addBehavior
 makeNewSprite
 findBehavior
 behaviorsEqual
-whenUpArrow
+keyPressed
 whenMouseClicked
 whenTouching
 */
@@ -150,12 +150,15 @@ describe('Game Lab Jr Helper Library', () => {
     const keyWentDownStub = stub(window, 'keyWentDown').returns(true);
     const mouseWentDownStub = stub(window, 'mouseWentDown').returns(true);
     const shouldUpdateStub = stub(window, 'shouldUpdate').returns(true);
-    const overlapStub = stub(sprite, 'overlap').returns(true);
+    const overlapStub = stub(sprite, 'overlap').callsFake((other, callback) => {
+      callback(sprite, other);
+      return true;
+    });
 
     const eventLog = [];
     addBehavior(sprite, () => eventLog.push('behavior 1 ran'));
     addBehavior(sprite, () => eventLog.push('behavior 2 ran'));
-    whenUpArrow(() => eventLog.push('key event ran'));
+    keyPressed('when', 'up', () => eventLog.push('key event ran'));
     whenMouseClicked(() => eventLog.push('touch event ran'));
     whenTouching(
       () => sprite,
