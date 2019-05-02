@@ -142,6 +142,8 @@ module Pd::Application
       Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
     end
 
+    # Return a string if the principal approval state is complete, in-progress, or not required.
+    # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
@@ -359,6 +361,9 @@ module Pd::Application
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
+
+      # Only if we've sent at least one principal approval email before.
+      return false unless emails.where(email_type: 'principal_approval').exists?
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
