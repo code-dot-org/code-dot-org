@@ -167,13 +167,18 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * contains more data than we need. This filters to the parts our views care about.
  */
 export const processedLevel = level => {
+  // Levelbuilders can select if External/
+  // Markdown levels should display as Unplugged.
+  const displayAsUnplugged =
+    level.kind === LevelKind.unplugged || level.display_as_unplugged;
+
   return {
     url: level.url,
     name: level.name,
     progression: level.progression,
     kind: level.kind,
     icon: level.icon,
-    isUnplugged: level.kind === LevelKind.unplugged,
+    isUnplugged: displayAsUnplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
     bonus: level.bonus
