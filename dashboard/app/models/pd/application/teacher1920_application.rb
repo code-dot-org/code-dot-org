@@ -355,9 +355,6 @@ module Pd::Application
     end
 
     def allow_sending_principal_approval_teacher_reminder_email?
-      last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
-      last_principal_approval_email_created_at = last_principal_approval_email&.created_at
-
       reminder_emails = emails.where(email_type: 'principal_approval_teacher_reminder')
 
       # Do we allow the cron job to send a reminder email to the teacher?
@@ -366,7 +363,7 @@ module Pd::Application
       return false if reminder_emails.any?
 
       # Only if we've sent at least one principal approval email before.
-      return false unless last_principal_approval_email_created_at
+      return false unless emails.where(email_type: 'principal_approval').exists?
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?
