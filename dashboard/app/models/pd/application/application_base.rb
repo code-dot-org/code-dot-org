@@ -376,7 +376,7 @@ module Pd::Application
     end
 
     def course_name
-      COURSE_NAME_MAP[course.to_sym] unless course.nil?
+      COURSE_NAME_MAP[course.to_sym]
     end
 
     # displays the iso8601 date (yyyy-mm-dd)
