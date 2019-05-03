@@ -9,7 +9,9 @@ import sectionAssessments, {
   setAssessmentId,
   getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
+  getMatchStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
+  getStudentMatchResponsesForCurrentAssessment,
   getStudentsMCandMatchSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
@@ -424,13 +426,60 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
+    describe('getMatchStructureForCurrentAssessment', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getMatchStructureForCurrentAssessment(rootState);
+        assert.deepEqual(result, []);
+      });
+
+      it('returns an array of objects of matchQuestionPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            assessmentId: 123,
+            assessmentQuestionsByScript: {
+              3: {
+                123: {
+                  id: 123,
+                  name: 'Assessment 1',
+                  questions: [
+                    {
+                      level_id: 456,
+                      type: 'Match',
+                      question: 'Can you match these things?',
+                      question_index: 0,
+                      answers: [{text: 'answer 1'}, {text: 'answer 2'}],
+                      options: [{text: 'option 1'}, {text: 'option 2'}]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        };
+        const result = getMatchStructureForCurrentAssessment(
+          stateWithAssessment
+        );
+        assert.deepEqual(result, [
+          {
+            id: 456,
+            questionNumber: 1,
+            question: 'Can you match these things?',
+            answers: [{text: 'answer 1'}, {text: 'answer 2'}],
+            options: [{text: 'option 1'}, {text: 'option 2'}]
+          }
+        ]);
+      });
+    });
+
     describe('getStudentMCResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
         assert.deepEqual(result, {});
       });
 
-      it('returns an array of objects of studentAnswerDataPropType', () => {
+      it('returns an array of objects of studentWithMCResponsesPropType', () => {
         const stateWithAssessment = {
           ...rootState,
           sectionAssessments: {
@@ -469,6 +518,60 @@ describe('sectionAssessmentsRedux', () => {
           id: 1,
           name: 'Saira',
           studentResponses: [{responses: 'D', isCorrect: false}]
+        });
+      });
+    });
+
+    describe('getStudentMatchResponsesForCurrentAssessment', () => {
+      it('returns an empty array when no assessments in redux', () => {
+        const result = getStudentMatchResponsesForCurrentAssessment(rootState);
+        assert.deepEqual(result, {});
+      });
+
+      it('returns an array of objects of studentWithMatchResponsesPropType', () => {
+        const stateWithAssessment = {
+          ...rootState,
+          sectionAssessments: {
+            ...rootState.sectionAssessments,
+            studentId: 1,
+            assessmentId: 123,
+            assessmentResponsesByScript: {
+              3: {
+                1: {
+                  student_name: 'Saira',
+                  responses_by_assessment: {
+                    123: {
+                      level_results: [
+                        {
+                          student_result: [3],
+                          status: 'incorrect',
+                          type: 'Multi'
+                        },
+                        {
+                          student_result: 'Hi',
+                          status: '',
+                          type: 'FreeResponse'
+                        },
+                        {
+                          student_result: [0, 1],
+                          status: ['submitted', 'submitted'],
+                          type: 'Match'
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        };
+        const result = getStudentMatchResponsesForCurrentAssessment(
+          stateWithAssessment
+        );
+        assert.deepEqual(result, {
+          id: 1,
+          name: 'Saira',
+          studentResponses: [{responses: [0, 1]}]
         });
       });
     });
