@@ -487,6 +487,10 @@ FactoryGirl.define do
     trait :script do
       create(:script_level)
     end
+
+    factory :sublevel do
+      sequence(:name) {|n| "sublevel#{n}"}
+    end
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -786,14 +790,18 @@ FactoryGirl.define do
         title: title,
         anonymous: false,
         submittable: submittable,
-        pages: [{levels: ['sublevel1', 'sublevel2']}, {levels: ['sublevel3']}]
+        pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
       }
     end
-    after(:create) do |lg|
-      lg.properties['pages'].each do |page|
-        page['levels'].each do |level_name|
-          create :level, name: level_name
-        end
+
+    # create real sublevels, and update pages to match.
+    trait :with_sublevels do
+      after(:create) do |lg|
+        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
+        lg.properties['pages'] = [
+          {levels: [sublevels[0].name, sublevels[1].name]},
+          {levels: [sublevels[2].name]}
+        ]
       end
     end
   end

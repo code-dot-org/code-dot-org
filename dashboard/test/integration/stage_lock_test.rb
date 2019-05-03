@@ -13,7 +13,7 @@ class StageLockTest < ActionDispatch::IntegrationTest
     @lockable_stage = create(:stage, script: @script, name: 'Lockable Stage', lockable: true)
     external = create(:external, name: 'markdown level')
     @lockable_external_sl = create(:script_level, script: @script, stage: @lockable_stage, levels: [external])
-    @level_group = create(:level_group, name: 'assessment 1')
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
     @lockable_level_group_sl = create(:script_level, script: @script, stage: @lockable_stage, levels: [@level_group], assessment: true)
   end
 
