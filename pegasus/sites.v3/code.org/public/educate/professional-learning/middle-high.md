@@ -17,6 +17,7 @@ theme: responsive
 <br/>
 <br/>
 
+<a name="scholarships"></a>
 <div class="col-50">
 <%= view :regional_partner_zip_form %>
 
@@ -32,7 +33,7 @@ theme: responsive
 <div style="clear: both;"></div>
 <%= view :three_circles, circles: [] %>
 
-
+<a name="why"></a>
 ## Why should I apply?
 
 The majority of our workshop attendees rank it the **best professional development ever.** Over 90% of attendees would recommend our program to another teacher.
