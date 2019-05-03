@@ -359,6 +359,10 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
+      # Only if this teacher application is currently unreviewed or pending.
+      # (Unlike allow_sending_principal_email?, don't allow for waitlisted.)
+      return false unless unreviewed? || pending?
+
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
 
