@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
-import DatasetLibrary from './DatasetLibrary';
 import i18n from '@cdo/locale';
+import DatasetListEntry from './DatasetListEntry';
 
 const styles = {
   root: {
@@ -20,25 +20,37 @@ const styles = {
 };
 
 /**
- * A component for managing hosted sounds and the Sound Library.
+ * A component for managing access to Code.org hosted datasets
  */
 export default class DatasetPicker extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func
   };
-  getAssetNameWithPrefix = dataset => {
-    console.log('here');
-    this.props.assetChosen(dataset);
-  };
   render() {
-    let title = <p>{i18n.chooseSounds()}</p>;
+    let datasets = [
+      {name: 'Dogs', description: 'something about dogs', url: 'dogUrl'},
+      {name: 'Words', description: 'something something words', url: 'wordUrl'}
+    ];
 
-    const body = <DatasetLibrary assetChosen={this.getAssetNameWithPrefix} />;
+    const datasetEntries = datasets.map(d => {
+      return (
+        <DatasetListEntry
+          key={d.name}
+          name={d.name}
+          description={d.description}
+          url={d.url}
+          assetChosen={this.props.assetChosen}
+        />
+      );
+    });
+
     return (
       <div className="modal-content" style={styles.root}>
-        {title}
+        <p>{i18n.chooseDataset()}</p>
         <hr style={styles.divider} />
-        {body}
+        <table>
+          <tbody>{datasetEntries}</tbody>
+        </table>
       </div>
     );
   }

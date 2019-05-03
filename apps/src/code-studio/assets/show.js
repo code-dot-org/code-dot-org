@@ -43,13 +43,12 @@ module.exports = function showAssetManager(
   });
 
   var getPickerForType = function(typeFilter) {
-    if (typeFilter === 'audio') {
-      return SoundPicker;
-    } else if (typeFilter === 'image') {
-      return ImagePicker;
-    } else if (typeFilter === 'datasets') {
-      return DatasetPicker;
-    }
+    const pickersByType = {
+      audio: SoundPicker,
+      image: ImagePicker,
+      dataset: DatasetPicker
+    };
+    return pickersByType[typeFilter];
   };
 
   let pickerType = getPickerForType(typeFilter);
