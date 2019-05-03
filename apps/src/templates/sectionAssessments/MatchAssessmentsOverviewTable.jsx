@@ -207,7 +207,10 @@ class MatchAssessmentsOverviewTable extends Component {
         role="tooltip"
         effect="solid"
       >
-        {answer.answer}
+        {answer.answer.includes('<img')
+            ? $(answer.answer).attr('alt')
+            : answer.answer
+        }
       </ReactTooltip>
     ));
   }
