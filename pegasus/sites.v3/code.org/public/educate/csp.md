@@ -9,7 +9,7 @@ style_min: true
 
 # Computer Science Principles
 
-[<img src="/images/plc/pl-deadlines-banner.png" width="100%">](/educate/middle-high)
+[<img src="/images/plc/pl-deadlines-banner.png" width="100%">](/educate/professional-learning/middle-high#scholarships)
 
 ## <a name="whatis"></a>What is CS Principles?
 
