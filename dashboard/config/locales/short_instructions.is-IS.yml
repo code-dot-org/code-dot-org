@@ -2,6 +2,8 @@
 is:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'Hvað heldur þú að muni gerast þegar
+        þú smellir á geimveruna?  '
       2-3 Artist 1 new: Hæ ég er listamaður. Þú getur skrifað kóða til að láta mig
         teikna næstum hvað sem er. Notaðu nokkra kubba til að láta mig teikna yfir
         gráu strikin í myndinni. (Hver lína er 100 díla löng.)
@@ -2025,8 +2027,8 @@ is:
         svo allar geimverurnar í einni röð. '
       Dance Party 4: 'Bættu við þriðju verunni sem heitir `alien3` og hafðu svo allar
         geimverurnar í einni röð. '
-      Dance Party 4_2019: 'Bættu við þriðju verunni sem heitir `alien3` og hafðu svo
-        allar geimverurnar í einni röð. '
+      Dance Party 4_2019: Bættu við þriðju verunni sem heitir `alien3` og hafðu svo
+        allar geimverurnar í einni röð.
       Dance Party 4_simple: 'Bættu við þriðju verunni sem heitir `alien3` og hafðu
         svo allar geimverurnar í einni röð. '
       Dance Party 5 - Validated: Bættu við kóða sem breytir litnum á hverri geimveru
@@ -2061,6 +2063,7 @@ is:
         geimveruna?  '
       Dance Party Predict_simple: 'Hvað heldur þú að muni gerast þegar þú smellir
         á geimveruna?  '
+      Dance Party Template 2_2019: Sniðmát
       Dance_Events_Example_Video: Notaðu atvik til að gera dansinn gagnvirkan!
       Dance_Party_01: Dragðu kubbinn `búa til` inn á vinnusvæðið og láttu hann smella
         innan í kubbinn `uppsetning`.

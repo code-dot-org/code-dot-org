@@ -1419,11 +1419,13 @@ gl:
             The Artist:
               name: O Artista
             Internet:
-              name: Internet
+              name: A Internet
             Crowdsourcing:
               name: Colaboración Aberta
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
             Relay Programming:
               name: Programación por relevos
             Conditionals with Cards:
@@ -1431,7 +1433,7 @@ gl:
             Digital Citizenship:
               name: Cidadanía dixital
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imaxes binárias
             Artist Binary:
               name: Artista binario
         coursee-2019:
@@ -1442,8 +1444,8 @@ gl:
               name: Bucles aniñados
             Conditionals with Cards:
               name: Condicionais con cartas
-            Conditionals:
-              name: Condicionais
+            'Functions: Songwriting':
+              name: Composición
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1476,16 +1478,16 @@ gl:
               name: nulo
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Construíndo unha base
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: avión de papel'
+            'Events: The Big Event':
+              name: O Gran Evento
             Binary Bracelets:
               name: Pulseiras Binarias
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Planta unha Semente'
+            'Programming: Happy Maps':
+              name: Mapas Felices
             Going Places Safely:
               name: Ir a Sitios en modo Seguro
         courseb-2019:
@@ -1494,6 +1496,8 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
+            'Loops: Getting Loopy':
+              name: Bucleándose
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1542,3 +1546,7 @@ gl:
               name: Condicionais con cartas
             Building a Foundation:
               name: Construíndo unha base
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programación en Papel Cadriculado

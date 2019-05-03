@@ -154,10 +154,6 @@ mt:
     header:
       finished_hoc: "Jien lestejt l'Hour of Code tieghi"
       sign_in_to_save: 'Idħol biex tissejvja l-progress'
-      free_play:
-        playlab: 'Agħmel App'
-        artist: 'Pinġi Xi Ħaġa'
-        applab: 'Agħmel App'
       project_gallery: "Il-Proġetti"
     user:
       district_dashboard: 'Pannell tal-Kontroll Distrettwali'

@@ -96,7 +96,11 @@ ku:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ئەشكەوت
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': پەلكەزێرینە
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
       gamelab_setPosition:
         options:
           POSITION:

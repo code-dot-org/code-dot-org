@@ -210,10 +210,6 @@ et:
     header:
       finished_hoc: "Olen lõpetanud oma KoodiTunni"
       sign_in_to_save: 'Edusammude salvestamiseks logi sisse'
-      free_play:
-        playlab: 'Loo Play Lab rakendus'
-        artist: 'Joonista midagi'
-        applab: 'Loo App Lab rakendus'
       my_dashboard: "Minu töölaud"
       course_catalog: "Kursuste kataloog"
       project_gallery: "Projektid"

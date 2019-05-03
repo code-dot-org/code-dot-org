@@ -1876,6 +1876,8 @@ sv:
               name: Dansparty
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
             Relay Programming:
               name: Stafettprogrammering
             Conditionals with Cards:
@@ -1883,7 +1885,7 @@ sv:
             Digital Citizenship:
               name: Digitalt medborgarskap
             'Unplugged: Binary':
-              name: 'Ouppkopplad: Binärt'
+              name: Binära bilder
             Artist Binary:
               name: Artist binär
             Dance Party:
@@ -1896,8 +1898,8 @@ sv:
               name: Kapslade slingor(loopar)
             Conditionals with Cards:
               name: Villkorssatser med kort
-            Conditionals:
-              name: Villkor
+            'Functions: Songwriting':
+              name: Låtskrivande
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1934,16 +1936,16 @@ sv:
             timmen.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Bygga en grund
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer i verkliga livet: Pappersflygplan'
+            'Events: The Big Event':
+              name: Den stora händelsen
             Binary Bracelets:
               name: Binära armband
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Verklighetsalgoritmer: Så ett frö'
+            'Programming: Happy Maps':
+              name: Glada kartor
             Going Places Safely:
               name: Trygg resa
         courseb-2019:
@@ -1952,6 +1954,8 @@ sv:
               name: Flytta det, flytta den
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2022,3 +2026,7 @@ sv:
               name: Villkorssatser med kort
             Building a Foundation:
               name: Bygga en grund
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Kalkyleringsprogrammering
