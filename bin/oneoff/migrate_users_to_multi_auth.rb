@@ -2,7 +2,9 @@
 
 require_relative '../../dashboard/config/environment'
 
-SLICE_SIZE = 1_000
+# Tested slice sizes of 10k, 1k, 100, 10, and 1, and 100 seemed to be the
+# fastest per-user
+SLICE_SIZE = 100
 
 def migrate_batches(limit=nil)
   limit = limit.to_i if limit
