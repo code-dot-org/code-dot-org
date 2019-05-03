@@ -101,7 +101,11 @@ class MatchAssessmentsOverviewTable extends Component {
   };
 
   optionFormatter = (option, {rowData, columnIndex, rowIndex, property}) => {
-    return <div>{`${option}`}</div>;
+    if (option.includes('<img')) {
+      return <div>{$(option).attr('alt')}</div>;
+    } else {
+      return <div>{`${option}`}</div>;
+    }
   };
 
   getNotAnsweredColumn = () => ({
@@ -126,13 +130,20 @@ class MatchAssessmentsOverviewTable extends Component {
     }
   });
 
+  getColumnLabel = columnLabel => {
+    if (columnLabel.includes('<img')) {
+      return $(columnLabel).attr('alt');
+    } else {
+      return columnLabel.length < 30
+        ? `${columnLabel}`
+        : `${columnLabel.slice(0, 30)}...`;
+    }
+  };
+
   getAnswerColumn = columnLabel => ({
     property: 'percentAnswered',
     header: {
-      label:
-        columnLabel.length < 30
-          ? `${columnLabel}`
-          : `${columnLabel.slice(0, 30)}...`,
+      label: this.getColumnLabel(columnLabel),
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
