@@ -7,7 +7,6 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getCurrentQuestion} from './sectionAssessmentsRedux';
-import color from '@cdo/apps/util/color';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 
@@ -22,22 +21,7 @@ const styles = {
   },
   answers: {
     float: 'left',
-    width: 550
-  },
-  icon: {
-    color: color.level_perfect
-  },
-  iconSpace: {
-    width: 40,
-    float: 'left'
-  },
-  answerBlock: {
-    width: '100%'
-  },
-  answerLetter: {
-    width: 30,
-    float: 'left',
-    fontWeight: 'bold'
+    width: 250
   }
 };
 
@@ -79,12 +63,16 @@ class MatchDetailsDialog extends Component {
                       return (
                         <tr key={index}>
                           <td>
-                            <UnsafeRenderedMarkdown
-                              markdown={questionAndAnswers.options[index]}
-                            />
+                            <div style={styles.answers}>
+                              <UnsafeRenderedMarkdown
+                                markdown={questionAndAnswers.options[index]}
+                              />
+                            </div>
                           </td>
                           <td>
-                            <UnsafeRenderedMarkdown markdown={answer} />
+                            <div style={styles.answers}>
+                              <UnsafeRenderedMarkdown markdown={answer} />
+                            </div>
                           </td>
                         </tr>
                       );
