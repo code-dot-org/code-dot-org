@@ -22,7 +22,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 404
   end
 
-  test 'update last confirmation date will 401 if given a user id other than the person logged in' do
+  test 'update last confirmation date will 401 if given a school_info id not owned by the signed-in user' do
     user_school_info1 = create :user_school_info
     user_school_info2 = create :user_school_info
     sign_in user_school_info2.user
@@ -42,7 +42,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert updated_user_school_info.user.last_seen_school_info_interstitial.to_datetime, Date.current
   end
 
-  test "end_date and last_seen_school_info_interstitial are not updated if user id other than the person logged in is used." do
+  test "end_date and last_seen_school_info_interstitial are not updated if given a school_info id not owned by the signed-in user." do
     user_school_info3 = create :user_school_info
     user_school_info4 = create :user_school_info
     sign_in user_school_info4.user
@@ -67,7 +67,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert new_user_school_info.school_info_id, user_school_info.school_info_id
   end
 
-  test "school_info_id is not updated when an invalid user id is passed " do
+  test "school_info_id is not updated when an invalid school_info id is passed " do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     patch "/api/v1/user_school_infos/-1/update_school_info_id", params: {
