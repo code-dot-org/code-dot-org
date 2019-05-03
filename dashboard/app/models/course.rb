@@ -304,7 +304,7 @@ class Course < ApplicationRecord
           version_year: c.version_year,
           version_title: c.localized_version_title,
           can_view_version: c.can_view_version?(user),
-          is_stable: stable?
+          is_stable: c.stable?
         }
       end
 
