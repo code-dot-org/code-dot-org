@@ -9895,10 +9895,10 @@ tr:
                 Bu projenin en uzun bölümü olacak.Sürecin beş aşamasını da inceleyen
                 ders rehberi, proje sürecinin başında, [here](https://curriculum.code.org/csf/coursef/15/)
                 bulunabilir.
-            new stage:
-              name: yeni kademe
             The Artist:
               name: Sanatçı
+            Nested Loops in the Maze:
+              name: Labirentte İçiçe Döngüler
             Internet:
               name: İnternet
             Crowdsourcing:
@@ -9912,7 +9912,7 @@ tr:
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: Grafik Kağıdı Programlama
             Introduction to Online Puzzles:
               name: Online Bulmacalara Giriş
             Relay Programming:
@@ -9922,9 +9922,9 @@ tr:
             Events in Bounce:
               name: Sıçrama Olayları
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
             Nested Loops in Artist:
               name: Sanatçıların İç İçe Döngüleri
             Nested Loops in Frozen:
@@ -9940,7 +9940,7 @@ tr:
             Build a Play Lab Game:
               name: Bir Play Lab Oyunu Oluştur
             'Unplugged: Binary':
-              name: 'Bağımsız: İkili Taban (Binary)'
+              name: İkili Sistemle Resimler
             Artist Binary:
               name: Sanaçtı İkili Taban
             Build a Star Wars Game:
@@ -9970,7 +9970,6 @@ tr:
             Conditionals with Cards:
               name: Kartlarla Koşullu Önermeler
             Conditionals:
-              name: Koşullar
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
                 bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
@@ -9999,7 +9998,7 @@ tr:
                 Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek
                 ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             'Functions: Songwriting':
-              name: 'Fonksiyonlar: şarkı yazma'
+              name: Şarkı yazma
               description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
                 Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
               description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
@@ -10087,11 +10086,9 @@ tr:
                 öğrencilere, ekip çalışmasının bilgisayar bilimleri endüstrisinde
                 nasıl faydalı olabileceğini gösterecektir.
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
             Nested Loops in Artist:
               name: Sanatçıların İç İçe Döngüleri
-            Nested Loops in Frozen:
-              name: Frozen'da İç İçe Döngüler
             Conditionals in Minecraft:
               name: Minecraft' da Koşullar
             Digital Sharing:
@@ -10331,8 +10328,6 @@ tr:
             hikayelerinizi ve sanatınızı oluşturun.
           description_audience: 'Yaş: 6-10'
           stages:
-            Building a Foundation:
-              name: Bir Temel Oluşturma
             Programming in Maze:
               name: Labirentte Programlama
             Debugging in Maze:
@@ -10350,7 +10345,7 @@ tr:
             Loops in Artist:
               name: Sanatçı- Döngüler
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
             Build a Flappy Game:
               name: Bir Kanat Çırpma Oyunu Oluşturmak
             Screen Out the Mean:
@@ -10378,20 +10373,8 @@ tr:
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description_audience: 'Yaş: 4-7'
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
-              description_teacher: 'Bu ders hata ayıklama (debugging) adımları için
-                öğrencilere rehberlik edecek. Öğrenciler mantrayı öğrenecekler: "Ne
-                oldu? Ne olması bekleniyordu? Sana ne anlatıyor?"'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
-              description_teacher: "Bu derste öğrenciler, gerçek bir tohum ekerek
-                algoritma kavramını gerçek hayat aktiviteleriyle ilişkilendirecekler.
-                Burada amaç gerçek dünyadaki durumları çevrimiçi senaryolara dönüştürmeye
-                başlamak veya tam tersi olarak çevrimiçi senaryoları gerçek dünyadaki
-                durumlara çevirmektir.\r\n"
             'Programming: Happy Maps':
-              name: 'Programlama: Mutlu Haritalar'
+              name: Mutlu Haritalar
               description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
                 uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
                 köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve
@@ -10428,7 +10411,6 @@ tr:
                 öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
                 verilecek.
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
                 eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
                 istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar
@@ -10466,12 +10448,10 @@ tr:
               name: Toplayıcıda Döngüler
             Loops in Artist:
               name: Sanatçı- Döngüler
-            'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
               name: Play Lab' da Olaylar
             'Loops: Getting Loopy':
-              name: 'Döngüler: Loopy Başlarken'
+              name: Döngüselleşme
             Programming in Maze:
               name: Labirentte Programlama
         pre-express-2019:
@@ -11922,3 +11902,9 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Grafik Kağıdı Programlama
+            Programming in Maze:
+              name: Labirentte Programlama

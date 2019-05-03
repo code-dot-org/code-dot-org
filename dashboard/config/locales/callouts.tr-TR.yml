@@ -740,9 +740,6 @@ tr:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Yeni blokları gördün mü? Merak etme daha sonraki
           aşamalarda bunları nasıl kullanacağını göstereceğiz.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
-          bunun içinde fazladan bloklar bulabilirsin.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
           bunun içinde fazladan bloklar bulabilirsin.
@@ -753,6 +750,9 @@ tr:
         courseC_maze_programming3_2: "Fazla blokları atmak için blokları alet kutusuna
           doğru \n sürükleyebilirsin."
         stone_block_2: Gri kareler taştan yapılmış ve atılamazlar.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Bu senin blok limitin. Elinde kullanabileceğin
           kaç tane blokun kaldığını söyler.
@@ -801,6 +801,9 @@ tr:
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Tüm blokları birleştirdikten sonra, ''Çalıştır''
           a bas ve programını başlat.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Bu alet kutusudur. Bulmacalarını tamamlamak için
+          bunun içinde fazladan bloklar bulabilirsin.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Bu bloklardan alet kutusunda yalnızca bir adet var.
           Onu nasıl kullanacaksın?
