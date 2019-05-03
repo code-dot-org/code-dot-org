@@ -5,6 +5,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ImagePicker = require('../components/ImagePicker');
 var SoundPicker = require('../components/SoundPicker');
+var DatasetPicker = require('../components/DatasetPicker');
 var Dialog = require('../LegacyDialog');
 
 /**
@@ -41,7 +42,17 @@ module.exports = function showAssetManager(
     }
   });
 
-  let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
+  var getPickerForType = function(typeFilter) {
+    if (typeFilter === 'audio') {
+      return SoundPicker;
+    } else if (typeFilter === 'image') {
+      return ImagePicker;
+    } else if (typeFilter === 'datasets') {
+      return DatasetPicker;
+    }
+  };
+
+  let pickerType = getPickerForType(typeFilter);
 
   ReactDOM.render(
     React.createElement(pickerType, {
