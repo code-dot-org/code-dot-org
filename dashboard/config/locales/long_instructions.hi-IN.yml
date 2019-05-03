@@ -111,7 +111,7 @@ hi:
       Dance_Party_02: |-
         आइए इस अमरीकी हिरण से डांस करवाएं!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">फ्लॉस</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
 
         **संगीत प्रविधियां** संगीत में समय की गिनती करने के लिए उपयोग की जाती हैं। इस ट्यूटोरियल में, एक संगीत प्रविधि चार बीट्स जितनी लंबी होगी।
       Dance_Party_03: "_अब हम संगीत सुन (ग्रूव) रहे हैं!_ \n\nअपने वर्कस्पेस में एक
@@ -252,7 +252,7 @@ hi:
       Ryan_Demo: |-
         आइए इस अमरीकी हिरण से डांस करवाएं!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">फ्लॉस</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
 
         **संगीत प्रविधियां** संगीत में समय की गिनती करने के लिए उपयोग की जाती हैं। इस ट्यूटोरियल में, एक संगीत प्रविधि चार बीट्स जितनी लंबी होगी।
       courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)

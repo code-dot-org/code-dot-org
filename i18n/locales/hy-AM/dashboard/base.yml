@@ -180,10 +180,6 @@ hy:
     header:
       finished_hoc: "Ես ավարտեցի իմ Կոդի Ժամը"
       sign_in_to_save: 'Մուտք գործեք փրկելու առաջընթացը'
-      free_play:
-        playlab: 'Կատարել է Play Lab հավելվածը'
-        artist: 'Ոչ ոքի մի բան'
-        applab: 'Կատարել App Lab հավելվածը'
       project_gallery: "ծրագրեր"
       educate_hoc: "Կոդի ժամ"
       stats: "Վիճակագրություն"

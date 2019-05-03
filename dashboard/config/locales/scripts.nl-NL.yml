@@ -1947,7 +1947,7 @@ nl:
             The Artist:
               name: De Artiest
             Internet:
-              name: Internet
+              name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
@@ -1956,6 +1956,8 @@ nl:
               name: Dansfeest
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
             Relay Programming:
               name: Estafette Programmeren
             Conditionals with Cards:
@@ -1963,7 +1965,7 @@ nl:
             Digital Citizenship:
               name: Digitaal Burgerschap
             'Unplugged: Binary':
-              name: 'Unplugged: binair'
+              name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
             Dance Party:
@@ -1976,8 +1978,8 @@ nl:
               name: Genestelde lussen
             Conditionals with Cards:
               name: Statements met Kaarten
-            Conditionals:
-              name: Voorwaardelijke instructies
+            'Functions: Songwriting':
+              name: Songwriting
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2013,18 +2015,18 @@ nl:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Een Basis Bouwen
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+            'Events: The Big Event':
+              name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
         gamelab:
           title: Game Lab
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmen in het echte leven: Plant een zaadje'
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
         courseb-2019:
@@ -2033,6 +2035,8 @@ nl:
               name: verplaats het, verplaats het
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2121,3 +2125,7 @@ nl:
               name: Statements met Kaarten
             Building a Foundation:
               name: Een Basis Bouwen
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmeren op Ruitjespapier

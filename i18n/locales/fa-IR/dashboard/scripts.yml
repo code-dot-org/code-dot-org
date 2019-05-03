@@ -1472,6 +1472,8 @@ fa:
               name: کمک گیری جمعی
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
               name: برنامه نویسی دست به دست
             Conditionals with Cards:
@@ -1479,7 +1481,7 @@ fa:
             Digital Citizenship:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
+              name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
         coursee-2019:
@@ -1490,8 +1492,8 @@ fa:
               name: حلقه های تو در تو
             Conditionals with Cards:
               name: شرطی ها با کارتها
-            Conditionals:
-              name: شرطی ها
+            'Functions: Songwriting':
+              name: ترانه سرایی
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1524,18 +1526,18 @@ fa:
               name: 'تهی'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: ساختن بنیان
             'Real-life Algorithms: Paper Planes':
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
+            'Events: The Big Event':
+              name: رویداد بزرگ
             Binary Bracelets:
               name: دستبند دودویی
         gamelab:
           title: کارگاه بازی سازی
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
+            'Programming: Happy Maps':
+              name: نقشه های شاد
             Going Places Safely:
               name: با خیال راحت سفرکردن
         courseb-2019:
@@ -1544,6 +1546,8 @@ fa:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1594,3 +1598,7 @@ fa:
               name: شرطی ها با کارتها
             Building a Foundation:
               name: ساختن بنیان
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی

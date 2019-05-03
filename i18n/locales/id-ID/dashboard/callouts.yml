@@ -495,8 +495,6 @@ id:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Apakah anda melihat beberapa blok baru di kotak alat? Jangan khawatir, kami akan menunjukkan cara menggunakannya nanti dalam tahapan.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseA_maze_ramp2a_2018_callout:
@@ -504,6 +502,8 @@ id:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Kamu bisa menarik blok-blok tambahan ke dalam kotak perlengkapan untuk membuangnya.
         stone_block_2: Blok-blok warna abu-abu terbuat dari batu dan tidak bisa dibuang.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseA_maze_seq1_callout:
@@ -542,6 +542,8 @@ id:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan" untuk memulai program mu.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan" untuk memulai program mu.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Ini adalah kotak perlengkapan. Dimana kamu akan menemukan blok-blok tambahan untuk menyelesaikan teka-teki yang kamu kerjakan.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Hanya ada satu dari blok-blok tersebut yang ada didalam kotak peralatan. Mau digunakan untuk apa?
       courseB_artist_loops3_2018_callout:

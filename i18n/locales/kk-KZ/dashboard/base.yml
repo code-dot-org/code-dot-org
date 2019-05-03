@@ -182,10 +182,6 @@ kk:
     header:
       finished_hoc: "Мен Код Жазу Сағатымды аяқтадым"
       sign_in_to_save: 'Прогрессті сақтау үшін тіркеліңіз'
-      free_play:
-        playlab: 'Қосымша бағдарлама жасау'
-        artist: 'Кез келген нәрсе салу'
-        applab: 'Қосымша бағдарлама жасау'
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
     user:
