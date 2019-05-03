@@ -198,7 +198,7 @@ pl:
       4-5 Bee Conditionals 6: Nie jestem pewien, ile nektaru ma ten kwiat, ale wiem, że ma 1, 2 lub 3 nektary. \\r \\r Połącz bloki warunkowe ("jeśli" i/lub "jeśli-w przeciwnym razie"), aby zebrać tylko tyle nektaru, ile ma kwiat. \\r \\r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu łamigłówki!
       4-5 Bee Conditionals 7: Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \\r \\r Ukończ funkcję "check purple flower" (sprawdź fioletowy kwiat) i użyj jej, by zebrać cały nektar z kwiatów.
       4-5 Bee Conditionals 8: Wypełnij wnętrze funkcji "check flower make honey" (sprawdź kwiat zrób miód). \\r \\r Twoja funkcja powinna sprawdzać, czy fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\r Następnie. przejdź dalej i zrób miód.
-      4-5 Bee Conditionals Assessment 1: '**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\r \\r Ukończ funkcję "get nectar or make honey" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. \\r'
+      4-5 Bee Conditionals Assessment 1: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu. \n\nUkończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. "
       4-5 Bee Debugging 1: Te bloki naprawdę męczą mnie. \\r \\r Czy mógłbyś je naprawić?
       4-5 Bee Debugging 6: Fioletowy kwiatek zawiera inną ilość nektaru za każdym razem, gdy rozwiązujesz tę łamigłówkę. \\r \\r Napraw bloki, aby za każdym razem zebrać cały nektar z kwiatka.
       4-5 Bee Debugging Assessment 1: "**Sprawdzian:** Popraw kod."
@@ -367,6 +367,7 @@ pl:
       CourseE_HOC 2018 Level_8: Najpierw góry lodowe, a teraz lawa? Przeszukaj tę wulkaniczną wyspę i znajdź w rafie koralowej **tropikalną rybę** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).
       CourseE_HOC 2018 Level_9b: Zrobiłeś to na rafie, teraz przeszukaj **Serce morza** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Wykorzystaj niebieski i czerwony koral, aby dotrzeć do **kufra** ze skarbem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy! Zmień wartość zmiennej "dog\_speed" (prędkość psa), aby być pewnym, że możesz zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
+      Dance Party Template 2_2019: Szablon
       Dance_Party_01: |-
         _Urządźmy potańcówkę!_
 
@@ -1041,7 +1042,7 @@ pl:
       grade3_ConditionalsElse_6: Nie jestem pewien, ile nektaru ma ten kwiat, ale wiem, że ma 1, 2 lub 3 nektary. \\r \\r Połącz bloki warunkowe ("jeśli" i/lub "jeśli-w przeciwnym razie"), aby zebrać tylko tyle nektaru, ile ma kwiat. \\r \\r Pamiętaj, że ilość nektaru może być inna przy ponownym uruchomieniu łamigłówki!
       grade3_ConditionalsElse_7: Te kwiaty mogą mieć 3, 2 lub 1 nektarów. \\r \\r Ukończ funkcję "check purple flower" (sprawdź fioletowy kwiat) i użyj jej, by zebrać cały nektar z kwiatów.
       grade3_ConditionalsElse_8: Wypełnij wnętrze funkcji "check flower make honey" (sprawdź kwiat zrób miód). \\r \\r Twoja funkcja powinna sprawdzać, czy fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\r Następnie. przejdź dalej i zrób miód.
-      grade3_ConditionalsElse_9: '**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\r \\r Ukończ funkcję "get nectar or make honey" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. \\r'
+      grade3_ConditionalsElse_9: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu. \n\nUkończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie zbierz nektar i miód. "
       grade3_ConditionalsElse_TeacherIDo: To może być kwiat lub plaster miodu pod każdą z tych chmurek. \\r \\r Użyj bloku "jeśli-w przeciwnym razie", by zebrać nektar, jeśli jest to kwiat, \\r W przeciwnym razie zrób miód (bo to jest plaster miodu).
       grade3_Conditionals_1: Jestem głodną pszczółką! \\r\\r\\r Pomóż mi zebrać cały nektar z kwiatów, używając możliwie najmniejszej liczby bloków.
       grade3_Conditionals_10: Wiele się tutaj dzieje!\\r \\r Skorzystaj z tego, czego się nauczyłeś, aby zebrać cały nektar a następnie zrobić miód.

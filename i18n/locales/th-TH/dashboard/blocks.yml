@@ -668,7 +668,13 @@ th:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ถ้ำ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ทะเลทราย
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ตาข่าย
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
       gamelab_setPosition:
         text: ย้าย {THIS} ไป {POSITION} ตำแหน่ง
         options:
@@ -702,6 +708,11 @@ th:
       gamelab_setup:
         text: การตั้งค่า
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
@@ -743,6 +754,11 @@ th:
             "'down'": เป็นตำแหน่ง
             "'left'": ซ้าย
             "'right'": ขวา
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
       gamelab_whileKey:
         options:
           KEY:

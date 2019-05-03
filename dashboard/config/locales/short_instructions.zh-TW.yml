@@ -2,6 +2,7 @@
 zh-TW:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 預測一下，當你點擊外星生物時會發生什麼事？
       2-3 Artist 1 new: 嗨，我是一個藝術家。您可以寫程式來讓我畫出任何東西。現在請您用一些程式積木，讓我沿著圖中的灰色線條畫畫。（每一條線的長度都是
         100 像素）
       2-3 Artist 11: "我們來做一個停止的交通標誌吧！畫出一個正八邊形，每邊長 100 像素。\\\r\n\\\r"
@@ -1033,6 +1034,7 @@ zh-TW:
       Dance Party Predict: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_2019: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_simple: 預測一下，當你點擊外星生物時會發生什麼事？
+      Dance Party Template 2_2019: 範本
       Dance_Events_Example_Video: 使用事件讓你的舞蹈派對有更多互動！
       Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
       Dance_Party_01_low: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。

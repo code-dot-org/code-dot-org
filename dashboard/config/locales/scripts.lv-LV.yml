@@ -1247,6 +1247,8 @@ lv:
               name: Pūļa ieguve
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
             Relay Programming:
               name: Releju programmēšana
             Conditionals with Cards:
@@ -1254,7 +1256,7 @@ lv:
             Digital Citizenship:
               name: Digitālā pilsonība
             'Unplugged: Binary':
-              name: 'Atvienots: binārs'
+              name: Binārie Attēli
             Artist Binary:
               name: 'Mākslinieks: Binārais'
         coursee-2019:
@@ -1265,8 +1267,8 @@ lv:
               name: Cikls ciklā
             Conditionals with Cards:
               name: nosacījumi ar kārtēm
-            Conditionals:
-              name: Sazarojumi
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
             Internet:
               name: Internets
             Crowdsourcing:
@@ -1299,16 +1301,16 @@ lv:
               name: bez vērtības
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Veidot pamatus
             'Real-life Algorithms: Paper Planes':
               name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            'Events: The Big Event':
+              name: Lielais notikums
             Binary Bracelets:
               name: Binārās aproces
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
             Going Places Safely:
               name: Nokļūst galamērķos droši
         courseb-2019:
@@ -1317,6 +1319,8 @@ lv:
               name: Ej, ej
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1367,3 +1371,7 @@ lv:
               name: nosacījumi ar kārtēm
             Building a Foundation:
               name: Veidot pamatus
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana

@@ -22,8 +22,10 @@ module ScriptConstants
     full_course: [
       CSP_2017 = 'csp-2017'.freeze,
       CSP_2018 = 'csp-2018'.freeze,
+      CSP_2019 = 'csp-2019'.freeze,
       CSD_2017 = 'csd-2017'.freeze,
       CSD_2018 = 'csd-2018'.freeze,
+      CSD_2019 = 'csd-2019'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
@@ -96,6 +98,14 @@ module ScriptConstants
       COURSED_DRAFT_NAME = 'coursed-draft'.freeze,
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
+    ],
+    csd_2019: [
+      CSD1_2019_NAME = 'csd1-2019'.freeze,
+      CSD2_2019_NAME = 'csd2-2019'.freeze,
+      CSD3_2019_NAME = 'csd3-2019'.freeze,
+      CSD4_2019_NAME = 'csd4-2019'.freeze,
+      CSD5_2019_NAME = 'csd5-2019'.freeze,
+      CSD6_2019_NAME = 'csd6-2019'.freeze,
     ],
     csd_2018: [
       CSD1_2018_NAME = 'csd1-2018'.freeze,
