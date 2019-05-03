@@ -339,8 +339,8 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed or pending.
-      return false unless unreviewed? || pending?
+      # Only if this teacher application is currently unreviewed, pending, or waitlisted.
+      return false unless unreviewed? || pending? || waitlisted?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
