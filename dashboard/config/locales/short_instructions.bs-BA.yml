@@ -113,7 +113,7 @@ bs:
         60 stepeni!
       2-3 Artist Loops 10: Šta se dogodi sa ovim dizajnom ako načinimo zadnji korak
         upola manjim?
-      2-3 Artist Loops 11: Hadje da sada postavimo *još jednu* petlju koja će obuhvatiti
+      2-3 Artist Loops 11: Hadje da sada postavimo _još jednu_ petlju koja će obuhvatiti
         našu čitavu kreaciju! Nemoj zaboraviti da dodaš ugao na kraju vanjske petlje.
       2-3 Artist Loops 2: Sada iskoristi blok za ponavljanje da bi napravio oklop
         za ćeliju.
@@ -127,7 +127,7 @@ bs:
         li napraviti romb unutar ovog šestouagonika?
       2-3 Artist Loops 8: Hadje da stavimo oba elementa u petlju.
       2-3 Artist Loops 9: "Sada ćemo prolaziti kroz iste elemente, ali ćemo dodati
-        određenu razdaljinu između njih.\r Koristi isti kod kao i prije, ali dodaj
+        određenu razdaljinu između njih.\\\r Koristi isti kod kao i prije, ali dodaj
         korak naprijed na kraju vanjske petlje."
       2-3 Artist Loops New 1: Hajde da nacrtamo glavu ovog robota! Možeš li napraviti
         kvadrat sa stranicama od 100 piksela?
@@ -135,9 +135,7 @@ bs:
         ih crtati koristeći petlju.
       2-3 Artist Loops New 11: Hajde da ih ovaj put nacrtamo 24 puta. Dodaj u ovaj
         kod okret ulijevo za 30 stepeni i stavi sve u blok ponavljanja.
-      2-3 Artist Loops New 12: 'Nacrtaj dijamant sa stranicama od 100 piksela.
-
-'
+      2-3 Artist Loops New 12: Nacrtaj dijamant sa stranicama od 100 piksela.
       2-3 Artist Loops New 13: Sada nacrtaj dijamant 3 puta koristeći petlju.
       2-3 Artist Loops New 14: Hajde sada da nacrtamo dijamant 10 puta ali zarotiraj
         za 90 stepeni između svakog dijamanta.
@@ -151,7 +149,7 @@ bs:
       2-3 Artist Match Sq Pic: 'Sparivanje: Dovrši nepotpun kod'
       2-3 Artist Match Tri pic: 'Uparivanje: Dodaj kod koji nedostaje.'
       2-3 Artist Nested Loops 1: "Do sada smo koristili petlje za crtanje raznih oblika,
-        ali znaš li da možeš staviti petlju unutar druge petlje?\r Ponavljaj ovaj
+        ali znaš li da možeš staviti petlju unutar druge petlje?\\\r Ponavljaj ovaj
         cijeli blok 3 puta da bi nacrtao uzorak."
       2-3 Artist Nested Loops 10: Ponavljaj ovaj kod 12 puta da bi se uzorak dovršio.
       2-3 Artist Nested Loops 11: Ponavljaj ovaj kod 4 puta da bi se uzorak dovršio.
@@ -183,7 +181,7 @@ bs:
       2-3 Bee Conditionals 1: Zdravo! Ja sam pčela. Pomozi mi da pokupim nektar iz
         cvijeta.
       2-3 Bee Conditionals 10: "Ljubičasti cvjetovi mogu imat ili 1 ili 0 za nektar.
-        Pazi da ne pokupiš nektar iz ljubičastog cvijeta koji ga uopšte nema.\r\n"
+        Pazi da ne pokupiš nektar iz ljubičastog cvijeta koji ga uopšte nema.\\\r"
       2-3 Bee Conditionals 11: Pokupi nektar iz cvjetova koji ga imaju.
       2-3 Bee Conditionals 12: Koristi petlju za provjeru nektra u cvijetu i skupljanju
         nektra iz svih ovih cvjetova.
@@ -362,6 +360,8 @@ bs:
       2-3 maze sq15: Možeš li doći do suncokreta koristeći samo pet blokova?
       2-3 maze sq16: Ok, ovo je slično, ali malo različito. Možeš li ovo napraviti
         sa samo pet blokova?
+      2-3: "Ljubičasti cvjetovi mogu imat ili 1 ili 0 za nektar. Pazi da ne pokupiš
+        nektar iz ljubičastog cvijeta koji ga uopšte nema.\\\r"
       2-3level1: Pomjeranjem naprijed pomozi ptici da uhvati nevaljalu svinju
       20hr_farmer_stage9_1: Zdravo, ja sam farmer. Trebam tvoju pomoć da poravnam
         zemlju na farmi da bude spremna za sadnju. Pomakni me do hrpe zemlje i koristi
@@ -556,8 +556,6 @@ bs:
       4-5 Artist Patterns 5: Hajde da to ponovimo da bismo dobilired od 6 dijamanata.
         Primjeti da smo promijenili kod za dijamanta tako da ponavlja 3 puta umjesto
         2 puta. Zašto misliš da smo to uradili?
-      4-5 Artist Patterns 6: Koliko puta trebaš ponoviti ovaj blok da bi nacrtao čitavu
-        mrežu dijamanata?
       4-5 Artist Patterns 7: Hajde da promijenimo kod prethodnog zadatka da bismo
         mogli napraviti komplikovaniji uzorak. Primjeti kako se dijamanti sada preklapaju.
         Pokušaj promijeniti prvi "skok unazad" sa 100 na 50 (upola daleko). Koliko
@@ -701,7 +699,7 @@ bs:
         10 trokutova. Ovo se zove ugniježdena petlja. Savjet: Svih 10 trokutova zatvaraju
         ugao od 360 stepeni.  '
       4-5 Nested Loops 3: "Napravi sunce tako što ćeš ugnijezditi početni kod u drugu
-        petlju. Ovo se zove ugniježdena petlja.\r"
+        petlju. Ovo se zove ugniježdena petlja.\\\r"
       4-5 Nested Loops 5: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
       4-5 Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod
         za trokut u petlji?
@@ -733,8 +731,6 @@ bs:
       4-5 While Loops Assessment 1: Sada vidim puno rupa i hrpa. Pomozi mi da ih popunim
         i uklonim sve dok se zemlja ne poravna.
       App Lab test: uslov
-      Artist - Nested Loops 1: 'Dovrši kod za crtanje ovih trokutova. Prvi dio smo
-        odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       Artist - Nested Loops 10: Nacrtati zadnji red zvijezda na ovoj zastavi tako
         što ćeš ponavljati date blokove. Zvijezde su odmaknute za 50 piksela, ali
         zapamti da su zvijezde same 30 piksela široke.
@@ -746,7 +742,7 @@ bs:
         nacrtao/la 10 trokutova. Ovo se zove ugniježdena petlja. Savjet: Svih 10 trokutova
         zatvaraju 360 stepeni.  '
       Artist - Nested Loops 3: "Napravi sunce tako što ćeš ugnijezditi početni kod
-        u neku drugu petlju. Ovo se zove ugniježdena petlja.\r\n"
+        u neku drugu petlju. Ovo se zove ugniježdena petlja.\\\r"
       Artist - Nested Loops 5: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
       Artist - Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati
         kod za trokut u petlji?
@@ -834,11 +830,11 @@ bs:
         ih popunim i uklonim sve dok se zemlja ne poravna.
       Calc Circles of Eval .2: Ovaj Blok Izvršenja je funkcija za množenje koja uzima
         dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži
-        2 * 5
+        2 \* 5
       Calc Circles of Eval .4: Ovdje smo ugnijezdili Blok Sabiranja unutar Bloka Množenja.
         Dovrši ovaj kod da bi pomnožio/la 3 sa (4 + 1)
-      Calc Circles of Eval 1 (copy 1): Pretvori ovaj izraz u <some_shape> izvršenje.
-      Calc Circles of Eval 2 (copy 1): Pretvori ovaj izraz u <some_shape> izvršenje.
+      Calc Circles of Eval 1 (copy 1): Pretvori ovaj izraz u \<some\_shape> izvršenje.
+      Calc Circles of Eval 2 (copy 1): Pretvori ovaj izraz u \<some\_shape> izvršenje.
       Calc Circles of Eval 3: Dovrši Blok Izvršenja da ogovara ovom izrazu.
       Calc Circles of Eval 4: Ovom kodu nedostaje nekoliko Blokova Izvršenja - pobrini
         se da staviš sve u pravilnom redu.
@@ -860,7 +856,7 @@ bs:
       Calc Rocket 1: "U posljednjem zadatku si napisao/la ugovor za funkciju \"visina-rakete\"
         koja ima Brojeve kao kodomenu i domenu, i koja vraća visinu rakete koja ide
         brzinom od 15 m/s nakon datog broja sekundi. Hajde sada da napišemo primjer
-        za visinu rakete u trećoj sekundi.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n "
+        za visinu rakete u trećoj sekundi.\\\r\n\\\r\n\\\r\n\\\r\n\\\r\n  \\\r\n\\\r\n "
       Calc Rocket 2: Odlično! Hadje da uradimo još jedan primjer prije nego napišemo
         funkciju. Koju visinu bi raketa trebala imati nakon 30 sekundi?
       Calc Vars 2 (copy 1): Ovdje smo postavili varijablu "dob" na 17. Možeš li napisati
@@ -1055,7 +1051,7 @@ bs:
         Savjet: svaki kvadrat ima veličinu od 100 piksela'
       Course 4 Artist Functions 3: "Možeš li nacrtati ovu sliku koristeći \"nacrtaj
         kvadrat\" funkciju? Savjet: kvadrati su razmaknuti jedan od drugog za 120
-        piksela.\r\n"
+        piksela.\\\r"
       Course 4 Artist Functions 4: 'Jesi li spreman/na za kreiranje tvog vlastitof
         "Funkcijskog Bloka"? Klikni na "Funkcije" blok u alatnoj traci, daj mu ime
         "nacrtaj trokut", a zatim kreiraj trokutove na isti način kako si odradio/la
@@ -1066,7 +1062,7 @@ bs:
         nacrtala?
       Course 4 Artist Functions 5: "Možeš li nacrtati ovu sliku koristeći \"nacrtaj
         kvadrat\" funkciju? Savjet: kvadrati su razmaknuti jedan od drugog za 120
-        piksela.\r\n"
+        piksela.\\\r"
       Course 4 Artist Functions 6: Koji blok moraš dodati da bi se dobio trokut koji
         sjedi na kvadratu?
       Course 4 Artist Functions 7: Možeš li nacrtati liniju načinjenu od kvadrata
@@ -1105,10 +1101,8 @@ bs:
         bi također trebala uzeti dužinu kao parametar, isto kao funkcija za trokut.
         Ovaj puta nacrtaj 3 kvadrata od 25, 50 i 75 piksela dužine, razmaknuti jedan
         od drugog za 100 piksela.
-      Course 4 Artist Params 5: 'Upotrijebi obje svoje funkcije da nacrtaš ovu sliku.
+      Course 4 Artist Params 5: Upotrijebi obje svoje funkcije da nacrtaš ovu sliku.
         Da ti bude lakše koristi petlju da "brojač" parametrom.
-
-'
       Course 4 Artist Params 6: 'Hajde da preuredimo ovu "nacrtaj oblik" funkciju
         koja već ima "dužinu" kao parametar. Dodajmo sada parametar za "stranice".
         Sjeti se da je ugao za okretanje datog oblika jednak 360 podijeljeno sa brojem
@@ -1117,10 +1111,8 @@ bs:
       Course 4 Artist Params 7: 'Možeš li nacrtati ove oblike tako što ćeš popuniti
         "???". Kvadrat i trokut su 100 piksela veličine dok je šestougaonik veličine
         75 piksela. '
-      Course 4 Artist Params 8: 'Možeš li shvatiti kako da nacrtaš ovaj oblik? Evo
+      Course 4 Artist Params 8: Možeš li shvatiti kako da nacrtaš ovaj oblik? Evo
         savjeta kako da napraviš novu funkciju sa 6 stranica zvanu šestougaonik.
-
-'
       Course 4 Artist Params 9: Sjećaš li se kada smo koristili brojač petlju bez
         petlje unutar nje? Hajde da se zabavimo i upotrijebimo "nacrtaj oblik" funkciju
         sa "stranice" i "dužina" parametrima. Možeš li napraviti ove oblike? Brojač
@@ -1278,12 +1270,10 @@ bs:
       Course 4 Play Lab Params 1: Evo funkcija pod nazivom "skoči" koja čini da tvoj
         glavni lik skače za 100 piksela. Upotrijebi funkciju za skakanje za sakupljanje
         svih zastava.
-      Course 4 Play Lab Params 10: 'Dodali smo još jednu zadnju funkciju za tvoje
-        korištenje. Isprogramiraj tvoju igricu da zove "viši nivo" funkciju kada je
-        "broj_poena"> 10. Da bi prešao/la na novi zadatak, igraj igricu, i načini
-        da prođe nivo 4.
-
-'
+      Course 4 Play Lab Params 10: Dodali smo još jednu zadnju funkciju za tvoje korištenje.
+        Isprogramiraj tvoju igricu da zove "viši nivo" funkciju kada je "broj\_poena">
+        10. Da bi prešao/la na novi zadatak, igraj igricu, i načini da prođe nivo
+        4.
       Course 4 Play Lab Params 2: Sada imamo zastave koje su previsoke za naš trenutni
         skok! Hajde da dodamo parametar "visina" našoj funkciji za skakanje. Kada
         se pritisne strelica gore dolazi do skoka od 100 piksela, ali sa pritiskom
@@ -1307,7 +1297,7 @@ bs:
         i igraj igricu! U ovoj igrici, ti si Pas koji pokušava da sakupi više zastava
         od Mačke. Upotrijebi strelicu prema dole za kontrolisanje Psa. Pritisni na
         "Završi" kada želiš prestati igrati.
-      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       Course 4 Play Lab Vars 3: Evo nova vrsta igrice! Koristi strelicu za lijevo
@@ -1374,10 +1364,10 @@ bs:
       Course 4 Play Labs For Loops 8: Koja "od-do" petlja bi učinila da ja izgovaram
         19, 27, 35, 43, 51?
       Course1BeePuzzle12: Sakupi tri nektara i onda napravi dva meda
-      Course1MazeAssessment1: "Ovo je test!\r\nKreći se u jednom smjeru, a zatim u
-        drugom da bi me doveo/la do svinje"
-      Course1MazeAssessment2: "Ovo je test!\r\nKreći se u jednom smjeru, a zatim u
-        drugom da bi me doveo/la do svinje."
+      Course1MazeAssessment1: "Ovo je test!\\\r\nKreći se u jednom smjeru, a zatim
+        u drugom da bi me doveo/la do svinje"
+      Course1MazeAssessment2: "Ovo je test!\\\r\nKreći se u jednom smjeru, a zatim
+        u drugom da bi me doveo/la do svinje."
       CourseD_Dance_Party_01: Prevuci blok `kreiranje novog` u radni prostor i spoji
         ga unutar bloka `postavke`.
       CourseD_Dance_Party_02: Učini da Los započne novi pokret svako 4 takta!
@@ -1404,7 +1394,7 @@ bs:
         smo se igrali do sada, zajedno sa još nekoliko dodatni u slučaju da ih zatrebaš.
         Napravi igricu ili priču koja koristi ove varijable. Savjet: Pomjeraj radni
         prostor prema dolje da vidiš sve komande.'
-      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       CourseF_PlayLab_vars3: Evo nova vrsta igrice! Koristi strelicu za lijevo i desno
@@ -1515,7 +1505,7 @@ bs:
         Na primjer, (gastro-kritičar \"pizza\") bi mogao reći \"ukusno\", ali (gastro-kritičar
         \"pokvarena jaja\") bi rekao da je to \"užasno\"! Izaberi dvije vrste hrane
         za kritiku, ali možeš uraditi i više ako želiš! Ne zaboravi da dodaš \"inače\"
-        izraz!\r\nJedan primjer - i dio definicije - smo već odradili za tebe!"
+        izraz!\\\r\nJedan primjer - i dio definicije - smo već odradili za tebe!"
       Eval Contracts 1: Upotrijebi "zvijezda" funkciju za pravljenje crvene zvijezde
         prečnika od 60 piksela
       Eval Contracts 10A: U redu. Hajde da dovršimo ovaj zadatak sa Zelenim Kvadratom
@@ -1598,11 +1588,9 @@ bs:
       Farmer for TTS testing: 'Wow, našao sam pravo duboku rupu! Ne znam koliko mi
         je lopata zemlje potrebno. Možeš li napisati program koji je popunjava sve
         dok zemlja nije poravnata? Savjet: Pokušaj korisitit "dok" petlju ovaj puta.'
-      Food Fight!: 'Dodali smo još jednu zadnju funkciju za tvoje korištenje. Isprogramiraj
-        tvoju igricu da zove "viši nivo" funkciju kada je "broj_poena"> 10. Da bi
+      Food Fight!: Dodali smo još jednu zadnju funkciju za tvoje korištenje. Isprogramiraj
+        tvoju igricu da zove "viši nivo" funkciju kada je "broj\_poena"> 10. Da bi
         prešao/la na novi zadatak, igraj igricu, i načini da prođe nivo 4.
-
-'
       Infinity_catch: Možeš li koristeći tipke sa strelicama načiniti da Elsa ("lik
         2") prestigne Annu?
       Infinity_finale: Napravi šta god želiš i podijeli!
@@ -1741,9 +1729,9 @@ bs:
         svinje!
       K-1 Maze Multi 14: Nivo Procjene
       K-1 Maze Multi 15: Nivo Procjene
-      K-1 Maze Sequence Assessment 1: "Ovo je test!\r\nPokreći se u jednom smjeru,\na
+      K-1 Maze Sequence Assessment 1: "Ovo je test!\\\r\nPokreći se u jednom smjeru,\na
         zatim u drugom da bi me doveo/la do svinje"
-      K-1 Maze Sequence Assessment 2: "Ovo je test!\r\nPokreći se u jednom smjeru,\na
+      K-1 Maze Sequence Assessment 2: "Ovo je test!\\\r\nPokreći se u jednom smjeru,\na
         zatim u drugom da bi me doveo/la do svinje."
       K-1 Maze debug Assessment 1: Procjena -- Ispravi ovaj nivo preraspodjelom i
         dodavanjem blokova da bi me doveo/la do svinje!
@@ -1753,7 +1741,7 @@ bs:
       K-1 maze debug 1: Promijeni kod da bi me doveo/la do svinje!
       K-1 maze debug 10: Ispravi ovaj nivo tako što ćeš preraspodijeliti i dodati
         blokove da bi me doveo/la do svinje!
-      K-1 maze debug 11: "Ovo je test!\r\nIspravi ovaj nivo tako što ćeš preraspodijeliti
+      K-1 maze debug 11: "Ovo je test!\\\r\nIspravi ovaj nivo tako što ćeš preraspodijeliti
         i dodati blokove da bi me doveo/la do svinje"
       K-1 maze debug 2: Shvati šta nedostaje i onda dodaj blokove da bi me doveo/la
         do svinje!
@@ -1823,7 +1811,7 @@ bs:
         unutar urednika su definicije koje čine "nacrtaj kvadrat" funkciju. Kada si
         završio/la sa pregledom, klikni na "Spremi i Zatvori" i onda klikni na "Pokreni".
       NEW Course 4 Artist Functions 6: "Koristeći \"nacrtaj kvadrat\" funkcijski blok,
-        možeš li nacrtati ovu sliku? Savjet: kvadrati su razmaknuti za 20 piksela.\r\n"
+        možeš li nacrtati ovu sliku? Savjet: kvadrati su razmaknuti za 20 piksela.\\\r"
       NEW Course 4 Artist Functions 7: 'Jesi se već navikao/la na korištenje funkcijskih
         blokova? Hajde da promijenimo ovaj kvadrat tako da je veličine 200 piksela.
         Savjet: klikni na "uredi" da bi promijenio/la veličinu urednika funkcije "nacrtaj
@@ -1854,7 +1842,7 @@ bs:
         si napisao/la i još nekih dodatnih. Nacrtaj nešto fantastično!
       NEW Course 4 Artist Params 3: "Hajde sada da upotrijebimo funkciju za crtanje
         3 trokuta u nizu iz posljednjeg zadatka. Savjet: trokutovi su razmaknuti za
-        50 piksela.\r\n"
+        50 piksela.\\\r"
       NEW Course 4 Artist Params 4: Primjetiš li nešto drugačije u vezi ovih funkcijskih
         blokova? Klikni na "Pokreni" da vidiš šta će se desiti.
       NEW Course 4 Artist Params 5: 'Isputni ??? u ulazni blok za parametar koji označava
@@ -1917,7 +1905,7 @@ bs:
         nešto nektra!
       NEW Course 4 Bee For Loops 8: "Ako tvoja petlja broji prema gore, prirast je
         dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš
-        povećati da bi sakupio/la 3, 6, 9 nektara?\r\n"
+        povećati da bi sakupio/la 3, 6, 9 nektara?\\\r"
       NEW Course 4 Bee For Loops 9: Ako tvoja petlja broji prema dole, korak za povećanje
         se pri svakom prolazu kroz petlju oduzima od trenutne vrijednosti tvoje brojač
         varijable. Koliki bi trebao biti korak povećanja da bi se sakupilo 9, onda
@@ -1940,10 +1928,10 @@ bs:
       New Gumball Project: Napravi šta god želiš i podijeli!
       New Ice Age Project: Napravi šta god želiš i podijeli!
       New Infinity Project: Napravi šta god želiš i podijeli!
-      Ninjacat Demo B (copy 1): "\r\nHajde da počnemo istraživati jednostavnu video
+      Ninjacat Demo B (copy 1): "\\\r\nHajde da počnemo istraživati jednostavnu video
         igricu, i da otkrijemo kako radi. Možeš koristiti tipke sa strelicama za kretanje
-        ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\r\n\r\n\r\n\r\n
-        \ \r\n\r\n"
+        ninje lijevo, desno i za skok. Pokušaj uhvatiti jednoroga i izbjeći zmaja!\\\r\n\\\r\n\\\r\n\\\r\n
+        \ \\\r\n\\\r"
       PDK5 Functions 2: Funkcije ti omogućuju da definiraš nove blokove! Premjestili
         smo blokove za crtanje kvadrata u funkciju sa nazivom "nacrtaj kvadrat". Možeš
         li iskoristiti funkciju "nacrtaj kvadrat" da bi napravio/la naočale? Kvadrati
@@ -2218,13 +2206,13 @@ bs:
         na kraj vanjske petlje da bi nacrtao/la čitavu mrežu?
       courseF_bee_for8: "Ako tvoja petlja broji prema gore, prirast je dodat na brojač
         varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi
-        sakupio/la 3, 6, 9 nektara?\r\n"
+        sakupio/la 3, 6, 9 nektara?\\\r"
       courseF_bee_for8_2018: "Ako tvoja petlja broji prema gore, prirast je dodat
         na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati
-        da bi sakupio/la 3, 6, 9 nektara?\r\n"
+        da bi sakupio/la 3, 6, 9 nektara?\\\r"
       courseF_bee_for8_2019: "Ako tvoja petlja broji prema gore, prirast je dodat
         na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati
-        da bi sakupio/la 3, 6, 9 nektara?\r\n"
+        da bi sakupio/la 3, 6, 9 nektara?\\\r"
       courseF_bee_functions4: Funkcije "pokreni se i pokupi nektar" funkcije čine
         da se pčela okrene, pokupi nektar i onda vrati odakle je krenula. Upotrijebi
         ovu funkciju da bi se pokupio sav nektar.
@@ -2497,7 +2485,7 @@ bs:
         ćeš pozivati kod za trokut u petlji?
       grade4_arist_nested_loop_triangles4: Nacrtaj zube u ustima aligatora!
       grade4_arist_nested_loop_triangles5: "Napravi sunce tako što ćeš ugnijezditi
-        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r"
+        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\\r"
       grade4_arist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći
         ugniježdenu petlju?
       grade4_artist_functions1: 'Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi
@@ -2517,10 +2505,8 @@ bs:
         moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
       grade4_artist_nested_loop_squares1: Možeš li nacrtati ovih 10 kvadrata ovog
         trotoara koristeći ugniježdene petlje? Svaki kvadrat je širok 30 piksela.
-      grade4_artist_nested_loop_triangles1: 'Dovrši kod za crtanje ovih trokutova.
-        Prvi dio smo odradili za tebe. Savjet: 3 trokuta zarotirani za 360 stepeni.'
       grade4_artist_nested_loop_triangles5: "Napravi sunce tako što ćeš ugnijezditi
-        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r"
+        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\\r"
       grade4_artist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći
         ugniježdenu petlju?
       grade4_artist_parameters_squares1: 'Klikni na "uredi" da upišeš definiciju "nacrtaj
@@ -2612,9 +2598,6 @@ bs:
       grade4_playlab_test2: Evo funkcija pod nazivom "skoči" koja čini da tvoj glavni
         lik skače za 100 piksela. Upotrijebi funkciju za skakanje za sakupljanje svih
         zastava.
-      grade4_review_artist1: Zdravo, ja sam umjetnik. Možeš napisati kod pomoću kojeg
-        ću ja nacrtati skoro sve što želiš. Koristi nekoliko blokova da bih ja nacrtao
-        sive linije u slici. (Svaka linija je 100 piksela duga)
       grade4_review_artist2: 'Ova kuća treba krov! Nacrtaj trokut. Savjet: sve tri
         stranice su iste dužine.'
       grade4_review_artist3: Blok za skakanje pokreće umjetnika bez crtanja. Nacrtaj
@@ -2721,7 +2704,7 @@ bs:
         nektar sa odbrojavanjem od 5 do 1 za 1.
       grade5_bee_for_loops8: "Ako tvoja petlja broji prema gore, prirast je dodat
         na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati
-        da bi sakupio/la 3, 6, 9 nektara?\r\n"
+        da bi sakupio/la 3, 6, 9 nektara?\\\r"
       grade5_playlab_freeplay: 'Vrijeme je za slobodno igranje! Zabavi se sa svim
         blokovima u tvojoj alatnoj traci. '
       grade5_playlab_variables1: Ne moraš pisati nikakav kod, samo pritisni na "pokreni"
@@ -2737,7 +2720,7 @@ bs:
         nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
       grade5_playlab_variables14: 'Vrijeme je za slobodno igranje! Zabavi se sa svim
         blokovima u tvojoj alatnoj traci. '
-      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       grade5_playlab_variables3: Evo nova vrsta igrice! Koristi strelicu za lijevo
@@ -2756,12 +2739,10 @@ bs:
         bude baš prelagana. Svaki put kada Pas (lik 1) bude pogođen sa vatrenom kuglom,
         ti bi trebao/la izgubiti poen. Hajde da počnemo sa 10 poena tako da ne bude
         preteško. Neka tvoj rezultat padne sa 10 na 0 da bi prošao/la ovaj nivo.
-      grade5_playlab_variables81: 'Dodali smo još jednu zadnju funkciju za tvoje korištenje.
-        Isprogramiraj tvoju igricu da zove "viši nivo" funkciju kada je "broj_poena">
+      grade5_playlab_variables81: Dodali smo još jednu zadnju funkciju za tvoje korištenje.
+        Isprogramiraj tvoju igricu da zove "viši nivo" funkciju kada je "broj\_poena">
         10. Da bi prešao/la na novi zadatak, igraj igricu, i načini da prođe nivo
         4.
-
-'
       grade5_playlab_variables9: Evo funkcija pod nazivom "izvidnica". Preuredi je
         da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
       grade5_playlab_variables_freeplay: 'Vrijeme za slobodno igranje! Evo svih varijabli

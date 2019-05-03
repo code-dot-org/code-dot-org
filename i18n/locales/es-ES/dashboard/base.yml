@@ -270,12 +270,6 @@ es:
     header:
       finished_hoc: "He terminado mi Hora de Código"
       sign_in_to_save: 'Inicia sesión para guardar tu progreso'
-      free_play:
-        playlab: 'Hacer una aplicación para el laboratorio de juegos'
-        artist: 'Dibuja Algo'
-        applab: 'Hacer una aplicación para el Laboratorio de Aplicaciones'
-        gamelab: 'Hacer un proyecto de laboratorio de Juegos'
-        weblab: 'Hacer un proyecto de laboratorio de Juegos (beta)'
       my_dashboard: "Mi Panel de Control"
       course_catalog: "Catalogo de cursos"
       project_gallery: "Proyectos"
@@ -947,7 +941,16 @@ es:
     csp_conditionals: 'Condicionales'
     csp_functions: 'funciones'
     csp_project: 'Proyecto'
+    csp_lists: 'Listas'
+    csp_loops: 'vuelta'
+    csp_traversals: 'Recorridos'
+    csp_libraries: 'Librerías'
     dlp: 'Preguntas para Reflexionar'
+    time4cs_c1: 'Everglades y sus Ecosistemas'
+    time4cs_c2: 'Cadenas de comida en Everglades'
+    time4cs_c3: 'Vivir en Everglades'
+    time4cs_c4: 'Impactos Invasivos en Everglades'
+    time4cs_c5: 'Los ciudadanos afectan el cambio en Everglades'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia un sitio que no es operado por Code.org.

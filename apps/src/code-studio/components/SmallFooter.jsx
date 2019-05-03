@@ -1,8 +1,8 @@
-/* eslint-disable react/no-danger */
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -10,21 +10,6 @@ const MenuState = {
   EXPANDED: 'EXPANDED',
   COPYRIGHT: 'COPYRIGHT'
 };
-
-class EncodedParagraph extends React.Component {
-  static propTypes = {
-    text: PropTypes.string
-  };
-  render() {
-    return (
-      <p
-        dangerouslySetInnerHTML={{
-          __html: decodeURIComponent(this.props.text)
-        }}
-      />
-    );
-  }
-}
 
 export default class SmallFooter extends React.Component {
   static propTypes = {
@@ -235,10 +220,8 @@ export default class SmallFooter extends React.Component {
           style={combinedBaseStyle}
           onClick={this.clickBase}
         >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: decodeURIComponent(this.props.i18nDropdown)
-            }}
+          <UnsafeRenderedMarkdown
+            markdown={decodeURIComponent(this.props.i18nDropdown)}
           />
           <small>
             {this.renderPrivacy(styles)}
@@ -255,16 +238,28 @@ export default class SmallFooter extends React.Component {
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
-            <EncodedParagraph text={this.props.copyrightStrings.thank_you} />
-            <p>{this.props.copyrightStrings.help_from_html}</p>
-            <EncodedParagraph
-              text={this.props.copyrightStrings.art_from_html}
+            <UnsafeRenderedMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.thank_you
+              )}
             />
-            <EncodedParagraph
-              text={this.props.copyrightStrings.code_from_html}
+            <p>{this.props.copyrightStrings.help_from_html}</p>
+            <UnsafeRenderedMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.art_from_html
+              )}
+            />
+            <UnsafeRenderedMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.code_from_html
+              )}
             />
             <p>{this.props.copyrightStrings.powered_by_aws}</p>
-            <EncodedParagraph text={this.props.copyrightStrings.trademark} />
+            <UnsafeRenderedMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.trademark
+              )}
+            />
           </div>
         </div>
         {this.renderMoreMenu(styles)}

@@ -10,7 +10,7 @@ pt:
       2-3 Artist 9 REPLACEMENT: Termine o desenho destas escadas!
       2-3 Artist 9: Terminar este papagaio
       2-3 Artist Debugging 10: "O controlo de direção no meu controlador\ndo jogo
-        é muito estreito. \r\n\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
+        é muito estreito. \\\r\n\\\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
       2-3 Artist Debugging 11: Ajude-me a terminar meu lindo floco de neve. Quantas
         vezes preciso "repetir" para terminá-lo?
       2-3 Artist Debugging 2: 'O código para os três bigodes que você vê está errado.
@@ -25,7 +25,7 @@ pt:
       2-3 Artist Debugging 6: |-
         Parece que estou sentado em uma cadeira
         sem uma perna. Edite os blocos para desenhar a perna.
-      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\\\r\n\\\r\nConsegues
         voltar a transformá-lo num C?"
       2-3 Artist Debugging 8: |-
         Meu cata-vento não está pronto. Quantas
@@ -235,8 +235,8 @@ pt:
         Use o bloco repita até para levar o
         zumbi até o girassol.
       4-5 Maze Conditionals 10: "Consegues adicionar apenas 3 blocos para ajudar o
-        zombie a completar um labirinto mais complexo? \r\n\r\nSe conseguires, ele
-        pode andar em qualquer caminho curvo independentemente do seu tamanho!"
+        zombie a completar um labirinto mais complexo? \\\r\n\\\r\nSe conseguires,
+        ele pode andar em qualquer caminho curvo independentemente do seu tamanho!"
       4-5 Maze Conditionals 2: |-
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -256,7 +256,8 @@ pt:
         para que eu chegue lá com o menor número de blocos possível.
       4-5 Maze Conditionals 7: |-
         Ok, vamos praticar mais uma vez
-        - essa parte não é muito diferente, mas fique de olho nas carnívoras!
+
+        -   essa parte não é muito diferente, mas fique de olho nas carnívoras!
       4-5 Maze Conditionals 8: |-
         Os blocos "se-senão" verificam uma condição
         e, em seguida, fazem uma coisa OU outra. Para me levar ao girassol, tente
@@ -271,7 +272,7 @@ pt:
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
       4-5 Nested Loops 3: "Crie um sol aninhando o código inicial\ndentro de outro
-        laço. Chamamos isso de laço aninhado.\r"
+        laço. Chamamos isso de laço aninhado.\\\r"
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: |-
         Você pode desenhar um hexágono repetindo o
@@ -300,9 +301,9 @@ pt:
       Artist Autorun Test: |-
         Use o bloco "repita" para desenhar esses
         3 quadrados.
-      CoureE_HOC 2018 Level_7a: "Encontraste as ruínas subaquáticas. Procura o arenito
+      CoureE_HOC 2018 Level_7a: Encontraste as ruínas subaquáticas. Procura o arenito
         para um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!
@@ -365,17 +366,17 @@ pt:
         o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
       Course 4 Play Lab Vars 2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       Course 4 Play Labs For Loops 1: |-
         Vamos fazer o cão falar todos
         os números de 1 a 100. Use um laço para e o bloco contador para que ele fale o valor da variável
         contador a cada vez que o laço for executado.
-      CourseE_HOC 2018 Level_1: "Precisas de abastecimentos para a viagem que se avizinha.
+      CourseE_HOC 2018 Level_1: Precisas de abastecimentos para a viagem que se avizinha.
         Coleciona um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      CourseE_HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        escondida algures neste Monumento do Oceano, consegues encontrá-la?\n\n"
+        do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        escondida algures neste Monumento do Oceano, consegues encontrá-la?
       CourseE_HOC 2018 Level_11: Constrói uma parede de **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         à volta do betão preto. Isto ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         e completará o desafio!
@@ -389,34 +390,34 @@ pt:
         escondida algures! Explora o navio encalhado para chegares ao **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Que frio está! Apanha um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         a caminho das ruínas subaquáticas.
-      CourseE_HOC 2018 Level_7a: "Encontraste as ruínas subaquáticas. Procura o arenito
+      CourseE_HOC 2018 Level_7a: Encontraste as ruínas subaquáticas. Procura o arenito
         para um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      CourseE_HOC 2018 Level_8: "Primeiro icebergs e agora lava? Atravessa esta ilha
+        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_8: Primeiro icebergs e agora lava? Atravessa esta ilha
         vulcânica e encontra o **peixe tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        no recife de coral.\n\n"
-      CourseE_HOC 2018 Level_9b: "Chegaste ao recife de coral, agora procura o **Heart
+        no recife de coral.
+      CourseE_HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart
         of the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
-        ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+        ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       CourseF_PlayLab_vars2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       Function intro Ryan: "Uma **função** chamada \"construir ponte\" está no teu
         espaço de trabalho.  Todo o código de que precisas para atravessar o rio está
-        incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu espaço
-        de trabalho para arranjar o caminho e levar {currentPlayerName} até à Tocha
-        de Redstone [redstone_torch]."
-      Function intro Ryan_2019: "Uma **função** chamada \"construir ponte\" está no
-        teu espaço de trabalho.  Todo o código de que precisas para atravessar o rio
-        está incorporado! \r\n \r\nEncaixa o pequeno bloco verde duas vezes no teu
+        incorporado! \\\r\n \\\r\nEncaixa o pequeno bloco verde duas vezes no teu
         espaço de trabalho para arranjar o caminho e levar {currentPlayerName} até
         à Tocha de Redstone [redstone_torch]."
-      HOC 2018 Level_1: "Precisas de abastecimentos para a viagem que se avizinha.
+      Function intro Ryan_2019: "Uma **função** chamada \"construir ponte\" está no
+        teu espaço de trabalho.  Todo o código de que precisas para atravessar o rio
+        está incorporado! \\\r\n \\\r\nEncaixa o pequeno bloco verde duas vezes no
+        teu espaço de trabalho para arranjar o caminho e levar {currentPlayerName}
+        até à Tocha de Redstone [redstone_torch]."
+      HOC 2018 Level_1: Precisas de abastecimentos para a viagem que se avizinha.
         Coleciona um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        escondida algures neste Monumento do Oceano, consegues encontrá-la?\n\n"
+        do **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Há uma **lula** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        escondida algures neste Monumento do Oceano, consegues encontrá-la?
       HOC 2018 Level_11: Constrói uma parede de **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         à volta do betão preto. Isto ativará o **canal** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         e completará o desafio!
@@ -432,15 +433,15 @@ pt:
         escondida algures! Explora o navio encalhado para chegares ao **baú** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       HOC 2018 Level_6: Que frio está! Apanha um **salmão** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         a caminho das ruínas subaquáticas.
-      HOC 2018 Level_7a: "Encontraste as ruínas subaquáticas. Procura o arenito para
+      HOC 2018 Level_7a: Encontraste as ruínas subaquáticas. Procura o arenito para
         um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      HOC 2018 Level_8: "Primeiro icebergs e agora lava? Atravessa esta ilha vulcânica
+        que contenha um tesouro de **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      HOC 2018 Level_8: Primeiro icebergs e agora lava? Atravessa esta ilha vulcânica
         e encontra o **peixe tropical** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        no recife de coral.\n\n"
-      HOC 2018 Level_9b: "Chegaste ao recife de coral, agora procura o **Heart of
-        the Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
-        ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+        no recife de coral.
+      HOC 2018 Level_9b: Chegaste ao recife de coral, agora procura o **Heart of the
+        Sea** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Usa o coral azul e vermelho para alcançar o **baú** do tesouro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Bee Loops 2: |-
         Use um laço para mover e então coletar o néctar e
         produzir mel!
@@ -457,11 +458,11 @@ pt:
       MC Agent Freeplay: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
         do Agent para te ajudar a explorar este mundo."
       MC_HOC_2017 Agent Test: "Clica em \"Executar\" para mover o jogador com as **teclas
-        de seta**.  \r\n\r\nPara passar de nível, tens de chegar à porta e abri-la
+        de seta**.  \\\r\n\\\r\nPara passar de nível, tens de chegar à porta e abri-la
         (com a **barra de espaço**) para chegar ao quadrado cor de laranja que se
         encontra dentro."
       MC_HOC_2017_01: "Clica em \"Executar\" para mover o jogador com as **teclas
-        de seta**.  \r\n\r\nPara passar de nível, tens de chegar à porta e abri-la
+        de seta**.  \\\r\n\\\r\nPara passar de nível, tens de chegar à porta e abri-la
         (com a **barra de espaço**) para chegar ao quadrado cor de laranja que se
         encontra dentro."
       MC_HOC_2017_01_Cole: Tens de recolher todas as ferramentas nesta jornada. Desloca-te
@@ -469,13 +470,13 @@ pt:
       MC_HOC_2017_01_Kiki: 'Para jogar este nível, clica no botão cor de laranja "Executar"
         abaixo da área de jogo e move o jogador com as **teclas de seta**.  '
       MC_HOC_2017_01_RETRY: "{currentPlayerName} está preso dentro da casa, mas o
-        Agent está aqui para ajudar!   \r\n \r\n   \r\nEncaixa um bloco \"avançar\"
+        Agent está aqui para ajudar!   \\\r\n \\\r\n   \\\r\nEncaixa um bloco \"avançar\"
         no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
         à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
         de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
         \ "
       MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} está preso dentro da casa, mas
-        o Agent está aqui para ajudar!   \r\n \r\n   \r\nEncaixa um bloco \"avançar\"
+        o Agent está aqui para ajudar!   \\\r\n \\\r\n   \\\r\nEncaixa um bloco \"avançar\"
         no bloco \"quando executado\" no espaço de trabalho, para levar o Agent até
         à placa de pressão [PressurePlate_Up]. Prime \"Executar\" e utiliza as teclas
         de seta para tirar {currentPlayerName} da casa e recolher o **baú** [chest].
@@ -483,103 +484,104 @@ pt:
       MC_HOC_2017_02: O jogador precisa de entrar naquele bosque secreto.  Ajuda o
         Agent a abrir o portão, escrevendo código que o leve até à placa de pressão.
       MC_HOC_2017_02_Cole: "{currentPlayerName} embarcou numa aventura! Para o ajudar,
-        chega ao **mapa** [map_empty] atrás da porta fechada à direita. \r\n \r\nEncaixa
+        chega ao **mapa** [map_empty] atrás da porta fechada à direita. \\\r\n \\\r\nEncaixa
         o código no espaço de trabalho para mover o Agent para a placa de pressão
         [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} embarcou numa aventura! Para
         o ajudar, chega ao **mapa** [map_empty] atrás da porta fechada à direita.
-        \r\n \r\nEncaixa o código no espaço de trabalho para mover o Agent para a
-        placa de pressão [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
+        \\\r\n \\\r\nEncaixa o código no espaço de trabalho para mover o Agent para
+        a placa de pressão [PressurePlate_Up] e {currentPlayerName} conseguir passar. "
       MC_HOC_2017_02_Kiki: "O jogador embarcou numa aventura, mas primeiro tem de
-        chegar à tocha que está escondida do outro lado daquela porta fechada. \r\n\r\nPrograma
+        chegar à tocha que está escondida do outro lado daquela porta fechada. \\\r\n\\\r\nPrograma
         o Agent para avançar duas vezes e seguir o caminho branco para chegar à placa
         de pressão e abrir a porta ao jogador."
       MC_HOC_2017_02_Will: "Para terminar este nível, o jogador tem de chegar ao quadrado
-        cor de laranja dentro do Bosque Secreto atrás da porta fechada.  \r\n\r\nO
+        cor de laranja dentro do Bosque Secreto atrás da porta fechada.  \\\r\n\\\r\nO
         código no espaço de trabalho faz com que o Agent avance duas vezes, chegando
         à placa de pressão e abrindo a porta a Alex ou Steve."
       MC_HOC_2017_03_Cole: "{currentPlayerName} continua na sua aventura e precisa
-        da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
+        da **bússola** [compass] para se preparar para a viagem.  \\\r\n   \\\r\nPrograma
         o Agent para abrir o portão. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na sua aventura e precisa
-        da **bússola** [compass] para se preparar para a viagem.  \r\n   \r\nPrograma
+        da **bússola** [compass] para se preparar para a viagem.  \\\r\n   \\\r\nPrograma
         o Agent para abrir o portão. "
       MC_HOC_2017_03_Kiki: "A aventura do jogador começa atrás da porta fechada, no
-        Bosque Secreto!  \r\n\r\n\r\nAjuda o Agent a abrir a porta, escrevendo código
-        que o leve até à placa de pressão."
+        Bosque Secreto!  \\\r\n\\\r\n\\\r\nAjuda o Agent a abrir a porta, escrevendo
+        código que o leve até à placa de pressão."
       MC_HOC_2017_04: Muda a ação circular do último quebra-cabeças para ajudar o
         Agent a criar um caminho sobre a parte mais larga deste rio.
       MC_HOC_2017_04POINT5_Cole: "Conseguiste sair do pântano!  Agora, leva o jogador
-        em segurança até ao quadrado cor de laranja. \n\n\nAjuda o Agent a abrir caminho
+        em segurança até ao quadrado cor de laranja. \n\nAjuda o Agent a abrir caminho
         através de um padrão simples e da utilização de ações circulares para passar
         pelas duas primeiras placas de pressão."
-      MC_HOC_2017_04POINT5_RYAN: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
-        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Conseguiste passar! \r\n\r\nAgora, leva {currentPlayerName}
-        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\r\n"
-      MC_HOC_2017_04_Cole: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
+      MC_HOC_2017_04POINT5_RYAN: "Conseguiste passar! \\\r\n\\\r\nAgora, leva {currentPlayerName}
+        em segurança pelo labirinto para recolher o **machado** [diamond_axe]\\\r"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Conseguiste passar! \\\r\n\\\r\nAgora, leva
+        {currentPlayerName} em segurança pelo labirinto para recolher o **machado**
+        [diamond_axe]\\\r"
+      MC_HOC_2017_04_Cole: "O Agent consegue mover-se pela água!  \\\r\n \\\r\nUtiliza
         uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
         a chegar ao **balde** [bucket_empty] atrás da porta. "
-      MC_HOC_2017_04_Cole_2019: "O Agent consegue mover-se pela água!  \r\n \r\nUtiliza
+      MC_HOC_2017_04_Cole_2019: "O Agent consegue mover-se pela água!  \\\r\n \\\r\nUtiliza
         uma ação circular \"repetir\" para resolver este quebra-cabeças e ajudar {currentPlayerName}
         a chegar ao **balde** [bucket_empty] atrás da porta. "
       MC_HOC_2017_04_Kiki: "A entrada para o Bosque Secreto levou-te a este maravilhoso
         Oásis!  Para passar este nível, o jogador tem de chegar ao quadrado cor de
-        laranja na cabana.  \r\n\r\nUtiliza uma ação circular \"repetir\" para ajudar
-        o Agent a percorrer todo o caminho até à placa de pressão, que abre a porta
-        da cabana."
-      MC_HOC_2017_05: "As ações circulares nem sempre são úteis. \n\n\nEstes catos
-        não crescem num padrão óbvio, pelo que uma ação circular não é capaz de os
-        eliminar corretamente.  Em vez disso, apresentamos-te uma função chamada \"destruir
+        laranja na cabana.  \\\r\n\\\r\nUtiliza uma ação circular \"repetir\" para
+        ajudar o Agent a percorrer todo o caminho até à placa de pressão, que abre
+        a porta da cabana."
+      MC_HOC_2017_05: "As ações circulares nem sempre são úteis. \n\nEstes catos não
+        crescem num padrão óbvio, pelo que uma ação circular não é capaz de os eliminar
+        corretamente.  Em vez disso, apresentamos-te uma função chamada \"destruir
         e mover\", que faz todo o trabalho árduo sempre que o Agent encontra um obstáculo."
-      MC_HOC_2017_05_Cole: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o Agent
-        para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
-        conseguir chegar à **pá** [diamond_shovel]."
-      MC_HOC_2017_05_Cole_2019: "Oh não, a ponte foi destruída! \r\n\r\nPrograma o
+      MC_HOC_2017_05_Cole: "Oh não, a ponte foi destruída! \\\r\n\\\r\nPrograma o
         Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
         conseguir chegar à **pá** [diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Oh não, a ponte foi destruída! \n\n\nAjuda o Agent a reconstruir
+      MC_HOC_2017_05_Cole_2019: "Oh não, a ponte foi destruída! \\\r\n\\\r\nPrograma
+        o Agent para reconstruir a ponte com um bloco \"colocar\", para {currentPlayerName}
+        conseguir chegar à **pá** [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Oh não, a ponte foi destruída! \n\nAjuda o Agent a reconstruir
         a ponte para o jogador conseguir chegar à **pá**."
       MC_HOC_2017_05_Kiki: "Está na hora de o jogador sair do Bosque Secreto e continuar
-        a sua aventura, mas a ponte foi destruída! \r\n\r\nAjuda o Agent a reconstruir
+        a sua aventura, mas a ponte foi destruída! \\\r\n\\\r\nAjuda o Agent a reconstruir
         a ponte e leva-o até à tábua de madeira, para o jogador conseguir chegar ao
         quadrado cor de laranja."
-      MC_HOC_2017_06_Cole: "Encontrámos outro rio, mas este é muito mais largo! \r\n
-        \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
+      MC_HOC_2017_06_Cole: "Encontrámos outro rio, mas este é muito mais largo! \\\r\n
+        \\\r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
         chegar à **picareta** [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Encontrámos outro rio, mas este é muito mais largo!
-        \r\n \r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
+        \\\r\n \\\r\nCorrige o código e ajuda o Agent a construir uma ponte para {currentPlayerName}
         chegar à **picareta** [diamond_pickaxe]. "
-      MC_HOC_2017_06_Josh: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
+      MC_HOC_2017_06_Josh: "Encontrámos outro rio, mas este é muito mais largo! \\\r\n\\\r\nCorrige
         o código para ajudar o Agent a construir uma ponte sobre este rio."
-      MC_HOC_2017_06_Kiki: "Encontrámos outro rio, mas este é muito mais largo! \r\n\r\nCorrige
+      MC_HOC_2017_06_Kiki: "Encontrámos outro rio, mas este é muito mais largo! \\\r\n\\\r\nCorrige
         o código para ajudar o Agent a construir uma ponte sobre a água."
-      MC_HOC_2017_07_Cole: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
+      MC_HOC_2017_07_Cole: "O caminho tem gelo!  \\\r\n \\\r\nA função \"abrir caminho\"
         pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
         [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "O caminho tem gelo!  \r\n \r\nA função \"abrir caminho\"
-        pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até à vagoneta
-        [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "O caminho tem gelo!  \\\r\n \\\r\nA função \"abrir
+        caminho\" pode ajudar-te a destruir o gelo e a levar {currentPlayerName} até
+        à vagoneta [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "As ações circulares não são a única forma de repetir código!
-        \ \r\n\r\nVê só, apresentamos-te uma função chamada \"eliminar catos\" que
-        trata da tarefa árdua de eliminar três catos sempre que é utilizada.  Utiliza
+        \ \\\r\n\\\r\nVê só, apresentamos-te uma função chamada \"eliminar catos\"
+        que trata da tarefa árdua de eliminar três catos sempre que é utilizada.  Utiliza
         dois blocos \"eliminar catos\" para abrir caminho até ao quadrado cor de laranja. "
       MC_HOC_2017_07a_Kiki: Agora, edita esta ação circular para ajudar o Agent a
         abrir caminho até ao quadrado cor de laranja.
       MC_HOC_2017_08_Cole: "Agora, em vez de destruir antes de te moveres, tens de
-        colocar um bloco.  \r\n\r\nMuda a função apresentada para que funcione no
-        deserto."
+        colocar um bloco.  \\\r\n\\\r\nMuda a função apresentada para que funcione
+        no deserto."
       MC_HOC_2017_08_Kiki: "Agora, em vez de destruir catos, tens de colocar pedras
-        sobre a lava e destruir arenito.  \r\n\r\nMuda a função para que funcione
+        sobre a lava e destruir arenito.  \\\r\n\\\r\nMuda a função para que funcione
         neste nível."
-      MC_HOC_2017_08_RY: "Agora, podes escolher entre **DUAS** funções! \n\n\nUtiliza-as
+      MC_HOC_2017_08_RY: "Agora, podes escolher entre **DUAS** funções! \n\nUtiliza-as
         para construir rapidamente uma ponte sobre a lava para {currentPlayerName}."
-      MC_HOC_2017_08_Will: "Agora, podes escolher entre **DUAS** funções! \n\n\nUtiliza-as
+      MC_HOC_2017_08_Will: "Agora, podes escolher entre **DUAS** funções! \n\nUtiliza-as
         para construir rapidamente uma ponte sobre a lava para o jogador."
       MC_HOC_2017_09_Cole: Utiliza as funções para ajudar o Agent a destruir os blocos
         gigantes de terra que estão a impedir a passagem do jogador até à placa de
         pressão.
-      MC_HOC_2017_09_Kiki: "Este código inicial não pode ser removido.\r\n\r\nAdiciona
+      MC_HOC_2017_09_Kiki: "Este código inicial não pode ser removido.\\\r\n\\\r\nAdiciona
         comandos à função \"criar rasto\" para o programa no espaço de trabalho levar
         o Agent até à placa de pressão. "
       MC_HOC_2017_09_RS_CLONE: Corrige esta função para preencher os buracos. Depois,
@@ -593,13 +595,13 @@ pt:
         seja mais fácil para o Agent terminar esta vagoneta e levar o jogador até
         ao quadrado cor de laranja.
       MC_HOC_2017_10_RETRY: "Consegues descobrir a diferença entre as duas funções
-        no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
-        ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
-        \r\n "
+        no teu espaço de trabalho? \\\r\n \\\r\nUtiliza-as com outro código da caixa
+        de ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço**
+        [flint_and_steel]. \\\r\n "
       MC_HOC_2017_10_RETRY_2019: "Consegues descobrir a diferença entre as duas funções
-        no teu espaço de trabalho? \r\n \r\nUtiliza-as com outro código da caixa de
-        ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço** [flint_and_steel].
-        \r\n "
+        no teu espaço de trabalho? \\\r\n \\\r\nUtiliza-as com outro código da caixa
+        de ferramentas para abrir caminho até a Vagoneta e recolher **Sílex e Aço**
+        [flint_and_steel]. \\\r\n "
       MC_HOC_2017_10_RYAN: Experimenta construir funções desde o início para que seja
         mais fácil para o Agent terminar esta vagoneta e levar o jogador até ao quadrado
         cor de laranja.
@@ -611,7 +613,7 @@ pt:
       MC_HOC_2017_13_Cole: "**Jogo livre:** Agora tudo depende de ti! Utiliza o código
         do Agent para te ajudar a explorar este mundo."
       MC_HOC_2017_4.5v2: "Conseguiste sair do pântano!  Agora, leva o jogador em segurança
-        até ao quadrado cor de laranja. \n\n\nAjuda o Agent a abrir caminho através
+        até ao quadrado cor de laranja. \n\nAjuda o Agent a abrir caminho através
         de um padrão simples e da utilização de ações circulares para passar pelas
         duas primeiras placas de pressão."
       MC_HOC_2017_Ali: 'Examina as funções abaixo.  Como é que as podes utilizar para
@@ -629,11 +631,11 @@ pt:
       MC_HOC_2017_FP20x20_2019: "**Jogo livre:** Agora tudo depende de ti! Utiliza
         o código do Agent para te ajudar a explorar este mundo."
       MC_HOC_2017_Ryan_03: "Sabias que podes colocar mais do que um bloco de código
-        numa ação circular?  \r\n\r\nUtiliza a ação circular \"repetir\" para ajudar
-        o Agent a construir uma ponte sobre o rio, colocando blocos na água."
+        numa ação circular?  \\\r\n\\\r\nUtiliza a ação circular \"repetir\" para
+        ajudar o Agent a construir uma ponte sobre o rio, colocando blocos na água."
       MC_HOC_2017_Ryan_05: "Às vezes, precisas de derrubar o que se encontra no caminho
-        do teu jogador.  \r\nUtiliza o bloco \"destruir\" para eliminar todos os catos
-        entre o Agent e a placa de pressão."
+        do teu jogador.  \\\r\nUtiliza o bloco \"destruir\" para eliminar todos os
+        catos entre o Agent e a placa de pressão."
       MC_HOC_Kiki_02: Alguém tem de estar na placa de pressão para a porta lateral
         se abrir. Ajuda o Agent a chegar à placa, para o jogador conseguir sair da
         casa.
@@ -777,7 +779,7 @@ pt:
       grade2_PuppyLoops_8: 'O código para os três bigodes que você vê está errado.
         Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
         desenhar os bigodes.'
-      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\\\r\n\\\r\nConsegues
         voltar a transformá-lo num C?"
       grade2_puppy_loops4: Use dois laços para chegar até o porco usando menos blocos.
       grade3_ConditionalsElse_2: |-
@@ -853,7 +855,7 @@ pt:
         código do triângulo?
       grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
-        de outro laço. Chamamos isso de laço aninhado.\r"
+        de outro laço. Chamamos isso de laço aninhado.\\\r"
       grade4_arist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -868,7 +870,7 @@ pt:
         Repita esse design 10 vezes. Quanto
         você precisa virar a cada repetição? (Dica: quanto é 360 dividido por 10?)
       grade4_artist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
-        de outro laço. Chamamos isso de laço aninhado.\r"
+        de outro laço. Chamamos isso de laço aninhado.\\\r"
       grade4_artist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -967,7 +969,7 @@ pt:
         o cão de volta para a parte superior esquerda se ele tocar em qualquer outro personagem.
       grade5_playlab_variables2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       grade5_playlab_variables9: |-
         Aqui temos uma função chamada "patrulhe".

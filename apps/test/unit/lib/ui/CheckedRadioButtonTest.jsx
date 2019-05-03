@@ -4,10 +4,10 @@ import {expect} from '../../../util/reconfiguredChai';
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 
 const DEFAULT_PROPS = {
-  id: 'rubric-input-exceeds',
+  id: 'rubric-input-performanceLevel1',
   disabledMode: false,
   checked: false,
-  value: 'exceeds',
+  value: 'performanceLevel1',
   onRadioButtonChange: () => {}
 };
 

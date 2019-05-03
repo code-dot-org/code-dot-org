@@ -1310,7 +1310,7 @@ ro-RO:
   csp_2018_category_name: Pricipii Informatice ('18-'19)
   cspexams_category_name: Principiile practicilor test CS
   applab_name: Laboratului Aplicației
-  gamelab_name: Laborator de jocuri
+  gamelab_name: Game Lab
   basketball_name: Realizeaza un joc de baschet
   sports_name: Propgrameaza propriul joc sport
   applab_gradelevel: Vârste 13 +
@@ -2115,7 +2115,7 @@ ro-RO:
   user_header_settings: Contul meu
   user_header_logout: Deloghează-te
   user_header_signin: Loghează-te
-  user_header_gamelab: Laborator de jocuri
+  user_header_gamelab: Game Lab
   user_header_playlab: Laborator de Joacă
   user_header_dance: Petrecere cu dans
   user_header_spritelab: Laborator Sprite
@@ -2199,7 +2199,7 @@ ro-RO:
   hoc2018_mc_start: Începe
   hoc2018_mc_no_internet: Nu ai Internet?
   hoc2018_mc_download_adventurer: Descarcă versiunea offline a Minecraft Adventurer.
-  hoc2018_mc_educators_box2_button: Descărcare
+  hoc2018_mc_educators_box2_button: Descarcă
   hoc2018_mc_watch_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
     inspirationale
   hoc2018_mc_videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri

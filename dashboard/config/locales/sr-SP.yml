@@ -202,10 +202,6 @@ sr:
     header:
       finished_hoc: Завршио сам свој Сат програмирања
       sign_in_to_save: Пријави се да сачуваш напредак
-      free_play:
-        playlab: Направи апликацију
-        artist: Нацртај нешто
-        applab: Направи апликацију
       educate_hoc: Час кода
     user:
       classroom: Почетна страница за учитеље
@@ -454,6 +450,8 @@ sr:
     csp_variables: Променљиве
     csp_conditionals: Кондиционали
     csp_functions: Функције
+    csp_lists: Листе
+    csp_loops: Петље
   pd:
     form_labels:
       email: Електронска пошта

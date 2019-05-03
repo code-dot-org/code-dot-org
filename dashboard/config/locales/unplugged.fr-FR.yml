@@ -682,3 +682,10 @@ fr:
           processus créatif de partage et d'inspiration. Parallèlement à cela vient
           la promotion de l'expression créative et le besoin d'être juste avec le
           travail créatif.
+      timeforcs_demo_crowdsourcing:
+        title: Financement participatif
+      timeforcs_demo_conditionals:
+        title: Instructions conditionnelles
+        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
+          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
+          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».

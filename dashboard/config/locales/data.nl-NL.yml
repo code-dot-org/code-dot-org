@@ -721,6 +721,7 @@ nl:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_loops_AB: Lussen
         csd_pair_programming: Programmeren in Tweetallen
+        csd_applab_parameters: Functies met Parameters
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

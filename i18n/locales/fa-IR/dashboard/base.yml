@@ -200,10 +200,6 @@ fa:
     header:
       finished_hoc: "من ساعتی با کد خود را به پایان رسانده ام"
       sign_in_to_save: 'وارد گردید تا پیشرفتتان ذخیره شود'
-      free_play:
-        playlab: 'ایجاد یک برنامه'
-        artist: 'چیزی بکش'
-        applab: 'ایجاد یک برنامه'
       course_catalog: "کاتالوگ دوره‌ها"
       project_gallery: "پروژه ها"
       educate_hoc: "ساعت کد نویسی"
@@ -629,6 +625,8 @@ fa:
     csp_variables: 'متغیرها'
     csp_conditionals: 'شرطی ها'
     csp_functions: 'توابع'
+    csp_lists: 'فهرست‌ها'
+    csp_loops: 'حلقه‌ها'
   hoc_download:
     minecraft_name: 'ساعتی با کد ماینکرفت'
   pd:

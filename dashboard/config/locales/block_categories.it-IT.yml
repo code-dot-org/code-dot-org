@@ -22,12 +22,12 @@ it:
       Text: Testo
       Picker: Selezione
       Comment: Commento
-      'Variables ': 'Variabili '
-      Default: Impostazione predefinita
-      Behaviors: Comportamenti
-      everythingelse: qualunque altra cosa
       World: Ambiente
       Sprites: Personaggi
+      Behaviors: Comportamenti
+      'Variables ': 'Variabili '
+      Default: Impostazione predefinita
+      everythingelse: qualunque altra cosa
       Location: Luogo
       numbers: numeri
       Numbers: Numeri

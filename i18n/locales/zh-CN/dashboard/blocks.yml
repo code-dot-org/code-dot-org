@@ -619,7 +619,12 @@ zh-CN:
             '"space"': 空间
             '"enter"': 回车
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -629,6 +634,7 @@ zh-CN:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -638,6 +644,16 @@ zh-CN:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高
         options:
@@ -657,6 +673,8 @@ zh-CN:
         text: 精灵 {SPRITE} 开始 {BEHAVIOR}
       gamelab_addBehaviorUntil:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_beginBehavior:
         text: 开始 {BEHAVIOR}
       gamelab_bounceOff:
@@ -687,6 +705,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
         options:
           CONDITION:
             '"when"': 当
@@ -697,6 +716,8 @@ zh-CN:
         text: '注释: {COMMENT}'
       gamelab_console.log:
         text: 日志消息 {MESSAGE}
+      gamelab_countByCostume:
+        text: "{COSTUME} 的数值"
       gamelab_createNewSprite:
         text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       gamelab_debugSprite:
@@ -745,8 +766,10 @@ zh-CN:
             '"direction"': 移动方向
             '"tint"': 色调
       gamelab_getThisSprite:
+        text: "{CHOICE} 精灵"
         options:
           CHOICE:
+            '"this"': 这
             '"other"': 其他
       gamelab_groupLength:
         text: "{THIS} 中的精灵数量"
@@ -769,6 +792,7 @@ zh-CN:
       gamelab_keyDown:
         text: 键被按下 {KEY}
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} 被按下"
         options:
           CONDITION:
             '"when"': 当
@@ -780,7 +804,12 @@ zh-CN:
             '"right"': 向右
             '"space"': 空间
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -790,6 +819,7 @@ zh-CN:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -800,6 +830,7 @@ zh-CN:
             '"y"': 'y'
             '"z"': z
       gamelab_layoutSprites:
+        text: "{FORMAT} 是 {COSTUME} 的布局"
         options:
           FORMAT:
             '"border"': 边框
@@ -856,6 +887,8 @@ zh-CN:
         text: 设置 {VAR} 的位置到 {VAL}
       gamelab_makeNewGroup:
         text: 创建新组
+      gamelab_makeNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -902,6 +935,8 @@ zh-CN:
             '"West"': 西
       gamelab_pointToward:
         text: 将 {SPRITE} 朝向 {LOCATION}
+      gamelab_printText:
+        text: 打印 {TEXT}
       gamelab_randColor:
         text: 随机颜色
       gamelab_randomColor:
@@ -914,6 +949,8 @@ zh-CN:
         text: 精灵 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 从 {THIS} 删除颜色
+      gamelab_say:
+        text: "{THIS} 表示 {TEXT}"
       gamelab_secondTouched:
         text: 第二次碰到精灵
       gamelab_setAnimation:
@@ -921,9 +958,17 @@ zh-CN:
       gamelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       gamelab_setBackgroundImage:
+        text: 设置背景为 {IMG}
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水底
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
+            undefined: 没有
       gamelab_setDirection:
         text: 设置 {SPRITE} 移动方向为 {DIRECTION}
       gamelab_setFrameDelay:
@@ -963,9 +1008,22 @@ zh-CN:
         text: 将 {THIS} 的颜色改为 {COLOR}
       gamelab_setup:
         text: 设置
+      gamelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          收集
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} 被点击"
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': 当
@@ -1062,6 +1120,11 @@ zh-CN:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whenTouchingAny:
         text: 当 {SPRITE} 碰到任何 {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_whenTrue:
         text: 当 {CONDITION} 为真时
       gamelab_whenUpArrow:
@@ -1091,6 +1154,8 @@ zh-CN:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whileUpArrow:
         text: 当上方向键按下时
+      gamelab_worldSeconds:
+        text: 过几秒的时间
       gamelab_xLocationOf:
         text: "{SPRITE} 的x轴坐标"
       gamelab_yLocationOf:
@@ -1132,13 +1197,17 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupChangeAnim:
+        text: 将 {SELECT} {COSTUME} 改为 {COSTUME2}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupChangePropBy:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1146,6 +1215,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupCreateNewSprite:
+        text: 在 {LOCATION} 创建一个新的 {COSTUME}
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1159,11 +1229,21 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Mikelab_groupDestroy:
+        text: 删除 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
+      Mikelab_groupDisplace:
+        text: 所有 {COSTUME} 屏蔽 {COSTUME2} 移动
+      Mikelab_groupEdgesDisplace:
+        text: 边缘模块阻止了 {COSTUME} 移动
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} 的 {PROPERTY}"
         options:
+          SELECT:
+            '"average"': 平均
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1171,21 +1251,29 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupRemoveAllBehaviors:
+        text: 停止 {SELECT} {COSTUME} 行为
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupRemoveTint:
+        text: 从 {SELECT} {COSTUME} 去掉颜色
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
       Mikelab_groupSetProp:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
           PROPERTY:
             '"scale"': 大小
             '"rotation"': 旋转
@@ -1193,9 +1281,21 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_groupSetTint:
+        text: 更改 {SELECT} {COSTUME} 的颜色为 {COLOR}
         options:
           SELECT:
             '"all"': 所有
+            '"this"': 这
+      Mikelab_groupWhenClickedOn:
+        text: 当点击 {COSTUME} 时
+      Mikelab_groupWhenXTouchesY:
+        text: 当{COSTUME} 碰到 {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: 点击 {COSTUME} 时
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          {COSTUME} 碰触到 {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} 当前在 {BEHAVIOR}"
       Mikelab_ifDanceIs:
@@ -1244,6 +1344,7 @@ zh-CN:
             '"right"': 向右
             '"left"': 向左
       Mikelab_sprite:
+        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1306,6 +1407,8 @@ zh-CN:
         text: 向左转
       RyanLab_turnRight:
         text: 向右转
+      SpriteLab2Beta_spriteSay:
+        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
           创建精灵
@@ -1331,10 +1434,16 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
+      aalab_addBehaviorForDuration:
+        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
+      aalab_addBehaviorSimpleFlexible:
+        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       aalab_addToSpriteGroup:
         text: 向组 {GROUP} 添加精灵 {SPRITE}
+      aalab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       aalab_changePropByFlexible:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
@@ -1345,28 +1454,43 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
       aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} 被点击"
         options:
           CONDITION:
             '"when"': 当
             '"while"': 当
+      aalab_createNewSprite:
+        text: "aalab 制作一个新的精灵 \n 取名 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
+      aalab_createNewSpriteAdvanced:
+        text: "制作一个新的精灵命名为 {NAME} \n 服装设置为 {COSTUME} \n 位于 {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
+      aalab_createNewSpriteAnonReturn:
+        text: aalab 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
       aalab_createPropertyGroup:
         text: |-
           创建一个叫做 {VAR} 的精灵组
           包括所有的 {COSTUME} 精灵
       aalab_createSpriteGroup:
         text: 创造一个叫做 {VAR} 的新精灵组
+      aalab_getSpritesByName:
+        text: 任何名为 {NAME} 的精灵
       aalab_getThisSprite:
+        text: "{CHOICE} 精灵"
         options:
           CHOICE:
+            '"this"': 这
             '"other"': 其他
       aalab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
       aalab_keyPressed:
+        text: "{CONDITION} {KEY} 被按下"
         options:
           CONDITION:
             '"when"': 当
@@ -1377,15 +1501,26 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
+      aalab_locationOf:
+        text: aalab {SPRITE} 的位置
       aalab_location_picker:
         text: "{LOCATION}"
+      aalab_moveForward:
+        text: aalab 向前移动 {SPRITE} {DISTANCE} 像素
       aalab_moveInDirection:
+        text: aalab 移动 {SPRITE} {DISTANCE} 像素 {DIRECTION}
         options:
           DIRECTION:
             '"North"': 北
             '"East"': 东
             '"South"': 南
             '"West"': 西
+      aalab_moveToward:
+        text: aalab 移动 {SPRITE} 距离 {DISTANCE} 朝向目标 {TARGET}
+      aalab_nameStringSay:
+        text: "{NAMESTRING} 说 {MESSAGE}"
+      aalab_prompt:
+        text: 提问 {MESSAGE}
       aalab_randomLocation:
         text: 随机位置
       aalab_removeOneAndAll:
@@ -1395,11 +1530,15 @@ zh-CN:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
       aalab_setCollidable:
+        text: aalab 设置 {SPRITE} 可相撞于 {VAL}
         options:
           VAL:
             '"true"': 真
             '"false"': 错
+      aalab_setDirection:
+        text: aalab 设置 {SPRITE} 运动方向为 {DIRECTION}
       aalab_setProp:
+        text: aalab 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1408,22 +1547,62 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
+      aalab_setSpriteVariable:
+        text: aalab 设置 {VARIABLE} 到 {SPRITE}
       aalab_showCustomText:
+        text: 显示文字 {TEXT} 在位置 {LOCATION} 字体大小 {SIZE} 颜色 {COLOR} 显示时长为 {DURATION}
         options:
           DURATION:
+            '"1"': 1 秒
+            '"2"': 2 秒
+            '"3"': 3 秒
+            '"4"': 4 秒
+            '"5"': 5 秒
             '"0"': 永远
+      aalab_showSpriteLabel:
+        text: 显示精灵 {SPRITE} 的标签 {TEXT} {LOCATION}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} 说 {MESSAGE}"
+      aalab_spriteSay:
+        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       aalab_toggleHideCustomText:
+        text: "{OPTION} 自定义文字"
         options:
           OPTION:
             '"show"': 显示
             '"hide"': 隐藏
+      binary_drawBin:
+        text: 绘制二进制 {BIN}
+      binary_drawBinScreen:
+        text: |-
+          绘制屏幕
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: 绘制十进制 {DEC}
       binary_drawPixelHere:
+        text: 设置像素 {VAL}
         options:
           VAL:
-            '0': 'off'
+            '0': 关闭
             '1': 开启
             '"toggle"': 切换
+      binary_drawString:
+        text: 绘制字符串 {STR}
+      binary_goTo:
+        text: 跳到 {LOC}
+      binary_goToHome:
+        text: 跳到左上角
+      binary_gridSize:
+        text: 设置网格尺寸大小 {SIZE}
       binary_move:
+        text: 移动 {DIR}
         options:
           DIR:
             '"up"': 向上

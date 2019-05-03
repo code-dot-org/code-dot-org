@@ -87,6 +87,7 @@ zh-CN:
       do something: 做点什么
       filter_pixel: 过滤像素
       draw_image: 绘图
+      checkSimulationEnd: 校验模拟结束
       witch ending: 巫婆结尾
       story: 故事
       starting path: 起始路径

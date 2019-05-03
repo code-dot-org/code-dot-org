@@ -2,16 +2,14 @@
 vi:
   data:
     long_instructions:
-      "'pre-assessment survey q25A'": 'Nếu đã từng học, bạn đã tham gia khóa
+      "'pre-assessment survey q25A'": Nếu đã từng học, bạn đã tham gia khóa
         Khoa Học Máy Tính nào trước khóa học hiện tại?
-
-'
       2-3 Artist 1 new: "Chào, tôi là một họa sĩ. Tôi có thể vẽ hầu như mọi thứ theo
         những dòng lệnh bạn viết. Hãy sử dụng các khối lệnh để giúp tôi vẽ các đường
-        thẳng màu xám. (Mỗi đường dài 100 pixel)\r \n\r\n"
+        thẳng màu xám. (Mỗi đường dài 100 pixel)\\\r \n\\\r"
       2-3 Artist 11: 'Tạo đường viền cho biển báo dừng bằng cách vẽ một hình bát giác
         cạnh dài 100 pixel. '
-      2-3 Artist 12: "Vẽ một vòng tròn để hoàn thành nhãn cầu!\n\r\n\r\nNếu chàng
+      2-3 Artist 12: "Vẽ một vòng tròn để hoàn thành nhãn cầu!\n\\\r\n\\\r\nNếu chàng
         họa sĩ xoay góc 1 độ mỗi vòng lặp, bạn phải lặp dòng lệnh bao nhiêu lần để
         vẽ vòng tròn? "
       2-3 Artist 2 new: Ngôi nhà này có một bức tường mới hoàn thành một nửa. Mỗi
@@ -19,106 +17,107 @@ vi:
       2-3 Artist 3.4: Khối nhảy di chuyển người nghệ sĩ mà không vẽ. Lập nét đứt bằng
         cách sử dụng hai khối nhảy và vẽ.
       2-3 Artist 3new: "Chiếc mũ đỏ cao 100 điểm ảnh. Hãy vẽ nốt một chiếc mũ đen
-        thấp hơn mũ đỏ 70 điểm ảnh. \r\n\r\n*(Lưu ý: Chiều rộng của mũ đen là 50 điểm
-        ảnh.)*"
+        thấp hơn mũ đỏ 70 điểm ảnh. \\\r\n\\\r\n_(Lưu ý: Chiều rộng của mũ đen là
+        50 điểm ảnh.)_"
       2-3 Artist 4: Giúp tôi hoàn thành nhà cho con mèo này.
-      2-3 Artist 6: "Nhà này cần một mái nhà! Hãy vẽ hình tam giác.  \r \r Gợi ý:
-        Ba cạnh tam giác có chiều dài bằng nhau. \r \r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+      2-3 Artist 6: "Nhà này cần một mái nhà! Hãy vẽ hình tam giác.  \\\r \\\r Gợi
+        ý: Ba cạnh tam giác có chiều dài bằng nhau. \\\r \\\r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
         width=\"300\"/>"
       2-3 Artist 7: "Vẽ nốt những chiếc cửa sổ cuối cùng của trường học để tất cả
-        học sinh trong lớp có thể nhìn ra ngoài. \r\n\r\nMỗi cạnh của hình vuông dài
-        25 pixel. "
-      2-3 Artist 8: "Hãy xây một chuồng gia súc! \r\n\r\nChia buồng cho các con vật
-        bằng cách chia chuồng thành hai hình vuông kích thước bằng nhau. \r\n\r\nGợi
-        ý:\nHình chữ nhật rộng 200 pixel, cao 100 pixel. \r\n\r\nCó rất nhiều cách
-        giải câu đố này."
+        học sinh trong lớp có thể nhìn ra ngoài. \\\r\n\\\r\nMỗi cạnh của hình vuông
+        dài 25 pixel. "
+      2-3 Artist 8: "Hãy xây một chuồng gia súc! \\\r\n\\\r\nChia buồng cho các con
+        vật bằng cách chia chuồng thành hai hình vuông kích thước bằng nhau. \\\r\n\\\r\nGợi
+        ý:\nHình chữ nhật rộng 200 pixel, cao 100 pixel. \\\r\n\\\r\nCó rất nhiều
+        cách giải câu đố này."
       2-3 Artist 9 NEW: Hoàn thành diều này
       2-3 Artist 9 REPLACEMENT: Hoàn tất bản vẽ các cầu thang!
       2-3 Artist 9: Hoàn thành diều này
       2-3 Artist Assessment 1: "**Bài kiểm tra:** Vẽ nốt cái răng cuối, rộng 25 pixel
         và cao 25 pixel."
-      2-3 Artist Debugging 1: "Chiếc mũ này chỉ nên rộng 50 pixel. \r\nBạn có sửa
-        nó được không?\r\n\r\n<br/>\r\n"
-      2-3 Artist Debugging 10: "Phím mũi tên điều khiển của tôi quá hẹp. \r\n\r Bạn
-        có thể làm nó rộng hơn 10 pixel không? \r\n\r\nThử chạy mã lệnh trước để thấy
-        lỗi sai."
+      2-3 Artist Debugging 1: "Chiếc mũ này chỉ nên rộng 50 pixel. \\\r\nBạn có sửa
+        nó được không?\\\r\n\\\r\n<br/>\\\r"
+      2-3 Artist Debugging 10: "Phím mũi tên điều khiển của tôi quá hẹp. \\\r\n\\\r
+        Bạn có thể làm nó rộng hơn 10 pixel không? \\\r\n\\\r\nThử chạy mã lệnh trước
+        để thấy lỗi sai."
       2-3 Artist Debugging 11: Giúp tôi hoàn thành bông tuyết xinh đẹp này. Tôi cần
         "lặp lại" bao nhiêu lần để hoàn thành nó?
-      2-3 Artist Debugging 2: "Dòng lệnh vẽ ria cho mèo bị sai. \r\n\r Hãy sửa lại
-        để mỗi chiếc ria dài bằng nhau."
-      2-3 Artist Debugging 3: "Thuyền của tôi có một cái lỗ! \r\n\r\nPhải sửa như
-        thế nào để khắc phục việc này?"
-      2-3 Artist Debugging 5: "Các lệnh để vẽ chân và bàn chân bị sai. \r\n\r\nBạn
+      2-3 Artist Debugging 2: "Dòng lệnh vẽ ria cho mèo bị sai. \\\r\n\\\r Hãy sửa
+        lại để mỗi chiếc ria dài bằng nhau."
+      2-3 Artist Debugging 3: "Thuyền của tôi có một cái lỗ! \\\r\n\\\r\nPhải sửa
+        như thế nào để khắc phục việc này?"
+      2-3 Artist Debugging 5: "Các lệnh để vẽ chân và bàn chân bị sai. \\\r\n\\\r\nBạn
         có sửa được không?"
       2-3 Artist Debugging 6: "Có vẻ như tôi đang ngồi trên một cái ghế thiếu một
-        chân! \r\n\r\nSửa lại mã lệnh để vẽ nốt chân còn lại."
-      2-3 Artist Debugging 7: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \r\n\r\nBạn
+        chân! \\\r\n\\\r\nSửa lại mã lệnh để vẽ nốt chân còn lại."
+      2-3 Artist Debugging 7: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \\\r\n\\\r\nBạn
         có thể sửa lại nó không?"
       2-3 Artist Debugging 8: "Giáo viên của tôi nói tôi phải hoàn tất những gì mình
-        bắt đầu! \r\n\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị
-        sai chỗ nào không?"
-      2-3 Artist Debugging 9: "Một cái gì đó đã bị tắt!\r\rMã lập trình cho thân cây
-        này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo
+        bắt đầu! \\\r\n\\\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó
+        bị sai chỗ nào không?"
+      2-3 Artist Debugging 9: "Một cái gì đó đã bị tắt!\\\r\\\rMã lập trình cho thân
+        cây này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo
         dõi thân cây đúng cách được không?"
-      2-3 Artist Debugging Assessment 1: "**Bài kiểm tra:** \r\nTại sao ô vuông có
-        tổng các cạnh 75 pixel lại nhỏ như vậy? \r\n\r\nMã lệnh bị sai ở đâu?"
+      2-3 Artist Debugging Assessment 1: "**Bài kiểm tra:** \\\r\nTại sao ô vuông
+        có tổng các cạnh 75 pixel lại nhỏ như vậy? \\\r\n\\\r\nMã lệnh bị sai ở đâu?"
       2-3 Artist Free Play: Tự do sáng tạo! Hãy bất thứ gì bạn thích.
-      2-3 Artist Functions 1 a: "\"Ta thấy ma là họa sĩ. Ta thích vẽ!\"\n\r\n\r\nHãy
-        giúp chàng thây ma vẽ cặp mắt kính hình vuông. \r\n\r\nĐường thẳng nối giữa
-        cặp kính dài 25 pixel, ngắn hơn chiều rộng hình vuông dài 100 pixel. \r\n\r\n"
-      2-3 Artist Functions 1: "\"Ta thấy ma là họa sĩ. Ta thích vẽ!\"\n\r\n\r\nHãy
-        giúp chàng thây ma vẽ cặp mắt kính hình vuông. \r\n\r\nĐường thẳng nối giữa
-        cặp kính dài 25 pixel, ngắn hơn chiều rộng hình vuông dài 100 pixel. \r\n\r\n"
+      2-3 Artist Functions 1 a: "\"Ta thấy ma là họa sĩ. Ta thích vẽ!\"\n\\\r\n\\\r\nHãy
+        giúp chàng thây ma vẽ cặp mắt kính hình vuông. \\\r\n\\\r\nĐường thẳng nối
+        giữa cặp kính dài 25 pixel, ngắn hơn chiều rộng hình vuông dài 100 pixel.
+        \\\r\n\\\r"
+      2-3 Artist Functions 1: "\"Ta thấy ma là họa sĩ. Ta thích vẽ!\"\n\\\r\n\\\r\nHãy
+        giúp chàng thây ma vẽ cặp mắt kính hình vuông. \\\r\n\\\r\nĐường thẳng nối
+        giữa cặp kính dài 25 pixel, ngắn hơn chiều rộng hình vuông dài 100 pixel.
+        \\\r\n\\\r"
       2-3 Artist Functions 10: "**Tự do sáng tạo:** Đây là hai hàm, dùng để vẽ bánh
-        răng to và bánh răng nhỏ. \r\n\r\nHãy dùng chúng để vẽ phần bên trong của
-        cỗ máy!"
+        răng to và bánh răng nhỏ. \\\r\n\\\r\nHãy dùng chúng để vẽ phần bên trong
+        của cỗ máy!"
       2-3 Artist Functions 11 a: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành
-        \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông! \r\n\r\nBạn \ncó thể sửa
-        hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\r\n\r\nHãy
-        dùng hàm mới này để vẽ!"
+        \"vẽ hình lục giác\", nhưng nó vẫn vẽ hình vuông! \\\r\n\\\r\nBạn \ncó thể
+        sửa hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel
+        không?\n\\\r\n\\\r\nHãy dùng hàm mới này để vẽ!"
       2-3 Artist Functions 11.5 a: |-
         Đây giống như hàm 'vẽ một hình lục giác'.
 
         Chuyện gì xảy ra nếu bạn vòng lặp **6** lần chương trình chính, xoay **60** độ mỗi lần bạn dùng vòng lặp?
-      2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \r\n\r\nChuyện ì sẽ
-        xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
+      2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \\\r\n\\\r\nChuyện
+        ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
       2-3 Artist Functions 11: "Chúng ta đã đổi tên hàm \"vẽ hình vuông\" thành \"vẽ
-        hình lục giác\", nhưng nó vẫn vẽ hình vuông! \r\n\r\nBạn \ncó thể sửa hàm
-        \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\r\n\r\nHãy
+        hình lục giác\", nhưng nó vẫn vẽ hình vuông! \\\r\n\\\r\nBạn \ncó thể sửa
+        hàm \"vẽ hình lục giác\" sao cho nó vẽ ra lục giác với cạnh là 50 pixel không?\n\\\r\n\\\r\nHãy
         dùng hàm mới này để vẽ!"
       2-3 Artist Functions 12 Mike: "Hàm có thể vẽ những vật phức tạp nhiều lần một
-        cách tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
-        cây còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
+        cách tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 12 a: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách
-        tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây
-        còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
+        tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
       2-3 Artist Functions 12: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách
-        tiện lợi. \r\n\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những cây
-        còn lại trong chậu không? \r\nCác bông hoa cách nhau 100 pixel."
-      2-3 Artist Functions 2: "Hàm giúp bạn tạo ra khối lệnh mới! \r\n\r\nChúng ta
-        đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
-        Hãy dùng hàm, này để vẽ một khung cửa kính. \r\n\r\nCác hình vuông cách nhau
-        75 pixel."
+        tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
+        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
+      2-3 Artist Functions 2: "Hàm giúp bạn tạo ra khối lệnh mới! \\\r\n\\\r\nChúng
+        ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
+        Hãy dùng hàm, này để vẽ một khung cửa kính. \\\r\n\\\r\nCác hình vuông cách
+        nhau 75 pixel."
       2-3 Artist Functions 3: "Chỉnh sửa hàm để vẽ một hình vuông với chiều dài cạnh
-        115 để vẽ khung kính lớn hơn. \r \r các ô vuông có bây giờ cách nhau 45 pixel."
+        115 để vẽ khung kính lớn hơn. \\\r \\\r các ô vuông có bây giờ cách nhau 45
+        pixel."
       2-3 Artist Functions 4: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình
         vuông.
       2-3 Artist Functions 9: "**Chơi tự do:** Đây là hàm hoa tuyết. Dùng nó để tạo
-        ra khung cảnh mùa đông! \r\n\r\nĐây là màn chơi tự do, chúc vui vẻ!"
+        ra khung cảnh mùa đông! \\\r\n\\\r\nĐây là màn chơi tự do, chúc vui vẻ!"
       2-3 Artist Loops 1: bạn có thể tạo hình lục giác với các cạnh bên là 100 điểm
         ảnh đủ để hoàn thành tế bào? hãy nhớ, điều đó có nghĩa là bạn sẽ chỉ cần quay
         60 độ!
       2-3 Artist Loops 2: Bây giờ sử dụng một khối lặp lại để tạo cho các tế bào một
         lớp vỏ.
       2-3 Artist Loops New 1: "Hãy vẽ đầu của chú robot!. \nBạn có thể vẽ 1 hình vuông
-        mỗi cạnh 100 pixel không?\r\n\r\n<br/>\r\n"
+        mỗi cạnh 100 pixel không?\\\r\n\\\r\n<br/>\\\r"
       2-3 Artist Loops New 10: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
-      2-3 Artist Loops New 11: "Hãy làm một thứ gì đó lộng lẫy!\n\r\n\r\nSửa lại lệnh
-        của màn chơi trước, lần này thêm lệnh rẽ trái 30 độ vào vòng lặp, và lặp các
-        lệnh 24 lần thay vì 8."
-      2-3 Artist Loops New 12: 'Vẽ một viên kim cương với các mặt có 100 điểm ảnh.
-
-'
+      2-3 Artist Loops New 11: "Hãy làm một thứ gì đó lộng lẫy!\n\\\r\n\\\r\nSửa lại
+        lệnh của màn chơi trước, lần này thêm lệnh rẽ trái 30 độ vào vòng lặp, và
+        lặp các lệnh 24 lần thay vì 8."
+      2-3 Artist Loops New 12: Vẽ một viên kim cương với các mặt có 100 điểm ảnh.
       2-3 Artist Loops New 13: bây giờ bạn hãy vẽ viên kim cương 3 lần trong vòng
         lặp.
       2-3 Artist Loops New 2: Đây là một số mã bạn sử dụng để vẽ hình chữ nhật. Điều
@@ -153,32 +152,32 @@ vi:
       2-3 Bee Conditionals 15: Thu thập phấn hoa từ tất cả các bông.
       2-3 Bee Conditionals 3: Giúp tôi thu thập tất cả mật hoa từ những bông hoa và
         làm mật ong. Sử dụng một vòng lặp.
-      2-3 Bee Debugging 3: "Có nhiều hoa đẹp quá!\r\n\r\nSửa lỗi để lấy được hết phấn
-        hoa."
-      2-3 Bee Debugging 6: "Thật là một thách thức ngọt ngào!\r\n\r\nSửa lỗi để lấy
-        được hết phấn hoa."
-      2-3 Bee Debugging 9: "Hãy cẩn thận!\r\n\r\nHãy sửa lỗi chương trình sau để con
-        ong lấy được hết phấn hoa và tạo mật."
+      2-3 Bee Debugging 3: "Có nhiều hoa đẹp quá!\\\r\n\\\r\nSửa lỗi để lấy được hết
+        phấn hoa."
+      2-3 Bee Debugging 6: "Thật là một thách thức ngọt ngào!\\\r\n\\\r\nSửa lỗi để
+        lấy được hết phấn hoa."
+      2-3 Bee Debugging 9: "Hãy cẩn thận!\\\r\n\\\r\nHãy sửa lỗi chương trình sau
+        để con ong lấy được hết phấn hoa và tạo mật."
       2-3 Bee Functions 10: "Hoa màu tím thay đổi lượng phấn hoa từ 1 thành 0 hoặc
-        từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \r \r tạo ra một hàm thu thập phấn
-        hoa chỉ tf các bông hoa màu tím mà có phấn."
-      2-3 Bee Functions 2: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử dụng
-        hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+        từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \\\r \\\r tạo ra một hàm thu thập
+        phấn hoa chỉ tf các bông hoa màu tím mà có phấn."
+      2-3 Bee Functions 2: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r sử
+        dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       2-3 Bee Functions 4: "Chức năng 'di chuyển và lấy mật hoa' xoay chuyển con ong,
-        thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \r \r sử dụng các
-        chức năng để thu thập tất cả mật hoa."
-      2-3 Bee Loops 1: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập mật
-        hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+        thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \\\r \\\r sử dụng
+        các chức năng để thu thập tất cả mật hoa."
+      2-3 Bee Loops 1: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu thập
+        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
       2-3 Bee Loops 3A: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
       2-3 Bee Loops 3B: Bây giờ dùng khối `repeat` để thu thập tất cả phấn hoa và
         biến tất cả thành mật ong.
       2-3 Bee Loops 4A: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này?
-        \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp để
-        hoàn thành trò chơi với số khối ít nhất có thể."
+        \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
+        để hoàn thành trò chơi với số khối ít nhất có thể."
       2-3 Bee Loops 8: "Các bông hoa màu tím này co số lượng mật hoa khác nhau mỗi
-        khi bạn chạy câu đố.\r\n\r\nSử dụng vòng lặp 'mật hoa trắng' để thu thập tất
-        cả mật hoa.\r\n\r\nVòng lặp này sẽ tiếp tục chạy miễn là điều kiện được thỏa
-        mãn, trong trường hợp này 'mật hoa > 0'."
+        khi bạn chạy câu đố.\\\r\n\\\r\nSử dụng vòng lặp 'mật hoa trắng' để thu thập
+        tất cả mật hoa.\\\r\n\\\r\nVòng lặp này sẽ tiếp tục chạy miễn là điều kiện
+        được thỏa mãn, trong trường hợp này 'mật hoa > 0'."
       4-5 Artist 10: Nhấn "Chạy" để thử dòng mã lệnh. Sau đó, lặp lại nó đủ thời gian
         để hoàn tất bản vẽ. Các màu sắc sẽ khác nhau mỗi lần.
       4-5 Artist 2: Tạo vòng lặp cho dòng lệnh sử dụng khối lệnh "nhắc lại" để hoàn
@@ -188,36 +187,35 @@ vi:
       4-5 Artist 6: Tam giác đều này có các góc là 60, 60, và 60 độ. Mỗi cạnh là 200
         pixel. Hoàn tất bản vẽ.
       Artist Autorun Test: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình vuông.
-      CoureE_HOC 2018 Level_7a: "Bạn đã tìm thấy những di tích dưới nước. Hãy tìm
-        kiếm ** chiếc rương **![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        có chứa kho báu ** prismarine **![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
+      CoureE_HOC 2018 Level_7a: Bạn đã tìm thấy những di tích dưới nước. Hãy tìm kiếm
+        trên tảng đá sa thạch một chiếc **rương** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        chứa **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
       CourseD_Dance_Party_01: |-
-        *Hãy mở tiệc khiêu vũ nào!*
+        _Hãy mở tiệc khiêu vũ nào!_
 
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
 
-        * *Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.*
+        -   _Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ._
       CourseD_Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
-        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
-
+        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
 
         **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       CourseD_Dance_Party_03: |-
-        *Bây giờ chúng ta đang quẩy theo nhạc! *
+        \*Bây giờ chúng ta đang quẩy theo nhạc! \*
 
         Thêm khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"nhịp"</title></block></xml> vào không gian làm việc. Hãy cho vũ công bắt đầu động tác mới sau 6 nhịp.
       CourseD_Dance_Party_04: |-
-        *Phần nhảy này cần một chút đèn flash!*
+        _Phần nhảy này cần một chút đèn flash!_
 
         Hãy tìm một khối mới trong hộp công cụ để thêm hiệu ứng nền vào phía sau các vũ công. Xem hiệu ứng thay đổi khớp theo thời gian với nhạc!
       CourseD_Dance_Party_05: |-
         Sử dụng một khối mới khác để làm các vũ công thay đổi động tác **sau mỗi 2 nhịp**!
 
-        * Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
+        -   Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
       CourseD_Dance_Party_06: |-
-        *Chúng ta cần thêm vũ công!*
+        _Chúng ta cần thêm vũ công!_
 
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       CourseD_Dance_Party_08: |-
@@ -226,11 +224,13 @@ vi:
         Bạn có thể làm một vũ công giống như đang ở trong nền bằng cách làm cho _kích cỡ_ của họ nhỏ hơn. Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích cỡ không?
       CourseD_Dance_Party_09: |-
         Vũ công có một thuộc tính "sắc thái" để có thể thêm một lớp màu. Hãy thử thay đổi sắc thái của một trong những vũ công.
-        * Sắc thái sẽ kết hợp màu sắc mà bạn chọn với màu sắc của các vũ công.
+
+        -   Sắc thái sẽ kết hợp màu sắc mà bạn chọn với màu sắc của các vũ công.
       CourseD_Dance_Party_10: |-
         Bây giờ chúng ta đã biết làm thế nào để thay đổi thuộc tính của một vũ công. Chúng tôi cũng có thể làm cho các thuộc tính giống nhau tự động phản hồi với âm nhạc bằng cách sử dụng khối này:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_pineapple</title>
         <title name="PROPERTY">"quy mô"</title>
         <title name="RANGE">"âm trầm"</title>
@@ -259,68 +259,66 @@ vi:
         tên phải.
       CourseD_Dance_Party_12: Bắt đầu quẩy thôi! Tạo ra điệu nhảy của riêng bạn để
         chia sẻ với bạn bè.
-      CourseE_HOC 2018 Level_1: "Bạn cần có trang thiết bị cho cuộc hành trình phía
-        trước. Hãy tới lấy chiếc ** thuyền **![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        từ trong ** chiếc rương **![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      CourseE_HOC 2018 Level_10: "Có một ** con mực **![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        đang ẩn nấp ở một nơi nào đó trong đại dương, có thể bạn tìm thấy nó?\n\n"
-      CourseE_HOC 2018 Level_11: Xây dựng một bức tường ** prismarine **![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
-        quanh khối bê tông đen. Điều này sẽ kích hoạt các ** ống dẫn **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+      CourseE_HOC 2018 Level_1: Bạn cần trang bị cho chuyến hải hành phía trước. Hãy
+        lấy một chiếc **thuyền** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        từ trong **rương** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Có một con **mực** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        lẩn trốn ở đâu đó trong Tượng đài Đại Dương này, bạn có tìm được nó không?
+      CourseE_HOC 2018 Level_11: Hãy xây một bức tường bằng **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        xung quanh phần bê tông đen. Việc này sẽ kích hoạt các **đường dẫn** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         và hoàn thành thử thách của bạn!
       CourseE_HOC 2018 Level_2: Sử dụng thuyền để di chuyển sẽ dễ hơn bơi trên biển!
         Hãy đi đến cuối bến thuyền và nhảy lên chiếc thuyền.
-      CourseE_HOC 2018 Level_3: Nắm lấy mái chèo và chèo thuyền của bạn trên vùng
-        biển khơi để bắt ** cá tuyết ** nào![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
-      CourseE_HOC 2018 Level_4: Cho ** cá heo **![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png)
-        ăn cá tuyết. Sử dụng khối lệnh lặp lại đến khi đạt được mục tiêu để giúp vượt
-        đại dương nhanh hơn.
-      CourseE_HOC 2018 Level_5: Có một ** vỏ ốc**![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        đang ẩn đi ở một nơi nào đó! Hãy khám phá con tàu đắm để tìm ** chiếc hòm
-        **![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      CourseE_HOC 2018 Level_6: Có vẻ lạnh đấy! Bắt một ** chú cá hồi **![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
-        trên đường đến nơi có chiếc tàu đắm.
-      CourseE_HOC 2018 Level_7a: "Bạn đã tìm thấy những di tích dưới nước. Hãy tìm
-        kiếm ** chiếc rương **![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        có chứa kho báu ** prismarine **![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      CourseE_HOC 2018 Level_8: "Đầu tiên là các tảng băng, bây giờ là dung nham ư?
-        Hãy đi qua hòn đảo núi lửa này và tìm ** cá nhiệt đới **![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        trong các rạn san hô.\n\n"
-      CourseE_HOC 2018 Level_9b: "Bạn đã tới rạn san hô, bây giờ tìm kiếm ** Trái
-        tim đại dương **![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Sử dụng san hô màu xanh và đỏ để tới ** rương** kho báu![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      CourseE_HOC 2018 Level_3: Cầm lấy mái chèo và lái thuyền của bạn băng qua biển
+        khơi để bắt **cá tuyết** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Hãy đem cá tuyết làm thức ăn cho **cá heo** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Sử dụng một khối lặp lại để có thể băng qua đại dương nhanh hơn.
+      CourseE_HOC 2018 Level_5: Có một **vỏ ốc anh vũ** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        ẩn giấu ở đâu đó! Hãy thám hiểm xác tàu đắm để đến được chiếc **rương** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Ngoài kia có vẻ lạnh cóng! Hãy bắt một con **cá hồi**
+        ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        trên đường đến các di tích dưới nước.
+      CourseE_HOC 2018 Level_7a: Bạn đã tìm thấy những di tích dưới nước. Hãy tìm
+        kiếm trên tảng đá sa thạch một chiếc **rương** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        chứa **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      CourseE_HOC 2018 Level_8: Đầu tiên là núi băng, giờ đến dung nham? Hãy vượt
+        qua hòn đảo núi lửa này và tìm thấy con **cá nhiệt đới** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        trong rạn san hô.
+      CourseE_HOC 2018 Level_9b: Bạn đã đến được rạn san hô, bây giờ hãy tìm **Trái
+        tim Biển cả** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Sử dụng san hô xanh và đỏ để tiếp cận kho báu trong chiếc **rương** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Dance_Party_01: |-
-        *Hãy mở tiệc khiêu vũ nào!*
+        _Hãy mở tiệc khiêu vũ nào!_
 
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
 
-        * *Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.*
+        -   _Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ._
       Dance_Party_01_low: |-
-        *Hãy mở tiệc khiêu vũ nào!*
+        _Hãy mở tiệc khiêu vũ nào!_
 
         Kéo khối `make a new` vào trong không gian làm việc và kết nối nó với bên trong khối `setup` để tạo ra vũ công đầu tiên của bạn.
 
-        * *Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ.*
+        -   _Bạn cũng có thể nhấn vào bóng đèn ở bên trái nếu muốn xem thêm thông tin hoặc thử thách phụ._
       Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
-        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
-
+        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
 
         **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       Dance_Party_03: |-
-        *Bây giờ chúng ta đang quẩy theo nhạc! *
+        \*Bây giờ chúng ta đang quẩy theo nhạc! \*
 
         Thêm khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"nhịp"</title></block></xml> vào không gian làm việc. Hãy cho vũ công bắt đầu động tác mới sau 6 nhịp.
       Dance_Party_04: |-
-        *Phần nhảy này cần một chút đèn flash!*
+        _Phần nhảy này cần một chút đèn flash!_
 
         Hãy tìm một khối mới trong hộp công cụ để thêm hiệu ứng nền vào phía sau các vũ công. Xem hiệu ứng thay đổi khớp theo thời gian với nhạc!
       Dance_Party_05: |-
         Sử dụng một khối mới khác để làm các vũ công thay đổi động tác **sau mỗi 2 nhịp**!
 
-        * Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
+        -   Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
       Dance_Party_06: |-
-        *Chúng ta cần thêm vũ công!*
+        _Chúng ta cần thêm vũ công!_
 
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       Dance_Party_08: |-
@@ -329,11 +327,13 @@ vi:
         Bạn có thể làm một vũ công giống như đang ở trong nền bằng cách làm cho _kích cỡ_ của họ nhỏ hơn. Bạn có thể làm cho cả hai vũ công dự phòng có cùng kích cỡ không?
       Dance_Party_09: |-
         Vũ công có một thuộc tính "sắc thái" để có thể thêm một lớp màu. Hãy thử thay đổi sắc thái của một trong những vũ công.
-        * Sắc thái sẽ kết hợp màu sắc mà bạn chọn với màu sắc của các vũ công.
+
+        -   Sắc thái sẽ kết hợp màu sắc mà bạn chọn với màu sắc của các vũ công.
       Dance_Party_10: |-
         Bây giờ chúng ta đã biết làm thế nào để thay đổi thuộc tính của một vũ công. Chúng tôi cũng có thể làm cho các thuộc tính giống nhau tự động phản hồi với âm nhạc bằng cách sử dụng khối này:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_pineapple</title>
         <title name="PROPERTY">"quy mô"</title>
         <title name="RANGE">"âm trầm"</title>
@@ -379,9 +379,9 @@ vi:
 
         Dưới đây là một cuộc thi đấu khiêu vũ giữa hai nhóm. Phím mũi tên điều khiển một trong hai vũ công và các phím "w, a, s, d" điều khiển vũ công còn lại. Thi đấu khiêu vũ với một người bạn và sau đó cố gắng cải thiện các bước nhảy.
 
-        * Thêm nhiều phím để điều khiển các điệu nhảy
-        * Làm cho các vũ công hỗ trợ cũng có phản ứng khi nhấn phím
-        * Thay thế vũ công mỗi quãng 4 bằng cách thiết lập khả năng hiển thị của họ
+        -   Thêm nhiều phím để điều khiển các điệu nhảy
+        -   Làm cho các vũ công hỗ trợ cũng có phản ứng khi nhấn phím
+        -   Thay thế vũ công mỗi quãng 4 bằng cách thiết lập khả năng hiển thị của họ
       Dance_Party_extras_every_beat: |-
         # Nốt đen
 
@@ -389,17 +389,17 @@ vi:
 
         Múa này cũng sử dụng một khối_điều kiện_ để kiểm soát khi khối 'quãng 0,25' có thể thay đổi những điệu nhảy. Hãy thử thay đổi con số trong các khối có điều kiện để xem cách nó thay đổi những điệu nhảy.
 
-        * Thử nghiệm với khác quãng nốt khác (như 0,5 cho nửa nốt hoặc 0,125 cho một phần tám nốt).
-        * Thêm một số sự kiện `sau quãng`.
-        * Chuyển đổi "quãng" thành "giây" và thử canh thời gian của bạn nhảy theo cách đó.
+        -   Thử nghiệm với khác quãng nốt khác (như 0,5 cho nửa nốt hoặc 0,125 cho một phần tám nốt).
+        -   Thêm một số sự kiện `sau quãng`.
+        -   Chuyển đổi "quãng" thành "giây" và thử canh thời gian của bạn nhảy theo cách đó.
       Dance_Party_extras_layout: |-
         # Hãy vào đội hình nào!
 
         Kiểm tra các điệu nhảy này sử dụng các khối `giao diện` để thay đổi hình thành các vũ công dự phòng trong suốt buổi khiêu vũ. Hãy thử một trong những IDE để mở rộng nó:
 
-        * Tạo một nhóm các vũ công thứ hai trong một giao diện khác
-        * Thay đổi giao diện khi nhấn phím
-        * Thay đổi một thuộc tính khi các vũ công thay đổi đội hình
+        -   Tạo một nhóm các vũ công thứ hai trong một giao diện khác
+        -   Thay đổi giao diện khi nhấn phím
+        -   Thay đổi một thuộc tính khi các vũ công thay đổi đội hình
       Dance_Party_extras_on_beat: |-
         # Âm trầm, Âm trung và Âm cao
 
@@ -413,46 +413,44 @@ vi:
 
         Điệu nhảy này làm xuất hiện và ẩn hai nhóm vũ công khác nhau. Kiểm tra và sau đó thử thêm vào sự tinh tế của riêng của bạn.
 
-        * Thêm một nhóm vũ công
-        * Hiển thị và ẩn các vũ công bằng cách sử dụng các phím mũi tên
-        * Ẩn tất cả các vũ công và chuyển sang một hiệu ứng nền thú vị
-      HOC 2018 Level_1: "Bạn cần có trang thiết bị cho cuộc hành trình phía trước.
-        Hãy tới lấy chiếc ** thuyền **![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
-        từ trong ** chiếc rương **![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).\n\n"
-      HOC 2018 Level_10: "Có một ** con mực **![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
-        đang ẩn nấp ở một nơi nào đó trong đại dương, có thể bạn tìm thấy nó?\n\n"
-      HOC 2018 Level_11: Xây dựng một bức tường ** prismarine **![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
-        quanh khối bê tông đen. Điều này sẽ kích hoạt các ** ống dẫn **! [] (https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        -   Thêm một nhóm vũ công
+        -   Hiển thị và ẩn các vũ công bằng cách sử dụng các phím mũi tên
+        -   Ẩn tất cả các vũ công và chuyển sang một hiệu ứng nền thú vị
+      HOC 2018 Level_1: Bạn cần trang bị cho chuyến hải hành phía trước. Hãy lấy một
+        chiếc **thuyền** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        từ trong **rương** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Có một con **mực** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        lẩn trốn ở đâu đó trong Tượng đài Đại Dương này, bạn có tìm được nó không?
+      HOC 2018 Level_11: Hãy xây một bức tường bằng **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        xung quanh phần bê tông đen. Việc này sẽ kích hoạt các **đường dẫn** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         và hoàn thành thử thách của bạn!
       HOC 2018 Level_12: Chúc mừng! Thế giới đại dương đang chờ bạn. Hãy tạo ra một
         rạn san hô! Một ngọn núi lửa! Một con tàu đắm! Điều đó tùy thuộc vào bạn.
       HOC 2018 Level_2: Sử dụng thuyền để di chuyển sẽ dễ hơn bơi trên biển! Hãy đi
         đến cuối bến thuyền và nhảy lên chiếc thuyền.
-      HOC 2018 Level_3: Nắm lấy mái chèo và chèo thuyền của bạn trên vùng biển khơi
-        để bắt ** cá tuyết ** nào![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
-      HOC 2018 Level_4: Cho ** cá heo **![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png)
-        ăn cá tuyết. Sử dụng khối lệnh lặp lại đến khi đạt được mục tiêu để giúp vượt
-        đại dương nhanh hơn.
-      HOC 2018 Level_5: Có một ** vỏ ốc**![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        đang ẩn đi ở một nơi nào đó! Hãy khám phá con tàu đắm để tìm ** chiếc hòm
-        **![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
-      HOC 2018 Level_6: Có vẻ lạnh đấy! Bắt một ** chú cá hồi **![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
-        trên đường đến nơi có chiếc tàu đắm.
-      HOC 2018 Level_7a: "Bạn đã tìm thấy những di tích dưới nước. Hãy tìm kiếm **
-        chiếc rương **![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        có chứa kho báu ** prismarine **![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).\n\n"
-      HOC 2018 Level_8: "Đầu tiên là các tảng băng, bây giờ là dung nham ư? Hãy đi
-        qua hòn đảo núi lửa này và tìm ** cá nhiệt đới **![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
-        trong các rạn san hô.\n\n"
-      HOC 2018 Level_9b: "Bạn đã tới rạn san hô, bây giờ tìm kiếm ** Trái tim đại
-        dương **![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
-        Sử dụng san hô màu xanh và đỏ để tới ** rương** kho báu![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).\n\n"
+      HOC 2018 Level_3: Cầm lấy mái chèo và lái thuyền của bạn băng qua biển khơi
+        để bắt **cá tuyết** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Hãy đem cá tuyết làm thức ăn cho **cá heo** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Sử dụng một khối lặp lại để có thể băng qua đại dương nhanh hơn.
+      HOC 2018 Level_5: Có một **vỏ ốc anh vũ** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        ẩn giấu ở đâu đó! Hãy thám hiểm xác tàu đắm để đến được chiếc **rương** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Ngoài kia có vẻ lạnh cóng! Hãy bắt một con **cá hồi** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        trên đường đến các di tích dưới nước.
+      HOC 2018 Level_7a: Bạn đã tìm thấy những di tích dưới nước. Hãy tìm kiếm trên
+        tảng đá sa thạch một chiếc **rương** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        chứa **prismarine** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png).
+      HOC 2018 Level_8: Đầu tiên là núi băng, giờ đến dung nham? Hãy vượt qua hòn
+        đảo núi lửa này và tìm thấy con **cá nhiệt đới** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        trong rạn san hô.
+      HOC 2018 Level_9b: Bạn đã đến được rạn san hô, bây giờ hãy tìm **Trái tim Biển
+        cả** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)!
+        Sử dụng san hô xanh và đỏ để tiếp cận kho báu trong chiếc **rương** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       HOC Dance 4_draft: |-
         Sử dụng một khối mới khác để làm các vũ công thay đổi động tác **sau mỗi 2 nhịp**!
 
-        * Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
+        -   Chọn `(Tiếp theo)`, `(Trước)`, hoặc `(Ngẫu nhiên)` để điều khiển vũ công làm các động tác khác nhau mỗi lần chạy mã.
       HOC Dance 5_draft: |-
-        *Chúng ta cần thêm vũ công!*
+        _Chúng ta cần thêm vũ công!_
 
         Tạo ra một vũ công dự phòng, gọi là `backup_dancer1` để nhảy cùng con mèo.
       HOC Dance 9_draft: |-
@@ -472,134 +470,135 @@ vi:
       MC Agent Freeplay: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo! Hãy
         lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_2017_Ryan_02: "Mã lệnh như thế này có thể được rút gọn bằng cách sử dụng
-        vòng lặp! \r \n\r \nBây giờ đưa Đặc vụ đến các tấm áp lực bằng cách sử dụng
-        vòng lặp 'lặp lại' để giúp Đặc vụ di chuyển về phía trước."
+        vòng lặp! \\\r \n\\\r \nBây giờ đưa Đặc vụ đến các tấm áp lực bằng cách sử
+        dụng vòng lặp 'lặp lại' để giúp Đặc vụ di chuyển về phía trước."
       MC_HOC_2017 Agent Test: "Nhấp vào \"Chạy\" để di chuyển người chơi bằng cách
-        sử dụng các ** phím mũi tên **.  \r \r Để vượt qua cấp độ này, bạn cần đi
-        được đến cánh cửa và mở nó ra (sử dụng phím **cách**) sau đó, bạn có thể tới
-        được hình vuông màu cam phía trong."
+        sử dụng các \\*\\* phím mũi tên **.  \\\r \\\r Để vượt qua cấp độ này, bạn
+        cần đi được đến cánh cửa và mở nó ra (sử dụng phím \\*\\*cách**) sau đó, bạn
+        có thể tới được hình vuông màu cam phía trong."
       MC_HOC_2017_01: "Nhấp vào \"Chạy\" để di chuyển người chơi bằng cách sử dụng
-        các ** phím mũi tên **.  \r \r Để vượt qua cấp độ này, bạn cần đi được đến
-        cánh cửa và mở nó ra (sử dụng phím **cách**) sau đó, bạn có thể tới được hình
-        vuông màu cam phía trong."
+        các \\*\\* phím mũi tên **.  \\\r \\\r Để vượt qua cấp độ này, bạn cần đi
+        được đến cánh cửa và mở nó ra (sử dụng phím \\*\\*cách**) sau đó, bạn có thể
+        tới được hình vuông màu cam phía trong."
       MC_HOC_2017_01_Cole: Bạn cần thu thập tất cả các công cụ trong hành trình này.
         Di chuyển nhân vật xung quanh bằng cách sử dụng các phím mũi tên và di chuyển
         đến trung tâm của con đường để dành chiến thắng
       MC_HOC_2017_01_Kiki: 'Để chơi cấp độ này, nhấp vào nút "Chạy" màu da cam bên
         dưới khu vực chơi, sau đó di chuyển người chơi xung quanh bằng cách sử dụng
-        các ** phím mũi tên **.  '
+        các \*\* phím mũi tên \*\*.  '
       MC_HOC_2017_01_RETRY: "Cửa bị khóa, nhưng Đặc vụ đang ở đây để giúp đỡ! \nDi
         chuyển một khối 'di chuyển về phía trước' xuống phía dưới khối 'khi chạy'
         trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
         đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
-        nhà và thu thập các ** thùng kho báu ** [chest]."
+        nhà và thu thập các \\*\\* thùng kho báu \\*\\* [chest]."
       MC_HOC_2017_01_RETRY_2019: "Cửa bị khóa, nhưng Đặc vụ đang ở đây để giúp đỡ!
         \nDi chuyển một khối 'di chuyển về phía trước' xuống phía dưới khối 'khi chạy'
         trong khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up], sau
         đó nhấn \"Chạy\" và sử dụng các phím mũi tên để di chuyển người chơi ra khỏi
-        nhà và thu thập các ** thùng kho báu ** [chest]."
+        nhà và thu thập các \\*\\* thùng kho báu \\*\\* [chest]."
       MC_HOC_2017_02: "Người chơi cần phải vào được khu rừng bí mật.  \nGiúp Đặc vụ
         mở cánh cửa bằng cách viết mã lệnh để đưa Đặc vụ đến tấm áp lực."
       MC_HOC_2017_02_Cole: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu! Để giúp
-        đỡ, lấy ** bản đồ ** [map_empty] đằng sau cánh cửa đã bị khóa ở bên phải.
-        \r \r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp lực [PressurePlate_Up],
-        từ đó {currentPlayerName} có thể đi qua. "
+        đỡ, lấy \\*\\* bản đồ \\*\\* [map_empty] đằng sau cánh cửa đã bị khóa ở bên
+        phải. \\\r \\\r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp
+        lực [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} đang dẫn đầu cuộc phiêu lưu!
-        Để giúp đỡ, lấy ** bản đồ ** [map_empty] đằng sau cánh cửa đã bị khóa ở bên
-        phải. \r \r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến tấm áp lực
-        [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
+        Để giúp đỡ, lấy \\*\\* bản đồ \\*\\* [map_empty] đằng sau cánh cửa đã bị khóa
+        ở bên phải. \\\r \\\r \nĐưa mã lệnh vào khu vực làm việc để đưa Đặc vụ đến
+        tấm áp lực [PressurePlate_Up], từ đó {currentPlayerName} có thể đi qua. "
       MC_HOC_2017_02_Kiki: "Người chơi đang dẫn đầu trong cuộc phiêu lưu, nhưng đầu
-        tiên họ phải đi đến ngọn đuốc ẩn bên kia cánh cửa bị khóa. \r \r \nLập trình
-        cho Đặc vụ di chuyển về phía trước hai lần để đi theo con đường màu trắng
-        và đến được tấm áp lực, khi đó Đặc vụ có thể mở cửa cho người chơi."
+        tiên họ phải đi đến ngọn đuốc ẩn bên kia cánh cửa bị khóa. \\\r \\\r \nLập
+        trình cho Đặc vụ di chuyển về phía trước hai lần để đi theo con đường màu
+        trắng và đến được tấm áp lực, khi đó Đặc vụ có thể mở cửa cho người chơi."
       MC_HOC_2017_02_Will: "Để hoàn thành cấp độ này, người chơi cần đi được đến hình
-        vuông màu cam bên trong khu rừng bí mật đằng sau cánh cửa bị khóa.  \r \r
+        vuông màu cam bên trong khu rừng bí mật đằng sau cánh cửa bị khóa.  \\\r \\\r
         \nMã lệnh trong khu vực làm việc này sẽ làm cho Đặc vụ di chuyển về phía trước
         hai lần để đến được tấm áp lực và mở cửa cho Alex hoặc Steve."
-      MC_HOC_2017_03_Cole: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần **
-        la bàn ** [compass] để chuẩn bị cho chuyến đi.  \r \r \nLập trình cho Đặc
-        vụ để mở cổng. "
+      MC_HOC_2017_03_Cole: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần \\*\\*
+        la bàn \\*\\* [compass] để chuẩn bị cho chuyến đi.  \\\r \\\r \nLập trình
+        cho Đặc vụ để mở cổng. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} tiếp tục cuộc phiêu lưu và cần
-        ** la bàn ** [compass] để chuẩn bị cho chuyến đi.  \r \r \nLập trình cho Đặc
-        vụ để mở cổng. "
+        \\*\\* la bàn \\*\\* [compass] để chuẩn bị cho chuyến đi.  \\\r \\\r \nLập
+        trình cho Đặc vụ để mở cổng. "
       MC_HOC_2017_03_Kiki: "Cuộc phiêu lưu của người chơi sẽ bắt đầu đằng sau cánh
-        cửa bị khóa, bên trong khu rừng bí mật!  \r \r \r \nGiúp đỡ Đặc vụ mở cửa
-        bằng cách viết mã lệnh để đưa Đặc vụ đi đến tấm áp lực."
+        cửa bị khóa, bên trong khu rừng bí mật!  \\\r \\\r \\\r \nGiúp đỡ Đặc vụ mở
+        cửa bằng cách viết mã lệnh để đưa Đặc vụ đi đến tấm áp lực."
       MC_HOC_2017_04: Thay đổi vòng lặp từ câu đố trước để giúp Đặc vụ tạo ra một
         con đường đi qua phần rộng hơn của con sông.
       MC_HOC_2017_04POINT5_Cole: "Bạn đã thoát khỏi đầm lầy thành công! Bây giờ, đưa
-        người chơi đến ô vuông màu cam an toàn. \r \r \nGiúp đỡ Đặc vụ dọn sạch con
-        đường bằng cách tìm kiếm một mô hình đơn giản và sử dụng các vòng lặp để vượt
-        qua hai tấm áp lực đầu tiên."
-      MC_HOC_2017_04POINT5_RYAN: "Bạn đã vượt qua nó! \r \r \nBây giờ, đưa {currentPlayerName}
-        đến mê cung một cách an toàn để thu thập ** cái rìu ** [diamond_axe]"
-      MC_HOC_2017_04POINT5_RYAN_2019: "Bạn đã vượt qua nó! \r \r \nBây giờ, đưa {currentPlayerName}
-        đến mê cung một cách an toàn để thu thập ** cái rìu ** [diamond_axe]"
-      MC_HOC_2017_04_Cole: "Đặc vụ có thể vượt qua dòng nước!  \r \r \nSử dụng một
-        vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName} đi
-        đến ** cái xô ** [bucket_empty] đằng sau cánh cửa. "
-      MC_HOC_2017_04_Cole_2019: "Đặc vụ có thể vượt qua dòng nước!  \r \r \nSử dụng
+        người chơi đến ô vuông màu cam an toàn. \\\r \\\r \nGiúp đỡ Đặc vụ dọn sạch
+        con đường bằng cách tìm kiếm một mô hình đơn giản và sử dụng các vòng lặp
+        để vượt qua hai tấm áp lực đầu tiên."
+      MC_HOC_2017_04POINT5_RYAN: "Bạn đã vượt qua nó! \\\r \\\r \nBây giờ, đưa {currentPlayerName}
+        đến mê cung một cách an toàn để thu thập \\*\\* cái rìu \\*\\* [diamond_axe]"
+      MC_HOC_2017_04POINT5_RYAN_2019: "Bạn đã vượt qua nó! \\\r \\\r \nBây giờ, đưa
+        {currentPlayerName} đến mê cung một cách an toàn để thu thập \\*\\* cái rìu
+        \\*\\* [diamond_axe]"
+      MC_HOC_2017_04_Cole: "Đặc vụ có thể vượt qua dòng nước!  \\\r \\\r \nSử dụng
         một vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName}
-        đi đến ** cái xô ** [bucket_empty] đằng sau cánh cửa. "
+        đi đến \\*\\* cái xô \\*\\* [bucket_empty] đằng sau cánh cửa. "
+      MC_HOC_2017_04_Cole_2019: "Đặc vụ có thể vượt qua dòng nước!  \\\r \\\r \nSử
+        dụng một vòng lặp 'lặp lại' để giải quyết các câu đố và giúp {currentPlayerName}
+        đi đến \\*\\* cái xô \\*\\* [bucket_empty] đằng sau cánh cửa. "
       MC_HOC_2017_04_Kiki: "Cánh cửa đi vào khu rừng bí mật dẫn đến ốc đảo xinh đẹp
         này!  Để vượt qua cấp độ này, người chơi cần tới được hình vuông màu da cam
-        trong nhà chòi.  \r \r \nSử dụng một vòng lặp 'lặp lại' để giúp Đặc vụ đến
-        được tấm áp lực, nơi sẽ mở ra cánh cửa nhà chòi."
-      MC_HOC_2017_05: "Vòng lặp không phải luôn luôn hữu ích. \r \r \nNhững cây xương
-        rồng này không phát triển theo một hình thù rõ ràng, do đó, một vòng lặp sẽ
-        không xóa chúng một cách chính xác. Thay vào đó, chúng tôi cung cấp một chức
-        năng là 'tiêu hủy và di chuyển' để thực hiện phần việc khó khăn giúp bạn mỗi
-        khi Đặc vụ gặp trở ngại."
-      MC_HOC_2017_05_Cole: "Ôi không, cây cầu đã biến mất! \r \r \nLập trình cho Đặc
-        vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
-        có thể lấy được ** cái xẻng ** [diamond_shovel]."
-      MC_HOC_2017_05_Cole_2019: "Ôi không, cây cầu đã biến mất! \r \r \nLập trình
+        trong nhà chòi.  \\\r \\\r \nSử dụng một vòng lặp 'lặp lại' để giúp Đặc vụ
+        đến được tấm áp lực, nơi sẽ mở ra cánh cửa nhà chòi."
+      MC_HOC_2017_05: "Vòng lặp không phải luôn luôn hữu ích. \\\r \\\r \nNhững cây
+        xương rồng này không phát triển theo một hình thù rõ ràng, do đó, một vòng
+        lặp sẽ không xóa chúng một cách chính xác. Thay vào đó, chúng tôi cung cấp
+        một chức năng là 'tiêu hủy và di chuyển' để thực hiện phần việc khó khăn giúp
+        bạn mỗi khi Đặc vụ gặp trở ngại."
+      MC_HOC_2017_05_Cole: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nLập trình cho
+        Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
+        có thể lấy được \\*\\* cái xẻng \\*\\* [diamond_shovel]."
+      MC_HOC_2017_05_Cole_2019: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nLập trình
         cho Đặc vụ xây lại cây cầu bằng cách sử dụng các khối 'vị trí' để {currentPlayerName}
-        có thể lấy được ** cái xẻng ** [diamond_shovel]."
-      MC_HOC_2017_05_Josh: "Ôi không, cây cầu đã biến mất! \r \r \nGiúp đỡ Đặc vụ
-        xây dựng lại cây cầu để người chơi có thể lấy được ** cái xẻng **."
+        có thể lấy được \\*\\* cái xẻng \\*\\* [diamond_shovel]."
+      MC_HOC_2017_05_Josh: "Ôi không, cây cầu đã biến mất! \\\r \\\r \nGiúp đỡ Đặc
+        vụ xây dựng lại cây cầu để người chơi có thể lấy được \\*\\* cái xẻng \\*\\*."
       MC_HOC_2017_05_Kiki: "Đã đến lúc người chơi rời khỏi khu rừng bí mật và tiếp
-        tục cuộc phiêu lưu, nhưng cây cầu đã biến mất! \r \r \nGiúp đỡ Đặc vụ xây
-        dựng lại cây cầu, sau đó di chuyển đến tấm ván gỗ, để người chơi có thể lấy
-        được hình vuông màu cam."
+        tục cuộc phiêu lưu, nhưng cây cầu đã biến mất! \\\r \\\r \nGiúp đỡ Đặc vụ
+        xây dựng lại cây cầu, sau đó di chuyển đến tấm ván gỗ, để người chơi có thể
+        lấy được hình vuông màu cam."
       MC_HOC_2017_06_Cole: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
-        nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu để
-        {currentPlayerName} có thể lấy được ** cái cúp ** [diamond_pickaxe]. "
+        nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu
+        để {currentPlayerName} có thể lấy được \\*\\* cái cúp \\*\\* [diamond_pickaxe]. "
       MC_HOC_2017_06_Cole_2019: "Một con sông nữa, nhưng con sông này còn rộng lớn
-        hơn nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu
-        để {currentPlayerName} có thể lấy được ** cái cúp ** [diamond_pickaxe]. "
+        hơn nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây
+        cầu để {currentPlayerName} có thể lấy được \\*\\* cái cúp \\*\\* [diamond_pickaxe]. "
       MC_HOC_2017_06_Josh: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
-        nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu vượt
-        qua sông."
+        nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu
+        vượt qua sông."
       MC_HOC_2017_06_Kiki: "Một con sông nữa, nhưng con sông này còn rộng lớn hơn
-        nhiều! \r \r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu vượt
-        qua dòng nước"
-      MC_HOC_2017_07_Cole: "Có băng trong nước!  \r \r \nSử dụng chức năng 'dọn đường'
-        để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
-      MC_HOC_2017_07_Cole_2019: "Có băng trong nước!  \r \r \nSử dụng chức năng 'dọn
+        nhiều! \\\r \\\r \nSửa lại mã lệnh này để giúp Đặc vụ xây dựng một cây cầu
+        vượt qua dòng nước"
+      MC_HOC_2017_07_Cole: "Có băng trong nước!  \\\r \\\r \nSử dụng chức năng 'dọn
         đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
+      MC_HOC_2017_07_Cole_2019: "Có băng trong nước!  \\\r \\\r \nSử dụng chức năng
+        'dọn đường' để tiêu diệt băng và đưa {currentPlayerName} đến Minecart [minecart_normal]! "
       MC_HOC_2017_07_Kiki: "Vòng lặp không phải là cách duy nhất để lặp lại mã lệnh!
-        \ \r \r \nChúng tôi cung cấp cho bạn một chức năng là 'dọn xương rồng' giúp
-        xóa bỏ ba cây xương rồng trong một lần sử dụng. Sử dụng hai khối 'dọn xương
-        rồng' để dọn đường đi đến ô vuông màu cam. "
+        \ \\\r \\\r \nChúng tôi cung cấp cho bạn một chức năng là 'dọn xương rồng'
+        giúp xóa bỏ ba cây xương rồng trong một lần sử dụng. Sử dụng hai khối 'dọn
+        xương rồng' để dọn đường đi đến ô vuông màu cam. "
       MC_HOC_2017_07a_Kiki: Bây giờ, chỉnh sửa vòng lặp này để giúp Đặc vụ dọn đường
         đi đến ô vuông màu cam.
       MC_HOC_2017_08_Cole: "Bây giờ, thay vì tiêu diệt trước khi bạn di chuyển, bạn
-        sẽ cần phải đặt một khối đá.  \r \r \nThay đổi chức năng được cung cấp để
-        phù hợp với sa mạc."
+        sẽ cần phải đặt một khối đá.  \\\r \\\r \nThay đổi chức năng được cung cấp
+        để phù hợp với sa mạc."
       MC_HOC_2017_08_Kiki: "Bây giờ, thay vì phá hủy xương rồng, bạn sẽ cần phải đặt
-        đá trên dung nham, sau đó tiêu diệt viên đá đứng.  \r \r \nThay đổi các chức
-        năng để phù hợp với cấp độ này."
-      MC_HOC_2017_08_RY: "Bây giờ, bạn có ** hai ** nhóm lệnh chức năng để lựa chọn!
-        \r \r \nSử dụng các nhóm lệnh chức năng này để nhanh chóng xây dựng một cây
-        cầu bắc qua dung nham cho nhân vật có thể di chuyển."
-      MC_HOC_2017_08_Will: "Bây giờ bạn có ** hai ** nhóm lệnh chức năng để lựa chọn!
-        \r \r sử dụng các nhóm lệnh chức năng này để nhanh chóng xây dựng một cây
-        cầu bắc qua dung nham cho nhân vật có thể di chuyển."
+        đá trên dung nham, sau đó tiêu diệt viên đá đứng.  \\\r \\\r \nThay đổi các
+        chức năng để phù hợp với cấp độ này."
+      MC_HOC_2017_08_RY: "Bây giờ, bạn có \\*\\* hai \\*\\* nhóm lệnh chức năng để
+        lựa chọn! \\\r \\\r \nSử dụng các nhóm lệnh chức năng này để nhanh chóng xây
+        dựng một cây cầu bắc qua dung nham cho nhân vật có thể di chuyển."
+      MC_HOC_2017_08_Will: "Bây giờ bạn có \\*\\* hai \\*\\* nhóm lệnh chức năng để
+        lựa chọn! \\\r \\\r sử dụng các nhóm lệnh chức năng này để nhanh chóng xây
+        dựng một cây cầu bắc qua dung nham cho nhân vật có thể di chuyển."
       MC_HOC_2017_09_Cole: Sử dụng các nhóm lệnh chức năng để giúp nhân vật đặc vụ
         phá hủy các khối đất khổng lồ đang chặn đường người chơi đi đến các tấm áp
         lực.
-      MC_HOC_2017_09_Kiki: "Mã lệnh lập trình đầu tiên này không thể gỡ bỏ. \r \r
+      MC_HOC_2017_09_Kiki: "Mã lệnh lập trình đầu tiên này không thể gỡ bỏ. \\\r \\\r
         Hãy thêm lệnh vào nhóm lệnh chức năng 'tạo đường mòn' để chương trình có thể
         thực hiện nhiệm vụ đưa nhân vật đặc vụ tới tấm áp lực. "
       MC_HOC_2017_09_RS_CLONE: Chỉnh sửa nhóm lệnh chức năng này để làm đầy các chỗ
@@ -613,13 +612,13 @@ vi:
         vật đặc vụ hoàn thành nhiệm vụ xe đẩy quặng dễ dàng hơn và giúp người chơi
         đi đến ô vuông màu da cam.
       MC_HOC_2017_10_RETRY: "Bạn có thể tìm ra điểm khác biệt giữa hai nhóm lệnh chức
-        năng (hàm) dưới đây không? \r\n \r Sử dụng những nhóm lệnh chức năng này kết
-        hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn tới xe
-        đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \r "
+        năng (hàm) dưới đây không? \\\r\n \\\r Sử dụng những nhóm lệnh chức năng này
+        kết hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn tới
+        xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \\\r "
       MC_HOC_2017_10_RETRY_2019: "Bạn có thể tìm ra điểm khác biệt giữa hai nhóm lệnh
-        chức năng (hàm) dưới đây không? \r\n \r Sử dụng những nhóm lệnh chức năng
+        chức năng (hàm) dưới đây không? \\\r\n \\\r Sử dụng những nhóm lệnh chức năng
         này kết hợp với những lệnh khác trong khung lệnh bên trái để xóa đường dẫn
-        tới xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \r "
+        tới xe đẩy quặng, sau đó thu thập **đá lửa và thép** [flint_and_steel]. \\\r "
       MC_HOC_2017_10_RYAN: Thử xây dựng một nhóm lệnh chức năng từ đầu để giúp nhân
         vật đặc vụ hoàn thành nhiệm vụ xe đẩy quặng dễ dàng hơn và giúp người chơi
         đi đến ô vuông màu da cam.
@@ -631,9 +630,9 @@ vi:
       MC_HOC_2017_13_Cole: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_4.5v2: "Bạn đã thoát khỏi đầm lầy thành công! Bây giờ, đưa người
-        chơi đến ô vuông màu cam an toàn. \r \r \nGiúp đỡ Đặc vụ dọn sạch con đường
-        bằng cách tìm kiếm một mô hình đơn giản và sử dụng các vòng lặp để vượt qua
-        hai tấm áp lực đầu tiên."
+        chơi đến ô vuông màu cam an toàn. \\\r \\\r \nGiúp đỡ Đặc vụ dọn sạch con
+        đường bằng cách tìm kiếm một mô hình đơn giản và sử dụng các vòng lặp để vượt
+        qua hai tấm áp lực đầu tiên."
       MC_HOC_2017_Ali: 'Xem xét các nhóm lệnh chức năng dưới đây.  Làm thế nào bạn
         có thể sử dụng chúng để tránh các Ghasts và giúp {currentPlayerName}  **lấy
         được quyển sách** [book_enchanted] một cách an toàn?  '
@@ -642,19 +641,19 @@ vi:
         được quyển sách** [book_enchanted] một cách an toàn?  '
       MC_HOC_2017_FP10x10: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Bạn có thể thử thách bản thân thu thập hết các viên kim cương trong cấp độ
-        này không?\n"
+        này không?"
       MC_HOC_2017_FP10x10_RE: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Bạn có thể thử thách bản thân thu thập hết các viên kim cương trong cấp độ
-        này không?\n"
+        này không?"
       MC_HOC_2017_FP20x20: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng tạo!
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_FP20x20_2019: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
         tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_Ryan_03: "Bạn có biết rằng bạn có thể thêm nhiều hơn một câu lệnh
-        vào trong vòng lặp? \r \r Sử dụng một vòng lặp`lặp lại` để giúp Đặc vụ xây
-        một cây cầu bắc qua dòng sông bằng cách đặt các khối đá trong nước."
+        vào trong vòng lặp? \\\r \\\r Sử dụng một vòng lặp`lặp lại` để giúp Đặc vụ
+        xây một cây cầu bắc qua dòng sông bằng cách đặt các khối đá trong nước."
       MC_HOC_2017_Ryan_05: "Đôi khi bạn cần phải bắn hạn những chướng ngại vật trên
-        đường đi của người chơi. \r Sử dụng khối lệnh 'tiêu diệt' (phá hủy) để xóa
+        đường đi của người chơi. \\\r Sử dụng khối lệnh 'tiêu diệt' (phá hủy) để xóa
         tất cả những cây xương rồng giữa nhân vật đặc vụ và tấm áp lực."
       MC_HOC_Kiki_02: Ai đó cần đứng lên tấm áp lực để cánh cửa mở ra. Hãy giúp Đặc
         vụ đi tới tấm áp lực để người chơi có thể đi ra khỏi ngôi nhà.
@@ -671,17 +670,16 @@ vi:
       Ryan_Demo: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
-        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
-
+        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"giá trị đo"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
 
         **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
         nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
-      courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử
-        dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
-      courseE_bee_functions3_2018: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r
+      courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
         sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+      courseE_bee_functions3_2018: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r
+        \\\r sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       frozen circle function in circle: Bây giờ hãy tạo 20 vòng tròn chồng chéo, xoay
         18 độ giữa mỗi vòng tròn.
       frozen circle function with parameter: Khối "Tạo vòng tròn" có thể làm những
@@ -693,10 +691,8 @@ vi:
         thế dấu hỏi chấm để vẽ một vòng tròn?
       frozen cross rotate dense: 'Hãy lặp lại 90 lần! Bao nhiêu lần 90 thì thành 360?
         Gợi ý: Nó là một số rất nhỏ.'
-      frozen cross rotate: 'Bây giờ hãy thử lặp lại 10 lần. Bạn cần xoay bao nhiêu
+      frozen cross rotate: Bây giờ hãy thử lặp lại 10 lần. Bạn cần xoay bao nhiêu
         độ giữa mỗi đường?
-
-'
       frozen cross: Sử dụng khối "Lặp lại" để tạo ta một dấu cộng. Bạn có nhận thấy
         rằng Elsa có thể di chuyển lên và xuống?
       frozen diamond mini snowflake: Bạn có biết mỗi bông tuyết là một hình khác nhau?
@@ -728,15 +724,15 @@ vi:
       frozen square snowflake: Bạn có thể tạo một bông tuyết sử dụng khối "Lặp lại"
         để làm một hình vuông 10 lần, và khối "Xoay" để xoay 36 độ giữa mỗi hình?
       grade2_MakeDogTag_8: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
-      grade2_MakeDogTag_9: "Hãy làm một thứ gì đó lộng lẫy!\n\r\n\r\nSửa lại lệnh
+      grade2_MakeDogTag_9: "Hãy làm một thứ gì đó lộng lẫy!\n\\\r\n\\\r\nSửa lại lệnh
         của màn chơi trước, lần này thêm lệnh rẽ trái 30 độ vào vòng lặp, và lặp các
         lệnh 24 lần thay vì 8."
       grade2_PuppyLoops_10: "Giáo viên của tôi nói tôi phải hoàn tất những gì mình
-        bắt đầu! \r\n\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó bị
-        sai chỗ nào không?"
-      grade2_PuppyLoops_8: "Dòng lệnh vẽ ria cho mèo bị sai. \r\n\r Hãy sửa lại để
-        mỗi chiếc ria dài bằng nhau."
-      grade2_PuppyLoops_9: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \r\n\r\nBạn
+        bắt đầu! \\\r\n\\\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó
+        bị sai chỗ nào không?"
+      grade2_PuppyLoops_8: "Dòng lệnh vẽ ria cho mèo bị sai. \\\r\n\\\r Hãy sửa lại
+        để mỗi chiếc ria dài bằng nhau."
+      grade2_PuppyLoops_9: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \\\r\n\\\r\nBạn
         có thể sửa lại nó không?"
       grade3_Conditionals_10: |-
         Hút mật hoa để làm mật ong.
@@ -746,26 +742,26 @@ vi:
       grade3_Conditionals_2: Giúp tôi thu thập tất cả mật hoa từ những bông hoa và
         làm mật ong. Sử dụng một vòng lặp.
       grade3_Conditionals_8: Thu thập phấn hoa từ những bông có phấn.
-      grade3_Debugging_6: "Thật là một thách thức ngọt ngào!\r\n\r\nSửa lỗi để lấy
-        được hết phấn hoa."
-      grade3_Debugging_9: "Hãy cẩn thận!\r\n\r\nHãy sửa lỗi chương trình sau để con
-        ong lấy được hết phấn hoa và tạo mật."
+      grade3_Debugging_6: "Thật là một thách thức ngọt ngào!\\\r\n\\\r\nSửa lỗi để
+        lấy được hết phấn hoa."
+      grade3_Debugging_9: "Hãy cẩn thận!\\\r\n\\\r\nHãy sửa lỗi chương trình sau để
+        con ong lấy được hết phấn hoa và tạo mật."
       grade3_Loops_3: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
       grade3_Loops_4: Bây giờ dùng khối `repeat` để thu thập tất cả phấn hoa và biến
         tất cả thành mật ong.
       grade3_Loops_6: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này?
-        \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp để
-        hoàn thành trò chơi với số khối ít nhất có thể."
-      grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập mật hoa
-        từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
-      grade3_Loops_TeacherIDo: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập
-        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
-      grade4_artist_functions2: "Hàm giúp bạn tạo ra khối lệnh mới! \r\n\r\nChúng
+        \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
+        để hoàn thành trò chơi với số khối ít nhất có thể."
+      grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu thập mật
+        hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+      grade3_Loops_TeacherIDo: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+      grade4_artist_functions2: "Hàm giúp bạn tạo ra khối lệnh mới! \\\r\n\\\r\nChúng
         ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
-        Hãy dùng hàm, này để vẽ một khung cửa kính. \r\n\r\nCác hình vuông cách nhau
-        75 pixel."
-      grade4_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \r \r sử dụng
-        hàm 'lấy 5' để lấy  5 phấn hoa một lần."
+        Hãy dùng hàm, này để vẽ một khung cửa kính. \\\r\n\\\r\nCác hình vuông cách
+        nhau 75 pixel."
+      grade4_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
+        sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       grade4_frozen_freeplay: Bạn đã chính thức trở thành một nghệ sĩ bậc thầy! Tạo
         một Xứ sở thần tiên vào mùa đông.
       grade4_frozen_functions0: Đường tròn là một hình đặc biệt. Bạn có thể tìm ra
@@ -796,8 +792,8 @@ vi:
         chắc chắn xoay 120 độ trước mỗi hình vuông mới.
       grade4_frozen_square_loop3: Bạn có thể tạo một bông tuyết sử dụng khối "Lặp
         lại" để làm một hình vuông 10 lần, và khối "Xoay" để xoay 36 độ giữa mỗi hình?
-      grade4_review_artist2: "Nhà này cần một mái nhà! Hãy vẽ hình tam giác.  \r \r
-        Gợi ý: Ba cạnh tam giác có chiều dài bằng nhau. \r \r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+      grade4_review_artist2: "Nhà này cần một mái nhà! Hãy vẽ hình tam giác.  \\\r
+        \\\r Gợi ý: Ba cạnh tam giác có chiều dài bằng nhau. \\\r \\\r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
         width=\"300\"/>"
       grade4_review_artist3: Khối nhảy di chuyển người nghệ sĩ mà không vẽ. Lập nét
         đứt bằng cách sử dụng hai khối nhảy và vẽ.
@@ -807,7 +803,9 @@ vi:
       level 'grade3_Loops_4: Bây giờ dùng khối `repeat` để thu thập tất cả phấn hoa
         và biến tất cả thành mật ong.
       level 'grade3_Loops_6: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi
-        này? \r\n\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
-        để hoàn thành trò chơi với số khối ít nhất có thể."
-      level 'grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \r \r Hãy thu thập
-        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+        này? \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng
+        lặp để hoàn thành trò chơi với số khối ít nhất có thể."
+      level 'grade3_Loops_7: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu
+        thập mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
+      pre-assessment survey q25A: Nếu đã từng học, bạn đã tham gia khóa Khoa
+        Học Máy Tính nào trước khóa học hiện tại?

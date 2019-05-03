@@ -167,9 +167,6 @@ bn:
     confirm: 'আপনি কি নিশ্চিত?'
   nav:
     header:
-      free_play:
-        playlab: 'একটি অ্যাপ তৈরি করুন'
-        applab: 'একটি অ্যাপ তৈরি করুন'
       project_gallery: "প্রকল্প"
       educate_hoc: "এক ঘন্টার কোড"
       stats: "পরিসংখ্যান"
@@ -402,6 +399,8 @@ bn:
     csp_variables: 'চলকগুলো'
     csp_conditionals: 'শর্তযুক্ত'
     csp_functions: 'ফাংশনগুলি'
+    csp_lists: 'তালিকা'
+    csp_loops: 'চক্র'
   pd:
     form_labels:
       email: 'ই-মেইল'

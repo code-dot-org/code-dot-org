@@ -19,7 +19,7 @@ FactoryGirl.define do
     trait :local_summer_workshop_upcoming do
       local_summer_workshop
       num_sessions 5
-      sessions_from {Date.today + 3.months}
+      sessions_from {Date.current + 3.months}
     end
     trait :fit do
       course Pd::Workshop::COURSE_CSP
@@ -29,7 +29,7 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       num_facilitators 0
-      sessions_from {Date.today + 9.hours} # Start time of the first session, then one per day after that.
+      sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
@@ -108,10 +108,10 @@ FactoryGirl.define do
 
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {Date.today - 5.days}
-    apps_open_date_csd_teacher {Date.today - 6.days}
-    apps_close_date_csp_teacher {Date.today - 2.days}
-    apps_close_date_csd_teacher {Date.today - 3.days}
+    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -129,19 +129,19 @@ FactoryGirl.define do
 
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {Date.today + 5.days}
-    apps_open_date_csd_teacher {Date.today + 6.days}
-    apps_close_date_csp_teacher {Date.today + 14.days}
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
     # CSD dates but no CSP dates.
     apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {Date.today + 6.days}
+    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
     apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {Date.today + 15.days}
+    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -161,7 +161,7 @@ FactoryGirl.define do
       duration_hours 6
     end
     association :workshop, factory: :pd_workshop
-    start {Date.today + 9.hours}
+    start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
@@ -224,7 +224,7 @@ FactoryGirl.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Date.today}
+    start_date {Date.current}
     fixed_payment 50
   end
 

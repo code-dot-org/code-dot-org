@@ -429,6 +429,7 @@ ko:
         mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
         CSF_loops_AB: 반복
         csd_pair_programming: 페어 프로그래밍
+        csd_applab_parameters: 함수(값 전달)
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

@@ -420,6 +420,7 @@ ar:
         mc_2017_puzzle_12: ماينكرافت ساعة من البرمجة - اللعب الحر
         CSF_loops_AB: الحلقات
         csd_pair_programming: البرمجة الزوجية
+        csd_applab_parameters: الدوال والمعاملات
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

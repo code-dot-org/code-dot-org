@@ -217,6 +217,7 @@ class ScriptsControllerTest < ActionController::TestCase
       login_required true
       hideable_stages true
       wrapup_video 'hoc_wrapup'
+      project_sharing true
 
     TEXT
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -230,7 +231,8 @@ class ScriptsControllerTest < ActionController::TestCase
       visible_to_teachers: true,
       login_required: true,
       hideable_stages: true,
-      wrapup_video: 'hoc_wrapup'
+      wrapup_video: 'hoc_wrapup',
+      project_sharing: 'on'
     }
     assert_redirected_to script_path id: 'test-script-create'
 
@@ -239,8 +241,7 @@ class ScriptsControllerTest < ActionController::TestCase
     refute script.hidden
     assert script.login_required
     assert script.hideable_stages
-
-    File.unstub(:write)
+    assert script.project_sharing
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -317,6 +318,31 @@ class ScriptsControllerTest < ActionController::TestCase
     refute Script.find_by_name(script.name).hidden
   end
 
+  test 'updates project_sharing' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    assert_nil Script.find_by_name(script.name).project_sharing
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      project_sharing: "on"
+    }
+    assert Script.find_by_name(script.name).project_sharing
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: ''
+    }
+    refute Script.find_by_name(script.name).project_sharing
+  end
+
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
@@ -371,8 +397,6 @@ class ScriptsControllerTest < ActionController::TestCase
     script = Script.find_by_name('test-script-create')
     assert_equal 'test-script-create', script.name
     assert script.has_lesson_plan?
-
-    File.unstub(:write)
   end
 
   test 'can update with has_lesson_plan param' do

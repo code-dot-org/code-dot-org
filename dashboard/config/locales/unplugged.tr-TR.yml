@@ -554,3 +554,10 @@ tr:
         desc: Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
           yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını
           tartışacaklar.
+      timeforcs_demo_crowdsourcing:
+        title: Kalabalık Kaynaklandırma 'Crowdsourcing'
+      timeforcs_demo_conditionals:
+        title: Koşullar
+        desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada
+          eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir
+          puan alırsın gibi kurallar yaratacaklar

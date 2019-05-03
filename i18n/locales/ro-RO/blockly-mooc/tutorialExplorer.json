@@ -45,9 +45,9 @@
   "filterHeaderHideFilters": "Aplicaţi",
   "filterHeaderTutorialCountSingle": "1 rezultat",
   "filterHeaderTutorialCountPlural": "{tutorial_count} rezultate",
-  "roboticsButtonText": "Vezi activitățile de robotică",
+  "roboticsButtonText": "Robotică și circuite",
   "roboticsText": "Aveți roboți? Utilizați aceste activități și realizați o oră de programare interactivă cu elevii dvs. de toate vârstele!",
-  "tutorialSetNoTutorials": "Căutarea ta nu a avut rezultate care să se potrivească. Încearcă sa elimini câteva filtre pentru a vedea mai multe activități.",
+  "tutorialSetNoTutorials": "Căutarea ta nu a returnat nici un rezultat. Încearcă să schimbi câteva filtre pentru a vedea mai multe activități.",
   "tutorialDetailsTeacherNotes": "Notițele profesorului",
   "tutorialDetailsShortLink": "Link scurt",
   "tutorialDetailInternationalLanguages": "Limbă",
@@ -58,5 +58,5 @@
   "hideAllTutorialsButton": "Ascunde activitățile pentru mai multe limbi",
   "noTutorialsYourLanguage": "Nu sunt activităţi susţinute în limba dvs. Încercaţi activităţi în alte limbi, făcând clic pe butonul de mai jos.",
   "bottomGuidelinesLink": "Click aici pentru a vedea criteriile noastre și ghidurile pentru tutorialele Hour of Code.",
-  "bottomSpecialNeedsLink": "Click aici pentru mai multe informaţii despre sprijinirea elevilor cu nevoi speciale."
+  "bottomSpecialNeedsLink": "Apasă aici pentru mai multe informații despre sprijinirea elevilor cu nevoi speciale."
 }

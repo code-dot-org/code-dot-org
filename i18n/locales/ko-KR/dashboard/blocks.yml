@@ -670,7 +670,13 @@ ko:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 동굴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 사막
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 그리드
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
       gamelab_setPosition:
         text: "{THIS}을(를) {POSITION} 위치로 이동"
         options:
@@ -704,6 +710,11 @@ ko:
       gamelab_setup:
         text: 설정
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': "~할 때"
+            '"while"': '반복(~인 동안):'
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': "~할 때"
@@ -745,6 +756,11 @@ ko:
             "'down'": 아래로
             "'left'": 왼쪽으로
             "'right'": 오른쪽으로
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': "~할 때"
+            '"while"': '반복(~인 동안):'
       gamelab_whileKey:
         options:
           KEY:

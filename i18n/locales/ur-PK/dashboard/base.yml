@@ -184,6 +184,8 @@ ur:
     csf_variables: 'متغیرات'
     csp_variables: 'متغیرات'
     csp_conditionals: 'شرائط'
+    csp_lists: 'فہرستیں'
+    csp_loops: 'لوپس'
   pd:
     form_labels:
       email: 'Email'

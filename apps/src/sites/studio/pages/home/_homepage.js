@@ -137,6 +137,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
+            locale={homepageData.locale}
           />
         )}
         {!isTeacher && (

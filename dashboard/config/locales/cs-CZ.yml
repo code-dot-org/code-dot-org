@@ -325,12 +325,6 @@ cs:
     header:
       finished_hoc: Dokončil jsem Hodinu Kódu
       sign_in_to_save: Přihlaš se pro uložení pokroku
-      free_play:
-        playlab: Vytvořit aplikaci
-        artist: Nakresli něco
-        applab: Vytvořit aplikaci
-        gamelab: Vytvořit projekt Game Lab
-        weblab: Vytvořit Web Lab (beta) projekt
       my_dashboard: Můj přehled
       course_catalog: Katalog kurzů
       project_gallery: Projekty
@@ -1110,6 +1104,8 @@ cs:
     csp_variables: Proměnné
     csp_conditionals: Podmínky
     csp_functions: Funkce
+    csp_lists: Seznamy
+    csp_loops: Smyčky
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností

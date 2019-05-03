@@ -34,7 +34,10 @@ describe('TopInstructionsCSP', () => {
           tabSelected: 'instructions',
           feedbacks: [],
           rubric: null,
-          displayFeedbackTeacherFacing: false
+          teacherViewingStudentWork: false,
+          studentId: null,
+          fetchingData: false,
+          token: null
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
@@ -48,12 +51,15 @@ describe('TopInstructionsCSP', () => {
           feedbacks: [],
           rubric: {
             keyConcept: 'This is the key concept',
-            exceeds: 'Includes more than needed',
-            meets: 'Includes exactly all needed elements',
-            approaches: 'Has some of the needed elements',
-            noEvidence: 'No work done'
+            performanceLevel1: 'Includes more than needed',
+            performanceLevel2: 'Includes exactly all needed elements',
+            performanceLevel3: 'Has some of the needed elements',
+            performanceLevel4: 'No work done'
           },
-          displayFeedbackTeacherFacing: false
+          teacherViewingStudentWork: false,
+          studentId: null,
+          fetchingData: false,
+          token: null
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
@@ -74,19 +80,28 @@ describe('TopInstructionsCSP', () => {
               created_at: '2019-03-26T19:56:53.000Z',
               id: 5,
               level_id: 123,
-              performance: 'meets',
+              performance: 'performanceLevel2',
               student_id: 1,
               teacher_name: 'Tim The Teacher'
             }
           ],
-          rubric: null,
-          displayFeedbackTeacherFacing: false
+          rubric: {
+            keyConcept: 'This is the key concept',
+            performanceLevel1: 'Includes more than needed',
+            performanceLevel2: 'Includes exactly all needed elements',
+            performanceLevel3: 'Has some of the needed elements',
+            performanceLevel4: 'No work done'
+          },
+          teacherViewingStudentWork: false,
+          studentId: 1,
+          fetchingData: false,
+          token: null
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
       });
 
-      it('does not show the feedback tab on a level where the teacher has not given feedback', () => {
+      it('does not show the feedback tab on a level where the teacher has not given feedback and there is no rubric', () => {
         const wrapper = shallow(
           <TopInstructionsCSP {...DEFAULT_PROPS} viewAs={'Student'} />
         );
@@ -95,7 +110,10 @@ describe('TopInstructionsCSP', () => {
           tabSelected: 'instructions',
           feedbacks: [],
           rubric: null,
-          displayFeedbackTeacherFacing: false
+          teacherViewingStudentWork: false,
+          studentId: 1,
+          fetchingData: false,
+          token: null
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);

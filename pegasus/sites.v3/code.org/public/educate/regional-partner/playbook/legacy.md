@@ -1,15 +1,14 @@
-<meta name="robots" content="noindex">
-
 ---
 title: Legacy Programs
 nav: regional_partner_playbook_nav
+noindex: true
 ---
 
 <a id="top"></a>
 
 # Legacy Programs
 
-See below for documents and more information about Code.org's legacy programs.  Code.org has discontinued professional learning for these programs, but are leaving the information available for those partners who have decided to continue them. 
+See below for documents and more information about Code.org's legacy programs.  Code.org has discontinued professional learning for these programs, but are leaving the information available for those partners who have decided to continue them.
 
 ## Quick Links
 
@@ -24,7 +23,7 @@ Click on the program name below to find out more about our **legacy programs**. 
 
 <a id="algebra"></a>
 ________________
-## **Computer Science in Algebra** 
+## **Computer Science in Algebra**
 
 [CS In Algebra homepage](https://code.org/curriculum/algebra)<br/>
 [CS in Algebra Course A Curriculum (PDF)](https://curriculum.code.org/algebra/courseA.pdf)<br/>
@@ -105,7 +104,7 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 ________________
 <a id="science"></a>
 
-## **Computer Science in Science** 
+## **Computer Science in Science**
 
 [CS in Science homepage](https://code.org/curriculum/science)
 
@@ -180,7 +179,7 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 ________________
 <a id="ecs"></a>
 
-## **Exploring Computer Science** 
+## **Exploring Computer Science**
 [ECS Curriculum homepage](http://www.exploringcs.org/for-teachers-districts/curriculum)
 
 <details>
@@ -208,7 +207,7 @@ These guidelines explain the type of space your facilitators need to run a succe
 | |Requirements and Suggestions|
 |:-----|:-----------|
 |**Location**|**Ask yourself these questions when searching for the the ideal location for your workshop.**<br/> - Central location: Is the location central to the spread of teachers attending? <br/>- Catering: Are there several options to order from within 20 miles? Is there an internal or preferred caterer for the venue?<br/> - Parking: Does parking cost anything? Will teachers need parking passes? Is the lot close to an entrance? *Tip: teachers are more likely to show up to the workshop when parking is free.* <br/> - Access: Will there be someone from the venue there to open the building, help with getting supplies to your room(s), and be available to help with technology as needed during the workshop?|
-|**Rooms and <br/>Set Up**|Reservation time: <br/>Rooms need to be reserved from 7:30 am to 4:30 pm (M-Th) and 7:30 am to 2:30 pm (F).<Br/><br/> General itinerary:<br/> 7:30 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:30 pm - facilitators clean up for the night<br/>Note: ECS workshops end at 1:30 pm on Fridays.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|  
+|**Rooms and <br/>Set Up**|Reservation time: <br/>Rooms need to be reserved from 7:30 am to 4:30 pm (M-Th) and 7:30 am to 2:30 pm (F).<Br/><br/> General itinerary:<br/> 7:30 am - 8:30 am - facilitators arrive and set up room<br/>8:30 am - 9:00 am - teachers arrive, register & eat breakfast</br> 9:00 am - 12:00 pm - workshop time<br/> 12:00 pm - 1:00 pm - break for lunch<br/>1:00 pm - 3:30 pm - workshop time<br/>3:30 pm - 4:30 pm - facilitators clean up for the night<br/>Note: ECS workshops end at 1:30 pm on Fridays.<br/><br/>Rooms Needed:<br/>- One room for entire group<br/>- Breakout room to set up catering and for eating. Hallway space also works. We want to avoid interrupting the session by setting up food in the room.<br/>- Wall space for hanging poster sized paper with Blue painter's tape<br/><br/>Seating<br/>- Pods of 4 people for the size of the group. We recommend 8 pods.|
 |**Technology <br/>Requirements**| - Projector and screen<br/> - Power outlets and extension cords<br/> - Wifi that can support access by all participants (4 MB/s minimum, 8 MB/s is ideal.)<br/> |
 |**Logistical and Facilitator One Pager Information**|- Physical Address of Workshop<br/>- Address to ship supplies (If needed)<br/> - Map of the Campus and/or building to help teachers find the room. Driving instructions should be provded to teachers. This can be done via Google Maps or Bing Maps.<br/> - Wifi strength, name and password. All participants will need to be on the network at the same time with no lag.<br/> - Arrangments for Access: You should make arrangements with your venue contact to give you access to the building and help you locate supplies.<br/>
 </p>

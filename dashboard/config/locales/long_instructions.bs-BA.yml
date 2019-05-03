@@ -54,9 +54,7 @@ bs:
         za ćeliju.
       2-3 Artist Loops New 10: Hajde da spojimo nekoliko V-ova zajedno tako što ćemo
         ih crtati koristeći petlju.
-      2-3 Artist Loops New 12: 'Nacrtaj dijamant sa stranicama od 100 piksela.
-
-'
+      2-3 Artist Loops New 12: Nacrtaj dijamant sa stranicama od 100 piksela.
       2-3 Artist Loops New 13: Sada nacrtaj dijamant 3 puta koristeći petlju.
       2-3 Artist Loops New 2: Evo dio koda koji si koristio/la za crtanje kvadrata.
         Šta se desi ako pokreneš ovaj kod 4 puta koristeći blok ponavljanja?
@@ -199,7 +197,7 @@ bs:
       4-5 Nested Loops 12: Možeš li nacrtati ovih 36 trokutova koristeći ugniježdenu
         petlju?
       4-5 Nested Loops 3: "Napravi sunce tako što ćeš ugnijezditi početni kod u drugu
-        petlju. Ovo se zove ugniježdena petlja.\r"
+        petlju. Ovo se zove ugniježdena petlja.\\\r"
       4-5 Nested Loops 5: Ponavljaj dati kod u petlji da bi se napravila vjetrenjača.
       4-5 Nested Loops 6: Možeš li nacrtati šestougaonik tako što ćeš pozivati kod
         za trokut u petlji?
@@ -229,7 +227,7 @@ bs:
         kako igra izgleda sa podrazumijevanim vrijednostima.
       Calc Circles of Eval .2: Ovaj Blok Izvršenja je funkcija za množenje koja uzima
         dva broja i vraća proizvod dva broja. Promijeni ovaj blok tako da pomnoži
-        2 * 5
+        2 \* 5
       Calc Circles of Eval .4: Ovdje smo ugnijezdili Blok Sabiranja unutar Bloka Množenja.
         Dovrši ovaj kod da bi pomnožio/la 3 sa (4 + 1)
       Calc Circles of Eval 3: Dovrši Blok Izvršenja da ogovara ovom izrazu.
@@ -276,18 +274,18 @@ bs:
         da pokreće Mačku prema gore za 400 piksela i onda prema dole za 400 piksela.
       Course 4 Play Lab Params 8: Upotrijebi "pri dodiru" blok da bi poslao/la Psa
         nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
-      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      Course 4 Play Lab Vars 2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       Course 4 Play Labs For Loops 1: Hajde da učinimo da ovaj pas izgovori svaki
         broj od 1 do 100. Upotrijebi petlju i brojač blok za izgovaranje svake brojač
         varijable pri svakom prolasku kroz petlju.
       CourseD_Dance_Party_01: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       CourseD_Dance_Party_02: |-
         Hajde da pokrenemo ovog losa!
 
@@ -295,19 +293,19 @@ bs:
 
         **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
       CourseD_Dance_Party_03: |-
-        *Sada smo napredovali!*
+        _Sada smo napredovali!_
 
         Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       CourseD_Dance_Party_04: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potražite novi blok u vašim blokovima koji dodaje pozadinski efekat vašem plesaču. Posmatrajte kako se efekat mijenja sa muzikom!
       CourseD_Dance_Party_05: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       CourseD_Dance_Party_06: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
       CourseD_Dance_Party_08: |-
@@ -317,11 +315,12 @@ bs:
       CourseD_Dance_Party_09: |-
         Plesači imaju osobine "nijanse" koje dodaju novu boju. Probajte da izmjenite nijansu boje jednog od vaših igrača.
 
-        * Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
+        -   Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
       CourseD_Dance_Party_10: |-
         Sada kada znamo kako da promjenimo osobinu plesača. Možemo napraviti i iste osobine automatski reaguju na muziku korištenjem ovog bloka:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
@@ -347,21 +346,21 @@ bs:
         Vrijeme je za plesno natjecanje! Mačka podigne ruke kada pritisnete lijevu strelicu. Neka se robot "spusti" kada kliknete desnu stelicu i "klapne rukama" kada pritisnete strelicu gore.
 
         **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
-      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      CourseF_PlayLab_vars2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       Dance_Party_01: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       Dance_Party_01_low: |-
-        *Hajde da održimo jednu plesnu zabavu!*
+        _Hajde da održimo jednu plesnu zabavu!_
 
         Prevucite blok `kreiraj novog` u radni prostor, postavite ga i spojite ga unutar bloka `postavke` kako bi kreirali svog prvog plesača.
 
-        * *Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove.*
+        -   _Isto tako možete kliknuti na sijalicu sa lijeve strane ukoliko želite dodatne informacije ili dodatne izazove._
       Dance_Party_02: |-
         Hajde da pokrenemo ovog losa!
 
@@ -369,19 +368,19 @@ bs:
 
         **Taktovi** se koriste kako bi se brojalo u muzici. U ovom slučaju taktovi su dugi četiri otkucaja.
       Dance_Party_03: |-
-        *Sada smo napredovali!*
+        _Sada smo napredovali!_
 
         Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       Dance_Party_04: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potražite novi blok u vašim blokovima koji dodaje pozadinski efekat vašem plesaču. Posmatrajte kako se efekat mijenja sa muzikom!
       Dance_Party_05: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       Dance_Party_06: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
       Dance_Party_08: |-
@@ -391,11 +390,12 @@ bs:
       Dance_Party_09: |-
         Plesači imaju osobine "nijanse" koje dodaju novu boju. Probajte da izmjenite nijansu boje jednog od vaših igrača.
 
-        * Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
+        -   Nijanse će izmješati boju koju odaberete sa trenutnom bojom plesača.
       Dance_Party_10: |-
         Sada kada znamo kako da promjenimo osobinu plesača. Možemo napraviti i iste osobine automatski reaguju na muziku korištenjem ovog bloka:
         <xml>
         <block type="Dancelab_startMapping">
+
         <title name="SPRITE">right_unicorn</title>
         <title name="PROPERTY">"scale"</title>
         <title name="RANGE">"bass"</title>
@@ -433,11 +433,11 @@ bs:
 
         **Iskoristite strelice kako bi robot što brže se spustio-klepnuo-spustio-klepnuo!**
       Dance_Party_3: |-
-        *Sada smo napredovali!*
+        _Sada smo napredovali!_
 
         Dodajte još jedan blok od <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"takta"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.
       Dance_Party_4: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potraži novi blok u blokovima i upotrijebi ga za dodavanje efekta pozadine iza plesača. Posmatraj kako se efekti mijenjaju vremenom uz muziku!
       Dance_Party_8: |-
@@ -449,9 +449,9 @@ bs:
 
         Ovdje se radi o takmičenju između dvije skupine. Tipke sa strelicama kontrolišu jednog od plesača a tipke "w, a, s, d" kontrolišu drugog. Takmiči se sa prijateljem, i probaj da unaprijediš takmičenje.
 
-        * Dodaj dodatne tipke da bi kontrolisao plesanje
-        * Napravi da i dodatni igrači reaguje na pritiskanje tipki
-        * Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
+        -   Dodaj dodatne tipke da bi kontrolisao plesanje
+        -   Napravi da i dodatni igrači reaguje na pritiskanje tipki
+        -   Zamjeni plesača svako 4 takta tako što ćeš podesiti njihovu vidljivost
       Dance_Party_extras_every_beat: |-
         # Četvrtina note
 
@@ -459,17 +459,17 @@ bs:
 
         Ovaj ples isto tako koristi i _uslovni_ blok koji kontroliše `taktove od svako 0,25` kako bi se promjenio ples. Probaj da mijenjaš blok uslova da bi vidio kako se ples mijenja.
 
-        * Ekperimentiši sa dužinama drugih nota (kao 0,5 za pola note, 0,125 za osminu note).
-        * Dodaj i neka `naknadne taktove`
-        * izmjeni "taktove" na "sekunde" i probaj da mjeriš ples na taj način.
+        -   Ekperimentiši sa dužinama drugih nota (kao 0,5 za pola note, 0,125 za osminu note).
+        -   Dodaj i neka `naknadne taktove`
+        -   izmjeni "taktove" na "sekunde" i probaj da mjeriš ples na taj način.
       Dance_Party_extras_layout: |-
         # Uspostavimo formacije
 
         Pogledaj ovaj ples koji koristi blok za `postavke` da bi se promijenila formacija dodatnih plesača. Probaj neku od ovih ideja kako bi proširio:
 
-        * Kreiraj drugu grupu plesača kako u drugoj postavci
-        * Promjeni postavku kada se klikne tipka
-        * Promijeni osobinu kada plesači promjene formaciju
+        -   Kreiraj drugu grupu plesača kako u drugoj postavci
+        -   Promjeni postavku kada se klikne tipka
+        -   Promijeni osobinu kada plesači promjene formaciju
       Dance_Party_extras_on_beat: |-
         # Basovi, Mid i Trebl
 
@@ -483,9 +483,9 @@ bs:
 
         Ovaj ples prikazuje i skriva dvije različite skupine plesača. Testiraj i dodaj nešto po svom ukusu.
 
-        * Dodaj drugu skupinu plesača
-        * Prikaži i sakrij drugu skupinu plesača koristeći strelice
-        * Sakrij sve plesače i promjeni uzbudljive efekte pozadine
+        -   Dodaj drugu skupinu plesača
+        -   Prikaži i sakrij drugu skupinu plesača koristeći strelice
+        -   Sakrij sve plesače i promjeni uzbudljive efekte pozadine
       Eval Design Recipe Free Play: Vrijeme za slobodno igranje! Upotrijevi recept
         za crtež da napraviš vlastitu funkciju po svom izboru
       Eval Strings Images .1: Do sada smo se samo bavili sa jednom vrstom podataka,
@@ -495,15 +495,15 @@ bs:
       Eval Strings Images 6: Upotrijebi funkciju prekrivanja da postaviš žutu zvijezdu
         od 75 piksela preko plavog pravougaonika dugog 150 piksela.
       HOC Dance 3_draft: |-
-        *Ovom plesu je potrebno malo svjetlosti!*
+        _Ovom plesu je potrebno malo svjetlosti!_
 
         Potraži novi blok u blokovima i upotrijebi ga za dodavanje efekta pozadine iza plesača. Posmatraj kako se efekti mijenjaju vremenom uz muziku!
       HOC Dance 4_draft: |-
         Iskoristite novi blok kako bi plesač izmjenio pokret **svako 2 takta**!
 
-        *Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
+        \*Odairom `(Sljedeći)`, `(Prethodni)`, ili `(Slučajno)` govorite pelsaču da odigra druge pokrete svaki put kada se kod pokrene.
       HOC Dance 5_draft: |-
-        *Potrebno nam je još plesača!*
+        _Potrebno nam je još plesača!_
 
         Kreirajte dodatnog plesača sa imenom `backup_dancer1` kako bi plesao sa mačkom.
       HOC Dance 6_draft: |-
@@ -692,7 +692,7 @@ bs:
         ćeš pozivati kod za trokut u petlji?
       grade4_arist_nested_loop_triangles4: Nacrtaj zube u ustima aligatora!
       grade4_arist_nested_loop_triangles5: "Napravi sunce tako što ćeš ugnijezditi
-        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r"
+        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\\r"
       grade4_arist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći
         ugniježdenu petlju?
       grade4_artist_functions2: Funkcije ti omogućuju da definiraš nove blokove! Premjestili
@@ -704,7 +704,7 @@ bs:
       grade4_artist_nested_loop_polygons1: 'Ponavljaj ovaj dizajn 10 puta. Za koliko
         moraš okrenuti pri svakoj petlji? (Savjet: Koliko je 360 podijeljeno sa 10?)'
       grade4_artist_nested_loop_triangles5: "Napravi sunce tako što ćeš ugnijezditi
-        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\r"
+        početni kod u drugu petlju. Ovo se zove ugniježdena petlja.\\\r"
       grade4_artist_nested_loop_triangles6: Možeš li nacrtati ovih 36 trokutova koristeći
         ugniježdenu petlju?
       grade4_artist_parameters_triangles2: Primjetiš li nešto drugačije u vezi ovih
@@ -775,7 +775,7 @@ bs:
         uzorak tako što ćeš ubaciti "dužina" varijablu u ispravno mjesto?
       grade5_playlab_variables13: Upotrijebi "pri dodiru" blok da bi poslao/la Psa
         nazad u gornji lijevi ugao u slučaju kada Pas dodirne neki od likova.
-      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina_psa"
+      grade5_playlab_variables2: Utrka nije baš bila pravedna! Promijeni "brzina\_psa"
         varijablu da bi osigurao/la da ćeš sakupiti više zastava od Mačke. Prvi koji
         prikupi 10 zastava je pobjednik!
       grade5_playlab_variables9: Evo funkcija pod nazivom "izvidnica". Preuredi je

@@ -333,3 +333,10 @@ lt:
         desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
           apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
           galima sekti ir tai gali turėti pasėkmių.
+      timeforcs_demo_crowdsourcing:
+        title: Komandinis programavimas
+      timeforcs_demo_conditionals:
+        title: Sąlyginiai sakiniai
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.

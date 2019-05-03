@@ -1,8 +1,8 @@
 ---
 title: Communications
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 
 # Communications Playbook
 
@@ -25,15 +25,15 @@ ________________
 
 Hour of Code is an exciting time and leads towards increased interest in CS Fundamentals professional learning. Use <a href="https://docs.google.com/presentation/d/16RpRhMBbmEDboAKKcNMOcoG71bqQkZq__qrTA6Z-bLQ/edit?usp=sharing" target=_blank>this marketing kit</a> to attract new schools post-Hour of Code with highly customizable marketing collateral. From email templates, social media messages, one-page flyers, and stock images - this kit has all you need!
 
-#### Hour of Code Toolkits are now available! 
+#### Hour of Code Toolkits are now available!
 
-View the <a href="https://drive.google.com/file/d/1U_xHspO5Js5CNEI0WQlgZPEAaJMRnRvX/view?usp=sharing" target=_blank>Hour of Code Toolkit</a> for information on how to organize an Hour of Code event or the <a href="https://drive.google.com/drive/folders/1pvpRd-B4Ug41vnJkK5-P67rpdATaM8AH" target=_blank>Creativity Campaign Toolkit</a> to begin planning a campaign in your region. 
+View the <a href="https://drive.google.com/file/d/1U_xHspO5Js5CNEI0WQlgZPEAaJMRnRvX/view?usp=sharing" target=_blank>Hour of Code Toolkit</a> for information on how to organize an Hour of Code event or the <a href="https://drive.google.com/drive/folders/1pvpRd-B4Ug41vnJkK5-P67rpdATaM8AH" target=_blank>Creativity Campaign Toolkit</a> to begin planning a campaign in your region.
 
 ________________
 <a id="archive"></a>
 
 ## Regional Partner Weekly Update Emails
-Each week we send out an email with important action items, new collateral, CS Education news, etc. 
+Each week we send out an email with important action items, new collateral, CS Education news, etc.
 
 - [Group 1 weekly emails](https://docs.google.com/document/d/1suhDTctEfeGnXY4shwWqBmb8dIXZ603RkVfqPuVPbnU/edit?usp=sharing)
 - [Group 2 weekly emails](https://docs.google.com/document/d/1Z1gXtCTU5Veih9gAxLw4VsAHeSC4HA_A70O1VWH_ZZI/edit?usp=sharing)

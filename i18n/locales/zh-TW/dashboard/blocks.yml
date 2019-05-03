@@ -902,9 +902,15 @@ zh-TW:
         text: 背景設為 {IMG}
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 格狀
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': 舞台
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': 太陽和彩虹
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水中
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 無
       gamelab_setFrameDelay:
         text: 角色 {THIS} 圖格延遲 {VAL}
@@ -947,6 +953,11 @@ zh-TW:
         text: 標題畫面顯示 {BREAK} 標題 {TITLE} 內文 {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} 角色 {SPRITE} 被點擊？"
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': 當
@@ -1025,6 +1036,11 @@ zh-TW:
         text: 當角色 {SPRITE1} 碰到角色 {SPRITE2} 時
       gamelab_whenTouchingAny:
         text: 當角色 {SPRITE} 碰到群組 {GROUP} 的任一角色時
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': 當
+            '"while"': 當
       gamelab_whenUpArrow:
         text: 當向上鍵被按下
       gamelab_whileDownArrow:

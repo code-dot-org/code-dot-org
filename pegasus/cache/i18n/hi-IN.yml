@@ -139,6 +139,7 @@ hi-IN:
   what_gender: आपका लिंग क्या है?
   girl: लड़की
   boy: लड़का
+  studiobar_dance_title: डांस पार्टी
   studiobar_donate_title: दान करे
   studiobar_shop_title: दुकान
   homepage_slot_text_shop: दुकान
@@ -278,14 +279,84 @@ hi-IN:
   sphero_beyond_gradelevel: उम्र 8 +
   flappy_shortcode: फ़ड़फ़ड़ाय
   header_courses: पाठ्यक्रम
+  user_header_dance: डांस पार्टी
   applab_tile_start_tutorial: शुरू करें
   account_sign_up_child_accept_terms: अगर मैं उंर के 13 साल से कम कर रहा हूं, मैं
     पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन Code.org सेवाओं का
     उपयोग करने की अनुमति है ।
+  hoc_overview_dance_title: डांस पार्टी
   hoc_overview_start_tutorial: शुरू करें
   hoc2018_creativity_create: बनाए
   hoc2018_mc_start: शुरू करें
   hoc2018_mc_homepage_try_it: कर के देखे
+  hoc2018_dance_party_main_heading: डांस पार्टी
+  hoc2018_dance_party_landing_title: डांस
+  hoc2018_dance_party_subheading: डांस पार्टी का अनुवाद करने में मदद करें
+  hoc2018_dance_create_your_own_dance_title: अपनी खुद की डांस पार्टी बनाएं
+  hoc2018_dance_party_box_title: डांस पार्टी
+  hoc2018_dance_party_box_description: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
+    को कोड दें!
+  hoc2018_dance_party_specs: भाषा | फॉर्मैट | आयु 6-106
   hoc2018_dance_party_button: शुरू करें
+  hoc2018_dance_keep_on_dancing_box_title: डांस करते रहें
+  hoc2018_dance_keep_on_dancing_description: विस्तृत परियोजना योजनाओं के साथ पहले
+    घंटे से आगे जाएं।
+  hoc2018_dance_keep_on_dancing_specs: भाषा | फॉर्मैट | आयु 13+
+  hoc2018_dance_keep_on_dancing_button: भाग 2 शुरू करें
+  hoc2018_dance_teacher_resources_title: अध्यापक संसाधन
+  hoc2018_dance_teacher_resources_tile1_description: पाठ योजनाएं, प्रमाण-पत्र और संगीत
+    की छंटाई।
+  hoc2018_dance_teacher_resources_tile2_title: डांस पार्टी अनप्लगड
+  hoc2018_dance_teacher_resources_tile2_description: कोई कंप्यूटर नहीं चाहिए! साथ
+    में डांस पार्टी को कोरियोग्राफ करने के लिए कोडिंग धारणाएं सीखें।
   hoc2018_dance_teacher_resources_tile2_button: अनप्लग की गई गतिविधि
+  hoc2018_dance_featured_student_creations_title: पेश की गईं विद्यार्थियों की रचनाएं
+  hoc2018_dance_videos_section_heading: प्रेरणा लें
+  hoc2018_dance_video_title_what_is_creativity: रचनात्मकता क्या है?
+  hoc2018_dance_view_creativity_video_playlist: रचनात्मकता क्या है? पूरी सीरीज देखें
+    (5 मिनट)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: इनके साथ साझेदारी में
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* कम-आय वाले तथा सुविधाओं से वंचित अन्य बच्चों व युवाओं को कंप्यूटर साइंस
+    में कैरियर बनाने के लिए प्रेरित करने, शिक्षित व प्रशिक्षित करने के लिए एक व्यापक
+    बचपन के कैरियर तक का प्रोग्राम है। <a href='%{amazon_future_engineer_link}' target='_blank'>और
+    जानें</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Amazon Future
+    Engineer के बारे में और जानें
+  hoc2018_dance_amazon_about_future_engineer_title: Amazon Future Engineer के बारे
+    में
+  hoc2018_dance_amazon_about_future_engineer_description: कंप्यूटर साइंस शिक्षा तक
+    पहुंच को बढ़ाने के लिए Amazon के किंडरगार्टन से कैरियर प्रोग्राम के बारे में जानें।
+    इस बारे में जानकारी पाएं कि आप हमारे समर कैंपों, हाई स्कूल की CS क्लासों, छात्रवृत्तियों
+    और इंटर्नशिप्स में कैसे शामिल हो सकते हैं।
   hoc2018_dance_amazon_about_future_engineer_button: अधिक जानें
+  hoc2018_dance_amazon_try_coding_this_summer_title: इस गर्मी कोडिंग को आजमाएं
+  hoc2018_dance_amazon_try_coding_this_summer_description: Amazon Future Engineer
+    के निशुल्क, मज़ेदार और सम्मिलित कंप्यूटर साइंस कैंपस में शामिल हों! समर कैंप गर्मी
+    2019 के लिए अमेरिका में कई स्थानों पर किंडरगार्टन से लेकर 8वें ग्रेड तक के विद्यार्थियों
+    के लिए उपलब्ध हैं।
+  hoc2018_dance_amazon_try_coding_this_summer_button: एक कैंप से जुड़ें
+  hoc2018_dance_amazon_scholarship_programs_title: एक कैंप से जुड़ें
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon उन वंचित विद्यार्थियों
+    के लिए प्रति वर्ष $10,000 तक की छात्रवृत्तियों की पेशकश कर रहा है, जिन्होंने सफलतापूर्वक
+    AP CS कोर्स पूरा कर लिया है या इस समय इस कोर्स में नामांकित हैं और अमेरिका में
+    4-वर्षीय कॉलेज या यूनिवर्सिटी में CS डिग्री के लिए पढ़ाई करना चाहते हैं।
+  hoc2018_dance_amazon_internships_title: Amazon पर इंटर्न बनें
+  hoc2018_dance_amazon_internships_description: गर्मी 2019 Amazon Future Engineer
+    इंटर्नशिप्स के लिए आवेदन अब शुरू हो गए हैं। इंटर्न्स नई विशेषताओं की खोज करने
+    और उन्हें बनाने के लिए व Amazon ग्राहकों की ओर से सेवाओं के लिए प्रबंधक, तकनीकी
+    परामर्शदाता और अन्य इंटर्न्स के साथ साझेदारी करेंगे। इंटर्नशिप्स अमेरिका व कैनेडा
+    में उपलब्ध हैं।
+  hoc2018_dance_amazon_internships_button: इंटर्नशिप ढूंढें
+  hoc2018_dance_amazon_k8_programs_title: K-8 प्रोग्राम
+  hoc2018_dance_amazon_funding_title: अपनी CS डिग्री के लिए फंड प्राप्त करें
+  hoc2018_dance_amazon_future_engineer_footer: "* जिन कलाकारों का संगीत इस ट्यूटोरियवल
+    में उपयोग किया गया है, वे Code.org के लिए अपने संगीत के उपयोग की लाइसेसिंग के
+    भाग के तौर पर Amazon को प्रायोजित या पृष्ठांकित नहीं कर रहे हैं।\n\n"
+  hoc2018_dance_measure: संगीत प्रविधि
+  hoc2018_dance_measure_colon: 'संगीत प्रविधि:'
+  hoc2018_dance_video1: डांस पार्टी - परिचय
+  hoc2018_dance_video2: डांस पार्टी - इवेंट्स
+  hoc2018_dance_video3: डांस पार्टी - विशेषताएं
+  hoc2018_dance_video4: डांस पार्टी - बधाई हो
+  hoc2018_mc_with_microsoft: इनके साथ साझेदारी में

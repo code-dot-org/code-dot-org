@@ -17,6 +17,8 @@ zu:
   project:
     delete_no: Cha
     cancel: Hoxisa
+  flex_category:
+    csp_lists: Umbhalo olandelanayo
   pd:
     form_entries:
       subjects:

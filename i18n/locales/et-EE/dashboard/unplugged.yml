@@ -321,3 +321,8 @@ et:
       DigitalFootprint_2019:
         title: Sinu digitaalne jalajälg
         desc: Õpetajad selgitavad õpilastele ideed, et enda kohta teabe jätmine Internetti jätab digitaalse jalajälje või "jälje", millel on tagajärjed.
+      timeforcs_demo_crowdsourcing:
+        title: Ühistegevused
+      timeforcs_demo_conditionals:
+        title: Tingimuslaused
+        desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta kaardi, saad sina punkti."'

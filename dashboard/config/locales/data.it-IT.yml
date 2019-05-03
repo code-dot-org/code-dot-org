@@ -591,11 +591,11 @@ it:
         Unplug11: Conclusione
         C1_happy_maps_unplugged: Mappe Felici
         C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Gli Eventi
-        C1_getting_loopy: Diventare Ripetitivi
+        C1_bigevent_unplugged: Gli eventi
+        C1_getting_loopy: Diventare ripetitivi
         C1_pair_programming: Programmazione in coppia
         C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
-        C1_maze_debugging: 'Labirinto: Correzione di Errori'
+        C1_maze_debugging: 'Labirinto: correzione di errori'
         C1_bee_level_intro: 'Ape: Introduzione'
         C1_artist_intro: Artista - Introduzione
         C1_spelling_bee_intro: 'Ape Sapiente: Introduzione'
@@ -619,7 +619,7 @@ it:
         C2_conditionals_with_cards: Istruzioni condizionali
         C2_binary_bracelets: Braccialetti Binari
         C2_relay_programming: Programmazione a Staffetta
-        C2_paper_airplanes: Aeroplani di Carta
+        C2_paper_airplanes: Aeroplani di carta
         C2_digital_footprint: La tua impronta digitale
         C2_digital_footprint_v2: La tua impronta digitale
         C3_maze_level_4: 'Labirinto: Cicli'
@@ -648,7 +648,7 @@ it:
         C4_for_loops: Cicli con Contatore
         C4_for_loops_bee: Cicli con Contatore
         C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: Programmare l'Artista usando la matematica
+        C4_math_artist: Programmare l'artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
         C4_function_parameters: Funzioni con parametri
@@ -673,8 +673,8 @@ it:
         CSF_my_robotic_friends: I miei amici robotici
         CSF_Power_of_Words: Cittadinanza digitale - Il potere delle parole
         CSF_Super_Digital_Citizen: Cittadinanza digitale - Super cittadino digitale
-        CSF_stevie_big_project: Stevie e il grande progetto
-        CSF_unspotted_bugs: Fastidiosi insetti nascosti
+        CSF_stevie_big_project: Stefi e il grande progetto
+        CSF_unspotted_bugs: Quei fastidiosi insetti nascosti
         CSF_zuck_loops_short: Cicli (istruzioni di ripetizione)
         frozen_intro: Introduzione all'Ora del Codice
         frozen_loops: Introduzione ai Cicli
@@ -804,8 +804,8 @@ it:
         CSF_bb8_loops_C-F: Cicli con BB-8
         CSF_harvester_skinOverview_K-1: La contadina
         CSF_harvester_loops_K1: Cicli con la contadina
-        CSF_scrat_loops_K1: Cicli con l'Era Glaciale
-        CSF_scrat_loops_CF: Cicli con l'Era Glaciale
+        CSF_scrat_loops_K1: Cicli con l'Era glaciale
+        CSF_scrat_loops_CF: Cicli con l'Era glaciale
         CSF_if_allskins: Il Blocco Se
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
@@ -829,11 +829,13 @@ it:
         hoc_dance_congrats: Ballando col codice - Parte la festa!
         c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
         c_and_c_digital_sharing: Condivisione Digitale
+        teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
         what_is_cs: Cos'é l'informatica?
         repeat_block: Uso del blocco Ripeti
         writing_first_program: Scrivi il tuo primo programma per computer
         what_is_an_event: Cos'è un evento?
         csd_pair_programming: Programmazione in coppia
+        csd_applab_parameters: Funzioni con parametri
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-02-14T01:24:43.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -24,11 +24,11 @@
     "video_key": "csd_weblab_css_1",
     "encrypted": "false",
     "rubric_key_concept": "Apply formatting in a web page using CSS",
-    "rubric_exceeds": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
-    "rubric_meets": "The `h3` headings are a new color (not black).",
-    "rubric_approaches": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
-    "rubric_no_evidence": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set.",
-    "mini_rubric": "true"
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The `h3` headings are a new color (not black).  There is no extra code in the stylesheet, and there are no syntax errors in the code.",
+    "rubric_performance_level_2": "The `h3` headings are a new color (not black).",
+    "rubric_performance_level_3": "The `h3` headings have a special rule-set in the stylesheet, and the color property is used, but there are enough errors that the text does not change color.",
+    "rubric_performance_level_4": "There is no special rule-set for `h3` headings or the color property is not used in the rule-set."
   },
   "published": true,
   "notes": "",

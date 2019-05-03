@@ -1,8 +1,34 @@
 name 'Pluralsight for CSP'
-encrypted 'cZMBPVCWza+kbgmnTzQjHRE8Iub4KyOi9LlxO+qQa3Mi+ax3Ae9ysviTNNxW
-QzHDAJ+3obqLo9pv+wi40HiJGX/IOvoTj48pS1RAP8hRCB/LxsO5QGVam2z6
-BYMipUHT1jbDW7Ksbxvkj1M/WJrSg7AK+h8sIRwiRjWHTviRKFfjyInidPUs
-pxN9RHj0mHhOH811hsnCSikJYMc/Qji0tZ9hgIkPXsgfxpkQww8IrZz6YA9M
-7m9iWOh3I+IJh4470xcJQ5AGdwgxz+UOl3vfXNAnuAPl6DYprms+iuHEj8aX
-FQKEKElNepUGEzUAgvdsbiM2gLcPKdskHdAEtKe6OA==
-'
+title 'Pluralsight for CSP'
+description 'description here'
+
+markdown <<MARKDOWN
+# Go further with _Pluralsight One_ computer science courses!
+
+Having fun learning computer science? Now you can get access to **Pluralsight One** courses for one year, and learn even more about networking, help desk, databases, programming, game dev and more! 
+
+With Pluralsight One, you can try courses like **"Introduction to Web Development"**; **"Game Prototyping in Unity"**; and **"Getting Started in UX Design"**, pick up new skills, and test out what you've learned through Code.org.
+
+
+To get access to the specially-curated catalog of Pluralsight One courses for a year, **click the "Get started" button** below. You'll be asked to sign up for Pluralsight One and will receive a redemption code to your email that you can use to access the courses.
+
+
+<a class=“btn btn-large btn-primary” href="https://www.pluralsight.com/redeem"> Get started </a>
+
+
+
+<h3>
+What is Pluralsight One?
+</h3>
+Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management. [Learn more about Pluralsight](https://www.pluralsight.com).
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+To access this offer, have your students do the following:
+1. Click the “Get started” button above to sign up for the Pluralsight One offer
+2. After signing up, the student will receive an email with a link to activate the offer
+3. Once they've activated the offer via the link, the student will have 12 months free access to Pluralsight One
+
+[Learn more about how to use this offer in your classroom](https://www.pluralsight.com)
+
+MARKDOWN

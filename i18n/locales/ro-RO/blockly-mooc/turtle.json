@@ -78,7 +78,7 @@
   "pixels": "pixeli",
   "reinfFeedbackMsg": "Aici este desenul dvs.! Continuaţi să lucrați la el sau continuați cu următorul puzzle.",
   "setAlpha": "setează alfa",
-  "setCharacter": "setează caracterul pentru a {character}",
+  "setCharacter": "setează caracterul la {character}",
   "setColour": "setează culoarea",
   "setPattern": "setează model",
   "setWidth": "setează lăţimea",

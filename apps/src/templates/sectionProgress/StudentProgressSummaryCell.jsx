@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ProgressBox from '../sectionProgress/ProgressBox';
-import {summarizeProgressInStage} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  summarizeProgressInStage,
+  stageIsAllAssessment
+} from '@cdo/apps/templates/progress/progressHelpers';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
@@ -9,12 +12,14 @@ class StudentProgressSummaryCell extends Component {
     studentId: PropTypes.number.isRequired,
     style: PropTypes.object,
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
-    onSelectDetailView: PropTypes.func
+    onSelectDetailView: PropTypes.func,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
     const totalPixels = 20;
     const statusCounts = summarizeProgressInStage(this.props.levelsWithStatus);
+    const assessmentStage = stageIsAllAssessment(this.props.levelsWithStatus);
     const perfectPixels = Math.floor(
       (statusCounts.completed / statusCounts.total) * totalPixels
     );
@@ -37,6 +42,8 @@ class StudentProgressSummaryCell extends Component {
           incomplete={incompletePixels}
           imperfect={imperfectPixels}
           perfect={perfectPixels}
+          stageIsAllAssessment={assessmentStage}
+          inMiniRubricExperiment={this.props.inMiniRubricExperiment}
         />
       </div>
     );

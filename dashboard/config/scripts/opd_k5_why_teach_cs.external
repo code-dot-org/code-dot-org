@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # CS Fundamentals > Why teach computer science?
 
-<img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px;" align="left">
+<img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
 
 Research shows that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills. In fact, a [recent research study](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching CS Fundamentals lessons.
 

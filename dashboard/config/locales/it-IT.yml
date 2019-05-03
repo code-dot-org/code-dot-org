@@ -336,12 +336,6 @@ it:
     header:
       finished_hoc: Ho finito!
       sign_in_to_save: Accedi per salvare i progressi fatti
-      free_play:
-        playlab: Costruisci un Gioco nel Laboratorio
-        artist: Disegna qualcosa
-        applab: Costruisci una App in Sviluppo App
-        gamelab: Crea un progetto in Sviluppo Giochi
-        weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
       my_dashboard: Controllo
       course_catalog: Corsi
       project_gallery: Progetti
@@ -407,7 +401,7 @@ it:
       gamelab_jr: Sviluppo Giochi (versione provvisoria)
       gumball: Lo straordinario mondo di Gumball
       iceage: L'Era Glaciale
-      infinity: Infinito
+      infinity: Infiniti
       minecraft_adventurer: Un'avventura con Minecraft
       minecraft_aquatic: Minecraft Acquatico
       minecraft_designer: Minecraft
@@ -435,7 +429,7 @@ it:
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
-    for_teachers_only: Per i soli insegnanti
+    for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'
       other: 'I tuoi insegnanti:'
@@ -1287,6 +1281,8 @@ it:
     csp_variables: Variabili
     csp_conditionals: Istruzioni condizionali
     csp_functions: Funzioni
+    csp_lists: Liste
+    csp_loops: Ripetizioni
     dlp: Punti di riflessione
   external_links:
     disclaimer: Limiti di responsabilità

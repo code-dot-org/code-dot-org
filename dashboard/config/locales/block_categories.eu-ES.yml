@@ -23,12 +23,12 @@ eu:
       Text: Testua
       Picker: Hautatzailea
       Comment: Iruzkina
+      World: Mundua
+      Behaviors: Jokabideak
       'Variables ': 'Aldagaiak '
       Default: Lehenetsia
-      Behaviors: Jokabideak
       Locations: Kokalekuak
       everythingelse: besteguztia
-      World: Mundua
       Location: Kokalekua
       numbers: zenbakiak
       Numbers: Zenbakiak

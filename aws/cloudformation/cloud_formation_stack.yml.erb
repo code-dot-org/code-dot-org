@@ -24,7 +24,7 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = ENV['DATABASE']
+database = @database = rack_env?(:test) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 
 unless dry_run
@@ -69,11 +69,6 @@ Parameters:
     Type: String
     Default: master
     MaxLength: 16
-  DatabasePassword:
-    Type: String
-    NoEcho: true
-    MinLength: 8
-    MaxLength: 41
 <% end -%>
 Resources:
   # Stack-specific IAM permissions applied to both daemon and frontends.
@@ -84,6 +79,16 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
+<% if database -%>
+          # Read-only access to current secrets.
+          - Effect: Allow
+            Action: 'secretsmanager:GetSecretValue'
+            Resource:
+              - !Ref DatabaseSecret
+            Condition:
+              StringEquals:
+                secretsmanager:VersionStage: AWSCURRENT
+<% end -%>
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'
@@ -692,35 +697,47 @@ Resources:
       Threshold: 87
       TreatMissingData: missing
 <% if database -%>
-  Database:
+  AuroraCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      Engine: aurora-mysql
+      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
+      EngineVersion: 5.7.12
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+      DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+
+  AuroraMaster:
     Type: AWS::RDS::DBInstance
     Properties:
-      DBInstanceIdentifier: !Ref AWS::StackName
-      DBInstanceClass: db.t2.micro
-      AllocatedStorage: 64
-      StorageType: gp2
-      Engine: mysql
-      EngineVersion: 5.7.23
-      DBParameterGroupName: !Ref DatabaseParameters
-      VPCSecurityGroups: [!ImportValue VPC-DBSecurityGroup]
+      DBInstanceIdentifier: !Sub "${AWS::StackName}-master"
+      DBClusterIdentifier: !Ref AuroraCluster
+      DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-      MasterUsername: !Ref DatabaseUsername
-      MasterUserPassword: !Ref DatabasePassword
-  DatabaseParameters:
-    Type: AWS::RDS::DBParameterGroup
+      Engine: aurora-mysql
+      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with instance.
+      EngineVersion: 5.7.12
+
+  AuroraClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
     Properties:
-      Description: !Sub "Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters:
-        innodb_autoinc_lock_mode: 2
-        innodb_flush_log_at_trx_commit: 0
-        innodb_flush_method: O_DIRECT
-        sync_binlog: 0
-        tx_isolation: READ-COMMITTED
-        skip_name_resolve: 1
-        performance_schema: 1
-        innodb_buffer_pool_dump_at_shutdown: 1
-        innodb_buffer_pool_load_at_startup: 1
+      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: {'innodb_monitor_enable': 'all'}
+
+  DatabaseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+      Name: !Sub "CfnStack/${AWS::StackName}/database-secret"
 <% end -%>
 Outputs:
   DashboardURL:

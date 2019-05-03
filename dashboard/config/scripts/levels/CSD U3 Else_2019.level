@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:38.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -121,10 +121,10 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Use conditionals to control the flow of a program; detect and respond to user input.",
-    "rubric_exceeds": "The gears spin in the opposite direction when the space bar is not being pressed, and the teeth of the gears line up properly.",
-    "rubric_meets": "At least one gear spins in the opposite direction when the space bar is not being pressed, but there may be minor errors in the program that keep all the gears from spinning.",
-    "rubric_approaches": "There is an else clause used, but there are major errors in the program that keep the gears from spinning.",
-    "rubric_no_evidence": "There is no else clause.",
+    "rubric_performance_level_1": "The gears spin in the opposite direction when the space bar is not being pressed, and the teeth of the gears line up properly.",
+    "rubric_performance_level_2": "At least one gear spins in the opposite direction when the space bar is not being pressed, but there may be minor errors in the program that keep all the gears from spinning.",
+    "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the gears from spinning.",
+    "rubric_performance_level_4": "There is no else clause.",
     "preload_asset_list": null
   },
   "published": true,

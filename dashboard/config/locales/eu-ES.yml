@@ -193,10 +193,6 @@ eu:
     header:
       finished_hoc: Nire Kode Ordua bukatu dut
       sign_in_to_save: Sartu aurrerapenak gordetzeko
-      free_play:
-        playlab: Aplikazio bat sortu
-        artist: Marraztu zerbait
-        applab: Aplikazio bat sortu
       project_gallery: Proiektuak
       educate_hoc: Kode Ordua
     user:
@@ -666,6 +662,8 @@ eu:
     csp_variables: Aldagaiak
     csp_conditionals: Baldintzak
     csp_functions: Funtzioak
+    csp_lists: Zerrendak
+    csp_loops: Itzuliak
   pd:
     form_labels:
       email: E-posta

@@ -455,6 +455,7 @@ he:
         hoc_dance_events: מסיבת ריקודים - אירועים
         hoc_dance_properties: מסיבת ריקודים - תכונות
         csd_pair_programming: תכנות בזוגות
+        csd_applab_parameters: פונקציות ופרמטרים
     callout:
       text:
         run: לחצו על "התחל" כדי לנסות את התוכנית שלכם

@@ -1,15 +1,15 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "आपको एक डांसर बनाने की आवश्यकता है।",
+  "danceFeedbackNoDancers": "आपके पास कोई डांसर नहीं हैं।",
+  "danceFeedbackNoBackground": "आपके पास कोई डांसर नहीं हैं।",
+  "danceFeedbackTooManyDancers": "यदि आप `प्रत्येक 2 संगीत प्रविधियों` के अंदर `नया बनाएं` ब्लॉक डालते हैं, तो आप बहुत से डांसर बना लेंगे।",
+  "danceFeedbackUseSetSize": "उस डांसर को और छोटा बनाने के लिए `set backup_dancer2 size` ब्लॉक प्रयोग करें।",
+  "danceFeedbackUseSetTint": "डांसर की रंगत बदलने के लिए `रंगत सेट करें` ब्लॉक प्रयोग करें।",
+  "danceFeedbackUseStartMapping": "अपने प्रोग्राम में <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ब्लॉक शामिल करने का प्रयास करें।",
+  "danceFeedbackStartNewMove": "आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव नहीं कर रहा था।",
+  "danceFeedbackNeedDifferentDance": "आपको एक अलग डांस प्रयोग करना होगा।",
+  "danceFeedbackNeedEveryTwoMeasures": "सुनिश्चित करें कि आप `प्रत्येक 2 संगीत प्रविधि` ब्लॉक प्रयोग कर रहे हैं",
+  "danceFeedbackNeedMakeANewDancer": "दूसरा डांसर बनाने के लिए `नया बनाएं` ब्लॉक प्रयोग करें।",
+  "danceFeedbackKeyEvent": "आप `कब कुंजी` ब्लॉक से कोई कोड लगाना और जब आपका डांस चल रहा हो तो कुंजी को दबाना सुनिश्चित करें।",
+  "measure": "संगीत प्रविधि:"
 }

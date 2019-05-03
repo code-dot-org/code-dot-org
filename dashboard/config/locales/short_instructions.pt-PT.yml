@@ -48,7 +48,7 @@ pt:
       2-3 Artist Debugging 1: "Este chapéu deveria ter apenas 50 píxeis de largura.
         \nConsegue corrigir isto?"
       2-3 Artist Debugging 10: "O controlo de direção no meu controlador\ndo jogo
-        é muito estreito. \r\n\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
+        é muito estreito. \\\r\n\\\r\nConsegue fazê-lo mais largo, em 10 píxeis?"
       2-3 Artist Debugging 11: Ajude-me a terminar meu lindo floco de neve. Quantas
         vezes preciso "repetir" para terminá-lo?
       2-3 Artist Debugging 12: "É suposto eu adicionar uma onda do mar \nnessa cena.
@@ -68,7 +68,7 @@ pt:
       2-3 Artist Debugging 6: |-
         Parece que estou sentado em uma cadeira
         sem uma perna. Edite os blocos para desenhar a perna.
-      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+      2-3 Artist Debugging 7: "Parece que o C no código está desenhado ao contrário.\\\r\n\\\r\nConsegues
         voltar a transformá-lo num C?"
       2-3 Artist Debugging 8: |-
         Meu cata-vento não está pronto. Quantas
@@ -152,7 +152,7 @@ pt:
         O que acontece com o design quando fazemos nossa
         etapa final com metade do comprimento?
       2-3 Artist Loops 11: |-
-        Agora, vamos colocar *outro* laço em torno de toda
+        Agora, vamos colocar _outro_ laço em torno de toda
         a criação! Não se esqueça de adicionar um ângulo ao final do laço externo.
       2-3 Artist Loops 2: |-
         Agora, use um bloco "repita" para transformar a célula em uma
@@ -171,7 +171,7 @@ pt:
         consegue criar um losango dentro desse hexágono?
       2-3 Artist Loops 8: Vamos colocar ambos os elementos dentro de um laço.
       2-3 Artist Loops 9: "Vamos repetir os mesmos elementos, mas \nagora vamos adicionar
-        alguma distância entre eles.\r\nUse o mesmo código usado \nanteriormente,
+        alguma distância entre eles.\\\r\nUse o mesmo código usado \nanteriormente,
         mas adicione um passo à frente no final do laço externo."
       2-3 Artist Loops New 1: |-
         Vamos desenhar a cabeça do robô! Você pode
@@ -199,8 +199,8 @@ pt:
       2-3 Artist Match Sq Pic: 'Correspondência: complete o código que falta'
       2-3 Artist Match Tri pic: 'Correspondência: preencha o código que falta.'
       2-3 Artist Nested Loops 1: "Você usou laços para desenhar formas antes,\nmas
-        você sabia que pode colocar um laço dentro de outro laço?\r\nRepita este bloco\nde
-        código inteiro 3 vezes para desenhar o padrão."
+        você sabia que pode colocar um laço dentro de outro laço?\\\r\nRepita este
+        bloco\nde código inteiro 3 vezes para desenhar o padrão."
       2-3 Artist Nested Loops 10: |-
         Repita este código 12 vezes para completar
         o padrão.
@@ -247,7 +247,7 @@ pt:
         Olá! Eu sou uma abelha. Ajude-me a coletar o néctar
         da flor.
       2-3 Bee Conditionals 10: "As flores roxas podem ter 1 ou 0 néctar.\nTenha cuidado
-        para não coletar néctar de uma flor roxa se ela não\ntiver néctar.\r\n"
+        para não coletar néctar de uma flor roxa se ela não\ntiver néctar.\\\r"
       2-3 Bee Conditionals 11: Colete néctar onde as flores têm néctar.
       2-3 Bee Conditionals 12: |-
         Use um laço para verificar e coletar o néctar
@@ -509,6 +509,8 @@ pt:
       2-3 maze sq16: |-
         Ok, isso é parecido, mas um pouco diferente. Você pode
         fazer isso em apenas cinco blocos?
+      2-3: "As flores roxas podem ter 1 ou 0 néctar.\nTenha cuidado para não coletar
+        néctar de uma flor roxa se ela não\ntiver néctar.\\\r"
       2-3level1: Ajude o pássaro a pegar o porco safado movendo-o para frente
       20hr_farmer_stage9_1: Olá, eu sou uma agricultora. Quero plantar no terreno
         da minha quinta e preciso da tua ajuda para conseguir aplaná-lo. Move-me para
@@ -766,9 +768,6 @@ pt:
         Vamos repetir isso para fazer uma fileira de 6 diamantes.
         Perceba que alteramos nosso código do diamante para repetir 3 vezes ao invés de 2 - por que
         você acha que fizemos isso?
-      4-5 Artist Patterns 6: |-
-        Quantas vezes você precisa repetir esse
-        bloco para desenhar toda a grade de diamantes?
       4-5 Artist Patterns 7: |-
         Vamos modificar o código do último desafio
         para fazer esse padrão mais complexo. Perceba como os diamantes se sobrepõem agora. Tente
@@ -921,8 +920,8 @@ pt:
         Use o bloco repita até para levar o
         zumbi até o girassol.
       4-5 Maze Conditionals 10: "Consegues adicionar apenas 3 blocos para ajudar o
-        zombie a completar um labirinto mais complexo? \r\n\r\nSe conseguires, ele
-        pode andar em qualquer caminho curvo independentemente do seu tamanho!"
+        zombie a completar um labirinto mais complexo? \\\r\n\\\r\nSe conseguires,
+        ele pode andar em qualquer caminho curvo independentemente do seu tamanho!"
       4-5 Maze Conditionals 2: |-
         Use o bloco repita até para levar o
         zumbi até o girassol.
@@ -942,7 +941,8 @@ pt:
         para que eu chegue lá com o menor número de blocos possível.
       4-5 Maze Conditionals 7: |-
         Ok, vamos praticar mais uma vez
-        - essa parte não é muito diferente, mas fique de olho nas carnívoras!
+
+        -   essa parte não é muito diferente, mas fique de olho nas carnívoras!
       4-5 Maze Conditionals 8: |-
         Os blocos "se-senão" verificam uma condição
         e, em seguida, fazem uma coisa OU outra. Para me levar ao girassol, tente
@@ -971,7 +971,7 @@ pt:
         10 triângulos. Isso se chama laço aninhado. Dica: todos os 10 triângulos completam
         uma rotação de 360 graus.
       4-5 Nested Loops 3: "Crie um sol aninhando o código inicial\ndentro de outro
-        laço. Chamamos isso de laço aninhado.\r"
+        laço. Chamamos isso de laço aninhado.\\\r"
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: |-
         Você pode desenhar um hexágono repetindo o
@@ -1017,9 +1017,6 @@ pt:
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
       App Lab test: teste
-      Artist - Nested Loops 1: |-
-        Complete o código para desenhar esses triângulos. O
-        primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
       Artist - Nested Loops 10: |-
         Desenhe a última linha de estrelas nessa bandeira
         repetindo os blocos fornecidos. As estrelas estão separadas por 50 pixels, mas lembre-se
@@ -1043,8 +1040,8 @@ pt:
         3 quadrados.
       Artist Inspiration: "Atividade livre - Inspiração: agora você\naprendeu tudo
         o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
-        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n
+        \\\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387530>
         para ver a solução."
       Auto Open Function Editor: |-
         Você pode chamar funções de dentro
@@ -1102,8 +1099,8 @@ pt:
         e erro. Não esperamos que você seja perfeito na primeira vez.
       Course 4 Artist 12: "Atividade livre - Inspiração: agora você aprendeu\ntudo
         o que precisa saber para criar um padrão como esse! Se essa imagem\ninspira
-        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
-        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit\npara
+        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\\\r\n\n\\\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Visite <https://studio.code.org/c/105765376/edit>\npara
         ver a solução."
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
@@ -1200,7 +1197,7 @@ pt:
       Course 4 Artist For Loops 11a: "Vamos juntar tudo!  Usando\nseu conhecimento
         em \"laços para\" e o \"contador\", crie este desenho no qual\ncada forma
         tem dois lados a mais que a anterior. Lembre-se de que cada lado é\n10 vezes
-        maior que o número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo
+        maior que o número de lados do polígono.\\\r\n\\\r\nApenas uma pequena parte\ndo
         código foi fornecida para você."
       Course 4 Artist For Loops 12: |-
         Isso foi muito legal, mas agora
@@ -1260,8 +1257,8 @@ pt:
         Precisa de uma dica? Clique aqui.
       Course 4 Artist For Loops inspire: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n\r\nQuer
-        saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387604
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n\\\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387604>
         para ver a solução."
       Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com 100
@@ -1290,7 +1287,7 @@ pt:
         entre cada um? Dica: cada quadrado tem 100 pixels de tamanho
       Course 4 Artist Functions 3: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
         consegue desenhar esta imagem? Dica: os quadrados estão a 120 pixels de distância
-        um do outro.\r\n"
+        um do outro.\\\r"
       Course 4 Artist Functions 4: |-
         Você está pronto para criar seu próprio
         "bloco de função"? Clique no bloco "Funções" na caixa de ferramentas, nomeie-o
@@ -1303,7 +1300,7 @@ pt:
         para desenhar uma casa - o que precisa ser corrigido neste código para desenhar a casa corretamente?
       Course 4 Artist Functions 5: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
         consegue desenhar esta imagem? Dica: os quadrados estão a 120 pixels de distância
-        um do outro.\r\n"
+        um do outro.\\\r"
       Course 4 Artist Functions 6: |-
         Qual bloco você precisa adicionar para
         que o triângulo fique em cima do quadrado?
@@ -1323,12 +1320,12 @@ pt:
       Course 4 Artist Functions inspire: "Atividade livre - Inspiração:\nAgora você
         aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe essa
         imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo
-        você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
+        você mesmo.\\\r\n\\\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
         Visite-nos para ver a solução."
       Course 4 Artist Inspire: "Atividade livre - Inspiração: agora você aprendeu\ntudo
         o que precisa saber para criar um padrão como esse! Se essa imagem\ninspira
-        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\r\n\n\r\nQuer
-        saber como nosso padrão de inspiração foi feito? Visite https://studio.code.org/c/105765376/edit\npara
+        você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.\\\r\n\n\\\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Visite <https://studio.code.org/c/105765376/edit>\npara
         ver a solução."
       Course 4 Artist Params 1: |-
         Vamos editar uma função que desenha um
@@ -1392,9 +1389,10 @@ pt:
         para desenhar essa imagem de quadrados?
       Course 4 Artist Vars 12: |-
         Vamos definir a variável "lados" como
-        5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
-        padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
-        um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
+
+        5.  Quanto mais lados adicionarmos a esse algoritmo, maior será o
+            padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
+            um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
       Course 4 Artist Vars 14: |-
         Atividade livre: veja, agora seu algoritmo
         está aninhado dentro de mais um laço. Experimente alterar os valores das
@@ -1607,7 +1605,8 @@ pt:
         para coletar todas as bandeiras.
       Course 4 Play Lab Params 10: |-
         Adicionamos uma última função para
-        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
+        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos\_jogador"
+
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
       Course 4 Play Lab Params 2: |-
         Agora temos bandeiras que estão altas demais
@@ -1640,7 +1639,7 @@ pt:
         Pressione "Terminar" quando você terminar de jogar.
       Course 4 Play Lab Vars 2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       Course 4 Play Lab Vars 3: |-
         Temos aqui um novo tipo de jogo! Use as
@@ -1691,9 +1690,10 @@ pt:
         ver todos os comandos da área de trabalho.
       Course 4 Play Lab Vars: |-
         Certo, uma última coisa para esse jogo
-        - vamos configurá-lo para que o jogador possa ganhar (ou perder). Use um laço infinito para
-        verificar o valor da pontuação - se a pontuação for maior que 20, faça o inimigo
-        desaparecer. Se a pontuação for menor que 0, faça o jogador desaparecer.
+
+        -   vamos configurá-lo para que o jogador possa ganhar (ou perder). Use um laço infinito para
+            verificar o valor da pontuação - se a pontuação for maior que 20, faça o inimigo
+            desaparecer. Se a pontuação for menor que 0, faça o jogador desaparecer.
       Course 4 Play Labs For Loops 1: |-
         Vamos fazer o cão falar todos
         os números de 1 a 100. Use um laço para e o bloco contador para que ele fale o valor da variável
@@ -1714,7 +1714,7 @@ pt:
         contar o cubo de cada número (1, 8, 27, 64, 125, 216, 343 ….)
       Course 4 Play Labs For Loops 6: |-
         Você deve se lembrar de que um número primo
-        é qualquer número inteiro que é divisível apenas por ele mesmo e por 1. Use a função "é_primo"
+        é qualquer número inteiro que é divisível apenas por ele mesmo e por 1. Use a função "é\_primo"
         para falar apenas os números primos de 1 a 100.
       Course 4 Play Labs For Loops 7: |-
         Você poderia usar um laço "para" para me
@@ -1748,7 +1748,7 @@ pt:
         ver todos os comandos da área de trabalho.
       CourseF_PlayLab_vars2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       CourseF_PlayLab_vars3: |-
         Temos aqui um novo tipo de jogo! Use as
@@ -1793,7 +1793,8 @@ pt:
       Crack a Caesar Cipher_2019: Instruções
       Food Fight!: |-
         Adicionamos uma última função para
-        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
+        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos\_jogador"
+
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar
         um caminho até à tocha.
@@ -1844,8 +1845,8 @@ pt:
         em um floco de neve. Depois clique em "Executar" e faça ela tocar uma vez em cada floco de neve.
       Inspirational Artwork: "Atividade livre - Inspiração: agora você\naprendeu tudo
         o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
-        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n
+        \\\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387530>
         para ver a solução."
       K-1 Artist 1 Assessment 1: |-
         Desenhe uma pequena reta para cima e uma
@@ -1987,9 +1988,9 @@ pt:
         até o poco!
       K-1 Maze Multi 14: Avaliação de nível
       K-1 Maze Multi 15: Avaliação de nível
-      K-1 Maze Sequence Assessment 1: "Isso é um teste!\r\nMova-me por um caminho
+      K-1 Maze Sequence Assessment 1: "Isso é um teste!\\\r\nMova-me por um caminho
         e então\npor outro para me levar até o porco"
-      K-1 Maze Sequence Assessment 2: "Isso é um teste!\r\nMova-me por um caminho
+      K-1 Maze Sequence Assessment 2: "Isso é um teste!\\\r\nMova-me por um caminho
         e então\npor outro para me levar até o porco."
       K-1 Maze debug Assessment 1: |-
         Avaliação -- depure esse nível
@@ -2001,8 +2002,8 @@ pt:
       K-1 maze debug 10: |-
         Depure esse nível reorganizando e adicionando blocos
         para me levar até o porco!
-      K-1 maze debug 11: "Isso é um teste!\r\nDepure esse nível reorganizando\ne adicionando
-        blocos para me levar até o porco"
+      K-1 maze debug 11: "Isso é um teste!\\\r\nDepure esse nível reorganizando\ne
+        adicionando blocos para me levar até o porco"
       K-1 maze debug 2: |-
         Descubra o que está faltando e então adicione blocos
         para me levar até o porco!
@@ -2189,7 +2190,7 @@ pt:
         compõe "desenhe um quadrado". Quando você terminar de analisar, clique em "Salvar
         e Fechar" e então em "Executar".
       NEW Course 4 Artist Functions 6: "Usando o bloco de função \"desenhe um quadrado\",\nvocê
-        pode desenhar esta imagem? Dica: cada quadrado está separado por 20 pixels.\r\n"
+        pode desenhar esta imagem? Dica: cada quadrado está separado por 20 pixels.\\\r"
       NEW Course 4 Artist Functions 7: |-
         Você está pegando o jeito de como
         usar os blocos de função? Vamos modificar esse quadrado para que ele tenha 200 pixels
@@ -2206,7 +2207,7 @@ pt:
       NEW Course 4 Artist Functions inspire: "Atividade livre - Inspiração:\nAgora
         você aprendeu tudo o que precisa saber para criar um padrão como esse!\nSe
         essa imagem inspira você, tente fazer algo similar. Caso contrário, crie\nalgo
-        você mesmo.\r\n\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
+        você mesmo.\\\r\n\\\r\nQuer saber como nosso padrão de inspiração foi\nfeito?
         Visite-nos para ver a solução."
       NEW Course 4 Artist Params 1: |-
         Vamos definir essa função para desenhar
@@ -2237,7 +2238,7 @@ pt:
         que você escreveu e mais algumas com as quais você pode brincar. Desenhe alguma coisa incrível!
       NEW Course 4 Artist Params 3: "Agora, vamos usar a função para desenhar\n3 triângulos
         do último desafio em uma linha. Dica: cada triângulo está separado por\n50
-        pixels.\r\n"
+        pixels.\\\r"
       NEW Course 4 Artist Params 4: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -2264,8 +2265,8 @@ pt:
         pixels de comprimento e separados por 100 pixels cada.
       NEW Course 4 Artist Params inspire: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
-        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n
+        \\\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387530>
         para ver a solução."
       NEW Course 4 Artist Vars 1.5: |-
         Dê uma olhada no código. Você consegue
@@ -2336,7 +2337,7 @@ pt:
         Vamos coletar um pouco de néctar!
       NEW Course 4 Bee For Loops 8: "Se seu laço está contando, o\nincremento é somado
         à variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
-        3, 6 e 9 néctares?\r\n"
+        3, 6 e 9 néctares?\\\r"
       NEW Course 4 Bee For Loops 9: |-
         Se seu laço está fazendo contagem regressiva, o
         incremento é subtraído da sua variável contador a cada repetição. Qual deve ser
@@ -2819,13 +2820,13 @@ pt:
         pode colocar no final do laço mais externo para desenhar toda a grade?
       courseF_bee_for8: "Se seu laço está contando, o\nincremento é somado à variável
         contador a cada repetição. Qual deve ser seu incremento\npara coletar 3, 6
-        e 9 néctares?\r\n"
+        e 9 néctares?\\\r"
       courseF_bee_for8_2018: "Se seu laço está contando, o\nincremento é somado à
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
-        3, 6 e 9 néctares?\r\n"
+        3, 6 e 9 néctares?\\\r"
       courseF_bee_for8_2019: "Se seu laço está contando, o\nincremento é somado à
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
-        3, 6 e 9 néctares?\r\n"
+        3, 6 e 9 néctares?\\\r"
       courseF_bee_functions4: |-
         A função "mova e obtenha néctar" vira
         a abelha, coleta néctar, e então retorna a abelha para onde ela começou. Use
@@ -2986,7 +2987,7 @@ pt:
       grade2_PuppyLoops_8: 'O código para os três bigodes que você vê está errado.
         Dica: cada bigode tem o comprimento de 75 pixels. Corrija esse código para
         desenhar os bigodes.'
-      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\r\n\r\nConsegues
+      grade2_PuppyLoops_9: "Parece que o C no código está desenhado ao contrário.\\\r\n\\\r\nConsegues
         voltar a transformá-lo num C?"
       grade2_puppy_loops2: |-
         Você pode substituir esses cinco blocos por apenas dois blocos?
@@ -3180,7 +3181,7 @@ pt:
         código do triângulo?
       grade4_arist_nested_loop_triangles4: Desenhe o dente na boca do crocodilo!
       grade4_arist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
-        de outro laço. Chamamos isso de laço aninhado.\r"
+        de outro laço. Chamamos isso de laço aninhado.\\\r"
       grade4_arist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -3212,11 +3213,8 @@ pt:
       grade4_artist_nested_loop_squares1: |-
         Você pode desenhar esses 10 quadrados dessa
         calçada usando um laço aninhado? Cada quadrado tem 30 pixels.
-      grade4_artist_nested_loop_triangles1: |-
-        Complete o código para desenhar esses triângulos. O
-        primeiro está pronto para você. Dica: 3 triângulos em uma rotação de 360 graus.
       grade4_artist_nested_loop_triangles5: "Crie um sol aninhando o código inicial\ndentro
-        de outro laço. Chamamos isso de laço aninhado.\r"
+        de outro laço. Chamamos isso de laço aninhado.\\\r"
       grade4_artist_nested_loop_triangles6: |-
         Você pode desenhar esses 36 triângulos usando
         um laço aninhado?
@@ -3338,9 +3336,6 @@ pt:
         Aqui temos uma função chamada "pule"
         que faz seu personagem principal pular 100 pixels. Use a função pule
         para coletar todas as bandeiras.
-      grade4_review_artist1: Oi, eu sou um artista. Você pode escrever códigos para
-        me fazer desenhar quase qualquer coisa. Use alguns blocos para me fazer desenhar
-        sobre as linhas cinzas na imagem. (Cada linha tem o comprimento de 100 pixels)
       grade4_review_artist2: 'Essa casa precisa de um telhado! Desenhe o triângulo.
         Dica: todos os 3 lados têm o mesmo comprimento.'
       grade4_review_artist3: |-
@@ -3400,17 +3395,17 @@ pt:
       grade5_artist_for_loops9: "Vamos juntar tudo!  Usando\nseu conhecimento em \"laços
         para\" e o \"contador\", crie este desenho no qual\ncada forma tem dois lados
         a mais que a anterior. Lembre-se de que cada lado é\n10 vezes maior que o
-        número de lados do polígono.\r\n\r\nApenas uma pequena parte\ndo código foi
-        fornecida para você."
+        número de lados do polígono.\\\r\n\\\r\nApenas uma pequena parte\ndo código
+        foi fornecida para você."
       grade5_artist_for_loopsfreeplay11: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n\r\nQuer
-        saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387604
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n\\\r\nQuer
+        saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387604>
         para ver a solução."
       grade5_artist_functionparameters10: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
-        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\r\n
-        \r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\nhttps://studio.code.org/c/106387530
+        você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n
+        \\\r\nQuer saber como nosso padrão de inspiração foi feito? Acesse\n<https://studio.code.org/c/106387530>
         para ver a solução."
       grade5_artist_functionparameters11: |-
         Atividade livre: aqui estão as funções
@@ -3452,8 +3447,8 @@ pt:
       grade5_artist_variables_freeplay15: "Atividade livre - Inspiração: agora você
         aprendeu\ntudo o que precisa saber para criar um padrão como esse! Se essa
         imagem\ninspira você, tente fazer algo semelhante. Caso contrário, crie algo
-        você mesmo.\r\n\n\r\nQuer saber como nosso padrão de inspiração foi feito?
-        Visite https://studio.code.org/c/105765376/edit\npara ver a solução."
+        você mesmo.\\\r\n\n\\\r\nQuer saber como nosso padrão de inspiração foi feito?
+        Visite <https://studio.code.org/c/105765376/edit>\npara ver a solução."
       grade5_artist_variables_freeplay16: |-
         Ainda jogando?  Temos aqui uma tela em branco na qual
         você pode criar o que quiser!
@@ -3476,9 +3471,10 @@ pt:
         colocando o bloco da variável "comprimento" nos lugares corretos?
       grade5_artist_variables_pentagons12: |-
         Vamos definir a variável "lados" como
-        5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
-        padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
-        um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
+
+        5.  Quanto mais lados adicionarmos a esse algoritmo, maior será o
+            padrão! Vamos adicionar uma nova variável chamada "comprimento" e usá-la onde há
+            um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
       grade5_artist_variables_rectangle6: |-
         Agora eu quero fazer um retângulo que tenha
         a altura duas vezes maior que a largura. Temos uma variável chamada "largura" que
@@ -3508,7 +3504,7 @@ pt:
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.
       grade5_bee_for_loops8: "Se seu laço está contando, o\nincremento é somado à
         variável contador a cada repetição. Qual deve ser seu incremento\npara coletar
-        3, 6 e 9 néctares?\r\n"
+        3, 6 e 9 néctares?\\\r"
       grade5_playlab_freeplay: |-
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas.
@@ -3532,7 +3528,7 @@ pt:
         com todos os blocos da sua caixa de ferramentas.
       grade5_playlab_variables2: |-
         Essa corrida não foi muito justa! Altere
-        a variável "velocidade_cão" para garantir que você possa coletar mais bandeiras do que o
+        a variável "velocidade\_cão" para garantir que você possa coletar mais bandeiras do que o
         gato. O primeiro a coletar 10 bandeiras vence!
       grade5_playlab_variables3: |-
         Temos aqui um novo tipo de jogo! Use as
@@ -3556,7 +3552,8 @@ pt:
         pontuação cair de 10 para 0 para passar de nível.
       grade5_playlab_variables81: |-
         Adicionamos uma última função para
-        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos_jogador"
+        que você use. Programe seu jogo para chamar a função "suba de nível" se "pontos\_jogador"
+
         > 10. Jogue o jogo e passe do nível 4 para seguir para o próximo desafio.
       grade5_playlab_variables9: |-
         Aqui temos uma função chamada "patrulhe".

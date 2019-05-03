@@ -1,69 +1,116 @@
+---
 lv:
   data:
     short_instructions:
       2-3 Artist 1 new: Sveiki, esmu mākslinieks. Tu vari rakstīt kodu, lai liktu man uzzīmēt gandrīz jebko. Izmanto pāris blokus, lai liktu man zīmēt attēlā redzamo pelēko līniju vietā. (Katra līnija ir 100 pikseļu gara)
-      2-3 Artist 11: "Uztaisi robežu stop zīmei no astoņstūra, kuram katra mala ir 100 pikseļu gara. Cik platus leņķus tev vajadzīgs izmantot? (Pavediens: Cik ir 360 dalīts ar 8?) "
+      2-3 Artist 11: 'Uztaisi robežu stop zīmei no astoņstūra, kuram katra mala ir 100 pikseļu gara. Cik platus leņķus tev vajadzīgs izmantot? (Pavediens: Cik ir 360 dalīts ar 8?) '
       2-3 Artist 12: |-
-        Izveido apli, lai pabeigtu acs zīmējumu!\r
-        \r
+        Izveido apli, lai pabeigtu acs zīmējumu!\\r
+        \\r
         Cik reizes jāatkārto kods, lai uzzīmētu apli, ja aktieris katru reizi pagriežas par 1 grādu? 180? 360? 500?
       2-3 Artist 2 new: 'Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100, bet pa pusei pabeigtai sienai - 100. Pabeidziet sienu. '
       2-3 Artist 2: 'Šai mājai ir pa pusei pabeigta siena. Katrai pusei ir 100, bet pa pusei pabeigtai sienai - 100. Pabeidziet sienu. '
-      2-3 Artist 3.4: "Lēkšanas bloks pārvieto mākslinieku bez zīmēšanas.\nUzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara."
+      2-3 Artist 3.4: |-
+        Lēkšanas bloks pārvieto mākslinieku bez zīmēšanas.
+        Uzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara.
       2-3 Artist 3: Šī cepure ir 100 pikseļus augsta. Zīmējiet cepuri, kura ir par 70 pikseļiem mazāka.
-      2-3 Artist 3new: "Sarkanā cepure ir 70 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir 70 pikseļus mazāka. \\r \n(Katras cepures platums ir 50 pikseļi.)"
+      2-3 Artist 3new: "Sarkanā cepure ir 70 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir 70 pikseļus mazāka. \\\\r \n(Katras cepures platums ir 50 pikseļi.)"
       2-3 Artist 4: Palīdzi man pabeigt māju šim kaķim.
       2-3 Artist 5: Nomaini šo kodu ar "atkārtot reizes" bloku, lai uzzīmētu šo pašu māju tikai ar 3 blokiem.
-      2-3 Artist 6: "Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:\nvisas trīs malas ir vienāda garuma."
+      2-3 Artist 6: |-
+        Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
+        visas trīs malas ir vienāda garuma.
       2-3 Artist 7: 'Pabeidz zīmēt skolai pēdējos logus, lai klasē ikviens var redzēt, kas notiek ārā. Katras loga rūts malas garums ir 25 pikseļi. '
       2-3 Artist 8: Pabeidz veidot telpas katram dzīvniekam, sadalot četrstūri divos vienāda izmēra kvadrātos. Četrstūris ir 200 pikseļus plats un 100 pikseļus augsts.
       2-3 Artist 9 NEW: Pabeidz gaisa pūķi
       2-3 Artist 9 REPLACEMENT: Pabeidz zīmēt šīs kāpnes!
       2-3 Artist 9: Pabeidz gaisa pūķi
-      2-3 Artist Assessment 1: "Uzdevums: Pabeidz zīmēt pēdējo zobu.\nTas ir 25 pikseļus plats un 25 pikseļus augsts."
+      2-3 Artist Assessment 1: |-
+        Uzdevums: Pabeidz zīmēt pēdējo zobu.
+        Tas ir 25 pikseļus plats un 25 pikseļus augsts.
       2-3 Artist Debugging 1: Šai  cepurei jābūt 50 pikseļus platai. Vai vari to salabot?
-      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\r\n\\r\nVai vari to izveidot 10 pikseļus platāku?"
+      2-3 Artist Debugging 10: |-
+        Spēļu kontroliera kursorsvira ir pārāk šaura. \\r
+        \\r
+        Vai vari to izveidot 10 pikseļus platāku?
       2-3 Artist Debugging 12: Man jāizveido okeāna vilnis šajā zīmējumā. Vai vari man palīdzēt?
-      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
-      2-3 Artist Debugging 3: "Manā laivā ir caurums! \\r\n\\r\nVai vari izlabot zīmējumu, lai cauruma nebūtu?"
+      2-3 Artist Debugging 2: |-
+        Šis kods kaķa ūsu zīmēšanai ir kļūdains.
+        \\r
+        \\r
+        Izlabo kodu, lai visām ūsām būtu vienāds garums.
+      2-3 Artist Debugging 3: |-
+        Manā laivā ir caurums! \\r
+        \\r
+        Vai vari izlabot zīmējumu, lai cauruma nebūtu?
       2-3 Artist Debugging 4: Kas ir zīmējumā, ko mēs mēģinām uzzīmēt? Pabeidz savienot punktus, izmantojot pareizās līnijas un leņķus.
       2-3 Artist Debugging 5: "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?"
       2-3 Artist Debugging 6: |-
-        Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\r
-        \r
+        Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\\r
+        \\r
         Izmaini kodu, lai uzzīmētu pēdējo kāju.
       2-3 Artist Debugging 7: |-
-        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r
-        \r
+        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\r
+        \\r
         Vai vari to uzzīmēt pareizi?
       2-3 Artist Debugging 8: |-
-        Skolotājs saka, ka man ir jāpabeidz iesāktais!\r
-        \r
+        Skolotājs saka, ka man ir jāpabeidz iesāktais!\\r
+        \\r
         Palīdzi man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?
-      2-3 Artist Debugging 9: |-
-        Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt stiebru pareizajā virzienā?
-      2-3 Artist Debugging Assessment 1: "Uzdevums: Kāpēc šī kvadrāta malas ir par 75 pikseļiem īsākas nekā vajadzētu būt? \\r\n\\r\nKurā vietā ir jālabo kods?"
+      2-3 Artist Debugging 9: Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt stiebru pareizajā virzienā?
+      2-3 Artist Debugging Assessment 1: |-
+        Uzdevums: Kāpēc šī kvadrāta malas ir par 75 pikseļiem īsākas nekā vajadzētu būt? \\r
+        \\r
+        Kurā vietā ir jālabo kods?
       2-3 Artist Free Play: Brīvā spēle! Zīmē visu, ko vēlies.
-      2-3 Artist Functions 1 a: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
-      2-3 Artist Functions 1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      2-3 Artist Functions 1 a: |-
+        "Es zombij mākslinieks. Es patīk zīmēt!" \\r
+        \\r
+        Palīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r
+        \\r
+        Savienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums.
+      2-3 Artist Functions 1: |-
+        "Es zombij mākslinieks. Es patīk zīmēt!" \\r
+        \\r
+        Palīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r
+        \\r
+        Savienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums.
       2-3 Artist Functions 10: 'Brīvā spēle: Šeit ir divas funkcijas, kas zīmē lielāku un mazāku zobratus. Izmantojot šīs funkcijas, uzzīmējiet zīmējumu mašīnas iekšienē!'
-      2-3 Artist Functions 11 a: "Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri` funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\r\n\\r\nUzzīmē zīmējumu ar jauno funkciju!"
-      2-3 Artist Functions 11.5 a: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r\n\\r\nKas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
-      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r\n\\r\nKas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
-      2-3 Artist Functions 11: "Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri` funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\r\n\\r\nUzzīmē zīmējumu ar jauno funkciju!"
-      2-3 Artist Functions 12 Mike: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
-      2-3 Artist Functions 12 a: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
-      2-3 Artist Functions 12: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\r\n\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 11 a: |-
+        Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri` funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\r
+        \\r
+        Uzzīmē zīmējumu ar jauno funkciju!
+      2-3 Artist Functions 11.5 a: |-
+        Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r
+        \\r
+        Kas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?
+      2-3 Artist Functions 11.5: |-
+        Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\r
+        \\r
+        Kas notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?
+      2-3 Artist Functions 11: |-
+        Mēs pārsaucām funkciju `zīmēt kvadrātu` par `zīmēt sešstūri`, bet tas joprojām zīmē kvadrātu! Vai vari izmainīt `zīmēt sešstūri` funkciju tā, lai tā zīmētu sešstūri ar 50 pikseļus garām malām? \\r
+        \\r
+        Uzzīmē zīmējumu ar jauno funkciju!
+      2-3 Artist Functions 12 Mike: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\\\r\n\\\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 12 a: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\\\r\n\\\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\\\r\nZiedi atrodas 100 pikseļu attālumā."
+      2-3 Artist Functions 12: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības vairākas reizes. \\\\r\n\\\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt visu puķu kasti?\\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Loops New 12: 'Uzzīmē rombu, kura malas ir 100 pikseļus garas. '
-      2-3 Artist Loops New 13: "Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu vienu rombu!"
+      2-3 Artist Loops New 13: Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu vienu rombu!
       2-3 Artist Loops New 15: Uzzīmē kaut ko jautru.
       2-3 Artist Nested Loops 10: Atkārto šo kodu 12 reizes, lai pabeigtu rakstu.
       2-3 Artist Nested Loops 11: Atkārto šo kodu 4 reizes, lai pabeigtu rakstu, pagriezies par 90 grādiem pēc katra riņķa.
       2-3 Artist Nested Loops 12: Atkārto šo kodu 12 reizes, lai pabeigtu cilpas.
-      2-3 Artist Nested Loops 2: "Tagad atkārto trīsstūri 6 reizes. Pēc katra trīsstūra nepieciešams pagriezties par 60 grādiem, pirms zīmēt nākamo."
+      2-3 Artist Nested Loops 2: Tagad atkārto trīsstūri 6 reizes. Pēc katra trīsstūra nepieciešams pagriezties par 60 grādiem, pirms zīmēt nākamo.
       2-3 Artist Nested Loops 7: "Lai uzzīmētu sauli, atkārto šo trīsstūri 10 reizes. \n\nTev nepieciešams pārvietoties un pagriezties pēc katra trīsstūra. \n\nTu vari izdomāt cik daudz pagriezties, ja riņķī esošos grādus dali ar trīsstūru skaitu, ko nepieciešams uzzīmēt."
-      2-3 Artist Nested Loops 8: "Tagad attēlā uzzīmēsim zāli.\n\nKatrs zāles stiebrs ir 50 pikseļu attālumā viens no otra."
-      2-3 Artist Nested Loops 9: "Pabeigsim šo zīmējumu, pievienojot mūsu ziedu.\n\nAtkārto rombu 12 reizes, lai uzzīmētu ziedu."
+      2-3 Artist Nested Loops 8: |-
+        Tagad attēlā uzzīmēsim zāli.
+
+        Katrs zāles stiebrs ir 50 pikseļu attālumā viens no otra.
+      2-3 Artist Nested Loops 9: |-
+        Pabeigsim šo zīmējumu, pievienojot mūsu ziedu.
+
+        Atkārto rombu 12 reizes, lai uzzīmētu ziedu.
       2-3 Bee Conditionals 11: "Brīnums, kas tur ir! \nPalīdzi man lidot apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
       2-3 Bee Conditionals 12: Palīdzi man iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu!
       2-3 Bee Conditionals 13: |-
@@ -74,26 +121,31 @@ lv:
         Lieto visu, ko esi iemācījies. lai palīdzētu man iegūt nektāri tikai no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu. Neaizmirsti beigās pagatavot medu.
       2-3 Bee Conditionals 15: "Šis kāpņu ceļš šķiet jau redzēts. \nVai vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu?"
       2-3 Bee Conditionals 2: "Esmu izsalkusi bite! \nPalīdzi man iegūt nektāru no ziediem, lietojot pēc iespējas mazāku bloku skaitu."
-      2-3 Bee Conditionals 3: "Skaties cik daudz nektāra!\nPalīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu."
-      2-3 Bee Conditionals 5: "Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).\nPirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot \"Ja nektārs\" bloku."
+      2-3 Bee Conditionals 3: |-
+        Skaties cik daudz nektāra!
+        Palīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu.
+      2-3 Bee Conditionals 5: |-
+        Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).
+        Pirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot "Ja nektārs" bloku.
       2-3 Bee Conditionals 6: Pārbaudi šo ziedu ar "Ja" bloku, lai zinātu vai nektārs ir pieejams.
       2-3 Bee Conditionals 7: Iegūsti nektāru no katra zieda tikai tad, ja tas tur ir.
-      2-3 Bee Conditionals 8: "Šajā laikā ir sarkani un violeti ziedi.\nSarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru."
+      2-3 Bee Conditionals 8: |-
+        Šajā laikā ir sarkani un violeti ziedi.
+        Sarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru.
       2-3 Bee Conditionals 9: Iegūsti visu nektāru no katra zieda.
       2-3 Bee Conditionals Assessment 1: 'Uzdevums: Iegūsti visu nektāru. Uzmanies, lai neiegūtu nektāru no violetā zieda, ja tā tur nav.'
       2-3 Bee Functions 3: Iegūsti visu nektāru no katra zieda.
-      2-3 Bee Loops 1: |-
-        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      2-3 Bee Loops 1: Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
       2-3 Bee Loops 13: 'Uzdevums: Iegūsti visu nektāru, lietojot pēc iespējas mazāku bloku skaitu.'
-      2-3 Bee Loops 1A: 'Sveicināts! Es esmu bite. Vai vari man palīdzēt iegūt nektāru no šiem ziediem?'
+      2-3 Bee Loops 1A: Sveicināts! Es esmu bite. Vai vari man palīdzēt iegūt nektāru no šiem ziediem?
       2-3 Bee Loops 2: Iegūsti visu nektāru un pagatavo visu medu ar pēc iespējas mazāku bloku skaitu.
       2-3 Bee Loops 3: Iegūsti nektāru no katra zieda un pagatavo medu katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       2-3 Bee Loops 3B: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
       2-3 Bee Loops 4: |-
         Cik aizņemta bite!
         Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
-      2-3 Bee Loops 4A: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
-      2-3 Bee Loops 5: "Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?"
+      2-3 Bee Loops 4A: Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu.
+      2-3 Bee Loops 5: Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?
       2-3 Bee Loops 6: Vai vari atrast ātrāko veidu, lai bite iegūtu visu nektāru un pagatavotu visu medu?
       2-3 Bee Loops 7: Kāds skaists ziedu lauks! Palīdzi bitei apmeklēt katru ziedu. Vai vari to izdarīt ar mazāk kā 7 blokiem?
       2-3 Maze 1: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "pārvietot uz priekšu" blokus zem "kad palaists" bloka un spied "Palaist". '
@@ -119,8 +171,12 @@ lv:
       2-3 Maze 8: Palīdzi man tikt līdz cūkai!
       2-3 Maze 9: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
       2-3 Maze Loops 1: Vai tu vari man palīdzēt tikt līdz cūkai izmantojot 5 vienāda veida blokus?
-      2-3 Maze Loops 18: "Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!\nPamēģini lietot vienu \"Atkārtot\" bloku iekšā citā, lai samazinātu kopējo bloku skaitu."
-      2-3 Maze Loops 19: "Pacelsim uzdevumu jaunā līmenī!\nLieto ciklus, lai aizvestu mani pie saulespuķes ar pēc iespējas mazāku ciklu skaitu."
+      2-3 Maze Loops 18: |-
+        Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!
+        Pamēģini lietot vienu "Atkārtot" bloku iekšā citā, lai samazinātu kopējo bloku skaitu.
+      2-3 Maze Loops 19: |-
+        Pacelsim uzdevumu jaunā līmenī!
+        Lieto ciklus, lai aizvestu mani pie saulespuķes ar pēc iespējas mazāku ciklu skaitu.
       2-3 Maze Loops 20: Aizved mani pie saulespuķes ar mazāko iespējamo bloku skaitu!
       2-3 Maze Loops 21: Aizved mani pie saulespuķes ar mazāko iespējamo bloku skaitu!
       2-3 Maze Loops Assessment 1: 'Uzdevums: Aizved mani pie saulespuķes, lietojot tikai 5 blokus!'
@@ -157,9 +213,14 @@ lv:
       20hr_maze_stage2_7: Mēģini nogādāt mani līdz traucētājam, izmantojot tikai trīs blokus.
       20hr_maze_stage2_8: Palīdzi man izdzīt ļauno cūciņu, izmantojot pēc iespējas mazāku bloku daudzumu. Mēģini izmantot vairāk par vienu "Atkārtot reizes" bloku.
       20hr_maze_stage2_9: 'Kad bloks ir pelēks, tas nozīmē, ka tu nevari to izdzēst. Atrisini puzli, izmantojot "atkārtot" bloku, kas atkārtojas 3 reizes. Mēģini izvietot šos 3 blokus iekšā pelēkajiem "atkārtot" blokiem: pārvietoties, pārvietoties, pagriesties.'
+      4-5 Artist 1: Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus gara)
       4-5 Artist 5: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu, izmantojot doto ciklu?
       4-5 Bee Conditionals 1: "Mākonis aizsedz man skatu! \nPaņem nektāru tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
-      4-5 Bee Conditionals 2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      4-5 Bee Conditionals 2: |-
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
       4-5 Bee Conditionals 3: Tagad es gribu pagatavot medu. Daži mākoņi var slēpt bišu sūnas. Pārbaudi katru mākoni!
       4-5 Bee Conditionals 4: Dažreiz mākonis slēpj ziedu, bet citreiz tas slēpj bišu šūnas. Lieto Ja/darīt/cits bloku, lai iegūtu nektāru (ja atrodies virs zieda), vai arī pagatavotu medu (ja atrodies virs bišu šūnām).
       4-5 Bee Debugging 10: Atrodi kļūdas un izlabo tās.
@@ -174,11 +235,13 @@ lv:
       Artist - Nested Loops 5: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
       Artist - Nested Loops 9: Uzzīmē zobus krokodila mutē!
       Bergeron Robot Maze1: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "pārvietot uz priekšu" blokus zem "kad palaists" bloka un spied "Palaist". '
-      Course 2 Bee Loops 1: 'Sveicināts! Es esmu bite. Vai vari man palīdzēt iegūt nektāru no šiem ziediem?'
+      Course 2 Bee Loops 1: Sveicināts! Es esmu bite. Vai vari man palīdzēt iegūt nektāru no šiem ziediem?
       Course 2 Maze Loops 1: Vai vari mani aizvest līdz cūkai, izmantojot 5 blokus?
       Course 4 Maze 1: Aizved dusmīgo putnu līdz cūkai!
       Course 4 Maze 3: 'Ieprogrammē dusmīgo putnu, lai tas nokļūst līdz cūkai. '
-      Course E MC Conditionals1: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
+      Course E MC Conditionals1: |-
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
       Crack Random Substitution: Instrukcijas
       Crack Random Substitution_2018: Instrukcijas
       Crack Random Substitution_2019: Instrukcijas
@@ -230,9 +293,15 @@ lv:
       Mike Test Bee Conditionals 1: "Mākonis aizsedz man skatu! \nPaņem nektāru tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
       New Basketball Project: Izveido savu spēli "Basketbols". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Pabeigt" un aicini draugus spēlēt tavu spēli.
       New Bounce Project: Izveido savu spēli "Pong". Vari mainīt visus noteikumus, pielāgot izskatu. Kad pabeigts, spied "Gatavs" un aicini draugus spēlēt tavu spēli.
-      Overworld Avoid Monsters: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
-      Overworld Avoid Monsters_2018: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
-      Overworld Avoid Monsters_2019: "Ieskriet ložņā ir bīstami.\nUzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās."
+      Overworld Avoid Monsters: |-
+        Ieskriet ložņā ir bīstami.
+        Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
+      Overworld Avoid Monsters_2018: |-
+        Ieskriet ložņā ir bīstami.
+        Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
+      Overworld Avoid Monsters_2019: |-
+        Ieskriet ložņā ir bīstami.
+        Uzmanīgi ejiet garām ložņām, kamēr nonākat drošībā mājās.
       Overworld Chop Tree - allthethings: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Tree: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
       Overworld Chop Tree_2018: Koks ir ļoti nozīmīgs resurss. No koka var uztaisīt daudzas lietas. Pieejiet pie koka un lietojiet "iznīcināt bloku", lai to nocirstu.
@@ -240,9 +309,15 @@ lv:
       Overworld Chop Trees: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
       Overworld Chop Trees_2018: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
       Overworld Chop Trees_2019: Mums jāuzbūvē māja līdz saulrietam. Mājai vajag daudz koku. Nocērt visus 3 kokus.
-      Overworld Free Play 20x20: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
-      Overworld Free Play 20x20_2018: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
-      Overworld Free Play 20x20_2019: "Apsveicam! Tu uzveici visus uzdevumus!\nTagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas."
+      Overworld Free Play 20x20: |-
+        Apsveicam! Tu uzveici visus uzdevumus!
+        Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
+      Overworld Free Play 20x20_2018: |-
+        Apsveicam! Tu uzveici visus uzdevumus!
+        Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
+      Overworld Free Play 20x20_2019: |-
+        Apsveicam! Tu uzveici visus uzdevumus!
+        Tagad ievāc resursus un uzbūvē kaut ko pēc savas patikas, izmantojot iegūtās zināšanas.
       Overworld House Frame Chosen: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
       Overworld House Frame Chosen_2018: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
       Overworld House Frame Chosen_2019: Būvē pārējo māju no jebkuriem materiāliem. Tev noderēs cikla "atkārtot" komandas.
@@ -261,7 +336,9 @@ lv:
       Overworld Shear Sheep: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
       Overworld Shear Sheep_2018: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
       Overworld Shear Sheep_2019: Aitu cirpšana! Lieto "apcirpt" komandu, lai iegūtu vilnu no abām aitām.
-      PS copy 2-3 Bee Conditionals 5: "Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).\nPirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot \"Ja nektārs\" bloku."
+      PS copy 2-3 Bee Conditionals 5: |-
+        Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).
+        Pirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot "Ja nektārs" bloku.
       The Vigenere Cipher Widget: Instrukcijas
       The Vigenere Cipher Widget_2018: Instrukcijas
       The Vigenere Cipher Widget_2019: Instrukcijas
@@ -279,9 +356,15 @@ lv:
       Underground Iron: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Iron_2018: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
       Underground Iron_2019: Iekrist izkusušā lavā ir bīstami. Noliec bruģakmeni, lai izveidotu tiltu, un pēc tam iegūsti vismaz divus dzelzs blokus.
-      Underground Mining Coal: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
-      Underground Mining Coal_2018: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
-      Underground Mining Coal_2019: "Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.\nNolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus."
+      Underground Mining Coal: |-
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
+      Underground Mining Coal_2018: |-
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
+      Underground Mining Coal_2019: |-
+        Visvērtīgākie resursi ir pazemē, bet tur var būt tumšs.
+        Nolieciet vismaz 2 lāpas un nojauciet ne mazāk kā 2 ogļu blokus.
       birdsDebugVideo1: Izseko maršrutam un aizved mani līdz tai muļķīgajai cūkai. Izvairies no dinamīta, citādi lidos spalvas!
       bounce_1: Pievieno bloku pie "kad kreisā bulta" un spied "Palaist". Parvieto dēlīti ar labo bultu lai sasniegtu mērķi.
       bounce_10: Tagad augšā ir mērķis. Pievieno "pieskaiti punktu" un "pieskaiti pretiniekam punktu" blakus "kad bumba mērķī" un "kad bumba neatsitas pret dēlīti" blokiem, lai veidotu spēli, Paskat, cik punktus tu var nopelnīt, pirms pretinieks nopelna divtik.
@@ -363,7 +446,7 @@ lv:
       courseB_maze_seq12: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2018: Tagad notver to cūku, kā vien māki!
       courseB_maze_seq12_2019: Tagad notver to cūku, kā vien māki!
-      courseB_maze_seq2: '*"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz cūkai."*'
+      courseB_maze_seq2: _"Kļūda! Izlabo kļūdu kodā, lai palīdzētu putnam tikt līdz cūkai."_
       courseB_maze_seq6: Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!
       courseB_maze_seq7: Izdomā, kas šeit pietrūkst un tad pievieno blokus, lai palīdzētu putnam tikt līdz cūkai!
       courseB_maze_seq8: Tavs gājiens! Kas tev nepieciešams, lai dabūtu putnu līdz cūkai?
@@ -388,8 +471,18 @@ lv:
       courseD_bounce_events5: Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie "kad bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.
       courseD_bounce_events6: Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad bumba trāpa" blokiem, lai atrisinātu šo puzli.
       courseD_bounce_events7: Pievieno blokus pie katra "kad" bloka. Ļauj bumbai lidot, kamēr tā sasniedz mērķi.
-      courseE_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
-      courseE_artist_functions1_2018: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      courseE_artist_functions1: |-
+        "Es zombij mākslinieks. Es patīk zīmēt!" \\r
+        \\r
+        Palīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r
+        \\r
+        Savienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums.
+      courseE_artist_functions1_2018: |-
+        "Es zombij mākslinieks. Es patīk zīmēt!" \\r
+        \\r
+        Palīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r
+        \\r
+        Savienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums.
       courseE_bee_functions1: Iegūsti visu nektāru no katra zieda.
       courseE_bee_functions1_2018: Iegūsti visu nektāru no katra zieda.
       flappy_1: Pievieno bloku pie "kad noklikšķināts" bloka, tad spied "Palaist". Klikšķini vai piesit ekrānam, lai virzītu Flappy uz mērķi.
@@ -416,29 +509,36 @@ lv:
       grade2_CaringForNewPet_10: Palīdzi man tikt līdz cūkai!
       grade2_CaringForNewPet_5: Palīdzi man tikt līdz cūkai!
       grade2_MakeDogTag_10: Uzzīmē kaut ko jautru.
-      grade2_MakeDogTag_3: |-
-        Palīdzi man pabeigt māju šim kaķim.
+      grade2_MakeDogTag_3: Palīdzi man pabeigt māju šim kaķim.
       grade2_MakeDogTag_4: |-
         Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
         visas trīs malas ir vienāda garuma.
-      grade2_MakeDogTag_6: 'Brīvā spēle! Zīmē visu, ko vēlies.'
+      grade2_MakeDogTag_6: Brīvā spēle! Zīmē visu, ko vēlies.
       grade2_PuppyLoops_1: Vai tu vari man palīdzēt tikt līdz cūkai izmantojot 5 vienāda veida blokus?
       grade2_PuppyLoops_10: |-
-        Skolotājs saka, ka man ir jāpabeidz iesāktais!\r
-        \r
+        Skolotājs saka, ka man ir jāpabeidz iesāktais!\\r
+        \\r
         Palīdzi man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?
       grade2_PuppyLoops_2: Vai tu vari tikt līdz cūkai, izveidojot ciklu, izmantojot tikai vienu "pārvietot uz priekšu" bloku iekš bloka "atkārtot"?
       grade2_PuppyLoops_4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
       grade2_PuppyLoops_5: Vai vari izdomāt ātrāko veidu kā palīdzēt man tikt līdz cūkai?
-      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\r\n\\r\nIzlabo kodu, lai visām ūsām būtu vienāds garums."
+      grade2_PuppyLoops_8: |-
+        Šis kods kaķa ūsu zīmēšanai ir kļūdains.
+        \\r
+        \\r
+        Izlabo kodu, lai visām ūsām būtu vienāds garums.
       grade2_PuppyLoops_9: |-
-        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r
-        \r
+        Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\r
+        \\r
         Vai vari to uzzīmēt pareizi?
       grade2_puppy_loops2: Vai tu vari tikt līdz cūkai, izveidojot ciklu, izmantojot tikai vienu "pārvietot uz priekšu" bloku iekš bloka "atkārtot"?
       grade2_puppy_loops4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt līdz cūkai ar mazāko skaitu bloku!
       grade3_ConditionalsElse_1: "Mākonis aizsedz man skatu! \nPaņem nektāru tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
-      grade3_ConditionalsElse_2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade3_ConditionalsElse_2: |-
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
       grade3_ConditionalsElse_3: Tagad es gribu pagatavot medu. Daži mākoņi var slēpt bišu sūnas. Pārbaudi katru mākoni!
       grade3_ConditionalsElse_4: Dažreiz mākonis slēpj ziedu, bet citreiz tas slēpj bišu šūnas. Lieto Ja/darīt/cits bloku, lai iegūtu nektāru (ja atrodies virs zieda), vai arī pagatavotu medu (ja atrodies virs bišu šūnām).
       grade3_Conditionals_1: "Esmu izsalkusi bite! \nPalīdzi man iegūt nektāru no ziediem, lietojot pēc iespējas mazāku bloku skaitu."
@@ -450,11 +550,17 @@ lv:
         Lieto visu, ko esi iemācījies. lai palīdzētu man iegūt nektāri tikai no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu. Neaizmirsti beigās pagatavot medu.
       grade3_Conditionals_12: "Šis kāpņu ceļš šķiet jau redzēts. \nVai vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu?"
       grade3_Conditionals_13: 'Uzdevums: Iegūsti visu nektāru. Uzmanies, lai neiegūtu nektāru no violetā zieda, ja tā tur nav.'
-      grade3_Conditionals_2: "Skaties cik daudz nektāra!\nPalīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu."
-      grade3_Conditionals_3: "Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).\nPirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot \"Ja nektārs\" bloku."
+      grade3_Conditionals_2: |-
+        Skaties cik daudz nektāra!
+        Palīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu.
+      grade3_Conditionals_3: |-
+        Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).
+        Pirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot "Ja nektārs" bloku.
       grade3_Conditionals_4: Pārbaudi šo ziedu ar "Ja" bloku, lai zinātu vai nektārs ir pieejams.
       grade3_Conditionals_5: Iegūsti nektāru no katra zieda tikai tad, ja tas tur ir.
-      grade3_Conditionals_6: "Šajā laikā ir sarkani un violeti ziedi.\nSarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru."
+      grade3_Conditionals_6: |-
+        Šajā laikā ir sarkani un violeti ziedi.
+        Sarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru.
       grade3_Conditionals_7: Iegūsti visu nektāru no katra zieda.
       grade3_Conditionals_8: "Brīnums, kas tur ir! \nPalīdzi man lidot apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
       grade3_Conditionals_9: Palīdzi man iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu!
@@ -462,17 +568,15 @@ lv:
       grade3_Loops_10: |-
         Cik aizņemta bite!
         Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
-      grade3_Loops_11: "Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?"
+      grade3_Loops_11: Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?
       grade3_Loops_12: Vai vari atrast ātrāko veidu, lai bite iegūtu visu nektāru un pagatavotu visu medu?
       grade3_Loops_4: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
       grade3_Loops_5: Kāds skaists ziedu lauks! Palīdzi bitei apmeklēt katru ziedu. Vai vari to izdarīt ar mazāk kā 7 blokiem?
-      grade3_Loops_6: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
-      grade3_Loops_7: |-
-        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      grade3_Loops_6: Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu.
+      grade3_Loops_7: Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
       grade3_Loops_8: Iegūsti visu nektāru un pagatavo visu medu ar pēc iespējas mazāku bloku skaitu.
       grade3_Loops_9: Iegūsti nektāru no katra zieda un pagatavo medu katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
-      grade3_Loops_TeacherIDo: |-
-        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      grade3_Loops_TeacherIDo: Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
       grade3_maze_Loop1: 'Uzdevums: Aizved mani pie saulespuķes, lietojot tikai 5 blokus!'
       grade3_maze_loops5: Aizved mani pie saulespuķes ar mazāko iespējamo bloku skaitu!
       grade3_maze_nestedLoops1: Vai tu vari man palīdzēt tikt līdz cūkai izmantojot 5 vienāda veida blokus?
@@ -484,16 +588,28 @@ lv:
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Palīdzi man aizpildīt visas bedres ar 5 lāpstām zemes. Padoms: tu vari ielikt "atkārtot" bloku iekšā "kamēr" blokā.'
       grade4_arist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
       grade4_arist_nested_loop_triangles4: Uzzīmē zobus krokodila mutē!
-      grade4_artist_functions1: "\"Es zombij mākslinieks. Es patīk zīmēt!\" \\r\n\\r\nPalīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r\n\\r\nSavienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums."
+      grade4_artist_functions1: |-
+        "Es zombij mākslinieks. Es patīk zīmēt!" \\r
+        \\r
+        Palīdzi zombijam uzzīmēt kvadrātiskas brilles. \\r
+        \\r
+        Savienojums starp lēcām ir par 25 pikseļiem īsāks nekā lēcu kvadrātu platums.
       grade4_artist_nested_loop_flags1: Ieliec ciklā doto kodu, lai izveidotu vējdzirnavas.
       grade4_bee_conditionals_quantum1: "Mākonis aizsedz man skatu! \nPaņem nektāru tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
-      grade4_bee_conditionals_quantum2: "Vēl vairāk mākoņu!\nPirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.\nAtceries:\nNe katrs mākonis slēpj to pašu!"
+      grade4_bee_conditionals_quantum2: |-
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
       grade4_bee_conditionals_quantum4: Dažreiz mākonis slēpj ziedu, bet citreiz tas slēpj bišu šūnas. Lieto Ja/darīt/cits bloku, lai iegūtu nektāru (ja atrodies virs zieda), vai arī pagatavotu medu (ja atrodies virs bišu šūnām).
       grade4_bee_functions1: Iegūsti visu nektāru no katra zieda.
       grade4_frozen_functions0: Vai vari izdomāt, ar kuru numuru aizstāt jautājumzīmes, lai uzzīmētu apli?
-      grade4_review_artist1: Sveiki, esmu mākslinieks. Tu vari rakstīt kodu, lai liktu man uzzīmēt gandrīz jebko. Izmanto pāris blokus, lai liktu man zīmēt attēlā redzamo pelēko līniju vietā. (Katra līnija ir 100 pikseļu gara)
-      grade4_review_artist2: "Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:\nvisas trīs malas ir vienāda garuma."
-      grade4_review_artist3: "Lēkšanas bloks pārvieto mākslinieku bez zīmēšanas.\nUzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara."
+      grade4_review_artist2: |-
+        Šai mājai vajag jumtu! Uzzīmē trīsstūri. Padoms:
+        visas trīs malas ir vienāda garuma.
+      grade4_review_artist3: |-
+        Lēkšanas bloks pārvieto mākslinieku bez zīmēšanas.
+        Uzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara.
       grade4_review_bee1: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
       grade4_review_bee2: Iegūsti nektāru no katra zieda un pagatavo medu katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       grade4_review_bee3: |-
@@ -502,13 +618,12 @@ lv:
       level 'grade3_Loops_10: |-
         Cik aizņemta bite!
         Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
-      level 'grade3_Loops_11: "Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?"
+      level 'grade3_Loops_11: Šī ceļa forma ir citādāka nekā iepriekš! Vai vari iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?
       level 'grade3_Loops_12: Vai vari atrast ātrāko veidu, lai bite iegūtu visu nektāru un pagatavotu visu medu?
       level 'grade3_Loops_4: Tagad lieto "Atkārtot" bloku, lai iegūtu visu nektāru un pagatavotu visu medu.
       level 'grade3_Loops_5: Kāds skaists ziedu lauks! Palīdzi bitei apmeklēt katru ziedu. Vai vari to izdarīt ar mazāk kā 7 blokiem?
-      level 'grade3_Loops_6: "Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu."
-      level 'grade3_Loops_7: |-
-        Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
+      level 'grade3_Loops_6: Cik reižu cikli var palīdzēt atrisināt šo uzdevumu? Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc iespējas mazāku bloku skaitu.
+      level 'grade3_Loops_7: Šie ziedi izskatās tik garšīgi! Iegūsti nektāru no katra zieda, lietojot pēc iespējas mazāku bloku skaitu.
       level 'grade3_Loops_8: Iegūsti visu nektāru un pagatavo visu medu ar pēc iespējas mazāku bloku skaitu.
       level 'grade3_Loops_9: Iegūsti nektāru no katra zieda un pagatavo medu katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       scrat 19 (copy 1): Vēl viens uzdevums ar "ja-tad" bloku. Vai vari to atrisināt pareizi no pirmā mēģinājuma?

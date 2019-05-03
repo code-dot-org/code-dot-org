@@ -113,7 +113,6 @@ module Dashboard
       js/*
       css/*.css
       assets/**/*
-      angularProjects.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js

@@ -651,6 +651,7 @@ sv:
         iceage_repeat: Ice Age timme av kod - upprepa påståeenden
         CSF_loops_AB: loopar
         csd_pair_programming: Par-programmering
+        csd_applab_parameters: Funktioner med parametrar
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket

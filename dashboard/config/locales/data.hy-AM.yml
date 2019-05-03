@@ -628,6 +628,7 @@ hy:
         iceage_repeat: Ice Age ժամը օրենսգրքի - Կրկնեք հայտարարությունները
         CSF_loops_AB: loops
         csd_pair_programming: Զույգ Ծրագրավորում
+        csd_applab_parameters: Գործառույթները պարամետրերով
     callout:
       text:
         drag_blocks: Քաշեք է մի «քայլ» թաղամաս եւ տալ այն ներքեւում մյուս թաղամաս

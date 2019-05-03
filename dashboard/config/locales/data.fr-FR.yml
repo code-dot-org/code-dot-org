@@ -694,6 +694,7 @@ fr:
         csp_applab_functions: Introduction aux Fonctions
         csp_applab_functions_parameters: Fonctions avec Paramètres
         csp_applab_loops: boucles
+        csp_cs_is_changing_everything: L'informatique est en train de tout changer
         starwars_intro: 'Star Wars : Construire une galaxie avec du code - Introduction'
         starwars_typing: 'Star Wars : Construire une galaxie avec du code - JavaScript'
         starwars_events: 'Star Wars : Construire une galaxie avec du code - Événements'
@@ -781,7 +782,28 @@ fr:
         hoc_dance_congrats: Fête dansante - C'est la fête !
         c_and_c_great_to_create: C'est bien de créer et de jouer équitablement
         c_and_c_digital_sharing: Partage numérique
+        teaching_csf_how_it_works: 'Enseignement des fondamentaux de CS : Comment
+          fonctionne le cours'
+        elem_pd_2: Informatique à l'école primaire - PD vidéo 2/2
+        what_is_cs: Qu'est-ce que l'informatique ?
+        repeat_block: Utiliser le bloc de répétition
+        lesson_planning: Plan de cours
+        opd_closing: 'Enseignement des fondamentaux CS : Clôture et prochaines étapes'
+        why_unplugged_lessons: Obtenir « unplugged »
+        writing_first_program: Écrire son premier programme informatique
+        conditionals_with_cards: Leçon de débranché en Action - Conditions avec des
+          cartes
+        songwriting_with_functions: Leçon de débranché en Action - Ecriture de sons
+          avec fonctions
+        what_is_an_event: Qu'est-ce qu'un événement?
+        teaching_cs_pair_programming: 'Enseignement des fondamentaux CS: Programmation
+          en binôme'
+        teaching_problem_solving: 'Enseignement des fondements CS : Enseigner la résolution
+          du problème'
+        csd_applab_designmode: 'Découvertes CS : Laboratoire App - Mode Design'
         csd_pair_programming: Programmation en Binôme
+        csd_gamelab_functions: Appeler et Définir des Fonctions
+        csd_applab_parameters: Fonctions avec Paramètres
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

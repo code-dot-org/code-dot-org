@@ -672,6 +672,7 @@ sq:
         mc_2017_congratulations: Urimet e Orës së Kodimit Minecraft
         CSF_loops_AB: cikle
         csd_pair_programming: Programim në çift
+        csd_applab_parameters: Funksionet me parametra
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër

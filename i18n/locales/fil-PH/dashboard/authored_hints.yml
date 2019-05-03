@@ -1,3 +1,4 @@
+---
 fil:
   data:
     authored_hints:
@@ -16,7 +17,7 @@ fil:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Para tapusin ang bahay, ang kailangan lang nating gawin ay guguhit ng parisukat!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Para magawa ang mga maliliit na mga anggulo, kailangan mong lumiko sa bawat beses nang *mas malayo* kaysa sa ginawa mo sa parisukat.   '
+        2-3_Artist_6_a: 'Para magawa ang mga maliliit na mga anggulo, kailangan mong lumiko sa bawat beses nang _mas malayo_ kaysa sa ginawa mo sa parisukat.   '
         2-3_Artist_6_b: Dahil ako ay nakaharap na pakanan, ito ay pinakamadaling magsimula sa paggalaw paharap, pagkatapos ay gawin ang pagliko ng pakaliwa para makalikha ng tatsulok.
         2-3_Artist_6_c: Bawat gilid ng tatsulok ay pareho ang haba sa bawat gilid ng parisukat...100 pixels!
       2-3 Artist 7_authored_hint:
@@ -34,7 +35,7 @@ fil:
 
           ![](https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
       2-3 Artist Debugging 10_authored_hint:
-        2-3_Artist_Debugging_10_a: Tandaan, kung gusto mo ang control panel na 10 pixels na *mas mahaba*... kaya siguraduhing **magdagdag** nang 10 sa kahit anong numero ang iyong babaguhin.
+        2-3_Artist_Debugging_10_a: Tandaan, kung gusto mo ang control panel na 10 pixels na _mas mahaba_... kaya siguraduhing **magdagdag** nang 10 sa kahit anong numero ang iyong babaguhin.
         2-3_Artist_Debugging_10_b: "**Pagsubok at kamalian ay perpekto lang dito!** \n\nMagsimula sa pamamagitan ng pagbago nang isang numero sa bawat beses.   \n\nAling mga numero ang gumagawa nito?  \n\nKung ikaw ay nawawala, i-click lang ang \"Start over\" at ang iyong code ay ma-reset."
       2-3 Artist Debugging 2_authored_hint:
         2-3_Artist_Debugging_2_a: 'Hint: Bawat bigote ay 75 pixels ang haba.'
@@ -47,7 +48,7 @@ fil:
         2-3_Artist_Debugging_8_a: |-
           Ilang beses ba naiulit ang aking hugis?
 
-          Ilang beses ba *dapat* uulitin ang hugis?
+          Ilang beses ba _dapat_ uulitin ang hugis?
 
           Saan mo maaaring mapalitan ito sa loob ng programa?
       2-3 Artist Debugging 9_authored_hint:
@@ -70,15 +71,17 @@ fil:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -138,7 +141,7 @@ fil:
         2-3_Artist Loops_New_12_c: Ang artista ay kailangang lumiko pakanan lang nang 60 degrees para makalikha nang mas malawak na kanto.
       2-3 Artist Loops New 13_authored_hint:
         2-3_Artist_Loops_New_13_a: "Sa dulo nang bawat dyamante, ang artista ay nakaharap na sa tamang direksyon para masimulan ang sunod na isa.  \n\nDahil dito, hindi na natin kailangang magdagdag ng ekstrang `turn left by` na bloke bago tayo magsimula ulit."
-        2-3_Artist_Loops_New_13_b: "Para magawa ang bawat dyamante, ang artista ay kailangang:  \n- gumalaw\n- lumiko pakanan nang 120 degrees\n- gumalaw\n- lumiko pakanan nang 60 degrees  \n\nPagkatapos ay gawin ito lahat ulit!"
+        2-3_Artist_Loops_New_13_b: "Para magawa ang bawat dyamante, ang artista ay kailangang:  \n\n-   gumalaw\n-   lumiko pakanan nang 120 degrees\n-   gumalaw\n-   lumiko pakanan nang 60 degrees  \n\nPagkatapos ay gawin ito lahat ulit!"
       2-3 Artist Loops New 9_authored_hint:
         2-3_Artist_Loops_New_9_a: Ang artista ay kailangang liliko nang 45 degrees pakanan bago ka magsimulang gumuhit.
         2-3_Artist_Loops_New_9_b: Ang V na ito ay isa lang talagang kalahati nang isang parisukat. Ano ba dapat ang code para maiguhit ang kalahati nang isang parisukat?
@@ -161,20 +164,7 @@ fil:
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Nagkaroon nang kahirapan sa pagtukoy kung paano makuha ang mga bloke pababa? Subukang isipin ang mga pulang bulaklak eksaktong katulad nang lilang bulaklak!
         2-3_Bee_Conditionals_14_b: Kung ang pulang bulaklak ay lila, maaari mo bang matukung kung paano gamitin ang ekstrang `repeat` na loop para maputol sa code?
-        2-3_Bee_Conditionals_14_c: |-
-          Subukang paghiwalayin ito sa dalawang magkahiwalay na bahagi:  
-
-
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1) Magtipon ng mga nektar nang 3 beses
-            - Gumalaw pasuong nang 5 beses
-            - Suriin para makita kung nektar, kung gayon: kunin ito
-            - Lumiko pakaliwa
-
-          2. Gumawa ng pulot
-            - Gumalaw pasulong nang isang pagkakataon
-            - Gumawa nang dalawang pulot
+        2-3_Bee_Conditionals_14_c: "Subukang paghiwalayin ito sa dalawang magkahiwalay na bahagi:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Magtipon ng mga nektar nang 3 beses\n\n2.  Gumalaw pasuong nang 5 beses\n\n3.  Suriin para makita kung nektar, kung gayon: kunin ito\n\n4.  Lumiko pakaliwa\n\n5.  Gumawa ng pulot\n\n6.  Gumalaw pasulong nang isang pagkakataon\n\n7.  Gumawa nang dalawang pulot"
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Tandaan: Ang mga lilang bulaklak ay mayroong 0 o 1 na nektar at sila ay maaaring magbago sa bawat beses na ipapatakbo mo ang programa.'
       2-3 Bee Conditionals 3_authored_hint:
@@ -258,14 +248,14 @@ fil:
         4-5_Artist_5_a: |-
           Ang pagsubok at kamalian ay isang magandang pamamaraan, ngunit maaari mo ring lutasin ang problema sa pamamagitan ng paghati nang 90 degree anggulo sa tatlong mga bahagi.
 
-          **90 / 3 == _____**
+          **90 / 3 == **\_****
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Aling anggulo ang pinakamaliit? Saang anggulo nakatayo ang artista? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Ang mahabang mga gilid ay 240 pixels ang bawat isa. Ibig sabihin na ang 2 makiling mga gilid ay dapat bubuo:\n\n**800 - 240 - 240 = 320**\n\nAno ang **320.2** ? "
-        4-5_Artist_8_b: "Ang larawang ito ay maaaring gawin sa dalawang pamamaraan!  \n- Iguhit ang dalawang parihaba na **120** ang haba at **160** ang taas, na may nagkapatung-patong na gilid.\n- Iguhit ang isang parihaba na **240** ang haba at **160**  ang taas, pagkatapos ay magdagdag ng linya sa gitna."
+        4-5_Artist_8_b: "Ang larawang ito ay maaaring gawin sa dalawang pamamaraan!  \n\n-   Iguhit ang dalawang parihaba na **120** ang haba at **160** ang taas, na may nagkapatung-patong na gilid.\n-   Iguhit ang isang parihaba na **240** ang haba at **160**  ang taas, pagkatapos ay magdagdag ng linya sa gitna."
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: "Kapag ang tatsulok ay isang paragilid, lahat ng mga gilid at lahat ng mga anggulo ay parehas.\n"
+        4-5_Artist_9_a: Kapag ang tatsulok ay isang paragilid, lahat ng mga gilid at lahat ng mga anggulo ay parehas.
         4-5_Artist_9_b: Kakailanganin mong iguhit ang tatlong mga tatsulok na pareho ang laki. Huwag kalimutang tumalon sa iyong bagong posisyon pagkatapos ng bawat isa.
       4-5 Artist Assessment 1_authored_hint:
         4-5_Artist_Assessment_1_a: Kakailanganin mo lang iguhit ang panlabas ng tatsulok para makumpleto ang palaisipang ito.
@@ -302,7 +292,10 @@ fil:
       4-5 Maze 6_authored_hint:
         4-5_Maze_6_a: "Subukang sundin ang landas gamit ang iyong mga daliri. \nIto ba ang pinakamaikling daan na mahahanap mo?"
       4-5 Maze 7_authored_hint:
-        4-5_Maze_7_a: "**Gustom magawa ang iyong code na maikli hangga't maaari?*\n\nMaghanap ng mga patterns sa loob ng iyong mga bloke. Nakakakita ka ba ng isang bagay na inuulit? Sa halip ay subukang mag-loop sa paligid nito!"
+        4-5_Maze_7_a: |-
+          \*_Gustom magawa ang iyong code na maikli hangga't maaari?_
+
+          Maghanap ng mga patterns sa loob ng iyong mga bloke. Nakakakita ka ba ng isang bagay na inuulit? Sa halip ay subukang mag-loop sa paligid nito!
       4-5 Nested Loops 12_authored_hint:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 6_authored_hint:
@@ -329,11 +322,13 @@ fil:
       Artist Inspiration_authored_hint:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na loop.
-        specifics: "Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga \"petals\" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.\n    \nAng `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas."
+        specifics: |-
+          Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga "petals" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.
+
+          Ang `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas.
         after: Kapag tapos ka na sa bawat "petal", siguraduhin mong `gumalaw pasulong` ng 60 pixels bago ka makagawa ng 60 degree na rotasyon.
         solution: |-
           **Solusyon**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       Bergeron Robot Maze1_authored_hint:
@@ -344,9 +339,7 @@ fil:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Bawat inuulit na hugis ay kombinasyon ng **kalahati ng hexagon**, na sinusundan ng **2/3 ng tatsulok**. '
         Course_4_Artist_12_b: 'Ang hugis ng yunit ay halos kapareha ng huling palaisipan, maliban nalang na ang kalahating hexagon ay malaki nang kaunt. '
-        Course_4_Artist_12_c: |-
-          1. Ang unang tatong mga linya ay 60 pixels ang haba at ikaw kakailangan lumiko nang 60 degrees. 
-           2, Ang susunod na dalawang mga linya ay 80 pixels ang haba at kakailanganin mong lumiko nang 120 degrees 
+        Course_4_Artist_12_c: "1.  Ang unang tatong mga linya ay 60 pixels ang haba at ikaw kakailangan lumiko nang 60 degrees. \n    2, Ang susunod na dalawang mga linya ay 80 pixels ang haba at kakailanganin mong lumiko nang 120 degrees "
         Course_4_Artist_12_d: |-
           **Solusyon:**
 
@@ -412,7 +405,10 @@ fil:
 
           Ilang beses ba ang 3 maipasok sa 360?
       Course 4 Artist 9_authored_hint:
-        Course_4_Artist_9_a: "Kailangan malaman kung ilang ang lilikoan?\n\nAno ang 360 na hinahati sa 10?"
+        Course_4_Artist_9_a: |-
+          Kailangan malaman kung ilang ang lilikoan?
+
+          Ano ang 360 na hinahati sa 10?
       Course 4 Artist Binary Free Play 2b_authored_hint:
         Course_4_Artist_Binary_Free_Play_2b_a: Ang code na ito ay gumagamit ng mga `for loop`. Ang isa ay bumibilang mula 1 hanggang 8, ang kabila ay nagbibilang mula 8 hanggang sa 1.
         Course_4_Artist_Binary_Free_Play_2b_b: Bawat `for loop` ay mayroong tatlong mga pag-ulit. Ang una ay gumuguhit sa pinakadulong kaliwang hanay ng mga 1, ang pangalawa ay gumuguhit sa mga 0 na nasa gitna at ang pangatlo ay gumuguhit ng mga 1 sa kanan.
@@ -453,6 +449,7 @@ fil:
           <mutation counter="counter"></mutation>
           <value name="FROM">
           <block type="math_number">
+
           <title name="NUM">1</title>
           </block>
           </value>
@@ -1099,7 +1096,10 @@ fil:
         Course_4_SCF_2_a: Bawat octagon ay mayroong 40 pixel na mga gilid.
         Course_4_SCF_2_b: Mayroong 136 pixel na mga pagtalon sa pagitan ng bawat octagon sa bawat pahalang ng linya.
         Course_4_SCF_2_c: "Bago mo iguguhit ang pangalawang hanay ng mga octagon, kakailanganin mong lumiko pakanan nang 45 degrees at tumalon pasulong ng 96 pixels.  \n\nKapag ikaw ay nasa tamang pahilis na lokasyon, kakailanganin mong pabalikin ang iyong artista ulit at tumalon pabalik ng mga 408 pixels. "
-        Course_4_SCF_2_d: "Bigyang-pansin na dahil mayroon lang kaunting mga octagon sa isang even na mga hilera, hindi mo na kailangang tumalon pabalik pa sa panimulang lugar para sa mga bilang na gansal na mga hanay.\n\nIbig sabihin nito na maaari mong gamitin ang parehong function para sa lahat ng mga hanay."
+        Course_4_SCF_2_d: |-
+          Bigyang-pansin na dahil mayroon lang kaunting mga octagon sa isang even na mga hilera, hindi mo na kailangang tumalon pabalik pa sa panimulang lugar para sa mga bilang na gansal na mga hanay.
+
+          Ibig sabihin nito na maaari mong gamitin ang parehong function para sa lahat ng mga hanay.
         Course_4_SCF_2_e: |-
           **Solusyon:**
 
@@ -2718,6 +2718,7 @@ fil:
 
           <xml><block type="when_run"><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_number"><title name="NUM">0</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">up</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">down</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">4</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">left</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">8</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">2</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">1</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">2</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">3</title></block></value></block></value></block></next></block>
           <block type="studio_whenSpriteCollided">
+
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">2</title>
           <next>
@@ -2882,10 +2883,7 @@ fil:
           </block>
           </xml>
       Course 4 SCV 5_authored_hint:
-        Course_4_SCV_5_a: |-
-          Tingnan ang opsyon na mga ito para sa paggalaw: 
-
-          ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
+        Course_4_SCV_5_a: "Tingnan ang opsyon na mga ito para sa paggalaw: \n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)"
         Course_4_SCV_5_b: Bawat beses sa pag-loop, ang mga bulaklak ay mababawasan ng dalawang nektar at ang bubuyog ay nangangailangang makagawa ng isang pang pulot.
         Course_4_SCV_5_c: Bigyang pansin na sa simula ng ating panlabas na loob, ang bubugyog ay gumalaw nang napakaraming beses hangga't mayroon pang nektar sa sunod na bulaklak.
         Course_4_SCV_5_d: |-
@@ -3020,7 +3018,7 @@ fil:
         Course_4_SCV_6_b: 'Makakatulong sa iyo ang paglikha nang 8 mga variable: red1, green1, blue1, red2, green2, blue2, length, at sides.'
         Course_4_SCV_6_c: Bawat isa sa limang mga gilid ng hugis ay binubuo ng mga piraso na may `length`/`sides` kung saan ang zig ay teal (rgb = 0,175,200) at ang zag ay lila (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'Para maka-zig, lumiko pakaliwa nang `360`/`sides`. Para maka-zag, lumiko pakanan nang `360`/`sides`. '
-        Course_4_SCV_6_e: 'Ang lahat ng programa ay ang pinakapamantayan sa paggawa ng buong 360 degree na pag-ikot mula sa isang hugis, maliban nalang na ating pinatung-patong ang hugis sa kalahati nito, para kailangan nating lumiko pakanan nang `180`/`sides`, kung saan ay ibig sabihin ay kakailanganin nating gumawa ng makalawa ang arami kaysa sa karaniwan (`sides`*`2` na pag-ulit). '
+        Course_4_SCV_6_e: 'Ang lahat ng programa ay ang pinakapamantayan sa paggawa ng buong 360 degree na pag-ikot mula sa isang hugis, maliban nalang na ating pinatung-patong ang hugis sa kalahati nito, para kailangan nating lumiko pakanan nang `180`/`sides`, kung saan ay ibig sabihin ay kakailanganin nating gumawa ng makalawa ang arami kaysa sa karaniwan (`sides`\*`2` na pag-ulit). '
         Course_4_SCV_6_f: |-
           **Solusyon:**
 
@@ -3330,14 +3328,17 @@ fil:
         first_hint: |-
           Ito ang unang hudyat.
 
-          Mayroon itong *iilang* **pangunahing** `markup`
-        second_hint: "Narito ang pangalawang hudyat. Mayroon itong larawan.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)"
+          Mayroon itong _iilang_ **pangunahing** `markup`
+        second_hint: |-
+          Narito ang pangalawang hudyat. Mayroon itong larawan.
+
+          ![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)
         last_hint: Narito ang pangatlo at huling hudyat. Wala itong anumang espesyal.
       Farmer for TTS testing_authored_hint:
         first_hint: |-
           Ito ang unang hudyat.
 
-          Mayroon itong *iilang* **pangunahing** `markup`
+          Mayroon itong _iilang_ **pangunahing** `markup`
         second_hint: |-
           Narito ang pangalawang hudyat. Mayroon itong larawan.
 
@@ -3354,11 +3355,13 @@ fil:
       Inspirational Artwork_authored_hint:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na loop.
-        specifics: "Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga \"petals\" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.\n    \nAng `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas."
+        specifics: |-
+          Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga "petals" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.
+
+          Ang `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas.
         after: Kapag tapos ka na sa bawat "petal", siguraduhin mong `gumalaw pasulong` ng 60 pixels bago ka makagawa ng 60 degree na rotasyon.
         solution: |-
           **Solusyon**
-
 
           ![Image of Solution Blocks](https://images.code.org/d85a18bd31a09f87b41a818fc8d6c1cc-image-1469641375258.png)
       K2.0 sequence 10_authored_hint:
@@ -3451,10 +3454,10 @@ fil:
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Alam mo ba na maaari kang maglagay ng higit sa isang piraso ng code sa loob ng loop? Subukang maglagay ng tabla **at** gumalaw pasulong sa loob ng `repeat` para makumpleto ang palaisipang ito.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba *dapat* ito tumatakbo?
+        MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba _dapat_ ito tumatakbo?
         MC_HOC_2017_06_Cole_b: 'Tulungan ang Ahente na bumuo ng tulay patawid sa tubig! '
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba *dapat* ito tumatakbo?
+        MC_HOC_2017_06_Cole_a: Ilang beses ba ipapatakbo ang loop na ito? Ilang beses ba _dapat_ ito tumatakbo?
         MC_HOC_2017_06_Cole_b: 'Tulungan ang Ahente na bumuo ng tulay patawid sa tubig! '
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Subukan ang paglalagay ng higit sa isang instruksyon sa loob ng isang `repeat` na loop!
@@ -3522,15 +3525,17 @@ fil:
       NEW Course 4 Artist Params 11_authored_hint:
         NEW_Course_4_Artist_Params_11_a: Mayroong higit sa isang numero ang kailangang papalitan ng isang variable sa loob ng function.
       NEW Course 4 Artist Params 13_authored_hint:
-        NEW_Course_4_Artist_Params_13_a: 'Kailangan mong hatiin ang *perimeter* ayon sa bilang ng ma gilid para panatilihin ang pangkalahatang laki ng mga hugis. '
+        NEW_Course_4_Artist_Params_13_a: 'Kailangan mong hatiin ang _perimeter_ ayon sa bilang ng ma gilid para panatilihin ang pangkalahatang laki ng mga hugis. '
       NEW Course 4 Artist Params inspire_authored_hint:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na loop.
-        specifics: "Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga \"petals\" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.\n    \nAng `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas."
+        specifics: |-
+          Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga "petals" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.
+
+          Ang `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas.
         after: Kapag tapos ka na sa bawat "petal", siguraduhin mong `gumalaw pasulong` ng 60 pixels bago ka makagawa ng 60 degree na rotasyon.
         solution: |-
           **Solusyon**
-
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
@@ -3657,22 +3662,22 @@ fil:
         mc_8_b: Gumamit ng `repeat` na mga loops para magawang simple ang iyong code.
         mc_8_c: Ang iyong layunin ay ang makapasok sa pintuan ng bahay na nasa itaas ng screen.
       Overworld Chop Tree_authored_hint:
-        mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
+        mc_2_a: Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.
         mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Tree_2018_authored_hint:
-        mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
+        mc_2_a: Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.
         mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Tree_2019_authored_hint:
-        mc_2_a: 'Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.'
+        mc_2_a: Kailangan mong `gumalaw pasulong` nang dalawang beses para makatindig sa harap ng kahoy.
         mc_2_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Trees_authored_hint:
-        mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
+        mc_4_a: Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?
         mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Trees_2018_authored_hint:
-        mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
+        mc_4_a: Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?
         mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld Chop Trees_2019_authored_hint:
-        mc_4_a: 'Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?'
+        mc_4_a: Maaari mong putulin ang mga kahot sa kahit anong pagkasunod-sunod. Anong landas ang nagdadala sa pinakamaikling bilang ng mga bloke?
         mc_4_b: Ang `destroy block` na utos ay nagpuputol sa mga kahoy na nasa harap mo.
       Overworld House Frame Chosen_authored_hint:
         mc_6_a: Nag-click sa arrow na nasa taas ng `place` ba bloke para makapili kung ano ang ilalagay mo.
@@ -3687,14 +3692,14 @@ fil:
         mc_6_b: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
         mc_6_c: Maaari kang maglagay ng higit sa isang bloke sa loob ng isang `repeat` na loop.
       Overworld Move to Sheep_authored_hint:
-        mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
-        mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
+        mc_1_a: Ang `move forward` na bloke ay nasa taas ng toolbox.
+        mc_1_b: Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.
       Overworld Move to Sheep_2018_authored_hint:
-        mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
-        mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
+        mc_1_a: Ang `move forward` na bloke ay nasa taas ng toolbox.
+        mc_1_b: Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.
       Overworld Move to Sheep_2019_authored_hint:
-        mc_1_a: 'Ang `move forward` na bloke ay nasa taas ng toolbox.'
-        mc_1_b: 'Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.'
+        mc_1_a: Ang `move forward` na bloke ay nasa taas ng toolbox.
+        mc_1_b: Siguradohing ang parehong `move forward` na mga bloke ay naka-snap sa `when run` na bloke.
       Overworld Place Wall_authored_hint:
         mc_5_a: Gamitin ang `place` na bloke muna, at pagkatapos ay ang `move` na bloke.
         mc_5_b: Siguraduhing ang parehong mga bloke ay nasa loob ng `repeat` na loob para mapatakbo ang code nang higit sa isang beses.
@@ -3729,28 +3734,28 @@ fil:
         mc_13_a: Gamitin ang `place rail` para maglagay ng riles sa parisukat kung saan ka nakatayo.
         mc_13_b: Gamitin ang `repeat` na mga loop para mapaikli ang iyong code.
       Overworld Shear Sheep_authored_hint:
-        mc_3_a: 'Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?'
-        mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
-        mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
+        mc_3_a: Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?
+        mc_3_b: Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.
+        mc_3_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.
       Overworld Shear Sheep_2018_authored_hint:
-        mc_3_a: 'Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?'
-        mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
-        mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
+        mc_3_a: Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?
+        mc_3_b: Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.
+        mc_3_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Overworld Shear Sheep_2019_authored_hint:
-        mc_3_a: 'Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?'
-        mc_3_b: 'Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.'
-        mc_3_c: 'Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang mangyayari, kung hindi mo pa nalutas ang palaisipan.'
+        mc_3_a: Ang `shear` na bloke ay maghahatid sa tupa sa harap mo. Nakaharap ka ba sa tupa?
+        mc_3_b: Kung kailangan mong baguhin ang daan kung saan ka nakaharap, gamitin ang `turn` na bloke.
+        mc_3_c: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
-          Magsimula sa pag-iisip tungkol sa bahaging ito: ano ang kaibahan sa bawat hakbang ng daan? Anong klase ng bloke ang maaari mong gamitin para gumawa ng *desisyon* tungkol kung ikaw ba ay nasa bulaklak o pulot-pukyutan?
+          Magsimula sa pag-iisip tungkol sa bahaging ito: ano ang kaibahan sa bawat hakbang ng daan? Anong klase ng bloke ang maaari mong gamitin para gumawa ng _desisyon_ tungkol kung ikaw ba ay nasa bulaklak o pulot-pukyutan?
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+          ![](<https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png>)
         turn_at_honeycomb_pointer: Maliban nalang sa paggawa ng pulot, nakakita ka ba ng kahit anong kaibahan sa kailangan mong gawin sa pulot-pukyutan?
       Planning Farmer_authored_hint:
         conditional_pointer: |-
-          Magsimula sa pag-iisip tungkol sa bahaging ito: ano ang kaibahan sa bawat hakbang ng daan? Anong klase ng bloke ang maaari mong gamitin para gumawa ng *desisyon* tungkol kung ikaw ba ay nasa bulaklak o pulot-pukyutan?
+          Magsimula sa pag-iisip tungkol sa bahaging ito: ano ang kaibahan sa bawat hakbang ng daan? Anong klase ng bloke ang maaari mong gamitin para gumawa ng _desisyon_ tungkol kung ikaw ba ay nasa bulaklak o pulot-pukyutan?
 
-          ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
+          ![](<https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png>)
         turn_at_honeycomb_pointer: Maliban nalang sa paggawa ng pulot, nakakita ka ba ng kahit anong kaibahan sa kailangan mong gawin sa pulot-pukyutan?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Ito ay isang pagsubok na pahiwatig.
@@ -3806,6 +3811,7 @@ fil:
           Subukan ang loop na ito
           Try this loop
           <xml><block type="controls_repeat">
+
           <title name="TIMES">8</title>
           <statement name="DO">
           <block type="draw_move_by_constant">
@@ -3845,22 +3851,50 @@ fil:
         aE2_a: Bigyang-pansin na dahil ang mga panyo ay 20 pixels ang haba, kakailanganin mong tumalon ng 20 pixels bago mo simulang ang iyong sunod na loop.
       aE3_authored_hint:
         aE3_a: Pagkatapos mong patakbuhin ang iyong **naka-nest na loop** mula sa huling yugto, kailangan mong tumalon pabalik sa simula ng linya.
-        aE3_b: "Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!\n\nPara mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:\n- Lumiko nang 90 degrees (para makaharap pababa)\n- Tumalon ng 20 pixels (para makakuha ng bagong hanay)\n- Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)"
+        aE3_b: |-
+          Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!
+
+          Para mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:
+
+          -   Lumiko nang 90 degrees (para makaharap pababa)
+          -   Tumalon ng 20 pixels (para makakuha ng bagong hanay)
+          -   Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)
         aE3_c: Kapag tapos ka na, ang iyong **naka-nest na mga loop** ay dapat tatlong pag-uulit ang lalim.
         aE3_d: Kung ang iyong code ay naging nakakalito, maaari ka lang mag-click nang "Start Over" at subukang ulit!
       aE3alternate_authored_hint:
         aE3alternate_a: Pagkatapos mong patakbuhin ang iyong **naka-nest na loop** mula sa huling yugto, kailangan mong tumalon pabalik sa simula ng linya.
-        aE3alternate_b: "Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!\n\nPara mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:\n- Lumiko nang 90 degrees (para makaharap pababa)\n- Tumalon ng 20 pixels (para makakuha ng bagong hanay)\n- Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)"
+        aE3alternate_b: |-
+          Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!
+
+          Para mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:
+
+          -   Lumiko nang 90 degrees (para makaharap pababa)
+          -   Tumalon ng 20 pixels (para makakuha ng bagong hanay)
+          -   Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)
         aE3alternate_c: Kapag tapos ka na, ang iyong **naka-nest na mga loop** ay dapat tatlong pag-uulit ang lalim.
         aE3alternate_d: Kung ang iyong code ay naging nakakalito, maaari ka lang mag-click nang "Start Over" at subukang ulit!
       aE3alternateB_authored_hint:
         aE4alternateB_a: Pagkatapos mong patakbuhin ang iyong **naka-nest na loop** mula sa huling yugto, kailangan mong tumalon pabalik sa simula ng linya.
-        aE4alternateB_b: "Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!\n\nPara mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:\n- Lumiko nang 90 degrees (para makaharap pababa)\n- Tumalon ng 20 pixels (para makakuha ng bagong hanay)\n- Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)"
+        aE4alternateB_b: |-
+          Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!
+
+          Para mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:
+
+          -   Lumiko nang 90 degrees (para makaharap pababa)
+          -   Tumalon ng 20 pixels (para makakuha ng bagong hanay)
+          -   Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)
         aE4alternateB_c: Kapag tapos ka na, ang iyong **naka-nest na mga loop** ay dapat tatlong pag-uulit ang lalim.
         aE4alternateB_d: Kung ang iyong code ay naging nakakalito, maaari ka lang mag-click nang "Start Over" at subukang ulit!
       aE4_authored_hint:
         aE4_a: Pagkatapos mong patakbuhin ang iyong **naka-nest na loop** mula sa huling yugto, kailangan mong tumalon pabalik sa simula ng linya.
-        aE4_b: "Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!\n\nPara mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:\n- Lumiko nang 90 degrees (para makaharap pababa)\n- Tumalon ng 20 pixels (para makakuha ng bagong hanay)\n- Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)"
+        aE4_b: |-
+          Huwag kalimutang pagalawin ang artista pababa bago ka magsimulang ng bagong hanay ng mga hugis!
+
+          Para mapagalaw ang artista pababa at mapaharap siya ulit sa tamang landas, siguraduhin na:
+
+          -   Lumiko nang 90 degrees (para makaharap pababa)
+          -   Tumalon ng 20 pixels (para makakuha ng bagong hanay)
+          -   Lumiko pabalik nang 90 degress (para makaharap sa kanan ulit)
         aE4_c: Kapag tapos ka na, ang iyong **naka-nest na mga loop** ay dapat tatlong pag-uulit ang lalim.
         aE4_d: Kung ang iyong code ay naging nakakalito, maaari ka lang mag-click nang "Start Over" at subukang ulit!
       aE6_authored_hint:
@@ -3872,14 +3906,20 @@ fil:
         aE7_a: Iguhit ang ibabang kalahati ng bilog at pagkatapos ang pangtaas na kalahati ng bilog para makagawa ng isang bahagi.
         aE7_b: Kakailanganin mo ang 4 na mga bahagi para makumpleto ang palaisipang ito.
       aE8_authored_hint:
-        aE8_a: "Para makagawa ng parisukat mula sa iyong linya, kailangan mong:\n- gumuhit ng linya\n- gumamit ng pasikot-sikot na kanto\n\nUlitin ang mga hakbang na ito nang 4 na beses."
+        aE8_a: |-
+          Para makagawa ng parisukat mula sa iyong linya, kailangan mong:
+
+          -   gumuhit ng linya
+          -   gumamit ng pasikot-sikot na kanto
+
+          Ulitin ang mga hakbang na ito nang 4 na beses.
       allHallows2017_authored_hint:
         allHallows2017_a: Mag-ingat! Ang GT ay maaaring susunod sa iyo sakay sa bisekleta niya at burahin ang iyong linya!
         allHallows2017_g: 'Nagsasabi si Sarah na: "Nalalamigan ka ba? Halika at umupo dito sa sulok... ngayon ay 90 degrees!"'
         allHallows2017_c: 'Si Jordyn ay nagsasabi: "Hindi ka na makakatigil ngayon! Magpatuloy!"'
         allHallows2017_d: 'Si Josh ay nagsasabi: "Kailangan mong magsalik sa iyong kakayahan sa pag-code para makumpleto ang palaisipang ito!"'
         allHallows2017_e: 'Si Dani ay nagsasabi: "Hindi ako magaling sa mga paritugma, Subukang gumamit ng repeat na bloke!"'
-        allHallows2017_b: 'Si Baker ay nagsasabi: "Ang Chicago crayo ay gagana lang kapag nasa *berdeng linya*."'
+        allHallows2017_b: 'Si Baker ay nagsasabi: "Ang Chicago crayo ay gagana lang kapag nasa _berdeng linya_."'
         allHallows2017_f: 'Si Amy ay nagsasabi: "Magagawa mo ito! Mag-isip ng hindi pangkaraniwan"'
       artistDebugVideo1_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.
@@ -3906,10 +3946,8 @@ fil:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Dapay ay mayroong 3 mga bloke sa loob ng iyong para malutas ang palaisipang ito.
       course1_artist_loops_challenge1_authored_hint:
-        courseA_artist_loops_challenge1_a: |+
+        courseA_artist_loops_challenge1_a: |-
           Maaari mong gamitin ang mga loop gaya nito para makalikha ng mga pader at bubong. Subukang mag-ulit sa iba-ibang mga bloke.
-
-
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
@@ -3928,25 +3966,32 @@ fil:
         courseA_collector_loops_challenge1_b: Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.
         courseA_collector_loops_challenge1_c: Mayroong 6 na mga batong-hiyas ang nasa kanang gilid ng kuweba, ngunit kailangan mo lang gumalaw at magkolekta ng 5 beses. Alam mo ba kung bakit?
       course1_collector_loops_challenge3_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           Magsimula sa pmamagita ng pag-loop sa mga utos na `move south` at `get treasure`.
           <xml>
           <block type="maze_moveSouth"/><next>
           <block type="collector_collect"/></next>
           </xml>
-        courseB_collector_loops_challenge1_a: |
+        courseB_collector_loops_challenge1_a: |-
           Ang hilagang pattern ay medyo kakaiba kaysa timog na pattern.
           <xml>
           <block type="collector_collect"/><next>
           <block type="maze_moveNorth"/></next>next>
           </xml>
-        courseB_collector_loops_challenge1_c: "Gumalaw pasilakangan nang dalawang beses sa bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\nMaaari mong magawa ito gamit ang 14 na mga bloke lang. I-click para sa isa pang pahiwatig para makita ang solusyon.\n"
+        courseB_collector_loops_challenge1_c: |-
+          Gumalaw pasilakangan nang dalawang beses sa bawat landas.
+          <xml>
+            <block type="maze_moveEast"/><next>
+            <block type="maze_moveEast"/></next>next>
+            </xml>
+          Maaari mong magawa ito gamit ang 14 na mga bloke lang. I-click para sa isa pang pahiwatig para makita ang solusyon.
         courseB_collector_loops_challenge1_d: |-
           Subukan ito!
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -4016,12 +4061,25 @@ fil:
         courseA_playlab_events_challenge1_d: "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Sa wakas, ipakita si Wendel ang Salamangkero kapag na-click mo si Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          Maaari mong patunogin ang robot.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">winpoint</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           Maaari mong mapaungol ang galit na halimaw.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -4047,11 +4105,12 @@ fil:
         courseD_artist_nestedLoops_challenge1_b: Magdagdag ng code para maiguhit ang tatsulok sa loob ng iyong naka-nest na loop. Gamitin ang 120 degree na pagliko para sa iyong tatsulok.
         courseD_artist_nestedLoops_challenge1_c: |-
           Gumamit ng naka-nest na loop:
-          - Ulitin nang 8 beses
-          - iguhit ang octagon
-          - iguhit ang tatsulok
-          - tumalon sa harap nang 50 pixels
-          - lumiko pakanan nang 90 degrees
+
+          -   Ulitin nang 8 beses
+          -   iguhit ang octagon
+          -   iguhit ang tatsulok
+          -   tumalon sa harap nang 50 pixels
+          -   lumiko pakanan nang 90 degrees
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'Ang parihaba ay 200 pixels ang lapad at 100 pixels ang taas. '
       course2_bee_conditionals_challenge1_authored_hint:
@@ -4067,12 +4126,9 @@ fil:
         courseC_harvester_loops_challenge1_a: Huwag isiping subukang ito nang hindi gumagamit ng mga loop!
         courseC_harvester_loops_challenge1_b: Maaari mong ulitin ang `move forward` at `pick corn` nang napakaraming ulit hangga't kailangan mo, pagkatapos `turn right` sa bawat kanto.
       course2_maze_loops_challenge1_authored_hint:
-        courseC_maze_loops_challenge1_c: |-
-          Kung nakaabot ka sa ganito kalayo, kailangan mo lang `turn left` pagkatapos ay `move forward ` nang ilang ulit. Huwag susuko! 
-
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+        courseC_maze_loops_challenge1_c: "Kung nakaabot ka sa ganito kalayo, kailangan mo lang `turn left` pagkatapos ay `move forward` nang ilang ulit. Huwag susuko! \n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
       course2_maze_programming_challenge2_authored_hint:
-        courseC_maze_programming_challenge2_a: "*Kung ipapadala mo ako nang patalikod, maging sobrang mag-ingan na ako ay liliko sa tamang daan!*"
+        courseC_maze_programming_challenge2_a: _Kung ipapadala mo ako nang patalikod, maging sobrang mag-ingan na ako ay liliko sa tamang daan!_
         courseC_maze_programming_challenge2_b: Ang pinakamaikling solusyon ay gumagamit lang nang 5 mga bloke, ngunit ito ay gumagamit nang `repeat` na bloke!
       course2_maze_seq_challenge1_authored_hint:
         courseA_maze_seq_challenge2_a: Subukang bilangin ang mga puwang sa iyong daliri. Tandaan na huwang bilangin ang puwang kung saan ka nagsimula!
@@ -4193,7 +4249,7 @@ fil:
           </block>
           </xml>
       course3_collector_debugging_challenge2_authored_hint:
-        courseD_collector_debugging_challenge2_a: "Magsimula sa pamamagitan ng pagbigay diin sa pagkolekta ng DALAWANG mga hiyas mula sa bawat isa sa unang dalawang mga tumpok.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png)\nGamitin ang mga blokeng ito.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_a: "Magsimula sa pamamagitan ng pagbigay diin sa pagkolekta ng DALAWANG mga hiyas mula sa bawat isa sa unang dalawang mga tumpok.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nGamitin ang mga blokeng ito.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n\n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
       course3_farmer_condLoops_challenge1_authored_hint:
         courseD_farmer_condLoops_challenge1_a: Ang `STEP` na button ay lubhang nakakatulong sa hamon na ito.
       course3_farmer_condLoops_challenge2_authored_hint:
@@ -4205,9 +4261,9 @@ fil:
         courseC_maze_debugging_challenge2_a: Isang paraan para malutas ito ay ang pagdagdag ng mas maraming hakbang pasulong sa pagitan ng mga pagliko.
         courseC_maze_debugging_challenge2_b: Kung ikaw ay hindi makausad, maaari kang magsimula ulit o magtanggal sa lahat ng code at maghanap ng sarili mong paraan!
         courseC_maze_debugging_challenge2_c: |-
-          Mayroong dalawang iba't ibang mga landas ang maaari mong sundin na gumagamit lang ng `move forward, at apat na mga pagliko lang. Kung nakakahanap ka ng daan para magamit ang `repeat` na bloke, maaaring may mas marami pa!
+          Mayroong dalawang iba't ibang mga landas ang maaari mong sundin na gumagamit lang ng `move forward, at apat na mga pagliko lang. Kung nakakahanap ka ng daan para magamit ang`repeat\` na bloke, maaaring may mas marami pa!
 
-          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_artist_variables_challenge2_authored_hint:
         courseF_artist_variables_challenge2_a: 'Ang mga variables ay nakakatulon dahil maaari kang magdagdag sa mga ito sa bawat beses sa pamamagitan ng loop. '
         courseF_artist_variables_challenge2_b: Ang palaisipang ito ay mayroong isang loop na naglilikha sa polygon, isang loop na nag-uulit sa polygon nang `sides` na beses, pagkatapos ay isa pang loop na naggagawa nito ulit pagkatapos magdagdag ng 5 sa `sides`.
@@ -4218,11 +4274,11 @@ fil:
 
           Huwag kalimutang pabalikin ang magsasaka sa pangunahing landas pagkatapos ng pag-aani!
         courseF_bee_fwp_challenge1_d: |-
-          Sa loob ng `for loop` maaaring gugustuhin mong gumawa ng `move forward` pagkatapos ay gumawa ng `get nectar` nang **counter na beses. Pagkatapos ng `for loop`, maaari ka lang gumagawa ng `move backward` nang **length na beses**.
+          Sa loob ng `for loop` maaaring gugustuhin mong gumawa ng `move forward` pagkatapos ay gumawa ng `get nectar` nang **counter na beses. Pagkatapos ng `for loop`, maaari ka lang gumagawa ng `move backward` nang \*\*length na beses**.
 
           Maaaring kakailanganin mong basahin ang pahiwatig nang iilang ulit para maunawaan ito. Ang bahagi na **bold** ay isang pahiwatig tungkol sa kung paano gamitin ang dalawang `repeat` na mga loop na kakailanganin mo.
       course4_bee_fwp_challenge2_authored_hint:
-        courseF_bee_fwp_challenge2_b: "Nauubusan ka ba ng `move forward` na mga bloke?\nSubukang gumamit ng *pangalawang* `for loop` sa iyong pangunahing programa. \n\n**Tandaan:** Mag-ingat na hindi malito sa `counter` at `counter2` sa iyong code."
+        courseF_bee_fwp_challenge2_b: "Nauubusan ka ba ng `move forward` na mga bloke?\nSubukang gumamit ng _pangalawang_ `for loop` sa iyong pangunahing programa. \n\n**Tandaan:** Mag-ingat na hindi malito sa `counter` at `counter2` sa iyong code."
       courseA_artist_loops2_authored_hint:
         courseA_artist_loops2_a: Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type="when_run"/></xml> na bloke para makita kung ano ang mangyayari.
         courseA_artist_loops2_b: Gamitin ang blokeng ito <block type="simple_move_right"/> para malutas ang palaisipang ito.
@@ -4237,43 +4293,46 @@ fil:
         courseA_artist_loops3_b: |-
           Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2018_authored_hint:
         courseA_artist_loops3_a: Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.
         courseA_artist_loops3_b: |-
           Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops3_2019_authored_hint:
         courseA_artist_loops3_a: Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.
         courseA_artist_loops3_b: |-
           Gugustuhin mong gumamit ng bloke gaya nito para malutas ang palaisipang ito.
 
-          ![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops4_authored_hint:
         courseA_artist_loops4_a: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops4_b: |-
-          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
+        courseA_artist_loops4_b: Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
       courseA_artist_loops4_2018_authored_hint:
         courseA_artist_loops4_a: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops4_b: |-
-          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
+        courseA_artist_loops4_b: Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
       courseA_artist_loops4_2019_authored_hint:
         courseA_artist_loops4_a: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops4_b: |-
-          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
+        courseA_artist_loops4_b: Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob ng <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block> na loop.
       courseA_artist_loops5_authored_hint:
         courseA_artist_loops5_a: Subukang gamitin ang natutunan mo tungkol sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!
         courseA_artist_loops5_b: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops5_c: "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+        courseA_artist_loops5_c: |-
+          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          na loop.
       courseA_artist_loops5_2018_authored_hint:
         courseA_artist_loops5_a: Subukang gamitin ang natutunan mo tungkol sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!
         courseA_artist_loops5_b: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops5_c: "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+        courseA_artist_loops5_c: |-
+          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          na loop.
       courseA_artist_loops5_2019_authored_hint:
         courseA_artist_loops5_a: Subukang gamitin ang natutunan mo tungkol sa <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!
         courseA_artist_loops5_b: Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.
-        courseA_artist_loops5_c: "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+        courseA_artist_loops5_c: |-
+          Dahil maaari ka lang gumamit ng isang <xml><block type="simple_move_right"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          na loop.
       courseA_artist_loops6_authored_hint:
         courseA_artist_loops6_a: Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.
         courseA_artist_loops6_b: Kakailanganin mo nang 2 mga bloke sa 2 mga direksyon para malutas ang palaisipang ito.
@@ -4286,12 +4345,17 @@ fil:
       courseA_artist_loops7_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
-        courseA_artist_loops7_c: "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+        courseA_artist_loops7_c: |-
+          Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
+
+          <title name="TIMES">???</title>
+          </block></xml> na loop.
       courseA_artist_loops7_2018_authored_hint:
         courseA_artist_loops7_a: Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
           Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml> na loop.
       courseA_artist_loops7_2019_authored_hint:
@@ -4299,6 +4363,7 @@ fil:
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
           Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml> na loop.
       courseA_artist_loops7_forVideo_authored_hint:
@@ -4306,6 +4371,7 @@ fil:
         courseA_artist_loops7_b: Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.
         courseA_artist_loops7_c: |-
           Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type="controls_repeat">
+
           <title name="TIMES">???</title>
           </block></xml> na loop.
       courseA_artist_loops8_authored_hint:
@@ -4326,10 +4392,7 @@ fil:
         courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
       courseA_artist_loops9_2018_authored_hint:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
-        courseA_artist_loops9_b: |-
-          Ang bloke na idagdag mo ay dapay ilagay sa loob ng 
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
-          </xml> na loop.
+        courseA_artist_loops9_b: "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop."
         courseA_artist_loops9_c: Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern.
       courseA_artist_loops9_2019_authored_hint:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.
@@ -4390,7 +4453,7 @@ fil:
         courseA_collector_loops3_a: Subukang gumamit ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops3_2019_authored_hint:
-        courseA_collector_loops3_a: "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+        courseA_collector_loops3_a: Subukang gumamit ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop!
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops4_authored_hint:
         courseA_collector_loops4_a: Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.
@@ -4519,7 +4582,7 @@ fil:
         courseA_collector_loops_challenge2kp_b: Subukan ang landas na ito para makarating sa isang solusyon.
         courseA_collector_loops_challenge2kp_a: Maaari ka bang gumamit ng mga loop para malutas ang palaisipang ito?
       courseA_collector_preLoops4_authored_hint:
-        courseA_collector_preLoops4_a: "Para makuha ang mga kayamanan, mag-snap ng dalawang ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) mga bloke at isang ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) na bloke sa ilalim ng programa at pindutin ang \"Run\"!"
+        courseA_collector_preLoops4_a: Para makuha ang mga kayamanan, mag-snap ng dalawang ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) mga bloke at isang ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) na bloke sa ilalim ng programa at pindutin ang "Run"!
       courseA_collector_preLoops5_authored_hint:
         courseA_collector_preLoops5_a: Kailangan mong pumunta sa dalawang magkaibang direskyon para makakuha ng kahit isang hiyas!
       courseA_collector_preLoops6_authored_hint:
@@ -4571,7 +4634,7 @@ fil:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -4590,7 +4653,7 @@ fil:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -4609,7 +4672,7 @@ fil:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -4628,7 +4691,7 @@ fil:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -4721,8 +4784,7 @@ fil:
           Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>
           <block type="when_run"/>
           </xml>
-        courseA_maze_seq1_b: |-
-          Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>
+        courseA_maze_seq1_b: 'Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>'
       courseA_maze_seq10_authored_hint:
         courseA_maze_seq10_a: Kung ikaw ay nagkaproblema, subukang isulat muna ang mga hakbang sa isang pirasong papel.
         courseA_maze_seq10_b: Kailanganin mong pumunta sa 3 mga direksyon para malutas ang palaisipang ito.
@@ -4735,11 +4797,15 @@ fil:
       courseA_maze_seq13_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
-        courseA_maze_seq13_c: "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+        courseA_maze_seq13_c: |-
+          Ang mga <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
       courseA_maze_seq13_2018_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
-        courseA_maze_seq13_c: "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+        courseA_maze_seq13_c: |-
+          Ang mga <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy.
       courseA_maze_seq13_2019_authored_hint:
         courseA_maze_seq13_a: Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.
         courseA_maze_seq13_b: Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.
@@ -4751,15 +4817,13 @@ fil:
           Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>
           <block type="when_run"/>
           </xml>
-        courseA_maze_seq1_b: |-
-          Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>
+        courseA_maze_seq1_b: 'Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>'
       courseA_maze_seq1_2019_authored_hint:
         courseA_maze_seq1_a: |-
           Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>
           <block type="when_run"/>
           </xml>
-        courseA_maze_seq1_b: |-
-          Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>
+        courseA_maze_seq1_b: 'Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type="maze_moveWest"/></xml>'
       courseA_maze_seq2_authored_hint:
         courseA_maze_seq2_a: Ang programang ito ay kulang ng 1 bloke. Maaari mo bang matukoy kung alin sa mga ito?
         courseA_maze_seq2_b: Subukang patakbuhin muna ang code para makita kung saan aabot ang ibon. Saan mo ba kailangang pumunta mula doon?
@@ -4903,12 +4967,25 @@ fil:
         courseA_playlab_events_challenge1_c: "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1a_authored_hint:
-        courseA_playlab_events_challenge1_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_b: "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: |-
+          Maaari mong patunogin ang robot.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">winpoint</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge1_c: |-
           Maaari mong mapaungol ang galit na halimaw.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -4930,12 +5007,25 @@ fil:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_authored_hint:
-        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          Maaari mong patunogin ang robot.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">winpoint</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           Maaari mong mapaungol ang galit na halimaw.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -4957,12 +5047,25 @@ fil:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2018_authored_hint:
-        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          Maaari mong patunogin ang robot.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">winpoint</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           Maaari mong mapaungol ang galit na halimaw.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -4984,12 +5087,25 @@ fil:
           </next>
           </block></xml>
       courseA_playlab_events_challenge2_2019_authored_hint:
-        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: |-
+          Maaari mong patunogin ang robot.
+          <xml>
+            <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">6</title>
+              <next>
+
+                    <block type="studio_playSound">
+                      <title name="SOUND">winpoint</title>
+                    </block>
+                  </next>
+
+            </block></xml>
         courseA_playlab_events_challenge2_c: |-
           Maaari mong mapaungol ang galit na halimaw.
 
           <xml>  <block type="studio_whenSpriteClicked">
+
           <title name="SPRITE">5</title>
           <next>
           <block type="studio_setSpriteEmotion">
@@ -5055,7 +5171,7 @@ fil:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5074,7 +5190,7 @@ fil:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5093,7 +5209,7 @@ fil:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5112,7 +5228,7 @@ fil:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -5233,13 +5349,11 @@ fil:
       courseB_collector_loops4_2018_authored_hint:
         courseB_collector_loops4_a: Subukang gamitin ang hakbang na pindutan para matukoy kung saan nagkamali.
         courseB_collector_loops4_b: Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.
-        courseB_collector_loops4_c: |-
-          Si Laurel ay kailangang maglakad pababa at magkolekta ng kayamanan pagkatapos nyang matapos ang `repeat` na loop!
+        courseB_collector_loops4_c: Si Laurel ay kailangang maglakad pababa at magkolekta ng kayamanan pagkatapos nyang matapos ang `repeat` na loop!
       courseB_collector_loops4_2019_authored_hint:
         courseB_collector_loops4_a: Subukang gamitin ang hakbang na pindutan para matukoy kung saan nagkamali.
         courseB_collector_loops4_b: Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.
-        courseB_collector_loops4_c: |-
-          Si Laurel ay kailangang maglakad pababa at magkolekta ng kayamanan pagkatapos nyang matapos ang `repeat` na loop!
+        courseB_collector_loops4_c: Si Laurel ay kailangang maglakad pababa at magkolekta ng kayamanan pagkatapos nyang matapos ang `repeat` na loop!
       courseB_collector_loops5_authored_hint:
         courseB_collector_loops5_a: Gumamit ng higit sa isang loop para magawa ang trabaho.
         courseB_collector_loops5_b: Subukang patakbuhin ang code ng ilang ulit para makita kung ano ang mangyayari.
@@ -5257,14 +5371,12 @@ fil:
       courseB_collector_loops6_2018_authored_hint:
         courseB_collector_loops6_a: Hindi matukong kung saan nagsimula ang pagkakamali? Gamitin ang "Step" na pindutan para magpatakbo sa iyong programa nang paisa-isang bloke.
         courseB_collector_loops6_b: Maaari mong baguhin ang numero nang ilang ulit na pinapatakbo ang repeat loop sa pamamagitan ng pag-click sa "3" at pagpili ng iba't ibang numero.
-        courseB_collector_loops6_c: |-
-          Kailangan mong gamitin ang 3 `repeat` na mga loops para malutas ang palaisipang ito.
+        courseB_collector_loops6_c: Kailangan mong gamitin ang 3 `repeat` na mga loops para malutas ang palaisipang ito.
         courseB_collector_loops6_d: Kung ikaw ay nalito, subukang hatiin ang palaisipan sa 3 mga piraso.
       courseB_collector_loops6_2019_authored_hint:
         courseB_collector_loops6_a: Hindi matukong kung saan nagsimula ang pagkakamali? Gamitin ang "Step" na pindutan para magpatakbo sa iyong programa nang paisa-isang bloke.
         courseB_collector_loops6_b: Maaari mong baguhin ang numero nang ilang ulit na pinapatakbo ang repeat loop sa pamamagitan ng pag-click sa "3" at pagpili ng iba't ibang numero.
-        courseB_collector_loops6_c: |-
-          Kailangan mong gamitin ang 3 `repeat` na mga loops para malutas ang palaisipang ito.
+        courseB_collector_loops6_c: Kailangan mong gamitin ang 3 `repeat` na mga loops para malutas ang palaisipang ito.
         courseB_collector_loops6_d: Kung ikaw ay nalito, subukang hatiin ang palaisipan sa 3 mga piraso.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: Kung ikaw ay nagkaroon ng kahirapan sa palaisipan, subukang iguhit ito sa papel para matulungan kang matukoy ito.
@@ -5282,16 +5394,16 @@ fil:
       courseB_collector_loops8_2019_authored_hint:
         courseB_collector_loops8_challenge_a: Kung hindi mo matukoy kung saan ilagay ang mga repeat na loop, isulat ang code sa bawat hakbang at maghanap ng pattern.
       courseB_collector_loops9_authored_hint:
-        courseB_collector_loops9_a: 'Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.'
+        courseB_collector_loops9_a: Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.
         courseB_collector_loops9_b: Kakailanganin mo nang 3 repeat na mga loop, isa pagkatapos nang isa, para sa solusyong ito.
       courseB_collector_loops9_2018_authored_hint:
-        courseB_collector_loops9_a: 'Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.'
+        courseB_collector_loops9_a: Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.
         courseB_collector_loops9_b: Kakailanganin mo nang 3 repeat na mga loop, isa pagkatapos nang isa, para sa solusyong ito.
       courseB_collector_loops9_2019_authored_hint:
-        courseB_collector_loops9_a: 'Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.'
+        courseB_collector_loops9_a: Para ba itong mahirap? Hatiin ito sa 3 maliliit na problema para mas madali ito sa pakiramdam.
         courseB_collector_loops9_b: Kakailanganin mo nang 3 repeat na mga loop, isa pagkatapos nang isa, para sa solusyong ito.
       courseB_collector_loops_challenge1_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:
 
           <xml>
@@ -5301,13 +5413,20 @@ fil:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.\n"
+        courseB_collector_loops_challenge1_c: |-
+          Gumalaw papuntang Silangan sa pagitan ng bawat landas.
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+          Magagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.
         courseB_collector_loops_challenge1_d: |-
           Subukan ito!
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -5361,7 +5480,7 @@ fil:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2018_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:
 
           <xml>
@@ -5371,13 +5490,20 @@ fil:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.\n"
+        courseB_collector_loops_challenge1_c: |-
+          Gumalaw papuntang Silangan sa pagitan ng bawat landas.
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+          Magagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.
         courseB_collector_loops_challenge1_d: |-
           Subukan ito!
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -5431,7 +5557,7 @@ fil:
           </block>
           </xml>
       courseB_collector_loops_challenge1_2019_authored_hint:
-        courseB_collector_loops_challenge1_b: |
+        courseB_collector_loops_challenge1_b: |-
           Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:
 
           <xml>
@@ -5441,13 +5567,20 @@ fil:
           </next>
           </block>
           </xml>
-        courseB_collector_loops_challenge1_c: "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.\n"
+        courseB_collector_loops_challenge1_c: |-
+          Gumalaw papuntang Silangan sa pagitan ng bawat landas.
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+          Magagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.
         courseB_collector_loops_challenge1_d: |-
           Subukan ito!
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
           <block type="controls_repeat_simplified">
+
           <title name="TIMES">5</title>
           <statement name="DO">
           <block type="maze_moveSouth">
@@ -5522,6 +5655,12 @@ fil:
         courseB_starWars_prog9_a: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
       courseB_starWars_prog9_2019_authored_hint:
         courseB_starWars_prog9_a: Huwag matakot na makagawa ng pagkakamali! Patakbuhin ang code para makita kung ano ang nangyayari, kahit na hindi mo pa nalutas ang palaisipan.
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_maze_debugging2_authored_hint:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging2_2018_authored_hint:
@@ -5569,9 +5708,10 @@ fil:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: "Subukang gumamit ng `jump forward` na bloke para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula ang kasunod. \n\nKung ang iyong parisukat ay 20 pixels ang taas at sila ay 20 pixels ang pagitan, gaano kalayo ba ang kailangan mung talonan?"
       courseD_artist_nestedLoops3_2018_authored_hint:
@@ -5608,21 +5748,30 @@ fil:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: "Kung ang palaisipan ay parang mahirap, subukang gawin ang iyong function nang paunti-unti.  \n\nMagdagdag ng iilang mga bloke, pagkatapos ay subukan ito. Magdagdag pa, pagkatapos ay subukan ulit. Maya-maya, makakarating ka rin doon!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseE_bee_functions6_2018_authored_hint:
@@ -6079,7 +6228,7 @@ fil:
       courseF_artist_for_challenge2_2018_authored_hint:
         courseF_artist_for_challenge2_c: 'Ang `for loop` ay magdadagdag ng 2 mula sa 5 hanggang sa 250. '
         courseF_artist_for_challenge2_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green ay palaging may halaga na `counter`, at blue ay palaging `255 - counter`.
-        courseF_artist_for_challenge2_d: |
+        courseF_artist_for_challenge2_d: |-
           **Solusyon:**
 
           <xml>
@@ -6172,17 +6321,25 @@ fil:
         courseF_artist_for_challenge2_c: 'Ang `for loop` ay magdadagdag ng 2 mula sa 5 hanggang sa 250. '
         courseF_artist_for_challenge2_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green ay palaging may halaga na `counter`, at blue ay palaging `255 - counter`.
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: 'Ito ay isang serye ng mga octagon na may mga gilid na `counter` pixels ang haba. '
         courseF_artist_fwp_challenge1_c: 'Bawat octagon ay tinatawag mula sa loob ng isang `for` na loop na bumababa nang 2 mula sa 200. '
         courseF_artist_fwp_challenge1_d: 'Huwag kalimong lumiko nang 22.5 degrees sa dulo ng bawat iterasyon. '
         courseF_artist_fwp_challenge1_e: Ang parehong kulay ng bawat octagot at ang lapad na pen ay kinokontrol ng `counter` na variable.
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: 'Ito ay isang serye ng mga octagon na may mga gilid na `counter` pixels ang haba. '
         courseF_artist_fwp_challenge1_c: 'Bawat octagon ay tinatawag mula sa loob ng isang `for` na loop na bumababa nang 2 mula sa 200. '
         courseF_artist_fwp_challenge1_d: 'Huwag kalimong lumiko nang 22.5 degrees sa dulo ng bawat iterasyon. '
         courseF_artist_fwp_challenge1_e: Ang parehong kulay ng bawat octagot at ang lapad na pen ay kinokontrol ng `counter` na variable.
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge1a_authored_hint:
         courseF_artist_variables_challenge1_a: 'Ang mga variables ay nakakatulon dahil maaari kang magdagdag sa mga ito sa bawat beses sa pamamagitan ng loop. '
         courseF_artist_variables_challenge1_b: Ang palaisipang ito ay mayroong isang loop na naglilikha sa polygon, isang loop na nag-uulit sa polygon nang `sides` na beses, pagkatapos ay isa pang loop na naggagawa nito ulit pagkatapos magdagdag ng 5 sa `sides`.
@@ -6794,7 +6951,7 @@ fil:
         2-3_Artist_Debugging_8_a: |-
           Ilang beses ba naiulit ang aking hugis?
 
-          Ilang beses ba *dapat* uulitin ang hugis?
+          Ilang beses ba _dapat_ uulitin ang hugis?
 
           Saan mo maaaring mapalitan ito sa loob ng programa?
       grade2_PuppyLoops_6_authored_hint:
@@ -6886,9 +7043,10 @@ fil:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Ang iyong programa ay dapat:
-          - Gamitin ang function
-          - Gumalawa pasulong nang 100 + 75 pixels
-          - Gamitin ang function
+
+          -   Gamitin ang function
+          -   Gumalawa pasulong nang 100 + 75 pixels
+          -   Gamitin ang function
       grade4_artist_functions_challenge_authored_hint:
         Course_4_SCF_1_a: Bawat hexagon ay mayroong 40 pixel na mga gilid.
         Course_4_SCF_1_b: Mayroong 120 pixel na pagtalon sa bawat pagitan ng hexagon sa bawat pahalang na linya.
@@ -6930,7 +7088,7 @@ fil:
         2-3_Artist_1_new_a: Kung gagamit ka ng bloke para mapagalaw ako ng `move forward by 100 pxiels`, ako ay awtomatikong guguhit ng linya.
         2-3_Artist_1_new_b: May problema sa pagliko sa kanto? Gamitin ang `turn right 90 degrees` na bloke.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Para magawa ang mga maliliit na mga anggulo, kailangan mong lumiko sa bawat beses nang *mas malayo* kaysa sa ginawa mo sa parisukat.   '
+        2-3_Artist_6_a: 'Para magawa ang mga maliliit na mga anggulo, kailangan mong lumiko sa bawat beses nang _mas malayo_ kaysa sa ginawa mo sa parisukat.   '
         2-3_Artist_6_b: Dahil ako ay nakaharap na pakanan, ito ay pinakamadaling magsimula sa paggalaw paharap, pagkatapos ay gawin ang pagliko ng pakaliwa para makalikha ng tatsulok.
         2-3_Artist_6_c: Bawat gilid ng tatsulok ay pareho ang haba sa bawat gilid ng parisukat...100 pixels!
       grade4_review_bee1_authored_hint:
@@ -6960,7 +7118,10 @@ fil:
       grade5_artist_functionparameters10_authored_hint:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na loop.
-        specifics: "Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga \"petals\" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.\n    \nAng `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas."
+        specifics: |-
+          Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga "petals" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.
+
+          Ang `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas.
         after: Kapag tapos ka na sa bawat "petal", siguraduhin mong `gumalaw pasulong` ng 60 pixels bago ka makagawa ng 60 degree na rotasyon.
       grade5_artist_variables_freeplay10_authored_hint:
         Course_4_Artist_Vars_8_a: Kung hahatiin mo ang iyong panimulang haba sa bialng ng mga gilid, ang haba ng bawat ay ay mas maikli habang ang bilang ng mga gilid ay pataas ng pataas.

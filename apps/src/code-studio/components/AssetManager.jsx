@@ -242,7 +242,7 @@ export default class AssetManager extends React.Component {
         function(asset) {
           const choose =
             this.props.assetChosen &&
-            this.props.assetChosen.bind(this, asset.filename);
+            this.props.assetChosen.bind(this, asset.filename, asset.timestamp);
 
           return (
             <AssetRow

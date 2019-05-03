@@ -521,3 +521,11 @@ de:
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck
           oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins
           Internet stellt, und erläutern mögliche Konsequenzen.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Bedingungen
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
+          für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
+          einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
+          Punkt" erstellen.

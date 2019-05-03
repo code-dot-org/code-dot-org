@@ -11,23 +11,25 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
   disabledMode: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
-    exceeds: 'exceeded expectations',
-    meets: 'met expectations',
-    approaches: 'approaches expectations',
-    noEvidence: 'no evidence of trying'
+    performanceLevel1: 'exceeded expectations',
+    performanceLevel2: 'met expectations',
+    performanceLevel3: 'approaches expectations',
+    performanceLevel4: 'no evidence of trying'
   },
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true
+  displayKeyConcept: true,
+  latestFeedback: []
 };
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
@@ -35,16 +37,17 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   disabledMode: false,
   rubric: {
     keyConcept: 'This is the Key Concept',
-    exceeds: 'exceeded expectations',
-    meets: 'met expectations',
-    approaches: 'approaches expectations',
-    noEvidence: 'no evidence of trying'
+    performanceLevel1: 'exceeded expectations',
+    performanceLevel2: 'met expectations',
+    performanceLevel3: 'approaches expectations',
+    performanceLevel4: 'no evidence of trying'
   },
   visible: true,
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 
 const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
@@ -55,23 +58,25 @@ const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   user: 1,
   disabledMode: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
-    exceeds: 'exceeded expectations',
-    meets: 'met expectations',
-    approaches: 'approaches expectations',
-    noEvidence: 'no evidence of trying'
+    performanceLevel1: 'exceeded expectations',
+    performanceLevel2: 'met expectations',
+    performanceLevel3: 'approaches expectations',
+    performanceLevel4: 'no evidence of trying'
   },
   visible: true,
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true
+  displayKeyConcept: true,
+  latestFeedback: []
 };
 
 const STUDENT_FEEDBACK_RUBRIC_PROPS = {
@@ -79,16 +84,17 @@ const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   disabledMode: true,
   rubric: {
     keyConcept: 'This is the Key Concept',
-    exceeds: 'exceeded expectations',
-    meets: 'met expectations',
-    approaches: 'approaches expectations',
-    noEvidence: 'no evidence of trying'
+    performanceLevel1: 'exceeded expectations',
+    performanceLevel2: 'met expectations',
+    performanceLevel3: 'approaches expectations',
+    performanceLevel4: 'no evidence of trying'
   },
   visible: true,
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false
+  displayKeyConcept: false,
+  latestFeedback: []
 };
 
 describe('TeacherFeedback', () => {
@@ -110,12 +116,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -125,14 +127,18 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').first();
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(false);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        true
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').first();
+      expect(confirmLevelOneRatioButton.props().disabledMode).to.equal(false);
+      expect(
+        confirmLevelOneRatioButton.props().showFeedbackInputAreas
+      ).to.equal(true);
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(
+        false
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('exceeds');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelOneRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel1'
+      );
+      expect(confirmLevelOneRatioButton.props().rubricValue).to.equal(
         'exceeded expectations'
       );
       wrapper.find('RubricField').forEach(node => {
@@ -153,25 +159,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if teacher is giving feedback, on a level with a rubric, with previous feedback', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...TEACHER_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...TEACHER_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'performanceLevel2',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Previous Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -181,17 +186,23 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(false);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        true
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmLevelOneRatioButton.props().disabledMode).to.equal(false);
+      expect(
+        confirmLevelOneRatioButton.props().showFeedbackInputAreas
+      ).to.equal(true);
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(
+        false
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelOneRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel2'
+      );
+      expect(confirmLevelOneRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
-      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmLevelOneRatioButton.props().currentlyChecked).to.equal(
+        true
+      );
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -210,12 +221,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_NOT_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -225,14 +232,16 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').first();
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        false
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').first();
+      expect(confirmLevelOneRatioButton.props().disabledMode).to.equal(true);
+      expect(
+        confirmLevelOneRatioButton.props().showFeedbackInputAreas
+      ).to.equal(false);
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(true);
+      expect(confirmLevelOneRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel1'
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(true);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('exceeds');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelOneRatioButton.props().rubricValue).to.equal(
         'exceeded expectations'
       );
 
@@ -248,12 +257,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...TEACHER_FEEDBACK_NO_RUBRIC_PROPS} />
       );
 
-      // No past feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -283,12 +288,8 @@ describe('TeacherFeedback', () => {
         <TeacherFeedback {...STUDENT_NO_FEEDBACK_RUBRIC_PROPS} />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: '',
-        performance: null,
         studentId: 1,
-        latestFeedback: [],
         submitting: false
       });
 
@@ -298,14 +299,16 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        false
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmLevelOneRatioButton.props().disabledMode).to.equal(true);
+      expect(
+        confirmLevelOneRatioButton.props().showFeedbackInputAreas
+      ).to.equal(false);
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(true);
+      expect(confirmLevelOneRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel2'
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(true);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelOneRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
 
@@ -317,25 +320,24 @@ describe('TeacherFeedback', () => {
     });
     it('shows the correct components if student is on a level with no rubric, where a comment was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: null,
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: null,
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -358,25 +360,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a comment was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: null,
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: null,
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -386,14 +387,18 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmLevelOneRatioButton.props().disabledMode).to.equal(true);
+      expect(
+        confirmLevelOneRatioButton.props().showFeedbackInputAreas
+      ).to.equal(false);
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(
         false
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelOneRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel2'
+      );
+      expect(confirmLevelOneRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
 
@@ -409,25 +414,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a comment and performance level was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: 'Good work!',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'performanceLevel2',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: 'Good work!',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -437,17 +441,31 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        true
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').at(0);
+      const confirmLevelTwoRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmLevelTwoRatioButton.props().disabledMode).to.equal(true);
+      expect(
+        confirmLevelTwoRatioButton.props().showFeedbackInputAreas
+      ).to.equal(true);
+
+      // The rubric value that was given as feedback should be expanded
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(
+        false
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelTwoRatioButton.props().expandByDefault).to.equal(true);
+
+      expect(confirmLevelTwoRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel2'
+      );
+      expect(confirmLevelTwoRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
-      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmLevelTwoRatioButton.props().currentlyChecked).to.equal(
+        true
+      );
+      expect(confirmLevelOneRatioButton.props().currentlyChecked).to.equal(
+        false
+      );
 
       // Comment
       const confirmCommentArea = wrapper.find('CommentArea').first();
@@ -461,25 +479,24 @@ describe('TeacherFeedback', () => {
 
     it('shows the correct components if student is on a level with a rubric, where a performance level was given by the teacher', () => {
       const wrapper = shallow(
-        <TeacherFeedback {...STUDENT_FEEDBACK_RUBRIC_PROPS} />
+        <TeacherFeedback
+          {...STUDENT_FEEDBACK_RUBRIC_PROPS}
+          latestFeedback={[
+            {
+              comment: '',
+              created_at: '2019-03-26T19:56:53.000Z',
+              id: 5,
+              level_id: 123,
+              performance: 'performanceLevel2',
+              student_id: 1,
+              teacher_name: 'Tim The Teacher'
+            }
+          ]}
+        />
       );
 
-      // Student Has Feedback
       wrapper.setState({
-        comment: '',
-        performance: 'meets',
         studentId: 1,
-        latestFeedback: [
-          {
-            comment: 'Good work!',
-            created_at: '2019-03-26T19:56:53.000Z',
-            id: 5,
-            level_id: 123,
-            performance: 'meets',
-            student_id: 1,
-            teacher_name: 'Tim The Teacher'
-          }
-        ],
         submitting: false
       });
 
@@ -489,17 +506,31 @@ describe('TeacherFeedback', () => {
 
       // Rubric
       expect(wrapper.find('RubricField')).to.have.lengthOf(4);
-      const confirmExceedsRatioButton = wrapper.find('RubricField').at(1);
-      expect(confirmExceedsRatioButton.props().disabledMode).to.equal(true);
-      expect(confirmExceedsRatioButton.props().showFeedbackInputAreas).to.equal(
-        true
+      const confirmLevelOneRatioButton = wrapper.find('RubricField').at(0);
+      const confirmLevelTwoRatioButton = wrapper.find('RubricField').at(1);
+      expect(confirmLevelTwoRatioButton.props().disabledMode).to.equal(true);
+      expect(
+        confirmLevelTwoRatioButton.props().showFeedbackInputAreas
+      ).to.equal(true);
+
+      // The rubric value that was given as feedback should be expanded
+      expect(confirmLevelOneRatioButton.props().expandByDefault).to.equal(
+        false
       );
-      expect(confirmExceedsRatioButton.props().expandByDefault).to.equal(false);
-      expect(confirmExceedsRatioButton.props().rubricLevel).to.equal('meets');
-      expect(confirmExceedsRatioButton.props().rubricValue).to.equal(
+      expect(confirmLevelTwoRatioButton.props().expandByDefault).to.equal(true);
+
+      expect(confirmLevelTwoRatioButton.props().rubricLevel).to.equal(
+        'performanceLevel2'
+      );
+      expect(confirmLevelTwoRatioButton.props().rubricValue).to.equal(
         'met expectations'
       );
-      expect(confirmExceedsRatioButton.props().currentlyChecked).to.equal(true);
+      expect(confirmLevelTwoRatioButton.props().currentlyChecked).to.equal(
+        true
+      );
+      expect(confirmLevelOneRatioButton.props().currentlyChecked).to.equal(
+        false
+      );
 
       // Comment
       expect(wrapper.find('CommentArea')).to.have.lengthOf(0);

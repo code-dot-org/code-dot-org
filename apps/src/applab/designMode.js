@@ -191,8 +191,8 @@ designMode.fontFamilyOptionFromStyle = function(style) {
  * @param name {string}
  * @param value {string}
  */
-designMode.onPropertyChange = function(element, name, value) {
-  designMode.updateProperty(element, name, value);
+designMode.onPropertyChange = function(element, name, value, timestamp) {
+  designMode.updateProperty(element, name, value, timestamp);
   designMode.editElementProperties(element);
 };
 
@@ -203,13 +203,17 @@ designMode.onPropertyChange = function(element, name, value) {
  * @param name
  * @param value
  */
-designMode.updateProperty = function(element, name, value) {
+designMode.updateProperty = function(element, name, value, timestamp) {
   // For labels, we need to remember before we change the value if the element was "fitted" around the text or if it was
   // resized by the user. If it was previously fitted, then we will keep it fitted in the typeSpecificPropertyChange
   // method at the end. If it is not a label, then the return value from getPreChangeData will be null and will be
   // ignored.
   var preChangeData = elementLibrary.getPreChangeData(element, name);
   var handled = true;
+  var cacheBustSuffix = '';
+  if (timestamp) {
+    cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
+  }
   switch (name) {
     case 'id':
       value = value.trim();
@@ -326,7 +330,7 @@ designMode.updateProperty = function(element, name, value) {
       }
 
       var backgroundImage = new Image();
-      backgroundImage.src = assetPrefix.fixPath(value);
+      backgroundImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       element.style.backgroundImage = 'url("' + backgroundImage.src + '")';
 
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -348,7 +352,7 @@ designMode.updateProperty = function(element, name, value) {
         url = assetPrefix.renderIconToString(value, element);
       } else {
         const screenImage = new Image();
-        screenImage.src = assetPrefix.fixPath(value);
+        screenImage.src = `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
         url = screenImage.src;
       }
       element.style.backgroundImage = 'url("' + url + '")';
@@ -364,7 +368,9 @@ designMode.updateProperty = function(element, name, value) {
         element.src = assetPrefix.renderIconToString(value, element);
       } else {
         element.src =
-          value === '' ? '/blockly/media/1x1.gif' : assetPrefix.fixPath(value);
+          value === ''
+            ? '/blockly/media/1x1.gif'
+            : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       }
       break;
     case 'hidden':

@@ -388,6 +388,8 @@ zh-TW:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       behaviors 5_callout:
         behaviors_edit: 添加程式給這個行為。
+      behaviors free play_callout:
+        behaviors_edit: 添加程式給這個行為。
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       course3_bee_debugging_challenge1_callout:

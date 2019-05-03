@@ -22,13 +22,13 @@ hu:
       Text: szöveg
       Picker: Választó
       Comment: Megjegyzés
-      'Variables ': 'Változók '
-      Default: Alapértelmezett
-      Behaviors: Viselkedések
-      Locations: Helyek
-      everythingelse: minden más
       World: Világ
       Sprites: Sprite-ok
+      Behaviors: Viselkedések
+      'Variables ': 'Változók '
+      Default: Alapértelmezett
+      Locations: Helyek
+      everythingelse: minden más
       Location: Helyszín
       numbers: számok
       Numbers: Számok

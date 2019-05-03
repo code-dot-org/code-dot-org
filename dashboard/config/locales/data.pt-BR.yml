@@ -817,6 +817,7 @@ pt-BR:
         teaching_problem_solving: 'Ensinando Fundamentos da CC: Ensinando Resolução
           de Problemas'
         csd_pair_programming: Programação em duplas
+        csd_applab_parameters: Funções com Parâmetros
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

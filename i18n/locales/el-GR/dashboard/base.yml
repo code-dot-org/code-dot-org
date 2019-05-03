@@ -237,10 +237,6 @@ el:
     header:
       finished_hoc: "Ολοκλήρωσα την Ώρα του Κώδικα"
       sign_in_to_save: 'Συνδέσου για να αποθηκεύσεις την πρόοδό σου'
-      free_play:
-        playlab: 'Δημιουργήστε μια εφαρμογή'
-        artist: 'Ζωγραφίστε κάτι'
-        applab: 'Δημιουργήστε μια εφαρμογή'
       course_catalog: "Κατάλογος Μαθημάτων"
       project_gallery: "Έργα"
       help_support: "Βοήθεια και υποστήριξη"
@@ -719,6 +715,8 @@ el:
     csp_variables: 'Μεταβλητές'
     csp_conditionals: 'Συνθήκες'
     csp_functions: 'Συναρτήσεις'
+    csp_lists: 'Λίστες'
+    csp_loops: 'Βρόχοι'
   view_teacher_guide: 'Προβολή Οδηγού Εκπαιδευτικού'
   pd:
     form_labels:

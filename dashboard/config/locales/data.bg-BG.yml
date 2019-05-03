@@ -708,6 +708,7 @@ bg:
         applab_intro_share: App Lab - Споделяне на вашето приложение
         CSF_loops_AB: Повторения
         csd_pair_programming: Програмиране по двойки
+        csd_applab_parameters: Функции с параметри
     callout:
       text:
         drag_blocks: Плъзнете блока за преместване и го поставете под другия блок

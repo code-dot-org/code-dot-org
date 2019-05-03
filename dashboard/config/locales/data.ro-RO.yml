@@ -38,7 +38,7 @@ ro:
         NetSim: Simulator Internet
         Custom: Artist
         CustomStudio: Laborator de Joacă
-        Gamelab: Laborator de jocuri
+        Gamelab: Game Lab
         Spritelab: Laborator Sprite
     trophy:
       name:
@@ -779,6 +779,7 @@ ro:
         teaching_problem_solving: 'Predarea cursului Fundamentele CS: Predarea modalităților
           de rezolvare a problemelor'
         csd_pair_programming: Programare în perechi
+        csd_applab_parameters: Funcții cu Parametrii
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

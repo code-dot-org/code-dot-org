@@ -7,8 +7,6 @@
  * Thank you!
  */
 
-import sinon from 'sinon';
-
 /**
  * We want to be able to have test throw by default on console error/warning, but
  * also be able to allow these calls in specific tests. This method creates two
@@ -16,10 +14,12 @@ import sinon from 'sinon';
  * console.error). The first method - throwEverywhere - causes us to throw any
  * time the console method in question is called in this test scope. The second
  * method - allow - overrides that behavior, allowing calls to the console method.
+ * Note: Intentionally not using sinon for this, to keep test bundle sizes down.
  */
 function throwOnConsoleEverywhere(methodName) {
   let throwing = true;
   let firstInstance = null;
+  let wrappedMethod = null;
 
   return {
     // Method that will stub console[methodName] during each test and throw after
@@ -32,29 +32,30 @@ function throwOnConsoleEverywhere(methodName) {
           testTitle = this.currentTest.title;
         }
 
-        sinon.stub(console, methodName).callsFake(msg => {
+        wrappedMethod = console[methodName];
+        console[methodName] = msg => {
           const prefix = throwing ? '' : '[ignoring]';
-          console[methodName].wrappedMethod(prefix, msg);
+          wrappedMethod.call(console, prefix, msg);
 
           // Store error so we can throw in after. This will ensure we hit a failure
           // even if message was originally thrown in async code
           if (throwing && !firstInstance) {
-            // It seems that format(msg) might be causing calls to console.error itself
-            // Unstub so that those dont go through our stubbed console.error
-            console[methodName].restore();
+            console[methodName] = wrappedMethod;
+            wrappedMethod = null;
 
             firstInstance = new Error(
               `Call to console.${methodName} from "${testTitle}": ${msg}\n${getStack()}`
             );
           }
-        });
+        };
       });
 
       // After the test, throw an error if we called the console method.
       afterEach(function() {
-        if (console[methodName].restore) {
-          console[methodName].restore();
+        if (wrappedMethod) {
+          console[methodName] = wrappedMethod;
         }
+        wrappedMethod = null;
         if (firstInstance) {
           throw new Error(firstInstance);
         }
@@ -65,8 +66,12 @@ function throwOnConsoleEverywhere(methodName) {
     // Method to be called in tests that want console[methodName] to be called without
     // failure
     allow() {
-      beforeEach(() => (throwing = false));
-      afterEach(() => (throwing = true));
+      beforeEach(function() {
+        throwing = false;
+      });
+      afterEach(function() {
+        throwing = true;
+      });
     }
   };
 }

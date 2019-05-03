@@ -69,6 +69,8 @@ en-GB:
     csf_loops: Loops
     csf_variables: Variables
     csp_variables: Variables
+    csp_lists: Lists
+    csp_loops: Loops
   pd:
     form_labels:
       email: Email

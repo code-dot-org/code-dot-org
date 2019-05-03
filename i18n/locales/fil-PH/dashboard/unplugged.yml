@@ -328,3 +328,8 @@ fil:
       DigitalFootprint_2019:
         title: Ang Iyong Digital na Bakas
         desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang digital na yapak o "bakas" na mayroong kahihinatnan.
+      timeforcs_demo_crowdsourcing:
+        title: Pag-crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Mga conditional
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha ako ng itim na baraha, makakapuntos ka."

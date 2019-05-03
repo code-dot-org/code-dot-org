@@ -478,8 +478,13 @@ zh-TW:
         MC_2018_loops: Minecraft 水上巡航 重複直到
         mc_2018_conditionals: Minecraft 水上巡航 條件式
         mc_2018_closing: 'Minecraft: 水上巡航 恭喜'
+        hoc_dance_warmup: 舞蹈派對 - 暖身
+        hoc_dance_events: 舞蹈派對 - 事件（Evnets）
+        hoc_dance_properties: 舞蹈派對 - 屬性（Properties）
+        hoc_dance_congrats: 舞蹈派對 - 還不快動起來！
         lesson_planning: 教學計畫
         csd_pair_programming: 小組編程
+        csd_applab_parameters: 函式帶參數
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

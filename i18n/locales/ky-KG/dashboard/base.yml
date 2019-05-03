@@ -162,6 +162,8 @@ ky:
     csp_variables: 'Өзгөрмөлөр'
     csp_conditionals: 'Шартуулар'
     csp_functions: 'Функциялар'
+    csp_lists: 'Тизмелер'
+    csp_loops: 'Циклдер'
   view_all_units: 'Бардык бирдиктерди көрүү'
   pd:
     form_labels:

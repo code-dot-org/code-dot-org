@@ -51,11 +51,12 @@ class StageExtrasProgressBubble extends Component {
         <div style={{...styles.main, ...styles.hoverOverlay}} />
         <TooltipWithIcon
           tooltipId={tooltipId}
-          icon={'flag'}
+          icon={'flag-checkered'}
           text={i18n.stageExtras()}
           // Currently a stage extra can not also be an assessment so this should always be false
           // TODO (dmcavoy) : When we change the way we mark levels as assessment refactor
           includeAssessmentIcon={false}
+          inMiniRubricExperiment={false}
         />
       </a>
     );

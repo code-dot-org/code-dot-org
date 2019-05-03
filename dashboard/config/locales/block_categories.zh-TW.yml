@@ -20,12 +20,12 @@ zh-TW:
       Comments: 評論
       Category: 類別
       Text: 文字
-      'Variables ': '變數 '
-      Default: 預設值
-      Behaviors: 行為
-      Locations: 座標
       World: 世界
       Sprites: 角色
+      Behaviors: 行為
+      'Variables ': '變數 '
+      Default: 預設值
+      Locations: 座標
       Location: 位置
       numbers: 數字
       Numbers: 數字

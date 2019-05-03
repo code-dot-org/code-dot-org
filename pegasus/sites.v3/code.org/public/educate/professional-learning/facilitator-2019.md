@@ -1,9 +1,8 @@
 ---
 title: Facilitator Development Program
 theme: responsive
+noindex: true
 ---
-
-<meta name=“robots” content=“noindex”>
 
 # Facilitating with Code.org
 
@@ -17,7 +16,7 @@ theme: responsive
 
 ## Change the face of computer science education - become a Code.org facilitator.
 
-Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators. 
+Code.org counts on engaging, committed, and knowledgeable facilitators to develop and support the next generation of computer science educators.
 
 Ready to take your leadership to the next level?
 
@@ -33,7 +32,7 @@ Our online applications take 25-30 minutes to complete, and are not optimized fo
 
 <div class="col-60", style="padding-right:20px;">
 
-Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum. 
+Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver quality workshops on Code.org's curriculum.
 
 <br>
 <br>
@@ -69,7 +68,7 @@ We're seeking candidates who demonstrate the following qualities:
 [col-80]
 
 <h3 style="font-family: 'Gotham 5r', sans-serif">Champion for CS Education</h3>
- 
+
   * Enthusiastic supporter of K-12 CS education
 
 [/col-80]
@@ -180,7 +179,7 @@ When participants apply to the program, they must select a curriculum focus area
 
 Have questions? We have answers!
 
-Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org 
+Check out our <a href="https://docs.google.com/document/d/e/2PACX-1vQzx_dR5g68Zzg7atSIZ_y8_tlSXln8dqBrW0oh1dQkTb6M56cdk3N9ozxgci4vJCdm6h3uwZ4douK4/pub", target=_"blank">FAQs</a> or write to us at facilitators@code.org
 
 ## Apply now!
 

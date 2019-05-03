@@ -30,6 +30,8 @@ hi:
         mc_congrats_share: Minecraft - बधाई
         mc_congrats_no_share: Minecraft - बधाई
         CSF_loops_AB: फंदे
+        hoc_dance_events: डांस पार्टी - इवेंट्स
+        hoc_dance_properties: डांस पार्टी - विशेषताएं
     callout:
       text:
         run: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ

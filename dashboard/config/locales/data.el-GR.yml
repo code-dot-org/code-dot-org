@@ -828,6 +828,7 @@ el:
         hoc_dance_warmup: Πάρτυ Χορού - Ζέσταμα
         hoc_dance_congrats: Πάρτυ Χορού - Συνέχισε το πάρτυ!
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
+        csd_applab_parameters: Συναρτήσεις με παραμέτρους
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

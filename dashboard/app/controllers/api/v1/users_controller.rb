@@ -12,6 +12,13 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user = current_user
   end
 
+  # GET /api/v1/users/<user_id>/school_name
+  def get_school_name
+    render json: {
+      school_name: current_user&.school
+    }
+  end
+
   # GET /api/v1/users/<user_id>/contact_details
   def get_contact_details
     render json: {

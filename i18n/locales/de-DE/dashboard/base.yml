@@ -242,11 +242,6 @@ de:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
       sign_in_to_save: 'Melde dich, an um deinen Fortschritt zu speichern'
-      free_play:
-        playlab: 'Erstelle eine App'
-        artist: 'Zeichne etwas'
-        applab: 'Erstelle eine App'
-        gamelab: 'Ein Game Lab Projekt eröffnen.'
       my_dashboard: "Mein Armaturenbrett"
       course_catalog: "Kurs Katalog"
       project_gallery: "Projekte"
@@ -828,6 +823,8 @@ de:
     csp_variables: 'Variablen'
     csp_conditionals: 'Bedingungen'
     csp_functions: 'Funktionen'
+    csp_lists: 'Listen'
+    csp_loops: 'Schleifen'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."

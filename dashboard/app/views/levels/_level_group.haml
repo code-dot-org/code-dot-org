@@ -70,7 +70,7 @@
             - elsif level_class == "free_response"
               = render partial: 'levels/free_response', locals: {in_level_group: true, level: level, last_attempt: sublevel_last_attempt}
             - elsif level_class == "match"
-              = render partial: 'levels/single_match', locals: {standalone: false, level: level}
+              = render partial: 'levels/single_match', locals: {standalone: false, level: level, last_attempt: sublevel_last_attempt}
 
         - unless @script_level.nil?
           = render partial: 'levels/dialog', locals: {app: app, previous_button: page.page_number > 1, next_button: page.page_number < @total_page_count}

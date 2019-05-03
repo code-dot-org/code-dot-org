@@ -562,3 +562,10 @@ pl:
         title: Twój cyfrowy ślad
         desc: Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie
           online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.
+      timeforcs_demo_crowdsourcing:
+        title: Praca w grupie (Crowdsourcing)
+      timeforcs_demo_conditionals:
+        title: Zdania z warunkami
+        desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty
+          i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
+          punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'

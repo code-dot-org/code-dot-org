@@ -196,10 +196,6 @@ ne:
     header:
       finished_hoc: "I've finished my Hour of Code"
       sign_in_to_save: 'Sign in to save progress'
-      free_play:
-        playlab: 'Make a Play Lab app'
-        artist: 'Draw something'
-        applab: 'Make an App Lab app'
       project_gallery: "Projects"
       educate_hoc: "Hour of Code"
       stats: "Stats"
@@ -701,6 +697,8 @@ ne:
     csp_variables: 'Variables'
     csp_conditionals: 'Conditionals'
     csp_functions: 'Functions'
+    csp_lists: 'Lists'
+    csp_loops: 'Loops'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

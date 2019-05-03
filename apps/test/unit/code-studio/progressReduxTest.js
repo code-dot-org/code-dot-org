@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {ViewType, setViewTypeNonThunk} from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import reducer, {
   initProgress,
   isPerfect,
@@ -27,6 +27,8 @@ import reducer, {
   getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
+import sinon from 'sinon';
+import experiments from '@cdo/apps/util/experiments';
 
 // This is some sample stage data taken a course. I truncated to the first two
 // stages, and also truncated the second stage to the first 3 levels
@@ -36,7 +38,6 @@ const stageData = [
     script_id: 36,
     script_name: 'course3',
     script_stages: 21,
-    freeplay_links: ['playlab', 'artist'],
     id: 264,
     position: 1,
     name: 'Computational Thinking',
@@ -54,7 +55,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
         previous: false,
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: true
       },
       {
         ids: [323],
@@ -65,7 +67,8 @@ const stageData = [
         title: 1,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [322],
@@ -77,7 +80,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
         next: [2, 1],
         is_concept_level: false,
-        bonus: true
+        bonus: true,
+        display_as_unplugged: false
       }
     ],
     lesson_plan_html_url:
@@ -90,7 +94,6 @@ const stageData = [
     script_id: 36,
     script_name: 'course3',
     script_stages: 3,
-    freeplay_links: ['playlab', 'artist'],
     id: 265,
     position: 2,
     name: 'Maze',
@@ -108,7 +111,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
         previous: [1, 3],
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [339],
@@ -119,7 +123,8 @@ const stageData = [
         title: 2,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [341],
@@ -130,7 +135,8 @@ const stageData = [
         title: 3,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       }
     ],
     lesson_plan_html_url:
@@ -347,12 +353,10 @@ describe('progressReduxTest', () => {
       assert.strictEqual(nextState.stageExtrasEnabled, true);
     });
 
+    // The changeViewType exported by viewAsRedux is a thunk that handles some
+    // stuff like updating query param. We just want to test the core action
+    // it ultimately dispatches.
     describe('setViewType', () => {
-      // The setViewType exported by viewAsRedux is a thunk that handles some
-      // stuff like updating query param. We just want the core action it ultimately
-      // dispatches
-      const setViewType = setViewTypeNonThunk;
-
       it('toggles to detail view when setting viewAs to Teacher', () => {
         const state = {
           ...initialState,
@@ -409,63 +413,90 @@ describe('progressReduxTest', () => {
         const status = statusForLevel(level, levelProgress);
         assert.strictEqual(status, LevelStatus.locked);
       });
-    });
 
-    it('returns LevelStatus.attempted for unlocked assessment level', () => {
-      const level = {
-        ids: [5275],
-        uid: '5275_0'
-      };
-      const levelProgress = {
-        '5275': TestResults.UNSUBMITTED_ATTEMPT,
-        '5275_0': TestResults.UNSUBMITTED_ATTEMPT,
-        '5275_1': TestResults.GENERIC_FAIL
-      };
-      const status = statusForLevel(level, levelProgress);
-      assert.strictEqual(status, LevelStatus.attempted);
-    });
+      it('returns LevelStatus.attempted for unlocked assessment level', () => {
+        const level = {
+          ids: [5275],
+          uid: '5275_0'
+        };
+        const levelProgress = {
+          '5275': TestResults.UNSUBMITTED_ATTEMPT,
+          '5275_0': TestResults.UNSUBMITTED_ATTEMPT,
+          '5275_1': TestResults.GENERIC_FAIL
+        };
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.attempted);
+      });
 
-    it('returns LevelStatus.perfect for completed level', () => {
-      const level = {
-        ids: [123]
-      };
-      const levelProgress = {
-        123: TestResults.ALL_PASS
-      };
-      const status = statusForLevel(level, levelProgress);
-      assert.strictEqual(status, LevelStatus.perfect);
-    });
+      it('returns LevelStatus.perfect for completed level', () => {
+        const level = {
+          ids: [123]
+        };
+        const levelProgress = {
+          123: TestResults.ALL_PASS
+        };
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.perfect);
+      });
 
-    it('returns LevelStatus.not_tried for level with no progress', () => {
-      const level = {
-        ids: [123]
-      };
-      const levelProgress = {
-        999: TestResults.ALL_PASS
-      };
-      const status = statusForLevel(level, levelProgress);
-      assert.strictEqual(status, LevelStatus.not_tried);
-    });
+      it('returns LevelStatus.not_tried for level with no progress', () => {
+        const level = {
+          ids: [123]
+        };
+        const levelProgress = {
+          999: TestResults.ALL_PASS
+        };
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.not_tried);
+      });
 
-    it('returns LevelStatus.locked for a locked peer_review stage', () => {
-      const level = {
-        kind: LevelKind.peer_review,
-        locked: true
-      };
-      const levelProgress = {};
-      const status = statusForLevel(level, levelProgress);
-      assert.strictEqual(status, LevelStatus.locked);
-    });
+      it('returns LevelStatus.locked for a locked peer_review stage', () => {
+        const level = {
+          kind: LevelKind.peer_review,
+          locked: true
+        };
+        const levelProgress = {};
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.locked);
+      });
 
-    it('returns LevelStatus.perfect for a completed peer_review stage', () => {
-      const level = {
-        kind: LevelKind.peer_review,
-        locked: false,
-        status: LevelStatus.perfect
-      };
-      const levelProgress = {};
-      const status = statusForLevel(level, levelProgress);
-      assert.strictEqual(status, LevelStatus.perfect);
+      it('returns LevelStatus.perfect for a completed peer_review stage', () => {
+        const level = {
+          kind: LevelKind.peer_review,
+          locked: false,
+          status: LevelStatus.perfect
+        };
+        const levelProgress = {};
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.perfect);
+      });
+      // it('returns LevelStatus.completed_assessment for assessment level when experiment is on', () => {
+      //   sinon.stub(experiments, 'isEnabled').returns(true);
+      //   const level = {
+      //     ids: [123],
+      //     kind: LevelKind.assessment
+      //   };
+      //   const levelProgress = {
+      //     123: TestResults.ALL_PASS
+      //   };
+      //   const status = statusForLevel(level, levelProgress);
+      //   assert.strictEqual(status, LevelStatus.completed_assessment);
+      //   experiments.isEnabled.restore();
+      // });
+
+      it('does not return LevelStatus.completed_assessment for assessment level when experiment is off', () => {
+        sinon.stub(experiments, 'isEnabled').returns(false);
+        const level = {
+          ids: [123],
+          kind: LevelKind.assessment
+        };
+        const levelProgress = {
+          123: TestResults.ALL_PASS
+        };
+        const status = statusForLevel(level, levelProgress);
+        assert.strictEqual(status, LevelStatus.perfect);
+        experiments.isEnabled.restore();
+      });
     });
   });
 
@@ -740,12 +771,14 @@ describe('progressReduxTest', () => {
               {
                 kind: LevelKind.unplugged,
                 title: 'Unplugged Activity',
-                ids: [123]
+                ids: [123],
+                display_as_unplugged: true
               },
               {
                 kind: LevelKind.puzzle,
                 title: 1,
-                ids: [124]
+                ids: [124],
+                display_as_unplugged: false
               }
             ]
           }

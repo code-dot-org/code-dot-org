@@ -211,10 +211,6 @@ sv:
     header:
       finished_hoc: "Jag är klar med min Kodtimme"
       sign_in_to_save: 'Logga in för att spara framsteg'
-      free_play:
-        playlab: 'Skapa en App'
-        artist: 'Rita något'
-        applab: 'Skapa en App'
       project_gallery: "Projekt"
       sections: "Avsnitt"
       help_support: "Hjälp och support"
@@ -750,6 +746,8 @@ sv:
     csp_variables: 'variabler'
     csp_conditionals: 'Villkor'
     csp_functions: 'funktioner'
+    csp_lists: 'Listor'
+    csp_loops: 'loopar'
   hoc_download:
     capsule_title: 'Har du Internet?'
     instructions_headline: 'Inget Internet?'

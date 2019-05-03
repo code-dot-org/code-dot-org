@@ -46,7 +46,7 @@ cs:
           pootočit o 45 stupňů doleva!
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Pamatuj, chceš udělat ovládací tlačítka 10 pixelů
-          *širší* ...tak nezapomeň **přidat** 10 k číslu, které se mění.
+          _širší_ ...tak nezapomeň **přidat** 10 k číslu, které se mění.
         2-3_Artist_Debugging_10_b: |-
           **Pokus a omyl je zde dobrá cesta!**
 
@@ -68,7 +68,7 @@ cs:
         2-3_Artist_Debugging_8_a: |-
           Kolikrát se můj tvar opakuje?
 
-          Kolikrát se *má* opakovat?
+          Kolikrát se _má_ opakovat?
 
           Kde to můžeš v programu změnit?
       2-3 Artist Debugging 9_authored_hint:
@@ -101,15 +101,17 @@ cs:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Váš program by měl:
-          - použít funkci
-          - posunout se vpřed o 100 + 75 pixelů
-          - použít funkci
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Váš program by měl:
-          - použít funkci
-          - posunout se vpřed o 100 + 75 pixelů
-          - použít funkci
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
       2-3 Artist Functions 3 a_authored_hint:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Functions 3_authored_hint:
@@ -180,10 +182,11 @@ cs:
           Proto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne.
         2-3_Artist_Loops_New_13_b: |-
           Pro každý diamant umělec:
-          - posun vpřed
-          - otočit vpravo o 120 stupňů
-          - posun vpřed
-          - otočit vpravo o 60 stupňů
+
+          -   posun vpřed
+          -   otočit vpravo o 120 stupňů
+          -   posun vpřed
+          -   otočit vpravo o 60 stupňů
 
           A pak celé znovu!
       2-3 Artist Loops New 9_authored_hint:
@@ -202,7 +205,7 @@ cs:
         2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
       2-3 Artist Nested Loops 5_authored_hint:
         2-3_Artist_Nested_Loops_5_a: |-
-          Zkuste použít blok `skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
+          Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
       2-3 Artist Nested Loops 7_authored_hint:
@@ -214,16 +217,30 @@ cs:
         2-3_Artist_Nested_Loops_9_a: |-
           Potřebujete pomoc s nalezením správného úhlu?
 
-          ** 360 / 12 = 30 **
+          \*\* 360 / 12 = 30 \*\*
       2-3 Bee Conditionals 14_authored_hint:
         2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
           s červenou květinou úplně stejně jako s fialovou květinou!
         2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
           jak použít blok `opakuj` abys zmenšil kód?
-        2-3_Bee_Conditionals_14_c: "Zkus to rozložit na dva samostatné úkoly:\n\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1)
-          Získat nektar 3 krát\n  - Posun vpřed 5 krát\n  - Zkontroluj, jestli je
-          tam nektar: pokud ano, získej ho\n  - Otoč se doleva\n  \n2) Vyrob med\n
-          \ - Posuň se vpřed 2 krát\n  - Vyrob dva medy"
+        2-3_Bee_Conditionals_14_c: |-
+          Zkus to rozložit na dva samostatné úkoly:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Získat nektar 3 krát
+
+          2.  Posun vpřed 5 krát
+
+          3.  Zkontroluj, jestli je tam nektar: pokud ano, získej ho
+
+          4.  Otoč se doleva
+
+          5.  Vyrob med
+
+          6.  Posuň se vpřed 2 krát
+
+          7.  Vyrob dva medy
       2-3 Bee Conditionals 15_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
           and mohou se změnit pokaždé, když spustíš program.'
@@ -306,8 +323,8 @@ cs:
       2-3 Maze Loops 17_authored_hint:
         2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
-        2-3_Maze_Loops_17_b: Zmizel vám úvodní kód? Klikněte na `začít znovu ' a vrátí
-          se zpátky!
+        2-3_Maze_Loops_17_b: Zmizel vám úvodní kód? Klikněte na \`začít znovu ' a
+          vrátí se zpátky!
       2-3 Maze Loops 18_authored_hint:
         2-3_Maze_Loops_18_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
@@ -331,11 +348,11 @@ cs:
         4-5_Artist_3_a: |-
           Pokud má záhon obvod 600 pixelů a dvě ze stran jsou dlouhé 200 pixelů, zde je návod, jak zjistit délku zbývajících stran:
 
-          ** 600 - 200 - 200 = 200 **
+          \*\* 600 - 200 - 200 = 200 \*\*
 
           To znamená, že obě kratší strany mají dohromady 200 pixelů.
 
-          ** Co znamená 200/2? **
+          \*\* Co znamená 200/2? \*\*
       4-5 Artist 4_authored_hint:
         4-5_Artist_4_a: |-
           V kruhu je 360 stupňů!
@@ -345,23 +362,22 @@ cs:
         4-5_Artist_5_a: |-
           Metoda pokus / omyl je skvělá, ale problém lze také vyřešit rozdělením úhlu 90 stupňů na třetiny.
 
-          ** 90 / 3 = _____ **
+          \*\* 90 / 3 = **\_** \*\*
       4-5 Artist 7_authored_hint:
         4-5_Artist_7_a: 'Který úhel je nejmenší? V jakém úhlu stojí Malíř? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké
-          strany musí být celkem:\n\n** 800 - 240 - 240 = 320 **\n\nCo znamená **
-          320/2 **? "
+          strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená
+          \\*\\* 320/2 \\*\\*? "
         4-5_Artist_8_b: |-
           Tento obrázek lze nakreslit dvěma způsoby!
-          - Nakreslete dva obdélníky, které jsou ** 120 ** dlouhé a ** 160 ** vysoké, s překrývající se stranou
 
-          - Nakreslete jeden obdélník, který je ** 240 ** dlouhý a ** 160 ** vysoký, potom přidejte prostřední čáru.
+          -   Nakreslete dva obdélníky, které jsou \*\* 120 \*\* dlouhé a \*\* 160 \*\* vysoké, s překrývající se stranou
+
+          -   Nakreslete jeden obdélník, který je \*\* 240 \*\* dlouhý a \*\* 160 \*\* vysoký, potom přidejte prostřední čáru.
       4-5 Artist 9_authored_hint:
-        4-5_Artist_9_a: 'Když je trojúhelník rovnostranný, jsou všechny jeho strany
+        4-5_Artist_9_a: Když je trojúhelník rovnostranný, jsou všechny jeho strany
           a všechny úhly stejné.
-
-'
         4-5_Artist_9_b: Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte,
           že do každé nové pozice musíte skočit.
       4-5 Artist Assessment 1_authored_hint:
@@ -384,14 +400,14 @@ cs:
           O kolik stupňů musí být otočen, aby se postavil rovně?
       4-5 Bee Conditionals 4_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       4-5 Bee Conditionals 5_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       4-5 Bee Conditionals 6_authored_hint:
         4-5 Bee Conditionals 6_a: Tuto hádanku můžete vyřešit pouze s bloky v pracovním
           prostoru. V jakém pořadí by měly následovat?
@@ -416,37 +432,42 @@ cs:
           jeho poloviční délku před otočkou a kreslením dalšího čtverce.
         Course_4_Artist_Inspire_b: Každý čtverec a skok se opakuje čtyřikrát ( s otočkou
           vlevo mezi ) k nakreslení celého větrníku kola.
+      Course 4 SCF 3_authored_hint:
+        Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Zajisti, aby se tanečník zobrazil na obrazovce.
 
-          *Tato úroveň končí po 4 taktech.*
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
         challenges: |-
           **Volitelné výzvy**
-          * Zvol jinou píseň k přehrání.
-          * Zvol jiného tanečníka, který vypadá jako los!
-          * Přejmenuj tanečníka.
+
+          -   Zvol jinou píseň k přehrání.
+          -   Zvol jiného tanečníka, který vypadá jako los!
+          -   Přejmenuj tanečníka.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Tanečník musí po 4 taktech přejít na nový pohyb.
 
-          *Tato úroveň končí po 8 taktech.*
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+          -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -455,63 +476,63 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Potřebuješ mít alespoň dva tanečníky.
+          -   Potřebuješ mít alespoň dva tanečníky.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
-          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+          -   Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          -   Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Dva tanečníci musí mít velikost jinou než 100.
+          -   Dva tanečníci musí mít velikost jinou než 100.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Změň odstín nejméně jednoho tanečníka.
+          -   Změň odstín nejméně jednoho tanečníka.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+          -   Musí se změnit vlastnosti dvou nebo více tanečníků.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+          -   Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
-          Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+        voyage_aquatic_10a: Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak je můžeš využít, aby ses dostal skrz oceánský monument?
       CourseE_HOC 2018 Level_7a_authored_hint:
         aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
       CourseE_HOC 2018 Level_9b_authored_hint:
@@ -521,9 +542,9 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -532,9 +553,9 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -542,45 +563,50 @@ cs:
       Dance_Party_01_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Zajisti, aby se tanečník zobrazil na obrazovce.
 
-          *Tato úroveň končí po 4 taktech.*
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
         challenges: |-
           **Volitelné výzvy**
-          * Zvol jinou píseň k přehrání.
-          * Zvol jiného tanečníka, který vypadá jako los!
-          * Přejmenuj tanečníka.
+
+          -   Zvol jinou píseň k přehrání.
+          -   Zvol jiného tanečníka, který vypadá jako los!
+          -   Přejmenuj tanečníka.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Zajisti, aby se tanečník zobrazil na obrazovce.
 
-          *Tato úroveň končí po 4 taktech.*
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
         challenges: |-
           **Volitelné výzvy**
-          * Zvol jinou píseň k přehrání.
-          * Zvol jiného tanečníka, který vypadá jako los!
-          * Přejmenuj tanečníka.
+
+          -   Zvol jinou píseň k přehrání.
+          -   Zvol jiného tanečníka, který vypadá jako los!
+          -   Přejmenuj tanečníka.
       Dance_Party_02_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Tanečník musí po 4 taktech přejít na nový pohyb.
 
-          *Tato úroveň končí po 8 taktech.*
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_03_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+          -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       Dance_Party_04_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -589,98 +615,101 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Potřebuješ mít alespoň dva tanečníky.
+          -   Potřebuješ mít alespoň dva tanečníky.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
-          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+          -   Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          -   Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
       Dance_Party_08_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Dva tanečníci musí mít velikost jinou než 100.
+          -   Dva tanečníci musí mít velikost jinou než 100.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Změň odstín nejméně jednoho tanečníka.
+          -   Změň odstín nejméně jednoho tanečníka.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_1_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Zajisti, aby se tanečník zobrazil na obrazovce.
 
-          *Tato úroveň končí po 4 taktech.*
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
         challenges: |-
           **Volitelné výzvy**
-          * Zvol jinou píseň k přehrání.
-          * Zvol jiného tanečníka, který vypadá jako los!
-          * Přejmenuj tanečníka.
+
+          -   Zvol jinou píseň k přehrání.
+          -   Zvol jiného tanečníka, který vypadá jako los!
+          -   Přejmenuj tanečníka.
       Dance_Party_10_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+          -   Musí se změnit vlastnosti dvou nebo více tanečníků.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_11_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
+          -   Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_2_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Tanečník musí po 4 taktech přejít na nový pohyb.
 
-          *Tato úroveň končí po 8 taktech.*
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
       Dance_Party_3_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+          -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       Dance_Party_4_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -689,33 +718,33 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+          -   Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Volitelná výzva**
 
-          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
-          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+          -   Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          -   Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
       Dance_Party_8_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Dva tanečníci musí mít velikost jinou než 100.
+          -   Dva tanečníci musí mít velikost jinou než 100.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Změň odstín nejméně jednoho tanečníka.
+          -   Změň odstín nejméně jednoho tanečníka.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       Function intro Ryan_authored_hint:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
@@ -723,8 +752,8 @@ cs:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
-          Jak je můžeš využít, aby ses dostal skrz oceánský monument?\n\n"
+        voyage_aquatic_10a: Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Jak je můžeš využít, aby ses dostal skrz oceánský monument?
       HOC 2018 Level_7a_authored_hint:
         aquatic7: Můžeš použít bloky "pokud je cesta", aby ti pomohly otočit se doprava.
       HOC 2018 Level_9b_authored_hint:
@@ -733,34 +762,37 @@ cs:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Zajisti, aby se tanečník zobrazil na obrazovce.
 
-          *Tato úroveň končí po 4 taktech.*
+          -   Zajisti, aby se tanečník zobrazil na obrazovce.
+
+          _Tato úroveň končí po 4 taktech._
         challenges: |-
           **Volitelné výzvy**
-          * Zvol jinou píseň k přehrání.
-          * Zvol jiného tanečníka, který vypadá jako los!
-          * Přejmenuj tanečníka.
+
+          -   Zvol jinou píseň k přehrání.
+          -   Zvol jiného tanečníka, který vypadá jako los!
+          -   Přejmenuj tanečníka.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Tanečník musí po 4 taktech přejít na nový pohyb.
 
-          *Tato úroveň končí po 8 taktech.*
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
+          -   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
+          -   Musíš vynutit změnu efektu pozadí někdy během sedmého taktu písně.
 
-          *Tato úroveň končí po 10 taktech.*
+          _Tato úroveň končí po 10 taktech._
         challenges: |-
           **Volitelná výzva**
 
@@ -769,54 +801,54 @@ cs:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
+          -   Tanečník musí provádět různé pohyby během prvních 12 taktů písně.
 
-          *Tato úroveň končí po 12 taktech.*
+          _Tato úroveň končí po 12 taktech._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Volitelná výzva**
 
-          * Přidej třetího tanečníka (nebo tolik, kolik chceš!)
-          * Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
+          -   Přidej třetího tanečníka (nebo tolik, kolik chceš!)
+          -   Přiměj všechny tanečníky provádět během různých bodů písně různé pohyby.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Dva tanečníci musí mít velikost jinou než 100.
+          -   Dva tanečníci musí mít velikost jinou než 100.
 
-          *Tato úroveň končí po 6 taktech.*
+          _Tato úroveň končí po 6 taktech._
         challenges: |-
           **Volitelná výzva**
 
-          * Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
+          -   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Změň odstín nejméně jednoho tanečníka.
+          -   Změň odstín nejméně jednoho tanečníka.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Musí se změnit vlastnosti dvou nebo více tanečníků.
+          -   Musí se změnit vlastnosti dvou nebo více tanečníků.
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       HOC Dance make group_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
 
-          * Buď prostě kreativní!
+          -   Buď prostě kreativní!
 
-          *Tato úroveň končí po 8 taktech.*
+          _Tato úroveň končí po 8 taktech._
       MC Agent Freeplay_authored_hint:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
@@ -911,9 +943,9 @@ cs:
           Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení
           této hádanky.
       MC_HOC_2017_06_Cole_authored_hint:
-        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?
       MC_HOC_2017_06_Cole_2019_authored_hint:
-        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by *měl* proběhnout?
+        MC_HOC_2017_06_Cole_a: Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Zkuste do cyklu „opakovat“ vložit více pokynů!
       MC_HOC_2017_07_Cole_authored_hint:
@@ -972,9 +1004,10 @@ cs:
       Ryan_Demo_authored_hint:
         validation: |-
           **Jak splním tuto úroveň?**
-          * Tanečník musí po 4 taktech přejít na nový pohyb.
 
-          *Tato úroveň končí po 8 taktech.*
+          -   Tanečník musí po 4 taktech přejít na nový pohyb.
+
+          _Tato úroveň končí po 8 taktech._
       aE3_authored_hint:
         aE3_d: Pokud se váš kód stane příliš zmateným, můžete vždy kliknout na tlačítko
           "Začít znovu" a zkuste to od začátku!
@@ -987,11 +1020,16 @@ cs:
       aE4_authored_hint:
         aE4_d: Pokud se váš kód stane příliš zmateným, můžete vždy kliknout na tlačítko
           "Začít znovu" a zkuste to od začátku!
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       course2_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
 
           <xml>  <block type="bee_whileNectarAmount">
+
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
@@ -1019,7 +1057,7 @@ cs:
         courseC_maze_loops_challenge1_c: |-
           Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
 
-          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course3_artist_concept_challenge1_authored_hint:
         courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku
           80 pixelů a otočka vpravo je o 120 stupňů. '
@@ -1068,7 +1106,7 @@ cs:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1087,7 +1125,7 @@ cs:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1106,7 +1144,7 @@ cs:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1125,7 +1163,7 @@ cs:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1272,7 +1310,7 @@ cs:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1291,7 +1329,7 @@ cs:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1310,7 +1348,7 @@ cs:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1329,7 +1367,7 @@ cs:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -1437,6 +1475,12 @@ cs:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2019_authored_hint:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2018_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_flappy_events1_2019_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_maze_loops6_authored_hint:
         courseC_maze_loops6_b: |-
           Chcete-li umístit více bloků do smyčky, stačí přetáhnout blok `opakování` do pracovního prostoru a pak do něj přetáhnout všechny bloky z původního programu.
@@ -1469,44 +1513,46 @@ cs:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Váš program by měl:
-          - použít funkci
-          - posunout se vpřed o 100 + 75 pixelů
-          - použít funkci
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
       courseD_artist_nestedLoops3_authored_hint:
         courseD_artist_nestedLoops3_a: |-
-          Zkuste použít blok `skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
+          Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
       courseD_artist_nestedLoops3_2018_authored_hint:
         courseD_artist_nestedLoops3_a: |-
-          Zkuste použít blok `skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
+          Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
       courseD_artist_nestedLoops3_2019_authored_hint:
         courseD_artist_nestedLoops3_a: |-
-          Zkuste použít blok `skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
+          Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
       courseD_bee_conditionals8_authored_hint:
         courseD_bee_conditionals8_a: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       courseD_bee_conditionals8_2018_authored_hint:
         courseD_bee_conditionals8_a: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       courseD_bee_conditionals8_2019_authored_hint:
         courseD_bee_conditionals8_a: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       courseD_bee_conditionals_challenge2_authored_hint:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
 
           <xml>  <block type="bee_whileNectarAmount">
+
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
@@ -1518,6 +1564,7 @@ cs:
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
 
           <xml>  <block type="bee_whileNectarAmount">
+
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
@@ -1529,6 +1576,7 @@ cs:
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
 
           <xml>  <block type="bee_whileNectarAmount">
+
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
@@ -1540,6 +1588,7 @@ cs:
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
 
           <xml>  <block type="bee_whileNectarAmount">
+
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>                    <statement name="DO">
@@ -1574,9 +1623,16 @@ cs:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Váš program by měl:
-          - použít funkci
-          - posunout se vpřed o 100 + 75 pixelů
-          - použít funkci
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
+      courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2018_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseE_artist_functions8_2019_authored_hint:
+        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_bee_functions6_authored_hint:
         courseE_bee_functions6_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
@@ -1652,16 +1708,28 @@ cs:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_fwp_challenge2_2018_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables_4_authored_hint:
+        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_bee_conditionals8_authored_hint:
         courseF_bee_conditionals8_a: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       courseF_bee_conditionals8_2018_authored_hint:
         courseF_bee_conditionals8_a: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       courseF_bee_functions6_2018_authored_hint:
         courseF_bee_functions6_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
@@ -1712,7 +1780,7 @@ cs:
         2-3_Artist_Debugging_8_a: |-
           Kolikrát se můj tvar opakuje?
 
-          Kolikrát se *má* opakovat?
+          Kolikrát se _má_ opakovat?
 
           Kde to můžeš v programu změnit?
       grade2_PuppyLoops_6_authored_hint:
@@ -1725,8 +1793,8 @@ cs:
       grade2_PuppyLoops_7_authored_hint:
         2-3_Maze_Loops_17_a: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
-        2-3_Maze_Loops_17_b: Zmizel vám úvodní kód? Klikněte na `začít znovu ' a vrátí
-          se zpátky!
+        2-3_Maze_Loops_17_b: Zmizel vám úvodní kód? Klikněte na \`začít znovu ' a
+          vrátí se zpátky!
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Tip: Každý vous je dlouhý 75 pixelů.'
       grade2_PuppyLoops_9_authored_hint:
@@ -1744,19 +1812,19 @@ cs:
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
       grade3_ConditionalsElse_4_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade3_ConditionalsElse_5_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Těžko najít způsob, jak vyzrát na bloky? Zkus zacházet
           s červenou květinou úplně stejně jako s fialovou květinou!
@@ -1809,9 +1877,9 @@ cs:
         2-3_Bee_Loops_3_a: Uvnitř své smyčky bys měl mít 6 bloků.
       grade3_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade3_maze_loops2_authored_hint:
         grade3_maze_loops2_b: Pokud je těžké opakující se vzor hned rozpoznat, nakódujte
           nejprve vše bez opakování a poté najděte, co se v kódu opakuje.
@@ -1826,22 +1894,23 @@ cs:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Váš program by měl:
-          - použít funkci
-          - posunout se vpřed o 100 + 75 pixelů
-          - použít funkci
+
+          -   použít funkci
+          -   posunout se vpřed o 100 + 75 pixelů
+          -   použít funkci
       grade4_artist_nestedLoops_challenge2_authored_hint:
         Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka
           vpravo je o 120 stupňů. '
       grade4_bee_conditionals_quantum4_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade4_bee_conditionals_quantum5_authored_hint:
         remember_quantum: |-
-          ** Pamatujte: ** Tato hádanka se mění pokaždé, když je spuštěna.
+          \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
-          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo` if / else`).
+          K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
       grade4_bee_functions7_authored_hint:
         2-3_Bee_Functions_8_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.

@@ -457,6 +457,7 @@ fil:
         CSF_harvester_loops_K1: Mga Loops sa Harvester
         CSF_loops_AB: Mga loop
         csd_pair_programming: Pair programming
+        csd_applab_parameters: Mga function na meron mga parameter
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

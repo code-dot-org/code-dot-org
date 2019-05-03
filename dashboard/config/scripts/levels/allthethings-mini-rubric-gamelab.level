@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-03-28T20:18:54.000Z",
+  "created_at": "2019-03-29T20:07:34.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -187,10 +187,6 @@
     "instructions_important": "false",
     "long_instructions": "\r\nRun\r\nThis level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test gamelab levels (By design, gamelab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "rubric_key_concept": "Key Concept",
-    "rubric_exceeds": "Did x, y, and z.",
-    "rubric_meets": "Did x and y",
-    "rubric_approaches": "Did x or y",
-    "rubric_no_evidence": "Did not do x, y or z",
     "mini_rubric": "true",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
@@ -206,6 +202,10 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
+    "rubric_performance_level_1": "Did x, y, and z.",
+    "rubric_performance_level_2": "Did x and y",
+    "rubric_performance_level_3": "Did x or y",
+    "rubric_performance_level_4": "Did not do x, y or z",
     "preload_asset_list": null
   },
   "published": true,
