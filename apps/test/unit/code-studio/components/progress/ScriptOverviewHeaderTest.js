@@ -50,7 +50,9 @@ const fakeTeacherAndStudentAnnouncement = {
 
 describe('ScriptOverviewHeader', () => {
   it('renders', () => {
-    shallow(<ScriptOverviewHeader {...defaultProps} />);
+    shallow(<ScriptOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
   });
 
   it('includes a PlcHeader if it has plcHeaderProps', () => {
@@ -61,18 +63,23 @@ describe('ScriptOverviewHeader', () => {
           unitName: 'foo',
           courseViewPath: '/s/my-course'
         }}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(wrapper.find('PlcHeader').length, 1);
   });
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
-    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />);
+    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
     assert.equal(wrapper.find('PlcHeader').length, 0);
   });
 
   it('has no notifications by default', () => {
-    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />);
+    const wrapper = shallow(<ScriptOverviewHeader {...defaultProps} />, {
+      disableLifecycleMethods: true
+    });
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
       0
@@ -85,7 +92,8 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -98,7 +106,8 @@ describe('ScriptOverviewHeader', () => {
       <ScriptOverviewHeader
         {...defaultProps}
         announcements={[fakeOldTeacherAnnouncement]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -112,7 +121,8 @@ describe('ScriptOverviewHeader', () => {
         {...defaultProps}
         viewAs={ViewType.Student}
         announcements={[fakeOldTeacherAnnouncement]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -128,7 +138,8 @@ describe('ScriptOverviewHeader', () => {
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
         announcements={[fakeTeacherAnnouncement]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -146,7 +157,8 @@ describe('ScriptOverviewHeader', () => {
           fakeTeacherAnnouncement,
           fakeTeacherAndStudentAnnouncement
         ]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -163,7 +175,8 @@ describe('ScriptOverviewHeader', () => {
           fakeTeacherAndStudentAnnouncement,
           fakeTeacherAnnouncement
         ]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -188,7 +201,8 @@ describe('ScriptOverviewHeader', () => {
         isVerifiedTeacher={false}
         viewAs={ViewType.Student}
         announcements={[fakeStudentAnnouncement]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -208,7 +222,8 @@ describe('ScriptOverviewHeader', () => {
           fakeTeacherAndStudentAnnouncement,
           fakeTeacherAnnouncement
         ]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     assert.equal(
       wrapper.find('ScriptAnnouncements').props().announcements.length,
@@ -258,7 +273,8 @@ describe('ScriptOverviewHeader', () => {
         scriptName="coursea-2018"
         versions={versions}
         locale="Italian"
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
