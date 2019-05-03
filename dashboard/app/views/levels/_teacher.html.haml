@@ -11,11 +11,6 @@
       .non-scrollable-wrapper
         -# This is rendered into by react
         #teacher-panel-viewas
-        - if @user
-          .students.hide-as-student
-            %h4= t('teacher.panel.student')
-            - unless @section.nil? || @user.nil?
-              = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
         - if @user_level
           .user_level
             .level

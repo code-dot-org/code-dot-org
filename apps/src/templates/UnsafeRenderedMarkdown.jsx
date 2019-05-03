@@ -6,10 +6,18 @@ import Parser from '@code-dot-org/redactable-markdown';
 import expandableImages from './plugins/expandableImages';
 import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 import stripStyles from './plugins/stripStyles';
+import externalLinks from './plugins/externalLinks';
+
+const commonPlugins = [xmlAsTopLevelBlock, expandableImages];
 
 const remarkParser = Parser.create();
-remarkParser.parser.use([xmlAsTopLevelBlock, expandableImages]);
+remarkParser.parser.use(commonPlugins);
 remarkParser.compilerPlugins.push(stripStyles);
+
+const extendedParser = Parser.create();
+extendedParser.parser.use(commonPlugins);
+extendedParser.parser.use(externalLinks, {links: 'all'});
+extendedParser.compilerPlugins.push(stripStyles);
 
 /**
  * Basic component for rendering a markdown string as HTML.
@@ -21,11 +29,15 @@ remarkParser.compilerPlugins.push(stripStyles);
  */
 export default class UnsafeRenderedMarkdown extends React.Component {
   static propTypes = {
-    markdown: PropTypes.string.isRequired
+    markdown: PropTypes.string.isRequired,
+    openExternalLinksInNewTab: PropTypes.bool
   };
 
   render() {
-    const processedMarkdown = remarkParser.sourceToHtml(this.props.markdown);
+    const parser = this.props.openExternalLinksInNewTab
+      ? extendedParser
+      : remarkParser;
+    const processedMarkdown = parser.sourceToHtml(this.props.markdown);
 
     /* eslint-disable react/no-danger */
     return <div dangerouslySetInnerHTML={{__html: processedMarkdown}} />;

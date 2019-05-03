@@ -16,6 +16,9 @@ export const CANCEL_LOCATION_SELECTION = 'gamelab/CANCEL_LOCATION_SELECTION';
 export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
 export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
+export const CLEAR_CONSOLE = 'spritelab/CLEAR_CONSOLE';
+export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode

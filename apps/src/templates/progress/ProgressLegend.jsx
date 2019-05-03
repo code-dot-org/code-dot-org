@@ -169,6 +169,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.notStarted()}`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -181,6 +182,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.inProgress()}`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -194,6 +196,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -254,6 +257,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -266,6 +270,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.inProgress()}`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -292,6 +297,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>
@@ -304,6 +310,7 @@ export default class ProgressLegend extends Component {
                     name: `${i18n.activity()}: ${i18n.submitted()}`
                   }}
                   disabled={false}
+                  inMiniRubricExperiment={miniRubricExperiment}
                 />
               </div>
             </TD>

@@ -250,21 +250,21 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters_2018'
-named_level 'Geometric Sun_2018'
-named_level 'Robot Doodle_2018'
-named_level 'CourseE_hoops'
-named_level 'courseE_Dogger_2'
+level 'courseF_video_csMatters_2018', named: true
+level 'Geometric Sun_2018', named: true
+level 'Robot Doodle_2018', named: true
+level 'CourseE_hoops', named: true
+level 'courseE_Dogger_2', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project_2018'
+level 'Begin planning your project_2018', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course E: Artist Project_2018'
-named_level 'CourseE_Project_SpriteLab'
+level 'Course E: Artist Project_2018', named: true
+level 'CourseE_Project_SpriteLab', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation_2018'
+level 'Prepare for your presentation_2018', named: true
 
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet_2018'

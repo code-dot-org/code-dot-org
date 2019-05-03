@@ -20,34 +20,31 @@ require('../utils'); // Provides Function.prototype.inherits
  * @param {Element} targetDiv
  * @constructor
  */
-export default function GoogleChart(targetDiv) {
-  // Define this late so we can overwrite it in tests.
-  if (!GoogleChart.lib) {
-    GoogleChart.lib = google;
+export default class GoogleChart {
+  constructor(targetDiv) {
+    // Define this late so we can overwrite it in tests.
+    if (!GoogleChart.lib) {
+      GoogleChart.lib = google;
+    }
+
+    /** @private {Element} */
+    this.targetDiv_ = targetDiv;
+
+    /**
+     * List of all warnings logged while performing operations with this chart
+     * instance.
+     * @type {Error[]}
+     */
+    this.warnings = [];
   }
 
-  /** @private {Element} */
-  this.targetDiv_ = targetDiv;
-
-  /** @private {google.visualization.DataTable} */
-  this.dataTable_ = null;
-
   /**
-   * List of all warnings logged while performing operations with this chart
-   * instance.
-   * @type {Error[]}
+   * Loads the required libraries for this particular chart type.
+   * Safe to call multiple times - Google's loader caches dependencies.
+   * @returns {Promise} that resolves when dependencies have been loaded.
    */
-  this.warnings = [];
-}
-
-/**
- * Loads the required libraries for this particular chart type.
- * Safe to call multiple times - Google's loader caches dependencies.
- * @returns {Promise} that resolves when dependencies have been loaded.
- */
-GoogleChart.prototype.loadDependencies = function() {
-  return new Promise(
-    function(resolve, reject) {
+  loadDependencies() {
+    return new Promise((resolve, reject) => {
       try {
         GoogleChart.lib.load('visualization', '1', {
           packages: this.getDependencies(),
@@ -60,112 +57,101 @@ GoogleChart.prototype.loadDependencies = function() {
           new Error('Unable to load Charts API.  Please try again later.')
         );
       }
-    }.bind(this)
-  );
-};
-
-/**
- * Renders the chart into the target container using the specified options.
- *
- *  @param {Object[]} rawData - data to display in chart, formatted as an array
- *        of objects where each object represents a row, and the object keys
- *        are column names.
- * @param {string[]} columnList - Ordered list of column names to use as source
- *        data for the chart.  Column names must match keys in rawData.
- * @param {Object} options - Plain options object that gets passed through to
- *        the Charts API.
- * @returns {Promise} that resolves when the chart has been rendered to the
- *          target container.
- */
-GoogleChart.prototype.drawChart = function(rawData, columnList, options) {
-  return this.loadDependencies().then(
-    function() {
-      this.verifyData_(rawData, columnList);
-      var dataTable = GoogleChart.dataTableFromRowsAndColumns(
-        rawData,
-        columnList
-      );
-      return this.render_(dataTable, options);
-    }.bind(this)
-  );
-};
-
-/**
- * Array of packages the chart needs to load to render.
- * @returns {string[]}
- */
-GoogleChart.prototype.getDependencies = function() {
-  return ['corechart'];
-};
-
-/**
- * Pushes the provided warning message into a collection of warnings for this
- * chart, which can be parsed and displayed later.
- * @param {string} warningMessage
- */
-GoogleChart.prototype.warn = function(warningMessage) {
-  this.warnings.push(new Error(warningMessage));
-};
-
-/**
- * Makes sure data looks okay, throws errors and logs warnings as appropriate.
- * @param {string[]} columns
- * @param {Object[]} data
- * @private
- */
-GoogleChart.prototype.verifyData_ = function(data, columns) {
-  // Warn when no rows are present
-  if (data.length === 0) {
-    this.warn('No data.');
+    });
   }
 
-  // Error when not enough columns are provided
-  if (columns.length < 2) {
-    throw new Error('Not enough columns for chart; expected at least 2.');
+  /**
+   * Renders the chart into the target container using the specified options.
+   *
+   *  @param {Object[]} rawData - data to display in chart, formatted as an array
+   *        of objects where each object represents a row, and the object keys
+   *        are column names.
+   * @param {string[]} columnList - Ordered list of column names to use as source
+   *        data for the chart.  Column names must match keys in rawData.
+   * @param {Object} options - Plain options object that gets passed through to
+   *        the Charts API.
+   * @returns {Promise} that resolves when the chart has been rendered to the
+   *          target container.
+   */
+  async drawChart(rawData, columnList, options) {
+    await this.loadDependencies();
+
+    this.verifyData_(rawData, columnList);
+    const dataTable = GoogleChart.dataTableFromRowsAndColumns(
+      rawData,
+      columnList
+    );
+    this.render_(dataTable, options);
   }
 
-  // Warn on empty columns?
-  columns.forEach(
-    function(colName) {
-      var exists = data.some(function(row) {
-        return row[colName] !== undefined;
-      });
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   */
+  getDependencies() {
+    return ['corechart'];
+  }
+
+  /**
+   * Pushes the provided warning message into a collection of warnings for this
+   * chart, which can be parsed and displayed later.
+   * @param {string} warningMessage
+   */
+  warn(warningMessage) {
+    this.warnings.push(new Error(warningMessage));
+  }
+
+  /**
+   * Makes sure data looks okay, throws errors and logs warnings as appropriate.
+   * @param {string[]} columns
+   * @param {Object[]} data
+   * @private
+   */
+  verifyData_(data, columns) {
+    // Warn when no rows are present
+    if (data.length === 0) {
+      this.warn('No data.');
+    }
+
+    // Error when not enough columns are provided
+    if (columns.length < 2) {
+      throw new Error('Not enough columns for chart; expected at least 2.');
+    }
+
+    // Warn on empty columns?
+    columns.forEach(colName => {
+      const exists = data.some(row => row[colName] !== undefined);
       if (!exists) {
         this.warn('No data found for column "' + colName + '".');
       }
-    }.bind(this)
-  );
-};
-
-/**
- * @param {Object[]} rows - Rows as POJOs with keys.
- * @param {string[]} columns - Column names which must correspond to keys
- *        in the row objects.
- * @return {google.visualization.DataTable}
- */
-GoogleChart.dataTableFromRowsAndColumns = function(rows, columns) {
-  var dataArray = rows.map(function(row) {
-    return columns.map(function(key) {
-      return row[key];
     });
-  });
-  return GoogleChart.lib.visualization.arrayToDataTable(
-    [columns].concat(dataArray)
-  );
-};
+  }
 
-/**
- * Internal 'abstract' method that subclasses should use to implement the actual
- * rendering step.
- *
- * @param {google.visualzation.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- */
-GoogleChart.prototype.render_ = function(dataTable, options) {
-  return Promise.reject(new Error('Rendering unimplemented for chart type.'));
-};
+  /**
+   * @param {Object[]} rows - Rows as POJOs with keys.
+   * @param {string[]} columns - Column names which must correspond to keys
+   *        in the row objects.
+   * @return {google.visualization.DataTable}
+   */
+  static dataTableFromRowsAndColumns(rows, columns) {
+    const dataArray = rows.map(row => columns.map(key => row[key]));
+    return GoogleChart.lib.visualization.arrayToDataTable(
+      [columns].concat(dataArray)
+    );
+  }
+
+  /**
+   * Internal 'abstract' method that subclasses should use to implement the actual
+   * rendering step.
+   *
+   * @param {google.visualzation.DataTable} dataTable
+   * @param {Object} options
+   * @private
+   */
+  render_(dataTable, options) {
+    throw new Error('Rendering unimplemented for chart type.');
+  }
+}
 
 /**
  * Google Charts API Pie Chart
@@ -176,32 +162,30 @@ GoogleChart.prototype.render_ = function(dataTable, options) {
  * @constructor
  * @extends GoogleChart
  */
-var PieChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-PieChart.inherits(GoogleChart);
-GoogleChart.PieChart = PieChart;
-
-PieChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.PieChart(this.targetDiv_);
-  apiChart.draw(dataTable, options);
-  return Promise.resolve();
-};
-
-/**
- *
- * @param {string[]} columns
- * @param {Object[]} data
- * @private
- * @override
- */
-PieChart.prototype.verifyData_ = function(data, columns) {
-  PieChart.superPrototype.verifyData_.call(this, data, columns);
-
-  if (columns.length > 2) {
-    this.warn('Too many columns for pie chart; only using the first 2.');
+class PieChart extends GoogleChart {
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.PieChart(
+      this.targetDiv_
+    );
+    apiChart.draw(dataTable, options);
   }
-};
+
+  /**
+   *
+   * @param {string[]} columns
+   * @param {Object[]} data
+   * @private
+   * @override
+   */
+  verifyData_(data, columns) {
+    super.verifyData_(data, columns);
+
+    if (columns.length > 2) {
+      this.warn('Too many columns for pie chart; only using the first 2.');
+    }
+  }
+}
+GoogleChart.PieChart = PieChart;
 
 /**
  * Google Charts API Bar Chart
@@ -212,24 +196,22 @@ PieChart.prototype.verifyData_ = function(data, columns) {
  * @constructor
  * @extends GoogleChart
  */
-var BarChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-BarChart.inherits(GoogleChart);
+class BarChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.BarChart(
+      this.targetDiv_
+    );
+    apiChart.draw(dataTable, options);
+  }
+}
 GoogleChart.BarChart = BarChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-BarChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.BarChart(this.targetDiv_);
-  apiChart.draw(dataTable, options);
-  return Promise.resolve();
-};
 
 /**
  * Google Charts API Material Design Bar Chart
@@ -241,35 +223,31 @@ BarChart.prototype.render_ = function(dataTable, options) {
  * @constructor
  * @extends GoogleChart
  */
-var MaterialBarChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-MaterialBarChart.inherits(GoogleChart);
+class MaterialBarChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.charts.Bar(this.targetDiv_);
+    // Material charts have a built-in options converter for now.
+    const convertedOptions = GoogleChart.lib.charts.Bar.convertOptions(options);
+    apiChart.draw(dataTable, convertedOptions);
+  }
+
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   * @override
+   */
+  getDependencies() {
+    return ['bar'];
+  }
+}
 GoogleChart.MaterialBarChart = MaterialBarChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-MaterialBarChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Bar(this.targetDiv_);
-  // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Bar.convertOptions(options);
-  apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
-};
-
-/**
- * Array of packages the chart needs to load to render.
- * @returns {string[]}
- * @override
- */
-MaterialBarChart.prototype.getDependencies = function() {
-  return ['bar'];
-};
 
 /**
  * Google Charts API Line Chart
@@ -280,24 +258,22 @@ MaterialBarChart.prototype.getDependencies = function() {
  * @constructor
  * @extends GoogleChart
  */
-var LineChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-LineChart.inherits(GoogleChart);
+class LineChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.LineChart(
+      this.targetDiv_
+    );
+    apiChart.draw(dataTable, options);
+  }
+}
 GoogleChart.LineChart = LineChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-LineChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.LineChart(this.targetDiv_);
-  apiChart.draw(dataTable, options);
-  return Promise.resolve();
-};
 
 /**
  * Google Charts API Material Design Line Chart
@@ -309,35 +285,33 @@ LineChart.prototype.render_ = function(dataTable, options) {
  * @constructor
  * @extends GoogleChart
  */
-var MaterialLineChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-MaterialLineChart.inherits(GoogleChart);
+class MaterialLineChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.charts.Line(this.targetDiv_);
+    // Material charts have a built-in options converter for now.
+    const convertedOptions = GoogleChart.lib.charts.Line.convertOptions(
+      options
+    );
+    apiChart.draw(dataTable, convertedOptions);
+  }
+
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   * @override
+   */
+  getDependencies() {
+    return ['line'];
+  }
+}
 GoogleChart.MaterialLineChart = MaterialLineChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-MaterialLineChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Line(this.targetDiv_);
-  // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Line.convertOptions(options);
-  apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
-};
-
-/**
- * Array of packages the chart needs to load to render.
- * @returns {string[]}
- * @override
- */
-MaterialLineChart.prototype.getDependencies = function() {
-  return ['line'];
-};
 
 /**
  * Google Charts API Scatter Chart
@@ -348,26 +322,22 @@ MaterialLineChart.prototype.getDependencies = function() {
  * @constructor
  * @extends GoogleChart
  */
-var ScatterChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-ScatterChart.inherits(GoogleChart);
+class ScatterChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.visualization.ScatterChart(
+      this.targetDiv_
+    );
+    apiChart.draw(dataTable, options);
+  }
+}
 GoogleChart.ScatterChart = ScatterChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-ScatterChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.visualization.ScatterChart(
-    this.targetDiv_
-  );
-  apiChart.draw(dataTable, options);
-  return Promise.resolve();
-};
 
 /**
  * Google Charts API Material Design Scatter Chart
@@ -379,32 +349,30 @@ ScatterChart.prototype.render_ = function(dataTable, options) {
  * @constructor
  * @extends GoogleChart
  */
-var MaterialScatterChart = function(targetDiv) {
-  GoogleChart.call(this, targetDiv);
-};
-MaterialScatterChart.inherits(GoogleChart);
+class MaterialScatterChart extends GoogleChart {
+  /**
+   * @param {google.visualization.DataTable} dataTable
+   * @param {Object} options
+   * @returns {Promise}
+   * @private
+   * @override
+   */
+  render_(dataTable, options) {
+    const apiChart = new GoogleChart.lib.charts.Scatter(this.targetDiv_);
+    // Material charts have a built-in options converter for now.
+    const convertedOptions = GoogleChart.lib.charts.Scatter.convertOptions(
+      options
+    );
+    apiChart.draw(dataTable, convertedOptions);
+  }
+
+  /**
+   * Array of packages the chart needs to load to render.
+   * @returns {string[]}
+   * @override
+   */
+  getDependencies() {
+    return ['scatter'];
+  }
+}
 GoogleChart.MaterialScatterChart = MaterialScatterChart;
-
-/**
- * @param {google.visualization.DataTable} dataTable
- * @param {Object} options
- * @returns {Promise}
- * @private
- * @override
- */
-MaterialScatterChart.prototype.render_ = function(dataTable, options) {
-  var apiChart = new GoogleChart.lib.charts.Scatter(this.targetDiv_);
-  // Material charts have a built-in options converter for now.
-  var convertedOptions = GoogleChart.lib.charts.Scatter.convertOptions(options);
-  apiChart.draw(dataTable, convertedOptions);
-  return Promise.resolve();
-};
-
-/**
- * Array of packages the chart needs to load to render.
- * @returns {string[]}
- * @override
- */
-MaterialScatterChart.prototype.getDependencies = function() {
-  return ['scatter'];
-};

@@ -63,12 +63,9 @@ export function connect({interpreter, onDisconnect}) {
   }
 
   if (currentBoard) {
-    return Promise.reject(
-      new Error(
-        'Attempted to connect Maker Toolkit when ' +
-          'an existing board is already connected.'
-      )
-    );
+    commands.injectBoardController(currentBoard);
+    currentBoard.installOnInterpreter(interpreter);
+    return Promise.resolve();
   }
 
   const store = getStore();
@@ -153,18 +150,7 @@ function shouldRunWithFakeBoard() {
  * and puts maker UI back in a default state.
  */
 export function reset() {
-  if (!redux.isEnabled(getStore().getState())) {
-    return;
-  }
-
-  const setDisconnected = () => {
-    currentBoard = null;
-    getStore().dispatch(redux.disconnect());
-  };
-
   if (currentBoard) {
-    currentBoard.destroy().then(setDisconnected);
-  } else {
-    setDisconnected();
+    currentBoard.reset();
   }
 }

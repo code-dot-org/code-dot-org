@@ -568,6 +568,7 @@ en:
         csd_pair_programming: Pair Programming
         csd_gamelab_functions: Calling and Defining Functions
         csd_applab_parameters: Functions with Parameters
+        csd_applab_loops: Loops in App Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

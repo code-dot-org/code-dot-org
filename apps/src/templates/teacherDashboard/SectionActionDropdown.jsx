@@ -119,16 +119,15 @@ class SectionActionDropdown extends Component {
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
-          <PopUpMenu.Item href={teacherDashboardUrl(sectionData.id, '/manage')}>
+          <PopUpMenu.Item
+            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+          >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
             sectionData.loginType !== OAuthSectionTypes.clever && (
               <PopUpMenu.Item
-                href={teacherDashboardUrl(
-                  sectionData.id,
-                  '/print_signin_cards'
-                )}
+                href={teacherDashboardUrl(sectionData.id, '/login_info')}
               >
                 {sectionData.loginType === SectionLoginType.email
                   ? i18n.joinInstructions()

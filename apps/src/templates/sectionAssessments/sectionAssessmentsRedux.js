@@ -3,7 +3,6 @@ import {
   SET_SCRIPT,
   getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
-import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -56,6 +55,14 @@ const MultiAnswerStatus = {
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
+
+/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
+export const inProgressFakeTimestamp = new Date(
+  '1990-01-01T20:52:05.000+00:00'
+);
+export const notStartedFakeTimestamp = new Date(
+  '1980-01-01T20:52:05.000+00:00'
+);
 
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
@@ -498,11 +505,13 @@ export const getAssessmentsFreeResponseResults = state => {
     responsesArray
       .filter(result => result.type === QuestionType.FREE_RESPONSE)
       .forEach((response, index) => {
-        questionsAndResults[index].responses.push({
-          id: studentId,
-          name: studentObject.student_name,
-          response: response.student_result
-        });
+        if (questionsAndResults[index]) {
+          questionsAndResults[index].responses.push({
+            id: studentId,
+            name: studentObject.student_name,
+            response: response.student_result
+          });
+        }
       });
   });
   return questionsAndResults;
@@ -649,25 +658,32 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
     const studentsAssessment =
       studentsObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, display empty results.
+    // If the student has not submitted this assessment
     if (!studentsAssessment) {
       return {
         id: studentId,
         name: studentsObject.student_name,
         isSubmitted: false,
-        submissionTimeStamp: i18n.notStarted()
+        inProgress: false,
+        submissionTimeStamp: notStartedFakeTimestamp
       };
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
-    const submissionTimeStamp = studentsAssessment.submitted
-      ? new Date(studentsAssessment.timestamp).toLocaleString()
-      : i18n.inProgress();
+
+    /* In progress assessments have a timestamp from the server indicating when the student last worked on the assessment. We don't display that timestamp in the SubmissionStatusAssessmentsTable, but we use it here to check if the assessment has been started. */
+    const inProgress =
+      studentsAssessment.timestamp && !studentsAssessment.submitted;
+    const submissionTimeStamp = inProgress
+      ? inProgressFakeTimestamp
+      : new Date(studentsAssessment.timestamp);
+
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
+      inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
       url: studentsAssessment.url

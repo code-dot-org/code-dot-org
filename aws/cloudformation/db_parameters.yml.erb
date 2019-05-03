@@ -137,3 +137,35 @@ Replica:
   slave_parallel_workers: 1
   # Ensure transactions are externalized in the same order as they appear in the replica's relay log.
   slave_preserve_commit_order: 1
+
+# System variables for the Aurora DB cluster.
+AuroraCluster:
+  # When using row-based logging, the master writes events to the binary log that indicate how individual table rows are changed.
+  # Replication of the master to the slave works by copying the events representing the changes to the table rows to the slave.
+  # ROW required for DMS Change Data Capture:
+  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
+  binlog_format: ROW
+  # When enabled, this variable causes the master to write a checksum for each event in the binary log.
+  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
+  # NONE required for DMS Change Data Capture:
+  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
+  binlog_checksum: NONE
+
+  # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
+  gtid-mode: ON_PERMISSIVE
+
+  # Enable slow query log.
+  slow_query_log: 1
+
+  # Enable InnoDB monitoring counters: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Monitoring.html
+  innodb_monitor_enable: all
+
+# System variables for the Aurora DB writer.
+AuroraWriter:
+  # Enable Performance Schema.
+  performance_schema: 1
+
+# System variables for the Aurora DB writer.
+AuroraReportingReplica:
+  # No max execution time on reporting DB.
+  max_execution_time: null

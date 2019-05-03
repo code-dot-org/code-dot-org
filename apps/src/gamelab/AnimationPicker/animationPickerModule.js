@@ -11,6 +11,8 @@ import {
 import {makeEnum} from '../../utils';
 import {animations as animationsApi} from '../../clientApi';
 import gamelabMsg from '@cdo/gamelab/locale';
+import {changeInterfaceMode} from '../actions';
+import {GameLabInterfaceMode} from '../constants';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -177,8 +179,12 @@ export function handleUploadError(status) {
  */
 export function pickNewAnimation() {
   return (dispatch, getState) => {
-    const goal = getState().animationPicker.goal;
+    const state = getState();
+    const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
+      if (state.interfaceMode !== GameLabInterfaceMode.ANIMATION) {
+        dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+      }
       dispatch(addBlankAnimation());
     } else if (goal === Goal.NEW_FRAME) {
       dispatch(appendBlankFrame());

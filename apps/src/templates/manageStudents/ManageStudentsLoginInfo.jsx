@@ -4,6 +4,7 @@ import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypePa
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   explanation: {
@@ -21,18 +22,6 @@ class ManageStudentsLoginInfo extends Component {
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string,
     pegasusUrlPrefix: PropTypes.string
-  };
-
-  // TODO: (madelynkasula) Delete this method once the old pegasus-served teacher dashboard
-  // has been fully removed.
-  printLoginCardsUrl = () => {
-    const {studioUrlPrefix, sectionId} = this.props;
-
-    if (studioUrlPrefix === window.location.origin) {
-      return `/teacher_dashboard/sections/${sectionId}/login_info`;
-    } else {
-      return `/teacher-dashboard#/sections/${sectionId}/print_signin_cards`;
-    }
   };
 
   render() {
@@ -67,7 +56,10 @@ class ManageStudentsLoginInfo extends Component {
               </a>
             </p>
             <p>
-              <a target="_blank" href={this.printLoginCardsUrl()}>
+              <a
+                target="_blank"
+                href={teacherDashboardUrl(sectionId, '/login_info')}
+              >
                 {i18n.printLoginCardExplanation()}
               </a>
             </p>

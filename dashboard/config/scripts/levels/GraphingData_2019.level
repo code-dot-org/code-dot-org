@@ -9,7 +9,7 @@
     "encrypted": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2019-02-14 16:11:31 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 16:59:31 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-14 16:11:31 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 16:59:31 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-18 20:52:08 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-18 20:52:39 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-18 20:53:21 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-18 20:55:46 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -7,7 +7,7 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
   # students must be assigned or have progress to view older script versions
@@ -15,12 +15,12 @@ Scenario: Version warning announcement on course and unit overview pages
   Given I am assigned to script "csp3-2017"
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
   When I am on "http://studio.code.org/s/csp2-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
   # generate some progress in csp-2017
@@ -32,14 +32,14 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
   When I am on "http://studio.code.org/s/csp2-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # make sure we are showing the warning specific to course units
   Then element ".announcement-notification:contains(going to the course page)" is visible
@@ -51,13 +51,13 @@ Scenario: Version warning announcement on course and unit overview pages
   # The course unit version warning banner stays closed on refresh
   When I reload the page
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
   # The course overview warning banner also stays closed
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
 @as_student
@@ -65,7 +65,7 @@ Scenario: Version warning announcement on course and unit overview pages
 Scenario: Versions warning announcement on script overview page
   When I am on "http://studio.code.org/s/coursea-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
   Given I am assigned to script "coursea-2017"
@@ -74,7 +74,7 @@ Scenario: Versions warning announcement on script overview page
 
   When I am on "http://studio.code.org/s/coursea-2018"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
 
@@ -85,7 +85,7 @@ Scenario: Versions warning announcement on script overview page
   # The script version warning banner stays closed on refresh
   When I reload the page
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
   # Generate progress in course 2
@@ -95,7 +95,7 @@ Scenario: Versions warning announcement on script overview page
 
   When I am on "http://studio.code.org/s/course1"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
 @as_student
@@ -105,18 +105,20 @@ Scenario: Switch versions using dropdown on script overview page
   When I am on "http://studio.code.org/s/coursea-2017"
   And I get redirected to "s/coursea-2018" via "dashboard"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
 
   Given I am assigned to script "coursea-2017"
   When I am on "http://studio.code.org/s/coursea-2017"
   And I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
-  And I select the "2018" option in dropdown "version-selector" to load a new page
+  And element "#uitest-version-selector" is visible
+  And I click selector "#assignment-version-year" once I see it
+  And I click selector ".assignment-version-title:contains(2018)" once I see it
   Then I wait until I am on "http://studio.code.org/s/coursea-2018"
 
   When I wait until element "#script-title" is visible
-  And element "#version-selector" is visible
-  And I select the "2017" option in dropdown "version-selector" to load a new page
+  And element "#uitest-version-selector" is visible
+  And I click selector "#assignment-version-year" once I see it
+  And I click selector ".assignment-version-title:contains(2017)" once I see it
   Then I wait until I am on "http://studio.code.org/s/coursea-2017"
 
 @as_student

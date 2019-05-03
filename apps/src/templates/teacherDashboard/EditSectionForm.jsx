@@ -53,6 +53,7 @@ const style = {
 class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    locale: PropTypes.string,
 
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -118,7 +119,8 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
-      assignedScriptName
+      assignedScriptName,
+      locale
     } = this.props;
     if (!section) {
       return null;
@@ -144,6 +146,7 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
+            locale={locale}
           />
           {stageExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
@@ -264,7 +267,8 @@ const AssignmentField = ({
   onChange,
   validAssignments,
   assignmentFamilies,
-  disabled
+  disabled,
+  locale
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
@@ -277,6 +281,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
+      locale={locale}
     />
   </div>
 );
@@ -285,7 +290,8 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  locale: PropTypes.string
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (

@@ -24,7 +24,8 @@ const defaultProps = {
   isRtl: false,
   resources: [],
   scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false
+  scriptAllowsHiddenStages: false,
+  showAssignButton: true
 };
 
 describe('ScriptOverviewTopRow', () => {

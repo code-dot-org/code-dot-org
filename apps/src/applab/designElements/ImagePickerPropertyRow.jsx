@@ -71,8 +71,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     });
   };
 
-  changeImage = filename => {
-    this.props.handleChange(filename);
+  changeImage = (filename, timestamp) => {
+    this.props.handleChange(filename, timestamp);
     // Because we delay the call to this function via setTimeout, we must be sure not
     // to call setState after the component is unmounted, or React will warn and
     // tests will fail.

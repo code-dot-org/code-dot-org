@@ -48,10 +48,10 @@ class LevelsController < ApplicationController
     if @level.mini_rubric&.to_bool
       render json: {
         keyConcept: @level.rubric_key_concept,
-        exceeds: @level.rubric_exceeds,
-        meets: @level.rubric_meets,
-        approaches: @level.rubric_approaches,
-        noEvidence: @level.rubric_no_evidence
+        performanceLevel1: @level.rubric_performance_level_1,
+        performanceLevel2: @level.rubric_performance_level_2,
+        performanceLevel3: @level.rubric_performance_level_3,
+        performanceLevel4: @level.rubric_performance_level_4
       }
     end
   end

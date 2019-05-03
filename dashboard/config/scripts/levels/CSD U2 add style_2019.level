@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-04-02T18:10:44.000Z",
+  "created_at": "2019-04-03T18:08:37.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -22,10 +22,10 @@
     "encrypted": "false",
     "mini_rubric": "true",
     "rubric_key_concept": "Create rules that affect entire groups of elements; apply formatting in a web page using CSS.",
-    "rubric_exceeds": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
-    "rubric_meets": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
-    "rubric_approaches": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
-    "rubric_no_evidence": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages."
+    "rubric_performance_level_1": "The background, images, and text have all been styled as described in the instructions.  There are no syntax errors or extra code (that does not function) in the stylesheet.",
+    "rubric_performance_level_2": "The background, images, and text have all been styled as described in the instructions, but there may be minimal errors or non-functioning code in the stylesheet.",
+    "rubric_performance_level_3": "Rule-sets have been created in the style-sheet to style the background, images, and text, but there are major errors that prevent the code from working properly.",
+    "rubric_performance_level_4": "There are no rule-sets in the stylesheet, or the rule-sets do not have the necessary selectors to style the background or images in the pages."
   },
   "published": true,
   "notes": "",

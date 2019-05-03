@@ -92,7 +92,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Make computer science courses count</h3>
 
 - How you credit computer science can dramatically impact [who enrolls in computer science courses](http://blog.code.org/post/121123281798/md).
-- 43 states plus D.C. allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
+- 46 states plus D.C. allow computer science [to satisfy graduation requirements](/promote). When computer science counts for graduation, [enrollment and diversity goes up](https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 - If possible, we recommend allowing computer science courses to satisfy graduation requirements and exist as both an Academic and CTE course.
 
 [/col-80]
@@ -111,7 +111,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 
 - Identify teachers who will lead CS classes in your district next year.
 - Code.org's curriculum and professional development is designed for teachers from other subjects to become computer science teachers.  As you identify potential future computer science teachers in your district, it’s important to understand what, if any, requirements your state has in place for computer science teachers.
-- 34 states plus D.C. have a certification or licensure for computer science; [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
+- 36 states plus D.C. have a certification or licensure for computer science; [find your state here](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml#).
 
 [/col-80]
 
@@ -147,7 +147,7 @@ Code.org has partnered with more than <a href="/educate/district/partners" style
 <h3 style="font-family: 'Gotham 5r', sans-serif">Allocate funding</h3>
 
 - Thanks to the generous support of our funders, all curricular resources from Code.org are free for anyone to use.  However, there are still costs to consider when starting a computer science program.  You should begin thinking about how you’ll support:
-  - **Professional development costs** - Code.org's courses are designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science. 
+  - **Professional development costs** - Code.org's courses are designed to be taught by teachers new to computer science. This means you do not have to increase your full-time employee budget or hire additional teachers to support computer science.
   - **Computers and internet access** - In order to teach our 6-12 courses, students will need to be in a 1:1 computing environment every class period. For our K-5 courses, students can be on a computer, tablet, or do our unplugged activities which require no technology at all. If you don't have enough devices, we highly recommend [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). [Check here](/educate/it) to see if your school meets all the technical requirements for teaching Code.org.
   - **Classroom supplies** -  Code.org's courses include hands on excercises that use standard classroom materials.  We estimate these costs to be less than $100 per 30 students.
   - **Administrative support** - As your computer science program grows, there will need to be additional administrative support. We recommend dedicating at least 0.15 full-time employee to this initiative to start, and growing up to 1 full-time employee per 30 teachers offering computer science in the district.

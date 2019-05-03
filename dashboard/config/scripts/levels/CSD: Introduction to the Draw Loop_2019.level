@@ -13,11 +13,12 @@
     "parent_level_id": 11233,
     "name_suffix": "_2019",
     "long_instructions": "## Question to Consider\r\n\r\n* What does the draw function do?",
-    "encrypted_teacher_markdown": "JCI5inQ9gCc06u5RqPvQlwR6wlMX0qlKhoEB3wYQOgN9h//y/UWxO1AkHT74\n9k3hc8yAPvULaVnl4n7260pyxKdHD7fvrZUgv9P+FF8UUefyanXqF+lVL+ka\nve91rdoUHV12vkETK4Sv52JlQ3ttDlRe8IvKWBeebuGAL8f4KtheG8Y4Sf0b\nvk0q8JKA7RHPfA0RaKOjZKYL0uUdxK/fVY+ZGf4aJcoiaPNebJKDNFPdKDYe\nnz4jKJ4VgQg1kr0N6gE8lswSqx7r0begJHQ+ywxewkxuDIYJAfGQ/ZvEaMHA\nDQnGMoOCEhQ93O5dKbDSsAiHSM1c+pHvxt6/tmurTHcxLI2lOd3iz7lCzcCc\n0wlC9SevHr2wOjtPkKvKzHtfwY9SsEFh2CzXDnHtdzsl2exT9o5cD+2SiLQP\nhc6ZQ6Nt3XgM7FWE0ObyMovx2UxEd1z4gPsLVrmGFmKN5bY1hRW3Xw09b3uQ\n6cgVCzFB0idrk5VP/ob2Fa7mR8xqEiKQKy+4N3yp7SHryj6SewnWdFNkmPV6\nL9uJlE7PcZDKiptsqFPBIXoAjc8clcV9D30DcYOh/hX8SmXg39yQ7nzJE5AJ\nZYS/KQeTEQ8MpMc952vLlo7yb3Lckxi1+FPHd3Zb3oFavZk6bJzxehX8TifS\nOnTAhdFp+zP0UjYjOiHdiWncd76oFoQXuL6dFsocU5cnuuPS9VarDe3uGgfM\nv7fk9Yjfux0JT9rgyQJliysMg+ZSM8xY8wfUDg5+jlprJhOeTSsdkECVZqi4\nM/a19t0qfeybI2Vtvbp5lMPpWQygAM3dsFNRuBIp/P22rkdnCyD9gNa3iRug\n6shUNuMY5BnvVouhZ/1tlbl7zHAya23MItYbTr6xEisvB0pFScexnlSMC12G\n2myKef0Jb4B8Kpo+Ru5jTrOr75nbag7EOSKp1OIwFhAHsY7S+ZpEOtwiHztP\n"
+    "encrypted_teacher_markdown": "26QclSbKli2oiYlJnUWgLbzeVgV0wuI80LAmStuGUPBOJUCABJsQ+W871XXa\n/yw/wJ+8Ya0YjFNnhxB+lGXOqDEDDsDQN5lFPgl3ngmKj6sP8cpDUuRW3C9c\nUmrToLMJ0jRqHuA+ea124QCvRmhWOoaK8mXRQgHoNccsp0pO23J+ubelN6cY\nSWFKWHBKmAYKnghY6mtyfELaQ8Dt3dNCZ+URrucdCnwsAfL1Qw5FdnqjnBUN\nkV8CcsCpNJbhHYBq5LMt6GjPB0WXl1qRRoYd9gBLn5GeP3+/Hk2m40FxGlqG\nLtpwZmbxMPJahiYvjNRkFsnsj864gP1aft3oyZhv3MY9X/YYgULH3HujoCN1\nDUlKKMmg+B9bPKVELyIzAkynAqR2PQQXRp7PY0NJvtDk9qb5O0LZ+24HcBfK\nRxUs9V/1NKYk5/dkfNVMEWZhJkXQLyUiLiDXM5JIL+3hrXEKu1WsrbEn2LcF\nBgQT2pYGpoxoRlpQJ6CyMoLqvyQKGd80h7G6VBbqYB7wM4X/jGD/mDe1dSVI\nLvUDypMcawgSiZgUvtZmrWGSUqy6+h5Uy7hhOjL0ehCWFkQVMgYL5ZUIMQl1\nMQocON6tz5xdmR/GcBMY2+wY4XaPo+fJXgXda3KNkMi1qvGWj0MYaSzCo+Ro\nAhWNNAx8oXpaPzqExOP3M4bD2+Ac2cq1hnwu2RxqM9eo0/9PNV76Z6nF5tWz\nEga2tW8Z9iCOZb2WuH7dEXayVET418KPNb//PxIrzQZ0vU93+6bquhiXqTSB\nBOVZzlIW3Qy895w88m5fMMW0TmdkUsNmy+5em+cQAk5JsKF2f4uZZdyA7bzD\n1QuIdn8sdxIGSjZoh5nYDfI0zx7gcVnTKwC5G9Q2qiwx/sXxKrHWLdNpLuTw\nssPyNyHEv2n+eP1Uq61oYVkjnqH/C/QIwLo+agM=\n",
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-15 17:48:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-15 17:48:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:56:57 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

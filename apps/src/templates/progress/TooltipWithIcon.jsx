@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import {DOT_SIZE} from './progressStyles';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   tooltip: {
@@ -28,20 +27,26 @@ export default class TooltipWithIcon extends Component {
     tooltipId: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    includeAssessmentIcon: PropTypes.bool
+    includeAssessmentIcon: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
   render() {
-    const {tooltipId, icon, text, includeAssessmentIcon} = this.props;
+    const {
+      tooltipId,
+      icon,
+      text,
+      includeAssessmentIcon,
+      inMiniRubricExperiment
+    } = this.props;
     return (
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
-          {experiments.isEnabled(experiments.MINI_RUBRIC_2019) &&
-            includeAssessmentIcon && (
-              <FontAwesome
-                icon="check-circle"
-                style={styles.tooltipAssessmentIcon}
-              />
-            )}
+          {inMiniRubricExperiment && includeAssessmentIcon && (
+            <FontAwesome
+              icon="check-circle"
+              style={styles.tooltipAssessmentIcon}
+            />
+          )}
           <FontAwesome icon={icon} style={styles.tooltipIcon} />
           {text}
         </div>

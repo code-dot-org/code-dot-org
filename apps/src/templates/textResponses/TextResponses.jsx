@@ -191,7 +191,6 @@ class TextResponses extends Component {
             responses={filteredResponses}
             sectionId={sectionId}
             isLoading={isLoadingResponses}
-            scriptId={scriptId}
             scriptName={scriptName}
           />
         </div>

@@ -101,9 +101,10 @@ describe('makeUrlProtocolRelative', () => {
 });
 
 describe('setProperty and read Property', () => {
-  let text_input, text_area, dropdown;
+  let picture, text_input, text_area, dropdown;
   // Create HTML elements to get/set
   beforeEach(() => {
+    picture = document.createElement('img');
     text_input = document.createElement('input');
     text_area = document.createElement('div');
     dropdown = document.createElement('select');
@@ -133,6 +134,10 @@ describe('setProperty and read Property', () => {
       expect(text_input.value).to.equal('Iota Kappa');
       expect(text_area.innerHTML).to.equal('Lambda Mu');
       expect(dropdown.value).to.equal('Eta Theta');
+    });
+    it('Uses the asset timestamp in the source path for pictures', () => {
+      designMode.updateProperty(picture, 'picture', 'picture.jpg', 123456);
+      expect(picture.src).to.contain('picture.jpg?t=123456');
     });
   });
 

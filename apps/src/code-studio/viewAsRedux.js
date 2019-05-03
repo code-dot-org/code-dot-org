@@ -11,9 +11,6 @@ export const ViewType = makeEnum('Student', 'Teacher');
 // Action types
 export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
 
-/**
- * Stage lock reducer
- */
 export default function reducer(state = ViewType.Student, action) {
   if (action.type === SET_VIEW_TYPE) {
     const viewType = action.viewType;
@@ -29,13 +26,12 @@ export default function reducer(state = ViewType.Student, action) {
 
 // Action creators
 
-// Exported for test purposes
-export const setViewTypeNonThunk = viewType => ({
+export const setViewType = viewType => ({
   type: SET_VIEW_TYPE,
   viewType
 });
 
-export const setViewType = viewType => {
+export const changeViewType = viewType => {
   return dispatch => {
     // If changing to viewAs student while we are a particular student, remove
     // the user_id and do a reload so that we're instead viewing as a generic
@@ -47,6 +43,6 @@ export const setViewType = viewType => {
       return;
     }
 
-    dispatch(setViewTypeNonThunk(viewType));
+    dispatch(setViewType(viewType));
   };
 };

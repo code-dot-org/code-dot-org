@@ -1,16 +1,16 @@
 ---
 title: Using Data
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 
 # Using Data
 
-More resources to come. 
+More resources to come.
 
 ## Quick Links
 - [Access Your Data Dashboard](#tableau)
-- [2018 Summer Data Clean-up](#summer) 
+- [2018 Summer Data Clean-up](#summer)
 - [Data Dashboard How-To Guide](#guide)
 - [Access Report](#access)
 
@@ -20,19 +20,19 @@ More resources to come.
 
 
 ### Sign In
-Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.com/</a> to sign into the Code.org Data Dashboard. 
+Visit <a href="http://online.tableau.com/" target=_blank>http://online.tableau.com/</a> to sign into the Code.org Data Dashboard.
 
 ### Don't have an account?
 <details>
   <summary>Set up your account</summary>
-  <p> 
+  <p>
 
-1. Each Regional Partner organization is provided with one partner account. 
-	* If multiple people in your organization need to access the data, we encourage you to set up your account with a password that can be shared within your organization. 
-2. Email your Regional Manager if you have not been set up with an account. 
-	* Once your account has been set up, you will receive an email from Tableau with instructions on how to access your Tableau account, including setting up your password. 
+1. Each Regional Partner organization is provided with one partner account.
+	* If multiple people in your organization need to access the data, we encourage you to set up your account with a password that can be shared within your organization.
+2. Email your Regional Manager if you have not been set up with an account.
+	* Once your account has been set up, you will receive an email from Tableau with instructions on how to access your Tableau account, including setting up your password.
 	* The email will say “You’ve been invited to Tableau Online”
-	* There will be an orange button prompting you to sign up for the first time and set up your password. 
+	* There will be an orange button prompting you to sign up for the first time and set up your password.
 </p>
 </details>
 
@@ -43,7 +43,7 @@ Check out **<a href="https://docs.google.com/document/d/14KgWKsfRuzC740lDZLlgjTp
 <a name="summer"></a>
 ## 2018 Summer Data Clean-up
 
-Teacher data from your 2018-19 CS Principles and CS Discoveries local summer workshop or TeacherCon cohorts is now available in Tableau. We need your help to identify errors to be fixed so this data will be more useful to you long term. This is a one-time clean-up process that will give you a more accurate view into important metrics like implementation rate, URM student numbers, and overall program health. Changes that you’ve requested will be implemented by the Code.org data team and visible in your Tableau data dashboard by the end of November. 
+Teacher data from your 2018-19 CS Principles and CS Discoveries local summer workshop or TeacherCon cohorts is now available in Tableau. We need your help to identify errors to be fixed so this data will be more useful to you long term. This is a one-time clean-up process that will give you a more accurate view into important metrics like implementation rate, URM student numbers, and overall program health. Changes that you’ve requested will be implemented by the Code.org data team and visible in your Tableau data dashboard by the end of November.
 
 Please navigate to the <a href="https://us-east-1.online.tableau.com/#/site/codeorg/views/Regionalpartnerdatasharing/TeacherRoster
 " target=_blank>Teacher Roster tab</a> of your data dashboard and filter to this school year.
@@ -52,16 +52,16 @@ Note that there is a filter for each course, CS Discoveries and CS Principles, s
 
 <details>
   <summary>Teachers who are actually implementing, but are listed as having 0 students</summary>
-  <p> 
-  
+  <p>
+
 * This might occur if a teacher is teaching with a Code.org account that is different from the one they used to register for your workshop or TeacherCon. If you are able to give us the email address of the account the teacher is using to teach, we can fix their data in Tableau.
 </p>
 </details>
 
 <details>
   <summary>Teachers to remove</summary>
-  <p> 
-  
+  <p>
+
 * There may be some people that are included in the attendance for your workshop according to the dashboard, but shouldn't be listed as part of your cohort (e.g., novice and apprentice facilitators). Please identify these people so we can remove them.
 * It is possible that the same teacher might appear multiple times on your list. Please identify these people so we can remove one of the two entries.
 * You should not remove teachers that are no longer teaching the course or participating in PD for any reason. This information is important to retain for implementation rates.
@@ -70,16 +70,16 @@ Note that there is a filter for each course, CS Discoveries and CS Principles, s
 
 <details>
   <summary>Teachers to add</summary>
-  <p> 
+  <p>
 
-* If for any reason a teacher is missing from your roster, please provide their email address. The address you provide should be associated with the Code.org account they use to teach. 
+* If for any reason a teacher is missing from your roster, please provide their email address. The address you provide should be associated with the Code.org account they use to teach.
 </p>
 </details>
 
 
-**Data change requests will be accepted until November 9**. Indicate the changes that you’re requesting in **<a href="https://docs.google.com/forms/d/e/1FAIpQLSfyI2FIPoncROIZ3GDf0Uxt2W5OLqBvIjYUP8rONFc5qTp12w/viewform?usp=sf_link" target=_blank>this survey</a>**. 
+**Data change requests will be accepted until November 9**. Indicate the changes that you’re requesting in **<a href="https://docs.google.com/forms/d/e/1FAIpQLSfyI2FIPoncROIZ3GDf0Uxt2W5OLqBvIjYUP8rONFc5qTp12w/viewform?usp=sf_link" target=_blank>this survey</a>**.
 
-Please also note that this process is for CS Discoveries and CS Principles programs only. We have not yet defined a process for CS Fundamentals teacher data. 
+Please also note that this process is for CS Discoveries and CS Principles programs only. We have not yet defined a process for CS Fundamentals teacher data.
 
 <a name="access"></a>
 ## K-12 Computer Science Access Report
@@ -89,8 +89,8 @@ The data we gather can be an incredible resource to you, but only if it is robus
 
 <details>
   <summary>How can you help?</summary>
-  <p> 
-  
+  <p>
+
 * Include a call in your newsletters for students, teachers, parents, and districts to fill out the survey at <a href="http://code.org/yourschool" target=_blank>http://code.org/yourschool</a>. You can find sample language to use in your newsletter [here](https://docs.google.com/document/d/1O9julhujYWIkg-JAm92B-6havhPLSTI0avnXFXlthsk/edit?usp=sharing)
 * Connect to local organizations in your region who can spread the word on your behalf.
 * Connect us to organizations that may already have this information in your region (accessreport@code.org).

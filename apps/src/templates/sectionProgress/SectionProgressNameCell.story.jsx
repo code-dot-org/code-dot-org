@@ -14,7 +14,6 @@ export default storybook => {
             name={'StudentName'}
             studentId={123}
             sectionId={546}
-            scriptId={789}
           />
         )
       }

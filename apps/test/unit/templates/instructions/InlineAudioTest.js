@@ -127,6 +127,7 @@ describe('InlineAudio', function() {
     component.setProps({src: 'state2'});
     expect(component.instance().state.audio).to.be.undefined;
     expect(component.instance().state.playing).to.be.false;
+    expect(component.instance().state.error).to.be.false;
   });
 
   it('can toggle hover state', function() {
@@ -147,4 +148,5 @@ class FakeAudio {
   addEventListener() {}
   removeEventListener() {}
   dispatchEvent() {}
+  removeAttribute() {}
 }

@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:54.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 106,
   "properties": {
@@ -53,11 +53,11 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Define and call functions to organize code and make it easier to reuse.",
-    "rubric_exceeds": "The two functions are defined and called within the if statement as instructed, so that different backgrounds display according to the current score.  Code is correctly organized inside and outside the draw loop, and there are no extra blocks.",
-    "rubric_meets": "At least one new background function is defined and called successfully inside the program, but may not work exactly as instructed.  Code is correctly organized inside and outside the draw loop.",
-    "rubric_approaches": "A function is both defined and called inside the program, but there may be major errors that prevent it from running successfully, or code has been incorrectly placed in the draw loop.",
-    "rubric_no_evidence": "There are no new functions in the program.",
     "video_key": "csd_gamelab_functions",
+    "rubric_performance_level_1": "The two functions are defined and called within the if statement as instructed, so that different backgrounds display according to the current score.  Code is correctly organized inside and outside the draw loop, and there are no extra blocks.",
+    "rubric_performance_level_2": "At least one new background function is defined and called successfully inside the program, but may not work exactly as instructed.  Code is correctly organized inside and outside the draw loop.",
+    "rubric_performance_level_3": "A function is both defined and called inside the program, but there may be major errors that prevent it from running successfully, or code has been incorrectly placed in the draw loop.",
+    "rubric_performance_level_4": "There are no new functions in the program.",
     "preload_asset_list": null
   },
   "published": true,
