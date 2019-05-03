@@ -63,15 +63,13 @@ class MatchAssessmentsOverviewContainer extends Component {
                     0,
                     QUESTION_CHARACTER_LIMIT
                   )}`}
-                  {question.question.length >= QUESTION_CHARACTER_LIMIT && (
-                    <a
-                      onClick={() => {
-                        this.selectQuestion(question.questionNumber - 1);
-                      }}
-                    >
-                      <span>{i18n.seeFullQuestion()}</span>
-                    </a>
-                  )}
+                  <a
+                    onClick={() => {
+                      this.selectQuestion(question.questionNumber - 1);
+                    }}
+                  >
+                    <span>{i18n.seeFullQuestion()}</span>
+                  </a>
                 </div>
                 <MatchAssessmentsOverviewTable
                   questionAnswerData={question.options}

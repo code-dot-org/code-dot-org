@@ -78,8 +78,14 @@ class MatchDetailsDialog extends Component {
                     {questionAndAnswers.answers.map((answer, index) => {
                       return (
                         <tr key={index}>
-                          <td>{questionAndAnswers.options[index]}</td>
-                          <td>{answer}</td>
+                          <td>
+                            <UnsafeRenderedMarkdown
+                              markdown={questionAndAnswers.options[index]}
+                            />
+                          </td>
+                          <td>
+                            <UnsafeRenderedMarkdown markdown={answer} />
+                          </td>
                         </tr>
                       );
                     })}
