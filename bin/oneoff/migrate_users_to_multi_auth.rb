@@ -9,7 +9,7 @@ SLICE_SIZE = 100
 def migrate_batches(limit=nil)
   limit = limit.to_i if limit
   unmigrated_users = User.where.not(provider: User::PROVIDER_MIGRATED)
-  unmigrated_users_count = 40_000_000 # estimate
+  unmigrated_users_count = 10_000_000 # estimate
 
   slice_count = 0
   puts "Migrating #{limit || 'all'} slice(s)"
