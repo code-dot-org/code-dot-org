@@ -99,6 +99,14 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_2019: [
+      CSD1_2019_NAME = 'csd1-2019'.freeze,
+      CSD2_2019_NAME = 'csd2-2019'.freeze,
+      CSD3_2019_NAME = 'csd3-2019'.freeze,
+      CSD4_2019_NAME = 'csd4-2019'.freeze,
+      CSD5_2019_NAME = 'csd5-2019'.freeze,
+      CSD6_2019_NAME = 'csd6-2019'.freeze,
+    ],
     csd_2018: [
       CSD1_2018_NAME = 'csd1-2018'.freeze,
       CSD2_2018_NAME = 'csd2-2018'.freeze,
