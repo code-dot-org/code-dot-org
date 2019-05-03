@@ -6,7 +6,7 @@ require_relative '../../../dashboard/config/environment'
 # from the application.
 def course_from_current_teacher_accepted_app(si)
   app = Pd::Application::Teacher1920Application.find_by(user_id: si.user_id)
-  if app && Pd::SharedApplicationConstants::COHORT_CALCULATOR_STATUSES.include?(app.status)
+  if app
     return app.course
   end
   nil
