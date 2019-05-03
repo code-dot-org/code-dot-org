@@ -13,7 +13,6 @@ import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import {searchAssets} from '../../code-studio/assets/searchAssets';
-import experiments from '@cdo/apps/util/experiments';
 import {connect} from 'react-redux';
 
 const MAX_SEARCH_RESULTS = 27;
@@ -115,8 +114,7 @@ class AnimationPickerBody extends React.Component {
     );
 
     // Hide the upload option for students in spritelab
-    let hideUploadOption =
-      experiments.isEnabled('sprite-costumes') && this.props.spriteLab;
+    let hideUploadOption = this.props.spriteLab;
 
     return (
       <div>
