@@ -712,6 +712,18 @@ sk:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': okraj
+            '"inner"': vnútorný štvorec
+            '"circle"': kruh
+            '"grid"': mriežka
+            '"row"': riadok
+            '"column"': stĺpec
+            '"x"': uhlopriečka
+            '"plus"': plus
+            '"random"': náhodný
       gamelab_locationDelta:
         options:
           DIR:

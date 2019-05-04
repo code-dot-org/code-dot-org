@@ -3006,6 +3006,8 @@ fr:
               name: Financement participatif
             Digital Sharing:
               name: Partage numérique
+            Songwriting:
+              name: Écriture de chansons
         express-2019:
           stages:
             Relay Programming:
@@ -3059,6 +3061,8 @@ fr:
                 real-world situations to online scenarios and vice versa.\r\n"
             Going Places Safely:
               name: Se déplacer en toute sécurité
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3302,3 +3306,11 @@ fr:
               name: Boucles et simulations
             Introduction to Arrays:
               name: Introduction sur les Arrays
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Financement participatif
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            Building a Foundation:
+              name: Construire une fondation

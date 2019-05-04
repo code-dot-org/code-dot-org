@@ -178,7 +178,7 @@ export default class Section1AboutYou extends LabeledFormComponent {
           For additional questions regarding the program or application, please{' '}
           <RegionalPartnerMiniContactPopupLink
             sourcePageId="teacher-application-first-page"
-            notes="Please tell me more about the professional learning program!"
+            notes="Please tell me more about the professional learning program for grades 6-12!"
           >
             <span style={styles.linkLike}>contact your Regional Partner</span>
           </RegionalPartnerMiniContactPopupLink>

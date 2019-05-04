@@ -170,6 +170,10 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': අහඹු
       gamelab_locationDelta:
         options:
           DIR:

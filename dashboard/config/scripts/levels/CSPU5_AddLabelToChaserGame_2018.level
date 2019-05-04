@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:00:25.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -60,7 +56,7 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "encrypted_examples": "Ti55dXNr65xWBPrAclIgNOkHC74i5SzuUW1ty+EpAoJ+Y5iKtflx+1rzQY4a\nJJN1\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -68,8 +64,12 @@
     "expand_debugger": "false",
     "parent_level_id": 7004,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:00:25.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-04-17 22:45:16 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"

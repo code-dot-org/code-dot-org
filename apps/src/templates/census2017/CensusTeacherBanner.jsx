@@ -292,12 +292,12 @@ export default class CensusTeacherBanner extends Component {
         </div>
         <div style={styles.share}>
           <a href={facebookShareUrl} target="_blank">
-            <button style={styles.shareButton}>
+            <button type="button" style={styles.shareButton}>
               <i className="fa fa-facebook" /> Share on Facebook
             </button>
           </a>
           <a href={twitterShareUrl} target="_blank">
-            <button style={styles.shareButton}>
+            <button type="button" style={styles.shareButton}>
               <i className="fa fa-twitter" /> Share on Twitter
             </button>
           </a>

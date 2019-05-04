@@ -8,6 +8,7 @@ import {show, Goal} from '../AnimationPicker/animationPickerModule';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
+import i18n from '@cdo/locale';
 
 const styles = {
   root: {
@@ -29,12 +30,21 @@ class AnimationList extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
     selectedAnimation: shapes.AnimationKey,
-    onNewItemClick: PropTypes.func.isRequired
+    onNewItemClick: PropTypes.func.isRequired,
+    spriteLab: PropTypes.bool.isRequired
   };
 
   render() {
+    let addAnimation = (
+      <NewListItem
+        key="new_animation"
+        label={this.props.spriteLab ? i18n.newCostume() : i18n.newAnimation()}
+        onClick={this.props.onNewItemClick}
+      />
+    );
     return (
       <ScrollableList style={styles.root} className="animationList">
+        {this.props.spriteLab && addAnimation}
         {this.props.animationList.orderedKeys.map(key => (
           <AnimationListItem
             key={key}
@@ -44,11 +54,7 @@ class AnimationList extends React.Component {
             animationList={this.props.animationList}
           />
         ))}
-        <NewListItem
-          key="new_animation"
-          label="new animation"
-          onClick={this.props.onNewItemClick}
-        />
+        {!this.props.spriteLab && addAnimation}
       </ScrollableList>
     );
   }
@@ -56,7 +62,8 @@ class AnimationList extends React.Component {
 export default connect(
   state => ({
     animationList: state.animationList,
-    selectedAnimation: state.animationTab.selectedAnimation
+    selectedAnimation: state.animationTab.selectedAnimation,
+    spriteLab: state.pageConstants.isBlockly
   }),
   dispatch => ({
     onNewItemClick() {

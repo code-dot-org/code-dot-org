@@ -57,8 +57,9 @@ module RegistrationsControllerTests
     end
 
     test "destroys the user if password is not required" do
-      user = create :user, :with_migrated_google_authentication_option
+      user = create :user, :with_google_authentication_option
       user.update_attribute(:encrypted_password, nil)
+      user.reload
       sign_in user
       assert_destroys(User) do
         delete '/users'
@@ -152,6 +153,18 @@ module RegistrationsControllerTests
       assert_equal [user.email], mail.to
       assert_equal ['noreply@code.org'], mail.from
       assert_match 'Your account has been deleted', mail.body.encoded
+    end
+
+    test "does not send email when teacher destroyed if teacher has no email" do
+      user = create :teacher, :without_email, password: 'apassword'
+      refute user.valid?
+      sign_in user
+
+      TeacherMailer.expects(:delete_teacher_email).never
+      assert_destroys(User) do
+        delete '/users', params: {password_confirmation: 'apassword'}
+      end
+      assert_equal 0, ActionMailer::Base.deliveries.length
     end
   end
 end

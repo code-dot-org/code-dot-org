@@ -31,6 +31,7 @@ export default class VersionRow extends React.Component {
     if (this.props.isLatest) {
       button = (
         <button
+          type="button"
           className="btn-default"
           disabled="disabled"
           style={{cursor: 'default'}}
@@ -50,11 +51,16 @@ export default class VersionRow extends React.Component {
           }
           target="_blank"
         >
-          <button className="version-preview">
+          <button type="button" className="version-preview">
             <i className="fa fa-eye" />
           </button>
         </a>,
-        <button key={1} className="btn-info" onClick={this.props.onChoose}>
+        <button
+          type="button"
+          key={1}
+          className="btn-info"
+          onClick={this.props.onChoose}
+        >
           {msg.restoreThisVersion()}
         </button>
       ];

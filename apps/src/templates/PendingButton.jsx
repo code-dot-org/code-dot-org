@@ -22,6 +22,7 @@ class PendingButton extends React.Component {
       : this.props.style;
     return (
       <button
+        type="button"
         id={this.props.id}
         style={style}
         className={this.props.className}

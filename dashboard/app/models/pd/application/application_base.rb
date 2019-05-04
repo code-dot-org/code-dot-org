@@ -142,6 +142,19 @@ module Pd::Application
       self.accepted_at = accepted? ? Time.now : nil
     end
 
+    def applicant_full_name
+      "#{first_name} #{last_name}"
+    end
+
+    def formatted_applicant_email
+      applicant_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      if applicant_email.blank?
+        raise "invalid email address for application #{id}"
+      end
+
+      "\"#{applicant_full_name}\" <#{applicant_email}>"
+    end
+
     # Queues an email for this application
     # @param email_type [String] specifies the mailer action
     # @param deliver_now [Boolean] (default false)
@@ -363,7 +376,7 @@ module Pd::Application
     end
 
     def course_name
-      COURSE_NAME_MAP[course.to_sym]
+      COURSE_NAME_MAP[course.to_sym] unless course.nil?
     end
 
     # displays the iso8601 date (yyyy-mm-dd)

@@ -1340,6 +1340,8 @@ ne:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Songwriting
         express-2019:
           stages:
             Relay Programming:
@@ -1428,3 +1430,11 @@ ne:
           stages:
             While Loops:
               name: While Loops
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            Building a Foundation:
+              name: Building a Foundation

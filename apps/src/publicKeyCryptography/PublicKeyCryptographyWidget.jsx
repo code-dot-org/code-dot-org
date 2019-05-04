@@ -208,16 +208,16 @@ const CharacterSelect = props => (
   <span>
     <strong style={characterSelectTextStyle}>Pick a character:</strong>
     <ToggleGroup selected={props.selectedCharacter} onChange={props.onChange}>
-      <button value={ALICE_VIEW}>
+      <button type="button" value={ALICE_VIEW}>
         <FontAwesome icon="user" /> Alice
       </button>
-      <button value={EVE_VIEW}>
+      <button type="button" value={EVE_VIEW}>
         <FontAwesome icon="user-secret" /> Eve
       </button>
-      <button value={BOB_VIEW}>
+      <button type="button" value={BOB_VIEW}>
         <FontAwesome icon="user" /> Bob
       </button>
-      <button value={ALL_VIEW}>
+      <button type="button" value={ALL_VIEW}>
         <FontAwesome icon="users" /> All
       </button>
     </ToggleGroup>

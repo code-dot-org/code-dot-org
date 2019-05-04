@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Bạn cần sử dụng một điệu nhảy khác.",
   "danceFeedbackNeedEveryTwoMeasures": "Hãy đảm bảo bạn đang sử dụng khối `every 2 measures`",
   "danceFeedbackNeedMakeANewDancer": "Sử dụng khối `make a new` để tạo ra vũ công thứ hai.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Nhịp:"
 }

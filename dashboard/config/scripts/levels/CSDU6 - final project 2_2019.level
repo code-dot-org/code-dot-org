@@ -111,10 +111,20 @@
     "long_instructions": "# Wiring Up the UI\r\n\r\nWith your user interface in place, you can now add event handlers for your interface elements. At this point you may want to just include `console.log()` commands to make sure that your events are working as expected - you can add the functional code later one.",
     "parent_level_id": 12547,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/app-lab/responding-to-user-input/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 08:38:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

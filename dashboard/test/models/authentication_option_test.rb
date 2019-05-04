@@ -2,7 +2,8 @@ require 'test_helper'
 
 class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'after create sets primary_contact_info on user if contact info is nil' do
-    user = create :user, primary_contact_info: nil
+    user = create :user
+    user.primary_contact_info = nil
     auth_option = create :authentication_option, user: user
     assert_equal auth_option, user.primary_contact_info
   end
@@ -54,8 +55,8 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'user can have multiple authentication options' do
     assert_creates(User) do
       user = create(:user, :with_google_authentication_option, :with_clever_authentication_option)
-      assert user.authentication_options.length == 2
-      assert user.authentication_options.first.hashed_email == user.hashed_email
+      assert_equal 3, user.authentication_options.length
+      assert_equal user.hashed_email, user.authentication_options.first.hashed_email
     end
   end
 

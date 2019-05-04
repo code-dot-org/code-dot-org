@@ -230,3 +230,8 @@ ja:
         title: 動かせ！動かせ！
       DigitalFootprint_2019:
         title: あなたのデジタルフットプリント
+      timeforcs_demo_crowdsourcing:
+        title: クラウドソーシング
+      timeforcs_demo_conditionals:
+        title: 条件
+        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。

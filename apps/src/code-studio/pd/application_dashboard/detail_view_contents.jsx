@@ -172,7 +172,8 @@ export class DetailViewContents extends React.Component {
       school_stats: PropTypes.object,
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
-      principal_approval_state: PropTypes.string
+      principal_approval_state: PropTypes.string,
+      allow_sending_principal_email: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -1070,6 +1071,7 @@ export class DetailViewContents extends React.Component {
                   {Object.keys(this.pageLabels[header]).map((key, j) => {
                     return (
                       (this.props.applicationData.form_data[key] ||
+                        key === 'csTotalCourseHours' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>

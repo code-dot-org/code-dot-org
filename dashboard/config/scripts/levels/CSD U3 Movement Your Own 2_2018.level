@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2018-03-19T23:32:46.000Z",
+  "created_at": "2018-12-14T19:32:14.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -27,10 +27,10 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "true",
+    "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "# Add movement to your animation\r\n\r\nWith your static scene set up, you can now add some movement. When you are satisfied with your program, click the \"Submit\" button to turn it in. You can always unsubmit and continue working if you want to add features.\r\n\r\n# Do This\r\n\r\nIn the draw loop\r\n\r\n* Identify which sprite properties to change.\r\n* Update those properties using the counter pattern.\r\n\r\n_Tip: If your counter pattern isn't working like you expect, add watchers to help debug your program._",
+    "long_instructions": "# Add movement to your animation\r\n\r\nWith your static scene set up, you can now add some movement.\r\n\r\n# Do This\r\n\r\nIn the draw loop\r\n\r\n* Identify which sprite properties to change.\r\n* Update those properties using the counter pattern.\r\n\r\n_Tip: If your counter pattern isn't working like you expect, add watchers to help debug your program._",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -85,11 +85,18 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "encrypted": "false",
+    "rubric_key_concept": "Model two dimensional movement on a coordinate plane.",
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The counter pattern is used on at least two sprite properties to create smooth motion.  There are no extra blocks, and all set up is contained outside the draw loop.",
+    "rubric_performance_level_2": "The counter pattern is used on at least two sprite properties to create smooth motion.  There may be minor errors in the program, or extra blocks.",
+    "rubric_performance_level_3": "The counter pattern is used somewhere in the program, but the sprite may not animate properly.",
+    "rubric_performance_level_4": "There is no counter pattern.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:10 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:59:39 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:24:10 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 19:59:39 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-01 03:02:26 +0000\",\"changed\":[\"submittable\",\"long_instructions\",\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

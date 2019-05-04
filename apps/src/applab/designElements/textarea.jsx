@@ -14,6 +14,9 @@ import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
+import themeColor from '../themeColor';
+import elementLibrary from './library';
+import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -192,20 +195,103 @@ class TextAreaEvents extends React.Component {
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
+  themeValues: {
+    backgroundColor: {
+      type: 'color',
+      ...themeColor.textAreaBackground
+    },
+    borderRadius: {
+      default: 2,
+      orange: 2,
+      citrus: 4,
+      ketchupAndMustard: 5,
+      lemonade: 6,
+      forest: 5,
+      watermelon: 20,
+      area51: 20,
+      polar: 8,
+      glowInTheDark: 0,
+      bubblegum: 8,
+      millennial: 8,
+      robot: 0,
+      classic: 0
+    },
+    borderWidth: {
+      default: 1,
+      orange: 0,
+      citrus: 0,
+      ketchupAndMustard: 2,
+      lemonade: 0,
+      forest: 0,
+      watermelon: 0,
+      area51: 0,
+      polar: 2,
+      glowInTheDark: 0,
+      bubblegum: 0,
+      millennial: 0,
+      robot: 1,
+      classic: 1
+    },
+    borderColor: {
+      type: 'color',
+      ...themeColor.textAreaBorder
+    },
+    textColor: {
+      type: 'color',
+      ...themeColor.textArea
+    },
+    fontFamily: {
+      default: 'Arial',
+      orange: 'Arial',
+      citrus: 'Palatino',
+      ketchupAndMustard: 'Tahoma',
+      lemonade: 'Arial',
+      forest: 'Arial',
+      watermelon: 'Georgia',
+      area51: 'Trebuchet',
+      polar: 'Arial',
+      glowInTheDark: 'Tahoma',
+      bubblegum: 'Trebuchet',
+      millennial: 'Arial',
+      robot: 'Tahoma',
+      classic: 'Arial'
+    },
+    fontSize: {
+      default: 13,
+      orange: 13,
+      citrus: 13,
+      ketchupAndMustard: 13,
+      lemonade: 13,
+      forest: 13,
+      watermelon: 13,
+      area51: 13,
+      polar: 13,
+      glowInTheDark: 13,
+      bubblegum: 13,
+      millennial: 13,
+      robot: 13,
+      classic: 14
+    }
+  },
 
   create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    element.style.fontFamily = fontFamilyStyles[0];
-    element.style.fontSize = defaultFontSizeStyle;
-    element.style.color = '#000000';
-    element.style.backgroundColor = '#ffffff';
-    elementUtils.setDefaultBorderStyles(element, {
-      forceDefaults: true,
-      textInput: true
-    });
+    if (experiments.isEnabled('applabThemes')) {
+      element.style.borderStyle = 'solid';
+      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    } else {
+      element.style.fontFamily = fontFamilyStyles[0];
+      element.style.fontSize = defaultFontSizeStyle;
+      element.style.color = themeColor.textArea.classic;
+      element.style.backgroundColor = themeColor.textAreaBackground.classic;
+      elementUtils.setDefaultBorderStyles(element, {
+        forceDefaults: true,
+        textInput: true
+      });
+    }
 
     $(element).addClass('textArea');
 

@@ -8,7 +8,7 @@ class DemigrateFromMultiAuthTest < ActionDispatch::IntegrationTest
   end
 
   test "demigrate_from_multi_auth demigrates a migrated user" do
-    teacher = create :teacher, :with_migrated_email_authentication_option
+    teacher = create :teacher
     assert teacher.migrated?
 
     sign_in teacher
@@ -21,7 +21,7 @@ class DemigrateFromMultiAuthTest < ActionDispatch::IntegrationTest
   end
 
   test "demigrate_from_multi_auth is a no-op for an unmigrated user" do
-    teacher = create :teacher
+    teacher = create :teacher, :demigrated
     refute teacher.migrated?
 
     sign_in teacher

@@ -1,62 +1,63 @@
+---
 eu:
   data:
     short_instructions:
       2-3 Artist 1 new: Ei, artista bat naiz. Kodez idatz dezakezu nik edozer gauza marraztu ahal izateko. Bloke gutxi erabili nik marraztu ahal izateko irudiaren lerro grisen gainetik.(Lerro bakoitza 100 pixelekoa da)
-      2-3 Artist 11: "Inguratu \"Geldi\" seinalea,  alde bakoitzak 100 pixel luze dituen oktogono bat eginez. Zenbat gradu biratu behako duzu? (Pista: Zenbat da 360 zati 8?)"
-      2-3 Artist 12: |-
-        Ezarri "errepikatu" blokea zirkulua egiteko eta begia bukatzeko. Higidura bakoitzak eskumara gradu bat jotzen badu, zenbat denbora behar duzu zirkulu osoa amaitzeko? 180? 360? 500?
+      2-3 Artist 11: 'Inguratu "Geldi" seinalea,  alde bakoitzak 100 pixel luze dituen oktogono bat eginez. Zenbat gradu biratu behako duzu? (Pista: Zenbat da 360 zati 8?)'
+      2-3 Artist 12: Ezarri "errepikatu" blokea zirkulua egiteko eta begia bukatzeko. Higidura bakoitzak eskumara gradu bat jotzen badu, zenbat denbora behar duzu zirkulu osoa amaitzeko? 180? 360? 500?
       2-3 Artist 2 new: 'Etxe honek horma erdi-egin bat dauka. Alde bakoitza 100-ekoa da baina erdi-egina, soilik, 50-ekoa da. Amaitu horma. '
       2-3 Artist 2: 'Etxe honek horma erdi-egin bat dauka. Alde bakoitza 100-ekoa da baina erdi-egina, soilik, 50-ekoa da. Amaitu horma. '
       2-3 Artist 3.4: Jauzi blokeak artista mugitzen du, marraztu gabe. Marraztu marratutako lerroa Jauzi eta Marraztu blokeak erabiliz.
       2-3 Artist 3: Txapel hau 100 pixelekoa da garaikoa. Marraztu txapel bat 70 pixel gutxiagokoa.
-      2-3 Artist 3new: "Kapelu gorriak 100 pixeleko altuera du. Bukatu marrazten kapelu beltza, 70 pixel gutxiago dituena. Kapelu beltzak 50 pixel ditu zabaleran."
+      2-3 Artist 3new: Kapelu gorriak 100 pixeleko altuera du. Bukatu marrazten kapelu beltza, 70 pixel gutxiago dituena. Kapelu beltzak 50 pixel ditu zabaleran.
       2-3 Artist 4: Lagun nazazu katuarentzat etxea bukatzen
       2-3 Artist 5: ' Etxe bera 3 bloke soilik erabiliz marrazteko, "Errepika" blokearekin ordezkatu kodea.'
       2-3 Artist 6: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
-      2-3 Artist 7: 'Azkeneko leihoaren eskuin aldea marrazten bukatu. Leihoaren karratu bakoitzak 25 pixel neurtzen du'
+      2-3 Artist 7: Azkeneko leihoaren eskuin aldea marrazten bukatu. Leihoaren karratu bakoitzak 25 pixel neurtzen du
       2-3 Artist 8: Animalia bakoitzarentzat bere gela osatu, laukizuzena bi karratu berdinetan zatituz. Laukizuzenak 200 pixel ditu zabaleran eta 100 pixel altueran.
       2-3 Artist 9 NEW: Kometa hau bukatu.
       2-3 Artist 9 REPLACEMENT: Bukatu eskailera hauek marrazten!
       2-3 Artist 9: Kometa hau bukatu.
       2-3 Artist Assessment 1: 'Ebaluaketa: Azkeneko hortza marrazten bukatu, 25 pixel zabal bider 25 pixel altu.'
       2-3 Artist Debugging 1: Egin dezakezu, gehienez 100 pixel luze den kapelua?
-      2-3 Artist Debugging 10: "Nire jokoaren norabide-kontrolatzailea estuegia da. Iradokizuna: egizu 10 pixel zabalagoa"
-      2-3 Artist Debugging 11: |-
-        Nire elur maluta ederra marrazten lagun nazazu. Zenbatetan errepikatu behar dut, bukatzeko?
+      2-3 Artist Debugging 10: 'Nire jokoaren norabide-kontrolatzailea estuegia da. Iradokizuna: egizu 10 pixel zabalagoa'
+      2-3 Artist Debugging 11: Nire elur maluta ederra marrazten lagun nazazu. Zenbatetan errepikatu behar dut, bukatzeko?
       2-3 Artist Debugging 12: Olatu bat gehitu behar dut ozeano honetan. Lagun nazakezu?
-      2-3 Artist Debugging 2: "Ikusten duzun hiru biboteentzako kodea okerra da. Iradokizuna: bibote bakoitza 75 pixeleko zabalera dauka. Zuzendu kodea biboteak marrazteko."
-      2-3 Artist Debugging 3: "Nire itsasontziak zulo bat daukat! Lagunduko didazu hori konpontzen lerroaren angelua aldatuz? Iradokizuna: azken angeluan 15 graduko errorea dago."
+      2-3 Artist Debugging 2: 'Ikusten duzun hiru biboteentzako kodea okerra da. Iradokizuna: bibote bakoitza 75 pixeleko zabalera dauka. Zuzendu kodea biboteak marrazteko.'
+      2-3 Artist Debugging 3: 'Nire itsasontziak zulo bat daukat! Lagunduko didazu hori konpontzen lerroaren angelua aldatuz? Iradokizuna: azken angeluan 15 graduko errorea dago.'
       2-3 Artist Debugging 4: Zer da marrazten ari garen irudia? Bukatu puntuak lotzen lerro eta angelu egokiak lotuz.
-      2-3 Artist Debugging 5: "Ikusten dituzun hanka eta oin horien kodea okerra da. Iradokizuna: Oina luzeegia da, litekeena da urrats bat ezabatu behar izatea (nahita jarritako hitz-jokoa)"
-      2-3 Artist Debugging 6: |-
-        Hanka bat faltan duen aulki batean jarrita nagoela dirudi. Edita itzazu blokeak hanka marrazteko.
-      2-3 Artist Debugging 7: |-
-        Ematen du "code"-ko C letra alderantziz marraztu dela. Ondo jarriko duzu C moduan?
-      2-3 Artist Debugging 8: |-
-        Nire errotatxo bukatu gabe dago. Zenbatetan errepikatu behar dut bukatzeko?
-      2-3 Artist Debugging 9: |-
-        Zutoin honen kodea okerra da. Iradokizuna: angeluaren errorea 60 gradukoa da
-      2-3 Artist Debugging Assessment 1: "Irudi hori txikegia da. Handiago egin dezakezu? Iradokizuna: alde bakoitzean 75 pixel handiagoa beharko luke."
+      2-3 Artist Debugging 5: 'Ikusten dituzun hanka eta oin horien kodea okerra da. Iradokizuna: Oina luzeegia da, litekeena da urrats bat ezabatu behar izatea (nahita jarritako hitz-jokoa)'
+      2-3 Artist Debugging 6: Hanka bat faltan duen aulki batean jarrita nagoela dirudi. Edita itzazu blokeak hanka marrazteko.
+      2-3 Artist Debugging 7: Ematen du "code"-ko C letra alderantziz marraztu dela. Ondo jarriko duzu C moduan?
+      2-3 Artist Debugging 8: Nire errotatxo bukatu gabe dago. Zenbatetan errepikatu behar dut bukatzeko?
+      2-3 Artist Debugging 9: 'Zutoin honen kodea okerra da. Iradokizuna: angeluaren errorea 60 gradukoa da'
+      2-3 Artist Debugging Assessment 1: 'Irudi hori txikegia da. Handiago egin dezakezu? Iradokizuna: alde bakoitzean 75 pixel handiagoa beharko luke.'
       2-3 Artist Free Play: Joku askea! Marraztu nahi duzuna.
-      2-3 Artist Functions 1 a: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
-      2-3 Artist Functions 1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
-      2-3 Artist Functions 10: 'Hemen bi funtzio daude, batekin engranaje handi bat margotu dezakezu bestearekin ordea txiki bat. Erabili itzazu biak makina baten barrualdea marrazteko!'
-      2-3 Artist Functions 11 a: "\"Marraztu karratua\" funtzioa berrizendatu dugu \"Marraztu hexagonoa\" izenarekin, baina oraiandik karratuak marrazten ditu! Aldatu dezakezu \"Marraztu hexagonoa\" funtzioa 50 pixeleko aldea duen hexagono bat marraz dezan, eta irudi hori marraztu funtzioa erabiliz?"
-      2-3 Artist Functions 11.5 a: "\"Marraztu hexagono bat\" funtzio bera dago hemen. Zer gertatuko da errepikapen bakoitzean 60 gradutan baino ez bazara biratzen?"
-      2-3 Artist Functions 11.5: "\"Marraztu hexagono bat\" funtzio bera dago hemen. Zer gertatuko da errepikapen bakoitzean 60 gradutan baino ez bazara biratzen?"
-      2-3 Artist Functions 11: "\"Marraztu karratua\" funtzioa berrizendatu dugu \"Marraztu hexagonoa\" izenarekin, baina oraiandik karratuak marrazten ditu! Aldatu dezakezu \"Marraztu hexagonoa\" funtzioa 50 pixeleko aldea duen hexagono bat marraz dezan, eta irudi hori marraztu funtzioa erabiliz?"
-      2-3 Artist Functions 12 Mike: "Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. \"Marraztu lore bat\" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  "
-      2-3 Artist Functions 12 a: "Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. \"Marraztu lore bat\" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  "
-      2-3 Artist Functions 12: "Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. \"Marraztu lore bat\" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  "
+      2-3 Artist Functions 1 a: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      2-3 Artist Functions 1: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      2-3 Artist Functions 10: Hemen bi funtzio daude, batekin engranaje handi bat margotu dezakezu bestearekin ordea txiki bat. Erabili itzazu biak makina baten barrualdea marrazteko!
+      2-3 Artist Functions 11 a: '"Marraztu karratua" funtzioa berrizendatu dugu "Marraztu hexagonoa" izenarekin, baina oraiandik karratuak marrazten ditu! Aldatu dezakezu "Marraztu hexagonoa" funtzioa 50 pixeleko aldea duen hexagono bat marraz dezan, eta irudi hori marraztu funtzioa erabiliz?'
+      2-3 Artist Functions 11.5 a: '"Marraztu hexagono bat" funtzio bera dago hemen. Zer gertatuko da errepikapen bakoitzean 60 gradutan baino ez bazara biratzen?'
+      2-3 Artist Functions 11.5: '"Marraztu hexagono bat" funtzio bera dago hemen. Zer gertatuko da errepikapen bakoitzean 60 gradutan baino ez bazara biratzen?'
+      2-3 Artist Functions 11: '"Marraztu karratua" funtzioa berrizendatu dugu "Marraztu hexagonoa" izenarekin, baina oraiandik karratuak marrazten ditu! Aldatu dezakezu "Marraztu hexagonoa" funtzioa 50 pixeleko aldea duen hexagono bat marraz dezan, eta irudi hori marraztu funtzioa erabiliz?'
+      2-3 Artist Functions 12 Mike: 'Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. "Marraztu lore bat" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  '
+      2-3 Artist Functions 12 a: 'Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. "Marraztu lore bat" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  '
+      2-3 Artist Functions 12: 'Funtzioak oso baliagarriak dira gauza konplexuak hainbat aldiz marrazteko. "Marraztu lore bat" funtzioa erabiliko duzu lorezainaren kutxako gainontzekoa betetzeko? (Aholkua: Loreen arteko distantzia 100 pixelekoa da)  '
       2-3 Artist Functions 13: Bi funtzio dituzu. Nahi duzun moduan erabili funtzio horiek, begizta bat edo gehiagotan, geroago lagunekin partekatu ditzakezun marrazkiak egiteko. Sakatu "hasi" adibide bat ikusteko.
-      2-3 Artist Functions 2: "Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak \"marraztu karratua\" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu \"marraztu karratua\" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da."
-      2-3 Artist Functions 3: "Funtzioa editatu 115 pixeleko aldea duen karratu bat marrazteko eta marraztu betaurreko handiagoak. Karratuen arteko distantzia orain 45 pixelekoa da."
+      2-3 Artist Functions 2: Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da.
+      2-3 Artist Functions 3: Funtzioa editatu 115 pixeleko aldea duen karratu bat marrazteko eta marraztu betaurreko handiagoak. Karratuen arteko distantzia orain 45 pixelekoa da.
       2-3 Artist Functions 4: '"Errepikatu" blokea erabili 3 karratu hauek marrazteko.'
       2-3 Artist Functions 7: '"Marraztu etxea" funtzioa erabili bi etxe marrazteko, bi parametro desberdin erabilita. (Aholkua: Lehen etxea 100 pixelekoa da).'
-      2-3 Artist Functions 9: 'Hemen dago elur-maluta funtzio bat. Jolastu berarekin neguko irudi bat sortzeko. Hau libre jolasteko maila da, ez dago ebazteko problemarik. Ondo pasa!'
+      2-3 Artist Functions 9: Hemen dago elur-maluta funtzio bat. Jolastu berarekin neguko irudi bat sortzeko. Hau libre jolasteko maila da, ez dago ebazteko problemarik. Ondo pasa!
       2-3 Artist Loops 1: 100 pixeleko aldeak dituen hexagono bat marraztuko duzu zelula bukatzeko? Gogora ezazu biraketak 60 gradukoak izan behar direla!
       2-3 Artist Loops 10: Zer gertatzen zaio marrazkiari azken urratsaren luzera erdira laburtzen badugu?
-      2-3 Artist Loops 11: "Orain *beste* begizta bat jarriko dugu gure sorkuntza osoaren inguruan.\nEz ahaztu angelu bat gehitzeaz kanpoko begiztaren bukaeran."
+      2-3 Artist Loops 11: |-
+        Orain _beste_ begizta bat jarriko dugu gure sorkuntza osoaren inguruan.
+        Ez ahaztu angelu bat gehitzeaz kanpoko begiztaren bukaeran.
       2-3 Artist Loops 2: Orain erabil ezazu errepikatu bloke bat zelula oskol bihurtzeko.
       2-3 Artist Loops 4: Ikusi nahi duzu zer gertatzen den forma hori behin eta berriz errepikatzen dugunean begizta bat erabiliz?
       2-3 Artist Loops 5: Egin dezagun orain aldaketa txiki bat begiztan eta ikus dezagun zenbat aldatzen den gure irudia.
@@ -64,76 +65,71 @@ eu:
       2-3 Artist Loops 7: Era guztietako poligonoak egiteko erabil ditzakegu begiztak. Sortu dezakezu erronbo bat hexagonoaren barruan?
       2-3 Artist Loops 8: Jarri bi osagaiak begizta batean.
       2-3 Artist Loops 9: |-
-        Elementu berdinekin egingo ditugu errepikapenak, baina orain distantzia txiki bat jarriko dugu beraien artean.\r
+        Elementu berdinekin egingo ditugu errepikapenak, baina orain distantzia txiki bat jarriko dugu beraien artean.\\r
         Lehengo kodea erabili, baina urrats bat aurrera egin kanpoko begizta bukatu ondoren.
       2-3 Artist Loops New 1: Marraztu dezagun robot honen burua! Egingo duzu 100 pixeleko aldea duen karratu bat?
       2-3 Artist Loops New 10: Orain konekta ditzagun V mordo bat elkarrekin, begizta batean denak marraztuta.
       2-3 Artist Loops New 11: Oraingoan marraztu dezagun hori 24 aldiz. Gehitu kode honi 30 graduko biraketa bat eta jarri dena "errepikatu" bloke batean.
-      2-3 Artist Loops New 12: "Marraztu 100 pixeleko aldeak dituen diamante bat.\n"
-      2-3 Artist Loops New 13: "Orain marraztu diamantea 3 aldiz begizta batean."
+      2-3 Artist Loops New 12: Marraztu 100 pixeleko aldeak dituen diamante bat.
+      2-3 Artist Loops New 13: Orain marraztu diamantea 3 aldiz begizta batean.
       2-3 Artist Loops New 14: Orain marraztu diamantea 10 aldiz, baina biratu 90 gradu diamante bakoitzaren artean.
       2-3 Artist Loops New 15: Marraztu zerbait dibertigarria.
-      2-3 Artist Loops New 2: |-
-        Hona hemen karratua marrazteko erabili duzun kodearen zati bat. Zer gertatzen da errepikatu blokea erabiltzen baduzu kode hau 4 aldiz exekutatzeko?
+      2-3 Artist Loops New 2: Hona hemen karratua marrazteko erabili duzun kodearen zati bat. Zer gertatzen da errepikatu blokea erabiltzen baduzu kode hau 4 aldiz exekutatzeko?
       2-3 Artist Loops New 9: Gezia amaitzeko marraztu V arrunt bat, non bi aldeak 50 pixelekoak diren.
       2-3 Artist Match Hex Pic: 'Elkartu: Lagundu hexagonoa bukatzen.'
       2-3 Artist Match Rho Pic: 'Elkartu: bukatu falta de kodea.'
       2-3 Artist Match Sq Pic: 'Elkartu: osatu falta den kodea'
       2-3 Artist Match Tri pic: 'Elkartu: bete falta den kodea.'
-      2-3 Artist Nested Loops 1: Jadanik erabili dituzu begiztak formak irudikatzeko, baina ba al zenekien begizta bat beste begizta baten barnean jarri dezakezula?\r Sar ezazu 3 aldiz begizta batean kode honi dagokion bloke osoa patroia marrazteko.
+      2-3 Artist Nested Loops 1: Jadanik erabili dituzu begiztak formak irudikatzeko, baina ba al zenekien begizta bat beste begizta baten barnean jarri dezakezula?\\r Sar ezazu 3 aldiz begizta batean kode honi dagokion bloke osoa patroia marrazteko.
       2-3 Artist Nested Loops 10: Errepikatu kode hau 12 aldiz patroia osatzeko.
       2-3 Artist Nested Loops 11: Errepikatu kode hau 4 aldiz patroia osatzeko, biratu 90 gradu zirkulu bakoitzaren ondoren.
       2-3 Artist Nested Loops 12: Kurbak osatzeko sartu kode zati hau begizta batean 12 aldiz errepikatuz.
-      2-3 Artist Nested Loops 2: "Orain errepikatu triangelua sei aldiz. Triangelu bakoitzaren ondoren 60 graduko bira eman beharko duzu hurrengoa marraztu aurretik."
-      2-3 Artist Nested Loops 3: "Triangelua 12 aldiz errepikatu beharko duzu patroi hau marrazteko. Zatitu zirkulu baten gradu kopurua (360) marrazten ari zaren forma kopuruarekin (12), forma bakoitzaren ondoren zenbat biratu beharko duzun jakiteko."
-      2-3 Artist Nested Loops 4: "Errepikatu diamantea 12 aldiz lore bat marrazteko. Pista: 12 diamante marraztea egin dituzun 12 triangeluen berdina da - zenbat biratu behar duzu forma bakoitzaren ondoren?"
-      2-3 Artist Nested Loops 5: "Bete eraikin honen leihoak kabiatutako begizta batekin. Leihoek 20 pixeleko luzera dute, eta beraien artean 20 pixel daude."
-      2-3 Artist Nested Loops 6: |-
-        Dinosauro honek 8 tontor dauzka isatsetik gora; tontor bakoitzak 30 pixeleko luzera du. Errepikatu triangelua 8 aldiz, baina ziurtatu aurrera mugitzea horietariko bakoitzaren ondoren.
-      2-3 Artist Nested Loops 7: "Errepikatu triangelua 10 aldiz eguzkia marrazteko. Triangelu bakoitzaren ondoren mugitu eta biratu beharko duzu. Zirkuluaren gradu kopurua, hau osatzen duten forma kopuruarekin zatituz, zenbat biratu beharko duzun ondorioztatuko duzu."
-      2-3 Artist Nested Loops 8: "Orain gehitu diezaiogun belarra gure irudiari.\nBelar koma bakoitza 50 pixeleko distantzian dago."
-      2-3 Artist Nested Loops 9: "Irudi hau amaitzeko lore bat gehituko dugu. Errepikatu diamantea 12 aldiz zure lorea marrazteko."
+      2-3 Artist Nested Loops 2: Orain errepikatu triangelua sei aldiz. Triangelu bakoitzaren ondoren 60 graduko bira eman beharko duzu hurrengoa marraztu aurretik.
+      2-3 Artist Nested Loops 3: Triangelua 12 aldiz errepikatu beharko duzu patroi hau marrazteko. Zatitu zirkulu baten gradu kopurua (360) marrazten ari zaren forma kopuruarekin (12), forma bakoitzaren ondoren zenbat biratu beharko duzun jakiteko.
+      2-3 Artist Nested Loops 4: 'Errepikatu diamantea 12 aldiz lore bat marrazteko. Pista: 12 diamante marraztea egin dituzun 12 triangeluen berdina da - zenbat biratu behar duzu forma bakoitzaren ondoren?'
+      2-3 Artist Nested Loops 5: Bete eraikin honen leihoak kabiatutako begizta batekin. Leihoek 20 pixeleko luzera dute, eta beraien artean 20 pixel daude.
+      2-3 Artist Nested Loops 6: Dinosauro honek 8 tontor dauzka isatsetik gora; tontor bakoitzak 30 pixeleko luzera du. Errepikatu triangelua 8 aldiz, baina ziurtatu aurrera mugitzea horietariko bakoitzaren ondoren.
+      2-3 Artist Nested Loops 7: Errepikatu triangelua 10 aldiz eguzkia marrazteko. Triangelu bakoitzaren ondoren mugitu eta biratu beharko duzu. Zirkuluaren gradu kopurua, hau osatzen duten forma kopuruarekin zatituz, zenbat biratu beharko duzun ondorioztatuko duzu.
+      2-3 Artist Nested Loops 8: |-
+        Orain gehitu diezaiogun belarra gure irudiari.
+        Belar koma bakoitza 50 pixeleko distantzian dago.
+      2-3 Artist Nested Loops 9: Irudi hau amaitzeko lore bat gehituko dugu. Errepikatu diamantea 12 aldiz zure lorea marrazteko.
       2-3 Artist Nested Loops Free Play: Jolas askea, marraztu zerbait zoragarria habiatutako begiztekin.
       2-3 Bee Conditionals 1: Kaixo! Erle bat naiz. Lagundu nazazu loretik nektarra lortzen.
-      2-3 Bee Conditionals 10: "Lore moreek 1 edo 0 nektar izan dezakete. Kontuz ibili nektarra ez jasotzeko lore more batetik, bat ere ez badu.\\r\n"
-      2-3 Bee Conditionals 11: "Bildu nektarra nektarra duten loreetatik."
+      2-3 Bee Conditionals 10: Lore moreek 1 edo 0 nektar izan dezakete. Kontuz ibili nektarra ez jasotzeko lore more batetik, bat ere ez badu.\\r
+      2-3 Bee Conditionals 11: Bildu nektarra nektarra duten loreetatik.
       2-3 Bee Conditionals 12: Erabili begizta bat lore hauek guztiek nektarra duten egiaztatu eta jasotzeko.
-      2-3 Bee Conditionals 13: |-
-        Bildu nektarra eta eztia egin. Pista: zer gertatzen da "baldin nektar" baldintza erabiltzen baduzu lore gorri batean? Begizta batekin osatu dezakezu hau?
-      2-3 Bee Conditionals 14: |-
-        Bildu nektarra eta eztia egin. Kontuz ibili nektarra ez jasotzeko nektarrik ez duen lore more batetik.
-      2-3 Bee Conditionals 15: "Bildu nektarra lau loreetatik."
-      2-3 Bee Conditionals 2: "Kaixo! Erle bat naiz. Lagundu nazazu loreetatik nektar guztia biltzen. Erabili begizta bat."
-      2-3 Bee Conditionals 3: "Lagundu nektar guztia loreetatik biltzen eta eztia egiten. Erabili begizta bat."
+      2-3 Bee Conditionals 13: 'Bildu nektarra eta eztia egin. Pista: zer gertatzen da "baldin nektar" baldintza erabiltzen baduzu lore gorri batean? Begizta batekin osatu dezakezu hau?'
+      2-3 Bee Conditionals 14: Bildu nektarra eta eztia egin. Kontuz ibili nektarra ez jasotzeko nektarrik ez duen lore more batetik.
+      2-3 Bee Conditionals 15: Bildu nektarra lau loreetatik.
+      2-3 Bee Conditionals 2: Kaixo! Erle bat naiz. Lagundu nazazu loreetatik nektar guztia biltzen. Erabili begizta bat.
+      2-3 Bee Conditionals 3: Lagundu nektar guztia loreetatik biltzen eta eztia egiten. Erabili begizta bat.
       2-3 Bee Conditionals 4: Lagundu nektar guztia loreetatik biltzen eta ezti guztia egiten.
-      2-3 Bee Conditionals 5: "Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz."
+      2-3 Bee Conditionals 5: Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz.
       2-3 Bee Conditionals 6: Egiaztatu lore hau "if" blokearein ikusteko ea nektarrik dagoen eskuragarri.
       2-3 Bee Conditionals 7: Bildu nektarra lore bakoitzetik baldin badauka.
-      2-3 Bee Conditionals 8: "Eremu honek lore gorri eta moreak ditu.\nLore gorriak jakineko nektar kopurua daukate, baina moreen nektar kopurua ez da jakina.\nBildu nektar guztia."
+      2-3 Bee Conditionals 8: |-
+        Eremu honek lore gorri eta moreak ditu.
+        Lore gorriak jakineko nektar kopurua daukate, baina moreen nektar kopurua ez da jakina.
+        Bildu nektar guztia.
       2-3 Bee Conditionals 9: Bildu lore bakoitzeko nektar guztia.
       2-3 Bee Conditionals Assessment 1: 'Ebaluazioa: Bildu nektar guztia. Kontuz ibili nektarrik ez duten lore moreetatik ez biltzen.'
       2-3 Bee Debugging 1: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging 10: "Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko."
-      2-3 Bee Debugging 2: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging 3: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 10: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 2: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 3: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       2-3 Bee Debugging 4: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging 5: "Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko. Orain korrika eta pausua erabili ditzakezu."
-      2-3 Bee Debugging 6: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 5: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko. Orain korrika eta pausua erabili ditzakezu.
+      2-3 Bee Debugging 6: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       2-3 Bee Debugging 7: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging 8: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging 9: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      2-3 Bee Debugging Assessment 1: |-
-        Ebaluazioa: Bloke hauek benetan izorratzen naute. Konpondu (akatsa) k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 8: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging 9: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      2-3 Bee Debugging Assessment 1: 'Ebaluazioa: Bloke hauek benetan izorratzen naute. Konpondu (akatsa) k nektar guztia biltzeko eta ezti guztia egiteko.'
       2-3 Bee Functions 1: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 2 nektar" lore bakoitzaren nektarra biltzeko.
-      2-3 Bee Functions 10: "Lore moreek nektar 1 edo bat ere ez eduki dezakete. Sortu ezazu funtzio bat soilik nektarra duten loreetatik bilduko duena nektarra."
-      2-3 Bee Functions 2: "Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili \"lortu 5\" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai."
+      2-3 Bee Functions 10: Lore moreek nektar 1 edo bat ere ez eduki dezakete. Sortu ezazu funtzio bat soilik nektarra duten loreetatik bilduko duena nektarra.
+      2-3 Bee Functions 2: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
       2-3 Bee Functions 3: Bildu lore bakoitzeko nektar guztia.
-      2-3 Bee Functions 4: "\"Mugitu eta lortu nektarra\" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko."
+      2-3 Bee Functions 4: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'
       2-3 Bee Functions 5: Orain nektar gehiago dago loreetan. Editatu emandako funtzioa 4 nektar biltzeko eta erabili gero loreetatik nektar guztia biltzeko.
       2-3 Bee Functions 6: Orain erabili funtzio bera hiru loreetatik biltzeko nektarra.
       2-3 Bee Functions 7: Loreak urrutiago daude orain. Editatu emandako funtzioa eta erabili gero loreetatik nektar guztia biltzeko.
@@ -141,8 +137,7 @@ eu:
       2-3 Bee Functions 9: Sortu funtzio bat bide batean zehar mugitu, nektarra bildu, eztia egin eta erlea bidearen hasierara eramango duena.
       2-3 Bee Functions Assessment 1: 'Ebaluazioa: Erabili emandako funtzioa nektarra biltzeko lore bakoitzetik.'
       2-3 Bee Functions Assessment 2: 'Ebaluazioa: Sortu funtzio bat aldiberean 3 ezti unitate egiteko.'
-      2-3 Bee Loops 1: |-
-        Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. 
+      2-3 Bee Loops 1: 'Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. '
       2-3 Bee Loops 10: Erabili al dezakezu "bitartean" begizta bat beste bi begizten barruan nektar guztia biltzeko?
       2-3 Bee Loops 11: Erabili "bitartean" begiztak eremu honetako nektar guztia biltzeko.
       2-3 Bee Loops 12: Erabili "bitartean" begiztak eremu honetako nektar guztia biltzeko.
@@ -153,13 +148,12 @@ eu:
       2-3 Bee Loops 3: Bildu lore bakoitzaren nektarra eta egin eztia abaraska bakoitzean.
       2-3 Bee Loops 3A: Begizta bat erabiltzerik al duzu nektar guztia biltzeko?
       2-3 Bee Loops 3B: Orain erabili "errepika" bloke berria nektar guztia bildu eta ezti guztia egiteko.
-      2-3 Bee Loops 4: |-
-        Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
-      2-3 Bee Loops 4A: "Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!"
-      2-3 Bee Loops 5: "Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili."
+      2-3 Bee Loops 4: Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
+      2-3 Bee Loops 4A: Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!
+      2-3 Bee Loops 5: Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili.
       2-3 Bee Loops 6: Erabili begizta bat lore bakoitzetik nektarra bildu eta abaraska bakoitzean eztia egiteko.
       2-3 Bee Loops 7: Jarri bloke hauek begizta batean lore bakoitzaren nektarra biltzeko.
-      2-3 Bee Loops 8: "Lore moratu hauek nektar kopuru ezezaguna dute. Nektar guztia biltzeko \"while nektar\" begizta erabil ezazu. Begizta hori exekutatuko da baldintza (kasu honetan nektar>0) egiazkoa den bitartean."
+      2-3 Bee Loops 8: Lore moratu hauek nektar kopuru ezezaguna dute. Nektar guztia biltzeko "while nektar" begizta erabil ezazu. Begizta hori exekutatuko da baldintza (kasu honetan nektar>0) egiazkoa den bitartean.
       2-3 Bee Loops 9: '"Bitartean" aginduak begizta baten barruan jarritako "baldin" aginduaren ekintza bera bete dezake. Gehitu "bitartean" begizta bat kode honi ataza berdina egiteko.'
       2-3 Bee Loops Assessment 1: 'Ebaluazioa: Erabili "bitartean" begizta bat lore hauen nektar guztia biltzeko.'
       2-3 Maze 1: 'Lagunduko didazu txerri zikina harrapatzen? Pilatu "aurrera mugitu" bloke pare bat eta klikatu "Hasi". '
@@ -189,8 +183,8 @@ eu:
       2-3 Maze 9: Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)
       2-3 Maze Loops 1: Zerriraino eraman nazakezu 5 bloke erabiliz?
       2-3 Maze Loops 17: Eraman nazazu ekiloreraino!
-      2-3 Maze Loops 18: "Eraman nazazu ekiloreraino!"
-      2-3 Maze Loops 19: "Eraman nazazu ekiloreraino!"
+      2-3 Maze Loops 18: Eraman nazazu ekiloreraino!
+      2-3 Maze Loops 19: Eraman nazazu ekiloreraino!
       2-3 Maze Loops 20: Ebatz dezakezu puzle hau ahal den bloke kopuru txikiena erabiliz?
       2-3 Maze Loops 21: Eraman nazazu ekiloreraino!
       2-3 Maze Loops Assessment 1: 'Ebaluazioa: Eraman nazazu ekiloreraino soilik 5 bloke erabiliz! '
@@ -210,6 +204,7 @@ eu:
       2-3 maze sq14: Iritsi al zaitezke ekiloreraino soilik 4 bloke erabiliz?
       2-3 maze sq15: Iritsi al zaitezke ekiloreraino soilik 5 bloke erabiliz?
       2-3 maze sq16: Ok, hau antzekoa da, baina ez berdina. 5 bloketan bakarrik egin dezakezu?
+      2-3: Lore moreek 1 edo 0 nektar izan dezakete. Kontuz ibili nektarra ez jasotzeko lore more batetik, bat ere ez badu.\\r
       2-3level1: Lagundu iezaiozu txoriari zerri zikina harrapatzen aurrera mugiaraziz
       20hr_farmer_stage9_1: Kaixo! Baserritarra naiz. Zure laguntza behar dut baserriko lurrak berdintzeko, erein ahal izateko prest egon daitezen. Eraman nazazu lur-metara eta erabil ezazu "ezabatu" blokea hori desegiteko.
       20hr_farmer_stage9_11: 'Oraindik ilun dago kanpoan. Mugi nazazu eremuan zehar. Meta bat baldin badago, desegin ezazu, eta zulo bat baldin badago, bete ezazu. Pista: "baldin" blokearen menu zabalgarriko aukerak erabil ditzakezu.'
@@ -249,7 +244,7 @@ eu:
       4-5 Artist 5: Ze angelu erabiltzen duzu?
       4-5 Artist 6: Triangelu alde-berdinak 60, 60 eta 60 graduko angeluak ditu. Alde bakoitzak 200 pixeleko luzera du. Osatu irudia.
       4-5 Artist 7: Triangelu angeluzuzen honek 30, 60 eta 90 graduko angeluak ditu. Alde makurraren luzera 100 pixeleko altueraren bikoitza da. Osatu irudia.
-      4-5 Artist 8: "Futboleko zelai-erdiko marra alboko marren perpendikularra da. Zelaiak 800 pixeleko perimetroa du eta 240 pixeleko luzera. Zenbatekoa da zabalera? Margotu mugak eta zelai-erdiko marra."
+      4-5 Artist 8: Futboleko zelai-erdiko marra alboko marren perpendikularra da. Zelaiak 800 pixeleko perimetroa du eta 240 pixeleko luzera. Zenbatekoa da zabalera? Margotu mugak eta zelai-erdiko marra.
       4-5 Artist 9: Marraztu beste erdia diseinua simetrikoa izan dadin. Triangeluak alde-berdinekoak dira eta 50 pixeleko luzera dute.
       4-5 Artist Assessment 1: 'Ebaluazioa: Erabili begizta bat triangelu alde-berdina irudikatzeko. Alde bakoitzak 300 pixel ditu.'
       4-5 Artist For Loops 1: Jarri 1etik 10erako zenbakiak "Ezarri zabalera" blokeetan eta exekutatu kodea.
@@ -283,43 +278,42 @@ eu:
       4-5 Artist Functions 7: Erabili "marraztu etxe bat" funtzioa 100 pixeleko eta 50 pixeleko etxeak marrazteko. Bi etxeen arteko tartea 50 pixelekoa izango da.
       4-5 Artist Functions 8: '"Marraztu lore bat" funtzioak parametro bat du zurtoinaren altuera ezartzeko. Ezarri 200-era eta ikusi zer gertatzen den.'
       4-5 Artist Functions 9: Marraztu hiru lore hauel. Lehenengoaren altuera 100ekoa da eta hurrengoaren luzera beti aurrekoarenak baino 50 pixel gehiago ditu. Loreen arteko tartea ere 100 pixelekoa da.
-      4-5 Artist Patterns 1: |-
-        Marraztu dezakezu karratu hau begizta bat erabiliz? Alde bakoitzaren luzera 20 pixelekoa da.
-      4-5 Artist Patterns 10: "Kode honek bi hexagono ilara marrazten ditu - errepikatu guztia 4 aldiz abaraska osoa marrazteko. Pista: 120 pixeleko saltoa eman beharko duzu kanpoko begiztan artistak pantailatik kanpo marraztu ez dezan."
+      4-5 Artist Patterns 1: Marraztu dezakezu karratu hau begizta bat erabiliz? Alde bakoitzaren luzera 20 pixelekoa da.
+      4-5 Artist Patterns 10: 'Kode honek bi hexagono ilara marrazten ditu - errepikatu guztia 4 aldiz abaraska osoa marrazteko. Pista: 120 pixeleko saltoa eman beharko duzu kanpoko begiztan artistak pantailatik kanpo marraztu ez dezan.'
       4-5 Artist Patterns 11: 'Zenbat aldiz errepikatu behar duzu hau zirkulu erdi bat marrazteko? Pista: zirkulu batean 360 grado baldin badaude eta begizta bakoitzean 3 gradu mugitzen bada, zenbateko begizta beharko zenuke zirkulu osoa marrazteko?'
-      4-5 Artist Patterns 12: "Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?"
-      4-5 Artist Patterns 13: "Orain errepika dezagun guztia lau aldiz irudi-marko hau sortzeko. Kontuz izkinekin - ezin duzu besterik gabe 90 grado biratu! 3 gradoko birak 60 aldiz errepikatuz gero zirkulu erdia lortuko da, hauetako ze kode-blokek egingo du izkinetarako zirkulu laurdena?"
+      4-5 Artist Patterns 12: Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?
+      4-5 Artist Patterns 13: Orain errepika dezagun guztia lau aldiz irudi-marko hau sortzeko. Kontuz izkinekin - ezin duzu besterik gabe 90 grado biratu! 3 gradoko birak 60 aldiz errepikatuz gero zirkulu erdia lortuko da, hauetako ze kode-blokek egingo du izkinetarako zirkulu laurdena?
       4-5 Artist Patterns 2: Karratuaren begizta beste begiztaren barnean jartzen baduzu, "kabiatutako begizta" izango duzu. Ze gehitu behar diozu kanpoko begiztari 15 karratuak elkarren artean lerrokatuta daudela ziurtatzeko?
       4-5 Artist Patterns 3: Orain goazen maila sakonago batera! kode-bloke oso hori kabiatu dugu beste begizta batean, baina artista bere lekura eraman behar duzu hurrengo lerroa marrazteko. Hauetako ze kode-bloke jar dezakezu kanpo-begiztaren amaieran lauki-sare osoa marrazteko?
       4-5 Artist Patterns 4: Diamante honek 50 pixeleko aldeak ditu eta 120 eta 60 gradoko angeluak. Erabili begizta bat marrazteko.
       4-5 Artist Patterns 5.5: Zenbat aldiz errepikatu behar duzu bloke hau diamanteen sare osoa marrazteko?
-      4-5 Artist Patterns 5: "Errepika dezagun hori 6 diamanteko ilara egiteko. Kontuan izan diamantearen kodea aldatu dugula 2ren ordez 3 aldiz errepikatzeko - zergatik ote?"
-      4-5 Artist Patterns 6: Zenbat aldiz errepikatu behar duzu bloke hau diamanteen sare osoa marrazteko?
+      4-5 Artist Patterns 5: Errepika dezagun hori 6 diamanteko ilara egiteko. Kontuan izan diamantearen kodea aldatu dugula 2ren ordez 3 aldiz errepikatzeko - zergatik ote?
       4-5 Artist Patterns 7: Alda dezagun azken puzlearen kodea patroi konplexuago hau egiteko. Kontuan izan orain diamanteak gainjarri egiten direla, saiatu lehenengo "salto egin atzera" aldatzen 100etik 50era (erdira beraz) - orain zenbat egin behar du atzera artistak bigarren aldiko "sato egin atzera" horretan?
       4-5 Artist Patterns 8: Erabili begizta bat 40 pixeleko aldeak eta 60 gradoko angeluak dituen hexagono hau marrazteko.
       4-5 Artist Patterns 9.5: Errepika dezagun kode hau bi hexagono ilara marrazteko. Kontuan izan bigarren ilara eskuinera desplazatuta dagoela.
-      4-5 Artist Patterns 9: "Orain errepikatu kode hau 3 aldiz ilara osoa marrazteko. Pista, hexagono bakoitzak 80 pixel ditu eskuinetik ezkerrerako puntu altuenetatik."
+      4-5 Artist Patterns 9: Orain errepikatu kode hau 3 aldiz ilara osoa marrazteko. Pista, hexagono bakoitzak 80 pixel ditu eskuinetik ezkerrerako puntu altuenetatik.
       4-5 Artist Patterns Free Play: Joku askea - saiatu zuk aukeratutako patroi bat egiten!
       4-5 Bee Conditionals - FC Test: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
       4-5 Bee Conditionals 1: Erleak esan dezake hau lorea edo abaraska den. Nektarra bildu loreetatik soilik, baina lehenengo egiaztatu lorea edo abaraska den.
       4-5 Bee Conditionals 2 (copy 1): Erleak orain nektarra baino ez du nahi. Gogoratu, objektu guztiak ez dira loreak, beraz egiaztatu nektarra loreetatik soilik biltzen duzula.
-      4-5 Bee Conditionals 2: "Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu."
+      4-5 Bee Conditionals 2: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       4-5 Bee Conditionals 3: Orain erleak eztia egin nahi du. Ziurtatu eztia abaraskan bakarrik egiten duzula.
       4-5 Bee Conditionals 4: Objektu ezezaguna lorea edo abaraska da. Erabili baldin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
-      4-5 Bee Conditionals 5: |-
-        Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
-      4-5 Bee Conditionals 6: "Lore moreak 3, nektar, 2 edo 1 izan ditzake. Hmen, \"baldin-orduan\" blokea \"baldin-bestela\" bloke batekin konbinatzen da \"baldin-orduan-bestela\" blokea sortzeko. Osatu soluzioa nektar kopuru ezezaguna biltzeko."
-      4-5 Bee Conditionals 7: "Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela. Bete \"egiaztatu lore morea\" funtzioa eta erabili ezazu loreetako nektar guztia biltzeko."
-      4-5 Bee Conditionals 8: "Idatzi \"egiaztatu lorea eztia egin\" funtzioaren barruan. Zure funtzioak lore moreak 3, 2 edo nektar bakarra duen begiratu beharko du, eta nektar guztia bildu. Ondoren, mugitu aurrera eta egin eztia."
-      4-5 Bee Conditionals Assessment 1: "Ebaluazioa: Kode hau okerra da.\nBete \"lortu nektarra edo egin eztia\" funtzioa. Ondoren deitu iezaiozu nektar guztia eta eztia biltzeko. Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela."
-      4-5 Bee Debugging 1: "Bloke hauek benetan gogaitzen naute. Zuzendu ditzakezu?"
+      4-5 Bee Conditionals 5: Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
+      4-5 Bee Conditionals 6: Lore moreak 3, nektar, 2 edo 1 izan ditzake. Hmen, "baldin-orduan" blokea "baldin-bestela" bloke batekin konbinatzen da "baldin-orduan-bestela" blokea sortzeko. Osatu soluzioa nektar kopuru ezezaguna biltzeko.
+      4-5 Bee Conditionals 7: Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela. Bete "egiaztatu lore morea" funtzioa eta erabili ezazu loreetako nektar guztia biltzeko.
+      4-5 Bee Conditionals 8: Idatzi "egiaztatu lorea eztia egin" funtzioaren barruan. Zure funtzioak lore moreak 3, 2 edo nektar bakarra duen begiratu beharko du, eta nektar guztia bildu. Ondoren, mugitu aurrera eta egin eztia.
+      4-5 Bee Conditionals Assessment 1: |-
+        Ebaluazioa: Kode hau okerra da.
+        Bete "lortu nektarra edo egin eztia" funtzioa. Ondoren deitu iezaiozu nektar guztia eta eztia biltzeko. Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela.
+      4-5 Bee Debugging 1: Bloke hauek benetan gogaitzen naute. Zuzendu ditzakezu?
       4-5 Bee Debugging 10: Akatsak bilatu eta zuzendu itzazu.
       4-5 Bee Debugging 11: Ondo kontatzen al du?
       4-5 Bee Debugging 2: Lagundu iezaiozu erleari nektarra lortzen eta eztia egiten.
       4-5 Bee Debugging 3: Akatsak bilatu eta zuzendu itzazu.
       4-5 Bee Debugging 4: Bloke hauek ez dute funtzionatzen. Zein da patroia?
       4-5 Bee Debugging 5: Zerbait ez dago ondo hemen...
-      4-5 Bee Debugging 6: "Lore moreak nektar kopuru ezezaguna dauka. Zuzendu blokeak loreko nektar guztia lortzeko."
+      4-5 Bee Debugging 6: Lore moreak nektar kopuru ezezaguna dauka. Zuzendu blokeak loreko nektar guztia lortzeko.
       4-5 Bee Debugging 7: Funtzio honetan zerbait falta da...
       4-5 Bee Debugging 8: Funtzio hau zuzena da, baina ez dago ondo erabilita.
       4-5 Bee Debugging 9: Zergatik ez da ari erlea nahikoa ezti egiten?
@@ -327,13 +321,13 @@ eu:
       4-5 Bee Nested Loops 1: Erabili begizta bat nektar guztia biltzeko.
       4-5 Bee Nested Loops 2: 'Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. '
       4-5 Bee Nested Loops 3: Bildu nektar guztia sortuta dagoen kodea begizta kabiatu batean jarriz.
-      4-5 Bee Nested Loops 4: "Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. "
+      4-5 Bee Nested Loops 4: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       4-5 Bee Nested Loops 5: Bildu nektar guztia begizta kabiatu bat sortuz.
       4-5 Bee Nested Loops 6: Bildu nektar guztia.
       4-5 Bee Nested Loops 7: Jarri begizta hau beste begizta baten barnean begizta kabiatu bat sortzeko eta loreetako nektar guztia biltzeko.
       4-5 Bee Nested Loops 8: 'Bildu lore hauetako nektar guztia "bitartean begizta" bat kabiatuz. Ordezkatu barruko "errepikatu n aldiz" blokea "bitartean bloke" batekin. '
       4-5 Bee Nested Loops 9: Bildu lore hauetako nektar guztia bitartean begizta bat errepikatu begizta baten barruan kabiatuz.
-      4-5 Bee Nested Loops Assessment 1: "Ebaluazioa - Bildu nektar guztia eta egin eztia begiztak erabiliz."
+      4-5 Bee Nested Loops Assessment 1: Ebaluazioa - Bildu nektar guztia eta egin eztia begiztak erabiliz.
       4-5 Bee Nested Loops Rows: Bildu nektarra lore ilaretatik. Erabili begizta kabiatu bat.
       4-5 Maze 1 (copy 1): Pertsona agurgarria. Ni zombia. Joan... behar... lorera.
       4-5 Maze 1: Pertsona agurgarria. Ni zombia. Joan... behar... lorera.
@@ -353,46 +347,41 @@ eu:
       4-5 Maze 6 (copy 1): Ebatz dezakezu puzle hau ahal den bloke kopuru txikiena erabiliz?
       4-5 Maze 6: Ebatz dezakezu puzle hau ahal den bloke kopuru txikiena erabiliz?
       4-5 Maze 7: Pertsona agurgarria. Ni zonbia. Joan... behar... ekilorera.
-      4-5 Maze 8: "Erabili \"repeat\" blokea zombiea ekilorera eramateko. (Lore haragijaleak saihestuz)"
-      4-5 Maze 9: "Sor ezazu begizta bat \"errepikatu arte\" blokearekin."
+      4-5 Maze 8: Erabili "repeat" blokea zombiea ekilorera eramateko. (Lore haragijaleak saihestuz)
+      4-5 Maze 9: Sor ezazu begizta bat "errepikatu arte" blokearekin.
       4-5 Maze Assessment 1: 'Ebaluazioa: iritsi ekilorera.'
       4-5 Maze Conditionals 1: Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.
       4-5 Maze Conditionals 2: Zonbia ekiloreraino eramateko "errepikatu arte" blokea erabi ezazu.
-      4-5 Maze Conditionals 3: "\"baldin\" blokea erabil ezazu, noiz biratu niri erabakitzen uzteko. Iradokizuna: bloke bat gehiago soilik behar duzu, baina ikasi nola konfiguratzen dugun hurrengoan zure kasa egiteko gai izan zaitezen."
+      4-5 Maze Conditionals 3: '"baldin" blokea erabil ezazu, noiz biratu niri erabakitzen uzteko. Iradokizuna: bloke bat gehiago soilik behar duzu, baina ikasi nola konfiguratzen dugun hurrengoan zure kasa egiteko gai izan zaitezen.'
       4-5 Maze Conditionals 4: Ongi, hau azkeneko ariketa bezalakoa da, baina "baldin" blokea eta "errepikatu" blokea batera nola erabili zenituen gogoratu behar duzu.
-      4-5 Maze Conditionals 5: "Nik nahi ekilore! \"baldin\" bloke bat erabil ezazu, ni haraino eramateko bloke kopuru txikienarekin."
-      4-5 Maze Conditionals 6: |-
-        Nik nahi ekilore! "baldin" bloke bat erabil ezazu, ni haraino eramateko bloke kopuru txikienarekin.
+      4-5 Maze Conditionals 5: Nik nahi ekilore! "baldin" bloke bat erabil ezazu, ni haraino eramateko bloke kopuru txikienarekin.
+      4-5 Maze Conditionals 6: Nik nahi ekilore! "baldin" bloke bat erabil ezazu, ni haraino eramateko bloke kopuru txikienarekin.
       4-5 Maze Conditionals 7: Ongi, berriz egin dezagun praktikatzearren -hau ez da oso desberdina, baina adi lore haragijaleetara!
-      4-5 Maze Conditionals 8: "\"baldin/bestela\" blokeak baldintza bat egiaztatzen du, eta orduan gauza bat egiten du ALA bestea. Ni ekiloreraino eramateko bloke berri hau erabiltzen sai zaitez."
-      4-5 Maze Conditionals 9: |-
-        "baldin-bestela" blokearekin beste jardun bat gehiago, ondo egingo al duzu zure lehenengo saiakeran?
-      4-5 Maze Conditionals Assessment 1: "\"errepikatu arte\" bloke bat eta \"baldin-bestela\" bloke bat erabil itzazu, ni ekiloreraino eramateko ahal den bloke kopuru txikienarekin."
+      4-5 Maze Conditionals 8: '"baldin/bestela" blokeak baldintza bat egiaztatzen du, eta orduan gauza bat egiten du ALA bestea. Ni ekiloreraino eramateko bloke berri hau erabiltzen sai zaitez.'
+      4-5 Maze Conditionals 9: '"baldin-bestela" blokearekin beste jardun bat gehiago, ondo egingo al duzu zure lehenengo saiakeran?'
+      4-5 Maze Conditionals Assessment 1: '"errepikatu arte" bloke bat eta "baldin-bestela" bloke bat erabil itzazu, ni ekiloreraino eramateko ahal den bloke kopuru txikienarekin.'
       4-5 Nested Loops 1: 'Osatu kodea triangelu hauek marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
       4-5 Nested Loops 10: Marraztu bandera honetako izarren azkeneko lerroa emandako blokeak errepikatuz. Izarren artean 50 pixeleko tartea dago, baina gogoratu izarrak 30 pixeleko zabalerakoak direla.
       4-5 Nested Loops 11: Marraztu ditzakezu espaloi honetako 10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
       4-5 Nested Loops 12: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       4-5 Nested Loops 2: 'Orain sartu begizta hau beste begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
-      4-5 Nested Loops 3: |-
-        Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-
+      4-5 Nested Loops 3: Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\r
       4-5 Nested Loops 5: Errepikatu emandako kodea haize-errota bat sortzeko.
       4-5 Nested Loops 6: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
-      4-5 Nested Loops 7: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
-      4-5 Nested Loops 8: "Errepikatu diseinu hau 6 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 6?)"
+      4-5 Nested Loops 7: 'Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
+      4-5 Nested Loops 8: 'Errepikatu diseinu hau 6 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 6?)'
       4-5 Nested Loops 9: Marraztu krokodiloaren ahoko hortzak!
-      4-5 Nested Loops Assessment 1: 'Erabili begizta kabiatu bat irudia amaitzeko.'
+      4-5 Nested Loops Assessment 1: Erabili begizta kabiatu bat irudia amaitzeko.
       4-5 While Loops 1: Mugi nazazu zuloraino eta bete hau bi lur palakadaz, "bete" blokea erabiliz.
       4-5 While Loops 2: Mugi nazazu lur tontorreraino eta desegin ezazu 5 palakadaz, "ezabatu" blokea erabiliz.
-      4-5 While Loops 3: "Mugi nazazu tontorreraino eta guztia ezabatu ezazu, ondoren zulora mugitu eta hau guztiz bete. Pista: Erabili ahalik eta bloke gutxien."
-      4-5 While Loops 4: "Primeran! Zulo benetan sakona aurkitu dudana! Ez dakit zenbat paletakada lur behar diren. Programa bat idatz dezakezu zuloa betetzeko gainazala laua izan arte? Pista: Oraingoan saia zaitez bitartean begizta erabiltzen."
+      4-5 While Loops 3: 'Mugi nazazu tontorreraino eta guztia ezabatu ezazu, ondoren zulora mugitu eta hau guztiz bete. Pista: Erabili ahalik eta bloke gutxien.'
+      4-5 While Loops 4: 'Primeran! Zulo benetan sakona aurkitu dudana! Ez dakit zenbat paletakada lur behar diren. Programa bat idatz dezakezu zuloa betetzeko gainazala laua izan arte? Pista: Oraingoan saia zaitez bitartean begizta erabiltzen.'
       4-5 While Loops 5: Hara, orain bi zulo sakon daude! Programa bat idatz dezakezu bi zuloak betetzeko gainazala laua izan arte?
       4-5 While Loops 6: Hara, orain lur-meta asko dago! Idatzi dezakezu programa bat lur-metak ezabatuko dituena lurzorua laua izan arte?
       4-5 While Loops 7: Hara, oran hiru lur-meta daude! Idatz dezakezu programa bat lur-metak ezabatuko dituena lurzorua laua izan arte?
-      4-5 While Loops 8: " Zulo benetan sakona dago eta lur-meta asko. Zenbat palakada lur mugitu behar dira inguruan lurzorua laua bihurtzeko? Pista: Erabili \"bitartean\" begizta bietarako."
+      4-5 While Loops 8: ' Zulo benetan sakona dago eta lur-meta asko. Zenbat palakada lur mugitu behar dira inguruan lurzorua laua bihurtzeko? Pista: Erabili "bitartean" begizta bietarako.'
       4-5 While Loops Assessment 1: Zulo eta lur-meta piloa dago. Lagun iezadazu zuloak betetzen eta lur-metak kentzen lurzorua laua egiteko.
       App Lab test: proba
-      Artist - Nested Loops 1: 'Osatu kodea triangelu hauek marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
       Artist - Nested Loops 10: Marraztu bandera honetako izarren azkeneko lerroa emandako blokeak errepikatuz. Izarren artean 50 pixeleko tartea dago, baina gogoratu izarrak 30 pixeleko zabalerakoak direla.
       Artist - Nested Loops 11: Marraztu ditzakezu espaloi honetako 10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
       Artist - Nested Loops 12: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
@@ -401,7 +390,7 @@ eu:
       Artist - Nested Loops 9: Marraztu krokodiloaren ahoko hortzak!
       Artist - Nested Loops Assessment 1: Erabili kabiatutako begizta bat diseinua osatzeko.
       Artist Autorun Test: '"Errepikatu" blokea erabili 3 karratu hauek marrazteko.'
-      Artist Inspiration: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
+      Artist Inspiration: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\\\r\n\\\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
       Auto Open Function Editor: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
       Bee Recommended Blocks test: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.
       Bergeron Robot Maze1: 'Lagunduko didazu txerri zikina harrapatzen? Pilatu "aurrera mugitu" bloke pare bat eta klikatu "Hasi". '
@@ -422,25 +411,34 @@ eu:
       Course 4 2: Erleak orain nektarra baino ez du nahi. Gogoratu, objektu guztiak ez dira loreak, beraz egiaztatu nektarra loreetatik soilik biltzen duzula.
       Course 4 Artist 1: 'Lagundu iezadazu kutxa bat marrazten. (Lerro bakoitzak 200 pixeleko luzera dauka) '
       Course 4 Artist 10: |-
-        Egin klik hemen pistak berriro ikusteko!\r
-        \r
+        Egin klik hemen pistak berriro ikusteko!\\r
+        \\r
         Hemen duzu forma interesgarri batentzako kodea. Zer gertatzen da errepikatzen baduzu? Kontuan izan forma honetan biraketek 420 gradu batzen dituztela eta, ondorioz, zure artistak marrazkia amaitzen duenean ez dela hasierako noranzkoan geldituko. Noranzko berria hasierakoaren 60 grado eskuinera izango da.
       Course 4 Artist 11: Eta orain erronka bat! Hemen diseinu bat aurkezten dugu, zuk jadanik ikusita dituzun blokeak bakarrik erabiltzen dituena. Pentsa al dezakezu nola berregin daitekeen? proba eta errorea teknika aplikatzeko libre zara. Lehen aldian borobil-borobil egitea ez da espero. Iradokizun gehiago ikusi nahi? Hemen klikatu!
-      Course 4 Artist 12: |-
-        Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r \r Bestela, diseinu osoa zure kasa egin ezazu!
+      Course 4 Artist 12: Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\\r \\r Bestela, diseinu osoa zure kasa egin ezazu!
       Course 4 Artist 13: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia diseina dezakezun!
       Course 4 Artist 2: Honako kodearekin begizta sor al dezakezu laukia grisean marraz dezan?
       Course 4 Artist 20: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia sor dezakezun!
       Course 4 Artist 3: Honako kodea exekutatzen baduzu zer gertatzen den pentsatzen saia zaitez (edo bestela, "Hasi" sakatu probatzeko). Ondoren, marrazkia osatzeko behar adina aldiz errepika ezazu.
       Course 4 Artist 4: Zenbat gradu daude zirkulu batean? Zenbaki horrekin "errepikatu" blokea bete ezazu, koloreetako zirkulu bat sortzeko.
       Course 4 Artist 5: 'Diseinu honen beste erdia marraz ezazu, simetrikoa izan dadin. Triangeluak aldekideak dira eta 50 pixeleko luzerakoak. Iradokizuna: kodea hainbat aldiz exekutatzeko beharra izan dezakezu gehitu behar diren bloke guztiak zeintzuk diren pentsatzeko.'
-      Course 4 Artist 6: "Triangelu hauek marrazteko kodea osa ezazu.\nIradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?"
+      Course 4 Artist 6: |-
+        Triangelu hauek marrazteko kodea osa ezazu.
+        Iradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?
       Course 4 Artist 7: 'Orain begizta hau beste begizta baten barnean sar ezazu 10 triangelu marrazteko. Honi habiaratutako begizta esaten zaio. Iradokizuna: 10 triangelu horiek guztiak 360 graduko biraketa osatzen dute.  '
       Course 4 Artist 8: Eguzki hau marraz ezazu kode bloke honen gainean hainbat aldiz begizta burutuz.
-      Course 4 Artist 8a: "Irudi hau gogoratzen? Oraingoan hori eraikitzen utziko dizugu baina hasteko inolako blokerik eman gabe!\\r\nIradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?"
-      Course 4 Artist 9: "Diseinu hau 10 aldiko begiztan sartu, eta marrazten den forma bakoitzaren ondoren biraketa egiten dela ziurtatu. Hona hemen iradokizuna biraketa zenbatekoa izan behar den jakiteko: zenbat da 360 zati 10?"
-      Course 4 Artist Binary 1: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r\n\\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
-      Course 4 Artist Binary 1a: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r\n\\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
+      Course 4 Artist 8a: |-
+        Irudi hau gogoratzen? Oraingoan hori eraikitzen utziko dizugu baina hasteko inolako blokerik eman gabe!\\r
+        Iradokizuna: 360 graduko biraketan 3 triangelu daude... zenbat aldiz dago 3 zenbakia 360-an?
+      Course 4 Artist 9: 'Diseinu hau 10 aldiko begiztan sartu, eta marrazten den forma bakoitzaren ondoren biraketa egiten dela ziurtatu. Hona hemen iradokizuna biraketa zenbatekoa izan behar den jakiteko: zenbat da 360 zati 10?'
+      Course 4 Artist Binary 1: |-
+        Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r
+        \\r
+        Kode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko.
+      Course 4 Artist Binary 1a: |-
+        Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r
+        \\r
+        Kode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko.
       Course 4 Artist Binary 2: Honako kate edo segida bitarretik zeinen gainean egin daiteke 8 aldiko begizta irudi hau marrazteko?
       Course 4 Artist Binary 3: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       Course 4 Artist Binary 4: Kate edo segida bitar bakoitzak irudi honetako lerro bat adierazten du. Berrantola al ditzakezu aurpegi kopetilun baten ordez aurpegi irribarretsua marraz dezan?
@@ -449,41 +447,50 @@ eu:
       Course 4 Artist Binary 7: Honako marrazkia buka ezazu.
       Course 4 Artist Binary Free Play 2: 'Joku askea: hona hemen canvas edo oihal zuria, beraren gainean marraz dezazun. Ondo pasa!'
       Course 4 Artist Binary Free Play 2a: |-
-        Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \r
-        \r
+        Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \\r
+        \\r
         Bitekin kreatiboak izaten hasten garenean zer gertatzen den ikusten?
       Course 4 Artist Binary Free Play 2b: Hemen klikatu iradokizunak ikusteko.
       Course 4 Artist Binary Free Play: 'Joku Askea: gustukoa duzun edozein gauza marraztu bitarrekin!'
-      Course 4 Artist Binary pre1: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
-      Course 4 Artist Binary ryan: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      Course 4 Artist Binary pre1: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
+      Course 4 Artist Binary ryan: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
       Course 4 Artist For  Functions 10: Goazen aurrera pauso bat ematea. Marraz dezakezu Izar bat "Marraztu karratuko marra" funtzioa erabiliz? Zorte on!
       Course 4 Artist For  Functions 11: Goazen aurrera pauso bat ematea. Marraz dezakezu Izar bat "Marraztu karratuko marra" funtzioa erabiliz? Zorte on!
       Course 4 Artist For Loops 1: 'Marraztu 50 pixeleko zabalera duen triangelu hau. Pista: erabili errepikatu bloke bat.'
       Course 4 Artist For Loops 10: Joko librearen garaia! Dibertitu nahi duzuna marrazten, erabiltzen ikasi duzun blokeen bidez
       Course 4 Artist For Loops 11: 'Gogoratzen duzu 6. atalean erabili genuen aldagaia forma bateko alde kopurua kontrolatzeko? Orain berdina egingo dugu "kontagailua" aldagaiarekin. Patroi hau triangelu batekin hasten da eta alde bat gehitzen zaio banan-banan dekagono bat (10 alde) osatu arte. Alde bakoitzak 100 pixeleko luzera izan behar du. Pista: 360 gradu forma batek duen alde kopuruarekin zatituta, biratu beharreko gradu kopurua lortuko duzu.'
-      Course 4 Artist For Loops 11a: |-
-        Jarri ditzagun denak elkarrekin! "for begiztak" eta "kontagailua"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \r\r Kodearen oso zati txikia eman zaizu.
+      Course 4 Artist For Loops 11a: Jarri ditzagun denak elkarrekin! "for begiztak" eta "kontagailua"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \\r\\r Kodearen oso zati txikia eman zaizu.
       Course 4 Artist For Loops 12: 'Hori polita izan da, baina orain irudi bakoitza azkenekoaren ondoan marraztea nahiko nuke. Oraingo honetan alde bakoitzak 20 pixel ditu. Erabili jauzi blokea 40 pixel aurrera jauzi egiteko forma bakoitzaren ondoren. '
       Course 4 Artist For Loops 13: Hmmm, forma horiek gero eta handiagoak dira! Ez al dugu jadanik ebatzi arazo hau aldagaiak erabiliz? Nola erabili genezake "kontagailua" aldagaia aldeak txikiagoak egiteko alde kopurua handiagoa den heinean? Aurrera distantzia finko bat mugitu beharrean, saiatu (100/kontagailua) pixel aurrera mugituz.
       Course 4 Artist For Loops 14: Forma bat egiteko normalean baino piskat gehiago edo gutxiago biratzen baduzu, efektu egituratuagoa lortuko duzu. Saia zaitez azken mailako kodea erabiltzen baina, oraingoan 89 grado biratu, espiral karratu txirikordatu hau sortzeko.
-      Course 4 Artist For Loops 15: "Joko librea: Saia zure gustoko irudiak marrazten For Begiztak erabiliz. Zenbait aldagai orokor sortu ditugu, erabil ditzazun.\\r\n\\r\nKontuan izan orain tresna-kutxan hainbat bloke dituzula eta, berriro, kategoriatan antolatu behar ditugula. Klikatu inguruan maila honetan erabil ditzakezun bloke guztiak ikusteko."
+      Course 4 Artist For Loops 15: |-
+        Joko librea: Saia zure gustoko irudiak marrazten For Begiztak erabiliz. Zenbait aldagai orokor sortu ditugu, erabil ditzazun.\\r
+        \\r
+        Kontuan izan orain tresna-kutxan hainbat bloke dituzula eta, berriro, kategoriatan antolatu behar ditugula. Klikatu inguruan maila honetan erabil ditzakezun bloke guztiak ikusteko.
       Course 4 Artist For Loops 2: 'Triangelua marrazten duen kodea 50etik 100era hamarnaka kontatzen duen begizta baten barruan jarri dut. OHARRA: Ziurtatu kodea begiratzen duzula "Hasi" botoia sakatu aurretik.'
-      Course 4 Artist For Loops 3: "Erabili azken ariketa hau osatzeko erreferentzia gisa. Triangelu txikienak 20 pixeleko aldeak ditu, handienak 200 pixelekoak, eta triangelu bakoitza aurrekoa baino 20 pixel handiagoa da.\n"
+      Course 4 Artist For Loops 3: Erabili azken ariketa hau osatzeko erreferentzia gisa. Triangelu txikienak 20 pixeleko aldeak ditu, handienak 200 pixelekoak, eta triangelu bakoitza aurrekoa baino 20 pixel handiagoa da.
       Course 4 Artist For Loops 4: 'Nola aldatuko zenuke ikasi duzuna karratu hauek marrazteko? 15 pixeleko luzerarekin hasten dira, eta handiena 300 pixelekoa da. Karratu bakoitza aurrekoa baino 15 pixel handiagoa da. '
       Course 4 Artist For Loops 5: 'Lan ona egin duzu azken ariketan! Goazen berriro ere "kontagailua" aldagai hori erabiltzera irudi polit hau marrazteko. '
       Course 4 Artist For Loops 6: Joko librea! Saia zaitez begizta bat erabiltzen zuk zeuk diseinatutako patroi-forma hazkorra marrazteko.
       Course 4 Artist For Loops 6a: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       Course 4 Artist For Loops 7: Ze gertatzen da algoritmo honetatik "Errepikatu 3" kentzen badugu, "mugitu" eta "biratu" blokeak bigiztaren barnean mantenduz? espiral moduko triangelu honetan, alde bakoitzaren luzera azkenekoarena baino 20 pixel handiagoa da.
       Course 4 Artist For Loops 8: |-
-        Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\r
-        \r
+        Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\\r
+        \\r
         Pista: zerbait ezabatu behar duzu!
       Course 4 Artist For Loops 8a: Azken irudiko kodeari aldaketa txiki bat eginez marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?
       Course 4 Artist For Loops 9: Espiral bat egin dezakezu? Mugitu aurrera 1 pixeletik 75raino, banaka.
-      Course 4 Artist For Loops Challenge: "Asma dezakezu nola erabili ikasi duzun guztia irudi hau sortzeko?\\r\n\\r\nPista txiki bat behar duzu? egin klik hemen."
+      Course 4 Artist For Loops Challenge: |-
+        Asma dezakezu nola erabili ikasi duzun guztia irudi hau sortzeko?\\r
+        \\r
+        Pista txiki bat behar duzu? egin klik hemen.
       Course 4 Artist For Loops inspire: |-
-        Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\r
-        \r
+        Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\\r
+        \\r
         Pista bat behar duzu? egin klik hemen.
       Course 4 Artist Functions 1: Marraztu al dezakezu 100 pixeleko luzera duen karratua begizta bat erabiliz?
       Course 4 Artist Functions 10: Ze bloke gehitu behar duzu triangelua karratuaren gainean jartzeko?
@@ -491,18 +498,18 @@ eu:
       Course 4 Artist Functions 12.1: Sor dezagun "marraztu oktogono bat 20" izeneko funtzioa, alde bakoitza 20 pixelekoa izango duen oktogonoa marrazteko.
       Course 4 Artist Functions 12: Errepikatu karratu funtzioa lerro bat marrazteko
       Course 4 Artist Functions 13.1: |-
-        Orain, patroi hau bukatzeko, egin dezagun "jauzi gora eta eskuinaldera" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.\r
-        \r
+        Orain, patroi hau bukatzeko, egin dezagun "jauzi gora eta eskuinaldera" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.\\r
+        \\r
         Iradokizuna: Goiko eta eskuineko erpinera joateko, saiatu oktogonoaren 3/8 den patroi batean jauzi egiten.
       Course 4 Artist Functions 13: '"marraztu karratu errenkada" izeneko funtzio berri bat dugu. Begiratu lasai funtzio blokeren barrualdea, nola eraiki dugun ikusteko. Klikatu "Hasi" hurrengo puzlerako prest zaudenean.'
       Course 4 Artist Functions 14.1: Orain, patroi hau bukatzeko, egin dezagun "jauzi gora eta eskuinaldera" izeneko funtzio bat, artista marraztu berri duzun oktogonoaren goiko eskuinaldera mugituko duena.
       Course 4 Artist Functions 14: Oso ondo ari zara! Erabili "Marraztu karratu lerro bat" funtzioa Karratu bat marrazteko. Gogoratu karratu bakoitza 40 pixel luze dela.
       Course 4 Artist Functions 15: 'Goazen urrats bat haratago. Marraz dezakezu izar bat "marraztu karratu lerro bat" funtzioa erabiliz? Iradokizuna: 144 graduko biraketa egin beharko duzu'
       Course 4 Artist Functions 2: 'Marraz ditzakezu 3 karratu, bata bestetik 20 pixeletara daudenak? Iradokizuna: karratu bakoitzaren tamaina 100 pixelekoa da'
-      Course 4 Artist Functions 3: "\"karratu bat marraztu\" funtzio blokea erabiliz, marraztu al dezakezu irudi hau? Pista: karratuen arteko distantzia 1220 pixel da\n"
+      Course 4 Artist Functions 3: '"karratu bat marraztu" funtzio blokea erabiliz, marraztu al dezakezu irudi hau? Pista: karratuen arteko distantzia 1220 pixel da'
       Course 4 Artist Functions 4: 'Prest al zaude zure "Funtzio bloke" propioa sortzeko? Tresna kutxako "Funtzioak" blokean klika ezazu, "triangelua marraztu" izena emaiozu, orduan triangelu bat sortu Akzioak eta Begiztak blokeekin lehen egin duzun moduan. Ondoren Gorde eta Itxi botoien gainean klikatu, eskuineko goiko izkinean. Iradokizuna: 100 pixeleko luzera duen triangelu bat sortu. Zorte on!'
       Course 4 Artist Functions 5 OLD: Saia gaitezen gure bi funtzioak etxe bat marrazteko erabiltzen. Zer zuzendu behar da kodean etxea behar bezala marrazteko?
-      Course 4 Artist Functions 5: "\"karratu bat marraztu\" funtzio blokea erabiliz, marraztu al dezakezu irudi hau? Pista: karratuen arteko distantzia 1220 pixel da\n"
+      Course 4 Artist Functions 5: '"karratu bat marraztu" funtzio blokea erabiliz, marraztu al dezakezu irudi hau? Pista: karratuen arteko distantzia 1220 pixel da'
       Course 4 Artist Functions 6: Ze bloke gehitu behar duzu triangelua karratuaren gainean jartzeko?
       Course 4 Artist Functions 7: Marraz dezakezu karratu errenkada bat "marraztu karratua" funtzioa erabilita? Karratu bakoitza 40 pixel luze da.
       Course 4 Artist Functions 8: 'Funtzio blokeak nola erabiltzen diren harrapatzen ari al zara? Lauki hau alda dezagun, tamainan 200 pixel izan dezan. Iradokizuna: "editatu"-ren gainean klikatu editatzailean "marraztu karratua" funtzioaren tamaina aldatzeko. Gogoratu "gorde eta itxi"-ren gainean klikatzea funtzio editatzailetik ateratzeko. '
@@ -510,44 +517,43 @@ eu:
       Course 4 Artist Functions Inspiration: Klikatu hemen iradokizunak berriz ikusteko.
       Course 4 Artist Functions challenge: Klikatu hemen iradokizunak berriz ikusteko.
       Course 4 Artist Functions inspire: Hemen klikatu ezazu irudi inspiragarria berriro ikusteko.
-      Course 4 Artist Inspire: |-
-        Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r \r Bestela, diseinu osoa zure kasa egin ezazu!
+      Course 4 Artist Inspire: Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\\r \\r Bestela, diseinu osoa zure kasa egin ezazu!
       Course 4 Artist Params 1: Edita dezagun funtzio bat, 50 pixeleko aldeak dituen karratu bat marrazten duena
       Course 4 Artist Params 10: 'Funtzioen barrenetik beste funtzio batzuk deitu ditzakezu! Zure "forma" funtzioa oinarri moduan erabiliz, 3 etxe irudi edo forma sortu, bakoitza aurrekoa baino 20 pixel luzeagoa eta 50 pixeleko luzerarekin hasiz. Kontagailu begizta bat erabiltzea lagungarria izan liteke. '
       Course 4 Artist Params 12: Forma hauetako bakoitza marrazteko zure "errotatxo" funtzioa erabil ezazu. Irudi bakoitzaren aldearen luzera 50ekoa da.
       Course 4 Artist Params 13: 'Joku askea: zuk idatzitako funtzioak dauzkazu hemen, eta beste batzuk gehiago zuk horiekin jolas dezazun. Zerbait zoragarria marraztu!'
       Course 4 Artist Params 3: 'Zoragarria, triangelu hauetako bakoitza marraz al dezakezu funtzio berri horrekin? Lehenengoak 25 pixeleko luzera du, bigarrenak 50ekoa, eta hirugarrena 75. '
       Course 4 Artist Params 4: Laukia izeneko funtzio berri bat gehitu al dezakezu? luzera izeneko parametro bat erabili beharko litzateke, triangeluaren kasuan bezala hain justu. Oraingoan 3 lauki marraztu, luzera 25, 50 eta 75 pixel dutenak, eta 100 pixel tartean.
-      Course 4 Artist Params 5: "Irudi hau marrazteko zure bi funtzio berriak erabil itzazu. Lan hau errazagoa egitearren begizta bat erabili \"kontagailua\" parametro batekin.\n"
+      Course 4 Artist Params 5: Irudi hau marrazteko zure bi funtzio berriak erabil itzazu. Lan hau errazagoa egitearren begizta bat erabili "kontagailua" parametro batekin.
       Course 4 Artist Params 6: "\"forma bat marraztu\" funtzio hau edita dezagun. \nJadanik \"luzera\" izeneko parametroa dauka. Orain, funtzioa edita dezagun \"aldeak\" izeneko parametroa ere gehitzeko. Gogoratu forma zehatz baten angelua kalkulatzeko 360 zati berak daukan alde kopurua egin behar dela. Iradokizuna: forma bakoitzaren luzera honakoak da: triangeluan 100 pixel, hexagonoan 35 pixel eta laukian 50 pixel. "
       Course 4 Artist Params 7: '"???" tokian behar den balioa betez forma hauek marraztu al ditzakezu? Laukian eta triangeluan tamaina 100 pixelekoa da, hexagonoan tamaina 75 pixel den bitartean. '
-      Course 4 Artist Params 8: "Forma hau nola marraztu asma al dezakezu? Hona hemen iradokizuna: 6 aldeko funtzio berri bat sortu, hexagonoa izenekoa.\n"
+      Course 4 Artist Params 8: 'Forma hau nola marraztu asma al dezakezu? Hona hemen iradokizuna: 6 aldeko funtzio berri bat sortu, hexagonoa izenekoa.'
       Course 4 Artist Params 9: Gogoratzen al duzu kontagailudun begizta erabili dugunean baina barneko begizta bat kenduz? Diberti gaitezen eta "aldeak" eta "luzera" parametroak dituen "forma bat marraztu" funtzioa erabil dezagun. Forma hauek berriz sor al ditzakezu? Laukiaren kontagailua 5/100/5 izan beharko litzateke, triangeluaren kontagailua 10/100/10 izan beharko litzateke, eta hexagonoarena 2/100/2.
       Course 4 Artist Var 9: 'Hona hemen triangelua marrazteko algoritmoa, berau alda ezazu "aldeak" aldagaia erabil dezan. 3 zenbakia kendu eta bere ordez "aldeak" aldagaia jarri. Iradokizuna: "aldeak ezarri" blokea erabiltzea gogoratu.'
-      Course 4 Artist Vars 1: "Triangelu aldekide bat marrazten lagun al diezadakezu? Alde bakoitzak zehazki 100 pixeleko luzera izan behar du."
+      Course 4 Artist Vars 1: Triangelu aldekide bat marrazten lagun al diezadakezu? Alde bakoitzak zehazki 100 pixeleko luzera izan behar du.
       Course 4 Artist Vars 10: Hona hemen beste triangelu txikiago batzuetan oinarrituz triangelu bat marrazten duen algoritmoa. Berau alda al dezakezu triangelu bakoitza marrazteko "aldeak" aldagaia erabil dezan? Kodea behatu, eta 3 zenbakia ikusten duzun bakoitzean, zure "aldeak" aldagaiarekin ordezkatu. Gogoratu "aldeak ezarri" blokea erabiltzea.
       Course 4 Artist Vars 11: Hona hemen kode konplikatuago bat, azkeneko ariketaren kontzeptu berdinak erabiltzen dituena - zer balio eman behar diozu "aldeak" aldagaiari laukiz osatutako irudi hau marrazteko?
       Course 4 Artist Vars 12: '"aldeak" aldagaian 5 balioa ezarriko dugu. Zenbat eta alde gehiago gehitu algoritmoan, orduan eta handiagoa izango da patroia! Kontuan izan "luzera" izeneko beste aldagai bat dagoela. Orain hori erabil dezakegu "mugitu aurrera" daukagun toki guztietan. Forma honentzat "luzera" aldagaiari 75 balioa eman.'
-      Course 4 Artist Vars 13: "Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \\r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, \"luzera\" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, \"aldeak\" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\\r Laguntzarik behar? Klikatu hemen."
+      Course 4 Artist Vars 13: Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \\r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, "luzera" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, "aldeak" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\\r Laguntzarik behar? Klikatu hemen.
       Course 4 Artist Vars 14: |-
-        Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\r
-        \r
+        Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\\r
+        \\r
         Efektu handiagoa lortzeko, jolastu kolorearekin! Erabili  ausazko koloreak begizten barnean zure diseinua nola aldatzen den ikusteko.
       Course 4 Artist Vars 2: '"Mugitu aurrera 150" ordez, oraingoan "mugitu" blokeak "luzera" izeneko aldagaiari egiten dio erreferentzia. Eman diezaiokezu "luzera" aldagaiari 150 balioa triangelu berri hau marrazteko?'
       Course 4 Artist Vars 3: 'Hemen duzu karratu bat marrazten duen begizta, baina zerbait falta du. Zuzendu dezakezu eta "luzera" aldagaia erabili alde bakoitzaren luzera zein izan behar den admatzeko? '
       Course 4 Artist Vars 4: Orain altuera zabaleraren bikoitza duen laukizuzena egin nahi dut. "zabalera" izeneko aldagai bat dugu 100 balioa eman behar ziona. Erabili ditzakezu matematikako blokeak kodea osatzeko?
       Course 4 Artist Vars 5: Erabili "aldeak" aldagaia begizta hau zenbat aldiz exekutatzen den kontrolatzeko.
       Course 4 Artist Vars 6: |-
-        Hemen duzu edozein poligono erregular marraztu dezakeen kodea. "aldeak" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu "aldeak" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\r
-        \r
+        Hemen duzu edozein poligono erregular marraztu dezakeen kodea. "aldeak" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu "aldeak" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\\r
+        \\r
         Egin klik hemen pistara itzultzeko!
       Course 4 Artist Vars 7: |-
-        Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko "aldeak" aldagaia erabiliz.\r
-        \r
+        Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko "aldeak" aldagaia erabiliz.\\r
+        \\r
         Ikusten duzu nola balio bakar bat aldatuz triangelua, karratua, pentagonoa edo oktogonoa marraztu dezakezun?
       Course 4 Artist Vars 8: 'Joko librea: jolastu formak duen alde kopuruarekin. Alda dezakezu algoritmoa formaren tamaina orokorra mantentzeko, alde kopuruak eragin gabe? Pista: agian oraingoan zure matematikako blokeak erabili behar dituzu (360 zati "aldeak") bi tokitan.'
       Course 4 Artist Vars 9: Aldatu algoritmo hau kopuru finko baten ordez "aldeak" aldagaia erabil dezan triangelu bat marrazteko. Ez ahaztu "aldeak ezarri" blokea erabiltzea.
-      Course 4 Bee 1: "Erleak ezin du esan zer dagoen lainoaren azpian! Lehenengo, erabili \"baldin\" blokea lorea edo abaraska den egiaztatzeko. Ondoren, bildu nektarra lorea bada soilik. "
+      Course 4 Bee 1: 'Erleak ezin du esan zer dagoen lainoaren azpian! Lehenengo, erabili "baldin" blokea lorea edo abaraska den egiaztatzeko. Ondoren, bildu nektarra lorea bada soilik. '
       Course 4 Bee 2: Erabili "baldin/bestela" blokea objektu bakoitza aztertu eta lorea edo abaraska den ikusteko. Lorea bada, nektarra bildu... bestela, eztia egin!
       Course 4 Bee 3: Objektu ezezaguna lorea edo abaraska da. Oraingoan, erabili "baldin/bestela" blokea nektarra biltzeko lorea bada, eta eztia egiteko bestela (abaraska delako).
       Course 4 Bee 4: Lore moreak 3, 2 edo nektar 1 eduki ditzake. Hemen, "baldin/bestela" blokea beste "baldin/bestela" bloke batekin konbinatzen da " baldin/bestela-baldin/bestela" agindua sortzeko. Osatu soluzioa ezezaguna den nektar kopurua biltzeko.
@@ -580,10 +586,10 @@ eu:
       Course 4 Bee Params 6: Ez al litzateke ederra izango nektar guzti hau funtzio bakarrarekin biltzerik bagenu? Saiatu zure funtzioari "nektar unitateak" izeneko parametro berri bat gehitzen, biltzeko dugun nektar kantitatea kontrolatzeko. Seguruenez, funtzioari ere izena aldatu nahiko diozu!
       Course 4 Bee Params 7 (copy 1): Saiatu zure funtzio berria erabiltzen nektar guzti hau biltzeko.
       Course 4 Bee Params 7: Saiatu zure funtzio berria erabiltzen nektar guzti hau biltzeko.
-      Course 4 Bee Params 8 Clone 2: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko? 
-      Course 4 Bee Params 8 Clone: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko? 
-      Course 4 Bee Params 8 clone 3: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko? 
-      Course 4 Bee Params 8 new: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko? 
+      Course 4 Bee Params 8 Clone 2: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko?
+      Course 4 Bee Params 8 Clone: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko?
+      Course 4 Bee Params 8 clone 3: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko?
+      Course 4 Bee Params 8 new: Arranopola, orain eztiaz ere arduratu beharra dago! Nola egunera zenezake zure funtzioa nekatarra lortzeko edo eztia egiteko?
       Course 4 Bee Params 8: 'Erronka: Orain eztiaz ere arduratu beharra dago! Berridatzi zure funtzioa, bai ezti unitate kopurua eta bai nektar unitate kopurua erabiltzeko.  Nola erabil zenitzake kopuru horiek zer egin erabakitzeko?'
       Course 4 Bee Params Ex: Saiatu zure funtzio berria erabiltzen nektar guzti hau biltzeko.
       Course 4 Binary 1: Hona hemen funtzio bat, 1ez eta 0z osatutako kate bitar bat hartu eta baserritarrari ezkerretik eskuinera, goitik behera biratzeko agintzen diona, zenbakiak zero bat duen karratuetan biratuz. Abiarazi emandako kodea, baserritarrek sistema bitarra erabiliz irudi bat nola marrazten duten ikusteko.
@@ -595,12 +601,12 @@ eu:
       Course 4 Binary 6: Zein kate bitarrek, 10 aldiz errepikatuta, marraztuko du irudi hau?
       Course 4 Binary 7: Zein kate bitarrek, 10 aldiz errepikatuta, marraztuko du irudi hau?
       Course 4 Binary 8: Irudi honen gehiengoa 5 biteko zenbaki bitar bat errepikatuz osa dezakezu - ondoren, 4 biteko beste zenbaki bat beharko duzu beheko eskuineko erpina lortzeko.
-      Course 4 EC 1a: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
-      Course 4 EC 1b: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
-      Course 4 EC 2a: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
-      Course 4 EC 2b: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
-      Course 4 EC 2c: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
-      Course 4 EC 2d: '**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
+      Course 4 EC 1a: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
+      Course 4 EC 1b: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
+      Course 4 EC 2a: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
+      Course 4 EC 2b: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
+      Course 4 EC 2c: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
+      Course 4 EC 2d: "**Sekulako Lehiaketa:** Araurik ez. Pistarik ez. Lehiaketa besterik ez!"
       Course 4 EC 3: 'Erabili aurreko mailan ikasitakoa honelako irudia marrazteko. Oharra: kodea erraztu egiten da parametroak erabiltzen badituzu. '
       Course 4 EC 3a: 'Sekulako Lehiaketa: Araurik ez. Pistarik ez. Lehiaketa besterik ez!'
       Course 4 Maze 1: Bidali txori haserrea zerriarengana!
@@ -611,43 +617,57 @@ eu:
       Course 4 Maze 6: Ebatz dezakezu puzle hau ahal den bloke kopuru txikiena erabiliz?
       Course 4 Play Lab For Loops 2: Oraingo honetan, konta ditzagun 1etik 100erako zenbaki bakoitiak.
       Course 4 Play Lab Params 1: Hona hemen "salto" funtzioa, zure protagonistak 100 pixeleko saltoa ematea eragiten duena. Erabili salto funtzioa bandera guztiak biltzeko.
-      Course 4 Play Lab Params 10: "Azken funtzio bat gehitu dizugu. \\r\n\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\r\n\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\r\n\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
-      Course 4 Play Lab Params 2: "Orain gure saltoentzeko altuegi dauden banderak ditugu! Erabil ditzagun \"gora\" eta \"behera\" geziak hainbat altueratako saltoak izateko. \\r\n\\r\nGure salto funtzioari \"altuera\" izeneko parametro bat gehitu beharrean gaude. Gora geziak txakurrak 200 pixeleko saltoa egitea eragin beharko luke, eta behera geziak 100 pixeleko saltoa egitea.\n\\r\n\\r\nIradokizuna: Salto funtzioan \"editatu\" klikatu beharko duzu eta eguneratu, \"altuera\" parametroa erabil dezan."
+      Course 4 Play Lab Params 10: "Azken funtzio bat gehitu dizugu. \\\\r\n\\\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\\\r\n\\\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\\\r\n\\\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
+      Course 4 Play Lab Params 2: |-
+        Orain gure saltoentzeko altuegi dauden banderak ditugu! Erabil ditzagun "gora" eta "behera" geziak hainbat altueratako saltoak izateko. \\r
+        \\r
+        Gure salto funtzioari "altuera" izeneko parametro bat gehitu beharrean gaude. Gora geziak txakurrak 200 pixeleko saltoa egitea eragin beharko luke, eta behera geziak 100 pixeleko saltoa egitea.
+        \\r
+        \\r
+        Iradokizuna: Salto funtzioan "editatu" klikatu beharko duzu eta eguneratu, "altuera" parametroa erabil dezan.
       Course 4 Play Lab Params 3: 'Salto egiteko funtzioari alagai bat gehitu diogu beste aktoreekin erabili ahal izateko. Aktore bakoitza zenbaki batez dago adierazita, batetik hasita. Aldatu "salto egin" funtzioa, aktorea aldagaia erabiliz dagokion pertsonaiak salto egin dezan. '
       Course 4 Play Lab Params 4: "Hemen \"patruila\" izeneko funtzioa dago. \nAldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera."
       Course 4 Play Lab Params 5: Aldatu "patruila" funtzioa "aktore" aldagaia gehitzeko, pantailako aktore bakoitzeko dei ahal diezaiogun. Gogoratu, atoreek 1, 2 eta 3 zenbakiak dituzte.
       Course 4 Play Lab Params 6: Gehitu beste parametro bat, "abiadura" izenekoa, "patruila" funtzioari. Saia zaitez "ezarri abiadura" blokea erabiltzen "abiadura" parametro berriarekin, pinguinoari laguntzeko bi banderak harrapatzen iratxoek bandera bat eskuratu baino lehen.
-      Course 4 Play Lab Params 7: "Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \\r\\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko."
+      Course 4 Play Lab Params 7: Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \\r\\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko.
       Course 4 Play Lab Params 8: Erabili "aktoreak ikutzen duenean" blokea txakurra goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako bat ikutzen badu.
-      Course 4 Play Lab Params 9: "Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, \"gehitu_puntuak\".\"\\r \\r Editatu funtzioa \"puntuak\" parametroa gehitzeko \"jokalariaren_puntuazioa\" aldagaiari. \\r \\r \"jokalariaren_puntuazioa\" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\\r \\r Oharra:\nHori guztia egin ondoren, klikatu \"Hasi\" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara."
+      Course 4 Play Lab Params 9: |-
+        Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, "gehitu_puntuak"."\\r \\r Editatu funtzioa "puntuak" parametroa gehitzeko "jokalariaren_puntuazioa" aldagaiari. \\r \\r "jokalariaren\_puntuazioa" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\\r \\r Oharra:
+        Hori guztia egin ondoren, klikatu "Hasi" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara.
       Course 4 Play Lab Vars 1: Oraingoan ez duzu koderik idatzi behar, sakatu "Exekutatu" joko honetan aritzeko! Jokoan, katuak baino bandera gehiago biltzen saiatzen ari den zakurra zara zu. Erabili gezia behera zakurra kontrolatzeko. Sakatu "Amaitu" jokatzeari uzteko.
-      Course 4 Play Lab Vars 2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
+      Course 4 Play Lab Vars 2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       Course 4 Play Lab Vars 3: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
       Course 4 Play Lab Vars 4: Orain "altuera" izeneko aldagai bat erabiltzen ari gara zakurrak egiten dituen jauzien altuera kontrolatzeko. Eguneratu "altuera" aldagaia zakurra gai izan dadin nahikoa salto egin eta bandera guztietara iristeko.
       Course 4 Play Lab Vars 5: 'Goazen joko bat egitera! Lehenengo markagailua behar dugu. Azkeneko mailan ikusi duzun kodea berregin puntuazioa 10ean ezartzeko. '
       Course 4 Play Lab Vars 6 (copy 1): Primeran, orain gure "puntuazioa" aldagaia daukagu, baina nola egin erabilgarri? zer dirudizu aldagaia gehitzen badugu arerioak suzko bolarekin astintzen dituzun bakoitzean? Erabili "2. aktoreak zerbait ikutu" gertaera markagailuaren eguneraketa bat aktibatzeko suzko bolak katua astintzen duen bakoitzean. Markagailua inkrementatu dezakezu puntuazioa = puntuazioa + 1 ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       Course 4 Play Lab Vars 6: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       Course 4 Play Lab Vars 7: Bikain, orain ziurtatu dezagun joko hau ez dela errazegia. Katuak (2. aktorea) jaurtikitako bihotz hori batek Zakurra (1. aktorea) kolpatzen duen aldi bakoitzean puntu bat galdu behar duzu. Hasi 10 punturekin zailegi gerta ez dadin. 10 puntu galdu behar dituzu maila gainditzeko.
       Course 4 Play Lab Vars 8 (copy 1): Ondo da, azkeneko kontu bat joko honekin amaitzeko - jokalariak irabazi (edo galdu) dezan prestatuko dugu. Erabili "errepikatu betirako" begizta markagailuaren balioa aztertzeko - puntuazioa 20 baino handiagoa bada, arerioak ezabatu behar dituzu. Puntuazioa 0 baino txikiagoa bada, jokalaria ezabatu. Egin klik "Amaitu" botoian jokoak zuk nahi bezala funtzionatzen duenean.
       Course 4 Play Lab Vars 8: Zakurrak irabazteko (edo galtzeko) aukera izan dezan prestatuko dugu jokoa. Erabili "errepikatu betirako" begizta bat puntuazioaren balioa aztertzeko - puntuazioa 20 baino handiagoa denean, arerioa (Katua) ezabatu behar duzu. Puntuazioa 0 baino txikiagoa bada, jokalaria (Zakurra) ezabatu. Egin klik "Amaitu" botoian jokoak zuk nahi bezala funtzionatzen duenean.
-      Course 4 Play Lab Vars 9: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
+      Course 4 Play Lab Vars 9: |-
+        Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r
+        \\r
+        Kontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r
+        \\r
+        Pista: korritu behera laneremuko komando guztiak ikusteko.
       Course 4 Play Lab Vars: Ondo da, azkeneko kontu bat joko honekin - jokalariak irabazi (edo galdu) dezan prestatuko dugu. Erabili "errepikatu betirako" begizta markagailuaren balioa aztertzeko - puntuazioa 20 baino handiagoa bada, arerioa ezabatu. Puntuazioa 0 baino txikiagoa bada, jokalaria ezabatu.
       Course 4 Play Labs For Loops 1: Eragin dezagun txakurrak 1etik 100erako zenbaki guztiak esatea. Erabili for begizta bat eta kontagailu blokea begizta abiarazten den bakoitzean kontagailu aldagaiak hitz egin dezan.
       Course 4 Play Labs For Loops 3: Zenbaki handiak erabiliz kontatzen badugu, denbora berean zenbaki handiago batera iritsiko gara. Saiatu txakurrari 10etik 1000ra arte 10naka kontarazten.
       Course 4 Play Labs For Loops 4: Inkrementua aldatzea erabilgarria izan daiteke, baina oraindik linealki zenbatzen ari gara (zenbaki bakoitza aurrekotik distantzia berdinera dago!) Eta esponentzialki zenbatu nahiko bagenu? begizta honen ezarpenak aldatu gabe, zenatu dezakezu 1, 4, 9, 16, 25... (kontagailuaren karratua)?
-      Course 4 Play Labs For Loops 4a: "Orain, nahas ditzagun 7. etapako aldagaiak zure \"kontagailu\" aldagaiarekin magia egiteko.  \\r\n\\r\nPuzle honetan, txakurrak 0tik 1000ra arte kontatuko du, batuz. Ezarri \"batuketa\" aldagaia 10en kodearen hasieran, zer gertatzen den ikusteko."
+      Course 4 Play Labs For Loops 4a: |-
+        Orain, nahas ditzagun 7. etapako aldagaiak zure "kontagailu" aldagaiarekin magia egiteko.  \\r
+        \\r
+        Puzle honetan, txakurrak 0tik 1000ra arte kontatuko du, batuz. Ezarri "batuketa" aldagaia 10en kodearen hasieran, zer gertatzen den ikusteko.
       Course 4 Play Labs For Loops 5: Azken etapan zenbakien karratuak kontatu dugu. Saiatu "kontagailua^2" "kontagailua^3"-ra aldatzen, zenbakien kuboak kontatzeko (1, 8, 27, 64, 125, 216, 343...)
-      Course 4 Play Labs For Loops 6: Gogoratuko duzu zenbaki lehenak 1ez eta bere buruaz soilik zatigarriak diren zenbaki arruntak direla. Erabili "lehena_da" funtzioa 1etik 100erako zenbaki lehenak soilik esateko.
-      Course 4 Play Labs For Loops 6a: |-
-        Txakurrak jarraituko du denbora kontatzen gure "for" begiztarekin, "inkrementua" kontuan harturik, baina oraingo honetan Aztia sartuko dugu jokoan. Aldatu dezakezu kodea "inkrementua" bi unitatetan handitzeko Aztia sakatzen den bakoitzean?\r \r Kontuz! Aztia azkar mugitzen da eta!
+      Course 4 Play Labs For Loops 6: Gogoratuko duzu zenbaki lehenak 1ez eta bere buruaz soilik zatigarriak diren zenbaki arruntak direla. Erabili "lehena\_da" funtzioa 1etik 100erako zenbaki lehenak soilik esateko.
+      Course 4 Play Labs For Loops 6a: Txakurrak jarraituko du denbora kontatzen gure "for" begiztarekin, "inkrementua" kontuan harturik, baina oraingo honetan Aztia sartuko dugu jokoan. Aldatu dezakezu kodea "inkrementua" bi unitatetan handitzeko Aztia sakatzen den bakoitzean?\\r \\r Kontuz! Aztia azkar mugitzen da eta!
       Course 4 Play Labs For Loops 7: 'Erabil dezakezu "for" begizta bat niri laguntzeko sekuentzia hau egiten: 1, 4, 7, 10, 13, 16, 19, 22, 25?'
-      Course 4 Play Labs For Loops 7a: "Bagoaz aurrera! Zer moduz hasten bagara kontatzen zenbat aldiz klikatu dezakegun Aztiaren gainean Txakurra 30era iritsi baino lehen? \\r \\r Gehitu blokeak Aztiari bere gainean klikatzen dugun bakoitzean \"klikatua\" aldagaia unitate batean handitzeko. Oraingoz, ez duzu \"inkrementua\" kontuan hartu behar.\\r \\r Txakurra kontatzen hasiko da \"Egikaritu\" sakatzen duzunean."
-      Course 4 Play Labs For Loops 8: "Orain, lagundu aktoreei mugitzen kontatzen duten bitartean. \\r \\r Txakurra mugitu eta binaka (kontagailua + 2) kontatu beharko du. Katua mugitu eta 2rekin biderkatuz (kontagailua * 2) kontatu beharko du. Pinguinoa mugitu eta 2ren berreturak gehitzen (kontagailua ^ 2) kontatu behar du. Zein iritsiko da lehenago dagokion helburura?"
-      Course 4 Play Labs For Loops 8a: |-
-        Gure jolasa amaitzeko, "inkrementua" aldagaia erabili behar dugu berriro! Jolasaren mailaren arabera hartuko dugu kontuan.\r \r 1) Kontatu zenbat aldiz klikatzen den Aztiaren gainean.\r 2) Aztia gutxienez 10 aldiz klikatua baldin bada Txakurra 30era iritsi baino lehen, handitu "inkrementua" aldagaia unitate batean eta hasi berriro.\r 3) Aztia gutxienez 10 aldiz klikatua ez bada, jolasa amaituko da.
+      Course 4 Play Labs For Loops 7a: Bagoaz aurrera! Zer moduz hasten bagara kontatzen zenbat aldiz klikatu dezakegun Aztiaren gainean Txakurra 30era iritsi baino lehen? \\r \\r Gehitu blokeak Aztiari bere gainean klikatzen dugun bakoitzean "klikatua" aldagaia unitate batean handitzeko. Oraingoz, ez duzu "inkrementua" kontuan hartu behar.\\r \\r Txakurra kontatzen hasiko da "Egikaritu" sakatzen duzunean.
+      Course 4 Play Labs For Loops 8: Orain, lagundu aktoreei mugitzen kontatzen duten bitartean. \\r \\r Txakurra mugitu eta binaka (kontagailua + 2) kontatu beharko du. Katua mugitu eta 2rekin biderkatuz (kontagailua \* 2) kontatu beharko du. Pinguinoa mugitu eta 2ren berreturak gehitzen (kontagailua ^ 2) kontatu behar du. Zein iritsiko da lehenago dagokion helburura?
+      Course 4 Play Labs For Loops 8a: Gure jolasa amaitzeko, "inkrementua" aldagaia erabili behar dugu berriro! Jolasaren mailaren arabera hartuko dugu kontuan.\\r \\r 1) Kontatu zenbat aldiz klikatzen den Aztiaren gainean.\\r 2) Aztia gutxienez 10 aldiz klikatua baldin bada Txakurra 30era iritsi baino lehen, handitu "inkrementua" aldagaia unitate batean eta hasi berriro.\\r 3) Aztia gutxienez 10 aldiz klikatua ez bada, jolasa amaituko da.
       Course 4 SCF 1: Erabili iradokitako funtzioak lau hexagono ilara marrazteko. Konturatzen al zara nola zenbaki bikoitia duten lerroak eskuinera desplazatzen diren?
       Course 4 SCF 1a: Badakizu nola bildu nektar hauek guztiak ahalik eta bloke gutxien erabiliz?
       Course 4 SCF 1b: Badakizu nola bildu nektar hauek guztiak ahalik eta bloke gutxien erabiliz?
@@ -668,9 +688,9 @@ eu:
       Course 4 SCV 1: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCV 2: Klikatu hemen jarraibideak berriro ikusteko.
       Course 4 SCV 3: |-
-        Goazen orain harrapaketan jolastera! Harrapatu katua 2 puntu lortzeko. Harrapatu pinguinoa 3 puntu lortzeko. Lortu 10 puntu irabazteko!\r
-        Baina kontuz ibili, katuak eta pinguinoak elkar ukitzen dutenean, puntuak eramaten dituzte eta.\r
-        \r
+        Goazen orain harrapaketan jolastera! Harrapatu katua 2 puntu lortzeko. Harrapatu pinguinoa 3 puntu lortzeko. Lortu 10 puntu irabazteko!\\r
+        Baina kontuz ibili, katuak eta pinguinoak elkar ukitzen dutenean, puntuak eramaten dituzte eta.\\r
+        \\r
         Gehitu jolasa behar bezala ibil dadin beharrezko diren blokeak. Nola lortuko duzu txakurra geizdun teklak erabiliz norabide guztietan mugitzea? Nola gehituko dituzu puntuak txakurrak katua edo pinguinoa harrapatzen dituenean? Nola kenduko dituzu puntuak katuak eta pinguinoak elkar ukitzen dutenean?
       Course 4 SCV 4: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
       Course 4 SCV 5: Puzzle hau ebatz ezazu ahalik eta bloke gutxien erabiliz.
@@ -678,22 +698,27 @@ eu:
       Course 4 SCVP 1: Parametrodun funtzio bat egin behar duzu artistak aurrera eta atzera x pixel salto egin ditzan, eta baita gora eta behera y pixel (zenbaki positiboak eta negatiboak erabiiz).
       Course 4 Variables Assessment: Sor al dezakezu irudi hau aldeetarako aldagai bat erabiliz? Lerro bakoitza 50 pixelekoa izan beharko zukeen.
       Course E MC Conditionals1: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
-      CourseF_PlayLab_vars10: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
-      CourseF_PlayLab_vars2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
+      CourseF_PlayLab_vars10: |-
+        Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r
+        \\r
+        Kontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r
+        \\r
+        Pista: korritu behera laneremuko komando guztiak ikusteko.
+      CourseF_PlayLab_vars2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       CourseF_PlayLab_vars3: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
       CourseF_PlayLab_vars4: Orain "altuera" izeneko aldagai bat erabiltzen ari gara zakurrak egiten dituen jauzien altuera kontrolatzeko. Eguneratu "altuera" aldagaia zakurra gai izan dadin nahikoa salto egin eta bandera guztietara iristeko.
       CourseF_PlayLab_vars5: 'Goazen joko bat egitera! Lehenengo markagailua behar dugu. Azkeneko mailan ikusi duzun kodea berregin puntuazioa 10ean ezartzeko. '
       CourseF_PlayLab_vars6: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       CourseF_PlayLab_vars7: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       CourseF_PlayLab_vars8: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       CourseF_PlayLab_vars9: Bikain, orain ziurtatu dezagun joko hau ez dela errazegia. Katuak (2. aktorea) jaurtikitako bihotz hori batek Zakurra (1. aktorea) kolpatzen duen aldi bakoitzean puntu bat galdu behar duzu. Hasi 10 punturekin zailegi gerta ez dadin. 10 puntu galdu behar dituzu maila gainditzeko.
       Crack Random Substitution: Argibideak
@@ -702,7 +727,7 @@ eu:
       Crack a Caesar Cipher: Argibideak
       Crack a Caesar Cipher_2018: Argibideak
       Crack a Caesar Cipher_2019: Argibideak
-      Food Fight!: "Azken funtzio bat gehitu dizugu. \\r\n\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\r\n\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\r\n\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
+      Food Fight!: "Azken funtzio bat gehitu dizugu. \\\\r\n\\\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\\\r\n\\\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\\\r\n\\\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
       Infinity_catch: Gezien teklak erabiliz egin al dezakezu Elsak ("2. aktorea") Ana harrapatzea?
       Infinity_finale: Sortu nahi duzuna eta partekatu!
       Infinity_move_collide: Hiro "1. aktorea" da. Bera eskuinerantz mugitu Baymax-arengana, eta soinu bat sortu elkar ukitzen direnean.
@@ -715,7 +740,7 @@ eu:
       Infinity_touch_faster: Ikutu elur maluta gehiago!
       Infinity_touch_four: Mugitu Anna gora, beheko ezkerraldera eta eskuinaldera elur maluta bakoitza ukitzeko.
       Infinity_touch_score: Eragin Annak puntu bat irabaztea elur maluta bat ukitzen duen bakoitzean. Ondoren klikatu "Abiarazi" eta gida ezazu elur maluta bakoitza behin uki dezan.
-      Inspirational Artwork: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
+      Inspirational Artwork: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\\\r\n\\\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
       K-1 Artist 1 Assessment 1: Marraztu lerro motz bat goraka eta luze bat eskuineraka!
       K-1 Artist Loops 1: Marraz ezazu lerro hau ekialderantz lau aldiz mugituz.
       K-1 Artist Loops 2: Marraz dezakezu lerro bera begizta bat erabiliz?
@@ -798,7 +823,7 @@ eu:
       K-1 Maze Assessment 2: Ebaluazioa -- Eraman nazazu zerriarengana!
       K-1 Maze Loops 1: Eraman nazazu zerriraino!
       K-1 Maze Loops 10: Eraman nazazu zerriarengana! Erabili errepikatu begizta.
-      K-1 Maze Loops 11: "Eraman nazazu zerriarengana! Erabili errepikatu begizta."
+      K-1 Maze Loops 11: Eraman nazazu zerriarengana! Erabili errepikatu begizta.
       K-1 Maze Loops 12: Eraman nazazu zerriarengana! Erabili errepikatu begizta.
       K-1 Maze Loops 2: Erabili Errepikatu blokea zerriarengana joan nadin!
       K-1 Maze Loops 3: Eraman nazazu zerriarengana! Erabili errepikatu begizta.
@@ -813,16 +838,18 @@ eu:
       K-1 Maze Multi 14: Ebaluazio maila
       K-1 Maze Multi 15: Ebaluazio maila
       K-1 Maze Sequence Assessment 1: |-
-        Hau proba da!\r
+        Hau proba da!\\r
         Mugitu norabide batean, eta gero bestean, txerriraino iritsi nadin
-      K-1 Maze Sequence Assessment 2: "Hau proba da!\\r\nMugitu norabide batean, eta gero bestean, txerriraino iritsi nadin."
+      K-1 Maze Sequence Assessment 2: |-
+        Hau proba da!\\r
+        Mugitu norabide batean, eta gero bestean, txerriraino iritsi nadin.
       K-1 Maze debug Assessment 1: Ebaluazioa -- Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
       K-1 artist 1 level 10: Marraztu marratutako lerroa salto eta marraztu blokeak erabiliz
       K-1 artist 1 level 9: Marraztu honakoa hiru lerro erabiliz
       K-1 maze debug 1: Aldatu kodea zerriarengana joan nadin!
       K-1 maze debug 10: Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
       K-1 maze debug 11: |-
-        Hau froga bat da!\r
+        Hau froga bat da!\\r
         Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin
       K-1 maze debug 2: Pentsatu zer falta den eta gehitu blokeak zerriarekin elkar nadin!
       K-1 maze debug 3: Pentsatu zer falta den eta kendu blokeak zerriarekin elkar nadin!
@@ -846,15 +873,15 @@ eu:
       NEW Course 4 Artist Functions 1: Marraz dezakezu 100 pixeleko luzera duen karratu bat errepikatu begizta erabiliz?
       NEW Course 4 Artist Functions 10.1: Aurreko ariketetako funtzioak erabil itzazu patroi hau marrazteko.
       NEW Course 4 Artist Functions 10: '"editatu" klikatu, funtzioaren definizioan ageri diren blokeak betetzeko, eta horrela 40 pixeleko laukia egiteko.'
-      NEW Course 4 Artist Functions 11: "Orain \"marraztu karratu errenkada\" izeneko funtzio berria sortu nahi dugu, sei karratu errenkada batean marraztuko dituena. Funtzio hau eraiki al dezakezu jadanik sortuta dugun \"marraztu karratua 20\" funtzioa erabiliz? Oharra: ikusi arkatza aldatu dugula askoz finagoa izan dadin. Nola egin dugun ikusteko \"marraztu karratua 20\" funtzioaren gainean \"editatu\" klikatu!\\r\n"
+      NEW Course 4 Artist Functions 11: 'Orain "marraztu karratu errenkada" izeneko funtzio berria sortu nahi dugu, sei karratu errenkada batean marraztuko dituena. Funtzio hau eraiki al dezakezu jadanik sortuta dugun "marraztu karratua 20" funtzioa erabiliz? Oharra: ikusi arkatza aldatu dugula askoz finagoa izan dadin. Nola egin dugun ikusteko "marraztu karratua 20" funtzioaren gainean "editatu" klikatu!\\r'
       NEW Course 4 Artist Functions 12: Azken ariketako "marraztu karratu errenkada" funtzioa erabili, patroi hau marrazteko."
       NEW Course 4 Artist Functions 13: '"marraztu karratu errenkada" funtzioa erabiliz izar itxurako forma bat marraz al dezakezu? Iradokizuna: begizta bakoitzean "marraztu karratu errenkada" funtzioa hainbat aldiz deitu ondoren, pixel kopuru batean aurrerantz mugitu beharko duzu, eta gero 144 gradu biratu.'
       NEW Course 4 Artist Functions 14: 'Jolas librerako ordua! '
       NEW Course 4 Artist Functions 2: 'Marraz ditzakezu 3 karratu, bata bestetik 20 pixeletara daudenak? Iradokizuna: karratu bakoitzaren tamaina 100 pixelekoa da'
-      NEW Course 4 Artist Functions 3: "Hona hemen Bloke mota berri bat. \"Funtzioa\" blokea deitzen da. \"editatu\" klikatu eta orduan 100 pixeleko aldea duen lauki edo karratu bat marrazteko behar den kodearekin bete. Funtzioaren edizioa bukatzen duzunean, \"Itxi\" klikatu zure programara itzultzeko."
+      NEW Course 4 Artist Functions 3: Hona hemen Bloke mota berri bat. "Funtzioa" blokea deitzen da. "editatu" klikatu eta orduan 100 pixeleko aldea duen lauki edo karratu bat marrazteko behar den kodearekin bete. Funtzioaren edizioa bukatzen duzunean, "Itxi" klikatu zure programara itzultzeko.
       NEW Course 4 Artist Functions 4: '"Marraztu karratu bat" funtzioa erabil ezazu patroi hau marrazteko. Iradokizuna: karratu edo lauki bakoitzaren ondoren "eskuinerantz 120 gradu biratu" blokea erabili beharko duzu.'
       NEW Course 4 Artist Functions 5: Nola jakin zezakeen "marraztu karratua" blokeak zein komando exekutatu? Egin klik "edit" aukeran "marraztu karratua" funtzio blokean. Funtzio editorean dauden blokeak "marraztu laukia" definitzen dute. Hau ulertu duzunean, sakatu "Gorde eta itxi" eta "Hasi."
-      NEW Course 4 Artist Functions 6: "\"Marraztu karratu bat\" funtzio blokea erabiliz, marraz dezakezu irudi hau? Iradokizuna: karratuen artean 20 pixeleko tartea dago.\\r\n"
+      NEW Course 4 Artist Functions 6: '"Marraztu karratu bat" funtzio blokea erabiliz, marraz dezakezu irudi hau? Iradokizuna: karratuen artean 20 pixeleko tartea dago.\\r'
       NEW Course 4 Artist Functions 7: 'Ari al zara funtzio blokeak nola erabiltzen diren ulertzen? Eralda dezagun laukia 200 pixeleko tamaina izan dezan. Pista: egin klik "editatu" aukeran "marraztu laukia" funtzioa eraldatzeko. Ez ahaztu "itxi" aukeran klik egitea funtzio editoretik ateratzeko.'
       NEW Course 4 Artist Functions 8: '"marraztu triangelua" deituriko funtzio berria sortu dugu zuretzako.  Funtzioaren definizioa aldatu dezakezu 100 pixel-eko aldeak dituen hirukia marrazteko?'
       NEW Course 4 Artist Functions 9: Ebatzi al dezakezu hau bloke bakarra erantsiz?
@@ -864,24 +891,31 @@ eu:
       NEW Course 4 Artist Params 11: Pentsa al dezakezu forma hau nola irudikatu? Funtzioa aldatu "alde" parametroa erabiltzeko.
       NEW Course 4 Artist Params 12: Irusi hau osa al dezakezu? Forma guztien aldeak 100 pixelekoak dira.
       NEW Course 4 Artist Params 12a: Irudi hau aurrekoaren berdintsua da. For begizta bat erabili al dezakezu diseinu hau sortzeko?
-      NEW Course 4 Artist Params 13: "Editatu dezagun \"marraztu poligonoa\" funtzioa. Honek jada badu \"luzera\" parametroa. Orain, gehitu dezagun \"aldeak\" parametroa. Gogoratu forma zehatz bat biratzeko behar den angelua, 360 eta alde kopuruaren arteko zatiketaren emaitza dela.  Aholkua : forma bakoitzaren perimetroa 200 pixelekoa dela. Gogoratzen al duzu forma desberdinak tamaina berekoak bihurtzeko formula hauek alde kopuru desberdina dutenean?"
+      NEW Course 4 Artist Params 13: 'Editatu dezagun "marraztu poligonoa" funtzioa. Honek jada badu "luzera" parametroa. Orain, gehitu dezagun "aldeak" parametroa. Gogoratu forma zehatz bat biratzeko behar den angelua, 360 eta alde kopuruaren arteko zatiketaren emaitza dela.  Aholkua : forma bakoitzaren perimetroa 200 pixelekoa dela. Gogoratzen al duzu forma desberdinak tamaina berekoak bihurtzeko formula hauek alde kopuru desberdina dutenean?'
       NEW Course 4 Artist Params 14: Forma hauek sortu ditzakezu? Eraman "luzera" aldagaia funtzioaren definiziora.
       NEW Course 4 Artist Params 15: 'Joku askea: Hemen daude zuk idatzitako funtzioak eta jolasteko beste funtzio batzuk. Zerbait izugarria marraztu! Jolastu arkatzaren zabalararekin zein irudi izugarriak marraztu ditzakezun ikusteko!'
-      NEW Course 4 Artist Params 3: "Orain funtzioa erabil dezagun 5 triangelu aldiberean sortzeko. Pista: triangelu bakoitzen distantzia 30 pixelekoa da.\n"
+      NEW Course 4 Artist Params 3: 'Orain funtzioa erabil dezagun 5 triangelu aldiberean sortzeko. Pista: triangelu bakoitzen distantzia 30 pixelekoa da.'
       NEW Course 4 Artist Params 4: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
       NEW Course 4 Artist Params 5: 'Bete ??? sarrera-blokeko luzera parametroan. Pista: pentagonoak 100pixeletako aldeak ditu. '
       NEW Course 4 Artist Params 6: Bete ezazu "luzera" parametroa, "???" zenbaki zuzenekin ordezkatuz, hurrengo formak marrazteko. Karratuak eta triangeluak 100 pixeleko aldeak dituzte, hexagonoaren aldeak ,ordea, 75 pixel luze dira.
       NEW Course 4 Artist Params 7: 'Irudi hau osatu al dezakezu? Pista: Triangelu bakoitzaren aldea aurrekoarena baino 25 pixel handiagoa da. Lehenengo triangeluak 25 pixeleko aldeak ditu.'
       NEW Course 4 Artist Params 8: Triangelu honen kodea gaizki dago. Funtzioa editatu al dezakezu berau konpontzeko, eta 25, 50 eta 75 luzeradun triangeluak egiteko?
       NEW Course 4 Artist Params 9: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
-      NEW Course 4 Artist Params inspire: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
-      NEW Course 4 Artist Vars 1.5: 'Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.'
+      NEW Course 4 Artist Params inspire: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\\\r\n\\\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
+      NEW Course 4 Artist Vars 1.5: Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.
       NEW Course 4 Artist Vars 12: Orain, algoritmoa berregin eta 150 pixeleko aldeak dituen pentagono bat sor dezazu.
-      NEW Course 4 Artist Vars 2.5: 'Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.'
-      NEW Course 4 Artist Vars 2: 'Arrastatu zenbaki blokea "ezarri luzera" blokera 50 pixeleko triangelu multzo bat marrazteko.'
-      NEW Course 4 Artist Vars 4 5: "Lan paregabea azken ariketan,\nsaia gaitezen berriro; egin dezagun marrazki bikain hau 60 pixeleko hexagonoz."
-      NEW Course 4 Artist Vars 4: "Saia gaitezen berriro. Luzera aldagaia alda al dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da."
-      NEW Course 4 Artist Vars 6: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r\n\\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r\n\\r\n\\r\n"
+      NEW Course 4 Artist Vars 2.5: Begira ezazu kodea, ikusi dezakezu "ezarri luzera" blokeak eta "luzera" blokeak batera lan nola egiten duten? Egikaritu eta ikusi ezazu martxan.
+      NEW Course 4 Artist Vars 2: Arrastatu zenbaki blokea "ezarri luzera" blokera 50 pixeleko triangelu multzo bat marrazteko.
+      NEW Course 4 Artist Vars 4 5: |-
+        Lan paregabea azken ariketan,
+        saia gaitezen berriro; egin dezagun marrazki bikain hau 60 pixeleko hexagonoz.
+      NEW Course 4 Artist Vars 4: 'Saia gaitezen berriro. Luzera aldagaia alda al dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da.'
+      NEW Course 4 Artist Vars 6: |-
+        Marraz ezazu patroia "luzera" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r
+        \\r
+        Ikusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r
+        \\r
+        \\r
       NEW Course 4 Bee For Loops 1: Begizta bat erabil ezazu loreen nektarra jasotzeko.
       NEW Course 4 Bee For Loops 10: Erabili zuren begiztaren "kontagailua" aldagaia mugimendu horizontalaren irismena kontrolatzeko.
       NEW Course 4 Bee For Loops 10a: 'Erronkarako prest? begiztei buruz ikasi duzuna erabili arazo hau ebazteko. Gogoratu: Baliteke zure erantzuna birritan abiatu behar izatea pausu guztiez jabetu aurretik.'
@@ -889,20 +923,20 @@ eu:
       NEW Course 4 Bee For Loops 2: Erleak nektar guztia biltzen duela ziurtatzeko beharrezko kodea gehitu. Begiratu zenbat kode behar duzun ariketa honetarako! (Hurrengo ariketan era errazagoa ikasiko dugu.)
       NEW Course 4 Bee For Loops 3: 'Hara, "for" begiztak askoz errazago egiten du hau! Behar duzun kode guztia bertan da, bota iezaiozu begirada bat eta egin klik Hasi botoian martxan ikusteko. '
       NEW Course 4 Bee For Loops 4 4: Orain "kontagailua" aldiz egin behar dugu mugitu aurrera, nektarra "kontagailu" aldiz lortzeko. Erabili ahal ditzakezu bi "errepikatu" begizta erronka hau ebazteko?
-      NEW Course 4 Bee For Loops 4: 'Aldatu ??? ikurrak "for loop" barnean eta idatzi bertan erleak bildu beharreko nektan kopuru handiena.'
+      NEW Course 4 Bee For Loops 4: Aldatu ??? ikurrak "for loop" barnean eta idatzi bertan erleak bildu beharreko nektan kopuru handiena.
       NEW Course 4 Bee For Loops 5 5: Ari al zara "for loop" aukera behar bezala ulertzen? Lor dezagun erleak beste nektar guztia biltzea.
       NEW Course 4 Bee For Loops 5: For begizta bat ere erabil dezakezu kontaketa egiteko. Saia zaitez nektarra jasotzen 5 etik hasita beherantz zenbatuz, banaka-banaka.
       NEW Course 4 Bee For Loops 6: Begiztako azken zenbakia inkrementua deitzen da. Begizta exekutatzen den bakoitzean, aldagai zenbatzailea aldatu egiten da inkrementuaren balioaren arabera. Saia zaitez lore hauek biltzen inkrementu gisa 2 balioa erabiliz.
       NEW Course 4 Bee For Loops 7: |-
-        Orain, nahas dezagun "kontagailu" aldagaia matematikako bloke batekin! Nola erabil dezakezu "kontagailu" aldagaia lorategi honetatik ibiltzeko, ahal den bloke kopururik txikiena erabiltzen? Zer egin behar duzu 3, 6, 9, 12, 15 nektar biltzeko oraingo honetan? Sekretua "kontagailu" aldagaian dago!\r
-        \r
+        Orain, nahas dezagun "kontagailu" aldagaia matematikako bloke batekin! Nola erabil dezakezu "kontagailu" aldagaia lorategi honetatik ibiltzeko, ahal den bloke kopururik txikiena erabiltzen? Zer egin behar duzu 3, 6, 9, 12, 15 nektar biltzeko oraingo honetan? Sekretua "kontagailu" aldagaian dago!\\r
+        \\r
         Gogoratu: zure begiztak goruntz kontatzen badu, inkrementua gehitzen zaio zure "kontagailua" aldagaiari urrats bakoitzean.
-      NEW Course 4 Bee For Loops 8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
+      NEW Course 4 Bee For Loops 8: Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
       NEW Course 4 Bee For Loops 9: Zure begiztak beheraka zenbatzen badu, zure kontagailuaren aldagaiari inkrementua kentzen zaio begizta bakoitzean. Zein izan behar da inkrementua 15, ondoren 12, ondoren 9, 6, 3 nektar biltzeko?
       NEW Course 4 Bee For Loops 95: Begirada bat bota sortu duzun begiztaren zati bakoitzei. Asmatu ahal dezakezu zein zenbaki behar dituzun puzle honen erantzuna aurkitzeko? Zergatikan dabil ondo?
       NEW Course 4 Play Lab Params 11: 'Askatasun osoz jolasteko garaia! Ondo pasa zure tresna kutxako bloke guztiekin! '
       NEW Course 4 Play Lab Params 5 5: Saia gaitezen berriro, baina laguntza gutxiagorekin oraingoan. Zer editatu behar duzu oraingoan aktoreek patruila egin dezaten?
-      NEW Course 4 Play Lab Vars 4 5: "Kode honek, zer egingo du? Saka ezazu \"Egikaritu\" zer gertatuko den ikusteko"
+      NEW Course 4 Play Lab Vars 4 5: Kode honek, zer egingo du? Saka ezazu "Egikaritu" zer gertatuko den ikusteko
       NEW Course 4 Play Labs For Loops 7a: Orain arte ikasi duzuna erabiltzen ari zara. Pinguinoak zenbaki kontaketan zenbaki bat esan ahala Dinosaurioak urrats bat aurrera eman dezan lor dezakezu?
       NEW Course 4 Play Labs For Loops 8 Free Play: 'Nahi bezala jolasteko garaia da! Zure tresna kutxatxoan dituzun blokeekin diberti zaitez. '
       NEW Course 4 Play Labs For Loops 8a: 'Erronka: zelan erabiliko zenuke "for loop" aktore bakoitza mugitu eta euren aktore zenbakia esateko eta gero pantailatik desagertzeko?'
@@ -913,7 +947,7 @@ eu:
       New Gumball Project: Sortu nahi duzuna eta partekatu!
       New Ice Age Project: Sortu nahi duzuna eta partekatu!
       New Infinity Project: Sortu nahi duzuna eta partekatu!
-      New Sports Project: 'Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.'
+      New Sports Project: Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       Overworld Avoid Monsters: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
       Overworld Avoid Monsters_2018: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
       Overworld Avoid Monsters_2019: Landare igokari baten kontra jotzea ez da batere ideia ona. Mugi zaitez kontu handiz landare igokariak saihestuz eta iritsi zure etxeko segurtasunera.
@@ -947,15 +981,19 @@ eu:
       Overworld Shear Sheep_2019: Ardiei ilea mozteko garaia! Erabili "ilea moztu" agindua bi ardietatik lana eskuratzeko.
       PDK5 Conditionals 1: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.
       PDK5 Functions 2: Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da.
-      PS copy 2-3 Bee Conditionals 5: "Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz."
+      PS copy 2-3 Bee Conditionals 5: Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz.
       Quantum Bee: Lore moreek 1 edo 0 nektar izan dezakete, baina ez dakizu zenbat duen lore bakoitzak! Kontuz ibili ez saiatzeko nektarra hartzen nektarrik ez duen lore more batetik. Begiratu ea nektar 1 den "baldin" blokea erabiliz.
       Ryan - 4-5 Bee Conditionals 2: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
       Ryan - Bee Conditionals: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen den ikusteko. Horrela bada, nektarra bildu dezakezu.
       Ryan Test Locked Blocks: "Hemen \"patruila\" izeneko funtzioa dago. \nAldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera."
-      SpecialFrozenLevel: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat. 
+      SpecialFrozenLevel: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat.
       Standalone_Artist_1: Ongi etorri Artistaren txokora! Hasteko, saia zaitez lauki sinple bat marrazten, biratu eskuinera eta "mugitu aurrera" blokeak erabiliz. Karratuaren alde bakoitzaren luzerak 100 pixeleko izan beharko luke.
-      Standalone_Artist_2: "Marraz ezazu diamante hau 120 eta 60 graduko\nangeluekin eta 150 pixel luzerako aldeekin."
-      Standalone_Artist_3: "Marraztu al dezakezu 100 pixeleko aldeak\neta 60 graduko birak dituen hexagono hau?"
+      Standalone_Artist_2: |-
+        Marraz ezazu diamante hau 120 eta 60 graduko
+        angeluekin eta 150 pixel luzerako aldeekin.
+      Standalone_Artist_3: |-
+        Marraztu al dezakezu 100 pixeleko aldeak
+        eta 60 graduko birak dituen hexagono hau?
       Standalone_Artist_4: Orain, bloke berri bat daukazu jolasteko, begizta. Honek agindu sekuentzia bat errepikatzen du. Zer gertatzen da agindu hauek 6 aldiz errepikatzen badituzu?
       Standalone_Artist_5.5: 'Kontuan izan nola sinplifikatu dugun diamantearen kodea begizta bat lortzeko. Orain, sekuentzia osoa errepikatu dezakezu 12 aldiz lorea marrazteko. Aholkua: diamantearen begiztaren ondoren 30 graduko angelua biratu beharko duzu diamante beraren gainean berriro ez marrazteko.'
       Standalone_Artist_5: Zenbat aldiz errepikatu behar duzu diamante hau lorea marrazteko?
@@ -964,7 +1002,7 @@ eu:
       Standalone_Artist_8: Hona hemen "Marraztu forma geometriko bat" izeneko funtzioa; funtzio hori programatu dugu hexagonoak marrazteko. Exekutatu kodea ikusteko zer egiten duen eta orduan experimentatu funtzioarekin ikusteko zer gertatzen den. Lor dezakezu karratu segida bat marraztea? edo triangeluak? edo oktogonoak?
       Standalone_Artist_9: Orain, goazen aurrera eta egin ezazu nahi duzun marrazkia! Funtzio huts bat daukazu zuk betetzeko nahi duzuna egin dezan!
       Standalone_Artist_v2: Ongi etorri Artistaren txokora! Hasteko, saia zaitez lauki sinple bat marrazten, biratu eskuinera eta "mugitu aurrera" blokeak erabiliz. Karratuaren alde bakoitzaren luzerak 100 pixeleko izan beharko luke.
-      Testing Quantum Farmer: "Primeran! Zulo benetan sakona aurkitu dudana! Ez dakit zenbat paletakada lur behar diren. Programa bat idatz dezakezu zuloa betetzeko gainazala laua izan arte? Pista: Oraingoan saia zaitez bitartean begizta erabiltzen."
+      Testing Quantum Farmer: 'Primeran! Zulo benetan sakona aurkitu dudana! Ez dakit zenbat paletakada lur behar diren. Programa bat idatz dezakezu zuloa betetzeko gainazala laua izan arte? Pista: Oraingoan saia zaitez bitartean begizta erabiltzen.'
       The Vigenere Cipher Widget: Argibideak
       The Vigenere Cipher Widget_2018: Argibideak
       The Vigenere Cipher Widget_2019: Argibideak
@@ -989,8 +1027,8 @@ eu:
       Underground Mining Coal: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       Underground Mining Coal_2018: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
       Underground Mining Coal_2019: Baliabide preziatuenak lurazpian aurkituko dituzu, baina iluna dago bertan. Jarri 2 argi-zuzi eta suntsitu gutxienez 2 ikatz.
-      aE7: "Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?"
-      aE8: "Orain errepika dezagun guztia lau aldiz irudi-marko hau sortzeko. Kontuz izkinekin - ezin duzu besterik gabe 90 grado biratu! 3 gradoko birak 60 aldiz errepikatuz gero zirkulu erdia lortuko da, hauetako ze kode-blokek egingo du izkinetarako zirkulu laurdena?"
+      aE7: Begizta hori kopiatu eta eskuinera ordez ezkerrera biratzen baduzu, ze pasatzen da? Errepikatu dezakezu hori uhin hau marrazteko?
+      aE8: Orain errepika dezagun guztia lau aldiz irudi-marko hau sortzeko. Kontuz izkinekin - ezin duzu besterik gabe 90 grado biratu! 3 gradoko birak 60 aldiz errepikatuz gero zirkulu erdia lortuko da, hauetako ze kode-blokek egingo du izkinetarako zirkulu laurdena?
       beeDebugVideo1: Begizta bat erabiltzerik al duzu nektar guztia biltzeko?
       birdsDebugVideo1: Egin bidea eta eraman nazazu txerri mozoloarengana. Ekidin dinamita edo lumek hegan egingo dute!
       bounce_1: Itsatsi bloke bat "ezkerrerako gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura iristeko.
@@ -1005,7 +1043,7 @@ eu:
       bounce_12: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       bounce_12_2018: Sor ezazu zure Errebote joko propioa. Ikuste-efektu eta arau guztiak alda ditzakezu. Prest daukazunean, klikatu Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       bounce_12_basketball: Sor ezazu zure Saskibaloi joko propioa. Arau guztiak alda ditzakezu. Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
-      bounce_12_sports: 'Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.'
+      bounce_12_sports: Sor ezazu zure joko propioa! Arau guztiak alda ditzakezu eta kirolak nahastu. Izan zaitez sortzaile! Prest daukazunean, klik egin Amaitu zure lagunek probatu ahal izan dezaten zure jokoa haien telefonoetan.
       bounce_1_2018: Itsatsi bloke bat "ezkerrerako gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu erraketa ezkerralderako gezia erabiliz bukaerako helburura iristeko.
       bounce_1_basketball: Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi". Mugitu eskua ezkerralderako gezia erabiliz bukaerako helburura iristeko.
       bounce_1_sports: Iritsi banderara! Itsatsi bloke bat "ezkerreko gezia sakatzean" blokeari eta sakatu "Hasi" jokalariak banderara mugitzeko.
@@ -1047,16 +1085,19 @@ eu:
       course4_artist_fwp_challenge1: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz desberdina den zerbaitekin aldatu)
       courseA_maze_seq2: Aldatu kodea zerriarengana joan nadin!
       courseA_maze_seq2_2018: Aldatu kodea zerriarengana joan nadin!
-      courseC_artist_prog5: |-
-        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
-      courseC_artist_prog5_2018: |-
-        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
-      courseC_artist_prog5_2019: |-
-        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
+      courseC_artist_prog5: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
+      courseC_artist_prog5_2018: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
+      courseC_artist_prog5_2019: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
       courseC_maze_debugging10: Araztu maila hau blokeak birrordenatuz eta gehituz zerriarekin elkar nadin!
-      courseD_artist_binary1: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
-      courseD_artist_binary1_2018: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
-      courseD_artist_binary1_2019: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      courseD_artist_binary1: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
+      courseD_artist_binary1_2018: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
+      courseD_artist_binary1_2019: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
       courseD_artist_binary4: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       courseD_artist_binary4_2018: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       courseD_artist_binary4_2019: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
@@ -1070,7 +1111,7 @@ eu:
       courseD_autorun_binary6_2019: 6 digituko zein kate edo segida bitarrak, 11 aldiz errepikatuta, marraztuko du honako irudia?
       courseD_autorun_binary7_2019: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       courseD_bee_debugging3: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      courseD_bee_nestedLoops3: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
+      courseD_bee_nestedLoops3: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat.
       courseD_bee_nestedLoops5: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
       courseD_bee_nestedLoops6_2018: Eraman nazazu ekiloreraino!
       courseD_bee_nestedLoops8: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
@@ -1088,17 +1129,21 @@ eu:
       courseD_bounce_events6: Orain, bukaerako helburua goiko partean dago. Bloke batzuk gehitu behar dituzu "pilotak jotzen duenean" bi blokeetan ariketa hau ebazteko.
       courseD_bounce_events7: Itsatsi blokeak "... jotzean" eta "... sakatzean" bloke guztiei. Errebotatu pilota bukaerako helburua jotzen duen arte.
       courseD_debugging_3: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      courseD_maze_nestedLoops4: 'Eraman nazazu ekiloreraino!'
-      courseD_maze_nestedLoops4_2018: 'Eraman nazazu ekiloreraino!'
-      courseD_maze_nestedLoops4_2019: 'Eraman nazazu ekiloreraino!'
+      courseD_maze_nestedLoops4: Eraman nazazu ekiloreraino!
+      courseD_maze_nestedLoops4_2018: Eraman nazazu ekiloreraino!
+      courseD_maze_nestedLoops4_2019: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6_2018: Eraman nazazu ekiloreraino!
       courseD_maze_nestedLoops6_2019: Eraman nazazu ekiloreraino!
-      courseE_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
-      courseE_artist_functions1_2018: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
-      courseE_bee_concept1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
-      courseE_bee_concept1_2018: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
-      courseE_bee_concept1_2019: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
+      courseE_artist_functions1: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      courseE_artist_functions1_2018: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      courseE_bee_concept1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat.
+      courseE_bee_concept1_2018: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat.
+      courseE_bee_concept1_2019: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat.
       courseE_bee_functions1: Bildu lore bakoitzeko nektar guztia.
       courseE_bee_functions1_2018: Bildu lore bakoitzeko nektar guztia.
       courseE_bee_functions3: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
@@ -1115,9 +1160,9 @@ eu:
       courseF_artist_for_challenge2: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_artist_for_challenge2_2018: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
       courseF_artist_for_challenge2_2019: Badakizu nola egin berriro marrazki hau begizta bakar batekin?
-      courseF_bee_for8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
-      courseF_bee_for8_2018: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
-      courseF_bee_for8_2019: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
+      courseF_bee_for8: Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
+      courseF_bee_for8_2018: Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
+      courseF_bee_for8_2019: Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
       courseF_bee_for_challenge2: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge2_2018: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
       courseF_bee_for_challenge2_2019: Ebatzi puzle hau ahalik eta bloke gutxien erabiliz.
@@ -1154,7 +1199,7 @@ eu:
       frozen diamond mini snowflake: Ba al zenekien elur-maluta bakoitzak forma desberdina duela? Elur-maluta berri bat sortuko dugu "Errepikatu" bloke berri baten bidez paralelogramo bat lau aldiz errepikatzeko, paralelogramo bakoitzaren ondoren eskuinera 90 gradu biratuz.
       frozen diamond snowflake: Orain sor dezagun elur maluta bat errepikatu blokea erabiliz. Paralelogramo bat 10 aldiz errepikatuko dugu, errepikapenen artean 36 graduko eskuineranzko biraketa eginda.
       frozen diamond: Erabili "Errepikatu" bloke hauen inguruan paralelogramo bat sortzeko. Laukizuzena bezalakoa da baina angelu desberdinekin. Honek 60 eta 120 graduko angeluak ditu guztiak 90 gradukoak eduki ordez.
-      frozen freeplay: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat. 
+      frozen freeplay: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat.
       frozen line: Kaixo! Arendelleko Elsa naiz. Lagun iezadazu lerro bat sortzen.
       frozen perpendicular: Ikus dezagun orain elkarrekin 90 graduko angelua osatzen duten bi lerro marrazteko gai garen. "Biratu" blokeaz gainera "Mugitu" blokea ere erabili beharko duzu.
       frozen snowflake branch: Saiatu "Sortu elur maluta adarra" blokea hiru adar sortzeko, benetako elur maluta baten antza hartzen hasiko direnak.
@@ -1172,82 +1217,74 @@ eu:
       grade2_CaringForNewPet_10: Eraman nazazu zerriraino!
       grade2_CaringForNewPet_5: Eraman nazazu zerriraino!
       grade2_MakeDogTag_10: Marraztu zerbait dibertigarria.
-      grade2_MakeDogTag_3: |-
-        Lagun nazazu katuarentzat etxea bukatzen
-      grade2_MakeDogTag_4: |-
-        Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.
-      grade2_MakeDogTag_6: 'Joku askea! Marraztu nahi duzuna.'
+      grade2_MakeDogTag_3: Lagun nazazu katuarentzat etxea bukatzen
+      grade2_MakeDogTag_4: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
+      grade2_MakeDogTag_6: Joku askea! Marraztu nahi duzuna.
       grade2_MakeDogTag_8: Orain konekta ditzagun V mordo bat elkarrekin, begizta batean denak marraztuta.
       grade2_MakeDogTag_9: Oraingoan marraztu dezagun hori 24 aldiz. Gehitu kode honi 30 graduko biraketa bat eta jarri dena "errepikatu" bloke batean.
       grade2_PuppyLoops_1: Zerriraino eraman nazakezu 5 bloke erabiliz?
-      grade2_PuppyLoops_10: |-
-        Nire errotatxo bukatu gabe dago. Zenbatetan errepikatu behar dut bukatzeko?
+      grade2_PuppyLoops_10: Nire errotatxo bukatu gabe dago. Zenbatetan errepikatu behar dut bukatzeko?
       grade2_PuppyLoops_2: 'Ordeztu al ditzakezu bost bloke hauek bi blokerekin soilik? (Pista: Sortu begizta bat "Errepika Aldiz" blokearekin.)'
       grade2_PuppyLoops_4: Erabili bi begizta zerriraino iristeko bloke gutxiago erabiliz.
       grade2_PuppyLoops_5: Eraman nazazu zerriraino.
       grade2_PuppyLoops_7: Eraman nazazu ekiloreraino!
-      grade2_PuppyLoops_8: "Ikusten duzun hiru biboteentzako kodea okerra da. Iradokizuna: bibote bakoitza 75 pixeleko zabalera dauka. Zuzendu kodea biboteak marrazteko."
-      grade2_PuppyLoops_9: |-
-        Ematen du "code"-ko C letra alderantziz marraztu dela. Ondo jarriko duzu C moduan?
+      grade2_PuppyLoops_8: 'Ikusten duzun hiru biboteentzako kodea okerra da. Iradokizuna: bibote bakoitza 75 pixeleko zabalera dauka. Zuzendu kodea biboteak marrazteko.'
+      grade2_PuppyLoops_9: Ematen du "code"-ko C letra alderantziz marraztu dela. Ondo jarriko duzu C moduan?
       grade2_puppy_loops2: 'Ordeztu al ditzakezu bost bloke hauek bi blokerekin soilik? (Pista: Sortu begizta bat "Errepika Aldiz" blokearekin.)'
       grade2_puppy_loops4: Erabili bi begizta zerriraino iristeko bloke gutxiago erabiliz.
       grade3_ConditionalsElse_1: Erleak esan dezake hau lorea edo abaraska den. Nektarra bildu loreetatik soilik, baina lehenengo egiaztatu lorea edo abaraska den.
-      grade3_ConditionalsElse_2: "Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu."
+      grade3_ConditionalsElse_2: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       grade3_ConditionalsElse_3: Orain erleak eztia egin nahi du. Ziurtatu eztia abaraskan bakarrik egiten duzula.
       grade3_ConditionalsElse_4: Objektu ezezaguna lorea edo abaraska da. Erabili baldin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
-      grade3_ConditionalsElse_5: |-
-        Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
-      grade3_ConditionalsElse_6: "Lore moreak 3, nektar, 2 edo 1 izan ditzake. Hmen, \"baldin-orduan\" blokea \"baldin-bestela\" bloke batekin konbinatzen da \"baldin-orduan-bestela\" blokea sortzeko. Osatu soluzioa nektar kopuru ezezaguna biltzeko."
-      grade3_ConditionalsElse_7: "Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela. Bete \"egiaztatu lore morea\" funtzioa eta erabili ezazu loreetako nektar guztia biltzeko."
-      grade3_ConditionalsElse_8: "Idatzi \"egiaztatu lorea eztia egin\" funtzioaren barruan. Zure funtzioak lore moreak 3, 2 edo nektar bakarra duen begiratu beharko du, eta nektar guztia bildu. Ondoren, mugitu aurrera eta egin eztia."
-      grade3_ConditionalsElse_9: "Ebaluazioa: Kode hau okerra da.\nBete \"lortu nektarra edo egin eztia\" funtzioa. Ondoren deitu iezaiozu nektar guztia eta eztia biltzeko. Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela."
-      grade3_ConditionalsElse_TeacherIDo: |-
-        Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
+      grade3_ConditionalsElse_5: Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
+      grade3_ConditionalsElse_6: Lore moreak 3, nektar, 2 edo 1 izan ditzake. Hmen, "baldin-orduan" blokea "baldin-bestela" bloke batekin konbinatzen da "baldin-orduan-bestela" blokea sortzeko. Osatu soluzioa nektar kopuru ezezaguna biltzeko.
+      grade3_ConditionalsElse_7: Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela. Bete "egiaztatu lore morea" funtzioa eta erabili ezazu loreetako nektar guztia biltzeko.
+      grade3_ConditionalsElse_8: Idatzi "egiaztatu lorea eztia egin" funtzioaren barruan. Zure funtzioak lore moreak 3, 2 edo nektar bakarra duen begiratu beharko du, eta nektar guztia bildu. Ondoren, mugitu aurrera eta egin eztia.
+      grade3_ConditionalsElse_9: |-
+        Ebaluazioa: Kode hau okerra da.
+        Bete "lortu nektarra edo egin eztia" funtzioa. Ondoren deitu iezaiozu nektar guztia eta eztia biltzeko. Gogoratu lore moreek 3, 2 edo nektar 1 izan dezaketela.
+      grade3_ConditionalsElse_TeacherIDo: Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
       grade3_Conditionals_1 BAD: Erabili begizta bat nektar guztia biltzeko.
-      grade3_Conditionals_1: "Kaixo! Erle bat naiz. Lagundu nazazu loreetatik nektar guztia biltzen. Erabili begizta bat."
+      grade3_Conditionals_1: Kaixo! Erle bat naiz. Lagundu nazazu loreetatik nektar guztia biltzen. Erabili begizta bat.
       grade3_Conditionals_10 BAD: Bildu nektarra lore ilaretatik. Erabili begizta kabiatu bat.
-      grade3_Conditionals_10: |-
-        Bildu nektarra eta eztia egin. Pista: zer gertatzen da "baldin nektar" baldintza erabiltzen baduzu lore gorri batean? Begizta batekin osatu dezakezu hau?
+      grade3_Conditionals_10: 'Bildu nektarra eta eztia egin. Pista: zer gertatzen da "baldin nektar" baldintza erabiltzen baduzu lore gorri batean? Begizta batekin osatu dezakezu hau?'
       grade3_Conditionals_11 BAD: 'Ebaluazioa: Erabili "bitartean" begizta bat lore hauen nektar guztia biltzeko.'
-      grade3_Conditionals_11: |-
-        Bildu nektarra eta eztia egin. Kontuz ibili nektarra ez jasotzeko nektarrik ez duen lore more batetik.
-      grade3_Conditionals_12: "Bildu nektarra lau loreetatik."
+      grade3_Conditionals_11: Bildu nektarra eta eztia egin. Kontuz ibili nektarra ez jasotzeko nektarrik ez duen lore more batetik.
+      grade3_Conditionals_12: Bildu nektarra lau loreetatik.
       grade3_Conditionals_13: 'Ebaluazioa: Bildu nektar guztia. Kontuz ibili nektarrik ez duten lore moreetatik ez biltzen.'
-      grade3_Conditionals_2: "Lagundu nektar guztia loreetatik biltzen eta eztia egiten. Erabili begizta bat."
-      grade3_Conditionals_3: "Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz."
+      grade3_Conditionals_2: Lagundu nektar guztia loreetatik biltzen eta eztia egiten. Erabili begizta bat.
+      grade3_Conditionals_3: Lore moreek nektar 1 edo 0 izan ditzakete, baina ez dakizu zein! Kontuz ibili nektarrik ez daukan lore moretik nektarra biltzen. Egiaztatu nektarra 1en berdina den if blokea erabiliz.
       grade3_Conditionals_4: Egiaztatu lore hau "if" blokearein ikusteko ea nektarrik dagoen eskuragarri.
       grade3_Conditionals_5: Bildu nektarra lore bakoitzetik baldin badauka.
-      grade3_Conditionals_6: "Eremu honek lore gorri eta moreak ditu.\nLore gorriak jakineko nektar kopurua daukate, baina moreen nektar kopurua ez da jakina.\nBildu nektar guztia."
+      grade3_Conditionals_6: |-
+        Eremu honek lore gorri eta moreak ditu.
+        Lore gorriak jakineko nektar kopurua daukate, baina moreen nektar kopurua ez da jakina.
+        Bildu nektar guztia.
       grade3_Conditionals_7: Bildu lore bakoitzeko nektar guztia.
-      grade3_Conditionals_8: "Bildu nektarra nektarra duten loreetatik."
+      grade3_Conditionals_8: Bildu nektarra nektarra duten loreetatik.
       grade3_Conditionals_9: Erabili begizta bat lore hauek guztiek nektarra duten egiaztatu eta jasotzeko.
       grade3_Conditionals_TeacherIDo: Egiaztatu lore hau "if" blokearein ikusteko ea nektarrik dagoen eskuragarri.
       grade3_Debugging_1: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      grade3_Debugging_5: "Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko. Orain korrika eta pausua erabili ditzakezu."
-      grade3_Debugging_6: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      grade3_Debugging_5: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko. Orain korrika eta pausua erabili ditzakezu.
+      grade3_Debugging_6: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       grade3_Debugging_7: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      grade3_Debugging_9: |-
-        Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
+      grade3_Debugging_9: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
       grade3_Debugging_TeacherIDo: Bloke hauek benetan izorratzen naute. Konpondu (akatsa)k nektar guztia biltzeko eta ezti guztia egiteko.
-      grade3_Loops_10: |-
-        Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
-      grade3_Loops_11: "Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili."
+      grade3_Loops_10: Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
+      grade3_Loops_11: Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili.
       grade3_Loops_12: Erabili begizta bat lore bakoitzetik nektarra bildu eta abaraska bakoitzean eztia egiteko.
       grade3_Loops_2: Egin al dezakezu ataza bera modu errazagoan begizta bat erabiliz?
       grade3_Loops_3: Begizta bat erabiltzerik al duzu nektar guztia biltzeko?
       grade3_Loops_4: Orain erabili "errepika" bloke berria nektar guztia bildu eta ezti guztia egiteko.
       grade3_Loops_5: Jarri bloke hauek begizta batean lore bakoitzaren nektarra biltzeko.
-      grade3_Loops_6: "Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!"
-      grade3_Loops_7: |-
-        Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. 
+      grade3_Loops_6: Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!
+      grade3_Loops_7: 'Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. '
       grade3_Loops_8: Erabili begizta bat nektarra bildu eta eztia egiteko.
       grade3_Loops_9: Bildu lore bakoitzaren nektarra eta egin eztia abaraska bakoitzean.
-      grade3_Loops_TeacherIDo: |-
-        Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. 
-      grade3_bee_conditionals_quantum2: "Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu."
+      grade3_Loops_TeacherIDo: 'Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. '
+      grade3_bee_conditionals_quantum2: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       grade3_maze_Loop1: 'Ebaluazioa: Eraman nazazu ekiloreraino soilik 5 bloke erabiliz! '
-      grade3_maze_loops2: 'Eraman nazazu ekiloreraino!'
+      grade3_maze_loops2: Eraman nazazu ekiloreraino!
       grade3_maze_loops3: Eraman nazazu ekiloreraino!
       grade3_maze_loops4: Eraman nazazu ekiloreraino!
       grade3_maze_loops5: Eraman nazazu ekiloreraino!
@@ -1258,35 +1295,32 @@ eu:
       grade3_robotFarmer_ConditionalsIntro_11: 'Oraindik ilun dago kanpoan. Mugi nazazu eremuan zehar. Meta bat baldin badago, desegin ezazu, eta zulo bat baldin badago, bete ezazu. Pista: "baldin" blokearen menu zabalgarriko aukerak erabil ditzakezu.'
       grade3_robotFarmer_ConditionalsIntro_6: Desegin lur-meta guztiak, ahal den bloke-kopururik txikiena erabiliz. "bitartean" blokeko menu zabalgarriko aukera berriek adierazten dute ea meta baten edo zulo baten gainean nagoen.
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1: 'Lagun nazazu zulo hauek guztiak betetzen 5 paletakada lur botaz. Pista: "errepikatu" bloke bat sar dezakezu "bitartean" blokearen barruan.'
-      grade4_arist_nested_loop_circles1: 'Erabili begizta kabiatu bat irudia amaitzeko.'
+      grade4_arist_nested_loop_circles1: Erabili begizta kabiatu bat irudia amaitzeko.
       grade4_arist_nested_loop_flags1: Errepikatu emandako kodea haize-errota bat sortzeko.
-      grade4_arist_nested_loop_polygons1: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
-      grade4_arist_nested_loop_polygons2: "Errepikatu diseinu hau 6 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 6?)"
+      grade4_arist_nested_loop_polygons1: 'Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
+      grade4_arist_nested_loop_polygons2: 'Errepikatu diseinu hau 6 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 6?)'
       grade4_arist_nested_loop_squares1: Marraztu ditzakezu espaloi honetako 10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
       grade4_arist_nested_loop_triangles2: 'Orain sartu begizta hau beste begizta baten barnean 10 triangelu marrazteko. Honi begizta kabiatua deitzen zaio. Pista: 10 triangeluek 360 graduko biraketa osatzen dute.  '
       grade4_arist_nested_loop_triangles3: Marraztu dezakezu hexagono bat triangeluaren kodea errepikatuz?
       grade4_arist_nested_loop_triangles4: Marraztu krokodiloaren ahoko hortzak!
-      grade4_arist_nested_loop_triangles5: |-
-        Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-
+      grade4_arist_nested_loop_triangles5: Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\r
       grade4_arist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
-      grade4_artist_functions1: "Kaixo. Ni zombie artista. Marraztea maite dugu!\nLagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da."
-      grade4_artist_functions2: "Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak \"marraztu karratua\" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu \"marraztu karratua\" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da."
+      grade4_artist_functions1: |-
+        Kaixo. Ni zombie artista. Marraztea maite dugu!
+        Lagundu nazazu beirazko laukiak marrazten. Lagungarria: Beiren arteko zubia, laukien luzera baino 25 pixel txikiagoa da.
+      grade4_artist_functions2: Funtzioak ahalbidetzen zaitu bloke berriak definitzen. Karratu bat definitzeko blokeak "marraztu karratua" izeneko funtzio bat definitzeko mugitu ditugu. Erabiliko duzu "marraztu karratua" funtzioa erabiliz betaurrekoak sortuko dituzu? Karratuen arteko distantzia 75 pixelekoa da.
       grade4_artist_functions_challenge: Erabili iradokitako funtzioak lau hexagono ilara marrazteko. Konturatzen al zara nola zenbaki bikoitia duten lerroak eskuinera desplazatzen diren?
       grade4_artist_functions_challenge2: Erabili iradokitako funtzioak lau hexagono ilara marrazteko. Konturatzen al zara nola zenbaki bikoitia duten lerroak eskuinera desplazatzen diren?
       grade4_artist_nestedLoops_challenge: |-
-        Egin klik hemen pistak berriro ikusteko!\r
-        \r
+        Egin klik hemen pistak berriro ikusteko!\\r
+        \\r
         Hemen duzu forma interesgarri batentzako kodea. Zer gertatzen da errepikatzen baduzu? Kontuan izan forma honetan biraketek 420 gradu batzen dituztela eta, ondorioz, zure artistak marrazkia amaitzen duenean ez dela hasierako noranzkoan geldituko. Noranzko berria hasierakoaren 60 grado eskuinera izango da.
       grade4_artist_nestedLoops_challenge2: Eta orain erronka bat! Hemen diseinu bat aurkezten dugu, zuk jadanik ikusita dituzun blokeak bakarrik erabiltzen dituena. Pentsa al dezakezu nola berregin daitekeen? proba eta errorea teknika aplikatzeko libre zara. Lehen aldian borobil-borobil egitea ez da espero. Iradokizun gehiago ikusi nahi? Hemen klikatu!
-      grade4_artist_nested_loop_circles1: 'Erabili begizta kabiatu bat irudia amaitzeko.'
+      grade4_artist_nested_loop_circles1: Erabili begizta kabiatu bat irudia amaitzeko.
       grade4_artist_nested_loop_flags1: Errepikatu emandako kodea haize-errota bat sortzeko.
-      grade4_artist_nested_loop_polygons1: "Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)"
+      grade4_artist_nested_loop_polygons1: 'Errepikatu diseinu hau 10 aldiz. Zenbat biratu behar duzu errepikapen bakoitzean? (Pista: Zenbat da 360 zati 10?)'
       grade4_artist_nested_loop_squares1: Marraztu ditzakezu espaloi honetako 10 karratuak begizta kabiatu bat erabiliz? Karratu bakoitza 30 pixelekoa da.
-      grade4_artist_nested_loop_triangles1: 'Osatu kodea triangelu hauek marrazteko. Lehenengoa jadanik egina dago. Pista: 3 triangelu 360 graduko biraketan.'
-      grade4_artist_nested_loop_triangles5: |-
-        Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\r
-
+      grade4_artist_nested_loop_triangles5: Sortu eguzki bat emandako kodea beste begizta batean sartuz. Honi begizta kabiatua deitzen zaio.\\r
       grade4_artist_nested_loop_triangles6: Marraztu ditzakezu 36 triangelu hauek begizta kabiatu bat erabiliz?
       grade4_artist_parameters_squares1: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
       grade4_artist_parameters_triangles2: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
@@ -1295,19 +1329,18 @@ eu:
       grade4_artist_parameters_triangles4: Triangelu honen kodea gaizki dago. Funtzioa editatu al dezakezu berau konpontzeko, eta 25, 50 eta 75 luzeradun triangeluak egiteko?
       grade4_artist_parameters_trianglesx: 'Irudi hau osatu al dezakezu? Pista: Triangelu bakoitzaren aldea aurrekoarena baino 25 pixel handiagoa da. Lehenengo triangeluak 25 pixeleko aldeak ditu.'
       grade4_bee_conditionals_quantum1: Erleak esan dezake hau lorea edo abaraska den. Nektarra bildu loreetatik soilik, baina lehenengo egiaztatu lorea edo abaraska den.
-      grade4_bee_conditionals_quantum2: "Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu."
+      grade4_bee_conditionals_quantum2: Erleak orain nektarra baino ez du nahi. Objektu guztiak ez dira loreak, LAINO BAKOITZAREN azpian begiratu lore bat izkutatzen denentz ikusteko. Horrela bada, nektarra bildu dezakezu.
       grade4_bee_conditionals_quantum4: Objektu ezezaguna lorea edo abaraska da. Erabili baldin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
-      grade4_bee_conditionals_quantum5: |-
-        Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
+      grade4_bee_conditionals_quantum5: Laino horien azpian lore bat edo abaraska egon daiteke. Erabili badin/bestela blokea nektarra biltzeko lorea denean, eta eztia egiteko bestela (abaraska delako).
       grade4_bee_functions1: Bildu lore bakoitzeko nektar guztia.
       grade4_bee_functions2: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 2 nektar" lore bakoitzaren nektarra biltzeko.
       grade4_bee_functions3: Funtzioak ataza bat burutzen duten kode-blokeak dira. Erabili "lortu 5" funtzioa kolpetik 5 nektar lortzeko. Ziurtatu begizta bat erabiltzen duzula blokearen kontaketa ideala lortzeko ere bai.
       grade4_bee_functions4: '"Mugitu eta lortu nektarra" funtzioak erlea mugitu, nektarra bildu eta erlea hasierako lekura itzultzen du. Erabili funtzioa nektar guztia biltzeko.'
       grade4_bee_nestedLoops0: Erabili begizta bat nektar guztia biltzeko.
-      grade4_bee_nestedLoops1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat. 
+      grade4_bee_nestedLoops1: Bildu lore bakoitzeko nektar guztia. Erabili begizta kabiatu bat.
       grade4_bee_nestedLoops3: Bildu nektar guztia begizta kabiatu bat sortuz.
       grade4_bee_nestedLoops4: 'Bildu lore bakoitzeko nektar guztia, eta egin eztia abaraska bakoitzean. Erabili begizta kabiatu bat. '
-      grade4_frozen_freeplay: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat. 
+      grade4_frozen_freeplay: Ofizialki, artista bihurtu zara! Sor ezazu neguko herrialdi miragarri bat.
       grade4_frozen_functions0: Asmatuko zenuke zein zenbaki jarri beharko litzatekeen galdera ikurren ordez zirkulua marrazteko?
       grade4_frozen_functions1a: Erabili "Sortu zirkulua" bloke berria 10 zirkulu gainjartzaile sortzeko. Ez ahaztu zirkuluean artean aurrerantz jauzi egiteaz.
       grade4_frozen_functions2: Sor ditzagun orain 20 zirkulu gainjartzaile, zirkuluen artean 18 gradu biratuta.
@@ -1321,21 +1354,24 @@ eu:
       grade4_frozen_square_loop3: Elur-maluta bat sor al dezakezu, lauki bat 10 aldiz egiteko "errepikatu" blokea erabiliz, eta "biratu" blokea, laukien artean 36 graduko biraketa egiteko?
       grade4_playlab_freeplay: 'Askatasun osoz jolasteko garaia! Ondo pasa zure tresna kutxako bloke guztiekin! '
       grade4_playlab_test: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       grade4_playlab_test2: Hona hemen "salto" funtzioa, zure protagonistak 100 pixeleko saltoa ematea eragiten duena. Erabili salto funtzioa bandera guztiak biltzeko.
-      grade4_review_artist1: Ei, artista bat naiz. Kodez idatz dezakezu nik edozer gauza marraztu ahal izateko. Bloke gutxi erabili nik marraztu ahal izateko irudiaren lerro grisen gainetik.(Lerro bakoitza 100 pixelekoa da)
       grade4_review_artist2: 'Etxe honek teilatua behar du! Triangelua marraztu. Pista: hiru aldeak luzera bera dute.'
       grade4_review_artist3: Jauzi blokeak artista mugitzen du, marraztu gabe. Marraztu marratutako lerroa Jauzi eta Marraztu blokeak erabiliz.
       grade4_review_bee1: Orain erabili "errepika" bloke berria nektar guztia bildu eta ezti guztia egiteko.
       grade4_review_bee2: Bildu lore bakoitzaren nektarra eta egin eztia abaraska bakoitzean.
-      grade4_review_bee3: |-
-        Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
-      grade5_artist_binary1: "Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk \"off\" (0 zenbakiarekin adierazia) eta \"on\" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r\n\"Pixel\" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan \"01010101\" bitarrez marraztea?"
+      grade4_review_bee3: Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
+      grade5_artist_binary1: |-
+        Adierazpide bitarra informazioa adirezteko modu bat da bi aukera erabiltzen dituena soilik. Hemen, guk "off" (0 zenbakiarekin adierazia) eta "on" (1 zenbakiarekin adierazia) aukerak erabiliko ditugu.  \\r \\r
+        "Pixel" sare bat duzu eskuragarri. zuk nahi duzun diseinuak egin ahal izateko gelaxka batzuk soilik piztuz edo aktibatuz. Lor al dezakezu artistak lehenengo lerroan "01010101" bitarrez marraztea?
       grade5_artist_binary10: Hemen klikatu iradokizunak ikusteko.
       grade5_artist_binary11: 'Joku askea: hona hemen canvas edo oihal zuria, beraren gainean marraz dezazun. Ondo pasa!'
-      grade5_artist_binary2: "Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r\n\\r\nKode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko."
+      grade5_artist_binary2: |-
+        Hona hemen funtzio bat, 1-z eta 0-z osatutako kate bitarra hartzen duena eta zenbaki horiek ezkerretik eskuinera eta goitik behera jarraitzeko agindua ematen diona artistari. Artistak, 1 ikusten duenean, laukiak beteko ditu, eta 0 ikusten duenean, laukia ez ikusiarena egingo du.\\r
+        \\r
+        Kode hau abiarazi patroi hau marrazteko artistak bitarra nola erabiltzen duen ikusteko.
       grade5_artist_binary3: Honako kate edo segida bitarretik zeinen gainean egin daiteke 8 aldiko begizta irudi hau marrazteko?
       grade5_artist_binary4: Patroi hau marraz al dezakezu hiru digituko kate edo segida bitarraren gainean begizta burutuz?
       grade5_artist_binary5: Kate edo segida bitar bakoitzak irudi honetako lerro bat adierazten du. Berrantola al ditzakezu aurpegi kopetilun baten ordez aurpegi irribarretsua marraz dezan?
@@ -1343,92 +1379,99 @@ eu:
       grade5_artist_binary7: Zein da errepika dezakezun kate edo segida bitar motzena honako irudia marrazteko?
       grade5_artist_binary8: Honako marrazkia buka ezazu.
       grade5_artist_binary9: |-
-        Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \r
-        \r
+        Hona hemen marrazteko bereizmen handiagoko canvas edo oihala - 16 pixel bider 16 pixel \\r
+        \\r
         Bitekin kreatiboak izaten hasten garenean zer gertatzen den ikusten?
       grade5_artist_for_loops1: 'Marraztu 50 pixeleko zabalera duen triangelu hau. Pista: erabili errepikatu bloke bat.'
       grade5_artist_for_loops5: |-
-        Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\r
-        \r
+        Azken irudiko kodeari aldaketa txiki bat eginez  marrazki hau sor dezakezu. Asma dezakezu zein den aldaketa?\\r
+        \\r
         Pista: zerbait ezabatu behar duzu!
       grade5_artist_for_loops6: Forma bat egiteko normalean baino piskat gehiago edo gutxiago biratzen baduzu, efektu egituratuagoa lortuko duzu. Saia zaitez azken mailako kodea erabiltzen baina, oraingoan 89 grado biratu, espiral karratu txirikordatu hau sortzeko.
       grade5_artist_for_loops7: Egin hiru aldaketatxo azken mailako kodean hau lortzeko!
       grade5_artist_for_loops8: 'Gogoratzen duzu 6. atalean erabili genuen aldagaia forma bateko alde kopurua kontrolatzeko? Orain berdina egingo dugu "kontagailua" aldagaiarekin. Patroi hau triangelu batekin hasten da eta alde bat gehitzen zaio banan-banan dekagono bat (10 alde) osatu arte. Alde bakoitzak 100 pixeleko luzera izan behar du. Pista: 360 gradu forma batek duen alde kopuruarekin zatituta, biratu beharreko gradu kopurua lortuko duzu.'
-      grade5_artist_for_loops9: |-
-        Jarri ditzagun denak elkarrekin! "for begiztak" eta "kontagailua"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \r\r Kodearen oso zati txikia eman zaizu.
+      grade5_artist_for_loops9: Jarri ditzagun denak elkarrekin! "for begiztak" eta "kontagailua"ri buruzko zure jakintzarekin, forma bakoitzak aurrekoak baina bi alde gehiago dituen marrazki hau sortu. Ziurtatu alde bakoitza poligonoaren alde kopurua baino hamar aldiz luzeagoa dela. \\r\\r Kodearen oso zati txikia eman zaizu.
       grade5_artist_for_loopsfreeplay11: |-
-        Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\r
-        \r
+        Joko askeko sormena: Honelako patroi bat egiteko behar duzun guztia ikasi duzu iada! Irudi honek sormena pizten badizu, saia zaitez antzeko zerbait egiten. Bestela, sor ezazu zerbait zure kabuz.\\r
+        \\r
         Pista bat behar duzu? egin klik hemen.
-      grade5_artist_functionparameters10: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\r\n\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
+      grade5_artist_functionparameters10: "Jolas librea: Era honetakoak egiteko jakin beharreko guztia dakizu jada! irudi honek inspiratzen bazaitu, antzeko zerbait egitera saiatu. Bestela, zure kabuz sortu zerbait. \\\\r\n\\\\r\nJakin nahi al duzu gure inspirazioa patroia nola sortu zen? "
       grade5_artist_functionparameters11: 'Joku askea: Hemen daude zuk idatzitako funtzioak eta jolasteko beste funtzio batzuk. Zerbait izugarria marraztu! Jolastu arkatzaren zabalararekin zein irudi izugarriak marraztu ditzakezun ikusteko!'
       grade5_artist_functionparameters7: Irudi hau aurrekoaren berdintsua da. For begizta bat erabili al dezakezu diseinu hau sortzeko?
       grade5_artist_functionparameters8: 'Editatu dezagun "marraztu poligonoa" funtzioa. Honek jada badu "luzera" parametroa. Orain, gehitu dezagun "aldeak" parametroa. Gogoratu forma zehatz bat biratzeko behar den angelua, 360 eta alde kopuruaren arteko zatiketaren emaitza dela.  Aholkua : forma bakoitzaren perimetroa 200 pixelekoa dela. Gogoratzen al duzu forma desberdinak tamaina berekoak bihurtzeko formula hauek alde kopuru desberdina dutenean?'
-      grade5_artist_functionparameters_6: |-
-        Irusi hau osa al dezakezu? Forma guztien aldeak 100 pixelekoak dira.
+      grade5_artist_functionparameters_6: Irusi hau osa al dezakezu? Forma guztien aldeak 100 pixelekoak dira.
       grade5_artist_parameters_squares1: 'Klikatu "editatu", "karratu bat marraztu" funtzioaren definizioa betetzeko, bertan parametro bat gehituz. Luzera parametro bat izan beharko luke, triangeluak bezala. Oraingoan, 3 karratu marraztu : 25, 50 eta 75 pixeleko luzeerekin eta beraien artean 100 pixelez banatuak daudenak.'
       grade5_artist_parameters_triangles2a: Ezer berezirik antzeman al duzu funtzio-bloke hauetan? Sakatu "Abiatu" zer gertatzen den ikusteko.
       grade5_artist_parameters_triangles4: Triangelu honen kodea gaizki dago. Funtzioa editatu al dezakezu berau konpontzeko, eta 25, 50 eta 75 luzeradun triangeluak egiteko?
       grade5_artist_variables_freeplay10: 'Joko librea: jolastu formak duen alde kopuruarekin. Alda dezakezu algoritmoa formaren tamaina orokorra mantentzeko, alde kopuruak eragin gabe? Pista: agian oraingoan zure matematikako blokeak erabili behar dituzu (360 zati "aldeak") bi tokitan.'
       grade5_artist_variables_freeplay14: |-
-        Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\r
-        \r
+        Joko librea: Probatu! Orain zure algoritmoa kabiatuta dago begizta baten edo gehiagoren barnean. Zure bi aldagaien balioak aldatu, patroi politak marrazteko.\\r
+        \\r
         Efektu handiagoa lortzeko, jolastu kolorearekin! Erabili  ausazko koloreak begizten barnean zure diseinua nola aldatzen den ikusteko.
-      grade5_artist_variables_freeplay15: |-
-        Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\r \r Bestela, diseinu osoa zure kasa egin ezazu!
+      grade5_artist_variables_freeplay15: Inspiraziorako diseinuan bigarren begirada bat nahi al duzu edo iradokizunak? hemen klikatu!\\r \\r Bestela, diseinu osoa zure kasa egin ezazu!
       grade5_artist_variables_freeplay16: Oraindik jolasean? hemen canvas edo oihal zuria duzu, non nahi duzun guztia sor dezakezun!
-      grade5_artist_variables_hexagons1: "Saia gaitezen berriro. Luzera aldagaia alda al dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da."
+      grade5_artist_variables_hexagons1: 'Saia gaitezen berriro. Luzera aldagaia alda al dezakezu diseinu eder hau hexagonoekin egiteko? Pista: 10en multiploa da.'
       grade5_artist_variables_letterT11: Hona hemen kode konplikatuago bat, azkeneko ariketaren kontzeptu berdinak erabiltzen dituena - zer balio eman behar diozu "aldeak" aldagaiari laukiz osatutako irudi hau marrazteko?
-      grade5_artist_variables_octagons13: "Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \\r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, \"luzera\" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, \"aldeak\" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\\r Laguntzarik behar? Klikatu hemen."
+      grade5_artist_variables_octagons13: Irudi geometriko batek alde asko dituenean, alde bakoitzaren luzerak txikiagoa izan beharko du irudi osoa pantailan sartzea nahi baduzu. \\r Berregin dezagun irudi zoragarri hau sortzeko algoritmoa, baina, "luzera" aldagaiaren balioa eskuz aldatu beharrean, erabil dezagun matematikako bloke bat, "aldeak" aldagaia barruan duena, ziur egoteko irudi bakoitza ondo sartzen dela. Poligono bakoitzaren perimetroa 300 pixel da.\\r Laguntzarik behar? Klikatu hemen.
       grade5_artist_variables_pentagon8: |-
-        Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko "aldeak" aldagaia erabiliz.\r
-        \r
+        Erabili azkeneko puzlean ikasitakoa hexagono hau sortzeko "aldeak" aldagaia erabiliz.\\r
+        \\r
         Ikusten duzu nola balio bakar bat aldatuz triangelua, karratua, pentagonoa edo oktogonoa marraztu dezakezun?
       grade5_artist_variables_pentagon9: Orain, algoritmoa berregin eta 150 pixeleko aldeak dituen pentagono bat sor dezazu.
-      grade5_artist_variables_pentagons1: "Marraz ezazu patroia \"luzera\" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r\n\\r\nIkusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r\n\\r\n\\r\n"
+      grade5_artist_variables_pentagons1: |-
+        Marraz ezazu patroia "luzera" aldagaia leku egokian jarriz eta, ondoren, balio egokia ezarriz. (Pista: 10-en multiplo bat da).\\r
+        \\r
+        Ikusten al duzu luzera behin bakarrik definitu duzula eta kodeak beti balio egokia erabiltzen duela?\\r
+        \\r
+        \\r
       grade5_artist_variables_pentagons12: '"aldeak" aldagaian 5 balioa ezarriko dugu. Zenbat eta alde gehiago gehitu algoritmoan, orduan eta handiagoa izango da patroia! Kontuan izan "luzera" izeneko beste aldagai bat dagoela. Orain hori erabil dezakegu "mugitu aurrera" daukagun toki guztietan. Forma honentzat "luzera" aldagaiari 75 balioa eman.'
       grade5_artist_variables_rectangle6: Orain altuera zabaleraren bikoitza duen laukizuzena egin nahi dut. "zabalera" izeneko aldagai bat dugu 100 balioa eman behar ziona. Erabili ditzakezu matematikako blokeak kodea osatzeko?
       grade5_artist_variables_square7: |-
-        Hemen duzu edozein poligono erregular marraztu dezakeen kodea. "aldeak" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu "aldeak" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\r
-        \r
+        Hemen duzu edozein poligono erregular marraztu dezakeen kodea. "aldeak" izeneko aldagai berri bat dago eta 4 balioa du. Erabili dezakezu "aldeak" aldagaia (matematikako blokeren batekin) biraketa egokiak egiteko poligonoaren alde kopurua edozein izanda?\\r
+        \\r
         Egin klik hemen pistara itzultzeko!
       grade5_artist_variables_triangles2: '"Mugitu aurrera 150" ordez, oraingoan "mugitu" blokeak "luzera" izeneko aldagaiari egiten dio erreferentzia. Eman diezaiokezu "luzera" aldagaiari 150 balioa triangelu berri hau marrazteko?'
-      grade5_artist_variables_triangles3: 'Arrastatu zenbaki blokea "ezarri luzera" blokera 50 pixeleko triangelu multzo bat marrazteko.'
+      grade5_artist_variables_triangles3: Arrastatu zenbaki blokea "ezarri luzera" blokera 50 pixeleko triangelu multzo bat marrazteko.
       grade5_bee_for_loops1: Begizta bat erabil ezazu loreen nektarra jasotzeko.
       grade5_bee_for_loops2: Erleak nektar guztia biltzen duela ziurtatzeko beharrezko kodea gehitu. Begiratu zenbat kode behar duzun ariketa honetarako! (Hurrengo ariketan era errazagoa ikasiko dugu.)
       grade5_bee_for_loops6: For begizta bat ere erabil dezakezu kontaketa egiteko. Saia zaitez nektarra jasotzen 5 etik hasita beherantz zenbatuz, banaka-banaka.
-      grade5_bee_for_loops8: "Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?\n"
+      grade5_bee_for_loops8: Ondo zabiltza! Zein izan behar da darabilzun inkrementua 3, 6, 9, 12, 15 nektar jasotzeko?
       grade5_playlab_freeplay: 'Askatasun osoz jolasteko garaia! Ondo pasa zure tresna kutxako bloke guztiekin! '
       grade5_playlab_variables1: Oraingoan ez duzu koderik idatzi behar, sakatu "Exekutatu" joko honetan aritzeko! Jokoan, katuak baino bandera gehiago biltzen saiatzen ari den zakurra zara zu. Erabili gezia behera zakurra kontrolatzeko. Sakatu "Amaitu" jokatzeari uzteko.
       grade5_playlab_variables10: Aldatu "patruila" funtzioa "aktore" aldagaia gehitzeko, pantailako aktore bakoitzeko dei ahal diezaiogun. Gogoratu, atoreek 1, 2 eta 3 zenbakiak dituzte.
       grade5_playlab_variables11: Gehitu beste parametro bat, "abiadura" izenekoa, "patruila" funtzioari. Saia zaitez "ezarri abiadura" blokea erabiltzen "abiadura" parametro berriarekin, pinguinoari laguntzeko bi banderak harrapatzen iratxoek bandera bat eskuratu baino lehen.
-      grade5_playlab_variables12: "Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \\r\\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko."
+      grade5_playlab_variables12: Ondo pasa dezagun! Begiratu emandako kodea ikusteko ea bloke bakoitzak egiten duena asmatu dezakezun. \\r\\r Bukatutakoan, erabili gezi teklak txakurra kontrolatzeko eta bandera guztiak biltzeko.
       grade5_playlab_variables13: Erabili "aktoreak ikutzen duenean" blokea txakurra goi-ezker eskinera atzera bueltatzeko BAKARRIK txakurrak beste aktoreetako bat ikutzen badu.
       grade5_playlab_variables14: 'Askatasun osoz jolasteko garaia! Ondo pasa zure tresna kutxako bloke guztiekin! '
-      grade5_playlab_variables2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
+      grade5_playlab_variables2: Azkeneko puzleko lasterketa ez da oso justua izan! Aldatu "zakurraren\_abiadura" aldagaia ziurtatzeko Katuak baino bandera gehiago bil ditzakezula. 10 bandera biltzen dituen lehenengoak irabazten du!
       grade5_playlab_variables3: Joko mota berri bat duzu hemen! Erabili ezker eta eskuin geziak mugitzeko, eta gora gezia salto egiteko. Saiatu bandera guztiak biltzen.
       grade5_playlab_variables4: Orain "altuera" izeneko aldagai bat erabiltzen ari gara zakurrak egiten dituen jauzien altuera kontrolatzeko. Eguneratu "altuera" aldagaia zakurra gai izan dadin nahikoa salto egin eta bandera guztietara iristeko.
       grade5_playlab_variables6: |-
-        Erabili eskuin gezia bihotzak jaurtikitzeko.\r
-        \r
+        Erabili eskuin gezia bihotzak jaurtikitzeko.\\r
+        \\r
         Gure jokoan, nola lor ditzakegu puntuak? Gehitu 1 zure "puntuak" aldagaiari Zakurrak Katua bihotz batekin astintzen duen bakoitzean. Erabili "2. aktoreak zerbait ukitu" gertaera, zure puntuazioa eguneratzeko. Zure aldagaia inkrementatu dezakezu "puntuak = puntuak + 1" ezarriz. Lortu 10eko puntuazioa (banaka inkrementatuz!) maila gainditzeko.
       grade5_playlab_variables7: Bikain, orain ziurtatu dezagun joko hau ez dela errazegia. Katuak (2. aktorea) jaurtikitako bihotz hori batek Zakurra (1. aktorea) kolpatzen duen aldi bakoitzean puntu bat galdu behar duzu. Hasi 10 punturekin zailegi gerta ez dadin. 10 puntu galdu behar dituzu maila gainditzeko.
-      grade5_playlab_variables71: "Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, \"gehitu_puntuak\".\"\\r \\r Editatu funtzioa \"puntuak\" parametroa gehitzeko \"jokalariaren_puntuazioa\" aldagaiari. \\r \\r \"jokalariaren_puntuazioa\" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\\r \\r Oharra:\nHori guztia egin ondoren, klikatu \"Hasi\" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara."
-      grade5_playlab_variables81: "Azken funtzio bat gehitu dizugu. \\r\n\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\r\n\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\r\n\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
+      grade5_playlab_variables71: |-
+        Hona hemen aurreko urrats bateko jokoa, baina kode gehiena ezkutatuta dago. Funtzio berri bat dago, "gehitu_puntuak"."\\r \\r Editatu funtzioa "puntuak" parametroa gehitzeko "jokalariaren_puntuazioa" aldagaiari. \\r \\r "jokalariaren\_puntuazioa" aldagaiaren balioa eguneratu behar da gora (inkrementatu) Txakurrak Katuaren gainean bihotzak marrazten dituenean, eta behera (dekrementatu) Katuak Txakurraren gainean bihotzak marrazten dituenean.\\r \\r Oharra:
+        Hori guztia egin ondoren, klikatu "Hasi" jolasteko. Txakurrak 6 puntu eskuratzen dituenena, hurrengo ariketara pasatuko zara.
+      grade5_playlab_variables81: "Azken funtzio bat gehitu dizugu. \\\\r\n\\\\r\nErabili \"baldin eta\" adierazpena zure jokuak \"mailaz igo\" funtzioari dei diezaion \"jokalariaren puntuazioa\" zenbaki jakin bat baino handiagoa deneanl.\\\\r\n\\\\r\nAdibidez: \"jokalariaren puntuazioa\">6\\\\r\n\\\\r\nJoka ezazu eta pasa 4. mailara hurrengo puzlera joan ahal izateko. "
       grade5_playlab_variables9: "Hemen \"patruila\" izeneko funtzioa dago. \nAldatu katua 400 pixel gora mugitzeko eta gero 400 pixel behera."
-      grade5_playlab_variables_freeplay: "Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r\n\\r\nKontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r\n\\r\nPista: korritu behera laneremuko komando guztiak ikusteko."
+      grade5_playlab_variables_freeplay: |-
+        Joko librerako tartea! Hemen dituzu maila honetan erabili ditugun aldagai guztiak, baita erabili ditzakezun beste gutxi batzuk ere.\\r
+        \\r
+        Kontuan izan orain gure tresna-kutxan hainbat bloke daudela eta antolatu behar direla! Hemen, elementu bakoitzari kategoria bat eman zaio. Hartu zure denbora eskura daukazun guztiaz jabetzeko. Nabigatzen amaitzen duzunean, sortu joko edo istorio bat errepikak, aldagaiak eta gertaerak erabiliz.\\r
+        \\r
+        Pista: korritu behera laneremuko komando guztiak ikusteko.
       k-1 maze 1: Mugi nazakezu mendebalderantz zerriarekin elkartzeko?
-      level 'grade3_Loops_10: |-
-        Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
-      level 'grade3_Loops_11: "Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili."
+      level 'grade3_Loops_10: Azken ariketan erabilitakoaren antzeko begizta erabil ezazu, baina bertan biraketa bat sartuz.
+      level 'grade3_Loops_11: Pausoetan aurrera egiteko eta nektarra biltzeko begizta erabili.
       level 'grade3_Loops_12: Erabili begizta bat lore bakoitzetik nektarra bildu eta abaraska bakoitzean eztia egiteko.
       level 'grade3_Loops_2: Egin al dezakezu ataza bera modu errazagoan begizta bat erabiliz?
       level 'grade3_Loops_3: Begizta bat erabiltzerik al duzu nektar guztia biltzeko?
       level 'grade3_Loops_4: Orain erabili "errepika" bloke berria nektar guztia bildu eta ezti guztia egiteko.
       level 'grade3_Loops_5: Jarri bloke hauek begizta batean lore bakoitzaren nektarra biltzeko.
-      level 'grade3_Loops_6: "Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!"
-      level 'grade3_Loops_7: |-
-        Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. 
+      level 'grade3_Loops_6: Ze pasatzen da sekuentzia hau 3 aldiz errepikatzen baduzu? Ez ahaztu amaieran eztia egiteaz!
+      level 'grade3_Loops_7: 'Lore bakoitzak nektar unitate bat du. Bildu nektarra lore bakoitzetik. '
       level 'grade3_Loops_8: Erabili begizta bat nektarra bildu eta eztia egiteko.
       level 'grade3_Loops_9: Bildu lore bakoitzaren nektarra eta egin eztia abaraska bakoitzean.
       level grade3_Loops_2: Egin al dezakezu ataza bera modu errazagoan begizta bat erabiliz?

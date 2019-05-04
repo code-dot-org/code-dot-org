@@ -55,7 +55,7 @@ module Pd::Application
       mail(
         to: @application.principal_email,
         bcc: @application.user.email,
-        subject: "Approval requested: #{@application.teacher_full_name}'s participation in Code.org's Professional Learning Program"
+        subject: "Approval requested: #{@application.applicant_full_name}'s participation in Code.org's Professional Learning Program"
       )
     end
 

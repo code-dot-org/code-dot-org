@@ -102,6 +102,7 @@ export default class App extends React.Component {
       <View onLayout={this.onLayout} style={styles.container}>
         {height && indexUri && <View style={this.webViewContainerStyle()}>
           <WebView
+            allowUniversalAccessFromFileURLs
             originWhitelist={['*']}
             allowFileAccess
             source={{uri: indexUri}}

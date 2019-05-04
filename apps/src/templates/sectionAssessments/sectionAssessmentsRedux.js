@@ -1,6 +1,9 @@
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
-import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
-import i18n from '@cdo/locale';
+import {
+  SET_SCRIPT,
+  getSelectedScriptName
+} from '@cdo/apps/redux/scriptSelectionRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -24,6 +27,7 @@ export const ALL_STUDENT_FILTER = 0;
 const initialState = {
   assessmentResponsesByScript: {},
   assessmentQuestionsByScript: {},
+  feedbackByScript: {},
   surveysByScript: {},
   isLoading: false,
   assessmentId: 0,
@@ -50,10 +54,21 @@ const MultiAnswerStatus = {
 
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
+export const ASSESSMENT_FEEDBACK_OPTION_ID = 0;
+
+/* In order for the sorting of the submission timestamp column to work correctly in the SubmissionStatusAssessmentsTable, the submissionTimeStamp field must be a Date. So, we pass in arbitrary Dates in the past to handle when the assessment is in progress or not yet started. */
+export const inProgressFakeTimestamp = new Date(
+  '1990-01-01T20:52:05.000+00:00'
+);
+export const notStartedFakeTimestamp = new Date(
+  '1980-01-01T20:52:05.000+00:00'
+);
+
 // Action type constants
 const SET_ASSESSMENT_RESPONSES = 'sectionAssessments/SET_ASSESSMENT_RESPONSES';
 const SET_ASSESSMENTS_QUESTIONS =
   'sectionAssessments/SET_ASSESSMENTS_QUESTIONS';
+const SET_FEEDBACK = 'sectionAssessments/SET_FEEDBACK';
 const SET_SURVEYS = 'sectionAssessments/SET_SURVEYS';
 const START_LOADING_ASSESSMENTS =
   'sectionAssessments/START_LOADING_ASSESSMENTS';
@@ -75,6 +90,11 @@ export const setAssessmentQuestions = (scriptId, assessments) => ({
   type: SET_ASSESSMENTS_QUESTIONS,
   scriptId,
   assessments
+});
+export const setFeedback = (scriptId, feedback) => ({
+  type: SET_FEEDBACK,
+  scriptId,
+  feedback
 });
 export const startLoadingAssessments = () => ({
   type: START_LOADING_ASSESSMENTS
@@ -125,10 +145,18 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    Promise.all([loadResponses, loadQuestions, loadSurveys])
+    let loadFeedback = null;
+    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+      loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
+    }
+
+    Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
         dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
+        if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+          dispatch(setFeedback(scriptId, arrayOfValues[3]));
+        }
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
@@ -194,6 +222,15 @@ export default function sectionAssessments(state = initialState, action) {
       }
     };
   }
+  if (action.type === SET_FEEDBACK) {
+    return {
+      ...state,
+      feedbackByScript: {
+        ...state.feedbackByScript,
+        [action.scriptId]: action.feedback
+      }
+    };
+  }
   if (action.type === SET_SURVEYS) {
     return {
       ...state,
@@ -234,11 +271,20 @@ export default function sectionAssessments(state = initialState, action) {
 
 // Returns an array of objects, each indicating an assessment name and it's id
 // for the assessments and surveys in the current script.
-export const getCurrentScriptAssessmentList = state =>
-  computeScriptAssessmentList(
+export const getCurrentScriptAssessmentList = state => {
+  let tempAssessmentList = computeScriptAssessmentList(
     state.sectionAssessments,
     state.scriptSelection.scriptId
   );
+  /* Only add the feedback option to the dropdown for CSD and CSP */
+  if (doesCurrentCourseUseFeedback(state)) {
+    tempAssessmentList = tempAssessmentList.concat({
+      id: ASSESSMENT_FEEDBACK_OPTION_ID,
+      name: 'All teacher feedback in this unit'
+    });
+  }
+  return tempAssessmentList;
+};
 
 // Get the student responses for assessments in the current script and current assessment
 export const getAssessmentResponsesForCurrentScript = state => {
@@ -459,11 +505,13 @@ export const getAssessmentsFreeResponseResults = state => {
     responsesArray
       .filter(result => result.type === QuestionType.FREE_RESPONSE)
       .forEach((response, index) => {
-        questionsAndResults[index].responses.push({
-          id: studentId,
-          name: studentObject.student_name,
-          response: response.student_result
-        });
+        if (questionsAndResults[index]) {
+          questionsAndResults[index].responses.push({
+            id: studentId,
+            name: studentObject.student_name,
+            response: response.student_result
+          });
+        }
       });
   });
   return questionsAndResults;
@@ -610,25 +658,32 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
     const studentsAssessment =
       studentsObject.responses_by_assessment[currentAssessmentId];
 
-    // If the student has not submitted this assessment, display empty results.
+    // If the student has not submitted this assessment
     if (!studentsAssessment) {
       return {
         id: studentId,
         name: studentsObject.student_name,
         isSubmitted: false,
-        submissionTimeStamp: i18n.notStarted()
+        inProgress: false,
+        submissionTimeStamp: notStartedFakeTimestamp
       };
     }
     // Transform that data into what we need for this particular table, in this case
     // it is the structure studentOverviewDataPropType
-    const submissionTimeStamp = studentsAssessment.submitted
-      ? new Date(studentsAssessment.timestamp).toLocaleString()
-      : i18n.inProgress();
+
+    /* In progress assessments have a timestamp from the server indicating when the student last worked on the assessment. We don't display that timestamp in the SubmissionStatusAssessmentsTable, but we use it here to check if the assessment has been started. */
+    const inProgress =
+      studentsAssessment.timestamp && !studentsAssessment.submitted;
+    const submissionTimeStamp = inProgress
+      ? inProgressFakeTimestamp
+      : new Date(studentsAssessment.timestamp);
+
     return {
       id: studentId,
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
+      inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
       url: studentsAssessment.url
@@ -861,6 +916,42 @@ export const getExportableAssessmentData = state => {
 };
 
 /**
+ * @returns {array} of objects with keys corresponding to columns
+ * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
+ */
+export const getExportableFeedbackData = state => {
+  let feedback = [];
+  let feedbackForCurrentScript =
+    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId] ||
+    {};
+
+  Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
+    feedbackId = parseInt(feedbackId, 10);
+    feedback.push(feedbackForCurrentScript[feedbackId]);
+  });
+
+  return feedback;
+};
+
+/*
+ * Only show feedback option if in experiment and its CSD and CSP
+ * TODO: Remove experiment code once we remove mini rubric experiment
+ * */
+export const doesCurrentCourseUseFeedback = state => {
+  if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
+    const scriptName = getSelectedScriptName(state) || '';
+    return scriptName.includes('csp') || scriptName.includes('csd');
+  } else {
+    return false;
+  }
+};
+
+export const isCurrentScriptCSD = state => {
+  const scriptName = getSelectedScriptName(state) || '';
+  return scriptName.includes('csd');
+};
+
+/**
  *  @returns {boolean} true if current studentId has submitted responses for current script.
  */
 export const currentStudentHasResponses = state => {
@@ -964,6 +1055,17 @@ const loadSurveysFromServer = (sectionId, scriptId) => {
   const payload = {script_id: scriptId, section_id: sectionId};
   return $.ajax({
     url: `/dashboardapi/assessments/section_surveys`,
+    method: 'GET',
+    contentType: 'application/json;charset=UTF-8',
+    data: payload
+  });
+};
+
+// Loads comment and rubric feedback.
+const loadFeedbackFromServer = (sectionId, scriptId) => {
+  const payload = {script_id: scriptId, section_id: sectionId};
+  return $.ajax({
+    url: `/dashboardapi/assessments/section_feedback`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
     data: payload

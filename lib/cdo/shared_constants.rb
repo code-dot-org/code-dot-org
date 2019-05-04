@@ -37,6 +37,7 @@ module SharedConstants
       review_rejected: "review_rejected",
       dots_disabled: "dots_disabled",
       free_play_complete: "free_play_complete",
+      completed_assessment: 'completed_assessment'
     }
   ).freeze
 
@@ -159,6 +160,7 @@ module SharedConstants
       "getYPosition": null,
       "setScreen": null,
       "rgb": null,
+      "open": null,
 
       // Canvas
       "createCanvas": null,

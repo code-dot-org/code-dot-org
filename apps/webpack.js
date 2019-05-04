@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
-var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes -
@@ -16,7 +15,8 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'playground-io'),
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
-  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors')
+  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -82,8 +82,7 @@ var baseConfig = {
   module: {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
-      {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.ejs$/, loader: 'ejs-compiled-loader'},
+      {test: /\.ejs$/, loader: 'ejs-webpack-loader'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,
@@ -306,20 +305,30 @@ function create(options) {
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
+  var debugMinify = envConstants.DEBUG_MINIFIED;
   var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
   var externals = options.externals;
+  var optimization = options.optimization;
+  var mode = options.mode;
 
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-      filename: '[name].' + (minify ? 'min.' : '') + 'js'
+
+      // When debugging minified code, use the .js suffix (rather than .min.js)
+      // to allow the application to load minified js locally without running it
+      // through the rails asset pipeline. This is much simpler than hacking the
+      // application to load .min.js locally.
+      filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
     externals: externals,
+    optimization: optimization,
+    mode: mode,
     plugins: [
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
@@ -336,20 +345,6 @@ function create(options) {
     keepalive: watch,
     failOnError: !watch
   });
-
-  if (minify) {
-    config.plugins = config.plugins.concat([
-      new webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        },
-        // Don't generate source maps for our minified code, as these are expensive
-        // and we haven't been using them.
-        sourceMap: false
-      }),
-      new UnminifiedWebpackPlugin()
-    ]);
-  }
 
   if (watch) {
     config.plugins = config.plugins.concat(

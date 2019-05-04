@@ -294,7 +294,7 @@ module LevelsHelper
     use_droplet = @level.uses_droplet?
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
-    use_gamelab = @level.game.app == Game::GAMELAB
+    use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
     use_blockly = !use_droplet && !use_netsim && !use_weblab
@@ -597,73 +597,72 @@ module LevelsHelper
     }
   end
 
-  def string_or_image(prefix, text, source_level = nil)
-    return unless text
-    path, width = text.split(',')
-    if %w(.jpg .png .gif).include? File.extname(path)
-      "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
-    elsif File.extname(path).ends_with? '_blocks'
-      # '.start_blocks' takes the XML from the start_blocks of the specified level.
-      ext = File.extname(path)
-      base_level = File.basename(path, ext)
-      level = Level.find_by(name: base_level)
-      block_type = ext.slice(1..-1)
-      options = {
-        readonly: true,
-        embedded: true,
-        locale: js_locale,
-        baseUrl: Blockly.base_url,
-        blocks: '<xml></xml>',
-        dialog: {},
-        nonGlobal: true,
-      }
-      app = level.game.app
-      blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+  def match_answer_as_image(path, width)
+    "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+  end
 
-      unless @blockly_loaded
-        @blockly_loaded = true
-        blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-        content_tag(:style, '.blocklySvg { background: none; }') +
-        content_tag(:script, '', src: asset_path('js/blockly.js')) +
-        content_tag(:script, '', src: asset_path("js/#{js_locale}/blockly_locale.js")) +
-        content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
-        content_tag(:script, '', src: asset_path("js/#{js_locale}/#{app}_locale.js")) +
-        content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-        content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
-      end
+  def match_answer_as_embedded_blockly(path)
+    # '.start_blocks' takes the XML from the start_blocks of the specified level.
+    ext = File.extname(path)
+    base_level = File.basename(path, ext)
+    level = Level.find_by(name: base_level)
+    block_type = ext.slice(1..-1)
+    options = {
+      readonly: true,
+      embedded: true,
+      locale: js_locale,
+      baseUrl: Blockly.base_url,
+      blocks: '<xml></xml>',
+      dialog: {},
+      nonGlobal: true,
+    }
+    app = level.game.app
+    blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
 
-      blocks
-
-    elsif File.extname(path) == '.level'
-      base_level = File.basename(path, '.level')
-      level = Level.find_by(name: base_level)
-      content_tag(
-        :div,
-        content_tag(
-          :iframe,
-          '',
-          {
-            src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
-            width: (width ? width.strip : '100%'),
-            scrolling: 'no',
-            seamless: 'seamless',
-            style: 'border: none;'
-          }
-        ),
-        {class: 'aspect-ratio'}
-      )
-    else
-      level_name = source_level ? source_level.name : @level.name
-      data_t(prefix + '.' + level_name, text)
+    unless @blockly_loaded
+      @blockly_loaded = true
+      blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+      content_tag(:style, '.blocklySvg { background: none; }') +
+      content_tag(:script, '', src: asset_path('js/blockly.js')) +
+      content_tag(:script, '', src: asset_path("js/#{js_locale}/blockly_locale.js")) +
+      content_tag(:script, '', src: minifiable_asset_path('js/common.js')) +
+      content_tag(:script, '', src: asset_path("js/#{js_locale}/#{app}_locale.js")) +
+      content_tag(:script, '', src: minifiable_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+      content_tag(:script, '', src: minifiable_asset_path('js/embedBlocks.js'))
     end
+
+    blocks
   end
 
-  def multi_t(level, text)
-    string_or_image(level.type.underscore, text, level)
+  def match_answer_as_iframe(path, width)
+    base_level = File.basename(path, '.level')
+    level = Level.find_by(name: base_level)
+    content_tag(
+      :div,
+      content_tag(
+        :iframe,
+        '',
+        {
+          src: url_for(level_id: level.id, controller: :levels, action: :embed_level).strip,
+          width: (width ? width.strip : '100%'),
+          scrolling: 'no',
+          seamless: 'seamless',
+          style: 'border: none;'
+        }
+      ),
+      {class: 'aspect-ratio'}
+    )
   end
 
-  def match_t(text)
-    string_or_image('match', text)
+  def render_multi_or_match_content(text, level = @level)
+    return unless text
+
+    path, width = text.split(',')
+    return match_answer_as_image(path, width) if %w(.jpg .png .gif).include? File.extname(path)
+    return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
+    return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
+
+    level.localized_text(text)
   end
 
   def level_title
@@ -773,7 +772,6 @@ module LevelsHelper
   def redirect_under_13_without_tos_teacher(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
-    return false if level.is_a? GamelabJr
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")

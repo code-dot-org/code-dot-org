@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit5/10/overview/index.html",
+    "reference": "/curriculum/csp-19/unit5/10/overview/index.html",
     "parent_level_id": 13982,
     "teacher_markdown": "## Teaching This Lesson\r\n\r\nThis lesson looks like it has a lot of reading. The reading should go fairly fast since it's written like a script of two people talking.\r\n\r\nYou can **think about your pause points** in this lesson, where you might gather everyone to check for understanding, or at least do a check-in with various groups.\r\n\r\n* There are a few unavoidably tricky steps in the latter half of the lesson - steps that require students to modify or add to the code in more than one place in order to see the next thing. It's worth verifying that students have successfully completed these before moving on.\r\n\r\nYou **might also consider reading out loud** some parts of the script - particularly some the tricker decision-making points - to make sure students understand what decision was made and why.\r\n\r\n* It's also important to acknowledge along the way what's recapped in the Epilogue - that what we're walking students through here is NOT the *one true correct* way to make this app.  Each decision, while well-reasoned, is relatively arbitrary.\r\n* The goal of the script is to provide a model for collaboration, thinking about problems in small pieces, and how a process of iterative development can lead to a robust project.\r\n\r\n\r\n",
     "name_suffix": "_2019"

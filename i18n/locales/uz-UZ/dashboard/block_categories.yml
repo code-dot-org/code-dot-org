@@ -21,18 +21,18 @@ uz:
       Text: Matn
       Picker: Yig'uvchi
       Comment: Izoh
-      'Variables ': 'O''zgaruvchilar '
-      everythingelse: hamma narsa
       World: Dunyo
-      Location: Manzil
       Behaviors: Hatti-harakatlar
+      'Variables ': 'O''zgaruvchilar '
+      Locations: Manzil
+      everythingelse: hamma narsa
+      Location: Manzil
       numbers: raqamlar
       Numbers: Raqamlar
       Dancers: Raqqoslar
       Groups: Guruhlar
       Advanced: Rivojlangan
       Start: Boshlash
-      Locations: Manzil
       Dancing: Raqsga tushayotgan
       Sprite: Sprait
       Brush: Cho'tka

@@ -158,6 +158,9 @@ class Notification extends Component {
       })
     ),
 
+    // Optionally can provide children, such as one or more buttons.
+    children: PropTypes.node,
+
     // Can be specified to override default width
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
@@ -280,6 +283,7 @@ class Notification extends Component {
                     className={button.className}
                   />
                 ))}
+              {this.props.children}
             </div>
           </div>
           {dismissible && (

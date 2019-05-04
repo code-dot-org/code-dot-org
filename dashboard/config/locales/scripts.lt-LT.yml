@@ -1577,6 +1577,8 @@ lt:
               name: Internetas
             Crowdsourcing:
               name: Komandinis programavimas
+            Songwriting:
+              name: Dainų rašymas
         express-2019:
           stages:
             Relay Programming:
@@ -1667,3 +1669,11 @@ lt:
           stages:
             While Loops:
               name: "„Kol“ kartojimas"
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Komandinis programavimas
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Building a Foundation:
+              name: Laiptuota piramidė

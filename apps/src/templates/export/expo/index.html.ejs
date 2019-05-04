@@ -9,6 +9,9 @@
       function setExportConfig(config) { window.EXPORT_OPTIONS = config; }
     </script>
     <script src="<%- exportConfigPath %>"></script>
+  <% if (webpackRuntimePath) { -%>
+    <script src="<%- webpackRuntimePath %>"></script>
+  <% } -%>
   <% if (appOptionsPath) { -%>
     <script src="<%- appOptionsPath %>"></script>
   <% } -%>

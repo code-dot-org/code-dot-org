@@ -1358,10 +1358,10 @@ en:
         text: "The white space on the right is called the workspace and this is where we are going to build our program."
       7:
         image: 'notes/starwars_intro_7.JPG'
-        text: "If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid." 
+        text: "If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid."
       8:
         image: 'notes/starwars_intro_8.JPG'
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."       
+        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
       9:
         image: 'notes/starwars_intro_9.JPG'
         text: "When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box."
@@ -1417,7 +1417,7 @@ en:
         text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
       9:
         image: 'notes/starwars_events_9.JPG'
-        text: "Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive." 
+        text: "Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive."
     starwars_congrats:
       1:
         image: 'notes/starwars_congrats_1.JPG'
@@ -1446,10 +1446,10 @@ en:
         text: "In the next hour, we're going to build our own Star Wars game that will teach you the basic concepts of programming. Usually programming is all text but we're going to use blocks here so we can drag and drop to write the programs. To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts."
       4:
         image: 'notes/starwars_blocks_intro_4.JPG'
-        text: "Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space." 
+        text: "Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space."
       5:
         image: 'notes/starwars_blocks_intro_5.JPG'
-        text: "This middle area is the toolbox and each of these blocks is a command that BB-8 can understand." 
+        text: "This middle area is the toolbox and each of these blocks is a command that BB-8 can understand."
       6:
         image: 'notes/starwars_blocks_intro_6.JPG'
         text: "The white space on the right is called the work space and this is where we're going to build our program."
@@ -1483,10 +1483,10 @@ en:
         text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
       6:
         image: 'notes/starwars_blocks_events_6.JPG'
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen." 
+        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
       7:
         image: 'notes/starwars_blocks_events_7.JPG'
-        text: "Step by step, your game is getting more interactive." 
+        text: "Step by step, your game is getting more interactive."
     starwars_blocks_congrats:
       1:
         image: 'notes/starwars_blocks_congrats_1.JPG'
@@ -1543,7 +1543,7 @@ en:
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft." 
+        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
       2:
         image: 'notes/mc_repeat_2.JPG'
         text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
@@ -1562,7 +1562,7 @@ en:
     mc_if_statements:
       1:
         image: 'notes/mc_if_statements_1.JPG'
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."  
+        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
       2:
         image: 'notes/mc_if_statements_2.JPG'
         text: "All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message."
@@ -1745,13 +1745,13 @@ en:
       1:
         image: 'notes/mc_2016_events_1.jpg'
         text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
-      2: 
+      2:
         image: 'notes/mc_2016_events_2.jpg'
         text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
-      3: 
+      3:
         image: 'notes/mc_2016_events_3.jpg'
         text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
-      4: 
+      4:
         image: 'notes/mc_2016_events_4.jpg'
         text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
     mc_2016_spawn:
@@ -2026,7 +2026,7 @@ en:
         text: "Everywhere you look, computers are changing the world. Whether they're on our desktops, in our homes, our pockets, or just about anywhere else. But while most of us use this revolutionary technology daily, we don't often ask: \"How do computers work?\" In this series, you're going to learn how computers really work, starting with what makes a computer a computer. Then, you'll look at how information is represented inside the computer using tiny electrical signals going on and off at mind-boggling speeds."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
-        text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."  
+        text: "After that, you'll learn how computers use circuits to do everything from simple math to simulating entire virtual worlds. Next, you'll zoom out and look at the different parts of a computer that actually input, output, and store all that information. Finally, you'll take a look at what code actually is and how software controls hardware. So whether you're just curious about the devices you use every day or you want to design the innovations of the future, the first step is learning how computers work."
     csd_concept_computer:
       1:
         image: 'notes/csd_concept_computer_1.png'
@@ -2451,3 +2451,76 @@ en:
       9:
         image: 'notes/mc_2018_closing_9.png'
         text: "You've certainly proven yourself an intrepid coder by now, and I can’t wait to see what you build. And hopefully your adventures with code don't end here. Bon Voyage!"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "This course is broken down into stages."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "The first few stages will introduce what computer science is, as well as some key vocabulary."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Next, you will learn how to code in the same way your students will. The final stages of the course will help you make a plan to teach computer science in your classroom. Throughout the course, you will see examples of both plugged – or online – lessons, as well as unplugged lessons that are done without a computer."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "The learning platform will track your progress, so you can pick up where you left off at any time."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Coding is the set of instructions you give to a computer. Computer science is a field where people use the power of computers to solve big problems. Computer science includes coding, but it also includes other things, like how the internet works and impacts society, what to do with big data, and how to break down big problems. Computer science is about problem solving, critical thinking, and persistence."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org uses a visual, drag and drop programming language called Blockly. Blockly uses colorful instructions called blocks to build programs and solve puzzles."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Each puzzle has four parts."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "The play area is on the left, where your program runs."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "The center has the toolbox area, which has all the blocks you need."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "On the right is the workspace, where you will drag blocks to build your program."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Above the workspace are the instructions for each puzzle."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "If you drag out too many blocks from the toolbox, just drag the extra block back into the toolbox.  Hit Run to try your program, and Reset to try again."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "A repeat block lets you loop the code inside of it as many times as you tell it to."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "An event tells your program to listen for something to happen. When that thing happens, the program performs an action. A computer might listen for a mouse click, press on an arrow button, or a tap on the screen."
+    lesson_planning:
+      1:
+        image: 'notes/lesson_planning_1.png'
+        text: "CS Fundamentals lessons begin with overviews to let you know what the lesson will cover."
+      2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Lessons have warm-ups, activities, and wrap-ups. If you want to create your own lesson plans, you might want to keep these tips in mind."
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Try to use a spiraling curriculum design. Introduce concepts once and then revisit them."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Create a blended learning experience by combining online lessons with unplugged lessons."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Break your curriculum into smaller chunks."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Make sure that you align to local standards and college and career readiness skills."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Congratulations! You completed the Teaching Computer Science Fundamentals online course. You’re now part of the growing community of teachers preparing their students for the future."
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Check out these resources if you need more support: 1. forum.code.org 2. @teachcode on Twitter 3. studio.code.org "

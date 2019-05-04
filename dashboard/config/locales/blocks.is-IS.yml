@@ -797,6 +797,18 @@ is:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"inner"': ferningur
+            '"circle"': hringur
+            '"grid"': fylking
+            '"row"': hlið við hlið
+            '"column"': í röð upp
+            '"x"': þvers-og-kruss
+            '"plus"': plús
+            '"random"': eitthvað
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:

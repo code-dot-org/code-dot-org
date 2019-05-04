@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "You need to use a different dance.",
   "danceFeedbackNeedEveryTwoMeasures": "Make sure you are using the `every 2 measures` block",
   "danceFeedbackNeedMakeANewDancer": "Use the `make a new` block to create a second dancer.",
+  "danceFeedbackKeyEvent": "Make sure you attach some code to the `when key` block and press the key while your dance is running.",
   "measure": "Measure:"
 }

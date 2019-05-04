@@ -55,7 +55,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "project_template_level_name": "CSPU5 Adding Screens Template_2019",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

@@ -1,3 +1,4 @@
+@single_session
 Feature: Callouts
 
   Background:

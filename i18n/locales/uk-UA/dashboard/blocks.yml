@@ -546,6 +546,18 @@ uk:
             '"right"': праворуч
             '"space"': космос
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': рамка
+            '"inner"': внутрішній квадрат
+            '"circle"': коло
+            '"grid"': сітка
+            '"row"': ряд
+            '"column"': колона
+            '"x"': хрестик
+            '"plus"': плюс
+            '"random"': випадковий
       gamelab_locationDelta:
         options:
           DIR:

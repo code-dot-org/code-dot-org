@@ -1,5 +1,6 @@
 import React from 'react';
-import FacilitatorAveragesTable from './facilitator_averages_table';
+import {FacilitatorAveragesTable} from './facilitator_averages_table';
+import Permission from '../../permission';
 import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 
 export default storybook => {
@@ -123,6 +124,7 @@ export default storybook => {
               all_my_workshops: {1: 200}
             }}
             facilitatorId={1}
+            permission={new Permission(['facilitator'])}
           />
         )
       }

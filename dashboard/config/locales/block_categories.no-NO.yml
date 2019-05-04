@@ -23,19 +23,19 @@
       Text: tekst
       Picker: Velger
       Comment: Kommentar
-      'Variables ': 'Variabler '
-      everythingelse: resten
       World: Verden
-      Location: Sted
       Behaviors: Oppførsler
+      'Variables ': 'Variabler '
+      Default: Standard
+      Locations: Steder
+      everythingelse: resten
+      Location: Sted
       numbers: tall
       Numbers: Tall
-      Default: Standard
       Dancers: Dansere
       Groups: Grupper
       Advanced: Avansert
       Start: Start
-      Locations: Steder
       Music: Musikk
       Dancing: Dansing
       Sprite: Figur

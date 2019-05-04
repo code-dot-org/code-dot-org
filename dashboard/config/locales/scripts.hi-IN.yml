@@ -181,6 +181,30 @@ hi:
           stages:
             The Internet:
               name: इंटरनेट
+        dance:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+          title: डांस पार्टी
+        dance--draft:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        dance-draft:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        dance-extras:
+          title: डांस करते रहें
+          description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।
+        dance-low:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        coursed-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
         coursee-2019:
           stages:
             Conditionals:
@@ -189,6 +213,9 @@ hi:
           stages:
             'null':
               name: शून्य
+        dance-extras-gallery:
+          title: डांस करते रहें
+          description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।
         csd2-2019:
           stages:
             Lists:

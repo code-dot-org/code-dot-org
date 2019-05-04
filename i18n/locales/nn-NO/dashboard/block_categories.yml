@@ -22,21 +22,21 @@ nn:
       Text: Tekst
       Picker: Veljar
       Comment: Kommentar
-      'Variables ': 'Variablar '
-      everythingelse: resten
       World: Verd
       Sprites: Sprites
-      Location: Stad
       Behaviors: Atferd
+      'Variables ': 'Variablar '
+      Default: Standard
+      Locations: Stadar
+      everythingelse: resten
+      Location: Stad
       numbers: tal
       Numbers: Tal
       Input: Inngang
-      Default: Standard
       Dancers: Dansarar
       Groups: Grupper
       Advanced: Avansert
       Start: Start
-      Locations: Stadar
       Music: Musikk
       Dancing: Dansing
       Sprite: Sprite

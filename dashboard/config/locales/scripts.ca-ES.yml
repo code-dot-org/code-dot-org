@@ -1288,6 +1288,8 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+            Songwriting:
+              name: Composició de cançons
         express-2019:
           stages:
             Relay Programming:
@@ -1372,3 +1374,11 @@ ca:
           stages:
             While Loops:
               name: Bucles Mentres
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Col·laboració oberta
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            Building a Foundation:
+              name: Posant les bases

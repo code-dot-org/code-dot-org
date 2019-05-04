@@ -224,5 +224,23 @@ module Pd
       not_sure_explain: 'Not sure (Please explain):',
       unable_to_attend_1920: 'I’m not able to attend any of the above workshop dates. (Please explain):'
     }.freeze
+
+    SUBJECTS_TAUGHT_IN_PAST = [
+      'CS Fundamentals',
+      'CS in Algebra',
+      'CS in Science',
+      'CS Discoveries',
+      'CS Principles (intro or AP-level)',
+      'AP CS A',
+      'Beauty and Joy of Computing',
+      'Code HS',
+      'Edhesive',
+      'Exploring Computer Science',
+      'Mobile CSP',
+      'NMSI',
+      'Project Lead the Way',
+      'Robotics',
+      'ScratchEd'
+    ].freeze
   end
 end

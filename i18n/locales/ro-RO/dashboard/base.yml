@@ -10,15 +10,15 @@ ro:
       messages:
         blank: "este necesar"
         blank_plural: "sunt necesare"
-        invalid: "nu este valid"
-        invalid_plural: "sunt nevalide"
+        invalid: "este invalid"
+        invalid_plural: "sunt invalide"
     attributes:
       user:
         name: 'Numele afișat'
         name_example: 'Afişează numele <br/> (de exemplu, Cool Coder sau Jane S.)'
         email: 'E-mail'
         parent_email: 'E-mail părinte/tutore'
-        personal_email: "Adresa de e-mail personal <a href=\"%{url}\"> (click aici dacă nu aveţi o adresă de e-mail)</a>"
+        personal_email: "Adresă de e-mail personală <a href=\"%{url}\"> (apasă aici dacă nu ai o adresă de e-mail)</a>"
         username: 'nume de utilizator'
         password: 'Parolă'
         password_confirmation: 'Confirmarea parolei'
@@ -27,9 +27,9 @@ ro:
         age: 'Vârsta'
         gender: 'Sex'
         edit_header: 'Editează detaliile contului'
-        finish_sign_up_header: 'Finalizați crearea contului dvs'
-        finish_sign_up_subheader: 'Completaţi următoarele informaţii pentru a finaliza crearea unui cont de Code.org pentru <strong>%{email}</strong>.'
-        finish_sign_up_subheader_provider: 'Completaţi următoarele informaţii pentru a finaliza crearea unui cont la Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
+        finish_sign_up_header: 'Finalizează crearea contului tău'
+        finish_sign_up_subheader: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
         error:
           future: nu poate fi în viitor
   hello: "Salutare lume"
@@ -50,20 +50,20 @@ ro:
       label: 'Adaugă un profesor:'
       placeholder: "Secțiune Cod (ABCDEF)"
       instructions: "Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta este un cod din 6 litere ca \"ABCDEF\"."
-      instructions_short: "Introduceţi codul clasei dvs. din 6 litere"
+      instructions_short: "Introdu codul clasei tale din 6 litere"
     submit: 'Adaugă profesor'
   add_hint_form:
     placeholder: 'Te rugăm să introduci indiciul tău aici'
     submit: 'Adaugă sugestie'
   appname: "Code.org"
   stage: "Etapă"
-  stage_number: "Etapa %{number}"
+  stage_number: "Lecția %{number}"
   puzzle: "Puzzle"
   trophies: "trofee"
   courses: 'cursuri'
   courses_page:
     title_student: "Învață in Atelierul de programare"
-    title_teacher: "Predă cu Studio-ul Code"
+    title_teacher: "Predă Știința Calculatoarelor"
   unplugged_activity: 'Activitate fără Calculator'
   of: "de"
   more: "MAI MULT"
@@ -78,23 +78,23 @@ ro:
   prize: 'premiu'
   more_info: 'Mai multe informaţii'
   auth:
-    continue_with: 'Continuați cu %{provider}'
+    continue_with: 'Continuă cu %{provider}'
     sign_in_with: 'Loghează-te cu %{provider}'
     signed_in: 'Înregistrat!'
     signed_out: 'Te-ai delogat de pe <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic aici</a> pentru ate deloga de pe %{provider}.'
     already_signedup: 'Te-ai înscris deja?'
     notyet_signedup: "Nu te-ai alăturat încă?"
-    google_oauth2: 'Cont Google'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
-    windowslive: 'Cont Microsoft'
-    microsoft_v2_auth: 'Cont Microsoft'
+    windowslive: 'Microsoft'
+    microsoft_v2_auth: 'Microsoft'
     clever: 'Cont inteligent'
-    powerschool: 'Cont de SuperȘcoală'
+    powerschool: 'Powerschool'
     forgot_password: 'Ai uitat parola?'
-    migration_success: 'Succes! V-ați actualizat experiența la noul nostru tip de cont.'
-    demigration_success: 'Experienţa la noul nostru tip de cont este dezactivată acum pentru dvs.'
+    migration_success: 'Succes! Ai trecut la experiența oferită de noul nostru cont.'
+    demigration_success: 'Experienţa noului nostru tip de cont este dezactivată acum pentru contul tău.'
     need_confirmation: "Nu ai primit instrucţiuni de confirmare?"
     need_unlock: "Nu ai primit instrucţiuni de deblocare?"
     not_linked: "Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}. Va trebui să vă conectați introducând parola mai jos."
@@ -144,6 +144,7 @@ ro:
     accept_terms: "Trebuie să fii de acord pentru a crea un cont"
     error: "S-a produs o eroare."
     email_preference_question: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
+    email_preference_privacy: "(Vedeți polica noastră de confidențialitate)"
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "Trebuie să specificaţi un email preferat."
@@ -157,9 +158,9 @@ ro:
     after_school: 'After-School'
     other: 'Alte'
     state: 'Județ'
-    district: 'Sector'
+    district: 'Cartier'
     other_district_not_listed: 'Alt cartier nelistat mai sus'
-    district_name: 'Nume sector'
+    district_name: 'Nume cartier'
     school: 'Școală'
     other_school_not_listed: 'Altă şcoală nelistată mai sus'
     school_name: 'Numele școlii'
@@ -229,6 +230,8 @@ ro:
       picture: 'Poză - parolă'
       word: 'Cuvinte secrete'
       email: 'E-mail'
+      google_classroom: 'Clasa Google'
+      clever: 'Clever'
   follower:
     invite_sent: 'Invitație trimisă'
     added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
@@ -278,12 +281,14 @@ ro:
         applab: 'Creează o aplicație'
         gamelab: 'Creați un proiect în Laboratorul de Joc'
         weblab: 'Creați un proiect în Laboratorul Web (beta)'
+      my_dashboard: "Panoul meu principal"
       course_catalog: "Catalog de cursuri"
       project_gallery: "Proiecte"
       sections: "Secțiuni"
       help_support: "Ajutor şi suport"
       report_bug: "Raporteazã eroare"
       teacher_community: "Comunitate profesori"
+      professional_learning: "Dezvoltare profesională"
       documentation: "Documentație"
       tutorials: "Tutoriale"
       educate_overview: "Prezentare profesor"
@@ -326,13 +331,35 @@ ro:
       driver: 'Conducătorul'
       navigator: 'Navigator'
       create: 'Crează'
+      algebra_game: 'Algebră'
       applab: 'Laboratului Aplicației'
       artist: 'Artist'
-      gamelab: 'Laborator de jocuri'
-      playlab: 'Laborator de Joacă'
-      spritelab: 'Laborator Sprite'
-      minecraft: 'Minecraft'
+      artist_k1: 'Artist (pre-cititor)'
+      basketball: 'Baschet'
+      bounce: 'Săritură'
+      calc: 'Calculează'
+      dance: 'Petrecere cu dans'
+      eval: 'Evaluează'
       flappy: 'Flappy'
+      frozen: 'Frozen'
+      gamelab: 'Game Lab'
+      gamelab_jr: 'Game Lab (beta)'
+      gumball: 'Minunata lume a lui Gumball'
+      iceage: 'Epoca de gheață'
+      infinity: 'Infinit'
+      minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_designer: 'Minecraft'
+      minecraft_hero: 'Minecraft Hero'
+      playlab: 'Laborator de Joacă'
+      playlab_k1: 'Play Lab (Pre-cititor)'
+      scratch: 'Scratch'
+      sports: 'Sporturi'
+      spritelab: 'Laborator Sprite'
+      starwars: 'Star Wars'
+      starwarsblocks: 'Star Wars (blocuri)'
+      starwarsblocks_hour: 'Star Wars (blocuri)'
+      weblab: 'Laboratorul de web'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
@@ -464,8 +491,8 @@ ro:
     announcement_mc_launch: "Unul din tutorialele noastre cele mai populare acum are o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu clasa ta la Hour of Code."
     announcement_how_code_studio: "Nu aveţi nevoie de nici o experienţă pentru a începe predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie, programe de învățare profesionale de înaltă calitate şi tone de instrumente excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest video</a>!"
     announcement_go_beyond: "Parcurgeți mai mult de o Oră de Cod și explorați concepte informatice cu elevii dvs. în fiecare săptămână. Code.org oferă programe curriculare, planuri de lecții, programe profesionale de învățare de înaltă calitate și tone de instrumente excelente pentru toate nivelele de clasă&mdash; și totul este gratuit :) Nu aveți nevoie de experiență pentru a începe să predați știința informaticii în sala de clasă. <b>Identificați pasul următor potrivit clasei dvs.</b>"
-    announcement_teacher_recruitment: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională."
-    announcement_teacher_recruitment2: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate la nivel secundar pre-universitar, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională. Profesorii de gimnaziu și liceu aplică până pe 17 martie."
+    announcement_teacher_recruitment: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională."
+    announcement_teacher_recruitment2: "Profesori asemenea dumneavoastră conduc mișcarea de educație informatică. Puteți participa la programe de învățământ profesional de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul științelor informatice în școala dvs. și aplicați pentru învățarea profesională. Profesori ai ciclului gimnazial și liceal aplicați până în 17 martie."
     announcement_csf_pilot: "<strong>Profesori de școală primară:</strong> Participați la actualizarea cursurilor noastre care predau fundamentele Informaticii! Căutăm cadre didactice care să piloteze un curriculum actualizat al Fundamentelor Informatice pe perioada iernii și în primăvara anului 2019. Suntem dornici să auzim feedbackul dvs. înainte ca aceste actualizări să fie lansate live în august 2019."
     announcement_student_privacy: "La Code.org, acordăm o seriozitate deosebită protecției confidențialității elevilor. Pentru a proteja confidențialitatea elevilor dvs., am modificat pagina de conectare din secțiunea dvs. pentru a evita afișarea numelor complete. Chiar dacă această actualizare ar trebui să reducă preocupările în privința menținerii confidențialității pe pagina de conectare, noi încurajăm totuși utilizatorii în <i>a nu utiliza numele complete ale elevilor</i>."
     announcement_apcsp_recruitment: "<strong>Profesori care predați Pricipiile Informaticii:</strong> Elevii dvs. ar putea fi prezentați în următorul videoclip viral al Code.org, care îi încurajează pe studenți să suțină anul acesta examenul la nivel avansat AP (Advanced Placement) în Principii ale Informaticii. Invităm toți elevii care studiază Principiile Informaticii să trimită un clip video de 10-20 de secunde pe Twitter, Instagram sau Facebook, spunând că \"susțin examenul #APCSP pentru că...\" Cele mai bune înregistrări vor fi prezentate în videoclipul nostru și elevii câștigători vor primi Code.org swag/stil Code.org!"
@@ -584,6 +611,8 @@ ro:
       body_short: "Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde."
       audience: 'Vârste 13 +'
       cta: 'Află cum'
+    dance:
+      title: 'Petrecere cu dans'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
@@ -601,7 +630,7 @@ ro:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
     gamelab:
-      title: "Laborator de jocuri"
+      title: "Game Lab"
       body: "Laboratorul de jocuri este un mediu de programare în care puteți crea animații simple și jocuri cu obiecte și personaje care interacționează unul cu celălalt."
       audience: "Vârste 13 +"
       cta: "Află cum"
@@ -871,6 +900,18 @@ ro:
     csf_e_2: 'Conținut curs E'
     csf_f_1: 'Avansare la Cursul F (Opțional)'
     csf_f_2: 'Conținut curs F'
+    csf_digcit: 'Cetățenia Digitală'
+    csf_jigsaw: 'Puzzle'
+    csf_loops: 'Bucle'
+    csf_events: 'Evenimente'
+    csf_binary: 'Binar'
+    csf_conditionals: 'Condiţionale'
+    csf_spritelab: 'Laborator Sprite'
+    csf_nested_loops: 'Repetiții imbricate'
+    csf_functions: 'Funcţii'
+    csf_variables: 'Variabile'
+    csf_for_loops: 'Bucle Pentru'
+    csf_internet: 'Internet'
     csd1_1: 'Capitolul 1: Procesul de rezolvare a problemelor'
     csd1_2: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
     csd2_1: 'Capitolul 1: Conţinutul Web şi HTML'
@@ -880,9 +921,16 @@ ro:
     csd4_1: 'Capitolul 1: Design orientat spre utilizator'
     csd4_2: 'Capitolul 2: Prototipare aplicații'
     csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
+    csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+    csd6_1: 'Capitolul 1: Programare cu hardware'
     cspSurvey: 'Sondaj'
     cspAssessment: 'Evaluare capitol'
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
+    csp_variables: 'Variabile'
+    csp_conditionals: 'Condiţionale'
+    csp_functions: 'Funcţii'
+    csp_lists: 'Liste'
+    csp_loops: 'Bucle'
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de Code.org.
@@ -953,6 +1001,7 @@ ro:
       email_alternate: 'Email alternativ'
       gender: 'Identitate de gen'
       school_name: 'Numele școlii'
+      school_city: 'Orașul în care se află școala'
       school_country: 'Țara școlii'
     form_entries:
       gender:
@@ -986,6 +1035,7 @@ ro:
         tynker: 'Tynker'
       robotics:
         kodable: 'Kodable'
+        ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Atelierul minune'

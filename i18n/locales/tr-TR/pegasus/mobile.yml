@@ -347,6 +347,7 @@
   homepage_slot_text_link_donate: "Bağış yap"
   homepage_slot_text_link_shop: "Tişörtler, şapkalar ve daha fazlası"
   homepage_slot_text_link_administrators: "Okul veya bölgenizde düzenleyin"
+  homepage_gallery_header: "%{project_count} milyonun üzerinde Code.org projeleri oluşturuldu"
   homepage_header_donors: "Code.org destekleyenlere teşekkürler"
   homepage_donors_seall: "Tümünü göster"
   homepage_donors_donate: "Bağış Yap"

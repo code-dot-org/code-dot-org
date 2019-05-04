@@ -2,7 +2,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   include LevelsHelper
 
   before_action :load_from_cache
-  load_and_authorize_resource :section, only: [:section_responses, :section_surveys]
+  load_and_authorize_resource :section, only: [:section_responses, :section_surveys, :section_feedback]
   load_and_authorize_resource :script
 
   def load_from_cache
@@ -186,5 +186,9 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments/section_surveys'
   def section_surveys
     render json: LevelGroup.get_summarized_survey_results(@script, @section)
+  end
+
+  def section_feedback
+    render json: @script.get_feedback_for_section(@section)
   end
 end

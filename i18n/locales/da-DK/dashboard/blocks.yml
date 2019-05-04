@@ -292,6 +292,13 @@ da:
             '"right"': højre
             '"space"': rummet
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': grænse
+            '"inner"': indersiden af firkant
+            '"x"': kryds og tværs
+            '"random"': tilfældig
       gamelab_locationDelta:
         options:
           DIR:

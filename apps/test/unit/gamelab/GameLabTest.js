@@ -77,6 +77,7 @@ describe('GameLab', () => {
           instance.gameLabP5.p5.allSprites = sinon.spy();
           instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
           instance.gameLabP5.p5.redraw = sinon.spy();
+          instance.gameLabP5.p5.World = sinon.spy();
           instance.gameLabP5.setLoop = sinon.spy();
           instance.gameLabP5.startExecution = sinon.spy();
           instance.initInterpreter = sinon.spy();

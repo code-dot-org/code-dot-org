@@ -23,20 +23,20 @@ bg:
       Text: Текст
       Picker: Избор
       Comment: Коментар
-      'Variables ': 'Променливи '
-      everythingelse: всичко останало
       Sprites: Спрайт
-      Location: Адрес
       Behaviors: Поведения
+      'Variables ': 'Променливи '
+      Default: По подразбиране
+      Locations: Места
+      everythingelse: всичко останало
+      Location: Адрес
       numbers: числа
       Numbers: Числа
       Input: Поле за въвеждане
-      Default: По подразбиране
       Dancers: Танцьори
       Groups: Групи
       Advanced: Разширено
       Start: Старт
-      Locations: Места
       Music: Музика
       Dancing: Танци
       Sprite: Спрайт

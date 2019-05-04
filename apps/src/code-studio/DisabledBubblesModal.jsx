@@ -43,7 +43,9 @@ export default class DisabledBubblesModal extends React.Component {
             </a>
           </div>
           <div style={styles.button}>
-            <button onClick={this.handleClose}>{i18n.dialogOK()}</button>
+            <button type="button" onClick={this.handleClose}>
+              {i18n.dialogOK()}
+            </button>
           </div>
         </div>
       </BaseDialog>

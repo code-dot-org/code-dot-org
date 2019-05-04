@@ -68,7 +68,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 5,
-        "message": "drawAllSeaStars: App lab is expecting that you write a loop runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
+        "message": "drawAllSeaStars: App lab is expecting that you write a loop that runs at least 5 times and repeatedly calls two commands: moveTo(x,y) and drawSeaStar(size).  It appears as though the sequence is slightly different or you're not running the loop 5 times."
       },
       {
         "entries": [
@@ -100,7 +100,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 15,
-        "message": "drawAllFish: App lab is expecting that you write a loop runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
+        "message": "drawAllFish: App lab is expecting that you write a loop that runs at least 15 times and repeatedly calls two commands: moveTo(x,y) and drawFish(size, red, green, blue).  It appears as though the sequence is slightly different or you're not running the loop 15 times."
       },
       {
         "entries": [
@@ -133,11 +133,13 @@
     "expand_debugger": "false",
     "parent_level_id": 3224,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "This level should be replaced to demonstrate adding params with function param expando - which didn't exist when this level was written.",
-  "audit_log": "[{\"changed_at\":\"2017-11-29 22:48:16 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-29 22:48:41 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-19 18:25:36 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-29 22:48:16 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-11-29 22:48:41 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-19 18:25:36 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2019-04-01 15:49:42 +0000\",\"changed\":[\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

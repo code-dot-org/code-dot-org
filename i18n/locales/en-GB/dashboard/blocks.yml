@@ -127,6 +127,10 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
       gamelab_locationDelta:
         options:
           DIR:

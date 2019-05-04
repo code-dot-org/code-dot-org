@@ -106,6 +106,7 @@ cron-user-hierarchy-pii:
 - dashboard.teacher_profiles
 - dashboard.users
 - dashboard.user_geos
+- dashboard.user_school_infos
 cron-user-levels:
 - dashboard.user_levels
 cron-level-sources-pii:

@@ -41,12 +41,12 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null,
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/cf7454b44ed384fa0cb7ca9c5b4481d0=levelbuilder/44509.png",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 17:42:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 16:06:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-01 00:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 17:42:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 16:06:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-01 00:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-03-18 19:39:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 3,
@@ -175,14 +175,14 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="draw_colour" inline="true" id="draw-color">
+            <block type="draw_colour" id="draw-color">
               <value name="COLOUR">
                 <block type="colour_picker">
                   <title name="COLOUR">#0000cd</title>
                 </block>
               </value>
               <next>
-                <block type="controls_for_counter" inline="true">
+                <block type="controls_for_counter">
                   <mutation counter="counter"/>
                   <value name="FROM">
                     <block type="math_number">
@@ -200,7 +200,7 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_move" inline="true">
+                    <block type="draw_move">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="variables_get">
@@ -208,7 +208,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
                             <block type="math_number">

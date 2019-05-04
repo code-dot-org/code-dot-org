@@ -1017,6 +1017,8 @@ ky:
               name: Сүрөтчүдөгү програмдоо
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
+            Sticker Art with Loops:
+              name: Чаптама өнөрү циклдар менен
         gamelab:
           title: Оюн лабы
         coursea-2019:
@@ -1036,6 +1038,8 @@ ky:
               name: Сүрөтчүдөгү циклдар
             Spelling Bee:
               name: Spelling Bee
+            Ocean Scene with Loops:
+              name: Океан көрүнүшү циклдар менен
         csd2-2019:
           stages:
             Lists:
@@ -1052,3 +1056,13 @@ ky:
           stages:
             The Internet:
               name: Интернет
+        time4csdemo:
+          stages:
+            Programming in Artist:
+              name: Сүрөтчүдөгү програмдоо
+            Loops in Artist:
+              name: Сүрөтчүдөгү циклдар
+            Nested Loops with Frozen:
+              name: Тоңгондогу салынган циклдар
+            Functions in Artist:
+              name: Сүрөтчүдөгү функциялар

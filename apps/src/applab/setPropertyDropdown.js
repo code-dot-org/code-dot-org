@@ -576,10 +576,10 @@ function getPropertyValueDropdown(param2) {
       return ['"left"', '"right"', '"center"', '"justify"'];
     case 'fit':
       return ['"fill"', '"cover"', '"contain"', '"none"'];
-    case 'hidden':
-    case 'checked':
     case 'font-size':
       return ['8', '10', '12', '14', '18', '24', '36', '72'];
+    case 'hidden':
+    case 'checked':
     case 'readonly':
       return ['true', 'false'];
     case 'text':

@@ -1530,6 +1530,8 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Songwriting:
+              name: ترانه سرایی
         express-2019:
           stages:
             Relay Programming:
@@ -1618,3 +1620,11 @@ fa:
           stages:
             While Loops:
               name: حلقه ها ی While
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: کمک گیری جمعی
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            Building a Foundation:
+              name: ساختن بنیان

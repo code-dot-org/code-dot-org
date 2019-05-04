@@ -779,7 +779,7 @@ it:
             '"down"': in basso
             '"left"': a sinistra
             '"right"': a destra
-            '"space"': spaziale
+            '"space"': spazio
             '"a"': a
             '"d"': d
             '"h"': h
@@ -800,6 +800,18 @@ it:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"inner"': quadrato interno
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"row"': fila
+            '"column"': colonna
+            '"x"': croce
+            '"plus"': più
+            '"random"': a caso
       gamelab_locationAdd:
         text: "{LOC1} {OPERATOR} {LOC2}"
         options:
@@ -1018,7 +1030,7 @@ it:
             '"down"': in basso
             '"left"': a sinistra
             '"right"': a destra
-            '"space"': spaziale
+            '"space"': spazio
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1061,7 +1073,7 @@ it:
             '"down"': in basso
             '"left"': a sinistra
             '"right"': a destra
-            '"space"': spaziale
+            '"space"': spazio
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1385,7 +1397,7 @@ it:
             '"down"': in basso
             '"left"': a sinistra
             '"right"': a destra
-            '"space"': spaziale
+            '"space"': spazio
       aalab_location_picker:
         text: "{LOCATION}"
       aalab_moveInDirection:
@@ -1472,7 +1484,7 @@ it:
             '"down"': in basso
             '"left"': a sinistra
             '"right"': a destra
-            '"space"': spaziale
+            '"space"': spazio
             '"a"': a
             '"w"': w
             '"s"': s

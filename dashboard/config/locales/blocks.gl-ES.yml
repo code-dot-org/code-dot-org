@@ -172,6 +172,10 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatorio
       gamelab_locationDelta:
         options:
           DIR:

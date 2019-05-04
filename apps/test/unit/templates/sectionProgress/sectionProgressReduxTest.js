@@ -293,7 +293,8 @@ describe('sectionProgressRedux', () => {
                       kind: 'assessment',
                       icon: 'fa-computer',
                       is_concept_level: false,
-                      title: 'hello world'
+                      title: 'hello world',
+                      bonus: false
                     }
                   ]
                 }
@@ -314,7 +315,8 @@ describe('sectionProgressRedux', () => {
                 levelNumber: 'hello world',
                 name: 'name',
                 progression: 'progression',
-                url: 'url'
+                url: 'url',
+                bonus: false
               }
             ]
           }

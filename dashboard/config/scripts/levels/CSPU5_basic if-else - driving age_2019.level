@@ -52,7 +52,7 @@
     "short_instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "log_conditions": [

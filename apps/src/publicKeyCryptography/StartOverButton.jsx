@@ -23,7 +23,11 @@ export default class StartOverButton extends React.Component {
   render() {
     return (
       <span>
-        <button className="btn btn-info pull-right" onClick={this.confirm}>
+        <button
+          type="button"
+          className="btn btn-info pull-right"
+          onClick={this.confirm}
+        >
           {i18n.clearPuzzle()}
         </button>
         <Dialog

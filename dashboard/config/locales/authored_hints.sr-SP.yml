@@ -23,7 +23,7 @@ sr:
       2-3 Artist 4_authored_hint:
         2-3_Artist_4_a: Да би завршили кућу, све што треба је да нацртамо квадрат!
       2-3 Artist 6_authored_hint:
-        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо *даље* сваки
+        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо _даље_ сваки
           пут пре него што то урадимо са квадратом.   '
         2-3_Artist_6_b: Кад сам већ окренут на десно, лакше је да ме помериш напред
           и после на лево као да формираш тоугао.
@@ -42,10 +42,10 @@ sr:
       2-3 Artist 9_authored_hint:
         2-3_Artist_9_a: Овај дијамант је квадрат окренут за 45 степени.
         2-3_Artist_9_b: Не заборави да окренеш уметника за 45 степени улево пре него
-          почнеш да црташ квадрат (https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif)
+          почнеш да црташ квадрат (<https://images.code.org/47cc2474e533667101a2d73b98da204e-image-1467744539967.gif>)
       2-3 Artist Debugging 10_authored_hint:
         2-3_Artist_Debugging_10_a: Запамти, желиш да контролна табла буде 10 пиксела
-          *шира*....тако да треба да будеш сигуран да си **додао** 10 било којем броју
+          _шира_....тако да треба да будеш сигуран да си **додао** 10 било којем броју
           који треба да промениш.
         2-3_Artist_Debugging_10_b: "**Покушаји и грешке се овде очекују!**\nПочни
           тако што ћеш мењати сваки пут по један број. \nКоји број има коју улогу?\nАко
@@ -96,19 +96,21 @@ sr:
       2-3 Artist Functions 2 a_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       2-3 Artist Functions 3 a_authored_hint:
-        2-3_Artist_Functions_3_a: "*115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "\\*115 + 45 = 160\\*\\*"
       2-3 Artist Functions 3_authored_hint:
-        2-3_Artist_Functions_3_a: "*115 + 45 = 160**"
+        2-3_Artist_Functions_3_a: "\\*115 + 45 = 160\\*\\*"
       2-3 Artist Functions 4 a_authored_hint:
         2-3_Artist_Functions_4_a: Уметник треба да направи испуни 120 степени између
           сваког квадрата пре него заврши цртеж.
@@ -117,7 +119,7 @@ sr:
           сваког квадрата пре него заврши цртеж.
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: "Запамти да је тај део програма из задњег дела
-          слагалице: \n\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
+          слагалице: \n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
           type=\"controls_repeat\">\n<title name=\"TIMES\">8</title>\n<statement name=\"DO\">\n<block
           type=\"draw_colour\" inline=\"true\">\n<value name=\"COLOUR\">\n<block type=\"colour_random\"/>\n</value>\n<next>\n<block
           type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnRight</title>\n<title
@@ -126,7 +128,7 @@ sr:
           type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnLeft</title>\n<title
           name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
           name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
-        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је *крај* петље програма.
+        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је _крај_ петље програма.
       2-3 Artist Loops New 12_authored_hint:
         2-3_Artist Loops_New_12_a: Пре дијаматнта, уметник треба да скрене лево за
           60 степени и да настави право.
@@ -140,10 +142,11 @@ sr:
           Зато није потребно додати још једном ’скрени лево од’ пре него почне поново.
         2-3_Artist_Loops_New_13_b: |-
           Да би направио сваки дијамант, уметник мора да:
-          - крене
-          - скрене десно 120 степени
-          - крене
-          - скрене десно 60
+
+          -   крене
+          -   скрене десно 120 степени
+          -   крене
+          -   скрене десно 60
 
           После да понови све!
       2-3 Artist Loops New 9_authored_hint:
@@ -198,7 +201,7 @@ sr:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -217,7 +220,7 @@ sr:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -236,7 +239,7 @@ sr:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -255,7 +258,7 @@ sr:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -402,7 +405,7 @@ sr:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -421,7 +424,7 @@ sr:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -440,7 +443,7 @@ sr:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -459,7 +462,7 @@ sr:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -556,9 +559,10 @@ sr:
       courseD_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: Сваки квадрат има страницу 100 пиксела, што значи
           да треба да кренеш напред 175 пиксела пре него нацрташ свој следећи квадрат.
@@ -572,28 +576,31 @@ sr:
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       courseE_artist_functions2_2018_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       courseE_artist_functions2_2019_authored_hint:
         courseD_artist_functions2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       grade2_MakeDogTag_1_authored_hint:
         2-3_Artist_1_new_a: Ако ме блокираш да би ме ухватио ”настави напред за 100
           пиксела”, аутоматски ћу нацртати линију.
         2-3_Artist_1_new_b: Проблеми са скретањем? Користи ”скрени десно за 90 степени”,
           блокирај.
       grade2_MakeDogTag_9_authored_hint:
-        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је *крај* петље програма.
+        2-3_Artist_Loops_New_11_b: Следећи нови ред треба да је _крај_ петље програма.
       grade2_PuppyLoops_10_authored_hint:
         2-3_Artist_Debugging_8_a: |-
           Колико се пута понавља мој облик?
@@ -612,16 +619,17 @@ sr:
       grade4_artist_functions2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           Твој програм треба да:
-          - Користи функцију
-          - Помери напред за 100 + 75 пиксела
-          - Користи функцију
+
+          -   Користи функцију
+          -   Помери напред за 100 + 75 пиксела
+          -   Користи функцију
       grade4_review_artist1_authored_hint:
         2-3_Artist_1_new_a: Ако ме блокираш да би ме ухватио ”настави напред за 100
           пиксела”, аутоматски ћу нацртати линију.
         2-3_Artist_1_new_b: Проблеми са скретањем? Користи ”скрени десно за 90 степени”,
           блокирај.
       grade4_review_artist2_authored_hint:
-        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо *даље* сваки
+        2-3_Artist_6_a: 'Да би направили мале углове треба да укључимо _даље_ сваки
           пут пре него што то урадимо са квадратом.   '
         2-3_Artist_6_b: Кад сам већ окренут на десно, лакше је да ме помериш напред
           и после на лево као да формираш тоугао.

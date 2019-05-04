@@ -4,7 +4,7 @@ Host *.ec2.internal *.cdn-code.org
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/server_access_key
 
-<% @hosts.each do |node| %>
-Host <%= node.name %>
-  HostName <%= node['cloud'] ? node['cloud']['local_hostname'] : node['fqdn'] || 'fqdn_missing' %>
+<% @hosts.each do |name, hostname| %>
+Host <%= name %>
+  HostName <%= hostname %>
 <% end %>

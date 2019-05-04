@@ -1519,6 +1519,8 @@ pt:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+            Songwriting:
+              name: Composição
         express-2019:
           stages:
             Relay Programming:
@@ -1607,3 +1609,11 @@ pt:
           stages:
             While Loops:
               name: Laços enquanto
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Aberto ao público
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            Building a Foundation:
+              name: Criar uma base

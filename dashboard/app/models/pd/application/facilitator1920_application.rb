@@ -58,7 +58,7 @@ module Pd::Application
     end
 
     # Are we still accepting applications?
-    APPLICATION_CLOSE_DATE = Date.new(2019, 4, 1)
+    APPLICATION_CLOSE_DATE = Date.new(2019, 5, 1)
     def self.open?
       Time.zone.now < APPLICATION_CLOSE_DATE
     end
@@ -74,6 +74,19 @@ module Pd::Application
         waitlisted
         withdrawn
       )
+    end
+
+    # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
+    # In these decision emails, status and email_type are the same.
+    AUTO_EMAIL_STATUSES = %w(
+      declined
+      waitlisted
+    )
+
+    has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
+
+    def on_successful_create
+      queue_email :confirmation, deliver_now: true
     end
 
     # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
@@ -115,6 +128,18 @@ module Pd::Application
     def log_status
       self.status_log ||= []
       status_log.push({status: status, at: Time.zone.now})
+    end
+
+    def lock!
+      super
+
+      # delete any unsent emails, and queue a new status email if appropriate
+      emails.unsent.destroy_all
+      queue_email(status) if should_send_decision_email?
+    end
+
+    def should_send_decision_email?
+      AUTO_EMAIL_STATUSES.include?(status)
     end
 
     # memoize in a hash, per course

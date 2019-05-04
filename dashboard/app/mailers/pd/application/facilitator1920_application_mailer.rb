@@ -1,13 +1,14 @@
 module Pd::Application
   class Facilitator1920ApplicationMailer < ActionMailer::Base
     default from: 'Code.org <facilitators@code.org>'
+    default bcc: MailerConstants::PLC_EMAIL_LOG
     helper_method :signed_by, :from
 
     def confirmation(facilitator_application)
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         subject: "We've received your facilitator application!"
       )
@@ -17,7 +18,7 @@ module Pd::Application
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"
@@ -28,7 +29,7 @@ module Pd::Application
       @application = facilitator_application
 
       mail(
-        to: @application.user.email,
+        to: @application.formatted_applicant_email,
         from: from(@application),
         cc: @application.formatted_partner_contact_email,
         subject: "Your Code.org facilitator application status"

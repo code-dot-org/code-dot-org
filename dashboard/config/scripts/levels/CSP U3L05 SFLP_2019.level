@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit3/5/overview/index.html",
+    "reference": "/curriculum/csp-19/unit3/5/overview/index.html",
     "parent_level_id": 13955,
     "teacher_markdown": "Either as a class or individually, students should watch a video introducing the way that functions are defined and called in JavaScript. You may wish to take a minute following the video to address any questions that may have developed from watching the video.\r\n\r\n",
     "name_suffix": "_2019"

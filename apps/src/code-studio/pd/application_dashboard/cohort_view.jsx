@@ -8,6 +8,7 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
 import CohortCalculator from './cohort_calculator';
+import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
@@ -102,8 +103,8 @@ class CohortView extends React.Component {
       let accepted = 0;
       let registered = 0;
       if (this.state.applications !== null) {
-        accepted = this.state.applications.filter(
-          app => app.status === 'accepted'
+        accepted = this.state.applications.filter(app =>
+          CohortCalculatorStatuses.includes(app.status)
         ).length;
         registered = this.state.applications.filter(
           app => app.registered_workshop === 'Yes'

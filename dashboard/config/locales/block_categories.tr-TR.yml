@@ -23,21 +23,21 @@ tr:
       Text: yazı
       Picker: Seçici
       Comment: Yorum
-      'Variables ': Değişkenler
-      everythingelse: diğerherşey
       World: Dünya
       Sprites: Hareketli Nesneler
-      Location: Konum
       Behaviors: Davranışlar
+      'Variables ': Değişkenler
+      Default: Varsayılan
+      Locations: Konumlar
+      everythingelse: diğerherşey
+      Location: Konum
       numbers: sayılar
       Numbers: Sayılar
       Input: Girdi
-      Default: Varsayılan
       Dancers: Dansçılar
       Groups: Gruplar
       Advanced: İleri seviye
       Start: Başlayın
-      Locations: Konumlar
       Dancing: Dans
       Sprite: Hareketli nesne
       Brush: Fırça

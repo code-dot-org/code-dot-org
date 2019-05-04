@@ -1077,6 +1077,8 @@ sl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Napiši pesem
         express-2019:
           stages:
             Relay Programming:
@@ -1149,3 +1151,11 @@ sl:
           stages:
             While Loops:
               name: 'Zanka: dokler velja'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            Building a Foundation:
+              name: Graditi temelje

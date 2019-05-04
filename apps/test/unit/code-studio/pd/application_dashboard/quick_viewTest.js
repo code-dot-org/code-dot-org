@@ -85,6 +85,7 @@ describe('Quick View', () => {
       );
 
       server.respond();
+      quickView.update();
     });
     after(() => {
       server.restore();

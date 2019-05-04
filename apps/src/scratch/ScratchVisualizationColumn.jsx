@@ -16,13 +16,13 @@ export default function ScratchVisualizationColumn() {
       <ProtectedVisualizationDiv isResponsive={true}>
         <canvas id="scratch-stage" style={styles.scratchStage} />
       </ProtectedVisualizationDiv>
-      <button id="green-flag">
+      <button type="button" id="green-flag">
         <img
           src={assetUrl('media/scratch-blocks/icons/event_whenflagclicked.svg')}
           width={30}
         />
       </button>
-      <button id="stop-all">
+      <button type="button" id="stop-all">
         <img
           src={assetUrl('media/scratch-blocks/icons/control_stop.svg')}
           width={30}

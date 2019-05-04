@@ -318,6 +318,7 @@ class ShareAllowedDialog extends React.Component {
               </div>
               <div style={{clear: 'both', height: 40}}>
                 <button
+                  type="button"
                   id="continue-button"
                   style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
                   onClick={this.close}
@@ -386,6 +387,7 @@ class ShareAllowedDialog extends React.Component {
                   </a>
                   {canPublish && !isPublished && (
                     <button
+                      type="button"
                       id="share-dialog-publish-button"
                       style={
                         hasThumbnail ? styles.button : styles.buttonDisabled

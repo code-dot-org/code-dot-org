@@ -30,6 +30,7 @@ class XhrProxyController < ApplicationController
     apex.oracle.com
     api.coinmarketcap.com
     api.data.gov
+    api.datamuse.com
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -46,6 +47,7 @@ class XhrProxyController < ApplicationController
     bible-api.com
     code.org
     compete.hsctf.com
+    data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
@@ -55,11 +57,13 @@ class XhrProxyController < ApplicationController
     googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
+    hubblesite.org
     isenseproject.org
     lakeside-cs.org
     qrng.anu.edu.au
     quandl.com
     query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
     noaa.gov
     nuevaschool.ngrok.io
@@ -69,6 +73,7 @@ class XhrProxyController < ApplicationController
     random.org
     rhcloud.com
     runescape.com
+    samples.openweathermap.org
     sheets.googleapis.com
     spreadsheets.google.com
     stats.minecraftservers.org
@@ -77,6 +82,7 @@ class XhrProxyController < ApplicationController
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached

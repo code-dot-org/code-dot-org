@@ -78,6 +78,13 @@ const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
   'Nope. I will need a new copy provided. Thanks!': 'No'
 };
 
+const REPLACE_EXISTING_OPTIONS = [
+  'Yes, this course will replace an existing computer science course',
+  'No, this course will be added to the schedule in addition to an existing computer science course',
+  'No, this will be the only computer science course on the master schedule',
+  'I don’t know'
+];
+
 export default class EnrollForm extends React.Component {
   static propTypes = {
     workshop_id: PropTypes.number.isRequired,
@@ -85,7 +92,9 @@ export default class EnrollForm extends React.Component {
     first_name: PropTypes.string,
     email: PropTypes.string,
     onSubmissionComplete: PropTypes.func,
-    workshop_subject: PropTypes.string
+    workshop_subject: PropTypes.string,
+    previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
+    collect_demographics: PropTypes.bool
   };
 
   constructor(props) {
@@ -249,7 +258,9 @@ export default class EnrollForm extends React.Component {
       csf_has_physical_curriculum_guide:
         CSF_HAS_CURIICULUM_COPY_OPTIONS[
           this.state.csf_has_physical_curriculum_guide
-        ]
+        ],
+      previous_courses: this.state.previous_courses,
+      replace_existing: this.state.replace_existing
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -322,6 +333,9 @@ export default class EnrollForm extends React.Component {
           onInputChange: this.handleCsfCourseOtherChange
         }
       ]);
+    const previousCourses = this.props.previous_courses.concat([
+      'I don’t have experience teaching any of these courses'
+    ]);
 
     return (
       <form id="enroll-form">
@@ -521,6 +535,47 @@ export default class EnrollForm extends React.Component {
               />
             </FormGroup>
           )}
+
+        {this.props.collect_demographics && (
+          <div>
+            <ButtonList
+              id="previous_courses"
+              key="previous_courses"
+              answers={previousCourses}
+              groupName="previous_courses"
+              label="Which computer science courses or activities have you taught in the past?"
+              onChange={this.handleChange}
+              selectedItems={this.state.previous_courses}
+              validationState={
+                this.state.errors.hasOwnProperty('previous_courses')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.previous_courses}
+              type="check"
+              columnCount={2}
+            />
+
+            <ButtonList
+              id="replace_existing"
+              key="replace_existing"
+              answers={REPLACE_EXISTING_OPTIONS}
+              groupName="replace_existing"
+              label="Will this course replace an existing computer science course in the master schedule?"
+              onChange={this.handleChange}
+              selectedItems={this.state.replace_existing}
+              validationState={
+                this.state.errors.hasOwnProperty('replace_existing')
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+              errorText={this.state.errors.replace_existing}
+              type="radio"
+              columnCount={1}
+            />
+          </div>
+        )}
+
         <p>
           Code.org works closely with local Regional Partners and Code.org
           facilitators to deliver the Professional Learning Program. By

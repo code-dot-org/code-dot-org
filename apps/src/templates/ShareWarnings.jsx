@@ -96,7 +96,7 @@ class ShareWarnings extends Component {
           >
             {commonMsg.shareWarningsMoreInfo()}
           </a>
-          <button style={styles.ok} onClick={this.handleOk}>
+          <button type="button" style={styles.ok} onClick={this.handleOk}>
             {commonMsg.dialogOK()}
           </button>
         </div>

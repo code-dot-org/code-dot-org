@@ -154,8 +154,14 @@ module TextToSpeech
   end
 
   def tts_long_instructions_text
-    # Instructions in contained levels are used as TTS instead of the instructions of the containing level
-    tts_long_instructions_override || TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+    if I18n.locale == I18n.default_locale
+      # Instructions in contained levels are used as TTS instead of the
+      # instructions of the containing level
+      return tts_long_instructions_override ||
+        TextToSpeech.sanitize(tts_for_contained_level || long_instructions || "")
+    else
+      TextToSpeech.sanitize(try(:localized_long_instructions) || "")
+    end
   end
 
   def tts_for_contained_level

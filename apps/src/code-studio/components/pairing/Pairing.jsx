@@ -153,10 +153,10 @@ export default class Pairing extends React.Component {
           </div>
         ))}
         <div className="clear" />
-        <button className="stop" onClick={this.handleStop}>
+        <button type="button" className="stop" onClick={this.handleStop}>
           {i18n.pairProgrammingStop()}
         </button>
-        <button className="ok" onClick={this.props.handleClose}>
+        <button type="button" className="ok" onClick={this.props.handleClose}>
           OK
         </button>
       </div>

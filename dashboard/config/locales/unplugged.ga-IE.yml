@@ -490,3 +490,10 @@ ga:
         desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann
           siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg
           digiteach seo.
+      timeforcs_demo_crowdsourcing:
+        title: Sluafhoinsiú
+      timeforcs_demo_conditionals:
+        title: Coinníollacha
+        desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh
+          siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh
+          mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."

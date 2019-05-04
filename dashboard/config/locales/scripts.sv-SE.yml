@@ -1902,6 +1902,8 @@ sv:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Låtskrivande
         express-2019:
           stages:
             Relay Programming:
@@ -2012,3 +2014,11 @@ sv:
           stages:
             While Loops:
               name: "'Medan' loopar(slingor)"
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            Building a Foundation:
+              name: Bygga en grund

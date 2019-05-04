@@ -131,10 +131,6 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
-  def teacher_survey_reminder__csf_deepdive
-    mail :teacher_survey_reminder, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
-  end
-
   def teacher_follow_up__csf_intro
     mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
   end

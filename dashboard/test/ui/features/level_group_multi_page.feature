@@ -1,4 +1,3 @@
-@no_firefox
 @no_mobile
 @as_taught_student
 Feature: Level Group

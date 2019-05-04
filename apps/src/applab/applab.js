@@ -73,6 +73,7 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
+import {generateExpoApk} from '../util/exporter';
 
 /**
  * Create a namespace for the application.
@@ -124,7 +125,8 @@ var twitterOptions = {
 };
 
 function stepDelayFromStepSpeed(stepSpeed) {
-  return 300 * Math.pow(1 - stepSpeed, 2);
+  // 1.5 sec per socket in turtle mode
+  return 1500 * Math.pow(1 - stepSpeed, 2);
 }
 
 function loadLevel() {
@@ -808,7 +810,7 @@ Applab.reactMountPoint_ = null;
  */
 Applab.render = function() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
-    isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
+    isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
     handleVersionHistory: Applab.handleVersionHistory
@@ -826,14 +828,24 @@ Applab.exportApp = function(expoOpts) {
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
 
-  const {mode, expoSnackId} = expoOpts || {};
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName = project.getCurrentName() || 'my-app';
+
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(expoSnackId, studioApp().config);
+    return generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      studioApp().config
+    );
   }
 
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     studioApp().editor.getValue(),
     html,
     expoOpts,

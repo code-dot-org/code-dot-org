@@ -23,8 +23,8 @@ class Pd::InternationalOptInControllerTest < ::ActionController::TestCase
 
   test 'signed in teacher with no email' do
     teacher = create :teacher
-    teacher.email = ""
-    teacher.save(validate: false)
+    teacher.primary_contact_info.email = ""
+    teacher.primary_contact_info.save(validate: false)
     sign_in teacher
     get :new
     assert_template 'pd/application/teacher_application/no_teacher_email'

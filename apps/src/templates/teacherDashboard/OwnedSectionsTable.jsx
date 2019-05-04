@@ -118,7 +118,7 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
   return (
     <a
       style={tableLayoutStyles.link}
-      href={teacherDashboardUrl(rowData.id, '/print_signin_cards')}
+      href={teacherDashboardUrl(rowData.id, '/login_info')}
     >
       {sectionCode}
     </a>
@@ -126,7 +126,7 @@ export const loginInfoFormatter = function(loginType, {rowData}) {
 };
 
 export const studentsFormatter = function(studentCount, {rowData}) {
-  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage');
+  const manageStudentsUrl = teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button

@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
@@ -13,7 +13,8 @@ const defaultProps = {
     name: 'level_name',
     progression: 'progression_name'
   },
-  disabled: false
+  disabled: false,
+  inMiniRubricExperiment: false
 };
 
 describe('ProgressBubble', () => {
@@ -45,12 +46,30 @@ describe('ProgressBubble', () => {
     assert(wrapper.is('div'));
   });
 
-  it('has a green background when we have perfect status', () => {
+  it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
     const tooltipDiv = wrapper.find('div').at(1);
     const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
+  });
+
+  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level, and in experiment', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment,
+          status: LevelStatus.completed_assessment
+        }}
+        inMiniRubricExperiment={true}
+      />
+    );
+
+    const tooltipDiv = wrapper.find('div').at(1);
+    const div = tooltipDiv.find('div').at(1);
+    assert.equal(div.props().style.backgroundColor, color.level_submitted);
   });
 
   it('has a white background when we are disabled', () => {
@@ -217,6 +236,53 @@ describe('ProgressBubble', () => {
         .props().style.width,
       9
     );
+  });
+
+  it('shows assessment icon on assessment level, in experiment', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+        inMiniRubricExperiment={true}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+  });
+
+  it('does not show assessment icon on bubble on assessment level, in experiment, if smallBubble is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        smallBubble={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+        inMiniRubricExperiment={true}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+  });
+
+  it('does not show assessment icon on bubble on assessment level, in experiment, if hideAssessmentIcon is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        hideAssessmentIcon={true}
+        level={{
+          ...defaultProps.level,
+          kind: LevelKind.assessment
+        }}
+        inMiniRubricExperiment={true}
+      />
+    );
+
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
   it('renders a progress pill for unplugged lessons', () => {

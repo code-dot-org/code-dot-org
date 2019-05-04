@@ -77,7 +77,11 @@ class TableControls extends React.Component {
             containerStyle={{marginLeft: 10}}
           />
 
-          <button onClick={this.props.exportCsv} style={styles.exportButton}>
+          <button
+            type="button"
+            onClick={this.props.exportCsv}
+            style={styles.exportButton}
+          >
             Export to csv
           </button>
         </div>

@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "คุณต้องใช้การเต้นรำที่แตกต่างกัน",
   "danceFeedbackNeedEveryTwoMeasures": "ต้องแน่ใจว่าคุณกำลังใช้บล็อก `every 2 measures` ",
   "danceFeedbackNeedMakeANewDancer": "ใช้บล็อก `make a new` เพื่อสร้างนักเต้นคนที่สอง",
+  "danceFeedbackKeyEvent": "",
   "measure": "ห้องดนตรี:"
 }

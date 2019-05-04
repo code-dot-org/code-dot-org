@@ -243,26 +243,6 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'add_and_remove_student moves enrollment' do
-    old_section = create :section
-    new_section = create :section
-    student = (create :follower, section: old_section).student_user
-    new_section.add_and_remove_student(student, old_section)
-
-    followers = Follower.with_deleted.where(student_user: student).all
-
-    assert_equal 2, followers.count
-    assert_equal old_section, followers.first.section
-    assert followers.first.deleted?
-    assert_equal new_section, followers.second.section
-  end
-
-  test 'add_and_remove_student noops unless old follower is found' do
-    @section.add_and_remove_student(@student, create(:section))
-
-    assert_equal 0, Follower.where(student_user: @student).count
-  end
-
   test 'section_type validation' do
     section = build :section
 
@@ -337,13 +317,6 @@ class SectionTest < ActiveSupport::TestCase
     verify(['Thor', 'Thor Odinson'], ['Thor', 'Thor O'])
   end
 
-  test 'teacher_dashboard_url' do
-    section = build :section
-
-    expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
-    assert_equal expected_url, section.teacher_dashboard_url
-  end
-
   test 'default_script: no script or course assigned' do
     section = create :section, script: nil, course: nil
     assert_nil section.default_script
@@ -380,7 +353,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    course = create :course, name: 'somecourse', family_name: 'coursefam'
+    course = create :course, name: 'somecourse'
     section = create :section, script: nil, course: course
 
     expected = {
@@ -400,7 +373,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: nil, name: nil, course_family_name: course.family_name},
+      script: {id: nil, name: nil, project_sharing: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -432,7 +405,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: script.id, name: script.name, course_family_name: script.course&.family_name},
+      script: {id: script.id, name: script.name, project_sharing: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -445,7 +418,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    course = create :course, name: 'somecourse', family_name: 'coursefam'
+    course = create :course, name: 'somecourse'
     # If this were a real section, it would actually have a script that is part of
     # the provided course
     section = create :section, script: script, course: course
@@ -467,7 +440,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: course.id,
-      script: {id: script.id, name: script.name, course_family_name: course.family_name},
+      script: {id: script.id, name: script.name, project_sharing: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -497,7 +470,7 @@ class SectionTest < ActiveSupport::TestCase
       sharing_disabled: false,
       login_type: "email",
       course_id: nil,
-      script: {id: nil, name: nil, course_family_name: nil},
+      script: {id: nil, name: nil, project_sharing: nil},
       studentCount: 0,
       grade: nil,
       providerManaged: false,
@@ -530,6 +503,15 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 1, summarized_section[:numberOfStudents]
     assert_equal 1, summarized_section[:studentCount]
     assert_includes summarized_section[:students], student.summarize
+  end
+
+  test 'summarize: section with sharing disabled and script with project sharing' do
+    script = create :script, project_sharing: true
+    section = create :section, sharing_disabled: true, script: script, course: nil
+    summarized_section = section.summarize
+
+    assert summarized_section[:script][:project_sharing]
+    assert summarized_section[:sharing_disabled]
   end
 
   test 'valid_grade? accepts K-12 and Other' do

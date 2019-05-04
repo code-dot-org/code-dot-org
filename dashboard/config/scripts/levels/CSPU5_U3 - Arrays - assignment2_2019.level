@@ -56,7 +56,7 @@
     "encrypted_examples": "IcvK0SwrkSOrHsNcBbzhnrsaYRo3fWPU7N36uFJAYU1WNHSWPc1wO3iJoUGW\nvx3L\n",
     "video_key": "csp_applab_lists_3",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "hide_share_and_remix": "false",

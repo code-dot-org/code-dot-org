@@ -1,8 +1,14 @@
-import PeerReviewDashboard from '@cdo/apps/code-studio/peer_reviews/PeerReviewDashboard';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
 
-ReactDOM.render(
-  <PeerReviewDashboard />,
-  document.getElementById('dashboard-container')
-);
+document.addEventListener('DOMContentLoaded', function() {
+  ReactDOM.render(
+    <PeerReviewSubmissions
+      courseList={getScriptData('courseList')}
+      courseUnitMap={getScriptData('courseUnitMap')}
+    />,
+    document.getElementById('dashboard-container')
+  );
+});

@@ -23,19 +23,19 @@ he:
       Text: טקסט
       Picker: בוחר
       Comment: תגובה
-      'Variables ': 'משתנים '
-      everythingelse: כלהשאר
       World: עולם
-      Location: מיקום
       Behaviors: התנהגויות
+      'Variables ': 'משתנים '
+      Default: ברירת מחדל
+      Locations: מיקומים
+      everythingelse: כלהשאר
+      Location: מיקום
       numbers: מספרים
       Numbers: מספרים
-      Default: ברירת מחדל
       Dancers: רקדנים
       Groups: קבוצות
       Advanced: מתקדם
       Start: התחל
-      Locations: מיקומים
       Music: מוסיקה
       Dancing: ריקוד
       Sprite: ספרייט

@@ -10,11 +10,11 @@ sq:
       2-3 Artist 9 REPLACEMENT: Përfundoni duke vizatuar këto shkallë!
       2-3 Artist 9: Përfundo këtë balonë
       2-3 Artist Debugging 10: "Vatra e drejtimit në kontrolluesin e lojës time është
-        shumë e ngushtë.\r\n\r\n Mund ta zgjeroni me 10 piksel?\r\n\r\nProvoni të
-        ekzekutoni\nkodin e parë për të parë se çfarë është e gabuar."
-      2-3 Artist Debugging 11: "Flokët e dëborës po copëtohen!\r\n\r\nMund\ntë kuptoni
-        se çfarë është duke shkuar  gabim?"
-      2-3 Artist Debugging 2: "Ky Kodi për mustaqet e maces është i gabuar. \n\r\n\r\n
+        shumë e ngushtë.\\\r\n\\\r\n Mund ta zgjeroni me 10 piksel?\\\r\n\\\r\nProvoni
+        të ekzekutoni\nkodin e parë për të parë se çfarë është e gabuar."
+      2-3 Artist Debugging 11: "Flokët e dëborës po copëtohen!\\\r\n\\\r\nMund\ntë
+        kuptoni se çfarë është duke shkuar  gabim?"
+      2-3 Artist Debugging 2: "Ky Kodi për mustaqet e maces është i gabuar. \n\\\r\n\\\r\n
         Rregullo këtë kod për të vizatuar mustaqet që të jenë në të njëjtën gjatësi."
       2-3 Artist Debugging 3: |-
         Varka ime ka një vrimë! A mund ta rregullosh atë
@@ -70,9 +70,7 @@ sq:
       2-3 Artist Loops New 10: |-
         Tani le të bashkojmë një grup me V së bashku,
         duke i vizatuar ato në një cikël.
-      2-3 Artist Loops New 12: 'Vizato një diamant me brinjë 100 piksela.
-
-'
+      2-3 Artist Loops New 12: Vizato një diamant me brinjë 100 piksela.
       2-3 Artist Loops New 13: Tani vizato diamantin 3 herë në një cikël.
       2-3 Artist Loops New 2: |-
         Këtu është një pjesë kodi që ti përdore për të vizatuar
@@ -223,7 +221,7 @@ sq:
         Përdor bllokun repeat until për të
         çuar zombien tek luledielli.
       4-5 Maze Conditionals 10: "A mund të shtoni vetëm 3 blloqe që të ndihmojnë mumjen
-        të zgjidh një labirint më komplekse?\r\n\r\n Nëse e bën si duhet, ai mund
+        të zgjidh një labirint më komplekse?\\\r\n\\\r\n Nëse e bën si duhet, ai mund
         të ec në çdo rrugë të dredhuar pa marrë parasysh gjatësinë."
       4-5 Maze Conditionals 2: |-
         Përdor bllokun repeat until për të
@@ -244,7 +242,8 @@ sq:
         për të më çuar mua atje me numrin më të pakët të blloqeve.
       4-5 Maze Conditionals 7: |-
         Ok, le ta bëjmë përsëri për tu praktikuar
-        - kjo nuk është shumë ndryshe, por kujdes për përtypësit!
+
+        -   kjo nuk është shumë ndryshe, por kujdes për përtypësit!
       4-5 Maze Conditionals 8: |-
         Blloqet "if-alese" kërkojnë një kush,
         dhe më pas bëjnë një gjë OSE një tjetër. Për të më çuar tek luledielli përpiqu të përdorësh
@@ -258,7 +257,7 @@ sq:
       4-5 Nested Loops 12: Mund të vizatosh 36 trekëndësha duke përdorur një cikël
         të mbivendosur?
       4-5 Nested Loops 3: "Formo një diell duke mbivendosur kodin e fillimit me një
-        tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+        tjeter cikël. Ky quhet cikël i mbivendosur.\\\r"
       4-5 Nested Loops 5: Ciklo kodin e dhënë për të krijuar një mulli ere.
       4-5 Nested Loops 6: Mund te vizatosh një gjashtëkëndesh duke cikluar kodin e
         trekëndëshit?
@@ -297,11 +296,11 @@ sq:
       Calc Circles of Eval .2: |-
         Ky Bllok Vlerësimi është një funksion
         shumëzimi i cili merr 2 numra dhe kthen prodhimin e atyre numrave.
-        Redakto kët bllok që të shumëzojë 2*5
+        Redakto kët bllok që të shumëzojë 2\*5
       Calc Circles of Eval .4: |-
         Këtu kemi mbivendosur një Bllok Mbledhjeje
         brenda një Blloku Shumëzimi. Përfundo këtë kod që të shumëzojë 3 me (4 +
-        1)
+        1\)
       Calc Circles of Eval 3: |-
         Përfundo Blloqet e Vlerësimit për ta lidhur
         me këtë formulim.
@@ -329,12 +328,12 @@ sq:
       Course 4 Artist 8: Vizato këtë diell duke cikluar gjithë këto grupe kodesh disa
         herë.
       Course 4 Artist 8a: "E mban mend këtë formë? Tani ne do të lëmë ty t'a ndërtosh
-        pa të të dhënë asnjë bllok\r\nUdhëzim: Aty janë\n3 trekëndësha brenda një
+        pa të të dhënë asnjë bllok\\\r\nUdhëzim: Aty janë\n3 trekëndësha brenda një
         rrotudhimi 360 gradë...sa herë 3-shi hynë në 360?"
       Course 4 Artist Binary 1a: "Këtu është një funksion që ka vargun\nbinar të njishave
         dhe të zerove dhe drejton artistin që ti ndjeki ato nga e majta në \ntë djathtë,
         nga lartë poshtë. Artisti do mbushi katrorin kur të shikoj \n1 dhe injoroj
-        katrorin kur te shikoj 0. \r\nLësho kodin për të parë se si artisti \npërdor
+        katrorin kur te shikoj 0. \\\r\nLësho kodin për të parë se si artisti \npërdor
         binarët për të vizatuar modelin."
       Course 4 Artist For Loops 13: Hmmm, format po rriten perherë e më shumë! A nuk
         e zgjidhëm këtë problem me variablet? Si mund t'a perdorim variablën e numërimit
@@ -354,7 +353,7 @@ sq:
         e fundit mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai
         ndryshim?"
       Course 4 Artist For Loops Challenge_a: "Mund ta zbulosh se si të përdorësh të
-        gjitha gjërat që ke mësuar për të krijuar këtë figurë?\r\n\r\nTë nevojitet
+        gjitha gjërat që ke mësuar për të krijuar këtë figurë?\\\r\n\\\r\nTë nevojitet
         një udhezim? Kliko këtu."
       Course 4 Artist Vars 3: Ja litari qe viazaton nje katror, por dicka mungon.
         Arrin dot t'a ndreqesh ne menyre qe te perdori "gjatesine" e ndryshueshme
@@ -411,8 +410,8 @@ sq:
         Udhëzim: Eshte shumëfishi i 10-tës.'
       NEW Course 4 Artist Vars 6: "Vizato këtë model duke zhvendosur variablin e gjatësisë
         në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë. (Udhëzim:
-        Është shumfish i 10). \r\n\r\nE patë se si e vendosët vlerën për gjatësinë
-        dhe kodi përdori vlerën e duhur kudo?\r\n\r\n\r\n"
+        Është shumfish i 10). \\\r\n\\\r\nE patë se si e vendosët vlerën për gjatësinë
+        dhe kodi përdori vlerën e duhur kudo?\\\r\n\\\r\n\\\r"
       Overworld Move to Sheep: |-
         Shto një komandë të dytë "ec përpara" për të
         arritur delet.
@@ -517,7 +516,7 @@ sq:
         ende. Sa herë duhet t'a përsëris që të përfundojë?
       grade2_PuppyLoops_4: Përdor dy ciklet për të arritur tek derrkuci duke përdorur
         më pak blloqe.
-      grade2_PuppyLoops_8: "Ky Kodi për mustaqet e maces është i gabuar. \n\r\n\r\n
+      grade2_PuppyLoops_8: "Ky Kodi për mustaqet e maces është i gabuar. \n\\\r\n\\\r\n
         Rregullo këtë kod për të vizatuar mustaqet që të jenë në të njëjtën gjatësi."
       grade2_PuppyLoops_9: |-
         Duket sikur C në kod është vizatuar mbrapsht.
@@ -591,7 +590,7 @@ sq:
         cikluar kodin e trekëndëshit?
       grade4_arist_nested_loop_triangles4: Vizato dhëmbët në gojën e krokodilit!
       grade4_arist_nested_loop_triangles5: "Formo një diell duke mbivendosur kodin
-        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\\\r"
       grade4_arist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur
         një cikël të mbivendosur?
       grade4_artist_functions2: |-
@@ -604,7 +603,7 @@ sq:
       grade4_artist_nested_loop_polygons1: 'Ciklo këtë dizenjo 10 herë. Sa herë duhet
         të kthehesh për çdo herë që ciklon? (Kujdes: Sa është 360 e ndarë në 10-she?)'
       grade4_artist_nested_loop_triangles5: "Formo një diell duke mbivendosur kodin
-        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\r"
+        e fillimit me një tjeter cikël. Ky quhet cikël i mbivendosur.\\\r"
       grade4_artist_nested_loop_triangles6: Mund të vizatosh 36 trekëndësha duke përdorur
         një cikël të mbivendosur?
       grade4_artist_parameters_triangles2: A vure re diçka ndryshe te keto blloqe
@@ -661,11 +660,11 @@ sq:
         të gjithë nektarin dhe për të përgatitur të gjithë mjaltin.
       grade5_artist_for_loops1: Vizato këtë trekëndësh që është në masë 50 piksel.
       grade5_artist_for_loops10: "Mund ta zbulosh se si të përdorësh të gjitha gjërat
-        që ke mësuar për të krijuar këtë figurë?\r\n\r\nTë nevojitet një udhezim?
+        që ke mësuar për të krijuar këtë figurë?\\\r\n\\\r\nTë nevojitet një udhezim?
         Kliko këtu."
       grade5_artist_for_loops5: "Vetëm një ndryshim i vogël në kod nga figura e fundit
         mund të ndryshoj këtë vizatim. Mund ta zbulosh se çfarë është \nai ndryshim?
-        \r\n \r\nUdhëzim: Duhet të heqësh diçka!"
+        \\\r\n \\\r\nUdhëzim: Duhet të heqësh diçka!"
       grade5_artist_parameters_triangles2a: A vure re diçka ndryshe te keto blloqe
         funksionesh? Kliko "Lësho" për të parë se çfarë ndodh.
       grade5_artist_variables_hexagons1: 'Le ta provojme serish. A mundeni të vendosni
@@ -675,8 +674,8 @@ sq:
         për të krijuar një pentagon me brinjët nga 100.
       grade5_artist_variables_pentagons1: "Vizato këtë model duke zhvendosur variablin
         e gjatësisë në vendin e duhur dhe pastaj vendos vlerën e sakt për gjatësinë.
-        (Udhëzim: Është shumfish i 10). \r\n\r\nE patë se si e vendosët vlerën për
-        gjatësinë dhe kodi përdori vlerën e duhur kudo?\r\n\r\n\r\n"
+        (Udhëzim: Është shumfish i 10). \\\r\n\\\r\nE patë se si e vendosët vlerën
+        për gjatësinë dhe kodi përdori vlerën e duhur kudo?\\\r\n\\\r\n\\\r"
       grade5_playlab_variables13: Përdor një bllok "kur preket" për të dërguar Qenin
         pas në pjesën e sipërme-majtas VETËM NËSE Qeni prek ndonjë nga aktorët.
       grade5_playlab_variables2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë!

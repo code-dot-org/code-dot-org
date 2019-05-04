@@ -14,21 +14,16 @@ import {
   StartOverDialog,
   InstructionsDialog
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
-import marked from 'marked';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
-  let content;
-  if (appOptions.level.longInstructions) {
-    content = marked(appOptions.level.longInstructions);
-  }
   showDialog(
     <InstructionsDialog
       title={i18n.puzzleTitle({
         stage_total: appOptions.level.stage_total,
         puzzle_number: appOptions.level.puzzle_number
       })}
-      markdownContent={content}
+      markdown={appOptions.level.longInstructions}
     />
   );
   $('details').details();

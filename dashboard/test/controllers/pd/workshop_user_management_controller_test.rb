@@ -5,7 +5,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
   setup_all do
     @workshop_admin = create :workshop_admin
     @teacher = create :teacher
-    @multi_auth_teacher = create :teacher, :with_migrated_email_authentication_option
+    @multi_auth_teacher = create :teacher
     @student = create :student
     @facilitator = create :facilitator
     @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator

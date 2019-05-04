@@ -1,5 +1,4 @@
 @eyes
-@dashboard_db_access
 @as_student
 Feature: Sprite Lab Eyes
 

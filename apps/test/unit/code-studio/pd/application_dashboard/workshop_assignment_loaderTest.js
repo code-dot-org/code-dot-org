@@ -3,7 +3,8 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {createWaitForElement} from 'enzyme-wait';
+
+const defer = () => new Promise(resolve => setTimeout(resolve, 0));
 
 describe('WorkshopAssignmentLoader', () => {
   // We aren't testing any of the responses of the workshop selector control, so just
@@ -61,7 +62,7 @@ describe('WorkshopAssignmentLoader', () => {
       );
     });
 
-    it('Renders WorkshopAssignmentSelect with combined workshop list', () => {
+    it('Renders WorkshopAssignmentSelect with combined workshop list', async () => {
       respondWithLocal({
         workshops: [
           {id: 1, date_and_location_name: 'Dec 10 - 15, 2018, Seattle WA'},
@@ -73,21 +74,17 @@ describe('WorkshopAssignmentLoader', () => {
       ]);
       sandbox.server.respond();
 
-      const waitForSelect = createWaitForElement('WorkshopAssignmentSelect');
-      return waitForSelect(workshopAssignmentLoader).then(
-        workshopAssignmentLoader => {
-          expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
-          const select = workshopAssignmentLoader.find(
-            'WorkshopAssignmentSelect'
-          );
-          expect(select).to.have.length(1);
-          expect(select.prop('workshops')).to.eql([
-            {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
-            {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
-            {value: 11, label: 'July 22 - 27, 2018, Phoenix AZ'}
-          ]);
-        }
-      );
+      await defer();
+      workshopAssignmentLoader.update();
+
+      expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
+      const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
+      expect(select).to.have.length(1);
+      expect(select.prop('workshops')).to.eql([
+        {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
+        {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
+        {value: 11, label: 'July 22 - 27, 2018, Phoenix AZ'}
+      ]);
     });
   });
 
@@ -103,7 +100,7 @@ describe('WorkshopAssignmentLoader', () => {
       );
     });
 
-    it('Renders WorkshopAssignmentSelect with combined workshop list', () => {
+    it('Renders WorkshopAssignmentSelect with combined workshop list', async () => {
       respondWithLocal({
         workshops: [
           {id: 1, date_and_location_name: 'Dec 10 - 15, 2018, Seattle WA'},
@@ -112,32 +109,34 @@ describe('WorkshopAssignmentLoader', () => {
       });
       sandbox.server.respond();
 
-      const waitForSelect = createWaitForElement('WorkshopAssignmentSelect');
-      return waitForSelect(workshopAssignmentLoader).then(
-        workshopAssignmentLoader => {
-          expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
-          const select = workshopAssignmentLoader.find(
-            'WorkshopAssignmentSelect'
-          );
-          expect(select).to.have.length(1);
-          expect(select.prop('workshops')).to.eql([
-            {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
-            {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'}
-          ]);
-        }
-      );
+      await defer();
+      workshopAssignmentLoader.update();
+
+      expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
+      const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
+      expect(select).to.have.length(1);
+      expect(select.prop('workshops')).to.eql([
+        {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
+        {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'}
+      ]);
     });
   });
 
-  it('Displays error message when query fails', () => {
+  it('Displays error message when query fails', async () => {
     workshopAssignmentLoader = mountWorkshopAssignmentLoader('summer');
 
     // bad request
     sandbox.server.respondWith([400, {}, '']);
     sandbox.server.respond();
 
-    const waitForError = createWaitForElement('div.workshop-load-error');
-    return waitForError(workshopAssignmentLoader);
+    await defer();
+    workshopAssignmentLoader.update();
+
+    expect(
+      workshopAssignmentLoader.find('div.workshop-load-error').text()
+    ).to.equal(
+      'Oops. Something went wrong and we are unable to load workshops.'
+    );
   });
 
   it('Aborts pending ajax requests on unmount', () => {

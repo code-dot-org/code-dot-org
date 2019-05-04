@@ -614,6 +614,17 @@ nl:
             '"w"': w
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': grens
+            '"inner"': binnenkant vierkant
+            '"circle"': cirkel
+            '"grid"': raster
+            '"row"': rij
+            '"column"': kolom
+            '"x"': kriskras
+            '"random"': willekeurig
       gamelab_locationDelta:
         options:
           DIR:

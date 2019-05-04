@@ -1,7 +1,6 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import * as utils from '../utils';
 
 /** @enum {string} */
 export const CHANGE_INTERFACE_MODE = 'CHANGE_INTERFACE_MODE';
@@ -16,15 +15,15 @@ export const CANCEL_LOCATION_SELECTION = 'gamelab/CANCEL_LOCATION_SELECTION';
 export const SELECT_LOCATION = 'gamelab/SELECT_LOCATION';
 export const UPDATE_LOCATION = 'gamelab/UPDATE_LOCATION';
 
+export const CLEAR_CONSOLE = 'spritelab/CLEAR_CONSOLE';
+export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
+
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!GameLabInterfaceMode} interfaceMode
  * @returns {function}
  */
 export function changeInterfaceMode(interfaceMode) {
-  //Add a resize event on each call to changeInterfaceMode to ensure
-  //proper rendering of droplet and code mode. Similar solution in applab.
-  setTimeout(() => utils.fireResizeEvent(), 0);
   return function(dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({

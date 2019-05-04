@@ -157,7 +157,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
-  after_create :set_multi_auth_status
+  after_create_commit :migrate_to_multi_auth
 
   # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_PROVIDERS = %w(
@@ -209,7 +209,6 @@ class User < ActiveRecord::Base
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
 
-  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -217,12 +216,18 @@ class User < ActiveRecord::Base
   # we are fully migrated to multi-auth, we may want to remove this code and
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
+    if user.primary_contact_info && !user.primary_contact_info.valid?
+      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+    end
+
     user.authentication_options.each do |ao|
       unless ao.valid?
         ao.errors.each {|k, v| user.errors.add k, v}
       end
     end
   end
+
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
@@ -1827,27 +1832,6 @@ class User < ActiveRecord::Base
           PairedUserLevel.find_or_create_by(
             navigator_user_level_id: navigator_user_level.id,
             driver_user_level_id: user_level.id
-          )
-        end
-      end
-    end
-
-    # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
-
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
-        PeerReview.create_for_submission(user_level, level_source_id)
-
-        # See if there are created peer reviews, if not, raise to honey badger
-        unless PeerReview.where(
-          submitter_id: user_level.user_id,
-          level: user_level.level,
-          level_source_id: level_source_id
-        ).size >= 2
-          Honeybadger.notify(
-            error_class: "Failed to create peer review objects for submission",
-            error_message: "Failed to create peer reviews for user_level #{user_level.id}"
           )
         end
       end

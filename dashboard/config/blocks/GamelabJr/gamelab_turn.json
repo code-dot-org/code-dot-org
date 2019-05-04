@@ -2,7 +2,7 @@
   "category": "Actions",
   "config": {
     "func": "turn",
-    "blockText": "{SPRITE} turn {DIRECTION} {N} degrees",
+    "blockText": "turn {SPRITE} {DIRECTION} {N} degrees",
     "args": [
       {
         "name": "SPRITE",

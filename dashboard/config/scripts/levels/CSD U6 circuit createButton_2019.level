@@ -59,11 +59,21 @@
     "text_mode_at_start": "true",
     "parent_level_id": 12538,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/circuits-and-leds/"
+    ],
+    "map_reference": "/docs/concepts/maker-toolkit/circuits-and-buttons/",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 23:23:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-15 20:42:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-16 03:09:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 18:57:40 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-01-05 20:35:24 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:51:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-05 20:53:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-06 01:06:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 20:06:31 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-12 23:23:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-15 20:42:39 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-16 03:09:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 18:57:40 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:36:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

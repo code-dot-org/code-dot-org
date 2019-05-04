@@ -93,10 +93,19 @@
     ],
     "parent_level_id": 12475,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "map_reference": "/docs/concepts/javascript/for-loops/",
+    "mini_rubric": "false",
+    "expand_debugger": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 07:42:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

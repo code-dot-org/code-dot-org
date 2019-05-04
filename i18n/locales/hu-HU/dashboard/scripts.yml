@@ -1781,6 +1781,8 @@ hu:
               name: Internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Songwriting:
+              name: Dalszerzés paraméterekkel
         express-2019:
           stages:
             Relay Programming:
@@ -1892,3 +1894,11 @@ hu:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Csoportos megoldás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            Building a Foundation:
+              name: Alapozás

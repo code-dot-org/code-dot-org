@@ -57,7 +57,7 @@
     "instructions_important": "false",
     "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel_2019",
     "teacher_markdown": "### Quick Tip:\r\n\r\nSometimes instructions in an App Lab level are longer and take up a lot of the screen\r\n\r\n* Remind students that you can always collapse and expand instructions quickly by hitting the arrow that looks like this: ![](https://images.code.org/40949424e5b3f155abe3d9a3f1257ed0-image-1477668989450.png)\r\n\r\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "parent_level_id": 13350,
     "name_suffix": "_2019",
     "mini_rubric": "false",

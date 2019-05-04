@@ -1,3 +1,4 @@
+---
 az:
   data:
     authored_hints:
@@ -40,7 +41,7 @@ az:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -59,7 +60,7 @@ az:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -78,7 +79,7 @@ az:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -97,7 +98,7 @@ az:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -240,7 +241,7 @@ az:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -259,7 +260,7 @@ az:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -278,7 +279,7 @@ az:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -297,7 +298,7 @@ az:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>

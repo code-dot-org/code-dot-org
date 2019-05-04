@@ -81,6 +81,10 @@ mt:
           VAL:
             'true': veru/minnu
             'false': falz
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': bl-addoċċ
       gamelab_locationDelta:
         options:
           DIR:

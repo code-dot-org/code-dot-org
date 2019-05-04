@@ -1595,6 +1595,8 @@ el:
               name: Διαδίκτυο
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Σύνθεση τραγουδιού
         express-2019:
           stages:
             Relay Programming:
@@ -1638,6 +1640,8 @@ el:
               name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1700,3 +1704,11 @@ el:
           stages:
             While Loops:
               name: Βρόχοι με «Όσο»
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            Building a Foundation:
+              name: 'Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο'

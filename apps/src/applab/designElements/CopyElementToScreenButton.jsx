@@ -100,6 +100,7 @@ class CopyElementToScreenButton extends React.Component {
     return (
       <div style={styles.main} ref={element => (this.element = element)}>
         <button
+          type="button"
           style={[commonStyles.button, styles.copyElementToScreenButton]}
           onClick={this.handleDropdownClick}
         >

@@ -222,6 +222,7 @@ $(window).load(function() {
             }
           />
           <button
+            type="button"
             className="btn domain-x-button"
             onClick={(...args) =>
               this.props.onDomainRemove(object.key, ...args)
@@ -235,6 +236,7 @@ $(window).load(function() {
         <div className="domainsList">
           {typeChoiceNodes}
           <button
+            type="button"
             className="btn domain-add-button"
             onClick={this.props.onDomainAdd}
           >

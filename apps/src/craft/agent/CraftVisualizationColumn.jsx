@@ -20,7 +20,11 @@ var CraftVisualizationColumn = function(props) {
 
         {props.showFinishButton && (
           <div id="right-button-cell">
-            <button id="finishButton" className="share mc-share-button">
+            <button
+              type="button"
+              id="finishButton"
+              className="share mc-share-button"
+            >
               <div>{msg.finish()}</div>
             </button>
           </div>

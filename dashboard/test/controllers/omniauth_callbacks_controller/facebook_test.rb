@@ -82,7 +82,7 @@ module OmniauthCallbacksControllerTests
     test "student sign-in" do
       auth_hash = mock_oauth
 
-      student = create(:student, :unmigrated_facebook_sso, uid: auth_hash.uid)
+      student = create(:student, :facebook_sso_provider, uid: auth_hash.uid)
 
       get '/users/sign_in'
       sign_in_through_facebook
@@ -107,7 +107,7 @@ module OmniauthCallbacksControllerTests
     test "teacher sign-in" do
       auth_hash = mock_oauth
 
-      teacher = create(:teacher, :unmigrated_facebook_sso, uid: auth_hash.uid)
+      teacher = create(:teacher, :facebook_sso_provider, uid: auth_hash.uid)
 
       get '/users/sign_in'
       sign_in_through_facebook

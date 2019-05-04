@@ -224,6 +224,10 @@ fil:
             '"right"': kanan
             '"space"': space
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': nang hindi pinipili
       gamelab_locationDelta:
         options:
           DIR:

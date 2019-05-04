@@ -26,6 +26,24 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
+  def self.get_student_level_feedback(student_id, level_id, teacher_id)
+    where(
+      student_id: student_id,
+      level_id: level_id,
+      teacher_id: teacher_id
+    ).latest
+  end
+
+  def self.get_all_feedback_for_section(student_ids, level_ids, teacher_id)
+    find(
+      where(
+        student_id: student_ids,
+        level_id: level_ids,
+        teacher_id: teacher_id
+      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
+    )
+  end
+
   def self.latest_per_teacher
     #Only select feedback from teachers who lead sections in which the student is still enrolled
     find(

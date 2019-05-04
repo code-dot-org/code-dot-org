@@ -37,8 +37,8 @@ module Pd::Application
       assert_select 'h1', '2019-2020 Code.org Facilitator Application'
     end
 
-    test 'after March 31 2019 applications are closed' do
-      Timecop.freeze Time.zone.local(2019, 4, 1) do
+    test 'after April 30 2019 applications are closed' do
+      Timecop.freeze Time.zone.local(2019, 5, 1) do
         sign_in create(:teacher)
         get :new
         assert_response :success

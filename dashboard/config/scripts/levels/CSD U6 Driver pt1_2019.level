@@ -97,11 +97,20 @@
     "encrypted_examples": "fRLJ8ohokdTiK0ZPaIFJGpaYHQQY22AC6u/Aw1kxrooE/UfI+RkeZRuq2BlH\nzbe6YTtRNGh7MOo4+bPI/FTN6w==\n",
     "parent_level_id": 12503,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/accelerometer-events/"
+    ],
+    "map_reference": "/docs/concepts/app-lab/the-counter-pattern/",
+    "mini_rubric": "false",
+    "text_mode_at_start": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-16 17:27:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 17:42:09 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 17:45:32 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 18:18:59 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 19:15:58 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-01 09:36:15 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 19:13:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-01-16 17:27:48 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 17:42:09 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 17:45:32 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 18:18:59 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-01-17 19:15:58 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\",\"start_blocks\",\"code_functions\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-02-01 09:36:15 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 19:13:21 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:14:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

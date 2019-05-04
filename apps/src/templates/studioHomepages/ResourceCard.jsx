@@ -5,6 +5,8 @@ import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
 
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 
 const styles = {
@@ -83,7 +85,7 @@ class ResourceCard extends Component {
     isRtl: PropTypes.bool.isRequired,
     responsiveSize: PropTypes.string.isRequired,
     allowWrap: PropTypes.bool,
-    allowDangerouslySetInnerHtml: PropTypes.bool,
+    allowMarkdown: PropTypes.bool,
     linkId: PropTypes.string,
     linkClass: PropTypes.string
   };
@@ -96,7 +98,7 @@ class ResourceCard extends Component {
       link,
       isRtl,
       allowWrap,
-      allowDangerouslySetInnerHtml,
+      allowMarkdown,
       linkId,
       linkClass,
       responsiveSize
@@ -122,22 +124,15 @@ class ResourceCard extends Component {
       titleStyles.push(styles.titleNoWrap);
     }
 
-    let descriptionContainer;
-    if (allowDangerouslySetInnerHtml) {
-      descriptionContainer = (
-        <div
-          style={descriptionStyles}
-          dangerouslySetInnerHTML={{__html: description}} // eslint-disable-line react/no-danger
-        />
-      );
-    } else {
-      descriptionContainer = <div style={descriptionStyles}>{description}</div>;
+    let descriptionContent = description;
+    if (allowMarkdown) {
+      descriptionContent = <UnsafeRenderedMarkdown markdown={description} />;
     }
 
     return (
       <div style={cardStyles}>
         <div style={titleStyles}>{title}</div>
-        {descriptionContainer}
+        <div style={descriptionStyles}>{descriptionContent}</div>
         <br />
         <Button
           id={linkId}

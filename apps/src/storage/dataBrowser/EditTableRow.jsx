@@ -120,7 +120,11 @@ class EditTableRow extends React.Component {
                 text="Save"
               />
             ) : (
-              <button style={dataStyles.editButton} onClick={this.handleEdit}>
+              <button
+                type="button"
+                style={dataStyles.editButton}
+                onClick={this.handleEdit}
+              >
                 Edit
               </button>
             ))}

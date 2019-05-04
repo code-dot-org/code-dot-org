@@ -96,6 +96,9 @@ or
 To run a specific unit test, you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
 
+You can get a local coverage report with
+`COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
+
 If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`
 

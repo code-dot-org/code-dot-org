@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Необходимо использовать другой танец.",
   "danceFeedbackNeedEveryTwoMeasures": "Убедитесь, что вы используете блок «каждые 2 такта» (every 2 measures).",
   "danceFeedbackNeedMakeANewDancer": "Используйте блок «создать нового» (make a new) для создания второго танцора.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Такты:"
 }

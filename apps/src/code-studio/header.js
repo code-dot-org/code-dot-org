@@ -72,9 +72,6 @@ header.build = function(
   }
   if (stageData.script_stages > 1) {
     $('.header_popup_link').show();
-    stageData.freeplay_links.forEach(function(item) {
-      $('.' + item + '_free_play').show();
-    });
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
@@ -87,16 +84,6 @@ header.build = function(
     signedIn,
     stageExtrasEnabled
   );
-
-  $('.level_free_play').qtip({
-    content: {
-      attr: 'title'
-    },
-    position: {
-      my: 'top center',
-      at: 'bottom center'
-    }
-  });
 
   /**
    * Track boolean "visible" state of header popup to avoid
@@ -488,11 +475,6 @@ header.showProjectHeader = function() {
       $('<div class="project_remix header_button header_button_light">').text(
         dashboard.i18n.t('project.remix')
       )
-    )
-    .append(
-      $('<div class="project_new header_button header_button_light">').text(
-        dashboard.i18n.t('project.new')
-      )
     );
 
   // For Minecraft Code Connection (aka CodeBuilder) projects, add the option to
@@ -513,13 +495,6 @@ header.showProjectHeader = function() {
   }
 
   projectNameShow();
-  $('.freeplay_links')
-    .empty()
-    .before(
-      $('<div class="project_list header_button header_button_light">').text(
-        dashboard.i18n.t('project.my_projects')
-      )
-    );
 
   $(document).on('click', '.project_edit', projectNameEdit);
 
@@ -571,12 +546,6 @@ header.showProjectHeader = function() {
   });
   $projectMorePopup.click(function(e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it.
-  });
-
-  $('.project_new').click(dashboard.project.createNew);
-
-  $(document).on('click', '.project_list', function() {
-    location.href = '/projects';
   });
 };
 

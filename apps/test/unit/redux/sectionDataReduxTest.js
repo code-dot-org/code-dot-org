@@ -16,7 +16,8 @@ const fakeSectionData = {
   script: {
     id: 300,
     name: 'csp2'
-  }
+  },
+  stage_extras: false
 };
 
 const sortedFakeSectionData = {
@@ -34,7 +35,8 @@ const sortedFakeSectionData = {
   script: {
     id: 300,
     name: 'csp2'
-  }
+  },
+  stageExtras: false
 };
 
 describe('sectionDataRedux', () => {

@@ -387,6 +387,7 @@ sr:
         mc_congrats_no_share: Мајнкрафт - Честитамо
         iceage_intro: Ледено Доба час кода - увод
         CSF_loops_AB: Петље
+        csd_applab_parameters: Функције са параметрима
     callout:
       text:
         run: Притисни "Изврши" дугме да покренеш програм

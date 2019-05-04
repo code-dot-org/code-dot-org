@@ -448,3 +448,10 @@ lv:
         title: Tavs digitālais nospiedums
         desc: Skolotājs liek skolēniem apzināties, ka informācija, ko par sevi publicējam
           tiešsaistē veido digitālu pēdas nospiedumu vai asti, kas var arī radīt sekas.
+      timeforcs_demo_crowdsourcing:
+        title: Pūļa ieguve
+      timeforcs_demo_conditionals:
+        title: Sazarojumi
+        desc: Lai iemācītos nosacījuma apgalvojumus, skolēniem jāspēlē kāršu spēle
+          un jāizveido tās noteikumi, piemēram, "Ja es izvelku sarkanu kārti, es iegūstu
+          punktu" un "Ja es izvelku melnu kārti, tu iegūsti punktu."

@@ -42,6 +42,7 @@ export default class PlayZone extends React.Component {
         <CreateSomething />
         <div className="farSide">
           <button
+            type="button"
             id="ok-button"
             onClick={this.props.onContinue}
             style={styles.continueButton}

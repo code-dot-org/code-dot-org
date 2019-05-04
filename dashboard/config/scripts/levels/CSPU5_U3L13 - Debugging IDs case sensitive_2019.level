@@ -57,7 +57,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "true",
     "parent_level_id": 13345,
     "name_suffix": "_2019",

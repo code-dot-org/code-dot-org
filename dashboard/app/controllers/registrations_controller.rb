@@ -124,9 +124,11 @@ class RegistrationsController < Devise::RegistrationsController
     end
     dependent_students = current_user.dependent_students
     destroy_users(current_user, dependent_students)
-    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
+    if current_user.teacher? && current_user.email.present?
+      TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now
+    end
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-    return head :no_content
+    head :no_content
   end
 
   def sign_up_params

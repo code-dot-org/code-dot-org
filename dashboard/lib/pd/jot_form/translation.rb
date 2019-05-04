@@ -114,10 +114,9 @@ module Pd
       # @param replacement_text_by_name [Hash] mapping of question name to replacement text where applicable
       def parse_jotform_question(jotform_question, replacement_text_by_name)
         type = get_type(jotform_question)
-        sanitized_question_data = jotform_question.merge(
-          'type' => type,
-          'text' => replacement_text_by_name[jotform_question['name']] || jotform_question['text']
-        )
+        text = replacement_text_by_name[jotform_question['name']] || jotform_question['text']
+        text = jotform_question['name'] if text.empty?
+        sanitized_question_data = jotform_question.merge('type' => type, 'text' => text)
 
         klass = self.class.get_question_class_for type
         klass.from_jotform_question(sanitized_question_data)

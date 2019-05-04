@@ -1439,6 +1439,8 @@ eu:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Musika idazten
         express-2019:
           stages:
             Relay Programming:
@@ -1523,3 +1525,11 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            Building a Foundation:
+              name: Oinarri bat Eraikitzen

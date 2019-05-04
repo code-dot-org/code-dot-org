@@ -4909,6 +4909,8 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+            Songwriting:
+              name: Menulis lagu
         express-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5393,3 +5395,11 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Sumber kerumunan
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            Building a Foundation:
+              name: Membangun dasar

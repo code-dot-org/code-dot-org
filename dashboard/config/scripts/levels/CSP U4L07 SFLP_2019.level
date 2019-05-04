@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit4/9/overview/index.html",
+    "reference": "/curriculum/csp-19/unit4/9/overview/index.html",
     "parent_level_id": 13967,
     "teacher_markdown": "[key]\r\n\r\n**Key** [Key: Mulitplication + Modulo](https://docs.google.com/document/d/1n5_6nQIy5bCu_ApB2i8lOlx4Lq5zz4h6rVE9GmsMKuE)\r\n\r\n[/key]\r\n\r\n## Big Picture:\r\n\r\nThis lesson has a lot of different parts to it. But all parts are necessary building blocks that lead to an answer to the crucial question:\r\n\r\n**How can two people send encrypted messages back and forth over insecure channels (the internet) *without* meeting ahead of time to agree on a secret key?**\r\n\r\nThe answer explains what **Public Key Cryptography** is and how it works.  In a nutshell, there are two main principles you need to understand, that we try to lead students through in this lesson:\r\n\r\n| Principle | How we cover it in the lesson |\r\n|:--- |:---|\r\n| 1. The mechanics of communication with public key cryptography | <li> Recall public/private key idea from the video</li><li>Teacher Demonstration: \"Cups & Beans\" |\r\n| 2. The basic mathematical principles that make it possible | <li>Thought Experiment: Modulo as a clock </li><li> The \"Modulo Clock\" Widget </li><li> Public Key Crypto Widget & Activity </li> |\r\n\r\nCode studio is setup to walk students through these ideas with you (teacher) pausing at various points to lead a discussion, or run an activity.\r\n",
     "name_suffix": "_2019"

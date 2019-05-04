@@ -4,7 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import {
+  GameLabInterfaceMode,
+  GAME_WIDTH,
+  SpritelabReservedWords
+} from './constants';
 import experiments from '../util/experiments';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -45,6 +49,7 @@ import {
 } from '../containedLevels';
 import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import {addConsoleMessage, clearConsole} from './textConsoleModule';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
@@ -62,6 +67,7 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
+import {generateExpoApk} from '../util/exporter';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -147,6 +153,10 @@ var GameLab = function() {
       mobileControlsConfig,
       getStore().getState().pageConstants.isShareView
     );
+  };
+
+  this.appendSpriteConsole = spriteMessage => {
+    getStore().dispatch(addConsoleMessage(spriteMessage));
   };
 };
 
@@ -366,7 +376,8 @@ GameLab.prototype.init = function(config) {
     showDebugSlider: experiments.isEnabled('showDebugSlider'),
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
-    allAnimationsSingleFrame: config.level.allAnimationsSingleFrame,
+    allAnimationsSingleFrame:
+      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -420,12 +431,24 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  const {mode, expoSnackId} = expoOpts || {};
+  // TODO: find another way to get this info that doesn't rely on globals.
+  const appName =
+    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
+  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
   if (mode === 'expoGenerateApk') {
-    return Exporter.generateExpoApk(expoSnackId, this.studioApp_.config);
+    return generateExpoApk(
+      {
+        appName,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      },
+      this.studioApp_.config
+    );
   }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
+    appName,
     getStore().getState().animationList,
     expoOpts
   );
@@ -433,17 +456,21 @@ GameLab.prototype.exportApp = async function(expoOpts) {
 
 /**
  * Export the project for web or use within Expo.
+ * @param {string} appName
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportAppWithAnimations = function(animationList, expoOpts) {
+GameLab.prototype.exportAppWithAnimations = function(
+  appName,
+  animationList,
+  expoOpts
+) {
   const {pauseAnimationsByDefault} = this.level;
   const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
     getStore().getState()
   );
   return Exporter.exportApp(
-    // TODO: find another way to get this info that doesn't rely on globals.
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app',
+    appName,
     this.studioApp_.editor.getValue(),
     {
       animationList,
@@ -582,6 +609,7 @@ GameLab.prototype.afterInject_ = function(config) {
         'levelFailure'
       ].join(',')
     );
+    Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
@@ -704,6 +732,8 @@ GameLab.prototype.reset = function() {
     defaultMobileControlsConfig,
     getStore().getState().pageConstants.isShareView
   );
+
+  getStore().dispatch(clearConsole());
 };
 
 GameLab.prototype.rerunSetupCode = function() {
@@ -716,6 +746,7 @@ GameLab.prototype.rerunSetupCode = function() {
   }
   Sounds.getSingleton().muteURLs();
   this.gameLabP5.p5.allSprites.removeSprites();
+  delete this.gameLabP5.p5.World.background_color;
   this.JSInterpreter.deinitialize();
   this.initInterpreter(false /* attachDebugger */);
   this.onP5Setup();
@@ -914,6 +945,12 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
     this.JSInterpreter.createGlobalProperty(
       'showMobileControls',
       this.showMobileControls,
+      null
+    );
+
+    this.JSInterpreter.createGlobalProperty(
+      'appendSpriteConsole',
+      this.appendSpriteConsole,
       null
     );
   };

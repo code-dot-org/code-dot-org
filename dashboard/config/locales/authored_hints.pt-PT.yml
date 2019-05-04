@@ -3,9 +3,9 @@ pt:
   data:
     authored_hints:
       CourseE_HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como podes usar um condicional com estes para atravessar o Monumento do
-          Oceano?\n\n"
+          Oceano?
       CourseE_HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita**
           e certifica-te de que o coral vermelho não seja **esquerda**!
@@ -16,9 +16,9 @@ pt:
         Function_intro_Ryan_a: Podes chamar uma função várias vezes no teu programa!  Experimenta
           chamá-la duas vezes para resolver este quebra-cabeças.
       HOC 2018 Level_10_authored_hint:
-        voyage_aquatic_10a: "Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como podes usar um condicional com estes para atravessar o Monumento do
-          Oceano?\n\n"
+          Oceano?
       HOC 2018 Level_9b_authored_hint:
         voyage_aquatic_9a: Que bonito recife de coral! O coral azul é a maneira **direita**
           e certifica-te de que o coral vermelho não seja **esquerda**!
@@ -119,10 +119,10 @@ pt:
           para resolver este quebra-cabeças.
       MC_HOC_2017_06_Cole_authored_hint:
         MC_HOC_2017_06_Cole_a: Quantas vezes se repete esta ação circular?  Quantas
-          vezes *deveria* repetir-se?
+          vezes _deveria_ repetir-se?
       MC_HOC_2017_06_Cole_2019_authored_hint:
         MC_HOC_2017_06_Cole_a: Quantas vezes se repete esta ação circular?  Quantas
-          vezes *deveria* repetir-se?
+          vezes _deveria_ repetir-se?
       MC_HOC_2017_06_Josh_authored_hint:
         MC_HOC_2017_06_Cole_a: Experimenta colocar mais do que uma instrução numa
           ação circular "repetir"!
@@ -218,7 +218,7 @@ pt:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -237,7 +237,7 @@ pt:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -256,7 +256,7 @@ pt:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -275,7 +275,7 @@ pt:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -422,7 +422,7 @@ pt:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -441,7 +441,7 @@ pt:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -460,7 +460,7 @@ pt:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -479,7 +479,7 @@ pt:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>

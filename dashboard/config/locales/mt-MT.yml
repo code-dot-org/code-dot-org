@@ -180,6 +180,7 @@ mt:
       logout: Oħroġ il-barra
       signin: Idħol fis-sistema
       already_registered: Diġà rreġistrat?
+      frozen: Frozen
     popup:
       progress_for_user: Il-progress ta' %{name}
       progress: Il-progress tiegħek

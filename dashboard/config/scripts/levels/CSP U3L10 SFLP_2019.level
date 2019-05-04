@@ -7,7 +7,7 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Lesson Overview",
-    "reference": "/curriculum/csp-18/unit3/10/overview/index.html",
+    "reference": "/curriculum/csp-19/unit3/10/overview/index.html",
     "parent_level_id": 13960,
     "teacher_markdown": "\r\n**AP-style student submission**\r\n\r\n[key]\r\n\r\n* [Student Sample Submission for writing](https://docs.google.com/document/d/16RdMPs1a6Lk77MI5lqAjp2K_usE-olQOUSmW2953n6E/edit?usp=sharing) -  Document showing student writing sample side by side with scoring guide and suggested scoring.\r\n* [Sample student code PDF](https://drive.google.com/open?id=0B2QFqkDgv9LjZ0pDUFRvYlo3V1k) - linked to in sample submission doc as well.\r\n\r\n[/key]\r\n\r\n**Exemplar programming projects**\r\n\r\nThese sample App Lab projects contain inline comments explaining how they might be scored against the Project Programming Rubic.\r\n\r\n[key]\r\n\r\n* [Full credit sample](https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q) - Beach Scene\r\n* [Partial credit sample](https://studio.code.org/projects/applab/sSdQJEeupZeUvMWiLZKpaA) - Desert Scene\r\n\r\n[/key]\r\n\r\n---\r\n\r\nPlease note there is small multi-chose assessment in the next lesson, the \"Unit 3 Chapter 1 Assessment.\"  You might use it immediately after, or as part of, evaluating this project.\r\n\r\n**Q:** Where do I find the assessment that used to be linked in this space?\r\n\r\n**A:** It has been moved into the online version you see for the \"Unit 3: Chapter 1 Assessment\" in the lesson that follows this one.",
     "name_suffix": "_2019"

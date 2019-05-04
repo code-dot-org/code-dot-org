@@ -97,6 +97,7 @@ describe('Cohort Calculator', () => {
       expect(cohortCalculator.state('loading')).to.be.false;
     });
     it('Renders a table', () => {
+      cohortCalculator.update();
       expect(cohortCalculator.find('thead')).to.have.length(1);
     });
   });

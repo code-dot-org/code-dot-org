@@ -13,7 +13,9 @@ const PageAction = makeEnum(
   'DancePartyOnInit',
   'BrambleError',
   'BrambleFilesystemResetSuccess',
-  'BrambleFilesystemResetFailed'
+  'BrambleFilesystemResetFailed',
+  'JotFormFrameLoaded',
+  'JotFormLoadFailed'
 );
 
 const MAX_FIELD_LENGTH = 4095;

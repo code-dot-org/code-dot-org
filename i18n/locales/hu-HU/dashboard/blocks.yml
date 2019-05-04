@@ -792,6 +792,18 @@ hu:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': határ
+            '"inner"': belső négyzet
+            '"circle"': kör
+            '"grid"': rács
+            '"row"': sor
+            '"column"': oszlop
+            '"x"': keresztezés
+            '"plus"': plusz
+            '"random"': véletlen
       gamelab_locationAdd:
         text: "{LOC1}{OPERATOR}{LOC2}"
         options:

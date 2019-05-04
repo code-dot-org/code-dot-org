@@ -65,12 +65,13 @@ module Pd::Application
     end
 
     def update_scholarship_status(scholarship_status)
-      scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year) || Pd::ScholarshipInfo.new(user: user)
-      scholarship_info.update(scholarship_status: scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, application_year, course, scholarship_status)
     end
 
     def scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year)&.scholarship_status
+      if user && application_year && course
+        Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.scholarship_status
+      end
     end
 
     # Implement in derived class.
@@ -200,22 +201,7 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        taught_in_past: [
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'CS Discoveries',
-          'CS Principles (intro or AP-level)',
-          'AP CS A',
-          'Beauty and Joy of Computing',
-          'Code HS',
-          'Edhesive',
-          'Exploring Computer Science',
-          'Mobile CSP',
-          'NMSI',
-          'Project Lead the Way',
-          'Robotics',
-          'ScratchEd',
+        taught_in_past: SUBJECTS_TAUGHT_IN_PAST + [
           TEXT_FIELDS[:other_please_list],
           "I don't have experience teaching any of these courses"
         ],
@@ -473,10 +459,6 @@ module Pd::Application
 
     def last_name
       sanitize_form_data_hash[:last_name]
-    end
-
-    def teacher_full_name
-      "#{first_name} #{last_name}"
     end
 
     def state_code

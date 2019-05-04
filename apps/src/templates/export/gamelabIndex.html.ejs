@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=<%- appWidth %>, minimal-ui, target-densityDpi=device-dpi, user-scalable=no">
     <% } -%>
     <script src="<%- jQueryPath %>"></script>
+    <% if (webpackRuntimePath) { -%>
+      <script src="<%- webpackRuntimePath %>"></script>
+    <% } -%>
     <script src="<%- gamelabApiPath %>"></script>
     <link href="<%- gamelabCssPath %>" rel="stylesheet" type="text/css">
     <script src="<%- p5Path %>"></script>

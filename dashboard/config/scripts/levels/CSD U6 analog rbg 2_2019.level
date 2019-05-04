@@ -216,11 +216,19 @@
     "encrypted_examples": "omfmW1nF23xk9nU2brjbvwVC7ku3Ce7F8S/CwjXLVIWR2u5qukC3ZJD5DKBH\nv4x2IfJhvvyVsRTgq01MOZ8lag==\n",
     "parent_level_id": 12394,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/docs/concepts/maker-toolkit/analog-sensors/"
+    ],
+    "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 22:58:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:16:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 22:56:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:01:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-20 22:58:54 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:16:35 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 22:56:07 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:01:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 03:05:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

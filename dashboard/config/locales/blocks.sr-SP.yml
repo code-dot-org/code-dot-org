@@ -170,6 +170,10 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': насумичан
       gamelab_locationDelta:
         options:
           DIR:

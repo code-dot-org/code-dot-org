@@ -111,10 +111,21 @@
     "long_instructions": "# Designing the User Interface\r\n\r\nBefore worrying about the code for your program, start by laying out the user interface. As you add elements in Design Mode, make sure to give everything a meaningful ID. Even if you don't plan on accessing an element with code, making sure that all of your IDs are descriptive will help make your program more readable and easier to program.",
     "parent_level_id": 12545,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/app-lab/design-mode/",
+      "/docs/concepts/app-lab/design-mode/design-mode-elements/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 08:38:17 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:02:24.000Z",
-  "level_num": "custom",
-  "user_id": 42,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -52,7 +48,7 @@
     "short_instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
     "lock_zero_param_functions": "false",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "log_conditions": [
@@ -70,10 +66,14 @@
     "encrypted_examples": "Mp3ww1bSikfU1abE3WWGeHLyor3WEIWBJbmdadigKMXghHKQtbRz0yqFPSWI\nza8c\n",
     "parent_level_id": 7480,
     "name_suffix": "_2018",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "expand_debugger": "false"
+    "expand_debugger": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:02:24.000Z",
+  "level_num": "custom",
+  "user_id": 42,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-09-07 17:16:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"log_conditions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",

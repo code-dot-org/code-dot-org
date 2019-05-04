@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
@@ -20,37 +20,40 @@ describe('DisabledBubblesAlert', () => {
   it('is visible at first, if not seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).to.containMatchingElement(
-      <Alert type={'error'} onClose={wrapper.instance().onClose}>
-        <div>
-          <span>{i18n.disabledButtonsWarning() + ' '}</span>
-          <span>{i18n.disabledButtonsInfo() + ' '}</span>
-          <a
-            href="https://support.code.org/hc/en-us/articles/115002660852"
-            target="_blank"
-          >
-            {i18n.learnMore()}
-          </a>
-        </div>
-      </Alert>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Alert type={'error'} onClose={wrapper.instance().onClose}>
+          <div>
+            <span>{i18n.disabledButtonsWarning() + ' '}</span>
+            <span>{i18n.disabledButtonsInfo() + ' '}</span>
+            <a
+              href="https://support.code.org/hc/en-us/articles/115002660852"
+              target="_blank"
+            >
+              {i18n.learnMore()}
+            </a>
+          </div>
+        </Alert>
+      )
+    ).to.equal(true);
   });
 
   it('is hidden at first, if seen before', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(true);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(0);
   });
 
   it('hides and remembers that the alert was seen when closed', () => {
     sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper).not.to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(1);
 
     // Call whatever close handler we passed to the alert
-    wrapper.find(Alert).prop('onClose')();
+    wrapper.find('Alert').prop('onClose')();
+    wrapper.update();
 
-    expect(wrapper).to.be.empty;
+    expect(wrapper.find('Alert').length).to.equal(0);
     expect(sessionStorage.setItem).to.have.been.calledWith(
       'disabledBubblesAlertSeen',
       true

@@ -102,18 +102,18 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
-  gem 'chromedriver-helper', '~> 0.0.7'
   gem 'cucumber'
-  gem 'eyes_selenium', '3.14.2'
+  gem 'eyes_selenium'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.8.0'
+  gem 'selenium-webdriver'
   gem 'spring'
   gem 'spring-commands-testunit'
+  gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -170,7 +170,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
@@ -185,7 +185,7 @@ gem 'haml', github: 'wjordan/haml', ref: 'cdo'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '~> 1.8.2'
+gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
@@ -331,6 +331,9 @@ install_if require_pg do
 end
 
 gem 'activerecord-import'
+gem 'scenic'
+gem 'scenic-mysql_adapter'
+
 gem 'colorize'
 
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true

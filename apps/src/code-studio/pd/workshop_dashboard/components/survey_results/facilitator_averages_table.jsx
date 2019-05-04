@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import {Table} from 'react-bootstrap';
 import _ from 'lodash';
 import {COURSE_CSF} from '../../workshopConstants';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  ProgramManager,
+  Organizer
+} from '../../permission';
 
 const questionOrder = {
   facilitator_effectiveness: [
@@ -24,14 +31,15 @@ const questionOrder = {
   ]
 };
 
-export default class FacilitatorAveragesTable extends React.Component {
+export class FacilitatorAveragesTable extends React.Component {
   static propTypes = {
     facilitatorAverages: PropTypes.object.isRequired,
     facilitatorId: PropTypes.number.isRequired,
     facilitatorName: PropTypes.string.isRequired,
     questions: PropTypes.object.isRequired,
     courseName: PropTypes.string.isRequired,
-    facilitatorResponseCounts: PropTypes.object.isRequired
+    facilitatorResponseCounts: PropTypes.object.isRequired,
+    permission: PermissionPropType.isRequired
   };
 
   constructor(props) {
@@ -42,6 +50,26 @@ export default class FacilitatorAveragesTable extends React.Component {
       teacher_engagement: props.courseName === COURSE_CSF ? 5 : 6,
       overall_success: 6
     };
+  }
+
+  relatedWorkshopDescriptor(possessiveName) {
+    if (this.props.permission.has(WorkshopAdmin)) {
+      return `${possessiveName} average for this workshop`;
+    } else if (this.props.permission.has(ProgramManager)) {
+      return `Average for all your regional partner's ${
+        this.props.courseName
+      } workshops since June 2018`;
+    } else if (this.props.permission.has(Organizer)) {
+      return `${possessiveName} average for all ${
+        this.props.courseName
+      } workshops
+        organized since June 2018`;
+    } else {
+      return `${possessiveName} average for all ${
+        this.props.courseName
+      } workshops
+        facilitated since June 2018`;
+    }
   }
 
   renderAverage(displayNumber, category) {
@@ -65,10 +93,7 @@ export default class FacilitatorAveragesTable extends React.Component {
           <tr>
             <th />
             <th>{possessiveName} average for this workshop</th>
-            <th>
-              {possessiveName} average for all {this.props.courseName} workshops
-              since June 2018
-            </th>
+            <th>{this.relatedWorkshopDescriptor(possessiveName)}</th>
           </tr>
         </thead>
         <tbody>
@@ -140,3 +165,7 @@ export default class FacilitatorAveragesTable extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  permission: state.workshopDashboard.permission
+}))(FacilitatorAveragesTable);

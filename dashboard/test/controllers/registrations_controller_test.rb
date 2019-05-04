@@ -61,7 +61,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if user cannot edit password" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -74,7 +74,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if password is incorrect" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -96,7 +96,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user password if password is correct" do
-    teacher = create(:teacher, :with_migrated_email_authentication_option, password: 'mypassword')
+    teacher = create(:teacher, password: 'mypassword')
     sign_in teacher
 
     put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -106,7 +106,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_migrated_google_authentication_option, encrypted_password: nil
+    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -117,7 +117,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_migrated_google_authentication_option, encrypted_password: nil
+    student = create :student, :with_google_authentication_option, encrypted_password: nil
     student.update_attribute(:password, nil)
     sign_in student
 
@@ -186,7 +186,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email
@@ -209,7 +209,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_nil assigns(:user).provider
+      assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
       assert_equal User.hash_email('an@email.address'), assigns(:user).hashed_email

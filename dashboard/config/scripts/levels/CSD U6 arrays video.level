@@ -7,11 +7,15 @@
   "properties": {
     "video_key": "csd_applab_arrays",
     "instructions_important": "false",
-    "display_name": "Introduction to Arrays",
+    "display_name": "Video: Introduction to Arrays",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "encrypted": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-19 18:25:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

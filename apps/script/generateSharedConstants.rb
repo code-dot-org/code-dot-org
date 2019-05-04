@@ -95,6 +95,15 @@ def main
   )
 
   generate_shared_js_file(
+    generate_constants(
+      'COHORT_CALCULATOR_STATUSES',
+      source_module: Pd::SharedApplicationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/sharedApplicationConstants.js"
+  )
+
+  generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
       source_module: Pd::Facilitator1920ApplicationConstants,

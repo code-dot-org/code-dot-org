@@ -1,6 +1,7 @@
-hidden 'false'
-login_required 'true'
+hidden false
+login_required true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}'
 
 stage 'Calc: Evaluation Blocks'
 level 'Calc Circles of Eval .1'

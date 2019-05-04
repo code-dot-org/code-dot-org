@@ -1716,6 +1716,8 @@ et:
               name: Internet
             Crowdsourcing:
               name: Ühistegevused
+            Songwriting:
+              name: Laulude kirjutamine
         express-2019:
           stages:
             Relay Programming:
@@ -1759,6 +1761,8 @@ et:
               name: 'Päris elu algoritmid: Seemenda'
             Going Places Safely:
               name: Läheb asukohta turvaliselt
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1817,3 +1821,11 @@ et:
           stages:
             While Loops:
               name: '„Kui“ tsüklid'
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Ühistegevused
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            Building a Foundation:
+              name: Vundamendi ehitus

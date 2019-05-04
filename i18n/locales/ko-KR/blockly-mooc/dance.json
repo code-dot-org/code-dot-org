@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "다른 댄스를 사용해야 합니다.",
   "danceFeedbackNeedEveryTwoMeasures": "'2마디마다' 블록을 사용하고 있는지 확인하세요.",
   "danceFeedbackNeedMakeANewDancer": "'새로 만들기’ 블록을 사용하여 두 번째 댄서를 만드세요.",
+  "danceFeedbackKeyEvent": "",
   "measure": "마디:"
 }

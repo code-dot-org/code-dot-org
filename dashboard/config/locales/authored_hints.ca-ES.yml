@@ -5,34 +5,37 @@ ca:
       CourseD_Dance_Party_01_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          *Aquest nivell acaba després de quatre mesures.*
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
         challenges: |-
           **Reptes opcionals**
-          * Escull una cançó diferent per reproduir.
-          * Escull-ne un de diferent que sembli un ant!
-          * Torna a posar-li nom al dansaire.
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
       CourseD_Dance_Party_02_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
       CourseD_Dance_Party_03_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       CourseD_Dance_Party_04_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -41,60 +44,60 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Has de tenir com a mínim dos dansaires.
+          -   Has de tenir com a mínim dos dansaires.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Afegeix un tercer dansaire (o tants com vulguis!)
-          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
       CourseD_Dance_Party_08_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Els dos ballarins necessiten tenir una mida diferent de 100.
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
       CourseD_Dance_Party_09_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Canvia la tinta de, com a mínim, un dansaire.
+          -   Canvia la tinta de, com a mínim, un dansaire.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       CourseD_Dance_Party_10_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Les propietats de dos o més ballarins han de canviar.
+          -   Les propietats de dos o més ballarins han de canviar.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       CourseD_Dance_Party_11_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       CourseD_Dance_Party_11_5_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       CourseD_Dance_Party_11b_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+          -   Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       CourseE_HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Com es pot fer servir un condicional amb ells per passar a través del Monument
@@ -106,9 +109,9 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -117,9 +120,9 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -127,45 +130,50 @@ ca:
       Dance_Party_01_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          *Aquest nivell acaba després de quatre mesures.*
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
         challenges: |-
           **Reptes opcionals**
-          * Escull una cançó diferent per reproduir.
-          * Escull-ne un de diferent que sembli un ant!
-          * Torna a posar-li nom al dansaire.
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
       Dance_Party_01_low_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          *Aquest nivell acaba després de quatre mesures.*
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
         challenges: |-
           **Reptes opcionals**
-          * Escull una cançó diferent per reproduir.
-          * Escull-ne un de diferent que sembli un ant!
-          * Torna a posar-li nom al dansaire.
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
       Dance_Party_02_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_03_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       Dance_Party_04_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -174,98 +182,101 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Has de tenir com a mínim dos dansaires.
+          -   Has de tenir com a mínim dos dansaires.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Afegeix un tercer dansaire (o tants com vulguis!)
-          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
       Dance_Party_08_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Els dos ballarins necessiten tenir una mida diferent de 100.
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
       Dance_Party_09_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Canvia la tinta de, com a mínim, un dansaire.
+          -   Canvia la tinta de, com a mínim, un dansaire.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_1_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          *Aquest nivell acaba després de quatre mesures.*
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
         challenges: |-
           **Reptes opcionals**
-          * Escull una cançó diferent per reproduir.
-          * Escull-ne un de diferent que sembli un ant!
-          * Torna a posar-li nom al dansaire.
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
       Dance_Party_10_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Les propietats de dos o més ballarins han de canviar.
+          -   Les propietats de dos o més ballarins han de canviar.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_11.5_test_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_11_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_11_5_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_11b_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+          -   Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_2_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
       Dance_Party_3_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       Dance_Party_4_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -274,33 +285,33 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
+          -   La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       Dance_Party_6_authored_hint:
         challenges: |-
           **Repte opcional**
 
-          * Afegeix un tercer dansaire (o tants com vulguis!)
-          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
       Dance_Party_8_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Els dos ballarins necessiten tenir una mida diferent de 100.
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
       Dance_Party_9_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Canvia la tinta de, com a mínim, un dansaire.
+          -   Canvia la tinta de, com a mínim, un dansaire.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       HOC 2018 Level_10_authored_hint:
         voyage_aquatic_10a: Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Com es pot fer servir un condicional amb ells per passar a través del Monument
@@ -311,34 +322,37 @@ ca:
       HOC Dance 0_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          *Aquest nivell acaba després de quatre mesures.*
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
         challenges: |-
           **Reptes opcionals**
-          * Escull una cançó diferent per reproduir.
-          * Escull-ne un de diferent que sembli un ant!
-          * Torna a posar-li nom al dansaire.
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
       HOC Dance 1_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
       HOC Dance 2_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       HOC Dance 3_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          *Aquest nivell acaba després de 10 mesures.*
+          _Aquest nivell acaba després de 10 mesures._
         challenges: |-
           **Repte opcional**
 
@@ -347,60 +361,61 @@ ca:
         validation: |-
           **Com passo aquest nivell?**
 
-          * La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
+          -   La teva dansa ha de realitzar moviments diferents durant les primeres 12 mesures de la cançó.
 
-          *Aquest nivell acaba després de 12 mesures.*
+          _Aquest nivell acaba després de 12 mesures._
       HOC Dance 5_draft_authored_hint:
         challenges: |-
           **Repte opcional**
 
-          * Afegeix un tercer dansaire (o tants com vulguis!)
-          * Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
       HOC Dance 6_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Els dos ballarins necessiten tenir una mida diferent de 100.
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
 
-          *Aquest nivell acaba després de 6 mesures.*
+          _Aquest nivell acaba després de 6 mesures._
         challenges: |-
           **Repte opcional**
 
-          * Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
       HOC Dance 7_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Canvia la tinta de, com a mínim, un dansaire.
+          -   Canvia la tinta de, com a mínim, un dansaire.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       HOC Dance 8_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Les propietats de dos o més ballarins han de canviar.
+          -   Les propietats de dos o més ballarins han de canviar.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       HOC Dance 9_draft_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       HOC Dance make group_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
 
-          * Sigues creatiu!
+          -   Sigues creatiu!
 
-          *Aquest nivell acaba després de 8 mesures.*
+          _Aquest nivell acaba després de 8 mesures._
       Ryan_Demo_authored_hint:
         validation: |-
           **Com passo aquest nivell?**
-          * El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          *Aquest nivell acaba després de 8 mesures.*
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
           Your code should look like this:
@@ -436,7 +451,7 @@ ca:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -455,7 +470,7 @@ ca:
           </block>
           </xml>
       courseA_maze_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -474,7 +489,7 @@ ca:
           </block>
           </xml>
       courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -493,7 +508,7 @@ ca:
           </block>
           </xml>
       courseA_maze_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -640,7 +655,7 @@ ca:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -659,7 +674,7 @@ ca:
           </block>
           </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -678,7 +693,7 @@ ca:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>
@@ -697,7 +712,7 @@ ca:
           </block>
           </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
-        '1': |
+        '1': |-
           Your code should look like this:
 
           <xml>

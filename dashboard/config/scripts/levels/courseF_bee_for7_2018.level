@@ -42,12 +42,13 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-25 15:38:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:17:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:18:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-25 15:38:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:17:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-05 00:18:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-03-18 20:34:26 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5,
@@ -109,7 +110,7 @@
           </block>
           <block type="controls_repeat_ext" inline="true"/>
         </category>
-        <category name="Variables" custom="VARIABLE">
+        <category name="Variables">
           <block type="variables_get">
             <title name="VAR">counter</title>
           </block>

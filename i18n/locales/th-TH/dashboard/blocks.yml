@@ -636,6 +636,18 @@ th:
             '"right"': ขวา
             '"space"': อวกาศ
             '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"inner"': แถวจตุรัส
+            '"circle"': วงกลม
+            '"grid"': ตาข่าย
+            '"row"': แถว
+            '"column"': คอลัมน์
+            '"x"': กากบาท
+            '"plus"': เครื่องหมายบวก
+            '"random"': สุ่ม
       gamelab_locationDelta:
         options:
           DIR:

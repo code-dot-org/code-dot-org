@@ -27,6 +27,9 @@ const styles = {
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
     color: color.purple
+  },
+  red: {
+    color: color.red
   }
 };
 

@@ -1399,6 +1399,8 @@ gl:
               name: Internet
             Crowdsourcing:
               name: Colaboración Aberta
+            Songwriting:
+              name: Composición
         express-2019:
           stages:
             Relay Programming:
@@ -1483,3 +1485,11 @@ gl:
           stages:
             While Loops:
               name: Bucles mentres
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Colaboración Aberta
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            Building a Foundation:
+              name: Construíndo unha base

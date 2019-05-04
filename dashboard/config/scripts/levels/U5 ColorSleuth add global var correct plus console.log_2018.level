@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:03:03.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -37,7 +33,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
@@ -49,12 +45,13 @@
     "expand_debugger": "false",
     "parent_level_id": 7591,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:03:03.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "To Do:\r\n\r\nAdd log conditions.  Should be \r\n\r\n* 5x setProperty x 5 \r\n* 2x randomNumber\r\n* 1x setBoard\r\n* 1x console.log ?  ",
   "audit_log": "[{\"changed_at\":\"2018-02-24 07:06:30 +0000\",\"changed\":[\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-02-15 04:16:15 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

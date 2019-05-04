@@ -2290,6 +2290,8 @@ bg:
               name: Crowdsourcing кампания
             Conditionals in Minecraft:
               name: Условия в Minecraft
+            Songwriting:
+              name: Писане на песен
         express-2019:
           stages:
             Relay Programming:
@@ -2414,3 +2416,11 @@ bg:
           stages:
             While Loops:
               name: Докато цикли
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+            Conditionals with Cards:
+              name: Условия с карти
+            Building a Foundation:
+              name: Изграждане на база

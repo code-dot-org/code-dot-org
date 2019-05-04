@@ -111,10 +111,23 @@
     "long_instructions": "# Board Output\r\n\r\nIf you haven't already, use some of the output elements on the board to communicate useful information to the user.",
     "parent_level_id": 12549,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/docs/concepts/maker-toolkit/producing-output/",
+      "/docs/concepts/maker-toolkit/color-lights/",
+      "/docs/concepts/maker-toolkit/playing-notes/",
+      "/docs/concepts/maker-toolkit/circuits-and-leds/"
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-11 08:43:12 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-11 08:45:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

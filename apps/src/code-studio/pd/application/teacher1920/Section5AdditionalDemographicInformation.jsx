@@ -6,7 +6,8 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
-import PrivacyDialog from './PrivacyDialog';
+import PrivacyDialog from '../PrivacyDialog';
+import {PrivacyDialogMode} from '../../constants';
 
 export default class Section5AdditionalDemographicInformation extends LabeledFormComponent {
   static labels = PageLabels.section5AdditionalDemographicInformation;
@@ -60,6 +61,7 @@ export default class Section5AdditionalDemographicInformation extends LabeledFor
         <PrivacyDialog
           show={this.state.isPrivacyDialogOpen}
           onHide={this.handleClosePrivacyDialog}
+          mode={PrivacyDialogMode.TEACHER_APPLICATION}
         />
       </FormGroup>
     );

@@ -136,7 +136,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   after_create :ensure_user_is_a_teacher
   def ensure_user_is_a_teacher
-    user.update!(user_type: User::TYPE_TEACHER, email: primary_email) if user.email.blank?
+    user.upgrade_to_teacher(primary_email) if user.email.blank?
   end
 
   def application_json=(json)

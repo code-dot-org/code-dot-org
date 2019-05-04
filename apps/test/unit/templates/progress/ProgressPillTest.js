@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
@@ -10,9 +10,25 @@ const unpluggedLevel = {
   isUnplugged: true,
   status: LevelStatus.perfect
 };
+
+const assessmentLevel = {
+  kind: LevelKind.assessment,
+  isUnplugged: false,
+  status: LevelStatus.perfect
+};
+
 const levelWithUrl = {
   ...unpluggedLevel,
   url: '/foo/bar'
+};
+
+const DEFAULT_PROPS = {
+  levels: [],
+  icon: 'desktop',
+  text: '1',
+  fontSize: 12,
+  disabled: false,
+  inMiniRubricExperiment: false
 };
 
 describe('ProgressPill', () => {
@@ -65,5 +81,45 @@ describe('ProgressPill', () => {
       />
     );
     assert.equal(wrapper.find('a').props().href, undefined);
+  });
+
+  it('has an assessment icon when single level is assessment and in experiment', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[assessmentLevel]}
+        inMiniRubricExperiment={true}
+      />
+    );
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
+  });
+
+  it('does not have an assessment icon when single level is assessment and not in experiment', () => {
+    const wrapper = shallow(
+      <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
+    );
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+  });
+
+  it('does not have an assessment icon when single level is not assessment and in experiment', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[unpluggedLevel]}
+        inMiniRubricExperiment={true}
+      />
+    );
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+  });
+
+  it('does not have an assessment icon when multiple assessment levels and in experiment', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[assessmentLevel, assessmentLevel]}
+        inMiniRubricExperiment={true}
+      />
+    );
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 });

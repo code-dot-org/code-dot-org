@@ -1277,6 +1277,8 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+            Songwriting:
+              name: Te Tito Waiata
         express-2019:
           stages:
             Relay Programming:
@@ -1359,3 +1361,9 @@ mi:
           stages:
             While Loops:
               name: Ngā Koromeke I Te
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
+            Building a Foundation:
+              name: Te Hanga Tūāpapa

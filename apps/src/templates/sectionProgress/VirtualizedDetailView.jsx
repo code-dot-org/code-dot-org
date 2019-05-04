@@ -77,7 +77,9 @@ class VirtualizedDetailView extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
+    stageExtrasEnabled: PropTypes.bool,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   state = {
@@ -171,7 +173,9 @@ class VirtualizedDetailView extends Component {
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
-                icon={getIconForLevel(level)}
+                // NOTE: When we remove mini rubrics experiment we will still need to have optional
+                // param to tell getIconForLevel that we are in the detailed progress view
+                icon={getIconForLevel(level, this.props.inMiniRubricExperiment)}
                 style={
                   level.isUnplugged
                     ? progressStyles.unpluggedIcon
@@ -187,7 +191,7 @@ class VirtualizedDetailView extends Component {
   };
 
   studentCellRenderer = (studentStartIndex, stageIdIndex, key, style) => {
-    const {section, scriptData, getLevels} = this.props;
+    const {section, getLevels, stageExtrasEnabled} = this.props;
 
     // Alternate background colour of each row
     if (studentStartIndex % 2 === 1) {
@@ -206,7 +210,6 @@ class VirtualizedDetailView extends Component {
             name={student.name}
             studentId={student.id}
             sectionId={section.id}
-            scriptId={scriptData.id}
           />
         )}
         {stageIdIndex >= 0 && (
@@ -214,7 +217,9 @@ class VirtualizedDetailView extends Component {
             studentId={student.id}
             sectionId={section.id}
             stageId={stageIdIndex}
+            stageExtrasEnabled={stageExtrasEnabled}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
+            inMiniRubricExperiment={this.props.inMiniRubricExperiment}
           />
         )}
       </div>

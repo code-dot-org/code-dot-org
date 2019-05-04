@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Musíš použiť iný tanec.",
   "danceFeedbackNeedEveryTwoMeasures": "Uisti sa, že používaš blok \"každé dva takty\"",
   "danceFeedbackNeedMakeANewDancer": "Použi blok `vytvor`, aby si vytvoril druhého tanečníka.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Takt:"
 }

@@ -94,7 +94,7 @@ export default function(storybook) {
       description: 'Additional children can be provided',
       story: () => (
         <UnconnectedGameButtons>
-          <button>another button</button>
+          <button type="button">another button</button>
         </UnconnectedGameButtons>
       )
     },
@@ -103,7 +103,7 @@ export default function(storybook) {
       description: 'The default version with no props',
       story: () => (
         <UnconnectedGameButtons showSkipButton nextLevelUrl="#">
-          <button>another button</button>
+          <button type="button">another button</button>
         </UnconnectedGameButtons>
       )
     }

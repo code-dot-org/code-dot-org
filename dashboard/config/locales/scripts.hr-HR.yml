@@ -1396,6 +1396,8 @@ hr:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Songwriting:
+              name: Pisanje pjesama
         express-2019:
           stages:
             Relay Programming:
@@ -1478,3 +1480,11 @@ hr:
           stages:
             While Loops:
               name: Petlje s uvjetom
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Crowdsourcing
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            Building a Foundation:
+              name: Izrada temelja

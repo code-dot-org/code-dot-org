@@ -9,6 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
+import {DancelabReservedWords} from './constants';
 import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
 import danceMsg from './locale';
 import {
@@ -350,6 +351,7 @@ Dance.prototype.afterInject_ = function() {
         'levelFailure'
       ].join(',')
     );
+    Blockly.JavaScript.addReservedWords(DancelabReservedWords.join(','));
   }
 
   // record a replay log (and generate a video) for both project levels and any

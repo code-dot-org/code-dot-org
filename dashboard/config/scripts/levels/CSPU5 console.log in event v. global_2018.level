@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:00:43.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "embed": "false",
@@ -58,15 +54,16 @@
     "teacher_markdown": "### Teaching Tips\r\n\r\n**Prediction is important**\r\n\r\nYou might want to have all students do this level at the same time and explain the prediction process to them.\r\n\r\n* Do what you can to really get students to examine the code and predict what will happen before hitting run.  Perhaps have them do it with a partner.\r\n\r\n* Later on in the course there are levels that force you to make a prediction first.  We're not that heavy handed yet.\r\n\r\nThe **purpose of prediction** is that you are more likely to remember the result of some action if you try to predict what will happen first.\r\n\r\n* In fact, you might remember better if your prediction is *wrong*.  \r\n* So there is no pressure to be right, only that you *force yourself to make a prediction*.\r\n* Professional programmers do this implicitly out of habit - it's a great way to quickly gain insight into your code and what it is (or isn't) doing.",
     "parent_level_id": 7113,
     "name_suffix": "_2018",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "show_debug_watch": "false",
-    "expand_debugger": "false"
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:00:43.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-02-15 03:45:28 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",

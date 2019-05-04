@@ -291,3 +291,8 @@ cs:
       DigitalFootprint_2019:
         title: Tvé digitální stopy
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing
+      timeforcs_demo_conditionals:
+        title: Podmínky
+        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod" a "Vytáhnu-li černou kartu, dostanu bod."

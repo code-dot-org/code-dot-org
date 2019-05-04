@@ -43,8 +43,12 @@ describe('dialogHelper', () => {
         <div className="modal-content no-modal-icon">
           <p className="dialog-title">Title</p>
           <p className="dialog-body">Body</p>
-          <button id="cancel-button">Cancel</button>
-          <button id="ok-button">Okay</button>
+          <button type="button" id="cancel-button">
+            Cancel
+          </button>
+          <button type="button" id="ok-button">
+            Okay
+          </button>
         </div>
       </div>
     );

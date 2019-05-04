@@ -17,18 +17,30 @@ input[type=radio].with-font ~ label:before {
     font-family: FontAwesome;
     display: inline-block;
     content: "\f1db";  /* fa-circle-thin */
-    letter-spacing: 10px;
-    font-size: 1.5em;
+    font-size: 18px;
     color: color.black;
-    width: 1.4em;   /* reduce bounce */
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    vertical-align: bottom;
 }
 input[type=radio].with-font:checked ~ label:before  {
+    font-family: FontAwesome;
+    display:inline-block;
     content: "\f058";  /* fa-check-circle */
-    font-size: 1.5em;
+    font-size: 18px;
     color: #0094ca;
-    letter-spacing: 5px;
+    width: 15px;
+    height: 15px;
+    line-height: 16px;
+    background-color: white;
+    text-align: center;
+    border-radius: 60%;
 }
 
 label.hidden-label-checked-radio-button {
     margin: 0px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
 }

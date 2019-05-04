@@ -10,5 +10,6 @@
   "danceFeedbackNeedDifferentDance": "Du må bruke ein annan dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Sørg for at du bruker ‘for kvar andre takt’-blokka",
   "danceFeedbackNeedMakeANewDancer": "Bruk ‘lag ny’-blokka til å lage ein ny dansar.",
+  "danceFeedbackKeyEvent": "",
   "measure": "Takt:"
 }

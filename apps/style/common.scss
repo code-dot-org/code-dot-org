@@ -1167,17 +1167,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
-    font-size: 14px;
-    line-height: inherit;
-    color: $charcoal;
-    margin-bottom: 10px;
+    p {
+      font-size: 14px;
+      line-height: inherit;
+      color: $charcoal;
+      margin-bottom: 10px;
 
-    a {
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
-      color: $purple;
-      &:hover {
-        text-decoration: underline;
+      a {
+        font-family: $gotham-extra-bold;
+        font-weight: normal;
+        color: $purple;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -1677,6 +1679,11 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   #visualizationColumn.wireframeShare {
     padding: 0;
   }
+}
+
+#manageAssetsModal {
+  width: 800px;
+  margin-left: -400px;
 }
 
 @import "RotateContainer";

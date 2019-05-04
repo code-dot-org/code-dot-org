@@ -8,6 +8,8 @@
 
 %script=view 'google_analytics.js', user_type: user_type
 
+-# webpack-runtime.js must appear exactly once on any page containing webpack entries
+%script{src: minifiable_asset_path('js/webpack-runtime.js')}
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
 
 - if header['chart']

@@ -8,8 +8,8 @@ level '2-3 Maze 7'
 level '2-3 Maze 8'
 level '2-3 Maze 9'
 level '2-3 Maze 10'
-assessment '2-3 Maze Multi 2'
-assessment '2-3 Maze Match 2'
+level '2-3 Maze Multi 2', assessment: true
+level '2-3 Maze Match 2', assessment: true
 
 stage 'Artist: Sequence'
 level '2-3 Artist 1 new'
@@ -22,8 +22,8 @@ level '2-3 Artist 9'
 level '2-3 Artist 7'
 level '2-3 Artist 8'
 level '2-3 Artist Free Play'
-assessment '2-3 Artist Assessment 1'
-assessment '2-3 artist match 1'
+level '2-3 Artist Assessment 1', assessment: true
+level '2-3 artist match 1', assessment: true
 
 stage 'Artist: Loops'
 level '2-3 Artist Loops New 1'
@@ -39,9 +39,9 @@ level '2-3 Artist Loops New 12'
 level '2-3 Artist Loops New 13'
 level '2-3 Artist Loops New 14'
 level '2-3 Artist Loops New 15'
-assessment '2-3 artist loops match 1'
-assessment '2-3 artist loops multi 2'
-assessment '2-3 artist loops multi 1'
+level '2-3 artist loops match 1', assessment: true
+level '2-3 artist loops multi 2', assessment: true
+level '2-3 artist loops multi 1', assessment: true
 
 stage 'Bee: Conditionals'
 level '2-3 Bee Conditionals 2'
@@ -56,9 +56,9 @@ level '2-3 Bee Conditionals 12'
 level '2-3 Bee Conditionals 13'
 level '2-3 Bee Conditionals 14'
 level '2-3 Bee Conditionals 15'
-assessment '2-3 Bee Conditionals Assessment 1'
-assessment '2-3 bee conditionals multi 1'
-assessment '2-3 bee conditionals multi 3'
+level '2-3 Bee Conditionals Assessment 1', assessment: true
+level '2-3 bee conditionals multi 1', assessment: true
+level '2-3 bee conditionals multi 3', assessment: true
 
 stage 'Artist: Nested Loops'
 level '4-5 Nested Loops 1'
@@ -71,8 +71,8 @@ level '4-5 Nested Loops 7'
 level '4-5 Nested Loops 11'
 level '4-5 Nested Loops 8'
 level '4-5 Nested Loops 12'
-assessment '4-5 Nested Loops Assessment 1'
-assessment '4-5 artist loops multi 1'
+level '4-5 Nested Loops Assessment 1', assessment: true
+level '4-5 artist loops multi 1', assessment: true
 
 stage 'Farmer: While Loops'
 level '4-5 While Loops 1'
@@ -83,7 +83,7 @@ level '4-5 While Loops 5'
 level '4-5 While Loops 6'
 level '4-5 While Loops 7'
 level '4-5 While Loops 8'
-assessment '4-5 While Loops Assessment 1'
+level '4-5 While Loops Assessment 1', assessment: true
 
 stage 'Bee: Nested Loops'
 level '4-5 Bee Nested Loops 1'
@@ -96,9 +96,9 @@ level '4-5 Bee Nested Loops 7'
 level '2-3 Bee Loops 10'
 level '4-5 Bee Nested Loops 9'
 level '4-5 Bee Nested Loops Rows'
-assessment '2-3 Bee Loops Assessment 1'
-assessment '4-5 Bee Nested Loops Assessment 1'
-assessment '4-5 bee loops multi 1'
+level '2-3 Bee Loops Assessment 1', assessment: true
+level '4-5 Bee Nested Loops Assessment 1', assessment: true
+level '4-5 bee loops multi 1', assessment: true
 
 stage 'Artist: Functions'
 level '2-3 Artist Functions 1'
@@ -110,7 +110,7 @@ level '2-3 Artist Functions 11.5'
 level '2-3 Artist Functions 12'
 level '2-3 Artist Functions 9'
 level '2-3 Artist Functions 10'
-assessment '2-3 artist functions multi 1'
+level '2-3 artist functions multi 1', assessment: true
 
 stage 'Bee: Debugging'
 level '4-5 Bee Debugging 1'
@@ -124,5 +124,5 @@ level '4-5 Bee Debugging 8'
 level '4-5 Bee Debugging 9'
 level '4-5 Bee Debugging 10'
 level '4-5 Bee Debugging 11'
-assessment '4-5 Bee Debugging Assessment 1'
-assessment '4-5 bee debug multi 1'
+level '4-5 Bee Debugging Assessment 1', assessment: true
+level '4-5 bee debug multi 1', assessment: true

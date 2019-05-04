@@ -1,31 +1,31 @@
 name 'cspu5_assess2_wrongLogic_2018_2019'
-wrong 'Any time between 6 and 9'
-wrong 'Any time between 10 and 19'
-wrong 'Any time between 0 and 20'
-right 'There is no value of time that will result in “Good Morning” being displayed'
-wrong 'The logic error will cause the program to stop running at line 7.'
-
-markdown <<MARKDOWN
-**Content: Unit 5 Lesson 9** - ordering of conditions in else-if
-
-Consider the following JavaScript code segment.  
-
-    var time = promptNum(“What hour is it (on a 24 hour clock)?”);
-    var greeting = “”;
-    if (time < 6) {
-        greeting = "It is too early!";
-    } else if (time < 20) {
-        greeting = "Good Day!";
-    } else if (time < 10) {
-        greeting = “Good Morning!”;
-    } else {
-        greeting = "Good Evening!";
-    }
-    console.log(greeting);
-
-Something is wrong with the logic in the program above. For which values of time will the greeting “Good Morning” be displayed?
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-Looking at the two else if statements in the middle, we notice that (time < 20) comes before (time < 10). Since code executes sequentially, "Good Morning" will never be displayed because all values that are between 6 and 10 will first go into the (time < 20) statement due to the order of the code.
-MARKDOWN
+encrypted 'XMivbGpyOBLKuOWGgMhOnF/BcxWzdJCGd9bm1oiX2m9lGt82AItUwfezmKJZ
+Tp79gWxhTCyo79FwYP1/K+trMBMGV4+L2JMIadbVvm7IEQqC4K+uR7BiKa6d
+hZ1p/2MmTt1ndzR4zhserdLEm6ODjnMKlTEUkmNsfjrQRzyihV1Gp286StuS
+/DADJVaMnhhiJZ3BsQj2AVHXZpGWy2vASE4mALnSkCFZJqVmJpqoTS6gn8y3
+IWKTIDWecLn5a47hFY54qnGJA3Gp3JHxinWTkm1oktFmBlevEmwVjztLmbXR
+5jh65XV9LuOhHQAqiCZlc26v2GaZ9IUTi3f+BzSSKBOK6e8cldmljkKQk7Qt
+CNFWcHfuRiWw6R5NO/T44JshTgV84g2gXJ3rbj/+eH3F7AkEaxuglPClteox
+9AAN0XeyOi9P/d8KH3XBLw5rBiZwPVd0WJVCaflZbeqa03K/KyeHd5K0St6y
+rMAo7DwwhzQhIXgr7fp+h77fJ+roImyn7G/+kA32oBXEEa16yEs2cstGVhdd
+9GMxSJeurRwrAZBrARFf4skbKkyFQS4NucTZn2UUjifd0UmQYpMdWuuXpkyY
+JDxCaE1s4RQufhTuHylBA2v8MZS1oR7BmIrmtOmSMFsELgAlhumXaV6yczh6
+CFCCBfjJWGQLUNCJUpsyt2U7MdeN+EMZXkFdSKegcF8py0+MOhuSHLarYajG
+STFKjDS3SdgV6EdWMaCG9XThtMVb7RIzTdBXqZ3YH2yDWkZFD/C928QMU4TT
+/mlE8FhPMKe252T++5f8rObbjpHETmbOmp3G/BhT21+lWMlp53QVdd2RLuAr
+TEXxpDJAT8BU7pZj38kkYigpg3eIyE1tpm4iohED8ZTrtcS8gWH8l3gff3AO
+YwkPU/PcGqTodru496GUKqdof0K+23HRQDTA/WZft8DUhFSYToSi3AiE4QTK
+m1sO9xD1K/VfqtXhTI/A4pCJroweSvVqXuxHOvyXPxs/nYaL6THBL7nxSawa
+18beOEj5S2Zn952rHkplI0fpUsSPrABqom/Kqq3L0jU5IsJMNcTzolDFsviS
+1XLJ7QYSDcbiz0aHf1p59l8wJ3I664ipC4BYEYkGEydjsIq0IMECNB5ca3sH
+xvigUcwxJm+HKr/c6Eu23xqPehXlgCpuMpq7qYWEIzm+hk21IzSCobvRK2ck
+QasqGJ2mUIu6fHCA6ynlqRS2eWBNgfKAnGslfaazFQqvIKAGK7DUFXf5WUEl
+2XtkMcOYdkC+brRzLkIEXdKf9XiSxukEFBRHlOLuXLFOcPimxLIsUjDclFpD
+HRkAx5GWUOnUPJPYFUm0vjmjh8f70lbmKeS2ApdGUxhwgtyHbvsUKfloINZk
+wlRrpNAx/lmI3OOuAq3KS4cSUbXXOCOZb6rc/cJlOtMxr/fxv2kwpVIX56Mg
+wX3caEWcRFsI7Unq/4r+33wE+uNL7XKSHb6FLDLvTxJD4Mo37ZbFfDTE/dVb
+tw8y7ajyBbNiSPliNxHuGgx+BH31MgBCBaf6OpL/A3km860+O41rX/sm5i+s
+j+D+pxVrzpzMMMWtulKDuizEgkgaIlD4b5h5Exk8Vk9rEP7rZ2PCrvJENMLS
+LNwXa6SksAAx8pwn1N3Dk1myhkG8OFLmb6Z/5QiEgQE1SagduaVVKml4IUmp
+PDSYz2NmCQTj12NXu5FNyKajkho=
+'

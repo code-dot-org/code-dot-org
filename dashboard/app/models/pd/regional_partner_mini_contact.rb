@@ -37,7 +37,7 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
 
     if regional_partner_id
       partner = RegionalPartner.find(regional_partner_id)
-      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
+      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner: partner)
 
       if regional_partner_program_managers.empty?
         matched_but_no_pms = true

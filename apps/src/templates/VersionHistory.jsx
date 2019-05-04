@@ -143,13 +143,18 @@ export default class VersionHistory extends React.Component {
         <div>
           <p>Are you sure you want to clear all progress for this level&#63;</p>
           <button
+            type="button"
             id="confirm-button"
             style={{float: 'right'}}
             onClick={this.onClearPuzzle}
           >
             Start Over
           </button>
-          <button id="again-button" onClick={this.onCancelClearPuzzle}>
+          <button
+            type="button"
+            id="again-button"
+            onClick={this.onCancelClearPuzzle}
+          >
             Cancel
           </button>
         </div>
@@ -183,6 +188,7 @@ export default class VersionHistory extends React.Component {
                   </td>
                   <td width="250" style={{textAlign: 'right'}}>
                     <button
+                      type="button"
                       className="btn-danger"
                       onClick={this.onConfirmClearPuzzle}
                       style={{float: 'right'}}

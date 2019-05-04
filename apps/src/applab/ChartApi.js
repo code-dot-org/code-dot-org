@@ -5,7 +5,7 @@
  * @see {GoogleChart}
  */
 /* global Promise */
-import * as utils from '../utils';
+import {quote} from '../utils';
 
 import GoogleChart from './GoogleChart';
 
@@ -70,7 +70,7 @@ ChartApi.TypeNameToType = {
  * @returns {string[]}
  */
 ChartApi.getChartTypeNames = function() {
-  return Object.getOwnPropertyNames(ChartApi.TypeNameToType);
+  return Object.keys(ChartApi.TypeNameToType);
 };
 
 /**
@@ -87,7 +87,7 @@ ChartApi.supportsType = function(chartType) {
  */
 ChartApi.getChartTypeDropdown = function() {
   return ChartApi.getChartTypeNames()
-    .map(utils.quote)
+    .map(quote)
     .sort();
 };
 
@@ -185,9 +185,9 @@ ChartApi.prototype.warnIfColumnsNotFound = function(
     if (columnsInTable.indexOf(columnName) === -1) {
       this.warn(
         'Column ' +
-          utils.quote(columnName) +
+          quote(columnName) +
           ' not found in table ' +
-          utils.quote(tableName) +
+          quote(tableName) +
           '.'
       );
     }
@@ -216,7 +216,7 @@ ChartApi.prototype.guessColumnsIfNecessary = function(
     if (columnsInTable.length === 0) {
       throw new Error(
         'No columns found in table ' +
-          utils.quote(tableName) +
+          quote(tableName) +
           '. Charts require at least 2 columns.'
       );
     } else if (columnsInTable.length < 2) {
@@ -224,9 +224,9 @@ ChartApi.prototype.guessColumnsIfNecessary = function(
         'Only found ' +
           columnsInTable.length +
           ' columns in table ' +
-          utils.quote(tableName) +
+          quote(tableName) +
           ': ' +
-          columnsInTable.map(utils.quote).join(', ') +
+          columnsInTable.map(quote).join(', ') +
           '. Charts require at least 2 columns.'
       );
     } else {
@@ -234,11 +234,11 @@ ChartApi.prototype.guessColumnsIfNecessary = function(
       requestedColumns = columnsInTable.slice(0, 2);
       this.warn(
         'Using columns ' +
-          requestedColumns.map(utils.quote).join(' and ') +
+          requestedColumns.map(quote).join(' and ') +
           '.  Possible columns for table ' +
-          utils.quote(tableName) +
+          quote(tableName) +
           ' are ' +
-          columnsInTable.map(utils.quote).join(', ') +
+          columnsInTable.map(quote).join(', ') +
           '.'
       );
     }

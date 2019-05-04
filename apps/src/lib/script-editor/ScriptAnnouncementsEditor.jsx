@@ -77,7 +77,7 @@ const Announce = ({announcement, inputStyle, index, onChange, onRemove}) => (
         </select>
       </div>
     </label>
-    <button className="btn" onClick={() => onRemove(index)}>
+    <button className="btn" type="button" onClick={() => onRemove(index)}>
       Remove
     </button>
   </div>
@@ -158,7 +158,7 @@ export default class ScriptAnnouncementsEditor extends Component {
             onRemove={this.remove}
           />
         ))}
-        <button className="btn" onClick={this.add}>
+        <button className="btn" type="button" onClick={this.add}>
           Additional Announcement
         </button>
         {announcements.length > 0 && (

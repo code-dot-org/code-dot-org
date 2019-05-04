@@ -660,6 +660,18 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': raja
+            '"inner"': neliön sisällä
+            '"circle"': ympyrä
+            '"grid"': ruudukko
+            '"row"': rivi
+            '"column"': sarake
+            '"x"': ristiinrastiin
+            '"plus"': risti
+            '"random"': satunnainen
       gamelab_locationConstant:
         options:
           DIR:

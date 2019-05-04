@@ -7,7 +7,7 @@ lv:
         Uzzīmē pārtraukto līniju, izmantojot `lēkt` un `pārvietoties` blokus. Katra līnija ir 50 pikseļus gara.
       2-3 Artist 3new: |-
         Sarkanā cepure ir 100 pikseļus augsta. Pabeidz zīmēt melno cepuri, kura ir par 70 pikseļiem zemāka.
-        *(Katras cepures platums ir 50 pikseļi.)*
+        _(Katras cepures platums ir 50 pikseļi.)_
       2-3 Artist 4: Palīdzi man pabeigt māju šim kaķim.
       2-3 Artist 6: |-
         Šai mājai ir nepieciešams jumts! Uzzīmē trijstūri.
@@ -15,37 +15,35 @@ lv:
       2-3 Artist 9 NEW: Pabeidz gaisa pūķi
       2-3 Artist 9 REPLACEMENT: Pabeidz zīmēt šīs kāpnes!
       2-3 Artist 9: Pabeidz gaisa pūķi
-      2-3 Artist Debugging 1: 'Šai cepurei jābūt tikai 50 pikseļus platai. Vai vari
+      2-3 Artist Debugging 1: Šai cepurei jābūt tikai 50 pikseļus platai. Vai vari
         to salabot?
-
-'
-      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \r\n\r\nVai
+      2-3 Artist Debugging 10: "Spēļu kontroliera kursorsvira ir pārāk šaura. \\\r\n\\\r\nVai
         vari to izveidot 10 pikseļus platāku?"
-      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\r\n\r\nIzlabo
+      2-3 Artist Debugging 2: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\\r\n\\\r\nIzlabo
         kodu, lai visām ūsām būtu vienāds garums."
-      2-3 Artist Debugging 3: "Manā laivā ir caurums! \r\n\r\nVai vari izlabot zīmējumu,
-        lai cauruma nebūtu?"
+      2-3 Artist Debugging 3: "Manā laivā ir caurums! \\\r\n\\\r\nVai vari izlabot
+        zīmējumu, lai cauruma nebūtu?"
       2-3 Artist Debugging 5: "Kods kājai un pēdai ir kļūdains. \n\nVai vari to izlabot?"
-      2-3 Artist Debugging 6: "Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\r\n\r\nIzmaini
+      2-3 Artist Debugging 6: "Izskatās, ka sēžu uz krēsla, kam trūkst vienas kājas!\\\r\n\\\r\nIzmaini
         kodu, lai uzzīmētu pēdējo kāju."
-      2-3 Artist Debugging 7: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r\n\r\nVai
+      2-3 Artist Debugging 7: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\\r\n\\\r\nVai
         vari to uzzīmēt pareizi?"
-      2-3 Artist Debugging 8: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\r\n\r\nPalīdzi
+      2-3 Artist Debugging 8: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\\\r\n\\\r\nPalīdzi
         man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?"
       2-3 Artist Debugging 9: Stiebra kods ir nepareizs. Vai vari noskaidrot, kā uzzīmēt
         stiebru pareizajā virzienā?
       2-3 Artist Free Play: Brīvā spēle! Zīmē visu, ko vēlies.
-      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \r\n\r\nKas
+      2-3 Artist Functions 11.5: "Šeit ir šī pati funkcija `uzzīmēt sešstūri`. \\\r\n\\\r\nKas
         notiks, ja programmas ciklā katru reizi notiks pagrieziens par 60 grādiem?"
       2-3 Artist Functions 12 Mike: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas
-        darbības vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`,
-        vari aizpildīt visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        darbības vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`,
+        vari aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Functions 12 a: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas
-        darbības vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`,
-        vari aizpildīt visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        darbības vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`,
+        vari aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Functions 12: "Funkcijas ir lieliskas, lai atkārtotu sarežģītas darbības
-        vairākas reizes. \r\n\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari aizpildīt
-        visu puķu kasti?\r\nZiedi atrodas 100 pikseļu attālumā."
+        vairākas reizes. \\\r\n\\\r \nVai, izmantojot funkciju `zīmēt ziedu`, vari
+        aizpildīt visu puķu kasti?\\\r\nZiedi atrodas 100 pikseļu attālumā."
       2-3 Artist Loops New 12: 'Uzzīmē rombu, kura malas ir 100 pikseļus garas. '
       2-3 Artist Loops New 13: Iesākumā dosim Tev kodu (pelēkā krāsā), lai uzzīmētu
         vienu rombu!
@@ -90,8 +88,8 @@ lv:
       2-3 Maze Loops 18: |-
         Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!
         Pamēģini lietot vienu "Atkārtot" bloku iekšā citā, lai samazinātu kopējo bloku skaitu.
-      4-5 Artist 1: "Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus
-        gara)\n\n"
+      4-5 Artist 1: Palīdzi man pabeigt uzzīmēt kasti. (Katra līnija ir 300 pikseļus
+        gara)
       4-5 Artist 5: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu, izmantojot
         doto ciklu?
       4-5 Bee Conditionals 2: |-
@@ -116,14 +114,14 @@ lv:
         putnam nokļūt līdz cūkai!
       courseA_maze_seq8_2018: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
       courseA_maze_seq8_2019: Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!
-      courseB_maze_seq3: '*"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!"*'
-      grade2_PuppyLoops_10: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\r\n\r\nPalīdzi
+      courseB_maze_seq3: _"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!"_
+      grade2_PuppyLoops_10: "Skolotājs saka, ka man ir jāpabeidz iesāktais!\\\r\n\\\r\nPalīdzi
         man pabeigt vējdzirnaviņas. Vai vari pateikt, kas ir nepareizi?"
       grade2_PuppyLoops_4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt
         līdz cūkai ar mazāko skaitu bloku!
-      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\r\n\r\nIzlabo
+      grade2_PuppyLoops_8: "Šis kods kaķa ūsu zīmēšanai ir kļūdains.\n\\\r\n\\\r\nIzlabo
         kodu, lai visām ūsām būtu vienāds garums."
-      grade2_PuppyLoops_9: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\r\n\r\nVai
+      grade2_PuppyLoops_9: "Izskatās, ka kodā C burts ir uzzīmēts otrādi.\\\r\n\\\r\nVai
         vari to uzzīmēt pareizi?"
       grade2_puppy_loops4: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt
         līdz cūkai ar mazāko skaitu bloku!

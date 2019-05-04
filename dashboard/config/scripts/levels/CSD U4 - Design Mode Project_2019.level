@@ -144,7 +144,7 @@
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -185,16 +185,18 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "long_instructions": "# Mocking Up Your App\r\n\r\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\r\n\r\n# Do This\r\n\r\n* Rename the screen to match your _namespace_.\r\n* Use the built-in elements to lay out your app screen, giving each a proper ID\r\n\t* For example, if your namespace is `home_` you might create IDs like:\r\n    \t* `home_title`\r\n        * `home_login_button`\r\n        * `home_logo`\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/app-lab/design-mode/"
     ],
     "map_reference": "/docs/concepts/app-lab/design-mode/design-mode-elements/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "video_key": "csd_applab_designmode"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-18 18:35:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-27 22:24:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-31 19:23:43 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-12-10 22:52:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-12-10 22:53:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-12-10 22:54:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-03-06 00:53:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-09-18 18:35:15 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-27 22:24:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-31 19:23:43 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-12-10 22:52:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-12-10 22:53:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-12-10 22:54:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-03-06 00:53:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-19 18:01:39 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-19 18:02:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

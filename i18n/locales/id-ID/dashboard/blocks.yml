@@ -391,6 +391,13 @@ id:
             '"space"': luar angkasa
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': Kisi
+            '"row"': baris
+            '"column"': kolom
+            '"random"': acak
       gamelab_locationConstant:
         options:
           DIR:

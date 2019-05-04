@@ -48,7 +48,40 @@
       "led.on": null,
       "led.off": null,
       "buzzer.note": null,
-      "buzzer.stop": null
+      "buzzer.stop": null,
+      "pinMode": null,
+      "digitalWrite": null,
+      "digitalRead": null,
+      "analogWrite": null,
+      "analogRead": null,
+      "blink": null,
+      "pulse": null,
+      "stop": null,
+      "color": null,
+      "intensity": null,
+      "led.blink": null,
+      "led.toggle": null,
+      "led.pulse": null,
+      "buzzer.frequency": null,
+      "buzzer.off": null,
+      "buzzer.playNotes": null,
+      "buzzer.playSong": null,
+      "accelerometer.getOrientation": null,
+      "accelerometer.getAcceleration": null,
+      "isPressed": null,
+      "holdtime": null,
+      "soundSensor.value": null,
+      "soundSensor.getAveragedValue": null,
+      "soundSensor.setScale": null,
+      "soundSensor.threshold": null,
+      "lightSensor.value": null,
+      "lightSensor.getAveragedValue": null,
+      "lightSensor.setScale": null,
+      "lightSensor.threshold": null,
+      "tempSensor.F": null,
+      "tempSensor.C": null,
+      "toggleSwitch.isOpen": null,
+      "onBoardEvent": null
     },
     "edit_code": true,
     "embed": "false",
@@ -83,7 +116,7 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
+    "makerlab_enabled": "true",
     "long_instructions": "# Turning It Off\r\n\r\nWhen you start this app your lights are off, but as soon as choose a pattern, there's no way to turn the lights back off!\r\n\r\n# Do This\r\n\r\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs.",
     "project_template_level_name": "CSD U6 light pattern template_2018",
     "hide_share_and_remix": "false",
@@ -94,11 +127,15 @@
     "encrypted_examples": "KxZlpJ6bLYzc3aFyFKEg3FktHZLA9mqEvmuFIhbULhBXjuUYFitajdZJ1Upt\nw9KUPJdEuJUD3779bbp7DvQRag==\n",
     "parent_level_id": 10611,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 23:07:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 23:07:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-15 21:26:29 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

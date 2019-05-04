@@ -498,3 +498,10 @@ hu:
         title: A digitális lábnyomod
         desc: A tanárok bemutatják, hogy ha a diákok információt helyeznek el magukról
           online az digitális lábnyomot, nyomot hagy, ami az következményekkel járhat.
+      timeforcs_demo_crowdsourcing:
+        title: Csoportos megoldás
+      timeforcs_demo_conditionals:
+        title: Feltételek
+        desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot
+          játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros
+          lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'

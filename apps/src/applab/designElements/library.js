@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
-
+import designMode from '../designMode';
+import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -157,6 +158,31 @@ export default {
       return null;
     }
     throw new Error('unknown element type');
+  },
+
+  /**
+   * Gets the theme values for this element type (if specified).
+   */
+  getThemeValues: function(element) {
+    const elementType = this.getElementType(element);
+    const {themeValues} = elements[elementType] || {};
+    return themeValues;
+  },
+
+  getCurrentTheme: function(parentScreen) {
+    return parentScreen
+      ? parentScreen.getAttribute('data-theme')
+      : themeOptions[DEFAULT_THEME_INDEX];
+  },
+
+  applyCurrentTheme: function(element, parentScreen) {
+    const currentTheme = this.getCurrentTheme(parentScreen);
+    const themeValues = this.getThemeValues(element);
+    for (const propName in themeValues) {
+      const propTheme = themeValues[propName];
+      const defaultValue = propTheme[currentTheme];
+      designMode.updateProperty(element, propName, defaultValue);
+    }
   },
 
   /**

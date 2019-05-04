@@ -7,7 +7,7 @@ const CARDS = [
   {
     title: 'Administrator and Counselor PD',
     description:
-      '* How-To Guide <br> * Set Your Agenda<br> * Logistics (Venue, Catering)<br> * Supplies & Resources',
+      '&bull; How-To Guide <br> &bull; Set Your Agenda<br> &bull; Logistics (Venue, Catering)<br> &bull; Supplies & Resources',
     link: '/educate/regional-partner/playbook/administrator'
   },
 
@@ -21,40 +21,42 @@ const CARDS = [
   {
     title: 'Communications and Branding',
     description:
-      '* Weekly Update Email Archive<br> * Code.org Comms to Teachers<br> * Workshop & Email Comms.<br> * Branding Guidelines',
+      '&bull; Weekly Update Email Archive<br> &bull; Code.org Comms to Teachers<br> &bull; Workshop & Email Comms.<br> &bull; Branding Guidelines',
     link: '/educate/regional-partner/playbook/communications'
   },
 
   {
     title: 'Community Building',
     description:
-      '* Resources & Ideas<br> * Community Events for Teachers<br> * CS Fair for Students',
+      '&bull; Resources & Ideas<br> &bull; Community Events for Teachers<br> &bull; CS Fair for Students',
     link: '/educate/regional-partner/playbook/community'
   },
 
   {
     title: 'Data',
-    description: '* Resources & Ideas<br> * How to use the data dashboard',
+    description:
+      '&bull; Resources & Ideas<br> &bull; How to use the data dashboard',
     link: '/educate/regional-partner/playbook/data'
   },
 
   {
     title: 'Facilitator Support',
     description:
-      '* 1-Pager & Contract Exemplars <br> * Facilitator Recruitment Resources <br> * Facilitator Support Resources <br>  * Facilitator Payments',
+      '&bull; 1-Pager & Contract Exemplars <br> &bull; Facilitator Recruitment Resources <br> &bull; Facilitator Support Resources <br>  &bull; Facilitator Payments',
     link: '/educate/regional-partner/playbook/facilitator-support'
   },
 
   {
     title: 'Fundraising Resources',
-    description: '* Organization Sustainability <br> * Fundraising Playbook',
+    description:
+      '&bull; Organization Sustainability <br> &bull; Fundraising Playbook',
     link: '/educate/regional-partner/playbook/funding'
   },
 
   {
     title: 'Ordering Supplies',
     description:
-      '* Accessing Mimeo <br> * How to Order Supplies <br> * Printable Certificates <br> * Admin/Counselor Supplies ',
+      '&bull; Accessing Mimeo <br> &bull; How to Order Supplies <br> &bull; Printable Certificates <br> &bull; Admin/Counselor Supplies ',
     link: '/educate/regional-partner/playbook/ordering-supplies'
   },
 
@@ -75,21 +77,21 @@ const CARDS = [
   {
     title: 'Reporting and Evaluations',
     description:
-      '* Annual Report Requirements<br> * Post Workshop Feedback Form<br> * Regional Partner Annual Planning',
+      '&bull; Annual Report Requirements<br> &bull; Post Workshop Feedback Form<br> &bull; Regional Partner Annual Planning',
     link: '/educate/regional-partner/playbook/reporting-and-evaluations'
   },
 
   {
     title: 'Teacher & District Recruitment',
     description:
-      '* How to recruit teachers and districts<br/> * Teacher applications',
+      '&bull; How to recruit teachers and districts<br/> &bull; Teacher applications',
     link: '/educate/regional-partner/playbook/teacher-recruitment'
   },
 
   {
     title: 'Teachers & Curriculum',
     description:
-      '* Info for Teacher Support<br> * Links to Online Curriculum <br> * Curriculum 1-pagers <br>',
+      '&bull; Info for Teacher Support<br> &bull; Links to Online Curriculum <br> &bull; Curriculum 1-pagers <br>',
     link: '/educate/regional-partner/playbook/curriculum'
   },
 
@@ -135,7 +137,7 @@ export default class RegionalPartnerPlaybook extends Component {
             {...card}
             buttonText="Learn More"
             allowWrap={true}
-            allowDangerouslySetInnerHtml={true}
+            allowMarkdown={true}
           />
         ))}
       </ResourceCardResponsiveContainer>
