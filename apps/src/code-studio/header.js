@@ -3,7 +3,10 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-import {showMinimalProjectHeader} from './headerRedux';
+import {
+  showMinimalProjectHeader,
+  showLevelBuilderSaveButton
+} from './headerRedux';
 
 import progress from './progress';
 import {getStore} from '../redux';
@@ -317,41 +320,12 @@ function remixProject() {
   }
 }
 
-function saveStartCode(getChanges) {
-  $('.project_updated_at').text('Saving...');
-
-  $.ajax({
-    type: 'POST',
-    url: '../update_properties',
-    data: JSON.stringify(getChanges()),
-    dataType: 'json',
-    error: header.showProjectSaveError,
-    success: () => {
-      $('.project_updated_at').text('Saved');
-    }
-  });
-}
-
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-// Levelbuilder-only UI for saving changes to a level.
 header.showLevelBuilderSaveButton = function(getChanges) {
-  var projectName = $('<div class="project_name_wrapper header_text">')
-    .append(
-      $('<div class="project_name header_text">').text(
-        'Levelbuilder: edit start code'
-      )
-    )
-    .append(
-      $('<div class="project_updated_at header_text">').text('Not saved')
-    );
-
-  $('.project_info')
-    .append(projectName)
-    .append($('<div class="project_remix header_button">').text('Save'));
-  $('.project_remix').click(saveStartCode.bind(null, getChanges));
+  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
 };
 
 // Project header for script levels that are backed by a project. Shows a
