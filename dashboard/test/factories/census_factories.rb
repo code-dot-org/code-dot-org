@@ -367,9 +367,6 @@ FactoryGirl.define do
     end
 
     trait :with_ap_cs_offering do
-      transient do
-        school_year 2017
-      end
       ap_cs_offering {build_list(:ap_cs_offering, 1, school_year: school_year)}
     end
   end

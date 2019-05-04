@@ -152,7 +152,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
       :with_one_year_ago_teaches_yes,
       :with_two_years_ago_teaches_yes,
       :with_three_years_ago_teaches_yes,
-      school_year: school_year
+      school_year: 2017
     validate_summary(school, school_year, "NO")
   end
 
@@ -177,10 +177,7 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     school = create :census_school,
       :with_teaches_no_teacher_census_submission,
       :with_ap_cs_offering,
-      :with_one_year_ago_teaches_no,
-      :with_two_years_ago_teaches_no,
-      :with_three_years_ago_teaches_no,
-      school_year: school_year
+      school_year: 2017
     validate_summary(school, school_year, "YES")
   end
 
