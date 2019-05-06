@@ -7,7 +7,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
 import {
-  studentWithResponsesPropType,
+  studentWithMCResponsesPropType,
   multipleChoiceQuestionPropType
 } from './assessmentDataShapes';
 
@@ -42,7 +42,7 @@ const styles = {
 class MultipleChoiceByStudentTable extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.arrayOf(multipleChoiceQuestionPropType),
-    studentAnswerData: studentWithResponsesPropType
+    studentAnswerData: studentWithMCResponsesPropType
   };
 
   state = {
