@@ -71,7 +71,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     }
     sub_level8 = create :match, name: 'level_match_incorrect', type: 'Match', properties: {
       answers: [{text: "one"}, {text: "two"}],
-      gquestions: [{text: "one"}, {text: "two"}]
+      questions: [{text: "one"}, {text: "two"}]
     }
 
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
