@@ -489,7 +489,7 @@ FactoryGirl.define do
     end
 
     factory :sublevel do
-      sequence(:name) {|n| "sublevel#{n}"}
+      sequence(:name) {|n| "sub_level_#{n}"}
     end
   end
 
