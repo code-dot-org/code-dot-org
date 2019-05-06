@@ -36,7 +36,7 @@ const initialState = {
 };
 
 // Question types for assessments.
-const QuestionType = {
+export const QuestionType = {
   MULTI: 'Multi',
   MATCH: 'Match',
   FREE_RESPONSE: 'FreeResponse'
@@ -354,6 +354,12 @@ export const getCurrentQuestion = state => {
           answers: answers,
           questionType: QuestionType.MULTI
         };
+      } else if (question.type === QuestionType.FREE_RESPONSE) {
+        return {
+          question: question.question_text,
+          answers: null,
+          questionType: QuestionType.FREE_RESPONSE
+        };
       } else if (question.type === QuestionType.MATCH) {
         const answers = question.answers.map(answer => {
           return answer.text;
@@ -528,14 +534,16 @@ export const getStudentAnswersForCurrentQuestion = state => {
     const responsesArray = studentAssessment.level_results || [];
     const question = responsesArray[questionIndex];
     if (question) {
-      studentAnswers.push({
-        id: studentId,
-        name: studentObject.student_name,
-        answer: question.student_result
-          ? indexesToAnswerString(question.student_result)
-          : '-',
-        correct: question.status === 'correct'
-      });
+      if (question.type === QuestionType.MULTI) {
+        studentAnswers.push({
+          id: studentId,
+          name: studentObject.student_name,
+          answer: question.student_result
+            ? indexesToAnswerString(question.student_result)
+            : '-',
+          correct: question.status === 'correct'
+        });
+      }
     }
   });
   return studentAnswers;
