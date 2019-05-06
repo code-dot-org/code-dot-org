@@ -29,7 +29,7 @@ function calculateOpacity(answered) {
   return (answered + 10) / 100;
 }
 
-class MultipleChoiceAnswerCell extends Component {
+class PercentAnsweredCell extends Component {
   static propTypes = {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
@@ -82,8 +82,8 @@ class MultipleChoiceAnswerCell extends Component {
   }
 }
 
-MultipleChoiceAnswerCell.defaultProps = {
+PercentAnsweredCell.defaultProps = {
   percentValue: -1
 };
 
-export default MultipleChoiceAnswerCell;
+export default PercentAnsweredCell;

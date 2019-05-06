@@ -6,7 +6,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import PercentAnsweredCell from './PercentAnsweredCell';
 import styleConstants from '@cdo/apps/styleConstants';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
 import ReactTooltip from 'react-tooltip';
@@ -60,7 +60,7 @@ const answerColumnsFormatter = (
   }
 
   return (
-    <MultipleChoiceAnswerCell
+    <PercentAnsweredCell
       id={rowData.id}
       percentValue={percentValue}
       isCorrectAnswer={!!answerResults.isCorrect}

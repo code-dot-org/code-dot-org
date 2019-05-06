@@ -5,7 +5,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import MultipleChoiceAnswerCell from './MultipleChoiceAnswerCell';
+import PercentAnsweredCell from './PercentAnsweredCell';
 import {
   studentWithMCResponsesPropType,
   multipleChoiceQuestionPropType
@@ -77,7 +77,7 @@ class MultipleChoiceByStudentTable extends Component {
 
   correctAnswerColumnFormatter = (responses, {rowData, columnIndex}) => {
     return (
-      <MultipleChoiceAnswerCell
+      <PercentAnsweredCell
         id={rowData.id}
         displayAnswer={rowData.correctAnswer}
       />
@@ -86,7 +86,7 @@ class MultipleChoiceByStudentTable extends Component {
 
   studentAnswerColumnFormatter = (studentAnswer, {rowData, rowIndex}) => {
     return (
-      <MultipleChoiceAnswerCell
+      <PercentAnsweredCell
         id={rowData.id}
         displayAnswer={studentAnswer.responses || '-'}
         isCorrectAnswer={studentAnswer.isCorrect}
