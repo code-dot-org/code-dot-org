@@ -1,6 +1,16 @@
+- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLScg0PJasQW-uJ3TVR9dIgseGs_xnOHOWLeWJq7bYfIkgjIunA/viewform?usp=pp_url&entry.1305684097=#{current_user.id}"
+
 #diversity_survey
   #surveythanks{style: "display: none; "}
     Thank you for telling us about your students!
+    %br/
+    %br/
+    We're continuing to make improvements to our student and teacher tools.  We'd love your feedback on how we can make them work best for your classroom.
+    %br/
+    %br/
+    %a{href: survey_url, target: "_blank"}
+      %button.btn-primary
+        Go to survey
 
   #surveybody
     #headingarea
