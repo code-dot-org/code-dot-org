@@ -103,7 +103,7 @@ level 'courseE_aboutme_5', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_6', progression: 'Mini-project: Interactive Poster'
 
 stage 'Access Ability', flex_category: 'csf_impacts'
-level 'courseE_unplugged_accessAbility_2019'
+level 'DesigningForAccessibilityMarkdownLevel_2019', progression: 'Unplugged Activity'
 
 stage 'Nested Loops in Bee', flex_category: 'csf_nested_loops'
 level 'courseD_bee_nestedLoops1a_2019', progression: 'Practice'
