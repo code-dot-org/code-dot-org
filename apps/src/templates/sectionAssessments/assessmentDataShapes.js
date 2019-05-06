@@ -16,7 +16,7 @@ export const freeResponsesDataPropType = PropTypes.shape({
 
 // Represents a single answer and the number of
 // students who choose that answer
-const answerDataPropType = PropTypes.shape({
+const multipleChoiceAnswerDataPropType = PropTypes.shape({
   multipleChoiceOption: PropTypes.string,
   numAnswered: PropTypes.number,
   isCorrect: PropTypes.bool
@@ -27,7 +27,7 @@ export const multipleChoiceDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   question: PropTypes.string.isRequired,
   questionNumber: PropTypes.number,
-  answers: PropTypes.arrayOf(answerDataPropType),
+  answers: PropTypes.arrayOf(multipleChoiceAnswerDataPropType),
   totalAnswered: PropTypes.number.isRequired,
   notAnswered: PropTypes.number.isRequired
 });
@@ -39,17 +39,17 @@ export const multipleChoiceDataPropType = PropTypes.shape({
  * multiple choice question.
  * responses: returns strings such as 'A', or 'A, C'
  */
-export const studentResponsePropType = PropTypes.shape({
+export const studentMCResponsePropType = PropTypes.shape({
   isCorrect: PropTypes.bool,
   responses: PropTypes.string
 });
 
 // Represents a single student and a set of the student's answers for
 // a single assessment's multiple choice questions
-export const studentWithResponsesPropType = PropTypes.shape({
+export const studentWithMCResponsesPropType = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
-  studentResponses: PropTypes.arrayOf(studentResponsePropType)
+  studentResponses: PropTypes.arrayOf(studentMCResponsePropType)
 });
 
 // Represents a single multiple choice question structure
