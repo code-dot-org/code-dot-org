@@ -46,6 +46,10 @@ ruby
     properties['height'] || '40'
   end
 
+  def question
+    properties['content1'] || properties['content2'] || properties['content3'] || properties['markdown'] || ''
+  end
+
   def question_content_class
     question_content_blank = properties['content1'].blank? &&
       properties['content2'].blank? &&
