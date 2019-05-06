@@ -46,7 +46,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :status_change_log,
     :scholarship_status,
     :all_scores,
-    :total_score
+    :total_score,
+    :allow_sending_principal_email
   )
 
   def email
@@ -230,5 +231,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def scholarship_status
     object.try(:scholarship_status)
+  end
+
+  def allow_sending_principal_email
+    object.try(:allow_sending_principal_email?)
   end
 end

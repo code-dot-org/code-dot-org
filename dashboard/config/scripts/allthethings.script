@@ -253,3 +253,7 @@ assessment 'allthethings-mini-rubric-gamelab'
 
 stage 'Pluralsight Test', lockable: true
 assessment 'Pluralsight LevelGroup Test'
+
+stage 'Externals Optionally Displayed as Unplugged'
+level 'allthethings_external_displayed_as_unplugged'
+level 'allthethings_external_not_displayed_as_unplugged'

@@ -49,6 +49,11 @@ module SeleniumBrowser
       HttpClient.new name: 'webdriver'
     end
 
+    def read_timeout=(timeout)
+      super
+      @http&.read_timeout = timeout
+    end
+
     # Set HTTP read timeout within the specified block.
     def with_read_timeout(timeout)
       old_timeout = read_timeout
