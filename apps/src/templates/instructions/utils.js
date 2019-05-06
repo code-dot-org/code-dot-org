@@ -72,7 +72,8 @@ export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
 function removeCommentNodes(root) {
   const commentWalker = document.createTreeWalker(
     root,
-    NodeFilter.SHOW_COMMENT
+    NodeFilter.SHOW_COMMENT,
+    {acceptNode: node => NodeFilter.FILTER_ACCEPT}
   );
   // commentWalker.currentNode will always equal the root to start with, so
   // call nextNode to move it on to the first Comment node
