@@ -850,7 +850,13 @@ fr:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': caverne
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': désert
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grille
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arc-en-ciel
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sous-marin
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hiver
       gamelab_setPosition:
         text: déplacer {THIS} à la position {POSITION}
         options:
@@ -886,6 +892,11 @@ fr:
       gamelab_setup:
         text: configuration
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': quand
@@ -976,6 +987,11 @@ fr:
             "'right'": vers la droite
       gamelab_whenRightArrow:
         text: quand on appuie sur la flèche de droite
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': quand
+            '"while"': tant que
       gamelab_whenTrue:
         text: quand {CONDITION} vrai
       gamelab_whileKey:

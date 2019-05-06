@@ -1,5 +1,5 @@
 require 'test_helper'
-require_relative '../omniauth_callbacks_controller/utils'
+require_relative '../omniauth/utils'
 
 module RegistrationsControllerTests
   #

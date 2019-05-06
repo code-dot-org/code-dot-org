@@ -921,7 +921,13 @@ it:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': griglia
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arcobaleno
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sottomarino
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
       gamelab_setDirection:
         text: imposta la direzione di movimento di {SPRITE} verso {DIRECTION}
       gamelab_setPosition:
@@ -962,6 +968,11 @@ it:
       gamelab_showTitleScreen:
         text: mostra schermata introduttiva {BREAK} titolo {TITLE} testo {SUBTITLE}
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': quando
@@ -1056,6 +1067,11 @@ it:
         text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whenTouchingAny:
         text: quando {SPRITE} tocca qualsiasi {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': quando
+            '"while"': mentre
       gamelab_whenTrue:
         text: quando {CONDITION} è vero
       gamelab_whenUpArrow:

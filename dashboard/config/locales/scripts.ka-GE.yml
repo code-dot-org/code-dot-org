@@ -5167,10 +5167,10 @@ ka:
               name: გადახედეთ თქვენს პროექტს
             Present Your Project:
               name: წარმოადგინეთ თქვენი პროექტი
-            new stage:
-              name: ახალი დონე
             The Artist:
               name: მხატვარი
+            Nested Loops in the Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
             Copyright and Creativity:
               name: საავტორო უფლებები და შემოქმედებითობა
             Internet:
@@ -5181,12 +5181,14 @@ ka:
               name: ციფრული გაზიარება
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction to Online Puzzles:
               name: შესავალი ონლაინ თავსატეხებში
             Relay Programming:
               name: პროგრამირება ცვლაში
             Debugging in Collector:
-              name: გამართვა შემგროვებელში
+              name: გამართვა ლორელთან ერთად
             Events in Bounce:
               name: მოვლენები მხტუნავში
             Loops in Ice Age:
@@ -5194,7 +5196,7 @@ ka:
             Loops in Artist:
               name: ციკლები მხატვარში
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
             Nested Loops in Artist:
               name: ჩადგმული ციკლები მხატვარში
             While Loops in Farmer:
@@ -5204,13 +5206,13 @@ ka:
             Conditionals in Bee:
               name: პირობითი ბრძანებები ფუტკარში
             Conditionals & Loops in Harvester:
-              name: პირობითი წინადადებები და ციკლები ფერმერში
+              name: მოსავლის აღება პირობითი წინადადებებით
             Digital Citizenship:
               name: ციფრული მოქალაქეობა
             Build a Play Lab Game:
               name: შექმენით სათამაშო ლაბორატორიის თამაში
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
             Artist Binary:
               name: 'მხატვარი: ორობითი'
             Build a Star Wars Game:
@@ -5234,8 +5236,6 @@ ka:
               name: ჩასმული ციკლები
             Conditionals with Cards:
               name: პირობები ბარათებით
-            Conditionals:
-              name: პირობითი ბრძანებები
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
             Build a Star Wars Game:
@@ -5248,7 +5248,7 @@ ka:
                 ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ
                 პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები.
                 ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების
                 გამოყენებით.
@@ -5286,9 +5286,9 @@ ka:
                 ეს გაკვეთილი აჩვენებს მოსწავლეებს, თუ როგორი გამოსადეგი შეიძლება იყოს
                 ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
             Nested Loops in Artist:
-              name: ჩადგმული ციკლები მხატვარში
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
             Conditionals in Minecraft:
               name: პირობითი წინადადებები Minecraft-ში
             Digital Sharing:
@@ -5404,8 +5404,6 @@ ka:
             შეძლებთ!
           description_audience: 'ასაკი: 6-10'
           stages:
-            Building a Foundation:
-              name: ფუნდამენტის აშენება
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
@@ -5413,15 +5411,15 @@ ka:
             'Real-life Algorithms: Paper Planes':
               name: 'ცხოვრებისეული ალგორითმები: ქაღალდის თვითმფრინავები'
             Programming in Collector:
-              name: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Loops in Artist:
               name: ციკლები მხატვარში
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
             Build a Flappy Game:
               name: ააწყვეთ მოფარფატე ჩიტის თამაში
             Events in Play Lab:
@@ -5429,9 +5427,9 @@ ka:
             Binary Bracelets:
               name: ორობითი სამაჯურები
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
             Sticker Art with Loops:
               name: ციკლები მხატვარში
         gamelab:
@@ -5444,10 +5442,8 @@ ka:
             არ იცის.
           description_audience: 'ასაკი: 4-7'
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'ცხოვრებისეული ალგორითმები: დათესე მცენარე'
             'Programming: Happy Maps':
-              name: 'პროგრამირება: ბედნიერი რუკები'
+              name: ბედნიერი რუკები
               description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ
                 მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის
                 პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს,
@@ -5465,8 +5461,6 @@ ka:
                 განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
             Loops in Artist:
               name: ციკლები მხატვარში
-            'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
               description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება,
@@ -5475,8 +5469,6 @@ ka:
                 კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
-            Loops in Ice Age:
-              name: ციკლები გამყინვარების პერიოდში
             Programming with Rey and BB-8:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
         courseb-2019:
@@ -5503,10 +5495,10 @@ ka:
               name: ციკლები შემგროვებელში
             Loops in Artist:
               name: ციკლები მხატვარში
-            'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
+            'Loops: Getting Loopy':
+              name: ჩაციკლვა
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
         pre-express-2019:
@@ -5879,3 +5871,9 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: გრაფიკული პროგრამირება ქაღალდზე
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
