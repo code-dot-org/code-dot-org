@@ -129,7 +129,7 @@ export const studentOverviewData = [
   }
 ];
 
-// Data for single student multiple choice assessment
+// Data for single student multiple choice assessment table
 // type: studentWithMCResponsesPropType
 export const studentMCData = {
   id: 1,
