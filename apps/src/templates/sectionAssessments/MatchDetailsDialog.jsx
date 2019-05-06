@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {getCurrentQuestion} from './sectionAssessmentsRedux';
+import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 
@@ -42,7 +42,7 @@ class MatchDetailsDialog extends Component {
         style={styles.dialog}
         handleClose={this.props.closeDialog}
       >
-        {questionAndAnswers.questionType === 'Match' && (
+        {questionAndAnswers.questionType === QuestionType.MATCH && (
           <div>
             <h2>{i18n.questionDetails()}</h2>
             <div style={styles.instructions}>
@@ -54,8 +54,8 @@ class MatchDetailsDialog extends Component {
                 <table>
                   <thead>
                     <tr>
-                      <th>Option</th>
-                      <th>Answer</th>
+                      <th>{i18n.option()}</th>
+                      <th>{i18n.answer()}</th>
                     </tr>
                   </thead>
                   <tbody>

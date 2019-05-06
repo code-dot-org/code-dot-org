@@ -160,7 +160,7 @@ describe('MultipleChoiceAssessmentsOverviewTable', () => {
       />
     );
 
-    const answerCells = wrapper.find('MultipleChoiceAnswerCell');
+    const answerCells = wrapper.find('PercentAnsweredCell');
     expect(answerCells).to.have.length(32);
 
     const tableHeaders = wrapper.find('th');
