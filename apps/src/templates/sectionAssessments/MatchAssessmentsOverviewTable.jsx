@@ -18,6 +18,7 @@ export const COLUMNS = {
 
 const ANSWER_COLUMN_WIDTH = 100;
 const PADDING = 20;
+const ANSWER_CHAR_LIMIT = 30;
 
 const styles = {
   answerColumnHeader: {
@@ -130,9 +131,9 @@ class MatchAssessmentsOverviewTable extends Component {
     property: 'percentAnswered',
     header: {
       label:
-        columnLabel.length < 30
+        columnLabel.length < ANSWER_CHAR_LIMIT
           ? `${columnLabel}`
-          : `${columnLabel.slice(0, 30)}...`,
+          : `${columnLabel.slice(0, ANSWER_CHAR_LIMIT)}...`,
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
