@@ -138,6 +138,10 @@ module Pd::Application
       status == 'pending'
     end
 
+    def waitlisted?
+      status == 'waitlisted'
+    end
+
     def update_accepted_date
       self.accepted_at = accepted? ? Time.now : nil
     end

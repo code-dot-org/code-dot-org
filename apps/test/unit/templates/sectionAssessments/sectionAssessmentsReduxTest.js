@@ -10,7 +10,7 @@ import sectionAssessments, {
   getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
-  getStudentsMCSummaryForCurrentAssessment,
+  getStudentsMCandMatchSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
@@ -1375,9 +1375,9 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    describe('getStudentsMCSummaryForCurrentAssessment', () => {
+    describe('getStudentsMCandMatchSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
-        const result = getStudentsMCSummaryForCurrentAssessment({
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
           sectionData: {
             section: {
@@ -1413,6 +1413,8 @@ describe('sectionAssessmentsRedux', () => {
                     123: {
                       multi_correct: 4,
                       multi_count: 10,
+                      match_correct: 2,
+                      match_count: 4,
                       submitted: true,
                       timestamp: date,
                       url: 'code.org'
@@ -1423,7 +1425,7 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentsMCSummaryForCurrentAssessment(
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment(
           stateWithAssessment
         );
         assert.deepEqual(result, [
@@ -1432,6 +1434,8 @@ describe('sectionAssessmentsRedux', () => {
             name: 'Ilulia',
             numMultipleChoice: 10,
             numMultipleChoiceCorrect: 4,
+            numMatch: 4,
+            numMatchCorrect: 2,
             isSubmitted: true,
             inProgress: false,
             submissionTimeStamp: date,
@@ -1473,6 +1477,8 @@ describe('sectionAssessmentsRedux', () => {
                   123: {
                     multi_correct: 4,
                     multi_count: 10,
+                    match_correct: 2,
+                    match_count: 4,
                     submitted: true,
                     timestamp: '2018-06-12 04:53:36 UTC',
                     url: 'code.org'
@@ -1483,7 +1489,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         }
       };
-      const result = getStudentsMCSummaryForCurrentAssessment(
+      const result = getStudentsMCandMatchSummaryForCurrentAssessment(
         stateWithAssessment
       );
       assert.deepEqual(result, [

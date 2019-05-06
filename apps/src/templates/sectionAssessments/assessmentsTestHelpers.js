@@ -22,6 +22,8 @@ export const studentOverviewData = [
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.notStarted
@@ -31,6 +33,8 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
+    numMatchCorrect: 3,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: true,
     submissionTimeStamp: testDataTimestamps.inProgress
@@ -40,6 +44,8 @@ export const studentOverviewData = [
     name: 'Erin',
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
+    numMatchCorrect: 8,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.newest
@@ -50,6 +56,8 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
     isSubmitted: true,
+    numMatchCorrect: 10,
+    numMatch: 10,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.newer
   },
@@ -58,6 +66,8 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.new
@@ -67,6 +77,8 @@ export const studentOverviewData = [
     name: 'Mike',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.old
@@ -76,6 +88,8 @@ export const studentOverviewData = [
     name: 'Dani',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.older
@@ -85,6 +99,8 @@ export const studentOverviewData = [
     name: 'Amanda',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.oldest
@@ -94,6 +110,8 @@ export const studentOverviewData = [
     name: 'Nkiru',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: true,
     submissionTimeStamp: testDataTimestamps.inProgress
@@ -103,15 +121,17 @@ export const studentOverviewData = [
     name: 'Karis',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.notStarted
   }
 ];
 
-// Data for single student assessments table
-// type: studentWithResponsesPropType
-export const studentData = {
+// Data for single student multiple choice assessment table
+// type: studentWithMCResponsesPropType
+export const studentMCData = {
   id: 1,
   name: 'Caley',
   studentResponses: [
