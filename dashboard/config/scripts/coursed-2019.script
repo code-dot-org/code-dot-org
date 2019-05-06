@@ -1,3 +1,4 @@
+hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"]]
 stage_extras_available true
