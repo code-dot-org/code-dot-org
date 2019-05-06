@@ -26,6 +26,11 @@ schema.attributes.img.push('style', 'height', 'width');
 schema.tagNames.push('span');
 schema.attributes.span = ['dataUrl', 'className'];
 
+// Add support for inline styles (gross)
+// TODO replace all inline styles in our curriculum content with
+// semantically-significant content
+schema.attributes['*'].push('style');
+
 // Add support for Blockly XML
 schema.clobber = [];
 schema.tagNames.push(
