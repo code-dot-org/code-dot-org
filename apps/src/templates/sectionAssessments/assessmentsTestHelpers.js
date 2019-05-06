@@ -129,8 +129,7 @@ export const studentOverviewData = [
   }
 ];
 
-// Data for single student multiple choice
-// \assessments table
+// Data for single student multiple choice assessment
 // type: studentWithMCResponsesPropType
 export const studentMCData = {
   id: 1,
