@@ -1,3 +1,4 @@
+hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursef/standards/"]]
 stage_extras_available true
@@ -23,7 +24,7 @@ level 'MC_HOC_2017_Ali_2019', progression: 'Practice'
 level 'MC_HOC_2017_FP20x20_2019', progression: 'Free Play'
 
 stage 'Learning Sprites with Sprite Lab', flex_category: 'ramp_up'
-level 'CourseEF_video_IntroSpriteLab_2019', progression: 'Introducing Sprite LAb'
+level 'CourseEF_video_IntroSpriteLab_2019', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_2019', progression: 'Prediction'
 level 'Fish Tank 2-validated_2019', progression: 'Mini-Project: Swimming Fish'
 level 'Fish Tank 3-validated_2019', progression: 'Mini-Project: Swimming Fish'
@@ -179,10 +180,6 @@ stage 'Digital Sharing', flex_category: 'csf_digcit'
 level 'courseE_unplugged_CnC_2019'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
-level 'courseF_video_csMatters_2019', progression: 'Video'
-level 'InspirationalArtwork_2019', progression: 'Example Projects'
-level 'courseF_project_1_2019', progression: 'Example Projects'
-level 'Begin planning your project_2018_2019', progression: 'Being planning your project'
-level 'Course F: Artist Project_2019', progression: 'Artist Project'
+level 'courseF_project_exemplars_2019', progression: 'Example Projects'
 level 'CourseF_Project_SpriteLab_2019', progression: 'Sprite Lab Project'
-level 'Prepare for your presentation_2018_2019', progression: 'Prepare for your presentation'
+level 'Course F: Artist Project_2019', progression: 'Artist Project'
