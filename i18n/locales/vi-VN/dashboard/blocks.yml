@@ -649,7 +649,13 @@ vi:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hang động
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': thành phố
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sa mạc
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': lưới
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': cầu vồng
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dưới nước
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': mùa đông
       gamelab_setPosition:
         text: di chuyển {THIS} đến vị trí {POSITION}
         options:
@@ -683,6 +689,11 @@ vi:
       gamelab_setup:
         text: thiết lập
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': Khi nào
+            '"while"': Lặp khi
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': Khi nào
@@ -724,6 +735,11 @@ vi:
             "'down'": xuống
             "'left'": trái
             "'right'": phải
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': Khi nào
+            '"while"': Lặp khi
       gamelab_whileKey:
         options:
           KEY:

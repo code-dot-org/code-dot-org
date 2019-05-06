@@ -305,12 +305,6 @@ he:
     header:
       finished_hoc: סיימתי את שעת הקוד שלי
       sign_in_to_save: התחבר כדי לשמור את התקדמות
-      free_play:
-        playlab: צור אפליקציה במעבדת הצעצועים
-        artist: צייר משהו
-        applab: צור אפליקציה במעבדת המשחקים
-        gamelab: צור פרויקט מעבדת משחקים
-        weblab: צור פרויקט מעבדת אינטרנט (ביטה)
       my_dashboard: לוח הבקרה שלי
       course_catalog: קטלוג קורסים
       project_gallery: פרויקטים

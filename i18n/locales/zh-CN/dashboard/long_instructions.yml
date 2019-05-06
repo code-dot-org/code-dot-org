@@ -3,6 +3,7 @@ zh-CN:
   data:
     long_instructions:
       "'pre-assessment survey q25A'": 如果是，在当前的计算机科学课程前，你还学过什么计算机科学课程？
+      "(joshl) Dance Party 1-validated_2019": "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       2-3 Artist 1 new: |-
         嗨，我是一个艺术家。您可以编写代码来让我画几乎任何东西。使用几个块，让我在这幅画中沿成灰色线条画。（每条线是 100 像素长）\\r
         \\r
@@ -18150,6 +18151,7 @@ zh-CN:
         -   当外星人相互接触时，让他们开始不同的舞蹈
       Dance Party Predict: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       Dance Party Predict_2019: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
+      Dance Party Template 2_2019: 模板
       Dance_Party_01: |-
         _让我们开个舞会吧！_
 
@@ -22797,6 +22799,7 @@ zh-CN:
       Virtual Pet Freeplay_2019: "自由发挥：还能让长颈鹿做些什么？ \n\n-   能添加更多特殊组件吗？  \n-   能为她找到朋友吗？  "
       Virtual Pet Freeplay_simple: "自由发挥：你还能让长颈鹿做些什么？ \n\n\\-你能为长颈鹿添加更多特殊组件吗？  \n-你能为她找几个朋友吗？  "
       Virtual Pet Predict: '**做预测：**这是杰拉尔丁，你的宠物长颈鹿。你觉得在按下"▶ 运行"之后点击她会发生什么事？'
+      Virtual Pet Template_2019: "那边角落里有个泥坑。  \n\n创建一个 **事件** 使得杰拉尔丁碰到泥坑的时候，她的颜色会变成棕色。"
       What is the difference between formative and summative assessment?: 下面的连接提供了正式的和总结性的评估的定义和示例的资源：
       aE1: |-
         <img src="https://images.code.org/fa3c416b74ff9071455535955bc4df35-image-1465507662295.gif"
@@ -33312,6 +33315,7 @@ zh-CN:
         使用自上而下的方法描述如何创建一个程序使用随机数字在蓝色背景上绘制一个的白色雪花，使得每次运行代码时雪花都是唯一的。\\r
         \\r
         你不需要编写要使用的确切代码或模块, 但是你应该描述你需要创建哪些函数, 在哪里将或不使用循环, 以及在哪里将或不会使用随机数字。
+      test_sarah: 你好
       timeforcs_demo_sl_1: "**猜猜看：** 这个图形名叫`外星人一号`！当点击她时猜猜会发生什么？"
       timeforcs_demo_sl_2: "这个外星人对自己在火星上的舞技非常自信，但现在她只能上下移动了。 \n\n你能在<xml><block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n<value name=\"SPRITE\">\n<block type=\"sprite_variables_get\">\n\n<title name=\"VAR\">alien1</title>\n</block>\n</value>\n</block></xml>中改变行为，让它可以旋转吗？  "
       timeforcs_demo_sl_4: "创造一个叫`外星人2`的精灵。 \n\n让她在被点击时完成一个新的舞步。  "

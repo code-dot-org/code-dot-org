@@ -265,12 +265,6 @@ ja:
     header:
       finished_hoc: "終了しました！"
       sign_in_to_save: '進捗状況を保存するためにサインインする'
-      free_play:
-        playlab: 'プレイラボ で作る'
-        artist: 'アーティストで作る'
-        applab: 'アプリラボ で作る'
-        gamelab: 'ゲームラボで作る'
-        weblab: 'Web 研究室 (ベータ版) のプロジェクトを作る'
       my_dashboard: "マイ ダッシュボード"
       course_catalog: "コースカタログ"
       project_gallery: "プロジェクト"

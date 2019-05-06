@@ -1688,6 +1688,8 @@ uk:
               name: Танцювальна вечірка
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
             Relay Programming:
               name: Естафетне програмування
             Loops in Ice Age:
@@ -1697,7 +1699,7 @@ uk:
             Digital Citizenship:
               name: Цифрове громадянство
             'Unplugged: Binary':
-              name: 'Безмашинні вправи: двійкова система'
+              name: Двійкові зображення
             Artist Binary:
               name: 'Художник: двійкова система'
             Dance Party:
@@ -1710,8 +1712,8 @@ uk:
               name: Вкладені цикли
             Conditionals with Cards:
               name: Листівки та умови
-            Conditionals:
-              name: Умови
+            'Functions: Songwriting':
+              name: Написання пісень
             Internet:
               name: Інтернет
             Crowdsourcing:
@@ -1747,22 +1749,20 @@ uk:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Закладання основ
             'Real-life Algorithms: Paper Planes':
               name: 'Життєві алгоритми: Паперові літачки'
+            'Events: The Big Event':
+              name: Велика подія
             Binary Bracelets:
               name: Двійкові браслети
         gamelab:
           title: Ігрова лабораторія
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Життєві алгоритми: посадити насіння'
+            'Programming: Happy Maps':
+              name: Щасливі карти
             Going Places Safely:
               name: Безпечне добирання
-            Loops in Ice Age:
-              name: Петлі в Ice Age
         courseb-2019:
           stages:
             Move It, Move It:
@@ -1771,6 +1771,8 @@ uk:
               name: Твій цифровий слід
             Loops in Ice Age:
               name: Петлі в Ice Age
+            'Loops: Getting Loopy':
+              name: Економія на повторах
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1837,3 +1839,7 @@ uk:
               name: Листівки та умови
             Building a Foundation:
               name: Закладання основ
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Програмування по клітинках

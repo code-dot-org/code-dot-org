@@ -1372,14 +1372,14 @@ hr:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafičko programiranje
             Relay Programming:
               name: Odnosno programiranje
             Conditionals with Cards:
               name: Uvjeti s kartama
             Digital Citizenship:
               name: Digitalno građanstvo
-            'Unplugged: Binary':
-              name: 'Izvanmrežno: Logički operatori'
             Artist Binary:
               name: Umjetnik binarno
         coursee-2019:
@@ -1390,8 +1390,8 @@ hr:
               name: Ugniježđene petlje
             Conditionals with Cards:
               name: Uvjeti s kartama
-            Conditionals:
-              name: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1422,16 +1422,16 @@ hr:
               name: ništa
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Izrada temelja
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi iz stvarnog života: Papirnati avioni'
+            'Events: The Big Event':
+              name: Veliki događaj
             Binary Bracelets:
               name: Binarne narukvice
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmi u stvarnom životu: Posadi sjeme'
+            'Programming: Happy Maps':
+              name: Vesele karte
             Going Places Safely:
               name: Sigurna putovanja
         courseb-2019:
@@ -1440,6 +1440,8 @@ hr:
               name: Pomakni, pomakni
             Your Digital Footprint:
               name: Tvoj digitalni trag
+            'Loops: Getting Loopy':
+              name: Zapetljancije
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1488,3 +1490,7 @@ hr:
               name: Uvjeti s kartama
             Building a Foundation:
               name: Izrada temelja
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Grafičko programiranje

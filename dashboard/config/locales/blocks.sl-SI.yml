@@ -212,7 +212,13 @@ sl:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': votlina
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': puščava
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': mavrica
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod
+              vodo
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
       gamelab_setPosition:
         options:
           POSITION:
@@ -229,6 +235,11 @@ sl:
             '"scale"': velikost
             '"height"': višina
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': ko
@@ -265,6 +276,11 @@ sl:
             "'down'": dol
             "'left'": levo
             "'right'": desno
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': ko
+            '"while"': dokler
       gamelab_whileKey:
         options:
           KEY:

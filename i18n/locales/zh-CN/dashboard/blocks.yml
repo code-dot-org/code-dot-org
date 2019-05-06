@@ -619,7 +619,12 @@ zh-CN:
             '"space"': 空间
             '"enter"': 回车
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -629,6 +634,7 @@ zh-CN:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -638,6 +644,16 @@ zh-CN:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高
         options:
@@ -788,7 +804,12 @@ zh-CN:
             '"right"': 向右
             '"space"': 空间
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -798,6 +819,7 @@ zh-CN:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -939,7 +961,13 @@ zh-CN:
         text: 设置背景为 {IMG}
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水底
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 没有
       gamelab_setDirection:
         text: 设置 {SPRITE} 移动方向为 {DIRECTION}
@@ -980,10 +1008,22 @@ zh-CN:
         text: 将 {THIS} 的颜色改为 {COLOR}
       gamelab_setup:
         text: 设置
+      gamelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          收集
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} 被点击"
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': 当
@@ -1080,6 +1120,11 @@ zh-CN:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whenTouchingAny:
         text: 当 {SPRITE} 碰到任何 {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_whenTrue:
         text: 当 {CONDITION} 为真时
       gamelab_whenUpArrow:
@@ -1362,6 +1407,8 @@ zh-CN:
         text: 向左转
       RyanLab_turnRight:
         text: 向右转
+      SpriteLab2Beta_spriteSay:
+        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
           创建精灵
@@ -1387,6 +1434,10 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
+      aalab_addBehaviorForDuration:
+        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
+      aalab_addBehaviorSimpleFlexible:
+        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       aalab_addToSpriteGroup:
@@ -1450,15 +1501,26 @@ zh-CN:
             '"left"': 向左
             '"right"': 向右
             '"space"': 空间
+      aalab_locationOf:
+        text: aalab {SPRITE} 的位置
       aalab_location_picker:
         text: "{LOCATION}"
+      aalab_moveForward:
+        text: aalab 向前移动 {SPRITE} {DISTANCE} 像素
       aalab_moveInDirection:
+        text: aalab 移动 {SPRITE} {DISTANCE} 像素 {DIRECTION}
         options:
           DIRECTION:
             '"North"': 北
             '"East"': 东
             '"South"': 南
             '"West"': 西
+      aalab_moveToward:
+        text: aalab 移动 {SPRITE} 距离 {DISTANCE} 朝向目标 {TARGET}
+      aalab_nameStringSay:
+        text: "{NAMESTRING} 说 {MESSAGE}"
+      aalab_prompt:
+        text: 提问 {MESSAGE}
       aalab_randomLocation:
         text: 随机位置
       aalab_removeOneAndAll:
@@ -1468,11 +1530,15 @@ zh-CN:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
       aalab_setCollidable:
+        text: aalab 设置 {SPRITE} 可相撞于 {VAL}
         options:
           VAL:
             '"true"': 真
             '"false"': 错
+      aalab_setDirection:
+        text: aalab 设置 {SPRITE} 运动方向为 {DIRECTION}
       aalab_setProp:
+        text: aalab 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
@@ -1481,22 +1547,62 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
+      aalab_setSpriteVariable:
+        text: aalab 设置 {VARIABLE} 到 {SPRITE}
       aalab_showCustomText:
+        text: 显示文字 {TEXT} 在位置 {LOCATION} 字体大小 {SIZE} 颜色 {COLOR} 显示时长为 {DURATION}
         options:
           DURATION:
+            '"1"': 1 秒
+            '"2"': 2 秒
+            '"3"': 3 秒
+            '"4"': 4 秒
+            '"5"': 5 秒
             '"0"': 永远
+      aalab_showSpriteLabel:
+        text: 显示精灵 {SPRITE} 的标签 {TEXT} {LOCATION}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} 说 {MESSAGE}"
+      aalab_spriteSay:
+        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       aalab_toggleHideCustomText:
+        text: "{OPTION} 自定义文字"
         options:
           OPTION:
             '"show"': 显示
             '"hide"': 隐藏
+      binary_drawBin:
+        text: 绘制二进制 {BIN}
+      binary_drawBinScreen:
+        text: |-
+          绘制屏幕
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: 绘制十进制 {DEC}
       binary_drawPixelHere:
+        text: 设置像素 {VAL}
         options:
           VAL:
-            '0': 'off'
+            '0': 关闭
             '1': 开启
             '"toggle"': 切换
+      binary_drawString:
+        text: 绘制字符串 {STR}
+      binary_goTo:
+        text: 跳到 {LOC}
+      binary_goToHome:
+        text: 跳到左上角
+      binary_gridSize:
+        text: 设置网格尺寸大小 {SIZE}
       binary_move:
+        text: 移动 {DIR}
         options:
           DIR:
             '"up"': 向上
