@@ -159,11 +159,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               student_result = level_response["result"].split(",", -1)
               # If a student did not answer some of the matching question we will record that as nil
               student_result = student_result.map do |result|
-                if result == ""
-                  nil
-                else
-                  result.to_i
-                end
+                result.empty? ? nil : result.to_i
               end
               level_result[:student_result] = student_result
               option_status = []
