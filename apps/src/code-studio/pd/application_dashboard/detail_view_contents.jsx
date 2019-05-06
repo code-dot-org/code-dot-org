@@ -1200,6 +1200,13 @@ export class DetailViewContents extends React.Component {
               {principalApprovalUrl}
             </a>
           </p>
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showResendEmailButton={
+              this.props.applicationData.allow_sending_principal_email
+            }
+            onChange={this.handlePrincipalApprovalChange}
+          />
         </div>
       );
     }

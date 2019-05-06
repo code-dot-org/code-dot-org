@@ -59,4 +59,19 @@ export const multipleChoiceQuestionPropType = PropTypes.shape({
   correctAnswer: PropTypes.string.isRequired
 });
 
+// Summary of student answers for match and multiple choice questions
+export const studentOverviewDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  numMultipleChoiceCorrect: PropTypes.number,
+  numMultipleChoice: PropTypes.number,
+  numMatchCorrect: PropTypes.number,
+  numMatch: PropTypes.number,
+  /* timestamp is passed in as a Date so the column can be sorted accurately. See note in sectionAssessmentsRedux for details*/
+  submissionTimeStamp: PropTypes.instanceOf(Date).isRequired,
+  isSubmitted: PropTypes.bool.isRequired,
+  inProgress: PropTypes.bool.isRequired,
+  url: PropTypes.string
+});
+
 export const QUESTION_CHARACTER_LIMIT = 110;
