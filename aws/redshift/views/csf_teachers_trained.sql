@@ -15,8 +15,9 @@ pd_workshop_based as
     JOIN dashboard_production_pii.pd_workshops pdw ON pdw.id = pde.pd_workshop_id
   JOIN dashboard_production_pii.pd_sessions pds ON pds.pd_workshop_id = pdw.id
   WHERE course = 'CS Fundamentals'
-  AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive Workshop') or pdw.subject is null)
+  AND   (pdw.subject IN ( 'Intro Workshop', 'Intro', 'Deep Dive') or pdw.subject is null)
   AND pda.deleted_at is null
+  AND user_id IS NOT NULL 
   GROUP BY user_id, workshop_id, section_id
 ), 
 

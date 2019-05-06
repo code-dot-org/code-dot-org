@@ -10,7 +10,7 @@ import sectionAssessments, {
   getCurrentScriptAssessmentList,
   getMultipleChoiceStructureForCurrentAssessment,
   getStudentMCResponsesForCurrentAssessment,
-  getStudentsMCSummaryForCurrentAssessment,
+  getStudentsMCandMatchSummaryForCurrentAssessment,
   getSurveyFreeResponseQuestions,
   getAssessmentsFreeResponseResults,
   getMultipleChoiceSurveyResults,
@@ -28,7 +28,8 @@ import sectionAssessments, {
   setFeedback,
   doesCurrentCourseUseFeedback,
   getExportableFeedbackData,
-  isCurrentScriptCSD
+  isCurrentScriptCSD,
+  notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
@@ -1374,9 +1375,9 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    describe('getStudentsMCSummaryForCurrentAssessment', () => {
+    describe('getStudentsMCandMatchSummaryForCurrentAssessment', () => {
       it('returns an empty object when no assessments in redux', () => {
-        const result = getStudentsMCSummaryForCurrentAssessment({
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
           sectionData: {
             section: {
@@ -1412,6 +1413,8 @@ describe('sectionAssessmentsRedux', () => {
                     123: {
                       multi_correct: 4,
                       multi_count: 10,
+                      match_correct: 2,
+                      match_count: 4,
                       submitted: true,
                       timestamp: date,
                       url: 'code.org'
@@ -1422,7 +1425,7 @@ describe('sectionAssessmentsRedux', () => {
             }
           }
         };
-        const result = getStudentsMCSummaryForCurrentAssessment(
+        const result = getStudentsMCandMatchSummaryForCurrentAssessment(
           stateWithAssessment
         );
         assert.deepEqual(result, [
@@ -1431,15 +1434,19 @@ describe('sectionAssessmentsRedux', () => {
             name: 'Ilulia',
             numMultipleChoice: 10,
             numMultipleChoiceCorrect: 4,
+            numMatch: 4,
+            numMatchCorrect: 2,
             isSubmitted: true,
-            submissionTimeStamp: date.toLocaleString(),
+            inProgress: false,
+            submissionTimeStamp: date,
             url: 'code.org'
           },
           {
             id: 99,
             name: 'Issac',
             isSubmitted: false,
-            submissionTimeStamp: 'Not started'
+            inProgress: false,
+            submissionTimeStamp: notStartedFakeTimestamp
           }
         ]);
       });
@@ -1470,6 +1477,8 @@ describe('sectionAssessmentsRedux', () => {
                   123: {
                     multi_correct: 4,
                     multi_count: 10,
+                    match_correct: 2,
+                    match_count: 4,
                     submitted: true,
                     timestamp: '2018-06-12 04:53:36 UTC',
                     url: 'code.org'
@@ -1480,7 +1489,7 @@ describe('sectionAssessmentsRedux', () => {
           }
         }
       };
-      const result = getStudentsMCSummaryForCurrentAssessment(
+      const result = getStudentsMCandMatchSummaryForCurrentAssessment(
         stateWithAssessment
       );
       assert.deepEqual(result, [
@@ -1488,7 +1497,8 @@ describe('sectionAssessmentsRedux', () => {
           id: 99,
           name: 'Issac',
           isSubmitted: false,
-          submissionTimeStamp: 'Not started'
+          inProgress: false,
+          submissionTimeStamp: notStartedFakeTimestamp
         }
       ]);
     });

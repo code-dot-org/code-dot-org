@@ -10,6 +10,7 @@ new_name 'csd2-2017'
 family_name 'csd2'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2 L1 Overview', named: true
@@ -88,7 +89,7 @@ level 'CSD U2 add content', progression: 'Website Project'
 level 'CSD U2 header footer', progression: 'Website Project'
 level 'CSD U2 project review', progression: 'Website Project'
 level 'CSD U2 project share', progression: 'Website Project'
-assessment 'csd-pulse-check-survey-1-levelgroup U2Ch1', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U2Ch1', progression: 'Reflection', assessment: true
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 level 'Unit 2 Lesson 7 Overview', named: true
@@ -139,7 +140,7 @@ level 'CSDU2 - PW - Class Style Personal Site', progression: 'Styling with Class
 stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 level 'Unit 2 Lesson 16 Overview', named: true
 level 'Final Personal Website', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection', assessment: true
 
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
-assessment 'csd-post-survey-2018-markdown-with-link-to-survey'
+level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true

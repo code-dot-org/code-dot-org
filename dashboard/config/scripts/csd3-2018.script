@@ -13,6 +13,7 @@ script_announcements [{"notice"=>"CS Discoveries End of Semester Survey Now Open
 family_name 'csd3'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_2018', named: true
@@ -189,7 +190,7 @@ level 'CSD U3 Interactive Card Sprites_2018', progression: 'Project Work'
 level 'CSD U3 Interactive Card User Input_2018', progression: 'Project Work'
 level 'CSD U3 Interactive Card Other Conditionals_2018', progression: 'Project Work'
 level 'CSD U3 Interactive Card Final_2018', progression: 'Project Work'
-assessment 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018', progression: 'Reflection', assessment: true
 
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD U3L15 TFMD_2018', named: true
@@ -327,7 +328,7 @@ level 'CSD U3 game sprite movement_2018', progression: 'Project - Sprites and In
 level 'CSD U3 game user controls_2018', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions_2018', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 finishing touches_2018', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection', assessment: true
 
 stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-post-survey-2017-levelgroup_2018'
+level 'csd-post-survey-2017-levelgroup_2018', assessment: true

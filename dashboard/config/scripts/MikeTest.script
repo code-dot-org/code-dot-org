@@ -4,7 +4,7 @@ stage 'Sample Stage'
 level 'MikeTest1'
 level 'MikeTest2'
 level 'MikeTest3'
-assessment 'MikeAssessment1'
+level 'MikeAssessment1', assessment: true
 skin 'basketball'
 level 'bounce_12'
 

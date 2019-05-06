@@ -133,6 +133,9 @@ class ScriptDSL < BaseDSL
   string :skin
   string :video_key_for_next_level
 
+  # If someone forgets we moved away from assessment as level type and puts
+  # assessment as level type it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the assessment: true syntax
   def assessment(name, properties = {})
     properties[:assessment] = true
     level(name, properties)
@@ -158,9 +161,14 @@ class ScriptDSL < BaseDSL
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
     named = properties.delete(:named)
+    assessment = properties.delete(:assessment)
 
     if named
       properties[:named_level] = true
+    end
+
+    if assessment
+      properties[:assessment] = true
     end
 
     level = {
@@ -302,7 +310,6 @@ class ScriptDSL < BaseDSL
       s << t
       stage.script_levels.each do |sl|
         type = 'level'
-        type = 'assessment' if sl.assessment
         type = 'bonus' if sl.bonus
 
         if sl.levels.count > 1
@@ -317,13 +324,14 @@ class ScriptDSL < BaseDSL
                 sl.named_level?,
                 sl.target,
                 sl.challenge,
+                sl.assessment,
                 sl.experiments(level)
               ).map {|l| l.indent(2)}
             )
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.target, sl.challenge))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.target, sl.challenge, sl.assessment))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
@@ -340,6 +348,7 @@ class ScriptDSL < BaseDSL
     named = nil,
     target = nil,
     challenge = nil,
+    assessment = nil,
     experiments = []
   )
     s = []
@@ -359,6 +368,7 @@ class ScriptDSL < BaseDSL
     l += ", experiments: #{experiments.to_json}" if experiments.any?
     l += ", progression: '#{progression}'" if progression
     l += ', named: true' if named
+    l += ', assessment: true' if assessment
     l += ', target: true' if target
     l += ', challenge: true' if challenge
     s << l

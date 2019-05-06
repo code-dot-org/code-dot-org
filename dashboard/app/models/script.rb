@@ -840,14 +840,6 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
-  def freeplay_links
-    if cs_in_a?
-      ['calc', 'eval']
-    else
-      []
-    end
-  end
-
   def has_peer_reviews?
     peer_reviews_to_complete.try(:>, 0)
   end
@@ -1591,8 +1583,8 @@ class Script < ActiveRecord::Base
           stageName: script_level.stage.localized_title,
           levelNum: script_level.position.to_s,
           keyConcept: (current_level.rubric_key_concept || ''),
-          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance.to_sym]] || ''),
-          performance: rubric_performance_headers[temp_feedback.performance.to_sym],
+          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
+          performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
         }
