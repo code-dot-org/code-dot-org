@@ -40,6 +40,32 @@ hi:
         डांसरों के पास "रंगत" विशेषता होती है, जो रंग की एक परत शामिल कर सकती है। अपने किसी एक डांसर की रंगत बदलने का प्रयास करें।
 
         -   रंगत उस रंग को मिलाती है, जिसका चयन आप डांसर के रंगों के साथ करते हैं।
+      CourseD_Dance_Party_10: |-
+        "अब हमें पता है कि डांसर की विशेषताओं को कैसे बदलना है। हम इस ब्लॉक का उपयोग करते हुए संगीत के प्रति अपने आप प्रतिक्रिया करने वाली समान विशेषताएं भी बना सकते हैं:
+        <xml>
+        \<block type=""Dancelab_startMapping"" block-text=""right_unicorn begins following bass"">
+
+        <title name=""SPRITE"">right\_unicorn</title>
+        <title name=""PROPERTY"">""scale""</title>
+        <title name=""RANGE"">""bass""</title>
+        </block></xml>
+
+        यह प्रोग्राम डांसर के कद को नियंत्रित करने के लिए संगीत की ""मंद"" आवाज़ (धीमी ध्वनियां) का उपयोग करता है। क्या आप अन्य डांसर से भी संगीत पर प्रतिक्रिया करवा सकते हैं?"
+      CourseD_Dance_Party_11: |-
+        " <xml>\<block type=""Dancelab\_whenKey"" block-text=""when up pressed""></block></xml> इवेंट ब्लॉक से आप कोड चला सकते हैं, जब ऊपर के तीर वाले बटन को दबाया जाता है।
+        आप एक बार में ही डांस के मूव को बदल सकते हैं, डांसर की विशेषताओं को बदल सकते हैं, या तुरंत मूव कर सकते हैं। रचनात्मक बनें और नए ब्लॉक्स खोजें!"
+      CourseD_Dance_Party_11_5: |-
+        "इस ब्लॉक को आजामाएं:
+
+        <xml>
+        <block type=""Dancelab_makeNewDanceSpriteGroup"" block-text=""Make 6 new ducks in a circle"">
+        <title name=""N"">6</title>
+        <title name=""COSTUME"">""DUCK""</title>
+        <title name=""LAYOUT"">""circle""</title>
+        </block></xml>
+
+        अब आप एक बार में डांसरों का समूह बना सकते हैं!
+        वह कोड लिखने के लिए कुछ ""सभी बत्तखें"" ब्लॉक्स का उपयोग करने का प्रयास करें, जो सभी बत्तखों को एक साथ डांस करने के लिए सक्रिया करेगा।"
       CourseD_Dance_Party_11b: |-
         अब डांस प्रतियोगिता का समय है! जब आप बाएं तीर वाली कुंजी दबाते हैं तो बिल्ली थपथपाती है। जब आप दाएं तीर वाली कुंजी दबाएं तो रोबोट को एक बार "ड्रॉप" करने के लिए, और जब आप ऊपर के तीर वाली कुंजी दबाएं तो एक बार "ताली बजाने" के लिए सक्रिय करें।
 
@@ -85,7 +111,7 @@ hi:
       Dance_Party_02: |-
         आइए इस अमरीकी हिरण से डांस करवाएं!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">फ्लॉस</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
 
         **संगीत प्रविधियां** संगीत में समय की गिनती करने के लिए उपयोग की जाती हैं। इस ट्यूटोरियल में, एक संगीत प्रविधि चार बीट्स जितनी लंबी होगी।
       Dance_Party_03: "_अब हम संगीत सुन (ग्रूव) रहे हैं!_ \n\nअपने वर्कस्पेस में एक
@@ -226,7 +252,7 @@ hi:
       Ryan_Demo: |-
         आइए इस अमरीकी हिरण से डांस करवाएं!
 
-        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">फ्लॉस</title><title name="DIR">-1</title></block></xml> ब्लॉक को वर्कस्पेस पर खींचें। इसे <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ब्लॉक के नीचे जोड़ें। आपका डांसर चौथी संगीत प्रविधि के बाद नया मूव शुरू करेगा।
 
         **संगीत प्रविधियां** संगीत में समय की गिनती करने के लिए उपयोग की जाती हैं। इस ट्यूटोरियल में, एक संगीत प्रविधि चार बीट्स जितनी लंबी होगी।
       courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)

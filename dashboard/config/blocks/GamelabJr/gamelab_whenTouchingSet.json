@@ -1,0 +1,48 @@
+{
+  "category": "Unused",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenTouchingSet",
+    "blockText": "{CONDITION} {SPRITE1} touches {SPRITE2} set {SPRITEA} and set {SPRITEB}",
+    "args": [
+      {
+        "name": "CONDITION",
+        "options": [
+          [
+            "when",
+            "\"when\""
+          ],
+          [
+            "while",
+            "\"while\""
+          ]
+        ]
+      },
+      {
+        "name": "SPRITE1",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "SPRITE2",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "SPRITEA",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "SPRITEB",
+        "type": "Sprite",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}

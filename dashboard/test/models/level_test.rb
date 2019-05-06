@@ -220,8 +220,8 @@ class LevelTest < ActiveSupport::TestCase
   test 'returns concept videos with related videos' do
     level = create(:level)
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
-    assert_includes(level.related_videos, level.concepts.first.video)
-    assert_includes(level.related_videos, level.concepts.second.video)
+    assert_includes(level.related_videos, level.concepts.first.related_video)
+    assert_includes(level.related_videos, level.concepts.second.related_video)
   end
 
   test 'update custom level from file' do

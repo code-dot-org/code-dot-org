@@ -242,11 +242,6 @@ de:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
       sign_in_to_save: 'Melde dich, an um deinen Fortschritt zu speichern'
-      free_play:
-        playlab: 'Erstelle eine App'
-        artist: 'Zeichne etwas'
-        applab: 'Erstelle eine App'
-        gamelab: 'Ein Game Lab Projekt eröffnen.'
       my_dashboard: "Mein Armaturenbrett"
       course_catalog: "Kurs Katalog"
       project_gallery: "Projekte"

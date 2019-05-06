@@ -8,7 +8,7 @@ Scenario: Signed Out - sign in button shows
   And I wait until element ".display_name" is not visible
 
 Scenario: Teacher Signed In - shows display name with correct links
-  Given I create a teacher named "Ms_Frizzle"
+  Given I create a teacher named "Ms_Frizzle" and go home
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Ms_Frizzle"
   And I click selector ".display_name"
@@ -16,18 +16,19 @@ Scenario: Teacher Signed In - shows display name with correct links
   And I wait until element "#user-signout" is visible
   # Confirm dropdown is as expected on Pegasus
   Given I am on "http://code.org/help"
-  And I wait until element ".create_menu" is visible
+# Create menu does not display on Safari-1024px
+#  And I wait until element ".create_menu" is visible
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Ms_Frizzle"
   And I click selector ".display_name"
   And I wait until element "#user-edit" is visible
   And I wait until element "#user-signout" is visible
-  Then I sign out
+  Then I press "user-signout" to load a new page
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
 Scenario: Student Signed In - shows display name with correct links
-  Given I create a student named "Arnold"
+  Given I create a student named "Arnold" and go home
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Arnold"
   And I click selector ".display_name"
@@ -47,19 +48,15 @@ Scenario: Student Signed In - shows display name with correct links
   And I wait until element ".display_name" is visible
   And I click selector ".display_name"
   And I wait until element "#user-signout" is visible
-  And I press "user-signout"
+  And I press "user-signout" to load a new page
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
 Scenario: Pair Programming
   Given I create a teacher named "Dr_Seuss"
-  Then I see the section set up box
   And I create a new section
-  And I save the section url
-  Then I sign out
   Given I create a student named "Thing_One"
   And I navigate to the section url
-  Then I sign out
   Given I create a student named "Thing_Two"
   And I navigate to the section url
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"

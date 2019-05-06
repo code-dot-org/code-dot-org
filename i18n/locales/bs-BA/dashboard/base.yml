@@ -199,10 +199,6 @@ bs:
     header:
       finished_hoc: "Završih svoj Sat Kodiranja"
       sign_in_to_save: 'Prijavite se da biste snimili napredak'
-      free_play:
-        playlab: 'Napravi Aplikaciju'
-        artist: 'Nacrtaj Nešto'
-        applab: 'Napravi Aplikaciju'
       project_gallery: "Projekti"
       help_support: "Pomoć i podrška"
       documentation: "Dokumentacija"

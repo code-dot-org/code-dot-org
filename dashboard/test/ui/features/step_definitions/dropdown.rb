@@ -3,8 +3,14 @@ And /^I drag the play sound block to offset "(\d*), (\d*)"$/ do |dx, dy|
 end
 
 And /^I press dropdown number (\d+)$/ do |n|
-  elements = @browser.find_elements(:class, 'blocklyText')
-  elements[n.to_i].find_element(:xpath, '../*[last()]').click
+  text = @browser.find_elements(:class, 'blocklyText')[n.to_i]
+  if @browser.browser == :Safari
+    # Safari has an issue detecting SVG elements as interactive.
+    # Click mouse in element location using Actions API as a workaround.
+    @browser.action.move_to(text).click.perform
+  else
+    text.find_element(:xpath, '../*[last()]').click
+  end
 end
 
 Then /^the dropdown is (.*)$/ do |visibility|

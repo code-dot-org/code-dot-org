@@ -4904,6 +4904,10 @@ pt-BR:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
+      behaviors 3a_authored_hint:
+        behavior hint: |-
+          Tente editar os comportamentos!
+          \*Qual valor controla a velocidade de cada sprite?
       behaviors 5_authored_hint:
         target hint: Você pode escolher qualquer um dos quatro brinquedos. Qual deles
           o animal de estimação quer?
@@ -4915,6 +4919,10 @@ pt-BR:
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?
       behaviors 6_authored_hint:
+        behavior hint: |-
+          Tente editar os comportamentos!
+          \*Qual valor controla a velocidade de cada sprite?
+      behaviors 7_authored_hint:
         behavior hint: |-
           Tente editar os comportamentos!
           \*Qual valor controla a velocidade de cada sprite?

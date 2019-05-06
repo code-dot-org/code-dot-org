@@ -1502,6 +1502,8 @@ ja:
               name: ダンスパーティー
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
             Loops in Artist:
@@ -1509,7 +1511,7 @@ ja:
             Conditionals with Cards:
               name: カードと条件
             'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
+              name: バイナリ画像
             Artist Binary:
               name: アーティスト：バイナリ
             Dance Party:
@@ -1524,8 +1526,8 @@ ja:
               name: 入れ子のループ
             Conditionals with Cards:
               name: カードと条件
-            Conditionals:
-              name: 条件
+            'Functions: Songwriting':
+              name: 作詞作曲
             Internet:
               name: インターネット
             Crowdsourcing:
@@ -1563,16 +1565,12 @@ ja:
           description: 最初の 1 時間を越えて、応用編のプロジェクトのアイデアを活用しよう。
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: ピラミッドをたてよう
             Programming in Maze:
               name: めいろ のプログラミング
             'Real-life Algorithms: Paper Planes':
               name: '現実世界のアルゴリズム: 紙飛行機を作る場合'
             Loops in Artist:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
             Binary Bracelets:
@@ -1584,13 +1582,8 @@ ja:
         coursea-2019:
           description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'デバッグ: 気づかれていないバグ'
-              description_teacher: このレッスンで、生徒はデバッグ（虫を取り除く、プログラムの間違いを直す）の手順を概観します。生徒は「何が起きたか」「何が起きるべきだったのか」「それは何を意味しているのか」と言った、考え方を学びます。
-            'Real-life Algorithms: Plant a Seed':
-              name: 現実のアルゴリズム：種を植えましょう
             'Programming: Happy Maps':
-              name: プログラミング：ハッピー マップ
+              name: ハッピーマップ
             Programming in Maze:
               name: めいろ のプログラミング
             Going Places Safely:
@@ -1601,8 +1594,6 @@ ja:
               name: くりかえし あつめる
             Loops in Artist:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
             Ocean Scene with Loops:
@@ -1619,8 +1610,6 @@ ja:
               name: くりかえし あつめる
             Loops in Artist:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
             Programming in Maze:
@@ -1705,3 +1694,9 @@ ja:
               name: アーティストくりかえし
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: グラフ用紙のプログラミング
+            Programming in Maze:
+              name: めいろ のプログラミング

@@ -296,6 +296,7 @@
   volunteer_engineer_submission_field_description: "Aprašymas"
   volunteer_engineer_submission_field_email: "El. pašto adresas"
   volunteer_engineer_submission_field_email_placeholder: "El. pašto adresas"
+  volunteer_engineer_submission_field_email_preference_privacy: "Tikrinti savo privatumą"
   volunteer_engineer_submission_field_email_preference_yes: 'Taip'
   volunteer_engineer_submission_field_email_preference_no: 'Ne'
   volunteer_engineer_submission_submit: "Pateikti"
@@ -768,6 +769,7 @@
   header_home: "Pradžia"
   header_my_dashboard: "Valdymo skydelis"
   header_courses: "Kursai"
+  header_course_catalog: "Kurso katalogas"
   header_project_gallery: "Projektai"
   header_educate_elementary: "Pradinė mokykla"
   header_educate_middle: "Vidurinė mokykla"

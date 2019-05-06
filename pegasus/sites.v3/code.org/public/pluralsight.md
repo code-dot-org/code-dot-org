@@ -20,13 +20,20 @@ Students can build in-demand skills and learn from expert technologists. The Plu
 * Mobile and offline viewing to learn anytime, anywhere<br> 
 * Access for a full year from the time they redeem the offering that is provided by their teacher<br>
 
-Curated by expert technologists, the library features over 150 courses totaling over 500 hours of content across four major areas: IT/OPs, software development, design/creative, and product management.
-<Br>
+Curated by expert technologists, the library features over 350 courses totaling over 1,000 hours of content across four major areas: IT/OPs, software development, design/creative, and product management.
+
+[Learn more about Pluralsight](https://vimeo.com/319103540).
 
 ![AP Computer Science Principles](/images/fit-600/browse-pluralsight-screenshot-2019.png)
 
-As the AP CS Principles exam approaches, Code.org teachers will be notified through email newsletters on how to get access the Pluralsight One offering. 
+## Redeem this offer:
+After signing into your Code.org account, [start here](https://studio.code.org/s/pluralsight) and click ‘lock settings’ to unlock the Pluralsight One lesson for your students. 
 
+**This page will automatically lock after 24 hours**. You can unlock it again once the 24 hours have passed if your students need more time to redeem this offer.
+
+Have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/puzzle/1) to redeem the offer and sign up for a free Pluralsight One account
+
+This offer will be available for redemption through **June 30, 2019**.
 
 ***
 #### About Pluralsight

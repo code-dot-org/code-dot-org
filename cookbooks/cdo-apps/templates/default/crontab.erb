@@ -86,6 +86,7 @@
       cronjob at:'10 */12 * * *', do:dashboard_dir('bin','refresh_pd_workshop_material_orders')
       cronjob at:'*/1 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'30 0 * * *', do:dashboard_dir('bin', 'sync_jotforms')
+      cronjob at:'0 7 * * *', do:dashboard_dir('bin', 'process_jotform_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'19 4 * * *', do:deploy_dir('bin', 'cron', 'update_census_map')
       cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')

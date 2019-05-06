@@ -257,12 +257,6 @@ da:
     header:
       finished_hoc: "Jeg har afsluttet min Hour of Code"
       sign_in_to_save: 'Log ind for at gemme fremskridt'
-      free_play:
-        playlab: 'Lav en App'
-        artist: 'Tegn noget'
-        applab: 'Lav en App'
-        gamelab: 'Skab et GameLab projekt'
-        weblab: 'Skab et WebLab (beta) projekt'
       course_catalog: "Kursuskatalog"
       project_gallery: "Projekter"
       sections: "Sektioner"

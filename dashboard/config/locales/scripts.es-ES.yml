@@ -3644,18 +3644,18 @@ es:
         coursed-2019:
           description_audience: Edades de 7 a 11 años
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en papel cuadriculado
             Relay Programming:
               name: Programación de Relevos
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
-            Loops in Artist:
-              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             Digital Citizenship:
               name: Ciudadanía Digital
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imágenes binarias
             Artist Binary:
               name: Artista binario
             Build a Star Wars Game:
@@ -3673,8 +3673,6 @@ es:
               name: Bucles anidados
             Conditionals with Cards:
               name: Condicionales con tarjetas
-            Conditionals:
-              name: Condicionales
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
               description_student: Siente la fuerza cuando construyes tu propio juego
@@ -3684,12 +3682,12 @@ es:
                 línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes
                 serán guiados a través de eventos, luego le dadas espacio para crear
                 su propio juego.
+            'Functions: Songwriting':
+              name: Composición Musical
             Internet:
               name: Internet
             Crowdsourcing:
               name: Colaboración Abierta
-            Access Ability:
-              name: Habilidad de acceso
             Digital Sharing:
               name: Compartir digital
             Simon Says:
@@ -3787,12 +3785,12 @@ es:
             y crea tu propio arte, historias y juegos.
           description_audience: Edades de 6 a 10 años
           stages:
-            Building a Foundation:
-              name: Construyendo una Base
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos de la vida real : Aviones de papel'
             Loops in Artist:
               name: Bucles en Artista
+            'Events: The Big Event':
+              name: El Gran Evento
             Looking Ahead:
               name: Observando hacia el futuro
             Binary Bracelets:
@@ -3808,14 +3806,12 @@ es:
         coursea-2019:
           description_short: Una introducción a la informática para pre-lectores.
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos de la Vida Real: Planta una Semilla'
+            'Programming: Happy Maps':
+              name: Mapas Felices
             Going Places Safely:
               name: Ir a Sitios Seguro
             Loops in Artist:
               name: Bucles en Artista
-            Loops in Ice Age:
-              name: Bucles en la Edad del Hielo
         courseb-2019:
           stages:
             Move It, Move It:
@@ -3826,6 +3822,8 @@ es:
               name: Bucles en la Edad del Hielo
             Loops in Artist:
               name: Bucles en Artista
+            'Loops: Getting Loopy':
+              name: Bucleandose
         pre-express-2019:
           description_short: 'Introducción a las ciencias de la computación para preescolar:
             combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
@@ -4169,3 +4167,11 @@ es:
               name: Bucles en Artista
             Build a Star Wars Game:
               name: Construye un juego de la Guerra de las Galaxias
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Librerías
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programación en papel cuadriculado

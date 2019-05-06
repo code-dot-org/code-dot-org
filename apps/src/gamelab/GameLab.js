@@ -49,6 +49,7 @@ import {
 } from '../containedLevels';
 import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+import {addConsoleMessage, clearConsole} from './textConsoleModule';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {TestResults, ResultType} from '../constants';
@@ -152,6 +153,10 @@ var GameLab = function() {
       mobileControlsConfig,
       getStore().getState().pageConstants.isShareView
     );
+  };
+
+  this.appendSpriteConsole = spriteMessage => {
+    getStore().dispatch(addConsoleMessage(spriteMessage));
   };
 };
 
@@ -359,11 +364,6 @@ GameLab.prototype.init = function(config) {
     }
   }
 
-  // ToDo: Remove experiment flag and turn on allAnimationsSingleFrame and hideAnimationMode for Spritelab Levels
-  let showCostumeTab =
-    experiments.isEnabled('sprite-costumes') &&
-    this.studioApp_.isUsingBlockly();
-
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
@@ -374,10 +374,10 @@ GameLab.prototype.init = function(config) {
     showDebugWatch:
       config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: experiments.isEnabled('showDebugSlider'),
-    showAnimationMode: !config.level.hideAnimationMode || showCostumeTab,
+    showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame:
-      config.level.allAnimationsSingleFrame || showCostumeTab,
+      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -732,6 +732,8 @@ GameLab.prototype.reset = function() {
     defaultMobileControlsConfig,
     getStore().getState().pageConstants.isShareView
   );
+
+  getStore().dispatch(clearConsole());
 };
 
 GameLab.prototype.rerunSetupCode = function() {
@@ -943,6 +945,12 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
     this.JSInterpreter.createGlobalProperty(
       'showMobileControls',
       this.showMobileControls,
+      null
+    );
+
+    this.JSInterpreter.createGlobalProperty(
+      'appendSpriteConsole',
+      this.appendSpriteConsole,
       null
     );
   };

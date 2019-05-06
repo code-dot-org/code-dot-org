@@ -23,7 +23,7 @@ level 'CSD U4L06 SFLP', named: true
 
 stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 level 'CSD U4L07 SFLP', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection', assessment: true
 
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 level 'CSD U4L08 SFLP', named: true
@@ -99,4 +99,4 @@ level 'CSDU4 Project Bug Feature', named: true
 
 stage 'App Presentation', flex_category: 'csd4_2'
 level 'CSD U4L17 SFLP', named: true
-assessment 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection'
+level 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection', assessment: true

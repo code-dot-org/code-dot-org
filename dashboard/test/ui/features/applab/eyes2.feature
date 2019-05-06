@@ -1,5 +1,4 @@
 @eyes
-@dashboard_db_access
 @as_student
 Feature: App Lab Eyes - Part 2
 
