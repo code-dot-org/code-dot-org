@@ -163,9 +163,9 @@ sk:
       Course 4 Artist Vars 10_callout:
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
       Course 4 Artist Vars 12_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       Course 4 Artist Vars 2_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       Course 4 Artist Vars 3_callout:
         place_variable: Presuňte do tohto bloku Vašu premennú
       Course 4 Artist Vars 6_callout:
@@ -465,6 +465,9 @@ sk:
         artistLoopsK2_1: Toto číslo znamená počet blokov, ktoré môžete použiť v tejto hre.
       behaviors 1_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 3a_callout:
+        behavior_callout: Prečo tento postup nefunguje pri prostrednej hviezde?
+        star2_callout: Odstráň blok s kostýmom a použi namiesto neho blok "táto postava".
       behaviors 4_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 4a_callout:
@@ -537,8 +540,6 @@ sk:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp2a_2018_callout:
@@ -546,6 +547,8 @@ sk:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.
         stone_block_2: Šedé bloky sú z kamena a nemôžu byť zahodené.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť.
       courseA_maze_seq1_callout:
@@ -584,6 +587,8 @@ sk:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?
       courseB_artist_loops3_2018_callout:
@@ -967,11 +972,11 @@ sk:
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Všimnite si, že bloky majú nový spôsob zadávani čísiel. Tieto "matematické" bloky môžu byť vytiahnuté von a popresúvané podľa potreby!
       courseF_artist_variables3_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables3_2018_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables3_2019_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables6_2018_callout:
@@ -985,7 +990,7 @@ sk:
       courseF_artist_variables6a_2019_callout:
         courseF_artist_variables6a_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables_3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables_6_callout:
         courseF_artist_variables_6_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables_6a_callout:
@@ -1269,7 +1274,7 @@ sk:
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Presuňte sem premennú dĺžky pre nahradenie otáznikov
       grade5_artist_variables_pentagons12_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       grade5_artist_variables_square7_callout:
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
       grade5_artist_variables_triangles1_callout:
@@ -1279,7 +1284,7 @@ sk:
       grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Všimnite si, že bloky majú nový spôsob zadávani čísiel. Tieto "matematické" bloky môžu byť vytiahnuté von a popresúvané podľa potreby!
       grade5_artist_variables_triangles2_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       grade5_bee_parameters_new1_callout:
         grade5_bee_parameters_new1_a: Príkazy "if" nájdete tu.
       grade5_bee_parameters_new3_callout:

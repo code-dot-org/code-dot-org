@@ -4490,7 +4490,7 @@ id:
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Kertas Grafik Pemrograman'
+              name: Pemrograman grafis diatas kertas
             Introduction to Online Puzzles:
               name: Pengantar teka-Teki secara Online
             Relay Programming:
@@ -4500,7 +4500,7 @@ id:
             Digital Citizenship:
               name: Kewarganegaraaan Digital
             'Unplugged: Binary':
-              name: 'Dicabut: Biner'
+              name: gambar Biner
             Artist Binary:
               name: Artis Biner
         coursee-2019:
@@ -4511,12 +4511,12 @@ id:
               name: Perulangan bercabang
             Conditionals with Cards:
               name: Bersyarat dengan kartu
-            Conditionals:
-              name: Kondisi
             Private and Personal Information:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
             Build a Star Wars Game:
               description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
+            'Functions: Songwriting':
+              name: Menulis lagu
             Determine the Concept:
               description_student: "Kami tidak memberikan rahasia! \nPelajaran ini bisa menggunakan semua keterampilan yang telah anda pelajari sejauh ini."
             Explore Project Ideas:
@@ -4583,10 +4583,10 @@ id:
               name: 'null'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Membangun dasar
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritma kehidupan nyata: Pesawat Kertas'
+            'Events: The Big Event':
+              name: Acara besar
             Screen Out the Mean:
               name: Berarti keluar layar
             Looking Ahead:
@@ -4597,8 +4597,8 @@ id:
           title: Laboratorium Game
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+            'Programming: Happy Maps':
+              name: Pemetaan bahagia
             Going Places Safely:
               name: Pergi ke tempat-tempat dengan aman
         courseb-2019:
@@ -4607,6 +4607,8 @@ id:
               name: Gerakkan itu, Gerakkan itu
             Your Digital Footprint:
               name: Digital Footprint Kamu
+            'Loops: Getting Loopy':
+              name: Dapat berulang-ulang
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -4913,3 +4915,7 @@ id:
               name: Bersyarat dengan kartu
             Building a Foundation:
               name: Membangun dasar
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Pemrograman grafis diatas kertas

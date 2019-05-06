@@ -270,12 +270,6 @@ gl:
     header:
       finished_hoc: "Rematei a miña Hora de Código"
       sign_in_to_save: 'Inicia sesión para gardares o teu progreso'
-      free_play:
-        playlab: 'Crear unha aplicación'
-        artist: 'Debuxar algunha cousa'
-        applab: 'Crea unha aplicación do Laboratorio de Aplicacións'
-        gamelab: 'Crea un proxecto de Laboratorio de Xogos'
-        weblab: 'Crea un proxecto (beta) de Laboratorio Web'
       my_dashboard: "O meu panel de control"
       course_catalog: "Catálogo de cursos"
       project_gallery: "Proxectos"

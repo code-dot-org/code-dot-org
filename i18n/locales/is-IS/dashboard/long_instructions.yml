@@ -2,6 +2,7 @@
 is:
   data:
     long_instructions:
+      "(joshl) Dance Party 1-validated_2019": "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`! \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       2-3 Artist 1 new: Hæ, ég er listamaður. Þú getur skrifað kóða til að láta mig teikna næstum hvað sem er. Notaðu kubba til að láta mig teikna í gráu strikin á myndinni. (Hver lína er 100 díla löng)
       2-3 Artist 11: 'Teiknaðu útlínu á merkið með því að búa til átthyrning með 100 díla hliðum. '
       2-3 Artist 12: "Búðu til hring til að ljúka auganu! \n\nEf listamaðurinn snýr um 1 gráðu í hverri lykkju, hve oft þarf þá að endurtaka kóðann til að teikna hring? "
@@ -6347,6 +6348,7 @@ is:
       Dance Party Predict: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`!  \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       Dance Party Predict_2019: "**Spáðu hvað mun gerast:** Hér er vera sem heitir `alien1`!  \n\nHvað heldur þú að muni gerast þegar þú smellir á hana?  "
       Dance Party Predict_simple: "**Hvað heldur þú?** \n\nHér er vera sem heitir `alien1`!  \n\nHvað gerir hún þegar þú smellir á hana?  "
+      Dance Party Template 2_2019: Sniðmát
       Dance_Events_Example_Video: Notaðu atvik til að gera dansinn gagnvirkan!
       Dance_Party_01: |-
         \*Nú skulum við halda danspartý!

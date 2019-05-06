@@ -384,6 +384,9 @@ it:
         artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: Questo numero ti dice quanti di questi blocchi puoi usare in questo esercizio.
+      behaviors 3a_callout:
+        behavior_callout: Perché questo comportamento non funziona per la stella centrale?
+        star2_callout: Rimuovi questo blocco costume e usa al suo posto il blocco "questo personaggio".
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto il nettare da un fiore o fare tutto il miele in un favo.
       course3_artist_functions_challenge1_callout:
@@ -448,14 +451,14 @@ it:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa lezione.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp2a_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli nella cassetta degli attrezzi.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq1_2018_callout:
@@ -492,6 +495,8 @@ it:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro, premi "Esegui" per far partire il programma.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi dentro tutti i blocchi necessari per risolvere l'esercizio.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: C'è solo uno di questi blocchi nella cassetta degli attrezzi. Come lo userai?
       courseB_artist_loops3_2018_callout:

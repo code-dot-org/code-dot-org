@@ -290,11 +290,6 @@ bg:
     header:
       finished_hoc: Аз приключих моя 'Час на Кодирането'
       sign_in_to_save: Впишете се, за да запазите напредъка си
-      free_play:
-        playlab: Направи Play Lab приложение
-        artist: Начертай нещо
-        applab: Направи Play Lab приложение
-        gamelab: Направи Game Lab проект
       my_dashboard: Моето табло
       course_catalog: Каталог на курса
       project_gallery: Проекти

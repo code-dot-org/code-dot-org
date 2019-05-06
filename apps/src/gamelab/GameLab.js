@@ -364,11 +364,6 @@ GameLab.prototype.init = function(config) {
     }
   }
 
-  // ToDo: Remove experiment flag and turn on allAnimationsSingleFrame and hideAnimationMode for Spritelab Levels
-  let showCostumeTab =
-    experiments.isEnabled('sprite-costumes') &&
-    this.studioApp_.isUsingBlockly();
-
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
@@ -379,10 +374,10 @@ GameLab.prototype.init = function(config) {
     showDebugWatch:
       config.level.showDebugWatch || experiments.isEnabled('showWatchers'),
     showDebugSlider: experiments.isEnabled('showDebugSlider'),
-    showAnimationMode: !config.level.hideAnimationMode || showCostumeTab,
+    showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame:
-      config.level.allAnimationsSingleFrame || showCostumeTab,
+      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,

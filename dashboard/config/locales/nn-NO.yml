@@ -313,12 +313,6 @@ nn:
     header:
       finished_hoc: Eg er ferdig!
       sign_in_to_save: Logg inn for å lagre framgangen
-      free_play:
-        playlab: Lag ein app i Spel-lab
-        artist: Teikn noko
-        applab: Lag ein app i Spel-lab
-        gamelab: Lag eit prosjekt i Spel-lab
-        weblab: Lag eit Nett-lab-prosjekt (beta)
       my_dashboard: Kontrollpanel
       course_catalog: Kurskatalog
       project_gallery: Prosjekt
