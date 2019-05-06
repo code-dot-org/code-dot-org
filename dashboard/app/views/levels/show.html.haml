@@ -28,33 +28,48 @@
   -# Render the hidden stage partial, but make it hidden so that client can unhide if needed
   = render partial: 'levels/hidden_stage', locals: {hidden: true}
 
-  - if @game.unplugged?
-    :javascript
-      var appOptions = #{app_options.to_json};
-    = render partial: 'levels/unplug', locals: {app: @game.app}
-  - elsif (@level.is_a?(Applab) || @level.is_a?(Gamelab) || @level.is_a?(Weblab)) && app_options['readonlyWorkspace'] && !app_options['channel']
-    -# A teacher is trying to view a student's progress on a level they have not started.
-    = render partial: 'levels/not_started'
-  - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks && !@level.is_a?(Applab) && !@level.is_a?(Gamelab) && !@level.is_a?(Weblab)
-    #title
-      - if @level.properties['short_instructions'].present?
-        %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= brakeman_no_warn(@level.properties['short_instructions'])
-    -# Pass special parameters to Blockly partial for embedded level type.
-    = render partial: 'levels/blockly'
-  - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
-    :javascript
-      var appOptions = #{app_options.to_json};
-      dashboard.createCallouts(appOptions.callouts);
-    - if @level.is_a?(Widget)
-      = render partial: 'levels/widget'
-    - else
-      = render partial: "levels/#{@level.class.to_s.underscore}"
-    - unless @level.is_a?(StandaloneVideo)
-      = render partial: 'levels/reference_area'
-  - elsif @level.is_a?(Scratch)
-    = render partial: 'levels/scratch', locals: {app: @game.app}
+  -#
+    If the viewer can't view last_attempt, which would happen when it's a teacher
+    looking at a student's attempt at an anonymous survey, then just show explanation
+    text.  It's very important that we don't lose or miss this check.
+    Check that @script_level exists, because it won't for a /level/ view.
+  - if @script_level && @script_level.should_hide_survey(current_user, @user)
+    = I18n.t('level_group.hide_survey_last_answer')
+  - elsif @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
+    -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
+    = render 'levels/locked_stage'
   - else
-    = render partial: 'levels/blockly'
+    -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
+    - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
+      = render 'levels/locked_stage', hidden: true
+
+    - if @game.unplugged?
+      :javascript
+        var appOptions = #{app_options.to_json};
+      = render partial: 'levels/unplug', locals: {app: @game.app}
+    - elsif (@level.is_a?(Applab) || @level.is_a?(Gamelab) || @level.is_a?(Weblab)) && app_options['readonlyWorkspace'] && !app_options['channel']
+      -# A teacher is trying to view a student's progress on a level they have not started.
+      = render partial: 'levels/not_started'
+    - elsif @level.is_a?(Blockly) && @level.embed == 'true' && !@edit_blocks && !@level.is_a?(Applab) && !@level.is_a?(Gamelab) && !@level.is_a?(Weblab)
+      #title
+        - if @level.properties['short_instructions'].present?
+          %h4{style: 'margin-left: auto; margin-right: auto; max-width: 800px;'}!= brakeman_no_warn(@level.properties['short_instructions'])
+      -# Pass special parameters to Blockly partial for embedded level type.
+      = render partial: 'levels/blockly'
+    - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
+      :javascript
+        var appOptions = #{app_options.to_json};
+        dashboard.createCallouts(appOptions.callouts);
+      - if @level.is_a?(Widget)
+        = render partial: 'levels/widget'
+      - else
+        = render partial: "levels/#{@level.class.to_s.underscore}"
+      - unless @level.is_a?(StandaloneVideo)
+        = render partial: 'levels/reference_area'
+    - elsif @level.is_a?(Scratch)
+      = render partial: 'levels/scratch', locals: {app: @game.app}
+    - else
+      = render partial: 'levels/blockly'
 
   - if @peer_reviews.present?
     = render partial: 'peer_reviews/viewer'

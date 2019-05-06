@@ -38,6 +38,7 @@ const initialState = {
 // Question types for assessments.
 const QuestionType = {
   MULTI: 'Multi',
+  MATCH: 'Match',
   FREE_RESPONSE: 'FreeResponse'
 };
 
@@ -624,7 +625,7 @@ export const isCurrentAssessmentSurvey = state => {
  * assessment and a timestamp that indicates when a student submitted
  * the assessment.
  */
-export const getStudentsMCSummaryForCurrentAssessment = state => {
+export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
@@ -683,6 +684,8 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
+      numMatchCorrect: studentsAssessment.match_correct,
+      numMatch: studentsAssessment.match_count,
       inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
@@ -699,13 +702,15 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
  */
 export const getExportableSubmissionStatusData = state => {
   let summaryStudentStatus = [];
-  const studentStatus = getStudentsMCSummaryForCurrentAssessment(state);
+  const studentStatus = getStudentsMCandMatchSummaryForCurrentAssessment(state);
 
   studentStatus.forEach(student => {
     summaryStudentStatus.push({
       studentName: student.name,
       numMultipleChoiceCorrect: student.numMultipleChoiceCorrect,
       numMultipleChoice: student.numMultipleChoice,
+      numMatchCorrect: student.numMatchCorrect,
+      numMatch: student.numMatch,
       submissionTimestamp: student.submissionTimeStamp
     });
   });

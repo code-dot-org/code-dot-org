@@ -24,7 +24,7 @@ describe('instructions components', () => {
       expect(element.props().style.paddingTop).to.equal(19);
       expect(element.props().style.marginBottom).to.equal(35);
       expect(element.props().style.marginLeft).to.equal(undefined);
-      expect(element.text()).to.equal('md\n');
+      expect(element.text()).to.equal('md');
     });
 
     it('inTopPane has no top padding', function() {
@@ -59,7 +59,7 @@ describe('instructions components', () => {
         .to.equal('title');
       expect(elements.last())
         .text()
-        .to.equal('instructions\n');
+        .to.equal('instructions');
     });
 
     it('can have both instructions and instructions2', function() {
@@ -75,8 +75,8 @@ describe('instructions components', () => {
       var elements = dom.childAt(0).children();
       expect(elements.length).to.equal(3);
       expect(elements.get(0).textContent).to.equal('title');
-      expect(elements.get(1).textContent).to.equal('instructions\n');
-      expect(elements.get(2).textContent).to.equal('instructions2\n');
+      expect(elements.get(1).textContent).to.equal('instructions');
+      expect(elements.get(2).textContent).to.equal('instructions2');
     });
   });
 });
