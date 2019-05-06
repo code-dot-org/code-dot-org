@@ -16,7 +16,7 @@ const TABLE_COLUMN_WIDTHS = {
   numMultipleChoice: TABLE_WIDTH / 12,
   numMatchCorrect: TABLE_WIDTH / 12,
   numMatch: TABLE_WIDTH / 12,
-  submissionTimeStamp: TABLE_WIDTH / 5
+  submissionTimeStamp: TABLE_WIDTH / 3
 };
 
 const styles = {
