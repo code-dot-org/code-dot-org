@@ -569,6 +569,7 @@ en:
         csd_gamelab_functions: Calling and Defining Functions
         csd_applab_parameters: Functions with Parameters
         csd_applab_loops: Loops in App Lab
+        csd_problem_solving_process: The Problem Solving Process
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
