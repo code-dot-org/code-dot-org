@@ -26,7 +26,8 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       return [] if query.length < MIN_WORD_LENGTH + 2
       rows = rows.
         where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
-        order("MATCH(name,city) AGAINST('#{query}' IN BOOLEAN MODE) DESC, state, city, name")
+        # sanitize_sql_for_order won't be a public method until Rails 5.2
+        order(ActiveRecord::Base.send(:sanitize_sql_for_order, ["MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name", query]))
     end
 
     return rows.map do |row|
