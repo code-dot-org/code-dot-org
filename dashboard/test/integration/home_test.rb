@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StageLockTest < ActionDispatch::IntegrationTest
+class HomeTest < ActionDispatch::IntegrationTest
   setup_all do
     @student = create :student
     @teacher = create :teacher
