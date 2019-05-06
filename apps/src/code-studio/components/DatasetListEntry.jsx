@@ -1,6 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import * as color from '../../util/color';
+
+const styles = {
+  datasetNameText: {
+    fontSize: 'large',
+    color: color.purple,
+    font: 'Gotham 5r',
+    paddingRight: 5,
+    cursor: 'pointer'
+  }
+};
 
 /**
  * Component for a single dataset in the Dataset Picker
@@ -8,22 +19,21 @@ import i18n from '@cdo/locale';
  */
 export default class DatasetListEntry extends React.Component {
   static propTypes = {
-    assetChosen: PropTypes.func.isRequired,
     name: PropTypes.string,
-    description: PropTypes.string
+    description: PropTypes.string,
+    url: PropTypes.string,
+    onChoose: PropTypes.func
   };
-
-  chooseAsset() {
-    console.log('here!!');
-  }
 
   render() {
     return (
       <tr>
-        <td width="250">{this.props.name}</td>
+        <td width="250" style={styles.datasetNameText}>
+          {this.props.name}
+        </td>
         <td width="250">{this.props.description}</td>
         <td width="250" style={{textAlign: 'right'}}>
-          <button type="button" onClick={this.chooseAsset}>
+          <button type="button" onClick={this.props.onChoose}>
             {i18n.choose()}
           </button>
         </td>
