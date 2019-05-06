@@ -277,13 +277,6 @@ pt-BR:
     header:
       finished_hoc: "Eu terminei!"
       sign_in_to_save: 'Entre para salvar o progresso'
-      free_play:
-        playlab: 'Criar um aplicativo do Play Lab'
-        artist: 'Desenhar algo'
-        calculate: 'Calcule algo'
-        applab: 'Criar um aplicativo do Play Lab'
-        gamelab: 'Crie um projeto de Jogo de Laboratório'
-        weblab: 'Faça um projeto Laboratório Web (beta)'
       my_dashboard: "Meu painel de Controle"
       course_catalog: "Catálogo do Curso"
       project_gallery: "Projetos"
@@ -908,8 +901,10 @@ pt-BR:
     csf_f_2: 'Conteúdo do curso F'
     csf_digcit: 'Cidadania digital'
     csf_jigsaw: 'Quebra-cabeça'
+    csf_sequencing: 'Sequenciamento'
     csf_loops: 'laços'
     csf_events: 'Eventos'
+    csf_online_safety: 'Segurança Online'
     csf_binary: 'Binário'
     csf_conditionals: 'Condições'
     csf_sprites: 'Sprite'
@@ -952,8 +947,11 @@ pt-BR:
     csp_variables: 'variáveis'
     csp_conditionals: 'Condições'
     csp_functions: 'funções'
+    csp_project: 'Projeto'
     csp_lists: 'Listas'
     csp_loops: 'laços'
+    csp_traversals: 'Traversais'
+    csp_libraries: 'Bibliotecas'
     dlp: 'Prompts de reflexão'
   external_links:
     disclaimer: Aviso

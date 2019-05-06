@@ -267,10 +267,6 @@ pt:
     header:
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
-      free_play:
-        playlab: Criar uma aplicação Play Lab
-        artist: Desenhar alguma coisa
-        applab: Criar uma aplicação App Lab
       project_gallery: Projetos
       sections: Turmas
       help_support: Ajuda e suporte

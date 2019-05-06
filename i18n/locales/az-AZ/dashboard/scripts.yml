@@ -776,12 +776,14 @@ az:
               name: İnternet
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimetrlik kağızda proqramlaşdırma
             Relay Programming:
               name: Estafet proqramlaşdırması
+            'Unplugged: Binary':
+              name: İkilik təsvirlər
         coursee-2019:
           stages:
-            Conditionals:
-              name: Şərti ifadələr
             Internet:
               name: İnternet
         express-2019:
@@ -796,6 +798,10 @@ az:
               name: 'boş'
         dance-extras-gallery:
           title: Rəqs etməyə davam edin
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: Şən xəritələr
         csd2-2019:
           stages:
             Lists:
@@ -820,3 +826,7 @@ az:
           stages:
             The Internet:
               name: İnternet
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Millimetrlik kağızda proqramlaşdırma

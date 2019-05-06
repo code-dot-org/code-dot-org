@@ -302,12 +302,6 @@ ga:
     header:
       finished_hoc: Chríochnaigh mé an Uair Chódála
       sign_in_to_save: Logáil isteach le do dhul chun cinn a shábháil
-      free_play:
-        playlab: Déan aip sa Spraotharlann
-        artist: Tarraing pictiúr
-        applab: Déan aip sa tSaotharlann Aipeanna
-        gamelab: Déan tionscadal sa tSaotharlann Cluichíochta
-        weblab: Tosaigh togra nua i Saotharlann an Ghréasáin (béite)
       my_dashboard: Mo Phainéal
       course_catalog: Cúrsaí
       project_gallery: Tograí

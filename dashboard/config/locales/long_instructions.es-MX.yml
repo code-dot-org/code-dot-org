@@ -1628,6 +1628,7 @@ es-MX:
         del escalón de tu escalera?\\\r\n-   ¿Qué sucede si haces el patrón de tu
         diamante más largo o más corto?\\\r\n    \\-¿Cómo luce al dibujar dos copos
         de nieve uno encima del otro?\\\r?"
+      Dance Party Template 2_2019: Plantilla
       Dance_Party_01: |-
         _¡Hagamos una fiesta!_
 
@@ -3607,10 +3608,16 @@ es-MX:
         y luego te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar
         dentro del bucle? \n\n-   Intenta usar el bloque 'establecer patrón\\` antes
         de que tu bucle comience a crear una obra de arte.\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
-      courseC_artist_loops5b_2019: "¿Qué sucede cuando te `mueves hacia adelante`,
-        y luego te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar
-        dentro del bucle? \n\n-   Intenta usar el bloque 'establecer patrón\\` antes
-        de que tu bucle comience a crear una obra de arte.\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2019: |-
+        ¿Qué sucede cuando te `mueves hacia adelante`, y luego te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar dentro del bucle?
+
+        -   Intenta usar el bloque 'establecer patrón\` antes de que tu bucle comience a crear una obra de arte.
+
+        * * *
+
+        ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
+        ![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)
+        ![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)
       courseC_artist_loops6: "¿Qué debería poner el zombie dentro del jardín? \n\nDibuja
         lo que te gustaría que hubiera al interior de la cerca. ¿Te gustarían algunas
         flores o unos insectos?\n_(Mira las pistas para obtener más sugerencias)_"
@@ -4439,7 +4446,8 @@ es-MX:
         _“¡Buen trabajo!”_\n\nLuego de dibujar el hexágono, gira a la derecha **60**
         grados, y luego dibuja una línea que sea de **150** pixeles de largo.   \n\nPara
         finalizar, ubica a Elsa en el centro del área de juego con el bloque <xml><block
-        type=\"jump_to\"><title name=\"VALUE\">centro medio</title></block></xml>."
+        type=\"jump_to\" block-text=\"jump to the middle center position\"><title
+        name=\"VALUE\">centro medio</title></block></xml>."
       courseD_artist_3_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hagamos un copo de nieve.”_
 
@@ -4792,7 +4800,7 @@ es-MX:
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDibuja
         un patrón de escalones que use giros de entre 75 y 105 grados. Asegúrate de
         que tus giros hacia la derecha y la izquierda tengan el mismo ángulo.  \n(Verás
-        por qué más adelante)."
+        por qué más adelante)"
       courseD_artist_project1a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Intentemos algo nuevo. Esta vez, patina en zigzag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDibuja
@@ -4804,7 +4812,7 @@ es-MX:
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDibuja
         un patrón de escalones que use giros de entre 75 y 105 grados. Asegúrate de
         que tus giros hacia la derecha y la izquierda tengan el mismo ángulo.  \n(Verás
-        por qué más adelante)."
+        por qué más adelante)"
       courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         \ _“Ahora, vamos a dibujar más de una.”_\n\nAhora toma tu forma y dibuja dos
         o tres seguidas aumentando el número de pixeles.  \n\n-   Si aumentas **menos**

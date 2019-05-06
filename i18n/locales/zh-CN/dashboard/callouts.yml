@@ -219,6 +219,8 @@ zh-CN:
       CourseD_Dance_Party_11_callout:
         dance_callout_11_a: 新模块！
         dance_callout_11_b: 新模块！
+      CourseD_Dance_Party_11_5_callout:
+        dance_party_11_5_groups: 在这里找到”所有鸭子“模块
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: 使用箭头移动演员
       CourseF_PlayLab_vars10_callout:
@@ -233,9 +235,13 @@ zh-CN:
         dance_callout_04: 向程序里增加这个模块！
       Dance_Party_06_callout:
         dance_callout_06: 在这里添加新的跳舞者
+      Dance_Party_11.5_test_callout:
+        dance_party_11.5_groups: 在这里找到”所有鸭子“模块
       Dance_Party_11_callout:
         dance_callout_11_a: 新模块！
         dance_callout_11_b: 新模块！
+      Dance_Party_11_5_callout:
+        dance_party_11_5_groups: 在这里找到”所有鸭子“模块
       Eval Design Recipe .1_callout:
         edit_function: 单击此处来编辑您的函数。
       Frozen Project Test Toolbox_callout:
@@ -457,6 +463,20 @@ zh-CN:
         artistLoopsK2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: 这个数字告诉你, 你可以在这个谜题中使用多少块。
+      behaviors 1_callout:
+        behaviors_edit: 点这里发现如何工作。
+      behaviors 3a_callout:
+        behavior_callout: 为什么该行为对中间的星星不生效？
+        star2_callout: 用”精灵“模块替换装饰模块
+        this_sprite_callout: 正在测试
+      behaviors 4_callout:
+        behaviors_edit: 点这里发现如何工作。
+      behaviors 4a_callout:
+        behaviors_edit: 点这里发现如何工作。
+      behaviors 5_callout:
+        behaviors_edit: 对这个行为进行编码。
+      behaviors free play_callout:
+        behaviors_edit: 对这个行为进行编码。
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。
       course3_artist_functions_challenge1_callout:
@@ -521,8 +541,6 @@ zh-CN:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: 你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp2a_2018_callout:
@@ -530,6 +548,8 @@ zh-CN:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
         stone_block_2: 灰色的块是石头做的, 不能扔掉。
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseA_maze_seq1_callout:
@@ -568,6 +588,8 @@ zh-CN:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: 这是工具箱。在那里你可以找到额外的模块来完成你的关卡。
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: 工具箱中只有一个这样的模块。你将如何使用它？
       courseB_artist_loops3_2018_callout:
@@ -616,6 +638,10 @@ zh-CN:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: 这个模块允许你把演员移动到游戏空间的不同部分。
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: 这个模块对这个项目很重要。请确认使用它。
+      courseC_artist_loops1b_2019_callout:
+        sticker2: 将这个加到你的程序中。
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -646,6 +672,8 @@ zh-CN:
         courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
       courseC_maze_debugging5_2019_callout:
         courseC_maze_debugging5_1: 这些块是锁定的, 不能删除!
+      courseC_maze_debugging9_2019_callout:
+        courseC_maze_debugging9_2019_1: 模块可以从工具区拖到你的工作区。
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: 在这个关卡中，你只能使用一个这样的模块。
       courseC_maze_programming1_callout:
@@ -1098,6 +1126,8 @@ zh-CN:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
       coursef_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: 可以将额外的模块拖动到工具箱中, 以将其丢弃。
+      express_maze_debugging9_2019_callout:
+        express_maze_debugging9_2019_1: 模块可以从工具区拖到你的工作区。
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
       frozen circle function with parameter_b_callout:

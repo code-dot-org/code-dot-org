@@ -1,3 +1,4 @@
+hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursee/standards/"]]
 stage_extras_available true
@@ -200,12 +201,6 @@ bonus 'courseE_artist_functions_challenge1_2019'
 bonus 'courseE_artist_functions_challenge2_2019'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
-level 'courseF_video_csMatters_2019', progression: 'Video'
-level 'Geometric Sun_2019', progression: 'Example Projects'
-level 'Robot Doodle_2019', progression: 'Example Projects'
-level 'CourseE_hoops_2019', progression: 'Example Projects'
-level 'courseE_Dogger_2_2019', progression: 'Example Projects'
-level 'Begin planning your project_2018_2019', progression: 'Begin planning your project'
-level 'Course E: Artist Project_2019', progression: 'Artist Project'
+level 'courseE_project_exemplars_2019', progression: 'Example Projects'
 level 'CourseE_Project_SpriteLab_2019', progression: 'Sprite Lab Project'
-level 'Prepare for your presentation_2018_2019', progression: 'Prepare for your presentation'
+level 'Course E: Artist Project_2019', progression: 'Artist Project'
