@@ -1068,7 +1068,6 @@ describe('sectionAssessmentsRedux', () => {
           }
         };
         const result = getMatchSectionSummary(stateWithAssessment);
-        console.log(result);
         assert.deepEqual(result, [
           {
             id: 456,
