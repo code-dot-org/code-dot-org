@@ -73,7 +73,8 @@ function removeCommentNodes(root) {
   const commentWalker = document.createTreeWalker(
     root,
     NodeFilter.SHOW_COMMENT,
-    {acceptNode: node => NodeFilter.FILTER_ACCEPT}
+    {acceptNode: node => NodeFilter.FILTER_ACCEPT},
+    false
   );
   // commentWalker.currentNode will always equal the root to start with, so
   // call nextNode to move it on to the first Comment node
