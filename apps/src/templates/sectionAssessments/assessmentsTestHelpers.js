@@ -129,9 +129,9 @@ export const studentOverviewData = [
   }
 ];
 
-// Data for single student assessments table
-// type: studentWithResponsesPropType
-export const studentData = {
+// Data for single student multiple choice assessment table
+// type: studentWithMCResponsesPropType
+export const studentMCData = {
   id: 1,
   name: 'Caley',
   studentResponses: [
