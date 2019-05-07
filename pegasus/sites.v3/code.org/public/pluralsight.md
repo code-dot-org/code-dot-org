@@ -27,11 +27,13 @@ Curated by expert technologists, the library features over 350 courses totaling 
 ![AP Computer Science Principles](/images/fit-600/browse-pluralsight-screenshot-2019.png)
 
 ## Redeem this offer:
-After signing into your Code.org account, [start here](https://studio.code.org/s/pluralsight) and click ‘lock settings’ to unlock the Pluralsight One lesson for your students. 
+1. After signing into your Code.org account, [start here](https://studio.code.org/s/pluralsight) and click ‘lock settings’ to unlock the Pluralsight One lesson for your students. **This page will automatically lock after 24 hours**. You can unlock it again once the 24 hours have passed if your students need more time to redeem this offer.
 
-**This page will automatically lock after 24 hours**. You can unlock it again once the 24 hours have passed if your students need more time to redeem this offer.
+1. In the dialog that appears:
+   * Choose the section you want to unlock the offer for
+   * Select ‘Allow Editing’ and then ‘Save’ in the dialog to unlock the offer for that section.
 
-Have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/puzzle/1) to redeem the offer and sign up for a free Pluralsight One account
+1. Lastly, have your students sign-in and [visit this page](https://studio.code.org/s/pluralsight/lockable/1/puzzle/1) to redeem the offer and sign up for a free Pluralsight One account.
 
 This offer will be available for redemption through **June 30, 2019**.
 
