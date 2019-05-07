@@ -144,7 +144,13 @@ ur:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شہر
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': صحرا
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': دھنک
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی
+              کے اندر
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
       gamelab_setPosition:
         options:
           POSITION:
@@ -154,10 +160,20 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
       gamelab_whenKey:
         options:
           KEY:
             '"space"': خلاء
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': کب
+            '"while"': جب تک
       gamelab_whileKey:
         options:
           KEY:

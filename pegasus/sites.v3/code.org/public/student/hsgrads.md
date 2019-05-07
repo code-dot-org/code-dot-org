@@ -1,8 +1,18 @@
 ---
-title: Continuing Education
+title: High School Grads
 video_player: true
 theme: responsive
 style_min: true
+social:
+  "og:title": "Computer Science Beyond High School"
+  "og:description": "After graduation, advance your computer science learning by exploring pathways, job opportunities, and online courses."
+  "og:image": "http://code.org/images/2018-hoc-325.jpg"
+  "og:image:width": 850
+  "og:image:height": 502
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 #  Computer Science Beyond High School
 
@@ -31,7 +41,7 @@ Heading straight to university isn’t for everyone. If you aren’t planning on
 
 ###  Continue your learning with these partners:
 - [Lambda school](https://lambdaschool.com/code-org/?clickid=WwT36g1nlxyJR4n0EkzjZTwgUklzL-X9W1lFWE0&irgwc=1&utm_medium=affiliate&utm_campaign=1409860&utm_source=impact)  trains people online to be software engineers at no up-front cost. Instead of paying tuition, students can agree to pay a percentage of their income after they're employed, and only if they're making more than $50k per year. If you don't find a job, or don't reach that level of income, you'll never pay a cent.
-- [Take a 12-week course at a local university](https://www.trilogyed.com/)  through Trilogy. Dozens of Universities such as University of Washington, UCLA, or UPenn offer 12-week full-time or part-time courses in web development, data, design, or cybersecurity.
+- [Enroll in a skills-based boot camp](https://www.trilogyed.com/students/?utm_source=codeorg&utm_campaign=k12) powered by Trilogy Education. Programs include coding, data, design, and cybersecurity. More than 45 leading institutions, including Harvard Extension, UC Berkeley Extension, Penn LPS, and Georgia Tech, partner with Trilogy. Thousands of individuals have completed Trilogy-powered programs, and over 2,000 companies employ them. If you’re at least 18 years old and have a high school diploma or GED, apply now.
 - Based in San Francisco, [MAKE School](https://www.makeschool.com/) is designed in partnership with top tech companies and offers a degree program that is regionally accredited by WASC. Make School teaches a combination of liberal arts, civics, and computer science, and students can choose to pay tuition as a percent of earnings once they get a job. Tuition for the full two-year program is $70,000.
 - [CodePath.org](http://codepath.org/) provides college students from underrepresented backgrounds with industry-relevant technical training, along with the mentoring and networking support needed to not only land jobs, but to thrive at leading tech companies. This summer, students pursuing CS majors are invited to join their free, 12-week, [Technical Interview Prep Course](https://codepath.org/classes/interviewprep?utm_source=email&utm_campaign=codeorg). Students will learn how to ace the technical interview and land their dream job!
 

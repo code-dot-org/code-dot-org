@@ -16,7 +16,9 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk')
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
+  // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
+  path.resolve(__dirname, 'node_modules', 'parse5')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -82,7 +84,14 @@ var baseConfig = {
   module: {
     rules: [
       {test: /\.exported_json$/, loader: 'raw-loader'},
-      {test: /\.ejs$/, loader: 'ejs-webpack-loader'},
+      {
+        test: /\.ejs$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test')
+        ],
+        loader: 'ejs-webpack-loader'
+      },
       {test: /\.css$/, loader: 'style-loader!css-loader'},
       {
         test: /\.scss$/,

@@ -10759,24 +10759,24 @@ it:
         courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo
           esercizio.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2018_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2019_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
@@ -10829,18 +10829,18 @@ it:
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops5_2018_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.

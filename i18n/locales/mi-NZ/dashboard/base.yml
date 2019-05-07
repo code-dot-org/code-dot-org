@@ -190,10 +190,6 @@ mi:
     header:
       finished_hoc: "Kua oti i au taku Hour of Code"
       sign_in_to_save: 'Takiuru atu ki te tiaki i aku mahi'
-      free_play:
-        playlab: 'Hangaia tētahi taupānga Taiwhanga Tākaro'
-        artist: 'Tāngia tētahi mea'
-        applab: 'Hangaia tētahi taupānga Taiwhanga Taupānga'
       project_gallery: "Ngā Tūmahi"
     user:
       district_dashboard: 'Paemana ā-Rohe'

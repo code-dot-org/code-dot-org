@@ -516,6 +516,14 @@ pl:
         text: "Ta lekcja dotyczy tworzenia muzyki. Tworzenie muzyki jest trochę podobne do tworzenia programu komputerowego. Zapisane znaki i słowa mówią piosenkarzowi co ma robić. Niektórych fragmentów piosenki można użyć kilka razy."
       2:
       3:
+    tutorial_puzzle_challenge:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Pierwszy kwiatek jest oddalony o trzy bloki, więc potrzebuję 3 kroków do przodu. 1, 2, 3. Potem zebrać nektar i jeszcze raz zebrać nektar. Cóż, to nie zadziałało! Umieszczę jeszcze jeden krok do przodu pomiędzy zbieraniem nektarów i uruchomię jeszcze raz. Hurra, to działa! Właśnie nauczyłeś się jak używać zagadek z artystą i pszczółką w Studio Kodowania. Powodzenia w rozwiązywaniu zagadek w Studio Kodowania."
     starwars_intro:
       1:
         text: "Witam, jestem Kathleen Kennedy i jestem producentem filmu Star Wars: Przebudzenie Mocy (The Force Awakens). Dzisiaj będziecie pracować z jedną z naszych gwiazd, BB-8. BB-8 jest kulistym droidem. Cokolwiek robi i każdy jego ruch jest sterowany programem komputerowym. Informatyka ma wpływ na przemysł, od marketingu po ochronę zdrowia, na filmy. W rzeczywistości, setki inżynierów pracowało, aby powstał film taki, jak The Force Awakens."
@@ -683,3 +691,31 @@ pl:
       7:
       8:
       9:
+    hoc_dance_warmup:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Rozgrzewka"
+      2:
+        text: "Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą iLuminate."
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
+    hoc_dance_events:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Zdarzenia"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:

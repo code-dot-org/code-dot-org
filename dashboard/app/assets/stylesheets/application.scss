@@ -292,7 +292,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 300px;
+      padding-right: 350px;
     }
   }
 
@@ -432,6 +432,11 @@ img.video_thumbnail {
   }
 
   #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+  }
+
+  #help-button {
     padding-top: 4px;
     padding-left: 20px;
   }
@@ -3046,10 +3051,11 @@ code {
 }
 
 #diversity_survey {
-  background-color: $lighter_purple;
+  background-color: $background_gray;
   color: $dark_charcoal;
   border-radius: 5px;
   overflow: hidden;
+  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
@@ -3110,7 +3116,7 @@ code {
     .survey_right {
       width: 45%;
       float: left;
-      border-left: 1px solid $purple;
+      border-left: 1px solid $charcoal;
       padding-left: 20px;
 
       li {

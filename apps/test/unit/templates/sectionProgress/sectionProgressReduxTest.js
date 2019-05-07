@@ -294,7 +294,8 @@ describe('sectionProgressRedux', () => {
                       icon: 'fa-computer',
                       is_concept_level: false,
                       title: 'hello world',
-                      bonus: false
+                      bonus: false,
+                      display_as_unplugged: false
                     }
                   ]
                 }

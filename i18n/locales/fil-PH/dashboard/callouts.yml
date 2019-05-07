@@ -342,6 +342,8 @@ fil:
         craft_what_is_iron: Minahin ang bakal na ito!
       Underground Iron_2019_callout:
         craft_what_is_iron: Minahin ang bakal na ito!
+      behaviors 3a_callout:
+        this_sprite_callout: Pagsubok
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Gamitin ang loop na ito para kolektahin ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan).
       course3_bee_debugging_challenge1_callout:
@@ -364,8 +366,6 @@ fil:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseA_maze_ramp2a_2018_callout:
@@ -373,6 +373,8 @@ fil:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Maaari mong kaladkarin ang mga ekstrang bloke papunta sa toolbox para maitapon ang mga ito.
         stone_block_2: Ang mga bloke na kulay aboy ay yari sa bato at hindi maaaring itapon.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo.
       courseA_maze_seq1_callout:
@@ -395,6 +397,8 @@ fil:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Matapos ikonekta ang lahat ng mga bloke, pindutin ang "Run" para simulan ang iyong programa.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Narito ang toolbox. Ito ay kung saan makikita mo ang karagdagang mga bloke para makumpleto ang iyong mga palaisipan.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Mayroong isa lang sa mga blokeng ito sa loob ng toolbox. Paano mo ito magagamit?
       courseB_artist_loops3_2018_callout:

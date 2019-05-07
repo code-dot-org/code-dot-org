@@ -142,6 +142,8 @@ module Pd::Application
       Teacher1920ApplicationMailer.send(email.email_type, self).deliver_now
     end
 
+    # Return a string if the principal approval state is complete, in-progress, or not required.
+    # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApproval1920Application.find_by(application_guid: application_guid)
       return COMPLETE + response.full_answers[:do_you_approve] if response
@@ -337,8 +339,8 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed or pending.
-      return false unless unreviewed? || pending?
+      # Only if this teacher application is currently unreviewed, pending, or waitlisted.
+      return false unless unreviewed? || pending? || waitlisted?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
@@ -357,8 +359,15 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
+      # Only if this teacher application is currently unreviewed or pending.
+      # (Unlike allow_sending_principal_email?, don't allow for waitlisted.)
+      return false unless unreviewed? || pending?
+
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
+
+      # Only if we've sent at least one principal approval email before.
+      return false unless emails.where(email_type: 'principal_approval').exists?
 
       # If it's valid to send another principal email at this time.
       return allow_sending_principal_email?

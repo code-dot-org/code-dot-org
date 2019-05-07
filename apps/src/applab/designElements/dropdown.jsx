@@ -188,6 +188,9 @@ const svgArrowUrl = color =>
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 448" enable-background="new 0 0 256 448"><style type="text/css">.arrow{fill:${color};}</style><path class="arrow" d="M255.9 168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2 0-7.9 1.6-11.2 4.8S0 163.8 0 168c0 4.4 1.6 8.2 4.8 11.4l112 112c3.1 3.1 6.8 4.6 11.2 4.6 4.4 0 8.2-1.5 11.4-4.6l112-112c3-3.2 4.5-7 4.5-11.4z"/></svg>`
   )})`;
 
+const CLASSIC_DROPDOWN_PADDING = '0 30px 0 10px';
+const NEW_THEME_DROPDOWN_PADDING = '0 30px 0 15px';
+
 export default {
   PropertyTab: DropdownProperties,
   EventTab: DropdownEvents,
@@ -203,12 +206,12 @@ export default {
       ketchupAndMustard: 5,
       lemonade: 6,
       forest: 6,
-      watermelon: 10,
+      watermelon: 20,
       area51: 10,
-      polar: 100,
+      polar: 20,
       glowInTheDark: 10,
-      bubblegum: 100,
-      millennial: 100,
+      bubblegum: 20,
+      millennial: 20,
       robot: 0,
       classic: 0
     },
@@ -253,20 +256,36 @@ export default {
       classic: 'Arial'
     },
     fontSize: {
-      default: 15,
-      orange: 15,
-      citrus: 15,
-      ketchupAndMustard: 15,
-      lemonade: 15,
-      forest: 15,
-      watermelon: 15,
-      area51: 15,
-      polar: 15,
-      glowInTheDark: 15,
-      bubblegum: 15,
-      millennial: 15,
-      robot: 15,
+      default: 13,
+      orange: 13,
+      citrus: 13,
+      ketchupAndMustard: 13,
+      lemonade: 13,
+      forest: 13,
+      watermelon: 13,
+      area51: 13,
+      polar: 13,
+      glowInTheDark: 13,
+      bubblegum: 13,
+      millennial: 13,
+      robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_DROPDOWN_PADDING,
+      orange: NEW_THEME_DROPDOWN_PADDING,
+      citrus: NEW_THEME_DROPDOWN_PADDING,
+      ketchupAndMustard: NEW_THEME_DROPDOWN_PADDING,
+      lemonade: NEW_THEME_DROPDOWN_PADDING,
+      forest: NEW_THEME_DROPDOWN_PADDING,
+      watermelon: NEW_THEME_DROPDOWN_PADDING,
+      area51: NEW_THEME_DROPDOWN_PADDING,
+      polar: NEW_THEME_DROPDOWN_PADDING,
+      glowInTheDark: NEW_THEME_DROPDOWN_PADDING,
+      bubblegum: NEW_THEME_DROPDOWN_PADDING,
+      millennial: NEW_THEME_DROPDOWN_PADDING,
+      robot: NEW_THEME_DROPDOWN_PADDING,
+      classic: CLASSIC_DROPDOWN_PADDING
     }
   },
 
@@ -303,13 +322,19 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
-    // Set the font family for older projects that didn't set them on create:
+    // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
     // Set the dropdown SVG for older projects that didn't have them:
     if (!element.style.backgroundImage) {
       element.style.backgroundImage = svgArrowUrl(
         new RGBColor(element.style.color).toHex()
       );
+    }
+    if (experiments.isEnabled('applabThemes')) {
+      // Set the padding for older projects that didn't set it on create:
+      if (element.style.padding === '') {
+        element.style.padding = CLASSIC_DROPDOWN_PADDING;
+      }
     }
 
     // In the future we may want to trigger this on focus events as well.

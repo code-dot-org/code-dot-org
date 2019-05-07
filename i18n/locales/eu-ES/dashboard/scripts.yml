@@ -1415,6 +1415,8 @@ eu:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Paper grafiko programazioa
             Relay Programming:
               name: Txandaka programatzen
             Conditionals with Cards:
@@ -1422,7 +1424,7 @@ eu:
             Digital Citizenship:
               name: Hiritartasun digitala
             'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
+              name: Irudi bitarrak
             Artist Binary:
               name: Artista bitarra
         coursee-2019:
@@ -1433,8 +1435,8 @@ eu:
               name: Kabiatutako begiztak
             Conditionals with Cards:
               name: Baldintzak Txartelekin
-            Conditionals:
-              name: Baldintzak
+            'Functions: Songwriting':
+              name: Musika idazten
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1467,16 +1469,16 @@ eu:
               name: 'baliogabea'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Oinarri bat Eraikitzen
             'Real-life Algorithms: Paper Planes':
               name: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+            'Events: The Big Event':
+              name: Gertaera Handia
             Binary Bracelets:
               name: Eskumuturreko bitarrak
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+            'Programming: Happy Maps':
+              name: Mapa Zoriontsuak
             Going Places Safely:
               name: Joan segurtasunez
         courseb-2019:
@@ -1485,6 +1487,8 @@ eu:
               name: Mugi ezazu, mugi ezazu!
             Your Digital Footprint:
               name: Zure aztarna digitala
+            'Loops: Getting Loopy':
+              name: Iteratzen
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1533,3 +1537,7 @@ eu:
               name: Baldintzak Txartelekin
             Building a Foundation:
               name: Oinarri bat Eraikitzen
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Paper grafiko programazioa

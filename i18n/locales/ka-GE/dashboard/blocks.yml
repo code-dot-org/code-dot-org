@@ -403,7 +403,13 @@ ka:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': გამოქვაბული
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': უდაბნო
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ბადე
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ცისარტყელა
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': წყალქვეშა
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ზამთარი
       gamelab_setPosition:
         options:
           POSITION:
@@ -435,6 +441,11 @@ ka:
       gamelab_setup:
         text: დაყენება
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': როდის
@@ -503,6 +514,11 @@ ka:
             "'right'": მარჯვნივ
       gamelab_whenRightArrow:
         text: როცა დაჭერილია ისარი მარჯვნივ
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': როდის
+            '"while"': სანამ
       gamelab_whenUpArrow:
         text: როცა დაჭერილია ისარი მაღლა
       gamelab_whileDownArrow:
