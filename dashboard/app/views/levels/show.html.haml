@@ -43,7 +43,7 @@
       = render partial: 'levels/widget'
     - else
       = render partial: "levels/#{@level.class.to_s.underscore}"
-    - unless @level.is_a?(StandaloneVideo) || @level.properties["hide_reference_area"]
+    - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
       = render partial: 'levels/reference_area'
   - elsif @level.is_a?(Scratch)
     = render partial: 'levels/scratch', locals: {app: @game.app}
@@ -60,3 +60,4 @@
 = render partial: 'levels/admin'
 
 - if @script && current_user.try(:teacher?) && !@script.professional_learning_course?
+  = render partial: 'levels/teacher'
