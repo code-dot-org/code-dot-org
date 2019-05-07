@@ -20,11 +20,16 @@ const schema = Object.assign({}, defaultSanitizationSchema);
 
 // We use a _lot_ of image formatting stuff in our
 // instructions, particularly in CSP
-schema.attributes.img.push('style', 'height', 'width');
+schema.attributes.img.push('height', 'width');
 
 // Add support for expandableImages
 schema.tagNames.push('span');
 schema.attributes.span = ['dataUrl', 'className'];
+
+// Add support for inline styles (gross)
+// TODO replace all inline styles in our curriculum content with
+// semantically-significant content
+schema.attributes['*'].push('style', 'className');
 
 // Add support for Blockly XML
 schema.clobber = [];

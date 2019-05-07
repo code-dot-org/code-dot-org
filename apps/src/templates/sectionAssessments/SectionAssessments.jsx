@@ -27,6 +27,8 @@ import FreeResponsesSurveyContainer from './FreeResponsesSurveyContainer';
 import FreeResponseDetailsDialog from './FreeResponseDetailsDialog';
 import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOverviewContainer';
 import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
+import MatchAssessmentsOverviewContainer from './MatchAssessmentsOverviewContainer';
+import MatchDetailsDialog from './MatchDetailsDialog';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -104,7 +106,8 @@ class SectionAssessments extends Component {
 
   state = {
     freeResponseDetailDialogOpen: false,
-    multipleChoiceDetailDialogOpen: false
+    multipleChoiceDetailDialogOpen: false,
+    matchDetailDialogOpen: false
   };
 
   componentWillMount() {
@@ -139,6 +142,18 @@ class SectionAssessments extends Component {
   hideMultipleChoiceDetailDialog = () => {
     this.setState({
       multipleChoiceDetailDialogOpen: false
+    });
+  };
+
+  showMatchDetailDialog = () => {
+    this.setState({
+      matchDetailDialogOpen: true
+    });
+  };
+
+  hideMatchDetailDialog = () => {
+    this.setState({
+      matchDetailDialogOpen: false
     });
   };
 
@@ -220,6 +235,9 @@ class SectionAssessments extends Component {
                       openDialog={this.showMulitpleChoiceDetailDialog}
                     />
                     <MultipleChoiceByStudentContainer />
+                    <MatchAssessmentsOverviewContainer
+                      openDialog={this.showMatchDetailDialog}
+                    />
                     <FreeResponsesAssessmentsContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />
@@ -263,6 +281,10 @@ class SectionAssessments extends Component {
             <MultipleChoiceDetailsDialog
               isDialogOpen={this.state.multipleChoiceDetailDialogOpen}
               closeDialog={this.hideMultipleChoiceDetailDialog}
+            />
+            <MatchDetailsDialog
+              isDialogOpen={this.state.matchDetailDialogOpen}
+              closeDialog={this.hideMatchDetailDialog}
             />
           </div>
         )}
