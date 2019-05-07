@@ -1,6 +1,4 @@
-/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
