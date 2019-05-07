@@ -1,6 +1,28 @@
-{"datasets":[
-{"name": "dogs", "description": "something about dogs", "url": "dogBreeds.csv"}
-{"name": "words", "description": "something something words", "url": "words.csv"}
-{"name": "countries", "description": "blah blah countries", "url": "countries.csv"}
-{"name": "spotify", "description": "something about spotify", "url": "spotify.csv"}
-]}
+{
+  "datasets": [
+    {
+      "name": "dogs",
+      "description": "something about dogs",
+      "columns": "name,size,kidFriendly,dogFriendly,lowShedding,easyToGroom,highEnergy,goodHealth,lowBarking,intelligence,easyToTrain,toleratesHot,toleratesCold,imgURL",
+      "url": "/api/v1/dataset-library/dogBreeds.csv"
+    },
+    {
+      "name": "words",
+      "description": "something something words",
+      "columns": "word,partOfSpeech,Frequency,Rank",
+      "url": "/api/v1/dataset-library/words.csv"
+    },
+    {
+      "name": "countries",
+      "description": "blah blah countries",
+      "columns": "Country,Code,flagImgURL,Population,GDPperPersonUSD,Continent,Region,Latitude,Longitude,Capital,anthemMP3",
+      "url": "/api/v1/dataset-library/countries.csv"
+    },
+    {
+      "name": "spotify",
+      "description": "something about spotify",
+      "columns": "Track Name,Artist,Streams,songURL,Album Image,previewMP3,Position,Region,Country Code",
+      "url": "/api/v1/dataset-library/spotify.csv"
+    }
+  ]
+}

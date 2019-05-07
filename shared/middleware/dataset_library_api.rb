@@ -32,7 +32,7 @@ class DatasetLibraryApi < Sinatra::Base
 
       content_type result.content_type
       cache_for 3600
-      result.body
+      result.body.string
     rescue
       not_found
     end
