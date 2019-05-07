@@ -44,6 +44,11 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         summary = level.question_summary
         summary[:question_index] = index
         questions.push(summary)
+        # Except match has many "questions"
+        if level.type == "Match"
+          summary[:options] = level.questions
+          summary[:question] = level.question
+        end
       end
 
       assessments[level_group.id] = {
@@ -58,8 +63,6 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
 
   # Return a hash by student_id for all students in a section. The value is a hash by
   # script_level_id, with information on the student responses for that assessment.
-  # Currently, very similar logic to section_assessments, but will change as we refactor. The format
-  # of the results is different enough that I'm duplicating some code it for now.
   # Example output:
   # {
   #   12: {   <--- a student id
@@ -105,6 +108,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         # Summarize some key data.
         multi_count = 0
         multi_count_correct = 0
+        match_count = 0
+        match_count_correct = 0
 
         # And construct a listing of all the individual levels and their results.
         level_results = []
@@ -112,6 +117,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         level_group.levels.each do |level|
           if level.is_a? Multi
             multi_count += 1
+          elsif level.is_a? Match
+            match_count += level.questions.length
           end
 
           level_response = response_parsed[level.id.to_s]
@@ -123,6 +130,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             level_result[:type] = "FreeResponse"
           when Multi
             level_result[:type] = "Multi"
+          when Match
+            level_result[:type] = "Match"
           end
 
           if level_response
@@ -146,6 +155,25 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               else
                 level_result[:status] = "incorrect"
               end
+            when Match
+              student_result = level_response["result"].split(",", -1)
+              # If a student did not answer some of the matching question we will record that as nil
+              student_result = student_result.map do |result|
+                result.empty? ? nil : result.to_i
+              end
+              level_result[:student_result] = student_result
+              option_status = []
+              student_result.each_with_index do |answer, index|
+                if answer.nil?
+                  option_status[index] = "unsubmitted"
+                else
+                  option_status[index] = "submitted"
+                  if answer == index
+                    match_count_correct += 1
+                  end
+                end
+              end
+              level_result[:status] = option_status
             end
           else
             level_result[:status] = "unsubmitted"
@@ -164,6 +192,8 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
           multi_correct: multi_count_correct,
           multi_count: multi_count,
+          match_correct: match_count_correct,
+          match_count: match_count,
           submitted: submitted,
           timestamp: timestamp,
           level_results: level_results

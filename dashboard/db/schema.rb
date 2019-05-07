@@ -1338,6 +1338,29 @@ ActiveRecord::Schema.define(version: 20190422234557) do
     t.string   "emails"
   end
 
+  create_table "survey_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id"
+    t.bigint   "form_id"
+    t.bigint   "submission_id"
+    t.string   "question_id"
+    t.text     "answer_value",  limit: 65535
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "survey_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint   "form_id"
+    t.string   "question_id"
+    t.text     "preamble",       limit: 65535
+    t.text     "question_text",  limit: 65535
+    t.string   "answer_type"
+    t.text     "answer_options", limit: 65535
+    t.integer  "min_value"
+    t.integer  "max_value"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "survey_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
     t.string   "kind"
