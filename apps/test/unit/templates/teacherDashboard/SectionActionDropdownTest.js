@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
+import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
 const sections = [
@@ -60,7 +61,8 @@ const DEFAULT_PROPS = {
   onEdit: () => {},
   removeSection: () => {},
   toggleSectionHidden: () => {},
-  updateRoster: () => {}
+  updateRoster: () => {},
+  setRosterProvider
 };
 
 describe('SectionActionDropdown', () => {
