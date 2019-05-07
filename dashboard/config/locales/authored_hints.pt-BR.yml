@@ -334,8 +334,6 @@ pt-BR:
       2-3 Maze Loops 21_authored_hint:
         2-3_Maze_Loops_21_a: Se você está tendo dificuldades para encontrar o padrão
           de degrau, tente cobrir os caminhos bloqueados com o dedo.
-      4-5 Artist 1_authored_hint:
-        4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
         4-5_Artist_11_a: Dentro de seu loop, certifique-se que o artista salta para
           trás e para cima depois que desenha cada linha.
@@ -11171,10 +11169,6 @@ pt-BR:
           </block></xml>
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-      courseC_flappy_events1_2018_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseC_flappy_events1_2019_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'O bloco que você precisa adicionar se chama `definir
           velocidade`. '
@@ -16019,7 +16013,6 @@ pt-BR:
         courseD_artist_functions8_c: No final de cada conjunto de quadrados escalonados,
           o artista precisará pular para baixo e para trás antes de desenhar o próximo
           conjunto de quadrados escalonados.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019_authored_hint:
         courseD_artist_functions8_f: Você só precisa de um bloco `avançar ', mas você
           precisará de alguns blocos` pular para frente\` e / ou pular para trás!
@@ -16040,7 +16033,6 @@ pt-BR:
         courseD_artist_functions8_c: No final de cada conjunto de quadrados escalonados,
           o artista precisará pular para baixo e para trás antes de desenhar o próximo
           conjunto de quadrados escalonados.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: Você só precisa de um bloco 'avançar' se estiver
           fazendo isso corretamente!
@@ -18789,7 +18781,6 @@ pt-BR:
         courseF_artist_fwp_challenge1_c: Cada polígono é chamado de dentro um laço
           para que vai de 3 até 6 em um incremento de 1. Quais formas está fazendo?
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados
           que são de comprimento do ''contador'' em pixels. '
         courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um
@@ -18803,7 +18794,6 @@ pt-BR:
 
           ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: 'Esta é uma série de octógonos com lados
           que são de comprimento do ''contador'' em pixels. '
         courseF_artist_fwp_challenge1_c: 'Cada octógono é chamado de dentro de um
@@ -18933,7 +18923,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019_authored_hint:
         courseF_artist_variables4_a: Seu código não será muito diferente do que estava
           no último desafio, exceto que você precisará virar o artista para baixo,
@@ -18942,7 +18931,6 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5_authored_hint:
         courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
           o mesmo que a primeira metade, exceto você estará virando para _esquerda_,
@@ -19139,7 +19127,6 @@ pt-BR:
         courseF_artist_variables_4_a: Seu código não será muito diferente do que estava
           no último desafio, exceto que você precisará virar o artista para baixo,
           então coloca-lo de volta para saltar novamente.
-        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Graças as variáveis, você só precisa mudar um
           número no topo para fazer isto funcionar.
