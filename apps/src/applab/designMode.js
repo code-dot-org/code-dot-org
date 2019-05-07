@@ -613,12 +613,13 @@ designMode.onDuplicate = function(element, event) {
 
 var batchChangeId = 1;
 
-designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
-  const currentScreen = $(
-    elementUtils.getPrefixedElementById(
-      getStore().getState().screens.currentScreenId
-    )
-  );
+designMode.changeThemeForCurrentScreen = function(screenElement, themeValue) {
+  const prevThemeValue =
+    screenElement.getAttribute('data-theme') ||
+    applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
+  screenElement.setAttribute('data-theme', themeValue);
+
+  const currentScreen = $(screenElement);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(currentScreen.children());
@@ -641,7 +642,9 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
       const currentPropValue = designMode.readProperty(element, propName);
       const {type} = propTheme;
       let propShouldUpdate;
-      if (type === 'color') {
+      if (currentPropValue === '') {
+        propShouldUpdate = true;
+      } else if (type === 'color') {
         propShouldUpdate =
           new RGBColor(currentPropValue).toHex() ===
           new RGBColor(prevDefault).toHex();

@@ -220,11 +220,7 @@ export default {
   onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'theme': {
-        const prevValue =
-          element.getAttribute('data-theme') ||
-          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
-        element.setAttribute('data-theme', value);
-        designMode.changeThemeForCurrentScreen(prevValue, value);
+        designMode.changeThemeForCurrentScreen(element, value);
         return true;
       }
       default:
