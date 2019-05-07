@@ -1,0 +1,6 @@
+{"datasets":[
+{"name": "dogs", "description": "something about dogs", "url": "dogBreeds.csv"}
+{"name": "words", "description": "something something words", "url": "words.csv"}
+{"name": "countries", "description": "blah blah countries", "url": "countries.csv"}
+{"name": "spotify", "description": "something about spotify", "url": "spotify.csv"}
+]}
