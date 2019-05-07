@@ -154,7 +154,7 @@
   "changeEmailModal_emailOptIn_privacyPolicy": "(Ver a nossa política de privacidade)",
   "changeEmailModal_newEmail_invalid": "O endereço de email indicado não é válido.",
   "changeEmailModal_newEmail_isRequired": "Um adereço de email é obrigatório.",
-  "changeEmailModal_newEmail_mustBeDifferent": "O novo adereço de email não deve coincidir com o endereço de email antigo.",
+  "changeEmailModal_newEmail_mustBeDifferent": "O novo endereço de email não deve coincidir com o endereço de email antigo.",
   "changeEmailModal_newEmail_label": "Novo adereço de email",
   "changeEmailModal_save": "Atualizar adereço de email",
   "changeEmailModal_title": "Atualizar adereço de email",
