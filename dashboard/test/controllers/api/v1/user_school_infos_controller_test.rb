@@ -1,13 +1,28 @@
 require 'test_helper'
+require 'timecop'
 
 class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test "last confirmation date in user school infos table is updated" do
+    Timecop.freeze
+
     user_school_info = create :user_school_info
     sign_in user_school_info.user
-    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_last_confirmation_date"
-    assert_response :success
+    original_user_school_info = user_school_info.last_confirmation_date
+    original_user_school_info_created_at = user_school_info.created_at
 
-    assert user_school_info.last_confirmation_date.to_datetime, DateTime.current
+    Timecop.travel 1
+
+    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_last_confirmation_date"
+
+    user_school_info.reload
+
+    assert_response :success
+    assert user_school_info.last_confirmation_date.to_datetime > original_user_school_info.to_datetime
+
+    refute_equal original_user_school_info_created_at, user_school_info[:updated_at]
+    refute_equal original_user_school_info.to_datetime, user_school_info.last_confirmation_date.to_datetime
+
+    Timecop.return
   end
 
   test "will redirect user to sign in" do

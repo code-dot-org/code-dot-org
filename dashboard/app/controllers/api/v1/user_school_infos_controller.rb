@@ -5,14 +5,13 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
-    if @user_school_info.update!(last_confirmation_date: DateTime.now)
-      head :no_content
-    else
-      render json: @user_school_info.errors, status: :unprocessable_entity
-    end
+    @user_school_info.update!(last_confirmation_date: DateTime.now)
+
+    head :no_content
   end
 
   # PATCH /api/v1/users_school_infos/<id>/update_end_date
+  # TODO:  Add comments for clarification
   def update_end_date
     @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
     @user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
@@ -21,6 +20,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   end
 
   # PATCH /api/v1/user_school_infos/<id>/update_school_info_id
+  # TODO: Add comments for adding new row in userschoolinfotable & updating school id in the users table (most current school id)
   def update_school_info_id
     ActiveRecord::Base.transaction do
       school = @user_school_info.school_info.school
