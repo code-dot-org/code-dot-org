@@ -234,8 +234,15 @@ export function setDefaultBorderStyles(element, options = {}) {
  * @param {string} cssPaddingString value from element.style.padding
  */
 export function calculatePadding(cssPaddingString) {
+  //
+  // paddingRegEx matches a string with up to 4 pairs of numeric values
+  // with or without pixel suffixes (e.g. 0 or 2px)
+  //
   const paddingRegEx = /\s*?(\d*)(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*?/i;
   const paddingResult = paddingRegEx.exec(cssPaddingString);
+
+  // paddingResult indices 1, 3, 5, and 7 are the numeric values
+  // indices 2, 4, 6, and 8 are the optional 'px' values which we ignore
 
   const paddingValues = [
     parseInt(paddingResult[1], 10),
@@ -253,6 +260,11 @@ export function calculatePadding(cssPaddingString) {
     }
   }
 
+  // The meaning of the numeric values depends on the number that are supplied.
+  // 1 value: Apply to all four sides
+  // 2 values: vertical | horizontal
+  // 3 values: top | horizontal | bottom
+  // 4 values: top | right | bottom | left
   // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
   let horizontalPadding, verticalPadding;
   switch (validPaddingValues) {
