@@ -311,12 +311,6 @@ ar:
     header:
       finished_hoc: أكملت!
       sign_in_to_save: قم بتسجيل الدخول لحفظ التقدم
-      free_play:
-        playlab: اصنع تطبيقا
-        artist: ارسم شيئا
-        applab: اصنع تطبيقا
-        gamelab: أنشئ مشروع مختبر لعبة
-        weblab: أنشئ مشروع مختبر ويب (تجريبي)
       course_catalog: فهرس الدورة
       project_gallery: المشاريع
       sections: الأقسام

@@ -2,6 +2,7 @@
 cs:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       2-3 Artist 1 new: Ahoj, jsem Malíř. Můžeš napsat kod, kterým nakreslím cokoliv. Použij pár bloků, abych obkreslil šedé čáry. (Každá čára je dlouhá 100 pixelů)
       2-3 Artist 11: 'Vytvoř pro značku stop okraj tak, že vytvoříš osmiúhelník s 8 stranami, každou 100 pixelů dlouhou. O kolik stupňů by ses měl otáčet? (Tip: Kolik je 360 děleno 8?) '
       2-3 Artist 12: Nastav blok "opakuj", tak, že vytvoří kruh k dokončení oka. Pokud se při každém pohybu otočíš doprava o jeden stupeň, kolikrát musíš pohyb opakovat abys dokončil kruh? 180? 360? 500?
@@ -842,6 +843,7 @@ cs:
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_simple: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance Party Template 2_2019: Předloha
       Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `nastavení`.
       Dance_Party_01_low: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj ho dovnitř bloku `nastavení`.
       Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!

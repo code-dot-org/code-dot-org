@@ -262,6 +262,16 @@ Our CS teachers are everywhere! More than 70% of counties in the US have trained
 
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/student-app-designs1.png"></a>
+
+<br>
+
+Young women wanted to make apps about the weather and the young men wanted to make apps about billionaires. Check out our survey results from some high school students around which data sets (<a href="https://think.cs.vt.edu/corgis/csv/index.html">from CORGIS</a>) would make the best apps. <a href="https://twitter.com/TeachCode/status/1125430234705211393">What data do you think your students would want to use?</a>
+
+</div>
+
 <div style="clear: both;"></div>
 
 <br>

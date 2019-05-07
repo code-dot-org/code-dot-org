@@ -336,12 +336,6 @@ it:
     header:
       finished_hoc: Ho finito!
       sign_in_to_save: Accedi per salvare i progressi fatti
-      free_play:
-        playlab: Costruisci un Gioco nel Laboratorio
-        artist: Disegna qualcosa
-        applab: Costruisci una App in Sviluppo App
-        gamelab: Crea un progetto in Sviluppo Giochi
-        weblab: Crea un progetto in Sviluppo Web (versione provvisoria)
       my_dashboard: Controllo
       course_catalog: Corsi
       project_gallery: Progetti

@@ -104,6 +104,14 @@ zu:
         options:
           CONDITION:
             '"when"': nini
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': nini
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': nini
       RyanLab_moveForward:
         text: qubekela phambili
       aalab_checkTouching:
