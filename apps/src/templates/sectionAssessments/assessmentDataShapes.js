@@ -74,4 +74,38 @@ export const studentOverviewDataPropType = PropTypes.shape({
   url: PropTypes.string
 });
 
+// Shapes for match overview
+
+// Represents a single answer for a single option of a match question and a section summary of answers
+const answerMatchDataPropType = PropTypes.shape({
+  answer: PropTypes.string,
+  isCorrect: PropTypes.bool,
+  numAnswered: PropTypes.number
+});
+
+// Represents a single option of a match question and a section summary of answers
+export const optionDataPropTypeMatch = PropTypes.shape({
+  option: PropTypes.string,
+  totalAnswered: PropTypes.number,
+  notAnswered: PropTypes.number,
+  id: PropTypes.number,
+  answers: PropTypes.arrayOf(answerMatchDataPropType)
+});
+
+// Represents a single match question and a section summary of answers
+export const matchDataPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  questionNumber: PropTypes.number,
+  options: PropTypes.arrayOf(optionDataPropTypeMatch)
+});
+
+// Represents a single match question structure
+export const matchDetailsQuestionPropType = PropTypes.shape({
+  question: PropTypes.string.isRequired,
+  questionType: PropTypes.string,
+  answers: PropTypes.array,
+  options: PropTypes.array
+});
+
 export const QUESTION_CHARACTER_LIMIT = 110;
