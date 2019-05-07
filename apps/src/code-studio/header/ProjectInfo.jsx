@@ -3,11 +3,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import MinimalProjectHeader from './MinimalProjectHeader';
+import ProjectBackedHeader from './ProjectBackedHeader';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 
 class ProjectInfo extends React.Component {
   static propTypes = {
     showMinimalProjectHeader: PropTypes.bool,
+    showProjectBackedHeader: PropTypes.bool,
     showLevelBuilderSaveButton: PropTypes.bool
   };
 
@@ -15,6 +17,7 @@ class ProjectInfo extends React.Component {
     return (
       <div>
         {this.props.showMinimalProjectHeader && <MinimalProjectHeader />}
+        {this.props.showProjectBackedHeader && <ProjectBackedHeader />}
         {this.props.showLevelBuilderSaveButton && <LevelBuilderSaveButton />}
       </div>
     );
@@ -23,5 +26,6 @@ class ProjectInfo extends React.Component {
 
 export default connect(state => ({
   showMinimalProjectHeader: state.header.showMinimalProjectHeader,
+  showProjectBackedHeader: state.header.showProjectBackedHeader,
   showLevelBuilderSaveButton: state.header.showLevelBuilderSaveButton
 }))(ProjectInfo);
