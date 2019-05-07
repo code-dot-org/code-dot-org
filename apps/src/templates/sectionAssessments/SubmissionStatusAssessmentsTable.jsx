@@ -7,14 +7,16 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import {studentOverviewDataPropType} from './assessmentDataShapes';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 3,
-  numMultipleChoiceCorrect: TABLE_WIDTH / 8,
-  numMultipleChoice: TABLE_WIDTH / 8,
-  percentCorrect: TABLE_WIDTH / 8,
-  submissionTimeStamp: TABLE_WIDTH / 5
+  numMultipleChoiceCorrect: TABLE_WIDTH / 12,
+  numMultipleChoice: TABLE_WIDTH / 12,
+  numMatchCorrect: TABLE_WIDTH / 12,
+  numMatch: TABLE_WIDTH / 12,
+  submissionTimeStamp: TABLE_WIDTH / 3
 };
 
 const styles = {
@@ -46,20 +48,10 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  SUBMISSION_TIMESTAMP: 3
+  NUM_MATCH_CORRECT: 3,
+  NUM_MATCH: 4,
+  SUBMISSION_TIMESTAMP: 5
 };
-
-export const studentOverviewDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  numMultipleChoiceCorrect: PropTypes.number,
-  numMultipleChoice: PropTypes.number,
-  /* timestamp is passed in as a Date so the column can be sorted accurately. See note in sectionAssessmentsRedux for details*/
-  submissionTimeStamp: PropTypes.instanceOf(Date).isRequired,
-  isSubmitted: PropTypes.bool.isRequired,
-  inProgress: PropTypes.bool.isRequired,
-  url: PropTypes.string
-});
 
 /**
  * A table that shows the summary data for each student in a section.
@@ -188,6 +180,36 @@ class SubmissionStatusAssessmentsTable extends Component {
             style: {
               ...tableLayoutStyles.headerCell,
               ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatchCorrect',
+        header: {
+          label: i18n.numMatchCorrect(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatchCorrect}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatch',
+        header: {
+          label: i18n.numMatch(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatch}
             }
           }
         },
