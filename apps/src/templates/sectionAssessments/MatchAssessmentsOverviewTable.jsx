@@ -8,15 +8,17 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PercentAnsweredCell from './PercentAnsweredCell';
 import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
 import {setQuestionIndex} from './sectionAssessmentsRedux';
+import ReactTooltip from 'react-tooltip';
+import {optionDataPropTypeMatch} from './assessmentDataShapes';
 
 export const COLUMNS = {
-  QUESTION: 0
+  OPTION: 0
 };
 
-const ANSWER_COLUMN_WIDTH = 70;
+const ANSWER_COLUMN_WIDTH = 100;
 const PADDING = 20;
+const ANSWER_CHAR_LIMIT = 30;
 
 const styles = {
   answerColumnHeader: {
@@ -28,17 +30,14 @@ const styles = {
     padding: 0,
     height: 40
   },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
   notAnsweredCell: {
     padding: 0,
     height: 40
   },
-  link: {
-    color: color.teal
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
   }
 };
 
@@ -48,53 +47,36 @@ const answerColumnsFormatter = (
   percentAnswered,
   {rowData, columnIndex, rowIndex, property}
 ) => {
-  const cell = rowData.answers[columnIndex - 1];
-
   let percentValue = 0;
+  const answerResults = rowData.answers[columnIndex - 1] || {};
 
   if (property === NOT_ANSWERED) {
-    percentValue = rowData.notAnswered;
+    percentValue = Math.round(
+      (rowData.notAnswered / rowData.totalAnswered) * 100
+    );
   } else {
-    percentValue = cell && cell.percentAnswered;
+    percentValue = Math.round(
+      (answerResults.numAnswered / rowData.totalAnswered) * 100
+    );
   }
 
   return (
     <PercentAnsweredCell
       id={rowData.id}
       percentValue={percentValue}
-      isSurvey={true}
+      isCorrectAnswer={!!answerResults.isCorrect}
     />
   );
 };
 
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number
-});
-
-export const multipleChoiceSurveyDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired
-});
-
-/**
- * A single table that shows students' responses to each multiple choice question for a survey.
- * The table displays the percent of students that select an answer choice and
- * percent of students that did not answer the question.
- */
-class MultipleChoiceSurveyOverviewTable extends Component {
+class MatchAssessmentsOverviewTable extends Component {
   static propTypes = {
-    multipleChoiceSurveyData: PropTypes.arrayOf(
-      multipleChoiceSurveyDataPropType
-    ),
-    openDialog: PropTypes.func.isRequired,
+    questionAnswerData: PropTypes.arrayOf(optionDataPropTypeMatch),
     setQuestionIndex: PropTypes.func.isRequired
   };
 
   state = {
-    [COLUMNS.QUESTION]: {
+    [COLUMNS.OPTION]: {
       direction: 'desc',
       position: 0
     }
@@ -119,25 +101,8 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     });
   };
 
-  selectQuestion = index => {
-    this.props.setQuestionIndex(index);
-    this.props.openDialog();
-  };
-
-  questionFormatter = (
-    question,
-    {rowData, columnIndex, rowIndex, property}
-  ) => {
-    return (
-      <div>
-        <a
-          style={styles.link}
-          onClick={() => this.selectQuestion(rowData.questionNumber - 1)}
-        >
-          {`${rowData.questionNumber}. ${question}`}
-        </a>
-      </div>
-    );
+  optionFormatter = (option, {rowData, columnIndex, rowIndex, property}) => {
+    return <div>{`${option}`}</div>;
   };
 
   getNotAnsweredColumn = () => ({
@@ -165,12 +130,17 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   getAnswerColumn = columnLabel => ({
     property: 'percentAnswered',
     header: {
-      label: columnLabel,
+      label:
+        columnLabel.length < ANSWER_CHAR_LIMIT
+          ? `${columnLabel}`
+          : `${columnLabel.slice(0, ANSWER_CHAR_LIMIT)}...`,
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
           ...styles.answerColumnHeader
-        }
+        },
+        'data-for': `tooltipForOption${columnLabel}`,
+        'data-tip': true
       }
     },
     cell: {
@@ -184,14 +154,14 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     }
   });
 
-  getQuestionColumn = (sortable, numAnswers) => ({
-    property: 'question',
+  getOptionColumn = (sortable, numAnswers) => ({
+    property: 'option',
     header: {
-      label: i18n.question(),
+      label: i18n.option(),
       props: {style: tableLayoutStyles.headerCell}
     },
     cell: {
-      format: this.questionFormatter,
+      format: this.optionFormatter,
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -205,24 +175,32 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   });
 
   getColumns = sortable => {
-    let maxOptionsQuestion = [...this.props.multipleChoiceSurveyData]
-      .sort(
-        (question1, question2) =>
-          question1.answers.length - question2.answers.length
-      )
-      .pop();
-
-    const columnLabelNames = maxOptionsQuestion.answers.map(answer => {
-      return this.getAnswerColumn(answer.multipleChoiceOption);
-    });
+    const columnLabelNames = this.props.questionAnswerData[0].answers.map(
+      answer => {
+        return this.getAnswerColumn(answer.answer);
+      }
+    );
 
     const numAnswerColumns = columnLabelNames.length + 1;
     return [
-      this.getQuestionColumn(sortable, numAnswerColumns),
+      this.getOptionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
       this.getNotAnsweredColumn()
     ];
   };
+
+  renderTooltips() {
+    return this.props.questionAnswerData[0].answers.map(answer => (
+      <ReactTooltip
+        id={`tooltipForOption${answer.answer}`}
+        key={`tooltipForOption${answer.answer}`}
+        role="tooltip"
+        effect="solid"
+      >
+        {answer.answer}
+      </ReactTooltip>
+    ));
+  }
 
   render() {
     // Define a sorting transform that can be applied to each column
@@ -238,18 +216,21 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       columns,
       sortingColumns,
       sort: orderBy
-    })(this.props.multipleChoiceSurveyData);
+    })(this.props.questionAnswerData);
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
+      <div>
+        <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" />
+        </Table.Provider>
+        {this.props.questionAnswerData[0].answers && this.renderTooltips()}
+      </div>
     );
   }
 }
 
-export const UnconnectedMultipleChoiceSurveyOverviewTable = MultipleChoiceSurveyOverviewTable;
+export const UnconnectedMatchAssessmentsOverviewTable = MatchAssessmentsOverviewTable;
 
 export default connect(
   state => ({}),
@@ -258,4 +239,4 @@ export default connect(
       dispatch(setQuestionIndex(questionIndex));
     }
   })
-)(MultipleChoiceSurveyOverviewTable);
+)(MatchAssessmentsOverviewTable);
