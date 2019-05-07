@@ -191,6 +191,9 @@ class LabelEvents extends React.Component {
  */
 const STILL_FITS = 5;
 
+const CLASSIC_LABEL_PADDING = '2px';
+const NEW_THEME_LABEL_PADDING = '2px 15px';
+
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
@@ -203,14 +206,14 @@ export default {
       default: 0,
       orange: 0,
       citrus: 2,
-      ketchupAndMustard: 200,
+      ketchupAndMustard: 10,
       lemonade: 0,
       forest: 2,
       watermelon: 0,
-      area51: 20,
+      area51: 10,
       polar: 2,
       glowInTheDark: 0,
-      bubblegum: 100,
+      bubblegum: 10,
       millennial: 4,
       robot: 0,
       classic: 0
@@ -256,27 +259,42 @@ export default {
       classic: 'Arial'
     },
     fontSize: {
-      default: 15,
-      orange: 15,
-      citrus: 15,
-      ketchupAndMustard: 15,
-      lemonade: 15,
-      forest: 15,
-      watermelon: 15,
-      area51: 15,
-      polar: 15,
-      glowInTheDark: 15,
-      bubblegum: 15,
-      millennial: 15,
-      robot: 15,
+      default: 13,
+      orange: 13,
+      citrus: 13,
+      ketchupAndMustard: 13,
+      lemonade: 13,
+      forest: 13,
+      watermelon: 13,
+      area51: 13,
+      polar: 13,
+      glowInTheDark: 13,
+      bubblegum: 13,
+      millennial: 13,
+      robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_LABEL_PADDING,
+      orange: NEW_THEME_LABEL_PADDING,
+      citrus: NEW_THEME_LABEL_PADDING,
+      ketchupAndMustard: NEW_THEME_LABEL_PADDING,
+      lemonade: NEW_THEME_LABEL_PADDING,
+      forest: NEW_THEME_LABEL_PADDING,
+      watermelon: NEW_THEME_LABEL_PADDING,
+      area51: NEW_THEME_LABEL_PADDING,
+      polar: NEW_THEME_LABEL_PADDING,
+      glowInTheDark: NEW_THEME_LABEL_PADDING,
+      bubblegum: NEW_THEME_LABEL_PADDING,
+      millennial: NEW_THEME_LABEL_PADDING,
+      robot: NEW_THEME_LABEL_PADDING,
+      classic: CLASSIC_LABEL_PADDING
     }
   },
 
   create: function() {
     const element = document.createElement('label');
     element.style.margin = '0px';
-    element.style.padding = '2px';
     element.style.lineHeight = '1';
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
@@ -286,6 +304,7 @@ export default {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
+      element.style.padding = CLASSIC_LABEL_PADDING;
       element.style.backgroundColor = themeColor.labelBackground.classic;
       element.style.fontFamily = applabConstants.fontFamilyStyles[0];
       element.style.fontSize = applabConstants.defaultFontSizeStyle;
@@ -354,14 +373,17 @@ export default {
         })
         .appendTo($(document.body));
 
-      const padding = parseInt(element.style.padding, 10);
+      const {
+        horizontalPadding,
+        verticalPadding
+      } = elementUtils.calculatePadding(element.style.padding);
 
       if (!widthLocked) {
         // Truncate the width before it runs off the edge of the screen
-        size.width = Math.min(clone.width() + 1 + 2 * padding, maxWidth);
+        size.width = Math.min(clone.width() + 1 + horizontalPadding, maxWidth);
       }
       if (!heightLocked) {
-        size.height = clone.height() + 1 + 2 * padding;
+        size.height = clone.height() + 1 + verticalPadding;
       }
 
       clone.remove();
@@ -400,19 +422,41 @@ export default {
     element.style.height = size.height + 'px';
   },
 
+  _lastFitsExactly: {},
+
   /**
    * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
    */
-  beforePropertyChange: function(element, name) {
-    if (name !== 'text' && name !== 'fontSize') {
-      return null;
+  beforePropertyChange: function(element, name, batchChangeId) {
+    switch (name) {
+      case 'padding':
+      case 'text':
+      case 'fontFamily':
+      case 'fontSize': {
+        const {
+          batchId = -1,
+          previouslyFitExactly: batchPreviouslyFitExactly
+        } = this._lastFitsExactly;
+        if (batchId === batchChangeId) {
+          // We've already computed previouslyFitExactly for this batch of property updates:
+          return batchPreviouslyFitExactly;
+        }
+        const currentSize = this.getCurrentSize(element);
+        const bestSize = this.getBestSize(element);
+        const previouslyFitExactly =
+          Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
+          Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
+        this._lastFitsExactly = batchChangeId
+          ? {
+              batchId: batchChangeId,
+              previouslyFitExactly
+            }
+          : {};
+        return previouslyFitExactly;
+      }
+      default:
+        return null;
     }
-    const currentSize = this.getCurrentSize(element);
-    const bestSize = this.getBestSize(element);
-    return (
-      Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
-      Math.abs(currentSize.height - bestSize.height) < STILL_FITS
-    );
   },
 
   /**
@@ -421,7 +465,9 @@ export default {
   onPropertyChange: function(element, name, value, previouslyFitExactly) {
     switch (name) {
       case 'text':
+      case 'fontFamily':
       case 'fontSize':
+      case 'padding':
         if (previouslyFitExactly) {
           this.resizeToFitText(element);
         }

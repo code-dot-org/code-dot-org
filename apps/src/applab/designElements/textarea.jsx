@@ -192,6 +192,9 @@ class TextAreaEvents extends React.Component {
   }
 }
 
+const CLASSIC_TEXT_AREA_PADDING = '5px';
+const NEW_THEME_TEXT_AREA_PADDING = '5px 15px';
+
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
@@ -206,7 +209,7 @@ export default {
       citrus: 4,
       ketchupAndMustard: 5,
       lemonade: 6,
-      forest: 8,
+      forest: 5,
       watermelon: 20,
       area51: 20,
       polar: 8,
@@ -257,20 +260,36 @@ export default {
       classic: 'Arial'
     },
     fontSize: {
-      default: 15,
-      orange: 15,
-      citrus: 15,
-      ketchupAndMustard: 15,
-      lemonade: 15,
-      forest: 15,
-      watermelon: 15,
-      area51: 15,
-      polar: 15,
-      glowInTheDark: 15,
-      bubblegum: 15,
-      millennial: 15,
-      robot: 15,
+      default: 13,
+      orange: 13,
+      citrus: 13,
+      ketchupAndMustard: 13,
+      lemonade: 13,
+      forest: 13,
+      watermelon: 13,
+      area51: 13,
+      polar: 13,
+      glowInTheDark: 13,
+      bubblegum: 13,
+      millennial: 13,
+      robot: 13,
       classic: 14
+    },
+    padding: {
+      default: NEW_THEME_TEXT_AREA_PADDING,
+      orange: NEW_THEME_TEXT_AREA_PADDING,
+      citrus: NEW_THEME_TEXT_AREA_PADDING,
+      ketchupAndMustard: NEW_THEME_TEXT_AREA_PADDING,
+      lemonade: NEW_THEME_TEXT_AREA_PADDING,
+      forest: NEW_THEME_TEXT_AREA_PADDING,
+      watermelon: NEW_THEME_TEXT_AREA_PADDING,
+      area51: NEW_THEME_TEXT_AREA_PADDING,
+      polar: NEW_THEME_TEXT_AREA_PADDING,
+      glowInTheDark: NEW_THEME_TEXT_AREA_PADDING,
+      bubblegum: NEW_THEME_TEXT_AREA_PADDING,
+      millennial: NEW_THEME_TEXT_AREA_PADDING,
+      robot: NEW_THEME_TEXT_AREA_PADDING,
+      classic: CLASSIC_TEXT_AREA_PADDING
     }
   },
 
@@ -303,8 +322,14 @@ export default {
   onDeserialize: function(element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
-    // Set the font family for older projects that didn't set them on create:
+    // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
+    if (experiments.isEnabled('applabThemes')) {
+      // Set the padding for older projects that didn't set it on create:
+      if (element.style.padding === '') {
+        element.style.padding = CLASSIC_TEXT_AREA_PADDING;
+      }
+    }
 
     $(element).addClass('textArea');
 

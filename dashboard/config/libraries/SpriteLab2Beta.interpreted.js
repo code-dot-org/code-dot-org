@@ -147,8 +147,10 @@ function whenPressedAndReleased(direction, pressedHandler, releasedHandler) {
   inputEvents.push({type: keyWentUp, event: releasedHandler, param: direction});
 }
 
+//This exists for backcompat purposes with the first release of SpriteLab.
+//This version of the block is no longer provided, but it may exist in student code.
 function clickedOn(sprite, event) {
-  touchEvents.push({type: mousePressedOver, event: event, sprite: sprite});
+  inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
 }
 
 function spriteClicked(condition, sprite, event) {
@@ -297,7 +299,6 @@ function layoutSprites(animation, format) {
       sprite.x = 200 + radius * Math.cos(angle);
       sprite.y = 200 + radius * Math.sin(angle);
       sprite.rotation = (angle - startAngle) * radiansToDegrees;
-      //sprite.scale = scale;
     });
   } else if (format === 'plus') {
     pct = constrain(count / 10, 0, 1);
@@ -850,18 +851,20 @@ function runInputEvents() {
     param = typeof inputEvents[i].param === "function" ?
       inputEvents[i].param() :
       inputEvents[i].param;
-    // Need to fix
+    // Need to fix scope bleed with thisSprite and otherSprite.
     if (typeof(param) === "object") {
       if(!param.isGroup) {
         if(eventType(param)) {
           thisSprite = param;
           event();
+          thisSprite = null;
         }
       } else {
         for(var j = 0; j < param.length; j++) {
           if(eventType(param[j])) {
             thisSprite = param[j];
             event();
+            thisSprite = null;
           }
         }
       }
@@ -878,6 +881,8 @@ function createCollisionHandler (collisionEvent) {
     if (!collisionEvent.touching || collisionEvent.keepFiring) {
       collisionEvent.event(sprite1, sprite2);
     }
+    thisSprite = null;
+    otherSprite = null;
   };
 }
 

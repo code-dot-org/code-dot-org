@@ -6,10 +6,9 @@ import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
-import experiments from '@cdo/apps/util/experiments';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
 
-export function sprites() {
+function sprites() {
   const animationList = getStore().getState().animationList;
   if (!animationList || animationList.orderedKeys.length === 0) {
     console.warn('No sprites available');
@@ -154,7 +153,7 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (experiments.isEnabled('sprite-costumes')) {
+      if (getStore().getState().pageConstants.showAnimationMode) {
         buttons = [
           {
             text: 'Draw',
@@ -254,6 +253,7 @@ const customInputTypes = {
 };
 
 export default {
+  sprites,
   customInputTypes,
   install(blockly, blockInstallOptions) {
     // Legacy style block definitions :(
