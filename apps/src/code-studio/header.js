@@ -5,7 +5,10 @@ import _ from 'lodash';
 
 import {
   showMinimalProjectHeader,
-  showLevelBuilderSaveButton
+  showProjectBackedHeader,
+  showLevelBuilderSaveButton,
+  showProjectUpdatedAt,
+  setProjectUpdatedAt
 } from './headerRedux';
 
 import progress from './progress';
@@ -328,58 +331,17 @@ header.showLevelBuilderSaveButton = function(getChanges) {
   getStore().dispatch(showLevelBuilderSaveButton(getChanges));
 };
 
-// Project header for script levels that are backed by a project. Shows a
-// Share and Remix button, and places a last_modified time below the stage
-// name
 /**
  * @param {object} options{{
  *   showShareAndRemix: boolean
  * }}
  */
 header.showHeaderForProjectBacked = function(options) {
-  if ($('.project_updated_at').length !== 0) {
-    return;
-  }
   if (options.showShareAndRemix) {
-    $('.project_info')
-      .append(
-        $('<div class="project_share header_button header_button_light">').text(
-          dashboard.i18n.t('project.share')
-        )
-      )
-      .append(
-        $('<div class="project_remix header_button header_button_light">').text(
-          dashboard.i18n.t('project.remix')
-        )
-      );
-    $('.project_share').click(() =>
-      shareProject(dashboard.project.getShareUrl())
-    );
-    $('.project_remix').click(remixProject);
+    getStore().dispatch(showProjectBackedHeader());
   }
 
-  // Add updated_at below the level name. Do this by creating a new div, moving
-  // the level text into it, applying some styling, and placing that div where
-  // levelText was previously.
-  // I really don't like that we're modifying DOM elements/styles of other
-  // elements here, but until this is all Reactified, I'm not sure if theres
-  // a better solution
-  var levelText = $('.header_level_container')
-    .children()
-    .first()
-    .detach();
-  $('.header_level_container').prepend(
-    $('<div>')
-      .css({display: 'inline-block', verticalAlign: 'bottom'})
-      .append(levelText.css('display', 'block'))
-      .append(
-        $('<div class="project_updated_at header_text">').css({
-          display: 'block',
-          textAlign: 'left'
-        })
-      )
-  );
-
+  getStore().dispatch(showProjectUpdatedAt());
   header.updateTimestamp();
 };
 
@@ -489,17 +451,8 @@ header.showProjectHeader = function() {
 };
 
 header.updateTimestamp = function() {
-  var timestamp = dashboard.project.getCurrentTimestamp();
-  if (timestamp) {
-    $('.project_updated_at')
-      .empty()
-      .append('Saved ') // TODO i18n
-      .append($('<span class="timestamp">').attr('title', timestamp))
-      .show();
-    $('.project_updated_at span.timestamp').timeago();
-  } else {
-    $('.project_updated_at').text('Not saved'); // TODO i18n
-  }
+  const timestamp = dashboard.project.getCurrentTimestamp();
+  getStore().dispatch(setProjectUpdatedAt(timestamp));
 };
 
 // TODO i18n
