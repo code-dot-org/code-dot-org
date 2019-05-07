@@ -90,6 +90,12 @@ FactoryGirl.define do
           project_validator.save
         end
       end
+      factory :authorized_teacher do
+        after(:create) do |authorized_teacher|
+          authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+          authorized_teacher.save
+        end
+      end
       factory :facilitator do
         transient do
           course nil
@@ -481,6 +487,10 @@ FactoryGirl.define do
     trait :script do
       create(:script_level)
     end
+
+    factory :sublevel do
+      sequence(:name) {|n| "sub_level_#{n}"}
+    end
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -565,6 +575,10 @@ FactoryGirl.define do
   end
 
   factory :external, parent: :level, class: External do
+    after(:create) do |level|
+      level.properties['markdown'] = 'lorem ipsum'
+      level.save!
+    end
   end
 
   factory :external_link, parent: :level, class: ExternalLink do
@@ -782,6 +796,17 @@ FactoryGirl.define do
         submittable: submittable,
         pages: [{levels: ['level1', 'level2']}, {levels: ['level3']}]
       }
+    end
+
+    # create real sublevels, and update pages to match.
+    trait :with_sublevels do
+      after(:create) do |lg|
+        sublevels = [create(:sublevel), create(:sublevel), create(:sublevel)]
+        lg.properties['pages'] = [
+          {levels: [sublevels[0].name, sublevels[1].name]},
+          {levels: [sublevels[2].name]}
+        ]
+      end
     end
   end
 

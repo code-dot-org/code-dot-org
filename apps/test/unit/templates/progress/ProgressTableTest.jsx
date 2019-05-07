@@ -30,7 +30,8 @@ const DEFAULT_PROPS = {
 describe('ProgressTable', () => {
   it('renders a single lesson in full view', () => {
     const wrapper = shallow(
-      <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />
+      <ProgressTable {...DEFAULT_PROPS} isSummaryView={false} />,
+      {disableLifecycleMethods: true}
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -52,7 +53,8 @@ describe('ProgressTable', () => {
 
   it('renders a single lesson in summary view', () => {
     const wrapper = shallow(
-      <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />
+      <ProgressTable {...DEFAULT_PROPS} isSummaryView={true} />,
+      {disableLifecycleMethods: true}
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -77,7 +79,8 @@ describe('ProgressTable', () => {
       <ProgressTable
         {...DEFAULT_PROPS}
         categorizedLessons={[FAKE_LESSON_1, FAKE_LESSON_2]}
-      />
+      />,
+      {disableLifecycleMethods: true}
     );
     expect(wrapper).to.containMatchingElement(
       <div>

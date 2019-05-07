@@ -248,10 +248,6 @@ sq:
     header:
       finished_hoc: "Unë e mbarova Orën e Kodimit"
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
-      free_play:
-        playlab: 'Bëj një Aplikacion Play Lab'
-        artist: 'Vizato Diçka'
-        applab: 'Bëj një Aplikacion App Lab'
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
     user:
