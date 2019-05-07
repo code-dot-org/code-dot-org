@@ -6991,6 +6991,8 @@ en:
               name: CSP post course survey 2019 staging
             CSD post course survey 2019 staging:
               name: CSD post course survey 2019 staging
+            Place for testing crazy stuff:
+              name: Place for testing crazy stuff
           title: All the surveys
           description_audience: ''
           description_short: Place to stage and test Code.org surveys
@@ -12003,6 +12005,8 @@ en:
               name: 'Loops Practice: While Loops'
             'Loops Practice: Simulations':
               name: 'Loops Practice: Simulations'
+            Lists Make:
+              name: Lists Make
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''

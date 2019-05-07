@@ -1,6 +1,5 @@
 name 'DesigningForAccessibilityMarkdownLevel_2019'
-title 'Anton the Alien'
-description 'description here'
+display_as_unplugged 'true'
 markdown <<MARKDOWN
 # Designing for Accessibility
 

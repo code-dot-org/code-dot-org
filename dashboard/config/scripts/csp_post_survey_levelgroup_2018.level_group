@@ -73,5 +73,9 @@ level 'prepared-for-explore-PT'
 level 'prepared-for-create-pt'
 
 page
+level 'csp-post-survey-reasons-took-CSP'
+level 'csp-post-survey-who-encouraged-csp'
+level 'csp-post-survey-reasons-not-take-csp'
+level 'csp-post-survey-what-could-school-do-to-encourage-csp'
 text 'csp-post-survey-2017-thanks_2018'
 level 'csp-post-survey-2017-FR_2018'

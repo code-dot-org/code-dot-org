@@ -4,8 +4,7 @@ submittable 'true'
 anonymous 'true'
 
 page
-text 'csd-post-survey-preamble-anonymous-10-mins'
-text 'csd-post-survey-preamble-school-in-general'
+text 'csp-post-survey-2017 preamble 1_2019'
 level 'csp-post-survey-2017-q1_2018'
 level 'csp-post-survey-2017-q4_2018'
 
@@ -26,13 +25,14 @@ level 'csp-post-survey-2017-q19_2018'
 level 'csp-post-survey-2017-q20_2018'
 level 'csp-post-survey-2017-q22_2018'
 level 'csp-post-survey-2017-q23_2018'
+level 'csp-post-survey-2017-q24_2018'
 level 'curriculum-how-did-you-like-lessons'
 level 'curriculum-how-challenging'
 level 'post-assessment survey q31-a-2017b'
 level 'csp-post-survey-2018-topics-liked-FR'
 
 page
-text 'csd-post-survey-2017-implementation-teacher_2019'
+text 'csd-post-survey-2017-implementation-teacher'
 level 'csd-post-survey-q26_2018'
 level 'csd-post-survey-q27_2018'
 level 'csd-post-survey-q29_2018'
@@ -43,7 +43,7 @@ level 'how-often-failure-prob-solve-prcess-2019'
 level 'how-often-journal-2019'
 
 page
-text 'csd-post-survey-2017-implementation-student_2019'
+text 'csd-post-survey-2017-implementation-student'
 level 'csd-post-survey-q30_2018'
 level 'csd-post-survey-q31_2018'
 level 'csd-post-survey-q32_2018'
