@@ -280,6 +280,10 @@ es-MX:
       professional_learning: "Aprendizaje Profesional"
       documentation: "Documentación"
       tutorials: "Tutoriales"
+      app_lab_documentation: "Documentación del Laboratorio de aplicaciones"
+      app_lab_tutorials: "Tutoriales del Laboratorio de aplicaciones"
+      game_lab_documentation: "Documentación del Laboratorio de juegos"
+      game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
       educate_overview: "Descripción del educador"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
@@ -310,6 +314,7 @@ es-MX:
       district_dashboard: 'Panel del distrito'
       label: 'Hola, %{username}'
       stats: 'Code Studio'
+      my_projects: 'Mis proyectos'
       settings: 'Configuración de la cuenta'
       logout: 'Cerrar sesión'
       signin: 'Iniciar sesión'

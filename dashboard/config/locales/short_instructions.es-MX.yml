@@ -1995,6 +1995,12 @@ es-MX:
       CSPU5_U3 - Loops -  Complex Condition_2018: Cambia la expresión booleana para
         el bucle `mientras` para que se detenga cuando ambos dados sean mayores o
         iguales a 5. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot: Cambia la expresión booleana
+        para el bucle `mientras` para que se detenga cuando ambos dados sean mayores
+        o iguales a 5. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot2: Cambia la expresión booleana
+        para el bucle `mientras` para que se detenga cuando ambos dados sean mayores
+        o iguales a 5. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops -  Complex Condition_2019: Cambia la expresión booleana para
         el bucle `mientras` para que se detenga cuando ambos dados sean mayores o
         iguales a 5. (Haz clic para ver las instrucciones completas)
@@ -2006,6 +2012,9 @@ es-MX:
       CSPU5_U3 - Loops - 10_2018: Escribe un programa que simule la arrojada de dos
         dados. Arroje los dados repetidamente hasta que la suma de los dados sea o
         7 u 11.
+      CSPU5_U3 - Loops - 10_2018pilot: Escribe un programa que simule la arrojada
+        de dos dados. Arroje los dados repetidamente hasta que la suma de los dados
+        sea o 7 u 11.
       CSPU5_U3 - Loops - 10_2019: Escribe un programa que simule la arrojada de dos
         dados. Arroje los dados repetidamente hasta que la suma de los dados sea o
         7 u 11.
@@ -2015,6 +2024,9 @@ es-MX:
       CSPU5_U3 - Loops - 11_2018: Arregle la condición para que siga arrojando el
         dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente.
         (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 11_2018pilot: Arregle la condición para que siga arrojando
+        el dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente.
+        (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 11_2019: Arregle la condición para que siga arrojando el
         dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente.
         (Haz clic para ver las instrucciones completas)
@@ -2022,6 +2034,8 @@ es-MX:
         veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 12_2018: Cambia el código para que imprima la cadena "Hola"
         5 veces. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 12_2018pilot: Cambia el código para que imprima la cadena
+        "Hola" 5 veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 12_2019: Cambia el código para que imprima la cadena "Hola"
         5 veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 14: Cambia la condición del bucle para impedir el bucle infinito
@@ -2030,6 +2044,9 @@ es-MX:
       CSPU5_U3 - Loops - 14_2018: Cambia la condición del bucle para impedir el bucle
         infinito y la interrupción del conteo cuando que el conteo sea mayor de 30.
         (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 14_2018pilot: Cambia la condición del bucle para impedir
+        el bucle infinito y la interrupción del conteo cuando que el conteo sea mayor
+        de 30. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 14_2019: Cambia la condición del bucle para impedir el bucle
         infinito y la interrupción del conteo cuando que el conteo sea mayor de 30.
         (Haz clic para ver las instrucciones completas)
@@ -2037,10 +2054,15 @@ es-MX:
         12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 15_2018: Cuenta la cantidad de veces que la suma del dados
         es 12. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 15_2018pilot: Cuenta la cantidad de veces que la suma del
+        dados es 12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 15_2019: Cuenta la cantidad de veces que la suma del dados
         es 12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 1_2018: Cambia la condición del bucle `mientras` para comprobar
         si el número de variable es menor a 90. (Haz clic para ver las instrucciones
+        completas)
+      CSPU5_U3 - Loops - 1_2018pilot: Cambia la condición del bucle `mientras` para
+        comprobar si el número de variable es menor a 90. (Haz clic para ver las instrucciones
         completas)
       CSPU5_U3 - Loops - 1_2019: Cambia la condición del bucle `mientras` para comprobar
         si el número de variable es menor a 90. (Haz clic para ver las instrucciones
@@ -2049,6 +2071,8 @@ es-MX:
         > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 2_2018: Intenta crear un bucle infinito mediante el uso de
         !=, > y \<. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 2_2018pilot: Intenta crear un bucle infinito mediante el
+        uso de !=, > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 2_2019: Intenta crear un bucle infinito mediante el uso de
         !=, > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 3: Cambia la sentencia `si` a un bucle `mientras` para que
@@ -2057,6 +2081,9 @@ es-MX:
       CSPU5_U3 - Loops - 3_2018: Cambia la sentencia `si` a un bucle `mientras` para
         que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones
         completas)
+      CSPU5_U3 - Loops - 3_2018pilot: Cambia la sentencia `si` a un bucle `mientras`
+        para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las
+        instrucciones completas)
       CSPU5_U3 - Loops - 3_2019: Cambia la sentencia `si` a un bucle `mientras` para
         que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones
         completas)
@@ -2066,6 +2093,9 @@ es-MX:
       CSPU5_U3 - Loops - 4_2018: Utiliza los Comandos de depuración para hacer una
         lista de todos los valores lanzados antes de un 6. (Haz clic para ver las
         instrucciones completas)
+      CSPU5_U3 - Loops - 4_2018pilot: Utiliza los Comandos de depuración para hacer
+        una lista de todos los valores lanzados antes de un 6. (Haz clic para ver
+        las instrucciones completas)
       CSPU5_U3 - Loops - 4_2019: Utiliza los Comandos de depuración para hacer una
         lista de todos los valores lanzados antes de un 6. (Haz clic para ver las
         instrucciones completas)
@@ -2075,6 +2105,9 @@ es-MX:
       CSPU5_U3 - Loops - 5_2018: Añade código dentro del bucle `mientras` que actualizará
         el número de variable para que la condición finalmente se convierta en falsa.
         (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 5_2018pilot: Añade código dentro del bucle `mientras` que
+        actualizará el número de variable para que la condición finalmente se convierta
+        en falsa. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 5_2019: Añade código dentro del bucle `mientras` que actualizará
         el número de variable para que la condición finalmente se convierta en falsa.
         (Haz clic para ver las instrucciones completas)
@@ -2082,6 +2115,9 @@ es-MX:
         menos una vez. Cambie el valor inicial del número a un valor falso como -1.
         (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 6_2018: Corrija el problema para que el `bucle` se ejecute
+        al menos una vez. Cambie el valor inicial del número a un valor falso como
+        -1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 6_2018pilot: Corrija el problema para que el `bucle` se ejecute
         al menos una vez. Cambie el valor inicial del número a un valor falso como
         -1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 6_2019: Corrija el problema para que el `bucle` se ejecute
@@ -2093,6 +2129,9 @@ es-MX:
       CSPU5_U3 - Loops - 7_2018: Sin añadir ninguna línea de código, vuelve a ordenar
         el código para que imprima todos los valores del número. (Haz clic para ver
         las instrucciones completas)
+      CSPU5_U3 - Loops - 7_2018pilot: Sin añadir ninguna línea de código, vuelve a
+        ordenar el código para que imprima todos los valores del número. (Haz clic
+        para ver las instrucciones completas)
       CSPU5_U3 - Loops - 7_2019: Sin añadir ninguna línea de código, vuelve a ordenar
         el código para que imprima todos los valores del número. (Haz clic para ver
         las instrucciones completas)
@@ -2102,6 +2141,9 @@ es-MX:
       CSPU5_U3 - Loops - 8_2018: Depura qué número no se está escribiendo y añade
         una sentencia de escritura para mostrar ese valor. (Haz clic para ver las
         instrucciones completas)
+      CSPU5_U3 - Loops - 8_2018pilot: Depura qué número no se está escribiendo y añade
+        una sentencia de escritura para mostrar ese valor. (Haz clic para ver las
+        instrucciones completas)
       CSPU5_U3 - Loops - 8_2019: Depura qué número no se está escribiendo y añade
         una sentencia de escritura para mostrar ese valor. (Haz clic para ver las
         instrucciones completas)
@@ -2109,11 +2151,15 @@ es-MX:
         sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 9_2018: Modifica la condición para que siga girando mientras
         ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 9_2018pilot: Modifica la condición para que siga girando
+        mientras ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 9_2019: Modifica la condición para que siga girando mientras
         ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus: Cambia el código para contar regresivamente
         de 10 a 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus_2018: Cambia el código para contar regresivamente
+        de 10 a 1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Minus Minus_2018pilot: Cambia el código para contar regresivamente
         de 10 a 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus_2019: Cambia el código para contar regresivamente
         de 10 a 1. (Haz clic para ver las instrucciones completas)
@@ -2121,24 +2167,35 @@ es-MX:
         conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Plus Plus_2018: Cambia el código para usar conteo++ en lugar
         de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Plus Plus_2018pilot: Cambia el código para usar conteo++
+        en lugar de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Plus Plus_2019: Cambia el código para usar conteo++ en lugar
         de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console: Usa la consola para comprobar el valor
         final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Usa la consola para comprobar el
         valor final del número. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Typing in Console_2018_pilot: Usa la consola para comprobar
+        el valor final del número. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Typing in Console_2018pilot: Usa la consola para comprobar
+        el valor final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console_2019: Usa la consola para comprobar el
         valor final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - minus = operator: Actualiza el código para usar el operador
         -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - minus = operator_2018: Actualiza el código para usar el operador
         -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - minus = operator_2018pilot: Actualiza el código para usar
+        el operador -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones
+        completas)
       CSPU5_U3 - Loops - minus = operator_2019: Actualiza el código para usar el operador
         -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator: Actualiza el código para usar
         el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator_2018: Actualiza el código para
         usar el operador +=. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2018pilot: Actualiza el código
+        para usar el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator_2019: Actualiza el código para
         usar el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops And Arrays - Add 5: Añade 5 a todos los valores en un arreglo.
@@ -2321,6 +2378,9 @@ es-MX:
       CSPU5_U3 - Simulation - 1_2018: Usa un bucle `mientras` para "lanzar la moneda
         10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones
         completas)
+      CSPU5_U3 - Simulation - 1_2018pilot: Usa un bucle `mientras` para "lanzar la
+        moneda 10 veces" y escribe los valores en la pantalla. (Haz clic para ver
+        las instrucciones completas)
       CSPU5_U3 - Simulation - 1_2019: Usa un bucle `mientras` para "lanzar la moneda
         10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones
         completas)
@@ -2330,6 +2390,9 @@ es-MX:
       CSPU5_U3 - Simulation - 2.1_2018: Cambia tu condición de bucle para que la simulación
         se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones
         completas)
+      CSPU5_U3 - Simulation - 2.1_2018pilot: Cambia tu condición de bucle para que
+        la simulación se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver
+        las instrucciones completas)
       CSPU5_U3 - Simulation - 2.1_2019: Cambia tu condición de bucle para que la simulación
         se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones
         completas)
@@ -2338,6 +2401,9 @@ es-MX:
         completas)"
       CSPU5_U3 - Simulation - 2.5_2018: "¡Ejecuta tu simulación para obtener las 10.000
         caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones
+        completas)"
+      CSPU5_U3 - Simulation - 2.5_2018pilot: "¡Ejecuta tu simulación para obtener
+        las 10.000 caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones
         completas)"
       CSPU5_U3 - Simulation - 2.5_2019: "¡Ejecuta tu simulación para obtener las 10.000
         caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones
@@ -2348,6 +2414,9 @@ es-MX:
       CSPU5_U3 - Simulation - 2_2018: Lleva un registro de cuántas caras (1) tu programa
         genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones
         completas)
+      CSPU5_U3 - Simulation - 2_2018pilot: Lleva un registro de cuántas caras (1)
+        tu programa genera e imprime los resultados en la pantalla. (Haz clic para
+        ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2_2019: Lleva un registro de cuántas caras (1) tu programa
         genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones
         completas)
@@ -2355,12 +2424,17 @@ es-MX:
         se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 3_2018: Añade funcionalidad que cuente cuántas caras
         seguidas se lanzan. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 3_2018pilot: Añade funcionalidad que cuente cuántas
+        caras seguidas se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 3_2019: Añade funcionalidad que cuente cuántas caras
         seguidas se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 4: Actualiza la condición de tu bucle mientras que la
         moneda gire hasta que haya tres caras seguidas. (Haz clic para ver las instrucciones
         completas)
       CSPU5_U3 - Simulation - 4_2018: Actualiza la condición de tu bucle mientras
+        que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver
+        las instrucciones completas)
+      CSPU5_U3 - Simulation - 4_2018pilot: Actualiza la condición de tu bucle mientras
         que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver
         las instrucciones completas)
       CSPU5_U3 - Simulation - 4_2019: Actualiza la condición de tu bucle mientras
@@ -2372,12 +2446,17 @@ es-MX:
       CSPU5_U3 - Simulation - 5_2018: Cambia tu bucle `mientras` para ejecutar hasta
         que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para
         ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 5_2018pilot: Cambia tu bucle `mientras` para ejecutar
+        hasta que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic
+        para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 5_2019: Cambia tu bucle `mientras` para ejecutar hasta
         que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para
         ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6: Sigue añadiendo a tu simulación. ¿Qué quieres explorar
         más adelante? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6_2018: Sigue añadiendo a tu simulación. ¿Qué quieres
+        explorar más adelante? (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 6_2018pilot: Sigue añadiendo a tu simulación. ¿Qué quieres
         explorar más adelante? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6_2019: Sigue añadiendo a tu simulación. ¿Qué quieres
         explorar más adelante? (Haz clic para ver las instrucciones completas)
@@ -5323,6 +5402,9 @@ es-MX:
       PS predictive Applab level test: 'Aquí hay algunas instrucciones. '
       Pattern Bee 1: "¡Qué campo extraño de golosinas! Me pregunto si hay un patrón
         aquí..."
+      Pilot Unit 5 CSP Loops clone: Cambia la expresión booleana para el bucle `mientras`
+        para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic
+        para ver las instrucciones completas)
       Pixelation - AllTheThings 4: Este nivel de pixelación demuestra el uso de la
         opción `ocultar_controles_codificación`. Ten en cuenta que el nivel muestra
         los datos de imagen en hexadecimal y no te permite volver a convertirlo en
@@ -7565,6 +7647,12 @@ es-MX:
         completas)
       U4 - Read Record - 4: Imprime cada retorno de registro desde la llamada leerRegistros
         individualmente. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5: Usando un bucle, muestra el título de cada película en
+        tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5_2018: Usando un bucle, muestra el título de cada película
+        en tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5_2019: Usando un bucle, muestra el título de cada película
+        en tu base de datos. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - part 1 - template: Usa console.log para mostrar los registros
         devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones
         completas)
@@ -7574,6 +7662,125 @@ es-MX:
       U4 - Read Record - part 1 - template_2019: Usa console.log para mostrar los
         registros devueltos por una llamada a leerRegistros. (Haz clic para ver las
         instrucciones completas)
+      U4 - ReadRecords - Contacts App 1: Usa leerRegistros para copiar los datos de
+        tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 1_2018: Usa leerRegistros para copiar los datos
+        de tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 1_2019: Usa leerRegistros para copiar los datos
+        de tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2: Crea una función llamada actualizarDatosLocales.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2_2018: Crea una función llamada actualizarDatosLocales.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2_2019: Crea una función llamada actualizarDatosLocales.
+        (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 3: Agrega una llamada a "actualizarDatosLocales"
+        para la función de devolución de llamadas del crearRegistros que usas para
+        agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - ReadRecords - Contacts App 3_2018: Agrega una llamada a "actualizarDatosLocales"
+        para la función de devolución de llamadas del crearRegistros que usas para
+        agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - ReadRecords - Contacts App 3_2019: Agrega una llamada a "actualizarDatosLocales"
+        para la función de devolución de llamadas del crearRegistros que usas para
+        agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - ReadRecords - Contacts App 4: Crea un botón "Borrar". (Haz clic para ver
+        las instrucciones completas)
+      U4 - ReadRecords - Contacts App 4_2018: Crea un botón "Borrar". (Haz clic para
+        ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 4_2019: Crea un botón "Borrar". (Haz clic para
+        ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 5 make delete work: Crea un controlador de eventos
+        para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - ReadRecords - Contacts App 5 make delete work_2018: Crea un controlador
+        de eventos para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - ReadRecords - Contacts App 5 make delete work_2019: Crea un controlador
+        de eventos para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - add createRecord to contacts App: Agrega un código a tu aplicación de contactos
+        para que los contactos que han sido agregados recientemente estén guardados
+        en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - add createRecord to contacts App_2018: Agrega un código a tu aplicación
+        de contactos para que los contactos que han sido agregados recientemente estén
+        guardados en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - add createRecord to contacts App_2019: Agrega un código a tu aplicación
+        de contactos para que los contactos que han sido agregados recientemente estén
+        guardados en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive: Cambia título.canción por canción.
+        Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive_2018: Cambia título.canción por canción.
+        Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive_2019: Cambia título.canción por canción.
+        Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - deleteRecords 0: Usa el comando borrarRegistro con valores predeterminados.
+        Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones
+        completas).
+      U4 - deleteRecords 0_2018: Usa el comando borrarRegistro con valores predeterminados.
+        Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones
+        completas).
+      U4 - deleteRecords 0_2019: Usa el comando borrarRegistro con valores predeterminados.
+        Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones
+        completas).
+      U4 - deleteRecords 1: Encuentra la ID de "Conejito Foo Foo" en la tabla de datos
+        "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira lo que sucede
+        cuando intentas borrar una ID por segunda vez. (Haz clic para ver las instrucciones
+        completas).
+      U4 - deleteRecords 1_2018: Encuentra la ID de "Conejito Foo Foo" en la tabla
+        de datos "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira
+        lo que sucede cuando intentas borrar una ID por segunda vez. (Haz clic para
+        ver las instrucciones completas).
+      U4 - deleteRecords 1_2019: Encuentra la ID de "Conejito Foo Foo" en la tabla
+        de datos "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira
+        lo que sucede cuando intentas borrar una ID por segunda vez. (Haz clic para
+        ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object: Usa el objeto canción para borrar objetos
+        múltiples en la base de datos cambiando solamente la propiedad "id". (Haz
+        clic para ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object_2018: Usa el objeto canción para borrar objetos
+        múltiples en la base de datos cambiando solamente la propiedad "id". (Haz
+        clic para ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object_2019: Usa el objeto canción para borrar objetos
+        múltiples en la base de datos cambiando solamente la propiedad "id". (Haz
+        clic para ver las instrucciones completas).
+      U4 - deleteRecords 2: Usando el visor de datos, encuentra la id de un segundo
+        registro que quieres borrar. Usa el comando borrarRegistro para borrarlo.
+        (Haz clic para ver las instrucciones completas).
+      U4 - fix contacts by hand in data table: Usa el visor de datos para agregar
+        filas a la tabla de datos. Agrega los contactos con codificación fija originales
+        de tu aplicación a la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - fix contacts by hand in data table_2018: Usa el visor de datos para agregar
+        filas a la tabla de datos. Agrega los contactos con codificación fija originales
+        de tu aplicación a la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - fix contacts by hand in data table_2019: Usa el visor de datos para agregar
+        filas a la tabla de datos. Agrega los contactos con codificación fija originales
+        de tu aplicación a la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - last stage test adding contcts: Confirma que los nuevos contactos que agregas
+        estén guardados en la base de datos. Verifica que luego de reiniciar tu aplicación,
+        los contactos que agregaste ya no se muestran en la aplicación, pero todavía
+        existen en la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - last stage test adding contcts_2018: Confirma que los nuevos contactos
+        que agregas estén guardados en la base de datos. Verifica que luego de reiniciar
+        tu aplicación, los contactos que agregaste ya no se muestran en la aplicación,
+        pero todavía existen en la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - last stage test adding contcts_2019: Confirma que los nuevos contactos
+        que agregas estén guardados en la base de datos. Verifica que luego de reiniciar
+        tu aplicación, los contactos que agregaste ya no se muestran en la aplicación,
+        pero todavía existen en la base de datos. (Haz clic para ver las instrucciones
+        completas)
       U4 Model App: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla.
         (Haz clic para ver las instrucciones completas).
       U4 Model App_2018: Usa el Modo Diseño para agregar un botón rojo grande a tu
@@ -7597,6 +7804,26 @@ es-MX:
         y examina los objetos de evento que se muestran en la consola. ¿Por qué un
         objeto puede ser la mejor manera de almacenar esta información? (Haz clic
         para ver las instrucciones completas)
+      U4L06 Data Storage 1: Escribe tu nombre en lugar de "Ingresa tu nombre", ejecuta
+        la aplicación y haz clic en el botón. Ejecútalo varias veces con nombres diferentes.
+        Mira la consola y usa el botón "Visor de Datos" para ver cómo se actualiza
+        la tabla. Mientras juegas, asegúrate de que puedes explicar el propósito de
+        cada una de las partes redondeadas del diagrama.
+      U4L06 Data Storage 2: La aplicación es una continuación de la que previamente
+        comenzamos. Agrega una etiqueta de texto para recopilar los nombres de usuarios
+        y usar eso como ingreso de datos para el registro.
+      U4L06 Data Storage 3: Queremos mejorar la experiencia del usuario. Una vez que
+        hayamos enviado sus datos para almacenamiento, sería bueno poder limpiar la
+        casilla de texto. Actualiza tu aplicación para limpiar la casilla de texto
+        luego de que los datos han sido almacenados.
+      U4L06 Data Storage 4: Agrega una etiqueta y una casilla desplegable a tu aplicación
+        y guarda los datos en tu objeto JSON, y agrégalo a tu tabla. Asegúrate de
+        que reinicias el menú desplegable luego de que los datos han sido almacenados.
+      U4L06 Data Storage 5: 'Agrega un par de botones de radio o casillas de verificación
+        a tu aplicación. Luego encuentra una forma de recopilar los datos de todo
+        ellos. '
+      U4L06 Data Storage 6: " Usa unos de los bloques getTime() y getUserId() para
+        recopilar datos adicionales. "
       U4L06 Data Storage 7: Añade una segunda pantalla a la aplicación de muestra
         que hemos estado construyendo para capturar una imagen de un usuario. Vuelve
         a la pantalla 1 después de que el objeto JSON haya sido almacenado en la tabla.
@@ -7835,24 +8062,36 @@ es-MX:
       aE4: Alternativa
       aE5: Ejemplo de desafío mediante el uso de la forma de nivel de dificultad más
         alta.
+      aE6: "¿Cuántas veces necesitas crear un bucle para esto para dibujar un medio
+        círculo?"
       aE7: Si copia ese bucle y gira a la izquierda en lugar de la derecha, ¿qué pasa?
         ¿Puedes repetir eso para dibujar esta ola?
       aE8: Ahora repitamos todo eso cuatro veces para crear este cuadro. Cuidado con
         las esquinas - ¡simplemente no puedes girar 90 grados! Si se repite 60 veces
         un giro de 3 grados hace un semicírculo, ¿cuál de estos bloques de código
         hará un cuarto de círculo para las esquinas?
+      aEfreeplay: "¡Juego libre!"
+      aalevelcopy: Agrega instrucciones
+      allHallows2017: Atrapa a los empleados de Code.org en una caja de crayones dibujando
+        un cuadrado con lados de 320 pixeles.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Hacer esto
+      allthethings_moviebot: Este nivel se clonó de "U3 Digital Assistant Target"
       allthethings_ttscsf contained: Recoge todas las lechugas (solo mientras haya
         alguna que recoger).
       allthethings_ttscsp: Corrige el error lógico dentro del programa para depurar
         el programa. (Haz clic para ver las instrucciones completas)
       artistDebugVideo1: Usa el loop 'repetir' para agregar olas al agua.
+      artistFunctionsVideo1: Sigue las instrucciones para hacer tu propia función.
       artistLoopsK1: Este es un nuevo tipo de desafío llamado "Artista". Juega con
         el nivel y dibuja algo divertido.
       artistLoopsK2: Ahora, utiliza un ciclo de repetición para dibujar esta línea
         cinco veces!
       artistLoopsK2gradek_artist_loops3: Ahora, utiliza un ciclo de repetición para
         dibujar esta línea cinco veces!
+      artistLoopsK3: Dibuja una línea de ocho pasos de largo. Esto se convertirá en
+        la tierra de nuestro reino.
+      artistLoopsK4: Ahora necesitamos un castillo con un puente levadizo. Arregla
+        el código para que el puente está derecho en lugar de cayéndose.
       asteroids: "¡Este Corgi ha sido un buen chico! Arrastra esta zanahoria hasta
         él a modo de regalo especial."
       beeDebugVideo1: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
@@ -10672,10 +10911,8 @@ es-MX:
         la bellota!"
       courseD_scrat_ramp8_2018: "¡Usa lo que has aprendido para que Scrat llegue hasta
         la bellota!"
-      courseE_aboutme_1: |-
-        Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ha elegido este sprite para representarla!
-
-        ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
+      courseE_aboutme_1: Juega con el póster de Rikki y crea un poco de código; luego
+        haz clic en **Finalizar**.
       courseE_aboutme_2: |-
         ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
 
@@ -10696,18 +10933,12 @@ es-MX:
         -   Haz que Thuy comience a girar cuando Rikki la toca. ¡Ella tiene cosquillas!
 
         -   Haz que el cono de helado desaparezca cuando Rikki lo toca. ¡Qué rico!
-      courseE_aboutme_7: |-
-        Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ha elegido este sprite para representarla!
-
-        ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
+      courseE_aboutme_7: Juega con el póster de Rikki y crea un poco de código; luego
+        haz clic en **Finalizar**.
       courseE_aboutme_freeplay: "Gracias por ayudar a Rikki. Ahora es tu turno de
         **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos
         y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki,
         ¡recuerda compartir información SEGURA!"
-      courseE_aboutme_template: |-
-        ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
-
-        Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
       courseE_artist_concept1: 'Recrea esta imagen. '
       courseE_artist_concept1_2018: 'Recrea esta imagen. '
       courseE_artist_concept1_2019: 'Recrea esta imagen. '
@@ -10972,7 +11203,7 @@ es-MX:
         las calabazas.
       courseE_farmer_functions2ba: Ayuda a la granjera a recoger el maíz y las calabazas
         mediante la función `maíz y calabaza`.
-      courseE_farmer_functions2ba_2018: Usa la función `maíz y calabaza` para ayudar
+      courseE_farmer_functions2ba_2018: Usa la función a continuación para ayudar
         a la granjera a recoger el maíz y las calabazas.
       courseE_farmer_functions2ba_2019: Ayuda a la granjera a recoger el maíz y las
         calabazas mediante la función `maíz y calabaza`.
@@ -11721,11 +11952,11 @@ es-MX:
       courseF_playlab_variables1: Este es el pirata Pegleg. ¡Es muy difícil de entender
         en estos días!
       courseF_playlab_variables1a: Las variables se pueden usar para guardar texto
-        que te puede servir más adelante. Asigna la variable `gritar` a este texto
+        que te puede servir más adelante. Asigna este texto a la variable `gritar`
         para que Kiki, la jugadora de fútbol, grite "¡Gol!".
       courseF_playlab_variables1a_2018: Las variables se pueden usar para guardar
-        texto que te puede servir más adelante. Asigna la variable `gritar` a este
-        texto para que Kiki, la jugadora de fútbol, grite "¡Gol!".
+        texto que te puede servir más adelante. Asigna este texto a la variable `gritar`
+        para que Kiki, la jugadora de fútbol, grite "¡Gol!".
       courseF_playlab_variables2: 'Ahora, ¡cambia el valor de las variables en dos
         lugares para descifrar el discurso del pirata Pegleg! '
       courseF_playlab_variables2a: 'Ahora, ¡cambia el valor de las variables en dos

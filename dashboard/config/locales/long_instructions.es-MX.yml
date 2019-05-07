@@ -497,9 +497,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -551,9 +551,9 @@ es-MX:
         aventura."
       AppLab Intro 2 - add images: "Ahora lo sabes todo\nnecesitas hacer una simple
         selección elige tu propia aplicación de aventura, pero puedes agregarla y\n¡mucho
-        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1\\.\nEn
+        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1.\nEn
         otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras
-        usar.\\\r\n2\\.\nHaga clic con el botón derecho en la imagen y guarde su URL
+        usar.\\\r\n2.\nHaga clic con el botón derecho en la imagen y guarde su URL
         (generalmente \"Copiar la dirección del enlace\" o \"Copiar\"\nimagen URL
         \") \\\r\n\n3.  De vuelta en App Lab, vaya a Modo de diseño \\\r\n4.  Arrastra
         una \"imagen\"\n    o elemento a su pantalla \\\r\n5.  Pegue la URL que copió
@@ -1628,6 +1628,7 @@ es-MX:
         del escalón de tu escalera?\\\r\n-   ¿Qué sucede si haces el patrón de tu
         diamante más largo o más corto?\\\r\n    \\-¿Cómo luce al dibujar dos copos
         de nieve uno encima del otro?\\\r?"
+      Dance Party Template 1_2019: Plantilla
       Dance Party Template 2_2019: Plantilla
       Dance_Party_01: |-
         _¡Hagamos una fiesta!_
@@ -2111,8 +2112,8 @@ es-MX:
 
         Echa un ojo a un ejemplo de un manual
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
-        que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        ¡En la página siguiente podrás escribir un programa similar!
+        que los estudiantes más jóvenes escribirán en [Course A][0]. ¡En la página
+        siguiente podrás escribir un programa similar!
       OPD-K5 LessonPlanning: "Hasta ahora, han sido introducidos a algunas de nuestras
         planificaciones de lecciones sin conexión. Sin embargo, hay planificaciones
         de lecciones para cada lección de Fundamentos de Ciencias de la Computación
@@ -2304,9 +2305,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2321,9 +2322,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2338,9 +2339,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2610,7 +2611,7 @@ es-MX:
 
         type="controls_repeat_simplified\_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        [expandable][0]
       courseA_artist_loops7_forVideo: |-
         ## Usa el bucle <xml>\<block
 
@@ -2620,19 +2621,19 @@ es-MX:
       courseA_artist_loops8: |-
         ## Necesitamos una escalera hasta el bote.
 
-        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        [expandable][0]
       courseA_artist_loops8_2018: |-
         ## Necesitamos una escalera hasta el bote.
 
-        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        [expandable][0]
       courseA_artist_loops8_2019: |-
         ## Necesitamos una escalera hasta el bote.
 
-        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+        [expandable][0]
       courseA_artist_loops9: |-
         ## **Desafío:** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlas.
 
-        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        [expandable][0]
       courseA_artist_loops9_2018: |-
         ## **Desafío:** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlas.
 
@@ -2640,7 +2641,7 @@ es-MX:
       courseA_artist_loops9_2019: |-
         ## **Desafío:** Las escaleras hasta el muelle están rotas. Ayúdame a arreglarlas.
 
-        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+        [expandable][0]
       courseA_artist_loops_challenge1: "Puedes usar un loop para dibujar muchas líneas
         seguidas.\\\r\n\\\r\n¿Puedes dibujar una casa ? ¡Haz que se vea como a ti
         te gusta! Intenta buscar patrones que se repiten!\\\r\n\\\r\nAquí hay algunas
@@ -2737,8 +2738,8 @@ es-MX:
 
         Presiona el botón "Ejecutar" para verla caminar hasta el tesoro y recogerlo.
       courseA_collector_preLoops2: "¡Genial! ¡Ahora puedes agregar el código tú mismo!
-        \n\nColoca un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-        en la parte inferior del programa y haz clic en \"Ejecutar\"."
+        \n\nColoca un bloque [][0] en la parte inferior del programa y haz clic en
+        \"Ejecutar\"."
       courseA_collector_preLoops3: Para recoger el tesoro, encaja dos bloques ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
         y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
         en la parte inferior del programa y haz clic en "Ejecutar".
@@ -2857,7 +2858,7 @@ es-MX:
         click en "▶ Ejecutar".
       courseA_maze_ramp2a_2018: ¡Encaja los dos bloques <xml><block type="maze_moveEast"/></xml>
         en <xml><block type="when_run"/></xml> para finalizar tu código; luego, haz
-        clic en ![](https://images.code.org/727d03b75b490aa49ed2e23e1290fdd8-image-1522888269949.11.32.png).
+        clic en [][0].
       courseA_maze_ramp3_2018: "_\"Este cerdo está erizando mis plumas.\"_\n\nHay
         un bloque sobrante que hará chocar al pájaro.  \nQuítalo de los otros bloques
         y arrástralo a la caja de herramientas para descartarlo."
@@ -2888,7 +2889,7 @@ es-MX:
       courseA_maze_seq10: |-
         **Desafío:** ¡Rodea el TNT para que el pájaro llegue hasta el cerdo!
 
-        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+        [expandable][0]
       courseA_maze_seq10_2018: "**Desafío:** ¡Evita el TNT para que el pájaro llegue
         hasta el cerdo!"
       courseA_maze_seq10_2019: "**Desafío:** ¡Evita el TNT para que el pájaro llegue
@@ -2896,7 +2897,7 @@ es-MX:
       courseA_maze_seq11: |-
         ¡Es tiempo de un desafío más corto! Muévete en una dirección, y luego en otra, para que el pájaro llegue hasta el cerdo.
 
-        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+        [expandable][0]
       courseA_maze_seq11_2018: "¡Es tiempo de un desafío más corto! Muévete en una
         dirección, y luego en otra, para que el pájaro llegue hasta el cerdo.  "
       courseA_maze_seq11_2019: "¡Es tiempo de un desafío más corto! Muévete en una
@@ -2904,7 +2905,7 @@ es-MX:
       courseA_maze_seq12: |-
         ¡Atrapa a ese cerdo!
 
-        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+        [expandable][0]
       courseA_maze_seq12_2018: "¡Atrapa a ese cerdo!"
       courseA_maze_seq12_2019: "¡Atrapa a ese cerdo!"
       courseA_maze_seq1_2018: _"¡Juega con estos bloques e intenta llevarme hasta
@@ -2914,35 +2915,35 @@ es-MX:
       courseA_maze_seq2: |-
         _"¡Hay un error! Arregla el código para que pueda llegar hasta el cerdo."_
 
-        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+        [expandable][0]
       courseA_maze_seq2_2018: |-
         _"¡Hay un error! Arregla el código para que pueda llegar hasta el cerdo."_
 
-        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+        [expandable][0]
       courseA_maze_seq3: |-
         _"¡Arregla el código para que pueda llegar hasta el cerdo!"_
 
-        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+        [expandable][0]
       courseA_maze_seq3_2018: |-
         _"¡Arregla el código para que pueda llegar hasta el cerdo!"_
 
-        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+        [expandable][0]
       courseA_maze_seq4: |-
         _"Algo no está bien."_
 
         ¡QUITA un bloque para que el pájaro llegue hasta el cerdo!
 
-        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
+        [expandable][0]
       courseA_maze_seq4_2018: |-
         _"Algo no está bien."_
 
         ¡QUITA un bloque para que el pájaro llegue hasta el cerdo!
 
-        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
+        [expandable][0]
       courseA_maze_seq5: |-
         Inténtalo tú mismo desde el comienzo.
 
-        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+        [expandable][0]
       courseA_maze_seq5_2018: Prueba este.
       courseA_maze_seq5_2019: Prueba este.
       courseA_maze_seq5a_2018: |-
@@ -2956,7 +2957,7 @@ es-MX:
       courseA_maze_seq6: |-
         ¡Muéveme en una dirección, y luego en otra, para que pueda llegar hasta el cerdo!
 
-        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+        [expandable][0]
       courseA_maze_seq6_2018: "¡Mueve en una dirección, y luego en otra, para que
         el pájaro pueda llegar hasta el cerdo!"
       courseA_maze_seq6_2019: "¡Mueve en una dirección, y luego en otra, para que
@@ -2964,11 +2965,11 @@ es-MX:
       courseA_maze_seq7: |-
         ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
 
-        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        [expandable][0]
       courseA_maze_seq7_2018: |-
         ¡Descubre qué falta y luego agrega bloques para que el pájaro pueda llegar hasta el cerdo!
 
-        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+        [expandable][0]
       courseA_maze_seq8: |-
         ¡Resuelve este nivel y haz que el pájaro llegue hasta el cerdo!
 
@@ -2980,11 +2981,11 @@ es-MX:
       courseA_maze_seq9: |-
         **Desafío:** Agrega bloques para depurar este nivel y que el pájaro llegue hasta el cerdo.
 
-        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        [expandable][0]
       courseA_maze_seq9_2018: |-
         **Desafío:** Agrega bloques para depurar este nivel y que el pájaro llegue hasta el cerdo.
 
-        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+        [expandable][0]
       courseA_maze_seq_challenge1: Depura este nivel. Elimina los bloques adicionales
         y agrega los bloques faltantes. ¡Lleva el pájaro al cerdo!
       courseA_maze_seq_challenge1_2018: Depura este nivel. Elimina los bloques adicionales
@@ -3044,49 +3045,49 @@ es-MX:
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a crear este proyecto paso a paso!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge1_2018: |-
         ¡Robin aparecerá si haces clic en Olive! ¿Puedes escribir el código para mostrar al resto de los personajes?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a crear este proyecto paso a paso!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge1_2019: |-
         ¡Robin aparecerá si haces clic en Olive! ¿Puedes escribir el código para mostrar al resto de los personajes?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a crear este proyecto paso a paso!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge1a: |-
         ¿Dónde se esconden mis amigos? ¡Mi amigo Olive el Gato aparecerá en este juego si haces clic sobre mí! ¡Robin aparecerá si haces clic en Olive! ¿Puedes escribir el código para mostrar al resto de mis amigos?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a crear este proyecto paso a paso!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge2: |-
         Haz que cada uno haga algo cuando haces clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a probar cosas divertidas!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge2_2018: |-
         Haz que cada uno haga algo cuando haces clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a probar cosas divertidas!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challenge2_2019: |-
         Haz que cada uno haga algo cuando haces clic en ellos. ¿Qué dirán los animales? ¿Qué más pasará?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a probar cosas divertidas!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseA_playlab_events_challengeClone: |-
         ¿Dónde se esconden mis amigos? ¡Mi amigo Olive el Gato aparecerá en este juego si haces clic sobre mí! ¡Robin aparecerá si haces clic en Olive! ¿Puedes escribir el código para mostrar al resto de mis amigos?
 
         ¡Asegúrate de hacer clic para obtener consejos en este desafío! ¡Los consejos te ayudarán a crear este proyecto paso a paso!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+        [][0]
       courseB_Scrat_ramp1_2018: Para que Scrat llegue hasta la bellota, encaja el
         bloque <xml><block type="maze_moveEast"/></xml> en la parte inferior del bloque
         <xml><block type="when_run"/></xml>, y luego presiona "▶ Ejecutar".
@@ -3126,10 +3127,10 @@ es-MX:
 
         ### Ideas
 
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
-        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+        [][0]
+        [][1]
+        [][2]
+        [][3]
       courseB_artist_loops10_2018: |-
         Usa lo que has aprendido para hacer un dibujo de lo que crees que vio el artista cuando llegó a casa.
 
@@ -3137,10 +3138,10 @@ es-MX:
 
         ### Ideas
 
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
-        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+        [][0]
+        [][1]
+        [][2]
+        [][3]
       courseB_artist_loops10_2019: |-
         Usa lo que has aprendido para hacer un dibujo de lo que crees que vio el artista cuando llegó a casa.
 
@@ -3148,10 +3149,10 @@ es-MX:
 
         ### Ideas
 
-        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
-        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
-        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
-        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+        [][0]
+        [][1]
+        [][2]
+        [][3]
       courseB_artist_loops6: Detrás de los arbustos, hay una hermosa viña llena de
         flores. ¿Puedes subir la viña y ver hasta dónde llega?
       courseB_artist_loops6_2018: Detrás de los arbustos, hay una hermosa viña llena
@@ -3277,14 +3278,11 @@ es-MX:
       courseB_playLab_events1_2019: "Este juego se llama \"Laboratorio de juegos\".
         \ \n\nDescubre si puedes descifrar qué hace cada bloque."
       courseB_playlab_events3: Utiliza un evento para que Daisy la Dragón cambie a
-        un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        si haces clic en ella.
+        un estado de ánimo aleatorio [][0] si haces clic en ella.
       courseB_playlab_events3_2018: Utiliza un evento para que Daisy la Dragón cambie
-        a un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        si haces clic en ella.
+        a un estado de ánimo aleatorio [][0] si haces clic en ella.
       courseB_playlab_events3_2019: Utiliza un evento para que Daisy la Dragón cambie
-        a un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
-        si haces clic en ella.
+        a un estado de ánimo aleatorio [][0] si haces clic en ella.
       courseB_playlab_events4: "¡Es tiempo de caballeros! \n\nAñade un evento para
         que el caballero se mueva hacia el dragón cada vez que se hace clic en la
         flecha izquierda."
@@ -3340,27 +3338,24 @@ es-MX:
         Hagamos que los animales desaparezcan si haces clic en ellos.
         Intenta jugar con el perro ahora, y luego ayuda a los otros animales a unirse a la diversión. ¡También puedes agregar sonidos y ganar puntos para crear un juego de Animal Tag!
 
-        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+        [][0]
       courseB_playlab_events_challenge2_2018: |-
         Hagamos que los animales desaparezcan si haces clic en ellos.
         Intenta jugar con el perro ahora, y luego ayuda a los otros animales a unirse a la diversión. ¡También puedes agregar sonidos y ganar puntos para crear un juego de Animal Tag!
 
-        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+        [][0]
       courseB_playlab_events_challenge2_2019: |-
         Hagamos que los animales desaparezcan si haces clic en ellos.
         Intenta jugar con el perro ahora, y luego ayuda a los otros animales a unirse a la diversión. ¡También puedes agregar sonidos y ganar puntos para crear un juego de Animal Tag!
 
-        ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
+        [][0]
       courseB_starWars_prog1: |-
-        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_
+        [Rey][0]_"Ve por la chatarra, BB-8!"_
 
-        Cuidado con los muros y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
-      courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
-      courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
-      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
+        Cuidado con los muros y las cajas. La chatarra luce así: [picture of scrap metal][1]
+      courseB_starWars_prog10: '[][0] _"¿Puedes recoger todo?"_'
+      courseB_starWars_prog10_2018: '[][0] _"¿Puedes recoger todo?"_'
+      courseB_starWars_prog10_2019: '[][0] _"¿Puedes recoger todo?"_'
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Continúa!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -3368,59 +3363,44 @@ es-MX:
       courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Continúa!"_'
       courseB_starWars_prog1_2018: |-
-        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_
+        [Rey][0]_"Ve por la chatarra, BB-8!"_
 
-        Cuidado con los muros y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
+        Cuidado con los muros y las cajas. La chatarra luce así: [picture of scrap metal][1]
       courseB_starWars_prog1_2019: |-
-        ![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_"Ve por la chatarra, BB-8!"_
+        [Rey][0]_"Ve por la chatarra, BB-8!"_
 
-        Cuidado con los muros y las cajas. La chatarra luce así: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)
-      courseB_starWars_prog2: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Consigue todo el metal."_'
-      courseB_starWars_prog2_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Consigue todo el metal."_'
-      courseB_starWars_prog2_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Consigue todo el metal."_'
-      courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Continúa, BB-8!"_'
-      courseB_starWars_prog3_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Continúa, BB-8!"_'
-      courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Continúa, BB-8!"_'
-      courseB_starWars_prog4: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Consíguela, BB-8!"_'
-      courseB_starWars_prog4_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Consíguela, BB-8!"_'
-      courseB_starWars_prog4_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Consíguela, BB-8!"_'
-      courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
-      courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
-      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¿Puedes recoger todo?"_'
+        Cuidado con los muros y las cajas. La chatarra luce así: [picture of scrap metal][1]
+      courseB_starWars_prog2: '[][0] _"Consigue todo el metal."_'
+      courseB_starWars_prog2_2018: '[][0] _"Consigue todo el metal."_'
+      courseB_starWars_prog2_2019: '[][0] _"Consigue todo el metal."_'
+      courseB_starWars_prog3: '[][0] _"¡Continúa, BB-8!"_'
+      courseB_starWars_prog3_2018: '[][0] _"¡Continúa, BB-8!"_'
+      courseB_starWars_prog3_2019: '[][0] _"¡Continúa, BB-8!"_'
+      courseB_starWars_prog4: '[][0] _"¡Consíguela, BB-8!"_'
+      courseB_starWars_prog4_2018: '[][0] _"¡Consíguela, BB-8!"_'
+      courseB_starWars_prog4_2019: '[][0] _"¡Consíguela, BB-8!"_'
+      courseB_starWars_prog5: '[][0] _"¿Puedes recoger todo?"_'
+      courseB_starWars_prog5_2018: '[][0] _"¿Puedes recoger todo?"_'
+      courseB_starWars_prog5_2019: '[][0] _"¿Puedes recoger todo?"_'
       courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Puedes hacerlo!"_'
       courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Puedes hacerlo!"_'
       courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"¡Puedes hacerlo!"_'
-      courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Ve a buscarla!"_'
-      courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Ve a buscarla!"_'
-      courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Ve a buscarla!"_'
+      courseB_starWars_prog7: '[][0] _"¡Ve a buscarla!"_'
+      courseB_starWars_prog7_2018: '[][0] _"¡Ve a buscarla!"_'
+      courseB_starWars_prog7_2019: '[][0] _"¡Ve a buscarla!"_'
       courseB_starWars_prog8: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío**: Recoger toda la chatarra.
       courseB_starWars_prog8_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío**: Recoger toda la chatarra.
       courseB_starWars_prog8_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío**: Recoger toda la chatarra.
       courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -3455,24 +3435,24 @@ es-MX:
       courseC_PlayLab_events7: |-
         El botón `repetir siempre` te permite ejecutar el código una y otra vez. Usa este bloque para mover a Chomp el Dino (actor 2) 400 pixeles hacia arriba y hacia abajo constantemente.
 
-        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+        [][0]
       courseC_PlayLab_events7_2018: |-
         El botón `repetir siempre` te permite ejecutar el código una y otra vez. Usa este bloque para mover a Chomp el Dino (actor 2) 400 pixeles hacia arriba y hacia abajo constantemente.
 
-        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+        [][0]
       courseC_PlayLab_events7_2019: |-
         El botón `repetir siempre` te permite ejecutar el código una y otra vez. Usa este bloque para mover a Chomp el Dino (actor 2) 400 pixeles hacia arriba y hacia abajo constantemente.
 
-        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+        [][0]
       courseC_PlayLab_events8: "¿Puedes hacer que Waddles (actor 1) diga \"¡Ay!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \n\nCuando
-        estés listo, juega para hacer que eso suceda.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+        estés listo, juega para hacer que eso suceda.\n\n[][0]"
       courseC_PlayLab_events8_2018: "¿Puedes hacer que Waddles (actor 1) diga \"¡Ay!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \n\nCuando
-        estés listo, juega para hacer que eso suceda.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+        estés listo, juega para hacer que eso suceda.\n\n[][0]"
       courseC_PlayLab_events8_2019: "¿Puedes hacer que Waddles (actor 1) diga \"¡Ay!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \n\nCuando
-        estés listo, juega para hacer que eso suceda.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+        estés listo, juega para hacer que eso suceda.\n\n[][0]"
       courseC_PlayLab_eventsA_embed_2019: Juguemos un juego. ¡Anota 5 puntos moviendo
         el Pingüino hacia el Pulpo!
       courseC_PlayLab_events_challenge1: |-
@@ -3500,11 +3480,10 @@ es-MX:
         Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">PREDETERMINADO</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
       courseC_artist_loops1a: "**Juego libre:** ¡Vamos a crear algo más grande paso
         a paso! Puedes crear lo que quieras, ¡pero te vamos a mostrar cómo hacer algo
-        así!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUsa
-        el `salto a 200 sobre 200` para llevar al artista hasta el centro del área
-        de juego, y luego usa el bloque `dibujar un sticker` para que aparezca el
-        pájaro. \n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento con lo que
-        has hecho."
+        así!\n\n[expandable][0]\n\nUsa el `salto a 200 sobre 200` para llevar al artista
+        hasta el centro del área de juego, y luego usa el bloque `dibujar un sticker`
+        para que aparezca el pájaro. \n\n* * *\n\nPresiona \"Finalizar\" cuando estés
+        contento con lo que has hecho."
       courseC_artist_loops1a_2018: "**Juego libre:** ¡Vamos a crear algo más grande
         paso a paso!  \n\nUsa el `salto a 200 sobre 200` para llevar al artista hasta
         el centro del área de juego, y luego usa el bloque `dibujar un sticker` para
@@ -3517,7 +3496,7 @@ es-MX:
         del área de juego, y luego usa el bloque <xml><block type=\"sticker\" block-text=\"draw
         sticker\"><title name=\"VALUE\">Beaver</title></block></xml> para que aparezca
         algo.\n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento con lo que
-        has hecho.\n\n![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)\n![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)\n![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)"
+        has hecho.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]"
       courseC_artist_loops1b_2019: |-
         Agrega un comando `girar` a tu código para cambiar la orientación de tu sticker.
 
@@ -3525,9 +3504,9 @@ es-MX:
 
         Presiona "Finalizar" si estás satisfecho con el resultado.
 
-        ![expandable](https://images.code.org/30fe9d37758abd27055d9a6e5a890680-image-1553097358155.png)
-        ![expandable](https://images.code.org/61feed00662019b99ac774322231f084-image-1553097362176.png)
-        ![expandable](https://images.code.org/fd123bb703ea4c630218a12eb5994053-image-1553097354066.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseC_artist_loops2: |-
         Ahora que el zombie sabe por dónde ir, ¡ayúdalo a cavar agujeros de **25 pixeles de largo** a lo largo del camino para plantar más flores!
 
@@ -3544,31 +3523,31 @@ es-MX:
 
         Presiona "Finalizar" cuando estés contento con lo que has creado.
 
-        ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
-        ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
-        ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseC_artist_loops3a: "¡Qué divertido!  \n\nAhora agrega un sticker de un
         murciélago justo después del pájaro para crear una imagen como la de abajo.\n\n*
-        * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+        * *\n\n[expandable][0]"
       courseC_artist_loops3a_2018: "¡Qué divertido!  \n\nAhora agrega un sticker de
         un murciélago justo después del pájaro para crear una imagen como la de abajo.\n\n*
-        * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+        * *\n\n[expandable][0]"
       courseC_artist_loops3a_2019: "¡Qué divertido!  \n\nAhora agrega un segundo sticker
         justo por encima del primero para hacer una imagen como las que aparecen a
-        continuación.\n\n* * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)\n\nPresiona
+        continuación.\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n\nPresiona
         \"Finalizar\" cuando sientas que has terminado."
       courseC_artist_loops4a: |-
         Agrega un bloque a tu código para que el artista salte 75 pixeles hacia adelante entre el pájaro y el murciélago. En este desafío, ¡asegúrate de tener el bloque `saltar 200 sobre 200` dentro de tu bucle para mantenerte en el centro!
 
         * * *
 
-        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        [expandable][0]
       courseC_artist_loops4a_2018: |-
         Edita tu código para saltar 75 pixeles hacia adelante entre el pájaro y el murciélago. En este desafío, ¡asegúrate de tener el bloque `saltar 200 sobre 200` dentro de tu bucle para mantenerte en el centro!
 
         * * *
 
-        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+        [expandable][0]
       courseC_artist_loops4a_2019: |-
         Edita tu código para saltar hacia adelante entre los dibujos de los dos stickers. En este desafío, ¡asegúrate de tener el bloque `saltar a la posición central en el medio` dentro de tu bucle para mantenerte en el centro!
 
@@ -3576,10 +3555,10 @@ es-MX:
 
         Presiona "Finalizar" cuando estés contento con lo que has creado.
 
-        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
-        ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
-        ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
-        ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
+        [expandable][3]
       courseC_artist_loops5: "¡Genial! Ahora es momento para hacer una cerca adentro
         para mantener a los animales afuera.  \n¡Crea el tipo de cerca que quieras!"
       courseC_artist_loops5a: |-
@@ -3587,27 +3566,27 @@ es-MX:
 
         * * *
 
-        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+        [expandable][0]
       courseC_artist_loops5a_2018: |-
         ¿Qué sucede cuando reemplazas uno o ambos stickers con una criatura diferente?
 
         * * *
 
-        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+        [expandable][0]
       courseC_artist_loops5a_2019: |-
         ¿Qué sucede cuando reemplazas uno o ambos stickers con una criatura diferente?
 
         * * *
 
-        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+        [expandable][0]
       courseC_artist_loops5b: "¿Qué sucede cuando te `mueves hacia adelante`, y luego
         te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar dentro
         del bucle? \n\n-   Intenta usar el bloque 'establecer patrón\\` antes de que
-        tu bucle comience a crear una obra de arte.\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+        tu bucle comience a crear una obra de arte.\n    * * *\n    [expandable][0]"
       courseC_artist_loops5b_2018: "¿Qué sucede cuando te `mueves hacia adelante`,
         y luego te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar
         dentro del bucle? \n\n-   Intenta usar el bloque 'establecer patrón\\` antes
-        de que tu bucle comience a crear una obra de arte.\n    * * *\n    ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+        de que tu bucle comience a crear una obra de arte.\n    * * *\n    [expandable][0]"
       courseC_artist_loops5b_2019: |-
         ¿Qué sucede cuando te `mueves hacia adelante`, y luego te `mueves hacia atrás`, unos 100, 200 o 400 pixeles en algún lugar dentro del bucle?
 
@@ -3615,9 +3594,9 @@ es-MX:
 
         * * *
 
-        ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
-        ![expandable](https://images.code.org/55285e9e5c5ae1cf1c895cc0bf92824d-image-1553100970790.png)
-        ![expandable](https://images.code.org/6b8e67db2a3b341bc56fa53f67c284c2-image-1553100974645.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseC_artist_loops6: "¿Qué debería poner el zombie dentro del jardín? \n\nDibuja
         lo que te gustaría que hubiera al interior de la cerca. ¿Te gustarían algunas
         flores o unos insectos?\n_(Mira las pistas para obtener más sugerencias)_"
@@ -3628,7 +3607,7 @@ es-MX:
 
         * * *
 
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        [expandable][0]
       courseC_artist_loops6a_2018: |-
         ¡Agrega un tercer sticker en el lugar del bucle que quieras! ¿Cómo luce ahora?
 
@@ -3636,7 +3615,7 @@ es-MX:
 
         * * *
 
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        [expandable][0]
       courseC_artist_loops6a_2019: |-
         ¡Agrega un tercer sticker en el lugar del bucle que quieras! ¿Cómo luce ahora?
 
@@ -3644,7 +3623,7 @@ es-MX:
 
         * * *
 
-        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+        [expandable][0]
       courseC_artist_loops7a: |-
         Intenta cambiar el bucle `repetir` para ejecutar un número diferente de veces. ¿Qué tan lejos tienes que girar para rodear un círculo completo?
 
@@ -3656,7 +3635,7 @@ es-MX:
 
         Esta imagen usa un pirata, un ninja y una jirafa. Ellos giran 18 veces con un giro de 20 grados.
 
-        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        [expandable][0]
       courseC_artist_loops7a_2018: |-
         Intenta cambiar el bucle `repetir` para ejecutar un número diferente de veces. ¿Qué tan lejos tienes que girar para rodear un círculo completo?
 
@@ -3680,7 +3659,7 @@ es-MX:
 
         Esta imagen usa un pirata, un ninja y una jirafa. Ellos giran 18 veces con un giro de 20 grados.
 
-        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        [expandable][0]
       courseC_artist_loops8a: |-
         Ahora haz algo tú mismo. ¿Qué sucede cuando creas dos círculos separados de stickers diferentes?
 
@@ -3688,7 +3667,7 @@ es-MX:
 
         ¿Necesitas una idea? Prueba hacer un diseño como este.
 
-        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+        [expandable][0]
       courseC_artist_loops8a_2018: |-
         Ahora haz algo tú mismo. ¿Qué sucede cuando creas dos círculos separados de stickers diferentes?
 
@@ -3696,7 +3675,7 @@ es-MX:
 
         ¿Necesitas una idea? Prueba hacer un diseño como este.
 
-        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+        [expandable][0]
       courseC_artist_loops8a_2019: |-
         Ahora haz algo tú mismo. ¿Qué sucede cuando creas dos círculos separados de stickers diferentes?
 
@@ -3704,7 +3683,7 @@ es-MX:
 
         ¿Necesitas una idea? Prueba hacer un diseño como este.
 
-        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+        [expandable][0]
       courseC_artist_loopsPre1a: |-
         Ahora pon este código dentro de un bloque `repetir` y haz un bucle **6** veces.
 
@@ -4261,130 +4240,125 @@ es-MX:
         completar este nivel."
       courseC_puppy_loops8courseC_maze_loops8: "**Desafío:** Combina ideas de los
         últimos retos para completar este nivel."
-      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa cinco de los mismos bloques
-        para recoger chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1: "[][0] _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa
+        cinco de los mismos bloques para recoger chatarra. La chatarra brilla así:
+        [][1]"
       courseC_starWars_loops10: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)"¡Vamos, BB-8!"\_
+        [][0]"¡Vamos, BB-8!"\_
 
         ¡Lo estás haciendo muy bien! ¡Sigue así!
       courseC_starWars_loops10_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)"¡Vamos, BB-8!"\_
+        [][0]"¡Vamos, BB-8!"\_
 
         ¡Lo estás haciendo muy bien! ¡Sigue así!
       courseC_starWars_loops10_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)"¡Vamos, BB-8!"\_
+        [][0]"¡Vamos, BB-8!"\_
 
         ¡Lo estás haciendo muy bien! ¡Sigue así!
       courseC_starWars_loops11: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue, BB-8!"_
+        [][0] _"¡Sigue, BB-8!"_
 
         ¡Casi terminas! Este vez, ¡escoge el camino que tú quieras!
       courseC_starWars_loops11_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue, BB-8!"_
+        [][0] _"¡Sigue, BB-8!"_
 
         ¡Casi terminas! Este vez, ¡escoge el camino que tú quieras!
       courseC_starWars_loops11_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue, BB-8!"_
+        [][0] _"¡Sigue, BB-8!"_
 
         ¡Casi terminas! Este vez, ¡escoge el camino que tú quieras!
-      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa cinco de los mismos bloques
-        para recoger chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
-      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa cinco de los mismos bloques
-        para recoger chatarra. La chatarra brilla así: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2018: "[][0] _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa
+        cinco de los mismos bloques para recoger chatarra. La chatarra brilla así:
+        [][1]"
+      courseC_starWars_loops1_2019: "[][0] _\"Ve a recoger la chatarra, BB-8!\"_ \n\nUsa
+        cinco de los mismos bloques para recoger chatarra. La chatarra brilla así:
+        [][1]"
       courseC_starWars_loops2: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
+        [][0] _"¡Vamos, BB-8!"_
 
         Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
       courseC_starWars_loops2_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
+        [][0] _"¡Vamos, BB-8!"_
 
         Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
       courseC_starWars_loops2_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Vamos, BB-8!"_
+        [][0] _"¡Vamos, BB-8!"_
 
         Para llegar a la chatarra, intenta crear un bucle que use un solo bloque dentro de un bloque 'repetir'.
       courseC_starWars_loops4: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
       courseC_starWars_loops4_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
       courseC_starWars_loops4_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         En este desafío, ¡dos bucles 'repetir' te ayudarán a llevar a BB-8 hasta la chatarra con el menor número de bloques!
-      courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Vamos BB-8!"_'
-      courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Vamos BB-8!"_'
-      courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"¡Vamos BB-8!"_'
+      courseC_starWars_loops5: '[][0] _"¡Vamos BB-8!"_'
+      courseC_starWars_loops5_2018: '[][0] _"¡Vamos BB-8!"_'
+      courseC_starWars_loops5_2019: '[][0] _"¡Vamos BB-8!"_'
       courseC_starWars_loops6: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
+        [][0] _"¿Puedes recogerlo todo?"_
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
       courseC_starWars_loops6_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
+        [][0] _"¿Puedes recogerlo todo?"_
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
       courseC_starWars_loops6_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¿Puedes recogerlo todo?"_
+        [][0] _"¿Puedes recogerlo todo?"_
 
         ¡Los bucles funcionan incluso con más de un bloque adentro! ¿Puedes crear bucles para esta secuencia?
       courseC_starWars_loops7: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+        [][0] _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
       courseC_starWars_loops7_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+        [][0] _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
       courseC_starWars_loops7_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Puedes hacerlo!"_
+        [][0] _"¡Puedes hacerlo!"_
 
         ¿Puedes intentar recoger toda la chatarra con un solo bucle? Intenta programarlo todo y luego encuentra el código de repetición para ponerlo en un bucle.
       courseC_starWars_loops8: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
       courseC_starWars_loops8_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
       courseC_starWars_loops8_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Sigue así, BB-8."_
+        [][0] _"Sigue así, BB-8."_
 
         **Desafío:** Combina las ideas de los últimos retos para completar este nivel.
       courseC_starWars_loops9: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue adelante!"_
+        [][0] _"¡Sigue adelante!"_
 
         ¡Usa lo que has aprendido para recoger la chatarra!
       courseC_starWars_loops9_2018: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue adelante!"_
+        [][0] _"¡Sigue adelante!"_
 
         ¡Usa lo que has aprendido para recoger la chatarra!
       courseC_starWars_loops9_2019: |-
-        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"¡Sigue adelante!"_
+        [][0] _"¡Sigue adelante!"_
 
         ¡Usa lo que has aprendido para recoger la chatarra!
-      courseD_Frozen_nested1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja una
-        forma pequeña, de entre **20 y 50** pixeles de ancho. Puede ser cualquier
-        forma que quieras.  \n\n<hr/>\n\nPuedes intentar hacer un polígono como estos:
-        \ \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
-        \ \n\nO incluso una forma abstracta como estas:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_Frozen_nested2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        \ _“Ahora, vamos a dibujar más de una.”_\n\nAhora toma tu forma y dibuja dos
-        o tres seguidas aumentando el número de pixeles.  \n\n-   Si aumentas **menos**
-        que el ancho de tu forma, puede que se superpongan\n-   Si aumentas **más**
-        que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu fila puede
-        terminar recta, como en estos casos:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
-        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_Frozen_nested1: "[][0] _“Hola, soy Elsa de Arendelle, ayúdame a dibujar
+        una forma.”_\n\nDibuja una forma pequeña, de entre **20 y 50** pixeles de
+        ancho. Puede ser cualquier forma que quieras.  \n\n<hr/>\n\nPuedes intentar
+        hacer un polígono como estos:  \n[][1]\n[][2]\n[][3]  \n\nO incluso una forma
+        abstracta como estas:  \n[][4]\n[][5]\n[][6]"
+      courseD_Frozen_nested2: "[][0]  _“Ahora, vamos a dibujar más de una.”_\n\nAhora
+        toma tu forma y dibuja dos o tres seguidas aumentando el número de pixeles.
+        \ \n\n-   Si aumentas **menos** que el ancho de tu forma, puede que se superpongan\n-
+        \  Si aumentas **más** que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu
+        fila puede terminar recta, como en estos casos:\n\n[][1]\n[][2]\n[][3]\n<br/>
+        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n[][4]\n[][5]\n[][6]"
       courseD_Frozen_nested3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Vamos a transformarlo en un copo de nieve.\"_\\\r\n\\\r\nLuego, haz que
         Elsa salte de vuelta al centro usando el bloque `saltar 200 sobre 200`, y
@@ -4427,37 +4401,36 @@ es-MX:
         del escalón de tu escalera?\\\r\n-   ¿Qué sucede si haces el patrón de tu
         diamante más largo o más corto?\\\r\n    \\-¿Cómo luce al dibujar dos copos
         de nieve uno encima del otro?\\\r?"
-      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja un
-        hexágono con lados de 50 pixeles de largo.  \n\n* * *\n\nPara dibujar un hexágono,
-        necesitaras: \n\n-   Moverte hacia adelante **50** pixeles\n-   Girar a la
-        derecha **60** grados\n-   Repetir un total de **6** veces"
-      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja un
-        hexágono con lados de 50 pixeles de largo.  \n\n* * *\n\nPara dibujar un hexágono,
-        necesitaras: \n\n-   Moverte hacia adelante **50** pixeles\n-   Girar a la
-        derecha **60** grados\n-   Repetir un total de **6** veces"
-      courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“¡Buen trabajo!”_\n\nLuego de dibujar el hexágono, gira a la derecha **60**
-        grados, y luego dibuja una línea que sea de **150** pixeles de largo.   \n\nPara
-        finalizar, ubica a Elsa en el centro del área de juego con el bloque <xml><block
-        type=\"jump_to\"><title name=\"VALUE\">centro medio</title></block></xml>."
-      courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“¡Buen trabajo!”_\n\nLuego de dibujar el hexágono, gira a la derecha **60**
-        grados, y luego dibuja una línea que sea de **150** pixeles de largo.   \n\nPara
-        finalizar, ubica a Elsa en el centro del área de juego con el bloque <xml><block
-        type=\"jump_to\" block-text=\"jump to the middle center position\"><title
-        name=\"VALUE\">centro medio</title></block></xml>."
+      courseD_artist_1_2018: "[][0] _“Hola, soy Elsa de Arendelle, ayúdame a dibujar
+        una forma.”_\n\nDibuja un hexágono con lados de 50 pixeles de largo.  \n\n*
+        * *\n\nPara dibujar un hexágono, necesitaras: \n\n-   Moverte hacia adelante
+        **50** pixeles\n-   Girar a la derecha **60** grados\n-   Repetir un total
+        de **6** veces"
+      courseD_artist_1_2018_2019: "[][0] _“Hola, soy Elsa de Arendelle, ayúdame a
+        dibujar una forma.”_\n\nDibuja un hexágono con lados de 50 pixeles de largo.
+        \ \n\n* * *\n\nPara dibujar un hexágono, necesitaras: \n\n-   Moverte hacia
+        adelante **50** pixeles\n-   Girar a la derecha **60** grados\n-   Repetir
+        un total de **6** veces"
+      courseD_artist_2_2018: "[][0] _“¡Buen trabajo!”_\n\nLuego de dibujar el hexágono,
+        gira a la derecha **60** grados, y luego dibuja una línea que sea de **150**
+        pixeles de largo.   \n\nPara finalizar, ubica a Elsa en el centro del área
+        de juego con el bloque <xml><block type=\"jump_to\"><title name=\"VALUE\">centro
+        medio</title></block></xml>."
+      courseD_artist_2_2018_2019: "[][0] _“¡Buen trabajo!”_\n\nLuego de dibujar el
+        hexágono, gira a la derecha **60** grados, y luego dibuja una línea que sea
+        de **150** pixeles de largo.   \n\nPara finalizar, ubica a Elsa en el centro
+        del área de juego con el bloque <xml><block type=\"jump_to\" block-text=\"jump
+        to the middle center position\"><title name=\"VALUE\">centro medio</title></block></xml>."
       courseD_artist_3_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hagamos un copo de nieve.”_
+        [][0] _“Hagamos un copo de nieve.”_
 
         Para convertir este código en un copo de nieve, anida todos los códigos dentro de otro bucle `repetir` y ejecútalo un total de **6** veces. Solo deberías tener que agregar un bloque.
       courseD_artist_3_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Hagamos un copo de nieve.”_
+        [][0] _“Hagamos un copo de nieve.”_
 
         Para convertir este código en un copo de nieve, anida todos los códigos dentro de otro bucle `repetir` y ejecútalo un total de **6** veces. Solo deberías tener que agregar un bloque.
       courseD_artist_4_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"¡Hagamos que nuestros copos de nieve sean especiales!"_
+        [][0] _"¡Hagamos que nuestros copos de nieve sean especiales!"_
 
         **Inspiración:** ¿Dónde necesitas agregar un código si quieres dibujar un cuadrado pequeño en la punta de cada línea larga?
 
@@ -4471,7 +4444,7 @@ es-MX:
         -   Deberías girar 90 grados
         -   Repite 4 veces esas acciones
       courseD_artist_4_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"¡Hagamos que nuestros copos de nieve sean especiales!"_
+        [][0] _"¡Hagamos que nuestros copos de nieve sean especiales!"_
 
         **Inspiración:** ¿Dónde necesitas agregar un código si quieres dibujar un cuadrado pequeño en la punta de cada línea larga?
 
@@ -4485,30 +4458,28 @@ es-MX:
         -   Deberías girar 90 grados
         -   Repite 4 veces esas acciones
       courseD_artist_5_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"¡Intenta cambiar las formas o las longitudes de las líneas para personalizarlas!"_
+        [][0] _"¡Intenta cambiar las formas o las longitudes de las líneas para personalizarlas!"_
 
         **Inspiración:** Puedes cambiar tu dibujo como quieras. Te damos una idea:
 
         -   ¡Intenta cambiar el tipo de forma en el medio del copo de nieve por el que está al final de cada línea!
-      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"¡Intenta cambiar las formas o las longitudes de las líneas para personalizarlas!\"_\n\n<br/>
-        \ \n\n**Inspiración:** Puedes cambiar tu dibujo como quieras. Te damos una
-        idea:\n\n-   ¡Intenta cambiar el tipo de forma en el medio del copo de nieve
-        por el que está al final de cada línea!"
-      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Intentemos algo nuevo. Esta vez, patina en zigzag.\"_\n\n<br/>  \n\n**Inspiración:**
-        Intenta cambiar tu línea de 150 pixeles de largo por 6 líneas de **25** pixeles\n\n-
-        \  Gira **45** grados en otras direcciones después de cada línea corta para
-        que se vea como un zigzag\n-   ¿Dónde debes poner el nuevo bloque `repetir`
-        para que esto suceda?\n-   ¿Cuántas veces tienes que repetir tu patrón de
-        2 líneas cortas para tener 6 en total?"
-      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Intentemos algo nuevo. Esta vez, patina en zigzag.\"_\n\n<br/>  \n\n**Inspiración:**
-        Intenta cambiar tu línea de 150 pixeles de largo por 6 líneas de **25** pixeles\n\n-
-        \  Gira **45** grados en otras direcciones después de cada línea corta para
-        que se vea como un zigzag\n-   ¿Dónde debes poner el nuevo bloque `repetir`
-        para que esto suceda?\n-   ¿Cuántas veces tienes que repetir tu patrón de
-        2 líneas cortas para tener 6 en total?"
+      courseD_artist_5_2018_2019: "[][0] _\"¡Intenta cambiar las formas o las longitudes
+        de las líneas para personalizarlas!\"_\n\n<br/>  \n\n**Inspiración:** Puedes
+        cambiar tu dibujo como quieras. Te damos una idea:\n\n-   ¡Intenta cambiar
+        el tipo de forma en el medio del copo de nieve por el que está al final de
+        cada línea!"
+      courseD_artist_6_2018: "[][0] _\"Intentemos algo nuevo. Esta vez, patina en
+        zigzag.\"_\n\n<br/>  \n\n**Inspiración:** Intenta cambiar tu línea de 150
+        pixeles de largo por 6 líneas de **25** pixeles\n\n-   Gira **45** grados
+        en otras direcciones después de cada línea corta para que se vea como un zigzag\n-
+        \  ¿Dónde debes poner el nuevo bloque `repetir` para que esto suceda?\n-   ¿Cuántas
+        veces tienes que repetir tu patrón de 2 líneas cortas para tener 6 en total?"
+      courseD_artist_6_2018_2019: "[][0] _\"Intentemos algo nuevo. Esta vez, patina
+        en zigzag.\"_\n\n<br/>  \n\n**Inspiración:** Intenta cambiar tu línea de 150
+        pixeles de largo por 6 líneas de **25** pixeles\n\n-   Gira **45** grados
+        en otras direcciones después de cada línea corta para que se vea como un zigzag\n-
+        \  ¿Dónde debes poner el nuevo bloque `repetir` para que esto suceda?\n-   ¿Cuántas
+        veces tienes que repetir tu patrón de 2 líneas cortas para tener 6 en total?"
       courseD_artist_7_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Ahora vamos a girarnos y volvernos por donde vinimos.\"_\\\r\n\\\r\n¡Gira
         180 grados y dibuja exactamente el mismo patrón de escalera nuevamente!  \\\r\n\\\r\n\n-
@@ -4730,23 +4701,23 @@ es-MX:
         Ahora es tu turno. ¡Usa las habilidades que has aprendido y haz algo que te encante!
         ¿Necesitas ideas? Te damos algunas:
 
-        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
-        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
-        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseD_artist_nestedLoopsFP_2018: |-
         Ahora es tu turno. ¡Usa las habilidades que has aprendido y haz algo que te encante!
         ¿Necesitas ideas? Te damos algunas:
 
-        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
-        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
-        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseD_artist_nestedLoopsFP_2019: |-
         Ahora es tu turno. ¡Usa las habilidades que has aprendido y haz algo que te encante!
         ¿Necesitas ideas? Te damos algunas:
 
-        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
-        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
-        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+        [expandable][0]
+        [expandable][1]
+        [expandable][2]
       courseD_artist_nestedLoops_challenge1: "¿Puedes descifrar cómo hacer una imagen
         como esta?\\\r\n\\\r\n\n-   Ambas formas tienen **lados de 50 pixeles.**\\\r\n-
         \  Los _octágonos_ están hechos con giros de **45 grados**.\\\r\n-   Los _triángulos_
@@ -4777,26 +4748,24 @@ es-MX:
         -   El primer bucle interior debería hacer un octágono.
         -   El segundo bucle interior debería hacer un hexágono.
         -   El tercer bucle interior debería hacer un cuadrado.
-      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja una
-        forma pequeña, de entre **20 y 50** pixeles de ancho. Puede ser cualquier
-        forma que quieras.  \n\n<hr/>\n\nPuedes intentar hacer un polígono como estos:
-        \ \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
-        \ \n\nO incluso una forma abstracta como estas:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1: "[][0] _“Hola, soy Elsa de Arendelle, ayúdame a dibujar
+        una forma.”_\n\nDibuja una forma pequeña, de entre **20 y 50** pixeles de
+        ancho. Puede ser cualquier forma que quieras.  \n\n<hr/>\n\nPuedes intentar
+        hacer un polígono como estos:  \n[][1]\n[][2]\n[][3]  \n\nO incluso una forma
+        abstracta como estas:  \n[][4]\n[][5]\n[][6]"
       courseD_artist_project1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja una
         forma pequeña, de entre **20 y 50** pixeles de ancho. Puede ser cualquier
         forma que quieras.  \n\n<hr/>\n\nPuedes intentar hacer un polígono, como estos:
         \ \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
         \ \n\nO incluso una forma abstracta, como estas:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _“Hola, soy Elsa de Arendelle, ayúdame a dibujar una forma.”_\n\nDibuja una
-        forma pequeña, de entre **20 y 50** pixeles de ancho. Puede ser cualquier
-        forma que quieras.  \n\n<hr/>\n\nPuedes intentar hacer un polígono como estos:
-        \ \n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
-        \ \n\nO incluso una forma abstracta como estas:  \n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Intentemos algo nuevo. Esta vez, patina en zigzag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+      courseD_artist_project1_2019: "[][0] _“Hola, soy Elsa de Arendelle, ayúdame
+        a dibujar una forma.”_\n\nDibuja una forma pequeña, de entre **20 y 50** pixeles
+        de ancho. Puede ser cualquier forma que quieras.  \n\n<hr/>\n\nPuedes intentar
+        hacer un polígono como estos:  \n[][1]\n[][2]\n[][3]  \n\nO incluso una forma
+        abstracta como estas:  \n[][4]\n[][5]\n[][6]"
+      courseD_artist_project1a: "[][0] _\"Intentemos algo nuevo. Esta vez, patina
+        en zigzag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDibuja
         un patrón de escalones que use giros de entre 75 y 105 grados. Asegúrate de
         que tus giros hacia la derecha y la izquierda tengan el mismo ángulo.  \n(Verás
@@ -4807,33 +4776,30 @@ es-MX:
         un patrón de escalones que use giros de entre 75 y 105 grados. Asegúrate de
         que tus giros hacia la derecha y la izquierda tengan el mismo ángulo.  \n(Verás
         por qué más adelante)."
-      courseD_artist_project1a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Intentemos algo nuevo. Esta vez, patina en zigzag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+      courseD_artist_project1a_2019: "[][0] _\"Intentemos algo nuevo. Esta vez, patina
+        en zigzag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
         width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDibuja
         un patrón de escalones que use giros de entre 75 y 105 grados. Asegúrate de
         que tus giros hacia la derecha y la izquierda tengan el mismo ángulo.  \n(Verás
         por qué más adelante)"
-      courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        \ _“Ahora, vamos a dibujar más de una.”_\n\nAhora toma tu forma y dibuja dos
-        o tres seguidas aumentando el número de pixeles.  \n\n-   Si aumentas **menos**
-        que el ancho de tu forma, puede que se superpongan\n-   Si aumentas **más**
-        que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu fila puede
-        terminar recta, como en estos casos:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
-        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_artist_project2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        \ _“Ahora, vamos a dibujar más de una.”_\n\nAhora toma tu forma y dibuja dos
-        o tres seguidas aumentando el número de pixeles.  \n\n-   Si aumentas **menos**
-        que el ancho de tu forma, puede que se superpongan\n-   Si aumentas **más**
-        que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu fila puede
-        terminar recta, como en estos casos:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
-        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_artist_project2_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        \ _“Ahora, vamos a dibujar más de una.”_\n\nAhora toma tu forma y dibuja dos
-        o tres seguidas aumentando el número de pixeles.  \n\n-   Si aumentas **menos**
-        que el ancho de tu forma, puede que se superpongan\n-   Si aumentas **más**
-        que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu fila puede
-        terminar recta, como en estos casos:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
-        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2: "[][0]  _“Ahora, vamos a dibujar más de una.”_\n\nAhora
+        toma tu forma y dibuja dos o tres seguidas aumentando el número de pixeles.
+        \ \n\n-   Si aumentas **menos** que el ancho de tu forma, puede que se superpongan\n-
+        \  Si aumentas **más** que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu
+        fila puede terminar recta, como en estos casos:\n\n[][1]\n[][2]\n[][3]\n<br/>
+        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n[][4]\n[][5]\n[][6]"
+      courseD_artist_project2_2018: "[][0]  _“Ahora, vamos a dibujar más de una.”_\n\nAhora
+        toma tu forma y dibuja dos o tres seguidas aumentando el número de pixeles.
+        \ \n\n-   Si aumentas **menos** que el ancho de tu forma, puede que se superpongan\n-
+        \  Si aumentas **más** que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu
+        fila puede terminar recta, como en estos casos:\n\n[][1]\n[][2]\n[][3]\n<br/>
+        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n[][4]\n[][5]\n[][6]"
+      courseD_artist_project2_2019: "[][0]  _“Ahora, vamos a dibujar más de una.”_\n\nAhora
+        toma tu forma y dibuja dos o tres seguidas aumentando el número de pixeles.
+        \ \n\n-   Si aumentas **menos** que el ancho de tu forma, puede que se superpongan\n-
+        \  Si aumentas **más** que el ancho de tu forma, te quedará un espacio\n\n<hr/>\n\nTu
+        fila puede terminar recta, como en estos casos:\n\n[][1]\n[][2]\n[][3]\n<br/>
+        \ <br/>\n\nO tus formas se pueden mover, como en estos casos: \n\n[][4]\n[][5]\n[][6]"
       courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Ahora vamos a girarnos y volvernos por donde vinimos.\"_\\\r\n\\\r\n¡Gira
         180 grados y dibuja exactamente el mismo patrón de escalera nuevamente!  \\\r\n\\\r\n\n-
@@ -4855,27 +4821,24 @@ es-MX:
         de un loop para hacer que Elsa dibuje, se gire en 180 grados, dibuje, luego
         gire 180 grados nuevamente.\\\r\n    \\\r\n    <hr/>\r\n    \r\n    Aquí hay
         un ejemplo de escaleras que usan giros de 76 grados:\r\n    \r\n    ![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
-      courseD_artist_project3: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Vamos a transformarlo en un copo de nieve.\"_\n\nLuego, usa el bloque `saltar
-        200 sobre 200` para que Elsa vuelva al centro, y hazla girar para dibujar
-        la línea de formas una y otra vez en un montón de direcciones diferentes.
-        \  \n\n¡Qué copos de nieve tan maravillosos puedes hacer!\n\n* * *\n\nObserva
-        estos ejemplos con polígonos:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nLas
-        formas abstractas pueden crear copos de nieve más parecidos estos:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Vamos a transformarlo en un copo de nieve.\"_\n\nLuego, usa el bloque `saltar
-        200 sobre 200` para que Elsa vuelva al centro, y hazla girar para dibujar
-        la línea de formas una y otra vez en un montón de direcciones diferentes.
-        \  \n\n¡Qué copos de nieve tan maravillosos puedes hacer!\n\n* * *\n\nObserva
-        estos ejemplos con polígonos:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nLas
-        formas abstractas pueden crear copos de nieve más parecidos estos:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
-        _\"Vamos a transformarlo en un copo de nieve.\"_\n\nLuego, usa el bloque `saltar
-        200 sobre 200` para que Elsa vuelva al centro, y hazla girar para dibujar
-        la línea de formas una y otra vez en un montón de direcciones diferentes.
-        \  \n\n¡Qué copos de nieve tan maravillosos puedes hacer!\n\n* * *\n\nObserva
-        estos ejemplos con polígonos:  \n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\n\nLas
-        formas abstractas pueden crear copos de nieve más parecidos estos:  \n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
+      courseD_artist_project3: "[][0] _\"Vamos a transformarlo en un copo de nieve.\"_\n\nLuego,
+        usa el bloque `saltar 200 sobre 200` para que Elsa vuelva al centro, y hazla
+        girar para dibujar la línea de formas una y otra vez en un montón de direcciones
+        diferentes.   \n\n¡Qué copos de nieve tan maravillosos puedes hacer!\n\n*
+        * *\n\nObserva estos ejemplos con polígonos:  \n[][1]\n[][2]\n[][3]\n\nLas
+        formas abstractas pueden crear copos de nieve más parecidos estos:  \n[][4]\n[][5]\n[][6]"
+      courseD_artist_project3_2018: "[][0] _\"Vamos a transformarlo en un copo de
+        nieve.\"_\n\nLuego, usa el bloque `saltar 200 sobre 200` para que Elsa vuelva
+        al centro, y hazla girar para dibujar la línea de formas una y otra vez en
+        un montón de direcciones diferentes.   \n\n¡Qué copos de nieve tan maravillosos
+        puedes hacer!\n\n* * *\n\nObserva estos ejemplos con polígonos:  \n[][1]\n[][2]\n[][3]\n\nLas
+        formas abstractas pueden crear copos de nieve más parecidos estos:  \n[][4]\n[][5]\n[][6]"
+      courseD_artist_project3_2019: "[][0] _\"Vamos a transformarlo en un copo de
+        nieve.\"_\n\nLuego, usa el bloque `saltar 200 sobre 200` para que Elsa vuelva
+        al centro, y hazla girar para dibujar la línea de formas una y otra vez en
+        un montón de direcciones diferentes.   \n\n¡Qué copos de nieve tan maravillosos
+        puedes hacer!\n\n* * *\n\nObserva estos ejemplos con polígonos:  \n[][1]\n[][2]\n[][3]\n\nLas
+        formas abstractas pueden crear copos de nieve más parecidos estos:  \n[][4]\n[][5]\n[][6]"
       courseD_artist_project3a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Vamos a girarlo y a convertirlo en un copo de nieve.\"_\\\r\n\\\r\nHaz
         girar esa forma una 5 ó 6 veces en círculos.\\\r\n\n-   Si escoges 5 veces,
@@ -6004,17 +5967,21 @@ es-MX:
       courseD_scrat_ramp8_2018: "**Desafío:** ¡Usa lo que has aprendido para llevar
         a Scrat a la bellota!"
       courseE_aboutme_2: |-
-        Rikki piensa que es genial imprimir mensajes en Laboratorio de Sprite. ¡Esto significa que puede compartir información sobre ella en su póster!
+        Puedes hacer un póster igual que el de Rikki. Primero debes conseguir un disfraz nuevo para el sprite a continuación. ¡Se supone que ese eres tú!
 
-        Utiliza el bloque `imprimir` para ayudar a Rikki a decir al menos una cosa más.
-      courseE_aboutme_freeplay: "Gracias por ayudar a Rikki. Ahora es tu turno de
-        **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos
-        y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki,
-        ¡recuerda compartir información SEGURA!\n\n**Ejemplos de información SEGURA**\n\n-
-        \  nombre de pila\n-   videojuegos, libros y programas de TV favoritos\n-
-        \  opiniones respetuosas (sin insultos ni lenguaje inapropiado)\n\n**Ejemplos
-        de información NO SEGURA**\n\n-   nombre completo\n-   domicilio\n-   número
-        de teléfono"
+        <span style="color: #f00">Rikki: "¡Yo te ayudaré! Usa la solapa Disfraces para dibujar o elegir un disfraz que te represente."</span>
+
+        1.  Haz clic en la solapa **Disfraces**.
+        2.  Dibuja un disfraz que te represente, o elige uno de la biblioteca.
+        3.  En el código a continuación, cambia el disfraz del sprite por el tuyo.
+      courseE_aboutme_freeplay: "¡Excelente trabajo! Tu póster es igual de increíble
+        que el de Rikki.\n\n<span style=\"color: #f00\">Rikki: casi igual de increíble.
+        Casi. \U0001F609</span>\n\n¡Sigue adelante! Estas son algunas cosas que Rikki
+        le va a agregar a su póster. ¡Pruébalas!\n\n1.  ¡Agrega un fondo! Elige un
+        fondo que combine con el póster.\n2.  ¡Agrega comportamientos! Haz que cada
+        uno de tus sprites reaccione de manera diferente cuando se le haga clic.\n3.
+        \ ¡Agrega otra clase de eventos! Aplica tu creatividad y habilidades de codificación
+        y prueba eventos que no sean solo `hacer clic`."
       courseE_artist_concept1: "Recrea esta imagen. \\\r\n\\\r\n\n-   Los hexágonos
         tienen lados de 50 pixeles\\\r\n-   Los hexágonos están separados por 100
         pixeles\\\r\n-   Los anchos de lápiz son de 1 pixel, 4 pixeles y 8 pixeles."
@@ -7715,13 +7682,9 @@ es-MX:
       frozen perpendicular_b: |-
         _"¡Continuemos!"_
 
-         
-
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa"><title name="DIR">girar derecha</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> y otro bloque <xml><block type="draw_move_by_constant_dropdown"><title name="DIR">avanzar</title><title name="VALUE" config="50,100,150,200,300">100</title></block></xml> para hacer una forma de hielo.
       frozen perpendicular_test: |-
         _"¡Continuemos!"_
-
-         
 
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -7868,7 +7831,7 @@ es-MX:
         de la forma que quieras!"_
       grade2_playlab_project_3: "¿Puedes hacer que Waddles (actor 1) diga \"¡Ay!\"
         y reproduzca un sonido de \"golpe\" si se encuentra con Chomp? \n\nCuando
-        estés listo, juega para hacer que eso suceda.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+        estés listo, juega para hacer que eso suceda.\n\n[][0]"
       grade2_puppy_loops2: |-
         De repente, ¡un bloque mágico aparece! Con el bloque 'repetir', tú puedes repetir el código una y otra vez.
 
