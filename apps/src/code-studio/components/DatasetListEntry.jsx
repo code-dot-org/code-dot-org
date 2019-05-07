@@ -28,11 +28,11 @@ export default class DatasetListEntry extends React.Component {
   render() {
     return (
       <tr>
-        <td width="250" style={styles.datasetNameText}>
+        <td width="200" style={styles.datasetNameText}>
           {this.props.name}
         </td>
-        <td width="250">{this.props.description}</td>
-        <td width="250" style={{textAlign: 'right'}}>
+        <td width="450">{this.props.description}</td>
+        <td width="200" style={{textAlign: 'right'}}>
           <button type="button" onClick={this.props.onChoose}>
             {i18n.choose()}
           </button>
