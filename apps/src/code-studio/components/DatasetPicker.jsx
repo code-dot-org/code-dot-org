@@ -21,7 +21,7 @@ const styles = {
  */
 export default class DatasetPicker extends React.Component {
   static propTypes = {
-    assetChosen: PropTypes.func
+    assetChosen: PropTypes.func.isRequired
   };
 
   importCsvFromUrl = (name, url) => {
@@ -35,7 +35,6 @@ export default class DatasetPicker extends React.Component {
         () => console.log('importCsv onSuccess'),
         () => console.log('importCsv onError')
       );
-      console.log(request.status);
     };
     request.onerror = function() {
       console.log('onerror');
@@ -55,14 +54,13 @@ export default class DatasetPicker extends React.Component {
 
   render() {
     const datasetEntries = datasetLibrary.datasets.map(d => {
-      const choose = this.chooseAsset.bind(this, d.name, d.url);
       return (
         <DatasetListEntry
           key={d.name}
           name={d.name}
           description={d.description}
           url={d.url}
-          onChoose={choose}
+          onChoose={this.chooseAsset}
         />
       );
     });
