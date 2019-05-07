@@ -1,3 +1,4 @@
+const SHOW_PROJECT_HEADER = 'header/SHOW_PROJECT_HEADER';
 const SHOW_MINIMAL_PROJECT_HEADER = 'header/SHOW_MINIMAL_PROJECT_HEADER';
 const SHOW_PROJECT_BACKED_HEADER = 'header/SHOW_PROJECT_BACKED_HEADER';
 const SHOW_PROJECT_UPDATED_AT = 'header/SHOW_PROJECT_UPDATED_AT';
@@ -6,6 +7,7 @@ const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
 
 const initialState = {
+  showProjectHeader: false,
   showMinimalProjectHeader: false,
   showProjectBackedHeader: false,
   showProjectUpdatedAt: false,
@@ -15,8 +17,14 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  // TODO: are the project-backed header and minimal project header mutually
-  // exclusive?
+  // TODO: are the various kinds of headers mutually exclusive?
+  if (action.type === SHOW_PROJECT_HEADER) {
+    return {
+      ...state,
+      showProjectHeader: true
+    };
+  }
+
   if (action.type === SHOW_MINIMAL_PROJECT_HEADER) {
     return {
       ...state,
@@ -55,6 +63,10 @@ export default (state = initialState, action) => {
 
   return state;
 };
+
+export const showProjectHeader = () => ({
+  type: SHOW_PROJECT_HEADER
+});
 
 export const showMinimalProjectHeader = () => ({
   type: SHOW_MINIMAL_PROJECT_HEADER
