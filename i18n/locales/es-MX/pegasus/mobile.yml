@@ -9,7 +9,7 @@
   upgrade_ie_link: "Aprende más"
   en: "Ciencias de la computación"
   computer_science_edweek: "Semana de Educación en Ciencias de la Computación"
-  csedweek_dates: "Desde el 3 al 9 de diciembre, 2018"
+  csedweek_dates: "Del 3 al 9 de diciembre de 2018"
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora del código</a>. Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifica tu Hora del Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>"
@@ -28,10 +28,10 @@
   og_title: 'Code.org: Todos pueden aprender'
   og_title_soon: "Ya viene la Hora del código"
   og_title_here: "¡La Hora del Código está aquí!"
-  og_description: "Cada estudiante en cada escuela merece la oportunidad de estudiar ciencias de la computación."
+  og_description: "Cada estudiante de cada escuela merece la oportunidad de estudiar ciencias de la computación."
   og_description_celeb: "¡Prueba los nuevos tutoriales, gana un video chat con celebridades para ti o para tu clase!"
   csedweek_og_title: "La Hora del Código está aquí"
-  csedweek_og_description: "Ciencias de la Computación es la base para que cada alumno aprenda."
+  csedweek_og_description: "El aprendizaje de las ciencias de la computación es fundamental para cada estudiante."
   csedweek_og_description_soon: "La Hora del Código llegará del 3 al 9 de diciembre de 2018. Las ciencias de la computación son un aprendizaje fundamental para todos."
   csedweek_og_description_here: "La Hora del Código esta aquí. Las ciencias de la computación son un aprendizaje fundamental para todos."
   hoc2014_heading: "Únete a la <a href=\"http://hourofcode.com\">Hora del Código</a><br/>Diciembre 8 - 14, 2014<br/>"
@@ -71,14 +71,14 @@
   congratulations_on_completing_hoc: "Felicidades por completar una Hora del Código"
   congratulations_volunteer: 'Felicitaciones: ¡ahora que has probado la Hora del Código, <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a> y ayuda a estudiantes a aprender una Hora de Código!'
   congratulations_on_completing_course: "Felicitaciones por completar %{course}"
-  congrats_next_tutorials_title: "Prueba estos tutoriales a continuación"
+  congrats_next_tutorials_title: "Pasa al siguiente nivel"
   congrats_next_tutorials_desc: "Prueba estos tutoriales más cortos de una hora o prueba un <a href=\"%{current_path}/next\">tutorial para colaboradores</a>."
   get_a_certificate_of_achievement: "Recibe un certificado de tu logro"
   view_course: "Ver curso"
   view_unit: "Ver unidad"
   make_app: "Haz una aplicación"
   congrats_guest_speaker_title: "Encuentra un orador invitado para tu salón de clase"
-  congrats_guest_speaker_desc: "Ahora que sus alumnos han terminado un curso de ciencias de la computación, considere celebrar y conectarlos a cosas que ellos pueden construir en el mundo real invitando a un relator a su clase. Puede utilizar nuestro mapa de voluntarios para contactar a voluntarios locales para visitar su clase, o buscar en cualquier ciudad para encontrar estudiantes de ciencias de la computación o profesionales técnicos que estén listos para inspirar a sus estudiantes vía video conferencia."
+  congrats_guest_speaker_desc: "Ahora que tus estudiantes han terminado un curso de ciencias de la computación, invita a un orador a tu aula para celebrar sus logros y conectarlos con las cosas que pueden crear en el mundo real. Puedes utilizar nuestro mapa de voluntarios para invitar a voluntarios locales a tu aula, o buscar en cualquier ciudad para encontrar estudiantes de ciencias de la computación o profesionales técnicos que estén listos para participar en una videoconferencia con el objetivo de inspirar a tus estudiantes."
   congrats_guest_speaker_cta: "Encuentra un orador invitado"
   congrats_third_party_title: "Utiliza tus nuevas habilidades con estas aplicaciones y sitios web"
   third_party_gradelevel_kto8: "Cursos de Kinder a 8vo"
@@ -94,8 +94,8 @@
   third_party_price_varies: 'Precio: Los planes varían'
   third_party_price_free: 'Precio: Gratis'
   third_party_price_299: 'Precio: $ 2,99/descarga'
-  third_party_price_individual: 'Precio Individual: Plazo Gratis y $25USD al mes'
-  third_party_price_school: 'Precio para Escuelas: Planes gratuitos y Profesionales en $2500 +'
+  third_party_price_individual: 'Precio individual: prueba gratis y USD 25 al mes'
+  third_party_price_school: 'Precio para escuelas: planes gratuitos y profesionales a partir de $ 2500'
   third_party_tynker_desc: "Plataforma informática creativa de Tynker ayuda a los niños a desarrollar el pensamiento computacional y habilidades de programación de una manera intuitiva, imaginativa y divertida. Gracias a nuestro lenguaje de programación visual e innovador, cursos interactivos autodidactas y actividades de programación basadas en juegos, se proporciona una introducción fácil a la programación y se estimula a los niños a innovar y crear."
   third_party_tynker_btn_curriculum: "Prueba el Currículo Tynker para Lectores Principiantes"
   third_party_tynker_btn_site: "Visita Tynker"
@@ -1045,10 +1045,10 @@
   codesters_gradelevel: "12-14 años"
   texasinstruments_gradelevel: "13-16 años"
   teacherled_gradelevel: "Mayores de 5 años"
-  course1_gradelevel: "Edades de 4 a 6 años"
+  course1_gradelevel: "De 4 a 6 años"
   course2_gradelevel: "Edades de 6 a 18 años"
-  course3_gradelevel: "Edades de 8 a 18 años"
-  course4_gradelevel: "Edades de 10 a 18 años"
+  course3_gradelevel: "De 8 a 18 años"
+  course4_gradelevel: "De 10 a 18 años"
   coursea_gradelevel: "De 4 a 7 años"
   courseb_gradelevel: "De 5 a 8 años"
   coursec_gradelevel: "Edades de 6 a 10 años"
@@ -1067,7 +1067,7 @@
   coursed-2018_gradelevel: Edades de 7 a 11 años
   coursee-2018_gradelevel: Edad 8-12
   coursef-2018_gradelevel: De 9 a 13 años
-  accelerated_gradelevel: "Edades de 10 a 18 años"
+  accelerated_gradelevel: "De 10 a 18 años"
   codeorg_platformtext: "Navegadores modernos, smartphones, tabletas"
   codeintl_platformtext: "Navegadores modernos, smartphones, tabletas"
   thinkersmithspanish_platformtext: "Desconectado"
@@ -1459,6 +1459,10 @@
   header_help_support: 'Ayuda y Soporte '
   header_report_bug: "Reportar un error"
   header_tutorials: "Tutoriales"
+  app_lab_documentation: "Documentación del Laboratorio de aplicaciones"
+  app_lab_tutorials: "Tutoriales del Laboratorio de aplicaciones"
+  game_lab_documentation: "Documentación del Laboratorio de juegos"
+  game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
   header_documentation: "Documentación"
   csp_name: "'16-'17 Principios de CS"
   csd_name: "Descubrimientos de Ciencias de la Computación"
@@ -1466,6 +1470,7 @@
   full_course_category_name: "Cursos Completos"
   user_header_label: "Hola, %{username}"
   user_header_team: "Equipo"
+  user_header_my_projects: "Mis proyectos"
   user_header_settings: "Configuración de la cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar sesión"
@@ -1597,7 +1602,7 @@
   hoc2018_mc_short_description_shorter: "Use su creatividad y habilidades para resolver problemas para explorar y construir mundos bajo el agua con el código."
   hoc2018_mc_journey: "Viaje a través de Minecraft con el código."
   hoc2018_dance_party_main_heading: "Fiesta de baile"
-  hoc2018_dance_party_landing_title: "Bailar"
+  hoc2018_dance_party_landing_title: "Baile"
   hoc2018_dance_party_subheading: "Ayude a traducir Fiesta de Baile"
   hoc2018_dance_create_your_own_dance_title: "Crea tu propia fiesta del baile"
   hoc2018_dance_party_box_title: "Fiesta de baile"
@@ -1651,4 +1656,4 @@
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
   page_not_found_button: "Regresa a casa"
   hoc2018_mc_with_microsoft: "En colaboración con"
-  hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft el apoyo a nuestra visión y misión para asegurar que cada niño tenga la oportunidad de aprender Ciencias de la Computación y las habilidades para tener éxito en el siglo XXI."
+  hoc2018_mc_thank_microsoft: "Agradecemos a Microsoft por el apoyo a nuestra visión y misión centradas en asegurar que cada niño tenga la oportunidad de aprender ciencias de la computación y las habilidades para tener éxito en el siglo XXI."
