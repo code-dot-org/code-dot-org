@@ -51,7 +51,7 @@ module.exports = function showAssetManager(
     return pickersByType[typeFilter];
   };
 
-  let pickerType = getPickerForType(typeFilter);
+  const pickerType = getPickerForType(typeFilter);
 
   ReactDOM.render(
     React.createElement(pickerType, {

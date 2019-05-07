@@ -19,10 +19,14 @@ const styles = {
  */
 export default class DatasetListEntry extends React.Component {
   static propTypes = {
-    name: PropTypes.string,
-    description: PropTypes.string,
-    url: PropTypes.string,
-    onChoose: PropTypes.func
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    onChoose: PropTypes.func.isRequired
+  };
+
+  onChoose = () => {
+    this.props.onChoose(this.props.name, this.props.url);
   };
 
   render() {
@@ -33,7 +37,7 @@ export default class DatasetListEntry extends React.Component {
         </td>
         <td width="450">{this.props.description}</td>
         <td width="200" style={{textAlign: 'right'}}>
-          <button type="button" onClick={this.props.onChoose}>
+          <button type="button" onClick={this.onChoose}>
             {i18n.choose()}
           </button>
         </td>
