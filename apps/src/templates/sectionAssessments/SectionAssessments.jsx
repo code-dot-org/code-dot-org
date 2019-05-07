@@ -29,6 +29,7 @@ import MultipleChoiceSurveyOverviewContainer from './MultipleChoiceSurveyOvervie
 import MultipleChoiceDetailsDialog from './MultipleChoiceDetailsDialog';
 import MatchAssessmentsOverviewContainer from './MatchAssessmentsOverviewContainer';
 import MatchDetailsDialog from './MatchDetailsDialog';
+import MatchByStudentContainer from './MatchByStudentContainer';
 import AssessmentSelector from './AssessmentSelector';
 import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -236,6 +237,9 @@ class SectionAssessments extends Component {
                     />
                     <MultipleChoiceByStudentContainer />
                     <MatchAssessmentsOverviewContainer
+                      openDialog={this.showMatchDetailDialog}
+                    />
+                    <MatchByStudentContainer
                       openDialog={this.showMatchDetailDialog}
                     />
                     <FreeResponsesAssessmentsContainer
