@@ -940,7 +940,7 @@ sk:
         courseC_maze_loops_challenge1_c: |-
           Ak si sa dostal až sem, stačí už len použiť `otoč sa vľavo` a potom pár krát `posuň sa dopredu`. Nevzdávaj sa!
 
-          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
+          [][0]
       course2_maze_programming_challenge2_authored_hint:
         courseC_maze_programming_challenge2_a: _Ak ma necháš cúvať, uisti sa, že zabočím
           správnym smerom!"_
@@ -1160,10 +1160,10 @@ sk:
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
       courseA_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |-
           Tvoj kód by mal vyzerať takto:
@@ -3173,13 +3173,13 @@ sk:
 
           **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
 
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          [][0]
         idea2: |-
           _potrebuješ inšpiráciu?_
 
           **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
 
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          [][0]
         idea3: |-
           _Potrebuješ inšpiráciu?_
 
@@ -3190,13 +3190,13 @@ sk:
 
           **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
 
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          [][0]
         idea2: |-
           _potrebuješ inšpiráciu?_
 
           **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
 
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          [][0]
         idea3: |-
           _Potrebuješ inšpiráciu?_
 
@@ -3207,13 +3207,13 @@ sk:
 
           **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
 
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          [][0]
         idea2: |-
           _potrebuješ inšpiráciu?_
 
           **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
 
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          [][0]
         idea3: |-
           _Potrebuješ inšpiráciu?_
 
@@ -3304,7 +3304,7 @@ sk:
           </value>
           </block></xml>
 
-          ![](<https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png>)
+          [][0]
       courseC_artist_loop1_authored_hint:
         courseC_artist_loop1_a: V sovjom cykle nemusíš robiť žiadne zmeny, len pridaj
           navrch jeden blok.
@@ -3705,11 +3705,11 @@ sk:
         courseC_artist_loopsPrePre1a_a: |-
           Prvý blok, ktorý budeš potrebovať je:
 
-          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+          [][0]
         courseC_artist_loopsPrePre1a_b: |-
           Aby si sa posunul dopredu o 50 pixelov, použi tento blok:
 
-          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
+          [][0]
       courseC_artist_loopsPrePre1a_2018_authored_hint:
         courseC_artist_loopsPrePre1a_a: |-
           Prvý blok, ktorý potrebuješ použiť je:
@@ -5197,19 +5197,19 @@ sk:
         course_starWars_loops9_c: |-
           Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
 
-          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+          [][0]
       courseC_starWars_loops9_2018_authored_hint:
         course_starWars_loops9_b: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
         course_starWars_loops9_c: |-
           Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
 
-          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+          [][0]
       courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
         course_starWars_loops9_c: |-
           Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
 
-          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+          [][0]
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
@@ -6495,20 +6495,20 @@ sk:
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
       courseD_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
       courseD_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
       courseD_maze_ramp3_2019_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
       courseD_maze_ramp4_2019_authored_hint:
         courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
           aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
@@ -6621,17 +6621,17 @@ sk:
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseD_scrat_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           zo Scratovej perspektívy.
       courseD_scrat_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           zo Scratovej perspektívy.
       courseD_scrat_ramp4_authored_hint:
@@ -6771,17 +6771,17 @@ sk:
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseE_maze_ramp3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           z vtáčikovej perspektívy.
       courseE_maze_ramp3_2018_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           z vtáčikovej perspektívy.
       courseE_maze_ramp4_authored_hint:
@@ -6896,6 +6896,93 @@ sk:
           sa posunieš medzi trojuholníkmi.'
         courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
           iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables5_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables5_2018_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables5_2019_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          [][0]
+      courseF_artist_variables6_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6_2018_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6_2019_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6a_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables6a_2018_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables6a_2019_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables_6_authored_hint:
+        courseF_artist_variables_6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
@@ -6970,15 +7057,15 @@ sk:
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Vyskúšaj niečo, a keď
           to nefunguje, tak vyskúšaj niečo iné!
       coursef_maze_ramp3_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseF_maze_ramp3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho kódu,
+          potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok, ktorý
+          chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť
+          zvyšné bloky, tam kde patria."
       coursef_maze_ramp3_2018_authored_hint:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseF_maze_ramp3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho kódu,
+          potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok, ktorý
+          chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec vráť
+          zvyšné bloky, tam kde patria."
       grade1_adventurer_loops3_authored_hint:
         grade1_adventurer_loops3_a: Niečo nie je správne? Skús použiť tlačidlo Krok
           a zisti, kde nastala chyba.
@@ -7060,10 +7147,10 @@ sk:
         grade2_CaringForNewPet_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či
           si dobre spojil všetky bloky a stlač "Spustiť".
       grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
-        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_a: "[][0]\n\nAk chceš vymazať blok zo stredu tvojho
+          kódu, potiahni všetky bloky na okraj pracovnej plochy. \n\nPrejdi na blok,
+          ktorý chceš odstrániť a odtiahni ho naspäť do panela nástrojov.\n\nNakoniec
+          vráť zvyšné bloky, tam kde patria."
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Sú dve možnosti ako vyriešiť túto úlohu!
       grade2_CaringForNewPet_7D_authored_hint:
@@ -7103,13 +7190,13 @@ sk:
 
           **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
 
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+          [][0]
         idea2: |-
           _potrebuješ inšpiráciu?_
 
           **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
 
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+          [][0]
         idea3: |-
           _Potrebuješ inšpiráciu?_
 
