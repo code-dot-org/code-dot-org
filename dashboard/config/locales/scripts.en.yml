@@ -12267,3 +12267,17 @@ en:
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
           description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+        csp5-pilot:
+          stages:
+            new stage:
+              name: new stage
+            Lists Explore:
+              name: Lists Explore
+            Lists Investigate:
+              name: Lists Investigate
+            Lists Practice:
+              name: Lists Practice
+          title: 'Unit 5: Lists, Loops, and Traversals'
+          description_audience: ''
+          description_short: ''
+          description: ''

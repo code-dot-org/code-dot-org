@@ -1,0 +1,33 @@
+login_required true
+hideable_stages true
+has_verified_resources true
+pilot_experiment 'csp-piloters'
+
+stage 'Lists Explore', flex_category: 'csp_lists'
+level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
+level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
+level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
+
+stage 'Lists Investigate', flex_category: 'csp_lists'
+level 'U5 Lists Investigate Outfitly App', progression: 'App Investigation'
+level 'U5 Lists Investigate Bandly App', progression: 'App Investigation'
+level 'U5 Lists Investigate Partnersly App', progression: 'App Investigation'
+level 'Introduction to Lists - Part 3_2018', progression: 'Code Investigation'
+level 'Introduction to Lists - Part 4_2018', progression: 'Code Investigation'
+level 'U5 Lists Investigate Outfitly Code', progression: 'Code Investigation'
+level 'U5 Lists Investigate Bandly Code', progression: 'Code Investigation'
+level 'U5 Lists Investigate Partnersly Code', progression: 'Code Investigation'
+level 'Random List Access Pattern', progression: 'List Patterns'
+level 'List Scrolling Pattern', progression: 'List Patterns'
+
+stage 'Lists Practice', flex_category: 'csp_lists'
+level 'U5 L03 Lists Practice 1', progression: 'Setting up Lists'
+level 'U5 L03 Lists Practice 2', progression: 'Setting up Lists'
+level 'U5 L03 Lists Practice 3', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 3.75', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 3.5', progression: 'Accessing Elements in a List'
+level 'U5 L03 Lists Practice 4', progression: 'List Operations'
+level 'U5 L03 Lists Practice 5', progression: 'List Operations'
+level 'U5 L03 Lists Practice 9', progression: 'List Operations'
+level 'U5 L03 Lists Practice 6', progression: 'List Operations'
+level 'U5 L03 Lists Practice 10', progression: 'List Operations'
