@@ -1,4 +1,4 @@
-name 'csp-post-survey-2017 preamble 1_2019'
+name 'csd-post-survey-preamble-anonymous-10-mins'
 markdown <<MARKDOWN
 ### **This survey is anonymous** 
 
@@ -6,13 +6,9 @@ markdown <<MARKDOWN
 
 We do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.
 
-* The survey should take **10 minutes or less** to complete.
+The survey should take **10 minutes or less** to complete.
 
 ***
-
-## School in general
-
-#### *First, we want to ask you about your thoughts and feelings about school, in general.*
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
