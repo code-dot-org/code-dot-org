@@ -93,12 +93,14 @@ FactoryGirl.define do
     end
   end
 
+  # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
     mappings {[create(:pd_regional_partner_mapping, state: "AL")]}
     cost_scholarship_information "Some **important** information about scholarships."
     additional_program_information "And some _additional_ program information."
   end
 
+  # example zip: 60415
   factory :regional_partner_illinois, parent: :regional_partner_with_summer_workshops do
     # Link to partner-specific site.
     contact_name "Illinois Contact"
@@ -106,6 +108,7 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "IL")]}
   end
 
+  # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
     apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
@@ -115,6 +118,7 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
+  # example zip: 07001
   factory :regional_partner_newjersey, parent: :regional_partner_with_summer_workshops do
     # No contact details, no workshop application dates, and no workshops.
     contact_name nil
@@ -127,6 +131,7 @@ FactoryGirl.define do
     pd_workshops {[]}
   end
 
+  # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
     apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
@@ -136,6 +141,7 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
+  # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
     # CSD dates but no CSP dates.
     apps_open_date_csp_teacher nil
@@ -145,6 +151,7 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
+  # example zip: 90210
   factory :regional_partner_beverly_hills, parent: :regional_partner_with_summer_workshops do
     contact_name "Beverly Hills Contact"
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
