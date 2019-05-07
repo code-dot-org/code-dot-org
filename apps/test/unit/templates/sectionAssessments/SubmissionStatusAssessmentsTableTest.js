@@ -27,7 +27,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(4);
+    expect(tableHeaders).to.have.length(6);
 
     const tableRows = wrapper.find('tr');
     expect(tableRows).to.have.length(11);
