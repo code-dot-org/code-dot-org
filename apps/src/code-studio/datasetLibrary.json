@@ -2,25 +2,25 @@
   "datasets": [
     {
       "name": "dogs",
-      "description": "something about dogs",
+      "description": "Different breeds of dogs, including images and rankings on different qualities like size and friendliness",
       "columns": "name,size,kidFriendly,dogFriendly,lowShedding,easyToGroom,highEnergy,goodHealth,lowBarking,intelligence,easyToTrain,toleratesHot,toleratesCold,imgURL",
       "url": "/api/v1/dataset-library/dogBreeds.csv"
     },
     {
       "name": "words",
-      "description": "something something words",
+      "description": "The 1000 most commonly used English words and their parts of speech",
       "columns": "word,partOfSpeech,Frequency,Rank",
       "url": "/api/v1/dataset-library/words.csv"
     },
     {
       "name": "countries",
-      "description": "blah blah countries",
+      "description": "Information about different countries, images of their flags, and MP3 of their anthem",
       "columns": "Country,Code,flagImgURL,Population,GDPperPersonUSD,Continent,Region,Latitude,Longitude,Capital,anthemMP3",
       "url": "/api/v1/dataset-library/countries.csv"
     },
     {
       "name": "spotify",
-      "description": "something about spotify",
+      "description": "The top 20 songs in many regions of the world, including 30 second MP3 links to most songs",
       "columns": "Track Name,Artist,Streams,songURL,Album Image,previewMP3,Position,Region,Country Code",
       "url": "/api/v1/dataset-library/spotify.csv"
     }

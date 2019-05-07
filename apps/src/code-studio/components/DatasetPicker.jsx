@@ -13,11 +13,6 @@ const styles = {
   divider: {
     borderColor: color.purple,
     margin: '5px 0'
-  },
-  warning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold'
   }
 };
 
