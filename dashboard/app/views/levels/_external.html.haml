@@ -4,8 +4,8 @@
 - level_props = level.properties_with_replaced_markdown(current_user)
 - video_key = @level.video_key
 - video =  video_key ? Video.current_locale.find_by_key(video_key) : nil
+- use_large_video_player = level.properties["use_large_video_player"]
 - page_width = 800
-
 
 = stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
@@ -30,8 +30,7 @@
   -# otherwise it's handled by external.js
   = render partial: 'levels/dialog', locals: {app: 'external'}
 
-- if video
-  %h2 There's a video in this level!
+- if video && use_large_video_player
   .clear
   .video-container
 
