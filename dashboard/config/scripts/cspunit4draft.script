@@ -48,9 +48,9 @@ level 'U4L12 - Student Introduction'
 #1old
 stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
-assessment 'U4L01 Free Response'
-assessment 'U4L01 Choose 2'
-assessment 'U4L01 Multiple Choice'
+level 'U4L01 Free Response', assessment: true
+level 'U4L01 Choose 2', assessment: true
+level 'U4L01 Multiple Choice', assessment: true
 
 #2
 stage 'Creating Javascript Objects'
@@ -70,9 +70,9 @@ level 'U4 - Objects - pullValues'
 level 'U4 - Objects - createContactObject'
 level 'U4 - Objects - resetIndexAndShow'
 level 'U4 - Objects - showSampleImage'
-assessment 'U4L02 Free Response'
-assessment 'U4L02 Choose 2'
-assessment 'U4L02 Multiple Choice'
+level 'U4L02 Free Response', assessment: true
+level 'U4L02 Choose 2', assessment: true
+level 'U4L02 Multiple Choice', assessment: true
 
 #3
 stage 'Permanent Data Storage'
@@ -114,16 +114,16 @@ level 'U4 - ReadRecords - Contacts App 5 make delete work'
 #5
 stage 'Search Terms'
 level 'U4L05 Student Lesson Introduction'
-assessment 'U4L05 Free Response'
-assessment 'U4L05 Choose 2'
-assessment 'U4L05 Multiple Choice'
+level 'U4L05 Free Response', assessment: true
+level 'U4L05 Choose 2', assessment: true
+level 'U4L05 Multiple Choice', assessment: true
 
 #6
 stage 'Unique IDs, Delete and Update Records'
 level 'U4L06 Student Lesson Introduction'
-assessment 'U4L06 Free Response'
-assessment 'U4L06 Choose 2'
-assessment 'U4L06 Multiple Choice'
+level 'U4L06 Free Response', assessment: true
+level 'U4L06 Choose 2', assessment: true
+level 'U4L06 Multiple Choice', assessment: true
 
 #7
 stage 'Import, Export, and Visualize Data'
@@ -138,92 +138,92 @@ level 'U4 - Charts - Line Chart 1'
 level 'U4 - Charts - Line Chart 2'
 level 'U4 - Charts - drawChartFromRecords Options 1'
 level 'U4 - Charts - drawChartFromRecords Options 2'
-assessment 'U4L07 Free Response'
-assessment 'U4L07 Choose 2'
-assessment 'U4L07 Multiple Choice'
+level 'U4L07 Free Response', assessment: true
+level 'U4L07 Choose 2', assessment: true
+level 'U4L07 Multiple Choice', assessment: true
 
 #8
 stage 'Interpreting Data Visualizations'
 level 'U4L08 Student Lesson Introduction'
-assessment 'U4L08 Free Response'
-assessment 'U4L08 Choose 2'
-assessment 'U4L08 Multiple Choice'
+level 'U4L08 Free Response', assessment: true
+level 'U4L08 Choose 2', assessment: true
+level 'U4L08 Multiple Choice', assessment: true
 
 #9
 stage 'How is Data Collected?'
 level 'U4L09 Student Lesson Introduction'
-assessment 'U4L09 Free Response'
-assessment 'U4L09 Choose 2'
-assessment 'U4L09 Multiple Choice'
+level 'U4L09 Free Response', assessment: true
+level 'U4L09 Choose 2', assessment: true
+level 'U4L09 Multiple Choice', assessment: true
 
 #10
 stage 'Using Data in the Real World' 
 level 'U4L10 Student Lesson Introduction'
-assessment 'U4L10 Free Response'
-assessment 'U4L10 Choose 2'
-assessment 'U4L10 Multiple Choice'
+level 'U4L10 Free Response', assessment: true
+level 'U4L10 Choose 2', assessment: true
+level 'U4L10 Multiple Choice', assessment: true
 
 # 11
 stage 'Web Requests and APIs'
 level 'U4L11 Student Lesson Introduction'
-assessment 'U4L11 Free Response'
-assessment 'U4L11 Choose 2'
-assessment 'U4L11 Multiple Choice'
+level 'U4L11 Free Response', assessment: true
+level 'U4L11 Choose 2', assessment: true
+level 'U4L11 Multiple Choice', assessment: true
 
 # 12
 stage 'Data, Security, and Privacy'
 level 'U4L12 Student Lesson Introduction'
-assessment 'U4L12 Free Response'
-assessment 'U4L12 Choose 2'
-assessment 'U4L12 Multiple Choice'
+level 'U4L12 Free Response', assessment: true
+level 'U4L12 Choose 2', assessment: true
+level 'U4L12 Multiple Choice', assessment: true
 
 #13
 stage 'Privacy vs Utility'
 level 'U4L13 Student Lesson Introduction'
-assessment 'U4L13 Free Response'
-assessment 'U4L13 Choose 2'
-assessment 'U4L13 Multiple Choice'
+level 'U4L13 Free Response', assessment: true
+level 'U4L13 Choose 2', assessment: true
+level 'U4L13 Multiple Choice', assessment: true
 
 #14
 stage 'Privacy in a Digital World'
 level 'U4L14 Student Lesson Introduction'
-assessment 'U4L14 Free Response'
-assessment 'U4L14 Choose 2'
-assessment 'U4L14 Multiple Choice'
+level 'U4L14 Free Response', assessment: true
+level 'U4L14 Choose 2', assessment: true
+level 'U4L14 Multiple Choice', assessment: true
 
 #15
 stage 'Compiling Data'
 level 'U4L15 Student Lesson Introduction'
-assessment 'U4L15 Free Response'
-assessment 'U4L15 Choose 2'
-assessment 'U4L15 Multiple Choice'
+level 'U4L15 Free Response', assessment: true
+level 'U4L15 Choose 2', assessment: true
+level 'U4L15 Multiple Choice', assessment: true
 
 #16
 stage 'Cleaning Data'
-assessment 'U4L16 Free Response'
-assessment 'U4L16 Choose 2'
-assessment 'U4L16 Multiple Choice'
+level 'U4L16 Free Response', assessment: true
+level 'U4L16 Choose 2', assessment: true
+level 'U4L16 Multiple Choice', assessment: true
 
 #17
 stage 'Designing Data Collection'
 level 'U4L17 Student Lesson Introduction'
-assessment 'U4L17 Free Response'
-assessment 'U4L17 Choose 2'
-assessment 'U4L17 Multiple Choice'
+level 'U4L17 Free Response', assessment: true
+level 'U4L17 Choose 2', assessment: true
+level 'U4L17 Multiple Choice', assessment: true
 
 #18
 stage 'Designing for Your User'
 level 'U4L18 Student Lesson Introduction'
-assessment 'U4L18 Free Response'
-assessment 'U4L18 Choose 2'
-assessment 'U4L18 Multiple Choice'
+level 'U4L18 Free Response', assessment: true
+level 'U4L18 Choose 2', assessment: true
+level 'U4L18 Multiple Choice', assessment: true
 
 #19
 stage 'Practice Create PT: Data App'
 level 'U4L19 Student Lesson Introduction'
-assessment 'U4L19 Free Response'
-assessment 'U4L19 Choose 2'
-assessment 'U4L19 Multiple Choice'
+level 'U4L19 Free Response', assessment: true
+level 'U4L19 Choose 2', assessment: true
+level 'U4L19 Multiple Choice', assessment: true
 
 stage 'What Data Can Tell Us'
 level 'CSP Data Unit -Counting Records - Hard Way'
@@ -238,6 +238,6 @@ level 'U3L17 - setKeyValue'
 level 'U3L17 - twoSetKeyValue'
 level 'U3L17 - introCallbacks'
 level 'U3L17 - getKeyValue'
-assessment 'U3L22 Free Response Getting Started'
-assessment 'U3L22 Assessment'
-assessment 'U3L22 Reflection'
+level 'U3L22 Free Response Getting Started', assessment: true
+level 'U3L22 Assessment', assessment: true
+level 'U3L22 Reflection', assessment: true

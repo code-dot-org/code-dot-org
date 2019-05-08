@@ -101,4 +101,14 @@ export function snapToGridSize(coordinate) {
   return coordinate - (((coordinate + halfGrid) % GRID_SIZE) - halfGrid);
 }
 
+/**
+ * Given a dimension (width or height), returns a dimension of at least
+ * that size that aligns to the given grid size.
+ * @param {number} dimension
+ * @returns {number}
+ */
+export function growToGridSize(dimension) {
+  return Math.ceil(dimension / GRID_SIZE) * GRID_SIZE;
+}
+
 export {isPointInBounds};

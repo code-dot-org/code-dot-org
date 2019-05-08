@@ -59,6 +59,7 @@ namespace :seed do
     'csp-explore-2018',
     'csp-create-2018',
     'csppostap-2018',
+    'csp-post-survey-2018',
     'dance',
     'events',
     'express-2017',

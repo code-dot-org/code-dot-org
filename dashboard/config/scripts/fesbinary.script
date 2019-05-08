@@ -27,8 +27,8 @@ level 'courseD_autorun_binary8_predict1_2019'
 level 'grade5_artist_binary11'
 
 stage 'RGB Color'
-named_level 'Additive Color (Simulation)'
-named_level '3-Bit Pixel Simulator'
+level 'Additive Color (Simulation)', named: true
+level '3-Bit Pixel Simulator', named: true
 level 'mike3bit'
 level 'mike3bitbird'
 level 'mike3bitmario'

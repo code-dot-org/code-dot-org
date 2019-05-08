@@ -1,6 +1,5 @@
-@dashboard_db_access
 @no_mobile
-
+@single_session
 Feature: Personal Project Gallery
 
 Background:

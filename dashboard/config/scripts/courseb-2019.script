@@ -1,3 +1,4 @@
+hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/courseb/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/courseb/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/courseb/standards/"]]
 stage_extras_available true
@@ -10,10 +11,10 @@ family_name 'courseb'
 version_year '2019'
 
 stage 'Your Digital Footprint', flex_category: 'csf_digcit'
-level 'DigitalFootprint_2019'
+level 'DigitalFootprint-Unplugged'
 
 stage 'Move It, Move It', flex_category: 'csf_sequencing'
-level 'MoveItMoveIt_2019'
+level 'MoveItMoveIt-Unplugged'
 
 stage 'Sequencing in Maze', flex_category: 'csf_sequencing'
 level 'courseAB_video_NewIntro_2019', progression: 'Maze Intro: Programming with Blocks'
@@ -56,7 +57,7 @@ level 'courseA_harvester_seq11_2019', progression: 'Practice'
 level 'courseA_harvester_seq13_2019', progression: 'Practice'
 
 stage 'Loops: Getting Loopy', flex_category: 'csf_loops'
-level 'GettingLoopy_2019'
+level 'GettingLoopy-Unplugged'
 
 stage 'Loops in Harvester', flex_category: 'csf_loops'
 level 'courseA_harvester_loops1_2019', progression: 'Practice'
@@ -107,10 +108,10 @@ bonus 'courseB_artist_loops_challenge1_2019'
 bonus 'courseB_artist_loops_challenge2_2019'
 
 stage 'The Right App', flex_category: 'csf_impacts'
-level 'BigEvent_2019'
+level 'TheRightAppMarkdownLevel_2019'
 
 stage 'Events: The Big Event', flex_category: 'csf_events'
-level 'BigEvent_2019'
+level 'BigEvent-Unplugged'
 
 stage 'Events in Play Lab', flex_category: 'csf_events'
 level 'courseA_video_events_2019', progression: 'Create a Story'

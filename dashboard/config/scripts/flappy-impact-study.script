@@ -2,7 +2,7 @@ hidden false
 login_required true
 
 stage 'Pre Hour of Code Survey'
-assessment 'HOC pre-survey 2016 levelgroup'
+level 'HOC pre-survey 2016 levelgroup', assessment: true
 
 stage 'Flappy Code'
 skin 'flappy'
@@ -37,4 +37,4 @@ level_concept_difficulty '{"sequencing":1,"events":1}'
 level 'flappy_11'
 
 stage 'Post Hour of Code Survey'
-assessment 'HOC post-survey 2016 levelgroup'
+level 'HOC post-survey 2016 levelgroup', assessment: true
