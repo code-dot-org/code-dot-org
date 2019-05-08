@@ -1,3 +1,5 @@
+/* globals dashboard */
+
 const SHOW_PROJECT_HEADER = 'header/SHOW_PROJECT_HEADER';
 const SHOW_MINIMAL_PROJECT_HEADER = 'header/SHOW_MINIMAL_PROJECT_HEADER';
 const SHOW_PROJECT_BACKED_HEADER = 'header/SHOW_PROJECT_BACKED_HEADER';
@@ -5,6 +7,7 @@ const SHOW_PROJECT_UPDATED_AT = 'header/SHOW_PROJECT_UPDATED_AT';
 const SET_PROJECT_UPDATED_AT = 'header/SET_PROJECT_UPDATED_AT';
 const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
+const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
 
 const initialState = {
   showProjectHeader: false,
@@ -13,7 +16,8 @@ const initialState = {
   showProjectUpdatedAt: false,
   projectUpdatedAt: undefined,
   showLevelBuilderSaveButton: false,
-  getLevelBuilderChanges: undefined
+  getLevelBuilderChanges: undefined,
+  projectName: dashboard.project.getCurrentName()
 };
 
 export default (state = initialState, action) => {
@@ -61,6 +65,13 @@ export default (state = initialState, action) => {
     };
   }
 
+  if (action.type === REFRESH_PROJECT_NAME) {
+    return {
+      ...state,
+      projectName: dashboard.project.getCurrentName()
+    };
+  }
+
   return state;
 };
 
@@ -88,4 +99,8 @@ export const showProjectUpdatedAt = () => ({
 export const setProjectUpdatedAt = updatedAt => ({
   type: SET_PROJECT_UPDATED_AT,
   updatedAt
+});
+
+export const refreshProjectName = () => ({
+  type: REFRESH_PROJECT_NAME
 });
