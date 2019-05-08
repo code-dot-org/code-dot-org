@@ -1,3 +1,4 @@
+:ensure_latest: true
 :run_all_checks: true
 :report_progress: true
 :exit_on_warn: false
