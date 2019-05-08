@@ -18,15 +18,25 @@ FILES_TO_REDACT = [
   "dashboard/authored_hints.yml"
 ]
 
-def redact_translations
+def download_translations(locale)
+  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} download translations"
+end
+
+def redact_translations(locale, language)
   FILES_TO_REDACT.each do |file|
-    Languages.get_locale.each do |prop|
-      locale = prop[:locale_s]
-      source = "i18n/locales/#{locale}/#{file}"
-      redact(source, source, nil)
-      #puts source
-    end
+    source = "i18n/locales/#{language}/#{file}"
+    redact(source, source, nil)
   end
 end
 
-redact_translations if __FILE__ == $0
+def upload_translations(locale)
+  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} upload translations --dryrun"
+end
+
+Languages.get_crowdin_name_and_locale.each do |prop|
+  locale = prop[:locale_s]
+  language = prop[:crowdin_name_s]
+  download_translations(locale)
+  redact_translations(locale, language)
+  upload_translations(locale)
+end
