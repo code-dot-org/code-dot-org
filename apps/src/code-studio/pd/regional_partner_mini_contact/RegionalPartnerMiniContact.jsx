@@ -157,7 +157,7 @@ export class RegionalPartnerMiniContact extends React.Component {
           )}
           <FieldGroup
             id="zip"
-            label="School ZIP Code"
+            label="School ZIP Code (US only)"
             type="text"
             required={true}
             onChange={this.handleChange}
