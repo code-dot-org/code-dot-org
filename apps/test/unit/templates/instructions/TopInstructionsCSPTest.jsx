@@ -21,7 +21,8 @@ const DEFAULT_PROPS = {
   viewAs: 'Teacher',
   readOnlyWorkspace: false,
   serverLevelId: 123,
-  user: 5
+  user: 5,
+  teacherMarkdown: 'Some teacher only markdown'
 };
 
 describe('TopInstructionsCSP', () => {
@@ -117,6 +118,67 @@ describe('TopInstructionsCSP', () => {
         });
 
         expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
+      });
+    });
+  });
+  describe('viewing the Teacher Instructions Tab', () => {
+    describe('as a teacher', () => {
+      it('does not show the Teacher Instructions tab on a level with no markdown', () => {
+        const wrapper = shallow(
+          <TopInstructionsCSP {...DEFAULT_PROPS} teacherMarkdown={null} />
+        );
+
+        wrapper.setState({
+          tabSelected: 'instructions',
+          feedbacks: [],
+          rubric: null,
+          teacherViewingStudentWork: false,
+          studentId: null,
+          fetchingData: false,
+          token: null
+        });
+
+        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
+      });
+
+      it('shows the Teacher Instructions on a level with markdown', () => {
+        const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
+
+        wrapper.setState({
+          tabSelected: 'instructions',
+          feedbacks: [],
+          rubric: null,
+          teacherViewingStudentWork: false,
+          studentId: null,
+          fetchingData: false,
+          token: null
+        });
+
+        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(1);
+      });
+    });
+
+    describe('as a student', () => {
+      it('does not show the Teacher Instructions tab', () => {
+        const wrapper = shallow(
+          <TopInstructionsCSP
+            {...DEFAULT_PROPS}
+            viewAs={'Student'}
+            teacherMarkdown={null}
+          />
+        );
+
+        wrapper.setState({
+          tabSelected: 'instructions',
+          feedbacks: [],
+          rubric: null,
+          teacherViewingStudentWork: false,
+          studentId: 1,
+          fetchingData: false,
+          token: null
+        });
+
+        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
       });
     });
   });
