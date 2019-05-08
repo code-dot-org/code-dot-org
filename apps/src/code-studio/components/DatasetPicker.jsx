@@ -53,17 +53,15 @@ export default class DatasetPicker extends React.Component {
   };
 
   render() {
-    const datasetEntries = datasetLibrary.datasets.map(d => {
-      return (
-        <DatasetListEntry
-          key={d.name}
-          name={d.name}
-          description={d.description}
-          url={d.url}
-          onChoose={this.chooseAsset}
-        />
-      );
-    });
+    const datasetEntries = datasetLibrary.datasets.map(d => (
+      <DatasetListEntry
+        key={d.name}
+        name={d.name}
+        description={d.description}
+        url={d.url}
+        onChoose={this.chooseAsset}
+      />
+    ));
 
     return (
       <div className="modal-content" style={styles.root}>

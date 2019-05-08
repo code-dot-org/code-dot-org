@@ -34,5 +34,7 @@ describe('DatasetPicker', () => {
     assert.isTrue(createStub.called);
     assert.isTrue(importStub.called);
     xhr.restore();
+    createStub.restore();
+    importStub.restore();
   });
 });
