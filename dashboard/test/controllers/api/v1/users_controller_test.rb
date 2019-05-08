@@ -90,16 +90,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
-    sign_in(@user)
-    @user.ui_tip_dismissed_homepage_header = false
-    refute @user.ui_tip_dismissed_homepage_header
-    post :post_ui_tip_dismissed, params: {user_id: 'me', tip: 'homepage_header'}
-    assert_response :success
-    @user.reload
-    assert @user.ui_tip_dismissed_homepage_header
-  end
-
   test 'a post request to postpone_census_banner updates next_census_display' do
     test_user = create :user
     sign_in(test_user)

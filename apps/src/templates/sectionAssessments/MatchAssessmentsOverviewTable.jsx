@@ -102,7 +102,11 @@ class MatchAssessmentsOverviewTable extends Component {
   };
 
   optionFormatter = (option, {rowData, columnIndex, rowIndex, property}) => {
-    return <div>{`${option}`}</div>;
+    if (option.includes('<img')) {
+      return <div>{$(option).attr('alt')}</div>;
+    } else {
+      return <div>{`${option}`}</div>;
+    }
   };
 
   getNotAnsweredColumn = () => ({
@@ -127,13 +131,20 @@ class MatchAssessmentsOverviewTable extends Component {
     }
   });
 
+  getColumnLabel = columnLabel => {
+    if (columnLabel.includes('<img')) {
+      return $(columnLabel).attr('alt');
+    } else {
+      return columnLabel.length < ANSWER_CHAR_LIMIT
+        ? `${columnLabel}`
+        : `${columnLabel.slice(0, ANSWER_CHAR_LIMIT)}...`;
+    }
+  };
+
   getAnswerColumn = columnLabel => ({
     property: 'percentAnswered',
     header: {
-      label:
-        columnLabel.length < ANSWER_CHAR_LIMIT
-          ? `${columnLabel}`
-          : `${columnLabel.slice(0, ANSWER_CHAR_LIMIT)}...`,
+      label: this.getColumnLabel(columnLabel),
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
@@ -197,7 +208,9 @@ class MatchAssessmentsOverviewTable extends Component {
         role="tooltip"
         effect="solid"
       >
-        {answer.answer}
+        {answer.answer.includes('<img')
+          ? $(answer.answer).attr('alt')
+          : answer.answer}
       </ReactTooltip>
     ));
   }

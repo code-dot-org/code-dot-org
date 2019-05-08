@@ -601,8 +601,6 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
 
-      post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
-
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
 

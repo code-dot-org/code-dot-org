@@ -108,4 +108,31 @@ export const matchDetailsQuestionPropType = PropTypes.shape({
   options: PropTypes.array
 });
 
+// Shapes for single student match tables
+
+/**
+ * Represents an individual student's response to a single
+ * match question.
+ */
+export const studentMatchResponsePropType = PropTypes.shape({
+  responses: PropTypes.array
+});
+
+// Represents a single student and a set of the student's answers for
+// a single assessment's match questions
+export const studentWithMatchResponsesPropType = PropTypes.shape({
+  id: PropTypes.number,
+  name: PropTypes.string,
+  studentResponses: PropTypes.arrayOf(studentMatchResponsePropType)
+});
+
+// Represents a single match question structure
+export const matchQuestionPropType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  questionNumber: PropTypes.number.isRequired,
+  answers: PropTypes.array,
+  options: PropTypes.array
+});
+
 export const QUESTION_CHARACTER_LIMIT = 110;
