@@ -46,9 +46,10 @@ module.exports = function showAssetManager(
     const pickersByType = {
       audio: SoundPicker,
       image: ImagePicker,
-      dataset: DatasetPicker
+      dataset: DatasetPicker,
+      default: ImagePicker
     };
-    return pickersByType[typeFilter];
+    return pickersByType[typeFilter] || pickersByType.default;
   };
 
   const pickerType = getPickerForType(typeFilter);
