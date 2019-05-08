@@ -1,0 +1,9 @@
+name 'BinaryBracelets-Unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Binary Bracelets
+
+Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+MARKDOWN
