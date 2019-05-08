@@ -146,11 +146,20 @@ function shouldRunWithFakeBoard() {
 
 /**
  * Called when execution of the student app ends.
- * Resets the board state, disconnects and destroys the current board controller,
+ * Resets the board state
  * and puts maker UI back in a default state.
  */
 export function reset() {
   if (currentBoard) {
     currentBoard.reset();
   }
+}
+
+/**
+ * Called when the board disconnects
+ * Throw away reference to the currentBoard, so that next time we run
+ * we make a new board.
+ */
+export function disconnectBoard() {
+  currentBoard = null;
 }

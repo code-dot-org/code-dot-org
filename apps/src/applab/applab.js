@@ -1139,7 +1139,10 @@ Applab.execute = function() {
     makerToolkit
       .connect({
         interpreter: Applab.JSInterpreter,
-        onDisconnect: () => studioApp().resetButtonClick()
+        onDisconnect: () => {
+          studioApp().resetButtonClick();
+          makerToolkit.disconnectBoard();
+        }
       })
       .then(Applab.beginVisualizationRun)
       .catch(error => {
