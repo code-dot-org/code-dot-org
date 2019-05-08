@@ -45,16 +45,21 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 403
   end
 
-  test "end_date and last_seen_school_info_interstitial are updated" do
+  test "end_date, last_confirmation_date and last_seen_school_info_interstitial are updated" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
+
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_end_date"
     updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
 
     assert_response :success
 
-    assert updated_user_school_info.end_date.to_datetime, Date.current
-    assert updated_user_school_info.user.last_seen_school_info_interstitial.to_datetime, Date.current
+    # refute_equal user_school_info.end_date updated_user_school_info.end_date
+    # assert user_school_info.last_confirmation_date.to_datetime < updated_user_school_info.last_confirmation_date.to_datetime
+    # assert user_school_info.user.last_seen_school_info_interstitial.to_datetime < updated_user_school_info.user.last_seen_school_info_interstitial.to_datetime
+
+    refute_equal user_school_info[:created_at], updated_user_school_info[:updated_at]
+    # refute_equal original_user_school_info.to_datetime, updated_user_school_info.last_confirmation_date.to_datetime
   end
 
   test "end_date and last_seen_school_info_interstitial are not updated if given a school_info id not owned by the signed-in user." do

@@ -13,10 +13,12 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   # PATCH /api/v1/users_school_infos/<id>/update_end_date
   # TODO:  Add comments for clarification
   def update_end_date
-    @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
-    @user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
+    ActiveRecord::Base.transaction do
+      @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
+      @user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
 
-    head :no_content
+      head :no_content
+    end
   end
 
   # PATCH /api/v1/user_school_infos/<id>/update_school_info_id
