@@ -433,8 +433,8 @@ class TopInstructionsCSP extends Component {
                   teacherOnly={teacherOnly}
                 />
               )}
-              {this.props.teacherMarkdown &&
-                (!this.state.fetchingData || teacherOnly) && (
+              {this.props.viewAs === ViewType.Teacher &&
+                this.props.teacherMarkdown && (
                   <InstructionsTab
                     className="uitest-teacherOnlyTab"
                     onClick={this.handleTeacherOnlyTabClick}
@@ -497,7 +497,8 @@ class TopInstructionsCSP extends Component {
                 token={this.state.token}
               />
             )}
-            {this.props.teacherMarkdown &&
+            {this.props.viewAs === ViewType.Teacher &&
+              this.props.teacherMarkdown &&
               this.state.tabSelected === TabType.TEACHER_ONLY && (
                 <TeacherOnlyMarkdown ref="teacherOnlyTab" />
               )}
