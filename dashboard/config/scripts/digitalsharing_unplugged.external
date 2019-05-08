@@ -1,0 +1,9 @@
+name 'DigitalSharing-Unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Digital Sharing
+
+Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists' rights as an important part of being an ethical digital citizen.
+MARKDOWN

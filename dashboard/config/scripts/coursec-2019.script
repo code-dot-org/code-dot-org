@@ -10,13 +10,13 @@ family_name 'coursec'
 version_year '2019'
 
 stage 'Screen Out the Mean', flex_category: 'csf_digcit'
-level 'courseC_Unplugged_ScreenOutTheMean_2019'
+level 'ScreenOutTheMean-Unplugged'
 
 stage 'Powerful Passwords', flex_category: 'csf_digcit'
-level 'courseB_unplugged_passwords_2019'
+level 'PowerfulPasswords-Unplugged'
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_sequencing'
-level 'courseB_unplugged_MRF_2019'
+level 'MyRoboticFriends-Unplugged'
 
 stage 'Programming in Maze', flex_category: 'csf_sequencing'
 level 'courseC_video_maze_2019', progression: 'Maze Intro: Programming with Blocks'
@@ -79,10 +79,10 @@ bonus 'courseC_artist_prog_challenge1_2019'
 bonus 'courseC_artist_prog_challenge2a_2019'
 
 stage 'Binary Bracelets', flex_category: 'csf_binary'
-level 'BinaryBracelets_2019'
+level 'BinaryBracelets-Unplugged'
 
 stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_loops'
-level 'courseB_unplugged_loopyMRF_2019'
+level 'MyLoopyRoboticFriends-Unplugged'
 
 stage 'Loops with Rey and BB-8', flex_category: 'csf_loops'
 level 'bb8_skinOverview_C-F_video_2019', progression: 'Programming with Rey and BB-8'
@@ -147,7 +147,7 @@ level 'courseC_artist_loops7a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops8a_2019', progression: 'Free Play'
 
 stage 'Events: The Big Event', flex_category: 'csf_events'
-level 'BigEvent_2019'
+level 'BigEvent-Unplugged'
 
 stage 'Build a Flappy Game', flex_category: 'csf_events'
 level 'courseC_video_flappyIntro_2019', progression: 'Code Your Own Flappy Game'
@@ -178,8 +178,8 @@ level 'courseC_PlayLab_eventsFP_2019', progression: 'Free Play'
 bonus 'courseC_PlayLab_events_challenge1_2019'
 
 stage 'Picturing Data', flex_category: 'csf_data'
+level 'PicturingData-Unplugged'
 level 'courseC_data wizard'
-level 'GraphingData_2019'
 
 stage 'End of Course Project: Create a Play Lab Game', flex_category: 'end_of_course_project'
 level 'Begin planning your project_2018_2019', progression: 'Project'
