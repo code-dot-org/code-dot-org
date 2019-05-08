@@ -206,8 +206,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       ops_gender: 'test-value',
       using_text_mode: 'test-value',
       last_seen_school_info_interstitial: 'test-value',
-      ui_tip_dismissed_homepage_header: 'test-value',
-      ui_tip_dismissed_teacher_courses: 'test-value',
       oauth_refresh_token: 'test-value',
       oauth_token: 'test-value',
       oauth_token_expiration: 'test-value',
