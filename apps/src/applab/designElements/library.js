@@ -2,7 +2,12 @@ import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
+import experiments from '../../util/experiments';
+import {
+  themeOptions,
+  DEFAULT_THEME_INDEX,
+  CLASSIC_THEME_INDEX
+} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -170,9 +175,12 @@ export default {
   },
 
   getCurrentTheme: function(parentScreen) {
+    const defaultThemeIndex = experiments.isEnabled('applabThemes')
+      ? DEFAULT_THEME_INDEX
+      : CLASSIC_THEME_INDEX;
     return parentScreen
       ? parentScreen.getAttribute('data-theme')
-      : themeOptions[DEFAULT_THEME_INDEX];
+      : themeOptions[defaultThemeIndex];
   },
 
   applyCurrentTheme: function(element, parentScreen) {
