@@ -11,7 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
@@ -156,8 +156,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      classic: color.white,
-      dark: color.black
+      ...themeColor.background
     }
   },
 
@@ -179,7 +178,11 @@ export default {
     element.style.position = 'absolute';
     element.style.zIndex = 0;
     if (experiments.isEnabled('applabThemes')) {
-      element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+      // New screens are created with the same theme as is currently active
+      const currentTheme = elementLibrary.getCurrentTheme(
+        designMode.activeScreen()
+      );
+      element.setAttribute('data-theme', currentTheme);
       elementLibrary.applyCurrentTheme(element, element);
     }
 
@@ -197,12 +200,15 @@ export default {
 
     if (experiments.isEnabled('applabThemes')) {
       if (!element.getAttribute('data-theme')) {
-        element.setAttribute('data-theme', applabConstants.themeOptions[0]);
+        element.setAttribute(
+          'data-theme',
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+        );
       }
 
       if (element.style.backgroundColor === '') {
         element.style.backgroundColor = this.themeValues.backgroundColor[
-          applabConstants.themeOptions[0]
+          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
         ];
       }
     }
@@ -225,7 +231,7 @@ export default {
         case 'theme': {
           const prevValue =
             element.getAttribute('data-theme') ||
-            applabConstants.themeOptions[0];
+            applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
           element.setAttribute('data-theme', value);
           designMode.changeThemeForCurrentScreen(prevValue, value);
           return true;

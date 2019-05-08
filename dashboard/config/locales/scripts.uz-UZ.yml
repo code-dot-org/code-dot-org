@@ -335,14 +335,14 @@ uz:
           stages:
             The Artist:
               name: Rassom
+            Internet:
+              name: Internet
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
-        coursee-2019:
-          stages:
-            Conditionals:
-              name: Shart buyruqlari
         express-2019:
           stages:
             Relay Programming:
@@ -371,3 +371,7 @@ uz:
           stages:
             The Internet:
               name: Internet
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Katakchali varaqda dasturlash

@@ -1,6 +1,8 @@
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
 
+  default bcc: MailerConstants::PLC_EMAIL_LOG
+
   SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
   # Name of partial view for workshop details organized by course, then subject.

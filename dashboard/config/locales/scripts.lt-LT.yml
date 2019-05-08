@@ -1553,6 +1553,8 @@ lt:
               name: Komandinis programavimas
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
             Relay Programming:
               name: Programavimas komandoje
             Conditionals with Cards:
@@ -1560,7 +1562,7 @@ lt:
             Digital Citizenship:
               name: Virtuali pilietybė
             'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
+              name: Dvejetainiai vaizdai
             Artist Binary:
               name: 'Meninkas: dvejetainis'
         coursee-2019:
@@ -1571,8 +1573,8 @@ lt:
               name: Kartojimas kartojime
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
-            Conditionals:
-              name: Sąlyginiai sakiniai
+            'Functions: Songwriting':
+              name: Dainų rašymas
             Internet:
               name: Internetas
             Crowdsourcing:
@@ -1601,18 +1603,18 @@ lt:
               name: nieko
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Laiptuota piramidė
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+            'Events: The Big Event':
+              name: Didelis įvykis
             Binary Bracelets:
               name: Dvejetainės apyrankės
         gamelab:
           title: Žaidimų laboratorija
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
             Going Places Safely:
               name: Saugus naršymas internete
         courseb-2019:
@@ -1621,6 +1623,8 @@ lt:
               name: Judėk, judėk
             Your Digital Footprint:
               name: Virtualūs pirštų antspaudai
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1677,3 +1681,7 @@ lt:
               name: Sąlyginiai sakiniai su kortomis
             Building a Foundation:
               name: Laiptuota piramidė
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programavimas ant languoto popieriaus

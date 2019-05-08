@@ -5,7 +5,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Given I am on "http://studio.code.org/reset_session"
 
   @no_circle
-  @dashboard_db_access
   Scenario Outline: Temporarily circle disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a student

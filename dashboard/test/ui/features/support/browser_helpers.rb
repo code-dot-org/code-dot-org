@@ -12,11 +12,12 @@ module BrowserHelpers
   end
 
   def element_has_i18n_text(selector, language, loc_key)
-    require_rails_env
     loc_key.gsub!('\"', '"')
     # grab text from the browser, replacing non-breaking spaces with regular ones
     text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');")
-    text.should eq I18n.t loc_key, locale: language
+    # Get localized text from server
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
+    text.should eq response
   end
 
   def element_text(selector)

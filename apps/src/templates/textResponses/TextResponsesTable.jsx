@@ -37,16 +37,20 @@ class TextResponsesTable extends Component {
       rowData.studentId
     );
 
-    return (
-      <a
-        className="uitest-name-cell"
-        style={tableLayoutStyles.link}
-        href={studentUrl}
-        target="_blank"
-      >
-        {name}
-      </a>
-    );
+    if (studentUrl) {
+      return (
+        <a
+          className="uitest-name-cell"
+          style={tableLayoutStyles.link}
+          href={studentUrl}
+          target="_blank"
+        >
+          {name}
+        </a>
+      );
+    } else {
+      return <span className="uitest-name-cell">{name}</span>;
+    }
   };
 
   responseFormatter = (_, {rowData}) => {

@@ -672,7 +672,13 @@ et:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': koobas
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': kõrb
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ruudustikus
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vikerkaar
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': veealune
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talv
       gamelab_setPosition:
         text: liiguta {THIS} {POSITION} asendisse
         options:
@@ -705,6 +711,11 @@ et:
       gamelab_setup:
         text: seadistus
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': kui
@@ -750,6 +761,11 @@ et:
             "'down'": alla
             "'left'": vasakule
             "'right'": paremale
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': kui
+            '"while"': tingimusel
       gamelab_whileKey:
         options:
           KEY:

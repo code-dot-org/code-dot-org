@@ -1,7 +1,7 @@
 import React from 'react';
 import MultipleChoiceByStudentTable from './MultipleChoiceByStudentTable';
 import {
-  studentData,
+  studentMCData,
   multipleChoiceDataForSingleStudent
 } from './assessmentsTestHelpers';
 
@@ -15,7 +15,7 @@ export default storybook => {
         story: () => (
           <MultipleChoiceByStudentTable
             questionAnswerData={multipleChoiceDataForSingleStudent}
-            studentAnswerData={studentData}
+            studentAnswerData={studentMCData}
           />
         )
       }

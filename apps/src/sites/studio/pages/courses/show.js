@@ -16,6 +16,7 @@ import {
   setVerified,
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 
 $(document).ready(showCourseOverview);
 
@@ -73,7 +74,7 @@ function showCourseOverview() {
         scripts={courseSummary.scripts}
         isVerifiedTeacher={!!scriptData.is_verified_teacher}
         hasVerifiedResources={!!courseSummary.has_verified_resources}
-        versions={versions}
+        versions={convertAssignmentVersionShapeFromServer(versions)}
         showVersionWarning={
           !!scriptData.show_version_warning && versions.length > 1
         }

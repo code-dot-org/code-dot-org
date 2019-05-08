@@ -413,12 +413,12 @@ ms:
               name: Internet
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
         coursee-2019:
           stages:
-            Conditionals:
-              name: Bersyarat
             Internet:
               name: Internet
         express-2019:
@@ -431,6 +431,10 @@ ms:
           stages:
             'null':
               name: 'null'
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
         pre-express-2019:
           stages:
             Spelling Bee:
@@ -453,3 +457,7 @@ ms:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf

@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 ## Welcome!
 
-<img align="left" src="//code.org/images/edquote1.png" height="900" width="400" hspace="20">
+<img style="float:left; margin:0 20px" src="//code.org/images/edquote1.png" height="900" width="400">
 
 **Welcome to the Online Professional Development for Code.org's High School Introduction to Computer Science Course.** 
 

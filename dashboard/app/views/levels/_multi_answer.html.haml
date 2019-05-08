@@ -21,4 +21,4 @@
                       .item-answer-letter{style: "display: inline-block"}
                         = "#{correct_answer[:letter]}."
                         &nbsp;
-                    != multi_t(level, correct_answer[:text])
+                    != render_multi_or_match_content(correct_answer[:text], level)

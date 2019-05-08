@@ -9,7 +9,7 @@ describe('MarkdownSpan', () => {
       <MarkdownSpan>normal text *bold text*</MarkdownSpan>
     );
 
-    expect(markdownSpan).to.have.html(
+    expect(markdownSpan.html()).to.include(
       '<span>normal text <em>bold text</em></span>'
     );
   });
@@ -19,7 +19,7 @@ describe('MarkdownSpan', () => {
       <MarkdownSpan>This is a [link](https://code.org).</MarkdownSpan>
     );
 
-    expect(markdownSpan).to.have.html(
+    expect(markdownSpan.html()).to.include(
       '<span>This is a <a href="https://code.org" target="_blank">link</a>.</span>'
     );
   });
@@ -29,8 +29,10 @@ describe('MarkdownSpan', () => {
       <MarkdownSpan style={{fontFamily: 'Gotham 7r'}}>text</MarkdownSpan>
     );
 
-    expect(markdownSpan).to.containMatchingElement(
-      <span style={{fontFamily: 'Gotham 7r'}} />
-    );
+    expect(
+      markdownSpan.containsMatchingElement(
+        <span style={{fontFamily: 'Gotham 7r'}} />
+      )
+    ).to.be.ok;
   });
 });

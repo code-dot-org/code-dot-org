@@ -51,9 +51,16 @@ class ManageStudentNameCell extends Component {
       <div>
         {!this.props.isEditing && (
           <div>
-            <a style={tableLayoutStyles.link} href={studentUrl} target="_blank">
-              {name}
-            </a>
+            {studentUrl && (
+              <a
+                style={tableLayoutStyles.link}
+                href={studentUrl}
+                target="_blank"
+              >
+                {name}
+              </a>
+            )}
+            {!studentUrl && <span>{name}</span>}
             {username && (
               <div style={styles.details}>
                 {i18n.usernameLabel() + username}

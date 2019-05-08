@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert} from '../../../../util/configuredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';
 import {shallow} from 'enzyme';
 

@@ -279,12 +279,6 @@ zh-CN:
     header:
       finished_hoc: 完成了！
       sign_in_to_save: 登录以保存进度
-      free_play:
-        playlab: 创建一个游戏实验室应用
-        artist: 画一些东西
-        applab: 创建一个游戏实验室应用
-        gamelab: 创建一个游戏实验室项目
-        weblab: 开始一个网站实验室（测试版）项目
       my_dashboard: 我的控制面板
       course_catalog: 课程分类
       project_gallery: 项目
@@ -325,6 +319,7 @@ zh-CN:
       district_dashboard: 分区信息
       label: 你好%{username}
       stats: 代码工作室
+      my_projects: 我的项目
       settings: 帐户设置
       logout: 注销
       signin: 登录

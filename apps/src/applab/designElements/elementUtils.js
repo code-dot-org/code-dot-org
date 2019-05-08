@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -220,10 +220,63 @@ export function setDefaultBorderStyles(element, options = {}) {
   }
   if (forceDefaults || element.style.borderColor === '') {
     element.style.borderColor = textInput
-      ? color.text_input_default_border_color
-      : color.black;
+      ? themeColor.textInputBorder.classic
+      : themeColor.dropdownBorder.classic;
   }
   if (forceDefaults || element.style.borderRadius === '') {
     element.style.borderRadius = '0px';
   }
+}
+
+/**
+ * Parse a padding string and return the total horizontal padding and
+ * total vertical padding.
+ * @param {string} cssPaddingString value from element.style.padding
+ */
+export function calculatePadding(cssPaddingString) {
+  const paddingRegEx = /\s*?(\d*)(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*?/i;
+  const paddingResult = paddingRegEx.exec(cssPaddingString);
+
+  const paddingValues = [
+    parseInt(paddingResult[1], 10),
+    parseInt(paddingResult[3], 10),
+    parseInt(paddingResult[5], 10),
+    parseInt(paddingResult[7], 10)
+  ];
+  for (
+    var validPaddingValues = 0;
+    validPaddingValues < paddingValues.length;
+    validPaddingValues++
+  ) {
+    if (isNaN(paddingValues[validPaddingValues])) {
+      break;
+    }
+  }
+
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
+  let horizontalPadding, verticalPadding;
+  switch (validPaddingValues) {
+    case 1:
+      horizontalPadding = verticalPadding = 2 * paddingValues[0];
+      break;
+    case 2:
+      verticalPadding = 2 * paddingValues[0];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 3:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 4:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = paddingValues[1] + paddingValues[3];
+      break;
+    default:
+      horizontalPadding = verticalPadding = 0;
+      break;
+  }
+  return {
+    horizontalPadding,
+    verticalPadding
+  };
 }

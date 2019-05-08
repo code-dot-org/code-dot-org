@@ -32,7 +32,7 @@ level 'courseC_maze_debugging4_2018'
 level 'courseC_maze_debugging5_2018'
 level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
-assessment 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging8_predict1_2018', assessment: true
 level 'courseC_maze_debugging9_2018'
 level 'courseF_markdown_debugging_end'
 
@@ -46,7 +46,7 @@ level 'courseC_artist_prog5_2018'
 level 'courseC_artist_prog6_2018'
 level 'courseC_artist_prog7_2018', challenge: true
 level 'courseC_artist_prog8_2018'
-assessment 'courseC_artist_prog6_predict1_2018'
+level 'courseC_artist_prog6_predict1_2018', assessment: true
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
@@ -82,7 +82,7 @@ level 'courseD_maze_nestedLoops6_2018'
 level 'courseD_bee_nestedLoops7_2018', challenge: true
 level 'courseD_bee_nestedLoops8_2018'
 level 'courseD_bee_nestedLoops9_2018'
-assessment 'courseD_bee_nestedLoops9_predict2_2018'
+level 'courseD_bee_nestedLoops9_predict2_2018', assessment: true
 level 'courseF_markdown_nestedloops_end'
 
 stage 'Nested Loops with Frozen', flex_category: 'ramp_up'
@@ -128,24 +128,24 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c1_1'
-named_level 'timeforcs_demo_c1_2'
-named_level 'timeforcs_demo_c1_3'
-named_level 'timeforcs_demo_c1_4'
-named_level 'timeforcs_demo_c1_5_journal'
+level 'timeforcs_demo_c1_1', named: true
+level 'timeforcs_demo_c1_2', named: true
+level 'timeforcs_demo_c1_3', named: true
+level 'timeforcs_demo_c1_4', named: true
+level 'timeforcs_demo_c1_5_journal', named: true
 
 stage 'Crowdsourcing', flex_category: 'time4cs_c1'
 level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
 
 stage 'Everglades Habitats', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Reviewing Projects', flex_category: 'time4cs_c1'
-named_level 'timeforcs_demo_c3_1'
+level 'timeforcs_demo_c3_1', named: true
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
@@ -154,21 +154,21 @@ level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_c2_1', progression: 'Rubric'
 
 stage 'Food Chains', flex_category: 'time4cs_c2'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Conditionals with Cards', flex_category: 'time4cs_c2'
 level 'timeforcs_demo_conditionals', progression: 'Conditionals'
 
 stage 'Alligator Holes', flex_category: 'time4cs_c2'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Conditionals in Sprite Lab', flex_category: 'time4cs_c2'
 level 'timeforcs_demo_sl_1', progression: 'Engage'
@@ -182,11 +182,11 @@ level 'timeforcs_demo_sl_8', progression: 'Evaluate'
 level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
 stage 'Invasive Species', flex_category: 'time4cs_c3'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Events: The Big Event', flex_category: 'time4cs_c3'
 level 'BigEvent_2019'
@@ -227,11 +227,11 @@ video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
 
 stage 'I am in Big Trouble', flex_category: 'time4cs_c3'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Events in Sprite Lab', flex_category: 'time4cs_c3'
 level 'timeforcs_demo_sl_1', progression: 'Engage'
@@ -245,39 +245,39 @@ level 'timeforcs_demo_sl_8', progression: 'Evaluate'
 level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
 stage 'Fishy Business', flex_category: 'time4cs_c4'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Broadcast a Message', flex_category: 'time4cs_c4'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Pythons & Mammals', flex_category: 'time4cs_c4'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Broadcast in Scratch', flex_category: 'time4cs_c4'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Current Solutions', flex_category: 'time4cs_c5'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Functions: Songwriting', flex_category: 'time4cs_c5'
 level 'SongwritingParameters_2019'
@@ -344,11 +344,11 @@ bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
 stage 'Debate', flex_category: 'time4cs_c5'
-named_level 'timeforcs_demo_c2_1'
-named_level 'timeforcs_demo_c2_2'
-named_level 'timeforcs_demo_c2_3'
-named_level 'timeforcs_demo_c2_4'
-named_level 'timeforcs_demo_c2_5'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 stage 'Functions in Sprite Lab', flex_category: 'time4cs_c5'
 level 'behaviors 1', progression: 'Prediction'

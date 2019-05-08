@@ -1311,11 +1311,13 @@ ne:
             The Artist:
               name: The Artist
             Internet:
-              name: Internet
+              name: The Internet
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Graph Paper Programming
             Relay Programming:
               name: Relay programming
             Conditionals with Cards:
@@ -1323,7 +1325,7 @@ ne:
             Digital Citizenship:
               name: Digital Citizenship
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary Images
             Artist Binary:
               name: Artist Binary
         coursee-2019:
@@ -1334,8 +1336,8 @@ ne:
               name: Nested Loops
             Conditionals with Cards:
               name: Conditionals with Cards
-            Conditionals:
-              name: Conditionals
+            'Functions: Songwriting':
+              name: Songwriting
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1368,16 +1370,16 @@ ne:
               name: 'null'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Building a Foundation
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
+            'Events: The Big Event':
+              name: The Big Event
             Binary Bracelets:
               name: Binary Bracelets
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
+            'Programming: Happy Maps':
+              name: Happy Maps
             Going Places Safely:
               name: Going Places Safely
         courseb-2019:
@@ -1386,6 +1388,8 @@ ne:
               name: Move It, Move It
             Your Digital Footprint:
               name: Your Digital Footprint
+            'Loops: Getting Loopy':
+              name: Getting Loopy
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1438,3 +1442,7 @@ ne:
               name: Conditionals with Cards
             Building a Foundation:
               name: Building a Foundation
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Graph Paper Programming

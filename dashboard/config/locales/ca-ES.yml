@@ -277,10 +277,6 @@ ca:
     header:
       finished_hoc: He acabat la meva Hora de Codi
       sign_in_to_save: Inicia la sessió per a desar el progrés
-      free_play:
-        playlab: Fes un App
-        artist: Dibuixa alguna cosa
-        applab: Fes un App
       project_gallery: Projectes
       educate_hoc: Hora del codi
       about_us: Sobre nosaltres

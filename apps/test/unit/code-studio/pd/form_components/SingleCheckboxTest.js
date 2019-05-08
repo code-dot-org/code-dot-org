@@ -11,9 +11,11 @@ describe('SingleCheckbox', () => {
       <SingleCheckbox name="testCheckbox" label="This is the label" />
     );
 
-    expect(singleCheckbox).to.containMatchingElement(
-      <Checkbox>This is the label</Checkbox>
-    );
+    expect(
+      singleCheckbox.containsMatchingElement(
+        <Checkbox>This is the label</Checkbox>
+      )
+    ).to.be.ok;
   });
 
   it('displays checked value', () => {
