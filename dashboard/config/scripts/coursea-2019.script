@@ -10,7 +10,7 @@ family_name 'coursea'
 version_year '2019'
 
 stage 'Going Places Safely', flex_category: 'csf_digcit'
-level 'GoingPlacesSafely_2019'
+level 'GoingPlacesSafely-unplugged'
 
 stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
 skin 'jigsaw'
@@ -39,7 +39,7 @@ skin 'jigsaw'
 level 'blockly:Jigsaw:12', progression: 'Practice'
 
 stage 'Programming: Happy Maps', flex_category: 'csf_sequencing'
-level 'UnplugHappyMaps_2019'
+level 'HappyMaps-Unplugged'
 
 stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
 level 'courseAB_video_NewIntro_2019', progression: 'Maze Intro: Programming with Blocks'
@@ -81,7 +81,7 @@ level 'courseB_starWars_prog10_2019', progression: 'Practice'
 level 'courseB_starWars_prog11_2019', progression: 'Practice'
 
 stage 'Loops: Happy Loops', flex_category: 'csf_loops'
-level 'courseA_unplugged_loops_2019'
+level 'HappyLoops-Unplugged'
 
 stage 'Loops in Ice Age', flex_category: 'csf_loops'
 level 'courseB_iceage_loops1_2019', progression: 'Practice'
@@ -134,7 +134,7 @@ bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
 stage 'Events: The Big Event', flex_category: 'csf_events'
-level 'BigEvent_2019'
+level 'BigEvent-Unplugged'
 
 stage 'Events in Play Lab', flex_category: 'csf_events'
 level 'courseA_video_events_2019', progression: 'Create a Story'
