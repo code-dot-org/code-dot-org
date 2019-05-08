@@ -105,7 +105,7 @@ module.exports = {
     lemonade: '#5BB7E7',
     forest: '#A46C15',
     watermelon: '#FF8660',
-    area51: 'rgba(0, 0, 0, 0)',
+    area51: '#362F49',
     polar: '#EFFAFF',
     glowInTheDark: '#D9FFD9',
     bubblegum: '#FF7CD0',
