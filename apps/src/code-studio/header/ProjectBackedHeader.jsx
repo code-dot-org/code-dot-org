@@ -1,21 +1,14 @@
 /* globals dashboard */
 
-import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
+
+import ProjectRemix from './ProjectRemix';
 
 // Project header for script levels that are backed by a project. Shows a Share
-// and Remix button, and places a last_modified time below the stage name
-class ProjectBackedHeader extends React.Component {
-  static propTypes = {
-    isSignedIn: PropTypes.bool
-  };
-
+// and Remix button, and should be used with the version of ScriptName that
+// places a last_modified time below the stage name
+export default class ProjectBackedHeader extends React.Component {
   shareProject = () => {
-    // TODO
-  };
-
-  remixProject = () => {
     // TODO
   };
 
@@ -28,17 +21,8 @@ class ProjectBackedHeader extends React.Component {
         >
           {dashboard.i18n.t('project.share')}
         </div>
-        <div
-          className="project_remix header_button header_button_light"
-          onClick={this.remixProject}
-        >
-          dashboard.i18n.t('project.remix')
-        </div>
+        <ProjectRemix lightStyle />
       </div>
     );
   }
 }
-
-export default connect(state => ({
-  isSignedIn: state.pageConstants && state.pageConstants.isSignedIn
-}))(ProjectBackedHeader);
