@@ -1,7 +1,19 @@
 require 'net/http'
 require 'uri'
+require 'IPSocket'
 
 SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
+
+# https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
+PRIVATE_IPS = [
+  IPAddr.new('0.0.0.0/8'),
+  IPAddr.new('10.0.0.0/8'),
+  IPAddr.new('127.0.0.0/8'),
+  IPAddr.new('172.16.0.0/12'),
+  IPAddr.new('169.254.0.0/16'),
+  IPAddr.new('192.168.0.0/16'),
+  IPAddr.new('fd00::/8')
+].freeze
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
@@ -25,7 +37,7 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    unless allowed_hostname?(url, allowed_hostname_suffixes)
+    unless allowed_hostname?(url, allowed_hostname_suffixes) && allowed_ip_address?(url.host)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
@@ -146,5 +158,10 @@ module ProxyHelper
   def render_error_response(status, text)
     prevent_caching
     render plain: text, status: status
+  end
+
+  def allowed_ip_address?(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)}
   end
 end
