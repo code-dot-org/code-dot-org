@@ -1151,6 +1151,8 @@ en:
               name: Mini Rubric
             Pluralsight Test:
               name: Pluralsight Test
+            Externals Optionally Displayed as Unplugged:
+              name: Externals Optionally Displayed as Unplugged
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -9362,7 +9364,7 @@ en:
           stages:
             CSD post-course survey:
               name: CSD post-course survey
-          title: CSD Student Post-Course Survey
+          title: CSD Student Post-Course Survey ('18-'19)
           description_audience: CSD Students
           description_short: CSD Student Post-Course Survey
           description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
@@ -11995,6 +11997,12 @@ en:
               name: Loops Explore
             Traversals Explore:
               name: Traversals Explore
+            Lists Practice:
+              name: Lists Practice
+            'Loops Practice: While Loops':
+              name: 'Loops Practice: While Loops'
+            'Loops Practice: Simulations':
+              name: 'Loops Practice: Simulations'
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12243,3 +12251,19 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd-post-survey-2018:
+          stages:
+            CSD post-course survey:
+              name: CSD post-course survey
+          title: CSD Student Post-Course Survey 2018
+          description_audience: CSD Students
+          description_short: CSD Student Post-Course Survey 2018
+          description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
+        csp-post-survey-2018:
+          stages:
+            CSP post-course survey:
+              name: CSP post-course survey
+          title: CSP Student Post-Course Survey ('18-'19)
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.

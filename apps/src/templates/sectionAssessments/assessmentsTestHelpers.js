@@ -486,6 +486,15 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(
   }
 );
 
+// Data for single match question student table.
+export const matchDataForSingleStudent = {
+  id: 123,
+  question: 'Can you match these?',
+  questionNumber: 1,
+  answers: [{text: 'answer 1'}, {text: 'answer 2'}],
+  options: [{text: 'option 1'}, {text: 'option 2'}]
+};
+
 // Data for free responses assessments table.
 export const questionOne = [
   {

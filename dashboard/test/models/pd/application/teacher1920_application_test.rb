@@ -548,7 +548,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
@@ -570,7 +569,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -610,7 +608,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
@@ -632,7 +629,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -670,7 +666,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: [options[:race].second]
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -684,7 +679,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -715,7 +709,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].first,
         taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
-        willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
@@ -736,7 +729,6 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
-            willing_to_travel: NO,
             principal_schedule_confirmed: NO,
             principal_implementation: NO
           },
@@ -776,7 +768,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].first,
         taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
-        willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
@@ -797,7 +788,6 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
-            willing_to_travel: NO,
             principal_implementation: NO,
             principal_schedule_confirmed: NO,
           },
