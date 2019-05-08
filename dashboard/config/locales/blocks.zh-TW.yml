@@ -428,9 +428,9 @@ zh-TW:
           SPEED:
             '1': 普通
             '2': 快
-            '4': 非常快
+            '4': 很快
             '0.5': 慢
-            '0.25': 非常慢
+            '0.25': 很慢
       Dancelab_setDanceSpeedEach:
         text: 群組 {GROUP} 跳舞速度設為 {SPEED}
         options:
@@ -450,9 +450,9 @@ zh-TW:
           SPEED:
             '1': 普通
             '2': 快
-            '4': 非常快
+            '4': 很快
             '0.5': 慢
-            '0.25': 非常慢
+            '0.25': 很慢
       Dancelab_setForegroundEffect:
         text: 前景效果設為 {EFFECT}
         options:

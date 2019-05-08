@@ -34,6 +34,8 @@ zh-TW:
         CSD_U3_L13_S8_C1: 在此設定速度
       CSD U3 abstraction jumping_2019_callout:
         CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction setSpeed accelerate_callout:
+        CSD_U3_L11_S14_C1: 添加你的程式到這兒。
       CSD U3 abstraction sidescroll intro_callout:
         CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
       CSD U3 abstraction sidescroll template-2018_callout:
