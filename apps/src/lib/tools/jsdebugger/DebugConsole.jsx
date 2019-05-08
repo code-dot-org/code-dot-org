@@ -114,6 +114,9 @@ export default connect(
     static propTypes = {
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
+      // TODO: not sure what proptype should be for jsInterpreter, func used as placeholder
+      jsInterpreter: PropTypes.func.isRequired,
+
       logOutput: PropTypes.string.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
@@ -145,10 +148,17 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            const result = this.props.evalInCurrentScope(input);
-            this.appendLog('< ' + String(result));
+            let result = this.props.evalInCurrentScope(
+              input[0] === '{' && input[input.length - 1] === '}'
+                ? `(${input})`
+                : input
+            );
+            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+              result
+            );
+            this.appendLog(result);
           } catch (err) {
-            this.appendLog('< ' + String(err));
+            this.appendLog(String(err));
           }
         } else {
           this.appendLog('< (not running)');
