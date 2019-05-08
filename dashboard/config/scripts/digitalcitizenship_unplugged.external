@@ -1,0 +1,9 @@
+name 'DigitalCitizenship-Unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Digital Citizenship
+
+Today you will learn what it means to be a Digital Citizen.
+MARKDOWN

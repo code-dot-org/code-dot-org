@@ -1,6 +1,6 @@
 name 'csp-post-survey-reasons-not-take-csp'
 type 'multi2'
-question 'Think of a friend of yours at school who didn\’t take this class, but you think might have enjoyed it. What do you think are the two most significant reasons why they didn\'t (or wouldn\’t) take this class? (choose up to two).'
+question 'Think of a friend of yours at school who didn\’t take this class, but you think might have enjoyed it. What do you think are the strongest reasons why they didn\'t take this class? (choose up to two).'
 right 'Wanted to, just couldn\'t due to scheduling conflicts or other constraints (few elective slots, class full, etc.)'
 right 'Thought it would be too hard or they\'d get a bad grade'
 right 'Thought it would be boring, wouldn\'t learn anything useful'

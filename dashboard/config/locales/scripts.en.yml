@@ -7482,6 +7482,8 @@ en:
               name: CS Discoveries End of Semester Survey
               description_student: ''
               description_teacher: ''
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
         csd2-2018:
           title: CSD Unit 2 - Web Development ('18-'19)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
