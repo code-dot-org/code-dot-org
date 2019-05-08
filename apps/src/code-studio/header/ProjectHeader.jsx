@@ -8,10 +8,11 @@ import {shareProject} from '../headerShare';
 import {convertBlocksXml} from '../craft/code-connection/utils';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+import ProjectRemix from './ProjectRemix';
 
 class ProjectHeader extends React.Component {
   static propTypes = {
-    isSignedIn: PropTypes.bool
+    projectName: PropTypes.string.isRequired
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -62,32 +63,6 @@ class ProjectHeader extends React.Component {
 
   shareProject = () => {
     shareProject(dashboard.project.getShareUrl());
-  };
-
-  remixProject = () => {
-    if (
-      dashboard.project.getCurrentId() &&
-      dashboard.project.canServerSideRemix()
-    ) {
-      dashboard.project.serverSideRemix();
-    } else if (!this.props.isSignedIn) {
-      window.location = `/users/sign_in?user_return_to=${
-        window.location.pathname
-      }`;
-    } else {
-      // We don't have an id. This implies we are either on a legacy /c/ share
-      // page or a script level. In these cases, copy will create a new project
-      // for us.
-      var newName =
-        'Remix: ' +
-        (dashboard.project.getCurrentName() ||
-          appOptions.level.projectTemplateLevelName ||
-          'My Project');
-      dashboard.project
-        .copy(newName, {shouldNavigate: true})
-        .then(() => $('.project_name').text(newName))
-        .catch(err => console.log(err));
-    }
   };
 
   /**
@@ -210,9 +185,7 @@ class ProjectHeader extends React.Component {
     }
 
     return (
-      <div className="project_name header_text">
-        {dashboard.project.getCurrentName()}
-      </div>
+      <div className="project_name header_text">{this.props.projectName}</div>
     );
   }
 
@@ -252,12 +225,7 @@ class ProjectHeader extends React.Component {
         >
           {dashboard.i18n.t('project.share')}
         </div>
-        <div
-          className="project_remix header_button header_button_light"
-          onClick={this.remixProject}
-        >
-          {dashboard.i18n.t('project.remix')}
-        </div>
+        <ProjectRemix lightStyle />
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
             option to import code from an Hour of Code share link */}
@@ -281,5 +249,5 @@ class ProjectHeader extends React.Component {
 }
 
 export default connect(state => ({
-  isSignedIn: state.pageConstants && state.pageConstants.isSignedIn
+  projectName: state.header.projectName
 }))(ProjectHeader);
