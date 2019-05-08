@@ -22,7 +22,9 @@ const JSDebuggerState = Immutable.Record({
   observer: null,
   watchIntervalId: null,
   commandHistory: null,
+  // TODO: remove logOutput after flag is removed
   logOutput: '',
+  logOutputList: [],
   maxLogLevel: '',
   isOpen: false
 });
@@ -70,8 +72,13 @@ export function canRunNext(state) {
   );
 }
 
+// TODO: remove getlogOutput after flag is removed
 export function getLogOutput(state) {
   return getRoot(state).logOutput;
+}
+
+export function getLogOutputList(state) {
+  return getRoot(state).logOutputList;
 }
 
 export function getMaxLogLevel(state) {
@@ -85,7 +92,9 @@ export const selectors = {
   isPaused,
   isAttached,
   canRunNext,
+  // TODO: remove getlogOutput after flag is removed
   getLogOutput,
+  getLogOutputList,
   getMaxLogLevel,
   isOpen
 };
@@ -253,6 +262,17 @@ function appendLogOutput(logOutput, output) {
   return logOutput;
 }
 
+function appendLogOutputList(logOutputList, output, type) {
+  logOutputList = logOutputList || [];
+  switch (type) {
+    case APPEND_LOG:
+      return [...logOutputList, output];
+
+    default:
+      return logOutputList;
+  }
+}
+
 function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
   if (newLogLevel === 'error' || prevMaxLogLevel === 'error') {
     return 'error';
@@ -282,11 +302,22 @@ export function reducer(state, action) {
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
-      logOutput: appendLogOutput(state.logOutput, action.output),
+      // TODO: remove logOutput after flag is removed
+      logOutput: appendLogOutput(state.logOutput, action.output, action.type),
+      logOutputList: appendLogOutputList(
+        state.logOutputList,
+        action.output,
+        action.type
+      ),
       maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
     });
   } else if (action.type === CLEAR_LOG) {
-    return state.merge({logOutput: '', maxLogLevel: ''});
+    return state.merge({
+      // TODO: remove logOutput after flag is removed
+      logOutput: '',
+      logOutputList: [],
+      maxLogLevel: ''
+    });
   } else if (action.type === DETACH) {
     return state.merge({
       jsInterpreter: null,

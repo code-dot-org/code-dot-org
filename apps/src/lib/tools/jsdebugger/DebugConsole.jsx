@@ -16,6 +16,7 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
+import Inspector from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
 const DEBUG_CONSOLE_LEFT_PADDING = 3;
@@ -98,6 +99,7 @@ export default connect(
     commandHistory: selectors.getCommandHistory(state),
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
+    logOutputList: selectors.getLogOutputList(state),
     maxLogLevel: selectors.getMaxLogLevel(state),
     isAttached: selectors.isAttached(state)
   }),
@@ -115,6 +117,8 @@ export default connect(
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
       logOutput: PropTypes.string.isRequired,
+      logOutputList: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
+        .isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -125,7 +129,8 @@ export default connect(
       // passed from above
       debugButtons: PropTypes.bool,
       debugWatch: PropTypes.bool,
-      style: PropTypes.object
+      style: PropTypes.object,
+      showReactInspector: PropTypes.bool
     };
 
     onInputKeyDown = e => {
@@ -205,6 +210,17 @@ export default connect(
       }
     }
 
+    displayOutputToConsole() {
+      if (this.props.logOutputList.size > 0) {
+        return this.props.logOutputList.map((output, i) => {
+          if (typeof output === 'object') {
+            output = output.toJS();
+          }
+          return <Inspector key={i} data={output} />;
+        });
+      }
+    }
+
     render() {
       let classes = 'debug-console';
       if (!this.props.debugButtons) {
@@ -242,7 +258,9 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            {this.props.logOutput}
+            {this.props.showReactInspector
+              ? this.displayOutputToConsole()
+              : this.props.logOutput}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>
