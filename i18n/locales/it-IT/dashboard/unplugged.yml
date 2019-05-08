@@ -44,7 +44,7 @@ it:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
       BuildingAFoundation:
-        title: Costruire le Fondamenta
+        title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati.
       GettingLoopy:
         title: Diventare ripetitivi
@@ -141,7 +141,7 @@ it:
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca tutta la documentazione in italiano sul sito di Programma il Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
@@ -150,7 +150,7 @@ it:
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca tutta la documentazione in italiano sul sito di Programma il Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando come esempio l'atto del piantare un seme. Viene discussa anche una visione più generale dell'informatica  e il fatto che gli algoritmi ne sono una parte essenziale.
@@ -167,7 +167,7 @@ it:
         title: La tua impronta digitale
         desc: L'insegnante introduce agli studenti l'idea che mettere su Internet le loro informazioni personali crea un'impronta digitale che lascia tracce riconoscibili e sfruttabili.
       courseC_unplugged_buildingAFoundation:
-        title: Costruire le Fondamenta
+        title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile. Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza di insistere quando i problemi sono complicati.
       courseC_unplugged_paperPlanes:
         title: 'Algoritmi della vita reale: aeroplani di carta'
@@ -243,7 +243,7 @@ it:
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca tutta la documentazione in italiano sul sito di Programma il Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       Conditionals_2018:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
@@ -303,7 +303,7 @@ it:
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzione di ripetizione) attraverso una danza. Gli studenti imparano una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete.
+        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in rete. Cerca tutta la documentazione in italiano sul sito di Programma il Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       BigEvent_2019:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione. Gli eventi sono azioni che un calcolatore continuamente controlla se accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
