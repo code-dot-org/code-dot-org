@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {shareProject} from '../headerShare';
 import {convertBlocksXml} from '../craft/code-connection/utils';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+import ProjectShare from './ProjectShare';
 import ProjectRemix from './ProjectRemix';
 
 class ProjectHeader extends React.Component {
@@ -59,10 +59,6 @@ class ProjectHeader extends React.Component {
     this.setState({
       savingName: true
     });
-  };
-
-  shareProject = () => {
-    shareProject(dashboard.project.getShareUrl());
   };
 
   /**
@@ -219,12 +215,7 @@ class ProjectHeader extends React.Component {
           {!this.state.editName && <ProjectUpdatedAt />}
         </div>
         {this.renderSaveOrEdit()}
-        <div
-          className="project_share header_button header_button_light"
-          onClick={this.shareProject}
-        >
-          {dashboard.i18n.t('project.share')}
-        </div>
+        <ProjectShare />
         <ProjectRemix lightStyle />
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
