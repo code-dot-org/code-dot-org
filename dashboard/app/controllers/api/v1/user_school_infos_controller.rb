@@ -11,7 +11,6 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   end
 
   # PATCH /api/v1/users_school_infos/<id>/update_end_date
-  # TODO:  Add comments for clarification
   def update_end_date
     ActiveRecord::Base.transaction do
       @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
@@ -22,7 +21,9 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   end
 
   # PATCH /api/v1/user_school_infos/<id>/update_school_info_id
-  # TODO: Add comments for adding new row in userschoolinfotable & updating school id in the users table (most current school id)
+  # A new row is added to the user school infos table when a teacher updates current school to a different school,
+  # then the school_info_id is updated in the users table.
+
   def update_school_info_id
     ActiveRecord::Base.transaction do
       school = @user_school_info.school_info.school
@@ -37,11 +38,7 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
       user.user_school_infos.create!({school_info_id: school_info.id, last_confirmation_date: DateTime.now, start_date: user.created_at})
 
-      if user.update({school_info_id: school_info.id})
-        head :no_content
-      else
-        render json: user.errors, status: :unprocessable_entity
-      end
+      user.update!({school_info_id: school_info.id})
     end
   end
 
