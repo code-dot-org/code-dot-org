@@ -3226,9 +3226,40 @@ sk:
         môcť využívať v zopár ďalších úlohách.
       courseF_artist_variables3_2019: Presuň dĺžku 50 do premennej, takže ju budeme
         môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables4: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2018: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2019: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables5: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables5_2018: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables5_2019: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables6: 'Teraz sprav trojuholníky široké 60 pixelov, spolu
+        so skokmi o 60 pixelov.  '
+      courseF_artist_variables6_2018: 'Teraz sprav trojuholníky široké 60 pixelov,
+        spolu so skokmi o 60 pixelov.  '
+      courseF_artist_variables6_2019: 'Teraz sprav trojuholníky široké 60 pixelov,
+        spolu so skokmi o 60 pixelov.  '
+      courseF_artist_variables6a: Vytvor tento návrh, kde sú štvorce široké 80 pixelov
+        a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables6a_2018: Vytvor tento návrh, kde sú štvorce široké 80
+        pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables6a_2019: Vytvor tento návrh, kde sú štvorce široké 80
+        pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
         Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables_5: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables_6: |-
+        **EJHA!** My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables_6a: Vytvor tento návrh, kde sú štvorce široké 80 pixelov
+        a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals1_predict1: Skontroluj, či je pod oblakom kvet. Ak tam

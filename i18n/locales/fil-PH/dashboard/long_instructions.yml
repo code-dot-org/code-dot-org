@@ -595,19 +595,19 @@ fil:
 
         1.  Kung gusto mo ang istulo ng "Dogs" na button, maaari kang gumawa ng kopya nito. I-click ang button at pagkatapos ay i-click ang "Duplicate".\\r
             \\r
-            \\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+            \\t\!\[](\<<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>
             AM.png>)\\r
             \\r
         2.  Maaari ka ring gumawa ng bagong button mula sa wala sa pamamagitan ng pagkaladkad nito papasok mula sa Kagamitan sa Pag-disenyo.\\r
             \\r
-            \\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+            \\t\!\[](\<<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09>
             AM.png>)\\r
             \\r
         3.  I-click at kaladkarin para mailipat ang iyong bagong button kung saan mo ito gusto.\\r
             \\r
         4.  Kapag mayroon ka nang bagong button, bigyan ito nang malinaw na pangalan, "catButton". Maaari mo ring baguhin ang teksto nito para mabasang "Cats!".\\r
             \\r
-            \\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+            \\t\!\[](\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>
             AM.png>)\\r
             \\r
         5.  Mayroong napakaraming ibang pamamaraan na maarin mong baguhin ang hitsura ng iyong button. Mag-eksperimento sa buong menu na mga opsyon.\\r
@@ -622,23 +622,23 @@ fil:
 
         1.  Mula sa Code Mode, maaari mong kaladkarin papasok ang bloke \\r
             \\r
-            \\t![](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
+            \\t\!\[](\<<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>
             AM.png>)\\r
             \\r
         2.  Mula sa Design Mode ang iyong button ay mayroong "Events" na tab.
             I-click ang 'Insert and show code' para magdagdag ng code.\\r
             \\r
-            \\t![](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
+            \\t\!\[](\<<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>
             AM.png>)\\r
             \\r
             3.Gamitin ang drop down para masiguro na ikaw ay nagpapagawa sa pangyayari na tumugon sa "catButton".\\r
             \\r
-            \\t![](<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
+            \\t\!\[](\<<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03>
             AM.png>)\\r
             \\r
         3.  Ang `setScreen()` na bloke ay naglipat-lipat sa screen. I-drag ang blokeng ito sa loob ng iyong `onEvent()` na bloke at piliin ang iyong `catScreen` mula sa listahan.\\r
             \\r
-            \\t![](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
+            \\t\!\[](\<<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>
             AM.png>)\\r
             \\r
         4.  Patakbuhin ang iyong app. Kung ang lahat ay tamang gumagana ang iyong cat na button ay dapat magdadala sa iyo sa iyong cat na screen kapag pinidot mo ito. Kapag handa kanang matuto kung paano magdagdag ng mga tunog sa iyong app!
@@ -649,17 +649,17 @@ fil:
 
         1.  Ikaw ay lilikha ng mga screen ng pusa. Ito ang "Design Mode" kung saan maaari kang magdagdag at mag-edit ng mga screen. Para magdagdag ng screen, i-click ang screen na dropdown at piliin ang "New screen".\\r
             \\r
-            \\t![expandable](<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
+            \\t![expandable]\(\<<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33>
             AM.png>) \\r
             \\r
         2.  Pagkatapos lagyan ng pangalan ang iyong bagong screen na "catScreen".\\r
             \\r
-            \\t![expandable](<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
+            \\t![expandable]\(\<<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33>
             AM.png>)\\r
             \\r
         3.  Sa wakas, piliin ang background image ng pusa sa iyong screen\\r
             \\r
-            \\t![expandable](<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
+            \\t![expandable]\(\<<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40>
             AM.png>)\\r
             \\r
             Kapag nadagdag mo na ang iyong bagong screen, pindutin ang "Finish" para matutunan kung paano magdagdag ng mga buttons para mag-navigate sa screen.
@@ -672,12 +672,12 @@ fil:
 
         1.  Kaladkarin ang `playSound()` na bloke sa iyong `onEvent`. Ito ay magpapatugtog sa tuno kapag ang iyong gumagamit ay nag-click sa button. Pagkatapos ay i-click ang "Choose..." mula sa menu.\\r
             \\r
-            \\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
+            \\t\!\[](\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>
             AM.png>)\\r
             \\r
         2.  Puntahan ang "Sound Library" at hanapin ang tunog na gusto mo. Mayroon napakarami nito!\\r
             \\r
-            \\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
+            \\t\!\[](\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>
             AM.png>)\\r
             \\r
         3.  Patakbuhin ang iyong app para masuri kung paano gumagana ang iyong mga tunog.
@@ -1765,6 +1765,7 @@ fil:
       Course 4 Play Labs For Loops 1: Gawin natin ang aso na makapagsalita sa bawat numero mula 1 hanggang sa 100. Gumamit ng `for` loop at nang counter na bloke para isalita ang counter na variable sa bawat beses na tumatakbo ang loop.
       Course 4 Playlab For Loops 5b: Isaayos ang pagitan sa mga `for` loop na ito para ang dalawang karakter ay makarating sa parehong eksaktong lugar.
       CourseF_PlayLab_vars2: Ang habulan sa huling palaisipan ay hindi talaga patas! Palitan ang `dog_speed` na variable para masiguro na makakolekta ka ng mas maraming mga bandila kaysa sa Pusa. Ang unang makakakolekta ng 10 mga bandila ang mananalo!
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       K-1 Bee Loops 2: Gumamit ng `repeat` na loop para makagalaw at pagkatapos ay kumuha ng nektar at gumawa ng pulot!
       K-1 Bee Loops 3: Gumamit ng tatlong `repeat` na mga loop para makakuha ng nektar at makagawa ng pulot!

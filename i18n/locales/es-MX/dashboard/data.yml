@@ -529,6 +529,7 @@ es-MX:
         csd_gamelab_functions: Llamar y definir funciones
         csd_applab_parameters: Funciones con parámetros
         csd_applab_loops: Bucles en el Laboratorio de aplicaciones
+        csd_problem_solving_process: El proceso de resolución de problemas
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

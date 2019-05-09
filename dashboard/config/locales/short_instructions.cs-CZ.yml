@@ -890,6 +890,8 @@ cs:
         které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       CSPU5_U3 - Loops - 4_2018: Použijte Debug příkazy k vytvoření seznamu všech
         hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
+      CSPU5_U3 - Loops - 4_2018pilot: Použijte Debug příkazy k vytvoření seznamu všech
+        hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       CSPU5_U3 - Loops - 4_2019: Použijte Debug příkazy k vytvoření seznamu všech
         hodnot, které jsou vráceny před 6. (Kliknutím zobrazíte plné pokyny)
       Calc Circles of Eval 2: K provedení tohoto kódu použijte blok násobení.
@@ -1613,6 +1615,7 @@ cs:
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_simple: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance Party Template 1_2019: Předloha
       Dance Party Template 2_2019: Předloha
       Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
         ho dovnitř bloku `nastavení`.

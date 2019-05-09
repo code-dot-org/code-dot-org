@@ -3280,6 +3280,39 @@ sk:
         Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
 
         ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables4: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2018: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2019: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables6: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6_2018: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6_2019: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6a: Použi, čo si sa naučil, aby si vytvoril tento návrh,
+        kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi
+        každými dvomi.
+      courseF_artist_variables6a_2018: Použi, čo si sa naučil, aby si vytvoril tento
+        návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole
+        medzi každými dvomi.
+      courseF_artist_variables6a_2019: Použi, čo si sa naučil, aby si vytvoril tento
+        návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole
+        medzi každými dvomi.
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
 
@@ -3289,6 +3322,16 @@ sk:
         <br/>
 
         <img src="https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif" width="65%"/>
+      courseF_artist_variables_4: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables_5: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables_6: |-
+        **EJHA!** My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables_6a: Použi, čo si sa naučil, aby si vytvoril tento návrh,
+        kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi
+        každými dvomi.
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného
@@ -3417,14 +3460,14 @@ sk:
         _"Si majster v ľadovej tvorbe!"_
 
         Tu je všetko, čo potrebuješ, aby si si vytvoril vlastnú krajinu zimných zázrakov!
-      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n \n\nPripoj
+      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n\nPripoj
         blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n
         \   <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\"
         config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n
         \   <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100
         pixelov."
       frozen line_test: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_
-        \ \n \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\"
+        \ \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\"
         id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n
         \   <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml>
         k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť
@@ -3433,8 +3476,6 @@ sk:
         Budeš musieť použiť blok "Otoč sa" spolu s blokom "Posuň sa".
       frozen perpendicular_b: |-
         _"Pokračuj a neprestávaj!"_
-
-         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -3449,8 +3490,6 @@ sk:
         </xml> a vytvoríš v ľade tento tvar.
       frozen perpendicular_test: |-
         _"Pokračuj a neprestávaj!"_
-
-         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -3496,10 +3535,10 @@ sk:
         5 \\*\\* krát, pričom medzi každou sadou je \\*\\* 72 stupňov \\*\\*?"
       frozen square iterative: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme
         dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\n \n\nNa
+      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\nNa
         dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square iterative_test: "_\"Už sme na polceste k vytvoreniu štvorca!\"_
-        \n\n \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+        \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš.
         Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
       frozen square loop 3x_b: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného

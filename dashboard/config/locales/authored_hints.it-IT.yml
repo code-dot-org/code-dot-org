@@ -319,8 +319,6 @@ it:
       2-3 Maze Loops 21_authored_hint:
         2-3_Maze_Loops_21_a: Se fai fatica ad individuare il percorso a gradini, prova
           a coprire con le dita i tratti bloccati dalle piante carnivore.
-      4-5 Artist 1_authored_hint:
-        4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
         4-5_Artist_11_a: All'interno del ciclo, dopo ogni linea, ricordati di far
           tornare indietro l'artista e farlo saltare alla nuova posizione.
@@ -8872,7 +8870,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
@@ -8884,7 +8882,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
@@ -8896,7 +8894,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il
@@ -9911,12 +9909,6 @@ it:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
-      courseC_flappy_events1_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-      courseC_flappy_events1_2018_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseC_flappy_events1_2019_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta
           una velocità ...`. '
@@ -14749,7 +14741,6 @@ it:
         courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati,
           l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare
           quella successiva.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019_authored_hint:
         courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno
           parecchi blocchi `salta in avanti` e `salta indietro`!
@@ -14770,7 +14761,6 @@ it:
         courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati,
           l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare
           quella successiva.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se
           stai procedendo nel modo corretto!
@@ -17214,7 +17204,6 @@ it:
         courseF_artist_fwp6_a: Va benissimo sperimentare il comportamento della funzione
           per capire come si comporta al variare del valore dei parametri.
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di ottagoni
           ognuno con i lati lunghi `counter` (<i>contatore</i>) pixel.
         courseF_artist_fwp_challenge1_c: La funzione che disegna l'ottagono è chiamata
@@ -17228,7 +17217,6 @@ it:
         courseF_artist_fwp_challenge1_f: <b>Soluzione:</b> Se vuoi, <a href="https://studio.code.org/c/159877686">clicca
           qui</a> e poi su "Come funziona" per vedere la soluzione.
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di ottagoni
           ognuno con i lati lunghi `counter` (<i>contatore</i>) pixel.
         courseF_artist_fwp_challenge1_c: La funzione che disegna l'ottagono è chiamata
@@ -17316,7 +17304,6 @@ it:
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019_authored_hint:
         courseF_artist_variables4_a: Il codice non sarà molto diverso da quello dell'esercizio
           precedente, tranne per il fatto che dovrai girare l'artista per farlo saltare
@@ -17326,7 +17313,6 @@ it:
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5_authored_hint:
         courseF_artist_variables5_a: La seconda metà del programma dovrebbe apparire
           quasi uguale alla prima metà, tranne per il fatto che dovrai girare a _sinistra_,
@@ -17510,8 +17496,6 @@ it:
         courseF_artist_variables9_b: Assicurati che i blocchi che incrementano la
           variabile `length` (_lunghezza_) siano all'interno del ciclo in modo che
           le linee continuino ad allungarsi.
-      courseF_artist_variables_4_authored_hint:
-        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Grazie all'uso della variabile, devi modificare
           solo un numero in alto per svolgere questo esercizio.

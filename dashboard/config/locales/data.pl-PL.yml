@@ -779,6 +779,7 @@ pl:
         hoc_dance_properties: Potańcówka - Właściwości
         csd_pair_programming: Programowanie w parach
         csd_applab_parameters: Funkcje z parametrami
+        csd_problem_solving_process: Proces Rozwiązywania Problemów
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku
