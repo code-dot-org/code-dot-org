@@ -81,6 +81,11 @@ stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
 level 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding', assessment: true
 
+stage 'Traversals Investigate', flex_category: 'csp_traversals'
+level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
+level 'U5 Traversals Investigate Word Guess', progression: 'App Investigation'
+level 'U5 Traversals Investigate Dog Finder', progression: 'App Investigation'
+
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'
