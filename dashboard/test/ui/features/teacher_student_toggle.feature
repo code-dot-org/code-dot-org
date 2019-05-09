@@ -1,6 +1,6 @@
-@eyes
 Feature: Teacher Student Toggle
 
+@eyes
 Scenario: Toggle on Multi Level
   When I open my eyes to test "toggle on multi level"
   Given I create an authorized teacher-associated student named "Daenerys"
@@ -22,6 +22,7 @@ Scenario: Toggle on Multi Level
   And I see no difference for "progress dropdown for teacher viewing as student"
   And I close my eyes
 
+@eyes
 Scenario: Toggle on Hidden Maze Level
   When I open my eyes to test "toggle on hidden maze level"
   Given I create an authorized teacher-associated student named "Arya"
@@ -40,6 +41,7 @@ Scenario: Toggle on Hidden Maze Level
   And I see no difference for "view as teacher"
   And I close my eyes
 
+@eyes
 Scenario: Toggle on Lockable Level
   When I open my eyes to test "toggle on a lockable level"
   Given I create an authorized teacher-associated student named "Joffrey"
