@@ -3,10 +3,10 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/courseb/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/courseb/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/courseb/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/courseb/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview", "type"=>"bullhorn"}]
 family_name 'courseb'
 version_year '2019'
 
