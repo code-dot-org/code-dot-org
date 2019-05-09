@@ -221,6 +221,7 @@ header.renderScriptName = function(container, props) {
 };
 
 header.showMinimalProjectHeader = function() {
+  getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
