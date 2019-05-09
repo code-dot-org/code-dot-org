@@ -1,8 +1,8 @@
 ---
 title: Teachers & Curriculum
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 
 # Teachers & Curriculum
 
@@ -79,9 +79,9 @@ ________________
 
 ## **Technology in Classroom**
 
-As part of the application and selection process, it's important to ensure that schools, districts, and teachers selected to participate in our programs can meet Code.org’s technology requirements before they are selected to participate in the program. 
+As part of the application and selection process, it's important to ensure that schools, districts, and teachers selected to participate in our programs can meet Code.org’s technology requirements before they are selected to participate in the program.
 
-Whitelisting is the act of placing a domain or email on an ‘acceptable list’ for an organization's (school district or company) firewall. Some school districts will block all websites and emails that are not specifically entered into their whitelist. Generally, to whitelist a domain or email you will need to reach out to the organization’s IT department.    
+Whitelisting is the act of placing a domain or email on an ‘acceptable list’ for an organization's (school district or company) firewall. Some school districts will block all websites and emails that are not specifically entered into their whitelist. Generally, to whitelist a domain or email you will need to reach out to the organization’s IT department.
 
 Please review these general guidelines for whitelisting:<br/>
 [Teacher Participation Guidelines](/educate/it) <br/>

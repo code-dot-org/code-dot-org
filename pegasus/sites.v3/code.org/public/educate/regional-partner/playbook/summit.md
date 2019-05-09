@@ -2,10 +2,8 @@
 title: Summit
 theme: responsive
 style_min: true
-
+noindex: true
 ---
-<meta name=“robots” content=“noindex”>
-
 
 # Who's Who at the Regional Partner Summit
 

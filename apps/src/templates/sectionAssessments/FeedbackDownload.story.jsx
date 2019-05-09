@@ -9,7 +9,7 @@ const exampleExportableFeedbackData = [
     levelNum: '7',
     keyConcept: 'You should be learning about loops',
     performanceLevelDetails: 'A loop is in the code',
-    performance: 'exceeds',
+    performance: 'performanceLevel1',
     comment: 'Nice job using loops!',
     timestamp: '03/21/19 at 12:17:17 PM'
   },
@@ -32,7 +32,7 @@ const exampleExportableFeedbackData = [
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails:
       'You have some variables but are still missing out on their amazingness',
-    performance: 'approaches',
+    performance: 'performanceLevel3',
     comment: 'There are at least 3 more variables you could be using.',
     timestamp: '03/21/19 at 12:17:17 PM'
   },
@@ -43,7 +43,7 @@ const exampleExportableFeedbackData = [
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails: 'You uses no variables',
-    performance: 'no evidence',
+    performance: 'performanceLevel4',
     comment: "Why didn't you use variables?",
     timestamp: '03/21/19 at 12:21:17 PM'
   }

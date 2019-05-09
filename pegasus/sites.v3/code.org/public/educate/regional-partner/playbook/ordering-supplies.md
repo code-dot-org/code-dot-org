@@ -1,11 +1,11 @@
 ---
 title: Ordering Supplies
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
-# Ordering Supplies 
+# Ordering Supplies
 
 ## Quick Links
 
@@ -41,7 +41,7 @@ Forget your login information or don't have an account? Email partner@code.org.
 <a id="adafruit"></a>
 ## Adafruit Circuit Playground
 
-The [Adafruit Circuit Playground](https://www.adafruit.com/product/3399) is the core tool used in [CS Discoveries Unit 6, Physical Computing](https://studio.code.org/s/csd6). Find more information about The Circuit Playground on the Code.org website [here](https://code.org/circuitplayground) and find details about the different subsidies available below. 
+The [Adafruit Circuit Playground](https://www.adafruit.com/product/3399) is the core tool used in [CS Discoveries Unit 6, Physical Computing](https://studio.code.org/s/csd6). Find more information about The Circuit Playground on the Code.org website [here](https://code.org/circuitplayground) and find details about the different subsidies available below.
 
 
 **Discounts for Partners and Educators**
@@ -92,7 +92,7 @@ You may order 1 swag bag per attendee and 1 of each of the documents shown in th
 Guidelines to keep in mind:
 
 - Orders need to be placed no later than 21 calendar days before the workshop to ensure timely arrival. No rush shipping will be accommodated.
-- Please provide a link to the workshops that you are ordering for in the 'Workshop Link' field on the payment page. Orders without a link will be declined.  
+- Please provide a link to the workshops that you are ordering for in the 'Workshop Link' field on the payment page. Orders without a link will be declined.
 - Orders with printed material of $100 or more qualifies for free shipping of the full order. Please ensure that if you need swag bags, you are ordering them with printed materials.
 - All orders will go through an approval process.
 

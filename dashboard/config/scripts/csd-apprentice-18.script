@@ -3,7 +3,7 @@ login_required true
 student_detail_progress_view true
 
 stage 'Apprentice Reflection Overview', flex_category: 'required'
-named_level 'welcome-apprentice-18'
+level 'welcome-apprentice-18', named: true
 
 stage 'Day 1'
 level 'morning-prep-monday'
@@ -29,4 +29,4 @@ level 'recruiting-thursday'
 level 'csd-pushDL-unit3'
 
 stage 'Wrap Up'
-named_level 'apprentice-congrats'
+level 'apprentice-congrats', named: true

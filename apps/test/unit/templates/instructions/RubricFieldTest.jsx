@@ -5,7 +5,7 @@ import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructi
 
 const DEFAULT_PROPS = {
   showFeedbackInputAreas: true,
-  rubricLevel: 'exceeds',
+  rubricLevel: 'performanceLevel1',
   rubricValue: 'exceeded expectations',
   disabledMode: false,
   onChange: () => {},
@@ -24,7 +24,7 @@ describe('RubricField', () => {
 
     // Details
     const confirmDetails = wrapper.find('details').first();
-    expect(confirmDetails.contains('Exceeds')).to.equal(true);
+    expect(confirmDetails.contains('Extensive Evidence')).to.equal(true);
     expect(confirmDetails.contains('exceeded expectations')).to.equal(true);
   });
   it('does not have a CheckedRadioButton when showFeedbackInputAreas is false', () => {

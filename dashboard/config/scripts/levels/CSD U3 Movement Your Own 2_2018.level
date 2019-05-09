@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2018-03-19T23:32:46.000Z",
+  "created_at": "2018-12-14T19:32:14.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -85,17 +85,14 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "rubric_key_concept": "Model two dimensional movement on a coordinate plane.",
-    "rubric_exceeds": "The counter pattern is used on at least two sprite properties to create smooth motion.  There are no extra blocks, and all set up is contained outside the draw loop.",
-    "rubric_meets": "The counter pattern is used on at least two sprite properties to create smooth motion.  There may be minor errors in the program, or extra blocks.",
-    "rubric_approaches": "The counter pattern is used somewhere in the program, but the sprite may not animate properly.",
-    "rubric_no_evidence": "There is no counter pattern.",
-    "mini_rubric": "true"
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The counter pattern is used on at least two sprite properties to create smooth motion.  There are no extra blocks, and all set up is contained outside the draw loop.",
+    "rubric_performance_level_2": "The counter pattern is used on at least two sprite properties to create smooth motion.  There may be minor errors in the program, or extra blocks.",
+    "rubric_performance_level_3": "The counter pattern is used somewhere in the program, but the sprite may not animate properly.",
+    "rubric_performance_level_4": "There is no counter pattern.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

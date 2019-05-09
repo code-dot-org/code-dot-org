@@ -67,7 +67,7 @@ level 'courseD_maze_nestedLoops6'
 level 'courseD_bee_nestedLoops7', challenge: true
 level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
-assessment 'courseD_bee_nestedLoops9_predict2'
+level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
 stage 'Nested Loops in Artist'
 level 'courseD_artist_nestedLoops1'
@@ -81,7 +81,7 @@ level 'courseD_artist_nestedLoops7'
 level 'courseD_artist_nestedLoops8'
 level 'courseD_artist_nestedLoops9', challenge: true
 level 'courseD_artist_nestedLoops10'
-assessment 'courseD_artist_nestedLoops9_predict1'
+level 'courseD_artist_nestedLoops9_predict1', assessment: true
 level 'courseD_artist_nestedLoopsFP'
 
 stage 'Algorithms: Relay Programming'
@@ -98,7 +98,7 @@ level 'courseD_bee_debugging6', challenge: true
 level 'courseD_bee_debugging7'
 level 'courseD_bee_debugging8'
 level 'courseD_bee_debugging9'
-assessment 'courseD_bee_debugging9_predict1'
+level 'courseD_bee_debugging9_predict1', assessment: true
 
 stage 'While Loops in Farmer'
 level 'courseD_farmer_while1'
@@ -113,7 +113,7 @@ level 'courseD_farmer_while7'
 level 'courseD_farmer_while8', challenge: true
 level 'courseD_farmer_while9'
 level 'courseD_farmer_while10'
-assessment 'courseD_farmer_while10_predict2'
+level 'courseD_farmer_while10_predict2', assessment: true
 
 stage 'Conditionals with Cards'
 level 'Conditionals'
@@ -146,7 +146,7 @@ level 'courseD_video_ifElse'
 level 'courseD_maze_until8'
 level 'courseD_maze_until9', challenge: true
 level 'courseD_maze_until10'
-assessment 'courseD_maze_until10_predict2'
+level 'courseD_maze_until10_predict2', assessment: true
 
 stage 'Conditionals & Loops in Farmer'
 level 'courseD_farmer_condLoops1'
@@ -158,7 +158,7 @@ level 'courseD_farmer_condLoops6'
 level 'courseD_farmer_condLoops7', challenge: true
 level 'courseD_farmer_condLoops8'
 level 'courseD_farmer_condLoops9'
-assessment 'courseD_farmer_condLoops9_predict1'
+level 'courseD_farmer_condLoops9_predict1', assessment: true
 
 stage 'Digital Citizenship'
 level 'courseD_unplugged_digitalCitizenship'
@@ -185,5 +185,5 @@ level 'courseD_artist_binary5'
 level 'courseD_artist_binary6'
 level 'courseD_artist_binary7'
 level 'courseD_artist_binary8'
-assessment 'courseD_artist_binary8_predict1'
+level 'courseD_artist_binary8_predict1', assessment: true
 level 'courseD_artist_binaryFP'

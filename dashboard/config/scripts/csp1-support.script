@@ -4,94 +4,94 @@ login_required true
 student_detail_progress_view true
 
 stage 'Unit 1 Overview', flex_category: 'required'
-named_level 'What\'s inside and how is it organized?'
-named_level 'Introduction to Unit 1'
-named_level 'Unit 1 Teaching Philosophy and Commentary'
-named_level 'Teaching with the Internet Simulator'
-named_level 'Practice Performance Tasks in Unit 1'
-named_level 'Unit 1 Self-Assessment'
+level 'What\'s inside and how is it organized?', named: true
+level 'Introduction to Unit 1', named: true
+level 'Unit 1 Teaching Philosophy and Commentary', named: true
+level 'Teaching with the Internet Simulator', named: true
+level 'Practice Performance Tasks in Unit 1', named: true
+level 'Unit 1 Self-Assessment', named: true
 
 stage 'AP Preparation and Support', flex_category: 'required'
-named_level 'Unit 1 Vocab and Concept Review Activity'
-named_level 'AP Test Prep Guidance'
+level 'Unit 1 Vocab and Concept Review Activity', named: true
+level 'AP Test Prep Guidance', named: true
 
 stage 'Lessons 2 - 3: Binary Messages', flex_category: 'content'
-named_level 'Lesson 1.2 Overview'
-named_level 'Understanding Communication Protocols'
-named_level 'Lesson 1.3 Overview'
-named_level 'Binary as an Encoding Scheme'
-named_level 'Internet Simulator: Sending Binary Messages'
-named_level 'The Internet: Wires, Cables, and Wifi'
-named_level 'Lessons 2 - 3: Teaching and Student Support Plan'
+level 'Lesson 1.2 Overview', named: true
+level 'Understanding Communication Protocols', named: true
+level 'Lesson 1.3 Overview', named: true
+level 'Binary as an Encoding Scheme', named: true
+level 'Internet Simulator: Sending Binary Messages', named: true
+level 'The Internet: Wires, Cables, and Wifi', named: true
+level 'Lessons 2 - 3: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 4 - 6: Encoding and Sending Numbers', flex_category: 'content'
-named_level 'Lesson 1.4 Overview'
-named_level 'Why Teach Number Systems?'
-named_level 'Lesson 1.5 Overview'
-named_level 'Lesson 1.6 Overview'
-named_level 'Sending Numbers: The Big Picture'
-named_level 'Internet Simulator: Sending Numbers'
-named_level 'Reflection: Create your Own Number System'
-named_level 'Lessons 4 - 6: Teaching and Student Support Plan'
+level 'Lesson 1.4 Overview', named: true
+level 'Why Teach Number Systems?', named: true
+level 'Lesson 1.5 Overview', named: true
+level 'Lesson 1.6 Overview', named: true
+level 'Sending Numbers: The Big Picture', named: true
+level 'Internet Simulator: Sending Numbers', named: true
+level 'Reflection: Create your Own Number System', named: true
+level 'Lessons 4 - 6: Teaching and Student Support Plan', named: true
 
 stage 'Lesson 7: Encoding and Sending Text', flex_category: 'content'
-named_level 'Lesson 1.7 Overview'
-named_level 'What is ASCII?'
-named_level 'Task: ASCII Representation of your Name'
-named_level 'What is HTML?'
-named_level 'Internet Simulator: Sending Text'
-named_level 'Lesson 7: Teaching and Student Support Plan'
+level 'Lesson 1.7 Overview', named: true
+level 'What is ASCII?', named: true
+level 'Task: ASCII Representation of your Name', named: true
+level 'What is HTML?', named: true
+level 'Internet Simulator: Sending Text', named: true
+level 'Lesson 7: Teaching and Student Support Plan', named: true
 
 stage 'Lesson 9: Internet Addressing', flex_category: 'content'
-named_level 'Lesson 1.9 Overview'
-named_level 'Addressing in the Game of Battleship'
-named_level 'Task: Develop a Battleship Protocol'
-named_level 'Internet Simulator: Broadcast'
-named_level 'The Internet: IP Addresses & DNS'
-named_level 'Lesson 9: Teaching and Student Support Plan'
+level 'Lesson 1.9 Overview', named: true
+level 'Addressing in the Game of Battleship', named: true
+level 'Task: Develop a Battleship Protocol', named: true
+level 'Internet Simulator: Broadcast', named: true
+level 'The Internet: IP Addresses & DNS', named: true
+level 'Lesson 9: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 10 - 11: Routers, Redundancy, and Packets', flex_category: 'content'
-named_level 'Lesson 1.10 Overview'
-named_level 'Internet Simulator: Routers'
-named_level 'Lesson 1.11 Overview'
-named_level 'Internet Simulator: Packets'
-named_level 'The Internet: Packets, Routing, and Reliability'
-named_level 'Lessons 10 - 11: Teaching and Student Support Plan'
+level 'Lesson 1.10 Overview', named: true
+level 'Internet Simulator: Routers', named: true
+level 'Lesson 1.11 Overview', named: true
+level 'Internet Simulator: Packets', named: true
+level 'The Internet: Packets, Routing, and Reliability', named: true
+level 'Lessons 10 - 11: Teaching and Student Support Plan', named: true
 
 stage 'Lessons 12 - 13: Abstraction on the Internet', flex_category: 'content'
-named_level 'Lesson 1.12 Overview'
-named_level 'Internet Simulator: DNS'
-named_level 'The Internet: IP Addresses & DNS'
-named_level 'Lesson 1.13 Overview'
-named_level 'The Internet: HTTP and HTML'
-named_level 'Lessons 12 - 13: Teaching and Student Support Plan'
+level 'Lesson 1.12 Overview', named: true
+level 'Internet Simulator: DNS', named: true
+level 'The Internet: IP Addresses & DNS', named: true
+level 'Lesson 1.13 Overview', named: true
+level 'The Internet: HTTP and HTML', named: true
+level 'Lessons 12 - 13: Teaching and Student Support Plan', named: true
 
 stage 'Group Work and Peer Learning', flex_category: 'practice'
-named_level 'Overview: Group Work and Peer Learning'
-named_level 'Group Work and Peer Learning in Unit 1'
-named_level 'Collaborative Learning and Group Work: Description and Strategies'
-named_level 'The Official Peer Instruction Blog'
-named_level 'the Journal of Peer Learning'
-named_level 'Teaching Practice Plan: Group Work and Peer Learning'
+level 'Overview: Group Work and Peer Learning', named: true
+level 'Group Work and Peer Learning in Unit 1', named: true
+level 'Collaborative Learning and Group Work: Description and Strategies', named: true
+level 'The Official Peer Instruction Blog', named: true
+level 'the Journal of Peer Learning', named: true
+level 'Teaching Practice Plan: Group Work and Peer Learning', named: true
 
 stage 'Balancing Teachers and Tools', flex_category: 'practice'
-named_level 'Overview: Balancing Teachers and Tools'
-named_level 'Balancing Teacher and Tools in Unit 1'
-named_level 'Classroom Management Tips for School Computer Labs'
-named_level 'Considerations for the 1-to-1 Classroom'
-named_level 'Teaching Practice Plan: Balancing Teacher and Tools'
+level 'Overview: Balancing Teachers and Tools', named: true
+level 'Balancing Teacher and Tools in Unit 1', named: true
+level 'Classroom Management Tips for School Computer Labs', named: true
+level 'Considerations for the 1-to-1 Classroom', named: true
+level 'Teaching Practice Plan: Balancing Teacher and Tools', named: true
 
 stage 'Discovery Learning', flex_category: 'practice'
-named_level 'Overview: Discovery Learning'
-named_level 'Discovery Learning in Unit 1'
-named_level 'Discovery learning definition and history'
-named_level 'Discovery learning techniques'
-named_level 'Teaching Practice Plan: Discovery Learning'
+level 'Overview: Discovery Learning', named: true
+level 'Discovery Learning in Unit 1', named: true
+level 'Discovery learning definition and history', named: true
+level 'Discovery learning techniques', named: true
+level 'Teaching Practice Plan: Discovery Learning', named: true
 
 stage 'Measuring Student Learning', flex_category: 'practice'
-named_level 'Overview: Capturing Student Learning'
-named_level 'Assessing Student Learning in Unit 1'
-named_level 'What is the difference between formative and summative assessment?'
-named_level 'Designing Assessment Questions'
-named_level 'Classroom Assessment Techniques'
-named_level 'Teaching Practice Plan: Assessing Student Learning'
+level 'Overview: Capturing Student Learning', named: true
+level 'Assessing Student Learning in Unit 1', named: true
+level 'What is the difference between formative and summative assessment?', named: true
+level 'Designing Assessment Questions', named: true
+level 'Classroom Assessment Techniques', named: true
+level 'Teaching Practice Plan: Assessing Student Learning', named: true

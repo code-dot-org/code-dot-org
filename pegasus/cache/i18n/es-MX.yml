@@ -593,12 +593,12 @@ es-MX:
   sports_og_title: Esfuérzate. Cualquiera puede aprender.
   sports_og_description: Campeones y medallistas de oro te animan a probar la hora
     del código. Escribe tu propio juego deportivo.
-  sports_title: Programa tu propio juego de deporte
+  sports_title: Programa tu propio juego de deportes
   sports_watch_video: Mira el Video
   sports_video_title: Esfuérzate. Cualquiera puede aprender.
   sports_select_theme: Selecciona el tema del tutorial
   sports_basketball_title: Crea un juego de baloncesto
-  sports_all_sports_title: Multideporte
+  sports_all_sports_title: Combina deportes
   sports_featured_athletes: Revisa los atletas destacados
   sports_athletes_title: Atletas destacados
   sports_athlete_Draymond: Draymond Green, medallista de oro olímpico y campeón de
@@ -1276,6 +1276,7 @@ es-MX:
   pre-express_name: 'Curso Express pre-lectores:'
   express-2017_name: Curso Express (2017)
   pre-express-2017_name: Curso Express pre-lectores
+  express-2018_name: Curso Express (2018)
   pre-express-2018_name: Curso Express pre-lectores
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
@@ -1345,7 +1346,7 @@ es-MX:
   applab_name: Laboratorio de aplicaciones
   gamelab_name: Laboratorio de juegos
   basketball_name: Crea un juego de baloncesto
-  sports_name: Programa tu propio juego de deporte
+  sports_name: Programa tu propio juego de deportes
   applab_gradelevel: Desde 13 años
   applab_shortdescription_congrats: App Lab es un entorno de programación donde hacer
     aplicaciones simples. Diseña una aplicación, codifica con bloques o JavaScript
@@ -2179,6 +2180,7 @@ es-MX:
   user_header_gamelab: Laboratorio de juegos
   user_header_playlab: Laboratorio de juegos
   user_header_dance: Fiesta de baile
+  user_header_spritelab: Laboratorio de sprites
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Ver todos los proyectos...
@@ -2235,6 +2237,7 @@ es-MX:
     de Google Classroom" en la pestaña "Gestionar estudiantes":'
   google_sign_in_instruct: 'Desde ahí, deberán elegir la opcion "Registrarse con una
     cuenta de Google":'
+  hero_name: 'Minecraft: Viaje del héroe'
   applab-intro_name: Introducción al Laboratorio de Aplicaciones
   applab_tile_title: Introducción a App Lab (edades 13+)
   applab_tile_subtitle: Crea tu propia aplicación en JavaScript usando la programación
@@ -2242,7 +2245,7 @@ es-MX:
     basada en texto. (Sólo en inglés)
   applab_tile_start_tutorial: Inicio
   applab_tile_teacher_guide: Ver la guía del profesor
-  aquatic_name: 'Minecraft: Travesía Aquática'
+  aquatic_name: 'Minecraft: Voyage Aquatic'
   account_sign_up_email_opt_in: "¿Podemos enviarte actualizaciones de nuestros cursos,
     oportunidades en tu zona u otras noticias sobre ciencias de la computación por
     correo electrónico? (aproximadamente una vez al mes)"
@@ -2351,6 +2354,8 @@ es-MX:
   hoc2018_mc_homepage_watch_video: Mira nuestro video
   hoc2018_mc_homepage_join_us: Únete
   hoc2018_mc_homepage_try_it: Pruébalo
+  hoc2018_mc_back: "¡Minecraft está de vuelta con una nueva actividad para la Hora
+    del Código!"
   hoc2018_mc_back_journey: "¡Minecraft está de vuelta para la Hora del Código con
     una actividad nueva! Viaja a través de Minecraft con códigos."
   hoc2018_mc_teacher_guide: Ver la guía del profesor

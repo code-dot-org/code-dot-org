@@ -100,6 +100,15 @@ export default class WorkshopTable extends React.Component {
     let columns = [];
     columns.push(
       {
+        property: 'manage',
+        header: {
+          label: 'Manage'
+        },
+        cell: {
+          format: this.formatManagement
+        }
+      },
+      {
         property: 'date', // for sorting
         header: {
           label: 'Date and Time',
@@ -213,16 +222,6 @@ export default class WorkshopTable extends React.Component {
         }
       });
     }
-
-    columns.push({
-      property: 'manage',
-      header: {
-        label: 'Manage'
-      },
-      cell: {
-        format: this.formatManagement
-      }
-    });
 
     this.columns = columns;
   }

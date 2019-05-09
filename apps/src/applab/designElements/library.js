@@ -2,7 +2,7 @@ import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {themeOptions} from '../constants';
+import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -169,10 +169,14 @@ export default {
     return themeValues;
   },
 
-  applyCurrentTheme: function(element, parentScreen) {
-    const currentTheme = parentScreen
+  getCurrentTheme: function(parentScreen) {
+    return parentScreen
       ? parentScreen.getAttribute('data-theme')
-      : themeOptions[0];
+      : themeOptions[DEFAULT_THEME_INDEX];
+  },
+
+  applyCurrentTheme: function(element, parentScreen) {
+    const currentTheme = this.getCurrentTheme(parentScreen);
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {
       const propTheme = themeValues[propName];
@@ -196,10 +200,14 @@ export default {
    * Gets data from an element before it is changed, should it be necessary to do so. This data will be passed to the
    * typeSpecificPropertyChange method below.
    */
-  getPreChangeData: function(element, name) {
+  getPreChangeData: function(element, name, batchChangeId) {
     var elementType = this.getElementType(element);
     if (elements[elementType].beforePropertyChange) {
-      return elements[elementType].beforePropertyChange(element, name);
+      return elements[elementType].beforePropertyChange(
+        element,
+        name,
+        batchChangeId
+      );
     }
     return null;
   },

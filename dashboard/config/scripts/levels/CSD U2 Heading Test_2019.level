@@ -1,7 +1,7 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-02-14T01:24:18.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -19,12 +19,12 @@
     ],
     "map_reference": "/docs/csd-1718/headers/index.html",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
-    "rubric_exceeds": "All content is contained in tags, uses paragraph tags and multiple sized headings in a logically consistent way.",
-    "rubric_meets": "All content is contained in tags, uses paragraph and heading tags in a reasonable way.",
-    "rubric_approaches": "Most content is contained in tags.  At least one heading tag is used.",
-    "rubric_no_evidence": "Little or no content is contained in tags.",
     "mini_rubric": "true",
-    "encrypted": "false"
+    "encrypted": "false",
+    "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags and multiple sized headings in a logically consistent way.",
+    "rubric_performance_level_2": "All content is contained in tags, uses paragraph and heading tags in a reasonable way.",
+    "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
+    "rubric_performance_level_4": "Little or no content is contained in tags."
   },
   "published": true,
   "notes": "",

@@ -190,10 +190,6 @@
     "instructions_important": "false",
     "long_instructions": "This level has a mini rubric associated with it that teachers should be able to give students feedback on. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "rubric_key_concept": "This is the key concept for this mini rubric.",
-    "rubric_exceeds": "You did great!",
-    "rubric_meets": "You did good.",
-    "rubric_approaches": "You did okay.",
-    "rubric_no_evidence": "You did nothing.",
     "mini_rubric": "true",
     "submittable": "false",
     "never_autoplay_video": "false",
@@ -214,10 +210,11 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "rubric_performance_level_1": "You did great!",
+    "rubric_performance_level_2": "You did good.",
+    "rubric_performance_level_3": "You did okay.",
+    "rubric_performance_level_4": "You did nothing.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -138,6 +138,10 @@ module Pd::Application
       status == 'pending'
     end
 
+    def waitlisted?
+      status == 'waitlisted'
+    end
+
     def update_accepted_date
       self.accepted_at = accepted? ? Time.now : nil
     end
@@ -376,7 +380,7 @@ module Pd::Application
     end
 
     def course_name
-      COURSE_NAME_MAP[course.to_sym]
+      COURSE_NAME_MAP[course.to_sym] unless course.nil?
     end
 
     # displays the iso8601 date (yyyy-mm-dd)

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import i18n from '@cdo/locale';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import LandingPage, {
   LastWorkshopSurveyBanner
 } from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
@@ -81,12 +81,14 @@ describe('LastWorkshopSurveyBanner', () => {
   });
 
   it('makes a button that opens the survey URL in a new tab', () => {
-    expect(wrapper).to.containMatchingElement(
-      <Button
-        href={TEST_SURVEY_URL}
-        target="_blank"
-        text={i18n.plLandingStartSurvey()}
-      />
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={TEST_SURVEY_URL}
+          target="_blank"
+          text={i18n.plLandingStartSurvey()}
+        />
+      )
+    ).to.be.ok;
   });
 });

@@ -10,14 +10,15 @@ script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"
 family_name 'csp-create'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL01 SFLP'
+level 'CSP CreateL01 SFLP', named: true
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
 
 stage 'Create PT Prep - Making a Plan', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL02 SFLP_2018'
+level 'CSP CreateL02 SFLP_2018', named: true
 
 stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
-named_level 'CSP CreateL03 SFLP'
+level 'CSP CreateL03 SFLP', named: true
 level 'Practice Create Performance Task_2018', progression: 'Create PT - Complete the Task'

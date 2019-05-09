@@ -1,35 +1,31 @@
 @no_mobile
-@dashboard_db_access
-@pegasus_db_access
 Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in old and new teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
-    And I sign out
 
-    When I sign in as "Teacher_Sally"
-    When I click selector "a:contains(Untitled Section)" once I see it
+    When I sign in as "Teacher_Sally" and go home
+    And I get hidden script access
+    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
-    When I click selector "a:contains(Sally)" once I see it
+    And I wait until element "a:contains(Sally)" is visible
+    When I click selector "a:contains(Sally)" to load a new page
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "/s/allthethings"
     And check that the URL contains "viewAs=Teacher"
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
-    And I sign out
 
     # Progress tab
-    When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home"
+    When I sign in as "Teacher_Sally" and go home
+    And I get hidden script access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
@@ -82,29 +78,26 @@ Feature: Using the teacher dashboard
 
     And I wait until element ".project_edit" is visible
     Then element ".project_name.header_text" contains text "thumb wars"
-    And I sign out
 
-    When I sign in as "Teacher_Sally"
+    When I sign in as "Teacher_Sally" and go home
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
-    And I click selector "a:contains('thumb wars')" once I see it
-    And I go to the newly opened tab
-    And I wait until element ".project_name.header_text:contains('thumb wars')" is visible
+    And I click selector "a:contains('thumb wars')" once I see it to load a new tab
+    And I wait until element ".project_name.header_text" is visible
+    And element ".project_name.header_text" contains text "thumb wars"
 
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
-    And I sign out
 
     # Progress tab
-    When I sign in as "Teacher_Sally"
-    And I am on "http://studio.code.org/home"
+    When I sign in as "Teacher_Sally" and go home
+    And I get hidden script access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
@@ -203,12 +196,9 @@ Feature: Using the teacher dashboard
     # Wait for the thumbnail URL to be sent to the server.
     And I wait until element ".project_updated_at" contains text "Saved"
 
-    And I sign out
-
     # Load the section projects page
 
-    When I sign in as "Teacher_Sally"
-    Then I am on "http://studio.code.org/home"
+    When I sign in as "Teacher_Sally" and go home
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved

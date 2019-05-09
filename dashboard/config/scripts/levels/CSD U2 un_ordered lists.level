@@ -1,16 +1,13 @@
 <Weblab>
   <config><![CDATA[{
   "game_id": 58,
-  "created_at": "2019-03-27T07:02:42.000Z",
+  "created_at": "2019-03-28T16:54:18.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>How to make noodles<\\/h1>\\r\\n    <h2>What you will need<\\/h2>\\r\\n    \\r\\n    dry noodles\\r\\n    two pots\\r\\n    canned sauce\\r\\n    <h2>Steps to make it<\\/h2>\\r\\n    Boil noodles in big pot\\r\\n    heat sauce in small pot\\r\\n    drain noodles\\r\\n    put sauce on noodles\\r\\n\\r\\n   \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
-    "encrypted_examples": [
-
-    ],
     "submittable": "false",
     "parent_level_id": 15872,
     "name_suffix": "_2019",
@@ -23,10 +20,10 @@
     "encrypted": "false",
     "rubric_key_concept": "Structure content on a web page using HTML. (Use the `<ol>`, `<ul>`, and `<li>` tags to create ordered and unordered lists in an HTML page.)",
     "mini_rubric": "true",
-    "rubric_exceeds": "All list contents are contained in the appropriate tags so that the lists are displayed as in the example image.  '<li>' tags are all nested within '<ul>' or '<ol>' tags, and no numbers are used in the code to simulate the behavior of an ordered list.",
-    "rubric_meets": "`<ul>`, `<ol>`, and `<li>` tags are all used such that some items appear in an unordered list and some items appear in an unordered list.",
-    "rubric_approaches": "At least two `<li>` tags are nested inside a `<ul>`or `<ol>` tag such that the content appears in a list.",
-    "rubric_no_evidence": "List tags are not used, or are misused such that no content appears in a list."
+    "rubric_performance_level_1": "All list contents are contained in the appropriate tags so that the lists are displayed as in the example image.  '<li>' tags are all nested within '<ul>' or '<ol>' tags, and no numbers are used in the code to simulate the behavior of an ordered list.",
+    "rubric_performance_level_2": "`<ul>`, `<ol>`, and `<li>` tags are all used such that some items appear in an unordered list and some items appear in an unordered list.",
+    "rubric_performance_level_3": "At least two `<li>` tags are nested inside a `<ul>`or `<ol>` tag such that the content appears in a list.",
+    "rubric_performance_level_4": "List tags are not used, or are misused such that no content appears in a list."
   },
   "published": true,
   "notes": "",

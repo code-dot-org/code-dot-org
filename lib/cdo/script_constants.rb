@@ -22,8 +22,10 @@ module ScriptConstants
     full_course: [
       CSP_2017 = 'csp-2017'.freeze,
       CSP_2018 = 'csp-2018'.freeze,
+      CSP_2019 = 'csp-2019'.freeze,
       CSD_2017 = 'csd-2017'.freeze,
       CSD_2018 = 'csd-2018'.freeze,
+      CSD_2019 = 'csd-2019'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
@@ -97,6 +99,14 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_2019: [
+      CSD1_2019_NAME = 'csd1-2019'.freeze,
+      CSD2_2019_NAME = 'csd2-2019'.freeze,
+      CSD3_2019_NAME = 'csd3-2019'.freeze,
+      CSD4_2019_NAME = 'csd4-2019'.freeze,
+      CSD5_2019_NAME = 'csd5-2019'.freeze,
+      CSD6_2019_NAME = 'csd6-2019'.freeze,
+    ],
     csd_2018: [
       CSD1_2018_NAME = 'csd1-2018'.freeze,
       CSD2_2018_NAME = 'csd2-2018'.freeze,
@@ -104,6 +114,7 @@ module ScriptConstants
       CSD4_2018_NAME = 'csd4-2018'.freeze,
       CSD5_2018_NAME = 'csd5-2018'.freeze,
       CSD6_2018_NAME = 'csd6-2018'.freeze,
+      CSD_POST_SURVEY_2018_NAME = 'csd-post-survey-2018'.freeze,
     ],
     csd: [
       CSD1_NAME = 'csd1-2017'.freeze,
@@ -164,6 +175,37 @@ module ScriptConstants
   }.freeze
 
   DEFAULT_VERSION_YEAR = '2017'
+
+  # A whitelist of all family names for scripts.
+  FAMILY_NAMES = [
+    # CSF
+    COURSEA = 'coursea'.freeze,
+    COURSEB = 'courseb'.freeze,
+    COURSEC = 'coursec'.freeze,
+    COURSED = 'coursed'.freeze,
+    COURSEE = 'coursee'.freeze,
+    COURSEF = 'coursef'.freeze,
+    EXPRESS = 'express'.freeze,
+    PREEXPRESS = 'pre-express'.freeze,
+
+    # CSP
+    CSP1 = 'csp1'.freeze,
+    CSP2 = 'csp2'.freeze,
+    CSP3 = 'csp3'.freeze,
+    CSP4 = 'csp4'.freeze,
+    CSP5 = 'csp5'.freeze,
+    CSP_POSTAP = 'csppostap'.freeze,
+    CSP_CREATE = 'csp-create'.freeze,
+    CSP_EXPLORE = 'csp-explore'.freeze,
+
+    # CSD
+    CSD1 = "csd1".freeze,
+    CSD2 = "csd2".freeze,
+    CSD3 = "csd3".freeze,
+    CSD4 = "csd4".freeze,
+    CSD5 = "csd5".freeze,
+    CSD6 = "csd6".freeze
+  ].freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
@@ -235,5 +277,12 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script)
+  end
+
+  def self.i18n?(script)
+    ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.script_in_category?(:csf, script) ||
+      ScriptConstants.script_in_category?(:csf_2018, script) ||
+      ScriptConstants.script_in_category?(:twenty_hour, script)
   end
 end

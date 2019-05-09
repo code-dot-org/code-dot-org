@@ -1,12 +1,12 @@
 login_required 'true'
 
 stage 'Intro to the Unit', flex_category: 'required'
-named_level 'Sample Free Response'
-named_level 'U1L5 How the Internet Works - Video'
-named_level 'Sample External Resource'
+level 'Sample Free Response', named: true
+level 'U1L5 How the Internet Works - Video', named: true
+level 'Sample External Resource', named: true
 
 stage 'Chapter Overviews', flex_category: 'required'
-named_level 'Empty Markdown Level'
+level 'Empty Markdown Level', named: true
 
 stage 'Tool Talk: Intro to Netsim', flex_category: 'required'
 level 'Empty Markdown Level'
@@ -22,7 +22,7 @@ stage 'Encoding and Sending Numbers', flex_category: 'content'
 level 'Empty Markdown Level'
 
 stage 'Supporting Peer Learning', flex_category: 'practice'
-named_level 'U3L2 Free Response Reflection'
+level 'U3L2 Free Response Reflection', named: true
 
 stage 'Running a Constructive Classroom', flex_category: 'practice'
 level 'U3L2 Free Response Reflection'

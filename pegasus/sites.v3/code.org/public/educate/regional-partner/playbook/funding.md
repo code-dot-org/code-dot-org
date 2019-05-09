@@ -1,8 +1,8 @@
 ---
 title: Fundraising Resources
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Topics
@@ -35,9 +35,9 @@ It's important to start thinking about how you will sustain these programs witho
 <a id="gettingstarted"></a>
 ### What can you do if you're just getting started?
 
-- Create your prospect list of potential funders (who is likely to fund your Program Manager, etc.) 
-- Project how much you need and how much you can raise from this list in 3-4 months 
-- Start outreach to potential funders to pitch them through emails, calls or in person meetings 
+- Create your prospect list of potential funders (who is likely to fund your Program Manager, etc.)
+- Project how much you need and how much you can raise from this list in 3-4 months
+- Start outreach to potential funders to pitch them through emails, calls or in person meetings
 - Use a special event as your “closer” event
 
 [**Back to the top**](#top)
@@ -46,16 +46,16 @@ ________________
 <a id="start"></a>
 <br/>
 <br/>
-# Fundraising Playbook 
+# Fundraising Playbook
 
 When looking for donor support, it is important for your organization to understand the different types of donors. Each donor type may have different partnership expectations and giving trends that can either help or detract from your organization’s mission.
 
 **Types of Support:**
- 
-- **Individuals:** “major donors” - high net worth/family foundations, “small” donors (typically online) 
-- **Corporate:** grant from corporation’s foundation or sponsorship (donation in exchange for benefits such as logos and other marketing / visibility) 
-- **Large National Foundations:** ex. Gates Foundation, Rockefeller, etc. 
-- **In-Kind:** donated products and services (ex. office space, software, catering, advertising) 
+
+- **Individuals:** “major donors” - high net worth/family foundations, “small” donors (typically online)
+- **Corporate:** grant from corporation’s foundation or sponsorship (donation in exchange for benefits such as logos and other marketing / visibility)
+- **Large National Foundations:** ex. Gates Foundation, Rockefeller, etc.
+- **In-Kind:** donated products and services (ex. office space, software, catering, advertising)
 
 Note: This list of revenue streams is not exhaustive, but outlines the types of revenue streams Code.org pursues. You could also explore: crowdfunding, employee matching/giving, planned giving, events/galas, etc). Your organization should decide what fundraising methods work best to achieve your mission.
 
@@ -82,11 +82,11 @@ ________________
 
 ### Fundraising Strategy Best Practices:
 
-- **Diversify your revenue streams:** ex. Code.org if funded by approximately 40% corporations, 40% foundations/high net worth individuals, 20% online donations 
-  * Having a mix of types of support creates more stable funding and reduces risk year over year 
-- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the nonprofit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact. 
-- **General operating support vs. restricted funding:** Code.org best practice is to try to maintain as much general operating support to allow your organization to stay flexible to meet the needs of your program goals, and maintain low overhead and staff to manage grants and donors 
-- **Multi-Year Grants:** if possible, try to secure multi year grants to advance your mission. This will help you raise funds more efficiently and be able to better project your future income and cash flow. 
+- **Diversify your revenue streams:** ex. Code.org if funded by approximately 40% corporations, 40% foundations/high net worth individuals, 20% online donations
+  * Having a mix of types of support creates more stable funding and reduces risk year over year
+- **Program/mission focus:** Code.org best practice is lead with the ask with potential funders who have mutual goals, believe in your mission, and do not ask for you to stray away from your mission. Code.org does not pursue customized programs with funders, where the funder donates to create a specific program with the nonprofit. This enables us to stay focused on achieving our mission at scale, maintain lean fundraising operations/staff, and ultimately create more impact.
+- **General operating support vs. restricted funding:** Code.org best practice is to try to maintain as much general operating support to allow your organization to stay flexible to meet the needs of your program goals, and maintain low overhead and staff to manage grants and donors
+- **Multi-Year Grants:** if possible, try to secure multi year grants to advance your mission. This will help you raise funds more efficiently and be able to better project your future income and cash flow.
 
 
 |Best Practices| |
@@ -102,7 +102,7 @@ ________________
 <a id="research"></a>
 <br/>
 # Research
-The relationship between an organization and their donors should be based on clear communication and a partnership based in a common goal and mission. Throughout the research process to identify prospective donors, your organization will look at many different aspects of the prospective donor to assess if the donor is a good match for your organization. 
+The relationship between an organization and their donors should be based on clear communication and a partnership based in a common goal and mission. Throughout the research process to identify prospective donors, your organization will look at many different aspects of the prospective donor to assess if the donor is a good match for your organization.
 
 ## Prospective Research sheet:
 
@@ -126,30 +126,30 @@ Overall, match level is based on the research areas aligning with your own organ
 
 ## Other Research Resources:
 - Here is a list of potential funders.
-- General Fundraising Websites: 
+- General Fundraising Websites:
   * [Foundation Center](http://foundationcenter.org/findfunders/fundingsources/fdo.html)
   * [The Chronicle of Philanthropy](https://philanthropy.com/)
   * [GrantSpace](http://grantspace.org)
   * [Charity Navigator](http://www.charitynavigator.org/)
-  
+
 [**Back to the top**](#top)
 <br/>
 ________________
 <a id="outreach"></a>
 <br/>
-# Outreach 
+# Outreach
 Outreach is the securing of initial calls and meetings with potential funders. Once you have your research completed and you have determined your “pipeline” i.e. target list of potential donors to reach out to, its time to make the ask.
 
 ## Basic Solicitation Cycle:
-- Begin with thoughtful research to determine if potential donor is a good fit for your mission (see research template) 
+- Begin with thoughtful research to determine if potential donor is a good fit for your mission (see research template)
 - Outreach to potential donor via email (an introduction from a mutual contact or Board Member is always helpful)
 - Meet or schedule a call to determine interest and inclination of potential donor
-  * Involve donor prospect substantively to determine partnership value and fit - ask questions on what goals they have, what are their pain points? 
-  * Demonstrate your organization’s accomplishments and share your community of supporters who help provide credibility 
-  * Show you address their goals and why your partnership is a good fit 
-  * Ask if you can follow up with another call, meeting, or proposal 
-- Develop a proposal (include $ ask) 
-- Follow-up, answer any questions, negotiate and secure the donation 
+  * Involve donor prospect substantively to determine partnership value and fit - ask questions on what goals they have, what are their pain points?
+  * Demonstrate your organization’s accomplishments and share your community of supporters who help provide credibility
+  * Show you address their goals and why your partnership is a good fit
+  * Ask if you can follow up with another call, meeting, or proposal
+- Develop a proposal (include $ ask)
+- Follow-up, answer any questions, negotiate and secure the donation
 - Thank and steward the donor throughout the year. Include an opportunity to engage directly with your programs or employee engagement. Email communications on your accomplishments and program updates and engaging key executives to learn more about your mission.
 - Create Impact Reports/communications to demonstrate the value of the donor’s support
 - Reach out and set up a call or meeting 6-9 months into your grant cycle to start having renewal discussions
@@ -216,16 +216,16 @@ ________________
 
 ## Do's:
 
-- Have a clear vision, strategy and outcomes 
+- Have a clear vision, strategy and outcomes
 - Focus on building authentic, mutually beneficial relationships
-- Find funders who truly believe in your organization’s mission, vision and program 
+- Find funders who truly believe in your organization’s mission, vision and program
 - Leverage your position as a leader and expertise for your cause
-- Understand the pain points and goals of your potential funder and position yourself as a solution to help them achieve those goals 
+- Understand the pain points and goals of your potential funder and position yourself as a solution to help them achieve those goals
 - Share a list of your other donors and funders to demonstrate credibility
-- Be transparent with your finances and how you spend your money / where the money goes 
-- Recognize, thank and communicate with your donors often 
-- Be proactive with your follow up and stewardship 
-- Demonstrate the impact of your work through data, evaluation, case studies, impact stories 
+- Be transparent with your finances and how you spend your money / where the money goes
+- Recognize, thank and communicate with your donors often
+- Be proactive with your follow up and stewardship
+- Demonstrate the impact of your work through data, evaluation, case studies, impact stories
 
 ## Don'ts:
 
@@ -244,9 +244,9 @@ ________________
 <br/>
 # Supports for Pursuing Federal and State Grants
 
-This resource has been created to provide regional partners who may be interested in pursuing federal or state grant funding with some basic guidance and suggestions on doing so. In many cases the language can also be applied to the pursuit of corporate, foundation, or individual funding. 
+This resource has been created to provide regional partners who may be interested in pursuing federal or state grant funding with some basic guidance and suggestions on doing so. In many cases the language can also be applied to the pursuit of corporate, foundation, or individual funding.
 
-The document has been organized to reflect the major sections typically associated with federal grant applications and will include a basic explanation of what the particular section is about, indicators of effectiveness, a few tips to keep in mind, and generic templates from which to build your specific proposal off of. Templates are meant to be examples and not prescriptive. In the end your proposal should uniquely reflect the strengths and resources of your organization and the efforts you will engage in both as a Regional Partner of Code.org and as a leader of computer science education in your region. It is up to you to determine how much you want to highlight your collaboration with Code.org or take a more general approach focusing on your organization’s efforts. 
+The document has been organized to reflect the major sections typically associated with federal grant applications and will include a basic explanation of what the particular section is about, indicators of effectiveness, a few tips to keep in mind, and generic templates from which to build your specific proposal off of. Templates are meant to be examples and not prescriptive. In the end your proposal should uniquely reflect the strengths and resources of your organization and the efforts you will engage in both as a Regional Partner of Code.org and as a leader of computer science education in your region. It is up to you to determine how much you want to highlight your collaboration with Code.org or take a more general approach focusing on your organization’s efforts.
 
 Click [here](https://docs.google.com/document/d/1-F21aQTOmWuYt4l1wm8Ae2SrsGydBDoXiM7ifzCqsi0/edit#) to access the resource.
 

@@ -1,0 +1,4 @@
+login_required true
+
+stage 'Pluralsight LevelGroup', lockable: true
+level 'Pluralsight for CSP', assessment: true

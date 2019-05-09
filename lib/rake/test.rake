@@ -32,7 +32,8 @@ namespace :test do
         '--parallel', '120',
         '--magic_retry',
         '--with-status-page',
-        '--fail_fast'
+        '--fail_fast',
+        '--priority 0'
       )
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
@@ -53,7 +54,7 @@ namespace :test do
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging(
         'bundle', 'exec', './runner.rb',
-        '-c', 'ChromeLatestWin7,iPhone,IE11Win10',
+        '-c', 'Chrome,iPhone,IE11',
         '-d', CDO.site_host('studio.code.org'),
         '-p', CDO.site_host('code.org'),
         '--db', # Ensure features that require database access are run even if the server name isn't "test"
