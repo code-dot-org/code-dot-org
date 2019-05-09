@@ -62,14 +62,14 @@ level 'how-often-consider-alternative-approaches-2019'
 level 'how-often-explain-why-disagree-2019'
 
 page
-text 'csp-post-survey-2018-AP-preamble'
+text 'csp-post-survey-AP-preamble-2018'
 level 'csp-post-survey-2018-AP-exam-how-hard'
 level 'csp-post-survey-2018-why-not-exam'
 level 'prepared-for-AP-exam'
 level 'prepared-for-explore-PT'
 level 'prepared-for-create-pt'
 
-page
+
 text 'csp-post-survey-why-take-cs-preamble'
 level 'csp-post-survey-reasons-took-CSP'
 level 'csp-post-survey-who-encouraged-csp'
