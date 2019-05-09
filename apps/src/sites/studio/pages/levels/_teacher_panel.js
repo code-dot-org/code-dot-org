@@ -26,7 +26,11 @@ function initPage() {
   queryLockStatus(store, teacherPanelData.script_id);
   store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
   renderTeacherContentToggle(store);
-  renderTeacherPanel(store, teacherPanelData.script_id);
+  renderTeacherPanel(
+    store,
+    teacherPanelData.script_id,
+    teacherPanelData.section
+  );
 }
 
 function initViewAs(store) {
