@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {queryLockStatus} from '@cdo/apps/code-studio/teacherPanelHelpers';
 
 $(document).ready(initPage);
 
@@ -19,6 +20,7 @@ function initPage() {
   const store = getStore();
 
   initViewAs(store);
+  queryLockStatus(store, teacherPanelData.script_id);
   store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
   renderTeacherContentToggle(store);
 
