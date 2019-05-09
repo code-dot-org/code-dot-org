@@ -596,6 +596,7 @@ zh-CN:
       CSPU5_U3 - Keys - Final Image Scroller: 更新图像滚动条以响应按钮和按键。(点击查看完整说明)
       CSPU5_U3 - Loops - 4: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3 - Loops - 4_2018: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
+      CSPU5_U3 - Loops - 4_2018pilot: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3 - Loops - 4_2019: 使用调试命令创建包含6之前所有数字的一个列表。(点击查看详细说明)
       CSPU5_U3L13 - Turtle move with button: 添加一个按钮，在点击时移动乌龟。（点击查看完整说明）
       CSPU5_U3L15 full clicker app: 完成你的遥控器游戏 ！（点击查看完整的说明）
@@ -938,6 +939,7 @@ zh-CN:
       Dance Party Predict: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_2019: '当点击这个外星人的时候, 你认为会发生什么？  '
       Dance Party Predict_simple: '当点击这个外星人的时候, 你认为会发生什么？  '
+      Dance Party Template 1_2019: 模板
       Dance Party Template 2_2019: 模板
       Dance_Party_01: 将`新建`模块拖到工作区，并关联到`设置`模块。
       Dance_Party_01_low: 将`新建`模块拖到工作区，并关联到`设置`模块。

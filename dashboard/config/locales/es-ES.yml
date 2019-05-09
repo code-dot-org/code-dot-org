@@ -375,6 +375,7 @@ es:
       district_dashboard: Tablero de distrito
       label: Hola %{username}
       stats: Code Studio
+      my_projects: Mis proyectos
       settings: Mi cuenta
       logout: Cerrar sesión
       signin: Iniciar Sesión
