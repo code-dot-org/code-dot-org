@@ -33,7 +33,11 @@ export default class Results extends React.Component {
           return null;
         }
 
-        if (['scale', 'singleSelect'].includes(question['answer_type'])) {
+        if (
+          ['scale', 'singleSelect', 'multiSelect'].includes(
+            question['answer_type']
+          )
+        ) {
           return (
             <SingleChoiceResponses
               perFacilitator={section === 'facilitator'}
