@@ -8,8 +8,12 @@ import {
   showMinimalProjectHeader,
   showProjectBackedHeader,
   showLevelBuilderSaveButton,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
   showProjectUpdatedAt,
-  setProjectUpdatedAt
+  setProjectUpdatedAt,
+  refreshProjectName
 } from './headerRedux';
 
 import progress from './progress';
@@ -217,6 +221,7 @@ header.showHeaderForProjectBacked = function(options) {
 
 header.showProjectHeader = function() {
   header.updateTimestamp();
+  getStore().dispatch(refreshProjectName());
   getStore().dispatch(showProjectHeader());
 };
 
@@ -225,18 +230,16 @@ header.updateTimestamp = function() {
   getStore().dispatch(setProjectUpdatedAt(timestamp));
 };
 
-// TODO i18n
 header.showProjectSaveError = () => {
-  const saveErrorTooltip =
-    "It looks like we couldn't save your progress. Make sure you have a " +
-    'good internet connection and try running the project again to save it.';
+  getStore().dispatch(setProjectUpdatedError());
+};
 
-  const saveErrorHtml = `
-<span class="project-save-error" title="${saveErrorTooltip}">
-  <i class="fa fa-exclamation-triangle"/> Error saving project
-</span>`;
+header.showProjectSaving = () => {
+  getStore().dispatch(setProjectUpdatedSaving());
+};
 
-  $('.project_updated_at').html(saveErrorHtml);
+header.showProjectSaved = () => {
+  getStore().dispatch(setProjectUpdatedSaved());
 };
 
 export default header;

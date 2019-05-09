@@ -2,27 +2,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-const statuses = {
-  default: 'Not saved',
-  saving: 'Saving ...',
-  saved: 'Saved',
-  error: 'Error saving project'
-};
+import ProjectUpdatedAt from './ProjectUpdatedAt';
+import {
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved
+} from '../headerRedux';
 
 // Levelbuilder-only UI for saving changes to a level.
 class LevelBuilderSaveButton extends React.Component {
   static propTypes = {
-    getChanges: PropTypes.func.isRequired
-  };
-
-  state = {
-    status: statuses.default
+    getChanges: PropTypes.func.isRequired,
+    setProjectUpdatedError: PropTypes.func.isRequired,
+    setProjectUpdatedSaving: PropTypes.func.isRequired,
+    setProjectUpdatedSaved: PropTypes.func.isRequired
   };
 
   saveStartCode = () => {
-    this.setState({
-      status: statuses.SAVING
-    });
+    this.props.setProjectUpdatedSaving();
 
     $.ajax({
       type: 'POST',
@@ -30,14 +27,10 @@ class LevelBuilderSaveButton extends React.Component {
       data: JSON.stringify(this.props.getChanges()),
       dataType: 'json',
       error: () => {
-        this.setState({
-          status: statuses.error
-        });
+        this.props.setProjectUpdatedError();
       },
       success: () => {
-        this.setState({
-          status: statuses.saved
-        });
+        this.props.setProjectUpdatedSaved();
       }
     });
   };
@@ -49,9 +42,7 @@ class LevelBuilderSaveButton extends React.Component {
           <div className="project_name header_text">
             Levelbuilder: edit start code
           </div>
-          <div className="project_updated_at header_text">
-            {this.state.status}
-          </div>
+          <ProjectUpdatedAt />
         </div>
         <div
           className="project_remix header_button"
@@ -64,6 +55,13 @@ class LevelBuilderSaveButton extends React.Component {
   }
 }
 
-export default connect(state => ({
-  getChanges: state.header.getLevelBuilderChanges
-}))(LevelBuilderSaveButton);
+export default connect(
+  state => ({
+    getChanges: state.header.getLevelBuilderChanges
+  }),
+  {
+    setProjectUpdatedError,
+    setProjectUpdatedSaving,
+    setProjectUpdatedSaved
+  }
+)(LevelBuilderSaveButton);
