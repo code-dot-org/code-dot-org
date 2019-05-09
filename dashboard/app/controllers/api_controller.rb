@@ -20,7 +20,7 @@ class ApiController < ApplicationController
     return head :forbidden unless current_user
 
     uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v1.1/teachers/#{uid}/sections") do |response|
+    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -41,7 +41,7 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service("v1.1/sections/#{course_id}/students") do |students|
+    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
