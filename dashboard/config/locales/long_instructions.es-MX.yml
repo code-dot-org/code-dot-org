@@ -497,9 +497,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -551,9 +551,9 @@ es-MX:
         aventura."
       AppLab Intro 2 - add images: "Ahora lo sabes todo\nnecesitas hacer una simple
         selección elige tu propia aplicación de aventura, pero puedes agregarla y\n¡mucho
-        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1\\.\nEn
+        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1.\nEn
         otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras
-        usar.\\\r\n2\\.\nHaga clic con el botón derecho en la imagen y guarde su URL
+        usar.\\\r\n2.\nHaga clic con el botón derecho en la imagen y guarde su URL
         (generalmente \"Copiar la dirección del enlace\" o \"Copiar\"\nimagen URL
         \") \\\r\n\n3.  De vuelta en App Lab, vaya a Modo de diseño \\\r\n4.  Arrastra
         una \"imagen\"\n    o elemento a su pantalla \\\r\n5.  Pegue la URL que copió
@@ -1628,6 +1628,7 @@ es-MX:
         del escalón de tu escalera?\\\r\n-   ¿Qué sucede si haces el patrón de tu
         diamante más largo o más corto?\\\r\n    \\-¿Cómo luce al dibujar dos copos
         de nieve uno encima del otro?\\\r?"
+      Dance Party Template 1_2019: Plantilla
       Dance Party Template 2_2019: Plantilla
       Dance_Party_01: |-
         _¡Hagamos una fiesta!_
@@ -2304,9 +2305,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2321,9 +2322,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2338,9 +2339,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -6004,17 +6005,21 @@ es-MX:
       courseD_scrat_ramp8_2018: "**Desafío:** ¡Usa lo que has aprendido para llevar
         a Scrat a la bellota!"
       courseE_aboutme_2: |-
-        Rikki piensa que es genial imprimir mensajes en Laboratorio de Sprite. ¡Esto significa que puede compartir información sobre ella en su póster!
+        Puedes hacer un póster igual que el de Rikki. Primero debes conseguir un disfraz nuevo para el sprite a continuación. ¡Se supone que ese eres tú!
 
-        Utiliza el bloque `imprimir` para ayudar a Rikki a decir al menos una cosa más.
-      courseE_aboutme_freeplay: "Gracias por ayudar a Rikki. Ahora es tu turno de
-        **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos
-        y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki,
-        ¡recuerda compartir información SEGURA!\n\n**Ejemplos de información SEGURA**\n\n-
-        \  nombre de pila\n-   videojuegos, libros y programas de TV favoritos\n-
-        \  opiniones respetuosas (sin insultos ni lenguaje inapropiado)\n\n**Ejemplos
-        de información NO SEGURA**\n\n-   nombre completo\n-   domicilio\n-   número
-        de teléfono"
+        <span style="color: #f00">Rikki: "¡Yo te ayudaré! Usa la solapa Disfraces para dibujar o elegir un disfraz que te represente."</span>
+
+        1.  Haz clic en la solapa **Disfraces**.
+        2.  Dibuja un disfraz que te represente, o elige uno de la biblioteca.
+        3.  En el código a continuación, cambia el disfraz del sprite por el tuyo.
+      courseE_aboutme_freeplay: "¡Excelente trabajo! Tu póster es igual de increíble
+        que el de Rikki.\n\n<span style=\"color: #f00\">Rikki: casi igual de increíble.
+        Casi. \U0001F609</span>\n\n¡Sigue adelante! Estas son algunas cosas que Rikki
+        le va a agregar a su póster. ¡Pruébalas!\n\n1.  ¡Agrega un fondo! Elige un
+        fondo que combine con el póster.\n2.  ¡Agrega comportamientos! Haz que cada
+        uno de tus sprites reaccione de manera diferente cuando se le haga clic.\n3.
+        \ ¡Agrega otra clase de eventos! Aplica tu creatividad y habilidades de codificación
+        y prueba eventos que no sean solo `hacer clic`."
       courseE_artist_concept1: "Recrea esta imagen. \\\r\n\\\r\n\n-   Los hexágonos
         tienen lados de 50 pixeles\\\r\n-   Los hexágonos están separados por 100
         pixeles\\\r\n-   Los anchos de lápiz son de 1 pixel, 4 pixeles y 8 pixeles."
@@ -7715,13 +7720,9 @@ es-MX:
       frozen perpendicular_b: |-
         _"¡Continuemos!"_
 
-         
-
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa"><title name="DIR">girar derecha</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> y otro bloque <xml><block type="draw_move_by_constant_dropdown"><title name="DIR">avanzar</title><title name="VALUE" config="50,100,150,200,300">100</title></block></xml> para hacer una forma de hielo.
       frozen perpendicular_test: |-
         _"¡Continuemos!"_
-
-         
 
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 

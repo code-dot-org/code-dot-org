@@ -1102,6 +1102,7 @@ it:
       Dance Party Freeplay: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_simple: Ora crea la tua discoteca aliena!
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Usa gli eventi per rendere il tuo ballo interattivo!
       Dance_Party_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e aggancialo al blocco `quando si clicca su "Esegui"` (`setup`).
@@ -1745,7 +1746,7 @@ it:
       course2_playlab_stage17_10: Aggiungi dei blocchi per cambiare lo sfondo e la velocità del ​pinguino. Poi spostalo con i tasti freccia fino a che fai un punto.
       course2_playlab_stage17_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi" per far provare la storia ai tuoi amici sui loro smartphone.
       course2_playlab_stage17_2: Riesci a fare in modo che il cane dica qualcosa e poi il gatto gli risponda?
-      course2_playlab_stage17_3: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
+      course2_playlab_stage17_3: Riesci a scrivere un programma che faccia muovere questo cane (personaggio 1) verso il gatto?
       course2_playlab_stage17_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
       course2_playlab_stage17_5: Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?
       course2_playlab_stage17_6: Riesci a scrivere un programma che fa muovere il ​pinguino quando si usano le frecce su / giù / destra / sinistra per colpire tutti i bersagli?
@@ -2274,12 +2275,12 @@ it:
       courseC_PlayLab_events2: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
       courseC_PlayLab_events2_2018: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
       courseC_PlayLab_events2_2019: Riesci a fare in modo che il cane (personaggio 1) dica qualcosa e poi il gatto (personaggio 2) gli risponda?
-      courseC_PlayLab_events3: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
-      courseC_PlayLab_events3_2018: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
-      courseC_PlayLab_events3_2019: Riesci a scrivere un programma che faccia arrivare questo cane (personaggio 1) fino al gatto?
-      courseC_PlayLab_events4: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
-      courseC_PlayLab_events4_2018: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
-      courseC_PlayLab_events4_2019: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao" quando il cane lo raggiunge.
+      courseC_PlayLab_events3: Riesci a scrivere un programma che faccia muovere questo cane (personaggio 1) verso il gatto?
+      courseC_PlayLab_events3_2018: Riesci a scrivere un programma che faccia muovere questo cane (personaggio 1) verso il gatto?
+      courseC_PlayLab_events3_2019: Riesci a scrivere un programma che faccia muovere questo cane (personaggio 1) verso il gatto?
+      courseC_PlayLab_events4: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao!" quando il cane lo raggiunge.
+      courseC_PlayLab_events4_2018: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao!" quando il cane lo raggiunge.
+      courseC_PlayLab_events4_2019: Scrivi un programma per far arrivare il cane (personaggio 1) fino al gatto e fare in modo che il gatto dica "Ciao!" quando il cane lo raggiunge.
       courseC_PlayLab_events5: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
       courseC_PlayLab_events5_2018: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
       courseC_PlayLab_events5_2019: Scrivi un programma per far dire al polpo "Novità?" quando viene cliccato.
@@ -2329,9 +2330,9 @@ it:
       courseC_artist_loop1_2018: Aggiungiamo un po' di brio!
       courseC_artist_loop1_2019: Aggiungiamo un po' di brio!
       courseC_artist_loops1: "<b>\"Zombie. Disegnare!\"</b><br>\n<br>\nLo zombie vuole disegnare una linea da dove si trova fino al giardino di girasoli. Puoi aiutarlo?<br>\n<b>(Il giardino è distante 250 pixel)</b>  "
-      courseC_artist_loops1a: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
-      courseC_artist_loops1a_2018: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
-      courseC_artist_loops1a_2019: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
+      courseC_artist_loops1a: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
+      courseC_artist_loops1a_2018: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
+      courseC_artist_loops1a_2019: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
       courseC_artist_loops2: Ora che lo zombie conosce la strada, aiutalo a scavare buche <b>lunghe 25 pixel</b> lungo il percorso per piantare più fiori!
       courseC_artist_loops2a: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
       courseC_artist_loops2a_2018: Ora usa un ciclo per disegnare l'uccello 12 volte con un angolo di 30 gradi.
@@ -2368,13 +2369,13 @@ it:
       courseC_artist_loopsPre1a: È ora di far girare tutt'intorno quella linea!
       courseC_artist_loopsPre1a_2018: È ora di far girare tutt'intorno quella linea!
       courseC_artist_loopsPre1a_2019: È ora di far girare tutt'intorno quella linea!
-      courseC_artist_loopsPrePre1a: 'Fai in modo che l''artista vada al centro dell''area gioco, quindi fagli disegnare una linea. '
-      courseC_artist_loopsPrePre1a_2018: 'Fai in modo che l''artista vada al centro dell''area gioco, quindi fagli disegnare una linea. '
-      courseC_artist_loopsPrePre1a_2019: 'Fai in modo che l''artista vada al centro dell''area gioco, quindi fagli disegnare una linea. '
+      courseC_artist_loopsPrePre1a: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare una linea. '
+      courseC_artist_loopsPrePre1a_2018: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare una linea. '
+      courseC_artist_loopsPrePre1a_2019: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare una linea. '
       courseC_artist_loopsTemplate: Ottimo! Ora che i fiori sono germogliati, aiuta lo zombie a piazzare un amico ogni 50 pixel per proteggerli finché non crescono.
-      courseC_artist_loopsTemplateA: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
-      courseC_artist_loopsTemplateA_2018: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
-      courseC_artist_loopsTemplateA_2019: Fai in modo che l'artista vada al centro dell'area gioco, quindi fagli disegnare un uccello usando un adesivo.
+      courseC_artist_loopsTemplateA: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
+      courseC_artist_loopsTemplateA_2018: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
+      courseC_artist_loopsTemplateA_2019: 'Fai in modo che l''artista vada al centro dell''area di gioco, quindi fagli disegnare un uccello usando un adesivo. '
       courseC_artist_prog1: Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
       courseC_artist_prog1_2018: Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
       courseC_artist_prog1_2019: Gioca con i blocchi che trovi nella cassetta degli attrezzi per capire cosa fanno!
@@ -2472,9 +2473,9 @@ it:
       courseC_flappy_events5: Aggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi "Esegui" per segnare un punto facendo volare Flappy oltre la prima serie di tubi.
       courseC_flappy_events5_2018: Aggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi "Esegui" per segnare un punto facendo volare Flappy oltre la prima serie di tubi.
       courseC_flappy_events5_2019: Aggiungi un blocco all'evento `quando supera un ostacolo`, quindi premi "Esegui" per segnare un punto facendo volare Flappy oltre la prima serie di tubi.
-      courseC_flappy_events6: Vedi se riesci ancora a segnare un punto, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
-      courseC_flappy_events6_2018: Vedi se riesci ancora a segnare un punto, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
-      courseC_flappy_events6_2019: Vedi se riesci ancora a segnare un punto, cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
+      courseC_flappy_events6: Vedi se riesci ancora a segnare un punto cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
+      courseC_flappy_events6_2018: Vedi se riesci ancora a segnare un punto cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
+      courseC_flappy_events6_2019: Vedi se riesci ancora a segnare un punto cambiando di quanto Flappy sbatte le ali ogni volta che clicchi.
       courseC_flappy_events7: Adesso, prova a cambiare la scena attaccando un blocco all'evento `quando si clicca su "Esegui"`.
       courseC_flappy_events7_2018: Adesso, prova a cambiare la scena attaccando un blocco all'evento `quando si clicca su "Esegui"`.
       courseC_flappy_events7_2019: Adesso, prova a cambiare la scena attaccando un blocco all'evento `quando si clicca su "Esegui"`.
@@ -2661,8 +2662,8 @@ it:
         -   Cosa sembra ciò che ottieni disegnando due fiocchi di neve uno sopra l'altro?
       courseD_artist_1_2018: Disegna un esagono con lati lunghi **50** pixel.
       courseD_artist_1_2018_2019: Disegna un esagono con lati lunghi **50** pixel.
-      courseD_artist_2_2018: Adesso, gira a destra di **60** gradi, quindi disegna una linea retta lunga **150** pixel e salta indietro al centro dell'area gioco.
-      courseD_artist_2_2018_2019: Adesso, gira a destra di **60** gradi, quindi disegna una linea retta lunga **150** pixel e salta indietro al centro dell'area gioco.
+      courseD_artist_2_2018: Adesso, gira a destra di **60** gradi, quindi disegna una linea retta lunga **150** pixel e salta indietro al centro dell'area di gioco.
+      courseD_artist_2_2018_2019: Adesso, gira a destra di **60** gradi, quindi disegna una linea retta lunga **150** pixel e salta indietro al centro dell'area di gioco.
       courseD_artist_3_2018: 'Annida tutto il codice all''interno di un altro ciclo `ripeti ... volte` ed eseguilo per un totale di **6** volte. '
       courseD_artist_3_2018_2019: 'Annida tutto il codice all''interno di un altro ciclo `ripeti ... volte` ed eseguilo per un totale di **6** volte. '
       courseD_artist_4_2018: Aggiungi una piccola forma alla fine della tua linea!

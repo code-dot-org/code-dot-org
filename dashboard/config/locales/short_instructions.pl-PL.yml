@@ -1029,6 +1029,9 @@ pl:
       CSPU5_U3 - Loops - 4_2018: |-
         Użyj Poleceń Debugowania do utworzenia listy
         wszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)
+      CSPU5_U3 - Loops - 4_2018pilot: |-
+        Użyj Poleceń Debugowania do utworzenia listy
+        wszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)
       CSPU5_U3 - Loops - 4_2019: |-
         Użyj Poleceń Debugowania do utworzenia listy
         wszystkich wartości, które wypadły przed 6. (Kliknij, aby zobaczyć pełne instrukcje)
@@ -1800,6 +1803,7 @@ pl:
       Crack a Caesar Cipher: Instrukcje
       Crack a Caesar Cipher_2018: Instrukcje
       Crack a Caesar Cipher_2019: Instrukcje
+      Dance Party Template 1_2019: Szablon
       Dance Party Template 2_2019: Szablon
       Dance_Party_01: Przeciągnij blok "utwórz nowego" do obszaru roboczego i podłącz
         go w bloku "układ".

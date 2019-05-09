@@ -18,7 +18,7 @@ pt:
         name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: 'E-mail'
         parent_email: 'Email dos Responsáveis'
-        personal_email: "Adereço de email pessoal <a href=\"%{url}\">(clique aqui, se não tiver um adereço de email)</a>"
+        personal_email: "Endereço de email pessoal <a href=\"%{url}\">(clique aqui, se não tiver um adereço de email)</a>"
         username: 'Nome de utilizador'
         password: 'Palavra-passe'
         password_confirmation: 'Confirmação da palavra-passe'
