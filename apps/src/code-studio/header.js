@@ -198,6 +198,7 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 header.showMinimalProjectHeader = function() {
+  getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
