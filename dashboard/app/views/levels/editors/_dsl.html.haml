@@ -35,8 +35,4 @@
     %textarea#level_markdown_textarea
     #level_markdown_textarea_preview
 
-  .markdown.teacher
-    %p Edit Teacher Only Markdown:
-
-    %textarea#level_teacher_markdown_textarea
-    #level_teacher_markdown_textarea_preview
+  = render partial: 'levels/editors/teacher_only_markdown', locals: {f: f}
