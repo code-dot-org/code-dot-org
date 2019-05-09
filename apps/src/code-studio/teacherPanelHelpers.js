@@ -5,6 +5,48 @@ import {
   setSections,
   selectSection
 } from '../templates/teacherDashboard/teacherSectionsRedux';
+import {Provider} from 'react-redux';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {reload} from '@cdo/apps/utils';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ScriptTeacherPanel} from './components/progress/ScriptTeacherPanel';
+
+/**
+ * Render our teacher panel that shows up on our course overview page.
+ */
+export function renderTeacherPanel(store, scriptId, section) {
+  const div = document.createElement('div');
+  div.setAttribute('id', 'teacher-panel-container');
+  queryLockStatus(store, scriptId);
+
+  if (section && section.students) {
+    store.dispatch(setStudentsForCurrentSection(section.id, section.students));
+  }
+
+  const onSelectUser = id => {
+    updateQueryParam('user_id', id);
+    reload();
+  };
+
+  const getSelectedUserId = () => {
+    const userIdStr = queryString.parse(location.search).user_id;
+    const selectedUserId = userIdStr ? parseInt(userIdStr, 10) : null;
+    return selectedUserId;
+  };
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptTeacherPanel
+        onSelectUser={onSelectUser}
+        getSelectedUserId={getSelectedUserId}
+      />
+    </Provider>,
+    div
+  );
+  document.body.appendChild(div);
+}
 
 /**
  * Query the server for lock status of this teacher's students
