@@ -28,8 +28,8 @@
   dashboard.header.renderScriptName(
     document.getElementsByClassName('script_name_container')[0],
     {
-      name: #{text},
-      href: #{script_path(@script, section_id: section_id, user_id: user_id)},
+      name: #{text.inspect},
+      href: #{script_path(@script, section_id: section_id, user_id: user_id).inspect},
       smallText: #{small_text}
     }
   )

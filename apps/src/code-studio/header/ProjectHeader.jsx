@@ -9,9 +9,12 @@ import ProjectRemix from './ProjectRemix';
 import ProjectShare from './ProjectShare';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
+import {refreshProjectName} from '../headerRedux';
+
 class ProjectHeader extends React.Component {
   static propTypes = {
-    projectName: PropTypes.string.isRequired
+    projectName: PropTypes.string.isRequired,
+    refreshProjectName: PropTypes.func.isRequired
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -48,6 +51,7 @@ class ProjectHeader extends React.Component {
     }
 
     dashboard.project.rename(newName, () => {
+      this.props.refreshProjectName();
       this.setState({
         name: dashboard.project.getCurrentName(),
         editName: false,
@@ -83,6 +87,7 @@ class ProjectHeader extends React.Component {
       return (
         <div
           className="project_save header_button header_button_light"
+          onClick={this.saveNameChange}
           disabled={this.state.savingName}
         >
           {dashboard.i18n.t('project.save')}
@@ -125,6 +130,11 @@ class ProjectHeader extends React.Component {
   }
 }
 
-export default connect(state => ({
-  projectName: state.header.projectName
-}))(ProjectHeader);
+export default connect(
+  state => ({
+    projectName: state.header.projectName
+  }),
+  {
+    refreshProjectName
+  }
+)(ProjectHeader);

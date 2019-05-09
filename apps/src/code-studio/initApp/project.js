@@ -853,7 +853,7 @@ var projects = (module.exports = {
       return;
     }
 
-    $('.project_updated_at').text(msg.saving());
+    header.showProjectSaving();
 
     // Force a new version if we have not done so recently. This creates
     // periodic "checkpoint" saves if the user works for a long period of time
@@ -1238,7 +1238,7 @@ var projects = (module.exports = {
     var destChannel = current.id;
     assets.copyAll(srcChannel, destChannel, function(err) {
       if (err) {
-        $('.project_updated_at').text('Error copying files'); // TODO i18n
+        header.showProjectSaveError();
         return;
       }
       executeCallback(callback);

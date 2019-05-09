@@ -32,7 +32,7 @@ class ScriptName extends React.Component {
         href={this.props.href}
         className={className}
         style={
-          this.props.showProjectUpdatedAt && styles.scriptLinkWithUpdatedAt
+          this.props.showProjectUpdatedAt ? styles.scriptLinkWithUpdatedAt : {}
         }
       >
         {this.props.name}

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import refreshProjectName from '../headerRedux';
+import {refreshProjectName} from '../headerRedux';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -57,7 +57,5 @@ export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn
   }),
-  {
-    refreshProjectName
-  }
+  {refreshProjectName}
 )(ProjectRemix);
