@@ -27,13 +27,13 @@ class ProjectUpdatedAt extends React.Component {
 
   renderText() {
     if (this.props.status === statuses.error) {
-      const saveErrorTooltip =
-        "It looks like we couldn't save your progress. Make sure you have a " +
-        'good internet connection and try running the project again to save it.';
       return (
-        <span className="project-save-error" title={saveErrorTooltip}>
+        <span
+          className="project-save-error"
+          title={msg.projectSaveErrorTooltip()}
+        >
           <i className="fa fa-exclamation-triangle" />
-          Error saving project
+          {msg.projectSaveError()}
         </span>
       );
     }
@@ -51,7 +51,7 @@ class ProjectUpdatedAt extends React.Component {
       );
     }
 
-    return 'Not saved';
+    return msg.notSaved();
   }
 
   render() {
