@@ -5406,7 +5406,7 @@ en:
       courseE_aboutme_2: Use the **Costumes** tab to create or select a new costume for your sprite!
       courseE_aboutme_3: When your character is clicked, share something SAFE about yourself using the <xml><block type="gamelab_printText" block-text="print"></block></xml> block in the `World` toolbox category!
       courseE_aboutme_4: Add at least two new sprites to your poster. These sprite should represent something about yourself. Assign custom costumes to these sprites, then test it out!
-      courseE_aboutme_5: Share information about the sprites you just added! When they are clicked, print some SAFE information about them.
+      courseE_aboutme_5: Make your other sprites share information when they are clicked. This can be information about you or just about them. Be sure whatever you share is SAFE!
       courseE_aboutme_6: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
       courseE_aboutme_7: Play with Rikki's poster and code for a bit, then click **Finish**.
       courseE_aboutme_freeplay: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
