@@ -211,13 +211,7 @@ export default class SetupChecklist extends Component {
   }
 
   contactSupport() {
-    return (
-      <UnsafeRenderedMarkdown
-        markdown={
-          i18n.stillHavingTrouble() + ' ' + i18n.contactGeneralSupport()
-        }
-      />
-    );
+    return <UnsafeRenderedMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
   render() {
