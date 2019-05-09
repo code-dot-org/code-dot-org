@@ -12029,6 +12029,8 @@ en:
               name: 'Loops Practice: Simulations'
             Lists Make:
               name: Lists Make
+            Traversals Investigate:
+              name: Traversals Investigate
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
