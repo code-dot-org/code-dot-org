@@ -683,6 +683,7 @@ tr:
       CSPU5_U3 - Keys - Final Image Scroller: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
       CSPU5_U3 - Loops - 4: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
       CSPU5_U3 - Loops - 4_2018: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
+      CSPU5_U3 - Loops - 4_2018pilot: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
       CSPU5_U3 - Loops - 4_2019: Hata ayıklama komutları kullanın ve 6 dan önceki değerleri listeleyin. (Tüm talimatlar için tıklayınız)
       CSPU5_U3L13 - Turtle move with button: Tiklandiginda kaplumbagayi hareket ettirecek bir buton ekle. (Tum talimatlari gormke icin tikla)
       CSPU5_U3L15 full clicker app: Tıkırtı oyununu tamamla! (Tüm talimatlar için tıklayınız)
@@ -1023,6 +1024,7 @@ tr:
         -   Merdiven basamağı deseninde iki farklı açı kullanırsan ne olur?\\r
         -   Baklava desenini daha uzun ya da daha kısa yaparsan ne olur?\\r
         -   iki kar tanesini üst üste çizersen nasıl gözükür?
+      Dance Party Template 1_2019: Şablon
       Dance Party Template 2_2019: Şablon
       Dance_Party_01: "`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın."
       Dance_Party_01_low: "`Yeni yap` bloğunu çalışma alanına sürükleyin ve `kurulum` bloğunun içine bağlayın."

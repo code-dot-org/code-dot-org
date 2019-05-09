@@ -1748,10 +1748,10 @@ hy:
         flag first?"
       Course 4 Play Labs For Loops 8a: "To finish our game, we need to\nbring back
         the \"increment\" variable!    Let's tie it to the level of the\ngame.\\\r\n\\\r\n\n1.
-        \ Keep track of the number of times The Wizard is clicked.\\\r\n2.  2\\)\n
-        \   If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n
-        \   \"increment\" by 1 and start again.\\\r\n3.  If The Wizard does not get
-        clicked\n    at least 10 times, the game is over."
+        \ Keep track of the number of times The Wizard is clicked.\\\r\n2.  2)\n    If
+        The Wizard is clicked at least 10 times before Dog counts to 30, raise\n    \"increment\"
+        by 1 and start again.\\\r\n3.  If The Wizard does not get clicked\n    at
+        least 10 times, the game is over."
       Course 4 Playlab For Loop Freeplay: |-
         Freeplay: Use everything you've
         learned so far to make a game that includes a `for` loop!
@@ -1887,6 +1887,7 @@ hy:
       Crack a Caesar Cipher: Հրահանգներ
       Crack a Caesar Cipher_2018: Հրահանգներ
       Crack a Caesar Cipher_2019: Հրահանգներ
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       Food Fight!: "We've added one last function for\nyou. \\\r\n\\\r\nUse an \"if\"
         statement to program your game to call the \"level_up\"\nfunction only when
