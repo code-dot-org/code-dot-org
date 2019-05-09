@@ -7,23 +7,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from './redux';
-import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 import SectionSelector from './components/progress/SectionSelector';
 import ViewAsToggle from './components/progress/ViewAsToggle';
 import TeacherContentToggle from './components/TeacherContentToggle';
-import {setSectionLockStatus} from './stageLockRedux';
 import {ViewType, setViewType} from './viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {
-  setSections,
-  selectSection,
-  setStudentsForCurrentSection
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getHiddenStages} from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '@cdo/apps/utils';
+import {queryLockStatus} from './teacherPanelHelpers';
 
 function resizeScrollable() {
   var newHeight =
@@ -77,35 +72,6 @@ export function onReady() {
   });
 
   renderIntoLessonTeacherPanel();
-}
-
-/**
- * Query the server for lock status of this teacher's students
- * @returns {Promise} when finished
- */
-function queryLockStatus(store, scriptId) {
-  return new Promise((resolve, reject) => {
-    $.ajax('/api/lock_status', {
-      data: {
-        user_id: clientState.queryParams('user_id'),
-        script_id: scriptId
-      }
-    }).done(data => {
-      // Extract the state that teacherSectionsRedux cares about
-      const teacherSections = Object.values(data).map(section => ({
-        id: section.section_id,
-        name: section.section_name
-      }));
-
-      store.dispatch(setSections(teacherSections));
-      store.dispatch(setSectionLockStatus(data));
-      const query = queryString.parse(location.search);
-      if (query.section_id) {
-        store.dispatch(selectSection(query.section_id));
-      }
-      resolve();
-    });
-  });
 }
 
 /**
