@@ -7546,6 +7546,8 @@ en:
               name: Project - Personal Portfolio Website
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: Course A
@@ -8269,6 +8271,8 @@ en:
               name: Circuits and Physical Prototypes
             'Project: Prototype an Innovation':
               name: 'Project: Prototype an Innovation'
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
         coursee-2018:
           title: Course E (2018)
           assignment_family_title: Course E
@@ -8736,6 +8740,8 @@ en:
               name: Project - App Presentation
               description_student: Each team prepares a presentation to "pitch" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
         csd5-2018:
           title: CSD Unit 5 - Data and Society ('18-'19)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -8802,6 +8808,8 @@ en:
               name: Project - Solve a Data Problem
               description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
         csp2-2018:
           title: CSP Unit 2 - Digital Information ('18-'19)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -10376,6 +10384,18 @@ en:
               name: Crowdsourcing
               description_student: ''
               description_teacher: ''
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
+            Editing Behaviors:
+              name: Editing Behaviors
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+            Build A Project:
+              name: Build A Project
+            Dance Party:
+              name: Dance Party
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12253,15 +12273,17 @@ en:
               name: Graph Paper Programming
             Programming in Maze:
               name: Programming in Maze
-          title: CSF Express 2018 For Vietnam
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+          title: Express For Vietnam (2018)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt Nam.
+          description: "Khoa Học Máy Tính (Computer Science) \x1Dlà môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động cho phù hợp với học sinh Việt Nam.\r\n"
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
               name: CSD post-course survey
-          title: CSD Student Post-Course Survey 2018
+          title: CSD Student Post-Course Survey ('18-'19)
           description_audience: CSD Students
           description_short: CSD Student Post-Course Survey 2018
           description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
@@ -12283,6 +12305,8 @@ en:
               name: Lists Investigate
             Lists Practice:
               name: Lists Practice
+            Lists Make:
+              name: Lists Make
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
