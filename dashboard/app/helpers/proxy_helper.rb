@@ -160,6 +160,9 @@ module ProxyHelper
   end
 
   def allowed_ip_address?(hostname)
+    # There are some cases where we proxy to ourselves, which may not work on non-production environments that run
+    # on an internal IP address.
+    return true unless rack_env?(:production)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
     PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)}
   end
