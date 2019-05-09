@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import {convertBlocksXml} from '../../craft/code-connection/utils';
+import {convertBlocksXml} from '../../../craft/code-connection/utils';
 
 /**
  * Show a popup dialog to collect an Hour of Code share link, and create a new

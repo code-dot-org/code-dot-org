@@ -1,7 +1,7 @@
 /* globals dashboard */
 
 import React from 'react';
-import {shareProject} from '../headerShare';
+import {shareProject} from '../../headerShare';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {
