@@ -473,13 +473,13 @@ fr:
         need a button on your home screen to go to your new\nscreen. You can make
         a new button in two ways. \\\r\n\\\r\n\n1.  If you like the\n    style of
         the \"Dogs\" button you can make a copy of it. Click the button and\n    then
-        click \"Duplicate\".\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10\n
+        click \"Duplicate\".\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>\n
         \   AM.png>)\\\r\n    \\\r\n2.  You can also make a new button from scratch
-        by dragging\n    it in from the Design Toolbox.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09\n
+        by dragging\n    it in from the Design Toolbox.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Click and drag to move your new button where
-        you want it.\\\r\n    \\\r\n4.  3\\.\n    Once you have a new button give
-        it a clear name, \"catButton\". You can also\n    change its text to read
-        \"Cats!\".\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14\n
+        you want it.\\\r\n    \\\r\n4.  3.\n    Once you have a new button give it
+        a clear name, \"catButton\". You can also\n    change its text to read \"Cats!\".\\\r\n
+        \   \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>\n
         \   AM.png>)\\\r\n    \\\r\n5.  There's lots of other ways you can change
         the look\n    of your button. Experiment with the full menu of options.\\\r\n
         \   \\\r\n6.  Once you're\n    done run your app to make sure your button
@@ -490,34 +490,34 @@ fr:
         This `onEvent()` block runs some code when the `dogButton` is clicked.\nYou're
         going to need a second `onEvent()` block to make your button work.\nThere's
         two ways to do this.\\\r\n\\\r\n\n1.  From Code Mode you can drag in the\n
-        \   block \\\r\n    \\\r\n    \\\\t![](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56\n
+        \   block \\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>\n
         \   AM.png>)\\\r\n    \\\r\n2.  From Design Mode your button has an \"Events\"
-        tab.\n    Click 'Insert and show code' to add the code.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18\n
+        tab.\n    Click 'Insert and show code' to add the code.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Use the drop down to make sure you're making
-        the event\n    respond to the \"catButton\".\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03\n
+        the event\n    respond to the \"catButton\".\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03>\n
         \   AM.png>)\\\r\n    \\\r\n4.  The `setScreen()` block changes the screen.
         Drag this\n    block inside your `onEvent()` block and choose your `catScreen`
-        from the list.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02\n
+        from the list.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>\n
         \   AM.png>)\\\r\n    \\\r\n5.  Run your app. If everything worked correctly
         your cat\n    button should now take you to your cat screen when you click
         it. When you're\n    ready move on to learn how to add sounds to your app!"
       AppLab Intro 1 - Add Screen: "# Getting Started - Add\n\na cats screen\\\r\n\\\r\n\n1.
         \ You're going to make a cats screen. This is \"Design\n    Mode\" where you
         can add and edit screens. To add a screen click the screen\n    dropdown and
-        select \"New screen\".\\\r\n    \\\r\n    \\\\t![expandable](<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33\n
+        select \"New screen\".\\\r\n    \\\r\n    \\\\t![expandable]\\(\\<<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33>\n
         \   AM.png>) \\\r\n    \\\r\n2.  Then name your new screen \"catScreen\".
-        \\\r\n    \\\r\n    \\\\t![expandable](<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33\n
+        \\\r\n    \\\r\n    \\\\t![expandable]\\(\\<<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Finally, choose the cats background image
-        of your screen\\\r\n    \\\r\n    \\\\t![expandable](<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40\n
+        of your screen\\\r\n    \\\r\n    \\\\t![expandable]\\(\\<<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40>\n
         \   AM.png>)\\\r\n    \\\r\n    Once you have added your new screen hit \"Finish\"
         to learn\n    how to add buttons to navigate to the screen."
       AppLab Intro 1 - Add Sound: "# Getting Started - Add Sound\\\r\n\n\\\r\nApp\nLab
         can play sound too. You'll need to use the `playSound()` block to do\nit.\\\r\n\\\r\n\n1.
         \ Drag a `playSound()` block into your `onEvent`. This will make\n    the
         sound play when your user clicks the button. Then click \"Choose...\"\n    from
-        the menu.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\n
+        the menu.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>\n
         \   AM.png>)\\\r\n    \\\r\n2.  Go through the \"Sound Library\" and find
-        the sounds you\n    want. There's tons!\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\n
+        the sounds you\n    want. There's tons!\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Run your app to check out how your sounds
         work."
       AppLab Intro 1 - Build Your Adventure: "# Build Your Adventure\\\r\n\n\\\r\nUse\nthis
@@ -541,7 +541,7 @@ fr:
         \ Use the screen selector to choose the screen you just made\n    ([Show me
         where](#triggercallout=selector))\\\r\n2.  Drag a new \"text area\"\n    onto
         your screen to add it. ([Show me where](#triggercallout=textArea))\\\r\n3.
-        \ 3\\.\n    Drag the bottom right corner of your text area to change its size.\\\r\n4.
+        \ 3.\n    Drag the bottom right corner of your text area to change its size.\\\r\n4.
         \ Change\n    the text to tell your user what happens on this screen. Then
         change the color\n    of your text if you want!\\\r\n    \\\r\n    Click \"Run\"
         and then \"Finish\" to move\n    on.\\\r\n    \\\r\n    ![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif)\n
@@ -560,12 +560,11 @@ fr:
         **Design Mode** where you can personalize the look of\nyour app. Get your
         adventure started by picking a fun title!\\\r\n\\\r\n\n1.  Click\n    the
         title of your app. ([Show me where](#triggercallout=titleCallout))\\\r\n2.
-        \ 2\\.\n    Change the \"text\" to pick whatever name you like! ([Show me
-        where](#triggercallout=designMenu))\\\r\n3.  3\\.\n    Scroll down the menu
-        to change the color of your title ([Show me where](#triggercallout=changeTextColor))\\\r\n
-        \   \\\r\n    Once\n    you like the look of your title hit \"Run\" once to
-        make sure it's looking\n    good. Then hit \"Finish\" to move on!\\\r\n    \\\r\n
-        \   ![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif)\n
+        \ 2.\n    Change the \"text\" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\\\r\n3.
+        \ 3.\n    Scroll down the menu to change the color of your title ([Show me
+        where](#triggercallout=changeTextColor))\\\r\n    \\\r\n    Once\n    you
+        like the look of your title hit \"Run\" once to make sure it's looking\n    good.
+        Then hit \"Finish\" to move on!\\\r\n    \\\r\n    ![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif)\n
         \   Click here to see all three steps in a GIF"
       AppLab Intro 2 - Edit startScreen2: "Nice work! Time to\nstart filling in your
         story.\\\r\n\\\r\n\n1.  Click the story text on this screen.\n    ([Show me
@@ -593,23 +592,23 @@ fr:
       AppLab Intro 2 - add Button: "Now you have two screens,\nbut no way to get between
         them. Time to start adding buttons!\\\r\n\\\r\n\n1.  Use\n    the screen selector
         to go back to your \"startScreen\" ([Show me where](#triggercallout=selector))\\\r\n2.
-        \ 2\\.\n    Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\\r\n3.
-        \ 3\\.\n    Give your button a clear \"id\" that describes what it does ([Show
-        me where](#triggercallout=changeButtonID))\\\r\n4.  4\\.\n    Change the \"text\"
-        of your button to describe where it will take the user.\\\r\n5.  5\\.\n    Personalize
+        \ 2.\n    Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\\r\n3.
+        \ 3.\n    Give your button a clear \"id\" that describes what it does ([Show
+        me where](#triggercallout=changeButtonID))\\\r\n4.  4.\n    Change the \"text\"
+        of your button to describe where it will take the user.\\\r\n5.  5.\n    Personalize
         your button's other properties like \"text color\" or \"background\n    color\".\\\r\n
         \   \\\r\n    Click \"Run\" then \"Finish\" to move on and start writing\n
         \   the code that will make your button work\\\r\n    \\\r\n    ![expandable](https://images.code.org/43f2678e4748a1fa09556f75cad65e97-image-1505766882756.gif)\n
         \   Click to see a GIF of all steps"
       AppLab Intro 2 - add images: "You now know everything\nyou need to make a simple
         Choose Your Own Adventure app, but you can add so\nmuch more! If you want
-        to add images to your screen it's easy!\\\r\n\\\r\n1\\.\nIn another tab in
-        your browser go online and find an image you want to use\\\r\n2\\.\nRight
-        click the image and save its URL (usually \"Copy link address\" or \"Copy\nimage
-        URL\")\\\r\n\n3.  Back in App Lab go to Design Mode\\\r\n4.  Drag an \"image\"\n
-        \   element onto your screen\\\r\n5.  Paste the URL you copied into the \"image\"\n
-        \   property\\\r\n    \\\r\n    \"Run\" your app once to test it. Then hit
-        \"Finish\" to move\n    to learn to add sounds.\\\r\n    \\\r\n    ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)\n
+        to add images to your screen it's easy!\\\r\n\\\r\n1.\nIn another tab in your
+        browser go online and find an image you want to use\\\r\n2.\nRight click the
+        image and save its URL (usually \"Copy link address\" or \"Copy\nimage URL\")\\\r\n\n3.
+        \ Back in App Lab go to Design Mode\\\r\n4.  Drag an \"image\"\n    element
+        onto your screen\\\r\n5.  Paste the URL you copied into the \"image\"\n    property\\\r\n
+        \   \\\r\n    \"Run\" your app once to test it. Then hit \"Finish\" to move\n
+        \   to learn to add sounds.\\\r\n    \\\r\n    ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)\n
         \   Click to see GIF of all steps"
       AppLab Intro 2 - add more buttons 2: "Time to add a second\nbutton and write
         the code to make it work.\\\r\n\\\r\n\n1.  Drag a second button\n    onto
@@ -623,8 +622,8 @@ fr:
         \   Click to see a GIF of all steps"
       AppLab Intro 2 - add more buttons: "If this is going to\nbe a real Choose Your
         Own Adventure, you're need to add some more choices!\nStart by adding a screen
-        for the second choice your player could make.\\\r\n\\\r\n1\\.\nUse the screen
-        selector to add a new screen. Give it a clear \"id\".\\\r\n2\\.\nSet the \"background
+        for the second choice your player could make.\\\r\n\\\r\n1.\nUse the screen
+        selector to add a new screen. Give it a clear \"id\".\\\r\n2.\nSet the \"background
         color\" of your screen\\\r\n\n3.  Add a \"Text Area\" to your\n    screen
         describing what happens on it.\\\r\n    \\\r\n    Click \"Run\" then \"Finish\"\n
         \   to move on. You'll add another button and write the code to make it work.\\\r\n
@@ -2673,7 +2672,7 @@ fr:
       CSD U2 link pages: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the file list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -2833,7 +2832,7 @@ fr:
       CSD U2 new page: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -2843,7 +2842,7 @@ fr:
       CSD U2 new page_2018: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -2853,7 +2852,7 @@ fr:
       CSD U2 new page_2019: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
-        a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>).
+        a new HTML file by clicking  \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>).
         \ The new file will appear in the files list on the left side of the\nworkspace.\\\r\n\n-
         \  Rename the file, either by right clicking it and choosing\n    \"Rename\",
         or by clicking on it when it's already highlighted.  **Make sure\n    the
@@ -2964,17 +2963,17 @@ fr:
         to help you\n    find any potential problems with your site.\\\r"
       CSD U2 project share: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to share
         your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click the\n
-        \   ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        \   \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2018: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 project share_2019: "# Share Your Project\\\r\n\n\\\r\nIt's\ntime to
         share your project with the world!\\\r\n\\\r\n\n# Do This\\\r\n\n-   Click
-        the\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        the\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>) button at the top of this page.\\\r\n-   Copy the URL it gives
         you, and\n    email it to the people you want to see your page.\\\r\n    \\\r"
       CSD U2 text style freeplay - OLD: "# Adding Styles\\\r\n\n\\\r\nNow\nyou can
@@ -3486,172 +3485,172 @@ fr:
         \  What do you think the exclamation mark (`!`) on line 10\n    does?\\\r\n-
         \  How might you use the different keypress blocks in a game?"
       CSD U3 L11 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L11 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L12 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L13 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L15 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L16 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L17 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L18 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L19 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L3 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L4 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L5 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L6 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L7 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned to create
-        whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2018: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 L9 Freeplay_2019: "# Free Play\\\r\n\n\\\r\nUse what you've\nlearned
-        to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
-        \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+        to create whatever you like.  When you're finished, you can click  \\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)
+        \ to send your creation to a friend, or \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         to send it to your Projects Gallery."
       CSD U3 Mouse Input Bee 2: "# Random Around Point\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\\r\n\\\r\nNow
         that you can make the bee follow the mouse,\nlets make a bee fly around the
@@ -3775,16 +3774,16 @@ fr:
         watchers to help debug your program._"
       CSD U3 Plotting Shapes Shape Lab Open: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2019: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
-        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Random Add a Door: "<img src=\"https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\n\n-
         \  Write\n    code that makes a red rectangle that is taller than the one
@@ -3814,7 +3813,7 @@ fr:
       CSD U3 Random Number Map: "# Random Numbers\\\r\n\n\\\r\n\n# Using\n\nRandom
         Numbers\\\r\n\\\r\nThe `randomNumber()` block can be used to generate random\nnumbers
         in your programs. It can be used in the place of a single number and\nso can
-        make your program run a little differently each time.\\\r\n\\\r\n![](<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09\nPM.png>)\\\r\n\\\r\n<img
+        make your program run a little differently each time.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09>\nPM.png>)\\\r\n\\\r\n<img
         src=\"https://images.code.org/246e7ac850015aa830d469b7eeb5f00e-image-1491523022253.50.04\nPM.png\"
         style=\"float:left;width:150px\">\\\r\n\\\r\n<img src=\"https://images.code.org/01b10dc034475fd5a90bd3c7bd0c51b8-image-1491523025607.50.17\nPM.png\"
         style=\"float:left;width:150px\">\\\r\n\\\r\n<img src=\"https://images.code.org/0f0c3cc4d42923dc4321809daf189053-image-1491523028093.50.49\nPM.png\"
@@ -3824,7 +3823,7 @@ fr:
         program you can see three examples of possible output. Notice that even\nthough
         it's the same program it's a different image every time.\\\r\n\\\r\nYou\ncan
         use the `randomNumber()` command multiple times in your programs. Each\ntime
-        it's used a new random number will be generated.\\\r\n\\\r\n![](<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33\nPM.png>)"
+        it's used a new random number will be generated.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33>\nPM.png>)"
       CSD U3 Random Taller Rectangle: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10\nPM.png\"
         style=\"float:right;height:150px; border: 1px solid #CCC\">\\\r\n\n# \n\nRectangle
         Size\\\r\n\\\r\nThese `rect` blocks have two more parameters that you\ncan
@@ -4871,27 +4870,27 @@ fr:
         find the three world records encoded in the binary string below.  The\nanswers
         are in order in the string.\\\r\n\\\r\n\n1.  Most canned drinks opened by\n
         \   a parrot in one minute.\\\r\n2.  Most ice cream scoops balanced on a cone.\\\r\n3.
-        \ 3\\.\n    Most number of people lifted and thrown in two minutes.\\\r\n
-        \   \\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n
+        \ 3.\n    Most number of people lifted and thrown in two minutes.\\\r\n    \\\r\n
+        \   ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n
         \   \\\r\n    # \n    Do This\\\r\n4.  Try to decode the three numbers from
         a the binary string\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\r\n
         \   -   Was there any other information\n        you need to be certain your
         numbers are correct?"
       CSD U5 binary 4-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the
-        two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind
-        the two world records encoded in the binary string below.\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+        the two world records encoded in the binary string below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\r\n2.
         \ Most canned drinks opened by a parrot in one minute. (6 bits)\\\r\n    \\\r\n
         \   # \n    Do This\\\r\n3.  Decode the two numbers from the binary string."
@@ -4916,105 +4915,105 @@ fr:
       CSD U5 binary 5-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na widget
         that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 5-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         widget that can calculate numbers up to to eight bits. (If you have a shorter\nnumber,
         you can just leave the extra bits at the left off.) You can use it\nto find
-        the values of the two world records below.\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+        the values of the two world records below.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Longest tail on a dog (in inches) (5 bits)\\\r\n2.  Most spoons\n    balanced
         on someone's face (5 bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Decode the
         two\n    numbers from a the binary string."
       CSD U5 binary 6-new: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na new
         bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2018: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 6-new_2019: "# Decoding multiple numbers\\\r\n\n\\\r\nHere's\na
         new bit string.  This time, you don't know the bit length of the two numbers.
-        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+        \ Try\nto decode the numbers without knowing the bit length.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ Largest wind chime, in feet (? bits)\\\r\n2.  Furthest arrow\n    shot with
         someone's feet (in feet) (? bits)\\\r\n    \\\r\n    # Do This\\\r\n3.  Try
         to\n    decode the two numbers from the binary string.\\\r\n4.  Discuss with
         your partner\n    why you cannot know for sure whether your answer is correct."
       CSD U5 binary 7-new: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how many
         bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2018: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 binary 7-new_2019: "# Bit Length\\\r\n\n\\\r\nIf you don't\nknow how
         many bits long each number is, you won't be able to decode a string\nof numbers.\\\r\n\\\r\nFor
-        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\nIf
-        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\nIf
-        you split it like this, the string reads 42, 20.\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\nTo
+        example, the following binary string could be decoded\nmany different ways.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\nIf
+        you split the string like this, the string reads 12, 84.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\nIf
+        you split it like this, the string reads 42, 20.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\nTo
         solve this problem, people agree on a fixed length for every\nnumber.  The
         following string uses the same two numbers, but each number takes\nup exactly
-        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+        eight bits, no matter how many bits it actually needs.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         Do This\\\r\n\n\\\r\n\n-   Use the binary widget to decode the string\n    that
         uses eight bit numbers.\\\r\n-   Check you answer with a partner to see whether\n
         \   you got the same answer."
       CSD U5 black white images pixelation 2: "# Do This\\\r\n\n\\\r\nUse\nthe pixelation
-        widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# Do This\\\r\n\n\\\r\nUse\nthe
-        pixelation widget to draw a smiley face\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+        pixelation widget to draw a smiley face\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# Do This\\\r\n\n\\\r\nThe\nwidth and
         height sliders are set incorrectly for this image so it doesn't\nlook like
-        anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2018: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 3_2019: "# Do This\\\r\n\n\\\r\nThe\nwidth
         and height sliders are set incorrectly for this image so it doesn't\nlook
-        like anything. Change them until you find the image.\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
+        like anything. Change them until you find the image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
       CSD U5 black white images pixelation 4: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2018: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 4_2019: "# Do This\\\r\n\n\\\r\nAdd\neyebrows
-        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+        to this smiley face. Remember to use the \"Readable Format\" if you\nget stuck.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 5: "# Do This\\\r\n\n\\\r\nNow\nit's your
         turn. Draw anything you want in the pixelation widget. Feel free\nto change
         the width and height of your image if you wish."
@@ -7490,7 +7489,7 @@ fr:
         \   will reach their flag first?"
       Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back
         the `increment` variable!    Let's tie it to the level\nof the game.\\\r\n\\\r\n\n1.
-        \ Keep track of the number of times The Wizard is clicked.  \\\r\n2.  2\\)\n
+        \ Keep track of the number of times The Wizard is clicked.  \\\r\n2.  2)\n
         \   If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n
         \   `increment` by 1 and start again.  \\\r\n3.  If The Wizard does not get
         clicked\n    at least 10 times, the game is over.  "
@@ -7749,6 +7748,7 @@ fr:
         \   happens if you use two different angles in your stair step pattern?\\\r\n-
         \  What\n    happens if you make your diamond pattern longer or shorter?\\\r\n-
         \  What does\n    it look like to draw two snowflakes on top of one another?\\\r"
+      Dance Party Template 1_2019: Modèle
       Dance Party Template 2_2019: Modèle
       Dance_Party_01: |-
         _Faisons une fête dansante !_
@@ -8559,7 +8559,7 @@ fr:
         in the pictures on the right"
       Room Escape Workshop - 3: "# Hide the Code\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
         \ In Design Mode Click on the white\n    square where it says \"CODE\". Change
-        it to show a secret code of your choice\\\r\n2.  2\\.\n    Drag the picture
+        it to show a secret code of your choice\\\r\n2.  2.\n    Drag the picture
         down to cover the secret code\\\r\n    \\\r\n    ![](<>)"
       Room Escape Workshop - 4: "# Setting Up the Safe\\\r\n\n\\\r\nYou\nhave generated
         a secret code and made it so users can navigate to the second\nroom. Lets
@@ -8741,7 +8741,7 @@ fr:
         don't need to know how the function works inside, you never have to\nlook
         at it, you can just call it.\\\r\n\\\r\n_NOTE: the turtle should end where\nit
         started, which is also the middle of the plus sign, as shown below. Each\nof
-        the four segments of the plus sign are one `moveForward()` long._ \\\r\n\\\r\n![](<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14\nAM.png>)\\\r\n\\\r\n\\\r\nYou'll
+        the four segments of the plus sign are one `moveForward()` long._ \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14>\nAM.png>)\\\r\n\\\r\n\\\r\nYou'll
         use three subgoals for this problem: `//call function`,\n`//orient turtle`,
         and `//move turtle`. Defining the function is already done\nfor you. We've
         put subgoals for the first few steps in already. Plan the\nrest of the code
@@ -8811,7 +8811,7 @@ fr:
         how to combine functions to use as few blocks as possible.\\\r\n\\\r\nYou'll\nneed
         4 subgoals for this task. Think about how you can `//Define function`\nand
         `//Call function` to draw most of the square, then fill in the rest using\n`//Move
-        turtle` and `//Orient turtle`.\\\r\n\\\r\n![](<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18\nPM.png>)"
+        turtle` and `//Orient turtle`.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18>\nPM.png>)"
       SG U3L04 - snowflake: "# Do This:\\\r\n\n\\\r\nYou should have\nalready worked
         with a partner to break down the design below into its multiple\nlayers of
         functions. Now you'll have an opportunity to program your solution.\nHere
@@ -8824,7 +8824,7 @@ fr:
         functions.\\\r\n    \\\r\n    You'll use four subgoals for this:\n    `//Define
         function` and `//Call function` and `//Move turtle` and `//Orient\n    turtle`.
         If you don't already have a plan somewhere else, plan out your program\n    with
-        subgoals first.\\\r\n    \\\r\n    \\\r\n    ![](<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33\n
+        subgoals first.\\\r\n    \\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33>\n
         \   PM.png>)"
       SG U3L04 Assessment1: "Consider the figure below.  Use\ntop-down thinking to
         design a solution to the problem.  In the space provided\nwrite a list of
@@ -8887,7 +8887,7 @@ fr:
         `dot()` command.\\\r\n\\\r\n**Make a \"snowman\"**\\\r\n\\\r\n\n1.  Set the
         pen color\n    to some new color (we made ours pink)\\\r\n    \\\\t\\* Note:
         even if you just want the\n    default dot color - black - explicitly set
-        the color to black here.\\\r\n    \\\r\n2.  2\\.\n    Using that color, make
+        the color to black here.\\\r\n    \\\r\n2.  2.\n    Using that color, make
         a dot so big that it fills the screen.\\\r\n    \\\r\n3.  In\n    a different
         color, make 3 dots in a row, each one smaller than the next. (We\n    made
         our dots white to look like a snowman)\\\r\n    \\\r\n    You might want to
@@ -9015,7 +9015,7 @@ fr:
         time you're going to write your own function\nwith parameters to complete
         an image. Two function calls to `drawTriangle()`\nhave been placed at the
         top of the program but the function itself needs to\nbe defined.  The program
-        should draw this:\\\r\n\\\r\n![](<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20\nPM.png>)\\\r\n\\\r\n\n#
+        should draw this:\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20>\nPM.png>)\\\r\n\\\r\n\n#
         Do This:\\\r\n\n**Complete** the function definition for `drawTriangle(sideLength)`\n.
         Notice that you have already been given a **descriptive and meaningful parameter\nname**,
         `sideLength`, but you can change it if you wish.\\\r\n\\\r\n**Hint:**\nyou
@@ -9043,7 +9043,7 @@ fr:
         **5 and 20** using `drawFish`.\\\r\n    \\\r\n-   Once you have your loop\n
         \   working try calling `drawFish` with random values for its `red`, `green`,\n
         \   and `blue` parameters to get differently colored fish.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35\n
+        \   \\!\\[](\\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>\n
         \   PM.png>)"
       SG U3L07 - introSquare: "# Getting Started with Loops\\\r\n\n\\\r\nA\n**loop**
         is a block of code that is repeated or \"looped through\" in a program.\nYou
@@ -9128,7 +9128,7 @@ fr:
         the turtle randomly**\n    around the **bottom pixels (y values between 360
         and 450)** of the image.\\\r\n    \\\r\n-   \\*\n    **Draw 5 sea stars**
         of random size between **10 and 30** using `drawSeaStar`.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       SG U3L07 - sunBeams: "# Add Sunbeams\\\r\n\n<img src=\"https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54\nPM.png\"
         style=\"width: 200px; float: right\">\\\r\nFinally, we'll add some\nvisual
@@ -9186,7 +9186,7 @@ fr:
         \\*\\* the code and experiment to create an image similar\n    to the one
         below.\\\r\n    \\\r\n    Remember that to achieve the subgoal `//Define function`,\n
         \   you need to give it a name, identify the parameters, and fill it in with
-        blocks.\\\r\n    \\\r\n    ![](<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38\n
+        blocks.\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38>\n
         \   PM.png>)"
       SG U3L08 - drawSquareWithParam: "# Defining and Using\n\na Function with a Parameter\\\r\nFrom
         the video, you learned that defining multiple\nfunctions to draw different
@@ -9212,7 +9212,7 @@ fr:
         for `drawFish()` that allows you to control its size (Note: the\npen width
         is important here.) Make sure your parameter has a **descriptive\nand meaningful**
         name.\\\r\n\\\r\n**Update your function calls** to use your new\nversion of
-        `drawFish()` and change the size of the fish in your image.\\\r\n\\\r\n![](<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55\nPM.png>)"
+        `drawFish()` and change the size of the fish in your image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55>\nPM.png>)"
       SG U3L08 - introUnderTheSea - recovery: "# Under the Sea!\\\r\n\n\\\r\nIn\nthe
         next several challenges you will be working to improve **one program**\nthat
         draws an underwater scene.  Each time you  finish a puzzle and move on\nto
@@ -9229,7 +9229,7 @@ fr:
         out your code. If something doesn't work like you expect, consider whether\n
         \   you can add anything to the functions' definitions to make them better.\\\r\n-
         \  \\*\n    **Continue \\*\\* to the next level, \\*\\*where your code will
-        be waiting for you.**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        be waiting for you.**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       SG U3L08 - introUnderTheSea: "# Under the Sea!\\\r\n\n\\\r\nIn\nthe next several
         challenges you will be working to improve **one program**\nthat draws an underwater
@@ -9247,7 +9247,7 @@ fr:
         out your code. If something doesn't work like you expect, consider whether\n
         \   you can add anything to the functions' definitions to make them better.\\\r\n-
         \  \\*\n    **Continue \\*\\* to the next level, \\*\\*where your code will
-        be waiting for you.**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        be waiting for you.**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       SG U3L08 - multiParamFish: "# Multiple Parameters\\\r\n\n\\\r\nLet's\nmake our
         drawings even more interesting by adding some variety to the color.\\\r\n\\\r\n**Add**\nthree
@@ -9258,7 +9258,7 @@ fr:
         blue. Remember that identifying these parameters are all part of the subgoal\n`//Define
         function`.\\\r\n\\\r\n**HINT:** inside drawFish just replace the numbers\nof
         the penRGB values with the parameters of your function.\\\r\n\\\r\n**Change**\nthe
-        function calls at the top your code to draw different colored fish.\\\r\n\\\r\n![](<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30\nPM.png>)"
+        function calls at the top your code to draw different colored fish.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30>\nPM.png>)"
       SG U3L08 - paramsToStarfish: "# Adding Parameters to Functions:\n\n_drawStarfish_\\\r\n\\\r\nWe
         want to make our picture more interesting by adding\nsome variety. Currently
         the `drawStarfish()` function can only draw a starfish\nof size 60.\\\r\n\\\r\n**Add
@@ -9267,7 +9267,7 @@ fr:
         has a **descriptive and meaningful** name. Also make sure to\nchange the blocks
         within the function to use the parameter name that you chose.\\\r\n\\\r\n**Update\nyour
         function calls** to use your new version of `drawStarfish()` and change\nthe
-        size of your starfish.\\\r\n\\\r\n![](<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12\nPM.png>)"
+        size of your starfish.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12>\nPM.png>)"
       SG U3L08 - randomInput: "# Random Input\\\r\n\n\\\r\nYou have\na new block that
         allows you to generate a random number. You can use this\ninstead of hard-coding
         in values every time you call a function.\\\r\n\\\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\\\r\n\\\r\n**Read\nthe
@@ -9287,12 +9287,12 @@ fr:
         to change the radius of each arc.) Make sure\nyour parameter has a **descriptive
         and meaningful** name.\\\r\n\\\r\n**Update\nyour function calls** to use your
         new version of `drawSeagrass()` and change\nthe size of the seagrass in your
-        image.\\\r\n\\\r\n![](<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30\nPM.png>)"
+        image.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30>\nPM.png>)"
       SG U3L08 - squareTwoParams: "# Calling Functions with\n\nMultiple Parameters\\\r\n\\\r\nHere
         is a new definition for `drawSquare()` that\nhas two parameters: `drawSquare(size,
-        borderWidth)` Notice how **multiple\nparameters are separated by commas**.\\\r\n\\\r\n![](<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15\nPM.png>)\\\r\n\\\r\n\n#
+        borderWidth)` Notice how **multiple\nparameters are separated by commas**.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15>\nPM.png>)\\\r\n\\\r\n\n#
         Do This:\\\r\n\nAdd to the code to **make two calls** to the\nnew two-parameter
-        version of `drawSquare()` to make an image similar to this\none.\\\r\n\\\r\n![](<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38\nPM.png>)\\\r\n\\\r\nJust
+        version of `drawSquare()` to make an image similar to this\none.\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38>\nPM.png>)\\\r\n\\\r\nJust
         like for the subgoal `//Define function`, the subgoal\n`//Call function` used
         to involve only identifying the function's name. Now\nwhen you call a function,
         you need to identify the function's name and the\nvalue of the parameters
@@ -9380,7 +9380,7 @@ fr:
         \   presents some subtle challenges. Before you start creating the program,
         you\n    might want to test your ideas on paper for faster brainstorming.
         Work with\n    your partner to discuss possible solutions or strategies. Try
-        more than one.\\\r\n    \\\r\n2.  2\\.\n    Once you have a solution, **start**
+        more than one.\\\r\n    \\\r\n2.  2.\n    Once you have a solution, **start**
         by identifying the subgoals and drag them\n    from the **Goals** tab into
         the workspace. \\\r\n    \\\r\n3.  Then start filling it\n    in with turtle
         blocks, and **testing** it out as you go by adding a few commands,\n    then
@@ -9942,7 +9942,7 @@ fr:
         **5 and 20** using `drawFish`.\\\r\n    \\\r\n-   Once you have your loop\n
         \   working try calling `drawFish` with random values for its `red`, `green`,\n
         \   and `blue` parameters to get differently colored fish.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35\n
+        \   \\!\\[](\\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>\n
         \   PM.png>)"
       U3L07 - fish_2018: "# Add Fish\\\r\n\n\\\r\nThe next high-level\nfunction you
         will write is `drawAllFish`. A version of `drawFish` with parameters\nhas
@@ -9955,7 +9955,7 @@ fr:
         **5 and 20** using `drawFish`.\\\r\n    \\\r\n-   Once you have your loop\n
         \   working try calling `drawFish` with random values for its `red`, `green`,\n
         \   and `blue` parameters to get differently colored fish.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35\n
+        \   \\!\\[](\\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>\n
         \   PM.png>)"
       U3L07 - fish_2019: "# Add Fish\\\r\n\n\\\r\nThe next high-level\nfunction you
         will write is `drawAllFish`. A version of `drawFish` with parameters\nhas
@@ -9968,7 +9968,7 @@ fr:
         **5 and 20** using `drawFish`.\\\r\n    \\\r\n-   Once you have your loop\n
         \   working try calling `drawFish` with random values for its `red`, `green`,\n
         \   and `blue` parameters to get differently colored fish.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35\n
+        \   \\!\\[](\\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>\n
         \   PM.png>)"
       U3L07 - loopsWithRandom_2018: "# Using Multiple Loops\\\r\n\n\\\r\nSome\nrepeated
         tasks can't easily be solved with a single loop. Instead, you'll\nneed to
@@ -10052,7 +10052,7 @@ fr:
         the turtle randomly**\n    around the **bottom pixels (y values between 360
         and 450)** of the image.\\\r\n    \\\r\n-   \\*\n    **Draw 5 sea stars**
         of random size between **10 and 30** using `drawSeaStar`.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 - seaStar_2018: "# Add Sea Stars\\\r\n\n\\\r\nWe're now\nready to add
         sea stars to our image by writing `drawAllSeaStars`. Recall that\nwe've already
@@ -10069,7 +10069,7 @@ fr:
         the turtle randomly**\n    around the **bottom pixels (y values between 360
         and 450)** of the image.\\\r\n    \\\r\n-   \\*\n    **Draw 5 sea stars**
         of random size between **10 and 30** using `drawSeaStar`.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 - seaStar_2019: "# Add Sea Stars\\\r\n\n\\\r\nWe're now\nready to add
         sea stars to our image by writing `drawAllSeaStars`. Recall that\nwe've already
@@ -10086,7 +10086,7 @@ fr:
         the turtle randomly**\n    around the **bottom pixels (y values between 360
         and 450)** of the image.\\\r\n    \\\r\n-   \\*\n    **Draw 5 sea stars**
         of random size between **10 and 30** using `drawSeaStar`.\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 Free Response Reflection: "When breaking a problem\ndown, you often encounter
         elements that you want to use repeatedly in your\ncode. Sometimes it's appropriate
@@ -10149,7 +10149,7 @@ fr:
         \   your code**. If something doesn’t work like you expect, consider whether
         you\n    can add anything to the functions’ definitions to make them better.\\\r\n
         \   \\\r\n-   \\*\n    **Continue \\*\\* to the next level, \\*\\*where your
-        code will be waiting for you.**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        code will be waiting for you.**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       U3L08 - randomInput: "# Random Input\\\r\n\n\\\r\nYou have\na new block that
         allows you to generate a random number. You can use this\ninstead of hard-coding
@@ -10929,11 +10929,11 @@ fr:
         game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       course1_playlab_events_challenge2: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       course2_artist_nestedLoops_challenge1: "Can you figure\nout how to make a picture
         like this?\\\r\n\\\r\n\n-   Both shapes have **50 pixel\n    sides.**\\\r\n-
         \  The _octagons_ are made with **45 degree** turns.\\\r\n-   The _triangles_\n
@@ -11184,39 +11184,39 @@ fr:
         game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2018: "_\"Where are my friends\nhiding? In
         this game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2019: "_\"Where are my friends\nhiding? In
         this game, clicking on me will show my friend Olive the cat!\"_\\\r\n\\\r\nClicking\nOlive
         will make Robin appear! Can you write code to show the rest of the characters\ntoo?\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will help\nyou do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1a: "Where are my friends\nhiding? In this game,
         clicking on me will show my friend Olive the cat! Clicking\nOlive will make
         Robin appear! Can you write code to show the rest of my friends\ntoo?\\\r\n\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will\nhelp you do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2018: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2019: "_\"Let's have a party!\nGive my friends
         something to do when you click or tap them.\"_\\\r\n\\\r\nWhat\nwill the animals
         say? What else will happen?\\\r\n\\\r\n\\\r\n\\\r\nIn this puzzle,\nmake sure
-        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        to click for hints! The hints will give you fun things to try!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challengeClone: "Where are my friends\nhiding? In this
         game, clicking on me will show my friend Olive the cat! Clicking\nOlive will
         make Robin appear! Can you write code to show the rest of my friends\ntoo?\\\r\n\\\r\n\\\r\nIn
         this puzzle, make sure to click for hints! The hints will\nhelp you do this
-        project step-by-step!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        project step-by-step!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseB_artist_loops10: "Use what you have learned to\ndraw a picture of what
         you think the artist saw when he got home.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n###
         \n\nIdeas\\\r\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
@@ -13136,7 +13136,7 @@ fr:
         unit? \\\r\n    \\\\t\\* How does the project(s) apply\n    content and skills
         that were developed during the unit? \\\r\n    \\\\t\\* What kinds\n    of
         special considerations come with the unit long project in this unit?\\\r\n2.
-        \ 2\\.\n    What skills and knowledge should students leave the unit with?\\\r\n3.
+        \ 2.\n    What skills and knowledge should students leave the unit with?\\\r\n3.
         \ What\n    are the core 2017 CSTA standards or threads of the K-12 framework
         in this\n    unit?\\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit
         for Completing this Reflection \\\r\n    >\n    > ## \\\r\n    >\n    > Once
@@ -13707,8 +13707,8 @@ fr:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n1.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n2.  1\\.\n    What’s the role of the practice Performance
-        Task(s), or PTs, in the unit?\n    \\\r\n3.  Which PTs are being practiced?\\\r\n4.
+        \\\r\n    \\\r\n2.  1.\n    What’s the role of the practice Performance Task(s),
+        or PTs, in the unit?\n    \\\r\n3.  Which PTs are being practiced?\\\r\n4.
         \ How does the practice PT build\n    on what content and skills were developed
         during the unit? \\\r\n5.  What summative\n    and formative assessment opportunities
         are built into the unit? \\\r\n    \\\r\n    \\\r\n    > ## \n    >\n    >
@@ -13798,13 +13798,13 @@ fr:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n2.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n3.  1\\.\n    What’s the role of the practice Performance
-        Task(s), or PTs, in the unit?\n    \\\r\n4.  How does the practice Explore
-        PT build on what content and skills were\n    developed during the unit? \\\r\n5.
-        \ What summative and formative assessment\n    opportunities are built into
-        the unit? \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n
-        \   > for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once
-        you submit your reflection,\n    >     your response to the prompt above will
+        \\\r\n    \\\r\n3.  1.\n    What’s the role of the practice Performance Task(s),
+        or PTs, in the unit?\n    \\\r\n4.  How does the practice Explore PT build
+        on what content and skills were\n    developed during the unit? \\\r\n5.  What
+        summative and formative assessment\n    opportunities are built into the unit?
+        \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n    >
+        for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once you
+        submit your reflection,\n    >     your response to the prompt above will
         be shared anonymously and reviewed\n    >     by your peers, and you will
         review the work done by other facilitators. Reviewers\n    >     will be looking
         for thoughtful and thorough answers that demonstrate that\n    >     you have
@@ -13888,24 +13888,24 @@ fr:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n3.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n4.  1\\.\n    What’s the role of the practice Performance
-        Task(s), or PTs, in the unit?\n    \\\r\n5.  How does the practice Create
-        PT build on what content and skills were\n    developed during the unit? \\\r\n6.
-        \ What summative and formative assessment\n    opportunities are built into
-        the unit? \\\r\n    \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n
-        \   >\n    > for Completing this Reflection \\\r\n    > \\\r\n    >\n    >
-        -   Once you submit your reflection,\n    >     your response to the prompt
-        above will be shared anonymously and reviewed\n    >     by your peers, and
-        you will review the work done by other facilitators. Reviewers\n    >     will
-        be looking for thoughtful and thorough answers that demonstrate that\n    >
-        \    you have spent time considering the reflection questions listed above.
-        Reviewers\n    >     will have an opportunity to give feedback on your submission,
-        and you can\n    >     respond to that feedback and resubmit.\\\r\n7.  In
-        order to get credit for completing\n    this prompt, two reviewers need to
-        agree that you have responded to the prompts\n    fully. If reviewers don’t
-        feel comfortable making a decision about your task\n    submission, they can
-        elevate to an instructor for review. You will always\n    have a chance to
-        address feedback from your reviewers and resubmit your reflections!\n    Reviewer
+        \\\r\n    \\\r\n4.  1.\n    What’s the role of the practice Performance Task(s),
+        or PTs, in the unit?\n    \\\r\n5.  How does the practice Create PT build
+        on what content and skills were\n    developed during the unit? \\\r\n6.  What
+        summative and formative assessment\n    opportunities are built into the unit?
+        \\\r\n    \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n
+        \   > for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once
+        you submit your reflection,\n    >     your response to the prompt above will
+        be shared anonymously and reviewed\n    >     by your peers, and you will
+        review the work done by other facilitators. Reviewers\n    >     will be looking
+        for thoughtful and thorough answers that demonstrate that\n    >     you have
+        spent time considering the reflection questions listed above. Reviewers\n
+        \   >     will have an opportunity to give feedback on your submission, and
+        you can\n    >     respond to that feedback and resubmit.\\\r\n7.  In order
+        to get credit for completing\n    this prompt, two reviewers need to agree
+        that you have responded to the prompts\n    fully. If reviewers don’t feel
+        comfortable making a decision about your task\n    submission, they can elevate
+        to an instructor for review. You will always\n    have a chance to address
+        feedback from your reviewers and resubmit your reflections!\n    Reviewer
         feedback will show up at the bottom of this page, once it’s available.\n    \\\r\n
         \   \\\r\n    \\\r\n    \\\r"
       csp3dlp-lessons: "<br><br>\\\r\n\\\r\n\n> **NOTE: before you\n> start this reflection,
@@ -14180,9 +14180,9 @@ fr:
       csp_affirmation_control: "This brief activity allows\nyou to reflect about what
         you have learned in this course so far. It is provided\nto you by your teacher,
         but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in the course
-        may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14190,9 +14190,9 @@ fr:
       csp_affirmation_control_2: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14200,9 +14200,9 @@ fr:
       csp_affirmation_control_2018: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14210,9 +14210,9 @@ fr:
       csp_affirmation_control_2_2018: "This brief activity allows\nyou to reflect
         about what you have learned in this course so far. It is provided\nto you
         by your teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics
-        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14220,9 +14220,9 @@ fr:
       csp_affirmation_control_2_2019: "This brief activity allows\nyou to reflect
         about what you have learned in this course so far. It is provided\nto you
         by your teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics
-        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14230,9 +14230,9 @@ fr:
       csp_affirmation_control_3: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14240,9 +14240,9 @@ fr:
       csp_affirmation_control_3_2018: "This brief activity allows\nyou to reflect
         about what you have learned in this course so far. It is provided\nto you
         by your teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics
-        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14250,9 +14250,9 @@ fr:
       csp_affirmation_control_4: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14260,9 +14260,9 @@ fr:
       csp_affirmation_control_4_2018: "This brief activity allows\nyou to reflect
         about what you have learned in this course so far. It is provided\nto you
         by your teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics
-        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14270,9 +14270,9 @@ fr:
       csp_affirmation_control_5: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14280,9 +14280,9 @@ fr:
       csp_affirmation_control_5_2018: "This brief activity allows\nyou to reflect
         about what you have learned in this course so far. It is provided\nto you
         by your teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics
-        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
+        in the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -14291,30 +14291,30 @@ fr:
         what’s most important to you. It is provided to you by\nyour teacher, but
         _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values and
         qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14323,30 +14323,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14355,30 +14355,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14387,30 +14387,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14419,30 +14419,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14451,30 +14451,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14483,30 +14483,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14515,30 +14515,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14547,30 +14547,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14579,30 +14579,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -14611,30 +14611,30 @@ fr:
         about what’s most important to you. It is provided to you by\nyour teacher,
         but _you will not be graded on this._\\\r\n\\\r\nBelow is a list\nof values
         and qualities. Some of them may be important to you, others may\nbe unimportant.
-        \\\r\n\\\r\n<strong>\\\r\n1. What's most important to you?</strong>\n(select
-        one or more)\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\" width=75% cellpadding=5\ncellspacing=10
-        style=\"background-color: #d9eff7; border-width: 10px; border-color:\n#FFFFFF\">\r\n
-        \ <tr style=\"border: 5px solid white\">\r\n    <td width=25%\nstyle=\"border:
-        5px solid white;\">\r\n    <label><input type=\"checkbox\">\nRelationships
-        with friends and family\r\n    </label></td>\r\n    <td width=25%\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSports and athletics\r\n
-        \   </label></td>\r\n    <td width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Relationships with\nfriends or family\r\n
-        \   </label></td>\r\n    <td  width=25% style=\"border:\n5px solid white\">\r\n
-        \   <label><input type=\"checkbox\"> Creativity\r\n    </label></td>\r\n  </tr>\r\n
-        \ <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
-        type=\"checkbox\">\nSpirituality or religion\r\n    </label></td>\r\n    <td
-        style=\"border: 5px\nsolid white\">\r\n    <label><input type=\"checkbox\">
-        Sense of humor\r\n    </label></td>\r\n    <td\nstyle=\"border: 5px solid
-        white\">\r\n    <label><input type=\"checkbox\">\nHealth and fitness\r\n    </label></td>\r\n
-        \   <td style=\"border: 5px solid\nwhite\">\r\n    <label><input type=\"checkbox\">
-        Physical attractiveness\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nRomantic values\r\n
-        \   </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n    <label><input
-        type=\"checkbox\"> Kindness\r\n    </label></td>\r\n    <td\nstyle=\"border:
-        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity, living
-        life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px solid
-        white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
+        \\\r\n\\\r\n<strong>\\\r\n\n1.  What's most important to you?</strong>\n    (select
+        one or more)\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\" width=75%
+        cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7; border-width:
+        10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px solid white\">\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white;\">\r\n    <label><input
+        type=\"checkbox\">\nRelationships with friends and family\r\n    </label></td>\r\n
+        \   <td width=25%\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nSports and athletics\r\n    </label></td>\r\n    <td width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Relationships with\nfriends or family\r\n    </label></td>\r\n    <td  width=25%
+        style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
+        Creativity\r\n    </label></td>\r\n  </tr>\r\n  <tr>\r\n    <td\nstyle=\"border:
+        5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpirituality or
+        religion\r\n    </label></td>\r\n    <td style=\"border: 5px\nsolid white\">\r\n
+        \   <label><input type=\"checkbox\"> Sense of humor\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nHealth
+        and fitness\r\n    </label></td>\r\n    <td style=\"border: 5px solid\nwhite\">\r\n
+        \   <label><input type=\"checkbox\"> Physical attractiveness\r\n    </label></td>\r\n
+        \ </tr>\r\n  <tr>\r\n    <td\nstyle=\"border: 5px solid white\">\r\n    <label><input
+        type=\"checkbox\">\nRomantic values\r\n    </label></td>\r\n    <td style=\"border:
+        5px solid\nwhite\">\r\n    <label><input type=\"checkbox\"> Kindness\r\n    </label></td>\r\n
+        \   <td\nstyle=\"border: 5px solid white\">\r\n    <label><input type=\"checkbox\">\nSpontaneity,
+        living life in the moment\r\n    </label></td>\r\n    <td style=\"border:\n5px
+        solid white\">\r\n    <label><input type=\"checkbox\"> Independence\r\n    </label></td>\r\n
         \ </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\nWhy are these
         values important to you? Describe a time in your life when they\nwere really
         important.\r\n</strong>\r\n\r\n*Write a few sentences. Focus on\nyour thoughts
@@ -15502,7 +15502,7 @@ fr:
         done browsing, make a game or story using repeats,\nvariables, and events.
         \ \\\r\n\\\r\n_Hint: scroll down to see all the commands\nin the workspace._"
       gradek_artist_loops1: "Help the artist draw this line\ntwo times forward.\\\r\n\\\r\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
-      harvey_snowflake_artist1: "_It's time to get your snowflake\nready for 3d printing!_\\\r\n\\\r\n![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08\nPM.png>)In
+      harvey_snowflake_artist1: "_It's time to get your snowflake\nready for 3d printing!_\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>\nPM.png>)In
         order for your image to print correctly, follow these rules:\\\r\n\\\r\n\\*\nMake
         sure your image is all **one piece**! Separate pieces will print separately.\\\r\n\\*\nMake
         sure your image **fits** entirely on the canvas\\\r\n\n-   Use just **black\n
@@ -15513,7 +15513,7 @@ fr:
         name=\"VALUE\">7</title>\\\r\n    </block></xml>\\\r\n    When\n    you are
         finished, right-click to save the image, then send it to me on <a\n    href=\"https://classroom.google.com\">Google
         Classroom</a>."
-      harvey_snowflake_artist2: "_It's time to get your snowflake\nready for 3d printing!_\\\r\n\\\r\n![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08\nPM.png>)In
+      harvey_snowflake_artist2: "_It's time to get your snowflake\nready for 3d printing!_\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>\nPM.png>)In
         order for your image to print correctly, follow these rules:\\\r\n\\\r\n\\*\nMake
         sure your image is all **one piece**! Separate pieces will print separately.\\\r\n\\*\nMake
         sure your image **fits** entirely on the canvas\\\r\n\n-   Use just **black\n

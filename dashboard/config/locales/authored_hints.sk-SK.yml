@@ -6896,6 +6896,93 @@ sk:
           sa posunieš medzi trojuholníkmi.'
         courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
           iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+      courseF_artist_variables4_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      courseF_artist_variables4_2018_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      courseF_artist_variables4_2019_authored_hint:
+        courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
+          úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
+          ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
+        courseF_artist_variables4_c: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+      courseF_artist_variables5_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
+      courseF_artist_variables5_2018_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
+      courseF_artist_variables5_2019_authored_hint:
+        courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
+          rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,
+          a potom otáčať _vpravo_.
+        courseF_artist_variables5_b: Prvá polovica tvojho kóud nakreslí prvé tri trojuholníky
+          a druhá polovica nakreslí zvyšné tri.
+        courseF_artist_variables5_c: Začni zduplikovaním kódu z prvej polovice tvojho
+          programu, potom ho uprav, aby si vyrobil daný vzor.
+        courseF_artist_variables5_d: |-
+          Toto je vzor, ktorého sa bude držať tvoj umelec:
+
+          ![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)
+      courseF_artist_variables6_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6_2018_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6_2019_authored_hint:
+        courseF_artist_variables6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
+        courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50,
+          ale nič iné v kóde sa nemusí zmeniť.
+      courseF_artist_variables6a_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables6a_2018_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables6a_2019_authored_hint:
+        courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému
+          kódu, iba s rozdielnym útvarom!
+      courseF_artist_variables_6_authored_hint:
+        courseF_artist_variables_6_a: Vďaka premenným, potrebuješ zmeniť iba jedno
+          číslo navrchu, aby to fungovalo.
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú

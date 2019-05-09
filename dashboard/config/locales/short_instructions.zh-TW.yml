@@ -629,26 +629,35 @@ zh-TW:
       CSPU5_U3 - Loops - 1: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
       CSPU5_U3 - Loops - 15: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 15_2018: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 15_2018pilot: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 15_2019: 計算骰子總合為 12 出現的次數。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 1_2018: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 1_2018pilot: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
       CSPU5_U3 - Loops - 1_2019: 改變當…迴圈的條件，以判斷變數的值是否小於 90（點擊觀看完整說明）
       CSPU5_U3 - Loops - 2: 試著用 !=, > 還有 \< 創建一個無限迴圈。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 2_2018: 試著用 !=, > 還有 \< 創建一個無限迴圈。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - 2_2018pilot: 試著用 !=, > 還有 \< 創建一個無限迴圈。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 2_2019: 試著用 !=, > 還有 \< 創建一個無限迴圈。（點擊觀看完整說明）
       CSPU5_U3 - Loops - 4: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 4_2018: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
+      CSPU5_U3 - Loops - 4_2018pilot: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 4_2019: " 使用偵錯指令以列出在第 6 點之前的清單。（點擊查看完整說明）"
       CSPU5_U3 - Loops - 9: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       CSPU5_U3 - Loops - 9_2018: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
+      CSPU5_U3 - Loops - 9_2018pilot: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       CSPU5_U3 - Loops - 9_2019: " 修改條件讓它持續轉動，只要每個都小於 3。（點擊觀看完整說明）"
       CSPU5_U3 - Loops - Minus Minus: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
       CSPU5_U3 - Loops - Minus Minus_2018: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Minus Minus_2018pilot: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
       CSPU5_U3 - Loops - Minus Minus_2019: 修改程式，讓它從 10 倒數到 1。（點擊觀看完整說明）
       CSPU5_U3 - Loops - Typing in Console: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
       CSPU5_U3 - Loops - Typing in Console_2018: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Typing in Console_2018_pilot: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - Typing in Console_2018pilot: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
       CSPU5_U3 - Loops - Typing in Console_2019: 使用 console（系統監控台）來檢查最後一個數字。（點擊觀看完整說明）
       CSPU5_U3 - Loops - plus and minus = operator: 用 += 運算子來更新程式。（點擊觀看完整說明）
       CSPU5_U3 - Loops - plus and minus = operator_2018: 用 += 運算子來更新程式。（點擊觀看完整說明）
+      CSPU5_U3 - Loops - plus and minus = operator_2018pilot: 用 += 運算子來更新程式。（點擊觀看完整說明）
       CSPU5_U3 - Loops - plus and minus = operator_2019: 用 += 運算子來更新程式。（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Add 5: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
       CSPU5_U3 - Loops And Arrays - Add 5_2018: 將陣列裡的所有數值都加 5（點擊觀看完整說明）
@@ -1034,6 +1043,7 @@ zh-TW:
       Dance Party Predict: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_2019: 預測一下，當你點擊外星生物時會發生什麼事？
       Dance Party Predict_simple: 預測一下，當你點擊外星生物時會發生什麼事？
+      Dance Party Template 1_2019: 範本
       Dance Party Template 2_2019: 範本
       Dance_Events_Example_Video: 使用事件讓你的舞蹈派對有更多互動！
       Dance_Party_01: 將「創建一個新的」積木拖曳至工作區中，並把它放到「設定」積木裡頭。
@@ -1051,6 +1061,12 @@ zh-TW:
       Dance_Party_11_5: 使用「全部鴨子」積木，讓鴨子一起跳舞。
       Dance_Party_11b: 按下向右鍵時，會讓機器人「掉落」一次，而按下向上鍵時，會讓機器人跳「牙線舞」一次。盡可能快速地掉落又跳牙線舞！
       Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
+      Dance_Party_extras_battle: 舞蹈團隊（點擊「更多」觀看細節）
+      Dance_Party_extras_every_beat: 四分音符（點擊「更多」觀看細節）
+      Dance_Party_extras_layout: 讓我們加入陣形！（點擊更多觀看細節）
+      Dance_Party_extras_on_beat: 低音、中音和高音（點擊「更多」觀看細節）
+      Dance_Party_extras_speed: 加速、減速（點擊「更多」觀看細節）
+      Dance_Party_extras_visible: 他們要去哪？（點擊「更多」觀看細節）
       Eval Booleans 1: 布林運算子（像是 >、 \<、 =）讓我們能夠比較不同的值，並返回 true 或 false。點擊「運行」來看看這個運算式的結果。
       Eval Booleans: 布林值（Booleans）讓我們能夠比較不同的值，如果二者相等則返回 true；如果沒有則返回 false。你覺得這個程式運行後的結果會是什麼呢？
       Find the Wizard: 做你喜歡的任何東西。比方說一個猜數字遊戲！

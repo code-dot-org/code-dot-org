@@ -908,63 +908,85 @@ es-MX:
       CSPU5_U3 - Keys - Multiple Keys_2019: Reproduce un sonido diferente cuando se presione la flecha hacia abajo. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops -  Complex Condition: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops -  Complex Condition_2018: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot2: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops -  Complex Condition_2019: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 1: Cambia la condición del bucle `mientras` para comprobar si el número de variable es menor a 90. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 10: Escribe un programa que simule la arrojada de dos dados. Arroje los dados repetidamente hasta que la suma de los dados sea o 7 u 11.
       CSPU5_U3 - Loops - 10_2018: Escribe un programa que simule la arrojada de dos dados. Arroje los dados repetidamente hasta que la suma de los dados sea o 7 u 11.
+      CSPU5_U3 - Loops - 10_2018pilot: Escribe un programa que simule la arrojada de dos dados. Arroje los dados repetidamente hasta que la suma de los dados sea o 7 u 11.
       CSPU5_U3 - Loops - 10_2019: Escribe un programa que simule la arrojada de dos dados. Arroje los dados repetidamente hasta que la suma de los dados sea o 7 u 11.
       CSPU5_U3 - Loops - 11: Arregle la condición para que siga arrojando el dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 11_2018: Arregle la condición para que siga arrojando el dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 11_2018pilot: Arregle la condición para que siga arrojando el dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 11_2019: Arregle la condición para que siga arrojando el dado siempre que el valor no sea un 2 o un 3 en lugar de girar infinitamente. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 12: Cambia el código para que imprima la cadena "Hola" 5 veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 12_2018: Cambia el código para que imprima la cadena "Hola" 5 veces. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 12_2018pilot: Cambia el código para que imprima la cadena "Hola" 5 veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 12_2019: Cambia el código para que imprima la cadena "Hola" 5 veces. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 14: Cambia la condición del bucle para impedir el bucle infinito y la interrupción del conteo cuando que el conteo sea mayor de 30. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 14_2018: Cambia la condición del bucle para impedir el bucle infinito y la interrupción del conteo cuando que el conteo sea mayor de 30. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 14_2018pilot: Cambia la condición del bucle para impedir el bucle infinito y la interrupción del conteo cuando que el conteo sea mayor de 30. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 14_2019: Cambia la condición del bucle para impedir el bucle infinito y la interrupción del conteo cuando que el conteo sea mayor de 30. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 15: Cuenta la cantidad de veces que la suma del dados es 12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 15_2018: Cuenta la cantidad de veces que la suma del dados es 12. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 15_2018pilot: Cuenta la cantidad de veces que la suma del dados es 12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 15_2019: Cuenta la cantidad de veces que la suma del dados es 12. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 1_2018: Cambia la condición del bucle `mientras` para comprobar si el número de variable es menor a 90. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 1_2018pilot: Cambia la condición del bucle `mientras` para comprobar si el número de variable es menor a 90. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 1_2019: Cambia la condición del bucle `mientras` para comprobar si el número de variable es menor a 90. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 2: Intenta crear un bucle infinito mediante el uso de !=, > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 2_2018: Intenta crear un bucle infinito mediante el uso de !=, > y \<. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 2_2018pilot: Intenta crear un bucle infinito mediante el uso de !=, > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 2_2019: Intenta crear un bucle infinito mediante el uso de !=, > y \<. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 3: Cambia la sentencia `si` a un bucle `mientras` para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 3_2018: Cambia la sentencia `si` a un bucle `mientras` para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 3_2018pilot: Cambia la sentencia `si` a un bucle `mientras` para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 3_2019: Cambia la sentencia `si` a un bucle `mientras` para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 4: Utiliza los Comandos de depuración para hacer una lista de todos los valores lanzados antes de un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 4_2018: Utiliza los Comandos de depuración para hacer una lista de todos los valores lanzados antes de un 6. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 4_2018pilot: Utiliza los Comandos de depuración para hacer una lista de todos los valores lanzados antes de un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 4_2019: Utiliza los Comandos de depuración para hacer una lista de todos los valores lanzados antes de un 6. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 5: Añade código dentro del bucle `mientras` que actualizará el número de variable para que la condición finalmente se convierta en falsa. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 5_2018: Añade código dentro del bucle `mientras` que actualizará el número de variable para que la condición finalmente se convierta en falsa. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 5_2018pilot: Añade código dentro del bucle `mientras` que actualizará el número de variable para que la condición finalmente se convierta en falsa. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 5_2019: Añade código dentro del bucle `mientras` que actualizará el número de variable para que la condición finalmente se convierta en falsa. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 6: Corrija el problema para que el `bucle` se ejecute al menos una vez. Cambie el valor inicial del número a un valor falso como -1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 6_2018: Corrija el problema para que el `bucle` se ejecute al menos una vez. Cambie el valor inicial del número a un valor falso como -1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 6_2018pilot: Corrija el problema para que el `bucle` se ejecute al menos una vez. Cambie el valor inicial del número a un valor falso como -1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 6_2019: Corrija el problema para que el `bucle` se ejecute al menos una vez. Cambie el valor inicial del número a un valor falso como -1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 7: Sin añadir ninguna línea de código, vuelve a ordenar el código para que imprima todos los valores del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 7_2018: Sin añadir ninguna línea de código, vuelve a ordenar el código para que imprima todos los valores del número. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 7_2018pilot: Sin añadir ninguna línea de código, vuelve a ordenar el código para que imprima todos los valores del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 7_2019: Sin añadir ninguna línea de código, vuelve a ordenar el código para que imprima todos los valores del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 8: Depura qué número no se está escribiendo y añade una sentencia de escritura para mostrar ese valor. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 8_2018: Depura qué número no se está escribiendo y añade una sentencia de escritura para mostrar ese valor. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 8_2018pilot: Depura qué número no se está escribiendo y añade una sentencia de escritura para mostrar ese valor. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 8_2019: Depura qué número no se está escribiendo y añade una sentencia de escritura para mostrar ese valor. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 9: Modifica la condición para que siga girando mientras ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 9_2018: Modifica la condición para que siga girando mientras ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - 9_2018pilot: Modifica la condición para que siga girando mientras ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - 9_2019: Modifica la condición para que siga girando mientras ambos sean inferiores a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus: Cambia el código para contar regresivamente de 10 a 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus_2018: Cambia el código para contar regresivamente de 10 a 1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Minus Minus_2018pilot: Cambia el código para contar regresivamente de 10 a 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Minus Minus_2019: Cambia el código para contar regresivamente de 10 a 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Plus Plus: Cambia el código para usar conteo++ en lugar de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Plus Plus_2018: Cambia el código para usar conteo++ en lugar de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Plus Plus_2018pilot: Cambia el código para usar conteo++ en lugar de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Plus Plus_2019: Cambia el código para usar conteo++ en lugar de conteo = conteo + 1. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console: Usa la consola para comprobar el valor final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Usa la consola para comprobar el valor final del número. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Typing in Console_2018_pilot: Usa la consola para comprobar el valor final del número. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - Typing in Console_2018pilot: Usa la consola para comprobar el valor final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - Typing in Console_2019: Usa la consola para comprobar el valor final del número. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - minus = operator: Actualiza el código para usar el operador -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - minus = operator_2018: Actualiza el código para usar el operador -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - minus = operator_2018pilot: Actualiza el código para usar el operador -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - minus = operator_2019: Actualiza el código para usar el operador -= para contar de 30 a 0 de a 3. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator: Actualiza el código para usar el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator_2018: Actualiza el código para usar el operador +=. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2018pilot: Actualiza el código para usar el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops - plus and minus = operator_2019: Actualiza el código para usar el operador +=. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops And Arrays - Add 5: Añade 5 a todos los valores en un arreglo. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Loops And Arrays - Add 5_2018: Añade 5 a todos los valores en un arreglo. (Haz clic para ver las instrucciones completas)
@@ -1030,27 +1052,35 @@ es-MX:
       CSPU5_U3 - Return Values - writeMaxVal_2019: Escribe la función Valmáx y luego úsala dentro de la sentencia console.org para calcular el máximo de dos valores. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 1: Usa un bucle `mientras` para "lanzar la moneda 10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 1_2018: Usa un bucle `mientras` para "lanzar la moneda 10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 1_2018pilot: Usa un bucle `mientras` para "lanzar la moneda 10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 1_2019: Usa un bucle `mientras` para "lanzar la moneda 10 veces" y escribe los valores en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2.1: Cambia tu condición de bucle para que la simulación se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2.1_2018: Cambia tu condición de bucle para que la simulación se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 2.1_2018pilot: Cambia tu condición de bucle para que la simulación se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2.1_2019: Cambia tu condición de bucle para que la simulación se ejecute hasta que haya 5 caras lanzadas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2.5: "¡Ejecuta tu simulación para obtener las 10.000 caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones completas)"
       CSPU5_U3 - Simulation - 2.5_2018: "¡Ejecuta tu simulación para obtener las 10.000 caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones completas)"
+      CSPU5_U3 - Simulation - 2.5_2018pilot: "¡Ejecuta tu simulación para obtener las 10.000 caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones completas)"
       CSPU5_U3 - Simulation - 2.5_2019: "¡Ejecuta tu simulación para obtener las 10.000 caras completas! ¡Cuánto tiempo tomó? (Haz clic para ver las instrucciones completas)"
       CSPU5_U3 - Simulation - 2: Lleva un registro de cuántas caras (1) tu programa genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2_2018: Lleva un registro de cuántas caras (1) tu programa genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 2_2018pilot: Lleva un registro de cuántas caras (1) tu programa genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 2_2019: Lleva un registro de cuántas caras (1) tu programa genera e imprime los resultados en la pantalla. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 3: Añade funcionalidad que cuente cuántas caras seguidas se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 3_2018: Añade funcionalidad que cuente cuántas caras seguidas se lanzan. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 3_2018pilot: Añade funcionalidad que cuente cuántas caras seguidas se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 3_2019: Añade funcionalidad que cuente cuántas caras seguidas se lanzan. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 4: Actualiza la condición de tu bucle mientras que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 4_2018: Actualiza la condición de tu bucle mientras que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 4_2018pilot: Actualiza la condición de tu bucle mientras que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 4_2019: Actualiza la condición de tu bucle mientras que la moneda gire hasta que haya tres caras seguidas. (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 5: Cambia tu bucle `mientras` para ejecutar hasta que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 5_2018: Cambia tu bucle `mientras` para ejecutar hasta que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 5_2018pilot: Cambia tu bucle `mientras` para ejecutar hasta que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 5_2019: Cambia tu bucle `mientras` para ejecutar hasta que recibas una racha de 12 caras. ¿Cuántas lanzadas tomó? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6: Sigue añadiendo a tu simulación. ¿Qué quieres explorar más adelante? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6_2018: Sigue añadiendo a tu simulación. ¿Qué quieres explorar más adelante? (Haz clic para ver las instrucciones completas)
+      CSPU5_U3 - Simulation - 6_2018pilot: Sigue añadiendo a tu simulación. ¿Qué quieres explorar más adelante? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - Simulation - 6_2019: Sigue añadiendo a tu simulación. ¿Qué quieres explorar más adelante? (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - User Input - Save getText To Variable: Guarda la edad y el nombre del usuario en variables (Haz clic para ver las instrucciones completas)
       CSPU5_U3 - User Input - Save getText To Variable_2018: Guarda la edad y el nombre del usuario en variables (Haz clic para ver las instrucciones completas)
@@ -2296,6 +2326,7 @@ es-MX:
       PS copy 2-3 Bee Conditionals 5: "¡Flores de color púrpura pueden tener 1 o 0 néctar, pero no sabes cuál! Tenga cuidado de no recoger néctar de una flor morada si no tiene ninguno. Compruebe si el néctar es igual a 1 utilizando el bloque if."
       PS predictive Applab level test: 'Aquí hay algunas instrucciones. '
       Pattern Bee 1: "¡Qué campo extraño de golosinas! Me pregunto si hay un patrón aquí..."
+      Pilot Unit 5 CSP Loops clone: Cambia la expresión booleana para el bucle `mientras` para que se detenga cuando ambos dados sean mayores o iguales a 5. (Haz clic para ver las instrucciones completas)
       Pixelation - AllTheThings 4: Este nivel de pixelación demuestra el uso de la opción `ocultar_controles_codificación`. Ten en cuenta que el nivel muestra los datos de imagen en hexadecimal y no te permite volver a convertirlo en binario.
       Pixelation - AllTheThings 5: Este nivel de pixelación demuestra el uso de la opción "Ocultar controles deslizantes". Ten en cuenta que los controles deslizantes de ancho y alto no están disponibles, y los campos de ancho y alto no son editables.
       Pixelation - Lesson 14 - Fix bit offset: Un solo bit adicional se inserta en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional rompe todos los demás bits en la línea, lo que hace que el logotipo se vea desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo Code.org.
@@ -3178,9 +3209,49 @@ es-MX:
       U4 - Read Record - 4.1_2018: Usa índices y notación de puntos para referir valores en la respuesta de la base de datos. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 4.1_2019: Usa índices y notación de puntos para referir valores en la respuesta de la base de datos. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - 4: Imprime cada retorno de registro desde la llamada leerRegistros individualmente. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5: Usando un bucle, muestra el título de cada película en tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5_2018: Usando un bucle, muestra el título de cada película en tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 5_2019: Usando un bucle, muestra el título de cada película en tu base de datos. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - part 1 - template: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - part 1 - template_2018: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
       U4 - Read Record - part 1 - template_2019: Usa console.log para mostrar los registros devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 1: Usa leerRegistros para copiar los datos de tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 1_2018: Usa leerRegistros para copiar los datos de tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 1_2019: Usa leerRegistros para copiar los datos de tu base de datos en tu variable global de "contactos" y llama a mostrarContactoActual. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2: Crea una función llamada actualizarDatosLocales. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2_2018: Crea una función llamada actualizarDatosLocales. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 2_2019: Crea una función llamada actualizarDatosLocales. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 3: Agrega una llamada a "actualizarDatosLocales" para la función de devolución de llamadas del crearRegistros que usas para agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 3_2018: Agrega una llamada a "actualizarDatosLocales" para la función de devolución de llamadas del crearRegistros que usas para agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 3_2019: Agrega una llamada a "actualizarDatosLocales" para la función de devolución de llamadas del crearRegistros que usas para agregar un nuevo contacto a tu base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 4: Crea un botón "Borrar". (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 4_2018: Crea un botón "Borrar". (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 4_2019: Crea un botón "Borrar". (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 5 make delete work: Crea un controlador de eventos para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 5 make delete work_2018: Crea un controlador de eventos para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones completas)
+      U4 - ReadRecords - Contacts App 5 make delete work_2019: Crea un controlador de eventos para el botón "Borrar" que has creado. (Haz clic para ver las instrucciones completas)
+      U4 - add createRecord to contacts App: Agrega un código a tu aplicación de contactos para que los contactos que han sido agregados recientemente estén guardados en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - add createRecord to contacts App_2018: Agrega un código a tu aplicación de contactos para que los contactos que han sido agregados recientemente estén guardados en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - add createRecord to contacts App_2019: Agrega un código a tu aplicación de contactos para que los contactos que han sido agregados recientemente estén guardados en una tabla. (Haz clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive: Cambia título.canción por canción. Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive_2018: Cambia título.canción por canción. Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - debug column names are case sensitive_2019: Cambia título.canción por canción. Título (T mayúscula). Y ejecuta el programa. Verifica la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - deleteRecords 0: Usa el comando borrarRegistro con valores predeterminados. Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 0_2018: Usa el comando borrarRegistro con valores predeterminados. Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 0_2019: Usa el comando borrarRegistro con valores predeterminados. Verifica que el registro haya sido borrado. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 1: Encuentra la ID de "Conejito Foo Foo" en la tabla de datos "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira lo que sucede cuando intentas borrar una ID por segunda vez. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 1_2018: Encuentra la ID de "Conejito Foo Foo" en la tabla de datos "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira lo que sucede cuando intentas borrar una ID por segunda vez. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 1_2019: Encuentra la ID de "Conejito Foo Foo" en la tabla de datos "misCanciones". Usa el comando borrarRegistro para borrarlo. Mira lo que sucede cuando intentas borrar una ID por segunda vez. (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object: Usa el objeto canción para borrar objetos múltiples en la base de datos cambiando solamente la propiedad "id". (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object_2018: Usa el objeto canción para borrar objetos múltiples en la base de datos cambiando solamente la propiedad "id". (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 2 delete object_2019: Usa el objeto canción para borrar objetos múltiples en la base de datos cambiando solamente la propiedad "id". (Haz clic para ver las instrucciones completas).
+      U4 - deleteRecords 2: Usando el visor de datos, encuentra la id de un segundo registro que quieres borrar. Usa el comando borrarRegistro para borrarlo. (Haz clic para ver las instrucciones completas).
+      U4 - fix contacts by hand in data table: Usa el visor de datos para agregar filas a la tabla de datos. Agrega los contactos con codificación fija originales de tu aplicación a la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - fix contacts by hand in data table_2018: Usa el visor de datos para agregar filas a la tabla de datos. Agrega los contactos con codificación fija originales de tu aplicación a la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - fix contacts by hand in data table_2019: Usa el visor de datos para agregar filas a la tabla de datos. Agrega los contactos con codificación fija originales de tu aplicación a la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - last stage test adding contcts: Confirma que los nuevos contactos que agregas estén guardados en la base de datos. Verifica que luego de reiniciar tu aplicación, los contactos que agregaste ya no se muestran en la aplicación, pero todavía existen en la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - last stage test adding contcts_2018: Confirma que los nuevos contactos que agregas estén guardados en la base de datos. Verifica que luego de reiniciar tu aplicación, los contactos que agregaste ya no se muestran en la aplicación, pero todavía existen en la base de datos. (Haz clic para ver las instrucciones completas)
+      U4 - last stage test adding contcts_2019: Confirma que los nuevos contactos que agregas estén guardados en la base de datos. Verifica que luego de reiniciar tu aplicación, los contactos que agregaste ya no se muestran en la aplicación, pero todavía existen en la base de datos. (Haz clic para ver las instrucciones completas)
       U4 Model App: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
       U4 Model App_2018: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
       U4 Model App_2019: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla. (Haz clic para ver las instrucciones completas).
@@ -3193,6 +3264,12 @@ es-MX:
       U4L02 - Objects - Template1_2019: Plantilla
       U4L02 - Objects - createObject: Crea un objeto con, la menos, 5 valores que incluyan, al menos, una cadena y un número. (Haz clic para ver las instrucciones completas)
       U4L02 - Objects - eventParameter: Activa el evento del teclado y del ratón, y examina los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede ser la mejor manera de almacenar esta información? (Haz clic para ver las instrucciones completas)
+      U4L06 Data Storage 1: Escribe tu nombre en lugar de "Ingresa tu nombre", ejecuta la aplicación y haz clic en el botón. Ejecútalo varias veces con nombres diferentes. Mira la consola y usa el botón "Visor de Datos" para ver cómo se actualiza la tabla. Mientras juegas, asegúrate de que puedes explicar el propósito de cada una de las partes redondeadas del diagrama.
+      U4L06 Data Storage 2: La aplicación es una continuación de la que previamente comenzamos. Agrega una etiqueta de texto para recopilar los nombres de usuarios y usar eso como ingreso de datos para el registro.
+      U4L06 Data Storage 3: Queremos mejorar la experiencia del usuario. Una vez que hayamos enviado sus datos para almacenamiento, sería bueno poder limpiar la casilla de texto. Actualiza tu aplicación para limpiar la casilla de texto luego de que los datos han sido almacenados.
+      U4L06 Data Storage 4: Agrega una etiqueta y una casilla desplegable a tu aplicación y guarda los datos en tu objeto JSON, y agrégalo a tu tabla. Asegúrate de que reinicias el menú desplegable luego de que los datos han sido almacenados.
+      U4L06 Data Storage 5: 'Agrega un par de botones de radio o casillas de verificación a tu aplicación. Luego encuentra una forma de recopilar los datos de todo ellos. '
+      U4L06 Data Storage 6: " Usa unos de los bloques getTime() y getUserId() para recopilar datos adicionales. "
       U4L06 Data Storage 7: Añade una segunda pantalla a la aplicación de muestra que hemos estado construyendo para capturar una imagen de un usuario. Vuelve a la pantalla 1 después de que el objeto JSON haya sido almacenado en la tabla.
       U4L15 Read Data 1: Ejecuta el nivel y observa lo que sucede. Luego edita el código para que imprima una columna de información diferente.
       U4L15 Read Data 2: |-
@@ -3307,30 +3384,74 @@ es-MX:
       aE3alternateB: Alternativa
       aE4: Alternativa
       aE5: Ejemplo de desafío mediante el uso de la forma de nivel de dificultad más alta.
+      aE6: "¿Cuántas veces necesitas crear un bucle para esto para dibujar un medio círculo?"
       aE7: Si copia ese bucle y gira a la izquierda en lugar de la derecha, ¿qué pasa? ¿Puedes repetir eso para dibujar esta ola?
       aE8: Ahora repitamos todo eso cuatro veces para crear este cuadro. Cuidado con las esquinas - ¡simplemente no puedes girar 90 grados! Si se repite 60 veces un giro de 3 grados hace un semicírculo, ¿cuál de estos bloques de código hará un cuarto de círculo para las esquinas?
+      aEfreeplay: "¡Juego libre!"
+      aalevelcopy: Agrega instrucciones
+      allHallows2017: Atrapa a los empleados de Code.org en una caja de crayones dibujando un cuadrado con lados de 320 pixeles.
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Hacer esto
+      allthethings_moviebot: Este nivel se clonó de "U3 Digital Assistant Target"
       allthethings_ttscsf contained: Recoge todas las lechugas (solo mientras haya alguna que recoger).
       allthethings_ttscsp: Corrige el error lógico dentro del programa para depurar el programa. (Haz clic para ver las instrucciones completas)
       artistDebugVideo1: Usa el loop 'repetir' para agregar olas al agua.
+      artistFunctionsVideo1: Sigue las instrucciones para hacer tu propia función.
       artistLoopsK1: Este es un nuevo tipo de desafío llamado "Artista". Juega con el nivel y dibuja algo divertido.
       artistLoopsK2: Ahora, utiliza un ciclo de repetición para dibujar esta línea cinco veces!
       artistLoopsK2gradek_artist_loops3: Ahora, utiliza un ciclo de repetición para dibujar esta línea cinco veces!
+      artistLoopsK3: Dibuja una línea de ocho pasos de largo. Esto se convertirá en la tierra de nuestro reino.
+      artistLoopsK4: Ahora necesitamos un castillo con un puente levadizo. Arregla el código para que el puente está derecho en lugar de cayéndose.
+      artistLoopsK5: Ahora necesitamos arreglar la parte superior del castillo. ¿Puedes hacer un bucle para el código tres veces?
+      artistLoopsK6: 'Alguien está atascado en la torre. Arregla las escaleras para liberarlos. '
+      artistLoopsK7: 'La torre es genial, ¿que hay debajo? Construye otra escalera para descubrirlo. '
+      artistLoopsK8: "¡Wow! Ahí hay un jardín. Ayuda a arreglar estas escaleras para que pueda llegar a él."
+      artistLoopsKA: Estas piedras está en el lugar equivocado. Ayúdame a moverlas para que no me caiga.
+      artistLoopsKB: "¡Mira! Es un teatro. Ayúdame a acomodar las sillas para que podamos ver todo el escenario."
+      artistLoopsKFP: "¡La hora de la imagen! Usa lo que has aprendido para dibujar una imagen de lo que crees que el Artista vio en el escenario."
       asteroids: "¡Este Corgi ha sido un buen chico! Arrastra esta zanahoria hasta él a modo de regalo especial."
       beeDebugVideo1: "¿Podrías utilizar un ciclo para recolectar todo el néctar?"
+      behavior bash mary: Clona este nivel y crea tus propios bloques.
+      behaviors 1: "¡Haz una predicción!"
+      behaviors 2: Vuela el cohete hasta las estrellas.
+      behaviors 3: Ayuda al explorador a superar al robot.
+      behaviors 3a: 'Depuración: haz que todas las estrellas giren de la misma manera.'
+      behaviors 4: "¡Haz una predicción!"
+      behaviors 5: Mueve al astronauta en forma diagonal.
+      behaviors 5a: Haz que la pelota gire.
+      behaviors 6: Haz que la pelota gire.
+      behaviors 7: Parte hacia el horizonte.
+      behaviors clone me 2: Clona este nivel y crea tus propios bloques.
+      behaviors clone me Ram: Clona este nivel y crea tus propios bloques.
+      behaviors clone me joshl: Clona este nivel y crea tus propios bloques.
+      behaviors clone me nk: Clona este nivel y crea tus propios bloques.
+      behaviors clone me tanya: Clona este nivel y crea tus propios bloques.
+      behaviors clone me: Clona este nivel y crea tus propios bloques.
+      behaviors free play: 'Juego libre: ¡crea tu propia escena de espacio exterior!'
+      behaviors pet test 123 copy: Cuando Daisy toma una zanahoria, se emociona. Usa el evento "cuando toca" y el bloque "agregar comportamiento" para hacer que Daisy haga algo divertido cuando toma la zanahoria.
+      behaviors pet test 123: Cuando Daisy toma una zanahoria, se emociona. Usa el evento "cuando toca" y el bloque "agregar comportamiento" para hacer que Daisy haga algo divertido cuando toma la zanahoria.
+      behaviors pet test 2: Cuando Daisy toma una zanahoria, se emociona. Usa el evento "cuando toca" y el bloque "agregar comportamiento" para hacer que Daisy haga algo divertido cuando toma la zanahoria.
+      behaviors pet test 3: |-
+        **Llego la hora de hacer tu propia mascota virtual** Puedes cambiar cualquier código que quieras para hacer tu propia mascota. Estas son algunas ideas:
+
+        -   ¿Puedes hacer que tu mascota comience un nuevo comportamiento cuando haces clic en ella?
+        -   ¿Puedes hacer que tu mascota salga corriendo cuando arrastras la vacuna hacia ella?
+        -   ¿Puedes agregar otros amigos animales a tu área de mascotas?
+      behaviors pet test: El nombre de esta perra es Daisy. Daisy ADORA comer zanahorias. Agrega el comportamiento "arrastrar y soltar" a la zanahoria para que puedas moverte hacia ella.
+      behaviors_caley: Clona este nivel y crea tus propios bloques.
+      ben's first level: Clona este nivel y crea tus propios bloques.
       birdsDebugVideo1: Traza el camino y llévame al cerdo tonto. ¡Evita el TNT o las plumas volarán!
       bounce_1: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo final.
       bounce_10: Ahora hay una meta en la parte superior. Une los bloques "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
       bounce_10_2018: Ahora hay una meta en la parte superior. Une los bloques "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza la meta" y "cuando pelota pasa de largo" para crear un juego. Prueba cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_10_basketball: Ahora hay una meta en la parte superior. Une los bloques "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_10_sports: Ahora hay una meta en la parte superior. Une los bloques "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
+      bounce_10_basketball: Ahora hay un arco arriba. Une los bloques "anotar punto" y "anotar punto de oponente" a los bloques "cuando pelota está en arco" y "cuando pelota falla mano" para hacer un juego. Mira cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
+      bounce_10_sports: Ahora hay un arco arriba. Une los bloques "anotar punto" y "anotar punto de oponente" a los bloques "cuando pelota está en arco" y "cuando pelota falla mano" para hacer un juego. Mira cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
       bounce_11: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la paleta y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
       bounce_11_2018: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la paleta y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
-      bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces!
-      bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces!
+      bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
+      bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También, trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuántos puntos puedes anotar antes de que tu oponente anote dos veces.
       bounce_12: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
       bounce_12_2018: Crea tu propio juego "Rebote". Puedes cambiar todos los efectos visuales y las reglas. Cuando estés listo, haz clic en Terminar para que tus amigos prueben tu juego en sus teléfonos.
-      bounce_12_basketball: Crea tu propio juego de baloncesto. Puedes cambiar todas las reglas. Cuando hayas terminado, haz clic en finalizar para permitir a tus amigos/as probar el juego en sus teléfonos.
+      bounce_12_basketball: Crea tu propio juego de baloncesto. Puedes cambiar todas las reglas. Cuando hayas terminado, haz clic en Finalizar para permitir a tus amigos/as probar el juego en sus teléfonos.
       bounce_12_sports: 'Crea tu propio juego. Ahora estás al mando: puedes cambiar todas las reglas y mezclar deportes. ¡Puedes ser creativo! Cuando estés listo, haz clic en "Terminar" para que tus amigos prueben tu juego en sus teléfonos.'
       bounce_1_2018: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo final.
       bounce_1_basketball: Une un bloque al bloque "cuando flecha izquierda" y presiona "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo final.
@@ -3338,7 +3459,7 @@ es-MX:
       bounce_2: Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
       bounce_2_2018: Une un bloque a los bloques "cuándo flecha derecha" y "cuándo flecha izquierda". Mueve la paleta para alcanzar ambos objetivos finales.
       bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y "cuando flecha izquierda". Mueve la mano para alcanzar los 2 objetivos finales.
-      bounce_2_sports: ¡Ahora hay dos banderas! Coloque un bloque en "cuando flecha izquierda" y "cuando flecha derecha" para mover a tu jugador en las dos direcciones.
+      bounce_2_sports: ¡Ahora hay dos banderas! Coloca un bloque en los bloques "cuando flecha izquierda" y "cuando flecha derecha" para hacer que los jugadores se muevan en dos direcciones.
       bounce_3: Ahora intenta algo similar con el bloque "cuándo flecha arriba". Mueve la paleta hacia el objetivo final en la parte superior.
       bounce_3_2018: Ahora intenta algo similar con el bloque "cuándo flecha arriba". Mueve la paleta hacia el objetivo final en la parte superior.
       bounce_4: Esta vez tienes que añadir cuatro bloques. Mueve la paleta a los cuatro objetivos finales para completar este desafío.
@@ -3346,7 +3467,7 @@ es-MX:
       bounce_5: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque "cuando la pelota golpea la paleta" para asegurar que la pelota alcance el objetivo final.
       bounce_5_2018: Vamos a lanzar una pelota hacia la paleta. Une un bloque al bloque "cuando la pelota golpea la paleta" para asegurar que la pelota alcance el objetivo final.
       bounce_5_basketball: Lanzaremos una pelota hacia la mano. Añade un bloque al bloque "cuando la bola golpee mano" para asegurar que la pelota llegue a la bandera.
-      bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloque un bloque en "cuando la bola golpea al jugador".
+      bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloca un bloque en el bloque "cuando la pelota golpea al jugador" para golpear la bandera.
       bounce_6: Ahora el objetivo final está en la parte superior. Tienes que unir bloques a ambos bloques de "cuando la pelota choca" para resolver este desafío.
       bounce_6_2018: Ahora el objetivo final está en la parte superior. Tienes que unir bloques a ambos bloques de "cuando la pelota choca" para resolver este desafío.
       bounce_6_basketball: Ahora la bandera está en la parte superior. Necesitas añadir bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
@@ -3355,9 +3476,17 @@ es-MX:
       bounce_7_2018: Une bloques a cada uno de los bloques "cuando". Rebota la pelota hasta que alcance el objetivo final.
       bounce_7_basketball: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota hasta que toque la bandera.
       bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota hasta que toque la bandera.
+      brendan behaviors clone: Clona este nivel y crea tus propios bloques.
+      brendan hackathon level: estas son instrucciones para mi nivel. deberías hacer este nivel y divertirte.
+      clone me mary: Clona este nivel y crea tus propios bloques.
+      collector example: Coloca estos bloques en orden para recolectar todo el oro y resolver este desafío.
+      collectorDebugVideo2: Coloca estos bloques en orden para recolectar todo el oro y resolver este desafío.
+      collectorSkinVideo1: Recoge las cuatro pilas para pasar este nivel.
+      collectorSkinVideo2: Recoge una pila de oro para pasar este nivel.
       comment_intro_maze_2018: Usa el nuevo bloque `comentar` para dejarte recordatorios rápidos.
       comment_intro_maze_2018_2019: Usa el nuevo bloque `comentar` para dejarte recordatorios rápidos.
       conditionals_forvideo_harvester: Recoge todo el maíz y todas las lechugas, luego recoge la calabaza.
+      conditionals_forvideo_playlab: Anota la mayor cantidad de puntos que puedas.
       course1_artist_loops_challenge1: |-
         Puede usar un loop para dibujar muchas líneas seguidas.
 
@@ -3371,57 +3500,55 @@ es-MX:
       course1_collector_loops_challenge2: 'Esta vez solo puedes usar uno de cada bloque de flecha. ¡Obtén todo el tesoro! '
       course1_collector_loops_challenge3: 'Esta vez solo puedes usar uno de cada bloque de flecha. ¡Obtén todo el tesoro! '
       course1_collector_loops_challenge4: "¡Consigamos el tesoro! Ayúdame a cruzar cada fila y luego regresa para comenzar la siguiente fila. ¿Puedes encontrar un patrón?"
+      course1_maze_debugging_challenge1: Depura este nivel. Elimina los bloques adicionales y agrega los bloques restantes. Lleva el pájaro hasta el cerdo.
       course1_maze_debugging_challenge2: Depura este nivel. ¡Estos son los bloques correctos, pero están en el orden equivocado!
+      course1_maze_seq_challenge1: '"Indica el recorrido y llévame hasta el cerdo tonto. Evita el TNT o las plumas se desparramarán".'
+      course1_playlab_events_challenge1: "¿Dónde están escondidos mis amigos? ¿Puedes escribir el código para mostrar al resto de mis amigos?"
+      course1_playlab_events_challenge2: '"Hagamos una fiesta. Dales a mis amigos algo que hacer cuando hagas clic en ellos o los toques".'
       course2_artist_nestedLoops_challenge1: "¿Puedes descifrar cómo hacer una imagen como esta?"
       course2_artist_nestedLoops_challenge2: "¿Puedes descifrar cómo hacer una imagen como esta?"
+      course2_artist_prog_challenge1: Dibuja habitaciones para cada uno de los animales. Hay varias maneras diferentes de resolver este desafío, así que diviértete. La solución más corta posibles es 6 bloques, pero usa los que necesites.
       course2_artist_prog_challenge2: _¡Ayúdame a pintar de amarillo las líneas en este camino!_
       course2_bee_conditionals_challenge1: Recoge todo el néctar o haz toda la miel.
       course2_bee_conditionals_challenge2: Recoge todo el néctar o haz toda la miel.
+      course2_collector_loops_challenge2: "¡Consigue todo el tesoro! "
       course2_collector_prog_challenge1: "¡Mira con cuidado! ¿Puedes recolectar todas las **10** piezas del tesoro?"
+      course2_collector_prog_challenge2: Hay 20 piezas del tesoro por encontrar. Recoge al menos la mitad para terminar este desafío.
       course2_harvester_loops_challenge1: Recoge todo el maíz.
       course2_harvester_loops_challenge2: Recoge toda la lechuga. ¡Evita los árboles y los campos!
       course2_maze_loops_challenge1: "¡Ahora Scrat quiere usar bucles para intentar encontrar su bellota! "
       course2_maze_programming_challenge2: A veces hay más de una forma de resolver el mismo problema. ¡A veces, es más rápido ir hacia atrás que ir hacia adelante!
       course2_maze_seq_challenge1: Traza el camino y llévame al cerdo tonto. ¡Evita el TNT o las plumas volarán!
-      course2_playlab_stage17_1: |-
-        ¿Puedes hacer que Jorge el Perro (actor 1)
-        diga "Hola"?
+      course2_playlab_stage17_1: ¿Puedes hacer que Jorge el Perro (actor 1) diga "Hola"?
       course2_playlab_stage17_10: |-
-        Agrega bloques al evento "cuando se ejecuta"
-        para cambiar el fondo y la velocidad de Waddles.\\r
-        \\r
-        Juega y
-        mueve a Waddles con las flechas hasta que anotes.
+        Agrega bloques al evento `cuando se ejecuta` para cambiar el fondo y la velocidad de Waddles.
+
+        Juega y mueve a Waddles con las flechas hasta que anotes.
       course2_playlab_stage17_11: Crea tu propia historia. Cuando estés listo, haz clic en Finalizar para que tus amigos la prueben en sus teléfonos.
-      course2_playlab_stage17_2: "¿Puedes hacer que el perro diga algo y que a continuación el gato le conteste?"
+      course2_playlab_stage17_2: "¿Puedes hacer que Jorge (actor 1) diga algo y que Olivia la Gata (actor 2) diga algo?"
       course2_playlab_stage17_3: "¿Puedes escribir un programa para que Jorge (actor 1) se mueva hacia Olive el Gato?"
-      course2_playlab_stage17_4: |-
-        ¿Puedes escribir un programa que haga que
-        Jorge (actor 1) mueva a Olive el Gato, y que Olive diga "Hola" cuando Jorge
-        la alcance?
-      course2_playlab_stage17_5: |-
-        ¿Puedes escribir un programa que haga que Octavia
-        diga "Hola" cuando se hace clic en ella?
-      course2_playlab_stage17_6: |-
-        Ahora, ¡escribe un programa que haga que Waddles
-        se mueva usando las teclas arriba/abajo/izquierda/derecha para tocar a todos los blancos!
+      course2_playlab_stage17_4: ¿Puedes escribir un programa que haga que Jorge (actor 1) mueva a Olivia la Gata, y que Olivia diga "Hola" cuando Jorge la alcance?
+      course2_playlab_stage17_5: ¿Puedes escribir un programa que haga que Octavia diga "Hola" cuando se hace clic en ella?
+      course2_playlab_stage17_6: Ahora, ¡escribe un programa que haga que Waddles se mueva usando las teclas arriba/abajo/izquierda/derecha para darle a todos los blancos!
+      course2_playlab_stage17_7: El bloque `repetir para siempre` te permite ejecutar código una y otra vez para siempre. ¿Puedes unir bloques para mover a Chomp el Dinosaurio (actor 2) arriba y abajo para siempre?
       course2_playlab_stage17_8: |-
         ¿Puedes hacer que Waddles (actor 1) diga "¡Auch!" y haga un ruido de "golpe" si se encuentra con Chomp?
 
         Cuando termines, juaga el juago para que eso suceda.
       course2_playlab_stage17_9: |-
-        ¿Puedes agregar un bloque para ganar un punto
-        cuando Waddles choque con Octavia (actor 3)?\\r
-        ¡Juega y mueve a Waddles
-        con las flechas hasta que anotes!
+        ¿Puedes agregar un bloque para anotar un punto cuando Waddles choque con Octavia (actor 3)?
+        ¡Juega y mueve a Waddles con las flechas hasta que anotes!
+      course3_artist_concept_challenge1: Puedes usar la prueba y error. No tienes que dibujarlo perfecto la primera vez. ¿Quieres ver más sugerencias? Haz clic aquí.
       course3_artist_functions_challenge1: Una vez que defines una función, puedes llamarla una y otra vez - ¡Cuándo y dónde quieras! Intenta este código para ver cómo funciona, ¡luego cámbialo para hacer tu propio diseño impresionante!
       course3_artist_functions_challenge2: Intenta este código para ver cómo funciona, ¡luego has tu programa propio!
       course3_bee_functions_challenge1: Estás por tu cuenta para este desafío. ¡Esto puede "ser" más difícil de lo que parece!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar y la miel mientras hay un camino por delante. ¡Úsalo para completar el desafío!
       course3_bee_functions_challenge4: "¡Usa todo lo que has aprendido para completar este desafío!"
       course3_collector_debugging_challenge2: "¿Eres experto en loops anidados? ¡Usa lo que has aprendido hasta ahora para recolectar todo el tesoro!"
+      course3_farmer_condLoops_challenge1: Gira a la derecha en las calabazas. Recoge todo para completar el nivel. Cada cultivo oculto sólo tiene un maíz o una lechuga.
       course3_farmer_condLoops_challenge2: Recoge todo para completar el nivel.
       course3_farmer_until_challenge2: Usa bloques si/si no para seguir el camino con curvas. En cada esquina, usa el comando 'remover 1' en un loop para limpiar los montones.
+      course3_maze_debugging_challenge2: _"Si giro muy seguido, me podría marear! Ayúdame a alcanzar la bellota con solo cuatro comandos `girar`."_
       course3_maze_until_challenge1: Sin pistas, sólo desafío. Lleva al zombie hasta el girasol.
       course3_playLab_challenge1: "Algo debería suceder cuando obtegas suficientes puntos o cuando se te acaben los puntos. Agrega algo de código a las funciones 'ganar juego' y 'perder juego' para hacer que el juego funcione de la manera que deberñia. \n¡Haz clic en las pistas para más ideas!"
       course3_playlab_challenge2: ¿Puedes descifrar cómo funciona la aplicación "Adivino"? Haz clic en 'MÁS' para ver tus desafós.
@@ -3445,7 +3572,9 @@ es-MX:
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios para ver que ocurre. ¿Puedes averiguar cómo funciona? (o elimínalo y reemplázalo con algo totalmente diferente)
       course4_artist_variables_challenge1: "¡Has aprendido todo lo que necesitas saber para hacer un patrón como este! Este desafío está hecho para ser difícil. ¿Puedes quedarte aquí hasta que descifres la solución?"
       course4_artist_variables_challenge2: "¡Has aprendido todo lo que necesitas saber para hacer un patrón como este! Este desafío está hecho para ser difícil. ¿Puedes quedarte aquí hasta que descifres la solución?"
+      course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar. Hay unas pocas acciones que querrás repetir 'contador' veces.
       course4_bee_fwp_challenge1: Usa un 'loop para' en una función para recoger todo el maíz. El mismo 'loop para' puede contar a valores máximos diferentes usando el parámetro 'longitud'.
+      course4_bee_fwp_challenge2: Usa un 'bucle para' en una función para recoger todos los vegetales en la fila. Haz que el 'bucle para' pueda contar hasta valores máximos diferentes usando el parámetro `longitud`. Haz tu programa tan corto como sea posible mediante el uso de un segundo 'bucle para' fuera de la función.
       course4_collector_nested_loops_challenge2: Ayuda al recolector a alcanzar al menos dos pilas del tesoro usando solo los bloques en tu caja de herramientas. Es posible recolectar las 4.
       course4_harvester_nested_loops_challenge1: '"¡Necesito ayuda en la granja! Ayúdame a cosechar este maíz usando sólo los bloques en tu caja de herramientas."'
       course4_playlab_variables_challenge1: Usa estos bloques para hacer que los actores compartan un chiste toc/toc. ¡Cambia el remate y establece tu propio chiste!
@@ -4943,14 +5072,16 @@ es-MX:
       courseD_scrat_ramp7_2018: "¡Ayuda a Scrat a llegar hasta la bellota!"
       courseD_scrat_ramp8: "¡Usa lo que has aprendido para que Scrat llegue hasta la bellota!"
       courseD_scrat_ramp8_2018: "¡Usa lo que has aprendido para que Scrat llegue hasta la bellota!"
-      courseE_aboutme_1: |-
-        Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ha elegido este sprite para representarla!
+      courseE_aboutme_1: Juega con el póster de Rikki y crea un poco de código; luego haz clic en **Finalizar**.
+      courseE_aboutme_1_old: |-
+        Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ella ha elegido este sprite para representarla!
 
         ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
       courseE_aboutme_2: |-
         ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
 
         Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
+      courseE_aboutme_3: Cuando se haya hecho clic en tu personaje, comparte algo SEGURO sobre ti mismo mediante el uso del bloque <xml><block type="gamelab_printText" block-text="print"></block></xml> en la categoría de caja de herramientas `Mundo`.
       courseE_aboutme_4: Agrega, al menos, dos nuevos sprites a tu póster. Estos sprites deberían representar algo sobre ti mismo. Asigna disfraces personalizados a estos sprites y luego haz una prueba.
       courseE_aboutme_5: "¡Comparte información acerca de los sprites que acabas de agregar! Cuando se les haga clic, imprime un poco de información SEGURA sobre ellos."
       courseE_aboutme_6: |-
@@ -4963,15 +5094,8 @@ es-MX:
         -   Haz que Thuy comience a girar cuando Rikki la toca. ¡Ella tiene cosquillas!
 
         -   Haz que el cono de helado desaparezca cuando Rikki lo toca. ¡Qué rico!
-      courseE_aboutme_7: |-
-        Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ha elegido este sprite para representarla!
-
-        ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
+      courseE_aboutme_7: Juega con el póster de Rikki y crea un poco de código; luego haz clic en **Finalizar**.
       courseE_aboutme_freeplay: "Gracias por ayudar a Rikki. Ahora es tu turno de **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki, ¡recuerda compartir información SEGURA!"
-      courseE_aboutme_template: |-
-        ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
-
-        Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
       courseE_artist_concept1: 'Recrea esta imagen. '
       courseE_artist_concept1_2018: 'Recrea esta imagen. '
       courseE_artist_concept1_2019: 'Recrea esta imagen. '
@@ -5116,7 +5240,7 @@ es-MX:
       courseE_farmer_functions2b_2018: Ayuda a la cosechadora a recoger el maíz y las calabazas.
       courseE_farmer_functions2b_2019: Ayuda a la cosechadora a recoger el maíz y las calabazas.
       courseE_farmer_functions2ba: Ayuda a la granjera a recoger el maíz y las calabazas mediante la función `maíz y calabaza`.
-      courseE_farmer_functions2ba_2018: Usa la función `maíz y calabaza` para ayudar a la granjera a recoger el maíz y las calabazas.
+      courseE_farmer_functions2ba_2018: Usa la función a continuación para ayudar a la granjera a recoger el maíz y las calabazas.
       courseE_farmer_functions2ba_2019: Ayuda a la granjera a recoger el maíz y las calabazas mediante la función `maíz y calabaza`.
       courseE_farmer_functions3: "¿Qué sucede cuando los caminos hacia las calabazas son de longitudes diferentes?  \n\nRecógelas todas con la menor cantidad posible de bloques."
       courseE_farmer_functions3b: Ahora ayuda a la granjera a recoger el maíz, la lechuga **y** la calabaza.
@@ -5516,8 +5640,8 @@ es-MX:
       courseF_playlab_embed_vars: Responde las preguntas de Pegleg el Pirata. ¿Qué sucede si ingresas el nombre en código "contraseña"? ¿Qué sucede con los otros nombres en código?
       courseF_playlab_variables0: Este es el pirata Pegleg. ¡Es muy difícil de entender en estos días!
       courseF_playlab_variables1: Este es el pirata Pegleg. ¡Es muy difícil de entender en estos días!
-      courseF_playlab_variables1a: Las variables se pueden usar para guardar texto que te puede servir más adelante. Asigna la variable `gritar` a este texto para que Kiki, la jugadora de fútbol, grite "¡Gol!".
-      courseF_playlab_variables1a_2018: Las variables se pueden usar para guardar texto que te puede servir más adelante. Asigna la variable `gritar` a este texto para que Kiki, la jugadora de fútbol, grite "¡Gol!".
+      courseF_playlab_variables1a: Las variables se pueden usar para guardar texto que te puede servir más adelante. Asigna este texto a la variable `gritar` para que Kiki, la jugadora de fútbol, grite "¡Gol!".
+      courseF_playlab_variables1a_2018: Las variables se pueden usar para guardar texto que te puede servir más adelante. Asigna este texto a la variable `gritar` para que Kiki, la jugadora de fútbol, grite "¡Gol!".
       courseF_playlab_variables2: 'Ahora, ¡cambia el valor de las variables en dos lugares para descifrar el discurso del pirata Pegleg! '
       courseF_playlab_variables2a: 'Ahora, ¡cambia el valor de las variables en dos lugares para descifrar el discurso del pirata Pegleg! '
       courseF_playlab_variables2b RYAN CLONE: Pon la variable `color` en el espacio vacío del bloque `unir` para insertarla en el medio de una oración.
@@ -5563,6 +5687,7 @@ es-MX:
       coursef_explore_playlab_cat_game: "¡Puedes hacer lo que quieras en Laboratorio de juegos! Este es un ejemplo de un juego que puedes crear."
       coursef_maze_ramp3: Hay un bloque sobrante que hará que el pájaro se estrelle. Arrástralo a la caja de herramientas para descartarlo.
       coursef_maze_ramp3_2018: Hay un bloque sobrante que hará que el pájaro se estrelle. Arrástralo a la caja de herramientas para descartarlo.
+      drawings!: 'Dibuja el triángulo equilátero: todos los lados son iguales.'
       eventsIntro: Necesitas una mejor combinación de laboratorio de juegos/eventos
       express_maze_debugging9_2019: Usa los bloques de la caja de herramientas para crear tu programa. Haz que Scrat llegue hasta la bellota.
       flappy_1: Adjunta un bloque a "cuando se haga clic en el bloque", entonces presiona "Ejecutar". Haz clic o toca la pantalla para mover a Flappy hacia el objetivo.
@@ -5586,8 +5711,14 @@ es-MX:
       flappy_9: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar el juego, intente ajustar el marcador de nuevo a 0.
       flappy_9_2018: Para mezclar las cosas, al chocar con un obstáculo, en vez de terminar el juego, intente ajustar el marcador de nuevo a 0.
       frozen circle function in circle: Ahora crearemos 20 círculos superpuestos, girando 18 grados entre cada círculo.
+      frozen circle function in circle_b: Ahora creemos _20_ círculos superpuestos, que giran _18 grados_ entre cada círculo.
+      frozen circle function in circle_test: Ahora creemos _20_ círculos superpuestos, que giran _18 grados_ entre cada círculo.
       frozen circle function with parameter: Aquí está un bloque "Crear círculo" que puede dibujar círculos de diferentes tamaños. ¿Puedes usarlo para dibujar un círculo pequeño de tamaño 5 y uno más grande de tamaño 10?
+      frozen circle function with parameter_b: Usa la nueva función para crear un pequeño círculo del tamaño **5** y un círculo más grande del tamaño **10**.
+      frozen circle function with parameter_test: Usa la nueva función para crear un pequeño círculo del tamaño **5** y un círculo más grande del tamaño **10**.
       frozen circle function: Utiliza el nuevo bloque "Crear un círculo" para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante entre cada círculo.
+      frozen circle function_b: Utiliza la nueva función `Crear un círculo` para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante 25 pixeles entre cada círculo.
+      frozen circle function_test: Utiliza la nueva función `Crear un círculo` para crear 10 círculos superpuestos. No te olvides de saltar hacia adelante 25 pixeles entre cada círculo.
       frozen circle: Un círculo es una figura especial. ¿Puedes adivinar qué número debe reemplazar los signos de interrogación para dibujar un círculo?
       frozen cross rotate dense: "¡Ahora repitámoslo 90 veces! ¿Cuántas veces cabe 90 en 360? Pista: Es un número muy pequeño."
       frozen cross rotate: Ahora trata de repetirlo 10 veces. ¿Cuántos grados necesitas girar entre cada línea?
@@ -5659,6 +5790,7 @@ es-MX:
       grade2_collector_10: "¡Casi terminas! ¡Recoge tantos tesoros como puedas para finalizar la etapa!"
       grade2_collector_10_2018: "¡Casi terminas! ¡Recoge tantos tesoros como puedas para finalizar la etapa!"
       grade2_collector_10_2019: "¡Casi terminas! ¡Recoge tantos tesoros como puedas para finalizar la etapa!"
+      grade2_collector_3: Coloca estos bloques en orden para recolectar todo el oro y resolver este desafío.
       grade2_collector_5: Estos bloques están en el orden equivocado. ¿Puedes corregirlos?
       grade2_collector_6: Reorganiza los bloques para recoger todo el tesoro.
       grade2_collector_7: "¡Súper Desafío! Usa los bloques de la caja de herramientas para recolectar todo el tesoro."
@@ -5666,24 +5798,19 @@ es-MX:
       grade2_collector_A_2018: Ayuda a Laurel a recoger todo el tesoro.
       grade2_collector_A_2019: Ayuda a Laurel a recoger todo el tesoro.
       grade2_maze_debuggingFP: '"Ahora, ¡ayúdame a acercarme sigilosamente al cerdo de la forma que quieras!"'
-      grade2_playlab_project_1: |-
-        Ahora, ¡escribe un programa que haga que Waddles
-        se mueva usando las teclas arriba/abajo/izquierda/derecha para tocar a todos los blancos!
+      grade2_playlab_project_1: Ahora, ¡escribe un programa que haga que Waddles se mueva usando las teclas arriba/abajo/izquierda/derecha para darle a todos los blancos!
+      grade2_playlab_project_2: El bloque `repetir para siempre` te permite ejecutar código una y otra vez para siempre. ¿Puedes unir bloques para mover a Chomp el Dinosaurio (actor 2) arriba y abajo para siempre?
       grade2_playlab_project_3: |-
         ¿Puedes hacer que Waddles (actor 1) diga "¡Auch!" y haga un ruido de "golpe" si se encuentra con Chomp?
 
         Cuando termines, juaga el juago para que eso suceda.
       grade2_playlab_project_4: |-
-        ¿Puedes agregar un bloque para ganar un punto
-        cuando Waddles choque con Octavia (actor 3)?\\r
-        ¡Juega y mueve a Waddles
-        con las flechas hasta que anotes!
+        ¿Puedes agregar un bloque para anotar un punto cuando Waddles choque con Octavia (actor 3)?
+        ¡Juega y mueve a Waddles con las flechas hasta que anotes!
       grade2_playlab_project_5: |-
-        Agrega bloques al evento "cuando se ejecuta"
-        para cambiar el fondo y la velocidad de Waddles.\\r
-        \\r
-        Juega y
-        mueve a Waddles con las flechas hasta que anotes.
+        Agrega bloques al evento `cuando se ejecuta` para cambiar el fondo y la velocidad de Waddles.
+
+        Juega y mueve a Waddles con las flechas hasta que anotes.
       grade2_puppy_loops2: '¿Podrías reemplazar estos cinco bloques con solo dos? (Sugerencia: Crea un ciclo usando un bloque de "repeticiones".)'
       grade2_puppy_loops4: Usa dos ciclos para hacer que el cerdo use menos bloques.
       grade3_ConditionalsElse_1: La abeja no puede decir si se trata de una flor o un panal de miel. Reúnen néctar de las flores, pero primero tienes que comprobar si es una flor o un panal de miel.
@@ -6007,6 +6134,7 @@ es-MX:
       level grade3_Loops_2: "¿Podrías hacer la misma tarea más fácilmente con un ciclo?"
       loops_forvideo_iceage_ab: "¡Usa los bucles para que Scrat llegue hasta la bellota!"
       loops_forvideo_iceage_cf: "¡Usa los bucles para que Scrat llegue hasta la bellota!"
+      marina_gameLab_play: Clona este nivel y crea tus propios bloques.
       playEventsK1: Este juego se llama "Play Lab".  Ve si puedes descifrar que hace cada bloque.
       playEventsK3: "¡Jorge quiere que lo rasquen detrás de las orejas! ¿Puedes hacerlo para que Jorge esté feliz cuando hagas clic?"
       playLabDebugVideo1: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?

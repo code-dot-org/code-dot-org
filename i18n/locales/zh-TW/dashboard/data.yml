@@ -385,6 +385,8 @@ zh-TW:
         csd_external_netflix_data: Netflix 是如何製作電視節目和電影建議的？
         csd_external_waze_data: 為什麼有這麼多人對 Waze 著迷？
         csd_gamelab_animation_tab: 動畫頁籤
+        csd_gamelab_draw_1: 用 Game Lab 繪圖 - 第 1 部分
+        csd_gamelab_draw_2: 用 Game Lab 繪圖 - 第 2 部分
         csd_gamelab_sprites_2: 動畫角色
         csd_gamelab_velocity: 速度
         csd_weblab_intro_1: Web Lab 介紹 - 第 1 部分
@@ -471,6 +473,7 @@ zh-TW:
         lesson_planning: 教學計畫
         csd_pair_programming: 小組編程
         csd_applab_parameters: 函式帶參數
+        csd_problem_solving_process: 問題解決流程
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方
