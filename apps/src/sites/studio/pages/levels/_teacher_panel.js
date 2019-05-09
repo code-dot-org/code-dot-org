@@ -1,20 +1,25 @@
 /* global appOptions */
 
 import $ from 'jquery';
-import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
+import {getHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
 
 $(document).ready(initPage);
 
 function initPage() {
+  const script = document.querySelector('script[data-teacherpanel]');
+  const teacherPanelData = JSON.parse(script.dataset.teacherpanel);
+
   const store = getStore();
 
   initViewAs(store);
+  store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
   renderTeacherContentToggle(store);
 
   const teacherPanel = document.getElementById('level-teacher-panel');
