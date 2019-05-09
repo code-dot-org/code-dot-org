@@ -1,6 +1,5 @@
 require 'net/http'
 require 'uri'
-require 'IPSocket'
 
 SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
 
