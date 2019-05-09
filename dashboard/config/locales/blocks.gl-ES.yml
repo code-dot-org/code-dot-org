@@ -192,7 +192,14 @@ gl:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
+              da vella
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': baixa
+              a auga
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
       gamelab_setPosition:
         options:
           POSITION:
@@ -209,6 +216,11 @@ gl:
             '"scale"': tamaño
             '"height"': altura
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': cando
@@ -245,6 +257,11 @@ gl:
             "'down'": abaixo
             "'left'": esquerda
             "'right'": dereita
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': cando
+            '"while"': mentras
       gamelab_whileKey:
         options:
           KEY:

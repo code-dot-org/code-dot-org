@@ -2,6 +2,7 @@
 sk:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       2-3 Artist 1 new: Ahoj, ja som umelec. Napíš program a môžeš ma naučiť kresliť takmer všetko. Pomocou pár blokov ma nauč kresliť sivé čiary na obrázku. (Každá z čiar je 100 pixelov dlhá)
       2-3 Artist 11: |-
         Daj značke "Stop" okraj tým,
@@ -63,7 +64,7 @@ sk:
         Niečo nie je v poriadku!
 
         Kód pre túto stonku je zlý. Vieš zistiť, ako by Umelec nakreslil stonku správnym spôsobom?
-      2-3 Artist Debugging Assessment 1: "Hodnotenie\" Prečo je tento štvorec nakoniec o 75 pixelov menší na každej strane? \n\nKde robí kód chybu?"
+      2-3 Artist Debugging Assessment 1: "Prečo je tento štvorec na každej strane o 75 pixelov menší? \n\nKde robí kód chybu?"
       2-3 Artist Free Play: Voľná hra! Možeš si nakresliť čokoľvek.
       2-3 Artist Functions 1 a: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôžte zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
       2-3 Artist Functions 1: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôžte zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
@@ -108,7 +109,7 @@ sk:
         Použi rovnaký kód ako predtým, ale pridaj krok dopredu na koniec vonkajšieho cyklu.
       2-3 Artist Loops New 1: Poďme nakresliť hlavu tohto robota! Viete spraviť štvorec so stranou dlhou 100 pixelov?
       2-3 Artist Loops New 10: A teraz spojme niekoľko Véčiek spolu do cyklu.
-      2-3 Artist Loops New 11: Prerobte kód z poslednej úlohy tak, že pridáte otočku o 30 stupňov dovnútra cyklu. A teraz to zopakujte 24krát namiesto 8.
+      2-3 Artist Loops New 11: Prerob kód z poslednej úlohy tak, že na koniec cyklu pridáš otočku o 30 stupňov. A teraz to zopakuj 24krát namiesto 8.
       2-3 Artist Loops New 12: Nakresli kosoštvorec so stranami dlhými 100 pixelov.
       2-3 Artist Loops New 13: "Začneme s časťou kódu (v šedom), s ktorým vytvoríme jeden kosoštvorec. \n\nZopakuj šedý kód viackrát a vytvor zábavný vzor!"
       2-3 Artist Loops New 14: Pohraj sa trochu s kódom, ktorým si nakreslil diamant. Vieš nakresliť aj iné vzory? Skús zmeniť počet stupňov o ktoré sa otočíš aj počty opakovaní.
@@ -182,7 +183,7 @@ sk:
       2-3 Bee Functions 5: Teraz je na kvetoch viac nektáru. Uprav danú funkciu tak, že získa 4 nektáru a použi ju na zozbieranie všetkého nektáru z kvetov.
       2-3 Bee Functions 6: Teraz použi rovnakú funkciu a získaj nektár z troch kvetov.
       2-3 Bee Functions 7: Kvety sú teraz ďalej. Upraviť danú funkciu a použi ju na zozbieranie všetkého nektáru z kvetov.
-      2-3 Bee Functions 8: Vytvor vlastnú funkciu, ktorá získa 7 nektáru, pohne sa dopredu a urobí 7 medu. Použi funkciu na zozbieranie nektáru v každom kvete a urobí med na každom pláste.
+      2-3 Bee Functions 8: Vytvor vlastnú funkciu, ktorá získa 7 nektárov, pohne sa dopredu a vyrobí 7 medov. Použi funkciu na zozbieranie nektáru z každého kvetu a výrobu medu v každom pláste.
       2-3 Bee Functions 9: Vytvor vlastnú funkciu, ktorá prejde po ceste, pozbiera nektár, vyrobí med a potom vráti včelu na začiatok cesty.
       2-3 Bee Functions Assessment 1: 'Hodnotenie: Použi danú funkciu pre pozbieranie nektáru z každej kvetiny.'
       2-3 Bee Functions Assessment 2: 'Hodnotenie: Vytvorte funkciu pre zabočenie, posun dopredu a výrobu 3 medov, potom vráťte včeličku na miesto, z ktorého začala a otočte ju.'
@@ -335,8 +336,8 @@ sk:
       4-5 Artist Patterns Free Play: Voľná hra - vyskúšaj svoju ruku nakreslením vlastného vzoru!
       4-5 Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       4-5 Bee Conditionals 2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      4-5 Bee Conditionals 3: Ja chcem len spraviť med. Niektoré z týchto oblakov môžu schovávať úle. Uistite sa, že ste skontrolovali každý oblak!
-      4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      4-5 Bee Conditionals 3: Teraz chcem len vyrábať med. Pod niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
+      4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       4-5 Bee Conditionals 5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 
@@ -548,7 +549,7 @@ sk:
       Dance Party 3_simple: 'Vytvor novú postavičku s menom `alien2` a potom mu prikáž zmeniť tanečný krok, keď na neho klikneš.  '
       Dance Party 4 Validated: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie. '
       Dance Party 4: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie. '
-      Dance Party 4_2019: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie. '
+      Dance Party 4_2019: Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie.
       Dance Party 4_simple: 'Vytvor tretiu postavičku nazvanú `alien3` a umiestni všetkých svojich mimozemšťanov do jednej línie. '
       Dance Party 5 - Validated: Pridaj kód, aby sa zmenila farba mimozemšťana, keď na neho klikneš.
       Dance Party 5: Pridaj kód, aby sa zmenila farba mimozemšťana, keď na neho klikneš.
@@ -1638,9 +1639,9 @@ sk:
       courseD_bee_conditionals5: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseD_bee_conditionals5_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseD_bee_conditionals5_2019: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
-      courseD_bee_conditionals6: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
-      courseD_bee_conditionals6_2018: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
-      courseD_bee_conditionals6_2019: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
+      courseD_bee_conditionals6: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
+      courseD_bee_conditionals6_2018: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
+      courseD_bee_conditionals6_2019: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
       courseD_bee_conditionals_challenge1: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals_challenge1_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals_challenge1_2019: Pozbieraj všetok nektár a vyrob všetok med.
@@ -1986,6 +1987,12 @@ sk:
       courseF_artist_for_challenge2_2019: Viete zistiť, ako znova nakresliť túto kresbu s jedinou slučkou?
       courseF_artist_ramp8: Teraz s pomocu Umelca nakresli štvorec!
       courseF_artist_ramp8_2018: Teraz s pomocu Umelca nakresli štvorec!
+      courseF_artist_variables3: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables3_2018: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables3_2019: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
+      courseF_artist_variables_2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+        Môžeš doň vložiť kód z predošlej úlohy.
       courseF_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals1_predict1: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.
@@ -2113,7 +2120,7 @@ sk:
         Ešte jedna ceduľka. Toto je trojuholník pre Pi.
         (Každá strana má 150 pixelov)
       grade2_MakeDogTag_8: A teraz spojme niekoľko Véčiek spolu do cyklu.
-      grade2_MakeDogTag_9: Prerobte kód z poslednej úlohy tak, že pridáte otočku o 30 stupňov dovnútra cyklu. A teraz to zopakujte 24krát namiesto 8.
+      grade2_MakeDogTag_9: Prerob kód z poslednej úlohy tak, že na koniec cyklu pridáš otočku o 30 stupňov. A teraz to zopakuj 24krát namiesto 8.
       grade2_PuppyLoops_1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
       grade2_PuppyLoops_10: |-
         Môj učiteľ hovorí, že by som mal dokončiť to, čo som začal!
@@ -2144,8 +2151,8 @@ sk:
       grade2_puppy_loops4: V tejto úlohe ti dva príkazy "opakuj" pomôžu dostať prasiatko najmenším možným počtom blokov!
       grade3_ConditionalsElse_1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       grade3_ConditionalsElse_2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      grade3_ConditionalsElse_3: Ja chcem len spraviť med. Niektoré z týchto oblakov môžu schovávať úle. Uistite sa, že ste skontrolovali každý oblak!
-      grade3_ConditionalsElse_4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      grade3_ConditionalsElse_3: Teraz chcem len vyrábať med. Pod niekotorými z týchto oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
+      grade3_ConditionalsElse_4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       grade3_ConditionalsElse_5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 
@@ -2221,7 +2228,7 @@ sk:
       grade3_bee_conditionals_new3b: Pozbieraj všetok nektár a vyrob všetok med.
       grade3_bee_conditionals_quantum1: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.
       grade3_bee_conditionals_quantum2: 'Skontroluj každý oblak, či sa pod ním nenachádza kvet predtým, ako pozbieraš nektár.  '
-      grade3_bee_conditionals_quantum3: Niektoré z týchto oblakov môžu skrývať úľ. Určite pohľadaj úľ pod každým oblakom!
+      grade3_bee_conditionals_quantum3: Po niektorými z týchto oblakov sa môžu skrývať plásty. Určite pohľadaj plást pod každým oblakom!
       grade3_maze_Loop1: 'Hodnotenie: Dostaňte ma k slnečnici použitím len 5 blokov! '
       grade3_maze_loops2: 'Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov!  '
       grade3_maze_loops2a: Dostaň zombíka k slnečnici použitím čo najmenšieho počtu blokov.
@@ -2254,7 +2261,7 @@ sk:
       grade4_artist_nested_loop_polygons1: "Zopakuj tento dizajn 10 krát. \n\nO koľko sa musíš otočiť pri každom opakovaní?"
       grade4_bee_conditionals_quantum1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor, kvetinka môže meniť svoju polohu!
       grade4_bee_conditionals_quantum2: "Ďalšie oblaky!\n\nSkontroluj každý oblak, či sa pod ním neschováva kvetinka predtým, ako pozbieraš nektár.  \n\nPamätaj: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
-      grade4_bee_conditionals_quantum4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ! Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre spravenie medu, ak tam je úľ.
+      grade4_bee_conditionals_quantum4: Niekedy oblak zakrýva kvetinu a inokedy zakrýva plást! Použi bloky ak-inak na pozbieranie nektáru, ak je pod oblakom kvetina alebo na vyrobenie medu, ak je pod ním plást.
       grade4_bee_conditionals_quantum5: |-
         Pod každým z týchto oblakov je buď kvetina, alebo úľ!
 

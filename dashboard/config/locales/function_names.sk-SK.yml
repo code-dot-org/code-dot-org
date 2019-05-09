@@ -87,6 +87,7 @@ sk:
       do something: urob niečo
       filter_pixel: filtruj_pixel
       draw_image: nakresli_obrázok
+      checkSimulationEnd: skontrolujKoniecSimulacie
       witch ending: koniec_bosorky
       story: príbeh
       starting path: začiatok cesty

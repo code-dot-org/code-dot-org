@@ -3653,48 +3653,6 @@ fr:
         to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)
         \ to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
         to send it to your Projects Gallery."
-      CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
-        Mouse X and Y\\\r\n\n\\\r\nOne of the simplest ways\nto take input is to just
-        make a sprite follow the user's mouse position.\n**You can get the x and y
-        location of the mouse using `World.mouseX` and `World.mouseY`.**  This\nfollows
-        the pattern you learned with sprite properties. `World` is the name\nof the
-        object. `mouseX` and `mouseY` are the names of the properties.\\\r\n\\\r\n\n#
-        \n\nDo This\\\r\n\\\r\nYou are going to make a bee sprite follow the mouse
-        around\nthe game area.\\\r\n\\\r\n\n-   The bee image is already loaded in
-        the animation tab\n    for you.\\\r\n-   Create a bee sprite that draws in
-        the center of the window.\\\r\n-   \\*\n    Inside the draw loop update the
-        position of the sprite to the position of\n    the mouse:\\\r\n    \\\\t\\*
-        Set the x position of the sprite to the value of `World.mouseX`.\\\r\n    \\*\n
-        \   Set the y position of the sprite to the value of `World.mouseY`.\\\r\n-
-        \  Run\n    the program to test that it works.\\\r"
-      CSD U3 Mouse Input Bee 1_2018: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
-        Mouse X and Y\\\r\n\n\\\r\nOne of the simplest ways\nto take input is to just
-        make a sprite follow the user's mouse position.\n**You can get the x and y
-        location of the mouse using `World.mouseX` and `World.mouseY`.**  This\nfollows
-        the pattern you learned with sprite properties. `World` is the name\nof the
-        object. `mouseX` and `mouseY` are the names of the properties.\\\r\n\\\r\n\n#
-        \n\nDo This\\\r\n\\\r\nYou are going to make a bee sprite follow the mouse
-        around\nthe game area.\\\r\n\\\r\n\n-   The bee image is already loaded in
-        the animation tab\n    for you.\\\r\n-   Create a bee sprite that draws in
-        the center of the window.\\\r\n-   \\*\n    Inside the draw loop update the
-        position of the sprite to the position of\n    the mouse:\\\r\n    \\\\t\\*
-        Set the x position of the sprite to the value of `World.mouseX`.\\\r\n    \\*\n
-        \   Set the y position of the sprite to the value of `World.mouseY`.\\\r\n-
-        \  Run\n    the program to test that it works.\\\r"
-      CSD U3 Mouse Input Bee 1_2019: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
-        Mouse X and Y\\\r\n\n\\\r\nOne of the simplest ways\nto take input is to just
-        make a sprite follow the user's mouse position.\n**You can get the x and y
-        location of the mouse using `World.mouseX` and `World.mouseY`.**  This\nfollows
-        the pattern you learned with sprite properties. `World` is the name\nof the
-        object. `mouseX` and `mouseY` are the names of the properties.\\\r\n\\\r\n\n#
-        \n\nDo This\\\r\n\\\r\nYou are going to make a bee sprite follow the mouse
-        around\nthe game area.\\\r\n\\\r\n\n-   The bee image is already loaded in
-        the animation tab\n    for you.\\\r\n-   Create a bee sprite that draws in
-        the center of the window.\\\r\n-   \\*\n    Inside the draw loop update the
-        position of the sprite to the position of\n    the mouse:\\\r\n    \\\\t\\*
-        Set the x position of the sprite to the value of `World.mouseX`.\\\r\n    \\*\n
-        \   Set the y position of the sprite to the value of `World.mouseY`.\\\r\n-
-        \  Run\n    the program to test that it works.\\\r"
       CSD U3 Mouse Input Bee 2: "# Random Around Point\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/d124946bb9e01a3623078c2a87beea8c-image-1477681483067.gif\"\nstyle=\"float:right\">\\\r\n\\\r\nNow
         that you can make the bee follow the mouse,\nlets make a bee fly around the
         mouse as shown in the picture on the right.  In\norder to do this, you will
@@ -7791,6 +7749,7 @@ fr:
         \   happens if you use two different angles in your stair step pattern?\\\r\n-
         \  What\n    happens if you make your diamond pattern longer or shorter?\\\r\n-
         \  What does\n    it look like to draw two snowflakes on top of one another?\\\r"
+      Dance Party Template 2_2019: Modèle
       Dance_Party_01: |-
         _Faisons une fête dansante !_
 

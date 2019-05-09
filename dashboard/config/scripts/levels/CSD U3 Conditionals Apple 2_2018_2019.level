@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:29:37.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -104,14 +104,14 @@
     "long_instructions": "# Changing Fruit\r\n\r\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\r\n\r\n# Do This\r\n\r\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\r\n\r\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_",
     "parent_level_id": 11446,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "encrypted": "false",
     "rubric_key_concept": "Use conditionals to control the flow of a program.",
-    "rubric_exceeds": "The sprite's image changes from an apple to a pear when the sprite's scale reaches 2.",
-    "rubric_meets": "There is a conditional in the draw loop that checks whether the sprite's scale has reached 2.",
-    "rubric_approaches": "There is a conditional in the draw loop that checks the value of a Boolean statement.",
-    "rubric_no_evidence": "There are no conditionals in the draw loop.",
-    "mini_rubric": "true"
+    "mini_rubric": "true",
+    "rubric_performance_level_1": "The sprite's image changes from an apple to a pear when the sprite's scale reaches 2.",
+    "rubric_performance_level_2": "There is a conditional in the draw loop that checks whether the sprite's scale has reached 2.",
+    "rubric_performance_level_3": "There is a conditional in the draw loop that checks the value of a Boolean statement.",
+    "rubric_performance_level_4": "There are no conditionals in the draw loop.",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

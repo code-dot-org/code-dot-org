@@ -4780,11 +4780,6 @@ es-MX:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Deberían haber 3 bloques dentro del loop para resolver este
           puzzle.
-      behaviors 1_authored_hint:
-        behavior hint: |-
-          ¡Intenta editar los comportamientos!
-
-          -   ¿En qué dirección necesita moverse el pájaro?
       behaviors 2_authored_hint:
         behavior hint: |-
           ¡Intenta editar los comportamientos!
@@ -4795,11 +4790,11 @@ es-MX:
           ¡Intenta editar los comportamientos!
 
           -   ¿Qué valor controla la velocidad de cada sprite?
-      behaviors 4_authored_hint:
+      behaviors 3a_authored_hint:
         behavior hint: |-
           ¡Intenta editar los comportamientos!
 
-          -   ¿En qué dirección necesita moverse el pájaro?
+          -   ¿Qué valor controla la velocidad de cada sprite?
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere
           la mascota?
@@ -4812,6 +4807,11 @@ es-MX:
 
           -   ¿Qué valor controla la velocidad de cada sprite?
       behaviors 6_authored_hint:
+        behavior hint: |-
+          ¡Intenta editar los comportamientos!
+
+          -   ¿Qué valor controla la velocidad de cada sprite?
+      behaviors 7_authored_hint:
         behavior hint: |-
           ¡Intenta editar los comportamientos!
 

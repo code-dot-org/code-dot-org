@@ -7676,7 +7676,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2018_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare
           gli errori (debugging). Non arrenderti!
@@ -7684,7 +7684,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_collector_loops_challenge2a_2019_authored_hint:
         courseB_collector_loops_challenge2a_a: Se qualcosa va storto, prova a cercare
           gli errori (debugging). Non arrenderti!
@@ -7692,7 +7692,7 @@ it:
           a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
-          oppure mettere quel blocco all'interno di un proprio ciclo `ripeti`.
+          oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
         courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
@@ -10487,21 +10487,21 @@ it:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
           il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2018_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
           il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_debugging_challenge2_2019_authored_hint:
         courseC_maze_debugging_challenge2_b: Se ti stai bloccando, prova a controllare
           il codice (debugging). C'è qualcosa di sbagliato?
         courseC_maze_debugging_challenge2_c: |-
-          Ci sono due diversi percorsi che puoi seguire andando avanti e girando solo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
+          Ci sono due diversi percorsi che puoi seguire andando avanti e girando al massimo quattro volte. Ma se trovi il modo di usare un ciclo, potrebbero essercene anche di più!
 
           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_loops6_authored_hint:
@@ -10759,24 +10759,24 @@ it:
         courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo
           esercizio.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2018_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice
           per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2019_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti
-          ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti?
+          Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi
           per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo
           `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
@@ -10829,18 +10829,18 @@ it:
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops5_2018_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo
           girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo
-          `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`,
+          una curva e infine un ciclo.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di
           carta e cerca una sequenza che si ripete.

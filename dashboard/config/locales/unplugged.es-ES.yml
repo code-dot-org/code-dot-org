@@ -712,6 +712,8 @@ es:
           seguras y fuertes.
       timeforcs_demo_crowdsourcing:
         title: Colaboración Abierta
+        desc: '_Nota de Josh: a diferencia de la primera lección, he formateado esta
+          como una lección típica no empaquetada._'
       timeforcs_demo_conditionals:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes

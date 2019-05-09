@@ -22,13 +22,13 @@ pt-BR:
       Text: Texto
       Picker: Seletor
       Comment: Comentário
-      'Variables ': 'Variáveis '
-      Default: Padrão
-      Behaviors: Comportamentos
-      Locations: Localizações
-      everythingelse: todoresto
       World: Mundo
       Sprites: Sprite
+      Behaviors: Comportamentos
+      'Variables ': 'Variáveis '
+      Default: Padrão
+      Locations: Localizações
+      everythingelse: todoresto
       Location: Localização
       numbers: números
       Numbers: Números

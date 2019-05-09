@@ -6,6 +6,7 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import clientState from './clientState';
 import StageProgress from './components/progress/StageProgress.jsx';
+import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ScriptOverview from './components/progress/ScriptOverview.jsx';
 import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
@@ -177,8 +178,10 @@ progress.renderCourseProgress = function(scriptData) {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.versions}
+        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
+        locale={scriptData.locale}
+        showAssignButton={scriptData.show_assign_button}
       />
     </Provider>,
     mountPoint

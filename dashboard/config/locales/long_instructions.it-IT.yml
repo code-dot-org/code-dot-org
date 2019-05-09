@@ -4,6 +4,8 @@ it:
     long_instructions:
       "'pre-assessment survey q25A'": 'Se sì, a quale corso/i di informatica hai preso
         parte prima di questa lezione di informatica? '
+      "(joshl) Dance Party 1-validated_2019": "**Fai una previsione:** Ecco un personaggio
+        chiamato `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       2-3 Artist 1 new: Ciao, io sono un artista. Puoi scrivere del codice per farmi
         disegnare quasi qualunque cosa. Usa i blocchi per farmi disegnare lungo le
         linee grigie dell'immagine. (Ciascuna riga è lunga 100 pixel)
@@ -1445,6 +1447,7 @@ it:
         \n\nCosa pensi che succeda quando ci clicchi sopra?  "
       Dance Party Predict_2019: "**Fai una previsione:** Ecco un personaggio chiamato
         `alien1`! \n\nCosa pensi che succeda quando ci clicchi sopra?  "
+      Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Usa gli eventi per rendere il tuo ballo interattivo!
       Dance_Party_01: |-
         _Organizziamo una festa e balliamo alla grande!_
@@ -2276,6 +2279,9 @@ it:
       Virtual Pet Predict: '**Fai una previsione:** Questa è Geraldine, la tua nuova
         giraffa domestica. Cosa pensi accadrà quando premerai  "▶ Esegui" e cliccherai
         su di lei?'
+      Virtual Pet Template_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea
+        un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera,
+        il suo colore diventi marrone."
       beeDebugVideo1: Raccogli tutto il nettare.
       comment_intro_maze_2018: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_
         \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche
@@ -2580,11 +2586,11 @@ it:
       courseA_bee_seq6: Adesso l'ape deve raccogliere il nettare da due fiori!
       courseA_bee_seq7: Aggiungi due blocchi per completare l'esercizio!
       courseA_collector_loops1: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseA_collector_loops12: |-
         _"Evviva! Raccogli più diamanti che puoi!"_
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
@@ -2595,17 +2601,17 @@ it:
         _"Evviva! Raccogli più diamanti che puoi!"_
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseA_collector_loops1_2018: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseA_collector_loops1_2019: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
          <xml><block type="collector_collect"/></xml>
@@ -3022,27 +3028,23 @@ it:
       courseB_artist_loops_challenge2_2019: Disegna più X che puoi. Riesci a disegnarne
         tre in fila... e fare TRIS?
       courseB_collector_loops1: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseB_collector_loops1_2018: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante per completare questo esercizio.
-
-        * * *
-
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti.
-
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
-      courseB_collector_loops1_2019: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante per completare questo esercizio.
-
-        * * *
-
-        Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti.
-
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
+      courseB_collector_loops1_2018: "**Tempo di giocare:** questa è Laura l'avventuriera!
+        Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante
+        per completare questo esercizio.\n\n* * *\n\nTrascina i blocchi nell'area
+        di lavoro e cerca di capire come prendere i diamanti.\n\n(Se non sei riuscito
+        a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)
+        \ "
+      courseB_collector_loops1_2019: "**Tempo di giocare:** questa è Laura l'avventuriera!
+        Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante
+        per completare questo esercizio.\n\n* * *\n\nTrascina i blocchi nell'area
+        di lavoro e cerca di capire come prendere i diamanti.\n\n(Se non sei riuscito
+        a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante \"Termina\".)
+        \ "
       courseB_collector_loops2: |-
         Muovi Laura lungo i diamanti e usa il blocco <xml><block type="collector_collect"/></xml> per racccoglierlo.
 
@@ -3610,19 +3612,19 @@ it:
 
         Ogni lato del quadrato interno è lungo 100 pixel e tutti gli angoli sono di 90 gradi.
       courseC_artist_prog4: |-
-        _"Oh no! Il mostriciattolo domestico è volato via! Aiuta l'alieno!"_
+        _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo animale domestico.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog4_2018: |-
-        _"Oh no! Il mostriciattolo domestico è volato via! Aiuta l'alieno!"_
+        _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo animale domestico.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog4_2019: |-
-        _"Oh no! Il mostriciattolo domestico è volato via! Aiuta l'alieno!"_
+        _"Oh no! Il mio amico mostriciattolo è volato via! Aiutami a raggiungerlo!"_
 
-        Completa il razzo in modo che l'alieno possa seguire il suo animale domestico.
+        Completa il razzo in modo che l'alieno possa seguire il suo amico mostriciattolo.
         (Ogni lato del triangolo è lungo 100 pixel ed ha angoli esterni di 120 gradi.)
       courseC_artist_prog5: |-
         _"Forse dovremmo costruire una targhetta per ciascuno dei nostri animali domestici nel caso in cui si perdano."_
@@ -3709,23 +3711,23 @@ it:
 
         Aiuta la collezionista a raccogliere almeno **5** diamanti.
       courseC_collector_prog1: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseC_collector_prog1_2018: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseC_collector_prog1_2019: |-
-        **Tempo di giocare:** questa è Laura l'Avventuriera! Muovila per farle raccogliere più diamanti che puoi.
+        **Tempo di giocare:** questa è Laura l'avventuriera! Muovila per farle raccogliere più diamanti che puoi.
 
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
-        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina")
+        (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseC_collector_prog2: Fai muovere Laura fino al diamante, quindi usa il blocco
         <xml><block type="collector_collect"/></xml> per prenderlo.
       courseC_collector_prog2_2018: Fai muovere Laura fino al diamante, quindi usa
@@ -3765,15 +3767,15 @@ it:
       courseC_collector_prog6: |-
         _"Aiutami a raccogliere tutti i diamanti!!"_
 
-        Questi blocchi sono nell'ordine sbagliato. Riordinarli per raccogliere tutti i diamanti.
+        Questi blocchi sono nell'ordine sbagliato. Riordinali per raccogliere tutti i diamanti.
       courseC_collector_prog6_2018: |-
         _"Aiutami a raccogliere tutti i diamanti!!"_
 
-        Questi blocchi sono nell'ordine sbagliato. Riordinarli per raccogliere tutti i diamanti.
+        Questi blocchi sono nell'ordine sbagliato. Riordinali per raccogliere tutti i diamanti.
       courseC_collector_prog6_2019: |-
         _"Aiutami a raccogliere tutti i diamanti!!"_
 
-        Questi blocchi sono nell'ordine sbagliato. Riordinarli per raccogliere tutti i diamanti.
+        Questi blocchi sono nell'ordine sbagliato. Riordinali per raccogliere tutti i diamanti.
       courseC_collector_prog7: |-
         **Sfida:** _Cosa sta succedendo qui?_
 
@@ -3798,7 +3800,7 @@ it:
       courseC_collector_prog9: _"Prendiamoli tutti 'sti diamanti!"_
       courseC_collector_prog9_2018: _"Prendiamoli tutti 'sti diamanti!"_
       courseC_collector_prog9_2019: _"Prendiamoli tutti 'sti diamanti!"_
-      courseC_collector_progA: Aiuto Laura a raccogliere tutti i diamanti.
+      courseC_collector_progA: Aiuta Laura a raccogliere tutti i diamanti.
       courseC_collector_prog_challenge2: In questa grotta ci sono 20 diamanti. Raccogline
         almeno **10** per completare la sfida!
       courseC_collector_prog_challenge2_2018: In questa grotta ci sono 20 diamanti.
@@ -4031,6 +4033,15 @@ it:
         C'è ancora qualcosa di sbagliato.
 
         Rimuovi dei blocchi per far arrivare Scrat fino alla ghianda!
+      courseC_maze_debugging_challenge2: Se fai fare troppe curve a Scrat, potrebbe
+        giragli la testa! Aiutalo a raggiungere la ghianda usando al massimo quattro
+        blocchi `gira a ...`.
+      courseC_maze_debugging_challenge2_2018: Se fai fare troppe curve a Scrat, potrebbe
+        giragli la testa! Aiutalo a raggiungere la ghianda usando al massimo quattro
+        blocchi `gira a ...`.
+      courseC_maze_debugging_challenge2_2019: Se fai fare troppe curve a Scrat, potrebbe
+        giragli la testa! Aiutalo a raggiungere la ghianda usando al massimo quattro
+        blocchi `gira a ...`.
       courseC_maze_loops8: "**Sfida:** Metti a frutto ciò che hai imparato negli ultimi
         esercizi per completare questo livello."
       courseC_maze_programming1: Per risolvere questo esercizio, collega tutti i blocchi
@@ -4039,12 +4050,14 @@ it:
         i blocchi e clicca su "Esegui" per vederlo in funzione!
       courseC_maze_programming1_2019: Per risolvere questo esercizio, collega tutti
         i blocchi e clicca su "Esegui" per vederlo in funzione!
-      courseC_maze_programming2: Trascina ancora un blocco <xml><block type="maze_moveForward"/></xml>
-        fuori dalla cassetta degli attrezzi per completare il programma.
-      courseC_maze_programming2_2018: Trascina ancora un blocco <xml><block type="maze_moveForward"/></xml>
-        fuori dalla cassetta degli attrezzi per completare il programma.
-      courseC_maze_programming2_2019: Trascina ancora un blocco <xml><block type="maze_moveForward"/></xml>
-        fuori dalla cassetta degli attrezzi per completare il programma.
+      courseC_maze_programming2: Per completare il programma, trascina ancora un blocco
+        <xml><block type="maze_moveForward"/></xml> fuori dalla cassetta degli attrezzi.
+      courseC_maze_programming2_2018: Per completare il programma, trascina ancora
+        un blocco <xml><block type="maze_moveForward"/></xml> fuori dalla cassetta
+        degli attrezzi.
+      courseC_maze_programming2_2019: Per completare il programma, trascina ancora
+        un blocco <xml><block type="maze_moveForward" block-text="move forward"/></xml>
+        fuori dalla cassetta degli attrezzi.
       courseC_maze_programming3: |-
         _"Questo maialino mi fa arricciare le penne."_
 
@@ -4087,15 +4100,15 @@ it:
       courseC_maze_programming6: |-
         _"Mantieni la calma e aiutami a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!"_
 
-        Fai arrivare l'uccellino fino a maialino evitando la dinamite (TNT).
+        Fai arrivare l'uccellino fino al maialino evitando la dinamite (TNT).
       courseC_maze_programming6_2018: |-
         _"Mantieni la calma e aiutami a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!"_
 
-        Fai arrivare l'uccellino fino a maialino evitando la dinamite (TNT).
+        Fai arrivare l'uccellino fino al maialino evitando la dinamite (TNT).
       courseC_maze_programming6_2019: |-
         _"Mantieni la calma e aiutami a trovare quel cattivone di un maialino. Altrimenti potrei arrabbiarmi!"_
 
-        Fai arrivare l'uccellino fino a maialino evitando la dinamite (TNT).
+        Fai arrivare l'uccellino fino al maialino evitando la dinamite (TNT).
       courseC_maze_programming7: |-
         _"È ora di arrabbiarsi!"_
 
@@ -4126,6 +4139,12 @@ it:
         modo che preferisci!"_
       courseC_maze_programming9_2019: _"Ora aiutami a sorprendere il maialino nel
         modo che preferisci!"_
+      courseC_maze_programming_challenge1: 'L''uccellino ha bisogno del tuo aiuto!
+        Il maialino si sta nascondendo e l''obiettivo è trovarlo. '
+      courseC_maze_programming_challenge1_2018: 'L''uccellino ha bisogno del tuo aiuto!
+        Il maialino si sta nascondendo e l''obiettivo è trovarlo. '
+      courseC_maze_programming_challenge1_2019: 'L''uccellino ha bisogno del tuo aiuto!
+        Il maialino si sta nascondendo e l''obiettivo è trovarlo. '
       courseC_maze_programming_challenge2: Alcune volte ci sono diversi modi per risolvere
         lo stesso problema. In questo caso, per esempio, potrebbe essere più veloce
         andare all'indietro, piuttosto che muoversi in avanti!
@@ -7524,9 +7543,9 @@ it:
         _"Aiutami a raccogliere ogni moneta d'oro"!_
 
         Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
-      grade2_collector_A: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2018: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2019: Aiuto Laura a raccogliere tutti i diamanti.
+      grade2_collector_A: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2018: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2019: Aiuta Laura a raccogliere tutti i diamanti.
       grade2_maze_debuggingFP: _"Ora aiutami a sorprendere il maialino nel modo che
         preferisci!"_
       grade2_playlab_project_3: |-

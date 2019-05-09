@@ -61,12 +61,25 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     sub_level5 = create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    sub_level6 = create :match, name: 'level_match_unsubmitted', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
+    sub_level7 = create :match, name: 'level_match_correct', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
+    sub_level8 = create :match, name: 'level_match_incorrect', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
 
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] = 'Long assessment 1'
     level1.properties['pages'] = [
       {levels: ['level_free_response', 'level_multi_unsubmitted']},
       {levels: ['level_multi_correct', 'level_multi_incorrect']},
+      {levels: ['level_match_unsubmitted', 'level_match_correct', 'level_match_incorrect']},
       {levels: ['level_multi_unattempted']}
     ]
     level1.save!
@@ -86,6 +99,10 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       {"text" => "answer3", "correct" => false},
       {"text" => "answer4", "correct" => false}
     ]
+
+    expected_match_answers = [{"text" => "one"}, {"text" => "two"}]
+    expected_match_options = [{"text" => "one"}, {"text" => "two"}]
+
     expected_questions = [
       {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name,
         "display_name" => nil, "title" => "title", "question_text" => nil, "question_index" => 0},
@@ -95,8 +112,14 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text, "question_index" => 2},
       {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text, "question_index" => 3},
+      {"level_id" => sub_level6.id, "type" => "Match", "name" => sub_level6.name,
+       "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level6.get_question_text, "question" => sub_level6.question, "question_index" => 4},
+      {"level_id" => sub_level7.id, "type" => "Match", "name" => sub_level7.name,
+       "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level7.get_question_text, "question" => sub_level7.question, "question_index" => 5},
+      {"level_id" => sub_level8.id, "type" => "Match", "name" => sub_level8.name,
+       "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level8.get_question_text, "question" => sub_level8.question, "question_index" => 6},
       {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name,
-        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text, "question_index" => 4},
+        "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text, "question_index" => 7},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
     assert_equal "translation missing: en-US.data.script.name.#{script.name}.title", level_response["name"]
@@ -145,10 +168,25 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    sub_level5 = create :match, name: 'level_match_unsubmitted', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
+    sub_level6 = create :match, name: 'level_match_correct', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
+    sub_level7 = create :match, name: 'level_match_incorrect', type: 'Match', properties: {
+      answers: [{text: "one"}, {text: "two"}],
+      questions: [{text: "one"}, {text: "two"}]
+    }
 
     level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
     level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
+    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']},
+                                  {levels: ['level_multi_correct', 'level_multi_incorrect']},
+                                  {levels: ['level_match_unsubmitted', 'level_match_correct', 'level_match_incorrect']},
+                                  {levels: ['level_multi_unattempted']}]
     level1.save!
     create :script_level, script: script, levels: [level1], assessment: true
 
@@ -156,7 +194,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     level_source = create(
       :level_source,
       level: level1,
-      data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"}})
+      data: %Q({"#{sub_level1.id}":{"result":"This is a free response"},"#{sub_level2.id}":{"result":"0"},"#{sub_level3.id}":{"result":"1"},"#{sub_level4.id}":{"result":"-1"},"#{sub_level5.id}":{"result":","},"#{sub_level6.id}":{"result":"0,1"},"#{sub_level7.id}":{"result":"1,0"}})
     )
     create :activity, user: @student_1, level: level1,
       level_source: level_source
@@ -185,6 +223,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
             "multi_correct" => 1,
             "multi_count" => 4,
+            "match_correct" => 2,
+            "match_count" => 6,
             "submitted" => true,
             "timestamp" => user_level[:updated_at],
             "level_results" => [
@@ -192,6 +232,9 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
               {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
               {"type" => "Multi", "student_result" => [], "status" => "unsubmitted",},
+              {"type" => "Match", "student_result" => [nil, nil], "status" => ["unsubmitted", "unsubmitted"],},
+              {"type" => "Match", "student_result" => [0, 1], "status" => ["submitted", "submitted"],},
+              {"type" => "Match", "student_result" => [1, 0], "status" => ["submitted", "submitted"],},
               {"type" => "Multi", "status" => "unsubmitted"}
             ]
           }

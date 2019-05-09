@@ -1,4 +1,4 @@
-.unplugged.match
+.unplugged.match{id: "level_#{level.id}"}
   = render partial: 'levels/content', locals: {app: 'match', data: level.properties, content_class: level.question_content_class, source_level: level, hide_header: !standalone}
 
   - if standalone && !(level.properties['options'].try(:[], 'hide_submit'))
@@ -15,11 +15,11 @@
 
   .mainblock
     .column
-      %ul#questions
+      %ul.match_questions
         - level.questions.each do |question|
-          %li{style: "height: #{level.height}px"}!= match_t(question['text'], level)
-    .column#answerdest
-      %ul#slots.draggablecolumn
+          %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'], level)
+    .column.match_answerdest
+      %ul.match_slots.draggablecolumn
         - level.answers.each do |_|
           %li.emptyslot{style: "height: #{level.height}px"}
             .giantmark
@@ -27,20 +27,28 @@
               .text{style: "font-size: #{giantmark_height}px; line-height: #{giantmark_height}px"}
                 ?
 
-    .column#correctmarkscolumn
-      %ul#correctmarks
+    .column.match_correctmarkscolumn
+      %ul.match_correctmarks
         - level.questions.each_with_index do |question, index|
           %li.correctmark{style: "height: #{level.height}px"}
-            .xmark{style: 'display: none;', id: "xmark_#{index}"}
+            .xmark{style: 'display: none;', id: "xmark_#{level.id}_#{index}"}
               %strong X
 
     .column
-      %ul#answers.draggablecolumn
+      %ul.match_answers.draggablecolumn
         - level.shuffled_indexed_answers.each do |answer|
-          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= match_t(answer['text'], level)
+          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: answer['index']}!= render_multi_or_match_content(answer['text'], level)
 
     .clear
   - if standalone
     = render partial: 'levels/dialog', locals: {app: 'match'}
   = render partial: 'levels/match_answer', locals: {level: level}
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+
+  :javascript
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Match(
+      #{level.id},
+      "level_#{level.id}",
+      #{standalone},
+      "#{last_attempt}"
+    ));

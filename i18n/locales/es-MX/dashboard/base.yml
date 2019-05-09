@@ -4,7 +4,7 @@ es-MX:
       not_saved: 'Por favor, corrige los siguientes errores:'
       too_young: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes.'
       teacher_must_accept_terms: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte los Términos de Servicio actualizados para darte acceso a este contenido. Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón "Revisar términos actualizados" cerca de la parte superior de la página de inicio de Code Studio.'
-      pair_programmer: 'En este momento, estás programando en pareja con un estudiante que no tiene acceso a este contenido. Para acceder a este contenido, detén la programación en pareja e inténtalo nuevamente.'
+      pair_programmer: 'En este momento, estás programando de a pares con un estudiante que no tiene acceso a este contenido. Para acceder a este contenido, detén la programación en pareja e inténtalo nuevamente.'
   activerecord:
     errors:
       messages:
@@ -14,8 +14,8 @@ es-MX:
         invalid_plural: "no son válidos"
     attributes:
       user:
-        name: 'Nombre por mostrar'
-        name_example: 'Nombre por mostrar <br/> (p. ej., Programador Genial o Juana S.)'
+        name: 'Nombre a mostrar'
+        name_example: 'Nombre a mostrar <br/> (Programador Genial o Juana S.)'
         email: 'Correo electrónico'
         parent_email: 'Correo electrónico del padre o tutor'
         personal_email: "Correo electrónico personal <a href=\"%{url}\">(haz clic aquí si no tienes correo electrónico)</a>"
@@ -270,12 +270,6 @@ es-MX:
     header:
       finished_hoc: "¡He terminado!"
       sign_in_to_save: 'Inicia sesión para guardar tu progreso'
-      free_play:
-        playlab: 'Crear una aplicación en el Laboratorio de juegos'
-        artist: 'Dibuja algo'
-        applab: 'Crear una aplicación en el Laboratorio de aplicaciones'
-        gamelab: 'Crear un proyecto en el Laboratorio de juegos'
-        weblab: 'Crear un proyecto en el Laboratorio Web (beta)'
       my_dashboard: "Mi panel de control"
       course_catalog: "Catálogo de cursos"
       project_gallery: "Proyectos"
@@ -351,7 +345,8 @@ es-MX:
       playlab: 'Laboratorio de juegos'
       playlab_k1: 'Play Lab ( Pre-lector)'
       scratch: 'Scratch'
-      sports: 'Спорт'
+      sports: 'Deportes'
+      spritelab: 'Laboratorio de sprites'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (bloques)'
       starwarsblocks_hour: 'Star Wars (bloques)'
@@ -658,7 +653,7 @@ es-MX:
       title: "Minecraft"
       body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
     sports:
-      title: "Спорт"
+      title: "Deportes"
       body: "Elige entre un partido de baloncesto o una combinación de deportes."
     text-compression:
       title: "Compresión de texto"
@@ -908,6 +903,8 @@ es-MX:
     csf_binary: 'Binario'
     csf_data: 'Datos'
     csf_conditionals: 'Condicionales'
+    csf_sprites: 'Sprites'
+    csf_spritelab: 'Laboratorio de sprites'
     csf_nested_loops: 'Bucles anidados'
     csf_functions: 'Funciones'
     csf_variables: 'Variables'
@@ -951,13 +948,13 @@ es-MX:
     csp_lists: 'Listas'
     csp_loops: 'Bucles'
     csp_traversals: 'Recorridos'
-    csp_libraries: 'Librerías'
+    csp_libraries: 'Bibliotecas'
     dlp: 'Preguntas para reflexionar'
-    time4cs_c1: 'Everglades y sus Ecosistemas'
+    time4cs_c1: 'Everglades y sus ecosistemas'
     time4cs_c2: 'Cadenas de comida en Everglades'
     time4cs_c3: 'Vivir en Everglades'
-    time4cs_c4: 'Impactos Invasivos en Everglades'
-    time4cs_c5: 'Los ciudadanos afectan el cambio en Everglades'
+    time4cs_c4: 'Impactos invasivos en Everglades'
+    time4cs_c5: 'Los ciudadanos efectúan cambios en Everglades'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada por Code.org.

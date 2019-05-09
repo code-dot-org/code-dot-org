@@ -1,5 +1,6 @@
 class PeerReviewMailer < ActionMailer::Base
   default from: 'Code.org <teacher@code.org>'
+  default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def review_completed_receipt(peer_review)
     @peer_review = peer_review

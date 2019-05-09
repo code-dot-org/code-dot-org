@@ -1,8 +1,8 @@
 ---
 title: Regional Partner Directory
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name=“robots” content=“noindex”>
 
 # Regional Partner Network
 
@@ -28,9 +28,9 @@ As the Regional Partner program continues to mature and expand, Code.org will lo
 
 **Purpose**
 
-The advisory committee is a valuable resource for Code.org to understand our partners’ needs and to tailor our models accordingly. Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input.  While there are numerous avenues for all partners to provide feedback, make suggestions, and share ideas such as regional managers, ongoing feedback surveys, and at Partner Summits, the advisory committee provides a formal structure for ongoing communication with a representative group of Regional Partners. Code.org benefits from hearing feedback, advice and receiving guidance on the direction of the program. 
+The advisory committee is a valuable resource for Code.org to understand our partners’ needs and to tailor our models accordingly. Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input.  While there are numerous avenues for all partners to provide feedback, make suggestions, and share ideas such as regional managers, ongoing feedback surveys, and at Partner Summits, the advisory committee provides a formal structure for ongoing communication with a representative group of Regional Partners. Code.org benefits from hearing feedback, advice and receiving guidance on the direction of the program.
 
-The advisory committee is also a forum to connect peers across the Regional Partner network to share resources and successes, discuss ideas, and connect and learn from each other.  Committee members serve a 2- or 3-year term and represent a broad range of partners from all Groups, institutional types, and geographic locations.  New committee members are nominated by Code.org staff in collaboration with the current advisory committee.  If you are interested in serving on the committee in the future, have questions, or would like to learn more, please email the Chair(s) to express your interest. 
+The advisory committee is also a forum to connect peers across the Regional Partner network to share resources and successes, discuss ideas, and connect and learn from each other.  Committee members serve a 2- or 3-year term and represent a broad range of partners from all Groups, institutional types, and geographic locations.  New committee members are nominated by Code.org staff in collaboration with the current advisory committee.  If you are interested in serving on the committee in the future, have questions, or would like to learn more, please email the Chair(s) to express your interest.
 
 <a id="members"></a>
 
@@ -39,7 +39,7 @@ The advisory committee is also a forum to connect peers across the Regional Part
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'rpadvisory') %>
 
 <a id="resources"></a>
-## Shared Resources 
+## Shared Resources
 
 Access the Regional Partner Network Google Drive [here](https://drive.google.com/drive/folders/1yKAijpPre8wFRStRhIpl_1BuKcxQa9HW?usp=sharing).
 

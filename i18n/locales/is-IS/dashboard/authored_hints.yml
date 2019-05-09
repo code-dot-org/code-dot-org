@@ -2100,20 +2100,20 @@ is:
         artistLoopsKA_a: Notaðu hoppa kubbinn til að fara áfram án þessa að teikna línu.
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Það ættu að vera 3 kubbar innan í lykkjunni til að leysa þessa þraut.
-      behaviors 1_authored_hint:
-        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Í hvaða átt þarf að fuglinn að færast?"
       behaviors 2_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Í hvaða átt þarf að fuglinn að færast?"
       behaviors 3_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
-      behaviors 4_authored_hint:
-        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Í hvaða átt þarf að fuglinn að færast?"
+      behaviors 3a_authored_hint:
+        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
       behaviors 5_authored_hint:
         target hint: Þú getur valið milli fjögurra leikfanga. Hvert af þeim vill gæludýrið?
         behavior hint: Breytu atferlinu til að leysa þessa þraut. Gæludýrið þarf að fara í tvær mismunandi áttir til að hreyfast á endanum skáhallt.
       behaviors 5a_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
       behaviors 6_authored_hint:
+        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
+      behaviors 7_authored_hint:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Athugasemdir eru einnig hjálplegar þegar aðrir reyna að lesa kóðann þinn.

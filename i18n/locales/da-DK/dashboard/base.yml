@@ -257,12 +257,11 @@ da:
     header:
       finished_hoc: "Jeg har afsluttet min Hour of Code"
       sign_in_to_save: 'Log ind for at gemme fremskridt'
-      free_play:
-        playlab: 'Lav en App'
-        artist: 'Tegn noget'
-        applab: 'Lav en App'
+      course_catalog: "Kursuskatalog"
       project_gallery: "Projekter"
+      sections: "Sektioner"
       report_bug: "Rapporter fejl"
+      teacher_community: "Lærer-fælleskab"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -295,8 +294,11 @@ da:
       settings: 'Min konto'
       logout: 'Log ud'
       signin: 'Log ind'
+      signup: 'Skab en konto'
       already_registered: 'Allerede registreret?'
+      pair_programming: 'Par-programmering'
       team: 'Hold'
+      driver: 'Logget ind'
       navigator: 'Partner'
       create: 'Opret'
       algebra_game: 'Algebra'
@@ -312,8 +314,10 @@ da:
       gumball: 'Gumball'
       iceage: 'Is-tid'
       infinity: 'Uendelig'
+      makerlab: 'Skaber-toolkit'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
+      spritelab: 'SpriteLab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
@@ -353,11 +357,13 @@ da:
       last_updated: 'Senest opdateret:'
       unsubmit: 'Fortryd indsendelse'
       worked_with: 'Samarbejdede med'
+      clear_response: 'Klar feedback'
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
     email_confirm_wrong_email: '(Forkert e-mail?)'
     email_resend_confirm: 'Gensend bekræftelsesmail'
+    new_email_hint: '(vær sikker på, du kan modtaget mails på denne adresse)'
     new_password_hint: "(Efterlad blank hvis du ikke ønsker at ændre det)"
     current_password_hint: '(vi har brug for din nuværende adgangskode til at bekræfte dine ændringer)'
     delete: 'Slet din konto'
@@ -710,6 +716,7 @@ da:
     csf_events: 'Hændelser'
     csf_binary: 'Binære'
     csf_conditionals: 'Betingelser'
+    csf_spritelab: 'SpriteLab'
     csf_nested_loops: 'Indlejret Løkker'
     csf_functions: 'Funktioner'
     csf_variables: 'Variabler'

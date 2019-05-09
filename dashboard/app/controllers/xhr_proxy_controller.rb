@@ -47,6 +47,7 @@ class XhrProxyController < ApplicationController
     bible-api.com
     code.org
     compete.hsctf.com
+    data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
@@ -72,6 +73,7 @@ class XhrProxyController < ApplicationController
     random.org
     rhcloud.com
     runescape.com
+    samples.openweathermap.org
     sheets.googleapis.com
     spreadsheets.google.com
     stats.minecraftservers.org
@@ -80,6 +82,7 @@ class XhrProxyController < ApplicationController
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached

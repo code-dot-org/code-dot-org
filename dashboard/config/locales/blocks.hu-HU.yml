@@ -916,7 +916,13 @@ hu:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': barlang
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': város
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sivatag
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rács
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': szivárvány
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vízalatti
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': téli
       gamelab_setDirection:
         text: állítsd be {SPRITE} mozgás irányát {DIRECTION}
       gamelab_setPosition:
@@ -958,6 +964,11 @@ hu:
         text: mutasd címoldalt {BREAK} cím {TITLE} leírás {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} kattintás"
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': amikor
@@ -1057,6 +1068,11 @@ hu:
         text: amikor {SPRITE1} érinti {SPRITE2}
       gamelab_whenTouchingAny:
         text: amikor {SPRITE} érinti bármely {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': amikor
+            '"while"': amíg
       gamelab_whenTrue:
         text: ha {CONDITION} igaz
       gamelab_whenUpArrow:

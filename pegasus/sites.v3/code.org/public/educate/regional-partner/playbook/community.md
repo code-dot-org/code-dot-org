@@ -1,8 +1,8 @@
 ---
 title: Community Building
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Community Building
@@ -39,7 +39,7 @@ Teachers should feel supported as members of a teacher community. Use community 
 Incorporate the diverse and varied computer science community in your events! Anyone who is interested in supporting computer science in the classroom should feel like they can attend.
 
 **When to hold them?**<br/>
-Hold at least 4 community events for teachers through the year.  Please ensure at least 3 of these events are spread out during the academic year.  We recommend 2 events during the "fall term" before December 31 and 2 events between January 1 and the end of the school year. 
+Hold at least 4 community events for teachers through the year.  Please ensure at least 3 of these events are spread out during the academic year.  We recommend 2 events during the "fall term" before December 31 and 2 events between January 1 and the end of the school year.
 
 **What's expected?**<br/>
 All events should include teachers from your professional learning programs across CS Fundamentals, Discoveries, and Principles.  We also encourage you to open up these events to CS teachers outside your cohorts. Consider partnering with other organizations to host these events.

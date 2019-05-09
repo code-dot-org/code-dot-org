@@ -22,12 +22,12 @@ ar:
       Prebuilt: معدّة مسبقاً
       Text: النص
       Comment: تعليق
+      World: العالم
+      Behaviors: السلوك
       'Variables ': 'المتغيرات '
       Default: الافتراضي
-      Behaviors: السلوك
       Locations: مواقع
       everythingelse: كل شيء اخر
-      World: العالم
       Location: الموقع
       numbers: أرقام
       Numbers: أرقام

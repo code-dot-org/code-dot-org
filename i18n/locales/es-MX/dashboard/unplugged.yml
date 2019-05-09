@@ -393,7 +393,7 @@ es-MX:
         desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene como objetivo ayudar a los alumnos a entender cómo funciona el intercambio y la inspiración en el proceso creativo. Esto conlleva la promoción de la expresión creativa y la necesidad de ser justos con el trabajo creativo.
       GraphingData_2019:
         title: Gráficos de datos
-        desc: " En esta lección, los estudiantes recopilarán datos de un proyecto del Laboratorio de Juegos o de un escenario del mundo real y los utilizarán para hacer predicciones."
+        desc: ' En esta lección, los estudiantes recopilarán datos de un proyecto del Laboratorio de Juegos o de un escenario del mundo real y los utilizarán para hacer predicciones.'
       courseE_unplugged_accessAbility_2019:
         title: Habilidad de acceso
         desc: Aprende sobre accesibilidad y sobre el valor de la empatía mediante la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas.
@@ -405,8 +405,10 @@ es-MX:
         desc: Explora por qué las personas utilizan contraseñas, aprende los beneficios de usarlas y descubre estrategias que te ayudarán a crear y conservar contraseñas fuertes y seguras.
       timeforcs_demo_crowdsourcing:
         title: Colaboración abierta
+        desc: '_Nota de Josh: a diferencia de la primera lección, el formato de esta es como el de una lección típica sin conexión._'
       timeforcs_demo_conditionals:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
       TheRightApp_2019:
         title: La aplicación correcta
+        desc: "* Todos usan computadoras hoy en día, especialmente smartphones. \\r\n* Las aplicaciones para smartphones, también conocidas como \"apps\", ayudan a las personas a hacer cosas como hablar con amigos, escuchar música, comprar o navegar por Internet.\\r\n* ¡Es importante que los programadores entiendan las necesidades de los demás y diseñen aplicaciones a su medida!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

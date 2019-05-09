@@ -32,7 +32,7 @@ es-MX:
       AppLab Intro 4 - Video Welcome: Bienvenidos a la Hora del Código
       AppLab Intro 4 - Video designMode: Vistazo rápido del modo de diseño
       AppLab Intro 4 - Video onEvent: Usar onEvent
-      AppLab Intro 4 - Video setProperty: Iniciando
+      AppLab Intro 4 - Video setProperty: Primeros pasos
       AppLab Intro 4 - Video share thisThat: Compartir tu trabajo
       AppLab Intro 4 - Video share your work: Compartir tu trabajo
       AppLab Intro 4 - Video share: Compartir tu trabajo
@@ -64,7 +64,7 @@ es-MX:
       AppLab Intro 6 - Change Screen Color: Cambiar el color de la pantalla
       AppLab Intro 6 - Change Text 2: Cambiar el texto
       AppLab Intro 6 - Full Text: Dos botones
-      AppLab Intro 6 - Video welcome: Iniciando
+      AppLab Intro 6 - Video welcome: Primeros pasos
       AppLab Intro 6 - animalSoundBoard: Usar playSound
       AppLab Intro 6 - blankApp: Usar playSound
       AppLab Intro 6 - onEvent intro: Hacer que funcionen los botones
@@ -115,10 +115,14 @@ es-MX:
       CSD LEDs Map: 'Circuit Playground: LED'
       CSD LEDs Map_2018: 'Circuit Playground: LED'
       CSD LEDs Map_2019: 'Circuit Playground: LED'
+      CSD Polling Events Map: Eventos de encuestas
+      CSD Polling Events Map_2018: Eventos de encuestas
+      CSD Polling Events Map_2019: Eventos de encuestas
       CSD Set Scale Map: Cambiar la escala del sensor
       CSD Set Scale Map_2018: Cambiar la escala del sensor
       CSD Set Scale Map_2019: Cambiar la escala del sensor
       CSD Timed For Loop Map: Bucles 'desde' cronometrados
+      CSD Timed Loop Map: Bucles cronometrados
       CSD U1 Feedback FR: Pregunta 6
       CSD U1 Test Collaborate FR: Pregunta 7
       CSD U1 Test Feedback FR: Pregunta 6
@@ -199,9 +203,13 @@ es-MX:
       CSD U2 formatting map: Formatear HTML
       CSD U2 formatting map_2018: Formatear HTML
       CSD U2 formatting map_2019: Formatear HTML
+      CSD U2 images map: Imágenes en HTML
+      CSD U2 images map_2018: Imágenes en HTML
+      CSD U2 images map_2019: Imágenes en HTML
       CSD U2 lists map: Listas en HTML
       CSD U2 lists map_2018: Listas en HTML
       CSD U2 lists map_2019: Listas en HTML
+      CSD U2 publish video: Publicar tu sitio web
       CSD U2L01 TFMD_2018: Resumen de la lección
       CSD U2L01 TFMD_2019: Resumen de la lección
       CSD U2L02 TFMD_2018: Resumen de la lección
@@ -254,6 +262,7 @@ es-MX:
       CSD U3 Compound Nested Challenge: 'Desafío: comprobar condiciones múltiples'
       CSD U3 Compound Nested Challenge_2018: 'Desafío: comprobar condiciones múltiples'
       CSD U3 Compound Nested Challenge_2019: 'Desafío: comprobar condiciones múltiples'
+      CSD U3 Draw Loop Map: El bucle 'dibujar'
       CSD U3 Draw Loop Plugged update your scene: 'Desafío: extender tu escena'
       CSD U3 Draw Loop Plugged update your scene_2018: 'Desafío: extender tu escena'
       CSD U3 Draw Loop Plugged update your scene_2019: 'Desafío: extender tu escena'
@@ -266,6 +275,7 @@ es-MX:
       CSD U3 Entertainment Sample 4: Escenas de sprites
       CSD U3 Entertainment Sample 4_2018: Escenas de sprites
       CSD U3 Entertainment Sample 4_2019: Escenas de sprites
+      CSD U3 Functions Call Function_2019: 'Video: llamar y definir funciones'
       CSD U3 Interactive Card Exemplar_2018: Tarjeta interactiva
       CSD U3 Interactive Card Exemplar_2019: Tarjeta interactiva
       CSD U3 Keyboard Input Challenge-2018: 'Desafío: añadir más entradas'
@@ -335,6 +345,9 @@ es-MX:
       CSD U3 Sprites scene challenge: 'Desafío: extender tu escena'
       CSD U3 Sprites scene challenge_2018: 'Desafío: extender tu escena'
       CSD U3 Sprites scene challenge_2019: 'Desafío: extender tu escena'
+      CSD U3 The Draw Loop Map: El bucle 'dibujar'
+      CSD U3 The Draw Loop Map_2018: El bucle 'dibujar'
+      CSD U3 The Draw Loop Map_2019: El bucle 'dibujar'
       CSD U3 Variables Challenge: 'Desafío: actualizar variables'
       CSD U3 Variables Challenge_2018: 'Desafío: actualizar variables'
       CSD U3 Variables Challenge_2019: 'Desafío: actualizar variables'
@@ -356,6 +369,9 @@ es-MX:
       CSD U3 challenge new shape: 'Desafío: forma de formas'
       CSD U3 challenge new shape_2018: 'Desafío: forma de formas'
       CSD U3 challenge new shape_2019: 'Desafío: forma de formas'
+      CSD U3 collisions build isTouching: Detección de colisiones
+      CSD U3 collisions build isTouching_2018: Detección de colisiones
+      CSD U3 collisions build isTouching_2019: Detección de colisiones
       CSD U3 collisions car intro: Juego de muestra
       CSD U3 collisions car intro_2018: Juego de muestra
       CSD U3 collisions car intro_2019: Juego de muestra
@@ -365,10 +381,12 @@ es-MX:
       CSD U3 finishing touches: Proyecto - Toques finales
       CSD U3 finishing touches_2018: Proyecto - Toques finales
       CSD U3 finishing touches_2019: Proyecto - Toques finales
+      CSD U3 function video: 'Video: funciones'
       CSD U3 functions map: Funciones
       CSD U3 functions review: Revisión de funciones
       CSD U3 functions review_2018: Revisión de funciones
       CSD U3 functions review_2019: Revisión de funciones
+      CSD U3 if else predict: Predecir
       CSD U3 interactions map: Revisión de interacciones de sprites
       CSD U3 interactions map_2018: Revisión de interacciones de sprites
       CSD U3 interactions map_2019: Revisión de interacciones de sprites
@@ -464,6 +482,9 @@ es-MX:
       CSD U4 Importing Screens Map: Importar pantallas
       CSD U4 Importing Screens Map_2018: Importar pantallas
       CSD U4 Importing Screens Map_2019: Importar pantallas
+      CSD U4 Mult Screen Map: Aplicaciones con varias pantallas
+      CSD U4 Mult Screen Map_2018: Aplicaciones con varias pantallas
+      CSD U4 Mult Screen Map_2019: Aplicaciones con varias pantallas
       CSD U4 User Input Map: Responder a las contribuciones de los usuarios
       CSD U4 User Input Map_2018: Responder a las contribuciones de los usuarios
       CSD U4 User Input Map_2019: Responder a las contribuciones de los usuarios
@@ -570,11 +591,15 @@ es-MX:
       CSD U5L14 autoSFLP_2019: Resumen de la lección
       CSD U5L15 autoSFLP_2018: Resumen de la lección
       CSD U5L15 autoSFLP_2019: Resumen de la lección
+      CSD U6 Event Types: Tipos de eventos
+      CSD U6 Event Types_2018: Tipos de eventos
+      CSD U6 Event Types_2019: Tipos de eventos
       CSD U6 analog challenge: 'Desafío: entender los sensores'
       CSD U6 analog challenge_2018: 'Desafío: entender los sensores'
       CSD U6 analog challenge_2019: 'Desafío: entender los sensores'
-      CSD U6 arrays intro: Introducción a los Arrays
-      CSD U6 arrays intro_2018: Introducción a los Arrays
+      CSD U6 arrays intro: Introducción a los arreglos
+      CSD U6 arrays intro_2018: Introducción a los arreglos
+      CSD U6 arrays intro_2019: Arreglos
       CSD U6 arrays video: 'Video: introducción a arreglos'
       CSD U6 challenge motorcycle: 'Desafío: motocicleta'
       CSD U6 challenge motorcycle_2018: 'Desafío: motocicleta'
@@ -628,6 +653,9 @@ es-MX:
       CSD U6 sensor experiment embedded: Experimento con sensores
       CSD U6 sensor experiment embedded_2018: Experimento con sensores
       CSD U6 sensor experiment embedded_2019: Experimento con sensores
+      CSD U6 setProperty Map: Diseñar pantallas con código
+      CSD U6 setProperty Map_2018: Diseñar pantallas con código
+      CSD U6 setProperty Map_2019: Diseñar pantallas con código
       CSD U6 tugowar conditional map: Actualización de condicionales
       CSD U6 tugowar demo: Demo - Capturar error
       CSD U6 tugowar demo_2018: Demo - Capturar error
@@ -1035,8 +1063,8 @@ es-MX:
       MC_HOC_2017_Ryan_03: Un río...
       MC_HOC_2017_Ryan_05: Templo del desierto
       MC_HOC_Kiki_02: Conoce al agente
-      Making Music_2018: Haciendo música
-      Making Music_2019: Haciendo música
+      Making Music_2018: Crear música
+      Making Music_2019: Crear música
       New Dance Lab Project: Nuevo proyecto de Fiesta de baile
       New Minecraft Hero Project: Juego libre
       OPD-K5 S2L2: '¿Qué son las Ciencias de la Computación?'
@@ -1121,9 +1149,12 @@ es-MX:
       U5 AP Practice Create Process_2018: "(nuevo) Respuesta de práctica AP - Describir tu proceso"
       U5 AP Practice Create Process_2019: "(nuevo) Respuesta de práctica AP - Describir tu proceso"
       U5 L01 Introduction to Lists: 'Condicionales: expresiones booleanas'
+      U5 L09 Traversals Exit Ticket: Comprueba tu comprensión
       U5-AP-Algorithm-Does-It-Count: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2018: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2019: Respuesta de práctica AP - Puntuar la respuesta
+      U7 L01 More with Functions: 'Condicionales: expresiones booleanas'
+      U7 L05 Exit Ticket: Comprueba tu comprensión
       Using Accelerometer Events_2018: Usar eventos del acelerómetro
       Using Accelerometer Events_2019: Usar eventos del acelerómetro
       'Video: Intro to CSS Part 2_2018': 'Video: introducción a CSS - Parte 2'
@@ -1266,11 +1297,13 @@ es-MX:
       expresslink: Curso Express
       fit-dlp-example-2: Conexiones y filosofía de las lecciones
       fit-dlp-example: Conexiones y filosofía de las lecciones
+      harvey_pixelation: Widget de pixelado
       harvey_snowflake_artist1: 'Copo de nieve 1 (convertido al Artista)'
       harvey_snowflake_artist2: 'Copo de nieve 2 (convertido al Artista)'
       maker workshop final: 'Desafío: ¡explorar!'
       okToDelete: Evaluador
       scrat_loops_C-F_video: Video de bucles en la Era de Hielo
       scrat_loops_C-F_video_2019: Video de bucles en la Era de Hielo
+      timeforcs_demo_c1_5_journal: Evaluar
       timeforcs_demo_sl_3: Cómo crear un sprite
       timeforcs_demo_spritelab_1: Ejemplo de proyecto del Laboratorio de sprites

@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-14T01:30:01.000Z",
+  "created_at": "2019-02-20T16:17:27.000Z",
   "level_num": "custom",
   "user_id": 324,
   "properties": {
@@ -62,10 +62,10 @@
     "mini_rubric": "true",
     "encrypted": "false",
     "rubric_key_concept": "Using a structured process to plan and develop a program",
-    "rubric_exceeds": "The project guide accurately reflects the program, both as shown in the example and as coded by the student.  Relevant functions, variables, and sprites are consistent between the project guide and actual project, with very few exceptions.",
-    "rubric_meets": "The project guide is generally consistent with the sample project and student project, with main functions and sprites included.  There may be some inconsistencies.",
-    "rubric_approaches": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
-    "rubric_no_evidence": "The project guide is incomplete or does not seem to describe the program.",
+    "rubric_performance_level_1": "The project guide accurately reflects the program, both as shown in the example and as coded by the student.  Relevant functions, variables, and sprites are consistent between the project guide and actual project, with very few exceptions.",
+    "rubric_performance_level_2": "The project guide is generally consistent with the sample project and student project, with main functions and sprites included.  There may be some inconsistencies.",
+    "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
+    "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program.",
     "preload_asset_list": null
   },
   "published": true,

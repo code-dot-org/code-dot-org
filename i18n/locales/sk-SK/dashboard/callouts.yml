@@ -8,9 +8,9 @@ sk:
       4-5 Artist Patterns Free Play_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
       4-5 Bee Conditionals - FC Test_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       AppLab Intro 2 - Edit place1 2_callout:
         dragTextAreaIn: Kliknite a presuňte "Textové pole" na obrazovku
         screenSelectorCallout3: Vyberte si Vami vytvorenú obrazovku
@@ -163,9 +163,9 @@ sk:
       Course 4 Artist Vars 10_callout:
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre dokončenie tejto úlohy.
       Course 4 Artist Vars 12_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       Course 4 Artist Vars 2_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       Course 4 Artist Vars 3_callout:
         place_variable: Presuňte do tohto bloku Vašu premennú
       Course 4 Artist Vars 6_callout:
@@ -402,9 +402,9 @@ sk:
       Rocket Height Course A_callout:
         pass_function: Tento blok štart(funkcie) vám presunie funkciu (nie hodnotu, ktorú funkcia vráti po zadaní vstupu) do knižnice s animáciou rakety. Animácia, ktorú vidíte na obrazovke využíva Vašu funkciu pre pohyb rakety!
       Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       Ryan_Demo_callout:
         dance_callout_02: Pridaj tento blok do svojho programu!
       SG U3L08 how to add comments_callout:
@@ -465,11 +465,16 @@ sk:
         artistLoopsK2_1: Toto číslo znamená počet blokov, ktoré môžete použiť v tejto hre.
       behaviors 1_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
+      behaviors 3a_callout:
+        behavior_callout: Prečo tento postup nefunguje pri prostrednej hviezde?
+        star2_callout: Odstráň blok s kostýmom a použi namiesto neho blok "táto postava".
       behaviors 4_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 4a_callout:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 5_callout:
+        behaviors_edit: Pridaj kód k tomuto správaniu.
+      behaviors free play_callout:
         behaviors_edit: Pridaj kód k tomuto správaniu.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
@@ -535,8 +540,6 @@ sk:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať.
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať.
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp2a_2018_callout:
@@ -544,6 +547,8 @@ sk:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.
         stone_block_2: Šedé bloky sú z kamena a nemôžu byť zahodené.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť.
       courseA_maze_seq1_callout:
@@ -582,6 +587,8 @@ sk:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Po pripojení všetkých blokov stlač tlačidlo "Spustiť", ktoré spustí tvoj program.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Iba jeden z týchto blokov je v paneli s nástrojmi. Ako ho použijete?
       courseB_artist_loops3_2018_callout:
@@ -630,6 +637,10 @@ sk:
         courseC_PlayLab_events_challenge1_1: Tento blok vám umožní presunúť hercov do rôznych častí hracieho poľa.
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Tento blok vám umožní presunúť hercov do rôznych častí hracieho poľa.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Tento blok je pre projekt veľmi dôležitý. Určite ho použi!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Toto pridaj do stredu tvojho programu.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Začnite použitím tohto bloku pre premiestnenie herca do stredu obrazovky.
       courseC_artist_loopsPrePre1a_2018_callout:
@@ -720,14 +731,14 @@ sk:
         courseD_artist_ramp11_1: Toto číslo môžete zmeniť.
         courseD_artist_ramp11_2: Kliknite sem pre zadanie počtu opakovaní vášho kódu.
       courseD_bee_conditionals2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete pomoc?  Kliknite sem pre videonápovedu!
       courseD_bee_conditionals2_2018_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       courseD_bee_conditionals2_2019_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
         4_5_Bee_Conditionals_2_2: Potrebujete trochu pomôcť? Kliknite sem pre naše nové VIDEONÁPOVEDY!
       courseD_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu).
@@ -961,11 +972,11 @@ sk:
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Všimnite si, že bloky majú nový spôsob zadávani čísiel. Tieto "matematické" bloky môžu byť vytiahnuté von a popresúvané podľa potreby!
       courseF_artist_variables3_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables3_2018_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables3_2019_callout:
-        courseF_artist_variables3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables6_callout:
         courseF_artist_variables6_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables6_2018_callout:
@@ -979,7 +990,7 @@ sk:
       courseF_artist_variables6a_2019_callout:
         courseF_artist_variables6a_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: Použite toto pre nastavenie hodnoty "dĺžka"
+        courseF_artist_variables_3_a: Použi tento blok na nastavenie hodnoty pre `dĺžku`
       courseF_artist_variables_6_callout:
         courseF_artist_variables_6_1: Premenné môžu byť užitočné, keď potrebujete zmeniť veľký počet kópií rovnakého čísla.
       courseF_artist_variables_6a_callout:
@@ -1199,11 +1210,11 @@ sk:
       grade2_puppy_loops2_callout:
         grade2_puppy_loops2_callout1: V tejto hre máte iba jeden takýto blok k dispozícií.
       grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       grade3_Conditionals_3_callout:
         Bee_Cond_5_1a: Fialové kvety môžu mať 1 alebo 0 nektárov... dozvieš sa to, až keď spustíš kód!
       grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       grade4_artist_freeplay_callout:
         4-5_Artist_Patterns_Free_Play_1: Všetky tvoje obľúbené bloky sú usporiadané do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!
       grade4_artist_functions1_callout:
@@ -1216,7 +1227,7 @@ sk:
         edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie pridať parameter
         add_and_drag_parameter: Napíšte sem meno vášho parametr, kliknite na Pridať a potom ho presuňte do definície Vašej funkcie
       grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať včelie plásty.
+        4_5_Bee_Conditionals_2_1: Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.
       grade4_frozen_freeplay_callout:
         snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!
       grade4_frozen_functions3_callout:
@@ -1263,7 +1274,7 @@ sk:
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: Presuňte sem premennú dĺžky pre nahradenie otáznikov
       grade5_artist_variables_pentagons12_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       grade5_artist_variables_square7_callout:
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
       grade5_artist_variables_triangles1_callout:
@@ -1273,7 +1284,7 @@ sk:
       grade5_artist_variables_triangles1_2019_callout:
         grade5_artist_variables_triangles1_1: Všimnite si, že bloky majú nový spôsob zadávani čísiel. Tieto "matematické" bloky môžu byť vytiahnuté von a popresúvané podľa potreby!
       grade5_artist_variables_triangles2_callout:
-        set_length: Použite tento blok pre nastavenie správnej hodnoty "dĺžky".
+        set_length: Použi tento blok na nastavenie "dĺžky" na správnu hodnotu.
       grade5_bee_parameters_new1_callout:
         grade5_bee_parameters_new1_a: Príkazy "if" nájdete tu.
       grade5_bee_parameters_new3_callout:

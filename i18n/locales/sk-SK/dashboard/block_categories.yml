@@ -22,14 +22,14 @@ sk:
       Text: Text
       Picker: Nástroj výberu
       Comment: Komentár
+      World: Prostredie
+      Sprites: Postavy
+      Behaviors: Správanie
       'Variables ': 'Premenné '
       Default: Predvolené
-      Behaviors: Správanie
       Locations: Miesta
       Bunny Game: Hra so zajačikmi
       everythingelse: všetko ostatné
-      World: Prostredie
-      Sprites: Postavy
       Location: Miesto
       numbers: čisla
       Numbers: Čísla

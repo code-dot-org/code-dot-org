@@ -238,7 +238,12 @@ az:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': mağara
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': səhra
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': göy qurşağı
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suyun altı
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qış
       gamelab_setPosition:
         options:
           POSITION:
@@ -253,6 +258,11 @@ az:
             '"scale"': ölçü
             '"height"': hündürlük
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': nə zaman
@@ -285,6 +295,11 @@ az:
             "'down'": aşağı
             "'left'": sola
             "'right'": sağa
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': nə zaman
+            '"while"': hələ ki,
       gamelab_whileKey:
         options:
           KEY:

@@ -314,6 +314,8 @@ hi:
             '"MOOSE"': अमरीकी हिरण
             '"PINEAPPLE"': अनानास
             '"ROBOT"': रोबोट
+            '"SHARK"': संगीत प्रविधियां
+            '"UNICORN"': गेंडा
           LAYOUT:
             '"border"': बॉर्डर
             '"inner"': अंदर वर्ग
@@ -324,26 +326,94 @@ hi:
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
             '"random"': यादृच्छिक
+      Dancelab_mixColors:
+        text: "{COLOR1} और {COLOR2} को मिलाएं"
+      Dancelab_nMeasures:
+        text: "{N} संगीत प्रविधियां"
+      Dancelab_onPointerDown:
+        text: "\"संकेतक के नीचे करने पर"
+      Dancelab_onPointerDrag:
+        text: संकेतक को खींचने पर
+      Dancelab_onPointerUp:
+        text: संकेतक को ऊपर करने पर
       Dancelab_randomColor:
         text: यादृच्छिक रंग
+      Dancelab_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
       Dancelab_setBackgroundEffect:
+        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': कोई नहीं
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"splatter"': पेंट का छिड़काव
+            '"rainbow"': इंद्रधनुष
+            '"snowflakes"': हिमपात
+            '"text"': गाने के नाम
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"disco"': चोकोण
+            '"stars"': स्टार
+          PALETTE:
+            '"rave"': काला व सफेद
+            '"cool"': शांत!
+            '"electronic"': इलेक्ट्रोनिक
+            '"iceCream"': आईस क्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"tropical"': उष्णकटिबंधी
+            '"vintage"': विंटेज
+            '"warm"': गरम
       Dancelab_setBackgroundEffectWithPalette:
+        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': कोई नहीं
             '"rand"': "(बेतरतीब)"
+            '"circles"': चक्र
+            '"color_cycle"': रंग
+            '"diamonds"': हीरा
+            '"disco_ball"': डिस्को बॉल
+            '"fireworks"': पटाखे
+            '"swirl"': हिप्नो
+            '"kaleidoscope"': कैलाइडोस्कोप
+            '"lasers"': लेजर डांस फ्लोर
+            '"splatter"': पेंट का छिड़काव
+            '"rainbow"': इंद्रधनुष
+            '"snowflakes"': हिमपात
+            '"text"': गाने के नाम
+            '"sparkles"': फुलझड़ियां
+            '"spiral"': घुमावदार
+            '"disco"': चोकोण
+            '"stars"': स्टार
+          PALETTE:
+            '"rave"': काला व सफेद
+            '"cool"': शांत!
+            '"electronic"': इलेक्ट्रोनिक
+            '"iceCream"': आईस क्रीम
+            '"default"': प्रकाश
+            '"neon"': निऑन
+            '"tropical"': उष्णकटिबंधी
+            '"vintage"': विंटेज
+            '"warm"': गरम
       Dancelab_setDanceSpeed:
+        text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': तेज़
+            '4': अत्‍यधिक तेज़
+            '0.5': धीमा
+            '0.25': अत्‍यधिक धीमा
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           GROUP:
             '"ALIEN"': सभी एलियन्स
@@ -359,27 +429,47 @@ hi:
             '"UNICORN"': सभी गेंडे
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': तेज़
+            '4': अत्‍यधिक तेज़
+            '0.5': धीमा
+            '0.25': अत्‍यधिक धीमा
       Dancelab_setForegroundEffect:
+        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
+            '"bubbles"': बुलबुले
+            '"confetti"': कॉन्फेटी
+            '"hearts_red"': दिल
+            '"music_notes"': संगीत के नोट्स
             '"pineapples"': अनानास
+            '"pizzas"': पिज़्ज़ा
+            '"smiling_poop"': पूप
+            '"rain"': बारिश
             '"floating_rainbows"': इंद्रधनुष
             '"smile_face"': इंद्रधनुष
+            '"spotlight"': स्पॉटलाइट
             '"color_lights"': स्टेज लाइटें
+            '"raining_tacos"': टैको
       Dancelab_setForegroundEffectExtended:
+        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
         options:
           EFFECT:
             '"none"': कोई नहीं
             '"rand"': "(बेतरतीब)"
+            '"bubbles"': बुलबुले
+            '"confetti"': कॉन्फेटी
+            '"hearts_red"': दिल
+            '"music_notes"': संगीत के नोट्स
             '"pineapples"': अनानास
+            '"pizzas"': पिज़्ज़ा
+            '"smiling_poop"': पूप
+            '"rain"': बारिश
             '"floating_rainbows"': इंद्रधनुष
             '"smile_face"': इंद्रधनुष
+            '"spotlight"': स्पॉटलाइट
             '"color_lights"': स्टेज लाइटें
+            '"raining_tacos"': टैको
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} को {VAL} पर सेट करें "
         options:
@@ -415,7 +505,7 @@ hi:
             '"y"': लंबवत स्थिति
             '"tint"': रंगत
       Dancelab_setPropRandom:
-        text: randomize {SPRITE} {PROPERTY}
+        text: बेतरतीब{SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': आकार
@@ -611,14 +701,26 @@ hi:
         options:
           DIR:
             "'random'": यादृच्छिक
+      gamelab_mixColors:
+        text: "{COLOR1} और {COLOR2} को मिलाएं"
       gamelab_randColor:
         text: यादृच्छिक रंग
       gamelab_randomColor:
         text: यादृच्छिक रंग
+      gamelab_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुफा
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': रेगिस्तान
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इंद्रधनुष
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पानी
+              के नीचे
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': सर्दी
+              का मोसम
       gamelab_setPosition:
         text: "{THIS} को {POSITION} पोजीशन में मूव करें"
         options:
@@ -653,6 +755,11 @@ hi:
           CONDITION:
             '"when"': कब
             '"while"': जबकि
+      gamelab_spriteClickedSet:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_spritesWhere:
         options:
           PROPERTY:
@@ -674,6 +781,11 @@ hi:
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': कब
+            '"while"': जबकि
       gamelab_whileKey:
         options:
           KEY:

@@ -22,19 +22,19 @@ ja:
       Text: テキスト
       Picker: ピッカー
       Comment: コメント
+      World: 世界
+      Behaviors: 行動
       'Variables ': '変数(へんすう) '
       Default: デフォルト
-      Behaviors: 行動
       Locations: 場所
       everythingelse: ほかのすべて
-      World: 世界
       Location: ロケーション
       numbers: 数（かず）
       Numbers: 数（かず）
       Dancers: ダンサー
       Groups: グループ
       Advanced: 詳細設定
-      Start: 始める
+      Start: はじめる
       Dancing: ダンスする
       Sprite: スプライト
       Brush: ブラシ

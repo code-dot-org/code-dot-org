@@ -4194,10 +4194,6 @@ zh-CN:
         artistLoopsKA_a: 使用向前跳模块来向前移动，并且不会画线。
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: 您的循环中应该有3个模块来解决这个关卡。
-      behaviors 1_authored_hint:
-        behavior hint: |-
-          尝试编辑行为！
-          鸟需要朝哪个方向飞？
       behaviors 2_authored_hint:
         behavior hint: |-
           尝试编辑行为！
@@ -4206,10 +4202,10 @@ zh-CN:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
-      behaviors 4_authored_hint:
+      behaviors 3a_authored_hint:
         behavior hint: |-
           尝试编辑行为！
-          鸟需要朝哪个方向飞？
+          \*哪个值控制每个精灵的速度？
       behaviors 5_authored_hint:
         target hint: 你可以选择这四个玩具中的任何一个。宠物想要哪一个?
         behavior hint: 编辑行为来解决这个难题。宠物小精灵需要在两个不同的方向移动，以结束对角线移动。
@@ -4218,6 +4214,10 @@ zh-CN:
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
       behaviors 6_authored_hint:
+        behavior hint: |-
+          尝试编辑行为！
+          \*哪个值控制每个精灵的速度？
+      behaviors 7_authored_hint:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
@@ -5910,9 +5910,11 @@ zh-CN:
       courseA_harvester_loops2_authored_hint:
         courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block
           type=\"harvester_corn\"/></xml>模块。 "
+        courseA_harvester_loops2_b: '如果你仍然遇到麻烦，请尝试将步骤大声说出来。 '
       courseA_harvester_loops2_2019_authored_hint:
         courseA_harvester_loops2_a: "代码会有 **四个**`向西移动`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n模块和**四个**<xml>`采摘玉米`<block
           type=\"harvester_corn\"/></xml>模块。 "
+        courseA_harvester_loops2_b: '如果你仍然遇到麻烦，请尝试将步骤大声说出来。 '
       courseA_harvester_loops3_authored_hint:
         courseA_harvester_loops3_a: |-
           用一个这样的`重复`模块来帮忙！
@@ -9057,6 +9059,18 @@ zh-CN:
           <title name="VALUE">Bird</title>
           </block>
           </xml>
+      courseC_artist_loops1b_2019_authored_hint:
+        courseC_artist_loops1b_a: |-
+          这是你将需要的第一段代码：
+
+          <xml>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+          </block>
+          </xml>
+
+          您可以选择左或右和任意度数。
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: 在你的循环中, 你需要跳到200以上，再向下200像素, 然后画鸟的贴纸, 然后转30度。
         courseC_artist_loops2a_b: 单击`重复`循环顶部的数字来更改重复次数。
@@ -9111,6 +9125,45 @@ zh-CN:
           </xml>
 
           不要忘记更改跳多远！
+        courseC_artist_loops4a_b: |-
+          你的程序应该类似于这个!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">???</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">猫</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">向前跳</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">狗</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseC_artist_loops5_authored_hint:
         courseC_artist_loops5_a: |-
           尝试使用`跳到`模块使您的艺术家回到中心：
@@ -9157,6 +9210,62 @@ zh-CN:
           </block>
           </xml>
         courseC_artist_loops5b_b: 要制作和上面类似设计, 向后移动与向前移动必须是相同的数量。
+        courseC_artist_loops5b_c: |-
+          你的程序应该类似于这个!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">彩虹条</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">向前移动</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">向后移动</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">猫</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">向前跳</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">狗</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseC_artist_loops6_authored_hint:
         courseC_artist_loops6_a: |-
           尝试三角形花：
@@ -12955,6 +13064,7 @@ zh-CN:
         courseD_playLab_cond6_b: 您需要在`一直重复`模块内使用一个`如果演员 1的y方向 > 255`模块来总是检查海盗是否在章鱼下。
       courseD_playLab_cond6_2019_authored_hint:
         courseD_playLab_cond6_a: 将 ’设置蒙面忍者速度‘模块添加到程序的开始来帮助降低忍者的速度。
+        courseD_playLab_cond6_c: '"安全区" 是忍者不能进入的区域, 让海盗安全。'
         courseD_playLab_cond6_b: 您需要在`一直重复`模块内使用一个`如果演员 1的y方向 > 255`模块来总是检查海盗是否在章鱼下。
       courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: 将`等待1秒`模块添加到`一直重复`循环的顶部, 它检查海盗位置 (但不在`如果`语句内) 防止分数被减得太快。
@@ -18005,6 +18115,52 @@ zh-CN:
           </block>
           </next>
           </block></xml>
+      courseF_bee_variables_3_2018_authored_hint:
+        courseF_beevariables_3a: |-
+          让变量减一, 您可以在您的程序中使用这段代码:
+          <xml><block type="variables_set" inline="false">
+
+          <title name="VAR">集合</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">集合</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
+      courseF_bee_variables_3_2019_authored_hint:
+        courseF_bee_variables_3_2019_1: |-
+          让变量减一, 您可以在您的程序中使用这段代码:
+          <xml><block type="variables_set" inline="false">
+
+          <title name="VAR">集合</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">集合</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
+      courseF_bee_variables_4_2019_authored_hint:
+        courseF_bee_variables_4_2019_1: 不要从`gather` 中减去 1，而是每次增加1。变量的初始值应该是什么？
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: 如果你很难看到循环应该去哪里, 试着把它全部编码出来, 然后寻找一个模式。
         courseF_farmer_ramp11_b: 如何使用 <xml> <block type="controls_repeat"> <title
@@ -18310,6 +18466,7 @@ zh-CN:
         repeat_pointer: 你必须画一条边, 然后转3次... 你可以用什么模块来多次运行相同的指令？
         repeat_bottom_out: 使用 "重复3次" 模块!
       farmer-test-lb_authored_hint:
+        farmer_test_lb_a: 你怎么能把鸟弄到猪那里去？
         hint_2: 指向 123
       grade1_adventurer_loops10_authored_hint:
         grade1_adventurer_loops10_a: 您将需要多个 ' 重复 ' 循环来解决这个关卡。

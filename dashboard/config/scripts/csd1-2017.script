@@ -11,35 +11,36 @@ new_name 'csd1-2017'
 family_name 'csd1'
 version_year '2017'
 is_stable true
+project_sharing true
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csd-pre-survey-2017-levelgroup'
+level 'csd-pre-survey-2017-levelgroup', assessment: true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 1 Overview'
+level 'Unit 1 Lesson 1 Overview', named: true
 
 stage 'The Problem Solving Process', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 2 Overview'
+level 'Unit 1 Lesson 2 Overview', named: true
 
 stage 'Exploring Problem Solving', flex_category: 'csd1_1'
-named_level 'Unit 1 Lesson 3 Overview'
+level 'Unit 1 Lesson 3 Overview', named: true
 
 stage 'What is a Computer?', flex_category: 'csd1_2'
-named_level 'Unit 1 Lesson 4 Overview'
-named_level 'CSD What Makes a Computer a Computer Video'
+level 'Unit 1 Lesson 4 Overview', named: true
+level 'CSD What Makes a Computer a Computer Video', named: true
 
 stage 'Input and Output', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 5 Overview'
+level 'CSD U1 Lesson 5 Overview', named: true
 
 stage 'Processing', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 6 Overview'
+level 'CSD U1 Lesson 6 Overview', named: true
 
 stage 'Storage', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 7 Overview'
+level 'CSD U1 Lesson 7 Overview', named: true
 
 stage 'Apps and Problem Solving', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 8 Overview'
+level 'CSD U1 Lesson 8 Overview', named: true
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
-named_level 'CSD U1 Lesson 9 Overview'
-assessment 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection'
+level 'CSD U1 Lesson 9 Overview', named: true
+level 'csd-pulse-check-survey-1-levelgroup U1Ch2', progression: 'Reflection', assessment: true

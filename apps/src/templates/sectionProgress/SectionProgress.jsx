@@ -178,6 +178,7 @@ class SectionProgress extends Component {
               />
               <SummaryViewLegend
                 showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
+                inMiniRubricExperiment={inMiniRubricExperiment}
               />
             </div>
           )}

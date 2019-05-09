@@ -721,12 +721,15 @@ sk:
           na ktorom stojíš.
         mc_13_b: Použi príkaz "Opakuj", aby si tvoj kód skrátil.
       Overworld Shear Sheep_authored_hint:
+        mc_3_a: Blok `strihaj` posunie ovcu pred teba. Si natočený smerom k ovci?
         mc_3_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
       Overworld Shear Sheep_2018_authored_hint:
+        mc_3_a: Blok `strihaj` posunie ovcu pred teba. Si natočený smerom k ovci?
         mc_3_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
       Overworld Shear Sheep_2019_authored_hint:
+        mc_3_a: Blok `strihaj` posunie ovcu pred teba. Si natočený smerom k ovci?
         mc_3_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
       Ryan_Demo_authored_hint:
@@ -754,6 +757,16 @@ sk:
       artistLoopsK2gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť
           číslo navrchu bloku.
+      comment_intro_maze_2018_authored_hint:
+        courseC_maze_programming4_a: Komentáre sú tiež užitočné, ak sa iní ľudia snažia
+          prečítať tvoj kód.
+        courseC_maze_programming4_b: Pridaj komentár pri zmene smeru - čo by sa stalo,
+          keby si sa obrátil opačným smerom?
+      comment_intro_maze_2018_2019_authored_hint:
+        courseC_maze_programming4_a: Komentáre sú tiež užitočné, ak sa iní ľudia snažia
+          prečítať tvoj kód.
+        courseC_maze_programming4_b: Pridaj komentár pri zmene smeru - čo by sa stalo,
+          keby si sa obrátil opačným smerom?
       course1_artist_loops_challenge3_authored_hint:
         courseA_artist_loops_challenge2_a: 'Blok ako tento: <xml> <block type="simple_move_up_left"/></xml>
           umožní tvojmu umelcovi hýbať sa šikmo!'
@@ -874,7 +887,42 @@ sk:
           "zbieraj" môžeš použiť aj častejšie.
       course2_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Bez cyklov to ani neskúšaj!
+        courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
+          blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepsší spôsob na zozbieranie prvých štyroch kukuríc je použiť blok `opakuj` vo vnútri ďalšieho bloku `opakuj`. Tento vzor môžeš použiť aj pre zvyšok úlohy!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       course2_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: Jedno z riešení je ísť cik-cakovo. Ďalší
+          spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!
+        courseC_harvester_loops_challenge2_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v
+          rohu.
         courseC_harvester_loops_challenge2_c: |-
           Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!
 
@@ -889,6 +937,15 @@ sk:
         courseC_maze_loops_challenge1_b: Medzi každým blokom `opakuj`, potrebuješ
           blok `otoč sa vľavo` alebo `otoč sa vpravo`, aby sa Scrat pripravil na ďalší
           vzorec.
+        courseC_maze_loops_challenge1_c: |-
+          Ak si sa dostal až sem, stačí už len použiť `otoč sa vľavo` a potom pár krát `posuň sa dopredu`. Nevzdávaj sa!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
+      course2_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: _Ak ma necháš cúvať, uisti sa, že zabočím
+          správnym smerom!"_
+        courseC_maze_programming_challenge2_b: Najkratšie riešenie používa len 5 blokov,
+          avšak obsahuje aj blok `opakuj`!
       course2_maze_seq_challenge2_authored_hint:
         courseB_maze_seq_challenge1_a: Tentokrát nemusí fungovať najkratšia cesta.
       course3_collector_debugging_challenge2_authored_hint:
@@ -1052,6 +1109,15 @@ sk:
         courseA_collector_loops5_c: Môžeš začať cyklom <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>, ktorý posunie Laurel
           na západ (vľavo) a pozbiera drahokamy.
+      courseA_collector_loops6_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
+      courseA_collector_loops6_2018_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
+      courseA_collector_loops6_2019_authored_hint:
+        courseA_collector_loops6_a: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseA_collector_loops8_authored_hint:
         courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús
           si zapísať všetky kroky na papier a pohľadať v nich vzor.
@@ -1075,46 +1141,57 @@ sk:
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
       courseA_harvester_loops5b_2019_authored_hint:
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
+      courseA_harvester_loops6_authored_hint:
+        courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+      courseA_harvester_loops6_2019_authored_hint:
+        courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
       courseA_maze_ramp2_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp2_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp2a_2018_authored_hint:
         '1': Snap both `East` blocks to the bottom of the `when run` block.
+      courseA_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
       courseA_maze_ramp3a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveNorth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp3a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveNorth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp3b_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveSouth"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp3b_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveSouth"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp4a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveSouth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp4a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveSouth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp5_2018_authored_hint:
@@ -1127,12 +1204,12 @@ sk:
           vyriešenú celú úlohu.
       courseA_maze_ramp5a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
       courseA_maze_ramp5a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
       courseA_maze_seq5_2018_authored_hint:
@@ -1163,52 +1240,52 @@ sk:
           niečo iné!
       courseB_Scrat_ramp2_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp2_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp3a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveNorth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp3a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveNorth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp3b_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveSouth"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp3b_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveSouth"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp4a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveSouth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp4a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveEast"> <next> <block type="maze_moveSouth"/> </next> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp5a_2018_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
       courseB_Scrat_ramp5a_2019_authored_hint:
         '1': |-
-          Takto by mal vyzerať tvoj kód:
+          Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
       courseB_artist_loops2_authored_hint:
@@ -2854,6 +2931,819 @@ sk:
         courseB_starWars_prog9_b: Je veľa spôsobov ako vyriešiť túto úlohu.
         courseB_starWars_prog9_c: Pomohol by tu cyklus <xml><block type="controls_repeat_simplified">
           <title name="TIMES">3</title> </block></xml>?
+      courseC_PlayLab_events1_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events1_2018_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events1_2019_authored_hint:
+        courseC_PlayLab_events1_a: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events2_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
+      courseC_PlayLab_events2_2018_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
+      courseC_PlayLab_events2_2019_authored_hint:
+        courseC_PlayLab_events2_a: |-
+          Pripoj dva tieto bloky k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
+        courseC_PlayLab_events2_b: Použi rozbaľovaciu ponuku pri druhom bloku `postava
+          __ povedz`, aby si zmenil, ktorá postava prehovorí.
+      courseC_PlayLab_events3_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
+        courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
+          našu postavu?
+        courseC_PlayLab_events3_c: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events3_2018_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
+        courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
+          našu postavu?
+        courseC_PlayLab_events3_c: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events3_2019_authored_hint:
+        courseC_PlayLab_events3_a: Musíš len posunúť Jorgeho doprava o približne 25
+          pixelov, aby si vyriešil túto úlohu.
+        courseC_PlayLab_events3_b: Vidíš v paneli nástrojov blok, ktorý by mohol posunúť
+          našu postavu?
+        courseC_PlayLab_events3_c: |-
+          Pripoj tento blok k bloku `pri spustení`:
+
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
+      courseC_PlayLab_events4_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
+      courseC_PlayLab_events4_2018_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
+      courseC_PlayLab_events4_2019_authored_hint:
+        courseC_PlayLab_events4_b: Po kliknutí tlačidla "Spustiť" sa Jorge potrebuje
+          presunúť do prava o **100** pixelov, aby sa dostal až k mačke Olive.
+        courseC_PlayLab_events4_a: Na vyriešienie tejto úlohy, budeš musieť pripojiť
+          blok `postava __ povedz` k udalosti `keď sa postava dotkne`.
+      courseC_PlayLab_events5_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
+        courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
+          si zistil, či funguje!
+      courseC_PlayLab_events5_2018_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
+        courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
+          si zistil, či funguje!
+      courseC_PlayLab_events5_2019_authored_hint:
+        courseC_PlayLab_events5_a: Budeš musieť klinúť na rozbaľovacie menu v bloku
+          `posatava povedz`, aby si našiel text "Čo je nové?"
+        courseC_PlayLab_events5_b: Klikni na Octaviu, keď spustíš svoj program, aby
+          si zistil, či funguje!
+      courseC_PlayLab_events6_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events6_2018_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events6_2019_authored_hint:
+        courseC_PlayLab_events6_a: Každý zelený blok `keď šípka` má mať pod sebou
+          jednu činnosť.
+        courseC_PlayLab_events6_b: Použi rozbaľovacie menu v bloku `posuň postavu
+          1`, aby si zmenil smer, ktorým sa Waddles hýbe.
+        courseC_PlayLab_events6_c: Keď to dokončíš, malo by sa ti dať pohybovať Waddlesom
+          pomocou šípok na klávesnici!
+      courseC_PlayLab_events7_authored_hint:
+        courseC_PlayLab_events7_a: 'Na vyriešenie tejto úlohy použi bloky `posuň postavu
+          2 hore 400 pixelov` a `posuň postavu 2 dole 400 pixelov` vo vnútri cyklu
+          `opakuj donekonečna`. '
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events7_2018_authored_hint:
+        courseC_PlayLab_events7_a: 'Na vyriešenie tejto úlohy použi bloky `posuň postavu
+          2 hore 400 pixelov` a `posuň postavu 2 dole 400 pixelov` vo vnútri cyklu
+          `opakuj donekonečna`. '
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events7_2019_authored_hint:
+        courseC_PlayLab_events7_a: 'Na vyriešenie tejto úlohy použi bloky `posuň postavu
+          2 hore 400 pixelov` a `posuň postavu 2 dole 400 pixelov` vo vnútri cyklu
+          `opakuj donekonečna`. '
+        courseC_PlayLab_events7_b: Cyklus `opakuj donekonečna` nemusí byť spojený
+          s inými blokmi udalostí; dokáže fungovať samostatne.
+      courseC_PlayLab_events8_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events8_2018_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events8_2019_authored_hint:
+        courseC_PlayLab_events8_a: Potrebuješ pripojiť bloky k bloky `keď sa postava
+          dotkne`, aby všetko fungovalo správne.
+        courseC_PlayLab_events8_b: Bloky `postava povedz` a `prehraj zvuk` v paneli
+          s nástrojmi ti pomôžu!
+      courseC_PlayLab_events9_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
+        courseC_PlayLab_events9_b: Uisti sa, že tvoj nový blok `keď sa postava dotkne`
+          má nastavené postavy **1** a **3**.
+        courseC_PlayLab_events9_c: Blok `keď sa postava dotkne` môžeš na pracovnej
+          ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!
+      courseC_PlayLab_events9_2018_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
+        courseC_PlayLab_events9_b: Uisti sa, že tvoj nový blok `keď sa postava dotkne`
+          má nastavené postavy **1** a **3**.
+        courseC_PlayLab_events9_c: Blok `keď sa postava dotkne` môžeš na pracovnej
+          ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!
+      courseC_PlayLab_events9_2019_authored_hint:
+        courseC_PlayLab_events9_a: Použitie bloku `pridaj bod` ti pomôže vyriešiť
+          túto úlohu.
+        courseC_PlayLab_events9_b: Uisti sa, že tvoj nový blok `keď sa postava dotkne`
+          má nastavené postavy **1** a **3**.
+        courseC_PlayLab_events9_c: Blok `keď sa postava dotkne` môžeš na pracovnej
+          ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!
+      courseC_PlayLab_eventsA_authored_hint:
+        courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
+          a blok `nastav postavu na ___ rýchlosť`.
+        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť
+          do pracovného priestoru konkétny blok `pri spustení`.
+      courseC_PlayLab_eventsA_2018_authored_hint:
+        courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
+          a blok `nastav postavu na ___ rýchlosť`.
+        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť
+          do pracovného priestoru konkétny blok `pri spustení`.
+      courseC_PlayLab_eventsA_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
+          a blok `nastav postavu na ___ rýchlosť`.
+        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť
+          do pracovného priestoru konkétny blok `pri spustení`.
+      courseC_PlayLab_eventsA_embed_2019_authored_hint:
+        courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
+          a blok `nastav postavu na ___ rýchlosť`.
+        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť
+          do pracovného priestoru konkétny blok `pri spustení`.
+      courseC_PlayLab_eventsFP_authored_hint:
+        idea1: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _potrebuješ inšpiráciu?_
+
+          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
+      courseC_PlayLab_eventsFP_2018_authored_hint:
+        idea1: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _potrebuješ inšpiráciu?_
+
+          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
+      courseC_PlayLab_eventsFP_2019_authored_hint:
+        idea1: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _potrebuješ inšpiráciu?_
+
+          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
+      courseC_PlayLab_events_challenge1_authored_hint:
+        courseC_PlayLab_events_challenge_a: |-
+          Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.
+
+          <xml> <block type="studio_setSpritePosition">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Vyskúšaj použiť blok `nastav postavu 1
+          na pozíciu v strede vľavo`, keď sa dotkne iných postáv. Toto hru zreštartuje
+          a tak sa hráč môže znova pokúsiť!
+        courseC_PlayLab_events_challenge_c: |-
+          Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2018_authored_hint:
+        courseC_PlayLab_events_challenge_a: |-
+          Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.
+
+          <xml> <block type="studio_setSpritePosition">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Vyskúšaj použiť blok `nastav postavu 1
+          na pozíciu v strede vľavo`, keď sa dotkne iných postáv. Toto hru zreštartuje
+          a tak sa hráč môže znova pokúsiť!
+        courseC_PlayLab_events_challenge_c: |-
+          Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_2019_authored_hint:
+        courseC_PlayLab_events_challenge_a: |-
+          Tento blok môžeš použiť, ak chceš postavy premiestnovať na rôzne miesta na hracej ploche.
+
+          <xml> <block type="studio_setSpritePosition">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+          </block></xml>
+        courseC_PlayLab_events_challenge_b: Vyskúšaj použiť blok `nastav postavu 1
+          na pozíciu v strede vľavo`, keď sa dotkne iných postáv. Toto hru zreštartuje
+          a tak sa hráč môže znova pokúsiť!
+        courseC_PlayLab_events_challenge_c: |-
+          Vyskúšaj zmeniť rýchlosť jednotlivých postáv, takto si vieš hru uľahčiť alebo sťažiť!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+          </block></xml>
+      courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
+        courseC_PlayLab_events_challenge_a: Hodnoty, kotré vieš zmeniť v tomto bloku
+          ti umožnia presunúť postavu kdekoľvek na hracej ploche. Vyber si ľubovoľné
+          číslo medzi 0-400.
+        courseC_PlayLab_events_challenge_b: |-
+          Ty rozhoduješ, ktoré čísla použije, zamysli sa ako ďaleko by si z ľavého horného rohu chcel zájsť Prvé číslo reprezentuje počet pixelov z ľava. Druhé číslo reprezentuje počet pixelov zvrchu.
+
+          <xml><block type="studio_setSpriteXY" inline="true">
+          <value name="SPRITE">
+          <block type="math_number" movable="false">
+
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="XPOS">
+          <block type="math_number" movable="false">
+          <title name="NUM">37</title>
+          </block>
+          </value>
+          <value name="YPOS">
+          <block type="math_number" movable="false">
+          <title name="NUM">187</title>
+          </block>
+          </value>
+          </block></xml>
+
+          ![](<https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png>)
+      courseC_artist_loop1_authored_hint:
+        courseC_artist_loop1_a: V sovjom cykle nemusíš robiť žiadne zmeny, len pridaj
+          navrch jeden blok.
+        courseC_artist_loop1_b: |-
+          Toto je blok, potrebný na vytvorenie vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+
+          Vyber si vzor, ktorý len chceš!
+      courseC_artist_loop1_2018_authored_hint:
+        courseC_artist_loop1_a: V sovjom cykle nemusíš robiť žiadne zmeny, len pridaj
+          navrch jeden blok.
+        courseC_artist_loop1_b: |-
+          Toto je blok, potrebný na vytvorenie vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+
+          Vyber si vzor, ktorý len chceš!
+      courseC_artist_loop1_2019_authored_hint:
+        courseC_artist_loop1_a: V sovjom cykle nemusíš robiť žiadne zmeny, len pridaj
+          navrch jeden blok.
+        courseC_artist_loop1_b: |-
+          Toto je blok, potrebný na vytvorenie vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+
+          Vyber si vzor, ktorý len chceš!
+      courseC_artist_loops1a_authored_hint:
+        courseC_artist_loops1a_a: |-
+          Toto je prvý blok, ktorý budeš potrebovať:
+
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Použi tento blok na nakreslenie nálepky!
+
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
+      courseC_artist_loops1a_2018_authored_hint:
+        courseC_artist_loops1a_a: |-
+          Toto je prvý blok, ktorý budeš potrebovať:
+
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Použi tento blok na nakreslenie nálepky!
+
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
+      courseC_artist_loops1a_2019_authored_hint:
+        courseC_artist_loops1a_a: |-
+          Toto je prvý blok, ktorý budeš potrebovať:
+
+          <xml>
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          </block>
+          </xml>
+        courseC_artist_loops1a_b: |-
+          Použi tento blok na nakreslenie nálepky!
+
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
+      courseC_artist_loops1b_2019_authored_hint:
+        courseC_artist_loops1b_a: |-
+          Toto je prvý blok, ktorý budeš potrebovať:
+
+          <xml>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+          </block>
+          </xml>
+
+          Môžeš si vybrať otočiť sa doprava alebo doľava o koľkokoľvek stupňov.
+      courseC_artist_loops2a_authored_hint:
+        courseC_artist_loops2a_a: Vo vnútri cyklu použi blok skoč na 200 cez 200,
+          potom blok nakresli nálepku a potom sa otoč o 30 stupňov.
+        courseC_artist_loops2a_b: Klikni na číslo na vrchu cyklu `opakuj`, aby si
+          zmenil počet opakovaní.
+      courseC_artist_loops2a_2018_authored_hint:
+        courseC_artist_loops2a_a: Vo vnútri cyklu použi blok skoč na 200 cez 200,
+          potom blok nakresli nálepku a potom sa otoč o 30 stupňov.
+        courseC_artist_loops2a_b: Klikni na číslo na vrchu cyklu `opakuj`, aby si
+          zmenil počet opakovaní.
+      courseC_artist_loops2a_2019_authored_hint:
+        courseC_artist_loops2a_a: Vo vnútri tvojho cyklu, potrebuješ skočiť do stredu,
+          potom sa otočiť a potom nakresliť nálepku.
+        courseC_artist_loops2a_b: Klikni na číslo na vrchu cyklu `opakuj`, aby si
+          zmenil počet opakovaní.
+      courseC_artist_loops3a_authored_hint:
+        courseC_artist_loops3a_a: Potrebuješ pridať len jeden blok do vnútra tvojho
+          cyklu, nasleduje nálepke vtáčika.
+        courseC_artist_loops3a_b: Použi rozbaľovacie menu na bloku `nakresli nálepku`,
+          aby si našiel nálepku netopiera.
+      courseC_artist_loops3a_2018_authored_hint:
+        courseC_artist_loops3a_a: Potrebuješ pridať len jeden blok do vnútra tvojho
+          cyklu, nasleduje nálepke vtáčika.
+        courseC_artist_loops3a_b: Použi rozbaľovacie menu na bloku `nakresli nálepku`,
+          aby si našiel nálepku netopiera.
+      courseC_artist_loops3a_2019_authored_hint:
+        courseC_artist_loops3a_a: Potrebuješ pridať len jeden blok do vnútra tvojho
+          cyklu, nasleduje po prvej nálepke.
+        courseC_artist_loops3a_b: |-
+          Tvoj program, by mal vyzerať takto!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">???</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Cat</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Dog</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+
+          Môžeš použiť nálepky, ktoré chceš!
+      courseC_artist_loops4a_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Použi tento blok, aby si skočil dopredu:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+
+          Nezabudni zmeniť to, ako ďaleko skočíš!
+      courseC_artist_loops4a_2018_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Použi tento blok, aby si skočil dopredu:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
+
+          Nezabudni zmeniť to, ako ďaleko skočíš!
+      courseC_artist_loops4a_2019_authored_hint:
+        courseC_artist_loops4a_a: |-
+          Použi tento blok, aby si skočil dopredu:
+
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">???</title>
+          </block>
+          </xml>
+
+          Nezabudni zmeniť to, ako ďaleko skočíš!
+        courseC_artist_loops4a_b: |-
+          Tvoj program by mal vyzerať takto!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">???</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Cat</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Dog</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseC_artist_loops5_authored_hint:
+        courseC_artist_loops5_a: |-
+          Vyskúšaj použiť blok `skoč na`, aby si dostal umelca späť do stredu plochy:
+
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">100</title>
+          <title name="YPOS">100</title>
+          </block>
+          </xml>
+      courseC_artist_loops5a_authored_hint:
+        courseC_artist_loops5a_a: Použi rozbaľovacie menu na blokoch `nakresli nálepku`,
+          aby si zmenil obrázok.
+      courseC_artist_loops5a_2018_authored_hint:
+        courseC_artist_loops5a_a: Použi rozbaľovacie menu na blokoch `nakresli nálepku`,
+          aby si zmenil obrázok.
+      courseC_artist_loops5a_2019_authored_hint:
+        courseC_artist_loops5a_a: Použi rozbaľovacie menu na blokoch `nakresli nálepku`,
+          aby si zmenil obrázok.
+      courseC_artist_loops5b_authored_hint:
+        courseC_artist_loops5b_a: |-
+          Použi tento blok na nastavenie tvojho vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: Na vytvorenie dizajnu, ako je ten hore, použi blok
+          posuň sa dozadu toľko isto krát ako blok posuň sa dopredu.
+      courseC_artist_loops5b_2018_authored_hint:
+        courseC_artist_loops5b_a: |-
+          Použi tento blok na nastavenie tvojho vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: Na vytvorenie dizajnu, ako je ten hore, použi blok
+          posuň sa dozadu toľko isto krát ako blok posuň sa dopredu.
+      courseC_artist_loops5b_2019_authored_hint:
+        courseC_artist_loops5b_a: |-
+          Použi tento blok na nastavenie tvojho vzoru:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
+        courseC_artist_loops5b_b: Na vytvorenie dizajnu, ako je ten hore, použi blok
+          posuň sa dozadu toľko isto krát ako blok posuň sa dopredu.
+        courseC_artist_loops5b_c: |-
+          Tvoj program by mal vyzerať nejako takto!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">rainbowLine</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="jump_to">
+          <title name="VALUE">13</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveBackward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">???</title>
+          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Cat</title>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">???</title>
+          <next>
+          <block type="sticker">
+          <title name="VALUE">Dog</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseC_artist_loops6_authored_hint:
+        courseC_artist_loops6_a: |-
+          Vyskúšaj trojuholníkový kvet:
+          <img src="https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png" width="150px" />
+
+          Alebo malého zeleného chrobáka:
+          <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
+      courseC_artist_loops6a_authored_hint:
+        courseC_artist_loops6a_a: Na vytvorenie podobného dizajnu ako je ten hore,
+          skoč dopredu menej ako 75 pixelov medzi každou nálepkou.
+      courseC_artist_loops6a_2018_authored_hint:
+        courseC_artist_loops6a_a: Na vytvorenie podobného dizajnu ako je ten hore,
+          skoč dopredu menej ako 75 pixelov medzi každou nálepkou.
+      courseC_artist_loops6a_2019_authored_hint:
+        courseC_artist_loops6a_a: Na vytvorenie podobného dizajnu ako je ten hore,
+          skoč dopredu menej ako 75 pixelov medzi každou nálepkou.
+      courseC_artist_loops7a_authored_hint:
+        courseC_artist_loops7a_a: Kruh má 360 stupňov. Vynásob stupne, kotré sú v
+          bloku otoč sa počtom opakovaní. Vyšlo ti 360? Prezri si návrhy otáčaní,
+          aby si videl, že to tak skutočne funguje!
+      courseC_artist_loops7a_2018_authored_hint:
+        courseC_artist_loops7a_a: Kruh má 360 stupňov. Vynásob stupne, kotré sú v
+          bloku otoč sa počtom opakovaní. Vyšlo ti 360? Prezri si návrhy otáčaní,
+          aby si videl, že to tak skutočne funguje!
+      courseC_artist_loops7a_2019_authored_hint:
+        courseC_artist_loops7a_a: Kruh má 360 stupňov. Vynásob stupne, kotré sú v
+          bloku otoč sa počtom opakovaní. Vyšlo ti 360? Prezri si návrhy otáčaní,
+          aby si videl, že to tak skutočne funguje!
+      courseC_artist_loopsPre1a_authored_hint:
+        courseC_artist_loopsPre1a_a: Pamätaj, že blok `otoč sa` musí ísť do vnútra
+          cyklu.
+        courseC_artist_loopsPre1a_b: 'Tvoj cyklus `opakuj` by mal mať vo vnútri 3
+          bloky: `skoč k/na 200 cez 200 dole`, `posuň sa dopredu o 50 pixelov` a `otoč
+          sa vpravo o 60 stupňov`.'
+      courseC_artist_loopsPre1a_2018_authored_hint:
+        courseC_artist_loopsPre1a_a: Pamätaj, že blok `otoč sa` musí ísť do vnútra
+          cyklu.
+        courseC_artist_loopsPre1a_b: 'Tvoj cyklus `opakuj` by mal mať vo vnútri 3
+          bloky: `skoč k/na 200 cez 200 dole`, `posuň sa dopredu o 50 pixelov` a `otoč
+          sa vpravo o 60 stupňov`.'
+      courseC_artist_loopsPre1a_2019_authored_hint:
+        courseC_artist_loopsPre1a_a: Pamätaj, že blok `otoč sa` musí ísť do vnútra
+          cyklu.
+        courseC_artist_loopsPre1a_b: 'Tvoj cyklus `opakuj` by mal mať vo vnútri 3
+          bloky: `skoč k/na 200 cez 200 dole`, `posuň sa dopredu o 50 pixelov` a `otoč
+          sa vpravo o 60 stupňov`.'
+      courseC_artist_loopsPrePre1a_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          Prvý blok, ktorý budeš potrebovať je:
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
+        courseC_artist_loopsPrePre1a_b: |-
+          Aby si sa posunul dopredu o 50 pixelov, použi tento blok:
+
+          ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
+      courseC_artist_loopsPrePre1a_2018_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          Prvý blok, ktorý potrebuješ použiť je:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Aby si sa posunul dopredu o 50 pixelov, použi tento blok:
+
+          <xml><block type="draw_move_by_constant">
+
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
+      courseC_artist_loopsPrePre1a_2019_authored_hint:
+        courseC_artist_loopsPrePre1a_a: |-
+          Prvý blok, ktorý potrebuješ použiť je:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Aby si sa posunul dopredu o 50 pixelov, použi tento blok:
+
+          <xml><block type="draw_move_by_constant">
+
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block></xml>
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: '-   "Ak použiješ blok <xml><block type="draw_move_by_constant"><title
           name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>,
@@ -3281,24 +4171,347 @@ sk:
         courseC_collector_prog_challenge1_b: Stratil si sa? Vyskúšaj túto cestu!
       courseC_flappy_events1_authored_hint:
         courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events2_authored_hint:
+        courseC_flappy_events2_a: 'Blok, ktorý potrebuješ pridať sa volá `nastav rýchlosť`. '
+        courseC_flappy_events2_b: Na vyriešenie tejto úlohy, spoj dokopy bloky `nastav
+          rýchlosť` a `pri spustení`.
+      courseC_flappy_events2_2018_authored_hint:
+        courseC_flappy_events2_a: 'Blok, ktorý potrebuješ pridať sa volá `nastav rýchlosť`. '
+        courseC_flappy_events2_b: Na vyriešenie tejto úlohy, spoj dokopy bloky `nastav
+          rýchlosť` a `pri spustení`.
+      courseC_flappy_events2_2019_authored_hint:
+        courseC_flappy_events2_a: 'Blok, ktorý potrebuješ pridať sa volá `nastav rýchlosť`. '
+        courseC_flappy_events2_b: Na vyriešenie tejto úlohy, spoj dokopy bloky `nastav
+          rýchlosť` a `pri spustení`.
+      courseC_flappy_events3_authored_hint:
+        courseC_flappy_events3_a: Ak niečo nefunguje, uisti sa, že tvoje bloky sú
+          na pracovnej ploche pripojené k správnym udalostiam.
+      courseC_flappy_events3_2018_authored_hint:
+        courseC_flappy_events3_a: Ak niečo nefunguje, uisti sa, že tvoje bloky sú
+          na pracovnej ploche pripojené k správnym udalostiam.
+      courseC_flappy_events3_2019_authored_hint:
+        courseC_flappy_events3_a: Ak niečo nefunguje, uisti sa, že tvoje bloky sú
+          na pracovnej ploche pripojené k správnym udalostiam.
+      courseC_flappy_events4_authored_hint:
+        courseC_flappy_events4_a: Na vyriešenie tejto úlohy, pripoj blok `ukonči hru`
+          k bloku `keď narazí na prekážku`.
+      courseC_flappy_events4_2018_authored_hint:
+        courseC_flappy_events4_a: Na vyriešenie tejto úlohy, pripoj blok `ukonči hru`
+          k bloku `keď narazí na prekážku`.
+      courseC_flappy_events4_2019_authored_hint:
+        courseC_flappy_events4_a: Na vyriešenie tejto úlohy, pripoj blok `ukonči hru`
+          k bloku `keď narazí na prekážku`.
+      courseC_flappy_events5_authored_hint:
+        courseC_flappy_events5_a: Potrebuješ použiť blok `pridaj bod`, aby si prešiel
+          tento level.
+      courseC_flappy_events5_2018_authored_hint:
+        courseC_flappy_events5_a: Potrebuješ použiť blok `pridaj bod`, aby si prešiel
+          tento level.
+      courseC_flappy_events5_2019_authored_hint:
+        courseC_flappy_events5_a: Potrebuješ použiť blok `pridaj bod`, aby si prešiel
+          tento level.
+      courseC_flappy_events6_authored_hint:
+        courseC_flappy_events6_a: Skús pripojiť blok `mávni ____ ___` k udalosti `keď
+          klikneš`.
+      courseC_flappy_events6_2018_authored_hint:
+        courseC_flappy_events6_a: Skús pripojiť blok `mávni ____ ___` k udalosti `keď
+          klikneš`.
+      courseC_flappy_events6_2019_authored_hint:
+        courseC_flappy_events6_a: Skús pripojiť blok `mávni ____ ___` k udalosti `keď
+          klikneš`.
+      courseC_flappy_events7_authored_hint:
+        courseC_flappy_events7_a: 'Pozadie môžeš zmeniť pomocou bloku `nastav prostredie`. '
+      courseC_flappy_events7_2018_authored_hint:
+        courseC_flappy_events7_a: 'Pozadie môžeš zmeniť pomocou bloku `nastav prostredie`. '
+      courseC_flappy_events7_2019_authored_hint:
+        courseC_flappy_events7_a: 'Pozadie môžeš zmeniť pomocou bloku `nastav prostredie`. '
+      courseC_flappy_events8_authored_hint:
+        courseC_flappy_events8_a: Vyskúšaj pripojiť ďalší blok `nastav prostredie`
+          pod udalosť `keď obíde prekážku`, aby si prešiel tento level.
+      courseC_flappy_events8_2018_authored_hint:
+        courseC_flappy_events8_a: Vyskúšaj pripojiť ďalší blok `nastav prostredie`
+          pod udalosť `keď obíde prekážku`, aby si prešiel tento level.
+      courseC_flappy_events8_2019_authored_hint:
+        courseC_flappy_events8_a: Vyskúšaj pripojiť ďalší blok `nastav prostredie`
+          pod udalosť `keď obíde prekážku`, aby si prešiel tento level.
+      courseC_flappy_events9_authored_hint:
+        courseC_flappy_events9_a: Pripoj blok `nastav skóre 0` k udalosti `keď narazí
+          na prekážku`, aby si prešiel tento level.
+      courseC_flappy_events9_2018_authored_hint:
+        courseC_flappy_events9_a: Pripoj blok `nastav skóre 0` k udalosti `keď narazí
+          na prekážku`, aby si prešiel tento level.
+      courseC_flappy_events9_2019_authored_hint:
+        courseC_flappy_events9_a: Pripoj blok `nastav skóre 0` k udalosti `keď narazí
+          na prekážku`, aby si prešiel tento level.
       courseC_harvester_loops1_authored_hint:
+        courseC_harvester_loops1_a: Keď sa dostaneš až k tekvici, použi blok <xml><block
+          type="harvester_pumpkin"/></xml>, aby si ju zobral.
         courseC_harvester_loops1_b: Môžeš použiť cyklus s blokom <xml><block type="harvester_pumpkin"/></xml>,
           aby si z políčka zobral viac ako jednu tekvicu.
       courseC_harvester_loops1_2018_authored_hint:
+        courseC_harvester_loops1_a: Keď sa dostaneš až k tekvici, použi blok <xml><block
+          type="harvester_pumpkin"/></xml>, aby si ju zobral.
         courseC_harvester_loops1_b: Môžeš použiť cyklus s blokom <xml><block type="harvester_pumpkin"/></xml>,
           aby si z políčka zobral viac ako jednu tekvicu.
       courseC_harvester_loops1_2019_authored_hint:
+        courseC_harvester_loops1_a: Keď sa dostaneš až k tekvici, použi blok <xml><block
+          type="harvester_pumpkin"/></xml>, aby si ju zobral.
         courseC_harvester_loops1_b: Môžeš použiť cyklus s blokom <xml><block type="harvester_pumpkin"/></xml>,
           aby si z políčka zobral viac ako jednu tekvicu.
+      courseC_harvester_loops2_authored_hint:
+        courseC_harvester_loops2_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops2_b: Budeš potrebovať jeden cyklus `opakvať` za druhým.
+        courseC_harvester_loops2_c: Jeden z cyklov opakuje príkaz `posuň sa dopredu`
+          a ten druhý opakuje príkaz `zbieraj tekvica`.
+      courseC_harvester_loops2_2018_authored_hint:
+        courseC_harvester_loops2_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops2_b: Budeš potrebovať jeden cyklus `opakvať` za druhým.
+        courseC_harvester_loops2_c: Jeden z cyklov opakuje príkaz `posuň sa dopredu`
+          a ten druhý opakuje príkaz `zbieraj tekvica`.
+      courseC_harvester_loops2_2019_authored_hint:
+        courseC_harvester_loops2_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops2_b: Budeš potrebovať jeden cyklus `opakvať` za druhým.
+        courseC_harvester_loops2_c: Jeden z cyklov opakuje príkaz `posuň sa dopredu`
+          a ten druhý opakuje príkaz `zbieraj tekvica`.
+      courseC_harvester_loops3_authored_hint:
+        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+        courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
+          je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
+          otočiť?
+        courseC_harvester_loops3_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops3_2018_authored_hint:
+        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+        courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
+          je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
+          otočiť?
+        courseC_harvester_loops3_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops3_2019_authored_hint:
+        courseC_harvester_loops3_a: Neboj sa urobiť chybu! Pokús sa pridať bloky a
+          spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+        courseC_harvester_loops3_b: Pri prvých tekviciach môžeš použiť kód, kotrý
+          je veľmi podobný tomu z minulej úlohy. Ktorým smerom sa potom potrebuješ
+          otočiť?
+        courseC_harvester_loops3_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops4_authored_hint:
+        courseC_harvester_loops4_a: Použi nový blok `zbieraj kukuricu`, aby si ju
+          vzal.
+        courseC_harvester_loops4_b: Vo svojom kóde môžeš použiť viac ako jeden opakovací
+          cyklus, jeden na zbieranie kukurice a iný na zbieranie tekvíc.
+        courseC_harvester_loops4_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops4_2018_authored_hint:
+        courseC_harvester_loops4_a: Použi nový blok `zbieraj kukuricu`, aby si ju
+          vzal.
+        courseC_harvester_loops4_b: Vo svojom kóde môžeš použiť viac ako jeden opakovací
+          cyklus, jeden na zbieranie kukurice a iný na zbieranie tekvíc.
+        courseC_harvester_loops4_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops4_2019_authored_hint:
+        courseC_harvester_loops4_a: Použi nový blok `zbieraj kukuricu`, aby si ju
+          vzal.
+        courseC_harvester_loops4_b: Vo svojom kóde môžeš použiť viac ako jeden opakovací
+          cyklus, jeden na zbieranie kukurice a iný na zbieranie tekvíc.
+        courseC_harvester_loops4_c: Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops5_authored_hint:
+        courseC_harvester_loops5_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops5_b: Sú ti tieto schodíky povedomé z iných úloh? Pohyby
+          budú podobné, len pamätaj, že musíš ešte po ceste zozbierať úrodu.
+      courseC_harvester_loops5_2018_authored_hint:
+        courseC_harvester_loops5_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops5_b: Sú ti tieto schodíky povedomé z iných úloh? Pohyby
+          budú podobné, len pamätaj, že musíš ešte po ceste zozbierať úrodu.
+      courseC_harvester_loops5_2019_authored_hint:
+        courseC_harvester_loops5_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
+          a hľadaj v nich opakujúce sa vzory.
+        courseC_harvester_loops5_b: Sú ti tieto schodíky povedomé z iných úloh? Pohyby
+          budú podobné, len pamätaj, že musíš ešte po ceste zozbierať úrodu.
+      courseC_harvester_loops6_authored_hint:
+        courseC_harvester_loops6_a: Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť
+          aj viac blokov.
+        courseC_harvester_loops6_b: Nezabudni sa otočiť na konci radu s kukuricou.
+      courseC_harvester_loops6_2018_authored_hint:
+        courseC_harvester_loops6_a: Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť
+          aj viac blokov.
+        courseC_harvester_loops6_b: Nezabudni sa otočiť na konci radu s kukuricou.
+      courseC_harvester_loops6_2019_authored_hint:
+        courseC_harvester_loops6_a: Pamätaj, že do vnútra bloku `opakuj` môžeš vložiť
+          aj viac blokov.
+        courseC_harvester_loops6_b: Nezabudni sa otočiť na konci radu s kukuricou.
+      courseC_harvester_loops7_authored_hint:
+        courseC_harvester_loops7_a: Táto úloha sa dá vyriešiť dvoma spôsobmi, buď
+          pozbieraš prvú kukuricu alebo tekvice.
+        courseC_harvester_loops7_b: Budeš chcieť použiť viacero cyklov `opakuj`, aby
+          si vyriešil túto úlohu.
+      courseC_harvester_loops7_2018_authored_hint:
+        courseC_harvester_loops7_a: Táto úloha sa dá vyriešiť dvoma spôsobmi, buď
+          pozbieraš prvú kukuricu alebo tekvice.
+        courseC_harvester_loops7_b: Budeš chcieť použiť viacero cyklov `opakuj`, aby
+          si vyriešil túto úlohu.
+      courseC_harvester_loops7_2019_authored_hint:
+        courseC_harvester_loops7_a: Táto úloha sa dá vyriešiť dvoma spôsobmi, buď
+          pozbieraš prvú kukuricu alebo tekvice.
+        courseC_harvester_loops7_b: Budeš chcieť použiť viacero cyklov `opakuj`, aby
+          si vyriešil túto úlohu.
+      courseC_harvester_loops8_authored_hint:
+        courseC_harvester_loops8_a: Sú ti tieto schodíky povedomé z predchádzajúcej
+          úlohy? Pohyby budú podobné, len pamätaj, že musíš ešte po ceste zozbierať
+          úrodu.
+        courseC_harvester_loops8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops8_2018_authored_hint:
+        courseC_harvester_loops8_a: Sú ti tieto schodíky povedomé z predchádzajúcej
+          úlohy? Pohyby budú podobné, len pamätaj, že musíš ešte po ceste zozbierať
+          úrodu.
+        courseC_harvester_loops8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseC_harvester_loops8_2019_authored_hint:
+        courseC_harvester_loops8_a: Sú ti tieto schodíky povedomé z predchádzajúcej
+          úlohy? Pohyby budú podobné, len pamätaj, že musíš ešte po ceste zozbierať
+          úrodu.
+        courseC_harvester_loops8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseC_harvester_loops_challenge1_authored_hint:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
+        courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober kukuricu` koľkokoľvek krát potrebuješ, potom sa otoč vpravo na každom
+          rohu.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepsší spôsob na zozbieranie prvých štyroch kukuríc je použiť blok `opakuj` vo vnútri ďalšieho bloku `opakuj`. Tento vzor môžeš použiť aj pre zvyšok úlohy!
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
       courseC_harvester_loops_challenge1a_authored_hint:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
+        courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
+          blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge1a_2018_authored_hint:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
+        courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
+          blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge1a_2019_authored_hint:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
+        courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
+          blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepší spôsob na zozbieranie kukurice používa blok `opakuj` vo vnútri iného bloku `opakuj`.
+
+          <xml><block type="controls_repeat">
+
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
       courseC_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: Jedno z riešení je ísť cik-cakovo. Ďalší
+          spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!
+        courseC_harvester_loops_challenge2_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v
+          rohu.
         courseC_harvester_loops_challenge2_c: |-
           Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!
 
@@ -3308,6 +4521,11 @@ sk:
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2018_authored_hint:
+        courseC_harvester_loops_challenge2_a: Jedno z riešení je ísť cik-cakovo. Ďalší
+          spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!
+        courseC_harvester_loops_challenge2_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v
+          rohu.
         courseC_harvester_loops_challenge2_c: |-
           Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!
 
@@ -3317,6 +4535,11 @@ sk:
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2019_authored_hint:
+        courseC_harvester_loops_challenge2_a: Jedno z riešení je ísť cik-cakovo. Ďalší
+          spôsob je ísť do špirály! Úloha ako táto má veľa možných riešení. Buď vytrvalý!
+        courseC_harvester_loops_challenge2_b: Môžeš zopakovať `posuň sa dopredu` a
+          `zober šalát` koľkokoľvek krát potrebuješ, potom sa otoč vždy, keď si v
+          rohu.
         courseC_harvester_loops_challenge2_c: |-
           Tento cik-cakový vzor zopakuj dva krát na to, aby si úlohu splnil len s pomocou 20 blokov!
 
@@ -3350,6 +4573,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging2_2018_authored_hint:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -3357,6 +4582,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging2_2019_authored_hint:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -3364,6 +4591,8 @@ sk:
           -   Funguje všetko po prvom kroku?
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
+        courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -3373,6 +4602,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_2018_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -3382,6 +4613,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging3_2019_authored_hint:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -3391,6 +4624,8 @@ sk:
           Nakoniec daj svoje ďalšie bloky späť tam, kam patria.
 
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
+        courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
+          spustiť niekoľko krát a sleduj čo sa stane.
       courseC_maze_debugging4_authored_hint:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
           o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
@@ -3810,30 +5045,48 @@ sk:
         courseC_puppy_loops8courseC_maze_loops8_c: "Táto úloha sa dá vyriešiť viacerými
           spôsobmi. \n\nBudeš chcieť použiť aspoň 2 cykly, zopakovať pár činností
           v tom prvom a jeden blok `posuň sa dopredu` v tom druhom."
+      courseC_puppy_loops9_authored_hint:
+        courseC_puppy_loops9_1: Ak zopakuješ prvých pár krokov, dostaneš ma k prasať,
+          len pomocou ďalších 4 blokov!
       courseC_starWars_loops1_authored_hint:
+        courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
         courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
+          dopredu` 5 krát.
       courseC_starWars_loops10_authored_hint:
         courseC_starWars_loops10_a: Nevyzerá tento vzor ako obrovské schody? Skús
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
+        courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
         courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseC_starWars_loops10_2018_authored_hint:
         courseC_starWars_loops10_a: Nevyzerá tento vzor ako obrovské schody? Skús
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
+        courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
         courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseC_starWars_loops10_2019_authored_hint:
         courseC_starWars_loops10_a: Nevyzerá tento vzor ako obrovské schody? Skús
           využiť skúsenosti z predchádzajúcich cvičení a daj si pozor na správne otočky.
+        courseC_starWars_loops10_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
         courseC_starWars_loops10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseC_starWars_loops1_2018_authored_hint:
+        courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
         courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
+          dopredu` 5 krát.
       courseC_starWars_loops1_2019_authored_hint:
+        courseC_starWars_loops1_a: Keď BB-8 prejde cez šrot, automaticky ho zoberie.
         courseC_starWars_loops1_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel,
           čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_starWars_loops1_c: Na vyriešenie tejto úlohy použi blok `posuň sa
+          dopredu` 5 krát.
       courseC_starWars_loops2_authored_hint:
         courseC_starWars_loops2_a: Na opakovanie kódu vytiahni cyklus `opakuj`, a
           potom vlož dovnútra blok, ktorý chceš.
@@ -3843,15 +5096,54 @@ sk:
       courseC_starWars_loops2_2019_authored_hint:
         courseC_starWars_loops2_a: Na opakovanie kódu vytiahni cyklus `opakuj`, a
           potom vlož dovnútra blok, ktorý chceš.
+      courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_c: Stlačením malej šípky vedľa slova "vľavo" na bloku
+          otoč sa, zmeníš smer na "vpravo".
+        courseC_starWars_loops4_a: Použi dva bloky `opakuj`.
+        courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
+          príkaz: `posuň sa dopredu`.'
+      courseC_starWars_loops4_2018_authored_hint:
+        courseC_starWars_loops4_c: Stlačením malej šípky vedľa slova "vľavo" na bloku
+          otoč sa, zmeníš smer na "vpravo".
+        courseC_starWars_loops4_a: Použi dva bloky `opakuj`.
+        courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
+          príkaz: `posuň sa dopredu`.'
+      courseC_starWars_loops4_2019_authored_hint:
+        courseC_starWars_loops4_c: Stlačením malej šípky vedľa slova "vľavo" na bloku
+          otoč sa, zmeníš smer na "vpravo".
+        courseC_starWars_loops4_a: Použi dva bloky `opakuj`.
+        courseC_starWars_loops4_b: 'Každý cyklus `opakuj` bude mať vo vnútri len jeden
+          príkaz: `posuň sa dopredu`.'
+      courseC_starWars_loops5_authored_hint:
+        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
+          pohnúť dopredu.
+        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
+          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
+      courseC_starWars_loops5_2018_authored_hint:
+        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
+          pohnúť dopredu.
+        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
+          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
+      courseC_starWars_loops5_2019_authored_hint:
+        courseC_starWars_loops5_b: Ak chceš ísť dole musíš sa najprv otočiť a potom
+          pohnúť dopredu.
+        courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
+          blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
+        courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
       courseC_starWars_loops6_2018_authored_hint:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
+        courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
       courseC_starWars_loops6_2019_authored_hint:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
+        courseC_starWars_loops6_b: "Ak chceš použiť menej kódu, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! \nToto sa nazýva **vnorený cyklus**."
       courseC_starWars_loops7_authored_hint:
         courseC_starWars_loops7_a: Tento vzor je jednoduchší. ako sa zdá! Začni jedným
           schodom. Pokryje to všetok šrot?
@@ -3902,10 +5194,22 @@ sk:
           ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9_authored_hint:
         course_starWars_loops9_b: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
+        course_starWars_loops9_c: |-
+          Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018_authored_hint:
         course_starWars_loops9_b: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
+        course_starWars_loops9_c: |-
+          Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2019_authored_hint:
         course_starWars_loops9_b: Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov.
+        course_starWars_loops9_c: |-
+          Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_5_2018_authored_hint:
         '1': If you are switching your shapes, don't forget that you will need to
           switch their angles, too!
@@ -4150,9 +5454,9 @@ sk:
           -   Otoč sa vpravo o 45 stupňov
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_a: Začni s vnoreným cyklom ako v predošlej úlohe,
-          ale tento krát s ním vykresluj štvorce.
+          ale tento krát s ním vykresli štvorce.
         courseD_artist_nestedLoops9_b: Pripoj ďalší blok vnorených cyklov k prvému
-          bloku vnorených cyklov, ale tentokrát vykresluj trojuholníky.
+          bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.
         courseD_artist_nestedLoops9_c: |-
           Použi dva vnorené cykly:
 
@@ -4166,9 +5470,9 @@ sk:
           -   Otoč sa vpravo o 45 stupňov
       courseD_artist_nestedLoops9_2018_authored_hint:
         courseD_artist_nestedLoops9_a: Začni s vnoreným cyklom ako v predošlej úlohe,
-          ale tento krát s ním vykresluj štvorce.
+          ale tento krát s ním vykresli štvorce.
         courseD_artist_nestedLoops9_b: Pripoj ďalší blok vnorených cyklov k prvému
-          bloku vnorených cyklov, ale tentokrát vykresluj trojuholníky.
+          bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.
         courseD_artist_nestedLoops9_c: |-
           Použi dva vnorené cykly:
 
@@ -4182,9 +5486,9 @@ sk:
           -   Otoč sa vpravo o 45 stupňov
       courseD_artist_nestedLoops9_2019_authored_hint:
         courseD_artist_nestedLoops9_a: Začni s vnoreným cyklom ako v predošlej úlohe,
-          ale tento krát s ním vykresluj štvorce.
+          ale tento krát s ním vykresli štvorce.
         courseD_artist_nestedLoops9_b: Pripoj ďalší blok vnorených cyklov k prvému
-          bloku vnorených cyklov, ale tentokrát vykresluj trojuholníky.
+          bloku vnorených cyklov, ale tentokrát vykresli trojuholníky.
         courseD_artist_nestedLoops9_c: |-
           Použi dva vnorené cykly:
 
@@ -4286,6 +5590,18 @@ sk:
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_c: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseD_bee_conditionals3_authored_hint:
+        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_bee_conditionals3_2018_authored_hint:
+        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseD_bee_conditionals3_2019_authored_hint:
+        courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_bee_conditionals_challenge1_authored_hint:
         courseD_bee_conditionals_challenge1_a: Nájdeš cestu, ktorou sa dostaneš ku
           všetkým kvetom a plástom bez toho, aby si narazil do stromu? Najlepšou cestou
@@ -4875,6 +6191,9 @@ sk:
         courseD_collector_nested_loops_challenge2a_a: Pamätaj, že pomocou bloku `opakuj`
           môžeš opakovať jeden príkaz ale aj viac príkazov za sebou. Vieš dokonca
           opakovať aj samotný blok `opakuj`!
+      courseD_collector_ramp8_authored_hint:
+        courseD_collector_ramp8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
+          cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
       courseD_debugging_4_authored_hint:
         courseD_debugging_4_b: |-
           Ak sa ti nedarí prísť na to, aké kroky sa pri schodoch opakujú, skús po nich prejsť prstom a príkazy si hovor nahlas.
@@ -5040,9 +6359,17 @@ sk:
         courseD_iceage_loops9_b: Tvoj výsledný kód by mal mať **4** cykly.
         courseD_iceage_loops9_c: Scrat by mal ísť po tejto ceste, aby sa dostal k
           žaluďu.
+      courseD_maze_intro4_2019_authored_hint:
+        courseC_maze_programming4_a: Z Redovho pohľadu sa môžeš otočiť aj vľavo aj
+          vpravo. Ak si natočený vpravo, otočenie sa vpravo ťa otočí smerom dole.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k žaluďu.
       courseD_maze_intro5a_2019_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_b: Pamätaj si, že smer otáčania sa určuje z pohľadu
+          Red.
         courseC_maze_programming5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
@@ -5167,6 +6494,28 @@ sk:
       courseD_maze_ramp2_2019_authored_hint:
         courseC_maze_programming2_b: Uisti sa, že sú všetky 3 bloky spojené a pripojené
           ku bloku "pri spustení".
+      courseD_maze_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+      courseD_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+      courseD_maze_ramp3_2019_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+      courseD_maze_ramp4_2019_authored_hint:
+        courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
+          aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
+          dole.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k žaluďu.
       courseD_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
@@ -5265,20 +6614,64 @@ sk:
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
+      courseD_scrat_ramp2_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
+          sú spojené s blokom `pri spustení`.
+      courseD_scrat_ramp2_2018_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
+          sú spojené s blokom `pri spustení`.
+      courseD_scrat_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
+          zo Scratovej perspektívy.
+      courseD_scrat_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
+          zo Scratovej perspektívy.
       courseD_scrat_ramp4_authored_hint:
+        courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
+          aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
+          dole.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k žaluďu.
         courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_scrat_ramp4_2018_authored_hint:
+        courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
+          aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
+          dole.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k žaluďu.
         courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_scrat_ramp5_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
+          rohu?
+        courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
+          k žaluďu.
       courseD_scrat_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
+          rohu?
+        courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
+          k žaluďu.
+      courseD_scrat_ramp6_authored_hint:
+        courseC_maze_programming6a_a: Použi blok "opakuj", aby sa Scrat pohol!
+      courseD_scrat_ramp6_2018_authored_hint:
+        courseC_maze_programming6a_a: Použi blok "opakuj", aby sa Scrat pohol!
       courseD_scrat_ramp7_authored_hint:
         courseD_scrat_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
         courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
@@ -5305,6 +6698,14 @@ sk:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
+      courseE_artist_functions6_authored_hint:
+        grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
+          bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš,
+          že máš vyriešenú celú úlohu.
+      courseE_artist_functions6_2018_authored_hint:
+        grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
+          bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš,
+          že máš vyriešenú celú úlohu.
       courseE_artist_ramp10_authored_hint:
         courseD_artist_ramp10_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
@@ -5320,9 +6721,39 @@ sk:
       courseE_artist_ramp9_2_2018_authored_hint:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseE_bee_ramp17_authored_hint:
+        courseE_bee_ramp17_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseE_farmer_functions4b_authored_hint:
+        courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_farmer_functions4b_2018_authored_hint:
+        courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_farmer_functions5c_2018_authored_hint:
+        courseE_farmer_functions5c_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
+      courseE_farmer_ramp12a_authored_hint:
+        courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseE_farmer_ramp12a_2018_authored_hint:
+        courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
           či si dobre spojil všetky bloky a stlač "Spustiť".
+        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotreuješ žiadne
+          ďalšie bloky z panela nástrojov!
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
           bludiskom krok po kroku a nájsť chyby.
@@ -5331,6 +6762,28 @@ sk:
       courseE_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
           či si dobre spojil všetky bloky a stlač "Spustiť".
+        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotreuješ žiadne
+          ďalšie bloky z panela nástrojov!
+      courseE_maze_ramp2_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
+          sú spojené s blokom `pri spustení`.
+      courseE_maze_ramp2_2018_authored_hint:
+        courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
+          sú spojené s blokom `pri spustení`.
+      courseE_maze_ramp3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
+          z vtáčikovej perspektívy.
+      courseE_maze_ramp3_2018_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+        courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
+          z vtáčikovej perspektívy.
       courseE_maze_ramp4_authored_hint:
         courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
@@ -5342,16 +6795,28 @@ sk:
       courseE_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
+          rohu?
+        courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
+          k prasiatku.
       courseE_maze_ramp5_2018_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+        courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
+          rohu?
+        courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
+          k prasiatku.
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
+        courseC_maze_programming6_b: Pamätaj, že sa musíš najprv otočiť, keďže na
+          začiatku je vták otočený smerom k stene.
         courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseE_maze_ramp6_2018_authored_hint:
         courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
+        courseC_maze_programming6_b: Pamätaj, že sa musíš najprv otočiť, keďže na
+          začiatku je vták otočený smerom k stene.
         courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
@@ -5374,6 +6839,75 @@ sk:
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
+      courseF_artist_for3_authored_hint:
+        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_for3_2018_authored_hint:
+        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_for3_2019_authored_hint:
+        courseF_artist_for3_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_for4_authored_hint:
+        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_for4_2018_authored_hint:
+        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_for4_2019_authored_hint:
+        courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_artist_variables2_authored_hint:
+        courseF_artist_variables2_a: Nezabudni sa pohnúť dopredu po nakreslení každého
+          trojuholníka.
+        courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj
+          trojuholník a potom príkaz `posuň sa dopredu`.
+      courseF_artist_variables2_2018_authored_hint:
+        courseF_artist_variables2_a: Nezabudni sa pohnúť dopredu po nakreslení každého
+          trojuholníka.
+        courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj
+          trojuholník a potom príkaz `posuň sa dopredu`.
+      courseF_artist_variables2_2019_authored_hint:
+        courseF_artist_variables2_a: Nezabudni sa pohnúť dopredu po nakreslení každého
+          trojuholníka.
+        courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj
+          trojuholník a potom príkaz `posuň sa dopredu`.
+      courseF_artist_variables3_authored_hint:
+        courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach
+          v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
+          sa posunieš medzi trojuholníkmi.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
+          iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+      courseF_artist_variables3_2018_authored_hint:
+        courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach
+          v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
+          sa posunieš medzi trojuholníkmi.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
+          iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+      courseF_artist_variables3_2019_authored_hint:
+        courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach
+          v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
+          sa posunieš medzi trojuholníkmi.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
+          iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+      courseF_bee_for5_authored_hint:
+        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_bee_for5_2018_authored_hint:
+        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_bee_for5_2019_authored_hint:
+        courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Ak sa vták neposúva ku prasiatku, presvedč sa, či si
           dobre spojil všetky bloky a stlač "Spustiť".
@@ -5382,6 +6916,9 @@ sk:
           bludiskom krok po kroku a nájsť chyby.
         courseF_maze_ramp13_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
           alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+        courseF_maze_ramp13_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseF_maze_ramp15_authored_hint:
         courseF_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
           bludiskom krok po kroku a nájsť chyby.
@@ -5390,6 +6927,14 @@ sk:
       courseF_maze_ramp1_2018_authored_hint:
         courseF_maze_ramp1_a: Ak sa vták neposúva ku prasiatku, presvedč sa, či si
           dobre spojil všetky bloky a stlač "Spustiť".
+      courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
+      courseF_maze_ramp4_2018_authored_hint:
+        courseF_maze_ramp4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
+          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
+          celú úlohu.
       courseF_maze_ramp5_authored_hint:
         courseF_maze_ramp5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok
           po riadku. Zistíš, čo spraviť ďalej?
@@ -5424,6 +6969,16 @@ sk:
           či si dobre spojil oba bloky a stlač "Spustiť".
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Vyskúšaj niečo, a keď
           to nefunguje, tak vyskúšaj niečo iné!
+      coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
+      coursef_maze_ramp3_2018_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
       grade1_adventurer_loops3_authored_hint:
         grade1_adventurer_loops3_a: Niečo nie je správne? Skús použiť tlačidlo Krok
           a zisti, kde nastala chyba.
@@ -5504,6 +7059,11 @@ sk:
       grade2_CaringForNewPet_0_authored_hint:
         grade2_CaringForNewPet_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či
           si dobre spojil všetky bloky a stlač "Spustiť".
+      grade2_CaringForNewPet_2courseC_maze_programming3_authored_hint:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
+          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
+          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
+          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
       grade2_CaringForNewPet_4_authored_hint:
         2-3_Maze_6_a: Sú dve možnosti ako vyriešiť túto úlohu!
       grade2_CaringForNewPet_7D_authored_hint:
@@ -5537,6 +7097,23 @@ sk:
           cyklus.
       grade2_PuppyLoops_8_authored_hint:
         2-3_Artist_Debugging_2_a: 'Nápoveda: Každý fúz je 75 pixelov dlhý.'
+      grade2_playlab_project_6_authored_hint:
+        idea1: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _potrebuješ inšpiráciu?_
+
+          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea3: |-
+          _Potrebuješ inšpiráciu?_
+
+          **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
       grade2_puppy_loops2_authored_hint:
         hint1: Túto úlohu dokážeš vyriešiť pomocou len 3 blokov, vráatne bloku `pri
           spustení`.
@@ -5601,6 +7178,27 @@ sk:
         Course_4_Artist_For_Loops_Challenge_a: Najväčší mnohouholník má 19 strán.
       grade5_artist_functionparameters10_authored_hint:
         double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
+      grade5_artist_variables_triangles1_authored_hint:
+        grade5_artist_variables_triangles1_a: Pamätaj, že musíš otočiť umelca o 120
+          stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.
+        grade5_artist_variables_triangles1_b: Použi cyklus `opakuj`, aby si skrátil
+          tvoj kód.
+        grade5_artist_variables_triangles1_c: Vo vnútri tvojho cyklu sa chceš pohnúť
+          dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov.
+      grade5_artist_variables_triangles1_2018_authored_hint:
+        grade5_artist_variables_triangles1_a: Pamätaj, že musíš otočiť umelca o 120
+          stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.
+        grade5_artist_variables_triangles1_b: Použi cyklus `opakuj`, aby si skrátil
+          tvoj kód.
+        grade5_artist_variables_triangles1_c: Vo vnútri tvojho cyklu sa chceš pohnúť
+          dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov.
+      grade5_artist_variables_triangles1_2019_authored_hint:
+        grade5_artist_variables_triangles1_a: Pamätaj, že musíš otočiť umelca o 120
+          stupňov, aby si spravil vnútorný uhol 60 stupňov v trojuholníku.
+        grade5_artist_variables_triangles1_b: Použi cyklus `opakuj`, aby si skrátil
+          tvoj kód.
+        grade5_artist_variables_triangles1_c: Vo vnútri tvojho cyklu sa chceš pohnúť
+          dopredu o 50 pixelov, a potom otočiť doľava o 120 stupňov.
       gradek_artist_loops3_authored_hint:
         artistLoopsK2_a: Ak chceš opakovať cyklus viac ako 4 krát, tak môžeš zmeniť
           číslo navrchu bloku.

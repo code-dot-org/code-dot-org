@@ -1892,6 +1892,7 @@ it:
       Dance Party Freeplay: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_2019: Ora crea la tua discoteca aliena!
       Dance Party Freeplay_simple: Ora crea la tua discoteca aliena!
+      Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Usa gli eventi per rendere il tuo ballo interattivo!
       Dance_Party_01: Trascina nell’area di lavoro il blocco `crea un nuovo`e aggancialo
         al blocco `quando si clicca su "Esegui"` (`setup`).
@@ -2901,6 +2902,8 @@ it:
         tua giraffa? '
       Virtual Pet Freeplay_simple: 'Tempo di giocare: Cos''altro puoi far fare alla
         tua giraffa? '
+      Virtual Pet Template_2019: Crea un **evento** in modo che quando la giraffa
+        Geraldine tocca la pozzanghera, il suo colore diventi marrone.
       aE7: |-
         Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>
         Riesci a disegnare quest'onda ripetendo il tutto?
@@ -4243,7 +4246,7 @@ it:
       courseC_collector_prog9: _"Prendiamoli tutti 'sti diamanti!"_
       courseC_collector_prog9_2018: _"Prendiamoli tutti 'sti diamanti!"_
       courseC_collector_prog9_2019: _"Prendiamoli tutti 'sti diamanti!"_
-      courseC_collector_progA: Aiuto Laura a raccogliere tutti i diamanti.
+      courseC_collector_progA: Aiuta Laura a raccogliere tutti i diamanti.
       courseC_collector_prog_challenge1: Guarda bene! Riesci a raccogliere tutti e
         **10** i diamanti?
       courseC_collector_prog_challenge1_2018: Guarda bene! Riesci a raccogliere tutti
@@ -4432,11 +4435,11 @@ it:
       courseC_maze_debugging_challenge1_2019: Aiuta Scrat a decidere che percorso
         seguire per raggiungere la ghianda.
       courseC_maze_debugging_challenge2: Aiuta Scrat a raggiungere la ghianda usando
-        solo quattro istruzioni `gira a ...`
+        al massimo quattro istruzioni `gira a ...`.
       courseC_maze_debugging_challenge2_2018: Aiuta Scrat a raggiungere la ghianda
-        usando solo quattro istruzioni `gira a ...`
+        usando al massimo quattro istruzioni `gira a ...`.
       courseC_maze_debugging_challenge2_2019: Aiuta Scrat a raggiungere la ghianda
-        usando solo quattro istruzioni `gira a ...`
+        usando al massimo quattro istruzioni `gira a ...`.
       courseC_maze_loops10: Stai andando alla grande! Continua così!
       courseC_maze_loops11: Ci sei quasi! Questa volta scegli il percorso che preferisci!
       courseC_maze_loops6: I cicli funzionano anche con più di un blocco al loro interno!  Puoi
@@ -5207,9 +5210,9 @@ it:
       courseD_collector_nested_loops_challenge2_2019: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
         È possibile raccoglierli tutti e 4.
-      courseD_collector_ramp10: Aiuto Laura a raccogliere tutti i diamanti.
-      courseD_collector_ramp8: Aiuto Laura a raccogliere tutti i diamanti.
-      courseD_collector_ramp9: Aiuto Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
+      courseD_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_debugging_3: |-
         Questi blocchi sbagliati mi fanno perdere tempo. Correggi gli errori per raccogliere tutto il nettare e produrre tutto il miele.<br><br>
         Ricorda che cliccando su "Fai un passo" puoi eseguire il programma un blocco alla volta.
@@ -5842,9 +5845,9 @@ it:
         Forza!
       courseE_bee_functions_challenge2_2018: Dovrai cavartela da solo in questa sfida.
         Forza!
-      courseE_collector_ramp10: Aiuto Laura a raccogliere tutti i diamanti.
-      courseE_collector_ramp8: Aiuto Laura a raccogliere tutti i diamanti.
-      courseE_collector_ramp9: Aiuto Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
+      courseE_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
       courseE_farmer_concept1: Riesci a scrivere un programma che riempia queste buche
         fino a quando il terreno è livellato?
       courseE_farmer_concept1_2018: Riesci a scrivere un programma che riempia queste
@@ -6609,9 +6612,9 @@ it:
         il puzzle.
       grade2_collector_5: Questi blocchi sono nell'ordine sbagliato. Riesci a riordinarli?
       grade2_collector_6: Riordina i blocchi per raccogliere tutti i diamanti.
-      grade2_collector_A: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2018: Aiuto Laura a raccogliere tutti i diamanti.
-      grade2_collector_A_2019: Aiuto Laura a raccogliere tutti i diamanti.
+      grade2_collector_A: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2018: Aiuta Laura a raccogliere tutti i diamanti.
+      grade2_collector_A_2019: Aiuta Laura a raccogliere tutti i diamanti.
       grade2_playlab_project_1: Riesci a scrivere un programma che fa muovere il ​pinguino
         quando si usano le frecce su / giù / destra / sinistra per colpire tutti i
         bersagli?

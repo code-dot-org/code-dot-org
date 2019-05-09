@@ -2,6 +2,8 @@
 es-MX:
   data:
     short_instructions:
+      "(joshl) Dance Party 1-validated_2019": "¿Qué crees que ocurrirá al hacer clic
+        en el extraterrestre?"
       2-3 Artist 1 new: Hola, soy un artista. Puedes escribir código para hacerme
         dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las
         líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
@@ -3991,8 +3993,8 @@ es-MX:
         haz que todos tus extraterrestres se pongan en una línea. '
       Dance Party 4: 'Crea un tercer sprite llamado `extraterrestre3` y haz que todos
         tus extraterrestres se pongan en una línea. '
-      Dance Party 4_2019: 'Crea un tercer sprite que parezca un extraterrestre amarillo,
-        y haz que todos tus extraterrestres se pongan en una línea. '
+      Dance Party 4_2019: Crea un tercer sprite que parezca un extraterrestre amarillo,
+        y haz que todos tus extraterrestres se pongan en una línea.
       Dance Party 4_simple: 'Crea un tercer sprite llamado `extraterrestre3` y haz
         que todos tus extraterrestres se pongan en una línea. '
       Dance Party 5 - Validated: Añade código para cambiar el color de cada extraterrestre
@@ -4029,6 +4031,10 @@ es-MX:
       Dance Party Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_2019: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Dance Party Predict_simple: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
+      Dance Party Template 1_2019: Reemplaza el bloque de comportamiento en el bloque
+        `sprite comienza` con uno diferente que haga que el extraterrestre comience
+        a girar.
+      Dance Party Template 2_2019: Plantilla
       Dance_Party_01: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo
         y conéctalo dentro del bloque de 'instalación'.
       Dance_Party_01_low: Arrastra el bloque de 'Crear nuevo' en el espacio de trabajo
@@ -4667,17 +4673,51 @@ es-MX:
       K2.0 sequence 6: "¡Averigua qué falta y entonces agrega bloques para llevarme
         al cerdo!"
       K2.0 sequence 7: "¡Resuelve este nivel y llévame hasta el cerdo!"
+      K2.0 sequence 8: "¡Depura este nivel agregando bloques para llevarme hasta el
+        cerdo!"
       K2.0 sequence 9: "¡Evita el TNT para llevarme al cerdo!"
       K2.0 sequence FP: "¡Ahora descifra cómo atrapar al cerdo de cualquier forma
         que puedas!"
+      K2.0 sequence pre: "¡Juega con estos bloques para ver si puedes llevarme hasta
+        el cerdo!"
       KIKI GLJ Test Response: Oserva el código de más abajo. ¿Qué crees que hará el
         avión cuando hagas clic en "Ejecutar"?
+      KTest1: "¿Me puedes hacer mover al Sur una vez más para llegar hasta el cerdo?"
       KTest2: Traza el camino y llévame al cerdo tonto. ¡Evita el TNT o las plumas
         volarán!
       Kiki_StarWars_Test_3: Texto
       Kiki_StarWars_Test_4: Texto
       Kiki_StarWars_Test_5: Texto
       Kiki_StarWars_Test_5_Example: Texto
+      LaurelDebugging4Video1: Mueve a Laurel y consigue la mayor cantidad de oro que
+        puedas.
+      Limited Quantity of Blocks Test: Agrega solamente un bloque para llevarme hasta
+        el cerdo
+      Luigi's Pizza 1: "¡Bienvenido a Luigi's Pizza! Para pedir una pizza, escribe
+        el nombre de un ingrediente en la función de costo, y devolveremos el precio
+        de esa pizza. Intenta ordenar una pizza de pepperoni para empezar."
+      Luigi's Pizza 2 (copy 1): Ahora solo hay cuatro opciones disponibles en Luigi's
+        Pizza. ¡Vamos a arreglarlo! Añade un par de nuevos ingredientes al bloque
+        condicional en la función "costo". Una vez que hayas añadido tus ingredientes,
+        prueba la función para asegurarte de que funciona.
+      Luigi's Pizza 2: Ahora solo hay cuatro opciones disponibles en Luigi's Pizza.
+        ¡Vamos a arreglarlo! Añade un par de nuevos ingredientes al bloque condicional
+        en la función "costo". Una vez que hayas añadido tus ingredientes, prueba
+        la función para asegurarte de que funciona.
+      Luigi's Pizza 3 (copy 1): ¡Eso está mejor! A todo el mundo le encanta tener
+        más variedad de ingredientes para la pizza. Pero todavía no puedes complacer
+        a todos, y hay gente que está llegando a pedir ingredientes que Luigi no tiene.
+        En lugar de decirles que "no" a esas personas, ¿podría actualizar la cláusula
+        "sino" para que les cobremos un recargo por los ingredientes que normalmente
+        no ofrecemos?
+      Luigi's Pizza 3: ¡Eso está mejor! A todo el mundo le encanta tener más variedad
+        de ingredientes para la pizza. Pero todavía no puedes complacer a todos, y
+        hay gente que está llegando a pedir ingredientes que Luigi no tiene. En lugar
+        de decirles que "no" a esas personas, ¿podría actualizar la cláusula "sino"
+        para que les cobremos un recargo por los ingredientes que normalmente no ofrecemos?
+        Cobremos $10.000 por un ingrediente que la pizza no tiene.
+      Luigi's Pizza 4: 'Juego libre: ¿Qué puedes hacer para lograr que la función
+        de costo de Luigi sea aún más útil?'
       MC Agent Freeplay: "**Improvisación:**  ¡Es hora de explorar por tu cuenta!"
       MC HOC 2016 Level 10: "¡Es hora de crear tu propio Minecraft! Genera criaturas
         y haz que hagan lo que tú quieras. ¡Diviértete!"
@@ -4712,14 +4752,16 @@ es-MX:
         podrás anotar un punto cada vez que atrapes uno. ¡Acumula cinco puntos y gana!
       MC HOC 2016 Village Test: "¡Ay, no! ¡Los zombis te tienen atrapado! ¡Escribe
         código que haga que el gólem de hierro persiga y ataque a los zombis!"
-      MC_HOC_2017 Agent Test: Vajuta "Käivita", et liigutada mängija oranžile ruudule
-        maja sees.
-      MC_HOC_2017_01: Vajuta "Käivita", et liigutada mängija oranžile ruudule maja
-        sees.
+      MC_2017_Ryan_02: Usa bucles para ayudar al jugador a salir y llevar al Agente
+        hasta la placa de presión.
+      MC_HOC_2017 Agent Test: Haz clic en "Ejecutar" para mover al jugador al cuadrado
+        naranja dentro de la casa.
+      MC_HOC_2017_01: Haz clic en "Ejecutar" para mover al jugador al cuadrado naranja
+        dentro de la casa.
       MC_HOC_2017_01_Cole: Debes recoger todas las herramientas en esta aventura.
         Muévete usando las **teclas de flecha** y llega al cofre del camino para ganar
-      MC_HOC_2017_01_Kiki: Vajuta "Käivita", et liigutada mängija oranžile ruudule
-        maja sees.
+      MC_HOC_2017_01_Kiki: Haz clic en "Ejecutar" para mover al jugador al cuadrado
+        naranja dentro de la casa.
       MC_HOC_2017_01_RETRY: Lleva al Agent a la placa de presión, luego presiona "Ejecutar"
         y usa las teclas de flecha para mover al jugador fuera de la casa para recoger
         el cofre.
@@ -4796,11 +4838,62 @@ es-MX:
       MC_HOC_2017_Ryan_05: Destruye estos cactus para que el jugador pueda llegar
         a la meta.
       MC_HOC_Kiki_02: Lleva al Agent a la placa de presión.
+      MSM Big Game Empty: Todas las variables y funciones están actualmente stubs
+        vacíos. Cada progresión del desafío se centrará en definir algunos de ellos
+        y, por lo tanto, añadir funcionalidad.
+      MSM Big Game Vars 1 (copy 1): En la barra de herramientas de Variables, verás
+        varias variables que definen cómo se ven, mueven e interactúan los personajes
+        de tu juego
+      MSM Big Game Vars 1: En la barra de herramientas de Variables, verás varias
+        variables que definen cómo se ven, mueven e interactúan los personajes de
+        tu juego
+      MSM Big Game Vars Backup: En la barra de herramientas de Variables, verás varias
+        variables que definen cómo se ven, mueven e interactúan los personajes de
+        tu juego
+      MSM Defining Vars 2 (copy 1): Si quisiéramos hacer cincuenta triángulos verdes,
+        sería un dolor de cabeza repetir ese bloque de código 50 veces. Vamos a crear
+        una variable llamada "mi-forma" y poner el código para un triángulo verde
+        sólido de 50 pixeles dentro.
+      MSM Defining Vars 2: Si quisiéramos hacer cincuenta triángulos verdes, sería
+        un dolor de cabeza repetir ese bloque de código 50 veces. Vamos a crear una
+        variable llamada "mi-forma" y poner el código para un triángulo verde sólido
+        de 50 pixeles dentro.
+      MSM Defining Vars 3 (copy 1): Toma tu variable "mi-forma" y úsala con este código
+        proporcionado para dibujar dos triángulos verdes idénticos.
+      MSM Defining Vars 3: Toma tu variable "mi-forma" y úsala con este código proporcionado
+        para dibujar dos triángulos verdes idénticos que tengan un tamaño de 50 pixeles.
+      MSM Defining Vars 4: Edita tu variable mi-forma para que dibuje estrellas rojas
+        sólidas de 75 pixeles.
+      MSM Play Lab Butterfly 1: Ayuda a Sam a permanecer en la pantalla para que siempre
+        puedas ver al menos una parte de él. Usando las teclas de flechas, observa
+        hasta qué punto Sam puede ir a la izquierda y permanecer en la pantalla. Descubrirás
+        que Sam está en pantalla mientras que su coordenada x sea mayor que -50. Luego,
+        rellena el código para hacer que Sam permanezca en la pantalla.
+      MSM Play Lab Butterfly 2: Ahora haz que Sam permanezca en el lado derecho de
+        la pantalla. Tendrás que experimentar para ver hasta qué punto puede ir y
+        seguir siendo parcialmente visible en la pantalla.
+      MSM Play Lab Butterfly 3: Ahora, combina tu trabajo para hacer que Sam permanezca
+        en ambos lados de la pantalla.
+      MSM Play Lab Game 2: Las variables también pueden utilizarse para controlar
+        la velocidad de los jugadores en un juego. Establece la velocidad del jugador
+        y la velocidad del enemigo, y mira cómo cambia el movimiento. La velocidad
+        puede ser entre 2 y 12.
       Middle School Hackathon Pt 1: "(Haz clic para ver las instrucciones completas)"
       Middle School Hackathon Pt 2: "(Haz clic para ver las instrucciones completas)"
+      Mike Pair Programming: Estas son las instrucciones.
       Mike Test Bee Conditionals 1: La abeja no puede decir si se trata de una flor
         o un panal de miel. Reúnen néctar de las flores, pero primero tienes que comprobar
         si es una flor o un panal de miel.
+      Mike Test Bee Conditionals 2: Recoge todo el néctar. Sólo puedes recoger el
+        néctar de las flores, pero puedes revisar cualquier espacio para ver si hay
+        una flor.
+      MikeAssessment1: "¡Ahora hazlo bien!"
+      MikeStar: Dibuja esto.
+      MikeStarHard: Dibuja esto.
+      MikeStarNested: Dibuja esto.
+      MikeTest1: "¡¿Quién sabe qué debes hacer?!"
+      MikeTest2: "¡Dibuja algo!"
+      MikeTest3: "¡Construye algo!"
       NEW Course 4 Artist Functions 1: "¿Puedes dibujar un cuadrado de 100 píxeles
         de largo usando un ciclo?"
       NEW Course 4 Artist Functions 10.1: Use las funciones de los puzzles anteriores
@@ -4972,6 +5065,73 @@ es-MX:
         direcciones IP de todos las computadoras conectadas. Envía un mensaje en el
         formulario GET [hostname] al servicio DNS en la dirección <yourRouterNumber>.15
         para obtener la dirección de un estudiante.
+      NetSim Standalone Broadcast: En esta versión del simulador de Internet, puedes
+        conectarte con hasta 5 personas más en una sala. Cuando envías mensajes en
+        la sala, todos los reciben. ¿Cuáles son algunos de los desafíos de este sistema
+        y cómo puedes resolverlos?
+      NetSim Standalone Classroom Routers: En esta versión del simulador de Internet,
+        todos se conectan a un router y tienen una dirección específica. Para enviar
+        mensajes, tienes que dirigir el mensaje a la dirección específica del destinatario,
+        y el router se encargará de entregarlo a la computadora correcta. Si hay otros
+        routers creados en tu clase, pide la dirección de uno de tus compañeros de
+        clase y envíales un mensaje. Mira el Router de Registro para ver la ruta que
+        los mensajes han tomado a través de la red.
+      NetSim Standalone Freeplay: En esta configuración, la mayoría de las opciones
+        están activadas y puedes jugar con ellas. ¡Diviértete!
+      NetSim Standalone Manual DNS: En esta versión del simulador, no puedes ver las
+        direcciones de los otros estudiantes. En lugar de ello, uno de ustedes debe
+        actuar como nombre de servicio, para ayudar a compartir direcciones entre
+        sí.
+      NetSim Standalone Packets TCP: 'Los mensajes en Internet pueden tomar muchas
+        rutas para llegar a su destino y, a veces, en el recorrido, el mensaje se
+        elimina. En esta versión del simulador de Internet, hay un 10 % de probabilidad
+        de que un paquete se elimine, varios paquetes pueden tomar diferentes rutas
+        para llegar a destino, y el tamaño máximo del paquete predeterminado se establece
+        a 6 caracteres adicionales. '
+      NetSim Standalone Routers Addresses: |-
+        Para esta actividad, conéctate a un router con los demás de tu grupo. Nota importante: el router sólo enrutará correctamente los mensajes donde los primeros 4 bits son Para: dirección y los segundos 4 bits son De: dirección.
+
+        [PENDIENTE: Es necesario que NetSim sea compatible con direcciones jerárquicas. Por ahora, el nivel está configurado para direcciones "de" y "para" de 4 bits]
+      NetSim Standalone SendAB: Tu compañero y tú comparten un solo cable que sólo
+        puede estar en estado A o estado B. Puedes establecer el cable a cualquiera
+        de los estados en cualquier momento, y puedes leer el estado del cable en
+        cualquier momento. ¿Puedes encontrar una forma de comunicarte eficazmente
+        con este sistema?
+      NetSim Standalone Sending Numbers Ascii: 'Ahora que has transmitido información
+        representada como números decimales, puedes asignar esos números a caracteres
+        de texto para enviar información basada en texto de un lado a otro. Con un
+        protocolo basado en texto, puede representar y comunicar fácilmente todo tipo
+        de información. '
+      NetSim Standalone Sending Numbers: "¡Ahora tu compañero y tú pueden enviar mensajes
+        confiablemente de una parte a otra sin coordinación adicional! Si bien siempre
+        estás enviando bits de un lado a otro, también puedes representar esos bits
+        como números decimales. ¿Qué tipo de información puedes representar con este
+        sistema? "
+      NetSim_AddressingMessages: En esta versión del simulador, te conectarás a un
+        Router en lugar de hacerlo directamente a otro estudiante. Introduce una dirección
+        en el cuadro "Para" para enviar un mensaje a otro estudiante.
+      NetSim_AutomaticDNS: En esta versión del simulador, se te proporciona un servicio
+        DNS. Envía un mensaje en el formulario GET [hostname] al servicio DNS en la
+        dirección 15 para obtener la dirección de un estudiante.
+      NetSim_ManualDNS: En esta versión del simulador, no puedes ver las direcciones
+        de los otros estudiantes. En lugar de ello, uno de ustedes debe actuar como
+        nombre de servicio, para ayudar a compartir direcciones entre sí.
+      NetSim_SendAB: Conéctate a otro estudiante. Cada uno de ustedes puede establecer
+        el valor del cable entre ustedes con "A" o "B". ¡Mira si puedes enviar un
+        mensaje completo!
+      NetSim_SendAscii: En esta versión del simulador, puedes enviar números o caracteres
+        ASCII entre sí, de a 1 bit a la vez.
+      NetSim_SendBits: Conéctate a otro estudiante. Ahora puedes configurar tu cable
+        a "0" o "1". ¡Envía un mensaje a tu compañero!
+      NetSim_SendNumbers: En esta versión del simulador, puedes ver las representaciones
+        decimales del binario que estás enviando.
+      NetSim_SendingABTest: Esta es la prueba de Sarah de hacer un nivel de Netsim
+      NetSim_Superuser: Has cargado NetSim en modo superusuario.
+      NetSim_Variant1: 'NetSim: la variante 1 permite a los estudiantes calcular manualmente
+        el tiempo de envío de bits de un lado a otro.'
+      NetSim_Variant2: 'NetSim: variante 2: los estudiantes se conectan directamente
+        entre sí y envían paquetes enteros de un lado a otro, y exploran sistemas
+        de codificación de datos.'
       NetSim_Variant3: 'NetSim: Variante 3: Conecta grupos de 2-6 estudiantes con
         un router, y explora problemas de enrutamiento y DNS'
       New Artist Project: "¡Dibuja algo impresionante! Tu código ha sido guardado
@@ -5168,9 +5328,24 @@ es-MX:
         los datos de imagen en hexadecimal y no te permite volver a convertirlo en
         binario.
       Pixelation - AllTheThings 5: Este nivel de pixelación demuestra el uso de la
-        opción "Ocultar controles deslizantes". Tenga en cuenta que los controles
-        deslizantes de ancho y alto no están disponibles, y los campos de ancho y
-        alto no son editables.
+        opción "Ocultar controles deslizantes". Ten en cuenta que los controles deslizantes
+        de ancho y alto no están disponibles, y los campos de ancho y alto no son
+        editables.
+      Pixelation - Lesson 14 - Fix bit offset: Un solo bit adicional se inserta en
+        el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional
+        rompe todos los demás bits en la línea, lo que hace que el logotipo se vea
+        desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo
+        Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2018: Un solo bit adicional se inserta
+        en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional
+        rompe todos los demás bits en la línea, lo que hace que el logotipo se vea
+        desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo
+        Code.org.
+      Pixelation - Lesson 14 - Fix bit offset_2019: Un solo bit adicional se inserta
+        en el flujo de bits que componen el logotipo C del Code.org. Ese bit adicional
+        rompe todos los demás bits en la línea, lo que hace que el logotipo se vea
+        desordenado. Rastrea el bit adicional y quítalo para arreglar el logotipo
+        Code.org.
       Pixelation - Lesson 14 - Make the Letter A: "Haga \nuna letra 'A' de 3x5. El
         widget está configurado con las dimensiones incorrectas. Su primera tarea
         es establecer el segundo byte en el código binario de 8 bits para 5: 0000
@@ -5183,6 +5358,16 @@ es-MX:
         El widget está configurado con las dimensiones incorrectas. Su primera tarea
         es establecer el segundo byte en el código binario de 8 bits para 5: 0000
         0101. Luego comience a ingresar datos de píxeles."
+      Pixelation - Lesson 14 - Make your own B and W Image: "¡Ahora haz tu propia
+        imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño
+        que quieras. ¡Que te diviertas pixelando!"
+      Pixelation - Lesson 14 - Make your own B&W Image: "¡Ahora haz tu propia imagen!
+        Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que
+        quieras. ¡Que te diviertas pixelando!"
+      Pixelation - Lesson 15 - Color Free Play: 'Requisitos: El icono debe ser de
+        16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits
+        de información de color. La imagen debe codificarse con al menos 12 bits por
+        pixel.'
       Pixelation - Lesson 15 - Color Shades 4x4: 'Comenzamos con la imagen 4x4 que
         Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores
         utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con
@@ -5198,6 +5383,18 @@ es-MX:
         colores utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar
         con tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4
         - tonos de gris.'
+      Pixelation - Lesson 15 - Color Shades: Te iniciamos con la fila de sombras de
+        rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando
+        la fila inferior de la imagen con sombras de un color diferente. Aquí tienes
+        un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
+      Pixelation - Lesson 15 - Color Shades_2018: Te iniciamos con la fila de sombras
+        de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando
+        la fila inferior de la imagen con sombras de un color diferente. Aquí tienes
+        un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
+      Pixelation - Lesson 15 - Color Shades_2019: Te iniciamos con la fila de sombras
+        de rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando
+        la fila inferior de la imagen con sombras de un color diferente. Aquí tienes
+        un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
       Pixelation - Lesson 15 - Complete 3-bit color: Comenzamos con la imagen de 4x2
         que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine
         la imagen descubriendo los dos colores que faltan y codifíquelos.
@@ -5207,11 +5404,64 @@ es-MX:
       Pixelation - Lesson 15 - Complete 3-bit color_2019: Comenzamos con la imagen
         de 4x2 que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados.
         Termine la imagen descubriendo los dos colores que faltan y codifíquelos.
+      Pixelation Bee: 'Esta imagen más grande de una abeja codifica el color con 12
+        bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel.
+        Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits.
+        Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta
+        24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Bee_2018: 'Esta imagen más grande de una abeja codifica el color
+        con 12 bits por pixel, pero ver en hex hace más fácil ver el color de cada
+        píxel. Si cambias al modo binario (sujétate a tu sombrero), es un montón de
+        bits. Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel
+        hasta 24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Bee_2019: 'Esta imagen más grande de una abeja codifica el color
+        con 12 bits por pixel, pero ver en hex hace más fácil ver el color de cada
+        píxel. Si cambias al modo binario (sujétate a tu sombrero), es un montón de
+        bits. Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel
+        hasta 24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+      Pixelation Flappy: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits
+        por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente
+        imagen que es aún más sofisticada, pero más fácil de entender.
+      Pixelation Flappy_2018: Esta es una imagen más grande a 9 bits por pixel. Con
+        9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver
+        la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
+      Pixelation Flappy_2019: Esta es una imagen más grande a 9 bits por pixel. Con
+        9 bits por pixel puedes expresar 512 colores diferentes. Haz clic para ver
+        la siguiente imagen que es aún más sofisticada, pero más fácil de entender.
+      Pizza on a Plate: 'Idea del proyecto: Crear una imagen de algo conocido del
+        mundo real. ¡Esto requiere persistencia y planificación!'
       Planning Farmer: "¡Qué campo extraño de golosinas! Me pregunto si hay un patrón
         aquí..."
+      Planter Test: "¡Ayúdame a plantar mis campos!"
+      Play Lab Rocket 1: Un cohete se despega y viaja a 15 metros por segundo... presione
+        "Ejecutar" para ver cómo este problema de palabras se ve como una animación.
+      Play Lab Rocket 2: Hemos iniciado la Receta de Diseño para la altura de cohetes
+        mediante el contrato y ejemplos que acabas de escribir. Completa la definición
+        de función para la altura de cohetes y ejecuta tu animación.
+      Play Lab Rocket 2B: Un cohete despega y viaja a 15 metros por segundo. Usando
+        la Receta de Diseño, escribe una función llamada altura-cohete que lleva el
+        número de segundos transcurridos desde que despegó el cohete, y que produce
+        la altura del cohete en aquel momento.
+      Play Lab Rocket 4 (copy 1): Los cohetes reales comienzan lentamente y ganan
+        velocidad con el tiempo. ¡Vamos a hacer que los nuestros hagan lo mismo! Escribe
+        una función exponencial que describa un cohete que viaja a "segundos" metros
+        cuadrados por segundo.
+      Play Lab Rocket 4: Los cohetes reales comienzan lentamente y ganan velocidad
+        con el tiempo, ¡así que añadamos una aceleración simple a la nuestra! ¿Puedes
+        escribir una función que describe un cohete que está a 10 metros en 1 segundo,
+        40 metros en 2 segundos, 90 metros en 3 segundos, 160 metros en 4 segundos
+        y así sucesivamente?
+      Play Lab Rocket 5: Mucho mejor, pero escribamos una función más con aceleración
+        simple. Esta vez, el cohete debe ser de 15 metros en 1 segundo, 45 metros
+        en 2 segundos, 95 metros en 3 segundos y 165 metros en 4 segundos.
+      Play Lab Rocket Free Play: 'Juego libre: Experimenta con tu función altura-cohete
+        para hacer que el cohete vuele de diferentes maneras. Haz clic en "Finalizar"
+        cuando hayas terminado.'
       Poorva copy U3L2 Using Simple Commands: Dibuja un cuadrado de 1x1 arriba y a
         la izquierda de la posición inicial de la tortuga. Haga clic para ver las
         instrucciones completas.
+      Poorva-test: Estas son instrucciones normales para un nivel. En esta parte,
+        no hay nada extraordinario.
       Practice Create Performance Task: Diseña e implementa tu práctica Crear tarea
         de rendimiento. (Haz clic para ver las instrucciones completas)
       Practice Create Performance Task_2018: Diseña e implementa tu práctica Crear
@@ -5239,49 +5489,225 @@ es-MX:
         (Haz clic para ver las instrucciones completas)
       Prompt Test: Construye lo que quieras. ¡Este es un ejemplo de un juego de adivinación
         de números!
-      Quantum Bee - Ryan: Estas nubes me están molestando! Algunas de las nubes tienen
-        flores dentro, y otras no. Debo comprobar cada nube y obtener el néctar sólo
-        de las flores.
+      Quantum Bee - Ryan: "¡Estas nubes me están molestando! Algunas de las nubes
+        tienen flores dentro, y otras, no. Debo comprobar cada nube y solo obtener
+        el néctar de las flores."
       Quantum Bee: "¡Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero
         tu no sabes cuál! Ten cuidado de no recolectar el néctar de una flor morada
         sin néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”."
+      Ram Spritelab Validation Test: Presiona la tecla arriba
+      Robot Doodle: 'Idea del proyecto: Crear una imagen de algo conocido del mundo
+        real. ¡Esto requiere persistencia y planificación!'
+      Robot Doodle_2018: 'Idea del proyecto: Crear una imagen de algo conocido del
+        mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot Doodle_2019: 'Idea del proyecto: Crear una imagen de algo conocido del
+        mundo real. ¡Esto requiere persistencia y planificación!'
+      Robot Drawing: 'Idea del proyecto: Crear una imagen de algo conocido del mundo
+        real. ¡Esto requiere persistencia y planificación!'
+      Robot: 'Idea del proyecto: Crear una imagen de algo conocido del mundo real.
+        ¡Esto requiere persistencia y planificación!'
+      Rocket Height Course A: Sigue la Receta de Diseño para crear un función altura-cohete.
       Ryan - 4-5 Bee Conditionals 2: La abeja sólo quiere néctar ahora. No todos los
         objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si está
         escondiendo una flor. Si es así, puedes recolectar néctar.
       Ryan - Bee Conditionals: La abeja sólo quiere néctar ahora. No todos los objetos
         son flores, así que mira debajo de TODAS LAS NUBES para verlo si está escondiendo
         una flor. Si es así, puedes recolectar néctar.
+      Ryan App Lab: "¡Resuelve esto!"
+      Ryan Doily Step 1: Ahora vamos a dibujar una carpeta paso a paso. Primero, dibuja
+        un cuadrado.
+      Ryan Doily Step 2: Ahora debes girar y repetirlo 20 veces. ¿Cuántos grados giras
+        para obtener 360 después de 20 iteraciones?
+      Ryan Doily Step 3: Ahora debes girar y repetirlo 20 veces. ¿Cuántos grados giras
+        para obtener 360 después de 20 iteraciones?
       Ryan Test Locked Blocks: Aquí hay una función denominada "patrulla". Edítela
         para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.
+      Ryan's clone of C4S15P10: "Añadimos una última función para ti.\n\nUtiliza una
+        sentencia \"si\" para que tu programa llame a la función \"nivel_arriba\"
+        solo cuando \"puntuación_jugador\" sea mayor que un cierto numero.\n\nPor
+        ejemplo: \"puntuación\\_jugador\" > 6\n\nJuégalo y pasa el nivel 4 para avanzar
+        al siguiente desafío. "
       RyanTest3: "¡Este nivel tiene activado el cambio de forma! Actualiza para ver
         diferentes variantes."
       Ryan_Demo: Haz que el alce comience un nuevo movimiento después de 4 medidas.
+      SG Add Subgoals practice: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      SG U3L03 - draw rect function: |-
+        Escribe una función llamada drawRectangle().
+        (Haz clic para ver las instrucciones completas)
+      SG U3L03 - draw step: Escribe la función drawStep. (Haz clic para ver las instrucciones
+        completas)
       SG U3L03 Define and use turnAround: Define una función llamada darVuelta. Llama
         a la función y luego mueva la tortuga hacia adelante. (Haz clic para ver las
         instrucciones completas)
+      SG U3L03 Draw a T using turnAround: Dibuja un signo de suma usando la versión
+        proporcionada de turnAround(). (Haz clic para ver las instrucciones completas)
+      SG U3L03 Three Steps: Define la función llamada drawSide(), que dibuja tres
+        pasos y mueve la tortuga para prepararse para el próximo lado. (Haz clic para
+        ver las instrucciones completas)
+      SG U3L03 define turnRight and draw a rectangle: Define una función llamada right(),
+        que gira la tortuga a la derecha. Luego usa esta función para dibujar un rectángulo,
+        como se muestra a continuación. (Haz clic para ver las instrucciones completas)
+      SG U3L03 draw diamond: Crea una función llamada drawDiamond() que hace uso del
+        trabajo anterior para dibujar el diamante completo. (Haz clic para ver las
+        instrucciones completas)
+      SG U3L04 - 3 by 3 with functions: Haz el cuadrado de 3x3 lo más eficientemente
+        que puedas. (Haz clic para ver las instrucciones completas)
+      SG U3L04 - snowflake: Crea el diseño desglosándolo en capas de funciones. (Haz
+        clic para ver las instrucciones completas)
+      SG U3L06 - moveForwardwithParams: Usa un comando único para mover la tortuga
+        el borde de la pantalla. (Haz clic para ver las instrucciones completas)
+      SG U3L06 Challenge 1 triangle: Usa las versiones parametrizadas de los comandos
+        de la tortuga para crear un triángulo con lados de 100 pixeles de largo. (Haz
+        clic para ver las instrucciones completas)
       SG U3L06 Challenge 2 purple square: Lee la documentación para bolígrafocolor()
         y bolígrafoancho() antes de usarlo para dibujar el cuadrado azul.
-      SG U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea simplemente usando
-        punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos sean
-        transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
-      SG U3L07 - introSquare: "Usa un bucle para dibujar un cuadrado. A continuación,
-        agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna
-        cantidad. \n(Haz clic para ver instrucciones completas)"
-      SG U3L07 - loopsWithRandom: Aumenta el número de iteraciones para completar
-        la pantalla con blanco. (Haz clic para ver instrucciones completas)
+      SG U3L06 Challenge 3 fill pink: Completa el fondo de la pantalla con tu color
+        favorito. (Haz clic para ver las instrucciones completas)
+      SG U3L06 Challenge 4 bullseye: Crea el juego de dardos con colores hexadecimales
+        y dot(). (Haz clic para ver las instrucciones completas)
+      SG U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea usando solamente
+        dot() y penColor(), ¿pero cómo haremos para que esos círculos sean transparentes?
+        Si no has obtenida la sugerencia aún: ¡mira la documentación!'
+      SG U3L06 Challenge 6 squiggles: 'Lee la documentación para los comandos "arcLeft"
+        y "arcRight" y luego dibuja los garabatos como se muestra. '
+      SG U3L06 Challenge 7 smiley face: Usa turnTo() y moveTo() para ayudar a dibujar
+        una cara sonriente. (Haz clic para ver las instrucciones completas)
+      SG U3L06 Challenge 8 make your own: Crea un dibujo propio. (Haz clic para ver
+        las instrucciones completas)
+      SG U3L07 - Free Play Loops and Random: "¡Juego libre! Usa lo que has prendido
+        de bucles y aleatorio para crear tu propia escena. Diviértete."
+      SG U3L07 - allSeaGrass: Agrega 50 piezas de hierba marina a la imagen escribiendo
+        drawAllSeagrass con un bucle. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - bubbles: Agrega 200 burbujas a la imagen escribiendo drawAllBubbles
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - createTriangleParam: Define una función que acepte un parámetro para
+        hacer coincidir las llamadas a funciones y completar la imagen. (Haz clic
+        para ver las instrucciones completas)
+      SG U3L07 - fish: Agrega 15 peces a la imagen escribiendo drawAllFish con un
+        bucle. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - introSquare: Usa un bucle para dibujar un cuadrado. Luego agrega
+        otro bucle para dibujar muchos cuadrados, cada uno rotado en alguna medida.
+        (Haz clic para ver las instrucciones completas)
+      SG U3L07 - loopsWithRandom: Aumenta la cantidad de iteraciones para completar
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - randomDots1: Aumenta la cantidad de iteraciones para completar totalmente
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - randomSquare: Usa un bucle para dibujar la figura. (Haz clic para
+        ver las instrucciones completas)
+      SG U3L07 - seaGrass: Agrega un parámetro para dibujar drawSeagrass que controla
+        la cantidad de olas en la hierba. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - seaStar: Agrega 5 estrellas marinas a la imagen escribiendo drawAllSeagrass
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      SG U3L07 - sunBeams: Agrega 100 rayos de luz a la imagen escribiendo drawAllSunbeams
+        con un bucle. (Haz clic para ver las instrucciones completas)
       SG U3L07 - topDownDesign: Ponte cómodo con la estructura de este programa, luego
-        avance al siguiente ejercicio. (Haz clic para ver instrucciones completas)
+        avanza al siguiente ejercicio. (Haz clic para ver las instrucciones completas)
       SG U3L07 More Subgoals: Lee la documentación para bolígrafocolor() y bolígrafoancho()
         antes de usarlo para dibujar el cuadrado azul.
+      SG U3L08 - createTwoParamTriangle: Define una función llamada drawTriangle()
+        que acepta dos parámetros para establecer el tamaño y el ancho del triángulo.
+        (Haz clic para ver las instrucciones completas)
+      SG U3L08 - digitalScene: Crea las funciones que se te asignaron como parte de
+        la escena digital. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - drawSquareWithParam: Usa drawSquare() para recrear la imagen de ambos
+        cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 - fish: Agrega un parámetro para dibujar drawFish que controla el tamaño
+        de los peces dibujados. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - freePlay: Crea más llamadas para tus nuevas funciones con parámetros
+        para seguir agregando a tu imagen. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - individualCode: Crea las funciones que se te asignaron como parte
+        de la escena digital. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - introUnderTheSea - recovery: Agrega un pez, una estrella de mar y
+        una porción de hierba marina adicionales a tu imagen. Mira las funciones que
+        los crean, pero no cambies estas funciones. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 - introUnderTheSea: Agrega un pez, una estrella de mar y una porción
+        de hierba marina adicionales a tu imagen. Mira las funciones que los crean,
+        pero no cambies estas funciones. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - multiParamFish: Agrega tres parámetros a tu función drawFish para
+        aceptar los valores rojos, verdes y azules para hacer que tus peces tengan
+        colores diferentes. (Haz clic para ver las instrucciones completas)
+      SG U3L08 - paramsToStarfish: Agrega un parámetro para drawStarfish que controla
+        el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 - randomInput: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 - seaGrass: Agrega un parámetro para drawStarfish que controla el tamaño
+        de la porción de hierba marina dibujada. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 - squareTwoParams: Llama drawSquare() para completar el dibujo de dos
+        cuadrados. (Haz clic para ver las instrucciones completas)
+      SG U3L08 comments: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      SG U3L08 how to add comments: Usa los bloques randomNumber() para probar las
+        funciones que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
       SG U3L2 Using Simple Commands part 1: Dibuja un cuadrado de 1x1 arriba y a la
         izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones
         completas.
       SG U3L2 Using Simple Commands: Dibuja un cuadrado de 1x1 arriba y a la izquierda
         de la posición inicial de la tortuga. Haga clic para ver las instrucciones
         completas.
-      SG U3L2_TurtleSquare_right: |-
-        Dibuja un cuadrado al frente y
-         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
+      SG U3L2_Add-subgoals: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      SG U3L2_Turtle3by3Grid: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      SG U3L2_TurtleSquare_right: Dibuja un cuadrado al frente y a la derecha de la
+        ubicación de inicio. (Haz clic para ver las instrucciones completas)
+      SGU3L07 - randomDots1: Aumenta la cantidad de iteraciones para completar totalmente
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      Sam the Butterfly 1 (copy 1): Esta mariposa se llama Sam, y el área de juego
+        es el patio de Sam. El patio de Sam es de 400 pixeles de ancho por 400 pixeles
+        de altura. Como puedes ver, Sam puede caminar alrededor del patio, y las coordenadas
+        en la parte superior de la actualización de pantalla te indica su ubicación.
+        Usa las teclas de flecha para mover a Sam alrededor de su patio. Ayuda a Sam
+        a recoger todas las banderas para avanzar.
+      Sam the Butterfly 1: Este murciélago se llama Sam, y el área de juego es el
+        patio de Sam. El patio de Sam tiene 400 pixeles de ancho por 400 pixeles de
+        altura. Como puedes ver, Sam puede caminar alrededor del patio, y las coordenadas
+        en la parte superior de la actualización de pantalla te indica su ubicación.
+        Haz clic en "Ejecutar", luego utiliza las teclas de flecha para mover a Sam
+        alrededor de su patio y toma nota de las coordenadas de Sam en diferentes
+        ubicaciones. Haz clic en "Finalizar" cuando estés listo para avanzar.
+      Sam the Butterfly 2: La mamá de Sam quiere asegurarse de que siempre pueda ver
+        al menos un poco de él, así que escribamos algunas funciones que la ayuden
+        a asegurarse de que él no vaya demasiado lejos del patio. Esta es una función
+        llamada segura-izquierda?; debe tomar un Número para su dominio que representa
+        las coordenadas x de Sam y volver verdad si es completamente visible en la
+        pantalla. Si su función no falla, Sam no debería ser capaz de dejar el patio
+        desde el lado izquierdo.
+      Sam the Butterfly 3: En el último desafío, hemos impedido que Sam saliera por
+        la izquierda; ahora vamos a hacer lo mismo con la derecha. ¿Completa la función
+        seguro-derecha? para asegurarse de que Sam no puede salir del lado derecho
+        de la pantalla.
+      Sam the Butterfly 4: Uy, podemos impedir que Sam salga por la izquierda, o podemos
+        impedir que salga por la derecha, ¿pero cómo podemos mantenerlo seguro de
+        salir de ambas direcciones? Intenta usar el y bloquea para programar la función
+        en-pantalla? para comprobar si Sam está seguro-izquierda? y seguro-derecha?
+      Sam the Butterfly 5: 'Juego libre: Increíble, ¡hemos mantenido a Sam a salvo
+        a la izquierda y a la derecha! Usa esta etapa de juego libre para experimentar
+        con tus funciones y mejorar aún más enpantalla?'
+      Sam the Butterfly 6: Hemos añadido un nuevo parámetro "y" a la función "enpantalla?".
+        Actualiza la función para que compruebe que "seguro-izquierda?" Y "seguro-derecha?"
+        Y "seguro-arriba?" sean todos verdaderos. Cuando hayas arreglado la función,
+        intenta salir del patio desde la izquierda, desde la derecha y desde los lados
+        superiores.
+      Sam the Butterfly 7: ¡Sólo una última indicación para preocuparse! Crea una
+        función "seguro-abajo?" y actualiza la función "enpantalla?" para que compruebe
+        arriba, abajo, izquierda y derecha.
+      Sam the Butterfly Complete: ¡Sólo una última indicación para preocuparse! Crea
+        una función "seguro-abajo?" y actualiza la función "enpantalla?" para que
+        compruebe arriba, abajo, izquierda y derecha.
       SpecialFrozenLevel: "¡Te has convertido oficialmente en un artista maestro!
         Crea un paraíso invernal."
       Standalone_Artist_1: "¡Bienvenido a Artista! En primer lugar, vamos a intentar
@@ -5317,8 +5743,22 @@ es-MX:
       Standalone_Artist_v2: "¡Bienvenido a Artista! En primer lugar, vamos a intentar
         hacer un simple cuadrado usando el bloque vuelta derecha y el bloque mover
         hacia adelante. Cada lado debe tener 100 píxeles de largo."
+      StepIntro: Así se usa el botón "Paso".
+      Test Play Lab: Este es un nivel de laboratorio de juego de prueba.
+      Test embedded Blockly in instructions: |-
+        Como elemento de bloque, deberíamos poder incluir XML que represente un bloque o bloques Blockly válidos.
+
+        <xml>
+        <block type="draw_move_by_constant">
+        <title name="DIR">avanzar</title>
+        <title name="VALUE">100</title>
+        </block>
+        </xml>
+
+        También brindamos compatibilidad con XML de Blockly como un elemento en línea como: <xml><block type="draw_move_by_constant"><title name="DIR">avanzar</title><title name="VALUE">100</title></block></xml>. La diferencia en el formato de entrada es que este está insertado dentro de un párrafo, mientras que el anterior es un bloque de texto independiente. La diferencia en el valor es comparable.
       Test embedded K1 Blockly in instructions: Usa tres bloques "mover oeste" y un
         bloque "recoger maíz" para resolver este desafío.
+      Test of comment block: Arrastra el bloque de etiqueta de submeta que quieras.
       Testing Quantum Farmer: "¡Wow, encontré un agujero realmente profundo! no sé
         cuántas paleadas de tierra necesita. ¿Puedes escribir un programa que llene
         hasta que el suelo esté parejo? Sugerencia: trata usando el bucle mientras."
@@ -5326,8 +5766,14 @@ es-MX:
       The Vigenere Cipher Widget_2018: Instrucciones
       The Vigenere Cipher Widget_2019: Instrucciones
       The Vigenere Cipher: Instrucciones
+      Tortoise and Hare: "¡Ayuda a que la tortuga golpee a la liebre!"
       Total Artist Clone Me: 'Juego Libre: Aquí están las funciones que has escrito
         y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
+      U1L10 NetSim numbers with decimal: Invente y pruebe un protocolo para codificar
+        y enviar mensajes de texto. Su protocolo debe incluir las letras a-z, espacios
+        y marcas de puntuación comunes. Puedes añadir caracteres adicionales si lo
+        deseas. Vea la hoja de trabajo entregada por su profesor para obtener instrucciones
+        más detalladas.
       U1L11 NetSim numbers with Ascii: Trabaja con un compañero o en un pequeño equipo
         para desarrollar un protocolo que te permite enviar texto formateado. ¡Mira
         la hoja de trabajo que tu profesor ha entregado para obtener instrucciones
@@ -5335,6 +5781,7 @@ es-MX:
       U1L4 NetSim SendAB: 'Desarrolla, documenta y prueba un protocolo que le permite
         usar el simulador de Internet para transmitir un mensaje. Mira la hoja de
         trabajo para obtener instrucciones más detalladas.  '
+      U1L8 NetSim numbers no decimal: Instrucciones predeterminadas
       U1L8 NetSim numbers with decimal: Con su compañero, desarrolla un protocolo
         o un conjunto de reglas para comunicar un dibujo mediante la utilización de
         bits solamente. ¡Mira la hoja de trabajo que entrega tu profesor para obtener
@@ -5345,16 +5792,40 @@ es-MX:
       U2 vigenere cipher: Instrucciones
       U2L04 - NetSim Routers with Addresses: Enviar mensajes con tus compañeros de
         clase. (Haz clic para ver las instrucciones completas)
+      U2L05 - NetSim - Packets and Building TCP: |-
+        Desarrolla un Protocolo para enviar un mensaje de manera confiable.
+
+        Restricciones:
+
+        -   Los paquetes pueden contener sólo 6 caracteres
+        -   Los paquetes pueden bajar con probabilidad pequeña
+        -   Los paquetes podrían no llegar en orden
       U2L10 NetSim Automatic DNS: En esta versión del simulador de Internet, se te
         proporciona un sistema de nombres de dominio (DNS) y este conoce las direcciones
         IP de todos las computadoras conectadas. Envía un mensaje en el formulario
         GET [hostname] al servicio DNS en la dirección <yourRouterNumber>.15 para
         obtener la dirección de un estudiante.
+      U2L10 NetSim Manual DNS: En esta versión del simulador, no puedes ver las direcciones
+        de los otros estudiantes. En lugar de ello, uno de ustedes debe actuar como
+        nombre de servicio, para ayudar a compartir direcciones entre sí.
       U2L14 frequency random: Prueba
       U2L2 NetSim Hub Mode: Ahora usa el simulador de Internet para enviar los movimientos
         de la nave de batalla. Para configurar, únete a una Sala con tu grupo, y añade
         barcos a su tablero de papel para cada oponente. Al jugar, toda la comunicación
         debe hacerse a través de la herramienta, ¡así que no debes hablar, sino divertirte!
+      U2L3 NetSim Hub Mode: Usa el simulador de Internet para probar el protocolo
+        de comunicación binaria de tu grupo para la nave. ¿Cuán corto puedes hacer
+        que sea el mensaje y la respuesta?
+      U2L4 NetSim Routers Addresses: |-
+        Para esta actividad, conéctate a un router con los demás de tu grupo. Nota importante: el router sólo enrutará correctamente los mensajes donde los primeros 4 bits son Para: dirección y los segundos 4 bits son De: dirección.
+
+        [PENDIENTE: Es necesario que NetSim sea compatible con direcciones jerárquicas. Por ahora, el nivel está configurado para direcciones "de" y "para" de 4 bits]
+      U2L5 NetSim Classroom Internet: Para esta actividad, conéctate a un router con
+        los demás de tu grupo. El simulador de Internet ahora proporciona un lugar
+        para que pongas las direcciones A y Desde, para que no tengas que escribir
+        los bits manualmente.
+      U2L7 NetSim Need for Packets: Transfiere tu favicon a un socio a través de una
+        red en la que mientras más crece el paquete, más probable es que se deseche.
       U3 - Arrays - Demo App: Utiliza la aplicación "Mis Cosas Favoritas". ¿De qué
         manera esta aplicación podría estar utilizando un arreglo? (Haz clic para
         ver instrucciones completas)
@@ -5484,12 +5955,19 @@ es-MX:
       U3 - Conditionals - Combine AND OR and NOT: Escribe una sentencia `si` que utiliza
         Y y O para mostrar "¡Hora de ir a la escuela!" si no es el fin de semana y
         el usuario es menor de 18 años. (Haz clic para ver las instrucciones completas)
+      U3 - Conditionals - Combine AND and OR: Escribe una sentencia `si` que utiliza
+        Y y O para mostrar "¡Hora de ir a la escuela!" si no es el fin de semana y
+        el usuario es menor de 18 años. (Haz clic para ver las instrucciones completas).
       U3 - Conditionals - Simple AND: Escribe una sentencia `si` que utilice Y para
         mostrar "Eres un adolescente." si el usuario ingresa una edad de entre 13
         y 19 años. (Haz clic para ver las instrucciones completas)
       U3 - Conditionals - Simple OR: Escribe una sentencia `si` que utilice Y para
         mostrar "¡Es fin de semana!" si el usuario ingresa una edad de entre 13 y
         19 años. (Haz clic para ver las instrucciones completas)
+      U3 - Conditionals - intoOr: Añade 2 sentencias `si` que usan el operador O.
+        (Haz clic para ver las instrucciones completas)
+      U3 - Conditionals - introAND: Añade 2 sentencias `si` que usan el operador O.
+        (Haz clic para ver las instrucciones completas)
       U3 - Design Mode - Console Log: Actualiza los nombres de ID y los mensajes `console.log`
         para coincidir con el botón correcto. (Haz clic para ver las instrucciones
         completas)
@@ -5501,6 +5979,9 @@ es-MX:
       U3 - Design Mode - Multi Screens: Crea una aplicación de 2 pantallas con una
         pantalla negra y una pantalla blanca. (Haz clic para ver las instrucciones
         detalladas)
+      U3 - Design Mode - Other Events: Elimina el botón y haz que la imagen se mueva
+        a una ubicación aleatoria cuando haces clic en él. (Haz clic para ver las
+        instrucciones detalladas)
       U3 - Design Mode - WTF Console Log: Añade 3 mensajes de console.log y pruébalos.
         (Haz clic para ver las instrucciones completas)
       U3 - Design Mode -Recreate Beyond Buttons: Recrea el juego "Chaser" con una
@@ -5550,6 +6031,15 @@ es-MX:
         (Haz clic para ver instrucciones completas)
       U3 - Keys - Multiple Keys: Reproduce un sonido diferente cuando se presione
         la flecha hacia abajo. (Haz clic para ver las instrucciones completas)
+      U3 - Keys - Practice Adding Images with URL: Añade URL de imagen a tu arreglo
+        de imágenes. Prueba el botón de añadir. Dale estilo a tu desplazamiento de
+        imagen. (Haz clic para ver las instrucciones completas)
+      U3 - Keys - Words to Images: Añade URL de imagen a tu arreglo de imágenes. Prueba
+        el botón de añadir. Dale estilo a tu desplazamiento de imagen. (Haz clic para
+        ver las instrucciones completas)
+      U3 - Loops -  9 Part 2: Cambia la expresión booleana para el bucle `mientras`
+        para que se detenga cuando ambos dados sean mayores o iguales a 3. (Haz clic
+        para ver las instrucciones completas)
       U3 - Loops -  Complex Condition: Cambia la expresión booleana para el bucle
         `mientras` para que se detenga cuando ambos dados sean mayores o iguales a
         5. (Haz clic para ver las instrucciones completas)
@@ -5562,11 +6052,15 @@ es-MX:
         para ver las instrucciones completas)
       U3 - Loops - 12: Cambia el código para que imprima la cadena "Hola" 5 veces.
         (Haz clic para ver las instrucciones completas)
+      U3 - Loops - 13: Actualiza el código para contar de a 3 en lugar de a 1. (Haz
+        clic para ver las instrucciones completas)
       U3 - Loops - 14: Cambia la condición del bucle para impedir el bucle infinito
         y la interrupción del conteo cuando que el conteo sea mayor de 30. (Haz clic
         para ver las instrucciones completas)
       U3 - Loops - 15: Cuenta la cantidad de veces que la suma del dados es 12. (Haz
         clic para ver las instrucciones completas)
+      U3 - Loops - 16: Descubre cuántas veces tienes que tirar para obtener 100 veces
+        la suma de 7. (Haz clic para ver las instrucciones completas)
       U3 - Loops - 2: Intenta crear un bucle infinito mediante el uso de !=, > y \<.
         (Haz clic para ver las instrucciones completas)
       U3 - Loops - 3: Cambia la sentencia `si` a un bucle `mientras` para que el programa
@@ -5587,6 +6081,9 @@ es-MX:
         completas)
       U3 - Loops - 9: Modifica la condición para que siga girando mientras ambos sean
         inferiores a 3. (Haz clic para ver las instrucciones completas)
+      U3 - Loops - Continue: Utiliza los Comandos de depuración para hacer una lista
+        de todos los valores lanzados antes de un 6. (Haz clic para ver las instrucciones
+        completas)
       U3 - Loops - Minus Minus: Cambia el código para contar regresivamente de 10
         a 1. (Haz clic para ver las instrucciones completas)
       U3 - Loops - Plus Plus: Cambia el código para usar conteo++ en lugar de conteo
@@ -5599,13 +6096,22 @@ es-MX:
         +=. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Add 5: Añade 5 a todos los valores en un arreglo. (Haz
         clic para ver las instrucciones completas)
+      U3 - Loops And Arrays - Challenge 1: Escribe una función que encuentra y devuelve
+        el valor mínimo en un arreglo. (Haz clic para ver las instrucciones completas)
+      U3 - Loops And Arrays - Challenge 2: Escribe una función que encuentra y devuelve
+        el valor mínimo en un arreglo. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Counting Times: Cuenta la cantidad de veces que aparece
         el 5 en un arreglo. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Divid by 2: Divide cada valor por 2 en el arreglo. (Haz
         clic para ver las instrucciones completas)
+      U3 - Loops And Arrays - Find Max: Diseña una función que muestra el número más
+        pequeño en un arreglo. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Find Min: Completa la función encontrarValMín para encontrar
         y mostrar el valor más pequeño en un arreglo. (Haz clic para ver las instrucciones
         completas)
+      U3 - Loops And Arrays - Functions that Return Value: Llama a encontrarMín dentro
+        de la sentencia console.log para calcular el mínimo de dos valores. (Haz clic
+        para ver las instrucciones completas)
       U3 - Loops And Arrays - General Search Param: Añade un segundo parámetro a la
         función de búsqueda para el valor que se buscará.  (Haz clic para ver las
         instrucciones completas)
@@ -5624,17 +6130,27 @@ es-MX:
       U3 - Loops And Arrays - Make it a Function: Mueve el código que busca la lista
         de 5 en una función llamada "búsqueda". (Haz clic para ver las instrucciones
         completas)
+      U3 - Loops And Arrays - Multiple Returns: Evalúa los valores de retorno de la
+        función encontrarMáx. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Print Array: Usa un bucle `para` para escribir todos
         los valores de un arreglo. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Printing Single True: Procesa el arreglo y muestra una
         solo "verdadero" si el arreglo contiene un 5 o un solo "falso" si no lo hace.
         (Haz clic para ver las instrucciones completas)
+      U3 - Loops And Arrays - Return Index: Haz que la función de búsqueda devuelva
+        el índice del valor de búsqueda en un arreglo. (Haz clic para ver las instrucciones
+        completas)
       U3 - Loops And Arrays - Return Value: Usa la restricción en esta aplicación
         simple para evitar que la tortuga se mueva fuera de la pantalla. (Haz clic
         para ver las instrucciones completas)
+      U3 - Loops And Arrays - Search and Remove: Busca 5 en el arreglo y elimínalo
+        del arreglo. (Haz clic para ver las instrucciones completas)
       U3 - Loops And Arrays - Search with Boolean Var: Haz una variable booleana para
         usar como un indicador para mantener un seguimiento de si hay 5 en el arreglo.
         (Haz clic para ver las instrucciones completas)
+      U3 - Loops And Arrays - useFindMin: Llama a encontrarMín dentro de la sentencia
+        console.log para calcular el mínimo de dos valores. (Haz clic para ver las
+        instrucciones completas)
       U3 - Movie Bot - Multiple If Sequences: Añade otro conjunto de sentencias `si`,
         `sino si` y `si no` dentro de la pregunta si la sentencia para comprobar las
         palabras clave para las calificaciones de película (G, PG, PG-13 y R). (Haz
@@ -5650,6 +6166,29 @@ es-MX:
         para ver las instrucciones completas)
       U3 - Practice Create Performance Task: Diseña e implementa tu práctica Crear
         tarea de rendimiento. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 1.2: Usa console.log para los registros devueltos por una
+        llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 1.5: Usa console.log para los registros devueltos por una
+        llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 1.6: Usa console.log para los registros devueltos por una
+        llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 1: Usa console.log para los registros devueltos por una llamada
+        a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 2: Cambia el nombre de la tabla para que los registros sean
+        leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 3: Cambia el nombre de la tabla en un comando leerRegistros
+        para leer desde una tabla que no existe. (Haz clic para ver las instrucciones
+        completas)
+      U3 - Read Record - 4.1: Imprime cada retorno de registro desde la llamada leerRegistros
+        individualmente. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 4: Imprime cada retorno de registro desde la llamada leerRegistros
+        individualmente. (Haz clic para ver las instrucciones completas)
+      U3 - Read Record - 5 and half: Imprime el nombre de cada película en los devolución
+        de registros de la llamada leerRegistros. (Haz clic para ver las instrucciones
+        completas)
+      U3 - Read Record - 5: Imprime el nombre de cada película en los devolución de
+        registros de la llamada leerRegistros. (Haz clic para ver las instrucciones
+        completas)
       U3 - Return Values - constrainTurtle: Usa la restricción en esta aplicación
         simple para evitar que la tortuga se mueva fuera de la pantalla. (Haz clic
         para ver las instrucciones completas)
@@ -5660,6 +6199,15 @@ es-MX:
         el valor máximo apropiado. (Haz clic para ver las instrucciones completas)
       U3 - Return Values - debuggingReturns: Corrige el error en Valmáx para que informe
         el valor máximo apropiado. (Haz clic para ver las instrucciones completas)
+      U3 - Return Values - increase1: Llama a la función de aumento dentro de avanzar,
+        escribir y console.log. (Haz clic para ver las instrucciones completas)
+      U3 - Return Values - increase2: Cambia la función de aumento para devolver 3
+        veces el valor de entrada. (Haz clic para ver las instrucciones completas)
+      U3 - Return Values - min1: Evalúa los valores de retorno de la función encontrarMáx.
+        (Haz clic para ver las instrucciones completas)
+      U3 - Return Values - useFindMin: Llama a encontrarMín dentro de la sentencia
+        console.log para calcular el mínimo de dos valores. (Haz clic para ver las
+        instrucciones completas)
       U3 - Return Values - useMinVal: Llama a Valmín dentro de la sentencia console.log
         para calcular el mínimo de dos valores. (Haz clic para ver las instrucciones
         completas)
@@ -5669,6 +6217,19 @@ es-MX:
       U3 - Return Values - writeMaxVal: Escribe la función Valmáx y luego úsala dentro
         de la sentencia console.org para calcular el máximo de dos valores. (Haz clic
         para ver las instrucciones completas)
+      U3 - Search Terms - 1: Crea un arreglo de todas las películas realizadas en
+        2008 e imprímelas. (Haz clic para ver las instrucciones completas)
+      U3 - Search Terms - 2: Usa los términos de búsqueda de leerRegistros para imprimir
+        todas las películas con el año 2008. (Haz clic para ver las instrucciones
+        completas)
+      U3 - Search Terms - 3: Imprime si hay o no películas que coincidan con los criterios
+        de búsqueda. (Haz clic para ver las instrucciones completas)
+      U3 - Search Terms - 4: Imprime si hay o no películas que coincidan con los criterios
+        de búsqueda. (Haz clic para ver las instrucciones completas)
+      U3 - Search Terms - 5: Imprime las ciudades que están en California o tienen
+        una población de 2.000.000. (Haz clic para ver las instrucciones completas)
+      U3 - Search Terms - 6: Imprime las ciudades que están en California o tienen
+        una población de 2.000.000. (Haz clic para ver las instrucciones completas)
       U3 - Simple Drawing - Comments: Hacer esto
       U3 - Simple Drawing - Ellipse and No Fill: Hacer esto
       U3 - Simple Drawing - Fill: Hacer esto
@@ -5706,6 +6267,15 @@ es-MX:
         completas)
       U3 - Simulation - 6: Sigue añadiendo a tu simulación. ¿Qué quieres explorar
         más adelante? (Haz clic para ver las instrucciones completas)
+      U3 - Simulation - App: Cambia tu código para ejecutar la simulación completa
+        con 10.000 monedas. ¿Cuál fue tu racha de caras más larga? (Haz clic para
+        ver las instrucciones completas)
+      U3 - Simulation - Template: Usa un bucle `mientras` para "lanzar 10 monedas"
+        y escríbelas en la pantalla. (Haz clic para ver las instrucciones completas)
+      U3 - Simulation - Template_2018: Usa un bucle `mientras` para "lanzar 10 monedas"
+        y escríbelas en la pantalla. (Haz clic para ver las instrucciones completas)
+      U3 - Simulation - Template_2019: Usa un bucle `mientras` para "lanzar 10 monedas"
+        y escríbelas en la pantalla. (Haz clic para ver las instrucciones completas)
       U3 - Sprites - Intro Sprites: Hacer esto
       U3 - Sprites and Mod - Create  and Draw Sprite: Hacer esto
       U3 - Sprites and Mod - Mouse Width and Height: Hacer esto
@@ -5718,10 +6288,41 @@ es-MX:
       U3 - Sprites and Mod - two sprites: Hacer esto
       U3 - User Input - Save getText To Variable: Guarda la edad y el nombre del usuario
         en variables (Haz clic para ver las instrucciones completas)
+      U3 - User Input - Saving After Input: Guarda la edad y el usuario en una variable
+        mediante el uso de obtenerTexto. (Haz clic para ver las instrucciones completas)
+      U3 - User Input and String -  Concat: Escribe un mensaje sobre la edad en un
+        Área de texto. (Haz clic para ver las instrucciones completas)
+      U3 - Variables - Clicker Game: Crea tu juego "Chaser" mejorado aquí. (Haz clic
+        para ver las instrucciones completas)
+      U3 - Variables - Debug Scope: "¿Por qué el valor de foo no están cambiando correctamente?
+        Haz una conjetura. (Haz clic para ver las instrucciones completas)"
+      U3 - Variables - Debugging with Turtle: Utiliza tus nuevas técnicas de depuración
+        para que el código se ejecute correctamente. (Haz clic para ver las instrucciones
+        completas)
+      U3 - Variables - Decrement: Reduce el valor de la variable. (Haz clic para ver
+        las instrucciones completas)
+      U3 - Variables - Identify Variables: Identifica los valores que se imprimen
+        en la terminal con sentencias console.log. (Haz clic para ver las instrucciones
+        completas)
+      U3 - Variables - Increment: Usa la técnica de depuración console.log para ver
+        lo que está ocurriendo en este ejemplo. Añade otra variable e incrementa su
+        valor. (Haz clic para ver las instrucciones completas)
+      U3 - Variables - Incrementing Variables: "¡Crea un bucle de repetición para
+        el código repetido y usa incremento para recrear el programa original con
+        menos líneas de código! (Haz clic para ver las instrucciones completas)"
+      U3 - Variables - Read Using Turtle: Crea un segundo conjunto de variables para
+        la posición x e y. Mueve la tortuga a esa nueva ubicación. (Haz clic para
+        ver las instrucciones completas)
+      U3 - Variables - Reassigning Variables with Console.log: Añade otra sentencia
+        de reasignación al final del código para cambiar el valor de la variable en
+        segunda vez. (Haz clic para ver las instrucciones completas)
+      U3 - Variables - Set to Expression with Other Variables and Turtle: "(haz clic
+        para ver las instrucciones completas)"
       U3 - Variables - Set to Expression with Other Variables: 'Escribe una expresión
         que calcule la puntuación total del jugador y la almacene en la variable puntajeTotal.
         El cálculo es: los puntos del jugador multiplicado por las vidas dividido
         por el tiempo total. (Haz clic para ver las instrucciones completas)'
+      U3 - Variables - Set to Expression with Turtle: "(haz clic para ver todo)"
       U3 - Variables - Set to Expression: Prueba las nuevas expresiones. (Haz clic
         para ver instrucciones completas)
       U3 - images - bee free play: Hacer esto
@@ -5734,6 +6335,10 @@ es-MX:
       U3 Digital Assistant Target - Mehal: "¡Prueba una demostración del Asistente
         Digital!"
       U3 Digital Assistant Target: "¡Prueba una demostración del Asistente Digital!"
+      U3 Digital Assistant Template: "¡Esta es una plantilla de proyecto!"
+      U3 Digital: Elige un tema de especialización para tu asistente digital. Crea
+        un asistente digital básico que tome la entrada del usuario y muestre una
+        respuesta predeterminada.
       U3 Variables consolelog: Usa el bloque escribir para mostrar el valor del tamaño
       U3 Variables flower example: Cambie el valor de petalSize varias veces. ¿Cómo
         cambia tu dibujo?
@@ -5741,11 +6346,17 @@ es-MX:
         tu dibujo?
       U3 Variables make a square: Cambia el valor del tamaño varias veces. ¿Cómo cambia
         tu dibujo?
+      U3 Variables misconceptions try it: Prueba tus predicciones del nivel anterior.
       U3 Variables randomize your square: Cambie el valor de petalSize varias veces.
         ¿Cómo cambia tu dibujo?
       U3 Variables write: Usa el bloque escribir para mostrar el valor del tamaño
       U3 full clicker demo: Juego de clics - ¡Pruébalo!
       U3 mehal's clone: "¡Prueba una demostración del Asistente Digital!"
+      U3- Variables - Assign Random For Turtle Draw: Intenta escribir el mismo código
+        en modo texto.
+      U3- Variables - Changing the Value: Actualiza el valor de 'girarCantidad' antes
+        de cada "avanzar" para que la tortuga gire una cantidad diferente cada vez.
+        (Haz clic para ver las instrucciones completas)
       U3- Variables - Create And Assign: En una línea, añade una variable llamada
         "vidas" y asígnale el valor 3. Escríbelo en la consola. (Haz clic para ver
         las instrucciones completas)
@@ -5755,6 +6366,9 @@ es-MX:
       U3-Design Mode-ID and Event Handler: Añade un controlador de eventos para el
         botón mediante el enlace "Insertar y mostrar" en la pestaña Eventos de Modo
         Diseño. (Haz clic para ver las instrucciones completas).
+      U3-Design Mode-ID: Utilizando los Eventos de Modo Diseño, cambia el ID del botón
+        y actualiza el código para coincidir. (Haz clic para ver las instrucciones
+        de detalle).
       U3-Design Mode-Image: Usa el Modo Diseño para recrear el juego "Chaser" de la
         última lección. (Haz clic para ver las instrucciones completas)
       U313 Two Buttons with Ids: Haz una predicción de lo que sucederá. Una vez que
@@ -5766,6 +6380,23 @@ es-MX:
       U313 eventsDetails: Ejecuta un programa con dos botones que tengan la mismo
         ID para ver el mensaje de advertencia en la consola. Cambia los ID para hacer
         que el programa se ejecute sin recibir un mensaje de advertencia.
+      U3L03 - draw rect function: |-
+        Escribe una función llamada drawRectangle().
+        (Haz clic para ver las instrucciones completas)
+      U3L03 - draw rect function_2018: |-
+        Escribe una función llamada drawRectangle().
+        (Haz clic para ver las instrucciones completas)
+      U3L03 - draw rect function_2019: |-
+        Escribe una función llamada drawRectangle().
+        (Haz clic para ver las instrucciones completas)
+      U3L03 - draw step: Escribe la función drawStep. (Haz clic para ver las instrucciones
+        completas)
+      U3L03 - draw step_2018: Escribe la función drawStep. (Haz clic para ver las
+        instrucciones completas)
+      U3L03 - draw step_2019: Escribe la función drawStep. (Haz clic para ver las
+        instrucciones completas)
+      U3L03 Creating Procedures 1: 'Escribe la función turnAround() y úsala para hacer
+        que la tortuga se mueva como se describe. Mira: U3L03-turnAndDown.gif'
       U3L03 Define and use turnAround: Define una función llamada darVuelta. Llama
         a la función y luego mueva la tortuga hacia adelante. (Haz clic para ver las
         instrucciones completas)
@@ -5775,44 +6406,368 @@ es-MX:
       U3L03 Define and use turnAround_2019: Define una función llamada darVuelta.
         Llama a la función y luego mueva la tortuga hacia adelante. (Haz clic para
         ver las instrucciones completas)
+      U3L03 Draw a T using turnAround: Dibuja un signo de suma usando la versión proporcionada
+        de turnAround(). (Haz clic para ver las instrucciones completas)
+      U3L03 Draw a T using turnAround_2018: Dibuja un signo de suma usando la versión
+        proporcionada de turnAround(). (Haz clic para ver las instrucciones completas)
+      U3L03 Draw a T using turnAround_2019: Dibuja un signo de suma usando la versión
+        proporcionada de turnAround(). (Haz clic para ver las instrucciones completas)
+      U3L03 Three Steps: Define la función llamada drawSide(), que dibuja tres pasos
+        y mueve la tortuga para prepararse para el próximo lado. (Haz clic para ver
+        las instrucciones completas)
+      U3L03 Three Steps_2018: Define la función llamada drawSide(), que dibuja tres
+        pasos y mueve la tortuga para prepararse para el próximo lado. (Haz clic para
+        ver las instrucciones completas)
+      U3L03 Three Steps_2019: Define la función llamada drawSide(), que dibuja tres
+        pasos y mueve la tortuga para prepararse para el próximo lado. (Haz clic para
+        ver las instrucciones completas)
+      U3L03 choose your own drawing: '¡Ahora elige el tuyo propio! Elige uno de los
+        tres dibujos que se muestran aquí e intenta crearlos por ti mismo. Para esto,
+        toma decisiones inteligentes sobre cómo desglosar el problema en funciones
+        reutilizables. Revisarás tu trabajo con un compañero mediante "procedimientos
+        de revisión de pares."  Comprueba los requisitos.  GIF: U3L3-Procedimientos-ChooseOne.png'
+      U3L03 define turnRight and draw a rectangle: Define una función llamada right(),
+        que gira la tortuga a la derecha. Luego usa esta función para dibujar un rectángulo,
+        como se muestra a continuación. (Haz clic para ver las instrucciones completas)
+      U3L03 define turnRight and draw a rectangle_2018: Define una función llamada
+        right(), que gira la tortuga a la derecha. Luego usa esta función para dibujar
+        un rectángulo, como se muestra a continuación. (Haz clic para ver las instrucciones
+        completas)
+      U3L03 define turnRight and draw a rectangle_2019: Define una función llamada
+        right(), que gira la tortuga a la derecha. Luego usa esta función para dibujar
+        un rectángulo, como se muestra a continuación. (Haz clic para ver las instrucciones
+        completas)
+      U3L03 draw diamond: Crea una función llamada drawDiamond() que hace uso del
+        trabajo anterior para dibujar el diamante completo. (Haz clic para ver las
+        instrucciones completas)
+      U3L03 draw diamond_2018: Crea una función llamada drawDiamond() que hace uso
+        del trabajo anterior para dibujar el diamante completo. (Haz clic para ver
+        las instrucciones completas)
+      U3L03 draw diamond_2019: Crea una función llamada drawDiamond() que hace uso
+        del trabajo anterior para dibujar el diamante completo. (Haz clic para ver
+        las instrucciones completas)
+      U3L04 - 3 by 3 with functions: Haz el cuadrado de 3x3 lo más eficientemente
+        que puedas. (Haz clic para ver las instrucciones completas)
+      U3L04 - 3 by 3 with functions_2018: Haz el cuadrado de 3x3 lo más eficientemente
+        que puedas. (Haz clic para ver las instrucciones completas)
+      U3L04 - 3 by 3 with functions_2019: Haz el cuadrado de 3x3 lo más eficientemente
+        que puedas. (Haz clic para ver las instrucciones completas)
+      U3L04 - snowflake: Crea el diseño desglosándolo en capas de funciones. (Haz
+        clic para ver las instrucciones completas)
+      U3L04 - snowflake_2018: Crea el diseño desglosándolo en capas de funciones.
+        (Haz clic para ver las instrucciones completas)
+      U3L04 - snowflake_2019: Crea el diseño desglosándolo en capas de funciones.
+        (Haz clic para ver las instrucciones completas)
+      U3L04 choose your own drawing: ¡Ahora elige el tuyo propio! Elige uno de los
+        tres dibujos que se muestran aquí e intenta crearlos por ti mismo. Para esto,
+        toma decisiones inteligentes sobre cómo desglosar el problema en funciones
+        reutilizables. Revisarás tu trabajo con un compañero mediante la "rúbrica
+        de procedimientos de revisión de pares". Comprueba los requisitos.
+      U3L04 diamond solution: Estudia esta solución al problema de dibujarDiamante.
+        Ten en cuenta que todo el programa comienza al llamar a drawDiamond() en la
+        parte superior. El programa sigue una cadena de llamadas de función. Puedes
+        rastrear lo que está sucediendo en el código para ver las funciones reutilizadas.
+        También es fácil de leer, porque los nombres de funciones describen el comportamiento
+        esperado.
+      U3L05_3x3GridEfficiencyChallenge: Vamos a volver el problema de la cuadrícula
+        3x3 que hiciste hace algunas lecciones.  Esta vez, el reto es programar la
+        solución "lo más eficientemente posible."  Ahora que sabes cómo escribir funciones,
+        debería ser más fácil desglosar el problema, y su código debería ser más fácil
+        de leer y depurar.  Mira la rúbrica para obtener más detalles sobre los requisitos
+        y expectativas.
+      U3L05_draw3x3GridEfficiently: 'Dibuja una cuadrícula de 3x3 arriba y a la derecha
+        de la tortuga. Intenta hacer con la menor cantidad de comandos posible. NOTA:
+        este es un problema muy exigente. Debes jugar un poco con él y luego ajustarlo.
+        También podrías considerar el uso de lápiz y papel para bosquejar tus ideas.'
+      U3L06 - moveForwardwithParams: Usa un comando único para mover la tortuga el
+        borde de la pantalla. (Haz clic para ver las instrucciones completas)
+      U3L06 - moveForwardwithParams_2018: Usa un comando único para mover la tortuga
+        el borde de la pantalla. (Haz clic para ver las instrucciones completas)
+      U3L06 - moveForwardwithParams_2019: Usa un comando único para mover la tortuga
+        el borde de la pantalla. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 1 triangle: Usa las versiones parametrizadas de los comandos
+        de la tortuga para crear un triángulo con lados de 100 pixeles de largo. (Haz
+        clic para ver las instrucciones completas)
+      U3L06 Challenge 1 triangle_2018: Usa las versiones parametrizadas de los comandos
+        de la tortuga para crear un triángulo con lados de 100 pixeles de largo. (Haz
+        clic para ver las instrucciones completas)
+      U3L06 Challenge 1 triangle_2019: Usa las versiones parametrizadas de los comandos
+        de la tortuga para crear un triángulo con lados de 100 pixeles de largo. (Haz
+        clic para ver las instrucciones completas)
       U3L06 Challenge 2 purple square: Lee la documentación para bolígrafocolor()
         y bolígrafoancho() antes de usarlo para dibujar el cuadrado azul.
       U3L06 Challenge 2 purple square_2018: Lee la documentación para bolígrafocolor()
         y bolígrafoancho() antes de usarlo para dibujar el cuadrado azul.
       U3L06 Challenge 2 purple square_2019: Lee la documentación para bolígrafocolor()
         y bolígrafoancho() antes de usarlo para dibujar el cuadrado azul.
-      U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea simplemente usando
-        punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos sean
-        transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
-      U3L06 Challenge 5 overlapping circles_2018: 'Esta imagen se crea simplemente
-        usando punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos
-        sean transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
-      U3L06 Challenge 5 overlapping circles_2019: 'Esta imagen se crea simplemente
-        usando punto() y colorLapicero() pero, ¿cómo vamos a hacer que esos círculos
-        sean transparentes? Si todavía no has entendido la pista: ¡consulta la documentación!'
-      U3L07 - introSquare: "Usa un bucle para dibujar un cuadrado. A continuación,
-        agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna
-        cantidad. \n(Haz clic para ver instrucciones completas)"
-      U3L07 - introSquare_2018: "Usa un bucle para dibujar un cuadrado. A continuación,
-        agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna
-        cantidad. \n(Haz clic para ver instrucciones completas)"
-      U3L07 - introSquare_2019: "Usa un bucle para dibujar un cuadrado. A continuación,
-        agregue \notro bucle para dibujar muchos cuadrados, cada uno rotado alguna
-        cantidad. \n(Haz clic para ver instrucciones completas)"
-      U3L07 - loopsWithRandom: Aumenta el número de iteraciones para completar la
-        pantalla con blanco. (Haz clic para ver instrucciones completas)
-      U3L07 - loopsWithRandom_2018: Aumenta el número de iteraciones para completar
-        la pantalla con blanco. (Haz clic para ver instrucciones completas)
-      U3L07 - loopsWithRandom_2019: Aumenta el número de iteraciones para completar
-        la pantalla con blanco. (Haz clic para ver instrucciones completas)
+      U3L06 Challenge 3 fill pink: Completa el fondo de la pantalla con tu color favorito.
+        (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 3 fill pink_2018: Completa el fondo de la pantalla con tu color
+        favorito. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 3 fill pink_2019: Completa el fondo de la pantalla con tu color
+        favorito. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 4 bullseye: Crea el juego de dardos con colores hexadecimales
+        y dot(). (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 4 bullseye_2018: Crea el juego de dardos con colores hexadecimales
+        y dot(). (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 4 bullseye_2019: Crea el juego de dardos con colores hexadecimales
+        y dot(). (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 5 overlapping circles: 'Esta imagen se crea usando solamente
+        dot() y penColor(), ¿pero cómo haremos para que esos círculos sean transparentes?
+        Si no has obtenida la sugerencia aún: ¡mira la documentación!'
+      U3L06 Challenge 5 overlapping circles_2018: 'Esta imagen se crea usando solamente
+        dot() y penColor(), ¿pero cómo haremos para que esos círculos sean transparentes?
+        Si no has obtenida la sugerencia aún: ¡mira la documentación!'
+      U3L06 Challenge 5 overlapping circles_2019: 'Esta imagen se crea usando solamente
+        dot() y penColor(), ¿pero cómo haremos para que esos círculos sean transparentes?
+        Si no has obtenida la sugerencia aún: ¡mira la documentación!'
+      U3L06 Challenge 6 squiggles: 'Lee la documentación para los comandos "arcLeft"
+        y "arcRight" y luego dibuja los garabatos como se muestra. '
+      U3L06 Challenge 6 squiggles_2018: 'Lee la documentación para los comandos "arcLeft"
+        y "arcRight" y luego dibuja los garabatos como se muestra. '
+      U3L06 Challenge 6 squiggles_2019: 'Lee la documentación para los comandos "arcLeft"
+        y "arcRight" y luego dibuja los garabatos como se muestra. '
+      U3L06 Challenge 7 smiley face: Usa turnTo() y moveTo() para ayudar a dibujar
+        una cara sonriente. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 7 smiley face_2018: Usa turnTo() y moveTo() para ayudar a dibujar
+        una cara sonriente. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 7 smiley face_2019: Usa turnTo() y moveTo() para ayudar a dibujar
+        una cara sonriente. (Haz clic para ver las instrucciones completas)
+      U3L06 Challenge 8 make your own: Crea un dibujo propio. (Haz clic para ver las
+        instrucciones completas)
+      U3L06 Challenge 8 make your own_2018: Crea un dibujo propio. (Haz clic para
+        ver las instrucciones completas)
+      U3L06 Challenge 8 make your own_2019: Crea un dibujo propio. (Haz clic para
+        ver las instrucciones completas)
+      U3L07 - Free Play Loops and Random: "¡Juego libre! Usa lo que has prendido de
+        bucles y aleatorio para crear tu propia escena. Diviértete."
+      U3L07 - Free Play Loops and Random_2018: "¡Juego libre! Usa lo que has prendido
+        de bucles y aleatorio para crear tu propia escena. Diviértete."
+      U3L07 - Free Play Loops and Random_2019: "¡Juego libre! Usa lo que has prendido
+        de bucles y aleatorio para crear tu propia escena. Diviértete."
+      U3L07 - Starry Night Starter Code: 'Vas a usar bucles y números aleatorios para
+        generar la imagen de un cielo estrellado similar a uno que se muestra aquí.
+        Te hemos dado un poco de código inicial para generar el suelo y el cielo (solo
+        dos puntos gigantes); agregarás código a este proyecto para hacer las estrellas,
+        el pasto y la luna. Todos los efectos son aplicaciones inteligentes de puntos,
+        líneas y colores de la tortuga. Para comenzar, sigue la serie de pasos sugeridos
+        en la hoja de trabajo adjunta. '
+      U3L07 - allSeaGrass: Agrega 50 piezas de hierba marina a la imagen escribiendo
+        drawAllSeagrass con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - allSeaGrass_2018: Agrega 50 piezas de hierba marina a la imagen escribiendo
+        drawAllSeagrass con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - allSeaGrass_2019: Agrega 50 piezas de hierba marina a la imagen escribiendo
+        drawAllSeagrass con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - bubbles: Agrega 200 burbujas a la imagen escribiendo drawAllBubbles
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - bubbles_2018: Agrega 200 burbujas a la imagen escribiendo drawAllBubbles
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - bubbles_2019: Agrega 200 burbujas a la imagen escribiendo drawAllBubbles
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - callingFunctionsInLoops: Llama a la función dentro del bucle para completar
+        la figura. (Haz clic para ver las instrucciones completas)
+      U3L07 - createTriangleParam: Define una función que acepte un parámetro para
+        hacer coincidir las llamadas a funciones y completar la imagen. (Haz clic
+        para ver las instrucciones completas)
+      U3L07 - createTriangleParam_2018: Define una función que acepte un parámetro
+        para hacer coincidir las llamadas a funciones y completar la imagen. (Haz
+        clic para ver las instrucciones completas)
+      U3L07 - createTriangleParam_2019: Define una función que acepte un parámetro
+        para hacer coincidir las llamadas a funciones y completar la imagen. (Haz
+        clic para ver las instrucciones completas)
+      U3L07 - fish: Agrega 15 peces a la imagen escribiendo drawAllFish con un bucle.
+        (Haz clic para ver las instrucciones completas)
+      U3L07 - fish_2018: Agrega 15 peces a la imagen escribiendo drawAllFish con un
+        bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - fish_2019: Agrega 15 peces a la imagen escribiendo drawAllFish con un
+        bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - introSquare: Usa un bucle para dibujar un cuadrado. Luego agrega otro
+        bucle para dibujar muchos cuadrados, cada uno rotado en alguna medida. (Haz
+        clic para ver las instrucciones completas)
+      U3L07 - introSquare_2018: Usa un bucle para dibujar un cuadrado. Luego agrega
+        otro bucle para dibujar muchos cuadrados, cada uno rotado en alguna medida.
+        (Haz clic para ver las instrucciones completas)
+      U3L07 - introSquare_2019: Usa un bucle para dibujar un cuadrado. Luego agrega
+        otro bucle para dibujar muchos cuadrados, cada uno rotado en alguna medida.
+        (Haz clic para ver las instrucciones completas)
+      U3L07 - loopsWithRandom: Aumenta la cantidad de iteraciones para completar la
+        pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - loopsWithRandom_2018: Aumenta la cantidad de iteraciones para completar
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - loopsWithRandom_2019: Aumenta la cantidad de iteraciones para completar
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - randomDots1: Aumenta la cantidad de iteraciones para completar totalmente
+        la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - randomDots1_2018: Aumenta la cantidad de iteraciones para completar
+        totalmente la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - randomDots1_2019: Aumenta la cantidad de iteraciones para completar
+        totalmente la pantalla con blanco. (Haz clic para ver las instrucciones completas)
+      U3L07 - randomSquare: Usa un bucle para dibujar la figura. (Haz clic para ver
+        las instrucciones completas)
+      U3L07 - randomSquare_2018: Usa un bucle para dibujar la figura. (Haz clic para
+        ver las instrucciones completas)
+      U3L07 - randomSquare_2019: Usa un bucle para dibujar la figura. (Haz clic para
+        ver las instrucciones completas)
+      U3L07 - seaGrass: Agrega un parámetro para dibujar drawSeagrass que controla
+        la cantidad de olas en la hierba. (Haz clic para ver las instrucciones completas)
+      U3L07 - seaGrass_2018: Agrega un parámetro para dibujar drawSeagrass que controla
+        la cantidad de olas en la hierba. (Haz clic para ver las instrucciones completas)
+      U3L07 - seaGrass_2019: Agrega un parámetro para dibujar drawSeagrass que controla
+        la cantidad de olas en la hierba. (Haz clic para ver las instrucciones completas)
+      U3L07 - seaStar: Agrega 5 estrellas marinas a la imagen escribiendo drawAllSeagrass
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - seaStar_2018: Agrega 5 estrellas marinas a la imagen escribiendo drawAllSeagrass
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - seaStar_2019: Agrega 5 estrellas marinas a la imagen escribiendo drawAllSeagrass
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - sunBeams: Agrega 100 rayos de luz a la imagen escribiendo drawAllSunbeams
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - sunBeams_2018: Agrega 100 rayos de luz a la imagen escribiendo drawAllSunbeams
+        con un bucle. (Haz clic para ver las instrucciones completas)
+      U3L07 - sunBeams_2019: Agrega 100 rayos de luz a la imagen escribiendo drawAllSunbeams
+        con un bucle. (Haz clic para ver las instrucciones completas)
       U3L07 - topDownDesign: Ponte cómodo con la estructura de este programa, luego
-        avance al siguiente ejercicio. (Haz clic para ver instrucciones completas)
+        avanza al siguiente ejercicio. (Haz clic para ver las instrucciones completas)
       U3L07 - topDownDesign_2018: Ponte cómodo con la estructura de este programa,
-        luego avance al siguiente ejercicio. (Haz clic para ver instrucciones completas)
+        luego avanza al siguiente ejercicio. (Haz clic para ver las instrucciones
+        completas)
       U3L07 - topDownDesign_2019: Ponte cómodo con la estructura de este programa,
-        luego avance al siguiente ejercicio. (Haz clic para ver instrucciones completas)
+        luego avanza al siguiente ejercicio. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - Enchantment Under the Sea: Te han brindado un código de arranque para
+        una escena de "Under de Sea" que incluye tres funciones, una para la estrella
+        de mar, otra para la hierba marina, y otra para el pez. Crea versiones de
+        estas funciones que acepten parámetros para permitirte agregar más variación
+        a tu escena. La hoja de trabajo del estudiante brinda más detalles y guía.
+      U3L08 - createTwoParamTriangle: Define una función llamada drawTriangle() que
+        acepta dos parámetros para establecer el tamaño y el ancho del triángulo.
+        (Haz clic para ver las instrucciones completas)
+      U3L08 - createTwoParamTriangle_2018: Define una función llamada drawTriangle()
+        que acepta dos parámetros para establecer el tamaño y el ancho del triángulo.
+        (Haz clic para ver las instrucciones completas)
+      U3L08 - createTwoParamTriangle_2019: Define una función llamada drawTriangle()
+        que acepta dos parámetros para establecer el tamaño y el ancho del triángulo.
+        (Haz clic para ver las instrucciones completas)
+      U3L08 - digitalScene: Crea las funciones que se te asignaron como parte de la
+        escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - digitalScene_2018: Crea las funciones que se te asignaron como parte
+        de la escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - digitalScene_2019: Crea las funciones que se te asignaron como parte
+        de la escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - drawSquareWithParam - for video: Usa drawSquare() para recrear la imagen
+        de ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - drawSquareWithParam: Usa drawSquare() para recrear la imagen de ambos
+        cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - drawSquareWithParam_2018: Usa drawSquare() para recrear la imagen de
+        ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - drawSquareWithParam_2019: Usa drawSquare() para recrear la imagen de
+        ambos cuadrados, y esta vez usa parámetros. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - drawSquaresWithParams: Escribe drawSmallSquare() para dibujar un cuadrado
+        de 25 pixeles. (Haz clic para ver las instrucciones completas)
+      U3L08 - fish: Agrega un parámetro para dibujar drawFish que controla el tamaño
+        de los peces dibujados. (Haz clic para ver las instrucciones completas)
+      U3L08 - fish_2018: Agrega un parámetro para dibujar drawFish que controla el
+        tamaño de los peces dibujados. (Haz clic para ver las instrucciones completas)
+      U3L08 - fish_2019: Agrega un parámetro para dibujar drawFish que controla el
+        tamaño de los peces dibujados. (Haz clic para ver las instrucciones completas)
+      U3L08 - freePlay: Crea más llamadas para tus nuevas funciones con parámetros
+        para seguir agregando a tu imagen. (Haz clic para ver las instrucciones completas)
+      U3L08 - freePlay_2018: Crea más llamadas para tus nuevas funciones con parámetros
+        para seguir agregando a tu imagen. (Haz clic para ver las instrucciones completas)
+      U3L08 - freePlay_2019: Crea más llamadas para tus nuevas funciones con parámetros
+        para seguir agregando a tu imagen. (Haz clic para ver las instrucciones completas)
+      U3L08 - individualCode: Crea las funciones que se te asignaron como parte de
+        la escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - individualCode_2018: Crea las funciones que se te asignaron como parte
+        de la escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - individualCode_2019: Crea las funciones que se te asignaron como parte
+        de la escena digital. (Haz clic para ver las instrucciones completas)
+      U3L08 - introUnderTheSea with comments: Agrega un pez, una estrella de mar y
+        una porción de hierba marina adicionales a tu imagen. Mira las funciones que
+        los crean, pero no cambies estas funciones. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - introUnderTheSea: Agrega un pez, una estrella de mar y una porción de
+        hierba marina adicionales a tu imagen. Mira las funciones que los crean, pero
+        no cambies estas funciones. (Haz clic para ver las instrucciones completas)
+      U3L08 - introUnderTheSea_2018: Agrega un pez, una estrella de mar y una porción
+        de hierba marina adicionales a tu imagen. Mira las funciones que los crean,
+        pero no cambies estas funciones. (Haz clic para ver las instrucciones completas)
+      U3L08 - introUnderTheSea_2019: Agrega un pez, una estrella de mar y una porción
+        de hierba marina adicionales a tu imagen. Mira las funciones que los crean,
+        pero no cambies estas funciones. (Haz clic para ver las instrucciones completas)
+      U3L08 - multiParamFish: Agrega tres parámetros a tu función drawFish para aceptar
+        los valores rojos, verdes y azules para hacer que tus peces tengan colores
+        diferentes. (Haz clic para ver las instrucciones completas)
+      U3L08 - multiParamFish_2018: Agrega tres parámetros a tu función drawFish para
+        aceptar los valores rojos, verdes y azules para hacer que tus peces tengan
+        colores diferentes. (Haz clic para ver las instrucciones completas)
+      U3L08 - multiParamFish_2019: Agrega tres parámetros a tu función drawFish para
+        aceptar los valores rojos, verdes y azules para hacer que tus peces tengan
+        colores diferentes. (Haz clic para ver las instrucciones completas)
+      U3L08 - multipleLayersofParams: Llama drawPlusSign() para completar la imagen.
+        (Haz clic para ver las instrucciones completas)
+      U3L08 - paramsToStarfish: Agrega un parámetro para drawStarfish que controla
+        el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - paramsToStarfish_2018: Agrega un parámetro para drawStarfish que controla
+        el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - paramsToStarfish_2019: Agrega un parámetro para drawStarfish que controla
+        el tamaño de la estrella de mar dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - randomInput: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - randomInput_2018: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - randomInput_2019: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - seaGrass: Agrega un parámetro para drawStarfish que controla el tamaño
+        de la porción de hierba marina dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - seaGrass_2018: Agrega un parámetro para drawStarfish que controla el
+        tamaño de la porción de hierba marina dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - seaGrass_2019: Agrega un parámetro para drawStarfish que controla el
+        tamaño de la porción de hierba marina dibujada. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 - squareTwoParams: Llama drawSquare() para completar el dibujo de dos
+        cuadrados. (Haz clic para ver las instrucciones completas)
+      U3L08 - squareTwoParams_2018: Llama drawSquare() para completar el dibujo de
+        dos cuadrados. (Haz clic para ver las instrucciones completas)
+      U3L08 - squareTwoParams_2019: Llama drawSquare() para completar el dibujo de
+        dos cuadrados. (Haz clic para ver las instrucciones completas)
+      U3L08 - starFish: Agrega un pez, una estrella de mar y una porción de hierba
+        marina adicionales a tu imagen. Mira las funciones que los crean, pero no
+        cambies estas funciones. (Haz clic para ver las instrucciones completas)
+      U3L08 - triangleTwoParams: Llama drawSquare() para completar el dibujo de dos
+        cuadrados. (Haz clic para ver las instrucciones completas)
+      U3L08 how to add comments: Usa los bloques randomNumber() para probar las funciones
+        que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 how to add comments_2018: Usa los bloques randomNumber() para probar las
+        funciones que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L08 how to add comments_2019: Usa los bloques randomNumber() para probar las
+        funciones que has diseñado con entrada aleatoria. (Haz clic para ver las instrucciones
+        completas)
+      U3L1 - Simulation - Template: Usa un bucle `mientras` para "lanzar 10 monedas"
+        y escríbelas en la pantalla. (Haz clic para ver las instrucciones completas)
+      U3L12 Chaser Template: "¡Esta es una plantilla de proyecto!"
+      U3L13 - Button with ID: Arrastra un botón a la pantalla y establece el texto
+        en "¡Avanzar!". Ejecuta el programa para asegurarte de que puedes ver el botón.
       U3L13 - Debug Id Problem: Elige un ID descriptivo y significativo para mejorar
         el botón. (Haz clic para ver las instrucciones completas)
+      U3L13 - Debug Id plus logic problem: |-
+        El último problema fue un ejemplo de error de sintaxis.  El Laboratorio de aplicaciones no entendió qué objeto se debe oír para un evento de "clic", de modo que mostró un mensaje de error en la consola para notificártelo. Otra clase de error es un error lógico; el programa es válido, pero no está haciendo lo que quieres que haga.
+
+        Este programa tiene 2 errores. Un error de sintaxis (engañoso) y un error lógico. Encuéntralos, arréglalos y haz que el programa funcione como se espera.
       U3L13 - Debugging 1: Depura el programa mediante la verificación de que sus
         identificadores están siendo referenciados correctamente. (Haz clic para ver
         instrucciones completas)
@@ -5836,6 +6791,9 @@ es-MX:
       U3L14 - Mini Calculator embed: Se te pedirán dos números; uno justo después
         del otro. Mira lo que sucede. Introduce diferentes números hasta que entiendas
         la idea.
+      U3L14 - Unfortunate Events Free Play: Sigan la Hoja de trabajo de "Eventos Desafortunados"
+        e ingresa tu código aquí para experimentar. Hemos precargado el código que
+        necesitas para comenzar.
       U3L14 - User Input Division calculator: Escribe un programa que actúe como una
         calculadora simple. (Haz clic para ver las instrucciones completas)
       U3L14 - Variable ReAssignment pt2: Rastrea el código y haz una predicción de
@@ -5924,6 +6882,30 @@ es-MX:
         propias. (Haz clic para ver las instrucciones completas)
       U3L16 - doubleQuotes: Guarda una cadena dentro de una variable y regístrala
         en la consola. (Haz clic para ver las instrucciones completas)
+      U3L16 - hideAndShow: 'Introducción a Entradatexto, obtenerTexto y escribir.  Primero
+        ejecuta el código de arranque varias veces. Intenta cambiar lo que está escrito
+        en el pantalla cuando el botón está presionado. Luego usa obtenerTexto para
+        escribir en la pantalla lo que el usuario a ingresado en la caja de texto.
+        GIF: U3L16 - useGetText.gif'
+      U3L16 - hideAndShowPractice: 'Has recibido un código de arranque que pone una
+        imagen y dos botones en la pantalla. La imagen inicialmente se esconde. Agrega
+        dos nuevos controladores de eventos: uno por cada botón, que cuando están
+        presionados ocultan y muestran la imagen.'
+      U3L16 - image and text labels: Presentación del comando establecerPosición.
+        Reemplaza el moverA en el controlador de eventos de clic en el botón para
+        usar establecerPosición para mover el botón mismo a una ubicación aleatoria
+        cuando se haga clic.
+      U3L16 - images and text labels: 'Introducción a objetos que no sean botones:
+        etiquetasdeTexto e imágenes. Primero intenta reemplazar tu botón con una etiquetadeTexto.
+        ¿El texto responderá a eventos de la misma manera que el botón? Intenta conectar
+        un controlador de eventos a esto. Inicialmente, te hemos brindado código similar
+        al resultado del último nivel; puedes copiar tu código de ese nivel aquí si
+        prefieres. '
+      U3L16 - images: Presentación de Imágenes. Intenta reemplazar la etiquetadeTexto
+        con una imagen. ¿La imagen responderá a eventos de la misma manera que el
+        botón? Intenta conectar un controlador de eventos a esto. Inicialmente, te
+        hemos brindado código similar al resultado del último nivel; puedes copiar
+        código de ese nivel aquí si prefieres.
       U3L16 - intro getText: Añade un gestor de eventos al botón Enviar para que cuando
         el botón sea pulsado aparezca el nombre introducido en el cuadro de texto
         a la consola. Utiliza obtenerTexto para obtener el valor fuera del cuadro
@@ -5956,8 +6938,15 @@ es-MX:
         Reemplaza el moverA en el controlador de eventos de clic en el botón para
         usar establecerPosición para mover el botón mismo a una ubicación aleatoria
         cuando se haga clic.
+      U3L16 - setPositionMoveButton: Usa establecerPosición para moverBotón
+      U3L16 - setupMoveToRandom: Modifica el código para que la tortuga se mueva a
+        una ubicación aleatoria de pantalla cuando el botón esté presionado. (Haz
+        clic para ver las instrucciones completas)
       U3L16 - singleSetPosition: Mueve el botón a la mitad de la pantalla. (Haz clic
         para ver las instrucciones completas)
+      U3L16 - stringsVsNumbers: Ejecuta el programa para ver cómo las cadenas y los
+        números se comportan con diferentes operadores aritméticos. (Haz clic para
+        ver las instrucciones completas)
       U3L16 - text labels: Usa el comando textoEtiqueta para reemplazar el botón de
         tu programa con una etiqueta de texto. (Haz clic para ver las instrucciones
         completas)
@@ -5984,14 +6973,48 @@ es-MX:
         completas) '
       U3L16 Mad Lib toUpper: 'Aplica las funciones de cadena de paraMayúscula y paraMinúscula
         al texto del usuario. (Haz clic para ver las instrucciones completas) '
+      U3L17 - getKeyValue: Ejecuta el programa varias veces para observar cómo ahora
+        los comandos establecerValorClave siempre llegan en orden. (Haz clic para
+        ver las instrucciones completas)
+      U3L17 - introCallbacks: Ejecuta el programa varias veces para observar cómo
+        ahora los comandos establecerValorClave siempre llegan en orden. (Haz clic
+        para ver las instrucciones completas)
+      U3L17 - introKeyValue: Explora tus pares de valor clave con el Visor de Datos.
+        (Haz clic para ver las instrucciones completas)
+      U3L17 - readKeyValue: Explora tus pares de valor clave con el Visor de Datos.
+        (Haz clic para ver las instrucciones completas)
+      U3L17 - setKeyValue: Crea y actualiza tus pares de valor clave mediante el uso
+        de establecerValorClave. (Haz clic para ver las instrucciones completas)
+      U3L17 - twoSetKeyValue: Ejecuta el programa varias veces para observar cómo,
+        a menudo, los comandos establecerValorClave llegan desordenados. (Haz clic
+        para ver las instrucciones completas)
       U3L18 comparison operators: Usa console.log para imprimir las diferentes expresiones
         booleanas abajo para ver qué información devuelven. (Haz clic para ver las
         instrucciones completas)
+      U3L18 comparison operators_for_video: Usa `console.log` para imprimir las diferentes
+        expresiones booleanas a continuación para ver qué información devuelven. (Haz
+        clic para ver las instrucciones completas)
+      U3L19 - Clicker Game Freeplay Area: Usa esta área de Laboratorio de aplicaciones
+        para mejorar tu juego de clics. Deberías comenzar copiando/pegando aquí el
+        código de tu juego anterior. Mostramos un conjunto de bloques más completo
+        en la caja de herramientas; algunas de las cosas que podrías no haber usado
+        aún. Con total confianza, explora y experimenta si lo deseas. Se debería mostrar
+        el resto de lo que necesitas. ¡Diviértete!
       U3L19 - DEMO up down count practice app: Prueba la aplicación de demostración.
         (Haz clic para ver las instrucciones completas)
+      U3L19 - Debugging with consoleLog: Agrega sentencias console.log() para descubrir
+        el valor de a y b luego de la primera sentencia de reasignación a = b; (Haz
+        clic para ver las instrucciones completas)
       U3L19 - Simple If-statements in UpDown App: Añade una sentencia `si` para que
         la aplicación cambie las pantallas cuando el conteo alcance -5. (Haz clic
         para ver las instrucciones completas)
+      U3L19 - Target Clicker App: Investiga los nuevos elementos del juego "Chaser"
+      U3L19 - do concatenate string with var: "Te hemos brindado una porción de código
+        de la pantalla anterior. Intenta cambiar el valor asignado a foo para ver
+        el cambio de cadena. \nHaz esto: \n\n1.  Intenta cambiar el valor asignado
+        a foo para ver el cambio de cadena. \n2.  Solo mediante la modificación de
+        las líneas del código que fueron brindadas, intenta hacer que la salida diga:
+        \"El valor de foo es: 9. Eso está bien.\""
       U3L19 - fix the var name syntax error v2: Corrige el error y logra que imprima
         el valor de ambas variables. (Haz clic para ver las instrucciones completas)
       U3L19 - fix the var name syntax error: Corrige el error y logra que imprima
@@ -5999,21 +7022,48 @@ es-MX:
       U3L19 - global var example count up: Mira el código de esta aplicación y observa
         cómo funciona para actualizar la variable de conteo cuando se hace clic en
         la flecha arriba. (Haz clic para ver las instrucciones completas).
+      U3L19 - practice with setText: Agrega otro botón que cambia el texto al valor
+        de la nueva variable. (Haz clic para ver las instrucciones completas)
       U3L19 - test reassignment of two vars: Haz una predicción del valor de a y b.
         Agrega sentencias console.log para averiguar el valor real de a y b. (Haz
         clic para obtener las instrucciones completas)
       U3L19 - three basic ops of variables: Añade otra variable llamada "vidas" y
         configura el valor a 3. Escribe el valor de la variable a la consola. (Haz
         clic para ver las instrucciones completas)
+      U3L19 - try out console log: "Prueba console.log.  Haz esto: reemplaza la sentencia
+        escribir(\"foo es: \" + foo) con console.log(\"foo es: \" + foo). Ejecuta
+        el programa y deberías ver que la salida se muestra en el área de la consola,
+        debajo del espacio de trabajo. Luego intenta agregar algunas sentencias console.log
+        más. Muestra un poco de texto. Haz otra variable y muestra eso.  \nLa pantalla
+        de la aplicación estará en blanco: ese es el punto. Con console.log, puedes
+        probar la salida detrás de las escenas sin que el usuario lo vea.  \n\nGIF:
+        U3L19-useconsolelog.gif"
+      U3L19 - up down count practice app: Configura el botón abajo para disminuir
+        el valor de conteo en 1 cada vez que esté presionado. (Haz clic para ver las
+        instrucciones completas)
+      U3L19 - updating variables pt1: 'Esta aplicación sólo es LEVEMENTE diferente
+        de la anterior, pero mucho más dinámica. Fíjate si puedes averiguar cómo y
+        por qué el recuento está creciendo. Una vez que lo hayas configurado, entonces
+        deberías poder HACER ESTO: añadir un botón a la aplicación que, al hacerle
+        clic, haga que el recuento baje y actualice la etiqueta. Cuando hayas terminado,
+        la aplicación debe funcionar como se muestra en la demostración.  GIF: U3L19
+        - upDownCountApp.gif'
       U3L19 - variable reassignment challenge pt2: Haz una predicción sobre los valores
         finales de a, b y c. Luego usa console.log para ver si has comprendido. (Haz
         clic para ver las instrucciones completas)
       U3L19 - variable reassignment part 1: Haz una predicción del valor de a y b.
         Agrega sentencias console.log para averiguar el valor real de a y b. (Haz
         clic para obtener las instrucciones completas)
+      U3L19 - variable scope problem 2: "¿Qué está sucediendo con foo? Juega con el
+        nivel para intentar descubrirlo. (Haz clic para ver las instrucciones completas)"
+      U3L19 - variable scoping problem debugging: Fíjate si puedes descubrir por qué
+        el código ya no funciona. (Haz clic para ver las instrucciones completas)
       U3L19 - write var and string with same name v2: Arregla el código para que los
         valores de ambas variables se escriban en la consola. (Haz clic para ver las
         instrucciones completas)
+      U3L19 - write var and string with same name: Arregla el código para que el valor
+        de ambas variables se imprima en la consola. (Haz clic para ver las instrucciones
+        completas)
       U3L2 Using Simple Commands (no tooltips): Dibuja un cuadrado de 1x1 arriba y
         a la izquierda de la posición inicial de la tortuga. Haga clic para ver las
         instrucciones completas.
@@ -6029,12 +7079,57 @@ es-MX:
       U3L23 Chatbot Conditionals 1: Añade sentencias `si`, `sino si` y `si no` para
         detectar los géneros de película Comedia, Romance, Acción y Horror. (Haz clic
         para ver las instrucciones completas)
+      U3L23 Chatbot Intro 1a: Almacena la entrada del usuario dentro de una variable
+        y regístralo en la consola.
+      U3L23 Chatbot Intro 2: 'Usa la concatenación de cadena para almacenar la entrada
+        del usuario y la respuesta del asistente en la variable de conversación usando
+        el formato "Usuario: <input><bot name>: <default response>". Registra la conversación
+        en la consola.'
+      U3L23 Chatbot Intro 2a: 'Muestra la conversación en el elemento "texto\_área".
+        Opcional: borrar la entrada del usuario después de cada evento "cambiar".'
+      U3L23 Chatbot Intro 3: Añade caracteres de nueva línea "\\n" para separar la
+        entrada del usuario y la respuesta de la computadora.
+      U3L23 Chatbot Intro 4: Usa este nivel para que tu chatbot luzca y funcione mejor.
+      U3L23 Chatbot Intro: Elige un tema de especialización para tu asistente digital.
+        Crea un asistente digital básico que tome la entrada del usuario y muestre
+        una respuesta predeterminada.
+      U3L23 Digital Assistant 1: Establece el elemento texto_área para mostrar la
+        entrada del usuario desde el elemento texto_entrada.
+      U3L23 Digital Assistant 2: Añade la respuesta "No lo sé." después de cada una
+        de las entradas del usuario.
+      U3L23 Digital Assistant 3: Añade la respuesta "No lo sé." después de cada una
+        de las entradas del usuario.
+      U3L23 Digital Assistant 4: Muestra la entrada del usuario y la respuesta del
+        asistente digital en diferentes líneas.
+      U3L23 Digital Assistant 5: Comienza el comando del usuario con la frase "Usuario:"
+        y la respuesta del asistente digital con la frase "Bot:"
+      U3L23 Digital Assistant 6: Cuando el usuario aprieta "Ejecutar", muestra el
+        texto "Soy un asistente digital genérico. ¡Pregúntame algo!"
+      U3L24 Basic String Parsing 1: Utiliza la función "entradadeusuario.índicede(<food>)"
+        para comprobar si las cadenas "pizza" o "sopa" están en cualquier lugar en
+        la respuesta del usuario.
       U3L24 Chatbot Basic Conditionals: Revisa la descripción del proyecto para las
         instrucciones. (Haga clic para ver las instrucciones completas.)
+      U3L24 Chatbot Conditionals 2: Ajusta el bloque "if" para hacer que el bot responda
+        "No conozco ese color." si el usuario escribe algo además de "azul"
+      U3L24 Chatbot Conditionals 3: Ajuste el bloque "si/si no" para hacer que el
+        bot responda a los colores azul, rojo y verde, y a dos colores adicionales.
+      U3L24 Chatbot Keyword Record: Usa el próximo nivel para registrar las palabras
+        clave/frases de tu asistente digital.
+      U3L24 Chatbot Nested Conditionals: Agrega un condicional encadenado con, al
+        menos, 3 sentencias "sino si" a tu asistente personal.
       U3L24 Nested Conditionals 1: Cambia todas las expresiones booleanas para usar
         `incluye` en lugar de ==. (Haz clic para ver las instrucciones completas)
       U3L24 Nested Conditionals 2: 'Anida las sentencias `si` de género de película
         dentro de las sentencias `si` para comprobar un ? en la entrada. '
+      U3L24 Nested Conditionals Bugs 2: Arregla el problema con el código para que
+        todas las condiciones se puedan alcanzar. (Haz clic para ver las instrucciones
+        completas)
+      U3L24 Nested Conditionals Bugs 3: Arregla los errores que todavía existen en
+        este programa. Demuestra que el programa funciona correctamente.
+      U3L24 Nested Conditionals Bugs: Escribe entradas en el cuadro entrada-usuario
+        para mostrar los errores en este problema. Rastrea qué entradas causan valores
+        inesperados.
       U3L24 introIncludes: Usa el comando `incluye` para practicar. (Haz clic para
         ver las instrucciones completas)
       U3L25 - drag out key event: Configura un gestor de eventos para responder a
@@ -6044,21 +7139,296 @@ es-MX:
       U3L25 - play sound when up key: Cambia el código para que el sonido sólo se
         pueda reproducir cuando se presiona la flecha arriba. (Haz clic para ver las
         instrucciones completas)
+      U3L25 Chatbot Strings: 1.  Ajusta tu asistente digital para evaluar las entradas
+        de la misma manera, independientemente de si las entradas se escriben con
+        mayúscula o minúscula. 2. Si un usuario pregunta "Qué es <phrase>?", donde
+        <phrase> es una entrada que tu asistente digital no reconoce, haz que tu asistente
+        digital responda "No sé qué es <phrase>."
+      U3L25 String Parsing 1: Dada la cadena "La duda es el principio de la sabiduría.",
+        ¿cuál es el índice de los siguientes caracteres W, t, w, ., d, y k? Confirma
+        tu expectativa mediante el uso de la función índice.cadenaDe().
+      U3L25 String Parsing 2: Usa longitud.cadena para encontrar la longitud de las
+        cadenas “Hola, mundo”, “¡La ciencia de la computación es lo máximo!”, y “Prometo
+        hacer mis deberes todos los días”.
+      U3L25 String Parsing 3: Escribe un verificador de longitud de contraseña que
+        escribe “sí” en la consola si una cadena tiene una longitud mayor a 10, o
+        “no” si es menor o igual a 10. Evalúa tu función mediante dos cadenas, una
+        que cumpla con cada opción condicional.
+      U3L25 String Parsing 4: Se te da la cadena "La duda es el principio de la sabiduría".
+        Utiliza la función cadena.subcadena(principio, final) para imprimir "principio"
+        y "duda" en la consola.
+      U3L25 String Parsing 5: |-
+        Rellena la función, encontrarPrincipioDuda() para obtener las cadenas "principio" y "duda" de una frase sin importar dónde exista en la oración.
+        Imprime las cadenas y su índice en la consola.
+      U3L25 String Parsing 6: Escribe una función que toma un nombre (primer último)
+        y la reordena (último, primero).
+      U3L25 String Parsing 7: Se te da la cadena “La tierra tiene música para aquellos
+        que escuchan”. Manipúlala mediante el uso de las funciones cad.aMayúscula()
+        y cad.aMinúscula().
       U3L26 AND operator: Actualiza las sentencias `si` de género y calificación para
         dar solo una sugerencia de película a la vez. (Haz clic para ver las instrucciones
         completas)
+      U3L26 Chatbot Compound Conditionals: Actualiza tu asistente digital para incluir
+        al menos uno de cada Y, O, y NO
+      U3L26 Chatbot Final: Actualiza tu asistente digital para incluir al menos uno
+        de cada Y, O, y NO
+      U3L26 Compound Logic: Escribe una sentencia condicional que detecte si un comando
+        contiene todas las frases "2000", "animadas" y "calificación G". Si se detectan
+        todas estas frases, haga que Movie Bot responda "La película animada y con
+        calificación G más exitosa de la década del 2000 fue Buscando a Nemo."
+      U3L26 NOT operator: 'Escribe una sentencia condicional que detecte si un comando
+        no contiene la frase "mala." Si "mala" no se detecta, haga que el Movie Bot
+        responda normalmente. De lo contrario, haga que el Movie Bot responda "Lo
+        siento, no entiendo de películas malas". '
       U3L26 OR operator: Actualiza la sentencia `si` para usar una O para comprobar
         un "?", además de quién, dónde, cuándo, por qué, cómo en la entrada del usuario.
         (Haz clic para ver las instrucciones completas)
-      U3L2_TurtleSquare_right: |-
-        Dibuja un cuadrado al frente y
-         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
-      U3L2_TurtleSquare_right_2018: |-
-        Dibuja un cuadrado al frente y
-         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
-      U3L2_TurtleSquare_right_2019: |-
-        Dibuja un cuadrado al frente y
-         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
+      U3L27 Chatbot Final: Haz que tu asistente digital sea asombroso y cuando hayas
+        terminado, pide a uno de tus compañeros de clase que use la guía de actividades
+        para probarlo por ti. A medida que añadas características a tu asistente digital,
+        rastréalas en el siguiente nivel.
+      U3L2_Turtle3by3Grid: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      U3L2_Turtle3by3Grid_2018: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      U3L2_Turtle3by3Grid_2019: Dibuja una cuadrícula de 3x3 en el frente y la derecha
+        de la tortuga lo más eficientemente posible. La tortuga debería finalizar
+        en la ubicación original, de cara a su dirección original. (Haz clic para
+        ver las instrucciones completas)
+      U3L2_TurtleSquare_right: Dibuja un cuadrado al frente y a la derecha de la ubicación
+        de inicio. (Haz clic para ver las instrucciones completas)
+      U3L2_TurtleSquare_right_2018: Dibuja un cuadrado al frente y a la derecha de
+        la ubicación de inicio. (Haz clic para ver las instrucciones completas)
+      U3L2_TurtleSquare_right_2019: Dibuja un cuadrado al frente y a la derecha de
+        la ubicación de inicio. (Haz clic para ver las instrucciones completas)
+      U4 - Add Row By Hand: Añade un nuevo registro a tu tabla en el Visor de Datos.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Add Row By Hand_2018: Añade un nuevo registro a tu tabla en el Visor de
+        Datos. (Haz clic para ver las instrucciones completas)
+      U4 - Add Row By Hand_2019: Añade un nuevo registro a tu tabla en el Visor de
+        Datos. (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Export Data: Exporta los datos de la tabla “edades” como archivo
+        CSV, luego vuelve a mezclar esta aplicación e importa el archivo CSV. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - Export Data_2018: Exporta los datos de la tabla “edades” como
+        archivo CSV, luego vuelve a mezclar esta aplicación e importa el archivo CSV.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Export Data_2019: Exporta los datos de la tabla “edades” como
+        archivo CSV, luego vuelve a mezclar esta aplicación e importa el archivo CSV.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 1: Descarga el archivo CSV que hemos proporcionado,
+        y luego utiliza el visor de datos para importar los datos del archivo en la
+        tabla "mitabla". (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 1_2018: Descarga el archivo CSV que hemos proporcionado,
+        y luego utiliza el visor de datos para importar los datos del archivo en la
+        tabla "mitabla". (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 1_2019: Descarga el archivo CSV que hemos proporcionado,
+        y luego utiliza el visor de datos para importar los datos del archivo en la
+        tabla "mitabla". (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 2: Llama a leerRegistros en “mitabla” e imprime cada
+        registro en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 2_2018: Llama a leerRegistros en “mitabla” e imprime
+        cada registro en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Import Data 2_2019: Llama a leerRegistros en “mitabla” e imprime
+        cada registro en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Charts - Line Chart 1: Crea un cuadro de línea que muestre el cambio de
+        popularidad de “#tbt” a lo largo del tiempo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Charts - Line Chart 1_2018: Crea un cuadro de línea que muestre el cambio
+        de popularidad de “#tbt” a lo largo del tiempo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Charts - Line Chart 1_2019: Crea un cuadro de línea que muestre el cambio
+        de popularidad de “#tbt” a lo largo del tiempo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Charts - Line Chart 2: Añade una segunda línea a tu cuadro para mostrar
+        el cambio de popularidad de “#tbt” y “#nofilter” al mismo tiempo. (Haz clic
+        para ver las instrucciones completas)
+      U4 - Charts - Line Chart 2_2018: Añade una segunda línea a tu cuadro para mostrar
+        el cambio de popularidad de “#tbt” y “#nofilter” al mismo tiempo. (Haz clic
+        para ver las instrucciones completas)
+      U4 - Charts - Line Chart 2_2019: Añade una segunda línea a tu cuadro para mostrar
+        el cambio de popularidad de “#tbt” y “#nofilter” al mismo tiempo. (Haz clic
+        para ver las instrucciones completas)
+      U4 - Charts - Line Chart Template: Esta es una plantilla.
+      U4 - Charts - Line Chart Template_2018: Esta es una plantilla.
+      U4 - Charts - Line Chart Template_2019: Esta es una plantilla.
+      U4 - Charts - Remixing Apps with Data: Ejecuta esta aplicación y mira lo que
+        imprime en la consola. Luego vuelve a mezclar la aplicación y ejecuta la versión
+        remezclada para ver lo que ha ocurrido con los datos. (Haz clic para ver las
+        instrucciones completas)
+      U4 - Charts - Remixing Apps with Data_2018: Ejecuta esta aplicación y mira lo
+        que imprime en la consola. Luego vuelve a mezclar la aplicación y ejecuta
+        la versión remezclada para ver lo que ha ocurrido con los datos. (Haz clic
+        para ver las instrucciones completas)
+      U4 - Charts - Remixing Apps with Data_2019: Ejecuta esta aplicación y mira lo
+        que imprime en la consola. Luego vuelve a mezclar la aplicación y ejecuta
+        la versión remezclada para ver lo que ha ocurrido con los datos. (Haz clic
+        para ver las instrucciones completas)
+      U4 - Charts - Scatter Chart: Usa la nueva tabla y nombres de columna para crear
+        un diagrama de dispersión de la tabla “Tomatespodridos”. (Haz clic para ver
+        las instrucciones completas)
+      U4 - Charts - Scatter Chart_2018: Usa la nueva tabla y nombres de columna para
+        crear un diagrama de dispersión de la tabla “Tomatespodridos”. (Haz clic para
+        ver las instrucciones completas)
+      U4 - Charts - Scatter Chart_2019: Usa la nueva tabla y nombres de columna para
+        crear un diagrama de dispersión de la tabla “Tomatespodridos”. (Haz clic para
+        ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords 1: Usa el bloque dibujarCuadroDeRegistros
+        para crear un gráfico de dispersión de la tabla de la base de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords 1_2018: Usa el bloque dibujarCuadroDeRegistros
+        para crear un gráfico de dispersión de la tabla de la base de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords 1_2019: Usa el bloque dibujarCuadroDeRegistros
+        para crear un gráfico de dispersión de la tabla de la base de datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords Options 1: Añade un título a tu gráfico y
+        cambia los colores de tus líneas usando el parámetro de opciones de dibujarCuadroDeRegistros.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords Options 1_2018: Añade un título a tu gráfico
+        y cambia los colores de tus líneas usando el parámetro de opciones de dibujarCuadroDeRegistros.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords Options 1_2019: Añade un título a tu gráfico
+        y cambia los colores de tus líneas usando el parámetro de opciones de dibujarCuadroDeRegistros.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords Options 2: Mira a través de la API de dibujarCuadroDeRegistros
+        y elige algunas opciones más para personalizar. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Charts - drawChartFromRecords Options 2_2018: Mira a través de la API de
+        dibujarCuadroDeRegistros y elige algunas opciones más para personalizar. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - drawChartFromRecords Options 2_2019: Mira a través de la API de
+        dibujarCuadroDeRegistros y elige algunas opciones más para personalizar. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Charts - drawChartsFromRecords 1: Añade un elemento de pantalla, retira
+        el bloque dibujarCuadros, ¡ejecuta el programa!
+      U4 - CreateRecord - 1: Añade un comando crearRegistro y ejecutar el programa.
+        (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 1_2018: Añade un comando crearRegistro y ejecutar el programa.
+        (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 1_2019: Añade un comando crearRegistro y ejecutar el programa.
+        (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 2.5: Cambia el nombre de la tabla de crearRegistro, luego
+        verifica el Visor de Datos para ver la nueva tabla. (Haz clic para ver las
+        instrucciones completas)
+      U4 - CreateRecord - 2.5_2018: Cambia el nombre de la tabla de crearRegistro,
+        luego verifica el Visor de Datos para ver la nueva tabla. (Haz clic para ver
+        las instrucciones completas)
+      U4 - CreateRecord - 2.5_2019: Cambia el nombre de la tabla de crearRegistro,
+        luego verifica el Visor de Datos para ver la nueva tabla. (Haz clic para ver
+        las instrucciones completas)
+      U4 - CreateRecord - 2: Cambia el nombre de "Alicia" a otra cosa en el comando
+        crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios
+        en tu tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 2_2018: Cambia el nombre de "Alicia" a otra cosa en el comando
+        crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios
+        en tu tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 2_2019: Cambia el nombre de "Alicia" a otra cosa en el comando
+        crearRegistro. Ejecuta el programa y usa el Visor de Datos para ver los cambios
+        en tu tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3: Usa crearRegistro para agregar el objeto canción como
+        un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3_2018: Usa crearRegistro para agregar el objeto canción
+        como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 3_2019: Usa crearRegistro para agregar el objeto canción
+        como un registro para la tabla. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4: Ejecuta el programa. Verifica que el objeto canción fue
+        agregado a la base de datos. Observa que la función de devolución de llamada
+        ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4_2018: Ejecuta el programa. Verifica que el objeto canción
+        fue agregado a la base de datos. Observa que la función de devolución de llamada
+        ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - CreateRecord - 4_2019: Ejecuta el programa. Verifica que el objeto canción
+        fue agregado a la base de datos. Observa que la función de devolución de llamada
+        ahora muestra la copia del registro enviada de vuelta a la base datos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - CreateRecord - 5: Agrega una propiedad al objeto de JavaScript, y luego
+        ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar el objeto
+        afecta a la tabla de datos. (Haz clic para ver las instrucciones completas)
+      U4 - CreateRecord - 5_2018: Agrega una propiedad al objeto de JavaScript, y
+        luego ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar
+        el objeto afecta a la tabla de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - CreateRecord - 5_2019: Agrega una propiedad al objeto de JavaScript, y
+        luego ejecuta el programa. Visualiza la tabla de datos y mira cómo cambiar
+        el objeto afecta a la tabla de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Edit Data Table by Hand: Visualiza la tabla de datos y haz clic en editar
+        siguiente a cada fila. Agrega los nombres de artistas para cada canción en
+        forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Edit Data Table by Hand_2018: Visualiza la tabla de datos y haz clic en
+        editar siguiente a cada fila. Agrega los nombres de artistas para cada canción
+        en forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Edit Data Table by Hand_2019: Visualiza la tabla de datos y haz clic en
+        editar siguiente a cada fila. Agrega los nombres de artistas para cada canción
+        en forma manual. (Haz clic para ver las instrucciones completas)
+      U4 - Exploring Data Tools - Template: Usa crearRegistro para agregar el objeto
+        canción como un registro para la tabla. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Exploring Data Tools - Template_2018: Usa crearRegistro para agregar el
+        objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Exploring Data Tools - Template_2019: Usa crearRegistro para agregar el
+        objeto canción como un registro para la tabla. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - accessingPropertiesInArray: Accede a las propiedades de los objetos
+        almacenados en un arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - accessingPropertiesInArray_2018: Accede a las propiedades de
+        los objetos almacenados en un arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - accessingPropertiesInArray_2019: Accede a las propiedades de
+        los objetos almacenados en un arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - arraysOfObjects: Crea un arreglo llamado "estudiantes" y agrega
+        los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - arraysOfObjects_2018: Crea un arreglo llamado "estudiantes" y
+        agrega los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - arraysOfObjects_2019: Crea un arreglo llamado "estudiantes" y
+        agrega los 5 objetos de estudiante al arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - createContactObject: Construye un nuevo objeto de las entradas
+        de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - createContactObject_2018: Construye un nuevo objeto de las entradas
+        de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - createContactObject_2019: Construye un nuevo objeto de las entradas
+        de usuario y adjúntalo a tu arreglo. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - createContactsData: Agrega valores los tres objetos de contacto
+        brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactsData_2018: Agrega valores los tres objetos de contacto
+        brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createContactsData_2019: Agrega valores los tres objetos de contacto
+        brindados en el código de arranque. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation: Crea un objeto de estudiante propio. Agrega
+        propiedades a tu objeto, de a uno a la vez, mediante notación de puntos. (Haz
+        clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation_2018: Crea un objeto de estudiante propio.
+        Agrega propiedades a tu objeto, de a uno a la vez, mediante notación de puntos.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createDotNotation_2019: Crea un objeto de estudiante propio.
+        Agrega propiedades a tu objeto, de a uno a la vez, mediante notación de puntos.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - createObject: Crea un objeto con, al menos, 3 propiedades y muéstralo
+        en la Consola de depuración. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation: Usa la notación de puntos para mostrar propiedades
+        individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation_2018: Usa la notación de puntos para mostrar propiedades
+        individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - dotNotation_2019: Usa la notación de puntos para mostrar propiedades
+        individuales del objeto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - eventHandlersToSwitchScreen: Adjunta controladores de eventos
+        a los botones "Agregar contacto" y "Atrás" que le permitan al usuario alternar
+        pantallas. (Haz clic para ver las instrucciones completas)
       U4 - Objects - eventParameter: Activa el evento del teclado y del ratón, y examina
         los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede
         ser la mejor manera de almacenar esta información? (Haz clic para ver las
@@ -6071,6 +7441,139 @@ es-MX:
         y examina los objetos de evento que se muestran en la consola. ¿Por qué un
         objeto puede ser la mejor manera de almacenar esta información? (Haz clic
         para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp: Usa la aplicación Contactos y luego agrega
+        un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp_2018: Usa la aplicación Contactos y luego
+        agrega un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - exemplarContactsApp_2019: Usa la aplicación Contactos y luego
+        agrega un contacto propio. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - loopingArray: Haz un bucle sobre tu arreglo de estudiantes e
+        imprime el nombre de cada estudiante. (Haz clic para ver las instrucciones
+        completas).
+      U4 - Objects - loopingArray2: Haz un bucle sobre tu arreglo de estudiantes e
+        imprime el nombre y califica a cada estudiante. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - loopingCompoundConditions: Haz un bucle sobre el arreglo de estudiantes
+        y muestra la información de estudiantes que están presentes y en el grado
+        11. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - loopingConditions: Haz un bucle sobre el arreglo de objetos de
+        estudiantes y muestra los nombres de cada estudiante que está presente en
+        clase. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues: Crea un controlador de eventos para el botón "Guardar
+        contacto" que muestre los contenidos de los 4 campos de entrada de texto en
+        la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues_2018: Crea un controlador de eventos para el botón
+        "Guardar contacto" que muestre los contenidos de los 4 campos de entrada de
+        texto en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - pullValues_2019: Crea un controlador de eventos para el botón
+        "Guardar contacto" que muestre los contenidos de los 4 campos de entrada de
+        texto en la consola. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode: Familiarízate con el código de arranque y los
+        elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode_2018: Familiarízate con el código de arranque
+        y los elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - readStarterCode_2019: Familiarízate con el código de arranque
+        y los elementos de la IU brindada. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow: Agrega un código a tu controlador de eventos
+        para el botón "Guardar contacto" para que cuando se agregue un nuevo contacto,
+        las entradas se eliminen, la pantalla cambie y se muestre el contacto correcto.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow_2018: Agrega un código a tu controlador de
+        eventos para el botón "Guardar contacto" para que cuando se agregue un nuevo
+        contacto, las entradas se eliminen, la pantalla cambie y se muestre el contacto
+        correcto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - resetIndexAndShow_2019: Agrega un código a tu controlador de
+        eventos para el botón "Guardar contacto" para que cuando se agregue un nuevo
+        contacto, las entradas se eliminen, la pantalla cambie y se muestre el contacto
+        correcto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1: Agrega un código a la función mostrarContactoActual
+        para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1_2018: Agrega un código a la función mostrarContactoActual
+        para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact1_2019: Agrega un código a la función mostrarContactoActual
+        para mostrar el nombre del contacto almacenado en el índiceActual de tu arreglo.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2: Agrega un número de teléfono y texto de fecha de
+        cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2_2018: Agrega un número de teléfono y texto de fecha
+        de cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact2_2019: Agrega un número de teléfono y texto de fecha
+        de cumpleaños a tu área de texto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3: Muestra la información de imagen para cada contacto.
+        (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3_2018: Muestra la información de imagen para cada
+        contacto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showContact3_2019: Muestra la información de imagen para cada
+        contacto. (Haz clic para ver las instrucciones completas)
+      U4 - Objects - showSampleImage: Adjunta un controlador de eventos a la entrada
+        de texto de la URL de la imagen para que el usuario pueda confirmar que su
+        imagen funcionará según lo esperado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - showSampleImage_2018: Adjunta un controlador de eventos a la
+        entrada de texto de la URL de la imagen para que el usuario pueda confirmar
+        que su imagen funcionará según lo esperado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - showSampleImage_2019: Adjunta un controlador de eventos a la
+        entrada de texto de la URL de la imagen para que el usuario pueda confirmar
+        que su imagen funcionará según lo esperado. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Objects - writeWrap: Usa la función de envolver para impedir que índiceActual
+        abandone los límites de tu arreglo. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2: Coloca un comando de console.log debajo del comando
+        leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2_2018: Coloca un comando de console.log debajo del comando
+        leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.2_2019: Coloca un comando de console.log debajo del comando
+        leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3: Agrega un comando de console.log dentro de la función
+        de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3_2018: Agrega un comando de console.log dentro de la función
+        de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1.3_2019: Agrega un comando de console.log dentro de la función
+        de devolución de llamada. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1: Usa console.log para mostrar los registros devueltos por
+        una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1_2018: Usa console.log para mostrar los registros devueltos
+        por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 1_2019: Usa console.log para mostrar los registros devueltos
+        por una llamada a leerRegistros. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2: Cambia el nombre de la tabla para que los registros sean
+        leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2_2018: Cambia el nombre de la tabla para que los registros
+        sean leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 2_2019: Cambia el nombre de la tabla para que los registros
+        sean leídos de la nueva tabla. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - 3: Cambia el nombre de la tabla en un comando leerRegistros
+        para leer desde una tabla que no existe. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 3_2018: Cambia el nombre de la tabla en un comando leerRegistros
+        para leer desde una tabla que no existe. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 3_2019: Cambia el nombre de la tabla en un comando leerRegistros
+        para leer desde una tabla que no existe. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 4.1: Usa índices y notación de puntos para referir valores
+        en la respuesta de la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 4.1_2018: Usa índices y notación de puntos para referir valores
+        en la respuesta de la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 4.1_2019: Usa índices y notación de puntos para referir valores
+        en la respuesta de la base de datos. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - 4: Imprime cada retorno de registro desde la llamada leerRegistros
+        individualmente. (Haz clic para ver las instrucciones completas)
+      U4 - Read Record - part 1 - template: Usa console.log para mostrar los registros
+        devueltos por una llamada a leerRegistros. (Haz clic para ver las instrucciones
+        completas)
+      U4 - Read Record - part 1 - template_2018: Usa console.log para mostrar los
+        registros devueltos por una llamada a leerRegistros. (Haz clic para ver las
+        instrucciones completas)
+      U4 - Read Record - part 1 - template_2019: Usa console.log para mostrar los
+        registros devueltos por una llamada a leerRegistros. (Haz clic para ver las
+        instrucciones completas)
       U4 Model App: Usa el Modo Diseño para agregar un botón rojo grande a tu pantalla.
         (Haz clic para ver las instrucciones completas).
       U4 Model App_2018: Usa el Modo Diseño para agregar un botón rojo grande a tu
@@ -6094,6 +7597,18 @@ es-MX:
         y examina los objetos de evento que se muestran en la consola. ¿Por qué un
         objeto puede ser la mejor manera de almacenar esta información? (Haz clic
         para ver las instrucciones completas)
+      U4L06 Data Storage 7: Añade una segunda pantalla a la aplicación de muestra
+        que hemos estado construyendo para capturar una imagen de un usuario. Vuelve
+        a la pantalla 1 después de que el objeto JSON haya sido almacenado en la tabla.
+      U4L15 Read Data 1: Ejecuta el nivel y observa lo que sucede. Luego edita el
+        código para que imprima una columna de información diferente.
+      U4L15 Read Data 2: |-
+        El estudiante debe crear una frase que agrupe todas las piezas de un registro.
+
+        \<<Name>> tiene \<<Age>> años y le gusta \<<Food>>
+      U4L15 Read Data 3: Imprime la oración mediante el primer objeto JSON del arreglo
+      U4L15 Read Data 4: Usa un registro aleatorio de la lista de registros para mostrar
+        tu oración.
       U5 if-else-if movie example: Añade una sentencia `si no-si` para decirle al
         usuario si sus predicciones son altas o bajas en lugar de simplemente incorrectas.
         (Haz clic para ver las instrucciones completas)
@@ -6103,6 +7618,60 @@ es-MX:
       U5 if-else-if movie example_2019: Añade una sentencia `si no-si` para decirle
         al usuario si sus predicciones son altas o bajas en lugar de simplemente incorrectas.
         (Haz clic para ver las instrucciones completas)
+      U6 - Final Project - Project Level: Construye tu proyecto final aquí. (Haz clic
+        para ver las instrucciones completas)
+      U6 - Final Project - Project Level_2018: Construye tu proyecto final aquí. (Haz
+        clic para ver las instrucciones completas)
+      U6 - Final Project - Project Level_2019: Construye tu proyecto final aquí. (Haz
+        clic para ver las instrucciones completas)
+      U6 - updateRecord - Callback Success Parameter: Añade un bloque si-si no dentro
+        de la función de devolución de llamada para actualizarRegistro. (Haz clic
+        para ver las instrucciones completas)
+      U6 - updateRecord - Callback Success Parameter_2018: Añade un bloque si-si no
+        dentro de la función de devolución de llamada para actualizarRegistro. (Haz
+        clic para ver las instrucciones completas)
+      U6 - updateRecord - Callback Success Parameter_2019: Añade un bloque si-si no
+        dentro de la función de devolución de llamada para actualizarRegistro. (Haz
+        clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit UI: Configura los elementos de la interfaz
+        de usuario para editar contactos. (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit UI_2018: Configura los elementos de la interfaz
+        de usuario para editar contactos. (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit UI_2019: Configura los elementos de la interfaz
+        de usuario para editar contactos. (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit event handler: Escribe gestores de eventos
+        para los elementos de la interfaz de usuario de edición de contactos. (Haz
+        clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit event handler_2018: Escribe gestores de
+        eventos para los elementos de la interfaz de usuario de edición de contactos.
+        (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Edit event handler_2019: Escribe gestores de
+        eventos para los elementos de la interfaz de usuario de edición de contactos.
+        (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Save edited contact: Utiliza actualizarRegistro
+        para almacenar las ediciones del usuario en la base de datos. (Haz clic para
+        ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Save edited contact_2018: Utiliza actualizarRegistro
+        para almacenar las ediciones del usuario en la base de datos. (Haz clic para
+        ver las instrucciones completas)
+      U6 - updateRecord - Contacts - Save edited contact_2019: Utiliza actualizarRegistro
+        para almacenar las ediciones del usuario en la base de datos. (Haz clic para
+        ver las instrucciones completas)
+      U6 - updateRecord - Default Block: Usa actualizarRegistro para cambiar el registro
+        de "Ojo del Tigre." (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Default Block_2018: Usa actualizarRegistro para cambiar
+        el registro de "Ojo del Tigre." (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Default Block_2019: Usa actualizarRegistro para cambiar
+        el registro de "Ojo del Tigre." (Haz clic para ver las instrucciones completas)
+      U6 - updateRecord - Update Nonexistent Record: Cambia el ID de canciónParaActualizar
+        para forzar actualizarRegistro para fallar. (Haz clic para ver las instrucciones
+        completas)
+      U6 - updateRecord - Update Nonexistent Record_2018: Cambia el ID de canciónParaActualizar
+        para forzar actualizarRegistro para fallar. (Haz clic para ver las instrucciones
+        completas)
+      U6 - updateRecord - Update Nonexistent Record_2019: Cambia el ID de canciónParaActualizar
+        para forzar actualizarRegistro para fallar. (Haz clic para ver las instrucciones
+        completas)
       Underground Avoiding Lava: Hay lava bajo algunos de estos bloques. Tendrás que
         cubrirlos antes de seguir avanzando. Aquí te será útil un comando "si". Añade
         un comando "avanzar" en el lugar correcto para extraer los recursos de estos
@@ -6140,11 +7709,132 @@ es-MX:
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
       Unicorn Tag: Echa un vistazo a este proyecto. ¿Puedes ver cómo se hizo?
+      Valentine_artist2_01: Programa al artista para dibujar algo de hierba para el
+        bicho del amor.
+      Valentine_artist_01: Ayuda al artista a terminar su corazón de llama.
+      Valentine_playlab_01: 'Programa Kiki (Actor 1) para moverse a la izquierda y
+        a la derecha cuando se presionan las flechas de izquierda y derecha. Cuando
+        se haga clic en Kiki, debe arrojar corazones hacia sus amigos. '
       Vigenere: Prueba
       Virtual Pet 1 Predict: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
+      Virtual Pet 1 Predict_2019: ¿Qué crees que ocurrirá al hacer clic en "▶ Ejecutar"?
       Virtual Pet 1 Predict_simple: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
+      Virtual Pet 1 fix: ¿Qué crees que sucederá si presionas "Ejecutar" y luego haces
+        clic en ella?
+      Virtual Pet 1: ¿Qué crees que sucederá si presionas "Ejecutar" y luego haces
+        clic en ella?
+      Virtual Pet 1_2019: Lee y ejecuta el código a continuación, luego observa lo
+        que hace la mascota. Intenta cambiar parte del código para producir resultados
+        diferentes. Cuando hayas terminado, haz clic en **Finalizar**.
+      Virtual Pet 1_simple: ¿Qué crees que sucederá si presionas "Ejecutar" y luego
+        haces clic en ella?
+      Virtual Pet 2 - Validated (Ram): Crea un **evento** para que cuando Geraldine
+        toca el charco, su color cambie a marrón.
+      Virtual Pet 2 - Validated: Crea un **evento** para que cuando Geraldine toca
+        el charco, su color cambie a marrón.
+      Virtual Pet 2: Crea un **evento** para que cuando Geraldine toca el charco,
+        su color cambie a marrón.
+      Virtual Pet 2_2019: "¡Crea tu propia mascota virtual! Haz clic en la pestaña
+        **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota virtual.
+        En el código a continuación, cambia el disfraz de la mascota sprite por el
+        tuyo."
+      Virtual Pet 2_simple: Crea un **evento** para que cuando Geraldine toca la tierra,
+        su color cambie a marrón.
+      Virtual Pet 2_simple_clone: Crea un **evento** para que cuando Geraldine toca
+        la tierra, su color cambie a marrón.
+      Virtual Pet 3: Añade un nuevo sprite de jabón a la pantalla. ¿Puedes hacerlo
+        para que cuando la jirafa y el jabón se toquen, la jirafa vuelva a su color
+        normal?
+      Virtual Pet 3_2019: Añade un nuevo sprite a la pantalla, luego dale un disfraz
+        que parezca alimento que le gusta comer a tu mascota.
+      Virtual Pet 3_simple: Añade un nuevo sprite de jabón a la pantalla. ¿Puedes
+        hacerlo para que cuando la jirafa y el jabón se toquen, la jirafa vuelva a
+        su color normal?
+      Virtual Pet 4: Añade un comportamiento a tu jabón para que sea arrastrable,
+        luego arrástralo para limpiar la jirafa.
+      Virtual Pet 4_simple: Añade un comportamiento a tu jabón para que sea arrastrable,
+        luego arrástralo para limpiar la jirafa.
+      Virtual Pet 5 - Validated: Añade acciones a cada evento para que cuando la jirafa
+        choque con cada sprite, se reduzca por 5.
+      Virtual Pet 5: Añade acciones a cada evento para que cuando la jirafa choque
+        con cada sprite, se reduzca por 5.
+      Virtual Pet 5_2019: Añade un sprite para comida que a tu mascota no le gusta
+        comer. Haz un evento que haga que este alimento salte a una ubicación aleatoria
+        cuando tu mascota lo toca.
+      Virtual Pet 5_simple: Añade acciones a cada evento para que cuando la jirafa
+        choque con cada sprite, se reduzca por 5.
+      Virtual Pet 6: Añade una manzana que devuelve la jirafa al tamaño normal cuando
+        se toquen.
+      Virtual Pet 6_2019: Establece la variable `felicidad` a 0 cuando el programa
+        comienza. Cuando tu mascota come comida que le gusta, cambia `felicidad` por
+        1. Cuando tu mascota come comida no le gusta, cambia `felicidad` por -1.
+      Virtual Pet 6_simple: Añade una manzana que devuelve la jirafa al tamaño normal
+        cuando se toquen.
+      Virtual Pet 7_2019: |-
+        Imprime el nivel de felicidad de tu mascota cada vez que come alimento. Usa este bloque, que se encuentra en la categoría de caja de herramientas "Mundo":
+        <xml>
+        <block type="gamelab_printText" block-text="print text block">
+        <value name="TEXT">
+        <block type="text_join_simple" inputcount="2">
+        <value name="ADD0">
+        <block type="text">
+
+        <title name="TEXT">Mi nivel de felicidad: </title>
+        </block>
+        </value>
+        <value name="ADD1">
+        <block type="variables_get">
+        <title name="VAR">felicidad</title>
+        </block>
+        </value>
+        </block>
+        </value>
+        </block></xml>
+      Virtual Pet 8_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga?
+        ¡Prueba lo que quieras!"
+      Virtual Pet Freeplay: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
+      Virtual Pet Freeplay_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota
+        haga? ¡Prueba lo que quieras!"
+      Virtual Pet Freeplay_simple: 'Juego libre: ¿Qué más puedes lograr que tu jirafa
+        haga? '
+      Virtual Pet Template_2019: "¡Crea tu propia mascota virtual! Haz clic en la
+        pestaña **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota
+        virtual. En el código a continuación, cambia el disfraz de la mascota sprite
+        por el tuyo."
+      WhileAdventure: Nuestra aventurera quiere recoger monedas. ¿Puedes ayudarla
+        a agarrar la mayor cantidad que pueda usando solo un `eliminar 1 bloque`?
+      'Widget: Black and White Pixelation': "¡Ahora haz tu propia imagen! Hemos empezado
+        con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que
+        te diviertas pixelando!"
+      'Widget: Black and White Pixelation_2018': "¡Ahora haz tu propia imagen! Hemos
+        empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras.
+        ¡Que te diviertas pixelando!"
+      'Widget: Black and White Pixelation_2019': "¡Ahora haz tu propia imagen! Hemos
+        empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras.
+        ¡Que te diviertas pixelando!"
+      'Widget: Color Pixelation': 'Requisitos: El icono debe ser de 16 x 16 pixeles.
+        Debes utilizar el Widget Pixelation para codificar los bits de información
+        de color. La imagen debe codificarse con al menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2018': 'Requisitos: El icono debe ser de 16 x 16 pixeles.
+        Debes utilizar el Widget Pixelation para codificar los bits de información
+        de color. La imagen debe codificarse con al menos 12 bits por pixel.'
+      'Widget: Color Pixelation_2019': 'Requisitos: El icono debe ser de 16 x 16 pixeles.
+        Debes utilizar el Widget Pixelation para codificar los bits de información
+        de color. La imagen debe codificarse con al menos 12 bits por pixel.'
       XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas de
         unidades
+      aE1: "¡Has elegido crear una servilleta cuadrada! \n\nPara terminar, dibuja
+        un cuadrado con lados de 20 pixeles. "
+      aE2: Si pones tu bucle cuadrado dentro de otro bucle, lo llamamos "bucle anidado".
+        ¿Qué necesitas agregar a tu bucle externo para asegurarte de que las 14 servilletas
+        se alinean una al lado de la otra?
+      aE3: "¡Tenemos que tener un mantel!  \n\nToma tu fila de 14 servilletas y cóselas
+        juntas con otro **bucle externo** para hacer una cobertura para nuestra mesa."
+      aE3alternate: Alternativa
+      aE3alternateB: Alternativa
+      aE4: Alternativa
+      aE5: Ejemplo de desafío mediante el uso de la forma de nivel de dificultad más
+        alta.
       aE7: Si copia ese bucle y gira a la izquierda en lugar de la derecha, ¿qué pasa?
         ¿Puedes repetir eso para dibujar esta ola?
       aE8: Ahora repitamos todo eso cuatro veces para crear este cuadro. Cuidado con
@@ -7351,7 +9041,7 @@ es-MX:
       courseC_artist_loops1a_2018: 'Lleva al artista al centro del área de juego,
         y luego dibuja un pájaro con un sticker. '
       courseC_artist_loops1a_2019: 'Lleva al artista al centro del área de juego,
-        y luego dibuja un pájaro con un sticker. '
+        y luego dibuja un sticker. '
       courseC_artist_loops1b_2019: 'Agrega un comando `girar` a tu código para cambiar
         la orientación de tu sticker. '
       courseC_artist_loops2: Ahora que el zombie sabe por dónde ir, ¡ayúdalo a cavar
@@ -7368,13 +9058,14 @@ es-MX:
         que crezcan."
       courseC_artist_loops3a: "¡Ahora agrega un murciélago!"
       courseC_artist_loops3a_2018: "¡Ahora agrega un murciélago!"
-      courseC_artist_loops3a_2019: "¡Ahora agrega un murciélago!"
+      courseC_artist_loops3a_2019: "¡Ahora agrega un segundo sticker!"
       courseC_artist_loops4: "¡El zombie ha encontrado una granja vacía! ¿Puedes ayudarlo
         a estampar stickers de animales cada 100 pixeles alrededor del borde para
         darle vida?"
       courseC_artist_loops4a: Intenta saltar 75 pixeles hacia adelante.
       courseC_artist_loops4a_2018: Intenta saltar 75 pixeles hacia adelante.
-      courseC_artist_loops4a_2019: Intenta saltar 75 pixeles hacia adelante.
+      courseC_artist_loops4a_2019: Edita tu código para saltar entre los dibujos de
+        los dos stickers.
       courseC_artist_loops5: "¡Genial! Llegó el momento de hacer una cerca adentro
         para mantener a los animales afuera.   "
       courseC_artist_loops5a: "¡Prueba nuevos stickers!"
@@ -8989,17 +10680,12 @@ es-MX:
         ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
 
         Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
-      courseE_aboutme_4: |-
-        ¡Aquí está Thuy, el mejor amigo de Rikki!
-
-        Haz que Rikki comparta información SEGURA sobre ella cuando se hace clic en Thuy.
-      courseE_aboutme_5: "¡A Rikki le encanta el helado! Ella estaba buscando un disfraz
-        de cono de helado, pero lo más parecido que pudo encontrar fue... un jabón.
-        ¡Puaj! \n\nVamos a sorprenderla: **dibuja un traje de cono de helado** que
-        puede utilizar para ese sprite.\n\n**Crea un disfraz de cono de helado**\n\n-
-        \  Haz clic en la pestaña **Disfraces**.\n\n-   ¡Dibuja un cono de helado!\n\n-
-        \  ¡Reemplaza el disfraz de jabón del sprite con tu disfraz de cono de helado
-        en el código de abajo!"
+      courseE_aboutme_4: Agrega, al menos, dos nuevos sprites a tu póster. Estos sprites
+        deberían representar algo sobre ti mismo. Asigna disfraces personalizados
+        a estos sprites y luego haz una prueba.
+      courseE_aboutme_5: "¡Comparte información acerca de los sprites que acabas de
+        agregar! Cuando se les haga clic, imprime un poco de información SEGURA sobre
+        ellos."
       courseE_aboutme_6: |-
         El póster de Rikki se ve bien, ¡pero puede ser aún mejor!
 
@@ -9018,6 +10704,10 @@ es-MX:
         **hacer tu propio póster interactivo**.\n\nUsa disfraces, mensajes, eventos
         y comportamientos para contarle al mundo sobre ti. \n\nAl igual que Rikki,
         ¡recuerda compartir información SEGURA!"
+      courseE_aboutme_template: |-
+        ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
+
+        Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
       courseE_artist_concept1: 'Recrea esta imagen. '
       courseE_artist_concept1_2018: 'Recrea esta imagen. '
       courseE_artist_concept1_2019: 'Recrea esta imagen. '
@@ -10269,6 +11959,8 @@ es-MX:
         al cerdo!"
       grade1_maze_sequence7: "¡Es tu turno! ¿Qué tienes que hacer para que el pájaro
         llegue hasta el cerdo?"
+      grade1_maze_sequence8: "¡Depura este nivel agregando bloques para llevarme hasta
+        el cerdo!"
       grade1_maze_sequence9: "¡Evita el TNT para llevarme al cerdo!"
       grade1_maze_sequenceA: 'Desafío: muéveme alrededor del TNT para llevar al pájaro
         hasta el cerdo.'
@@ -10472,6 +12164,9 @@ es-MX:
         bloques posible
       grade3_bee_conditionals_new2a: Obtén todo el néctar con la menor cantidad de
         bloques posible.
+      grade3_bee_conditionals_new2b: Recoge todo el néctar. Sólo puedes recoger el
+        néctar de las flores, pero puedes revisar cualquier espacio para ver si hay
+        una flor.
       grade3_bee_conditionals_new3b: Recoge todo el néctar y haz toda la miel.
       grade3_bee_conditionals_quantum1: Mira si hay una flor debajo de la nube. Si
         hay una flor, recoge el néctar.
@@ -10631,6 +12326,12 @@ es-MX:
       grade4_artist_parameters_trianglesx: "¿Puedes completar este dibujo? Sugerencia:
         cada triángulo es 25 píxeles más grande que el último. El primer triángulo
         es de 25 píxeles de tamaño."
+      grade4_bee_conditionals_nested_loops: Recoge todo el néctar. Sólo puedes recoger
+        el néctar de las flores, pero puedes revisar cualquier espacio para ver si
+        hay una flor.
+      grade4_bee_conditionals_new1: Recoge todo el néctar. Sólo puedes recoger el
+        néctar de las flores, pero puedes revisar cualquier espacio para ver si hay
+        una flor.
       grade4_bee_conditionals_new3b: "¡Ah, oh! La abeja no está segura de si debería
         recoger el néctar o hacer miel. ¿Puedes ayudarla?"
       grade4_bee_conditionals_quantum1: La abeja no puede decir si se trata de una
@@ -10719,6 +12420,7 @@ es-MX:
       grade4_playlab_test2: Aquí está la función denominada "salto" que permite que
         tu personaje principal salte hasta 100 píxeles. Use la función salto para
         recoger todas las banderas.
+      grade4_prompt_test: Este es un nivel de laboratorio de juego de prueba.
       grade4_review_artist1: Hola, soy un artista. Puedes escribir código para hacerme
         dibujar cualquier cosa. Usa algunos bloques para hacerme dibujar sobre las
         líneas grises en la imagen. (Cada línea tiene 100 píxeles de largo)
@@ -11144,9 +12846,8 @@ es-MX:
       subgoal U3L2 Using Simple Commands: Dibuja un cuadrado de 1x1 arriba y a la
         izquierda de la posición inicial de la tortuga. Haga clic para ver las instrucciones
         completas.
-      subgoalU3L2_TurtleSquare_right: |-
-        Dibuja un cuadrado al frente y
-         a la derecha de la ubicación de inicio. (Haga clic para mostrar las instrucciones completas)
+      subgoalU3L2_TurtleSquare_right: Dibuja un cuadrado al frente y a la derecha
+        de la ubicación de inicio. (Haz clic para ver las instrucciones completas)
       timeforcs_demo_sl_1: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       timeforcs_demo_sl_2: Cambia el comportamiento dentro del bloque `spring comienza`
         para hacer que el extraterrestre comience a dar vueltas.

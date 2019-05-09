@@ -1,8 +1,8 @@
 ---
 title: Reporting and Evaluation
 nav: regional_partner_playbook_nav
+noindex: true
 ---
-<meta name="robots" content="noindex">
 <a id="top"></a>
 
 # Reporting and Evaluations
@@ -30,7 +30,7 @@ ________________
 <a id="roadmap"></a>
 <br/>
 ## **Regional Partner Annual Planning**
-The annual plan is one of the tools you will use to self-evaluate and improve in the main categories for success as a Regional Partner. 
+The annual plan is one of the tools you will use to self-evaluate and improve in the main categories for success as a Regional Partner.
 
 Find the annual plan template for your group:
 

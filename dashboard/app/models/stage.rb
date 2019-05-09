@@ -126,7 +126,6 @@ class Stage < ActiveRecord::Base
         script_id: script.id,
         script_name: script.name,
         script_stages: script.stages.to_a.size,
-        freeplay_links: script.freeplay_links,
         id: id,
         position: absolute_position,
         relative_position: relative_position,

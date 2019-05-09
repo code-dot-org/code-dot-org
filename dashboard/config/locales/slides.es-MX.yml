@@ -28,7 +28,7 @@ es-MX:
       7:
         image: notes/hoc1_7.jpg
         text: El lado izquierdo es el laberinto donde se ejecuta tu programa. Las
-          instrucciones para cada rompecabezas están debajo del laberinto.
+          instrucciones para cada desafío están debajo del laberinto.
       8:
         image: notes/hoc1_8.jpg
         text: La barra de herramientas del medio contiene los comandos para el Angry
@@ -41,8 +41,8 @@ es-MX:
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloque es una instrucción. Si arrastras el bloque "avanzar" a tu
-          espacio de trabajo y oprimes el botón "Ejecutar Programa", el pájaro se
-          mueve una casilla en el laberinto.
+          espacio de trabajo y presionas "Ejecutar programa", el pájaro se moverá
+          una casilla en el laberinto.
       11:
         image: notes/hoc1_11.jpg
         text: Para hacer más de una acción, puedes arrastrar muchos bloques en tu
@@ -50,11 +50,11 @@ es-MX:
           arriba hacia abajo.
       12:
         image: notes/hoc1_12.jpg
-        text: Si ejecutas un programa y quieres arreglarlo e intentar de nuevo, presiona
-          el botón "Reiniciar".
+        text: Si ejecutas un programa y quieres corregirlo e intentarlo de nuevo,
+          presiona el botón "Reiniciar".
       13:
         image: notes/hoc1_13.jpg
-        text: "¡Vamos por esos cerdos!"
+        text: "¡Vamos a conseguir esos cerdos!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -63,8 +63,8 @@ es-MX:
           más rápido."
       2:
         image: notes/stage5_2.jpg
-        text: En estos rompecabezas, serás un artista que dibuja una línea detrás
-          de ellos dondequiera que vayan.
+        text: En estos desafíos serás un artista que dibuja una línea detrás de ellos
+          dondequiera que vayan.
       3:
         image: notes/stage5_3.jpg
         text: Este bloque dice "avanzar 100 píxeles". Los píxeles son pequeños puntos
@@ -85,8 +85,8 @@ es-MX:
           que aplanar completamente su campo para iniciar la siembra de cultivos."
       2:
         image: notes/stage9_2.jpg
-        text: Tienes que ayudarla a quitar todos los montones de tierra y rellenar
-          todos los huecos.
+        text: Tienes que ayudarla a quitar todas las pilas de tierra y llenar todos
+          los hoyos.
       3:
         image: notes/stage9_3.jpg
         text: Los nuevos bloques eliminan una palada llena de tierra de un montón
@@ -160,20 +160,20 @@ es-MX:
       5:
         image: notes/hoc2_5.jpg
         text: Podemos poner el bloque "avanzar" dentro del bloque "repetir" y escribir
-          un número en el bloque para decirle cuántas veces repetirlo.
+          un número en el bloque para decirle cuántas veces tiene que repetirlo.
       6:
         image: notes/hoc2_6.jpg
-        text: 'Y esto es importante: puedes poner más de un comando dentro de un bloque
+        text: 'Algo importante: puedes poner más de un comando dentro de un bloque
           "repetir".'
       7:
         image: notes/hoc2_7.jpg
-        text: ¡Disfruta usando tu nuevo bloque "repetir"!
+        text: ¡Disfruta tu nuevo bloque "repetir"!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
         text: Hola, soy Chris. Antes de unirme a los Miami Heat, fui a Georgia Tech
-          a estudiar Ciencias de la Computación. Vamos a probar nuestro nuevo bloque,
-          el bloque "repetir hasta".
+          a estudiar Ciencias de la Computación. Vamos a probar nuestro nuevo bloque
+          "repetir hasta".
       2:
         image: notes/hoc3_2.jpg
         text: "¿Qué sucedería si no supiéramos cuánto debería moverse el pájaro para
@@ -324,7 +324,8 @@ es-MX:
           que ser de longitudes diferentes?"
       3:
         image: notes/stage15_3.jpg
-        text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
+        text: Podemos escribir todo ese código manualmente o usar una función con
+          parámetros.
       4:
         image: notes/stage15_4.jpg
         text: Para hacer esto, haz clic en la estrella azul sobre la definición de
@@ -342,12 +343,12 @@ es-MX:
           número.
       7:
         image: notes/stage15_7.jpg
-        text: Para usar tu función con parámetros, haz clic en la categoría funciones
-          y arrastra tu función "dibuja un triángulo con longitud".
+        text: Para usar tu función con parámetros, haz clic en la categoría de funciones
+          y arrastra tu función "dibujar un triángulo con longitud".
       8:
         image: notes/stage15_8.jpg
-        text: Ahora puedes usar el bloque matemáticas para introducir diferentes números
-          para dibujar triángulos de diferente tamaño.
+        text: Ahora puedes usar el bloque 'matemáticas' para ingresar diferentes números
+          y dibujar triángulos de diferente tamaño.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
@@ -362,11 +363,11 @@ es-MX:
           "repetir hasta", las declaraciones "si" y las "si si no".
       3:
         image: notes/hoc6_3.jpg
-        text: Si te gustó tu primera hora del código, visita code.org para continuar
-          tu educación en Ciencias de la Computación. Una vez que completes nuestro
-          curso de 20 horas, habrás dominado los fundamentos de la programación y
-          podrás empezar a aprender cómo escribir aplicaciones para teléfonos, instrucciones
-          para robots, juegos, o lo que quieras.
+        text: Si te gustó tu primera hora del código, ¡visita code.org para seguir
+          aprendiendo sobre Ciencias de la Computación! Una vez que que completes
+          nuestro curso de 20 horas, habrás dominado los aspectos básicos de la programación
+          y podrás empezar a aprender cómo escribir aplicaciones para teléfonos, instrucciones
+          para robots, juegos o lo que quieras.
       4:
         image: notes/hoc6_4.jpg
         text: 'La tecnología está cambiando todo lo que hacemos y no importa si eres
@@ -378,9 +379,9 @@ es-MX:
         text: "¡Mostrar notas estará disponible pronto!"
     frozen_intro:
       1:
-        text: Hola, mi nombre es Lindsey. Modelo, actúo y escribo mis propias aplicaciones.
-          Vamos a usar código para unirnos a Ana y Elsa en la exploración de la magia
-          y la belleza del hielo.
+        text: Hola, mi nombre es Lindsey. Soy modelo, actúo y escribo mis propias
+          aplicaciones. Vamos a usar código para unirnos a Ana y Elsa mientras exploran
+          la magia y la belleza del hielo.
       2:
         text: Vas a crear copos de nieve y patrones, mientras patinas sobre hielo,
           realizas un paisaje invernal que luego puedes compartir con tus amigos.
@@ -437,16 +438,14 @@ es-MX:
         text: Cualquier bloque de código que pones dentro del bloque "repetir" se
           repetirá en secuencia, tantas veces como quieras.
       4:
-        text: Para dibujar un cuadrado, puedes utilizar el bloque de "mover hacia
-          adelante" y "girar a la derecha" 4 veces. Pero la forma más fácil es decirle
-          a la computadora "mover hacia adelante" y "girar a la derecha 90 grados"
-          una sola vez y luego repetir este par de acciones 4 veces. Para hacer eso,
-          tienes que poner el bloque "mover hacia adelante" y el bloque "girar a la
-          derecha" dentro de un bloque "repetir".
+        text: Para dibujar un cuadrado, puedes utilizar los bloques "avanzar" y "girar
+          a la derecha" 4 veces. La forma más fácil es decirle a la computadora que
+          debe "avanzar" y "girar a la derecha 90 grados" una vez y luego repetir
+          ese par de acciones 4 veces. Para hacer eso, tienes que poner los bloques
+          "avanzar" y "girar a la derecha" dentro de un bloque "repetir".
       5:
         text: Recuerda que puedes cambiar el número del bloque "repetir" por cualquier
-          otro, y va a repetir lo que está dentro del bloque cuantas veces le hayas
-          indicado.
+          otro para que repita lo que está dentro del bloque esa cantidad de veces.
     frozen_functions:
       1:
         text: Hola, soy Chris Bosh. Soy un jugador de baloncesto profesional, y programé
@@ -470,7 +469,7 @@ es-MX:
         text: Puedes definir esto como una función llamada "crear un cuadrado"
       6:
         text: Ahora tienes un nuevo bloque que puedes utilizar varias veces para crear
-          múltiples cuadrados.
+          varios cuadrados.
       7:
         text: Muchas figuras sencillas pueden utilizarse para crear patrones más complejos.
           En el siguiente desafío, el código que has escrito recientemente para hacer
@@ -490,8 +489,8 @@ es-MX:
           cada nivel están escritas abajo.
       3:
         text: La zona media es la caja de herramientas, y cada uno de estos bloques
-          es un fragmento de código. El espacio en blanco a la derecha se llama el
-          espacio de trabajo y es donde construiremos nuestro programa.
+          es un fragmento de código. El área en blanco a la derecha se llama espacio
+          de trabajo; allí crearemos nuestro programa.
       4:
         text: Para empezar, necesitarás unir tus bloques al bloque naranja, llamado
           "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia
@@ -591,11 +590,11 @@ es-MX:
           Los eventos son una forma grandiosa de permitir al usuario manipular tu
           programa cuando quiera o lo necesite.
       4:
-        text: Suceden cosas a las que todos respondemos. Sentimos hambre y nos vamos
-          a la nevera. Escuchamos que el cartero viene y pone nuestro correo en el
-          buzón y luego vamos a obtener nuestro correo. Lo mismo pasa con los eventos
-          de pulsar un botón o mover una palanca de mando. Son algo que pasa que provocan
-          que hagamos algo.
+        text: Todo el tiempo suceden cosas que generan respuestas en nosotros. Si
+          sentimos hambre, vamos al refrigerador. Si escuchamos que el cartero pone
+          nuestro correo en el buzón, vamos a buscarlo. Lo mismo pasa con eventos
+          como pulsar un botón o mover el joystick. Son cosas que suceden y que nos
+          llevan a hacer algo.
       5:
         text: En los videojuegos, hay un evento llamado "Actualizar" y pasa 30 o 60
           veces por segundo. Para los programadores de videojuegos eso es casi tan
@@ -612,10 +611,10 @@ es-MX:
           programa. Pero si usted persiste, no conseguirá nada mejor y más emocionante
           para usted. La persistencia es el nombre del juego. Quédate, te va a encantar.
       2:
-        text: Esta lección se llama construir una base. En esta lección, vamos a trabajar
-          en una tarea que va a ser realmente difícil. Debes encontrar la manera de
-          hacer una estructura tan alta como uno de estos vasos y tiene que ser lo
-          suficientemente fuerte como para soportar el peso de un libro.
+        text: Esta lección se llama Construir un cimiento. En ella, vamos a trabajar
+          en una tarea que será realmente difícil. Debes encontrar la manera de crear
+          una estructura tan alta como uno de estos vasos y lo suficientemente fuerte
+          como para soportar el peso de un libro.
       3:
         text: Podría haber momentos en los que nuestra creación no funcione. Podría
           haber momentos en los que nos frustremos y queramos dejarlo. Podría haber
@@ -660,8 +659,8 @@ es-MX:
           en informática porque abrevian y simplifican nuestro trabajo.
     C1_happy_maps_unplugged:
       1:
-        text: Esta lección se llama Mapas Felices. Hoy vamos a ayudar a nuestro pequeño
-          amigo peludo Flurb a llegar a su fruta.
+        text: Esta lección se llama Mapas felices. Hoy vamos a ayudar a nuestro pequeño
+          amigo peludo Flurb a llegar hasta su fruta.
       2:
         text: Consigue que tu Flurb llegue a tu fruta. Para hacer eso necesitarás
           descubrir en qué dirección tiene que ir el Flurb, y dirigirla con las flechas.
@@ -670,8 +669,8 @@ es-MX:
       3:
         text: Para llegar ahí, haces un círculo en la dirección que tiene que ir.
       4:
-        text: Construye tu algoritmo pegando las flechas junto al mapa que estás intentando
-          resolver. El segundo es igual, pero hacia abajo.
+        text: Pega las flechas junto al mapa que estás intentando resolver para crear
+          tu algoritmo. El segundo es igual, pero hacia abajo.
       5:
         text: Es como programar con papel. ¡Y eso es todo!
     C1_maze_debugging:
@@ -692,8 +691,8 @@ es-MX:
           depurar la solución y arreglarla. ¿Qué falló? Te darás cuenta de que necesitabas
           seguir yendo al oeste una casilla más.
       4:
-        text: Vamos a arreglarlo añadiendo otro bloque de ir al oeste y dando a ejecutar
-          para ver si has acertado. ¡Sí, has acertado!
+        text: Vamos a arreglarlo. Añade otro bloque 'ir hacia el oeste' y presiona
+          ejecutar para ver si has acertado. ¡Sí, lo has logrado!
     C1_maze_intro_sequencing:
       1:
         text: Para este rompecabezas necesitarás llevar el pájaro al cerdo. Mira el
@@ -728,8 +727,8 @@ es-MX:
           para llevar a nuestros amigos desde la salida con la brújula hasta la meta,
           con la cara sonriente.
       2:
-        text: Pero la cara sonriente está boca abajo, y sólo una persona sabe como
-          llegar hasta ella. Vamos a empezar este programa.
+        text: Pero la cara sonriente está boca abajo, y solo una persona sabe cómo
+          llegar hasta allí. Vamos a comenzar este programa.
       3:
         text: Un programa es un algoritmo que ha sido codificado en algo que se puede
           ejecutar en una máquina. La mayoría de nosotros piensa en un programa como
@@ -738,8 +737,8 @@ es-MX:
           programa de juego o incluso un robot para hacer las cosas para usted.
     C1_going_places_safely:
       1:
-        text: Me llamo Jeremiah. Hola, tengo siete años. Me encanta jugar con la computadora
-          de mamá, pero siempre le pido permiso primero. "Mami, ¿puedo usar la computadora?
+        text: Hola, me llamo Jeremiah. Tengo siete años. Me encanta jugar con la computadora
+          de mamá, pero siempre le pido permiso. "Mami, ¿puedo usar la computadora?
           ¡Claro que sí, cielo!"
       2:
         text: Me encanta la computadora de mamá porque me puedo meter en Internet.
@@ -809,10 +808,10 @@ es-MX:
           es que si sigues las instrucciones en orden, puedes hacer algo que antes
           no sabías cómo hacer. Es como una receta.
       3:
-        text: Hoy vamos a sembrar nuestras propias semillas utilizando un algoritmo.
-          Crea tus propios algoritmos para apartar las fotos. Seleccione las imágenes
-          que muestran los pasos para plantar una semilla y organiza las fotografías
-          en el orden correcto.
+        text: Hoy vamos a sembrar nuestras propias semillas mediante un algoritmo.
+          Divide las fotos para crear tu propio algoritmo. Selecciona las imágenes
+          que muestran los pasos para sembrar una semilla y organízalas en el orden
+          correcto.
       4:
         text: Ahora, es el momento para ver si el algoritmo funciona. Siga atentamente
           los pasos en el algoritmo. ¿Están en el orden correcto? ¿Has tenido éxito
@@ -1046,9 +1045,9 @@ es-MX:
           a mano.
       2:
         text: Un algoritmo es una lista de instrucciones necesarias para completar
-          una tarea. Vamos a seguir este set de instrucciones para hacer el tazón.
-          Los algoritmos son muy útiles cuando necesitas que otra personas entienda
-          como hacer algo.
+          una tarea. Vamos a seguir este conjunto de instrucciones para crear el tazón.
+          Los algoritmos son muy útiles si necesitas que otra persona entienda cómo
+          hacer algo.
       3:
         text: Si estás escribiendo un algoritmo para una computadora, tienes que dividir
           el problema en pequeños pasos. Por lo tanto, termina esta fila y luego pasa
@@ -2431,13 +2430,13 @@ es-MX:
           приятели или да играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
-        text: Hola, soy Kathleen Kennedy, la productora de Star Wars, El Despertar
-          de La Fuerza. Hoy trabajarás con una de nuestras estrellas, el BB-8. BB-8
+        text: 'Hola, soy Kathleen Kennedy, productora de Star Wars: El Despertar de
+          la Fuerza. Hoy trabajarás con BB-8, uno de nuestros protagonistas. BB-8
           es un androide esférico. Todo lo que hace, cada movimiento que ejecuta,
-          es controlado por un programa de ordenador. La informática tiene impacto
-          en cualquier industria, desde el marketing hasta la atención sanitaria,
-          o en una película. De hecho, cientos de ingenieros informáticos trabajaron
-          conjuntamente para hacer una película como El Despertar de La Fuerza.
+          es controlado por un programa informático. Las ciencias de la computación
+          tienen influencia en todas las industrias, desde el marketing hasta la salud
+          o una película. De hecho, cientos de ingenieros informáticos trabajaron
+          juntos para hacer una película como El Despertar de la Fuerza.'
       2:
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
           de desarrollo de criaturas y animación. En El Despertar de la Fuerza, soy
@@ -2912,226 +2911,231 @@ es-MX:
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
-        text: Mi nombre es Mei'lani. Soy una pasante en code.org y soy también estudiante
-          de ciencias de la computación. Me gusta porque es muy creativa. Puedo ser
-          la que soluciona los problemas y decidir como funciona todo. Pero también
-          logro ser la diseñadora. Puedo ser la artista y determinar todo desde el
-          lado creativo.
+        text: Mi nombre es Mei'lani. Soy pasante en code.org y estudiante de ciencias
+          de la computación. Me gusta esta ciencia porque es muy creativa. Puedo ser
+          la que soluciona los problemas y hacer que todo funcione como yo quiero.
+          Pero también puedo ser la diseñadora, la artista, y tomar decisiones desde
+          el lado creativo.
       2:
         image: notes/applab_intro_welcome_2.png
-        text: "¡Hacer tus propias aplicaciones es muy fácil con App Lab! Sin importar
-          que seas nuevo programando o si tienes alguna experiencia. App Lap es una
-          buena herramienta para la creación de nuevas aplicaciones que puedes compartir
-          con tus amigos."
+        text: "¡Crear tus propias aplicaciones es muy fácil con el Laboratorio de
+          aplicaciones! No importa si recién comienzas a programar o si tienes algo
+          de experiencia, el Laboratorio de aplicaciones es una herramienta genial
+          para crear nuevas aplicaciones que puedes compartir con tus amigos."
       3:
         image: notes/applab_intro_welcome_3.png
-        text: Esta es App Lab. Del lado izquierdo se encuentra tu aplicación. Del
-          lado derecho se encuentra el código que hará que se ejecute. Construyes
-          tu programa arrastrando en bloques desde la caja de herramientas. Para empezar
-          sólo necesitas un bloque denominado 'setProperty'.
+        text: Este es el Laboratorio de aplicaciones. A la izquierda se encuentra
+          tu aplicación. A la derecha, el código que hará que se ejecute. Arrastra
+          bloques desde la caja de herramientas para crear tu programa. Para empezar
+          solo necesitas un bloque llamado 'establecerPropiedad'.
       4:
         image: notes/applab_intro_welcome_4.png
-        text: El bloque de configuración de propiedades cambia la apariencia de los
-          elementos en su pantalla. Como los botones, rótulos, o incluso la pantalla
-          en sí. Primero necesitas decidir cuál elemento deseas cambiar. Si pasas
-          el ratón por un elemento en su aplicación podrás ver el nombre o el ID aquí.
-          Luego ve a seleccionar ese ID desde el primer menú.
+        text: El bloque 'establecerPropiedad' cambia la apariencia de los elementos
+          en tu pantalla, como los botones, las etiquetas, o incluso la pantalla misma.
+          Primero necesitas decidir qué elemento quieres cambiar. Si pasas el cursor
+          sobre un elemento de tu aplicación, podrás ver el nombre o el ID aquí. Luego,
+          selecciona ese ID en el primer menú desplegable.
       5:
         image: notes/applab_intro_welcome_5.png
-        text: Los elementos tienen un montón de propiedades. Puedes cambiar su color
-          de texto, tamaño de fuente o color de fondo. Puedes ver la lista completa
-          y seleccionar qué propiedad deseas cambiar en el segundo menú.
+        text: Los elementos tienen muchas propiedades que puedes cambiar, como el
+          color del texto, el color de fondo o el tamaño de la fuente. Puedes ver
+          la lista completa y seleccionar qué propiedad deseas cambiar en el segundo
+          menú desplegable.
       6:
         image: notes/applab_intro_welcome_6.png
-        text: El último menú es donde escribirás el valor que deseas utilizar. El
-          bloque hará una sugerencia. Pero siempre puedes ingresar diferentes colores
+        text: En el último menú desplegable escribirás el valor que deseas utilizar.
+          El bloque hará una sugerencia. Pero siempre puedes ingresar diferentes colores
           o números.
       7:
         image: notes/applab_intro_welcome_7.png
-        text: 'Una vez que termines, el bloque se lee un poco como una oración: ''Establece
+        text: 'Una vez que termines, el bloque lee el bit como una oración: ''Establecer
           el color de fondo de button1 a verde''. Ejecútalo para ver los cambios que
-          se está construyendo en el código. Si reestableces puede arrastrar más bloques
-          para cambiar otras cosas acerca de tu aplicación. ¡Como el texto!'
+          haces en el código. Al reiniciar, puedes arrastrar más bloques para cambiar
+          otras cosas de tu aplicación, como el texto.'
       8:
         image: notes/applab_intro_welcome_8.png
-        text: Para este tutorial vamos a trabajar en modo de bloques pero App Lab
-          también te permite trabajar con texto.
+        text: Para este tutorial vamos a trabajar con el modo de bloques, pero el
+          Laboratorio de aplicaciones también te permite trabajar con texto.
       9:
         image: notes/applab_intro_welcome_9.png
-        text: De cualquier manera se va a estar programando en JavaScript, el lenguaje
+        text: De cualquier manera, estarás programando en JavaScript, el lenguaje
           de la web. Cada nivel tiene una meta, instrucciones y una imagen de lo que
           se pretende crear.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: Si alguna vez tienes dificultades, haz clic en la imagen y semostrará
-          exactamente cómo completar el nivel. Pero intenta hacerlo primero por tu
-          cuenta.
+        text: Si alguna vez tienes dificultades, puedes hacer clic en la imagen y
+          ver exactamente cómo completar el nivel. Pero intenta hacerlo primero por
+          tu cuenta.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Una vez que hayas completado la meta para este nivel haz clic en Terminar
-          para seguir adelante. ¡Esto es todo! ¡Selecciona el botón naranja "Continuar"
-          para ir al siguiente nivel y empezar tu aventura con App Lab!
+        text: Una vez que hayas completado la meta para este nivel, haz clic en Terminar
+          para seguir adelante. ¡Esto es todo! Presiona el botón naranja "Continuar"
+          para pasar al siguiente nivel y empezar tu aventura con el Laboratorio de
+          aplicaciones.
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
-        text: Las aplicaciones son geniales porque son como comenzar tu propio negocio,
-          es decir, diseñar todo desde el comienzo, administrarlo, y ser el dueño
-          de esta obra que acabas de crear con código.
+        text: Las aplicaciones son geniales porque son como comenzar tu propio negocio.
+          Es decir que puedes diseñar todo desde el comienzo, administrarlo y ser
+          el dueño de esta obra que acabas de crear gracias al código.
       2:
         image: notes/applab_intro_events_2.png
-        text: Ahora que puedes cambiar la apariencia de tu aplicación ¡hagámosla interactivo
-          respondiendo a eventos! Los eventos son acciones del usuario como hacer
-          clic al botón, moversé por el menú o sobre una imagen. Las aplicaciones
-          interactivas necesitan siempre responder a eventos, como reproducir un sonido
-          cuando hago clic este botón. Para hacer esto en App Lab se necesita usar
-          un nuevo bloque denominado 'onEvent'.
+        text: Ahora que puedes cambiar la apariencia de tu aplicación, ¡responde a
+          eventos para hacerla interactiva! Los eventos son acciones del usuario,
+          como hacer clic en un botón, moverse por un menú o pasar sobre una imagen.
+          Las aplicaciones interactivas necesitan formas de responder a eventos, como
+          reproducir un sonido cuando se hace clic en un botón. Para hacer esto en
+          el Laboratorio de aplicaciones, necesitas usar un nuevo bloque denominado
+          'enEvento'.
       3:
         image: notes/applab_intro_events_3.png
         text: Este programa configura la pantalla en azul. Yo quiero que la pantalla
-          se cambie a verde cuando haga clic en este botón. Primero necesitaré arrastrar
-          un bloque de onEvent. Pasando por el, sé que el nombre del botón es "bigButton"
-          así que lo seleccionaré en el primer menú desplegable.
+          cambie a verde cuando hago clic en este botón. Primero, necesitaré arrastrar
+          un bloque de enEvento. Si paso por encima de él, sabré que el nombre del
+          botón es "granBotón" y lo seleccionaré en el primer menú desplegable.
       4:
         image: notes/applab_intro_events_4.png
-        text: Luego seleccionare el tipo de evento. Hay un montón de opciones que
-          se pueden escoger pero ahora voy a dejarlo como un clic cualquiera.
+        text: Luego, seleccionaré el tipo de evento. Hay muchas opciones para escoger
+          pero voy a dejarlo como un clic normal.
       5:
         image: notes/applab_intro_events_5.png
-        text: 'Finalmente añadiré el código dentro del evento que cambiará el color
-          de fondo de la pantalla. Puedes leer este bloque como una oración: "En el
-          evento que se hace clic en el botón se ejecuta todo este código."'
+        text: 'Por último, voy a añadir el código dentro del evento para cambiar el
+          color de fondo de la pantalla. Puedes leer este bloque como una oración:
+          "En el evento en el que se hace clic en el botón se ejecuta todo este código".'
       6:
         image: notes/applab_intro_events_6.png
-        text: Probémoslo. Bloques afuera de un onEvent se ejecutan justo después así
-          que la pantalla empieza azul.
+        text: Vamos a probarlo. Los bloques fuera de un bloque 'enEvento' se ejecutan
+          justo después, para que la pantalla sea azul al comienzo.
       7:
         image: notes/applab_intro_events_7.png
-        text: Y cuando hago clic en el botón grande se ejecuta el código dentro de
-          mi onEvent y mi pantalla se pone verde.
+        text: Cuando hago clic en el botón grande, se ejecuta el código dentro de
+          mi bloque 'enEvento' y mi pantalla se pone verde.
       8:
         image: notes/applab_intro_events_8.png
         text: Si deseas cambiar más cosas después de este evento, como el texto en
-          la pantalla sólo añade más código al evento
+          la pantalla, solo tienes que agregar más código al bloque 'enEvento'
       9:
         image: notes/applab_intro_events_9.png
-        text: Para hacer que tu programa responda a más eventos, añade mas bloques
-          de onEvent. Solo asegúrate de no colocarlos uno dentro del otro. Ahora es
-          momento de intentarlo por tu propia cuenta. ¡Diviértete!
+        text: Para que tu programa responda a más eventos, añade mas bloques 'enEvento'.
+          Solo asegúrate de no colocar uno dentro del otro. Ahora es momento de intentarlo
+          por tu propia cuenta. ¡Diviértete!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
-        text: Ahora aprenderás sobre agregar imágenes y sonidos a tu aplicación. Empecemos
-          revisando las opciones de sonido.
+        text: Ahora aprenderás a agregar imágenes y sonidos a tu aplicación. Empecemos
+          con las opciones de sonido.
       2:
         image: notes/applab_intro_sounds_2.png
-        text: En la caja de herramientas encontrarás un nuevo bloque llamado "playSound".
-          Arrástralo al área de trabajo. Puedes seleccionar un sonido haciendo clic
-          en el menú desplegable y luego haciendo clic en "Escoger".
+        text: En la caja de herramientas encontrarás un nuevo bloque llamado "reproducirSonido".
+          Arrástralo al espacio de trabajo. Haz clic en el menú desplegable y luego
+          en "Elegir" para escoger un sonido y reproducirlo.
       3:
         image: notes/applab_intro_sounds_3.png
-        text: Desde aquí puedes subir un archivo de sonido de tu computadora, o buscando
-          un sonido desde la biblioteca de sonidos. La biblioteca de sonidos tiene
-          un montón de diferentes categorías como instrumentos, música de fondo o
-          animales.
+        text: Desde aquí puedes subir un archivo de sonido de tu computadora o buscar
+          un sonido en la biblioteca de sonidos. Esta biblioteca tiene muchas categorías
+          diferentes, como instrumentos, música de fondo o animales.
       4:
         image: notes/applab_intro_sounds_4.png
-        text: Una vez que tengas el sonido que deseas, haz clic en "Seleccionar".
-          Cuando este bloque se ejecuta, se reproducirá el sonido que elegiste.
+        text: Una vez que tengas el sonido que deseas, haz clic en "Elegir". El sonido
+          se reproducirá al ejecutar este bloque.
       5:
         image: notes/applab_intro_sounds_5.png
-        text: Para agregar imágenes a tus elementos puedes usar el bloque setProperty.
-          Selecciona las características de la imagen en el segundo menú desplegable
+        text: Puedes usar el bloque 'establecerPropiedad' para agregar imágenes a
+          tus elementos. Selecciona las propiedades de la imagen en el segundo menú
+          desplegable
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Luego selecciona "Elegir" del tercer menú.
+        text: Luego, selecciona "Elegir" en el tercer menú desplegable.
       7:
         image: notes/applab_intro_sounds_7.png
-        text: Desde aquí puedes subir una imagen desde tu computadora o puedes buscar
-          a través de una enorme biblioteca de iconos en la biblioteca de icono.
+        text: Desde aquí puedes subir una imagen de tu computadora o buscar en una
+          enorme biblioteca de íconos.
       8:
         image: notes/applab_intro_sounds_8.png
-        text: De vuelta en el modo de código usted puede usar el bloque "setProperty"
-          para cambiar el color de icono de tu icono. Una vez que hayas seleccionado
-          qué icono vas a usar haz clic en "Correr" para ver cómo se ve.
+        text: De vuelta en el código, puedes usar el bloque "establecerPropiedad"
+          para cambiar el color de tu ícono. Una vez que hayas seleccionado qué imagen
+          va a usar tu ícono, haz clic en "Ejecutar" para ver cómo se ve.
       9:
         image: notes/applab_intro_sounds_9.png
-        text: "¡Esto es todo a eso! Ahora puedes a empezar a agregar imágenes y sonidos
-          para hacer tus aplicaciones aún mas divertidas y dinámicas."
+        text: "¡Eso es todo! Ahora puedes a empezar a agregar imágenes y sonidos para
+          que tus aplicaciones sean aún más divertidas y dinámicas."
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
         text: Para crear tus propias aplicaciones, necesitarás empezar a diseñar pantallas
-          y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño de
+          y elementos desde cero. Puedes hacerlo fácilmente con el Modo Diseño del
           Laboratorio de aplicaciones.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Utilice el interruptor en la parte superior de su aplicación para entrar
-          en Modo de Diseño.
+        text: Utiliza el interruptor en la parte superior de tu aplicación para entrar
+          al Modo Diseño.
       3:
         image: notes/applab_intro_designmode_3.png
-        text: Puedes agregar nuevos elementos arrastrándolos a la pantalla. Puedes
-          moverlos a diferentes lugares y cambiar su tamaño arrastrando la esquina
-          inferior derecha.
+        text: Puedes arrastrar nuevos elementos a la pantalla para agregarlos. Muévelos
+          a diferentes lugares y arrastra la esquina inferior derecha para cambiar
+          su tamaño.
       4:
         image: notes/applab_intro_designmode_4.png
-        text: Para cambiar las propiedades de un elemento utiliza los controles a
-          la derecha. Por ejemplo, es muy fácil cambiar el texto, color y tamaño de
-          la fuente de este botón.
+        text: Utiliza los controles que se encuentran a la derecha para cambiar las
+          propiedades de un elemento. Por ejemplo, es muy fácil cambiar el texto,
+          color y tamaño de la fuente de este botón.
       5:
         image: notes/applab_intro_designmode_5.png
-        text: Cuando agregas un nuevo elemento a su pantalla obtendrá una identificación
-          genérica como button1. Es una buena idea cambiar el identificador de este
-          botón a algo más significativo como "botónDerecho". Así sabrás cuál es cuando
-          vaya al programa.
+        text: Los elementos nuevos que agregas a tu pantalla tendrán una identificación
+          genérica, como botón1. Te recomendamos cambiar esta identificación a algo
+          que tenga más sentido, como "botónDerecho". Así sabrás cuál es cuando estés
+          en el programa.
       6:
         image: notes/applab_intro_designmode_6.png
-        text: Si agregas un elemento a tu app por error, arrástralo fuera o presiona
-          la tecla borrar.
+        text: Si agregas un elemento a tu aplicación por error, arrástralo afuera
+          o presiona la tecla borrar.
       7:
         image: notes/applab_intro_designmode_7.png
-        text: Puedes añadir pantallas totalmente nuevas a tu app arrastrándolas en
-          un elemento de pantalla
+        text: Puedes arrastrar un elemento de la pantalla para añadir pantallas totalmente
+          nuevas a tu aplicación
       8:
         image: notes/applab_intro_designmode_8.png
-        text: Desde la lista de selección de arriba puedes rápidamente cambiar entre
-          las pantallas que creas.
+        text: Puedes alternar rápidamente entre las pantallas que creas desde el menú
+          desplegable en la parte superior.
       9:
         image: notes/applab_intro_designmode_9.png
-        text: Dentro de tu app, necesitarás una forma de alternar entre todas estas
-          pantallas, así que el bloque setScreen ha sido añadido a tu caja de herramientas.
-          Usa "setScreen" dentro del bloque "onEvent" para cambiar pantallas con un
-          click.
+        text: Como necesitarás una forma de alternar entre todas estas pantallas dentro
+          de tu aplicación, se añadió el bloque 'establecerPantalla' a tu caja de
+          herramientas. Usa "establecerPantalla" dentro del bloque "enEvento" para
+          cambiar de pantalla con el clic de un botón.
       10:
         image: notes/applab_intro_designmode_10.png
-        text: En los próximos niveles estarás trabajando en un solo proyecto. Primero
-          añadirás un botón y luego añadirás una nueva pantalla. Finalmente escribirás
-          código para que el botón cambie a la nueva pantalla.
+        text: En los próximos niveles trabajarás en un solo proyecto. Primero, añadirás
+          un botón y, luego, una nueva pantalla. Por último, escribirás código para
+          que el botón cambie a la nueva pantalla.
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
-        text: Ahora que has aprendido los fundamentos de App Lab como añadir botones,
-          sonido, imágenes, texto y nuevas pantallas puedes crear todo tipo de apps.
+        text: Ahora que has aprendido los aspectos básicos del Laboratorio de aplicaciones,
+          como añadir botones, sonido, imágenes, texto y nuevas pantallas, puedes
+          crear todo tipo de aplicaciones.
       2:
         image: notes/applab_intro_share_2.png
-        text: En el siguiente nivel encontrarás la app que acabas de construir. Con
-          un poco de creatividad puedes convertirla en un test de personalidad para
-          tus amigos, una carta de agradecimiento que puedes compartir con tu familia
-          o un juego de aventura que-puedas-elegir. Todas estas apps son solo una
-          combinación de las habilidades que ya has aprendido, y apuesto que puedes
-          venir con mucho más.
+        text: En el siguiente nivel encontrarás la aplicación que acabas de crear.
+          Con un poco de creatividad podrás convertirla en una prueba de personalidad
+          para tus amigos, una carta de agradecimiento que puedes compartir con tu
+          familia o un juego del tipo elige tu propia aventura. Todas estas aplicaciones
+          son solo una combinación de las habilidades que ya has aprendido, y apuesto
+          que puedes crear muchas más.
       3:
         image: notes/applab_intro_share_3.png
-        text: Una vez que hayas terminado con tu app puedes enviarla fácilmente a
-          tu teléfono y ver cómo ha quedado. Simplemente haz clic en "Compartir" e
-          introduce tu número de teléfono aquí.
+        text: Una vez que has terminado tu aplicación, puedes enviarla fácilmente
+          a tu teléfono y ver cómo ha quedado. Solo tienes que hacer clic en "Compartir"
+          e ingresar tu número de teléfono aquí.
       4:
         image: notes/applab_intro_share_4.png
-        text: Recibirás un mensaje de texto que te permitirá abrir tu app instantáneamente.
+        text: Recibirás un mensaje de texto que te permitirá abrir tu aplicación de
+          inmediato.
       5:
         image: notes/applab_intro_share_5.png
-        text: También puedes compartir un enlace a tu app en los medios sociales o
-          enviarla a la galería de code.org para que otras personas puedan jugar y
-          compartir.
+        text: También puedes compartir un enlace a tu aplicación en las redes sociales
+          o publicarla en la galería pública de code.org para que otras personas puedan
+          jugar con ella y compartirla.
       6:
         image: notes/applab_intro_share_6.png
         text: Estas son solo algunas de las cosas que el Laboratorio de aplicaciones
@@ -3162,7 +3166,7 @@ es-MX:
           ¿Alguien sabe cómo escribir código en Minecraft?"
       4:
         text: "(ufff) Preston: ¿Qué es eso? Stampy: Nunca había visto uno de esos
-          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es... es obediente? Preston: ¿Qué está
+          antes. Lizzy: ¡Qué adorable! Stacy: ¿Es... es bueno? Preston: ¿Qué está
           pasando? Alguien tiene que volver al mundo real y arreglar esto. Todos:
           ¡Yo no! Stacy: Yo n... (suspira). Bien, iré."
       5:
@@ -3202,7 +3206,7 @@ es-MX:
       1:
         text: 'Stampy: ¿Qué estará haciendo Stacy?'
       2:
-        text: 'Stacy: Woah, creo que estoy en el lugar correcto. ¡Esto es increíble!'
+        text: 'Stacy: Ohhh, creo que estoy en el lugar correcto. ¡Esto es increíble!'
       3:
         text: "¡Siento como si estuviera de vuelta en Minecraft! Hola, ¿cómo estás?
           ¿Hola?"
@@ -3213,7 +3217,7 @@ es-MX:
       5:
         image: notes/mc_2017_repeat_5.png
         text: 'Stacy: Esto es increíble. ¿Así que trabajas aquí como desarrolladora?
-          Katie: sí, es muy impresionante. Soy desarrolladora en el equipo de mercado
+          Katie: Sí, es muy impresionante. Soy desarrolladora en el equipo de mercado
           de Minecraft. Stacy: ¿Cuántos lenguajes de programación conoces? Katie:
           Debo haber trabajado con más de una decena durante mi carrera. Stacy: ¿Una
           decena? Katie: Sí. Stacy: ¿Sabes algo acerca de este pequeño golem que se
@@ -3234,7 +3238,7 @@ es-MX:
           el bloque 'avanzar' dentro del bloque 'repetir'. Esto le ordena a la computadora
           que haga lo mismo muchas veces seguidas sin tener que arrastrar un montón
           de bloques al espacio de trabajo. Puedes asignar un número al bloque 'repetir'
-          para que algo se repita determinadas veces.
+          para que algo se repita una cierta cantidad de veces.
       8:
         image: notes/mc_2017_repeat_8.png
         text: También puedes poner giros y diversos comandos en el bloque 'repetir',
@@ -3273,9 +3277,9 @@ es-MX:
           desde allí hasta el bloque 'cuando se ejecuta'.
       6:
         image: notes/mc_2017_functions_6.png
-        text: Recuerda, puedes usar la misma función cada vez que necesites ejecutar
-          el mismo set de instrucciones para hacer algo, como construir un puente.
-          ¡Buena suerte, se que puedes hacerlo!
+        text: Recuerda que puedes usar la misma función cada vez que necesites ejecutar
+          el mismo conjunto de instrucciones para hacer algo, como construir un puente.
+          Buena suerte. ¡Sé que puedes hacerlo!
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
@@ -3403,16 +3407,16 @@ es-MX:
     csd_concept_binary_data:
       1:
         text: "¡Hola! Mi nombre es Limor Fried, y soy ingeniero en Adafruit Industries.
-          Allí es donde hago ingeniería y diseño, y diseño circuitos para moda, música
+          Allí es donde hago ingeniería y diseño, y creo circuitos para moda, música
           y tecnología."
       2:
-        text: Mi nombre es Federico Gómez Suárez, y soy desarrollador de software
-          para Microsoft Hack for Good. Me interesa que la tecnología nos ayude a
-          resolver algunos de los grandes problemas sociales de nuestros tiempos.
+        text: Mi nombre es Federico Gómez Suárez y soy desarrollador de software para
+          Microsoft Hack for Good. Me interesa que la tecnología nos ayude a resolver
+          algunos de los grandes problemas sociales de nuestros tiempos.
       3:
         text: Puede que hayas oído que las computadoras funcionan con unos y ceros.
           Pero, hoy en día, casi nadie trata directamente con ellos. Sin embargo,
-          desempeñan un papel importante en el funcionamiento interno de las computadoras.
+          desempeñan un papel importante en su funcionamiento interno.
       4:
         text: En una computadora hay cables y circuitos eléctricos que transmiten
           toda la información. ¿Cómo se puede almacenar o representar información
@@ -3450,7 +3454,7 @@ es-MX:
           0 hasta 4 mil millones. Con el sistema numérico binario, puedes representar
           cualquier número que quieras.
       9:
-        text: "¿Pero qué ocurre con otros tipos de información como texto, imágenes
+        text: "¿Pero qué ocurre con otros tipos de información, como texto, imágenes
           o sonido? Resulta que todas estas cosas también pueden representarse con
           números. Piensa en todas las letras del alfabeto. Podrías asignar un número
           a cada letra. La A podría ser 1, la B podría ser 2, etcétera. Puedes representar
@@ -3506,7 +3510,7 @@ es-MX:
           simple. Utiliza una señal eléctrica, encendida o apagada, y la voltea. Si
           la señal que le das es un 1, el circuito devuelve un cero; si ingresas un
           0 al circuito, te devolverá un 1. La señal que entra no es igual a la que
-          sale, por eso a este circuito lo llamamos NO.
+          sale; por eso a este circuito lo llamamos NO.
       5:
         image: notes/csd_concept_circuits_logic_5.png
         text: Los circuitos más complejos pueden tomar varias señales, combinarlas
@@ -3573,113 +3577,555 @@ es-MX:
       2:
         image: notes/csd_concept_memory_cpu_input_output_2.png
         text: Mi nombre es Danielle Applestone y soy CEO de Othermachine Company.
-          Construimos una fresadora de sobremesa. Una fresadora usa un instrumento
-          de corte giratorio moviéndolo a través de un material para crear un objeto
+          Construimos una fresadora de escritorio. Una fresadora usa un instrumento
+          de corte giratorio que se mueve a través de un material para crear un objeto
           3D.
       3:
         image: notes/csd_concept_memory_cpu_input_output_3.png
+        text: Todas las computadoras hacen las mismas cuatro cosas básicas. Reciben
+          información, almacenan y procesan información y, finalmente, generan información.
+          Cada una de estas cosas es realizada por una parte diferente de la computadora.
       4:
         image: notes/csd_concept_memory_cpu_input_output_4.png
+        text: Hay dispositivos que toman información del mundo exterior y la convierten
+          en información binaria. Existe una memoria para almacenar esta información;
+          una unidad de procesamiento central o CPU, donde se hacen todos los cálculos,
+          y, finalmente, dispositivos de salida que toman información y la convierten
+          en una producción física.
       5:
         image: notes/csd_concept_memory_cpu_input_output_5.png
+        text: Primero hablemos de la entrada de información. Las computadoras pueden
+          tomar muchos tipos diferentes de entrada, como el teclado, el panel táctil
+          de un teléfono, una cámara, un micrófono o un GPS. Incluso los sensores
+          de un carro, un termostato o un drone son diferentes dispositivos de entrada.
       6:
         image: notes/csd_concept_memory_cpu_input_output_6.png
-        text: Ahora, veamos como un simple ejemplo de cómo una entrada viaja a través
-          de la computadora y se convierte en salida. Cuando usted presiona una tecla
-          en su teclaso - digamos la leta "B". El teclado convierte la letra en un
-          número. Ese número es enviado como binario, ceros y unos, dentro de la computadora.
+        text: Ahora, veamos un simple ejemplo de cómo una entrada viaja a través de
+          la computadora y se convierte en salida. Cuando presionas una tecla en tu
+          teclado, por ejemplo la letra "B", el teclado convierte la letra en un número.
+          Ese número es enviado como binario, o sea ceros y unos, dentro de la computadora.
       7:
         image: notes/csd_concept_memory_cpu_input_output_7.png
-        text: Empezando por este número, el CPU calcula cómo mostrar la letra "B"
-          pixel por pixel. El CPU pide instrucciones paso a paso de la memoria, que
-          dice cómo dibujar la letra "B". El CPU ejecuta estas instrucciones y almacena
-          en la memoria el resultado como píxeles.
+        text: A partir de este número, la CPU calcula cómo mostrar la letra "B" pixel
+          por pixel. La CPU pide instrucciones paso a paso a la memoria, que dice
+          cómo dibujar la letra "B". La CPU ejecuta estas instrucciones y almacena
+          los resultados como pixeles en la memoria.
       8:
         image: notes/csd_concept_memory_cpu_input_output_8.png
-        text: Finalmente, esta información en píxel es enviada en binario a la pantalla.
+        text: Finalmente, esta información en pixeles es enviada en binario a la pantalla.
           La pantalla es un dispositivo de salida, el cual convierte las señales binarias
-          en las pequeñas luces y colores que conforman lo que se ve.
+          en las pequeñas luces y colores que dan forma a lo que se ve.
       9:
         image: notes/csd_concept_memory_cpu_input_output_9.png
-        text: Todo esto sucede tan rápido que se siente instantáneo, pero para mostrar
-          cada letra una computadora ejecuta miles de instrucciones, empezando desde
-          el momento que su dedo presiona el punto clave.
+        text: Todo esto sucede tan rápido que parece instantáneo, pero, para mostrar
+          cada letra, una computadora ejecuta miles de instrucciones desde el momento
+          en que el dedo presiona el punto clave.
       10:
         image: notes/csd_concept_memory_cpu_input_output_10.png
-        text: En ese ejemplo, el dispositivo de salida fue la pantalla pero hay varios
-          diferentes tipos de salida que toman una señal binaria de la computadora
-          y hacen algo con el ella en el mundo físico. Por ejemplo, una corneta reproducirá
-          un sonido, y una impresora 3D imprimirá un objeto. Dispositivos de salida
-          pueden también controlar movimientos físicos como el brazo de un robot,
-          el motor de un carro, o la herramienta cortadora de la máquina fresadora
-          que mi compañia posee. Nuevos tipos de entradas y salidas permiten que computadoras
-          interactúen con el mundo en nuevas maneras. Esto ha sido facilitado por
-          mejoras a la velocidad y tamaño de l memoria y CPU.
+        text: En ese ejemplo, el dispositivo de salida fue la pantalla, pero hay varios
+          tipos diferentes que toman una señal binaria de la computadora y hacen algo
+          con ella en el mundo físico. Por ejemplo, un bocina reproducirá un sonido
+          y una impresora 3D imprimirá un objeto. Los dispositivos de salida también
+          pueden controlar movimientos físicos como el brazo de un robot, el motor
+          de un carro o la herramienta de corte de la fresadora que produce mi compañía.
+          Gracias a los nuevos tipos de entradas y salidas, y las mejoras en la velocidad
+          y el tamaño de la memoria y la CPU, las computadoras pueden interactuar
+          con el mundo en nuevas maneras.
       11:
         image: notes/csd_concept_memory_cpu_input_output_11.png
-        text: Mientras más complicada sea la tarea y más información que es entrada
-          o salida, mayor sera el poder de procesamiento y memoria que una computadora
-          necesita. Escribir letras en una pantalla puede ser sencillo pero para hacer
-          gráficos complicados en 3D o grabar una película en alta definición, computadoras
-          modernas a menudo tienen múltiples CPUs para procesar toda esa información
-          y muchos gigabytes de memoria para almacenarlo.
+        text: Mientras más difícil sea la tarea y más información de entrada o salida
+          haya, mayor será el poder de procesamiento y la memoria que una computadora
+          necesita. Escribir letras en una pantalla puede ser sencillo pero, a la
+          hora de crear gráficos complejos en 3D o grabar una película en alta definición,
+          las computadoras modernas suelen tener varias CPU, para procesar toda esa
+          información, y muchos gigabytes de memoria, para almacenarla.
       12:
         image: notes/csd_concept_memory_cpu_input_output_12.png
-        text: 'No importa qué es lo que quiere hacer con la computadora, cada acción
-          sencilla trata sobre: introduciendo información del mundo físico, almacenando
-          y procesando esa información, y obteniendo alguna salida que retorne al
-          mundo físico.'
+        text: No importa qué es lo que quieres hacer con la computadora, cada acción
+          sencilla involucra la entrada de información del mundo físico, el almacenamiento
+          y procesamiento de esa información, y la generación de un resultado que
+          vuelve al mundo físico.
     csd_concept_hardware_software:
       1:
         image: notes/csd_concept_hardware_software_1.png
+        text: Hola, mi nombre es Érica Gómez y soy gerente de ingeniería en Amazon.com.
+          Una de las mejores cosas que tiene trabajar en tecnología, y en Amazon en
+          particular, es que puedo llevar a mi perro a trabajar conmigo todos los
+          días. Mi trabajo es ayudar a garantizar que el software llegue a las personas
+          y su trabajo es dormir una siesta debajo de mi escritorio y roncar muy fuerte.
       2:
         image: notes/csd_concept_hardware_software_2.png
+        text: Mi nombre es Jerome Holman, y soy administrador de programa en Team
+          Xbox. Tengo un trabajo realmente divertido que consiste, básicamente, en
+          integrar el hardware y el software para dar forma a todos los juegos que
+          te encantan de la Xbox.
       3:
         image: notes/csd_concept_hardware_software_3.png
-        text: Cuando se mira dentro de un dispositivo informático uno ve un montón
-          de circuitos, chips, cables, altavoces, enchufes y todo tipo de cosas. Esto
-          es lo que se conoce como el hardware.
+        text: Cuando miro dentro de un dispositivo informático, veo muchos circuitos,
+          chips, cables, bocinas, conectores y todo tipo de cosas. Eso es lo que se
+          conoce como hardware.
       4:
         image: notes/csd_concept_hardware_software_4.png
-        text: Pero lo que no ves es el software. Este es todo los programas de la
-          computadora, o código que se ejecuta en este equipo. El software puede ser
-          cualquier cosas desde aplicaciones y juegos hasta páginas web y el software
-          de ciencia de los datos que mi equipo de Amazon y yo usamos para entender
-          cómo se comportan los clientes.
+        text: Pero lo que no se ve es el software, esto es, todos los programas de
+          la computadora, o el código, que se ejecutan en este equipo. El software
+          puede ser cualquier cosa, desde aplicaciones y juegos hasta páginas web
+          o el software de ciencia de datos que mis equipos y yo usamos en Amazon
+          para entender cómo se comportan los clientes.
       5:
         image: notes/csd_concept_hardware_software_5.png
+        text: Pero, ¿cómo se relacionan el hardware y el software entre sí? Echemos
+          un vistazo a la unidad de procesamiento central de una computadora, también
+          conocida como CPU.
       6:
         image: notes/csd_concept_hardware_software_6.png
+        text: La CPU es el chip maestro que controla todas las demás partes de la
+          computadora. Como una CPU necesita hacer cosas diferentes, en su interior
+          hay partes más pequeñas y simples que manejan tareas específicas. Tiene
+          algunos circuitos para hacer cálculos y operaciones lógicas simples, y otros
+          para enviar y recibir información a y desde diferentes partes de la computadora.
       7:
         image: notes/csd_concept_hardware_software_7.png
+        text: La verdadera magia de la CPU reside en cómo saber qué circuitos usar
+          y cuándo usarlos. La CPU recibe comandos simples que le dicen qué circuito
+          usar para hacer una tarea específica. Por ejemplo, un comando "sumar" le
+          dice a la CPU que utilice su circuito externo para calcular un nuevo número,
+          y un comando "almacenar" le dice que use un circuito diferente para guardar
+          ese resultado en la memoria.
       8:
         image: notes/csd_concept_hardware_software_8.png
+        text: Al igual que los números, todos estos comandos simples se pueden representar
+          en unos y ceros binarios o en señales eléctricas de encendido y apagado.
+          Los comandos binarios se almacenan en la memoria, y la CPU los busca y los
+          ejecuta en secuencia uno tras otro. Esta secuencia de comandos es, de hecho,
+          un programa informático muy simple.
       9:
         image: notes/csd_concept_hardware_software_9.png
+        text: El código binario es la forma más básica de software y controla todo
+          el hardware de una computadora. Hoy en día, nadie escribe software en binario.
+          ¡Tardaría mucho tiempo!
       10:
         image: notes/csd_concept_hardware_software_10.png
+        text: Hoy, el software que escribimos se parece más a este (Python) o a este
+          (Ruby), o incluso a este (Blockly). Estos lenguajes de programación permiten
+          escribir comandos en algo que se parece mucho al inglés.
       11:
         image: notes/csd_concept_hardware_software_11.png
+        text: Para dibujar un rectángulo en la pantalla, necesitas un solo comando.
+          Este comando de alto nivel se convierte en cientos, o miles, de comandos
+          binarios más simples que la CPU entiende. El software le dice a la CPU qué
+          hacer pero, cuando escuchas música, navegas por Internet y chateas con un
+          amigo, tu computadora ejecuta varias piezas de software a la vez.
       12:
         image: notes/csd_concept_hardware_software_12.png
+        text: Entonces, ¿cómo llegan todos estos programas a la computadora en primer
+          lugar, y cómo la CPU puede ejecutarlos al mismo tiempo? Para descubrirlo,
+          tendremos que echar un vistazo al sistema operativo.
       13:
         text: El sistema operativo de la computadora es el programa principal que
-          gestiona cómo el software consigue usar el hardware de la computadora. Por
-          ejemplo, yo ayudé a crear el sistema operativo de Windows que se ejecuta
-          en la mayoría de computadoras personales.
+          maneja la forma en que el software usa el hardware de la computadora. Por
+          ejemplo, yo ayudé a crear el sistema operativo Windows que se ejecuta en
+          la mayoría de las computadoras personales.
       14:
-        text: El sistema operativo es un programa con habilidades especiales que permiten
-          controlar el otro software en la computadora. Permite instalar nuevos programa
-          cargándolos en la memoria del su computadora. Él decido cuándo un programa
-          es ejecutado por la unidad de procesamiento central, y si ese programa puede
-          acceder al sistema de salida o entrada del dispositivo. Y cuándo usted piensa
-          que su computadora está ejecutando varios programa al mismo tiempo, en realidad,
-          es el sistema operativo que funciona rápido cambiando entre los programas
-          que comparte ese CPU por fracciones de un segundo.
+        text: El sistema operativo es un programa con habilidades especiales que permite
+          controlar el resto del software en la computadora. Permite instalar nuevos
+          programas y cargarlos en la memoria de tu computadora. Decide cuándo la
+          unidad de procesamiento central ejecuta un programa, y si ese programa puede
+          acceder a los dispositivos de entrada y salida del dispositivo. Cuando piensas
+          que tu computadora ejecuta varios programa al mismo tiempo, en realidad
+          lo que ocurre es que el sistema operativo cambia rápidamente en fracciones
+          de segundo entre los programas que comparte esa CPU.
       15:
-        text: Dentro de cada computadora hay un sistema operativo manejando un software
-          que controla el hardware de la computadora.
+        text: Dentro de cada computadora hay un sistema operativo que maneja el software
+          que controla el hardware.
       16:
-        text: El software es una serie de comandos hechos de un código binario simple,
-          y ese código binario simple son sólo señales eléctricas fluyendo a través
-          de millones de pequeños circuitos.
+        text: El software es una serie de comandos de código binario simple, y ese
+          código no es más que señales eléctricas que fluyen a través de miles de
+          millones de circuitos diminutos.
+      17:
+        text: Las computadoras pueden hacer todo tipo de cosas asombrosas. Pero lo
+          único que hace que una computadora sea inteligente, o útil, eres tú. Cuando
+          aprendes a programar, puedes definir el problema que quieres resolver y
+          escribir el software que hace realidad esas ideas.
+    hoc_dance_warmup:
+      1:
+        text: 'Hora del Código | Fiesta de baile: calentamiento'
+      2:
+        text: "¡Hola! Mi nombre es Miral Kotb y soy bailarina, desarrolladora de software
+          y creadora de iLuminate."
+      3:
+        text: Las ciencias de la computación se relacionan con la creatividad de muchas
+          maneras. Muchísimas, de hecho. Me refiero a que, una vez que tienes la capacidad
+          de escribir software, puedes innovar en lo que sea. Yo lo hago en los trajes
+          de luces. Hay tanto que puedes hacer una vez que tienes las herramientas
+          para escribir software, y las posibilidades son realmente infinitas.
+      4:
+        text: Durante la siguiente hora darás tus primeros pasos con las ciencias
+          de la computación y programarás tu propia fiesta. Hemos reunido algunas
+          canciones exitosas y un equipo de grandes bailarines con los que puedes
+          jugar.
+      5:
+        text: Usarás bloques de código para elegir diferentes bailarines, cambiar
+          sus movimientos de baile, hacerlos responder a la música y que puedan interactuar.
+      6:
+        text: Verás que tu pantalla está dividida en tres partes. A la izquierda está
+          el espacio de juego. Aquí es donde aparecerán tus bailarines.
+      7:
+        text: El área del medio es la caja de herramientas. En este espacio verás
+          nuevos bloques de código a medida que avances de lección.
+      8:
+        text: El área a la derecha es el espacio de trabajo. Puedes arrastrar bloques
+          desde la caja de herramientas para crear tu programa.
+      9:
+        text: Las instrucciones para cada nivel estarán en la parte superior de la
+          pantalla. Si necesitas una pista, simplemente haz clic en la bombilla.
+      10:
+        text: Para empezar, crearemos un nuevo bailarín con este bloque rojo. Primero,
+          arrástralo desde la caja de herramientas y colócalo bajo este bloque naranja
+          de "configuración". Este bailarín es un gato y su nombre es "mi_primer_bailarín".
+          Puedes hacer clic aquí para cambiar el nombre.
+      11:
+        text: Con esto puedes cambiar el lugar en el que aparece el bailarín en tu
+          espacio de juego.
+      12:
+        text: Arriba del espacio de juego verás un menú para seleccionar música. Diviértete
+          encontrando tus canciones favoritas entre una gran cantidad de opciones.
+          Debajo del espacio de juego está el botón Ejecutar. Si lo presionas, aparecerán
+          los bailarines de tu programa y sonará la música.
+      13:
+        text: "¡Pruébalo tú mismo! Si no puedes avanzar, ¡no te preocupes! Sigue adelante
+          y, pronto, habrás creado tu propia fiesta de baile. Entonces, ¿qué vas a
+          crear?"
+    hoc_dance_events:
+      1:
+        text: 'Hora del Código | Fiesta de baile: eventos'
+      2:
+        text: Soy Aloe Blacc, cantante, compositor y artista. Creo que las ciencias
+          de la computación son el futuro, y por eso son realmente importantes de
+          aprender. Además, pienso que es importante que las personas tengan el control
+          de la tecnología que controla literalmente sus vidas.
+      3:
+        text: Para que los diferentes movimientos de baile acompañen la música, puedes
+          usar algo llamado eventos. Un evento le indica a tu programa que escuche
+          algo que ocurre y que reaccione inmediatamente.
+      4:
+        text: Algunos ejemplos de eventos son escuchar un clic del ratón, un botón
+          de flecha o un toque en la pantalla. El evento que vamos a utilizar ahora
+          escuchará un cambio en la canción. El cambio activará a tu bailarín para
+          que haga un nuevo movimiento de baile.
+      5:
+        text: Los bailarines profesionales cuentan los tiempos de una canción para
+          practicar su coreografía.
+      6:
+        text: En música, un compás se refiere a un cierto número de tiempos. En las
+          canciones más populares, el compás tiene cuatro tiempos.
+      7:
+        text: Para que tus bailarines se muevan, necesitarás un bloque verde de eventos.
+          Este bloque de eventos dice, "después de 4 compases".
+      8:
+        text: Si arrastra un bloque púrpura "hacer siempre", puedes escoger un baile
+          para el bailarín. Al estar debajo del bloque de evento "después de 4 compases",
+          tu bailarín esperará cuatro compases de la canción antes de empezar a bailar.
+      9:
+        text: Ten en cuenta el contador de compases en la parte superior de la pantalla.
+      10:
+        text: Mira y escucha el evento que activará el código del baile. En ese momento
+          comenzará a moverse el bailarín.
+    hoc_dance_properties:
+      1:
+        text: 'Hora del Código | Fiesta de baile: propiedades'
+      2:
+        text: Mi nombre es María. Soy junior en la Universidad de Washington y futura
+          ingeniera en Amazon.
+      3:
+        text: Me encantan las ciencias de la computación porque incorporan la resolución
+          de problemas y el pensamiento crítico, y porque, luego de horas de trabajar
+          en algo, puedes obtener resultados realmente geniales y gratificantes.
+      4:
+        text: Hasta ahora, has tenido la oportunidad de jugar con diferentes tipos
+          de bailarines y los has programado para que hagan diferentes tipos de baile.
+          Pero, ¿cómo funcionan estos movimientos?
+      5:
+        text: Cada movimiento de baile está compuesto por una serie de imágenes llamadas
+          fotogramas. Cada fotograma es un poco diferente del anterior. Cuando se
+          ejecuta tu programa, la computadora muestra un fotograma tras otro. Aparecen
+          tan rápido que parece que el bailarín se mueve. Ese es el secreto detrás
+          de toda animación.
+      6:
+        text: No solo puedes cambiar los movimientos de tu bailarín, sino también
+          sus propiedades. Las propiedades describen cosas como la posición del bailarín
+          en la pantalla, su tamaño y su color.
+      7:
+        text: Para cambiar las propiedades de un bailarín, usarás un bloque 'establecer'.
+          Usaremos uno de estos bloques para que nuestros bailarines sean más pequeños.
+          Primero, arrastra el bloque 'establecer' a tu programa. Luego, selecciona
+          al bailarín que te gustaría cambiar y escribe el tamaño en que aparecerá
+          en la pantalla.
+      8:
+        text: El tamaño completo es 100. Si eliges un número inferior, el bailarín
+          será más pequeño. Cuanto más pequeño sea, más lejos se verá. Esta es una
+          gran manera de crear bailarines de fondo.
+      9:
+        text: Con el bloque 'establecer' también puedes cambiar las dimensiones, la
+          rotación, la posición y el color del bailarín. Puedes jugar con estas propiedades
+          para hacer todo tipo de cambios y conectarlos a diferentes partes de la
+          canción.
+      10:
+        text: Recuerda que solo puedes establecer las propiedades de un bailarín que
+          ya existe. Asegúrate de que tu bloque venga después del bloque "Hacer un
+          nuevo bailarín". Aprovecha para ser creativo y divertirte.
+    hoc_dance_congrats:
+      1:
+        text: 'Hora del Código | Fiesta de baile: ¡que comience la fiesta!'
+      2:
+        text: "¡Felicitaciones! Acabas de aprender los aspectos básicos de las ciencias
+          de la computación. Ahora puedes usar estos bloques para crear tu propia
+          fiesta de baile y compartirla con tus amigos."
+      3:
+        text: Si miras en la caja de herramientas, encontrarás algunos bloques nuevos
+          que no has visto antes. Por ejemplo, puedes usar el bloque 'disposición'
+          para organizar a los bailarines de diferentes maneras en la pantalla.
+      4:
+        text: Echa un vistazo y comienza a experimentar con estos nuevos bloques y
+          características. ¿Crearás una coreografía perfecta para tu baile con tu
+          canción favorita?
+      5:
+        text: "¿Una competencia de baile con tus amigos?"
+      6:
+        text: "¿U otra cosa?"
+      7:
+        text: Al final del tutorial podrás compartir un enlace a tu creación con tus
+          amigos. ¡Diviértete a pura imaginación!
+    mc_2018_intro:
+      1:
+        text: "¡Hola! Justo a tiempo. Bienvenido a Voyage Aquatic. Estoy a punto de
+          embarcarme en una búsqueda para encontrar un tesoro submarino oculto y sería
+          genial que me ayudes. Quién sabe qué encontraremos a lo largo de estos misteriosos
+          cursos de agua. Deberíamos conocer a nuestro primer guía en algún lugar
+          de este muelle."
+      2:
+        text: "¡Bienvenido, aventurero! Para completar Voyage Aquatic tendrás que
+          resolver una serie de desafíos a través del código. Así es cómo funciona.
+          Tu pantalla se divide en tres partes."
+      3:
+        text: A la izquierda, verás el mundo de Minecraft.
+      4:
+        text: El área del medio es tu caja de herramientas, donde puedes encontrar
+          comandos de programación.
+      5:
+        text: Y el área grande a la derecha es tu espacio de trabajo. Aquí puedes
+          colocar comandos para crear tu programa y controlar tus movimientos.
+      6:
+        text: Las instrucciones de cada nivel están en la parte superior de la página.
+          Haz clic en el signo más para alternar entre instrucciones largas y cortas.
+      7:
+        text: Intenta arrastrar bloques desde la caja de herramientas hacia el espacio
+          de trabajo, pon uno arriba del otro y luego haz clic en el botón Ejecutar
+          para ejecutar tus comandos.
+      8:
+        text: Puede que tengas que intentarlo varias veces hasta hacerlo bien y algunos
+          de los desafíos tienen más de una solución. No dudes en experimentar para
+          ver qué funciona.
+      9:
+        text: Si quieres volver a intentarlo, haz clic en el botón 'reiniciar' para
+          volver a donde comenzaste.
+      10:
+        text: Si necesitas eliminar un comando, simplemente arrastra el bloque desde
+          tu espacio de trabajo hacia la caja de herramientas. Recuerda hacer clic
+          en "Ejecutar" para ver tu código en acción.
+      11:
+        text: Bueno, basta de perder el tiempo, aventurero. Empecemos a programar
+          para encontrar algún tesoro submarino.
+    MC_2018_loops:
+      1:
+        text: "¡Genial! ¡Hemos capturado un bacalao! ¿Sabías que si alimentas con
+          bacalao a un delfín, este te guiará a un naufragio donde puede haber un
+          tesoro? Debemos estar cerca. El próximo conjunto de desafíos será más difícil;
+          aprendamos más habilidades de programación. ¿Qué es esto? Una cueva?"
+      2:
+        text: "¡Bienvenido, aventurero! Mi nombre es Squid. Me di cuenta de que usé
+          el mismo conjunto de comandos una y otra vez en los últimos desafíos. Debe
+          haber sido un poco tedioso. ¿No sería bueno encontrar una forma de hacer
+          algo, como lavar los platos o cepillarte los dientes, una y otra vez sin
+          cansarte o que sea aburrido?"
+      3:
+        text: Las computadoras son realmente buenas en hacer lo mismo una y otra vez
+          mediante bucles de programación. Si quieres que tu programa siga las mismas
+          instrucciones muchas veces, ¡puedes usar un bucle!
+      4:
+        text: El bloque 'bucle' contiene instrucciones que se repiten hasta alcanzar
+          el objetivo. Una vez que el programa inicia un bucle "Repetir hasta el objetivo",
+          seguirá repitiendo las instrucciones dentro de él hasta que se logre el
+          objetivo.
+      5:
+        text: ¡Pruébalo por ti mismo! Coloca los comandos que quieres repetir dentro
+          del bloque "Repetir hasta el objetivo", haz clic en "Ejecutar" y míralo
+          en acción.
+      6:
+        text: Bueno, eso fue un poco raro. ¿Quién hubiese imaginado que los calamares
+          saben programar? Ni siquiera sabía que tenían dedos. Ahora que sabemos sobre
+          bucles, vamos a usarlos para conseguir algún otro tesoro.
+    mc_2018_conditionals:
+      1:
+        text: "¡Qué bien! ¡Resolvimos otros tres desafíos! Y hemos capturado... un
+          salmón. No es tan emocionante como las pilas de oro, pero igual está bien.
+          Y tengo la sensación de que la concha de nautilo aparecerá dentro de poco.
+          Me pregunto qué se oculta en estas ruinas. ¡Quizás sea otra pista! Echemos
+          un vistazo."
+      2:
+        text: Mi nombre es Netty. Bienvenidos a mis ruinas. Tomamos decisiones todo
+          el tiempo según las condiciones. Si parece que va a llover, tomamos un paraguas.
+          Si tenemos hambre, comemos un refrigerio.
+      3:
+        text: Si vemos un creeper, debemos correr en la dirección opuesta. Las computadoras
+          también toman este tipo de decisiones. En realidad, usan el código para
+          responder a las condiciones.
+      4:
+        text: Para programar una respuesta como esta mediante los comandos de tu código,
+          selecciona un bloque 'si hay camino'.
+      5:
+        text: Selecciona el menú desplegable para crear el comando.
+      6:
+        text: Por ejemplo, si escribes el comando "si hay camino a la derecha" y colocas
+          el giro a la derecha dentro del condicional, Steve siempre girará a la derecha
+          si llega a un camino abierto a la derecha (no lo hará si no hay camino abierto
+          a la derecha). Estos comandos 'si' condicionales son útiles cuando ejecutas
+          código en situaciones impredecibles, como las ruinas misteriosas de las
+          cuevas submarinas.
+      7:
+        text: Intenta usar los bloques 'si' y genera un giro con tu código.
+      8:
+        text: "¡Oh! Las ruinas de Netty son impresionantes. Realmente debo mudarme
+          de la casa de mis padres. ¿Qué piensan? ¿Están dadas las condiciones para
+          que completemos los desafíos finales? Vamos a intentarlo."
+    mc_2018_closing:
+      1:
+        text: 'Amy Lee33: ¡Felicitaciones, lo has conseguido!'
+      2:
+        text: 'Squid: ¡Felicitaciones!'
+      3:
+        text: 'Netty: ¡Lo has logrado! ¡Felicitaciones!'
+      4:
+        text: 'Tomohawk: ¡Felicitaciones!'
+      5:
+        text: "¡Qué gran día! La búsqueda de tesoros nos llevó a construir un canalizador
+          de Minecraft, encontrar conchas de nautilo y descubrir cofres de tesoro.
+          Me encanta el color del prismarina. También aprendimos cómo programar con
+          bucles y condicionales."
+      6:
+        text: Hablando de programación, queda un nivel más en esta misión. ¿Estás
+          listo, aventurero?
+      7:
+        text: Es un nivel de juego libre y puedes usar tus habilidades de programación
+          para construir algo increíble.
+      8:
+        text: Mmmm... ¿un lugar para ocultar tu tesoro, un monumento submarino, un
+          castillo de coral? Ahhh... tantas ideas. Intenta usar bucles, para crear
+          una acción repetitiva, y condicionales, para prepararte para todos esos
+          escenarios imprevisibles.
+      9:
+        text: Seguramente ya eres un programador intrépido. Estoy ansioso por ver
+          lo que construyes. Esperamos que tus aventuras con el código no terminen
+          aquí. ¡Buen viaje!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: Este curso se divide en etapas.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: Las primeras etapas cuentan qué es la ciencia de la computación y presentan
+          vocabulario clave.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: A continuación, aprenderás a programar de la misma manera que tus estudiantes.
+          Las etapas finales del curso te ayudarán a crear un plan para enseñar ciencias
+          de la computación en tu aula. A lo largo del curso, verás ejemplos de lecciones
+          conectadas, o en línea, así como lecciones sin conexión que no necesitan
+          de una computadora.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: La plataforma de aprendizaje seguirá tu progreso, para que puedas retomar
+          desde donde dejaste, en cualquier momento.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: La programación es el conjunto de instrucciones que le das a una computadora.
+          Las ciencias de la computación son un campo en el que las personas utilizan
+          el poder de las computadoras para resolver grandes problemas. Esta ciencia
+          incluye la programación y otras cosas, por ejemplo, cómo funciona Internet
+          y su impacto en la sociedad, qué hacer con los grandes datos y cómo solucionar
+          problemas importantes. Las ciencias de la computación se caracterizan por
+          la resolución de problemas, el pensamiento crítico y la perseverancia.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Code.org utiliza un lenguaje de programación visual del tipo 'arrastrar
+          y soltar' llamado Blockly. Este lenguaje utiliza instrucciones coloridas
+          llamadas bloques para crear programas y resolver desafíos.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Cada desafío tiene cuatro partes.
+      3:
+        image: notes/writing_first_program_3.png
+        text: El espacio de juego está a la izquierda, donde se ejecuta tu programa.
+      4:
+        image: notes/writing_first_program_4.png
+        text: Al centro se encuentra el área de la caja de herramientas, que tiene
+          todos los bloques que necesitas.
+      5:
+        image: notes/writing_first_program_5.png
+        text: A la derecha está el espacio de trabajo, hacia el cual arrastrarás los
+          bloques para crear tu programa.
+      6:
+        image: notes/writing_first_program_6.png
+        text: Arriba del espacio de trabajo están las instrucciones para cada desafío.
+      7:
+        image: notes/writing_first_program_7.png
+        text: Si has arrastrado demasiados bloques desde la caja de herramientas,
+          solo tienes que arrastrar el bloque que sobra de vuelta a la caja. Presiona
+          Ejecutar para probar tu programa y Reiniciar para volver a intentarlo.
+    repeat_block:
+      1:
+        image: notes/repeat_block.png
+        text: El bloque 'repetir' te permite repetir el código dentro de él tantas
+          veces como le digas.
+    what_is_an_event:
+      1:
+        image: notes/what_is_an_event.png
+        text: Un evento le indica a tu programa que escuche algo que sucede para que,
+          cuando suceda, realice una acción. Una computadora podría escuchar un clic
+          del ratón, un botón de flecha que se presiona o un toque en la pantalla.
+    lesson_planning:
+      1:
+        image: notes/lesson_planning_1.png
+        text: Las lecciones de Fundamentos de Ciencias de la Computación comienzan
+          con resúmenes para que sepas qué abarcará cada lección.
+      2:
+        image: notes/lesson_planning_2.png
+        text: Las lecciones tienen fases de preparación, actividades y cierres. Si
+          quieres crear tus propios planes de lecciones, puedes tener en cuenta estos
+          consejos.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Intenta usar un diseño de plan de estudios en espiral. Introduce
+          conceptos una vez y vuelve a revisarlos.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Combina estas lecciones en línea con lecciones sin conexión para
+          crear una experiencia de aprendizaje mixto.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Divide tu plan de estudios en partes más pequeñas.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Asegúrate de estar alineado con las normas locales y las habilidades
+          de preparación para la universidad y las carreras profesionales.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: "¡Felicitaciones! Has completado el curso en línea de Enseñanza de los
+          Fundamentos de las Ciencias de la Computación. Ahora eres parte de la creciente
+          comunidad de docentes que preparan a sus estudiantes para el futuro."
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Echa un vistazo a estos recursos en caso de que necesites más soporte:
+          1. forum.code.org 2. @teachcode en Twitter 3. studio.code.org '

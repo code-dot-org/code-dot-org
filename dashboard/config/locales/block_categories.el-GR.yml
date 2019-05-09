@@ -23,12 +23,12 @@ el:
       Text: κείμενο
       Picker: Επιλέκτης
       Comment: Σχόλιο
+      World: Κόσμος
+      Behaviors: Συμπεριφορές
       'Variables ': 'Μεταβλητές '
       Default: Προεπιλογή
-      Behaviors: Συμπεριφορές
       Locations: Τοποθεσίες
       everythingelse: όλαταάλλα
-      World: Κόσμος
       Location: Τοποθεσία
       numbers: αριθμοί
       Numbers: Αριθμοί

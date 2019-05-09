@@ -73,6 +73,7 @@ export default class Attachments extends React.Component {
             key={asset.filename}
             style={styles.attachment}
             href={url}
+            className="uitest-attachment"
             target="_blank"
           >
             {asset.filename}

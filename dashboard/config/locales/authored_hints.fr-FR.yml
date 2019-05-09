@@ -5014,18 +5014,15 @@ fr:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Pour résoudre ce problème, il devrait y avoir 3 blocs dans
           ta boucle.
-      behaviors 1_authored_hint:
-        behavior hint: "Essaie de modifier les comportements ! \n\n-   Dans quelle
-          direction l’oiseau doit-il voler ?"
       behaviors 2_authored_hint:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Dans quelle
           direction l’oiseau doit-il voler ?"
       behaviors 3_authored_hint:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
           contrôle la vitesse de chaque sprite ?"
-      behaviors 4_authored_hint:
-        behavior hint: "Essaie de modifier les comportements ! \n\n-   Dans quelle
-          direction l’oiseau doit-il voler ?"
+      behaviors 3a_authored_hint:
+        behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
+          contrôle la vitesse de chaque sprite ?"
       behaviors 5_authored_hint:
         target hint: Tu peux choisir n’importe lequel des quatre jouets. Lequel veut
           l’animal ?
@@ -5036,6 +5033,9 @@ fr:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
           contrôle la vitesse de chaque sprite ?"
       behaviors 6_authored_hint:
+        behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
+          contrôle la vitesse de chaque sprite ?"
+      behaviors 7_authored_hint:
         behavior hint: "Essaie de modifier les comportements ! \n\n-   Quelle valeur
           contrôle la vitesse de chaque sprite ?"
       comment_intro_maze_2018_authored_hint:

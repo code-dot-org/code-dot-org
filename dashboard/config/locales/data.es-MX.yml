@@ -41,6 +41,7 @@ es-MX:
         Custom: Artista
         CustomStudio: Laboratorio de juegos
         Gamelab: Laboratorio de juegos
+        Spritelab: Laboratorio de sprites
     trophy:
       name:
         Bronze: Bronce
@@ -765,7 +766,7 @@ es-MX:
         applab_intro_sounds: Laboratorio de aplicaciones - Imágenes y sonidos
         applab_intro_designmode: Laboratorio de aplicaciones - Modo de diseño
         applab_intro_share: Laboratorio de aplicaciones - Comparte tu aplicación
-        csd_applab_arrays: Introducción a los Arrays
+        csd_applab_arrays: Introducción a los arreglos
         CSF_skinOverview_Harvester: La cosechadora
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -818,7 +819,9 @@ es-MX:
         csd_applab_designmode: 'Descubrimientos de Ciencias de la Computación: Laboratorio
           de aplicaciones - Modo de diseño'
         csd_pair_programming: Programación en parejas
+        csd_gamelab_functions: Llamar y definir funciones
         csd_applab_parameters: Funciones con parámetros
+        csd_applab_loops: Bucles en el Laboratorio de aplicaciones
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

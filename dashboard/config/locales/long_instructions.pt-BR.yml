@@ -4494,6 +4494,17 @@ pt-BR:
         Copiando seus hiperlinks para todas as suas páginas permitiu que você chegasse à maioria das páginas em seu site de qualquer outra página. Um hiperlink está faltando - o único para levá-lo à sua página inicial (index.html).
 
         **Adicione um hiperlink à sua página inicial a partir de todas as páginas, até mesmo da sua página inicial.** Adicionando isto à sua página inicial manterá seu cabeçalho de navegação consistente em todas as páginas.
+      CSD U2 add style_2019: |-
+        # Experimente!
+
+        Agora que você viu algumas maneiras para adicionar estilos, é hora de você experimentar. Aqui está uma página web que você nunca viu antes, mas ela precisa de algum estilo!
+
+        # Faça Isto
+
+        -   Adicione uma cor de fundo à página web.
+        -   Agregue algum espaço a mais ao redor das imagens.
+        -   Faça com que o texto seja exibido em uma cor diferente.
+        -   Acrescente quaisquer estilos adicionais que você queira.
       CSD U2 challenge: |-
         # Desafio
 
@@ -6764,6 +6775,244 @@ pt-BR:
         -   Use HTML para completar sua nova página. Ela deverá incluir:
         -   uma lista
         -   um cabeçalho
+      CSD U2 lists intro: "# Listas\n\n<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary><strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul> </ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li> </li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary><strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite os
+        items da lista entre os tags.\n\nA indentação dos tags `<li> </li>` pode ajudar,
+        para deixar claro que estão contidos no interior das tags `<ul> </ul>`.\n\n</details>\n\n<details>\n<summary><strong>O
+        que é uma lista ordenada?</strong>\n</summary>\n\nUma lista ordenada é um
+        conjunto de itens com marcação que são numerados.\n\nUm elemento de lista
+        ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação para <strong>O</strong>rdered
+        <strong>L</strong>ist. Cada item da lista é marcado por um elemento de item
+        de lista `<li> </li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O elemento de item de lista é um elemento filho, o que significa que deve
+        ser colocado no interior de seu elemento pai, que é a lista ordenada.\n\n</details>\n\n<details>\n<summary><strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n\nA indentação dos tags `<li> </li>` pode ajudar, para deixar claro
+        que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 lists intro_2018: "# Listas\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary>\n<strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul></ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li></li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite o
+        item da lista entre os tags.\n<br /><br />\nA indentação dos tags `<li> </li>`
+        pode ajudar, para deixar claro que estão contidos no interior das tags `<ul>
+        </ul>`.\n\n</details>\n\n<details>\n<summary>\n<strong>O que é uma lista ordenada?</strong>\n</summary>\n\nUma
+        lista ordenada é um conjunto de itens com marcação que são numerados.\n\nUm
+        elemento de lista ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação
+        para <strong>O</strong>rdered <strong>L</strong>ist. Cada item da lista é
+        marcado por um elemento de item de lista `<li> </li>`. Isto é uma abreviação
+        para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista
+        é um elemento filho, o que significa que deve ser colocado no interior de
+        seu elemento pai, que é a lista ordenada.\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n<br /><br />\nA indentação dos tags `<li> </li>` pode ajudar, para
+        deixar claro que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 lists intro_2019: "# Listas\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Quais
+        são os dois tipos de listas?</strong>\n</summary>\nHá dois tipos de listas
+        em HTML, listas ordenadas e não ordenadas.\n</details>\n\n<details>\n<summary>\n<strong>O
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUma lista não ordenada
+        é somente um conjunto de itens com marcadores.\n\nUma lista não ordenada possui
+        os tags `<ul></ul>`. Isto é uma abreviação para <strong>U</strong>nordered
+        <strong>L</strong>ist. Cada item da lista é indicado por um elemento de item
+        de lista `<li></li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem.
+        O item de lista é um elemento filho, o que significa que ele é colocado no
+        interior de seu elemento pai, que é a lista não ordenada.\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não
+        ordenada requer dois passos: criar a lista, e adicionar os itens da lista.
+        Para criar a lista não ordenada, digite as tags `<ul> </ul>`. Em seguida,
+        adicione seus itens de lista **dentro** dos tags da lista não ordenada. Para
+        criar cada item, utilize os tags de itens de lista `<li> </li>` e digite o
+        item da lista entre os tags.\n<br /><br />\nA indentação dos tags `<li> </li>`
+        pode ajudar, para deixar claro que estão contidos no interior das tags `<ul>
+        </ul>`.\n\n</details>\n\n<details>\n<summary>\n<strong>O que é uma lista ordenada?</strong>\n</summary>\n\nUma
+        lista ordenada é um conjunto de itens com marcação que são numerados.\n\nUm
+        elemento de lista ordenada possui os tags `<ol> </ol>`. Isto é uma abreviação
+        para <strong>O</strong>rdered <strong>L</strong>ist. Cada item da lista é
+        marcado por um elemento de item de lista `<li> </li>`. Isto é uma abreviação
+        para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista
+        é um elemento filho, o que significa que deve ser colocado no interior de
+        seu elemento pai, que é a lista ordenada.\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu crio uma lista ordenada?</strong>\n</summary>\n\nA criação de uma lista
+        ordenada requer dois passos: criar a lista, e adicionar os elementos da lista.
+        Para criar a lista ordenada, digite os tags `<ol> </ol>`. Em seguida, adicione
+        seus items de lista **dentro** dos tags da lista ordenada. Para criar cada
+        item da lista, utilize os tags `<li> </li>` e digite o item da lista entre
+        os tags. \n<br /><br />\nA indentação dos tags `<li> </li>` pode ajudar, para
+        deixar claro que estão contidos no interior das tags `<ol> </ol>`.\n\n</details>\n</div>\n\nVocê
+        também pode usar HTML para criar tipos diferentes de listas na sua página
+        web. Esta receita inclui dois tipos diferentes de listas, uma ordenada (com
+        números) e outra não ordenada (com marcadores).\n\n# Faça Isto\n\n-   Use
+        a ferramenta de inspeção para observar o código que cria os dois diferentes
+        tipos de lista\n-   Tenha certeza que você e seu parceiro estejam de acordo
+        sobre o que fazem as diferentes tags.\n-   Ajuste o código para que o segundo
+        item de cada lista seja exibido corretamente"
+      CSD U2 navigation: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que são hyperlinks?</strong>
+        </summary>
+
+        Hyperlinks conectam-se a outras páginas locais ou a páginas externas. Para adicionar navegação ao seu website você vai precisar adicionar hyperlinks que se conectam a suas páginas web individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink deve ser inserido entre os links de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que é a localidade onde se quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página. <br> <br>
+
+        Por exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte código dentro do elemento \`<body>. <br><br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu adiciono um hyperlink?</strong>
+        </summary>
+
+        Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que a localidade à qual você quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página. <br><br>
+
+        Por exemplo para conectar à página de casas exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`. <br><br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        # Crie uma Barra de Navegação
+
+        Aqui está seu projeto de antes. Você irá conectar as duas páginas através da criação de uma **barra de navegação** no topo da página. Sites web tipicamente têm a mesma barra de navegação em todas as suas páginas para que você possa navegar à vontade entre as páginas do site. Você pode ver um exemplo de uma barra de navegação <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/" target="_new">nesta página</a>
+
+        # Faça Isto
+
+        -   Na sua página inicial (index.html), adicione dois hyperlinks no topo da página, um para sua página de listas, e outro para sua página inicial.
+        -   Ainda que possa parecer estranho ligar uma página a ela mesma, fica menos confuso se a barra de navegação for exatamente a mesma em todas as páginas.
+        -   Copie o código da barra de navegação, e depois adicione no topo de sua página de listas.
+        -   Teste seus links na área de visualização, clicando sobre eles.
+      CSD U2 navigation_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>O que são hyperlinks?</strong>
+        </summary>
+
+        Hyperlinks conectam-se a outras páginas locais ou a páginas externas. Para adicionar navegação ao seu website você vai precisar adicionar hyperlinks que se conectam a suas páginas web individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink deve ser inserido entre os links de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que é a localidade onde se quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página.
+        <br/><br/>
+        Por exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte código dentro do elemento `<body>`
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Como eu adiciono um hyperlink?</strong>
+        </summary>
+
+        Você pode **adicionar hyperlinks à sua página web usando o elemento `<a>`**. O texto que você quiser mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink. O elemento `<a>` possui um atributo `href` que a localidade à qual você quer conectar. A localidade de uma página local é simplesmente o caminho para o arquivo da página.
+        <br/><br/>
+        Por exemplo para conectar à página de casas exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        # Crie uma Barra de Navegação
+
+        Aqui está seu projeto de antes. Você irá conectar as duas páginas através da criação de uma **barra de navegação** no topo da página. Sites web tipicamente têm a mesma barra de navegação em todas as suas páginas para que você possa navegar à vontade entre as páginas do site. Você pode ver um exemplo de uma barra de navegação <a href="https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/" target="_new">nesta página</a>
+
+        # Faça Isto
+
+        -   Na sua página inicial (index.html), adicione dois hyperlinks no topo da página, um para sua página de listas, e outro para sua página inicial.
+        -   Ainda que possa parecer estranho ligar uma página a ela mesma, fica menos confuso se a barra de navegação for exatamente a mesma em todas as páginas.
+        -   Copie o código da barra de navegação, e depois adicione no topo de sua página de listas.
+        -   Teste seus links na área de visualização, clicando sobre eles.
+      CSD U2 navigation_2019: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>O
+        que são hyperlinks?</strong>\n</summary>\n\nHyperlinks conectam-se a outras
+        páginas locais ou a páginas externas. Para adicionar navegação ao seu website
+        você vai precisar adicionar hyperlinks que se conectam a suas páginas web
+        individuais. Você pode **adicionar hyperlinks à sua página web usando o elemento
+        `&lt;a&gt;`**. O texto que você quiser mostrar como hyperlink deve ser inserido
+        entre os links de abertura e fechamento do hyperlink. O elemento `&lt;a&gt;`
+        possui um atributo `href` que é a localidade onde se quer conectar. A localidade
+        de uma página local é simplesmente o caminho para o arquivo da página.\n<br/><br/>\nPor
+        exemplo, para conectar à página de casas exclusivas você adicionaria o seguinte
+        código dentro do elemento `<body>`.\n\n<pre>\n&lt;a href=”houses.html”&gt;
+        Casas Exclusivas &lt;/a&gt;\n</pre>\n\n</details>\n<details>\n<summary>\n<strong>Como
+        eu adiciono um hyperlink?</strong>\n</summary>\n\nVocê pode **adicionar hyperlinks
+        à sua página web usando o elemento `&lt;a&gt;`**. O texto que você quiser
+        mostrar como hyperlink vai entre os tags de abertura e fechamento do hyperlink.
+        O elemento `&lt;a&gt;` possui um atributo `href` que a localidade à qual você
+        quer conectar. A localidade de uma página local é simplesmente o caminho para
+        o arquivo da página. \n<br/><br/>\nPor exemplo para conectar à página de casas
+        exclusivas você poderia adicionar o seguinte código dentro do elemento `<body>`.\n\n<pre>\n&lt;a
+        href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;\n</pre>\n\n</details>\n</div>\n\n#
+        Crie uma Barra de Navegação\n\nAqui está seu projeto de antes. Você irá conectar
+        as duas páginas através da criação de uma **barra de navegação** no topo da
+        página. Sites web tipicamente têm a mesma barra de navegação em todas as suas
+        páginas para que você possa navegar à vontade entre as páginas do site. Você
+        pode ver um exemplo de uma barra de navegação <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
+        target=\"_new\">nesta página</a>\n\n# Faça Isto\n\n-   Na sua página inicial
+        (index.html), adicione dois hyperlinks no topo da página, um para sua página
+        de listas, e outro para sua página inicial.\n-   Ainda que possa parecer estranho
+        ligar uma página a ela mesma, fica menos confuso se a barra de navegação for
+        exatamente a mesma em todas as páginas.\n-   Copie o código da barra de navegação,
+        e depois adicione no topo de sua página de listas.\n-   Teste seus links na
+        área de visualização, clicando sobre eles."
       CSD U2 new page: |-
         # Crie uma nova página para o seu site.
 
@@ -6800,6 +7049,183 @@ pt-BR:
         -   Use HTML para preencher sua nova página. Deve incluir:
         -   uma lista
         -   um cabeçalho
+      CSD U2 ordered list: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary><strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary><strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary><strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
+      CSD U2 ordered list_2018: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+        <br /><br />
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+        <br /><br />
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
+      CSD U2 ordered list_2019: |-
+        # Listas Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Há dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista ordenada?</strong>
+        </summary>
+
+        Uma lista ordenada é um conjunto de itens com marcadores que são numerados.
+        <br /><br />
+        Um elemento de lista ordenada possui o tag `<ol>`. Isto é uma abreviação para <strong>O</strong>rdered <strong>L</strong>ist. Cada item na lista é indicado por um elemento de item de lista `<li>`. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem. O elemento de item de lista é um elemento filho, o que significa que estará dentro de seu elemento pai, a lista ordenada (`<ol>`).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista ordenada?</strong>
+        </summary>
+
+        A criação de uma lista ordenada tem dois passos: criar a lista, e acrescentar os itens da lista. Para criar uma lista ordenada, digite os tags da lista ordenada `<ol></ol>`. Em seguida, adicione os items **dentro** dos tags da lista ordenada. Para criar cada item de lista, utilize s tags de item de lista `<li></li>` e digite o item no interior dos tags.
+        <br /><br />
+        A indentação dos tags `<li>` pode ajudar para deixar claro que eles estão contidos dentro do tag `<ol>`.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ol&gt; <br>   &lt;li&gt;Passo 1 &lt;/li&gt; <br>   &lt;li&gt;Passo 2 &lt;/li&gt; <br>   &lt;li&gt;Passo 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>
+        <td><img src="https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria incluir uma lista ordenada, mas as tags da lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ol>` e `<li>` para estruturar este conteúdo em uma lista ordenada semelhante à lista mostrada abaixo.
+
+        _Dica: Seu código NÃO DEVERÁ CONTER NÚMEROS._
+
+        ![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png>)
       CSD U2 project review: |-
         # Revise seu projeto
 
@@ -6863,6 +7289,414 @@ pt-BR:
 
         -   Clique no botão ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27 AM.png>) no topo da página.
         -   Copie a URL dada a você, e mande por email para as pessoas que você quer que veja sua página.
+      CSD U2 publish video: |-
+        ## Perguntas a Considerar
+
+        -   Quais você acha que são suas responsabilidades como editor de um site web?
+        -   Por que você poderia querer ver o código ou reaproveitar código de alguma outra pessoa?
+      CSD U2 style background: |-
+        <div style="float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;">
+        <details>
+
+        <summary>
+
+        **O que é um conjunto de regras de CSS?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um seletor?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um bloco de declaração?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **O que é um par de propriedade-valor?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Como eu crio um novo conjunto de regras?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo "style.css" está em uma linguagem diferente?**
+
+        </summary>
+
+        blá blá resposta
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        -   Localize a propriedade "text-align" na tag de parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left" (esquerda), "right" (direita), e "center" (centro)
+      CSD U2 text style bgcolor: |-
+        <div style="float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;">
+        <details>
+
+        <summary>
+
+        **Que cores eu posso escolher?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Como o código funciona?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+        blá blá resposta
+        </details>
+        <details>
+        <summary>
+
+        **Por que o arquivo 'style.css' está em uma linguagem diferente?**
+
+        </summary>
+
+        blá blá resposta
+
+        </details>
+        </div>
+
+        # Cor de Fundo
+
+        -   Localize o código em 'style.css' que torna a cor de fundo azul claro para a página toda.
+        -   Altere o código para que a página fique de uma cor diferente.
+        -   Tente alterar a cor de fundo somente para os parágrafos.
+      CSD U2 text style decoration: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        o código funciona?</strong></summary>\nAqui está o código que faz os elementos
+        `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-
+        \  `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as
+        regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration:
+        underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-
+        \  `text-decoration` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele
+        explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n
+        \   </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis
+        para decoração de texto?</strong></summary>\n    Você pode escolher entre
+        \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a
+        propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools
+        - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por
+        que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento
+        que controla como uma página web será exibida. Folhas de estilo externas são
+        arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize
+        o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere
+        a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\",
+        \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto
+        para o parágrafo ou tag h3."
+      CSD U2 text style decoration_2018: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        o código funciona?</strong></summary>\nAqui está o código que faz os elementos
+        `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-
+        \  `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as
+        regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration:
+        underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-
+        \  `text-decoration` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele
+        explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n
+        \   </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis
+        para decoração de texto?</strong></summary>\n    Você pode escolher entre
+        \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a
+        propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools
+        - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por
+        que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento
+        que controla como uma página web será exibida. Folhas de estilo externas são
+        arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize
+        o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere
+        a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\",
+        \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto
+        para o parágrafo ou tag h3."
+      CSD U2 text style decoration_2019: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        o código funciona?</strong></summary>\nAqui está o código que faz os elementos
+        `h1` serem sublinhados:\n\n<pre>h1 {\ntext-decoration: underline; \n}</pre>\n\n-
+        \  `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as
+        regras dentro das chaves. O `p` significa parágrafo.\n-   `text-decoration:
+        underline;` é a regra que faz o texto no interior da tag `h1` ficar sublinhado.\n-
+        \  `text-decoration` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso onde a linha deve ser colocada.\n-   `underline` é o _valor_. Ele
+        explica como a regra deve ser aplicada, neste caso está sublinhando o texto.\n
+        \   </details>\n    <details>\n    <summary><strong>Quais são os valores possíveis
+        para decoração de texto?</strong></summary>\n    Você pode escolher entre
+        \"underline\", \"overline\" e \"line-through\". Você pode ler mais sobre a
+        propriedade text-decoration em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools
+        - CSS text-decoration Property</a>\n    </details>\n    <details>\n    <summary><strong>Por
+        que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\nA folha de estilos é um documento
+        que controla como uma página web será exibida. Folhas de estilo externas são
+        arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Sublinhamento\n\n-   Localize
+        o código na folha de estilos que faz a tag `h1` ficar sublinhada.\n-   Altere
+        a decoração do texto e veja qual você prefere.\n-   Escolha entre \"underline\",
+        \"overline\" e \"line-through\"\n-   Adicione uma regra de decoração de texto
+        para o parágrafo ou tag h3."
+      CSD U2 text style font family: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        o código funciona?</strong></summary>\n\nAqui está o código que está controlando
+        a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-
+        \  `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras
+        dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;`
+        é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-
+        \  `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste
+        caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como
+        a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary><strong>Quais
+        são os valores possíveis para família de fontes?</strong></summary>\n\nVocê
+        pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e
+        \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools
+        - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary><strong>Por
+        que toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize
+        o conjunto de regras CSS na folha de estilos que define o estilo para tags
+        de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-
+        \  Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-
+        \  Adicione uma regra de família de fontes para as tags h1 ou h3."
+      CSD U2 text style font family_2018: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está controlando
+        a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-
+        \  `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras
+        dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;`
+        é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-
+        \  `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste
+        caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como
+        a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary>\n<strong>Quais
+        são os valores possíveis para família de fontes?</strong>\n</summary>\n\nVocê
+        pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e
+        \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools
+        - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize
+        o conjunto de regras CSS na folha de estilos que define o estilo para tags
+        de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-
+        \  Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-
+        \  Adicione uma regra de família de fontes para as tags h1 ou h3."
+      CSD U2 text style font family_2019: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está controlando
+        a fonte usada no parágrafo:\n\n<pre>p {\nfont-family: cursive; \n}</pre>\n\n-
+        \  `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras
+        dentro das chaves. O `p` significa parágrafo.\n-   `font-family: cursive;`
+        é a regra que faz o texto no interior da tag `p` usar uma fonte específica.\n-
+        \  `font-family` é a _propriedade_. Ela indica do que se trata a regra, neste
+        caso a fonte que deve ser usada.\n-   `cursive` é o _valor_. Ele explica como
+        a regra deve ser aplicada, neste caso escolhendo a fonte cursiva.\n\n</details>\n<details>\n<summary>\n<strong>Quais
+        são os valores possíveis para família de fontes?</strong>\n</summary>\n\nVocê
+        pode escolher entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e
+        \"monospace\". Você pode ler mais sobre fontes específicas em <a href=\"http://www.w3schools.com/cssref/css_websafe_fonts.asp\">W3Schools
+        - CSS Web Safe Font Combinations</a>\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Alterando a Fonte\n\n-   Localize
+        o conjunto de regras CSS na folha de estilos que define o estilo para tags
+        de parágrafos.\n-   Altere a família de fontes para aquela que você preferir.\n-
+        \  Escolha entre \"serif\", \"sans-serif\", \"cursive\", \"fantasy\" e \"monospace\"\n-
+        \  Adicione uma regra de família de fontes para as tags h1 ou h3."
       CSD U2 text style freeplay - OLD: |-
         # Adicionando Estilos
 
@@ -6931,7 +7765,1135 @@ pt-BR:
         -   `text-align`
 
         Se você usou pelo menos três das propriedades da lista de verificação, explore algumas propriedades de texto adicionais para adicionar ao seu projeto.
+      CSD U2 text style h1: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Que
+        cores eu posso usar em CSS?</strong></summary>\nCSS inclui a maioria dos nomes
+        de cores em inglês (red, blue, green,etc.) e muitas cores incomuns. Você pode
+        ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n</details><details>\n<summary><strong>Como o
+        código funciona?</strong></summary>\nAqui está o código que está fazendo o
+        cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1`
+        é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro
+        das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz
+        o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n    </details>\n    <details>\n    <summary><strong>Por que
+        toda a pontuação é necessária?</strong></summary>\n\nA pontuação, como as
+        chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo
+        HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo
+        específico. A folha de estilos contém informações sobre como cada um dos elementos
+        HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique
+        em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar
+        vermelho.\n-   Troque o código para a cor do cabeçalho h1 de \"red\" para
+        uma cor diferente."
+      CSD U2 text style h1_2018: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que
+        cores eu posso usar em CSS?</strong>\n</summary>\n\nCSS inclui a maioria dos
+        nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns.
+        Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n\n</details><details>\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1`
+        é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro
+        das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz
+        o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda
+        a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves
+        `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender
+        as regras na folha de estilos. As chaves contém todas as regras para um seletor
+        em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades
+        são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo
+        HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo
+        específico. A folha de estilos contém informações sobre como cada um dos elementos
+        HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique
+        em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar
+        vermelho.\n-   Troque o código para a cor do cabeçalho `h1` de \"red\" para
+        uma cor diferente."
+      CSD U2 text style h1_2019: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que
+        cores eu posso usar em CSS?</strong>\n</summary>\n\nCSS inclui a maioria dos
+        nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns.
+        Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n\n</details><details>\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `h1`
+        é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro
+        das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz
+        o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por que toda
+        a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como as chaves
+        `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender
+        as regras na folha de estilos. As chaves contém todas as regras para um seletor
+        em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades
+        são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# CSS e Cor do Texto\n\nEste arquivo
+        HTML usa uma folha de estilos (\"style.css\") para dar à página um estilo
+        específico. A folha de estilos contém informações sobre como cada um dos elementos
+        HTML deve ser exibido.\n\n-   Localize o código na folha de estilos (clique
+        em \"style.css\" na lista de arquivos) que está fazendo o cabeçalho h1 ficar
+        vermelho.\n-   Troque o código para a cor do cabeçalho `h1` de \"red\" para
+        uma cor diferente."
+      CSD U2 text style h3: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Que
+        cores eu posso usar em CSS?</strong></summary>\n\nCSS inclui a maioria dos
+        nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns.
+        Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n\n</details>\n<details>\n<summary><strong>Como
+        o código funciona?</strong></summary>\nAqui está o código que está fazendo
+        o cabeçalho `h1` ficar vermelho:\n\n<pre>p {\ncolor: red; \n}</pre>\n\n-   `p`
+        é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro
+        das chaves. O `p` significa parágrafo.\n-   `color: red;` é a regra que faz
+        o texto no interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n    </details>\n    <details>\n\n<summary><strong>Como eu
+        crio um novo conjunto de regras?</strong></summary>\n\nPara criar um novo
+        conjunto de regras, você irá precisar de um seletor e uma lista de regras.
+        O seletor é o nome da tag em que você que as regras sejam aplicadas. As regras
+        são a lista de pares de propriedades e valores. Você também precisa prestar
+        atenção na pontuação usada no conjunto de regras. Veja o código abaixo para
+        ter um exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes
+        para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_.
+        Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-
+        \  `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem
+        vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra
+        deve ser aplicada, neste caso escolhendo a cor vermelha.\n    </details>\n
+        \   <details>\n    <summary><strong>Por que toda a pontuação é necessária?</strong></summary>\n\nA
+        pontuação, como as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`,
+        ajudam o computador a entender as regras na folha de estilos. As chaves contém
+        todas as regras para um seletor em particular. Cada regra deve terminar com
+        um ponto e vírgula, e as propriedades são sempre separadas de seus valores
+        por dois pontos.\n\n</details>\n<details>\n<summary><strong>O que é uma folha
+        de estilos?</strong></summary>\n\nA folha de estilos é um documento que controla
+        como uma página web será exibida. Folhas de estilo externas são arquivos separados,
+        que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras
+        de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado
+        de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando
+        o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize
+        o conjunto de regras de CSS da folha de estilos que determina os estilos para
+        a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS
+        que irá definir os estilos para a tag h3.\n-   Acrescente código para definir
+        uma cor diferente para as tags h3."
+      CSD U2 text style h3_2018: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que
+        cores eu posso usar em CSS?</strong>\n</summary>\nCSS inclui a maioria dos
+        nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns.
+        Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n</details>\n<details>\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        o cabeçalho `h1` ficar vermelho:\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-
+        \  `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as
+        regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no
+        interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Como eu crio
+        um novo conjunto de regras?</strong>\n</summary>\n\nPara criar um novo conjunto
+        de regras, você irá precisar de um seletor e uma lista de regras. O seletor
+        é o nome da tag em que você que as regras sejam aplicadas. As regras são a
+        lista de pares de propriedades e valores. Você também precisa prestar atenção
+        na pontuação usada no conjunto de regras. Veja o código abaixo para ter um
+        exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes
+        para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_.
+        Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-
+        \  `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem
+        vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra
+        deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras
+        de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado
+        de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando
+        o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize
+        o conjunto de regras de CSS da folha de estilos que determina os estilos para
+        a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS
+        que irá definir os estilos para a tag h3.\n-   Acrescente código para definir
+        uma cor diferente para as tags h3."
+      CSD U2 text style h3_2019: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que
+        cores eu posso usar em CSS?</strong>\n</summary>\nCSS inclui a maioria dos
+        nomes de cores em inglês (red, blue, green,etc.) e muitas cores incomuns.
+        Você pode ver a lista completa de nomes de cores CSS em <a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools
+        - HTML Color Names</a>. Você pode também usar cores que não estão incluídas
+        na lista de nomes, mas você terá que usar os valores RGB. Você pode ler mais
+        sobre o uso de cores em CSS em <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
+        - CSS Legal Color Values</a>\n</details>\n<details>\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        o cabeçalho `h1` ficar vermelho:\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-
+        \  `h1` é o _seletor_. Ele especifica quais elementos terão que seguir as
+        regras dentro das chaves.\n-   `color: red;` é a regra que faz o texto no
+        interior das tags `h1` ficarem vermelhas.\n-   `color` é a _propriedade_.
+        Ela indica do que se trata a regra, neste caso a cor da fonte.\n-   `red`
+        é o _valor_. Ele explica como a regra deve ser aplicada, neste caso escolhendo
+        a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Como eu crio
+        um novo conjunto de regras?</strong>\n</summary>\n\nPara criar um novo conjunto
+        de regras, você irá precisar de um seletor e uma lista de regras. O seletor
+        é o nome da tag em que você que as regras sejam aplicadas. As regras são a
+        lista de pares de propriedades e valores. Você também precisa prestar atenção
+        na pontuação usada no conjunto de regras. Veja o código abaixo para ter um
+        exemplo de como o código deve ficar. Você vai precisar adaptar os detalhes
+        para a sua página.\n\n<pre>h1 {\ncolor: red; \n}</pre>\n\n-   `h1` é o _seletor_.
+        Ele especifica quais elementos terão que seguir as regras dentro das chaves.\n-
+        \  `color: red;` é a regra que faz o texto no interior das tags `h1` ficarem
+        vermelhas.\n-   `color` é a _propriedade_. Ela indica do que se trata a regra,
+        neste caso a cor da fonte.\n-   `red` é o _valor_. Ele explica como a regra
+        deve ser aplicada, neste caso escolhendo a cor vermelha.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que toda a pontuação é necessária?</strong>\n</summary>\n\nA pontuação, como
+        as chaves `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador
+        a entender as regras na folha de estilos. As chaves contém todas as regras
+        para um seletor em particular. Cada regra deve terminar com um ponto e vírgula,
+        e as propriedades são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é uma folha de estilos?</strong>\n</summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que é CSS?</strong>\n</summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Criando um novo conjunto de regras
+        de CSS\n\nO bloco de código que fornece regras para uma tag específica é chamado
+        de _conjunto de regras_. Você pode criar um novo conjunto de regras copiando
+        o padrão que aparece no conjunto de regras para a tag `h1`.\n\n-   Localize
+        o conjunto de regras de CSS da folha de estilos que determina os estilos para
+        a tag h1.\n-   Usando o mesmo padrão, escreva um novo conjunto de regras CSS
+        que irá definir os estilos para a tag h3.\n-   Acrescente código para definir
+        uma cor diferente para as tags h3."
+      CSD U2 text style sample: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n\n**O
+        que é uma folha de estilos?**\n\n</summary>\nUma folha de estilos é um documento
+        que controla como uma página web será exibida. Folhas de estilo externas são
+        arquivos separados, que estão vinculados à página HTML.\n</details>\n<details>\n<summary>\n\n**O
+        que é CSS?**\n\n</summary>\nCSS é a linguagem que controla a maneira que o
+        conteúdo de uma página web é exibido. Ela usa conjuntos de regras para alterar
+        a aparência de uma página. Cada conjunto de regras possui um seletor, que
+        especifica quais elementos na página serão afetados, e as regras, que explicam
+        como exibir os elementos. Cada regra consiste em uma propriedade e o valor
+        para esta propriedade.\n\nAqui está um exemplo de um conjunto de regras que
+        faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor: blue;\nfont-family:
+        cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor, `color` e `font-family`
+        são propriedades, e `blue` e `cursive` são os valores das propriedades.\n\n</details>\n<details>\n<summary>\n\n**Por
+        que o arquivo \"style.css\" está em uma linguagem diferente?**\n\n</summary>\nDesenvolvedores
+        web intencionalmente separam conteúdo e estilo para tornar seu código mais
+        fácil de manter. HTML é a linguagem usada para dar estrutura ao conteúdo de
+        uma página web. CSS é a linguagem que acrescenta estilo à página web.\n</details>\n<details>\n<summary>\n\n**O
+        que significa `px` / O que é um pixel?**\n\n</summary>\nPixel, que é abreviado
+        por `px`, é a forma como elementos são medidos em CSS. É o tamanho de um único
+        ponto de luz na tela.\n</details>\n<details>\n<summary>\n\n**Para que serve
+        a propriedade `text-decoration`?**\n\n</summary>\nA propriedade `text-decoration`
+        coloca uma linha acima, abaixo, ou no meio de um trecho de texto. Você pode
+        ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_text_text-decoration.asp\">W3Schools
+        - CSS text-decoration Property</a>\n</details>\n<details>\n<summary>\n\n**Para
+        que serve a propriedade `text-align`?**\n\n</summary>\nA propriedade `text-align`
+        alinha o texto à esquerda, à direita, ou ao centro. Você pode ler mais em
+        <a href=\"http://www.w3schools.com/cssref/pr_text_text-align.asp\">W3Schools
+        - CSS text-align Property</a>\n</details>\n<details>\n<summary>\n\n**Para
+        que serve a propriedade `font-family`?**\n\n</summary>\n\nA propriedade `font-family`
+        altera a fonte do texto. Ela fornece uma descrição geral do tipo de fonte
+        que deve ser usado, mas cada browser pode exibir a fonte de forma um pouco
+        diferente. Leia mais em <a href=\"http://www.w3schools.com/cssref/pr_font_font-family.asp\">W3Schools
+        - CSS font-family Property</a>\n\n</details>\n</div>\n\n# CSS e Folhas de
+        Estilo\n\n-   Observe a página web abaixo e localize alguns tipos diferentes
+        de estilos de texto que você ainda não conhece.\n-   Clique na folha de estilos
+        (\"style.css\" na área de arquivos) e observe o texto no interior do arquivo.\n-
+        \  Com seu parceiro, discuta quais as partes do código que você acha que estão
+        fazendo o texto parecer um pouco diferente do que antes.\n\nNas próximas lições,
+        você irá alterar e adicionar novos estilos a esta página."
+      CSD U2 text style size: "<div style=\"float: right; height: 250px; width: 40%;
+        overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        o código funciona?</strong></summary>\nAqui está o código que está controlando
+        o tamanho da fonte usada no parágrafo:\n\n<pre>p {\nfont-size: 14px; \n}</pre>\n\n-
+        \  `p` é o _seletor_. Ele especifica quais elementos terão que seguir as regras
+        dentro das chaves. O `p` significa parágrafo.\n-   `font-size: 14px;` é a
+        regra que faz o texto no interior da tag `p` usar um tamanho de fonte específico.\n-
+        \  `font-size` é a _propriedade_. Ela indica do que se trata a regra, neste
+        caso a fonte que deve ser usada.\n-   `14px` é o _valor_. Ele explica como
+        a regra deve ser aplicada, neste caso fazendo que o tamanho do texto tenha
+        14px.\n    </details>\n    <details>\n    <summary><strong>O que significa
+        `px` / O que é um pixel?</strong></summary>\n\nPixel, que é abreviado como
+        `px`, é a forma como elementos são mensurados em CSS. É o tamanho de um único
+        ponto de luz na tela.\n\n</details>\n<details>\n<summary><strong>Por que toda
+        a pontuação é necessária?</strong></summary>\n\nA pontuação, como as chaves
+        `{}`, dois pontos `:`, e o ponto e vírgula `;`, ajudam o computador a entender
+        as regras na folha de estilos. As chaves contém todas as regras para um seletor
+        em particular. Cada regra deve terminar com um ponto e vírgula, e as propriedades
+        são sempre separadas de seus valores por dois pontos.\n\n</details>\n<details>\n<summary><strong>O
+        que é uma folha de estilos?</strong></summary>\n\nA folha de estilos é um
+        documento que controla como uma página web será exibida. Folhas de estilo
+        externas são arquivos separados, que estão vinculados à página HTML.\n\n</details>\n<details>\n<summary><strong>O
+        que é CSS?</strong></summary>\n\nCSS é a linguagem que controla a maneira
+        que o conteúdo de uma página web é exibido. Ela usa conjuntos de regras para
+        alterar a aparência de uma página. Cada conjunto de regras possui um seletor,
+        que especifica quais elementos na página serão afetados, e as regras, que
+        explicam como exibir os elementos. Cada regra consiste em uma propriedade
+        e o valor para esta propriedade.\n\nAqui está um exemplo de um conjunto de
+        regras que faz o texto em uma tag `h2` ficar azul e cursivo:\n\n<pre>h2 {\ncolor:
+        blue;\nfont-family: cursive; \n</pre>\n\nNeste exemplo, `h2` é o seletor,
+        `color` e `font-family` são propriedades, e `blue` e `cursive` são os valores
+        das propriedades.\n\n</details>\n</div>\n\n# Alterando o Tamanho da Fonte\n\nVocê
+        pode alterar outras coisas além de cores utilizando outras propriedades.\n\n-
+        \  Localize o conjunto de regras CSS na folha de estilos que define o estilo
+        para tags de parágrafos.\n-   Altere o tamanho do texto dos parágrafos para
+        que fiquem maiores.\n-   Adicione uma nova regra ao seu conjunto de regras
+        para as tags h3, para fazer os textos ficarem maiores ou menores."
+      CSD U2 text style size_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Esse é o código que controla o tamanho do texto do parágrafo:
+
+        <pre>p {
+        font-size: 14px;
+        }</pre>
+
+        -   `p` é o _seletor_.  Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.
+        -   `font-size: 14px;` é a regra que faz o texto dentro das tags `p` ter um tamanho específico.
+        -   `font-size` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o tamanho (size) da fonte.
+        -   `14px` é o _valor_.  Ele explica como a regra deve ser aplicada, nesse caso fazendo o tamanho do texto ser 14 pixels.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que <code>px</code> significa / O que é um pixel?</strong>
+        </summary>
+
+        Pixel, abreviado como `px`, é como os elementos são medidos em CSS. É o tamanho de um único ponto de luz na tela.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+        </div>
+
+        # Alterando o tamanho do texto
+
+        Você pode controlar outras coisas além das cores ao usar outras propriedades.
+
+        -   Encontre o conjunto de regras CSS na folha de estilos que determina o estilo para a tag parágrafo.
+        -   Faça o texto dos parágrafos ser maior.
+        -   Adicione uma regra para sua tag h3 ao seu conjuntos de regras e faça o texto dela ser maior ou menor.
+      CSD U2 text style size_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Esse é o código que controla o tamanho do texto do parágrafo:
+
+        <pre>p {
+        font-size: 14px;
+        }</pre>
+
+        -   `p` é o _seletor_.  Ele especifica quais elementos terão que seguir as regras dentro das chaves. O `p` significa parágrafo.
+        -   `font-size: 14px;` é a regra que faz o texto dentro das tags `p` ter um tamanho específico.
+        -   `font-size` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o tamanho (size) da fonte.
+        -   `14px` é o _valor_.  Ele explica como a regra deve ser aplicada, nesse caso fazendo o tamanho do texto ser 14 pixels.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que <code>px</code> significa / O que é um pixel?</strong>
+        </summary>
+
+        Pixel, abreviado como `px`, é como os elementos são medidos em CSS. É o tamanho de um único ponto de luz na tela.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+        </div>
+
+        # Alterando o tamanho do texto
+
+        Você pode controlar outras coisas além das cores ao usar outras propriedades.
+
+        -   Encontre o conjunto de regras CSS na folha de estilos que determina o estilo para a tag parágrafo.
+        -   Faça o texto dos parágrafos ser maior.
+        -   Adicione uma regra para sua tag h3 ao seu conjuntos de regras e faça o texto dela ser maior ou menor.
+      CSD U2 text style text align: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **Como o código funciona?**
+
+        </summary>
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+            </details>
+            <details>
+            <summary>
+
+        **Por que `text-align: left;` não faz nada?**
+
+        </summary>
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+        </details>
+        <details>
+        <summary>
+
+        **Quais são os valores possíveis para o alinhamento do texto?**
+
+        </summary>
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+        </details>
+        <details>
+        <summary>
+
+        **Por que preciso de toda essa pontuação?**
+
+        </summary>
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+        </details>
+        <details>
+        <summary>
+
+        **O que é uma folha de estilos?**
+
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+
+        **O que é CSS?**
+
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 text style text align_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que <code>text-align: left;</code> não faz nada?</strong>
+        </summary>
+
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quais são os valores possíveis para o alinhamento do texto?</strong>
+        </summary>
+
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+        <br/><br/>
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 text style text align_2019: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como o código funciona?</strong>
+        </summary>
+
+        Aqui está o código que controla o alinhamento do texto do parágrafo:
+
+        <pre>p {
+        text-align: left;
+        }</pre>
+
+        -   `p` é o _seletor_. Ele determina quais elementos seguirão as regras dentro das chaves. O `p` significa parágrafo.
+        -   `text-align: left;` é a regra que faz o texto dentro das tags `p`alinhar ao lado esquerdo (left) do parágrafo.
+        -   `text-align` é a _propriedade_. Ela explica sobre o que a regra é, nesse caso o alinhamento do texto.
+        -   `left` é o _valor_. Ele explica como a regra deve ser aplicada, nesse caso fazendo o texto alinhar ao lado esquerdo do parágrafo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que <code>text-align: left;</code> não faz nada?</strong>
+        </summary>
+
+        A maioria das propriedades têm valores padrão. Os valores padrão são os estilos que um elemento terá automaticamente, antes de você adicionar sua folha de estilos. O valor padrão para `text-align` é `left`, então ele não muda de como já estava.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Quais são os valores possíveis para o alinhamento do texto?</strong>
+        </summary>
+
+        Você pode escolher dentre "left", "right" e "center" (esquerda, direita e centro). Você pode ler mais sobre a propriedade text-align em <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - propriedade CSS text-align</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que preciso de toda essa pontuação?</strong>
+        </summary>
+
+        A pontuação, como as chaves `{}`, os dois-pontos `:` e o ponto e vírgula `;`, ajudam o computador a entender as regras na folha de estilos. As chaves guardam todas as regras de um seletor específico. Cada regra deve terminar em um ponto e vírgula, enquanto as propriedades e valores são sempre separados por dois-pontos.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma folha de estilos?</strong>
+        </summary>
+
+        Uma folha de estilos é um documento que controla a aparência de uma página da web. Folhas de estilo externas são arquivos separados que são ligados à página HTML.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é CSS?</strong>
+        </summary>
+
+        CSS é uma linguagem que controla a forma como o conteúdo numa página da web é exibido. Ela usa conjuntos de regras para alterar a aparência de uma página. Cada conjunto de regras tem um seletor, que especifica quais elementos da página serão afetados, além de regras, que explicam como exibir os elementos. Cada regra consiste de uma propriedade e de um valor para essa propriedade.
+        <br/><br/>
+        O exemplo a seguir é de um conjunto de regras que torna o texto em um `h2` azul e cursivo:
+
+        <pre>h2 {
+        color: blue;
+        font-family: cursive;
+        }</pre>
+
+        Nesse exemplo, `h2` é um seletor, `color` e `font-family` são propriedades, enquanto `blue` e `cursive` são os valores dessas propriedades.
+
+        </details>
+
+        </details>
+        </div>
+
+        # Alinhamento de Texto
+
+        A propriedade `text-align` define o posicionamento horizontal (lado a lado) do texto dentro de cada linha.
+
+        -   Encontre a propriedade "text-align" na tag parágrafo.
+        -   Altere o alinhamento do parágrafo.
+        -   Escolha entre "left", "right" e "center" (esquerda, direita e centro)
+      CSD U2 un_ordered lists: "# Combining Lists\n\n<div style=\"float: right; height:
+        250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Quais são os dois tipos de
+        lista?</strong>\n</summary>\nExistem dois tipos de listas em HTML, listas
+        ordenadas e não ordenadas.\n</details>\n<details>\n<summary>\n<strong>\nO
+        que é uma lista não ordenada?</strong>\n</summary>\n\nUm lista não ordenada
+        é somente um conjunto de itens com marcadores. \n<br /><br /> Um lista não
+        ordenada tem a tag \\<ul> . \nEsta é uma abreviação para <strong>U</strong>
+        não ordenada <strong>L</strong>ista. \nCada item na lista é marcado por um
+        elemento de item de lista \\<li>. Esta é uma abreviação de <strong>L</strong>ista
+        <strong>I</strong>tem. O item elemento da lista é um elemento filho, o que
+        significa que ele está dentro do elemento pai, a lista não ordenada. (\\<ul>).\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        faço uma lista não ordenada?</strong>\n</summary>\n\nCriar uma lista não ordenada
+        tem dois passos: fazer a lista e adicionar os itens da lista. Para criar uma
+        lista não ordenada, escreva as tags de listas não ordenadas `<ul></ul>`.  \n\nEm
+        seguida, adicione seus itens de lista \\*\\* dentro \\*\\* das tags de lista
+        não ordenada. Para criar cada item da lista, use as tags `<li></li>` e escreva
+        o item da lista dentro das tags. \n<br /><br />\nPode ser útil recuar as tags
+        \\\\ <li> para que fique claro que elas estão contidas na tag \\\\ <ul>.\n\n</details>\n\n<details>\n<summary>\n<strong>O
+        que é uma lista ordenada?</strong>\n</summary>\n\nUma lista ordenada é um
+        conjunto de itens com marcadores que são numerados.\n<br /><br />\nUm elemento
+        da lista ordenada tem a tag `<ol>` . Esta é uma abreviação para <strong>O</strong>rdenada
+        <strong>L</strong>ista. Cada item da lista é marcado por um elemento de item
+        de lista `<li>`;.  Esta é uma abreviação para <strong>L</strong>ista <strong>I</strong>tem.
+        \ O elemento item da lista é um elemento filho, o que significa que ele está
+        dentro de seu elemento pai, a lista ordenada. (`<ol>`).\n\n</details>\n\n<details>\n<summary>\n<strong>Como
+        eu faço uma lista ordenada?</strong>\n</summary>\n\nCriar uma lista ordenada
+        tem dois passos: fazer a lista e adicionar os itens da lista. Para criar a
+        lista ordenada, escreva as tags da lista ordenada `<ol></ol>`.  Em seguida,
+        adicione os itens da sua lista \\*\\* dentro \\*\\* das tags da lista ordenada.
+        Para criar cada item da lista, use as tags de item de lista `<li> </ li>`
+        e escreva o item da lista dentro das tags.\n<br /><br />\nPode ser útil recuar
+        as suas tags  `<li>` para que fique claro que elas estão contidas na tag `<ol>`.\n\n</details>\n\n<details>\n<summary>\n<strong>Me
+        mostre o código.</strong>\n</summary>\n\n<table border=\"1\">\n<tr>\n<td>Exemplo</td>\n<td>Resultado</td>\n</tr>\n<tr>\n<td><pre>
+        &lt;ul&gt; <br>   &lt;li&gt;Vermelho &lt;/li&gt; <br>   &lt;li&gt;Verde &lt;/li&gt;
+        <br>   &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>\n<td><img src=\"https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32
+        PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n<table border=\"1\">\n<tr>\n<td>Exemplo</td>\n<td>Resultado</td>\n</tr>\n<tr>\n<td><pre>
+        &lt;ol&gt; <br>   &lt;li&gt;Passo 1&lt;/li&gt; <br>   &lt;li&gt;Passo 2&lt;/li&gt;
+        <br>   &lt;li&gt;Passo 3&lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\n<td><img
+        src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04
+        PM.png\" style=\"width:200px\"></td>\n</tr>\n</table>\n\n</details>\n</div>\n\nEsta
+        página deve incluir uma lista não ordenada e uma lista ordenada.\n\n# Faça
+        isso\n\n-   Use as tags de lista para estruturar esse conteúdo em duas listas
+        que se parecem com as abaixo.\n\n_Hint: Não haverá NUMEROS no seu código._
+        \n\n![](https://images.code.org/c9c002b39893ab09e8bc6be4b20ad7c2-image-1553714125509.png)\n\nroot
+        -> data -> long_instructions -> CSD U2 un_ordered lists\n<strong>Quais são
+        os dois tipos de lista?</strong>"
+      CSD U2 unordered list: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+        </details>
+        <details>
+        <summary><strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary><strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary><strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 unordered list_2018: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+        <br /><br />
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 unordered list_2019: |-
+        # Listas Não Ordenadas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Quais são os dois tipos de listas?</strong>
+        </summary>
+        Existem dois tipos de listas em HTML, listas ordenadas e não ordenadas.
+
+        </details>
+        <details>
+        <summary>
+        <strong>O que é uma lista não ordenada?</strong>
+        </summary>
+
+        Uma lista não ordenada é somente um conjunto de itens com marcadores.
+        <br /><br />Um elemento de lista não ordenada tem a tag \<ul>. Isto é uma abreviação para <strong>U</strong>nordered <strong>L</strong>ist (lista não ordenada). Cada item na lista é marcado por um elemento de item de lista \<li>. Isto é uma abreviação para <strong>L</strong>ist <strong>I</strong>tem (item de lista). O elemento de item de lista é um elemento filho, o que significa que ele é colocado no interior do elemento pai, que é a lista não ordenada (\<ul>).
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Como eu crio uma lista não ordenada?</strong>
+        </summary>
+
+        A criação de uma lista não ordenada é feita em dois passos: criando a lista e adicionando os itens da lista. Para criar a lista não ordenada, digite as tags de lista não ordenada `<ul></ul>`. Em seguida, adicione seus itens de lista **dentro** das tags da lista não ordenada. Para criar cada item, use as tags de itens de lista `<li></li>` e digite o item de lista dentro das tags.
+        <br /><br />
+        Pode ser útil indentar suas tags \<li> para que fique claro que elas estão contidas na tag \<ul>.
+
+        </details>
+
+        <details>
+        <summary>
+        <strong>Mostre-me o código que funciona.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br> &lt;li&gt;Vermilho &lt;/li&gt; <br> &lt;li&gt;Verde &lt;/li&gt; <br> &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta página deveria ter uma lista não ordenada, mas as tags de lista estão faltando.
+
+        # Faça Isto
+
+        -   Use as tags `<ul>` e `<li>` para estruturar o conteúdo em uma lista não ordenada, como a figura abaixo.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
+      CSD U2 upload image: |-
+        # Carregue uma nova imagem
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+
+        **Como eu acrescento imagens?**
+
+        </summary>
+        A tag `<img>` permite a você mostrar imagens na sua página web.<br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cachorro pulando"/&gt;</pre><br><br>
+
+        Para indicar ao browser qual arquivo usar, uma informação a mais, denominada um **atributo**, é adicionada à tag \<img> dentro dos colchetes. O atributo `src` significa **s**ou**rc**e (origem) e contém o nome da imagem. Nomes de arquivos de imagem incluem extensões que dizem ao computador qual o tipo da imagem com que estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além de possuir o atributo src, elementos de imagens também têm o atributo `alt` que descreve a imagem. Isto é importante no caso de a imagem não carregar, ou para pessoas que tenham problemas visuais.<br><br>
+
+        Uma tag `<img>` é um exemplo de um **elemento vazio** porque ela começa e termina em uma única tag. Para indicar isto nós colocamos o `/` que normalmente é colocado na tag de fechamento, ao final da tag de imagem.
+
+        </details>
+        <details>
+        <summary>
+
+        **O que é um elemento vazio?**
+
+        </summary>
+        Uma tag `<img>` é um exemplo de um **elemento vazio** porque ela inicia e termina em uma mesma tag. Para indicar isto nós colocamos o `/` que normalmente é colocado na tag de fechamento, ao final da tag de imagem. Tags vazias não necessitam de uma tag de fechamento porque não existe conteúdo de texto que precisa ser envolvido em tags. O conteúdo que é exibido na tela é descrito através dos atributos da tag.
+        </details>
+        <details>
+        <summary>
+
+        **Por que uma imagem não tem uma tag de fechamento?**
+
+        </summary>
+        Uma tag de imagem é uma tag vazia, e uma tag vazia não precisa de tag de fechamento porque não existe conteúdo de texto que deve ser envolvido por tags. O conteúdo que é exibido na tela é definido através dos atributos da tag.
+        </details>
+        <details>
+        <summary>
+
+        **O que é um atributo?**
+
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação que está sendo fornecido, e então os valores fornecem a informação específicas para aquela tag.
+
+        Por exemplo, tags \<img> têm dois atributos, src e alt. src especifica o nome do arquivo de imagem, e alt diz ao browser, em texto legível, o que a imagem é.
+
+        </details>
+        </div>
+
+        Agora você pode adicionar suas próprias imagens ao seu website pessoal. Se você não tiver as imagens que você deseja em seu computador, você pode procurá-las aqui e baixá-las.
+
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type=hidden name=site value="imghp" />
+        <input type=hidden name=tbm value=isch />
+        <input type=hidden name=tbs value="sur:fmc" />
+        <input name=q />
+        <input type=submit value="search">
+        <br />
+        </form>
+
+        Assim que você tiver suas imagens, clique ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) e carregue a image do seu computador para o seu projeto.
+
+        # Faça Isto
+
+        -   Carregue pelo menos duas imagens para o seu projeto.
+        -   Use a tag `<img>` para mostrar as imagens no seu website.
+      CSD U2 upload images: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="/s/csd2/stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
+      CSD U2 upload images_2018: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
+      CSD U2 upload images_2019: |-
+        # Carregue Imagens
+
+        A seguir, você vai precisar carregar todas as suas imagens no seu projeto.
+
+        # Faça Isto
+
+        -   Baixe todas as imagens que você quiser no seu computador. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> para ter ajuda, se você precisar.
+        -   Tenha certeza que você tem o direito de uso estas imagens.
+        -   Anote toda a informação de atribuição de direitos que você precisa.
+        -   Carregue todas as imagens no seu projeto. Visite <a href="../../../stage/7/puzzle/5" target="_new">Lição 7 Nível 5</a> se você esqueceu como fazer isto.
       CSD U3 - Booleans Video: "# Video de Expressões Booleanas"
+      CSD U3 - Booleans Video_2019: |-
+        ## Perguntas para Consideração
+
+        -   O que é uma expressão booleana?
+        -   Qual é uma expressão que resultaria em verdadeiro?
+        -   Qual é uma expressão que resultaria em falso?
+      CSD U3 - Conditionals Video_2019: |-
+        ## Perguntas para Consideração
+
+        -   O que é um exemplo de quando você precisaria de uma declaração "if/else"?
+      CSD U3 - Simple Counter Predict: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 - Simple Counter Predict_2018: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 - Simple Counter Predict_2019: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
       CSD U3 - Sprites - Sprite v Rect: |-
         # Sprites vs Rect
 
@@ -6959,6 +8921,274 @@ pt-BR:
 
         -   Crie um sprite
         -   Adicione a animação.
+      CSD U3 - images - review: |-
+        Revisão de Sprites
+
+        Você já aprendeu muito sobre sprites e condicionais. Você pode usar essas habilidades para criar um quadrado que se mova em todas as quatro direções em resposta às teclas de seta?
+
+        # Faça isso
+
+        -   Crie um sprite
+        -   Faça o sprite se mover para cima, para baixo, para a esquerda e para a direita em resposta às teclas de seta
+      CSD U3 - images - scale: |-
+        Envie sua própria imagem
+
+        Então a imagem que você enviou provavelmente não era do tamanho que você queria? Você pode consertar isso! Existe uma propriedade para sprites chamada `escala`. **Escala controla a largura e a altura do sprite de uma só vez.**Usar escala é melhor do que usar largura e altura para imagens porque...
+
+        1.  É uma propriedade em vez de duas.
+        2.  Você mantém a proporção da imagem e não a distorce.
+
+        **Para tornar a imagem menor, você deseja usar uma escala menor que 1. Para aumentar a imagem, você deseja usar um número maior que 1. Uma escala de 1 manteria o mesmo.**
+
+        # Faça isso
+
+        -   Redimensione seu kite usando `scale` para melhor encaixar na imagem.
+      CSD U3 - images - visible: |-
+        # Visível
+
+        Agora que você tem condicionais e imagens, às vezes, é apropriado ocultar a imagem por um tempo e, em seguida, mostrá-la novamente. Você pode fazer isso usando a propriedade `visível`. A propriedade visível é um pouco diferente de algumas das outras propriedades que você viu no passado. É um valor booleano. Então visível é verdadeiro ou falso. Por padrão, visível é definido como verdadeiro.
+
+        # Faça isso
+
+        -   Em resposta a algo, defina o sprite para visível e invisível.
+      CSD U3 AnimationsMulti Play Defender: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti Play Defender_2018: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti Play Defender_2019: |-
+        # Defenda seu bolo!
+
+        Este é um exemplo de um jogo de defesa que você vai construir até o final desta lição. Para defender o seu bolo, mova o alienígena com as setas para bloquear as joaninhas e empurre-as para a água.
+
+        # Faça isso
+
+        Volte para um colega e faça uma lista das seguintes informações.
+
+        -   Quantos sprites existem neste jogo. Quais são eles?
+        -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
+        -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti defender animate player: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender animate player_2018: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender animate player_2019: |-
+        # Alterar animações do jogador
+
+        Agora seu jogador está sempre voltado para a mesma direção. Você pode fazer as coisas parecerem muito mais realistas, alternando entre as animações. Seu jogador deve alternar entre uma animação voltada para a esquerda e para a direita, dependendo de qual tecla foi pressionada pela última vez. Lembre-se, você pode copiar e editar animações rapidamente dentro da guia Animação.
+
+        # Faça isso
+
+        -   Dentro da guia Animação, copie a animação do sprite do seu jogador.
+        -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
+        -   Renomeie sua nova animação.
+        -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender template: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti defender template_2018: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti defender template_2019: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti introducing multiframe template: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti introducing multiframe template_2018: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti introducing multiframe template_2019: |-
+        # Usando animações em vários quadros
+
+        Você provavelmente notou no último jogo que os próprios sprites estavam animados. Divirta-se escolhendo algumas das animações da biblioteca.
+
+        # Faça isso
+
+        Este programa já inclui vários sprites, mas eles ainda não possuem animações.
+
+        -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti play pause: |-
+        # Reproduzir e pausar
+
+        Você pode usar os comandos `sprite.reproduzir` e`sprite.pausar` para reproduzir e pausar a animação de um sprite. Se a animação já estiver sendo reproduzida ou pausada, o uso desses comandos duas vezes seguidas não terá efeito. Há uma exceção importante, no entanto, que é que **a reprodução reiniciará uma animação sem loop se tiver terminado**. Nós vamos olhar para algum comportamento legal que isso nos permite criar.
+
+        # Faça isso
+
+        -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 Complex Movement counter prediction: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2018: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2019: |-
+        # Velocidade e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz com que um sprite se mova suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Compound Nested Challenge: |-
+        # Desafio: Verificação de várias condições
+
+        _Verifique com seu professor antes de aceitar este desafio._
+
+        Até agora, analisamos várias maneiras de verificar se uma única condição é verdadeira, mas geralmente um programa precisa verificar o estado de muitas condições simultaneamente antes de tomar uma decisão. Para este desafio, vamos supor o seguinte cenário:
+
+        -   O sprite deve se mover para cima, para baixo, para a esquerda e para a direita se a tecla de seta correspondente for pressionada.
+        -   O sprite não deve ir até a tela em qualquer direção.
+
+        # Faça isso juntos
+
+        Antes de começar a escrever este programa, você precisará descobrir como verificar várias condições de uma só vez.
+
+        -   \*\* Brainstorm \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
+        -   \*\* Compartilhe \*\* de volta com toda a turma para ver outras abordagens em potencial.
+        -   \*\* Explore \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
+        -   \*\* Programa \*\* sua solução proposta.
+        -   \*\* Teste \*\* seu programa para verificar se ele está realmente verificando todas as condições desejadas.
+      CSD U3 Counters explaining counters contained 2: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters contained 2_2018: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters contained 2_2019: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Counters explaining counters: |-
+        # O Padrão de Contador
+
+        Este padrão é um dos mais importantes em toda a programação.
+
+        ![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56 PM.png>)
+
+        Ele é usado para incrementar o valor de uma variável em 1. Você poderia chamá-lo de **padrão do contador** já que ele pode ser usado para criar uma variável que conta para cima. Você irá usar este padrão bastante, especialmente com a iteração de desenho. Vamos ver como ela se parece.
+
+        # Faça Isto
+
+        Este programa cria uma variável `counter` e depois utiliza o **padrão do contador** para incrementar seu valor. Quando você rodar o programa, o que você acha que vai ver na tela?
+
+        -   **Leia o programa** e faça uma previsão de como será sua saída.
+        -   **Rode o programa** para verificar sua previsão.
+        -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
       CSD U3 Random random ellipse-2018: |-
         # Números aleatórios
 
@@ -7547,6 +9777,7 @@ pt-BR:
         muito justa! Altere a variável "velocidade\_cão" para garantir que você possa coletar mais
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       Craft Aquatic - allthethings: Chegue ao Farol do Mar.
+      Dance Party Template 2_2019: Modelo
       Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -7803,6 +10034,27 @@ pt-BR:
       K-1 Maze Loops 8: Use o laço "repita" para me levar até o porco.
       KIKI GLJ Test Response: Olhe cuidadosamente para o código abaixo. O que você
         acha que acontecerá com o avião quando você clicar "Executar"?
+      Luigi's Pizza 1: |-
+        Bem-vindo à pizzaria do Luigi! Para pedir uma pizza,
+        digite o nome de um sabor na função "custo" e vamos retornar o
+        preço da pizza. Tente pedir uma pizza de pepperoni para começar.
+      Luigi's Pizza 2: Agora há apenas quatro opções disponíveis na pizzaria do Luigi
+        - vamos arrumar isso! Adicione alguns novos sabores ao bloco condicional na
+        função "custo". Quando adicionar seus sabores, teste a função para ver se
+        ela funciona.
+      Luigi's Pizza 3: |-
+        Assim está melhor, todos adoram uma maior variedade nos
+        sabores de pizza! Mas você ainda não consegue agradar a todos, e algumas pessoas estão
+        vindo pedir sabores que Luigi não tem. Ao invés de dizer não
+        a essas pessoas, você poderia atualizar a cláusula "senão" para que possamos cobrar a
+        mais deles por sabores que normalmente não oferecemos? Vamos cobrar R$10.000
+        por um sabor que não está disponível.
+      Luigi's Pizza 4: |-
+        Prática Livre: O que você pode fazer para tornar a função de custo de Luigi ainda mais útil? Tente um (ou mais) dos seguintes itens:
+
+        -   Crie uma nova função para exibir uma imagem da pizza escolhida
+        -   Crie uma função que permita encomendar várias pizzas (iguais ou com sabores diferentes)
+        -   Crie uma função que permita adicionar o código de um cupom com 30% de desconto
       MC Agent Freeplay: "**Jogo Livre:** Agora é com você! Use o código do Agent
         para ajudá-lo a explorar este mundo."
       MC_HOC_2017 Agent Test: "Clique em \"Executar\" para mover o jogador usando
