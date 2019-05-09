@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {ScriptTeacherPanel} from './components/progress/ScriptTeacherPanel';
+import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
 
 /**
  * Render our teacher panel that shows up on our course overview page.
