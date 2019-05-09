@@ -273,7 +273,11 @@ gem 'net-scp'
 gem 'net-ssh'
 gem 'oj'
 
-gem 'rest-client', '~> 2.0'
+gem 'rest-client', '~> 2.0.1'
+
+# A rest-client dependency
+# This is the latest version that's installing successfully
+gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 0'
