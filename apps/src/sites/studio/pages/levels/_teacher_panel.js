@@ -41,10 +41,11 @@ function renderTeacherContentToggle(store) {
   const element = $('<div/>')
     .css('height', '100%')
     .insertAfter(levelContent)[0];
+  const isBlocklyOrDroplet = !!(window.appOptions && appOptions.app);
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app} />
+      <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
     </Provider>,
     element
   );
