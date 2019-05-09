@@ -42,11 +42,13 @@ class ProjectUpdatedAt extends React.Component {
       return msg.saving();
     }
 
-    if (this.props.status === statuses.saved && this.props.updatedAt) {
+    if (this.props.status === statuses.saved) {
       return (
         <div>
           {msg.savedToGallery()}{' '}
-          <span className="timestamp" title={this.props.updatedAt} />
+          {this.props.updatedAt && (
+            <span className="timestamp" title={this.props.updatedAt} />
+          )}
         </div>
       );
     }
