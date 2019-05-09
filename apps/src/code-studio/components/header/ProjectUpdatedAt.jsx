@@ -3,15 +3,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import msg from '@cdo/locale';
 
-import {projectUpdatedStatuses as statuses} from '../headerRedux';
+import {projectUpdatedStatuses as statuses} from '../../headerRedux';
 
 const styles = {
-  defaultContainer: {
+  container: {
     display: 'block',
     textAlign: 'left'
-  },
-  hiddenContainer: {
-    display: 'none'
   }
 };
 
@@ -58,13 +55,8 @@ class ProjectUpdatedAt extends React.Component {
   }
 
   render() {
-    const style = styles.defaultContainer;
-    //const style = this.props.show
-    //  ? styles.defaultContainer
-    //  : styles.hiddenContainer;
-
     return (
-      <div className="project_updated_at header_text" style={style}>
+      <div className="project_updated_at header_text" style={styles.container}>
         {this.renderText()}
       </div>
     );
