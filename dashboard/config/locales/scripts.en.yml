@@ -10384,6 +10384,18 @@ en:
               name: Crowdsourcing
               description_student: ''
               description_teacher: ''
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
+            Editing Behaviors:
+              name: Editing Behaviors
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+            Build A Project:
+              name: Build A Project
+            Dance Party:
+              name: Dance Party
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12261,10 +12273,12 @@ en:
               name: Graph Paper Programming
             Programming in Maze:
               name: Programming in Maze
-          title: CSF Express 2018 For Vietnam
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+          title: Express For Vietnam (2018)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt Nam.
+          description: "Khoa Học Máy Tính (Computer Science) \x1Dlà môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động cho phù hợp với học sinh Việt Nam.\r\n"
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
@@ -12291,6 +12305,8 @@ en:
               name: Lists Investigate
             Lists Practice:
               name: Lists Practice
+            Lists Make:
+              name: Lists Make
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
