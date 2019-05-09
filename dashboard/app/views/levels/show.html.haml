@@ -81,4 +81,7 @@
 = render partial: 'levels/admin'
 
 - if @script && current_user.try(:teacher?) && !@script.professional_learning_course?
-  = render partial: 'levels/teacher'
+  - if params[:newTeacherPanel]
+    = render partial: 'levels/teacher_panel'
+  - else
+    = render partial: 'levels/teacher'
