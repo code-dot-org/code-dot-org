@@ -6,8 +6,8 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import ProjectInfo from './header/ProjectInfo';
-import ScriptName from './header/ScriptName';
+import ProjectInfo from './components/header/ProjectInfo';
+import ScriptName from './components/header/ScriptName';
 import {
   showProjectHeader,
   showMinimalProjectHeader,

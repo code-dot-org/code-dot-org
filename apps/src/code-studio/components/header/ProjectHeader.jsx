@@ -9,7 +9,7 @@ import ProjectRemix from './ProjectRemix';
 import ProjectShare from './ProjectShare';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
-import {refreshProjectName} from '../headerRedux';
+import {refreshProjectName} from '../../headerRedux';
 
 class ProjectHeader extends React.Component {
   static propTypes = {

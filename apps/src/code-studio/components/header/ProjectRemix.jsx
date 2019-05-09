@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {refreshProjectName} from '../headerRedux';
+import {refreshProjectName} from '../../headerRedux';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
