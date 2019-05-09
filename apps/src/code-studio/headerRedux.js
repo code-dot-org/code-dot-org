@@ -17,45 +17,45 @@ export const projectUpdatedStatuses = {
   error: 'error'
 };
 
+export const possibleHeaders = {
+  project: 'project',
+  minimalProject: 'minimalProject',
+  projectBacked: 'projectBacked',
+  levelBuilderSave: 'levelBuilderSave'
+};
+
 const initialState = {
-  showProjectHeader: false,
-  showMinimalProjectHeader: false,
-  showProjectBackedHeader: false,
+  currentHeader: undefined,
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
-  showLevelBuilderSaveButton: false,
   getLevelBuilderChanges: undefined,
   projectName: ''
 };
 
 export default (state = initialState, action) => {
-  // TODO: are the various kinds of headers mutually exclusive?
   if (action.type === SHOW_PROJECT_HEADER) {
     return {
       ...state,
-      showProjectHeader: true
+      currentHeader: possibleHeaders.project
     };
-  }
-
-  if (action.type === SHOW_MINIMAL_PROJECT_HEADER) {
+  } else if (action.type === SHOW_MINIMAL_PROJECT_HEADER) {
     return {
       ...state,
-      showMinimalProjectHeader: true
+      currentHeader: possibleHeaders.minimalProject
     };
-  }
-
-  if (action.type === SHOW_PROJECT_BACKED_HEADER) {
+  } else if (action.type === SHOW_PROJECT_BACKED_HEADER) {
     return {
       ...state,
-      showProjectBackedHeader: true
+      currentHeader: possibleHeaders.projectBacked
     };
-  }
-
-  if (action.type === ENABLE_LEVEL_BUILDER_SAVE_BUTTON && action.getChanges) {
+  } else if (
+    action.type === ENABLE_LEVEL_BUILDER_SAVE_BUTTON &&
+    action.getChanges
+  ) {
     return {
       ...state,
-      showLevelBuilderSaveButton: true,
+      currentHeader: possibleHeaders.levelBuilderSave,
       getLevelBuilderChanges: action.getChanges
     };
   }
