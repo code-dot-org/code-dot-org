@@ -130,6 +130,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       );
     }
 
+    this.fiveBoard_.on('close', () => this.emit('disconnect'));
+
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
   }
 
