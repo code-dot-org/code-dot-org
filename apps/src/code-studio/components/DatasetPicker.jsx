@@ -7,7 +7,7 @@ import FirebaseStorage from '../../storage/firebaseStorage';
 import datasetLibrary from '../datasetLibrary.json';
 
 const styles = {
-  root: {
+  modal: {
     margin: '0 0 0 5px'
   },
   divider: {
@@ -53,12 +53,12 @@ export default class DatasetPicker extends React.Component {
   };
 
   render() {
-    const datasetEntries = datasetLibrary.datasets.map(d => (
+    const datasetEntries = datasetLibrary.datasets.map(dataset => (
       <DatasetListEntry
-        key={d.name}
-        name={d.name}
-        description={d.description}
-        url={d.url}
+        key={dataset.name}
+        name={dataset.name}
+        description={dataset.description}
+        url={dataset.url}
         onChoose={this.chooseAsset}
       />
     ));
