@@ -2,7 +2,13 @@ pl:
   data:
     function_names:
       x: x
+      details: szczegóły
+      draw eyebrow: narysuj brwi
+      draw pupil: narysuj źrenice
       draw a circle: narysuj okrąg
+      draw a car: narysuj samochod
+      draw_rect: narysuj trojkat
+      draw square: narysuj kwadrat
       draw a hexagon: narysuj sześciokąt
       draw a flower: narysuj kwiatka
       draw a square: narysuj kwadrat

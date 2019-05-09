@@ -5877,3 +5877,7 @@ ka:
               name: გრაფიკული პროგრამირება ქაღალდზე
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
+        csp5-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

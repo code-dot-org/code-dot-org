@@ -11908,3 +11908,12 @@ tr:
               name: Grafik Kağıdı Programlama
             Programming in Maze:
               name: Labirentte Programlama
+        csp-post-survey-2018:
+          description_audience: CSP Öğrencileri
+          description_short: CSP Öğrenci Kurs Sonu Anketi
+          description: Code.org CS Principles Post-Course Survey' e hoşgeldiniz. Bu
+            anketi tamamlamak 10 dakikanızı alır. Yanıtlarınız özel ve anonimdir.
+        csp5-pilot:
+          stages:
+            new stage:
+              name: yeni kademe

@@ -119,6 +119,7 @@ es-MX:
       CSD Polling Events Map: Eventos de encuestas
       CSD Polling Events Map_2018: Eventos de encuestas
       CSD Polling Events Map_2019: Eventos de encuestas
+      CSD Problem Solving Process Video: 'Video: el proceso de resolución de problemas'
       CSD Set Scale Map: Cambiar la escala del sensor
       CSD Set Scale Map_2018: Cambiar la escala del sensor
       CSD Set Scale Map_2019: Cambiar la escala del sensor
@@ -666,9 +667,9 @@ es-MX:
       CSD U6 sensor experiment embedded: Experimento con sensores
       CSD U6 sensor experiment embedded_2018: Experimento con sensores
       CSD U6 sensor experiment embedded_2019: Experimento con sensores
-      CSD U6 setProperty Map: Diseñar pantallas con código
-      CSD U6 setProperty Map_2018: Diseñar pantallas con código
-      CSD U6 setProperty Map_2019: Diseñar pantallas con código
+      CSD U6 setProperty Map: Diseñar pantallas a través del código
+      CSD U6 setProperty Map_2018: Diseñar pantallas a través del código
+      CSD U6 setProperty Map_2019: Diseñar pantallas a través del código
       CSD U6 tugowar conditional map: Actualización de condicionales
       CSD U6 tugowar demo: Demo - Capturar error
       CSD U6 tugowar demo_2018: Demo - Capturar error
@@ -1205,6 +1206,9 @@ es-MX:
         tu proceso"
       U5 L01 Introduction to Lists: 'Condicionales: expresiones booleanas'
       U5 L09 Traversals Exit Ticket: Comprueba tu comprensión
+      U5 Lists Investigate Choresly App: Aplicación de termostato v.5
+      U5 Lists Investigate Choresly Code: Aplicación de termostato v.5
+      U5 Lists Investigate Outfitly Code: Aplicación de termostato v.5
       U5-AP-Algorithm-Does-It-Count: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2018: Respuesta de práctica AP - Puntuar la respuesta
       U5-AP-Algorithm-Does-It-Count_2019: Respuesta de práctica AP - Puntuar la respuesta
@@ -1352,7 +1356,7 @@ es-MX:
       expresslink: Curso Express
       fit-dlp-example-2: Conexiones y filosofía de las lecciones
       fit-dlp-example: Conexiones y filosofía de las lecciones
-      harvey_pixelation: Widget de pixelado
+      harvey_pixelation: Widget de pixelación
       harvey_snowflake_artist1: Copo de nieve 1 (convertido al Artista)
       harvey_snowflake_artist2: Copo de nieve 2 (convertido al Artista)
       maker workshop final: 'Desafío: ¡explorar!'

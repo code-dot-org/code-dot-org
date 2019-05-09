@@ -1458,6 +1458,7 @@
   full_course_category_name: "Cursos Completos"
   user_header_label: "Hola %{username}"
   user_header_team: "Equipo"
+  user_header_my_projects: "Mis proyectos"
   user_header_settings: "Mi cuenta"
   user_header_logout: "Cerrar sesión"
   user_header_signin: "Iniciar Sesión"

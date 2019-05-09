@@ -277,46 +277,46 @@ zh-TW:
       CSD For Loops - Check For Understanding: "＃檢入\\\r\n\\\r\n在這個框框中下面解釋這迴圈的三種不同的部分。為什麼每個都很重要？\\\r"
       CSD U1 - PixFilter Full: "# 操作說明移到這裡"
       CSD U3 - Booleans Video: "# 布林表達式影片"
-      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
       CSD U3 - images - Embed Project: 成果專案範例
-      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
       CSD U3 abstraction race template: 賽跑遊戲範本
-      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
@@ -761,15 +761,15 @@ zh-TW:
 
         **連續按下按鍵讓機器人做出 drop-clap-drop-clap 的動作，看看你能做多快！**
       CourseD_Dance_Party_12: 隨著音樂律動！建立一支自己的舞蹈，與朋友分享。
-      CourseE_HOC 2018 Level_1: 您需要補給才能踏上前方等著您的旅途。打開**箱子** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
+      CourseE_HOC 2018 Level_1: 在啟程前，先準備一些必需品和補給品吧。打開**箱子** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
         以取得**小船** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)。
       CourseE_HOC 2018 Level_10: 有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         躲在這片海洋遺址中，您找得到牠嗎？
       CourseE_HOC 2018 Level_11: 使用**海磷石** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
         在黑色混凝土周圍建造一面牆。這將啟用**導管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         並完成您的挑戰！
-      CourseE_HOC 2018 Level_2: 在開放水域中，駕駛小船會比自己游泳要來得輕鬆許多！走向碼頭盡頭就可跳上船。
-      CourseE_HOC 2018 Level_3: 拿起船槳駕駛小船穿越開放海域以捕捉**鱈魚** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png)。
+      CourseE_HOC 2018 Level_2: 在一望無際的大海中，划船肯定比游泳輕鬆！走到碼頭那兒搭船吧。
+      CourseE_HOC 2018 Level_3: 拿起船槳駕駛小船，先去抓條**鱈魚**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png)！
       CourseE_HOC 2018 Level_4: 將鱈魚餵給**海豚** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png)。使用重複方塊以更快的速度穿越大海。
       CourseE_HOC 2018 Level_5: 某個地方藏有**鸚鵡螺殼** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)！探索沉船以找出**箱子**
         ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)。
@@ -851,6 +851,7 @@ zh-TW:
         \*\* 猜猜看：\*\* 這裡有個名叫 `alien1` 的角色！
 
         當你點擊牠時，你覺得會發生什麼事？
+      Dance Party Template 1_2019: 範本
       Dance Party Template 2_2019: 範本
       Dance_Events_Example_Video: 使用事件讓你的舞蹈派對有更多互動！
       Dance_Party_01: |-
@@ -948,45 +949,45 @@ zh-TW:
       Dance_Party_extras_battle: |-
         # 舞蹈團隊
 
-        這是兩個隊員之間的舞蹈。方向鍵控制其中一位舞者，“w、a、s、d”鍵控制另一位舞者。可以和朋友一起跳支舞，然後努力改進你的舞蹈。
+        這是兩個舞者的舞蹈。方向鍵控制其中一位舞者；w、a、s、d 鍵控制另一位舞者。可以和朋友一起跳支舞，然後改良你的舞蹈。以下是一些修改的點子：
 
-        -   添加更多按鍵來控制舞蹈
-        -   讓後備舞者也在按下按鍵時做出反應
-        -   通過設置舞者的可見度，每 4 個節拍替換舞者一次
+        -   添加更多按鍵來控制舞蹈。
+        -   讓在後面伴舞的舞者也在按下按鍵時做出反應。
+        -   通過設置舞者的可見度，每 4 個節拍替換舞者一次。
       Dance_Party_extras_every_beat: |-
         # 四分音符
 
-        我們的舞蹈大多採用了完整節拍，但每個節拍都由 4 個四分音符組成。這種舞蹈使用“1/4 節拍”使舞者在每個四分音符拍手。
+        大部分的舞蹈採用完整節拍，但其實每個節拍都由 4 個四分音符組成。這支舞蹈使用了 `1/4 節拍` 讓舞者在每個四分音符拍手。
 
-        這種舞蹈還使用_conditional_塊來控制在什麼時候“每 1/4 個節拍”塊可以改變舞蹈。嘗試更改條件塊中的數字，看看這會如何改變舞蹈。
+        這種舞蹈還使用「條件指令」來控制在什麼時候`每 1/4 個節拍`可以改變舞蹈。嘗試更改條件，看看舞蹈會變得怎樣。以下是一些其它的點子，你可以試試：
 
-        -   嘗試使用其他音符長度（1/2 節拍或 1/8 節拍）。
-        -   添加一些 “節拍后”事件。
-        -   用“秒”替換“節拍”，並嘗試以這種方式為舞蹈計時。
+        -   嘗試使用其它節奏（1/2 拍或 1/8 拍）。
+        -   在`每次經過_小節後`積木之後添加其它事件。
+        -   用「秒」替換「節拍」，並嘗試以這種方式為舞蹈計時。
       Dance_Party_extras_layout: |-
-        # 讓我們進入陣型！
+        # 讓我們加入陣形！
 
-        查看這種舞蹈的效果，使用“佈局”塊來改變整個舞蹈中後備舞者的陣型。請嘗試以下任一方法進行擴展練習：
+        來欣賞這個舞蹈的效果吧，它用了`分佈`來改變整個舞蹈舞者的隊形。你可以試試以下的方法加以延伸：
 
-        -   在不同的佈局中創建第二組舞者
-        -   按下按鍵時更改佈局
-        -   當舞者改變陣型時改變屬性
+        -   創建第二組舞者，讓他們使用不同的隊形。
+        -   用事件來重新分佈舞者，比方說按下按鍵時更改隊形。
+        -   在舞者變換隊形後，接著改變屬性。
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
-        這種舞蹈會在音樂的不同部分響起時使用“峰值”事件來觸發代碼。嘗試換用不同的歌曲，看看這會如何改變舞蹈。
+        這支舞蹈會在音樂的不同音頻時變換動作，使用的是「峰值」事件來觸發程式。你可以試試更換歌曲，看看舞蹈會變得怎樣。
       Dance_Party_extras_speed: |-
-        # 加快速度、減慢速度
+        # 加速、減速
 
-        最後一種舞蹈使用“設定速度”塊來控制每位舞者的移動速度。嘗試在歌曲中的不同節點使用不同的速度。隨意對舞蹈進行修改，或恢復以前的舞蹈，取得更好的效果。
+        最後的這個舞蹈使用`跳舞速度設為`積木來控制每位舞者的動作的速度。嘗試在歌曲中的不同節點使用不同的速度。隨意對舞蹈進行修改，或使用之前的舞蹈加以改編。
       Dance_Party_extras_visible: |-
         # 他們要去哪？
 
-        這鐘舞蹈可以顯示和隱藏了兩組不同的舞者。看看效果如何，然後嘗試發揮自己的天分。
+        這個舞蹈顯示和隱藏了兩組不同的舞者。你可以試試下面的方法，看看效果如何。
 
-        -   添加另一組舞者
-        -   使用方向鍵來顯示和隱藏舞者
-        -   隱藏所有舞者並切換到令人興奮的背景效果
+        -   添加另一組舞者。
+        -   使用方向鍵來顯示和隱藏舞者。
+        -   隱藏所有舞者並切換一個讓人興奮的背景效果。
       ECS Unit 3 Challenge Selection: "# 挑戰概覽\n\n> 你的挑戰有哪些？ \\\r\n> \\\r\n\n## Enter
         the lesson you selected for your\n\nchallenge in the text box below.\\\r\n\\\r\nHTML
         Beginners:\\\r\n\\\r\n\n-   Day 3-4,5:\n    Basic HTML - Paragraph, Header,
@@ -1049,7 +1050,7 @@ zh-TW:
       Geometric Sun: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
       Geometric Sun_2018: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
       Geometric Sun_2019: "**專案點子：** 創作一個圖案，用幾何思維，這需要毅力和規劃！"
-      HOC 2018 Level_1: 您需要補給才能踏上前方等著您的旅途。打開**箱子** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
+      HOC 2018 Level_1: 在啟程前，先準備一些必需品和補給品吧。打開**箱子** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png)
         以取得**小船** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)。
       HOC 2018 Level_10: 有一隻**烏賊** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         躲在這片海洋遺址中，您找得到牠嗎？
@@ -1057,8 +1058,8 @@ zh-TW:
         在黑色混凝土周圍建造一面牆。這將啟用**導管** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         並完成您的挑戰！
       HOC 2018 Level_12: 恭喜！廣闊的水世界正等著您。建造一個珊瑚礁！一座火山！一艘沉船！您自己決定。
-      HOC 2018 Level_2: 在開放水域中，駕駛小船會比自己游泳要來得輕鬆許多！走向碼頭盡頭就可跳上船。
-      HOC 2018 Level_3: 拿起船槳駕駛小船穿越開放海域以捕捉**鱈魚** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png)。
+      HOC 2018 Level_2: 在一望無際的大海中，划船肯定比游泳輕鬆！走到碼頭那兒搭船吧。
+      HOC 2018 Level_3: 拿起船槳駕駛小船，先去抓條**鱈魚**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png)！
       HOC 2018 Level_4: 將鱈魚餵給**海豚** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png)。使用重複方塊以更快的速度穿越大海。
       HOC 2018 Level_5: 某個地方藏有**鸚鵡螺殼** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)！探索沉船以找出**箱子**
         ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)。
@@ -1086,6 +1087,28 @@ zh-TW:
         _我們需要更多舞者！_
 
         建立一個名為 `backup_dancer1` 的舞者，為皮斯貓伴舞。
+      HOC Dance 8: |-
+        現在我們已經知道如何改變舞者的屬性。我們也可以讓這些屬性自動回應音樂，使用的積木為：
+        <xml>
+        <block type="Dancelab_startMapping">
+
+        <title name="SPRITE">dancer1</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        此程式使用音樂的「低音」音量（比較低的聲音）來控制一個舞者的大小。你是否能讓其他舞者也隨著音樂有變化？
+      HOC Dance 8_draft: |-
+        現在我們已經知道如何改變舞者的屬性。我們也可以讓這些屬性自動回應音樂，使用的積木為：
+        <xml>
+        <block type="Dancelab_startMapping">
+
+        <title name="SPRITE">dancer1</title>
+        <title name="PROPERTY">"scale"</title>
+        <title name="RANGE">"bass"</title>
+        </block></xml>
+
+        此程式使用音樂的「低音」音量（比較低的聲音）來控制一個舞者的大小。你是否能讓其他舞者也隨著音樂有變化？
       HOC Dance 9_draft: |-
         <xml><block type="Dancelab_whenKey"></block></xml> 這個積木可讓你在按下按鍵時執行其中的程式。
 

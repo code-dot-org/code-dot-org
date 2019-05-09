@@ -594,6 +594,11 @@ es:
           en este rompecabezas.
       behaviors 1_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
+      behaviors 3a_callout:
+        behavior_callout: "¿Por qué este comportamiento no funciona para la estrella
+          del medio?"
+        star2_callout: Eliminar este bloque de disfraz y usar este bloque de "gráfico"
+          en su lugar.
       behaviors 4_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
