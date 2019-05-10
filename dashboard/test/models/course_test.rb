@@ -61,7 +61,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    course = create(:course, name: 'my-course')
+    course = create(:course, name: 'my-course', is_stable: true)
     create(:course_script, course: course, position: 1, script: create(:script, name: "script1"))
     create(:course_script, course: course, position: 2, script: create(:script, name: "script2"))
     create(:course_script, course: course, position: 3, script: create(:script, name: "script3"))
@@ -71,6 +71,30 @@ class CourseTest < ActiveSupport::TestCase
     obj = JSON.parse(serialization)
     assert_equal 'my-course', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
+    assert obj['properties']['is_stable']
+  end
+
+  test "stable?: true if course has plc_course" do
+    course = Course.new(family_name: 'plc')
+    course.plc_course = Plc::Course.new(course: course)
+    course.save
+
+    assert course.stable?
+  end
+
+  test "stable?: true if course is not in a family" do
+    course = create :course
+    assert course.stable?
+  end
+
+  test "stable?: true if course in family has is_stable set" do
+    course = create :course, family_name: 'csd', is_stable: true
+    assert course.stable?
+  end
+
+  test "stable?: defaults to false if course in family does not have is_stable set" do
+    course = create :course, family_name: 'csd'
+    refute course.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
@@ -165,6 +189,20 @@ class CourseTest < ActiveSupport::TestCase
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
     assert_nil summary[:scripts][0]['stageDescriptions']
+  end
+
+  test 'summarize_version' do
+    create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+
+    summary = csp_2018.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+
+    summary = csp_2019.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
   end
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
@@ -311,10 +349,11 @@ class CourseTest < ActiveSupport::TestCase
 
   class CanViewVersion < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
       @csp1_2017 = create(:script, name: 'csp1-2017')
       create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
       @student = create :student
     end
 
@@ -348,21 +387,22 @@ class CourseTest < ActiveSupport::TestCase
 
   class LatestVersionTests < ActiveSupport::TestCase
     setup do
-      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
-      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
       @student = create :student
     end
 
-    test 'latest version returns nil if course family does not exist' do
-      assert_nil Course.latest_version('fake-family')
+    test 'latest_stable_version returns nil if course family does not exist' do
+      assert_nil Course.latest_stable_version('fake-family')
     end
 
-    test 'latest version returns latest course version' do
-      latest_version = Course.latest_version('csp')
+    test 'latest_stable_version returns latest course version' do
+      latest_version = Course.latest_stable_version('csp')
       assert_equal @csp_2018, latest_version
     end
 
-    test 'latest assigned version returns latest version in family assigned to student' do
+    test 'latest_assigned_version returns latest version in family assigned to student' do
       create :follower, section: create(:section, course: @csp_2017), student_user: @student
       latest_assigned_version = Course.latest_assigned_version('csp', @student)
       assert_equal @csp_2017, latest_assigned_version

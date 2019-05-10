@@ -1008,6 +1008,7 @@ Applab.serializeAndSave = function(callback) {
  */
 // XXX This is the only method used by the templates!
 Applab.runButtonClick = function() {
+  Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
     Blockly.mainBlockSpace.traceOn(true);

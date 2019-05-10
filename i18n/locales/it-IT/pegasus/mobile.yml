@@ -1430,6 +1430,7 @@
   full_course_category_name: "Corsi Avanzati"
   user_header_label: "Ciao %{username}"
   user_header_team: "Squadra"
+  user_header_my_projects: "Collezione Privata"
   user_header_settings: "Il mio account"
   user_header_logout: "Esci"
   user_header_signin: "Accedi"

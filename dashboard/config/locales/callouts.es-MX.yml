@@ -601,6 +601,7 @@ es-MX:
           del medio?"
         star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este
           sprite".
+        this_sprite_callout: Probando
       behaviors 4_callout:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
@@ -705,9 +706,6 @@ es-MX:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
@@ -718,6 +716,9 @@ es-MX:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no se pueden eliminar.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
+          bloques adicionales para completar tus rompecabezas.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
@@ -769,6 +770,9 @@ es-MX:
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
+          bloques adicionales para completar tus rompecabezas.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo
           se utilizará?

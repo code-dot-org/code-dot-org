@@ -292,7 +292,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 300px;
+      padding-right: 350px;
     }
   }
 
@@ -432,6 +432,11 @@ img.video_thumbnail {
   }
 
   #hamburger {
+    padding-top: 4px;
+    padding-left: 20px;
+  }
+
+  #help-button {
     padding-top: 4px;
     padding-left: 20px;
   }
@@ -3046,10 +3051,11 @@ code {
 }
 
 #diversity_survey {
-  background-color: $lighter_purple;
+  background-color: $background_gray;
   color: $dark_charcoal;
   border-radius: 5px;
   overflow: hidden;
+  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
@@ -3110,7 +3116,7 @@ code {
     .survey_right {
       width: 45%;
       float: left;
-      border-left: 1px solid $purple;
+      border-left: 1px solid $charcoal;
       padding-left: 20px;
 
       li {
@@ -3178,135 +3184,6 @@ code {
     float: left;
     padding: 5px;
   }
-}
-
-.arrow_box_up {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up::after, .arrow_box_up::before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-/* An arrow box with an arrow going up, but the pointer is in the
- * top-right corner */
-
-.arrow_box_up_corner {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up_corner::after, .arrow_box_up_corner::before {
-  bottom: 100%;
-  left: 90%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up_corner::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up_corner::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
 }
 
 #script-breadcrumb {

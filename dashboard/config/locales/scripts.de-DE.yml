@@ -1770,7 +1770,7 @@ de:
             The Artist:
               name: Der Künstler
             Internet:
-              name: Internet
+              name: das Internet
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
@@ -1779,6 +1779,8 @@ de:
               name: Tanzparty
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmieren auf Millimeterpapier
             Relay Programming:
               name: Relais-Programmierung
             Conditionals with Cards:
@@ -1786,7 +1788,7 @@ de:
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
             'Unplugged: Binary':
-              name: 'Offline: Binär'
+              name: Binärbilder
             Artist Binary:
               name: Künstler Binär
             Dance Party:
@@ -1799,8 +1801,8 @@ de:
               name: Verschachtelte Schleifen
             Conditionals with Cards:
               name: Bedingungen mit Karten
-            Conditionals:
-              name: Bedingungen
+            'Functions: Songwriting':
+              name: Songschreiben
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1836,18 +1838,18 @@ de:
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Grundlagen aufbauen
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
+            'Events: The Big Event':
+              name: Der große Event
             Binary Bracelets:
               name: Binäre Armbänder
         gamelab:
           title: Spielelabor
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-Life-Algorithmen: Pflanze Samen'
+            'Programming: Happy Maps':
+              name: Glücklich Karten
             Going Places Safely:
               name: Sicher unterwegs
         courseb-2019:
@@ -1856,6 +1858,8 @@ de:
               name: Bewegung, Bewegung
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            'Loops: Getting Loopy':
+              name: Schöne Schleifen
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1932,3 +1936,7 @@ de:
               name: Bedingungen mit Karten
             Building a Foundation:
               name: Grundlagen aufbauen
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmieren auf Millimeterpapier

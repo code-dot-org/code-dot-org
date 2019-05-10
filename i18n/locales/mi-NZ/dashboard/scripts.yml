@@ -1257,12 +1257,14 @@ mi:
               name: Te Mahi ā-Ohu
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papatono Pepa Kauwhata
             Relay Programming:
               name: Papatonotanga ā-Tānga
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
             'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
+              name: Ngā Atahanga Tāhūrua
             Artist Binary:
               name: Rehetoi Tāhūrua
         coursee-2019:
@@ -1271,8 +1273,8 @@ mi:
               name: Te Hanga Tūāpapa
             Nested Loops:
               name: Ngā Koromeke Tauroto
-            Conditionals:
-              name: Ngā Here
+            'Functions: Songwriting':
+              name: Te Tito Waiata
             Internet:
               name: Te Ipurangi
             Crowdsourcing:
@@ -1303,16 +1305,16 @@ mi:
               name: 'korenga'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Te Hanga Tūāpapa
             'Real-life Algorithms: Paper Planes':
               name: 'Hātepe Motuhenga: Waka Rererangi Pepa'
+            'Events: The Big Event':
+              name: Te Takahanga Nui
             Binary Bracelets:
               name: Kōmore Ā-Rua
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Hātepe Motuhenga: Whakatōkia he Kano'
+            'Programming: Happy Maps':
+              name: Ngā Mahere Harikoa
             Going Places Safely:
               name: Te Karore Haumaru
         courseb-2019:
@@ -1321,6 +1323,8 @@ mi:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
+            'Loops: Getting Loopy':
+              name: Kia Koromeke
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1367,3 +1371,7 @@ mi:
               name: Te Mahi ā-Ohu
             Building a Foundation:
               name: Te Hanga Tūāpapa
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Papatono Pepa Kauwhata
