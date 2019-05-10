@@ -118,4 +118,5 @@ class SchoolInfoConfirmationDialog extends Component {
     );
   }
 }
+
 export default SchoolInfoConfirmationDialog;
