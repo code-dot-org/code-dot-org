@@ -38,11 +38,21 @@ export default class Results extends React.Component {
             question['answer_type']
           )
         ) {
+          // numRespondents will get either a value (for multiSelect) or undefined.
+          const numRespondents = answers[questionId].num_respondents;
+
+          // Make a copy of the answers without the num_respondents field.
+          const filteredAnswers = _.omit(
+            answers[questionId],
+            'num_respondents'
+          );
+
           return (
             <SingleChoiceResponses
               perFacilitator={section === 'facilitator'}
+              numRespondents={numRespondents}
               question={question['text']}
-              answers={answers[questionId]}
+              answers={filteredAnswers}
               possibleAnswers={question['options']}
               key={i}
               answerType={question['answer_type']}
