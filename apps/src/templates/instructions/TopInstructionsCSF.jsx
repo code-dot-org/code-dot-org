@@ -246,8 +246,6 @@ class TopInstructions extends React.Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    window.addEventListener('resize', this.adjustMaxNeededHeight);
-
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
     $(ReactDOM.findDOMNode(this.icon)).load(
@@ -275,7 +273,7 @@ class TopInstructions extends React.Component {
    */
   componentWillReceiveProps(nextProps) {
     const minHeight = this.getMinHeight(nextProps.collapsed);
-    const newHeight = Math.min(nextProps.maxHeight, minHeight);
+    const newHeight = minHeight;
 
     const shouldUpdateHeight = nextProps.collapsed
       ? newHeight !== this.props.height
@@ -322,8 +320,6 @@ class TopInstructions extends React.Component {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({rightColWidth});
     }
-
-    this.adjustMaxNeededHeight();
 
     if (this.instructions) {
       const contentContainer = this.instructions.parentElement;
@@ -415,6 +411,7 @@ class TopInstructions extends React.Component {
    * @returns {number} How much we actually changed
    */
   handleHeightResize = (delta = 0) => {
+    this.adjustMaxNeededHeight();
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
@@ -428,7 +425,6 @@ class TopInstructions extends React.Component {
     } else {
       newHeight = Math.min(newHeight, this.props.maxHeight);
     }
-
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
   };
