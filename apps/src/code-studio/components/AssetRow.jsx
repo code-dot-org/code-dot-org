@@ -116,8 +116,8 @@ export default class AssetRow extends React.Component {
       flex = size + ' kb';
     }
 
-    let usage = $('#designModeViz').find(
-      `[src$=\'${encodeURIComponent(this.props.name)}']`
+    let usage = $('#visualization').find(
+      `[src*=\'${encodeURIComponent(this.props.name)}']`
     ).length;
 
     switch (this.state.action) {
