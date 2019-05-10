@@ -13564,3 +13564,14 @@ fil:
               name: Graph Paper Programming
             Programming in Maze:
               name: Pag-Program sa Maze
+        csp-post-survey-2018:
+          description_audience: CSP na mga Estudyante
+          description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng
+            CSP
+          description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso
+            na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto
+            para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+        csp5-pilot:
+          stages:
+            new stage:
+              name: bagong yugto

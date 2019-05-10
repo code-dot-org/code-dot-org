@@ -3,6 +3,8 @@ import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
 import SetupChecker from '../util/SetupChecker';
+import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import i18n from '@cdo/locale';
 import {
   isCodeOrgBrowser,
   isChromeOS,
@@ -10,7 +12,6 @@ import {
   isWindows,
   isLinux
 } from '../util/browserChecks';
-import SurveySupportSection from './SurveySupportSection';
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
@@ -94,7 +95,9 @@ class Downloads extends React.Component {
         {MAC === platform && <MacDownloads />}
         {LINUX === platform && <LinuxDownloads />}
         {CHROMEBOOK === platform && <ChromebookInstructions />}
-        <SurveySupportSection />
+        <h2>{i18n.support()}</h2>
+        <UnsafeRenderedMarkdown markdown={i18n.debugMakerToolkit()} />
+        <UnsafeRenderedMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
   }

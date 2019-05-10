@@ -815,6 +815,7 @@ is:
       CSPU5_U3 - Keys - Final Image Scroller: Uppfærðu myndflettinguna þannig að hún bregðist við hnöppum og lyklum. (Smelltu til að sjá nánari leiðbeiningar.)
       CSPU5_U3 - Loops - 4: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3 - Loops - 4_2018: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
+      CSPU5_U3 - Loops - 4_2018pilot: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3 - Loops - 4_2019: Notaðu villuleitarskipanirnar til að búa til lista yfir öll gildin sem komu upp á undan 6. (Smelltu til að sjá nánari leiðbeiningar)
       CSPU5_U3L13 - Debug Id Problem: Endurbættu hnappinn með því að velja lýsandi og merkingarfullt kenni. (Smelltu til að sjá ítarlegar leiðbeiningar)
       CSPU5_U3L13 - Turtle move with button: Bættu við hnappi sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
@@ -1363,6 +1364,7 @@ is:
       Dance Party Predict: 'Hvað heldur þú að muni gerast þegar þú smellir á geimveruna?  '
       Dance Party Predict_2019: 'Hvað heldur þú að muni gerast þegar þú smellir á geimveruna?  '
       Dance Party Predict_simple: 'Hvað heldur þú að muni gerast þegar þú smellir á geimveruna?  '
+      Dance Party Template 1_2019: Sniðmát
       Dance Party Template 2_2019: Sniðmát
       Dance_Events_Example_Video: Notaðu atvik til að gera dansinn gagnvirkan!
       Dance_Party_01: Dragðu kubbinn `búa til` inn á vinnusvæðið og láttu hann smella innan í kubbinn `uppsetning`.

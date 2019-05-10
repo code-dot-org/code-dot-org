@@ -1236,6 +1236,7 @@ ko:
       Crack a Caesar Cipher: 소개
       Crack a Caesar Cipher_2018: 소개
       Crack a Caesar Cipher_2019: 소개
+      Dance Party Template 1_2019: 템플릿
       Dance Party Template 2_2019: 템플릿
       Dance_Party_01: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
       Dance_Party_01_low: "‘새로 만들기’ 블록을 작업공간에 드래그하고, ‘설정’ 블록 안에서 연결하세요."
@@ -1984,6 +1985,45 @@ ko:
       courseD_artist_binary7: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은 어떤 것 일까요?
       courseD_artist_binary7_2018: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은 어떤 것 일까요?
       courseD_artist_binary7_2019: 이 이미지를 그리기 위해 반복하는 것들 중에서 가장 짧은 2진 문자열은 어떤 것 일까요?
+      courseD_artist_nestedLoops1: |-
+        이번 단계를 시작하기 위해 삼각형을 그리세요.
+        (각각의 변은 100픽셀이고, 매번 바깥으로 120도를 돌아야 합니다.)
+      courseD_artist_nestedLoops1_2018: |-
+        이번 단계를 시작하기 위해 삼각형을 그리세요.
+        (각각의 변은 100픽셀이고, 매번 바깥으로 120도를 돌아야 합니다.)
+      courseD_artist_nestedLoops1_2019: |-
+        이번 단계를 시작하기 위해 삼각형을 그리세요.
+        (각각의 변은 100픽셀이고, 매번 바깥으로 120도를 돌아야 합니다.)
+      courseD_artist_nestedLoops1a: '이번에는 삼각형을 6번 반복해서 그려보세요. '
+      courseD_artist_nestedLoops1a_2018: '이번에는 삼각형을 6번 반복해서 그려보세요. '
+      courseD_artist_nestedLoops1a_2019: '이번에는 삼각형을 6번 반복해서 그려보세요. '
+      courseD_artist_nestedLoops2: 이번에는 가능한 한 가장 적은 개수의 블록을 사용해서 문제를 해결해보세요.
+      courseD_artist_nestedLoops2_2018: 이번에는 가능한 한 가장 적은 개수의 블록을 사용해서 문제를 해결해보세요.
+      courseD_artist_nestedLoops2_2019: 이번에는 가능한 한 가장 적은 개수의 블록을 사용해서 문제를 해결해보세요.
+      courseD_artist_nestedLoops3: |-
+        건물의 창문을 그리기 위해 새로운 기술을 사용하세요.
+
+        창문은 한 변의 길이가 20픽셀인 정사각형이고, 각 창문은 20픽셀씩 떨어져 있습니다.
+      courseD_artist_nestedLoops3_2018: |-
+        건물의 창문을 그리기 위해 새로운 기술을 사용하세요.
+
+        창문은 한 변의 길이가 20픽셀인 정사각형이고, 각 창문은 20픽셀씩 떨어져 있습니다.
+      courseD_artist_nestedLoops3_2019: |-
+        건물의 창문을 그리기 위해 새로운 기술을 사용하세요.
+
+        창문은 한 변의 길이가 20픽셀인 정사각형이고, 각 창문은 20픽셀씩 떨어져 있습니다.
+      courseD_artist_nestedLoops4: 잘했어요! 원으로 똑같은 일을 해보세요.
+      courseD_artist_nestedLoops4_2018: 잘했어요! 원으로 똑같은 일을 해보세요.
+      courseD_artist_nestedLoops4_2019: 잘했어요! 원으로 똑같은 일을 해보세요.
+      courseD_artist_nestedLoops5: 만약 원 사이에서 90도 돌면 어떻게 될까요?
+      courseD_artist_nestedLoops5_2018: 만약 원 사이에서 90도 돌면 어떻게 될까요?
+      courseD_artist_nestedLoops5_2019: 만약 원 사이에서 90도 돌면 어떻게 될까요?
+      courseD_artist_nestedLoops7: 이 그림을 그리기 위해서 지금까지 배운 것들을 사용해보세요.
+      courseD_artist_nestedLoops7_2018: 이 그림을 그리기 위해서 지금까지 배운 것들을 사용해보세요.
+      courseD_artist_nestedLoops7_2019: 이 그림을 그리기 위해서 지금까지 배운 것들을 사용해보세요.
+      courseD_artist_nestedLoopsFP: 이제 당신 차례입니다. 지금까지 배운 것들을 이용해 좋아하는 것을 그려보세요!
+      courseD_artist_nestedLoopsFP_2018: 이제 당신 차례입니다. 지금까지 배운 것들을 이용해 좋아하는 것을 그려보세요!
+      courseD_artist_nestedLoopsFP_2019: 이제 당신 차례입니다. 지금까지 배운 것들을 이용해 좋아하는 것을 그려보세요!
       courseD_autorun_binary4_2019: 3개의 2진수(0 또는 1) 를 반복시켜서 이 패턴을 그려주세요.
       courseD_autorun_binary6_2019: 이 이미지를 그리기 위해 11번을 반복 시킬 수 있는 6자리 2진 문자열은 어떤 것
         일까요?

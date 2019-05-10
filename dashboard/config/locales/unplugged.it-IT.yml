@@ -104,7 +104,7 @@ it:
           più generale dell'informatica  e il fatto che gli algoritmi ne sono una
           parte essenziale.
       BuildingAFoundation:
-        title: Costruire le Fondamenta
+        title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile.
           Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
@@ -280,7 +280,8 @@ it:
       courseC_Unplugged_ScreenOutTheMean:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete.
+          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
+          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
         desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
@@ -290,7 +291,8 @@ it:
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete.
+          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
+          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -317,7 +319,7 @@ it:
           le loro informazioni personali crea un'impronta digitale che lascia tracce
           riconoscibili e sfruttabili.
       courseC_unplugged_buildingAFoundation:
-        title: Costruire le Fondamenta
+        title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile.
           Le strutture devono soddisfare alcuni requisiti (raggiungere una specifica
           altezza o sopportare un determinato peso) e gli studenti riflettono sull'importanza
@@ -448,7 +450,8 @@ it:
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete.
+          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
+          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       Conditionals_2018:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -555,7 +558,8 @@ it:
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
         desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete.
+          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
+          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
       BigEvent_2019:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.

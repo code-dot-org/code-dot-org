@@ -5148,3 +5148,7 @@ vi:
           stages:
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
+        csp5-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới

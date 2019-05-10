@@ -693,6 +693,8 @@ es:
             '"while"': mientras
       gamelab_clickedOn:
         text: cuando se hace clic en {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: clic en gráfico
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_console.log:
@@ -861,7 +863,7 @@ es:
       gamelab_makeNewGroup:
         text: crear un nuevo grupo
       gamelab_makeNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -896,6 +898,8 @@ es:
         text: mover {SPRITE} distancia {DISTANCE} hacia {TARGET}
       gamelab_moveUp:
         text: "{THIS} se mueve hacia arriba"
+      gamelab_objectSprite:
+        text: gráfico de objeto
       gamelab_playSound:
         text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
@@ -936,10 +940,15 @@ es:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cueva
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': pista
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desierto
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': cuadrícula
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
               iris
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciencia
+              ficción
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrellas
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': bajo
               el agua
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': invierno
@@ -999,6 +1008,7 @@ es:
             '"when"': cuando
             '"while"': mientras
       gamelab_spriteClickedSet:
+        text: "{CONDITION} {SPRITE} clic en conjunto {CLICK}"
         options:
           CONDITION:
             '"when"': cuando
@@ -1045,6 +1055,8 @@ es:
         text: último {VALUE}
       gamelab_spritesWhereRandom:
         text: aleatorio en el grupo {VALUE}
+      gamelab_subjectSprite:
+        text: gráfico de sujeto
       gamelab_thisBeginsBehaviorSimple:
         text: gráfico {SPRITE} inicia {BEHAVIOR}
         options:
@@ -1096,6 +1108,8 @@ es:
       gamelab_whenTouchingAny:
         text: cuando {SPRITE} toca cualquier {GROUP}
       gamelab_whenTouchingSet:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2} conjunto {SPRITEA} y conjunto
+          {SPRITEB}"
         options:
           CONDITION:
             '"when"': cuando
@@ -1430,9 +1444,9 @@ es:
         text: "hacer un nuevo gráfico llamado {NAME} \n con traje {COSTUME} \n en
           {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: aalab crea un nuevo gráfico {ANIMATION\_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           hacer un nuevo grupo de gráficos llamado {VAR}
