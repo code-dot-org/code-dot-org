@@ -302,7 +302,7 @@ describe('setProperty and read Property', () => {
         </div>
       `);
 
-      // Change theme to default, verify that the screen now has an updated data-theme attribute
+      // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
       // and the textInput now has the padding style and the background color of the new theme:
       designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
