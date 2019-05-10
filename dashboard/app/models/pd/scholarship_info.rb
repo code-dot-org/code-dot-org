@@ -18,7 +18,6 @@
 #  index_pd_scholarship_infos_on_pd_enrollment_id                 (pd_enrollment_id)
 #  index_pd_scholarship_infos_on_user_id                          (user_id)
 #  index_pd_scholarship_infos_on_user_id_and_app_year_and_course  (user_id,application_year,course) UNIQUE
-#  index_pd_scholarship_infos_on_user_id_and_application_year     (user_id,application_year) UNIQUE
 #
 
 class Pd::ScholarshipInfo < ActiveRecord::Base
