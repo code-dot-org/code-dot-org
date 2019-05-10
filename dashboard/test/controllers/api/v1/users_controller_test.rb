@@ -125,7 +125,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'get school name will 403 if given a user id other than the person logged in' do
     sign_in(@user)
-    get :get_school_name, params: {user_id: '456'}
+    get :get_school_name, params: {user_id: @user.id + 1}
     assert_response 403
   end
 
