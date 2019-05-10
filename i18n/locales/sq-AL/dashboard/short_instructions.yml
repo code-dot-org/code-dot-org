@@ -1001,7 +1001,7 @@ sq:
       Calc Circles of Eval .4: |-
         Këtu kemi mbivendosur një Bllok Mbledhjeje
         brenda një Blloku Shumëzimi. Përfundo këtë kod që të shumëzojë 3 me (4 +
-        1\)
+        1)
       Calc Circles of Eval 1 (copy 1): |-
         Ndrysho këtë formulim në \<some\_shape>
         vlerësimi.
@@ -1416,7 +1416,7 @@ sq:
         \\r
 
         1.  Mbaj shënim numrin e herëve të klikuara të Magjistarit.\\r
-        2.  2\)
+        2.  2)
             Nëse Magjistari klikohet të paktën 10 herë para se Qeni të numërojë deri në 30, ngrej "rritjen" me 1 dhe fillo sërisht.\\r
         3.  Nëse Magjistari nuk klikohet të paktën 10 herë, loja ka mbaruar.
       Course 4 Playlab For Loop Freeplay: |-
@@ -1501,6 +1501,7 @@ sq:
       Crack a Caesar Cipher: Udhëzimet
       Crack a Caesar Cipher_2018: Udhëzimet
       Crack a Caesar Cipher_2019: Udhëzimet
+      Dance Party Template 1_2019: Shabllon
       Dance Party Template 2_2019: Shabllon
       Farmer for Authored Hint testing: |-
         Wow, unë gjeta një gropë vërtet të thellë! Unë nuk

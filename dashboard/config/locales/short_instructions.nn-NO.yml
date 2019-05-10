@@ -962,12 +962,17 @@ nn:
         rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4_2018: Bruk debug-kommandoen til å lage ei liste over alle
         verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
+      CSPU5_U3 - Loops - 4_2018pilot: Bruk debug-kommandoen til å lage ei liste over
+        alle verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 4_2019: Bruk debug-kommandoen til å lage ei liste over alle
         verdiane rulla før ein seksar. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7: Utan å leggje til noko linje med kode, ordne koden slik
         at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige instruksjonar)
       CSPU5_U3 - Loops - 7_2018: Utan å leggje til noko linje med kode, ordne koden
         slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige
+        instruksjonar)
+      CSPU5_U3 - Loops - 7_2018pilot: Utan å leggje til noko linje med kode, ordne
+        koden slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige
         instruksjonar)
       CSPU5_U3 - Loops - 7_2019: Utan å leggje til noko linje med kode, ordne koden
         slik at den skriv ut alle verdiande av num. (Klikk for å sjå fullstendige
@@ -1540,7 +1545,7 @@ nn:
         nå flagget sitt først?"
       Course 4 Play Labs For Loops 8a: "For å fullføre spillet vårt må vi bruke \"øk\"-variabelen!
         La oss knytte den til nivået i spillet.\\\r\n\\\r\n\n1.  Hold styr på hvor
-        mange ganger Trollmannen er trykket på.\\\r\n2.  2\\)\n    Hvis Trollmannen
+        mange ganger Trollmannen er trykket på.\\\r\n2.  2)\n    Hvis Trollmannen
         er trykket på minst 10 ganger før Hund teller til 30 skal \"øk\"-variabelen
         økes med 1 og starte på nytt.\\\r\n3.  Hvis Trollmannen ikke blir klikket
         på 10 ganger (eller mer) er spillet over."
@@ -1685,6 +1690,7 @@ nn:
       D_Frozen_nested6: Teikn eit trappetrinnsmønster som brukar svingar mellom 75
         og 105 gradar.
       D_Frozen_nested7: Snu 180 gradar og teikn trappetrinnsmønsteret igjen!
+      Dance Party Template 1_2019: Mal
       Dance Party Template 2_2019: Mal
       Dance_Party_01: Dra “lag ei ny blokk”-blokka inn i arbeidsområdet, og koble
         den til inni oppsettblokka.

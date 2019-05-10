@@ -914,6 +914,9 @@ hu:
       CSPU5_U3 - Loops - 4_2018: Használd a Hibakereső parancsokat egy olyan lista
         készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide
         az összes utasításhoz)
+      CSPU5_U3 - Loops - 4_2018pilot: Használd a Hibakereső parancsokat egy olyan
+        lista készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints
+        ide az összes utasításhoz)
       CSPU5_U3 - Loops - 4_2019: Használd a Hibakereső parancsokat egy olyan lista
         készítéséhez, ami a 6-os előtt dobott értékeket tartalmazza. (Kattints ide
         az összes utasításhoz)
@@ -1475,6 +1478,7 @@ hu:
       Crack a Caesar Cipher: Utasítások
       Crack a Caesar Cipher_2018: Utasítások
       Crack a Caesar Cipher_2019: Utasítások
+      Dance Party Template 1_2019: Sablon
       Dance Party Template 2_2019: Sablon
       Dance_Party_01: Húzd az „új készítése“ blokkot a munkaterületre, és csatlakoztasd
         az „összeállítás“ blokkba.

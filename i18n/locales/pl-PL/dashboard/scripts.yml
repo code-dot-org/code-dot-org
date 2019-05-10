@@ -4685,3 +4685,7 @@ pl:
               name: Programowanie na papierze milimetrowym
             Programming in Maze:
               name: Programowanie w labiryncie
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nowy etap
