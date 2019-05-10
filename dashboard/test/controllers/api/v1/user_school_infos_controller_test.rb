@@ -86,7 +86,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     new_user_school_info = UserSchoolInfo.last
 
     assert_response :success
-    assert_equal UserSchoolInfo.count, 1
     refute_equal new_user_school_info.id, user_school_info.id
     assert_equal new_user_school_info.school_info_id, user_school_info.school_info_id
   end
