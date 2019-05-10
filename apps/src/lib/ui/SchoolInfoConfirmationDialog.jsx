@@ -15,24 +15,31 @@ export const styles = {
 class SchoolInfoConfirmationDialog extends Component {
   static propTypes = {
     schoolName: PropTypes.string,
-    onUpdate: PropTypes.func,
-    onConfirm: PropTypes.func,
-    isOpen: PropTypes.bool.isRequired
+    scriptData: PropTypes.shape({
+      formUrl: PropTypes.string.isRequired,
+      authTokenName: PropTypes.string.isRequired,
+      authTokenValue: PropTypes.string.isRequired,
+      existingSchoolInfo: PropTypes.shape({
+        id: PropTypes.number,
+        school_id: PropTypes.string,
+        country: PropTypes.string,
+        school_type: PropTypes.string,
+        school_name: PropTypes.string,
+        full_address: PropTypes.string
+      }).isRequired
+    }).isRequired,
+    onClose: PropTypes.func,
+    isOpen: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
     this.state = {
       showSchoolInterstitial: false,
-      schoolName: props.schoolName,
-      isOpen: true
+      schoolName: props.scriptData.existingSchoolInfo.school_name,
+      isOpen: props.isOpen || true
     };
   }
-
-  static defaultProps = {
-    onUpdate: () => {},
-    schoolName: ''
-  };
 
   componentDidMount() {
     const {schoolName} = this.state;
@@ -53,7 +60,6 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   renderInitialContent() {
-    const {onConfirm} = this.props;
     const {schoolName} = this.state;
     return (
       <Body>
@@ -71,7 +77,7 @@ class SchoolInfoConfirmationDialog extends Component {
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
-          onClick={onConfirm}
+          onClick={this.handleClick}
           href={'#'}
         />
       </Body>
