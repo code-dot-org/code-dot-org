@@ -52,6 +52,7 @@ module SafeBrowsing
 
     # Safe Browsing API returns empty JSON object is no threat matches found
     # Do not determine safe if response is nil
-    response.nil? ? false : response_value
+    # Determine safe if bad request (response code is 400)
+    response.nil? ? false : (response.code === '400' || response_value)
   end
 end
