@@ -44,7 +44,6 @@ class Gamelab < Blockly
     debugger_disabled
     pause_animations_by_default
     start_animations
-    teacher_markdown
     auto_run_setup
     custom_setup_code
     validation_code
