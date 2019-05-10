@@ -290,4 +290,8 @@ class SchoolInfo < ActiveRecord::Base
   def charter_school?
     school_type.eql? SCHOOL_TYPE_CHARTER
   end
+
+  def completely_filled_out?
+    school_type.present? && school_name.present? && country.eql?('US')
+  end
 end
