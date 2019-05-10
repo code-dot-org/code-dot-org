@@ -70,6 +70,46 @@ export function createCircuitPlaygroundComponents(board) {
 }
 
 /**
+ * reset state on circuit playground components, but don't delete them.
+ */
+export function resetCircuitPlaygroundComponents(components) {
+  if (components.colorLeds) {
+    components.colorLeds.forEach(led => {
+      led.color('white');
+      led.intensity(100);
+      led.off();
+      led.stop();
+    });
+  }
+
+  if (components.led) {
+    components.led.off();
+    components.led.stop();
+  }
+
+  if (components.buzzer) {
+    components.buzzer.off();
+    components.buzzer.stop();
+  }
+
+  if (components.soundSensor) {
+    components.soundSensor.disable();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.disable();
+  }
+
+  if (components.tempSensor) {
+    components.tempSensor.disable();
+  }
+
+  if (components.accelerometer) {
+    components.accelerometer.stop();
+  }
+}
+
+/**
  * De-initializes any Johnny-Five components that might have been created
  * by createCircuitPlaygroundComponents
  * @param {Object} components - map of components, as originally returned by
