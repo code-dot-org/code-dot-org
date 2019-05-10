@@ -17,16 +17,7 @@ class ProjectHeader extends React.Component {
     refreshProjectName: PropTypes.func.isRequired
   };
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    // If we have finished editing the name, refresh the 'updated at' timestamp
-    // TODO we can probably do this without going through dashboard.header
-    if (this.state.editName === false && prevState.editName === true) {
-      dashboard.header.updateTimestamp();
-    }
-  }
-
   state = {
-    name: dashboard.project.getCurrentName(),
     editName: false,
     savingName: false
   };
@@ -38,22 +29,16 @@ class ProjectHeader extends React.Component {
     });
   };
 
-  changeName = event => {
-    this.setState({
-      name: event.target.value
-    });
-  };
-
   saveNameChange = () => {
-    const newName = this.state.name.trim().substr(0, 100);
+    const newName = this.nameChangeInput.value.trim().substr(0, 100);
     if (newName.length === 0) {
       return;
     }
 
     dashboard.project.rename(newName, () => {
+      dashboard.header.updateTimestamp();
       this.props.refreshProjectName();
       this.setState({
-        name: dashboard.project.getCurrentName(),
         editName: false,
         savingName: false
       });
@@ -66,13 +51,17 @@ class ProjectHeader extends React.Component {
 
   renderProjectName() {
     if (this.state.editName) {
+      // Use an uncontrolled input for the "rename" operation so our UI tests
+      // can easily interface with it
       return (
         <input
           type="text"
           className="project_name header_input"
           maxLength="100"
-          value={this.state.name}
-          onChange={this.changeName}
+          defaultValue={this.props.projectName}
+          ref={input => {
+            this.nameChangeInput = input;
+          }}
         />
       );
     }
