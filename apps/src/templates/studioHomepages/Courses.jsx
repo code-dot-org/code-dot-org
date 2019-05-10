@@ -28,8 +28,6 @@ class Courses extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
-    showInitialTips: PropTypes.bool.isRequired,
-    userId: PropTypes.number,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired
   };
 
@@ -45,8 +43,6 @@ class Courses extends Component {
       isEnglish,
       isTeacher,
       isSignedOut,
-      userId,
-      showInitialTips,
       modernElementaryCoursesAvailable
     } = this.props;
     const headingText = isTeacher
@@ -86,11 +82,7 @@ class Courses extends Component {
             {showSpecialTeacherAnnouncement && (
               <SpecialAnnouncementActionBlock />
             )}
-            <CoursesTeacherEnglish
-              isSignedOut={isSignedOut}
-              showInitialTips={showInitialTips}
-              userId={userId}
-            />
+            <CoursesTeacherEnglish />
           </div>
         )}
 

@@ -33,7 +33,7 @@ import {
   getLevelResult
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {renderTeacherPanel} from './teacher';
+import {renderTeacherPanel} from './teacherPanelHelpers';
 import experiments from '../util/experiments';
 
 var progress = module.exports;

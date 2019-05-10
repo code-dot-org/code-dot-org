@@ -1531,6 +1531,7 @@ zh-CN:
   full_course_category_name: 完整课程
   user_header_label: 你好%{username}
   user_header_team: 团队
+  user_header_my_projects: 我的项目
   user_header_settings: 帐户设置
   user_header_logout: 注销
   user_header_signin: 登录

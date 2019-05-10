@@ -131,8 +131,6 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
-    ui_tip_dismissed_homepage_header
-    ui_tip_dismissed_teacher_courses
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -439,8 +437,6 @@ class User < ActiveRecord::Base
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
-
-  before_create :suppress_ui_tips_for_new_users
 
   before_create :update_default_share_setting
 
@@ -1469,13 +1465,6 @@ class User < ActiveRecord::Base
   # Returns an array of experiment name strings
   def get_active_experiment_names
     Experiment.get_all_enabled(user: self).pluck(:name)
-  end
-
-  def suppress_ui_tips_for_new_users
-    # New teachers don't need to see the UI tips for their home and course pages,
-    # so set them as already dismissed.
-    self.ui_tip_dismissed_homepage_header = true
-    self.ui_tip_dismissed_teacher_courses = true
   end
 
   def advertised_scripts

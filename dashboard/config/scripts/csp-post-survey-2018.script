@@ -1,0 +1,8 @@
+login_required true
+hideable_stages true
+exclude_csf_column_in_legend true
+has_verified_resources true
+has_lesson_plan true
+
+stage 'CSP post-course survey', flex_category: 'cspSurvey'
+level 'csp-post-survey-levelgroup-2018', progression: 'CS Principles Post-course Survey', assessment: true

@@ -1,9 +1,9 @@
 require 'net/http'
 require 'set'
 
-# This proxy controller allows us to serve curriculumn builder docs that live on
+# This proxy controller allows us to serve curriculum builder docs that live on
 # [docs|curriculum].code.org as if they live on studio.code.org. This is done so that we can
-# render them in an iframe, and access that iframe without having cross-origin problems
+# render them in an iframe, and access that iframe without having cross-origin problems.
 class CurriculumProxyController < ApplicationController
   include ProxyHelper
 
