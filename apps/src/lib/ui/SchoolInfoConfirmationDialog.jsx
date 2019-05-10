@@ -41,19 +41,23 @@ class SchoolInfoConfirmationDialog extends Component {
     };
   }
 
-  componentDidMount() {
-    const {schoolName} = this.state;
-    if (!schoolName && schoolName.length > 0) {
-      fetch('/dashboardapi/v1/users/me/school_name')
-        .then(response => response.json())
-        .then(data => {
-          this.setState({
-            schoolName: data.school_name
-          });
-        })
-        .catch(error => this.setState({error}));
-    }
-  }
+  handleClickYes = () => {
+    const {authTokenName, authTokenValue} = this.props.scriptData;
+
+    console.log(authTokenName, authTokenValue);
+
+    fetch(
+      `/api/v1/user_school_infos/${
+        this.props.scriptData.existingSchoolInfo.id
+      }/update_last_confirmation_date`,
+      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+    )
+      .then(() => this.props.onClose())
+      .catch(error => {
+        console.log('The Error =>', error);
+        this.setState({error});
+      });
+  };
 
   handleUpdateClick = () => {
     this.setState({showSchoolInterstitial: true});
@@ -77,8 +81,7 @@ class SchoolInfoConfirmationDialog extends Component {
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
-          onClick={this.handleClick}
-          href={'#'}
+          onClick={this.handleClickYes}
         />
       </Body>
     );
