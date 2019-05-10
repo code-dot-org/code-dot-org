@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class Pd::EnrollmentTest < ActiveSupport::TestCase
+  include Pd::WorkshopConstants
+
   test 'code' do
     enrollment1 = create :pd_enrollment
     enrollment2 = create :pd_enrollment
@@ -12,8 +14,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrollment.for_user' do
     user = create :teacher
-    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email
-    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com'
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :pd_workshop, course: COURSE_CSD)
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :pd_workshop, course: COURSE_CSF)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)

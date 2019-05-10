@@ -67,6 +67,7 @@ class Pd::Enrollment < ActiveRecord::Base
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
+  after_create :set_default_scholarship_info
 
   serialized_attrs %w(
     role
@@ -78,6 +79,12 @@ class Pd::Enrollment < ActiveRecord::Base
     previous_courses
     replace_existing
   )
+
+  def set_default_scholarship_info
+    if user && workshop.csf? && workshop.school_year
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, COURSE_KEY_MAP[workshop.course], Pd::ScholarshipInfoConstants::YES_CDO)
+    end
+  end
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
