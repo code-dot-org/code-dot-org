@@ -1490,11 +1490,13 @@ pt:
             The Artist:
               name: O Artista
             Internet:
-              name: Internet
+              name: A Internet
             Crowdsourcing:
               name: Aberto ao público
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
             Conditionals with Cards:
@@ -1502,7 +1504,7 @@ pt:
             Digital Citizenship:
               name: Cidadania digital
             'Unplugged: Binary':
-              name: 'Offline: binário'
+              name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
         coursee-2019:
@@ -1513,8 +1515,8 @@ pt:
               name: Laços aninhados
             Conditionals with Cards:
               name: Condicionais com cartas
-            Conditionals:
-              name: Condicionais
+            'Functions: Songwriting':
+              name: Composição
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1547,16 +1549,16 @@ pt:
               name: nulo
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Criar uma base
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da Vida Real: Aviões de Papel'
+            'Events: The Big Event':
+              name: O Grande Evento
             Binary Bracelets:
               name: Pulseiras binárias
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmos da Vida Real: Plante uma Semente'
+            'Programming: Happy Maps':
+              name: Mapas felizes
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
         courseb-2019:
@@ -1565,6 +1567,8 @@ pt:
               name: Criando caminhos
             Your Digital Footprint:
               name: Seu rastro digital
+            'Loops: Getting Loopy':
+              name: Repetindo
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1617,3 +1621,7 @@ pt:
               name: Condicionais com cartas
             Building a Foundation:
               name: Criar uma base
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programação de papel milimetrico

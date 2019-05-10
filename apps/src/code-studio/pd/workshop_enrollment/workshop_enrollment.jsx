@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import WorkshopDetails from './workshop_details';
 import FacilitatorBio from './facilitator_bio';
-import SignInPrompt from './sign_in_prompt';
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 
@@ -29,10 +28,6 @@ export default class WorkshopEnrollment extends React.Component {
       first_name: PropTypes.string
     }),
     facilitators: PropTypes.arrayOf(FacilitatorPropType),
-    sign_in_prompt_data: PropTypes.shape({
-      info_icon: PropTypes.string,
-      sign_in_url: PropTypes.string
-    }),
     workshop_enrollment_status: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
     collect_demographics: PropTypes.bool
@@ -207,14 +202,6 @@ export default class WorkshopEnrollment extends React.Component {
                   <div className="row">
                     <div className="span6">
                       <h2>Your Information</h2>
-                      {!this.props.enrollment.email && (
-                        <SignInPrompt
-                          info_icon={this.props.sign_in_prompt_data.info_icon}
-                          sign_in_url={
-                            this.props.sign_in_prompt_data.sign_in_url
-                          }
-                        />
-                      )}
                       <EnrollForm
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}

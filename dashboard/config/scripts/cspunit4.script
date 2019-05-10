@@ -47,8 +47,8 @@ level 'U4L10 Student Lesson Introduction'
 
 stage 'Rapid Research - Data Innovations'
 level 'U4L11 Student Lesson Introduction'
-named_level 'Video - Data and Medicine'
-named_level 'Video - CS is Changing Everything'
+level 'Video - Data and Medicine', named: true
+level 'Video - CS is Changing Everything', named: true
 
 stage 'Identifying People with Data'
 level 'U4L12 Student Lesson Introduction'

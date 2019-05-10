@@ -11,7 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import color from '../../util/color';
+import themeColor from '../themeColor';
 import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
@@ -156,10 +156,7 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      default: color.white,
-      classic: color.white,
-      orange: color.applab_orange_background_color,
-      citrus: color.applab_citrus_background_color
+      ...themeColor.background
     }
   },
 
@@ -181,10 +178,11 @@ export default {
     element.style.position = 'absolute';
     element.style.zIndex = 0;
     if (experiments.isEnabled('applabThemes')) {
-      element.setAttribute(
-        'data-theme',
-        applabConstants.themeOptions[applabConstants.DEFAULT_THEME_INDEX]
+      // New screens are created with the same theme as is currently active
+      const currentTheme = elementLibrary.getCurrentTheme(
+        designMode.activeScreen()
       );
+      element.setAttribute('data-theme', currentTheme);
       elementLibrary.applyCurrentTheme(element, element);
     }
 

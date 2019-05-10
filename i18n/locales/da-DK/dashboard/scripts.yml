@@ -1467,7 +1467,7 @@ da:
             The Artist:
               name: Kunstneren
             Internet:
-              name: Internet
+              name: Internettet
             Crowdsourcing:
               name: Crowdsourcing
         dance-low:
@@ -1476,6 +1476,8 @@ da:
               name: Dansefest
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
             Relay Programming:
               name: Stafet-programmering
             Conditionals with Cards:
@@ -1483,7 +1485,7 @@ da:
             Digital Citizenship:
               name: Digital statsborgerskab
             'Unplugged: Binary':
-              name: 'Unplugged: Binære'
+              name: Binære billeder
             Artist Binary:
               name: Kunstner binære
             Dance Party:
@@ -1496,8 +1498,8 @@ da:
               name: Indlejret Løkker
             Conditionals with Cards:
               name: Betingelser med kortspil
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Sangskrivning
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1533,18 +1535,18 @@ da:
           description: Overskrid den første time med udvidede projektideer.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Opbygge et fundament
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life algoritmer: Papir fly'
+            'Events: The Big Event':
+              name: Den store begivenhed
             Binary Bracelets:
               name: Binære armbånd
         gamelab:
           title: Spil Laboratoriet
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life algoritmer: Plante et frø'
+            'Programming: Happy Maps':
+              name: Glade Kort
             Going Places Safely:
               name: Gå til sikre steder
         courseb-2019:
@@ -1553,6 +1555,8 @@ da:
               name: Flyt det, flyt det
             Your Digital Footprint:
               name: Dit digitale fodspor
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1611,3 +1615,7 @@ da:
               name: Betingelser med kortspil
             Building a Foundation:
               name: Opbygge et fundament
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir

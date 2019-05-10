@@ -201,10 +201,6 @@ uk:
     header:
       finished_hoc: "Я вже завершив мою Годину коду"
       sign_in_to_save: 'Увійдіть для збереження досягнень'
-      free_play:
-        playlab: 'Створити програму'
-        artist: 'Намалювати щось'
-        applab: 'Створити програму в App Lab'
       course_catalog: "Каталог курсів"
       project_gallery: "Проекти"
       educate_overview: "Огляд для педагога"

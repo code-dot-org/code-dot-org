@@ -390,7 +390,7 @@ es:
         desc: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender el proceso creativo de compartir e de inspiración. Esto conlleva la promoción de la expresión creativas y la necesidad de ser justo con el trabajo creativo.
       GraphingData_2019:
         title: Datos de gráfico
-        desc: " En esta lección, los estudiantes recopilarán datos de un proyecto de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para hacer predicciones."
+        desc: ' En esta lección, los estudiantes recopilarán datos de un proyecto de Laboratorio de Juegos o escenario real del mundo y lo utilizarán para hacer predicciones.'
       courseE_unplugged_accessAbility_2019:
         title: Habilidad de acceso
         desc: Aprende acerca de la accesibilidad y el valor de la empatía a través de la búsqueda y diseño de soluciones accesibles para aplicaciones hipotéticas.
@@ -406,3 +406,5 @@ es:
       timeforcs_demo_conditionals:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
+      TheRightApp_2019:
+        desc: "* Todos usan ordenadores hoy en día, especialmente teléfonos inteligentes. \\r\n* Las aplicaciones de teléfonos inteligentes, o \"apps\", ayudan a la gente a hacer cosas como hablar con los amigos, escuchar música, comprar o simplemente navegar por internet.\\r\n* ¡Resulta importante que los programadores entiendan las necesidades de los demás y diseñen apps a su medida!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

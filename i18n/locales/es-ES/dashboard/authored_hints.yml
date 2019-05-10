@@ -333,7 +333,7 @@ es:
       Course 4 Artist 12_authored_hint:
         Course_4_Artist_12_a: 'Cada forma repetida es la combinación de \*\* la mitad de un hexágono \*\*, seguida de \*\* 2/3 de un triángulo \*\*. '
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último puzzle, excepto que el medio hexágono es un poco más grande. '
-        Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados "
+        Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80 píxeles de largo y necesitas girar 120 grados "
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -4349,12 +4349,16 @@ es:
         behavior hint: "Trata de editar los comportamientos! \n\n-   A que direccion necesita el pjaro moverse?"
       behaviors 3_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
+      behaviors 3a_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 5_authored_hint:
         target hint: Puedes elegir cualquiera de los cuatro juguetes. ¿Cuál quiere la mascota?
         behavior hint: Edita el comportamiento para resolver el puzzle. El personaje debe moverse en dos direcciones diferentes para moverse en diagonal.
       behaviors 5a_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       behaviors 6_authored_hint:
+        behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
+      behaviors 7_authored_hint:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando la velocidad de cada sprite?"
       comment_intro_maze_2018_authored_hint:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras personas intentan leer tu código.

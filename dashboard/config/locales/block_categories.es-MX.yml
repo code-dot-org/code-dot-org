@@ -24,6 +24,7 @@ es-MX:
       Picker: Rocolector/a
       Comment: Comentario
       World: Mundo
+      Sprites: Sprites
       Behaviors: Comportamientos
       'Variables ': 'Variables '
       Default: Incumplimiento
@@ -33,10 +34,11 @@ es-MX:
       Location: Ubicación
       numbers: números
       Numbers: Números
+      Input: Entrada
       Dancers: Bailarines
       Groups: Grupos
       Advanced: Avanzado
-      Start: Inicio
+      Start: Comenzar
       Music: Música
       Dancing: Baile
       Sprite: Sprite
@@ -47,7 +49,6 @@ es-MX:
       Functional: Funcional
       While Events: Eventos mientra
       Sprite Properties: Propiedades de Sprite
-      Merge with Behaviors: Fusión con comportamientos
       Predefined: Predefinido
       test: prueba
       test2: prueba2

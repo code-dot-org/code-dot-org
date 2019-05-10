@@ -1,14 +1,12 @@
 @no_mobile
-@as_student
 Feature: Level Group
 
-Background:
+@as_student
+Scenario: Submit three answers.
   Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
-  Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
-Scenario: Submit three answers.
   When element ".level-group-content:nth(1) .multi-question" contains text "The standard QWERTY keyboard has"
 
   # First, submit answers to all three multis.
@@ -33,6 +31,11 @@ Scenario: Submit three answers.
 
 @no_ie
 Scenario: Match levels within level group
+  Given I create a teacher-associated student named "Lilian"
+  Given I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  And I wait to see ".submitButton"
+  And element ".submitButton" is visible
+
   Given match level 0 question contains text "Match the code to the image that it will produce."
   And match level 0 contains 4 unplaced answers
   And match level 0 contains 4 empty slots
@@ -48,3 +51,39 @@ Scenario: Match levels within level group
   And match level 1 contains 4 unplaced answers
   And match level 1 contains 4 empty slots
   And element ".xmark" is not visible
+
+  # Make sure the answers are saved and loaded
+
+  Given I press ".submitButton:first" using jQuery
+  And I wait to see ".modal"
+  And I press ".modal #ok-button" using jQuery to load a new page
+
+  When I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1?noautoplay=true"
+  And I wait to see ".submitButton"
+
+  # Wait for moves reflecting lastAttempt to be made
+  And I wait until element ".match:nth(1) .match_slots .answer" is visible
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible
+
+  And I sign out
+
+  # Teacher can view answers
+
+  When I sign in as "Teacher_Lilian"
+  And I am on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
+  And I click selector ".show-handle .fa-chevron-left"
+  And I click selector ".section-student .name a" to load a new page
+
+  Then match level 0 contains 3 unplaced answers
+  And match level 0 contains 3 empty slots
+  And match level 1 contains 4 unplaced answers
+  And match level 1 contains 4 empty slots
+  And element ".xmark" is not visible
+
+  # no answers are draggable
+  And element ".ui-draggable" is not visible

@@ -152,6 +152,7 @@ Dashboard::Application.routes.draw do
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
     get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
+    get '/reset_session', to: 'sessions#reset'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -273,8 +274,6 @@ Dashboard::Application.routes.draw do
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
 
   get '/beta', to: redirect('/')
-
-  get 'reset_session', to: 'application#reset_session_endpoint'
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
@@ -582,6 +581,17 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  if rack_env?(:development, :test)
+    scope '/api' do
+      namespace :test, defaults: {format: 'json'} do
+        TestController.instance_methods(false).each do |action|
+          method = action.to_s.start_with?('get') ? :get : :post
+          send(method, action, action: action)
+        end
+      end
+    end
+  end
+
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
@@ -590,8 +600,6 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
-
-      post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'

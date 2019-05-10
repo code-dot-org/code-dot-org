@@ -68,6 +68,33 @@ describe('JoinSection', () => {
     server.respond();
   });
 
+  it('trims and upper cases join code', done => {
+    server.respondWith('POST', '/api/v1/sections/ABCDEF/join', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({
+        sections: [{code: 'ABCDEF'}],
+        result: 'success'
+      })
+    ]);
+
+    const updateSections = sinon.spy(function() {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
+
+      expect(updateSections).to.have.been.calledOnce;
+
+      done();
+    });
+
+    const wrapper = shallow(
+      <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
+    );
+    wrapper.find('input').simulate('change', {target: {value: ' aBcDeF  '}});
+    wrapper.find('Button').simulate('click');
+    server.respond();
+  });
+
   it('enter key sends join request', done => {
     server.respondWith('POST', '/api/v1/sections/ABCDEF/join', [
       200,

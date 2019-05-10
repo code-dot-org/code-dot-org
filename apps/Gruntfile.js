@@ -504,6 +504,8 @@ describe('entry tests', () => {
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'levels/_teacher_panel':
+      './src/sites/studio/pages/levels/_teacher_panel.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -628,6 +630,7 @@ describe('entry tests', () => {
     essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
     jotformLoader: './src/sites/studio/pages/jotformLoader.js',
+    jotformEmbed: './src/sites/studio/pages/jotformEmbed.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the

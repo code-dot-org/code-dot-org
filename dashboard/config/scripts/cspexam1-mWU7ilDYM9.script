@@ -2,4 +2,4 @@ login_required true
 
 stage 'CS Principles Culminating Assessment Part 1'
 level 'CSP_Final_instructions'
-assessment 'Part 1 - CSP Culminating Assessment'
+level 'Part 1 - CSP Culminating Assessment', assessment: true

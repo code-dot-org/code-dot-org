@@ -1,13 +1,22 @@
 zh-TW:
   data:
     display_name:
+      AppLab Intro 3 - Change Text 2: 修改文字
+      AppLab Intro 3 - Change Text: 修改文字
       AppLab Intro 3 - onEvent mouseOver: 鼠標懸停的用法
       AppLab Intro 3 - playSound: 播放音效的用法
       AppLab Intro 3 - stopSound: 播放音效的用法
+      AppLab Intro 4 - Change Text 2: 修改文字
+      AppLab Intro 4 - Change Text: 修改文字
       AppLab Intro 4 - Video setProperty: 新手上路
+      AppLab Intro 4 - Video share thisThat: 分享你的作品
+      AppLab Intro 4 - Video share your work: 分享你的作品
+      AppLab Intro 4 - Video share: 分享你的作品
       AppLab Intro 4 - onEvent mouseOver: 鼠標懸停的用法
       AppLab Intro 4 - playSound: 播放音效的用法
       AppLab Intro 4 - stopSound: 播放音效的用法
+      AppLab Intro 5 - Change Text 2: 修改文字
+      AppLab Intro 5 - Change Text: 修改文字
       AppLab Intro 5 - addButton: 播放音效的用法
       AppLab Intro 5 - go further: 播放音效的用法
       AppLab Intro 5 - playSound: 播放音效的用法
@@ -15,12 +24,14 @@ zh-TW:
       AppLab Intro 5 - setScreen: 播放音效的用法
       AppLab Intro 5 - share keep going: 播放音效的用法
       AppLab Intro 5 - socialTemplate: 播放音效的用法
+      AppLab Intro 6 - Change Text 2: 修改文字
       AppLab Intro 6 - Video welcome: 新手上路
       AppLab Intro 6 - animalSoundBoard: 播放音效的用法
       AppLab Intro 6 - blankApp: 播放音效的用法
       AppLab Intro 6 - playSound Template: 播放音效的用法
       AppLab Intro 6 - playSound: 播放音效的用法
       AppLab Intro 6 - quizApp: 播放音效的用法
+      AppLab Intro 7 - Change Text 2: 修改文字
       AppLab Intro 7 - playSound: 播放音效的用法
       CDEF_video_SpritesInAction: 如何建立一個角色
       CDEF_video_SpritesInAction_2019: 如何建立一個角色
@@ -160,6 +171,12 @@ zh-TW:
       CSD U3 istouching map: 碰撞檢測
       CSD U3 istouching map_2018: 碰撞檢測
       CSD U3 istouching map_2019: 碰撞檢測
+      CSD U3 plotting shapes map: 在 Game Lab 裡繪製圖形
+      CSD U3 plotting shapes map_2018: 在 Game Lab 裡繪製圖形
+      CSD U3 plotting shapes map_2019: 在 Game Lab 裡繪製圖形
+      CSD U3 rect: Game Lab 的介紹
+      CSD U3 rect_2018: Game Lab 的介紹
+      CSD U3 rect_2019: Game Lab 的介紹
       CSD U3 velocity map: 角色速度
       CSD U3 velocity map_2018: 角色速度
       CSD U3 velocity map_2019: 角色速度
@@ -358,11 +375,20 @@ zh-TW:
       'CSD: Animating Sprite Movement': '影片：角色動作'
       'CSD: Animating Sprite Movement_2018': '影片：角色動作'
       'CSD: Animating Sprite Movement_2019': '影片：角色動作'
+      'CSD: Drawing in Game Lab 1': '影片：用 Game Lab 繪圖 - 第 1 部分'
+      'CSD: Drawing in Game Lab 1_2018': '影片：用 Game Lab 繪圖 - 第 1 部分'
+      'CSD: Drawing in Game Lab 1_2019': '影片：用 Game Lab 繪圖 - 第 1 部分'
+      'CSD: Drawing in Game Lab 2': '影片：用 Game Lab 繪圖 - 第 2 部分'
+      'CSD: Drawing in Game Lab 2_2018': '影片：用 Game Lab 繪圖 - 第 2 部分'
+      'CSD: Drawing in Game Lab 2_2019': '影片：用 Game Lab 繪圖 - 第 2 部分'
       'CSD: For Loop_2018': 計數迴圈（For Loops）
       'CSD: For Loop_2019': 計數迴圈（For Loops）
       'CSD: Sprite Velocity': '影片：速度'
       'CSD: Sprite Velocity_2018': '影片：速度'
       'CSD: Sprite Velocity_2019': '影片：速度'
+      'CSD: Sprites in Game Lab': '影片：角色的介紹'
+      'CSD: Sprites in Game Lab_2018': '影片：角色的介紹'
+      'CSD: Sprites in Game Lab_2019': '影片：角色的介紹'
       CSP CreateL01 SFLP: 教學內容概覽
       CSP CreateL01 SFLP_2019: 教學內容概覽
       CSP CreateL02 SFLP_2018: 教學內容概覽
@@ -512,7 +538,7 @@ zh-TW:
       CourseEF_video_MakeSprite_2019: 如何建立一個角色
       Dance_Party_extras_battle: 舞蹈團隊
       Dance_Party_extras_every_beat: 四分音符
-      Dance_Party_extras_layout: 進入陣型
+      Dance_Party_extras_layout: 加入陣形
       Dance_Party_extras_on_beat: 低音、中音和高音
       Dance_Party_extras_speed: 加速、減速
       Dance_Party_extras_visible: 他們要去哪？

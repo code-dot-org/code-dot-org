@@ -60,6 +60,7 @@ const SILENCED = [
   'gamelab-api',
   'jigsaw',
   'jotformLoader',
+  'jotformEmbed',
   'levelbuilder',
   'levelbuilder_applab',
   'levelbuilder_craft',
