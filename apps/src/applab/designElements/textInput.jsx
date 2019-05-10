@@ -307,7 +307,10 @@ export default {
     element.style.width = '200px';
     element.style.height = '30px';
     element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     return element;
   },

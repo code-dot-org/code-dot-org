@@ -613,7 +613,7 @@ designMode.onDuplicate = function(element, event) {
 
 var batchChangeId = 1;
 
-designMode.changeThemeForCurrentScreen = function(screenElement, themeValue) {
+designMode.changeThemeForScreen = function(screenElement, themeValue) {
   const prevThemeValue =
     screenElement.getAttribute('data-theme') ||
     applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
@@ -641,8 +641,14 @@ designMode.changeThemeForCurrentScreen = function(screenElement, themeValue) {
       const newDefault = propTheme[themeValue];
       const currentPropValue = designMode.readProperty(element, propName);
       const {type} = propTheme;
+      //
+      // Update properties if the student hasn't customized the property
+      // from the default value for the previous theme.
+      //
       let propShouldUpdate;
       if (currentPropValue === '') {
+        // Don't treat a deleted/empty property as a valid customization
+        // that should be preserved across a theme change.
         propShouldUpdate = true;
       } else if (type === 'color') {
         propShouldUpdate =

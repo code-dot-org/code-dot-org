@@ -194,7 +194,10 @@ applabCommands.button = function(opts) {
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
   newButton.style.borderStyle = 'solid';
-  elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newButton,
+    Applab.activeScreen()
+  );
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -898,7 +901,10 @@ applabCommands.textInput = function(opts) {
   newInput.style.height = '30px';
   newInput.style.width = '200px';
   newInput.style.borderStyle = 'solid';
-  elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newInput,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -916,7 +922,10 @@ applabCommands.textLabel = function(opts) {
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
   newLabel.style.borderStyle = 'solid';
-  elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newLabel,
+    Applab.activeScreen()
+  );
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -980,7 +989,10 @@ applabCommands.dropdown = function(opts) {
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
   newSelect.style.borderStyle = 'solid';
-  elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSelect,
+    Applab.activeScreen()
+  );
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
