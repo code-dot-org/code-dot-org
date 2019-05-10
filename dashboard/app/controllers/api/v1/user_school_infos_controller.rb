@@ -15,9 +15,9 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     ActiveRecord::Base.transaction do
       @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
       @user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
-
-      head :no_content
     end
+
+    head :no_content
   end
 
   # PATCH /api/v1/user_school_infos/<id>/update_school_info_id
