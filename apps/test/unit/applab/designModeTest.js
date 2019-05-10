@@ -168,7 +168,7 @@ describe('setProperty and read Property', () => {
     });
   });
 
-  describe('changeThemeForCurrentScreen: ', () => {
+  describe('changeThemeForScreen: ', () => {
     let designModeViz;
 
     beforeEach(() => {
@@ -193,7 +193,7 @@ describe('setProperty and read Property', () => {
 
       // Change theme to watermelon, verify that the screen now has the data-theme attribute
       // and the background color for that theme:
-      designMode.changeThemeForCurrentScreen(
+      designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
         'watermelon'
       );
@@ -214,7 +214,7 @@ describe('setProperty and read Property', () => {
 
       // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
       // and the background color for that theme:
-      designMode.changeThemeForCurrentScreen(
+      designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
         'watermelon'
       );
@@ -236,7 +236,7 @@ describe('setProperty and read Property', () => {
 
       // Change theme to default, verify that the screen now has the data-theme attribute
       // and the textInput now has the padding style and the background color of the new theme:
-      designMode.changeThemeForCurrentScreen(
+      designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
         themeOptions[DEFAULT_THEME_INDEX]
       );
@@ -262,7 +262,7 @@ describe('setProperty and read Property', () => {
 
       // Change theme to default, verify that the screen now has an updated data-theme attribute
       // and the textInput now has the padding style and the background color of the new theme:
-      designMode.changeThemeForCurrentScreen(
+      designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
         'watermelon'
       );

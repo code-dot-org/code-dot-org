@@ -234,22 +234,17 @@ export function setDefaultBorderStyles(element, options = {}) {
  * @param {string} cssPaddingString value from element.style.padding
  */
 export function calculatePadding(cssPaddingString) {
-  //
-  // paddingRegEx matches a string with up to 4 pairs of numeric values
-  // with or without pixel suffixes (e.g. 0 or 2px)
-  //
-  const paddingRegEx = /\s*?(\d*)(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*(\d*)?(px)?\s*?/i;
-  const paddingResult = paddingRegEx.exec(cssPaddingString);
+  // Extract up to 4 numbers, ignoring the 'px' that may be included
 
-  // paddingResult indices 1, 3, 5, and 7 are the numeric values
-  // indices 2, 4, 6, and 8 are the optional 'px' values which we ignore
+  // NOTE: if other measurement values (e.g. 'em') make it into the padding string,
+  // we will treat them as 'px' values
 
-  const paddingValues = [
-    parseInt(paddingResult[1], 10),
-    parseInt(paddingResult[3], 10),
-    parseInt(paddingResult[5], 10),
-    parseInt(paddingResult[7], 10)
-  ];
+  // Ideally, we could use getComputedStyle(), but we need to work with
+  // detached DOM nodes, which doesn't work on Chrome and Safari
+
+  const paddingValues = (cssPaddingString || '')
+    .split(/\s+/)
+    .map(part => parseInt(part, 10));
   for (
     var validPaddingValues = 0;
     validPaddingValues < paddingValues.length;

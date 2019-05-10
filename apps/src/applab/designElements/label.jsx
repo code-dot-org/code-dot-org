@@ -300,7 +300,10 @@ export default {
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
     element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     this.resizeToFitText(element);
     return element;

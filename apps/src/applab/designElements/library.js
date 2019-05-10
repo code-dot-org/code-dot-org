@@ -183,7 +183,12 @@ export default {
       : themeOptions[defaultThemeIndex];
   },
 
-  applyCurrentTheme: function(element, parentScreen) {
+  /**
+   * Sets all properties on the element to reflect the current theme
+   * of the parent screen. This function ignores any student customization
+   * on those properties and overwrites all theme properties.
+   */
+  setAllPropertiesToCurrentTheme: function(element, parentScreen) {
     const currentTheme = this.getCurrentTheme(parentScreen);
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {

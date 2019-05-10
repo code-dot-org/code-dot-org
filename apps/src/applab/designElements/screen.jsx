@@ -182,7 +182,7 @@ export default {
       designMode.activeScreen()
     );
     element.setAttribute('data-theme', currentTheme);
-    elementLibrary.applyCurrentTheme(element, element);
+    elementLibrary.setAllPropertiesToCurrentTheme(element, element);
 
     return element;
   },
@@ -220,7 +220,7 @@ export default {
   onPropertyChange: function(element, name, value) {
     switch (name) {
       case 'theme': {
-        designMode.changeThemeForCurrentScreen(element, value);
+        designMode.changeThemeForScreen(element, value);
         return true;
       }
       default:

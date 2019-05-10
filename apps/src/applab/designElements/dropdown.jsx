@@ -293,7 +293,10 @@ export default {
     element.style.height = '30px';
     element.style.margin = '0';
     element.style.borderStyle = 'solid';
-    elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     const option1 = document.createElement('option');
     option1.innerHTML = 'Option 1';
