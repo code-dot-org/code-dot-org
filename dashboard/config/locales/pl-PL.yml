@@ -313,7 +313,7 @@ pl:
     header:
       finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
       sign_in_to_save: Zaloguj się, by zapisać postępy
-      my_dashboard: Pulpit
+      my_dashboard: Mój pulpit
       course_catalog: Katalog Kursów
       project_gallery: Galeria Projektów
       sections: Sekcje
@@ -379,6 +379,7 @@ pl:
       iceage: Epoka lodowcowa
       infinity: Nieskończoność
       minecraft_adventurer: Poszukiwacz przygód z Minecraftem
+      minecraft_aquatic: 'Minecraft: Wodna podróż'
       minecraft_designer: Minecraft
       minecraft_hero: Bohater Minecraftu
       playlab: Play Lab
@@ -1301,7 +1302,7 @@ pl:
     form_labels:
       email: e-mail
       school_name: Nazwa szkoły
-      school_city: Miasto Szkoły
+      school_city: Miasto szkoły
       school_country: Kraj
     form_entries:
       gender:

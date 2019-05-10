@@ -48,3 +48,16 @@ fr:
           title: Les principes des sciences informatiques (2018-2019)
           version_title: 2018-2019
           description_short: Apprenez les concepts fondamentaux des sciences informatiques.
+        csp-2019:
+          description_short: Apprenez les concepts fondamentaux des sciences informatiques.
+        csd-2019:
+          description_short: La version 2018-2019 du cours Découvertes des sciences
+            informatiques.
+          description_student: Découvertes des sciences informatiques (CS Discoveries)
+            est un cours d'initiation à l'informatique qui permet aux étudiants de
+            créer des artefacts authentiques et d'utiliser l'informatique comme moyen
+            de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes des sciences informatiques (CS Discoveries)
+            est un cours d'initiation à l'informatique qui permet aux étudiants de
+            créer des artefacts authentiques et d'utiliser l'informatique comme moyen
+            de créativité, de communication, de résolution de problèmes et d'amusement.

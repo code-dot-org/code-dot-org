@@ -578,6 +578,10 @@ is:
           í þessari þraut.
       behaviors 1_callout:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
+      behaviors 3a_callout:
+        behavior_callout: Af hverju virkar þessi hegðun ekki hjá miðstjörnunni?
+        star2_callout: Fjarlægðu þennan kubb fyrir búning og notaðu kubbinn "þessi
+          vera" í staðinn.
       behaviors 4_callout:
         behaviors_edit: Smelltu hér til að sjá þessa hegðun.
       behaviors 4a_callout:
@@ -812,6 +816,11 @@ is:
       courseC_PlayLab_events_challenge1_2019_callout:
         courseC_PlayLab_events_challenge1_1: Með þessum kubbi getur þú fært leikmenn
           á staði á leiksvæðinu.
+      courseC_artist_loops1a_2019_callout:
+        jumpto_callout: Þessi kubbur er mjög mikilvægur í þessu verkefni. Gættu þess
+          að nota hann!
+      courseC_artist_loops1b_2019_callout:
+        sticker2: Bættu þessu í miðju forritsins þíns.
       courseC_artist_loopsPrePre1a_callout:
         courseC_artist_loopsPrePre1a_1: Byrjaðu á að nota þennan kubb til að koma
           listamanninum á miðjan skjáinn.

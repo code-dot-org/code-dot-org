@@ -17,6 +17,50 @@ uk:
       4-5 Bee Conditionals 2_callout:
         4_5_Bee_Conditionals_2_1: Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ.
           Тобі зовсім не потрібно перевіряти соту.
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: Зміни номер тут
+      CSD U3 Variables Predict Where X_2018_callout:
+        CSD_U3_variables: Зміни номер тут
+      CSD U3 Variables Predict Where X_2019_callout:
+        CSD_U3_variables: Зміни номер тут
+      CSD U3 debug_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 debug_2018_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 debug_2019_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 ellipse_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 ellipse_2018_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 ellipse_2019_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 fill_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 fill_2018_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 fill_2019_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 my-rect_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 rect_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 rect_2018_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 rect_2019_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 sequence_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 sequence_2018_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U3 sequence_2019_callout:
+        CSD_U3_rect_c1: Ось код
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: Додай свій код тут
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: Додай свій код тут
+      CSD U6 colorLeds intensity_2019_callout:
+        CSDU6L10_rainbow: Додай свій код тут
       Counting_callout:
         sign_in_to_save_project: Хочете отримати доступ до вашого проекту пізніше?
           Увійдіть, щоб зберегти цей проект у своєму обліковому записі!
@@ -80,8 +124,18 @@ uk:
       Course 4 Playlab For Loops 4b_callout:
         Course_4_Playlab_For_Loops_4b_2: У цій головоломці ви можете змінювати тільки
           "інкрімент" петлі "for".
+      CourseD_Dance_Party_06_callout:
+        dance_callout_06: Додай сюди свого нового танцюриста
+      CourseD_Dance_Party_11_callout:
+        dance_callout_11_a: Новий блок!
+        dance_callout_11_b: Новий блок!
       CourseF_PlayLab_vars1_callout:
         arrows_move_actor: Скористайтесь стрілками для переміщення персонажа
+      Dance_Party_06_callout:
+        dance_callout_06: Додай сюди свого нового танцюриста
+      Dance_Party_11_callout:
+        dance_callout_11_a: Новий блок!
+        dance_callout_11_b: Новий блок!
       Eval Design Recipe .1_callout:
         edit_function: Клацни тут, щоб змінити функцію.
       Frozen Project Test Toolbox_callout:

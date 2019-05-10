@@ -93,11 +93,41 @@ is:
       cube: teningur
       do something2: gera eitthvað2
       jump upper right: hoppa efst hægri
+      draw a line of  squares: teikna röð ferninga
+      draw a line of squares: teikna röð ferninga
       jump upper left: hoppa efst vinstri
+      draw a line of octagons: teikna röð átthyrninga
+      Draw a Square: Teikna ferning
+      draw a square 20: teikna ferning 20
+      draw a square 40: teikna ferning 40
+      draw a triangle with length: teikna þríhyrning með lengd
+      Draw a Triangle with length: teikna þríhyrning með lengd
+      draw a triangle wioth length: teikna þríhyrning með lengd
+      draw a sqaure: teikna ferning
+      triangle: þríhyrningur
+      draw a spiral shape: teikna spíralform
+      get 3 nectar: sækja 3 blómasafa
+      get many nectar: sækja mikinn blómasafa
+      get nectar make honey: safna blómasafa búa til hunang
+      draw an octagon: teikna átthyrning
+      draw octagons: teikna átthyrninga
+      score_points: skora_stig
       set score: setja stig á
+      draw a line of hexagons: teikna röð sexhyrninga
       get nectar: sækja blómasafa
+      make honey up and over: gera hunang upp til hægri
+      patrol left right: rása vinstri hægri
+      empty function: tómt fall
+      check guess: athuga ágiskun
       Jump: Hoppa
       test: prófun
+      build bridge: byggja brú
+      run right: hlaupa til hægri
+      spin right: snúast til hægri
+      grow forever: vaxa endalaust
+      draw grass: teikna gras
+      sun: sól
+      draw windows: teikna glugga
       square: ferningur
       draw a door: teikna dyr
       rectangle: rétthyrningur
@@ -129,13 +159,28 @@ is:
       place 3 tracks: setja 3 slóðir
       clear right corner: hreinsa hægra horn
       clear left corner: hreinsa vinstra horn
+      draw a spiral edge: teikna útlínu spírals
       draw a pentagon: teikna fimmhyrning
       artist jump around: listamaður hoppa um
+      Draw lenses: teikna linsur
+      25 pixel square: 25 díla ferningur
       move right: færa til hægri
       move up: færa upp
       move down: færa niður
       move left: færa til vinstri
       click: smella
+      draw line of triangles: teikna röð þríhyrninga
+      draw a window: teikna glugga
+      stop_everything: stöðva_allt
+      lose: tapa
+      draw a plane of squares: teikna flöt ferninga
+      draw hexagon: teikna sexhyrning
+      draw line of hexagons: teikna röð sexhyrninga
+      staggered squares: víxlaðir ferningar
+      draw line of polygons: teikna röð marghyrninga
+      draw polygon: teikna marghyrning
+      honey nectar: hunang blómasafi
+      move and make honey: færa og búa til hunang
       collect all nectar: safna öllum blómasafa
       get all nectar: sækja allan blómasafa
       get pumpkin: tína grasker

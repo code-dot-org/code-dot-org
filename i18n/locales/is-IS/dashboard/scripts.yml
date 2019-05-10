@@ -4364,3 +4364,7 @@ is:
           stages:
             Graph Paper Programming:
               name: Forritun rúðublaða
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi

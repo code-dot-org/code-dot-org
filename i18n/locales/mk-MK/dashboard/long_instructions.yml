@@ -11985,9 +11985,9 @@ mk:
         \`(1000
 
         -   400.    / (3 \* 20)\`\\r
-                                \\r
-                                These expressions have two important components:\\r
-                                \\r
+                                        \\r
+                                        These expressions have two important components:\\r
+                                        \\r
         -   \*
             **values:** numbers, text, or information in your program \\r
         -   **operators:**
@@ -17793,14 +17793,14 @@ mk:
         at the `if/else` block that checks whether the horse's position is less than
 
         325.    [Show me where](#triggercallout=code_triggered1)\\r
-                            \\r
+                                    \\r
         326.    If the horse's
-                            y position is less than 325, use a counter pattern to change the horse's
-                            velocityY by 0.1 on each tick of the draw loop. \\r
+                                    y position is less than 325, use a counter pattern to change the horse's
+                                    velocityY by 0.1 on each tick of the draw loop. \\r
         327.    If the horse's y position
-                            is not less than 325, use the `velocityY` to change its vertical velocity
-                            to zero. [Show me where](#triggercallout=code_triggered2)\\r
-                            \\r
+                                    is not less than 325, use the `velocityY` to change its vertical velocity
+                                    to zero. [Show me where](#triggercallout=code_triggered2)\\r
+                                    \\r
       CSD U3 abstraction jump-2018: |-
         # Jumping\\r
 

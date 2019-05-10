@@ -300,7 +300,7 @@ sq:
       Calc Circles of Eval .4: |-
         Këtu kemi mbivendosur një Bllok Mbledhjeje
         brenda një Blloku Shumëzimi. Përfundo këtë kod që të shumëzojë 3 me (4 +
-        1\)
+        1)
       Calc Circles of Eval 3: |-
         Përfundo Blloqet e Vlerësimit për ta lidhur
         me këtë formulim.
@@ -383,6 +383,7 @@ sq:
       CourseF_PlayLab_vars2: "Gara ne formuesen e fundit nuk ishte \nshumë e drejtë!
         Ndrysho variablin \"shpejtesia_e_qenit\" që të sigurohesh që mund të mbledhesh\nmë
         shumë flamuj se sa Macja. I pari qe mbledh 10 flamuj fiton!"
+      Dance Party Template 1_2019: Shabllon
       Dance Party Template 2_2019: Shabllon
       K-1 Bee Loops 2: Përdor një cikël për të lëvizur dhe pastaj merr nektarin dhe
         bëj mjaltin!

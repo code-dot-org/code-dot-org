@@ -1,5 +1,5 @@
 {
-  "startButton": "Inicio",
+  "startButton": "Comenzar",
   "filterOrgNames": "Creado por",
   "filterOrgNamesAll": "Todos",
   "filterSortBy": "Ordenar por",
@@ -38,7 +38,7 @@
   "filterProgrammingLanguage": "Idioma",
   "filterProgrammingLanguageBlocks": "Bloques",
   "filterProgrammingLanguageTyping": "Escribiendo",
-  "filterProgrammingLanguageOther": "Otros",
+  "filterProgrammingLanguageOther": "Otro",
   "filterActivityTypeRobotics": "Robótica",
   "backButtonBack": "Volver a todas las actividades",
   "filterHeaderShowFilters": "Filtros",

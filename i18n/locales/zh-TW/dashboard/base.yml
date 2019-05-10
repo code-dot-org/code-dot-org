@@ -614,6 +614,7 @@ zh-TW:
       body: "觀看由用戶建立的應用程式及藝術畫作"
     gamelab:
       title: "Game Lab"
+      body: "Game Lab 這個編程環境可以讓你利用現成的一些物件、角色創作簡單能互動的動畫、遊戲，。"
       audience: "年齡 13+"
       cta: "學習如何做"
     hoc-encryption:
