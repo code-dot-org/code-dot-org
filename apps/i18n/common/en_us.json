@@ -1036,7 +1036,7 @@
   "projectLastUpdated": "Last updated",
   "projectName": "Project Name",
   "projectSaveError": "Error saving project",
-  "projectSaveErrorTooltop": "It looks like we couldn't save your progress. Make sure you have a good internet connection and try running the project again to save it.",
+  "projectSaveErrorTooltip": "It looks like we couldn't save your progress. Make sure you have a good internet connection and try running the project again to save it.",
   "projectSharingColumnHeader": "Sharing",
   "projectSharingDialogButton": "Show project sharing column",
   "projectSharingDialogHeader": "Control sharing for App Lab / Game Lab / Web Lab projects",
