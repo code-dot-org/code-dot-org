@@ -211,7 +211,7 @@ AS(
          pdw.id AS workshop_id, -- section_id in the other table (below)
          pdw.section_id AS section_id,
          CASE 
-            WHEN (subject IN ('Intro Workshop', 'Intro') OR subject IS NULL)
+            WHEN (pdw.subject IN ('Intro Workshop', 'Intro') OR pdw.subject IS NULL)
                 THEN 'Intro Workshop' 
             ELSE pdw.subject 
             END as subject,

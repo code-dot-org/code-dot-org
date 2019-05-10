@@ -160,7 +160,7 @@ select
          ON ss_user.school_id = si_user.school_id
 -- attendance
  -- LEFT JOIN analysis.csf_workshop_attendance csfa -- functions mostly to get the regional partner's location info and to decide whether the person was 'trained_by_partner'
-  LEFT JOIN analysis.csf_workshop_attendance csfa   -- ****CHANGE TO VIEW****
+  LEFT JOIN analysis.csf_workshop_attendance_view csfa  
         ON  csfa.user_id = d.user_id
         AND csfa.workshop_date = d.trained_at 
         AND csfa.future_event = 0 -- removes workshops planned for future dates
@@ -195,8 +195,8 @@ select
          and tmp.script_name = s.script_name
          and tmp.school_year = sa.school_year
 WITH NO SCHEMA BINDING
-
 ;
+
 
 GRANT INSERT, TRIGGER, UPDATE, REFERENCES, RULE, DELETE, SELECT ON analysis_pii.regional_partner_stats_csf_view TO dev;
 GRANT SELECT ON analysis_pii.regional_partner_stats_csf_view TO GROUP reader_pii;

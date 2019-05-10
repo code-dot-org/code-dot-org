@@ -11,7 +11,7 @@ pd_workshop_based as
     pdw.id as workshop_id,
     pdw.section_id as section_id,
     CASE WHEN pdw.subject IN ( 'Intro Workshop', 'Intro') OR pdw.subject IS NULL THEN 'Intro Workshop' 
-         WHEN pdw.subject = 'Deep Dive' THEN subject 
+         ELSE subject -- just 'Deep Dive' becauase of where clause
     END AS subject
   FROM dashboard_production_pii.pd_enrollments pde
     JOIN dashboard_production_pii.pd_attendances pda ON pda.pd_enrollment_id = pde.id
