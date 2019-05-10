@@ -97,13 +97,11 @@ class SchoolInfoConfirmationDialog extends Component {
     return (
       <Body>
         <SchoolInfoInterstitial
-          scriptData={{
-            formUrl: '',
-            authTokenName: 'auth_token',
-            authTokenValue: 'fake_auth_token',
-            existingSchoolInfo: {}
+          scriptData={this.props.scriptData}
+          onClose={() => {
+            this.handleClickSave();
+            this.setState({isOpen: false});
           }}
-          onClose={() => this.setState({isOpen: false})}
         />
       </Body>
     );
