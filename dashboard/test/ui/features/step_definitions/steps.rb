@@ -1488,7 +1488,7 @@ Then /^I unlock the stage for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
-  page_load {@browser.execute_script('$(".modal-body button:contains(Save)").first().click()')}
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
 Then /^I show stage answers for students$/ do
