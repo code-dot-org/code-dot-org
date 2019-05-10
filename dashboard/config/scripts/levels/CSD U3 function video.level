@@ -10,9 +10,9 @@
     "instructions_important": "false",
     "display_name": "Video: Functions",
     "long_instructions": "## Questions to Consider\r\n\r\n* Think of a time when a function might have helped you write a program.\r\n  * What code would go in the **definition** of the function?\r\n  * When would you **call** the function?\r\n  * What would you name it?",
-    "encrypted_teacher_markdown": "uCqs/BJMF1WP/Tr5tp8JlYMF+Yowbx5c8cRaG1CXNEkqsVOrplhACzRpO/i/\npA3+4dyCQ7xV54UuvSVYGFN2z+4+hwFo76vztCF7kY5YuS2FDyxuagSgTCn+\ngC3o1W1zzC6w5MjuSwXuw3uTZZy6a4h2dy5q/UHV5Ef8dfq07sFhgmWFOgfF\nRTrF/7ywkSrhjvsQKvr519tmOgGujvjOs/CWxYPryASLX9vKRK8BGi9COMkL\nNoBN5gACuaffY4vMaUPORDpS9UMf6g7pAHupVcsH0Pf+7MvyNGiL31Z2xp9c\nW38T8nHf0D8wgMgSWd1TiJTUIrk2xxR5cn/xjczhe3k/cTXSXaD0Re9HlTiw\nft3EuraNF5nT+ep8Vbg1l0mBz5sUPiK9/hxVrufSzc28rhgBF4lzcS0kAUIL\npTlceF0UL+hlu3FzLZRGFdZzT21U8eWAcKF7LoC38wnwzQ26dQ/X8AHQ12h7\nQPnEE44mMoolbOmjR0Z6nZvzYKq5OmNyIPEdKwl7thdlS8rFzneT7/1WWLui\nolbJXxKcab/hmukJ90LO6K/AMAR9Ab7n3dwDHqdhIAdXmI7pmVpKcnQ2XVxf\nwWoZuXPu/z3/v/GKx3Y=\n",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "teacher_markdown": "# Discussion Goals\r\n\r\nMake sure students understand role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction.  The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code.    The function should be called at each place in the program that the student wants that block of code to run."
   },
   "published": true,
   "notes": "",
