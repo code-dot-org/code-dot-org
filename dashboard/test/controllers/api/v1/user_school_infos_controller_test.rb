@@ -7,7 +7,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     user_school_info = create :user_school_info
     sign_in user_school_info.user
-    original_user_school_info = user_school_info.last_confirmation_date
+    original_confirmation_date = user_school_info.last_confirmation_date
     original_user_school_info_created_at = user_school_info.created_at
 
     Timecop.travel 1
@@ -17,10 +17,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     user_school_info.reload
 
     assert_response :success
-    assert user_school_info.last_confirmation_date.to_datetime > original_user_school_info.to_datetime
+    assert user_school_info.last_confirmation_date.to_datetime > original_confirmation_date.to_datetime
 
     refute_equal original_user_school_info_created_at, user_school_info[:updated_at]
-    refute_equal original_user_school_info.to_datetime, user_school_info.last_confirmation_date.to_datetime
+    refute_equal original_confirmation_date.to_datetime, user_school_info.last_confirmation_date.to_datetime
 
     Timecop.return
   end
@@ -50,8 +50,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     user_school_info = create :user_school_info
     sign_in user_school_info.user
-
-    puts "user_school_info #{user_school_info.inspect}"
 
     Timecop.travel 1
 
@@ -88,8 +86,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     new_user_school_info = UserSchoolInfo.last
 
     assert_response :success
-    assert UserSchoolInfo.count, 1
-    assert_not_equal new_user_school_info.id, user_school_info.id
+    assert_equal UserSchoolInfo.count, 1
+    refute_equal new_user_school_info.id, user_school_info.id
     assert_equal new_user_school_info.school_info_id, user_school_info.school_info_id
   end
 
