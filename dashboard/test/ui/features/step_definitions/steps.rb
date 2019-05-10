@@ -1478,15 +1478,17 @@ Then /^I scroll our lockable stage into view$/ do
 end
 
 Then /^I open the stage lock dialog$/ do
+  wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal-body')}
 end
 
 Then /^I unlock the stage for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
-  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+  page_load {@browser.execute_script('$(".modal-body button:contains(Save)").first().click()')}
 end
 
 Then /^I show stage answers for students$/ do
