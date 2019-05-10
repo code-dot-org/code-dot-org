@@ -59,23 +59,29 @@ class SchoolInfoConfirmationDialog extends Component {
       });
   };
 
-  handleUpdateClick = () => {
-    this.setState({showSchoolInterstitial: true});
+  handleClickUpdate = () => {
+    const {authTokenName, authTokenValue} = this.props.scriptData;
+    fetch(
+      `/api/v1/user_school_infos/${
+        this.props.scriptData.existingSchoolInfo.id
+      }/update_end_date`,
+      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+    )
+      .then(() => this.setState({showSchoolInterstitial: true}))
+      .catch(() => {});
   };
 
-  renderInitialContent() {
+  renderInitialContent = () => {
     const {schoolName} = this.state;
     return (
       <Body>
         <div>
-          <p>
-            {i18n.schoolInfoDialogDescription()} {schoolName}
-          </p>
+          <p>{i18n.schoolInfoDialogDescription({schoolName})}</p>
         </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
-          onClick={this.handleUpdateClick}
+          onClick={this.handleClickUpdate}
         />
         <Button
           style={styles.button}
@@ -85,7 +91,7 @@ class SchoolInfoConfirmationDialog extends Component {
         />
       </Body>
     );
-  }
+  };
 
   renderSchoolInformationForm() {
     return (
