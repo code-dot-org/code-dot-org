@@ -10764,3 +10764,24 @@ zh-CN:
               name: 方格纸编程
             Programming in Maze:
               name: 迷宫编程
+        csd-post-survey-2018:
+          stages:
+            CSD post-course survey:
+              name: 计算机科学发现课后问卷
+          description_audience: 计算机科学发现学生
+        csp-post-survey-2018:
+          stages:
+            CSP post-course survey:
+              name: 计算机科学原理课后问卷
+          description_audience: 计算机科学原理学生
+          description_short: 计算机科学原理学生课后调查
+          description: 欢迎来到Code.org的计算机科学原理课后问卷。这个调查需要10分钟来完成。你的答案会被保密，并是匿名的。
+        csp5-pilot:
+          stages:
+            new stage:
+              name: 新的阶段
+            Lists Explore:
+              name: 列表探索
+            Lists Investigate:
+              name: 列表调查
+          title: '单元 5: 列表、循环和遍历'

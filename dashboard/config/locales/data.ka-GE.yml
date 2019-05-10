@@ -726,6 +726,7 @@ ka:
         c_and_c_digital_sharing: ციფრული გაზიარება
         csd_pair_programming: პროგრამირება წყვილებში
         csd_applab_parameters: ფუნქციები პარამეტრებით
+        csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
     callout:
       text:
         drag_blocks: გადმოიტანეთ ბლოკი "მოძრაობა" სხვა ბლოკის ქვემოთ

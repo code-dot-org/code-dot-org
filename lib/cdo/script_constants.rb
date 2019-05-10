@@ -114,6 +114,7 @@ module ScriptConstants
       CSD4_2018_NAME = 'csd4-2018'.freeze,
       CSD5_2018_NAME = 'csd5-2018'.freeze,
       CSD6_2018_NAME = 'csd6-2018'.freeze,
+      CSD_POST_SURVEY_2018_NAME = 'csd-post-survey-2018'.freeze,
     ],
     csd: [
       CSD1_NAME = 'csd1-2017'.freeze,
