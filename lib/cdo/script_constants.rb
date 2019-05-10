@@ -133,6 +133,7 @@ module ScriptConstants
       CSP5_2018_NAME = 'csp5-2018'.freeze,
       CSP_CREATE_2018_NAME = 'csp-create-2018'.freeze,
       CSP_POSTAP_2018_NAME = 'csppostap-2018'.freeze,
+      CSP_POST_SURVEY_2018_NAME = 'csp-post-survey-2018'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,
