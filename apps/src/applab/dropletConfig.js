@@ -864,6 +864,12 @@ export var blocks = [
     type: 'value'
   },
   {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
     func: 'declareAssign_list_abd',
     block: 'var list = ["a", "b", "d"];',
     category: 'Variables',
