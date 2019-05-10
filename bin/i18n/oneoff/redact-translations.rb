@@ -5,10 +5,6 @@
 
 require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
-require 'fileutils'
-require 'json'
-require 'yaml'
-require 'tempfile'
 
 require_relative '../i18n_script_utils'
 
