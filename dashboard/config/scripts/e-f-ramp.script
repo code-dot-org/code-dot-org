@@ -27,7 +27,7 @@ level 'courseC_maze_debugging4'
 level 'courseC_maze_debugging5'
 level 'courseC_maze_debugging6'
 level 'courseC_maze_debugging7', challenge: true
-assessment 'courseC_maze_debugging8_predict1'
+level 'courseC_maze_debugging8_predict1', assessment: true
 level 'courseC_maze_debugging9'
 
 stage 'Programming in Artist', flex_category: 'csf_e_1'
@@ -40,7 +40,7 @@ level 'courseC_artist_prog5'
 level 'courseC_artist_prog6'
 level 'courseC_artist_prog7', challenge: true
 level 'courseC_artist_prog8'
-assessment 'courseC_artist_prog6_predict1'
+level 'courseC_artist_prog6_predict1', assessment: true
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2'
 
@@ -73,7 +73,7 @@ level 'courseD_maze_nestedLoops6'
 level 'courseD_bee_nestedLoops7', challenge: true
 level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
-assessment 'courseD_bee_nestedLoops9_predict2'
+level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
 stage 'Nested Loops with Frozen', flex_category: 'csf_e_1'
 level 'courseD_artist_project1'
@@ -161,7 +161,7 @@ level 'courseE_bee_functions7'
 level 'courseE_bee_functions8', challenge: true
 level 'courseE_bee_functions9'
 level 'courseE_bee_functions10'
-assessment 'courseE_bee_functions11_predict1'
+level 'courseE_bee_functions11_predict1', assessment: true
 bonus 'courseE_bee_functions_challenge1'
 bonus 'courseE_bee_functions_challenge2'
 
@@ -178,7 +178,7 @@ level 'courseE_artist_functions7'
 level 'courseE_artist_functions8', challenge: true
 level 'courseE_artist_functions9'
 level 'courseE_artist_functions10'
-assessment 'courseE_artist_functions_predict2'
+level 'courseE_artist_functions_predict2', assessment: true
 bonus 'courseE_artist_functions_challenge1'
 bonus 'courseE_artist_functions_challenge2'
 
@@ -196,7 +196,7 @@ level 'courseE_farmer_functions7b'
 level 'courseE_farmer_functions8b', challenge: true
 level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
-assessment 'courseE_farmer_functions11_predict'
+level 'courseE_farmer_functions11_predict', assessment: true
 
 stage 'Determine the Concept', flex_category: 'csf_e_2'
 level 'courseE_bee_concept1'
@@ -222,21 +222,21 @@ level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters'
-named_level 'Geometric Sun'
-named_level 'Robot Doodle'
-named_level 'Alien Defender'
-named_level 'Find the Wizard'
+level 'courseF_video_csMatters', named: true
+level 'Geometric Sun', named: true
+level 'Robot Doodle', named: true
+level 'Alien Defender', named: true
+level 'Find the Wizard', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project'
+level 'Begin planning your project', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course E: Play Lab Project'
-named_level 'Course E: Artist Project'
+level 'Course E: Play Lab Project', named: true
+level 'Course E: Artist Project', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation'
+level 'Prepare for your presentation', named: true
 
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet'

@@ -521,6 +521,17 @@ export var blocks = [
   },
 
   {
+    func: 'getList',
+    parent: api,
+    category: 'Data',
+    params: ['tableName', 'columnName'],
+    dropdown: {
+      0: () => getAssetDropdown('dataset'),
+      1: ['true', 'false'] // () => populateColumns()
+    },
+    nativeIsAsync: true
+  },
+  {
     func: 'startWebRequest',
     parent: api,
     category: 'Data',

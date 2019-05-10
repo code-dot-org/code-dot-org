@@ -3,49 +3,49 @@ login_required 'true'
 peer_reviews_to_complete 5
 
 stage 'Introduction to Teachercon', flex_category: 'required'
-named_level 'Welcome to TeacherCon!'
-named_level 'TeacherCon Agenda'
-named_level 'TeacherCon Self-Assessment'
+level 'Welcome to TeacherCon!', named: true
+level 'TeacherCon Agenda', named: true
+level 'TeacherCon Self-Assessment', named: true
 
 stage 'Lesson 1,4', flex_category: 'content'
-named_level 'U1L4 Lesson Overview'
+level 'U1L4 Lesson Overview', named: true
 
 stage 'Lesson 1,6', flex_category: 'content'
-named_level 'U1L6 Lesson Overview'
+level 'U1L6 Lesson Overview', named: true
 
 stage 'Lesson 1,9', flex_category: 'content'
-named_level 'U1L9 Lesson Overview'
+level 'U1L9 Lesson Overview', named: true
 
 stage 'Lesson 1,10', flex_category: 'content'
-named_level 'U1L10 Lesson Overview'
+level 'U1L10 Lesson Overview', named: true
 
 stage 'Lesson 1,11', flex_category: 'content'
-named_level 'U1L11 Lesson Overview'
+level 'U1L11 Lesson Overview', named: true
 
 stage 'Lesson 2,2', flex_category: 'content'
-named_level 'U2L2 Lesson Overview'
+level 'U2L2 Lesson Overview', named: true
 
 stage 'Lesson 2,3', flex_category: 'content'
-named_level 'U2L3 Lesson Overview'
+level 'U2L3 Lesson Overview', named: true
 
 stage 'Lesson 2,10', flex_category: 'content'
-named_level 'U2L10 Lesson Overview'
+level 'U2L10 Lesson Overview', named: true
 
 stage 'Group Work and Peer Learning', flex_category: 'practice'
-named_level 'Exploring Practices and Strategies during TeacherCon'
-named_level 'Overview: Group Work and Peer Learning'
-named_level 'Collaborative Learning and Group Work: description and strategies'
-named_level 'The Official Peer Instruction Blog'
-named_level 'the Journal of Peer Learning '
-named_level 'Wednesday Report: Balancing Teachers and Tools in Unit 1'
-named_level 'Peer Review Level 1 - Tuesday Report'
-named_level 'Peer Review Level 2 - Wednesday Report'
+level 'Exploring Practices and Strategies during TeacherCon', named: true
+level 'Overview: Group Work and Peer Learning', named: true
+level 'Collaborative Learning and Group Work: description and strategies', named: true
+level 'The Official Peer Instruction Blog', named: true
+level 'the Journal of Peer Learning ', named: true
+level 'Wednesday Report: Balancing Teachers and Tools in Unit 1', named: true
+level 'Peer Review Level 1 - Tuesday Report', named: true
+level 'Peer Review Level 2 - Wednesday Report', named: true
 
 stage 'Balancing Teachers and Tools', flex_category: 'practice'
-named_level 'Exploring Practices and Strategies during TeacherCon'
-named_level  'Overview: Balancing Teachers and Tools'
-named_level 'Peer Review Level 1 - Tuesday Report'
-named_level 'Peer Review Level 2 - Wednesday Report'
+level 'Exploring Practices and Strategies during TeacherCon', named: true
+level  'Overview: Balancing Teachers and Tools', named: true
+level 'Peer Review Level 1 - Tuesday Report', named: true
+level 'Peer Review Level 2 - Wednesday Report', named: true
 
 stage 'Test stage with bubbles'
 level 'cspu5_assess1_eventprograms'

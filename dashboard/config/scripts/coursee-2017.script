@@ -283,21 +283,21 @@ level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters'
-named_level 'Geometric Sun'
-named_level 'Robot Doodle'
-named_level 'Alien Defender'
-named_level 'Find the Wizard'
+level 'courseF_video_csMatters', named: true
+level 'Geometric Sun', named: true
+level 'Robot Doodle', named: true
+level 'Alien Defender', named: true
+level 'Find the Wizard', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project'
+level 'Begin planning your project', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course E: Play Lab Project'
-named_level 'Course E: Artist Project'
+level 'Course E: Play Lab Project', named: true
+level 'Course E: Artist Project', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation'
+level 'Prepare for your presentation', named: true
 
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet'

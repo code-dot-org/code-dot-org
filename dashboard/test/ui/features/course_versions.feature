@@ -7,7 +7,7 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is not visible
+  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
   # students must be assigned or have progress to view older script versions
@@ -15,7 +15,7 @@ Scenario: Version warning announcement on course and unit overview pages
   Given I am assigned to script "csp3-2017"
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
 
   When I am on "http://studio.code.org/s/csp2-2018"
@@ -32,7 +32,7 @@ Scenario: Version warning announcement on course and unit overview pages
 
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # make sure we are showing the warning specific to course overview pages
   Then element ".announcement-notification:contains(using the dropdown below)" is visible
@@ -57,7 +57,7 @@ Scenario: Version warning announcement on course and unit overview pages
   # The course overview warning banner also stays closed
   When I am on "http://studio.code.org/courses/csp-2018"
   And I wait to see ".uitest-CourseScript"
-  And element "#version-selector" is visible
+  And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" does not exist
 
 @as_student

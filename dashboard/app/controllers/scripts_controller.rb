@@ -137,6 +137,7 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :project_sharing,
       :login_required,
       :hideable_stages,
       :curriculum_path,

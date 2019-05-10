@@ -1,0 +1,9 @@
+name 'Internet-Unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# The Internet
+
+Students send messages representing various Internet transmission methods using pieces of paper.
+MARKDOWN

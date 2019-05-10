@@ -1,0 +1,9 @@
+name 'HappyMaps-Unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Happy Maps
+
+Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+MARKDOWN

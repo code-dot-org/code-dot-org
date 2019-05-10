@@ -20,6 +20,10 @@ import {
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 
 const styles = {
   main: {
@@ -70,14 +74,7 @@ export default class CourseOverview extends Component {
     scripts: PropTypes.array.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    versions: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        version_year: PropTypes.string.isRequired,
-        version_title: PropTypes.string.isRequired,
-        can_view_version: PropTypes.bool.isRequired
-      })
-    ).isRequired,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
     redirectToCourseUrl: PropTypes.string,
@@ -91,12 +88,12 @@ export default class CourseOverview extends Component {
     this.state = {showRedirectDialog};
   }
 
-  onChangeVersion = event => {
-    const courseName = event.target.value;
-    if (courseName !== this.props.name) {
+  onChangeVersion = versionYear => {
+    const course = this.props.versions.find(v => v.year === versionYear);
+    if (course && course.name.length > 0 && course.name !== this.props.name) {
       const sectionId = queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`/courses/${courseName}${queryString}`);
+      utils.navigateToHref(`/courses/${course.name}${queryString}`);
     }
   };
 
@@ -165,8 +162,14 @@ export default class CourseOverview extends Component {
       hasVerifiedResources;
 
     // Only display viewable versions in course version dropdown.
-    const filteredVersions = versions.filter(
-      version => version.can_view_version
+    const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = filteredVersions.find(
+      v => v.name === this.props.name
+    );
+    setRecommendedAndSelectedVersions(
+      filteredVersions,
+      null, // Ignore locale for courses.
+      selectedVersion && selectedVersion.year
     );
 
     return (
@@ -201,24 +204,11 @@ export default class CourseOverview extends Component {
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {filteredVersions.length > 1 && (
-            <span style={styles.versionWrapper}>
-              <span style={styles.versionLabel}>
-                {i18n.courseOverviewVersionLabel()}
-              </span>
-              &nbsp;
-              <select
-                onChange={this.onChangeVersion}
-                value={name}
-                style={styles.versionDropdown}
-                id="version-selector"
-              >
-                {filteredVersions.map(version => (
-                  <option key={version.name} value={version.name}>
-                    {version.version_title}
-                  </option>
-                ))}
-              </select>
-            </span>
+            <AssignmentVersionSelector
+              onChangeVersion={this.onChangeVersion}
+              versions={filteredVersions}
+              rightJustifiedPopupMenu={true}
+            />
           )}
         </div>
         <div style={styles.description}>

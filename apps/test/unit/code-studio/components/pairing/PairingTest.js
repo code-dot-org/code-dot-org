@@ -1,7 +1,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 

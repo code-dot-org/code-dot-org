@@ -1,2 +1,3 @@
 %script{src: minifiable_asset_path('js/jotformLoader.js')}
-= embed_jotform @form_id, @form_params
+= jotform_iframe @form_id, @form_params
+%script{src: minifiable_asset_path('js/jotformEmbed.js'), id: "jotform-embed", data: {formId: @form_id}}

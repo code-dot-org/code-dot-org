@@ -250,8 +250,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    const assessmentIcon = wrapper.find('FontAwesome').at(1);
-    assert.equal(assessmentIcon.props().icon, 'check-circle');
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
   });
 
   it('does not show assessment icon on bubble on assessment level, in experiment, if smallBubble is true', () => {
@@ -267,7 +266,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(0);
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
   it('does not show assessment icon on bubble on assessment level, in experiment, if hideAssessmentIcon is true', () => {
@@ -283,7 +282,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(0);
+    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
   it('renders a progress pill for unplugged lessons', () => {

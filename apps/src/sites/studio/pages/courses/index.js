@@ -20,8 +20,6 @@ function showCourses() {
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
-  const showInitialTips = !coursesData.initialtipsdismissed;
-  const userId = coursesData.userid;
   const modernElementaryCoursesAvailable =
     coursesData.modernelementarycoursesavailable;
 
@@ -34,8 +32,6 @@ function showCourses() {
         studentsCount={studentsCount}
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
-        showInitialTips={showInitialTips}
-        userId={userId}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
       />
     </Provider>,

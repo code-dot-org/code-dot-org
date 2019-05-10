@@ -1073,6 +1073,7 @@ en:
       Underground Iron_2019_callout:
         craft_what_is_iron: Mine this iron!
       Virtual Pet 2_2019_callout: {}
+      Virtual Pet Template_2019_callout: {}
       WebLab PS test - 1-12_callout:
         version_history_button: Check out version history
       WhileAdventure_callout:
@@ -1102,11 +1103,17 @@ en:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
       behaviors 1_callout:
         behaviors_edit: Click here to see how this behavior works.
+      behaviors 3a_callout:
+        behavior_callout: Why isn't this behavior working for the middle star?
+        star2_callout: Remove this costume block and use the "this sprite" block instead.
+        this_sprite_callout: Testing
       behaviors 4_callout:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 4a_callout:
         behaviors_edit: Click here to see how this behavior works.
       behaviors 5_callout:
+        behaviors_edit: Add code to this behavior.
+      behaviors free play_callout:
         behaviors_edit: Add code to this behavior.
       comment_intro_maze_2018_callout: {}
       comment_intro_maze_2018_2019_callout: {}
@@ -1186,8 +1193,7 @@ en:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseA_forVideoTest_artist_callout: {}
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseA_maze_ramp2_2018_callout: {}
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp2a_2018_callout:
@@ -1195,7 +1201,8 @@ en:
       courseA_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
         stone_block_2: Grey blocks are made of stone and cannot be thrown away.
-      courseA_maze_ramp3a_2018_callout: {}
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseA_maze_ramp3a_2019_callout: {}
       courseA_maze_ramp3b_2018_callout: {}
       courseA_maze_ramp3b_2019_callout: {}
@@ -1253,7 +1260,8 @@ en:
       courseB_Scrat_ramp2_2018_callout: {}
       courseB_Scrat_ramp2_2019_callout: {}
       courseB_Scrat_ramp3a_2018_callout: {}
-      courseB_Scrat_ramp3a_2019_callout: {}
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseB_Scrat_ramp3b_2018_callout: {}
       courseB_Scrat_ramp3b_2019_callout: {}
       courseB_Scrat_ramp4a_2018_callout: {}
