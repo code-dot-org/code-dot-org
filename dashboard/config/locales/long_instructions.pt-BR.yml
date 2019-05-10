@@ -8909,6 +8909,280 @@ pt-BR:
         -   Certifique-se de chamar `drawSprites` no laço de desenho
         -   Execute o programa
         -   Você consegue ver a diferença?
+      CSD U3 - complex - compound conditionals: |-
+        # Solução Possível #2 - Condicionais Compostas
+
+        Uma outra forma que você pode ter descrito o problema do desafio é:
+
+            Se a seta para cima foi pressionada E a figura não desapareceu do topo da tela, mova para cima.
+
+        Esta estrutura em que duas perguntas são feitas ao mesmo tempo são implementadas através de uma **condicional composta**. Condicionais compostas usam os operadores booleanos `E` e `OU` (AND e OR, em inglês) para fazer várias perguntas de uma só vez. `E` somente retorna verdadeiro se _ambas_ as perguntas que forem feitas são verdadeiras, enquanto que `OU` irá retornar verdadeiro se qualquer uma das perguntas for verdadeira. Em JavaScript (e muitas outras linguagens) `E` é representado por dois símbolos e-comerciais (`&&`) enquanto que `OU` é representado por duas barras verticais (`||`) - seus blocos se parecem assim:
+
+        ![](https://images.code.org/c7ab68cb4091472f05d7c862a52730c6-image-1466785066210.48.02.png)
+
+        O pseudocódigo  para esta solução poderia ser escrito assim:
+
+            Se a seta para cima for pressionada E sprite.y > 0\t// As duas perguntas
+            \tmova para cima\t\t\t\t\t\t\t\t\t // Somente executa se ambas as questões forem verdadeiras
+
+        # Faça Isto
+
+        Aqui está o mesmo código do desafio, mas desta vez a seta para cima faz uso de uma condicional composta.
+
+        -   Use o mesmo padrão de condicionais compostas para as demais três teclas de setas.
+      CSD U3 - complex - key up and down: |-
+        # Respondendo a um Clique Único
+
+        Anteriormente aprendemos que `keyWebDown` e `keyWentUp` podem ser usados para responder a uma tecla pressionada uma única vez. Os blocos `mouseWentUp` e `mouseWentDown` permitem a você fazer isto com o mouse!
+
+        # Faça Isto
+
+        Vamos criar um jogo simples, que conta quantas vezes você clicou. Nós já providenciamos uma variável `clicks` que você pode usar para controlar o número de vezes que o usuário clicou.
+
+        -   Acrescente uma condicional que verifica se o mouse foi clicado.
+        -   No interior de sua condicional, incremente o valor da variável `clicks`.
+
+        _Desafio: Você pode adicionar uma figura que responde ao `mouseWentDown` também? Insira uma imagem de sua escolha e incremente o tamanho da imagem a cada vez que o mouse é clicado._
+      CSD U3 - complex - key up and down_2018: |-
+        # Respondendo a um Clique Único
+
+        Anteriormente aprendemos que `keyWebDown` e `keyWentUp` podem ser usados para responder a uma tecla pressionada uma única vez. Os blocos `mouseWentUp` e `mouseWentDown` permitem a você fazer isto com o mouse!
+
+        # Faça Isto
+
+        Vamos criar um jogo simples, que conta quantas vezes você clicou. Nós já providenciamos uma variável `clicks` que você pode usar para controlar o número de vezes que o usuário clicou.
+
+        -   Acrescente uma condicional que verifica se o mouse foi clicado.
+        -   No interior de sua condicional, incremente o valor da variável `clicks`.
+
+        _Desafio: Você pode adicionar uma figura que responde ao `mouseWentDown` também? Insira uma imagem de sua escolha e incremente o tamanho da imagem a cada vez que o mouse é clicado._
+      CSD U3 - complex - key up and down_2019: |-
+        # Respondendo a um Clique Único
+
+        Anteriormente aprendemos que `keyWebDown` e `keyWentUp` podem ser usados para responder a uma tecla pressionada uma única vez. Os blocos `mouseWentUp` e `mouseWentDown` permitem a você fazer isto com o mouse!
+
+        # Faça Isto
+
+        Vamos criar um jogo simples, que conta quantas vezes você clicou. Nós já providenciamos uma variável `clicks` que você pode usar para controlar o número de vezes que o usuário clicou.
+
+        -   Acrescente uma condicional que verifica se o mouse foi clicado.
+        -   No interior de sua condicional, incremente o valor da variável `clicks`.
+
+        _Desafio: Você pode adicionar uma figura que responde ao `mouseWentDown` também? Insira uma imagem de sua escolha e incremente o tamanho da imagem a cada vez que o mouse é clicado._
+      CSD U3 - complex - mouse down: |-
+        # Cliques do Mouse
+
+        Teclas pressionadas são ótimas, mas às vezes você quer que os usuários interajam através de cliques do mouse. Existe um novo bloco denominado `mouseDown` que, de maneira semelhante ao `keyDown`, verifica se algum dos botões direito ou esquerdo do mouse está sendo pressionado. Se você está usando um computador com mouse que possui somente um botão, você vai querer usar sempre `mouseDown("left")`.
+
+        # Faça Isto
+
+        Aqui está um programa que deixa cair um balão na tela - você irá programar o botão do mouse para fazer com que o balão suba novamente, enquanto o botão estiver pressionado.
+
+        -   Acrescente uma declaração "if else" que verifica por `mouseDown`.
+        -   No interior da condicional, mova o balão para cima em um pixel, se o mouse estiver pressionado. Caso contrário, mova o balão para baixo.
+
+        _Dica: Você vai precisar mover o código que faz o balão cair para isto funcionar - você somente quer rodá-lo se `mouseDown` vale `false`_
+
+        _Desafio: Você consegue fazer o balão se deslocar aleatoriamente para a direita e para a esquerda, à medida em que ele sobe e desce?_
+      CSD U3 - complex - mouse down_2018: |-
+        # Cliques do Mouse
+
+        Teclas pressionadas são ótimas, mas às vezes você quer que os usuários interajam através de cliques do mouse. Existe um novo bloco denominado `mouseDown` que, de maneira semelhante ao `keyDown`, verifica se algum dos botões direito ou esquerdo do mouse está sendo pressionado. Se você está usando um computador com mouse que possui somente um botão, você vai querer usar sempre `mouseDown("left")`.
+
+        # Faça Isto
+
+        Aqui está um programa que deixa cair um balão na tela - você irá programar o botão do mouse para fazer com que o balão suba novamente, enquanto o botão estiver pressionado.
+
+        -   Acrescente uma declaração "if else" que verifica por `mouseDown`.
+        -   No interior da condicional, mova o balão para cima em um pixel, se o mouse estiver pressionado. Caso contrário, mova o balão para baixo.
+
+        _Dica: Você vai precisar mover o código que faz o balão cair para isto funcionar - você somente quer rodá-lo se `mouseDown` vale `false`_
+
+        _Desafio: Você consegue fazer o balão se deslocar aleatoriamente para a direita e para a esquerda, à medida em que ele sobe e desce?_
+      CSD U3 - complex - mouse down_2019: |-
+        # Cliques do Mouse
+
+        Teclas pressionadas são ótimas, mas às vezes você quer que os usuários interajam através de cliques do mouse. Existe um novo bloco denominado `mouseDown` que, de maneira semelhante ao `keyDown`, verifica se algum dos botões direito ou esquerdo do mouse está sendo pressionado. Se você está usando um computador com mouse que possui somente um botão, você vai querer usar sempre `mouseDown("left")`.
+
+        # Faça Isto
+
+        Aqui está um programa que deixa cair um balão na tela - você irá programar o botão do mouse para fazer com que o balão suba novamente, enquanto o botão estiver pressionado.
+
+        -   Acrescente uma declaração "if else" que verifica por `mouseDown`.
+        -   No interior da condicional, mova o balão para cima em um pixel, se o mouse estiver pressionado. Caso contrário, mova o balão para baixo.
+
+        _Dica: Você vai precisar mover o código que faz o balão cair para isto funcionar - você somente quer rodá-lo se `mouseDown` vale `false`_
+
+        _Desafio: Você consegue fazer o balão se deslocar aleatoriamente para a direita e para a esquerda, à medida em que ele sobe e desce?_
+      CSD U3 - complex - mouse move: |-
+        # mouseDidMove
+
+        Nós também podemos usar expressões booleanas para verificar se o mouse foi movimentado ou não. O bloco `mouseDidMove` irá retornar `false` se o mouse estiver parado, mas `true`se o mouse estava se movimentando.
+
+        # Faça Isto
+
+        Na forma como está, este programa somente mostra uma figura de um saleiro. Você precisará usar `mouseDidMove` para que você possa "chacoalhar"  o sal movendo o mouse para frente e para trás.
+
+        -   Acrescente uma condicional que verifica se `mouseDidMove`.
+        -   Se a condicional for verdadeira, rotacione a figura do saleiro de forma aleatória para a direita ou para a esquerda.
+
+        _Desafio: Você consegue controlar o número de vezes que o `mouseDidMove` chacoalha o sal, e depois rotacioná-lo para a posição correta após 100 chacoalhadas?_
+      CSD U3 - complex - mouse move_2018: |-
+        # mouseDidMove
+
+        Nós também podemos usar expressões booleanas para verificar se o mouse foi movimentado ou não. O bloco `mouseDidMove` irá retornar `false` se o mouse estiver parado, mas `true`se o mouse estava se movimentando.
+
+        # Faça Isto
+
+        Na forma como está, este programa somente mostra uma figura de um saleiro. Você precisará usar `mouseDidMove` para que você possa "chacoalhar"  o sal movendo o mouse para frente e para trás.
+
+        -   Acrescente uma condicional que verifica se `mouseDidMove`.
+        -   Se a condicional for verdadeira, rotacione a figura do saleiro de forma aleatória para a direita ou para a esquerda.
+
+        _Desafio: Você consegue controlar o número de vezes que o `mouseDidMove` chacoalha o sal, e depois rotacioná-lo para a posição correta após 100 chacoalhadas?_
+      CSD U3 - complex - mouse move_2019: |-
+        # mouseDidMove
+
+        Nós também podemos usar expressões booleanas para verificar se o mouse foi movimentado ou não. O bloco `mouseDidMove` irá retornar `false` se o mouse estiver parado, mas `true`se o mouse estava se movimentando.
+
+        # Faça Isto
+
+        Na forma como está, este programa somente mostra uma figura de um saleiro. Você precisará usar `mouseDidMove` para que você possa "chacoalhar"  o sal movendo o mouse para frente e para trás.
+
+        -   Acrescente uma condicional que verifica se `mouseDidMove`.
+        -   Se a condicional for verdadeira, rotacione a figura do saleiro de forma aleatória para a direita ou para a esquerda.
+
+        _Desafio: Você consegue controlar o número de vezes que o `mouseDidMove` chacoalha o sal, e depois rotacioná-lo para a posição correta após 100 chacoalhadas?_
+      CSD U3 - complex - nested conditional: |-
+        # Solução Possível #1 - Condicionais Aninhadas
+
+        A maneira como você descreveu o desafio anterior diz bastante sobre como você poderá resolvê-lo. Por exemplo, você pode ter descrito a  elevação e permanência na tela como:
+
+            Se a seta para cima foi pressionada, então verifique se a figura não saiu do topo da tela, e mova para cima.
+
+        Esta estrutura de primeiro fazer uma pergunta, e depois fazer uma segunda pergunta caso a resposta da primeira seja verdadeira, é implementada usando uma **declaração if aninhada**. Declarações if aninhadas colocam uma declaração no interior da outra. Você pode imaginar isto como fazer uma pergunta, e conforme a resposta, fazer uma outra pergunta antes de tomar uma decisão. Esta frase pode ser descrita em pseudocódigo da seguinte forma:
+
+            Se a seta para cima foi pressionada\t// Primeira Pergunta
+            \tIf my. y > 0\t\t\t\t// Segunda pergunta
+                \tmova para cima\t\t\t\t// Somente executa caso ambas as respostas forem verdadeiro
+
+        # Faça Isto
+
+        Aqui está o mesmo código do desafio, mas com a seta para cima utilizando uma condicional aninhada.
+
+        -   Use o mesmo padrão de condicional aninhada para as outras 3 teclas de setas.
+      CSD U3 - conditionals - arrows and gears: |-
+        # Engrenagens com Condicionais
+
+        Vamos fazer as engrenagens girarem comente quando a tecla de espaços estiver sendo pressionada.
+
+        # Faça Isto
+
+        -   Acrescente uma declaração `if`.
+        -   Use `keyDown` como entrada para a declaração if, para verificar quando a tecla de espaços estiver pressionada.
+        -   Mova o código que faz as engrenagens girarem para o interior do `if`.
+      CSD U3 - conditionals - first conditional 2-2018: |-
+        <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
+
+        # Visibilidade
+
+        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `true` (a figura é visivel) ou `false` (a figura **não** é visível). Por padrão, o valor atribuído a visible é `true`.
+
+        # Faça Isto
+
+        Faça o balão estourar quanto ele encosta na borda da área de jogo!
+
+        -   Acrescente uma condicional que verifica quando o balão atinge a borda.
+        -   Use um visualizador em `balloon.scale` para te ajudar com isso.
+        -   Crie uma figura de estouro que mostra um "pop" visual, na aba de animação.
+        -   Use a propriedade `visible` para manter a figura de estouro oculta, no início.
+        -   Dentro do `if` adicione duas declarações.
+        -   Uma que define a propriedade `visible` para esconder a figura do balão.
+        -   Uma que define a propriedade `visible` para mostrar a figura do estouro.
+      CSD U3 - conditionals - first conditional 2_2018: |-
+        <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
+
+        # Visibilidade
+
+        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `true` (a figura é visivel) ou `false` (a figura **não** é visível). Por padrão, o valor atribuído a visible é `true`.
+
+        # Faça Isto
+
+        Faça o balão estourar quanto ele encosta na borda da área de jogo!
+
+        -   Acrescente uma condicional que verifica quando o balão atinge a borda.
+        -   Use um visualizador em `balloon.scale` para te ajudar com isso.
+        -   Crie uma figura de estouro que mostra um "pop" visual, na aba de animação.
+        -   Use a propriedade `visible` para manter a figura de estouro oculta, no início.
+        -   Dentro do `if` adicione duas declarações.
+        -   Uma que define a propriedade `visible` para esconder a figura do balão.
+        -   Uma que define a propriedade `visible` para mostrar a figura do estouro.
+      CSD U3 - conditionals - first conditional 2_2018_2019: |-
+        <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
+
+        # Visibilidade
+
+        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `true` (a figura é visivel) ou `false` (a figura **não** é visível). Por padrão, o valor atribuído a visible é `true`.
+
+        # Faça Isto
+
+        Faça o balão estourar quanto ele encosta na borda da área de jogo!
+
+        -   Acrescente uma condicional que verifica quando o balão atinge a borda.
+        -   Use um visualizador em `balloon.scale` para te ajudar com isso.
+        -   Crie uma figura de estouro que mostra um "pop" visual, na aba de animação.
+        -   Use a propriedade `visible` para manter a figura de estouro oculta, no início.
+        -   Dentro do `if` adicione duas declarações.
+        -   Uma que define a propriedade `visible` para esconder a figura do balão.
+        -   Uma que define a propriedade `visible` para mostrar a figura do estouro.
+      CSD U3 - conditionals - transition 2: |-
+        # Mais prática com Booleanos
+
+        Vamos usar mais uma expressão booleana para verificar a condição de um sprite.
+
+        # Faça isso
+
+        Há um sprite balão crescente criado para você. Você pode criar uma expressão para verificar quando o balão atinge a borda da área do jogo?
+
+        -   Adicione uma instrução `console.log`.
+        -   Adicione uma expressão booleana dentro do `console.log` que verifica se o balão atingiu a borda da área do jogo.
+        -   Dica: use a escala do balão. Você pode ter que fazer algumas suposições e verificar os testes para encontrar a escala correta.
+      CSD U3 - conditionals - transition: |-
+        # Booleanos
+
+        Nos últimos níveis, temos comparado valores de sprites para descobrir se algo é verdadeiro ou falso. Vamos começar a colocar isso no contexto de uma animação.
+
+        # Faça isso
+
+        O programa desenha um carro de corrida e uma linha de chegada. Vamos descobrir quando o carro de corrida cruza a linha de chegada. Os sprites foram criados para você.
+
+        -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
+        -   Adicione uma expressão booleana dentro do `console.log` que pergunta" A posição x do carro de corrida é menor que a posição x da linha de chegada? "
+        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por quê?
+      CSD U3 - conditionals - transition_2018: |-
+        # Booleanos
+
+        Nos últimos níveis, temos comparado valores de sprites para descobrir se algo é verdadeiro ou falso. Vamos começar a colocar isso no contexto de uma animação.
+
+        # Faça isso
+
+        O programa desenha um carro de corrida e uma linha de chegada. Vamos descobrir quando o carro de corrida cruza a linha de chegada. Os sprites foram criados para você.
+
+        -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
+        -   Adicione uma expressão booleana dentro do `console.log` que pergunta" A posição x do carro de corrida é menor que a posição x da linha de chegada? "
+        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por quê?
+      CSD U3 - conditionals - transition_2019: |-
+        # Booleanos
+
+        Nos últimos níveis, temos comparado valores de sprites para descobrir se algo é verdadeiro ou falso. Vamos começar a colocar isso no contexto de uma animação.
+
+        # Faça isso
+
+        O programa desenha um carro de corrida e uma linha de chegada. Vamos descobrir quando o carro de corrida cruza a linha de chegada. Os sprites foram criados para você.
+
+        -   Adicione uma instrução `console.log` dentro do loop de desenho. ([Mostre-me onde] [0])
+        -   Adicione uma expressão booleana dentro do `console.log` que pergunta" A posição x do carro de corrida é menor que a posição x da linha de chegada? "
+        -   Veja a saída do programa enquanto o carro se move. Quando a saída muda? Por quê?
       CSD U3 - images - Embed Project: Exemplo do Projeto Final
       CSD U3 - images - animations: |-
         # Animações
@@ -8921,6 +9195,112 @@ pt-BR:
 
         -   Crie um sprite
         -   Adicione a animação.
+      CSD U3 - images - changing scene: |-
+        # Imagens
+
+        Use a guia animações para terminar de fazer todos os três sprites pescarem imagens.
+
+        <img src="https://images.code.org/f947fc6800cd1abda023b08c20a2ee87-image-1477679298953.gif" style="float:right">
+
+        # Faça isso
+
+        Seu objetivo é terminar a cena subaquática para que todos os três sprites sejam peixes, como no exemplo à direita.
+
+        -   Existe um sprite retângulo já criado para você para cada peixe.
+        -   Execute o código para ver como funciona.
+        -   Adicione um comando `definirAnimacao` para mudar a aparência dos dois peixes restantes.
+        -   Corra para ver que o seu retângulo agora é uma imagem!
+      CSD U3 - images - first image: |-
+        # Imagens
+
+        Até agora todos os seus sprites foram retângulos. Não mais! Agora você pode usar fotos para seus sprites.
+
+        Confira a guia de animações clicando no botão <img src="https://images.code.org/9471c62f11f3c6065c0d2da523f2ac89-image-1465515854142.43.49 PM.png" style="width:100px"> acima da área de exibição.
+
+        Existe uma imagem que foi carregada para você!
+
+        Para usar essa imagem, você precisará usar o comando `definirAnimacao`. Você tem que criar o sprite antes de poder definir sua animação.
+
+        # Faça isso
+
+        Existe um sprite retângulo já criado para você. Tudo que você precisa fazer é alterá-lo para uma imagem.
+
+        -   Adicionar uma chamada ao `setAnimation` para definir a animação para a imagem fornecida
+        -   Corra para ver que o seu retângulo agora é uma imagem!
+      CSD U3 - images - fish free play: |-
+        # Peixe Jogue Livre
+
+        Aqui está o peixe nadando em que você tem trabalhado. Continue a melhorar a animação!
+
+        # Faça isso
+
+        -   Adicione outra criatura marinha à cena.
+        -   Faça a criatura do mar se mover.
+        -   Faça um dos peixes seguir o mouse.
+        -   Adicione mais ideias de sua preferência!
+      CSD U3 - images - fish with arrows: |-
+        # Peixe com setas
+
+        Os peixes estão de volta. Você consegue fazer o peixe se mover para a esquerda apenas quando a tecla da seta para a esquerda é pressionada?
+
+        # Faça isso
+
+        -   Adicione uma instrução if para verificar quando a tecla de seta para a esquerda é pressionada.
+        -   Mova as instruções para mover o peixe dentro da instrução if.
+      CSD U3 - images - kite free play: |-
+        # Kite Free Play
+
+        Aqui está o kite voador que você está trabalhando. Continue a melhorar a animação!
+
+        # Faça isso
+
+        -   Adicione pelo menos um outro sprite.
+        -   Faça o sprite se mover.
+        -   Melhore o fundo adicionando nuvens ou outros objetos.
+        -   Adicione mais ideias de sua preferência!
+      CSD U3 - images - kiteFlying: |-
+        # Pipa
+
+        Agora que você tem uma pipa, faça voar.
+
+        Para fazer isso, precisamos mover a pipa e atualizar a posição final da linha que é a string. Você fez coisas semelhantes com variáveis antes, mas agora você estará usando propriedades.
+
+        # Faça isso
+
+        -   Faça a pipa se mover ao redor do canto superior direito da tela aleatoriamente.
+        -   Mova o código da string da pipa para a seção Desenhar Animações, já que ela está se movendo agora!
+        -   Atualize a posição final da linha para que uma extremidade da corda fique no centro da asa.
+      CSD U3 - images - nextFrame: |-
+        # Próximo quadro
+
+        No último nível, a animação que você usou continuamente circulou pela animação e nunca parou. Às vezes queremos controlar quando a animação muda. Quando você quiser criar uma sequência, mas não tê-la em loop, clique no botão na guia anmations **\_ show example \_**. Então, no código, você pode controlar quando você passa para o próximo quadro usando `proximoQuadro`.
+
+        # Faça isso
+
+        Há um sprite já criado para você e 4 imagens carregadas na aba de animações. Faça o sprite mudar de quadro sempre que a barra de espaço for pressionada.
+
+        -   Crie uma condicional para responder à barra de espaço
+        -   Dentro da chamada condicional `proximoQuadro` para mover o sprite para o próximo quadro
+      CSD U3 - images - race images: |-
+        # Carros de corrida
+
+        Você fez um jogo de corrida na última lição. Agora você pode fazer esses retângulos parecerem carros de corrida!
+
+        # Faça isso
+
+        -   Use as imagens do carro de corrida na guia animações para atualizar sua animação de corrida.
+      CSD U3 - images - random movement: |-
+        <img src="https://images.code.org/fccef5d23434917c0a22361cb6e69666-image-1477679738105.gif" style="float:right">
+
+        # Atualizando Peixes
+
+        A mesma coisa que você fez no último nível ajudará seus peixes a parecerem que estão nadando. Atualize sua cena para fazer com que os peixes pareçam nadar em uma linha perfeitamente reta.
+
+        # Faça isso
+
+        Seu objetivo é terminar a cena subaquática para que todos os três sprites sejam peixes, como no exemplo à direita.
+
+        -   Use uma pequena rotação aleatória para **fazer o seu peixe mexer**.
       CSD U3 - images - review: |-
         Revisão de Sprites
 
@@ -8943,6 +9323,16 @@ pt-BR:
         # Faça isso
 
         -   Redimensione seu kite usando `scale` para melhor encaixar na imagem.
+      CSD U3 - images - switch the picture: |-
+        # Troca de Imagens
+
+        Você não precisa manter a mesma imagem o tempo todo. Na verdade, como sua imagem estava se movendo pela tela, seria legal ter a direção correta à medida que ela se move.
+
+        # Faça isso
+
+        Seu trabalho foi copiado aqui também
+
+        -   Adicionar uma chamada ao `definirAnimacao` dentro de cada instrução se para a imagem correta
       CSD U3 - images - visible: |-
         # Visível
 
@@ -9189,6 +9579,36 @@ pt-BR:
         -   **Leia o programa** e faça uma previsão de como será sua saída.
         -   **Rode o programa** para verificar sua previsão.
         -   **Discuta com seu vizinho**. Você consegue explicar o que observou?
+      CSD U3 Input Gears: |-
+        # Engrenagens com Condicionais
+
+        Vamos fazer as engrenagens girarem comente quando a tecla de espaços estiver sendo pressionada.
+
+        # Faça Isto
+
+        -   Acrescente uma declaração `if`.
+        -   Use `keyDown` como entrada para a declaração if, para verificar quando a tecla de espaços estiver pressionada.
+        -   Mova o código que faz as engrenagens girarem para o interior do `if`.
+      CSD U3 Input Gears_2018: |-
+        # Engrenagens com Condicionais
+
+        Vamos fazer as engrenagens girarem comente quando a tecla de espaços estiver sendo pressionada.
+
+        # Faça Isto
+
+        -   Acrescente uma declaração `if`.
+        -   Use `keyDown` como entrada para a declaração if, para verificar quando a tecla de espaços estiver pressionada.
+        -   Mova o código que faz as engrenagens girarem para o interior do `if`.
+      CSD U3 Input Gears_2019: |-
+        # Engrenagens com Condicionais
+
+        Vamos fazer as engrenagens girarem comente quando a tecla de espaços estiver sendo pressionada.
+
+        # Faça Isto
+
+        -   Acrescente uma declaração `if`.
+        -   Use `keyDown` como entrada para a declaração if, para verificar quando a tecla de espaços estiver pressionada.
+        -   Mova o código que faz as engrenagens girarem para o interior do `if`.
       CSD U3 Random random ellipse-2018: |-
         # Números aleatórios
 
@@ -9400,9 +9820,6 @@ pt-BR:
         # Faça isso
 
         Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor\_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
-      CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       'CSD: Boolean Expressions': "# Video de Expressões Booleanas"
       CSDU2 - First-Weblab: |-
         # Adicionando conteúdo
@@ -9564,12 +9981,12 @@ pt-BR:
         Esta é uma função de Adição que
         usa dois números e retorna sua soma. Use este bloco Adição para somar 3
 
-        -   6\.
+        -   6.
       Calc Circles of Eval .4: |-
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
 
-        -   1\)
+        -   1)
       Calc Circles of Eval 2: |-
         Use um bloco de multiplicação para completar
         esse código.
@@ -9777,7 +10194,59 @@ pt-BR:
         muito justa! Altere a variável "velocidade\_cão" para garantir que você possa coletar mais
         bandeiras do que o gato. O primeiro a coletar 10 bandeiras vence!
       Craft Aquatic - allthethings: Chegue ao Farol do Mar.
+      Dance Party 2 Validated: A alien estava orgulhosa de suas habilidades de dança
+        em Marte, mas agora ela só pode se mover de um lado para o outro. Você pode
+        mudar o comportamento dentro do bloco `comecar` para fazê-la começar a girar?
+      Dance Party 3_2019: "Crie um novo sprite que se pareça com um alien cor-de-rosa.
+        \nFaça ele realizar um movimento de dança diferente quando ele é clicado."
+      Dance Party 3_simple: |-
+        Crie um novo sprite chamado `alien2`.
+
+        Quando o novo sprite é clicado, ele deve fazer alguma coisa.
+      Dance Party 4 Validated: |-
+        Crie um terceiro sprite chamado `alien3`.
+
+        Você pode definir todos os seus alienígenas para ficar em linha reta? É uma equipe de dança alienígena!
+      Dance Party 4: |-
+        Crie um terceiro sprite chamado `alien3`.
+
+        Você pode definir todos os seus alienígenas para ficar em linha reta? É uma equipe de dança alienígena!
+      Dance Party 4_2019: |-
+        Forme uma equipe de dança alienígena!
+
+        -   Crie um terceiro sprite que se pareça com um alien amarelo e o faça começar uma nova dança quando clicado.
+        -   Coloque todos os seus alienígenas em uma linha horizontal, assim:
+
+        \[] [0]
+      Dance Party 4_simple: |-
+        Crie um terceiro sprite chamado `alien3`.
+
+        Posicione todos os seus aliens em uma linha reta. É uma festa de dança alienígena!
+      Dance Party 5 - Validated: |-
+        Nós podemos mudar todos os tipos de coisas neste programa quando você clica nos sprites. Vamos mudar suas cores!
+
+        \*\* Adicione um código para mudar a cor de cada alienígena quando for clicado. \*\*
+      Dance Party 5: |-
+        Nós podemos mudar todos os tipos de coisas neste programa quando você clica nos sprites. Vamos mudar suas cores!
+
+        \*\* Adicione um código para mudar a cor de cada alienígena quando for clicado. \*\*
+      Dance Party 5_2019: Nós podemos mudar todos os tipos de coisas neste programa
+        quando você clica nos sprites. Adicione um código para alterar a cor de cada
+        alienígena quando for clicado.
+      Dance Party 5_simple: |-
+        Você pode mudar muitas coisas neste programa.
+
+        Adicione um código para alterar a cor de cada alienígena quando for clicado.
+      Dance Party Predict: "\\*\\* Faça uma previsão: \\*\\* Aqui está um sprite chamado
+        `alien1`!\n\nO que você acha que vai acontecer quando você clicar nele?  "
+      Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está um sprite
+        que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
+        você clicar nele?  "
+      Dance Party Predict_simple: "**O que você acha?**\n\nAqui está um sprite chamado
+        `alien1`!\n\nQuando você clicar nele, o que ele fará?  "
+      Dance Party Template 1_2019: Modelo
       Dance Party Template 2_2019: Modelo
+      Dance_Events_Example_Video: Use eventos para tornar sua festa de dança interativa!
       Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -9865,6 +10334,14 @@ pt-BR:
         da seta para a direita.
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
+      Dance_Party_4: |-
+        \_Esta dança está precisando de brilho! \_
+
+        Procure por um novo bloco novo na sua caixa de ferramentas e use-o para adicionar um efeito de fundo atrás do seu dançarino. Veja os efeitos mudando em sincronia com a música!
+      Dance_Party_8: Cada dançarino tem um conjunto de _propriedades_ que controlam
+        sua aparência. Você pode fazer parecer que um(a) dançarino(a) está em segundo
+        plano diminuindo o seu tamanho. Você pode fazer os dois dançarinos apoio do
+        mesmo tamanho?
       Dance_Party_extras_battle: |-
         # Equipes de dança
 
@@ -9970,6 +10447,10 @@ pt-BR:
         o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.
+      HOC Dance 3_draft: |-
+        \_Esta dança está precisando de brilho! \_
+
+        Procure por um novo bloco novo na sua caixa de ferramentas e use-o para adicionar um efeito de fundo atrás do seu dançarino. Veja os efeitos mudando em sincronia com a música!
       HOC Dance 4_draft: |-
         Use outro bloco novo para fazer o(a) dançarino(a) mudar seus movimentos a cada dois **compassos**!
 
@@ -9978,6 +10459,10 @@ pt-BR:
         _Precisamos de mais dançarinos!_
 
         Crie um(a) dançarino(a) de apoio intitulado 'backup\_dancer1' para dançar com o gato.
+      HOC Dance 6_draft: Cada dançarino tem um conjunto de _propriedades_ que controlam
+        sua aparência. Você pode fazer parecer que um(a) dançarino(a) está em segundo
+        plano diminuindo o seu tamanho. Você pode fazer os dois dançarinos apoio do
+        mesmo tamanho?
       HOC Dance 9_draft: |-
         O bloco <xml><block type="Dancelab_whenKey"></block></xml> permite executar o código quando a seta para cima for selecionada.
 
@@ -10247,6 +10732,15 @@ pt-BR:
       MSM Defining Vars 1: |-
         Escreva um programa que produz um triângulo
         verde sólido de 50 pixels.
+      MSM Defining Vars 2: Se quiséssemos fazer cinquenta triângulos verdes, seria
+        horrível repetir esse bloco de código 50 vezes. Vamos criar uma variável chamada
+        "minha-forma" e colocar o código para um triângulo verde sólido de 50 pixels
+        dentro dela.
+      MSM Defining Vars 3: Pegue sua variável "minha-forma" e use-a com este código
+        fornecido para desenhar dois triângulos verdes idênticos que têm 50 pixels.
+      MSM Defining Vars 4: Edite sua variável "minha-forma" para que ela desenhe estrelas
+        vermelhas sólidas de 75 pixels.
+      Matt Test Level: 0 bits pesam menos do que 1 bit?
       Middle School Hackathon Pt 1: |-
         # MS Hackathon: Desenho Chique
 
@@ -10299,9 +10793,20 @@ pt-BR:
         isso pode mudar!"
       Mike Test Bee Conditionals 2: "**Avaliação:** Colete todo o néctar. \nTenha
         cuidado para não coletar néctar das flores roxas que não o tiverem."
+      Modular Arithmetic: |-
+        # Aritmética Modular
+
+        A operação do módulo (que lhe dá o restante da divisão de dois inteiros) é importante na ciência da computação e acaba sendo útil em muitos contextos, incluindo a criptografia. Na verdade, não é computacionalmente intensivo computar um único módulo em um computador; é tão rápido quanto dividir dois números. As propriedades comutativas do módulo e números com grandes expoentes foram descobertas como os principais ingredientes para a criptografia assimétrica moderna.
+
+        O link abaixo apresenta o conceito de aritmética modular e explica a troca de chaves Diffie-Hellman (descrita na lição 7 usando uma analogia com Alice, Eve e Bob).
+      NEW Course 4 Artist Functions 1: |-
+        Você consegue desenhar um quadrado com
+        100 pixels de comprimento usando um laço?
       NEW Course 4 Artist Functions 10.1: |-
         Use as funções dos desafios
         anteriores para desenhar esse padrão.
+      NEW Course 4 Artist Functions 10: Clique em "editar" para preencher os blocos
+        na definição da função e criar um quadrado de 40 pixels.
       NEW Course 4 Artist Functions 12: |-
         Use a função "desenhe uma fileira de quadrados"
         do último desafio para desenhar esse padrão.
@@ -10469,9 +10974,6 @@ pt-BR:
         # Faça isso:
 
         Desenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial.
-      U4 - Objects - Template Contacts: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      U4 - Objects - Template Contacts_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      U4 - Objects - Template Contacts_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       U4L02 - Objects - Template1: "# Modelo"
       U4L02 - Objects - Template1_2018: "# Modelo"
       U4L02 - Objects - Template1_2019: "# Modelo"
@@ -11934,3 +12436,9 @@ pt-BR:
 
         Desenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial.
       test_sarah: oi
+      timeforcs_demo_sl_4: "Crie um novo sprite que se pareça com um alien cor-de-rosa.
+        \nFaça ele realizar um movimento de dança diferente quando ele é clicado."
+      timeforcs_demo_sl_6: |-
+        Nós podemos mudar todos os tipos de coisas neste programa quando você clica nos sprites. Vamos mudar suas cores!
+
+        \*\* Adicione um código para mudar a cor de cada alienígena quando for clicado. \*\*

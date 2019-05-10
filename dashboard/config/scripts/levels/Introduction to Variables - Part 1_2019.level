@@ -13,7 +13,7 @@
     "name_suffix": "_2019",
     "display_name": "Introduction to Variables",
     "long_instructions": "## Questions to Consider\r\n\r\n* What are variables used to do?\r\n* How do you create a variable and assign it a value?\r\n* What can go into a variable?\r\n",
-    "encrypted_teacher_markdown": "exYSlg2ZgfQhaZ+2cEA4TkH1KQWCART9haTrZq1wpEtlTSXgIlMdl6pHgJhG\nI5NxW+NxUGklY3EJ4Fu/ehpwidqCManS5O3/Fai5aIaX6L5v6ImDDl1rEgeW\nFS3B7iZlxtgrp0RvTRrDlA6z5fWr3tOcEQTTksvkFJjl+02IQWEXpxGcbNCf\neVmeV/sx8gdcp1oiovQoAOQr+EwPZawAeV/yySMhsHVBx4PwkVtqIe54IIuV\n6FFEdvRrUyvwHAHzi+/+YyS6Iyct7YbQpgDFJ4Y7LVWIIOYNtwdk2ufgrukm\n58vETVqhnF1lgF5mlEcec1Z1+o9k7EgVUI0LSWuur7RGH98RSLwnjaQGK1lt\nHw8uFFpEqLw4tquX64uG/vtcaCcQAXnv+HRPwE7FYG6Fyg73e0Lh4OXUKZsy\nsN2kK+r+qMws7PjFPfhOmHEQ+v8vwr0ln1evH3ARcbg2UlW6+2ZfQdn9uaev\npAnIrEcjoYl9qQwrQhfPxn3ahnihR4M/teB9V9IjP5KPhSLwOTHNWCeN0WZf\nOx5PNLtHJpOM+dLgELaDe7JQmPfdHAqzKZwn+QOqvyswC0QKDZ6uNwphBMqF\ndrmxNQBYr61/XjP6uKNfh4h82VnBgakQK8gFQ+8EK5giQ5sVY7EtgfkvQFcp\ndwDWXQoG1R4QOLLw7A+bIjnKRfpeaSISxycbVCKeMAH+lGzb7M251wM1h9rq\nxZ17sA7x8SxL4hN1c2eecDEUMw0=\n"
+    "teacher_markdown": "# Discussion Goals\r\n\r\nStudents should understand that variables hold information and an be accessed using their labels.  With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\r\n\r\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course."
   },
   "published": true,
   "notes": "",

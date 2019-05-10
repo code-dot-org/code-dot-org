@@ -753,6 +753,9 @@ id:
       CSPU5_U3 - Loops - 4_2018: |-
         Gunakan Perintah Debug untuk membuat daftar
          semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
+      CSPU5_U3 - Loops - 4_2018pilot: |-
+        Gunakan Perintah Debug untuk membuat daftar
+         semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
       CSPU5_U3 - Loops - 4_2019: |-
         Gunakan Perintah Debug untuk membuat daftar
          semua nilai yang digulirkan sebelum angka 6. (Klik untuk melihat petunjuk lengkap)
@@ -1141,6 +1144,7 @@ id:
       Crack a Caesar Cipher: instruksi
       Crack a Caesar Cipher_2018: instruksi
       Crack a Caesar Cipher_2019: instruksi
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       Food Fight!: "Kami telah menambahkan satu fungsi terakhir untuk\nAnda.\\\\r\n\\\\r\nGunakan pernyataan \"jika\" untuk memprogram permainan Anda untuk memanggil fungsi \"level_up\"\nhanya bila \"player_score\" menjadi lebih besar dari angka tertentu.\\\\r\n\\\\r\nSebagai\ncontoh: \"player\\_score\"> 6\\\\r\n\\\\r\nMainkan sampai ke level 3\nuntuk pindah ke teka-teki berikutnya. "
       FoodFight: Ini adalah contoh sebuah permainan yang dapat Anda buat di play lab.

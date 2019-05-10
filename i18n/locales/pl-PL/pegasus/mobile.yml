@@ -1393,7 +1393,7 @@
   compatibility_unsupported_browser: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może nie działać właściwie."
   flappy_shortcode: "pofruń"
   header_home: "Strona główna"
-  header_my_dashboard: "Pulpit"
+  header_my_dashboard: "Mój pulpit"
   header_courses: "Kursy"
   header_course_catalog: "Katalog Kursów"
   header_project_gallery: "Galeria Projektów"

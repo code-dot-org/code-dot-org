@@ -49,7 +49,6 @@ class Applab < Blockly
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
-    teacher_markdown
     helper_libraries
   )
 

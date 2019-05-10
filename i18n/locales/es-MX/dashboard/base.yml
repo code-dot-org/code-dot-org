@@ -138,8 +138,8 @@ es-MX:
     additional_information: "Necesitamos más información para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
-    user_type_teacher: "Profesor"
-    user_type_student: "estudiante"
+    user_type_teacher: "Docente"
+    user_type_student: "Estudiante"
     field_is_required: "es obligatorio"
     accept_terms: "Debes estar de acuerdo para crear una cuenta."
     error: "Ocurrió un error."
@@ -157,7 +157,7 @@ es-MX:
     public: 'Pública'
     homeschool: 'Educación en el hogar'
     after_school: 'Después de la escuela'
-    other: 'Otros'
+    other: 'Otro'
     state: 'Estado/provincia'
     district: 'Distrito'
     other_district_not_listed: 'Otro distrito no mencionado'
@@ -223,7 +223,7 @@ es-MX:
     remove: '(quitar la sección)'
     type:
       picture: 'Contraseña con imagen'
-      word: 'Palabra secreta'
+      word: 'Palabras secretas'
       email: 'Correo electrónico'
       google_classroom: 'Aula de Google'
       clever: 'Clever'
@@ -280,6 +280,10 @@ es-MX:
       professional_learning: "Aprendizaje Profesional"
       documentation: "Documentación"
       tutorials: "Tutoriales"
+      app_lab_documentation: "Documentación del Laboratorio de aplicaciones"
+      app_lab_tutorials: "Tutoriales del Laboratorio de aplicaciones"
+      game_lab_documentation: "Documentación del Laboratorio de juegos"
+      game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
       educate_overview: "Descripción del educador"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
@@ -306,10 +310,11 @@ es-MX:
       teach: "Enseñar"
       about: "Acerca de"
     user:
-      classroom: 'Página de inicio del maestro'
+      classroom: 'Página de inicio para docentes'
       district_dashboard: 'Panel del distrito'
       label: 'Hola, %{username}'
       stats: 'Code Studio'
+      my_projects: 'Mis proyectos'
       settings: 'Configuración de la cuenta'
       logout: 'Cerrar sesión'
       signin: 'Iniciar sesión'
@@ -378,7 +383,7 @@ es-MX:
     student_teacher_disassociated: 'Has abandonado la sección %{section_code} con %{teacher_name}.'
     panel:
       answer_viewer: 'Panel de maestro'
-      student: 'estudiante'
+      student: 'Estudiante'
       viewing_solution: 'Ver la solución'
       try_it_yourself: 'Inténtalo tú mismo'
       section: 'Sección'
@@ -514,8 +519,8 @@ es-MX:
     not_listed: 'El término preferido no aparece'
     none: 'Prefiero no contestar'
   user_type:
-    student: 'estudiante'
-    teacher: 'Profesor'
+    student: 'Estudiante'
+    teacher: 'Docente'
   footer:
     thank_you: 'Agradecemos a nuestros <a href="https://code.org/about/donors">donantes</a>, <a href="https://code.org/about/partners">aliados</a>, nuestro <a href="https://code.org/about/team">equipo extendido</a> nuestro elenco de video y nuestros <a href="https://code.org/about/advisors">asesores académicos</a> por su apoyo a la creación de Code Studio.'
     help_from_html: 'Queremos reconocer especialmente el trabajo de los ingenieros de Amazon, Google y Microsoft, que han ayudado a crear estos materiales.'
@@ -627,7 +632,7 @@ es-MX:
       audience: "Desde 13 años"
       cta: "Aprende cómo"
     hoc-encryption:
-      title: "Encriptación Simple"
+      title: "Cifrado simple"
       body: "Los estudiantes aprenderán técnicas para crear y revelar mensajes cifrados."
     weblab:
       title: "Laboratorio web (beta)"
@@ -784,7 +789,7 @@ es-MX:
       asian: "Asiático"
       hawaiian: "Nativo de Hawái o de otra isla del Pacífico"
       american_indian: "Indígena americano/nativo de Alaska"
-      other: "Otros"
+      other: "Otro"
       opt_out: "Prefiero no contestar"
     submit: "Enviar"
     decline: "Cerrar"
@@ -866,7 +871,7 @@ es-MX:
           harassment: 'Amenazas, ciberacoso, acoso'
           offensive: 'Contenido ofensivo'
           infringement: 'Infracción de Derechos de Autor'
-          other: 'Otros'
+          other: 'Otro'
         detail: 'Proporcione tantos detalles como sea posible sobre el contenido que está informando.'
         acknowledge: 'Al enviar esta información, reconoces que se regirá por los términos de la %{link_start_privacy}política de privacidad%{link_end}% y los %{link_start_tos}términos de servicio%{link_end}.'
   peer_review:
@@ -939,7 +944,7 @@ es-MX:
     csp_ap_3: 'Capítulo 3: Create Performance Task de AP'
     csp_postap_1: 'Capítulo 1: Manipulación y visualización de datos'
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
-    csp2_1_2018: 'Unidad 2: Información Digital'
+    csp2_1_2018: 'Unidad 2: Información digital'
     csp3_1_2018: 'Unidad 3: Introducción a la programación'
     csp_variables: 'Variables'
     csp_conditionals: 'Condicionales'
@@ -1122,7 +1127,7 @@ es-MX:
   cookie_banner:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
-    accept: 'De acuerdo'
+    accept: 'Acepto'
   gdpr_dialog:
     heading: '¿Aceptas utilizar un sitio web alojado en los Estados Unidos?'
     message: 'Es posible que los datos de su utilización de este sitio web se envíen y almacenen en Estados Unidos.'

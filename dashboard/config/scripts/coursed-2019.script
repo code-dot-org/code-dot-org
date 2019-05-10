@@ -8,7 +8,7 @@ family_name 'coursed'
 version_year '2019'
 
 stage 'Algorithms: Graph Paper Programming', flex_category: 'csf_sequencing'
-level 'GraphPaperProgramming_2019'
+level 'GraphPaperProgramming-Unplugged'
 
 stage 'Introduction to Online Puzzles', flex_category: 'csf_sequencing'
 level 'courseD_video_ramp1_2019', progression: 'Maze Intro: Programming with Blocks'
@@ -23,7 +23,7 @@ level 'courseD_maze_intro5c_2019', progression: 'Practice'
 level 'courseD_maze_ramp5d_2019', progression: 'Practice'
 
 stage 'Relay Programming', flex_category: 'csf_sequencing'
-level 'RelayProgramming_2018_2019'
+level 'RelayProgramming-Unplugged'
 
 stage 'Debugging in Collector', flex_category: 'csf_sequencing'
 level 'courseD_video_debugging_2019', progression: 'De-bugging with the Step Button'
@@ -113,7 +113,7 @@ bonus 'courseD_harvester_nested_loops_challenge1_2019'
 bonus 'courseD_collector_nested_loops_challenge2_2019'
 
 stage 'Conditionals with Cards', flex_category: 'csf_conditionals'
-level 'Conditionals_2019'
+level 'ConditionalsWithCards-Unplugged'
 
 stage 'Conditionals in Bee', flex_category: 'csf_conditionals'
 level 'courseD_bee_conditionalsVid1_2019', progression: 'Conditionals: If Statements'
@@ -177,7 +177,7 @@ bonus 'courseD_farmer_condLoops_challenge1_2019'
 bonus 'courseD_farmer_condLoops_challenge2_2019'
 
 stage 'Unplugged: Binary', flex_category: 'csf_binary'
-level 'BinaryImages_2019'
+level 'BinaryImages-Unplugged'
 
 stage 'Artist Binary', flex_category: 'csf_binary'
 level 'courseD_external_binary1_2018_2019', progression: 'Practice'
@@ -195,7 +195,7 @@ bonus 'courseD_artist_binary_challenge1_2019'
 bonus 'courseD_artist_binary_challenge2_2019'
 
 stage 'Digital Citizenship', flex_category: 'csf_digcit'
-level 'courseD_unplugged_digitalCitizenship_2019'
+level 'DigitalCitizenship-Unplugged'
 
 stage 'Dance Party', flex_category: 'end_of_course_project'
 level 'CourseD_Dance_Party_01', progression: 'Practice'

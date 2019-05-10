@@ -1611,6 +1611,8 @@ zh-TW:
               name: 複合角色動作
             Conditionals and Keyboard Input:
               name: 條件判斷與鍵盤輸入
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Sprites and Images:
               name: 角色和圖像
             Sprites and Properties:
@@ -1638,6 +1640,9 @@ zh-TW:
         TEMP CSD Unit 3:
           title: " TEMP CSD 單元 3 - 互動遊戲與動畫"
           description_short: 程式設計
+          stages:
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
         CSF_Secret_Sample:
           description_audience: 年齡 8-18
         ECSPD1:
@@ -2031,6 +2036,8 @@ zh-TW:
               name: 複合條件判斷
             Conditionals and Keyboard Input:
               name: 條件判斷與鍵盤輸入
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Sprites and Images:
               name: 角色和圖像
             Sprites and Properties:
@@ -2783,6 +2790,8 @@ zh-TW:
               name: 形狀與隨機性
             Shapes and Randomness:
               name: 形狀與隨機性
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Variables:
               name: 變數
             Programming for Entertainment:
@@ -2848,6 +2857,8 @@ zh-TW:
               name: 資料的建構
         csd3-old:
           stages:
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Sprites and Properties:
               name: 角色與屬性
             Sprites and Images:
@@ -2922,6 +2933,8 @@ zh-TW:
               name: 娛樂用途的程式設計
             Plotting Shapes:
               name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Shapes and Randomness:
               name: 形狀與隨機性
             Variables:
@@ -2958,6 +2971,9 @@ zh-TW:
           stages:
             Plotting Shapes:
               name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+          title: CSD - 用 Game Lab 繪圖
         csd2-old:
           stages:
             Quality Websites:
@@ -3732,6 +3748,8 @@ zh-TW:
               name: 娛樂用途的程式設計
             Plotting Shapes:
               name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Variables:
               name: 變數
             Sprites:
@@ -3772,6 +3790,8 @@ zh-TW:
               name: 娛樂用途的程式設計
             Plotting Shapes:
               name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Variables:
               name: 變數
             Sprites:
@@ -4903,6 +4923,8 @@ zh-TW:
               name: 娛樂用途的程式設計
             Plotting Shapes:
               name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
             Variables:
               name: 變數
             Sprites:
@@ -5222,3 +5244,7 @@ zh-TW:
               name: 方格紙編程
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
+        csp5-pilot:
+          stages:
+            new stage:
+              name: 新的階段
