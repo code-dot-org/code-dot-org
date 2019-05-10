@@ -119,6 +119,7 @@ class ProjectHeader extends React.Component {
   }
 }
 
+export const UnconnectedProjectHeader = ProjectHeader;
 export default connect(
   state => ({
     projectName: state.header.projectName
