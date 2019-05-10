@@ -8,6 +8,7 @@ export default class SingleChoiceResponses extends React.Component {
     question: PropTypes.string.isRequired,
     answers: PropTypes.object.isRequired,
     perFacilitator: PropTypes.bool,
+    numRespondents: PropTypes.number.isRequired,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
     otherText: PropTypes.string
@@ -21,7 +22,16 @@ export default class SingleChoiceResponses extends React.Component {
         );
       }, 0);
     } else {
-      return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+      if (this.props.numRespondents !== undefined) {
+        // Multi-select questions will tell us how many respondents there were,
+        // so that we can correctly show the percentage of respondents who
+        // gave a certain answer.  (The default technique of counting the number
+        // of answers doesn't work when a single respondent can choose multiple
+        // answers, though it continues to work for single-select questions.)
+        return this.props.numRespondents;
+      } else {
+        return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+      }
     }
   }
 
