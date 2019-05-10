@@ -58,6 +58,7 @@ const SILENCED = [
   'flappy',
   'gamelab',
   'gamelab-api',
+  'header',
   'jigsaw',
   'jotformLoader',
   'jotformEmbed',

@@ -134,5 +134,5 @@
     )
     //]]>
 
-:javascript
-  dashboard.header.renderProjectInfo(document.getElementsByClassName('project_info')[0]);
+- content_for(:body_scripts) do
+  %script{type: "text/javascript", src: minifiable_asset_path('js/header.js')}

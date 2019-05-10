@@ -625,6 +625,7 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    header: './src/sites/studio/pages/header.js',
     essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
     jotformLoader: './src/sites/studio/pages/jotformLoader.js',

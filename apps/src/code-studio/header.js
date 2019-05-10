@@ -3,10 +3,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import ProjectInfo from './header/ProjectInfo';
 import {showMinimalProjectHeader} from './headerRedux';
 
 import progress from './progress';
@@ -335,15 +331,6 @@ function saveStartCode(getChanges) {
     }
   });
 }
-
-header.renderProjectInfo = function(container) {
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ProjectInfo />
-    </Provider>,
-    container
-  );
-};
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(showMinimalProjectHeader());
