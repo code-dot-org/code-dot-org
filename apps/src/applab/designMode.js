@@ -614,6 +614,9 @@ designMode.onDuplicate = function(element, event) {
 var batchChangeId = 1;
 
 designMode.changeThemeForScreen = function(screenElement, themeValue) {
+  if (!applabConstants.themeOptions.includes(themeValue)) {
+    throw new Error(`Invalid themeValue: ${themeValue}`);
+  }
   const prevThemeValue =
     screenElement.getAttribute('data-theme') ||
     applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
