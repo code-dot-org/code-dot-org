@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190422234557) do
+ActiveRecord::Schema.define(version: 20190510230052) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1628,7 +1628,6 @@ ActiveRecord::Schema.define(version: 20190422234557) do
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
-  add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
