@@ -112,7 +112,6 @@ Scenario: Toggle on Lockable Level with new teacher panel
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   Then I open the stage lock dialog
   Then I unlock the stage for students
 
