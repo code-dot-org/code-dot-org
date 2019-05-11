@@ -93,6 +93,7 @@ class Ability
         can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
+        can [:update_last_confirmation_date, :update_end_date, :update_school_info_id], UserSchoolInfo, user_id: user.id
       end
 
       if user.facilitator?
