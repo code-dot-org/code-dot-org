@@ -529,24 +529,6 @@ header.showProjectHeader = function() {
   );
   $('.project_remix').click(remixProject);
   $('.project_import').click(importProject);
-
-  var $projectMorePopup = $('.project_more_popup');
-  function hideProjectMore() {
-    $projectMorePopup.hide();
-    $('.project_more_glyph').html('&#x25BC;');
-    $(document).off('click', hideProjectMore);
-  }
-  $('.project_more').click(function(e) {
-    if ($projectMorePopup.is(':hidden')) {
-      e.stopPropagation();
-      $projectMorePopup.show();
-      $('.project_more_glyph').html('&#x25B2;');
-      $(document).on('click', hideProjectMore);
-    }
-  });
-  $projectMorePopup.click(function(e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it.
-  });
 };
 
 header.updateTimestamp = function() {
