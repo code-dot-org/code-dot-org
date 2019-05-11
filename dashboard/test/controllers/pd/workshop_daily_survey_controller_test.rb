@@ -368,6 +368,7 @@ module Pd
     end
 
     test 'facilitator specific survey redirects to next facilitator when response exists' do
+      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -379,6 +380,7 @@ module Pd
     end
 
     test 'last facilitator specific survey redirects to thanks when response exists' do
+      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
       create :pd_workshop_facilitator_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -390,6 +392,7 @@ module Pd
     end
 
     test 'facilitator specific survey with open session attendance displays embedded JotForm' do
+      skip 'Investigate flaky test failures'
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
