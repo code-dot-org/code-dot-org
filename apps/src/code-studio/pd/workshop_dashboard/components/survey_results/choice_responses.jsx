@@ -17,7 +17,7 @@ export default class ChoiceResponses extends React.Component {
     otherText: PropTypes.string
   };
 
-  getTotalResponses() {
+  getTotalRespondents() {
     if (this.props.perFacilitator) {
       return Object.values(this.props.answers).reduce((sum, answers) => {
         return (
@@ -36,7 +36,10 @@ export default class ChoiceResponses extends React.Component {
         // There are still multiple paths through summarize_workshop_surveys on
         // the server which return results without telling us how many
         // respondents there were, and so we maintain this behavior for
-        // backwards compatibility.
+        // backwards compatibility.  This technique counts the number of answers
+        // provided, but for non-multiSelect questions this works out the same
+        // as the number of respondents to a question, since there can only be
+        // one response given per question.
         return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
       }
     }
@@ -70,7 +73,7 @@ export default class ChoiceResponses extends React.Component {
 
       return (
         <tr key={i}>
-          <td>{this.formatPercentage(count / this.getTotalResponses())}</td>
+          <td>{this.formatPercentage(count / this.getTotalRespondents())}</td>
           <td style={{paddingLeft: '20px'}}>{count}</td>
           <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
         </tr>
@@ -134,7 +137,7 @@ export default class ChoiceResponses extends React.Component {
           {showTotalCount && (
             <td style={{paddingLeft: '4px'}}>
               {`(${this.formatPercentage(
-                totalCount / this.getTotalResponses()
+                totalCount / this.getTotalRespondents()
               )})`}
             </td>
           )}
@@ -180,7 +183,7 @@ export default class ChoiceResponses extends React.Component {
               <tr>
                 <td>
                   {this.formatPercentage(
-                    otherAnswers.length / this.getTotalResponses()
+                    otherAnswers.length / this.getTotalRespondents()
                   )}
                 </td>
                 <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>
