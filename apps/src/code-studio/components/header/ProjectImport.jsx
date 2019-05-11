@@ -1,5 +1,6 @@
 /* globals dashboard, Craft */
 
+import $ from 'jquery';
 import React from 'react';
 
 import {convertBlocksXml} from '../../../craft/code-connection/utils';
