@@ -660,7 +660,9 @@ Applab.init = function(config) {
     );
   }
 
-  let customFunctions = level.codeFunctions['customFunctions'];
+  let customFunctions = level.codeFunctions
+    ? level.codeFunctions['customFunctions']
+    : undefined;
   if (customFunctions) {
     Object.keys(customFunctions).map(key => {
       customFunctions[key]['func'] = key;
