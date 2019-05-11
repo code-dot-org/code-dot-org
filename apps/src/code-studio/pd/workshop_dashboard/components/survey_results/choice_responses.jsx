@@ -3,18 +3,21 @@ import React from 'react';
 import _ from 'lodash';
 import {Panel} from 'react-bootstrap';
 
-export default class SingleChoiceResponses extends React.Component {
+// This component renders a survey answer for answer_type of 'scale',
+// 'singleSelect', or 'multiSelect'.
+
+export default class ChoiceResponses extends React.Component {
   static propTypes = {
     question: PropTypes.string.isRequired,
     answers: PropTypes.object.isRequired,
     perFacilitator: PropTypes.bool,
-    numRespondents: PropTypes.number.isRequired,
+    numRespondents: PropTypes.number,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
     otherText: PropTypes.string
   };
 
-  getTotalAnswers() {
+  getTotalResponses() {
     if (this.props.perFacilitator) {
       return Object.values(this.props.answers).reduce((sum, answers) => {
         return (
@@ -30,6 +33,10 @@ export default class SingleChoiceResponses extends React.Component {
         // answers, though it continues to work for single-select questions.)
         return this.props.numRespondents;
       } else {
+        // There are still multiple paths through summarize_workshop_surveys on
+        // the server which return results without telling us how many
+        // respondents there were, and so we maintain this behavior for
+        // backwards compatibility.
         return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
       }
     }
@@ -63,7 +70,7 @@ export default class SingleChoiceResponses extends React.Component {
 
       return (
         <tr key={i}>
-          <td>{this.formatPercentage(count / this.getTotalAnswers())}</td>
+          <td>{this.formatPercentage(count / this.getTotalResponses())}</td>
           <td style={{paddingLeft: '20px'}}>{count}</td>
           <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
         </tr>
@@ -127,7 +134,7 @@ export default class SingleChoiceResponses extends React.Component {
           {showTotalCount && (
             <td style={{paddingLeft: '4px'}}>
               {`(${this.formatPercentage(
-                totalCount / this.getTotalAnswers()
+                totalCount / this.getTotalResponses()
               )})`}
             </td>
           )}
@@ -173,7 +180,7 @@ export default class SingleChoiceResponses extends React.Component {
               <tr>
                 <td>
                   {this.formatPercentage(
-                    otherAnswers.length / this.getTotalAnswers()
+                    otherAnswers.length / this.getTotalResponses()
                   )}
                 </td>
                 <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>

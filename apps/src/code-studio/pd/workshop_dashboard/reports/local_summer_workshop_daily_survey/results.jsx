@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import SingleChoiceResponses from '../../components/survey_results/single_choice_responses';
+import ChoiceResponses from '../../components/survey_results/choice_responses';
 import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
@@ -48,7 +48,7 @@ export default class Results extends React.Component {
           );
 
           return (
-            <SingleChoiceResponses
+            <ChoiceResponses
               perFacilitator={section === 'facilitator'}
               numRespondents={numRespondents}
               question={question['text']}
