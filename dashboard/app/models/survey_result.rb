@@ -56,6 +56,7 @@ class SurveyResult < ActiveRecord::Base
     DIVERSITY_2016 = 'Diversity2016'.freeze,
     DIVERSITY_2017 = 'Diversity2017'.freeze,
     DIVERSITY_2018 = 'Diversity2018'.freeze,
+    DIVERSITY_2019 = 'Diversity2019'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
     NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze

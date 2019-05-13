@@ -174,7 +174,15 @@ ms:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': gua
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': bandar
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': padang
+              pasir
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': pelangi
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': di
+              bawah permukaan air
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim
+              sejuk
       gamelab_setPosition:
         options:
           POSITION:
@@ -189,6 +197,11 @@ ms:
             '"scale"': saiz
             '"height"': ketinggian
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': apabila
@@ -221,6 +234,11 @@ ms:
             "'down'": bawah
             "'left'": kiri
             "'right'": kanan
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': apabila
+            '"while"': semasa
       gamelab_whileKey:
         options:
           KEY:

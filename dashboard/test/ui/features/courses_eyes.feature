@@ -1,10 +1,10 @@
 @eyes
-@dashboard_db_access
 @no_mobile
 Feature: Courses page
 
 @as_student
 Scenario: Student courses
+  Given I am on "http://studio.code.org/home"
   When I open my eyes to test "student courses"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
@@ -15,6 +15,7 @@ Scenario: Student courses
 
 @as_teacher
 Scenario: Teacher courses
+  Given I am on "http://studio.code.org/home"
   When I open my eyes to test "teacher courses"
   And I wait to see ".headerlinks"
   And I see "#header-teacher-courses"

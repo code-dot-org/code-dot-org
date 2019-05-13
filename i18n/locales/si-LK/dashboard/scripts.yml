@@ -1436,6 +1436,8 @@ si:
               name: Crowdsourcing වැඩසටහන
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ප්‍රස්තාර රටා වැඩසටහන්
             Relay Programming:
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
             Conditionals with Cards:
@@ -1443,7 +1445,7 @@ si:
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
             'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
+              name: ද්විමය පින්තූර
             Artist Binary:
               name: කලාකරු ද්විමය
         coursee-2019:
@@ -1454,8 +1456,8 @@ si:
               name: නැවත නැවත සිදුවන ලුප
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
-            Conditionals:
-              name: කන්ඩිෂනලස්
+            'Functions: Songwriting':
+              name: ගීත ලිවීම
             Internet:
               name: අන්තර්ජාලය
             Crowdsourcing:
@@ -1488,16 +1490,16 @@ si:
               name: 'ශුන්‍ය'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: පදනමක් තැනීම
             'Real-life Algorithms: Paper Planes':
               name: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
+            'Events: The Big Event':
+              name: විශාල සිදුවීම
             Binary Bracelets:
               name: ද්විමය වළලු
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+            'Programming: Happy Maps':
+              name: සතුටු සිතියම්
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
         courseb-2019:
@@ -1506,6 +1508,8 @@ si:
               name: එය ගෙන යන්න, ගෙන යන්න
             Your Digital Footprint:
               name: ඔබේ ඩිජිටල් පා සටහන
+            'Loops: Getting Loopy':
+              name: ඔල්මාද වීම
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1559,3 +1563,7 @@ si:
               name: කාඩ්පත් සමඟ කොන්දේසික
             Building a Foundation:
               name: පදනමක් තැනීම
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: ප්‍රස්තාර රටා වැඩසටහන්

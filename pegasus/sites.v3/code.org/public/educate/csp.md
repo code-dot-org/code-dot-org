@@ -9,6 +9,8 @@ style_min: true
 
 # Computer Science Principles
 
+[<img src="/images/plc/pl-deadlines-banner.png" width="100%">](/educate/professional-learning/middle-high#scholarships)
+
 ## <a name="whatis"></a>What is CS Principles?
 
 Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.

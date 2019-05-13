@@ -151,10 +151,16 @@ ku:
           stages:
             The Artist:
               name: هونەرەكە
+            Internet:
+              name: ئینترنێت
         andrea-test:
           stages:
             'null':
               name: 'بەتاڵ'
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: نەخشەی دڵخۆش
         csd2-2019:
           stages:
             Lists:

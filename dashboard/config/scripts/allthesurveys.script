@@ -1,5 +1,11 @@
 login_required true
 
+stage 'CSP post course survey 2019 staging'
+level 'csp-post-survey-levelgroup-2019', assessment: true
+
+stage 'CSD post course survey 2019 staging'
+level 'csd-post-survey-2019', assessment: true
+
 stage 'CSP pre survey 2017 staging'
 level 'csp-pre-survey-2017-levelgroup', assessment: true
 
@@ -26,3 +32,6 @@ level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
 stage 'CSP mid survey 2018 staging'
 level 'csp-post-survey-2017-levelgroup_2018', assessment: true
+
+stage 'Place for testing crazy stuff'
+level 'Levelgroup-for-testing-stuff', assessment: true

@@ -1,5 +1,3 @@
-# TODO: (Brad) Fix and re-enable on Firefox
-@no_firefox
 @no_mobile
 @as_taught_student
 Feature: Level Group

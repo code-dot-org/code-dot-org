@@ -11,8 +11,10 @@ class MakerControllerTest < ActionController::TestCase
 
     @csd_2017 = ensure_course Script::CSD_2017
     @csd_2018 = ensure_course Script::CSD_2018
+    @csd_2019 = ensure_course Script::CSD_2019
     @csd6_2017 = ensure_script Script::CSD6_NAME
     @csd6_2018 = ensure_script Script::CSD6_2018_NAME
+    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
   end
 
   test_redirect_to_sign_in_for :home
@@ -43,6 +45,13 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal @csd6_2018, MakerController.maker_script(@student)
   end
 
+  test "shows CSD6-2019 if CSD6-2019 is assigned" do
+    create :user_script, user: @student, script: @csd6_2019, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2019
+
+    assert_equal @csd6_2019, MakerController.maker_script(@student)
+  end
+
   test "shows CSD6-2018 if CSD6-2018 is assigned" do
     create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
     refute_includes @student.scripts, @csd6_2017
@@ -66,6 +75,13 @@ class MakerControllerTest < ActionController::TestCase
     assert_includes @student.scripts, @csd6_2018
 
     assert_equal @csd6_2018, MakerController.maker_script(@student)
+  end
+
+  test "shows CSD6-2019 if CSD-2019 is assigned" do
+    create :follower, section: create(:section, course: @csd_2019), student_user: @student
+    assert_includes @student.section_courses, @csd_2019
+
+    assert_equal @csd6_2019, MakerController.maker_script(@student)
   end
 
   test "shows CSD6-2018 if CSD-2018 is assigned" do

@@ -1550,6 +1550,8 @@ cs:
           description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli! (Tato verze je pro pomalá připojení)
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programování Na Milimetrovém Papíru
             Relay Programming:
               name: Relay programování
             Conditionals with Cards:
@@ -1557,7 +1559,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
             'Unplugged: Binary':
-              name: 'Nezapojené: binární'
+              name: Binární obrázky
             Artist Binary:
               name: Umělecké binární
             Dance Party:
@@ -1570,8 +1572,8 @@ cs:
               name: Vnořené cykly
             Conditionals with Cards:
               name: Podmínky s kartami
-            Conditionals:
-              name: Podmínky
+            'Functions: Songwriting':
+              name: Skládání písniček
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1607,16 +1609,16 @@ cs:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Budování nadace
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            'Events: The Big Event':
+              name: Velká událost
             Binary Bracelets:
               name: Binární náramky
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmy ze života: Zasadit semínko'
+            'Programming: Happy Maps':
+              name: Šťastné mapy
             Going Places Safely:
               name: Cestování bezpečně
         courseb-2019:
@@ -1625,6 +1627,8 @@ cs:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvé digitální stopy
+            'Loops: Getting Loopy':
+              name: Bláznit
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1686,3 +1690,7 @@ cs:
               name: Podmínky s kartami
             Building a Foundation:
               name: Budování nadace
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programování Na Milimetrovém Papíru

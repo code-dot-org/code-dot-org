@@ -116,7 +116,7 @@ class CoursesController < ApplicationController
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
     # are assigned.
     redirect_course = Course.latest_assigned_version(course.family_name, current_user)
-    redirect_course ||= Course.latest_version(course.family_name)
+    redirect_course ||= Course.latest_stable_version(course.family_name)
 
     # Do not redirect if we are already on the correct course.
     return nil if redirect_course == course

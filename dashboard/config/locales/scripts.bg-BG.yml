@@ -2264,6 +2264,8 @@ bg:
               name: Crowdsourcing кампания
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
             Relay Programming:
               name: Повтори програмирането
             Conditionals with Cards:
@@ -2271,7 +2273,7 @@ bg:
             Digital Citizenship:
               name: Цифрови граждани
             'Unplugged: Binary':
-              name: 'Ънплъгд: двоичен код'
+              name: Бинарни образи(картини)
             Artist Binary:
               name: 'Художник: Бинарен код'
         coursee-2019:
@@ -2282,8 +2284,8 @@ bg:
               name: Вмъкнати цикли
             Conditionals with Cards:
               name: Условия с карти
-            Conditionals:
-              name: Условия
+            'Functions: Songwriting':
+              name: Писане на песен
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2318,18 +2320,18 @@ bg:
               name: нула
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Изграждане на база
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
+            'Events: The Big Event':
+              name: Голямото събитие
             Binary Bracelets:
               name: Двоични гривни
         gamelab:
           title: Играта лаборатория
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Реални алгоритми: Засадете семената'
+            'Programming: Happy Maps':
+              name: Щастливи карти
             Going Places Safely:
               name: Достигаме безопасно до места
         courseb-2019:
@@ -2338,6 +2340,8 @@ bg:
               name: Преместете го, преместете го
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+            'Loops: Getting Loopy':
+              name: Да повтаряме
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -2424,3 +2428,7 @@ bg:
               name: Условия с карти
             Building a Foundation:
               name: Изграждане на база
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Програмиране на милиметрова хартия

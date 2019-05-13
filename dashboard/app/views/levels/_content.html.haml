@@ -4,7 +4,7 @@
 - app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
 
 - unless data['title'].blank? || hide_header
-  %h1!= (source_level || @level).localized_text(data['title']) unless app == 'external'
+  %h1!= render_multi_or_match_content(data['title'], source_level || @level) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
