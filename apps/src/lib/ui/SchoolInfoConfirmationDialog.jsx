@@ -1,7 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import Button from './Button';
-import SchoolInfoInterstitial from '../lib/ui/SchoolInfoInterstitial';
+import Button from '../../templates/Button';
+import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
 
 export const styles = {

@@ -14,30 +14,42 @@ function main(context) {
     // cdn.jotfor.ms       https://cdn.jotfor.ms/images/calendar.png  817B
     checkReachability('https://cdn.jotfor.ms/images/calendar.png'),
     // www.jotform.com     https://www.jotform.com/favicon.ico        887B
-    checkReachability('https://www.jotform.com/favicon.ico')
+    checkReachability('https://www.jotform.com/favicon.ico'),
+    // api.jotform.com     https://api.jotform.com/favicon.ico        592B
+    checkReachability('https://api.jotform.com/favicon.ico')
     // Not using these yet, they're likely to fall under the same policy as www.jotform.com
     // events.jotform.com
     // files.jotform.com
     // form.jotform.com
-  ]).then(([jotFormFrameLoadedMs, cdnjotformsMs, wwwjotformcomMs]) => {
-    if (jotFormFrameLoadedMs === false) {
-      // Load failed if we specifically got 'false'
-      logToCloud.addPageAction(logToCloud.PageAction.JotFormLoadFailed, {
-        route: `GET ${context.location.pathname}`,
-        reachedCdnjotforms: false !== cdnjotformsMs,
-        reachedWwwjotformcom: false !== wwwjotformcomMs,
-        cdnjotformsMs,
-        wwwjotformcomMs
-      });
-    } else {
-      logToCloud.addPageAction(logToCloud.PageAction.JotFormFrameLoaded, {
-        route: `GET ${context.location.pathname}`,
-        jotFormFrameLoadedMs,
-        cdnjotformsMs,
-        wwwjotformcomMs
-      });
+  ]).then(
+    ([
+      jotFormFrameLoadedMs,
+      cdnjotformsMs,
+      wwwjotformcomMs,
+      apijotformcomMs
+    ]) => {
+      if (jotFormFrameLoadedMs === false) {
+        // Load failed if we specifically got 'false'
+        logToCloud.addPageAction(logToCloud.PageAction.JotFormLoadFailed, {
+          route: `GET ${context.location.pathname}`,
+          reachedCdnjotforms: false !== cdnjotformsMs,
+          reachedWwwjotformcom: false !== wwwjotformcomMs,
+          reachedApijotformcom: false !== apijotformcomMs,
+          cdnjotformsMs,
+          wwwjotformcomMs,
+          apijotformcomMs
+        });
+      } else {
+        logToCloud.addPageAction(logToCloud.PageAction.JotFormFrameLoaded, {
+          route: `GET ${context.location.pathname}`,
+          jotFormFrameLoadedMs,
+          cdnjotformsMs,
+          wwwjotformcomMs,
+          apijotformcomMs
+        });
+      }
     }
-  });
+  );
 }
 
 /**
