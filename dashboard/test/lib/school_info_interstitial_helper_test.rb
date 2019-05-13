@@ -87,4 +87,18 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
+
+  test 'school info confirmation dialog is shown to a user when school info is nil' do
+    school_info = SchoolInfo.new
+    school_info.country = nil
+    school_info.school_type = nil
+    school_info.school_name = nil
+    school_info.full_address = nil
+
+    assert_nil school_info.school_id
+    assert_nil school_info.school_type
+    assert_nil school_info.school_name
+    assert_nil school_info.country
+    assert_equal SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?, true
+  end
 end
