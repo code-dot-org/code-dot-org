@@ -19,6 +19,11 @@
       "name": "spotify",
       "description": "The top 20 songs in many regions of the world, including 30 second MP3 links to most songs",
       "url": "/api/v1/dataset-library/spotify.csv"
+    },
+    {
+      "name": "weather",
+      "description": "Daily weather forecasts for the next five days for a selection of US cities.",
+      "url": "/api/v1/dataset-library/weather.csv"
     }
   ]
 }
