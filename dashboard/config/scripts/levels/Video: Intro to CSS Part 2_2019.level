@@ -13,7 +13,7 @@
     "name_suffix": "_2019",
     "display_name": "Video: Intro to CSS Part 2",
     "long_instructions": "## Question to Consider\r\n* How does the web page know what stylesheet it should be using?",
-    "encrypted_teacher_markdown": "iBnNeU8Ilesrzl/b6jM2OBT3GZrWfaiodwxq7RtQBkvsG4ehuNjRshS6CcmB\n5wVLmWnYfCfDAtnGa2Tdyya8NFJA+Oqp3KioNU1uG6/5nIkrHVnR9DlRJhzM\n3t4mvqFiQlyCeYX2fNjDZaeLQ3KpK0UsAX+FOJYCHFFc1bntqco=\n"
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure all the students understand how to link to their stylesheet from each web page."
   },
   "published": true,
   "notes": "",

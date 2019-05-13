@@ -8950,6 +8950,8 @@ en:
               name: Creating Functions with Parameters
             Mid-Year Survey:
               name: Mid-Year Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -8970,6 +8972,8 @@ en:
               description_teacher: ''
             Mid-Year Survey:
               name: Mid-Year Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         csp-create-2018:
           title: Create - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -8988,6 +8992,8 @@ en:
               name: Create PT - Complete the Task
               description_student: ''
               description_teacher: ''
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy ('18-'19)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -9046,6 +9052,8 @@ en:
               name: Unit 4 Assessment
             Mid-Year Survey:
               name: Mid-Year Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         csp5-2018:
           title: CSP Unit 5 - Building Apps ('18-'19)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9150,6 +9158,8 @@ en:
               description_teacher: ''
             Mid-Year Survey:
               name: Mid-Year Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         csppostap-2018:
           title: Post AP - Data Tools ('18-'19)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -9214,6 +9224,8 @@ en:
               name: Unit 2 Chapter 2 Assessment
             Chapter 1 Assessment:
               name: Chapter 1 Assessment
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -10201,7 +10213,7 @@ en:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
               description_student: ''
               description_teacher: ''
             Relay Programming:
@@ -10209,15 +10221,15 @@ en:
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Scrat
               description_student: ''
               description_teacher: ''
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -10229,7 +10241,7 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Copyright and Creativity:
@@ -10237,19 +10249,19 @@ en:
               description_student: ''
               description_teacher: ''
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snowflakes with Anna and Elsa
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: While Loops with the Farmer
               description_student: ''
               description_teacher: ''
             Until Loops in Maze:
@@ -10261,11 +10273,11 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting':
@@ -10277,11 +10289,11 @@ en:
               description_student: ''
               description_teacher: ''
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Functions in Artist:
-              name: Functions in Artist
+              name: Functions with Artist
               description_student: ''
               description_teacher: ''
             Screen Out the Mean:
@@ -10309,15 +10321,15 @@ en:
               description_student: ''
               description_teacher: ''
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
               description_student: ''
               description_teacher: ''
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
               description_student: ''
               description_teacher: ''
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
               description_student: ''
               description_teacher: ''
             For Loop Fun:
@@ -10325,19 +10337,19 @@ en:
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: ''
               description_teacher: ''
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
               description_student: ''
               description_teacher: ''
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
               description_student: ''
               description_teacher: ''
             Pet Giraffe with Sprite Lab:
@@ -10385,13 +10397,13 @@ en:
               description_student: ''
               description_teacher: ''
             Concept Practice with Minecraft:
-              name: Concept Practice with Minecraft
+              name: Looking Ahead with Minecraft
             Editing Behaviors:
-              name: Editing Behaviors
+              name: Behaviors in Sprite Lab
             Virtual Pet with Sprite Lab:
               name: Virtual Pet with Sprite Lab
             Build A Project:
-              name: Build A Project
+              name: End of Course Project
             Dance Party:
               name: Dance Party
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -10757,15 +10769,15 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10783,13 +10795,13 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Scrat
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Tell a Story in Play Lab:
-              name: Tell a Story in Play Lab
+              name: On the Move with Events
             Make a Game in Play Lab:
-              name: Make a Game in Play Lab
+              name: A Royal Battle with Events
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
         removed19:
@@ -12029,6 +12041,10 @@ en:
               name: 'Loops Practice: Simulations'
             Lists Make:
               name: Lists Make
+            Traversals Investigate:
+              name: Traversals Investigate
+            Traversals Practice:
+              name: Traversals Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12307,6 +12323,18 @@ en:
               name: Lists Practice
             Lists Make:
               name: Lists Make
+            Loops Explore:
+              name: Loops Explore
+            'Loops Practice: While Loops':
+              name: 'Loops Practice: While Loops'
+            'Loops Practice: Simulations':
+              name: 'Loops Practice: Simulations'
+            Traversals Explore:
+              name: Traversals Explore
+            Traversals Investigate:
+              name: Traversals Investigate
+            Traversals Practice:
+              name: Traversals Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''

@@ -3,17 +3,21 @@ import React from 'react';
 import _ from 'lodash';
 import {Panel} from 'react-bootstrap';
 
-export default class SingleChoiceResponses extends React.Component {
+// This component renders a survey answer for answer_type of 'scale',
+// 'singleSelect', or 'multiSelect'.
+
+export default class ChoiceResponses extends React.Component {
   static propTypes = {
     question: PropTypes.string.isRequired,
     answers: PropTypes.object.isRequired,
     perFacilitator: PropTypes.bool,
+    numRespondents: PropTypes.number,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
     otherText: PropTypes.string
   };
 
-  getTotalAnswers() {
+  getTotalRespondents() {
     if (this.props.perFacilitator) {
       return Object.values(this.props.answers).reduce((sum, answers) => {
         return (
@@ -21,7 +25,23 @@ export default class SingleChoiceResponses extends React.Component {
         );
       }, 0);
     } else {
-      return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+      if (this.props.numRespondents !== undefined) {
+        // Multi-select questions will tell us how many respondents there were,
+        // so that we can correctly show the percentage of respondents who
+        // gave a certain answer.  (The default technique of counting the number
+        // of answers doesn't work when a single respondent can choose multiple
+        // answers, though it continues to work for single-select questions.)
+        return this.props.numRespondents;
+      } else {
+        // There are still multiple paths through summarize_workshop_surveys on
+        // the server which return results without telling us how many
+        // respondents there were, and so we maintain this behavior for
+        // backwards compatibility.  This technique counts the number of answers
+        // provided, but for non-multiSelect questions this works out the same
+        // as the number of respondents to a question, since there can only be
+        // one response given per question.
+        return Object.values(this.props.answers).reduce((sum, x) => sum + x, 0);
+      }
     }
   }
 
@@ -53,7 +73,7 @@ export default class SingleChoiceResponses extends React.Component {
 
       return (
         <tr key={i}>
-          <td>{this.formatPercentage(count / this.getTotalAnswers())}</td>
+          <td>{this.formatPercentage(count / this.getTotalRespondents())}</td>
           <td style={{paddingLeft: '20px'}}>{count}</td>
           <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
         </tr>
@@ -117,7 +137,7 @@ export default class SingleChoiceResponses extends React.Component {
           {showTotalCount && (
             <td style={{paddingLeft: '4px'}}>
               {`(${this.formatPercentage(
-                totalCount / this.getTotalAnswers()
+                totalCount / this.getTotalRespondents()
               )})`}
             </td>
           )}
@@ -163,7 +183,7 @@ export default class SingleChoiceResponses extends React.Component {
               <tr>
                 <td>
                   {this.formatPercentage(
-                    otherAnswers.length / this.getTotalAnswers()
+                    otherAnswers.length / this.getTotalRespondents()
                   )}
                 </td>
                 <td style={{paddingLeft: '20px'}}>{otherAnswers.length}</td>
