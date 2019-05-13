@@ -22,4 +22,20 @@ class ProxyHelperTest < ActionView::TestCase
     refute allowed_hostname?(URI.parse('http://foobar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
     refute allowed_hostname?(URI.parse('http://foo-bar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
   end
+  test 'allows hostname resolving to public IP address' do
+    assert allowed_ip_address?('google.com')
+  end
+
+  test 'allows public IP address provided as hostname' do
+    assert allowed_ip_address?('8.8.8.8')
+  end
+
+  test 'disallows hostname resolving to private IP address' do
+    IPSocket.stubs(:getaddress).returns('169.254.0.0')
+    refute allow_ip_address?('resolves.to.private.ip.example.net')
+  end
+
+  test 'disallows private IP address provided as hostname' do
+    refute allow_ip_address?('169.254.0.0')
+  end
 end
