@@ -1496,8 +1496,21 @@ designMode.addKeyboardHandlers = function() {
       switch (event.which) {
         case KeyCodes.COPY:
           if (currentlyEditedElement) {
+            let madeUndraggable;
+            const currentElement = $(currentlyEditedElement);
+            const isScreen = currentElement.hasClass('screen');
+            if (isScreen) {
+              // Unwrap the draggable wrappers around the child elements:
+              madeUndraggable = makeUndraggable(currentElement.children());
+            }
+
             // Remember the current element on the clipboard
-            clipboardElement = $(currentlyEditedElement).clone(true)[0];
+            clipboardElement = currentElement.clone(true)[0];
+
+            // Restore the draggable wrappers on the child elements:
+            if (isScreen && madeUndraggable) {
+              makeDraggable(currentElement.children());
+            }
           }
           break;
         case KeyCodes.PASTE:
