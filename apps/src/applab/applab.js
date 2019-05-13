@@ -660,6 +660,17 @@ Applab.init = function(config) {
     );
   }
 
+  let customFunctions = level.codeFunctions
+    ? level.codeFunctions['customFunctions']
+    : undefined;
+  if (customFunctions) {
+    Object.keys(customFunctions).map(key => {
+      customFunctions[key]['func'] = key;
+      config.dropletConfig.blocks.push(customFunctions[key]);
+      level.codeFunctions[key] = null;
+    });
+  }
+
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
