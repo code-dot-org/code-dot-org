@@ -12045,6 +12045,8 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12335,6 +12337,12 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''

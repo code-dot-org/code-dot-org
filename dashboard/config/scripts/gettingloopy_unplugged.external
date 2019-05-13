@@ -5,5 +5,8 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Getting Loopy
 
-This lesson introduces the programming concept of loops (repeated instructions) through a dance activity. Students will learn simple choreography, then be instructed to repeat it.
+This lesson introduces the programming concept of loops through a dance activity.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.youtube.com/embed/JoKTqHCni0M"  frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"n></iframe></div>
+
 MARKDOWN
