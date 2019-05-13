@@ -26,6 +26,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions} from './redux/applab';
 import {getStore} from '../redux';
+import datasetLibrary from '@cdo/apps/code-studio/datasetLibrary.json';
 import $ from 'jquery';
 
 // For proxying non-https xhr requests
@@ -1797,8 +1798,31 @@ applabCommands.getList = function(opts) {
 
 var handleGetListSync = function(opts, values) {
   let columnList = [];
-  values.forEach(row => columnList.push(row[opts.columnName]));
-  opts.callback(columnList);
+
+  if (values.length > 0) {
+    values.forEach(row => columnList.push(row[opts.columnName]));
+    opts.callback(columnList);
+    return;
+  }
+
+  let url;
+  datasetLibrary.datasets.forEach(dataset => {
+    if (dataset.name === opts.tableName) {
+      url = dataset.url;
+    }
+  });
+  if (url) {
+    // Import the dataset, then try getList again.
+    Applab.storage.importDataset(
+      opts.tableName,
+      url,
+      () => applabCommands.getList(opts),
+      () => console.log('error')
+    );
+  } else {
+    // No dataset with the specified name, call back into interpreter and return the empty list.
+    opts.callback(columnList);
+  }
 };
 
 var handleGetListSyncError = function(opts, values) {
