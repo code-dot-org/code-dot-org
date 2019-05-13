@@ -10,9 +10,9 @@ module VersionRedirectOverrider
     end
   end
 
-  def set_redirect_override
+  def set_script_redirect_override(script_name)
     return unless params[:no_redirect]
-    set_script_version_override(params[:script_id]) if params[:script_id]
+    set_script_version_override(script_name)
   end
 
   # TODO: also check script's course
