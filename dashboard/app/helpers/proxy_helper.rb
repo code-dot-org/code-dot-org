@@ -3,21 +3,21 @@ require 'uri'
 
 SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
 
-# https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
-PRIVATE_IPS = [
-  IPAddr.new('0.0.0.0/8'),
-  IPAddr.new('10.0.0.0/8'),
-  IPAddr.new('127.0.0.0/8'),
-  IPAddr.new('172.16.0.0/12'),
-  IPAddr.new('169.254.0.0/16'),
-  IPAddr.new('192.168.0.0/16'),
-  IPAddr.new('fd00::/8')
-].freeze
-
-DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
-
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
+  # https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
+  PRIVATE_IPS = [
+    IPAddr.new('0.0.0.0/8'),
+    IPAddr.new('10.0.0.0/8'),
+    IPAddr.new('127.0.0.0/8'),
+    IPAddr.new('172.16.0.0/12'),
+    IPAddr.new('169.254.0.0/16'),
+    IPAddr.new('192.168.0.0/16'),
+    IPAddr.new('fd00::/8')
+  ].freeze
+
+  DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
+
   def render_proxied_url(
     location,
     allowed_content_types:,
