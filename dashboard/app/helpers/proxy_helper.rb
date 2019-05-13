@@ -14,6 +14,8 @@ PRIVATE_IPS = [
   IPAddr.new('fd00::/8')
 ].freeze
 
+DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
+
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
   def render_proxied_url(
@@ -159,11 +161,10 @@ module ProxyHelper
     render plain: text, status: status
   end
 
+  # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
+  # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   def allowed_ip_address?(hostname)
-    # There are some cases where we proxy to ourselves, which may not work on non-production environments that run
-    # on an internal IP address.
-    return true unless rack_env?(:production)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)}
+    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == DASHBOARD_IP_ADDRESS
   end
 end
