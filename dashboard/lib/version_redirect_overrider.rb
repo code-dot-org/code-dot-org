@@ -30,6 +30,7 @@ module VersionRedirectOverrider
   end
 
   def override_course_redirect?(course)
-    course_version_overrides.include?(course.name)
+    overridden_course_scripts = course.default_scripts.map(&:name) & script_version_overrides
+    course_version_overrides.include?(course.name) || !overridden_course_scripts.empty?
   end
 end
