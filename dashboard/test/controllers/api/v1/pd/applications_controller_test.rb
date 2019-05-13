@@ -974,7 +974,7 @@ module Api::V1::Pd
         "Please indicate which workshops you are able to attend.",
         "If you are unable to make any of the above workshop dates, would you be open to traveling to another region for your local summer workshop?",
         "How far would you be willing to travel to academic year workshops?",
-        "Are you interested in this online program for school year workshops?",
+        "Do you want to be considered for the virtual academic year workshop track?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",

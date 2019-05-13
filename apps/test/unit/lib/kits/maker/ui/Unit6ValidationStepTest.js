@@ -41,7 +41,7 @@ describe('Unit6ValidationStep', () => {
         initialChoice={Unit6Intention.NO}
       />
     );
-    assert.equal(wrapper.find('input [value="no"]').props().checked, true);
+    assert.equal(wrapper.find('[value="no"]').props().checked, true);
     assert.equal(wrapper.find('Button').length, 0);
   });
 
@@ -54,8 +54,7 @@ describe('Unit6ValidationStep', () => {
       />
     );
     assert.equal(
-      wrapper.find(`input [value="${Unit6Intention.YES_18_19}"]`).props()
-        .checked,
+      wrapper.find(`[value="${Unit6Intention.YES_18_19}"]`).props().checked,
       true
     );
     assert.equal(wrapper.find('Button').length, 0);

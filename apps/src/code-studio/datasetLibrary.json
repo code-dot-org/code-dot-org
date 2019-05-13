@@ -1,0 +1,34 @@
+{
+  "datasets": [
+    {
+      "name": "dogs",
+      "description": "Different breeds of dogs, including images and rankings on different qualities like size and friendliness",
+      "url": "/api/v1/dataset-library/dogBreeds.csv",
+      "columns": "name,size,dogFriendly,imgURL"
+    },
+    {
+      "name": "words",
+      "description": "The 1000 most commonly used English words and their parts of speech",
+      "url": "/api/v1/dataset-library/words.csv",
+      "columns": "word,partOfSpeech"
+    },
+    {
+      "name": "countries",
+      "description": "Information about different countries, images of their flags, and MP3 of their anthem",
+      "url": "/api/v1/dataset-library/countries.csv",
+      "columns": "Country,flagImgURL,Capital,anthemMP3"
+    },
+    {
+      "name": "spotify",
+      "description": "The top 20 songs in many regions of the world, including 30 second MP3 links to most songs",
+      "url": "/api/v1/dataset-library/spotify.csv",
+      "columns": "Track Name,Artist,Streams,songURL,Album Image,previewMP3,Position,Region,Country Code"
+    },
+    {
+      "name": "weather",
+      "description": "Daily weather forecasts for the next five days for a selection of US cities.",
+      "url": "/api/v1/dataset-library/weather.csv",
+      "columns": "city,date,lowTemp,highTemp,condition,icon"
+    }
+  ]
+}

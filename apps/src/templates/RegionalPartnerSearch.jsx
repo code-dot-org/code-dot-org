@@ -341,9 +341,7 @@ class RegionalPartnerSearch extends Component {
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
                 {workshopCollections[0].workshops.length === 0 &&
                   workshopCollections[1].workshops.length === 0 && (
-                    <div>
-                      Workshop date and location information coming soon.
-                    </div>
+                    <div>Workshops not currently available in your region.</div>
                   )}
 
                 {workshopCollections.map(
@@ -517,7 +515,8 @@ const StartApplicationButton = ({
     notificationHeading = `Priority deadline for your region is ${priorityDeadlineDate}`;
     notificationText = 'Sign up now to reserve your space!';
   } else {
-    notificationHeading = 'We still have spaces at your local workshop!';
+    notificationHeading =
+      'We still have spaces in the professional learning program!';
     notificationText = 'It’s not too late to sign up.';
   }
 

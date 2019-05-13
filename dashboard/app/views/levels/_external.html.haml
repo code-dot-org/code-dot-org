@@ -2,6 +2,12 @@
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
 - level_props = level.properties_with_replaced_markdown(current_user)
+- video_key = @level.video_key
+- video =  video_key ? Video.current_locale.find_by_key(video_key) : nil
+- use_large_video_player = level.properties["use_large_video_player"]
+- small_video_page_width = 800
+
+= stylesheet_link_tag '/blockly/video-js/video-js', media: 'all'
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
@@ -23,3 +29,16 @@
   -# This partial will take care of milestone posts in the contexts of levelgroups,
   -# otherwise it's handled by external.js
   = render partial: 'levels/dialog', locals: {app: 'external'}
+
+- if video && use_large_video_player
+  .clear
+  .video-container
+
+.clear
+
+- if video
+  :javascript
+    var videoOptions = #{video.summarize(false).to_json};
+    var videoHeight = #{small_video_page_width} / (16 / 9);
+
+    window.dashboard.videos.createVideoWithFallback($('.video-container'), videoOptions, #{small_video_page_width}, videoHeight);
