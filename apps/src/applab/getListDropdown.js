@@ -21,3 +21,7 @@ function getColumnsForTable(tableName) {
   }
   return [];
 }
+
+export var __TestInterface = {
+  getColumnsForTable: getColumnsForTable
+};
