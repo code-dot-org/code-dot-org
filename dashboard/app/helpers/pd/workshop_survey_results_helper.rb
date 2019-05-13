@@ -292,8 +292,7 @@ module Pd::WorkshopSurveyResultsHelper
 
               session_summary[:facilitator][q_key] = facilitator_responses.transform_keys {|k| facilitator_map[k]}
             else
-              summary = surveys_for_session[response_section].map {|survey| survey[q_key]}.group_by {|v| v}.transform_values(&:size)
-              session_summary[response_section][q_key] = summary.reject {|k, _| k.nil?}
+              session_summary[response_section][q_key] = get_session_summary(surveys_for_session[response_section], q_key)
             end
           end
         end
@@ -303,6 +302,26 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     workshop_summary
+  end
+
+  # Given an array of survey submissions for a session, and a question key, return a
+  # summary of how many responses per question, as well as how many respondents per question.
+  #
+  # See the unit test for example inputs & outputs.
+  #
+  # The return value is a hash with the answers as keys and the values as the counts of those answers.
+  # An additional key of num_respondents is added, which gives the number of respondents for
+  # a given question, which is needed for displaying results for multi-choice questions in particular.
+  # The client filters out num_respondents so that it's not shown as one of the answers.
+
+  def get_session_summary(survey_for_session, q_key)
+    summary = survey_for_session.map {|survey| survey[q_key]}.flatten.group_by {|v| v}.transform_values(&:size)
+    session_summary = summary.reject {|k, _| k.nil?}
+
+    num_respondents = survey_for_session.select {|item| item.key?(q_key)}.count
+    session_summary["num_respondents"] = num_respondents unless num_respondents == 0
+
+    session_summary
   end
 
   def get_surveys_for_workshops(workshops)

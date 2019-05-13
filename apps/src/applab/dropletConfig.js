@@ -15,6 +15,7 @@ import {
   setPropertyDropdown,
   setPropertyValueSelector
 } from './setPropertyDropdown';
+import {getListColumnDropdown} from './getListDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
 
@@ -527,7 +528,7 @@ export var blocks = [
     params: ['tableName', 'columnName'],
     dropdown: {
       0: () => getAssetDropdown('dataset'),
-      1: ['true', 'false'] // () => populateColumns()
+      1: getListColumnDropdown()
     },
     nativeIsAsync: true,
     type: 'value'
