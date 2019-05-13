@@ -7,6 +7,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include ScriptConstants
+  include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -18,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
     if ScriptLevelsController.cachable_request?(request)
@@ -115,9 +117,8 @@ class ScriptLevelsController < ApplicationController
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
       @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
-    elsif !params[:no_redirect] && redirect_script = redirect_script(@script_level&.script, request.locale)
+    elsif !override_redirect_for_script?(@script_level&.script) && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
-      # Do not redirect users that have added the 'no_redirect' query parameter to the request.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
     end
