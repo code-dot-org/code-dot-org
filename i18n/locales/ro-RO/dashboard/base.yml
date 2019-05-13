@@ -275,12 +275,6 @@ ro:
     header:
       finished_hoc: "Am terminat Ora mea de Cod"
       sign_in_to_save: 'Loghează-te pentru a salva progresul'
-      free_play:
-        playlab: 'Creează o aplicație "Play Lab"'
-        artist: 'Desenează ceva'
-        applab: 'Creează o aplicație'
-        gamelab: 'Creați un proiect în Laboratorul de Joc'
-        weblab: 'Creați un proiect în Laboratorul Web (beta)'
       my_dashboard: "Panoul meu principal"
       course_catalog: "Catalog de cursuri"
       project_gallery: "Proiecte"

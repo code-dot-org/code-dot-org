@@ -220,8 +220,10 @@ export default class SmallFooter extends React.Component {
           style={combinedBaseStyle}
           onClick={this.clickBase}
         >
-          <UnsafeRenderedMarkdown
-            markdown={decodeURIComponent(this.props.i18nDropdown)}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: decodeURIComponent(this.props.i18nDropdown)
+            }}
           />
           <small>
             {this.renderPrivacy(styles)}

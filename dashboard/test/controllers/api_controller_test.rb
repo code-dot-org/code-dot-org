@@ -1113,7 +1113,7 @@ class ApiControllerTest < ActionController::TestCase
     teacher = create :teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER
     sign_in teacher
 
-    expected_uri = "https://api.clever.com/v1.1/teachers/#{teacher.uid}/sections"
+    expected_uri = "https://api.clever.com/v2.1/teachers/#{teacher.uid}/sections"
     auth = {authorization: "Bearer #{teacher.oauth_token}"}
     mock_response = {data: []}.to_json
     RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
@@ -1126,7 +1126,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_in teacher
     assert_nil teacher.uid
 
-    expected_uri = "https://api.clever.com/v1.1/teachers/#{auth_option.authentication_id}/sections"
+    expected_uri = "https://api.clever.com/v2.1/teachers/#{auth_option.authentication_id}/sections"
     auth = {authorization: "Bearer #{auth_option.data_hash[:oauth_token]}"}
     mock_response = {data: []}.to_json
     RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)

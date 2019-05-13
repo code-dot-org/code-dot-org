@@ -175,11 +175,6 @@ hr:
     header:
       finished_hoc: "Završih svoj Sat Kodiranja"
       sign_in_to_save: 'Prijavite se da bi spremili napredak'
-      free_play:
-        playlab: 'Napravi aplikaciju'
-        artist: 'Nacrtaj nešto'
-        calculate: 'Izračunajte nešto'
-        applab: 'Napravi aplikaciju'
       project_gallery: "Projekti"
       educate_hoc: "Hour of Code"
     user:

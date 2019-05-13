@@ -27,7 +27,7 @@ pt:
         name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: E-mail
         parent_email: Email dos Responsáveis
-        personal_email: Adereço de email pessoal <a href="%{url}">(clique aqui, se
+        personal_email: Endereço de email pessoal <a href="%{url}">(clique aqui, se
           não tiver um adereço de email)</a>
         username: Nome de utilizador
         password: Palavra-passe
@@ -267,10 +267,6 @@ pt:
     header:
       finished_hoc: Terminei minha Hora do Código
       sign_in_to_save: Inicia sessão para guardares o teu progresso
-      free_play:
-        playlab: Criar uma aplicação Play Lab
-        artist: Desenhar alguma coisa
-        applab: Criar uma aplicação App Lab
       project_gallery: Projetos
       sections: Turmas
       help_support: Ajuda e suporte

@@ -22,6 +22,8 @@ export const studentOverviewData = [
     name: 'Caley',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.notStarted
@@ -31,6 +33,8 @@ export const studentOverviewData = [
     name: 'Maddie',
     numMultipleChoiceCorrect: 3,
     numMultipleChoice: 10,
+    numMatchCorrect: 3,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: true,
     submissionTimeStamp: testDataTimestamps.inProgress
@@ -40,6 +44,8 @@ export const studentOverviewData = [
     name: 'Erin',
     numMultipleChoiceCorrect: 8,
     numMultipleChoice: 10,
+    numMatchCorrect: 8,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.newest
@@ -50,6 +56,8 @@ export const studentOverviewData = [
     numMultipleChoiceCorrect: 10,
     numMultipleChoice: 10,
     isSubmitted: true,
+    numMatchCorrect: 10,
+    numMatch: 10,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.newer
   },
@@ -58,6 +66,8 @@ export const studentOverviewData = [
     name: 'Brad',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.new
@@ -67,6 +77,8 @@ export const studentOverviewData = [
     name: 'Mike',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.old
@@ -76,6 +88,8 @@ export const studentOverviewData = [
     name: 'Dani',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.older
@@ -85,6 +99,8 @@ export const studentOverviewData = [
     name: 'Amanda',
     numMultipleChoiceCorrect: 0,
     numMultipleChoice: 10,
+    numMatchCorrect: 0,
+    numMatch: 10,
     isSubmitted: true,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.oldest
@@ -94,6 +110,8 @@ export const studentOverviewData = [
     name: 'Nkiru',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: true,
     submissionTimeStamp: testDataTimestamps.inProgress
@@ -103,15 +121,17 @@ export const studentOverviewData = [
     name: 'Karis',
     numMultipleChoiceCorrect: 7,
     numMultipleChoice: 10,
+    numMatchCorrect: 7,
+    numMatch: 10,
     isSubmitted: false,
     inProgress: false,
     submissionTimeStamp: testDataTimestamps.notStarted
   }
 ];
 
-// Data for single student assessments table
-// type: studentWithResponsesPropType
-export const studentData = {
+// Data for single student multiple choice assessment table
+// type: studentWithMCResponsesPropType
+export const studentMCData = {
   id: 1,
   name: 'Caley',
   studentResponses: [
@@ -122,6 +142,160 @@ export const studentData = {
     {isCorrect: true, responses: 'A'}
   ]
 };
+
+export const matchQuestionWith2Pairs = [
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 6,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 0,
+        isCorrect: true
+      }
+    ],
+    id: 0,
+    option: 'option 1',
+    notAnswered: 1,
+    totalAnswered: 7
+  },
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 2,
+        isCorrect: true
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 4,
+        isCorrect: false
+      }
+    ],
+    id: 1,
+    option: 'option 2',
+    notAnswered: 1,
+    totalAnswered: 7
+  }
+];
+
+export const matchQuestionWith4Pairs = [
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 6,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 0,
+        isCorrect: true
+      },
+      {
+        answer: 'answer 3',
+        numAnswered: 6,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 4',
+        numAnswered: 0,
+        isCorrect: false
+      }
+    ],
+    id: 0,
+    option: 'option 1',
+    notAnswered: 3,
+    totalAnswered: 15
+  },
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 5,
+        isCorrect: true
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 5,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 3',
+        numAnswered: 6,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 4',
+        numAnswered: 5,
+        isCorrect: false
+      }
+    ],
+    id: 1,
+    option: 'option 2',
+    notAnswered: 0,
+    totalAnswered: 15
+  },
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 0,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 15,
+        isCorrect: true
+      },
+      {
+        answer: 'answer 3',
+        numAnswered: 0,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 4',
+        numAnswered: 0,
+        isCorrect: false
+      }
+    ],
+    id: 2,
+    option: 'option 3',
+    notAnswered: 0,
+    totalAnswered: 15
+  },
+  {
+    answers: [
+      {
+        answer: 'answer 1',
+        numAnswered: 1,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 2',
+        numAnswered: 1,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 3',
+        numAnswered: 1,
+        isCorrect: false
+      },
+      {
+        answer: 'answer 4',
+        numAnswered: 0,
+        isCorrect: true
+      }
+    ],
+    id: 3,
+    option: 'option 4',
+    notAnswered: 12,
+    totalAnswered: 15
+  }
+];
 
 // Data for multiple choice overview table
 export const multipleChoiceData = [
@@ -311,6 +485,15 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(
     };
   }
 );
+
+// Data for single match question student table.
+export const matchDataForSingleStudent = {
+  id: 123,
+  question: 'Can you match these?',
+  questionNumber: 1,
+  answers: [{text: 'answer 1'}, {text: 'answer 2'}],
+  options: [{text: 'option 1'}, {text: 'option 2'}]
+};
 
 // Data for free responses assessments table.
 export const questionOne = [

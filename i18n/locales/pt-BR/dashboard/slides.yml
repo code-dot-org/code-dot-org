@@ -1626,32 +1626,53 @@ pt-BR:
       2:
         text: "Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software e criador do iLuminate."
       3:
+        text: "Então, a ciência da computação está relacionada à criatividade de várias maneiras. Imensurável, na verdade. Quer dizer, uma vez que você tenha a habilidade de escrever software, você pode colocar idéias em qualquer coisa. Eu faço isso com roupas leves. Há muito o que fazer quando você tem as ferramentas para escrever software, e as possibilidades são infinitas."
       4:
+        text: "Na próxima hora, você começará a trabalhar com ciência da computação programando sua própria festa de dança! Reunimos algumas músicas de sucesso e uma equipe de ótimos dançarinos para você tocar."
       5:
+        text: "Você usará blocos de código para escolher diferentes dançarinos, mudar seus movimentos de dança, fazê-los responder à música e torná-los interativos."
       6:
+        text: "Você verá que sua tela é dividida em três partes principais. À esquerda está o espaço de jogo. É aqui que seus dançarinos aparecerão."
       7:
+        text: "Esta área intermediária é a caixa de ferramentas. Novos blocos de código estarão disponíveis neste espaço conforme você passa pelas lições."
       8:
+        text: "O espaço à direita é o espaço de trabalho. Você pode arrastar blocos para fora da caixa de ferramentas e para o espaço de trabalho para criar seu programa."
       9:
+        text: "As instruções para cada nível estarão aqui na parte superior da tela. Se você precisar de uma dica, basta clicar na lâmpada."
       10:
+        text: "Para começar, vamos fazer um novo dançarino com esse bloco vermelho. Primeiro, arraste-o para fora da caixa de ferramentas e encaixe-o sob este bloco laranja de \"configuração\". Este dançarino é um gato e seu nome é \"meu_primeiro_dancarino\". Você pode alterar o nome para o que quiser clicando aqui."
       11:
+        text: "Você também pode mudar onde o dançarino aparece no seu espaço de jogo com isso."
       12:
+        text: "Acima do espaço de jogo temos um menu para escolher música. Há uma tonelada de músicas para escolher, então divirta-se encontrando suas favoritas. Abaixo do espaço de jogo temos o botão de execução. Quando você clica verá os dançarinos do seu programa aparecerem no espaço de jogo e a música tocará."
       13:
+        text: "Tente você mesmo! E se você está se sentindo preso, tudo bem! Apenas levante-se e mova-se, e antes que você perceba, você terá feito sua própria festa de dança. Então, o que você vai criar?"
     hoc_dance_events:
       1:
         text: "Hora do Código | Festa Dançante: Eventos"
       2:
+        text: "Eu sou Aloe Blacc. Eu sou um cantor, compositor e artista. Eu acho que a ciência da computação é realmente importante para aprender porque ciência da computação é o futuro, e eu acho que é importante para as pessoas estarem no controle da tecnologia que está literalmente controlando suas vidas."
       3:
+        text: "Para que diferentes movimentos de dança aconteçam no momento certo com a música, você pode usar algo chamado eventos. Um evento diz ao seu programa para ouvir algo acontecer e depois reagir imediatamente."
       4:
+        text: "Alguns exemplos de eventos são ouvir um clique do mouse, um botão de seta ou um toque na tela. O evento que vamos usar agora vai ouvir uma mudança na música. A mudança fará com que seu dançarino faça uma nova dança."
       5:
+        text: "Dançarinos profissionais praticam sua coreografia contando as batidas da música."
       6:
+        text: "Na música, uma medida se refere a um certo número de batidas. Na maioria das músicas populares, uma medida é de quatro tempos."
       7:
+        text: "Para que seus dançarinos se soltem, você precisará de um bloco de evento verde. Este bloco de eventos diz \"após 4 medidas\"."
       8:
+        text: "Se você arrastar um bloco roxo \"do pra sempre\", você pode escolher uma dança para o seu dançarino fazer. Porque está sob o bloco de eventos \"após 4 compassos\", o seu dançarino irá esperar por quatro compassos da música antes de iniciar a dança."
       9:
+        text: "Fique de olho no contador de compassos na parte superior da área de exibição."
       10:
+        text: "Procure e ouça o evento que acionará o código de dança. E na hora certa, nossa dançarina começa a ir."
     hoc_dance_properties:
       1:
         text: "Hora do Código | Festa Dançante: Propriedades"
       2:
+        text: "Meu nome é Maria, sou júnior na Universidade de Washington e sou engenheira amazônica do futuro."
       3:
       4:
       5:

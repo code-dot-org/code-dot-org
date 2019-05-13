@@ -9,12 +9,12 @@
     "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.",
     "instructions_important": "false",
     "display_name": "How Waze Uses Data",
-    "encrypted_teacher_markdown": "tIcDCDuS63ml0BA5dYeDGE/9AEHGX96lq0OxZL1bz0zSPSDerzh73cFJTmhn\nu6X2EQUN0HgOYEBeewYoaoXici9DBR4ELmBgUPNbkJtQ7tsegG21UhuRlNDG\n6TXBM2il2uZZdwf5yLYHIYLO+PbYKnmNu4X8F7MjGNIVwVdu1WmlVe2jwAwB\nwDQYYiXxl562xzf0wR8lxydETbShPjwFAvToqkB07WWyQFRH7yAbn95QayV1\nu6UXVYZKCzCy61+e\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 12958,
     "name_suffix": "_2019",
-    "encrypted": "false"
+    "encrypted": "false",
+    "teacher_markdown": "Check that students have answered the first two \"Routz\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
   "published": true,
   "notes": "",

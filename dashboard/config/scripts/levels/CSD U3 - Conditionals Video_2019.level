@@ -14,7 +14,7 @@
     "name_suffix": "_2019",
     "encrypted": "false",
     "long_instructions": "## Questions to Consider\r\n\r\n* What’s an example of when you would need an “if/else” statement?",
-    "encrypted_teacher_markdown": "tfdHCwj7XnkxaB3BFrLGSkskdXmOq/h5hL2TCmOMD84g+QQQcyH+PlB+s4+G\naFWvenBfuxjwJwd0Ld5TsEyvfISzTtl4SZLEvYJN2if9hojwtyGtnMnbIqxd\nhV/MYB4+d7FlaKQHwMbbs9+DqYLpdtVDxjmYE5Fn7He1icdu3D6+dPrU0uJz\nfOw0c8dff8t+r4Kv+iIQ/FPl48dOrgpd9gJ3U8D8IzvIJUA6ZedhfgbOT1Vs\n6IczIqzXWMiROWGpMuaUTLTwuhI0gnzB7DO3Q/VKfLN1VyqOnGfD85BLt6El\nOeImtzCmXtfGPARZRNtWGuigwBWt+TAy0ekcA8J/XG6gCxK5FIasrPPsEg2t\nKCQbWmioiOE08R7SecdOuaGOQdNlLiPe8IBE5SZTZpTd34XBBshvS5aImpwN\ntlxSry1AdgetQD937/gOKrkvU4N0zr3zf0nGc/vub3cg3yruZKojW1oEsJAK\n/rtuqf7b8QlLwc5W7mKwzSGf4Bd+M6yPjubNPgx/W3+t/xjoWFT/8/bKs6ki\ntU/9VKXN96Wswf0GWySL94vMjtCFdtakV+9SVYXrZzzRe9jZm5ZQ7YKB4A==\n"
+    "teacher_markdown": "## Discussion Goals\r\n\r\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation.  For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right.  Challenge the students to think about when they would just use an `if` block, and when an `if/else` block is necessary.  "
   },
   "published": true,
   "notes": "",

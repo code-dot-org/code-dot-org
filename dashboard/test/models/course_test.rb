@@ -191,6 +191,20 @@ class CourseTest < ActiveSupport::TestCase
     assert_nil summary[:scripts][0]['stageDescriptions']
   end
 
+  test 'summarize_version' do
+    create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+
+    summary = csp_2018.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+
+    summary = csp_2019.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+  end
+
   class SelectCourseScriptTests < ActiveSupport::TestCase
     setup do
       @course = create(:course, name: 'my-course')

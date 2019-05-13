@@ -13,8 +13,8 @@
     "parent_level_id": 11233,
     "name_suffix": "_2019",
     "long_instructions": "## Question to Consider\r\n\r\n* What does the draw function do?",
-    "encrypted_teacher_markdown": "26QclSbKli2oiYlJnUWgLbzeVgV0wuI80LAmStuGUPBOJUCABJsQ+W871XXa\n/yw/wJ+8Ya0YjFNnhxB+lGXOqDEDDsDQN5lFPgl3ngmKj6sP8cpDUuRW3C9c\nUmrToLMJ0jRqHuA+ea124QCvRmhWOoaK8mXRQgHoNccsp0pO23J+ubelN6cY\nSWFKWHBKmAYKnghY6mtyfELaQ8Dt3dNCZ+URrucdCnwsAfL1Qw5FdnqjnBUN\nkV8CcsCpNJbhHYBq5LMt6GjPB0WXl1qRRoYd9gBLn5GeP3+/Hk2m40FxGlqG\nLtpwZmbxMPJahiYvjNRkFsnsj864gP1aft3oyZhv3MY9X/YYgULH3HujoCN1\nDUlKKMmg+B9bPKVELyIzAkynAqR2PQQXRp7PY0NJvtDk9qb5O0LZ+24HcBfK\nRxUs9V/1NKYk5/dkfNVMEWZhJkXQLyUiLiDXM5JIL+3hrXEKu1WsrbEn2LcF\nBgQT2pYGpoxoRlpQJ6CyMoLqvyQKGd80h7G6VBbqYB7wM4X/jGD/mDe1dSVI\nLvUDypMcawgSiZgUvtZmrWGSUqy6+h5Uy7hhOjL0ehCWFkQVMgYL5ZUIMQl1\nMQocON6tz5xdmR/GcBMY2+wY4XaPo+fJXgXda3KNkMi1qvGWj0MYaSzCo+Ro\nAhWNNAx8oXpaPzqExOP3M4bD2+Ac2cq1hnwu2RxqM9eo0/9PNV76Z6nF5tWz\nEga2tW8Z9iCOZb2WuH7dEXayVET418KPNb//PxIrzQZ0vU93+6bquhiXqTSB\nBOVZzlIW3Qy895w88m5fMMW0TmdkUsNmy+5em+cQAk5JsKF2f4uZZdyA7bzD\n1QuIdn8sdxIGSjZoh5nYDfI0zx7gcVnTKwC5G9Q2qiwx/sXxKrHWLdNpLuTw\nssPyNyHEv2n+eP1Uq61oYVkjnqH/C/QIwLo+agM=\n",
-    "encrypted": "false"
+    "encrypted": "false",
+    "teacher_markdown": "## Discussion Goal\r\n\r\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\".   This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\r\n\r\n### Misconception Alert!\r\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop.  If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
   },
   "published": true,
   "notes": "",

@@ -4,8 +4,6 @@
   = tag 'meta', property: 'og:description', content: t('share.description')
 
 
-- show_ui_tips = false
-
 -# Student modal
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
@@ -15,11 +13,9 @@
   = render partial: 'layouts/terms_interstitial'
 - elsif (current_user && current_user.show_school_info_interstitial?) || @force_school_info_interstitial
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
-- else
-  - show_ui_tips = true
 
 - if current_user
-  = render partial: 'home/homepage', locals: {show_ui_tips: show_ui_tips}
+  = render partial: 'home/homepage'
 
 %br/
 %br/

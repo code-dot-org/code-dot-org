@@ -275,8 +275,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.login_required
     assert script.hideable_stages
     assert script.project_sharing
-
-    File.unstub(:write)
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -358,6 +356,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
 
     assert_nil Script.find_by_name(script.name).project_sharing
 
@@ -431,8 +430,6 @@ class ScriptsControllerTest < ActionController::TestCase
     script = Script.find_by_name('test-script-create')
     assert_equal 'test-script-create', script.name
     assert script.has_lesson_plan?
-
-    File.unstub(:write)
   end
 
   test 'can update with has_lesson_plan param' do

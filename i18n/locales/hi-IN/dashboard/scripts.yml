@@ -195,6 +195,10 @@ hi:
         dance-extras:
           title: डांस करते रहें
           description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।
+        coursef-2019:
+          stages:
+            Internet:
+              name: इंटरनेट
         dance-low:
           stages:
             Dance Party:
@@ -203,10 +207,6 @@ hi:
           stages:
             Dance Party:
               name: डांस पार्टी
-        coursee-2019:
-          stages:
-            Conditionals:
-              name: शर्तें
         andrea-test:
           stages:
             'null':

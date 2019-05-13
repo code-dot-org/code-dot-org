@@ -1,3 +1,4 @@
+hidden false
 login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
@@ -18,6 +19,7 @@ level 'CSD U1L01 TFMD_2019', named: true
 
 stage 'The Problem Solving Process', flex_category: 'csd1_1'
 level 'CSD U1L02 TFMD_2019', named: true
+level 'CSD Problem Solving Process Video', named: true
 
 stage 'Exploring Problem Solving', flex_category: 'csd1_1'
 level 'CSD U1L03 TFMD_2019', named: true

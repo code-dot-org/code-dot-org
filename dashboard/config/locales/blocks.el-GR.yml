@@ -920,7 +920,14 @@ el:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο
+              τόξο
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
       gamelab_setDirection:
         text: όρισε {SPRITE} κατεύθυνση κίνησης {DIRECTION}
       gamelab_setFrameDelay:
@@ -964,6 +971,11 @@ el:
         text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} πατιέται"
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': όταν
@@ -1059,6 +1071,11 @@ el:
         text: όταν {SPRITE1} αγγίζει {SPRITE2}
       gamelab_whenTouchingAny:
         text: όταν {SPRITE} αγγίζει οποιοδήποτε {GROUP}
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
       gamelab_whenTrue:
         text: όταν {CONDITION} αληθές
       gamelab_whenUpArrow:
