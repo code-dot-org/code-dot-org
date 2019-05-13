@@ -574,14 +574,17 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
         general: {
           'sampleMatrix_0' => {
             'Strongly Agree' => 2,
-            'Disagree' => 1
+            'Disagree' => 1,
+            'num_respondents' => 3
           },
           'sampleMatrix_1' => {
             'Agree' => 3,
+            'num_respondents' => 3
           },
           'sampleScale' => {
             2 => 1,
-            4 => 1
+            4 => 1,
+            'num_respondents' => 2
           },
           'sampleText' => ['Here are my thoughts', 'More thoughts']
         }
@@ -616,6 +619,63 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorText'].delete @workshop.facilitators.second.name
     first_facilitator_expected_results['Day 1'][:facilitator]['sampleFacilitatorScale'].delete @workshop.facilitators.second.name
     assert_equal(first_facilitator_expected_results, generate_workshops_survey_summary([@workshop], @expected_questions))
+  end
+
+  test 'test get_session_summary' do
+    # The survey results for this session.
+    survey_for_session =
+      [{"type_of_last_pd" =>
+         ["I completed an online course/webinar.",
+          "I participated in a professional learning community/lesson study/teacher study group.",
+          "I received assistance or feedback from a formally designated coach/mentor.",
+          "I took a formal course for college credit."],
+        "reasons_for_no_PD" => ["Did not have school/admin support", "my other text"],
+        "wouldYou220" => "No, thanks.",
+        "permission" => "No, I do not give permission to quote me."},
+       {"type_of_last_pd" =>
+         ["I completed an online course/webinar.",
+          "I participated in a professional learning community/lesson study/teacher study group.",
+          "I received assistance or feedback from a formally designated coach/mentor."],
+        "reasons_for_no_PD" => ["Did not have financial support", "second other text"],
+        "wouldYou220" => "No, thanks.",
+        "permission" => "No, I do not give permission to quote me."}]
+
+    # A multi-choice question.
+
+    expected_result =
+      {"I completed an online course/webinar." => 2,
+       "I participated in a professional learning community/lesson study/teacher study group." => 2,
+       "I received assistance or feedback from a formally designated coach/mentor." => 2,
+       "I took a formal course for college credit." => 1,
+       "num_respondents" => 2}
+
+    result = get_session_summary(survey_for_session, "type_of_last_pd")
+    assert_equal(result, expected_result)
+
+    # A multi-choice question with Other response containing free text.
+
+    expected_result =
+      {"Did not have school/admin support" => 1,
+       "my other text" => 1,
+       "Did not have financial support" => 1,
+       "second other text" => 1,
+       "num_respondents" => 2}
+
+    result = get_session_summary(survey_for_session, "reasons_for_no_PD")
+    assert_equal(result, expected_result)
+
+    # A question that wasn't answered by any users.
+
+    result = get_session_summary(survey_for_session, "pd_activities_0")
+    assert_equal(result, {})
+
+    # A single-choice question.
+
+    expected_result =
+      {"No, I do not give permission to quote me." => 2, "num_respondents" => 2}
+
+    result = get_session_summary(survey_for_session, "permission")
+    assert_equal(result, expected_result)
   end
 
   test 'generate facilitator averages works off provided summary data' do
