@@ -767,6 +767,13 @@ FactoryGirl.define do
     script
   end
 
+  factory :user_school_info do
+    user {create :teacher}
+    start_date DateTime.now
+    last_confirmation_date DateTime.now
+    association :school_info
+  end
+
   factory :peer_review do
     submitter {create :teacher}
     from_instructor false

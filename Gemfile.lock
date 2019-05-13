@@ -332,7 +332,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
-    brakeman (4.3.1)
+    brakeman (4.5.0)
     builder (3.2.3)
     cancancan (1.15.0)
     childprocess (0.9.0)
