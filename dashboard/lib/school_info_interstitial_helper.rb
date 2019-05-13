@@ -30,6 +30,8 @@ module SchoolInfoInterstitialHelper
   def self.show_school_info_confirmation_dialog?(user)
     return false unless user.teacher?
 
+    return true if user.school_info.nil?
+
     school_info = user.school_info
 
     check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && school_info.school_info_complete?

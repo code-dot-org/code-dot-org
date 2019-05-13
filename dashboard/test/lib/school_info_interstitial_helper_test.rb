@@ -28,6 +28,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert_nil school_info.school_id
     refute_nil school_info.school_name
     assert_nil school_info.full_address
+
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
@@ -88,17 +89,35 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  test 'school info confirmation dialog is shown to a user when school info is nil' do
-    school_info = SchoolInfo.new
-    school_info.country = nil
-    school_info.school_type = nil
-    school_info.school_name = nil
-    school_info.full_address = nil
+  test 'shows school info confirmation dialog when user school info is nil' do
+    user = create :user
+    user.user_type = 'teacher'
+    user.save
 
-    assert_nil school_info.school_id
-    assert_nil school_info.school_type
-    assert_nil school_info.school_name
-    assert_nil school_info.country
-    assert_equal SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?, true
+    user.school_info = nil
+
+    assert_nil user.school_info
+    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
+  end
+
+  test 'does not show school info confirmation dialog if user is not a teacher' do
+    user = create :user
+
+    assert_equal user.user_type, 'student'
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
+  end
+
+  test 'does not show school info confirmation dialog when last confirmation date is less than a year' do
+    user = create :user
+    user.user_type = 'teacher'
+
+    user.user_school_infos.last_confimation_date = '2019-4-01 01:29:18 -0500'
+
+    school_info = SchoolInfo.new
+    school_info.country = 'United States'
+    school_info.school_type = SchoolInfo::SCHOOL_TYPE_OTHER
+    school_info.school_name = 'Top Corners School'
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
   end
 end
