@@ -1799,25 +1799,28 @@ applabCommands.getList = function(opts) {
 var handleGetListSync = function(opts, values) {
   let columnList = [];
 
-  if (values.length === 0) {
-    let url;
-    datasetLibrary.datasets.forEach(dataset => {
-      if (dataset.name === opts.tableName) {
-        url = dataset.url;
-      }
-    });
-    if (url) {
-      Applab.storage.importDataset(
-        opts.tableName,
-        url,
-        () => applabCommands.getList(opts),
-        () => console.log('error')
-      );
-    } else {
-      opts.callback(columnList);
-    }
-  } else {
+  if (values.length > 0) {
     values.forEach(row => columnList.push(row[opts.columnName]));
+    opts.callback(columnList);
+    return;
+  }
+
+  let url;
+  datasetLibrary.datasets.forEach(dataset => {
+    if (dataset.name === opts.tableName) {
+      url = dataset.url;
+    }
+  });
+  if (url) {
+    // Import the dataset, then try getList again.
+    Applab.storage.importDataset(
+      opts.tableName,
+      url,
+      () => applabCommands.getList(opts),
+      () => console.log('error')
+    );
+  } else {
+    // No dataset with the specified name, call back into interpreter and return the empty list.
     opts.callback(columnList);
   }
 };
