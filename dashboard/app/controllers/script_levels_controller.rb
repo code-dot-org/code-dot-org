@@ -440,6 +440,10 @@ class ScriptLevelsController < ApplicationController
     return false
   end
 
+  def set_redirect_override
+    set_script_redirect_override(params[:script_id]) if params[:script_id]
+  end
+
   def redirect_script(script, locale)
     return nil unless script
 
