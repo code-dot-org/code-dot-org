@@ -125,7 +125,7 @@ export default connect(
       removeWatchExpression: PropTypes.func.isRequired,
       evalInCurrentScope: PropTypes.func.isRequired,
       appendLog: PropTypes.func.isRequired,
-      jsInterpreter: PropTypes.func.isRequired,
+      jsInterpreter: PropTypes.object,
 
       // passed from above
       debugButtons: PropTypes.bool,
@@ -139,7 +139,7 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog('> ' + input);
+        this.appendLog(input);
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -163,7 +163,7 @@ export default connect(
             this.appendLog(String(err));
           }
         } else {
-          this.appendLog('< (not running)');
+          this.appendLog('(not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -217,13 +217,27 @@ export default connect(
       }
     }
 
-    displayOutputToConsole() {
+    displayOutputsWithFlag() {
+      // logoutput is array
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((output, i) => {
           if (typeof output === 'object') {
             output = output.toJS();
           }
           return <Inspector key={i} data={output} />;
+        });
+      }
+    }
+
+    debugOutputs() {
+      // logOutput is string
+      if (this.props.logOutput.length > 0) {
+        return this.props.logOutput.split('\n').map((output, i) => {
+          if (i % 2 === 0) {
+            return <div key={i}>&gt; {output}</div>;
+          } else if (i % 2 !== 0) {
+            return <div key={i}>&lt; {output}</div>;
+          }
         });
       }
     }
@@ -266,8 +280,8 @@ export default connect(
             }}
           >
             {experiments.isEnabled('react-inspector')
-              ? this.displayOutputToConsole()
-              : this.props.logOutput}
+              ? this.displayOutputsWithFlag()
+              : this.debugOutputs()}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>

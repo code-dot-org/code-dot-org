@@ -71,7 +71,7 @@ describe('The DebugConsole component', () => {
       });
 
       it('a notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).to.contain('< (not running)');
+        expect(debugOutput().text()).to.contain('(not running)');
       });
 
       it('the text gets removed from the input', () => {
@@ -157,7 +157,7 @@ describe('The DebugConsole component', () => {
       });
 
       it('no notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).not.to.contain('< (not running)');
+        expect(debugOutput().text()).not.to.contain('(not running)');
       });
 
       it('the result of evaluating the expression gets spit out', () => {
@@ -166,6 +166,49 @@ describe('The DebugConsole component', () => {
 
       it('the text gets removed from the input', () => {
         expect(debugInputText()).not.to.contain('1+1;');
+      });
+    });
+
+    describe('When typing an array into the text input and pressing enter,', () => {
+      beforeEach(() => submit('["foo", "bar"];'));
+
+      it('the text gets appended to the output', () => {
+        expect(debugOutput().text()).to.contain('> ["foo", "bar"];');
+      });
+
+      it('no notice about the interpreter not running gets spit out', () => {
+        expect(debugOutput().text()).not.to.contain('(not running)');
+      });
+
+      it('the result of evaluating the expression gets spit out', () => {
+        expect(debugOutput().text()).to.contain(
+          '> ["foo", "bar"];< ["foo","bar"]'
+        );
+      });
+
+      it('the text gets removed from the input', () => {
+        expect(debugInputText()).not.to.contain('["foo", "bar"];');
+      });
+    });
+
+    describe('When typing an object into the text input and pressing enter,', () => {
+      beforeEach(() => submit('{foo: "bar"};'));
+
+      it('the text gets appended to the output', () => {
+        expect(debugOutput().text()).to.contain('> {foo: "bar"};');
+      });
+
+      it('no notice about the interpreter not running gets spit out', () => {
+        expect(debugOutput().text()).not.to.contain('(not running)');
+      });
+
+      // debugOutput().text() contains < bar instead {foo: "bar"} because it hasn't gone through the this.props.jsInterpreter.interpreter.marshalInterpreterToNative(result) to get interpreted back to {foo: "bar"}
+      it('the result of evaluating the expression gets spit out', () => {
+        expect(debugOutput().text()).to.contain('{foo: "bar"};< bar');
+      });
+
+      it('the text gets removed from the input', () => {
+        expect(debugInputText()).not.to.contain('{foo: "bar"};');
       });
     });
 
@@ -178,7 +221,7 @@ describe('The DebugConsole component', () => {
 
       it('the error gets appended to the output', () => {
         expect(debugOutput().text()).to.contain(
-          '< ReferenceError: a is not defined'
+          'ReferenceError: a is not defined'
         );
       });
     });
