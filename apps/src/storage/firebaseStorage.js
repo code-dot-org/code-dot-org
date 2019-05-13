@@ -901,6 +901,14 @@ FirebaseStorage.importCsv = function(
     .then(onSuccess, onError);
 };
 
+/**
+ * Imports a dataset specified by a URL. Used by the dataset picker modal to allow users to import
+ * Code.org provided datasets.
+ * @param {string} tableName
+ * @param {string} url
+ * @param onSuccess
+ * @param onError
+ */
 FirebaseStorage.importDataset = function(tableName, url, onSuccess, onError) {
   let request = new XMLHttpRequest();
   request.open('GET', url, true);
