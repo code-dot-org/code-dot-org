@@ -23,6 +23,12 @@
       "description": "The top 20 songs in many regions of the world, including 30 second MP3 links to most songs",
       "url": "/api/v1/dataset-library/spotify.csv",
       "columns": "Track Name,Artist,Streams,songURL,Album Image,previewMP3,Position,Region,Country Code"
+    },
+    {
+      "name": "weather",
+      "description": "Daily weather forecasts for the next five days for a selection of US cities.",
+      "url": "/api/v1/dataset-library/weather.csv",
+      "columns": "city,date,lowTemp,highTemp,condition,icon"
     }
   ]
 }
