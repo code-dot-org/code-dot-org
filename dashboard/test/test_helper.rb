@@ -594,6 +594,8 @@ end
 # the same id
 def storage_id(_)
   return storage_id_for_user_id(current_user.id) if current_user
+  id = storage_id_from_cookie if request.cookies[storage_id_cookie_name]
+  return id if id
   Random.new.rand(1_000_000)
 end
 
