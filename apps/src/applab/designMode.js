@@ -581,7 +581,8 @@ designMode.readProperty = function(element, name) {
 designMode.onDuplicate = function(element, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    return duplicateScreen(element);
+    const newScreenId = duplicateScreen(element);
+    return elementUtils.getPrefixedElementById(newScreenId);
   }
 
   var duplicateElement = $(element).clone(true)[0];
@@ -1512,6 +1513,27 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.setAsClipboardElement = function(element) {
+  if (!element) {
+    return;
+  }
+  let madeUndraggable;
+  const jqueryElement = $(element);
+  const isScreen = jqueryElement.hasClass('screen');
+  if (isScreen) {
+    // Unwrap the draggable wrappers around the child elements:
+    madeUndraggable = makeUndraggable(jqueryElement.children());
+  }
+
+  // Remember the current element on the clipboard
+  clipboardElement = jqueryElement.clone(true)[0];
+
+  // Restore the draggable wrappers on the child elements:
+  if (isScreen && madeUndraggable) {
+    makeDraggable(jqueryElement.children());
+  }
+};
+
 designMode.addKeyboardHandlers = function() {
   $('#designModeViz').keydown(function(event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
@@ -1522,18 +1544,13 @@ designMode.addKeyboardHandlers = function() {
     if (event.altKey || event.ctrlKey || event.metaKey) {
       switch (event.which) {
         case KeyCodes.COPY:
-          if (currentlyEditedElement) {
-            // Remember the current element on the clipboard
-            clipboardElement = $(currentlyEditedElement).clone(true)[0];
-          }
+          designMode.setAsClipboardElement(currentlyEditedElement);
           break;
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
-            let duplicateElement = designMode.onDuplicate(clipboardElement);
-            if (duplicateElement) {
-              clipboardElement = $(duplicateElement).clone(true)[0];
-            }
+            const duplicateElement = designMode.onDuplicate(clipboardElement);
+            designMode.setAsClipboardElement(duplicateElement);
           }
           break;
         default:
