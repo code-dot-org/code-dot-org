@@ -65,7 +65,7 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if !override_redirect_for_course?(course) && redirect_course = redirect_course(course)
+    if !override_course_redirect?(course) && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
