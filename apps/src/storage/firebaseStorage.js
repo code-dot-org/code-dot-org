@@ -901,6 +901,26 @@ FirebaseStorage.importCsv = function(
     .then(onSuccess, onError);
 };
 
+FirebaseStorage.importDataset = function(tableName, url, onSuccess, onError) {
+  let request = new XMLHttpRequest();
+  request.open('GET', url, true);
+  request.responseType = 'text';
+  request.onload = function() {
+    FirebaseStorage.createTable(
+      tableName,
+      () =>
+        FirebaseStorage.importCsv(
+          tableName,
+          request.response,
+          onSuccess,
+          onError
+        ),
+      onError
+    );
+  };
+  request.send();
+};
+
 export default FirebaseStorage;
 
 export function initFirebaseStorage(config) {
