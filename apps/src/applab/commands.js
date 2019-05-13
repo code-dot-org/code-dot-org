@@ -1791,16 +1791,45 @@ applabCommands.handleReadValue = function(opts, value) {
 };
 
 applabCommands.getList = function(opts) {
+  validateGetListArgs(opts.tableName, opts.columnName);
   var onSuccess = handleGetListSync.bind(this, opts);
   var onError = handleGetListSyncError.bind(this, opts);
   Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
+};
+
+var validateGetListArgs = function(tableName, columnName) {
+  const datasetNames = datasetLibrary.datasets.map(d => d.name);
+  if (datasetNames.indexOf(tableName) === -1) {
+    outputWarning(
+      tableName +
+        ' is not a data set in this project.' +
+        ' Check the Data tab to see the names of your tables.'
+    );
+  }
+  for (let dataset of datasetLibrary.datasets) {
+    if (dataset.name === tableName) {
+      const columnList = dataset.columns.split(',');
+      if (columnList.indexOf(columnName) === -1) {
+        outputWarning(
+          columnName +
+            ' is not a column in ' +
+            tableName +
+            'Check the Data tab for the names of the columns in that table.'
+        );
+      }
+    }
+  }
 };
 
 var handleGetListSync = function(opts, values) {
   let columnList = [];
 
   if (values.length > 0) {
-    values.forEach(row => columnList.push(row[opts.columnName]));
+    values.forEach(row => {
+      if (row.hasOwnProperty(opts.columnName)) {
+        columnList.push(row[opts.columnName]);
+      }
+    });
     opts.callback(columnList);
     return;
   }
