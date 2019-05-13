@@ -1814,7 +1814,7 @@ var validateGetListArgs = function(tableName, columnName) {
           columnName +
             ' is not a column in ' +
             tableName +
-            'Check the Data tab for the names of the columns in that table.'
+            '. Check the Data tab for the names of the columns in that table.'
         );
       }
     }
