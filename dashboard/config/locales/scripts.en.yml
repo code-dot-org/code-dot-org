@@ -10213,7 +10213,7 @@ en:
               description_student: ''
               description_teacher: ''
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Angry Birds
               description_student: ''
               description_teacher: ''
             Relay Programming:
@@ -10221,15 +10221,15 @@ en:
               description_student: ''
               description_teacher: ''
             Debugging in Maze:
-              name: Debugging in Maze
+              name: Debugging with Scrat
               description_student: ''
               description_teacher: ''
             Programming in Collector:
-              name: Programming in Collector
+              name: Collecting Treasure with Laurel
               description_student: ''
               description_teacher: ''
             Programming in Artist:
-              name: Programming in Artist
+              name: Creating Art with Code
               description_student: ''
               description_teacher: ''
             'Loops: Getting Loopy':
@@ -10241,7 +10241,7 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Sticker Art with Loops
               description_student: ''
               description_teacher: ''
             Copyright and Creativity:
@@ -10249,19 +10249,19 @@ en:
               description_student: ''
               description_teacher: ''
             'Concept Practice with Minecraft ':
-              name: 'Concept Practice with Minecraft '
+              name: Looking Ahead with Minecraft
               description_student: ''
               description_teacher: ''
             Nested Loops in Bee:
-              name: Nested Loops in Bee
+              name: Nested Loops in Maze
               description_student: ''
               description_teacher: ''
             Nested Loops in Frozen:
-              name: Nested Loops in Frozen
+              name: Snowflakes with Anna and Elsa
               description_student: ''
               description_teacher: ''
             While Loops in Farmer:
-              name: While Loops in Farmer
+              name: While Loops with the Farmer
               description_student: ''
               description_teacher: ''
             Until Loops in Maze:
@@ -10273,11 +10273,11 @@ en:
               description_student: ''
               description_teacher: ''
             Conditionals in Bee:
-              name: Conditionals in Bee
+              name: If/Else with Bee
               description_student: ''
               description_teacher: ''
             Conditionals & Loops in Harvester:
-              name: Conditionals & Loops in Harvester
+              name: Harvesting with Conditionals
               description_student: ''
               description_teacher: ''
             'Functions: Songwriting':
@@ -10289,11 +10289,11 @@ en:
               description_student: ''
               description_teacher: ''
             Functions in Harvester:
-              name: Functions in Harvester
+              name: Functions with Harvester
               description_student: ''
               description_teacher: ''
             Functions in Artist:
-              name: Functions in Artist
+              name: Functions with Artist
               description_student: ''
               description_teacher: ''
             Screen Out the Mean:
@@ -10321,15 +10321,15 @@ en:
               description_student: ''
               description_teacher: ''
             Variables as Constant in Artist:
-              name: Variables as Constant in Artist
+              name: Variables with Artist
               description_student: ''
               description_teacher: ''
             Variables that Change in Bee:
-              name: Variables that Change in Bee
+              name: Changing Variables with Bee
               description_student: ''
               description_teacher: ''
             Variables that Change in Artist:
-              name: Variables that Change in Artist
+              name: Changing Variables with Artist
               description_student: ''
               description_teacher: ''
             For Loop Fun:
@@ -10337,19 +10337,19 @@ en:
               description_student: ''
               description_teacher: ''
             For Loops in Bee:
-              name: For Loops in Bee
+              name: For Loops with Bee
               description_student: ''
               description_teacher: ''
             For Loops in Artist:
-              name: For Loops in Artist
+              name: For Loops with Artist
               description_student: ''
               description_teacher: ''
             Learning Sprites with Sprite Lab:
-              name: Learning Sprites with Sprite Lab
+              name: Learning Sprite Lab
               description_student: ''
               description_teacher: ''
             Alien Dance Party with Sprite Lab:
-              name: Alien Dance Party with Sprite Lab
+              name: Alien Dance Party
               description_student: ''
               description_teacher: ''
             Pet Giraffe with Sprite Lab:
@@ -10397,13 +10397,13 @@ en:
               description_student: ''
               description_teacher: ''
             Concept Practice with Minecraft:
-              name: Concept Practice with Minecraft
+              name: Looking Ahead with Minecraft
             Editing Behaviors:
-              name: Editing Behaviors
+              name: Behaviors in Sprite Lab
             Virtual Pet with Sprite Lab:
               name: Virtual Pet with Sprite Lab
             Build A Project:
-              name: Build A Project
+              name: End of Course Project
             Dance Party:
               name: Dance Party
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -10769,15 +10769,15 @@ en:
               description_student: ''
               description_teacher: ''
             Loops in Ice Age:
-              name: Loops in Ice Age
+              name: Loops with Scrat
               description_student: ''
               description_teacher: ''
             Loops in Collector:
-              name: Loops in Collector
+              name: Loops with Laurel
               description_student: ''
               description_teacher: ''
             Loops in Artist:
-              name: Loops in Artist
+              name: Drawing Gardens with Loops
               description_student: ''
               description_teacher: ''
             'Events: The Big Event':
@@ -10795,13 +10795,13 @@ en:
             Learn to Drag and Drop:
               name: Learn to Drag and Drop
             Programming in Maze:
-              name: Programming in Maze
+              name: Programming with Scrat
             Programming in Harvester:
-              name: Programming in Harvester
+              name: Programming with Harvester
             Tell a Story in Play Lab:
-              name: Tell a Story in Play Lab
+              name: On the Move with Events
             Make a Game in Play Lab:
-              name: Make a Game in Play Lab
+              name: A Royal Battle with Events
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
         removed19:
