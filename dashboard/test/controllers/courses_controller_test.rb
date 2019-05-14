@@ -91,7 +91,8 @@ class CoursesControllerTest < ActionController::TestCase
     create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
 
     get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
-
+    assert_response :ok
+    get :show, params: {course_name: 'csp-2017'}
     assert_response :ok
   end
 
