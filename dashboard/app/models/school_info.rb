@@ -278,4 +278,22 @@ class SchoolInfo < ActiveRecord::Base
   def effective_school_name
     school.try(:name) || school_name
   end
+
+  def private_school?
+    school_type.eql? SCHOOL_TYPE_PRIVATE
+  end
+
+  def public_school?
+    school_type.eql? SCHOOL_TYPE_PUBLIC
+  end
+
+  def charter_school?
+    school_type.eql? SCHOOL_TYPE_CHARTER
+  end
+
+  # Check if school info is complete to stop showing
+  # school info interstitial
+  def school_info_complete?
+    school_type.present? && school_name.present? && country.eql?('US')
+  end
 end
