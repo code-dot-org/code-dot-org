@@ -795,14 +795,12 @@ zh-TW:
     new: "建立新專案"
     rename: "重新命名"
     save: "儲存"
-    delete: "删除"
     import: "匯入"
     share_link_import_bad_link_header: "分享的連結無法識別"
     share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
     share_link_import_error_header: "有地方出錯了。"
     share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
-    my_projects: "我的專案"
     project_gallery: "所有專案"
     publish: "發佈"
     unpublish: "取消發佈"
@@ -814,22 +812,14 @@ zh-TW:
     embed: "嵌入"
     advanced_share: "顯示進階選項"
     no_projects: "你目前沒有創建任何專案，點擊上方其中一個按鈕來開始一個專案。"
-    close: "關閉"
-    more: "更多"
     name: "你的名字"
     updated: "最後更新於"
     project_type: "專案類型"
     help_text: "點擊下方的<strong>做一個 App</strong>或<strong>畫一些東西</strong>來開始一個新的專案！<br/>你可以隨時回來繼續你的專案。"
     need_help: "試試這些課程來幫助你開始新專案"
     thumbnail_help: "你的專案縮圖不正確嗎？運行你的 app 以產生新的縮圖。注意，可能需要幾個小時後才能看到更新後的圖片。"
-    really_delete: '要刪除嗎？'
-    delete_yes: '是'
-    delete_no: '否'
     saved: "已儲存"
     not_saved: "未儲存"
-    cancel: '取消'
-    delete_confirm_title: 確定要刪除這個專案？
-    delete_confirm_text: "刪除您當前的專案，將會把它從你的專案清單中永久移除，你已分享的連結也會永久失效。"
     view_all: '檢視我的專案'
     remix: '改編'
     click_to_remix: "點擊「改編」，創造自己的版本！"
