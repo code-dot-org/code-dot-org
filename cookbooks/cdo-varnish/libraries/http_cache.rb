@@ -233,7 +233,7 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: '/tracking_pixel',
+            path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: whitelisted_cookies
           }

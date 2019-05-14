@@ -1,6 +1,6 @@
 require 'cdo/firehose'
 
-class TrackingPixelController < ApplicationController
+class CurriculumTrackingPixelController < ApplicationController
   def index
     prevent_caching
     curriculum_page = URI.unescape(params[:from])
