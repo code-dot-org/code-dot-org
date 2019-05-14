@@ -101,12 +101,15 @@ class StorageIdTest < Minitest::Test
     cookie_value = CGI.escape(storage_encrypt_id(cookie_storage_id))
     request.stubs(:cookies).returns({storage_id_cookie_name => cookie_value})
 
-    assert_equal cookie_storage_id, storage_id_from_cookie
+    # returns nil if storage id is invalid
+    assert_nil storage_id_from_cookie
 
+    # returns storage id from cookie if unowned
     @user_storage_ids_table.insert(user_id: nil, id: cookie_storage_id)
     assert_equal cookie_storage_id, storage_id_from_cookie
 
+    # returns nil if storage id from cookie is owned by a user
     @user_storage_ids_table.where(id: cookie_storage_id).update(user_id: 2)
-    assert_equal cookie_storage_id, storage_id_from_cookie
+    assert_nil storage_id_from_cookie
   end
 end

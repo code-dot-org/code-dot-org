@@ -23,6 +23,12 @@ Scenario: Project Ownership
   And check that the URL matches "/edit$"
   And I save the URL
 
+  # Make sure that project ownership persists via storage_id cookie.
+
+  And I reload the page
+  And I wait for the page to fully load
+  And check that the URL matches "/edit$"
+
   # The storage_id cookie is sent with this account creation request,
   # leading to a storage_id cookie takeover.
 
@@ -31,10 +37,9 @@ Scenario: Project Ownership
   And I wait for the page to fully load
   And check that the URL matches "/edit$"
 
-  # Verify existing buggy behavior. A signed-out user now owns the projects of
-  # the user who took over the storage id.
+  # After takeover, the signed-out user no longer owns the project.
 
   When I sign out
   And I navigate to the saved URL
   And I wait for the page to fully load
-  And check that the URL matches "/edit$"
+  And check that the URL matches "/view$"
