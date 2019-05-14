@@ -290,10 +290,4 @@ class SchoolInfo < ActiveRecord::Base
   def charter_school?
     school_type.eql? SCHOOL_TYPE_CHARTER
   end
-
-  # Check if school info is complete to stop showing
-  # school info interstitial
-  def school_info_complete?
-    school_type.present? && school_name.present? && country.eql?('US')
-  end
 end
