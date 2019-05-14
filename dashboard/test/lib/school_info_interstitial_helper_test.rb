@@ -28,6 +28,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert_nil school_info.school_id
     refute_nil school_info.school_name
     assert_nil school_info.full_address
+
     assert SchoolInfoInterstitialHelper.complete? school_info
   end
 
@@ -86,5 +87,23 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
 
     school_info.school_type = SchoolInfo::SCHOOL_TYPE_CHARTER
     refute SchoolInfoInterstitialHelper.complete? school_info
+  end
+
+  test 'shows school info confirmation dialog when user school info is nil' do
+    user = create :user
+    user.user_type = 'teacher'
+    user.save
+
+    user.school_info = nil
+
+    assert_nil user.school_info
+    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
+  end
+
+  test 'does not show school info confirmation dialog if user is not a teacher' do
+    user = create :user
+
+    assert_equal user.user_type, 'student'
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
   end
 end
