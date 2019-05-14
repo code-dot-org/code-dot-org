@@ -536,7 +536,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
-  test 'update scholarship status' do
+  test 'update scholarship status for local summer workshop' do
     workshop = create :pd_workshop, :local_summer_workshop_upcoming
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     assert_nil enrollment.scholarship_status
@@ -551,13 +551,24 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
 
-  test 'update scholarship status does nothing if not a local summer workshop' do
-    workshop = create :pd_workshop, num_sessions: 1
+  test 'update scholarship status for csf workshop' do
+    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
-    assert_nil enrollment.scholarship_status
-    refute workshop.local_summer?
+    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
 
-    refute enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
-    assert_nil enrollment.scholarship_status
+    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
+    assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
+
+    refute enrollment.update_scholarship_status 'invalid status'
+    assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
+
+    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+  end
+
+  test 'scholarship info automatically created when enrolling in csf workshop' do
+    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
   end
 end
