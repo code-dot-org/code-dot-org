@@ -4,7 +4,7 @@ class TrackingPixelController < ApplicationController
   def index
     prevent_caching
     curriculum_page = URI.unescape(params[:from]).split('/').reverse.drop(1).reverse.join('/')
-    user_id = current_user&.id || nil
+    user_id = current_user&.id
 
     FirehoseClient.instance.put_record(
       study: 'curriculum-builder-page-views',
