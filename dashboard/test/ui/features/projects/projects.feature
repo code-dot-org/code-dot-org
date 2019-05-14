@@ -16,3 +16,25 @@ Scenario: My Projects
   And I wait until element "a[href='/projects/gumball/new']" is visible
   Then I see no difference for "view full list of new project types"
   And I close my eyes
+
+Scenario: Project Ownership
+  Given I am on "http://studio.code.org/projects/artist/new"
+  And I wait for the page to fully load
+  And check that the URL matches "/edit$"
+  And I save the URL
+
+  # The storage_id cookie is sent with this account creation request,
+  # leading to a storage_id cookie takeover.
+
+  When I create a student named "Takeover"
+  And I navigate to the saved URL
+  And I wait for the page to fully load
+  And check that the URL matches "/edit$"
+
+  # Verify existing buggy behavior. A signed-out user now owns the projects of
+  # the user who took over the storage id.
+
+  When I sign out
+  And I navigate to the saved URL
+  And I wait for the page to fully load
+  And check that the URL matches "/edit$"
