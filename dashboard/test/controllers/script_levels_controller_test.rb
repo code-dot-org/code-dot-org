@@ -390,7 +390,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
 
     get :show, params: {
-      script_id: courseg_2017.id,
+      script_id: courseg_2017.name,
       stage_position: courseg_2017_stage_1.relative_position,
       id: courseg_2017_stage_1_script_level.position,
     }
@@ -406,13 +406,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
 
     get :show, params: {
-      script_id: courseg_2017.id,
+      script_id: courseg_2017.name,
       stage_position: courseg_2017_stage_1.relative_position,
       id: courseg_2017_stage_1_script_level.position,
       no_redirect: "true"
     }
-
-    assert_redirected_to '/s/courseg-2017/stage/1/puzzle/1?no_redirect=true'
+    assert_response :ok
   end
 
   test "show: redirect to latest assigned script version in family for student if one exists" do
@@ -426,7 +425,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
 
     get :show, params: {
-      script_id: courseg_2017.id,
+      script_id: courseg_2017.name,
       stage_position: courseg_2017_stage_1.relative_position,
       id: courseg_2017_stage_1_script_level.position,
     }
