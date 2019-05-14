@@ -199,13 +199,13 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
               {enrollment.attendances} / {this.props.numSessions}
             </td>
           )}
-          {this.props.workshopSubject === LOCAL_SUMMER &&
+          {this.props.scholarshipWorkshop &&
             this.state.pendingScholarshipUpdates.includes(enrollment.id) && (
               <td>
                 <Spinner size="small" />
               </td>
             )}
-          {this.props.workshopSubject === LOCAL_SUMMER &&
+          {this.props.scholarshipWorkshop &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             this.scholarshipInfo(enrollment)}
         </tr>
@@ -272,7 +272,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             {this.props.workshopSubject === LOCAL_SUMMER && (
               <th style={styles.th}>Total Attendance</th>
             )}
-            {this.props.workshopSubject === LOCAL_SUMMER && (
+            {this.props.scholarshipWorkshop && (
               <th style={styles.th}>Scholarship Teacher?</th>
             )}
           </tr>
@@ -287,6 +287,7 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   permissionList: PropTypes.object.isRequired,
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
   accountRequiredForAttendance: PropTypes.bool.isRequired,
+  scholarshipWorkshop: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
