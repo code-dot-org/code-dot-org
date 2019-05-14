@@ -89,12 +89,12 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  test 'shows school info confirmation dialog when user school info is nil' do
+  test 'shows school info confirmation dialog when user school infos table is empty' do
     user = create :user
     user.user_type = 'teacher'
     user.save
 
-    user.school_info = nil
+    user.user_school_infos = []
 
     assert_nil user.school_info
     assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
@@ -105,5 +105,14 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
 
     assert_equal user.user_type, 'student'
     refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
+  end
+
+  test 'does not show school info confirmation dialog when last confirmation date is less than a year' do
+    user_school_info = create :user_school_info
+
+    user_school_info.last_confirmation_date = 1.day.ago
+    user_school_info.save
+
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user_school_info.user)
   end
 end
