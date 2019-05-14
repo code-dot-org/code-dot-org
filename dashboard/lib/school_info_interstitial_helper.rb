@@ -36,7 +36,7 @@ module SchoolInfoInterstitialHelper
 
     school_info = user_school_info.school_info
 
-    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && school_info.school_info_complete?
+    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && SchoolInfoInterstitialHelper.complete?(school_info)
 
     check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
 
