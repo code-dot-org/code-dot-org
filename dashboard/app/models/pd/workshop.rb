@@ -636,6 +636,11 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.last.try {|session| session.attendances.any?}
   end
 
+  # whether we will show the scholarship dropdown
+  def scholarship_workshop?
+    csf? || local_summer?
+  end
+
   def pre_survey?
     PRE_SURVEY_BY_COURSE.key? course
   end
