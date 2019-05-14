@@ -1,16 +1,16 @@
 import React from 'react';
-import SingleChoiceResponses from './single_choice_responses';
+import ChoiceResponses from './choice_responses';
 import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 
 export default storybook => {
   storybook
-    .storiesOf('Single choice responses', module)
+    .storiesOf('Choice responses', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
-        name: 'Single choice responses without other',
+        name: 'Choice responses without other',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question="What is your favorite pizza topping?"
             answers={{
               Peppers: 4,
@@ -32,9 +32,9 @@ export default storybook => {
         )
       },
       {
-        name: 'Single choice responses with others',
+        name: 'Choice responses with others',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={
               'What is your favorite pizza topping? Please provide the topping if it is not listed here'
             }
@@ -62,9 +62,9 @@ export default storybook => {
         )
       },
       {
-        name: 'Single choice selectValue response',
+        name: 'Choice selectValue response',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={'What do you think about pineapples on pizza?'}
             answers={{
               1: 10,
@@ -87,7 +87,7 @@ export default storybook => {
       {
         name: 'Scale ratings',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={'How do you feel about deep dish?'}
             answers={{
               1: 1,
@@ -102,13 +102,13 @@ export default storybook => {
     ]);
 
   storybook
-    .storiesOf('Single choice per-facilitator responses', module)
+    .storiesOf('Choice per-facilitator responses', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
-        name: 'Single choice responses for only one facilitator',
+        name: 'Choice responses for only one facilitator',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question="What is your favorite pizza topping?"
             perFacilitator={true}
             answers={{
@@ -132,9 +132,9 @@ export default storybook => {
         )
       },
       {
-        name: 'Single choice responses without other',
+        name: 'Choice responses without other',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question="What is your favorite pizza topping?"
             perFacilitator={true}
             answers={{
@@ -167,9 +167,9 @@ export default storybook => {
         )
       },
       {
-        name: 'Single choice responses with others',
+        name: 'Choice responses with others',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={
               'What is your favorite pizza topping? Please provide the topping if it is not listed here'
             }
@@ -211,9 +211,9 @@ export default storybook => {
         )
       },
       {
-        name: 'Single choice selectValue response',
+        name: 'Choice selectValue response',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={'What do you think about pineapples on pizza?'}
             perFacilitator={true}
             answers={{
@@ -249,7 +249,7 @@ export default storybook => {
       {
         name: 'Scale ratings',
         story: () => (
-          <SingleChoiceResponses
+          <ChoiceResponses
             question={'How do you feel about deep dish?'}
             perFacilitator={true}
             answers={{
