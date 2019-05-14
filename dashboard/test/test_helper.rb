@@ -590,17 +590,15 @@ class StorageApps
   end
 end
 
-# Mock storage_id to generate random IDs. Seed with current user so that a user maintains
-# the same id
-def storage_id(_)
-  return storage_id_for_user_id(current_user.id) if current_user
-  id = storage_id_from_cookie if request.cookies[storage_id_cookie_name]
-  return id if id
-  Random.new.rand(1_000_000)
-end
+# Mock storage_id helpers to generate random IDs. Seed with current user so that
+# a user maintains the same id
 
 def storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
+end
+
+def create_storage_id_cookie
+  Random.new.rand(1_000_000)
 end
 
 # A fake slogger implementation that captures the records written to it.
