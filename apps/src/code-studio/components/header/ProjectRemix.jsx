@@ -20,9 +20,9 @@ class ProjectRemix extends React.Component {
     ) {
       dashboard.project.serverSideRemix();
     } else if (!this.props.isSignedIn) {
-      window.location = `/users/sign_in?user_return_to=${
-        window.location.pathname
-      }`;
+      window.location.assign(
+        `/users/sign_in?user_return_to=${window.location.pathname}`
+      );
     } else {
       // We don't have an id. This implies we are either on a legacy /c/ share
       // page or a script level. In these cases, copy will create a new project
@@ -53,6 +53,7 @@ class ProjectRemix extends React.Component {
   }
 }
 
+export const UnconnectedProjectRemix = ProjectRemix;
 export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn
