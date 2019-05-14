@@ -987,63 +987,85 @@ en:
       CSPU5_U3 - Keys - Multiple Keys_2019: Play a different sound when the down arrow is pressed. (Click to see full instructions)
       CSPU5_U3 - Loops -  Complex Condition: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       CSPU5_U3 - Loops -  Complex Condition_2018: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot2: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       CSPU5_U3 - Loops -  Complex Condition_2019: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       CSPU5_U3 - Loops - 1: Change the condition for the while loop to check if the variable num is less than 90. (Click to see full instructions)
       CSPU5_U3 - Loops - 10: Write a program that simulates the rolling of two dice. Roll the dice repeatedly until the sum of the dice is either 7 or 11.
       CSPU5_U3 - Loops - 10_2018: Write a program that simulates the rolling of two dice. Roll the dice repeatedly until the sum of the dice is either 7 or 11.
+      CSPU5_U3 - Loops - 10_2018pilot: Write a program that simulates the rolling of two dice. Roll the dice repeatedly until the sum of the dice is either 7 or 11.
       CSPU5_U3 - Loops - 10_2019: Write a program that simulates the rolling of two dice. Roll the dice repeatedly until the sum of the dice is either 7 or 11.
       CSPU5_U3 - Loops - 11: Fix the condition so that it keeps rolling the die as long as the value is not a 2 or a 3 instead of rolling infinitely. (Click to see full instructions)
       CSPU5_U3 - Loops - 11_2018: Fix the condition so that it keeps rolling the die as long as the value is not a 2 or a 3 instead of rolling infinitely. (Click to see full instructions)
+      CSPU5_U3 - Loops - 11_2018pilot: Fix the condition so that it keeps rolling the die as long as the value is not a 2 or a 3 instead of rolling infinitely. (Click to see full instructions)
       CSPU5_U3 - Loops - 11_2019: Fix the condition so that it keeps rolling the die as long as the value is not a 2 or a 3 instead of rolling infinitely. (Click to see full instructions)
       CSPU5_U3 - Loops - 12: Change the code so that it prints the string "Hi" 5 times. (Click to see full instructions)
       CSPU5_U3 - Loops - 12_2018: Change the code so that it prints the string "Hi" 5 times. (Click to see full instructions)
+      CSPU5_U3 - Loops - 12_2018pilot: Change the code so that it prints the string "Hi" 5 times. (Click to see full instructions)
       CSPU5_U3 - Loops - 12_2019: Change the code so that it prints the string "Hi" 5 times. (Click to see full instructions)
       CSPU5_U3 - Loops - 14: Change the loop condition to prevent the infinite loop and stop counting once the count is past 30. (Click to see full instructions)
       CSPU5_U3 - Loops - 14_2018: Change the loop condition to prevent the infinite loop and stop counting once the count is past 30. (Click to see full instructions)
+      CSPU5_U3 - Loops - 14_2018pilot: Change the loop condition to prevent the infinite loop and stop counting once the count is past 30. (Click to see full instructions)
       CSPU5_U3 - Loops - 14_2019: Change the loop condition to prevent the infinite loop and stop counting once the count is past 30. (Click to see full instructions)
       CSPU5_U3 - Loops - 15: Count the number of times the sum of the dice is 12. (Click to see full instructions)
       CSPU5_U3 - Loops - 15_2018: Count the number of times the sum of the dice is 12. (Click to see full instructions)
+      CSPU5_U3 - Loops - 15_2018pilot: Count the number of times the sum of the dice is 12. (Click to see full instructions)
       CSPU5_U3 - Loops - 15_2019: Count the number of times the sum of the dice is 12. (Click to see full instructions)
       CSPU5_U3 - Loops - 1_2018: Change the condition for the while loop to check if the variable num is less than 90. (Click to see full instructions)
+      CSPU5_U3 - Loops - 1_2018pilot: Change the condition for the while loop to check if the variable num is less than 90. (Click to see full instructions)
       CSPU5_U3 - Loops - 1_2019: Change the condition for the while loop to check if the variable num is less than 90. (Click to see full instructions)
       CSPU5_U3 - Loops - 2: Try creating an infinite loop using !=, > and <. (Click to see full instructions)
       CSPU5_U3 - Loops - 2_2018: Try creating an infinite loop using !=, > and <. (Click to see full instructions)
+      CSPU5_U3 - Loops - 2_2018pilot: Try creating an infinite loop using !=, > and <. (Click to see full instructions)
       CSPU5_U3 - Loops - 2_2019: Try creating an infinite loop using !=, > and <. (Click to see full instructions)
       CSPU5_U3 - Loops - 3: Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 3_2018: Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)
+      CSPU5_U3 - Loops - 3_2018pilot: Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 3_2019: Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 4: Use the Debug Commands to make a list of all the values rolled before a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 4_2018: Use the Debug Commands to make a list of all the values rolled before a 6. (Click to see full instructions)
+      CSPU5_U3 - Loops - 4_2018pilot: Use the Debug Commands to make a list of all the values rolled before a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 4_2019: Use the Debug Commands to make a list of all the values rolled before a 6. (Click to see full instructions)
       CSPU5_U3 - Loops - 5: Add code inside the while loop which will update the variable num so that the condition will eventually become false. (Click to see full instructions)
       CSPU5_U3 - Loops - 5_2018: Add code inside the while loop which will update the variable num so that the condition will eventually become false. (Click to see full instructions)
+      CSPU5_U3 - Loops - 5_2018pilot: Add code inside the while loop which will update the variable num so that the condition will eventually become false. (Click to see full instructions)
       CSPU5_U3 - Loops - 5_2019: Add code inside the while loop which will update the variable num so that the condition will eventually become false. (Click to see full instructions)
       CSPU5_U3 - Loops - 6: Fix the problem so the loop will run at least once. Change the initial value of num to a dummy value such as -1. (Click to see full instructions)
       CSPU5_U3 - Loops - 6_2018: Fix the problem so the loop will run at least once. Change the initial value of num to a dummy value such as -1. (Click to see full instructions)
+      CSPU5_U3 - Loops - 6_2018pilot: Fix the problem so the loop will run at least once. Change the initial value of num to a dummy value such as -1. (Click to see full instructions)
       CSPU5_U3 - Loops - 6_2019: Fix the problem so the loop will run at least once. Change the initial value of num to a dummy value such as -1. (Click to see full instructions)
       CSPU5_U3 - Loops - 7: Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)
       CSPU5_U3 - Loops - 7_2018: Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)
+      CSPU5_U3 - Loops - 7_2018pilot: Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)
       CSPU5_U3 - Loops - 7_2019: Without adding any lines of code, reorder the code so that it prints all the values of num. (Click to see full instructions)
       CSPU5_U3 - Loops - 8: Debug which number is not getting printed and add a write statement to display that value. (Click to see full instructions)
       CSPU5_U3 - Loops - 8_2018: Debug which number is not getting printed and add a write statement to display that value. (Click to see full instructions)
+      CSPU5_U3 - Loops - 8_2018pilot: Debug which number is not getting printed and add a write statement to display that value. (Click to see full instructions)
       CSPU5_U3 - Loops - 8_2019: Debug which number is not getting printed and add a write statement to display that value. (Click to see full instructions)
       CSPU5_U3 - Loops - 9: " Modify the condition so that it keeps rolling as long as both are less than 3. (Click to see full instructions)"
       CSPU5_U3 - Loops - 9_2018: " Modify the condition so that it keeps rolling as long as both are less than 3. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 9_2018pilot: " Modify the condition so that it keeps rolling as long as both are less than 3. (Click to see full instructions)"
       CSPU5_U3 - Loops - 9_2019: " Modify the condition so that it keeps rolling as long as both are less than 3. (Click to see full instructions)"
       CSPU5_U3 - Loops - Minus Minus: Change the code to count down from 10 to 1. (Click to see full instructions)
       CSPU5_U3 - Loops - Minus Minus_2018: Change the code to count down from 10 to 1. (Click to see full instructions)
+      CSPU5_U3 - Loops - Minus Minus_2018pilot: Change the code to count down from 10 to 1. (Click to see full instructions)
       CSPU5_U3 - Loops - Minus Minus_2019: Change the code to count down from 10 to 1. (Click to see full instructions)
       CSPU5_U3 - Loops - Plus Plus: Change the code to use count++ instead of count = count + 1.  (Click to see full instructions)
       CSPU5_U3 - Loops - Plus Plus_2018: Change the code to use count++ instead of count = count + 1.  (Click to see full instructions)
+      CSPU5_U3 - Loops - Plus Plus_2018pilot: Change the code to use count++ instead of count = count + 1.  (Click to see full instructions)
       CSPU5_U3 - Loops - Plus Plus_2019: Change the code to use count++ instead of count = count + 1.  (Click to see full instructions)
       CSPU5_U3 - Loops - Typing in Console: Use console to check the ending value of num. (Click to see full instructions)
       CSPU5_U3 - Loops - Typing in Console_2018: Use console to check the ending value of num. (Click to see full instructions)
+      CSPU5_U3 - Loops - Typing in Console_2018_pilot: Use console to check the ending value of num. (Click to see full instructions)
+      CSPU5_U3 - Loops - Typing in Console_2018pilot: Use console to check the ending value of num. (Click to see full instructions)
       CSPU5_U3 - Loops - Typing in Console_2019: Use console to check the ending value of num. (Click to see full instructions)
       CSPU5_U3 - Loops - minus = operator: Update the code to use the -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)
       CSPU5_U3 - Loops - minus = operator_2018: Update the code to use the -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)
+      CSPU5_U3 - Loops - minus = operator_2018pilot: Update the code to use the -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)
       CSPU5_U3 - Loops - minus = operator_2019: Update the code to use the -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)
       CSPU5_U3 - Loops - plus and minus = operator: Update the code to use the += operator. (Click to see full instructions)
       CSPU5_U3 - Loops - plus and minus = operator_2018: Update the code to use the += operator. (Click to see full instructions)
+      CSPU5_U3 - Loops - plus and minus = operator_2018pilot: Update the code to use the += operator. (Click to see full instructions)
       CSPU5_U3 - Loops - plus and minus = operator_2019: Update the code to use the += operator. (Click to see full instructions)
       CSPU5_U3 - Loops And Arrays - Add 5: Add 5 to all the values in an array (Click to see full instructions)
       CSPU5_U3 - Loops And Arrays - Add 5_2018: Add 5 to all the values in an array (Click to see full instructions)
@@ -1109,15 +1131,19 @@ en:
       CSPU5_U3 - Return Values - writeMaxVal_2019: Write the function maxVal and then use it within the console.log statement to calculate the maximum of two values.  (Click to see full instructions)
       CSPU5_U3 - Simulation - 1: Use a while loop to "flip a coin 10 times" and write the values to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 1_2018: Use a while loop to "flip a coin 10 times" and write the values to the screen. (Click to see full instructions)
+      CSPU5_U3 - Simulation - 1_2018pilot: Use a while loop to "flip a coin 10 times" and write the values to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 1_2019: Use a while loop to "flip a coin 10 times" and write the values to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.1: Change your looping condition so the simulation runs until there are 5 heads flipped. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.1_2018: Change your looping condition so the simulation runs until there are 5 heads flipped. (Click to see full instructions)
+      CSPU5_U3 - Simulation - 2.1_2018pilot: Change your looping condition so the simulation runs until there are 5 heads flipped. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.1_2019: Change your looping condition so the simulation runs until there are 5 heads flipped. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.5: Run your simulation to get the full 10,000 heads! How long did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.5_2018: Run your simulation to get the full 10,000 heads! How long did it take? (Click to see full instructions)
+      CSPU5_U3 - Simulation - 2.5_2018pilot: Run your simulation to get the full 10,000 heads! How long did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 2.5_2019: Run your simulation to get the full 10,000 heads! How long did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 2: Keep track of how many heads (1's) your program generates and print the results to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2_2018: Keep track of how many heads (1's) your program generates and print the results to the screen. (Click to see full instructions)
+      CSPU5_U3 - Simulation - 2_2018pilot: Keep track of how many heads (1's) your program generates and print the results to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 2_2019: Keep track of how many heads (1's) your program generates and print the results to the screen. (Click to see full instructions)
       CSPU5_U3 - Simulation - 3: 'Add functionality that counts how many heads in a row are flipped. (Click to see full instructions)
 
@@ -1125,17 +1151,23 @@ en:
       CSPU5_U3 - Simulation - 3_2018: 'Add functionality that counts how many heads in a row are flipped. (Click to see full instructions)
 
 '
+      CSPU5_U3 - Simulation - 3_2018pilot: 'Add functionality that counts how many heads in a row are flipped. (Click to see full instructions)
+
+'
       CSPU5_U3 - Simulation - 3_2019: 'Add functionality that counts how many heads in a row are flipped. (Click to see full instructions)
 
 '
       CSPU5_U3 - Simulation - 4: Update your while loop's condition so the the coin flips until there are three heads in a row. (Click to see full instructions)
       CSPU5_U3 - Simulation - 4_2018: Update your while loop's condition so the the coin flips until there are three heads in a row. (Click to see full instructions)
+      CSPU5_U3 - Simulation - 4_2018pilot: Update your while loop's condition so the the coin flips until there are three heads in a row. (Click to see full instructions)
       CSPU5_U3 - Simulation - 4_2019: Update your while loop's condition so the the coin flips until there are three heads in a row. (Click to see full instructions)
       CSPU5_U3 - Simulation - 5: Change your while loop to run until you get a streak of 12 heads. How many flips did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 5_2018: Change your while loop to run until you get a streak of 12 heads. How many flips did it take? (Click to see full instructions)
+      CSPU5_U3 - Simulation - 5_2018pilot: Change your while loop to run until you get a streak of 12 heads. How many flips did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 5_2019: Change your while loop to run until you get a streak of 12 heads. How many flips did it take? (Click to see full instructions)
       CSPU5_U3 - Simulation - 6: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       CSPU5_U3 - Simulation - 6_2018: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
+      CSPU5_U3 - Simulation - 6_2018pilot: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       CSPU5_U3 - Simulation - 6_2019: Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)
       CSPU5_U3 - User Input - Save getText To Variable: Save the age and name of the user in variables (Click to see full instructions)
       CSPU5_U3 - User Input - Save getText To Variable_2018: Save the age and name of the user in variables (Click to see full instructions)
@@ -1826,7 +1858,7 @@ en:
       Dance Party 3 - Validated: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 3 Ram: Make the sprite do something different when you press the up arrow.
       Dance Party 3: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
-      Dance Party 3_2019: 'Create a new sprite that looks like a pink alien, then make it do a different dance move when it''s clicked.  '
+      Dance Party 3_2019: 'Create a new sprite that looks like a pink alien, then make it do a any move when it''s clicked.  '
       Dance Party 3_simple: 'Create a new sprite called `alien2`, then make it do a different dance move when it''s clicked.  '
       Dance Party 4 Validated: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 4: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
@@ -1834,11 +1866,11 @@ en:
       Dance Party 4_simple: 'Create a third sprite called `alien3` and get all of your aliens to stand in a line. '
       Dance Party 5 - Validated: Add code to change the color of each alien when it gets clicked.
       Dance Party 5: Add code to change the color of each alien when it gets clicked.
-      Dance Party 5_2019: Add code to change the color of each alien when it gets clicked.
+      Dance Party 5_2019: Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!
       Dance Party 5_simple: Add code to change the color of each alien when it gets clicked.
       Dance Party 6 - Validated: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 6: Use the `stops everything` block to make each alien stop moving when it is clicked.
-      Dance Party 6_2019: Use the `stops everything` block to make each alien stop moving when it is clicked.
+      Dance Party 6_2019: Use the `stops everything` block with a **click** or **keypress** event make all three aliens stop dancing when the event occurs!
       Dance Party 6_simple: Use the `stops everything` block to make each alien stop moving when it is clicked.
       Dance Party 7 - Validated: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
       Dance Party 7: Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.
@@ -1850,7 +1882,7 @@ en:
       Dance Party Predict: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_2019: 'What do you think will happen when you click on the alien?  '
       Dance Party Predict_simple: 'What do you think will happen when you click on the alien?  '
-      Dance Party Template 1_2019: Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning around!
+      Dance Party Template 1_2019: Template
       Dance Party Template 2_2019: Template
       Dance_Events_Example_Video: Use events to make your dance party interactive!
       Dance_Party_01: Drag the `make a new` block into the workspace, and connect it inside the `setup` block.
@@ -1948,17 +1980,17 @@ en:
       Find the Wizard: Build whatever you want. This is an example of a number-guessing game!
       Find the Wizard_2018: Build whatever you want. This is an example of a number-guessing game!
       Fish Tank 2-validated: Change Dusty (the tumbleweed) to a fish.
-      Fish Tank 2-validated_2019: Change Dusty (the tumbleweed) to a fish.
+      Fish Tank 2-validated_2019: Change the tumbleweed into any kind of fish!
       Fish Tank 2-validated_simple: Change Dusty (the tumbleweed) to a fish.
       Fish Tank 3-validated Ram: Change the fish's behavior so that it swims around the tank.
       Fish Tank 3-validated: Change the fish's behavior so that it swims around the tank.
-      Fish Tank 3-validated_2019: Change the fish's behavior so that it swims around the tank.
+      Fish Tank 3-validated_2019: Change the fish's behavior so that it swims left and right.
       Fish Tank 3-validated_simple: Change the fish's behavior so that it swims around the tank.
       Fish Tank 4-validated: Use the `set background color` block to make the background blue.
-      Fish Tank 4-validated_2019: Use the `set background color` block to make the background blue.
+      Fish Tank 4-validated_2019: Use the `set background color` block to make the background any color.
       Fish Tank 4-validated_simple: Use the `set background color` block to make the background blue.
       Fish Tank 5-validated: Our fish is getting a little lonely. Add another sprite to the fish tank.
-      Fish Tank 5-validated_2019: Our fish is getting a little lonely. Add another sprite to the fish tank.
+      Fish Tank 5-validated_2019: The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!
       Fish Tank 5-validated_2019_implicitGroupTest: Our fish is getting a little lonely. Add another sprite to the fish tank.
       Fish Tank 5-validated_simple: The fish wants a friend.   Add a new sprite.
       Fish Tank 6-validated: Add a behavior to the fish's new friend.
@@ -2518,6 +2550,7 @@ en:
       PS copy 2-3 Bee Conditionals 5: "Be careful not to collect nectar from a purple flower if it doesn't have any. \nYou must first check if the nectar is equal to 1 using the `if nectar` block."
       PS predictive Applab level test: 'Here are some instructions. '
       Pattern Bee 1: What a strange field of goodies! I wonder if there's a pattern here...
+      Pilot Unit 5 CSP Loops clone: Change the boolean expression for the while loop so that it will stop when both dice are greater than or equal to 5. (Click to see full instructions)
       Pixelation - AllTheThings 4: This pixelation level demonstrates the use of the `hide_encoding_controls` option.  Notice that the level displays the image data in hexadecimal and does not let you change it back to binary.
       Pixelation - AllTheThings 5: This pixelation level demonstrates the use of the "Hide sliders" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.
       Pixelation - Lesson 14 - Fix bit offset v.2: 'Something happened to the bits in this image! Find the error and fix it! Hint: a few extra bits were added. You should only need to remove some bits.'
@@ -3610,7 +3643,7 @@ en:
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
-      Virtual Pet 1_2019: Read and run the code below, then observe what the pet does. Try changing some of the code to produce different results! When you're done, click **Finish**.
+      Virtual Pet 1_2019: Read and run the code below. Try interacting with the pet. When you're done, click **Finish**.
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
@@ -3619,14 +3652,14 @@ en:
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-      Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
+      Virtual Pet 3_2019: 'Make your pet move North, South, West, or East while up, down, left, or right arrow keys are pressed. '
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Let's make it so your pet can "eat" its food. Add an event that makes the food jump to a random location when your pet touches it.
+      Virtual Pet 4_2019: Add another sprite to your world, and give it a costume that looks like something your pet likes to eat!
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: Add a sprite for food your pet doesn't like to eat. Make an event that causes this food to jump to a random location when your pet touches it.
+      Virtual Pet 5_2019: 'Create two touch events, one per food sprite, that makes them jump to a random location when your pet touches them. '
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
@@ -3654,7 +3687,7 @@ en:
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
-      Virtual Pet Template_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
+      Virtual Pet Template_2019: Template for Virtual Pet 2019
       WhileAdventure: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3996,7 +4029,7 @@ en:
       courseA_harvester_loops5a_2019: Look at all this corn! Can you pick it all by yourself?
       courseA_harvester_loops5b: Can you change your code to make the harvester pick all the corn?
       courseA_harvester_loops5b_2019: Can you change your code to make the harvester pick all the corn?
-      courseA_harvester_loops6: You will need **one** `Move South` block and **one** `Move West` block.
+      courseA_harvester_loops6: You will need **one** `Move West` block and **one** `Move North` block.
       courseA_harvester_loops6_2019: You will need **one** `Move South` block and **one** `Move West` block.
       courseA_harvester_loops7: 'Try it on your own! '
       courseA_harvester_loops7_2019: 'Try it on your own! '
@@ -5373,11 +5406,11 @@ en:
       courseE_aboutme_2: Use the **Costumes** tab to create or select a new costume for your sprite!
       courseE_aboutme_3: When your character is clicked, share something SAFE about yourself using the <xml><block type="gamelab_printText" block-text="print"></block></xml> block in the `World` toolbox category!
       courseE_aboutme_4: Add at least two new sprites to your poster. These sprite should represent something about yourself. Assign custom costumes to these sprites, then test it out!
-      courseE_aboutme_5: Share information about the sprites you just added! When they are clicked, print some SAFE information about them.
+      courseE_aboutme_5: Make your other sprites share information when they are clicked. This can be information about you or just about them. Be sure whatever you share is SAFE!
       courseE_aboutme_6: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
       courseE_aboutme_7: Play with Rikki's poster and code for a bit, then click **Finish**.
       courseE_aboutme_freeplay: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
-      courseE_aboutme_template: Use the **Costumes** tab to create or select a new costume for your sprite!
+      courseE_aboutme_template: This is a template level for "About Me 2019".
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '

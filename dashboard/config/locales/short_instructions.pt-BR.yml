@@ -2304,6 +2304,12 @@ pt-BR:
       CSPU5_U3 - Loops -  Complex Condition_2018: Altere a expressão booleana para
         o laço while de forma que ele irá parar quando ambos dados forem maiores que
         ou iguais a 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot: Altere a expressão booleana
+        para o laço while de forma que ele irá parar quando ambos dados forem maiores
+        que ou iguais a 5. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops -  Complex Condition_2018pilot2: Altere a expressão booleana
+        para o laço while de forma que ele irá parar quando ambos dados forem maiores
+        que ou iguais a 5. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops -  Complex Condition_2019: Altere a expressão booleana para
         o laço while de forma que ele irá parar quando ambos dados forem maiores que
         ou iguais a 5. (Clique para ver as instruções completas)
@@ -2313,6 +2319,8 @@ pt-BR:
         Role os dados repetidamente até a soma dos dados ser 7 ou 11.
       CSPU5_U3 - Loops - 10_2018: Escreva um programa que simule a rolagem de 2 dados.
         Role os dados repetidamente até a soma dos dados ser 7 ou 11.
+      CSPU5_U3 - Loops - 10_2018pilot: Escreva um programa que simule a rolagem de
+        2 dados. Role os dados repetidamente até a soma dos dados ser 7 ou 11.
       CSPU5_U3 - Loops - 10_2019: Escreva um programa que simule a rolagem de 2 dados.
         Role os dados repetidamente até a soma dos dados ser 7 ou 11.
       CSPU5_U3 - Loops - 11: Conserte a condição para que continue rolando o dado
@@ -2321,6 +2329,9 @@ pt-BR:
       CSPU5_U3 - Loops - 11_2018: Conserte a condição para que continue rolando o
         dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 11_2018pilot: Conserte a condição para que continue rolando
+        o dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
+        (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 11_2019: Conserte a condição para que continue rolando o
         dado enquanto o valor não for um 2 ou um 3 ao invés de rolar infinitamente.
         (Clique para ver as instruções completas)
@@ -2328,6 +2339,8 @@ pt-BR:
         (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 12_2018: Altere o código para que imprima a string "Oi" 5
         vezes. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 12_2018pilot: Altere o código para que imprima a string "Oi"
+        5 vezes. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 12_2019: Altere o código para que imprima a string "Oi" 5
         vezes. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito
@@ -2336,6 +2349,9 @@ pt-BR:
       CSPU5_U3 - Loops - 14_2018: Altere a condição do laço para evitar o laço infinito
         e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
         completas)
+      CSPU5_U3 - Loops - 14_2018pilot: Altere a condição do laço para evitar o laço
+        infinito e pare a contagem quando o contador passar de 30. (Clique para ver
+        as instruções completas)
       CSPU5_U3 - Loops - 14_2019: Altere a condição do laço para evitar o laço infinito
         e pare a contagem quando o contador passar de 30. (Clique para ver as instruções
         completas)
@@ -2343,21 +2359,30 @@ pt-BR:
         para ver as instruções completas)
       CSPU5_U3 - Loops - 15_2018: Conte o número de vezes que a soma dos dados é 12.
         (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 15_2018pilot: Conte o número de vezes que a soma dos dados
+        é 12. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 15_2019: Conte o número de vezes que a soma dos dados é 12.
         (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 1_2018: Altere a condição para o laço while para checar se
         a variável num é menor do que 90. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 1_2018pilot: Altere a condição para o laço while para checar
+        se a variável num é menor do que 90. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 1_2019: Altere a condição para o laço while para checar se
         a variável num é menor do que 90. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 2: Tente criar um laço infinito usando !=, > e \<. (Clique
         para ver todas as instruções)
       CSPU5_U3 - Loops - 2_2018: Tente criar um laço infinito usando !=, > e \<. (Clique
         para ver todas as instruções)
+      CSPU5_U3 - Loops - 2_2018pilot: Tente criar um laço infinito usando !=, > e
+        \<. (Clique para ver todas as instruções)
       CSPU5_U3 - Loops - 2_2019: Tente criar um laço infinito usando !=, > e \<. (Clique
         para ver todas as instruções)
       CSPU5_U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para
         que o programa execute até que role um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 3_2018: Mude a condição "se" para uma repetição "enquanto"
+        para que o programa execute até que role um 6. (Clique para ver as instruções
+        completas)
+      CSPU5_U3 - Loops - 3_2018pilot: Mude a condição "se" para uma repetição "enquanto"
         para que o programa execute até que role um 6. (Clique para ver as instruções
         completas)
       CSPU5_U3 - Loops - 3_2019: Mude a condição "se" para uma repetição "enquanto"
@@ -2367,6 +2392,9 @@ pt-BR:
         os valores que rolaram antes um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 4_2018: Use os Comandos de Análise para fazer uma lista de
         todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - 4_2018pilot: Use os Comandos de Análise para fazer uma lista
+        de todos os valores que rolaram antes um 6. (Clique para ver as instruções
+        completas)
       CSPU5_U3 - Loops - 4_2019: Use os Comandos de Análise para fazer uma lista de
         todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - 5: Adicione código dentro do loop enquanto, que atualizará
@@ -2375,6 +2403,9 @@ pt-BR:
       CSPU5_U3 - Loops - 5_2018: Adicione código dentro do loop enquanto, que atualizará
         a variável num para que a condição acabe se tornando falsa. (Clique para ver
         instruções completas)
+      CSPU5_U3 - Loops - 5_2018pilot: Adicione código dentro do loop enquanto, que
+        atualizará a variável num para que a condição acabe se tornando falsa. (Clique
+        para ver instruções completas)
       CSPU5_U3 - Loops - 5_2019: Adicione código dentro do loop enquanto, que atualizará
         a variável num para que a condição acabe se tornando falsa. (Clique para ver
         instruções completas)
@@ -2384,12 +2415,18 @@ pt-BR:
       CSPU5_U3 - Loops - 6_2018: Corrija o problema para que o loop seja executado
         pelo menos uma vez. Altere o valor inicial de num para um valor fictício,
         como -1. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - 6_2018pilot: Corrija o problema para que o loop seja executado
+        pelo menos uma vez. Altere o valor inicial de num para um valor fictício,
+        como -1. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - 6_2019: Corrija o problema para que o loop seja executado
         pelo menos uma vez. Altere o valor inicial de num para um valor fictício,
         como -1. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para
         que ele imprima todos os valores de num. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - 7_2018: Sem adicionar linhas de código, reordene o código
+        para que ele imprima todos os valores de num. (Clique para ver instruções
+        completas)
+      CSPU5_U3 - Loops - 7_2018pilot: Sem adicionar linhas de código, reordene o código
         para que ele imprima todos os valores de num. (Clique para ver instruções
         completas)
       CSPU5_U3 - Loops - 7_2019: Sem adicionar linhas de código, reordene o código
@@ -2401,6 +2438,9 @@ pt-BR:
       CSPU5_U3 - Loops - 8_2018: Depure qual número não está sendo impresso e inclua
         uma instrução de gravação para exibir esse valor. (Clique para ver instruções
         completas)
+      CSPU5_U3 - Loops - 8_2018pilot: Depure qual número não está sendo impresso e
+        inclua uma instrução de gravação para exibir esse valor. (Clique para ver
+        instruções completas)
       CSPU5_U3 - Loops - 8_2019: Depure qual número não está sendo impresso e inclua
         uma instrução de gravação para exibir esse valor. (Clique para ver instruções
         completas)
@@ -2408,11 +2448,16 @@ pt-BR:
         desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
       CSPU5_U3 - Loops - 9_2018: " Modifique a condição para que ele continue rolando,
         desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      CSPU5_U3 - Loops - 9_2018pilot: " Modifique a condição para que ele continue
+        rolando, desde que ambos sejam menores que 3. (Clique para ver as instruções
+        completas)"
       CSPU5_U3 - Loops - 9_2019: " Modifique a condição para que ele continue rolando,
         desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
       CSPU5_U3 - Loops - Minus Minus: Altere o código para contar decrescentemente
         de 10 para 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Minus Minus_2018: Altere o código para contar decrescentemente
+        de 10 para 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Minus Minus_2018pilot: Altere o código para contar decrescentemente
         de 10 para 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Minus Minus_2019: Altere o código para contar decrescentemente
         de 10 para 1. (Clique para ver as instruções completas)
@@ -2420,24 +2465,35 @@ pt-BR:
         = count + 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Plus Plus_2018: Altere o código para usar count++ em vez
         de count = count + 1. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Plus Plus_2018pilot: Altere o código para usar count++ em
+        vez de count = count + 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Plus Plus_2019: Altere o código para usar count++ em vez
         de count = count + 1. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console: Use o console para verificar o valor final
         de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console_2018: Use o console para verificar o valor
         final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Typing in Console_2018_pilot: Use o console para verificar
+        o valor final de num. (Clique para ver as instruções completas)
+      CSPU5_U3 - Loops - Typing in Console_2018pilot: Use o console para verificar
+        o valor final de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - Typing in Console_2019: Use o console para verificar o valor
         final de num. (Clique para ver as instruções completas)
       CSPU5_U3 - Loops - minus = operator: Atualize o código para usar o operador
         -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - minus = operator_2018: Atualize o código para usar o operador
         -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - minus = operator_2018pilot: Atualize o código para usar o
+        operador -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções
+        completas)
       CSPU5_U3 - Loops - minus = operator_2019: Atualize o código para usar o operador
         -= para contar de 30 a 0 por 3 segundos. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - plus and minus = operator: Atualize o código para usar o
         operador +=. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - plus and minus = operator_2018: Atualize o código para usar
         o operador +=. (Clique para ver instruções completas)
+      CSPU5_U3 - Loops - plus and minus = operator_2018pilot: Atualize o código para
+        usar o operador +=. (Clique para ver instruções completas)
       CSPU5_U3 - Loops - plus and minus = operator_2019: Atualize o código para usar
         o operador +=. (Clique para ver instruções completas)
       CSPU5_U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique
@@ -2606,30 +2662,41 @@ pt-BR:
         e escreva os valores na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 1_2018: Use um laço while para "jogar uma moeda 10 vezes"
         e escreva os valores na tela. (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 1_2018pilot: Use um laço while para "jogar uma moeda
+        10 vezes" e escreva os valores na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 1_2019: Use um laço while para "jogar uma moeda 10 vezes"
         e escreva os valores na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2.1: Mude sua condição de laço para que a simulação
         seja executada até que haja 5 caras jogadas. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2.1_2018: Mude sua condição de laço para que a simulação
         seja executada até que haja 5 caras jogadas. (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 2.1_2018pilot: Mude sua condição de laço para que a
+        simulação seja executada até que haja 5 caras jogadas. (Clique para ver instruções
+        completas)
       CSPU5_U3 - Simulation - 2.1_2019: Mude sua condição de laço para que a simulação
         seja executada até que haja 5 caras jogadas. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2.5: Execute sua simulação para obter todas as 10.000
         caras! Quanto tempo levou? (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2.5_2018: Execute sua simulação para obter todas as
         10.000 caras! Quanto tempo levou? (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 2.5_2018pilot: Execute sua simulação para obter todas
+        as 10.000 caras! Quanto tempo levou? (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2.5_2019: Execute sua simulação para obter todas as
         10.000 caras! Quanto tempo levou? (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2: Acompanhe quantas caras (1's) seu programa gera e
         imprima os resultados na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2_2018: Acompanhe quantas caras (1's) seu programa gera
         e imprima os resultados na tela. (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 2_2018pilot: Acompanhe quantas caras (1's) seu programa
+        gera e imprima os resultados na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 2_2019: Acompanhe quantas caras (1's) seu programa gera
         e imprima os resultados na tela. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 3: Adicionar funcionalidade que conta quantas caras
         em sequência são jogadas. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 3_2018: Adicionar funcionalidade que conta quantas caras
         em sequência são jogadas. (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 3_2018pilot: Adicionar funcionalidade que conta quantas
+        caras em sequência são jogadas. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 3_2019: Adicionar funcionalidade que conta quantas caras
         em sequência são jogadas. (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 4: Atualize a condição do seu laço while para que a
@@ -2637,6 +2704,9 @@ pt-BR:
         ver instruções completas)
       CSPU5_U3 - Simulation - 4_2018: Atualize a condição do seu laço while para que
         a moeda seja jogada até que resulte cara três vezes em sequência. (Clique
+        para ver instruções completas)
+      CSPU5_U3 - Simulation - 4_2018pilot: Atualize a condição do seu laço while para
+        que a moeda seja jogada até que resulte cara três vezes em sequência. (Clique
         para ver instruções completas)
       CSPU5_U3 - Simulation - 4_2019: Atualize a condição do seu laço while para que
         a moeda seja jogada até que resulte cara três vezes em sequência. (Clique
@@ -2647,6 +2717,9 @@ pt-BR:
       CSPU5_U3 - Simulation - 5_2018: Mude o seu laço while para executar até obter
         uma sequência de 12 caras. Quantas jogadas foram necessárias? (Clique para
         ver instruções completas)
+      CSPU5_U3 - Simulation - 5_2018pilot: Mude o seu laço while para executar até
+        obter uma sequência de 12 caras. Quantas jogadas foram necessárias? (Clique
+        para ver instruções completas)
       CSPU5_U3 - Simulation - 5_2019: Mude o seu laço while para executar até obter
         uma sequência de 12 caras. Quantas jogadas foram necessárias? (Clique para
         ver instruções completas)
@@ -2654,6 +2727,8 @@ pt-BR:
         quer explorar a seguir? (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 6_2018: Continue adicionando à sua simulação. O que
         você quer explorar a seguir? (Clique para ver instruções completas)
+      CSPU5_U3 - Simulation - 6_2018pilot: Continue adicionando à sua simulação. O
+        que você quer explorar a seguir? (Clique para ver instruções completas)
       CSPU5_U3 - Simulation - 6_2019: Continue adicionando à sua simulação. O que
         você quer explorar a seguir? (Clique para ver instruções completas)
       CSPU5_U3 - User Input - Save getText To Variable: Salve a idade e o nome do
@@ -3342,12 +3417,12 @@ pt-BR:
         Esta é uma função de Adição que
         usa dois números e retorna sua soma. Use este bloco Adição para somar 3
 
-        -   6\.
+        -   6.
       Calc Circles of Eval .4: |-
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
 
-        -   1\)
+        -   1)
       Calc Circles of Eval 1 (copy 1): |-
         Converta essa instrução para \<alguma\_forma>
         de cálculo.
@@ -4322,7 +4397,7 @@ pt-BR:
         ^ 2) a cada vez.  Quem vai chegar\nprimeiro à bandeira?"
       Course 4 Play Labs For Loops 8a: "Para terminar nosso jogo, precisamos\ntrazer
         de volta a variável \"incremento\"!    Vamos relacioná-la ao nível do\njogo.\\\r\n\\\r\n\n1.
-        \ Guarde o número de vezes que o mago é clicado.\\\r\n2.  2\\)\n    Se o mago
+        \ Guarde o número de vezes que o mago é clicado.\\\r\n2.  2)\n    Se o mago
         for clicado pelo menos 10 vezes antes do cão contar até 30, aumente\n    \"incremento\"
         em 1 unidade e comece de novo.\\\r\n3.  Se o mago não for clicado\n    pelo
         menos 10 vezes, o jogo acaba."
@@ -4582,7 +4657,10 @@ pt-BR:
         alienígena?  '
       Dance Party Predict_simple: 'O que acha que vai acontecer quando você clicar
         no alienígena?  '
+      Dance Party Template 1_2019: Substitua o bloco de comportamento no bloco `sprite
+        begins` por um diferente que fará o alienígena começar a girar!
       Dance Party Template 2_2019: Modelo
+      Dance_Events_Example_Video: Use eventos para tornar sua festa de dança interativa!
       Dance_Party_01: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
         dentro do bloco de 'configuração'.
       Dance_Party_01_low: Arraste o bloco 'criar novo' para a área de trabalho, conectando-o
@@ -6088,6 +6166,9 @@ pt-BR:
       PS predictive Applab level test: 'Veja aqui algumas instruções. '
       Pattern Bee 1: Que campo de guloseimas estranho! Me pergunto se tem um padrão
         aqui...
+      Pilot Unit 5 CSP Loops clone: Altere a expressão booleana para o laço while
+        de forma que ele irá parar quando ambos dados forem maiores que ou iguais
+        a 5. (Clique para ver as instruções completas)
       Pixelation - AllTheThings 4: Este nível de pixelização demonstra o uso da opção
         `hide_encoding_controls`. Note que o nível mostra os dados da imagem em hexadecimal
         e não o deixa alterar de volta para binário.
@@ -6388,19 +6469,40 @@ pt-BR:
       SG U3L07 - Free Play Loops and Random: |-
         Atividade livre! Use o que você aprendeu
         sobre laços e aleatoriedade para criar sua própria pequena cena. Divirta-se.
+      SG U3L07 - allSeaGrass: Adicione 50 pedaços de ervas marinhas à imagem escrevendo
+        drawAllSeagrass com um laço. (Clique para ver instruções completas)
+      SG U3L07 - bubbles: Adicione 200 bolhas à imagem escrevendo drawAllBubbles com
+        um loop. (Clique para ver instruções completas)
       SG U3L07 - createTriangleParam: Defina uma função que aceite um parâmetro para
         corresponder às chamadas da função e conclua a imagem. (Clique para ver instruções
         completas)
+      SG U3L07 - fish: Adicione 15 peixes à imagem escrevendo drawAllFish com um loop.
+        (Clique para ver instruções completas)
+      SG U3L07 - introSquare: Use um loop para desenhar um quadrado. Em seguida, adicione
+        outro loop para desenhar muitos quadrados, cada um deles girando um pouco.
+        (Clique para ver instruções completas)
+      SG U3L07 - loopsWithRandom: Aumente o número de iterações para preencher a tela
+        com branco. (Clique para ver instruções completas)
       SG U3L07 - randomDots1: Aumente o número de iterações para preencher completamente
         a tela com pontos aleatórios. (Clique para ver instruções completas)
       SG U3L07 - randomSquare: Desenhe a figura usando um laço. (Clique para ver todas
         as instruções)
+      SG U3L07 - seaGrass: Adicione um parâmetro para desenhar ervas marinhas que
+        controla o número de ondas na grama. (Clique para ver instruções completas)
+      SG U3L07 - seaStar: Adicione 5 estrelas do mar à imagem escrevendo drawAllSeaStars
+        com um loop. (Clique para ver instruções completas)
+      SG U3L07 - sunBeams: Adicione 100 raios de sol à imagem escrevendo drawAllSunbeams
+        com um loop. (Clique para ver instruções completas)
+      SG U3L07 - topDownDesign: Fique à vontade com a estrutura deste programa, depois
+        passe para o próximo exercício. (Clique para ver instruções completas)
       SG U3L07 More Subgoals: |-
         Desta vez vamos aprender
         um pouco sobre como alterar a caneta da tartaruga. Leia a documentação para encontrar
         larguraCaneta() e corCaneta(), e então desenhe o quadrado roxo como foi mostrado.
       SG U3L08 - createTwoParamTriangle: Defina uma função chamada desenharTriangulo
         () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
+        (Clique para ver instruções completas)
+      SG U3L08 - digitalScene: Crie as funções atribuídas como parte de sua cena digital.
         (Clique para ver instruções completas)
       SG U3L08 - drawSquareWithParam: Use desenharQuadrado () para recriar a imagem
         de ambos os quadrados, desta vez usando parâmetros. (Clique para ver instruções
@@ -6409,9 +6511,29 @@ pt-BR:
         do peixe desenhado. (Clique para ver instruções completas)
       SG U3L08 - freePlay: Continue adicionando à sua imagem fazendo mais chamadas
         para suas novas funções com parâmetros. (Clique para ver instruções completas)
+      SG U3L08 - individualCode: Crie as funções atribuídas como parte de sua cena
+        digital. (Clique para ver instruções completas)
+      SG U3L08 - introUnderTheSea - recovery: Adicione um peixe extra, uma estrela
+        do mar e um pedaço de ervas marinhas à imagem. Olhe mas não mude as funções
+        que os criam. (Clique para ver instruções completas)
+      SG U3L08 - introUnderTheSea: Adicione um peixe extra, uma estrela do mar e um
+        pedaço de ervas marinhas à imagem. Olhe mas não mude as funções que os criam.
+        (Clique para ver instruções completas)
       SG U3L08 - multiParamFish: Adicione três parâmetros à sua função desenharPeixe
         para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
         diferentes. (Clique para ver instruções completas)
+      SG U3L08 - paramsToStarfish: Adicione um parâmetro ao drawStarfish que altera
+        o tamanho da estrela do mar desenhada. (Clique para ver instruções completas)
+      SG U3L08 - randomInput: Use os blocos randomNumber () para testar as funções
+        que você projetou com entrada aleatória. (Clique para ver instruções completas)
+      SG U3L08 - seaGrass: Adicione um parâmetro drawSeagrass que altera o tamanho
+        do pedaço de ervas marinhas extraídas. (Clique para ver instruções completas)
+      SG U3L08 - squareTwoParams: Chame drawSquare () para completar o desenho de
+        dois quadrados. (Clique para ver instruções completas)
+      SG U3L08 comments: Use os blocos randomNumber () para testar as funções que
+        você projetou com entrada aleatória. (Clique para ver instruções completas)
+      SG U3L08 how to add comments: Use os blocos randomNumber () para testar as funções
+        que você projetou com entrada aleatória. (Clique para ver instruções completas)
       SG U3L2 Using Simple Commands part 1: |-
         Desenhe um quadrado usando apenas avance
         e vireEsquerda.  O quadrado deve ser desenhado acima e à esquerda da posição
@@ -6536,8 +6658,11 @@ pt-BR:
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
         Cada lado deve medir 100 pixels.
+      StepIntro: Veja como usar o botão "Etapa".
+      Test Play Lab: Este é um nível de laboratório de teste.
       Test embedded K1 Blockly in instructions: Use três blocos 'mover para oeste'
         e um bloco 'pegar o milho' para resolver este enigma.
+      Test of comment block: Arraste o bloco de legenda subgoal desejado.
       Testing Quantum Farmer: "Uau, que demais! \\\r\n\\\r\nEu não sei de quantas\npás
         cheias de terra esse buraco precisa.  \\\r\nVocê pode escrever um programa
         que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
@@ -6545,16 +6670,23 @@ pt-BR:
       The Vigenere Cipher Widget_2018: Instruções
       The Vigenere Cipher Widget_2019: Instruções
       The Vigenere Cipher: Instruções
+      Tortoise and Hare: Ajude a tartaruga a bater a lebre!
       Total Artist Clone Me: |-
         Atividade livre: aqui estão as funções
         que você escreveu e mais algumas para você usar. Desenhe algo incrível!
         Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!
+      U1L10 NetSim numbers with decimal: Invente e teste um protocolo para codificar
+        e enviar mensagens de texto. Seu protocolo deve incluir as letras a-z, espaços
+        e sinais de pontuação comuns. Você pode adicionar caracteres adicionais, se
+        desejar. Veja a planilha distribuída pelo seu professor para instruções mais
+        detalhadas!
       U1L11 NetSim numbers with Ascii: Trabalhe com um parceiro ou em uma pequena
         equipe para desenvolver um protocolo que permita o envio de texto formatado.
         Veja a planilha distribuída pelo seu professor para instruções mais detalhadas!
       U1L4 NetSim SendAB: |-
         Envie uma mensagem configurando o estado do
         fio como A ou B.
+      U1L8 NetSim numbers no decimal: Intruções padrão
       U1L8 NetSim numbers with decimal: Com seu parceiro, desenvolva um protocolo
         ou um conjunto de regras para comunicar um desenho usando apenas bits. Veja
         a planilha distribuída pelo seu professor para instruções mais detalhadas!
@@ -6709,12 +6841,19 @@ pt-BR:
       U3 - Conditionals - Combine AND OR and NOT: Escreva uma instrução "se" que usa
         "E" e "OU" para exibir "Hora de ir para a escola!" se não é fim de semana
         e o usuário é menor de 18 anos. (Clique para ver as instruções completas).
+      U3 - Conditionals - Combine AND and OR: Escreva uma instrução if que usa AND
+        e OR para mostrar "Hora de ir para a escola!" se não é final de semana e o
+        usuário tem menos de 18 anos. (Clique para ver todas as instruções).
       U3 - Conditionals - Simple AND: Escreva uma instrução "se" que usa "E" para
         exibir "Você é um adolescente..." se o usuário insere uma idade entre 13 e
         19. (Clique para ver as instruções completas)
       U3 - Conditionals - Simple OR: Escrever uma instrução "se" que usa "OU" para
         exibir "É o fim de semana!" se o usuário insere um dia de fim de semana no
         prompt. (Clique para ver as instruções completas)
+      U3 - Conditionals - intoOr: Adicione 2 instruções if que usem o operador OR.
+        (Clique para ver todas as instruções)
+      U3 - Conditionals - introAND: Adicione 2 instruções if que usem o operador OR.
+        (Clique para ver todas as instruções)
       U3 - Design Mode - Console Log: Atualize os nomes de ID e as mensagens de 'console.log'
         para associar com o botão correto. (Clique para ver as instruções completas.)
       U3 - Design Mode - Layers and Delete: Conserte o formato do jogo bullseye. (Clique
@@ -6724,6 +6863,8 @@ pt-BR:
         detalhadas.)
       U3 - Design Mode - Multi Screens: Faça um app com 2 telas com uma tela preta
         e uma tela branca. (Clique para ver instruções detalhadas)
+      U3 - Design Mode - Other Events: Delete o botão e faça a imagem mover para uma
+        localização aleatória quando você clicar nela. (clique para ver todas as instruções)
       U3 - Design Mode - WTF Console Log: Adicione 3 mensagens de console.log e os
         teste. (Clique para ver as instruções completas.)
       U3 - Design Mode -Recreate Beyond Buttons: Recrie o jogo a partir do "Jogo do
@@ -6782,6 +6923,8 @@ pt-BR:
         ver as instruções completas)
       U3 - Loops - 12: Altere o código para que imprima a string "Oi" 5 vezes. (Clique
         para ver as instruções completas)
+      U3 - Loops - 13: Atualize seu código para contar por 4 ao invés de 1. (Clique
+        para ver todas as instruções)
       U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito e pare
         a contagem quando o contador passar de 30. (Clique para ver as instruções
         completas)
@@ -6817,12 +6960,21 @@ pt-BR:
         +=. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Add 5: Some 5 a todos os valores em um vetor (Clique
         para ver as instruções completas)
+      U3 - Loops And Arrays - Challenge 1: Escreva uma função que encontre e retorne
+        o menor valor no array. (Clique para ver todas as instruções)
+      U3 - Loops And Arrays - Challenge 2: Escreva uma função que encontre e retorne
+        o menor valor no array. (Clique para ver todas as instruções)
       U3 - Loops And Arrays - Counting Times: Conte o número de vezes que o 5 aparece
         em um vetor. (Clique para ver as instruções completas)
       U3 - Loops And Arrays - Divid by 2: Divida cada valor no vetor por 2. (Clique
         para ver as instruções completas)
+      U3 - Loops And Arrays - Find Max: Escreva uma função que mostre o menor número
+        em um array. (Clique para ver todas as instruções)
       U3 - Loops And Arrays - Find Min: Complete a função findMinVal para localizar
         e exibir o menor valor em um array (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Functions that Return Value: Invoque findMin com a instrução
+        console.log para calcular o mínimo de dois valores. (Clique para ver todas
+        as instruções)
       U3 - Loops And Arrays - General Search Param: Adicione um segundo parâmetro
         à função de pesquisa para o valor a ser pesquisado. (Clique para ver instruções
         completas)
@@ -6839,16 +6991,24 @@ pt-BR:
         para ver instruções completas)
       U3 - Loops And Arrays - Make it a Function: Mova o código que pesquisa a lista
         por um 5 em uma função chamada "pesquisa". (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Multiple Returns: Teste o valor de retorno da função
+        findMax. (Clique para ver todas as instruções)
       U3 - Loops And Arrays - Print Array: Use um laço for para imprimir todos os
         valores em um array. (Clique para ver instruções completas)
       U3 - Loops And Arrays - Printing Single True: Processe o array e exiba um único
         "verdadeiro" se o array contiver um 5 ou um único "falso" caso não tenha.
         (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Return Index: Faça a função de busca retornar o índice
+        do valor buscado no array. (Clique para ver todas as instruções)
       U3 - Loops And Arrays - Return Value: Use restrições neste aplicativo simples
         para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
+      U3 - Loops And Arrays - Search and Remove: Busque por 5 no array e o remova
+        do array. (Clique para ver todas as instruções)
       U3 - Loops And Arrays - Search with Boolean Var: Crie uma variável booleana
         para ser usada como uma flag para observar se há um 5 no array. (Clique para
         ver todas as instruções)
+      U3 - Loops And Arrays - useFindMin: Invoque findMin com a instrução console.log
+        para calcular o mínimo de dois valores. (Clique para ver todas as instruções)
       U3 - Movie Bot - Multiple If Sequences: Adicione outro conjunto de declarações
         se, senão se e senão dentro da questão de declaração se para verificar por
         palavras para classificações de filmes (G, PG, PG-13 e R). (Clique para ver
@@ -6862,6 +7022,20 @@ pt-BR:
         (Clique para ver instruções completas)
       U3 - Practice Create Performance Task: Projete e implemente sua prática Criar
         tarefa de desempenho. (Clique para ver instruções completas)
+      U3 - Read Record - 1.2: Console.log os registros retornados pela chamada de
+        readRecords. (Clique para ver todas as instruções)
+      U3 - Read Record - 1.5: Console.log os registros retornados pela chamada de
+        readRecords. (Clique para ver todas as instruções)
+      U3 - Read Record - 1.6: Console.log os registros retornados pela chamada de
+        readRecords. (Clique para ver todas as instruções)
+      U3 - Read Record - 1: Console.log os registros retornados pela chamada de readRecords.
+        (Clique para ver todas as instruções)
+      U3 - Read Record - 2: Mude o nome da tabela para que os registros sejam lidos
+        da nova tabela. (Clique para ver todas as instruções)
+      U3 - Read Record - 5 and half: Imprima o nome de cada filme nos registros retornados
+        da chamada a readRecords. (Clique para ver todas as instruções)
+      U3 - Read Record - 5: Imprima o nome de cada filme nos registros retornados
+        da chamada a readRecords. (Clique para ver todas as instruções)
       U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples
         para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
       U3 - Return Values - debuggingConstrain: Corrija o erro na restrição para que
@@ -6870,6 +7044,10 @@ pt-BR:
         reporte corretamente o valor máximo. (Clique para ver instruções completas)
       U3 - Return Values - debuggingReturns: Corrija o erro no maxVal para que ele
         reporte corretamente o valor máximo. (Clique para ver instruções completas)
+      U3 - Return Values - min1: Teste o valor de retorno da função findMax. (Clique
+        para ver todas as instruções)
+      U3 - Return Values - useFindMin: Invoque findMin com a instrução console.log
+        para calcular o mínimo de dois valores. (Clique para ver todas as instruções)
       U3 - Return Values - useMinVal: Chame minVal dentro da instrução console.log
         para calcular o mínimo de dois valores. (Clique para ver instruções completas)
       U3 - Return Values - wrapTurtle: Escreva embrulhe neste aplicativo simples para
@@ -6878,6 +7056,12 @@ pt-BR:
       U3 - Return Values - writeMaxVal: Escreva a função maxVal e use-a na instrução
         console.log para calcular o máximo de dois valores. (Clique para ver instruções
         completas)
+      U3 - Search Terms - 1: Crie um array com todos os filmes feitos em 2008 e os
+        imprima. (Clique para ver todas as instruções)
+      U3 - Search Terms - 5: Imprima as cidades que estão na Califórnia ou que tenham
+        uma população de 2.000.000. (Clique para ver todas as instruções)
+      U3 - Search Terms - 6: Imprima as cidades que estão na Califórnia ou que tenham
+        uma população de 2.000.000. (Clique para ver todas as instruções)
       U3 - Simple Drawing - Comments: Faça isso
       U3 - Simple Drawing - Ellipse and No Fill: Faça isso
       U3 - Simple Drawing - Fill: Faça isso
@@ -6924,10 +7108,13 @@ pt-BR:
       U3 - Sprites and Mod - two sprites: Faça isso
       U3 - User Input - Save getText To Variable: Salve a idade e o nome do usuário
         em variáveis (clique para ver as instruções completas)
+      U3 - User Input and String -  Concat: Exibe uma mensagem sobre idade na área
+        de texto. (Clique para ver todas as instruções)
       U3 - Variables - Set to Expression with Other Variables: 'Escreva uma expressão
         que calcule a pontuação total do jogador e armazene-a na variável pontuacaoTotal.
         O cálculo é: os pontos do jogador são multiplicados pelas vidas e divididos
         pelo tempo total. (clique para ver as instruções completas)'
+      U3 - Variables - Set to Expression with Turtle: "(Clique para ver tudo)"
       U3 - Variables - Set to Expression: Teste as novas expressões. (Clique para
         ver instruções completas)
       U3 - images - bee free play: Faça isso
@@ -6940,6 +7127,7 @@ pt-BR:
       U3 Digital Assistant Target - Mehal: Experimente uma demonstração do Assistente
         Digital!
       U3 Digital Assistant Target: Experimente uma demonstração do Assistente Digital!
+      U3 Digital Assistant Template: Esse é um template de projeto!
       U3 Variables consolelog: Use o bloco de escrita para exibir o valor de tamanho
       U3 Variables flower example: Mude o valor de petalSize múltiplas vezes. Como
         isto muda o seu desenho?
@@ -6952,6 +7140,8 @@ pt-BR:
       U3 Variables write: Use o bloco de escrita para exibir o valor de tamanho
       U3 full clicker demo: Jogo Clicker - Experimente!
       U3 mehal's clone: Experimente uma demonstração do Assistente Digital!
+      U3- Variables - Assign Random For Turtle Draw: Experimente escrever o mesmo
+        código em modo texto.
       U3- Variables - Create And Assign: Em uma linha, adicione uma variável chamada
         "vidas" e atribua a ela o valor 3. Imprima-a no console. (Clique para ver
         instruções completas)
@@ -7241,6 +7431,18 @@ pt-BR:
         a grama e a lua.  Todos os efeitos são aplicações inteligentes dos pontos,\nlinhas
         e cores da tartaruga.  Para começar, siga a série de etapas sugerida na\nplanilha
         de acompanhamento. "
+      U3L07 - allSeaGrass: Adicione 50 pedaços de ervas marinhas à imagem escrevendo
+        drawAllSeagrass com um laço. (Clique para ver instruções completas)
+      U3L07 - allSeaGrass_2018: Adicione 50 pedaços de ervas marinhas à imagem escrevendo
+        drawAllSeagrass com um laço. (Clique para ver instruções completas)
+      U3L07 - allSeaGrass_2019: Adicione 50 pedaços de ervas marinhas à imagem escrevendo
+        drawAllSeagrass com um laço. (Clique para ver instruções completas)
+      U3L07 - bubbles: Adicione 200 bolhas à imagem escrevendo drawAllBubbles com
+        um loop. (Clique para ver instruções completas)
+      U3L07 - bubbles_2018: Adicione 200 bolhas à imagem escrevendo drawAllBubbles
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - bubbles_2019: Adicione 200 bolhas à imagem escrevendo drawAllBubbles
+        com um loop. (Clique para ver instruções completas)
       U3L07 - createTriangleParam: Defina uma função que aceite um parâmetro para
         corresponder às chamadas da função e conclua a imagem. (Clique para ver instruções
         completas)
@@ -7250,6 +7452,27 @@ pt-BR:
       U3L07 - createTriangleParam_2019: Defina uma função que aceite um parâmetro
         para corresponder às chamadas da função e conclua a imagem. (Clique para ver
         instruções completas)
+      U3L07 - fish: Adicione 15 peixes à imagem escrevendo drawAllFish com um loop.
+        (Clique para ver instruções completas)
+      U3L07 - fish_2018: Adicione 15 peixes à imagem escrevendo drawAllFish com um
+        loop. (Clique para ver instruções completas)
+      U3L07 - fish_2019: Adicione 15 peixes à imagem escrevendo drawAllFish com um
+        loop. (Clique para ver instruções completas)
+      U3L07 - introSquare: Use um loop para desenhar um quadrado. Em seguida, adicione
+        outro loop para desenhar muitos quadrados, cada um deles girando um pouco.
+        (Clique para ver instruções completas)
+      U3L07 - introSquare_2018: Use um loop para desenhar um quadrado. Em seguida,
+        adicione outro loop para desenhar muitos quadrados, cada um deles girando
+        um pouco. (Clique para ver instruções completas)
+      U3L07 - introSquare_2019: Use um loop para desenhar um quadrado. Em seguida,
+        adicione outro loop para desenhar muitos quadrados, cada um deles girando
+        um pouco. (Clique para ver instruções completas)
+      U3L07 - loopsWithRandom: Aumente o número de iterações para preencher a tela
+        com branco. (Clique para ver instruções completas)
+      U3L07 - loopsWithRandom_2018: Aumente o número de iterações para preencher a
+        tela com branco. (Clique para ver instruções completas)
+      U3L07 - loopsWithRandom_2019: Aumente o número de iterações para preencher a
+        tela com branco. (Clique para ver instruções completas)
       U3L07 - randomDots1: Aumente o número de iterações para preencher completamente
         a tela com pontos aleatórios. (Clique para ver instruções completas)
       U3L07 - randomDots1_2018: Aumente o número de iterações para preencher completamente
@@ -7262,6 +7485,30 @@ pt-BR:
         todas as instruções)
       U3L07 - randomSquare_2019: Desenhe a figura usando um laço. (Clique para ver
         todas as instruções)
+      U3L07 - seaGrass: Adicione um parâmetro para desenhar ervas marinhas que controla
+        o número de ondas na grama. (Clique para ver instruções completas)
+      U3L07 - seaGrass_2018: Adicione um parâmetro para desenhar ervas marinhas que
+        controla o número de ondas na grama. (Clique para ver instruções completas)
+      U3L07 - seaGrass_2019: Adicione um parâmetro para desenhar ervas marinhas que
+        controla o número de ondas na grama. (Clique para ver instruções completas)
+      U3L07 - seaStar: Adicione 5 estrelas do mar à imagem escrevendo drawAllSeaStars
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - seaStar_2018: Adicione 5 estrelas do mar à imagem escrevendo drawAllSeaStars
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - seaStar_2019: Adicione 5 estrelas do mar à imagem escrevendo drawAllSeaStars
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - sunBeams: Adicione 100 raios de sol à imagem escrevendo drawAllSunbeams
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - sunBeams_2018: Adicione 100 raios de sol à imagem escrevendo drawAllSunbeams
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - sunBeams_2019: Adicione 100 raios de sol à imagem escrevendo drawAllSunbeams
+        com um loop. (Clique para ver instruções completas)
+      U3L07 - topDownDesign: Fique à vontade com a estrutura deste programa, depois
+        passe para o próximo exercício. (Clique para ver instruções completas)
+      U3L07 - topDownDesign_2018: Fique à vontade com a estrutura deste programa,
+        depois passe para o próximo exercício. (Clique para ver instruções completas)
+      U3L07 - topDownDesign_2019: Fique à vontade com a estrutura deste programa,
+        depois passe para o próximo exercício. (Clique para ver instruções completas)
       U3L08 - createTwoParamTriangle: Defina uma função chamada desenharTriangulo
         () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
         (Clique para ver instruções completas)
@@ -7271,6 +7518,12 @@ pt-BR:
       U3L08 - createTwoParamTriangle_2019: Defina uma função chamada desenharTriangulo
         () que aceita dois parâmetros para definir o tamanho e a largura do triângulo.
         (Clique para ver instruções completas)
+      U3L08 - digitalScene: Crie as funções atribuídas como parte de sua cena digital.
+        (Clique para ver instruções completas)
+      U3L08 - digitalScene_2018: Crie as funções atribuídas como parte de sua cena
+        digital. (Clique para ver instruções completas)
+      U3L08 - digitalScene_2019: Crie as funções atribuídas como parte de sua cena
+        digital. (Clique para ver instruções completas)
       U3L08 - drawSquareWithParam - for video: Use desenharQuadrado () para recriar
         a imagem de ambos os quadrados, desta vez usando parâmetros. (Clique para
         ver instruções completas)
@@ -7295,6 +7548,24 @@ pt-BR:
         para suas novas funções com parâmetros. (Clique para ver instruções completas)
       U3L08 - freePlay_2019: Continue adicionando à sua imagem fazendo mais chamadas
         para suas novas funções com parâmetros. (Clique para ver instruções completas)
+      U3L08 - individualCode: Crie as funções atribuídas como parte de sua cena digital.
+        (Clique para ver instruções completas)
+      U3L08 - individualCode_2018: Crie as funções atribuídas como parte de sua cena
+        digital. (Clique para ver instruções completas)
+      U3L08 - individualCode_2019: Crie as funções atribuídas como parte de sua cena
+        digital. (Clique para ver instruções completas)
+      U3L08 - introUnderTheSea with comments: Adicione um peixe extra, uma estrela
+        do mar e um pedaço de ervas marinhas à imagem. Olhe mas não mude as funções
+        que os criam. (Clique para ver instruções completas)
+      U3L08 - introUnderTheSea: Adicione um peixe extra, uma estrela do mar e um pedaço
+        de ervas marinhas à imagem. Olhe mas não mude as funções que os criam. (Clique
+        para ver instruções completas)
+      U3L08 - introUnderTheSea_2018: Adicione um peixe extra, uma estrela do mar e
+        um pedaço de ervas marinhas à imagem. Olhe mas não mude as funções que os
+        criam. (Clique para ver instruções completas)
+      U3L08 - introUnderTheSea_2019: Adicione um peixe extra, uma estrela do mar e
+        um pedaço de ervas marinhas à imagem. Olhe mas não mude as funções que os
+        criam. (Clique para ver instruções completas)
       U3L08 - multiParamFish: Adicione três parâmetros à sua função desenharPeixe
         para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
         diferentes. (Clique para ver instruções completas)
@@ -7304,6 +7575,44 @@ pt-BR:
       U3L08 - multiParamFish_2019: Adicione três parâmetros à sua função desenharPeixe
         para aceitar os valores vermelho, verde e azul para criar seu peixe com cores
         diferentes. (Clique para ver instruções completas)
+      U3L08 - paramsToStarfish: Adicione um parâmetro ao drawStarfish que altera o
+        tamanho da estrela do mar desenhada. (Clique para ver instruções completas)
+      U3L08 - paramsToStarfish_2018: Adicione um parâmetro ao drawStarfish que altera
+        o tamanho da estrela do mar desenhada. (Clique para ver instruções completas)
+      U3L08 - paramsToStarfish_2019: Adicione um parâmetro ao drawStarfish que altera
+        o tamanho da estrela do mar desenhada. (Clique para ver instruções completas)
+      U3L08 - randomInput: Use os blocos randomNumber () para testar as funções que
+        você projetou com entrada aleatória. (Clique para ver instruções completas)
+      U3L08 - randomInput_2018: Use os blocos randomNumber () para testar as funções
+        que você projetou com entrada aleatória. (Clique para ver instruções completas)
+      U3L08 - randomInput_2019: Use os blocos randomNumber () para testar as funções
+        que você projetou com entrada aleatória. (Clique para ver instruções completas)
+      U3L08 - seaGrass: Adicione um parâmetro drawSeagrass que altera o tamanho do
+        pedaço de ervas marinhas extraídas. (Clique para ver instruções completas)
+      U3L08 - seaGrass_2018: Adicione um parâmetro drawSeagrass que altera o tamanho
+        do pedaço de ervas marinhas extraídas. (Clique para ver instruções completas)
+      U3L08 - seaGrass_2019: Adicione um parâmetro drawSeagrass que altera o tamanho
+        do pedaço de ervas marinhas extraídas. (Clique para ver instruções completas)
+      U3L08 - squareTwoParams: Chame drawSquare () para completar o desenho de dois
+        quadrados. (Clique para ver instruções completas)
+      U3L08 - squareTwoParams_2018: Chame drawSquare () para completar o desenho de
+        dois quadrados. (Clique para ver instruções completas)
+      U3L08 - squareTwoParams_2019: Chame drawSquare () para completar o desenho de
+        dois quadrados. (Clique para ver instruções completas)
+      U3L08 - starFish: Adicione um peixe extra, uma estrela do mar e um pedaço de
+        ervas marinhas à imagem. Olhe mas não mude as funções que os criam. (Clique
+        para ver instruções completas)
+      U3L08 - triangleTwoParams: Chame drawSquare () para completar o desenho de dois
+        quadrados. (Clique para ver instruções completas)
+      U3L08 how to add comments: Use os blocos randomNumber () para testar as funções
+        que você projetou com entrada aleatória. (Clique para ver instruções completas)
+      U3L08 how to add comments_2018: Use os blocos randomNumber () para testar as
+        funções que você projetou com entrada aleatória. (Clique para ver instruções
+        completas)
+      U3L08 how to add comments_2019: Use os blocos randomNumber () para testar as
+        funções que você projetou com entrada aleatória. (Clique para ver instruções
+        completas)
+      U3L12 Chaser Template: Esse é um template de projeto!
       U3L13 - Button with ID: |-
         Arraste um botão para fora da tela e
         defina seu texto como "Vá em frente!".  Execute o programa para ver se você consegue enxergar
@@ -7901,6 +8210,8 @@ pt-BR:
         para um script inteiro e seria chato de fazer para o script todasascoisas).
       allthethings_U3 - Simple Drawing - Rectangle Width and Height: Faça isso
       allthethings_moviebot: Este nível clonado do "U3 Alvo Assistente Digital"
+      allthethings_ttscsf contained: Colha toda a alface (somente enquanto houver
+        alguma para colher.)
       allthethings_ttscsp: Analise o programa corrigindo o erro lógico dentro do programa.
         (Clique para ver as instruções completas)
       artistDebugVideo1: Use o laço `repetir` para adicionar ondas à água.
@@ -8956,8 +9267,14 @@ pt-BR:
       courseB_starWars_prog9: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog9_2018: Ajude BB-8 a recolher os pedaços de metais brilhantes
       courseB_starWars_prog9_2019: Ajude BB-8 a recolher os pedaços de metais brilhantes
+      courseC19_playLab_EOC1: Escolha um plano de fundo, um mapa e escolha um ator
+        para ser o herói do seu jogo.
       courseC19_playLab_EOC2: Use eventos e ações para fazer seu herói se mover. Chegue
         aos alvos.
+      courseC19_playLab_EOC3: Coloque dois ou mais atores adicionais no seu jogo e
+        faça-os se moverem.
+      courseC19_playLab_EOC4: Encontre algumas maneiras interessantes de alterar a
+        pontuação do seu jogo. Faça a pontuação mostrar algo diferente de 0 para continuar.
       courseC19_playLab_EOC5: Ótimo trabalho! Você tem todos os componentes básicos
         de um jogo em funcionamento. Agora passe algum tempo certificando-se de que
         o jogo funciona do jeito que você deseja.
@@ -10344,19 +10661,110 @@ pt-BR:
         abóboras.
       courseE_farmer_functions2b_2019: Ajude a colheitadeira a pegar os milhos e as
         abóboras.
+      courseE_farmer_functions7a1_2018: Crie uma função que envie a colheitadeira
+        por um caminho quadrado para colher uma única cabeça de alface no meio de
+        cada linha.
+      courseE_farmer_functions7a1_2019: Crie uma função que envie a colheitadeira
+        por um caminho quadrado para colher uma única cabeça de alface no meio de
+        cada linha.
+      courseE_farmer_functions7b: Ajude a colheitadeira a encontrar seu trajeto por
+        esse caminho confuso até a abóbora virando à esquerda no milho e à direta
+        na alface.
+      courseE_farmer_functions7b_2018: Ajude a colheitadeira a encontrar seu trajeto
+        por esse caminho confuso até a abóbora virando à esquerda no milho e à direta
+        na alface.
       courseE_farmer_functions8: "**Desafio:** Resolva este quebra-cabeça com a menor
         quantidade possível de blocos."
+      courseE_farmer_functions8a1_2018: Sua função ainda é útil?
+      courseE_farmer_functions8a1_2019: Sua função ainda é útil?
       courseE_farmer_functions8b: "**Desafio:** Colete todas as abóboras usando o
         método do último quebra-cabeça. "
       courseE_farmer_functions8b_2018: "**Desafio:** Colete todas as abóboras usando
         o método do último quebra-cabeça. "
       courseE_farmer_functions9: Use condicionais para simplificar seu programa.
+      courseE_farmer_functions9a1_2018: Sua função ainda é útil?
+      courseE_farmer_functions9a1_2019: Sua função ainda é útil?
+      courseE_farmer_functions9b: Você consegue descobrir o padrão que você precisa
+        para resolver este quebra-cabeça?
+      courseE_farmer_functions9b_2018: Você consegue descobrir o padrão que você precisa
+        para resolver este quebra-cabeça?
+      courseE_farmer_functions9b_clone: Você consegue descobrir o padrão que você
+        precisa para resolver este quebra-cabeça?
+      courseE_farmer_predict1: Colha toda a alface (somente enquanto houver alguma
+        para colher.)
+      courseE_farmer_predict1_2018: Colha toda a alface (somente enquanto houver alguma
+        para colher.)
+      courseE_farmer_ramp11: Este quebra-cabeça também usa laços aninhados. Você consegue
+        descobrir como?
       courseE_farmer_ramp11a: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11a_2019: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2018: Enquanto houver uma pilha, remova a areia.
       courseE_farmer_ramp11b_2019: Enquanto houver uma pilha, remova a areia.
+      courseE_farmer_ramp12: Agora use laços aninhados para resolver esse quebra-cabeça.
+      courseE_farmer_ramp12_2018: Agora use laços aninhados para resolver esse quebra-cabeça.
+      courseE_farmer_ramp12_forswap: Agora use laços aninhados para resolver esse
+        quebra-cabeça.
+      courseE_farmer_ramp12_forswap_2018: Agora use laços aninhados para resolver
+        esse quebra-cabeça.
+      courseE_farmer_ramp12_forswap_2019: Agora use laços aninhados para resolver
+        esse quebra-cabeça.
+      courseE_farmer_ramp12a: Ajude o fazendeiro a percorrer corretamente o caminho
+        para coletar toda a alface.
+      courseE_farmer_ramp12a_2018: Ajude o fazendeiro a percorrer corretamente o caminho
+        para coletar toda a alface.
+      courseE_farmer_ramp12b: Enquanto houver alface, colha alface!
+      courseE_farmer_ramp12b_2018: Enquanto houver alface, colha alface!
+      courseE_farmer_ramp12b_2019: Enquanto houver alface, colha alface!
+      courseE_farmer_ramp12c: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
+      courseE_farmer_ramp12c_2018: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12c_2019: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12d: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
+      courseE_farmer_ramp12d_2018: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12d_2019: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12e: Avance até chegar à alface e, em seguida, colha tudo
+        usando um laço `while`.
+      courseE_farmer_ramp12e_2018: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12e_2019: Avance até chegar à alface e, em seguida, colha
+        tudo usando um laço `while`.
+      courseE_farmer_ramp12f: Siga em frente até chegar à alface e, em seguida, vire
+        à esquerda **se** houver um caminho para a esquerda. Caso contrário, vire
+        à direita.
+      courseE_farmer_ramp12f_2018: Siga em frente até chegar à alface e, em seguida,
+        vire à esquerda **se** houver um caminho para a esquerda. Caso contrário,
+        vire à direita.
+      courseE_farmer_ramp12f_2019: Siga em frente até chegar à alface e, em seguida,
+        vire à esquerda **se** houver um caminho para a esquerda. Caso contrário,
+        vire à direita.
+      courseE_farmer_ramp12g: Siga em frente até chegar à alface e, em seguida, vire
+        à esquerda **se** houver um caminho para a esquerda. Caso contrário, vire
+        à direita.
+      courseE_farmer_ramp12g_2018: Siga em frente até chegar à alface e, em seguida,
+        vire à esquerda **se** houver um caminho para a esquerda. Caso contrário,
+        vire à direita.
+      courseE_farmer_ramp12g_2019: Siga em frente até chegar à alface e, em seguida,
+        vire à esquerda **se** houver um caminho para a esquerda. Caso contrário,
+        vire à direita.
+      courseE_farmer_ramp13: Colha milho se houver milho e colha alface enquanto houver
+        alface.
+      courseE_farmer_ramp13_2018: Colha milho se houver milho e colha alface enquanto
+        houver alface.
+      courseE_farmer_ramp15: Resolva esse quebra-cabeça usando apenas os blocos disponíveis.
+      courseE_farmer_ramp15_2018: Resolva esse quebra-cabeça usando apenas os blocos
+        disponíveis.
+      courseE_maze_predict1: Este código inclui um novo bloco. O que você acha que
+        aconteceria se você pressionar o bloco "Executar"?
+      courseE_maze_predict1_2018: Este código inclui um novo bloco. O que você acha
+        que aconteceria se você pressionar o bloco "Executar"?
+      courseE_maze_ramp13: Hora de um último quebra-cabeça para juntar tudo!
       courseE_maze_ramp3: Há um bloco extra que vai fazer com que o pássaro caia.
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseE_maze_ramp3_2018: Há um bloco extra que vai fazer com que o pássaro caia.
@@ -10369,6 +10777,11 @@ pt-BR:
         Senão eu posso ficar zangado!"'
       courseE_maze_ramp6_2018: '"Mantenha a calma e me ajude a encontrar o porco malvado.
         Senão eu posso ficar zangado!"'
+      courseE_maze_ramp7: Use o que você aprendeu para levar o pássaro para o porco!
+      courseE_maze_ramp7_2018: Use o que você aprendeu para levar o pássaro para o
+        porco!
+      courseE_maze_ramp_predict1: Este código inclui um novo bloco. O que você acha
+        que aconteceria se você pressionar o bloco "Executar"?
       courseE_multi_maze_ramp5: Desvie da TNT.
       courseE_playLab_challenge1: "Algo deve acontecer quando tiver pontos suficientes,
         ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
@@ -10378,10 +10791,116 @@ pt-BR:
         ou quando você ficar sem pontos. Adicione algum código para o 'ganhar jogo'
         e 'perder o jogo' funções para fazer o jogo funcionar do jeito que deveria.
         \nClique as dicas para ideias!"
+      courseE_playLab_embedded: Este é um jogo de exemplo com o qual você pode brincar.
+        Mova o cachorro com as setas do teclado. Quando o cachorro toca um dos gatos,
+        ele marca um ponto! Marque 5 pontos para ganhar!
+      courseE_playLab_exampleProject2: Aqui está todo o seu código para escolher uma
+        carta - tente adicionar alguns outros recursos divertidos!
+      courseE_playLab_scaffold1: Escolha um plano de fundo, um mapa e escolha um ator
+        para ser o herói do seu jogo.
+      courseE_playLab_scaffold1_2018: Escolha um plano de fundo, um mapa e escolha
+        um ator para ser o herói do seu jogo.
+      courseE_playLab_scaffold2: Use manipuladores de eventos e ações para fazer seu
+        herói se mover.
+      courseE_playLab_scaffold2_2018: Use manipuladores de eventos e ações para fazer
+        seu herói se mover.
+      courseE_playLab_scaffold3: Coloque dois ou mais atores adicionais no seu jogo
+        e faça-os se moverem.
+      courseE_playLab_scaffold3_2018: Coloque dois ou mais atores adicionais no seu
+        jogo e faça-os se moverem.
+      courseE_playLab_scaffold4: Encontre algumas maneiras interessantes de alterar
+        a pontuação do seu jogo. Faça a pontuação mostrar algo diferente de 0 para
+        continuar.
+      courseE_playLab_scaffold4_2018: Encontre algumas maneiras interessantes de alterar
+        a pontuação do seu jogo. Faça a pontuação mostrar algo diferente de 0 para
+        continuar.
+      courseE_playLab_scaffold5: Agora gaste algum tempo certificando-se de que o
+        jogo funciona do jeito que você quer. Inclua uma maneira de ganhar ou perder
+        no seu jogo, daí jogue até suprir uma dessas condições.
+      courseE_playLab_scaffold5_2018: Agora gaste algum tempo certificando-se de que
+        o jogo funciona do jeito que você quer. Inclua uma maneira de ganhar ou perder
+        no seu jogo, daí jogue até suprir uma dessas condições.
       courseE_playlab_challenge2: Você pode descobrir como este aplicativo "Vidente"
         funciona? Clique em `MAIS` para ver seus desafios.
       courseE_playlab_variables_challenge2: Você pode descobrir como este aplicativo
         "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
+      courseE_video_createFunctions: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseE_video_createFunctions2: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseE_video_createFunctions2_2018: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseE_video_createFunctions2_2019: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseE_video_createFunctions_2018: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseF_IceAge_1: Ajude Sid a dizer "Olá!" arrastando o bloco `ator 1 diz` pra
+        fora e conectando-o à parte inferior do evento `quando executar`.
+      courseF_IceAge_10: Use o comando `ator __ lança` para que Sid (ator 1) lance
+        os corações para Granny (ator 2) e defina o humor de Granny para feliz quando
+        ela for atingida por eles.
+      courseF_IceAge_11: 'Hora de criar seu próprio jogo ou história! '
+      courseF_IceAge_2: Ajude Manny e Sid a se cumprimentarem usando o bloco `ator
+        ___ diz` duas vezes.
+      courseF_IceAge_4: Conecte um bloco ao evento `quando o ator tocar` para tocar
+        um som quando Diego encontra Manny.
+      courseF_IceAge_5: Ajude a vovó a fazer algum exercício movendo para a esquerda
+        e para a direita repetidamente.
+      courseF_IceAge_6: 'Você pode ajudar Sid a ligar para os amigos dele quando você
+        clica nele? '
+      courseF_IceAge_7: Escreva o código para ajudar Scrat a pegar todas as nozes!
+      courseF_IceAge_8: 'Você pode terminar este programa para fazer com que **toque
+        um som** e **marque um ponto** quando Sid e Granny colidirem? '
+      courseF_IceAge_9: Mude a cena para um fundo nevado e ajuste a velocidade de
+        Sid (ator 1) para rápido.
+      courseF_IceAge_template: Escreva o código para ajudar Scrat a pegar todas as
+        nozes!
+      courseF_artist_embed_for7: Pressione Executar para ver um programa em ação!
+        Este usa laços for.
+      courseF_artist_embed_variables9: Pressione Executar para ver este programa em
+        ação!
+      courseF_artist_for1: Experimente com o laço `for` e brinque com a variável`contador`.
+      courseF_artist_for10: 'Jogo Livre: Tente usar a variável `contador` com outros
+        elementos de desenho para criar imagens mágicas como esta.'
+      courseF_artist_for10_2018: 'Jogo Livre: Tente usar a variável `contador` com
+        outros elementos de desenho para criar imagens mágicas como esta.'
+      courseF_artist_for10_2019: 'Jogo Livre: Tente usar a variável `contador` com
+        outros elementos de desenho para criar imagens mágicas como esta.'
+      courseF_artist_for1_2018: Experimente com o laço `for` e brinque com a variável`contador`.
+      courseF_artist_for1_2019: Experimente com o laço `for` e brinque com a variável`contador`.
+      courseF_artist_for2: Crie essa pilha de triângulos que vai de 50 a 100 pixels
+        de lado.
+      courseF_artist_for2_2018: Crie essa pilha de triângulos que vai de 50 a 100
+        pixels de lado.
+      courseF_artist_for2_2019: Crie essa pilha de triângulos que vai de 50 a 100
+        pixels de lado.
+      courseF_artist_for3: 'Esses triângulos vão de 20 a 200 pixels de lados e cada
+        triângulo é 20 pixels maior que o anterior. '
+      courseF_artist_for3_2018: 'Esses triângulos vão de 20 a 200 pixels de lados
+        e cada triângulo é 20 pixels maior que o anterior. '
+      courseF_artist_for3_2019: 'Esses triângulos vão de 20 a 200 pixels de lados
+        e cada triângulo é 20 pixels maior que o anterior. '
+      courseF_artist_for4: 'Esses quadrados começam com 15 pixels de comprimento.
+        O maior tem 300 pixels de comprimento e cada quadrado é 15 pixels maior que
+        o anterior. '
+      courseF_artist_for4_2018: 'Esses quadrados começam com 15 pixels de comprimento.
+        O maior tem 300 pixels de comprimento e cada quadrado é 15 pixels maior que
+        o anterior. '
+      courseF_artist_for4_2019: 'Esses quadrados começam com 15 pixels de comprimento.
+        O maior tem 300 pixels de comprimento e cada quadrado é 15 pixels maior que
+        o anterior. '
+      courseF_artist_for5: Apenas uma pequena alteração no código da última imagem
+        pode criar este desenho. Você consegue descobrir que alteração é essa?
+      courseF_artist_for5_2018: Apenas uma pequena alteração no código da última imagem
+        pode criar este desenho. Você consegue descobrir que alteração é essa?
+      courseF_artist_for5_2019: Apenas uma pequena alteração no código da última imagem
+        pode criar este desenho. Você consegue descobrir que alteração é essa?
+      courseF_artist_for6: Recrie seu código do último nível, mas gire 89 graus para
+        criar essa espiral quadrada torcida.
+      courseF_artist_for6_2018: Recrie seu código do último nível, mas gire 89 graus
+        para criar essa espiral quadrada torcida.
+      courseF_artist_for6_2019: Recrie seu código do último nível, mas gire 89 graus
+        para criar essa espiral quadrada torcida.
       courseF_artist_for7: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
@@ -10391,6 +10910,18 @@ pt-BR:
       courseF_artist_for7_2019: |-
         Faça três pequenas alterações no
         código do último nível para conseguir isso!
+      courseF_artist_for9: "**Inspiração:** Use o contador dentro do bloco `defina
+        alpha` para obter este centro desbotado."
+      courseF_artist_for9_2018: "**Inspiração:** Use o contador dentro do bloco `defina
+        alpha` para obter este centro desbotado."
+      courseF_artist_for9_2019: "**Inspiração:** Use o contador dentro do bloco `defina
+        alpha` para obter este centro desbotado."
+      courseF_artist_for_Template: Tente usar um pouco do código do último nível,
+        mas girando 89 graus para criar essa espiral quadrada torcida.
+      courseF_artist_for_Template_2018: Tente usar um pouco do código do último nível,
+        mas girando 89 graus para criar essa espiral quadrada torcida.
+      courseF_artist_for_Template_2019: Tente usar um pouco do código do último nível,
+        mas girando 89 graus para criar essa espiral quadrada torcida.
       courseF_artist_for_challenge1: Você consegue descobrir como recriar este desenho?
       courseF_artist_for_challenge1_2018: Você consegue descobrir como recriar este
         desenho?
@@ -10408,23 +10939,148 @@ pt-BR:
       courseF_artist_fwp1: Edite a função 'desenhar um quadrado' para encontrar bugs.
       courseF_artist_fwp1_2018: Edite a função 'desenhar um quadrado' para encontrar
         bugs.
+      courseF_artist_fwp2: Edite a função para aceitar um parâmetro chamado `comprimento`.
+      courseF_artist_fwp2_2018: Edite a função para aceitar um parâmetro chamado `comprimento`.
+      courseF_artist_fwp2_predict1: Edite a função para aceitar um parâmetro chamado
+        `comprimento`.
+      courseF_artist_fwp2_predict1_2018: Edite a função para aceitar um parâmetro
+        chamado `comprimento`.
+      courseF_artist_fwp3: Crie uma função chamada 'desenhe um quadrado' e use-a para
+        delinear essas quatro caixas usando parâmetros.
+      courseF_artist_fwp3_2018: Crie uma função chamada 'desenhe um quadrado' e use-a
+        para delinear essas quatro caixas usando parâmetros.
+      courseF_artist_fwp4: Edite esta função para adicionar um parâmetro para o número
+        de lados em seu polígono.
+      courseF_artist_fwp4_2018: Edite esta função para adicionar um parâmetro para
+        o número de lados em seu polígono.
+      courseF_artist_fwp5: 'Use a função do último quebra-cabeça para desenhar essa
+        série de formas.  '
+      courseF_artist_fwp5_2018: 'Use a função do último quebra-cabeça para desenhar
+        essa série de formas.  '
+      courseF_artist_fwp6: 'Desafio: Edite `desenhe uma borda em espiral` para usar
+        os parâmetros `comprimento` e `lados`, daí recrie essas formas.'
+      courseF_artist_fwp6_2018: 'Desafio: Edite `desenhe uma borda em espiral` para
+        usar os parâmetros `comprimento` e `lados`, daí recrie essas formas.'
+      courseF_artist_fwp7: Termine a função `desenhar uma borda em espiral` para também
+        solicitar um comprimento mínimo para o centro da espiral.
+      courseF_artist_fwp7_2018: Termine a função `desenhar uma borda em espiral` para
+        também solicitar um comprimento mínimo para o centro da espiral.
+      courseF_artist_fwp8: Você consegue descobrir como fazer esse desenho usando
+        a função que você acabou de criar?
+      courseF_artist_fwp8_2018: Você consegue descobrir como fazer esse desenho usando
+        a função que você acabou de criar?
+      courseF_artist_fwp9: 'Jogo Livre: Desenhe algo incrível! Brinque com a largura
+        da caneta para ver o quão diferente seus desenhos ficarão!'
+      courseF_artist_fwp9_2018: 'Jogo Livre: Desenhe algo incrível! Brinque com a
+        largura da caneta para ver o quão diferente seus desenhos ficarão!'
       courseF_artist_fwp_challenge1: Você consegue descobrir como este programa funciona?
       courseF_artist_fwp_challenge1_2018: Você consegue descobrir como este programa
         funciona?
+      courseF_artist_fwp_challenge2: Use o que você aprendeu no nível anterior para
+        desenhar uma imagem como essa.
+      courseF_artist_fwp_challenge2_2018: Use o que você aprendeu no nível anterior
+        para desenhar uma imagem como essa.
       courseF_artist_variables1: Vamos desenhar um triângulo equilátero com exatamente
         50 pixels de comprimento em cada lado.
+      courseF_artist_variables10: 'Aqui está o seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas.  '
+      courseF_artist_variables10_2018: 'Aqui está o seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas.  '
+      courseF_artist_variables10_2019: 'Aqui está o seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas.  '
+      courseF_artist_variables2: 'Agora desenhe três desses triângulos ao lado um
+        do outro.   '
+      courseF_artist_variables2_2018: 'Agora desenhe três desses triângulos ao lado
+        um do outro.   '
+      courseF_artist_variables2_2019: 'Agora desenhe três desses triângulos ao lado
+        um do outro.   '
+      courseF_artist_variables3: Coloque o comprimento de 50 em uma variável para
+        que possamos usá-lo em alguns dos próximos quebra-cabeças.
+      courseF_artist_variables3_2018: Coloque o comprimento de 50 em uma variável
+        para que possamos usá-lo em alguns dos próximos quebra-cabeças.
+      courseF_artist_variables3_2019: Coloque o comprimento de 50 em uma variável
+        para que possamos usá-lo em alguns dos próximos quebra-cabeças.
+      courseF_artist_variables6: 'Agora faça os triângulos com 60 pixels de largura,
+        com pulos de 60 pixels.  '
+      courseF_artist_variables6_2018: 'Agora faça os triângulos com 60 pixels de largura,
+        com pulos de 60 pixels.  '
+      courseF_artist_variables6_2019: 'Agora faça os triângulos com 60 pixels de largura,
+        com pulos de 60 pixels.  '
+      courseF_artist_variables6a: Construa este desenho onde os quadrados têm 80 pixels
+        de lados e o artista pule 80 pixels adiante e para baixo entre cada um.
+      courseF_artist_variables6a_2018: Construa este desenho onde os quadrados têm
+        80 pixels de lados e o artista pule 80 pixels adiante e para baixo entre cada
+        um.
+      courseF_artist_variables6a_2019: Construa este desenho onde os quadrados têm
+        80 pixels de lados e o artista pule 80 pixels adiante e para baixo entre cada
+        um.
       courseF_artist_variables7: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2018: 'Desenhar um triângulo com lados de 150 pixels. '
       courseF_artist_variables7_2019: 'Desenhar um triângulo com lados de 150 pixels. '
+      courseF_artist_variables8: Reconstrua o código do triângulo do último quebra-cabeça,
+        mas desta vez use o bloco `definir comprimento em` para redefinir a variável
+        `comprimento` para `comprimento`+10 no final de cada iteração do laço.
+      courseF_artist_variables8_2018: Reconstrua o código do triângulo do último quebra-cabeça,
+        mas desta vez use o bloco `definir comprimento em` para redefinir a variável
+        `comprimento` para `comprimento`+10 no final de cada iteração do laço.
+      courseF_artist_variables8_2019: Reconstrua o código do triângulo do último quebra-cabeça,
+        mas desta vez use o bloco `definir comprimento em` para redefinir a variável
+        `comprimento` para `comprimento`+10 no final de cada iteração do laço.
+      courseF_artist_variables9: Veja o que acontece quando você repete o código do
+        último quebra-cabeça 30 vezes, ao invés de apenas 3! Sinta-se livre para fazer
+        suas linhas de qualquer cor ou padrão para um pouco de entusiasmo extra.
+      courseF_artist_variables9_2018: Veja o que acontece quando você repete o código
+        do último quebra-cabeça 30 vezes, ao invés de apenas 3! Sinta-se livre para
+        fazer suas linhas de qualquer cor ou padrão para um pouco de entusiasmo extra.
+      courseF_artist_variables9_2019: Veja o que acontece quando você repete o código
+        do último quebra-cabeça 30 vezes, ao invés de apenas 3! Sinta-se livre para
+        fazer suas linhas de qualquer cor ou padrão para um pouco de entusiasmo extra.
+      courseF_artist_variablesFP: "\\*\\* Jogo Livre:\\*\\* Pegue o que você aprendeu
+        e faça seu próprio desenho. "
+      courseF_artist_variablesFP_2018: "\\*\\* Jogo Livre:\\*\\* Pegue o que você
+        aprendeu e faça seu próprio desenho. "
+      courseF_artist_variablesFP_2019: "\\*\\* Jogo Livre:\\*\\* Pegue o que você
+        aprendeu e faça seu próprio desenho. "
+      courseF_artist_variables_10: 'Aqui está o seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas.  '
+      courseF_artist_variables_2: "Agora use outro laço para desenhar três desses
+        triângulos ao lado um do outro.  \nVocê pode aninhar o código do seu último
+        quebra-cabeça dentro deste laço."
+      courseF_artist_variables_6a: Construa este desenho onde os quadrados têm 80
+        pixels de lados e o artista pule 80 pixels adiante e para baixo entre cada
+        um.
+      courseF_artist_variables_9: |-
+        Veja o que acontece quando você repete o código do último quebra-cabeça 30 vezes, ao invés de apenas 3!
+
+        Sinta-se livre para fazer suas linhas de qualquer cor ou padrão para um pouco de entusiasmo extra.
+      courseF_artist_variables_challenge1: Você pode criar uma variável `comprimento`
+        e usá-la para criar esse padrão?
+      courseF_artist_variables_challenge1_2018: Você pode criar uma variável `comprimento`
+        e usá-la para criar esse padrão?
+      courseF_artist_variables_challenge1_2019: Você pode criar uma variável `comprimento`
+        e usá-la para criar esse padrão?
       courseF_artist_variables_challenge1a: Você agora aprendeu tudo o que você precisa
         saber para fazer um padrão assim! Este desafio foi feito para ser difícil.
         Você pode pensar sobre ele até descobrir a solução?
+      courseF_artist_variables_challenge2: Você já aprendeu tudo o que precisa saber
+        para criar um padrão como esse!
+      courseF_artist_variables_challenge2_2018: Você já aprendeu tudo o que precisa
+        saber para criar um padrão como esse!
+      courseF_artist_variables_challenge2_2019: Você já aprendeu tudo o que precisa
+        saber para criar um padrão como esse!
+      courseF_artistembed_variables9: Veja o que acontece quando você repete o código
+        do último quebra-cabeça 30 vezes, ao invés de apenas 3! Sinta-se livre para
+        fazer suas linhas de qualquer cor ou padrão para um pouco de entusiasmo extra.
       courseF_bee_conditionals10: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals10_2018: Colete todo o néctar e faça todo o mel.
       courseF_bee_conditionals1_predict1: Verifique se há uma flor embaixo da nuvem.
         Se houver uma flor, pegue o néctar.
       courseF_bee_conditionals1_predict1_2018: Verifique se há uma flor embaixo da
         nuvem. Se houver uma flor, pegue o néctar.
+      courseF_bee_conditionals2: 'Verifique embaixo de cada nuvem para ver se ela
+        está escondendo uma flor antes de pegar o néctar.  '
+      courseF_bee_conditionals2_2018: 'Verifique embaixo de cada nuvem para ver se
+        ela está escondendo uma flor antes de pegar o néctar.  '
       courseF_bee_conditionals3: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals3_2018: 'Ajude a abelha a colegar todo o nectar. '
       courseF_bee_conditionals4: Pegue todo o néctar usando o menor número de blocos
@@ -10447,6 +11103,18 @@ pt-BR:
         Caso contrário, faça mel (porque existe um favo de mel).
       courseF_bee_for1: Colete o nectar de cada flor usando o menor número de blocos
         possíveis.
+      courseF_bee_for10: "\\*\\* Desafio:\\*\\* Pegue o que você aprendeu sobre os
+        laços `for` e tente resolver este problema. "
+      courseF_bee_for10_2018: "\\*\\* Desafio:\\*\\* Pegue o que você aprendeu sobre
+        os laços `for` e tente resolver este problema. "
+      courseF_bee_for10_2019: "\\*\\* Desafio:\\*\\* Pegue o que você aprendeu sobre
+        os laços `for` e tente resolver este problema. "
+      courseF_bee_for11: Qual deve ser o seu incremento para coletar 15, depois 12,
+        depois 9, 6 e 3 néctares?
+      courseF_bee_for11_2018: Qual deve ser o seu incremento para coletar 15, depois
+        12, depois 9, 6 e 3 néctares?
+      courseF_bee_for11_2019: Qual deve ser o seu incremento para coletar 15, depois
+        12, depois 9, 6 e 3 néctares?
       courseF_bee_for1_2018: Colete o nectar de cada flor usando o menor número de
         blocos possíveis.
       courseF_bee_for1_2019: Colete o nectar de cada flor usando o menor número de
@@ -10456,6 +11124,8 @@ pt-BR:
         o néctar.
       courseF_bee_for2_2019: Escrever o código para ajudar a abelha a coletar todo
         o néctar.
+      courseF_bee_for3: Tente este quebra-cabeça usando o laço `for` e a variável
+        `contador` para ver quão mais curto seu código se torna.
       courseF_bee_for4: Ajude a abelha a coletar todo o nectar.
       courseF_bee_for4_2018: Ajude a abelha a coletar todo o nectar.
       courseF_bee_for4_2019: Ajude a abelha a coletar todo o nectar.
@@ -10464,6 +11134,15 @@ pt-BR:
         enigma.
       courseF_bee_for5_2019: Usar a variável `contador` duas vezes para resolver este
         enigma.
+      courseF_bee_for6: Tente reunir esse néctar por contagem regressiva de 5 para
+        1 em 1.
+      courseF_bee_for6_2018: Tente reunir esse néctar por contagem regressiva de 5
+        para 1 em 1.
+      courseF_bee_for6_2019: Tente reunir esse néctar por contagem regressiva de 5
+        para 1 em 1.
+      courseF_bee_for7: Tente coletar essas flores usando um incremento de 2.
+      courseF_bee_for7_2018: Tente coletar essas flores usando um incremento de 2.
+      courseF_bee_for7_2019: Tente coletar essas flores usando um incremento de 2.
       courseF_bee_for8: |-
         Você conseguiu! Qual deve ser seu
         incremento para coletar 3, 6, 9, 12, 15 néctares?
@@ -10473,6 +11152,15 @@ pt-BR:
       courseF_bee_for8_2019: |-
         Você conseguiu! Qual deve ser seu
         incremento para coletar 3, 6, 9, 12, 15 néctares?
+      courseF_bee_for9: Use a variável `contador` para navegar neste jardim com o
+        menor número possível de blocos.
+      courseF_bee_for9_2018: Use a variável `contador` para navegar neste jardim com
+        o menor número possível de blocos.
+      courseF_bee_for9_2019: Use a variável `contador` para navegar neste jardim com
+        o menor número possível de blocos.
+      courseF_bee_for_challenge1: 'Use este `laço for` para coletar todo o néctar. '
+      courseF_bee_for_challenge1_2018: 'Use este `laço for` para coletar todo o néctar. '
+      courseF_bee_for_challenge1_2019: 'Use este `laço for` para coletar todo o néctar. '
       courseF_bee_for_challenge2: |-
         Resolva este desafio usando o menor número
         possível de blocos.
@@ -10485,6 +11173,10 @@ pt-BR:
       courseF_bee_for_challenge3: |-
         Resolva este desafio usando o menor número
         possível de blocos.
+      courseF_bee_functions2: Use a função `pegar só nectar` para coletar o néctar
+        de cada flor.
+      courseF_bee_functions2_2018: Use a função `pegar só nectar` para coletar o néctar
+        de cada flor.
       courseF_bee_functions4: "A função \"mova e obtenha néctar\" vira\na abelha,
         coleta néctar, e então retorna a abelha para onde ela começou. \\\r\n\\\r\nUse\na
         função para coletar todo o néctar."
@@ -10503,6 +11195,13 @@ pt-BR:
         para resolvê-lo?
       courseF_bee_variables_8_2018: Quantos néctares a abelha irá coletar desta flor?
       courseF_bee_variables_8_2019: Quantos néctares a abelha irá coletar desta flor?
+      courseF_farmer_ramp11: Este quebra-cabeça também usa laços aninhados. Você consegue
+        descobrir como?
+      courseF_farmer_ramp11_2018: Este quebra-cabeça também usa laços aninhados. Você
+        consegue descobrir como?
+      courseF_maze_predict1: Este código inclui um novo bloco. O que você acha que
+        aconteceria se você pressionar o bloco "Executar"?
+      courseF_maze_ramp15: Use o que você aprendeu para levar o pássaro para o porco!
       courseF_maze_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseF_maze_ramp4_2018: Evite a(s) TNT(s) ou penas irão voar!
       courseF_maze_ramp5: Desvie da TNT.
@@ -10511,6 +11210,7 @@ pt-BR:
         Senão eu posso ficar zangado!"'
       courseF_maze_ramp6_2018: '"Mantenha a calma e me ajude a encontrar o porco malvado.
         Senão eu posso ficar zangado!"'
+      courseF_maze_ramp7: Use o que você aprendeu para levar o pássaro para o porco!
       courseF_playlab_variables0: Esta é uma Perna de Pirata. Ele é muito difícil
         de entender nos dias de hoje!
       courseF_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil
@@ -10523,6 +11223,10 @@ pt-BR:
       courseF_playlab_variables8c_2018: Use as variáveis para tornar o jogo mais pessoal.
       courseF_playlab_variables_challenge3: Você pode descobrir como este aplicativo
         "Vidente" funciona? Clique em `MAIS` para ver seus desafios.
+      courseF_video_createFunctions: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
+      courseF_video_createFunctions_2018: Ainda não temos um vídeo para criar funções.
+        Este é um marcador de posição.
       course_playlab_variables1: Esta é uma Perna de Pirata. Ele é muito difícil de
         entender nos dias de hoje!
       course_playlab_variables2: "Agora, decodifique a fala da Perna de Pirata mudando
@@ -11011,6 +11715,8 @@ pt-BR:
       grade3_maze_nestedLoops4: |-
         Neste desafio, dois laços "repita" ajudarão você
         a pegar o porco com o menor número possível de blocos!
+      grade3_playLab_buildGame_final2: Aqui está todo o seu código para escolher uma
+        carta - tente adicionar alguns outros recursos divertidos!
       grade3_robotFarmer_ConditionalsIntro4: Ajude o fazendeiro a remover essa pilha
         inteira usando um laço `while`.
       grade3_robotFarmer_ConditionalsIntro_10: Estou trabalhando até tarde, então
@@ -11238,6 +11944,7 @@ pt-BR:
         que faz seu personagem principal pular 100 pixels. Execute o programa e use
         a função "pule" para coletar todas as bandeiras movendo o cachorro com as setas
         do teclado.
+      grade4_prompt_test: Este é um nível de laboratório de teste.
       grade4_review_artist1: Olá, eu sou um artista. Você pode escrever código para
         me fazer desenhar praticamente qualquer coisa. Use alguns blocos para me fazer
         desenhar sobre as linhas cinzas na figura. (Cada linha tem 100 pixels de comprimento)
@@ -11298,6 +12005,9 @@ pt-BR:
       grade5_artist_for_loops10: "Você consegue descobrir como\nusar todas as coisas
         que você aprendeu para criar esta imagem?\\\r\n\\\r\nPrecisa de uma\ndica?
         Clique aqui."
+      grade5_artist_for_loops1b: Experimente com o laço `for` e brinque com a variável`contador`.
+      grade5_artist_for_loops3: 'Esses triângulos vão de 20 a 200 pixels de lados
+        e cada triângulo é 20 pixels maior que o anterior. '
       grade5_artist_for_loops5: "Apenas uma pequena alteração no código\nda última
         imagem pode criar este desenho. Você consegue descobrir qual é\nessa alteração?\\\r\n\\\r\nDica:
         algo precisa ser removido!"
@@ -11323,6 +12033,8 @@ pt-BR:
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n\\\r\nPrecisa
         de uma dica? Clique aqui."
+      grade5_artist_for_loopsfreeplay12: 'Jogo Livre: Tente usar a variável `contador`
+        com outros elementos de desenho para criar imagens mágicas como esta.'
       grade5_artist_functionparameters10: "Atividade livre - Inspiração: agora você\naprendeu
         tudo o que precisa saber para criar um padrão como esse! Se essa\nimagem inspira
         você, tente fazer algo similar. Caso contrário, crie algo\nvocê mesmo.\\\r\n
@@ -11339,6 +12051,12 @@ pt-BR:
         \\\r \nO perímetro de cada forma tem 200 pixels de comprimento. Você se lembra\nda
         equação para fazer as formas ficarem do mesmo tamanho quando elas têm um número
         diferente\nde lados?"
+      grade5_artist_functionparameters9: 'Desafio: Edite `desenhe uma borda em espiral`
+        para usar os parâmetros `comprimento` e `lados`, daí recrie essas formas.'
+      grade5_artist_functionparameters9a: Termine a função `desenhar uma borda em
+        espiral` para também solicitar um comprimento mínimo para o centro da espiral.
+      grade5_artist_functionparameters9b: Você consegue descobrir como fazer esse
+        desenho usando a função que você acabou de criar?
       grade5_artist_functionparameters_6: |-
         Você consegue completar esse desenho?
         Os lados de todas as formas têm 100 pixels de comprimento.
@@ -11347,6 +12065,8 @@ pt-BR:
         da função "desenhe um quadrado" e adicionar um parâmetro. Ela deve receber um parâmetro
         comprimento, como no triângulo. Dessa vez, desenhe 3 quadrados: 25, 50 e 75
         pixels de comprimento e separados por 100 pixels cada.
+      grade5_artist_parameters_squares2a: Edite a função para aceitar um parâmetro
+        chamado `comprimento`.
       grade5_artist_parameters_triangles2a: |-
         Você percebe algo diferente
         sobre esses blocos de função? Clique em "Executar" para ver o que acontece.
@@ -11420,6 +12140,10 @@ pt-BR:
       grade5_bee_for_loops1: |-
         Use um laço para coletar o néctar de
         todas as flores.
+      grade5_bee_for_loops10: Qual deve ser o seu incremento para coletar 15, depois
+        12, depois 9, 6 e 3 néctares?
+      grade5_bee_for_loops11: "\\*\\* Desafio:\\*\\* Pegue o que você aprendeu sobre
+        os laços `for` e tente resolver este problema. "
       grade5_bee_for_loops2: |-
         Adicione o código necessário para garantir que
         a abelha colete todo o néctar. Olhe quanto código você precisa para esse desafio!
@@ -11428,9 +12152,12 @@ pt-BR:
       grade5_bee_for_loops6: |-
         Você também pode usar um laço "para" para fazer contagem
         regressiva. Tente coletar esse néctar fazendo uma contagem regressiva de 5 até 1, de 1 em 1.
+      grade5_bee_for_loops7: Tente coletar essas flores usando um incremento de 2.
       grade5_bee_for_loops8: |-
         Você conseguiu! Qual deve ser seu
         incremento para coletar 3, 6, 9, 12, 15 néctares?
+      grade5_bee_for_loops9: Use a variável `contador` para navegar neste jardim com
+        o menor número possível de blocos.
       grade5_playlab_freeplay: "É hora da atividade livre! Divirta-se\ncom todos os
         blocos da sua caixa de ferramentas. "
       grade5_playlab_variables1: |-
@@ -11541,6 +12268,42 @@ pt-BR:
         o área de trabalho e veja o que acontece!
       group test: Faça um jogo
       iceAgeLoopsforVideo: Você consegue chegar à bolota com apenas um bloco `avançar`?
+      iceage_click_hello: 'Você pode ajudar Sid a ligar para os amigos dele quando
+        você clica nele? '
+      iceage_click_hello_2018: 'Você pode ajudar Sid a ligar para os amigos dele quando
+        você clica nele? '
+      iceage_free_play: 'Hora de criar seu próprio jogo ou história! '
+      iceage_free_play_2018: 'Hora de criar seu próprio jogo ou história! '
+      iceage_free_playcourseF_IceAge_11: 'Hora de criar seu próprio jogo ou história! '
+      iceage_hello2: Ajude Manny e Sid a se cumprimentarem usando o bloco `ator ___
+        diz` duas vezes.
+      iceage_hello2_2018: Ajude Manny e Sid a se cumprimentarem usando o bloco `ator
+        ___ diz` duas vezes.
+      iceage_move_events: Escreva o código para ajudar Scrat a pegar todas as nozes!
+      iceage_move_events_2018: Escreva o código para ajudar Scrat a pegar todas as
+        nozes!
+      iceage_move_to_actor: Conecte um bloco ao evento `quando o ator tocar` para
+        tocar um som quando Diego encontra Manny.
+      iceage_move_to_actor_2018: Conecte um bloco ao evento `quando o ator tocar`
+        para tocar um som quando Diego encontra Manny.
+      iceage_repeat: Ajude a vovó a fazer algum exercício movendo para a esquerda
+        e para a direita repetidamente.
+      iceage_repeat_2018: Ajude a vovó a fazer algum exercício movendo para a esquerda
+        e para a direita repetidamente.
+      iceage_sound_and_points: 'Você pode terminar este programa para fazer com que
+        **toque um som** e **marque um ponto** quando Sid e Granny colidirem? '
+      iceage_sound_and_points_2018: 'Você pode terminar este programa para fazer com
+        que **toque um som** e **marque um ponto** quando Sid e Granny colidirem? '
+      iceage_throw_hearts: Use o comando `ator __ lança` para que Sid (ator 1) lance
+        os corações para Granny (ator 2) e defina o humor de Granny para feliz quando
+        ela for atingida por eles.
+      iceage_throw_hearts_2018: Use o comando `ator __ lança` para que Sid (ator 1)
+        lance os corações para Granny (ator 2) e defina o humor de Granny para feliz
+        quando ela for atingida por eles.
+      iceage_warn_ice_age: Mude a cena para um fundo nevado e ajuste a velocidade
+        de Sid (ator 1) para rápido.
+      iceage_warn_ice_age_2018: Mude a cena para um fundo nevado e ajuste a velocidade
+        de Sid (ator 1) para rápido.
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
       k1stickerfreeplay: O artista viu algo engraçado a distância. Desenhe o que você
         acha que ele viu.

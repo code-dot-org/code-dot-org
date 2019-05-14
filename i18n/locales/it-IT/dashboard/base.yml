@@ -316,6 +316,7 @@ it:
       district_dashboard: 'Dashboard'
       label: 'Ciao %{username}'
       stats: 'Code Studio'
+      my_projects: 'Collezione Privata'
       settings: 'Il mio account'
       logout: 'Esci'
       signin: 'Accedi'

@@ -692,10 +692,14 @@ is:
             '"while"': meðan
       gamelab_clickedOn:
         text: þegar smellt á {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: ásmellt vera
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
       gamelab_console.log:
         text: skrá boð {MESSAGE}
+      gamelab_countByCostume:
+        text: fjöldi {COSTUME}
       gamelab_createNewSprite:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       gamelab_debugSprite:
@@ -798,6 +802,7 @@ is:
             '"x"': x
             '"z"': z
       gamelab_layoutSprites:
+        text: stilla {COSTUME} upp sem {FORMAT}
         options:
           FORMAT:
             '"border"': rammi
@@ -855,7 +860,7 @@ is:
       gamelab_makeNewGroup:
         text: búa til nýjan hóp
       gamelab_makeNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -890,6 +895,8 @@ is:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
       gamelab_moveUp:
         text: "{THIS} færa upp"
+      gamelab_objectSprite:
+        text: þolandi vera
       gamelab_playSound:
         text: spilaHljóð {SOUND}
       gamelab_pointInDirection:
@@ -902,6 +909,8 @@ is:
             '"West"': vestur
       gamelab_pointToward:
         text: beina {SPRITE} í átt til {LOCATION}
+      gamelab_printText:
+        text: prenta {TEXT}
       gamelab_randColor:
         text: einhver litur
       gamelab_randomColor:
@@ -914,6 +923,8 @@ is:
         text: vera {SPRITE} hættir {BEHAVIOR}
       gamelab_removeTint:
         text: fjarlægja lit af {THIS}
+      gamelab_say:
+        text: "{THIS} segir {TEXT}"
       gamelab_secondTouched:
         text: önnur snert vera
       gamelab_setAnimation:
@@ -921,15 +932,21 @@ is:
       gamelab_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       gamelab_setBackgroundImage:
+        text: stilla bakgrunn á {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hellir
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': borg
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': völlur
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': eyðimörk
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': vetrarbraut
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': fylking
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbogi
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': vísindaskáldskapur
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stjörnur
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
+            undefined: ekkert
       gamelab_setDirection:
         text: láta {SPRITE} hreyfast í stefnu {DIRECTION}
       gamelab_setFrameDelay:
@@ -969,6 +986,13 @@ is:
         text: breyta lit {THIS} í {COLOR}
       gamelab_setup:
         text: uppstilling
+      gamelab_setupSim:
+        text: |-
+          stilla upp hermi þar sem
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
+          eru að safna
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: sýna titilskjá {BREAK} titill {TITLE} texti {SUBTITLE}
       gamelab_spriteClicked:
@@ -978,6 +1002,7 @@ is:
             '"when"': þegar
             '"while"': meðan
       gamelab_spriteClickedSet:
+        text: "{CONDITION} {SPRITE} er smellt þá stilla {CLICK}"
         options:
           CONDITION:
             '"when"': þegar
@@ -1024,6 +1049,8 @@ is:
         text: síðasta {VALUE}
       gamelab_spritesWhereRandom:
         text: af handahófi í hóp {VALUE}
+      gamelab_subjectSprite:
+        text: gerandi vera
       gamelab_thisBeginsBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
         options:
@@ -1075,6 +1102,7 @@ is:
       gamelab_whenTouchingAny:
         text: þegar {SPRITE} snertir einhvern {GROUP}
       gamelab_whenTouchingSet:
+        text: "{CONDITION} {SPRITE1} snertir {SPRITE2} þá stilla {SPRITEA} og stilla {SPRITEB}"
         options:
           CONDITION:
             '"when"': þegar
@@ -1108,6 +1136,8 @@ is:
         text: meðan {SPRITE1} snertir {SPRITE2}
       gamelab_whileUpArrow:
         text: meðan ýtt er á ör upp
+      gamelab_worldSeconds:
+        text: sekúndur liðnar
       gamelab_xLocationOf:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
@@ -1408,9 +1438,9 @@ is:
       aalab_createNewSpriteAdvanced:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           búa til nýjan hóp sem heitir {VAR}
@@ -1496,11 +1526,14 @@ is:
             '"4"': 4 sekúndur
             '"5"': 5 sekúndur
             '"0"': að eilífu
+      aalab_showSpriteLabel:
+        text: sýna merki{TEXT} {LOCATION} vera{SPRITE}
       aalab_speakerSaysConsole:
         text: "{SPRITE} segir {MESSAGE}"
       aalab_spriteSay:
         text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       aalab_toggleHideCustomText:
+        text: "{OPTION} sérsniðinn texti"
         options:
           OPTION:
             '"show"': sýna
