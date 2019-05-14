@@ -446,6 +446,8 @@ module Pd::WorkshopSurveyResultsHelper
           next unless histogram_for_this_workshop.key? facilitator
         end
 
+        histogram_for_this_workshop.except!("num_respondents")
+
         histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
 
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
