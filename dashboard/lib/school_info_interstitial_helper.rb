@@ -32,11 +32,13 @@ module SchoolInfoInterstitialHelper
 
     return true if user.user_school_infos.empty?
 
-    school_info = user.user_school_infos.last
+    user_school_info = user.user_school_infos.last
+
+    school_info = user_school_info.school_info
 
     check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && school_info.school_info_complete?
 
-    check_last_confirmation_date = user.user_school_infos.find(user.school_info_id).last_confirmation_date.to_datetime < 1.year.ago
+    check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
 
     check_last_confirmation_date && check_school_type
   end
