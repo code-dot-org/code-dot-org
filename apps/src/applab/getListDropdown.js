@@ -4,7 +4,7 @@ import {getFirstParam} from '../dropletUtils';
 export function getListColumnDropdown() {
   return function(aceEditor) {
     const tableName = getFirstParam('getList', this.parent, aceEditor);
-    const columns = getColumnsForTable(tableName);
+    const columns = getColumnsForTable(tableName, datasetLibrary.datasets);
     const opts = [];
     columns.forEach(columnName =>
       opts.push({display: `"${columnName}"`, text: `"${columnName}"`})
@@ -13,8 +13,8 @@ export function getListColumnDropdown() {
   };
 }
 
-function getColumnsForTable(tableName) {
-  let dataset = datasetLibrary.datasets.find(d => `"${d.name}"` === tableName);
+function getColumnsForTable(tableName, datasets) {
+  let dataset = datasets.find(d => `"${d.name}"` === tableName);
   if (dataset) {
     return dataset.columns.split(',');
   } else {
