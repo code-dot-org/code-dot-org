@@ -27,7 +27,7 @@ ________________
 
 ## Announcements
 
-- **New** guidance is available for ordering [Local Summer Workshop](#local) materials from the CS Discoveries & CS Principles Mimeo Marketplace
+- **New** guidance is available for ordering Local Summer Workshop materials for [K-5 Workshops](#local) and [6-12 Workshops](#local) from the CS Discoveries & CS Principles Mimeo Marketplace
 - **New** resources for the '19-'20 Virtual Professional Learning Program are available [here](#virtual)
 - **New** resources for the CS Fundamentals Deep Dive workshop are available [here](#csf)
 
@@ -46,7 +46,8 @@ See these resources to plan and run CS Fundamentals workshops. Partners should w
 - <a href="https://docs.google.com/document/d/1so6ZyrtydTOmW6YHDgpdpDIUBAssQ_uCI130iCBA8SQ/edit"target=_blank>2019 Intro and Deep Dive Workshop Overview</a>
 - <a href="https://docs.google.com/document/d/1rhqOSkvVoh4LjBoug4pYTXECmifBkOUxlb8rMgRgTAI/edit?usp=drive_web&ouid=101665711587844633285"target=_blank>2019 Deep Dive Workshop FAQ</a>
 - <a href="https://docs.google.com/presentation/d/1A1WWW0Lr0ZcRLvaHOA6Qai_rTHiEsD5zrm-Mu8W2T2Y/edit"target=_blank>2019 Deep Dive One-Pager</a>
-- <a href="https://docs.google.com/presentation/d/1vWCJwbUo_DkhnSWc8GAvRVRokTHrRqD1rKSxK34UYVY/edit#slide=id.g4e9da0141c_0_0"target=_blank>2019 Deep Dive Marketing Deck</a>
+- <a href="https://docs.google.com/presentation/d/1vWCJwbUo_DkhnSWc8GAvRVRokTHrRqD1rKSxK34UYVY/edit#slide=id.g4e9da0141c_0_0"target=_blank>2019 Deep Dive Marketing Deck</a> 
+- <a href="https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit?ts=5c61ef7a"target=_blank>2019-20 K-12 Supplies Plan</a>
 - <a href="https://docs.google.com/document/d/1E3-0OajPte60A4IFovfmO0W7zRufDwJ7n-SHZCeSK_8/edit" target=_blank>Mimeo Marketplace Guidelines</a> for ordering materials & swag
 
 [**Back to the top**](#top)
