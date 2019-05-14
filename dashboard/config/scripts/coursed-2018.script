@@ -8,6 +8,7 @@ script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is L
 family_name 'coursed'
 version_year '2018'
 is_stable true
+supported_locales ["sk-SK"]
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
