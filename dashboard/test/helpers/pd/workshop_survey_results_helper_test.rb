@@ -850,7 +850,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
           general: {
             'iFeel133' => {
               'Fantastic' => 5,
-              'Pretty good' => 3
+              'Pretty good' => 3,
+              'num_respondents' => 2  # This should get filtered out.
             },
             'overallHow' => {
               'A tremendous amount' => 5
