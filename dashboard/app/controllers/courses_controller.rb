@@ -65,7 +65,8 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if !override_course_redirect?(course) && redirect_course = redirect_course(course)
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
+    if !override_redirect && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
@@ -113,7 +114,9 @@ class CoursesController < ApplicationController
   private
 
   def set_redirect_override
-    set_course_redirect_override(params[:course_name]) if params[:course_name] && params[:no_redirect]
+    if params[:course_name] && params[:no_redirect]
+      VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
+    end
   end
 
   def redirect_course(course)

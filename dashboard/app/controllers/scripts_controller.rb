@@ -34,7 +34,8 @@ class ScriptsController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong script overview page.
-    if !override_script_redirect?(@script) && redirect_script = redirect_script(@script, request.locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script)
+    if !override_redirect && redirect_script = redirect_script(@script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
     end
@@ -179,7 +180,9 @@ class ScriptsController < ApplicationController
   end
 
   def set_redirect_override
-    set_script_redirect_override(params[:id]) if params[:id] && params[:no_redirect]
+    if params[:id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:id])
+    end
   end
 
   def redirect_script(script, locale)
