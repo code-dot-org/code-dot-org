@@ -14,12 +14,12 @@ export function getListColumnDropdown() {
 }
 
 function getColumnsForTable(tableName) {
-  for (let dataset of datasetLibrary.datasets) {
-    if (`"${dataset.name}"` === tableName) {
-      return dataset.columns.split(',');
-    }
+  let dataset = datasetLibrary.datasets.find(d => `"${d.name}"` === tableName);
+  if (dataset) {
+    return dataset.columns.split(',');
+  } else {
+    return [];
   }
-  return [];
 }
 
 export var __TestInterface = {
