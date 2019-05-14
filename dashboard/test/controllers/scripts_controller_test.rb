@@ -170,6 +170,8 @@ class ScriptsControllerTest < ActionController::TestCase
   test "show: do not redirect to latest stable version if no_redirect query param is supplied" do
     get :show, params: {id: @coursez_2017.name, no_redirect: "true"}
     assert_response :ok
+    get :show, params: {id: @coursez_2017.name}
+    assert_response :ok
   end
 
   test "show: redirect to latest stable version in family for student" do
