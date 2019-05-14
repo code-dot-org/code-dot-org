@@ -540,6 +540,7 @@
   "submitYourProjectConfirm": "Non podes editar o teu proxecto unha vez o teñas enviado, desexas envialo agora?",
   "subtitle": "un entorno de programación visual",
   "success": "Feito!",
+  "support": "Axuda e Comunidade",
   "switchSection": "Trocar de sección:",
   "syntaxErrorMsg": "O teu programa contén un error tipográfico. Por favor, elimina a liña {lineNumber} e inténtao de novo.",
   "teacher": "Profesor",

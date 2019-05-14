@@ -947,6 +947,7 @@
   "submitYourProjectConfirm": "Du kannst das Projekt nicht mehr bearbeiten, nachdem du es eingereicht hast. Willst du es wirklich einreichen?",
   "subtitle": "eine visuelle Programmierumgebung",
   "success": "Geschafft!",
+  "support": "Unterstützung",
   "switchSection": "Lerngruppe wechseln:",
   "syntaxErrorMsg": "Dein Programm enthält einen Tippfehler. Bitte entferne Zeile {lineNumber} und versuche es erneut.",
   "teacher": "Lehrer",
