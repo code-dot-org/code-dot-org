@@ -191,9 +191,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.csf_has_physical_curriculum_guide}</td>
             )}
-          {this.props.accountRequiredForAttendance && (
-            <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
-          )}
           {this.props.workshopSubject === LOCAL_SUMMER && (
             <td>
               {enrollment.attendances} / {this.props.numSessions}
@@ -266,9 +263,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
               this.props.workshopSubject === DEEP_DIVE && (
                 <th style={styles.th}>Has Physical Copy of Curriculum?</th>
               )}
-            {this.props.accountRequiredForAttendance && (
-              <th style={styles.th}>Code Studio Account?</th>
-            )}
             {this.props.workshopSubject === LOCAL_SUMMER && (
               <th style={styles.th}>Total Attendance</th>
             )}
