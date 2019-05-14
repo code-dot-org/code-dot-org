@@ -75,31 +75,6 @@ describe('SessionAttendanceRow', () => {
     ).to.be.ok;
   });
 
-  it('renders extra column when account is required for attendance', () => {
-    const wrapper = shallow(
-      <SessionAttendanceRow
-        {...DEFAULT_PROPS}
-        accountRequiredForAttendance={true}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <tr>
-          <td>{FAKE_FIRST_NAME}</td>
-          <td>{FAKE_LAST_NAME}</td>
-          <td>{FAKE_EMAIL}</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>
-            <div>
-              <i className="fa fa-square-o" />
-            </div>
-          </td>
-        </tr>
-      )
-    ).to.be.ok;
-  });
-
   it('renders extra column to show completed puzzles', () => {
     const wrapper = shallow(
       <SessionAttendanceRow {...DEFAULT_PROPS} showPuzzlesCompleted={true} />
