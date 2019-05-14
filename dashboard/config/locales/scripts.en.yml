@@ -12061,6 +12061,8 @@ en:
               name: Teacher Survey (Traversals)
             Student Survey (Mini PT):
               name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12365,6 +12367,10 @@ en:
               name: Teacher Survey (Lists)
             Teacher Survey (Traversals):
               name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
