@@ -69,6 +69,7 @@ class Level < ActiveRecord::Base
     rubric_performance_level_4
     mini_rubric
     encrypted
+    teacher_markdown
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

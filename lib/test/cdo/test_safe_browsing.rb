@@ -1,5 +1,6 @@
 require_relative '../test_helper'
 require_relative '../../cdo/safe_browsing'
+require 'webmock/minitest'
 
 class SafeBrowsingTest < Minitest::Test
   include SetupTest
@@ -18,5 +19,17 @@ class SafeBrowsingTest < Minitest::Test
 
   def test_determine_unsafe_website
     refute SafeBrowsing.determine_safe_to_open("http://testsafebrowsing.appspot.com/s/phishing.html")
+  end
+
+  def test_safe_with_bad_request
+    stub_request(:post,     "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=" + CDO.google_safe_browsing_key).
+        to_return({status: 400, body: "{}", headers: {}})
+    assert SafeBrowsing.determine_safe_to_open("http://testsafebrowsing.appspot.com/s/phishing.html")
+  end
+
+  def test_safe_with_rate_limit
+    stub_request(:post,     "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=" + CDO.google_safe_browsing_key).
+        to_return({status: 429, body: "{}", headers: {}})
+    assert SafeBrowsing.determine_safe_to_open("http://testsafebrowsing.appspot.com/s/phishing.html")
   end
 end

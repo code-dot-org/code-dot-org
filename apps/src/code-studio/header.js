@@ -2,6 +2,9 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
+
+import {showMinimalProjectHeader} from './headerRedux';
+
 import progress from './progress';
 import {getStore} from '../redux';
 import {shareProject} from './headerShare';
@@ -329,28 +332,8 @@ function saveStartCode(getChanges) {
   });
 }
 
-// Minimal project header for viewing channel shares and legacy /c/ share pages.
 header.showMinimalProjectHeader = function() {
-  var projectName = $('<div class="project_name_wrapper header_text">')
-    .append(
-      $('<div class="project_name header_text">').text(
-        dashboard.project.getCurrentName()
-      )
-    )
-    .append(
-      $('<div class="project_updated_at header_text">').text(
-        dashboard.i18n.t('project.click_to_remix')
-      )
-    );
-
-  $('.project_info')
-    .append(projectName)
-    .append(
-      $('<div class="project_remix header_button">').text(
-        dashboard.i18n.t('project.remix')
-      )
-    );
-  $('.project_remix').click(remixProject);
+  getStore().dispatch(showMinimalProjectHeader());
 };
 
 // Levelbuilder-only UI for saving changes to a level.
@@ -529,24 +512,6 @@ header.showProjectHeader = function() {
   );
   $('.project_remix').click(remixProject);
   $('.project_import').click(importProject);
-
-  var $projectMorePopup = $('.project_more_popup');
-  function hideProjectMore() {
-    $projectMorePopup.hide();
-    $('.project_more_glyph').html('&#x25BC;');
-    $(document).off('click', hideProjectMore);
-  }
-  $('.project_more').click(function(e) {
-    if ($projectMorePopup.is(':hidden')) {
-      e.stopPropagation();
-      $projectMorePopup.show();
-      $('.project_more_glyph').html('&#x25B2;');
-      $(document).on('click', hideProjectMore);
-    }
-  });
-  $projectMorePopup.click(function(e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it.
-  });
 };
 
 header.updateTimestamp = function() {

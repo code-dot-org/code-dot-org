@@ -848,14 +848,12 @@ en:
     new: "Create New"
     rename: "Rename"
     save: "Save"
-    delete: "Delete"
     import: "Import"
     share_link_import_bad_link_header: "Share link not recognized"
     share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share_link_import_error_header: "Something went wrong."
     share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
-    my_projects: "My Projects"
     project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
@@ -867,22 +865,14 @@ en:
     embed: "Embed"
     advanced_share: "Show advanced options"
     no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
-    close: "Close"
-    more: "More"
     name: "Name"
     updated: "Updated"
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
     thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
-    really_delete: 'Delete?'
-    delete_yes: 'Yes'
-    delete_no: 'No'
     saved: "Saved"
     not_saved: "Not saved"
-    cancel: 'Cancel'
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'
     remix: 'Remix'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"
@@ -962,6 +952,7 @@ en:
     csf_for_loops: 'For Loops'
     csf_internet: 'Internet'
     csf_impacts: 'Impacts of Computing'
+    csf_warmup: 'Warm-Up'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'

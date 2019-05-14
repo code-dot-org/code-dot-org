@@ -15999,10 +15999,10 @@ en:
         courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set variable length` block.'
       courseF_artist_variables3_2018_authored_hint:
         courseF_artist_variables3_a: 'The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.'
-        courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set variable length` block.'
+        courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set length` block.'
       courseF_artist_variables3_2019_authored_hint:
         courseF_artist_variables3_a: 'The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.'
-        courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set variable length` block.'
+        courseF_artist_variables3_b: 'A number block with value 50 should only be in one place: after the `set length` block.'
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to jump forward again.
         courseF_artist_variables4_c: |-
@@ -16011,14 +16011,14 @@ en:
           [][0]
         courseF_artist_variables4_b: "[][0]"
       courseF_artist_variables4_2018_authored_hint:
-        courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to jump forward again.
+        courseF_artist_variables4_a: Get him ready to draw the next triangle.
         courseF_artist_variables4_c: |-
           This is the pattern your artist will be following:
 
           [][0]
         courseF_artist_variables4_b: "[][0]"
       courseF_artist_variables4_2019_authored_hint:
-        courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to jump forward again.
+        courseF_artist_variables4_a: Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.
         courseF_artist_variables4_c: |-
           This is the pattern your artist will be following:
 

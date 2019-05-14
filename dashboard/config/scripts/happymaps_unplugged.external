@@ -5,5 +5,12 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Happy Maps
 
-Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+Create an algorithm to move a character through a maze.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.youtube.com/embed/hrnhiKAQ1_k"  frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"n></iframe></div>
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

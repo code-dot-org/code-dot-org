@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import SingleChoiceResponses from '../../components/survey_results/single_choice_responses';
+import ChoiceResponses from '../../components/survey_results/choice_responses';
 import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
@@ -33,12 +33,26 @@ export default class Results extends React.Component {
           return null;
         }
 
-        if (['scale', 'singleSelect'].includes(question['answer_type'])) {
+        if (
+          ['scale', 'singleSelect', 'multiSelect'].includes(
+            question['answer_type']
+          )
+        ) {
+          // numRespondents will get either a value (for multiSelect) or undefined.
+          const numRespondents = answers[questionId].num_respondents;
+
+          // Make a copy of the answers without the num_respondents field.
+          const filteredAnswers = _.omit(
+            answers[questionId],
+            'num_respondents'
+          );
+
           return (
-            <SingleChoiceResponses
+            <ChoiceResponses
               perFacilitator={section === 'facilitator'}
+              numRespondents={numRespondents}
               question={question['text']}
-              answers={answers[questionId]}
+              answers={filteredAnswers}
               possibleAnswers={question['options']}
               key={i}
               answerType={question['answer_type']}
