@@ -172,9 +172,6 @@ export default class SessionAttendanceRow extends React.Component {
         <td>{this.props.attendance.first_name}</td>
         <td>{this.props.attendance.last_name}</td>
         <td>{this.props.attendance.email}</td>
-        {this.props.accountRequiredForAttendance && (
-          <td>{this.props.attendance.user_id ? 'Yes' : 'No'}</td>
-        )}
         <td>{this.props.attendance.verified_teacher_account ? 'Yes' : 'No'}</td>
         {this.props.showPuzzlesCompleted && (
           <td>
