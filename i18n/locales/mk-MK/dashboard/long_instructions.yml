@@ -937,7 +937,7 @@ mk:
             \\r
         3.  Click and drag to move your new button where you want it.\\r
             \\r
-        4.  3.
+        4.  3\.
             Once you have a new button give it a clear name, "catButton". You can also
             change its text to read "Cats!".\\r
             \\r
@@ -1076,7 +1076,7 @@ mk:
             ([Show me where](#triggercallout=selector))\\r
         2.  Drag a new "text area"
             onto your screen to add it. ([Show me where](#triggercallout=textArea))\\r
-        3.  3.
+        3.  3\.
             Drag the bottom right corner of your text area to change its size.\\r
         4.  Change
             the text to tell your user what happens on this screen. Then change the color
@@ -1114,9 +1114,9 @@ mk:
 
         1.  Click
             the title of your app. ([Show me where](#triggercallout=titleCallout))\\r
-        2.  2.
+        2.  2\.
             Change the "text" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\\r
-        3.  3.
+        3.  3\.
             Scroll down the menu to change the color of your title ([Show me where](#triggercallout=changeTextColor))\\r
             \\r
             Once
@@ -1179,13 +1179,13 @@ mk:
 
         1.  Use
             the screen selector to go back to your "startScreen" ([Show me where](#triggercallout=selector))\\r
-        2.  2.
+        2.  2\.
             Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\r
-        3.  3.
+        3.  3\.
             Give your button a clear "id" that describes what it does ([Show me where](#triggercallout=changeButtonID))\\r
-        4.  4.
+        4.  4\.
             Change the "text" of your button to describe where it will take the user.\\r
-        5.  5.
+        5.  5\.
             Personalize your button's other properties like "text color" or "background
             color".\\r
             \\r
@@ -1199,9 +1199,9 @@ mk:
         you need to make a simple Choose Your Own Adventure app, but you can add so
         much more! If you want to add images to your screen it's easy!\\r
         \\r
-        1.
+        1\.
         In another tab in your browser go online and find an image you want to use\\r
-        2.
+        2\.
         Right click the image and save its URL (usually "Copy link address" or "Copy
         image URL")\\r
 
@@ -1241,9 +1241,9 @@ mk:
         be a real Choose Your Own Adventure, you're need to add some more choices!
         Start by adding a screen for the second choice your player could make.\\r
         \\r
-        1.
+        1\.
         Use the screen selector to add a new screen. Give it a clear "id".\\r
-        2.
+        2\.
         Set the "background color" of your screen\\r
 
         3.  Add a "Text Area" to your
@@ -2405,11 +2405,11 @@ mk:
         ### Points to pay attention to:\\r
 
         \\r
-        1.
+        1\.
         What's a _Boolean Expression?_\\r
 
         2.  Why is it called a "Boolean"?\\r
-        3.  3.
+        3.  3\.
             Is this a legal expression?  `10 > 25`?
       Brad Spooky House Copy: |-
         Freeplay: Here are the functions
@@ -11985,9 +11985,9 @@ mk:
         \`(1000
 
         -   400.    / (3 \* 20)\`\\r
-                                        \\r
-                                        These expressions have two important components:\\r
-                                        \\r
+                                            \\r
+                                            These expressions have two important components:\\r
+                                            \\r
         -   \*
             **values:** numbers, text, or information in your program \\r
         -   **operators:**
@@ -12039,7 +12039,7 @@ mk:
         **Create and display the results of some expressions of your own**. It doesn't
         matter what they are, just throw in something long and complex and convince
         yourself a single value always comes out.
-      CSD U3 Counters random expressions: "# Random Numbers\n\nin Expressions\\\\r\n\\\\r\nYou can **use random numbers inside of expressions**\ntoo. For example, \\\\r\n\\\\r\n`10 * randomNumber(1,5)`\\\\r\n\\\\r\nis a perfectly valid\nexpression. This is because **`randomNumber` will generate a single random\nvalue** that can then be used in the expression just like a number.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nThis program displays random multiples of 10 between 10 and\n50\\.\\\\r\n\\\\r\n\n-   **Run the program** to see how it works\\\\r\n-   **Change the program**\n    so that it displays **random multiples of 10 between 10 and 100**.\\\\r\n-   Change\n    the expression with a random number in it more if you like. Once you're comfortable\n    with how it works move on."
+      CSD U3 Counters random expressions: "# Random Numbers\n\nin Expressions\\\\r\n\\\\r\nYou can **use random numbers inside of expressions**\ntoo. For example, \\\\r\n\\\\r\n`10 * randomNumber(1,5)`\\\\r\n\\\\r\nis a perfectly valid\nexpression. This is because **`randomNumber` will generate a single random\nvalue** that can then be used in the expression just like a number.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nThis program displays random multiples of 10 between 10 and\n50.\\\\r\n\\\\r\n\n-   **Run the program** to see how it works\\\\r\n-   **Change the program**\n    so that it displays **random multiples of 10 between 10 and 100**.\\\\r\n-   Change\n    the expression with a random number in it more if you like. Once you're comfortable\n    with how it works move on."
       CSD U3 Counters sunset template: |-
         # Animate a Sunset\\r
 
@@ -13592,7 +13592,7 @@ mk:
             \\r
         3.  For each Sprite, which properties are being updated?\\r
             \\r
-        4.  4)
+        4.  4\)
             Where do you see conditionals being used?\\r
             \\r
         5.  Are there elements that
@@ -13613,7 +13613,7 @@ mk:
             \\r
         3.  For each Sprite, which properties are being updated?\\r
             \\r
-        4.  4)
+        4.  4\)
             Where do you see conditionals being used?\\r
             \\r
         5.  Are there elements that
@@ -17388,14 +17388,14 @@ mk:
             descriptive name such as **coin**.\\r
         -   Use the `sprite.x` and `sprite.y`
             properties of the sprite to give it a random X and Y position between 0 and
-            400\.\\r
+            400.\\r
         -   In the Animation Tab there is already a coin animation. Use the
             `sprite.setAnimation()` block to give your sprite this animation.\\r
             \\r
             Test
             your code before moving on. When you run the game, you should see a coin sprite
             appear somewhere randomly on the screen.
-      CSD U3 abstraction add coin_2018: "# Add a Coin\\\\r\n\n\\\\r\nIn\nthe next few levels you'll add to your program to make a simple game. In\nthis game the player will collect points to increase the score. This is a\ngood chance to see how different kinds of movement can affect the way a game\nfeels, and it will also just help you practice programming skills.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nIn this level you'll just be adding a new coin sprite to the\ngame. You should be working at the top of your program, outside the draw loop.\\\\r\n\\\\r\n\\*\nUse the `createSprite()` block to create a new sprite. Make sure to give it\na descriptive name such as **coin**.\\\\r\n\n-   Use the `sprite.x` and `sprite.y`\n    properties of the sprite to give it a random X and Y position between 0 and\n    400\\.\\\\r\n-   In the Animation Tab there is already a coin animation. Use the\n    `sprite.setAnimation()` block to give your sprite this animation.\\\\r\n    \\\\r\n    Test\n    your code before moving on. When you run the game, you should see a coin sprite\n    appear somewhere randomly on the screen."
+      CSD U3 abstraction add coin_2018: "# Add a Coin\\\\r\n\n\\\\r\nIn\nthe next few levels you'll add to your program to make a simple game. In\nthis game the player will collect points to increase the score. This is a\ngood chance to see how different kinds of movement can affect the way a game\nfeels, and it will also just help you practice programming skills.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nIn this level you'll just be adding a new coin sprite to the\ngame. You should be working at the top of your program, outside the draw loop.\\\\r\n\\\\r\n\\*\nUse the `createSprite()` block to create a new sprite. Make sure to give it\na descriptive name such as **coin**.\\\\r\n\n-   Use the `sprite.x` and `sprite.y`\n    properties of the sprite to give it a random X and Y position between 0 and\n    400.\\\\r\n-   In the Animation Tab there is already a coin animation. Use the\n    `sprite.setAnimation()` block to give your sprite this animation.\\\\r\n    \\\\r\n    Test\n    your code before moving on. When you run the game, you should see a coin sprite\n    appear somewhere randomly on the screen."
       CSD U3 abstraction animation circle: "# Animate the Satellite\\\\r\n\n\\\\r\nNow\nyou are ready for the final piece of the drawing: making the satellite circle\nthe moon.\\\\r\n\\\\r\n\n# Do This\\\\r\n\n\\\\r\nUse `setSpeed()` and `getDirection()` to\nmake the satellite circle the moon. "
       CSD U3 abstraction animation rotate: |-
         # Rotation\\r
@@ -17793,14 +17793,14 @@ mk:
         at the `if/else` block that checks whether the horse's position is less than
 
         325.    [Show me where](#triggercallout=code_triggered1)\\r
-                                    \\r
+                                        \\r
         326.    If the horse's
-                                    y position is less than 325, use a counter pattern to change the horse's
-                                    velocityY by 0.1 on each tick of the draw loop. \\r
+                                        y position is less than 325, use a counter pattern to change the horse's
+                                        velocityY by 0.1 on each tick of the draw loop. \\r
         327.    If the horse's y position
-                                    is not less than 325, use the `velocityY` to change its vertical velocity
-                                    to zero. [Show me where](#triggercallout=code_triggered2)\\r
-                                    \\r
+                                        is not less than 325, use the `velocityY` to change its vertical velocity
+                                        to zero. [Show me where](#triggercallout=code_triggered2)\\r
+                                        \\r
       CSD U3 abstraction jump-2018: |-
         # Jumping\\r
 
@@ -22123,7 +22123,7 @@ mk:
             # Do This\\r
         3.  Decode
             the two numbers from the binary string.
-      CSD U5 binary 3: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers up to to eight bits.  You can use it to\ntry to find the three world records encoded in the binary string below.  The\nanswers are in order in the string.\\\\r\n\\\\r\n\n1.  Most canned drinks opened by\n    a parrot in one minute.\\\\r\n2.  Most ice cream scoops balanced on a cone.\\\\r\n3.  3.\n    Most number of people lifted and thrown in two minutes.\\\\r\n    \\\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n4.  Try to decode the three numbers from a the binary string\\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\\r\n    -   Was there any other information\n        you need to be certain your numbers are correct?"
+      CSD U5 binary 3: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers up to to eight bits.  You can use it to\ntry to find the three world records encoded in the binary string below.  The\nanswers are in order in the string.\\\\r\n\\\\r\n\n1.  Most canned drinks opened by\n    a parrot in one minute.\\\\r\n2.  Most ice cream scoops balanced on a cone.\\\\r\n3.  3\\.\n    Most number of people lifted and thrown in two minutes.\\\\r\n    \\\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n4.  Try to decode the three numbers from a the binary string\\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\\r\n    -   Was there any other information\n        you need to be certain your numbers are correct?"
       CSD U5 binary 4-new: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4: |-
         # Bit Length\\r
@@ -24748,7 +24748,7 @@ mk:
             this is an html document and to interpret it as such. \<!DOCTYPE html>
             is not technically a tag but instead an instruction to the web browser. \\r
             \\r
-        2.  2.
+        2.  2\.
             Wrap all the content of the file in an HTML element using the \<html>
             tag. The \<html> tag notifies the computer where the html starts and
             ends. The  \<html> tag is the container for all other HTML elements (except
@@ -25358,7 +25358,7 @@ mk:
         -   Leave this open on your screen so your peer
             reviewers can look at your work
       CSDU2 - Intro to CSS: "# Style Element\\\\r\n\n\\\\r\nUp until\nnow you have only been able to add content to your page. In Web Developers\nintentionally separate content and style to make their code easier to maintain.  HTML\nis the language used to add content to a web page. CSS is a language that\nadds style to a web page. \\\\r\n\\\\r\nIn CSS style rules are used to style certain\nelements of HTML.  Style rules explicitly call out certain properties of the\nelement to be styled. To add CSS style rules to an HTML page, you need to\nfirst add an HTML `<style>` element. This signals to the web browser that\nall the stuff inside the `<style>` element is CSS styling instructions. \\\\r\n\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\n\n-   Add the `<style>` element right below the opening `<html>`\n    tag. \\\\r\n    \\\\r\n    We will add CSS to change the look of the page on the next level!"
-      CSDU2 - Intro to Validator: "# Validator\\\\r\n\n\\\\r\nThe validator\nis a tool that allows you to check if a page is following good HTML fundamentals\nand will work consistently across many different computers and web browsers.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nUse the validator to check if the web page on this level meets\nthe requirements for consistent web pages. To use the validator, it’s important\nto work on it one error at a time.\\\\r\n\\\\r\n\n1.  Open up the <a href=\"https://validator.w3.org/\"\n    target=\"_blank\">W3 validator</a>.\\\\r\n2.  Click **\"Validate by Direct Input\"**\\\\r\n    3\\.\\*\\*\n    Copy and paste the contents of index.html\\*\\* file into the box.\\\\r\n3.  Click\n    **“Check”**\\\\r\n4.  If there is an error message click the top error below:\\\\r\n    \\\\r\n    \\\\t\\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\"> Unable to Determine\n    Parse Mode! </a>\\\\r\n    \\\\t\\* <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">\n    No DOCTYPE found, and unknown root element. Aborting validation. </a>\\\\r\n    \\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/5\"> Element head\n    is missing a required instance of child element title. </a>\\\\r\n    -   <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/5\">\n        Element title must not be empty.</a>\\r\n    -   <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">\n        Start tag seen without seeing a doctype first. Expected e.g. <!DOCTYPE html>.</a>\\r\n        \\r\n        \\tOnce\n        you fix the error start again at step 1.\\r\n        \\r\n5.  If there are no error messages\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/6\">click here </a>\n    to head to the next set of levels!"
+      CSDU2 - Intro to Validator: "# Validator\\\\r\n\n\\\\r\nThe validator\nis a tool that allows you to check if a page is following good HTML fundamentals\nand will work consistently across many different computers and web browsers.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\nUse the validator to check if the web page on this level meets\nthe requirements for consistent web pages. To use the validator, it’s important\nto work on it one error at a time.\\\\r\n\\\\r\n\n1.  Open up the <a href=\"https://validator.w3.org/\"\n    target=\"_blank\">W3 validator</a>.\\\\r\n2.  Click **\"Validate by Direct Input\"**\\\\r\n    3.\\*\\*\n    Copy and paste the contents of index.html\\*\\* file into the box.\\\\r\n3.  Click\n    **“Check”**\\\\r\n4.  If there is an error message click the top error below:\\\\r\n    \\\\r\n    \\\\t\\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\"> Unable to Determine\n    Parse Mode! </a>\\\\r\n    \\\\t\\* <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">\n    No DOCTYPE found, and unknown root element. Aborting validation. </a>\\\\r\n    \\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/5\"> Element head\n    is missing a required instance of child element title. </a>\\\\r\n    -   <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/5\">\n        Element title must not be empty.</a>\\r\n    -   <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">\n        Start tag seen without seeing a doctype first. Expected e.g. <!DOCTYPE html>.</a>\\r\n        \\r\n        \\tOnce\n        you fix the error start again at step 1.\\r\n        \\r\n5.  If there are no error messages\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/6\">click here </a>\n    to head to the next set of levels!"
       CSDU2 - Link Tag: "# Link Element\\\\r\n\n\\\\r\nIn the last level\nyou moved your style out into an external style sheet. You may have noticed\nthough that the style was no longer appearing on the page. To get the style\nto apply to the web page we need to connect the html and css files.\\\\r\n\\\\r\n**To\nlink sheets you will need to add a `<link>` element.** The `<link>` element\ngoes inside the `<head>` element since it is information about the page and\nnot content of the page. You can link a stylesheet to multiple pages if you\nwant them all to have the same style.\\\\r\n\\\\r\n`<link>` element has two main\nattributes: `rel` and `href`.\\\\r\n\\\\r\n\n-   As you learned before for images the\n    `href` attribute is the file path, in this case just the same of the CSS file.  \\\\r\n-   \\*\n    The `rel` attribute indicates the relationship that the linked file has to\n    the current file, in this case its a stylesheet.\\\\r\n    \\\\r\n    For example:\\\\r\n    <pre>\\r\n    &lt;head&gt;\\r\n    &lt;link\n    rel=\"stylesheet\" href=\"styles.css\"&gt;\\r\n    &lt;/head&gt;\\r\n    </pre>\\r\n    \\\\r\n    # \n    Do This\\\\r\n    \\\\r\n-   For the index.html link the css file using the `<link>` element\n    in the `<head>` element"
       CSDU2 - Link and Nav: |-
         <div style="float: right; height:
@@ -28561,7 +28561,7 @@ mk:
         \\r
 
         1.  Display the question\\r
-        2.  2.
+        2.  2\.
             Show if the question was answered correctly\\r
         3.  Show if the question was
             answered incorrectly\\r
@@ -30344,13 +30344,13 @@ mk:
         Take a minute to
         read through the code and run the program. Discuss with a partner:\\r
         \\r
-        1.
+        1\.
         What is the source of input?\\r
 
         2.  Where and how does the program check for
             input?\\r
         3.  What does the program do when it gets the right input?\\r
-        4.  3.
+        4.  3\.
             What is the program doing when there is no input?
       CSDU6 Circuit Playground Test: |-
         # Test Your Board\\r
@@ -30374,14 +30374,14 @@ mk:
             There
             are a number of things that could prevent your test from passing.\\r
             \\r
-        5.  1.
+        5.  1\.
             Try refreshing the page and running the test again (you should refresh the
             page for each of the following ideas as well)\\r
         6.  Try connecting your board
             to a different USB port\\r
         7.  Try a different USB cable. Some USB cables can
             only be used for charging, so make sure your cable supports data transfer!\\r
-        8.  4.
+        8.  4\.
             Try a different board\\r
         9.  Go to [studio.code.org/maker/setup](/maker/setup)
             to run a more detailed test
@@ -30395,13 +30395,13 @@ mk:
         Take a minute to
         read through the code and run the program. Discuss with a partner:\\r
         \\r
-        1.
+        1\.
         What is the source of input?\\r
 
         2.  Where and how does the program check for
             input?\\r
         3.  What does the program do when it gets the correct input?\\r
-        4.  3.
+        4.  3\.
             What is the program doing when there is no input?
       CSDU6 LED alarm silent: |-
         # Silent Alarm\\r
@@ -31690,7 +31690,7 @@ mk:
             Make screen1 white
             and screen2 black. **Set the background color for a screen in the Properties
             tab**.  Make sure to rename the screens with appropriate IDs.
-      CSPU5 Debugging Overlapping Objects and Screen Events: "# \n\nUse console.log to Test Overlapping Objects and the Screen\\\\r\n\\\\r\nThere are\ntwo goals here:\\\\r\n\\\\r\n\n1.  Practice inserting your own console.log statements.\\\\r\n2.  2.\n    Investigate how the screen captures events (it's different).\\\\r\n    \\\\r\n    ## Do\n    This:\\\\r\n    <img src=\"https://images.code.org/4100fcc7062f97ce8440003b3a17cd25-image-1477363054051.png\"\n    style=\"float: right\">\\\\r\n    \\\\r\n3.  **Add `console.log` statements to each of\n    the 3 event handlers** we started you out with.\\\\r\n4.  Make the text that gets\n    printed _be descriptive_ so that you know exactly what is happening when.\\\\r\n    \\\\r\n5.  \\*\n    **Run** the program and try clicking where the diagram (at right) shows.\\\\r\n    \\*\n    Click on each button\\\\r\n    -   Click where the buttons overlap\\\\r\n    -   Click on\n        the screen (i.e. the background)\\\\r\n        \\\\r\n        **Investigate until you can answer\n        these questions:**\\\\r\n6.  When you click on a location where two objects are\n    overlapping, which event(s) fire(s)?\\\\r\n7.  When you click on an non-overlapping\n    part of some object what gets triggered?\\\\r\n8.  When does a \"click\" on the\n    \"screen\" get triggered?\\\\r\n    \\\\r\n    \\\\r\n    <details><summary>Answers: [click here]</summary>\\r\n    <br><br>\\r\n9.  1.\n    When you click on a location where two objects are overlapping, which event(s)\n    fire(s)?\\\\r\n    <br>\\\\r\n    <li><em> The event-handler for object that is on top gets\n    triggered.  The object that is underneath is essentially blocked from being\n    clicked in the overlapping portion</em></li>\\r\n    <br><br>\\r\n10. When you click\n    on an non-overlapping part of some object what gets triggered?\\\\r\n    <li><em>The\n    event-handler for the object gets triggered as you might expect</em></li>\\r\n    <br><br>\\r\n11. 3.\n    When does a \"click\" on the \"screen\" get triggered?\\\\r\n    <li><em>Always.\n    Events that occur on the screen cannot be blocked by other objects.  If you\n    set up an event listener for the screen it will capture EVERY event of that\n    type, no matter what other UI elements are on the screen.  This behavior of\n    the screen is done on purpose and is useful for certain kinds of things.</em></li>\\r\n    \\r\n    \\r\n    </details>\\r\n    \\r"
+      CSPU5 Debugging Overlapping Objects and Screen Events: "# \n\nUse console.log to Test Overlapping Objects and the Screen\\\\r\n\\\\r\nThere are\ntwo goals here:\\\\r\n\\\\r\n\n1.  Practice inserting your own console.log statements.\\\\r\n2.  2\\.\n    Investigate how the screen captures events (it's different).\\\\r\n    \\\\r\n    ## Do\n    This:\\\\r\n    <img src=\"https://images.code.org/4100fcc7062f97ce8440003b3a17cd25-image-1477363054051.png\"\n    style=\"float: right\">\\\\r\n    \\\\r\n3.  **Add `console.log` statements to each of\n    the 3 event handlers** we started you out with.\\\\r\n4.  Make the text that gets\n    printed _be descriptive_ so that you know exactly what is happening when.\\\\r\n    \\\\r\n5.  \\*\n    **Run** the program and try clicking where the diagram (at right) shows.\\\\r\n    \\*\n    Click on each button\\\\r\n    -   Click where the buttons overlap\\\\r\n    -   Click on\n        the screen (i.e. the background)\\\\r\n        \\\\r\n        **Investigate until you can answer\n        these questions:**\\\\r\n6.  When you click on a location where two objects are\n    overlapping, which event(s) fire(s)?\\\\r\n7.  When you click on an non-overlapping\n    part of some object what gets triggered?\\\\r\n8.  When does a \"click\" on the\n    \"screen\" get triggered?\\\\r\n    \\\\r\n    \\\\r\n    <details><summary>Answers: [click here]</summary>\\r\n    <br><br>\\r\n9.  1\\.\n    When you click on a location where two objects are overlapping, which event(s)\n    fire(s)?\\\\r\n    <br>\\\\r\n    <li><em> The event-handler for object that is on top gets\n    triggered.  The object that is underneath is essentially blocked from being\n    clicked in the overlapping portion</em></li>\\r\n    <br><br>\\r\n10. When you click\n    on an non-overlapping part of some object what gets triggered?\\\\r\n    <li><em>The\n    event-handler for the object gets triggered as you might expect</em></li>\\r\n    <br><br>\\r\n11. 3\\.\n    When does a \"click\" on the \"screen\" get triggered?\\\\r\n    <li><em>Always.\n    Events that occur on the screen cannot be blocked by other objects.  If you\n    set up an event listener for the screen it will capture EVERY event of that\n    type, no matter what other UI elements are on the screen.  This behavior of\n    the screen is done on purpose and is useful for certain kinds of things.</em></li>\\r\n    \\r\n    \\r\n    </details>\\r\n    \\r"
       CSPU5 First Time Console.log: |-
         # Exploring console.log\\r
 
@@ -31894,7 +31894,7 @@ mk:
             Prediction**\\r
         -   **Run** the program\\r
         -   **Were you right?** What's unexpected?\\r
-        -   4.
+        -   4\.
             **Keep testing** until you see what's happening.\\r
             \\r
       CSPU5 console.log in event v. global: |-
@@ -33655,7 +33655,7 @@ mk:
             Make the color of the button red.\\r
             \\r
             \\r
-      CSPU5_U3 - Dice - Dropdown and Score: "# Adding Guess\n\nand Score to Dice Game\\\\r\n\\\\r\nLet's have the user guess the number that will\ncome up when we roll a single die. \\\\r\n\\\\r\nYou can have multiple `if` statements,\none after another, if they have different purposes which are separate. \\\\r\n\\\\r\n\\*\\*\nNote: \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** to take in the user's guess from 1 to\n    6\\.\\\\r\n    \\\\r\n-   **Add a set of `if` statements to check if the dice roll number\n    is equal to the user guess.** Put this set of `if` statements after your set\n    of `if` statements for the dice image. It should be completely separate from\n    the other set of `if` statements. \\\\r\n    \\\\r\n-   Create a variable to **keep track\n    of score**. Give 10 points if they guess right and take one point away when\n    they guess wrong.\\\\r\n    \\\\r\n-   **Display the score** on the screen and update\n    it after each dice roll.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
+      CSPU5_U3 - Dice - Dropdown and Score: "# Adding Guess\n\nand Score to Dice Game\\\\r\n\\\\r\nLet's have the user guess the number that will\ncome up when we roll a single die. \\\\r\n\\\\r\nYou can have multiple `if` statements,\none after another, if they have different purposes which are separate. \\\\r\n\\\\r\n\\*\\*\nNote: \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** to take in the user's guess from 1 to\n    6.\\\\r\n    \\\\r\n-   **Add a set of `if` statements to check if the dice roll number\n    is equal to the user guess.** Put this set of `if` statements after your set\n    of `if` statements for the dice image. It should be completely separate from\n    the other set of `if` statements. \\\\r\n    \\\\r\n-   Create a variable to **keep track\n    of score**. Give 10 points if they guess right and take one point away when\n    they guess wrong.\\\\r\n    \\\\r\n-   **Display the score** on the screen and update\n    it after each dice roll.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
       CSPU5_U3 - Dice - Dropdown with Strings: "# Adding Difficulty\n\nLevels: Dropdowns with Strings\\\\r\n\\\\r\nLet's add another element to our dice\ngame: **difficulty levels**. The user will pick either \"Easy\" or \"Hard.\"  These\nare strings so you might be wondering how to check for equality. **The `==`\nworks on strings as well!** It checks if the first string is exactly the same\nas the second string. **Strings must be the same letters and even have the\nsame case to be equal**! So \"dog\" and \"Dog\" would not be equal. \\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** for difficulty level with the options\n    of \"Easy\" or \"Hard.\" \\\\r\n    \\\\r\n-   **Create an `if` statement for difficulty\n    level** which prints the difficulty level to the console.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
       CSPU5_U3 - Dice - If: |-
         # Using `if` to Display Images\\r
@@ -35736,7 +35736,7 @@ mk:
         \\r
         There are two goals here:\\r
         \\r
-        1.
+        1\.
         Practice inserting your own console.log statements.\\r
 
         2.  Investigate how
@@ -35757,7 +35757,7 @@ mk:
         6.  **\\r
             \\r
             \*\*Investigate until you can answer the questions:**\\r
-        7.  1.
+        7.  1\.
             When you click on a location where two objects are overlapping, which event(s)
             fire(s)?\\r
         8.  When you click on an non-overlapping part of some object what
@@ -35775,12 +35775,12 @@ mk:
             for object that is on top gets triggered.  The object that is underneath is
             essentially blocked from being clicked in the overlapping portion</li>\r
             <br><br>\r
-        11. 2.
+        11. 2\.
             When you click on an non-overlapping part of some object what gets triggered?\\r
             <li>The
             event-handler for the object gets triggered as you might expect</li>\r
             <br><br>\r
-        12. 3.
+        12. 3\.
             When does a "click" on the "screen" get triggered?\\r
             <li>Always. Events
             that occur on the screen cannot be blocked by other objects.  If you set up
@@ -35928,15 +35928,15 @@ mk:
         \\r
         Try another one! -- This one is trickier, but very common.\\r
         \\r
-        1.
+        1\.
         **Run the program** and inspect the messages in the Debug Console for clues.\\r
-        2.
+        2\.
         **Investigate** - track down what the root of the problem might be.\\r
-        3.
+        3\.
         **Fix it** the program and correct the errors so that it works as intended.\\r
-        4.
+        4\.
         **Run the program** and verify that both buttons have the intended functionality.\\r
-        5.
+        5\.
         **Repeat as necessary** until the program works as intended\\r
         \\r
 
@@ -38636,7 +38636,7 @@ mk:
         \\r
         ![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\\r
         \\r
-        1.
+        1\.
         **Run the program** and inspect the error messages in the Debug Console.\\r
           \*
         **NOTE:** an error message _only_ indicates where the computer ran into trouble.  It
@@ -38644,7 +38644,7 @@ mk:
 
         2.  **Investigate**
             \-- Use the **error message as a clue** to investigate the possible problem.\\r
-        3.  3.
+        3.  3\.
             **Fix it** -- Make a change that you think will fix the problem.\\r
         4.  **Run
             the program** and verify that not only are there no error messages but the
@@ -38715,7 +38715,7 @@ mk:
         \\r
         Remember the steps:\\r
         \\r
-          1.
+          1\.
         **Design Mode**: drag another button onto the screen\\r
 
         2.  Switch to Code
@@ -39735,7 +39735,7 @@ mk:
         -   2`) each time.  Cat will move and count by multiplying by 2 (`counter \*2`)  each
             time. Penguin will move and count to the power of 2 (`counter ^ 2\`) each time.  Who
             will reach their flag first?
-      Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back the `increment` variable!    Let's tie it to the level\nof the game.\\\\r\n\\\\r\n\n1.  Keep track of the number of times The Wizard is clicked.  \\\\r\n2.  2)\n    If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n    `increment` by 1 and start again.  \\\\r\n3.  If The Wizard does not get clicked\n    at least 10 times, the game is over.  "
+      Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back the `increment` variable!    Let's tie it to the level\nof the game.\\\\r\n\\\\r\n\n1.  Keep track of the number of times The Wizard is clicked.  \\\\r\n2.  2\\)\n    If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n    `increment` by 1 and start again.  \\\\r\n3.  If The Wizard does not get clicked\n    at least 10 times, the game is over.  "
       Course 4 Playlab For Loop Freeplay: |-
         **Freeplay:** Use
         everything you've learned so far to make a game that includes a `for` loop!
@@ -40986,7 +40986,7 @@ mk:
         1.  Read through the blocks at lines 14 and 21 - what is going
             on?\\r
         2.  Add two more conditionals to respond to the up and left keys\\r
-        3.  3.
+        3.  3\.
             Experiment with some of the additional provided blocks, such as `sprite.scale`
             and `sprite.rotation`\\r
       GameLab Livecode Demo 3: |-
@@ -40997,7 +40997,7 @@ mk:
         this point there's one sprite on screen, and we can move it around with the
         arrow keys. Now let's add a second sprite and get the two interacting.\\r
         \\r
-        1.
+        1\.
         Add a new animation in the animation tab\\r
 
         2.  Create a new sprite called
@@ -41071,7 +41071,7 @@ mk:
       Geometric Sun_2018: |-
         **Project Idea:** Create a pattern
         using geometric ideas like shapes. This requires persistence and planning!
-      Glossary O: "## Vocabulary\n\nEncouraging students to\nlearn and use 'professional' terms enables them to communicate correctly\nand efficiently with others and builds their knowledge such that it can be\nfurther developed without having to relearn terms and concepts at a later\ntime. The terms and concepts used in the unplugged lessons are defined using\nwords that young students can understand.\n\n# TEACHING TIP\n\nBest practice\nis to introduce the terms with easy-to-understand language, relate the terms\nto previous experiences, use the terms repeatedly beyond the lesson itself\nthroughout the entire course (and in other situations) when appropriate, and\nreinforce students' use in oral and written communication.\n\nThe following\nterms are introduced in an unplugged lesson as either a Vocabulary word or\nas a term related to the online Blockly programming interface. Terms are subsequently\nreinforced in the following online puzzles and activities. Most terms appear\nmultiple times throughout the courses and lessons providing the students with\nmany opportunities to deepen their understanding and assimilate the words\ninto conversations, both in and outside of the classroom.\n\nThe course and\nlesson numbers after each term indicate the unplugged lessons in which the\nterm is emphasized.\n\n# Look through this list of vocabulary words and then\n\nanswer the prompt at the bottom of the page. You don't have to learn all\nthe vocabulary words all right now, but you they are here so you can refer\nback them during this online course. \n\nabstraction\n\nPulling out specific\ndifferences to make one solution work for multiple problems students.\n\n(Course\n3: Lesson 1)\n\nalgorithm\n\nA list of steps to finish a task. A set of instructions\nthat can be performed with or without a computer. For example, the collection\nof steps to make a peanut butter and jelly sandwich is an algorithm.\n\n(Course\n1: Lessons 1, 6 | Course 2: Lessons 1, 2 | Course 3: Lessons 1, 10)\n\nbinary\n\nA\nway of representing information using only two options.\n\n(Course 2: Lesson\n14)\n\nBlockly\n\nThe visual programming language used in Code.org's online\nlearning system for K-5 students. (Course 1: Lesson 3)\n\nbug\n\nAn error\nin a program that prevents the program from running as expected. (Course 2:\nLesson 9)\n\ncode\n\nOne or more commands or algorithm(s) designed to be carried\nout by a computer. See Program. (Course 1: Lesson 2)\n\ncommand\n\nAn instruction\nfor the computer. Many commands put together make up algorithms and computer\nprograms. (Course 1: Lesson 2)\n\ncomputational thinking\n\nMental processes\nand strategies that include: decomposition, pattern matching, abstraction,\nalgorithms (decomposing problems into smaller, more manageable problems, finding\nrepeating patterns, abstracting specific differences to make one solution\nwork for multiple problems, and creating step-by-step algorithms). (Course\n3: Lesson 1)\n\ncomputer science\n\nA field in which people use the power\nof computers to solve big problems. (Course 1: Lesson 2)\n\nconditionals\n\nStatements\nthat only run under certain conditions or situations. (Course 2: Lesson 12)\n\ncrowdsourcing\n\nGetting\nhelp from a large group of people to finish something faster. (Course 3: Lesson\n19)\n\ndata\n\nQuantities, characters, or symbols that are the inputs and\noutputs of computer programs. (Course 2: Lesson 14 | Course 3: Lessons 1)\n\ndebugging\n\nFinding\nand fixing errors in programs. (Course 2: Lesson 9)\n\ndecompose\n\nBreak\na problem down into smaller pieces. (Course 3: Lesson 1)\n\ndigital citizen\n\nSomeone\nwho acts safely, responsibly, and respectfully online. (Course 3: Lesson 20)\n\ndigital\nfootprint\n\nThe information about someone on the Internet. (Course 2: Lesson\n18)\n\nDNS (domain name service)\n\nThe service that translates URLs to IP\naddresses. (Course 3: Lesson 18)\n\nDSL/cable\n\nA method of sending information\nusing telephone or television cables. (Course 3: Lesson 18)\n\nevent\n\nAn\naction that causes something to happen. (Course 1: Lesson 15 | Course 2: Lesson\n15)\n\nevent-handler\n\nAn action or event that is being constantly monitored\nfor by the computer. When you write code for the computer to perform after\nthat an action occurs, that code, the event-handler, will run every time the\naction is performed without having to put the commands inside of a loop. Many\nevent-handlers are human-initiated. For example: an event handler might respond\nwhen the user clicks the mouse by making the bird flap its wings. \"When the\nmouse is clicked\" is an event-handler. (Course 1: Lesson 15 | Course 2: Lesson\n15)\n\nfiber optic cable\n\nA connection that uses light to transmit information.\n(Course 3: Lesson 18)\n\nfunction\n\nA piece of code that you can easily call\nover and over again. Functions are sometimes called 'procedures.' A function\ndefinition is a segment of code that includes the steps performed in the function.\nA function call is the code segment, typically within the main logic of the\nprogram, which invokes the function. (Course 3: Lesson 4, 9)\n\nInternet\n\nA\ngroup of computers and servers that are connected to each other. (Course 1:\nLesson 17 | Course 3: Lessons 18, 20)\n\nIP address\n\nA number assigned to\nany item that is connected to the Internet. (Course 3: Lesson 18)\n\niteration\n\nA\nrepetitive action or command typically created with programming loops. (Course\n1: Lesson 12 | Course 2: Lesson 5)\n\nloop\n\nThe action of doing something\nover and over again. (Course 1: Lesson 12 | Course 2: Lesson 5)\n\npackets\n\nSmall\nchunks of information that have been carefully formed from larger chunks of\ninformation. (Course 3: Lesson 18)\n\npattern matching\n\nFinding similarities\nbetween things. (Course 3: Lesson 1)\n\npersistence\n\nTrying again and again,\neven when something is very hard. (Course 1: Lesson 9)\n\nprogram\n\nA program\nis an algorithm that has been coded into something that can be run by a machine.\n(Course 1: Lesson 2 | Course 2: Lesson 1 | Course 3: Lesson 10)\n\nrun program\n\nTo\nhave the computer execute the commands you've written in your program. (Course\n1: Lesson 4)\n\nservers\n\nComputers that exist only to provide things to\nothers. (Course 3: Lesson 18)\n\ntoolbox\n\nThe tall grey bar in the middle\nsection of Code.org's online learning system where all the commands you can\nuse to write your program are displayed. (Course 1: Lesson 4)\n\nURL (universal\nresource locator)\n\nAn easy-to-remember address for calling a web page (like\nwww.code.org). (Course 3: Lesson 18)\n\nusername\n\nA name you make up so\nthat you can see or do things on a website, sometimes called a \"screen name.\"\n(Course 1: Lesson 18)\n\nvariable\n\nA placeholder for a piece of information\nthat can change. (Course 3: Lesson 4)\n\nWi-Fi\n\nA wireless method of sending\ninformation using radio waves. (Course 3: Lesson 18)\n\nworkspace\n\nThe white\narea on the right side of Code.org's online learning system where you drag\nand drop commands to build your program. (Course 1: Lesson 4)\n\n### What\n\nis one way you can include computer science vocabulary terms in your class?"
+      Glossary O: "## Vocabulary\n\nEncouraging students to\nlearn and use 'professional' terms enables them to communicate correctly\nand efficiently with others and builds their knowledge such that it can be\nfurther developed without having to relearn terms and concepts at a later\ntime. The terms and concepts used in the unplugged lessons are defined using\nwords that young students can understand.\n\n# TEACHING TIP\n\nBest practice\nis to introduce the terms with easy-to-understand language, relate the terms\nto previous experiences, use the terms repeatedly beyond the lesson itself\nthroughout the entire course (and in other situations) when appropriate, and\nreinforce students' use in oral and written communication.\n\nThe following\nterms are introduced in an unplugged lesson as either a Vocabulary word or\nas a term related to the online Blockly programming interface. Terms are subsequently\nreinforced in the following online puzzles and activities. Most terms appear\nmultiple times throughout the courses and lessons providing the students with\nmany opportunities to deepen their understanding and assimilate the words\ninto conversations, both in and outside of the classroom.\n\nThe course and\nlesson numbers after each term indicate the unplugged lessons in which the\nterm is emphasized.\n\n# Look through this list of vocabulary words and then\n\nanswer the prompt at the bottom of the page. You don't have to learn all\nthe vocabulary words all right now, but you they are here so you can refer\nback them during this online course. \n\nabstraction\n\nPulling out specific\ndifferences to make one solution work for multiple problems students.\n\n(Course\n3: Lesson 1)\n\nalgorithm\n\nA list of steps to finish a task. A set of instructions\nthat can be performed with or without a computer. For example, the collection\nof steps to make a peanut butter and jelly sandwich is an algorithm.\n\n(Course\n1: Lessons 1, 6 | Course 2: Lessons 1, 2 | Course 3: Lessons 1, 10)\n\nbinary\n\nA\nway of representing information using only two options.\n\n(Course 2: Lesson\n14\\)\n\nBlockly\n\nThe visual programming language used in Code.org's online\nlearning system for K-5 students. (Course 1: Lesson 3)\n\nbug\n\nAn error\nin a program that prevents the program from running as expected. (Course 2:\nLesson 9)\n\ncode\n\nOne or more commands or algorithm(s) designed to be carried\nout by a computer. See Program. (Course 1: Lesson 2)\n\ncommand\n\nAn instruction\nfor the computer. Many commands put together make up algorithms and computer\nprograms. (Course 1: Lesson 2)\n\ncomputational thinking\n\nMental processes\nand strategies that include: decomposition, pattern matching, abstraction,\nalgorithms (decomposing problems into smaller, more manageable problems, finding\nrepeating patterns, abstracting specific differences to make one solution\nwork for multiple problems, and creating step-by-step algorithms). (Course\n3: Lesson 1)\n\ncomputer science\n\nA field in which people use the power\nof computers to solve big problems. (Course 1: Lesson 2)\n\nconditionals\n\nStatements\nthat only run under certain conditions or situations. (Course 2: Lesson 12)\n\ncrowdsourcing\n\nGetting\nhelp from a large group of people to finish something faster. (Course 3: Lesson\n19\\)\n\ndata\n\nQuantities, characters, or symbols that are the inputs and\noutputs of computer programs. (Course 2: Lesson 14 | Course 3: Lessons 1)\n\ndebugging\n\nFinding\nand fixing errors in programs. (Course 2: Lesson 9)\n\ndecompose\n\nBreak\na problem down into smaller pieces. (Course 3: Lesson 1)\n\ndigital citizen\n\nSomeone\nwho acts safely, responsibly, and respectfully online. (Course 3: Lesson 20)\n\ndigital\nfootprint\n\nThe information about someone on the Internet. (Course 2: Lesson\n18\\)\n\nDNS (domain name service)\n\nThe service that translates URLs to IP\naddresses. (Course 3: Lesson 18)\n\nDSL/cable\n\nA method of sending information\nusing telephone or television cables. (Course 3: Lesson 18)\n\nevent\n\nAn\naction that causes something to happen. (Course 1: Lesson 15 | Course 2: Lesson\n15\\)\n\nevent-handler\n\nAn action or event that is being constantly monitored\nfor by the computer. When you write code for the computer to perform after\nthat an action occurs, that code, the event-handler, will run every time the\naction is performed without having to put the commands inside of a loop. Many\nevent-handlers are human-initiated. For example: an event handler might respond\nwhen the user clicks the mouse by making the bird flap its wings. \"When the\nmouse is clicked\" is an event-handler. (Course 1: Lesson 15 | Course 2: Lesson\n15\\)\n\nfiber optic cable\n\nA connection that uses light to transmit information.\n(Course 3: Lesson 18)\n\nfunction\n\nA piece of code that you can easily call\nover and over again. Functions are sometimes called 'procedures.' A function\ndefinition is a segment of code that includes the steps performed in the function.\nA function call is the code segment, typically within the main logic of the\nprogram, which invokes the function. (Course 3: Lesson 4, 9)\n\nInternet\n\nA\ngroup of computers and servers that are connected to each other. (Course 1:\nLesson 17 | Course 3: Lessons 18, 20)\n\nIP address\n\nA number assigned to\nany item that is connected to the Internet. (Course 3: Lesson 18)\n\niteration\n\nA\nrepetitive action or command typically created with programming loops. (Course\n1: Lesson 12 | Course 2: Lesson 5)\n\nloop\n\nThe action of doing something\nover and over again. (Course 1: Lesson 12 | Course 2: Lesson 5)\n\npackets\n\nSmall\nchunks of information that have been carefully formed from larger chunks of\ninformation. (Course 3: Lesson 18)\n\npattern matching\n\nFinding similarities\nbetween things. (Course 3: Lesson 1)\n\npersistence\n\nTrying again and again,\neven when something is very hard. (Course 1: Lesson 9)\n\nprogram\n\nA program\nis an algorithm that has been coded into something that can be run by a machine.\n(Course 1: Lesson 2 | Course 2: Lesson 1 | Course 3: Lesson 10)\n\nrun program\n\nTo\nhave the computer execute the commands you've written in your program. (Course\n1: Lesson 4)\n\nservers\n\nComputers that exist only to provide things to\nothers. (Course 3: Lesson 18)\n\ntoolbox\n\nThe tall grey bar in the middle\nsection of Code.org's online learning system where all the commands you can\nuse to write your program are displayed. (Course 1: Lesson 4)\n\nURL (universal\nresource locator)\n\nAn easy-to-remember address for calling a web page (like\nwww.code.org). (Course 3: Lesson 18)\n\nusername\n\nA name you make up so\nthat you can see or do things on a website, sometimes called a \"screen name.\"\n(Course 1: Lesson 18)\n\nvariable\n\nA placeholder for a piece of information\nthat can change. (Course 3: Lesson 4)\n\nWi-Fi\n\nA wireless method of sending\ninformation using radio waves. (Course 3: Lesson 18)\n\nworkspace\n\nThe white\narea on the right side of Code.org's online learning system where you drag\nand drop commands to build your program. (Course 1: Lesson 4)\n\n### What\n\nis one way you can include computer science vocabulary terms in your class?"
       Hardware Accessibility: |-
         # Hardware Accessibility: Screen
 
@@ -41479,7 +41479,7 @@ mk:
         -   With an else clause you are _guaranteeing_
             that one of two portions of code will run.\\r
             \\r
-      'Introduction to Conditionals: Boolean Expressions': "### \n\nPoints to pay attention to:\\\\r\n\\\\r\n\n1.  What's a _Boolean Expression?_\\\\r\n2.  2.\n    Why is it called a \"Boolean\"?\\\\r\n3.  Is this a legal expression?  `10 > 25`?"
+      'Introduction to Conditionals: Boolean Expressions': "### \n\nPoints to pay attention to:\\\\r\n\\\\r\n\n1.  What's a _Boolean Expression?_\\\\r\n2.  2\\.\n    Why is it called a \"Boolean\"?\\\\r\n3.  Is this a legal expression?  `10 > 25`?"
       'Introduction to Conditionals: Compound Boolean Expressions': "### \n\nPoints to pay attention to:\\\\r\n\\\\r\n\n-   The \"Boolean operators\" are AND and\n    OR.  \\\\r\n-   In JavaScript you write them as `&&` for AND and `||` for OR.\\\\r\n-   \\*\n    You use them to combine boolean expressions into a single statement when you\n    need to check multiple conditions before executing a particular segment of\n    code.\\\\r\n    \\\\r"
       'Introduction to Conditionals: if-else Statements': "### \n\nPoints to pay attention to:\\\\r\n\\\\r\n\n-   An IF statement can have an else clause,\n    but an ELSE clause cannot exist on its own.\\\\r\n-   With an else clause you are\n    _guaranteeing_ that one of two portions of code will run.\\\\r\n    \\\\r"
       'Introduction to Conditionals: if-else-if Statements': "### \n\nPoints to pay attention to:\\\\r\n\\\\r\n\n-   An if-else-if statement lets you check\n    more than one condition at a time.\\\\r\n-   The **order of conditions matters**.\n    Since conditions are checked sequentially from top to bottom, the code that\n    gets executed will be the _first_ statement to evaluate to true.\\\\r\n    \\\\r"
@@ -43363,7 +43363,7 @@ mk:
 
         1.  In Design Mode Click on the white
             square where it says "CODE". Change it to show a secret code of your choice\\r
-        2.  2.
+        2.  2\.
             Drag the picture down to cover the secret code\\r
             \\r
             ![](<>)
@@ -44008,7 +44008,7 @@ mk:
             \\t\* Note: even if you just want the
             default dot color - black - explicitly set the color to black here.\\r
             \\r
-        2.  2.
+        2.  2\.
             Using that color, make a dot so big that it fills the screen.\\r
             \\r
         3.  In
@@ -44936,7 +44936,7 @@ mk:
             might want to test your ideas on paper for faster brainstorming. Work with
             your partner to discuss possible solutions or strategies. Try more than one.\\r
             \\r
-        2.  2.
+        2.  2\.
             Once you have a solution, **start** by identifying the subgoals and drag them
             from the **Goals** tab into the workspace. \\r
             \\r
@@ -45797,11 +45797,11 @@ mk:
         1.  What are the **dimensions** (width and height)
             of the **largest image** we can make with the pixelation widget? \\r
             \\r
-        2.  2.
+        2.  2\.
             How many **total bits** would there be in the the largest possible image we
             could make with the pixelation widget (assuming 1 bit per pixel)?\\r
             \\r
-        3.  3.
+        3.  3\.
             How many **total bits** bits would it take to represent **the smallest possible
             image** (i.e. an image with one pixel)?\\r
       U1L16 Reflection Free Response: |-
@@ -48059,7 +48059,7 @@ mk:
             \\r
             <img src="https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif"
             style="width: 500px; float: middle">\\r
-      U3 - Dice - Dropdown and Score: "# Adding Guess and Score\n\nto Dice Game\\\\r\n\\\\r\nLet's have the user guess the number that will come up\nwhen we roll a single die. \\\\r\n\\\\r\nYou can have multiple `if` statements,\none after another, if they have different purposes which are separate. \\\\r\n\\\\r\n\\*\\*\nNote: \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** to take in the user's guess from 1 to\n    6\\.\\\\r\n    \\\\r\n-   **Add a set of `if` statements to check if the dice roll number\n    is equal to the user guess.** Put this set of `if` statements after your set\n    of `if` statements for the dice image. It should be completely separate from\n    the other set of `if` statements. \\\\r\n    \\\\r\n-   Create a variable to **keep track\n    of score**. Give 10 points if they guess right and take one point away when\n    they guess wrong.\\\\r\n    \\\\r\n-   **Display the score** on the screen and update\n    it after each dice roll.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
+      U3 - Dice - Dropdown and Score: "# Adding Guess and Score\n\nto Dice Game\\\\r\n\\\\r\nLet's have the user guess the number that will come up\nwhen we roll a single die. \\\\r\n\\\\r\nYou can have multiple `if` statements,\none after another, if they have different purposes which are separate. \\\\r\n\\\\r\n\\*\\*\nNote: \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** to take in the user's guess from 1 to\n    6.\\\\r\n    \\\\r\n-   **Add a set of `if` statements to check if the dice roll number\n    is equal to the user guess.** Put this set of `if` statements after your set\n    of `if` statements for the dice image. It should be completely separate from\n    the other set of `if` statements. \\\\r\n    \\\\r\n-   Create a variable to **keep track\n    of score**. Give 10 points if they guess right and take one point away when\n    they guess wrong.\\\\r\n    \\\\r\n-   **Display the score** on the screen and update\n    it after each dice roll.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
       U3 - Dice - Dropdown with Strings: "# Adding Difficulty\n\nLevels: Dropdowns with Strings\\\\r\n\\\\r\nLet's add another element to our dice\ngame: **difficulty levels**. The user will pick either \"Easy\" or \"Hard.\"  These\nare strings so you might be wondering how to check for equality. **The `==`\nworks on strings as well!** It checks if the first string is exactly the same\nas the second string. **Strings must be the same letters and even have the\nsame case to be equal**! So \"dog\" and \"Dog\" would not be equal. \\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Add a dropdown** for difficulty level with the options\n    of \"Easy\" or \"Hard.\" \\\\r\n    \\\\r\n-   **Create an `if` statement for difficulty\n    level** which prints the difficulty level to the console.\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png\"\n    style=\"width: 100%\">\\\\r\n    <a href=\"https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png\"\n    target=\"_blank\">Open diagram in a new tab</a>"
       U3 - Dice - If: |-
         # Using `if` to Display Images\\r
@@ -50505,7 +50505,7 @@ mk:
         Sometimes
         we want to search through the records in the table to find certain records.
         For instance let's search through the records for all the movies made in
-        2008\.\\r
+        2008.\\r
         \\r
         loop over element in the array returned from readRecord and print
         out only the ones that meet a certain criteria - uses if statement and forshadows
@@ -51564,7 +51564,7 @@ mk:
             \\r
         -   Take a guess
             at what the problem is. We will discuss it on the next level.
-      U3 - Variables - Debugging with Turtle: "# Practice Debugging\\\\r\n\n\\\\r\nOn\nthe last two levels you learned two different common variable problems\\\\r\n\\\\r\n1.\nFoo vs foo\\\\r\n\n2.  \"foo\" vs foo\\\\r\n    \\\\r\n    On this level there are a bunch of\n    errors you will need trace down to get the program to run correctly.\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/256c4c3a041b107b4f2a6a743b963bf5-image-1445204671406.44.21\n    PM.png\" style=\"width: 150px; float: right; border: solid 1px black\">\\\\r\n    \\\\r\n3.  \\*\n    **Run the program**\\\\r\n    \\\\r\n4.  **Locate the errors**\\\\r\n    \\\\r\n5.  **Fix the program**.\n    The final product should look like the image on the right."
+      U3 - Variables - Debugging with Turtle: "# Practice Debugging\\\\r\n\n\\\\r\nOn\nthe last two levels you learned two different common variable problems\\\\r\n\\\\r\n1\\.\nFoo vs foo\\\\r\n\n2.  \"foo\" vs foo\\\\r\n    \\\\r\n    On this level there are a bunch of\n    errors you will need trace down to get the program to run correctly.\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/256c4c3a041b107b4f2a6a743b963bf5-image-1445204671406.44.21\n    PM.png\" style=\"width: 150px; float: right; border: solid 1px black\">\\\\r\n    \\\\r\n3.  \\*\n    **Run the program**\\\\r\n    \\\\r\n4.  **Locate the errors**\\\\r\n    \\\\r\n5.  **Fix the program**.\n    The final product should look like the image on the right."
       U3 - Variables - Decrement: "# Decrementing Variables\\\\r\n\n\\\\r\nIn\nlast level we increased the value of our variable. Now what if we want to\ndecrease it. Well you probably guessed it. Its just subtraction instead of\naddition!\\\\r\n\\\\r\nHint: You may find it easier to edit the code in Text Mode\ninstead of Block Mode. Text Mode allows you to type code instead of dragging\nblocks out. It is very helpful for changing certain parts of your code and\nyou should feel free to use it whenever you feel it helps you. You can always\nswitch back to Block Mode at any point! You can find Text Mode by clicking\n<img src=\"https://images.code.org/8020c9f5f3766a2d82c2376d6df1b896-image-1444966181885.04.50\nPM.png\" width=\"100px\"> in the upper right corner of the Code Workspace.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\n\n-   Update the program to decrement the value of the variable\n    instead of increment.\\\\r\n    \\\\r\n-   Use console.log statements to check your work."
       U3 - Variables - Identify Variables: "# What happened\n\nin the last level?\\\\r\n\\\\r\nIn the last level we saw the difference between\na var name `foo` and one names `Foo`.  Variable names are \\*\\* case sensitive\\*\\*\nmeaning that capital letters are different than lower case letters. \\\\r\n\\\\r\n\n# \n\nDebugging Variables: Part 3\\\\r\n\\\\r\nSometimes you have lots of console log\nstatments going on at once and its very difficult to tell which part of the\ncode is printing each message. One strategy to deal with this is to name messages\nby putting some output in front of them. \\\\r\n\\\\r\n\n# Do This\\\\r\n\n\\\\r\n\n-   **Run\n    the program**. Check out what happens when you click Button 1 in comparison\n    to the other buttons.\\\\r\n    \\\\r\n-   **Add `console.log()` statements** for the\n    other buttons to identify where the value is coming from."
       U3 - Variables - Increment: "# Incrementing Variables\\\\r\n\n\\\\r\nSo\nfar we have seen explicitly changing the value of a variable to a specific\nvalue. What if we want to increase the current value by a certain amount?\nWe can add to the current value. This is called **incrementing** a value.\\\\r\n\\\\r\n\n# \n\nDo This\\\\r\n\\\\r\n\n-   **Run the program** and add `console.log()` statements to\n    see what is happening. \\\\r\n    \\\\r\n-   \\*\\* Add another increment of the current variable\\*\\*\\\\r\n    \\\\r\n-   \\*\n    **Create another variable**\\\\r\n    \\\\r\n-   **Increment the value of the new variable**."
@@ -53014,7 +53014,7 @@ mk:
             \\t\* Note: even if you just want the
             default dot color - black - explicitly set the color to black here.\\r
             \\r
-        2.  2.
+        2.  2\.
             Using that color, make a dot so big that it fills the screen.\\r
             \\r
         3.  In
@@ -56155,7 +56155,7 @@ mk:
 
         -   When the "Play
             again" button is clicked, **clear the text from each text input** on Screen
-            1\.\\r
+            1.\\r
         -   **Free play:** Add images, or more How-to steps for your Mad Libs,
             and invite others to play!\\r
             \\r
@@ -56652,7 +56652,7 @@ mk:
         -   **Open the Data Viewer** to see what value `unpredictableBit`
             was set to.\\r
         -   **Record** what value `unpredictableBit` was set to (0 or
-            1\)\\r
+            1)\\r
         -   **Repeat the experiment** a few more times (5-10). You'll need to
             **refresh the Data Viewer** each time by reloading the tab it is in.\\r
         -   \*
@@ -57085,7 +57085,7 @@ mk:
         ![]()\r
         \r
         ![]()
-      U3L19 - up down count practice app: "# What happened last\n\nlevel?\\\\r\n\\\\r\nIn JavaScript you should just think of the word var as shorthand\nfor \"create a variable\". In fact in the case of the last level the program\nthinks you want another variable names foo. This is the result of **scope**.\n\\\\r\n\\\\r\nThere are two types of variables:\\\\r\n\\\\r\n\n1.  **Gloabl Variables** -\n    Created outside of all functions and can be seen and updated by any code.\\\\r\n2.  1.\n    **Local Variables** - Create inside of a function and can't be seen by any\n    other code. They get created when the function is run, and they get destroyed\n    (seriously) when last line of code in the function has executed. If the function\n    gets run again, then the variable is created again.\\\\r\n    \\\\r\n    So if you say `var`\n    in front of a variable with the same name as a global variable it actually\n    thinks you want another variable named foo just for this function!\\\\r\n    \\\\r\n    \\\\r\n    # \n    Incrementing with buttons\\\\r\n    \\\\r\n    Check it out. We have started using increment\n    with a button!  Can you figure out how to set up the Down button to decrement\n    the value of count each time it is clicked?\\\\r\n    \\\\r\n    # Do This\\\\r\n    \\\\r\n3.  **Try\n    the starter code.** See how the UP button works.\\\\r\n    \\\\r\n4.  \\*\\* Set up the DOWN\n    button\\*\\* to decrease the value of count by 1 each time it is clicked.\\\\r\n    \\\\r\n5.  \\*\n    Your app should look like the example when done."
+      U3L19 - up down count practice app: "# What happened last\n\nlevel?\\\\r\n\\\\r\nIn JavaScript you should just think of the word var as shorthand\nfor \"create a variable\". In fact in the case of the last level the program\nthinks you want another variable names foo. This is the result of **scope**.\n\\\\r\n\\\\r\nThere are two types of variables:\\\\r\n\\\\r\n\n1.  **Gloabl Variables** -\n    Created outside of all functions and can be seen and updated by any code.\\\\r\n2.  1\\.\n    **Local Variables** - Create inside of a function and can't be seen by any\n    other code. They get created when the function is run, and they get destroyed\n    (seriously) when last line of code in the function has executed. If the function\n    gets run again, then the variable is created again.\\\\r\n    \\\\r\n    So if you say `var`\n    in front of a variable with the same name as a global variable it actually\n    thinks you want another variable named foo just for this function!\\\\r\n    \\\\r\n    \\\\r\n    # \n    Incrementing with buttons\\\\r\n    \\\\r\n    Check it out. We have started using increment\n    with a button!  Can you figure out how to set up the Down button to decrement\n    the value of count each time it is clicked?\\\\r\n    \\\\r\n    # Do This\\\\r\n    \\\\r\n3.  **Try\n    the starter code.** See how the UP button works.\\\\r\n    \\\\r\n4.  \\*\\* Set up the DOWN\n    button\\*\\* to decrease the value of count by 1 each time it is clicked.\\\\r\n    \\\\r\n5.  \\*\n    Your app should look like the example when done."
       U3L19 - variable reassignment challenge pt2: "# Wrapping\n\nUp Variables - This is Not Math Class\\\\r\n\\\\r\nHopefully you now understand\nthe gist of working with variables.  The major thing to remember is that every\ntime you see an `=` sign it means that you are instructing the computer to\nset a variable to a new value.  \\\\r\n\\\\r\n<img src=\"https://images.code.org/ecced8eb916809f66ac7d555a819c2a6-image-1447803015383.17.43.png\"\nstyle=\"float: right\">\\\\r\nThe example to the right is something that definitely\nwouldn't make sense in math class, but you should be able to reason about\nit as a piece of code.  Because it's code, you can also **insert** statements\nto display the value of variables as they change.  You don't have to guess!\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\n-   \\*\\* Make a prediction.\\*\\* \\\\r\n    \\\\r\n    As usual you should **first**\n    look at the code given to you and reason about what it does.  You should try\n    to predict what the value of `num` will be after all lines have executed.\\\\r\n    \\\\r\n-   \\*\n    \\*\\* Insert 3 `console.log` statements.\\*\\*\\\\r\n    \\\\r\n    Insert `console.log` statements\n    into the existing code to display each value of `num` immediately after it's\n    changed. (The animation below shows how to get started.)\\\\r\n    \\\\r\n    !\\[](\\<<https://images.code.org/0e425ce1a186d49d230395032f970913-image-1447802992249.19.24>\n    add console message.gif>)\\\\r\n    \\\\r\n-   **Was your prediction right?**\\\\r\n    \\\\r\n\nAfter you figure out the answer, if your prediction was off, try to understand\nwhy.  Where was your misunderstanding?\\\\r"
       U3L19 - variable reassignment part 1: |-
         # Variable Reassignment
@@ -58000,7 +58000,7 @@ mk:
 
         1.  If you have the letter S in your name, please stand.
 
-        2.  2.
+        2.  2\.
             If you play an instrument or sing in the choir, please put your head down
             on your desk.
 
@@ -58031,7 +58031,7 @@ mk:
 
         1.  <samp>“Hello World”</samp>\\r
             \\r
-        2.  1.
+        2.  1\.
             <samp>“Computer science rocks!"</samp>\\r
             \\r
         3.  <samp>“I promise to do my
@@ -60902,7 +60902,7 @@ mk:
 
         1.  Look at the code and write down on paper
             what you think it will do.  Think back to createRecord as you make your guess.\\r
-        2.  1.
+        2.  1\.
             Run the level\\r
         3.  Open the data view\\r
         4.  Take a look at the outcome and
@@ -60929,7 +60929,7 @@ mk:
         **HINT**\\r
 
         1.  Find out the length of the records\\r
-        2.  1.
+        2.  1\.
             Make a variable that holds a random number\\r
         3.  Use it to get a random record
       U4L16 Free Response: Free response prompt here.
@@ -61281,11 +61281,11 @@ mk:
         ### Points to pay attention to:\\r
 
         \\r
-        1.
+        1\.
         What's a _Boolean Expression?_\\r
 
         2.  Why is it called a "Boolean"?\\r
-        3.  3.
+        3.  3\.
             Is this a legal expression?  `10 > 25`?
       U5 Check Password if statement lock image: |-
         <img src="https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif"
@@ -61457,7 +61457,7 @@ mk:
             right, move on.\\r
         -   If it's broken or doesn't run double-check the changes
             you made.\\r
-      U5 ColorSleuth checkCorrect part1 link to event handlers: "## \n\nSteps 2 and 3 - Add checkCorrect(buttonId) and Event Handlers\\\\r\n\\\\r\nThis\nfeels like a big step, but it's actually just a few small ones.  We'll see\nsome new functionality at the end.\\\\r\n\\\\r\n\n1.  **Add a function definition for\n    `checkCorrect(buttonId)` that:**\\\\r\n    \\\\t\\* Contains a console.log message to\n    display the parameter\\\\r\n    -   Calls setBoard()\\\\r\n        \\\\r\n            function\n        checkCorrect(buttonId){\\\\r\n                console.log(\"Checking: \"+buttonId);\\\\r\n                setBoard();\\\\r\n            }\\\\r\n        \\\\r\n2.  2.\n    **Add 4 \"click\" event handlers - one for each button - that call checkCorrect**\\\\r\n    \\\\t\\*\n    The event handling functions should call `checkCorrect(...)` with its button\n    id.\\\\r\n    \\\\t\\* So for _button1_ it should look something like:\\\\r\n    \\\\r\n    \\\\t\\\\t\\\\tonEvent(\"button1\",\n    \"click\", function(){\\\\r\n        \\\\t\\\\tcheckCorrect(\"button1\");\\\\r\n        \\\\t});\\\\r\n        \\\\r\n    \\\\r\n    **TESTING**\\\\r\n    \\\\r\n    Once\n    you've added this code you should really see some changes.  When you click\n    on buttons you should see:\\\\r\n3.  Console messages showing what was clicked\\\\r\n4.  2.\n    The board should change each time you click a button\\\\r\n5.  Console messages\n    showing the correct answer for each new board.\\\\r\n    \\\\r\n    ![](https://images.code.org/2941465a60c0f61c83979192c1de29ce-image-1481146240419.gif)"
+      U5 ColorSleuth checkCorrect part1 link to event handlers: "## \n\nSteps 2 and 3 - Add checkCorrect(buttonId) and Event Handlers\\\\r\n\\\\r\nThis\nfeels like a big step, but it's actually just a few small ones.  We'll see\nsome new functionality at the end.\\\\r\n\\\\r\n\n1.  **Add a function definition for\n    `checkCorrect(buttonId)` that:**\\\\r\n    \\\\t\\* Contains a console.log message to\n    display the parameter\\\\r\n    -   Calls setBoard()\\\\r\n        \\\\r\n            function\n        checkCorrect(buttonId){\\\\r\n                console.log(\"Checking: \"+buttonId);\\\\r\n                setBoard();\\\\r\n            }\\\\r\n        \\\\r\n2.  2\\.\n    **Add 4 \"click\" event handlers - one for each button - that call checkCorrect**\\\\r\n    \\\\t\\*\n    The event handling functions should call `checkCorrect(...)` with its button\n    id.\\\\r\n    \\\\t\\* So for _button1_ it should look something like:\\\\r\n    \\\\r\n    \\\\t\\\\t\\\\tonEvent(\"button1\",\n    \"click\", function(){\\\\r\n        \\\\t\\\\tcheckCorrect(\"button1\");\\\\r\n        \\\\t});\\\\r\n        \\\\r\n    \\\\r\n    **TESTING**\\\\r\n    \\\\r\n    Once\n    you've added this code you should really see some changes.  When you click\n    on buttons you should see:\\\\r\n3.  Console messages showing what was clicked\\\\r\n4.  2\\.\n    The board should change each time you click a button\\\\r\n5.  Console messages\n    showing the correct answer for each new board.\\\\r\n    \\\\r\n    ![](https://images.code.org/2941465a60c0f61c83979192c1de29ce-image-1481146240419.gif)"
       U5 ColorSleuth checkCorrect part2 add if statement to check correct: "## \n\nStep 4 - add an if-statement in _checkCorrect_\\\\r\n\\\\r\n**Add a simple `if-else`\nstatement inside the function `checkCorrect` that:**\\\\r\n\\\\r\n\n-   Compares `buttonId`\n    and `randButtonId` and\\\\r\n-   Displays a message to console that they got right\n    or wrong\\\\r\n    \\\\r\n    Insert something like this _between_ your existing console.log\n    statement and the call to setBoard()\\\\r\n    \\\\r\n    \\\\t\\\\tif( buttonId == randButtonId\n    ) {\\\\r\n        \\\\tconsole.log(\"You got it right!\");\\\\r\n        } else {\\\\r\n        \\\\tconsole.log(\"WRONG\");\\\\r\n        }\\\\r\n    \\\\r\n    **TEST\n    IT: Verify that the if-statement is giving correct results**\\\\r\n    <img src=\"https://images.code.org/8fd0d14a4c32a6e36299251a2edb56bb-image-1481148748359.png\"\n    style=\"float: right\">\\\\r\n    \\\\r\n-   You should be able to click on buttons and\n    see messages that verify your if-statement is working\\\\r\n-   Be sure to click\n    on all the buttons to test the scenarios\\\\r\n    \\\\t\\* Is it detecting correct or\n    incorrect button clicks properly?\\\\r\n    -   Is it changing the board every\n        time?\\\\r\n-   Your console output might look something like what's shown at\n    right.\\\\r\n    \\\\r\n    **TIP:** It might be useful to temporarily remove or comment\n    out the call to `setBoard()` so the board doesn't change every time when\n    you click.  This would let you verify that every button works right for a\n    single board setup.  Then add it back in once you're done."
       U5 ColorSleuth implement end game: |-
         # Challenge - Pick
@@ -61777,7 +61777,7 @@ mk:
             organizing the code to make it more useful. In the next step will make more
             use of `setBoard()`.  For now, just make the function and call it once.\r
             \r
-      U5 ColorSleuth scoring pt1 vars function stub console: "## \n\nNext Step - add function updateScoreBy \\\\r\n\\\\r\nWe're going to follow the\nsame pattern we used when adding switch player.  We'll add variables, a function,\ncalls to the function, and for now just use `console.log` statements to verify\nwe've got things working.\\\\r\n\\\\r\n\n1.  Add global variables to the top of the\n    code: `var p1Score=0;` and `var p2Score=0;`\\\\r\n2.  Add a new function definition\n    `updateScoreBy` with an if-statement and console.log to verify.  Something\n    like this:\\\\r\n    \\\\r\n    \\\\t\\\\tfunction updateScoreBy(amt){\\\\r\n        \\\\tif(currentPlayer\n    == 1){\\\\r\n            \\\\tp1Score = p1Score + amt;\\\\r\n            } else {\\\\r\n            \\\\tp2Score\n    = p2Score + amt;\\\\r\n            }\\\\r\n            console.log(\"P1 score: \"\n3.  p1Score);\\\\r\n            console.log(\"P2 score: \" + p2Score);\\\\r\n        }\\\\r\n    \\\\r\n4.  3.\n    Add calls to `updateScoreBy(1)` and `updateScoreBy(-3)` to the appropriate\n    place inside the if statement in the `checkCorrect` function.\\\\r\n    \\\\t\\* You can\n    leave your console.log statements in there for now as well.  Just add calls\n    to `updateScoreBy` along with them.\\\\r\n    \\\\r\n    **TEST IT OUT**\\\\r\n    \\\\r\n    When you\n    run the program now you should be able to verify in the console that the player's\n    scores are updating.  Study the console output to make sure and verify that:\\\\r\n    \\\\r\n5.  \\*\n    updateScoreBy is being called from checkCorrect with each click\\\\r\n    \\\\t\\* if\n    you have console.log statements in `updateScoreBy` then you should at least\n    see that it's being called with each click\\\\r\n6.  The correct player's score\n    is being updated\\\\r\n7.  The scores are being updated by the correct amount\\\\r\n    \\\\r\n    A\n    sample of the output might look like this:\\\\r\n    \\\\r\n    ![](https://images.code.org/eb33f7d6d634e4f98e613bc13b231601-image-1481219318239.png)"
+      U5 ColorSleuth scoring pt1 vars function stub console: "## \n\nNext Step - add function updateScoreBy \\\\r\n\\\\r\nWe're going to follow the\nsame pattern we used when adding switch player.  We'll add variables, a function,\ncalls to the function, and for now just use `console.log` statements to verify\nwe've got things working.\\\\r\n\\\\r\n\n1.  Add global variables to the top of the\n    code: `var p1Score=0;` and `var p2Score=0;`\\\\r\n2.  Add a new function definition\n    `updateScoreBy` with an if-statement and console.log to verify.  Something\n    like this:\\\\r\n    \\\\r\n    \\\\t\\\\tfunction updateScoreBy(amt){\\\\r\n        \\\\tif(currentPlayer\n    == 1){\\\\r\n            \\\\tp1Score = p1Score + amt;\\\\r\n            } else {\\\\r\n            \\\\tp2Score\n    = p2Score + amt;\\\\r\n            }\\\\r\n            console.log(\"P1 score: \"\n3.  p1Score);\\\\r\n            console.log(\"P2 score: \" + p2Score);\\\\r\n        }\\\\r\n    \\\\r\n4.  3\\.\n    Add calls to `updateScoreBy(1)` and `updateScoreBy(-3)` to the appropriate\n    place inside the if statement in the `checkCorrect` function.\\\\r\n    \\\\t\\* You can\n    leave your console.log statements in there for now as well.  Just add calls\n    to `updateScoreBy` along with them.\\\\r\n    \\\\r\n    **TEST IT OUT**\\\\r\n    \\\\r\n    When you\n    run the program now you should be able to verify in the console that the player's\n    scores are updating.  Study the console output to make sure and verify that:\\\\r\n    \\\\r\n5.  \\*\n    updateScoreBy is being called from checkCorrect with each click\\\\r\n    \\\\t\\* if\n    you have console.log statements in `updateScoreBy` then you should at least\n    see that it's being called with each click\\\\r\n6.  The correct player's score\n    is being updated\\\\r\n7.  The scores are being updated by the correct amount\\\\r\n    \\\\r\n    A\n    sample of the output might look like this:\\\\r\n    \\\\r\n    ![](https://images.code.org/eb33f7d6d634e4f98e613bc13b231601-image-1481219318239.png)"
       U5 ColorSleuth scoring pt2 add scoring if statement console: |-
         \\r
         DO
@@ -62039,11 +62039,11 @@ mk:
         ### Points to pay attention to:\\r
 
         \\r
-        1.
+        1\.
         What's a _Boolean Expression?_\\r
 
         2.  Why is it called a "Boolean"?\\r
-        3.  3.
+        3.  3\.
             Is this a legal expression?  `10 > 25`?
       U5-AP-Algorithm-Does-It-Count: |-
         # AP Practice - Algorithm
@@ -62974,7 +62974,7 @@ mk:
         1.  Look at
             the web page we gave you to start with. Look how lame it is. 1996 just called
             and wants its web page back. But don't get depressed - YOU can fix it!\\r
-        2.  2.
+        2.  2\.
             Add a background-color attribute in the body style in style.css to make the
             page background color 'darkcyan'\\r
         3.  Add a text-align attribute to the
@@ -65080,7 +65080,7 @@ mk:
       courseC_flappy_events9: |-
         To mix things up, instead of
         ending the game when Flappy hits an obstacle, try setting the score back to
-        0.
+        0\.
       courseC_harvester_loops1: |-
         Loops can be used to repeat
         more than moves.  \\r
@@ -69276,7 +69276,7 @@ mk:
             content and skills that were developed during the unit? \\r
             \\t\* What kinds
             of special considerations come with the unit long project in this unit?\\r
-        2.  2.
+        2.  2\.
             What skills and knowledge should students leave the unit with?\\r
         3.  What
             are the core 2017 CSTA standards or threads of the K-12 framework in this
@@ -69853,7 +69853,7 @@ mk:
 
         -   What teaching philosophy seems most effective with the Internet
             Simulator? \\r
-      csp1dlp-assessment: "\\\\r\n\\\\r\n<br><br>\\\\r\n\\\\r\n\n> **NOTE:\n> before you start this reflection, make sure you’ve reviewed the lesson in\n> Unit 1, and have a good sense of the the role of assessment across the unit.\n> If you haven’t already reviewed the materials, do that now and come back to\n> this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# Assessment in Unit 1\\\\r\n\n\\\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n\n1.  Your response should clearly address each of the items below: \\\\r\n    \\\\r\n2.  1.\n    What’s the role of the practice Performance Task(s), or PTs, in the unit?\n    \\\\r\n3.  Which PTs are being practiced?\\\\r\n4.  How does the practice PT build\n    on what content and skills were developed during the unit? \\\\r\n5.  What summative\n    and formative assessment opportunities are built into the unit? \\\\r\n    \\\\r\n    \\\\r\n    > ## \n    >\n    > Getting Credit for Completing this Reflection \\\\r\n    > \\\\r\n    >\n    > -   Once you submit your\n    >     reflection, your response to the prompt above will be shared anonymously and\n    >     reviewed by your peers, and you will review the work done by other facilitators.\n    >     Reviewers will be looking for thoughtful and thorough answers that demonstrate\n    >     that you have spent time considering the reflection questions listed above.\n    >     Reviewers will have an opportunity to give feedback on your submission, and\n    >     you can respond to that feedback and resubmit.\\\\r\n6.  In order to get credit\n    for completing this prompt, two reviewers need to agree that you have responded\n    to the prompts fully. If reviewers don’t feel comfortable making a decision\n    about your task submission, they can elevate to an instructor for review.\n    You will always have a chance to address feedback from your reviewers and\n    resubmit your reflections! Reviewer feedback will show up at the bottom of\n    this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
+      csp1dlp-assessment: "\\\\r\n\\\\r\n<br><br>\\\\r\n\\\\r\n\n> **NOTE:\n> before you start this reflection, make sure you’ve reviewed the lesson in\n> Unit 1, and have a good sense of the the role of assessment across the unit.\n> If you haven’t already reviewed the materials, do that now and come back to\n> this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# Assessment in Unit 1\\\\r\n\n\\\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n\n1.  Your response should clearly address each of the items below: \\\\r\n    \\\\r\n2.  1\\.\n    What’s the role of the practice Performance Task(s), or PTs, in the unit?\n    \\\\r\n3.  Which PTs are being practiced?\\\\r\n4.  How does the practice PT build\n    on what content and skills were developed during the unit? \\\\r\n5.  What summative\n    and formative assessment opportunities are built into the unit? \\\\r\n    \\\\r\n    \\\\r\n    > ## \n    >\n    > Getting Credit for Completing this Reflection \\\\r\n    > \\\\r\n    >\n    > -   Once you submit your\n    >     reflection, your response to the prompt above will be shared anonymously and\n    >     reviewed by your peers, and you will review the work done by other facilitators.\n    >     Reviewers will be looking for thoughtful and thorough answers that demonstrate\n    >     that you have spent time considering the reflection questions listed above.\n    >     Reviewers will have an opportunity to give feedback on your submission, and\n    >     you can respond to that feedback and resubmit.\\\\r\n6.  In order to get credit\n    for completing this prompt, two reviewers need to agree that you have responded\n    to the prompts fully. If reviewers don’t feel comfortable making a decision\n    about your task submission, they can elevate to an instructor for review.\n    You will always have a chance to address feedback from your reviewers and\n    resubmit your reflections! Reviewer feedback will show up at the bottom of\n    this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
       csp1dlp-lessons: "<br><br>\\\\r\n\\\\r\n\n> **NOTE: before you\n> start this reflection, make sure you’ve reviewed the lesson in Unit 1, and\n> have a good sense of the connections between lessons. If you haven’t already\n> reviewed the materials, do that now and come back to this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# \n\nUnit 1 Lesson Connections and Philosophy\\\\r\n\\\\r\nFor this reflection, you’re\ngoing to consider each of the prompts below and craft a written response that\ndemonstrates your understanding of the lessons in Unit 1. Your response should\nclearly address each of the items below: \\\\r\n\\\\r\n\n1.  What skills and knowledge\n    should students leave the unit with?\\\\r\n\n2.  Which Big Idea(s) are students\n    learning the most about? Where and how are those BI(s) addressed? \\\\r\n\n3.  Which\n    skills or Computational Practices are honed through the activities and projects?\n    \\\\r\n    \\\\r\n\n4.  What is the connection between early lessons and later lessons?\\\\r\n\n5.  How is the content spiraled or scaffolded within the unit? \\\\r\n\n6.  What foundation\n    is being laid early on and how is it leveraged throughout the unit? Why? \\\\r\n\n7.  How would you respond to a teacher who says ‘what’s the point’ of lesson\n    4? \\\\r\n    \\\\r\n\n8.  Which lessons are particularly tricky to teach in this unit\n    and why? \\\\r\n    \\\\r\n    > ## Getting Credit for Completing this Reflection \\\\r\n    >\n    > ## \\\\r\n    >\n    > Once you submit your reflection, your response to the prompt above will be\n    > shared anonymously and reviewed by your peers, and you will review the work\n    > done by other facilitators. Reviewers will be looking for thoughtful and thorough\n    > answers that demonstrate that you have spent time considering the reflection\n    > questions listed above. Reviewers will have an opportunity to give feedback\n    > on your submission, and you can respond to that feedback and resubmit.\\\\r\n\n9.  \\-\n    In order to get credit for completing this prompt, two reviewers need to agree\n    that you have responded to the prompts fully. If reviewers don’t feel comfortable\n    making a decision about your task submission, they can elevate to an instructor\n    for review. You will always have a chance to address feedback from your reviewers\n    and resubmit your reflections! Reviewer feedback will show up at the bottom\n    of this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
       csp1dlp-tools: |-
         \\r
@@ -69938,7 +69938,7 @@ mk:
 
         2.  Your response should clearly address each of the items below: \\r
             \\r
-        3.  1.
+        3.  1\.
             What’s the role of the practice Performance Task(s), or PTs, in the unit?
             \\r
         4.  How does the practice Explore PT build on what content and skills were
@@ -69995,7 +69995,7 @@ mk:
 
         3.  Your response should clearly address each of the items below: \\r
             \\r
-        4.  1.
+        4.  1\.
             What’s the role of the practice Performance Task(s), or PTs, in the unit?
             \\r
         5.  How does the practice Create PT build on what content and skills were
@@ -70225,7 +70225,7 @@ mk:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -70236,7 +70236,7 @@ mk:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -70253,7 +70253,7 @@ mk:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -70264,7 +70264,7 @@ mk:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -70281,7 +70281,7 @@ mk:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -70292,7 +70292,7 @@ mk:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -70309,7 +70309,7 @@ mk:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -70320,7 +70320,7 @@ mk:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -70337,7 +70337,7 @@ mk:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -70348,7 +70348,7 @@ mk:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -71169,7 +71169,7 @@ mk:
         -   \*
             (temperature != 0) && (temperature \< 32)\\r
         -   (temperature == 0) || (temperature
-            > 32\)\\r
+            > 32)\\r
         -   (temperature \< 0) || (temperature > 32)\\r
             \\r
             _Note: Write "true"
