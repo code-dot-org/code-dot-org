@@ -66,6 +66,9 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none'
+  },
+  myDiv: {
+    display: 'inline-block'
   }
 };
 
@@ -224,7 +227,25 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          return <Inspector key={i} data={output} />;
+          if (i % 2 === 0) {
+            return (
+              <div key={i}>
+                &gt;{' '}
+                <div style={style.myDiv}>
+                  <Inspector data={output} />
+                </div>
+              </div>
+            );
+          } else if (i % 2 !== 0) {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.myDiv}>
+                  <Inspector data={output} />
+                </div>
+              </div>
+            );
+          }
         });
       }
     }
