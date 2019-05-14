@@ -1478,8 +1478,10 @@ Then /^I scroll our lockable stage into view$/ do
 end
 
 Then /^I open the stage lock dialog$/ do
+  wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
+  wait_short_until {jquery_is_element_visible('.modal-body')}
 end
 
 Then /^I unlock the stage for students$/ do
@@ -1492,15 +1494,6 @@ end
 Then /^I show stage answers for students$/ do
   @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
   @browser.execute_script('$(".modal-body button:contains(Save)").click()')
-end
-
-Then /^I select the first section$/ do
-  steps %{
-    And I wait to see ".uitest-sectionselect"
-  }
-  @browser.execute_script(
-    "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
-  )
 end
 
 def refute_bad_gateway_or_site_unreachable

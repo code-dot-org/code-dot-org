@@ -6,7 +6,6 @@ Scenario: Hidden Stages
   Given I create an authorized teacher-associated student named "bobby"
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   And I wait to see ".uitest-togglehidden"
   Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
   And I see no difference for "teacher overview with hidden stage"
