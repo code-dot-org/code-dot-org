@@ -84,7 +84,7 @@ module LevelsHelper
       user_storage_id = storage_id_for_user_id(user.id)
       channel_token = ChannelToken.find_channel_token(level, user_storage_id)
     else
-      user_storage_id = storage_id('user')
+      user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
