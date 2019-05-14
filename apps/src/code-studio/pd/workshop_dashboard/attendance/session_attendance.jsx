@@ -39,6 +39,7 @@ export class SessionAttendance extends React.Component {
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     enrollmentCount: PropTypes.number.isRequired
   };
 
@@ -156,6 +157,7 @@ export class SessionAttendance extends React.Component {
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
+          scholarshipWorkshop={this.props.scholarshipWorkshop}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
           displayYesNoAttendance={
             !this.props.permission.hasAny(WorkshopAdmin, Partner)
@@ -194,6 +196,9 @@ export class SessionAttendance extends React.Component {
                   )}
                   <th>Verified Teacher Account</th>
                   {this.showPuzzlesCompleted && <th>Puzzles Completed</th>}
+                  {this.props.scholarshipWorkshop && (
+                    <th>Scholarship Teacher?</th>
+                  )}
                   {this.isCSF ? <th>Attended</th> : <th>Present</th>}
                 </tr>
               </thead>

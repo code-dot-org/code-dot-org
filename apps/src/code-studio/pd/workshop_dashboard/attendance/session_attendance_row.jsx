@@ -28,13 +28,15 @@ export default class SessionAttendanceRow extends React.Component {
       user_id: PropTypes.number,
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
-      puzzles_completed: PropTypes.number.isRequired
+      puzzles_completed: PropTypes.number.isRequired,
+      scholarship_status: PropTypes.string
     }).isRequired,
     adminOverride: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     showPuzzlesCompleted: PropTypes.bool.isRequired,
     displayYesNoAttendance: PropTypes.bool.isRequired
   };
@@ -183,6 +185,9 @@ export default class SessionAttendanceRow extends React.Component {
               ? this.props.attendance.puzzles_completed
               : null}
           </td>
+        )}
+        {this.props.scholarshipWorkshop && (
+          <td>{this.props.attendance.scholarship_status}</td>
         )}
         <td>{this.renderAttendedCellContents()}</td>
       </tr>
