@@ -112,13 +112,16 @@ class ScriptLevelsController < ApplicationController
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
     end
 
+    # If user is allowed to see level but is assigned to a newer version of the level's script,
+    # we will show a dialog for the user to choose whether they want to go to the newer version.
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
     if can_view_version
-      # If user is allowed to see level but is assigned to a newer version of the level's script,
-      # we will show a dialog for the user to choose whether they want to go to the newer version.
       @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
-    elsif !override_script_redirect?(@script_level&.script) && redirect_script = redirect_script(@script_level&.script, request.locale)
-      # Redirect user to the proper script overview page if we think they ended up on the wrong level.
+    end
+
+    # Redirect user to the proper script overview page if we think they ended up on the wrong level.
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+    if !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
     end
@@ -441,7 +444,9 @@ class ScriptLevelsController < ApplicationController
   end
 
   def set_redirect_override
-    set_script_redirect_override(params[:script_id]) if params[:script_id] && params[:no_redirect]
+    if params[:script_id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+    end
   end
 
   def redirect_script(script, locale)
