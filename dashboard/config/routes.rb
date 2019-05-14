@@ -653,5 +653,5 @@ Dashboard::Application.routes.draw do
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
-  get '/tracking_pixel', to: 'tracking_pixel#index'
+  get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
 end
