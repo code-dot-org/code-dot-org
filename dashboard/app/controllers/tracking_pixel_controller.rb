@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class TrackingPixelController < ApplicationController
   def index
     prevent_caching
-    curriculum_page = URI.unescape(params[:from]).split('/').reverse.drop(1).reverse.join('/')
+    curriculum_page = URI.unescape(params[:from])
     user_id = current_user&.id
 
     FirehoseClient.instance.put_record(
