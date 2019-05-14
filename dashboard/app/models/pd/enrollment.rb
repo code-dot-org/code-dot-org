@@ -265,9 +265,9 @@ class Pd::Enrollment < ActiveRecord::Base
     school_info.try :effective_school_district_name
   end
 
-  def update_scholarship_status(scholarship_status)
+  def update_scholarship_status(status)
     if workshop.scholarship_workshop?
-      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, workshop.course_key, scholarship_status)
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, workshop.course_key, status)
     end
   end
 
