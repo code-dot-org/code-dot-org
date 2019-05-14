@@ -106,18 +106,4 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert_equal user.user_type, 'student'
     refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
   end
-
-  test 'does not show school info confirmation dialog when last confirmation date is less than a year' do
-    user = create :user
-    user.user_type = 'teacher'
-
-    user.user_school_infos.last_confimation_date = '2019-4-01 01:29:18 -0500'
-
-    school_info = SchoolInfo.new
-    school_info.country = 'United States'
-    school_info.school_type = SchoolInfo::SCHOOL_TYPE_OTHER
-    school_info.school_name = 'Top Corners School'
-
-    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
-  end
 end
