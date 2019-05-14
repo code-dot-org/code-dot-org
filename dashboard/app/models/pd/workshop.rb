@@ -320,8 +320,7 @@ class Pd::Workshop < ActiveRecord::Base
   # The school year runs 6/1-5/31.
   def school_year
     return nil if sessions.empty?
-    y = year
-    sessions.order(:start).first.start.month >= 6 ? "#{y}-#{y.to_i + 1}" : "#{y.to_i - 1}-#{y}"
+    sessions.order(:start).first.start.month >= 6 ? "#{year}-#{year.to_i + 1}" : "#{year.to_i - 1}-#{year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
