@@ -517,6 +517,7 @@ describe('entry tests', () => {
     raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
@@ -627,7 +628,6 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
-    header: './src/sites/studio/pages/header.js',
     essential: './src/sites/studio/pages/essential.js',
     plc: './src/sites/studio/pages/plc.js',
     jotformLoader: './src/sites/studio/pages/jotformLoader.js',
