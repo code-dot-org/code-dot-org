@@ -4,21 +4,25 @@ var getListDropdown = require('@cdo/apps/applab/getListDropdown');
 
 describe('getListDropdown', function() {
   var getColumnsForTable = getListDropdown.__TestInterface.getColumnsForTable;
+  const testDatasets = [
+    {name: 'dataset1', columns: 'column1,column2,column3'},
+    {name: 'dataset2', columns: 'column3,column4,column5,column6,column7'}
+  ];
   it('getColumnsForTable', function() {
-    expect(getColumnsForTable('"NonExistentTable"')).to.deep.equal([]);
-    expect(getColumnsForTable('"words"')).to.deep.equal([
-      'Word',
-      'Part of Speech',
-      'Frequency',
-      'Rank'
+    expect(
+      getColumnsForTable('"NonExistentTable"', testDatasets)
+    ).to.deep.equal([]);
+    expect(getColumnsForTable('"dataset1"', testDatasets)).to.deep.equal([
+      'column1',
+      'column2',
+      'column3'
     ]);
-    expect(getColumnsForTable('"weather"')).to.deep.equal([
-      'City',
-      'Date',
-      'Low Temp',
-      'High Temp',
-      'Condition',
-      'Icon'
+    expect(getColumnsForTable('"dataset2"', testDatasets)).to.deep.equal([
+      'column3',
+      'column4',
+      'column5',
+      'column6',
+      'column7'
     ]);
   });
 });
