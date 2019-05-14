@@ -8,6 +8,10 @@ sk:
       2-3 Artist 9 NEW: Dokonči tohto šarkana
       2-3 Artist 9 REPLACEMENT: Dokonči tieto schody!
       2-3 Artist 9: Dokonči tohto šarkana
+      2-3 Artist Debugging 1: |-
+        Tento klobúk by mal byť len 50 pixelov široký. Dokážeš to opraviť?
+
+        <br/>
       2-3 Artist Debugging 10: |-
         Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.
 
@@ -44,7 +48,18 @@ sk:
 
         Kód pre túto stonku je zlý. Vieš zistiť, ako by Umelec nakreslil stonku správnym spôsobom?
       2-3 Artist Free Play: Voľná hra! Možeš si nakresliť čokoľvek.
+      2-3 Artist Functions 1 a: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôž zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
+      2-3 Artist Functions 1: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôž zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
+      2-3 Artist Functions 10: "**Voľná hra:** Tu sú dve funkcie, jedna na nakreslenie veľkého a jedna na nakreslenie malého kolesa. \n\nNakresli s nimi vnútro tohoto stroja!"
+      2-3 Artist Functions 11 a: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále sa kreslia štvorce! Vieš funkciu `nakresli šesťuholník` upravifunkciafunkciať tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli obrázok použitím novej funkcie!
       2-3 Artist Functions 11.5: "Tu je rovnaká funkcia \"nakresli šesťuholník\". \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom po každom zopakovaní sa otočíte o 60 stupňov?"
+      2-3 Artist Functions 11: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále sa kreslia štvorce! Vieš funkciu `nakresli šesťuholník` upravifunkciafunkciať tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli obrázok použitím novej funkcie!
       2-3 Artist Functions 12 Mike: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
       2-3 Artist Functions 12 a: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
       2-3 Artist Functions 12: Funkcie sú skvelé na opakované kreslenie zložitých vecí. \\r \\r Dokážete použiť funkciu "draw a flower" (nakresli kvetinu) na vyplnenie zvyšku kvetináča? \\r Medzery medzi rastlinami sú veľké 100 pixelov.
@@ -2205,6 +2220,20 @@ sk:
         _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
         Pomôž záhradníčke dostať sa k tekvici a zobrať ju.
+      courseE_farmer_functions10a1_2018: "**Výzva:** Použi všetko čo už vieš a skús vyriešiť túto úlohu pomocou maximálne 19 blokov!"
+      courseE_farmer_functions10a1_2019: "**Výzva:** Použi všetko čo už vieš a skús vyriešiť túto úlohu pomocou maximálne 19 blokov!"
+      courseE_farmer_functions13_2018: |-
+        Na vyriešenie tejto úlohy použi najviac 23 blokov.
+
+        * * *
+
+        ##### Na každej rastline narastie buď _jedna_ kukurica alebo nič. Pre najlepšie riešenie budeš musieť zmeniť kódy funkcií.
+      courseE_farmer_functions13_2019: |-
+        Na vyriešenie tejto úlohy použi najviac 23 blokov.
+
+        * * *
+
+        ##### Na každej rastline narastie buď _jedna_ kukurica alebo nič. Pre najlepšie riešenie budeš musieť zmeniť kódy funkcií.
       courseE_farmer_functions1_2018: |-
         _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
@@ -2288,6 +2317,24 @@ sk:
         Použi `pozbieraj popri ceste` na vyriešenie tejto úlohy s čo najmenším počtom blokov.
       courseE_farmer_functions3c_2018: Výborne!  Teraz vyskúšaj svoje funkcie na dlhšej cestičke.
       courseE_farmer_functions3c_2019: Výborne!  Teraz vyskúšaj svoje funkcie na dlhšej cestičke.
+      courseE_farmer_functions7a1_2018: |-
+        _"Funkcie **šalát** robia viac s menšou námahou!"_
+
+        Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions7a1_2019: |-
+        _"Funkcie **šalát** robia viac s menšou námahou!"_
+
+        Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions8a1_2018: Skús znovu napísať svoju funkciu. Je stále užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
+      courseE_farmer_functions8a1_2019: Skús znovu napísať svoju funkciu. Je stále užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
+      courseE_farmer_functions9a1_2018: |-
+        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+
+        Je tvoja funkcia užitočná aj pri tejto úlohe?
+      courseE_farmer_functions9a1_2019: |-
+        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+
+        Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
       courseE_farmer_ramp11a_2018: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
       courseE_farmer_ramp11a_2019: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
@@ -2393,6 +2440,18 @@ sk:
       courseF_artist_variables6a: Použi, čo si sa naučil, aby si vytvoril tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_artist_variables6a_2018: Použi, čo si sa naučil, aby si vytvoril tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_artist_variables6a_2019: Použi, čo si sa naučil, aby si vytvoril tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables7: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables7_2018: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables7_2019: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
 
@@ -2408,9 +2467,24 @@ sk:
         **EJHA!** My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
         Nie si rád, že používaš premennú?
       courseF_artist_variables_6a: Použi, čo si sa naučil, aby si vytvoril tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables_7: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
+      courseF_bee_functions_3_2018: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_ \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_3_2018: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_ \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_3_2019: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_ \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_4_2018: |-
+        "Neuveriteľné! (Un-BEE-lievable|)"
+
+        Uprav kód, aby fungoval pre túto úlohu.
+      courseF_bee_variables_4_2019: |-
+        "Pokračujme!"
+
+        Uprav kód, aby fungoval pre túto úlohu.
       courseF_maze_ramp4: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_ \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp4_2018: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_ \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp5: |-
@@ -2498,11 +2572,13 @@ sk:
         _"Si majster v ľadovej tvorbe!"_
 
         Tu je všetko, čo potrebuješ, aby si si vytvoril vlastnú krajinu zimných zázrakov!
-      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
-      frozen line_test: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen line_test: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
       frozen perpendicular: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč sa" spolu s blokom "Posuň sa".
       frozen perpendicular_b: |-
         _"Pokračuj a neprestávaj!"_
+
+         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -2517,6 +2593,8 @@ sk:
         </xml> a vytvoríš v ľade tento tvar.
       frozen perpendicular_test: |-
         _"Pokračuj a neprestávaj!"_
+
+         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -2550,8 +2628,8 @@ sk:
       frozen snowflower_b: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu \\*\\* 5 \\*\\* krát, pričom medzi každou sadou je \\*\\* 72 stupňov \\*\\*?"
       frozen snowflower_test: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu \\*\\* 5 \\*\\* krát, pričom medzi každou sadou je \\*\\* 72 stupňov \\*\\*?"
       frozen square iterative: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
-      frozen square iterative_test: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\n \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square iterative_test: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\n \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
       frozen square loop 3x_b: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného opakovacieho cyklu?  \n\nPomôž Anne nakresliť tri štvorce a otoč sa po každom o \\*\\* 120 stupňov \\*\\*. "
       frozen square loop 3x_test: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného opakovacieho cyklu?  \n\nPomôž Anne nakresliť tri štvorce a otoč sa po každom o \\*\\* 120 stupňov \\*\\*. "
