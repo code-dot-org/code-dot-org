@@ -34,7 +34,6 @@ class ScriptsController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong script overview page.
-    # Do not redirect users that have added the 'no_redirect' query parameter to the request.
     if !override_script_redirect?(@script) && redirect_script = redirect_script(@script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
