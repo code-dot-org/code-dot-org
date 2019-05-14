@@ -44,6 +44,9 @@ level 'U5 Lists Make Project Step 6', progression: 'Build the Reminders App'
 stage 'Student Survey (Lists)', lockable: true, flex_category: 'csp_lists'
 level 'Student Late Spring Pilot Survey Lists', progression: 'Student Survey (Lists)', assessment: true
 
+stage 'Teacher Survey (Lists)', lockable: true, flex_category: 'csp_lists'
+level 'Teacher Late Spring Pilot Survey Lists', progression: 'Teacher Survey (Lists)', assessment: true
+
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
 level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
@@ -117,5 +120,15 @@ level 'U5 Traversals Make Project Step 4', progression: 'Build the Wacky Name Ge
 level 'U5 Traversals Make Project Step 5', progression: 'Build the Wacky Name Generator App'
 level 'U5 Traversals Make Project Step 6', progression: 'Build the Wacky Name Generator App', assessment: true
 
+stage 'Mini PT', flex_category: 'csp_project'
+level 'U5 Mini Practice PT', progression: 'Instructions'
+level 'CSP Pilot U5 Mini PT Project', progression: 'Mini PT', assessment: true
+
 stage 'Student Survey (Traversals)', lockable: true, flex_category: 'csp_traversals'
 level 'Student Late Spring Pilot Survey Traversals', progression: 'Student Survey (Traversals)', assessment: true
+
+stage 'Teacher Survey (Traversals)', lockable: true, flex_category: 'csp_traversals'
+level 'Teacher Late Spring Pilot Survey Traversals', progression: 'Teacher Survey (Traversals)', assessment: true
+
+stage 'Unit 5 Mini Assessment', lockable: true
+level 'CSP 20-21 Unit 5 Pilot Mini Assessment', assessment: true

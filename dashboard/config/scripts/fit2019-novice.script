@@ -1,0 +1,28 @@
+professional_learning_course 'Facilitators in Training Summer 2019'
+login_required true
+student_detail_progress_view true
+
+stage 'Novice Reflection Overview', flex_category: 'required'
+level 'welcome-novice-18', named: true
+
+stage 'Day 1'
+level 'novice-monday-1'
+level 'novice-monday-2'
+
+stage 'Day 2'
+level 'novice-tuesday-1'
+level 'instructional-strategy-tuesday'
+level 'novice-tuesday-2'
+
+stage 'Day 3'
+level 'novice-wednesday-1'
+level 'getting-buy-in-wednesday'
+level 'novice-wednesday-2'
+
+stage 'Day 4'
+level 'novice-thursday-1'
+level 'recruiting-thursday'
+level 'novice-thursday-2'
+
+stage 'Wrap Up'
+level 'novice-congrats', named: true

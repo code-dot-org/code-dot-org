@@ -5507,11 +5507,11 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: Course A
+          title: Kurz A
           assignment_family_title: Course A
-          description_audience: 'Ages: 4-7'
-          description_short: An introduction to computer science for pre-readers.
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_audience: 'Vek: 4-7'
+          description_short: Predstavenie informatiky pre predškolákov.
+          description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -12047,6 +12047,20 @@ en:
               name: Traversals Practice
             Traversals Make:
               name: Traversals Make
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12343,7 +12357,47 @@ en:
               name: Student Survey (Lists)
             Student Survey (Traversals):
               name: Student Survey (Traversals)
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
           title: 'Unit 5: Lists, Loops, and Traversals'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+            Wrap Up:
+              name: Wrap Up
+          title: Novice Reflections for Summer Workshop 2019
+          description_audience: 6 - 12 Novice Facilitators in Training
+          description_short: 'Novice reflection materials for 2019 facilitators in training '
+          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Workshop.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital unplugged WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital unplugged WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital unplugged WIAC L3
+            What is a Computer?:
+              name: What is a Computer?
+          title: Testing Widgets that save state
           description_audience: ''
           description_short: ''
           description: ''
