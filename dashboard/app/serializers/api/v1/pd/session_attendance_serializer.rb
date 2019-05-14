@@ -19,7 +19,7 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
         verified_teacher_account: !!enrollment.user.try(:verified_teacher?),
         attended: attended?(enrollment),
         puzzles_completed: UserLevel.where(user_id: enrollment.user_id).passing.count,
-        scholarship_status: enrollment.scholarship_status
+        scholarship_status: enrollment.friendly_scholarship_status
       }
     end
   end
