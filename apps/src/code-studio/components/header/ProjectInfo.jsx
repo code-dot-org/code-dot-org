@@ -31,6 +31,7 @@ class ProjectInfo extends React.Component {
   }
 }
 
+export const UnconnectedProjectInfo = ProjectInfo;
 export default connect(state => ({
   currentHeader: state.header.currentHeader
 }))(ProjectInfo);
