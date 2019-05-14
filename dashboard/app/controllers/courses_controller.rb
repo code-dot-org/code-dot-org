@@ -113,7 +113,7 @@ class CoursesController < ApplicationController
   private
 
   def set_redirect_override
-    set_course_redirect_override(params[:course_name]) if params[:course_name]
+    set_course_redirect_override(params[:course_name]) if params[:course_name] && params[:no_redirect]
   end
 
   def redirect_course(course)
