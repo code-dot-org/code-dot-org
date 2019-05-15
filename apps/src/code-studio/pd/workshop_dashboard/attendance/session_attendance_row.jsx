@@ -29,7 +29,8 @@ export default class SessionAttendanceRow extends React.Component {
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
       puzzles_completed: PropTypes.number.isRequired,
-      scholarship_status: PropTypes.string
+      cdo_scholarship: PropTypes.string,
+      other_scholarship: PropTypes.string
     }).isRequired,
     adminOverride: PropTypes.bool,
     isReadOnly: PropTypes.bool,
@@ -187,7 +188,10 @@ export default class SessionAttendanceRow extends React.Component {
           </td>
         )}
         {this.props.scholarshipWorkshop && (
-          <td>{this.props.attendance.scholarship_status}</td>
+          <td>{this.props.attendance.cdo_scholarship ? 'Yes' : ''}</td>
+        )}
+        {this.props.scholarshipWorkshop && (
+          <td>{this.props.attendance.other_scholarship ? 'Yes' : ''}</td>
         )}
         <td>{this.renderAttendedCellContents()}</td>
       </tr>
