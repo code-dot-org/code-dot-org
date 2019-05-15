@@ -16,7 +16,9 @@ function main(context) {
     // www.jotform.com     https://www.jotform.com/favicon.ico        887B
     checkReachability('https://www.jotform.com/favicon.ico'),
     // api.jotform.com     https://api.jotform.com/favicon.ico        592B
-    checkReachability('https://api.jotform.com/favicon.ico')
+    checkReachability('https://api.jotform.com/favicon.ico'),
+    // submit.jotform.us   https://submit.jotform.us/favicon.ico      1.5KB
+    checkReachability('https://submit.jotform.us/favicon.ico')
     // Not using these yet, they're likely to fall under the same policy as www.jotform.com
     // events.jotform.com
     // files.jotform.com
@@ -26,7 +28,8 @@ function main(context) {
       jotFormFrameLoadedMs,
       cdnjotformsMs,
       wwwjotformcomMs,
-      apijotformcomMs
+      apijotformcomMs,
+      submitjotformusMs
     ]) => {
       if (jotFormFrameLoadedMs === false) {
         // Load failed if we specifically got 'false'
@@ -35,9 +38,11 @@ function main(context) {
           reachedCdnjotforms: false !== cdnjotformsMs,
           reachedWwwjotformcom: false !== wwwjotformcomMs,
           reachedApijotformcom: false !== apijotformcomMs,
+          reachedSubmitjotformus: false !== submitjotformusMs,
           cdnjotformsMs,
           wwwjotformcomMs,
-          apijotformcomMs
+          apijotformcomMs,
+          submitjotformusMs
         });
       } else {
         logToCloud.addPageAction(logToCloud.PageAction.JotFormFrameLoaded, {
@@ -45,7 +50,8 @@ function main(context) {
           jotFormFrameLoadedMs,
           cdnjotformsMs,
           wwwjotformcomMs,
-          apijotformcomMs
+          apijotformcomMs,
+          submitjotformusMs
         });
       }
     }
