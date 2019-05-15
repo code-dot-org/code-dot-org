@@ -622,6 +622,7 @@
   "submitYourProject": "Indsend dit projekt",
   "submitYourProjectConfirm": "Du kan ikke redigere projektet efter du har indsendt det, så vil du virkelig indsende nu?",
   "subtitle": "et visuelt programmerings miljø",
+  "support": "Support",
   "switchSection": "Skift hold:",
   "syntaxErrorMsg": "Dit program indeholder en fejl. Fjern linje {lineNumber} og prøv igen.",
   "teacher": "Lærer",

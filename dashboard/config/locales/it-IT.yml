@@ -1116,7 +1116,6 @@ it:
     new: Nuovo
     rename: Rinomina
     save: Salva
-    delete: Elimina
     import: Importa
     share_link_import_bad_link_header: Collegamento di condivisione non riconosciuto
     share_link_import_bad_link_body: 'Non siamo riusciti a importare il collegamento
@@ -1126,7 +1125,6 @@ it:
     share_link_import_error_body: Si è verificato un errore durante l'importazione
       del collegamento di condivisione. Riprova.
     exit: Ritorna al corso
-    my_projects: Collezione Privata
     project_gallery: Progetti
     publish: Pubblica
     unpublish: Annulla Pubblicazione
@@ -1141,8 +1139,6 @@ it:
     advanced_share: Mostra opzioni avanzate
     no_projects: Attualmente non hai progetti. Clicca su uno dei bottoni qui sopra
       per iniziarne uno.
-    close: Chiudi
-    more: Di più
     name: Nome
     updated: Aggiornato
     project_type: Tipo di progetto
@@ -1154,16 +1150,8 @@ it:
     thumbnail_help: Non trovi l'anteprima del tuo progetto? Esegui la tua App per
       generare una nuova anteprima. Considera che ci vogliono un paio d'ore affinché
       le anteprime si aggiornino ovunque.
-    really_delete: Elimina?
-    delete_yes: Sì
-    delete_no: 'No'
     saved: Salvato
     not_saved: Non salvato
-    cancel: Annulla
-    delete_confirm_title: Sei sicuro di voler rimuovere questo progetto?
-    delete_confirm_text: L'eliminazione del progetto lo rimuoverà in modo permanente
-      dal tuo elenco progetti. Se hai condiviso il link con altri questi non saranno
-      più in grado di visualizzare il progetto.
     view_all: Guarda la Collezione Privata
     remix: Rimescola
     click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a

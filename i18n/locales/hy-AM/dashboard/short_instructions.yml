@@ -1995,7 +1995,7 @@ hy:
         \\r
 
         1.  Keep track of the number of times The Wizard is clicked.\\r
-        2.  2)
+        2.  2\)
             If The Wizard is clicked at least 10 times before Dog counts to 30, raise
             "increment" by 1 and start again.\\r
         3.  If The Wizard does not get clicked

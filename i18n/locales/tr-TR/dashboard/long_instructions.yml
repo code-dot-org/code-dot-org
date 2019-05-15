@@ -392,11 +392,11 @@ tr:
 
         Yeni ekrana geçmek için ana ekranınızda bir düğmeye ihtiyacınız olacak. İki şekilde yeni bir düğme yapabilirsiniz.
 
-        1.  "Köpekler" düğmesinin stilini beğendiyseniz, bir kopyasını oluşturabilirsiniz. Düğmesini tıklayın ve ardından "Kopyala" yı tıklayın.!\[](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>
+        1.  "Köpekler" düğmesinin stilini beğendiyseniz, bir kopyasını oluşturabilirsiniz. Düğmesini tıklayın ve ardından "Kopyala" yı tıklayın.\!\[](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>
             AM.png
         2.  Tasarım Araç Kutusu'ndan sürükleyerek sıfırdan yeni bir düğme de yapabilirsiniz
         3.  Yeni düğmenizi istediğiniz yere taşımak için tıklayın ve sürükleyin.
-        4.  Yeni bir düğme yaptıktan sonra açık bir ad verin, "catButton". Metnini de "Kediler" olarak değiştirebilirsiniz.\!\[](\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>
+        4.  Yeni bir düğme yaptıktan sonra açık bir ad verin, "catButton". Metnini de "Kediler" olarak değiştirebilirsiniz.![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
             AM.png>)
         5.  Görünümü değiştirebileceğiniz bir çok yolu var düğmesine basın. Seçeneklerin tam menüsü ile denemeler yapın.
         6.  Bitirdiğinizde, düğmenizin göründüğünden emin olmak için uygulamanızı çalıştırın. Ardından, düğmenizin nasıl işleyeceğini öğrenmek ve devam etmek için "Bitir" i tıklayın.
@@ -410,24 +410,24 @@ tr:
 
         1.  Kod Modundan bloğun içine sürükleyebilirsiniz.\\r
             \\r
-            \\t!\[](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>
+            \\t\!\[](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>
             AM.png\\r
             \\r
         2.  Tasarım Modu'ndan düğmenizde "Events" sekmesi bulunur.
             Kodu eklemek için 'Kodu ekle ve göster' düğmesini tıklayın\\r
             \\r
-            \\t!\[](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>
+            \\t\!\[](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>
             AM.png\\r
             \\r
         3.  Etkinliğin "catButton" etiketine yanıt vermesini sağladığınızdan emin olmak için açılır listeyi kullanın.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03>
+            \\t![](<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
             AM.png>)\\r
             \\r
         4.  `setScreen()` bloğu ekranı değiştirir. Sürükleyin
             `onEvent()` bloğunun içinde blok yapın ve listeden `catScreen`inizi seçin.\\r
             \\r
-            \\t!\[](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>
+            \\t\!\[](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>
             AM.png\\r
             \\r
         5.  Uygulamanızı çalıştırın. Her şey düzgün çalıştı ise Cat
@@ -440,17 +440,17 @@ tr:
         1.  Bir kediler ekranı yapacaksınız. Bu "Tasarım"
             Mode "(Ekranı Ekleyebilir ve Düzenleyebilir) Ekran eklemek için ekran açılır menüsünü tıklayın ve" Yeni ekran ".\\r
             \\r
-            \\t[expandable]\(\<<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33>
+            \\t[expandable](<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
             AM.png>)\\r
             \\r
         2.  Daha sonra yeni ekranınızı "catScreen" olarak adlandırın.\\r
             \\r
-            \\t![expandable]\(\<<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33>
+            \\t![expandable](<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
             AM.png>)\\r
             \\r
         3.  Son olarak, ekranınızın kedilerin arka plan görüntüsünü seçin\\r
             \\r
-            \\t![expandable]\(\<<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40>
+            \\t![expandable](<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
             AM.png>)\\r
             \\r
             Yeni ekranınızı ekledikten sonra, ekranda gezinmek ve düğmelerin nasıl kullanılacağını öğrenmek için "Bitir" e basın.
@@ -464,12 +464,12 @@ tr:
 
         1.  `playSound ()` bloğunu `onEvent` alanına sürükleyin. Bu, kullanıcı düğmeyi tıklattığında sesi oynatır. Ardından, menüden "Choose..." düğmesini tıklayın\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>
+            \\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
             AM.png>)\\r
             \\r
         2.  "Ses Kitaplığı" na geçin ve istediğiniz sesleri bulun. Ton var\\r
             \\r
-            \\t!\[](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>
+            \\t\!\[](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>
             AM.png\\r
             \\r
         3.  Seslerinizin nasıl çalıştığını kontrol etmek için uygulamanızı çalıştırın.
@@ -496,7 +496,7 @@ tr:
 
         1.  Yaptığınız ekranı seçmek için ekran seçiciyi kullanın ([Show me where] \(# triggercallout = selector))\\r
         2.  Eklemek için ekranınıza yeni bir "metin alanı" sürükleyin.\\r
-        3.  3.
+        3.  3\.
             Boyutunu değiştirmek için metin alanınızın sağ alt köşesini sürükleyin.\\r
         4.  Metin alanınızın sağ alt köşesini sürükleyerek boyutunu kullanıcının bu ekranda ne olduğunu kullanıcıya gösterecek şekilde değiştirin. Ardından rengi değiştirin. İstersen metnin!\\r
             \\r
@@ -522,7 +522,7 @@ tr:
 
         1.  Uygulamanızın başlığını tıklayın. ([Show me where](#triggercallout=titleCallout))\\r
         2.  İstediğiniz adı seçmek için "metni" değiştirin! ([Show me where](#triggercallout=designMenu))\\r
-        3.  3.
+        3.  3\.
             Başlığınızın rengini değiştirmek için menüyü aşağı doğru kaydırın ([Show me where](#triggercallout=changeTextColor))\\r
             \\r
             Başlığınızın görünümünü beğendikten sonra, iyi görünmesini sağlamak için bir kez "Çalıştır" ı tıklayın. Ardından, devam etmek için "Bitir" e basın\\r
@@ -657,7 +657,7 @@ tr:
         \\r
         ![expandable](https://images.code.org/4e8549acbca3449cb336fe0ed495f8f3-image-1505878779849.gif)
       AppLab Intro 3 - onEvent before: |-
-        Ekranın ``arka plan rengi` `` `turuncu`olarak ayarlayın. Ardından `onEvent ()` içinde kod ekleyin böylece düğme ekranın``arka plan rengi\` `` pembe`` ayarlar. Nasıl yapıldığını görmek için resmi tıklayın.\\r
+        Ekranın ``arka plan rengi` `` `` turuncu``olarak ayarlayın. Ardından `onEvent ()` içinde kod ekleyin böylece düğme ekranın`` arka plan rengi\` `` pembe`` ayarlar. Nasıl yapıldığını görmek için resmi tıklayın.\\r
         \\r
         ![expandable](https://images.code.org/6c338185d7fe959daed2465c4f91fb55-image-1505888600472.gif)
       AppLab Intro 3 - onEvent intro: |-
@@ -2456,9 +2456,9 @@ tr:
       CSD U2 navigation: "# Gezinme çubuğu oluşturma\\\\r\n\n\\\\r\nİşte önceki projen.  Sayfanın üst kısmında bir gezinme çubuğu oluşturarak iki sayfayı birbirine bağlarsınız. websiteleri genellikle bütün sayfaları boyunca aynı gezinme çubuğunu kullanırlar böylece sitede geri ve ileri gidebilirsiniz.  Bu sayfada bir gezinme çubuğu örneği görebilirsin.(<https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/>).\\\\r\n\\\\r\n\n# \n\nBunu Yap\\\\r\n\n-   Anasayfanda (index.html), sayfanın üstüne iki tane köprü ekle, biri liste sayfana, diğeri anasayfana giden.\\\\r\n-   -   sayfanın kendisine link oluşturmak garip gözükse bile, eğer gezinme çubuğu her sayfada tam olarak aynı ise, daha az karışıktır. \\*\\\\r\n-   Gezinme çubuğu için kodu kopyala, sonra liste sayfanın başına ekle.\\\\r\n-   Öngörünüm alanında linklerine tıklayarak onları test et.\\\\r\n    \\\\r"
       CSD U2 navigation_2018: "# Gezinme çubuğu oluşturma\\\\r\n\n\\\\r\nİşte önceki projen.  Sayfanın üst kısmında bir gezinme çubuğu oluşturarak iki sayfayı birbirine bağlarsınız. websiteleri genellikle bütün sayfaları boyunca aynı gezinme çubuğunu kullanırlar böylece sitede geri ve ileri gidebilirsiniz.  Bu sayfada bir gezinme çubuğu örneği görebilirsin.(<https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/>).\\\\r\n\\\\r\n\n# \n\nBunu Yap\\\\r\n\n-   Anasayfanda (index.html), sayfanın üstüne iki tane köprü ekle, biri liste sayfana, diğeri anasayfana giden.\\\\r\n-   -   sayfanın kendisine link oluşturmak garip gözükse bile, eğer gezinme çubuğu her sayfada tam olarak aynı ise, daha az karışıktır. \\*\\\\r\n-   Gezinme çubuğu için kodu kopyala, sonra liste sayfanın başına ekle.\\\\r\n-   Öngörünüm alanında linklerine tıklayarak onları test et.\\\\r\n    \\\\r"
       CSD U2 navigation_2019: "# Gezinme çubuğu oluşturma\\\\r\n\n\\\\r\nİşte önceki projen.  Sayfanın üst kısmında bir gezinme çubuğu oluşturarak iki sayfayı birbirine bağlarsınız. websiteleri genellikle bütün sayfaları boyunca aynı gezinme çubuğunu kullanırlar böylece sitede geri ve ileri gidebilirsiniz.  Bu sayfada bir gezinme çubuğu örneği görebilirsin.(<https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/>).\\\\r\n\\\\r\n\n# \n\nBunu Yap\\\\r\n\n-   Anasayfanda (index.html), sayfanın üstüne iki tane köprü ekle, biri liste sayfana, diğeri anasayfana giden.\\\\r\n-   -   sayfanın kendisine link oluşturmak garip gözükse bile, eğer gezinme çubuğu her sayfada tam olarak aynı ise, daha az karışıktır. \\*\\\\r\n-   Gezinme çubuğu için kodu kopyala, sonra liste sayfanın başına ekle.\\\\r\n-   Öngörünüm alanında linklerine tıklayarak onları test et.\\\\r\n    \\\\r"
-      CSD U2 new page: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
-      CSD U2 new page_2018: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
-      CSD U2 new page_2019: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n\\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
+      CSD U2 new page: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
+      CSD U2 new page_2018: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
+      CSD U2 new page_2019: "# Web siteniz için yeni bir sayfa oluşturun.\\\\r\n\n\\\\r\nİşte önceki projen.  Yeni bir sayfa daha ekliyor olacaksın. Yeni sayfan listenin en iyi 10'u, yemek tarifi veya hoşlandığın herhangi bir şey olabilir.\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\*\nBağlantıya tıklayarak yeni bir HTML dosya ekle \n![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>). Yeni sayfa çalışma alanının solunda dosyaların listesinin içinde gözükecek. .\\\\r\n\n-   Dosyayı yeniden adlandır, sağ tıklayarak ve Yeniden Adlandır' ı seçerek veya seçili iken üzerine tıklayarak.   **İsmin diğerlerinden farklı olduğundan, tanımlayıcı ve dosya uzantısının \".html\" ile bittiğinden emin ol**.\\\\r\n-   Yeni sayfanı doldurmak için HTML kullan. \n    Sayfa aşağıdakileri içermeli:\\\\r\n-   bir liste\\\\r\n-   bir üst başlık\\\\r"
       CSD U2 ordered list: "# Sıralı Listeler\\\\r\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**İki liste türü nelerdir?**</summary>\\r\n\nSıralı ve sırasız listeler olmak üzere HTML'de iki tür liste vardır.\\\\r\n\n</details>\\r\n<details>\\r\n<summary>**Sıralı liste nedir?**</summary>\\r\nSıralı liste, bir dizi numaralandırılmış madde işaretli ögesi bulunan listedir. \\r \n<br /><br />\\r\nBir sıralı liste ögesi '<ol>'; etiketi ile gösterilir. Bu <strong>O</strong> rdered <strong>L</strong>IST (Sıralı Liste) kısaltmasıdır. Listedeki her öge bir liste ögesi '<li>'; tarafından işaretlenir. Bu <strong>L</strong>ist <strong>I</strong>tem (liste ögesi) anlamındadır. Liste ögesi bir alt ögedir, yani üst ögesi olan sıralı listenin içinde bulunur ('<ol>').\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Sıralı listeyi nasıl oluşturabilirim? **</summary>\\r\nSıralı bir liste yapmanın iki adımı vardır: liste yapmak ve liste ögelerini eklemek. Sıralı liste yapmak için, sıralı liste etiketlerini '<ol></ol>' yazın. Sonra, liste ögelerini sıralı liste etiketleri **içine** ekleyin. Her liste ögesini yapmak için, liste ögesi etiketlerini '<li></li>' kullanın ve liste ögelerini etiketlerin içine yazın.\\r\n<br/><br />\\r\n'<li>' etiketlerini girintilemek yararlı olabilir böylece içinde bulunduğu '<ol>' etiketi içinde açıkça görünür.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Bana çalışan kod göster.**</summary> \\r\n<table border=\"1\"> \\r\n<tr>\\r\n<td>örnek</td>\\r\n<td>sonuç</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;Adım1 &lt;/li&gt; <br> &lt;li&gt;Adım 2 &lt;/li&gt;\n<br> &lt;li&gt;Adım 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nBu sayfa bir sıralı liste içermelidir, ancak liste etiketleri eksik. \\r\n\\r\n# Bunu Yap\\r\n\\r\n* Bu içeriğin aşağıdaki örnekteki gibi bir sıralı yapısı olması için '<ol>' ve '<li>' etiketlerini kullanın.\\r\n\\r \n* İpucu: Yazdığın kodda hiç sayı bulunmayacak.*\\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 ordered list_2018: "# Sıralı Listeler\\\\r\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**İki liste türü nelerdir?**</summary>\\r\n\nSıralı ve sırasız listeler olmak üzere HTML'de iki tür liste vardır.\\\\r\n\n</details>\\r\n<details>\\r\n<summary>**Sıralı liste nedir?**</summary>\\r\nSıralı liste, bir dizi numaralandırılmış madde işaretli ögesi bulunan listedir. \\r \n<br /><br />\\r\nBir sıralı liste ögesi '<ol>'; etiketi ile gösterilir. Bu <strong>O</strong> rdered <strong>L</strong>IST (Sıralı Liste) kısaltmasıdır. Listedeki her öge bir liste ögesi '<li>'; tarafından işaretlenir. Bu <strong>L</strong>ist <strong>I</strong>tem (liste ögesi) anlamındadır. Liste ögesi bir alt ögedir, yani üst ögesi olan sıralı listenin içinde bulunur ('<ol>').\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Sıralı listeyi nasıl oluşturabilirim? **</summary>\\r\nSıralı bir liste yapmanın iki adımı vardır: liste yapmak ve liste ögelerini eklemek. Sıralı liste yapmak için, sıralı liste etiketlerini '<ol></ol>' yazın. Sonra, liste ögelerini sıralı liste etiketleri **içine** ekleyin. Her liste ögesini yapmak için, liste ögesi etiketlerini '<li></li>' kullanın ve liste ögelerini etiketlerin içine yazın.\\r\n<br/><br />\\r\n'<li>' etiketlerini girintilemek yararlı olabilir böylece içinde bulunduğu '<ol>' etiketi içinde açıkça görünür.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Bana çalışan kod göster.**</summary> \\r\n<table border=\"1\"> \\r\n<tr>\\r\n<td>örnek</td>\\r\n<td>sonuç</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;Adım1 &lt;/li&gt; <br> &lt;li&gt;Adım 2 &lt;/li&gt;\n<br> &lt;li&gt;Adım 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nBu sayfa bir sıralı liste içermelidir, ancak liste etiketleri eksik. \\r\n\\r\n# Bunu Yap\\r\n\\r\n* Bu içeriğin aşağıdaki örnekteki gibi bir sıralı yapısı olması için '<ol>' ve '<li>' etiketlerini kullanın.\\r\n\\r \n* İpucu: Yazdığın kodda hiç sayı bulunmayacak.*\\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
       CSD U2 ordered list_2019: "# Sıralı Listeler\\\\r\n\n<div style=\"float:\nright; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**İki liste türü nelerdir?**</summary>\\r\n\nSıralı ve sırasız listeler olmak üzere HTML'de iki tür liste vardır.\\\\r\n\n</details>\\r\n<details>\\r\n<summary>**Sıralı liste nedir?**</summary>\\r\nSıralı liste, bir dizi numaralandırılmış madde işaretli ögesi bulunan listedir. \\r \n<br /><br />\\r\nBir sıralı liste ögesi '<ol>'; etiketi ile gösterilir. Bu <strong>O</strong> rdered <strong>L</strong>IST (Sıralı Liste) kısaltmasıdır. Listedeki her öge bir liste ögesi '<li>'; tarafından işaretlenir. Bu <strong>L</strong>ist <strong>I</strong>tem (liste ögesi) anlamındadır. Liste ögesi bir alt ögedir, yani üst ögesi olan sıralı listenin içinde bulunur ('<ol>').\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Sıralı listeyi nasıl oluşturabilirim? **</summary>\\r\nSıralı bir liste yapmanın iki adımı vardır: liste yapmak ve liste ögelerini eklemek. Sıralı liste yapmak için, sıralı liste etiketlerini '<ol></ol>' yazın. Sonra, liste ögelerini sıralı liste etiketleri **içine** ekleyin. Her liste ögesini yapmak için, liste ögesi etiketlerini '<li></li>' kullanın ve liste ögelerini etiketlerin içine yazın.\\r\n<br/><br />\\r\n'<li>' etiketlerini girintilemek yararlı olabilir böylece içinde bulunduğu '<ol>' etiketi içinde açıkça görünür.\\r\n\\r\n</details>\\r\n\\r\n<details>\\r\n<summary>**Bana çalışan kod göster.**</summary> \\r\n<table border=\"1\"> \\r\n<tr>\\r\n<td>örnek</td>\\r\n<td>sonuç</td>\\r\n</tr>\\r\n<tr>\\r\n<td><pre>\n&lt;ol&gt; <br> &lt;li&gt;Adım1 &lt;/li&gt; <br> &lt;li&gt;Adım 2 &lt;/li&gt;\n<br> &lt;li&gt;Adım 3 &lt;/li&gt; <br> &lt;/ol&gt; </pre></td>\\r\n<td><img\nsrc=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04\nPM.png\" style=\"width:200px\"></td>\\r\n</tr>\\r\n</table>\\r\n\\r\n</details>\\r\n</div>\\r\n\\r\nBu sayfa bir sıralı liste içermelidir, ancak liste etiketleri eksik. \\r\n\\r\n# Bunu Yap\\r\n\\r\n* Bu içeriğin aşağıdaki örnekteki gibi bir sıralı yapısı olması için '<ol>' ve '<li>' etiketlerini kullanın.\\r\n\\r \n* İpucu: Yazdığın kodda hiç sayı bulunmayacak.*\\r\n\\r\n![](https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03\nPM.png)"
@@ -2514,7 +2514,7 @@ tr:
         # Bunu Yapın\\r
 
         -   Sayfanın üstündeki
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) butonuna tıklayın.\\r
         -   Üretilen URL' yi kopyalayın, sayfanızı görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\r
             \\r
@@ -2528,7 +2528,7 @@ tr:
         # Bunu Yapın\\r
 
         -   Sayfanın üstündeki
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) butonuna tıklayın.\\r
         -   Üretilen URL' yi kopyalayın, sayfanızı görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\r
             \\r
@@ -2542,7 +2542,7 @@ tr:
         # Bunu Yapın\\r
 
         -   Sayfanın üstündeki
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) butonuna tıklayın.\\r
         -   Üretilen URL' yi kopyalayın, sayfanızı görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\r
             \\r
@@ -3288,295 +3288,295 @@ tr:
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L11 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L11 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L12 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L12 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L12 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L13 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L13 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L13 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L15 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L15 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L15 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L16 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L16 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L16 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L17 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L17 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L17 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L18 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L18 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L18 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L19 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L19 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L19 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L3 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L3 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L3 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L4 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L4 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L4 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L5 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L5 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L5 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L6 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L6 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L6 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L7 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L7 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L7 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L9 Freeplay: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L9 Freeplay_2018: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 L9 Freeplay_2019: |-
         # Serbest Oyun\\r
 
         \\r
-        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        İstediğin herhangi bir şeyi oluşturmak için öğrendiklerini kullan.  Bitirdiğinde, bir arkadaşına göndermek için buna tıklayabilirsin  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>) , veya oluşturduğun şeyi Proje Galerisine göndermek için buna tıklayabilirsin. ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>).
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\\r\n\\\\r\n\n# Fare X ve Y\\\\r\n\n\\\\r\nGiriş almanın basit yollarından birisi de kullanıcının fare imleci konumudur. **'World.mouseX' ve World.mouseY' özelliklerini kullanarak farenin x ve y konumlarını alabilirsiniz.** Bu kalıpla birlikte hareketli nesnenin özelliklerini öğrendiniz..\\\\r\n\\\\r\n\n# \n\nBunu Yap\\\\r\n\\\\r\nOyun alanı etrafındaki fareyi takip ederek arı nesnesi yapacaksınız.\\\\r\n\\\\r\n\n-   Senin için arı resmi zaten animasyon sekmesinde var.\\\\r\n-   Pencerenin ortasına çizen bir arı nesnesi oluştur.\\\\r\n-   \\*\n    Çizme döngüsünün içerisinde hareketli nesnenin pozisyonunu farenin pozisyonuna güncelleyin:\\\\r\n    \\\\t\\* 'Wordl.MouseX' değerini hareketli nesnenin x konumuna ata.\\\\r\n    \\*\n    'Wordl.MouseY' değerini hareketli nesnenin y konumuna ata..\\\\r\n-   İşlediğini test etmek için programı çalıştır.\\\\r"
       CSD U3 Mouse Input Bee 1_2018: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\\r\n\\\\r\n\n# Fare X ve Y\\\\r\n\n\\\\r\nGiriş almanın basit yollarından birisi de kullanıcının fare imleci konumudur. **'World.mouseX' ve World.mouseY' özelliklerini kullanarak farenin x ve y konumlarını alabilirsiniz.** Bu kalıpla birlikte hareketli nesnenin özelliklerini öğrendiniz..\\\\r\n\\\\r\n\n# \n\nBunu Yap\\\\r\n\\\\r\nOyun alanı etrafındaki fareyi takip ederek arı nesnesi yapacaksınız.\\\\r\n\\\\r\n\n-   Senin için arı resmi zaten animasyon sekmesinde var.\\\\r\n-   Pencerenin ortasına çizen bir arı nesnesi oluştur.\\\\r\n-   \\*\n    Çizme döngüsünün içerisinde hareketli nesnenin pozisyonunu farenin pozisyonuna güncelleyin:\\\\r\n    \\\\t\\* 'Wordl.MouseX' değerini hareketli nesnenin x konumuna ata.\\\\r\n    \\*\n    'Wordl.MouseY' değerini hareketli nesnenin y konumuna ata..\\\\r\n-   İşlediğini test etmek için programı çalıştır.\\\\r"
@@ -3793,7 +3793,7 @@ tr:
         \\r
         Şekilleri tam olarak yerleştirmenize yardımcı olması için, "Çalıştır" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab: |-
         # Şekiller Çizme\\r
@@ -3803,7 +3803,7 @@ tr:
         \\r
         Şekilleri tam olarak yerleştirmenize yardımcı olması için, "Çalıştır" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2018: |-
         # Şekiller Çizme\\r
@@ -3813,7 +3813,7 @@ tr:
         \\r
         Şekilleri tam olarak yerleştirmenize yardımcı olması için, "Çalıştır" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2019: |-
         # Şekiller Çizme\\r
@@ -3823,7 +3823,7 @@ tr:
         \\r
         Şekilleri tam olarak yerleştirmenize yardımcı olması için, "Çalıştır" butonuna bastığınızdan ve ızgarayı görünür yaptığınızdan emin olun.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Random Add a Door: '<img src="https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25 PM.png" style="float:right;height:150px"> \\r \\r # kırmızı bir dikdörtgeni daha uzun yapacak bir kod yazın \* yeni dikdörtgen daha uzun olduğu sürece boyutları hakkında endişelenme.'
       CSD U3 Random Debug Cloud: |-
@@ -3905,7 +3905,7 @@ tr:
         \\r
         `randomNumber()` komutunu programlarınızda birden çok kez kullanabilirsiniz. Komut her kullanıldığında rastgele yeni bir sayı üretecek.\\r
         \\r
-        \!\[](\<<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33>
+        ![](<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33
         PM.png>)
       CSD U3 Random Taller Rectangle: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10\nPM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\\\\r\n\n# \n\nDikdörtgen Büyüklüğü\\\\r\n\\\\r\nBu `rect` bloklarının büyüklüğü kontrol etmek için kullanabileceğiniz iki tane daha parametresi vardır. `noStroke()` bloğunun şekilleri kenarlık(çerçeve) olmadan oluşturduğuna dikkat edin.\\\\r\n\\\\r\n\n# Bunları Yapın\\\\r\n\n\\\\r\n\n-   Koda bakın ve 'rect' bloğundaki son iki parametrenin nasıl çalıştığını çözmeye çalışın.\\\\r\n-   Kırmızı dikdörtgenin uzunluğunu mavi dikdörtgenden daha büyük yapmak için ikinci 'rect' bloğundaki sayıları değiştirin.\\\\r"
       CSD U3 Random Taller Rectangle_2018: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10\nPM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\\\\r\n\n# \n\nDikdörtgen Büyüklüğü\\\\r\n\\\\r\nBu `rect` bloklarının büyüklüğü kontrol etmek için kullanabileceğiniz iki tane daha parametresi vardır. `noStroke()` bloğunun şekilleri kenarlık(çerçeve) olmadan oluşturduğuna dikkat edin.\\\\r\n\\\\r\n\n# Bunları Yapın\\\\r\n\n\\\\r\n\n-   Koda bakın ve 'rect' bloğundaki son iki parametrenin nasıl çalıştığını çözmeye çalışın.\\\\r\n-   Kırmızı dikdörtgenin uzunluğunu mavi dikdörtgenden daha büyük yapmak için ikinci 'rect' bloğundaki sayıları değiştirin.\\\\r"
@@ -5138,13 +5138,13 @@ tr:
       CSD U5 binary 2_2019: "6.-Bit sayısı \\\\ r \n\\\\ r \nbu widget için, tüm farklı bit değerleri koymak gerekir. \\\\ r \n\\\\ r \n\n# Do\n\nBu \\\\ r \n\\\\ r \n\n-   daha sonra kare şeklinde doğrudan değerleri yazın, \"Düzenle\" düğmesini tıklayın. \\\\ r \n-   Her bit değerini karar verdikten sonra, \"Kaydet\" düğmesine basın. \\\\ r \n    yeni sistemle \\*, yapmak aşağıdaki numaraları: 32, 41, 63"
       CSD U5 binary 3-new: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n4, 5 veya 6 bitlik sayıları hesaplayabilen bir araç. Aşağıda ikili dizede kodlanmış dünya rekorlarını bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\n1.  İki \n    dakika içinde kaldırılmış ve fırlatılmış en çok insan sayısı. (4 bit)\\\\r\n2.  Bir dakika\n    içinde bir papağan tarafından açılmış en çok kutulanmış içecek sayısı. (6 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n    \\*İkili \n    dizedeki iki sayıyı çözün."
       CSD U5 binary 3: "# Birden fazla sayıyı çözerek \\\\ r\n\n\\\\ r \nSekiz bit'e kadar sayıyı hesaplayabilen bir widget. Bunu, aşağıdaki ikili dizgide kodlanan üç dünya rekorunu bulmaya çalışmak için kullanabilirsiniz . Yanıtlar dizede sıralıdır. \\\\ r \\\\ r \nbir dakika içinde bir papağan tarafından açılan 1. En konserve içecekler. \\\\ r \nbir koni üzerinde dengeli 2. En dondurma kaşık. \\\\ r \nkaldırdı ve iki dakika atılmış insanların 3. En sayısı. \\\\ r \\\\ r \n! \\[] (<https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-> görüntü -1502735454689.png) \\\\ r \\\\ r \n\n# \n\n Do Bu\n\n\\\\ r \n\n-   bir üç sayı deşifre etmeye çalışın ikili dize \\\\ r \n-   eşinizle cevapları tartışır. \\\\ r\n    Eğer numaralarının doğru belli olması gerekiyor diğer bilgileri \\* var mıydı?"
-      CSD U5 binary 4-new: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
-      CSD U5 binary 4-new_2018: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
-      CSD U5 binary 4-new_2019: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
+      CSD U5 binary 4-new: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
+      CSD U5 binary 4-new_2018: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
+      CSD U5 binary 4-new_2019: "# Birden fazla sayıyı çözme\\\\r\n\n\\\\r\nİşte 4, 5 veya 6 bitlik sayıları hesaplayabilen bir widget. Bunu, aşağıdaki \nikili dizgide kodlanan iki dünya rekorunu bulmak için kullanabilirsiniz.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Çoğu kişi kaldırdı ve iki dakika içinde atıldı.\n    (4 bits)\\\\r\n2.  Bir dakika içinde bir papağan tarafından açılan konserve içeceklerin çoğu. (6 bits)\\\\r\n    \\\\r\n    # \n    Bunu Yapın\\\\r\n3.  İkili dizedeki iki sayıyı çözer."
       CSD U5 binary 4: "# Bit Uzunluğu\\\\r\n\n\\\\r\nEğer her sayının ne \nkadar bit uzunluğunda olduğunu bilmiyorsanız, sayı dizelerini çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı yolla çözülebilir.\\\\r\n\\\\r\n<img src=\"https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png\"\nstyle=\"height: 30px;\">\\\\r\n\\\\r\nEğeri dizeyi böyle ayırırsanız, dize\n71, 28, 28 olarak okunur.\\\\r\n\\\\r\n<img src=\"https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png\"\nstyle=\"height: 30px;\"> <img src=\"https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png\"\nstyle=\"height: 30px;\"> <img src=\"https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png\"\nstyle=\"height: 30px;\"><img src=\"https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png\"\nstyle=\"height: 30px;\">\\\\r\n\\\\r\nEğer böyle ayırırsanız, dize 17, 249,\n12 olarak okunur.\\\\r\n\\\\r\n<img src=\"https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png\"\nstyle=\"height: 30px;\"> <img src=\"https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png\"\nstyle=\"height: 30px;\"> <img src=\"https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png\"\nstyle=\"height: 30px;\">\\\\r\n\\\\r\n\\\\r\nBu problemi çözmek için, insanlar her sayı \niçin sabit bir uzunluk üzerinde anlaştı. Aşağıdaki dize aynı üç sayıyı kullanır \nama her sayı tam olarak 8 bit yer kaplar.\\\\r\n\\\\r\n\\\\r\n<img src=\"https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png\"\nstyle=\"height: 30px;\">\\\\r\n\\\\r\n\n# Bunu Yap\\\\r\n\n\\\\r\n\n-   İkili sistem aracını kullanarak\n    8 bitlik sayıları kullanan dizeleri çözün.\\\\r\n-   Aynı cevabı bulup bulmadığınızı\n    görmek için cevabınızı bir takım arkadaşınızla karşılaştırın."
-      CSD U5 binary 5-new: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
-      CSD U5 binary 5-new_2018: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
-      CSD U5 binary 5-new_2019: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
+      CSD U5 binary 5-new: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
+      CSD U5 binary 5-new_2018: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
+      CSD U5 binary 5-new_2019: "# Birden fazla sayıyı çözmek\\\\r\n\n\\\\r\nİşte\n8 bite kadar olan sayıları hesaplayabilen bir araç. Aşağıdaki dünya rekorlarının değerlerini bulmak için bunu kullanabilirsiniz.\\\\r\n\\\\r\n\"1\" bitinin her zaman en sağdaki bit olduğundan emin olmayı unutmayın. Eğer aracın solunda fazladan bit var ise, onları kapalı tutun.\\\\r\n\\\\r \n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\\r\n\\\\r\n\n1.  Bir köpekteki en uzun kuyruk (inç cinsinden) (5 bit)\\\\r\n2.  Birinin yüzünde\n    dengede duran en fazla kaşık (5 bit)\\\\r\n    \\\\r\n    # Bunu Yap\\\\r\n3.  İkili dizedeki \n    iki sayıyı çözün."
       CSD U5 binary 6-new: |-
         # Birden fazla sayıyı çözmek\\r
 
@@ -5152,7 +5152,7 @@ tr:
         İşte
         yeni bir bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu bilmeden sayıları çözmeye çalışın.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -5171,7 +5171,7 @@ tr:
         İşte
         yeni bir bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu bilmeden sayıları çözmeye çalışın.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -5190,7 +5190,7 @@ tr:
         İşte
         yeni bir bit dizesi. Bu sefer, iki sayının bit uzunluğunu bilmiyorsunuz. Bit uzunluğunu bilmeden sayıları çözmeye çalışın.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -5202,16 +5202,16 @@ tr:
         3.  İkili dizedeki
             iki sayıyı çözmeyi deneyin.\\r
         4.  Cevabınızın doğru olup olmadığını neden kesin olarak bilemeyeceğinizi takım arkadaşınızla tartışın.
-      CSD U5 binary 7-new: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>) \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>) \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
-      CSD U5 binary 7-new_2018: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>) \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>) \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
-      CSD U5 binary 7-new_2019: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>) \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>) \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
+      CSD U5 binary 7-new: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
+      CSD U5 binary 7-new_2018: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
+      CSD U5 binary 7-new_2019: "# Bit Uzunluğu\\\\r\n\n\\\\r\nHer bir numaranın kaç bit uzunluğunu bilmiyorsanız, bir dizi sayıdaki kodu çözemezsiniz.\\\\r\n\\\\r\nÖrneğin, aşağıdaki ikili dize birçok farklı şekilde çözülebilir.\\\\r\n\\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\\r\n\\\\r\nDizi bu şekilde bölünürse, dize 10, 84'ü okur.\\\\r\n\\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\\r\n\\\\r\n\\\\r\nEğer böyle bölüyorsanız, dize 42, 20 okur.\\\\r\n\\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\\r\n\\\\r\nBu sorunu çözmek için, insanlar her sayı için sabit bir uzunluğu kabul ediyorlar. \nAşağıdaki dize aynı iki sayıyı kullanır, ancak her bir numara \ngerçekte kaç bit olursa olsun tam olarak sekiz bit alır.\\\\r\n\\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\\r\n\\\\r\n\n# Bunu Yapın\\\\r\n\n\\\\r\n\n-   Sekiz bitlik sayıyı kullanan dizgeyi çözmek için ikili widget'i kullanın.\\\\r\n-   Aynı cevaba sahip olup olmadığınızı görmek için bir takım arkadaşı ile cevaplarınızı kontrol edin."
       CSD U5 black white images pixelation 2: |-
         # Bunu Yap\\r
 
         \\r
         Pikselleme aracını kullanarak gülen yüz çizin.\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2018: |-
         # Bunu Yap\\r
@@ -5219,7 +5219,7 @@ tr:
         \\r
         Pikselleme aracını kullanarak gülen yüz çizin.\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2019: |-
         # Bunu Yap\\r
@@ -5227,7 +5227,7 @@ tr:
         \\r
         Pikselleme aracını kullanarak gülen yüz çizin.\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 3: |-
         # Bunu Yap\\r
@@ -5235,7 +5235,7 @@ tr:
         \\r
         Bu resmin genişlik ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye benzemiyor. Resmi bulana kadar onları değiştirin.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2018: |-
         # Bunu Yap\\r
@@ -5243,7 +5243,7 @@ tr:
         \\r
         Bu resmin genişlik ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye benzemiyor. Resmi bulana kadar onları değiştirin.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2019: |-
         # Bunu Yap\\r
@@ -5251,7 +5251,7 @@ tr:
         \\r
         Bu resmin genişlik ve yükseklik kaydırma çubuğu doğru ayarlanmadığı için hiçbir şeye benzemiyor. Resmi bulana kadar onları değiştirin.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 4: |-
         # Bunu Yap\\r
@@ -5259,7 +5259,7 @@ tr:
         \\r
         Bu gülen yüze kaşlarını ekleyin. Eğer takılırsan "Okunabilir Biçim"i kullanmayı hatırla.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2018: |-
         # Bunu Yap\\r
@@ -5267,7 +5267,7 @@ tr:
         \\r
         Bu gülen yüze kaşlarını ekleyin. Eğer takılırsan "Okunabilir Biçim"i kullanmayı hatırla.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2019: |-
         # Bunu Yap\\r
@@ -5275,7 +5275,7 @@ tr:
         \\r
         Bu gülen yüze kaşlarını ekleyin. Eğer takılırsan "Okunabilir Biçim"i kullanmayı hatırla.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 5: |-
         # Bunu Yap\\r
@@ -7831,7 +7831,7 @@ tr:
         \\r
 
         1.  Tasarım Görünümünde "CODE" diyen beyaz kareye tıklayın. Seçiminizin gizli kodunu göstermesi için değiştirin.\\r
-        2.  2.
+        2.  2\.
             Kodu kaplamak için resmi aşağıya çekin\\r
             \\r
             ![](<>)
@@ -8233,7 +8233,7 @@ tr:
         \\r
         Bu bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli şeyler sunacak!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       course2_artist_nestedLoops_challenge1: |-
         Bunun gibi bir resmin nasıl yapılacağını çözebilir misin?\\r
@@ -8658,7 +8658,7 @@ tr:
         \\r
         Bu bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli şeyler sunacak!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2018: |-
         Hadi bir parti verelim!
@@ -8668,7 +8668,7 @@ tr:
         \\r
         Bu bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli şeyler sunacak!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2019: |-
         Hadi bir parti verelim!
@@ -8678,7 +8678,7 @@ tr:
         \\r
         Bu bulmacada, ipuçlarına tıkladığından emin ol! İpuçları, denemen için sana eğlenceli şeyler sunacak!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challengeClone: Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
       courseB_artist_loops10: "Öğrendiklerini kullan ve resmi çiz. Sizce sanatçı eve gittiğinde ne gördü.\\\\r\n\\\\r\n\n<hr/>\\r\n<h3>Ideas</h3>\\r\n<table>\\r\n<tr>\\r\n<td>\\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\\r\n<h4>A Singing Snail</h4><br/><br/>\\r\n</td>\\r\n\\r\n<td>\\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\\r\n<h4>A Big City</h4><br/><br/>\\r\n</td>\\r\n\\r\n<td>\\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\\r\n<h4>A Concert</h4><br/><br/>\\r\n</td>\\r\n\\r\n<td>\\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\\r\n<h4>A Birthday Cake</h4><br/><br/>\\r\n</td>\\r\n\\r\n</tr>\\r\n</table>\\r\n "

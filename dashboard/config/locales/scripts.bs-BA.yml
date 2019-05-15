@@ -2067,6 +2067,8 @@ bs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Plesna zabava
         andrea-test:
           stages:
             'null':

@@ -311,6 +311,7 @@
   "submitYourProject": "Pošaljite svoj projekt",
   "submitYourProjectConfirm": "Nakon slanja nećete moći više uređivati svoj projekt. Zbilja želite poslati?",
   "subtitle": "grafičko okruženje za programiranje",
+  "support": "Pomoć i zajedništvo",
   "switchSection": "Promijeni odjeljenje:",
   "syntaxErrorMsg": "Vaš program sadrži grešku. Molimo uklonite redak {lineNumber} i pokušajte ponovo.",
   "teacher": "Učitelj",

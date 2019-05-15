@@ -796,7 +796,6 @@ sv:
     new: Skapa ny
     rename: Ändra namn
     save: Spara
-    delete: Ta bort
     import: Importera
     share_link_import_bad_link_header: Delningslänken kändes inte igen
     share_link_import_bad_link_body: 'Vi kunde inte importera delningslänken. Se till
@@ -806,7 +805,6 @@ sv:
     share_link_import_error_body: Det gick inte att importera delningslänken. Försök
       igen.
     exit: Tillbaka till kursen
-    my_projects: Mina projekt
     project_gallery: Projekt
     share: Dela
     share_title: Dela ditt projekt
@@ -817,8 +815,6 @@ sv:
       skola.
     embed: Inbäddad
     advanced_share: Visa avancerade alternativ
-    close: Avsluta
-    more: Mer
     name: Namn
     updated: Uppdaterad
     project_type: Projekttyp
@@ -826,16 +822,8 @@ sv:
       nedan för att göra ett nytt Spel Lab eller Artist projekt! <br/>Du kan komma
       tillbaka och arbeta med ditt projekt när som helst.
     need_help: Behöver du hjälp att komma igång?
-    really_delete: Ta bort?
-    delete_yes: Ja
-    delete_no: Nej
     saved: Sparade
     not_saved: Inte sparad
-    cancel: Avbryt
-    delete_confirm_title: Är du säker på att du vill ta bort detta projekt?
-    delete_confirm_text: Genom att Ta bort ditt projekt kommer det att tas bort permanent
-      från listan Mina projekt. Någon du har delat länken till kommer inte längre
-      att kunna se ditt projekt.
     view_all: Titta på mina projekt
     remix: Remix
     click_to_remix: Klicka på "Remix" för att göra en spin-off som din egen version!

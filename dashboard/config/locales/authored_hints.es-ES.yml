@@ -446,8 +446,8 @@ es:
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           puzzle, excepto que el medio hexágono es un poco más grande. '
         Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
-          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
-          píxeles de largo y necesitas girar 120 grados "
+          y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen
+          80 píxeles de largo y necesitas girar 120 grados "
         Course_4_Artist_12_d: |-
           **Solución:**
 
