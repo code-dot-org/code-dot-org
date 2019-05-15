@@ -109,11 +109,16 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # Upcoming (not started) public CSF workshops.
   def k5_public_map_index
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(
+    conditions = {
       course: Pd::Workshop::COURSE_CSF,
       on_map: true
-    ).where.not(processed_location: nil)
+    }
+    if params['deep_dive_only']
+      conditions[:subject] = 'Deep Dive'
+    end
 
+    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
+      where(conditions).where.not(processed_location: nil)
     render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
   end
 
