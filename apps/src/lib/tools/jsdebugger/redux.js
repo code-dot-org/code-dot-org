@@ -25,7 +25,8 @@ const JSDebuggerState = Immutable.Record({
   commandHistory: null,
   logOutput: experiments.isEnabled('react-inspector') ? [] : '',
   maxLogLevel: '',
-  isOpen: false
+  isOpen: false,
+  fromDebugConsole: false
 });
 
 export function getRoot(state) {
@@ -79,6 +80,10 @@ export function getMaxLogLevel(state) {
   return getRoot(state).maxLogLevel;
 }
 
+export function getFromDebugConsole(state) {
+  return getRoot(state).fromDebugConsole;
+}
+
 export const selectors = {
   getRoot,
   getCommandHistory,
@@ -88,7 +93,8 @@ export const selectors = {
   canRunNext,
   getLogOutput,
   getMaxLogLevel,
-  isOpen
+  isOpen,
+  getFromDebugConsole
 };
 
 // actions
@@ -101,10 +107,10 @@ export function initialize({runApp}) {
  * @param {object} output
  * @param {string} level optional text: 'ERROR', 'WARNING', or nothing
  */
-export function appendLog(output, level) {
+export function appendLog(origin, output, level) {
   return (dispatch, getState) => {
     const logLevel = level && level.toLowerCase();
-    dispatch({type: APPEND_LOG, output, logLevel});
+    dispatch({type: APPEND_LOG, origin, output, logLevel});
     if (!isOpen(getState())) {
       dispatch(open());
     }
@@ -275,6 +281,14 @@ function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
   }
 }
 
+function determineOriginOfInput(fromDebugConsole, origin) {
+  if (origin === 'codeWorkspace') {
+    return false;
+  } else if (origin === 'debugConsole') {
+    return true;
+  }
+}
+
 export function reducer(state, action) {
   if (!state) {
     state = new JSDebuggerState({
@@ -294,6 +308,10 @@ export function reducer(state, action) {
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
+      fromDebugConsole: determineOriginOfInput(
+        state.fromDebugConsole,
+        action.origin
+      ),
       logOutput: appendLogOutput(state.logOutput, action.output, action.type),
       maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
     });
@@ -301,6 +319,7 @@ export function reducer(state, action) {
     return state.merge({
       logOutput: experiments.isEnabled('react-inspector') ? [] : '',
       maxLogLevel: ''
+      // fromDebugConsole: false
     });
   } else if (action.type === DETACH) {
     return state.merge({

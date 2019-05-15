@@ -104,6 +104,7 @@ export default connect(
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
     maxLogLevel: selectors.getMaxLogLevel(state),
+    fromDebugConsole: selectors.getFromDebugConsole(state),
     isAttached: selectors.isAttached(state)
   }),
   {
@@ -123,6 +124,7 @@ export default connect(
         ? PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
         : PropTypes.string.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
+      fromDebugConsole: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
       removeWatchExpression: PropTypes.func.isRequired,
@@ -180,7 +182,7 @@ export default connect(
     };
 
     appendLog(output) {
-      this.props.appendLog(output);
+      this.props.appendLog('debugConsole', output);
     }
 
     componentDidUpdate() {
@@ -227,30 +229,38 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          if (i % 2 === 0) {
-            return (
-              <div key={i}>
-                &gt;{' '}
-                <div style={style.myDiv}>
-                  <Inspector data={output} />
+          if (this.props.fromDebugConsole) {
+            if (i % 2 === 0) {
+              return (
+                <div key={i}>
+                  &gt;{' '}
+                  <div style={style.myDiv}>
+                    <Inspector data={output} />
+                  </div>
                 </div>
-              </div>
-            );
-          } else if (i % 2 !== 0) {
-            return (
-              <div key={i}>
-                &lt;{' '}
-                <div style={style.myDiv}>
-                  <Inspector data={output} />
+              );
+            } else if (i % 2 !== 0) {
+              return (
+                <div key={i}>
+                  &lt;{' '}
+                  <div style={style.myDiv}>
+                    <Inspector data={output} />
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            }
+          } else {
+            if (i % 2 === 0) {
+              return <Inspector key={i} data={output} />;
+            } else if (i % 2 !== 0) {
+              return <Inspector key={i} data={output} />;
+            }
           }
         });
       }
     }
 
-    debugOutputs() {
+    displayOutputs() {
       // logOutput is string
       if (this.props.logOutput.length > 0) {
         return this.props.logOutput.split('\n').map((output, i) => {
@@ -302,7 +312,7 @@ export default connect(
           >
             {experiments.isEnabled('react-inspector')
               ? this.displayOutputsWithFlag()
-              : this.debugOutputs()}
+              : this.displayOutputs()}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>
