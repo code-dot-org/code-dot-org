@@ -98,7 +98,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "get video choices" do
     choices_cached = video_key_choices
-    assert_equal(choices_cached.count, Video.count)
+    assert_equal(choices_cached.count, Video.where(locale: 'en-US').count)
     Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
