@@ -60,6 +60,7 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
+    console.log('===>I have been called');
     const {authTokenName, authTokenValue} = this.props.scriptData;
     fetch(
       `/api/v1/user_school_infos/${
@@ -82,12 +83,14 @@ class SchoolInfoConfirmationDialog extends Component {
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
+          id="first-button"
         />
         <Button
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
           onClick={this.handleClickYes}
+          id="second-button"
         />
       </Body>
     );
