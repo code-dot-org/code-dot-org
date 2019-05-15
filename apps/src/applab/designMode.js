@@ -582,7 +582,8 @@ designMode.readProperty = function(element, name) {
 designMode.onDuplicate = function(element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
-    return duplicateScreen(element);
+    const newScreenId = duplicateScreen(element);
+    return elementUtils.getPrefixedElementById(newScreenId);
   }
 
   var duplicateElement = $(element).clone(true)[0];
@@ -1539,6 +1540,27 @@ designMode.addScreenIfNecessary = function(html) {
   return rootDiv[0].outerHTML;
 };
 
+designMode.setAsClipboardElement = function(element) {
+  if (!element) {
+    return;
+  }
+  let madeUndraggable;
+  const jqueryElement = $(element);
+  const isScreen = jqueryElement.hasClass('screen');
+  if (isScreen) {
+    // Unwrap the draggable wrappers around the child elements:
+    madeUndraggable = makeUndraggable(jqueryElement.children());
+  }
+
+  // Remember the current element on the clipboard
+  clipboardElement = jqueryElement.clone(true)[0];
+
+  // Restore the draggable wrappers on the child elements:
+  if (isScreen && madeUndraggable) {
+    makeDraggable(jqueryElement.children());
+  }
+};
+
 designMode.addKeyboardHandlers = function() {
   $('#designModeViz').keydown(function(event) {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
@@ -1549,38 +1571,20 @@ designMode.addKeyboardHandlers = function() {
     if (event.altKey || event.ctrlKey || event.metaKey) {
       switch (event.which) {
         case KeyCodes.COPY:
-          if (currentlyEditedElement) {
-            let madeUndraggable;
-            const currentElement = $(currentlyEditedElement);
-            const isScreen = currentElement.hasClass('screen');
-            if (isScreen) {
-              // Unwrap the draggable wrappers around the child elements:
-              madeUndraggable = makeUndraggable(currentElement.children());
-            }
-
-            // Remember the current element on the clipboard
-            clipboardElement = currentElement.clone(true)[0];
-
-            // Restore the draggable wrappers on the child elements:
-            if (isScreen && madeUndraggable) {
-              makeDraggable(currentElement.children());
-            }
-            // Remember the current theme on the clipboard
-            clipboardElementTheme = elementLibrary.getCurrentTheme(
-              designMode.activeScreen()
-            );
-          }
+          designMode.setAsClipboardElement(currentlyEditedElement);
+          // Remember the current theme on the clipboard
+          clipboardElementTheme = elementLibrary.getCurrentTheme(
+            designMode.activeScreen()
+          );
           break;
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
-            let duplicateElement = designMode.onDuplicate(
+            const duplicateElement = designMode.onDuplicate(
               clipboardElement,
               clipboardElementTheme
             );
-            if (duplicateElement) {
-              clipboardElement = $(duplicateElement).clone(true)[0];
-            }
+            designMode.setAsClipboardElement(duplicateElement);
           }
           break;
         default:

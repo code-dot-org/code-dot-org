@@ -4215,11 +4215,19 @@ ko:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 3a_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          \*어떤 값이 각 개체의 속도를 조절하나요?
       behaviors 5a_authored_hint:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?
       behaviors 6_authored_hint:
+        behavior hint: |-
+          잘 생각해 보세요!
+          \*어떤 값이 각 개체의 속도를 조절하나요?
+      behaviors 7_authored_hint:
         behavior hint: |-
           잘 생각해 보세요!
           \*어떤 값이 각 개체의 속도를 조절하나요?

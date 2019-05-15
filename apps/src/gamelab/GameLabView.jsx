@@ -17,6 +17,7 @@ import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import AnimationPicker from './AnimationPicker/AnimationPicker';
 
 /**
  * Top-level React wrapper for GameLab
@@ -85,6 +86,10 @@ class GameLabView extends React.Component {
         >
           {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
           <GameLabVisualizationColumn finishButton={showFinishButton} />
+          <AnimationPicker
+            channelId={this.getChannelId()}
+            allowedExtensions=".png,.jpg,.jpeg"
+          />
         </div>
         {this.props.isIframeEmbed && !this.props.isRunning && (
           <IFrameEmbedOverlay

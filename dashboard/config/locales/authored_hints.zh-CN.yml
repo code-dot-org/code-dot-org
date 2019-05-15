@@ -4202,6 +4202,10 @@ zh-CN:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
+      behaviors 3a_authored_hint:
+        behavior hint: |-
+          尝试编辑行为！
+          \*哪个值控制每个精灵的速度？
       behaviors 5_authored_hint:
         target hint: 你可以选择这四个玩具中的任何一个。宠物想要哪一个?
         behavior hint: 编辑行为来解决这个难题。宠物小精灵需要在两个不同的方向移动，以结束对角线移动。
@@ -4210,6 +4214,10 @@ zh-CN:
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？
       behaviors 6_authored_hint:
+        behavior hint: |-
+          尝试编辑行为！
+          \*哪个值控制每个精灵的速度？
+      behaviors 7_authored_hint:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵的速度？

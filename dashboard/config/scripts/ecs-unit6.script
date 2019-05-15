@@ -34,12 +34,12 @@ level 'ECSPD3-u6 ideas for culminating projects'
 stage 'Unit 6 Challenge'
 level 'ECSPD3-u6 challenge details'
 level 'ECSPD3-u6 list of challenges'
-named_level 'ECS Unit 6 Challenge Selection'
+level 'ECS Unit 6 Challenge Selection', named: true
 level 'ECSPD3-u6 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
-named_level 'ECS Unit 6 Challenge Submission'
+level 'ECS Unit 6 Challenge Submission', named: true
 
 stage 'Close & Next Steps'
 level 'ECSPD Challenge Reflection'

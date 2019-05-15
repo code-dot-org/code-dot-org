@@ -670,7 +670,13 @@ ja:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': どうくつ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': さばく
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': グリッド
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
       gamelab_setPosition:
         text: "{THIS} を {POSITION} の位置に移動"
         options:
@@ -704,6 +710,11 @@ ja:
       gamelab_setup:
         text: セットアップ
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': もし
@@ -745,6 +756,11 @@ ja:
             "'down'": 下 に
             "'left'": 左 に
             "'right'": 右 に
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': もし
+            '"while"': 以下の間
       gamelab_whileKey:
         options:
           KEY:

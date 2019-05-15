@@ -1,24 +1,24 @@
 stage 'Events'
 level 'BigEvent'
-assessment '2-3 Big Event Match 1'
+level '2-3 Big Event Match 1', assessment: true
 
 stage 'Loops'
 level 'GettingLoopy'
-assessment '2-3 Getting Loopy Multi 1'
+level '2-3 Getting Loopy Multi 1', assessment: true
 
 stage 'Nested Loops'
 level 'comingSoon'
 
 stage 'Conditionals'
 level 'Conditionals'
-assessment '2-3 Conditionals Multi 1'
+level '2-3 Conditionals Multi 1', assessment: true
 
 stage 'While Loops'
 level 'comingSoon'
 
 stage 'Functions'
 level 'SongwritingParameters'
-assessment '4-5 Songwriting Multi 1'
+level '4-5 Songwriting Multi 1', assessment: true
 
 stage 'Variables'
 level 'EnvelopeVariables'
@@ -40,7 +40,7 @@ level 'grade5_artist_functionparameters11'
 
 stage 'Binary'
 level 'BinaryBracelets'
-assessment '2-3 Binary Match 1'
+level '2-3 Binary Match 1', assessment: true
 level 'BinaryImages'
 level 'grade5_pixelation'
 level 'grade5_artist_binary5'

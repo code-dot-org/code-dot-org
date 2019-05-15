@@ -121,7 +121,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     result = @section.add_student current_user
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize),
+      sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: result
     }
   end
@@ -131,7 +131,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize),
+      sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: "success"
     }
   end

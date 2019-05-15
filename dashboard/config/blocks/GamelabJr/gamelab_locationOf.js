@@ -3,7 +3,7 @@ function locationOf(sprite) {
     return undefined;
   }
   return {
-    x:sprite.x,
-    y:sprite.y,
+    x:getProp(sprite, "x"),
+    y:400 - getProp(sprite, "y"),
   };
 }

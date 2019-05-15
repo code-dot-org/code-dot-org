@@ -8,6 +8,7 @@
   = javascript_include_tag 'application'
   = javascript_include_tag "js/#{js_locale}/common_locale"
   %script{src: minifiable_asset_path('js/embedVideo.js')}
+  %script{src: minifiable_asset_path('js/webpack-runtime.js')}
 %html{:dir => locale_dir}
   :css
     #video-container {

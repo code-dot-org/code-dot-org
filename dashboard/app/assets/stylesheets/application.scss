@@ -248,19 +248,6 @@ img.video_thumbnail {
     }
   }
 
-  .header_status_bar {
-    background-color: $dark_color;
-    border-radius: 5px;
-    min-width: 20px;
-    padding: 3px;
-    font-size: 16px;
-    display: inline-block;
-  }
-
-  a.header_status_bar:hover {
-    background-color: $orange;
-  }
-
   .header_text {
     font-size: 16px;
     display: inline-block;
@@ -305,7 +292,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 300px;
+      padding-right: 350px;
     }
   }
 
@@ -449,13 +436,13 @@ img.video_thumbnail {
     padding-left: 20px;
   }
 
-  #signin_button .header_button {
-    margin-top: 6px;
+  #help-button {
+    padding-top: 4px;
+    padding-left: 20px;
   }
 
-  .freeplay_links {
-    float: left;
-    padding-top: 13px;
+  #signin_button .header_button {
+    margin-top: 6px;
   }
 }
 
@@ -741,7 +728,7 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options, .project_more_popup {
+.user_options {
   display: none;
   background-color: $white;
   a:link {
@@ -1034,11 +1021,6 @@ $default-modal-width: 640px;
 .header_right {
   position: absolute;
   right: 16px;
-}
-
-.freeplay_links {
-  display: inline-block;
-  text-align: center;
 }
 
 input.header_input {
@@ -1384,15 +1366,6 @@ a.download-video {
   padding-left: 5px;
 }
 
-#section-management {
-  #edit_teachers {
-    .padtopbottom {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
-
 #landingpage {
   .welcome {
     background-color: $light_purple;
@@ -1519,14 +1492,6 @@ a.download-video {
       border: 1px solid $cyan;
     }
   }
-
-  #edit_teachers {
-    background-color: $lightest_gray;
-    margin: 20px 0 20px -20px;
-    form {
-      margin: 0;
-    }
-  }
 }
 
 .gallery {
@@ -1556,10 +1521,6 @@ a.download-video {
       background-color: $white;
     }
   }
-}
-
-#angular-my-projects-wrapper .gallery {
-  margin-left: 45px;
 }
 
 .course_progress {
@@ -2192,6 +2153,10 @@ a.download-video {
 
 .external .content-level {
   overflow: hidden;
+}
+
+.external-video-container {
+  margin-left: 93px;
 }
 
 .peer-review input[type=radio] {
@@ -3090,10 +3055,11 @@ code {
 }
 
 #diversity_survey {
-  background-color: $lighter_purple;
+  background-color: $background_gray;
   color: $dark_charcoal;
   border-radius: 5px;
   overflow: hidden;
+  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
@@ -3154,7 +3120,7 @@ code {
     .survey_right {
       width: 45%;
       float: left;
-      border-left: 1px solid $purple;
+      border-left: 1px solid $charcoal;
       padding-left: 20px;
 
       li {
@@ -3222,135 +3188,6 @@ code {
     float: left;
     padding: 5px;
   }
-}
-
-.arrow_box_up {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up::after, .arrow_box_up::before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-/* An arrow box with an arrow going up, but the pointer is in the
- * top-right corner */
-
-.arrow_box_up_corner {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up_corner::after, .arrow_box_up_corner::before {
-  bottom: 100%;
-  left: 90%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up_corner::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up_corner::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
 }
 
 #script-breadcrumb {

@@ -1583,6 +1583,8 @@ ga:
               name: Sluafhoinsiú
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Ríomhchlárú ar Ghrafpháipéar
             Relay Programming:
               name: Códáil sealaíochta
             Conditionals with Cards:
@@ -1590,7 +1592,7 @@ ga:
             Digital Citizenship:
               name: Saoránacht Dhigiteach
             'Unplugged: Binary':
-              name: 'Díphlugáilte: Dénártha'
+              name: Íomhánna Dénártha
             Artist Binary:
               name: 'Ealaíontóir: Dénártha'
         coursee-2019:
@@ -1601,8 +1603,8 @@ ga:
               name: Lúba Neadaithe
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
-            Conditionals:
-              name: Coinníollacha
+            'Functions: Songwriting':
+              name: Ceapadh Ceoil
             Internet:
               name: An tIdirlíon
             Crowdsourcing:
@@ -1636,10 +1638,10 @@ ga:
         coursec-2019:
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           stages:
-            Building a Foundation:
-              name: Dúshraith a Leagan
             'Real-life Algorithms: Paper Planes':
               name: 'Algartaim Fhíorshaoil: Eitleáin Pháipéir'
+            'Events: The Big Event':
+              name: An Teagmhas Mór
             Binary Bracelets:
               name: Bráisléid Dhénártha
         gamelab:
@@ -1647,8 +1649,8 @@ ga:
         coursea-2019:
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algartaim Fhíorshaoil: Síol a Chur'
+            'Programming: Happy Maps':
+              name: Mapaí Meidhreacha
             Going Places Safely:
               name: Ag Taisteal Slán Sábháilte
         courseb-2019:
@@ -1657,6 +1659,8 @@ ga:
               name: Bog é, Bog é
             Your Digital Footprint:
               name: Do Lorg Digiteach
+            'Loops: Getting Loopy':
+              name: Bí Lúbach
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1717,3 +1721,7 @@ ga:
               name: Coinníollacha le Cártaí
             Building a Foundation:
               name: Dúshraith a Leagan
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Ríomhchlárú ar Ghrafpháipéar

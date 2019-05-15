@@ -594,11 +594,18 @@ es:
           en este rompecabezas.
       behaviors 1_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
+      behaviors 3a_callout:
+        behavior_callout: "¿Por qué este comportamiento no funciona para la estrella
+          del medio?"
+        star2_callout: Eliminar este bloque de disfraz y usar este bloque de "gráfico"
+          en su lugar.
       behaviors 4_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 5_callout:
+        behaviors_edit: Añadir código a este comportamiento.
+      behaviors free play_callout:
         behaviors_edit: Añadir código a este comportamiento.
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: Usa este ciclo para recolectar todo
@@ -665,9 +672,6 @@ es:
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
-      courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
-          No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
@@ -697,9 +701,6 @@ es:
       courseA_collector_preLoops6_callout:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
-      courseA_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás
-          los bloques extra para completar los rompecabezas.
       courseA_maze_ramp2_2019_callout:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás
           los bloques extra para completar los rompecabezas.
@@ -710,6 +711,9 @@ es:
         courseC_maze_programming3_2: Puedes arrastras los bloques extra a la caja
           de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no pueden tirarse.
+      courseA_maze_ramp3a_2018_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás
+          los bloques extra para completar los rompecabezas.
       courseA_maze_ramp4_2018_callout:
         courseC_maze_programming4_1: Este es el límite de bloques. Te dice cuántos
           bloques te quedan por usar.
@@ -761,6 +765,9 @@ es:
       courseB_Scrat_ramp1_2019_callout:
         grade2_CaringForNewPet_0_1: Después de conectar todos los bloques, pulsa "Ejecutar"
           para iniciar el programa.
+      courseB_Scrat_ramp3a_2019_callout:
+        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás
+          los bloques extra para completar los rompecabezas.
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.
           ¿Cómo se usará?

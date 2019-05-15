@@ -886,7 +886,13 @@ nn:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': hole
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': by
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ørken
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rutenett
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnboge
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervass
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
       gamelab_setPosition:
         text: flytt {THIS} til {POSITION}
         options:
@@ -920,6 +926,11 @@ nn:
       gamelab_setup:
         text: oppsett
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': når
@@ -974,6 +985,11 @@ nn:
             "'down'": ned
             "'left'": venstre
             "'right'": høgre
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': når
+            '"while"': så lenge
       gamelab_whileKey:
         options:
           KEY:

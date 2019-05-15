@@ -33,6 +33,8 @@ zh-TW:
         CSD_U3_L13_S8_C1: 在此設定速度
       CSD U3 abstraction jumping_2019_callout:
         CSD_U3_L13_S8_C1: 在此設定速度
+      CSD U3 abstraction setSpeed accelerate_callout:
+        CSD_U3_L11_S14_C1: 添加你的程式到這兒。
       CSD U3 abstraction sidescroll intro_callout:
         CSD_U3_L11_S17_C1: 在此設定角色的初始位置。
       CSD U3 abstraction sidescroll template-2018_callout:
@@ -388,6 +390,8 @@ zh-TW:
         artistLoopsK2_1: 這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。
       behaviors 5_callout:
         behaviors_edit: 添加程式給這個行為。
+      behaviors free play_callout:
+        behaviors_edit: 添加程式給這個行為。
       course2_bee_conditionals_challenge2_callout:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       course3_bee_debugging_challenge1_callout:
@@ -407,8 +411,6 @@ zh-TW:
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: 這個數字指的是解答中只可以使用一個這類型的積木
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
-      courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: 發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。

@@ -46,7 +46,8 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     :status_change_log,
     :scholarship_status,
     :all_scores,
-    :total_score
+    :total_score,
+    :allow_sending_principal_email
   )
 
   def email
@@ -170,7 +171,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     return {} unless object.try(:school_id)
 
     school = School.find_by_id(object.school_id)
-    stats = school.school_stats_by_year.order(school_year: :desc).first
+    stats = school&.school_stats_by_year&.order(school_year: :desc)&.first
     return {} unless stats
 
     urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
@@ -230,5 +231,9 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
 
   def scholarship_status
     object.try(:scholarship_status)
+  end
+
+  def allow_sending_principal_email
+    object.try(:allow_sending_principal_email?)
   end
 end
