@@ -548,7 +548,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
@@ -570,7 +569,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -610,7 +608,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].first],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_plan_to_teach: principal_options[:plan_to_teach].first,
@@ -632,7 +629,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
             principal_schedule_confirmed: YES,
             principal_implementation: YES
           },
@@ -670,7 +666,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].second,
         taught_in_past: [options[:taught_in_past].last],
         committed: options[:committed].first,
-        willing_to_travel: options[:willing_to_travel].first,
         race: [options[:race].second]
 
       application = create :pd_teacher1920_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
@@ -684,7 +679,6 @@ module Pd::Application
             cs_total_course_hours: YES,
             plan_to_teach: YES,
             committed: YES,
-            willing_to_travel: YES,
           },
           meets_scholarship_criteria_scores: {
             plan_to_teach: YES,
@@ -715,7 +709,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].first,
         taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
-        willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
@@ -736,7 +729,6 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
-            willing_to_travel: NO,
             principal_schedule_confirmed: NO,
             principal_implementation: NO
           },
@@ -776,7 +768,6 @@ module Pd::Application
         replace_existing: options[:replace_existing].first,
         taught_in_past: [options[:taught_in_past].fourth],
         committed: options[:committed].last,
-        willing_to_travel: options[:willing_to_travel].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_plan_to_teach: principal_options[:plan_to_teach].fourth,
@@ -797,7 +788,6 @@ module Pd::Application
             cs_total_course_hours: NO,
             plan_to_teach: NO,
             committed: NO,
-            willing_to_travel: NO,
             principal_implementation: NO,
             principal_schedule_confirmed: NO,
           },
@@ -988,7 +978,22 @@ module Pd::Application
       application = create :pd_teacher1920_application
       assert application.allow_sending_principal_email?
 
-      # If we're no longer unreviewed/pending, we can't send.
+      # If we are unreviewed, we can send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'unreviewed')
+      assert application.allow_sending_principal_email?
+
+      # If we are pending, we can send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'pending')
+      assert application.allow_sending_principal_email?
+
+      # If we are waitlisted, we can send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'waitlisted')
+      assert application.allow_sending_principal_email?
+
+      # If we're no longer unreviewed/pending/waitlisted, we can't send.
       application = create :pd_teacher1920_application
       application.update!(status: 'accepted_no_cost_registration')
       refute application.allow_sending_principal_email?
@@ -1015,28 +1020,50 @@ module Pd::Application
     end
 
     test 'test allow_sending_principal_approval_teacher_reminder_email?' do
-      # By default we can send.
+      # By default we can't send.
       application = create :pd_teacher1920_application
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we are unreviewed, we can send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'unreviewed')
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_approval_teacher_reminder_email?
 
-      # If we created a teacher reminder email any time before, we can't send.
+      # If we are pending, we can send.
       application = create :pd_teacher1920_application
-      create :pd_application_email, application: application, email_type: 'principal_approval_teacher_reminder', created_at: 14.days.ago
+      application.update!(status: 'pending')
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      assert application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we are waitlisted, we can't send.
+      application = create :pd_teacher1920_application
+      application.update!(status: 'waitlisted')
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher1920_application
       application.update!(status: 'accepted_no_cost_registration')
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we created a teacher reminder email any time before, we can't send.
+      application = create :pd_teacher1920_application
+      create :pd_application_email, application: application, email_type: 'principal_approval_teacher_reminder', created_at: 14.days.ago
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher1920_application
       application.update!(principal_approval_not_required: true)
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher1920_application
       create :pd_principal_approval1920_application, teacher_application: application
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we created a principal email < 5 days ago, we can't send.

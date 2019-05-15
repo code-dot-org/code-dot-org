@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is L
 family_name 'coursea'
 version_year '2018'
 is_stable true
+supported_locales ["sk-SK"]
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted_2018'

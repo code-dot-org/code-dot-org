@@ -502,16 +502,18 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       )
     end
 
-  workshop = FactoryGirl.create(:pd_workshop, :funded,
-    on_map: true,
-    course: course,
-    organizer_id: organizer.id,
-    capacity: number.to_i,
-    location_name: 'Buffalo',
-    num_sessions: 1,
-    sessions_from: Date.new(2018, 4, 1),
-    enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
-  )
+  workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
+    FactoryGirl.create(:pd_workshop, :funded,
+      on_map: true,
+      course: course,
+      organizer_id: organizer.id,
+      capacity: number.to_i,
+      location_name: 'Buffalo',
+      num_sessions: 1,
+      sessions_from: Date.new(2018, 4, 1),
+      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
+    )
+  end
 
   # Facilitators
   if number_type == 'facilitators'

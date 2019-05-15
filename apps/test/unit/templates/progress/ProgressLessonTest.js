@@ -41,7 +41,7 @@ describe('ProgressLesson', () => {
       />
     );
 
-    assert.equal(wrapper.node, null);
+    assert.equal(wrapper.html(), null);
   });
 
   it('renders with dashed border when only visible for teachers', () => {

@@ -7,6 +7,7 @@
 *~
 **/.bundle
 **/.vscode
+dashboard/brakeman_security_report.htm
 .DS_Store
 .dropbox
 .tmputils

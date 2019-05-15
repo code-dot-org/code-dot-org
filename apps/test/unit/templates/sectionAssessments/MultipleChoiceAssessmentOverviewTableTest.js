@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
 import commonMsg from '@cdo/locale';
 
@@ -160,7 +160,7 @@ describe('MultipleChoiceAssessmentsOverviewTable', () => {
       />
     );
 
-    const answerCells = wrapper.find('MultipleChoiceAnswerCell');
+    const answerCells = wrapper.find('PercentAnsweredCell');
     expect(answerCells).to.have.length(32);
 
     const tableHeaders = wrapper.find('th');

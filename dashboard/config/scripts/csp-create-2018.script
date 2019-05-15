@@ -6,7 +6,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-18/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.", "link"=>"https://code.org/educate/csp/ap-students", "type"=>"bullhorn", "visibility"=>"Student-only"}]
+script_announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csp-create'
 version_year '2018'
 is_stable true
@@ -22,3 +22,6 @@ level 'CSP CreateL02 SFLP_2018', named: true
 stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL03 SFLP', named: true
 level 'Practice Create Performance Task_2018', progression: 'Create PT - Complete the Task'
+
+stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
+level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true

@@ -32,7 +32,8 @@ namespace :test do
         '--parallel', '120',
         '--magic_retry',
         '--with-status-page',
-        '--fail_fast'
+        '--fail_fast',
+        '--priority 0'
       )
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'

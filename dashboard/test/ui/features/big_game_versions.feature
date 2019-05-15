@@ -15,11 +15,11 @@ Feature: Big Game Versions
   Scenario: Big Game Versions
 
     # Create the initial version with title "VERSION_TEST"
-    Then I press the first "g#game_title > .blocklyIconGroup" element
+    Then I press the first "g#game_title > .blocklyIconGroup > .blocklyText" element
     And I wait until element "#functionNameText" is visible
     And I type "" into "#functionNameText"
     And I press keys "VERSION_TEST" for element "#functionNameText"
-    And I press "modalEditorClose"
+    And I press the first "#modalEditorClose > .blocklyText" element
     And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
     And I press "runButton"
     And I wait until element "#resetButton" is visible

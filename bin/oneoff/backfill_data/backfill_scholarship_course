@@ -6,7 +6,7 @@ require_relative '../../../dashboard/config/environment'
 # from the application.
 def course_from_current_teacher_accepted_app(si)
   app = Pd::Application::Teacher1920Application.find_by(user_id: si.user_id)
-  if app && Pd::SharedApplicationConstants::COHORT_CALCULATOR_STATUSES.include?(app.status)
+  if app
     return app.course
   end
   nil
@@ -24,12 +24,14 @@ def course_from_current_teacher_lsw_enrollment(si)
 
     if Pd::Application::Facilitator1920Application.find_by(user_id: si.user_id)&.status == 'accepted'
       puts "user #{si.user_id} new facilitator, app #{Pd::Application::Facilitator1920Application.find_by(user_id: si.user_id).id}"
+      next
     end
     if e.workshop.course == "CS Discoveries"
       course = 'csd'
     elsif e.workshop.course == 'CS Principles'
       course = 'csp'
     end
+    break
   end
   course
 end
@@ -37,6 +39,7 @@ end
 ActiveRecord::Base.transaction do
   count = 0
   Pd::ScholarshipInfo.find_each do |si|
+    next if si.course
     course = course_from_current_teacher_accepted_app(si) || course_from_current_teacher_lsw_enrollment(si)
     if course
       puts "#{si.id} #{course}"

@@ -17,7 +17,6 @@ Feature: Using the teacher homepage sections feature
   Scenario: Loading teacher homepage with course experiment enabled
     Given I am on "http://studio.code.org/home"
     Given I enable the "subgoals-group-a" course experiment
-    And I wait for the pegasus and dashboard experiment caches to expire
     And I reload the page
     And I wait to see ".uitest-newsection"
     And check that the URL contains "/home"
