@@ -3,5 +3,29 @@
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
 
+- if @level && @script_level
+  - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels
+    - level_example_links = @level.examples.map do |example|
+      - send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+  - if @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
+    -level_example_links = []
+    -level_example_links.push(build_script_level_url(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})))
+
+- data[:level_examples] = level_example_links
+
+- data[:section_levels] = @section.students.order(:name).map do |student|
+  - if @script_level
+    - contained_levels = @script_level.levels.map {|level| level.contained_levels}.flatten
+    - if contained_levels.any?
+      - user_level = student.last_attempt_for_any(contained_levels)
+    - else
+      - user_level = student.last_attempt_for_any(@script_level.levels)
+    - status = activity_css_class(user_level)
+    - passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+    - if user_level
+      - {isConceptLevel: @level.concept_level?, passed: passed, status: status, bonus: @script_level&.bonus, levelNumber: @script_level&.position, assessment: @script_level&.assessment}.merge!(user_level.attributes)
+    - else
+      - {isConceptLevel: @level.concept_level?, user_id: student.id, passed: passed, status: status, levelNumber: @script_level&.position, assessment: @script_level&.assessment}
+
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
