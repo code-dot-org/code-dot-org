@@ -539,14 +539,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'update scholarship status for local summer workshop' do
     workshop = create :pd_workshop, :local_summer_workshop_upcoming
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    # no scholarship info initially
     assert_nil enrollment.scholarship_status
 
+    # updating status should create scholarship info
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
     assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
 
+    # updating to invalid status should fail
     refute enrollment.update_scholarship_status 'invalid status'
     assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
 
+    # updating to a valid status should work
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
@@ -554,14 +558,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'update scholarship status for csf workshop' do
     workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
 
-    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
-    assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
-
+    # updating to invalid status should fail
     refute enrollment.update_scholarship_status 'invalid status'
     assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
 
+    # updating to a valid status should work
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
@@ -569,6 +573,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'scholarship info automatically created when enrolling in csf workshop' do
     workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
+
+    # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
   end
 end
