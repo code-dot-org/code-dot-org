@@ -104,7 +104,7 @@ describe('SchoolInfoConfirmationDialog', () => {
 
     afterEach(() => server.restore());
 
-    describe('handleClickYes', () => {
+    describe('handleClickUpdate', () => {
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
           {...MINIMUM_PROPS}
@@ -117,7 +117,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         />
       );
 
-      it('calls handleYes', () => {
+      it('calls handleUpdate method when a user clicks the button to update school information', () => {
         const fakeScriptId = 1;
         // const handleClickUpdate = sinon.spy();
         const wrapperInstance = wrapper.instance();
