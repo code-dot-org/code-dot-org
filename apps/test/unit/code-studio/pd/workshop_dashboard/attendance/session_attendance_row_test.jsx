@@ -18,8 +18,7 @@ const DEFAULT_PROPS = {
     enrollment_id: 47564,
     user_id: 101,
     verified_teacher_account: false,
-    attended: false,
-    puzzles_completed: 42
+    attended: false
   },
   onSaving: () => {},
   onSaved: () => {},
