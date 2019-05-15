@@ -115,35 +115,6 @@ describe('SessionAttendance', () => {
     wrapper.unmount();
   });
 
-  it('includes a "Code Studio Account" column if account is required', () => {
-    const wrapper = mount(
-      <SessionAttendance
-        {...DEFAULT_PROPS}
-        accountRequiredForAttendance={true}
-      />
-    );
-
-    // After the server responds
-    server.respond();
-    // Has expected columns:
-    expect(
-      wrapper.containsMatchingElement(
-        <thead>
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Code Studio Account</th>
-            <th>Verified Teacher Account</th>
-            <th>Present</th>
-          </tr>
-        </thead>
-      )
-    ).to.be.ok;
-
-    wrapper.unmount();
-  });
-
   it('includes "Puzzles Completed" and "Attended" columns if course is CSF', () => {
     const wrapper = mount(
       <SessionAttendance {...DEFAULT_PROPS} course={COURSE_CSF} />
