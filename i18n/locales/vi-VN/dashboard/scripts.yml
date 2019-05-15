@@ -4775,6 +4775,10 @@ vi:
           stages:
             Relay Programming:
               name: Chương trình chuyển tiếp
+            Debugging in Maze:
+              name: Gỡ lỗi với Scrat
+            'Concept Practice with Minecraft ':
+              name: Nhìn về phía trước
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -4789,6 +4793,10 @@ vi:
               name: Kết nối mạng
             Crowdsourcing:
               name: Đa nguồn
+            Concept Practice with Minecraft:
+              name: Nhìn về phía trước
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
         csd1-2019:
           stages:
             CS Discoveries Pre-survey:

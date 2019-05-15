@@ -70,7 +70,6 @@ my:
       နောက်တစ်ခေါက်ကြိုးစားပါ
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ
-    cancel: ပယ်ဖျတ်သည်
   flex_category:
     csf_loops: Loops
     csf_variables: Variables

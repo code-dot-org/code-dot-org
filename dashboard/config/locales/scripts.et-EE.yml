@@ -1785,6 +1785,8 @@ et:
               name: Internet
             Crowdsourcing:
               name: Ühistegevused
+            Dance Party:
+              name: Tantsuõhtu
         andrea-test:
           stages:
             'null':
@@ -1824,8 +1826,6 @@ et:
               name: Liiguta, liiguta
             Your Digital Footprint:
               name: Sinu digitaalne jalajälg
-            Loops in Ice Age:
-              name: Tsüklik - Jääaeg
             Spelling Bee:
               name: Sõnamesilane
         removed19:

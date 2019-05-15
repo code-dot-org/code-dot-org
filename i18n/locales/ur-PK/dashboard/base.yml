@@ -167,12 +167,8 @@ ur:
     submit: "جمع کرائیں"
   project:
     share: "دوسروں کو بتائیں"
-    more: "مزید"
     name: "نام"
-    delete_yes: 'جی'
-    delete_no: 'نہيں'
     saved: "Saved"
-    cancel: 'منسوخ کریں'
     abuse:
       report_abuse_form:
         abuse_type:

@@ -652,33 +652,23 @@ da:
     new: "Opret nyt"
     rename: "Omdøb"
     save: "Gem"
-    delete: "Slet"
     import: "Importér"
     share_link_import_bad_link_header: "Ukendt delingslink"
     share_link_import_bad_link_body: "Vi kunne ikke importere delingslinket. Sørg for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret hele linket."
     share_link_import_error_header: "Der gik noget galt"
     share_link_import_error_body: "Vi kunne ikke importere delingslinket. Prøv igen."
     exit: "Vend tilbage til kursus"
-    my_projects: "Mine projekter"
     project_gallery: "Projekter"
     share: "Del"
     share_title: Del dit projekt
     share_copy_link: "Kopiér linket:"
-    close: "Luk"
-    more: "Mere"
     name: "Navn"
     updated: "Opdateret"
     project_type: "Projekttype"
     help_text: "Klik på <strong>Lav en App</strong> eller <strong>Tegn noget</strong> nedenfor for at lave et nyt Play Lab eller Kunstnerprojekt! <br/>Du kan til enhver tid vende tilbage og arbejde videre på dine projekter."
     need_help: "Brug for hjælp til at komme i gang?"
-    really_delete: 'Slet?'
-    delete_yes: 'Ja'
-    delete_no: 'Nej'
     saved: "Gemt"
     not_saved: "Ikke gemt"
-    cancel: 'Annuller'
-    delete_confirm_title: Sikker på, at du vil slette dette projekt?
-    delete_confirm_text: "Sletning af dit projekt vil permanent fjerne det fra listen Mine Projekter. Enhver du har delt linket med vil ikke længere kunne se dit projekt."
     view_all: 'Se Mine Projekter'
     remix: 'Bland igen'
     click_to_remix: "Klik 'Bland igen' oprette et spin-off i din egen version!"

@@ -869,6 +869,7 @@
   "submitYourProject": "Projekt küldése",
   "submitYourProjectConfirm": "Nem szerkesztheti a projektet, miután beküldte azt, tényleg beküldi?",
   "subtitle": "vizuális programozási felület",
+  "support": "Segítség",
   "switchSection": "Válts csoportot:",
   "syntaxErrorMsg": "A program gépelési hibát tartalmaz. Kérlek távolítsd el a {lineNumber} sort és próbáld újra.",
   "teacher": "Tanár",

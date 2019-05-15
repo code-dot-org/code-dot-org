@@ -757,15 +757,11 @@ gl:
     new: Crear novo
     rename: Renomear
     save: Salvar
-    delete: Eliminar
     exit: Voltar ao curso
-    my_projects: Os meus proxectos
     project_gallery: Proxectos
     share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
-    close: Pechar
-    more: Máis
     name: Nome
     updated: Última actualización
     project_type: Tipo de proxecto
@@ -774,16 +770,8 @@ gl:
       un Proxecto de artista!<br/>Podes voltar a traballar nos teus proxectos cando
       quixeres.
     need_help: Precisas de axuda para comezares?
-    really_delete: Eliminar?
-    delete_yes: Si
-    delete_no: Non
     saved: Gardado na Galería!
     not_saved: Non gardado
-    cancel: Cancelar
-    delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
-    delete_confirm_text: Ao borrares este proxecto estás eliminándoo permanentemente
-      de “Os meus proxectos”. Calquera persoa coa que compartiras a ligazón para este
-      proxecto xa non poderá velo.
     view_all: Ver os meus proxectos
     remix: Remix
     click_to_remix: Clique em "Remix" para facer a súa propia versión!

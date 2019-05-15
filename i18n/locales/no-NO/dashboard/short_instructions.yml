@@ -910,7 +910,7 @@
         \\r
 
         1.  Hold styr på hvor mange ganger Trollmannen er trykket på.\\r
-        2.  2)
+        2.  2\)
             Hvis Trollmannen er trykket på minst 10 ganger før Hund teller til 30 skal "øk"-variabelen økes med 1 og starte på nytt.\\r
         3.  Hvis Trollmannen ikke blir klikket på 10 ganger (eller mer) er spillet over.
       Course 4 Playlab For Loop Freeplay: 'Frilek: Bruk alt du har lært så langt til å lage et spill som inkludere en "for"-løkke!'

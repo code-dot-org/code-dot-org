@@ -813,14 +813,12 @@ sk:
     new: "Vytvoriť nový"
     rename: "Premenovať"
     save: "Uložiť"
-    delete: "Vymazať"
     import: "Import"
     share_link_import_bad_link_header: "Link na zdieľanie nebol rozpoznaný"
     share_link_import_bad_link_body: "Link na zdieľanie sa nám nepodarilo importovať. Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý link."
     share_link_import_error_header: "Vyskytla sa chyba."
     share_link_import_error_body: "Vyskytol sa problém s importom tohto linku na zdieľanie. Skús to znova."
     exit: "Vrátiť sa do kurzu"
-    my_projects: "Moje Projekty"
     project_gallery: "Projekty"
     publish: "Publikovať"
     unpublish: "Zrušiť publikovanie"
@@ -832,22 +830,14 @@ sk:
     embed: "Vložiť"
     advanced_share: "Zobraziť rozšírené možnosti"
     no_projects: "Momentálne nemáte žiadne projekty. Kliknite na jedno z tlačidiel vyššie pre začatie projektu."
-    close: "Zatvoriť"
-    more: "Viac"
     name: "Meno"
     updated: "Aktualizovaný"
     project_type: "Typ projektu"
     help_text: "Klikni na <strong>Vytvoriť Appku</strong> alebo <strong>Nakresliť niečo</strong> a vytvor nový projekt!<br/> Kedykoľvek sa môžeš vrátiť späť a pokračovať v práci na svojom projekte."
     need_help: "Potrebujete pomôcť so štartom?"
     thumbnail_help: "Nevidíte správny obrázok vášho projektu? Spustite Vašu aplikáciu pre vygenerovanie nového obrázku. Môže trvať až niekoľko hodín, kým sa obrázok aktualizuje na celej stránke."
-    really_delete: 'Vymazať?'
-    delete_yes: 'Áno'
-    delete_no: 'Nie'
     saved: "Uložené"
     not_saved: "Neuložené"
-    cancel: 'Zrušiť'
-    delete_confirm_title: Naozaj chcete odstrániť tento projekt?
-    delete_confirm_text: "Vymazaním tohto projektu sa projekt navždy zmaže aj z tvojho zoznamu Moje Projekty. Nikto, s kým si zdieľal odkaz, si už tvoj projekt nebude môcť pozrieť."
     view_all: 'Zobraziť Moje Projekty'
     remix: 'Remix'
     click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"

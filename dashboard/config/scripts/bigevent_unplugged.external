@@ -5,7 +5,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # The Big Event
 
-In computer science, events are actions that a computer monitors. In this lesson, the teacher will press buttons on a remote and students will react differently depending on which button is pressed.
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.youtube.com/embed/XoApWo-IrI4"  frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"n></iframe></div>
+In computer science, events are actions that a computer monitors. In this lesson react differently depending on which button is pressed.
 MARKDOWN
