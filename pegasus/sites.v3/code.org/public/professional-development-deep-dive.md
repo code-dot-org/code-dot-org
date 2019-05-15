@@ -4,71 +4,94 @@ video_player: false
 theme: responsive
 ---
 # CS Fundamentals: Deep Dive
-Code.org’s <a href="https://code.org/educate/curriculum/elementary-school", target=_"blank">CS Fundamentals </a> curriculum and professional learning program has made a big splash with over _______ educators teaching our K-5 courses to over _____ students. *This is a tremendous step towards ensuring every student in every school has access to computer science education.*
 
-We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in!
+Schools and teachers have asked us to expand our most popular professional learning program. Over 85,000 educators have attended Intro workshops for our <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> curriculum, rating it 4.8 out of 5 stars, and we want to help you go further.
 
-## What is the CS Fundamentals Deep Dive Workshop?
-The CS Fundamentals Deep Dive Workshop is our newest one-day professional development workshop where educators can take a deep dive into course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
+We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in! Through this workshop, educators will explore course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
 
-Deep Dive Workshops are open to educators with some experience teaching CS Fundamentals. Attending a Code.org Intro workshop is not required prerequisite.
+[Register](#register) for a public workshop or [set up](#setup) a private workshop for your school today!
 
-Image
+<a name="questions"></a>
+## Learn More
+Click on the questions below to learn more about what Deep Dive workshops have to offer! Looking for a resource to share with your teacher or administrator about the Deep Dive workshops? Download a flyer <a href="https://drive.google.com/open?id=1FjuKALA4saetJOQtUdHMJ6HbmBEly7Kp" target="blank"> here</a>.
 
-Not sure where to start? See a comparison of our two workshops offerings here.
+<details>
+  <summary>**Who should attend?**</summary>
+  <p>
+  <br/>
+  Workshops are open to any elementary school educators who taught some of Code.org’s <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> courses. Attending a Code.org Intro workshop is not a required prerequisite.
 
-## What will teachers learn in a Deep Dive Workshop?
+  If you’ve already started teaching CS Fundamentals, we recommend starting with the Deep Dive workshop. If you have not yet begun teaching, we recommend our Intro workshop. See a comparison of our two workshops offerings <a href="https://drive.google.com/open?id=1eiJw35CLX_yxTwmUkAj-4Ps4EvDjdjxh" target="blank"> here</a>. Classroom teachers, librarians, tech teachers, and other educators are all welcome!
 
-At the end of the Deep Dive workshop, teachers will *know:*
-- The details, philosophy, values, and rationale behind how the CS Fundamentals course is structured.
-- The intended approach to teaching CS Fundamentals, including specific classroom practices, and the division of responsibility between students and teachers.
+</p>
+</details>
 
-At the end of the workshop, teachers will *have:*
-- A plan for offering more of the CS Fundamentals course.
-- Strategies for addressing roadblocks to implementation, including any specific issues experienced in lessons taught thus far.
-- Ideas for fostering and developing a strong classroom rapport that nurtures learners of all types.
-- A deepened sense of community with CS Fundamentals teachers and a plan for keeping in touch with other teachers in the future.
-- Ongoing support through the Code.org teacher forum and online support.
-- A certificate of completion.
-- Code.org swag!
+<details>
+  <summary>**How does the workshop transform teacher practice?**</summary>
+  <p>
+  <br/>
+  Developed with Code.org’s <a href="https://code.org/educate/professional-learning/values" target="blank"> professional learning values</a> in mind, the 7-hour Deep Dive workshop provides teachers with a hands-on learning experience with other like-minded teachers. Teachers are given the space to work through the individual challenges in carefully crafted sessions led by experienced facilitators, most of whom were (and often still are) classroom teachers.
 
-Looking for a resource to share with your teacher or administrator about the Deep Dive workshops? Download One-Pager Here.
+  Teachers will leave their Deep Dive workshop not only with an understanding of the details, philosophy, values, and rationale behind how the CS Fundamentals course is structured but also with a *customized plan* for how to implement more of the CS Fundamentals courses. Teachers will have ideas for fostering and developing a strong classroom rapport that nurtures learners of all types and *strategies for addressing roadblocks to implementation*. Ongoing support through the Code.org teacher forum and online support after the workshop will continue to build a *strong community of practice and support* for participating teachers.
 
-## How does the Deep Dive Workshop help my school?*
+</p>
+</details>
 
-*Supports a Computer Science K-12 Pathway*
-CS Fundamentals (for elementary students, ages 4-11) provides 6 courses (A-F); each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. When these six CS Fundamentals courses are implemented successfully in a school, they can become an important part of a district’s K-12 pathway, which can include Code.org’s middle school and high school programs as well.
+<details>
+  <summary>**How does the workshop support a computer science K-12 pathway?**</summary>
+  <p>
+  <br/>
+  When the six CS Fundamentals’ six courses (A-F)  are implemented successfully in a school, they can become an important part of a district’s K-12 pathway. A potential K-12 pathway using Code.org curricula might have 1) <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> in elementary school grades, 2) <a href="https://code.org/educate/curriculum/middle-school" target="blank">CS Discoveries</a> offered in middle school grades, and 3) <a href="https://code.org/educate/curriculum/high-school" target="blank">CS Principles </a> offered in the high school grades.
 
-Deep Dive workshops can be a key strategy to ensure CS Fundamentals curriculum is successfully established as part of a district’s K-12 computer science pathway.  The Intro Workshop is a foundational introduction to the CS Fundamentals curriculum and a great way to support teachers getting started; and the Deep Dive workshop can get them to the finish line. Teachers who complete the Deep Dive workshop will not only leave with a plan for offering more of the CS Fundamentals course, but also connections to a community of support that will help them execute this plan.
+  Deep Dive workshops can be a key strategy to ensure the first part of that pathway, CS Fundamentals, is successfully established. The Intro Workshop is a foundational introduction to the CS Fundamentals curriculum and a great way to support teachers getting started; and the Deep Dive workshop can get them to the finish line. Teachers who complete the Deep Dive workshop will not only leave with a plan for offering more of the CS Fundamentals course, but also connections to a community of support that will help them execute this plan.
 
-Image  
+</p>
+</details>
 
-*Supports Your School’s Commitment to Equity*
-Code.org believes that acknowledging and actively addressing the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students. Professional learning plays an essential role in helping educators identify and address equity gaps in their classrooms and schools. The Deep Dive workshop will support teachers in implementing equitable teaching practices and help ensure computer science is accessible to every student in your schools.
+<details>
+  <summary>**How does the workshop support my school’s commitment to equity?**</summary>
+  <p>
+  <br/>
+  Code.org believes that acknowledging and actively addressing the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students. Professional learning plays an essential role in helping educators identify and address equity gaps in their classrooms and schools. Bringing a Deep Dive workshop to your school, or encouraging your teachers to attend a workshop, will support teachers in implementing equitable teaching practices and help ensure computer science is accessible to every student in your schools.
+</p>
+</details>
 
-button
+<details>
+  <summary>**How much does a workshop cost?**</summary>
+  <p>
+  <br/>
+  Costs will vary across the country. [contact your Regional Partner](#contact) to find the cost in your area.
 
-*Aligns to ESSA Professional Learning Definitions*
-Not sure we'll include this section yet....
+  We believe that local support is critical for success - we’ve partnered with a network of Regional Partners and local facilitators to work with your school. Code.org provides grant funding to help subsidize the costs of the program and to ensure you can use the curriculum & tools forever at no cost.
 
-## Register for a Deep Dive Workshop
+  Grant funding from our donors and other local support allows our partners to offer the CS Fundamentals: Deep Dive workshop at substantial **discounts**. They are also able to offer **scholarships** and **group discounts**.
+<br/>
+
+</p>
+</details>
+
+
+<a id="register"></a>
+<br/>
+## Register for a workshop
 Look at the map below to find the next upcoming CS Fundamentals: Deep Dive workshop in your region. Workshops are available year round, because CS Fundamentals courses can be implemented at any point in the school year. Check back often as new workshops will continue to be added throughout the year as Deep Dive launches throughout the country starting in June 2019.
 
 map
 
-If you can’t find a workshop, and you’re in the U.S., contact your Regional Partner. They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
+If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
+</p>
 
-button    
 
-## What does the program cost?
-Code.org has received generous grants and funding from our donors that allow us to commit to offering our curriculum at no cost, forever. In addition, we have secured funding for our Regional Partners to support the start up costs for bringing teacher professional development programs to communities across the country. Code.org Regional Partners are the key to our success - they provide customization and connections to ensure that schools across the country have turnkey computer science professional development solutions that align to their local context.
+<a id="setup"></a>
+<br/>
+## Set up a private workshop
 
-As the initial grant funding for the start up costs comes to an end, Code.org is working with Regional Partners to cultivate sustainable, long-term funding solutions to sustain high quality programming for years to come. These solutions include securing donors to fund workshops, as well as working with schools and districts to tap into available funding (state or other sources) to pay for teacher training.
+Support all your teachers with a private group workshop on a Professional Development (PD) day or Saturday. Our Regional Partners can come to your school to help your teachers work together to understand the implementation challenges they face in teaching CS Fundamentals.
 
-The value of the one-day Deep Dive workshop is $300/person, which includes a 1-day (7 hour) professional development workshop hosted by a Code.org Regional Partner and led by a Code.org-trained facilitator, a completion certificate, and Code.org swag.
+If you’d like to set up a private workshop and you’re in the U.S., [contact your Regional Partner](#contact).
 
-Actual costs to the school/district/teacher will vary. Most Regional Partners will be able to offer substantial discounts by leveraging local resources and offering group discount pricing. In addition in all regions of the country there will be Code.org scholarships available to schools and teachers that may need them so they may attend at no cost.
+<a id="contact"></a>
+<br/>
+## Contact your Regional Partners
 
-button   
-
-BOTTOM BANNER?
+<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "professional-development-deep-dive"%>
