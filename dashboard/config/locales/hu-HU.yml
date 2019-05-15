@@ -783,7 +783,6 @@ hu:
     new: Új létrehozása
     rename: Átnevezés
     save: Mentés
-    delete: Törlés
     import: Importálás
     share_link_import_bad_link_header: A megosztási hivatkozást a rendszer nem ismerte
       fel
@@ -794,7 +793,6 @@ hu:
     share_link_import_error_body: Hiba történt a megosztási hivatkozás importálása
       során. Próbáld újra!
     exit: Vissza a tanfolyamhoz
-    my_projects: Projektjeim
     project_gallery: Projektek
     publish: Közzétesz
     unpublish: Közzététel visszavonása
@@ -802,8 +800,6 @@ hu:
     share_title: A projekt megosztása
     share_copy_link: 'A hivatkozás másolása:'
     embed: Beágyaz
-    close: Bezár
-    more: Mégtöbb
     name: Név
     updated: Frissítve
     project_type: Projekt típusa
@@ -811,16 +807,8 @@ hu:
       feliratokra egy új "Játék a Laborban" vagy "Művész" projekt létrehozásához!<br/>Bármikor
       vissza tudsz térni és folytatni a munkát a projektjeiden.
     need_help: Szükséged van segítségre a kezdéshez?
-    really_delete: Biztos törölni akarod?
-    delete_yes: Igen
-    delete_no: Nem
     saved: Mentve
     not_saved: Nincs mentve
-    cancel: Mégsem
-    delete_confirm_title: Biztosan törlöd ezt a projektet?
-    delete_confirm_text: A projekt törlése véglegesen eltávolítja azt a saját projektek
-      listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni
-      megtekinteni a projektet.
     view_all: Projektjeim megtekintése
     remix: Remix
     click_to_remix: Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!

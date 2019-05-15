@@ -675,15 +675,11 @@ ca:
     new: Crea nou
     rename: Canviar el nom
     save: Desa
-    delete: Elimina
     exit: Tornar al curs
-    my_projects: Els meus projectes
     project_gallery: Projectes
     share: Comparteix
     share_title: Compartir el teu projecte
     share_copy_link: 'Copia l''enllaç:'
-    close: Tancar
-    more: Més
     name: Nom
     updated: Actualitzat
     project_type: Tipus de projecte
@@ -691,16 +687,8 @@ ca:
       a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
       continuar els projectes en qualsevol moment.
     need_help: Necessita ajuda per començar?
-    really_delete: Vols suprimir?
-    delete_yes: Sí
-    delete_no: 'No'
     saved: Desat
     not_saved: No desat
-    cancel: Cancel·lar
-    delete_confirm_title: Esteu segur que voleu suprimir aquest projecte?
-    delete_confirm_text: Esborrar el teu projecte l'eliminarà permanentment de la
-      llista de Els meus projectes. Aquells amb qui hagis compartit l'enllaç ja no
-      podran veure el teu projecte.
     view_all: Mostra els meus projectes
     remix: Remescla
     click_to_remix: Feu clic a "Remix" per iniciar la teva pròpia versió!

@@ -830,7 +830,7 @@ ru:
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
-              name: Основы информатики
+              name: Основы программирования
             Getting Started:
               name: Приступить к работе
             'Mastering the Basics: Conditionals':
@@ -1300,7 +1300,7 @@ ru:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Игровая лаборатория
+              name: Лаборатория игр
         CSDU2-Draft:
           stages:
             Introduction to HTML:
@@ -2592,6 +2592,10 @@ ru:
           stages:
             Artist:
               name: Художник
+        aquatic:
+          title: 'Майнкрафт: Водное путешествие'
+          description_short: Используйте навыки креативности и решения проблем, чтобы
+            изучать и строить подводные миры с помощью программирования!
         dance--draft:
           stages:
             Dance Party:
@@ -2690,7 +2694,7 @@ ru:
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             While Loops in Farmer:
               name: Цикл while в Фермере
             Conditionals with Cards:
@@ -2713,6 +2717,8 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Dance Party:
+              name: Танцевальная вечеринка
         andrea-test:
           stages:
             'null':
@@ -2734,7 +2740,7 @@ ru:
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
         gamelab:
-          title: Игровая лаборатория
+          title: Лаборатория игр
         coursea-2019:
           description_audience: 'Возраст: 4-7'
           stages:
@@ -2774,8 +2780,6 @@ ru:
               name: Вперед, вперед
             Your Digital Footprint:
               name: Твой цифровой след
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
