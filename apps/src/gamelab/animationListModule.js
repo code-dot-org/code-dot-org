@@ -655,7 +655,7 @@ function loadAnimationFromSource(key, callback) {
  */
 export function addAnimationAction(key, props, index) {
   // Spritelab projects add animation at the beginning of animation list
-  if (index >= 0) {
+  if (index === 0) {
     return {
       type: ADD_ANIMATION_AT,
       key,
