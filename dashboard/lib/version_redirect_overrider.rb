@@ -1,3 +1,13 @@
+# A module for overriding course and script versioning redirects.
+#
+# These overrides are stored as an array of course/script names
+# in the Rails session as follows:
+# Course overrides: session[:course_version_overrides] => ['csd-2017']
+# Script overrides: session[:script_version_overrides] => ['coursea-2017']
+#
+# Overrides are checked when a user visits courses#show, scripts#show, and script_levels#show.
+# Given the example above, a user would *not* be redirected to a different version when
+# visiting a course (optional), script, or level in csd-2017 or coursea-2017.
 module VersionRedirectOverrider
   def self.script_version_overrides(session)
     session[:script_version_overrides] ||= []
