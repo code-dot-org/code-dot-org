@@ -4,4 +4,6 @@ use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # My Loopy Robotic Friends
+
+Make your programs more shorter using loops!
 MARKDOWN
