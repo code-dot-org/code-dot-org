@@ -364,7 +364,7 @@ export function appendBlankFrame() {
 }
 
 /**
- * Add an animation to the project (at the end of the list).
+ * Add an animation to the project (at the end of the list, unless a spritelab project).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} props
  */
@@ -372,7 +372,11 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch(addAnimationAction(key, {...props, looping: true}));
+    if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      dispatch(addAnimationAction(key, {...props, looping: true}, 0));
+    } else {
+      dispatch(addAnimationAction(key, {...props, looping: true}));
+    }
     dispatch(
       loadAnimationFromSource(key, () => {
         dispatch(selectAnimation(key));
@@ -402,13 +406,17 @@ export function appendCustomFrames(props) {
 }
 
 /**
- * Add a library animation to the project.
+ * Add a library animation to the project (at the end of the list, unless a spritelab project).
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props) {
   return (dispatch, getState) => {
     const key = createUuid();
-    dispatch(addAnimationAction(key, props));
+    if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      dispatch(addAnimationAction(key, props, 0));
+    } else {
+      dispatch(addAnimationAction(key, props));
+    }
     dispatch(
       loadAnimationFromSource(key, () => {
         dispatch(selectAnimation(key));
@@ -646,9 +654,19 @@ function loadAnimationFromSource(key, callback) {
  * Action creator for adding an animation.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
+ * @param {number} [index]
  * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
-export function addAnimationAction(key, props) {
+export function addAnimationAction(key, props, index) {
+  // Spritelab projects add animation at the beginning of animation list
+  if (index >= 0) {
+    return {
+      type: ADD_ANIMATION_AT,
+      key,
+      props,
+      index
+    };
+  }
   return {
     type: ADD_ANIMATION,
     key,
