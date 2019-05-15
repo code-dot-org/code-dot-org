@@ -27,6 +27,17 @@ export class SelectedStudentInfo extends React.Component {
     return (
       <div style={styles.main}>
         <div>{selectedStudent.name}</div>
+        {level.paired && (
+          <div>
+            <div>{i18n.workedWith()}</div>
+            {level.navigators.length > 0 && (
+              <div>{`Partner: ${level.navigators[0]}`}</div>
+            )}
+            {level.drivers.length > 0 && (
+              <div>{`Logged in: ${level.drivers[0]}`}</div>
+            )}
+          </div>
+        )}
         <TeacherPanelProgressBubble
           level={level}
           inMiniRubricExperiment={inMiniRubricExperiment}
