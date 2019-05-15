@@ -360,6 +360,7 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
         level_prop['name'] = name
       end
 
