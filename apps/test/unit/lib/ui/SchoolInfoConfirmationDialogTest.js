@@ -2,11 +2,7 @@ import React from 'react';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import Button from '../../../../src/templates/Button';
-import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
+import {Body} from '@cdo/apps/templates/Dialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
 
@@ -121,29 +117,23 @@ describe('SchoolInfoConfirmationDialog', () => {
         />
       );
 
-      it('calls handleClickYes when the yes button is clicked', () => {
-        const fakeSchoolInfoId = 1;
-        const handleClickYes = sinon.spy();
+      it('calls handleYes', () => {
+        const fakeScriptId = 1;
+        // const handleClickUpdate = sinon.spy();
+        const wrapperInstance = wrapper.instance();
+        sinon.spy(wrapperInstance, 'handleClickUpdate');
+        wrapper.instance().setState({showSchoolInterstitial: false});
+        console.log('******', wrapper.html());
+        wrapper.find('div#first-button').simulate('click');
+
         server.respondWith(
           'PATCH',
-          `/api/v1/user_school_infos/${fakeSchoolInfoId}/
-        update_last_confirmation_date`,
-          [200, {'Content-Type': 'application/json'}, '']
+          `/api/v1/user_school_infos/${fakeScriptId}/update_end_date`,
+          [200, {}, JSON.stringify({response: 'ok'})]
         );
-
-        // const handleClickYesStub = sinon.stub(
-        //   wrapper.instance(),
-        //   'handleClickYes'
-        // );
-
-        // handleClickYesStub.callsFake(() => {});
-        // wrapper.instance().setState({showSchoolInterstitial: false});
-        // wrapper
-        //   .find('Button')
-        //   .at(0)
-        //   .simulate('click');
         server.respond();
-        expect(handleClickYes).to.have.been.calledOnce;
+        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
+        expect(wrapper.state('showSchoolInterstitial')).to.be.true;
       });
     });
   });
