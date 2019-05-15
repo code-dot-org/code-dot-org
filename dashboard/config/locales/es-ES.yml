@@ -335,12 +335,6 @@ es:
     header:
       finished_hoc: He terminado mi Hora de Código
       sign_in_to_save: Inicia sesión para guardar tu progreso
-      free_play:
-        playlab: Hacer una aplicación para el laboratorio de juegos
-        artist: Dibuja Algo
-        applab: Hacer una aplicación para el Laboratorio de Aplicaciones
-        gamelab: Hacer un proyecto de laboratorio de Juegos
-        weblab: Hacer un proyecto de laboratorio de Juegos (beta)
       my_dashboard: Mi Panel de Control
       course_catalog: Catalogo de cursos
       project_gallery: Proyectos
@@ -381,6 +375,7 @@ es:
       district_dashboard: Tablero de distrito
       label: Hola %{username}
       stats: Code Studio
+      my_projects: Mis proyectos
       settings: Mi cuenta
       logout: Cerrar sesión
       signin: Iniciar Sesión

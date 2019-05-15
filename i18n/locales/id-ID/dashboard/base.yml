@@ -274,12 +274,6 @@ id:
     header:
       finished_hoc: "Saya telah menyelesaikan jam kode!"
       sign_in_to_save: 'Masuk untuk mencatat kemajuan belajar'
-      free_play:
-        playlab: 'Buat sebuah aplikasi Lab Bermain'
-        artist: 'Gambarlah Sesuatu'
-        applab: 'Buat sebuah aplikasi Lab Aplikasi'
-        gamelab: 'Buat sebuah proyek Lab Permainan'
-        weblab: 'Membuat proyek Lab Web (beta)'
       my_dashboard: "Dasbor saya"
       course_catalog: "Katalog kursus"
       project_gallery: "Proyek"

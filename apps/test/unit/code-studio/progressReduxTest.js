@@ -55,7 +55,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
         previous: false,
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: true
       },
       {
         ids: [323],
@@ -66,7 +67,8 @@ const stageData = [
         title: 1,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [322],
@@ -78,7 +80,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3',
         next: [2, 1],
         is_concept_level: false,
-        bonus: true
+        bonus: true,
+        display_as_unplugged: false
       }
     ],
     lesson_plan_html_url:
@@ -108,7 +111,8 @@ const stageData = [
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1',
         previous: [1, 3],
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [339],
@@ -119,7 +123,8 @@ const stageData = [
         title: 2,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       },
       {
         ids: [341],
@@ -130,7 +135,8 @@ const stageData = [
         title: 3,
         url: 'http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3',
         is_concept_level: false,
-        bonus: false
+        bonus: false,
+        display_as_unplugged: false
       }
     ],
     lesson_plan_html_url:
@@ -765,12 +771,14 @@ describe('progressReduxTest', () => {
               {
                 kind: LevelKind.unplugged,
                 title: 'Unplugged Activity',
-                ids: [123]
+                ids: [123],
+                display_as_unplugged: true
               },
               {
                 kind: LevelKind.puzzle,
                 title: 1,
-                ids: [124]
+                ids: [124],
+                display_as_unplugged: false
               }
             ]
           }

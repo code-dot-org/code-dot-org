@@ -13,7 +13,7 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
@@ -25,7 +25,7 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
@@ -37,7 +37,7 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
@@ -49,7 +49,7 @@ Feature: Lab share page logo
     And I navigate to the share URL
     And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
@@ -64,7 +64,7 @@ Feature: Lab share page logo
     And I reload the page
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://code.org/"
 
   @no_mobile
@@ -79,7 +79,7 @@ Feature: Lab share page logo
     And I reload the page
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
-    And I press "logo-img" to load a new page
+    And I press the first "#logo-img img" element to load a new page
     And check that I am on "http://code.org/"
 
   @only_mobile

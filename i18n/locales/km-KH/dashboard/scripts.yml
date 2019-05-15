@@ -287,10 +287,8 @@ km:
           stages:
             The Artist:
               name: វិចិត្រករ
-        coursee-2019:
-          stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
+            Internet:
+              name: អ៊ីនធឺណិត
         andrea-test:
           stages:
             'null':

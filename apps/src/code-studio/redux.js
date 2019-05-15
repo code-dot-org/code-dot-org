@@ -1,5 +1,6 @@
 /* eslint no-unused-vars: "error" */
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import header from './headerRedux';
 import progress from './progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stageLock from './stageLockRedux';
@@ -12,6 +13,7 @@ import publishDialog from '../templates/projects/publishDialog/publishDialogRedu
 import verifiedTeacher from './verifiedTeacherRedux';
 
 registerReducers({
+  header,
   progress,
   teacherSections,
   stageLock,
