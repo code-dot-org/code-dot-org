@@ -1103,7 +1103,6 @@ id:
     new: Buat baru
     rename: Ubah Nama
     save: Simpan
-    delete: Hapus
     import: Impor
     share_link_import_bad_link_header: Tautan berbagi tidak dikenali
     share_link_import_bad_link_body: 'Kami tidak bisa mengimpor tautan berbagi tersebut.
@@ -1113,7 +1112,6 @@ id:
     share_link_import_error_body: Ada masalah saat mengimpor tautan berbagi tersebut.
       Coba lagi.
     exit: Kembali ke Kursus
-    my_projects: Project Saya
     project_gallery: Proyek
     publish: Publikasikan
     unpublish: Tidak dipublikasikan
@@ -1128,8 +1126,6 @@ id:
     advanced_share: Tampilkan opsi lanjutan
     no_projects: Anda saat ini tidak memiliki proyek. Klik salah satu tombol di atas
       untuk memulai sebuah proyek.
-    close: Tutup
-    more: Lebih
     name: Nama
     updated: Diperbarui
     project_type: Jenis proyek
@@ -1140,16 +1136,8 @@ id:
     thumbnail_help: Tidak melihat thumbnail yang benar untuk proyek anda? Jalankan
       aplikasi anda untuk menghasilkan gambar mini baru. Catatan bahwa proses ini
       memerlukan beberapa jam agar thumbnail dapat disegarkan di mana-mana.
-    really_delete: Hapus?
-    delete_yes: Ya
-    delete_no: Tidak
     saved: Disimpan
     not_saved: Tidak disimpan
-    cancel: Batal
-    delete_confirm_title: Apakah Anda yakin Anda ingin menghapus proyek ini?
-    delete_confirm_text: Saat menghapus proyek Anda akan menghapusnya secara permanen
-      dari daftar proyek anda. Siapa saja yang telah Anda bagikan link tidak akan
-      lagi dapat melihat proyek Anda.
     view_all: Lihat proyek saya
     remix: Remix
     click_to_remix: Klik 'Remix' untuk mematikan putaran versi Anda sendiri!

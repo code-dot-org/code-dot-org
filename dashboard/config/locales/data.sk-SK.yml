@@ -431,8 +431,8 @@ sk:
           "Pripraviť sa, pozor, štart!"? Nezabudni po tom, ako stlačíš "Spustiť" kliknúť
           na Antona, aby si si svoj program otestoval!
         studio_gumball_move_events: Darwin súťaží v zbieraní vlajok! Pomôž mu v zbieraní
-          pridaním bloku "posuň sa" ku každej z akcií. Keď budeš hotový, stlač "Spustiť"
-          a skús pozbierať všetky vlajky.
+          pridaním bloku "posuň sa" ku každej udalosti "keď šípka...". Keď skončíš,
+          stlač "Spustiť" a skús pozbierať všetky vlajky.
         studio_gumball_sound_and_points: Napísali sme za teba skoro všetok kód, ktorý
           hýbe Antonom (postava 2) doľava a doprava, ako aj kód, ktorý umožní hýbať
           sa Banánovému Joe (postava 1) po obrazovke. Dokonči kód a pridaj k udalosti

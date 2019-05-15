@@ -865,7 +865,7 @@ es-MX:
       gamelab_makeNewGroup:
         text: crear un nuevo grupo
       gamelab_makeNewSpriteAnon:
-        text: crear un nuevo sprite {ANIMATION\_NAME} en {LOCATION}
+        text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1446,9 +1446,9 @@ es-MX:
         text: "crear un nuevo sprite llamado {NAME} \n con el disfraz {COSTUME} \n
           en {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: crear un nuevo sprite {ANIMATION\_NAME} en {LOCATION}
+        text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab crear un nuevo sprite {ANIMATION\_NAME} en {LOCATION}
+        text: aalab crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           crear un nuevo grupo llamado {VAR}

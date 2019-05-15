@@ -28,7 +28,6 @@ Scenario: Toggle on Hidden Maze Level
   Given I create an authorized teacher-associated student named "Arya"
   Then I sign in as "Teacher_Arya"
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   And I wait to see ".uitest-togglehidden"
   Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
@@ -67,7 +66,6 @@ Scenario: Toggle on Lockable Level
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   Then I open the stage lock dialog
   Then I unlock the stage for students
 
@@ -112,7 +110,6 @@ Scenario: Toggle on Lockable Level with new teacher panel
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
-  And I select the first section
   Then I open the stage lock dialog
   Then I unlock the stage for students
 

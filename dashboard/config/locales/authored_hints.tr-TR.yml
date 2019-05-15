@@ -2005,7 +2005,7 @@ tr:
           PM.png) yalnızca bir tane kullanmanız gerekir .
         courseA_collector_loops_challenge2_a: |-
           Güney'e ilerlemeden önce patikada geriye gidebilirsin.
-           !\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
+           \!\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
       course1_collector_loops_challenge3_authored_hint:
         courseB_collector_loops_challenge1_b: "'Güney'e ilerle' ve 'hazine al' komutlarını
           dögü içinde tekrarlayarak başla. \n<xml>\n<block type=\"maze_moveSouth\"/><next>\n<block
@@ -5014,7 +5014,7 @@ tr:
           PM.png) yalnızca bir tane kullanmanız gerekir .
         courseA_collector_loops_challenge2_a: |-
           Güney'e ilerlemeden önce patikada geriye gidebilirsin.
-           !\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
+           \!\[] (<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21> PM.png)
       courseB_iceage_loops3_authored_hint:
         courseB_iceage_loops3_b: Tekrar etmek için, bir 'tekrar' döngüsü sürükle,
           sonra içine istediğin bloğu koy.
