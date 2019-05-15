@@ -10,118 +10,119 @@ script_announcements [{"notice"=>"Are you signed up for the AP exam?", "details"
 family_name 'csp1'
 version_year '2018'
 is_stable true
+project_sharing true
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
-assessment 'csp-pre-survey-2017-levelgroup_2018'
+level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
-named_level 'CSP U1L01 SFLP'
-named_level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything'
+level 'CSP U1L01 SFLP', named: true
+level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything', named: true
 variants
-  assessment 'csp_socialBelonging_control_2018', active: false, progression: 'Reflection: starting out in computer science'
-  assessment 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_control_2018', active: false, progression: 'Reflection: starting out in computer science', assessment: true
+  level 'csp_socialBelonging_intervention_2018', progression: 'Reflection: starting out in computer science', assessment: true
 endvariants
 
 stage 'Sending Binary Messages', flex_category: 'csp1_1'
-named_level 'CSP U1L02 SFLP'
-assessment 'U1L2 Multiple Choice Assessment Question_2018', progression: 'Check Your Understanding'
-assessment 'U1L3 Free response reflection question_2018', progression: 'Check Your Understanding'
-assessment 'U1L2 Free response assessment question_2018', progression: 'Check Your Understanding'
-assessment 'U1L3 Free Response_2018', progression: 'Check Your Understanding'
+level 'CSP U1L02 SFLP', named: true
+level 'U1L2 Multiple Choice Assessment Question_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L3 Free response reflection question_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L2 Free response assessment question_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L3 Free Response_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Sending Binary Messages with the Internet Simulator', flex_category: 'csp1_1'
-named_level 'CSP U1L03 SFLP'
-named_level 'Internet Simulator: Sending Binary Messages_2018', progression: 'Internet Simulator: Sending Binary Messages'
-named_level 'The Internet: Wires, Cables, and Wifi_2018', progression: 'The Internet: Wires, Cables, and Wifi'
-assessment 'U1L4 Multiple Choice_2018', progression: 'Check Your Understanding'
-assessment 'U1L3 Multiple Choice_2018', progression: 'Check Your Understanding'
-assessment 'U1L4 Free Response Reflection_2018', progression: 'Check Your Understanding'
-assessment 'U1L5 Matching Assessment_2018', progression: 'Check Your Understanding'
+level 'CSP U1L03 SFLP', named: true
+level 'Internet Simulator: Sending Binary Messages_2018', progression: 'Internet Simulator: Sending Binary Messages', named: true
+level 'The Internet: Wires, Cables, and Wifi_2018', progression: 'The Internet: Wires, Cables, and Wifi', named: true
+level 'U1L4 Multiple Choice_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L3 Multiple Choice_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L4 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L5 Matching Assessment_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Number Systems', flex_category: 'csp1_1'
-named_level 'CSP U1L04 SFLP'
-assessment 'U1L6 Assessment multiple choice_2018', progression: 'Check Your Understanding'
-assessment 'U1L6 Free Response Reflection_2018', progression: 'Check Your Understanding'
+level 'CSP U1L04 SFLP', named: true
+level 'U1L6 Assessment multiple choice_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L6 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Binary Numbers', flex_category: 'csp1_1'
-named_level 'CSP U1L05 SFLP'
-named_level 'Widget: Binary Odometer_2018', progression: 'Widget: Binary Odometer'
-assessment 'U1L7 Free Response Assessment_2018', progression: 'Check Your Understanding'
-assessment 'U1L7 Free Response Reflection_2018', progression: 'Check Your Understanding'
+level 'CSP U1L05 SFLP', named: true
+level 'Widget: Binary Odometer_2018', progression: 'Widget: Binary Odometer', named: true
+level 'U1L7 Free Response Assessment_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L7 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Sending Numbers', flex_category: 'csp1_1'
-named_level 'CSP U1L06 SFLP'
-named_level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet Simulator: Sending Numbers'
-assessment 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding'
-assessment 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding'
+level 'CSP U1L06 SFLP', named: true
+level 'Internet Simulator: Sending Numbers_2018', progression: 'Internet Simulator: Sending Numbers', named: true
+level 'U1L8 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L8 Multiple Choice_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Sending Text', flex_category: 'csp1_1'
-named_level 'CSP U1L07 SFLP'
-named_level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text'
-assessment 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U1L10 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Reflection Multiple Representations_2018', progression: 'Check Your Understanding'
-assessment 'U1L11 Abstraction Reflection_2018', progression: 'Check Your Understanding'
+level 'CSP U1L07 SFLP', named: true
+level 'Internet Simulator: Sending Text_2018', progression: 'Internet Simulator: Sending Text', named: true
+level 'U1L10 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L10 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L11 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L11 Reflection Multiple Representations_2018', progression: 'Check Your Understanding', assessment: true
+level 'U1L11 Abstraction Reflection_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Unit 1 Chapter 1 Assessment', lockable: true, flex_category: 'csp1_1'
-assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018'
+level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018', assessment: true
 
 stage 'The Internet', flex_category: 'csp1_2'
-named_level 'CSP U1L08 SFLP'
-named_level 'What is the Internet?_2018', progression: 'What is the Internet?'
-assessment 'U2L01 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U2L01 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U2L01 Assessment 3_2018', progression: 'Check Your Understanding'
-assessment 'U2L01 Assessment 4_2018', progression: 'Check Your Understanding'
-assessment 'csp-pulse-check-survey-1-levelgroup-U1Ch2_2018', progression: 'Quick Check-In'
+level 'CSP U1L08 SFLP', named: true
+level 'What is the Internet?_2018', progression: 'What is the Internet?', named: true
+level 'U2L01 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L01 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L01 Assessment 3_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L01 Assessment 4_2018', progression: 'Check Your Understanding', assessment: true
+level 'csp-pulse-check-survey-1-levelgroup-U1Ch2_2018', progression: 'Quick Check-In', assessment: true
 
 stage 'The Need for Addressing', flex_category: 'csp1_2'
-named_level 'CSP U1L09 SFLP'
-named_level 'Internet Simulator: Broadcast_2018', progression: 'Internet Simulator: Broadcast'
-named_level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS'
-assessment 'U2L02 Free Response Reflection_2018', progression: 'Check Your Understanding'
-assessment 'U2L02 Assessment 3_2018', progression: 'Check Your Understanding'
-assessment 'U2L02 Assessment 4_2018', progression: 'Check Your Understanding'
-assessment 'U2L02 Assessment 5_2018', progression: 'Check Your Understanding'
-assessment 'U2L3 Assessment 2_2018', progression: 'Check Your Understanding'
+level 'CSP U1L09 SFLP', named: true
+level 'Internet Simulator: Broadcast_2018', progression: 'Internet Simulator: Broadcast', named: true
+level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS', named: true
+level 'U2L02 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L02 Assessment 3_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L02 Assessment 4_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L02 Assessment 5_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L3 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Routers and Redundancy', flex_category: 'csp1_2'
-named_level 'CSP U1L10 SFLP'
-named_level 'Internet Simulator: Routers_2018', progression: 'Internet Simulator: Routers'
-assessment 'U2L04 Assessment1_2018', progression: 'Check Your Understanding'
-assessment 'U2L04 Assessment4_2018', progression: 'Check Your Understanding'
-assessment 'U2L04 Assessment5_2018', progression: 'Check Your Understanding'
-assessment 'U2L04 Assessment2_2018', progression: 'Check Your Understanding'
-assessment 'U2L04 Assessment3_2018', progression: 'Check Your Understanding'
+level 'CSP U1L10 SFLP', named: true
+level 'Internet Simulator: Routers_2018', progression: 'Internet Simulator: Routers', named: true
+level 'U2L04 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L04 Assessment4_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L04 Assessment5_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L04 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L04 Assessment3_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Packets and Making a Reliable Internet', flex_category: 'csp1_2'
-named_level 'CSP U1L11 SFLP'
-named_level 'Internet Simulator: Packets_2018', progression: 'Internet Simulator: Packets'
-named_level 'The Internet: Packets, Routing, and Reliability_2018', progression: 'The Internet: Packets, Routing, and Reliability'
-assessment 'U2L05 Reflection 1_2018', progression: 'Check Your Understanding'
-assessment 'U2L05 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U2L05 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U2L3 Assessment_2018', progression: 'Check Your Understanding'
+level 'CSP U1L11 SFLP', named: true
+level 'Internet Simulator: Packets_2018', progression: 'Internet Simulator: Packets', named: true
+level 'The Internet: Packets, Routing, and Reliability_2018', progression: 'The Internet: Packets, Routing, and Reliability', named: true
+level 'U2L05 Reflection 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L05 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L05 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L3 Assessment_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'The Need for DNS', flex_category: 'csp1_2'
-named_level 'CSP U1L12 SFLP'
-named_level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS'
-named_level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS'
-assessment 'U2L09 Assessment1_2018', progression: 'Check Your Understanding'
-assessment 'U2L09 Assessment2_2018', progression: 'Check Your Understanding'
-assessment 'U2L09 Free Response Wrap Up_2018', progression: 'Check Your Understanding'
-assessment 'U2L10 Assessment1_2018', progression: 'Check Your Understanding'
+level 'CSP U1L12 SFLP', named: true
+level 'Internet Simulator: DNS_2018', progression: 'Internet Simulator: DNS', named: true
+level 'The Internet: IP Addresses & DNS_2018', progression: 'The Internet: IP Addresses & DNS', named: true
+level 'U2L09 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L09 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L09 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L10 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'HTTP and Abstraction', flex_category: 'csp1_2'
-named_level 'CSP U1L13 SFLP'
-named_level 'The Internet: HTTP and HTML_2018', progression: 'The Internet: HTTP and HTML'
-assessment 'U2L11 Assessment 1_2018', progression: 'Check Your Understanding'
-assessment 'U2L11 Assessment 2_2018', progression: 'Check Your Understanding'
-assessment 'U2L11 Free Response_2018', progression: 'Check Your Understanding'
+level 'CSP U1L13 SFLP', named: true
+level 'The Internet: HTTP and HTML_2018', progression: 'The Internet: HTTP and HTML', named: true
+level 'U2L11 Assessment 1_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L11 Assessment 2_2018', progression: 'Check Your Understanding', assessment: true
+level 'U2L11 Free Response_2018', progression: 'Check Your Understanding', assessment: true
 
 stage 'Practice PT - The Internet and Society', flex_category: 'csp1_2'
-named_level 'CSP U1L14 SFLP'
+level 'CSP U1L14 SFLP', named: true
 
 stage 'Unit 1 Chapter 2 Assessment', lockable: true, flex_category: 'csp1_2'
-assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018'
+level 'CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018', assessment: true

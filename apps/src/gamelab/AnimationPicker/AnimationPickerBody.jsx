@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
 import color from '../../util/color';
-import {AnimationCategories} from '../constants';
+import {AnimationCategories, CostumeCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
+import spriteCostumeLibrary from '../spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import {searchAssets} from '../../code-studio/assets/searchAssets';
-import experiments from '@cdo/apps/util/experiments';
 import {connect} from 'react-redux';
 
 const MAX_SEARCH_RESULTS = 27;
@@ -73,10 +73,13 @@ class AnimationPickerBody extends React.Component {
   };
 
   animationCategoriesRendering() {
-    return Object.keys(AnimationCategories).map(category => (
+    let categories = this.props.spriteLab
+      ? CostumeCategories
+      : AnimationCategories;
+    return Object.keys(categories).map(category => (
       <AnimationPickerListItem
         key={category}
-        label={AnimationCategories[category]}
+        label={categories[category]}
         category={category}
         onClick={this.onCategoryChange}
       />
@@ -96,22 +99,27 @@ class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    let libraryManifest = this.props.spriteLab
+      ? spriteCostumeLibrary
+      : animationLibrary;
+    let categories = this.props.spriteLab
+      ? CostumeCategories
+      : AnimationCategories;
     let {results, pageCount} = searchAssets(
       this.state.searchQuery,
       this.state.categoryQuery,
-      animationLibrary,
+      libraryManifest,
       this.state.currentPage,
       MAX_SEARCH_RESULTS
     );
 
     // Hide the upload option for students in spritelab
-    let hideUploadOption =
-      experiments.isEnabled('sprite-costumes') && this.props.spriteLab;
+    let hideUploadOption = this.props.spriteLab;
 
     return (
       <div>
         <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
-        {this.props.is13Plus || (
+        {!this.props.is13Plus && !hideUploadOption && (
           <WarningLabel>{gamelabMsg.animationPicker_warning()}</WarningLabel>
         )}
         <AnimationPickerSearchBar
@@ -128,7 +136,7 @@ class AnimationPickerBody extends React.Component {
                 >
                   {'All categories > '}
                 </span>
-                <span>{AnimationCategories[this.state.categoryQuery]}</span>
+                <span>{categories[this.state.categoryQuery]}</span>
               </div>
             )}
             {(this.state.searchQuery !== '' ||

@@ -1,5 +1,3 @@
-# Brad 2018-11-15 Known crash on SafariYosemite
-@no_safari
 Feature: Dance Lab Age Filter
   Scenario: Song selector is visible and doesn't display pg13 songs for age < 13
     Given I create a young student named "Harry"
@@ -33,6 +31,7 @@ Feature: Dance Lab Age Filter
     Then I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/1?noautoplay=true&songfilter=on"
     And I wait for the page to fully load
     And I wait until I don't see selector "#p5_loading"
+    And I wait for the song selector to load
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment
@@ -104,6 +103,7 @@ Feature: Dance Lab Age Filter
     And I wait until current URL contains "/stage/37/puzzle/2"
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
+    And I wait for the song selector to load
     #Local PG-13 option should not be visible after filter in any environment
     And I do not see "synthesize" option in the dropdown "#song_selector"
     #Test PG-13 option should not be visible after filter in any environment

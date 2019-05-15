@@ -1024,37 +1024,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal atlanta.id, JSON.parse(@response.body).last['id']
   end
 
-  test 'Regional Partners can view associated Teachercon workshops' do
-    partner_name = REGIONAL_PARTNER_TC_MAPPING.keys.sample
-    partner = create(:regional_partner, name: partner_name)
-    user = create(:teacher)
-    create(:regional_partner_program_manager, regional_partner: partner, program_manager: user)
-    phoenix = create(
-      :pd_workshop,
-      course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
-      organizer: @organizer,
-      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-      location_address: "Phoenix"
-    )
-    atlanta = create(
-      :pd_workshop,
-      course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
-      organizer: @organizer,
-      subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-      location_address: "Atlanta"
-    )
-    associated_workshop = get_matching_teachercon(partner) == TC_PHOENIX ? phoenix : atlanta
-
-    sign_in user
-
-    get :upcoming_teachercons
-    assert_response :success
-    assert_equal 1, JSON.parse(@response.body).length
-    assert_equal associated_workshop.id, JSON.parse(@response.body).first['id']
-  end
-
   test 'Teachercon workshops can be filtered by course' do
     csd = create(
       :pd_workshop,

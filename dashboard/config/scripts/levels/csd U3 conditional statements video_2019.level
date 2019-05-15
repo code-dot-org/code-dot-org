@@ -14,7 +14,7 @@
     "name_suffix": "_2019",
     "encrypted": "false",
     "long_instructions": "## Question to Consider\r\n\r\n* When would you want to use an if statement?",
-    "encrypted_teacher_markdown": "J6hgYYC6Y8KN70lRIyQDN7ra0IP99J1Mdj1u2YMvmH7CUTJztuMcx5y5GtKK\nzAYWoLGBfyxYeg3sARWvd8YAZMsQL909rgGLWoPciizL8DBzSONKdZp29CmJ\n57H5Vnv4q6bedKBe3kcVmSx3Geopvbd5jKXuiLWEjq1ekM9Xy45IyYd3NccT\n8mmZZ82BWPKJ/0j0w13u2HqKjfNnIFfoJwMY9R/Y+djQYpVAF1KMwoI9lD6N\nWlHmVUeExjbUXbwG6wquRnYDhk6BFPzJHSFmsg/mGJ7qq6o4KT0nBxBPgjDo\n3cgpgm/Nno2pS0VrUeUP2a9ERhabBZTTCNuct5ANI99CFauMlob5U0Ytlk9M\nZKXL3l5ktwQ6G0nkJxXpKN4+Q2sH/YuSnL227KIVms9bULcj/YPB7Nh7uFHX\njnwEzjPCnB78yWMNMBIEvO2ay36LKGtvHDl00Qr8nJB1Wr+8t8fYlu+E/4Cv\nrSuIEPYWMaoXaHr35XQ/WNFmXZK8iz7T3vsoBzEwAd3PTrfmirDexk/D4dHW\nHUXmrMVKKkDQ31jCAhI/mbPKsMYPZ5NTK+2j3EAosx7ZoxsAU+4ZcfqAhHaQ\n8pwXsN4+8bskSJ01ApofnIsDKg736J+YRJJclZo8N2NldCKvsv/0EECpBMeB\n5Gy1JhnBN4WG3L4vTzGFiFK21mmdVmjxHm5ECbpR3wXzysYwK9MKs3dM6Tdi\nYRZNtqX4ZBiET3TXImfPGl0/pIexTIAWHij7Utenvvq/jFkss2Hpm7HdMJMZ\n4W+b7ae0CPNi4gUKnWzcgXWFK7gqxwJgCgRJ91yyJbzu33Cp0kiU\n"
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations.  Encourage students to think of particular situations in which this would be the case.  For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level.  Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
   },
   "published": true,
   "notes": "",

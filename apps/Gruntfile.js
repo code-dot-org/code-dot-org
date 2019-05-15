@@ -504,6 +504,8 @@ describe('entry tests', () => {
     'levels/_external_link':
       './src/sites/studio/pages/levels/_external_link.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'levels/_teacher_panel':
+      './src/sites/studio/pages/levels/_teacher_panel.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
@@ -515,6 +517,7 @@ describe('entry tests', () => {
     raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',

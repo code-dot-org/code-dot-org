@@ -10,18 +10,22 @@ class Hamburger
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
 
+  def self.get_divider_visibility(above_section_visibility, below_section_visibility)
+    return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
+    return SHOW_MOBILE if above_section_visibility == SHOW_MOBILE || below_section_visibility == SHOW_MOBILE
+    return SHOW_ALWAYS
+  end
+
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
     show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
-    show_help_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
-      show_help_options = SHOW_ALWAYS
 
       if options[:user_type] == "teacher"
         show_teacher_options = SHOW_ALWAYS
@@ -52,20 +56,13 @@ class Hamburger
       if options[:language] == "en"
         # We want to show the pegasus options.  They're in the hamburger for desktop
         # if they didn't fit on the header, or they're just in it for mobile if they did.
-        if options[:user_type] == "teacher" || options[:user_type] == "student"
-          show_pegasus_options = SHOW_ALWAYS
-          show_help_options = SHOW_ALWAYS
-        else
-          show_pegasus_options = SHOW_MOBILE
-          show_help_options = SHOW_MOBILE
-        end
-      else
-        show_help_options = SHOW_ALWAYS
+        show_pegasus_options =
+          (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
       end
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options, show_help_options]
+    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -82,7 +79,6 @@ class Hamburger
       show_student_options: show_student_options,
       show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
-      show_help_options: show_help_options,
       show_intl_about: show_intl_about
     }
   end
@@ -181,82 +177,14 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: visibility[:show_teacher_options], id: "after-teacher"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_pegasus_options]), id: "after-teacher"}
     elsif options[:user_type] == "student"
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_pegasus_options]), id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_pegasus_options]), id: "after-signed-out"}
     end
-
-    # Help-related.
-
-    if options[:level] || options[:script_level]
-      report_url = options[:script_level] ?
-        options[:script_level].report_bug_url(options[:request]) :
-        options[:level].report_bug_url(options[:request])
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: report_url,
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    else
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: "https://support.code.org/hc/en-us/requests/new",
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    end
-
-    entries << {
-      title: I18n.t("#{loc_prefix}help_support"),
-      url: "https://support.code.org",
-      class: visibility[:show_help_options],
-      id: "support",
-      target: "_blank"
-    }
-
-    if options[:user_type] == "teacher"
-      entries << {
-        title: I18n.t("#{loc_prefix}teacher_community"),
-        url: "http://forum.code.org/",
-        class: visibility[:show_help_options],
-        target: "_blank",
-        id: "teacher-community"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/gamelab/",
-        class: visibility[:show_help_options],
-        id: "gamelab-docs"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/applab/",
-        class: visibility[:show_help_options],
-        id: "applab-docs"
-      }
-
-      entries << {
-        title: I18n.t("#{loc_prefix}tutorials"),
-        url: CDO.code_org_url('/educate/applab'),
-        class: visibility[:show_help_options],
-        id: "applab-tutorials"
-      }
-    end
-
-    entries << {type: "divider", class: visibility[:show_pegasus_options], id: "before-pegasus"}
 
     # Pegasus options.
 

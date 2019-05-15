@@ -9,7 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
-var ABUSE_THRESHOLD = 10;
+var ABUSE_THRESHOLD = 15;
 
 var hasProjectChanged = false;
 

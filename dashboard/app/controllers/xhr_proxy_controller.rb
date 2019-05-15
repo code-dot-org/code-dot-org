@@ -47,6 +47,7 @@ class XhrProxyController < ApplicationController
     bible-api.com
     code.org
     compete.hsctf.com
+    data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov

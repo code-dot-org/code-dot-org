@@ -1,3 +1,4 @@
+@single_session
 Feature: Hour of Code 2015 tutorial is completable
 
   @no_ie @no_mobile
