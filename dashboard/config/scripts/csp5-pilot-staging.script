@@ -66,8 +66,8 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check Your Understanding', 
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'U5 Traversals Investigate Mile Tracker', progression: 'App Investigation'
-level 'U5 Traversals Investigate Word Guess', progression: 'App Investigation'
-level 'U5 Traversals Investigate Dog Finder', progression: 'App Investigation'
+level 'U5 Traversals Investigate Word Guess - clone', progression: 'App Investigation'
+level 'U5 Traversals Investigate Dog Finder - clone', progression: 'App Investigation'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Code Investigation'
 level 'U5 Traversals Get List Explanation', progression: 'The getList() Block'
 level 'U5 Traversals Investigate Word Guess Modify', progression: 'Code Investigation'
