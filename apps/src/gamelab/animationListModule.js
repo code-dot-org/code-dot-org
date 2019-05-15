@@ -364,7 +364,7 @@ export function appendBlankFrame() {
 }
 
 /**
- * Add an animation to the project (at the end of the list, unless a spritelab project).
+ * Add an animation to the project (at the end of the list).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} props
  */
@@ -372,11 +372,7 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    if (getState().pageConstants && getState().pageConstants.isBlockly) {
-      dispatch(addAnimationAction(key, {...props, looping: true}, 0));
-    } else {
-      dispatch(addAnimationAction(key, {...props, looping: true}));
-    }
+    dispatch(addAnimationAction(key, {...props, looping: true}));
     dispatch(
       loadAnimationFromSource(key, () => {
         dispatch(selectAnimation(key));
