@@ -224,6 +224,43 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal '<div><label id="label1">real_level html</label></div>', level_options['startHtml']
   end
 
+  test 'project template level sets data tables when defined' do
+    template_level = create :applab
+    template_level.data_tables = '{"key":"expected"}'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"wrong"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from project_level not real_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"expected"}', level_options['dataTables']
+  end
+
+  test 'project template level does not set data tables when not defined' do
+    template_level = create :applab
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"real"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from real_level not project_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"real"}', level_options['dataTables']
+  end
+
   test 'project template level sets start animations when defined' do
     template_animations_json = '{"orderedKeys":["expected"],"propsByKey":{"expected":{}}}'
     template_level = create :gamelab
