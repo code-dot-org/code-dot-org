@@ -607,7 +607,7 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
 
   if (prevThemeName) {
     designMode.changeThemeForElement(
-      element,
+      duplicateElement,
       prevThemeName,
       elementLibrary.getCurrentTheme(designMode.activeScreen())
     );
@@ -737,16 +737,24 @@ function duplicateScreen(element) {
 
 designMode.onCopyElementToScreen = function(element, destScreen) {
   const sourceElement = $(element);
+  const prevThemeName = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
   designMode.changeScreen(destScreen);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceElement.children());
 
-  let duplicateElement = sourceElement.clone(true)[0];
+  const duplicateElement = sourceElement.clone(true)[0];
   const elementType = elementLibrary.getElementType(duplicateElement);
   elementUtils.setId(
     duplicateElement,
     elementLibrary.getUnusedElementId(elementType.toLowerCase())
+  );
+  designMode.changeThemeForElement(
+    duplicateElement,
+    prevThemeName,
+    elementLibrary.getCurrentTheme(designMode.activeScreen())
   );
   designMode.attachElement(duplicateElement);
 
@@ -1555,6 +1563,11 @@ designMode.setAsClipboardElement = function(element) {
   // Remember the current element on the clipboard
   clipboardElement = jqueryElement.clone(true)[0];
 
+  // Remember the current theme on the clipboard
+  clipboardElementTheme = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+
   // Restore the draggable wrappers on the child elements:
   if (isScreen && madeUndraggable) {
     makeDraggable(jqueryElement.children());
@@ -1572,10 +1585,6 @@ designMode.addKeyboardHandlers = function() {
       switch (event.which) {
         case KeyCodes.COPY:
           designMode.setAsClipboardElement(currentlyEditedElement);
-          // Remember the current theme on the clipboard
-          clipboardElementTheme = elementLibrary.getCurrentTheme(
-            designMode.activeScreen()
-          );
           break;
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
