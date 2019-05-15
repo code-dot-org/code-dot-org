@@ -327,7 +327,7 @@ module Pd::Application
     end
 
     def friendly_scholarship_status
-      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status
+      Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course)&.friendly_status_name
     end
 
     def allow_sending_principal_email?
