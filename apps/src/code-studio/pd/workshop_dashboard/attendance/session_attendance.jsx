@@ -197,7 +197,10 @@ export class SessionAttendance extends React.Component {
                   <th>Verified Teacher Account</th>
                   {this.showPuzzlesCompleted && <th>Puzzles Completed</th>}
                   {this.props.scholarshipWorkshop && (
-                    <th>Scholarship Teacher?</th>
+                    <th>Code.org Scholarship?</th>
+                  )}
+                  {this.props.scholarshipWorkshop && (
+                    <th>Other Scholarship?</th>
                   )}
                   {this.isCSF ? <th>Attended</th> : <th>Present</th>}
                 </tr>
