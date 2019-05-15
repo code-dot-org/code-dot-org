@@ -9,7 +9,7 @@ Schools and teachers have asked us to expand our most popular professional learn
 
 We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in! Through this workshop, educators will explore course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
 
-[Register](#register) for a public workshop or [set up](#setup) a private workshop for your school today!
+[Register](#register) for a public workshop or [Set up](#setup) a private workshop for your school today!
 
 <a name="questions"></a>
 ## Learn More
@@ -32,7 +32,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
   <br/>
   Developed with Code.org’s <a href="https://code.org/educate/professional-learning/values" target="blank"> professional learning values</a> in mind, the 7-hour Deep Dive workshop provides teachers with a hands-on learning experience with other like-minded teachers. Teachers are given the space to work through the individual challenges in carefully crafted sessions led by experienced facilitators, most of whom were (and often still are) classroom teachers.
 
-  Teachers will leave their Deep Dive workshop not only with an understanding of the details, philosophy, values, and rationale behind how the CS Fundamentals course is structured but also with a *customized plan* for how to implement more of the CS Fundamentals courses. Teachers will have ideas for fostering and developing a strong classroom rapport that nurtures learners of all types and *strategies for addressing roadblocks to implementation*. Ongoing support through the Code.org teacher forum and online support after the workshop will continue to build a *strong community of practice and support* for participating teachers.
+  Teachers will leave their Deep Dive workshop not only with an understanding of the details, philosophy, values, and rationale behind how the CS Fundamentals course is structured but also with a **customized plan** for how to implement more of the CS Fundamentals courses. Teachers will have ideas for fostering and developing a strong classroom rapport that nurtures learners of all types and **strategies for addressing roadblocks to implementation**. Ongoing support through the Code.org teacher forum and online support after the workshop will continue to build a **strong community of practice and support** for participating teachers.
 
 </p>
 </details>
@@ -60,11 +60,13 @@ Click on the questions below to learn more about what Deep Dive workshops have t
   <summary>**How much does a workshop cost?**</summary>
   <p>
   <br/>
-  Costs will vary across the country. [contact your Regional Partner](#contact) to find the cost in your area.
+  Costs will vary across the country. Contact your Regional Partner to find the cost in your area.
 
   We believe that local support is critical for success - we’ve partnered with a network of Regional Partners and local facilitators to work with your school. Code.org provides grant funding to help subsidize the costs of the program and to ensure you can use the curriculum & tools forever at no cost.
 
   Grant funding from our donors and other local support allows our partners to offer the CS Fundamentals: Deep Dive workshop at substantial **discounts**. They are also able to offer **scholarships** and **group discounts**.
+
+  <%= view :professional_development_workshops_regional_partner_search %>
 <br/>
 
 </p>
@@ -78,9 +80,11 @@ Look at the map below to find the next upcoming CS Fundamentals: Deep Dive works
 
 map
 
-If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
-</p>
+If you can’t find a workshop, and you’re in the U.S., contact your Regional Partner. They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
 
+<br/>
+<%= view :professional_development_workshops_regional_partner_search %>
+<br/>
 
 <a id="setup"></a>
 <br/>
@@ -88,10 +92,31 @@ If you can’t find a workshop, and you’re in the U.S., [contact your Regional
 
 Support all your teachers with a private group workshop on a Professional Development (PD) day or Saturday. Our Regional Partners can come to your school to help your teachers work together to understand the implementation challenges they face in teaching CS Fundamentals.
 
-If you’d like to set up a private workshop and you’re in the U.S., [contact your Regional Partner](#contact).
+If you’d like to set up a private workshop and you’re in the U.S., contact your Regional Partner.
 
-<a id="contact"></a>
+
+
+<div class="breakoutquote" style="background-color: #7665a0">
+
+<div class="col-33">
+
+<p><img src="/images/code_quote_headshot.jpg" style="max-width: 80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>
+“I want to teach <strong> MORE </strong> of the lessons after my workshop, because I got so many great ideas and have a better understanding of the courses and content.”
 <br/>
-## Contact your Regional Partners
+<br/>
+ ~CS Fundamentals teacher after attending the Deep Dive workshop"
+</p>
 
-<%= view :professional_learning_regional_partner_mini_contact, source_page_id: "professional-development-deep-dive"%>
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
