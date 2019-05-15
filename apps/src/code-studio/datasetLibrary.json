@@ -20,7 +20,7 @@
     },
     {
       "name": "tate",
-      "description": "A selection of artwork from the Tate Museum. Includes title, artist, artist birth location, creation year, and an thumbnail of the artwork.",
+      "description": "A selection of artwork from the Tate Museum. Includes title, artist, artist birth location, creation year, and a thumbnail of the artwork.",
       "url": "/api/v1/dataset-library/tate.csv",
       "columns": "Title,Artist,Birth Location,Creation Year,Thumbnail"
     },
