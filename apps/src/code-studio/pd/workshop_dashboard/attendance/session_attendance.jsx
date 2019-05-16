@@ -52,7 +52,6 @@ export class SessionAttendance extends React.Component {
     this.load();
     this.startRefreshInterval();
     this.isCSF = this.props.course === COURSE_CSF;
-    this.showPuzzlesCompleted = this.isCSF;
   }
 
   componentWillUnmount() {
@@ -156,7 +155,6 @@ export class SessionAttendance extends React.Component {
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-          showPuzzlesCompleted={this.showPuzzlesCompleted}
           displayYesNoAttendance={
             !this.props.permission.hasAny(WorkshopAdmin, Partner)
           }
@@ -189,11 +187,7 @@ export class SessionAttendance extends React.Component {
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
-                  {this.props.accountRequiredForAttendance && (
-                    <th>Code Studio Account</th>
-                  )}
                   <th>Verified Teacher Account</th>
-                  {this.showPuzzlesCompleted && <th>Puzzles Completed</th>}
                   {this.isCSF ? <th>Attended</th> : <th>Present</th>}
                 </tr>
               </thead>
