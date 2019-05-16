@@ -22,12 +22,21 @@ class ProxyHelperTest < ActionView::TestCase
     refute allowed_hostname?(URI.parse('http://foobar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
     refute allowed_hostname?(URI.parse('http://foo-bar.org/'), ALLOWED_HOSTNAME_SUFFIXES)
   end
+
   test 'allows hostname resolving to public IP address' do
     assert allowed_ip_address?('google.com')
   end
 
   test 'allows public IP address provided as hostname' do
     assert allowed_ip_address?('8.8.8.8')
+  end
+
+  test 'allows private IP that is the same as dashboard IP' do
+    private_ip_address_string = '127.0.0.1'
+    private_ip_address = IPAddr.new(private_ip_address_string)
+    CDO.stubs(:dashboard_hostname).returns(private_ip_address_string)
+    ProxyHelper.stubs(:dashboard_ip_address).returns(private_ip_address)
+    assert allowed_ip_address(private_ip_address_string)
   end
 
   test 'disallows hostname resolving to private IP address' do
