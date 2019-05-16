@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190422234557) do
+ActiveRecord::Schema.define(version: 20190504203007) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -787,11 +787,10 @@ ActiveRecord::Schema.define(version: 20190422234557) do
     t.integer  "pd_enrollment_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "course"
+    t.string   "course",             null: false
     t.index ["pd_application_id"], name: "index_pd_scholarship_infos_on_pd_application_id", using: :btree
     t.index ["pd_enrollment_id"], name: "index_pd_scholarship_infos_on_pd_enrollment_id", using: :btree
     t.index ["user_id", "application_year", "course"], name: "index_pd_scholarship_infos_on_user_id_and_app_year_and_course", unique: true, using: :btree
-    t.index ["user_id", "application_year"], name: "index_pd_scholarship_infos_on_user_id_and_application_year", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_scholarship_infos_on_user_id", using: :btree
   end
 
