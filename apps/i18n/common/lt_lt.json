@@ -491,6 +491,7 @@
   "submitYourProject": "Pateikti savo projektą",
   "submitYourProjectConfirm": "Jūs nebegalėsite redaguoti savo projekto po pateikimo, ar tikrai pateikti?",
   "subtitle": "Vizuali programavimo aplinka",
+  "support": "Pagalba",
   "switchSection": "Pasirinkti grupę:",
   "syntaxErrorMsg": "Tavo programoje yra rašybos klaida. Pašalink {lineNumber} eilutę ir bandyk dar kartą.",
   "teacher": "Mokytojas",

@@ -769,7 +769,6 @@ fi:
     new: Luo uusi
     rename: Nimeä uudelleen
     save: Tallenna
-    delete: Poista
     import: Tuo
     share_link_import_bad_link_header: Jakolinkkiä ei tunnistettu
     share_link_import_bad_link_body: 'Emme voineet tuoda tuota jakolinkkiä. Varmista,
@@ -777,7 +776,6 @@ fi:
     share_link_import_error_header: Jokin meni pieleen.
     share_link_import_error_body: Jakolinkin tuomisessa tapahtui virhe. Yritä uudelleen.
     exit: Takaisin kurssiin
-    my_projects: Omat projektit
     project_gallery: Projektit
     publish: Julkaise
     unpublish: Peru julkaiseminen
@@ -787,8 +785,6 @@ fi:
     embed: Upota
     advanced_share: Näytä lisäasetukset
     no_projects: Sinulla ei ole projekteja. Valitse jokin yllä olevista napeista aloittaaksesi.
-    close: Sulje
-    more: Lisää
     name: Nimi
     updated: Päivitetty
     project_type: Projektityyppi
@@ -796,15 +792,8 @@ fi:
       alla tehdäksesi uuden Pelilabra tai Taiteilija projektin! <br/>Voit tulla myöhemmin
       takaisin ja jatkaa projektiesi työstämistä milloin tahansa.
     need_help: Tarvitsetko apua alkutoimissa?
-    really_delete: Poista?
-    delete_yes: Kyllä
-    delete_no: Ei
     saved: Tallennettu
     not_saved: Ei tallenneta
-    cancel: Peru
-    delete_confirm_title: Oletko varma, että haluat poistaa tämän projektin?
-    delete_confirm_text: Projektin poistaminen pysyvästi poistaa sen Omat projektit-luettelosta.
-      Kukaan kenelle olet jakanut linkin ei enää voi katsella projektiasi.
     view_all: Katso omia projektejasi
     remix: Remix
     click_to_remix: Klikkaa "Remix" ja tee oma versiosi!

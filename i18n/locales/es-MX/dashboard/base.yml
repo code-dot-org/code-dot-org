@@ -813,14 +813,12 @@ es-MX:
     new: "Crear nuevo"
     rename: "Cambiar el nombre"
     save: "Guardar"
-    delete: "Borrar"
     import: "Importar"
     share_link_import_bad_link_header: "No se reconoce el enlace compartido"
     share_link_import_bad_link_body: "No pudimos importar el enlace compartido. Asegúrate de haber copiado el enlace completo del desafío Minecraft: Agente."
     share_link_import_error_header: "Algo salió mal."
     share_link_import_error_body: "Hubo un problema al importar el enlace compartido. Vuelve a intentarlo."
     exit: "Regresar al curso"
-    my_projects: "Mis proyectos"
     project_gallery: "Proyectos"
     publish: "Publicar"
     unpublish: "No publicar"
@@ -832,22 +830,14 @@ es-MX:
     embed: "Insertar"
     advanced_share: "Mostrar opciones avanzadas"
     no_projects: "No tienes proyectos. Haz clic en uno de los botones de arriba para comenzar uno."
-    close: "Cerrar"
-    more: "Más"
     name: "Nombre"
     updated: "Actualizado"
     project_type: "Tipo de proyecto"
     help_text: "¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio Lúdico! <br/>Puedes regresar y trabajar en tus proyectos en cualquier momento."
     need_help: "¿Necesitas ayuda para empezar?"
     thumbnail_help: "¿No ves la imagen en miniatura correcta para tu proyecto? Ejecuta la aplicación para generar una nueva. Ten en cuenta que la actualización de la imagen en todas partes puede demorar unas horas."
-    really_delete: '¿Borrar?'
-    delete_yes: 'Sí'
-    delete_no: 'No'
     saved: "Guardado"
     not_saved: "Sin guardar"
-    cancel: 'Cancelar'
-    delete_confirm_title: '¿Estás seguro de que quieres eliminar este proyecto?'
-    delete_confirm_text: "Borrar tu proyecto hará que se retire permanentemente de tu Lista de Proyectos. Las personas que tengan un enlace al mismo no podrán seguir viendo el proyecto una vez que haya sido eliminado."
     view_all: 'Ver mis proyectos'
     remix: 'Remix'
     click_to_remix: "¡Haz clic en \"Remix\" para obtener tu propia versión!"
@@ -1027,7 +1017,7 @@ es-MX:
   return_unit_overview: 'Ir al resumen de la unidad'
   return_course_overview: 'Ir al resumen del curso'
   view_all_units: 'Ver todas las unidades'
-  view_teacher_guide: 'Ver la guía del profesor'
+  view_teacher_guide: 'Ver la guía para docentes'
   pd:
     form_labels:
       first_name: 'Nombre'
@@ -1106,7 +1096,7 @@ es-MX:
         csf_af: 'Fundamentos de Ciencias de la Computación (cursos A-F)'
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
-        csp: '''16-''17 Principios de CS'
+        csp: 'Principios de Ciencias de la Computación'
       email_opt_in:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'
@@ -1123,7 +1113,7 @@ es-MX:
       more: 'Si quieres obtener más información acerca del programa antes de iniciar tu solicitud, echa un vistazo al <a href="%{pl_overview}">Programa de Aprendizaje Internacional</a>.'
     no_teacher_email:
       body: 'Tu cuenta no tiene una dirección de correo electrónico. Por favor, <a href="%{user_registration}">visita la configuración de tu cuenta</a> y agrega tu dirección de correo electrónico antes de completar este formulario.'
-  courses_category: 'Cursos Completos'
+  courses_category: 'Cursos completos'
   cookie_banner:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."

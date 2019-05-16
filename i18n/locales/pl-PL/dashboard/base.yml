@@ -782,14 +782,12 @@ pl:
     new: "Utwórz nowy"
     rename: "Zmień nazwę"
     save: "Zapisz"
-    delete: "Usuń"
     import: "Importuj"
     share_link_import_bad_link_header: "Nie rozpoznano udostępnionego linka"
     share_link_import_bad_link_body: "Nie można było zaimportować tego udostępnionego linka. Upewnij się, że ten link pochodzi z łamigłówki Minecraft: Agent i że został skopiowany w całości."
     share_link_import_error_header: "Coś poszło nie tak."
     share_link_import_error_body: "Wystąpił problem podczas importowania tego linku udostępniania. Proszę spróbować ponownie."
     exit: "Powrót do Kursu"
-    my_projects: "Moje Projekty"
     project_gallery: "Projekty"
     publish: "Opublikuj"
     unpublish: "Cofnij publikację"
@@ -801,22 +799,14 @@ pl:
     embed: "Osadź"
     advanced_share: "Pokaż zaawansowane opcje"
     no_projects: "Aktualnie nie masz żadnych projektów. Kliknij na jeden z powyższych przycisków, aby rozpocząć projekt."
-    close: "Zamknij"
-    more: "Więcej"
     name: "Imię/Nazwisko"
     updated: "Zaktualizowano"
     project_type: "Typ Projektu"
     help_text: "Kliknij, <strong>Utwórz aplikację</strong> lub <strong>Narysuj coś</strong> poniżej, aby utworzyć nowy projekt! <br/>Możesz wrócić i pracować nad swoimi projektami w dowolnym momencie."
     need_help: "Wypróbuj te kursy, by przygotować się do rozpoczęcia nowego projektu"
     thumbnail_help: "Nie widzisz poprawnej miniatury dla twojego projektu? Uruchom swoją aplikację, by wygenerować nową miniaturę. Weź pod uwagę, że odświeżenie miniatury wszędzie może zająć kilka godzin."
-    really_delete: 'Usunąć?'
-    delete_yes: 'Tak'
-    delete_no: 'Nie'
     saved: "Zapisane"
     not_saved: "Nie zapisane"
-    cancel: 'Anuluj'
-    delete_confirm_title: Czy na pewno chcesz usunąć ten projekt?
-    delete_confirm_text: "Usunięcie projektu spowoduje trwałe usunięcie go z twojej listy Moje Projekty. Nikt, komu udostępniłeś link do tego projektu, nie będzie już mógł zobaczyć tego projektu."
     view_all: 'Zobacz Moje Projekty'
     remix: 'Remix'
     click_to_remix: "Kliknij 'Remix', aby utworzyć swoją własną wersję!"

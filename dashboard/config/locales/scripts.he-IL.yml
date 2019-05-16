@@ -1707,27 +1707,27 @@ he:
         express-2019:
           stages:
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
             Relay Programming:
               name: הרץ פעולה בשנית
             Debugging in Maze:
-              name: איתור באגים במבוך
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Conditionals with Cards:
               name: התניות עם כרטיסים
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            For Loops in Bee:
-              name: לולאות עבור עם הדבורה
-            For Loops in Artist:
-              name: לולאות עבור עם האמן
             Binary Bracelets:
               name: צמידים בינארים
             Artist Binary:
               name: אמן בינארי
             Internet:
               name: אינטרנט
+            Dance Party:
+              name: מסיבת ריקודים
         andrea-test:
           stages:
             'null':
@@ -1779,11 +1779,9 @@ he:
             Move It, Move It:
               name: זוזו, זוזו
             Loops in Ice Age:
-              name: לולאות בעידן הקרח
+              name: לולאות עם סקראט
             Spelling Bee:
               name: תחרות איות
-            Programming in Maze:
-              name: תכנות במבוך
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':

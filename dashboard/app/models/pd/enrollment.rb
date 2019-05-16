@@ -32,7 +32,7 @@ require 'cdo/safe_names'
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
-  include Pd::SharedWorkshopConstants
+  include Pd::WorkshopConstants
   include Pd::WorkshopSurveyConstants
   include SerializedProperties
   include Pd::Application::ActiveApplicationModels
@@ -67,6 +67,7 @@ class Pd::Enrollment < ActiveRecord::Base
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
+  after_create :set_default_scholarship_info
 
   serialized_attrs %w(
     role
@@ -78,6 +79,12 @@ class Pd::Enrollment < ActiveRecord::Base
     previous_courses
     replace_existing
   )
+
+  def set_default_scholarship_info
+    if user && workshop.csf? && workshop.school_year
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, COURSE_KEY_MAP[workshop.course], Pd::ScholarshipInfoConstants::YES_CDO)
+    end
+  end
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -258,15 +265,21 @@ class Pd::Enrollment < ActiveRecord::Base
     school_info.try :effective_school_district_name
   end
 
-  def update_scholarship_status(scholarship_status)
-    if workshop.local_summer?
-      Pd::ScholarshipInfo.update_or_create(user, workshop.summer_workshop_school_year, workshop.course_key, scholarship_status)
+  def update_scholarship_status(status)
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, workshop.course_key, status)
     end
   end
 
   def scholarship_status
-    if workshop.local_summer?
-      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.summer_workshop_school_year, course: workshop.course_key)&.scholarship_status
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.scholarship_status
+    end
+  end
+
+  def friendly_scholarship_status
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.friendly_status_name
     end
   end
 
@@ -274,7 +287,7 @@ class Pd::Enrollment < ActiveRecord::Base
   # attending a local summer workshop as a participant to observe the facilitation techniques
   def newly_accepted_facilitator?
     workshop.local_summer? &&
-      workshop.summer_workshop_school_year == APPLICATION_CURRENT_YEAR &&
+      workshop.school_year == APPLICATION_CURRENT_YEAR &&
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
