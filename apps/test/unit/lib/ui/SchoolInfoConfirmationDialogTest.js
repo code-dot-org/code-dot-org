@@ -155,16 +155,16 @@ describe('SchoolInfoConfirmationDialog', () => {
         sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.instance().setState({showSchoolInterstitial: false});
         console.log('******', wrapper.html());
-        wrapper.find('div#first-button').simulate('click');
-
         server.respondWith(
           'PATCH',
           `api/v1/user_school_infos/${
-            wrapper.scriptData.existingSchoolInfo.fakeId
+            wrapper.MINIMUM_PROPS.scriptData.existingSchoolInfo.fakeId
           }/update_end_date`,
           [200, {}, JSON.stringify({response: 'ok'})]
         );
         server.respond();
+
+        wrapper.find('div#first-button').simulate('click');
         expect(wrapperInstance.handleClickYes).to.have.been.called;
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
       });
