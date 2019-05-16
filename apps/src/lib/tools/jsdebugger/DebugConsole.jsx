@@ -104,7 +104,7 @@ export default connect(
     jsInterpreter: selectors.getJSInterpreter(state),
     logOutput: selectors.getLogOutput(state),
     maxLogLevel: selectors.getMaxLogLevel(state),
-    fromDebugConsole: selectors.getFromDebugConsole(state),
+    // fromDebugConsole: selectors.getFromDebugConsole(state),
     isAttached: selectors.isAttached(state)
   }),
   {
@@ -124,7 +124,7 @@ export default connect(
         ? PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
         : PropTypes.string.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
-      fromDebugConsole: PropTypes.bool.isRequired,
+      // fromDebugConsole: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
       removeWatchExpression: PropTypes.func.isRequired,
@@ -144,7 +144,6 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog(input);
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -163,12 +162,12 @@ export default connect(
             result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
               result
             );
-            this.appendLog(result);
+            this.appendLog([input, result]);
           } catch (err) {
-            this.appendLog(String(err));
+            this.appendLog([input, String(err)]);
           }
         } else {
-          this.appendLog('(not running)');
+          this.appendLog([input, '(not running)']);
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -182,7 +181,7 @@ export default connect(
     };
 
     appendLog(output) {
-      this.props.appendLog('debugConsole', output);
+      this.props.appendLog(output);
     }
 
     componentDidUpdate() {
@@ -229,32 +228,23 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          if (this.props.fromDebugConsole) {
-            if (i % 2 === 0) {
-              return (
-                <div key={i}>
-                  &gt;{' '}
-                  <div style={style.myDiv}>
-                    <Inspector data={output} />
-                  </div>
+          if (output.length === 2) {
+            return (
+              <div key={i}>
+                &gt;{' '}
+                <div style={style.myDiv}>
+                  <Inspector data={output[0]} />
                 </div>
-              );
-            } else if (i % 2 !== 0) {
-              return (
-                <div key={i}>
+                <div>
                   &lt;{' '}
                   <div style={style.myDiv}>
-                    <Inspector data={output} />
+                    <Inspector data={output[1]} />
                   </div>
                 </div>
-              );
-            }
-          } else {
-            if (i % 2 === 0) {
-              return <Inspector key={i} data={output} />;
-            } else if (i % 2 !== 0) {
-              return <Inspector key={i} data={output} />;
-            }
+              </div>
+            );
+          } else if (output.length === 1) {
+            return <Inspector key={i} data={output[0]} />;
           }
         });
       }

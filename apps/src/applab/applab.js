@@ -100,7 +100,7 @@ Applab.log = function(object, logLevel) {
     jsInterpreterLogger.log(object);
   }
 
-  getStore().dispatch(jsDebugger.appendLog('codeWorkspace', object, logLevel));
+  getStore().dispatch(jsDebugger.appendLog([object], logLevel));
 };
 consoleApi.setLogMethod(Applab.log);
 
