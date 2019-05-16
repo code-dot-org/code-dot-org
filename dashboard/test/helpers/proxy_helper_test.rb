@@ -32,10 +32,10 @@ class ProxyHelperTest < ActionView::TestCase
 
   test 'disallows hostname resolving to private IP address' do
     IPSocket.stubs(:getaddress).returns('169.254.0.0')
-    refute allow_ip_address?('resolves.to.private.ip.example.net')
+    refute allowed_ip_address?('resolves.to.private.ip.example.net')
   end
 
   test 'disallows private IP address provided as hostname' do
-    refute allow_ip_address?('169.254.0.0')
+    refute allowed_ip_address?('169.254.0.0')
   end
 end
