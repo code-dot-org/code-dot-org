@@ -18,11 +18,14 @@ const DEFAULT_PROPS = {
     enrollment_id: 47564,
     user_id: 101,
     verified_teacher_account: false,
-    attended: false
+    attended: false,
+    cdo_scholarship: true,
+    other_scholarship: false
   },
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
+  scholarshipWorkshop: false,
   displayYesNoAttendance: false
 };
 
