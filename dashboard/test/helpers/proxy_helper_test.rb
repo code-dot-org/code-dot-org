@@ -36,7 +36,7 @@ class ProxyHelperTest < ActionView::TestCase
     private_ip_address = IPAddr.new(private_ip_address_string)
     CDO.stubs(:dashboard_hostname).returns(private_ip_address_string)
     ProxyHelper.stubs(:dashboard_ip_address).returns(private_ip_address)
-    assert allowed_ip_address(private_ip_address_string)
+    assert allowed_ip_address?(private_ip_address_string)
   end
 
   test 'disallows hostname resolving to private IP address' do
