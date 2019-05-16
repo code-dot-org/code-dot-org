@@ -12401,6 +12401,8 @@ en:
               name: csd digital unplugged WIAC L3
             What is a Computer?:
               name: What is a Computer?
+            Problem Solving Process:
+              name: Problem Solving Process
           title: Testing Widgets that save state
           description_audience: ''
           description_short: ''
