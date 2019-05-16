@@ -28,8 +28,8 @@ export default class SessionAttendanceRow extends React.Component {
       user_id: PropTypes.number,
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
-      cdo_scholarship: PropTypes.string,
-      other_scholarship: PropTypes.string
+      cdo_scholarship: PropTypes.bool,
+      other_scholarship: PropTypes.bool
     }).isRequired,
     adminOverride: PropTypes.bool,
     isReadOnly: PropTypes.bool,
