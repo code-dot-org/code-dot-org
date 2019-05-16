@@ -34,12 +34,12 @@ class DSLDefined < Level
     "Enter the level definition here.\n"
   end
 
-  def localized_text(text)
+  def localized_property(property)
     I18n.t(
-      text,
+      property,
       scope: ['data', type.underscore, name],
       separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
-      default: text,
+      default: self[property],
       smart: true
     )
   end
