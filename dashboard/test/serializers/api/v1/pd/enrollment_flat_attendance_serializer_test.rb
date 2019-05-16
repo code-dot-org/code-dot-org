@@ -123,4 +123,44 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     }
     assert_equal expected, serialized
   end
+
+  test 'cdo scholarship column' do
+    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_CDO)
+    assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = enrollment.user.name.split(' ', 2)
+    expected = {
+      first_name: first_name,
+      last_name: last_name,
+      email: enrollment.email,
+      session_1_date: workshop.sessions[0].formatted_date,
+      session_1_attendance: false,
+      cdo_scholarship: 'Yes',
+      other_scholarship: ''
+    }
+    assert_equal expected, serialized
+  end
+
+  test 'other scholarship column' do
+    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = enrollment.user.name.split(' ', 2)
+    expected = {
+      first_name: first_name,
+      last_name: last_name,
+      email: enrollment.email,
+      session_1_date: workshop.sessions[0].formatted_date,
+      session_1_attendance: false,
+      cdo_scholarship: '',
+      other_scholarship: 'Yes'
+    }
+    assert_equal expected, serialized
+  end
 end
