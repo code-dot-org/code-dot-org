@@ -176,6 +176,7 @@ class TopInstructionsCSP extends Component {
           // If student has feedback make their default tab the feedback tab instead of instructions
           if (data[0] && (data[0].comment || data[0].performance)) {
             this.setState({feedbacks: data, tabSelected: TabType.COMMENTS});
+            this.incrementFeedbackVisitCount();
           }
         })
       );
@@ -324,10 +325,32 @@ class TopInstructionsCSP extends Component {
   };
 
   handleCommentTabClick = () => {
+    // Only increment visit count if user is switching from another tab to the
+    // comments tab.
+    if (this.state.tabSelected !== TabType.COMMENTS) {
+      this.incrementFeedbackVisitCount();
+    }
+
     this.setState(
       {tabSelected: TabType.COMMENTS},
       this.forceTabResizeToMaxHeight
     );
+  };
+
+  incrementFeedbackVisitCount = () => {
+    // If a student is viewing their own work (i.e., the user is not a teacher
+    // viewing one of their students' work), increment visit count for student
+    // viewing their latest feedback.
+    const latestFeedback = this.state.feedbacks[0];
+    if (!this.state.teacherViewingStudentWork && latestFeedback) {
+      $.ajax({
+        url: `/api/v1/teacher_feedbacks/${
+          latestFeedback.id
+        }/increment_visit_count`,
+        method: 'POST',
+        contentType: 'application/json;charset=UTF-8'
+      });
+    }
   };
 
   render() {
