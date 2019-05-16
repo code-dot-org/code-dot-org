@@ -1435,11 +1435,13 @@ hy:
             The Artist:
               name: The Artist
             Internet:
-              name: Internet
+              name: Համացանց
             Crowdsourcing:
               name: Crowdsourcing
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
               name: Relay programming
             Conditionals with Cards:
@@ -1447,7 +1449,7 @@ hy:
             Digital Citizenship:
               name: Digital Citizenship
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary Images
             Artist Binary:
               name: Artist Binary
         coursee-2019:
@@ -1458,8 +1460,8 @@ hy:
               name: nested Loops
             Conditionals with Cards:
               name: Conditionals with Cards
-            Conditionals:
-              name: conditionals
+            'Functions: Songwriting':
+              name: songwriting
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1492,16 +1494,16 @@ hy:
               name: 'անվավեր'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Building a Foundation
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
+            'Events: The Big Event':
+              name: The Big Event
             Binary Bracelets:
               name: Binary Bracelets
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Real-life Algorithms: Plant a Seed'
+            'Programming: Happy Maps':
+              name: Ուրախ Քարտեզներ
             Going Places Safely:
               name: Going Places Safely
         courseb-2019:
@@ -1510,6 +1512,8 @@ hy:
               name: Տեղափոխել այն, տեղափոխել այն
             Your Digital Footprint:
               name: Your Digital Footprint
+            'Loops: Getting Loopy':
+              name: Getting Loopy
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1564,3 +1568,7 @@ hy:
               name: Conditionals with Cards
             Building a Foundation:
               name: Building a Foundation
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Գրաֆիկի Թուղթ Ծրագրավորում

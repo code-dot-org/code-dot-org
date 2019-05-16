@@ -270,9 +270,9 @@ pl:
         fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\\r Następnie.
         przejdź dalej i zrób miód."
       4-5 Bee Conditionals Assessment 1: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat
-        z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\\r
-        \\\r Ukończ funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód),
-        a następnie zbierz nektar i miód. \\\r"
+        z jednym nektarem lub plaster miodu, który potrzebuje jednego miodu. \n\nUkończ
+        funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie
+        zbierz nektar i miód. "
       4-5 Bee Debugging 1: "Te bloki naprawdę męczą mnie. \\\r \\\r Czy mógłbyś je
         naprawić?"
       4-5 Bee Debugging 6: "Fioletowy kwiatek zawiera inną ilość nektaru za każdym
@@ -569,6 +569,8 @@ pl:
       CourseF_PlayLab_vars2: Wyścig w poprzedniej łamigłówce nie był zbyt uczciwy!
         Zmień wartość zmiennej "dog\_speed" (prędkość psa), aby być pewnym, że możesz
         zebrać więcej flag niż Kot. Wygrywa ten, kto pierwszy zbierze 10 flag!
+      Dance Party Template 1_2019: Szablon
+      Dance Party Template 2_2019: Szablon
       Dance_Party_01: |-
         _Urządźmy potańcówkę!_
 
@@ -1101,6 +1103,9 @@ pl:
       course4_artist_fwp_challenge1: Uruchom ten program i wprowadzaj zmiany, aby
         zobaczyć co się dzieje. Czy możesz powiedzieć, co robi ten program? (Lub usuń
         go i zastąp go czymś zupełnie inny)
+      courseA_bee_seq1: Pomóż pszczółce zebrać jeden nektar!
+      courseA_bee_seq10: Spróbuj sam! Zbierz cały nektar.
+      courseA_bee_seq12: Pomóż pszczółce zebrać jeden nektar!
       courseA_collector_loops_challenge1: _"Czy możesz mi pomóc znaleźć błędy? Wiem
         którą drogą chcę iść, ale nie jestem pewien ile kroków muszę zrobić."_
       courseA_collector_loops_challenge1_2018: _"Czy możesz mi pomóc znaleźć błędy?
@@ -1457,9 +1462,9 @@ pl:
         fioletowy kwiat ma 3, 2, czy 1 nektary i zebrać cały nektar. \\\r Następnie.
         przejdź dalej i zrób miód."
       grade3_ConditionalsElse_9: "**Sprawdzian:** Ta chmurka albo ukrywa kwiat z jednym
-        nektarem lub plaster miodu, który potrzebuje jednego miodu.  \\\r \\\r Ukończ
-        funkcję \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie
-        zbierz nektar i miód. \\\r"
+        nektarem lub plaster miodu, który potrzebuje jednego miodu. \n\nUkończ funkcję
+        \"get nectar or make honey\" (zbierz nektar lub zrób miód), a następnie zbierz
+        nektar i miód. "
       grade3_ConditionalsElse_TeacherIDo: "To może być kwiat lub plaster miodu pod
         każdą z tych chmurek. \\\r \\\r Użyj bloku \"jeśli-w przeciwnym razie\", by
         zebrać nektar, jeśli jest to kwiat, \\\r W przeciwnym razie zrób miód (bo
@@ -1639,6 +1644,7 @@ pl:
         pikseli ustalając odpowiednią wartość zmiennej \"length\" (długość) i umieszczając
         tę zmienną w odpowiednich miejscach. \\\r \\\r Zauważ, że tylko raz musisz
         ustalić wartość tej zmiennej, a kod wszędzie używa odpowiedniej wartości."
+      grade5_bee_for_loops4: Pomóż pszczółce zebrać cały nektar.
       grade5_bee_parameters_new8a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_bee_parameters_new9a: Użyj swej nowej funkcji do rozwiązania spirali.
       grade5_playlab_variables13: Użyj bloku "kiedy postać dotyka", by wysłać Psa

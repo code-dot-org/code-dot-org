@@ -172,7 +172,8 @@ export class DetailViewContents extends React.Component {
       school_stats: PropTypes.object,
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
-      principal_approval_state: PropTypes.string
+      principal_approval_state: PropTypes.string,
+      allow_sending_principal_email: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
     onUpdate: PropTypes.func,
@@ -1199,6 +1200,13 @@ export class DetailViewContents extends React.Component {
               {principalApprovalUrl}
             </a>
           </p>
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showResendEmailButton={
+              this.props.applicationData.allow_sending_principal_email
+            }
+            onChange={this.handlePrincipalApprovalChange}
+          />
         </div>
       );
     }

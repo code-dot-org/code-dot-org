@@ -2,6 +2,8 @@
 sk:
   data:
     long_instructions:
+      "(joshl) Dance Party 1-validated_2019": "**Skús predvídať:** Tu je postavička
+        s menom `alien1`! \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
       2-3 Artist 3.4: Blok so skokom posunie umelca bez toho, aby niečo nakreslil.
         Nakresli prerušovanú čiaru použitím blokov "skoč dopredu" a "posuň sa dopredu".
         Každá čiara má dĺžku 50 pixelov.
@@ -9,6 +11,10 @@ sk:
       2-3 Artist 9 NEW: Dokonči tohto šarkana
       2-3 Artist 9 REPLACEMENT: Dokonči tieto schody!
       2-3 Artist 9: Dokonči tohto šarkana
+      2-3 Artist Debugging 1: |-
+        Tento klobúk by mal byť len 50 pixelov široký. Dokážeš to opraviť?
+
+        <br/>
       2-3 Artist Debugging 10: |-
         Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.
 
@@ -45,9 +51,26 @@ sk:
 
         Kód pre túto stonku je zlý. Vieš zistiť, ako by Umelec nakreslil stonku správnym spôsobom?
       2-3 Artist Free Play: Voľná hra! Možeš si nakresliť čokoľvek.
+      2-3 Artist Functions 1 a: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôž
+        zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov
+        kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
+      2-3 Artist Functions 1: "\"Ja zombie umelec. Ja ľúbiť kreslenie!\" \n\nPomôž
+        zombíkovi nakresliť štvorcové okuliare. \n\nMostík medzi sklami je o 25 pixelov
+        kratší ako šírka štvorcov, ktoré majú šírku 100 pixelov."
+      2-3 Artist Functions 10: "**Voľná hra:** Tu sú dve funkcie, jedna na nakreslenie
+        veľkého a jedna na nakreslenie malého kolesa. \n\nNakresli s nimi vnútro tohoto
+        stroja!"
+      2-3 Artist Functions 11 a: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále sa kreslia štvorce! Vieš funkciu `nakresli šesťuholník` upravifunkciafunkciať tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli obrázok použitím novej funkcie!
       2-3 Artist Functions 11.5: "Tu je rovnaká funkcia \"nakresli šesťuholník\".
         \n\nČo sa stane, ak zopakujete hlavný program 6 krát, pričom po každom zopakovaní
         sa otočíte o 60 stupňov?"
+      2-3 Artist Functions 11: |-
+        Premenovali sme funkciu `nakresli štvorec` na `nakresli šesťuholník`, ale stále sa kreslia štvorce! Vieš funkciu `nakresli šesťuholník` upravifunkciafunkciať tak, aby nakreslila šesťuholník so stranou 50 pixelov?
+
+        Nakresli obrázok použitím novej funkcie!
       2-3 Artist Functions 12 Mike: "Funkcie sú skvelé na opakované kreslenie zložitých
         vecí. \\\r \\\r Dokážete použiť funkciu \"draw a flower\" (nakresli kvetinu)
         na vyplnenie zvyšku kvetináča? \\\r Medzery medzi rastlinami sú veľké 100
@@ -840,16 +863,26 @@ sk:
       Testing Quantum Farmer: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
         hliny treba na zasypanie tejto jamy.  \nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
-      comment_intro_maze_2018: "_\"Hmm, čo robí tento program?\"_  \n\n* * *\n\nVyrieš
-        úlohu a použi nový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
-        </title>\n  </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť
-        si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.\n\nKomentáre slúžia
-        len pre **teba** a nijako neovplyvnia vykonávanie programu."
-      comment_intro_maze_2018_2019: "_\"Hmm, čo robí tento program?\"_  \n\n* * *\n\nVyrieš
-        úlohu a použi nový blok <xml><block type=\"comment\">\n    <title name=\"TEXT\">
-        </title>\n  </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť
-        si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.\n\nKomentáre slúžia
-        len pre **teba** a nijako neovplyvnia vykonávanie programu."
+      comment_intro_maze_2018: |-
+        _"Hmm, čo robí tento program?"_
+
+        * * *
+
+        Vyrieš úlohu a použi nový blok <xml><block type="comment">
+            <title name="TEXT"> </title>
+          </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.
+
+        Komentáre slúžia len pre **teba** a nijako neovplyvnia vykonávanie programu.
+      comment_intro_maze_2018_2019: |-
+        _"Hmm, čo robí tento program?"_
+
+        * * *
+
+        Vyrieš úlohu a použi nový blok <xml><block type="comment">
+            <title name="TEXT"> </title>
+          </block></xml>. Zapíš si tam svoje poznámky. Pomôže ti to spomenúť si, čo program robí a prečo, keď sa k nemu neskôr vrátiš.
+
+        Komentáre slúžia len pre **teba** a nijako neovplyvnia vykonávanie programu.
       course1_artist_loops_challenge4: _"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"_
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne
         bloky, ale sú v nesprávnom poradí!
@@ -3050,6 +3083,22 @@ sk:
         _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
         Pomôž záhradníčke dostať sa k tekvici a zobrať ju.
+      courseE_farmer_functions10a1_2018: "**Výzva:** Použi všetko čo už vieš a skús
+        vyriešiť túto úlohu pomocou maximálne 19 blokov!"
+      courseE_farmer_functions10a1_2019: "**Výzva:** Použi všetko čo už vieš a skús
+        vyriešiť túto úlohu pomocou maximálne 19 blokov!"
+      courseE_farmer_functions13_2018: |-
+        Na vyriešenie tejto úlohy použi najviac 23 blokov.
+
+        * * *
+
+        ##### Na každej rastline narastie buď _jedna_ kukurica alebo nič. Pre najlepšie riešenie budeš musieť zmeniť kódy funkcií.
+      courseE_farmer_functions13_2019: |-
+        Na vyriešenie tejto úlohy použi najviac 23 blokov.
+
+        * * *
+
+        ##### Na každej rastline narastie buď _jedna_ kukurica alebo nič. Pre najlepšie riešenie budeš musieť zmeniť kódy funkcií.
       courseE_farmer_functions1_2018: |-
         _"Už sme sa niekedy stretli? Ja som záhradníčka!"_
 
@@ -3140,6 +3189,26 @@ sk:
         cestičke.
       courseE_farmer_functions3c_2019: Výborne!  Teraz vyskúšaj svoje funkcie na dlhšej
         cestičke.
+      courseE_farmer_functions7a1_2018: |-
+        _"Funkcie **šalát** robia viac s menšou námahou!"_
+
+        Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions7a1_2019: |-
+        _"Funkcie **šalát** robia viac s menšou námahou!"_
+
+        Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions8a1_2018: Skús znovu napísať svoju funkciu. Je stále
+        užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
+      courseE_farmer_functions8a1_2019: Skús znovu napísať svoju funkciu. Je stále
+        užitočná?  Ako ju môžeš použiť pri riešení tejto úlohy?
+      courseE_farmer_functions9a1_2018: |-
+        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+
+        Je tvoja funkcia užitočná aj pri tejto úlohe?
+      courseE_farmer_functions9a1_2019: |-
+        \*Táto úloha je a-MAZE-ing! (amazing - účasná, maze - bludisko)\*\*
+
+        Je tvoja funkcia užitočná aj pri tejto úlohe?
       courseE_farmer_ramp11a: "Ach jaj!  Táto hromada je taká veľká, že je ťažké  odhadnúť
         koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela nástrojov
         - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie hromady
@@ -3244,12 +3313,124 @@ sk:
         _"Nasleduj cestu a priveď ma k prasiatku"_
 
         Vyhni sa TNT.
+      courseF_artist_variables2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables2_2018: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables2_2019: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables3: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables3_2018: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables3_2019: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+
+        ![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)
+      courseF_artist_variables4: Teraz použi premennú `dĺžka`, aby umelec skočil dopredu
+        a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2018: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables4_2019: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables6: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6_2018: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6_2019: |-
+        **EJHA!**
+
+        My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables6a: Použi, čo si sa naučil, aby si vytvoril tento návrh,
+        kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi
+        každými dvomi.
+      courseF_artist_variables6a_2018: Použi, čo si sa naučil, aby si vytvoril tento
+        návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole
+        medzi každými dvomi.
+      courseF_artist_variables6a_2019: Použi, čo si sa naučil, aby si vytvoril tento
+        návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole
+        medzi každými dvomi.
+      courseF_artist_variables7: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables7_2018: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables7_2019: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables_2: |-
+        Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
+
+        Môžeš doň vložiť kód z predošlej úlohy.
+      courseF_artist_variables_3: |-
+        Skôr ako sa to skomplikuje, môžeš presunúť dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách?
+        <br/>
+
+        <img src="https://images.code.org/e6eac1f6aeb68a9a7584516e28663c14-image-1477533059853.gif" width="65%"/>
+      courseF_artist_variables_4: Teraz použi premennú `dĺžka`, aby umelec skočil
+        dopredu a dole o `dĺžka` pixelov medzi trojuhoníkmi.
+      courseF_artist_variables_5: Pridaj ďalšiu sadu cyklov na koniec tvojho kódu,
+        ktoré pridajú ďalšie tri trojuholníky. Tentokrát sa pohni dopredu a hore!
+      courseF_artist_variables_6: |-
+        **EJHA!** My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
+        Nie si rád, že používaš premennú?
+      courseF_artist_variables_6a: Použi, čo si sa naučil, aby si vytvoril tento návrh,
+        kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi
+        každými dvomi.
+      courseF_artist_variables_7: |-
+        Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
+
+        Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
       courseF_bee_for_challenge2_2019: Vyrieš túto úlohu použitím čo najmenšieho možného
         počtu blokov.
+      courseF_bee_functions_3_2018: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_
+        \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý
+        kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť
+        rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_3_2018: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_
+        \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý
+        kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť
+        rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_3_2019: "_\"Such an a-MAZE-ing garden! (Aká nádherná záhrada!)\"_
+        \n\nV tejto úlohe každý kúsok potrebuje premennú o jedna menšiu ako predošlý
+        kúsok. Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť
+        rovnakú funkciu na vyriešenie tohto levelu."
+      courseF_bee_variables_4_2018: |-
+        "Neuveriteľné! (Un-BEE-lievable|)"
+
+        Uprav kód, aby fungoval pre túto úlohu.
+      courseF_bee_variables_4_2019: |-
+        "Pokračujme!"
+
+        Uprav kód, aby fungoval pre túto úlohu.
       courseF_maze_ramp4: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_
         \n\nVyhni sa TNT, inak bude lietať perie!"
       courseF_maze_ramp4_2018: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_
@@ -3718,6 +3899,18 @@ sk:
         Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
 
         \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
+      grade5_artist_variables_triangles1: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      grade5_artist_variables_triangles1_2018: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
+      grade5_artist_variables_triangles1_2019: |-
+        Nakreslime rovnostranný trojuholník.
+
+        Každú stranu musí mať dlhú presne 50 pixelov.
       harvester_Kahoot: |-
         \_"Joj, všade samá zelenina!"-
 

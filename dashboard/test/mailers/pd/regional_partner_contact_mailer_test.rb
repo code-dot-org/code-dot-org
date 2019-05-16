@@ -58,4 +58,13 @@ class RegionalPartnerContactMailerTest < ActionMailer::TestCase
     assert links_are_complete_urls?(mail)
     assert_sendable mail
   end
+
+  test 'default bcc' do
+    regional_partner_contact = create :pd_regional_partner_contact, form_data: FORM_DATA.to_json
+    form = regional_partner_contact.sanitize_and_trim_form_data_hash
+    rp_pm = create :regional_partner_program_manager
+    mail = Pd::RegionalPartnerContactMailer.matched(form, rp_pm)
+
+    assert_equal MailerConstants::PLC_EMAIL_LOG, mail.bcc.first
+  end
 end

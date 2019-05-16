@@ -74,21 +74,32 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csd-2018'
   end
 
-  # Right now, all course versions are considered stable, but in the future, we will track an is_stable property for
-  # each course, and the following tests regarding "latest stable version" need be updated.
   test "show: redirect to latest stable version in course family for logged out user" do
     sign_out @teacher
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     get :show, params: {course_name: 'csp-2017'}
 
     assert_redirected_to '/courses/csp-2018/?redirect_warning=true'
   end
 
+  test "show: do not redirect to latest stable version if no_redirect query param provided" do
+    sign_out @teacher
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+
+    get :show, params: {course_name: 'csp-2017', no_redirect: "true"}
+    assert_response :ok
+    get :show, params: {course_name: 'csp-2017'}
+    assert_response :ok
+  end
+
   test "show: redirect to latest stable version in course family for student" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
-    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true
+    create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true
+    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
 
     sign_in create(:student)
     get :show, params: {course_name: 'csp-2017'}

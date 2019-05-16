@@ -9,7 +9,7 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
-import color from '../util/color';
+import themeColor from './themeColor';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -26,6 +26,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions} from './redux/applab';
 import {getStore} from '../redux';
+import datasetLibrary from '@cdo/apps/code-studio/datasetLibrary.json';
 import $ from 'jquery';
 
 // For proxying non-https xhr requests
@@ -205,8 +206,8 @@ applabCommands.button = function(opts) {
   } else {
     newButton.style.fontSize = defaultFontSizeStyle;
     newButton.style.fontFamily = fontFamilyStyles[0];
-    newButton.style.color = color.white;
-    newButton.style.backgroundColor = color.applab_button_teal;
+    newButton.style.color = themeColor.buttonText.classic;
+    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
     elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
   }
 
@@ -944,8 +945,7 @@ applabCommands.textLabel = function(opts) {
   } else {
     newLabel.style.fontSize = defaultFontSizeStyle;
     newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor =
-      color.applab_classic_label_background_color;
+    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
@@ -1016,13 +1016,13 @@ applabCommands.dropdown = function(opts) {
   } else {
     newSelect.style.fontSize = defaultFontSizeStyle;
     newSelect.style.fontFamily = fontFamilyStyles[0];
-    newSelect.style.color = color.white;
+    newSelect.style.color = themeColor.dropdownText.classic;
     elementLibrary.typeSpecificPropertyChange(
       newSelect,
       'textColor',
       newSelect.style.color
     );
-    newSelect.style.backgroundColor = color.applab_button_teal;
+    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
     elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
   }
 
@@ -1788,6 +1788,71 @@ applabCommands.handleReadValue = function(opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
+};
+
+applabCommands.getList = function(opts) {
+  validateGetListArgs(opts.tableName, opts.columnName);
+  var onSuccess = handleGetListSync.bind(this, opts);
+  var onError = handleGetListSyncError.bind(this, opts);
+  Applab.storage.readRecords(opts.tableName, {}, onSuccess, onError);
+};
+
+var validateGetListArgs = function(tableName, columnName) {
+  let dataset = datasetLibrary.datasets.find(d => d.name === tableName);
+  if (!dataset) {
+    outputWarning(
+      tableName +
+        ' is not a data set in this project. Check the Data tab to see the names of your tables'
+    );
+    return;
+  }
+  const columnList = dataset.columns.split(',');
+  if (columnList.indexOf(columnName) === -1) {
+    outputWarning(
+      columnName +
+        ' is not a column in ' +
+        tableName +
+        '. Check the Data tab to see the names of the columns in that table.'
+    );
+  }
+};
+
+var handleGetListSync = function(opts, values) {
+  let columnList = [];
+
+  if (values.length > 0) {
+    values.forEach(row => {
+      if (row.hasOwnProperty(opts.columnName)) {
+        columnList.push(row[opts.columnName]);
+      }
+    });
+    opts.callback(columnList);
+    return;
+  }
+
+  let url;
+  datasetLibrary.datasets.forEach(dataset => {
+    if (dataset.name === opts.tableName) {
+      url = dataset.url;
+    }
+  });
+  if (url) {
+    // Import the dataset, then try getList again.
+    Applab.storage.importDataset(
+      opts.tableName,
+      url,
+      () => applabCommands.getList(opts),
+      () => console.log('error')
+    );
+  } else {
+    // No dataset with the specified name, call back into interpreter and return the empty list.
+    opts.callback(columnList);
+  }
+};
+
+var handleGetListSyncError = function(opts, values) {
+  console.log('handleGetListSyncError');
+  opts.callback();
 };
 
 applabCommands.getKeyValueSync = function(opts) {

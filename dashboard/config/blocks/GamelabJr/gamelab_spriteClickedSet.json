@@ -1,0 +1,39 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "spriteClickedSet",
+    "blockText": "{CONDITION} {SPRITE} clicked set {CLICK}",
+    "inline": false,
+    "args": [
+      {
+        "name": "CONDITION",
+        "options": [
+          [
+            "when",
+            "\"when\""
+          ],
+          [
+            "while",
+            "\"while\""
+          ]
+        ]
+      },
+      {
+        "name": "SPRITE",
+        "type": "Sprite",
+        "defer": true
+      },
+      {
+        "name": "CLICK",
+        "type": "Sprite",
+        "defer": true
+      }
+    ],
+    "eventBlock": true
+  }
+}

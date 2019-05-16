@@ -3,7 +3,7 @@
   is_public = local_assigns[:is_public]
   projects_data = {}
   projects_data[:limitedGallery] = local_assigns[:limited_gallery]
-  projects_data[:projectCount] = fetch_project_count['rounded_down_millions']
+  projects_data[:projectCount] = fetch_project_count['total_projects']
 
   if current_user
     projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)

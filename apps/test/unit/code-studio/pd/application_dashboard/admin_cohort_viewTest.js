@@ -1,5 +1,5 @@
 import AdminCohortView from '@cdo/apps/code-studio/pd/application_dashboard/admin_cohort_view';
-import {assert, expect} from '../../../../util/configuredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';

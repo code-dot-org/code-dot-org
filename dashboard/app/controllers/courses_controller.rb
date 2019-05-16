@@ -1,6 +1,9 @@
 class CoursesController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource except: [:index]
 
   def index
@@ -62,7 +65,8 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if redirect_course = redirect_course(course)
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
+    if !override_redirect && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
@@ -109,6 +113,12 @@ class CoursesController < ApplicationController
 
   private
 
+  def set_redirect_override
+    if params[:course_name] && params[:no_redirect]
+      VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
+    end
+  end
+
   def redirect_course(course)
     # Return nil if course is nil or we know the user can view the version requested.
     return nil if !course || course.can_view_version?(current_user)
@@ -116,7 +126,7 @@ class CoursesController < ApplicationController
     # Redirect the user to the latest assigned course in this family, or to the latest course in this family if none
     # are assigned.
     redirect_course = Course.latest_assigned_version(course.family_name, current_user)
-    redirect_course ||= Course.latest_version(course.family_name)
+    redirect_course ||= Course.latest_stable_version(course.family_name)
 
     # Do not redirect if we are already on the correct course.
     return nil if redirect_course == course

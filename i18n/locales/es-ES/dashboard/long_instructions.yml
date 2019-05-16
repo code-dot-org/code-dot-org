@@ -609,6 +609,7 @@ es:
         Puedes seguir trabajando en tu proyecto
         aquí. Cada vez que tus amigos vayan al enlace que compartiste, recibirán la última
         versión que hiciste ¿Cuán lejos construirás tu aventura?
+      AppLab Intro 3 - Change Screen Color: Selecciona el color de fondo de la pantalla en rojo. Pincha en la imagen para ver cómo hacerlo.
       AppLab Intro 4 - Video onEvent: "# Usando onEvent"
       AppLab Intro 4 - Video share your work: "# ¡Crea y comparte tu Aplicación!"
       AppLab Intro 4 - Video share: "# ¡Crea y comparte tu Aplicación!"
@@ -1606,6 +1607,8 @@ es:
       CourseF_PlayLab_vars2: |-
         ¡Esa carrera en ese ultimo problema no
         fue justa! Cambia la variable de "velocidad\_perro" para asegurarse que puede recoger más banderas que el Gato. ¡El primero en recoger 10 banderas gana!
+      Dance Party Template 1_2019: Plantilla
+      Dance Party Template 2_2019: Plantilla
       Dance_Party_01: |-
         _¡Hagamos una fiesta para bailar!_
 

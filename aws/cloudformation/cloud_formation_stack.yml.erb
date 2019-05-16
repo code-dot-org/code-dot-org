@@ -701,8 +701,9 @@ Resources:
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: default.aurora-mysql5.7
+      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
       Engine: aurora-mysql
+      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with cluster.
       EngineVersion: 5.7.12
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
@@ -717,7 +718,15 @@ Resources:
       DBInstanceClass: db.r4.large
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
+      # We will usually do engine version updates manually, since updating this requires replacement, so this value may be out of sync with instance.
       EngineVersion: 5.7.12
+
+  AuroraClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: {'innodb_monitor_enable': 'all'}
 
   DatabaseSecret:
     Type: AWS::SecretsManager::Secret

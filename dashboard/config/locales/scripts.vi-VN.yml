@@ -4975,12 +4975,10 @@ vi:
               name: Các biến phong bì
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
-            new stage:
-              name: giai đoạn mới
             The Artist:
               name: nghệ sĩ
             Internet:
-              name: Kết nối mạng
+              name: Internet
             Crowdsourcing:
               name: Đa nguồn
         dance-low:
@@ -4989,12 +4987,14 @@ vi:
               name: Bữa tiệc khiêu vũ
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: lập trình đồ thị trên giấy
             Relay Programming:
               name: Chương trình chuyển tiếp
             Digital Citizenship:
               name: Dân kỹ thuật số
             'Unplugged: Binary':
-              name: 'Chưa hoạt động: nhị phân'
+              name: Hình ảnh Nhị phân
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Dance Party:
@@ -5009,18 +5009,24 @@ vi:
               name: Vòng lặp lồng nhau
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
-            Conditionals:
-              name: Điều kiện
+            'Functions: Songwriting':
+              name: Sáng tác với tham số
             Internet:
               name: Kết nối mạng
             Crowdsourcing:
               name: Đa nguồn
+            Nested Loops in Frozen:
+              name: Vòng lặp lồng với Frozen
             Songwriting:
               name: Sáng tác với tham số
         express-2019:
           stages:
             Relay Programming:
               name: Chương trình chuyển tiếp
+            Debugging in Maze:
+              name: Gỡ lỗi với Scrat
+            'Concept Practice with Minecraft ':
+              name: Nhìn về phía trước
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -5035,6 +5041,10 @@ vi:
               name: Kết nối mạng
             Crowdsourcing:
               name: Đa nguồn
+            Concept Practice with Minecraft:
+              name: Nhìn về phía trước
+            Dance Party:
+              name: Bữa tiệc khiêu vũ
         csd1-2019:
           stages:
             CS Discoveries Pre-survey:
@@ -5061,10 +5071,10 @@ vi:
             án mở rộng.
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Xây dựng nền tảng
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
+            'Events: The Big Event':
+              name: Sự kiện lớn
             Looking Ahead:
               name: Nhìn về phía trước
             Binary Bracelets:
@@ -5073,10 +5083,8 @@ vi:
           title: Kho Trò chơi
         coursea-2019:
           stages:
-            'Debugging: Unspotted Bugs':
-              name: 'Gỡ lội: Những chú bọ không đốm'
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Thuật toán đời sống: Trồng một hạt giống'
+            'Programming: Happy Maps':
+              name: Bản đồ thú vị
             Going Places Safely:
               name: Đến nơi an toàn
         courseb-2019:
@@ -5085,6 +5093,8 @@ vi:
               name: Di chuyển nó, di chuyển nó
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số
+            'Loops: Getting Loopy':
+              name: Tạo vòng lặp
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5464,6 +5474,14 @@ vi:
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
         csp7-pilot-staging:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: lập trình đồ thị trên giấy
+        csp5-pilot:
           stages:
             new stage:
               name: giai đoạn mới

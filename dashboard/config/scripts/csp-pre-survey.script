@@ -1,22 +1,22 @@
 hideable_stages true
 
 stage 'Anonymous student pre-survey'
-assessment 'CSP pre-assessment survey'
+level 'CSP pre-assessment survey', assessment: true
 
 stage 'Unit 1 Chapter 1 Assessment', lockable: true
 variants
-  assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
-  assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group', active: false
+  level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2', assessment: true
+  level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group', active: false, assessment: true
 endvariants
 
 stage 'NEW Unit 1 Chapter 1 Assessment', lockable: true
-assessment 'CSP Unit 2 Ch2 Cumulative Assessment MC'
+level 'CSP Unit 2 Ch2 Cumulative Assessment MC', assessment: true
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true
-assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
+level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 
 stage 'Unit 4 Chapter 1 Assessment', lockable: true
-assessment 'CSP Unit 4 Ch1 Cumulative Assessment MC'
+level 'CSP Unit 4 Ch1 Cumulative Assessment MC', assessment: true
 
 stage 'Anonymous student survey: Taking the AP exam'
-assessment 'csp_ap_questions'
+level 'csp_ap_questions', assessment: true

@@ -123,6 +123,7 @@ lt:
     user_type_student: Mokinys
     field_is_required: reikalingas
     accept_terms: Turite sutikti, norint sukurti paskyrą
+    email_preference_privacy: Tikrinti savo privatumą
     email_preference_yes: Taip
     email_preference_no: Ne
   school_info:
@@ -232,11 +233,8 @@ lt:
     header:
       finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
       sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
-      free_play:
-        playlab: Sukurk programėlę
-        artist: Nupiešk ką nors
-        applab: Sukurk programėlę
       my_dashboard: Valdymo skydelis
+      course_catalog: Kurso katalogas
       project_gallery: Projektai
       report_bug: Pranešti apie klaidą
       teacher_community: Mokytojų bendruomenė
@@ -683,16 +681,12 @@ lt:
     new: Sukurti naują
     rename: Pervadinti
     save: Išsaugoti
-    delete: Ištrinti
     exit: Grįžti prie kursų
-    my_projects: Mano projektai
     project_gallery: Projektai
     share: Dalintis
     share_title: Bendrinti savo projektą
     share_copy_link: 'Kopijuoti nuorodą:'
     advanced_share: Rodyti išplėstinius nustatymus
-    close: Užverti
-    more: Daugiau
     name: Vardas
     updated: Atnaujinta
     project_type: Projekto rūšis
@@ -700,16 +694,8 @@ lt:
       žemiau, kad sukurtum Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsi
       sugrįžti ir pratęsti savo projektą.
     need_help: Išmėgink šiuos kursus, kurie tau padės sukurti naują projektą
-    really_delete: Ištrinti?
-    delete_yes: Taip
-    delete_no: Ne
     saved: Išsaugota
     not_saved: Neišsaugota
-    cancel: Atšaukti
-    delete_confirm_title: Ar tikrai norite ištrinti šį projektą?
-    delete_confirm_text: Jei ištrinsite projektą, jis bus visam laikui pašalintas
-      iš projektų sąrašo. Kiekvienas žmogus, kuriam buvote nusiuntęs nuorodą į jį,
-      nebegalės jo peržiūrėti.
     view_all: Peržiūrėti mano projektus
     remix: Remiksas
     click_to_remix: Paspausk ant „Remiksas“ ir sukurk savo versiją!

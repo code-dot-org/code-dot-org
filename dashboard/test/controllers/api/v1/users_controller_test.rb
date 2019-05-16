@@ -90,16 +90,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
-    sign_in(@user)
-    @user.ui_tip_dismissed_homepage_header = false
-    refute @user.ui_tip_dismissed_homepage_header
-    post :post_ui_tip_dismissed, params: {user_id: 'me', tip: 'homepage_header'}
-    assert_response :success
-    @user.reload
-    assert @user.ui_tip_dismissed_homepage_header
-  end
-
   test 'a post request to postpone_census_banner updates next_census_display' do
     test_user = create :user
     sign_in(test_user)
@@ -118,5 +108,30 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
     test_user.reload
     assert_equal response["next_census_display"], test_user.next_census_display
+  end
+
+  test "a get request to get school_name returns school object" do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: @user.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal @user.school, response["school_name"]
+  end
+
+  test "school name is not returned for a user that is not signed in" do
+    get :get_school_name, params: {user_id: 234}
+    assert_response 403
+  end
+
+  test 'get school name will 403 if given a user id other than the person logged in' do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: @user.id + 1}
+    assert_response 403
+  end
+
+  test "get_school_user will 403 if user id does not exist" do
+    sign_in(@user)
+    get :get_school_name, params: {user_id: '-1'}
+    assert_response 403
   end
 end
