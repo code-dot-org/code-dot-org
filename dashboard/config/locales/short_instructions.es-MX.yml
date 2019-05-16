@@ -8024,10 +8024,6 @@ es-MX:
         haga? ¡Prueba lo que quieras!"
       Virtual Pet Freeplay_simple: 'Juego libre: ¿Qué más puedes lograr que tu jirafa
         haga? '
-      Virtual Pet Template_2019: "¡Crea tu propia mascota virtual! Haz clic en la
-        pestaña **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota
-        virtual. En el código a continuación, cambia el disfraz de la mascota sprite
-        por el tuyo."
       WhileAdventure: Nuestra aventurera quiere recoger monedas. ¿Puedes ayudarla
         a agarrar la mayor cantidad que pueda usando solo un `eliminar 1 bloque`?
       'Widget: Black and White Pixelation': "¡Ahora haz tu propia imagen! Hemos empezado
@@ -8048,8 +8044,7 @@ es-MX:
       'Widget: Color Pixelation_2019': 'Requisitos: El icono debe ser de 16 x 16 pixeles.
         Debes utilizar el Widget Pixelation para codificar los bits de información
         de color. La imagen debe codificarse con al menos 12 bits por pixel.'
-      XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas de
-        unidades
+      XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas unitarias
       aE1: "¡Has elegido crear una servilleta cuadrada! \n\nPara terminar, dibuja
         un cuadrado con lados de 20 pixeles. "
       aE2: Si pones tu bucle cuadrado dentro de otro bucle, lo llamamos "bucle anidado".

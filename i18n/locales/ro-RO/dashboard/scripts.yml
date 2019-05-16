@@ -3944,6 +3944,8 @@ ro:
               name: Obţinând Informaţii/Critici
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            Dance Party:
+              name: Petrecere cu dans
         csd1-2019:
           description_audience: '[șir gol]'
           stages:
@@ -4120,7 +4122,6 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Ice Age:
-              name: Bucle în Ice Age
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Collector:
@@ -4642,8 +4643,6 @@ ro:
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp5-pilot:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'

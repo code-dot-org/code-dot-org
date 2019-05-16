@@ -728,7 +728,7 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options, .project_more_popup {
+.user_options {
   display: none;
   background-color: $white;
   a:link {
@@ -2153,6 +2153,10 @@ a.download-video {
 
 .external .content-level {
   overflow: hidden;
+}
+
+.external-video-container {
+  margin-left: 93px;
 }
 
 .peer-review input[type=radio] {

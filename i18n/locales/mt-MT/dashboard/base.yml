@@ -361,10 +361,8 @@ mt:
     new: "Oħloq Ġdid"
     rename: "Ibdel l-isem"
     exit: "Lura għall-kors"
-    my_projects: "Il-Proġetti Tiegħi"
     project_gallery: "Il-Proġetti"
     share_title: Aqsam il-proġett tiegħek
-    close: "Agħlaq"
     updated: "Aġġornat"
     saved: "Ssalvat"
     not_saved: "Mhux issalvat"

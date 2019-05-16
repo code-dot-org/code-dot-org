@@ -1086,7 +1086,6 @@ fil:
     new: Gumawa ng Bago
     rename: Baguhin ang Pangalan
     save: I-save
-    delete: I-delete
     import: Mag-Import
     share_link_import_bad_link_header: Ang Share na Link ay hindi kinikilala
     share_link_import_bad_link_body: 'Hindi namin ma-import ang share na link na iyan.
@@ -1096,7 +1095,6 @@ fil:
     share_link_import_error_body: May problema sa pag-import ng share na link na iyan.
       Pakisubukan ulit.
     exit: Bumalik sa Kurso
-    my_projects: Aking mga Proyekto
     project_gallery: Mga Proyekto
     publish: Ilathala
     unpublish: Di-nailathala
@@ -1111,8 +1109,6 @@ fil:
     advanced_share: Ipakita ang pinahusay na mga opsyon
     no_projects: Ikaw kasalukuyang walang proyekto. Mag-click sa isa sa mga buttons
       sa taas para simulan ang proyekto.
-    close: Isara
-    more: More
     name: Pangalan
     updated: I-update
     project_type: Tipo ng Proyekto
@@ -1124,16 +1120,8 @@ fil:
     thumbnail_help: Hindi nakita ang tamang thumbnail para sa iyong proyekto? Patakbuhin
       ang iyong app para makalikha ng bagong thumbnail. Tandaan na maaring tatagal
       ito ng ilang oras bago maupdate ang mga thumbnail sa lahat ng dako.
-    really_delete: I-delete?
-    delete_yes: Oo
-    delete_no: Hindi
     saved: Na-save sa gallery!
     not_saved: Hindi na-save
-    cancel: Kanselahin
-    delete_confirm_title: Sigurado ka bang gusto mong burahin ang proyektong ito?
-    delete_confirm_text: Ang pagbura ng iyong proyekto ay tuluyang magtanggal nito
-      sa iyong listahan na "Aking Mga Proyekto". Kahit na sino na mayroong share link
-      ay hindi na makakakita sa iyong proyekto.
     view_all: Tingnan ang Aking mga Proyekto
     remix: Remix
     click_to_remix: I-click ang "Remix" para makalikha ng iyong sariling bersyon!

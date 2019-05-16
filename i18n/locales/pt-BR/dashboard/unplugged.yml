@@ -403,12 +403,20 @@ pt-BR:
       GraphingData_2019:
         title: Gerando Gráficos a partir de dados
         desc: ' Nesta aula, os alunos irão coletar dados de um projeto Laboratório ou de um cenário real e usá-lo para fazer previsões.'
+      courseE_unplugged_accessAbility_2019:
+        desc: Aprenda sobre acessibilidade e o valor de epatia através de debates e a desenhar soluções acessíveis para apps hipotéticos.
       courseE_simon_says_2019:
+        title: Simon diz
         desc: "Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo."
+      courseB_unplugged_passwords_2019:
+        title: Senhas fortes
+        desc: Explore porquê usar senhas, aprenda os benefícios de usar senhas, e descubra estratégias para criar e manter senhas fortes e seguras.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Nota do Josh: em contraste com a primeira lição, eu formatei essa aqui como uma lição desconectada._'
       timeforcs_demo_conditionals:
         title: Condições
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
       TheRightApp_2019:
         title: O aplicativo correto
+        desc: "* Todo mundo usa computadores hoje em dia, especialmente smartphone. \\r\n* Aplicações de smartphone, ou \"apps\", ajudam pessoas a fazer coisas como conversar com amigos, ouvir música, comprar, ou mesmo só explorar a web. \\r\n* É importante que programadores entendam as necessidades dos outros e façam apps com isso em mente! \\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

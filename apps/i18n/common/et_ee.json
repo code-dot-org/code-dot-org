@@ -602,6 +602,7 @@
   "submitYourProjectConfirm": "Te ei saa muuta oma projekti pärast esitamist, kas esitan?",
   "subtitle": "visuaalne programmeerimiskeskkond",
   "success": "Korras!",
+  "support": "Abi ja kogukond",
   "switchSection": "Vaheta sektsiooni:",
   "syntaxErrorMsg": "Sinu programmis on näpukas. Palun eemalda rida {lineNumber} ja proovi uuesti.",
   "teacher": "Õpetaja",

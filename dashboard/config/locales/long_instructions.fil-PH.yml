@@ -535,14 +535,14 @@ fil:
         Maaari kang gumawa ng bagong button sa dalawang pamamaraan. \\\r\n\\\r\n\n1.
         \ Kung gusto mo ang istulo ng \"Dogs\" na button, maaari kang gumawa ng kopya
         nito. I-click ang button at pagkatapos ay i-click ang \"Duplicate\".\\\r\n
-        \   \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>\n
+        \   \\\r\n    \\\\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10\n
         \   AM.png>)\\\r\n    \\\r\n2.  Maaari ka ring gumawa ng bagong button mula
         sa wala sa pamamagitan ng pagkaladkad nito papasok mula sa Kagamitan sa Pag-disenyo.\\\r\n
-        \   \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09>\n
+        \   \\\r\n    \\\\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09\n
         \   AM.png>)\\\r\n    \\\r\n3.  I-click at kaladkarin para mailipat ang iyong
         bagong button kung saan mo ito gusto.\\\r\n    \\\r\n4.  Kapag mayroon ka
         nang bagong button, bigyan ito nang malinaw na pangalan, \"catButton\". Maaari
-        mo ring baguhin ang teksto nito para mabasang \"Cats!\".\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>\n
+        mo ring baguhin ang teksto nito para mabasang \"Cats!\".\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14\n
         \   AM.png>)\\\r\n    \\\r\n5.  Mayroong napakaraming ibang pamamaraan na
         maarin mong baguhin ang hitsura ng iyong button. Mag-eksperimento sa buong
         menu na mga opsyon.\\\r\n    \\\r\n6.  Kapag tapos ka na, ipatakbo ang iyong
@@ -555,16 +555,16 @@ fil:
         ay napindot. Ikaw ay nangangailangan ng pangalawang `onEvent()` na bloke para
         mapagana ang iyong button. Mayroong dalawang pamamaraan para magawa ito.\\\r\n\\\r\n\n1.
         \ Mula sa Code Mode, maaari mong kaladkarin papasok ang bloke \\\r\n    \\\r\n
-        \   \\\\t\\!\\[](\\<<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>\n
+        \   \\\\t![](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56\n
         \   AM.png>)\\\r\n    \\\r\n2.  Mula sa Design Mode ang iyong button ay mayroong
         \"Events\" na tab.\n    I-click ang 'Insert and show code' para magdagdag
-        ng code.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>\n
+        ng code.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18\n
         \   AM.png>)\\\r\n    \\\r\n    3.Gamitin ang drop down para masiguro na ikaw
         ay nagpapagawa sa pangyayari na tumugon sa \"catButton\".\\\r\n    \\\r\n
-        \   \\\\t\\!\\[](\\<<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03>\n
+        \   \\\\t![](<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03\n
         \   AM.png>)\\\r\n    \\\r\n3.  Ang `setScreen()` na bloke ay naglipat-lipat
         sa screen. I-drag ang blokeng ito sa loob ng iyong `onEvent()` na bloke at
-        piliin ang iyong `catScreen` mula sa listahan.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>\n
+        piliin ang iyong `catScreen` mula sa listahan.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02\n
         \   AM.png>)\\\r\n    \\\r\n4.  Patakbuhin ang iyong app. Kung ang lahat ay
         tamang gumagana ang iyong cat na button ay dapat magdadala sa iyo sa iyong
         cat na screen kapag pinidot mo ito. Kapag handa kanang matuto kung paano magdagdag
@@ -573,11 +573,11 @@ fil:
         \ Ikaw ay lilikha ng mga screen ng pusa. Ito ang \"Design Mode\" kung saan
         maaari kang magdagdag at mag-edit ng mga screen. Para magdagdag ng screen,
         i-click ang screen na dropdown at piliin ang \"New screen\".\\\r\n    \\\r\n
-        \   \\\\t![expandable]\\(\\<<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33>\n
+        \   \\\\t![expandable](<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33\n
         \   AM.png>) \\\r\n    \\\r\n2.  Pagkatapos lagyan ng pangalan ang iyong bagong
-        screen na \"catScreen\".\\\r\n    \\\r\n    \\\\t![expandable]\\(\\<<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33>\n
+        screen na \"catScreen\".\\\r\n    \\\r\n    \\\\t![expandable](<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33\n
         \   AM.png>)\\\r\n    \\\r\n3.  Sa wakas, piliin ang background image ng pusa
-        sa iyong screen\\\r\n    \\\r\n    \\\\t![expandable]\\(\\<<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40>\n
+        sa iyong screen\\\r\n    \\\r\n    \\\\t![expandable](<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40\n
         \   AM.png>)\\\r\n    \\\r\n    Kapag nadagdag mo na ang iyong bagong screen,
         pindutin ang \"Finish\" para matutunan kung paano magdagdag ng mga buttons
         para mag-navigate sa screen."
@@ -586,9 +586,9 @@ fil:
         ang `playSound()` na bloke para magawa ito.\\\r\n\\\r\n\n1.  Kaladkarin ang
         `playSound()` na bloke sa iyong `onEvent`. Ito ay magpapatugtog sa tuno kapag
         ang iyong gumagamit ay nag-click sa button. Pagkatapos ay i-click ang \"Choose...\"
-        mula sa menu.\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>\n
+        mula sa menu.\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\n
         \   AM.png>)\\\r\n    \\\r\n2.  Puntahan ang \"Sound Library\" at hanapin
-        ang tunog na gusto mo. Mayroon napakarami nito!\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>\n
+        ang tunog na gusto mo. Mayroon napakarami nito!\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\n
         \   AM.png>)\\\r\n    \\\r\n3.  Patakbuhin ang iyong app para masuri kung
         paano gumagana ang iyong mga tunog."
       AppLab Intro 1 - Build Your Adventure: "# Bumuo ng Iyong Pakikipagsapalaran\\\r\n\n\\\r\nGamitin

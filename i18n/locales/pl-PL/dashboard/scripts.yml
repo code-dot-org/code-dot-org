@@ -4288,12 +4288,12 @@ pl:
               name: Programowanie w labiryncie
             Relay Programming:
               name: Sztafeta programowania
-            Debugging in Maze:
-              name: Debugowanie labiryntu
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+            'Concept Practice with Minecraft ':
+              name: Patrząc w przyszłość
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Bee:
@@ -4322,6 +4322,10 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+            Concept Practice with Minecraft:
+              name: Patrząc w przyszłość
+            Dance Party:
+              name: Potańcówka
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -4405,14 +4409,10 @@ pl:
               name: Przenieść go, przenieść go
             Your Digital Footprint:
               name: Twój cyfrowy ślad
-            Loops in Ice Age:
-              name: Pętle w Epoce Lodowcowej
             Spelling Bee:
               name: Literująca Pszczółka
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
-            Programming in Maze:
-              name: Programowanie w labiryncie
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4685,6 +4685,8 @@ pl:
               name: Programowanie na papierze milimetrowym
             Programming in Maze:
               name: Programowanie w labiryncie
+            Loops with Rey and BB-8:
+              name: Pętle z Rey i BB-8
         csp5-pilot:
           stages:
             new stage:
