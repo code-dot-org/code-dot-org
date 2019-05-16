@@ -157,6 +157,7 @@ def storage_id_from_cookie
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
+  return nil unless user_storage_ids_table.where(id: storage_id, user_id: nil).first
   storage_id
 end
 

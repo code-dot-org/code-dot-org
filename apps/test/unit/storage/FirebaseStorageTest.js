@@ -1,6 +1,7 @@
 import {expect} from '../../util/configuredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {getDatabase, getConfigRef} from '@cdo/apps/storage/firebaseUtils';
+import sinon from 'sinon';
 
 describe('FirebaseStorage', () => {
   let FirebaseStorage;
@@ -1003,6 +1004,57 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  function validateTableData(expectedTableData, callback) {
+    const rowCountRef = getDatabase().child('counters/tables/mytable/rowCount');
+    rowCountRef
+      .once('value')
+      .then(snapshot => {
+        expect(snapshot.val()).to.equal(3);
+        const recordsRef = getDatabase().child(
+          'storage/tables/mytable/records'
+        );
+        return recordsRef.once('value');
+      })
+      .then(snapshot => {
+        expect(snapshot.val()).to.deep.equal(expectedTableData);
+        callback();
+      });
+  }
+
+  describe('importDataset', () => {
+    const csvData =
+      'id,name,age,male\n' +
+      '4,alice,7,false\n' +
+      '5,bob,8,true\n' +
+      '6,charlie,9,true\n';
+
+    const expectedTableData = {
+      1: '{"id":1,"name":"alice","age":7,"male":false}',
+      2: '{"id":2,"name":"bob","age":8,"male":true}',
+      3: '{"id":3,"name":"charlie","age":9,"male":true}'
+    };
+
+    it('imports a valid dataset', done => {
+      var xhr = sinon.useFakeXMLHttpRequest();
+      var requests = [];
+      xhr.onCreate = function(xhr) {
+        requests.push(xhr);
+      };
+
+      FirebaseStorage.importDataset(
+        'mytable',
+        'datasetURL',
+        () => validateTableData(expectedTableData, done),
+        error => {
+          throw error;
+        }
+      );
+      requests[0].respond(200, {'Content-Type': 'text/plain'}, csvData);
+
+      xhr.restore();
+    });
+  });
+
   describe('importCsv', () => {
     const csvData =
       'id,name,age,male\n' +
@@ -1020,30 +1072,11 @@ describe('FirebaseStorage', () => {
       FirebaseStorage.importCsv(
         'mytable',
         csvData,
-        validateTableData,
+        () => validateTableData(expectedTableData, done),
         error => {
           throw error;
         }
       );
-
-      function validateTableData() {
-        const rowCountRef = getDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
-      }
     });
 
     it('overwrites existing data', done => {
@@ -1060,30 +1093,11 @@ describe('FirebaseStorage', () => {
         FirebaseStorage.importCsv(
           'mytable',
           csvData,
-          validateTableData,
+          () => validateTableData(expectedTableData, done),
           error => {
             throw error;
           }
         );
-      }
-
-      function validateTableData() {
-        const rowCountRef = getDatabase().child(
-          'counters/tables/mytable/rowCount'
-        );
-        rowCountRef
-          .once('value')
-          .then(snapshot => {
-            expect(snapshot.val()).to.equal(3);
-            const recordsRef = getDatabase().child(
-              'storage/tables/mytable/records'
-            );
-            return recordsRef.once('value');
-          })
-          .then(snapshot => {
-            expect(snapshot.val()).to.deep.equal(expectedTableData);
-            done();
-          });
       }
     });
 
