@@ -20,7 +20,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: false,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: false
+      session_2_attendance: false,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
@@ -38,7 +40,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: true,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: false
+      session_2_attendance: false,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
@@ -55,7 +59,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: true,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: true
+      session_2_attendance: true,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
@@ -71,7 +77,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: false,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: false
+      session_2_attendance: false,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
@@ -89,7 +97,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: true,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: true
+      session_2_attendance: true,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
@@ -107,7 +117,9 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       session_1_date: @workshop.sessions[0].formatted_date,
       session_1_attendance: false,
       session_2_date: @workshop.sessions[1].formatted_date,
-      session_2_attendance: false
+      session_2_attendance: false,
+      cdo_scholarship: '',
+      other_scholarship: ''
     }
     assert_equal expected, serialized
   end
