@@ -69,6 +69,44 @@ export function createCircuitPlaygroundComponents(board) {
   });
 }
 
+export function resetCircuitPlaygroundComponents(components) {
+  if (components.colorLeds) {
+    components.colorLeds.forEach(led => {
+      led.color('white');
+      led.intensity(100);
+      led.stop();
+      led.off();
+    });
+  }
+
+  if (components.led) {
+    components.led.intensity(100);
+    components.led.off();
+    components.led.stop();
+  }
+
+  if (components.buzzer) {
+    components.buzzer.off();
+    components.buzzer.stop();
+  }
+
+  if (components.soundSensor) {
+    components.soundSensor.disable();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.disable();
+  }
+
+  if (components.tempSensor) {
+    components.tempSensor.disable();
+  }
+
+  if (components.accelerometer) {
+    components.accelerometer.stop();
+  }
+}
+
 /**
  * De-initializes any Johnny-Five components that might have been created
  * by createCircuitPlaygroundComponents
