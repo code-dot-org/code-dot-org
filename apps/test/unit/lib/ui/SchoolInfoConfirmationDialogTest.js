@@ -95,14 +95,19 @@ describe('SchoolInfoConfirmationDialog', () => {
     expect(wrapper.find('Button').length).to.equal(2);
   });
 
-  describe('', () => {
+  describe(' server and fetch', () => {
     let server;
+    let stubedFetch;
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
+      stubedFetch = sinon.stub(window, 'fetch');
     });
 
-    afterEach(() => server.restore());
+    afterEach(() => {
+      server.restore();
+      stubedFetch.restore();
+    });
 
     describe('handleClickUpdate', () => {
       const wrapper = mount(
@@ -111,29 +116,57 @@ describe('SchoolInfoConfirmationDialog', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
+              fakeId: 1,
               country: 'US'
             }
           }}
         />
       );
 
-      it('calls handleUpdate method when a user clicks the button to update school information', () => {
-        const fakeScriptId = 1;
-        // const handleClickUpdate = sinon.spy();
+      it('calls handleUpdate method when a user clicks the button to update school information', async () => {
+        stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
+        wrapper.instance().setState({showSchoolInterstitial: false});
+        wrapper.find('div#first-button').simulate('click');
+
+        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
+        await setTimeout(() => {}, 50);
+        expect(wrapper.state('showSchoolInterstitial')).to.be.true;
+      });
+    });
+
+    describe('handleClickYes', () => {
+      const wrapper = mount(
+        <SchoolInfoConfirmationDialog
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              fakeId: 1,
+              country: 'US'
+            }
+          }}
+        />
+      );
+
+      it('calls handleYes method when a user does not need to update school information', () => {
+        const wrapperInstance = wrapper.instance();
+        sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.instance().setState({showSchoolInterstitial: false});
         console.log('******', wrapper.html());
         wrapper.find('div#first-button').simulate('click');
 
         server.respondWith(
           'PATCH',
-          `/api/v1/user_school_infos/${fakeScriptId}/update_end_date`,
+          `api/v1/user_school_infos/${
+            wrapper.scriptData.existingSchoolInfo.fakeId
+          }/update_end_date`,
           [200, {}, JSON.stringify({response: 'ok'})]
         );
         server.respond();
-        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
-        expect(wrapper.state('showSchoolInterstitial')).to.be.true;
+        expect(wrapperInstance.handleClickYes).to.have.been.called;
+        expect(wrapper.state('showSchoolInterstitial')).to.be.false;
       });
     });
   });
