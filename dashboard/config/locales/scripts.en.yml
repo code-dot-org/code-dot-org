@@ -10250,8 +10250,6 @@ en:
               description_teacher: ''
             'Concept Practice with Minecraft ':
               name: Looking Ahead with Minecraft
-              description_student: ''
-              description_teacher: ''
             Nested Loops in Bee:
               name: Nested Loops in Maze
               description_student: ''
@@ -10396,8 +10394,6 @@ en:
               name: Crowdsourcing
               description_student: ''
               description_teacher: ''
-            Concept Practice with Minecraft:
-              name: Looking Ahead with Minecraft
             Editing Behaviors:
               name: Behaviors in Sprite Lab
             Virtual Pet with Sprite Lab:
@@ -10408,6 +10404,8 @@ en:
               name: Dance Party
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12403,6 +12401,8 @@ en:
               name: csd digital unplugged WIAC L3
             What is a Computer?:
               name: What is a Computer?
+            Problem Solving Process:
+              name: Problem Solving Process
           title: Testing Widgets that save state
           description_audience: ''
           description_short: ''
