@@ -7,7 +7,7 @@ import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
-import {WorkshopAdmin, ProgramManager} from '../permission';
+import {WorkshopAdmin, ProgramManager, Facilitator} from '../permission';
 import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 
 const CSF = 'CS Fundamentals';
@@ -109,7 +109,9 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
 
     if (
       this.props.permissionList.has(ProgramManager) ||
-      this.props.permissionList.has(WorkshopAdmin)
+      this.props.permissionList.has(WorkshopAdmin) ||
+      (this.props.permissionList.has(Facilitator) &&
+        this.props.isCsfFacilitator)
     ) {
       return (
         <td>
@@ -285,9 +287,11 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   onDelete: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
-  numSessions: PropTypes.number.isRequired
+  numSessions: PropTypes.number.isRequired,
+  isCsfFacilitator: PropTypes.number
 };
 
 export default connect(state => ({
-  permissionList: state.workshopDashboard.permission.permissions
+  permissionList: state.workshopDashboard.permission.permissions,
+  isCsfFacilitator: state.workshopDashboard.facilitatorCourses.includes(CSF)
 }))(WorkshopEnrollmentSchoolInfo);

@@ -106,6 +106,9 @@ class Ability
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
           can :create, Pd::Workshop
           can :update, Pd::Workshop, facilitators: {id: user.id}
+          can :update_scholarship_info, Pd::Enrollment do |enrollment|
+            enrollment.workshop.facilitators.pluck(user.id)
+          end
         end
       end
 
