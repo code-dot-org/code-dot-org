@@ -1,34 +1,40 @@
 {
   "datasets": [
     {
-      "name": "dogs",
-      "description": "Different breeds of dogs, including images and rankings on different qualities like size and friendliness",
-      "url": "/api/v1/dataset-library/dogBreeds.csv",
-      "columns": "name,size,dogFriendly,imgURL"
-    },
-    {
-      "name": "words",
-      "description": "The 1000 most commonly used English words and their parts of speech",
-      "url": "/api/v1/dataset-library/words.csv",
-      "columns": "word,partOfSpeech"
-    },
-    {
       "name": "countries",
       "description": "Information about different countries, images of their flags, and MP3 of their anthem",
       "url": "/api/v1/dataset-library/countries.csv",
-      "columns": "Country,flagImgURL,Capital,anthemMP3"
+      "columns": "Country,Code,Flag Image URL,Population,GDP Per Person,Continent,Region,Latitude,Longitude,Capital,National Anthem MP3"
+    },
+    {
+      "name": "dogs",
+      "description": "Different breeds of dogs, including images and rankings on different qualities like size and friendliness",
+      "url": "/api/v1/dataset-library/dogBreeds.csv",
+      "columns": "Name,Size,Kid Friendly,Dog Friendly,Low Shedding,Easy to Groom,High Energy,Good Health,Low Barking,Intelligence,Easy to Train,Tolerates Hot,Tolerates Cold,Image URL"
     },
     {
       "name": "spotify",
       "description": "The top 20 songs in many regions of the world, including 30 second MP3 links to most songs",
       "url": "/api/v1/dataset-library/spotify.csv",
-      "columns": "Track Name,Artist,Streams,songURL,Album Image,previewMP3,Position,Region,Country Code"
+      "columns": "Track Name,Artist,Streams,Song URL,Album Image,Preview MP3,Position,Region,Country Code"
+    },
+    {
+      "name": "tate",
+      "description": "A selection of artwork from the Tate Museum. Includes title, artist, artist birth location, creation year, and a thumbnail of the artwork.",
+      "url": "/api/v1/dataset-library/tate.csv",
+      "columns": "Title,Artist,Birth Location,Creation Year,Thumbnail"
     },
     {
       "name": "weather",
       "description": "Daily weather forecasts for the next five days for a selection of US cities.",
       "url": "/api/v1/dataset-library/weather.csv",
-      "columns": "city,date,lowTemp,highTemp,condition,icon"
+      "columns": "City,Date,Low Temp,High Temp,Condition,Icon"
+    },
+    {
+      "name": "words",
+      "description": "The 1000 most commonly used English words and their parts of speech",
+      "url": "/api/v1/dataset-library/words.csv",
+      "columns": "Word,Part of Speech,Frequency,Rank"
     }
   ]
 }

@@ -5415,13 +5415,13 @@ sk:
         courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň sa dopredu`.
       courseF_artist_variables3_authored_hint:
         courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko sa posunieš medzi trojuholníkmi.'
-        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav dĺžka na`.'
       courseF_artist_variables3_2018_authored_hint:
         courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko sa posunieš medzi trojuholníkmi.'
-        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav dĺžka na`.'
       courseF_artist_variables3_2019_authored_hint:
         courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko sa posunieš medzi trojuholníkmi.'
-        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav premennú dĺžka`.'
+        courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý iba na jendom mieste: po bloku `nastav dĺžka na`.'
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom ho otočiť späť, aby bol pripravený znovu skočiť dopredu.
         courseF_artist_variables4_c: |-
@@ -5475,10 +5475,31 @@ sk:
         courseF_artist_variables6_b: Potrebuješ editovať číselný blok s hodnotou 50, ale nič iné v kóde sa nemusí zmeniť.
       courseF_artist_variables6a_authored_hint:
         courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!
+        courseF_artist_variables6a_c: Najskôr napíš kód pre jeden štvorec, potom pridaj kód na pohyb medzi štvorcami. Nakoniec pridaj cyklus okolo všetkého!
+        courseF_artist_variables6a_d: |-
+          Toto je vzor, ktorého sa budeš držať!
+
+          ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables6a_2018_authored_hint:
         courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!
+        courseF_artist_variables6a_c: Najskôr napíš kód pre jeden štvorec, potom pridaj kód na pohyb medzi štvorcami. Nakoniec pridaj cyklus okolo všetkého!
+        courseF_artist_variables6a_d: |-
+          Toto je vzor, ktorého sa budeš držať!
+
+          ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables6a_2019_authored_hint:
         courseF_artist_variables6a_b: Tento kód bude veľmi podobný tvôjmu trojuholníkovému kódu, iba s rozdielnym útvarom!
+        courseF_artist_variables6a_c: Najskôr napíš kód pre jeden štvorec, potom pridaj kód na pohyb medzi štvorcami. Nakoniec pridaj cyklus okolo všetkého!
+        courseF_artist_variables6a_d: |-
+          Toto je vzor, ktorého sa budeš držať!
+
+          ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
+      courseF_artist_variables7_authored_hint:
+        courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
+      courseF_artist_variables7_2018_authored_hint:
+        courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
+      courseF_artist_variables7_2019_authored_hint:
+        courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Vďaka premenným, potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.
       courseF_bee_for5_authored_hint:
@@ -5487,6 +5508,50 @@ sk:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseF_bee_for5_2019_authored_hint:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
+      courseF_bee_variables_3_2018_authored_hint:
+        courseF_beevariables_3a: |-
+          Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:
+          <xml><block type="variables_set" inline="false">
+
+          <title name="VAR">gather</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">gather</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
+      courseF_bee_variables_3_2019_authored_hint:
+        courseF_bee_variables_3_2019_1: |-
+          Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:
+          <xml><block type="variables_set" inline="false">
+
+          <title name="VAR">gather</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">gather</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block></xml>
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: Ak sa vták neposúva ku prasiatku, presvedč sa, či si dobre spojil všetky bloky a stlač "Spustiť".
       courseF_maze_ramp13_authored_hint:

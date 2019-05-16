@@ -714,6 +714,7 @@
   "submitYourProject": "Envia-nos o teu projeto",
   "submitYourProjectConfirm": "Não é possível alterares o projeto depois de o submeteres. Pretendes continuar?",
   "subtitle": "um ambiente de programação visual",
+  "support": "Suporte",
   "switchSection": "Trocar de turma:",
   "syntaxErrorMsg": "O teu programa tem um pequeno erro de escrita. Por favor, remove a linha {lineNumber} e volta a tentar.",
   "teacher": "Professor",

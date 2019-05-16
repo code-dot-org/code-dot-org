@@ -14,7 +14,7 @@ es-MX:
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
           Computación
         csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
-        full_course_category_name: Cursos Completos
+        full_course_category_name: Cursos completos
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
       name:
@@ -12533,7 +12533,7 @@ es-MX:
           title: Sigue bailando
           description_short: Ve más allá de la Hora del Código con esta actividad
             de seguimiento para el tutorial de la Fiesta de baile de Code.org.
-          description: Ve más allá de la primera hora con ideas extendidas del proyecto.
+          description: Motívate con más ideas de proyectos.
         coursef-2019:
           title: Curso F (2019)
           description: Aprende a usar diferentes tipos de bucles, eventos, funciones
@@ -12977,31 +12977,31 @@ es-MX:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmos: programación en papel cuadriculado'
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Angry Birds
             Relay Programming:
               name: Programación de relevos
             Debugging in Maze:
-              name: Depuración en el laberinto
+              name: Depuración con Scrat
             Programming in Collector:
-              name: Programación en Collector
+              name: Recoger tesoros con Laurel
             Programming in Artist:
-              name: Programación en Artist
+              name: Crear arte con código
             'Loops: Getting Loopy':
               name: 'Loops: Buscando Loopy'
             Loops with Rey and BB-8:
               name: Bucles con Rey y BB-8
             Loops in Artist:
-              name: Loops en Artista
+              name: Arte con stickers y bucles
             Copyright and Creativity:
               name: Derechos de Autor y Creatividad
             'Concept Practice with Minecraft ':
-              name: 'Práctica de concepto con Minecraft '
+              name: Práctica de concepto con Minecraft
             Nested Loops in Bee:
-              name: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
             Nested Loops in Frozen:
-              name: Bucles anidados en Frozen
+              name: Copos de nieve con Anna y Elsa
             While Loops in Farmer:
-              name: Bucles 'mientras' en Granjera
+              name: Bucles 'mientras' en la Granjera
             Until Loops in Maze:
               name: Bucles 'mientras' en el Laberinto
             Conditionals with Cards:
@@ -13009,13 +13009,13 @@ es-MX:
             Conditionals in Bee:
               name: Condicionales con Abeja
             Conditionals & Loops in Harvester:
-              name: Condicionales y bucles en Cosechadora
+              name: Cosechar con condicionales
             'Functions: Songwriting':
               name: 'Funciones: composición musical'
             Functions in Minecraft:
               name: Funciones en Minecraft
             Functions in Harvester:
-              name: Funciones en la Cosechadora
+              name: Funciones en Cosechadora
             Functions in Artist:
               name: Funciones de Artista
             Screen Out the Mean:
@@ -13039,13 +13039,13 @@ es-MX:
             For Loop Fun:
               name: Diversión con bucles Para
             For Loops in Bee:
-              name: Bucles `desde` en Abeja
+              name: Bucles 'desde' con la Abeja
             For Loops in Artist:
-              name: Bucles `desde` en Artista
+              name: Bucles `desde'`con Artista
             Learning Sprites with Sprite Lab:
               name: Aprender sprites con Laboratorio de Sprite
             Alien Dance Party with Sprite Lab:
-              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
+              name: Fiesta de baile extraterrestre
             Pet Giraffe with Sprite Lab:
               name: Jirafa mascota con Sprite Lab
             Explore Project Ideas:
@@ -13068,6 +13068,16 @@ es-MX:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
+            Concept Practice with Minecraft:
+              name: Mirando hacia el Futuro con Minecraft
+            Editing Behaviors:
+              name: Editar comportamientos
+            Virtual Pet with Sprite Lab:
+              name: Mascota virtual
+            Dance Party:
+              name: Fiesta de baile
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
         csd1-2019:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación
@@ -13300,7 +13310,7 @@ es-MX:
           title: Sigue bailando
           description_short: Ve más allá de la Hora del Código con esta actividad
             de seguimiento para el tutorial de la Fiesta de baile de Code.org.
-          description: Ve más allá de la primera hora con ideas extendidas del proyecto.
+          description: Motívate con más ideas de proyectos.
         coursec-2019:
           title: Curso C (2019)
           description: Crea programas con secuencias, bucles y eventos. Traduce tus
@@ -13538,11 +13548,11 @@ es-MX:
             'Loops: My Loopy Robotic Friends':
               name: 'Bucles: Mis amigos robóticos y repetitivos'
             Loops in Ice Age:
-              name: Bucles de la Era de Hielo
+              name: Bucles con Scrat
             Loops in Collector:
-              name: Loops en Recolectora
+              name: Bucles con Laurel
             Loops in Artist:
-              name: Loops en Artista
+              name: Dibujar jardines con bucles
             'Events: The Big Event':
               name: 'Eventos: El Gran Evento'
             Events in Play Lab:
@@ -13552,7 +13562,7 @@ es-MX:
             Learn to Drag and Drop:
               name: Aprende a arrastrar y soltar
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Scrat
             Programming in Harvester:
               name: Programación con la cosechadora
             Tell a Story in Play Lab:
@@ -15736,6 +15746,8 @@ es-MX:
               name: Programación con Papel Cuadriculado
             Programming in Maze:
               name: Programación en Laberinto
+            Loops with Rey and BB-8:
+              name: Bucles con Rey y BB-8
           title: CSF Express 2018 para Vietnam
         csd-post-survey-2018:
           stages:
@@ -15774,4 +15786,12 @@ es-MX:
               name: Investigar listas
             Lists Practice:
               name: Práctica de listas
+            Loops Explore:
+              name: Explorar bucles
+            'Loops Practice: While Loops':
+              name: 'Práctica de bucles: bucles mientras'
+            'Loops Practice: Simulations':
+              name: 'Práctica de bucles: simulaciones'
+            Traversals Explore:
+              name: Explorar recorridos
           title: 'Unidad 5: Listas, bucles y recorridos'

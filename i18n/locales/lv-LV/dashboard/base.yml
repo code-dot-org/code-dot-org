@@ -491,16 +491,9 @@ lv:
     all_courses: "Visi kursi"
   project:
     save: "Saglabāt"
-    delete: "Izdzēst"
-    my_projects: "Mani projekti"
     share: "Ieteikt"
-    more: "Vairāk"
     name: "Vārds"
-    really_delete: 'Izdzēst?'
-    delete_yes: 'Jā'
-    delete_no: 'Nē'
     saved: "Saglabāts galerijā!"
-    cancel: 'Atcelt'
     abuse:
       report_abuse_form:
         abuse_type:

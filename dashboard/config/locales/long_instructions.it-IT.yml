@@ -797,8 +797,8 @@ it:
         di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un
         triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100
-        con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il
-        codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
+        con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato
+        bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
         target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
@@ -920,11 +920,12 @@ it:
         parametro chiamato `direction` (<i>direzione </i>)?
       Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti
         di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe
-        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica
-        la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un
-        nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica
-        la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare
-        anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
+        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n
+        \ \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>)
+        aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>),
+        che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà
+        meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome
+        anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte
         dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-

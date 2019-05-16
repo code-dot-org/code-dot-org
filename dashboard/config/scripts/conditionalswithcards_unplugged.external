@@ -5,5 +5,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Conditionals With Cards
 
-To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
+Play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
 MARKDOWN

@@ -4,4 +4,10 @@ use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # Move It, Move It
+
+Use a map and give commands to reach the goal.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

@@ -843,7 +843,6 @@ ko:
     new: 새로 만들기
     rename: 이름 바꾸기
     save: 저장
-    delete: 삭제
     import: 가져오기
     share_link_import_bad_link_header: 공유 링크를 인식할 수 없습니다
     share_link_import_bad_link_body: '공유 링크를 가져올 수 없습니다. Minecraft: Agent 퍼즐에서 제공되는
@@ -851,7 +850,6 @@ ko:
     share_link_import_error_header: 오류가 발생했습니다.
     share_link_import_error_body: 공유 링크를 가져오는 중 문제가 발생했습니다. 다시 시도해주세요.
     exit: 코스로 돌아가기
-    my_projects: 내 프로젝트
     project_gallery: 프로젝트
     publish: 발행하기
     unpublish: 발행취소하기
@@ -862,8 +860,6 @@ ko:
     share_u13_warning: 공유하기 전에 선생님께 여쭤보세요. 여러분 학교에 있는 다른 사용자에게만 공유할 수 있습니다.
     embed: 삽입
     advanced_share: 고급 옵션 표시
-    close: 닫기
-    more: 더 많은
     name: 이름
     updated: 업데이트됨
     project_type: 프로젝트 형식
@@ -872,15 +868,8 @@ ko:
     need_help: 자신만의 프로젝트를 만드는데 도움이 되기 위해서 이 과정들을 시도해 보세요.
     thumbnail_help: 프로젝트에 썸네일이 제대로 표시 되지 않나요? 앱을 실행해서 새로운 썸네일 생성을 생성하세요. 모든 곳의 썸네일을
       다시 생성하기 위해서는 2시간가량 걸릴 수 있습니다.
-    really_delete: 삭제하시겠습니까?
-    delete_yes: 예
-    delete_no: 아니요
     saved: 저장됨
     not_saved: 저장 안됨
-    cancel: 취소
-    delete_confirm_title: 이 프로젝트를 삭제하시겠습니까?
-    delete_confirm_text: 프로젝트를 삭제하면 '나의 프로젝트 리스트'에서 영원히 삭제됩니다. 삭제한 프로젝트의 링크를 공유하는
-      사람은 더 이상 당신의 프로젝트를 볼 수 없습니다.
     view_all: 내 프로젝트 보기
     remix: 리믹스
     click_to_remix: 자신만의 버전을 만들고 싶으시면 "Remix"를 클릭하세요!

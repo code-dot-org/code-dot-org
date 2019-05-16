@@ -1057,7 +1057,6 @@ vi:
     new: Tạo mới
     rename: Đổi tên
     save: Lưu
-    delete: Xóa
     import: Nhập
     share_link_import_bad_link_header: Chia sẻ liên kết không được công nhận
     share_link_import_bad_link_body: 'Chúng tôi không thể truy xuất đường link chia
@@ -1067,7 +1066,6 @@ vi:
     share_link_import_error_body: Đã xảy ra sự cố khi nhập liên kết chia sẻ đó. Vui
       lòng thử lại.
     exit: Trở về khóa học
-    my_projects: chương trình của tôi
     project_gallery: chương trình
     publish: Xuất bản
     unpublish: Hủy xuất bản
@@ -1082,8 +1080,6 @@ vi:
     advanced_share: Hiển thị tuỳ chọn nâng cao
     no_projects: Bạn hiện không có dự án. Nhấp vào một trong các nút ở trên để bắt
       đầu dự án.
-    close: Đóng
-    more: Nhiều hơn
     name: Tên
     updated: Đã cập nhật
     project_type: loại chương trình
@@ -1095,16 +1091,8 @@ vi:
     thumbnail_help: Không nhìn thấy hình thu nhỏ chính xác cho dự án của bạn? Chạy
       ứng dụng của bạn để tạo một hình thu nhỏ mới. Xin lưu ý rằng có thể mất vài
       giờ để hình thu nhỏ mới được làm mới.
-    really_delete: Xóa?
-    delete_yes: Đồng ý
-    delete_no: Không
     saved: Đã lưu
     not_saved: Không lưu
-    cancel: Huỷ
-    delete_confirm_title: Bạn có chắc bạn muốn xóa bỏ chương trình này?
-    delete_confirm_text: Xóa chương trình của bạn sẽ vĩnh viễn loại bỏ nó từ danh
-      sách chương trình của bạn. Bất cừ ai đã được bạn chia sẽ sẽ không còn nhìn thấy
-      chương trình của bạn.
     view_all: Xem chương trình của tôi
     remix: đảo lại
     click_to_remix: Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!
