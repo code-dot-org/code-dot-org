@@ -87,9 +87,7 @@ def storage_encrypt_channel_id(storage_id, storage_app_id)
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{storage_app_id}")).tr('=', '')
 end
 
-def storage_id(endpoint)
-  return nil if endpoint == 'shared'
-  raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
+def get_storage_id
   @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
@@ -167,7 +165,7 @@ end
 
 def owns_channel?(encrypted_channel_id)
   owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-  owner_storage_id == storage_id('user')
+  owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
 end
