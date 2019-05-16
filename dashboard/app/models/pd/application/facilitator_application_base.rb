@@ -38,6 +38,7 @@ module Pd::Application
   class FacilitatorApplicationBase < ApplicationBase
     include PdWorkshopHelper
     include Pd::FacilitatorCommonApplicationConstants
+    include Pd::Application::ActiveApplicationModels
 
     serialized_attrs %w(
       pd_workshop_id
@@ -107,8 +108,7 @@ module Pd::Application
     end
 
     def registered_fit_workshop?
-      # inspect the cached fit_workshop.enrollments rather than querying the DB
-      fit_workshop.enrollments.any? {|e| e.user_id == user.id} if fit_workshop_id
+      FIT_WEEKEND_REGISTRATION_CLASS.where(pd_application_id: id).any?
     end
 
     def friendly_registered_workshop(workshop_id = pd_workshop_id)
