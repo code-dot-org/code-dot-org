@@ -19,7 +19,8 @@ const DEFAULT_PROPS = {
   onSaving: () => {},
   onSaved: () => {},
   accountRequiredForAttendance: false,
-  enrollmentCount: 25
+  enrollmentCount: 25,
+  scholarshipWorkshop: false
 };
 const FAKE_API_RESPONSE = {
   session: {
@@ -38,7 +39,9 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47564,
       user_id: 101,
       verified_teacher_account: true,
-      attended: true
+      attended: true,
+      cdo_scholarship: true,
+      other_scholarship: false
     },
     {
       first_name: 'Adele',
@@ -47,7 +50,9 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47567,
       user_id: 102,
       verified_teacher_account: true,
-      attended: true
+      attended: true,
+      cdo_scholarship: false,
+      other_scholarship: true
     },
     {
       first_name: 'Grace',
@@ -56,7 +61,9 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47570,
       user_id: 103,
       verified_teacher_account: true,
-      attended: true
+      attended: true,
+      cdo_scholarship: false,
+      other_scholarship: false
     }
   ]
 };
@@ -129,6 +136,33 @@ describe('SessionAttendance', () => {
             <th>Email</th>
             <th>Verified Teacher Account</th>
             <th>Attended</th>
+          </tr>
+        </thead>
+      )
+    ).to.be.ok;
+
+    wrapper.unmount();
+  });
+
+  it('includes scholarship columns for scholarship workshops', () => {
+    const wrapper = mount(
+      <SessionAttendance {...DEFAULT_PROPS} scholarshipWorkshop={true} />
+    );
+
+    // After the server responds
+    server.respond();
+    // Has expected columns:
+    expect(
+      wrapper.containsMatchingElement(
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Verified Teacher Account</th>
+            <th>Code.org Scholarship?</th>
+            <th>Other Scholarship?</th>
+            <th>Present</th>
           </tr>
         </thead>
       )
