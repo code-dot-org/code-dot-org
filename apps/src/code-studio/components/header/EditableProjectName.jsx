@@ -42,7 +42,7 @@ const DisplayProjectName = connect(state => ({
   projectName: state.header.projectName
 }))(UnconnectedDisplayProjectName);
 
-export class UnconnectedEditProjectName extends React.Component {
+class UnconnectedEditProjectName extends React.Component {
   static propTypes = {
     finishEdit: PropTypes.func.isRequired,
     projectName: PropTypes.string.isRequired,
