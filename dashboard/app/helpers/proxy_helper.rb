@@ -165,6 +165,11 @@ module ProxyHelper
   # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   def allowed_ip_address?(hostname)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == DASHBOARD_IP_ADDRESS
+    PRIVATE_IPS.none? {|private_ip| private_ip.include?(host_ip_address)} || host_ip_address == dashboard_ip_address
+  end
+
+  # Wrap constant in a method so it can be stubbed in a test.
+  def dashboard_ip_address
+    DASHBOARD_IP_ADDRESS
   end
 end
