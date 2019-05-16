@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   DOT_SIZE,
   DIAMOND_DOT_SIZE,
@@ -70,9 +69,8 @@ export class TeacherPanelProgressBubble extends React.Component {
     }
 
     const number = level.levelNumber;
-    const levelIcon = getIconForLevel(level);
 
-    const hideNumber = levelIcon === 'lock' || level.paired || level.bonus;
+    const hideNumber = level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -99,7 +97,6 @@ export class TeacherPanelProgressBubble extends React.Component {
               ...(level.isConceptLevel && styles.diamondContents)
             }}
           >
-            {levelIcon === 'lock' && <FontAwesome icon="lock" />}
             {level.paired && <FontAwesome icon="users" />}
             {level.bonus && <FontAwesome icon="flag-checkered" />}
             {!hideNumber && <span>{number}</span>}
