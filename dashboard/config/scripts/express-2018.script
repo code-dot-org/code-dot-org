@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for 
 family_name 'express'
 version_year '2018'
 is_stable true
+supported_locales ["sk-SK"]
 
 stage 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'

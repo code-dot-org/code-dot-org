@@ -320,15 +320,9 @@ ms:
     submit: "Hantar"
   project:
     save: "Simpan"
-    delete: "Padam"
     share: "Kongsi"
-    more: "Lagi"
     name: "Nama"
-    really_delete: 'Padam?'
-    delete_yes: 'Ya'
-    delete_no: 'Tidak'
     saved: "Disimpan di dalam galeri!"
-    cancel: 'Batal'
     abuse:
       report_abuse_form:
         abuse_type:

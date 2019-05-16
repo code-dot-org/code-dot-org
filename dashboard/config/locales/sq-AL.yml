@@ -816,9 +816,7 @@ sq:
     new: Krijo një të ri
     rename: Riemëro
     save: Ruaj
-    delete: Fshi
     exit: Kthehu te Kursi
-    my_projects: Projektet e mia
     project_gallery: Projekte
     share: Shpërndaje
     share_title: Shpërndaje projektin
@@ -829,8 +827,6 @@ sq:
       me të tjerët në shkollën tuaj.
     embed: I integruar
     advanced_share: Trego opsione të avancuara
-    close: Mbyll
-    more: Më shumë
     name: Emri
     updated: U ndryshua
     project_type: Lloji i Projektit
@@ -839,16 +835,8 @@ sq:
       dhe të zhvillosh projektin tënd.
     need_help: Provoni këto kurse për t`ju ndihmuar  të filloni me projektin tuaj
       të ri
-    really_delete: Fshirje?
-    delete_yes: Po
-    delete_no: Jo
     saved: E ruajtur
     not_saved: E pa ruajtur
-    cancel: Anulo
-    delete_confirm_title: A jeni i sugurt që dëshironi ta fshini këtë projekt?
-    delete_confirm_text: Duke fshirë projektin, ju do ta hiqni përfundisht nga lista
-      e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden
-      më ta shohin atë.
     view_all: Shfaq projektet e mia
     remix: Remix
     click_to_remix: Kliko "Remix" për të nxjerrë versionin tënd!

@@ -5,5 +5,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Relay Programming
 
-This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+Break into teams and work together to write programs that draw pictures.
 MARKDOWN

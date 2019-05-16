@@ -28,7 +28,6 @@ export default class SessionAttendanceRow extends React.Component {
       user_id: PropTypes.number,
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
-      puzzles_completed: PropTypes.number.isRequired,
       cdo_scholarship: PropTypes.string,
       other_scholarship: PropTypes.string
     }).isRequired,
@@ -38,7 +37,6 @@ export default class SessionAttendanceRow extends React.Component {
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     scholarshipWorkshop: PropTypes.bool.isRequired,
-    showPuzzlesCompleted: PropTypes.bool.isRequired,
     displayYesNoAttendance: PropTypes.bool.isRequired
   };
 
@@ -179,14 +177,6 @@ export default class SessionAttendanceRow extends React.Component {
           <td>{this.props.attendance.user_id ? 'Yes' : 'No'}</td>
         )}
         <td>{this.props.attendance.verified_teacher_account ? 'Yes' : 'No'}</td>
-        {this.props.showPuzzlesCompleted && (
-          <td>
-            {// Only show for attended teachers
-            this.props.attendance.attended
-              ? this.props.attendance.puzzles_completed
-              : null}
-          </td>
-        )}
         {this.props.scholarshipWorkshop && (
           <td>{this.props.attendance.cdo_scholarship ? 'Yes' : ''}</td>
         )}

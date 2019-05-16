@@ -3030,6 +3030,8 @@ fr:
               name: Internet
             Crowdsourcing:
               name: Financement participatif
+            Dance Party:
+              name: Fête dansante
         andrea-test:
           stages:
             'null':
@@ -3073,8 +3075,6 @@ fr:
               name: Bouge, Bouge
             Your Digital Footprint:
               name: Ton empreinte numérique
-            Loops in Ice Age:
-              name: Boucles dans l'Âge de Glace
             Spelling Bee:
               name: Concours d'orthographe
         removed19:

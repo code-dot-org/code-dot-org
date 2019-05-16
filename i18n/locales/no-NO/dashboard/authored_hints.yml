@@ -205,7 +205,7 @@
         4-5_Artist_7_a: 'Hvilken vinkel er den minste?  I hvilken vinkel står kunstneren? '
       4-5 Artist 8_authored_hint:
         4-5_Artist_8_a: "Langsiden er 240 piksler.  Det betyr at 2 kortsidene må totalt være:\n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nhva er \\*\\* 320/2 \\*\\*? "
-        4-5_Artist_8_b: "Dette bildet kan gjøres 2 måter! \n\n -Tegn to rektangler som \\*\\* 120 \\*\\* lange og \\*\\* 160 \\*\\* høye, med en overlappende side\n\n-   Tegn et rektangel som \\*\\* 240 \\*\\* lang og \\*\\* 160 \\*\\* høye, deretter legg til en linje i midten."
+        4-5_Artist_8_b: "Dette bildet kan gjøres 2 måter! \n\n \\-Tegn to rektangler som \\*\\* 120 \\*\\* lange og \\*\\* 160 \\*\\* høye, med en overlappende side\n\n-   Tegn et rektangel som \\*\\* 240 \\*\\* lang og \\*\\* 160 \\*\\* høye, deretter legg til en linje i midten."
       4-5 Artist 9_authored_hint:
         4-5_Artist_9_a: Når en trekant er likesida, er alle sider og alle vinkler de samme.
         4-5_Artist_9_b: Du må lage tre trekanter av samme størrelse. Ikke glem å gå til din nye posisjon når du er ferdig med hver av trekantene.

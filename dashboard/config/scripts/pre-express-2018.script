@@ -9,6 +9,7 @@ script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for 
 family_name 'pre-express'
 version_year '2018'
 is_stable true
+supported_locales ["sk-SK"]
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted_2018'

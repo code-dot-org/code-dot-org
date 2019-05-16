@@ -650,14 +650,12 @@ et:
     new: "Loo uus"
     rename: "Nimeta ümber"
     save: "Salvesta"
-    delete: "Kustuta"
     import: "Impordi"
     share_link_import_bad_link_header: "Jagamise linki ei tuvastatud"
     share_link_import_bad_link_body: "Me ei saanud importida jagamise linki. Veenduge, et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi."
     share_link_import_error_header: "Midagi läks valesti."
     share_link_import_error_body: "Ilmnes probleem lingi importimisel. Palun proovige uuesti."
     exit: "Tagasi kursuse juurde"
-    my_projects: "Minu projektid"
     project_gallery: "Projektid"
     share: "Jaga"
     share_title: Jaga oma projekti
@@ -666,21 +664,13 @@ et:
     share_u13_warning: "Küsi õpetajalt enne jagamist luba. Jaga ainult oma kooli õpilastega."
     embed: "Vistusta"
     advanced_share: "Kuva täpsemad valikud"
-    close: "Sulge"
-    more: "Veel"
     name: "Nimi"
     updated: "Uuendatud"
     project_type: "Projekti tüüp"
     help_text: "Klõpsake <strong>tee rakendus</strong> või <strong>Joonista midagi</strong> allpool, et teha uus Play Lab või kunstniku projekt<br/> Sa võid oma projektide juurde tagasi tulla ja jätkata tööd nendega igal ajal."
     need_help: "Proovi neid kursusi, et oma uue projektiga alustada"
-    really_delete: 'Kas kustutan?'
-    delete_yes: 'Jah'
-    delete_no: 'Ei'
     saved: "Salvestatud"
     not_saved: "Ei ole salvestatud"
-    cancel: 'Tühista'
-    delete_confirm_title: Kas soovite kindlasti kustutada selle projekti?
-    delete_confirm_text: "Projekti kustutamine eemaldab selle jäädavalt \"Minu Projektide\" nimekirjast. Kui sa oled kellegagi linki jaganud, siis neil ei ole enam võimalik sinu projekti vaadata."
     view_all: 'Vaata minu projekte'
     remix: 'Remix'
     click_to_remix: "Vajuta \"Remix\" et liigendada oma versioon!"

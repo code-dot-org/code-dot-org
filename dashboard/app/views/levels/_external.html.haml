@@ -19,7 +19,7 @@
     - unless in_level_group
       - if @script.try(:professional_learning_course?) && @script_level
         = link_to @script_level.end_of_stage? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary submitButton'
-      - elsif !@level.has_submit_button?
+      - elsif !@level.has_submit_button? && !use_large_video_player
         %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
   = render partial: 'levels/content', locals: {app: 'external', data: level_props, content_class: level_props['options'].try(:[], 'css'), postcontent: postcontent}
@@ -32,13 +32,14 @@
 
 - if video && use_large_video_player
   .clear
-  .video-container
+  .video-container.external-video-container
+  %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
 .clear
 
 - if video
   :javascript
     var videoOptions = #{video.summarize(false).to_json};
-    var videoHeight = #{page_width} / (16 / 9);
+    var videoHeight = #{small_video_page_width} / (16 / 9);
 
     window.dashboard.videos.createVideoWithFallback($('.video-container'), videoOptions, #{small_video_page_width}, videoHeight);
