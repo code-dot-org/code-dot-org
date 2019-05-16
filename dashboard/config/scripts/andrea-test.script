@@ -13,5 +13,5 @@ level 'andrea-test3', progression: 'President Question'
 stage 'andrea-test-stage3'
 variants
   level 'andrea_test1', named: true
-  level 'andrea-test2', active: false, named: true
+  level 'andrea-test2', named: true
 endvariants
