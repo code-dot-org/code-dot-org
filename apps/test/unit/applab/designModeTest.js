@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import designMode from '@cdo/apps/applab/designMode';
@@ -176,10 +177,12 @@ describe('setProperty and read Property', () => {
       designModeViz = document.createElement('div');
       designModeViz.id = 'designModeViz';
       document.body.appendChild(designModeViz);
+      sinon.stub(designMode, 'renderDesignWorkspace');
     });
 
     afterEach(() => {
       designModeViz.parentNode.removeChild(designModeViz);
+      designMode.renderDesignWorkspace.restore();
     });
 
     function setExistingHTML(existingHTML) {
@@ -254,6 +257,35 @@ describe('setProperty and read Property', () => {
         expect(
           getPrefixedElementById('screen1').style.backgroundColor
         ).to.equal('rgb(197, 226, 85)');
+      });
+
+      it("will call renderDesignWorkspace after changing a screen's theme", () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
+          </div>
+        `);
+
+        // Change theme to watermelon:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          'watermelon'
+        );
+        expect(designMode.renderDesignWorkspace).to.have.been.called;
+      });
+
+      it("will not call renderDesignWorkspace after changing a screen's theme if no theme props should be applied", () => {
+        // customized background color
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(1, 2, 3);">
+          </div>
+        `);
+
+        // Change theme to watermelon:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          'default'
+        );
+        expect(designMode.renderDesignWorkspace).to.not.have.been.called;
       });
 
       it('will change a child of a legacy screen without the data-theme attribute', () => {
