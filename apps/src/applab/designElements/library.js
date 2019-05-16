@@ -178,9 +178,10 @@ export default {
     const defaultThemeIndex = experiments.isEnabled('applabThemes')
       ? DEFAULT_THEME_INDEX
       : CLASSIC_THEME_INDEX;
-    return parentScreen
-      ? parentScreen.getAttribute('data-theme')
-      : themeOptions[defaultThemeIndex];
+    return (
+      (parentScreen && parentScreen.getAttribute('data-theme')) ||
+      themeOptions[defaultThemeIndex]
+    );
   },
 
   /**
