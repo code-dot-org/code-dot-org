@@ -690,7 +690,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.pluck(:key)
+    Video.distinct.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
