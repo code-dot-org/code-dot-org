@@ -13,10 +13,8 @@ class TextMatchDSL < ContentDSL
   def i18n_strings
     strings = super[@name]
 
-    @hash[:answers].each do |answer|
-      strings[answer] = answer
-    end
-    strings[@hash[:placeholder]] = @hash[:placeholder] unless @hash[:placeholder].blank?
+    strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
+    strings['placeolder'] = @hash[:placeholder] unless @hash[:placeholder].blank?
 
     {@name => strings}
   end
