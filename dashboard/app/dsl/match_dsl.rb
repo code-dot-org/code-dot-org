@@ -19,16 +19,16 @@ class MatchDSL < ContentDSL
 
   def i18n_strings
     strings = super[@name]
-    @hash[:questions].each do |question|
-      text = question[:text]
-      strings[text] = text
-    end
-    @hash[:answers].each do |answer|
-      text = answer[:text]
-      strings[text] = text
-      feedback = answer[:feedback]
-      strings[feedback] = feedback if feedback.present?
-    end
+    strings['questions'] = @hash[:questions].map do |question|
+      question[:text]
+    end.compact
+    strings['answers'] = @hash[:answers].map do |answer|
+      answer[:text]
+    end.compact
+    strings['feedbacks'] = @hash[:answers].map do |answer|
+      answer[:feedback]
+    end.compact
+    strings.delete_if {|_, v| v.empty?}
     {@name => strings}
   end
 end
