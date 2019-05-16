@@ -7581,7 +7581,7 @@ fil:
             Relay Programming:
               name: Relay Programming
             Debugging in Maze:
-              name: Pagde-debug sa Maze
+              name: Pagde-debug gamit ang Scrat
             Programming in Collector:
               name: Pag-program sa Kolektor
             Programming in Artist:
@@ -7590,8 +7590,10 @@ fil:
               name: 'Mga Loops: Pagiging Loopy'
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
+            'Concept Practice with Minecraft ':
+              name: Masdan ang Hinaharap
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Frozen:
               name: Naka-nest na mga Loop sa Frozen
             While Loops in Farmer:
@@ -7642,6 +7644,8 @@ fil:
               name: Internet
             Crowdsourcing:
               name: Pag-crowdsourcing
+            Concept Practice with Minecraft:
+              name: Masdan ang Hinaharap
         csd1-2019:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           stages:
@@ -7793,8 +7797,6 @@ fil:
               name: Spelling Bee
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
-            Programming in Maze:
-              name: Pag-Program sa Maze
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -8374,6 +8376,8 @@ fil:
               name: Graph Paper Programming
             Programming in Maze:
               name: Pag-Program sa Maze
+            Loops with Rey and BB-8:
+              name: Mga Loops kasama sina Rey at BB-8
         csp-post-survey-2018:
           description_audience: CSP na mga Estudyante
           description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng CSP

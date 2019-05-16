@@ -1137,7 +1137,6 @@ fr:
     new: Créer un nouveau projet
     rename: Renommer
     save: Sauvegarder
-    delete: Supprimer
     import: Importer
     share_link_import_bad_link_header: Lien de partage non reconnu
     share_link_import_bad_link_body: 'Nous n''avons pas pu importer ce lien de partage.
@@ -1147,7 +1146,6 @@ fr:
     share_link_import_error_body: Un problème est survenu lors de l'importation de
       ce lien de partage. Veuillez réessayer.
     exit: Retourner au cours
-    my_projects: Mes projets
     project_gallery: Projets
     publish: Publier
     unpublish: Dépublier
@@ -1162,8 +1160,6 @@ fr:
     advanced_share: Afficher les options avancées
     no_projects: Vous n’avez actuellement aucun projet. Cliquez sur un des boutons
       ci-dessus pour démarrer un projet.
-    close: Fermer
-    more: Plus
     name: Nom
     updated: Mis à jour
     project_type: Type de projet
@@ -1174,16 +1170,8 @@ fr:
     thumbnail_help: Vous ne voyez pas la bonne vignette pour votre projet? Lancez
       votre app pour générer une nouvelle vignette. Veuillez noter que cela peut prendre
       jusqu'à deux heures pour que la vignette soit modifiée partout.
-    really_delete: Voukez-vous vraiment supprimer ?
-    delete_yes: Oui
-    delete_no: Non
     saved: Enregistré
     not_saved: Non enregistré
-    cancel: Annuler
-    delete_confirm_title: Es-tu sûr de vouloir supprimer ce projet ?
-    delete_confirm_text: La suppression de ton projet le supprimera définitivement
-      de ta liste « Mes projets ». Ceux avec qui tu as partagé le lien ne seront plus
-      en mesure de visualiser ton projet.
     view_all: Afficher « Mes projets »
     remix: Remix
     click_to_remix: Clique sur «Remix» pour créer ta propre version!

@@ -147,12 +147,8 @@ ky:
   project:
     create_a_project: 'Жаңы долбоор түзүү:'
     new: Жаңысын түзүү
-    close: Жабуу
     name: Аты
-    delete_yes: Ооба
-    delete_no: Жок
     saved: Сакталды
-    cancel: Жок кыл
     view_all: Долбоорлорумду көрүү
     abuse:
       report_abuse_form:

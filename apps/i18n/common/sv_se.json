@@ -503,6 +503,7 @@
   "submitYourProject": "Skicka in ditt projekt",
   "submitYourProjectConfirm": "Du kan inte ändra ditt projekt efter att du skickat in det. Vill du verkligen skicka in det?",
   "subtitle": "en visuell programmeringsmiljö",
+  "support": "Hjälp och Community",
   "switchSection": "Byt sektion:",
   "syntaxErrorMsg": "Programmet innehåller ett stavfel. Ta bort raden {lineNumber} och försök igen.",
   "teacher": "Lärare",

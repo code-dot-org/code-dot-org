@@ -226,6 +226,8 @@ hi:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
             "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
             "{x: 200, y: 200}": बीच में
             "{x: 100, y: 100}": ऊपर बाएं
             "{x: 300, y: 100}": ऊपर दाएं
@@ -275,6 +277,8 @@ hi:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
             "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
             "{x: 200, y: 200}": बीच में
             "{x: 100, y: 100}": ऊपर बाएं
             "{x: 300, y: 100}": ऊपर दाएं
@@ -592,6 +596,10 @@ hi:
         text: जब {KEY} को दबाया हो
         options:
           KEY:
+            '"up"': ऊपर
+            '"left"': बाएं
+            '"down"': नीचे
+            '"right"': सही
             '"space"': अंतरिक्ष
             '"enter"': दर्ज करें
             '"a"': a
@@ -666,6 +674,10 @@ hi:
             '"when"': कब
             '"while"': जबकि
           KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
             '"space"': अंतरिक्ष
             '"a"': a
             '"d"': d
@@ -701,6 +713,11 @@ hi:
         options:
           DIR:
             "'random'": यादृच्छिक
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': सही
+            '"left"': बाएं
       gamelab_mixColors:
         text: "{COLOR1} और {COLOR2} को मिलाएं"
       gamelab_randColor:
@@ -770,15 +787,31 @@ hi:
             '"scale"': आकार
             '"direction"': गतिविधि की दिशा
             '"tint"': रंगत
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': सही
+            '"left"': बाएं
       gamelab_whenKey:
         text: जब {KEY} को दबाया हो
         options:
           KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
             '"space"': अंतरिक्ष
             '"a"': a
             '"w"': w
             '"s"': s
             '"d"': d
+      gamelab_whenPressedAndReleased:
+        options:
+          DIR:
+            "'up'": ऊपर
+            "'down'": नीचे
+            "'left'": बाएं
+            "'right'": सही
       gamelab_whenTouchingSet:
         options:
           CONDITION:
@@ -787,6 +820,10 @@ hi:
       gamelab_whileKey:
         options:
           KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
             '"space"': अंतरिक्ष
             '"a"': a
             '"w"': w
@@ -803,6 +840,8 @@ hi:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
             "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
             "{x: 200, y: 200}": बीच में
             "{x: 100, y: 100}": ऊपर बाएं
             "{x: 300, y: 100}": ऊपर दाएं
@@ -825,6 +864,8 @@ hi:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
             "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
             "{x: 200, y: 200}": बीच में
             "{x: 100, y: 100}": ऊपर बाएं
             "{x: 300, y: 100}": ऊपर दाएं
@@ -871,11 +912,18 @@ hi:
             '"scale"': आकार
             '"rotation"': आवर्तन
             '"direction"': गतिविधि की दिशा
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': सही
+            '"left"': बाएं
       Mikelab_sprite:
         options:
           LOCATION:
             "{x: 200, y: 100}": ऊपर
             "{x: 200, y: 300}": नीचे
+            "{x: 100, y: 200}": बाएं
+            "{x: 300, y: 200}": सही
             "{x: 200, y: 200}": बीच में
             "{x: 100, y: 100}": ऊपर बाएं
             "{x: 300, y: 100}": ऊपर दाएं
@@ -944,6 +992,10 @@ hi:
             '"when"': कब
             '"while"': जबकि
           KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
             '"space"': अंतरिक्ष
       aalab_setBG:
         options:
@@ -969,10 +1021,21 @@ hi:
         options:
           OPTION:
             '"hide"': छुपाएँ
+      binary_move:
+        options:
+          DIR:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
       binary_whenKey:
         text: जब {KEY} को दबाया हो
         options:
           KEY:
+            '"up"': ऊपर
+            '"down"': नीचे
+            '"left"': बाएं
+            '"right"': सही
             '"space"': अंतरिक्ष
             '"a"': a
             '"w"': w

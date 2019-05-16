@@ -496,20 +496,12 @@ az:
     new: Yenisini düzəlt
     rename: Adını dəyiş
     save: Yadda saxla
-    delete: Sil
-    my_projects: Mənim layihələrim
     project_gallery: Layihə qalereyası
     share: Bölüşün
     embed: Yerləşdir
-    close: Bağla
-    more: Daha çox
     name: Ad
     updated: Yeniləndi
-    really_delete: Sil?
-    delete_yes: Bəli
-    delete_no: Xeyr
     saved: Qalereyada yadda saxlandı!
-    cancel: İmtina et
     view_all: Layihələrimi göstər
     remix: Remix
     abuse:

@@ -417,6 +417,7 @@
   "submitYourProject": "Pošaljite svoj projekat",
   "submitYourProjectConfirm": "Ne možete vršiti izmjene na svom projektu nakon što ga pošaljete, zbilja šaljete?",
   "subtitle": "grafičko okruženje za programiranje",
+  "support": "Pomoć i Zajednica",
   "switchSection": "Promijeni odjeljenje:",
   "syntaxErrorMsg": "Vaš program ima pogrešku. Molimo vas da uklonite liniju {lineNumber} i da pokušate ponovo.",
   "teacher": "Učitelj",

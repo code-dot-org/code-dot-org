@@ -1039,7 +1039,6 @@ ga:
     new: Cruthaigh Togra Nua
     rename: Athainmnigh
     save: Sábháil
-    delete: Scrios
     import: Iompórtáil
     share_link_import_bad_link_header: Nasc comhroinnte neamhaitheanta
     share_link_import_bad_link_body: 'Níorbh fhéidir linn an nasc comhroinnte sin
@@ -1049,7 +1048,6 @@ ga:
     share_link_import_error_body: Tharla earráid agus an nasc comhroinnte sin á iompórtáil.
       Bain triail eile as.
     exit: Fill ar an gCúrsa
-    my_projects: Mo Chuid Tograí
     project_gallery: Tograí
     publish: Foilsigh
     unpublish: Dífhoilsigh
@@ -1064,8 +1062,6 @@ ga:
     advanced_share: Taispeáin na hardroghanna
     no_projects: Níl aon togra agat faoi láthair. Cliceáil ceann de na cnaipí thuas
       le togra nua a thosú.
-    close: Dún
-    more: Tuilleadh
     name: Ainm
     updated: Nuashonraithe
     project_type: Cineál an Togra
@@ -1077,16 +1073,8 @@ ga:
     thumbnail_help: Nach bhfeiceann tú an mionphictiúr ceart le do thogra? Rith d'aip
       chun mionphictiúr nua a ghiniúint. Uaireanta tógann sé cúpla uair an chloig
       sula mbeidh an mionphictiúr ar fáil chuile áit.
-    really_delete: Scrios?
-    delete_yes: Tá
-    delete_no: Níl
     saved: Sábháilte
     not_saved: Gan sábháil
-    cancel: Cealaigh
-    delete_confirm_title: An bhfuil tú cinnte gur mhaith leat an togra seo a scriosadh?
-    delete_confirm_text: Má scriosann tú an togra, bainfear ón liosta "Mo Chuid Tograí"
-      é go buan. Má thug tú nasc leis an togra do chairde, ní bheidh siad in ann féachaint
-      air a thuilleadh.
     view_all: Mo Chuid Tograí
     remix: Athmheascadh
     click_to_remix: Cliceáil "Athmheascadh" le do leagan féin a dhéanamh!

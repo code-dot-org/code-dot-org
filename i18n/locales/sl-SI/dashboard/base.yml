@@ -583,28 +583,19 @@ sl:
     new: "Ustvari novo"
     rename: "Preimenuj"
     save: "Shrani"
-    delete: "Izbriši"
     exit: "Vrni se na tečaj"
-    my_projects: "Moji projekti"
     project_gallery: "Projekti"
     share: "Deli"
     share_title: Deli svoj projekt
     share_copy_link: "Kopiraj povezavo:"
     advanced_share: "Prikaz dodatnih možnosti"
-    close: "Zapri"
-    more: "Več"
     name: "Ime"
     updated: "Posodobljeno"
     project_type: "Vrsta projekta"
     help_text: "Klikni spodaj na <strong>Ustvari App</strong> ali <strong>Nariši kaj</strong>, da začneš nov projekt!<br/>Kadarkoli lahko prideš nazaj in delaš na svojih projektih."
     need_help: "Potrebujete pomoč za začetek?"
-    really_delete: 'Izbriši?'
-    delete_yes: 'Da'
-    delete_no: 'Ne'
     saved: "Shranjeno"
     not_saved: "Ni shranjeno"
-    cancel: 'Prekliči'
-    delete_confirm_title: Ali ste prepričani, da želite izbrisati ta projekt?
     view_all: 'Poglej si Moji projekti'
     remix: 'Remiks'
     edit_project: 'Uredi projekt'

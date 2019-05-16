@@ -4983,11 +4983,11 @@ ka:
             Relay Programming:
               name: პროგრამირება ცვლაში
             Debugging in Maze:
-              name: გამართვა ლაბირინთში
+              name: გამართვა სკრეტთან ერთად
             Programming in Collector:
-              name: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Loops in Artist:
@@ -4995,7 +4995,7 @@ ka:
             Copyright and Creativity:
               name: საავტორო უფლებები და შემოქმედებითობა
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
             While Loops in Farmer:
               name: While ციკლები ფერმერში
             Conditionals with Cards:
@@ -5003,7 +5003,7 @@ ka:
             Conditionals in Bee:
               name: პირობითი ბრძანებები ფუტკარში
             Conditionals & Loops in Harvester:
-              name: პირობითი წინადადებები და ციკლები ფერმერში
+              name: მოსავლის აღება პირობითი წინადადებებით
             'Functions: Songwriting':
               name: 'ფუნქციები: სიმღერების დაწერა'
             Functions in Artist:
@@ -5169,20 +5169,20 @@ ka:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
             'Loops: My Loopy Robotic Friends':
               name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
-            Loops in Ice Age:
-              name: ციკლები გამყინვარების პერიოდში
             Loops in Collector:
               name: ციკლები შემგროვებელში
             Loops in Artist:
-              name: ციკლები მხატვარში
+              name: ეზოების ხატვა ციკლებით
             'Events: The Big Event':
               name: 'მოვლენები: დიდი მოვლენა'
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
             Spelling Bee:
               name: შეჯიბრი დამარცვლაში
-            Programming in Maze:
-              name: პროგრამირება ლაბირინთში
+            Tell a Story in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            Make a Game in Play Lab:
+              name: მოვლენები სათამაშო ლაბორატორიაში
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
         removed19:
@@ -5476,6 +5476,8 @@ ka:
               name: გრაფიკული პროგრამირება ქაღალდზე
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
         csp5-pilot:
           stages:
             new stage:

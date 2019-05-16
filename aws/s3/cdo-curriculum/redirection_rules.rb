@@ -65,7 +65,25 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-18/"
+      replace_key_prefix_with: "plcsf-19/"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsd/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsd-19/"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsp/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsp-19/"
     }
   },
   {
