@@ -398,22 +398,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to '/s/courseg-2018?redirect_warning=true'
   end
 
-  test "show: does not redirect to latest stable script version if no_redirect query param provided" do
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_stable: true
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_stable: true
-
-    courseg_2017_stage_1 = create :stage, script: courseg_2017, name: 'Course G Stage 1', absolute_position: 1, relative_position: '1'
-    courseg_2017_stage_1_script_level = create :script_level, script: courseg_2017, stage: courseg_2017_stage_1, position: 1
-
-    get :show, params: {
-      script_id: courseg_2017.name,
-      stage_position: courseg_2017_stage_1.relative_position,
-      id: courseg_2017_stage_1_script_level.position,
-      no_redirect: "true"
-    }
-    assert_response :ok
-  end
-
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
@@ -429,8 +413,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       stage_position: courseg_2017_stage_1.relative_position,
       id: courseg_2017_stage_1_script_level.position,
     }
-
     assert_redirected_to '/s/courseg-2018?redirect_warning=true'
+
+    # Does not redirect if no_redirect query param is provided.
+    get :show, params: {
+      script_id: courseg_2017.name,
+      stage_position: courseg_2017_stage_1.relative_position,
+      id: courseg_2017_stage_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
   end
 
   test "updated routing for 20 hour script" do
