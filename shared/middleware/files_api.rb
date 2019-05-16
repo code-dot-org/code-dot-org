@@ -871,7 +871,7 @@ class FilesApi < Sinatra::Base
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
     if THUMBNAIL_FILENAME == filename
-      storage_apps = StorageApps.new(storage_id('user'))
+      storage_apps = StorageApps.new(get_storage_id)
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
@@ -925,7 +925,7 @@ class FilesApi < Sinatra::Base
   end
 
   def moderate_channel?(encrypted_channel_id)
-    storage_apps = StorageApps.new(storage_id('user'))
+    storage_apps = StorageApps.new(get_storage_id)
     !storage_apps.content_moderation_disabled?(encrypted_channel_id)
   end
 end
