@@ -54,7 +54,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexDirection: 'row',
-    margin: '0px 16px 16px 16px'
+    margin: '0px 16px 8px 16px'
   },
   keyConceptArea: {
     marginRight: 28,
@@ -69,7 +69,7 @@ const styles = {
     flexBasis: '60%'
   },
   commentAndFooter: {
-    margin: '0px 16px 8px 16px'
+    margin: '8px 16px 8px 16px'
   },
   form: {
     margin: 0

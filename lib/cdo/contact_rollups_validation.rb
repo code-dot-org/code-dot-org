@@ -54,13 +54,6 @@ class ContactRollupsValidation
       max: 4_000
     },
     {
-      name: "Workshop Organizer count",
-      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
-              LIKE '%Workshop Organizer%'",
-      min: 250,
-      max: 2_500
-    },
-    {
       name: "District Contact count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%District Contact%'",

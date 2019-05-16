@@ -4,49 +4,49 @@ has_lesson_plan true
 stage 'Unit 1 - Sending Bits in the Real World'
 level 'Sending Bits Real World Student Lesson Introduction'
 level 'U1L5 How the Internet Works - Video'
-assessment 'U1L5 Matching Assessment'
+level 'U1L5 Matching Assessment', assessment: true
 
 stage 'Unit 1 - Encoding Numbers in the Real World'
 level 'Encoding Numbers Real World Student Lesson Introduction'
-assessment 'U1L9 Free Response Assessment'
+level 'U1L9 Free Response Assessment', assessment: true
 
 stage 'Unit 1 - Algorithms Detour - Minimum Spanning Tree'
 level 'Algo MST Student Lesson Introduction'
-assessment 'U2L06 - Matching: Label the Diagram'
-assessment 'U2L06- MC: what is an MST?'
-assessment 'U2L06 - MC: Which is an MST?'
+level 'U2L06 - Matching: Label the Diagram', assessment: true
+level 'U2L06- MC: what is an MST?', assessment: true
+level 'U2L06 - MC: Which is an MST?', assessment: true
 
 stage 'Unit 1 - Algorithms Detour - Shortest Path'
 level 'Algo Shortest Path Student Lesson Introduction'
-assessment 'U1L07 Assessment 1'
-assessment 'U2L07 Assessment2'
-assessment 'U2L07 Assessment3'
-assessment 'U2L07 Assessment4'
-assessment 'U2L07 Assessment5'
+level 'U1L07 Assessment 1', assessment: true
+level 'U2L07 Assessment2', assessment: true
+level 'U2L07 Assessment3', assessment: true
+level 'U2L07 Assessment4', assessment: true
+level 'U2L07 Assessment5', assessment: true
 
 stage 'Unit 1 - How Routers Learn'
 level 'Algo How Routers Learn Student Lesson Introduction'
-assessment 'U2L08 Free Response 3'
-assessment 'U2L08 Free Response 1'
-assessment 'U2L08 Free Response 2'
-assessment 'U2L08 Assessment 0'
-assessment 'U2L08 Assessment 1'
+level 'U2L08 Free Response 3', assessment: true
+level 'U2L08 Free Response 1', assessment: true
+level 'U2L08 Free Response 2', assessment: true
+level 'U2L08 Assessment 0', assessment: true
+level 'U2L08 Assessment 1', assessment: true
 
 stage 'Unit 4 - Hard Problems - The Traveling Salesperson Problem'
 level 'U2L17 Student Lesson Introduction'
-assessment 'U2L17 Assessment 1'
-assessment 'U2L17 Assessment 2'
-assessment 'U2L16 Free Response Assessment 3'
-assessment 'U2L17 Free Response Wrap Up'
+level 'U2L17 Assessment 1', assessment: true
+level 'U2L17 Assessment 2', assessment: true
+level 'U2L16 Free Response Assessment 3', assessment: true
+level 'U2L17 Free Response Wrap Up', assessment: true
 
 stage 'Unit 4 - One-Way Functions - The WiFi Hotspot Problem'
 level 'U2L18 Student Lesson Introduction'
-assessment 'U2L17 Free Response Getting Started'
-assessment 'U2L17 Free Responses Assessment 1'
-assessment 'U2L17 - Vocabulary matching'
-assessment 'U2L18 Free Response Getting Started'
-assessment 'U2L18 Assessment'
-assessment 'U2L18 Free Response Wrap Up'
+level 'U2L17 Free Response Getting Started', assessment: true
+level 'U2L17 Free Responses Assessment 1', assessment: true
+level 'U2L17 - Vocabulary matching', assessment: true
+level 'U2L18 Free Response Getting Started', assessment: true
+level 'U2L18 Assessment', assessment: true
+level 'U2L18 Free Response Wrap Up', assessment: true
 
 stage 'Algorithms Detour - Minimum Spanning Tree'
 stage 'Algorithms Detour - Shortest Path'

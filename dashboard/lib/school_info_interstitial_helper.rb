@@ -24,6 +24,25 @@ module SchoolInfoInterstitialHelper
     return true
   end
 
+  # Show the school info confirmation dialog when a teacher has either completely
+  # filled out the school info interstitial for a US public, private, or charter school
+  # or confirmed current school over a year ago.
+  def self.show_school_info_confirmation_dialog?(user)
+    return false unless user.teacher?
+
+    return true if user.user_school_infos.empty?
+
+    user_school_info = user.user_school_infos.last
+
+    school_info = user_school_info.school_info
+
+    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && SchoolInfoInterstitialHelper.complete?(school_info)
+
+    check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
+
+    check_last_confirmation_date && check_school_type
+  end
+
   # Decides whether the school info is complete enough to stop bugging the
   # teacher for additional information every week.  Different from complete
   # record validation.

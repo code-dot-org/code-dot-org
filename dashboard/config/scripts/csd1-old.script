@@ -3,22 +3,22 @@ hideable_stages true
 student_detail_progress_view true
 
 stage 'Intro to Problem Solving'
-named_level 'Unit 1 Lesson 1 Overview'
+level 'Unit 1 Lesson 1 Overview', named: true
 
 stage 'The Problem Solving Process'
-named_level 'Unit 1 Lesson 2 Overview'
+level 'Unit 1 Lesson 2 Overview', named: true
 
 stage 'Exploring Problem Solving'
-named_level 'Unit 1 Lesson 3 Overview'
+level 'Unit 1 Lesson 3 Overview', named: true
 
 stage 'What is a Computer?'
-named_level 'Unit 1 Lesson 4 Overview'
+level 'Unit 1 Lesson 4 Overview', named: true
 
 stage 'Representing Information'
-named_level 'Unit 1 Lesson 5 Overview'
+level 'Unit 1 Lesson 5 Overview', named: true
 
 stage 'Processing with Bits'
-named_level 'Unit 1 Lesson 6 Overview'
+level 'Unit 1 Lesson 6 Overview', named: true
 level 'CSD U1 - PixFilter 1x1 intro'
 level 'CSD U1 - PixFilter Filter Intro'
 level 'CSD U1 - PixFilter Mushroom'
@@ -28,10 +28,10 @@ level 'CSD U1 - PixFilter UnFilter'
 level 'CSD U1 - PixFilter FreePlay'
 
 stage 'Human vs Computer Processing'
-named_level 'Unit 1 Lesson 7 Overview'
+level 'Unit 1 Lesson 7 Overview', named: true
 
 stage 'Processing with Apps'
-named_level 'Unit 1 Lesson 8 Overview'
+level 'Unit 1 Lesson 8 Overview', named: true
 level 'CSD U1 Input Output Intro'
 level 'CSD U1 Input Output C1'
 level 'CSD U1 Input Output C2'
@@ -39,4 +39,4 @@ level 'CSD U1 Input Output C3'
 level 'CSD U1 Input Output C4'
 
 stage 'Project: Apps and Problem Solving'
-named_level 'Unit 1 Lesson 9 Overview'
+level 'Unit 1 Lesson 9 Overview', named: true

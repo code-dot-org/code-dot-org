@@ -10,6 +10,7 @@ script_announcements [{"notice"=>"New: Choose Which Lessons to Show or Hide for 
 family_name 'express'
 version_year '2018'
 is_stable true
+supported_locales ["sk-SK"]
 
 stage 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
@@ -410,23 +411,23 @@ level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
 stage 'Explore Project Ideas'
-named_level 'courseF_video_csMatters_2018'
-named_level 'InspirationalArtwork_2018'
-named_level 'courseF_project_1'
+level 'courseF_video_csMatters_2018', named: true
+level 'InspirationalArtwork_2018', named: true
+level 'courseF_project_1', named: true
 
 stage 'The Design Process'
-named_level 'Begin planning your project_2018'
+level 'Begin planning your project_2018', named: true
 
 stage 'Build Your Project'
-named_level 'Course F: Artist Project_2018'
-named_level 'CourseF_Project_SpriteLab'
+level 'Course F: Artist Project_2018', named: true
+level 'CourseF_Project_SpriteLab', named: true
 
 stage 'Revise Your Project'
-named_level 'Course F: Artist Project - Revise_2018'
-named_level 'CourseF_Project_Revise_SpriteLab'
+level 'Course F: Artist Project - Revise_2018', named: true
+level 'CourseF_Project_Revise_SpriteLab', named: true
 
 stage 'Present Your Project'
-named_level 'Prepare for your presentation_2018'
+level 'Prepare for your presentation_2018', named: true
 
 stage 'Binary Bracelets'
 level 'BinaryBracelets_2018'
