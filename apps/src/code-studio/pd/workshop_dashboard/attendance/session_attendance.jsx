@@ -189,9 +189,6 @@ export class SessionAttendance extends React.Component {
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
-                  {this.props.accountRequiredForAttendance && (
-                    <th>Code Studio Account</th>
-                  )}
                   <th>Verified Teacher Account</th>
                   {this.props.scholarshipWorkshop && (
                     <th>Code.org Scholarship?</th>
