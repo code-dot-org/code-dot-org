@@ -76,7 +76,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
 ## Register for a workshop
 Look at the map below to find the next upcoming CS Fundamentals: Deep Dive workshop in your region. Workshops are available year round, because CS Fundamentals courses can be implemented at any point in the school year. Check back often as new workshops will continue to be added throughout the year as Deep Dive launches throughout the country starting in June 2019.
 
-map
+<%= view :workshop_search, deep_dive_only: true %>
 
 If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
 </p>
