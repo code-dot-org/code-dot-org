@@ -563,7 +563,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # updating to invalid status should fail
     refute enrollment.update_scholarship_status 'invalid status'
-    assert_equal Pd::ScholarshipInfoConstants::NO, enrollment.scholarship_status
+    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
 
     # updating to a valid status should work
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
