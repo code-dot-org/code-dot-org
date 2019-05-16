@@ -951,6 +951,7 @@
   "submitYourProjectConfirm": "作品（さくひん）を提出後（ていしゅつご）には編集（へんしゅう）ができなくなります。本当（ほんとう）に提出（ていしゅつ）しますか？",
   "subtitle": "ビジュアル ・ プログラミング環境",
   "success": "成功！",
+  "support": "ヘルプとコミュニティ",
   "switchSection": "セクションの切り替え:",
   "syncGoogleClassroom": "Google Classroomから生徒を同期する",
   "syntaxErrorMsg": "プログラムの中（なか）にタイプミスが含（ふく）まれています。行（ぎょう） {lineNumber} を削除（さくじょ）して、もう一度（いちど）やり直（なお）してください。",

@@ -10109,8 +10109,6 @@ tr:
               name: Labirentte Programlama
             Relay Programming:
               name: Röle Programlama
-            Debugging in Maze:
-              name: Labirentte Hata Ayıklama
             Programming in Collector:
               name: Koleksiyoncu programlama
             Programming in Artist:
@@ -10120,9 +10118,11 @@ tr:
             Loops with Rey and BB-8:
               name: Rey ve BB-8 ile döngüler
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
+            'Concept Practice with Minecraft ':
+              name: Geleceğe bakış
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
             Nested Loops in Frozen:
               name: Frozen'da İç İçe Döngüler
             While Loops in Farmer:
@@ -10173,6 +10173,10 @@ tr:
               name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+            Concept Practice with Minecraft:
+              name: Geleceğe bakış
+            Dance Party:
+              name: Dans Partisi
         csd1-2019:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
             nasıl çalıştıklarını öğrenin."
@@ -10476,7 +10480,7 @@ tr:
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             'Events: The Big Event':
               name: 'Olaylar: Büyük Olay'
             Events in Play Lab:
@@ -10485,8 +10489,10 @@ tr:
               name: Heceleme Yarışması
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
-            Programming in Maze:
-              name: Labirentte Programlama
+            Tell a Story in Play Lab:
+              name: Play Lab' da Olaylar
+            Make a Game in Play Lab:
+              name: Play Lab' da Olaylar
             Ocean Scene with Loops:
               name: Sanatçıların Döngüleri
         removed19:
@@ -11908,6 +11914,8 @@ tr:
               name: Grafik Kağıdı Programlama
             Programming in Maze:
               name: Labirentte Programlama
+            Loops with Rey and BB-8:
+              name: Rey ve BB-8 ile döngüler
         csp-post-survey-2018:
           description_audience: CSP Öğrencileri
           description_short: CSP Öğrenci Kurs Sonu Anketi

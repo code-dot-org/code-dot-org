@@ -1017,7 +1017,6 @@
     new: Opprett ny
     rename: Gi nytt navn
     save: Lagre
-    delete: Slett
     import: Importer
     share_link_import_bad_link_header: Lenke ikke gjenkjent
     share_link_import_bad_link_body: 'Vi kunne ikke importere lenken. Kontroller at
@@ -1027,7 +1026,6 @@
     share_link_import_error_body: Det oppstod et problem ved import av lenken. Vennligst
       prøv igjen.
     exit: Tilbake til kurset
-    my_projects: Mine prosjekter
     project_gallery: Prosjekter
     publish: Publiser
     unpublish: Avpubliser
@@ -1042,8 +1040,6 @@
     advanced_share: Vis avanserte alternativer
     no_projects: Du har ingen prosjekter. Klikk på en av knappene over for å starte
       et prosjekt.
-    close: Lukk
-    more: Mer
     name: Navn
     updated: Oppdatert
     project_type: Prosjekttype
@@ -1054,15 +1050,8 @@
     thumbnail_help: Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å
       generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet
       er oppdatert overalt.
-    really_delete: Slette?
-    delete_yes: Ja
-    delete_no: Nei
     saved: Lagret
     not_saved: Ikke lagret
-    cancel: Avbryt
-    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
-    delete_confirm_text: Slettes prosjektet, fjernes det permanent fra listen Mine
-      prosjekter. De du har delt lenken med vil ikke lenger kunne se prosjektet.
     view_all: Vis mine prosjekter
     remix: Remix
     click_to_remix: Klikk på "Remiks" for å lage din egen versjon!

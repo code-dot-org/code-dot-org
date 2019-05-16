@@ -61,10 +61,7 @@ en-GB:
       copied the full link.'
     share: Share
     name: Name
-    delete_yes: 'Yes'
-    delete_no: 'No'
     saved: Saved
-    cancel: Cancel
   flex_category:
     csf_loops: Loops
     csf_variables: Variables

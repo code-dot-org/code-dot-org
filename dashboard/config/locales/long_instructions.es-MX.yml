@@ -497,9 +497,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
-        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
+        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -511,14 +511,14 @@ es-MX:
       AppLab Intro 1 - Add Button: "# Primeros pasos: agregar un botón\n\nDeberás
         agregar un botón en tu página de inicio para ir a tu nueva pantalla. Tienes
         dos maneras de crear un botón. \n\n1.  Si te gusta el estilo del botón \"Perros\",
-        puedes copiarlo. Haz clic en el botón y, luego, en \"Duplicar\".\n\n\\\\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
+        puedes copiarlo. Haz clic en el botón y, luego, en \"Duplicar\".\n\n    ![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
         AM.png>)\n\n2.  También puedes crear un nuevo botón desde cero si lo arrastras
-        desde la caja de herramientas de diseño.\n\n\\\\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
+        desde la caja de herramientas de diseño.\n\n    ![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
         AM.png>)\n\n3.  Haz clic y arrastra para mover tu nuevo botón al lugar que
         quieras.\n\n4.  Una vez que tienes el botón, asígnale un nombre simple, \"Botóngato\".
-        También puedes cambiar el texto para que se lea \"¡Gatos!\".\n\n\\\\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
-        AM.png>)\n\n4.  Hay muchas otras maneras en que puedes cambiar el estilo de
-        tu botón. Experimenta con el menú completo de opciones.\n\n5.  Una vez que
+        También puedes cambiar el texto para que se lea \"¡Gatos!\".\n\n    ![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
+        AM.png>)\n\n5.  Hay muchas otras maneras en que puedes cambiar el estilo de
+        tu botón. Experimenta con el menú completo de opciones.\n\n6.  Una vez que
         termines, ejecuta tu aplicación para asegurarte de que aparezca el botón.
         Luego, haz clic en \"Finalizar\" para ver cómo funciona realmente tu botón."
       AppLab Intro 1 - Build Your Adventure: "# Build Your Adventure\\\r\n\n\\\r\nUse
@@ -551,9 +551,9 @@ es-MX:
         aventura."
       AppLab Intro 2 - add images: "Ahora lo sabes todo\nnecesitas hacer una simple
         selección elige tu propia aplicación de aventura, pero puedes agregarla y\n¡mucho
-        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1.\nEn
+        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1\\.\nEn
         otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras
-        usar.\\\r\n2.\nHaga clic con el botón derecho en la imagen y guarde su URL
+        usar.\\\r\n2\\.\nHaga clic con el botón derecho en la imagen y guarde su URL
         (generalmente \"Copiar la dirección del enlace\" o \"Copiar\"\nimagen URL
         \") \\\r\n\n3.  De vuelta en App Lab, vaya a Modo de diseño \\\r\n4.  Arrastra
         una \"imagen\"\n    o elemento a su pantalla \\\r\n5.  Pegue la URL que copió
@@ -2305,9 +2305,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
-        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
+        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2322,9 +2322,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
-        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
+        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2339,9 +2339,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
-        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
+        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -7720,9 +7720,13 @@ es-MX:
       frozen perpendicular_b: |-
         _"¡Continuemos!"_
 
+         
+
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa"><title name="DIR">girar derecha</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> y otro bloque <xml><block type="draw_move_by_constant_dropdown"><title name="DIR">avanzar</title><title name="VALUE" config="50,100,150,200,300">100</title></block></xml> para hacer una forma de hielo.
       frozen perpendicular_test: |-
         _"¡Continuemos!"_
+
+         
 
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 

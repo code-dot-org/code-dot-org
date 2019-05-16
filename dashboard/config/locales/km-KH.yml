@@ -495,7 +495,6 @@ km:
   project:
     projects: គម្រោង
     save: រក្សា​ទុក
-    delete: លុប
     import: នាំចូល
     share_link_import_bad_link_header: អត់ស្គាល់តំណដែលបានចែកចាយ
     share_link_import_bad_link_body: 'យើងមិនអាចទាញយកតំណដែលបានចែកចាយទេ។ ប្រាកដថាអ្នកបានប្រើប្រាស់តំណចេញពីហ្គេម
@@ -504,13 +503,8 @@ km:
     share_link_import_error_body: មានបញ្ហាក្នុងការទាញយកតំណដែលបានចែកចាយ។ សូមព្យាយាមម្តងទៀត។
     project_gallery: គម្រោង
     share: ចែក​រំលែក
-    more: ផ្សេង​ទៀត
     name: ឈ្មោះ
-    really_delete: ប្រាកដថាលុប?
-    delete_yes: យល់ព្រម
-    delete_no: ទេ
     saved: បាន​រក្សាទុក​ក្នុង​វិចិត្រសាល!
-    cancel: បោះបង់
     abuse:
       report_abuse_form:
         abuse_type:

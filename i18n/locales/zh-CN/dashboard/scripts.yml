@@ -8729,7 +8729,7 @@ zh-CN:
             Relay Programming:
               name: 编程接力
             Debugging in Maze:
-              name: 迷宫里的调试
+              name: 斯奎特和调试
             Programming in Collector:
               name: 在收集器中编程
             Programming in Artist:
@@ -8743,9 +8743,9 @@ zh-CN:
             Copyright and Creativity:
               name: 版权和创造力
             'Concept Practice with Minecraft ':
-              name: '用《我的世界》概念实践 '
+              name: 用《我的世界》概念实践 
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
             Nested Loops in Frozen:
               name: 冰雪奇缘里的嵌套循环
             While Loops in Farmer:
@@ -8793,7 +8793,7 @@ zh-CN:
             Learning Sprites with Sprite Lab:
               name: 在精灵实验室学习精灵
             Alien Dance Party with Sprite Lab:
-              name: 精灵实验室中的外星人舞蹈派对
+              name: 外星人舞蹈派对
             Pet Giraffe with Sprite Lab:
               name: 精灵实验室中的宠物长颈鹿
             Explore Project Ideas:
@@ -8816,6 +8816,16 @@ zh-CN:
               name: 互联网
             Crowdsourcing:
               name: 众包
+            Concept Practice with Minecraft:
+              name: 与《我的世界》往前看
+            Editing Behaviors:
+              name: 编辑行为
+            Virtual Pet with Sprite Lab:
+              name: 虚拟宠物
+            Dance Party:
+              name: 舞蹈派对
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: '《我的世界》的条件：水上航行'
         csd1-2019:
           title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \\r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\\r\n"
@@ -9059,11 +9069,11 @@ zh-CN:
             'Loops: My Loopy Robotic Friends':
               name: '循环: 我糊涂的机器人朋友'
             Loops in Ice Age:
-              name: 冰河时代里的循环
+              name: 斯奎特和循环
             Loops in Collector:
               name: 收集器中的循环
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
             'Events: The Big Event':
               name: '事件: 大事件'
             Events in Play Lab:
@@ -9073,7 +9083,7 @@ zh-CN:
             Learn to Drag and Drop:
               name: 学习拖放
             Programming in Maze:
-              name: 迷宫编程
+              name: 与斯奎特一起编程
             Programming in Harvester:
               name: 与收割者编程
             Tell a Story in Play Lab:
@@ -10165,10 +10175,13 @@ zh-CN:
               name: 方格纸编程
             Programming in Maze:
               name: 迷宫编程
+            Loops with Rey and BB-8:
+              name: 与雷伊和BB-8一起循环
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
               name: 计算机科学发现课后问卷
+          title: 计算机科学发现学生课程后调查
           description_audience: 计算机科学发现学生
         csp-post-survey-2018:
           stages:
@@ -10185,4 +10198,8 @@ zh-CN:
               name: 列表探索
             Lists Investigate:
               name: 列表调查
+            Loops Explore:
+              name: 循环探索
+            Traversals Explore:
+              name: 遍历探索
           title: '单元 5: 列表、循环和遍历'

@@ -26,9 +26,6 @@
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
 
-#carousel-mobile{:style=>'display:none'}
-  = view :learn_carousel, :heading=>I18n.t(:mobile_devices), :tag=>'Mobile', :tutorials=>tutorials, :id=>'collection-mobile', :check_language=>true
-
 #carousel-international{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:carousel_heading_international), :tag=>'International', :tutorials=>tutorials, :id=>'collection-international', :international_layout=>true, :check_language=>true
   %br
@@ -53,9 +50,6 @@
       = I18n.t(:learn_footer_all_tutorials)
 
 :javascript
-
-  //if (window.mobilecheck())
-  //  $('#carousel-mobile').show();
 
   // Older systems
   var ua = navigator.userAgent;

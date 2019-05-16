@@ -10249,9 +10249,7 @@ en:
               description_student: ''
               description_teacher: ''
             'Concept Practice with Minecraft ':
-              name: 'Looking Ahead with Minecraft'
-              description_student: ''
-              description_teacher: ''
+              name: Looking Ahead with Minecraft
             Nested Loops in Bee:
               name: Nested Loops in Maze
               description_student: ''
@@ -10396,8 +10394,6 @@ en:
               name: Crowdsourcing
               description_student: ''
               description_teacher: ''
-            Concept Practice with Minecraft:
-              name: Looking Ahead with Minecraft
             Editing Behaviors:
               name: Behaviors in Sprite Lab
             Virtual Pet with Sprite Lab:
@@ -10408,6 +10404,8 @@ en:
               name: Dance Party
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -12045,6 +12043,24 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12335,7 +12351,57 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+            Wrap Up:
+              name: Wrap Up
+          title: Novice Reflections for Summer Workshop 2019
+          description_audience: 6 - 12 Novice Facilitators in Training
+          description_short: 'Novice reflection materials for 2019 facilitators in training '
+          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Workshop.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital unplugged WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital unplugged WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital unplugged WIAC L3
+            What is a Computer?:
+              name: What is a Computer?
+          title: Testing Widgets that save state
           description_audience: ''
           description_short: ''
           description: ''

@@ -732,14 +732,12 @@ de:
     new: "Neu erstellen"
     rename: "Umbenennen"
     save: "Speichern"
-    delete: "Löschen"
     import: "Importieren"
     share_link_import_bad_link_header: "Freigabelink nicht erkannt"
     share_link_import_bad_link_body: "Wir konnten den Freigabelink nicht importieren. Prüfe, ob du einen Link aus einem Minecraft: Agent-Rätsel verwendest. Kopiere den kompletten Link."
     share_link_import_error_header: "Etwas ist schiefgelaufen."
     share_link_import_error_body: "Es gab ein Problem beim Import des Freigabelinks. Versuche es erneut."
     exit: "Zurück zum Kurs"
-    my_projects: "Meine Projekte"
     project_gallery: "Projekte"
     share: "Teilen"
     share_title: Teile Dein Projekt
@@ -748,21 +746,13 @@ de:
     share_u13_warning: "Fragen erst Deinen Lehrer, bevor du deine fertigen Programmier-Projekte für andere freigibst. Gib sie nur für Personen in deiner Schule frei."
     embed: "Einbetten"
     advanced_share: "Erweiterte Optionen anzeigen"
-    close: "Schließen"
-    more: "Mehr"
     name: "Name"
     updated: "Aktualisiert"
     project_type: "Projekttyp"
     help_text: "Klicke auf <strong>Erstelle eine App</strong> oder <strong>Zeichne etwas</strong>, um ein neues App- oder Künstlerprojekt zu machen! <br/> Du kannst immer wieder zurückkommen und an Deinen Projekten arbeiten."
     need_help: "Brauchst du Hilfe bei den ersten Schritten?"
-    really_delete: 'Löschen?'
-    delete_yes: 'Ja'
-    delete_no: 'Nein'
     saved: "Gespeichert"
     not_saved: "Nicht gespeichert"
-    cancel: 'Abbrechen'
-    delete_confirm_title: Bist du dir sicher, dass du dieses Projekt löschen möchtest?
-    delete_confirm_text: "Nach dem Löschen wird das Projekt für immer aus der Projektliste gelöscht. Andere Personen, denen du den Link für dein Projekt gegeben hast, können dein Projekt nicht mehr anschauen."
     view_all: 'Meine Projekte ansehen'
     remix: 'Remix'
     click_to_remix: "Klicke auf \"Remix\", um Deine eigene Version zu erstellen!"
