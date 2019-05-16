@@ -19,7 +19,6 @@ class ProjectUpdatedAt extends React.Component {
   };
 
   componentDidUpdate() {
-    // TODO replace this with a React implementation
     if (this.props.updatedAt) {
       $('.project_updated_at span.timestamp').timeago();
     }

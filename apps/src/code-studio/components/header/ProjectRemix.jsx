@@ -41,7 +41,6 @@ class ProjectRemix extends React.Component {
 
   render() {
     let className = 'project_remix header_button';
-    // TODO do this with inline styles
     if (this.props.lightStyle) {
       className += ' header_button_light';
     }
