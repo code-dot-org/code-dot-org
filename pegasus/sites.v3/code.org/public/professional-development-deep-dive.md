@@ -5,6 +5,9 @@ theme: responsive
 ---
 # CS Fundamentals: Deep Dive
 
+
+<img src="/images/professional-learning/fit-200/deep-dive.jpg" style="float: left;" style='padding-right: 20px'>
+
 Schools and teachers have asked us to expand our most popular professional learning program. Over 85,000 educators have attended Intro workshops for our <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> curriculum, rating it 4.8 out of 5 stars, and we want to help you go further.
 
 We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in! Through this workshop, educators will explore course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
@@ -76,7 +79,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
 ## Register for a workshop
 Look at the map below to find the next upcoming CS Fundamentals: Deep Dive workshop in your region. Workshops are available year round, because CS Fundamentals courses can be implemented at any point in the school year. Check back often as new workshops will continue to be added throughout the year as Deep Dive launches throughout the country starting in June 2019.
 
-<%= view :workshop_search, deep_dive_only: true %>
+map
 
 If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
 </p>
@@ -95,19 +98,3 @@ If you’d like to set up a private workshop and you’re in the U.S., [contact 
 ## Contact your Regional Partner
 
 <%= view :professional_learning_regional_partner_mini_contact, source_page_id: "professional-development-deep-dive"%>
-
-
-<div class="col-50">
-<%= view :regional_partner_zip_form %>
-
-</div>
-<div class="col-50" width="75%" style='padding-top: 10px'>
-<center>
-	<img class="quote-image" src="/images/professional-learning/fit-150/deep-dive.jpg">
-	<p class="quote-title">"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."</p>
-</center>
-</div>
-
-
-<div style="clear: both;"></div>
-<%= view :three_circles, circles: [] %>
