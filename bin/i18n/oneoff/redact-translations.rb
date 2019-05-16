@@ -26,7 +26,7 @@ def redact_translations(locale, language)
 end
 
 def upload_translations(locale)
-  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} upload translations --dryrun"
+  system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} upload translations"
 end
 
 Languages.get_crowdin_name_and_locale.each do |prop|
