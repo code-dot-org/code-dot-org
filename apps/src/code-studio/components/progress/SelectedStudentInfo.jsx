@@ -11,6 +11,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column'
+  },
+  bubble: {
+    marginLeft: 81
   }
 };
 
@@ -38,10 +41,12 @@ export class SelectedStudentInfo extends React.Component {
             )}
           </div>
         )}
-        <TeacherPanelProgressBubble
-          level={level}
-          inMiniRubricExperiment={inMiniRubricExperiment}
-        />
+        <div style={styles.bubble}>
+          <TeacherPanelProgressBubble
+            level={level}
+            inMiniRubricExperiment={inMiniRubricExperiment}
+          />
+        </div>
         {level.status !== LevelStatus.not_tried &&
           level.status !== LevelStatus.submitted && (
             <div>
