@@ -5,5 +5,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Graph Paper Programming
 
-Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.
+Write algorithms that your classmates can use to draw pictures.
 MARKDOWN
