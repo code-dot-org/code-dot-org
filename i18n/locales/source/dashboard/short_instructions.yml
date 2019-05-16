@@ -3504,7 +3504,7 @@ en:
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
-      Virtual Pet 1_2019: Read and run the code below, then observe what the pet does. Try changing some of the code to produce different results! When you're done, click **Finish**.
+      Virtual Pet 1_2019: Read and run the code below. Try interacting with the pet. When you're done, click **Finish**.
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
@@ -3513,14 +3513,14 @@ en:
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-      Virtual Pet 3_2019: Add a new sprite to the screen, then give it a costume that looks like food your pet enjoys eating.
+      Virtual Pet 3_2019: 'Make your pet move North, South, West, or East while up, down, left, or right arrow keys are pressed. '
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Let's make it so your pet can "eat" its food. Add an event that makes the food jump to a random location when your pet touches it.
+      Virtual Pet 4_2019: Add another sprite to your world, and give it a costume that looks like something your pet likes to eat!
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: Add a sprite for food your pet doesn't like to eat. Make an event that causes this food to jump to a random location when your pet touches it.
+      Virtual Pet 5_2019: 'Create two touch events, one per food sprite, that makes them jump to a random location when your pet touches them. '
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
       Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
@@ -3548,7 +3548,7 @@ en:
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
-      Virtual Pet Template_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
+      Virtual Pet Template_2019: Template for Virtual Pet 2019
       WhileAdventure: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -3890,7 +3890,7 @@ en:
       courseA_harvester_loops5a_2019: Look at all this corn! Can you pick it all by yourself?
       courseA_harvester_loops5b: Can you change your code to make the harvester pick all the corn?
       courseA_harvester_loops5b_2019: Can you change your code to make the harvester pick all the corn?
-      courseA_harvester_loops6: You will need **one** `Move South` block and **one** `Move West` block.
+      courseA_harvester_loops6: You will need **one** `Move West` block and **one** `Move North` block.
       courseA_harvester_loops6_2019: You will need **one** `Move South` block and **one** `Move West` block.
       courseA_harvester_loops7: 'Try it on your own! '
       courseA_harvester_loops7_2019: 'Try it on your own! '

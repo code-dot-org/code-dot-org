@@ -11,7 +11,6 @@ const fakei18n = {
       {
         'project.share_title': 'Share your project',
         'project.share_copy_link': 'Copy the link:',
-        'project.close': 'Close',
         'project.advanced_share': 'Show advanced options',
         'project.embed': 'Embed',
         'project.share_embed_description':
