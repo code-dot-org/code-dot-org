@@ -52,6 +52,11 @@ def restore_redacted_files
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
+      if ['i18n/locales/original/dashboard/authored_hints.yml',
+          'i18n/locales/original/dashboard/long_instructions.yml',
+          'i18n/locales/original/dashboard/authored_hints.yml'].include? original_path
+        plugin = 'instructionblock'
+      end
       restore(original_path, translated_path, translated_path, plugin)
     end
   end

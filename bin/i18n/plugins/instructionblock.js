@@ -1,7 +1,7 @@
 let redact;
 
 const INSTRUCTIONBLOCK = "instructionblock";
-const INSTRUCTIONBLOCK_RE = /<xml><block type="(.+?)".+?<\/block><\/xml>/;
+const INSTRUCTIONBLOCK_RE = /^<xml><block type="(.+?)".+?<\/block><\/xml>/;
 
 module.exports = function instructionblocks() {
   if (this.Parser) {

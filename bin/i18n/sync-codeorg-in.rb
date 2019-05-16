@@ -80,7 +80,7 @@ def redact_level_content
     short_instructions
     long_instructions
   ).each do |content_type|
-    redact_translated_data("dashboard/#{content_type}.yml")
+    redact_translated_data("dashboard/#{content_type}.yml", "instructionblock")
   end
 end
 
