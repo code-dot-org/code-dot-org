@@ -7,6 +7,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include ScriptConstants
+  include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -18,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
     if ScriptLevelsController.cachable_request?(request)
@@ -111,11 +113,12 @@ class ScriptLevelsController < ApplicationController
     end
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
       @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
-    elsif redirect_script = redirect_script(@script_level&.script, request.locale)
+    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
@@ -436,6 +439,12 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def set_redirect_override
+    if params[:script_id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+    end
   end
 
   def redirect_script(script, locale)
