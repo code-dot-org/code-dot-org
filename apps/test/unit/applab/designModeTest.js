@@ -2,6 +2,7 @@ import {expect} from '../../util/configuredChai';
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import designMode from '@cdo/apps/applab/designMode';
 import {getPrefixedElementById} from '@cdo/apps/applab/designElements/elementUtils';
+import elementLibrary from '@cdo/apps/applab/designElements/library';
 
 describe('appendPx', () => {
   it('returns a valid css positive integer', function() {
@@ -168,7 +169,7 @@ describe('setProperty and read Property', () => {
     });
   });
 
-  describe('changeThemeForScreen: ', () => {
+  describe('themes: ', () => {
     let designModeViz;
 
     beforeEach(() => {
@@ -185,233 +186,254 @@ describe('setProperty and read Property', () => {
       designModeViz.innerHTML = existingHTML;
     }
 
-    it('will throw when an invalid theme name is supplied', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1">
-        </div>
-      `);
+    describe('getCurrentTheme: ', () => {
+      it('will treat a screen without the data-theme attribute as the classic theme', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+          </div>
+        `);
 
-      expect(() => {
+        expect(
+          elementLibrary.getCurrentTheme(getPrefixedElementById('screen1'))
+        ).to.equal('classic');
+      });
+    });
+
+    describe('changeThemeForScreen: ', () => {
+      it('will throw when an invalid theme name is supplied', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+          </div>
+        `);
+
+        expect(() => {
+          designMode.changeThemeForScreen(
+            getPrefixedElementById('screen1'),
+            'randomInvalidThemeName'
+          );
+        }).to.throw;
+      });
+
+      it('will change a legacy screen without the data-theme attribute', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+          </div>
+        `);
+
+        // Change theme to watermelon, verify that the screen now has the data-theme attribute
+        // and the background color for that theme:
         designMode.changeThemeForScreen(
           getPrefixedElementById('screen1'),
-          'randomInvalidThemeName'
+          'watermelon'
         );
-      }).to.throw;
-    });
+        expect(getPrefixedElementById('screen1')).not.to.be.null;
+        expect(
+          getPrefixedElementById('screen1').getAttribute('data-theme')
+        ).to.equal('watermelon');
+        expect(
+          getPrefixedElementById('screen1').style.backgroundColor
+        ).to.equal('rgb(197, 226, 85)');
+      });
 
-    it('will change a legacy screen without the data-theme attribute', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1">
-        </div>
-      `);
+      it('will change a default theme screen', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
+          </div>
+        `);
 
-      // Change theme to watermelon, verify that the screen now has the data-theme attribute
-      // and the background color for that theme:
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        'watermelon'
-      );
-      expect(getPrefixedElementById('screen1')).not.to.be.null;
-      expect(
-        getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).to.equal('watermelon');
-      expect(getPrefixedElementById('screen1').style.backgroundColor).to.equal(
-        'rgb(197, 226, 85)'
-      );
-    });
+        // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
+        // and the background color for that theme:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          'watermelon'
+        );
+        expect(getPrefixedElementById('screen1')).not.to.be.null;
+        expect(
+          getPrefixedElementById('screen1').getAttribute('data-theme')
+        ).to.equal('watermelon');
+        expect(
+          getPrefixedElementById('screen1').style.backgroundColor
+        ).to.equal('rgb(197, 226, 85)');
+      });
 
-    it('will change a default theme screen', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
-        </div>
-      `);
+      it('will change a child of a legacy screen without the data-theme attribute', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+            <input id="design_input1">
+          </div>
+        `);
 
-      // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
-      // and the background color for that theme:
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        'watermelon'
-      );
-      expect(getPrefixedElementById('screen1')).not.to.be.null;
-      expect(
-        getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).to.equal('watermelon');
-      expect(getPrefixedElementById('screen1').style.backgroundColor).to.equal(
-        'rgb(197, 226, 85)'
-      );
-    });
+        // Change theme to default, verify that the screen now has the data-theme attribute
+        // and the textInput now has the padding style and the background color of the new theme:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          themeOptions[DEFAULT_THEME_INDEX]
+        );
+        expect(getPrefixedElementById('screen1')).not.to.be.null;
+        expect(
+          getPrefixedElementById('screen1').getAttribute('data-theme')
+        ).to.equal(themeOptions[DEFAULT_THEME_INDEX]);
+        expect(getPrefixedElementById('input1')).not.to.be.null;
+        expect(getPrefixedElementById('input1').style.padding).to.equal(
+          '5px 15px'
+        );
+        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
+          'rgb(242, 242, 242)'
+        );
+      });
 
-    it('will change a child of a legacy screen without the data-theme attribute', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1">
-          <input id="design_input1">
-        </div>
-      `);
+      it('will change from an invalid theme name screen into a valid theme', () => {
+        // Construct an existing screen with an invalid unknownThemeName value
+        // in the data-theme attribute:
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="unknownThemeName">
+            <input id="design_input1">
+          </div>
+        `);
 
-      // Change theme to default, verify that the screen now has the data-theme attribute
-      // and the textInput now has the padding style and the background color of the new theme:
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        themeOptions[DEFAULT_THEME_INDEX]
-      );
-      expect(getPrefixedElementById('screen1')).not.to.be.null;
-      expect(
-        getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).to.equal(themeOptions[DEFAULT_THEME_INDEX]);
-      expect(getPrefixedElementById('input1')).not.to.be.null;
-      expect(getPrefixedElementById('input1').style.padding).to.equal(
-        '5px 15px'
-      );
-      expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-        'rgb(242, 242, 242)'
-      );
-    });
+        // Change theme to default, verify that the screen now has an updated data-theme attribute
+        // and the textInput now has the padding style and the background color of the new theme:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          'watermelon'
+        );
+        expect(getPrefixedElementById('screen1')).not.to.be.null;
+        expect(
+          getPrefixedElementById('screen1').getAttribute('data-theme')
+        ).to.equal('watermelon');
+        expect(getPrefixedElementById('input1')).not.to.be.null;
+        expect(getPrefixedElementById('input1').style.padding).to.equal(
+          '5px 15px'
+        );
+        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
+          'rgb(226, 240, 170)'
+        );
+      });
 
-    it('will change from an invalid theme name screen into a valid theme', () => {
-      // Construct an existing screen with an invalid unknownThemeName value
-      // in the data-theme attribute:
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" data-theme="unknownThemeName">
-          <input id="design_input1">
-        </div>
-      `);
+      it('will change a child of a default theme screen', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
+            <input id="design_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">
+          </div>
+        `);
 
-      // Change theme to default, verify that the screen now has an updated data-theme attribute
-      // and the textInput now has the padding style and the background color of the new theme:
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        'watermelon'
-      );
-      expect(getPrefixedElementById('screen1')).not.to.be.null;
-      expect(
-        getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).to.equal('watermelon');
-      expect(getPrefixedElementById('input1')).not.to.be.null;
-      expect(getPrefixedElementById('input1').style.padding).to.equal(
-        '5px 15px'
-      );
-      expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-        'rgb(226, 240, 170)'
-      );
-    });
+        // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
+        // and the textInput now has the padding style and the background color of the new theme:
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          'watermelon'
+        );
+        expect(getPrefixedElementById('screen1')).not.to.be.null;
+        expect(
+          getPrefixedElementById('screen1').getAttribute('data-theme')
+        ).to.equal('watermelon');
+        expect(getPrefixedElementById('input1')).not.to.be.null;
+        expect(getPrefixedElementById('input1').style.padding).to.equal(
+          '5px 15px'
+        );
+        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
+          'rgb(226, 240, 170)'
+        );
+      });
 
-    it('will change a child of a default theme screen', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
-          <input id="design_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">
-        </div>
-      `);
+      it('will not change a customized, non-default property', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+            <input id="design_input1">
+          </div>
+        `);
+        const inputElement = getPrefixedElementById('input1');
 
-      // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
-      // and the textInput now has the padding style and the background color of the new theme:
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        'watermelon'
-      );
-      expect(getPrefixedElementById('screen1')).not.to.be.null;
-      expect(
-        getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).to.equal('watermelon');
-      expect(getPrefixedElementById('input1')).not.to.be.null;
-      expect(getPrefixedElementById('input1').style.padding).to.equal(
-        '5px 15px'
-      );
-      expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-        'rgb(226, 240, 170)'
-      );
-    });
+        designMode.updateProperty(
+          inputElement,
+          'backgroundColor',
+          'rgb(1,2,3)'
+        );
+        expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
 
-    it('will not change a customized, non-default property', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1">
-          <input id="design_input1">
-        </div>
-      `);
-      const inputElement = getPrefixedElementById('input1');
+        // Change theme to default
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          themeOptions[DEFAULT_THEME_INDEX]
+        );
+        expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
+      });
 
-      designMode.updateProperty(inputElement, 'backgroundColor', 'rgb(1,2,3)');
-      expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
+      it('will change an empty string property', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1">
+            <input id="design_input1">
+          </div>
+        `);
+        const inputElement = getPrefixedElementById('input1');
 
-      // Change theme to default
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        themeOptions[DEFAULT_THEME_INDEX]
-      );
-      expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
-    });
+        // Update the input background color to an empty string:
+        designMode.updateProperty(inputElement, 'backgroundColor', '');
+        expect(inputElement.style.backgroundColor).to.equal('');
 
-    it('will change an empty string property', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1">
-          <input id="design_input1">
-        </div>
-      `);
-      const inputElement = getPrefixedElementById('input1');
+        // Change theme to default
+        designMode.changeThemeForScreen(
+          getPrefixedElementById('screen1'),
+          themeOptions[DEFAULT_THEME_INDEX]
+        );
+        // Input background color should now be the default value:
+        expect(inputElement.style.backgroundColor).to.equal(
+          'rgb(242, 242, 242)'
+        );
+      });
 
-      // Update the input background color to an empty string:
-      designMode.updateProperty(inputElement, 'backgroundColor', '');
-      expect(inputElement.style.backgroundColor).to.equal('');
+      it('will change an alternate syntax background color property that matches the default', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" style="background-color: #F2F2F2;">
+          </div>
+        `);
+        const screen = getPrefixedElementById('screen1');
 
-      // Change theme to default
-      designMode.changeThemeForScreen(
-        getPrefixedElementById('screen1'),
-        themeOptions[DEFAULT_THEME_INDEX]
-      );
-      // Input background color should now be the default value:
-      expect(inputElement.style.backgroundColor).to.equal('rgb(242, 242, 242)');
-    });
+        // Change theme to watermelon
+        designMode.changeThemeForScreen(screen, 'watermelon');
+        // Screen background color should now be the default value:
+        expect(screen.style.backgroundColor).to.equal('rgb(242, 242, 242)');
+      });
 
-    it('will change an alternate syntax background color property that matches the default', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" style="background-color: #F2F2F2;">
-        </div>
-      `);
-      const screen = getPrefixedElementById('screen1');
+      it('will not change an alternate syntax background color property that does not match the default', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" style="background-color: #ABCDEF;">
+          </div>
+        `);
+        const screen = getPrefixedElementById('screen1');
+        // Screen background color should be the rgb() equivalent of the hex color:
+        expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
 
-      // Change theme to watermelon
-      designMode.changeThemeForScreen(screen, 'watermelon');
-      // Screen background color should now be the default value:
-      expect(screen.style.backgroundColor).to.equal('rgb(242, 242, 242)');
-    });
+        // Change theme to watermelon
+        designMode.changeThemeForScreen(screen, 'watermelon');
+        // Screen background color should be unchanged:
+        expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
+      });
 
-    it('will not change an alternate syntax background color property that does not match the default', () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" style="background-color: #ABCDEF;">
-        </div>
-      `);
-      const screen = getPrefixedElementById('screen1');
-      // Screen background color should be the rgb() equivalent of the hex color:
-      expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
+      it("will not change a customization, but will change it later if the value matches an intermediate theme's default", () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
+          </div>
+        `);
 
-      // Change theme to watermelon
-      designMode.changeThemeForScreen(screen, 'watermelon');
-      // Screen background color should be unchanged:
-      expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
-    });
+        const screen = getPrefixedElementById('screen1');
 
-    it("will not change a customization, but will change it later if the value matches an intermediate theme's default", () => {
-      setExistingHTML(`
-        <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
-        </div>
-      `);
+        // Customize the background color to match the watermelon background color
+        designMode.updateProperty(screen, 'backgroundColor', 'rgb(197,226,85)');
+        expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
 
-      const screen = getPrefixedElementById('screen1');
+        // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
+        // and the background color is unchanged:
+        designMode.changeThemeForScreen(screen, 'watermelon');
+        expect(screen.getAttribute('data-theme')).to.equal('watermelon');
+        expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
 
-      // Customize the background color to match the watermelon background color
-      designMode.updateProperty(screen, 'backgroundColor', 'rgb(197,226,85)');
-      expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
-
-      // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
-      // and the background color is unchanged:
-      designMode.changeThemeForScreen(screen, 'watermelon');
-      expect(screen.getAttribute('data-theme')).to.equal('watermelon');
-      expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
-
-      // Change theme to area51, verify that the screen now has an updated data-theme attribute
-      // and the background color for that theme (even though it had been customized once):
-      designMode.changeThemeForScreen(screen, 'area51');
-      expect(screen.getAttribute('data-theme')).to.equal('area51');
-      expect(screen.style.backgroundColor).to.equal('rgb(54, 47, 73)');
+        // Change theme to area51, verify that the screen now has an updated data-theme attribute
+        // and the background color for that theme (even though it had been customized once):
+        designMode.changeThemeForScreen(screen, 'area51');
+        expect(screen.getAttribute('data-theme')).to.equal('area51');
+        expect(screen.style.backgroundColor).to.equal('rgb(54, 47, 73)');
+      });
     });
   });
 });
