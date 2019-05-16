@@ -329,7 +329,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
 
-  test 'facilitators cannot update scholarship info' do
+  test 'non-csf facilitators cannot update scholarship info' do
     workshop = create :pd_workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in @facilitator
@@ -338,6 +338,19 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
     assert_response 403
     assert_nil enrollment.scholarship_status
+  end
+
+  test 'csf facilitators can update scholarship info in their workshops' do
+    facilitator = create(:pd_course_facilitator, course: 'CS Fundamentals').facilitator
+    workshop = create :pd_workshop, facilitators: [facilitator], sessions_from: Date.today + 3.months, num_sessions: 1
+    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    sign_in facilitator
+
+    assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
+    post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
+    assert_response 200
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, JSON.parse(@response.body)["scholarship_status"]
+    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
   end
 
   private
