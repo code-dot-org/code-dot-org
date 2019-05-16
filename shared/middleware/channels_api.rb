@@ -292,8 +292,12 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/abuse$} do |id|
     dont_cache
     content_type :json
+    # Reports of abuse from verified teachers are more reliable than reports
+    # from students so we increase the abuse score enough to block the project
+    # with only one report from a verified teacher.
+    amount = verified_teacher? ? 20 : 10
     begin
-      value = StorageApps.new(storage_id('user')).increment_abuse(id)
+      value = StorageApps.new(storage_id('user')).increment_abuse(id, amount)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -325,5 +329,9 @@ class ChannelsApi < Sinatra::Base
   # This method is included here so that it can be stubbed in tests.
   def project_validator?
     has_permission?("project_validator")
+  end
+
+  def verified_teacher?
+    has_permission?("authorized_teacher")
   end
 end
