@@ -30,12 +30,14 @@ export class SelectedStudentInfo extends React.Component {
         {level.paired && (
           <div>
             <div>{i18n.workedWith()}</div>
-            {level.navigators.length > 0 && (
-              <div>{`Partner: ${level.navigators[0]}`}</div>
-            )}
-            {level.drivers.length > 0 && (
-              <div>{`Logged in: ${level.drivers[0]}`}</div>
-            )}
+            {level.navigators.length > 0 &&
+              level.navigators.map(navigator => (
+                <div key={navigator}>{`Partner: ${navigator}`}</div>
+              ))}
+            {level.drivers.length > 0 &&
+              level.drivers.map(driver => (
+                <div key={driver}>{`Logged in: ${driver}`}</div>
+              ))}
           </div>
         )}
         <TeacherPanelProgressBubble
