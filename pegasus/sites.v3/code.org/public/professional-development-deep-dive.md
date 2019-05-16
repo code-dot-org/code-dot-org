@@ -60,7 +60,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
   <summary>**How much does a workshop cost?**</summary>
   <p>
   <br/>
-  Costs will vary across the country. [contact your Regional Partner](#contact) to find the cost in your area.
+  Costs will vary across the country. [Contact your Regional Partner](#contact) to find the cost in your area.
 
   We believe that local support is critical for success - we’ve partnered with a network of Regional Partners and local facilitators to work with your school. Code.org provides grant funding to help subsidize the costs of the program and to ensure you can use the curriculum & tools forever at no cost.
 
@@ -92,6 +92,22 @@ If you’d like to set up a private workshop and you’re in the U.S., [contact 
 
 <a id="contact"></a>
 <br/>
-## Contact your Regional Partners
+## Contact your Regional Partner
 
 <%= view :professional_learning_regional_partner_mini_contact, source_page_id: "professional-development-deep-dive"%>
+
+
+<div class="col-50">
+<%= view :regional_partner_zip_form %>
+
+</div>
+<div class="col-50" width="75%" style='padding-top: 10px'>
+<center>
+	<img class="quote-image" src="/images/professional-learning/fit-150/deep-dive.jpg">
+	<p class="quote-title">"I do not have a computer science background. I would change nothing about the training. It was an incredible experience, and I felt valued and respected."</p>
+</center>
+</div>
+
+
+<div style="clear: both;"></div>
+<%= view :three_circles, circles: [] %>
