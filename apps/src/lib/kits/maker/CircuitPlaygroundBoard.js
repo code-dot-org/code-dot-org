@@ -9,6 +9,7 @@ import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   destroyCircuitPlaygroundComponents,
+  resetCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {
@@ -205,10 +206,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   reset() {
-    const {led, buzzer, colorLeds} = this.prewiredComponents_;
-    led.off();
-    colorLeds.forEach(led => led.off());
-    buzzer.off();
+    resetCircuitPlaygroundComponents(this.prewiredComponents_);
   }
 
   /**
