@@ -50,7 +50,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     expect(wrapper.find(Body)).to.have.lengthOf(1);
   });
 
-  it('simulates click events - save button', () => {
+  it('simulates click save', () => {
     const wrapper = mount(
       <SchoolInfoConfirmationDialog
         {...MINIMUM_PROPS}
@@ -73,7 +73,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     expect(wrapper.find('Button').length).to.equal(1);
   });
 
-  it('simulates click events - 2 buttons', () => {
+  it('confirms there are two buttons in the school information confirmation modal', () => {
     const wrapper = mount(
       <SchoolInfoConfirmationDialog
         {...MINIMUM_PROPS}
@@ -95,77 +95,57 @@ describe('SchoolInfoConfirmationDialog', () => {
     expect(wrapper.find('Button').length).to.equal(2);
   });
 
-  describe(' server and fetch', () => {
-    let server;
+  describe('fetch', () => {
     let stubedFetch;
 
     beforeEach(() => {
-      server = sinon.fakeServer.create();
       stubedFetch = sinon.stub(window, 'fetch');
     });
 
     afterEach(() => {
-      server.restore();
       stubedFetch.restore();
     });
 
-    describe('handleClickUpdate', () => {
+    describe('handleClickUpdate and handleClickYes', () => {
+      const onClose = sinon.spy();
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
           {...MINIMUM_PROPS}
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              fakeId: 1,
               country: 'US'
             }
           }}
+          onClose={onClose}
+          isOpen={true}
         />
       );
 
-      it('calls handleUpdate method when a user clicks the button to update school information', async () => {
+      it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
         stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
         wrapper.instance().setState({showSchoolInterstitial: false});
         wrapper.find('div#first-button').simulate('click');
 
+        expect(onClose).not.to.have.been.called;
         expect(wrapperInstance.handleClickUpdate).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.true;
       });
-    });
 
-    describe('handleClickYes', () => {
-      const wrapper = mount(
-        <SchoolInfoConfirmationDialog
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              fakeId: 1,
-              country: 'US'
-            }
-          }}
-        />
-      );
-
-      it('calls handleYes method when a user does not need to update school information', () => {
+      it('calls handleClickYes method when a user does not need to update school information', async () => {
+        stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.instance().setState({showSchoolInterstitial: false});
-        console.log('******', wrapper.html());
-        server.respondWith(
-          'PATCH',
-          `api/v1/user_school_infos/${
-            wrapper.MINIMUM_PROPS.scriptData.existingSchoolInfo.fakeId
-          }/update_end_date`,
-          [200, {}, JSON.stringify({response: 'ok'})]
-        );
-        server.respond();
+        wrapper.find('div#second-button').simulate('click');
 
-        wrapper.find('div#first-button').simulate('click');
         expect(wrapperInstance.handleClickYes).to.have.been.called;
+        await setTimeout(() => {}, 50);
+        expect(onClose).to.have.been.called;
+        await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
       });
     });
