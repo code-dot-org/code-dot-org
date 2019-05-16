@@ -6,6 +6,7 @@
     - {index: index, letter: letter}
   - end.compact
   - unless correct_answers.empty?
+    - localized_answers = level.localized_property(:answers)
     #markdown.teacher.hide-as-student
       %h3= t('teacher.answer')
       .content
@@ -21,4 +22,4 @@
                       .item-answer-letter{style: "display: inline-block"}
                         = "#{correct_answer[:letter]}."
                         &nbsp;
-                    != render_multi_or_match_content(level.localized_property(:answers)[correct_answer[:index]], level)
+                    != render_multi_or_match_content(localized_answers[correct_answer[:index]], level)
