@@ -38,8 +38,7 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47564,
       user_id: 101,
       verified_teacher_account: true,
-      attended: true,
-      puzzles_completed: 60
+      attended: true
     },
     {
       first_name: 'Adele',
@@ -48,8 +47,7 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47567,
       user_id: 102,
       verified_teacher_account: true,
-      attended: true,
-      puzzles_completed: 171
+      attended: true
     },
     {
       first_name: 'Grace',
@@ -58,8 +56,7 @@ const FAKE_API_RESPONSE = {
       enrollment_id: 47570,
       user_id: 103,
       verified_teacher_account: true,
-      attended: true,
-      puzzles_completed: 365
+      attended: true
     }
   ]
 };
@@ -115,7 +112,7 @@ describe('SessionAttendance', () => {
     wrapper.unmount();
   });
 
-  it('includes "Puzzles Completed" and "Attended" columns if course is CSF', () => {
+  it('includes "Attended" column if course is CSF', () => {
     const wrapper = mount(
       <SessionAttendance {...DEFAULT_PROPS} course={COURSE_CSF} />
     );
@@ -131,7 +128,6 @@ describe('SessionAttendance', () => {
             <th>Last Name</th>
             <th>Email</th>
             <th>Verified Teacher Account</th>
-            <th>Puzzles Completed</th>
             <th>Attended</th>
           </tr>
         </thead>
