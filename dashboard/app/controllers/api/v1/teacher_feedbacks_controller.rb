@@ -42,6 +42,11 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     end
   end
 
+  # POST /teacher_feedbacks/:id/increment_visit_count
+  # TODO: ADD DESCRIPTION
+  def increment_visit_count
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
