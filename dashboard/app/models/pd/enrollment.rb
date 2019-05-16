@@ -277,6 +277,12 @@ class Pd::Enrollment < ActiveRecord::Base
     end
   end
 
+  def friendly_scholarship_status
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.friendly_status_name
+    end
+  end
+
   # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
   # attending a local summer workshop as a participant to observe the facilitation techniques
   def newly_accepted_facilitator?
