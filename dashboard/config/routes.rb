@@ -635,6 +635,7 @@ Dashboard::Application.routes.draw do
         collection do
           get 'get_feedback_from_teacher'
           get 'get_feedbacks'
+          post 'increment_visit_count'
         end
       end
     end
