@@ -50,7 +50,7 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
 
   def registered_fit_submission_time
     # Return friendly time format: "Mar 21 2019 10:33am UTC"
-    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:created_at).try(:strftime, '%b %d %Y %l:%M%P %Z')
+    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:created_at).try(:strftime, '%D %l:%M%P')
   end
 
   def fit_assigned_at_registration

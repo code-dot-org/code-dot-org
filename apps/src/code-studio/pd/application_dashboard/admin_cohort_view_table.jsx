@@ -183,6 +183,13 @@ export default class AdminCohortViewTable extends React.Component {
         }
       },
       {
+        property: 'registered_fit_submission_time',
+        header: {
+          label: 'FiT Registration Timestamp',
+          transforms: [sortable]
+        }
+      },
+      {
         property: 'fit_assigned_at_registration',
         header: {
           label: 'FiT Assigned at Registration',
@@ -280,6 +287,7 @@ export default class AdminCohortViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router && this.context.router.createHref(`/${id}`)}
         onClick={this.handleViewClick.bind(this, id)}
       >
