@@ -317,7 +317,7 @@ class ChannelsApi < Sinatra::Base
     dont_cache
     content_type :json
     begin
-      value = StorageApps.new(storage_id('user')).buffer_abuse_score(id)
+      value = StorageApps.new(get_storage_id).buffer_abuse_score(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
