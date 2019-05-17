@@ -159,11 +159,7 @@ uz:
     submit: "Taqdim qilmoq"
   project:
     save: "Saqlash"
-    delete: "O'chirish"
-    more: "Yana"
     name: "Ismi"
-    really_delete: 'O''chirasizmi?'
-    cancel: 'Bekor qilish'
     abuse:
       report_abuse_form:
         abuse_type:

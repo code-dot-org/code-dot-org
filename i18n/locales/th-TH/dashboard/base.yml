@@ -437,20 +437,13 @@ th:
     new: "สร้างใหม่"
     rename: "ตั้งชื่อใหม่"
     save: "บันทึก"
-    delete: "ลบ"
-    my_projects: "โปรเจคของฉัน"
     project_gallery: "โปรเจกต์"
     publish: "เผยแพร่"
     unpublish: "ไม่เผยแพร่"
     share: "แบ่งปัน"
-    more: "เพิ่มเติม"
     name: "ชื่อ"
     project_type: "ประเภทโปรเจกต์"
-    really_delete: 'ลบหรือไม่?'
-    delete_yes: 'ใช่'
-    delete_no: 'ไม่ใช่'
     saved: "จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!"
-    cancel: 'ยกเลิก'
     view_all: 'ดูโปรเจคของฉัน'
     remix: 'รีมิกซ์'
     abuse:

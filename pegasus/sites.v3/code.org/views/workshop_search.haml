@@ -1,3 +1,5 @@
+- deep_dive_only ||= false
+
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&libraries=places,geometry&v=3.27"}
 - image_path = CDO.studio_url 'blockly/media/workshop_search/m', CDO.default_scheme
 %script{type: 'text/javascript', src: minifiable_asset_path('js/code.org/views/workshop_search.js'), data: {workshopSearch: {'imagePath': image_path}.to_json} }
@@ -34,4 +36,4 @@
   .col-xs-12
     #gmap{style: 'height: 500px; padding: 3px; border: 3px solid #ddd;'}
 
-#properties{'data-studio-url': CDO.studio_url}
+#properties{'data-studio-url': CDO.studio_url, 'data-deep-dive-only': deep_dive_only}

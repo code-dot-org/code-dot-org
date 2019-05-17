@@ -1072,7 +1072,6 @@ is:
     new: Stofna nýtt
     rename: Endurnefna
     save: Vista
-    delete: Eyða
     import: Flytja inn
     share_link_import_bad_link_header: Óþekktur tengill fyrir deilingu
     share_link_import_bad_link_body: 'Við gátum ekki flutt inn þennan tengil til að
@@ -1082,7 +1081,6 @@ is:
     share_link_import_error_body: Það kom upp vandamál við að flytja inn þennan tengil
       fyrir deilingu. Reyndu aftur.
     exit: Til baka í námskeið
-    my_projects: Verkefni mín
     project_gallery: Verkefni
     publish: Birta
     unpublish: Taka úr birtingu
@@ -1097,8 +1095,6 @@ is:
     advanced_share: Sýna ítarlegri valkosti
     no_projects: Þú hefur engin verkefni sem er. Smelltu á einhvern hnappinn hér fyrir
       ofan til að byrja á verkefni.
-    close: Loka
-    more: Meira
     name: Nafn
     updated: Uppfært
     project_type: Tegund verkefnis
@@ -1109,16 +1105,8 @@ is:
     thumbnail_help: Sérðu ekki réttu smámyndina fyrir verkefnið þitt? Keyrðu appið
       þitt til að búa til nýja smámynd. Athugaðu að það getur einhverja klukkutíma
       fyrir smámyndina að birtast alls staðar.
-    really_delete: Eyða?
-    delete_yes: Já
-    delete_no: Nei
     saved: Vistað
     not_saved: Ekki vistað
-    cancel: Hætta við
-    delete_confirm_title: Ertu viss um að þú viljir eyða þessu verkefni?
-    delete_confirm_text: Ef þú eyðir verkefninu, verður það endanlega fjarlægt úr
-      listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
-      lengur sjá það.
     view_all: Sýna verkefnin mín
     remix: Endurblanda
     click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
