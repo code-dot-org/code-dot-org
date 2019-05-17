@@ -59,7 +59,7 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    set_script
     if @script.redirect_to?
       redirect_to "/s/#{@script.redirect_to}/next"
       return
@@ -77,7 +77,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
+    set_script(version_year: DEFAULT_VERSION_YEAR)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -439,6 +439,15 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def set_script(version_year: nil)
+    if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      @script = Script.get_script_family_redirect_for_user(params[:script_id], user: current_user, locale: request.locale)
+      return
+    end
+
+    @script = Script.get_from_cache(params[:script_id], version_year: version_year)
   end
 
   def set_redirect_override
