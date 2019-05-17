@@ -173,19 +173,9 @@ export default class AdminCohortViewTable extends React.Component {
         }
       },
       {
-        property: 'registered_fit',
-        header: {
-          label: 'Registered FiT',
-          transforms: [sortable]
-        },
-        cell: {
-          format: this.formatBoolean
-        }
-      },
-      {
         property: 'registered_fit_submission_time',
         header: {
-          label: 'FiT Registration Timestamp',
+          label: 'Registered FiT',
           transforms: [sortable]
         }
       },
