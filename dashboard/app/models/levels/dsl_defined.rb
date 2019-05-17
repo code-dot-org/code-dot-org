@@ -51,7 +51,7 @@ class DSLDefined < Level
     # have symbol keys regardless of the input format. We always want strings,
     # so convert the value here.
     if localized.nil?
-      send(property)
+      try(property) || properties[property]
     elsif localized.is_a? Hash
       localized.deep_stringify_keys
     elsif localized.is_a? Array
