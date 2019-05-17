@@ -1,4 +1,6 @@
 class ScriptsController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: :show
   before_action :authenticate_user!, except: :show
   check_authorization
@@ -6,6 +8,7 @@ class ScriptsController < ApplicationController
   # params[:id] in :show action may be a family name rather than a script,
   # so differentiate how we set the script for this action.
   before_action :set_script_for_show, only: [:show]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
 
@@ -31,7 +34,8 @@ class ScriptsController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong script overview page.
-    if redirect_script = redirect_script(@script, request.locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script)
+    if !override_redirect && redirect_script = redirect_script(@script, request.locale)
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
     end
@@ -173,6 +177,12 @@ class ScriptsController < ApplicationController
       :description,
       :stage_descriptions
     ).to_h
+  end
+
+  def set_redirect_override
+    if params[:id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:id])
+    end
   end
 
   def redirect_script(script, locale)
