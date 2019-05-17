@@ -1,4 +1,5 @@
 name 'GoingPlacesSafely-unplugged'
+video_key 'C1_going_places_safely'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
