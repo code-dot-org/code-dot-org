@@ -43,9 +43,6 @@ class SchoolInfoConfirmationDialog extends Component {
 
   handleClickYes = () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
-
-    console.log(authTokenName, authTokenValue);
-
     fetch(
       `/api/v1/user_school_infos/${
         this.props.scriptData.existingSchoolInfo.id
@@ -54,13 +51,11 @@ class SchoolInfoConfirmationDialog extends Component {
     )
       .then(() => this.props.onClose())
       .catch(error => {
-        console.log('The Error =>', error);
         this.setState({error});
       });
   };
 
   handleClickUpdate = () => {
-    console.log('===>I have been called');
     const {authTokenName, authTokenValue} = this.props.scriptData;
     fetch(
       `/api/v1/user_school_infos/${
@@ -69,6 +64,18 @@ class SchoolInfoConfirmationDialog extends Component {
       {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
     )
       .then(() => this.setState({showSchoolInterstitial: true}))
+      .catch(() => {});
+  };
+
+  handleClickSave = () => {
+    const {authTokenName, authTokenValue} = this.props.scriptData;
+    fetch(
+      `/api/v1/users/${
+        this.props.scriptData.existingSchoolInfo.id
+      }/update_school_info_id`,
+      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+    )
+      .then(() => this.props.onClose)
       .catch(() => {});
   };
 
@@ -83,14 +90,14 @@ class SchoolInfoConfirmationDialog extends Component {
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
           onClick={this.handleClickUpdate}
-          id="first-button"
+          id="update-button"
         />
         <Button
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
           onClick={this.handleClickYes}
-          id="second-button"
+          id="yes-button"
         />
       </Body>
     );
