@@ -1,4 +1,5 @@
 name 'ScreenOutTheMean-Unplugged'
+video_key 'CSF_Power_of_Words'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
