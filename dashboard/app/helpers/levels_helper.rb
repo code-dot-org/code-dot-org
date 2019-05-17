@@ -84,7 +84,7 @@ module LevelsHelper
       user_storage_id = storage_id_for_user_id(user.id)
       channel_token = ChannelToken.find_channel_token(level, user_storage_id)
     else
-      user_storage_id = storage_id('user')
+      user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
@@ -690,7 +690,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.pluck(:key)
+    Video.distinct.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
