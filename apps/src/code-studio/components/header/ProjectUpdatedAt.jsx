@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import msg from '@cdo/locale';
-import moment from 'moment';
+
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
 import {projectUpdatedStatuses as statuses} from '../../headerRedux';
 
@@ -15,7 +16,6 @@ const styles = {
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
-    locale: PropTypes.string,
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string
   };
@@ -38,16 +38,11 @@ class ProjectUpdatedAt extends React.Component {
     }
 
     if (this.props.status === statuses.saved) {
-      if (this.props.locale) {
-        moment.locale(this.props.locale);
-      }
       return (
         <div>
           {msg.savedToGallery()}{' '}
           {this.props.updatedAt && (
-            <span title={this.props.updatedAt}>
-              {moment(this.props.updatedAt).fromNow()}
-            </span>
+            <TimeAgo dateString={this.props.updatedAt} />
           )}
         </div>
       );
@@ -66,7 +61,6 @@ class ProjectUpdatedAt extends React.Component {
 }
 
 export default connect(state => ({
-  locale: state.pageConstants && state.pageConstants.locale,
   status: state.header.projectUpdatedStatus,
   updatedAt: state.header.projectUpdatedAt
 }))(ProjectUpdatedAt);
