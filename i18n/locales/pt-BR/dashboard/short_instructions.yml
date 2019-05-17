@@ -2463,12 +2463,12 @@ pt-BR:
         Esta é uma função de Adição que
         usa dois números e retorna sua soma. Use este bloco Adição para somar 3
 
-        -   6.
+        -   6\.
       Calc Circles of Eval .4: |-
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
 
-        -   1)
+        -   1\)
       Calc Circles of Eval 1 (copy 1): |-
         Converta essa instrução para \<alguma\_forma>
         de cálculo.
@@ -3486,7 +3486,7 @@ pt-BR:
         \\r
 
         1.  Guarde o número de vezes que o mago é clicado.\\r
-        2.  2)
+        2.  2\)
             Se o mago for clicado pelo menos 10 vezes antes do cão contar até 30, aumente
             "incremento" em 1 unidade e comece de novo.\\r
         3.  Se o mago não for clicado
@@ -5291,10 +5291,13 @@ pt-BR:
         serviço de nome, para ajudar a compartilhar os endereços entre si.
       U2L14 frequency random: Teste
       U2L2 NetSim Hub Mode: Agora use o Simulador da Internet para enviar os movimentos do navio de guerra. Para configuração, junte-se a uma sala com seu grupo e adicione naves ao seu tabuleiro de papel para cada oponente. Ao jogar, toda a comunicação deve ser feita através da ferramenta, por isso nada de falar, mas divirta-se!
+      U2L3 NetSim Hub Mode: Use o simulador de Internet para testar o protocolo de comunicação binário do seu grupo para encouraçado. Quão curto você pode fazer a mensagem e resposta?
       U2L4 NetSim Routers Addresses: |-
         Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
 
         [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
+      U2L5 NetSim Classroom Internet: Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. O Internet Simulator agora fornece um local para você colocar os endereços Para e De, para que você não precise digitar os bits manualmente.
+      U2L7 NetSim Need for Packets: Transfira seu favicon para um parceiro em uma rede em que quanto maior o pacote, maior a probabilidade de ele ser descartado.
       U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode este app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
       U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando appendItem. (Clique para ver as instruções completas)
       U3 - Arrays - assignment: Use índices para alterar os valores nesse vetor de 1 para 0. (Clique para ver as instruções completas)
@@ -5374,6 +5377,9 @@ pt-BR:
       U3 - Keys - Functions: Escreva funções facaSetaParaCima e facaSetaParaBaixo e chame as funções ao invés de duplicar o código. (Clique para ver as instruções completas)
       U3 - Keys - Key Up and Down: Experimente os eventos de soltar tecla e pressionar tecla para ver como eles são diferentes de apertar tecla. (Clique para ver as instruções completas)
       U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for pressionada (Clique aqui para ver todas as instruções)
+      U3 - Keys - Practice Adding Images with URL: Adicione URLs de imagem ao seu array de imagens. Teste o botão adicionar. Estilize seu scroller de imagem. (Clique para ver instruções completas)
+      U3 - Keys - Words to Images: Adicione URLs de imagem ao seu array de imagens. Teste o botão adicionar. Estilize seu scroller de imagem. (Clique para ver instruções completas)
+      U3 - Loops -  9 Part 2: Altere a expressão booleana para o loop while para que ele role até que ambos os dados sejam maiores que 3. (Clique para ver instruções completas)
       U3 - Loops -  Complex Condition: Altere a expressão booleana para o laço while de forma que ele irá parar quando ambos dados forem maiores que ou iguais a 5. (Clique para ver as instruções completas)
       U3 - Loops - 1: Altere a condição para o laço while para checar se a variável num é menor do que 90. (Clique para ver as instruções completas)
       U3 - Loops - 10: Escreva um programa que simule a rolagem de 2 dados. Role os dados repetidamente até a soma dos dados ser 7 ou 11.
@@ -5382,6 +5388,7 @@ pt-BR:
       U3 - Loops - 13: Atualize seu código para contar por 4 ao invés de 1. (Clique para ver todas as instruções)
       U3 - Loops - 14: Altere a condição do laço para evitar o laço infinito e pare a contagem quando o contador passar de 30. (Clique para ver as instruções completas)
       U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique para ver as instruções completas)
+      U3 - Loops - 16: Descubra quantas vezes você tem que rolar para obter a soma de 7 100 vezes (Clique para ver as instruções completas)
       U3 - Loops - 2: Tente criar um laço infinito usando !=, > e \<. (Clique para ver todas as instruções)
       U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que o programa execute até que role um 6. (Clique para ver as instruções completas)
       U3 - Loops - 4: " Use os Comandos de Análise para fazer uma lista de todos os valores que rolaram antes um 6. (Clique para ver as instruções completas)"
@@ -5390,6 +5397,7 @@ pt-BR:
       U3 - Loops - 7: Sem adicionar linhas de código, reordene o código para que ele imprima todos os valores de num. (Clique para ver instruções completas)
       U3 - Loops - 8: Depure qual número não está sendo impresso e inclua uma instrução de gravação para exibir esse valor. (Clique para ver instruções completas)
       U3 - Loops - 9: " Modifique a condição para que ele continue rolando, desde que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      U3 - Loops - Continue: " Use os Comandos de Depuração para fazer uma lista de todos os valores obtidos antes de um 6. (Clique para ver instruções completas)"
       U3 - Loops - Minus Minus: Altere o código para contar decrescentemente de 10 para 1. (Clique para ver as instruções completas)
       U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count = count + 1. (Clique para ver as instruções completas)
       U3 - Loops - Typing in Console: Use o console para verificar o valor final de num. (Clique para ver as instruções completas)
@@ -5427,6 +5435,9 @@ pt-BR:
       U3 - Read Record - 1.6: Console.log os registros retornados pela chamada de readRecords. (Clique para ver todas as instruções)
       U3 - Read Record - 1: Console.log os registros retornados pela chamada de readRecords. (Clique para ver todas as instruções)
       U3 - Read Record - 2: Mude o nome da tabela para que os registros sejam lidos da nova tabela. (Clique para ver todas as instruções)
+      U3 - Read Record - 3: Altere o nome da tabela em um comando readRecords para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U3 - Read Record - 4.1: Imprima cada retorno de registro da chamada readRecords individualmente. (Clique para ver instruções completas)
+      U3 - Read Record - 4: Imprima cada retorno de registro da chamada readRecords individualmente. (Clique para ver instruções completas)
       U3 - Read Record - 5 and half: Imprima o nome de cada filme nos registros retornados da chamada a readRecords. (Clique para ver todas as instruções)
       U3 - Read Record - 5: Imprima o nome de cada filme nos registros retornados da chamada a readRecords. (Clique para ver todas as instruções)
       U3 - Return Values - constrainTurtle: Use restrições neste aplicativo simples para evitar que a tartaruga saia da tela. (Clique para ver instruções completas)
@@ -6051,6 +6062,10 @@ pt-BR:
       U4 - Read Record - 1.2: Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)
       U4 - Read Record - 1.2_2018: Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)
       U4 - Read Record - 1.2_2019: Coloque um comando console.log abaixo do comando lerInformacoes. (Clique para ver instruções completas)
+      U4 - Read Record - 3: Altere o nome da tabela em um comando readRecords para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 3_2018: Altere o nome da tabela em um comando readRecords para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 3_2019: Altere o nome da tabela em um comando readRecords para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 4: Imprima cada retorno de registro da chamada readRecords individualmente. (Clique para ver instruções completas)
       U4 - ReadRecords - Contacts App 2: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2018: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2019: Crie uma função chamada atualizaDadosLocais. (Clique para ver todas as instruções)

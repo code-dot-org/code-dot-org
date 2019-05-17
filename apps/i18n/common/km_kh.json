@@ -852,6 +852,7 @@
   "submitYourProjectConfirm": "\nអ្នកមិនអាចកែគំរោងរបស់អ្នកបានទេបន្ទាប់ពីដាក់បញ្ជូនវា, ហើយអ្នកពិតជាដាក់បញ្ជូនមែនអត់?",
   "subtitle": "a visual programming environment",
   "success": "ជោគជ័យ!",
+  "support": "ការ​គាំទ្រ",
   "syntaxErrorMsg": "កម្មវិធីរបស់អ្នកមានកំហុសអក្ខរាវិរុទ្ធ។ សូមលុបបន្ទាត់ {lineNumber} ហើយព្យាយាមម្តងទៀត។",
   "teachers": "គ្រូបង្រៀន",
   "teacherCommunity": "គ្រូបង្រៀនសហគមន៍",

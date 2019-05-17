@@ -772,14 +772,12 @@ ja:
     new: "新しく作る"
     rename: "名前をかえる"
     save: "保存"
-    delete: "削除（さくじょ）"
     import: "インポート"
     share_link_import_bad_link_header: "共有リンクが認識されません"
     share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
     share_link_import_error_header: "問題が発生しました。"
     share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
-    my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト"
     publish: "みんなに見せる"
     unpublish: "見られなくする"
@@ -791,22 +789,14 @@ ja:
     embed: "埋め込み"
     advanced_share: "詳細オプションを表示"
     no_projects: "あなたのプロジェクトは現在ありません。上のボタンをクリックしてプロジェクトを開始してください。"
-    close: "閉じる"
-    more: "見る"
     name: "名前"
     updated: "更新された"
     project_type: "プロジェクトの種類"
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
     need_help: "これらのコースで、新しいプロジェクトを はじめよう"
     thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
-    really_delete: '本当に削除しますか？'
-    delete_yes: 'はい'
-    delete_no: 'いいえ'
     saved: "保存されました"
     not_saved: "保存されていません"
-    cancel: 'キャンセル'
-    delete_confirm_title: このプロジェクトを本当に削除してもよろしいですか？
-    delete_confirm_text: "プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。"
     view_all: 'マイプロジェクトを見る'
     remix: 'リミックス'
     click_to_remix: "\"Remix\" をクリックしてあなただけのバージョンを作成しましょう"

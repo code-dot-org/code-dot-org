@@ -577,6 +577,7 @@
   "submitYourProject": "تقديم مشروعك",
   "submitYourProjectConfirm": "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟",
   "subtitle": "بيئة البرمجة المرئية",
+  "support": "الدعم",
   "switchSection": "قسم التبديل:",
   "syntaxErrorMsg": "برنامجك يحتوي علي خطأ في الكتابة الرجاء إزالة السطر رقم {lineNumber} والمحاولة مرة أخرى.",
   "teacher": "المدرس",

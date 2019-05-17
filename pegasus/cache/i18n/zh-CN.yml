@@ -1524,6 +1524,10 @@ zh-CN:
   header_help_support: '帮助和支持 '
   header_report_bug: 报告错误
   header_tutorials: 教程
+  app_lab_documentation: 应用程序实验室文档
+  app_lab_tutorials: 应用程序实验室说明
+  game_lab_documentation: 游戏实验室文档
+  game_lab_tutorials: 游戏实验室说明
   header_documentation: 使用文档
   csp_name: 计算机科学原理
   csd_name: 计算机科学发现

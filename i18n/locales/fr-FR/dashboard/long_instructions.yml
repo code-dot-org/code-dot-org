@@ -526,22 +526,22 @@ fr:
             style of the "Dogs" button you can make a copy of it. Click the button and
             then click "Duplicate".\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10>
+            \\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
             AM.png>)\\r
             \\r
         2.  You can also make a new button from scratch by dragging
             it in from the Design Toolbox.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09>
+            \\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
             AM.png>)\\r
             \\r
         3.  Click and drag to move your new button where you want it.\\r
             \\r
-        4.  3.
+        4.  3\.
             Once you have a new button give it a clear name, "catButton". You can also
             change its text to read "Cats!".\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>
+            \\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
             AM.png>)\\r
             \\r
         5.  There's lots of other ways you can change the look
@@ -564,25 +564,25 @@ fr:
         1.  From Code Mode you can drag in the
             block \\r
             \\r
-            \\t\!\[](\<<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56>
+            \\t![](<https://images.code.org/c1ca564880152242c3bf92b2b9ad4fca-image-1504290427563.26.56
             AM.png>)\\r
             \\r
         2.  From Design Mode your button has an "Events" tab.
             Click 'Insert and show code' to add the code.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18>
+            \\t![](<https://images.code.org/90d6c0cb723ee4317244f99dcfbd3a66-image-1504290568475.29.18
             AM.png>)\\r
             \\r
         3.  Use the drop down to make sure you're making the event
             respond to the "catButton".\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03>
+            \\t![](<https://images.code.org/ebef61f18259a2fb0d8addb90d9d8ba4-image-1504290674099.31.03
             AM.png>)\\r
             \\r
         4.  The `setScreen()` block changes the screen. Drag this
             block inside your `onEvent()` block and choose your `catScreen` from the list.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02>
+            \\t![](<https://images.code.org/00433d32665ec6f2aa6a0caac2626568-image-1504290788639.33.02
             AM.png>)\\r
             \\r
         5.  Run your app. If everything worked correctly your cat
@@ -598,17 +598,17 @@ fr:
             Mode" where you can add and edit screens. To add a screen click the screen
             dropdown and select "New screen".\\r
             \\r
-            \\t![expandable]\(\<<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33>
+            \\t![expandable](<https://images.code.org/4e90c1d897ede63403a1351f5ec3bfae-image-1504288061907.47.33
             AM.png>) \\r
             \\r
         2.  Then name your new screen "catScreen". \\r
             \\r
-            \\t![expandable]\(\<<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33>
+            \\t![expandable](<https://images.code.org/966a2563aaf8a59a983fe6417d01dae9-image-1504288205242.49.33
             AM.png>)\\r
             \\r
         3.  Finally, choose the cats background image of your screen\\r
             \\r
-            \\t![expandable]\(\<<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40>
+            \\t![expandable](<https://images.code.org/ff8509146b8a249973498af63f41b08d-image-1504288758611.51.40
             AM.png>)\\r
             \\r
             Once you have added your new screen hit "Finish" to learn
@@ -626,13 +626,13 @@ fr:
             the sound play when your user clicks the button. Then click "Choose..."
             from the menu.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>
+            \\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
             AM.png>)\\r
             \\r
         2.  Go through the "Sound Library" and find the sounds you
             want. There's tons!\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>
+            \\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
             AM.png>)\\r
             \\r
         3.  Run your app to check out how your sounds work.
@@ -676,7 +676,7 @@ fr:
             ([Show me where](#triggercallout=selector))\\r
         2.  Drag a new "text area"
             onto your screen to add it. ([Show me where](#triggercallout=textArea))\\r
-        3.  3.
+        3.  3\.
             Drag the bottom right corner of your text area to change its size.\\r
         4.  Change
             the text to tell your user what happens on this screen. Then change the color
@@ -714,9 +714,9 @@ fr:
 
         1.  Click
             the title of your app. ([Show me where](#triggercallout=titleCallout))\\r
-        2.  2.
+        2.  2\.
             Change the "text" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\\r
-        3.  3.
+        3.  3\.
             Scroll down the menu to change the color of your title ([Show me where](#triggercallout=changeTextColor))\\r
             \\r
             Once
@@ -779,13 +779,13 @@ fr:
 
         1.  Use
             the screen selector to go back to your "startScreen" ([Show me where](#triggercallout=selector))\\r
-        2.  2.
+        2.  2\.
             Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\r
-        3.  3.
+        3.  3\.
             Give your button a clear "id" that describes what it does ([Show me where](#triggercallout=changeButtonID))\\r
-        4.  4.
+        4.  4\.
             Change the "text" of your button to describe where it will take the user.\\r
-        5.  5.
+        5.  5\.
             Personalize your button's other properties like "text color" or "background
             color".\\r
             \\r
@@ -799,9 +799,9 @@ fr:
         you need to make a simple Choose Your Own Adventure app, but you can add so
         much more! If you want to add images to your screen it's easy!\\r
         \\r
-        1.
+        1\.
         In another tab in your browser go online and find an image you want to use\\r
-        2.
+        2\.
         Right click the image and save its URL (usually "Copy link address" or "Copy
         image URL")\\r
 
@@ -841,9 +841,9 @@ fr:
         be a real Choose Your Own Adventure, you're need to add some more choices!
         Start by adding a screen for the second choice your player could make.\\r
         \\r
-        1.
+        1\.
         Use the screen selector to add a new screen. Give it a clear "id".\\r
-        2.
+        2\.
         Set the "background color" of your screen\\r
 
         3.  Add a "Text Area" to your
@@ -5518,7 +5518,7 @@ fr:
         # Do This\\r
 
         \*
-        Add a new HTML file by clicking  \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        Add a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>).  The new file will appear in the file list on the left side of the
         workspace.\\r
 
@@ -5866,7 +5866,7 @@ fr:
         # Do This\\r
 
         \*
-        Add a new HTML file by clicking  \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        Add a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>).  The new file will appear in the files list on the left side of the
         workspace.\\r
 
@@ -5890,7 +5890,7 @@ fr:
         # Do This\\r
 
         \*
-        Add a new HTML file by clicking  \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        Add a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>).  The new file will appear in the files list on the left side of the
         workspace.\\r
 
@@ -5914,7 +5914,7 @@ fr:
         # Do This\\r
 
         \*
-        Add a new HTML file by clicking  \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        Add a new HTML file by clicking  ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>).  The new file will appear in the files list on the left side of the
         workspace.\\r
 
@@ -6237,7 +6237,7 @@ fr:
         # Do This\\r
 
         -   Click the
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) button at the top of this page.\\r
         -   Copy the URL it gives you, and
             email it to the people you want to see your page.\\r
@@ -6253,7 +6253,7 @@ fr:
         # Do This\\r
 
         -   Click the
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) button at the top of this page.\\r
         -   Copy the URL it gives you, and
             email it to the people you want to see your page.\\r
@@ -6269,7 +6269,7 @@ fr:
         # Do This\\r
 
         -   Click the
-            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>) button at the top of this page.\\r
         -   Copy the URL it gives you, and
             email it to the people you want to see your page.\\r
@@ -7578,336 +7578,336 @@ fr:
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L11 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L11 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L12 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L12 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L12 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L13 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L13 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L13 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L15 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L15 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L15 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L16 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L16 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L16 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L17 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L17 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L17 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L18 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L18 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L18 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L19 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L19 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L19 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L3 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L3 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L3 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L4 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L4 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L4 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L5 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L5 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L5 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L6 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L6 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L6 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L7 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L7 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L7 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L9 Freeplay: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L9 Freeplay_2018: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 L9 Freeplay_2019: |-
         # Free Play\\r
 
         \\r
         Use what you've
-        learned to create whatever you like.  When you're finished, you can click  \!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)  to send your creation to a friend, or \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        learned to create whatever you like.  When you're finished, you can click  ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)  to send your creation to a friend, or ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) to send it to your Projects Gallery.
       CSD U3 Mouse Input Bee 2: |-
         # Random Around Point\\r
@@ -8196,7 +8196,7 @@ fr:
         sure you hit "Run" and try out turning on the grid to help you place shapes
         precisely.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab: |-
         # Drawing Shapes\\r
@@ -8209,7 +8209,7 @@ fr:
         sure you hit "Run" and try out turning on the grid to help you place shapes
         precisely.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2018: |-
         # Drawing Shapes\\r
@@ -8222,7 +8222,7 @@ fr:
         sure you hit "Run" and try out turning on the grid to help you place shapes
         precisely.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2019: |-
         # Drawing Shapes\\r
@@ -8235,7 +8235,7 @@ fr:
         sure you hit "Run" and try out turning on the grid to help you place shapes
         precisely.\\r
         \\r
-        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Random Add a Door: |-
         <img src="https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25
@@ -8325,7 +8325,7 @@ fr:
         numbers in your programs. It can be used in the place of a single number and
         so can make your program run a little differently each time.\\r
         \\r
-        \!\[](\<<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09>
+        ![](<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09
         PM.png>)\\r
         \\r
         <img src="https://images.code.org/246e7ac850015aa830d469b7eeb5f00e-image-1491523022253.50.04
@@ -8353,7 +8353,7 @@ fr:
         can use the `randomNumber()` command multiple times in your programs. Each
         time it's used a new random number will be generated.\\r
         \\r
-        \!\[](\<<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33>
+        ![](<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33
         PM.png>)
       CSD U3 Random Taller Rectangle: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10\nPM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\\\\r\n\n# \n\nRectangle Size\\\\r\n\\\\r\nThese `rect` blocks have two more parameters that you\ncan use to control the size. Notice that the `noStroke()` block turns off\nthe stroke (border) for shapes.\\\\r\n\\\\r\n\n# Do This\\\\r\n\n\\\\r\n\n-   Look at the code\n    and try to figure out how the last two inputs in `rect` work.\\\\r\n-   Change\n    the numbers in the second `rect` to make red rectangle longer than the blue\n    one.\\\\r"
       CSD U3 Random Taller Rectangle_2018: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10\nPM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\\\\r\n\n# \n\nRectangle Size\\\\r\n\\\\r\nThese `rect` blocks have two more parameters that you\ncan use to control the size. Notice that the `noStroke()` block turns off\nthe stroke (border) for shapes.\\\\r\n\\\\r\n\n# Do This\\\\r\n\n\\\\r\n\n-   Look at the code\n    and try to figure out how the last two inputs in `rect` work.\\\\r\n-   Change\n    the numbers in the second `rect` to make red rectangle longer than the blue\n    one.\\\\r"
@@ -10413,10 +10413,10 @@ fr:
             # Do This\\r
         3.  Decode
             the two numbers from the binary string.
-      CSD U5 binary 3: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers up to to eight bits.  You can use it to\ntry to find the three world records encoded in the binary string below.  The\nanswers are in order in the string.\\\\r\n\\\\r\n\n1.  Most canned drinks opened by\n    a parrot in one minute.\\\\r\n2.  Most ice cream scoops balanced on a cone.\\\\r\n3.  3.\n    Most number of people lifted and thrown in two minutes.\\\\r\n    \\\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n4.  Try to decode the three numbers from a the binary string\\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\\r\n    -   Was there any other information\n        you need to be certain your numbers are correct?"
-      CSD U5 binary 4-new: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
-      CSD U5 binary 4-new_2018: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
-      CSD U5 binary 4-new_2019: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
+      CSD U5 binary 3: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers up to to eight bits.  You can use it to\ntry to find the three world records encoded in the binary string below.  The\nanswers are in order in the string.\\\\r\n\\\\r\n\n1.  Most canned drinks opened by\n    a parrot in one minute.\\\\r\n2.  Most ice cream scoops balanced on a cone.\\\\r\n3.  3\\.\n    Most number of people lifted and thrown in two minutes.\\\\r\n    \\\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n4.  Try to decode the three numbers from a the binary string\\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\\r\n    -   Was there any other information\n        you need to be certain your numbers are correct?"
+      CSD U5 binary 4-new: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
+      CSD U5 binary 4-new_2018: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
+      CSD U5 binary 4-new_2019: "# Decoding multiple numbers\\\\r\n\n\\\\r\nHere's\na widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to\nfind the two world records encoded in the binary string below.\\\\r\n\\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\\r\n\\\\r\n\n1.  Most number of people lifted and thrown in two minutes.\n    (4 bits)\\\\r\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\\\\r\n    \\\\r\n    # \n    Do This\\\\r\n3.  Decode the two numbers from the binary string."
       CSD U5 binary 4: |-
         # Bit Length\\r
 
@@ -10474,7 +10474,7 @@ fr:
         number, you can just leave the extra bits at the left off.) You can use it
         to find the values of the two world records below.\\r
         \\r
-        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)\\r
         \\r
 
@@ -10494,7 +10494,7 @@ fr:
         number, you can just leave the extra bits at the left off.) You can use it
         to find the values of the two world records below.\\r
         \\r
-        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)\\r
         \\r
 
@@ -10514,7 +10514,7 @@ fr:
         number, you can just leave the extra bits at the left off.) You can use it
         to find the values of the two world records below.\\r
         \\r
-        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)\\r
         \\r
 
@@ -10533,7 +10533,7 @@ fr:
         a new bit string.  This time, you don't know the bit length of the two numbers.  Try
         to decode the numbers without knowing the bit length.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -10554,7 +10554,7 @@ fr:
         a new bit string.  This time, you don't know the bit length of the two numbers.  Try
         to decode the numbers without knowing the bit length.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -10575,7 +10575,7 @@ fr:
         a new bit string.  This time, you don't know the bit length of the two numbers.  Try
         to decode the numbers without knowing the bit length.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
 
@@ -10599,27 +10599,27 @@ fr:
         For example, the following binary string could be decoded
         many different ways.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
         If you split the string like this, the string reads 12, 84.\\r
         \\r
-        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)\\r
         \\r
         \\r
         If you split it like this, the string reads 42, 20.\\r
         \\r
-        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)\\r
         \\r
         To solve this problem, people agree on a fixed length for every
         number.  The following string uses the same two numbers, but each number takes
         up exactly eight bits, no matter how many bits it actually needs.\\r
         \\r
-        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)\\r
         \\r
 
@@ -10642,27 +10642,27 @@ fr:
         For example, the following binary string could be decoded
         many different ways.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
         If you split the string like this, the string reads 12, 84.\\r
         \\r
-        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)\\r
         \\r
         \\r
         If you split it like this, the string reads 42, 20.\\r
         \\r
-        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)\\r
         \\r
         To solve this problem, people agree on a fixed length for every
         number.  The following string uses the same two numbers, but each number takes
         up exactly eight bits, no matter how many bits it actually needs.\\r
         \\r
-        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)\\r
         \\r
 
@@ -10685,27 +10685,27 @@ fr:
         For example, the following binary string could be decoded
         many different ways.\\r
         \\r
-        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)\\r
         \\r
         If you split the string like this, the string reads 12, 84.\\r
         \\r
-        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)\\r
         \\r
         \\r
         If you split it like this, the string reads 42, 20.\\r
         \\r
-        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)\\r
         \\r
         To solve this problem, people agree on a fixed length for every
         number.  The following string uses the same two numbers, but each number takes
         up exactly eight bits, no matter how many bits it actually needs.\\r
         \\r
-        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)\\r
         \\r
 
@@ -10724,7 +10724,7 @@ fr:
         Use
         the pixelation widget to draw a smiley face\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2018: |-
         # Do This\\r
@@ -10733,7 +10733,7 @@ fr:
         Use
         the pixelation widget to draw a smiley face\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2019: |-
         # Do This\\r
@@ -10742,7 +10742,7 @@ fr:
         Use
         the pixelation widget to draw a smiley face\\r
         \\r
-        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 3: |-
         # Do This\\r
@@ -10752,7 +10752,7 @@ fr:
         width and height sliders are set incorrectly for this image so it doesn't
         look like anything. Change them until you find the image.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2018: |-
         # Do This\\r
@@ -10762,7 +10762,7 @@ fr:
         width and height sliders are set incorrectly for this image so it doesn't
         look like anything. Change them until you find the image.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2019: |-
         # Do This\\r
@@ -10772,7 +10772,7 @@ fr:
         width and height sliders are set incorrectly for this image so it doesn't
         look like anything. Change them until you find the image.\\r
         \\r
-        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 4: |-
         # Do This\\r
@@ -10782,7 +10782,7 @@ fr:
         eyebrows to this smiley face. Remember to use the "Readable Format" if you
         get stuck.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2018: |-
         # Do This\\r
@@ -10792,7 +10792,7 @@ fr:
         eyebrows to this smiley face. Remember to use the "Readable Format" if you
         get stuck.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2019: |-
         # Do This\\r
@@ -10802,7 +10802,7 @@ fr:
         eyebrows to this smiley face. Remember to use the "Readable Format" if you
         get stuck.\\r
         \\r
-        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 5: |-
         # Do This\\r
@@ -15586,7 +15586,7 @@ fr:
         -   2`) each time.  Cat will move and count by multiplying by 2 (`counter \*2`)  each
             time. Penguin will move and count to the power of 2 (`counter ^ 2\`) each time.  Who
             will reach their flag first?
-      Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back the `increment` variable!    Let's tie it to the level\nof the game.\\\\r\n\\\\r\n\n1.  Keep track of the number of times The Wizard is clicked.  \\\\r\n2.  2)\n    If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n    `increment` by 1 and start again.  \\\\r\n3.  If The Wizard does not get clicked\n    at least 10 times, the game is over.  "
+      Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back the `increment` variable!    Let's tie it to the level\nof the game.\\\\r\n\\\\r\n\n1.  Keep track of the number of times The Wizard is clicked.  \\\\r\n2.  2\\)\n    If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n    `increment` by 1 and start again.  \\\\r\n3.  If The Wizard does not get clicked\n    at least 10 times, the game is over.  "
       Course 4 Playlab For Loops 4b: |-
         Now, these two characters
         are going to race!  \\r
@@ -17072,7 +17072,7 @@ fr:
 
         1.  In Design Mode Click on the white
             square where it says "CODE". Change it to show a secret code of your choice\\r
-        2.  2.
+        2.  2\.
             Drag the picture down to cover the secret code\\r
             \\r
             ![](<>)
@@ -17432,7 +17432,7 @@ fr:
         it started, which is also the middle of the plus sign, as shown below. Each
         of the four segments of the plus sign are one `moveForward()` long._ \\r
         \\r
-        \!\[](\<<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14>
+        ![](<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14
         AM.png>)\\r
         \\r
         \\r
@@ -17580,7 +17580,7 @@ fr:
         and `//Call function` to draw most of the square, then fill in the rest using
         `//Move turtle` and `//Orient turtle`.\\r
         \\r
-        \!\[](\<<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18>
+        ![](<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18
         PM.png>)
       SG U3L04 - snowflake: |-
         # Do This:\\r
@@ -17608,7 +17608,7 @@ fr:
             with subgoals first.\\r
             \\r
             \\r
-            \!\[](\<<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33>
+            ![](<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33
             PM.png>)
       SG U3L04 Assessment1: |-
         Consider the figure below.  Use
@@ -17697,7 +17697,7 @@ fr:
             \\t\* Note: even if you just want the
             default dot color - black - explicitly set the color to black here.\\r
             \\r
-        2.  2.
+        2.  2\.
             Using that color, make a dot so big that it fills the screen.\\r
             \\r
         3.  In
@@ -17908,7 +17908,7 @@ fr:
         have been placed at the top of the program but the function itself needs to
         be defined.  The program should draw this:\\r
         \\r
-        \!\[](\<<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20>
+        ![](<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20
         PM.png>)\\r
         \\r
 
@@ -17966,7 +17966,7 @@ fr:
             working try calling `drawFish` with random values for its `red`, `green`,
             and `blue` parameters to get differently colored fish.\\r
             \\r
-            \!\[](\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>
+            ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35
             PM.png>)
       SG U3L07 - introSquare: "# Getting Started with Loops\\\\r\n\n\\\\r\nA\n**loop** is a block of code that is repeated or \"looped through\" in a program.\nYou will be creating a loop using the `for` loop block.\\\\r\n\\\\r\nWe'll start\nby experimenting with a program similar to what you saw in the video.\\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\n-   **Drag** out a `for` loop block. This serves the subgoal `//Write\n    a loop`. Much like the subgoal `//Define function`, you will then fill in\n    the loop, which might involve achieving more subgoals, like `//Move turtle`\n    and `//Orient turtle`.\\\\r\n    \\\\r\n-   **Inside the loop:**\\\\r\n    \\\\t\\* **Add** a call\n    to `moveForward()`.\\\\r\n    -   **Add** a call `turnLeft()`. (HINT: try turning\n        by 137 degrees to start. You can change after that.)\\\\r\n        \\\\r\n        ![](https://images.code.org/4da4a0c8a10a3c9637df96507fece183-image-1443038466204.gif)\\\\r\n        \\\\r\n-   \\*\n    **Run** the program to see the loop in action.\\\\r\n-   **Experiment:**\\\\r\n-   \\*\n    **Change** the number of times the loop runs.\\\\r\n-   **Increase** the run speed\n    to see how fast loops can execute.\\\\r\n-   **How many times** can the loop run\n    before you can no longer tell the difference in the image?\\\\r\n    \\\\r\n    **Move\n    on** once you feel like you have a decent grasp of using a `for` loop: setting\n    the number of times to repeat, running the program, and setting the run speed.\\\\r"
       SG U3L07 - loopsWithRandom: |-
@@ -18099,7 +18099,7 @@ fr:
         -   \*
             **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r
             \\r
-            \!\[](\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>
+            ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04
             PM.png>)
       SG U3L07 - sunBeams: "# Add Sunbeams\\\\r\n\n<img src=\"https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54\nPM.png\" style=\"width: 200px; float: right\">\\\\r\nFinally, we'll add some\nvisual flourish by writing `drawAllSunbeams`. Note: The `turnTo` command makes\nthe turtle face a random direction prior to drawing each sun beam.  \\\\r\n\\\\r\n\n# \n\nDo This:\\\\r\n\\\\r\n\n-   **Read** the `drawSunbeam` function to know how it works\n    and what **parameters** it accepts.\\\\r\n    \\\\r\n-   **Add a loop** to `drawAllSunbeams`\n    to draw about 100 sunbeams. Inside your loop:\\\\r\n    \\\\r\n-   **Place the commands\n    already inside the function in your loop.** This way your code will move the\n    turtle to a random x location at the top of the image (y is 0), `turnTo` a\n    random angle between **165 and 175 degrees**, and call `drawSunbeam`."
       SG U3L07 Free Response Reflection: |-
@@ -18146,7 +18146,7 @@ fr:
             Remember that to achieve the subgoal `//Define function`,
             you need to give it a name, identify the parameters, and fill it in with blocks.\\r
             \\r
-            \!\[](\<<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38>
+            ![](<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38
             PM.png>)
       SG U3L08 - drawSquareWithParam: "# Defining and Using\n\na Function with a Parameter\\\\r\nFrom the video, you learned that defining multiple\nfunctions to draw different sized squares results in lots of repetitive functions\n\n-   they are essentially the same, with a few numbers changed - and this is\n    not desirable.\\\\r\n    Any time you find yourself effectively copy and pasting\n    large sections of code, it's usually a sign that there is a better way.\\\\r\n    \\\\r\n    # \n    Do This:\\\\r\n    Uh oh! Something's wrong! We've set up a program that runs,\n    but doesn't do what it's supposed to do. The program is supposed to make\n    a drawing with two squares that looks like this:\\\\r\n    \\\\r\n    <img src=\"https://images.code.org/3eae30651dabc2f83a8bbbbbf8bea7ad-image-1442420537113.26.34\n    AM.png\" style=\"width: 150px;\"> \\\\r\n    \\\\r\n    We've given you the `drawSquare(size)`function\n    that was created in the video, but it's not quite right. **Fix the code inside\n    the `drawSquare()` function so that the program creates the drawing correctly.**\\\\r\n    \\\\r\n    **HINT:**\n    You should only need to change one thing about an existing line of code. You\n    don't need to add or remove any lines of code. Remember: The parameter `size`\n    acts like a placeholder for a value that gets plugged into each call to `moveForward()`."
       SG U3L08 - fish: |-
@@ -18165,7 +18165,7 @@ fr:
         **Update your function calls** to use your new
         version of `drawFish()` and change the size of the fish in your image.\\r
         \\r
-        \!\[](\<<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55>
+        ![](<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55
         PM.png>)
       SG U3L08 - introUnderTheSea - recovery: |-
         # Under the Sea!\\r
@@ -18198,7 +18198,7 @@ fr:
         -   \*
             **Continue \*\* to the next level, \*\*where your code will be waiting for you.**\\r
             \\r
-            \!\[](\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>
+            ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
             PM.png>)
       SG U3L08 - introUnderTheSea: |-
         # Under the Sea!\\r
@@ -18231,7 +18231,7 @@ fr:
         -   \*
             **Continue \*\* to the next level, \*\*where your code will be waiting for you.**\\r
             \\r
-            \!\[](\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>
+            ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
             PM.png>)
       SG U3L08 - multiParamFish: |-
         # Multiple Parameters\\r
@@ -18256,7 +18256,7 @@ fr:
         **Change**
         the function calls at the top your code to draw different colored fish.\\r
         \\r
-        \!\[](\<<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30>
+        ![](<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30
         PM.png>)
       SG U3L08 - paramsToStarfish: |-
         # Adding Parameters to Functions:
@@ -18276,7 +18276,7 @@ fr:
         your function calls** to use your new version of `drawStarfish()` and change
         the size of your starfish.\\r
         \\r
-        \!\[](\<<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12>
+        ![](<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12
         PM.png>)
       SG U3L08 - randomInput: |-
         # Random Input\\r
@@ -18334,7 +18334,7 @@ fr:
         your function calls** to use your new version of `drawSeagrass()` and change
         the size of the seagrass in your image.\\r
         \\r
-        \!\[](\<<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30>
+        ![](<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30
         PM.png>)
       SG U3L08 - squareTwoParams: |-
         # Calling Functions with
@@ -18345,7 +18345,7 @@ fr:
         has two parameters: `drawSquare(size, borderWidth)` Notice how **multiple
         parameters are separated by commas**.\\r
         \\r
-        \!\[](\<<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15>
+        ![](<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15
         PM.png>)\\r
         \\r
 
@@ -18355,7 +18355,7 @@ fr:
         new two-parameter version of `drawSquare()` to make an image similar to this
         one.\\r
         \\r
-        \!\[](\<<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38>
+        ![](<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38
         PM.png>)\\r
         \\r
         Just like for the subgoal `//Define function`, the subgoal
@@ -18492,7 +18492,7 @@ fr:
             might want to test your ideas on paper for faster brainstorming. Work with
             your partner to discuss possible solutions or strategies. Try more than one.\\r
             \\r
-        2.  2.
+        2.  2\.
             Once you have a solution, **start** by identifying the subgoals and drag them
             from the **Goals** tab into the workspace. \\r
             \\r
@@ -19577,7 +19577,7 @@ fr:
             working try calling `drawFish` with random values for its `red`, `green`,
             and `blue` parameters to get differently colored fish.\\r
             \\r
-            \!\[](\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>
+            ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35
             PM.png>)
       U3L07 - fish_2018: |-
         # Add Fish\\r
@@ -19607,7 +19607,7 @@ fr:
             working try calling `drawFish` with random values for its `red`, `green`,
             and `blue` parameters to get differently colored fish.\\r
             \\r
-            \!\[](\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>
+            ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35
             PM.png>)
       U3L07 - fish_2019: |-
         # Add Fish\\r
@@ -19637,7 +19637,7 @@ fr:
             working try calling `drawFish` with random values for its `red`, `green`,
             and `blue` parameters to get differently colored fish.\\r
             \\r
-            \!\[](\<<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35>
+            ![](<https://images.code.org/cbbb8e02c14cbc2d199ede4531090513-image-1443046439253.12.35
             PM.png>)
       U3L07 - loopsWithRandom_2018: |-
         # Using Multiple Loops\\r
@@ -19736,7 +19736,7 @@ fr:
         -   \*
             **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r
             \\r
-            \!\[](\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>
+            ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04
             PM.png>)
       U3L07 - seaStar_2018: |-
         # Add Sea Stars\\r
@@ -19774,7 +19774,7 @@ fr:
         -   \*
             **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r
             \\r
-            \!\[](\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>
+            ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04
             PM.png>)
       U3L07 - seaStar_2019: |-
         # Add Sea Stars\\r
@@ -19812,7 +19812,7 @@ fr:
         -   \*
             **Draw 5 sea stars** of random size between **10 and 30** using `drawSeaStar`.\\r
             \\r
-            \!\[](\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>
+            ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04
             PM.png>)
       U3L07 Free Response Reflection: |-
         When breaking a problem
@@ -19927,7 +19927,7 @@ fr:
         -   \*
             **Continue \*\* to the next level, \*\*where your code will be waiting for you.**\\r
             \\r
-            \!\[](\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>
+            ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35
             PM.png>)
       U3L08 - randomInput: |-
         # Random Input\\r
@@ -22076,7 +22076,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will help
         you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       course1_playlab_events_challenge2: |-
         _"Let's have a party!
@@ -22090,7 +22090,7 @@ fr:
         In this puzzle,
         make sure to click for hints! The hints will give you fun things to try!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       course2_artist_nestedLoops_challenge1: |-
         Can you figure
@@ -22749,7 +22749,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will help
         you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge1_2018: |-
         _"Where are my friends
@@ -22762,7 +22762,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will help
         you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge1_2019: |-
         _"Where are my friends
@@ -22775,7 +22775,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will help
         you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge1a: |-
         Where are my friends
@@ -22787,7 +22787,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will
         help you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2: |-
         _"Let's have a party!
@@ -22801,7 +22801,7 @@ fr:
         In this puzzle,
         make sure to click for hints! The hints will give you fun things to try!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2018: |-
         _"Let's have a party!
@@ -22815,7 +22815,7 @@ fr:
         In this puzzle,
         make sure to click for hints! The hints will give you fun things to try!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2019: |-
         _"Let's have a party!
@@ -22829,7 +22829,7 @@ fr:
         In this puzzle,
         make sure to click for hints! The hints will give you fun things to try!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challengeClone: |-
         Where are my friends
@@ -22841,7 +22841,7 @@ fr:
         In this puzzle, make sure to click for hints! The hints will
         help you do this project step-by-step!\\r
         \\r
-        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseB_artist_loops10: "Use what you have learned to\ndraw a picture of what you think the artist saw when he got home.\\\\r\n\\\\r\n\\_\\_\\_\\\\r\n\n### \n\nIdeas\\\\r\n\\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseB_artist_loops10_2018: "Use what you have learned to\ndraw a picture of what you think the artist saw when he got home.\\\\r\n\\\\r\n\\_\\_\\_\\\\r\n\n### \n\nIdeas\\\\r\n\\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
@@ -26684,7 +26684,7 @@ fr:
             content and skills that were developed during the unit? \\r
             \\t\* What kinds
             of special considerations come with the unit long project in this unit?\\r
-        2.  2.
+        2.  2\.
             What skills and knowledge should students leave the unit with?\\r
         3.  What
             are the core 2017 CSTA standards or threads of the K-12 framework in this
@@ -27254,7 +27254,7 @@ fr:
 
         -   What teaching philosophy seems most effective with the Internet
             Simulator? \\r
-      csp1dlp-assessment: "\\\\r\n\\\\r\n<br><br>\\\\r\n\\\\r\n\n> **NOTE:\n> before you start this reflection, make sure you’ve reviewed the lesson in\n> Unit 1, and have a good sense of the the role of assessment across the unit.\n> If you haven’t already reviewed the materials, do that now and come back to\n> this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# Assessment in Unit 1\\\\r\n\n\\\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n\n1.  Your response should clearly address each of the items below: \\\\r\n    \\\\r\n2.  1.\n    What’s the role of the practice Performance Task(s), or PTs, in the unit?\n    \\\\r\n3.  Which PTs are being practiced?\\\\r\n4.  How does the practice PT build\n    on what content and skills were developed during the unit? \\\\r\n5.  What summative\n    and formative assessment opportunities are built into the unit? \\\\r\n    \\\\r\n    \\\\r\n    > ## \n    >\n    > Getting Credit for Completing this Reflection \\\\r\n    > \\\\r\n    >\n    > -   Once you submit your\n    >     reflection, your response to the prompt above will be shared anonymously and\n    >     reviewed by your peers, and you will review the work done by other facilitators.\n    >     Reviewers will be looking for thoughtful and thorough answers that demonstrate\n    >     that you have spent time considering the reflection questions listed above.\n    >     Reviewers will have an opportunity to give feedback on your submission, and\n    >     you can respond to that feedback and resubmit.\\\\r\n6.  In order to get credit\n    for completing this prompt, two reviewers need to agree that you have responded\n    to the prompts fully. If reviewers don’t feel comfortable making a decision\n    about your task submission, they can elevate to an instructor for review.\n    You will always have a chance to address feedback from your reviewers and\n    resubmit your reflections! Reviewer feedback will show up at the bottom of\n    this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
+      csp1dlp-assessment: "\\\\r\n\\\\r\n<br><br>\\\\r\n\\\\r\n\n> **NOTE:\n> before you start this reflection, make sure you’ve reviewed the lesson in\n> Unit 1, and have a good sense of the the role of assessment across the unit.\n> If you haven’t already reviewed the materials, do that now and come back to\n> this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# Assessment in Unit 1\\\\r\n\n\\\\r\nFor this\nreflection, you’re going to consider each of the prompts below and craft a\nwritten response that demonstrates your understanding of the lessons in Unit\n\n1.  Your response should clearly address each of the items below: \\\\r\n    \\\\r\n2.  1\\.\n    What’s the role of the practice Performance Task(s), or PTs, in the unit?\n    \\\\r\n3.  Which PTs are being practiced?\\\\r\n4.  How does the practice PT build\n    on what content and skills were developed during the unit? \\\\r\n5.  What summative\n    and formative assessment opportunities are built into the unit? \\\\r\n    \\\\r\n    \\\\r\n    > ## \n    >\n    > Getting Credit for Completing this Reflection \\\\r\n    > \\\\r\n    >\n    > -   Once you submit your\n    >     reflection, your response to the prompt above will be shared anonymously and\n    >     reviewed by your peers, and you will review the work done by other facilitators.\n    >     Reviewers will be looking for thoughtful and thorough answers that demonstrate\n    >     that you have spent time considering the reflection questions listed above.\n    >     Reviewers will have an opportunity to give feedback on your submission, and\n    >     you can respond to that feedback and resubmit.\\\\r\n6.  In order to get credit\n    for completing this prompt, two reviewers need to agree that you have responded\n    to the prompts fully. If reviewers don’t feel comfortable making a decision\n    about your task submission, they can elevate to an instructor for review.\n    You will always have a chance to address feedback from your reviewers and\n    resubmit your reflections! Reviewer feedback will show up at the bottom of\n    this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
       csp1dlp-lessons: "<br><br>\\\\r\n\\\\r\n\n> **NOTE: before you\n> start this reflection, make sure you’ve reviewed the lesson in Unit 1, and\n> have a good sense of the connections between lessons. If you haven’t already\n> reviewed the materials, do that now and come back to this reflection later.**\\\\r\n> \\\\r\n> \\\\r\n\n# \n\nUnit 1 Lesson Connections and Philosophy\\\\r\n\\\\r\nFor this reflection, you’re\ngoing to consider each of the prompts below and craft a written response that\ndemonstrates your understanding of the lessons in Unit 1. Your response should\nclearly address each of the items below: \\\\r\n\\\\r\n\n1.  What skills and knowledge\n    should students leave the unit with?\\\\r\n\n2.  Which Big Idea(s) are students\n    learning the most about? Where and how are those BI(s) addressed? \\\\r\n\n3.  Which\n    skills or Computational Practices are honed through the activities and projects?\n    \\\\r\n    \\\\r\n\n4.  What is the connection between early lessons and later lessons?\\\\r\n\n5.  How is the content spiraled or scaffolded within the unit? \\\\r\n\n6.  What foundation\n    is being laid early on and how is it leveraged throughout the unit? Why? \\\\r\n\n7.  How would you respond to a teacher who says ‘what’s the point’ of lesson\n    4? \\\\r\n    \\\\r\n\n8.  Which lessons are particularly tricky to teach in this unit\n    and why? \\\\r\n    \\\\r\n    > ## Getting Credit for Completing this Reflection \\\\r\n    >\n    > ## \\\\r\n    >\n    > Once you submit your reflection, your response to the prompt above will be\n    > shared anonymously and reviewed by your peers, and you will review the work\n    > done by other facilitators. Reviewers will be looking for thoughtful and thorough\n    > answers that demonstrate that you have spent time considering the reflection\n    > questions listed above. Reviewers will have an opportunity to give feedback\n    > on your submission, and you can respond to that feedback and resubmit.\\\\r\n\n9.  \\-\n    In order to get credit for completing this prompt, two reviewers need to agree\n    that you have responded to the prompts fully. If reviewers don’t feel comfortable\n    making a decision about your task submission, they can elevate to an instructor\n    for review. You will always have a chance to address feedback from your reviewers\n    and resubmit your reflections! Reviewer feedback will show up at the bottom\n    of this page, once it’s available. \\\\r\n    \\\\r\n    \\\\r\n    \\\\r"
       csp1dlp-tools: |-
         \\r
@@ -27339,7 +27339,7 @@ fr:
 
         2.  Your response should clearly address each of the items below: \\r
             \\r
-        3.  1.
+        3.  1\.
             What’s the role of the practice Performance Task(s), or PTs, in the unit?
             \\r
         4.  How does the practice Explore PT build on what content and skills were
@@ -27396,7 +27396,7 @@ fr:
 
         3.  Your response should clearly address each of the items below: \\r
             \\r
-        4.  1.
+        4.  1\.
             What’s the role of the practice Performance Task(s), or PTs, in the unit?
             \\r
         5.  How does the practice Create PT build on what content and skills were
@@ -27688,7 +27688,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27699,7 +27699,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27716,7 +27716,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27727,7 +27727,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27744,7 +27744,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27755,7 +27755,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27772,7 +27772,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27783,7 +27783,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27800,7 +27800,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27811,7 +27811,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27828,7 +27828,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27839,7 +27839,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27856,7 +27856,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27867,7 +27867,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27884,7 +27884,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27895,7 +27895,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27912,7 +27912,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27923,7 +27923,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27940,7 +27940,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27951,7 +27951,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27968,7 +27968,7 @@ fr:
         topics in the course may be interesting to you, others may be less interesting.\\r
         \\r
         <strong>\\r
-        1\.
+        1.
         Write down 1 or 2 topics that are most interesting to you:\\r
         \\r
         </strong>\\r
@@ -27979,7 +27979,7 @@ fr:
         <br><br>\\r
         \\r
         <strong>\\r
-        2\.
+        2.
         How did you prepare for taking this test? Do you feel more or less prepared
         to answer questions about the topics that interest you?\\r
         </strong>\\r
@@ -27997,11 +27997,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28089,11 +28088,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28181,11 +28179,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28273,11 +28270,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28365,11 +28361,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28457,11 +28452,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28549,11 +28543,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28641,11 +28634,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28733,11 +28725,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28825,11 +28816,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -28917,11 +28907,10 @@ fr:
         be unimportant. \\r
         \\r
         <strong>\\r
-
-        1.  What's most important to you?</strong>
-            (select one or more)\\r
-            \\r
-            \\r
+        1. What's most important to you?</strong>
+        (select one or more)\\r
+        \\r
+        \\r
 
         <table bordercolor="#FFFFFF" width=75% cellpadding=5
         cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
@@ -30413,7 +30402,7 @@ fr:
         _It's time to get your snowflake
         ready for 3d printing!_\\r
         \\r
-        \!\[](\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>
+        ![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
         PM.png>)In order for your image to print correctly, follow these rules:\\r
         \\r
         \*
@@ -30438,7 +30427,7 @@ fr:
         _It's time to get your snowflake
         ready for 3d printing!_\\r
         \\r
-        \!\[](\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>
+        ![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
         PM.png>)In order for your image to print correctly, follow these rules:\\r
         \\r
         \*

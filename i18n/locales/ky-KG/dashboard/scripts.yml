@@ -1002,15 +1002,19 @@ ky:
             Relay Programming:
               name: Релени програмдоо
             Programming in Artist:
-              name: Сүрөтчүдөгү програмдоо
+              name: Код менен Сүрөт жаратуу
             Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
+              name: Чаптама өнөрү циклдар менен
             Nested Loops in Frozen:
-              name: Тоңгондогу салынган циклдар
+              name: Анна жана Элза менен карчалар
             Functions in Artist:
-              name: Сүрөтчүдөгү функциялар
+              name: Сүрөтчү менен функциялар
+            Variables as Constant in Artist:
+              name: Сүрөтчү менен өзгөрмөлөр
+            Variables that Change in Artist:
+              name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
             For Loops in Artist:
-              name: Сүрөтчүдөгү for циклдары
+              name: Сүрөтчү менен for циклдары
             Artist Binary:
               name: Сүрөтчү бинардык система
         andrea-test:
@@ -1041,7 +1045,7 @@ ky:
         pre-express-2019:
           stages:
             Loops in Artist:
-              name: Сүрөтчүдөгү циклдар
+              name: Циклдар менен бакчаларды тартуу
             Spelling Bee:
               name: Spelling Bee
             Ocean Scene with Loops:

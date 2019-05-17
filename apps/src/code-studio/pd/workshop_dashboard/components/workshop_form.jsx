@@ -434,8 +434,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
-    const isDeepDive = this.state.subject === 'Deep Dive';
-    const showMapChoice = isCsf && !isDeepDive;
+    const showMapChoice = isCsf;
 
     return (
       <FormGroup>
