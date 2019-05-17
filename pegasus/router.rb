@@ -348,10 +348,19 @@ class Documents < Sinatra::Base
     end
 
     def preprocess_markdown(markdown_content)
+      # Markdown content can include other partials with the syntax:
+      #
+      #     {{ path/to/partial }}
+      #
+      # Because markdown content can be translated, we want to make sure that
+      # if a translator accidentally translates the path to the template, we
+      # simply render nothing rather than throwing an error
       markdown_content.
         gsub(/```/, "```\n").
         gsub(/{{([^}]*)}}/) do
           view($1.strip)
+        rescue
+          ''
         end
     end
 
