@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190515203100) do
+ActiveRecord::Schema.define(version: 20190517000300) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -501,8 +501,8 @@ ActiveRecord::Schema.define(version: 20190515203100) do
   end
 
   create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "driver_user_level_id"
-    t.integer  "navigator_user_level_id"
+    t.bigint   "driver_user_level_id",                 unsigned: true
+    t.bigint   "navigator_user_level_id",              unsigned: true
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
