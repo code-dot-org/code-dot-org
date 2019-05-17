@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190504203007) do
+ActiveRecord::Schema.define(version: 20190517002900) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -348,7 +348,7 @@ ActiveRecord::Schema.define(version: 20190504203007) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",                                   unsigned: true
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -501,8 +501,8 @@ ActiveRecord::Schema.define(version: 20190504203007) do
   end
 
   create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "driver_user_level_id"
-    t.integer  "navigator_user_level_id"
+    t.bigint   "driver_user_level_id",                 unsigned: true
+    t.bigint   "navigator_user_level_id",              unsigned: true
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
@@ -1371,14 +1371,17 @@ ActiveRecord::Schema.define(version: 20190504203007) do
   end
 
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.text     "comment",     limit: 65535
+    t.text     "comment",                  limit: 65535
     t.integer  "student_id"
     t.integer  "level_id"
     t.integer  "teacher_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
     t.string   "performance"
+    t.integer  "student_visit_count"
+    t.datetime "student_first_visited_at"
+    t.datetime "student_last_visited_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
     t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
   end
