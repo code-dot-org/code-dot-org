@@ -4,8 +4,8 @@ function removeAllBehaviors(sprite) {
   	  sprite.forEach(function(s) {
         s.behaviors = [];
       });
-    }
   } else {
   	sprite.behaviors = [];
+  }
   }
 }

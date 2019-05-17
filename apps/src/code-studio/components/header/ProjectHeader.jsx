@@ -1,6 +1,7 @@
-/* globals dashboard, appOptions */
+/* globals appOptions */
 
 import React from 'react';
+import i18n from '@cdo/locale';
 
 import EditableProjectName from './EditableProjectName';
 import ProjectImport from './ProjectImport';
@@ -22,7 +23,7 @@ export default class ProjectHeader extends React.Component {
         {/* TODO: Remove this (and the related style) when Web Lab is no longer
             in beta.*/}
         {appOptions.app === 'weblab' && (
-          <div className="beta-notice">{dashboard.i18n.t('beta')}</div>
+          <div className="beta-notice">{i18n.beta()}</div>
         )}
       </div>
     );

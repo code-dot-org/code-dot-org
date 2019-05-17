@@ -12,16 +12,10 @@ describe('ProjectHeader', () => {
     replaceOnWindow('appOptions', {
       level: {}
     });
-    replaceOnWindow('dashboard', {
-      i18n: {
-        t: () => {}
-      }
-    });
   });
 
   afterEach(() => {
     restoreOnWindow('appOptions');
-    restoreOnWindow('dashboard');
   });
 
   it('renders', () => {

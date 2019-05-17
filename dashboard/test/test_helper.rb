@@ -590,9 +590,9 @@ class StorageApps
   end
 end
 
-# Mock storage_id to generate random IDs. Seed with current user so that a user maintains
+# Mock get_storage_id to generate random IDs. Seed with current user so that a user maintains
 # the same id
-def storage_id(_)
+def get_storage_id
   return storage_id_for_user_id(current_user.id) if current_user
   Random.new.rand(1_000_000)
 end
