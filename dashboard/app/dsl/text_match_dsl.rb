@@ -16,6 +16,6 @@ class TextMatchDSL < ContentDSL
     strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
     strings['placeolder'] = @hash[:placeholder] unless @hash[:placeholder].blank?
 
-    {@name => strings}
+    {@name => strings.deep_stringify_keys}
   end
 end
