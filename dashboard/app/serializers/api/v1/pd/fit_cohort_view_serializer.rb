@@ -53,10 +53,6 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
     object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:created_at).try(:strftime, '%D %l:%M%P')
   end
 
-  def fit_assigned_at_registration
-    object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:fit_city)
-  end
-
   def accepted_fit
     object.try(FIT_WEEKEND_REGISTRATION_SYMBOL).try(:accepted_seat_simplified)
   end
