@@ -35,13 +35,30 @@ class DSLDefined < Level
   end
 
   def localized_property(property)
-    I18n.t(
+    # We have to manually check for default here rather than just passing
+    # self.send(property) directly  because some properties used here (like
+    # questions and answer for multi and match levels) expect to return an
+    # array of values, and if you pass an array as default to I18n.t it
+    # actually only returns the first element
+    localized = I18n.t(
       property,
       scope: ['data', type.underscore, name],
       separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
-      default: self[property],
+      default: nil,
       smart: true
     )
+    # When the result of I18n.t is a hash (or an array of hashes), they always
+    # have symbol keys regardless of the input format. We always want strings,
+    # so convert the value here.
+    if localized.nil?
+      send(property)
+    elsif localized.is_a? Hash
+      localized.deep_stringify_keys
+    elsif localized.is_a? Array
+      localized.map(&:deep_stringify_keys)
+    else
+      localized
+    end
   end
 
   def self.setup(data)
