@@ -6,7 +6,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import TeacherPanel from '@cdo/apps/code-studio/components/TeacherPanel';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
-import commonMsg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import FontAwesome from '../../../../../src/templates/FontAwesome';
 
 const MINIMUM_PROPS = {
@@ -15,57 +15,62 @@ const MINIMUM_PROPS = {
   sectionsAreLoaded: false,
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
-  unlockedStageNames: []
+  unlockedStageNames: [],
+  sectionData: null
 };
 
+const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
+
 describe('ScriptTeacherPanel', () => {
-  it('initial view as student', () => {
-    const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
-    );
+  describe('on script page', () => {
+    it('initial view as student', () => {
+      const wrapper = shallow(
+        <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
+      );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <TeacherPanel>
-          <h3>{commonMsg.teacherPanel()}</h3>
-          <div>
-            <ViewAsToggle />
-            <div>{commonMsg.loading()}</div>
-          </div>
-        </TeacherPanel>
-      )
-    ).to.be.true;
-  });
+      expect(
+        wrapper.containsMatchingElement(
+          <TeacherPanel>
+            <h3>{i18n.teacherPanel()}</h3>
+            <div>
+              <ViewAsToggle />
+              <div>{i18n.loading()}</div>
+            </div>
+          </TeacherPanel>
+        )
+      ).to.be.true;
+    });
 
-  it('initial view as teacher', () => {
-    const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
-    );
-    assert(
-      wrapper.containsMatchingElement(
-        <TeacherPanel>
-          <h3>{commonMsg.teacherPanel()}</h3>
-          <div>
-            <ViewAsToggle />
-            <div>{commonMsg.loading()}</div>
-          </div>
-        </TeacherPanel>
-      )
-    );
+    it('initial view as teacher', () => {
+      const wrapper = shallow(
+        <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
+      );
+      assert(
+        wrapper.containsMatchingElement(
+          <TeacherPanel>
+            <h3>{i18n.teacherPanel()}</h3>
+            <div>
+              <ViewAsToggle />
+              <div>{i18n.loading()}</div>
+            </div>
+          </TeacherPanel>
+        )
+      );
+    });
   });
 
   it('shows loading message when sections are not loaded', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
-    assert(wrapper.containsMatchingElement(<div>{commonMsg.loading()}</div>));
+    assert(wrapper.containsMatchingElement(<div>{i18n.loading()}</div>));
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={true} />
     );
-    assert(!wrapper.containsMatchingElement(<div>{commonMsg.loading()}</div>));
+    assert(!wrapper.containsMatchingElement(<div>{i18n.loading()}</div>));
   });
 
   it('shows SectionSelector if scriptHasLockableStages', () => {
@@ -105,7 +110,7 @@ describe('ScriptTeacherPanel', () => {
     assert(
       wrapper.containsMatchingElement(
         <div>
-          <div>{commonMsg.selectSectionInstructions()}</div>
+          <div>{i18n.selectSectionInstructions()}</div>
         </div>
       )
     );
@@ -124,14 +129,14 @@ describe('ScriptTeacherPanel', () => {
     assert(
       wrapper.containsMatchingElement(
         <div>
-          <div>{commonMsg.selectSectionInstructions()}</div>
+          <div>{i18n.selectSectionInstructions()}</div>
           <div>
             <div>
               <FontAwesome icon="exclamation-triangle" />
-              <div>{commonMsg.dontForget()}</div>
+              <div>{i18n.dontForget()}</div>
             </div>
             <div>
-              {commonMsg.lockFollowing()}
+              {i18n.lockFollowing()}
               <ul>
                 <li>stage1</li>
                 <li>stage2</li>
@@ -144,8 +149,6 @@ describe('ScriptTeacherPanel', () => {
   });
 
   describe('StudentTable', () => {
-    const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
-
     it('displays StudentTable for teacher with students', () => {
       const wrapper = shallow(
         <ScriptTeacherPanel
@@ -179,6 +182,101 @@ describe('ScriptTeacherPanel', () => {
         />
       );
       expect(wrapper.find('StudentTable')).to.have.length(0);
+    });
+  });
+  describe('SelectedStudentInfo', () => {
+    describe('on script', () => {
+      it('does not display SelectedStudentInfo', () => {
+        const wrapper = shallow(
+          <ScriptTeacherPanel
+            {...MINIMUM_PROPS}
+            viewAs={ViewType.Teacher}
+            students={students}
+            onSelectUser={() => {}}
+            getSelectedUserId={() => {
+              return 0;
+            }}
+          />
+        );
+        expect(wrapper.find('SelectedStudentInfo')).to.have.length(0);
+      });
+    });
+    describe('on level', () => {
+      it('displays SelectedStudentInfo when student selected', () => {
+        const wrapper = shallow(
+          <ScriptTeacherPanel
+            {...MINIMUM_PROPS}
+            viewAs={ViewType.Teacher}
+            students={students}
+            onSelectUser={() => {}}
+            getSelectedUserId={() => {
+              return 1;
+            }}
+            sectionData={{
+              section: {
+                students: students
+              },
+              section_levels: [{user_id: 1}]
+            }}
+          />
+        );
+        expect(wrapper.find('SelectedStudentInfo')).to.have.length(1);
+      });
+    });
+  });
+  describe('Example Solutions', () => {
+    describe('on script', () => {
+      it('does not display example solutions', () => {
+        const wrapper = shallow(
+          <ScriptTeacherPanel
+            {...MINIMUM_PROPS}
+            viewAs={ViewType.Teacher}
+            onSelectUser={() => {}}
+            getSelectedUserId={() => {}}
+          />
+        );
+        expect(wrapper.find('Button')).to.have.length(0);
+      });
+    });
+    describe('on level', () => {
+      it('displays example solution for level with one example solution', () => {
+        const wrapper = shallow(
+          <ScriptTeacherPanel
+            {...MINIMUM_PROPS}
+            viewAs={ViewType.Teacher}
+            onSelectUser={() => {}}
+            getSelectedUserId={() => {}}
+            sectionData={{
+              level_examples: [
+                'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+              ],
+              section: {
+                students: students
+              },
+              section_levels: [{user_id: 1}]
+            }}
+          />
+        );
+        expect(wrapper.find('Button')).to.have.length(1);
+      });
+      it('does not display example solution for level with no example solution', () => {
+        const wrapper = shallow(
+          <ScriptTeacherPanel
+            {...MINIMUM_PROPS}
+            viewAs={ViewType.Teacher}
+            onSelectUser={() => {}}
+            getSelectedUserId={() => {}}
+            sectionData={{
+              level_examples: null,
+              section: {
+                students: students
+              },
+              section_levels: [{user_id: 1}]
+            }}
+          />
+        );
+        expect(wrapper.find('Button')).to.have.length(0);
+      });
     });
   });
 });
