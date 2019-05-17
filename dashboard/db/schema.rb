@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190517000300) do
+ActiveRecord::Schema.define(version: 20190517002900) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -348,7 +348,7 @@ ActiveRecord::Schema.define(version: 20190517000300) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",                                   unsigned: true
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
