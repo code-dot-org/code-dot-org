@@ -5,15 +5,15 @@
 - level = source_level || @level
 
 - unless data['title'].blank? || hide_header
-  %h1!= render_multi_or_match_content(level.localized_property(:title)) unless app == 'external'
+  %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
-      %p.content.content1!= render_multi_or_match_content(level.localized_property(:content1))
+      %p.content.content1!= render_multi_or_match_content(level.localized_property('content1'))
     - unless data['content2'].blank?
-      %p.content.content2!= render_multi_or_match_content(level.localized_property(:content2))
+      %p.content.content2!= render_multi_or_match_content(level.localized_property('content2'))
     - unless data['content3'].blank?
-      %p.content.content3!= render_multi_or_match_content(level.localized_property(:content3))
+      %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
