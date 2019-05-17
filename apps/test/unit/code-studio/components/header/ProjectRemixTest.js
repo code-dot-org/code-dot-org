@@ -20,9 +20,6 @@ describe('ProjectRemix', () => {
         getCurrentId: () => {},
         getCurrentName: () => {},
         serverSideRemix: () => {}
-      },
-      i18n: {
-        t: () => {}
       }
     });
 
