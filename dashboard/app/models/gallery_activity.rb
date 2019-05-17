@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  user_id         :integer          not null
-#  user_level_id   :integer
+#  user_level_id   :integer          unsigned
 #  level_source_id :integer
 #  created_at      :datetime
 #  updated_at      :datetime
