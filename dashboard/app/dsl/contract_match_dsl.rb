@@ -11,6 +11,6 @@ class ContractMatchDSL < ContentDSL
     strings = super[@name]
     strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
 
-    {@name => strings}
+    {@name => strings.deep_stringify_keys}
   end
 end
