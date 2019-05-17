@@ -376,21 +376,29 @@ class Documents < Sinatra::Base
       nil
     end
 
+    def directory_contains_path(directory, path)
+      # Helper method to make sure that tricky URIs with ".." can't load files
+      # from outside our template hierarchy
+      File.expand_path(path).starts_with?(File.expand_path(directory))
+    end
+
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
+        content_subdir = content_dir(dir, subdir)
         extnames.each do |extname|
-          path = content_dir(dir, subdir, "#{uri}#{extname}")
-          if File.file?(path)
+          path = File.join(content_subdir, "#{uri}#{extname}")
+          if File.file?(path) && directory_contains_path(content_subdir, path)
             return path
           end
         end
       end
 
       # Also look for shared items.
+      shared_dir = content_dir('..', '..', 'shared', 'haml')
       extnames.each do |extname|
-        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
-        if File.file?(path)
+        path = File.join(shared_dir, "#{uri}#{extname}")
+        if File.file?(path) && directory_contains_path(shared_dir, path)
           return path
         end
       end
