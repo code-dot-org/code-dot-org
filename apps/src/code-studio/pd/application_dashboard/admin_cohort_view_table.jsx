@@ -190,13 +190,6 @@ export default class AdminCohortViewTable extends React.Component {
         }
       },
       {
-        property: 'fit_assigned_at_registration',
-        header: {
-          label: 'FiT Assigned at Registration',
-          transforms: [sortable]
-        }
-      },
-      {
         property: 'accepted_fit',
         header: {
           label: 'Accepted FiT',
