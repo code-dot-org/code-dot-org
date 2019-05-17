@@ -147,3 +147,13 @@ form .form-required-field {
     cursor: pointer;
   }
 }
+
+.workshop-attendance-recorded {
+  font-size: 14px;
+  width: 70%;
+  line-height: 1.5;
+
+  .paragraph {
+    margin-bottom: 15px;
+  }
+}
