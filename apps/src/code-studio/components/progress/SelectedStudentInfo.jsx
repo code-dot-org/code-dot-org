@@ -25,11 +25,33 @@ export class SelectedStudentInfo extends React.Component {
   };
 
   onUnsubmit = () => {
-    console.log('unsubmit');
+    $.ajax({
+      url: `/user_levels/${this.props.level.id}`,
+      method: 'PUT',
+      data: {
+        user_level: {
+          best_result: 1,
+          submitted: false
+        }
+      }
+    })
+      .done(data => {
+        // Let's just refresh so that the dots are correct, etc.
+        location.reload();
+      })
+      .fail(err => console.error(err));
   };
 
   onClearResponse = () => {
-    console.log('clear response');
+    $.ajax({
+      url: `/user_levels/${this.props.level.id}`,
+      method: 'DELETE'
+    })
+      .done(data => {
+        // Refresh, so that we no longer have the students response loaded
+        location.reload();
+      })
+      .fail(err => console.error(err));
   };
 
   render() {
