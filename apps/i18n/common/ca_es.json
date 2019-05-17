@@ -365,6 +365,7 @@
   "submitYourProject": "Trameti el seu projecte",
   "submitYourProjectConfirm": "No pot editar el seu projecte després de trametre'l, realment el vol trametre?",
   "subtitle": "un entorn de programació visual",
+  "support": "Suport",
   "switchSection": "Canvia de secció:",
   "syntaxErrorMsg": "El seu programa conté un error tipogràfic. Tregui la línia {lineNumber} i torneu-ho a provar.",
   "teacher": "Mestre",

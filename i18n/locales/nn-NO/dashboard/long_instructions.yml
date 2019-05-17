@@ -512,12 +512,12 @@ nn:
 
         1.  Dra ei 'spelLyd()'-blokk til din 'påHending'. Dette vil gjere at lyden blir spelt når du klikkar på knappen. Klikk deretter på "Vel..." fra menyen.\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>
+            \\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41
             AM.png>)\\r
             \\r
         2.  Gå til "Lydbiblioteket" og finn lyden du ønsker. Det finst ein drøss!\\r
             \\r
-            \\t\!\[](\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>
+            \\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52
             AM.png>)\\r
             \\r
         3.  Køyr appen for å sjekk korleis lydane dine fungerer.

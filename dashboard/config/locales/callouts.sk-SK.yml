@@ -657,9 +657,6 @@ sk:
       courseA_collector_loops1_callout:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
-      courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa,
-          neskôr ti ukážeme, ako ich používať.
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: Vidíš v paneli nástrojov nové bloky? Neboj sa,
           neskôr ti ukážeme, ako ich používať.
@@ -1034,11 +1031,11 @@ sk:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseD_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: sme zoradili bloky do kategórií, aby ste mali viac
           kódu na hranie sa! Kliknite sem a pozrite sa, kam sme všetko dali.
@@ -1079,17 +1076,17 @@ sk:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp7_2018_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseD_scrat_ramp8_callout:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.
@@ -1230,11 +1227,11 @@ sk:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseE_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseE_maze_ramp7_callout:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.
@@ -1425,11 +1422,11 @@ sk:
         courseC_maze_programming4_1: Toto je váš počet blokov. Podľa toho viete, koľko
           takýchto blokov ešte môžete použiť.
       courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseF_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem dáte, sa zopakuje toľkokrát,
-          koľko mu poviete a potom sa spustí zvyšok programu.
+        courseD_maze_ramp6_1: Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát,
+          koľko mu povieš. Až potom sa spustí zvyšok programu.
       courseF_maze_ramp7_callout:
         courseF_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.

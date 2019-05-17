@@ -1,6 +1,9 @@
 class CoursesController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource except: [:index]
 
   def index
@@ -62,7 +65,8 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if redirect_course = redirect_course(course)
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
+    if !override_redirect && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
@@ -108,6 +112,12 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def set_redirect_override
+    if params[:course_name] && params[:no_redirect]
+      VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
+    end
+  end
 
   def redirect_course(course)
     # Return nil if course is nil or we know the user can view the version requested.

@@ -1109,7 +1109,6 @@ ro:
     new: Creează unul nou
     rename: Redenumește
     save: Salvează
-    delete: Șterge
     import: Importaţi
     share_link_import_bad_link_header: Link de distribuție nerecunoscut
     share_link_import_bad_link_body: 'Nu am putut importa link-ul. Asigurați-vă că
@@ -1118,7 +1117,6 @@ ro:
     share_link_import_error_body: A existat o problemă la importul link-ului de distribuire.
       Vă rugăm să încercați din nou.
     exit: Revenire la curs
-    my_projects: Proiectele mele
     project_gallery: Proiecte
     publish: Publicare
     unpublish: Anulează publicarea
@@ -1133,8 +1131,6 @@ ro:
     advanced_share: Afişaţi opţiunile avansate
     no_projects: În prezent, nu aveți nici un proiect. Faceți clic pe unul dintre
       butoanele de mai sus pentru a începe un proiect.
-    close: Închide
-    more: Mai mult
     name: Nume
     updated: Actualizat
     project_type: Tip de proiect
@@ -1146,16 +1142,8 @@ ro:
     thumbnail_help: Nu vedeți miniatura corectă pentru proiectul dvs.? Rulați aplicația
       pentru a genera o miniatură nouă. Rețineți că poate dura vreo două ore pentru
       ca miniatura să se actualizeze peste tot.
-    really_delete: Șterge?
-    delete_yes: Da
-    delete_no: Nu
     saved: Salvat
     not_saved: Nesalvat
-    cancel: Revocare
-    delete_confirm_title: Sigur ștergeți aceast proiect?
-    delete_confirm_text: Ștergerea proiectului tău îl va elimina definitiv pe acesta
-      din propria listă Proiectele Mele. Orice persoană căreia i-ai distribuit link-ul
-      nu va mai putea vedea proiectul tău.
     view_all: Vizualizează proiectele mele
     remix: Remix
     click_to_remix: Fă clic pe "Remix" pentru a-ți crea propria ta versiune!

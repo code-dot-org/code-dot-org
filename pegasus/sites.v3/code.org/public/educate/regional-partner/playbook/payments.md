@@ -15,6 +15,7 @@ ________________
 - [Administrator and Counselor Workshops](#ac)
 - [Community Events](#community)
 - [CS Fairs](#csfair)
+- [Local Summer Workshop Community Building Event](#LSW)
 - [Teacher Recruitment Fund](#recruitment)
 
 ________________
@@ -181,6 +182,17 @@ See more information about the CS Fair and reimbursable expenses on the [Communi
 [**Back to the top**](#top)
 
 ________________
+<a id="LSW"></a>
+
+## Local Summer Workshop Community Building Event
+Code.org reimburses up to $45 per person for attendees including teachers in the CS Discoveries and CS Principles cohorts, Regional Partner staff, and Code.org staff. To receive reimbursement for costs associated with the event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+
+Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
+See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
+
+[**Back to the top**](#top)
+________________
+
 <a id="recruitment"></a>
 
 ## Teacher Recruitment Fund

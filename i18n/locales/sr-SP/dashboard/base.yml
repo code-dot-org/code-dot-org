@@ -392,15 +392,9 @@ sr:
     submit: "Пошаљи"
   project:
     save: "Сачувај"
-    delete: "Обриши"
     share: "Подели"
-    more: "Више"
     name: "Име"
-    really_delete: 'Желите ли да избришете?'
-    delete_yes: 'Да'
-    delete_no: 'не'
     saved: "Сачувано у галерији!"
-    cancel: 'Откажи'
     abuse:
       report_abuse_form:
         abuse_type:

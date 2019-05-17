@@ -513,8 +513,11 @@ describe('entry tests', () => {
     schoolInfoInterstitial:
       './src/sites/studio/pages/schoolInfoInterstitial.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
+    'shared/_header_progress':
+      './src/sites/studio/pages/shared/_header_progress.js',
     signup: './src/sites/studio/pages/signup.js',
     raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/home': './src/sites/studio/pages/maker/home.js',

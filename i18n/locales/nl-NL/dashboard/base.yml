@@ -707,14 +707,12 @@ nl:
     new: "Nieuwe maken"
     rename: "Hernoemen"
     save: "Opslaan"
-    delete: "Verwijderen"
     import: "Importeren"
     share_link_import_bad_link_header: "Deelbare koppeling niet herkend"
     share_link_import_bad_link_body: "We kunnen die deelbare koppeling niet importeren. Zorg ervoor dat je een koppeling van een Minecraft: Agent-puzzel gebruikt en je de volledige koppeling kopieert."
     share_link_import_error_header: "Er is iets misgegaan."
     share_link_import_error_body: "Er is iets misgegaan met het importeren van die deelbare koppeling. Probeer het opnieuw."
     exit: "Terug naar de Cursus"
-    my_projects: "Mijn Projecten"
     project_gallery: "Projecten overzicht"
     publish: "Publiceren"
     unpublish: "Depubliceren"
@@ -726,21 +724,13 @@ nl:
     embed: "Insluiten"
     advanced_share: "Geavanceerde opties weergeven"
     no_projects: "Je hebt momenteel geen projecten. Klik op een van de knoppen hierboven om een project te starten."
-    close: "Afsluiten"
-    more: "Meer"
     name: "naam"
     updated: "Bijgewerkt"
     project_type: "Projecttype"
     help_text: "Klik hieronder op <strong>Maak een app</strong> of <strong>Teken iets</strong> om een nieuw Play Lab of Kunstenaar project te maken!<br/>Je kunt op elk gewenst moment terugkomen om aan je projecten te werken."
     need_help: "Hulp nodig om aan de slag te gaan?"
-    really_delete: 'Verwijderen?'
-    delete_yes: 'Ja'
-    delete_no: 'Nee'
     saved: "Opgeslagen"
     not_saved: "Niet opgeslagen"
-    cancel: 'Annuleren'
-    delete_confirm_title: Weet je zeker dat je dit project wilt verwijderen?
-    delete_confirm_text: "Bij het verwijderen van je project verdwijnt deze definitief uit jouw Mijn Projecten-lijst. Iedereen met wie je de link naar het project gedeeld hebt, zal niet langer je project kunnen bekijken."
     view_all: 'Mijn Projecten Bekijken'
     remix: 'Remix'
     click_to_remix: "Klik op 'Remix' om een spin-off voor je eigen versie te maken!"
