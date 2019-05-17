@@ -67,1491 +67,1864 @@ en:
     match:
       2-3 Big Event Match 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Match the button combination to the dance moves.
         questions:
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Matching
       2-3 Binary Match 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        - "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        - "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        - "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Use the key to match each code to its letter
         questions:
-        - "<strong>N</strong>"
-        - "<strong>O</strong>"
-        - "<strong>P</strong>"
-        - "<strong>Q</strong>"
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
         title: Matching
       2-3 Graph Paper Match 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Match the grid to the program.
         questions:
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Matching
       2-3 Maze Match 2:
         answers:
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: Match the puzzles to the blocks
         pre_title: Instructions
         questions:
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Maze Match
       2-3 artist loops match 1:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Match the loop to the shape
         questions:
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         title: Artist Loops Matching 1
       2-3 artist match 1:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Match the shape with the blocks that complete it.
         questions:
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
-        - "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: Artist Matching
       2-3 maze match 1:
         answers:
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Match the puzzles to the blocks
         questions:
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: Maze Match One
       4-5 Algorithms Match 1:
         answers:
-        - "<h4>Set Player 1 score to 0</h4>"
-        - "<h4>Player 1 rolls die</h4>"
-        - "<h4>Add Player 1 roll to total score</h4>"
-        - "<h4>Compare player scores to see who wins</h4>"
+        - text: "<h4>Set Player 1 score to 0</h4>"
+        - text: "<h4>Player 1 rolls die</h4>"
+        - text: "<h4>Add Player 1 roll to total score</h4>"
+        - text: "<h4>Compare player scores to see who wins</h4>"
         content1: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
         questions:
-        - "<h4>1)</h4>"
-        - "<h4>2)</h4>"
-        - "<h4>3)</h4>"
-        - "<h4>4)</h4>"
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
         title: Matching
       4-5 Computational Thinking Match 1:
         answers:
-        - "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        - "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        - "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        - "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
         questions:
-        - "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        - "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        - "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        - "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
+        - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
         title: Matching
       4-5 Suncatchers Match 1:
         answers:
-        - "<h4>STACK</h4>"
-        - "<h4>STAMP</h4>"
-        - "<h4>STAR</h4>"
-        - "<h4>RAMP</h4>"
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Match each program to the word it makes, using the provided group of skills.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
-        - "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
-        - "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
-        - "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Matching
       4-5 maze match 1:
         answers:
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: Match the puzzles to the blocks
         pre_title: Instructions
         questions:
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: Maze Match
       K-1 Artist 2 Match 2:
         answers:
-        - "/script_assets/k_1_images/artist_images/medium_circle.png"
-        - "/script_assets/k_1_images/artist_images/small_square.png"
-        - "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        - "/script_assets/k_1_images/artist_images/large_triangle.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Match the shapes based on type.
         questions:
-        - "/script_assets/k_1_images/artist_images/small_circle.png"
-        - "/script_assets/k_1_images/artist_images/large_square.png"
-        - "/script_assets/k_1_images/artist_images/medium_rectangle.png"
-        - "/script_assets/k_1_images/artist_images/small_triangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Matching
       K-1 Bee Loops Match 1:
         answers:
-        - "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        - "/script_assets/k_1_images/move_blocks/NNN.png"
-        - "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        - "/script_assets/k_1_images/move_blocks/EEEEE.png"
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Match the blocks
         questions:
-        - "/script_assets/k_1_images/bee_images/r4_gnectar.png"
-        - "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - "/script_assets/k_1_images/bee_images/r5_ghoney.png"
-        - "/script_assets/k_1_images/move_blocks/r5_E.png"
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Matching
       K-1 Big Event Match 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Match the button combination to the dance moves.
         questions:
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
-        - "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Matching
       K-1 Maze Match 1:
         answers:
-        - "/script_assets/k_1_images/move_blocks/EN.png"
-        - "/script_assets/k_1_images/move_blocks/ENE.png"
-        - "/script_assets/k_1_images/move_blocks/WW.png"
-        - "/script_assets/k_1_images/move_blocks/WSS.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: Match the puzzles and blocks
         pre_title: Instructions
         questions:
-        - "/script_assets/k_1_images/maze_images/maze_EN.png"
-        - "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        - "/script_assets/k_1_images/maze_images/maze_WW.png"
-        - "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Matching
     multi:
       2-3 Algorithms Multi 1:
         answers:
-        - Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square
-        - Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram
-        - Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram
-        - Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle
+        - text: Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square
+          correct: false
+        - text: Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram
+          correct: true
+        - text: Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram
+          correct: false
+        - text: Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle
+          correct: false
         content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
-        - Choose an algorithm for the image provided.
+        - text: Choose an algorithm for the image provided.
         title: Multiple Choice
       2-3 Algorithms Multi 2:
         answers:
-        - "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
-        - "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
-        - "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
-        - "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+          correct: false
         content1: Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square
         questions:
-        - Which image does <em>not</em> follow this algorithm?
+        - text: Which image does <em>not</em> follow this algorithm?
         title: Multiple Choice
       2-3 Conditionals Multi 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        - "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        - "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-        - "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
-        - According to the rules of the game, which set of cards is scored correctly?
+        - text: According to the rules of the game, which set of cards is scored correctly?
         title: Multiple Choice
       2-3 Getting Loopy Multi 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
-        - "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
-        - "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
-        - "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
-        - How would you simplify this sequence with loops?
+        - text: How would you simplify this sequence with loops?
         title: Multiple Choice
       2-3 Graph Paper Multi 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
-        - "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+          correct: false
         content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
-        - Which program makes this image?
+        - text: Which program makes this image?
         title: Multiple Choice
       2-3 Maze Multi 2:
         answers:
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - Which set of blocks will get me to the pig?
+        - text: Which set of blocks will get me to the pig?
         title: Maze Multiple Choice
       2-3 Relay Programming Multi 1:
         answers:
-        - "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
-        - "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
-        - "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
         content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - Which program **does not** create this image?
+        - text: Which program **does not** create this image?
         title: Multiple Choice
       2-3 Relay Programming Multi 2:
         answers:
-        - "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
-        - "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
-        - "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
-        - Which image-program combo does not contain mistakes?
+        - text: Which image-program combo does not contain mistakes?
         title: Multiple Choice
       2-3 artist debug multi 1:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
-        - "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700"
         questions:
-        - What would you need to fix to make this a finished circle?
+        - text: What would you need to fix to make this a finished circle?
         title: Artist Debugging Multiple Choice 1
       2-3 artist functions multi 1:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+          correct: false
         content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500"
         questions:
-        - Pick the correct blocks to draw this image using the given functions
+        - text: Pick the correct blocks to draw this image using the given functions
         title: Artist Functions Multiple Choice One
       2-3 artist loops multi 1:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: false
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500"
         questions:
-        - Which shape is made by this loop?
+        - text: Which shape is made by this loop?
         title: Artist Loops Multiple Choice
       2-3 artist loops multi 2:
         answers:
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        - "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500"
         questions:
-        - Which shape is made by this program?
+        - text: Which shape is made by this program?
         title: Artist Loops Multiple Choice
       2-3 bee conditionals multi 1:
         answers:
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+          correct: false
         questions:
-        - Which comparison below is true?
+        - text: Which comparison below is true?
         title: Bee Conditionals Multiple Choice 1
       2-3 bee conditionals multi 3:
         answers:
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        - "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500"
         questions:
-        - Choose the best blocks.
+        - text: Choose the best blocks.
         title: Bee Conditionals Multiple Choice 2
       2-3 bee loops multi 1:
         answers:
-        - "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
-        - "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
-        - "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
-        - "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
-        - Which blocks collect all of the nectar?
+        - text: Which blocks collect all of the nectar?
         title: Bee Loops Multiple Choice One
       2-3 maze multi 1:
         answers:
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
-        - "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
-        - Which set of blocks is the correct answer?
+        - text: Which set of blocks is the correct answer?
         title: Maze Multiple Choice One
       4-5 Algorithms Multi 1:
         answers:
-        - Brushing your teeth
-        - Baking cookies
-        - Shopping from a grocery list
-        - Banana
+        - text: Brushing your teeth
+          correct: false
+        - text: Baking cookies
+          correct: false
+        - text: Shopping from a grocery list
+          correct: false
+        - text: Banana
+          correct: true
         questions:
-        - Which one of these items is hardest to describe an algorithm for?
+        - text: Which one of these items is hardest to describe an algorithm for?
         title: Multiple Choice
       4-5 Computational Thinking Multi 1:
         answers:
-        - Seattle _____ a _____ _____.
-        - _____ is a _____ city.
-        - _____ is _____ a _____.
-        - Eugene is a _____ city.
+        - text: Seattle _____ a _____ _____.
+          correct: false
+        - text: _____ is a _____ city.
+          correct: true
+        - text: _____ is _____ a _____.
+          correct: false
+        - text: Eugene is a _____ city.
+          correct: false
         content1: Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?
         questions:
-        - Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
+        - text: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
         title: Multiple Choice
       4-5 Crowdsourcing Multi 1:
         answers:
-        - "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
-        - "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
-        - Which of these pictures best represents crowdsourcing?
+        - text: Which of these pictures best represents crowdsourcing?
         title: Multiple Choice
       4-5 Crowdsourcing Multi 2:
         answers:
-        - Cleaning your room
-        - Eating your dessert
-        - Brushing your hair
-        - Washing your face
+        - text: Cleaning your room
+          correct: true
+        - text: Eating your dessert
+          correct: false
+        - text: Brushing your hair
+          correct: false
+        - text: Washing your face
+          correct: false
         questions:
-        - Which one of these activities would be best for practicing crowdsourcing?
+        - text: Which one of these activities would be best for practicing crowdsourcing?
         title: Multiple Choice
       4-5 Digital Footprint Multi 1:
         answers:
-        - Your birthday
-        - Your favorite food
-        - Your address
-        - Your parent's credit card number
+        - text: Your birthday
+          correct: false
+        - text: Your favorite food
+          correct: true
+        - text: Your address
+          correct: false
+        - text: Your parent's credit card number
+          correct: false
         questions:
-        - Which piece of information listed below is okay to share on the internet?
+        - text: Which piece of information listed below is okay to share on the internet?
         title: Multiple Choice
       4-5 Internet Multi 1:
         answers:
-        - 23.23.224.106
-        - 54.209.61.132
-        - 64.14.68.10
-        - 54.243.71.82
+        - text: 23.23.224.106
+          correct: false
+        - text: 54.209.61.132
+          correct: false
+        - text: 64.14.68.10
+          correct: false
+        - text: 54.243.71.82
+          correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - When you try to log on to code.org, which IP address is the DNS most likely to take you to?
+        - text: When you try to log on to code.org, which IP address is the DNS most likely to take you to?
         title: Multiple Choice
       4-5 Internet Multi 2:
         answers:
-        - code.org
-        - csisfun.com
-        - thinkersmith.org
-        - khanacademy.org
+        - text: code.org
+          correct: false
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+          correct: false
+        - text: khanacademy.org
+          correct: false
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
+        - text: If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?
         title: Multiple Choice
       4-5 Songwriting Multi 1:
         answers:
-        - Lou, Lou, skip to my Lou,
-        - Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-        - Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
-        - Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
+        - text: Lou, Lou, skip to my Lou,
+          correct: false
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+          correct: false
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
+          correct: false
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
+        - text: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
         title: Multiple Choice
       4-5 Suncatchers Multi 1:
         answers:
-        - "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
-        - "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
-        - "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+          correct: false
         content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
-        - Which of the programs below <em>does not</em> make the exact same sequence as Program 1?
+        - text: Which of the programs below <em>does not</em> make the exact same sequence as Program 1?
         title: Multiple Choice
       4-5 artist loops multi 1:
         answers:
-        - "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
-        - "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
-        - "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
-        - "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500"
         questions:
-        - Which blocks will create the design?
+        - text: Which blocks will create the design?
         title: Artist Loops Multiple Choice
       4-5 artist multi 1:
         answers:
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
+          correct: false
         questions:
-        - Which blocks draw a rectangle with a perimeter of 100?
+        - text: Which blocks draw a rectangle with a perimeter of 100?
         title: Artist Multiple Choice
       4-5 artist multi 2:
         answers:
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
-        - "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
+          correct: false
         questions:
-        - Which drawing is symmetric?
+        - text: Which drawing is symmetric?
         title: Artist Multiple Choice
       4-5 bee conditionals multi 1:
         answers:
-        - "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
-        - "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
-        - "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
-        - "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         content2: A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?
         questions:
-        - Choose the best blocks.
+        - text: Choose the best blocks.
         title: Bee Conditionals Multiple Choice
       4-5 bee debug multi 1:
         answers:
-        - "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
-        - "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
-        - "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
-        - "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
-        - Which version of the function will work?
+        - text: Which version of the function will work?
         title: Bee Debug Multiple Choice
       4-5 bee loops multi 1:
         answers:
-        - "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
-        - "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
-        - "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
-        - "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
-        - Which blocks will solve the puzzle?
+        - text: Which blocks will solve the puzzle?
         title: Bee Loops Multiple Choice
       4-5 maze conditionals multi 1:
         answers:
-        - "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
-        - "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
-        - "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
-        - "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500"
         questions:
-        - Which blocks solve the puzzle?
+        - text: Which blocks solve the puzzle?
         title: Maze Conditionals Multiple Choice
       4-5 maze multi 1:
         answers:
-        - "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
-        - "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+          correct: false
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+          correct: false
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+          correct: false
         content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
-        - Which blocks solve the puzzle?
+        - text: Which blocks solve the puzzle?
         title: Maze Multiple Choice
       K-1 Artist 1 Multi 1:
         answers:
-        - "/script_assets/k_1_images/artist_images/W-S-S.png"
-        - "/script_assets/k_1_images/artist_images/E-S-S.png"
-        - "/script_assets/k_1_images/artist_images/S-E-E.png"
-        - "/script_assets/k_1_images/artist_images/E-S.png"
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+          correct: false
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+          correct: false
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+          correct: false
         content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
-        - Which blocks solve this puzzle?
+        - text: Which blocks solve this puzzle?
         title: Multiple Choice
       K-1 Artist 1 Multi 2:
         answers:
-        - "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        - "/script_assets/k_1_images/artist_images/E-S-W-N.png"
-        - "/script_assets/k_1_images/artist_images/N-S-E-W.png"
-        - "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+          correct: false
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+          correct: false
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+          correct: false
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
-        - Which blocks draw the square?
+        - text: Which blocks draw the square?
         title: Multiple Choice
       K-1 Bee 1 Multi 1:
         answers:
-        - "/script_assets/k_1_images/bee_images/nectar.png"
-        - "/script_assets/k_1_images/bee_images/2nectar.png"
-        - "/script_assets/k_1_images/bee_images/3nectar.png"
-        - "/script_assets/k_1_images/bee_images/4nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: false
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: false
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: false
         content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
-        - How many nectars is this?
+        - text: How many nectars is this?
         title: Multiple Choice
       K-1 Bee 1 Multi 2:
         answers:
-        - "/script_assets/k_1_images/bee_images/nectar.png"
-        - "/script_assets/k_1_images/bee_images/2nectar.png"
-        - "/script_assets/k_1_images/bee_images/3nectar.png"
-        - "/script_assets/k_1_images/bee_images/4nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: false
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: false
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: false
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
-        - How many nectars is this?
+        - text: How many nectars is this?
         title: Multiple Choice
       K-1 Digital Footprint Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
-        - "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
-        - "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
-        - Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?
+        - text: Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?
         title: Multiple Choice
       K-1 Getting Loopy Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
-        - "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
-        - "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+          correct: false
         content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
-        - How would you simplify this sequence with loops?
+        - text: How would you simplify this sequence with loops?
         title: Multiple Choice
       K-1 Happy Maps Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/up.png"
-        - "/script_assets/k_1_images/unplugged_images/down.png"
-        - "/script_assets/k_1_images/unplugged_images/left.png"
-        - "/script_assets/k_1_images/unplugged_images/right.png"
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: false
         content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
-        - Which arrow gets the Flurb to the treasure?
+        - text: Which arrow gets the Flurb to the treasure?
         title: Multiple Choice
       K-1 Keep it Private Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
-        - "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
-        - "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+          correct: false
         questions:
-        - Which information should you <strong>not</strong> share online?
+        - text: Which information should you <strong>not</strong> share online?
         title: Multiple Choice
       K-1 Maze Debugging Multi 1:
         answers:
-        - "/script_assets/k_1_images/move_blocks/N.png"
-        - "/script_assets/k_1_images/move_blocks/S.png"
-        - "/script_assets/k_1_images/move_blocks/E.png"
-        - "/script_assets/k_1_images/move_blocks/W.png"
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+          correct: false
         content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
-        - Which choice should be the final block?
+        - text: Which choice should be the final block?
         title: Multiple Choice
       K-1 Maze Loops Multi 1:
         answers:
-        - "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - "/script_assets/k_1_images/move_blocks/r3_NN.png"
-        - "/script_assets/k_1_images/move_blocks/r4_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+          correct: false
         content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
-        - Which repeat block is the same?
+        - text: Which repeat block is the same?
         title: Multiple Choice
       K-1 Maze Loops Multi 2:
         answers:
-        - "/script_assets/k_1_images/move_blocks/r3_S.png"
-        - "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        - "/script_assets/k_1_images/move_blocks/r3_SE.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
-        - Pick the correct repeat block.
+        - text: Pick the correct repeat block.
         title: Multiple Choice
       K-1 Maze Multiple Choice 2:
         answers:
-        - "/script_assets/k_1_images/move_blocks/EN.png"
-        - "/script_assets/k_1_images/move_blocks/ES.png"
-        - "/script_assets/k_1_images/move_blocks/WS.png"
-        - "/script_assets/k_1_images/move_blocks/WN.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+          correct: false
         content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
-        - Which answer solves this level?
+        - text: Which answer solves this level?
         title: Maze
       K-1 Move It Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/rightright.png"
-        - "/script_assets/k_1_images/unplugged_images/leftleft.png"
-        - "/script_assets/k_1_images/unplugged_images/upleft.png"
-        - "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+          correct: false
         content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
-        - Which algorithm gets the Flurb to the flowers?
+        - text: Which algorithm gets the Flurb to the flowers?
         title: Multiple Choice
       K-1 Plant a Seed Multi 1:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/poke-hole.png"
-        - "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        - "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
-        - Which step should go at the beginning of this algorithm?
+        - text: Which step should go at the beginning of this algorithm?
         title: Multiple Choice
       K-1 Plant a Seed Multi 2:
         answers:
-        - "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        - "/script_assets/k_1_images/unplugged_images/cover-seed.png"
-        - "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+          correct: false
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+          correct: false
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
-        - Which step should fill in the blank for this algorithm?
+        - text: Which step should fill in the blank for this algorithm?
         title: Multiple Choice
       K-1 Word Search Multi 1:
         answers:
-        - "/script_assets/k_1_images/move_blocks/EEES.png"
-        - "/script_assets/k_1_images/move_blocks/EESS.png"
-        - "/script_assets/k_1_images/move_blocks/ESSS.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+          correct: false
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+          correct: false
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
-        - Which blocks spell "MOVE"?
+        - text: Which blocks spell "MOVE"?
         title: Multiple Choice
       K-1 Word Search Multi 3:
         answers:
-        - SET
-        - SQUARE
-        - SOUTH
+        - text: SET
+          correct: false
+        - text: SQUARE
+          correct: true
+        - text: SOUTH
+          correct: false
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
-        - Which word is spelled?
+        - text: Which word is spelled?
         title: Multiple Choice
       courseC_multi_artist_prog6_predict1:
         answers:
-        - The artist will draw a triangle with three equal sides.
-        - The artist will draw a single line.
-        - The artist draws a square.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  The artist draws a square.
-        - Incorrect.  The artist draws a square.
-        - Correct!
-        - The artist draws a square.
+        - text: The artist will draw a triangle with three equal sides.
+          correct: false
+          feedback: Incorrect.  The artist draws a square.
+        - text: The artist will draw a single line.
+          correct: false
+          feedback: Incorrect.  The artist draws a square.
+        - text: The artist draws a square.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The artist draws a square.
         questions:
-        - Look carefully at the code below.  What will happen when you click "Run"?
+        - text: Look carefully at the code below.  What will happen when you click "Run"?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - The artist will draw a triangle with three equal sides.
-        - The artist will draw a single line.
-        - The artist will draw a square.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  The artist draws a square.
-        - Incorrect.  The artist draws a square.
-        - Correct!
-        - The artist draws a square.
+        - text: The artist will draw a triangle with three equal sides.
+          correct: false
+          feedback: Incorrect.  The artist draws a square.
+        - text: The artist will draw a single line.
+          correct: false
+          feedback: Incorrect.  The artist draws a square.
+        - text: The artist will draw a square.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The artist draws a square.
         questions:
-        - Look carefully at the code below.  What will happen when you click "Run"?
+        - text: Look carefully at the code below.  What will happen when you click "Run"?
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - '4'
-        - '12'
-        - '15'
-        - I don't know.
-        feedbacks:
-        - Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
-        - Correct!
-        - Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
-        - The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: '4'
+          correct: false
+          feedback: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: '12'
+          correct: true
+          feedback: Correct!
+        - text: '15'
+          correct: false
+          feedback: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: I don't know.
+          correct: false
+          feedback: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
         questions:
-        - Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        - text: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - '4'
-        - '12'
-        - '15'
-        - I don't know.
-        feedbacks:
-        - Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
-        - Correct!
-        - Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
-        - The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: '4'
+          correct: false
+          feedback: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: '12'
+          correct: true
+          feedback: Correct!
+        - text: '15'
+          correct: false
+          feedback: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        - text: I don't know.
+          correct: false
+          feedback: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
         questions:
-        - Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        - text: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - The program won't fail. Scrat will get to the acorn.
-        - Scrat will go the wrong way after his final turn.
-        - Scrat takes one too few steps and ends up short of the acorn.
-        - I don't know.
-        feedbacks:
-        - Incorrect. Scrat goes the wrong way after his final turn.
-        - Correct!
-        - Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
-        - 'The first error is that Scrat goes the wrong way after his final turn. '
+        - text: The program won't fail. Scrat will get to the acorn.
+          correct: false
+          feedback: Incorrect. Scrat goes the wrong way after his final turn.
+        - text: Scrat will go the wrong way after his final turn.
+          correct: true
+          feedback: Correct!
+        - text: Scrat takes one too few steps and ends up short of the acorn.
+          correct: false
+          feedback: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        - text: I don't know.
+          correct: false
+          feedback: 'The first error is that Scrat goes the wrong way after his final turn. '
         questions:
-        - 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        - text: 'Look closely at the code below.  What is the first bug that will make this program fail? '
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - The program won't fail. Scrat will get to the acorn.
-        - Scrat will go the wrong way after his final turn.
-        - Scrat takes one too few steps and ends up short of the acorn.
-        - I don't know.
-        feedbacks:
-        - Incorrect. Scrat goes the wrong way after his final turn.
-        - Correct!
-        - Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
-        - 'The first error is that Scrat goes the wrong way after his final turn. '
+        - text: The program won't fail. Scrat will get to the acorn.
+          correct: false
+          feedback: Incorrect. Scrat goes the wrong way after his final turn.
+        - text: Scrat will go the wrong way after his final turn.
+          correct: true
+          feedback: Correct!
+        - text: Scrat takes one too few steps and ends up short of the acorn.
+          correct: false
+          feedback: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        - text: I don't know.
+          correct: false
+          feedback: 'The first error is that Scrat goes the wrong way after his final turn. '
         questions:
-        - 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        - text: 'Look closely at the code below.  What is the first bug that will make this program fail? '
       courseC_multi_maze_programming8_predict1:
         answers:
-        - The bird will end up one step short of the pig.
-        - The bird will make it to the pig.
-        - The bird will run into the TNT.
-        - I don't know.
-        feedbacks:
-        - Incorrect. This code gets the bird perfectly to the pig.
-        - Correct!
-        - Incorrect. This code gets the bird perfectly to the pig.
-        - This code gets the bird perfectly to the pig.
+        - text: The bird will end up one step short of the pig.
+          correct: false
+          feedback: Incorrect. This code gets the bird perfectly to the pig.
+        - text: The bird will make it to the pig.
+          correct: true
+          feedback: Correct!
+        - text: The bird will run into the TNT.
+          correct: false
+          feedback: Incorrect. This code gets the bird perfectly to the pig.
+        - text: I don't know.
+          correct: false
+          feedback: This code gets the bird perfectly to the pig.
         questions:
-        - Read through the code below very carefully.  What will happen when you click "Run"?
+        - text: Read through the code below very carefully.  What will happen when you click "Run"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - The bird will end up one step short of the pig.
-        - The bird will make it to the pig.
-        - The bird will run into the TNT.
-        - I don't know.
-        feedbacks:
-        - Incorrect. This code gets the bird perfectly to the pig.
-        - Correct!
-        - Incorrect. This code gets the bird perfectly to the pig.
-        - This code gets the bird perfectly to the pig.
+        - text: The bird will end up one step short of the pig.
+          correct: false
+          feedback: Incorrect. This code gets the bird perfectly to the pig.
+        - text: The bird will make it to the pig.
+          correct: true
+          feedback: Correct!
+        - text: The bird will run into the TNT.
+          correct: false
+          feedback: Incorrect. This code gets the bird perfectly to the pig.
+        - text: I don't know.
+          correct: false
+          feedback: This code gets the bird perfectly to the pig.
         questions:
-        - Read through the code below very carefully.  What will happen when you click "Run"?
+        - text: Read through the code below very carefully.  What will happen when you click "Run"?
       courseC_multi_starWars_predict1:
         answers:
-        - BB-8 will not move.
-        - BB-8 will move only one space
-        - BB-8 will move 5 times and get all of the scrap metal
-        - I don't know
-        feedbacks:
-        - Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        - Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        - Correct!
-        - The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will not move.
+          correct: false
+          feedback: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will move only one space
+          correct: false
+          feedback: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will move 5 times and get all of the scrap metal
+          correct: true
+          feedback: Correct!
+        - text: I don't know
+          correct: false
+          feedback: The repeat block will make the BB-8 move forward 5 times.
         questions:
-        - What do you think will happen when you click "Run"?
+        - text: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - BB-8 will not move.
-        - BB-8 will move only one space
-        - BB-8 will move 5 times and get all of the scrap metal
-        - I don't know
-        feedbacks:
-        - Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        - Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        - Correct!
-        - The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will not move.
+          correct: false
+          feedback: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will move only one space
+          correct: false
+          feedback: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        - text: BB-8 will move 5 times and get all of the scrap metal
+          correct: true
+          feedback: Correct!
+        - text: I don't know
+          correct: false
+          feedback: The repeat block will make the BB-8 move forward 5 times.
         questions:
-        - What do you think will happen when you click "Run"?
+        - text: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict2:
         answers:
-        - BB-8 will travel too far in the first loop.
-        - BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
-        - BB-8 will collect all of the scrap metal with no problems.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
-        - Correct!
-        - Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
-        - The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: BB-8 will travel too far in the first loop.
+          correct: false
+          feedback: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 will collect all of the scrap metal with no problems.
+          correct: false
+          feedback: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: I don't know.
+          correct: false
+          feedback: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
         questions:
-        - Look closely at the code below.  What will happen when you click "Run"?
+        - text: Look closely at the code below.  What will happen when you click "Run"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - BB-8 will travel too far in the first loop.
-        - BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
-        - BB-8 will collect all of the scrap metal with no problems.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
-        - Correct!
-        - Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
-        - The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: BB-8 will travel too far in the first loop.
+          correct: false
+          feedback: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+          correct: true
+          feedback: Correct!
+        - text: BB-8 will collect all of the scrap metal with no problems.
+          correct: false
+          feedback: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        - text: I don't know.
+          correct: false
+          feedback: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
         questions:
-        - Look closely at the code below.  What will happen when you click "Run"?
+        - text: Look closely at the code below.  What will happen when you click "Run"?
       courseD_multi_artist_binary8_predict1:
         answers:
-        - A
-        - B
-        - C
-        - D
-        feedbacks:
-        - Incorrect.
-        - Incorrect.
-        - Incorrect.
-        - Correct!
+        - text: A
+          correct: false
+          feedback: Incorrect.
+        - text: B
+          correct: false
+          feedback: Incorrect.
+        - text: C
+          correct: false
+          feedback: Incorrect.
+        - text: D
+          correct: true
+          feedback: Correct!
         questions:
-        - Take a close look at the code below.  Which image will it create after you click "Run"?
+        - text: Take a close look at the code below.  Which image will it create after you click "Run"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - A
-        - B
-        - C
-        - D
-        feedbacks:
-        - Incorrect.
-        - Incorrect.
-        - Incorrect.
-        - Correct!
+        - text: A
+          correct: false
+          feedback: Incorrect.
+        - text: B
+          correct: false
+          feedback: Incorrect.
+        - text: C
+          correct: false
+          feedback: Incorrect.
+        - text: D
+          correct: true
+          feedback: Correct!
         questions:
-        - Take a close look at the code below.  Which image will it create after you click "Run"?
+        - text: Take a close look at the code below.  Which image will it create after you click "Run"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - A
-        - B
-        - C
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        - Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        - The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: A
+          correct: true
+          feedback: Correct!
+        - text: B
+          correct: false
+          feedback: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: C
+          correct: false
+          feedback: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: I don't know.
+          correct: false
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
         questions:
-        - Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        - text: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - A
-        - B
-        - C
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        - Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
-        - The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: A
+          correct: true
+          feedback: Correct!
+        - text: B
+          correct: false
+          feedback: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: C
+          correct: false
+          feedback: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        - text: I don't know.
+          correct: false
+          feedback: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
         questions:
-        - Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        - text: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - 'The bee will move to the cloud and try to get nectar, no matter what. '
-        - The bee will move to the cloud and only try to get nectar if there is a flower underneath.
-        - 'The bee will move to the cloud and then do nothing, no matter what. '
-        - I don't know.
-        feedbacks:
-        - Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
-        - Correct!
-        - Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        - The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: 'The bee will move to the cloud and try to get nectar, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+          correct: true
+          feedback: Correct!
+        - text: 'The bee will move to the cloud and then do nothing, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         questions:
-        - The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        - text: The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - 'The bee will move to the cloud and try to get nectar, no matter what. '
-        - The bee will move to the cloud and only try to get nectar if there is a flower underneath.
-        - 'The bee will move to the cloud and then do nothing, no matter what. '
-        - I don't know.
-        feedbacks:
-        - Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
-        - Correct!
-        - Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        - The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: 'The bee will move to the cloud and try to get nectar, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+          correct: true
+          feedback: Correct!
+        - text: 'The bee will move to the cloud and then do nothing, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         questions:
-        - The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        - text: The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - The bee will get nectar at each flower and honey at each honeycomb.
-        - The bee will try to get nectar from both flowers and honeycomb.
-        - The bee will try to get honey from both flowers and honeycomb.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        - Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
-        - The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        - text: The bee will get nectar at each flower and honey at each honeycomb.
+          correct: true
+          feedback: Correct!
+        - text: The bee will try to get nectar from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        - text: The bee will try to get honey from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         questions:
-        - 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        - text: 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - The bee will get nectar at each flower and honey at each honeycomb.
-        - The bee will try to get nectar from both flowers and honeycomb.
-        - The bee will try to get honey from both flowers and honeycomb.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        - Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
-        - The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        - text: The bee will get nectar at each flower and honey at each honeycomb.
+          correct: true
+          feedback: Correct!
+        - text: The bee will try to get nectar from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        - text: The bee will try to get honey from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         questions:
-        - 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        - text: 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - The bee will move forward and get nectar only one time.
-        - The bee will get only 2 units of nectar.
-        - The bee will get all of the nectar.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
-        - Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
-        - Correct!
-        - The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will move forward and get nectar only one time.
+          correct: false
+          feedback: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will get only 2 units of nectar.
+          correct: false
+          feedback: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will get all of the nectar.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
         questions:
-        - Look closely at the nested loops below.  What will happen when you click "Run"?
+        - text: Look closely at the nested loops below.  What will happen when you click "Run"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - The bee will move forward and get nectar only one time.
-        - The bee will get only 2 units of nectar.
-        - The bee will get all of the nectar.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
-        - Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
-        - Correct!
-        - The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will move forward and get nectar only one time.
+          correct: false
+          feedback: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will get only 2 units of nectar.
+          correct: false
+          feedback: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        - text: The bee will get all of the nectar.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
         questions:
-        - Look closely at the nested loops below.  What will happen when you click "Run"?
+        - text: Look closely at the nested loops below.  What will happen when you click "Run"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - '4'
-        - '8'
-        - '12'
-        - I don't know.
-        feedbacks:
-        - Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
-        - Correct!
-        - Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
-        - The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: '4'
+          correct: false
+          feedback: Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: '8'
+          correct: true
+          feedback: Correct!
+        - text: '12'
+          correct: false
+          feedback: Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: I don't know.
+          correct: false
+          feedback: The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
         questions:
-        - Look closely at the code below. How much honey will the bee make when you click "Run"?
+        - text: Look closely at the code below. How much honey will the bee make when you click "Run"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - '4'
-        - '8'
-        - '12'
-        - I don't know.
-        feedbacks:
-        - Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
-        - Correct!
-        - Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
-        - The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: '4'
+          correct: false
+          feedback: Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: '8'
+          correct: true
+          feedback: Correct!
+        - text: '12'
+          correct: false
+          feedback: Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        - text: I don't know.
+          correct: false
+          feedback: The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
         questions:
-        - Look closely at the code below. How much honey will the bee make when you click "Run"?
+        - text: Look closely at the code below. How much honey will the bee make when you click "Run"?
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - Laurel will turn the wrong way when making a square.
-        - 'The loop does not run long enough for Laurel to get to all of the treasure. '
-        - Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.
-        - I don't know.
-        feedbacks:
-        - Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.
-        - Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
-        - Correct!
-        - Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.
+        - text: Laurel will turn the wrong way when making a square.
+          correct: false
+          feedback: Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.
+        - text: 'The loop does not run long enough for Laurel to get to all of the treasure. '
+          correct: false
+          feedback: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
+        - text: Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.
         questions:
-        - 'Look closely at the code below.  Why won''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        - text: 'Look closely at the code below.  Why won''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - The harvester will collect all of the crops.
-        - The harvester will not collect any of the crops with the path she is taking.
-        - The harvester will collect all of the crops, except the pumpkin.
-        - I don't know.
-        feedbacks:
-        - Incorrect. There is no code here for collecting the pumpkin.
-        - Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        - Correct!
-        - The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        - text: The harvester will collect all of the crops.
+          correct: false
+          feedback: Incorrect. There is no code here for collecting the pumpkin.
+        - text: The harvester will not collect any of the crops with the path she is taking.
+          correct: false
+          feedback: Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        - text: The harvester will collect all of the crops, except the pumpkin.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
         questions:
-        - Take a close look at the code below.  What will happen after you click "Run"?
+        - text: Take a close look at the code below.  What will happen after you click "Run"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - The harvester will collect all of the crops.
-        - The harvester will not pick any of the crops with the path she is taking.
-        - The harvester will pick all of the crops, except the pumpkin.
-        - I don't know.
-        feedbacks:
-        - Incorrect. There is no code here for picking the pumpkin.
-        - Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
-        - Correct!
-        - The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        - text: The harvester will collect all of the crops.
+          correct: false
+          feedback: Incorrect. There is no code here for picking the pumpkin.
+        - text: The harvester will not pick any of the crops with the path she is taking.
+          correct: false
+          feedback: Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        - text: The harvester will pick all of the crops, except the pumpkin.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
         questions:
-        - Take a close look at the code below.  What will happen after you click "Run"?
+        - text: Take a close look at the code below.  What will happen after you click "Run"?
       courseD_multi_farmer_ramp13:
         answers:
-        - The farmer will walk to the end of the path and harvest the pumpkin.
-        - The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
-        - The farmer will walk four spaces, then try to pick one pumpkin.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
-        - Correct!
-        - Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
-        - The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        - text: The farmer will walk to the end of the path and harvest the pumpkin.
+          correct: false
+          feedback: Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        - text: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
+          correct: true
+          feedback: Correct!
+        - text: The farmer will walk four spaces, then try to pick one pumpkin.
+          correct: false
+          feedback: Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        - text: I don't know.
+          correct: false
+          feedback: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
         questions:
-        - " "
+        - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
-        - Nothing.  This code will leave only level ground.
-        - This code will leave the pile completely untouched.
-        - This code will leave the holes completely untouched.
-        - I don't know.
-        feedbacks:
-        - Incorrect. There is no code to remove dirt from the pile.
-        - Correct!
-        - Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
-        - The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        - text: Nothing.  This code will leave only level ground.
+          correct: false
+          feedback: Incorrect. There is no code to remove dirt from the pile.
+        - text: This code will leave the pile completely untouched.
+          correct: true
+          feedback: Correct!
+        - text: This code will leave the holes completely untouched.
+          correct: false
+          feedback: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        - text: I don't know.
+          correct: false
+          feedback: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
         questions:
-        - Take a good look at the code below. What will be left at the end of this puzzle?
+        - text: Take a good look at the code below. What will be left at the end of this puzzle?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - Nothing.  This code will leave only level ground.
-        - This code will leave the pile completely untouched.
-        - This code will leave the holes completely untouched.
-        - I don't know.
-        feedbacks:
-        - Incorrect. There is no code to remove dirt from the pile.
-        - Correct!
-        - Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
-        - The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        - text: Nothing.  This code will leave only level ground.
+          correct: false
+          feedback: Incorrect. There is no code to remove dirt from the pile.
+        - text: This code will leave the pile completely untouched.
+          correct: true
+          feedback: Correct!
+        - text: This code will leave the holes completely untouched.
+          correct: false
+          feedback: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        - text: I don't know.
+          correct: false
+          feedback: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
         questions:
-        - Take a good look at the code below. What will be left at the end of this puzzle?
+        - text: Take a good look at the code below. What will be left at the end of this puzzle?
       courseD_multi_farmer_while4_predict1:
         answers:
-        - Nothing will happen.
-        - The farmer will never stop removing dirt.
-        - The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
-        - Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
-        - Correct!
-        - The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: Nothing will happen.
+          correct: false
+          feedback: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: The farmer will never stop removing dirt.
+          correct: false
+          feedback: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
         questions:
-        - Look closely at the code below.  What will happen after you click "Run"?
+        - text: Look closely at the code below.  What will happen after you click "Run"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - Nothing will happen.
-        - The farmer will never stop removing dirt.
-        - The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
-        - Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
-        - Correct!
-        - The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: Nothing will happen.
+          correct: false
+          feedback: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: The farmer will never stop removing dirt.
+          correct: false
+          feedback: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        - text: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
         questions:
-        - Look closely at the code below.  What will happen after you click "Run"?
+        - text: Look closely at the code below.  What will happen after you click "Run"?
       courseD_multi_maze_until10_predict2:
         answers:
-        - The zombie will turn right immediately and get stuck.
-        - The zombie will make it to the sunflower.
-        - The zombie will turn right on the first path and go around in circles forever.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
-        - Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
-        - In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        - text: The zombie will turn right immediately and get stuck.
+          correct: true
+          feedback: Correct!
+        - text: The zombie will make it to the sunflower.
+          correct: false
+          feedback: Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        - text: The zombie will turn right on the first path and go around in circles forever.
+          correct: false
+          feedback: Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        - text: I don't know.
+          correct: false
+          feedback: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
         questions:
-        - Look carefully at the code below.  What will happen after you click "Run"?
+        - text: Look carefully at the code below.  What will happen after you click "Run"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - The zombie will pass the correct path and end up going back and forth forever.
-        - The zombie will make it to the sunflower.
-        - The zombie will turn right on the first path and go around in circles forever.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The zombie will pass the correct path and end up going back and forth forever.
-        - Incorrect. The zombie will pass the correct path and end up going back and forth forever.
-        - In this code, the zombie will pass the correct path and end up going back and forth forever.
+        - text: The zombie will pass the correct path and end up going back and forth forever.
+          correct: true
+          feedback: Correct!
+        - text: The zombie will make it to the sunflower.
+          correct: false
+          feedback: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
+        - text: The zombie will turn right on the first path and go around in circles forever.
+          correct: false
+          feedback: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
+        - text: I don't know.
+          correct: false
+          feedback: In this code, the zombie will pass the correct path and end up going back and forth forever.
         questions:
-        - Look carefully at the code below.  What will happen after you click "Run"?
+        - text: Look carefully at the code below.  What will happen after you click "Run"?
       courseD_multi_maze_until2_predict1:
         answers:
-        - The bird will not move at all.
-        - The bird will make it to the pig.
-        - The bird will move forward and run into the TNT.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
-        - Correct!
-        - Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
-        - The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+        - text: The bird will not move at all.
+          correct: false
+          feedback: Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        - text: The bird will make it to the pig.
+          correct: true
+          feedback: Correct!
+        - text: The bird will move forward and run into the TNT.
+          correct: false
+          feedback: Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        - text: I don't know.
+          correct: false
+          feedback: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
         questions:
-        - Take a close look at the code below.  What do you think will happen when you click "Run"?
+        - text: Take a close look at the code below.  What do you think will happen when you click "Run"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - The bird will not move at all.
-        - The bird will make it to the pig.
-        - The bird will move forward and run into the TNT.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
-        - Correct!
-        - Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
-        - The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+        - text: The bird will not move at all.
+          correct: false
+          feedback: Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        - text: The bird will make it to the pig.
+          correct: true
+          feedback: Correct!
+        - text: The bird will move forward and run into the TNT.
+          correct: false
+          feedback: Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        - text: I don't know.
+          correct: false
+          feedback: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
         questions:
-        - Take a close look at the code below.  What do you think will happen when you click "Run"?
+        - text: Take a close look at the code below.  What do you think will happen when you click "Run"?
       courseD_multi_scrat_predict1:
         answers:
-        - Nothing. Scrat will not move at all.
-        - Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
-        - Scrat will move forward, then turn and crash.
-        - I don't know.
-        feedbacks:
-        - Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
-        - Correct!
-        - Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
-        - Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        - text: Nothing. Scrat will not move at all.
+          correct: false
+          feedback: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
+        - text: Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
+          correct: true
+          feedback: Correct!
+        - text: Scrat will move forward, then turn and crash.
+          correct: false
+          feedback: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
+        - text: I don't know.
+          correct: false
+          feedback: Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
         questions:
-        - This code uses a new block. What do you think will happen when you press "Run"?
+        - text: This code uses a new block. What do you think will happen when you press "Run"?
       courseE_multi_artist_predict1:
         answers:
-        - The artist will draw the triangle from the last level four times in a rotated pattern.
-        - The artist will draw the triangle from the last level four times in a straight line.
-        - The artist will draw three squares in a rotated pattern.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
-        - Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
-        - The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        - text: The artist will draw the triangle from the last level four times in a rotated pattern.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw the triangle from the last level four times in a straight line.
+          correct: false
+          feedback: Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        - text: The artist will draw three squares in a rotated pattern.
+          correct: false
+          feedback: Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        - text: I don't know.
+          correct: false
+          feedback: The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
         questions:
-        - Based on the code below, what do you think will happen if you press 'Run'?
+        - text: Based on the code below, what do you think will happen if you press 'Run'?
       courseE_multi_bee_functions_predict1:
         answers:
-        - The same program will work to solve this puzzle, too.
-        - The bee won't make enough honey.
-        - The bee will try to make too much honey.
-        - I don't know.
-        feedbacks:
-        - Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
-        - Incorrect. The function is programmed to handle any amount of honey over 0.
-        - Incorrect. The function is programmed to handle any amount of honey over 0.
-        - The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        - text: The same program will work to solve this puzzle, too.
+          correct: true
+          feedback: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        - text: The bee won't make enough honey.
+          correct: false
+          feedback: Incorrect. The function is programmed to handle any amount of honey over 0.
+        - text: The bee will try to make too much honey.
+          correct: false
+          feedback: Incorrect. The function is programmed to handle any amount of honey over 0.
+        - text: I don't know.
+          correct: false
+          feedback: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
         questions:
-        - Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        - text: Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - The harvester will pick two pumpkins.
-        - The harvester will pick all of the pumpkins.
-        - The harvester will pick the lettuce.
-        - The harvester will pick the corn.
-        feedbacks:
-        - Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
-        - Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
-        - Incorrect. The harvester only makes one turn, and ends at the corn.
-        - Correct!
+        - text: The harvester will pick two pumpkins.
+          correct: false
+          feedback: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        - text: The harvester will pick all of the pumpkins.
+          correct: false
+          feedback: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        - text: The harvester will pick the lettuce.
+          correct: false
+          feedback: Incorrect. The harvester only makes one turn, and ends at the corn.
+        - text: The harvester will pick the corn.
+          correct: true
+          feedback: Correct!
         questions:
-        - Look at the functions defined below.  What will the harvester pick?
+        - text: Look at the functions defined below.  What will the harvester pick?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - The harvester will pick two pumpkins.
-        - The harvester will pick all of the pumpkins.
-        - The harvester will pick the lettuce.
-        - The harvester will pick the corn.
-        feedbacks:
-        - Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
-        - Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
-        - Correct!
-        - Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        - text: The harvester will pick two pumpkins.
+          correct: false
+          feedback: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        - text: The harvester will pick all of the pumpkins.
+          correct: false
+          feedback: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        - text: The harvester will pick the lettuce.
+          correct: true
+          feedback: Correct!
+        - text: The harvester will pick the corn.
+          correct: false
+          feedback: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
         questions:
-        - Look at the functions defined below.  What will the harvester pick?
+        - text: Look at the functions defined below.  What will the harvester pick?
       courseE_multi_farmer_predict1:
         answers:
-        - Nothing. The farmer will remain standing still
-        - The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
-        - The farmer will correctly travel the path, picking all of the lettuce along the way.
-        - I don't know
-        feedbacks:
-        - Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
-        - Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
-        - Correct!
-        - The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        - text: Nothing. The farmer will remain standing still
+          correct: false
+          feedback: Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        - text: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
+          correct: false
+          feedback: Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        - text: The farmer will correctly travel the path, picking all of the lettuce along the way.
+          correct: true
+          feedback: Correct!
+        - text: I don't know
+          correct: false
+          feedback: The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         questions:
-        - 'Look closely at the code below.  What do you think will happen when you click "Run"? '
+        - text: 'Look closely at the code below.  What do you think will happen when you click "Run"? '
       courseE_multi_farmer_predict2:
         answers:
-        - The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
-        - The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
-        - The farmer will not walk anywhere because there's no pumpkin in the first place.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
-        - Correct!
-        - Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
-        - The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        - text: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+          correct: false
+          feedback: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        - text: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+          correct: true
+          feedback: Correct!
+        - text: The farmer will not walk anywhere because there's no pumpkin in the first place.
+          correct: false
+          feedback: Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        - text: I don't know.
+          correct: false
+          feedback: The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
         questions:
-        - What do you think will happen in this puzzle when you press 'Run'?
+        - text: What do you think will happen in this puzzle when you press 'Run'?
       courseE_multi_maze_predict1:
         answers:
-        - Nothing. The bird will not move at all.
-        - The bird will move forward three times, turn, then move forward three more times, making it to the pig!
-        - The bird will move forward, then turn and crash into a wall.
-        - I don't know.
-        feedbacks:
-        - Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
-        - Correct!
-        - Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
-        - Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        - text: Nothing. The bird will not move at all.
+          correct: false
+          feedback: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
+        - text: The bird will move forward three times, turn, then move forward three more times, making it to the pig!
+          correct: true
+          feedback: Correct!
+        - text: The bird will move forward, then turn and crash into a wall.
+          correct: false
+          feedback: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
+        - text: I don't know.
+          correct: false
+          feedback: Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
         questions:
-        - This code uses a new block. What do you think would happen if you pressed 'Run'?
+        - text: This code uses a new block. What do you think would happen if you pressed 'Run'?
       courseE_prediction_artistFunction1:
         answers:
-        - Nothing. The function is not called in the program.
-        - The artist will draw a single square.
-        - The artist will draw two squares that overlap.
-        - The artist will draw two squares with a small gap in between.
-        feedbacks:
-        - Incorrect. The function is actually called two times in the program.
-        - Incorrect. The function is actually called two times in the program.
-        - Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
-        - Correct! The function is called two times in the program, with a jump in between.
+        - text: Nothing. The function is not called in the program.
+          correct: false
+          feedback: Incorrect. The function is actually called two times in the program.
+        - text: The artist will draw a single square.
+          correct: false
+          feedback: Incorrect. The function is actually called two times in the program.
+        - text: The artist will draw two squares that overlap.
+          correct: false
+          feedback: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        - text: The artist will draw two squares with a small gap in between.
+          correct: true
+          feedback: Correct! The function is called two times in the program, with a jump in between.
         questions:
-        - What will happen when you press "Run"?
+        - text: What will happen when you press "Run"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - Nothing. The function is not called in the program.
-        - The artist will draw a single square.
-        - The artist will draw two squares that overlap.
-        - The artist will draw two squares with a small gap in between.
-        feedbacks:
-        - Incorrect. The function is actually called two times in the program.
-        - Incorrect. The function is actually called two times in the program.
-        - Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
-        - Correct! The function is called two times in the program, with a jump in between.
+        - text: Nothing. The function is not called in the program.
+          correct: false
+          feedback: Incorrect. The function is actually called two times in the program.
+        - text: The artist will draw a single square.
+          correct: false
+          feedback: Incorrect. The function is actually called two times in the program.
+        - text: The artist will draw two squares that overlap.
+          correct: false
+          feedback: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        - text: The artist will draw two squares with a small gap in between.
+          correct: true
+          feedback: Correct! The function is called two times in the program, with a jump in between.
         questions:
-        - What will happen when you press "Run"?
+        - text: What will happen when you press "Run"?
       courseF_bee_variables_8a_2018:
         answers:
-        - The bee won't collect any nectar because the variable isn't called "gather".
-        - The bee will only collect 2 nectar.
-        - The bee will collect all of the nectar.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  Your variable's name does not affect its value.
-        - Correct!
-        - Incorrect.  The variable gets set back to 0 before the last two function calls.
-        - The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
+        - text: The bee won't collect any nectar because the variable isn't called "gather".
+          correct: false
+          feedback: Incorrect.  Your variable's name does not affect its value.
+        - text: The bee will only collect 2 nectar.
+          correct: true
+          feedback: Correct!
+        - text: The bee will collect all of the nectar.
+          correct: false
+          feedback: Incorrect.  The variable gets set back to 0 before the last two function calls.
+        - text: I don't know.
+          correct: false
+          feedback: The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
         questions:
-        - Look at the code below.  How many units of nectar will the bee collect at the end?
+        - text: Look at the code below.  How many units of nectar will the bee collect at the end?
         title: Bee Variables Multi
       courseF_multi_artist_for10_predict1:
         answers:
-        - The artist will draw a straight line that increases in thickness from one side of the play space to the other.
-        - 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
-        - The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The artist turns between iterations of the `for` loop.
-        - Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
-        - Correct!
-        - Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        - text: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+          correct: false
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+          correct: false
+          feedback: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
         questions:
-        - What will happen when you click "Run"?
+        - text: What will happen when you click "Run"?
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - The artist will draw a straight line that increases in thickness from one side of the play space to the other.
-        - 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
-        - The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
-        - I don't know.
-        feedbacks:
-        - Incorrect. The artist turns between iterations of the `for` loop.
-        - Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
-        - Correct!
-        - Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        - text: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+          correct: false
+          feedback: Incorrect. The artist turns between iterations of the `for` loop.
+        - text: 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+          correct: false
+          feedback: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        - text: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+          correct: true
+          feedback: Correct!
+        - text: I don't know.
+          correct: false
+          feedback: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
         questions:
-        - What will happen when you click "Run"?
+        - text: What will happen when you click "Run"?
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - The artist will use the same function to draw two different sized boxes.
-        - The artist will use two different functions to draw two different sized boxes.
-        - The artist will use two different functions to draw the same sized box twice.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect.  Using parameters lets you use a single function to create different outcomes.
-        - Incorrect.  Using parameters lets you use a single function to create different outcomes.
-        - The program uses parameters to allow a single function to create two different size boxes.
+        - text: The artist will use the same function to draw two different sized boxes.
+          correct: true
+          feedback: Correct!
+        - text: The artist will use two different functions to draw two different sized boxes.
+          correct: false
+          feedback: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        - text: The artist will use two different functions to draw the same sized box twice.
+          correct: false
+          feedback: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        - text: I don't know.
+          correct: false
+          feedback: The program uses parameters to allow a single function to create two different size boxes.
         questions:
-        - What will happen when you run this program?
+        - text: What will happen when you run this program?
       courseF_multi_artist_predict1:
         answers:
-        - The artist will draw the triangle from the last level four times in a rotated pattern.
-        - The artist will draw the triangle from the last level four times in a straight line.
-        - The artist will draw three squares in a rotated pattern.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
-        - Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
-        - The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        - text: The artist will draw the triangle from the last level four times in a rotated pattern.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw the triangle from the last level four times in a straight line.
+          correct: false
+          feedback: Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        - text: The artist will draw three squares in a rotated pattern.
+          correct: false
+          feedback: Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        - text: I don't know.
+          correct: false
+          feedback: The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
         questions:
-        - Based on the code below, what do you think will happen if you press "Run"?
+        - text: Based on the code below, what do you think will happen if you press "Run"?
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - The artist will draw a triangle with 50 pixel sides.
-        - The artist will draw a 50-sided polygon with 3 pixel sides.
-        - The artist will draw three open sides with 50 degree turns.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
-        - Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
-        - The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          correct: false
+          feedback: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          correct: false
+          feedback: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        - text: I don't know.
+          correct: false
+          feedback: The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - We have set the variable "length" to 50.  What will happen when you click "Run"?
+        - text: We have set the variable "length" to 50.  What will happen when you click "Run"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - The artist will draw a triangle with 50 pixel sides.
-        - The artist will draw a 50-sided polygon with 3 pixel sides.
-        - The artist will draw three open sides with 50 degree turns.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
-        - Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
-        - The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        - text: The artist will draw a triangle with 50 pixel sides.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw a 50-sided polygon with 3 pixel sides.
+          correct: false
+          feedback: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        - text: The artist will draw three open sides with 50 degree turns.
+          correct: false
+          feedback: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        - text: I don't know.
+          correct: false
+          feedback: The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
         questions:
-        - We have set the variable "length" to 50.  What will happen when you click "Run"?
+        - text: We have set the variable "length" to 50.  What will happen when you click "Run"?
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - 'The bee will move to the cloud and try to get nectar, no matter what. '
-        - The bee will move to the cloud and only try to get nectar if there is a flower underneath.
-        - 'The bee will move to the cloud and then do nothing, no matter what. '
-        - I don't know.
-        feedbacks:
-        - Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
-        - Correct!
-        - Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        - The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: 'The bee will move to the cloud and try to get nectar, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        - text: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+          correct: true
+          feedback: Correct!
+        - text: 'The bee will move to the cloud and then do nothing, no matter what. '
+          correct: false
+          feedback: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         questions:
-        - If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        - text: If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - The bee will get nectar at each flower, otherwise it will make honey.
-        - The bee will try to get nectar from both flowers and honeycomb.
-        - The bee will try to get honey from both flowers and honeycomb.
-        - I don't know.
-        feedbacks:
-        - Correct!
-        - Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
-        - Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        - The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
+        - text: The bee will get nectar at each flower, otherwise it will make honey.
+          correct: true
+          feedback: Correct!
+        - text: The bee will try to get nectar from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        - text: The bee will try to get honey from both flowers and honeycomb.
+          correct: false
+          feedback: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        - text: I don't know.
+          correct: false
+          feedback: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
         questions:
-        - Look carefully at the code below.  What do you think will happen after you click "Run"?
+        - text: Look carefully at the code below.  What do you think will happen after you click "Run"?
       courseF_multi_bee_for3_predict1:
         answers:
-        - 'The bee will move forward and collect all of the nectar from every flower. '
-        - The bee will move forward and collect all of the nectar from every flower, except for one.
-        - 'The bee will move forward and collect one nectar from each flower. '
-        - 'The bee will move forward and try to collect more nectar than is in the flowers. '
-        feedbacks:
-        - Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
-        - Correct!
-        - Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
-        - Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: 'The bee will move forward and collect all of the nectar from every flower. '
+          correct: false
+          feedback: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: The bee will move forward and collect all of the nectar from every flower, except for one.
+          correct: true
+          feedback: Correct!
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          correct: false
+          feedback: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: 'The bee will move forward and try to collect more nectar than is in the flowers. '
+          correct: false
+          feedback: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
         questions:
-        - Read the code below.  What will happen when you click "Run"?
+        - text: Read the code below.  What will happen when you click "Run"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - 'The bee will move forward and collect all of the nectar from every flower. '
-        - The bee will move forward and collect all of the nectar from every flower, except for one.
-        - 'The bee will move forward and collect one nectar from each flower. '
-        - 'I don''t know. '
-        feedbacks:
-        - Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
-        - Correct!
-        - Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
-        - The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: 'The bee will move forward and collect all of the nectar from every flower. '
+          correct: false
+          feedback: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: The bee will move forward and collect all of the nectar from every flower, except for one.
+          correct: true
+          feedback: Correct!
+        - text: 'The bee will move forward and collect one nectar from each flower. '
+          correct: false
+          feedback: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        - text: 'I don''t know. '
+          correct: false
+          feedback: The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
         questions:
-        - Read the code below.  What will happen when you click "Run"?
+        - text: Read the code below.  What will happen when you click "Run"?
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - The bee will not collect any nectar or honey.
-        - 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
-        - 'The bee will collect only one nectar or honey in each iteration of the loop. '
-        - I don't know.
-        feedbacks:
-        - Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
-        - Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
-        - Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
-        - Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        - text: The bee will not collect any nectar or honey.
+          correct: false
+          feedback: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
+        - text: 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
+          correct: true
+          feedback: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
+        - text: 'The bee will collect only one nectar or honey in each iteration of the loop. '
+          correct: false
+          feedback: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
+        - text: I don't know.
+          correct: false
+          feedback: Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
         questions:
-        - What will happen when you click "Run"?
+        - text: What will happen when you click "Run"?
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - The pirate would say, "Pleasure to meet you, Ali." and that is all.
-        - The pirate would say, "Pleasure to meet you." and that is all.
-        - The pirate would say, "Ali" and that is all.
-        - I don't know.
-        feedbacks:
-        - 'Correct. '
-        - Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
-        - Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
-        - 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        - text: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+          correct: true
+          feedback: 'Correct. '
+        - text: The pirate would say, "Pleasure to meet you." and that is all.
+          correct: false
+          feedback: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        - text: The pirate would say, "Ali" and that is all.
+          correct: false
+          feedback: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        - text: I don't know.
+          correct: false
+          feedback: 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
         questions:
-        - What would happen if the user entered the name "Ali" at the prompt?
+        - text: What would happen if the user entered the name "Ali" at the prompt?
       coursee_prediction_artistfunction2:
         answers:
-        - The artist will solve the puzzle correctly.
-        - The artist will draw four squares in a window pattern.
-        - The artist will draw only one line of squares.
-        - The artist will draw four squares on top of one another.
-        feedbacks:
-        - Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
-        - Correct!
-        - Incorrect. The program does not call "draw line of polygons".
-        - Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        - text: The artist will solve the puzzle correctly.
+          correct: false
+          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        - text: The artist will draw four squares in a window pattern.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw only one line of squares.
+          correct: false
+          feedback: Incorrect. The program does not call "draw line of polygons".
+        - text: The artist will draw four squares on top of one another.
+          correct: false
+          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         questions:
-        - What will happen when you press the "Run" button?
+        - text: What will happen when you press the "Run" button?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - The artist will solve the puzzle correctly.
-        - The artist will draw four squares in a window pattern.
-        - The artist will draw only one line of squares.
-        - The artist will draw four squares on top of one another.
-        feedbacks:
-        - Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
-        - Correct!
-        - Incorrect. The program does not call "draw line of polygons".
-        - Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        - text: The artist will solve the puzzle correctly.
+          correct: false
+          feedback: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        - text: The artist will draw four squares in a window pattern.
+          correct: true
+          feedback: Correct!
+        - text: The artist will draw only one line of squares.
+          correct: false
+          feedback: Incorrect. The program does not call "draw line of polygons".
+        - text: The artist will draw four squares on top of one another.
+          correct: false
+          feedback: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
         questions:
-        - What will happen when you press the "Run" button?
+        - text: What will happen when you press the "Run" button?
       grade2_multi_collector_A_predict1:
         answers:
-        - Laurel will collect 4 pieces of treasure using this code.
-        - Laurel will try to collect treasure where there is not any and it causes an error.
-        - Laurel will collect all of the treasure.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
-        - Correct!
-        - Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
-        - Laurel tries to collect treasure where there is none and it causes an error.
+        - text: Laurel will collect 4 pieces of treasure using this code.
+          correct: false
+          feedback: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        - text: Laurel will try to collect treasure where there is not any and it causes an error.
+          correct: true
+          feedback: Correct!
+        - text: Laurel will collect all of the treasure.
+          correct: false
+          feedback: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        - text: I don't know.
+          correct: false
+          feedback: Laurel tries to collect treasure where there is none and it causes an error.
         questions:
-        - Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        - text: Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - Laurel will collect 4 pieces of treasure using this code.
-        - Laurel will try to collect treasure where there is not any and it causes an error.
-        - Laurel will collect all of the treasure.
-        - I don't know.
-        feedbacks:
-        - Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
-        - Correct!
-        - Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
-        - Laurel tries to collect treasure where there is none and it causes an error.
+        - text: Laurel will collect 4 pieces of treasure using this code.
+          correct: false
+          feedback: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        - text: Laurel will try to collect treasure where there is not any and it causes an error.
+          correct: true
+          feedback: Correct!
+        - text: Laurel will collect all of the treasure.
+          correct: false
+          feedback: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        - text: I don't know.
+          correct: false
+          feedback: Laurel tries to collect treasure where there is none and it causes an error.
         questions:
-        - Look at this code carefully. What do you think will happen when the program runs?
+        - text: Look at this code carefully. What do you think will happen when the program runs?

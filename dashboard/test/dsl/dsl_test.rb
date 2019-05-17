@@ -230,13 +230,15 @@ wrong 'w3'
         'data' => {
           'multi' => {
             'name1' => {
-              'title1' => 'title1',
-              'desc1' => 'desc1',
-              'q1' => 'q1',
-              'w1' => 'w1',
-              'w2' => 'w2',
-              'r1' => 'r1',
-              'w3' => 'w3'
+              'title' => 'title1',
+              'content1' => 'desc1',
+              'questions' => [{'text' => 'q1'}],
+              'answers' => [
+                {'text' => 'w1', 'correct' => false},
+                {'text' => 'w2', 'correct' => false},
+                {'text' => 'r1', 'correct' => true},
+                {'text' => 'w3', 'correct' => false}
+              ],
             }
           }
         }
