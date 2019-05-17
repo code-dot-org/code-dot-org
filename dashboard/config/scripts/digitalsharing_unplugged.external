@@ -1,4 +1,5 @@
 name 'DigitalSharing-Unplugged'
+video_key 'c_and_c_digital_sharing'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
