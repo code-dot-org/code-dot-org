@@ -4,16 +4,20 @@
 %h1 Attendance recorded
 
 .workshop-attendance-recorded
-  .paragraph
-    We’ve recorded that you were here on #{@session.formatted_date}.
+  .left
+    .fa.fa-check-square-o.checkmark
 
-  .paragraph
-    Thank you for attending Code.org professional development.
+  .right
+    .paragraph
+      We’ve recorded that you were here on #{@session.formatted_date}.
 
-  .paragraph
-    If your workshop is multiple days, you must record attendance each day.
+    .paragraph
+      Thank you for attending Code.org professional development.
 
-  .paragraph
-    %a{href: '/home'}
-      %button
-        Continue
+    .paragraph
+      If your workshop is multiple days, you must record attendance each day.
+
+    .paragraph
+      %a{href: '/home'}
+        %button
+          Continue
