@@ -18,7 +18,9 @@ class FeaturedProjectsController < ApplicationController
 
   # Featured projects are selected internally for their
   # quality, so we can be reasonably confident that they
-  # are not abusive. To prevent users from spamming Zendesk # with false reports of abuse on featured projects, this # sets their abuse score such that the project needs to
+  # are not abusive. To prevent users from spamming Zendesk
+  # with false reports of abuse on featured projects, this
+  # sets their abuse score such that the project needs to
   # be reported many times before being blocked.
   def buffer_abuse_score(score=-50)
     channels_path = "/v3/channels/#{params[:project_id]}/buffer_abuse_score"
