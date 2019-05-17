@@ -127,7 +127,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
         wrapper.instance().setState({showSchoolInterstitial: false});
-        wrapper.find('div#first-button').simulate('click');
+        wrapper.find('div#update-button').simulate('click');
 
         expect(onClose).not.to.have.been.called;
         expect(wrapperInstance.handleClickUpdate).to.have.been.called;
@@ -140,7 +140,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.instance().setState({showSchoolInterstitial: false});
-        wrapper.find('div#second-button').simulate('click');
+        wrapper.find('div#yes-button').simulate('click');
 
         expect(wrapperInstance.handleClickYes).to.have.been.called;
         await setTimeout(() => {}, 50);
