@@ -129,9 +129,11 @@ class ScriptsController < ApplicationController
   end
 
   def set_script_for_show
-    is_family_name = ScriptConstants::FAMILY_NAMES.include?(params[:id])
-    return set_script unless is_family_name
-    @script = Script.get_script_family_redirect_for_user(params[:id], user: current_user, locale: request.locale)
+    if ScriptConstants::FAMILY_NAMES.include?(params[:id])
+      @script = Script.get_script_family_redirect_for_user(params[:id], user: current_user, locale: request.locale)
+    else
+      set_script
+    end
   end
 
   def script_params
