@@ -47,9 +47,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
   # Records metrics for student viewing teacher feedback.
   def increment_visit_count
     feedback = TeacherFeedback.find(params[:id])
-    return head :forbidden unless feedback && current_user&.id == feedback&.student_id
-
-    if feedback.increment_visit_count
+    if feedback&.increment_visit_count
       head :no_content
     else
       head :unprocessable_entity
