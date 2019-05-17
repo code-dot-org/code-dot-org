@@ -1,0 +1,19 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Attendance recorded
+
+.workshop-attendance-recorded
+  .paragraph
+    We’ve recorded that you were here on #{@session.formatted_date}.
+
+  .paragraph
+    Thank you for attending Code.org professional development.
+
+  .paragraph
+    If your workshop is multiple days, you must record attendance each day.
+
+  .paragraph
+    %a{href: '/home'}
+      %button
+        Continue
