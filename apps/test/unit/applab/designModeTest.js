@@ -4,6 +4,7 @@ import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import designMode from '@cdo/apps/applab/designMode';
 import {getPrefixedElementById} from '@cdo/apps/applab/designElements/elementUtils';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 describe('appendPx', () => {
   it('returns a valid css positive integer', function() {
@@ -291,7 +292,7 @@ describe('setProperty and read Property', () => {
       it('will change a child of a legacy screen without the data-theme attribute', () => {
         setExistingHTML(`
           <div class="screen" id="design_screen1">
-            <input id="design_input1">
+            <input id="design_text_input1">
           </div>
         `);
 
@@ -305,13 +306,13 @@ describe('setProperty and read Property', () => {
         expect(
           getPrefixedElementById('screen1').getAttribute('data-theme')
         ).to.equal(themeOptions[DEFAULT_THEME_INDEX]);
-        expect(getPrefixedElementById('input1')).not.to.be.null;
-        expect(getPrefixedElementById('input1').style.padding).to.equal(
+        expect(getPrefixedElementById('text_input1')).not.to.be.null;
+        expect(getPrefixedElementById('text_input1').style.padding).to.equal(
           '5px 15px'
         );
-        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-          'rgb(242, 242, 242)'
-        );
+        expect(
+          getPrefixedElementById('text_input1').style.backgroundColor
+        ).to.equal('rgb(242, 242, 242)');
       });
 
       it('will change from an invalid theme name screen into a valid theme', () => {
@@ -319,7 +320,7 @@ describe('setProperty and read Property', () => {
         // in the data-theme attribute:
         setExistingHTML(`
           <div class="screen" id="design_screen1" data-theme="unknownThemeName">
-            <input id="design_input1">
+            <input id="design_text_input1">
           </div>
         `);
 
@@ -333,19 +334,19 @@ describe('setProperty and read Property', () => {
         expect(
           getPrefixedElementById('screen1').getAttribute('data-theme')
         ).to.equal('watermelon');
-        expect(getPrefixedElementById('input1')).not.to.be.null;
-        expect(getPrefixedElementById('input1').style.padding).to.equal(
+        expect(getPrefixedElementById('text_input1')).not.to.be.null;
+        expect(getPrefixedElementById('text_input1').style.padding).to.equal(
           '5px 15px'
         );
-        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-          'rgb(226, 240, 170)'
-        );
+        expect(
+          getPrefixedElementById('text_input1').style.backgroundColor
+        ).to.equal('rgb(226, 240, 170)');
       });
 
       it('will change a child of a default theme screen', () => {
         setExistingHTML(`
           <div class="screen" id="design_screen1" data-theme="default" style="background-color: rgb(255, 255, 255);">
-            <input id="design_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">
+            <input id="design_text_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">
           </div>
         `);
 
@@ -359,22 +360,22 @@ describe('setProperty and read Property', () => {
         expect(
           getPrefixedElementById('screen1').getAttribute('data-theme')
         ).to.equal('watermelon');
-        expect(getPrefixedElementById('input1')).not.to.be.null;
-        expect(getPrefixedElementById('input1').style.padding).to.equal(
+        expect(getPrefixedElementById('text_input1')).not.to.be.null;
+        expect(getPrefixedElementById('text_input1').style.padding).to.equal(
           '5px 15px'
         );
-        expect(getPrefixedElementById('input1').style.backgroundColor).to.equal(
-          'rgb(226, 240, 170)'
-        );
+        expect(
+          getPrefixedElementById('text_input1').style.backgroundColor
+        ).to.equal('rgb(226, 240, 170)');
       });
 
       it('will not change a customized, non-default property', () => {
         setExistingHTML(`
           <div class="screen" id="design_screen1">
-            <input id="design_input1">
+            <input id="design_text_input1">
           </div>
         `);
-        const inputElement = getPrefixedElementById('input1');
+        const inputElement = getPrefixedElementById('text_input1');
 
         designMode.updateProperty(
           inputElement,
@@ -394,10 +395,10 @@ describe('setProperty and read Property', () => {
       it('will change an empty string property', () => {
         setExistingHTML(`
           <div class="screen" id="design_screen1">
-            <input id="design_input1">
+            <input id="design_text_input1">
           </div>
         `);
-        const inputElement = getPrefixedElementById('input1');
+        const inputElement = getPrefixedElementById('text_input1');
 
         // Update the input background color to an empty string:
         designMode.updateProperty(inputElement, 'backgroundColor', '');
@@ -465,6 +466,46 @@ describe('setProperty and read Property', () => {
         designMode.changeThemeForScreen(screen, 'area51');
         expect(screen.getAttribute('data-theme')).to.equal('area51');
         expect(screen.style.backgroundColor).to.equal('rgb(54, 47, 73)');
+      });
+    });
+
+    describe('onCopyElementToScreen', () => {
+      beforeEach(() => {
+        sinon.stub(designMode, 'changeScreen').callsFake(screenId => {
+          // Manually change the screen with a fake to avoid pulling in redux, Applab, etc.
+          designMode.activeScreen().style.display = 'none';
+          getPrefixedElementById(screenId).style.display = 'block';
+        });
+        sinon.stub(studioApp(), 'displayPlayspaceNotification');
+      });
+
+      afterEach(() => {
+        designMode.changeScreen.restore();
+        studioApp().displayPlayspaceNotification.restore();
+      });
+
+      it('copies element from a screen with one theme to a screen with a different theme', () => {
+        setExistingHTML(`
+          <div class="screen" id="design_screen1" data-theme="default" style="display:block; background-color: rgb(255, 255, 255);">
+            <input id="design_text_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">
+          </div>
+          <div class="screen" id="design_screen2" data-theme="watermelon" style="display:none; background-color: rgb(197, 226, 85);">
+          </div>
+        `);
+
+        designMode.onCopyElementToScreen(
+          getPrefixedElementById('text_input1'),
+          'screen2'
+        );
+
+        expect(designMode.changeScreen).to.be.called;
+        expect(studioApp().displayPlayspaceNotification).to.be.called;
+
+        expect(getPrefixedElementById('text_input2')).not.to.be.null;
+        // Should have the background color appropriate for the theme of screen2 (watermelon)
+        expect(
+          getPrefixedElementById('text_input2').style.backgroundColor
+        ).to.equal('rgb(226, 240, 170)');
       });
     });
   });
