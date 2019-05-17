@@ -80,3 +80,6 @@ stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 level 'CSD U5L15 autoSFLP_2019', named: true
 level 'csd u5 recommender sample_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019', progression: 'Reflection', assessment: true
+
+stage 'Post-Project Test', lockable: true, flex_category: 'csd5_2'
+level 'CSD U5 test', assessment: true

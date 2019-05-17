@@ -10,7 +10,7 @@ const container = document.getElementsByClassName('script_name_container');
 if (container.length) {
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ScriptName {...getScriptData('scriptname')}/>
+      <ScriptName {...getScriptData('scriptname')} />
     </Provider>,
     container[0]
   );

@@ -2,6 +2,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
@@ -32,7 +33,7 @@ class UnconnectedDisplayProjectName extends React.Component {
           className="project_edit header_button header_button_light"
           onClick={this.props.beginEdit}
         >
-          {dashboard.i18n.t('project.rename')}
+          {i18n.rename()}
         </div>
       </div>
     );
@@ -98,7 +99,7 @@ class UnconnectedEditProjectName extends React.Component {
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
         >
-          {dashboard.i18n.t('project.save')}
+          {i18n.save()}
         </div>
       </div>
     );

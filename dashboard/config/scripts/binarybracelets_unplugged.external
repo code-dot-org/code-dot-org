@@ -5,5 +5,7 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Binary Bracelets
 
-Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+Create a bracelet that represents your name in a system that computers understand!
+
+![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
 MARKDOWN

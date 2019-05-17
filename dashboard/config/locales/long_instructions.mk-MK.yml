@@ -536,9 +536,9 @@ mk:
         \   AM.png>)\\\r\n    \\\r\n2.  You can also make a new button from scratch
         by dragging\n    it in from the Design Toolbox.\\\r\n    \\\r\n    \\\\t!\\[](\\<<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Click and drag to move your new button where
-        you want it.\\\r\n    \\\r\n4.  3.\n    Once you have a new button give it
-        a clear name, \"catButton\". You can also\n    change its text to read \"Cats!\".\\\r\n
-        \   \\\r\n    \\\\t!\\[](\\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>\n
+        you want it.\\\r\n    \\\r\n4.  3\\.\n    Once you have a new button give
+        it a clear name, \"catButton\". You can also\n    change its text to read
+        \"Cats!\".\\\r\n    \\\r\n    \\\\t!\\[](\\<<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14>\n
         \   AM.png>)\\\r\n    \\\r\n5.  There's lots of other ways you can change
         the look\n    of your button. Experiment with the full menu of options.\\\r\n
         \   \\\r\n6.  Once you're\n    done run your app to make sure your button
@@ -600,7 +600,7 @@ mk:
         \ Use the screen selector to choose the screen you just made\n    ([Show me
         where](#triggercallout=selector))\\\r\n2.  Drag a new \"text area\"\n    onto
         your screen to add it. ([Show me where](#triggercallout=textArea))\\\r\n3.
-        \ 3.\n    Drag the bottom right corner of your text area to change its size.\\\r\n4.
+        \ 3\\.\n    Drag the bottom right corner of your text area to change its size.\\\r\n4.
         \ Change\n    the text to tell your user what happens on this screen. Then
         change the color\n    of your text if you want!\\\r\n    \\\r\n    Click \"Run\"
         and then \"Finish\" to move\n    on.\\\r\n    \\\r\n    ![expandable](https://images.code.org/8ba0d4f0eccaf83163e86d10eec3a291-image-1505766539456.gif)\n
@@ -619,11 +619,12 @@ mk:
         **Design Mode** where you can personalize the look of\nyour app. Get your
         adventure started by picking a fun title!\\\r\n\\\r\n\n1.  Click\n    the
         title of your app. ([Show me where](#triggercallout=titleCallout))\\\r\n2.
-        \ 2.\n    Change the \"text\" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\\\r\n3.
-        \ 3.\n    Scroll down the menu to change the color of your title ([Show me
-        where](#triggercallout=changeTextColor))\\\r\n    \\\r\n    Once\n    you
-        like the look of your title hit \"Run\" once to make sure it's looking\n    good.
-        Then hit \"Finish\" to move on!\\\r\n    \\\r\n    ![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif)\n
+        \ 2\\.\n    Change the \"text\" to pick whatever name you like! ([Show me
+        where](#triggercallout=designMenu))\\\r\n3.  3\\.\n    Scroll down the menu
+        to change the color of your title ([Show me where](#triggercallout=changeTextColor))\\\r\n
+        \   \\\r\n    Once\n    you like the look of your title hit \"Run\" once to
+        make sure it's looking\n    good. Then hit \"Finish\" to move on!\\\r\n    \\\r\n
+        \   ![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif)\n
         \   Click here to see all three steps in a GIF"
       AppLab Intro 2 - Edit startScreen2: "Nice work! Time to\nstart filling in your
         story.\\\r\n\\\r\n\n1.  Click the story text on this screen.\n    ([Show me
@@ -651,23 +652,23 @@ mk:
       AppLab Intro 2 - add Button: "Now you have two screens,\nbut no way to get between
         them. Time to start adding buttons!\\\r\n\\\r\n\n1.  Use\n    the screen selector
         to go back to your \"startScreen\" ([Show me where](#triggercallout=selector))\\\r\n2.
-        \ 2.\n    Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\\r\n3.
-        \ 3.\n    Give your button a clear \"id\" that describes what it does ([Show
-        me where](#triggercallout=changeButtonID))\\\r\n4.  4.\n    Change the \"text\"
-        of your button to describe where it will take the user.\\\r\n5.  5.\n    Personalize
+        \ 2\\.\n    Drag a button onto the screen ([Show me where](#triggercallout=dragButton))\\\r\n3.
+        \ 3\\.\n    Give your button a clear \"id\" that describes what it does ([Show
+        me where](#triggercallout=changeButtonID))\\\r\n4.  4\\.\n    Change the \"text\"
+        of your button to describe where it will take the user.\\\r\n5.  5\\.\n    Personalize
         your button's other properties like \"text color\" or \"background\n    color\".\\\r\n
         \   \\\r\n    Click \"Run\" then \"Finish\" to move on and start writing\n
         \   the code that will make your button work\\\r\n    \\\r\n    ![expandable](https://images.code.org/43f2678e4748a1fa09556f75cad65e97-image-1505766882756.gif)\n
         \   Click to see a GIF of all steps"
       AppLab Intro 2 - add images: "You now know everything\nyou need to make a simple
         Choose Your Own Adventure app, but you can add so\nmuch more! If you want
-        to add images to your screen it's easy!\\\r\n\\\r\n1.\nIn another tab in your
-        browser go online and find an image you want to use\\\r\n2.\nRight click the
-        image and save its URL (usually \"Copy link address\" or \"Copy\nimage URL\")\\\r\n\n3.
-        \ Back in App Lab go to Design Mode\\\r\n4.  Drag an \"image\"\n    element
-        onto your screen\\\r\n5.  Paste the URL you copied into the \"image\"\n    property\\\r\n
-        \   \\\r\n    \"Run\" your app once to test it. Then hit \"Finish\" to move\n
-        \   to learn to add sounds.\\\r\n    \\\r\n    ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)\n
+        to add images to your screen it's easy!\\\r\n\\\r\n1\\.\nIn another tab in
+        your browser go online and find an image you want to use\\\r\n2\\.\nRight
+        click the image and save its URL (usually \"Copy link address\" or \"Copy\nimage
+        URL\")\\\r\n\n3.  Back in App Lab go to Design Mode\\\r\n4.  Drag an \"image\"\n
+        \   element onto your screen\\\r\n5.  Paste the URL you copied into the \"image\"\n
+        \   property\\\r\n    \\\r\n    \"Run\" your app once to test it. Then hit
+        \"Finish\" to move\n    to learn to add sounds.\\\r\n    \\\r\n    ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)\n
         \   Click to see GIF of all steps"
       AppLab Intro 2 - add more buttons 2: "Time to add a second\nbutton and write
         the code to make it work.\\\r\n\\\r\n\n1.  Drag a second button\n    onto
@@ -681,8 +682,8 @@ mk:
         \   Click to see a GIF of all steps"
       AppLab Intro 2 - add more buttons: "If this is going to\nbe a real Choose Your
         Own Adventure, you're need to add some more choices!\nStart by adding a screen
-        for the second choice your player could make.\\\r\n\\\r\n1.\nUse the screen
-        selector to add a new screen. Give it a clear \"id\".\\\r\n2.\nSet the \"background
+        for the second choice your player could make.\\\r\n\\\r\n1\\.\nUse the screen
+        selector to add a new screen. Give it a clear \"id\".\\\r\n2\\.\nSet the \"background
         color\" of your screen\\\r\n\n3.  Add a \"Text Area\" to your\n    screen
         describing what happens on it.\\\r\n    \\\r\n    Click \"Run\" then \"Finish\"\n
         \   to move on. You'll add another button and write the code to make it work.\\\r\n
@@ -1224,9 +1225,9 @@ mk:
         for your Player, Target, and Danger. Feel free to play with all of the variables
         at this point to make your game look like you'd like it to. Click "Finish"
         when you're done.
-      Boolean Expressions: "### Points to pay attention to:\\\r\n\n\\\r\n1.\nWhat's
+      Boolean Expressions: "### Points to pay attention to:\\\r\n\n\\\r\n1\\.\nWhat's
         a _Boolean Expression?_\\\r\n\n2.  Why is it called a \"Boolean\"?\\\r\n3.
-        \ 3.\n    Is this a legal expression?  `10 > 25`?"
+        \ 3\\.\n    Is this a legal expression?  `10 > 25`?"
       Brad Spooky House Copy: "Freeplay: Here are the functions\nyou've written, and
         some more for you to play with. Play with the pen width\nto see how different
         your drawings look!\\\r\n\\\r"
@@ -5709,18 +5710,19 @@ mk:
       CSD U3 Counters expressions: "# Expressions\\\r\n\n\\\r\nWe're\ngoing to start
         learning about **expressions** and how to use them in programs.\nHere are
         two expressions, a short one and a longer one.\\\r\n\\\r\n`1 + 2`\\\r\n\\\r\n\\`(1000\n\n-
-        \  400.    / (3 \\* 20)\\`\\\r\n                                \\\r\n                                These
-        expressions have two important components:\\\r\n                                \\\r\n-
-        \  \\*\n    **values:** numbers, text, or information in your program \\\r\n-
-        \  **operators:**\n    commands telling the computer to perform an action
-        with those value `+`, `-`,\n    `*`, `/`\\\r\n    \\\r\n    Don't worry if
-        this is a lot of vocabulary all at once. Try\n    using some expressions first
-        to get a feel for how they work.\\\r\n    \\\r\n    # Do\n    This: \\\r\n
-        \   \\\r\n    This program draws a rectangle using 4 separate expressions.\n
-        \   \\\r\n    \\\r\n-   **Run the program** to see what happens\\\r\n-   **Change
-        some of the\n    values and operators in the 4 expressions**. How does it
-        change the rectangle?\\\r\n-   \\*\n    Move on once you've changed a few
-        expressions. It's fine if your program\n    didn't run properly."
+        \  400.    / (3 \\* 20)\\`\\\r\n                                    \\\r\n
+        \                                   These expressions have two important components:\\\r\n
+        \                                   \\\r\n-   \\*\n    **values:** numbers,
+        text, or information in your program \\\r\n-   **operators:**\n    commands
+        telling the computer to perform an action with those value `+`, `-`,\n    `*`,
+        `/`\\\r\n    \\\r\n    Don't worry if this is a lot of vocabulary all at once.
+        Try\n    using some expressions first to get a feel for how they work.\\\r\n
+        \   \\\r\n    # Do\n    This: \\\r\n    \\\r\n    This program draws a rectangle
+        using 4 separate expressions.\n    \\\r\n    \\\r\n-   **Run the program**
+        to see what happens\\\r\n-   **Change some of the\n    values and operators
+        in the 4 expressions**. How does it change the rectangle?\\\r\n-   \\*\n    Move
+        on once you've changed a few expressions. It's fine if your program\n    didn't
+        run properly."
       CSD U3 Counters long expressions: "# Expressions Evaluate\n\nto a Single Value\\\r\n\\\r\nAs
         you probably just noticed expressions can be used\nin places where you might
         normally use a number. That's because your computer\ncan **evaluate or calculate
@@ -5739,7 +5741,7 @@ mk:
         * randomNumber(1,5)`\\\r\n\\\r\nis a perfectly valid\nexpression. This is
         because **`randomNumber` will generate a single random\nvalue** that can then
         be used in the expression just like a number.\\\r\n\\\r\n\n# \n\nDo This\\\r\n\\\r\nThis
-        program displays random multiples of 10 between 10 and\n50\\.\\\r\n\\\r\n\n-
+        program displays random multiples of 10 between 10 and\n50.\\\r\n\\\r\n\n-
         \  **Run the program** to see how it works\\\r\n-   **Change the program**\n
         \   so that it displays **random multiples of 10 between 10 and 100**.\\\r\n-
         \  Change\n    the expression with a random number in it more if you like.
@@ -6390,13 +6392,13 @@ mk:
         a few times and answer the following questions:\\\r\n\\\r\n\n1.  Which\n    elements
         appear to use drawing commands?\\\r\n    \\\r\n2.  Which elements appear to\n
         \   be Sprites?\\\r\n    \\\r\n3.  For each Sprite, which properties are being
-        updated?\\\r\n    \\\r\n4.  4)\n    Where do you see conditionals being used?\\\r\n
-        \   \\\r\n5.  Are there elements that\n    you don’t understand?"
+        updated?\\\r\n    \\\r\n4.  4\\)\n    Where do you see conditionals being
+        used?\\\r\n    \\\r\n5.  Are there elements that\n    you don’t understand?"
       CSD U3 Interactive Card Exemplar_2018: "# Example Project\\\r\n\n\\\r\nRun\nthe
         program a few times and answer the following questions:\\\r\n\\\r\n\n1.  Which\n
         \   elements appear to use drawing commands?\\\r\n    \\\r\n2.  Which elements
         appear to\n    be Sprites?\\\r\n    \\\r\n3.  For each Sprite, which properties
-        are being updated?\\\r\n    \\\r\n4.  4)\n    Where do you see conditionals
+        are being updated?\\\r\n    \\\r\n4.  4\\)\n    Where do you see conditionals
         being used?\\\r\n    \\\r\n5.  Are there elements that\n    you don’t understand?"
       CSD U3 Interactive Card Final: "# Finishing Touches\\\r\n\nNow's\nyour chance
         to put some finishing touches on your card. We've included some\nnew blocks
@@ -8162,8 +8164,8 @@ mk:
         \  Use\n    the `createSprite()` block to create a new sprite. Make sure to
         give it a\n    descriptive name such as **coin**.\\\r\n-   Use the `sprite.x`
         and `sprite.y`\n    properties of the sprite to give it a random X and Y position
-        between 0 and\n    400\\.\\\r\n-   In the Animation Tab there is already a
-        coin animation. Use the\n    `sprite.setAnimation()` block to give your sprite
+        between 0 and\n    400.\\\r\n-   In the Animation Tab there is already a coin
+        animation. Use the\n    `sprite.setAnimation()` block to give your sprite
         this animation.\\\r\n    \\\r\n    Test\n    your code before moving on. When
         you run the game, you should see a coin sprite\n    appear somewhere randomly
         on the screen."
@@ -8177,7 +8179,7 @@ mk:
         the `createSprite()` block to create a new sprite. Make sure to give it\na
         descriptive name such as **coin**.\\\r\n\n-   Use the `sprite.x` and `sprite.y`\n
         \   properties of the sprite to give it a random X and Y position between
-        0 and\n    400\\.\\\r\n-   In the Animation Tab there is already a coin animation.
+        0 and\n    400.\\\r\n-   In the Animation Tab there is already a coin animation.
         Use the\n    `sprite.setAnimation()` block to give your sprite this animation.\\\r\n
         \   \\\r\n    Test\n    your code before moving on. When you run the game,
         you should see a coin sprite\n    appear somewhere randomly on the screen."
@@ -8356,13 +8358,13 @@ mk:
         fall down, but once it touches the ground it should stop.\nThe `if/else` block
         has already been provided for you.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\nLook\nat
         the `if/else` block that checks whether the horse's position is less than\n\n325.
-        \   [Show me where](#triggercallout=code_triggered1)\\\r\n                            \\\r\n326.
-        \   If the horse's\n                            y position is less than 325,
-        use a counter pattern to change the horse's\n                            velocityY
+        \   [Show me where](#triggercallout=code_triggered1)\\\r\n                                \\\r\n326.
+        \   If the horse's\n                                y position is less than
+        325, use a counter pattern to change the horse's\n                                velocityY
         by 0.1 on each tick of the draw loop. \\\r\n327.    If the horse's y position\n
-        \                           is not less than 325, use the `velocityY` to change
-        its vertical velocity\n                            to zero. [Show me where](#triggercallout=code_triggered2)\\\r\n
-        \                           \\\r"
+        \                               is not less than 325, use the `velocityY`
+        to change its vertical velocity\n                                to zero.
+        [Show me where](#triggercallout=code_triggered2)\\\r\n                                \\\r"
       CSD U3 abstraction jump-2018: "# Jumping\\\r\n\n\\\r\nYou now\nhave all the
         blocks you need to make your sprite jump!  The sprite should\njump up if it's
         on the ground and the user presses the \"up\" key, then should\nstart moving
@@ -10553,8 +10555,8 @@ mk:
         find the three world records encoded in the binary string below.  The\nanswers
         are in order in the string.\\\r\n\\\r\n\n1.  Most canned drinks opened by\n
         \   a parrot in one minute.\\\r\n2.  Most ice cream scoops balanced on a cone.\\\r\n3.
-        \ 3.\n    Most number of people lifted and thrown in two minutes.\\\r\n    \\\r\n
-        \   ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n
+        \ 3\\.\n    Most number of people lifted and thrown in two minutes.\\\r\n
+        \   \\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n
         \   \\\r\n    # \n    Do This\\\r\n4.  Try to decode the three numbers from
         a the binary string\\\r\n5.  \\*\n    Discuss your answers with your partner.\\\r\n
         \   -   Was there any other information\n        you need to be certain your
@@ -11793,11 +11795,11 @@ mk:
         \   the first thing in an html document because it notifies the computer that\n
         \   this is an html document and to interpret it as such. \\<!DOCTYPE html>\n
         \   is not technically a tag but instead an instruction to the web browser.
-        \\\r\n    \\\r\n2.  2.\n    Wrap all the content of the file in an HTML element
-        using the \\<html>\n    tag. The \\<html> tag notifies the computer where
-        the html starts and\n    ends. The  \\<html> tag is the container for all
-        other HTML elements (except\n    for the \\<!DOCTYPE html> tag).  So you need
-        an opening and closing \\<html>\n    tag.\\\r\n    \\\r\n    # Do This\\\r\n
+        \\\r\n    \\\r\n2.  2\\.\n    Wrap all the content of the file in an HTML
+        element using the \\<html>\n    tag. The \\<html> tag notifies the computer
+        where the html starts and\n    ends. The  \\<html> tag is the container for
+        all other HTML elements (except\n    for the \\<!DOCTYPE html> tag).  So you
+        need an opening and closing \\<html>\n    tag.\\\r\n    \\\r\n    # Do This\\\r\n
         \   This is your Hobbies page from the last lesson.\\\r\n    \\\r\n3.  \\*\n
         \   Add \\<!DOCTYPE html> at the top of your index.html file\\\r\n4.  Add
         \\<html>\n    right underneath \\<!DOCTYPE html> and add a closing \\</html>
@@ -12123,10 +12125,10 @@ mk:
         level meets\nthe requirements for consistent web pages. To use the validator,
         it’s important\nto work on it one error at a time.\\\r\n\\\r\n\n1.  Open up
         the <a href=\"https://validator.w3.org/\"\n    target=\"_blank\">W3 validator</a>.\\\r\n2.
-        \ Click **\"Validate by Direct Input\"**\\\r\n    3\\.\\*\\*\n    Copy and
-        paste the contents of index.html\\*\\* file into the box.\\\r\n3.  Click\n
-        \   **“Check”**\\\r\n4.  If there is an error message click the top error
-        below:\\\r\n    \\\r\n    \\\\t\\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">
+        \ Click **\"Validate by Direct Input\"**\\\r\n    3.\\*\\*\n    Copy and paste
+        the contents of index.html\\*\\* file into the box.\\\r\n3.  Click\n    **“Check”**\\\r\n4.
+        \ If there is an error message click the top error below:\\\r\n    \\\r\n
+        \   \\\\t\\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">
         Unable to Determine\n    Parse Mode! </a>\\\r\n    \\\\t\\* <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/4\">\n
         \   No DOCTYPE found, and unknown root element. Aborting validation. </a>\\\r\n
         \   \\*\n    <a href=\"https://studio.code.org/s/csd2/stage/5/puzzle/5\">
@@ -13764,7 +13766,7 @@ mk:
         max-width: 200px;\">\\\r\nLet's look back at the quiz\napp example that we
         talked about earlier in this lesson. Recall that we proposed\na single page
         that could serve three purposes:\\\r\n\\\r\n\n1.  Display the question\\\r\n2.
-        \ 2.\n    Show if the question was answered correctly\\\r\n3.  Show if the
+        \ 2\\.\n    Show if the question was answered correctly\\\r\n3.  Show if the
         question was\n    answered incorrectly\\\r\n    \\\r\n    # Do This\\\r\n
         \   \\\r\n    We've already provided the screen\n    for a single question.
         Before worrying about any code, you just need to set\n    this up to ask a
@@ -14565,10 +14567,10 @@ mk:
         press the left button to update the program when you toggle the\n    switch."
       CSDU6 AppLab Input 1: "# Input in App Lab\\\r\n\n\\\r\n_You\ndon't need to make
         any changes to the code here_\\\r\n\\\r\nTake a minute to\nread through the
-        code and run the program. Discuss with a partner:\\\r\n\\\r\n1.\nWhat is the
-        source of input?\\\r\n\n2.  Where and how does the program check for\n    input?\\\r\n3.
-        \ What does the program do when it gets the right input?\\\r\n4.  3.\n    What
-        is the program doing when there is no input?"
+        code and run the program. Discuss with a partner:\\\r\n\\\r\n1\\.\nWhat is
+        the source of input?\\\r\n\n2.  Where and how does the program check for\n
+        \   input?\\\r\n3.  What does the program do when it gets the right input?\\\r\n4.
+        \ 3\\.\n    What is the program doing when there is no input?"
       CSDU6 Circuit Playground Test: "# Test Your Board\\\r\n\n\\\r\nThis\nlevel is
         just a quick test to make sure your board is working. To run this\ntest, do
         the following:\\\r\n\\\r\n\n1.  Plug your board into your computer with\n
@@ -14576,20 +14578,20 @@ mk:
         a Success\n    or Error screen to pop up\\\r\n4.  If your test was successful,
         move on to the\n    next level. If not, try some of the troubleshooting steps\\\r\n
         \   \\\r\n    ## Troubleshooting\\\r\n    \\\r\n    There\n    are a number
-        of things that could prevent your test from passing.\\\r\n    \\\r\n5.  1.\n
+        of things that could prevent your test from passing.\\\r\n    \\\r\n5.  1\\.\n
         \   Try refreshing the page and running the test again (you should refresh
         the\n    page for each of the following ideas as well)\\\r\n6.  Try connecting
         your board\n    to a different USB port\\\r\n7.  Try a different USB cable.
         Some USB cables can\n    only be used for charging, so make sure your cable
-        supports data transfer!\\\r\n8.  4.\n    Try a different board\\\r\n9.  Go
+        supports data transfer!\\\r\n8.  4\\.\n    Try a different board\\\r\n9.  Go
         to [studio.code.org/maker/setup](/maker/setup)\n    to run a more detailed
         test"
       CSDU6 GameLab Input 1: "# Input in Game Lab\\\r\n\n\\\r\n_You\ndon't need to
         make any changes to the code here_\\\r\n\\\r\nTake a minute to\nread through
-        the code and run the program. Discuss with a partner:\\\r\n\\\r\n1.\nWhat
+        the code and run the program. Discuss with a partner:\\\r\n\\\r\n1\\.\nWhat
         is the source of input?\\\r\n\n2.  Where and how does the program check for\n
         \   input?\\\r\n3.  What does the program do when it gets the correct input?\\\r\n4.
-        \ 3.\n    What is the program doing when there is no input?"
+        \ 3\\.\n    What is the program doing when there is no input?"
       CSDU6 LED alarm silent: "# Silent Alarm\\\r\n\n\\\r\nHere's\nthe alarm app that
         you started in the last lesson. Right now it doesn't do\nmuch, so let's see
         if we can make it more useful by hooking it up to your\nboard. When the alarm
@@ -15253,7 +15255,7 @@ mk:
       CSPU5 Debugging Overlapping Objects and Screen Events: "# \n\nUse console.log
         to Test Overlapping Objects and the Screen\\\r\n\\\r\nThere are\ntwo goals
         here:\\\r\n\\\r\n\n1.  Practice inserting your own console.log statements.\\\r\n2.
-        \ 2.\n    Investigate how the screen captures events (it's different).\\\r\n
+        \ 2\\.\n    Investigate how the screen captures events (it's different).\\\r\n
         \   \\\r\n    ## Do\n    This:\\\r\n    <img src=\"https://images.code.org/4100fcc7062f97ce8440003b3a17cd25-image-1477363054051.png\"\n
         \   style=\"float: right\">\\\r\n    \\\r\n3.  **Add `console.log` statements
         to each of\n    the 3 event handlers** we started you out with.\\\r\n4.  Make
@@ -15267,14 +15269,14 @@ mk:
         \ When you click on an non-overlapping\n    part of some object what gets
         triggered?\\\r\n8.  When does a \"click\" on the\n    \"screen\" get triggered?\\\r\n
         \   \\\r\n    \\\r\n    <details><summary>Answers: [click here]</summary>\r\n
-        \   <br><br>\r\n9.  1.\n    When you click on a location where two objects
+        \   <br><br>\r\n9.  1\\.\n    When you click on a location where two objects
         are overlapping, which event(s)\n    fire(s)?\\\r\n    <br>\\\r\n    <li><em>
         The event-handler for object that is on top gets\n    triggered.  The object
         that is underneath is essentially blocked from being\n    clicked in the overlapping
         portion</em></li>\r\n    <br><br>\r\n10. When you click\n    on an non-overlapping
         part of some object what gets triggered?\\\r\n    <li><em>The\n    event-handler
         for the object gets triggered as you might expect</em></li>\r\n    <br><br>\r\n11.
-        3.\n    When does a \"click\" on the \"screen\" get triggered?\\\r\n    <li><em>Always.\n
+        3\\.\n    When does a \"click\" on the \"screen\" get triggered?\\\r\n    <li><em>Always.\n
         \   Events that occur on the screen cannot be blocked by other objects.  If
         you\n    set up an event listener for the screen it will capture EVERY event
         of that\n    type, no matter what other UI elements are on the screen.  This
@@ -15361,7 +15363,7 @@ mk:
         \  Will any of them trigger?  Which one(s)?\\\r\n-   What order will these\n
         \   events be triggered in?\\\r\n    \\\r\n    **You try it**:\\\r\n-   Study
         the code and **make\n    Prediction**\\\r\n-   **Run** the program\\\r\n-
-        \  **Were you right?** What's unexpected?\\\r\n-   4.\n    **Keep testing**
+        \  **Were you right?** What's unexpected?\\\r\n-   4\\.\n    **Keep testing**
         until you see what's happening.\\\r\n    \\\r"
       CSPU5 console.log in event v. global: "# Predict what\n\nwill happen\\\r\n\\\r\nWe've
         added some `console.log` statements _both_ in event\nhandlers as well as just
@@ -16322,7 +16324,7 @@ mk:
         they have different purposes which are separate. \\\r\n\\\r\n\\*\\*\nNote:
         \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\r\n\\\r\n\n#
         \n\nDo This:\\\r\n\\\r\n\n-   **Add a dropdown** to take in the user's guess
-        from 1 to\n    6\\.\\\r\n    \\\r\n-   **Add a set of `if` statements to check
+        from 1 to\n    6.\\\r\n    \\\r\n-   **Add a set of `if` statements to check
         if the dice roll number\n    is equal to the user guess.** Put this set of
         `if` statements after your set\n    of `if` statements for the dice image.
         It should be completely separate from\n    the other set of `if` statements.
@@ -17618,7 +17620,7 @@ mk:
         in the \\*Debug Console_ \\*_below the workspace instead of the\n    app window.
         We will discuss the \\*Debug Console_ on the next level."
       CSPU5_U3-Design Mode-Image: "# Testing Overlapping objects\n\nand the Screen
-        with Console.log\\\r\n\\\r\nThere are two goals here:\\\r\n\\\r\n1.\nPractice
+        with Console.log\\\r\n\\\r\nThere are two goals here:\\\r\n\\\r\n1\\.\nPractice
         inserting your own console.log statements.\\\r\n\n2.  Investigate how\n    the
         screen captures events (it's different).\\\r\n    \\\r\n    ## Do This:\\\r\n
         \   \\\r\n3.  \\*\n    Add `console.log` statements to each of the 3 event
@@ -17627,7 +17629,7 @@ mk:
         when.\\\r\n        \\\r\n4.  **Run** the program\\\r\n5.  **Click\n    on
         the overlapping objects** both the parts that overlap and the parts that\n
         \   don't.\\\r\n6.  **\\\r\n    \\\r\n    \\*\\*Investigate until you can
-        answer the questions:**\\\r\n7.  1.\n    When you click on a location where
+        answer the questions:**\\\r\n7.  1\\.\n    When you click on a location where
         two objects are overlapping, which event(s)\n    fire(s)?\\\r\n8.  When you
         click on an non-overlapping part of some object what\n    gets triggered?\\\r\n9.
         \ When does a \"click\" on the \"screen\" get triggered?\\\r\n    \\\r\n    \\\r\n
@@ -17636,9 +17638,9 @@ mk:
         event(s) fire(s)?\\\r\n    <br>\\\r\n    <li> The event-handler\n    for object
         that is on top gets triggered.  The object that is underneath is\n    essentially
         blocked from being clicked in the overlapping portion</li>\r\n    <br><br>\r\n11.
-        2.\n    When you click on an non-overlapping part of some object what gets
+        2\\.\n    When you click on an non-overlapping part of some object what gets
         triggered?\\\r\n    <li>The\n    event-handler for the object gets triggered
-        as you might expect</li>\r\n    <br><br>\r\n12. 3.\n    When does a \"click\"
+        as you might expect</li>\r\n    <br><br>\r\n12. 3\\.\n    When does a \"click\"
         on the \"screen\" get triggered?\\\r\n    <li>Always. Events\n    that occur
         on the screen cannot be blocked by other objects.  If you set up\n    an event
         listener for the screen it will capture EVERY event of that type,\n    no
@@ -17710,11 +17712,11 @@ mk:
         digits and letters.\r\n    <li>  can contain\n    hyphens (\"-\"), underscores
         (\"_\"), colons (\":\"), or periods (\".\").\r\n    \r\n    </details>\r"
       CSPU5_U3L13 - Debugging 1: "# Debugging Event-Driven Programs:\n\nIDs\\\r\n\\\r\nTry
-        another one! -- This one is trickier, but very common.\\\r\n\\\r\n1.\n**Run
-        the program** and inspect the messages in the Debug Console for clues.\\\r\n2.\n**Investigate**
-        - track down what the root of the problem might be.\\\r\n3.\n**Fix it** the
-        program and correct the errors so that it works as intended.\\\r\n4.\n**Run
-        the program** and verify that both buttons have the intended functionality.\\\r\n5.\n**Repeat
+        another one! -- This one is trickier, but very common.\\\r\n\\\r\n1\\.\n**Run
+        the program** and inspect the messages in the Debug Console for clues.\\\r\n2\\.\n**Investigate**
+        - track down what the root of the problem might be.\\\r\n3\\.\n**Fix it**
+        the program and correct the errors so that it works as intended.\\\r\n4\\.\n**Run
+        the program** and verify that both buttons have the intended functionality.\\\r\n5\\.\n**Repeat
         as necessary** until the program works as intended\\\r\n\\\r\n\n<details><summary>Hint?\n[click
         here]</summary>\r\n\r\n<li>Remember: IDs are **case-sensitive**!!!</li>\r\n<li>The\nerror
         is with the id: **left**[**B/b**]**tn**</li>\r\n</details>\r"
@@ -19113,12 +19115,12 @@ mk:
       CSPU5_predict_applab_onEventWithWrongID: "# Debugging\n\nEvent-Driven Programs:
         IDs\\\r\n\\\r\n**You Try it: Checking IDs** -- Your first\ndebugging task
         will be to verify that the button IDs match the event-handlers.  You'll\nalso
-        see error messages in the **\"Debug Console\"**\\\r\n\\\r\n![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\\\r\n\\\r\n1.\n**Run
+        see error messages in the **\"Debug Console\"**\\\r\n\\\r\n![](https://images.code.org/6bb61c1ab1af5c0ce84a8cc4dc9b95cd-image-1476970435861.png)\\\r\n\\\r\n1\\.\n**Run
         the program** and inspect the error messages in the Debug Console.\\\r\n  \\*\n**NOTE:**
         an error message _only_ indicates where the computer ran into trouble.  It\ndoesn't
         tell you the root cause of the problem, necessarily.\\\r\n\n2.  **Investigate**\n
         \   \\-- Use the **error message as a clue** to investigate the possible problem.\\\r\n3.
-        \ 3.\n    **Fix it** -- Make a change that you think will fix the problem.\\\r\n4.
+        \ 3\\.\n    **Fix it** -- Make a change that you think will fix the problem.\\\r\n4.
         \ **Run\n    the program** and verify that not only are there no error messages
         but the\n    program works as intended (turtle moves forward on button click).\\\r\n5.
         \ **Didn't\n    work?** - repeat the steps above.  And stick with it!  You'll
@@ -19150,7 +19152,7 @@ mk:
         you know the pattern try it out.  **Add a 2nd button to the screen that\nturns
         the turtle to the left when clicked.**  The finished product should\nlook
         similar to the image shown here.\\\r\n\\\r\nRemember the steps:\\\r\n\\\r\n
-        \ 1.\n**Design Mode**: drag another button onto the screen\\\r\n\n2.  Switch
+        \ 1\\.\n**Design Mode**: drag another button onto the screen\\\r\n\n2.  Switch
         to Code\n    Mode: **add an onEvent block** to the code\\\r\n3.  **Add code**
         inside the\n    function to make the turtle turn left\\\r\n4.  Run. Test.
         Debug\\\r\n    \\\r\n    <details><summary>Need\n    Help? [Click Here]</summary>\r\n
@@ -19793,7 +19795,7 @@ mk:
         \   will reach their flag first?"
       Course 4 Play Labs For Loops 8a: "To finish our game,\nwe need to bring back
         the `increment` variable!    Let's tie it to the level\nof the game.\\\r\n\\\r\n\n1.
-        \ Keep track of the number of times The Wizard is clicked.  \\\r\n2.  2)\n
+        \ Keep track of the number of times The Wizard is clicked.  \\\r\n2.  2\\)\n
         \   If The Wizard is clicked at least 10 times before Dog counts to 30, raise\n
         \   `increment` by 1 and start again.  \\\r\n3.  If The Wizard does not get
         clicked\n    at least 10 times, the game is over.  "
@@ -20744,12 +20746,12 @@ mk:
       GameLab Livecode Demo 2: "# Move With Keys\\\r\n\n\\\r\nNow\nthat we've got
         a sprite on the screen, let's make it respond to keyboard\ninput.\\\r\n\\\r\n\n1.
         \ Read through the blocks at lines 14 and 21 - what is going\n    on?\\\r\n2.
-        \ Add two more conditionals to respond to the up and left keys\\\r\n3.  3.\n
+        \ Add two more conditionals to respond to the up and left keys\\\r\n3.  3\\.\n
         \   Experiment with some of the additional provided blocks, such as `sprite.scale`\n
         \   and `sprite.rotation`\\\r"
       GameLab Livecode Demo 3: "# Sprite Interactions\\\r\n\n\\\r\nAt\nthis point
         there's one sprite on screen, and we can move it around with the\narrow keys.
-        Now let's add a second sprite and get the two interacting.\\\r\n\\\r\n1.\nAdd
+        Now let's add a second sprite and get the two interacting.\\\r\n\\\r\n1\\.\nAdd
         a new animation in the animation tab\\\r\n\n2.  Create a new sprite called\n
         \   \"target\" and set its animation\\\r\n3.  Use the `sprite.isTouching()`
         block\n    in a conditional to make the target sprite react to the player
@@ -20813,7 +20815,7 @@ mk:
         with or without a computer. For example, the collection\nof steps to make
         a peanut butter and jelly sandwich is an algorithm.\n\n(Course\n1: Lessons
         1, 6 | Course 2: Lessons 1, 2 | Course 3: Lessons 1, 10)\n\nbinary\n\nA\nway
-        of representing information using only two options.\n\n(Course 2: Lesson\n14)\n\nBlockly\n\nThe
+        of representing information using only two options.\n\n(Course 2: Lesson\n14\\)\n\nBlockly\n\nThe
         visual programming language used in Code.org's online\nlearning system for
         K-5 students. (Course 1: Lesson 3)\n\nbug\n\nAn error\nin a program that prevents
         the program from running as expected. (Course 2:\nLesson 9)\n\ncode\n\nOne
@@ -20828,24 +20830,24 @@ mk:
         field in which people use the power\nof computers to solve big problems. (Course
         1: Lesson 2)\n\nconditionals\n\nStatements\nthat only run under certain conditions
         or situations. (Course 2: Lesson 12)\n\ncrowdsourcing\n\nGetting\nhelp from
-        a large group of people to finish something faster. (Course 3: Lesson\n19)\n\ndata\n\nQuantities,
+        a large group of people to finish something faster. (Course 3: Lesson\n19\\)\n\ndata\n\nQuantities,
         characters, or symbols that are the inputs and\noutputs of computer programs.
         (Course 2: Lesson 14 | Course 3: Lessons 1)\n\ndebugging\n\nFinding\nand fixing
         errors in programs. (Course 2: Lesson 9)\n\ndecompose\n\nBreak\na problem
         down into smaller pieces. (Course 3: Lesson 1)\n\ndigital citizen\n\nSomeone\nwho
         acts safely, responsibly, and respectfully online. (Course 3: Lesson 20)\n\ndigital\nfootprint\n\nThe
-        information about someone on the Internet. (Course 2: Lesson\n18)\n\nDNS (domain
-        name service)\n\nThe service that translates URLs to IP\naddresses. (Course
-        3: Lesson 18)\n\nDSL/cable\n\nA method of sending information\nusing telephone
-        or television cables. (Course 3: Lesson 18)\n\nevent\n\nAn\naction that causes
-        something to happen. (Course 1: Lesson 15 | Course 2: Lesson\n15)\n\nevent-handler\n\nAn
+        information about someone on the Internet. (Course 2: Lesson\n18\\)\n\nDNS
+        (domain name service)\n\nThe service that translates URLs to IP\naddresses.
+        (Course 3: Lesson 18)\n\nDSL/cable\n\nA method of sending information\nusing
+        telephone or television cables. (Course 3: Lesson 18)\n\nevent\n\nAn\naction
+        that causes something to happen. (Course 1: Lesson 15 | Course 2: Lesson\n15\\)\n\nevent-handler\n\nAn
         action or event that is being constantly monitored\nfor by the computer. When
         you write code for the computer to perform after\nthat an action occurs, that
         code, the event-handler, will run every time the\naction is performed without
         having to put the commands inside of a loop. Many\nevent-handlers are human-initiated.
         For example: an event handler might respond\nwhen the user clicks the mouse
         by making the bird flap its wings. \"When the\nmouse is clicked\" is an event-handler.
-        (Course 1: Lesson 15 | Course 2: Lesson\n15)\n\nfiber optic cable\n\nA connection
+        (Course 1: Lesson 15 | Course 2: Lesson\n15\\)\n\nfiber optic cable\n\nA connection
         that uses light to transmit information.\n(Course 3: Lesson 18)\n\nfunction\n\nA
         piece of code that you can easily call\nover and over again. Functions are
         sometimes called 'procedures.' A function\ndefinition is a segment of code
@@ -21068,7 +21070,7 @@ mk:
         ELSE clause cannot exist on its own.\\\r\n-   With an else clause you are
         _guaranteeing_\n    that one of two portions of code will run.\\\r\n    \\\r"
       'Introduction to Conditionals: Boolean Expressions': "### \n\nPoints to pay
-        attention to:\\\r\n\\\r\n\n1.  What's a _Boolean Expression?_\\\r\n2.  2.\n
+        attention to:\\\r\n\\\r\n\n1.  What's a _Boolean Expression?_\\\r\n2.  2\\.\n
         \   Why is it called a \"Boolean\"?\\\r\n3.  Is this a legal expression?  `10
         > 25`?"
       'Introduction to Conditionals: Compound Boolean Expressions': "### \n\nPoints
@@ -22723,7 +22725,7 @@ mk:
         in the pictures on the right"
       Room Escape Workshop - 3: "# Hide the Code\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
         \ In Design Mode Click on the white\n    square where it says \"CODE\". Change
-        it to show a secret code of your choice\\\r\n2.  2.\n    Drag the picture
+        it to show a secret code of your choice\\\r\n2.  2\\.\n    Drag the picture
         down to cover the secret code\\\r\n    \\\r\n    ![](<>)"
       Room Escape Workshop - 4: "# Setting Up the Safe\\\r\n\n\\\r\nYou\nhave generated
         a secret code and made it so users can navigate to the second\nroom. Lets
@@ -23059,7 +23061,7 @@ mk:
         `dot()` command.\\\r\n\\\r\n**Make a \"snowman\"**\\\r\n\\\r\n\n1.  Set the
         pen color\n    to some new color (we made ours pink)\\\r\n    \\\\t\\* Note:
         even if you just want the\n    default dot color - black - explicitly set
-        the color to black here.\\\r\n    \\\r\n2.  2.\n    Using that color, make
+        the color to black here.\\\r\n    \\\r\n2.  2\\.\n    Using that color, make
         a dot so big that it fills the screen.\\\r\n    \\\r\n3.  In\n    a different
         color, make 3 dots in a row, each one smaller than the next. (We\n    made
         our dots white to look like a snowman)\\\r\n    \\\r\n    You might want to
@@ -23612,7 +23614,7 @@ mk:
         \   presents some subtle challenges. Before you start creating the program,
         you\n    might want to test your ideas on paper for faster brainstorming.
         Work with\n    your partner to discuss possible solutions or strategies. Try
-        more than one.\\\r\n    \\\r\n2.  2.\n    Once you have a solution, **start**
+        more than one.\\\r\n    \\\r\n2.  2\\.\n    Once you have a solution, **start**
         by identifying the subgoals and drag them\n    from the **Goals** tab into
         the workspace. \\\r\n    \\\r\n3.  Then start filling it\n    in with turtle
         blocks, and **testing** it out as you go by adding a few commands,\n    then
@@ -24378,11 +24380,11 @@ mk:
         recover the original image? If so, how? If not, why not?\\\r\n\\\r\n\\\r"
       U1L14 Assessment 1: "Please answer the following 3 questions\nin the space below.\\\r\n\\\r\n\n1.
         \ What are the **dimensions** (width and height)\n    of the **largest image**
-        we can make with the pixelation widget? \\\r\n    \\\r\n2.  2.\n    How many
-        **total bits** would there be in the the largest possible image we\n    could
-        make with the pixelation widget (assuming 1 bit per pixel)?\\\r\n    \\\r\n3.
-        \ 3.\n    How many **total bits** bits would it take to represent **the smallest
-        possible\n    image** (i.e. an image with one pixel)?\\\r"
+        we can make with the pixelation widget? \\\r\n    \\\r\n2.  2\\.\n    How
+        many **total bits** would there be in the the largest possible image we\n
+        \   could make with the pixelation widget (assuming 1 bit per pixel)?\\\r\n
+        \   \\\r\n3.  3\\.\n    How many **total bits** bits would it take to represent
+        **the smallest possible\n    image** (i.e. an image with one pixel)?\\\r"
       U1L16 Reflection Free Response: |-
         Respond to this prompt
         or to another as directed by your teacher.
@@ -26145,7 +26147,7 @@ mk:
         they have different purposes which are separate. \\\r\n\\\r\n\\*\\*\nNote:
         \\*\\* Use the flowchart below to help you figure out the logic of the game.\\\r\n\\\r\n\n#
         \n\nDo This:\\\r\n\\\r\n\n-   **Add a dropdown** to take in the user's guess
-        from 1 to\n    6\\.\\\r\n    \\\r\n-   **Add a set of `if` statements to check
+        from 1 to\n    6.\\\r\n    \\\r\n-   **Add a set of `if` statements to check
         if the dice roll number\n    is equal to the user guess.** Put this set of
         `if` statements after your set\n    of `if` statements for the dice image.
         It should be completely separate from\n    the other set of `if` statements.
@@ -27511,7 +27513,7 @@ mk:
         the one shown below.\\\r\n    \\\r\n    ![](https://images.code.org/5941ceeb27f0ad2d59819c9395d0d89a-image-1447947829448.gif)"
       U3 - Search Terms - 1: "# Printing Specific Records\\\r\n\n\\\r\nSometimes\nwe
         want to search through the records in the table to find certain records.\nFor
-        instance let's search through the records for all the movies made in\n2008\\.\\\r\n\\\r\nloop
+        instance let's search through the records for all the movies made in\n2008.\\\r\n\\\r\nloop
         over element in the array returned from readRecord and print\nout only the
         ones that meet a certain criteria - uses if statement and forshadows\nto search
         terms\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\nThe data from the last level has
@@ -28217,7 +28219,7 @@ mk:
         \   out the value of the variable at different points**\\\r\n    \\\r\n-   Take
         a guess\n    at what the problem is. We will discuss it on the next level."
       U3 - Variables - Debugging with Turtle: "# Practice Debugging\\\r\n\n\\\r\nOn\nthe
-        last two levels you learned two different common variable problems\\\r\n\\\r\n1.\nFoo
+        last two levels you learned two different common variable problems\\\r\n\\\r\n1\\.\nFoo
         vs foo\\\r\n\n2.  \"foo\" vs foo\\\r\n    \\\r\n    On this level there are
         a bunch of\n    errors you will need trace down to get the program to run
         correctly.\\\r\n    \\\r\n    # \n    Do This\\\r\n    \\\r\n    <img src=\"https://images.code.org/256c4c3a041b107b4f2a6a743b963bf5-image-1445204671406.44.21\n
@@ -29261,7 +29263,7 @@ mk:
         `dot()` command.\\\r\n\\\r\n**Make a \"snowman\"**\\\r\n\\\r\n\n1.  Set the
         pen color\n    to some new color (we made ours pink)\\\r\n    \\\\t\\* Note:
         even if you just want the\n    default dot color - black - explicitly set
-        the color to black here.\\\r\n    \\\r\n2.  2.\n    Using that color, make
+        the color to black here.\\\r\n    \\\r\n2.  2\\.\n    Using that color, make
         a dot so big that it fills the screen.\\\r\n    \\\r\n3.  In\n    a different
         color, make 3 dots in a row, each one smaller than the next. (We\n    made
         our dots white to look like a snowman)\\\r\n    \\\r\n    You might want to
@@ -30902,7 +30904,7 @@ mk:
         user clicks the \"Play again\" button, the first screen should reset and\nnot
         show the user's previous text.\\\r\n\\\r\n\n# Do This:\\\r\n\n-   When the
         \"Play\n    again\" button is clicked, **clear the text from each text input**
-        on Screen\n    1\\.\\\r\n-   **Free play:** Add images, or more How-to steps
+        on Screen\n    1.\\\r\n-   **Free play:** Add images, or more How-to steps
         for your Mad Libs,\n    and invite others to play!\\\r\n    \\\r\n    <img
         src=\"https://images.code.org/a49fe3eba4d2d2fb03e45d15aad53dbf-image-1450143105779.16.14\n
         \   Mad Libs play again button.gif\" style=\"width:200px\">\\\r\n    \\\r\n
@@ -31128,7 +31130,7 @@ mk:
         order**, leaving the value as 0 instead.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\n\\*\n**Run
         the program**\\\r\n\n-   **Open the Data Viewer** to see what value `unpredictableBit`\n
         \   was set to.\\\r\n-   **Record** what value `unpredictableBit` was set
-        to (0 or\n    1\\)\\\r\n-   **Repeat the experiment** a few more times (5-10).
+        to (0 or\n    1)\\\r\n-   **Repeat the experiment** a few more times (5-10).
         You'll need to\n    **refresh the Data Viewer** each time by reloading the
         tab it is in.\\\r\n-   \\*\n    **About what percent of the time do the `setKeyValue`
         requests arrive out\n    of order?**"
@@ -31347,10 +31349,10 @@ mk:
         want another variable names foo. This is the result of **scope**.\n\\\r\n\\\r\nThere
         are two types of variables:\\\r\n\\\r\n\n1.  **Gloabl Variables** -\n    Created
         outside of all functions and can be seen and updated by any code.\\\r\n2.
-        \ 1.\n    **Local Variables** - Create inside of a function and can't be seen
-        by any\n    other code. They get created when the function is run, and they
-        get destroyed\n    (seriously) when last line of code in the function has
-        executed. If the function\n    gets run again, then the variable is created
+        \ 1\\.\n    **Local Variables** - Create inside of a function and can't be
+        seen by any\n    other code. They get created when the function is run, and
+        they get destroyed\n    (seriously) when last line of code in the function
+        has executed. If the function\n    gets run again, then the variable is created
         again.\\\r\n    \\\r\n    So if you say `var`\n    in front of a variable
         with the same name as a global variable it actually\n    thinks you want another
         variable named foo just for this function!\\\r\n    \\\r\n    \\\r\n    #
@@ -31963,7 +31965,7 @@ mk:
 
         1.  If you have the letter S in your name, please stand.
 
-        2.  2.
+        2.  2\.
             If you play an instrument or sing in the choir, please put your head down
             on your desk.
 
@@ -31981,7 +31983,7 @@ mk:
         and <samp>k</samp>? Confirm your expectation using the <samp>string.indexOf()</samp>\nfunction."
       U3L25 String Parsing 2: "## Challenge 2.1\\\r\n\n\\\r\nUse <samp>str.length</samp>\nto
         find the length of the following strings:\\\r\n\\\r\n\n1.  <samp>“Hello World”</samp>\\\r\n
-        \   \\\r\n2.  1.\n    <samp>“Computer science rocks!\"</samp>\\\r\n    \\\r\n3.
+        \   \\\r\n2.  1\\.\n    <samp>“Computer science rocks!\"</samp>\\\r\n    \\\r\n3.
         \ <samp>“I promise to do my\n    homework every day.”</samp>\\\r"
       U3L25 String Parsing 3: "## Challenge 2.2\\\r\n\n\\\r\nWrite\na password length
         checker that writes “yes” to the console if a string has\na length greater
@@ -33709,7 +33711,7 @@ mk:
         This can be useful for instances where you want to display stored\ndata back
         to your user.\\\r\n\\\r\n\n1.  Look at the code and write down on paper\n
         \   what you think it will do.  Think back to createRecord as you make your
-        guess.\\\r\n2.  1.\n    Run the level\\\r\n3.  Open the data view\\\r\n4.
+        guess.\\\r\n2.  1\\.\n    Run the level\\\r\n3.  Open the data view\\\r\n4.
         \ Take a look at the outcome and\n    see if you connect the code to the output.\\\r\n5.
         \ Make it print a different\n    column of information.\\\r"
       U4L15 Read Data 2: "Student should create a sentence which\nputs together all
@@ -33720,7 +33722,7 @@ mk:
         happens."
       U4L15 Read Data 4: "Now instead of the first record, we\nwant a random record
         from the list of records.  Can you figure out how to\nmake this happen?\\\r\n\\\r\n**HINT**\\\r\n\n1.
-        \ Find out the length of the records\\\r\n2.  1.\n    Make a variable that
+        \ Find out the length of the records\\\r\n2.  1\\.\n    Make a variable that
         holds a random number\\\r\n3.  Use it to get a random record"
       U4L16 Free Response: Free response prompt here.
       U4L17 Free Response: Free response prompt here.
@@ -33885,8 +33887,8 @@ mk:
         would not award the points for Row 2 and Row 3**.\r\n\r\nHint:\nPay particular
         attention to the last column of the scoring guidelines and\nthe checklists
         entitled \"Do NOT award a point if...\""
-      U5 Booleans: "### Points to pay attention to:\\\r\n\n\\\r\n1.\nWhat's a _Boolean
-        Expression?_\\\r\n\n2.  Why is it called a \"Boolean\"?\\\r\n3.  3.\n    Is
+      U5 Booleans: "### Points to pay attention to:\\\r\n\n\\\r\n1\\.\nWhat's a _Boolean
+        Expression?_\\\r\n\n2.  Why is it called a \"Boolean\"?\\\r\n3.  3\\.\n    Is
         this a legal expression?  `10 > 25`?"
       U5 Check Password if statement lock image: "<img src=\"https://images.code.org/117a2a8e098760173f16048fde721295-image-1479829058899.gif\"\nstyle=\"float:
         right; width: 150px\">\\\r\n\n## You try it -- Text Password Checker\\\r\n\n\\\r\n**Key\nidea**:
@@ -33974,7 +33976,7 @@ mk:
         message to\n    display the parameter\\\r\n    -   Calls setBoard()\\\r\n
         \       \\\r\n            function\n        checkCorrect(buttonId){\\\r\n
         \               console.log(\"Checking: \"+buttonId);\\\r\n                setBoard();\\\r\n
-        \           }\\\r\n        \\\r\n2.  2.\n    **Add 4 \"click\" event handlers
+        \           }\\\r\n        \\\r\n2.  2\\.\n    **Add 4 \"click\" event handlers
         - one for each button - that call checkCorrect**\\\r\n    \\\\t\\*\n    The
         event handling functions should call `checkCorrect(...)` with its button\n
         \   id.\\\r\n    \\\\t\\* So for _button1_ it should look something like:\\\r\n
@@ -33982,7 +33984,7 @@ mk:
         \       \\\\t\\\\tcheckCorrect(\"button1\");\\\r\n        \\\\t});\\\r\n        \\\r\n
         \   \\\r\n    **TESTING**\\\r\n    \\\r\n    Once\n    you've added this code
         you should really see some changes.  When you click\n    on buttons you should
-        see:\\\r\n3.  Console messages showing what was clicked\\\r\n4.  2.\n    The
+        see:\\\r\n3.  Console messages showing what was clicked\\\r\n4.  2\\.\n    The
         board should change each time you click a button\\\r\n5.  Console messages\n
         \   showing the correct answer for each new board.\\\r\n    \\\r\n    ![](https://images.code.org/2941465a60c0f61c83979192c1de29ce-image-1481146240419.gif)"
       U5 ColorSleuth checkCorrect part2 add if statement to check correct: "## \n\nStep
@@ -34183,19 +34185,20 @@ mk:
         p1Score + amt;\\\r\n            } else {\\\r\n            \\\\tp2Score\n    =
         p2Score + amt;\\\r\n            }\\\r\n            console.log(\"P1 score:
         \"\n3.  p1Score);\\\r\n            console.log(\"P2 score: \" + p2Score);\\\r\n
-        \       }\\\r\n    \\\r\n4.  3.\n    Add calls to `updateScoreBy(1)` and `updateScoreBy(-3)`
-        to the appropriate\n    place inside the if statement in the `checkCorrect`
-        function.\\\r\n    \\\\t\\* You can\n    leave your console.log statements
-        in there for now as well.  Just add calls\n    to `updateScoreBy` along with
-        them.\\\r\n    \\\r\n    **TEST IT OUT**\\\r\n    \\\r\n    When you\n    run
-        the program now you should be able to verify in the console that the player's\n
-        \   scores are updating.  Study the console output to make sure and verify
-        that:\\\r\n    \\\r\n5.  \\*\n    updateScoreBy is being called from checkCorrect
-        with each click\\\r\n    \\\\t\\* if\n    you have console.log statements
-        in `updateScoreBy` then you should at least\n    see that it's being called
-        with each click\\\r\n6.  The correct player's score\n    is being updated\\\r\n7.
-        \ The scores are being updated by the correct amount\\\r\n    \\\r\n    A\n
-        \   sample of the output might look like this:\\\r\n    \\\r\n    ![](https://images.code.org/eb33f7d6d634e4f98e613bc13b231601-image-1481219318239.png)"
+        \       }\\\r\n    \\\r\n4.  3\\.\n    Add calls to `updateScoreBy(1)` and
+        `updateScoreBy(-3)` to the appropriate\n    place inside the if statement
+        in the `checkCorrect` function.\\\r\n    \\\\t\\* You can\n    leave your
+        console.log statements in there for now as well.  Just add calls\n    to `updateScoreBy`
+        along with them.\\\r\n    \\\r\n    **TEST IT OUT**\\\r\n    \\\r\n    When
+        you\n    run the program now you should be able to verify in the console that
+        the player's\n    scores are updating.  Study the console output to make sure
+        and verify that:\\\r\n    \\\r\n5.  \\*\n    updateScoreBy is being called
+        from checkCorrect with each click\\\r\n    \\\\t\\* if\n    you have console.log
+        statements in `updateScoreBy` then you should at least\n    see that it's
+        being called with each click\\\r\n6.  The correct player's score\n    is being
+        updated\\\r\n7.  The scores are being updated by the correct amount\\\r\n
+        \   \\\r\n    A\n    sample of the output might look like this:\\\r\n    \\\r\n
+        \   ![](https://images.code.org/eb33f7d6d634e4f98e613bc13b231601-image-1481219318239.png)"
       U5 ColorSleuth scoring pt2 add scoring if statement console: "\\\r\nDO\nTHIS:\\\r\n\\\r\n\n-
         \  add an if statement to updateScore\\\r\n-   if currentPlayer ==\n    player1\\\r\n
         \     player1Score += amt\\\r\n-   else\\\r\n       player2score += amt\\\r\n
@@ -34598,9 +34601,9 @@ mk:
         and the `console.log` statements you need.  **Your\ntask is to add the *if-else-if*
         statements to make it work.\r\n\r\n**Remember:**\nthe order in which you check
         the boolean conditions *matters*.\r\n\r\n\r\n\r\n````"
-      U5 video Booleans: "### Points to pay attention to:\\\r\n\n\\\r\n1.\nWhat's
+      U5 video Booleans: "### Points to pay attention to:\\\r\n\n\\\r\n1\\.\nWhat's
         a _Boolean Expression?_\\\r\n\n2.  Why is it called a \"Boolean\"?\\\r\n3.
-        \ 3.\n    Is this a legal expression?  `10 > 25`?"
+        \ 3\\.\n    Is this a legal expression?  `10 > 25`?"
       U5-AP-Algorithm-Does-It-Count: "# AP Practice - Algorithm\n\n-   Score the Response\\\r\n
         \   \\\r\n    One component of the **AP Create Performance Task**\n    is
         selecting and describing an algorithm that you developed.\\\r\n    \\\r\n
@@ -35477,7 +35480,7 @@ mk:
       Web Lab 1: "Make an awesome web page!\\\r\n\\\r\n\n1.  Look at\n    the web
         page we gave you to start with. Look how lame it is. 1996 just called\n    and
         wants its web page back. But don't get depressed - YOU can fix it!\\\r\n2.
-        \ 2.\n    Add a background-color attribute in the body style in style.css
+        \ 2\\.\n    Add a background-color attribute in the body style in style.css
         to make the\n    page background color 'darkcyan'\\\r\n3.  Add a text-align
         attribute to the\n    body style in style.css to center the image and text
         horizontally\\\r\n4.  Change\n    index.html to include an inspiring hashtag\\\r\n5.
@@ -36567,7 +36570,7 @@ mk:
       courseC_flappy_events9: |-
         To mix things up, instead of
         ending the game when Flappy hits an obstacle, try setting the score back to
-        0.
+        0\.
       courseC_harvester_loops1: "Loops can be used to repeat\nmore than moves.  \\\r\n\\\r\nUse
         loops to collect all four of the pumpkins."
       courseC_harvester_loops10: |-
@@ -38986,7 +38989,7 @@ mk:
         unit? \\\r\n    \\\\t\\* How does the project(s) apply\n    content and skills
         that were developed during the unit? \\\r\n    \\\\t\\* What kinds\n    of
         special considerations come with the unit long project in this unit?\\\r\n2.
-        \ 2.\n    What skills and knowledge should students leave the unit with?\\\r\n3.
+        \ 2\\.\n    What skills and knowledge should students leave the unit with?\\\r\n3.
         \ What\n    are the core 2017 CSTA standards or threads of the K-12 framework
         in this\n    unit?\\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit
         for Completing this Reflection \\\r\n    >\n    > ## \\\r\n    >\n    > Once
@@ -39535,8 +39538,8 @@ mk:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n1.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n2.  1.\n    What’s the role of the practice Performance Task(s),
-        or PTs, in the unit?\n    \\\r\n3.  Which PTs are being practiced?\\\r\n4.
+        \\\r\n    \\\r\n2.  1\\.\n    What’s the role of the practice Performance
+        Task(s), or PTs, in the unit?\n    \\\r\n3.  Which PTs are being practiced?\\\r\n4.
         \ How does the practice PT build\n    on what content and skills were developed
         during the unit? \\\r\n5.  What summative\n    and formative assessment opportunities
         are built into the unit? \\\r\n    \\\r\n    \\\r\n    > ## \n    >\n    >
@@ -39626,13 +39629,13 @@ mk:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n2.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n3.  1.\n    What’s the role of the practice Performance Task(s),
-        or PTs, in the unit?\n    \\\r\n4.  How does the practice Explore PT build
-        on what content and skills were\n    developed during the unit? \\\r\n5.  What
-        summative and formative assessment\n    opportunities are built into the unit?
-        \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n    >
-        for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once you
-        submit your reflection,\n    >     your response to the prompt above will
+        \\\r\n    \\\r\n3.  1\\.\n    What’s the role of the practice Performance
+        Task(s), or PTs, in the unit?\n    \\\r\n4.  How does the practice Explore
+        PT build on what content and skills were\n    developed during the unit? \\\r\n5.
+        \ What summative and formative assessment\n    opportunities are built into
+        the unit? \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n
+        \   > for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once
+        you submit your reflection,\n    >     your response to the prompt above will
         be shared anonymously and reviewed\n    >     by your peers, and you will
         review the work done by other facilitators. Reviewers\n    >     will be looking
         for thoughtful and thorough answers that demonstrate that\n    >     you have
@@ -39716,24 +39719,24 @@ mk:
         this\nreflection, you’re going to consider each of the prompts below and craft
         a\nwritten response that demonstrates your understanding of the lessons in
         Unit\n\n3.  Your response should clearly address each of the items below:
-        \\\r\n    \\\r\n4.  1.\n    What’s the role of the practice Performance Task(s),
-        or PTs, in the unit?\n    \\\r\n5.  How does the practice Create PT build
-        on what content and skills were\n    developed during the unit? \\\r\n6.  What
-        summative and formative assessment\n    opportunities are built into the unit?
-        \\\r\n    \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n    >\n
-        \   > for Completing this Reflection \\\r\n    > \\\r\n    >\n    > -   Once
-        you submit your reflection,\n    >     your response to the prompt above will
-        be shared anonymously and reviewed\n    >     by your peers, and you will
-        review the work done by other facilitators. Reviewers\n    >     will be looking
-        for thoughtful and thorough answers that demonstrate that\n    >     you have
-        spent time considering the reflection questions listed above. Reviewers\n
-        \   >     will have an opportunity to give feedback on your submission, and
-        you can\n    >     respond to that feedback and resubmit.\\\r\n7.  In order
-        to get credit for completing\n    this prompt, two reviewers need to agree
-        that you have responded to the prompts\n    fully. If reviewers don’t feel
-        comfortable making a decision about your task\n    submission, they can elevate
-        to an instructor for review. You will always\n    have a chance to address
-        feedback from your reviewers and resubmit your reflections!\n    Reviewer
+        \\\r\n    \\\r\n4.  1\\.\n    What’s the role of the practice Performance
+        Task(s), or PTs, in the unit?\n    \\\r\n5.  How does the practice Create
+        PT build on what content and skills were\n    developed during the unit? \\\r\n6.
+        \ What summative and formative assessment\n    opportunities are built into
+        the unit? \\\r\n    \\\r\n    \\\r\n    \\\r\n    \\\r\n    > ## Getting Credit\n
+        \   >\n    > for Completing this Reflection \\\r\n    > \\\r\n    >\n    >
+        -   Once you submit your reflection,\n    >     your response to the prompt
+        above will be shared anonymously and reviewed\n    >     by your peers, and
+        you will review the work done by other facilitators. Reviewers\n    >     will
+        be looking for thoughtful and thorough answers that demonstrate that\n    >
+        \    you have spent time considering the reflection questions listed above.
+        Reviewers\n    >     will have an opportunity to give feedback on your submission,
+        and you can\n    >     respond to that feedback and resubmit.\\\r\n7.  In
+        order to get credit for completing\n    this prompt, two reviewers need to
+        agree that you have responded to the prompts\n    fully. If reviewers don’t
+        feel comfortable making a decision about your task\n    submission, they can
+        elevate to an instructor for review. You will always\n    have a chance to
+        address feedback from your reviewers and resubmit your reflections!\n    Reviewer
         feedback will show up at the bottom of this page, once it’s available.\n    \\\r\n
         \   \\\r\n    \\\r\n    \\\r"
       csp3dlp-lessons: "<br><br>\\\r\n\\\r\n\n> **NOTE: before you\n> start this reflection,
@@ -39982,9 +39985,9 @@ mk:
       csp_affirmation_control: "This brief activity allows you\nto reflect about what
         you have learned in this course so far. It is provided\nto you by your teacher,
         but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in the course
-        may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
+        may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -39992,9 +39995,9 @@ mk:
       csp_affirmation_control_2: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -40002,9 +40005,9 @@ mk:
       csp_affirmation_control_3: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -40012,9 +40015,9 @@ mk:
       csp_affirmation_control_4: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -40022,9 +40025,9 @@ mk:
       csp_affirmation_control_5: "This brief activity allows\nyou to reflect about
         what you have learned in this course so far. It is provided\nto you by your
         teacher, but _you will not be graded on this._\\\r\n\\\r\nSome\ntopics in
-        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1\\.\nWrite
+        the course may be interesting to you, others may be less interesting.\\\r\n\\\r\n<strong>\\\r\n1.\nWrite
         down 1 or 2 topics that are most interesting to you:\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\nHow did you prepare
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\nHow did you prepare
         for taking this test? Do you feel more or less prepared\nto answer questions
         about the topics that interest you?\\\r\n</strong>\\\r\n\\\r\n_Write\na few
         sentences, focusing on your thoughts and feelings, don't worry about\nhow
@@ -40357,7 +40360,7 @@ mk:
         \   var temperature = 30;\\\r\n\\\r\nExpressions:\\\r\n\\\r\n\n-   (temperature\n
         \   > 0.  && (temperature \\< 32)\\\r\n-   (temperature > 0) || (temperature
         \\< 32)\\\r\n-   \\*\n    (temperature != 0) && (temperature \\< 32)\\\r\n-
-        \  (temperature == 0) || (temperature\n    > 32\\)\\\r\n-   (temperature \\<
+        \  (temperature == 0) || (temperature\n    > 32)\\\r\n-   (temperature \\<
         0) || (temperature > 32)\\\r\n    \\\r\n    _Note: Write \"true\"\n    or
         \"false\" on a new line for each expression._"
       cspu5_assess3_shortAnswer: "**Short Answer:**  Computer\nmodels and simulations

@@ -980,7 +980,6 @@ cs:
     new: Vytvořit nový
     rename: Přejmenovat
     save: Uložit
-    delete: Odstranit
     import: Importovat
     share_link_import_bad_link_header: Odkaz pro sdílení nebyl rozpoznán
     share_link_import_bad_link_body: 'Daný odkaz pro sdílení se nám nepodařilo naimportovat.
@@ -990,7 +989,6 @@ cs:
     share_link_import_error_body: Došlo k problému při importu daného odkazu pro sdílení.
       Zkuste to znovu.
     exit: Návrat ke kurzu
-    my_projects: Moje projekty
     project_gallery: Projekty
     publish: Publikovat
     unpublish: Zrušit publikování
@@ -1003,8 +1001,6 @@ cs:
       jen v rámci školy.
     embed: Vložit
     advanced_share: Zobrazit pokročilé možnosti
-    close: Zavřít
-    more: Více
     name: Jméno
     updated: Aktualizováno
     project_type: Typ projektu
@@ -1012,15 +1008,8 @@ cs:
       něco</strong> níže se vytvoří nový projekt Play Lab nebo umělec! <br/> Můžete
       se vrátit a pracovat na vašich projektech v kteroukoli dobu.
     need_help: Potřebujete pomoc, začneme?
-    really_delete: Odstranit?
-    delete_yes: Ano
-    delete_no: Ne
     saved: Uloženo
     not_saved: Neuloženo
-    cancel: Storno
-    delete_confirm_title: Opravdu chcete odstranit toto nastavení?
-    delete_confirm_text: Váš projekt bude natrvalo odstraněn ze seznamu projektů.
-      Každý, s kterým jste sdíleli odkaz, nebude již schopen zobrazit váš projekt.
     view_all: Zobrazit mé projekty
     remix: Remix
     click_to_remix: Klepněte na "Remix" na přetočení vlastní verze!

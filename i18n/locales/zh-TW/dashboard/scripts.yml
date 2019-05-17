@@ -4705,19 +4705,17 @@ zh-TW:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
             Relay Programming:
               name: 接力編程
             Programming in Collector:
-              name: 和收藏家學編程（Program）
+              name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: '迴圈：學習迴圈'
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             'Concept Practice with Minecraft ':
-              name: '與 Minecraft 一起實踐所學'
+              name: 與 Minecraft 一起實踐所學
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Functions in Minecraft:
@@ -4729,7 +4727,7 @@ zh-TW:
             For Loops in Artist:
               name: 藝術家中的計數迴圈（For Loops）
             Alien Dance Party with Sprite Lab:
-              name: 用 Sprite Lab 創作外星人舞蹈派對
+              name: 外星人舞蹈派對
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4746,6 +4744,12 @@ zh-TW:
               name: 網際網路 Internet
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
+            Concept Practice with Minecraft:
+              name: 與 Minecraft 一起展望未來
+            Editing Behaviors:
+              name: 行為的修改
+            Dance Party:
+              name: 舞蹈派對
         csd1-2019:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -4872,18 +4876,16 @@ zh-TW:
               name: 在冰河歷險紀裡編程
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
-            Loops in Ice Age:
-              name: 冰河歷險紀中的迴圈
             Loops in Collector:
               name: 和收藏家學迴圈（Loop）
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             Spelling Bee:
               name: 拼字蜜蜂
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 和鼠奎特一起寫程式
+            Programming in Harvester:
+              name: 和農夫一起學程式
         removed19:
           stages:
             'Debugging: Unspotted Bugs':

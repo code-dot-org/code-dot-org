@@ -634,35 +634,25 @@ pt:
     new: "Criar novo"
     rename: "Renomear"
     save: "Guardar"
-    delete: "Apagar"
     import: "Importar"
     share_link_import_bad_link_header: "Ligação de partilha não reconhecida"
     share_link_import_bad_link_body: "Não foi possível importar a ligação de partilha. Certifica-te de que estás a utilizar uma ligação do quebra-cabeças Minecraft: Agent e de que copiaste a ligação completa."
     share_link_import_error_header: "Algo correu mal."
     share_link_import_error_body: "Ocorreu um problema ao importar a ligação de partilha. Tenta de novo."
     exit: "Voltar ao curso"
-    my_projects: "Os meus projetos"
     project_gallery: "Projetos"
     publish: "Publicar"
     share: "Partilhar"
     share_title: Partilha o teu projeto
     share_copy_link: "Copia a ligação:"
     embed: "Incorporar"
-    close: "Fechar"
-    more: "Mais"
     name: "Nome"
     updated: "Última atualização"
     project_type: "Tipo de projeto"
     help_text: "Clica em <strong>Desenvolver uma aplicação</strong> ou <strong>Desenhar alguma coisa</strong> para entrares num novo Laboratório de jogos ou fazeres um Projeto de artista!<br/>Podes voltar a trabalhar nos teus projetos quando quiseres."
     need_help: "Precisas de ajuda para começares?"
-    really_delete: 'Apagar?'
-    delete_yes: 'Sim'
-    delete_no: 'Não'
     saved: "Guardado"
     not_saved: "Por guardar"
-    cancel: 'Cancelar'
-    delete_confirm_title: Tens a certeza de que pretendes apagar este projeto?
-    delete_confirm_text: "Ao apagares este projeto estás a removê-lo permanentemente de “Os meus projetos”. Os utilizadores com quem partilhaste a ligação para este projeto deixarão de poder vê-lo."
     view_all: 'Ver os meus projetos'
     remix: 'Criar variação'
     click_to_remix: "Clica em \"Criar variação\" para criares a tua própria versão!"

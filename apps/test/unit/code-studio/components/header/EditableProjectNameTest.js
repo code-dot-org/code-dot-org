@@ -17,9 +17,6 @@ describe('EditableProjectName', () => {
   beforeEach(() => {
     currentName = 'Brand New Project';
     replaceOnWindow('dashboard', {
-      i18n: {
-        t: () => {}
-      },
       project: {
         rename: (name, cb) => {
           currentName = name;

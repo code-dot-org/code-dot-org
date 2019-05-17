@@ -383,6 +383,7 @@
   "submitYourProject": "Submit your project",
   "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?",
   "subtitle": "a visual programming environment",
+  "support": "Support",
   "switchSection": "Switch section:",
   "syntaxErrorMsg": "Your program contains a typo. Please remove line {lineNumber} and try again.",
   "teacher": "Teacher",
