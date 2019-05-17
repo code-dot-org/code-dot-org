@@ -3,6 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import ProjectImport from './ProjectImport';
 import ProjectRemix from './ProjectRemix';
@@ -79,7 +80,7 @@ class ProjectHeader extends React.Component {
           onClick={this.saveNameChange}
           disabled={this.state.savingName}
         >
-          {dashboard.i18n.t('project.save')}
+          {i18n.save()}
         </div>
       );
     }
@@ -89,7 +90,7 @@ class ProjectHeader extends React.Component {
         className="project_edit header_button header_button_light"
         onClick={this.beginEdit}
       >
-        {dashboard.i18n.t('project.rename')}
+        {i18n.rename()}
       </div>
     );
   }
@@ -112,7 +113,7 @@ class ProjectHeader extends React.Component {
         {/* TODO: Remove this (and the related style) when Web Lab is no longer
             in beta.*/}
         {appOptions.app === 'weblab' && (
-          <div className="beta-notice">{dashboard.i18n.t('beta')}</div>
+          <div className="beta-notice">{i18n.beta()}</div>
         )}
       </div>
     );

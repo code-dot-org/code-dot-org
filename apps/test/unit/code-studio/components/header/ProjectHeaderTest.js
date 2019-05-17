@@ -22,9 +22,6 @@ describe('ProjectHeader', () => {
       level: {}
     });
     replaceOnWindow('dashboard', {
-      i18n: {
-        t: () => {}
-      },
       project: {
         rename: (name, cb) => cb()
       },
