@@ -139,11 +139,12 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil,
+        where(
+          unfeatured_at: nil,
           project_type: project_type.to_s,
-          abuse_score: 0,
           state: 'active'
         ).
+        where {abuse_score <= 0}.
         exclude(published_at: nil).
         order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
@@ -215,7 +216,8 @@ module ProjectsList
             select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: project_types, abuse_score: 0).
+            where(state: 'active', project_type: project_types).
+            where {abuse_score <= 0}.
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
