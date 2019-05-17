@@ -17,6 +17,6 @@ class CurriculumTrackingPixelController < ApplicationController
       }.to_json
     )
 
-    send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
+    send_file dashboard_dir('app/assets/images/1x1.png'), type: 'image/png'
   end
 end
