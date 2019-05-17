@@ -1,4 +1,5 @@
 name 'HappyMaps-Unplugged'
+video_key 'C1_happy_maps_unplugged'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
