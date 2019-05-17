@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import StudentTable from '@cdo/apps/code-studio/components/progress/StudentTable';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const MINIMUM_PROPS = {
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
@@ -21,7 +22,7 @@ const levels = [
     navigator: null,
     paired: null,
     passed: false,
-    status: 'not_tried',
+    status: LevelStatus.not_tried,
     user_id: 1
   },
   {
@@ -33,7 +34,7 @@ const levels = [
     navigator: null,
     paired: null,
     passed: false,
-    status: 'not_tried',
+    status: LevelStatus.not_tried,
     user_id: 2
   }
 ];
