@@ -24,6 +24,14 @@ export class SelectedStudentInfo extends React.Component {
     inMiniRubricExperiment: PropTypes.bool
   };
 
+  onUnsubmit = () => {
+    console.log('unsubmit');
+  };
+
+  onClearResponse = () => {
+    console.log('clear response');
+  };
+
   render() {
     const {selectedStudent, level, inMiniRubricExperiment} = this.props;
 
@@ -58,7 +66,20 @@ export class SelectedStudentInfo extends React.Component {
           <div>
             <div>{i18n.submittedOn()}</div>
             <div>{new Date(level.updated_at).toLocaleString()}</div>
-            <Button text={i18n.unsubmit()} color="blue" onClick={() => {}} />
+            <Button
+              text={i18n.unsubmit()}
+              color="blue"
+              onClick={this.onUnsubmit}
+            />
+          </div>
+        )}
+        {level.contained && level.status !== LevelStatus.not_tried && (
+          <div>
+            <Button
+              text={i18n.clearResponse()}
+              color="blue"
+              onClick={this.onClearResponse}
+            />
           </div>
         )}
       </div>
