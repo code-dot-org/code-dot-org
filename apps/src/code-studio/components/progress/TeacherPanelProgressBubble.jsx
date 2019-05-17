@@ -57,10 +57,6 @@ export class TeacherPanelProgressBubble extends React.Component {
     inMiniRubricExperiment: PropTypes.bool
   };
 
-  static defaultProps = {
-    currentLocation: window.location
-  };
-
   render() {
     const {level, inMiniRubricExperiment} = this.props;
 
