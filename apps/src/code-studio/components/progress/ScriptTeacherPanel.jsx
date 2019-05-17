@@ -110,7 +110,6 @@ class ScriptTeacherPanel extends React.Component {
                     color="blue"
                     href={example}
                     target="_blank"
-                    onClick={() => {}}
                   />
                 ))}
             </div>
