@@ -5,5 +5,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Envelope Variables
 
-Variables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.
+Variables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways.
 MARKDOWN
