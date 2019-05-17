@@ -4,6 +4,7 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import Button from '../../templates/Button';
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 export const styles = {
   button: {
@@ -96,13 +97,15 @@ class SchoolInfoConfirmationDialog extends Component {
 
   render() {
     const {showSchoolInterstitial, isOpen} = this.state;
-    return (
-      <Dialog isOpen={isOpen}>
-        {!showSchoolInterstitial
-          ? this.renderInitialContent()
-          : this.renderSchoolInformationForm()}
-      </Dialog>
-    );
+    if (experiments.isEnabled(experiments.SCHOOL_INFO_CONFIRMATION_DIALOG)) {
+      return (
+        <Dialog isOpen={isOpen}>
+          {!showSchoolInterstitial
+            ? this.renderInitialContent()
+            : this.renderSchoolInformationForm()}
+        </Dialog>
+      );
+    }
   }
 }
 export default SchoolInfoConfirmationDialog;
