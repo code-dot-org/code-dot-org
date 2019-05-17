@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MatchLevelTest < ActiveSupport::TestCase
-  test 'shuffled answers never exactly match answers' do
+  test 'shuffled answer indexes never exactly match default order' do
     @level = create :match, properties: {
       answers: [{text: "one"}, {text: "two"}, {text: "three"}]
     }
@@ -10,17 +10,13 @@ class MatchLevelTest < ActiveSupport::TestCase
     # possible shuffles on any given test run, but over all test runs for all
     # time we should be pretty well set.
     possible_shuffles = Array.new(10).map do |_|
-      @level.shuffled_indexed_answers
+      @level.shuffled_answer_indexes
     end
 
-    # strip indexes from the shuffled and indexed answers so we can easily test
-    # just the shuffled-ness
-    possible_shuffles.each do |shuffle|
-      shuffle.each {|answer| answer.delete("index")}
-    end
+    original_order = (0...@level.answers.size).to_a
 
     possible_shuffles.each do |shuffle|
-      refute_equal shuffle, @level.answers
+      refute_equal shuffle, original_order
     end
   end
 end
