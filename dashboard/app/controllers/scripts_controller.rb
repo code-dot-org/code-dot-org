@@ -13,13 +13,6 @@ class ScriptsController < ApplicationController
   before_action :set_script_file, only: [:edit, :update]
 
   def show
-    if @script.redirect_to?
-      redirect_path = script_path(Script.get_from_cache(@script.redirect_to))
-      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to "#{redirect_path}#{redirect_query_string}"
-      return
-    end
-
     if request.path != (canonical_path = script_path(@script))
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a script's new location to its old
