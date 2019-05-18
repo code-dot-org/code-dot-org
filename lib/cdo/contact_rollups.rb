@@ -189,7 +189,7 @@ class ContactRollups
     update_email_preferences
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
-    log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
+    log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in #{DEST_TABLE_NAME} table."
   end
 
   def self.sync_contact_rollups_to_main
@@ -203,7 +203,7 @@ class ContactRollups
     # MySQL use the email index to sort by email.
 
     # Query all of the contacts in the latest daily contact rollup table (contact_rollups_daily) sorted by email.
-    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM contact_rollups_daily FORCE INDEX(contact_rollups_email_index) ORDER BY email']
+    contact_rollups_src = PEGASUS_REPORTING_DB_READER['SELECT * FROM #{DEST_TABLE_NAME} FORCE INDEX(contact_rollups_email_index) ORDER BY email']
     # Query all of the contacts in the master contact rollup table (contact_rollups_daily) sorted by email.
     # Use MYSQL 5.7 MAX_EXECUTION_TIME optimizer hint to override the production database global query timeout.
     contact_rollups_dest = PEGASUS_DB_READER["SELECT /*+ MAX_EXECUTION_TIME(#{MAX_EXECUTION_TIME}) */ * FROM contact_rollups FORCE INDEX(contact_rollups_email_index) ORDER BY email"]
@@ -314,7 +314,7 @@ class ContactRollups
     -- Use CONCAT+COALESCE to append 'Teacher' to any existing roles
     SELECT users.email COLLATE utf8_general_ci, users.name, users.id, CONCAT(COALESCE(CONCAT(src.roles, ','), ''), '#{ROLE_TEACHER}'),
     user_geos.city, user_geos.state, user_geos.postal_code, user_geos.country FROM #{DASHBOARD_DB_NAME}.users_view AS users
-    LEFT OUTER JOIN #{PEGASUS_DB_NAME}.contact_rollups_daily AS src ON src.email = users.email
+    LEFT OUTER JOIN #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME} AS src ON src.email = users.email
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(users.email) > 0
     ON DUPLICATE KEY UPDATE #{DEST_TABLE_NAME}.name = VALUES(name), #{DEST_TABLE_NAME}.dashboard_user_id = VALUES(dashboard_user_id),
