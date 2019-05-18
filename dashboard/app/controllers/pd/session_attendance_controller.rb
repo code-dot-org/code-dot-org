@@ -58,7 +58,7 @@ class Pd::SessionAttendanceController < ApplicationController
       end
     end
 
-    render_confirmation
+    render :attendance_recorded
   end
 
   # GET /pd/attend/:session_code/upgrade
