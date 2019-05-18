@@ -276,6 +276,12 @@ class ScriptLevel < ActiveRecord::Base
       ids.concat(l.contained_levels.map(&:id))
     end
 
+    # Levelbuilders can select if External/
+    # Markdown levels should display as Unplugged.
+    display_as_unplugged =
+      level.unplugged? ||
+      level.properties["display_as_unplugged"] == "true"
+
     summary = {
       ids: ids,
       activeId: oldest_active_level.id,
@@ -286,7 +292,8 @@ class ScriptLevel < ActiveRecord::Base
       title: level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
-      bonus: bonus
+      bonus: bonus,
+      display_as_unplugged: display_as_unplugged
     }
 
     summary[:progression] = progression if progression

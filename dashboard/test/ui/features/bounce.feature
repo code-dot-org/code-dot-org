@@ -35,7 +35,7 @@ Scenario: Incomplete Level 5
   And I press "runButton"
   And I wait to see ".uitest-topInstructions-inline-feedback"
   And element ".uitest-topInstructions-inline-feedback" is visible
-  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet.\n"
+  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet."
 
 Scenario: Complete Level 5
   Given I am on "http://studio.code.org/s/events/stage/1/puzzle/5?noautoplay=true"
