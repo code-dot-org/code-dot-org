@@ -72,7 +72,7 @@ class ContactRollups
   # Table name of table structure to copy from to create the destination working table
   TEMPLATE_TABLE_NAME = "contact_rollups".freeze
   # Table name of destination working table
-  DEST_TABLE_NAME = "contact_rollups_daily".freeze
+  DEST_TABLE_NAME = "contact_rollups_temp".freeze
 
   # Set of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
   # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
@@ -173,10 +173,13 @@ class ContactRollups
       append_to_list_field_from_form(form_info[:kind], form_info[:dest_field], form_info[:dest_value])
     end
 
+    # TEMPORARILY stop invoking update_data_from_forms because its use of multi-statements
+    # currently requires a different database connection, which is not compatible with an
+    # experiment to use a TEMPORARY table in place of the contact_rollups_daily table.
     # parse all forms that collect user-reported address/location or other data of interest
-    FORM_KINDS_WITH_DATA.each do |kind|
-      update_data_from_forms(kind)
-    end
+    #FORM_KINDS_WITH_DATA.each do |kind|
+    #  update_data_from_forms(kind)
+    #end
 
     # Add contacts to the Teacher role based on form responses
     update_teachers_from_forms
@@ -289,8 +292,8 @@ class ContactRollups
     # Ensure destination table exists and is empty. Since this code runs on the reporting replica and the destination
     # table should exist only there, we can't use a migration to create it. Create the destination table explicitly in code.
     # Create it based on master contact_rollups table. Create it every time to keep up with schema changes in contact_rollups.
-    PEGASUS_REPORTING_DB_WRITER.run "DROP TABLE IF EXISTS #{DEST_TABLE_NAME}"
-    PEGASUS_REPORTING_DB_WRITER.run "CREATE TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
+    PEGASUS_REPORTING_DB_WRITER.run "DROP TEMPORARY TABLE IF EXISTS #{DEST_TABLE_NAME}"
+    PEGASUS_REPORTING_DB_WRITER.run "CREATE TEMPORARY TABLE #{DEST_TABLE_NAME} LIKE #{TEMPLATE_TABLE_NAME}"
     log_completion(start)
   end
 
