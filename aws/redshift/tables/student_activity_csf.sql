@@ -32,7 +32,7 @@ with csf_script_ids as
  
 student_activity as
 
-  (SELECT   cst.user_id user_id,
+  (SELECT  cst.user_id user_id,
            cst.school_year,
            cst.script_name,
            se.id section_id,
@@ -50,7 +50,7 @@ student_activity as
       JOIN dashboard_production.user_scripts us
         ON us.user_id = fo.student_user_id 
         AND  us.started_at between sy.started_at and sy.ended_at
-      JOIN csf_started cs
+      JOIN analysis.csf_started cs
         ON cs.user_id = us.user_id
         AND cs.started_at between sy.started_at and sy.ended_at
       JOIN csf_script_ids csi

@@ -276,12 +276,6 @@ sk:
     header:
       finished_hoc: "Hotovo!"
       sign_in_to_save: 'Pre uloženie pokroku je nutné sa prihlásiť'
-      free_play:
-        playlab: 'Vytvor appku v Play Labe'
-        artist: 'Nakresliť niečo'
-        applab: 'Vytvor appku v App Labe'
-        gamelab: 'Vytvor projekt v Game Labe'
-        weblab: 'Vytvor projekt vo Web Labe (beta verzia)'
       my_dashboard: "Môj hlavný panel"
       course_catalog: "Katalóg kurzov"
       project_gallery: "Projekty"
@@ -322,6 +316,7 @@ sk:
       district_dashboard: 'Prehľad pre školský okres'
       label: 'Ahoj %{username}'
       stats: 'Code Studio'
+      my_projects: 'Moje projekty'
       settings: 'Nastavenia účtu'
       logout: 'Odhlásiť sa'
       signin: 'Prihlásiť sa'
@@ -348,8 +343,10 @@ sk:
       gumball: 'Úžasný svet s Gumball'
       iceage: 'Doba ľadová'
       infinity: 'Infinity'
+      makerlab: 'Výrobcovo náradie'
       minecraft_adventurer: 'Minecraft Objavovateľ'
       minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Prepájanie kódu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft hrdina'
       playlab: 'Play Lab'
@@ -816,14 +813,12 @@ sk:
     new: "Vytvoriť nový"
     rename: "Premenovať"
     save: "Uložiť"
-    delete: "Vymazať"
     import: "Import"
     share_link_import_bad_link_header: "Link na zdieľanie nebol rozpoznaný"
     share_link_import_bad_link_body: "Link na zdieľanie sa nám nepodarilo importovať. Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý link."
     share_link_import_error_header: "Vyskytla sa chyba."
     share_link_import_error_body: "Vyskytol sa problém s importom tohto linku na zdieľanie. Skús to znova."
     exit: "Vrátiť sa do kurzu"
-    my_projects: "Moje Projekty"
     project_gallery: "Projekty"
     publish: "Publikovať"
     unpublish: "Zrušiť publikovanie"
@@ -835,22 +830,14 @@ sk:
     embed: "Vložiť"
     advanced_share: "Zobraziť rozšírené možnosti"
     no_projects: "Momentálne nemáte žiadne projekty. Kliknite na jedno z tlačidiel vyššie pre začatie projektu."
-    close: "Zatvoriť"
-    more: "Viac"
     name: "Meno"
     updated: "Aktualizovaný"
     project_type: "Typ projektu"
     help_text: "Klikni na <strong>Vytvoriť Appku</strong> alebo <strong>Nakresliť niečo</strong> a vytvor nový projekt!<br/> Kedykoľvek sa môžeš vrátiť späť a pokračovať v práci na svojom projekte."
     need_help: "Potrebujete pomôcť so štartom?"
     thumbnail_help: "Nevidíte správny obrázok vášho projektu? Spustite Vašu aplikáciu pre vygenerovanie nového obrázku. Môže trvať až niekoľko hodín, kým sa obrázok aktualizuje na celej stránke."
-    really_delete: 'Vymazať?'
-    delete_yes: 'Áno'
-    delete_no: 'Nie'
     saved: "Uložené"
     not_saved: "Neuložené"
-    cancel: 'Zrušiť'
-    delete_confirm_title: Naozaj chcete odstrániť tento projekt?
-    delete_confirm_text: "Vymazaním tohto projektu sa projekt navždy zmaže aj z tvojho zoznamu Moje Projekty. Nikto, s kým si zdieľal odkaz, si už tvoj projekt nebude môcť pozrieť."
     view_all: 'Zobraziť Moje Projekty'
     remix: 'Remix'
     click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"
@@ -905,6 +892,7 @@ sk:
     csf_f_2: 'Obsah kurzu F'
     csf_digcit: 'Digitálne občianstvo'
     csf_jigsaw: 'Skladačka'
+    csf_sequencing: 'Postupnosť'
     csf_loops: 'Cykly'
     csf_events: 'Udalosti'
     csf_online_safety: 'Bezpečnosť na internete'
@@ -952,12 +940,14 @@ sk:
     csp_project: 'Projekt'
     csp_lists: 'Zoznamy'
     csp_loops: 'Cykly'
+    csp_traversals: 'Prechody'
     csp_libraries: 'Knižnice'
     dlp: 'Výzvy na zhodnotenie'
     time4cs_c1: 'Everglades a jeho ekosystémy'
     time4cs_c2: 'Potravové reťazce v Everglades'
     time4cs_c3: 'Život v Everglades'
     time4cs_c4: 'Invazívne vplyvy na Everglades'
+    time4cs_c5: 'Občania ovplyvňujú zmeny v Everglades'
   external_links:
     disclaimer: Upozornenie
     leaving_domain: Opúštate túto doménu na stránku, ktorá nie je prevádzkovaná spoločnosťou Code.org.

@@ -36,8 +36,9 @@ const initialState = {
 };
 
 // Question types for assessments.
-const QuestionType = {
+export const QuestionType = {
   MULTI: 'Multi',
+  MATCH: 'Match',
   FREE_RESPONSE: 'FreeResponse'
 };
 
@@ -341,16 +342,38 @@ export const getCurrentQuestion = state => {
       ? assessmentQuestions[state.sectionAssessments.questionIndex]
       : null;
     if (question) {
-      const answers =
-        question.type === QuestionType.MULTI &&
-        (question.answers || []).map((answer, index) => {
-          return {...answer, letter: ANSWER_LETTERS[index]};
-        });
+      if (question.type === QuestionType.MULTI) {
+        const answers =
+          question.type === QuestionType.MULTI &&
+          (question.answers || []).map((answer, index) => {
+            return {...answer, letter: ANSWER_LETTERS[index]};
+          });
 
-      return {
-        question: question.question_text,
-        answers: answers
-      };
+        return {
+          question: question.question_text,
+          answers: answers,
+          questionType: QuestionType.MULTI
+        };
+      } else if (question.type === QuestionType.FREE_RESPONSE) {
+        return {
+          question: question.question_text,
+          answers: null,
+          questionType: QuestionType.FREE_RESPONSE
+        };
+      } else if (question.type === QuestionType.MATCH) {
+        const answers = question.answers.map(answer => {
+          return answer.text;
+        });
+        const options = question.options.map(option => {
+          return option.text;
+        });
+        return {
+          question: question.question,
+          answers: answers,
+          options: options,
+          questionType: QuestionType.MATCH
+        };
+      }
     } else {
       return emptyQuestion;
     }
@@ -425,6 +448,70 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
   };
 };
 
+/*
+ * Get the match questions in the current assessment
+ */
+export const getMatchStructureForCurrentAssessment = state => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+
+  const questionData = assessmentsStructure.questions;
+
+  // Transform that data into what we need for this particular table, in this case
+  // questionStructurePropType structure.
+  return questionData
+    .filter(question => question.type === QuestionType.MATCH)
+    .map(question => {
+      return {
+        id: question.level_id,
+        question: question.question,
+        questionNumber: question.question_index + 1,
+        answers: question.answers,
+        options: question.options
+      };
+    });
+};
+
+/*
+ * Get the match questions responses in the current assessment
+ */
+export const getStudentMatchResponsesForCurrentAssessment = state => {
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return {};
+  }
+  const studentId = state.sectionAssessments.studentId;
+  const studentObject = studentResponses[studentId];
+  if (!studentObject) {
+    return {};
+  }
+
+  const currentAssessmentId = state.sectionAssessments.assessmentId;
+  const studentAssessment =
+    studentObject.responses_by_assessment[currentAssessmentId];
+
+  // If the student has not submitted this assessment, don't display results.
+  if (!studentAssessment) {
+    return {};
+  }
+
+  // Transform that data into what we need for this particular table, in this case
+  // is the structure studentAnswerDataPropType
+  return {
+    id: studentId,
+    name: studentObject.student_name,
+    studentResponses: studentAssessment.level_results
+      .filter(answer => answer.type === QuestionType.MATCH)
+      .map(answer => {
+        return {
+          responses: answer.student_result
+        };
+      })
+  };
+};
+
 // Get an array of objects indicating what each student answered for the current
 // question in view.
 export const getStudentAnswersForCurrentQuestion = state => {
@@ -447,14 +534,16 @@ export const getStudentAnswersForCurrentQuestion = state => {
     const responsesArray = studentAssessment.level_results || [];
     const question = responsesArray[questionIndex];
     if (question) {
-      studentAnswers.push({
-        id: studentId,
-        name: studentObject.student_name,
-        answer: question.student_result
-          ? indexesToAnswerString(question.student_result)
-          : '-',
-        correct: question.status === 'correct'
-      });
+      if (question.type === QuestionType.MULTI) {
+        studentAnswers.push({
+          id: studentId,
+          name: studentObject.student_name,
+          answer: question.student_result
+            ? indexesToAnswerString(question.student_result)
+            : '-',
+          correct: question.status === 'correct'
+        });
+      }
     }
   });
   return studentAnswers;
@@ -624,7 +713,7 @@ export const isCurrentAssessmentSurvey = state => {
  * assessment and a timestamp that indicates when a student submitted
  * the assessment.
  */
-export const getStudentsMCSummaryForCurrentAssessment = state => {
+export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
@@ -683,6 +772,8 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
       name: studentsObject.student_name,
       numMultipleChoiceCorrect: studentsAssessment.multi_correct,
       numMultipleChoice: studentsAssessment.multi_count,
+      numMatchCorrect: studentsAssessment.match_correct,
+      numMatch: studentsAssessment.match_count,
       inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
@@ -699,13 +790,15 @@ export const getStudentsMCSummaryForCurrentAssessment = state => {
  */
 export const getExportableSubmissionStatusData = state => {
   let summaryStudentStatus = [];
-  const studentStatus = getStudentsMCSummaryForCurrentAssessment(state);
+  const studentStatus = getStudentsMCandMatchSummaryForCurrentAssessment(state);
 
   studentStatus.forEach(student => {
     summaryStudentStatus.push({
       studentName: student.name,
       numMultipleChoiceCorrect: student.numMultipleChoiceCorrect,
       numMultipleChoice: student.numMultipleChoice,
+      numMatchCorrect: student.numMatchCorrect,
+      numMatch: student.numMatch,
       submissionTimestamp: student.submissionTimeStamp
     });
   });
@@ -771,6 +864,75 @@ export const getMultipleChoiceSectionSummary = state => {
           results[questionIndex].answers[answer].numAnswered++;
         });
       }
+    });
+  });
+
+  return results;
+};
+
+// Returns an array of objects corresponding to each match question and the
+// number of students who answered each answer.
+export const getMatchSectionSummary = state => {
+  const assessmentsStructure = getCurrentAssessmentQuestions(state);
+  if (!assessmentsStructure) {
+    return [];
+  }
+  const questionData = assessmentsStructure.questions;
+  const matchQuestions = questionData.filter(
+    question => question.type === QuestionType.MATCH
+  );
+
+  const results = matchQuestions.map(question => {
+    return {
+      id: question.level_id,
+      question: question.question,
+      questionNumber: question.question_index + 1,
+      options: question.options.map((option, indexO) => {
+        return {
+          option: question.options[indexO].text,
+          id: indexO,
+          totalAnswered: 0,
+          notAnswered: 0,
+          answers: question.answers.map((answer, indexA) => {
+            return {
+              answer: question.answers[indexA].text,
+              isCorrect: indexA === indexO,
+              numAnswered: 0
+            };
+          })
+        };
+      })
+    };
+  });
+
+  // Calculate the number of students who answered each option and fill
+  // in the initialized results structure above.
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
+  if (!studentResponses) {
+    return [];
+  }
+
+  Object.keys(studentResponses).forEach(studentId => {
+    studentId = parseInt(studentId, 10);
+    const studentObject = studentResponses[studentId];
+    const currentAssessmentId = state.sectionAssessments.assessmentId;
+    const studentAssessment =
+      studentObject.responses_by_assessment[currentAssessmentId] || {};
+
+    const studentResults = studentAssessment.level_results || [];
+    const matchResults = studentResults.filter(
+      result => result.type === QuestionType.MATCH
+    );
+
+    matchResults.forEach((response, questionIndex) => {
+      (response.student_result || []).forEach((answer, index) => {
+        results[questionIndex].options[index].totalAnswered++;
+        if (response.status[index] === 'unsubmitted') {
+          results[questionIndex].options[index].notAnswered++;
+        } else {
+          results[questionIndex].options[index].answers[answer].numAnswered++;
+        }
+      });
     });
   });
 

@@ -9,6 +9,10 @@ class ContentDSL < BaseDSL
   def type(text) @hash[:type] = text end
   def submittable(text) @hash[:submittable] = text end
   def display_name(text) @hash[:display_name] = text end
+  def display_as_unplugged(text) @hash[:display_as_unplugged] = text end
+  def use_large_video_player(text) @hash[:use_large_video_player] = text end
+  def hide_reference_area(text) @hash[:hide_reference_area] = text end
+  def video_key(text) @hash[:video_key] = text end
 
   # legacy
   def description(text) @hash[:content1] = text end

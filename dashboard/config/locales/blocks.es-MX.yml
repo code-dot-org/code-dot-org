@@ -536,7 +536,7 @@ es-MX:
             '"y"': posición vertical
             '"tint"': tinte
       Dancelab_setTint:
-        text: definir tinte [SPRITE] [0] a [VAL] [1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
         text: establecer tonalidad {THIS} a {VAL}
         options:
@@ -553,7 +553,7 @@ es-MX:
             '"ROBOT"': todos los robots
             '"SHARK"': todos los tiburones
       Dancelab_setTintInline:
-        text: definir tinte [SPRITE] [0] a [VAL] [1]
+        text: definir tinte {SPRITE} a {VAL}
       Dancelab_setVisible:
         text: definir {SPRITE} visible para {VISIBILITY}
         options:
@@ -694,6 +694,8 @@ es-MX:
             '"while"': mientras
       gamelab_clickedOn:
         text: cuando {SPRITE} haz clic
+      gamelab_clickedSpritePointer:
+        text: clic en sprite
       gamelab_comment:
         text: 'comentario: {COMMENT}'
       gamelab_console.log:
@@ -898,6 +900,8 @@ es-MX:
         text: mover {SPRITE} pixeles {DISTANCE} hacia {TARGET}
       gamelab_moveUp:
         text: "{THIS} se mueve hacia arriba"
+      gamelab_objectSprite:
+        text: sprite de objeto
       gamelab_playSound:
         text: reproducirSonido {SOUND}
       gamelab_pointInDirection:
@@ -936,7 +940,20 @@ es-MX:
         text: establecer fondo a {IMG}
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cueva
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': cancha
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desierto
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': cuadrícula
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
+              iris
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciencia
+              ficción
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrellas
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': bajo
+              el agua
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': invierno
             undefined: ninguno
       gamelab_setDirection:
         text: definir dirección de movimiento {SPRITE} a {DIRECTION}
@@ -992,6 +1009,12 @@ es-MX:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_spriteClickedSet:
+        text: "{CONDITION} {SPRITE} clic en conjunto {CLICK}"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_spriteCostume:
         text: "{COSTUME}"
       gamelab_spriteDirection:
@@ -1034,6 +1057,8 @@ es-MX:
         text: último {VALUE}
       gamelab_spritesWhereRandom:
         text: aleatorio en el grupo {VALUE}
+      gamelab_subjectSprite:
+        text: sprite de sujeto
       gamelab_thisBeginsBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
         options:
@@ -1084,6 +1109,13 @@ es-MX:
         text: cuando {SPRITE1} toca {SPRITE2}
       gamelab_whenTouchingAny:
         text: cuando {SPRITE} toca cualquier {GROUP}
+      gamelab_whenTouchingSet:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2} conjunto {SPRITEA} y conjunto
+          {SPRITEB}"
+        options:
+          CONDITION:
+            '"when"': cuando
+            '"while"': mientras
       gamelab_whenTrue:
         text: cuando {CONDITION} es verdadera
       gamelab_whenUpArrow:

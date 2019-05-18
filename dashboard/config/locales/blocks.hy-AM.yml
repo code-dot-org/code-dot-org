@@ -190,7 +190,12 @@ hy:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': քարանձավ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': անապատ
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ծիածան
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
       gamelab_setPosition:
         options:
           POSITION:
@@ -205,6 +210,11 @@ hy:
             '"scale"': չափ
             '"height"': բարձրություն
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': երբ
@@ -237,6 +247,11 @@ hy:
             "'down'": ներքեւ
             "'left'": ձախ
             "'right'": ճիշտ
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
       gamelab_whileKey:
         options:
           KEY:

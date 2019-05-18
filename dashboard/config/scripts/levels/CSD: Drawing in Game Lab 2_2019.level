@@ -13,7 +13,7 @@
     "parent_level_id": 11182,
     "name_suffix": "_2019",
     "long_instructions": "## Questions to Consider\r\n\r\n* What’s the difference between stroke and fill?",
-    "encrypted_teacher_markdown": "/EC6+YmajhNTY257bQss0HQ4w3dmXDTeKrtpb3p/yZg/Kv+w6z0eLgNBbKuS\nkqf2IFt0uv0lhiNNIwqqpUHUQKIMzDUSdQPyCdYbZIH4cZ6zeDD+hZS49JdT\nm4yhZmOdGJBRI9EWnl48ReZ7Y6KZT67pURvwwvd9CvLx+5j01Dw=\n"
+    "teacher_markdown": "## Discussion Goals\r\n\r\nStroke controls the border color of the shape, and fill controls the color inside of it."
   },
   "published": true,
   "notes": "",

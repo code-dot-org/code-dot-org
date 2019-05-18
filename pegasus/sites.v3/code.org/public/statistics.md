@@ -262,6 +262,26 @@ Our CS teachers are everywhere! More than 70% of counties in the US have trained
 
 </div>
 
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/student-app-designs1.png"></a>
+
+<br>
+
+Young women wanted to make apps about the weather and the young men wanted to make apps about billionaires. Check out our survey results from some high school students around which data sets (<a href="https://think.cs.vt.edu/corgis/csv/index.html">from CORGIS</a>) would make the best apps. <a href="https://twitter.com/TeachCode/status/1125430234705211393">What data do you think your students would want to use?</a>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px; margin-bottom: 20px;">
+
+<a href="" target="_blank"><img src="/images/statistics/fit-250/more-likely-to-share.png"></a>
+
+<br>
+
+Boys in our classes are 50% more likely to share the projects they create to <a href="https://studio.code.org/projects/public">Code.org's project gallery</a>. Yet, the best ambassadors for girls in CS are the other girls. How can we encourage them to share their projects and show their friends what they’ve made? What has worked for girls you’ve worked with?
+
+</div>
+
 <div style="clear: both;"></div>
 
 <br>

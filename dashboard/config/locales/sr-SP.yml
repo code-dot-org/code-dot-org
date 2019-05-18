@@ -202,10 +202,6 @@ sr:
     header:
       finished_hoc: Завршио сам свој Сат програмирања
       sign_in_to_save: Пријави се да сачуваш напредак
-      free_play:
-        playlab: Направи апликацију
-        artist: Нацртај нешто
-        applab: Направи апликацију
       educate_hoc: Час кода
     user:
       classroom: Почетна страница за учитеље
@@ -427,15 +423,9 @@ sr:
     submit: Пошаљи
   project:
     save: Сачувај
-    delete: Обриши
     share: Подели
-    more: Више
     name: Име
-    really_delete: Желите ли да избришете?
-    delete_yes: Да
-    delete_no: не
     saved: Сачувано у галерији!
-    cancel: Откажи
     abuse:
       report_abuse_form:
         abuse_type:
