@@ -1053,6 +1053,9 @@ var projects = (module.exports = {
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
+    this.logError_(errorType, errorCount, errorText);
+  },
+  logError_: function(errorType, errorCount, errorText) {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
