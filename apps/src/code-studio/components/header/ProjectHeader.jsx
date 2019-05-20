@@ -8,6 +8,7 @@ import i18n from '@cdo/locale';
 import ProjectImport from './ProjectImport';
 import ProjectRemix from './ProjectRemix';
 import ProjectShare from './ProjectShare';
+import ProjectExport from './ProjectExport';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 import {refreshProjectName} from '../../headerRedux';
@@ -15,7 +16,8 @@ import {refreshProjectName} from '../../headerRedux';
 class ProjectHeader extends React.Component {
   static propTypes = {
     projectName: PropTypes.string.isRequired,
-    refreshProjectName: PropTypes.func.isRequired
+    refreshProjectName: PropTypes.func.isRequired,
+    includeExportInProjectHeader: PropTypes.bool.isRequired
   };
 
   state = {
@@ -96,6 +98,7 @@ class ProjectHeader extends React.Component {
   }
 
   render() {
+    const {includeExportInProjectHeader} = this.props;
     return (
       <div>
         <div className="project_name_wrapper header_text">
@@ -104,6 +107,7 @@ class ProjectHeader extends React.Component {
         </div>
         {this.renderSaveOrEdit()}
         <ProjectShare />
+        {includeExportInProjectHeader && <ProjectExport />}
         <ProjectRemix lightStyle />
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
@@ -123,7 +127,8 @@ class ProjectHeader extends React.Component {
 export const UnconnectedProjectHeader = ProjectHeader;
 export default connect(
   state => ({
-    projectName: state.header.projectName
+    projectName: state.header.projectName,
+    includeExportInProjectHeader: state.header.includeExportInProjectHeader
   }),
   {
     refreshProjectName
