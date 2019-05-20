@@ -1089,6 +1089,15 @@ var projects = (module.exports = {
         err + ''
       );
       return;
+    } else if (saveChannelErrorCount) {
+      // If the previous errors occurred due to network problems, we may not
+      // have been able to report them. Try to report them once more, now that
+      // the network appears to be working again.
+      this.logError_(
+        'channel-saved-after-errors',
+        saveChannelErrorCount,
+        `channel save succeeded after ${saveChannelErrorCount} consecutive failures`
+      );
     }
     saveChannelErrorCount = 0;
 
