@@ -125,13 +125,11 @@ describe('SchoolInfoConfirmationDialog', () => {
       );
 
       it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
-        stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
         wrapper.instance().setState({showSchoolInterstitial: false});
         wrapper.find('div#update-button').simulate('click');
 
-        expect(onClose).not.to.have.been.called;
         expect(wrapperInstance.handleClickUpdate).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.true;
@@ -154,21 +152,18 @@ describe('SchoolInfoConfirmationDialog', () => {
 
       it('calls handleClickSave method when a user does not need to update school information', async () => {
         stubedFetch.resolves('just a test ');
-        // const postStub = sinon.spy($, 'post', {done: cb => cb()});
         const postStub = sinon.stub($, 'post').callsFake(() => ({
           done: cb => {
             cb();
             return {fail: cb => cb()};
           }
         }));
-        const result = await fetch('anything');
-        console.log('>>>>I am truly stubbed', result);
+        await fetch('anything');
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickSave');
         wrapper.instance().setState({showSchoolInterstitial: true});
-        console.log('===>', wrapper.find(Button).html());
         wrapper.find(Button).simulate('click');
-        // wrapper.find('div#my-button').simulate('click');
+
         await setTimeout(() => {}, 500);
         expect(wrapperInstance.handleClickSave).to.have.been.called;
         await setTimeout(() => {}, 100);
