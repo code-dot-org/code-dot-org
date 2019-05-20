@@ -12,7 +12,6 @@ var commonStyles = require('../../commonStyles');
 import ContainedLevel from '../ContainedLevel';
 
 var Instructions = require('./Instructions');
-var HeightResizer = require('./HeightResizer');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -67,9 +66,6 @@ const containedLevelStyles = {
     paddingTop: CONTAINED_LEVEL_PADDING,
     paddingLeft: CONTAINED_LEVEL_PADDING,
     paddingRight: CONTAINED_LEVEL_PADDING
-  },
-  heightResizer: {
-    backgroundColor: color.background_gray
   }
 };
 
@@ -93,7 +89,6 @@ const audioStyle = {
 const styles = {
   main: {
     position: 'absolute',
-    marginLeft: 15,
     top: 0,
     right: 0
     // left handled by media queries for .editor-column
@@ -634,7 +629,7 @@ class TopInstructions extends React.Component {
 
     if (this.props.hasContainedLevels) {
       return (
-        <div style={mainStyle} className="editor-column">
+        <div style={mainStyle}>
           <div
             style={{
               ...containedLevelStyles.background,
@@ -659,13 +654,6 @@ class TopInstructions extends React.Component {
               </div>
             )}
           </div>
-          {!this.props.collapsed && !this.props.isEmbedView && (
-            <HeightResizer
-              position={this.props.height}
-              onResize={this.handleHeightResize}
-              style={containedLevelStyles.heightResizer}
-            />
-          )}
         </div>
       );
     }
@@ -675,7 +663,7 @@ class TopInstructions extends React.Component {
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
-      <div style={mainStyle} className="editor-column">
+      <div style={mainStyle}>
         <ThreeColumns
           styles={{
             container: [
@@ -821,12 +809,6 @@ class TopInstructions extends React.Component {
             )}
           </div>
         </ThreeColumns>
-        {!this.props.collapsed && !this.props.isEmbedView && (
-          <HeightResizer
-            position={this.props.height}
-            onResize={this.handleHeightResize}
-          />
-        )}
       </div>
     );
   }

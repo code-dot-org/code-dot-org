@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import TopInstructionsCSF from './TopInstructionsCSF';
 import TopInstructionsCSP from './TopInstructionsCSP';
 
 /**
@@ -11,7 +10,6 @@ import TopInstructionsCSP from './TopInstructionsCSP';
 class TopInstructions extends React.Component {
   static propTypes = {
     hidden: PropTypes.bool.isRequired,
-    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     shortInstructions: PropTypes.string,
     longInstructions: PropTypes.string
@@ -20,7 +18,6 @@ class TopInstructions extends React.Component {
   render() {
     const {
       hidden,
-      noInstructionsWhenCollapsed,
       shortInstructions,
       longInstructions,
       hasContainedLevels
@@ -36,18 +33,13 @@ class TopInstructions extends React.Component {
       return <div />;
     }
 
-    return noInstructionsWhenCollapsed ? (
-      <TopInstructionsCSP />
-    ) : (
-      <TopInstructionsCSF />
-    );
+    return <TopInstructionsCSP />;
   }
 }
 
 export const UnconnectedTopInstructions = TopInstructions;
 export default connect(state => ({
   hidden: state.pageConstants.isShareView,
-  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
   hasContainedLevels: state.instructions.hasContainedLevels,
   shortInstructions: state.instructions.shortInstructions,
   longInstructions: state.instructions.longInstructions
