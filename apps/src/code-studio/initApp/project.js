@@ -1009,6 +1009,13 @@ var projects = (module.exports = {
   },
 
   /**
+   * Asks the sourceHandler for the list of functions in an app
+   */
+  getLibraryFromApp() {
+    return this.sourceHandler.getLibrary();
+  },
+
+  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
