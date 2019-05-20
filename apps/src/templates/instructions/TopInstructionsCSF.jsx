@@ -30,6 +30,7 @@ import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
 
 import {levenshtein} from '../../utils';
+import InlineAudio from './InlineAudio';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -65,6 +66,23 @@ const containedLevelStyles = {
     paddingTop: CONTAINED_LEVEL_PADDING,
     paddingLeft: CONTAINED_LEVEL_PADDING,
     paddingRight: CONTAINED_LEVEL_PADDING
+  }
+};
+
+const audioStyle = {
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    border: '2px solid ' + color.lighter_gray,
+    borderRadius: '4px'
+  },
+  button: {
+    height: '32px',
+    backgroundColor: '#FFFFFF'
+  },
+  buttonImg: {
+    lineHeight: '32px',
+    fontSize: 20
   }
 };
 
@@ -149,6 +167,9 @@ const styles = {
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
     float: 'left'
+  },
+  audioControls: {
+    paddingTop: 10
   }
 };
 
@@ -604,6 +625,8 @@ class TopInstructions extends React.Component {
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
 
+    const showAudioControls = this.props.textToSpeechEnabled && ttsUrl;
+
     if (this.props.hasContainedLevels) {
       return (
         <div style={mainStyle}>
@@ -622,6 +645,14 @@ class TopInstructions extends React.Component {
                 }}
               />
             </div>
+            {showAudioControls && (
+              <div style={styles.audioControls}>
+                <InlineAudio
+                  src={this.props.ttsLongInstructionsUrl}
+                  style={audioStyle}
+                />
+              </div>
+            )}
           </div>
         </div>
       );
