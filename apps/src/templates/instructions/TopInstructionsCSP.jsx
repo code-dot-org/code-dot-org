@@ -387,9 +387,11 @@ class TopInstructionsCSP extends Component {
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
           <div style={styles.paneHeaderOverride}>
-            {this.state.tabSelected === TabType.INSTRUCTIONS && ttsUrl && (
-              <InlineAudio src={ttsUrl} style={audioStyle} />
-            )}
+            {this.state.tabSelected === TabType.INSTRUCTIONS &&
+              ttsUrl &&
+              this.props.noInstructionsWhenCollapsed && (
+                <InlineAudio src={ttsUrl} style={audioStyle} />
+              )}
             {this.props.documentationUrl &&
               this.state.tabSelected !== TabType.COMMENTS && (
                 <PaneButton
