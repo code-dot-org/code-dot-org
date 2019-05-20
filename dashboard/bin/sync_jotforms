@@ -11,7 +11,7 @@ require_relative '../config/environment'
 JOT_FORM_CLASSES = [
   Pd::WorkshopDailySurvey,
   Pd::WorkshopFacilitatorDailySurvey,
-  # Pd::PostCourseSurvey -- don't sync this one until we support the datetime control
+  Pd::PostCourseSurvey
 ].freeze
 
 def main
