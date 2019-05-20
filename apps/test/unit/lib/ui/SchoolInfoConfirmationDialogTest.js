@@ -1,10 +1,12 @@
 import React from 'react';
+import $ from 'jquery';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../util/configuredChai';
 import {Body} from '@cdo/apps/templates/Dialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
+import Button from '@cdo/apps/templates/Button';
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {
@@ -106,7 +108,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       stubedFetch.restore();
     });
 
-    describe('handleClickUpdate and handleClickYes', () => {
+    describe('school infor confirmation dialog behavior', () => {
       const onClose = sinon.spy();
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
@@ -138,7 +140,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       it('calls handleClickYes method when a user does not need to update school information', async () => {
         stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
-        sinon.spy(wrapperInstance, 'handleClickYes');
+        const handleclickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
         wrapper.instance().setState({showSchoolInterstitial: false});
         wrapper.find('div#yes-button').simulate('click');
 
@@ -147,7 +149,73 @@ describe('SchoolInfoConfirmationDialog', () => {
         expect(onClose).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
+        handleclickYesSpy.restore();
       });
+
+      it('calls handleClickSave method when a user does not need to update school information', async () => {
+        stubedFetch.resolves('just a test ');
+        // const postStub = sinon.spy($, 'post', {done: cb => cb()});
+        const postStub = sinon.stub($, 'post').callsFake(() => ({
+          done: cb => {
+            cb();
+            return {fail: cb => cb()};
+          }
+        }));
+        const result = await fetch('anything');
+        console.log('>>>>I am truly stubbed', result);
+        const wrapperInstance = wrapper.instance();
+        sinon.spy(wrapperInstance, 'handleClickSave');
+        wrapper.instance().setState({showSchoolInterstitial: true});
+        console.log('===>', wrapper.find(Button).html());
+        wrapper.find(Button).simulate('click');
+        // wrapper.find('div#my-button').simulate('click');
+        await setTimeout(() => {}, 500);
+        expect(wrapperInstance.handleClickSave).to.have.been.called;
+        await setTimeout(() => {}, 100);
+        expect(onClose).to.have.been.called;
+        await setTimeout(() => {}, 50);
+        expect(wrapper.state('isOpen')).to.be.false;
+        postStub.restore();
+      });
+    });
+  });
+
+  describe('when to render school info confirmation dialog', () => {
+    const onClose = sinon.spy();
+    const wrapper = mount(
+      <SchoolInfoConfirmationDialog
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            country: 'US'
+          }
+        }}
+        onClose={onClose}
+        isOpen={true}
+      />
+    );
+
+    it('renders school info form when school info interstitial is set to true', () => {
+      const wrapperInstance = wrapper.instance();
+      const renderSchoolInformationForm = sinon.spy(
+        wrapperInstance,
+        'renderSchoolInformationForm'
+      );
+      wrapper.instance().setState({showSchoolInterstitial: true});
+
+      expect(renderSchoolInformationForm).to.have.been.called;
+    });
+
+    it('renders school info confirmation dialog when school info interstitial is set to false', () => {
+      const wrapperInstance = wrapper.instance();
+      const renderSchoolInfoConfirmationDialog = sinon.spy(
+        wrapperInstance,
+        'renderInitialContent'
+      );
+      wrapper.instance().setState({showSchoolInterstitial: false});
+
+      expect(renderSchoolInfoConfirmationDialog).to.have.been.called;
     });
   });
 });
