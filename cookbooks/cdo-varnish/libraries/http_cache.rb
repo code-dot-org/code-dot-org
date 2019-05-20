@@ -242,6 +242,11 @@ class HttpCache
             headers: WHITELISTED_HEADERS + ALLOWED_WEB_REQUEST_HEADERS,
             cookies: whitelisted_cookies
           },
+          {
+            path: '/curriculum_tracking_pixel',
+            headers: [],
+            cookies: whitelisted_cookies
+          }
         ],
         # Default Dashboard paths are session-specific, whitelist all session cookies and language header.
         default: {
