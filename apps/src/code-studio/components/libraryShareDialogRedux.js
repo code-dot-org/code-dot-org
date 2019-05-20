@@ -3,11 +3,13 @@ const SHOW_LIBRARY_SHARE_DIALOG =
   'libraryShareDialog/SHOW_LIBRARY_SHARE_DIALOG';
 const HIDE_LIBRARY_SHARE_DIALOG =
   'libraryShareDialog/HIDE_LIBRARY_SHARE_DIALOG';
+const SET_LIBRARY_NAME = 'libraryShareDialog/SET_LIBRARY_NAME';
 
 export default function reducer(state, action) {
   state = state || {
     libraryFunctions: {},
-    isOpen: false
+    isOpen: false,
+    libraryName: ''
   };
 
   switch (action.type) {
@@ -26,6 +28,11 @@ export default function reducer(state, action) {
         ...state,
         libraryFunctions: action.libraryFunctions
       };
+    case SET_LIBRARY_NAME:
+      return {
+        ...state,
+        libraryName: action.libraryName
+      };
     default:
       return state;
   }
@@ -43,5 +50,12 @@ export function setLibraryFunctions(functions) {
   return {
     type: SET_LIBRARY_FUNCTIONS,
     libraryFunctions: functions
+  };
+}
+
+export function setLibraryName(name) {
+  return {
+    type: SET_LIBRARY_NAME,
+    libraryName: name
   };
 }

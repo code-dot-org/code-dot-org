@@ -7,7 +7,10 @@ import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
-import {setLibraryFunctions} from './components/libraryShareDialogRedux';
+import {
+  setLibraryFunctions,
+  setLibraryName
+} from './components/libraryShareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -18,6 +21,10 @@ export function shareProject(shareUrl) {
       getStore().dispatch(
         setLibraryFunctions(dashboard.project.getLibraryFromApp())
       );
+      var projectName = dashboard.project.getCurrentName().replace(/\s+/g, '');
+      var libraryName =
+        projectName.charAt(0).toUpperCase() + projectName.slice(1);
+      getStore().dispatch(setLibraryName(libraryName));
     }
     var i18n = window.dashboard.i18n;
 

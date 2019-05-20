@@ -128,7 +128,8 @@ class AdvancedShareOptions extends React.Component {
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired
     }).isRequired,
-    openPublishLibraryDialog: PropTypes.func
+    openPublishLibraryDialog: PropTypes.func,
+    libraryName: PropTypes.string
   };
 
   constructor(props) {
@@ -290,7 +291,7 @@ class AdvancedShareOptions extends React.Component {
           libraries to your project by going to the Settings icon in your
           Toolbox, and choosing "Manage Libraries."
         </p>
-        <p style={style.libraryName}>Library name:</p>
+        <p style={style.libraryName}>Library name: {this.props.libraryName}</p>
         <button
           type="button"
           onClick={this.props.openPublishLibraryDialog}
@@ -582,7 +583,9 @@ class AdvancedShareOptions extends React.Component {
 
 export const UnconnectedAdvancedShareOptions = Radium(AdvancedShareOptions);
 export default connect(
-  state => ({}),
+  state => ({
+    libraryName: state.libraryShareDialog.libraryName
+  }),
   dispatch => ({
     openPublishLibraryDialog() {
       dispatch(showLibraryShareDialog());
