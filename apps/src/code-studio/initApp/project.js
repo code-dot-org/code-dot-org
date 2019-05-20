@@ -1500,7 +1500,12 @@ function fetchSource(channelData, callback, version, sourcesApi) {
     }
     sourcesApi.fetch(url, function(err, data, jqXHR) {
       if (err) {
-        console.warn('unable to fetch project source file', err);
+        this.logError_(
+          'load-sources-error',
+          null,
+          `unable to fetch project source file: ${err}`
+        );
+        console.warn();
         data = {
           source: '',
           html: '',
