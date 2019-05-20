@@ -250,9 +250,9 @@ module ScriptConstants
   # Sections can be assigned to both courses and scripts. We want to make sure
   # we give teacher dashboard the same information for both sets of assignables.
   # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sycn. We accomplish
+  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
   # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate affect that
+  # to take care of translating name/cateogry (with the unfortunate effect that
   # we could have two different translations).
   # @param course_or_script [Course|Script] A row object from either our courses
   #   or scripts dashboard db tables.
