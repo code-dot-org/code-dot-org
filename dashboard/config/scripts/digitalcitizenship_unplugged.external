@@ -1,4 +1,5 @@
 name 'DigitalCitizenship-Unplugged'
+video_key 'CSF_Super_Digital_Citizen'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'

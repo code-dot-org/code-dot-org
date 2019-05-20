@@ -60,7 +60,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
   <summary>**How much does a workshop cost?**</summary>
   <p>
   <br/>
-  Costs will vary across the country. [contact your Regional Partner](#contact) to find the cost in your area.
+  Costs will vary across the country. [Contact your Regional Partner](#contact) to find the cost in your area.
 
   We believe that local support is critical for success - we’ve partnered with a network of Regional Partners and local facilitators to work with your school. Code.org provides grant funding to help subsidize the costs of the program and to ensure you can use the curriculum & tools forever at no cost.
 
@@ -76,7 +76,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
 ## Register for a workshop
 Look at the map below to find the next upcoming CS Fundamentals: Deep Dive workshop in your region. Workshops are available year round, because CS Fundamentals courses can be implemented at any point in the school year. Check back often as new workshops will continue to be added throughout the year as Deep Dive launches throughout the country starting in June 2019.
 
-map
+<%= view :workshop_search, deep_dive_only: true %>
 
 If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
 </p>
@@ -92,6 +92,6 @@ If you’d like to set up a private workshop and you’re in the U.S., [contact 
 
 <a id="contact"></a>
 <br/>
-## Contact your Regional Partners
+## Contact your Regional Partner
 
 <%= view :professional_learning_regional_partner_mini_contact, source_page_id: "professional-development-deep-dive"%>

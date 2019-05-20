@@ -660,4 +660,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
+
+  get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
 end
