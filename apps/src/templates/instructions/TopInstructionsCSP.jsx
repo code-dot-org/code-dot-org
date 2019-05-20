@@ -23,7 +23,7 @@ import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import experiments from '@cdo/apps/util/experiments';
 import queryString from 'query-string';
@@ -37,7 +37,8 @@ const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 const TabType = {
   INSTRUCTIONS: 'instructions',
   RESOURCES: 'resources',
-  COMMENTS: 'comments'
+  COMMENTS: 'comments',
+  TEACHER_ONLY: 'teacher-only'
 };
 
 const styles = {
@@ -125,7 +126,8 @@ class TopInstructionsCSP extends Component {
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
     user: PropTypes.number,
-    noInstructionsWhenCollapsed: PropTypes.bool.isRequired
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
+    teacherMarkdown: PropTypes.string
   };
 
   constructor(props) {
@@ -283,6 +285,9 @@ class TopInstructionsCSP extends Component {
       case TabType.COMMENTS:
         element = this.refs.commentTab;
         break;
+      case TabType.TEACHER_ONLY:
+        element = this.refs.teacherOnlyTab;
+        break;
     }
     const maxNeededHeight =
       $(ReactDOM.findDOMNode(element)).outerHeight(true) +
@@ -332,6 +337,10 @@ class TopInstructionsCSP extends Component {
     );
   };
 
+  handleTeacherOnlyTabClick = () => {
+    this.setState({tabSelected: TabType.TEACHER_ONLY});
+  };
+
   render() {
     const mainStyle = [
       styles.main,
@@ -371,7 +380,7 @@ class TopInstructionsCSP extends Component {
       ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
         (this.props.viewAs === ViewType.Teacher &&
           !this.state.teacherViewingStudentWork));
-    const feedbackTabText = displayKeyConcept ? 'Key Concept' : msg.feedback();
+    const feedbackTabText = displayKeyConcept ? 'Key Concept' : i18n.feedback();
 
     const displayFeedback =
       displayKeyConcept ||
@@ -396,7 +405,7 @@ class TopInstructionsCSP extends Component {
               this.state.tabSelected !== TabType.COMMENTS && (
                 <PaneButton
                   iconClass="fa fa-book"
-                  label={msg.documentation()}
+                  label={i18n.documentation()}
                   isRtl={false}
                   headerHasFocus={false}
                   onClick={this.handleDocumentationClick}
@@ -407,7 +416,7 @@ class TopInstructionsCSP extends Component {
                 className="uitest-instructionsTab"
                 onClick={this.handleInstructionTabClick}
                 selected={this.state.tabSelected === TabType.INSTRUCTIONS}
-                text={msg.instructions()}
+                text={i18n.instructions()}
                 teacherOnly={teacherOnly}
               />
               {displayHelpTab && (
@@ -415,7 +424,7 @@ class TopInstructionsCSP extends Component {
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
                   selected={this.state.tabSelected === TabType.RESOURCES}
-                  text={msg.helpTips()}
+                  text={i18n.helpTips()}
                   teacherOnly={teacherOnly}
                 />
               )}
@@ -428,6 +437,17 @@ class TopInstructionsCSP extends Component {
                   teacherOnly={teacherOnly}
                 />
               )}
+              {this.props.noInstructionsWhenCollapsed &&
+                this.props.viewAs === ViewType.Teacher &&
+                this.props.teacherMarkdown && (
+                  <InstructionsTab
+                    className="uitest-teacherOnlyTab"
+                    onClick={this.handleTeacherOnlyTabClick}
+                    selected={this.state.tabSelected === TabType.TEACHER_ONLY}
+                    text={i18n.teacherInstructions()}
+                    teacherOnly={teacherOnly}
+                  />
+                )}
             </div>
             {!this.props.isEmbedView && (
               <CollapserIcon
@@ -441,29 +461,28 @@ class TopInstructionsCSP extends Component {
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
             <div ref="instructions">
-              {this.props.hasContainedLevels && (
-                <ContainedLevel
-                  ref="instructions"
-                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                />
-              )}
+              {this.props.hasContainedLevels &&
+                this.props.noInstructionsWhenCollapsed && (
+                  <ContainedLevel
+                    ref="instructions"
+                    hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                  />
+                )}
+              {!this.props.noInstructionsWhenCollapsed &&
+                this.state.tabSelected === TabType.INSTRUCTIONS && (
+                  <TopInstructionsCSF />
+                )}
               {!this.props.hasContainedLevels &&
+                this.props.noInstructionsWhenCollapsed &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
-                    {!this.props.noInstructionsWhenCollapsed && (
-                      <TopInstructionsCSF />
-                    )}
-                    {this.props.noInstructionsWhenCollapsed && (
-                      <div>
-                        <Instructions
-                          ref="instructions"
-                          longInstructions={this.props.longInstructions}
-                          onResize={this.adjustMaxNeededHeight}
-                          inTopPane
-                        />
-                        <TeacherOnlyMarkdown />
-                      </div>
-                    )}
+                    <Instructions
+                      ref="instructions"
+                      longInstructions={this.props.longInstructions}
+                      onResize={this.adjustMaxNeededHeight}
+                      inTopPane
+                    />
+                    <TeacherOnlyMarkdown />
                   </div>
                 )}
             </div>
@@ -490,6 +509,12 @@ class TopInstructionsCSP extends Component {
                 token={this.state.token}
               />
             )}
+            {this.props.noInstructionsWhenCollapsed &&
+              this.props.viewAs === ViewType.Teacher &&
+              this.props.teacherMarkdown &&
+              this.state.tabSelected === TabType.TEACHER_ONLY && (
+                <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+              )}
           </div>
           {!this.props.isEmbedView && (
             <HeightResizer
@@ -527,7 +552,8 @@ export default connect(
     readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     serverLevelId: state.pageConstants.serverLevelId,
     user: state.pageConstants.userId,
-    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
+    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
+    teacherMarkdown: state.instructions.teacherMarkdown
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
