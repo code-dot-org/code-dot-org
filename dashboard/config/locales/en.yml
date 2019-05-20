@@ -992,6 +992,7 @@ en:
     csp_loops: 'Loops'
     csp_traversals: 'Traversals'
     csp_libraries: 'Libraries'
+    csp_parameters_return_values: 'Parameters and Return Values'
     dlp: 'Reflection Prompts'
     time4cs_c1: 'Everglades and Its Ecosystems'
     time4cs_c2: 'Food Chains in the Everglades'
