@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 
 const styles = {
   table: {
@@ -20,12 +21,19 @@ const styles = {
     }
   },
   td: {
-    padding: 10
+    padding: 5
   },
   selected: {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
     backgroundColor: color.light_cyan
+  },
+  studentTableRow: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  studentName: {
+    paddingLeft: 5
   }
 };
 
@@ -38,7 +46,9 @@ class StudentTable extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
-    getSelectedUserId: PropTypes.func.isRequired
+    getSelectedUserId: PropTypes.func.isRequired,
+    levels: PropTypes.array,
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   getRowStyle = (selectedUserId, id) => {
@@ -51,7 +61,13 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {students, onSelectUser, getSelectedUserId} = this.props;
+    const {
+      students,
+      onSelectUser,
+      getSelectedUserId,
+      levels,
+      inMiniRubricExperiment
+    } = this.props;
     const selectedUserId = getSelectedUserId();
 
     return (
@@ -70,7 +86,15 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                {student.name}
+                <div style={styles.studentTableRow}>
+                  {levels && (
+                    <TeacherPanelProgressBubble
+                      level={levels.find(level => student.id === level.user_id)}
+                      inMiniRubricExperiment={inMiniRubricExperiment}
+                    />
+                  )}
+                  <span style={styles.studentName}>{student.name}</span>
+                </div>
               </td>
             </tr>
           ))}
