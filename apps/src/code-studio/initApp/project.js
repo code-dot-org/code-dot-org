@@ -926,6 +926,15 @@ var projects = (module.exports = {
               );
               return;
             }
+          } else if (saveSourcesErrorCount > 0) {
+            // If the previous errors occurred due to network problems, we may not
+            // have been able to report them. Try to report them once more, now that
+            // the network appears to be working again.
+            this.logError_(
+              'sources-saved-after-errors',
+              saveSourcesErrorCount,
+              `sources saved after ${saveSourcesErrorCount} consecutive failures`
+            );
           }
           saveSourcesErrorCount = 0;
           if (!firstSaveTimestamp) {
