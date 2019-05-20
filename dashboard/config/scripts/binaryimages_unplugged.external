@@ -1,9 +1,10 @@
 name 'BinaryImages-Unplugged'
+video_key 'C4_unplugged_binary'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # Binary Images
 
-Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+Communicate how to recreate an image using just two simple values.
 MARKDOWN
