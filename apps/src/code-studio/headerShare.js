@@ -7,10 +7,18 @@ import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
+import {setLibraryFunctions} from './components/libraryShareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
+    const appType = dashboard.project.getStandaloneApp();
+    if (appType === 'applab' && experiments.isEnabled('student-libraries')) {
+      getStore().dispatch(
+        setLibraryFunctions(dashboard.project.getLibraryFromApp())
+      );
+    }
     var i18n = window.dashboard.i18n;
 
     var dialogDom = document.getElementById('project-share-dialog');
@@ -20,7 +28,6 @@ export function shareProject(shareUrl) {
       document.body.appendChild(dialogDom);
     }
 
-    const appType = dashboard.project.getStandaloneApp();
     const selectedSong = dashboard.project.getSelectedSong();
 
     // The AgeDialog used by Dance Party stores an 'ad_anon_over13' cookie for signed out users,
