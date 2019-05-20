@@ -27,6 +27,7 @@ import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import experiments from '@cdo/apps/util/experiments';
 import queryString from 'query-string';
+import TopInstructionsCSF from './TopInstructionsCSF';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -123,7 +124,8 @@ class TopInstructionsCSP extends Component {
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
-    user: PropTypes.number
+    user: PropTypes.number,
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -446,13 +448,20 @@ class TopInstructionsCSP extends Component {
               {!this.props.hasContainedLevels &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
-                    <Instructions
-                      ref="instructions"
-                      longInstructions={this.props.longInstructions}
-                      onResize={this.adjustMaxNeededHeight}
-                      inTopPane
-                    />
-                    <TeacherOnlyMarkdown />
+                    {!this.props.noInstructionsWhenCollapsed && (
+                      <TopInstructionsCSF />
+                    )}
+                    {this.props.noInstructionsWhenCollapsed && (
+                      <div>
+                        <Instructions
+                          ref="instructions"
+                          longInstructions={this.props.longInstructions}
+                          onResize={this.adjustMaxNeededHeight}
+                          inTopPane
+                        />
+                        <TeacherOnlyMarkdown />
+                      </div>
+                    )}
                   </div>
                 )}
             </div>
@@ -515,7 +524,8 @@ export default connect(
     viewAs: state.viewAs,
     readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     serverLevelId: state.pageConstants.serverLevelId,
-    user: state.pageConstants.userId
+    user: state.pageConstants.userId,
+    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
