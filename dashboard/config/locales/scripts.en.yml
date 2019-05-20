@@ -12159,6 +12159,10 @@ en:
               name: Functions with Parameters and Return Explore
             Libraries:
               name: Libraries
+            Parameters and Return Values Explore:
+              name: Parameters and Return Values Explore
+            Parameters and Return Values Investigate:
+              name: Parameters and Return Values Investigate
           title: 'Unit 7: Functions and Libraries'
           description_audience: ''
           description_short: ''
