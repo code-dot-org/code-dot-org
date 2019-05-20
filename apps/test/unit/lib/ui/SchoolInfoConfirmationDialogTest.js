@@ -108,7 +108,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       stubedFetch.restore();
     });
 
-    describe('school infor confirmation dialog behavior', () => {
+    describe('school info confirmation dialog behavior', () => {
       const onClose = sinon.spy();
       const wrapper = mount(
         <SchoolInfoConfirmationDialog
