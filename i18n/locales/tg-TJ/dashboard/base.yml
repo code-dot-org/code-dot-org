@@ -127,15 +127,12 @@ tg:
     new: "Эҷод кардани нав"
     rename: "Иваз кардани ном"
     exit: "Бозгашт ба дарс"
-    my_projects: "Лоиҳаи ман"
     project_gallery: "Лоиҳаҳо"
     share_title: Лоиҳаи худро мубодила кунед
     share_copy_link: "Нусхабардории пайванд:"
-    close: "Пӯшидан"
     name: "Ном"
     updated: "Навсозӣ шуд"
     project_type: "Навъи лоиҳа"
-    really_delete: 'Нест мекунед?'
     abuse:
       report_abuse_form:
         abuse_type:

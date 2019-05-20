@@ -808,14 +808,12 @@ es:
     new: "Crear nuevo"
     rename: "Cambiar nombre"
     save: "Guardar"
-    delete: "Borrar"
     import: "Importar"
     share_link_import_bad_link_header: "El enlace compartido no ha sido reconocido"
     share_link_import_bad_link_body: "No hemos podido importar el enlace compartido. Asegúrate de que estás utilizando un enlace de un rompecabezas de Minecraft: Agent, y de que has copiado el enlace al completo."
     share_link_import_error_header: "Algo salió mal."
     share_link_import_error_body: "Ha habido un problema al importar ese enlace compartido. Por favor, vuelve a intentarlo."
     exit: "Volver al curso"
-    my_projects: "Mis proyectos"
     project_gallery: "Proyectos"
     publish: "Publicar"
     unpublish: "No publicar"
@@ -827,22 +825,14 @@ es:
     embed: "Insertar"
     advanced_share: "Mostrar opciones avanzadas"
     no_projects: "Actualmente usted no posee proyectos. Haga clic en uno de los siguientes botones para empezar un proyecto."
-    close: "Cerrar"
-    more: "Más"
     name: "Nombre"
     updated: "Actualizado"
     project_type: "Tipo de Proyecto"
     help_text: "¡Haz clic en <strong>Hacer una Aplicación</strong> o <strong>Dibujar Algo</strong> más abajo para hacer un nuevo proyecto de Artista o de Laboratorio Lúdico! <br/>Puedes volver y trabajar en tus proyectos en cualquier momento."
     need_help: "¿Necesitas ayuda para empezar?"
     thumbnail_help: "¿No ven la imagen miniatura correcta para su proyecto? Ejecute la aplicación para generar una nueva imagen miniatura. Tenga en cuenta que pueda tardar un par de horas para que la miniatura se actualice en todos lados."
-    really_delete: '¿Borrar?'
-    delete_yes: 'Sí'
-    delete_no: 'No'
     saved: "Guardado"
     not_saved: "No guardado"
-    cancel: 'Cancelar'
-    delete_confirm_title: '¿Estás seguro de que quieres eliminar este proyecto?'
-    delete_confirm_text: "Al borrar tu proyecto se eliminará permanentemente de tu Lista de proyectos. Las personas que tengan un enlace al mismo no podrán seguir viendo el proyecto una vez que haya sido eliminado."
     view_all: 'Ver Mis proyectos'
     remix: 'Remezclar'
     click_to_remix: "¡Haz clic en 'Remezclar' para obtener tu propia versión!"

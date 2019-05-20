@@ -31,6 +31,7 @@ hi:
         CSF_loops_AB: फंदे
         hoc_dance_events: डांस पार्टी - इवेंट्स
         hoc_dance_properties: डांस पार्टी - विशेषताएं
+        hoc_dance_congrats: Dance Party - पार्टी ऑन!
     callout:
       text:
         run: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ

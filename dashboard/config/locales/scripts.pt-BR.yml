@@ -2259,6 +2259,10 @@ pt-BR:
           stages:
             Background and Context:
               name: Plano de Fundo e Contexto
+            'Classroom and Workshop Style ':
+              name: 'Sala de aula e oficina '
+            ECS Curriculum:
+              name: Currículo do ECS
             Welcome to Phase 1!:
               name: Bem-vindo a Fase 1!
         algebraFacilitator:
@@ -2340,6 +2344,14 @@ pt-BR:
               name: Estratégias para Redação de Alunos
             Supporting Peer Learning:
               name: Apoiando o Aprendizado entre Pares
+        test-teaching-ap-cs-unit-1:
+          stages:
+            test Unit 1 content module Alpha:
+              name: teste Unidade 1 módulo de conteúdo Alpha
+            test Unit 1 content module Bravo:
+              name: teste Módulo de conteúdo da unidade 1 Bravo
+            test Unit 1 content module Charlie:
+              name: teste módulo de conteúdo da Unidade 1 Charlie
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -5082,6 +5094,8 @@ pt-BR:
               name: Projetando para Acessibilidade
             Digital Sharing:
               name: Compartilhamento Digital
+            Simon Says:
+              name: Simon diz
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionais no Minecraft: Viagem Aquática'
             Designing for Accessibility:
@@ -5095,15 +5109,17 @@ pt-BR:
             ser compartilhada.
           stages:
             Programming in Maze:
-              name: Programação no labirinto
+              name: Programando com Angry Birds
             Relay Programming:
               name: Programação por revezamento
             Copyright and Creativity:
               name: Copyright e Direitos Autorais
             'Concept Practice with Minecraft ':
-              name: 'Prática conceitual com Minecraft '
+              name: Prática conceitual com Minecraft
             Conditionals with Cards:
               name: Condicionais com cartas
+            Functions in Artist:
+              name: Funções com Artista
             Envelope Variables:
               name: Variáveis do envelope
             For Loop Fun:
@@ -5118,6 +5134,10 @@ pt-BR:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Festa dançante
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionais no Minecraft: Viagem Aquática'
         csd1-2019:
           description: "Resolução de Problemas e Computação é uma introdução altamente
             interativa e colaborativa para o campo da ciência da computação, enquadrada
@@ -5171,6 +5191,8 @@ pt-BR:
               name: Meus Amigos Robôs Malucos Jr.
             Graphing Data:
               name: Gerando Gráficos a partir de dados
+            Powerful Passwords:
+              name: Senhas fortes
             Picturing Data:
               name: Gerando Gráficos a partir de dados
         gamelab:
@@ -5322,13 +5344,23 @@ pt-BR:
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Repetições com Scrat
+            Loops in Collector:
+              name: Repetições com Laurel
+            Loops in Artist:
+              name: Desenho jardins com repetições
             Spelling Bee:
               name: Soletrando
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
             Programming in Maze:
-              name: Programação no labirinto
+              name: Programação com Scrat
+            Programming in Harvester:
+              name: Programação com Colheitadeira
+            Tell a Story in Play Lab:
+              name: Em Movimento com os Eventos
+            Make a Game in Play Lab:
+              name: Um Battle Royal com eventos
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
         removed19:

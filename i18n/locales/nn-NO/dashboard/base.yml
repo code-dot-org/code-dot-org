@@ -792,14 +792,12 @@ nn:
     new: "Lag ny"
     rename: "Gje nytt navn"
     save: "Lagre"
-    delete: "Slett"
     import: "Importér"
     share_link_import_bad_link_header: "Delelenke ikkje attkjend"
     share_link_import_bad_link_body: "Vi kunne ikke importere lenka. Kontroller at du brukar ei lenke frå ei Minecraft: Agent-oppgåve, og at du har kopiert hele lenka."
     share_link_import_error_header: "Noke gjekk gale."
     share_link_import_error_body: "Det oppstod eit problem ved import av lenka. Prøv igjen."
     exit: "Attende til kurset"
-    my_projects: "Mine prosjekt"
     project_gallery: "Prosjekt"
     publish: "Publisér"
     unpublish: "Opphev publisering"
@@ -811,22 +809,14 @@ nn:
     embed: "Bygg inn"
     advanced_share: "Vis avanserte alternativ"
     no_projects: "Du har ingen prosjekter. Klikk på en av knappene over for å starte et prosjekt."
-    close: "Lukk"
-    more: "Meir"
     name: "Namn"
     updated: "Oppdatert"
     project_type: "Prosjekttype"
     help_text: "Klikk <strong>Lag ein app</strong> eller <strong>Teikn noko</strong> under for å lage eit prosjekt!<br/>Du kan komme tilbake og jobbe på prosjekta dine når som helst."
     need_help: "Treng du hjelp for å kome i gong?"
     thumbnail_help: "Ikke riktig miniatyrbildet for prosjektet? Kjør din app for å generere et nytt miniatyrbilde. Merk at det kan ta et par timer før miniatyrbildet er oppdatert overalt."
-    really_delete: 'Slette?'
-    delete_yes: 'Ja'
-    delete_no: 'Nei'
     saved: "Lagra"
     not_saved: "Ikkje lagra"
-    cancel: 'Avbryt'
-    delete_confirm_title: Er du sikker på at du vil slette dette prosjektet?
-    delete_confirm_text: "Ved å slette prosjektet fjernar du det frå lista Mine prosjekt for godt. Om du har delt lenkja til prosjektet ditt med nokon, vil dei ikkje lenger kunne sjå prosjektet ditt."
     view_all: 'Sjå Mine prosjekt'
     remix: 'Remix'
     click_to_remix: "Klikk \"Remix\" for å snurre i gong din eigen versjon!"

@@ -148,6 +148,7 @@ hi:
     login: 'ईमेल'
     password: 'पासवर्ड'
     remember: 'मुझे याद रखना'
+    submit: 'दाखिल करना'
   signin:
     try_heading: 'कोडिंग के बिना साइन अप करने की कोशिश करना चाहते हैं?'
     try_hoc: 'पहले संहिता के एक घंटे के प्रयास'
@@ -157,6 +158,7 @@ hi:
     name: 'अपने नाम का चयन करें'
     picture: 'अब अपने गुप्त चित्र ढूँढें'
     words: 'अब आपके गुप्त शब्द दर्ज करें'
+    login: 'दाखिल करना'
   password:
     reset_form:
       title: 'अपना पासवर्ड भूल गए?'
@@ -198,7 +200,12 @@ hi:
     created: '%{model} सफलतापूर्वक बनाया गया'
     destroyed: '%{model} सफलतापूर्वक हटा दिया गया था।'
   nav:
+    header:
+      finished_hoc: "मैंने पूरा कर लिया!"
+      help_support: "सहायता और समर्थन"
     user:
+      signin: 'दाखिल करना'
+      signup: 'एक खाता बनाएँ'
       create: 'बनाए'
       dance: 'डांस पार्टी'
       infinity: 'अनंत'
@@ -221,6 +228,16 @@ hi:
     female: 'महिला'
   user_type:
     student: 'छात्र'
+  footer:
+    copyright: 'कॉपीराइट'
+    more: 'अधिक'
+    translate: 'हमारी सामग्री का अनुवाद करने के लिए स्वयंसेवक'
+    tos: 'सेवा की शर्तें'
+    privacy: 'गोपनीयता नीति'
+    report_abuse: 'दुरुपयोग होने की सूचना दें'
+  reference_area:
+    title: 'मदद चाहिए?'
+    subtitle: 'देखें ये वीडियो और संकेत'
   compatibility:
     upgrade:
       link: "अधिक जानें"
@@ -231,8 +248,11 @@ hi:
       body: "कोड के जरिए Minecraft की दुनिया का पता लगाएँ"
     unplugged_conditionals:
       title: "शर्तें"
+  gallery:
+    report_abuse: "दुरुपयोग होने की सूचना दें"
   landing:
     support: "मदद प्राप्त करें"
+    help_support: "सहायता और समर्थन"
   multi:
     wrong_title: "गलत जवाब"
     correct_title: "सही"
@@ -263,6 +283,10 @@ hi:
     hour: '1 घंटा'
     day: 'दिन'
     week: 'सप्ताह'
+  terms_interstitial:
+    tos: "सेवा की शर्तें"
+    privacy: "गोपनीयता नीति"
+    print: "छापें"
   school_info_interstitial:
     save: "सहेजें"
   race_interstitial:
@@ -273,16 +297,11 @@ hi:
     new: "नया बनाएँ"
     rename: "नाम बदलें"
     save: "सहेजें"
-    delete: "मिटाएँ"
     exit: "पाठ्यक्रम पर लौटें"
     share: "शेयर करें"
-    close: "बंद करें"
     name: "नाम"
-    really_delete: 'मिटाएँ?'
-    delete_yes: 'हाँ'
-    delete_no: 'नहीं'
     saved: "सहेजा गया"
-    cancel: 'रद्द करें'
+    remix: 'रीमिक्स'
   flex_category:
     csf_loops: 'फंदे'
     csf_events: 'घटनाएँ'

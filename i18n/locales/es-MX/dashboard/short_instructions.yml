@@ -3368,7 +3368,6 @@ es-MX:
       Virtual Pet Freeplay: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
       Virtual Pet Freeplay_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga? ¡Prueba lo que quieras!"
       Virtual Pet Freeplay_simple: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
-      Virtual Pet Template_2019: "¡Crea tu propia mascota virtual! Haz clic en la pestaña **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota virtual. En el código a continuación, cambia el disfraz de la mascota sprite por el tuyo."
       WhileAdventure: Nuestra aventurera quiere recoger monedas. ¿Puedes ayudarla a agarrar la mayor cantidad que pueda usando solo un `eliminar 1 bloque`?
       'Widget: Black and White Pixelation': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
       'Widget: Black and White Pixelation_2018': "¡Ahora haz tu propia imagen! Hemos empezado con un lienzo de 10 x 10, pero puedes hacerlo del tamaño que quieras. ¡Que te diviertas pixelando!"
@@ -3376,7 +3375,7 @@ es-MX:
       'Widget: Color Pixelation': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
       'Widget: Color Pixelation_2018': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
       'Widget: Color Pixelation_2019': 'Requisitos: El icono debe ser de 16 x 16 pixeles. Debes utilizar el Widget Pixelation para codificar los bits de información de color. La imagen debe codificarse con al menos 12 bits por pixel.'
-      XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas de unidades
+      XML Scratchpad: Usar este nivel de prueba para obtener el xml para pruebas unitarias
       aE1: "¡Has elegido crear una servilleta cuadrada! \n\nPara terminar, dibuja un cuadrado con lados de 20 pixeles. "
       aE2: Si pones tu bucle cuadrado dentro de otro bucle, lo llamamos "bucle anidado". ¿Qué necesitas agregar a tu bucle externo para asegurarte de que las 14 servilletas se alinean una al lado de la otra?
       aE3: "¡Tenemos que tener un mantel!  \n\nToma tu fila de 14 servilletas y cóselas juntas con otro **bucle externo** para hacer una cobertura para nuestra mesa."

@@ -1710,7 +1710,7 @@ gl:
         ^ 2) de cada vez.  Quen vai chegar primeiro á bandeira?"
       Course 4 Play Labs For Loops 8a: "Para terminar o noso xogo, precisamos\ntraer
         de volta a variábel \"incremento\"!    Imos relacionala ao nivel do\nxogo.\\\r\n\\\r\n\n1.
-        \ Garda o número de veces que o Mago é clicado.\\\r\n2.  2)\n    Se o Mago
+        \ Garda o número de veces que o Mago é clicado.\\\r\n2.  2\\)\n    Se o Mago
         fose clicado polo menos 10 veces antes de que o can conte até 30, aumenta
         \"incremento\" en 1 unidade e comeza de novo.\\\r\n3.  Se o Mago non fose
         clicado\n    polo menos 10 veces, o xogo acaba."
