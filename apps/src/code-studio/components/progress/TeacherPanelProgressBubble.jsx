@@ -53,14 +53,13 @@ const styles = {
 
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
-    level: PropTypes.object,
-    inMiniRubricExperiment: PropTypes.bool
+    level: PropTypes.object
   };
 
   render() {
-    const {level, inMiniRubricExperiment} = this.props;
+    const {level} = this.props;
 
-    if (inMiniRubricExperiment && level.assessment && level.passed) {
+    if (level.assessment && level.passed) {
       level.status = LevelStatus.completed_assessment;
     }
 
