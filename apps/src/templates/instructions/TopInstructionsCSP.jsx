@@ -419,7 +419,7 @@ class TopInstructionsCSP extends Component {
                 text={i18n.instructions()}
                 teacherOnly={teacherOnly}
               />
-              {displayHelpTab && (
+              {this.props.noInstructionsWhenCollapsed && displayHelpTab && (
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
@@ -428,15 +428,17 @@ class TopInstructionsCSP extends Component {
                   teacherOnly={teacherOnly}
                 />
               )}
-              {displayFeedback && (!this.state.fetchingData || teacherOnly) && (
-                <InstructionsTab
-                  className="uitest-feedback"
-                  onClick={this.handleCommentTabClick}
-                  selected={this.state.tabSelected === TabType.COMMENTS}
-                  text={feedbackTabText}
-                  teacherOnly={teacherOnly}
-                />
-              )}
+              {this.props.noInstructionsWhenCollapsed &&
+                displayFeedback &&
+                (!this.state.fetchingData || teacherOnly) && (
+                  <InstructionsTab
+                    className="uitest-feedback"
+                    onClick={this.handleCommentTabClick}
+                    selected={this.state.tabSelected === TabType.COMMENTS}
+                    text={feedbackTabText}
+                    teacherOnly={teacherOnly}
+                  />
+                )}
               {this.props.noInstructionsWhenCollapsed &&
                 this.props.viewAs === ViewType.Teacher &&
                 this.props.teacherMarkdown && (
