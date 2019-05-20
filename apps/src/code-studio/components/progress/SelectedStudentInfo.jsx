@@ -64,10 +64,14 @@ export class SelectedStudentInfo extends React.Component {
           <div>
             <div>{i18n.workedWith()}</div>
             {level.navigator && (
-              <div key={level.navigator}>{`Partner: ${level.navigator}`}</div>
+              <div key={level.navigator}>
+                {i18n.partner({partner: level.navigator})}
+              </div>
             )}
             {level.driver && (
-              <div key={level.driver}>{`Logged in: ${level.driver}`}</div>
+              <div key={level.driver}>
+                {i18n.loggedIn({partner: level.driver})}
+              </div>
             )}
           </div>
         )}
