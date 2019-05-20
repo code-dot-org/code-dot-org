@@ -797,6 +797,7 @@ export function makeFooterMenuItems() {
       newWindow: false
     },
     {
+      key: 'reportAbuse',
       text: i18n.t('footer.report_abuse'),
       link: '/report_abuse',
       newWindow: true
@@ -822,6 +823,11 @@ export function makeFooterMenuItems() {
   if (project.getStandaloneApp() === 'gamelab') {
     footerMenuItems.shift();
   }
+
+  //Removes 'Report Abuse' if this user already reported this project
+  _.remove(footerMenuItems, function(menuItem) {
+    return menuItem.key === 'reportAbuse';
+  });
 
   return footerMenuItems;
 }
