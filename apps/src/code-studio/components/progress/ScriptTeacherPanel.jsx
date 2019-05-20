@@ -13,7 +13,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   scrollable: {
@@ -77,10 +76,6 @@ class ScriptTeacherPanel extends React.Component {
       unlockedStageNames,
       students
     } = this.props;
-
-    const inMiniRubricExperiment = experiments.isEnabled(
-      experiments.MINI_RUBRIC_2019
-    );
 
     const currentLevelSection = sectionData ? sectionData.section_levels : null;
 
@@ -162,7 +157,6 @@ class ScriptTeacherPanel extends React.Component {
                 <SelectedStudentInfo
                   selectedStudent={currentStudent}
                   level={currentStudentLevel}
-                  inMiniRubricExperiment={inMiniRubricExperiment}
                 />
               )}
               <StudentTable
@@ -170,7 +164,6 @@ class ScriptTeacherPanel extends React.Component {
                 students={students}
                 onSelectUser={this.props.onSelectUser}
                 getSelectedUserId={this.props.getSelectedUserId}
-                inMiniRubricExperiment={inMiniRubricExperiment}
               />
             </div>
           )}

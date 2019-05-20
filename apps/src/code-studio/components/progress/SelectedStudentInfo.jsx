@@ -20,8 +20,7 @@ const styles = {
 export class SelectedStudentInfo extends React.Component {
   static propTypes = {
     selectedStudent: PropTypes.object,
-    level: PropTypes.object,
-    inMiniRubricExperiment: PropTypes.bool
+    level: PropTypes.object
   };
 
   onUnsubmit = () => {
@@ -55,7 +54,7 @@ export class SelectedStudentInfo extends React.Component {
   };
 
   render() {
-    const {selectedStudent, level, inMiniRubricExperiment} = this.props;
+    const {selectedStudent, level} = this.props;
 
     return (
       <div style={styles.main}>
@@ -72,10 +71,7 @@ export class SelectedStudentInfo extends React.Component {
           </div>
         )}
         <div style={styles.bubble}>
-          <TeacherPanelProgressBubble
-            level={level}
-            inMiniRubricExperiment={inMiniRubricExperiment}
-          />
+          <TeacherPanelProgressBubble level={level} />
         </div>
         {level.status !== LevelStatus.not_tried &&
           level.status !== LevelStatus.submitted && (

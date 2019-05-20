@@ -25,7 +25,6 @@ import CollapserIcon from './CollapserIcon';
 import HeightResizer from './HeightResizer';
 import msg from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import queryString from 'query-string';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -180,20 +179,15 @@ class TopInstructionsCSP extends Component {
         })
       );
     }
-    //While this is behind an experiment flag we will only pull the rubric
-    //if the experiment is enable. This should prevent us from showing the
-    //rubric if not in the experiment.
-    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-      promises.push(
-        $.ajax({
-          url: `/levels/${serverLevelId}/get_rubric/`,
-          method: 'GET',
-          contentType: 'application/json;charset=UTF-8'
-        }).done(data => {
-          this.setState({rubric: data});
-        })
-      );
-    }
+    promises.push(
+      $.ajax({
+        url: `/levels/${serverLevelId}/get_rubric/`,
+        method: 'GET',
+        contentType: 'application/json;charset=UTF-8'
+      }).done(data => {
+        this.setState({rubric: data});
+      })
+    );
 
     if (this.state.teacherViewingStudentWork) {
       promises.push(

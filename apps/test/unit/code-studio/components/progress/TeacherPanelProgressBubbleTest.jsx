@@ -17,8 +17,7 @@ const defaultProps = {
     passed: false,
     status: LevelStatus.not_tried,
     user_id: 1
-  },
-  inMiniRubricExperiment: false
+  }
 };
 
 describe('StudentTable', () => {
@@ -72,7 +71,7 @@ describe('StudentTable', () => {
     assert.equal(div.props().style.backgroundColor, color.level_perfect);
   });
 
-  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level, and in experiment', () => {
+  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
         {...defaultProps}
@@ -82,7 +81,6 @@ describe('StudentTable', () => {
           kind: LevelKind.assessment,
           status: LevelStatus.completed_assessment
         }}
-        inMiniRubricExperiment={true}
       />
     );
 
