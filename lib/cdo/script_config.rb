@@ -26,6 +26,6 @@ class ScriptConfig
   end
 
   def self.csf_scripts
-    ScriptConstants::CATEGORIES.fetch_values(:csf, :csf_2018, :csf_international, :twenty_hour).flatten.uniq
+    ScriptConstants::CATEGORIES.fetch_values(:csf, :csf_2018, :csf_international, :twenty_hour, :csf_2019).flatten.uniq
   end
 end
