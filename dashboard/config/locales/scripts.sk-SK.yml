@@ -3304,8 +3304,8 @@ sk:
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
-          description_short: Úvod do informatiky pre predškolákov. Podobný ako Kurz
-            A, ale s rozšírenou hĺbkou konceptu.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať.
+            Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
           description_audience: Vek 5-8
           stages:
             'Debugging: Unspotted Bugs':
@@ -4303,25 +4303,29 @@ sk:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmy: Programovanie na štvorčekový papier'
             Programming in Maze:
-              name: Programovanie v bludisku
+              name: Programovanie s Angry Birds
             Relay Programming:
               name: Štafetové programovanie
             Debugging in Maze:
-              name: Odstraňovanie chýb v bludisku
+              name: Odstraňovanie chýb so Scratom
             Programming in Collector:
-              name: Programovanie so zberateľkou
+              name: Zbieranie pokladov s Laurel
             Programming in Artist:
-              name: Programovanie s Umelcom
+              name: Umenie s pomocou kódu
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+            Loops in Artist:
+              name: Pečiatkovanie v cykloch
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            'Concept Practice with Minecraft ':
+              name: Pohľad do budúcnosti s Minecraftom
             Nested Loops in Bee:
-              name: Vnorené cykly s včelou
+              name: Vnorené cykly v bludisku
             Nested Loops in Frozen:
-              name: Vnorené cykly vo Frozen
+              name: Snehové vločky s Annou a Elsou
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Until Loops in Maze:
@@ -4329,9 +4333,9 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky s včelou
+              name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Harvester:
-              name: Podmienky a cykly so Záhradníčkou
+              name: Zber úrody s podmienkami
             'Functions: Songwriting':
               name: 'Funkcie: Písanie pesničiek'
             Functions in Minecraft:
@@ -4352,14 +4356,22 @@ sk:
               name: Objav silu slov
             Envelope Variables:
               name: Premenné v obálkach
+            Variables as Constant in Artist:
+              name: Premenné s Umelcom
+            Variables that Change in Bee:
+              name: Meniace sa premenné s včelou
+            Variables that Change in Artist:
+              name: Meniace sa premenné s Umelcom
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
               name: Cykly "for" s včelou
             For Loops in Artist:
               name: Cykly "for" s Umelcom
+            Learning Sprites with Sprite Lab:
+              name: Spoznaj Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Mimozemská tanečná párty so Sprite Labom
+              name: Mimozemská tanečná párty
             Pet Giraffe with Sprite Lab:
               name: Moja malá žirafa so Sprite Labom
             Explore Project Ideas:
@@ -4382,6 +4394,12 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Concept Practice with Minecraft:
+              name: Pohľad do budúcnosti s Minecraftom
+            Build A Project:
+              name: Záverečný projekt
+            Dance Party:
+              name: Tanečná Párty
         andrea-test:
           stages:
             module1:
@@ -4549,8 +4567,8 @@ sk:
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
-          description_short: Úvod do informatiky pre predškolákov. Podobný ako Kurz
-            A, ale s rozšírenou hĺbkou konceptu.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať.
+            Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
           description_audience: Vek 5-8
           stages:
             Move It, Move It:
@@ -4616,13 +4634,23 @@ sk:
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
-              name: Cykly v Dobe ľadovej
+              name: Cykly so Scratom
+            Loops in Collector:
+              name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
             Programming in Maze:
-              name: Programovanie v bludisku
+              name: Programovanie so Scratom
+            Programming in Harvester:
+              name: Programovanie so Záhradníčkou
+            Tell a Story in Play Lab:
+              name: Udalosti v pohybe
+            Make a Game in Play Lab:
+              name: Kráľovská bitka s udalosťami
             Ocean Scene with Loops:
               name: Na mori s cyklami
         removed19:
@@ -4765,3 +4793,5 @@ sk:
               name: Programovanie na štvorčekový papier
             Programming in Maze:
               name: Programovanie v bludisku
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8

@@ -637,6 +637,7 @@
   "submitYourProjectConfirm": "Et voi muokata projektiasi lähetettyäsi sen. Haluatko varmasti lähettää sen?",
   "subtitle": "visuaalinen ohjelmointiympäristö",
   "success": "Onnistui!",
+  "support": "Tuki",
   "switchSection": "Vaihda ryhmää:",
   "syntaxErrorMsg": "Ohjelmassasi on kirjoitusvirhe. Poista rivi {lineNumber} ja yritä uudelleen.",
   "teacher": "Opettaja",

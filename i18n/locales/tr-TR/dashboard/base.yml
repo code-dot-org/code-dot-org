@@ -779,14 +779,12 @@ tr:
     new: "Yeni oluştur"
     rename: "Yeniden adlandır"
     save: "Kaydet"
-    delete: "Sil"
     import: "İçeri Aktar"
     share_link_import_bad_link_header: "Paylaşım bağlantısı tanınmıyor"
     share_link_import_bad_link_body: "Bu paylaşım bağlantısını içeri aktaramadık. Bir Minecraft: Agent bulmacasındaki bağlantıyı kullandığından ve tam bağlantıyı kopyaladığından emin ol."
     share_link_import_error_header: "Bir sorun oluştu."
     share_link_import_error_body: "Paylaşım bağlantısını içeri aktarırken bir sorun oluştu. Lütfen tekrar dene."
     exit: "Kursa dön"
-    my_projects: "Projelerim"
     project_gallery: "Projeler"
     publish: "Yayımla"
     unpublish: "Yayımdan Kaldır"
@@ -798,22 +796,14 @@ tr:
     embed: "Yerleştir"
     advanced_share: "Gelişmiş seçenekleri göster"
     no_projects: "Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden birini tıklatın."
-    close: "Kapat"
-    more: "Daha Fazla"
     name: "İsim"
     updated: "Güncellendi"
     project_type: "Proje türü"
     help_text: "Uygulama oluştur'a tıklayın veya Yeni bir oyun labaratuvarı veya sanatçı projesi çizin. \nGeri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz."
     need_help: "Başlarken yardıma mı ihtiyacınız var?"
     thumbnail_help: "Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat sürebilir."
-    really_delete: 'Silinsin mi?'
-    delete_yes: 'Evet'
-    delete_no: 'Hayır'
     saved: "Kaydedildi"
     not_saved: "Kaydedilmedi"
-    cancel: 'İptal'
-    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
-    delete_confirm_text: "Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır. Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler."
     view_all: 'Projelerimi görüntüle'
     remix: "karıştır.\n"
     click_to_remix: "Kendi sürümünüzü yaratmak için 'Remix'e basın!"

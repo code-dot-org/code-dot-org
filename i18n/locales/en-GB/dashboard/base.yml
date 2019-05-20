@@ -58,10 +58,7 @@ en-GB:
     share_link_import_bad_link_body: "We couldn't import that share link. Make sure that you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
     share: "Share"
     name: "Name"
-    delete_yes: 'Yes'
-    delete_no: 'No'
     saved: "Saved"
-    cancel: 'Cancel'
   flex_category:
     csf_loops: 'Loops'
     csf_variables: 'Variables'

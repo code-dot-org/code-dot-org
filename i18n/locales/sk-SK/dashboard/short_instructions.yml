@@ -1966,6 +1966,10 @@ sk:
       courseE_farmer_concept3_2019: Vyplň dieru na konci každej z týchto ciest.
       courseE_farmer_concept4: A poďme o level hlbšie! Vložili sme celý blok s kódom do ďaľšieho cyklu, ale pre nakreslenie ďalšej čiary sa Umelec potrebuje dostať na správne miesto. Ktorý z týchto blokov s kódom treba dať na koniec vonkajšej slučky, aby nakreslil celú mriežku?
       courseE_farmer_elseif_test: Vyplň dieru na konci každej z týchto ciest.
+      courseE_farmer_functions13_2018: Na vyriešenie tejto úlohy použi najviac 23 blokov.
+      courseE_farmer_functions13_2019: Na vyriešenie tejto úlohy použi najviac 23 blokov.
+      courseE_farmer_functions7a1_2018: Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions7a1_2019: Vytvor funkciu pomocou ktorej záhradníčka prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
       courseE_maze_ramp1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko "Spustiť" a sleduj, čo sa stane!
       courseE_maze_ramp1_2018: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko "Spustiť" a sleduj, čo sa stane!
       courseE_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
@@ -2002,6 +2006,9 @@ sk:
       courseF_artist_variables6a: Vytvor tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_artist_variables6a_2018: Vytvor tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
       courseF_artist_variables6a_2019: Vytvor tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables7: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
+      courseF_artist_variables7_2018: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
+      courseF_artist_variables7_2019: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
         Môžeš doň vložiť kód z predošlej úlohy.
@@ -2022,6 +2029,23 @@ sk:
       courseF_bee_conditionals5_2018: Pozbieraj všetok nektár s použitím čo najmenšieho počtu blokov
       courseF_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
       courseF_bee_functions4_2018: Funkcia "move and get nectar" prikáže včele otočiť sa, zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok nektár.
+      courseF_bee_functions_1_2018: Dokonči tento kód, aby včela mohla pozbierať všetok nektár a vyrobiť všetok med.
+      courseF_bee_functions_2_2018: Uprav svoje riešenie na jednom mieste tak, aby včela znovu získala všetok med a nektár.
+      courseF_bee_functions_3_2018: Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu.
+      courseF_bee_variables_1_2018: Dokonči tento kód, aby včela mohla pozbierať všetok nektár a vyrobiť všetok med.
+      courseF_bee_variables_1_2019: Dokonči tento kód, aby včela mohla pozbierať všetok nektár a vyrobiť všetok med.
+      courseF_bee_variables_2_2018: Uprav svoje riešenie na jednom mieste tak, aby včela znovu získala všetok med a nektár.
+      courseF_bee_variables_2_2019: Uprav svoje riešenie na jednom mieste tak, aby včela znovu získala všetok med a nektár.
+      courseF_bee_variables_3_2018: Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu.
+      courseF_bee_variables_3_2019: Odčítaj jedna z premennej vždy keď prejdeš cez cyklus, ak chceš použiť rovnakú funkciu na vyriešenie tohto levelu.
+      courseF_bee_variables_4_2018: Uprav kód, aby fungoval pre túto úlohu.
+      courseF_bee_variables_4_2019: Uprav kód, aby fungoval pre túto úlohu.
+      courseF_bee_variables_5_2018: Vytvor svoj vlastný kód na vyriešenie tejto úlohy
+      courseF_bee_variables_5_2019: Vytvor svoj vlastný kód na vyriešenie tejto úlohy
+      courseF_bee_variables_6_2018: "**Výzva** Teraz skús túto úlohu!"
+      courseF_bee_variables_6_2019: "**Výzva** Teraz skús túto úlohu!"
+      courseF_bee_variables_7_2018: Táto úloha je trochu iná. Čo potrebuješ, aby si ju vyriešil?
+      courseF_bee_variables_7_2019: Táto úloha je trochu iná. Čo potrebuješ, aby si ju vyriešil?
       courseF_maze_ramp4: Vyhni sa TNT, lebo bude lietať perie!
       courseF_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
       courseF_maze_ramp5: Vyhni sa TNT.

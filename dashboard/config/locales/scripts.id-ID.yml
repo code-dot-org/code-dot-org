@@ -4917,6 +4917,8 @@ id:
               name: 'Algoritma: Kertas Grafik Pemrograman'
             Relay Programming:
               name: Pemrograman bergiliran
+            'Concept Practice with Minecraft ':
+              name: Melihat ke depan
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             Screen Out the Mean:
@@ -4941,6 +4943,8 @@ id:
               name: Internet
             Crowdsourcing:
               name: Sumber kerumunan
+            Concept Practice with Minecraft:
+              name: Melihat ke depan
         csd1-2019:
           stages:
             The Problem Solving Process:
