@@ -25,7 +25,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     @example_curriculum_url = '/csf-18/pre-express/11/'
   end
 
-  test "get index for signed out, no url" do
+  test "get index for signed out, no curriculum_url" do
     get :index
     assert_response :success
     refute_curriculum_page_view_logged
@@ -37,7 +37,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     assert_curriculum_page_view_logged(@example_curriculum_url, nil)
   end
 
-  test "get index for signed in, no url" do
+  test "get index for signed in, no curriculum_url" do
     sign_in @teacher
     get :index
     assert_response :success
