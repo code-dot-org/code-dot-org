@@ -1,6 +1,10 @@
 import {commands} from './spritelabCommands';
 
 var Spritelab = function() {
+  window.p5.prototype.executeDrawLoopAndCallbacks = function() {
+    this.drawSprites();
+  };
+
   window.p5.prototype.setBackground = function(color) {
     commands.setBackground.apply(this, [color]);
   };
@@ -13,12 +17,16 @@ var Spritelab = function() {
     return commands.makeSprite.apply(this, [animation, location]);
   };
 
-  window.p5.prototype.executeDrawLoopAndCallbacks = function() {
-    this.drawSprites();
-  };
-
   window.p5.prototype.setAnimation = function(spriteIndex, animation) {
     commands.setAnimation.apply(this, [spriteIndex, animation]);
+  };
+
+  window.p5.prototype.getProp = function(spriteIndex, prop) {
+    return commands.getProp.apply(this, [spriteIndex, prop]);
+  };
+
+  window.p5.prototype.destroy = function(spriteIndex) {
+    commands.destroy.apply(this, [spriteIndex]);
   };
 };
 

@@ -44,5 +44,32 @@ export const commands = {
         sprite.setAnimation(animation);
       });
     }
+  },
+
+  getProp(spriteIndex, prop) {
+    if (!spriteIndex) {
+      return undefined;
+    }
+
+    let sprite = singleOrGroup(spriteIndex)[0];
+    if (prop === 'scale') {
+      return sprite.getScale() * 100;
+    } else if (prop === 'costume') {
+      return sprite.getAnimationLabel();
+    } else if (prop === 'y') {
+      return 400 - sprite.y;
+    } else {
+      return sprite[prop];
+    }
+  },
+
+  destroy(spriteIndex) {
+    let sprites = singleOrGroup(spriteIndex);
+    if (sprites) {
+      sprites.forEach(sprite => {
+        sprite.destroy();
+        delete nativeSpriteMap[sprite.id];
+      });
+    }
   }
 };
