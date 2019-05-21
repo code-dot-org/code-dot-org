@@ -6,7 +6,7 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
-import TimeAgo from '../TimeAgo';
+import {UnlocalizedTimeAgo} from '../TimeAgo';
 
 const styles = {
   card: {
@@ -148,7 +148,7 @@ export default class ProjectCard extends React.Component {
           {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
-              <TimeAgo
+              <UnlocalizedTimeAgo
                 style={styles.bold}
                 dateString={projectData.publishedAt}
               />
@@ -157,7 +157,10 @@ export default class ProjectCard extends React.Component {
           {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
-              <TimeAgo style={styles.bold} dateString={projectData.updatedAt} />
+              <UnlocalizedTimeAgo
+                style={styles.bold}
+                dateString={projectData.updatedAt}
+              />
             </div>
           )}
         </div>
