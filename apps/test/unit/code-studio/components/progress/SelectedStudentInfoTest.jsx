@@ -57,7 +57,7 @@ describe('SelectedStudentInfo', () => {
       />
     );
 
-    expect(wrapper.contains('Last updated:')).to.equal(true);
+    expect(wrapper.contains('Last Updated:')).to.equal(true);
     expect(wrapper.find('Button')).to.have.length(1);
   });
 
@@ -76,7 +76,7 @@ describe('SelectedStudentInfo', () => {
 
     expect(wrapper.contains('Worked With:')).to.equal(true);
     expect(wrapper.contains('Partner: Student 2')).to.equal(true);
-    expect(wrapper.contains('Last updated:')).to.equal(true);
+    expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
   it('displays time and who they worked with as driver if paired as navigator on level', () => {
@@ -94,6 +94,6 @@ describe('SelectedStudentInfo', () => {
 
     expect(wrapper.contains('Worked With:')).to.equal(true);
     expect(wrapper.contains('Logged in: Student 2')).to.equal(true);
-    expect(wrapper.contains('Last updated:')).to.equal(true);
+    expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 });
