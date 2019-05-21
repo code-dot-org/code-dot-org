@@ -1324,7 +1324,8 @@ class Script < ActiveRecord::Base
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
       show_assign_button: assignable?(user),
-      project_sharing: project_sharing
+      project_sharing: project_sharing,
+      curriculum_umbrella: curriculum_umbrella
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1460,7 +1461,8 @@ class Script < ActiveRecord::Base
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
       pilot_experiment: script_data[:pilot_experiment],
-      project_sharing: !!script_data[:project_sharing]
+      project_sharing: !!script_data[:project_sharing],
+      curriculum_umbrella: script_data[:curriculum_umbrella]
     }.compact
   end
 
@@ -1622,5 +1624,17 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+  end
+
+  def csf?
+    return true if curriculum_umbrella == 'CSF'
+  end
+
+  def csd?
+    return true if curriculum_umbrella == 'CSD'
+  end
+
+  def csp?
+    return true if curriculum_umbrella == 'CSP'
   end
 end
