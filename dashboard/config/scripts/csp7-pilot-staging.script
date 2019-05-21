@@ -5,6 +5,8 @@ level 'U7 L01 More with Functions', progression: 'More with Functions'
 
 stage 'Parameters and Return Values Investigate', flex_category: 'csp_parameters_and_return_values'
 level 'U7 Param Investigate Calculator App', progression: 'App Investigation'
+level 'U7 Param Return Investigate Thermostat', progression: 'Code Investigation'
+level 'U7 Param Return Investigate Outfit', progression: 'Code Investigation'
 
 stage 'Libraries', flex_category: 'csp_libraries'
 level 'U7 L01 More with Functions', progression: 'Intro to Libraries'

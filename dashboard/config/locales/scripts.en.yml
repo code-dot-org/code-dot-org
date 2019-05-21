@@ -12398,7 +12398,7 @@ en:
           title: Novice Reflections for Summer Workshop 2019
           description_audience: 6 - 12 Novice Facilitators in Training
           description_short: 'Novice reflection materials for 2019 facilitators in training '
-          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Workshop.
+          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop.
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -12415,3 +12415,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+            Wrap Up:
+              name: Wrap Up
+          title: Apprentice Reflections for Summer Workshop 2019
+          description_audience: 6 - 12 Apprentice Facilitators in Training
+          description_short: 'Apprentice reflection materials for 2019 facilitators in training '
+          description: This is the set of apprentice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop
