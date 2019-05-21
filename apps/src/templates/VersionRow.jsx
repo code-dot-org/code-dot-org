@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
 
-import TimeAgo from './TimeAgo';
+import {UnlocalizedTimeAgo} from './TimeAgo';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -67,7 +67,7 @@ export default class VersionRow extends React.Component {
       <tr className="versionRow">
         <td>
           <p>
-            Saved <TimeAgo dateString={this.props.lastModified} />
+            Saved <UnlocalizedTimeAgo dateString={this.props.lastModified} />
           </p>
           {this.getLastModifiedTimestamp()}
         </td>
