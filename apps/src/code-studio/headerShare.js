@@ -21,7 +21,18 @@ export function shareProject(shareUrl) {
       getStore().dispatch(
         setLibraryFunctions(dashboard.project.getLibraryFromApp())
       );
-      var projectName = dashboard.project.getCurrentName().replace(/\s+/g, '');
+
+      // strip whitespace and non alphanumeric characters (underscores are preserved)
+      var projectName = dashboard.project
+        .getCurrentName()
+        .replace(/\s+/g, '')
+        .replace(/\W/g, '');
+      if (projectName.length === 0 || !isNaN(projectName.charAt(0))) {
+        // if all characters are now gone or the library starts with a number, prepend 'Lib'.
+        projectName = 'Lib' + projectName;
+      }
+
+      // Make the first character uppercase
       var libraryName =
         projectName.charAt(0).toUpperCase() + projectName.slice(1);
       getStore().dispatch(setLibraryName(libraryName));
