@@ -13,8 +13,9 @@
 
 - data[:level_examples] = level_example_links
 
-- data[:section_script_levels] = @section.students.order(:name).map do |student|
-  - @script_level&.summarize_for_teacher_panel(student)
+-if @section
+  - data[:section_script_levels] = @section.students.order(:name).map do |student|
+    - @script_level&.summarize_for_teacher_panel(student)
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}

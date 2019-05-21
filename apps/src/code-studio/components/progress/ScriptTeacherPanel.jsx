@@ -59,7 +59,6 @@ class ScriptTeacherPanel extends React.Component {
       name: PropTypes.string.isRequired
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     inMiniRubricExperiment: PropTypes.bool
@@ -74,7 +73,6 @@ class ScriptTeacherPanel extends React.Component {
       sectionsAreLoaded,
       selectedSection,
       scriptHasLockableStages,
-      scriptAllowsHiddenStages,
       unlockedStageNames,
       students
     } = this.props;
@@ -85,9 +83,11 @@ class ScriptTeacherPanel extends React.Component {
 
     if (sectionData) {
       currentSectionScriptLevels = sectionData.section_script_levels;
-      currentStudent = sectionData.section.students.find(
-        student => this.props.getSelectedUserId() === student.id
-      );
+      if (sectionData.section && sectionData.section.students) {
+        currentStudent = sectionData.section.students.find(
+          student => this.props.getSelectedUserId() === student.id
+        );
+      }
       if (currentSectionScriptLevels && currentStudent) {
         currentStudentScriptLevel = currentSectionScriptLevels.find(
           level => this.props.getSelectedUserId() === level.user_id
@@ -100,6 +100,13 @@ class ScriptTeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
+          {currentStudent && (
+            <SelectedStudentInfo
+              selectedStudent={currentStudent}
+              level={currentStudentScriptLevel}
+              inMiniRubricExperiment={inMiniRubricExperiment}
+            />
+          )}
           {sectionData && sectionData.level_examples && (
             <div style={styles.exampleSolutions}>
               {sectionData.level_examples.map((example, index) => (
@@ -124,7 +131,7 @@ class ScriptTeacherPanel extends React.Component {
           {!sectionsAreLoaded && (
             <div style={styles.text}>{i18n.loading()}</div>
           )}
-          {(scriptAllowsHiddenStages || scriptHasLockableStages) && (
+          {sectionsAreLoaded && hasSections && (
             <SectionSelector style={{margin: 10}} reloadOnChange={true} />
           )}
           {hasSections &&
@@ -156,22 +163,13 @@ class ScriptTeacherPanel extends React.Component {
               </div>
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
-            <div>
-              {currentStudent && (
-                <SelectedStudentInfo
-                  selectedStudent={currentStudent}
-                  level={currentStudentScriptLevel}
-                  inMiniRubricExperiment={inMiniRubricExperiment}
-                />
-              )}
-              <StudentTable
-                levels={currentSectionScriptLevels}
-                students={students}
-                onSelectUser={this.props.onSelectUser}
-                getSelectedUserId={this.props.getSelectedUserId}
-                inMiniRubricExperiment={inMiniRubricExperiment}
-              />
-            </div>
+            <StudentTable
+              levels={currentSectionScriptLevels}
+              students={students}
+              onSelectUser={this.props.onSelectUser}
+              getSelectedUserId={this.props.getSelectedUserId}
+              inMiniRubricExperiment={inMiniRubricExperiment}
+            />
           )}
         </div>
       </TeacherPanel>
@@ -211,7 +209,6 @@ export default connect(state => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
     students: state.teacherSections.selectedStudents
   };
