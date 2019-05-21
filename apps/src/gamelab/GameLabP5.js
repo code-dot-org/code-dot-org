@@ -2,6 +2,7 @@ import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
+var Spritelab = require('./Spritelab');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
@@ -145,6 +146,8 @@ GameLabP5.prototype.init = function(options) {
       arguments
     );
   }.bind(this);
+
+  this.spritelab = new Spritelab();
 };
 
 /**
