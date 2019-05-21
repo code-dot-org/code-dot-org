@@ -40,8 +40,13 @@ class PublishLibraryDialog extends React.Component {
   };
 
   displayFunctions() {
-    if (!this.props.libraryFunctions) {
-      return <div>You have no functions to export :(</div>;
+    if (Object.keys(this.props.libraryFunctions).length === 0) {
+      return (
+        <div>
+          A library can only export functions. Your program does not have any
+          functions to export.
+        </div>
+      );
     }
 
     return Object.keys(this.props.libraryFunctions).map(key => {
