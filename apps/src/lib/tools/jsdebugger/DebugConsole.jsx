@@ -145,12 +145,12 @@ export default connect(
         this.props.commandHistory.push(input);
         e.target.value = '';
 
-        // experiments.isEnabled('react-inspector')
-        //   ? this.appendLog(input)
-        //   : this.appendLog('> ' + input);
-        if (!experiments.isEnabled('react-inspector')) {
-          this.appendLog('> ' + input);
-        }
+        experiments.isEnabled('react-inspector')
+          ? this.appendLog({input: input})
+          : this.appendLog('> ' + input);
+        // if (!experiments.isEnabled('react-inspector')) {
+        //   this.appendLog('> ' + input);
+        // }
 
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
@@ -172,7 +172,6 @@ export default connect(
                 result
               );
               this.appendLog({
-                input: input,
                 output: result
               });
             } else {
@@ -181,12 +180,12 @@ export default connect(
             }
           } catch (err) {
             experiments.isEnabled('react-inspector')
-              ? this.appendLog({input: input, output: String(err)})
+              ? this.appendLog({output: String(err)})
               : this.appendLog('< ' + String(err));
           }
         } else {
           experiments.isEnabled('react-inspector')
-            ? this.appendLog({input: input, output: '(not running)'})
+            ? this.appendLog({output: '(not running)'})
             : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
@@ -248,45 +247,26 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          if (output.input && output.output && !output.interpreted) {
+          if (output.input) {
             return (
               <div key={i}>
                 &gt;{' '}
                 <div style={style.myDiv}>
                   <Inspector data={output.input} />
                 </div>
-                <div>
-                  &lt;{' '}
-                  <div style={style.myDiv}>
-                    <Inspector data={output.output} />
-                  </div>
+              </div>
+            );
+          } else if (output.output) {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.myDiv}>
+                  <Inspector data={output.output} />
                 </div>
               </div>
             );
-          } else if (output.interpreted && !output.input && !output.output) {
+          } else if (output.interpreted) {
             return <Inspector key={i} data={output.interpreted} />;
-          } else if (
-            output.interpreted &&
-            output.input &&
-            (output.output || !output.output)
-          ) {
-            return (
-              <div key={i}>
-                &gt;{' '}
-                <div style={style.myDiv}>
-                  <Inspector data={output.input} />
-                </div>
-                <div>
-                  <Inspector key={i} data={output.interpreted} />
-                </div>
-                <div>
-                  &lt;{' '}
-                  <div style={style.myDiv}>
-                    <Inspector data={output.output} />
-                  </div>
-                </div>
-              </div>
-            );
           }
         });
       }

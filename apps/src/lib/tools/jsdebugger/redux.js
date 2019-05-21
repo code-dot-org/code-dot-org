@@ -26,7 +26,6 @@ const JSDebuggerState = Immutable.Record({
   logOutput: experiments.isEnabled('react-inspector') ? [] : '',
   maxLogLevel: '',
   isOpen: false
-  // fromDebugConsole: false
 });
 
 export function getRoot(state) {
@@ -80,10 +79,6 @@ export function getMaxLogLevel(state) {
   return getRoot(state).maxLogLevel;
 }
 
-// export function getFromDebugConsole(state) {
-//   return getRoot(state).fromDebugConsole;
-// }
-
 export const selectors = {
   getRoot,
   getCommandHistory,
@@ -94,7 +89,6 @@ export const selectors = {
   getLogOutput,
   getMaxLogLevel,
   isOpen
-  // getFromDebugConsole
 };
 
 // actions
@@ -251,6 +245,9 @@ export const actions = {
 function appendLogOutput(logOutput, output, type) {
   if (experiments.isEnabled('react-inspector')) {
     logOutput = logOutput || [];
+    // if (logOutput[0].interpreted) {
+    //   logOutput = {...logOutput, ...output}
+    // }
     switch (type) {
       case APPEND_LOG:
         return [...logOutput, output];
@@ -281,14 +278,6 @@ function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
   }
 }
 
-// function determineOriginOfInput(fromDebugConsole, origin) {
-//   if (origin === 'codeWorkspace') {
-//     return false;
-//   } else if (origin === 'debugConsole') {
-//     return true;
-//   }
-// }
-
 export function reducer(state, action) {
   if (!state) {
     state = new JSDebuggerState({
@@ -308,10 +297,6 @@ export function reducer(state, action) {
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
-      // fromDebugConsole: determineOriginOfInput(
-      //   state.fromDebugConsole,
-      //   action.origin
-      // ),
       logOutput: appendLogOutput(state.logOutput, action.output, action.type),
       maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
     });
@@ -319,7 +304,6 @@ export function reducer(state, action) {
     return state.merge({
       logOutput: experiments.isEnabled('react-inspector') ? [] : '',
       maxLogLevel: ''
-      // fromDebugConsole: false
     });
   } else if (action.type === DETACH) {
     return state.merge({
