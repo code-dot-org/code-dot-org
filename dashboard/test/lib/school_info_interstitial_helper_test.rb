@@ -89,7 +89,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute SchoolInfoInterstitialHelper.complete? school_info
   end
 
-  test 'shows school info confirmation dialog when user school infos table is empty' do
+  test 'school info confirmation dialog is not shown when the user school infos table is empty' do
     user = create :user
     user.user_type = 'teacher'
     user.save
@@ -97,7 +97,7 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     user.user_school_infos = []
 
     assert_nil user.school_info
-    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
+    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(user)
   end
 
   test 'does not show school info confirmation dialog if user is not a teacher' do
