@@ -68,7 +68,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can :get_feedbacks, TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :increment_visit_count], TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id
