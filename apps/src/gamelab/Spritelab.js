@@ -9,8 +9,16 @@ var Spritelab = function() {
     commands.makeSprite.apply(this, [animation, location]);
   };
 
+  window.p5.prototype.createNewSprite = function(name, animation, location) {
+    return commands.makeSprite.apply(this, [animation, location]);
+  };
+
   window.p5.prototype.executeDrawLoopAndCallbacks = function() {
     this.drawSprites();
+  };
+
+  window.p5.prototype.setAnimation = function(spriteIndex, animation) {
+    commands.setAnimation.apply(this, [spriteIndex, animation]);
   };
 };
 
