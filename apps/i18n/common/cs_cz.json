@@ -1118,6 +1118,7 @@
   "submitYourProject": "Odešlete projekt",
   "submitYourProjectConfirm": "Nelze upravit projekt po odeslání, opravdu chcete odeslat?",
   "subtitle": "vizuální programovací prostředí",
+  "support": "Nápověda a Komunita",
   "switchSection": "Přepnout sekci:",
   "syntaxErrorMsg": "Váš program obsahuje překlep. Odstranit řádek {lineNumber} a opakujte akci.",
   "teacher": "Učitel",

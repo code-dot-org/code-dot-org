@@ -315,13 +315,12 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
-  # returns the school year the summer workshop is preparing for, in
-  # the form "2019-2020", like application_year on Pd Applications
-  def summer_workshop_school_year
-    if local_summer?
-      y = year
-      "#{y}-#{y.to_i + 1}"
-    end
+  # Returns the school year the summer workshop is preparing for, in
+  # the form "2019-2020", like application_year on Pd Applications.
+  # The school year runs 6/1-5/31.
+  def school_year
+    return nil if sessions.empty?
+    sessions.order(:start).first.start.month >= 6 ? "#{year}-#{year.to_i + 1}" : "#{year.to_i - 1}-#{year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
@@ -634,6 +633,11 @@ class Pd::Workshop < ActiveRecord::Base
   # The workshop is ready to close if the last session has attendance
   def ready_to_close?
     sessions.last.try {|session| session.attendances.any?}
+  end
+
+  # whether we will show the scholarship dropdown
+  def scholarship_workshop?
+    csf? || local_summer?
   end
 
   def pre_survey?

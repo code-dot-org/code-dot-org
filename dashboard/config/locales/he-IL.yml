@@ -919,11 +919,9 @@ he:
     new: צור חדש
     rename: שנה שם
     save: שמור
-    delete: מחק
     import: ייבא
     share_link_import_error_header: משהו השתבש.
     exit: חזור לקורס
-    my_projects: הפרויקטים שלי
     project_gallery: פרויקטים
     publish: פרסם
     unpublish: בטל פרסום
@@ -938,8 +936,6 @@ he:
     advanced_share: הצג אפשרויות מתקדמות
     no_projects: כרגע אין לך פרויקטים. לחץ על אחד מהכפתורים למעלה כדי להתחיל פרויקט
       חדש.
-    close: סגור
-    more: יותר
     name: שם
     updated: עודכן
     project_type: סוג פרויקט
@@ -949,15 +945,8 @@ he:
     thumbnail_help: לא רואה תמונה ממוזערת של הפרויקט שלך? הרץ את האפליקציה כדי לייצר
       תמונה חדשה שכזו. שים לב שיתכן ויעברו כמה שעות עד שהתמונה הממוזערת תעדכן בכל
       המקומות.
-    really_delete: למחוק?
-    delete_yes: כן
-    delete_no: לא
     saved: נשמר
     not_saved: לא נשמר
-    cancel: בטל
-    delete_confirm_title: האם אתה בטוח שברצונך למחוק את הפרויקט הזה?
-    delete_confirm_text: מחיקת הפרויקט שלך תסיר אותה לתמיד מרשימת הפרויקטים שלך. כל
-      מי ששיתפת איתו את הקישור לפרויקט לא יוכל עוד לצפות בו.
     view_all: הצג את הפרויקטים שלי
     remix: צור משלך
     click_to_remix: לחץ "צור משלך" כדי ליצר גרסה משלך לפרויקט!

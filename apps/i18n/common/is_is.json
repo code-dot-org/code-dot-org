@@ -916,6 +916,7 @@
   "submitYourProjectConfirm": "Þú getur ekki breytt verkefninu eftir innsendingu, senda það samt inn?",
   "subtitle": "sjónrænt forritunarumhverfi",
   "success": "Það tókst!",
+  "support": "Stuðningur",
   "switchSection": "Skipta um hóp:",
   "syntaxErrorMsg": "Forritið þitt inniheldur ritvillu. Vinsamlegast fjarlægðu {lineNumber} og reyndu aftur.",
   "teacher": "Kennari",

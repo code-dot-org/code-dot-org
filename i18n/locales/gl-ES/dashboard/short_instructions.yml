@@ -1619,7 +1619,7 @@ gl:
         \\r
 
         1.  Garda o número de veces que o Mago é clicado.\\r
-        2.  2)
+        2.  2\)
             Se o Mago fose clicado polo menos 10 veces antes de que o can conte até 30, aumenta "incremento" en 1 unidade e comeza de novo.\\r
         3.  Se o Mago non fose clicado
             polo menos 10 veces, o xogo acaba.

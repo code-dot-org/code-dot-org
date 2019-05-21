@@ -4007,6 +4007,8 @@ is:
           stages:
             Relay Programming:
               name: Boðhlaupsforritun
+            'Concept Practice with Minecraft ':
+              name: Horft fram á við
             Conditionals with Cards:
               name: Skilyrði með kortum
             The Power of Words:
@@ -4015,10 +4017,6 @@ is:
               name: Umslagabreytur
             For Loop Fun:
               name: Fyndnar frá lykkjur
-            For Loops in Bee:
-              name: Frá-lykkjur með Býflugu
-            For Loops in Artist:
-              name: Frá-lykkjur með Listamanni
             Revise Your Project:
               name: Fara yfir verkefnið
             Binary Bracelets:
@@ -4031,6 +4029,10 @@ is:
               name: Internet
             Crowdsourcing:
               name: Hópvistun
+            Concept Practice with Minecraft:
+              name: Horft fram á við
+            Dance Party:
+              name: Danspartý
         csd1-2019:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           stages:
@@ -4112,8 +4114,8 @@ is:
               name: Hreyfa sig, hreyfa sig
             Your Digital Footprint:
               name: Stafræna fótsporið þitt
-            Loops in Ice Age:
-              name: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
             Spelling Bee:
               name: Stafsetning
             Programming in Harvester:

@@ -283,6 +283,10 @@ zh-CN:
       professional_learning: "专业学习"
       documentation: "使用文档"
       tutorials: "教程"
+      app_lab_documentation: "应用程序实验室文档"
+      app_lab_tutorials: "应用程序实验室说明"
+      game_lab_documentation: "游戏实验室文档"
+      game_lab_tutorials: "游戏实验室说明"
       educate_overview: "教育工作者概述"
       educate_elementary: "小学"
       educate_middle: "中学"
@@ -812,14 +816,12 @@ zh-CN:
     new: "新建"
     rename: "重命名"
     save: "保存​​"
-    delete: "刪除"
     import: "导入"
     share_link_import_bad_link_header: "分享的链接无法识别"
     share_link_import_bad_link_body: "无法导入共享链接。请确保这个链接是来源于《我的世界：代理人关卡》，并且完整复制了整个链接。"
     share_link_import_error_header: "出错了。"
     share_link_import_error_body: "导入该共享链接时出错。请再试一次。"
     exit: "返回课程"
-    my_projects: "我的项目"
     project_gallery: "项目"
     publish: "发布"
     unpublish: "取消发布"
@@ -831,22 +833,14 @@ zh-CN:
     embed: "嵌入"
     advanced_share: "显示更高级的选项"
     no_projects: "你当前没有任何项目，点击上面的任何按钮来开始一个项目。"
-    close: "关闭"
-    more: "更多"
     name: "姓名"
     updated: "最后更新于"
     project_type: "项目类型"
     help_text: "单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目！<br/>您可以在随时来继续这个项目。"
     need_help: "实施这些课程来帮助你开始新项目。"
     thumbnail_help: "没有为您的项目扎红到正确的缩略图？运行您的应用来生成一个新的缩略图。注意，需要几个小时后，缩略图才会同步显示到每个地方。"
-    really_delete: '要删除吗？'
-    delete_yes: '对'
-    delete_no: '不'
     saved: "已保存"
     not_saved: "没有保存"
-    cancel: '取消'
-    delete_confirm_title: 您确认您要删除此项目吗？
-    delete_confirm_text: "此项目将从项目列表中永久删除。任何人将不再能够通过您已共享的链接查看这个项目。"
     view_all: '查看我的项目'
     remix: '合成'
     click_to_remix: "点击\"合成\"来创造出你自己的版本！"

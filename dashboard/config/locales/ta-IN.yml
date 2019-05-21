@@ -131,10 +131,7 @@ ta:
   project:
     share: பகிர்
     name: பெயர்
-    delete_yes: ஆம்
-    delete_no: இல்லை
     saved: சேமித்தது
-    cancel: ரத்து செய்
     abuse:
       report_abuse_form:
         abuse_type:

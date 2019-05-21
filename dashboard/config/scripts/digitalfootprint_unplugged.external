@@ -1,9 +1,10 @@
 name 'DigitalFootprint-Unplugged'
+video_key 'C2_digital_footprint'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # Your Digital Footprint
 
-Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.
+Putting information about yourself online creates a digital footprint.
 MARKDOWN
