@@ -74,6 +74,7 @@ import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 import {generateExpoApk} from '../util/exporter';
+import sampleApplabLibrary from '../code-studio/sampleApplabLibrary.json';
 
 /**
  * Create a namespace for the application.
@@ -672,6 +673,18 @@ Applab.init = function(config) {
     });
   }
 
+  if (experiments.isEnabled('student-libraries')) {
+    let importedConfigs = sampleApplabLibrary.libraries
+      .map(library => library.dropletConfig)
+      .reduce((a, b) => a.concat(b));
+    if (importedConfigs) {
+      Object.keys(importedConfigs).map(key => {
+        config.dropletConfig.blocks.push(importedConfigs[key]);
+        level.codeFunctions[importedConfigs[key].func] = null;
+      });
+    }
+  }
+
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
   config.level.levelBlocks = config.dropletConfig.blocks;
@@ -1140,6 +1153,26 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
+
+    // Set up student-created libraries
+    if (experiments.isEnabled('student-libraries')) {
+      sampleApplabLibrary.libraries.map(library => {
+        var functionNames = library.functionNames
+          .map(name => {
+            return name + ': ' + name;
+          })
+          .join(',');
+        var libraryClosure =
+          'var ' +
+          library.name +
+          ' = (function() {\n' +
+          library.source +
+          '\nreturn {' +
+          functionNames +
+          '};})();';
+        codeWhenRun = libraryClosure + codeWhenRun;
+      });
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
