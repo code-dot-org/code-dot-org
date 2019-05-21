@@ -12,6 +12,7 @@ import {reload} from '@cdo/apps/utils';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Render our teacher panel that shows up on our course overview page.
@@ -41,12 +42,17 @@ export function renderTeacherPanel(
     return selectedUserId;
   };
 
+  const inMiniRubricExperiment = experiments.isEnabled(
+    experiments.MINI_RUBRIC_2019
+  );
+
   ReactDOM.render(
     <Provider store={store}>
       <ScriptTeacherPanel
         sectionData={sectionData}
         onSelectUser={onSelectUser}
         getSelectedUserId={getSelectedUserId}
+        inMiniRubricExperiment={inMiniRubricExperiment}
       />
     </Provider>,
     div

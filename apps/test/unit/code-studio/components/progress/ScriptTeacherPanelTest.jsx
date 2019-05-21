@@ -16,7 +16,9 @@ const MINIMUM_PROPS = {
   scriptHasLockableStages: false,
   scriptAllowsHiddenStages: false,
   unlockedStageNames: [],
-  sectionData: null
+  sectionData: null,
+  onSelectUser: () => {},
+  getSelectedUserId: () => {}
 };
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
@@ -155,8 +157,6 @@ describe('ScriptTeacherPanel', () => {
           {...MINIMUM_PROPS}
           viewAs={ViewType.Teacher}
           students={students}
-          onSelectUser={() => {}}
-          getSelectedUserId={() => {}}
         />
       );
       expect(wrapper.find('StudentTable')).to.have.length(1);
@@ -193,7 +193,6 @@ describe('ScriptTeacherPanel', () => {
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
             students={students}
-            onSelectUser={() => {}}
             getSelectedUserId={() => {
               return 0;
             }}
@@ -210,7 +209,6 @@ describe('ScriptTeacherPanel', () => {
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
             students={students}
-            onSelectUser={() => {}}
             getSelectedUserId={() => {
               return 1;
             }}
@@ -231,12 +229,7 @@ describe('ScriptTeacherPanel', () => {
     describe('on script', () => {
       it('does not display example solutions', () => {
         const wrapper = shallow(
-          <ScriptTeacherPanel
-            {...MINIMUM_PROPS}
-            viewAs={ViewType.Teacher}
-            onSelectUser={() => {}}
-            getSelectedUserId={() => {}}
-          />
+          <ScriptTeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
         );
         expect(wrapper.find('Button')).to.have.length(0);
       });
@@ -248,8 +241,6 @@ describe('ScriptTeacherPanel', () => {
           <ScriptTeacherPanel
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
-            onSelectUser={() => {}}
-            getSelectedUserId={() => {}}
             sectionData={{
               level_examples: [
                 'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
@@ -269,8 +260,6 @@ describe('ScriptTeacherPanel', () => {
           <ScriptTeacherPanel
             {...MINIMUM_PROPS}
             viewAs={ViewType.Teacher}
-            onSelectUser={() => {}}
-            getSelectedUserId={() => {}}
             sectionData={{
               level_examples: null,
               section: {

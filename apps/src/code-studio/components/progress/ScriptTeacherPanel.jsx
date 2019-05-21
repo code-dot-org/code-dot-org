@@ -13,7 +13,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   scrollable: {
@@ -62,11 +61,13 @@ class ScriptTeacherPanel extends React.Component {
     scriptHasLockableStages: PropTypes.bool.isRequired,
     scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentShape)
+    students: PropTypes.arrayOf(studentShape),
+    inMiniRubricExperiment: PropTypes.bool
   };
 
   render() {
     const {
+      inMiniRubricExperiment,
       sectionData,
       viewAs,
       hasSections,
@@ -78,10 +79,6 @@ class ScriptTeacherPanel extends React.Component {
       students
     } = this.props;
 
-    const inMiniRubricExperiment = experiments.isEnabled(
-      experiments.MINI_RUBRIC_2019
-    );
-
     const currentLevelSection = sectionData ? sectionData.section_levels : null;
 
     const currentStudent = sectionData
@@ -89,11 +86,12 @@ class ScriptTeacherPanel extends React.Component {
           student => this.props.getSelectedUserId() === student.id
         )
       : null;
-    const currentStudentLevel = sectionData
-      ? sectionData.section_levels.find(
-          level => this.props.getSelectedUserId() === level.user_id
-        )
-      : null;
+    const currentStudentLevel =
+      sectionData && currentStudent
+        ? sectionData.section_levels.find(
+            level => this.props.getSelectedUserId() === level.user_id
+          )
+        : null;
 
     return (
       <TeacherPanel>
