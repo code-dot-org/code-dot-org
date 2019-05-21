@@ -144,6 +144,14 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
+
+        // experiments.isEnabled('react-inspector')
+        //   ? this.appendLog(input)
+        //   : this.appendLog('> ' + input);
+        if (!experiments.isEnabled('react-inspector')) {
+          this.appendLog('> ' + input);
+        }
+
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -154,20 +162,32 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            let result = this.props.evalInCurrentScope(
-              input[0] === '{' && input[input.length - 1] === '}'
-                ? `(${input})`
-                : input
-            );
-            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-              result
-            );
-            this.appendLog([input, result]);
+            if (experiments.isEnabled('react-inspector')) {
+              let result = this.props.evalInCurrentScope(
+                input[0] === '{' && input[input.length - 1] === '}'
+                  ? `(${input})`
+                  : input
+              );
+              result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
+              this.appendLog({
+                input: input,
+                output: result
+              });
+            } else {
+              const result = this.props.evalInCurrentScope(input);
+              this.appendLog('< ' + String(result));
+            }
           } catch (err) {
-            this.appendLog([input, String(err)]);
+            experiments.isEnabled('react-inspector')
+              ? this.appendLog({input: input, output: String(err)})
+              : this.appendLog('< ' + String(err));
           }
         } else {
-          this.appendLog([input, '(not running)']);
+          experiments.isEnabled('react-inspector')
+            ? this.appendLog({input: input, output: '(not running)'})
+            : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -228,40 +248,75 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          if (output.length === 2) {
+          if (output.input && output.output && !output.interpreted) {
             return (
               <div key={i}>
                 &gt;{' '}
                 <div style={style.myDiv}>
-                  <Inspector data={output[0]} />
+                  <Inspector data={output.input} />
                 </div>
                 <div>
                   &lt;{' '}
                   <div style={style.myDiv}>
-                    <Inspector data={output[1]} />
+                    <Inspector data={output.output} />
                   </div>
                 </div>
               </div>
             );
-          } else if (output.length === 1) {
-            return <Inspector key={i} data={output[0]} />;
+          } else if (output.interpreted && !output.input && !output.output) {
+            return <Inspector key={i} data={output.interpreted} />;
+          } else if (
+            output.interpreted &&
+            output.input &&
+            (output.output || !output.output)
+          ) {
+            return (
+              <div key={i}>
+                &gt;{' '}
+                <div style={style.myDiv}>
+                  <Inspector data={output.input} />
+                </div>
+                <div>
+                  <Inspector key={i} data={output.interpreted} />
+                </div>
+                <div>
+                  &lt;{' '}
+                  <div style={style.myDiv}>
+                    <Inspector data={output.output} />
+                  </div>
+                </div>
+              </div>
+            );
           }
         });
       }
     }
 
-    displayOutputs() {
-      // logOutput is string
-      if (this.props.logOutput.length > 0) {
-        return this.props.logOutput.split('\n').map((output, i) => {
-          if (i % 2 === 0) {
-            return <div key={i}>&gt; {output}</div>;
-          } else if (i % 2 !== 0) {
-            return <div key={i}>&lt; {output}</div>;
-          }
-        });
-      }
-    }
+    // displayOutputs() {
+    //   // logOutput is string
+    //   if (this.props.logOutput.length > 0) {
+    //     let logOutputs = this.props.logOutput.split('\n');
+    //     if (logOutputs.size % 3 === 0) {
+    //       return logOutputs.map((output, i) => {
+    //         if (i === 0) {
+    //           return <div key={i}>{output}</div>;
+    //         } else if (i + (1 % 2) === 0) {
+    //           return <div key={i}>&gt; {output}</div>;
+    //         } else if (i + (1 % 2) !== 0) {
+    //           return <div key={i}>&lt; {output}</div>;
+    //         }
+    //       });
+    //     } else {
+    //       return logOutputs.map((output, i) => {
+    //         if (i % 2 === 0) {
+    //           return <div key={i}>&gt; {output}</div>;
+    //         } else if (i % 2 !== 0) {
+    //           return <div key={i}>&lt; {output}</div>;
+    //         }
+    //       });
+    //     }
+    //   }
+    // }
 
     render() {
       let classes = 'debug-console';
@@ -302,7 +357,7 @@ export default connect(
           >
             {experiments.isEnabled('react-inspector')
               ? this.displayOutputsWithFlag()
-              : this.displayOutputs()}
+              : this.props.logOutput}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>
