@@ -1,0 +1,40 @@
+hidden false
+login_required true
+student_detail_progress_view true
+
+stage 'Apprentice Reflection Overview', flex_category: 'required'
+level 'welcome-apprentice-18', named: true
+
+stage 'Day 1'
+level 'morning-prep-monday'
+level 'feel-monday'
+level 'debrief-monday'
+level 'engagement-monday'
+level 'novice-monday-2'
+
+stage 'Day 2'
+level 'morning-prep-tuesday'
+level 'feel-tuesday'
+level 'instructional-strategy-tuesday'
+level 'debrief-tuesday'
+level 'engagement-tuesday'
+level 'novice-tuesday-2'
+
+stage 'Day 3'
+level 'morning-prep-wednesday'
+level 'feel-wednesday'
+level 'getting-buy-in-wednesday'
+level 'debrief-wednesday'
+level 'engagement-wednesday'
+level 'novice-wednesday-2'
+
+stage 'Day 4'
+level 'morning-prep-thursday'
+level 'feel-thursday'
+level 'recruiting-thursday'
+level 'debrief-thursday'
+level 'engagement-thursday'
+level 'novice-thursday-2'
+
+stage 'Wrap Up'
+level 'apprentice-congrats', named: true

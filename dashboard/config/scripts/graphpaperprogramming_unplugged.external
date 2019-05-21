@@ -1,4 +1,5 @@
 name 'GraphPaperProgramming-Unplugged'
+video_key 'C2_graph_paper'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
