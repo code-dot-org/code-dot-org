@@ -1,5 +1,8 @@
 /* Despite being in /shared/, this styling is currently only used for the Pegasus
  * header.
+
+ * Shared
+ *= require user-menu
  */
 
 @import 'color';
@@ -122,81 +125,13 @@
     color: $white;
     background-color: transparent;
     border: 2px solid $white;
-    height: 38px;
-    user-select: none;
 
     .pairing_name, .display_name, .create_button {
       font-family: 'Gotham 4r', sans-serif;
-      max-width: 120px;
-      display: inline-block;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      float: left;
     }
 
     .user_options, .create_options {
-      position: absolute;
       font-size: 14px;
-      top: 55px;
-      right: 55px;
-    }
-
-    .user_menu_arrow_down,
-    .user_menu_arrow_up,
-    .create_menu_arrow_up,
-    .create_menu_arrow_down
-    {
-      font-size: 25px;
-    }
-
-    .user_menu_arrow_up,
-    .user_menu_arrow_down,
-    .create_menu_arrow_up,
-    .create_menu_arrow_down {
-      margin-top: -3px;
-    }
-  }
-
-  .create_options {
-    position: absolute;
-    top: 55px;
-    right: 55px;
-    background-color: $white;
-    width: max-content;
-    z-index: 10000;
-    border: 1px solid $charcoal;
-    border-bottom: 0;
-    a {
-      color: $teal;
-      font-family: 'Gotham 5r', sans-serif;
-      min-width: 240px;
-      font-size: 14px;
-      border-bottom: 1px solid $charcoal;
-      box-sizing: content-box;
-      white-space: nowrap;
-    }
-    a:hover {
-      color: $teal;
-      font-weight: 900;
-      background-color: $white;
-      cursor: pointer;
-    }
-    img {
-      height: 70px;
-      width: 70px;
-    }
-    .project_link_box {
-      display: block;
-    }
-    .project_link {
-      display: inline-block;
-      padding: 0 10px 0 4px;
-      line-height: 67px;
-    }
-    #view_all_projects {
-      height: 70px;
-      padding-left: 10px;
     }
   }
 
