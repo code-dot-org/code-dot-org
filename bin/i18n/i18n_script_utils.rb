@@ -1,3 +1,5 @@
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
+
 require 'fileutils'
 require 'open3'
 require 'psych'
@@ -141,4 +143,22 @@ def restore(source, redacted, dest, *plugins)
 
   source_json.close
   redacted_json.close
+end
+
+def get_level_url_key(script, level)
+  script_name = script.name
+  script_level = level.script_levels.find_by_script_id(script.id)
+
+  "https://studio.code.org/s/#{script_name}/stage/#{script_level.stage.relative_position}/puzzle/#{script_level.position}"
+end
+
+def get_level_from_url(url)
+  # i = "https://studio.code.org/s/".length
+  i = 26
+  # path in the form 'scriptname/stage/xxx/puzzle/xxx'
+  path = url[i..-1]
+  subpaths = path.split('/')
+  script = Script.find_by_name(subpaths[0])
+  stage = script.stages.find_by_relative_position(subpaths[2])
+  stage.script_levels.find_by_position(subpaths[4]).level
 end

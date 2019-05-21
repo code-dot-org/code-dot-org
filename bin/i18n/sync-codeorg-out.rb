@@ -21,8 +21,8 @@ def sync_out
   distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
-  puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  #puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
+  #run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
@@ -81,7 +81,7 @@ def sanitize!(data)
   end
 end
 
-def sanitize_and_write(loc_path, dest_path)
+def sanitize_file_and_write(loc_path, dest_path)
   loc_data = case File.extname(loc_path)
              when '.yaml', '.yml'
                YAML.load_file(loc_path)
@@ -90,14 +90,17 @@ def sanitize_and_write(loc_path, dest_path)
              else
                raise "do not know how to parse localization file from #{loc_path}"
              end
+  sanitize_data_and_write(loc_data, dest_path)
+end
 
-  sanitize! loc_data
+def sanitize_data_and_write(data, dest_path)
+  sanitize! data
 
   dest_data = case File.extname(dest_path)
               when '.yaml', '.yml'
-                loc_data.to_yaml
+                data.to_yaml
               when '.json'
-                JSON.pretty_generate(loc_data)
+                JSON.pretty_generate(data)
               else
                 raise "do not know how to serialize localization data to #{dest_path}"
               end
@@ -105,6 +108,41 @@ def sanitize_and_write(loc_path, dest_path)
   FileUtils.mkdir_p(File.dirname(dest_path))
   File.open(dest_path, 'w+') do |f|
     f.write(dest_data)
+  end
+end
+
+def distribute_course_content(locale)
+  translated_strings = {
+    "display_name" => {},
+    "short_instructions" => {},
+    "long_instructions" => {},
+    "failure_message_overrides" => {},
+    "authored_hints" => {},
+    "callouts" => {},
+    "block_categories" => {},
+    "function_names" => {}
+  }
+
+  Dir.glob("i18n/locales/#{locale}/course_content/**/*.yml") do |loc_file|
+    translated_data = YAML.load_file(loc_file)
+    translated_data = translated_data[locale]
+    next unless translated_data
+    translated_data['data'].each do |type, type_data|
+      type_data.each do |level_url, level_data|
+        level = get_level_from_url(level_url)
+        translated_strings[type][level.name] = level_data
+      end
+    end
+  end
+
+  translated_strings.each do |type, translations|
+    type_data = {}
+    type_data[locale] = Hash.new
+    type_data[locale]["data"] = Hash.new
+    type_data[locale]["data"][type] = Hash.new
+    type_data[locale]["data"][type] = translations
+    puts type
+    sanitize_data_and_write(type_data, "dashboard/config/locales/#{type}.#{locale}.yml")
   end
 end
 
@@ -128,28 +166,30 @@ def distribute_translations
         "dashboard/config/locales/#{locale}.yml" :
         "dashboard/config/locales/#{relname}.#{locale}.yml"
 
-      sanitize_and_write(loc_file, destination)
+      sanitize_file_and_write(loc_file, destination)
     end
+
+    distribute_course_content(locale)
 
     ### Apps
     js_locale = locale.tr('-', '_').downcase
     Dir.glob("i18n/locales/#{locale}/blockly-mooc/*.json") do |loc_file|
       relname = File.basename(loc_file, '.json')
       destination = "apps/i18n/#{relname}/#{js_locale}.json"
-      sanitize_and_write(loc_file, destination)
+      sanitize_file_and_write(loc_file, destination)
     end
 
     ### Blockly Core
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
-      sanitize_and_write(loc_file, destination)
+      sanitize_file_and_write(loc_file, destination)
     end
 
     ### Pegasus
     loc_file = "i18n/locales/#{locale}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
-    sanitize_and_write(loc_file, destination)
+    sanitize_file_and_write(loc_file, destination)
   end
 
   puts "#{CLEAR}Distribution finished!"
