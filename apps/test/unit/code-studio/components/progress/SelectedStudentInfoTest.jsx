@@ -28,6 +28,7 @@ describe('SelectedStudentInfo', () => {
     expect(wrapper.contains('Student 1')).to.equal(true);
     expect(wrapper.find('TeacherPanelProgressBubble')).to.have.length(1);
   });
+
   it('displays time and unsubmit button if submitted level', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
@@ -43,6 +44,7 @@ describe('SelectedStudentInfo', () => {
     expect(wrapper.contains('Submitted On:')).to.equal(true);
     expect(wrapper.find('Button')).to.have.length(1);
   });
+
   it('displays time and clear response button if contained level', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
@@ -58,6 +60,7 @@ describe('SelectedStudentInfo', () => {
     expect(wrapper.contains('Last updated:')).to.equal(true);
     expect(wrapper.find('Button')).to.have.length(1);
   });
+
   it('displays time and who they worked with as navigator if paired as driver on level', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
@@ -75,6 +78,7 @@ describe('SelectedStudentInfo', () => {
     expect(wrapper.contains('Partner: Student 2')).to.equal(true);
     expect(wrapper.contains('Last updated:')).to.equal(true);
   });
+
   it('displays time and who they worked with as driver if paired as navigator on level', () => {
     const wrapper = shallow(
       <SelectedStudentInfo

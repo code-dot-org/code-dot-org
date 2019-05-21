@@ -184,6 +184,7 @@ describe('ScriptTeacherPanel', () => {
       expect(wrapper.find('StudentTable')).to.have.length(0);
     });
   });
+
   describe('SelectedStudentInfo', () => {
     describe('on script', () => {
       it('does not display SelectedStudentInfo', () => {
@@ -201,6 +202,7 @@ describe('ScriptTeacherPanel', () => {
         expect(wrapper.find('SelectedStudentInfo')).to.have.length(0);
       });
     });
+
     describe('on level', () => {
       it('displays SelectedStudentInfo when student selected', () => {
         const wrapper = shallow(
@@ -224,6 +226,7 @@ describe('ScriptTeacherPanel', () => {
       });
     });
   });
+
   describe('Example Solutions', () => {
     describe('on script', () => {
       it('does not display example solutions', () => {
@@ -238,6 +241,7 @@ describe('ScriptTeacherPanel', () => {
         expect(wrapper.find('Button')).to.have.length(0);
       });
     });
+
     describe('on level', () => {
       it('displays example solution for level with one example solution', () => {
         const wrapper = shallow(
@@ -259,6 +263,7 @@ describe('ScriptTeacherPanel', () => {
         );
         expect(wrapper.find('Button')).to.have.length(1);
       });
+
       it('does not display example solution for level with no example solution', () => {
         const wrapper = shallow(
           <ScriptTeacherPanel

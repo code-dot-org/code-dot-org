@@ -37,6 +37,7 @@ describe('StudentTable', () => {
 
     expect(wrapper.find('FontAwesome')).to.have.length(1);
   });
+
   it('shows pair programming logo if level is paired as driver', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
@@ -51,12 +52,14 @@ describe('StudentTable', () => {
 
     expect(wrapper.find('FontAwesome')).to.have.length(1);
   });
+
   it('shows number in bubble if not paired and not bonus', () => {
     const wrapper = shallow(<TeacherPanelProgressBubble {...defaultProps} />);
 
     expect(wrapper.find('FontAwesome')).to.have.length(0);
     assert(wrapper.containsMatchingElement(<span>{4}</span>));
   });
+
   it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(
       <TeacherPanelProgressBubble
