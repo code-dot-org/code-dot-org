@@ -372,6 +372,48 @@ class ScriptLevel < ActiveRecord::Base
     }.camelize_keys
   end
 
+  def summarize_for_teacher_panel(student)
+    contained_levels = levels.map(&:contained_levels).flatten
+    if contained_levels.any?
+      user_level = student.last_attempt_for_any(contained_levels)
+      contained = true
+    else
+      user_level = student.last_attempt_for_any(levels)
+      contained = false
+    end
+
+    status = activity_css_class(user_level)
+    passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+
+    if user_level
+      paired = user_level.paired?
+      if UserLevel.most_recent_driver(@script, @level, student)
+        driver = UserLevel.most_recent_driver(@script, @level, student)[0] # the name is in array index 0
+      end
+      if UserLevel.most_recent_navigator(@script, @level, student)
+        navigator = UserLevel.most_recent_navigator(@script, @level, student)[0] # the name is in array index 0
+      end
+    end
+
+    teacher_panel_summary = {
+      contained: contained,
+      paired: paired,
+      driver: driver,
+      navigator: navigator,
+      isConceptLevel: level.concept_level?,
+      user_id: student.id,
+      passed: passed,
+      status: status,
+      levelNumber: position,
+      assessment: assessment
+    }
+    if user_level
+      teacher_panel_summary.merge!(user_level.attributes)
+    end
+
+    teacher_panel_summary
+  end
+
   def self.cache_find(id)
     Script.cache_find_script_level(id)
   end
