@@ -148,6 +148,7 @@ class Script < ActiveRecord::Base
     supported_locales
     pilot_experiment
     project_sharing
+    curriculum_umbrella
   )
 
   def self.twenty_hour_script
