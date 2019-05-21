@@ -80,10 +80,8 @@ class StudentTable extends React.Component {
             style={this.getRowStyle(selectedUserId, null)}
             onClick={() => onSelectUser(null)}
           >
-            <td style={styles.td}>
-              <span style={styles.nameInScript}>
-                {i18n.studentTableTeacherDemo()}
-              </span>
+            <td style={{...styles.td, ...styles.nameInScript}}>
+              {i18n.studentTableTeacherDemo()}
             </td>
           </tr>
           {students.map(student => (
