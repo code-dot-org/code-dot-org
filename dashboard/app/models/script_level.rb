@@ -372,6 +372,7 @@ class ScriptLevel < ActiveRecord::Base
     }.camelize_keys
   end
 
+  # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student)
     contained_levels = levels.map(&:contained_levels).flatten
     if contained_levels.any?
