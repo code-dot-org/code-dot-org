@@ -278,7 +278,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.login_required
     assert script.hideable_stages
     assert script.project_sharing
-    asser script.curriculum_umbrella
+    assert_equal "CSP", script.curriculum_umbrella
   end
 
   test 'destroy raises exception for evil filenames' do
