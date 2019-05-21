@@ -481,9 +481,9 @@ nn:
         kan spele lyd óg. Du må bruke spelLyd()-blokka til å gjere det.\\\r\n\\\r\n\n1.
         \ Dra ei 'spelLyd()'-blokk til din 'påHending'. Dette vil gjere at lyden blir
         spelt når du klikkar på knappen. Klikk deretter på \"Vel...\" fra menyen.\\\r\n
-        \   \\\r\n    \\\\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\n
+        \   \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>\n
         \   AM.png>)\\\r\n    \\\r\n2.  Gå til \"Lydbiblioteket\" og finn lyden du
-        ønsker. Det finst ein drøss!\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\n
+        ønsker. Det finst ein drøss!\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>\n
         \   AM.png>)\\\r\n    \\\r\n3.  Køyr appen for å sjekk korleis lydane dine
         fungerer."
       AppLab Intro 2 - add sound: "<img src=\"https://images.code.org/3c1d6506a6a3c350380b921e08588a2b-image-1505429594117.52.37\nPM.png\"
