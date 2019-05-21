@@ -1,4 +1,4 @@
-import {commands} from './spritelabCommands';
+var commands = require('./commands');
 
 var Spritelab = function() {
   window.p5.prototype.executeDrawLoopAndCallbacks = function() {

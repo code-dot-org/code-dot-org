@@ -2,7 +2,7 @@ import {getStore} from '../redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var Spritelab = require('./Spritelab');
+var Spritelab = require('./spritelab/Spritelab');
 import * as assetPrefix from '../assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
