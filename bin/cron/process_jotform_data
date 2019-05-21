@@ -5,6 +5,12 @@ require 'cdo/only_one'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
+JOTFORM_SURVEY_RESPONSE_CLASSES = [
+  Pd::WorkshopDailySurvey,
+  Pd::WorkshopFacilitatorDailySurvey,
+  Pd::PostCourseSurvey
+]
+
 # @param unsanitized [String, nil] the unsanitized string
 # @returns [String, nil] the sanitized version of the string, with newlines stripped and double
 #   quotations escaped. Returns nil on nil input.
@@ -36,20 +42,23 @@ def main
   # Get list of hashes containing responses to survey questions.
   # One row per question answered.
   survey_answers = []
-  Pd::WorkshopDailySurvey.find_each do |submission|
-    answers = submission.form_data_hash
-    answers.each do |question_key, answer_value|
-      survey_answers << {
-        user_id: submission.user_id,
-        form_id: submission.form_id,
-        submission_id: submission.submission_id,
-        question_id: question_key,
-        answer_value:  sanitize_string_for_db(answer_value.to_s)
-      }
+
+  JOTFORM_SURVEY_RESPONSE_CLASSES.each do |jotform_survey_response_class|
+    jotform_survey_response_class.find_each do |submission|
+      answers = submission.form_data_hash
+      answers.each do |question_key, answer_value|
+        survey_answers << {
+          user_id: submission.user_id,
+          form_id: submission.form_id,
+          submission_id: submission.submission_id,
+          question_id: question_key,
+          answer_value:  sanitize_string_for_db(answer_value.to_s)
+        }
+      end
     end
   end
 
-  raise "processed_answers too big: #{survey_answers.size} rows exceeds limit of 100,000,000" if survey_answers.size > 100_000_000
+  raise "processed_answers too big: #{survey_answers.size} rows exceeds limit of 10,000,000" if survey_answers.size > 10_000_000
   raise "processed_surveys too big: #{survey_questions.size} rows exceeds limit of 10,000" if survey_questions.size > 10_000
 
   # Truncate the existing tables.
