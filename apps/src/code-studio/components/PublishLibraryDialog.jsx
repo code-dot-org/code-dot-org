@@ -102,7 +102,6 @@ class PublishLibraryDialog extends React.Component {
           {this.displayFunctions()}
           <button
             type="button"
-            id="jessie-test"
             onClick={this.displayShareLink}
             style={styles.publishButton}
           >
