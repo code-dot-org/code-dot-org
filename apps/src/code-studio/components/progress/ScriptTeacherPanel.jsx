@@ -79,15 +79,17 @@ class ScriptTeacherPanel extends React.Component {
       students
     } = this.props;
 
-    const currentLevelSection = sectionData ? sectionData.section_levels : null;
+    const currentSectionScriptLevels = sectionData
+      ? sectionData.section_levels
+      : null;
 
     const currentStudent = sectionData
       ? sectionData.section.students.find(
           student => this.props.getSelectedUserId() === student.id
         )
       : null;
-    const currentStudentLevel =
-      sectionData && currentStudent
+    const currentStudentScriptLevel =
+      currentSectionScriptLevels && currentStudent
         ? sectionData.section_levels.find(
             level => this.props.getSelectedUserId() === level.user_id
           )
@@ -98,18 +100,17 @@ class ScriptTeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
-          {sectionData && (
+          {sectionData && sectionData.level_examples && (
             <div style={styles.exampleSolutions}>
-              {sectionData.level_examples &&
-                sectionData.level_examples.map((example, index) => (
-                  <Button
-                    key={index}
-                    text={i18n.exampleSolution({number: index + 1})}
-                    color="blue"
-                    href={example}
-                    target="_blank"
-                  />
-                ))}
+              {sectionData.level_examples.map((example, index) => (
+                <Button
+                  key={index}
+                  text={i18n.exampleSolution({number: index + 1})}
+                  color="blue"
+                  href={example}
+                  target="_blank"
+                />
+              ))}
             </div>
           )}
           {selectedSection && (
@@ -159,12 +160,12 @@ class ScriptTeacherPanel extends React.Component {
               {currentStudent && (
                 <SelectedStudentInfo
                   selectedStudent={currentStudent}
-                  level={currentStudentLevel}
+                  level={currentStudentScriptLevel}
                   inMiniRubricExperiment={inMiniRubricExperiment}
                 />
               )}
               <StudentTable
-                levels={currentLevelSection}
+                levels={currentSectionScriptLevels}
                 students={students}
                 onSelectUser={this.props.onSelectUser}
                 getSelectedUserId={this.props.getSelectedUserId}
