@@ -5,7 +5,10 @@ import moment from 'moment';
 
 class TimeAgo extends React.Component {
   static propTypes = {
-    dateString: PropTypes.string.isRequired,
+    dateString: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.instanceOf(Date)
+    ]).isRequired,
     locale: PropTypes.string,
     style: PropTypes.object
   };
