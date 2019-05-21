@@ -1,11 +1,23 @@
-/* globals dashboard, appOptions, Craft */
+/* globals dashboard */
 
 import $ from 'jquery';
 import _ from 'lodash';
+
+import {
+  showProjectHeader,
+  showMinimalProjectHeader,
+  showProjectBackedHeader,
+  showLevelBuilderSaveButton,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
+  showProjectUpdatedAt,
+  setProjectUpdatedAt,
+  refreshProjectName
+} from './headerRedux';
+
 import progress from './progress';
 import {getStore} from '../redux';
-import {shareProject} from './headerShare';
-import {convertBlocksXml} from '../craft/code-connection/utils';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -185,378 +197,50 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
-/**
- * Show a popup dialog to collect an Hour of Code share link, and create a new
- * channel-backed project from the associated LevelSource.
- *
- * Currently only supported for Minecraft Code Connection Projects and Minecraft
- * Agent share links
- */
-function importProject() {
-  if (!Craft) {
-    return;
-  }
-
-  Craft.showImportFromShareLinkPopup(shareLink => {
-    if (!shareLink) {
-      return;
-    }
-
-    let sharePath;
-    try {
-      const anchor = document.createElement('a');
-      anchor.href = shareLink;
-      sharePath = anchor.pathname;
-    } catch (e) {
-      // a shareLink that does not represent a valid URL will throw a TypeError
-      Craft.showErrorMessagePopup(
-        dashboard.i18n.t('project.share_link_import_bad_link_header'),
-        dashboard.i18n.t('project.share_link_import_bad_link_body')
-      );
-      return;
-    }
-
-    const legacyShareRegex = /^\/?c\/([^\/]*)/;
-    const obfuscatedShareRegex = /^\/?r\/([^\/]*)/;
-    const projectShareRegex = /^\/?projects\/minecraft_hero\/([^\/]*)/;
-
-    let levelSourcePath, channelId;
-
-    // Try a couple different kinds of share links, resolving to either a level
-    // source or channel
-    if (sharePath.match(legacyShareRegex)) {
-      const levelSourceId = sharePath.match(legacyShareRegex)[1];
-      levelSourcePath = `/c/${levelSourceId}.json`;
-    } else if (sharePath.match(obfuscatedShareRegex)) {
-      const levelSourceId = sharePath.match(obfuscatedShareRegex)[1];
-      levelSourcePath = `/r/${levelSourceId}.json`;
-    } else if (sharePath.match(projectShareRegex)) {
-      channelId = sharePath.match(projectShareRegex)[1];
-    }
-
-    const onFinish = function(source) {
-      // Source data will likely be from a different project type than this one,
-      // so convert it
-
-      const convertedSource = convertBlocksXml(source);
-      dashboard.project.createNewChannelFromSource(convertedSource, function(
-        channelData
-      ) {
-        const pathName =
-          dashboard.project.appToProjectUrl() + '/' + channelData.id + '/edit';
-        location.href = pathName;
-      });
-    };
-
-    const onError = function() {
-      Craft.showErrorMessagePopup(
-        dashboard.i18n.t('project.share_link_import_error_header'),
-        dashboard.i18n.t('project.share_link_import_error_body')
-      );
-    };
-
-    // Depending on what kind of source the share link resolved to (if it even
-    // did), retrieve the source and process it
-    if (levelSourcePath) {
-      // level sources can be grabbed with a simple ajax request
-      $.ajax({
-        url: levelSourcePath,
-        type: 'get',
-        dataType: 'json'
-      })
-        .done(function(data) {
-          onFinish(data.data);
-        })
-        .error(function() {
-          onError();
-        });
-    } else if (channelId) {
-      // channel-backed sources need to go through the project API
-      dashboard.project.getSourceForChannel(channelId, function(source) {
-        if (source) {
-          onFinish(source);
-        } else {
-          onError();
-        }
-      });
-    } else {
-      Craft.showErrorMessagePopup(
-        dashboard.i18n.t('project.share_link_import_bad_link_header'),
-        dashboard.i18n.t('project.share_link_import_bad_link_body')
-      );
-    }
-  });
-}
-
-function remixProject() {
-  if (
-    dashboard.project.getCurrentId() &&
-    dashboard.project.canServerSideRemix()
-  ) {
-    dashboard.project.serverSideRemix();
-  } else if (!getStore().getState().pageConstants.isSignedIn) {
-    window.location = `/users/sign_in?user_return_to=${
-      window.location.pathname
-    }`;
-  } else {
-    // We don't have an id. This implies we are either on a legacy /c/ share
-    // page or a script level. In these cases, copy will create a new project
-    // for us.
-    var newName =
-      'Remix: ' +
-      (dashboard.project.getCurrentName() ||
-        appOptions.level.projectTemplateLevelName ||
-        'My Project');
-    dashboard.project
-      .copy(newName, {shouldNavigate: true})
-      .then(() => $('.project_name').text(newName))
-      .catch(err => console.log(err));
-  }
-}
-
-function saveStartCode(getChanges) {
-  $('.project_updated_at').text('Saving...');
-
-  $.ajax({
-    type: 'POST',
-    url: '../update_properties',
-    data: JSON.stringify(getChanges()),
-    dataType: 'json',
-    error: header.showProjectSaveError,
-    success: () => {
-      $('.project_updated_at').text('Saved');
-    }
-  });
-}
-
-// Minimal project header for viewing channel shares and legacy /c/ share pages.
 header.showMinimalProjectHeader = function() {
-  var projectName = $('<div class="project_name_wrapper header_text">')
-    .append(
-      $('<div class="project_name header_text">').text(
-        dashboard.project.getCurrentName()
-      )
-    )
-    .append(
-      $('<div class="project_updated_at header_text">').text(
-        dashboard.i18n.t('project.click_to_remix')
-      )
-    );
-
-  $('.project_info')
-    .append(projectName)
-    .append(
-      $('<div class="project_remix header_button">').text(
-        dashboard.i18n.t('project.remix')
-      )
-    );
-  $('.project_remix').click(remixProject);
+  getStore().dispatch(refreshProjectName());
+  getStore().dispatch(showMinimalProjectHeader());
 };
 
-// Levelbuilder-only UI for saving changes to a level.
 header.showLevelBuilderSaveButton = function(getChanges) {
-  var projectName = $('<div class="project_name_wrapper header_text">')
-    .append(
-      $('<div class="project_name header_text">').text(
-        'Levelbuilder: edit start code'
-      )
-    )
-    .append(
-      $('<div class="project_updated_at header_text">').text('Not saved')
-    );
-
-  $('.project_info')
-    .append(projectName)
-    .append($('<div class="project_remix header_button">').text('Save'));
-  $('.project_remix').click(saveStartCode.bind(null, getChanges));
+  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
 };
 
-// Project header for script levels that are backed by a project. Shows a
-// Share and Remix button, and places a last_modified time below the stage
-// name
 /**
  * @param {object} options{{
  *   showShareAndRemix: boolean
  * }}
  */
 header.showHeaderForProjectBacked = function(options) {
-  if ($('.project_updated_at').length !== 0) {
-    return;
-  }
   if (options.showShareAndRemix) {
-    $('.project_info')
-      .append(
-        $('<div class="project_share header_button header_button_light">').text(
-          dashboard.i18n.t('project.share')
-        )
-      )
-      .append(
-        $('<div class="project_remix header_button header_button_light">').text(
-          dashboard.i18n.t('project.remix')
-        )
-      );
-    $('.project_share').click(() =>
-      shareProject(dashboard.project.getShareUrl())
-    );
-    $('.project_remix').click(remixProject);
+    getStore().dispatch(showProjectBackedHeader());
   }
 
-  // Add updated_at below the level name. Do this by creating a new div, moving
-  // the level text into it, applying some styling, and placing that div where
-  // levelText was previously.
-  // I really don't like that we're modifying DOM elements/styles of other
-  // elements here, but until this is all Reactified, I'm not sure if theres
-  // a better solution
-  var levelText = $('.header_level_container')
-    .children()
-    .first()
-    .detach();
-  $('.header_level_container').prepend(
-    $('<div>')
-      .css({display: 'inline-block', verticalAlign: 'bottom'})
-      .append(levelText.css('display', 'block'))
-      .append(
-        $('<div class="project_updated_at header_text">').css({
-          display: 'block',
-          textAlign: 'left'
-        })
-      )
-  );
-
+  getStore().dispatch(showProjectUpdatedAt());
   header.updateTimestamp();
 };
 
 header.showProjectHeader = function() {
-  function projectNameShow() {
-    $('.project_name').replaceWith(
-      $('<div class="project_name header_text">').text(
-        dashboard.project.getCurrentName()
-      )
-    );
-    header.updateTimestamp();
-    $('.project_save').replaceWith(
-      $('<div class="project_edit header_button header_button_light">').text(
-        dashboard.i18n.t('project.rename')
-      )
-    );
-  }
-
-  function projectNameEdit() {
-    $('.project_updated_at').hide();
-    $('.project_name').replaceWith(
-      $(
-        '<input type="text" class="project_name header_input" maxlength="100">'
-      ).val(dashboard.project.getCurrentName())
-    );
-    $('.project_edit').replaceWith(
-      $('<div class="project_save header_button header_button_light">').text(
-        dashboard.i18n.t('project.save')
-      )
-    );
-  }
-
-  var nameAndUpdated = $('<div class="project_name_wrapper header_text">') // content will be added by projectNameShow
-    .append($('<div class="project_name header_text">'))
-    .append($('<div class="project_updated_at header_text">'));
-
-  $('.project_info')
-    .append(nameAndUpdated)
-    .append(
-      $('<div class="project_edit header_button header_button_light">').text(
-        dashboard.i18n.t('project.rename')
-      )
-    )
-    .append(
-      $('<div class="project_share header_button header_button_light">').text(
-        dashboard.i18n.t('project.share')
-      )
-    )
-    .append(
-      $('<div class="project_remix header_button header_button_light">').text(
-        dashboard.i18n.t('project.remix')
-      )
-    );
-
-  // For Minecraft Code Connection (aka CodeBuilder) projects, add the option to
-  // import code from an Hour of Code share link
-  if (appOptions.level.isConnectionLevel) {
-    $('.project_info').append(
-      $('<div class="project_import header_button header_button_light">').text(
-        dashboard.i18n.t('project.import')
-      )
-    );
-  }
-
-  // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
-  if ('weblab' === appOptions.app) {
-    $('.project_info').append(
-      $('<div class="beta-notice">').text(dashboard.i18n.t('beta'))
-    );
-  }
-
-  projectNameShow();
-
-  $(document).on('click', '.project_edit', projectNameEdit);
-
-  $(document).on('input', '.project_name', function() {
-    if (
-      $(this)
-        .val()
-        .trim().length === 0
-    ) {
-      $('.project_save').attr('disabled', true);
-    } else {
-      $('.project_save').removeAttr('disabled');
-    }
-  });
-
-  $(document).on('click', '.project_save', function() {
-    if ($(this).attr('disabled')) {
-      return;
-    }
-    $(this).attr('disabled', true);
-    dashboard.project.rename(
-      $('.project_name')
-        .val()
-        .trim()
-        .substr(0, 100),
-      projectNameShow
-    );
-  });
-
-  $('.project_share').click(() =>
-    shareProject(dashboard.project.getShareUrl())
-  );
-  $('.project_remix').click(remixProject);
-  $('.project_import').click(importProject);
+  header.updateTimestamp();
+  getStore().dispatch(refreshProjectName());
+  getStore().dispatch(showProjectHeader());
 };
 
 header.updateTimestamp = function() {
-  var timestamp = dashboard.project.getCurrentTimestamp();
-  if (timestamp) {
-    $('.project_updated_at')
-      .empty()
-      .append('Saved ') // TODO i18n
-      .append($('<span class="timestamp">').attr('title', timestamp))
-      .show();
-    $('.project_updated_at span.timestamp').timeago();
-  } else {
-    $('.project_updated_at').text('Not saved'); // TODO i18n
-  }
+  const timestamp = dashboard.project.getCurrentTimestamp();
+  getStore().dispatch(setProjectUpdatedAt(timestamp));
 };
 
-// TODO i18n
 header.showProjectSaveError = () => {
-  const saveErrorTooltip =
-    "It looks like we couldn't save your progress. Make sure you have a " +
-    'good internet connection and try running the project again to save it.';
+  getStore().dispatch(setProjectUpdatedError());
+};
 
-  const saveErrorHtml = `
-<span class="project-save-error" title="${saveErrorTooltip}">
-  <i class="fa fa-exclamation-triangle"/> Error saving project
-</span>`;
+header.showProjectSaving = () => {
+  getStore().dispatch(setProjectUpdatedSaving());
+};
 
-  $('.project_updated_at').html(saveErrorHtml);
+header.showProjectSaved = () => {
+  getStore().dispatch(setProjectUpdatedSaved());
 };
 
 export default header;

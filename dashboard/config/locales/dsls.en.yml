@@ -597,3 +597,630 @@ en:
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Which word is spelled?
+      courseC_multi_artist_prog6_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a square.: The artist draws a square.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_artist_prog6_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The artist draws a square.: Incorrect.  The artist draws a square.
+        Look carefully at the code below.  What will happen when you click "Run"?: Look carefully at the code below.  What will happen when you click "Run"?
+        The artist draws a square.: The artist draws a square.
+        The artist will draw a single line.: The artist will draw a single line.
+        The artist will draw a square.: The artist will draw a square.
+        The artist will draw a triangle with three equal sides.: The artist will draw a triangle with three equal sides.
+      courseC_multi_harvester_loops11_predict1:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_harvester_loops11_predict1_2018:
+        '12': '12'
+        '15': '15'
+        '4': '4'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!
+      courseC_multi_maze_debugging8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat takes one too few steps and ends up short of the acorn.
+        Scrat will go the wrong way after his final turn.: Scrat will go the wrong way after his final turn.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
+        The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
+      courseC_multi_maze_debugging8_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrect. Scrat goes the wrong way after his final turn.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrect. Taking one too few steps happens after Scrat turns the wrong way.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Look closely at the code below.  What is the first bug that will make this program fail? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat takes one too few steps and ends up short of the acorn.
+        Scrat will go the wrong way after his final turn.: Scrat will go the wrong way after his final turn.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'The first error is that Scrat goes the wrong way after his final turn. '
+        The program won't fail. Scrat will get to the acorn.: The program won't fail. Scrat will get to the acorn.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will run into the TNT.: The bird will run into the TNT.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseC_multi_maze_programming8_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrect. This code gets the bird perfectly to the pig.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Read through the code below very carefully.  What will happen when you click "Run"?
+        The bird will end up one step short of the pig.: The bird will end up one step short of the pig.
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will run into the TNT.: The bird will run into the TNT.
+        This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
+      courseC_multi_starWars_predict1:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
+        BB-8 will not move.: BB-8 will not move.
+        Correct!: Correct!
+        I don't know: I don't know
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
+      courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
+        BB-8 will not move.: BB-8 will not move.
+        Correct!: Correct!
+        I don't know: I don't know
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
+        The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
+      courseC_multi_starWars_predict2:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+        BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+      courseC_multi_starWars_predict2_2018:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
+        BB-8 will travel too far in the first loop.: BB-8 will travel too far in the first loop.
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+        Look closely at the code below.  What will happen when you click "Run"?: Look closely at the code below.  What will happen when you click "Run"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.
+      courseD_multi_artist_binary8_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        D: D
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
+      courseD_multi_artist_binary8_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        D: D
+        Incorrect.: Incorrect.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Take a close look at the code below.  Which image will it create after you click "Run"?
+      courseD_multi_artist_nestedLoops9_predict1:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        A: A
+        B: B
+        C: C
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Take a good look at the code below.  Which drawing will this program make when you click "Run"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.
+      courseD_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+      courseD_multi_bee_conditionals1_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+      courseD_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseD_multi_bee_conditionals7_predict2_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        The bee will get nectar at each flower and honey at each honeycomb.: The bee will get nectar at each flower and honey at each honeycomb.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseD_multi_bee_nestedLoops2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Look closely at the nested loops below.  What will happen when you click "Run"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.
+        The bee will get all of the nectar.: The bee will get all of the nectar.
+        The bee will get only 2 units of nectar.: The bee will get only 2 units of nectar.
+        The bee will move forward and get nectar only one time.: The bee will move forward and get nectar only one time.
+      courseD_multi_bee_nestedLoops9_predict2:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        '12': '12'
+        '4': '4'
+        '8': '8'
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Look closely at the code below. How much honey will the bee make when you click "Run"?
+        ? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+        : The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!
+      courseD_multi_collector_debugging10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.
+        Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.: Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.
+        Laurel will turn the wrong way when making a square.: Laurel will turn the wrong way when making a square.
+        ? 'Look closely at the code below.  Why won''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        : 'Look closely at the code below.  Why won''t Laurel collect all of the treasure when you click "Run"? Warning: This is a tricky question, make sure you read all of the options before answering!'
+        'The loop does not run long enough for Laurel to get to all of the treasure. ': 'The loop does not run long enough for Laurel to get to all of the treasure. '
+      courseD_multi_farmer_condLoops9_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for collecting the pumpkin.: Incorrect. There is no code here for collecting the pumpkin.
+        Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
+        ? The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the harvester repeatedly make a stairstep pattern and collect as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The harvester will collect all of the crops, except the pumpkin.: The harvester will collect all of the crops, except the pumpkin.
+        The harvester will collect all of the crops.: The harvester will collect all of the crops.
+        The harvester will not collect any of the crops with the path she is taking.: The harvester will not collect any of the crops with the path she is taking.
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        Incorrect. There is no code here for picking the pumpkin.: Incorrect. There is no code here for picking the pumpkin.
+        Take a close look at the code below.  What will happen after you click "Run"?: Take a close look at the code below.  What will happen after you click "Run"?
+        ? The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        : The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.
+        The harvester will collect all of the crops.: The harvester will collect all of the crops.
+        The harvester will not pick any of the crops with the path she is taking.: The harvester will not pick any of the crops with the path she is taking.
+        The harvester will pick all of the crops, except the pumpkin.: The harvester will pick all of the crops, except the pumpkin.
+      courseD_multi_farmer_ramp13:
+        " ": " "
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        : Incorrect. The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.
+        The farmer will walk four spaces, then try to pick one pumpkin.: The farmer will walk four spaces, then try to pick one pumpkin.
+        The farmer will walk to the end of the path and harvest the pumpkin.: The farmer will walk to the end of the path and harvest the pumpkin.
+      courseD_multi_farmer_while10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while10_predict2_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrect. There is no code to remove dirt from the pile.
+        Nothing.  This code will leave only level ground.: Nothing.  This code will leave only level ground.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Take a good look at the code below. What will be left at the end of this puzzle?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.
+        This code will leave the holes completely untouched.: This code will leave the holes completely untouched.
+        This code will leave the pile completely untouched.: This code will leave the pile completely untouched.
+      courseD_multi_farmer_while4_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_farmer_while4_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        Look closely at the code below.  What will happen after you click "Run"?: Look closely at the code below.  What will happen after you click "Run"?
+        Nothing will happen.: Nothing will happen.
+        The farmer will never stop removing dirt.: The farmer will never stop removing dirt.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.
+      courseD_multi_maze_until10_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        : Incorrect. In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.
+        ? Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        : Incorrect. The zombie looks only for a right turn or straight path. It never looks to turn left, so it get stuck almost immediately.
+        Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
+        The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will turn right immediately and get stuck.: The zombie will turn right immediately and get stuck.
+        The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
+      courseD_multi_maze_until10_predict2_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: In this code, the zombie will pass the correct path and end up going back and forth forever.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrect. The zombie will pass the correct path and end up going back and forth forever.
+        Look carefully at the code below.  What will happen after you click "Run"?: Look carefully at the code below.  What will happen after you click "Run"?
+        The zombie will make it to the sunflower.: The zombie will make it to the sunflower.
+        The zombie will pass the correct path and end up going back and forth forever.: The zombie will pass the correct path and end up going back and forth forever.
+        The zombie will turn right on the first path and go around in circles forever.: The zombie will turn right on the first path and go around in circles forever.
+      courseD_multi_maze_until2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
+        The bird will not move at all.: The bird will not move at all.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseD_multi_maze_until2_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!
+        ? Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        : Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Take a close look at the code below.  What do you think will happen when you click "Run"?
+        The bird will make it to the pig.: The bird will make it to the pig.
+        The bird will move forward and run into the TNT.: The bird will move forward and run into the TNT.
+        The bird will not move at all.: The bird will not move at all.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.
+      courseD_multi_scrat_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.
+        Nothing. Scrat will not move at all.: Nothing. Scrat will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        : Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!
+        Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!
+        Scrat will move forward, then turn and crash.: Scrat will move forward, then turn and crash.
+        This code uses a new block. What do you think will happen when you press "Run"?: This code uses a new block. What do you think will happen when you press "Run"?
+      courseE_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Based on the code below, what do you think will happen if you press 'Run'?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseE_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.
+        ? Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        : Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click "Run"?
+        I don't know.: I don't know.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrect. The function is programmed to handle any amount of honey over 0.
+        The bee will try to make too much honey.: The bee will try to make too much honey.
+        The bee won't make enough honey.: The bee won't make enough honey.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.
+        The same program will work to solve this puzzle, too.: The same program will work to solve this puzzle, too.
+      courseE_multi_farmer_functions11_predict:
+        Correct!: Correct!
+        Incorrect.  The harvester does not call "check and pick" until she gets to the corn.: Incorrect.  The harvester does not call "check and pick" until she gets to the corn.
+        Incorrect. The harvester only makes one turn, and ends at the corn.: Incorrect. The harvester only makes one turn, and ends at the corn.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
+      courseE_multi_farmer_functions11_predict_2018:
+        Correct!: Correct!
+        Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.
+        Look at the functions defined below.  What will the harvester pick?: Look at the functions defined below.  What will the harvester pick?
+        The harvester will pick all of the pumpkins.: The harvester will pick all of the pumpkins.
+        The harvester will pick the corn.: The harvester will pick the corn.
+        The harvester will pick the lettuce.: The harvester will pick the lettuce.
+        The harvester will pick two pumpkins.: The harvester will pick two pumpkins.
+      courseE_multi_farmer_predict1:
+        Correct!: Correct!
+        I don't know: I don't know
+        ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
+        Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
+        ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
+      courseE_multi_farmer_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
+        ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: The farmer will not walk anywhere because there's no pumpkin in the first place.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
+        What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
+      courseE_multi_maze_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.: Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.
+        Nothing. The bird will not move at all.: Nothing. The bird will not move at all.
+        ? Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        : Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!
+        The bird will move forward three times, turn, then move forward three more times, making it to the pig!: The bird will move forward three times, turn, then move forward three more times, making it to the pig!
+        The bird will move forward, then turn and crash into a wall.: The bird will move forward, then turn and crash into a wall.
+        This code uses a new block. What do you think would happen if you pressed 'Run'?: This code uses a new block. What do you think would happen if you pressed 'Run'?
+      courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseE_prediction_artistFunction1_2018:
+        Correct! The function is called two times in the program, with a jump in between.: Correct! The function is called two times in the program, with a jump in between.
+        Incorrect. The function is actually called two times in the program.: Incorrect. The function is actually called two times in the program.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.
+        Nothing. The function is not called in the program.: Nothing. The function is not called in the program.
+        The artist will draw a single square.: The artist will draw a single square.
+        The artist will draw two squares that overlap.: The artist will draw two squares that overlap.
+        The artist will draw two squares with a small gap in between.: The artist will draw two squares with a small gap in between.
+        What will happen when you press "Run"?: What will happen when you press "Run"?
+      courseF_bee_variables_8a_2018:
+        Bee Variables Multi: Bee Variables Multi
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The variable gets set back to 0 before the last two function calls.: Incorrect.  The variable gets set back to 0 before the last two function calls.
+        Incorrect.  Your variable's name does not affect its value.: Incorrect.  Your variable's name does not affect its value.
+        Look at the code below.  How many units of nectar will the bee collect at the end?: Look at the code below.  How many units of nectar will the bee collect at the end?
+        The bee will collect all of the nectar.: The bee will collect all of the nectar.
+        The bee will only collect 2 nectar.: The bee will only collect 2 nectar.
+        The bee won't collect any nectar because the variable isn't called "gather".: The bee won't collect any nectar because the variable isn't called "gather".
+        ? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
+        : The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.
+      courseF_multi_artist_for10_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_for10_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrect. The artist turns between iterations of the `for` loop.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: The artist will draw a straight line that increases in thickness from one side of the play space to the other.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrect.  Using parameters lets you use a single function to create different outcomes.
+        The artist will use the same function to draw two different sized boxes.: The artist will use the same function to draw two different sized boxes.
+        The artist will use two different functions to draw the same sized box twice.: The artist will use two different functions to draw the same sized box twice.
+        The artist will use two different functions to draw two different sized boxes.: The artist will use two different functions to draw two different sized boxes.
+        The program uses parameters to allow a single function to create two different size boxes.: The program uses parameters to allow a single function to create two different size boxes.
+        What will happen when you run this program?: What will happen when you run this program?
+      courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press "Run"?: Based on the code below, what do you think will happen if you press "Run"?
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        : Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times.
+        ? Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        : Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle.
+        ? The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        : The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times.
+        The artist will draw the triangle from the last level four times in a rotated pattern.: The artist will draw the triangle from the last level four times in a rotated pattern.
+        The artist will draw the triangle from the last level four times in a straight line.: The artist will draw the triangle from the last level four times in a straight line.
+        The artist will draw three squares in a rotated pattern.: The artist will draw three squares in a rotated pattern.
+      courseF_multi_artist_variables3a_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
+      courseF_multi_artist_variables3a_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.
+        ? The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        : The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides.
+        The artist will draw a 50-sided polygon with 3 pixel sides.: The artist will draw a 50-sided polygon with 3 pixel sides.
+        The artist will draw a triangle with 50 pixel sides.: The artist will draw a triangle with 50 pixel sides.
+        The artist will draw three open sides with 50 degree turns.: The artist will draw three open sides with 50 degree turns.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: We have set the variable "length" to 50.  What will happen when you click "Run"?
+      courseF_multi_bee_conditionals1_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
+      courseF_multi_bee_conditionals7_predict2:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
+        ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
+        The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
+        The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
+        The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.
+        The bee will try to get nectar from both flowers and honeycomb.: The bee will try to get nectar from both flowers and honeycomb.
+      courseF_multi_bee_for3_predict1:
+        Correct!: Correct!
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'The bee will move forward and try to collect more nectar than is in the flowers. '
+      courseF_multi_bee_for3_predict1_2018:
+        Correct!: Correct!
+        'I don''t know. ': 'I don''t know. '
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        Read the code below.  What will happen when you click "Run"?: Read the code below.  What will happen when you click "Run"?
+        The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.
+        The bee will move forward and collect all of the nectar from every flower, except for one.: The bee will move forward and collect all of the nectar from every flower, except for one.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'The bee will move forward and collect all of the nectar from every flower. '
+        'The bee will move forward and collect one nectar from each flower. ': 'The bee will move forward and collect one nectar from each flower. '
+      courseF_multi_bee_fwp9_predict1:
+        ? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        : Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.
+        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: Correct! The function is set to collect as many nectar or honey as is passed through a parameter.
+        I don't know.: I don't know.
+        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.
+        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.
+        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'The bee will collect only one nectar or honey in each iteration of the loop. '
+        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. '
+        The bee will not collect any nectar or honey.: The bee will not collect any nectar or honey.
+        What will happen when you click "Run"?: What will happen when you click "Run"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correct. '
+        I don't know.: I don't know.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.
+        The pirate would say, "Ali" and that is all.: The pirate would say, "Ali" and that is all.
+        The pirate would say, "Pleasure to meet you, Ali." and that is all.: The pirate would say, "Pleasure to meet you, Ali." and that is all.
+        The pirate would say, "Pleasure to meet you." and that is all.: The pirate would say, "Pleasure to meet you." and that is all.
+        What would happen if the user entered the name "Ali" at the prompt?: What would happen if the user entered the name "Ali" at the prompt?
+      coursee_prediction_artistfunction2:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      coursee_prediction_artistfunction2_2018:
+        Correct!: Correct!
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrect. The loop turns 90 degrees between calls to "draw polygon".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".
+        Incorrect. The program does not call "draw line of polygons".: Incorrect. The program does not call "draw line of polygons".
+        The artist will draw four squares in a window pattern.: The artist will draw four squares in a window pattern.
+        The artist will draw four squares on top of one another.: The artist will draw four squares on top of one another.
+        The artist will draw only one line of squares.: The artist will draw only one line of squares.
+        The artist will solve the puzzle correctly.: The artist will solve the puzzle correctly.
+        What will happen when you press the "Run" button?: What will happen when you press the "Run" button?
+      grade2_multi_collector_A_predict1:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        ? Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+        : Look closely at the code below.  If the code were to run to the end (ignoring any errors) how many pieces of treasure would Laurel collect?
+      grade2_multi_collector_A_predict1_2018:
+        Correct!: Correct!
+        I don't know.: I don't know.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel tries to collect treasure where there is none and it causes an error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel will collect 4 pieces of treasure using this code.
+        Laurel will collect all of the treasure.: Laurel will collect all of the treasure.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel will try to collect treasure where there is not any and it causes an error.
+        Look at this code carefully. What do you think will happen when the program runs?: Look at this code carefully. What do you think will happen when the program runs?
