@@ -33,6 +33,7 @@ class DslTest < ActiveSupport::TestCase
     supported_locales: [],
     pilot_experiment: nil,
     project_sharing: nil,
+    curriculum_umbrella: nil
   }
 
   test 'test Script DSL' do
@@ -628,36 +629,29 @@ SCRIPT
     assert_equal expected, script_text
   end
 
-  test 'Script DSL with new_name, family_name, version_year and is_stable' do
-    input_dsl = <<DSL
-new_name 'new name'
-family_name 'family name'
-version_year '3035'
-is_stable true
-stage 'Stage1'
-level 'Level 1'
-level 'Level 2'
-DSL
+  test 'Script DSL with curriculum_umbrella' do
+    input_dsl = "curriculum_umbrella 'CSF'"
     expected = DEFAULT_PROPS.merge(
       {
-        new_name: "new name",
-        family_name: "family name",
-        version_year: "3035",
-        is_stable: true,
-        stages: [
-          {
-            stage: "Stage1",
-            scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
-            ]
-          }
-        ]
+        stages: [],
+        curriculum_umbrella: 'CSF'
       }
     )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'serialize curriculum_umbrella' do
+    script = create :script, curriculum_umbrella: 'CSP'
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+curriculum_umbrella 'CSP'
+
+SCRIPT
+
+    assert_equal expected, script_text
   end
 
   test 'serialize new_name, family_name, version_year and is_stable' do
