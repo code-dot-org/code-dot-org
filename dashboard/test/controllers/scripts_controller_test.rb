@@ -399,7 +399,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: script.id,
       script: {name: script.name},
-      script_text: ''
+      script_text: '',
+      curriculum_umbrella: ''
     }
     refute Script.find_by_name(script.name).curriculum_umbrella
   end
