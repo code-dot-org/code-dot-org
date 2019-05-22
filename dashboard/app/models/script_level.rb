@@ -388,12 +388,12 @@ class ScriptLevel < ActiveRecord::Base
 
     if user_level
       paired = user_level.paired?
-      if UserLevel.most_recent_driver(@script, @level, student)
-        driver = UserLevel.most_recent_driver(@script, @level, student)[0] # the name is in array index 0
-      end
-      if UserLevel.most_recent_navigator(@script, @level, student)
-        navigator = UserLevel.most_recent_navigator(@script, @level, student)[0] # the name is in array index 0
-      end
+
+      driver_info = UserLevel.most_recent_driver(script, level, student)
+      driver = driver_info[0] if driver_info
+
+      navigator_info = UserLevel.most_recent_navigator(script, level, student)
+      navigator = navigator_info[0] if navigator_info
     end
 
     teacher_panel_summary = {
