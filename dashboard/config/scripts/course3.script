@@ -5,6 +5,7 @@ project_widget_visible true
 has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course3/{LESSON}/Teacher'
 project_widget_types ["playlab", "artist"]
+curriculum_umbrella 'CSF'
 
 stage 'Computational Thinking'
 level 'ComputationalThinking'

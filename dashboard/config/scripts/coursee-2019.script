@@ -8,6 +8,7 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursee'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Sequencing in the Maze', flex_category: 'ramp_up'
 level 'courseD_video_ramp1_2019', progression: 'Maze Intro: Programming with Blocks'
