@@ -104,6 +104,9 @@ var Spritelab = function() {
   window.p5.prototype.destroy = function(spriteIndex) {
     commands.destroy.apply(this, [spriteIndex]);
   };
+  window.p5.prototype.displace = function(spriteIndex, targetSpriteIndex) {
+    commands.dispalce.apply(this, [spriteIndex, targetSpriteIndex]);
+  };
 
   // WORLD commands
   window.p5.prototype.hideTitleScreen = function() {

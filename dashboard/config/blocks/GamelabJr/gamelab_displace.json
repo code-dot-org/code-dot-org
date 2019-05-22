@@ -7,13 +7,16 @@
       0.74
     ],
     "func": "displace",
-    "blockText": "{THIS} blocks {SPRITE} from moving",
+    "blockText": "{SPRITE} blocks {TARGET} from moving",
     "args": [
       {
         "name": "SPRITE",
         "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "type": "Sprite"
       }
-    ],
-    "methodCall": true
+    ]
   }
 }

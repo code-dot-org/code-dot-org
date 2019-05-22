@@ -16,6 +16,14 @@ export const commands = {
     return spriteId;
   },
 
+  displace(spriteIndex, targetSpriteIndex) {
+    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+    let targetSprites = spriteUtils.singleOrGroup(targetSpriteIndex);
+    sprites.forEach(sprite => {
+      targetSprites.forEach(target => sprite.displace(target));
+    });
+  },
+
   setAnimation(spriteIndex, animation) {
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
     sprites.forEach(sprite => {
