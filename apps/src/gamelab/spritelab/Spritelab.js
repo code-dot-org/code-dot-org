@@ -28,26 +28,6 @@ var Spritelab = function() {
     updateTitle.apply(this);
   };
 
-  window.p5.prototype.makeNewSpriteAnon = function(animation, location) {
-    commands.makeSprite.apply(this, [animation, location]);
-  };
-
-  window.p5.prototype.createNewSprite = function(name, animation, location) {
-    return commands.makeSprite.apply(this, [animation, location]);
-  };
-
-  window.p5.prototype.setAnimation = function(spriteIndex, animation) {
-    commands.setAnimation.apply(this, [spriteIndex, animation]);
-  };
-
-  window.p5.prototype.getProp = function(spriteIndex, prop) {
-    return commands.getProp.apply(this, [spriteIndex, prop]);
-  };
-
-  window.p5.prototype.destroy = function(spriteIndex) {
-    commands.destroy.apply(this, [spriteIndex]);
-  };
-
   // ACTION commands
   window.p5.prototype.changePropBy = function(spriteIndex, prop, val) {
     commands.changePropBy.apply(this, [spriteIndex, prop, val]);
@@ -67,6 +47,9 @@ var Spritelab = function() {
     direction
   ) {
     commands.moveInDirection.apply(this, [spriteIndex, distance, direction]);
+  };
+  window.p5.prototype.moveToward = function(spriteIndex, distance, target) {
+    commands.moveToward.apply(this, [spriteIndex, distance, target]);
   };
   window.p5.prototype.pointInDirection = function(spriteIndex, direction) {
     commands.pointInDirection.apply(this, [spriteIndex, direction]);
@@ -99,6 +82,27 @@ var Spritelab = function() {
   };
   window.p5.prototype.yLocationOf = function(spriteIndex) {
     return commands.yLocationOf.apply(this, [spriteIndex]);
+  };
+
+  // SPRITE commands
+  window.p5.prototype.makeNewSpriteAnon = function(animation, location) {
+    commands.makeSprite.apply(this, [animation, location]);
+  };
+
+  window.p5.prototype.createNewSprite = function(name, animation, location) {
+    return commands.makeSprite.apply(this, [animation, location]);
+  };
+
+  window.p5.prototype.setAnimation = function(spriteIndex, animation) {
+    commands.setAnimation.apply(this, [spriteIndex, animation]);
+  };
+
+  window.p5.prototype.getProp = function(spriteIndex, prop) {
+    return commands.getProp.apply(this, [spriteIndex, prop]);
+  };
+
+  window.p5.prototype.destroy = function(spriteIndex) {
+    commands.destroy.apply(this, [spriteIndex]);
   };
 
   // WORLD commands

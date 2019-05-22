@@ -21,6 +21,8 @@ export const commands = {
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
   jumpTo(spriteIndex, location) {
+      return;
+    }
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
     sprites.forEach(sprite => {
       sprite.x = location.x;
@@ -37,6 +39,7 @@ export const commands = {
       }
     });
   },
+  moveForward(sprite, distance) {},
   moveInDirection(spriteIndex, distance, direction) {
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
     let dirs = {
@@ -50,6 +53,20 @@ export const commands = {
     }
     sprites.forEach(sprite => {
       dirs[direction](sprite);
+    });
+  },
+  moveToward(spriteIndex, distance, target) {
+    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+    sprites.forEach(sprite => {
+      if (sprite && target) {
+        let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
+        if (angle) {
+          let dy = Math.sin(angle) * distance;
+          let dx = Math.cos(angle) * distance;
+          sprite.x += dx;
+          sprite.y += dy;
+        }
+      }
     });
   },
   pointInDirection(spriteIndex, direction) {
