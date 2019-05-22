@@ -5,6 +5,10 @@ import {commands as worldCommands} from './worldCommands';
 
 let commands = module.exports;
 
+commands.comment = function(text) {
+  /* no-op */
+};
+
 Object.assign(commands, actionCommands);
 Object.assign(commands, locationCommands);
 Object.assign(commands, spriteCommands);

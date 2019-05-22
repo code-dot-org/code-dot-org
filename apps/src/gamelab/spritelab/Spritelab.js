@@ -117,6 +117,11 @@ var Spritelab = function() {
   window.p5.prototype.showTitleScreen = function(title, subtitle) {
     commands.showTitleScreen.apply(this, [title, subtitle]);
   };
+
+  // OTHER
+  window.p5.prototype.comment = function(text) {
+    commands.comment.apply(this, [text]);
+  };
 };
 
 module.exports = Spritelab;
