@@ -11,6 +11,7 @@ family_name 'express'
 version_year '2018'
 is_stable true
 supported_locales ["sk-SK"]
+curriculum_umbrella 'CSF'
 
 stage 'Graph Paper Programming'
 level 'GraphPaperProgramming_2018'
