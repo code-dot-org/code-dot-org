@@ -16,10 +16,12 @@ const styles = {
     marginLeft: 81
   },
   name: {
+    fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold',
     fontSize: 15
   },
   timeHeader: {
+    fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold'
   }
 };
