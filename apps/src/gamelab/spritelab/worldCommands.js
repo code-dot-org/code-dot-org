@@ -6,9 +6,9 @@ export const commands = {
   },
   randColor() {
     return this.color(
-      this.randomNumber(0, 255),
-      this.randomNumber(0, 255),
-      this.randomNumber(0, 255)
+      Math.floor(Math.random() * Math.floor(255)),
+      Math.floor(Math.random() * Math.floor(255)),
+      Math.floor(Math.random() * Math.floor(255))
     );
   },
   setBackground(color) {
