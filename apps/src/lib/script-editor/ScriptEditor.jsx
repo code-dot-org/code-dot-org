@@ -152,7 +152,9 @@ export default class ScriptEditor extends React.Component {
             ref={select => (this.curriculumUmbrellaSelect = select)}
           >
             {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
-              <option value={curriculumUmbrella}>{curriculumUmbrella}</option>
+              <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                {curriculumUmbrella}
+              </option>
             ))}
           </select>
           <p>
