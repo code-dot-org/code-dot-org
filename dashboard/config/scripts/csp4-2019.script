@@ -9,6 +9,7 @@ has_lesson_plan true
 family_name 'csp4'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'What is Big Data?', flex_category: 'csp4_1_2018'
 level 'CSP U4L01 SFLP_2019', named: true
