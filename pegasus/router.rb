@@ -40,6 +40,8 @@ require src_dir 'homepage'
 require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
+require pegasus_dir 'helper_modules/multiple_extname_file_utils'
+
 def http_vary_add_type(vary, type)
   types = vary.to_s.split(',').map(&:strip)
   return vary if types.include?('*') || types.include?(type)
@@ -338,7 +340,7 @@ class Documents < Sinatra::Base
       end
 
       response.headers['X-Pegasus-Version'] = '3'
-      render_(content, File.extname(path), path, line)
+      render_(content, path, line)
     rescue => e
       # Add document path to backtrace if not already included.
       if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
@@ -366,23 +368,13 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        extnames.each do |extname|
-          path = content_dir(dir, subdir, "#{uri}#{extname}")
-          if File.file?(path)
-            return path
-          end
-        end
+        found = MultipleExtnameFileUtils.find_with_possible_extnames(content_dir(dir, subdir), uri, extnames)
+        return found.first unless found.empty?
       end
 
       # Also look for shared items.
-      extnames.each do |extname|
-        path = content_dir('..', '..', 'shared', 'haml', "#{uri}#{extname}")
-        if File.file?(path)
-          return path
-        end
-      end
-
-      nil
+      found = MultipleExtnameFileUtils.find_with_possible_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
+      return found.first unless found.empty?
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.
@@ -466,44 +458,54 @@ class Documents < Sinatra::Base
     end
 
     def render_template(path, locals={})
-      render_(IO.read(path), File.extname(path), path, 0, locals)
+      render_(IO.read(path), path, 0, locals)
     rescue => e
       Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 
-    def render_(body, extname, path=nil, line=0, locals={})
+    def render_(body, path=nil, line=0, locals={})
       locals = @locals.merge(locals).symbolize_keys
       options = {locals: locals, line: line, path: path}
 
-      case extname
-      when '.erb', '.html'
-        erb body, options
-      when '.haml'
-        haml body, options
-      when '.fetch'
-        url = erb(body, options)
+      extensions = MultipleExtnameFileUtils.all_extnames(path)
 
-        cache_file = cache_dir('fetch', request.site, request.path_info)
-        unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
-          FileUtils.mkdir_p File.dirname(cache_file)
-          IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
+      # Now, apply the processing operations implied by each extension in order
+      # to the given file.
+      # IE, "foo.erb.md" will be processed as an ERB template, then the result
+      # of that will be processed as a MD template
+      result = body
+      extensions.each do |extension|
+        case extension
+        when '.erb', '.html'
+          result = erb result, options
+        when '.haml'
+          result = haml result, options
+        when '.fetch'
+          cache_file = cache_dir('fetch', request.site, request.path_info)
+          unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
+            FileUtils.mkdir_p File.dirname(cache_file)
+            IO.binwrite(cache_file, Net::HTTP.get(URI(result)))
+          end
+          pass unless File.file?(cache_file)
+
+          cache :static
+          result = send_file(cache_file)
+        when '.md'
+          preprocessed = preprocess_markdown result
+          result = markdown preprocessed, options
+        when '.redirect', '.moved', '.301'
+          result = redirect result, 301
+        when '.found', '.302'
+          result = redirect result, 302
+        else
+          # intentional no-op; expect to be used by things like .txt or
+          # .js.haml files
+          result
         end
-        pass unless File.file?(cache_file)
-
-        cache :static
-        send_file(cache_file)
-      when '.md', '.txt'
-        preprocessed = erb body, options
-        preprocessed = preprocess_markdown preprocessed
-        markdown preprocessed, options
-      when '.redirect', '.moved', '.301'
-        redirect erb(body, options), 301
-      when '.found', '.302'
-        redirect erb(body, options), 302
-      else
-        raise "'#{extname}' isn't supported."
       end
+
+      result
     end
 
     def social_metadata
