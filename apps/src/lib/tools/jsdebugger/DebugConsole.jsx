@@ -266,7 +266,19 @@ export default connect(
               </div>
             );
           } else if (output.interpreted) {
-            return <Inspector key={i} data={output.interpreted} />;
+            if (output.interpreted && output.output === undefined) {
+              return (
+                <div key={i}>
+                  <Inspector key={i} data={output.interpreted} />
+                  &lt;{' '}
+                  <div style={style.myDiv}>
+                    <Inspector data={output.output} />
+                  </div>
+                </div>
+              );
+            } else if (output.interpreted) {
+              return <Inspector key={i} data={output.interpreted} />;
+            }
           }
         });
       }
