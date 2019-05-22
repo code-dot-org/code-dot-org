@@ -180,6 +180,21 @@ class FirehoseClient {
     return data;
   }
 
+  handleError(requestData, error) {
+    // Report the error via our own servers, in case reporting it directly
+    // to firehose was blocked by a network firewall.
+    $.ajax({
+      url: '/api/firehose_unreachable',
+      data: JSON.stringify({
+        original_data: requestData,
+        error_text: String(error)
+      }),
+      contentType: 'application/json; charset=utf-8',
+      method: 'PUT',
+      dataType: 'json'
+    });
+  }
+
   /**
    * Pushes one data record into the delivery stream.
    * @param {hash} data The data to push.
@@ -197,6 +212,7 @@ class FirehoseClient {
     options = {alwaysPut: false, includeUserId: false, callback: null}
   ) {
     data = this.addCommonValues(data, options.includeUserId);
+    const handleError = this.handleError.bind(this, data);
     if (!this.shouldPutRecord(options['alwaysPut'])) {
       console.groupCollapsed('Skipped sending record to ' + deliveryStreamName);
       console.log(data);
@@ -217,6 +233,8 @@ class FirehoseClient {
       function(err, data) {
         if (options.callback) {
           options.callback(err, data);
+        } else if (err) {
+          handleError(err);
         }
       }
     );

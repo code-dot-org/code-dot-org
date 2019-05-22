@@ -879,7 +879,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
               'Quite a bit' => 9,
               'Some' => 8,
               'A little bit' => 7,
-              'Almost nothing' => 1
+              'Almost nothing' => 1,
+              'num_respondents' => 2  # This should get filtered out.
             }
           },
           facilitator: {
