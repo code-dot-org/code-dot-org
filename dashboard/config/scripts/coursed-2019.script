@@ -6,6 +6,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
 family_name 'coursed'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Algorithms: Graph Paper Programming', flex_category: 'csf_sequencing'
 level 'GraphPaperProgramming-Unplugged'

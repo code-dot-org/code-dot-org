@@ -8,6 +8,7 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursec'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Screen Out the Mean', flex_category: 'csf_digcit'
 level 'ScreenOutTheMean-Unplugged'
