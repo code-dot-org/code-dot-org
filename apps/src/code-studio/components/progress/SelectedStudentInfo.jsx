@@ -90,7 +90,7 @@ export class SelectedStudentInfo extends React.Component {
             inMiniRubricExperiment={inMiniRubricExperiment}
           />
         </div>
-        {(!level.submitLevel || level.contained) && (
+        {!level.submitLevel && (
           <div>
             <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
             <div>
@@ -100,7 +100,7 @@ export class SelectedStudentInfo extends React.Component {
             </div>
           </div>
         )}
-        {level.submitLevel && !level.contained && (
+        {level.submitLevel && (
           <div>
             <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
             <div>
