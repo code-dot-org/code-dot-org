@@ -912,6 +912,7 @@
   "note": "*Note:",
   "notInRightPlace": "It looks like you're not in the right place",
   "notAnswered": "Not Answered",
+  "notApplicable": "N/A",
   "notSaved": "Not saved",
   "notStarted": "Not started",
   "nPoints": "{numPoints, plural, one {1 point} other {# points}}",

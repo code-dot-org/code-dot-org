@@ -14,6 +14,13 @@ const styles = {
   },
   bubble: {
     marginLeft: 81
+  },
+  name: {
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  timeHeader: {
+    fontWeight: 'bold'
   }
 };
 
@@ -59,7 +66,7 @@ export class SelectedStudentInfo extends React.Component {
 
     return (
       <div style={styles.main}>
-        <div>{selectedStudent.name}</div>
+        <div style={styles.name}>{selectedStudent.name}</div>
         {level.paired && (
           <div>
             <div>{i18n.workedWith()}</div>
@@ -81,30 +88,39 @@ export class SelectedStudentInfo extends React.Component {
             inMiniRubricExperiment={inMiniRubricExperiment}
           />
         </div>
-        {level.status !== LevelStatus.not_tried &&
-          level.status !== LevelStatus.submitted && (
-            <div>
-              <div>{i18n.lastUpdatedNoTime()}</div>
-              <div>{new Date(level.updated_at).toLocaleString()}</div>
-            </div>
-          )}
-        {level.status === LevelStatus.submitted && (
+        {!level.submitLevel && (
           <div>
-            <div>{i18n.submittedOn()}</div>
-            <div>{new Date(level.updated_at).toLocaleString()}</div>
+            <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
+            <div>
+              {level.status !== LevelStatus.not_tried
+                ? new Date(level.updated_at).toLocaleString()
+                : i18n.notApplicable()}
+            </div>
+          </div>
+        )}
+        {level.submitLevel && (
+          <div>
+            <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
+            <div>
+              {level.status === LevelStatus.submitted
+                ? new Date(level.updated_at).toLocaleString()
+                : i18n.notApplicable()}
+            </div>
             <Button
               text={i18n.unsubmit()}
               color="blue"
               onClick={this.onUnsubmit}
+              disabled={level.status !== LevelStatus.submitted}
             />
           </div>
         )}
-        {level.contained && level.status !== LevelStatus.not_tried && (
+        {level.contained && (
           <div>
             <Button
               text={i18n.clearResponse()}
               color="blue"
               onClick={this.onClearResponse}
+              disabled={level.status === LevelStatus.not_tried}
             />
           </div>
         )}
