@@ -30,7 +30,7 @@ module SchoolInfoInterstitialHelper
   def self.show_school_info_confirmation_dialog?(user)
     return false unless user.teacher?
 
-    return true if user.user_school_infos.empty?
+    return false if user.user_school_infos.empty?
 
     user_school_info = user.user_school_infos.last
 
