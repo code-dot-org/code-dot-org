@@ -22,4 +22,5 @@ export function singleOrGroup(spriteOrGroup) {
   if (typeof spriteOrGroup === 'string') {
     return allSpritesWithAnimation(spriteOrGroup);
   }
+  return [];
 }

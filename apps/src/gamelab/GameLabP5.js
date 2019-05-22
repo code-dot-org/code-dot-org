@@ -155,6 +155,7 @@ GameLabP5.prototype.init = function(options) {
  */
 GameLabP5.prototype.resetExecution = function() {
   gameLabSprite.setCreateWithDebug(false);
+  this.spritelab.reset();
 
   if (this.p5) {
     this.p5.remove();

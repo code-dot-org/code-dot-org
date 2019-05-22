@@ -20,21 +20,18 @@ export const commands = {
 
   setAnimation(spriteIndex, animation) {
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
-    if (sprites) {
-      sprites.forEach(sprite => {
-        sprite.setAnimation(animation);
-      });
-    }
+    sprites.forEach(sprite => {
+      sprite.setAnimation(animation);
+    });
   },
 
   getProp(spriteIndex, prop) {
     if (!spriteIndex) {
       return undefined;
     }
-
     let sprite = spriteUtils.singleOrGroup(spriteIndex)[0];
     if (prop === 'scale') {
-      return sprite.getScale() * 100;
+      return sprite.scale * 100;
     } else if (prop === 'costume') {
       return sprite.getAnimationLabel();
     } else if (prop === 'y') {
@@ -46,11 +43,9 @@ export const commands = {
 
   destroy(spriteIndex) {
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
-    if (sprites) {
-      sprites.forEach(sprite => {
-        sprite.destroy();
-        delete spriteUtils.nativeSpriteMap[sprite.id];
-      });
-    }
+    sprites.forEach(sprite => {
+      sprite.destroy();
+      delete spriteUtils.nativeSpriteMap[sprite.id];
+    });
   }
 };
