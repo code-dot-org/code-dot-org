@@ -35,6 +35,7 @@ describe('SelectedStudentInfo', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
+          submitLevel: true,
           submitted: true,
           status: LevelStatus.submitted
         }}
