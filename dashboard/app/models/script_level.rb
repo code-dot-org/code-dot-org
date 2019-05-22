@@ -406,6 +406,7 @@ class ScriptLevel < ActiveRecord::Base
 
     teacher_panel_summary = {
       contained: contained,
+      submitLevel: level.properties['submittable'],
       paired: paired,
       driver: driver,
       navigator: navigator,
