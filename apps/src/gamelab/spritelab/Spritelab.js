@@ -94,6 +94,12 @@ var Spritelab = function() {
   window.p5.prototype.randomLocation = function() {
     return commands.randomLocation.apply(this, []);
   };
+  window.p5.prototype.xLocationOf = function(spriteIndex) {
+    return commands.xLocationOf.apply(this, [spriteIndex]);
+  };
+  window.p5.prototype.yLocationOf = function(spriteIndex) {
+    return commands.yLocationOf.apply(this, [spriteIndex]);
+  };
 
   // WORLD commands
   window.p5.prototype.hideTitleScreen = function() {
