@@ -1626,16 +1626,4 @@ class Script < ActiveRecord::Base
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
-
-  def csf?
-    return true if curriculum_umbrella == 'CSF'
-  end
-
-  def csd?
-    return true if curriculum_umbrella == 'CSD'
-  end
-
-  def csp?
-    return true if curriculum_umbrella == 'CSP'
-  end
 end
