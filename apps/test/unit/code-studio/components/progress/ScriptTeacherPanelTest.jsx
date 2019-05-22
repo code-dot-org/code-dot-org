@@ -75,27 +75,27 @@ describe('ScriptTeacherPanel', () => {
     assert(!wrapper.containsMatchingElement(<div>{i18n.loading()}</div>));
   });
 
-  it('shows SectionSelector if scriptHasLockableStages', () => {
-    const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} scriptHasLockableStages={true} />
-    );
-    assert(wrapper.containsMatchingElement(<SectionSelector />));
-  });
-
-  it('shows SectionSelector if scriptAllowsHiddenStages', () => {
-    const wrapper = shallow(
-      <ScriptTeacherPanel {...MINIMUM_PROPS} scriptAllowsHiddenStages={true} />
-    );
-    assert(wrapper.containsMatchingElement(<SectionSelector />));
-  });
-
-  it('hides SectionSelector if neither scriptAllowsHiddenStages nor scriptHasLockableStages', () => {
+  it('shows SectionSelector if hasSections and sectionsAreLoaded', () => {
     const wrapper = shallow(
       <ScriptTeacherPanel
         {...MINIMUM_PROPS}
-        scriptHasLockableStages={false}
-        scriptAllowsHiddenStages={false}
+        hasSections={true}
+        sectionsAreLoaded={true}
       />
+    );
+    assert(wrapper.containsMatchingElement(<SectionSelector />));
+  });
+
+  it('hides SectionSelector if hasSections is false', () => {
+    const wrapper = shallow(
+      <ScriptTeacherPanel {...MINIMUM_PROPS} hasSections={false} />
+    );
+    assert(!wrapper.containsMatchingElement(<SectionSelector />));
+  });
+
+  it('hides SectionSelector if sectionsAreLoaded is false', () => {
+    const wrapper = shallow(
+      <ScriptTeacherPanel {...MINIMUM_PROPS} sectionsAreLoaded={false} />
     );
     assert(!wrapper.containsMatchingElement(<SectionSelector />));
   });
