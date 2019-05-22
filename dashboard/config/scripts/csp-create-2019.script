@@ -9,6 +9,7 @@ has_lesson_plan true
 family_name 'csp-create'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL01 SFLP_2019', named: true
