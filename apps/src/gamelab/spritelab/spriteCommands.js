@@ -2,6 +2,12 @@ import * as spriteUtils from './spriteUtils.js';
 
 export const commands = {
   makeSprite(animation, location) {
+    if (!location) {
+      location = {x: 200, y: 200};
+    }
+    if (typeof location === 'function') {
+      location = location();
+    }
     var sprite = this.createSprite(location.x, location.y);
     spriteUtils.nativeSpriteMap[spriteUtils.spriteId] = sprite;
     sprite.id = spriteUtils.spriteId;

@@ -45,6 +45,17 @@ var Spritelab = function() {
     commands.destroy.apply(this, [spriteIndex]);
   };
 
+  // LOCATION commands
+  window.p5.prototype.locationAt = function(x, y) {
+    return commands.locationAt.apply(this, [x, y]);
+  };
+  window.p5.prototype.locationMouse = function() {
+    return commands.locationMouse.apply(this, []);
+  };
+  window.p5.prototype.locationOf = function(spriteIndex) {
+    return commands.locationOf.apply(this, [spriteIndex]);
+  };
+
   // WORLD commands
   window.p5.prototype.hideTitleScreen = function() {
     commands.hideTitleScreen.apply(this, []);
