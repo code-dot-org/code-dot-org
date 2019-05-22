@@ -64,6 +64,15 @@ var Spritelab = function() {
     commands.turn.apply(this, [spriteIndex, n, direction]);
   };
 
+  // EVENT commands
+  window.p5.prototype.spriteClicked = function(
+    condition,
+    spriteIndex,
+    callback
+  ) {
+    commands.spriteClicked.apply(this, [condition, spriteIndex, callback]);
+  };
+
   // LOCATION commands
   window.p5.prototype.locationAt = function(x, y) {
     return commands.locationAt.apply(this, [x, y]);

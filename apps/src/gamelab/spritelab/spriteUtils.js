@@ -40,3 +40,7 @@ export function resetSpriteMap() {
   nativeSpriteMap = {};
   spriteId = 0;
 }
+
+export function addEvent(type, spriteIndex, callback) {
+  return;
+}
