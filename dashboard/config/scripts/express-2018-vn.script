@@ -1,5 +1,6 @@
 hidden false
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/express/"], ["vocabulary", "https://curriculum.code.org/csf-18/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/express/standards/"]]
+curriculum_umbrella 'CSF'
 
 stage 'Programming in Maze'
 level 'courseC_video_maze_2018'

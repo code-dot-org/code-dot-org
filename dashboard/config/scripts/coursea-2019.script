@@ -8,6 +8,7 @@ project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'coursea'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Going Places Safely', flex_category: 'csf_digcit'
 level 'GoingPlacesSafely-unplugged'
