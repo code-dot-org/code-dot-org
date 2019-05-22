@@ -41,6 +41,9 @@ const styles = {
   exampleSolutions: {
     textAlign: 'center',
     margin: 5
+  },
+  sectionInfo: {
+    textAlign: 'center'
   }
 };
 
@@ -120,19 +123,22 @@ class ScriptTeacherPanel extends React.Component {
               ))}
             </div>
           )}
-          {selectedSection && (
-            <h4 style={styles.sectionHeader}>
-              {`${i18n.section()} `}
-              <a href={teacherDashboardUrl(selectedSection.id)}>
-                {selectedSection.name}
-              </a>
-            </h4>
-          )}
           {!sectionsAreLoaded && (
             <div style={styles.text}>{i18n.loading()}</div>
           )}
           {sectionsAreLoaded && hasSections && (
-            <SectionSelector style={{margin: 10}} reloadOnChange={true} />
+            <div style={styles.sectionInfo}>
+              <div>{i18n.viewingSection()}</div>
+              <SectionSelector style={{margin: 10}} reloadOnChange={true} />
+              {selectedSection && (
+                <Button
+                  text={i18n.teacherDashboard()}
+                  color="blue"
+                  href={teacherDashboardUrl(selectedSection.id)}
+                  target="_blank"
+                />
+              )}
+            </div>
           )}
           {hasSections &&
             scriptHasLockableStages &&
