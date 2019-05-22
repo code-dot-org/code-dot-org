@@ -29,6 +29,8 @@ const styles = {
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
+const CURRICULUM_UMBRELLAS = ['', 'CSF', 'CSD', 'CSP'];
+
 /**
  * Component for editing course scripts.
  */
@@ -56,7 +58,8 @@ export default class ScriptEditor extends React.Component {
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-    projectSharing: PropTypes.bool
+    projectSharing: PropTypes.bool,
+    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS)
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -140,6 +143,25 @@ export default class ScriptEditor extends React.Component {
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
+        <label>
+          Is this script part of one of the core courses?
+          <select
+            name="curriculum_umbrella"
+            style={{marginLeft: 20}}
+            defaultValue={this.props.curriculumUmbrella}
+            ref={select => (this.curriculumUmbrellaSelect = select)}
+          >
+            {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+              <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                {curriculumUmbrella}
+              </option>
+            ))}
+          </select>
+          <p>
+            By selecting one of the above, this script will have a property,
+            curriculum_umbrella, specific to that course regardless of version.
+          </p>
+        </label>
         <label>
           Visible in Teacher Dashboard
           <input
