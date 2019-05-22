@@ -48,6 +48,39 @@ var Spritelab = function() {
     commands.destroy.apply(this, [spriteIndex]);
   };
 
+  // ACTION commands
+  window.p5.prototype.changePropBy = function(spriteIndex, prop, val) {
+    commands.changePropBy.apply(this, [spriteIndex, prop, val]);
+  };
+  window.p5.prototype.edgesDisplace = function(spriteIndex) {
+    commands.edgesDisplace.apply(this, [spriteIndex]);
+  };
+  window.p5.prototype.jumpTo = function(spriteIndex, location) {
+    commands.jumpTo.apply(this, [spriteIndex, location]);
+  };
+  window.p5.prototype.mirrorSprite = function(spriteIndex, direction) {
+    commands.mirrorSprite.apply(this, [spriteIndex, direction]);
+  };
+  window.p5.prototype.moveInDirection = function(
+    spriteIndex,
+    distance,
+    direction
+  ) {
+    commands.moveInDirection.apply(this, [spriteIndex, distance, direction]);
+  };
+  window.p5.prototype.pointInDirection = function(spriteIndex, direction) {
+    commands.pointInDirection.apply(this, [spriteIndex, direction]);
+  };
+  window.p5.prototype.setProp = function(spriteIndex, prop, val) {
+    commands.setProp.apply(this, [spriteIndex, prop, val]);
+  };
+  window.p5.prototype.setSizes = function(spriteIndex, prop, val) {
+    commands.setProp.apply(this, [spriteIndex, prop, val]);
+  };
+  window.p5.prototype.turn = function(spriteIndex, n, direction) {
+    commands.turn.apply(this, [spriteIndex, n, direction]);
+  };
+
   // LOCATION commands
   window.p5.prototype.locationAt = function(x, y) {
     return commands.locationAt.apply(this, [x, y]);
