@@ -43,7 +43,11 @@ const styles = {
     margin: 5
   },
   sectionInfo: {
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingBottom: 5
+  },
+  teacherDashboardLink: {
+    fontSize: 11
   }
 };
 
@@ -129,14 +133,18 @@ class ScriptTeacherPanel extends React.Component {
           {sectionsAreLoaded && hasSections && (
             <div style={styles.sectionInfo}>
               <div>{i18n.viewingSection()}</div>
-              <SectionSelector style={{margin: 10}} reloadOnChange={true} />
+              <SectionSelector
+                style={{margin: '0px 10px'}}
+                reloadOnChange={true}
+              />
               {selectedSection && (
-                <Button
-                  text={i18n.teacherDashboard()}
-                  color="blue"
+                <a
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
-                />
+                  style={styles.teacherDashboardLink}
+                >
+                  {i18n.teacherDashboard()}
+                </a>
               )}
             </div>
           )}
