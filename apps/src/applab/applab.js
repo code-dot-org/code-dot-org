@@ -74,6 +74,7 @@ import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
 import {generateExpoApk} from '../util/exporter';
+import sampleApplabLibrary from '../code-studio/sampleApplabLibrary.json';
 
 /**
  * Create a namespace for the application.
@@ -371,6 +372,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
+  config.getLibrary = getLibrary;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -669,6 +671,18 @@ Applab.init = function(config) {
       config.dropletConfig.blocks.push(customFunctions[key]);
       level.codeFunctions[key] = null;
     });
+  }
+
+  if (experiments.isEnabled('student-libraries')) {
+    let importedConfigs = sampleApplabLibrary.libraries
+      .map(library => library.dropletConfig)
+      .reduce((a, b) => a.concat(b));
+    if (importedConfigs) {
+      Object.keys(importedConfigs).map(key => {
+        config.dropletConfig.blocks.push(importedConfigs[key]);
+        level.codeFunctions[importedConfigs[key].func] = null;
+      });
+    }
   }
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
@@ -1090,6 +1104,15 @@ Applab.onReportComplete = function(response) {
 };
 
 /**
+ * Generates a library from the functions in the project code
+ */
+function getLibrary() {
+  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
+  temporaryInterpreter.parse({code: studioApp().getCode()});
+  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1130,6 +1153,26 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
+
+    // Set up student-created libraries
+    if (experiments.isEnabled('student-libraries')) {
+      sampleApplabLibrary.libraries.map(library => {
+        var functionNames = library.functionNames
+          .map(name => {
+            return name + ': ' + name;
+          })
+          .join(',');
+        var libraryClosure =
+          'var ' +
+          library.name +
+          ' = (function() {\n' +
+          library.source +
+          '\nreturn {' +
+          functionNames +
+          '};})();';
+        codeWhenRun = libraryClosure + codeWhenRun;
+      });
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
