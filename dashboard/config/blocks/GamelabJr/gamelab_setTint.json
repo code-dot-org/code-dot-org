@@ -7,13 +7,16 @@
       0.74
     ],
     "func": "setTint",
-    "blockText": "change color of {THIS} to {COLOR}",
+    "blockText": "change color of {SPRITE} to {COLOR}",
     "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
       {
         "name": "COLOR",
         "type": "Colour"
       }
-    ],
-    "methodCall": true
+    ]
   }
 }

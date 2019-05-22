@@ -7,10 +7,12 @@
       0.74
     ],
     "func": "removeTint",
-    "blockText": "remove color from {THIS}",
+    "blockText": "remove color from {SPRITE}",
     "args": [
-
-    ],
-    "methodCall": true
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
   }
 }

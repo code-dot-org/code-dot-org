@@ -121,6 +121,12 @@ var Spritelab = function() {
   window.p5.prototype.showTitleScreen = function(title, subtitle) {
     commands.showTitleScreen.apply(this, [title, subtitle]);
   };
+  window.p5.prototype.setTint = function(spriteIndex, color) {
+    commands.setTint.apply(this, [spriteIndex, color]);
+  };
+  window.p5.prototype.removeTint = function(spriteIndex) {
+    commands.removeTint.apply(this, [spriteIndex]);
+  };
 
   // OTHER
   window.p5.prototype.comment = function(text) {

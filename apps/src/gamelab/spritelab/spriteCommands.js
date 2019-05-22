@@ -23,6 +23,19 @@ export const commands = {
     });
   },
 
+  setTint(spriteIndex, color) {
+    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+    sprites.forEach(sprite => {
+      sprite.tint = color;
+    });
+  },
+  removeTint(spriteIndex) {
+    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+    sprites.forEach(sprite => {
+      sprite.tint = null;
+    });
+  },
+
   getProp(spriteIndex, prop) {
     if (!spriteIndex) {
       return undefined;

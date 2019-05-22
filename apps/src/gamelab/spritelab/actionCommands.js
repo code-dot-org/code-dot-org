@@ -21,6 +21,7 @@ export const commands = {
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
   jumpTo(spriteIndex, location) {
+    if (!location) {
       return;
     }
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
