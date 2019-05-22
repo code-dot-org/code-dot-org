@@ -648,6 +648,7 @@ SCRIPT
     expected = <<-SCRIPT
 hidden false
 curriculum_umbrella 'CSP'
+
 SCRIPT
 
     assert_equal expected, script_text
