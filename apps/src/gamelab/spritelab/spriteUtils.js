@@ -1,5 +1,8 @@
 export var spriteId = 0;
 export var nativeSpriteMap = {};
+export var background;
+export var title = '';
+export var subtitle = '';
 
 function allSpritesWithAnimation(animation) {
   let group = [];
