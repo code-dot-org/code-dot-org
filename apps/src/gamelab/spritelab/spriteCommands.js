@@ -9,13 +9,11 @@ export const commands = {
       location = location();
     }
     var sprite = this.createSprite(location.x, location.y);
-    spriteUtils.nativeSpriteMap[spriteUtils.spriteId] = sprite;
-    sprite.id = spriteUtils.spriteId;
+    let spriteId = spriteUtils.addSprite(sprite);
     if (animation) {
       sprite.setAnimation(animation);
     }
-    spriteUtils.spriteId++;
-    return sprite.id;
+    return spriteId;
   },
 
   setAnimation(spriteIndex, animation) {
@@ -45,7 +43,7 @@ export const commands = {
     let sprites = spriteUtils.singleOrGroup(spriteIndex);
     sprites.forEach(sprite => {
       sprite.destroy();
-      delete spriteUtils.nativeSpriteMap[sprite.id];
+      spriteUtils.deleteSprite(sprite.id);
     });
   }
 };

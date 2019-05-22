@@ -1,5 +1,5 @@
-export var spriteId = 0;
-export var nativeSpriteMap = {};
+var spriteId = 0;
+var nativeSpriteMap = {};
 export var background;
 export var title = '';
 export var subtitle = '';
@@ -23,4 +23,20 @@ export function singleOrGroup(spriteOrGroup) {
     return allSpritesWithAnimation(spriteOrGroup);
   }
   return [];
+}
+
+export function addSprite(sprite) {
+  nativeSpriteMap[spriteId] = sprite;
+  sprite.id = spriteId;
+  spriteId++;
+  return sprite.id;
+}
+
+export function deleteSprite(spriteId) {
+  delete nativeSpriteMap[spriteId];
+}
+
+export function resetSpriteMap() {
+  nativeSpriteMap = {};
+  spriteId = 0;
 }

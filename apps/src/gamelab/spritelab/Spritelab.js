@@ -20,8 +20,7 @@ function updateTitle() {
 
 var Spritelab = function() {
   this.reset = () => {
-    spriteUtils.nativeSpriteMap = {};
-    spriteUtils.spriteId = 0;
+    spriteUtils.resetSpriteMap();
   };
   window.p5.prototype.executeDrawLoopAndCallbacks = function() {
     drawBackground.apply(this);
