@@ -10,6 +10,7 @@ curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
 family_name 'csd2'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_2019', named: true

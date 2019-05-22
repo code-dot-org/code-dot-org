@@ -1630,7 +1630,6 @@ ActiveRecord::Schema.define(version: 20190517002900) do
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
-  add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"
