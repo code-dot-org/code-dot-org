@@ -305,6 +305,26 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
+  # POST /v3/channels/<channel-id>/buffer_abuse_score
+  #
+  # Set an abuse score to -50 to buffer against false
+  # reporting. Used for featured projects.
+  #
+  post %r{/v3/channels/([^/]+)/buffer_abuse_score$} do |id|
+    # UserPermission::PROJECT_VALIDATOR
+    not_authorized unless project_validator?
+
+    dont_cache
+    content_type :json
+    begin
+      value = StorageApps.new(get_storage_id).buffer_abuse_score(id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {abuse_score: value}.to_json
+  end
+
+  #
   # DELETE /v3/channels/<channel-id>/abuse
   #
   # Clear an abuse score. Requires project_validator permission

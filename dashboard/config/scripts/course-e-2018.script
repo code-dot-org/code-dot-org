@@ -1,3 +1,5 @@
+curriculum_umbrella 'CSF'
+
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF_2018'
 

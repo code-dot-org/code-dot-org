@@ -9,6 +9,7 @@ project_widget_types ["playlab_k1", "artist_k1"]
 script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course B!", "link"=>"https://curriculum.code.org/csf-19/courseb", "type"=>"information"}]
 family_name 'courseb'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Your Digital Footprint', flex_category: 'csf_digcit'
 level 'DigitalFootprint-Unplugged'

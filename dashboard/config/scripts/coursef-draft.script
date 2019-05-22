@@ -1,5 +1,6 @@
 login_required true
 has_lesson_plan true
+curriculum_umbrella 'CSF'
 
 stage 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
