@@ -43,6 +43,7 @@ ________________
 See these resources to plan and run CS Fundamentals workshops. Partners should work with an approved CS Fundamentals facilitator when organizing one of these workshops.
 
 - <a href="https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit#" target=_blank>CS Fundamentals Workshop Process Document</a>
+- <a href="https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5"target=_blank>CS Fundamentals Facilitator Playbook</a>
 - <a href="https://docs.google.com/document/d/1so6ZyrtydTOmW6YHDgpdpDIUBAssQ_uCI130iCBA8SQ/edit"target=_blank>2019 Intro and Deep Dive Workshop Overview</a>
 - <a href="https://docs.google.com/document/d/1rhqOSkvVoh4LjBoug4pYTXECmifBkOUxlb8rMgRgTAI/edit?usp=drive_web&ouid=101665711587844633285"target=_blank>2019 Deep Dive Workshop FAQ</a>
 - <a href="https://docs.google.com/presentation/d/1A1WWW0Lr0ZcRLvaHOA6Qai_rTHiEsD5zrm-Mu8W2T2Y/edit"target=_blank>2019 Deep Dive One-Pager</a>

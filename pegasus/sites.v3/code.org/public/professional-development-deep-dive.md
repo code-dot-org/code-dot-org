@@ -5,9 +5,6 @@ theme: responsive
 ---
 # CS Fundamentals: Deep Dive
 
-
-<img src="/images/professional-learning/fit-200/deep-dive.jpg" style="float: left;" style='padding-right: 20px'>
-
 Schools and teachers have asked us to expand our most popular professional learning program. Over 85,000 educators have attended Intro workshops for our <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> curriculum, rating it 4.8 out of 5 stars, and we want to help you go further.
 
 We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in! Through this workshop, educators will explore course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
@@ -79,7 +76,7 @@ Click on the questions below to learn more about what Deep Dive workshops have t
 ## Register for a workshop
 Look at the map below to find the next upcoming CS Fundamentals: Deep Dive workshop in your region. Workshops are available year round, because CS Fundamentals courses can be implemented at any point in the school year. Check back often as new workshops will continue to be added throughout the year as Deep Dive launches throughout the country starting in June 2019.
 
-map
+<%= view :workshop_search, deep_dive_only: true %>
 
 If you can’t find a workshop, and you’re in the U.S., [contact your Regional Partner](#contact). They may already have a private workshop set up near your area that you can join, or can set up a workshop if there is enough demand.
 </p>

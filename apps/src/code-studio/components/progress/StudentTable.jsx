@@ -21,7 +21,7 @@ const styles = {
     }
   },
   td: {
-    padding: 5
+    padding: 1
   },
   selected: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -32,7 +32,10 @@ const styles = {
     display: 'flex',
     alignItems: 'center'
   },
-  studentName: {
+  nameInScript: {
+    paddingLeft: 5
+  },
+  nameWithBubble: {
     paddingLeft: 5
   }
 };
@@ -70,7 +73,9 @@ class StudentTable extends React.Component {
             style={this.getRowStyle(selectedUserId, null)}
             onClick={() => onSelectUser(null)}
           >
-            <td style={styles.td}>{i18n.studentTableTeacherDemo()}</td>
+            <td style={{...styles.td, ...styles.nameInScript}}>
+              {i18n.studentTableTeacherDemo()}
+            </td>
           </tr>
           {students.map(student => (
             <tr
@@ -85,7 +90,11 @@ class StudentTable extends React.Component {
                       level={levels.find(level => student.id === level.user_id)}
                     />
                   )}
-                  <span style={styles.studentName}>{student.name}</span>
+                  <span
+                    style={levels ? styles.nameWithBubble : styles.nameInScript}
+                  >
+                    {student.name}
+                  </span>
                 </div>
               </td>
             </tr>

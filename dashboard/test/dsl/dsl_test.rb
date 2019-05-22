@@ -33,6 +33,7 @@ class DslTest < ActiveSupport::TestCase
     supported_locales: [],
     pilot_experiment: nil,
     project_sharing: nil,
+    curriculum_umbrella: nil
   }
 
   test 'test Script DSL' do
@@ -622,6 +623,31 @@ DSL
     expected = <<-SCRIPT
 hidden false
 project_sharing true
+
+SCRIPT
+
+    assert_equal expected, script_text
+  end
+
+  test 'Script DSL with curriculum_umbrella' do
+    input_dsl = "curriculum_umbrella 'CSF'"
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [],
+        curriculum_umbrella: 'CSF'
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize curriculum_umbrella' do
+    script = create :script, curriculum_umbrella: 'CSP'
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+curriculum_umbrella 'CSP'
 
 SCRIPT
 

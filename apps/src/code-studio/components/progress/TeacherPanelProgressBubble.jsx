@@ -53,7 +53,7 @@ const styles = {
 
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
-    level: PropTypes.object
+    level: PropTypes.object.isRequired
   };
 
   render() {

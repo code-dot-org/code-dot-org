@@ -93,6 +93,35 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 'Test Display Name Override', summary[:name]
   end
 
+  test 'teacher panel summarize' do
+    sl = create(:script_level)
+    student = create :student
+    create(:user_level, user: student, level: sl.level)
+
+    summary = sl.summarize_for_teacher_panel(student)
+    assert_equal sl.assessment, summary[:assessment]
+    assert_equal sl.position, summary[:levelNumber]
+    assert_equal LEVEL_STATUS.not_tried, summary[:status]
+    assert_equal false, summary[:passed]
+    assert_equal student.id, summary[:user_id]
+  end
+
+  test 'teacher panel summarize for contained level' do
+    student = create :student
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
+    level_1 = create :level, name: 'level 1'
+    level_1.contained_level_names = [contained_level_1.name]
+    sl2 = create :script_level, levels: [level_1]
+
+    summary2 = sl2.summarize_for_teacher_panel(student)
+    assert_equal sl2.assessment, summary2[:assessment]
+    assert_equal sl2.position, summary2[:levelNumber]
+    assert_equal LEVEL_STATUS.not_tried, summary2[:status]
+    assert_equal false, summary2[:passed]
+    assert_equal student.id, summary2[:user_id]
+    assert_equal true, summary2[:contained]
+  end
+
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
     last_20h_maze_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '2_19'}, script_id: 1)
     first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)
