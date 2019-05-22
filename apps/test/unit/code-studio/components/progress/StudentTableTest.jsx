@@ -46,6 +46,7 @@ describe('StudentTable', () => {
 
     expect(wrapper.find('TeacherPanelProgressBubble')).to.have.length(2);
   });
+
   it('does not display bubbles when no levels', () => {
     const wrapper = shallow(<StudentTable {...MINIMUM_PROPS} />);
 

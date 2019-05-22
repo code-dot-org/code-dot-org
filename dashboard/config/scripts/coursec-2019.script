@@ -6,8 +6,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course C!", "link"=>"https://curriculum.code.org/csf-19/coursec", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursec'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Screen Out the Mean', flex_category: 'csf_digcit'
 level 'ScreenOutTheMean-Unplugged'

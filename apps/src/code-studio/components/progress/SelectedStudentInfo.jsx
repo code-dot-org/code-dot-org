@@ -14,6 +14,15 @@ const styles = {
   },
   bubble: {
     marginLeft: 81
+  },
+  name: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  timeHeader: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold'
   }
 };
 
@@ -58,45 +67,58 @@ export class SelectedStudentInfo extends React.Component {
 
     return (
       <div style={styles.main}>
-        <div>{selectedStudent.name}</div>
+        <div style={styles.name}>{selectedStudent.name}</div>
         {level.paired && (
           <div>
             <div>{i18n.workedWith()}</div>
             {level.navigator && (
-              <div key={level.navigator}>{`Partner: ${level.navigator}`}</div>
+              <div key={level.navigator}>
+                {i18n.partner({partner: level.navigator})}
+              </div>
             )}
             {level.driver && (
-              <div key={level.driver}>{`Logged in: ${level.driver}`}</div>
+              <div key={level.driver}>
+                {i18n.loggedIn({partner: level.driver})}
+              </div>
             )}
           </div>
         )}
         <div style={styles.bubble}>
           <TeacherPanelProgressBubble level={level} />
         </div>
-        {level.status !== LevelStatus.not_tried &&
-          level.status !== LevelStatus.submitted && (
-            <div>
-              <div>{i18n.lastUpdatedNoTime()}</div>
-              <div>{new Date(level.updated_at).toLocaleString()}</div>
-            </div>
-          )}
-        {level.status === LevelStatus.submitted && (
+        {!level.submitLevel && (
           <div>
-            <div>{i18n.submittedOn()}</div>
-            <div>{new Date(level.updated_at).toLocaleString()}</div>
+            <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
+            <div>
+              {level.status !== LevelStatus.not_tried
+                ? new Date(level.updated_at).toLocaleString()
+                : i18n.notApplicable()}
+            </div>
+          </div>
+        )}
+        {level.submitLevel && (
+          <div>
+            <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
+            <div>
+              {level.status === LevelStatus.submitted
+                ? new Date(level.updated_at).toLocaleString()
+                : i18n.notApplicable()}
+            </div>
             <Button
               text={i18n.unsubmit()}
               color="blue"
               onClick={this.onUnsubmit}
+              disabled={level.status !== LevelStatus.submitted}
             />
           </div>
         )}
-        {level.contained && level.status !== LevelStatus.not_tried && (
+        {level.contained && (
           <div>
             <Button
               text={i18n.clearResponse()}
               color="blue"
               onClick={this.onClearResponse}
+              disabled={level.status === LevelStatus.not_tried}
             />
           </div>
         )}

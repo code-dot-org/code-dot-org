@@ -926,6 +926,15 @@ var projects = (module.exports = {
               );
               return;
             }
+          } else if (saveSourcesErrorCount > 0) {
+            // If the previous errors occurred due to network problems, we may not
+            // have been able to report them. Try to report them once more, now that
+            // the network appears to be working again.
+            this.logError_(
+              'sources-saved-after-errors',
+              saveSourcesErrorCount,
+              `sources saved after ${saveSourcesErrorCount} consecutive failures`
+            );
           }
           saveSourcesErrorCount = 0;
           if (!firstSaveTimestamp) {
@@ -1009,6 +1018,13 @@ var projects = (module.exports = {
   },
 
   /**
+   * Asks the sourceHandler for the list of functions in an app
+   */
+  getLibraryFromApp() {
+    return this.sourceHandler.getLibrary();
+  },
+
+  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
@@ -1053,6 +1069,9 @@ var projects = (module.exports = {
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
+    this.logError_(errorType, errorCount, errorText);
+  },
+  logError_: function(errorType, errorCount, errorText) {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
@@ -1086,6 +1105,15 @@ var projects = (module.exports = {
         err + ''
       );
       return;
+    } else if (saveChannelErrorCount) {
+      // If the previous errors occurred due to network problems, we may not
+      // have been able to report them. Try to report them once more, now that
+      // the network appears to be working again.
+      this.logError_(
+        'channel-saved-after-errors',
+        saveChannelErrorCount,
+        `channel save succeeded after ${saveChannelErrorCount} consecutive failures`
+      );
     }
     saveChannelErrorCount = 0;
 
@@ -1324,7 +1352,7 @@ var projects = (module.exports = {
               .slice(PathPart.START, PathPart.APP + 1)
               .join('/');
           } else {
-            fetchSource(
+            this.fetchSource(
               data,
               () => {
                 if (current.isOwner && pathInfo.action === 'view') {
@@ -1349,7 +1377,7 @@ var projects = (module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(
+          this.fetchSource(
             data,
             () => {
               projects.showHeaderForProjectBacked();
@@ -1450,53 +1478,58 @@ var projects = (module.exports = {
   setPublishedAt(publishedAt) {
     current = current || {};
     current.publishedAt = publishedAt;
+  },
+
+  /**
+   * Given data from our channels api, updates current and gets sources from
+   * sources api
+   * @param {object} channelData Data we fetched from channels api
+   * @param {function} callback
+   * @param {string?} version Optional version to load
+   * @param {boolean} sources api to use, if present.
+   */
+  fetchSource(channelData, callback, version, sourcesApi) {
+    // Explicitly remove levelSource/levelHtml from channels
+    delete channelData.levelSource;
+    delete channelData.levelHtml;
+    // Also clear out html, which we never should have been setting.
+    delete channelData.html;
+
+    // Update current
+    current = channelData;
+
+    projects.setTitle(current.name);
+    if (sourcesApi && channelData.migratedToS3) {
+      var url = current.id + '/' + SOURCE_FILE;
+      if (version) {
+        url += '?version=' + version;
+      }
+      sourcesApi.fetch(url, (err, data, jqXHR) => {
+        if (err) {
+          this.logError_(
+            'load-sources-error',
+            null,
+            `unable to fetch project source file: ${err}`
+          );
+          console.warn();
+          data = {
+            source: '',
+            html: '',
+            animations: ''
+          };
+        }
+        currentSourceVersionId =
+          jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
+        unpackSources(data);
+        callback();
+      });
+    } else {
+      // It's possible that we created a channel, but failed to save anything to
+      // S3. In this case, it's expected that html/levelSource are null.
+      callback();
+    }
   }
 });
-
-/**
- * Given data from our channels api, updates current and gets sources from
- * sources api
- * @param {object} channelData Data we fetched from channels api
- * @param {function} callback
- * @param {string?} version Optional version to load
- * @param {boolean} sources api to use, if present.
- */
-function fetchSource(channelData, callback, version, sourcesApi) {
-  // Explicitly remove levelSource/levelHtml from channels
-  delete channelData.levelSource;
-  delete channelData.levelHtml;
-  // Also clear out html, which we never should have been setting.
-  delete channelData.html;
-
-  // Update current
-  current = channelData;
-
-  projects.setTitle(current.name);
-  if (sourcesApi && channelData.migratedToS3) {
-    var url = current.id + '/' + SOURCE_FILE;
-    if (version) {
-      url += '?version=' + version;
-    }
-    sourcesApi.fetch(url, function(err, data, jqXHR) {
-      if (err) {
-        console.warn('unable to fetch project source file', err);
-        data = {
-          source: '',
-          html: '',
-          animations: ''
-        };
-      }
-      currentSourceVersionId =
-        jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-      unpackSources(data);
-      callback();
-    });
-  } else {
-    // It's possible that we created a channel, but failed to save anything to
-    // S3. In this case, it's expected that html/levelSource are null.
-    callback();
-  }
-}
 
 function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function(err, data) {

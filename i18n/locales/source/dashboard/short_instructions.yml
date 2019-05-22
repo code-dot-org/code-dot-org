@@ -753,6 +753,7 @@ en:
         1.  ReadRecords for all records
         2.  Way to loop through and count
       CSP Loops: Change the if statement to a while loop so the program will run until it rolls a 6. (Click to see full instructions)
+      CSP Pilot U5 Mini PT Project: Design and implement your practice Create Performance Task. (Click to see full instructions)
       CSP U4 - JSON Object Intro - Bad Way: Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)
       CSP U4 - JSON Object Intro - Good Way: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
       CSP U4 - Objects - createObject: 'Create an object with at least 5 values including at least one string and one number. (Click to see full instructions) '
@@ -3504,51 +3505,25 @@ en:
       Virtual Pet 1 Predict_simple: 'What do you think will happen when you click on the alien?  '
       Virtual Pet 1 fix: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 1: What do you think will happen if you press "Run" and then click on her?
-      Virtual Pet 1_2019: Read and run the code below. Try interacting with the pet. When you're done, click **Finish**.
       Virtual Pet 1_simple: What do you think will happen if you press "Run" and then click on her?
       Virtual Pet 2 - Validated (Ram): Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2 - Validated: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
       Virtual Pet 2: Create an **event** so that when Geraldine touches the puddle, her color changes to brown.
-      Virtual Pet 2_2019: Create your own virtual pet! Click the **Costumes** tab to create or select a new costume for your virtual pet. In the code below, change the pet sprite's costume to your own.
       Virtual Pet 2_simple: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 2_simple_clone: Create an **event** so that when Geraldine touches the dirt, her color changes to brown.
       Virtual Pet 3: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
-      Virtual Pet 3_2019: 'Make your pet move North, South, West, or East while up, down, left, or right arrow keys are pressed. '
       Virtual Pet 3_simple: Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?
       Virtual Pet 4: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
-      Virtual Pet 4_2019: Add another sprite to your world, and give it a costume that looks like something your pet likes to eat!
       Virtual Pet 4_simple: Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!
       Virtual Pet 5 - Validated: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 5: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
-      Virtual Pet 5_2019: 'Create two touch events, one per food sprite, that makes them jump to a random location when your pet touches them. '
       Virtual Pet 5_simple: Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.
       Virtual Pet 6: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 6_2019: Set the variable `happiness` to 0 when the program starts. When your pet eats food it likes, change `happiness` by 1. When your pet eats food it doesn't like, change `happiness` by -1.
       Virtual Pet 6_simple: Add an apple that returns the giraffe back to regular size when they touch.
-      Virtual Pet 7_2019: |-
-        Print your pet's happiness level each time it eats food. Use this block, found in the "World" toolbox category:
-        <xml>
-        <block type="gamelab_printText" block-text="print text block">
-                <value name="TEXT">
-                  <block type="text_join_simple" inputcount="2">
-                    <value name="ADD0">
-                      <block type="text">
-                        <title name="TEXT">My happiness level: </title>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="variables_get">
-                        <title name="VAR">happiness</title>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-              </block></xml>
       Virtual Pet 8_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay: 'Freeplay: What more can you make your giraffe do? '
       Virtual Pet Freeplay_2019: "**Free Play:** What more can you make your pet do? Try anything you like!"
       Virtual Pet Freeplay_simple: 'Freeplay: What more can you make your giraffe do? '
-      Virtual Pet Template_2019: Template for Virtual Pet 2019
       WhileAdventure: Our adventurer wants to collect coins. Can you help her grab as many as she can using only one remove 1 block?
       'Widget: Black and White Pixelation': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
       'Widget: Black and White Pixelation_2018': Now make your own image! We've started you off with a 10x10 canvas but you can make it whatever size you want. Happy pixeling!
@@ -5256,19 +5231,13 @@ en:
       courseD_scrat_ramp7_2018: Help Scrat get to the acorn!
       courseD_scrat_ramp8: Use what you've learned to get Scrat to the acorn!
       courseD_scrat_ramp8_2018: Use what you've learned to get Scrat to the acorn!
-      courseE_aboutme_1: Play with Rikki's poster and code for a bit, then click **Finish**.
       courseE_aboutme_1_old: |-
         Rikki is using SpriteLab to create an **interactive poster** that she can share on the web. She has chosen this sprite to represent her!
 
         Run the code below and click Rikki's sprite to see what she's done so far!
-      courseE_aboutme_2: Use the **Costumes** tab to create or select a new costume for your sprite!
-      courseE_aboutme_3: When your character is clicked, share something SAFE about yourself using the <xml><block type="gamelab_printText" block-text="print"></block></xml> block in the `World` toolbox category!
-      courseE_aboutme_4: Add at least two new sprites to your poster. These sprite should represent something about yourself. Assign custom costumes to these sprites, then test it out!
-      courseE_aboutme_5: Make your other sprites share information when they are clicked. This can be information about you or just about them. Be sure whatever you share is SAFE!
-      courseE_aboutme_6: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
+      courseE_aboutme_6: 'Keep going! Try adding more features to your poster to make it even better. '
       courseE_aboutme_7: Play with Rikki's poster and code for a bit, then click **Finish**.
       courseE_aboutme_freeplay: Awesome job! Keep going! Try adding more features to your poster to make it even better. Try adding a background, behaviors, and other kinds of events!
-      courseE_aboutme_template: This is a template level for "About Me 2019".
       courseE_artist_concept1: 'Recreate this image. '
       courseE_artist_concept1_2018: 'Recreate this image. '
       courseE_artist_concept1_2019: 'Recreate this image. '
