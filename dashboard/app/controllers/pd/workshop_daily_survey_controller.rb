@@ -297,7 +297,7 @@ module Pd
       if next_facilitator_index.between?(1, session.workshop.facilitators.size - 1)
         redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
       # No facilitators left. Academic workshops redirect to post if its the last day
-      elsif !session.workshop.summer? && key_params[:day].to_i == session.workshop.sessions.size
+      elsif !session.workshop.summer? && !session.workshop.csf_201? && key_params[:day].to_i == session.workshop.sessions.size
         redirect_to action: :new_post, enrollment_code: Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
       else
         redirect_to action: :thanks
@@ -315,12 +315,14 @@ module Pd
 
     def render_csf_survey(survey_name, workshop)
       @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
+      session = survey_name == POST_DEEPDIVE_SURVEY ? workshop.sessions.first : nil
 
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
         workshopId: workshop.id,
         day: CSF_SURVEY_INDEXES[survey_name],
+        sessionId: session&.id,
         formId: @form_id
       }
 
