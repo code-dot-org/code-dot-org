@@ -44,7 +44,7 @@ const styles = {
   },
   sectionInfo: {
     textAlign: 'center',
-    paddingBottom: 5
+    padding: '5px 0px'
   },
   teacherDashboardLink: {
     fontSize: 11
