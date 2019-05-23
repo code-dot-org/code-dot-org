@@ -1,1691 +1,95 @@
 ---
 es-MX:
   data:
-    evaluation_multi:
-      U5 evaluation q1:
-        'No': 'No'
-        'Yes': Sí
-      U5 evaluation q2:
-        0: "? Modules in this unit are organized based on lessons that build towards
-          a common project. Once a programming concept is introduced, we will use
-          that again concept in later lessons. Which concept are you least familiar
-          with?"
-        1: ": Modules in this unit are organized based on lessons that build towards
-          a common project. Once a programming concept is introduced, we will use
-          that again concept in later lessons. Which concept are you least familiar
-          with?"
-        Processing Arrays: Procesando Arrays
-        While Loops: Bucles While
     external:
-      AWS Demo:
-        description here: descripción aquí
-      Algo How Routers Learn Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      Algo Shortest Path Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      App Lab Feedback:
-        description here: descripción aquí
-      AppLab Level U3L19 - variable re-assignment challenge pt1:
-        description here: descripción aquí
-      Basic mechanics of variables:
-        description here: descripción aquí
-        title: Título
-      Basic mechanics of variables_2018:
-        description here: descripción aquí
-        title: Título
       Begin planning your project:
         description here: descripción aquí
         title: Título
       Begin planning your project_2018:
-        Begin planning your project: Empieza a planificar tú proyecto
-        description here: descripción aquí
-      'Big Picture: If-statements':
-        description here: descripción aquí
-        title: Título
-      'Big Picture: If-statements_2018':
-        description here: descripción aquí
-        title: Título
-      Boolean Expressions and Comparison Operators:
-        description here: descripción aquí
-        title: Título
-      Boolean Expressions and Comparison Operators_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U1 Input Output C1:
-        description here: descripción aquí
-      CSD U1 Input Output C2:
-        description here: descripción aquí
-        title: Título
-      CSD U1 Input Output C3:
-        description here: descripción aquí
-        title: Título
-      CSD U1 Input Output C4:
-        description here: descripción aquí
-        title: Título
-      CSD U1 Input Output Intro:
-        description here: descripción aquí
-        title: Título
-      CSD U2 CSS explain:
-        description here: descripción aquí
-      CSD U2 Classes Introduction:
-        description here: descripción aquí
-      CSD U2 Design Project:
-        description here: descripción aquí
-        title: Título
-      CSD U2 Design Project_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L1 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L1 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L2 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L2 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L3 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L3 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L4 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L4 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L5 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L5 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L6 Overview:
-        description here: descripción aquí
-        title: Título
-      CSD U2 L6 Overview_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 Lesson 6 Overview:
-        description here: descripción aquí
-      CSD U2 Lesson 6 Overview_2018:
-        description here: descripción aquí
-      CSD U2 RGB Colors:
-        description here: descripción aquí
-      CSD U2 Social Sleuth:
-        description here: descripción aquí
-        title: Título
-      CSD U2 expand project:
-        description here: descripción aquí
-        title: Título
-      CSD U2 expand project_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U2 layout style review:
-        description here: descripción aquí
-        title: Título
-      CSD U2 more CSS:
-        description here: descripción aquí
-        title: Título
-      CSD U2 project guide:
-        description here: descripción aquí
-      CSD U2 project guide_2018:
-        description here: descripción aquí
-      CSD U2 text style review:
-        description here: descripción aquí
-      CSD U3 Card Examples_2018:
-        description here: descripción aquí
-      CSD U3 Describe the Picture:
-        description here: descripción aquí
-      CSD U3 L2 Challenges:
-        description here: descripción aquí
-        title: Título
-      CSD U3 SFLP Sprites and Images:
-        description here: descripción aquí
-        title: Título
-      CSD U3 abstraction intro:
-        description here: descripción aquí
-        title: Título
-      CSD U3 collisions STOP isTouching:
-        description here: descripción aquí
-      CSD U3 combining rep:
-        description here: descripción aquí
-        title: Título
-      CSD U3 combining rep_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U3 game intro:
-        description here: descripción aquí
-      CSD U3 game intro_2018:
-        description here: descripción aquí
-      CSD U3 platform intro:
-        description here: descripción aquí
-      CSD U3 platform intro_2018:
-        description here: descripción aquí
-      CSD U3 setSpeed STOP:
-        description here: descripción aquí
-      CSD U5 Encryption 1:
-        description here: descripción aquí
-        title: Título
-      CSD U5 Encryption 1_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U5 Encryption 2:
-        description here: descripción aquí
-      CSD U5 Encryption 2_2018:
-        description here: descripción aquí
-      CSD U5 L13 SFLP Interpreting Data:
-        description here: descripción aquí
-        title: Título
-      CSD U5 L13 SFLP Interpreting Data_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U5 Representing Information:
-        description here: descripción aquí
-        title: Título
-      CSD U5 collection UPS2:
-        description here: descripción aquí
-        title: Título
-      CSD U5 collection ads2:
-        description here: descripción aquí
-        title: Título
-      CSD U5 crosstab warmup:
-        description here: descripción aquí
-      CSD U5 crosstab warmup_2018:
-        description here: descripción aquí
-      CSD U5 data visualization:
-        description here: descripción aquí
-        title: Título
-      CSD U5 data visualization sheet:
-        description here: descripción aquí
-        title: Título
-      CSD U5 data visualization_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U5 fixed-bits:
-        description here: descripción aquí
-      CSD U5 student record:
-        description here: descripción aquí
-        title: Título
-      CSD U5 student record_2018:
-        description here: descripción aquí
-        title: Título
-      CSD U5 video2:
-        description here: descripción aquí
-        title: Título
-      CSD U6 LED create intro:
-        description here: descripción aquí
-      CSD U6 LED create intro_2018:
-        description here: descripción aquí
-      CSD U6 final intro:
-        description here: descripción aquí
-      CSD U6 final intro_2018:
-        description here: descripción aquí
-      CSD-U3-SFLP Drawing:
-        description here: descripción aquí
-        title: Título
-      CSDU2L01 SFLP:
-        description here: descripción aquí
-        title: Título
-      CSP ExploreL02 SFLP:
-        description here: descripción aquí
-        title: Título
-      CSP Journal Entry Placeholder2:
-        description here: descripción aquí
-        title: Título
-      CSP Student Plan - U1L5 - Sending Bits in the real world:
-        description here: descripción aquí
-      CSP Unit 3 - Learning JavaScript Resources:
-        description here: descripción aquí
-      CSP assessment Hex interstitial:
-        description here: descripción aquí
-      CSPPD impact of CS:
-        Impact of Computer Science: Impresión de la informática
-        description here: descripción aquí
-      CSPPD3-u2 Welcome:
-        Welcome!: "¡Bienvenido!"
-      CSPStudentLessonPlanTemplate:
-        description here: descripción aquí
-        title: Título
-      CSPU5 Making a Multi Screen Chaser Game:
-        description here: descripción aquí
-        title: Título
-      CSPU5_ChoosingGoodIds:
-        description here: descripción aquí
-        title: Título
-      CSPU5_EventDrivenProgrammingPatterns:
-        description here: descripción aquí
-        title: Título
-      CSPU5_FirstTimeDesignMode:
-        description here: descripción aquí
-        title: Título
-      CSPU5_FirstTimeDesignMode_2018:
-        description here: descripción aquí
-        title: Título
-      CSPU5_HowImagesWork:
-        description here: descripción aquí
-        title: Título
-      CSPU5_HowOnEventWorks_v2:
-        description here: descripción aquí
-        title: Título
-      CSPU5_U3L12 - Student Introduction 1:
-        Events Unplugged: Eventos desenchufados
-      CSPU5_U3L14 - Message - Other ways to assign values:
-        description here: descripción aquí
-        title: Título
-      CSPU5_U3L14 - Message - basic mechanics of variables:
-        description here: descripción aquí
-        title: Título
-      CSPU5_U3L15 - explanation of IF and =v==:
-        description here: descripción aquí
-        title: Título
-      CSPU5_U3L15 Student Lesson Intro - new:
-        description here: descripción aquí
-        title: Título
-      CSPU5_U3L19 - variable scope explanation pt2:
-        description here: descripción aquí
-      CSPU5_U3L20 - combining And and Or explanation:
-        description here: descripción aquí
-        title: Título
-      CSPU5_goodbyeTurtle_setPosition:
-        description here: descripción aquí
-        title: Título
-      CSPU5_introToDebugging:
-        description here: descripción aquí
-        title: Título
-      CSPU5_makingPredictions_ref:
-        description here: descripción aquí
-        title: Título
-      CSPU5_onEventBreakdown:
-        description here: descripción aquí
-        title: Título
-      CSP_Final_instructions:
-        description here: descripción aquí
-        title: Título
-      CSP_U4_rawMovieData:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Epilogue:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Epilogue_2018:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - How does it end?:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - How does it end?_2018:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - How to switch player turns:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - How to switch player turns_2018:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Keeping score:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Keeping score_2018:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Planning the App:
-        description here: descripción aquí
-        title: Título
-      Color Sleuth - Planning the App_2018:
-        description here: descripción aquí
-        title: Título
-      Controlling Memory - Other ways to assign values:
-        description here: descripción aquí
-        title: Título
-      Controlling Memory - Other ways to assign values_2018:
-        description here: descripción aquí
-        title: Título
-      Cups and Beans Activity:
-        description here: descripción aquí
-        title: Título
-      Cups and Beans Activity_2018:
-        description here: descripción aquí
-        title: Título
-      Debugging with Console.log:
-        description here: descripción aquí
-        title: Título
-      Debugging with Console.log_2018:
-        description here: descripción aquí
-        title: Título
-      Deeper Learning Overview:
-        description here: descripción aquí
-      Digital Footprint Chirpr lillizard:
-        description here: descripción aquí
-        title: Título
-      Digital Footprint FaceSpace Haley:
-        description here: descripción aquí
-        title: Título
-      Digital Footprint FaceSpace Lizzie:
-        description here: descripción aquí
-        title: Título
-      Digital Footprint instantframe wiz_kid_liz:
-        description here: descripción aquí
-        title: Título
-      DigitalCitizenship2:
-        Digital Citizenship: Ciudadanía digital
-      ECSPD Challenge Rubric:
-        description here: descripción aquí
-        title: Título
-      ECSPD Online U1D1-2:
-        description here: descripción aquí
-      ECSPD Online U1D1-2 Resources:
-        description here: descripción aquí
-      ECSPD Online U1D11-14:
-        title: Título
-      ECSPD Online U1D15-16 Forum:
-        description here: descripción aquí
-        title: Título
-      ECSPD Online intro:
-        Introduction: Introducción
-      ECSPD U2 Challenge Plan:
-        description here: descripción aquí
-        title: Título
-      ECSPD Unit 2 Stage11:
-        description here: descripción aquí
-        title: Título
-      ECSPD Unit 2 Stage13:
-        description here: descripción aquí
-        title: Título
-      ECSPD Unit 2 Stage6:
-        description here: descripción aquí
-        title: Título
-      ECSPD impact of CS:
-        Impact of Computer Science: Impresión de la informática
-        description here: descripción aquí
-      Encoding Numbers Real World Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      Event Driven Programming Recap:
-        description here: descripción aquí
-        title: Título
-      Event Driven Programming Recap_2018:
-        description here: descripción aquí
-        title: Título
-      Event-Driven Programming Patterns:
-        description here: descripción aquí
-        title: Título
-      Event-Driven Programming Patterns_2018:
-        description here: descripción aquí
-        title: Título
-      External MD column Test:
-        description here: descripción aquí
-        title: Título
-      External MD column Test bootstrap:
-        description here: descripción aquí
-        title: Título
-      GoodBadVisualizations_v1:
-        description here: descripción aquí
-        title: Título
-      GoodBadVisualizations_v2:
-        description here: descripción aquí
-        title: Título
-      How "if-else-if" Works:
-        description here: descripción aquí
-        title: Título
-      How "if-else-if" Works_2018:
-        description here: descripción aquí
-        title: Título
-      How Compound Boolean Expressions Work:
-        description here: descripción aquí
-        title: Título
-      How Compound Boolean Expressions Work_2018:
-        description here: descripción aquí
-        title: Título
-      How Dropdown Menus Work:
-        description here: descripción aquí
-        title: Título
-      How Dropdown Menus Work_2018:
-        description here: descripción aquí
-        title: Título
-      How If Statements Work pt 1:
-        description here: descripción aquí
-        title: Título
-      How If Statements Work pt 1_2018:
-        description here: descripción aquí
-        title: Título
-      How If-Else Statements Work:
-        description here: descripción aquí
-        title: Título
-      How If-Else Statements Work_2018:
-        description here: descripción aquí
-        title: Título
-      How Images Work:
-        description here: descripción aquí
-        title: Título
-      How Images Work_2018:
-        description here: descripción aquí
-        title: Título
-      How Secure Is Your Password?:
-        description here: descripción aquí
-        title: Título
-      How Secure Is Your Password?_2018:
-        description here: descripción aquí
-        title: Título
-      How Set Property Works:
-        description here: descripción aquí
-        title: Título
-      How Set Property Works_2018:
-        description here: descripción aquí
-        title: Título
-      How onEvent Works:
-        description here: descripción aquí
-        title: Título
-      How onEvent Works_2018:
-        description here: descripción aquí
-        title: Título
-      How setPosition and screen dimensions work:
-        description here: descripción aquí
-        title: Título
-      How setPosition and screen dimensions work_2018:
-        description here: descripción aquí
-        title: Título
-      How the Boolean &&, || and ! Operators Work:
-        description here: descripción aquí
-        title: Título
-      How the Boolean &&, || and ! Operators Work_2018:
-        description here: descripción aquí
-        title: Título
-      How to make a random color:
-        description here: descripción aquí
-        title: Título
-      How to make a random color_2018:
-        description here: descripción aquí
-        title: Título
-      How to pick a random button:
-        description here: descripción aquí
-        title: Título
-      How to pick a random button_2018:
-        description here: descripción aquí
-        title: Título
-      Internet Simulator Setup:
-        description here: descripción aquí
-      Internet Simulator Setup 2:
-        description here: descripción aquí
-        title: Título
-      Internet Simulator Setup 3:
-        description here: descripción aquí
-      Intro to Debugging and Common Problems:
-        description here: descripción aquí
-        title: Título
-      Intro to Debugging and Common Problems_2018:
-        description here: descripción aquí
-        title: Título
-      Making Multiple Screens:
-        description here: descripción aquí
-        title: Título
-      Making Multiple Screens_2018:
-        description here: descripción aquí
-        title: Título
-      Making a Multi Screen Chaser Game v.2:
-        description here: descripción aquí
-        title: Título
-      Making a Multi Screen Chaser Game v.2_2018:
-        description here: descripción aquí
-        title: Título
-      Multi-Screen Apps:
-        description here: descripción aquí
-        title: Título
-      New Challenge Introduction:
-        description here: descripción aquí
-        title: Título
-      New Challenge Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      OPD-K5 Stage3aGo:
-        description here: descripción aquí
-        title: Título
-      PDAlg Facilitator Test:
-        description here: descripción aquí
-        title: Título
-      PDK5 CS Video:
-        Computer Science: Ciencias de la computación
-      PDK5 Glossary C:
-        Vocabulary: Vocabulario
-      PDK5 Pair Programming 1:
-        Pair Programming: Programación de pares
-      PDK5 Teacher Dashboard C:
-        Teacher Dashboard: Panel del docente
-      PS - Responding to User Input:
-        description here: descripción aquí
-        title: Título
-      PS - draft - Longitudinal study description:
-        description here: descripción aquí
-        title: Título
-      Pixelation - Lesson 14 - Instructions Make Your Own:
-        description here: descripción aquí
-      Pixelation - Lesson 14 - Instructions one bit error:
-        description here: descripción aquí
-      Pixelation - Lesson 15 - Favicon Instructions:
-        description here: descripción aquí
-      Pixelation - Lesson 15 - Task 1 instructions:
-        description here: descripción aquí
-      Pixelation - Lesson 15 - Task 2 instructions:
-        description here: descripción aquí
-      Pixelation - Lesson 15 - Task 3 instructions:
-        description here: descripción aquí
-      Pixelation - Video - Color 1:
-        description here: descripción aquí
-      Pixelation - Video - Color 2:
-        description here: descripción aquí
-      Pixelation - Video - Color 3:
-        description here: descripción aquí
-      Pixelation - Video - Tips and Tricks:
+        Begin planning your project: Empieza a planificar tu proyecto
         description here: descripción aquí
       Prepare for your presentation:
         description here: descripción aquí
         title: Título
       Prepare for your presentation_2018:
-        Prepare for yur presentation: Prepararse para la presentación
-      Public Key Crypto Widget Instructions:
-        description here: descripción aquí
-        title: Título
-      Public Key Crypto Widget Instructions_2018:
-        description here: descripción aquí
-        title: Título
-      Rules About Choosing Good IDs:
-        description here: descripción aquí
-        title: Título
-      Rules About Choosing Good IDs_2018:
-        description here: descripción aquí
-        title: Título
-      SG U3 whats a comment:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L01 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L02 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L03 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L05 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L07 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L08 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      SG v2 U3L09 Student Lesson Introduction:
-        Looping and Random Numbers: Bucles y Números Aleatorios
-      SG v2 U3L6 Student Lesson Introduction:
-        Functions and Top-Down Design: Funciones y el Diseño Top-Down
-      Sending Bits Real World Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      Simple Decisions with if-statements:
-        description here: descripción aquí
-        title: Título
-      Simple Decisions with if-statements_2018:
-        description here: descripción aquí
-        title: Título
-      'Technique: Frequency Analysis':
-        description here: descripción aquí
-      'Technique: Frequency Analysis_2018':
-        description here: descripción aquí
-      Terminology Recap:
-        description here: descripción aquí
-      Terminology Recap_2018:
-        description here: descripción aquí
-      Tips For Working on Your Own:
-        description here: descripción aquí
-        title: Título
-      Tips For Working on Your Own_2018:
-        description here: descripción aquí
-        title: Título
-      U1L1 Student Lesson Introduction:
-        description here: descripción aquí
-      U1L1 Student Lesson Introduction_2018:
-        description here: descripción aquí
-      U1L10 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L11 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L12 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L13 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      U1L14 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      U1L15 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      U1L16 Student Lesson Introduction:
-        Lossy Compression and File Formats: Compresión con Pérdida y Formatos de Archivos
-        description here: descripción aquí
-      U1L17 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L2 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L3 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L4 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L4 Widget Demo - Video:
-        description here: descripción aquí
-      U1L5 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L6 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L7 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L8 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U1L9 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U2L1 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U2L12 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U2L14 Student Lesson Introduction:
-        Cracking the Code: Descifrando el código
-      U2L17 Student Lesson Introduction:
-        description here: descripción aquí
-      U2L2 Student Lesson Introduction:
-        The Need for Addressing: La necesidad para el redireccionamiento
-      U2L5 Student Lesson Introduction:
-        Packets and Making a Reliable Internet: Paquetes y realización de una internet
-          que sea de confianza
-      U2L7 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U2L8 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U2L9 Student Lesson Introduction:
-        The Need for DNS: La necesidad para el DNS
-      U3 whats a comment:
-        description here: descripción aquí
-        title: Título
-      U3 whats a comment_2018:
-        description here: descripción aquí
-        title: Título
-      U3L06 Student Lesson Introduction:
-        APIs and Function Parameters: Las API y los parámetros de las funciones
-      U3L07 Student Lesson Introduction:
-        Looping and Random Numbers: Bucles y Números Aleatorios
-      U3L08 Student Lesson Introduction:
-        Creating Functions with Parameters: Originando funciones con los parámetros
-      U3L12 - Mission Unsortable:
-        description here: descripción aquí
-        title: Título
-      U3L12 - Student Introduction 1:
-        Events Unplugged: Eventos desenchufados
-      U3L13 - Explanation of Ids:
-        description here: descripción aquí
-        title: Título
-      U3L13 - Make a Prediction Explanation:
-        description here: descripción aquí
-        title: Título
-      U3L13 Add Button Instrucitons:
-        description here: descripción aquí
-        title: Título
-      U3L13 Add Button Instructions:
-        description here: descripción aquí
-        title: Título
-      U3L14 - Message - Other ways to assign values:
-        description here: descripción aquí
-        title: Título
-      U3L14 - Message - basic mechanics of variables:
-        description here: descripción aquí
-        title: Título
-      U3L14 - Student Intro Page:
-        description here: descripción aquí
-        title: Título
-      U3L15 - explanation of IF and =v==:
-        description here: descripción aquí
-        title: Título
-      U3L15 Student Lesson Intro - new:
-        description here: descripción aquí
-        title: Título
-      U3L19 - Arithmetic v Concatenation:
-        description here: descripción aquí
-      U3L19 - Intro to variables:
-        description here: descripción aquí
-      U3L19 - concatenate string with var:
-        description here: descripción aquí
-      U3L19 - done with variables finally:
-        description here: descripción aquí
-        title: Título
-      U3L19 - explanation diff between string and var name:
-        description here: descripción aquí
-      U3L19 - improve your clicker game:
-        description here: descripción aquí
-      U3L19 - misconception variable assignment order pt1:
-        description here: descripción aquí
-      U3L19 - misconception variable assignment order pt2:
-        description here: descripción aquí
-      U3L19 - variable breakdown - Assigning a value:
-        description here: descripción aquí
-      U3L19 - variable breakdown - common mistake - declaring twice:
-        description here: descripción aquí
-      U3L19 - variable breakdown - declaration:
-        description here: descripción aquí
-      U3L19 - variable breakdown - setText in label:
-        description here: descripción aquí
-      U3L19 - variable breakdown - ways to read pt1:
-        description here: descripción aquí
-      U3L19 - variable breakdown intro:
-        description here: descripción aquí
-      U3L19 - variable scope explanation:
-        description here: descripción aquí
-      U3L19 - variable scope explanation pt2:
-        description here: descripción aquí
-      U3L19 - variable scope explanation pt3:
-        description here: descripción aquí
-      U3L20 - combining And and Or explanation:
-        description here: descripción aquí
-        title: Título
-      U4 - Cleaning Data - Activity Guide:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Bar Chart:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Edit Chart Appearance:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Free Play:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Free Play_2018:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Getting Started:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Line Chart:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Scatter Plot:
-        description here: descripción aquí
-        title: Título
-      U4 - Making Data Visualizations - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U4 - Privacy Abandoned - Hot On Your Trail Video:
-        description here: descripción aquí
-        title: Título
-      U4 - Unique Ids Explanation:
-        title: Título
-      U4 - Unique Ids Explanation_2018:
-        title: Título
-      U4 Cleaning Data Activity Guide Pt2:
-        description here: descripción aquí
-        title: Título
-      U4 Cleaning Data Activity Guide Pt3:
-        description here: descripción aquí
-        title: Título
-      U4 caesar cipher interstitial:
-        description here: descripción aquí
-      U4 how to crack substitution cipher:
-        description here: descripción aquí
-      U4L01 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L02 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L02 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U4L02v2 - Finding Trends:
-        description here: descripción aquí
-        title: Título
-      U4L03 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L03 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U4L03v2 - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L04 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L04 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U4L04v2 - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L05 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L06 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L06v2 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L07 Public Key Crypto Interstitial:
-        description here: descripción aquí
-      U4L07 Student Introduction public key crypto:
-        description here: descripción aquí
-        title: Título
-      U4L07 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L08 - mod clock instructions:
-        description here: descripción aquí
-        title: Título
-      U4L08 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L08v2 Making Pivot Tables:
-        description here: descripción aquí
-        title: Título
-      U4L08v2 Making Pivot Tables Part 2:
-        description here: descripción aquí
-        title: Título
-      U4L08v2 Making Pivot Tables Part 3:
-        description here: descripción aquí
-        title: Título
-      U4L08v2 Making Pivot Tables Part 3_2018:
-        description here: descripción aquí
-        title: Título
-      U4L08v2 Student Intro:
-        description here: descripción aquí
-        title: Título
-      U4L09 Student Lesson Intro Practice PT big data dilemma:
-        description here: descripción aquí
-        title: Título
-      U4L09 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L10 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L11 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L12 - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L12 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L13 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L14 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L15 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L16 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L17 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L18 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L19 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L20 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L21 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L22 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L23 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L24 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      U4L5 random subst challenge page:
-        description here: descripción aquí
-        title: Título
-      U5 - Create PT - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - Create PT Prep - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - Create PT review - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - Explore PT - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - Explore PT Prep - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - Explore PT Review - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U5 - PT Prep - Digital Portfolio and tech setup:
-        description here: descripción aquí
-        title: Título
-      U5 color sleuth check correct:
-        description here: descripción aquí
-        title: Título
-      U5 color sleuth check correct_2018:
-        description here: descripción aquí
-        title: Título
-      U5L08 - Student Intro If statements:
-        description here: descripción aquí
-        title: Título
-      U6 - Charts - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - Charts - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 - Final Project - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - Final Project - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 - ImportExport - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - ImportExport - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 - Sample Apps - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - Sample Apps - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 - deleteRecord - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - deleteRecord - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 - updateRecord - Student Introduction:
-        description here: descripción aquí
-        title: Título
-      U6 - updateRecord - Student Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      U6 AP Performance Task Tech Setup - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Create PT - Complete the Task - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Create PT - Complete the Task - Student Links_2018:
-        description here: descripción aquí
-        title: Título
-      U6 Create PT Review - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Create PT Review - Student Links_2018:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT - Complete the Task - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT - Complete the Task - Student Links_2018:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT - Make a Plan - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT - Make a Plan - Student Links_2018:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT Review - Student Links:
-        description here: descripción aquí
-        title: Título
-      U6 Explore PT Review - Student Links_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 2 Lesson 1 Overview Clone:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 1 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 1 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 2 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 2 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 5 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 5 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 4 Lesson 6 Introduction:
-        Cracking the Code: Descifrando el código
-      Unit 4 Lesson 6 Introduction_2018:
-        Cracking the Code: Descifrando el código
-      Unit 5 Lesson 1:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 1 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 1 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 10 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 10 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 2 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 2 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 3 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 3 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 4 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 4 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 5:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 5 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 5 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 6:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 6 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 6 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 7 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 7 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 8 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 8 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 9 Introduction:
-        description here: descripción aquí
-        title: Título
-      Unit 5 Lesson 9 Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      'Variable Scope: Local vs. Global':
-        description here: descripción aquí
-      'Variable Scope: Local vs. Global_2018':
-        description here: descripción aquí
-      'Worked Example: If-statements and Robot':
-        description here: descripción aquí
-        title: Título
-      'Worked Example: If-statements and Robot_2018':
-        description here: descripción aquí
-        title: Título
-      brad-repro-bug-000:
-        description here: descripción aquí
-      brad-test-continue-buttons-in-markdown:
-        description here: descripción aquí
-      challenges sample 3:
-        Life Science Challenges: Desafíos de ciencias de la vida
-      challenges sample 4:
-        Life Science Challenges: Desafíos de ciencias de la vida
-      challenges sample 5:
-        Life Science Challenges: Desafíos de ciencias de la vida
-      challenges sample 6:
-        Life Science Challenges: Desafíos de ciencias de la vida
-      challenges sample 7:
-        Life Science Challenges: Desafíos de ciencias de la vida
-      courseB_external_MRF:
-        description here: descripción aquí
-        title: Título
-      courseB_external_loopMRF:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs10:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs11:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs12:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs13:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs14:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs15:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs16:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs17:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs18:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs2:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs3:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs4:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs5:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs6:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs7:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs8:
-        description here: descripción aquí
-        title: Título
-      courseB_story_unspottedBugs9:
-        description here: descripción aquí
-        title: Título
-      courseB_unplugged_mrfProgramming:
-        description here: descripción aquí
-        title: Título
-      courseC_screenoutthemean:
-        description here: descripción aquí
-        title: Título
+        Prepare for yur presentation: Prepárate para tu presentación
       courseD_external_binary1:
         Binary Drawing: Dibujo binario
       courseD_external_binary1_2018:
         Binary Drawing: Dibujo binario
-      courseF_firstFunctions_map:
-        description here: descripción aquí
-        title: Título
-      coursef_functionsSummary_map:
-        description here: descripción aquí
-        title: Título
-      coursef_powerofwords:
-        description here: descripción aquí
-        title: Título
-      csd deeper learning timeline:
-        description here: descripción aquí
-      csd deeper learning timeline 2018-2019:
-        description here: descripción aquí
-      csd-post-survey-unit1-preamble:
-        description here: descripción aquí
-        title: Título
-      csd-post-survey-unit2-preamble:
-        description here: descripción aquí
-        title: Título
-      csd-post-survey-unit3-preamble:
-        description here: descripción aquí
-        title: Título
-      csd-post-survey-unit4-preamble:
-        description here: descripción aquí
-        title: Título
-      csd-post-survey-unit5-preamble:
-        description here: descripción aquí
-        title: Título
-      csd-post-survey-unit6-preamble:
-        description here: descripción aquí
-        title: Título
-      csp deeper learning timeline:
-        description here: descripción aquí
-      csp-post-survey-2018-AP-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-2018-topics-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-2018-unit-feedback-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-createPT-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-explorePT-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-unit1-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-unit2-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-unit3-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-unit4-preamble:
-        description here: descripción aquí
-        title: Título
-      csp-post-survey-unit5-preamble:
-        description here: descripción aquí
-        title: Título
-      csp_unit5_finalassessment_overview:
-        description here: descripción aquí
-        title: Título
-      csp_unit5_finalassessment_overview_2018:
-        description here: descripción aquí
-        title: Título
-      csp_unit5_finalassessment_overview_exam_prep:
-        description here: descripción aquí
-        title: Título
-      csp_unit_assessment_overview:
-        description here: descripción aquí
-        title: Título
-      csp_unit_assessment_overview_2018:
-        description here: descripción aquí
-        title: Título
-      csp_unit_assessment_overview_exam_prep:
-        description here: descripción aquí
-        title: Título
-      deeper learning:
-        description here: descripción aquí
-      deeper learning recommendations- csd:
-        description here: descripción aquí
-      deeper learning recommendations- csp:
-        description here: descripción aquí
-      deeper learning recommendations- csp - 2018:
-        description here: descripción aquí
-      dlp supports - csd:
-        description here: descripción aquí
-      dsl link test:
-        description here: descripción aquí
-        title: Título
-      equity discussion:
-        description here: descripción aquí
-      grade2_maze_intro1:
-        description here: descripción aquí
-        title: Título
-      grade2_unplugged_neighborhood:
-        description here: descripción aquí
-        title: Título
-      grade4_project_design:
-        description here: descripción aquí
-        title: Título
-      grade4_project_design_image:
-        description here: descripción aquí
-        title: Título
-      grade4_project_presentation:
-        description here: descripción aquí
-        title: Título
-      grade5_project_design:
-        description here: descripción aquí
-        title: Título
-      grade5_project_presentation:
-        description here: descripción aquí
-        title: Título
-      gradeK_unplugged_loops:
-        Loops Unplugged: Ciclos desconectados
+      courseF_markdown_algorithms_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_algorithms_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_conditionals_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_conditionals_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_debugging_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_debugging_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_forloops_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_forloops_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_loops_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_loops_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_nestedloops_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_nestedloops_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_variables_end:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
+      courseF_markdown_variables_intro:
+        Test Markdown Textbook Page: Prueba de reducción de la página del libro de
+          texto
       gradek1_activity_beNice:
-        The computer is your friend: El ordenador es tu amigo
-      gradek1_activity_beNice_2018:
-        The computer is your friend: El ordenador es tu amigo
-      more encryption algorithms:
-        description here: descripción aquí
-        title: Título
-      newCSFsample:
-        Intro: Introducción
-        description here: descripción aquí
-      post-assessment survey heading4:
-        description here: descripción aquí
-        title: Título
-      pwc_appdev:
-        description here: descripción aquí
-        title: Título
-      pwc_appdevunplugged:
-        description here: descripción aquí
-        title: Título
-      pwc_cybersecurity:
-        description here: descripción aquí
-        title: Título
-      pwc_data:
-        description here: descripción aquí
-      pwc_internetofthings:
-        description here: descripción aquí
-        title: Título
-      pwc_problemsolving:
-        description here: descripción aquí
-      pwc_programming:
-        description here: descripción aquí
-        title: Título
-      pwc_technologyfoundations:
-        description here: descripción aquí
-      pwc_webdevelopment:
-        description here: descripción aquí
-        title: Título
-      sciPD StarLogo intro video:
-        Introduction to StarLogo Nova: Introducción a StarLogo Nova
-      sciPD class models video:
-        Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
-      sciPD computer models forum:
-        Using Computer Models in Science: Utilizando los tipos de ordenadores en ciencia
-      sciPD computer models video:
-        Using Computer Models in Science: Utilizando los tipos de ordenadores en ciencia
-      sciPD culture forum:
-        Dispositions and Classroom Culture: Condiciones y cultura del aula
-      sciPD framework video:
-        Framework: Marco de trabajo
-      sciPD what to expect:
-        What to Expect: Que suponer
-      sciPD what to expect 16-17:
-        What to Expect: Que suponer
-      sciPD2Part4_S1_L3:
-        description here: descripción aquí
-        title: Título
-      sciPD2Part4_S2_L1:
-        description here: descripción aquí
-        title: Título
-      sciPD2Part4_S2_L2:
-        description here: descripción aquí
-        title: Título
-      sciPD2Part4_S3_L1:
-        description here: descripción aquí
-        title: Título
-      sciPD2Part4_S3_L2:
-        description here: descripción aquí
-        title: Título
-      sciPD2Part4_S3_L3:
-        description here: descripción aquí
-        title: Título
-      sciPD3 mods2:
-        description here: descripción aquí
-        title: Título
-      sciPD33 earth1:
-        description here: descripción aquí
-        title: Título
-      sciPD33 earth2:
-        description here: descripción aquí
-        title: Título
-      sciPDpart4_S1_L1:
-        description here: descripción aquí
-        title: Título
-      test cb level:
-        description here: descripción aquí
-      test discourse level type:
-        title: Título
-      v1 U1L13 Student Lesson Introduction:
-        The Need for DNS: La necesidad para el DNS
-      v2 U1 Internet is for Everyone Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1 Internet is for Everyone Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L11 Student Lesson Introduction:
-        Packets and Making a Reliable Internet: Paquetes y realización de una internet
-          que sea de confianza
-      v2 U1L11 Student Lesson Introduction_2018:
-        Packets and Making a Reliable Internet: Paquetes y realización de una internet
-          que sea de confianza
-      v2 U1L12 Student Lesson Introduction:
-        The Need for DNS: La necesidad para el DNS
-      v2 U1L12 Student Lesson Introduction_2018:
-        The Need for DNS: La necesidad para el DNS
-      v2 U1L14 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L14 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L2 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L2 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L3 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L3 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L4 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L4 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L5 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L5 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L6 Student Lesson Introduction:
-        Sending Numbers: Envío de los números
-        description here: descripción aquí
-      v2 U1L6 Student Lesson Introduction_2018:
-        Sending Numbers: Envío de los números
-        description here: descripción aquí
-      v2 U1L8 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U1L8 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U1L9 Student Lesson Introduction:
-        The Need for Addressing: La necesidad para el redireccionamiento
-      v2 U1L9 Student Lesson Introduction_2018:
-        The Need for Addressing: La necesidad para el redireccionamiento
-      v2 U2L1 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L1 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L10 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L10 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L11 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L11 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L12 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L12 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L13 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L13 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L14 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L14 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L15 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L15 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L2 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      v2 U2L2 Student Lesson Summary_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L3 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      v2 U2L3 Student Lesson Summary_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L4 Student Lesson Summary:
-        description here: descripción aquí
-        title: Título
-      v2 U2L4 Student Lesson Summary_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L5 Student Lesson Introduction:
-        Lossy Compression and File Formats: Compresión con Pérdida y Formatos de Archivos
-        description here: descripción aquí
-      v2 U2L5 Student Lesson Introduction_2018:
-        Lossy Compression and File Formats: Compresión con Pérdida y Formatos de Archivos
-        description here: descripción aquí
-      v2 U2L6 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L6 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L7 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L7 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L8 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L8 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U2L9 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U2L9 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U3L04 Student Lesson Introduction:
-        description here: descripción aquí
-        title: Título
-      v2 U3L04 Student Lesson Introduction_2018:
-        description here: descripción aquí
-        title: Título
-      v2 U3L05 Student Lesson Introduction:
-        Creating Functions: Creando funciones
-      v2 U3L05 Student Lesson Introduction_2018:
-        Creating Functions: Creando funciones
-      v2 U3L07 Student Lesson Introduction:
-        APIs and Function Parameters: Las API y los parámetros de las funciones
-      v2 U3L07 Student Lesson Introduction_2018:
-        APIs and Function Parameters: Las API y los parámetros de las funciones
-      v2 U3L08 Student Lesson Introduction:
-        Creating Functions with Parameters: Originando funciones con los parámetros
-      v2 U3L08 Student Lesson Introduction_2018:
-        Creating Functions with Parameters: Originando funciones con los parámetros
-      v2 U3L09 Student Lesson Introduction:
-        Looping and Random Numbers: Bucles y Números Aleatorios
-      v2 U3L09 Student Lesson Introduction_2018:
-        Looping and Random Numbers: Bucles y Números Aleatorios
-      v2 U3L6 Student Lesson Introduction:
-        Functions and Top-Down Design: Funciones y el Diseño Top-Down
-      v2 U3L6 Student Lesson Introduction_2018:
-        Functions and Top-Down Design: Funciones y el Diseño Top-Down
-      v2 U4L05 Student Lesson Intro Encryption Caesar:
-        description here: descripción aquí
-        title: Título
-      v2 U4L06 Student Lesson Introduction Encryption Vigenere:
-        Cracking the Code: Descifrando el código
+        The computer is your friend: La computadora es tu amiga
     match:
       2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Hacé que coincidan las combinaciones
-          de botones con los movimientos.
-        Matching: Emparejar
+        Match the button combination to the dance moves.: Haz que coincidan las combinaciones
+          de botones con los movimientos de baile.
+        Matching: Coincidencia
       2-3 Binary Match 1:
-        "<strong>N</strong>": "<negrillas>N</negrillas>"
-        "<strong>O</strong>": "<negrillas>0</negrillas>"
-        "<strong>P</strong>": "<negrillas>P</negrillas>"
-        "<strong>Q</strong>": "<negrillas>Q</negrillas>"
-        Matching: Emparejar
-        Use the key to match each code to its letter: Usá la clave para unir cada
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
+        Matching: Coincidencia
+        Use the key to match each code to its letter: Usa la llave para unir cada
           código con su letra
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: Hacé coincidir la cuadrícula con el programa.
-        Matching: Emparejar
+        Match the grid to the program.: Haz coincidir la cuadrícula con el programa.
+        Matching: Coincidencia
       2-3 Maze Match 2:
         Instructions: Instrucciones
-        Match the puzzles to the blocks: Uní los rompecabezas a los bloques
+        Match the puzzles to the blocks: Haz coincidir los desafíos con los bloques
         Maze Match: Partida del Laberinto
-      2-3 Relay Programming Match 1:
-        Matching: Emparejar
       2-3 artist loops match 1:
+        Artist Loops Matching 1: Bucles del Artista - Coincidencia 1
         Match the loop to the shape: Hacé coincidir el bucle con la figura
       2-3 artist match 1:
         Artist Matching: Artista que coincide
         Match the shape with the blocks that complete it.: Hacé coincidir la figura
           con los bloques que la completan.
-      2-3 bounce match 1:
-        Matching: Emparejar
-      2-3 flappy match 1:
-        Matching: Emparejar
       2-3 maze match 1:
-        Match the puzzles to the blocks: Uní los rompecabezas a los bloques
+        Match the puzzles to the blocks: Haz coincidir los desafíos con los bloques
         Maze Match One: Partido Uno del Laberinto
       4-5 Algorithms Match 1:
         "<h4>1)</h4>": "<h4>1)</h4>"
@@ -1702,7 +106,7 @@ es-MX:
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Uní
           los pasos en el juego Carrera de Dados al orden que deben aparecer en el
           algoritmo.
-        Matching: Emparejar
+        Matching: Coincidencia
       4-5 Computational Thinking Match 1:
         "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Ruedas/lado: 2<br/> Ventanas/lado:
           0</h3>"
@@ -1715,105 +119,34 @@ es-MX:
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada
           uno de estos vehículos ha sido descompuesto en pedazos más pequeños. Relacionar
           cada vehículo descompuesto con su lista.
-        Matching: Emparejar
+        Matching: Coincidencia
       4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
+        "<h4>RAMP</h4>": "<h4>RAMPA</h4>"
+        "<h4>STACK</h4>": "<h4>PILA</h4>"
+        "<h4>STAMP</h4>": "<h4>SELLO</h4>"
+        "<h4>STAR</h4>": "<h4>ESTRELLA</h4>"
         Match each program to the word it makes, using the provided group of skills.: Une
           cada programa a la palabra que produce, utilizando el grupo de habilidades
           provistas.
-        Matching: Emparejar
+        Matching: Coincidencia
       4-5 maze match 1:
         Instructions: Instrucciones
-        Match the puzzles to the blocks: Uní los rompecabezas a los bloques
+        Match the puzzles to the blocks: Haz coincidir los desafíos con los bloques
         Maze Match: Partida del Laberinto
-      CSD U3 CSS Vocab Match:
-        '1': '1'
-        '2': '2'
-      CSD U3 keyinput match:
-        Question: Pregunta
-      CSDU2 Match RGB Colors:
-        Question: Pregunta
-      ECSPD Growth Mindset Reflection Q:
-        Growth Mindset: Mentalidad de crecimiento
-      K-1 Artist 2 Match 1:
-        Matching: Emparejar
       K-1 Artist 2 Match 2:
         Match the shapes based on type.: Relacioná las figuras de acuerdo a su tipo.
-        Matching: Emparejar
-      K-1 Artist 2 Match 3:
-        Match the shapes based on type.: Relacioná las figuras de acuerdo a su tipo.
-        Matching: Emparejar
-      K-1 Artist Loops Match 1:
-        Matching: Emparejar
+        Matching: Coincidencia
       K-1 Bee Loops Match 1:
         Match the blocks: Relacioná los bloques
-        Matching: Emparejar
+        Matching: Coincidencia
       K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Hacé que coincidan las combinaciones
-          de botones con los movimientos.
-        Matching: Emparejar
-      K-1 Flappy Match 1:
-        Match the blocks: Relacioná los bloques
-        Matching: Emparejar
-      K-1 Happy Maps Match 1:
-        Matching: Emparejar
+        Match the button combination to the dance moves.: Haz que coincidan las combinaciones
+          de botones con los movimientos de baile.
+        Matching: Coincidencia
       K-1 Maze Match 1:
         Instructions: Instrucciones
         Match the puzzles and blocks: Hacé coincidir los rompecabezas y los bloques
-        Matching: Emparejar
-      K-1 Move It Match 1:
-        Matching: Emparejar
-      PDAlg Design Recipe Video:
-        Definition: Definición
-      PDAlg Types Video:
-        Image: Imagen
-        Number: Número
-        String: Hilo
-      PDK5 What is unplugged:
-        Question: Pregunta
-      'U2L06 - Matching: Label the Diagram':
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-      U3L19 - MATCH what are values of abc:
-        '10': '10'
-        '12': '12'
-        '13': '13'
-        '15': '15'
-        '16': '16'
-        '21': '21'
-        '3': '3'
-        '5': '5'
-        '7': '7'
-        '8': '8'
-        description here: descripción aquí
-        title: Título
-      U3L19 - MC what are values of abc:
-        description here: descripción aquí
-        title: Título
-      U4L06 Create Record Id Matching Q:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      parts of contract:
-        image: imagen
-      test matching image:
-        Instructions: Instrucciones
-      test matching text:
-        Matching: Emparejar
-        blue: azul
-      unique level name here:
-        Question: Pregunta
-        description here: descripción aquí
-        title: Título
+        Matching: Coincidencia
     multi:
       2-3 Algorithms Multi 1:
         Choose an algorithm for the image provided.: Elegí un algoritmo para esta
@@ -1831,9 +164,9 @@ es-MX:
         0: "? Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
           <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
           la derecha del paralelogramo"
-        1: ": Comienza con un cuadrado <br/> Pon un triángulo a la derecha del cuadrado
-          <br/> Pon un paralelogramo debajo del cuadrado <br/> Pon un triángulo a
-          la derecha del paralelogramo"
+        1: ": Comienza con un cuadrado<br/>Pon un triángulo a la derecha del cuadrado<br/>Pon
+          un paralelogramo debajo del cuadrado<br/>Pon un triángulo a la derecha del
+          paralelogramo"
       2-3 Algorithms Multi 2:
         Multiple Choice: Opción Múltiple
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Comienza
@@ -1841,9 +174,6 @@ es-MX:
           triángulo debajo del cuadrado
         Which image does <em>not</em> follow this algorithm?: "¿Qué imagen <em>no</em>
           sigue este algoritmo?"
-      2-3 Binary Multi 1:
-        Multiple Choice: Opción Múltiple
-        Which program makes this image?: "¿Cuál programa hace esta imagen?"
       2-3 Conditionals Multi 1:
         According to the rules of the game, which set of cards is scored correctly?: Según
           las reglas del juego ¿Qué conjunto de cartas tiene la puntuación correcta?
@@ -1868,6 +198,8 @@ es-MX:
         Which image-program combo does not contain mistakes?: "¿Qué combinación imagen-programa
           no tiene errores?"
       2-3 artist debug multi 1:
+        Artist Debugging Multiple Choice 1: Depuración del Artista - Opción múltiple
+          1
         What would you need to fix to make this a finished circle?: "¿Que necesitarás
           para hacer de esto un círculo terminado?"
       2-3 artist functions multi 1:
@@ -1883,10 +215,12 @@ es-MX:
         Which shape is made by this program?: "¿Qué figura se forma a partir de este
           programa?"
       2-3 bee conditionals multi 1:
+        Bee Conditionals Multiple Choice 1: Condicionales de la Abeja - Opción múltiple
+          1
         Which comparison below is true?: "¿Qué comparación de más abajo es verdadera?"
-      2-3 bee conditionals multi 2:
-        Choose the best blocks.: Escoge el mejor bloque.
       2-3 bee conditionals multi 3:
+        Bee Conditionals Multiple Choice 2: Condicionales de la Abeja - Opción múltiple
+          2
         Choose the best blocks.: Escoge el mejor bloque.
       2-3 bee loops multi 1:
         Bee Loops Multiple Choice One: Bucles de la Abeja - Opción Múltiple Uno
@@ -1905,9 +239,9 @@ es-MX:
           de estos ítems es más difícil de describir con un algoritmo?"
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: "¿Eugene es una _____ ciudad."
-        0: "? Aquí hay tres frases. ¿Cuál de las plantillas que están debajo abstrae
-          correctamente de tal forma que las tres frases coincidan con el mismo patrón
-          que la plantilla?"
+        0: "? Aquí hay tres oraciones. ¿Cuál de las plantillas que están debajo realiza
+          la abstracción correcta de tal forma que las tres coincidan con el mismo
+          patrón que la plantilla?"
         1: ": Aquí hay tres frases. ¿Cuál de las plantillas que están debajo abstrae
           correctamente de tal forma que las tres frases coincidan con el mismo patrón
           que la plantilla?"
@@ -1939,6 +273,10 @@ es-MX:
         Your favorite food: Tu comida favorita
         Your parent's credit card number: El número de tarjeta de crédito de tus padres
       4-5 Internet Multi 1:
+        23.23.224.106: 23.23.224.106
+        54.209.61.132: 54.209.61.132
+        54.243.71.82: 54.243.71.82
+        64.14.68.10: 64.14.68.10
         Multiple Choice: Opción Múltiple
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "¿Al
           intentar iniciar sesión en code.org, a qué dirección IP es más probable
@@ -1948,30 +286,35 @@ es-MX:
           el DNS te lleva a la página en la dirección IP 100.42.50.110, ¿en cuál sitio
           web estás?
         Multiple Choice: Opción Múltiple
+        code.org: code.org
+        csisfun.com: csisfun.com
+        khanacademy.org: khanacademy.org
+        thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        0: "? Mosca en la leche, <br/> Vete, vuela, vete, <br/>Mosca en la leche,
-          <br/> Vete, vuela, vete, <br/> mosca en la leche, <br/> Vete, vuela, vete,
-          <br/> Saltear a mi Lou, querida."
-        1: ": Mosca en la leche, <br/> Vete, vuela, vete, <br/>Mosca en la leche,
-          <br/> Vete, vuela, vete, <br/> mosca en la leche, <br/> Vete, vuela, vete,
-          <br/> Saltear a mi Lou, mi querida."
-        Lou, Lou, skip to my Lou,: Lou, Lou, saltear a mi Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou,
-          Lou, saltear a mi Lou, <br/>Lou, Lou, saltear a mi Lou, <br/>Lou, Lou, saltear
-          a mi Lou, <br/>saltear a mi Lou, mi querida.
-        2: "? Lou, Lou, saltear a mi Lou, <br/> Lou, Lou, saltear a mi Lou, <br/>
-          Lou, Lou, saltear a mi Lou, <br/> Saltear a mi Lou, mi querida. <br/> <br/><p>Mosca
-          en la leche, <br/> Vete, vuela, vete,"
-        3: ": Lou, Lou, saltear a mi Lou, <br/> Lou, Lou, saltear a mi Lou, <br/>
-          Lou, Lou, saltear a mi Lou, <br/> Saltear a mi Lou, mi querida. <br/> <br/><p>Mosca
-          en la leche, <br/> Vete, vuela, vete,"
+        0: "? Una mosca está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca
+          está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca está en la leche,
+          <br/>fuera, mosca, fuera, <br/> Brinca hasta mi amor, mi querido."
+        1: ": Una mosca está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca
+          está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca está en la leche,
+          <br/>fuera, mosca, fuera, <br/> Brinca hasta mi amor, mi querido."
+        Lou, Lou, skip to my Lou,: Mi amor, mi amor, brinda hasta mi amor,
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Mi
+          amor, mi amor, brinda hasta mi amor, <br/>Mi amor, mi amor, brinda hasta
+          mi amor, <br/>Mi amor, mi amor, brinda hasta mi amor, <br/>Brinca hasta
+          mi amor, mi querido.
+        2: "? Mi amor, mi amor, brinca hasta mi amor, <br/>Mi amor, mi amor, brinca
+          hasta mi amor, <br/>Mi amor, mi amor, brinca hasta mi amor, <br/>Brinca
+          hasta mi amor, mi querido.<br/><br/><p>Una mosca está en la leche, <br/>fuera,
+          mosca, fuera,"
+        3: ": Mi amor, mi amor, brinca hasta mi amor, <br/>Mi amor, mi amor, brinca
+          hasta mi amor, <br/>Mi amor, mi amor, brinca hasta mi amor, <br/>Brinca
+          hasta mi amor, mi querido.<br/><br/><p>Una mosca está en la leche, <br/>fuera,
+          mosca, fuera,"
         Multiple Choice: Opción Múltiple
-        4: "? ¿Cuál es la parte más larga de esta canción que se puede definir como
-          el coro de tal forma que el coro se repita exactamente cada vez que se lo
-          llama?"
-        5: ": ¿Cuál es la parte más larga de esta canción que se puede definir como
-          el coro de tal forma que el coro se repita exactamente cada vez que se lo
-          llama?"
+        4: "? ¿Cuál es la parte más larga de esta canción que puedes definir como
+          el coro, de tal forma que se repita exactamente cada vez que se lo llama?"
+        5: ": ¿Cuál es la parte más larga de esta canción que puedes definir como
+          el coro, de tal forma que se repita exactamente cada vez que se lo llama?"
       4-5 Suncatchers Multi 1:
         Multiple Choice: Opción Múltiple
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: "¿Cuál
@@ -2002,119 +345,18 @@ es-MX:
       4-5 bee loops multi 1:
         Bee Loops Multiple Choice: Bucles de la Abeja - Opción Múltiple
         Which blocks will solve the puzzle?: "¿Qué bloques resolverán el puzzle?"
-      4-5 farmer loops multi 1:
-        Which blocks solve the puzzle?: "¿Qué bloque resuelve el rompecabezas?"
       4-5 maze conditionals multi 1:
         Maze Conditionals Multiple Choice: Condicionales del Laberinto - Opción Múltiple
         Which blocks solve the puzzle?: "¿Qué bloque resuelve el rompecabezas?"
       4-5 maze multi 1:
         Maze Multiple Choice: Laberinto - Opción Múltiple
         Which blocks solve the puzzle?: "¿Qué bloque resuelve el rompecabezas?"
-      CB_Question_3:
-        A: A
-        Y: true
-      CSD Prediction Header Size:
-        Question: Pregunta
-      CSD U3 Boolean MC:
-        title: Título
-      CSD U3 Boolean MC_2018:
-        title: Título
-      CSDU4 Screens Predict Multi:
-        About: Acerca de
-        Contact Us: Contáctanos
-      'CSP U4L04 Assessment 1 ':
-        Question: Pregunta
-      CSP Unit 1 Ch 1 MC binary to dec simple:
-        '0010': '0010'
-        '0101': '0101'
-        '0110': '0110'
-        '1010': '1010'
-      CSP Unit 1 Ch 1 MC binary to dec simple_2018:
-        '0010': '0010'
-        '0101': '0101'
-        '0110': '0110'
-        '1010': '1010'
-      CSP Unit 1 Ch 1 MC binary to dec simple_exam_prep:
-        '0010': '0010'
-        '0101': '0101'
-        '0110': '0110'
-        '1010': '1010'
-      CSP verify 18:
-        'No': 'No'
-        'Yes': Sí
-      CSPU5_predict_mc_whichOfTwoEvents:
-        title: Título
-      CSPU5_predict_onEvent_withWrongID:
-        Question: Pregunta
-        title: Título
-      CommuteAssess - loops 1 - block:
-        '10': '10'
-        '18': '18'
-        '3': '3'
-        '6': '6'
-      CommuteAssess - loops 1 - block B:
-        '10': '10'
-        '18': '18'
-        '3': '3'
-        '6': '6'
-      CommuteAssess - loops 1 - block_2018:
-        '10': '10'
-        '18': '18'
-        '3': '3'
-        '6': '6'
-      CommuteAssess - loops 1 - block_exam_prep:
-        '10': '10'
-        '18': '18'
-        '3': '3'
-        '6': '6'
-      CommuteAssess - loops 2 - block:
-        '0': '0'
-        '1': '1'
-        '10': '10'
-        '5': '5'
-        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
-          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
-          and over until the code is stopped manually'''
-        12: ': ''How many times will the word <span style="font-family: monospace;
-          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
-          be displayed when this code is run?'''
-      CommuteAssess - loops 2 - block_2018:
-        '0': '0'
-        '1': '1'
-        '10': '10'
-        '5': '5'
-        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
-          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
-          and over until the code is stopped manually'''
-        12: ': ''How many times will the word <span style="font-family: monospace;
-          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
-          be displayed when this code is run?'''
-      CommuteAssess - loops 2 - block_exam_prep:
-        '0': '0'
-        '1': '1'
-        '10': '10'
-        '5': '5'
-        11: ': ''<span style="font-family: monospace; border: solid 1px #dddddd; padding:
-          2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over
-          and over until the code is stopped manually'''
-        12: ': ''How many times will the word <span style="font-family: monospace;
-          border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span>
-          be displayed when this code is run?'''
-      Destroy me multi test:
-        description here: descripción aquí
-      ECSPD2 question:
-        Question: Pregunta
-        title: Título
       K-1 Artist 1 Multi 1:
         Multiple Choice: Opción Múltiple
         Which blocks solve this puzzle?: "¿Qué bloques resuelven este puzzle?"
       K-1 Artist 1 Multi 2:
         Multiple Choice: Opción Múltiple
         Which blocks draw the square?: "¿Qué bloques dibujan el cuadrado?"
-      K-1 Artist 2 Multi 1:
-        Multiple Choice: Opción Múltiple
-      K-1 Artist Loops Multi 1:
-        Multiple Choice: Opción Múltiple
       K-1 Bee 1 Multi 1:
         How many nectars is this?: "¿Cuánto néctar hay?"
         Multiple Choice: Opción Múltiple
@@ -2165,879 +407,1179 @@ es-MX:
       K-1 Word Search Multi 1:
         Multiple Choice: Opción Múltiple
         Which blocks spell "MOVE"?: ¿Cuáles bloques forman la palabra "MOVE"?
-      K-1 Word Search Multi 2:
-        Multiple Choice: Opción Múltiple
       K-1 Word Search Multi 3:
         Multiple Choice: Opción Múltiple
-        SET: SET
+        SET: ESTABLECER
         SOUTH: SUR
         SQUARE: CUADRADO
         Which word is spelled?: "¿Qué palabra se forma?"
-      Multi Define Funcs 1:
-        '3': '3'
-        y: true
-      Multi Define Funcs 2:
-        '3': '3'
-        y: true
-      Multi Define Funcs 3:
-        '5': '5'
-        '6': '6'
-        y: true
-      PDAlg Blocks Video:
-        Toolbox: Caja de Herramientas
-      PDAlg DR Multi 1:
-        Domain: Dominio
-        Name: Nombre
-        Range: Rango
-        0: "? The first step in the Design Recipe is to create a contract based on
-          the word problem. Which part of this contract has the student gotten wrong?"
-        1: ": The first step in the Design Recipe is to create a contract based on
-          the word problem. Which part of this contract has the student gotten wrong?"
-      PDAlg PreQ 1:
-        'No': 'No'
-        'Yes': Sí
-      PDAlg PreQ 2:
-        'No': 'No'
-        'Yes': Sí
-      PDAlg functional:
-        'No': 'No'
-      PDK5 Blockly Intro:
-        'Yes': Sí
-      PDK5 Classroom Culture:
-        'Yes': Sí
-      PDK5 Course Maps:
-        'Yes': Sí
-      PDK5 Course Overview:
-        'Yes': Sí
-      PDK5 Glossary:
-        Glossary: Glosario
-        'Yes': Sí
-      PDK5 Intro:
-        'No': 'No'
-        Welcome!: "¡Bienvenido!"
-        'Yes': Sí
-      PDK5 Teacher Dashboard:
-        Teacher Dashboard: Panel del docente
-        'Yes': Sí
-      PDK5 Test1:
-        Question: Pregunta
-        description here: descripción aquí
-        title: Título
-      PDK5 UVideo Overview:
-        'Yes': Sí
-      PDK5 Unplugged Intro:
-        'Yes': Sí
-      PS U3-bakertest:
-        description here: descripción aquí
-        title: Título
-      SG U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-      Submittable Multi:
-        blue: azul
-        green: verde
-        red: rojo
-      Test Contained Multi:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '4': '4'
-      U1L07 Assessment 1:
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-      U1L6 Assessment multiple choice:
-        '10': '10'
-        '12': '12'
-        '4': '4'
-        '6': '6'
-        '8': '8'
-      U1L6 Assessment multiple choice_2018:
-        '10': '10'
-        '12': '12'
-        '4': '4'
-        '6': '6'
-        '8': '8'
-      U1L8 Multiple Choice:
-        '10': '10'
-        '13': '13'
-        '14': '14'
-        '16': '16'
-        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
-          the x and y coordinate as separate numbers, what is the minimum number of
-          \ bits that you will need to encode a coordinate in that space?"
-        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
-          the x and y coordinate as separate numbers, what is the minimum number of
-          \ bits that you will need to encode a coordinate in that space?"
-      U1L8 Multiple Choice_2018:
-        '10': '10'
-        '13': '13'
-        '14': '14'
-        '16': '16'
-        17: "? You have a coordinate grid that is 96 x 96. Assuming that you encode
-          the x and y coordinate as separate numbers, what is the minimum number of
-          \ bits that you will need to encode a coordinate in that space?"
-        18: ": You have a coordinate grid that is 96 x 96. Assuming that you encode
-          the x and y coordinate as separate numbers, what is the minimum number of
-          \ bits that you will need to encode a coordinate in that space?"
-      'U2L06 - MC: Which is an MST?':
-        0: ': "<p>The images below all show the same map (or graph) but have different
-          paths between the points highlighted.</p>\n<p>Please choose the image that
-          is highlighting a Minimum Spanning Tree for the map. </p>\n<p>NOTE: The
-          “distance” between points is depicted by the number of line segments connecting
-          any two points.</p> \n<img src=''https://images.code.org/2d7f0372e3fc8a4b128ee1021347e211-image-1433800100730.png''>"'
-        A: A
-        B: B
-        C: C
-        D: D
-        E: E
-      U2L08 Assessment 1:
-        '11': '11'
-        '5': '5'
-        '6': '6'
-        '8': '8'
-        '9': '9'
-      U2L13 Assessment4:
-        '26': '26'
-      U2L13 Assessment4_2018:
-        '26': '26'
-      U2L14 Assessment3:
-        'false': falso
-        'true': verdadero
-      U2L19 multichoice 13 MOD 17:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
-      U2L19 multichoice 13 MOD 17_2018:
-        '0': '0'
-        '13': '13'
-        '17': '17'
-        '4': '4'
-      'U2L19 mutlichoice ':
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
-      U2L19 mutlichoice 20 mod 15:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
-      U2L19 mutlichoice 20 mod 15_2018:
-        '0': '0'
-        '1.5': '1.5'
-        '15': '15'
-        '20': '20'
-        '5': '5'
-      U2L3 Assessment 3:
-        Invent an Addressing Protocol: Crear un protocolo de direccionamiento
-      U3L07 - MC remove line of code loops:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-      U3L07 - MC remove line of code loops_2018:
-        '1': '1'
-        '14': '14'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-      U3L13 - Making Predications MC:
-        0: '? "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
-          you are learning to program you will encounter more and more new features
-          of a language and be naturally curious about how things work.  Research
-          has shown that when you encounter a new piece of code or new situation,
-          you learn faster by simply making a prediction about what will happen before
-          you run the program for the first time.  \n</p><p>Making a prediction forces
-          you to study the code and use your intuitions based on what you already
-          know. Even experienced programmers might disagree about what a piece of
-          code would do!  So making a prediction is not like some sort of test about
-          how smart you are.  <strong>By making a prediction first, when you run the
-          code you learn so much more whether you were right, wrong or somewhere in
-          between.  You construct a stronger mental model for how code works than
-          if you just ran the program to see what happened.</strong></p>\n<p>  So
-          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
-          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
-          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
-          that both buttons still have the default IDs of \"id\". You will need to
-          fix this because we know it causes a warning message.  But it turns out
-          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
-          do you think will happen with this code is run?</strong></p>"'
-        1: ': "<h1>Make a prediction - Learning to Code Better, Faster</h1>\n<p>As
-          you are learning to program you will encounter more and more new features
-          of a language and be naturally curious about how things work.  Research
-          has shown that when you encounter a new piece of code or new situation,
-          you learn faster by simply making a prediction about what will happen before
-          you run the program for the first time.  \n</p><p>Making a prediction forces
-          you to study the code and use your intuitions based on what you already
-          know. Even experienced programmers might disagree about what a piece of
-          code would do!  So making a prediction is not like some sort of test about
-          how smart you are.  <strong>By making a prediction first, when you run the
-          code you learn so much more whether you were right, wrong or somewhere in
-          between.  You construct a stronger mental model for how code works than
-          if you just ran the program to see what happened.</strong></p>\n<p>  So
-          let''s try it...</p>\n<h1> What do you think will happen?</h1>\n<p><img
-          src=\"https://images.code.org/34f6a627f0d62b6dc015c9e318372de9-image-1444076081470.png\"
-          align=right>Here is a piece of code with two buttons and two event handlers.  Notice
-          that both buttons still have the default IDs of \"id\". You will need to
-          fix this because we know it causes a warning message.  But it turns out
-          the program can still run and it does do <i>something.</i></p>\n<p><strong>What
-          do you think will happen with this code is run?</strong></p>"'
-        description here: descripción aquí
-      U3L30 Assessment1:
-        '6': '6'
-        '7': '7'
-        '8': '8'
-      U3L30 Assessment2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-      U3L30 Assessment3:
-        '19': '19'
-        '20': '20'
-        '21': '21'
-      U4L01 Multiple Choice:
-        right: derecha
-      U4L02 Multiple Choice:
-        right: derecha
-      U4L03 Multiple Choice:
-        right: derecha
-      U4L04 Multiple Choice:
-        right: derecha
-      U4L05 Multiple Choice:
-        right: derecha
-      U4L06 Multiple Choice:
-        right: derecha
-      U4L06 Reflection Q 1:
-        Question: Pregunta
-        random: al azar
-      U4L07 Multiple Choice:
-        right: derecha
-      U4L08 Multiple Choice:
-        right: derecha
-      U4L09 Multiple Choice:
-        right: derecha
-      U4L10 Multiple Choice:
-        right: derecha
-      U4L11 Multiple Choice:
-        right: derecha
-      U4L12 Multiple Choice:
-        right: derecha
-      U4L13 Multiple Choice:
-        right: derecha
-      U4L14 Multiple Choice:
-        right: derecha
-      U4L15 Multiple Choice:
-        right: derecha
-      U4L16 Multiple Choice:
-        right: derecha
-      U4L17 Multiple Choice:
-        right: derecha
-      U4L18 Multiple Choice:
-        right: derecha
-      U4L19 Multiple Choice:
-        right: derecha
-      U4L20 Multiple Choice:
-        right: derecha
-      U4L21 Multiple Choice:
-        right: derecha
-      U4L22 Multiple Choice:
-        right: derecha
-      U4L23 Multiple Choice:
-        right: derecha
-      U4L24 Multiple Choice:
-        right: derecha
-      U4LXX Multiple Choice:
-        right: derecha
-      U5 assess_weight_v2:
-        Question: Pregunta
-        description here: descripción aquí
-        title: Título
-      Warmup questions:
-        random: al azar
-      commute assess - loops 4 - block:
-        '0': '0'
-        '1': '1'
-        '10': '10'
-        '5': '5'
-        '50': '50'
       courseC_multi_artist_prog6_predict1:
-        Incorrect.  The artist draws a square.: Incorrecto.  El artista dibuja un
-          cuadrado.
-        Look carefully at the code below.  What will happen when you click "Run"?: Mire
-          cuidadosamente el siguiente código.  ¿Qué pasa cuando se presiona  "Ejecutar"?
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The artist draws a square.: Incorrecto. El artista dibuja un cuadrado.
+        Look carefully at the code below.  What will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
         The artist draws a square.: El artista dibuja un cuadrado.
+        The artist will draw a single line.: El artista dibujará una sola línea.
+        The artist will draw a triangle with three equal sides.: El artista dibujará
+          un triángulo con tres lados iguales.
       courseC_multi_artist_prog6_predict1_2018:
-        Incorrect.  The artist draws a square.: Incorrecto.  El artista dibuja un
-          cuadrado.
-        Look carefully at the code below.  What will happen when you click "Run"?: Mire
-          cuidadosamente el siguiente código.  ¿Qué pasa cuando se presiona  "Ejecutar"?
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The artist draws a square.: Incorrecto. El artista dibuja un cuadrado.
+        Look carefully at the code below.  What will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
         The artist draws a square.: El artista dibuja un cuadrado.
+        The artist will draw a single line.: El artista dibujará una sola línea.
+        The artist will draw a square.: El artista dibujará un cuadrado.
+        The artist will draw a triangle with three equal sides.: El artista dibujará
+          un triángulo con tres lados iguales.
       courseC_multi_harvester_loops11_predict1:
         '12': '12'
         '15': '15'
         '4': '4'
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrecto.
+          El granjero recogerá 4 calabazas en cada uno de los 3 loops. 4 veces 3 es
+          12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Mira
+          el siguiente código con atención. ¿Cuántas calabazas recogerá la granjera
+          luego de que hagas clic en "Ejecutar"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: El
+          granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4 veces 3 es
+          12!
       courseC_multi_harvester_loops11_predict1_2018:
         '12': '12'
         '15': '15'
         '4': '4'
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: Incorrecto.
+          El granjero recogerá 4 calabazas en cada uno de los 3 loops. 4 veces 3 es
+          12!
+        Look closely at the code below. How many pumpkins will the farmer collect after you click "Run"?: Mira
+          el siguiente código con atención. ¿Cuántas calabazas recogerá la granjera
+          luego de que hagas clic en "Ejecutar"?
+        The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!: El
+          granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4 veces 3 es
+          12!
+      courseC_multi_maze_debugging8_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrecto. Scrat
+          va por el camino equivocado luego de su último giro.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrecto.
+          Dará unos pasos de más, porque Scrat giró en la dirección equivocada.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Mira
+          el siguiente código con atención. ¿Cuál es el primer error que hará que
+          el programa falle? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat da muy
+          pocos pasos y no llega hasta la bellota.
+        Scrat will go the wrong way after his final turn.: Scrat irá en la dirección
+          equivocada luego de su último giro.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'El
+          primer error es que Scrat va por el camino equivocado después de su último
+          giro. '
+        The program won't fail. Scrat will get to the acorn.: El programa no fallará.
+          Scrat llegará hasta la bellota.
+      courseC_multi_maze_debugging8_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Scrat goes the wrong way after his final turn.: Incorrecto. Scrat
+          va por el camino equivocado luego de su último giro.
+        Incorrect. Taking one too few steps happens after Scrat turns the wrong way.: Incorrecto.
+          Dará unos pasos de más, porque Scrat giró en la dirección equivocada.
+        'Look closely at the code below.  What is the first bug that will make this program fail? ': 'Mira
+          el siguiente código con atención. ¿Cuál es el primer error que hará que
+          el programa falle? '
+        Scrat takes one too few steps and ends up short of the acorn.: Scrat da muy
+          pocos pasos y no llega hasta la bellota.
+        Scrat will go the wrong way after his final turn.: Scrat irá en la dirección
+          equivocada luego de su último giro.
+        'The first error is that Scrat goes the wrong way after his final turn. ': 'El
+          primer error es que Scrat va por el camino equivocado después de su último
+          giro. '
+        The program won't fail. Scrat will get to the acorn.: El programa no fallará.
+          Scrat llegará hasta la bellota.
+      courseC_multi_maze_programming8_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrecto. En este
+          código, el pájaro llega perfectamente hasta el cerdo.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Lee
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The bird will end up one step short of the pig.: El pájaro quedará a un paso
+          del cerdo.
+        The bird will make it to the pig.: El pájaro logrará llegar hasta el cerdo.
+        The bird will run into the TNT.: El pájaro chocará con el TNT.
+        This code gets the bird perfectly to the pig.: En este código, el pájaro llega
+          perfectamente hasta el cerdo.
+      courseC_multi_maze_programming8_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. This code gets the bird perfectly to the pig.: Incorrecto. En este
+          código, el pájaro llega perfectamente hasta el cerdo.
+        Read through the code below very carefully.  What will happen when you click "Run"?: Lee
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The bird will end up one step short of the pig.: El pájaro quedará a un paso
+          del cerdo.
+        The bird will make it to the pig.: El pájaro logrará llegar hasta el cerdo.
+        The bird will run into the TNT.: El pájaro chocará con el TNT.
+        This code gets the bird perfectly to the pig.: En este código, el pájaro llega
+          perfectamente hasta el cerdo.
       courseC_multi_starWars_predict1:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 se moverá 5 veces
+          y recogerá toda la chatarra
+        BB-8 will move only one space: BB-8 se moverá solo un espacio
+        BB-8 will not move.: BB-8 no se moverá.
+        Correct!: "¡Correcto!"
         I don't know: No lo sé
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrecto.
+          El bloque repetir hará que BB-8 avance 5 veces.
+        The repeat block will make the BB-8 move forward 5 times.: El bloque repetir
+          hará que BB-8 avance 5 veces.
+        What do you think will happen when you click "Run"?: ¿Qué crees que sucederá
+          cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018:
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 se moverá 5 veces
+          y recogerá toda la chatarra
+        BB-8 will move only one space: BB-8 se moverá solo un espacio
+        BB-8 will not move.: BB-8 no se moverá.
+        Correct!: "¡Correcto!"
         I don't know: No lo sé
+        Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrecto.
+          El bloque repetir hará que BB-8 avance 5 veces.
+        The repeat block will make the BB-8 move forward 5 times.: El bloque repetir
+          hará que BB-8 avance 5 veces.
+        What do you think will happen when you click "Run"?: ¿Qué crees que sucederá
+          cuando hagas clic en "Ejecutar"?
+      courseC_multi_starWars_predict2:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 recogerá
+          toda la chatarra sin problemas.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8
+          no irá lo suficientemente lejos en el primer bucle para poder recoger toda
+          la chatarra.
+        BB-8 will travel too far in the first loop.: BB-8 irá demasiado lejos en el
+          primer bucle.
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrecto.
+          El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando necesita
+          avanzar 3 espacios.
+        Look closely at the code below.  What will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: El
+          primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando necesita avanzar
+          3 espacios.
+      courseC_multi_starWars_predict2_2018:
+        BB-8 will collect all of the scrap metal with no problems.: BB-8 recogerá
+          toda la chatarra sin problemas.
+        BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8
+          no irá lo suficientemente lejos en el primer bucle para poder recoger toda
+          la chatarra.
+        BB-8 will travel too far in the first loop.: BB-8 irá demasiado lejos en el
+          primer bucle.
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: Incorrecto.
+          El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando necesita
+          avanzar 3 espacios.
+        Look closely at the code below.  What will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces.: El
+          primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando necesita avanzar
+          3 espacios.
       courseD_multi_artist_binary8_predict1:
         A: A
         B: B
         C: C
+        Correct!: "¡Correcto!"
         D: D
+        Incorrect.: Incorrecto.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Observa
+          de cerca el siguiente código. ¿Qué imagen creará si haces clic en "Ejecutar"?
       courseD_multi_artist_binary8_predict1_2018:
         A: A
         B: B
         C: C
+        Correct!: "¡Correcto!"
         D: D
+        Incorrect.: Incorrecto.
+        Take a close look at the code below.  Which image will it create after you click "Run"?: Observa
+          de cerca el siguiente código. ¿Qué imagen creará si haces clic en "Ejecutar"?
       courseD_multi_artist_nestedLoops9_predict1:
         A: A
         B: B
         C: C
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrecto.  El
+          loop interior hace un pentágono, y el loop exterior repite un círculo 4
+          veces.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Observa
+          bien el siguiente código. ¿Qué dibujo hará el programa si haces clic en
+          "Ejecutar"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: El
+          loop interior hace un pentágono, y el loop exterior repite un círculo 4
+          veces.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         A: A
         B: B
         C: C
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: Incorrecto.  El
+          loop interior hace un pentágono, y el loop exterior repite un círculo 4
+          veces.
+        Take a good look at the code below.  Which drawing will this program make when you click "Run"?: Observa
+          bien el siguiente código. ¿Qué dibujo hará el programa si haces clic en
+          "Ejecutar"?
+        The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.: El
+          loop interior hace un pentágono, y el loop exterior repite un círculo 4
+          veces.
+      courseD_multi_bee_conditionals1_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrecto.
+          El bloque 'si hay flor' condiciona que la abeja intentará obtener néctar
+          solamente si hay una flor debajo de la nube.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: La
+          abeja ira a la nube y tratará de conseguir néctar solo si hay una flor debajo.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'La
+          abeja se moverá a la nube y no hará nada, pase lo que pase. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'La
+          abeja se moverá a la nube y tratará de obtener el néctar, pase lo que pase. '
+        0: '? La nube está bloqueando la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja necesitará obtener el néctar una vez. Si
+          no hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+          con cuidado. ¿Qué crees que sucederá si haces clic en "Ejecutar"?'
+        1: ': La nube está bloqueando la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja necesitará obtener el néctar una vez. Si
+          no hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+          con cuidado. ¿Qué crees que sucederá si haces clic en "Ejecutar"?'
+      courseD_multi_bee_conditionals1_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrecto.
+          El bloque 'si hay flor' condiciona que la abeja intentará obtener néctar
+          solamente si hay una flor debajo de la nube.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: La
+          abeja ira a la nube y tratará de conseguir néctar solo si hay una flor debajo.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'La
+          abeja se moverá a la nube y no hará nada, pase lo que pase. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'La
+          abeja se moverá a la nube y tratará de obtener el néctar, pase lo que pase. '
+        0: '? La nube está bloqueando la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja necesitará obtener el néctar una vez. Si
+          no hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+          con cuidado. ¿Qué crees que sucederá si haces clic en "Ejecutar"?'
+        1: ': La nube está bloqueando la vista. Podría haber una flor debajo de esta
+          nube. Si hay una flor, la abeja necesitará obtener el néctar una vez. Si
+          no hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+          con cuidado. ¿Qué crees que sucederá si haces clic en "Ejecutar"?'
+      courseD_multi_bee_conditionals7_predict2:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrecto.
+          Incorrecto. El bloque 'si hay flor' permite a la abeja tomar néctar de cada
+          flor y miel de cada panal..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrecto.
+          El bloque `si en la flor` permite a la abeja tomar el néctar de cada flor
+          y la miel de cada panal.
+        0: ': ''Mira el siguiente código con atención. ¿Qué crees que sucederá si
+          haces clic en "Ejecutar"? Recuerda que sólo habrá *un* panal o *una* flor
+          detrás de cada nube.'''
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: El
+          bloque `si en la flor` permite a la abeja tomar el néctar de cada flor y
+          la miel de cada panal.
+        The bee will get nectar at each flower and honey at each honeycomb.: La abeja
+          obtendrá el néctar de cada flor, y la miel, de cada panal.
+        The bee will try to get honey from both flowers and honeycomb.: La abeja tratará
+          de obtener la miel de las flores y del panal.
+        The bee will try to get nectar from both flowers and honeycomb.: La abeja
+          tratará de obtener el néctar de las flores y del panal.
+      courseD_multi_bee_conditionals7_predict2_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrecto.
+          Incorrecto. El bloque 'si hay flor' permite a la abeja tomar néctar de cada
+          flor y miel de cada panal..
+        Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrecto.
+          El bloque `si en la flor` permite a la abeja tomar el néctar de cada flor
+          y la miel de cada panal.
+        0: ': ''Mira el siguiente código con atención. ¿Qué crees que sucederá si
+          haces clic en "Ejecutar"? Recuerda que sólo habrá *un* panal o *una* flor
+          detrás de cada nube.'''
+        The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: El
+          bloque `si en la flor` permite a la abeja tomar el néctar de cada flor y
+          la miel de cada panal.
+        The bee will get nectar at each flower and honey at each honeycomb.: La abeja
+          obtendrá el néctar de cada flor, y la miel, de cada panal.
+        The bee will try to get honey from both flowers and honeycomb.: La abeja tratará
+          de obtener la miel de las flores y del panal.
+        The bee will try to get nectar from both flowers and honeycomb.: La abeja
+          tratará de obtener el néctar de las flores y del panal.
+      courseD_multi_bee_nestedLoops2_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrecto.
+          La abeja enlaza la acción en bucle de avanzar y recoger el néctar, lo que
+          permite resolver el desafío.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Mira
+          los bucles anidados a continuación. ¿Qué sucederá si haces clic en "Ejecutar"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: La
+          abeja enlaza la acción en bucle de avanzar y recoger el néctar, lo que permite
+          resolver el desafío.
+        The bee will get all of the nectar.: La abeja recogerá todo el néctar.
+        The bee will get only 2 units of nectar.: La abeja recogerá solo 2 unidades
+          de néctar.
+        The bee will move forward and get nectar only one time.: La abeja avanzará
+          y obtendrá el néctar solo una vez.
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: Incorrecto.
+          La abeja enlaza la acción en bucle de avanzar y recoger el néctar, lo que
+          permite resolver el desafío.
+        Look closely at the nested loops below.  What will happen when you click "Run"?: Mira
+          los bucles anidados a continuación. ¿Qué sucederá si haces clic en "Ejecutar"?
+        The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.: La
+          abeja enlaza la acción en bucle de avanzar y recoger el néctar, lo que permite
+          resolver el desafío.
+        The bee will get all of the nectar.: La abeja recogerá todo el néctar.
+        The bee will get only 2 units of nectar.: La abeja recogerá solo 2 unidades
+          de néctar.
+        The bee will move forward and get nectar only one time.: La abeja avanzará
+          y obtendrá el néctar solo una vez.
       courseD_multi_bee_nestedLoops9_predict2:
         '12': '12'
         '4': '4'
         '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        13: "? Incorrecto. La abeja recoge 2 néctares en un bucle de avance, y luego
+          2 néctares en un bucle hacia abajo. Esto está todo dentro de otro bucle
+          que ocurre dos veces. ¡4 veces 2 es 8!"
+        14: ": Incorrecto. La abeja recoge 2 néctares en un bucle de avance, y luego
+          2 néctares en un bucle hacia abajo. Esto está todo dentro de otro bucle
+          que ocurre dos veces. ¡4 veces 2 es 8!"
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Mira
+          el código a continuación. ¿Cuánta miel hará la abeja si haces clic en "Ejecutar"?
+        15: "? La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
+          en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
+          dos veces. ¡4 veces 2 es 8!"
+        16: ": La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
+          en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
+          dos veces. ¡4 veces 2 es 8!"
       courseD_multi_bee_nestedLoops9_predict2_2018:
         '12': '12'
         '4': '4'
         '8': '8'
-        13: "? Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        14: ": Incorrect. The bee collects 2 nectar in a loop moving forward, then
-          2 nectar in a loop down.  This is all inside of another loop that happens
-          twice. 4 times 2 is 8!"
-        15: "? The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
-        16: ": The bee collects 2 nectar in a loop moving forward, then 2 nectar in
-          a loop down.  This is all inside of another loop that happens twice. 4 times
-          2 is 8!"
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        13: "? Incorrecto. La abeja recoge 2 néctares en un bucle de avance, y luego
+          2 néctares en un bucle hacia abajo. Esto está todo dentro de otro bucle
+          que ocurre dos veces. ¡4 veces 2 es 8!"
+        14: ": Incorrecto. La abeja recoge 2 néctares en un bucle de avance, y luego
+          2 néctares en un bucle hacia abajo. Esto está todo dentro de otro bucle
+          que ocurre dos veces. ¡4 veces 2 es 8!"
+        Look closely at the code below. How much honey will the bee make when you click "Run"?: Mira
+          el código a continuación. ¿Cuánta miel hará la abeja si haces clic en "Ejecutar"?
+        15: "? La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
+          en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
+          dos veces. ¡4 veces 2 es 8!"
+        16: ": La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
+          en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
+          dos veces. ¡4 veces 2 es 8!"
+      courseD_multi_collector_debugging10_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square.: Incorrecto.
+          Esto fue parcialmente correcto, pues la abeja tomó el camino equivocado
+          al tratar de hacer un cuadrado.
+        Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: Incorrecto.
+          Esto es en parte correcto, pero el bucle no se ejecuta el tiempo suficiente
+          para obtener todo el tesoro.
+        Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.: Laurel
+          gira en la dirección equivocada *y* el bucle no se ejecuta el tiempo suficiente
+          como para que Laurel obtenga todo el tesoro.
+        Laurel will turn the wrong way when making a square.: Laurel girará en la
+          dirección incorrecta al tratar de hacer un cuadrado.
+        0: ': ''Mira el siguiente código con atención. ¿Por qué Laurel no recogerá
+          todo el tesoro cuando hagas clic en "Ejecutar"? Advertencia: es una pregunta
+          difícil, ¡asegúrate de leer todas las opciones antes de responder!"'
+        'The loop does not run long enough for Laurel to get to all of the treasure. ': 'El
+          bucle no se ejecuta el tiempo suficiente como para que Laurel obtenga todo
+          el tesoro. '
+      courseD_multi_farmer_condLoops9_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+          varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+          No recogerá la calabaza.
+        1: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+          varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+          No recogerá la calabaza.
+        Incorrect. There is no code here for collecting the pumpkin.: Incorrecto.
+          Aquí no hay ningún código para recoger la calabaza.
+        Take a close look at the code below.  What will happen after you click "Run"?: Observa
+          el siguiente código con atención. ¿Qué sucederá si haces clic en "Ejecutar"?
+        2: "? En este código, la cosechadora hará un patrón de escalones varias veces
+          y recogerá la mayor cantidad de maíz o lechuga que encuentre. No recogerá
+          la calabaza."
+        3: ": En este código, la cosechadora hará un patrón de escalones varias veces
+          y recogerá la mayor cantidad de maíz o lechuga que encuentre. No recogerá
+          la calabaza."
+        The harvester will collect all of the crops, except the pumpkin.: La cosechadora
+          recogerá todos los cultivos, excepto la calabaza.
+        The harvester will collect all of the crops.: La cosechadora recogerá todos
+          los cultivos.
+        The harvester will not collect any of the crops with the path she is taking.: La
+          cosechadora no recogerá cultivos en el camino que está tomando.
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. En este código, la cosechadora hará un patrón de escalones
+          varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+          No recogerá la calabaza."
+        1: ": Incorrecto. En este código, la cosechadora hará un patrón de escalones
+          varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
+          No recogerá la calabaza."
+        Incorrect. There is no code here for picking the pumpkin.: Incorrecto. Aquí
+          no hay ningún código para recoger la calabaza.
+        Take a close look at the code below.  What will happen after you click "Run"?: Observa
+          el siguiente código con atención. ¿Qué sucederá si haces clic en "Ejecutar"?
+        2: "? En este código, la cosechadora hará un patrón de escalones varias veces
+          y recolectará la mayor cantidad de maíz o lechuga que encuentre. No recogerá
+          la calabaza."
+        3: ": En este código, la cosechadora hará un patrón de escalones varias veces
+          y recolectará la mayor cantidad de maíz o lechuga que encuentre. No recogerá
+          la calabaza."
+        The harvester will collect all of the crops.: La cosechadora recogerá todos
+          los cultivos.
+        The harvester will not pick any of the crops with the path she is taking.: La
+          cosechadora no recogerá cultivos en el camino que está tomando.
+        The harvester will pick all of the crops, except the pumpkin.: La cosechadora
+          recogerá todos los cultivos, excepto la calabaza.
+      courseD_multi_farmer_ramp13:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. El bloque `recoger calabaza` está dentro del bucle, por
+          lo que la granjera intentará recoger calabazas en cada paso, en lugar de
+          hacerlo solo al final."
+        1: ": Incorrecto. El bloque `recoger calabaza` está dentro del bucle, por
+          lo que la granjera intentará recoger calabazas en cada paso, en lugar de
+          hacerlo solo al final."
+        The `pick pumpkin` block is inside the loop, so the farmer will try to pick pumpkins at each step, instead of just at the end.: El
+          bloque `recoger calabaza` está dentro del bucle, por lo que la granjera
+          intentará recoger calabazas en cada paso, en lugar de hacerlo solo al final.
+        The farmer will try to pick pumpkins at each square, but won't ever make it to the pumpkin.: La
+          granjera intentará recoger las calabazas en cada cuadrado, pero nunca se
+          acercará.
+        The farmer will walk four spaces, then try to pick one pumpkin.: La granjera
+          caminará cuatro espacios e intentará recoger una calabaza.
+        The farmer will walk to the end of the path and harvest the pumpkin.: La granjera
+          llegará al final del camino y cosechará las calabazas.
+      courseD_multi_farmer_while10_predict2:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrecto.
+          El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero no existe
+          un código para limpiar la tierra de la pila.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrecto. No
+          existe un código para limpiar la tierra de la pila.
+        Nothing.  This code will leave only level ground.: Nada. Este código solo
+          nivelará el suelo.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Observa
+          el código siguiente con atención. ¿Qué quedará al final de este desafío?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: El
+          bucle `mientras` podrá manejar cualquier tamaño de bucle, pero no existe
+          un código para limpiar la tierra de la pila.
+        This code will leave the holes completely untouched.: Este código dejará los
+          orificios completamente intactos.
+        This code will leave the pile completely untouched.: Este código dejará la
+          pila completamente intacta.
+      courseD_multi_farmer_while10_predict2_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: Incorrecto.
+          El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero no existe
+          un código para limpiar la tierra de la pila.
+        Incorrect. There is no code to remove dirt from the pile.: Incorrecto. No
+          existe un código para limpiar la tierra de la pila.
+        Nothing.  This code will leave only level ground.: Nada. Este código solo
+          nivelará el suelo.
+        Take a good look at the code below. What will be left at the end of this puzzle?: Observa
+          el código siguiente con atención. ¿Qué quedará al final de este desafío?
+        The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.: El
+          bucle `mientras` podrá manejar cualquier tamaño de bucle, pero no existe
+          un código para limpiar la tierra de la pila.
+        This code will leave the holes completely untouched.: Este código dejará los
+          orificios completamente intactos.
+        This code will leave the pile completely untouched.: Este código dejará la
+          pila completamente intacta.
+      courseD_multi_farmer_while4_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrecto.
+          La granjera removerá la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca
+        Look closely at the code below.  What will happen after you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        Nothing will happen.: No sucederá nada.
+        The farmer will never stop removing dirt.: La granjera nunca dejará de quitar
+          la tierra.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La
+          granjera quitará la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La
+          granjera quitará la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca.
+      courseD_multi_farmer_while4_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: Incorrecto.
+          La granjera removerá la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca
+        Look closely at the code below.  What will happen after you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        Nothing will happen.: No sucederá nada.
+        The farmer will never stop removing dirt.: La granjera nunca dejará de quitar
+          la tierra.
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone: La
+          granjera quitará la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca
+        The farmer will remove dirt as long as there is a pile, then stop when the pile is gone.: La
+          granjera quitará la tierra mientras exista una pila, y luego se detendrá
+          cuando la pila desaparezca.
+      courseD_multi_maze_until10_predict2:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        In this code, it looks for a right turn *before* it looks to see if it can go straight.  Because of this, the puzzle fails.: En
+          este código, busca un giro a la derecha *antes* de ver si puede ir derecho.
+          Debido a esto, el desafío falla.
+        0: "? Incorrecto. En este código, busca un giro a la derecha *antes* de ver
+          si puede ir derecho. Debido a esto, el desafío falla."
+        1: ": Incorrecto. En este código, busca un giro a la derecha *antes* de ver
+          si puede ir derecho. Debido a esto, el desafío falla."
+        2: "? Incorrecto. El zombie busca un giro a la derecha o un camino recto.
+          Nunca mira para girar a la izquierda, por lo que se atasca casi inmediatamente."
+        3: ": Incorrecto. El zombie busca un giro a la derecha o un camino recto.
+          Nunca mira para girar a la izquierda, por lo que se atasca casi inmediatamente."
+        Look carefully at the code below.  What will happen after you click "Run"?: Observa
+          el siguiente código con atención. ¿Qué sucederá luego de hacer clic en "Ejecutar"?
+        The zombie will make it to the sunflower.: El zombie llegará al girasol.
+        The zombie will turn right immediately and get stuck.: El zombie girará a
+          la derecha inmediatamente y quedará atascado.
+        The zombie will turn right on the first path and go around in circles forever.: El
+          zombie girará a la derecha en el primer camino y dará vueltas en círculos
+          sin parar.
+      courseD_multi_maze_until10_predict2_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        In this code, the zombie will pass the correct path and end up going back and forth forever.: En
+          este código, el zombie pasará el camino correcto, y no dejará de ir y venir.
+        Incorrect. The zombie will pass the correct path and end up going back and forth forever.: Incorrecto.
+          El zombie pasará el camino correcto, y no dejará de ir y venir.
+        Look carefully at the code below.  What will happen after you click "Run"?: Observa
+          el siguiente código con atención. ¿Qué sucederá luego de hacer clic en "Ejecutar"?
+        The zombie will make it to the sunflower.: El zombie llegará al girasol.
+        The zombie will pass the correct path and end up going back and forth forever.: El
+          zombie pasará el camino correcto, y no dejará de ir y venir.
+        The zombie will turn right on the first path and go around in circles forever.: El
+          zombie girará a la derecha en el primer camino y dará vueltas en círculos
+          sin parar.
+      courseD_multi_maze_until2_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. En este código, el pájaro avanza mientras haya un camino,
+          y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!"
+        1: ": Incorrecto. En este código, el pájaro avanza mientras haya un camino,
+          y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!"
+        2: "? Incorrecto. En este código, el pájaro avanza mientras haya un camino
+          seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+          al cerdo!"
+        3: ": Incorrecto. En este código, el pájaro avanza mientras haya un camino
+          seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+          al cerdo!"
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué crees que sucederá cuando hagas clic
+          en "Ejecutar"?
+        The bird will make it to the pig.: El pájaro logrará llegar hasta el cerdo.
+        The bird will move forward and run into the TNT.: El pájaro avanzará y chocará
+          con el TNT.
+        The bird will not move at all.: El pájaro no se moverá en lo absoluto.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: En
+          este código, el pájaro avanza mientras haya un camino, y luego gira a la
+          izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
+      courseD_multi_maze_until2_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. En este código, el pájaro avanza mientras haya un camino,
+          y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!"
+        1: ": Incorrecto. En este código, el pájaro avanza mientras haya un camino,
+          y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!"
+        2: "? Incorrecto. En este código, el pájaro avanza mientras haya un camino
+          seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+          al cerdo!"
+        3: ": Incorrecto. En este código, el pájaro avanza mientras haya un camino
+          seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
+          al cerdo!"
+        Take a close look at the code below.  What do you think will happen when you click "Run"?: Mira
+          el siguiente código con atención. ¿Qué crees que sucederá cuando hagas clic
+          en "Ejecutar"?
+        The bird will make it to the pig.: El pájaro logrará llegar hasta el cerdo.
+        The bird will move forward and run into the TNT.: El pájaro avanzará y chocará
+          con el TNT.
+        The bird will not move at all.: El pájaro no se moverá en lo absoluto.
+        The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.: En
+          este código, el pájaro avanza mientras haya un camino, y luego gira a la
+          izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
+      courseD_multi_scrat_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times.: Incorrecto.
+          Colocar el bloque 'avanzar' dentro del bloque 'repetir' hará que Scrat avance
+          tres veces.
+        Nothing. Scrat will not move at all.: Nada. Scrat no se moverá en absoluto.
+        0: '? Colocando el bloque "avanzar" dentro del bloque "repetir" hará que Scrat
+          avance tres veces. ¡Luego gira y avanza otra tres veces, llegando a la bellota!'
+        1: '? Colocando el bloque "avanzar" dentro del bloque "repetir" hará que Scrat
+          avance tres veces. ¡Luego gira y avanza otra tres veces, llegando a la bellota!'
+        Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!: Scrat
+          avanzará tres veces, girará, y luego avanzará tres veces más. ¡Así llegará
+          hasta la bellota!
+        Scrat will move forward, then turn and crash.: Scrat avanzará, y luego girará
+          y chocará.
+        This code uses a new block. What do you think will happen when you press "Run"?: Este
+          código usa un bloque nuevo. ¿Qué crees que pasará cuando presiones "Ejecutar"?
+      courseE_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press 'Run'?: Según
+          el siguiente código, ¿qué crees que sucederá si presionas "Ejecutar"?
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. Observa que el bucle `repetir 3` está dentro del bucle `repetir
+          4`. Esto significa que el dibujo será una forma de tres lados, dibujada
+          cuatro veces."
+        1: ": Incorrecto. Observa que el bucle `repetir 3` está dentro del bucle `repetir
+          4`. Esto significa que el dibujo será una forma de tres lados, dibujada
+          cuatro veces."
+        2: "? Incorrecto. Observa que hay un bloque `girar 90 grados` dentro del bucle
+          externo. Esto significa que el artista girará después de dibujar cada triángulo."
+        3: ": Incorrecto. Observa que hay un bloque `girar 90 grados` dentro del bucle
+          externo. Esto significa que el artista girará después de dibujar cada triángulo."
+        4: "? El bucle `repetir 3` está dentro del bucle `repetir 4`. Esto significa
+          que el artista dibujará un triángulo, y luego girará 90 grados un total
+          de 4 veces."
+        5: ": El bucle `repetir 3` está dentro del bucle `repetir 4`. Esto significa
+          que el artista dibujará un triángulo, y luego girará 90 grados un total
+          de 4 veces."
+        The artist will draw the triangle from the last level four times in a rotated pattern.: El
+          artista dibujará el triángulo del último nivel cuatro veces en un patrón
+          rotado.
+        The artist will draw the triangle from the last level four times in a straight line.: El
+          artista dibujará el triángulo del último nivel cuatro veces en una línea
+          recta.
+        The artist will draw three squares in a rotated pattern.: El artista dibujará
+          tres cuadrados en un patrón rotado.
+      courseE_multi_bee_functions_predict1:
+        Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that.: "¡Correcto!
+          No importa que haya una cantidad diferente de miel. La función está programada
+          para manejar eso."
+        0: '? Este es el mismo programa del último desafío, pero la cantidad de miel
+          por recoger en este desafío ha cambiado. ¿Qué sucederá cuando hagas clic
+          en "Ejecutar"?'
+        1: ': Este es el mismo programa del último desafío, pero la cantidad de miel
+          por recoger en este desafío ha cambiado. ¿Qué sucederá cuando hagas clic
+          en "Ejecutar"?'
+        I don't know.: No lo sé.
+        Incorrect. The function is programmed to handle any amount of honey over 0.: Incorrecto.
+          La función está programada para manejar cualquier cantidad de miel superior
+          a 0.
+        The bee will try to make too much honey.: La abeja intentará hacer demasiada
+          miel.
+        The bee won't make enough honey.: La abeja no hará miel suficiente.
+        The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0.: El
+          programa también trabajará para resolver este desafío. Está programado para
+          manejar cualquier cantidad de miel superior a 0.
+        The same program will work to solve this puzzle, too.: El mismo programa también
+          funcionará para resolver este desafío.
+      courseE_multi_farmer_functions11_predict:
+        Correct!: "¡Correcto!"
+        Incorrect.  The harvester does not call "check and pick" until she gets to the corn.: Incorrecto.
+          La cosechadora no llama a la función `revisar y escoger` hasta que llega
+          al maíz.
+        Incorrect. The harvester only makes one turn, and ends at the corn.: Incorrecto.
+          La cosechadora solo gira una vez y termina en el maíz.
+        Look at the functions defined below.  What will the harvester pick?: Observa
+          las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        The harvester will pick all of the pumpkins.: La cosechadora recogerá todas
+          las calabazas.
+        The harvester will pick the corn.: La cosechadora recogerá el maíz.
+        The harvester will pick the lettuce.: La cosechadora recogerá la lechuga.
+        The harvester will pick two pumpkins.: La cosechadora recogerá dos calabazas.
+      courseE_multi_farmer_functions11_predict_2018:
+        Correct!: "¡Correcto!"
+        Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce.: Incorrecto.
+          La cosechadora avanza hasta el final del camino, luego da la vuelta y retrocede
+          hasta que recoge la lechuga.
+        Look at the functions defined below.  What will the harvester pick?: Observa
+          las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
+        The harvester will pick all of the pumpkins.: La cosechadora recogerá todas
+          las calabazas.
+        The harvester will pick the corn.: La cosechadora recogerá el maíz.
+        The harvester will pick the lettuce.: La cosechadora recogerá la lechuga.
+        The harvester will pick two pumpkins.: La cosechadora recogerá dos calabazas.
       courseE_multi_farmer_predict1:
+        Correct!: "¡Correcto!"
         I don't know: No lo sé
-        0: "? Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        1: ": Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        2: "? The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
-        3: ": The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
-      courseE_multi_farmer_predict1_2018:
-        I don't know: No lo sé
-        0: "? Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        1: ": Incorrect. The `if` statement will help the farmer check if there is
-          a path ahead.  If there is, she will move forward.  Else, if there is no
-          path, she will pick as much lettuce as there is and then turn left."
-        2: "? The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
-        3: ": The `if` statement will help the farmer check if there is a path ahead.
-          \ If there is, she will move forward.  Else, if there is no path, she will
-          pick as much lettuce as there is and then turn left."
-      csd-post-survey-2018-topic-ai:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-cryptocurrency:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-cybersecurity:
-        Cybersecurity: Ciberseguridad
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-databases:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-datascience:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-gamedev:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-hardware:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-internet:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-mobile:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-parallel:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-programming:
-        'No': 'No'
-        'Yes': Sí
-      csd-post-survey-2018-topic-robotics:
-        'No': 'No'
-        Robotics: Robótica
-        'Yes': Sí
-      csd-post-survey-2018-topic-web:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2017-q64:
-        0: "? 'Do you know anyone outside of school who works in computer science?
-          (For example, working as a Computer Programmer, Software Developer, Web
-          Developer, Network Administrator, etc.) '"
-        1: ": 'Do you know anyone outside of school who works in computer science?
-          (For example, working as a Computer Programmer, Software Developer, Web
-          Developer, Network Administrator, etc.) '"
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2017-q64_2018:
-        0: "? 'Do you know anyone outside of school who works in computer science?
-          (For example, working as a Computer Programmer, Software Developer, Web
-          Developer, Network Administrator, etc.) '"
-        1: ": 'Do you know anyone outside of school who works in computer science?
-          (For example, working as a Computer Programmer, Software Developer, Web
-          Developer, Network Administrator, etc.) '"
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2017-q65:
-        I don't know: No lo sé
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2017-q65_2018:
-        I don't know: No lo sé
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-ai:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-cryptocurrency:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-cybersecurity:
-        Cybersecurity: Ciberseguridad
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-databases:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-datascience:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-gamedev:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-hardware:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-internet:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-mobile:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-parallel:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-programming:
-        'No': 'No'
-        'Yes': Sí
-      csp-post-survey-2018-topic-robotics:
-        'No': 'No'
-        Robotics: Robótica
-        'Yes': Sí
-      csp-post-survey-2018-topic-web:
-        'No': 'No'
-        'Yes': Sí
-      csp-pre-survey-2017-q40:
-        0: "? If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        1: ": If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        Other: Otros
-      csp-pre-survey-2017-q40_2018:
-        0: "? If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        1: ": If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        Other: Otros
-      csp_ap_exam_signup:
-        'No': 'No'
-        'Yes': Sí
-      csp_ap_previous_years:
-        'No': 'No'
-        'Yes': Sí
-      csp_ap_taking_ap_class:
-        'No': 'No'
-        'Yes': Sí
-      cspu5_assess1_fivemore:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
-      cspu5_assess1_fivemore_2018:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
-      cspu5_assess1_fivemore_exam_prep:
-        "-2": "-2"
-        '3': '3'
-        '5': '5'
-        '8': '8'
-      cspu5_assess1_flowchart:
-        '10': '10'
-        '5': '5'
-      cspu5_assess1_flowchart_2018:
-        '10': '10'
-        '5': '5'
-      cspu5_assess1_flowchart_exam_prep:
-        '10': '10'
-        '5': '5'
-      cspu5_assess1_increase:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
-      cspu5_assess1_increase_2018:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
-      cspu5_assess1_increase_exam_prep:
-        '10': '10'
-        '13': '13'
-        '5': '5'
-        '8': '8'
-      cspu5_assess2_addstrings:
-        result: resultado
-      cspu5_assess2_addstrings_2018:
-        result: resultado
-      cspu5_assess2_addstrings_exam_prep:
-        result: resultado
-      cspu5_assess2_combineString:
-        '10': '10'
-        '55': '55'
-        result: resultado
-      cspu5_assess2_combineString_2018:
-        '10': '10'
-        '55': '55'
-        result: resultado
-      cspu5_assess2_combineString_exam_prep:
-        '10': '10'
-        '55': '55'
-        result: resultado
-      cspu5_assess2_oldEnough:
-        '35': '35'
-        'false': falso
-        'true': verdadero
-      cspu5_assess2_oldEnough_2018:
-        '35': '35'
-        'false': falso
-        'true': verdadero
-      cspu5_assess2_oldEnough_exam_prep:
-        '35': '35'
-        'false': falso
-        'true': verdadero
-      cspu5_assess2_weight:
-        '125': '125'
-        '200': '200'
-        '30': '30'
-        '50': '50'
-        '75': '75'
-      cspu5_assess2_weight_2018:
-        '125': '125'
-        '200': '200'
-        '30': '30'
-        '50': '50'
-        '75': '75'
-      cspu5_assess2_weight_exam_prep:
-        '125': '125'
-        '200': '200'
-        '30': '30'
-        '50': '50'
-        '75': '75'
-      cspu5_assess3_array1:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
-      cspu5_assess3_array1_2018:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
-      cspu5_assess3_array1_exam_prep:
-        '10': '10'
-        '4': '4'
-        '7': '7'
-        '9': '9'
-      cspu5_assess3_array2:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_array2_2018:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_array2_exam_prep:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_array4:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
-      cspu5_assess3_array4_2018:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
-      cspu5_assess3_array4_exam_prep:
-        '0': '0'
-        '1': '1'
-        '2': '2'
-        '8': '8'
-      cspu5_assess3_listAppend:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
-      cspu5_assess3_listAppend_2018:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
-      cspu5_assess3_listAppend_exam_prep:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '6': '6'
-      cspu5_assess3_loopValue1:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-      cspu5_assess3_loopValue1_2018:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-      cspu5_assess3_loopValue1_exam_prep:
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-      cspu5_assess3_loopValue2:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue2_2018:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue2_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3_2018:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess3_loopValue3_exam_prep:
-        '0': '0'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-      cspu5_assess4_dataReturns:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
-      cspu5_assess4_dataReturns_2018:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
-      cspu5_assess4_dataReturns_exam_prep:
-        '10': '10'
-        '16': '16'
-        '3': '3'
-        '4': '4'
-        '9': '9'
-      cspu5_assess4_listOutput:
-        '17': '17'
-        '3': '3'
-        '42': '42'
-        '9': '9'
-      cspu5_assess4_listOutput_2018:
-        '17': '17'
-        '3': '3'
-        '42': '42'
-        '9': '9'
-      cspu5_assess4_listOutput_exam_prep:
-        '17': '17'
-        '3': '3'
-        '42': '42'
-        '9': '9'
-      msm variables multi 1:
-        '15': '15'
-        x: x
-      msm variables multi 10:
-        '17': '17'
-        x: x
-      msm variables multi 11:
-        '17': '17'
-        x: x
-      msm variables multi 12:
-        '17': '17'
-        x: x
-      msm variables multi 13:
-        '117': '117'
-        '17': '17'
-        x: x
-      msm variables multi 2:
-        '8': '8'
-      msm variables multi 3:
-        '5': '5'
-        x: x
-      msm variables multi 4:
-        '15': '15'
-        '3': '3'
-        '8': '8'
-      msm variables multi 5:
-        '3': '3'
-        '5': '5'
-      msm variables multi 6:
-        '1': '1'
-        '5': '5'
-        hello: hola
-      msm variables multi 7:
-        '3': '3'
-        x: x
-      msm variables multi 8:
-        '3': '3'
-        x: x
-      msm variables multi 9:
-        '5': '5'
-        '6': '6'
-        x: x
-      post-assessment survey q34:
-        Easy: Fácil
-        Hard: Difícil
-      pre-assessment survey q24:
-        'No': 'No'
-        'Yes': Sí
-      pre-assessment survey q26:
-        0: "? Have you ever participated in computer science activities or programs
-          somewhere outside of school hours (such as at an after school program, online,
-          or at a camp or summer program)?"
-        1: ": Have you ever participated in computer science activities or programs
-          somewhere outside of school hours (such as at an after school program, online,
-          or at a camp or summer program)?"
-        'No': 'No'
-        'Yes': Sí
-      pre-assessment survey q27:
-        0: "? If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        1: ": If yes, where did you previously take a computer science class or program
-          outside of school hours? If you have participated in more than one program,
-          please select the program where you have spent most of your time."
-        Other: Otros
-      pre-assessment survey q28:
-        '10': '10'
-        '11': '11'
-        '12': '12'
-        '8': '8'
-        '9': '9'
-        Other: Otros
-      pre-assessment survey q29:
-        Female: Mujer
-        Male: Varón
-        Other: Otros
-        Prefer not to answer: Prefiero no contestar
-      pre-assessment survey q30:
-        Asian: Asiático
-        Black or African American: Negro o Afroamericano
-        Other: Otros
-        Prefer not to answer: Prefiero no contestar
-        White: Blanco
-      sarah_test_maggie:
-        Question: Pregunta
-        test: prueba
-      sciPD PreQ 1:
-        'No': 'No'
-        'Yes': Sí
-      sciPD PreQ 2:
-        'No': 'No'
-        'Yes': Sí
-      sciPD class models 1:
-        Using Models in the Classroom: Utilizando Modelos en el Salón de Clases
-      test anonymous student survey educational:
-        'No': 'No'
-        'Yes': Sí
-      test me:
-        Question: Pregunta
-        description here: descripción aquí
-        title: Título
-      unique level name here:
-        Question: Pregunta
-        description here: descripción aquí
-        title: Título
-    text_match:
-      U2L07 Assessment4:
-        '43': '43'
+        0: "? Incorrecto. La sentencia `si` ayudará a la granjera a comprobar si hay
+          un camino por delante. Si hay uno, seguirá adelante. De lo contrario, si
+          no hay ningún camino, recogerá toda la lechuga que haya y luego girará a
+          la izquierda."
+        1: ": Incorrecto. La sentencia `si` ayudará a la granjera a comprobar si hay
+          un camino por delante. Si hay uno, seguirá adelante. De lo contrario, si
+          no hay ningún camino, recogerá toda la lechuga que haya y luego girará a
+          la izquierda."
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Mira
+          el siguiente código con atención. ¿Qué crees que sucederá cuando hagas clic
+          en "Ejecutar"? '
+        Nothing. The farmer will remain standing still: Nada. La granjera seguirá
+          estando de pie
+        2: "? La sentencia `si` ayudará a la granjera a comprobar si hay un camino
+          por delante. Si hay uno, seguirá adelante. De lo contrario, recogerá toda
+          la lechuga que haya y luego girará a la izquierda."
+        3: ": La sentencia `si` ayudará a la granjera a comprobar si hay un camino
+          por delante. Si hay uno, seguirá adelante. De lo contrario, recogerá toda
+          la lechuga que haya y luego girará a la izquierda."
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: La
+          granjera recorrerá correctamente el camino, y recogerá toda la lechuga que
+          encuentre.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: La
+          granjera intentará recoger la lechuga en cada espacio, y luego llegará hasta
+          el muro al final del camino.
+      courseE_multi_farmer_predict2:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. The 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.: Incorrecto.
+          El bloque 'repetir hasta la calabaza' garantizará que la granjera no siga
+          avanzando una vez que llegue a la calabaza.
+        0: "? Incorrecto. Hay una calabaza y el bloque 'repetir hasta la calabaza'
+          garantizará que la granjera no siga avanzando una vez que haya llegado a
+          la calabaza."
+        1: ": Incorrecto. Hay una calabaza y el bloque 'repetir hasta la calabaza'
+          garantizará que la granjera no siga avanzando una vez que haya llegado a
+          la calabaza."
+        2: "? El bloque 'repetir hasta la calabaza' garantizará que la granjera comience
+          a caminar y no se detenga hasta que llegue a la calabaza. Luego recogerá
+          la calabaza."
+        3: ": El bloque 'repetir hasta la calabaza' garantizará que la granjera comience
+          a caminar y no se detenga hasta que llegue a la calabaza. Luego recogerá
+          la calabaza."
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: La
+          granjera no caminará a ninguna parte, porque no hay calabazas.
+        The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: La
+          granjera caminará solo hasta que llegue a la calabaza, y luego recogerá
+          la calabaza.
+        The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: La
+          granjera caminará hasta que no pueda llegar más lejos, y luego intentará
+          recoger una calabaza que no está allí.
+        What do you think will happen in this puzzle when you press 'Run'?: ¿Qué crees
+          que sucederá en este desafío al hacer clic en "Ejecutar"?
+      courseE_multi_maze_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times.: Incorrecto.
+          Colocar el bloque 'avanzar' dentro del bloque 'repetir' hará que el pájaro
+          avance tres veces.
+        Nothing. The bird will not move at all.: Nada. El pájaro no se moverá.
+        0: "? Poner el bloque 'avanzar' dentro del bloque 'repetir' hará que el pájaro
+          avance tres veces. Luego, el pájaro gira y avanza otras tres veces, y llega
+          al cerdo."
+        1: ": Poner el bloque 'avanzar' dentro del bloque 'repetir' hará que el pájaro
+          avance tres veces. Luego, el pájaro gira y avanza otras tres veces, y llega
+          al cerdo."
+        The bird will move forward three times, turn, then move forward three more times, making it to the pig!: El
+          pájaro avanzará tres veces, girará, luego avanzará tres veces más, y llegará
+          al cerdo.
+        The bird will move forward, then turn and crash into a wall.: El pájaro avanzará,
+          luego girará y chocará con una pared.
+        This code uses a new block. What do you think would happen if you pressed 'Run'?: Este
+          código usa un bloque nuevo. ¿Qué crees que pasará cuando presiones "Ejecutar"?
+      courseE_prediction_artistFunction1:
+        Correct! The function is called two times in the program, with a jump in between.: "¡Correcto!
+          La función se llama dos veces en el programa, con un salto en el medio de
+          ambas."
+        Incorrect. The function is actually called two times in the program.: Incorrecto.
+          En realidad, se llama a la función dos veces en el programa.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrecto.
+          La longitud de cada lado del cuadrado es de solo 100 pixeles, pero el artista
+          salta a 175 pixeles entre funciones.
+        Nothing. The function is not called in the program.: Nada. No se llama a la
+          función en el programa.
+        The artist will draw a single square.: El artista dibujará un solo cuadrado.
+        The artist will draw two squares that overlap.: El artista dibujará dos cuadrados
+          que se superponen.
+        The artist will draw two squares with a small gap in between.: El artista
+          dibujará dos cuadrados con un pequeño espacio en el medio.
+        What will happen when you press "Run"?: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseE_prediction_artistFunction1_2018:
+        Correct! The function is called two times in the program, with a jump in between.: "¡Correcto!
+          La función se llama dos veces en el programa, con un salto en el medio de
+          ambas."
+        Incorrect. The function is actually called two times in the program.: Incorrecto.
+          En realidad, se llama a la función dos veces en el programa.
+        Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.: Incorrecto.
+          La longitud de cada lado del cuadrado es de solo 100 pixeles, pero el artista
+          salta a 175 pixeles entre funciones.
+        Nothing. The function is not called in the program.: Nada. No se llama a la
+          función en el programa.
+        The artist will draw a single square.: El artista dibujará un solo cuadrado.
+        The artist will draw two squares that overlap.: El artista dibujará dos cuadrados
+          que se superponen.
+        The artist will draw two squares with a small gap in between.: El artista
+          dibujará dos cuadrados con un pequeño espacio en el medio.
+        What will happen when you press "Run"?: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseF_bee_variables_8a_2018:
+        Bee Variables Multi: Variables múltiples en Abeja
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The variable gets set back to 0 before the last two function calls.: Incorrecto.
+          La variable vuelve a 0 antes de las dos últimas llamadas de funciones.
+        Incorrect.  Your variable's name does not affect its value.: Incorrecto. El
+          nombre de tu variable no afecta su valor.
+        Look at the code below.  How many units of nectar will the bee collect at the end?: Mira
+          el siguiente código. ¿Cuántas unidades de néctar recogerá la abeja al final?
+        The bee will collect all of the nectar.: La abeja recogerá todo el néctar.
+        The bee will only collect 2 nectar.: La abeja solo recogerá 2 néctares.
+        The bee won't collect any nectar because the variable isn't called "gather".: La
+          abeja no recogerá néctar, porque la variable no se llama "recoger".
+        0: "? La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
+          donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar."
+        1: ": La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
+          donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar."
+      courseF_multi_artist_for10_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrecto.
+          Cada vez que pasa por el bucle `desde`, el artista dibuja una línea más
+          larga y más gruesa.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrecto.
+          El artista gira entre repeticiones del bucle `desde`.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: El
+          artista dibujará una espiral y, cada vez que pase por el bucle `desde`,
+          la línea se volverá más larga y más gruesa.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'El
+          artista dibujará una espiral y, cada vez que pase por el bucle `desde`,
+          la línea se volverá más larga y más delgada. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: El
+          artista dibujará una línea recta que aumenta su grosor de un lado al otro
+          del espacio de juego.
+        What will happen when you click "Run"?: ¿Qué sucederá si haces clic en "Ejecutar"?
+      courseF_multi_artist_for10_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.: Incorrecto.
+          Cada vez que pasa por el bucle `desde`, el artista dibuja una línea más
+          larga y más gruesa.
+        Incorrect. The artist turns between iterations of the `for` loop.: Incorrecto.
+          El artista gira entre repeticiones del bucle `desde`.
+        The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.: El
+          artista dibujará una espiral y, cada vez que pase por el bucle `desde`,
+          la línea se volverá más larga y más gruesa.
+        'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ': 'El
+          artista dibujará una espiral y, cada vez que pase por el bucle `desde`,
+          la línea se volverá más larga y más delgada. '
+        The artist will draw a straight line that increases in thickness from one side of the play space to the other.: El
+          artista dibujará una línea recta que aumenta su grosor de un lado al otro
+          del espacio de juego.
+        What will happen when you click "Run"?: ¿Qué sucederá si haces clic en "Ejecutar"?
+      courseF_multi_artist_fwp2_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  Using parameters lets you use a single function to create different outcomes.: Incorrecto.
+          Los parámetros te permiten usar una única función para crear diferentes
+          resultados.
+        The artist will use the same function to draw two different sized boxes.: El
+          artista usará la misma función para dibujar dos cajas de diferente tamaño.
+        The artist will use two different functions to draw the same sized box twice.: El
+          artista usará dos funciones diferentes para dibujar una caja del mismo tamaño
+          dos veces.
+        The artist will use two different functions to draw two different sized boxes.: El
+          artista usará dos funciones diferentes para dibujar dos cajas de diferente
+          tamaño.
+        The program uses parameters to allow a single function to create two different size boxes.: El
+          programa usa parámetros para que una única función pueda crear dos cajas
+          de diferente tamaño.
+        What will happen when you run this program?: "¿Qué sucederá si ejecutas este
+          programa?"
+      courseF_multi_artist_predict1:
+        Based on the code below, what do you think will happen if you press "Run"?: Según
+          el siguiente código, ¿qué crees que sucederá si presionas "Ejecutar"?
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: "? Incorrecto. Observa que el bucle `repetir 3` está dentro del bucle `repetir
+          4`. Esto significa que el dibujo será una forma de tres lados, dibujada
+          cuatro veces."
+        1: ": Incorrecto. Observa que el bucle `repetir 3` está dentro del bucle `repetir
+          4`. Esto significa que el dibujo será una forma de tres lados, dibujada
+          cuatro veces."
+        2: "? Incorrecto. Observa que hay un bloque `girar 90 grados` dentro del bucle
+          externo. Esto significa que el artista girará después de dibujar cada triángulo."
+        3: ": Incorrecto. Observa que hay un bloque `girar 90 grados` dentro del bucle
+          externo. Esto significa que el artista girará después de dibujar cada triángulo."
+        4: "? El bucle `repetir 3` está dentro del bucle `repetir 4`. Esto significa
+          que el artista dibujará un triángulo, y luego girará 90 grados un total
+          de 4 veces."
+        5: ": El bucle `repetir 3` está dentro del bucle `repetir 4`. Esto significa
+          que el artista dibujará un triángulo, y luego girará 90 grados un total
+          de 4 veces."
+        The artist will draw the triangle from the last level four times in a rotated pattern.: El
+          artista dibujará el triángulo del último nivel cuatro veces en un patrón
+          rotado.
+        The artist will draw the triangle from the last level four times in a straight line.: El
+          artista dibujará el triángulo del último nivel cuatro veces en una línea
+          recta.
+        The artist will draw three squares in a rotated pattern.: El artista dibujará
+          tres cuadrados en un patrón rotado.
+      courseF_multi_artist_variables3a_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrecto.
+          Para que eso suceda, la variable `longitud` tendría que ser usada en el
+          bloque `girar`.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrecto.
+          Para que eso suceda, la variable `longitud` tendría que estar en el bucle
+          `repetir`.
+        0: "? La variable `longitud` se establece en 50 y se usa en el bloque `avanzar`.
+          Así, el artista dibujará un triángulo con lados de 50 pixeles."
+        1: ": La variable `longitud` se establece en 50 y se usa en el bloque `avanzar`.
+          Así, el artista dibujará un triángulo con lados de 50 pixeles."
+        The artist will draw a 50-sided polygon with 3 pixel sides.: El artista dibujará
+          un polígono de 50 caras con lados de 3 pixeles.
+        The artist will draw a triangle with 50 pixel sides.: El artista dibujará
+          un triángulo con lados de 50 pixeles.
+        The artist will draw three open sides with 50 degree turns.: El artista dibujará
+          tres lados abiertos con giros de 50 grados.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: Hemos
+          establecido la variable "longitud" en 50. ¿Qué sucederá cuando hagas clic
+          en "Ejecutar"?
+      courseF_multi_artist_variables3a_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen.: Incorrecto.
+          Para que eso suceda, la variable `longitud` tendría que ser usada en el
+          bloque `girar`.
+        Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen.: Incorrecto.
+          Para que eso suceda, la variable `longitud` tendría que estar en el bucle
+          `repetir`.
+        0: "? La variable `longitud` se establece en 50 y se usa en el bloque `avanzar`.
+          Así, el artista dibujará un triángulo con lados de 50 pixeles."
+        1: ": La variable `longitud` se establece en 50 y se usa en el bloque `avanzar`.
+          Así, el artista dibujará un triángulo con lados de 50 pixeles."
+        The artist will draw a 50-sided polygon with 3 pixel sides.: El artista dibujará
+          un polígono de 50 caras con lados de 3 pixeles.
+        The artist will draw a triangle with 50 pixel sides.: El artista dibujará
+          un triángulo con lados de 50 pixeles.
+        The artist will draw three open sides with 50 degree turns.: El artista dibujará
+          tres lados abiertos con giros de 50 grados.
+        We have set the variable "length" to 50.  What will happen when you click "Run"?: Hemos
+          establecido la variable "longitud" en 50. ¿Qué sucederá cuando hagas clic
+          en "Ejecutar"?
+      courseF_multi_bee_conditionals1_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        0: '? La abeja no hará nada si no hay una flor. Observa el siguiente código
+          con atención. ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?'
+        1: ': La abeja no hará nada si no hay una flor. Observa el siguiente código
+          con atención. ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?'
+        Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrecto.
+          El bloque 'si hay flor' condiciona que la abeja intentará obtener néctar
+          solamente si hay una flor debajo de la nube.
+        Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: El
+          bloque 'si hay flor' condiciona que la abeja intentará obtener néctar solamente
+          si hay una flor debajo de la nube.
+        The bee will move to the cloud and only try to get nectar if there is a flower underneath.: La
+          abeja ira a la nube y tratará de conseguir néctar solo si hay una flor debajo.
+        'The bee will move to the cloud and then do nothing, no matter what. ': 'La
+          abeja se moverá a la nube y no hará nada, pase lo que pase. '
+        'The bee will move to the cloud and try to get nectar, no matter what. ': 'La
+          abeja se moverá a la nube y tratará de obtener el néctar, pase lo que pase. '
+      courseF_multi_bee_conditionals7_predict2:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrecto.
+          Incorrecto. El bloque `si en la flor` permite a la abeja obtener el néctar
+          de cada flor y la miel de cada panal.
+        0: "? Incorrecto. El bloque `si en la flor` permite a la abeja obtener el
+          néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
+          hay un panal)."
+        1: ": Incorrecto. El bloque `si en la flor` permite a la abeja obtener el
+          néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
+          hay un panal)."
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Observa
+          el siguiente código con atención. ¿Qué crees que sucederá cuando hagas clic
+          en "Ejecutar"?
+        The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: El
+          bloque `si en la flor` permite a la abeja tomar el néctar de cada flor;
+          de lo contrario, hará miel.
+        The bee will get nectar at each flower, otherwise it will make honey.: La
+          abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
+        The bee will try to get honey from both flowers and honeycomb.: La abeja tratará
+          de obtener la miel de las flores y del panal.
+        The bee will try to get nectar from both flowers and honeycomb.: La abeja
+          tratará de obtener el néctar de las flores y del panal.
+      courseF_multi_bee_for3_predict1:
+        Correct!: "¡Correcto!"
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrecto.
+          Con el bucle `desde`, la abeja podrá recoger la cantidad correcta de néctar,
+          pero solo llegará a 4 flores.
+        Read the code below.  What will happen when you click "Run"?: Lee el siguiente
+          código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: La
+          abeja avanzará y recogerá todo el néctar de cada flor, excepto una.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'La
+          abeja avanzará y recogerá todo el néctar de cada flor. '
+        'The bee will move forward and collect one nectar from each flower. ': 'La
+          abeja avanzará y recogerá un néctar de cada flor. '
+        'The bee will move forward and try to collect more nectar than is in the flowers. ': 'La
+          abeja avanzará y tratará de recoger más néctar del que hay en las flores. '
+      courseF_multi_bee_for3_predict1_2018:
+        Correct!: "¡Correcto!"
+        'I don''t know. ': 'No lo sé. '
+        Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Incorrecto.
+          Con el bucle `desde`, la abeja podrá recoger la cantidad correcta de néctar,
+          pero solo llegará a 4 flores.
+        Read the code below.  What will happen when you click "Run"?: Lee el siguiente
+          código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
+        The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers.: Con
+          el bucle `desde`, la abeja podrá recoger la cantidad correcta de néctar,
+          pero solo llegará a 4 flores.
+        The bee will move forward and collect all of the nectar from every flower, except for one.: La
+          abeja avanzará y recogerá todo el néctar de cada flor, excepto una.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'La
+          abeja avanzará y recogerá todo el néctar de cada flor. '
+        'The bee will move forward and collect one nectar from each flower. ': 'La
+          abeja avanzará y recogerá un néctar de cada flor. '
+      courseF_multi_bee_fwp9_predict1:
+        0: "? Al hacer clic para ver dentro de la función, verás que está definida
+          por un parámetro para recoger todo el néctar o la miel que se encuentre."
+        1: ": Al hacer clic para ver dentro de la función, verás que está definida
+          por un parámetro para recoger todo el néctar o la miel que se encuentre."
+        Correct! The function is set to collect as many nectar or honey as is passed through a parameter.: "¡Correcto!
+          La función está definida por un parámetro para recoger todo el néctar o
+          la miel que se encuentre."
+        I don't know.: No lo sé.
+        Incorrect.  The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrecto.
+          La función está definida por un parámetro para recoger todo el néctar o
+          la miel que se encuentre.
+        Incorrect. The function is set to collect as many nectar or honey as is passed through a parameter.: Incorrecto.
+          La función está definida por un parámetro para recoger todo el néctar o
+          la miel que se encuentre.
+        'The bee will collect only one nectar or honey in each iteration of the loop. ': 'La
+          abeja recogerá un solo néctar o miel en cada repetición del bucle. '
+        'The bee will collect three nectar or honey, then two nectar or honey in a stair-step pattern. ': 'La
+          abeja recogerá tres néctares o mieles, y luego dos néctares o mieles, en
+          un patrón de escalera. '
+        The bee will not collect any nectar or honey.: La abeja no recogerá néctar
+          o miel.
+        What will happen when you click "Run"?: ¿Qué sucederá si haces clic en "Ejecutar"?
+      courseF_multi_playlab_variables4c_predictive1:
+        'Correct. ': 'Correcto. '
+        I don't know.: No lo sé.
+        'Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate''s sentence. ': 'Incorrecto.
+          Observa que el bloque `unirse` inserta el nombre (Ali) en la oración del
+          pirata. '
+        Incorrect. Notice that the `join` block inserts the provided name into the pirate's sentence.: Incorrecto.
+          Observa que el bloque `unirse` inserta el nombre en la oración del pirata.
+        The pirate would say, "Ali" and that is all.: El pirata diría "Ali", y eso
+          sería todo.
+        The pirate would say, "Pleasure to meet you, Ali." and that is all.: El pirata
+          diría "Encantado de conocerte, Ali", y eso sería todo.
+        The pirate would say, "Pleasure to meet you." and that is all.: El pirata
+          diría "Encantado de conocerte", y eso sería todo.
+        What would happen if the user entered the name "Ali" at the prompt?: ¿Qué
+          sucederá si el usuario ingresa el nombre "Ali" en la ventana?
+      coursee_prediction_artistfunction2:
+        Correct!: "¡Correcto!"
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrecto.
+          El bucle gira 90 grados entre llamadas a "dibujar polígono".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrecto.
+          El bucle usa "dibujar polígono" en lugar de "dibujar línea de polígonos".
+        Incorrect. The program does not call "draw line of polygons".: Incorrecto.
+          El programa no llama a la función "dibujar línea de polígonos".
+        The artist will draw four squares in a window pattern.: El artista dibujará
+          cuatro cuadrados en un patrón de ventana.
+        The artist will draw four squares on top of one another.: El artista dibujará
+          cuatro cuadrados, uno encima de otro.
+        The artist will draw only one line of squares.: El artista dibujará solo una
+          línea de cuadrados.
+        The artist will solve the puzzle correctly.: El artista resolverá el desafío
+          correctamente.
+        What will happen when you press the "Run" button?: ¿Qué sucederá cuando presiones
+          el botón "Ejecutar"?
+      coursee_prediction_artistfunction2_2018:
+        Correct!: "¡Correcto!"
+        Incorrect. The loop turns 90 degrees between calls to "draw polygon".: Incorrecto.
+          El bucle gira 90 grados entre llamadas a "dibujar polígono".
+        Incorrect. The loop uses "draw polygon" instead of "draw line of polygons".: Incorrecto.
+          El bucle usa "dibujar polígono" en lugar de "dibujar línea de polígonos".
+        Incorrect. The program does not call "draw line of polygons".: Incorrecto.
+          El programa no llama a la función "dibujar línea de polígonos".
+        The artist will draw four squares in a window pattern.: El artista dibujará
+          cuatro cuadrados en un patrón de ventana.
+        The artist will draw four squares on top of one another.: El artista dibujará
+          cuatro cuadrados, uno encima de otro.
+        The artist will draw only one line of squares.: El artista dibujará solo una
+          línea de cuadrados.
+        The artist will solve the puzzle correctly.: El artista resolverá el desafío
+          correctamente.
+        What will happen when you press the "Run" button?: ¿Qué sucederá cuando presiones
+          el botón "Ejecutar"?
+      grade2_multi_collector_A_predict1:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrecto.
+          Laurel trata de recoger el tesoro donde no lo hay, y esto provoca un error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel
+          trata de recoger el tesoro donde no lo hay, y ésto provoca un error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel recogerá
+          4 piezas del tesoro con este código.
+        Laurel will collect all of the treasure.: Laurel recogerá todo el tesoro.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel
+          intentará recoger el tesoro donde no lo hay y eso causará un error.
+        0: Mira el siguiente código de cerca. Si el código fuera ejecutado hasta el
+          final (ignorando cualquier error) ¿cuántas partes del tesoro recogería Laurel?
+        1: ": Mira el siguiente código de cerca. Si el código fuera ejecutado hasta
+          el final (ignorando cualquier error) ¿cuántas partes del tesoro recogería
+          Laurel?"
+      grade2_multi_collector_A_predict1_2018:
+        Correct!: "¡Correcto!"
+        I don't know.: No lo sé.
+        Incorrect.  Laurel tries to collect treasure where there is none and it causes an error.: Incorrecto.
+          Laurel trata de recoger el tesoro donde no lo hay, y esto provoca un error.
+        Laurel tries to collect treasure where there is none and it causes an error.: Laurel
+          trata de recoger el tesoro donde no lo hay, y ésto provoca un error.
+        Laurel will collect 4 pieces of treasure using this code.: Laurel recogerá
+          4 piezas del tesoro con este código.
+        Laurel will collect all of the treasure.: Laurel recogerá todo el tesoro.
+        Laurel will try to collect treasure where there is not any and it causes an error.: Laurel
+          intentará recoger el tesoro donde no lo hay y eso causará un error.
+        Look at this code carefully. What do you think will happen when the program runs?: Observa
+          este código cuidadosamente. ¿Qué crees que ocurrirá cuando ejecutes el programa?

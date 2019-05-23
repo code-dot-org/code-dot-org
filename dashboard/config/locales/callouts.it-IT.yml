@@ -638,6 +638,9 @@ it:
       courseA_maze_ramp3a_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseA_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseA_maze_seq1_callout:
         courseA_maze_seq1_1: Clicca sulla lampadina quando hai bisogno di un suggerimento!
       courseA_maze_seq1_2018_callout:
@@ -838,6 +841,15 @@ it:
           nella cassetta degli attrezzi.
         courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
           essere gettati via.
+      courseC_maze_programming4_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseC_maze_programming4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseC_maze_programming4_2019_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.
@@ -915,6 +927,9 @@ it:
       courseD_farmer_while7_2019_callout:
         courseD_farmer_while7_2018_PathAhead: Devi usare il blocco `mentre c'è strada
           in avanti` per risolvere questo esercizio.
+      courseD_maze_intro4_2019_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
@@ -942,6 +957,15 @@ it:
       courseD_maze_ramp3_2019_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+      courseD_maze_ramp4_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseD_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseD_maze_ramp4_2019_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
@@ -981,6 +1005,12 @@ it:
       courseD_scrat_ramp3_2018_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+      courseD_scrat_ramp4_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseD_scrat_ramp4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseD_scrat_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
@@ -1107,6 +1137,12 @@ it:
       courseE_maze_ramp3_2018_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+      courseE_maze_ramp4_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseE_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseE_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
@@ -1212,6 +1248,12 @@ it:
       courseF_maze_ramp2_2018_callout:
         courseC_maze_programming2_1: Questa è la cassetta degli attrezzi. Ci trovi
           dentro tutti i blocchi necessari per risolvere l'esercizio.
+      courseF_maze_ramp4_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
+      courseF_maze_ramp4_2018_callout:
+        courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       courseF_maze_ramp6_callout:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
@@ -1364,6 +1406,9 @@ it:
       grade2_CaringForNewPet_2courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+      grade2_CaringForNewPet_3_callout:
+        grade2_CaringForNewPet_3_1: Questo numero indica la massima quantità di blocchi
+          di questo tipo che puoi usare.
       grade2_collector_7_callout:
         grade2_collector_7_1: Se necessario, puoi prendere altri blocchi dalla cassetta
           degli attrezzi!

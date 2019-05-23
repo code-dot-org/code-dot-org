@@ -7404,10 +7404,10 @@ tr:
               name: İnternet
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
-            Concept Practice with Minecraft:
-              name: Geleceğe bakış
             Dance Party:
               name: Dans Partisi
+            Concept Practice with Minecraft:
+              name: Geleceğe bakış
         csd1-2019:
           description_short: "  İnsanların problemleri çözmek için bilgisayarlarla nasıl çalıştıklarını öğrenin."
           stages:
@@ -8166,3 +8166,11 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Özet
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Bilgisayar nedir?

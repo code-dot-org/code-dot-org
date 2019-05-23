@@ -139,9 +139,9 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil,
+        where(
+          unfeatured_at: nil,
           project_type: project_type.to_s,
-          abuse_score: 0,
           state: 'active'
         ).
         exclude(published_at: nil).
@@ -200,6 +200,7 @@ module ProjectsList
         :storage_apps__value___value,
         :storage_apps__project_type___project_type,
         :storage_apps__published_at___published_at,
+        :storage_apps__abuse_score___abuse_score,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
@@ -215,7 +216,7 @@ module ProjectsList
             select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: project_types, abuse_score: 0).
+            where(state: 'active', project_type: project_types).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
@@ -231,9 +232,10 @@ module ProjectsList
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true for App Lab and Game Lab.
+    #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
     def get_published_project_and_user_data(project_and_user)
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
+      return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
