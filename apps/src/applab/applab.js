@@ -677,12 +677,15 @@ Applab.init = function(config) {
     });
   }
 
-  if (
-    experiments.isEnabled('student-libraries') &&
-    level.libraries &&
-    level.libraries.length > 0
-  ) {
+  // Libraries should be added to redux whether the experiment is enabled or
+  // not. This prevents work from being lost if a levelbuilder toggles the
+  // experiment flag.
+  var librariesExist = level.libraries && level.libraries.length > 0;
+  if (librariesExist) {
     getStore().dispatch(setApplabLibraries(level.libraries));
+  }
+
+  if (experiments.isEnabled('student-libraries') && librariesExist) {
     let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
