@@ -25,7 +25,7 @@ module SchoolInfoInterstitialHelper
   end
 
   # Determine if a user has seen the school info interstitial.
-  def check_last_seen_school_info_interstitial?(user)
+  def self.check_last_seen_school_info_interstitial?(user)
     return true if user.last_seen_school_info_interstitial.nil?
 
     return true if user.last_seen_school_info_interstitial >= 7
