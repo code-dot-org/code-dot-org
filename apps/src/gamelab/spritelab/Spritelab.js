@@ -22,7 +22,9 @@ var Spritelab = function() {
   this.reset = () => {
     spriteUtils.resetSpriteMap();
   };
-  window.p5.prototype.executeDrawLoopAndCallbacks = function() {
+  this.commands = {};
+
+  this.commands.executeDrawLoopAndCallbacks = function() {
     drawBackground.apply(this);
     spriteUtils.runEvents.apply(this);
     this.drawSprites();
@@ -30,37 +32,33 @@ var Spritelab = function() {
   };
 
   // ACTION commands
-  window.p5.prototype.changePropBy = function(spriteId, prop, val) {
-    commands.changePropBy.apply(this, [spriteId, prop, val]);
+  this.commands.changePropBy = function(spriteId, prop, val) {
+    commands.changePropBy(spriteId, prop, val);
   };
-  window.p5.prototype.edgesDisplace = function(spriteId) {
+  this.commands.edgesDisplace = function(spriteId) {
     commands.edgesDisplace.apply(this, [spriteId]);
   };
-  window.p5.prototype.jumpTo = function(spriteId, location) {
+  this.commands.jumpTo = function(spriteId, location) {
     commands.jumpTo.apply(this, [spriteId, location]);
   };
-  window.p5.prototype.mirrorSprite = function(spriteId, direction) {
+  this.commands.mirrorSprite = function(spriteId, direction) {
     commands.mirrorSprite.apply(this, [spriteId, direction]);
   };
-  window.p5.prototype.moveInDirection = function(
-    spriteId,
-    distance,
-    direction
-  ) {
+  this.commands.moveInDirection = function(spriteId, distance, direction) {
     commands.moveInDirection.apply(this, [spriteId, distance, direction]);
   };
-  window.p5.prototype.moveToward = function(spriteId, distance, target) {
+  this.commands.moveToward = function(spriteId, distance, target) {
     commands.moveToward.apply(this, [spriteId, distance, target]);
   };
-  window.p5.prototype.setProp = function(spriteId, prop, val) {
+  this.commands.setProp = function(spriteId, prop, val) {
     commands.setProp.apply(this, [spriteId, prop, val]);
   };
-  window.p5.prototype.turn = function(spriteId, n, direction) {
+  this.commands.turn = function(spriteId, n, direction) {
     commands.turn.apply(this, [spriteId, n, direction]);
   };
 
   // EVENT commands
-  window.p5.prototype.checkTouching = function(
+  this.commands.checkTouching = function(
     condition,
     sprite1,
     sprite2,
@@ -68,76 +66,76 @@ var Spritelab = function() {
   ) {
     commands.checkTouching.apply(this, [condition, sprite1, sprite2, callback]);
   };
-  window.p5.prototype.keyPressed = function(condition, key, callback) {
+  this.commands.keyPressed = function(condition, key, callback) {
     commands.keyPressed.apply(this, [condition, key, callback]);
   };
-  window.p5.prototype.spriteClicked = function(condition, spriteId, callback) {
+  this.commands.spriteClicked = function(condition, spriteId, callback) {
     commands.spriteClicked.apply(this, [condition, spriteId, callback]);
   };
 
   // LOCATION commands
-  window.p5.prototype.locationAt = function(x, y) {
+  this.commands.locationAt = function(x, y) {
     return commands.locationAt.apply(this, [x, y]);
   };
-  window.p5.prototype.locationMouse = function() {
+  this.commands.locationMouse = function() {
     return commands.locationMouse.apply(this, []);
   };
-  window.p5.prototype.locationOf = function(spriteId) {
+  this.commands.locationOf = function(spriteId) {
     return commands.locationOf.apply(this, [spriteId]);
   };
-  window.p5.prototype.randomLocation = function() {
+  this.commands.randomLocation = function() {
     return commands.randomLocation.apply(this, []);
   };
 
   // SPRITE commands
-  window.p5.prototype.makeNewSpriteAnon = function(animation, location) {
+  this.commands.makeNewSpriteAnon = function(animation, location) {
     commands.makeSprite.apply(this, [animation, location]);
   };
 
-  window.p5.prototype.createNewSprite = function(name, animation, location) {
+  this.commands.createNewSprite = function(name, animation, location) {
     return commands.makeSprite.apply(this, [animation, location]);
   };
 
-  window.p5.prototype.setAnimation = function(spriteId, animation) {
+  this.commands.setAnimation = function(spriteId, animation) {
     commands.setAnimation.apply(this, [spriteId, animation]);
   };
 
-  window.p5.prototype.getProp = function(spriteId, prop) {
+  this.commands.getProp = function(spriteId, prop) {
     return commands.getProp.apply(this, [spriteId, prop]);
   };
 
-  window.p5.prototype.destroy = function(spriteId) {
+  this.commands.destroy = function(spriteId) {
     commands.destroy.apply(this, [spriteId]);
   };
-  window.p5.prototype.displace = function(spriteId, targetSpriteIndex) {
+  this.commands.displace = function(spriteId, targetSpriteIndex) {
     commands.dispalce.apply(this, [spriteId, targetSpriteIndex]);
   };
 
   // WORLD commands
-  window.p5.prototype.hideTitleScreen = function() {
+  this.commands.hideTitleScreen = function() {
     commands.hideTitleScreen.apply(this, []);
   };
-  window.p5.prototype.randColor = function() {
+  this.commands.randColor = function() {
     return commands.randColor.apply(this, []);
   };
-  window.p5.prototype.setBackground = function(color) {
+  this.commands.setBackground = function(color) {
     commands.setBackground.apply(this, [color]);
   };
-  window.p5.prototype.setBackgroundImage = function(img) {
+  this.commands.setBackgroundImage = function(img) {
     commands.setBackgroundImage.apply(this, [img]);
   };
-  window.p5.prototype.showTitleScreen = function(title, subtitle) {
+  this.commands.showTitleScreen = function(title, subtitle) {
     commands.showTitleScreen.apply(this, [title, subtitle]);
   };
-  window.p5.prototype.setTint = function(spriteId, color) {
+  this.commands.setTint = function(spriteId, color) {
     commands.setTint.apply(this, [spriteId, color]);
   };
-  window.p5.prototype.removeTint = function(spriteId) {
+  this.commands.removeTint = function(spriteId) {
     commands.removeTint.apply(this, [spriteId]);
   };
 
   // OTHER
-  window.p5.prototype.comment = function(text) {
+  this.commands.comment = function(text) {
     commands.comment.apply(this, [text]);
   };
 };

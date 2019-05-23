@@ -941,6 +941,14 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
         propList[prop][1]
       );
     }
+    const spritelabCommands = this.gameLabP5.spritelab.commands;
+    for (const command in spritelabCommands) {
+      this.JSInterpreter.createGlobalProperty(
+        command,
+        spritelabCommands[command],
+        this.gameLabP5.p5
+      );
+    }
 
     this.JSInterpreter.createGlobalProperty(
       'showMobileControls',
