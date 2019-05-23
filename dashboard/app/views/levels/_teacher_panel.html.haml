@@ -2,6 +2,24 @@
 - data[:script_name] = @script.name
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
+- data[:stage_extra] = @stage_extras
+
+- if @level && @script_level
+  - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels
+    - level_example_links = @level.examples.map do |example|
+      - send("#{@level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+  - if @level.ideal_level_source_id && @script # 'solutions' for blockly-type levels
+    -level_example_links = []
+    -level_example_links.push(build_script_level_url(@script_level, {solution: true}.merge(@section ? {section_id: @section.id} : {})))
+
+- data[:level_examples] = level_example_links
+
+-if @section
+  - data[:section_script_levels] = @section.students.order(:name).map do |student|
+    - if @stage_extras
+      - ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, student)
+    -else
+      - @script_level&.summarize_for_teacher_panel(student)
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}

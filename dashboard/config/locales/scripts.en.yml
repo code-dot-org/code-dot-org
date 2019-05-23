@@ -11363,6 +11363,8 @@ en:
               name: Unit 2 Assessment
               description_student: ''
               description_teacher: ''
+            CS Principles Post Course survey:
+              name: CS Principles Post Course survey
         csp3-2019:
           title: CSP Unit 3 - Intro to Programming ('19-'20)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -12383,6 +12385,8 @@ en:
               name: Parameters and Return Values Explore
             Parameters and Return Values Investigate:
               name: Parameters and Return Values Investigate
+            Parameters and Return Values Practice:
+              name: Parameters and Return Values Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
