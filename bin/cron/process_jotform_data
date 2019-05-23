@@ -122,6 +122,10 @@ def main
       # one row per question answered
       survey_answers = []
       submissions.each do |submission|
+        # skipping blank submissions
+        if submission.answers == "{}"
+          next
+        end
         answers = submission.form_data_hash
         answers.each do |question_key, answer_value|
           survey_answers << {
