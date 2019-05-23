@@ -434,7 +434,8 @@ class ScriptLevel < ActiveRecord::Base
       passed: passed,
       status: status,
       levelNumber: position,
-      assessment: assessment
+      assessment: assessment,
+      bonus: bonus
     }
     if user_level
       teacher_panel_summary.merge!(user_level.attributes)
