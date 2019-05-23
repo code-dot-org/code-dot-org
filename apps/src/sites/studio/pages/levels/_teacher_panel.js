@@ -29,7 +29,8 @@ function initPage() {
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
-    teacherPanelData.section
+    teacherPanelData.section,
+    teacherPanelData
   );
 }
 
