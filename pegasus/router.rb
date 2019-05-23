@@ -226,7 +226,8 @@ class Documents < Sinatra::Base
 
   # Documents
   get_head_or_post '*' do |uri|
-    pass unless path = resolve_document(uri)
+    path = resolve_document("#{uri}.#{request.locale}") || resolve_document(uri)
+    pass unless path
     if defined? NewRelic
       transaction_name = uri
       transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
@@ -417,7 +418,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
-      extnames = settings.non_static_extnames + [".#{request.locale}.md"]
+      extnames = settings.non_static_extnames
 
       path = resolve_template('public', extnames, uri, true)
       return path if path
