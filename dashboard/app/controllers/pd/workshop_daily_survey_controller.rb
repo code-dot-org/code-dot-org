@@ -293,12 +293,18 @@ module Pd
 
     def redirect_facilitator(key_params)
       session = Session.find(key_params[:sessionId])
+      session_size = session.workshop.sessions.size
       next_facilitator_index = key_params[:facilitatorIndex].to_i + 1
+
       if next_facilitator_index.between?(1, session.workshop.facilitators.size - 1)
-        redirect_to action: :new_facilitator, session_id: session.id, facilitator_index: next_facilitator_index
-      # No facilitators left. Academic workshops redirect to post if its the last day
-      elsif !session.workshop.summer? && !session.workshop.csf_201? && key_params[:day].to_i == session.workshop.sessions.size
-        redirect_to action: :new_post, enrollment_code: Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
+        redirect_to action: :new_facilitator,
+          session_id: session.id, facilitator_index: next_facilitator_index
+      # No facilitators left. Academic workshops redirect to post if its the last day.
+      # Summer workshops and CSF 201 workshops redirect to thanks.
+      elsif !session.workshop.summer? &&
+        !session.workshop.csf_201? && key_params[:day].to_i == session_size
+        enrollment_code = Pd::Enrollment.find_by(user: current_user, workshop: session.workshop).code
+        redirect_to action: :new_post, enrollment_code: enrollment_code
       else
         redirect_to action: :thanks
       end
@@ -315,14 +321,17 @@ module Pd
 
     def render_csf_survey(survey_name, workshop)
       @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
-      session = survey_name == POST_DEEPDIVE_SURVEY ? workshop.sessions.first : nil
+
+      # There are facilitator surveys after post workshop survey.
+      # Use sessionId to create URL query to those facilitator surveys.
+      session_id = survey_name == POST_DEEPDIVE_SURVEY ? workshop.sessions.first&.id : nil
 
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
         workshopId: workshop.id,
         day: CSF_SURVEY_INDEXES[survey_name],
-        sessionId: session&.id,
+        sessionId: session_id,
         formId: @form_id
       }
 
