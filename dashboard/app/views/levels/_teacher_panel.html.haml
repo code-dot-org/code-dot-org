@@ -18,7 +18,11 @@
 -if @section
   - data[:section_script_levels] = @section.students.order(:name).map do |student|
     - if @stage_extras
-      - {bonus: true, extras: student.user_levels.where(script: @stage.script, level: @bonus_level_ids), user_id: student.id}
+      - stage_extra_user_level = student.user_levels.where(script: @stage.script, level: @bonus_level_ids)&.first
+      - if stage_extra_user_level
+        - {bonus: true, user_id: student.id, status: SharedConstants::LEVEL_STATUS.perfect, passed: true}.merge!(stage_extra_user_level.attributes)
+      - else
+        - {bonus: true, user_id: student.id, status: SharedConstants::LEVEL_STATUS.not_tried}
     -else
       - @script_level&.summarize_for_teacher_panel(student)
 
