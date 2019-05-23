@@ -10,7 +10,7 @@ completed as
     'CS Fundamentals' as course,
     school_year,
     script_name
-  from analysis.csf_completed_teachers -- view 
+  from analysis.csf_completed_teachers 
 ),
 started as 
 (
@@ -19,7 +19,7 @@ select
     'CS Fundamentals' as course,
     school_year,
     script_name
-  from analysis.csf_started_teachers -- view
+  from analysis.csf_started_teachers
 ),
 implementation_365 as
 (
@@ -36,9 +36,9 @@ select
     CASE WHEN days_to_complete <= 365 and completed_before_training = 0 then 1 else 0 end as completed_365,
     CASE WHEN days_to_start <= 365  then 1 else 0 end as started_365_or_before,
     CASE WHEN days_to_complete <= 365  then 1 else 0 end as completed_365_or_before
-  from analysis.csf_teachers_trained tt       -- view 
-    left join analysis.csf_started_teachers st on st.user_id = tt.user_id     -- view
-    left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id   -- view
+  from analysis.csf_teachers_trained tt      
+    left join analysis.csf_started_teachers st on st.user_id = tt.user_id   
+    left join analysis.csf_completed_teachers ct on ct.user_id = tt.user_id   
   group by 1, 2, 3
 ),
 
@@ -48,7 +48,7 @@ repeat_trainings as
     user_id,
     min(trained_at) as first_training
   from 
-    analysis.csf_teachers_trained  -- view
+    analysis.csf_teachers_trained  
   group by 1
 ),
 
@@ -149,7 +149,7 @@ select
           -- student gender
           sa.students_female as students_female_total,
           sa.students_gender as students_gender_total
-  FROM analysis.csf_teachers_trained d    -- view
+  FROM analysis.csf_teachers_trained d   
   JOIN analysis.training_school_years sy on d.trained_at between sy.started_at and sy.ended_at
 -- school info
   LEFT JOIN dashboard_production_pii.users u  -- users needed to get school_info_id
