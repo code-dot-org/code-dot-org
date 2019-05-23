@@ -5,11 +5,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import AbuseError from './AbuseError';
-import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import {hideExportDialog} from './exportDialogRedux';
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '../../lib/util/firehose';
+import exportExpoIconPng from '../../templates/export/expo/icon.png';
 
 function recordExport(type) {
   if (!window.dashboard) {
@@ -28,19 +28,30 @@ function recordExport(type) {
   );
 }
 
-function wrapExportClick(handler, type) {
-  return function() {
-    try {
-      recordExport(type);
-    } finally {
-      handler.apply(this, arguments);
-    }
-  };
-}
-
-function select(event) {
-  event.target.select();
-}
+const baseStyles = {
+  button: {
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    fontSize: 'larger',
+    padding: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top'
+  },
+  section: {
+    marginTop: 10
+  },
+  text: {
+    fontSize: 'inherit',
+    lineHeight: 'inherit',
+    color: 'inherit'
+  },
+  inlineLabel: {
+    display: 'inline-block'
+  }
+};
 
 const styles = {
   modal: {
@@ -62,48 +73,70 @@ const styles = {
     fontSize: 13,
     fontWeight: 'bold'
   },
-  button: {
+  uploadIconButton: {
+    ...baseStyles.button,
+    backgroundColor: color.default_blue,
+    color: color.white
+  },
+  iosAppStoreButton: {
+    ...baseStyles.button,
     backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    color: color.white
   },
-  buttonDisabled: {
+  androidGooglePlayButton: {
+    ...baseStyles.button,
+    backgroundColor: color.purple,
+    color: color.white
+  },
+  cancelButton: {
+    ...baseStyles.button,
     backgroundColor: color.gray,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    color: color.black
   },
-  thumbnail: {
-    float: 'left',
+  actionButton: {
+    ...baseStyles.button,
+    backgroundColor: color.orange,
+    color: color.white
+  },
+  p: {
+    ...baseStyles.text
+  },
+  section: {
+    ...baseStyles.section
+  },
+  buttonRow: {
+    ...baseStyles.section,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  title: {
+    fontSize: 16
+  },
+  radioLabel: {
+    ...baseStyles.text,
+    ...baseStyles.inlineLabel
+  },
+  radioLabelDisabled: {
+    ...baseStyles.text,
+    ...baseStyles.inlineLabel,
+    color: color.light_gray
+  },
+  radioInput: {
+    height: 18,
+    verticalAlign: 'middle'
+  },
+  icon: {
     marginRight: 10,
     width: 125,
     height: 125,
     overflow: 'hidden',
     borderRadius: 2,
     border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.white,
-    position: 'relative'
+    backgroundColor: color.black,
+    position: 'relative',
+    display: 'inline-block'
   },
-  thumbnailImg: {
+  iconImage: {
     position: 'absolute',
     left: '50%',
     top: '50%',
@@ -125,9 +158,7 @@ class ExportAllowedDialog extends React.Component {
     }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
-    icon: PropTypes.string,
-    shareUrl: PropTypes.string.isRequired, // TODO: remove
-    thumbnailUrl: PropTypes.string, // TODO: remove?
+    projectUpdatedAt: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
     channelId: PropTypes.string.isRequired,
@@ -139,56 +170,324 @@ class ExportAllowedDialog extends React.Component {
   };
 
   state = {
-    showSendToPhone: false,
-    showAdvancedOptions: false,
-    exporting: false,
-    exportError: null
+    screen: 'intro'
   };
 
   componentDidUpdate(prevProps) {
-    if (this.props.isOpen && !prevProps.isOpen) {
+    const {isOpen, projectUpdatedAt} = this.props;
+    const {exportProjectUpdatedAt} = this.state;
+    if (isOpen && !prevProps.isOpen) {
       recordExport('open');
+      if (projectUpdatedAt !== exportProjectUpdatedAt) {
+        // The project has changed since we last opened the dialog,
+        // reset our export state, so we will need to export again:
+        this.resetExportState();
+      }
     }
   }
 
-  sharingDisabled = () =>
-    this.props.userSharingDisabled &&
-    ['applab', 'gamelab', 'weblab'].includes(this.props.appType);
+  sharingDisabled() {
+    return (
+      this.props.userSharingDisabled &&
+      ['applab', 'gamelab', 'weblab'].includes(this.props.appType)
+    );
+  }
+
+  resetExportState() {
+    this.setState({
+      exporting: false,
+      exportError: null,
+      expoUri: null,
+      expoSnackId: null,
+      iconUri: null,
+      splashImageUri: null
+    });
+  }
 
   close = () => {
+    const {expoUri} = this.state;
+    if (expoUri) {
+      this.setState({screen: 'intro'});
+    } else {
+      // If we don't haven't succesfully exported, then clear all export
+      // state so we will start again fresh the next time:
+      this.resetExportState();
+    }
     recordExport('close');
     this.props.onClose();
   };
 
-  showSendToPhone = event => {
-    this.setState({
-      showSendToPhone: true,
-      showAdvancedOptions: false
-    });
-    event.preventDefault();
+  onInstallExpoIOS = () => {
+    window.open(
+      'https://itunes.apple.com/app/apple-store/id982107779',
+      '_blank'
+    );
   };
 
-  showAdvancedOptions = () => {
-    this.setState({
-      showSendToPhone: false,
-      showAdvancedOptions: true
-    });
+  onInstallExpoAndroid = () => {
+    window.open(
+      'https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www',
+      '_blank'
+    );
   };
+
+  async publishExpoExport() {
+    const {expoUri} = this.state;
+    if (expoUri) {
+      return;
+    }
+    const {exportApp, projectUpdatedAt} = this.props;
+    this.setState({
+      exporting: true,
+      exportProjectUpdatedAt: projectUpdatedAt
+    });
+    try {
+      const {expoUri, expoSnackId, iconUri, splashImageUri} = await exportApp({
+        mode: 'expoPublish'
+      });
+      this.setState({
+        exporting: false,
+        exportError: null,
+        expoUri,
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      });
+    } catch (e) {
+      this.setState({
+        exporting: false,
+        exportProjectUpdatedAt: null,
+        expoUri: null,
+        expoSnackId: null,
+        exportError:
+          'Failed to publish project to Expo. Please try again later.'
+      });
+    }
+  }
+
+  onActionButton = () => {
+    const {screen} = this.state;
+
+    switch (screen) {
+      case 'intro':
+        this.publishExpoExport();
+        return this.setState({screen: 'export'});
+      case 'export':
+        return this.setState({screen: 'platform'});
+      case 'platform':
+        return this.setState({screen: 'icon'});
+      case 'icon':
+        return this.setState({screen: 'publish'});
+      case 'publish':
+        return this.setState({screen: 'waiting'});
+      case 'waiting':
+        return this.close();
+      default:
+        throw new Error(`ExportAllowedDialog: Unexpected screen: ${screen}`);
+    }
+  };
+
+  renderMainContent() {
+    const {screen} = this.state;
+
+    switch (screen) {
+      case 'intro':
+        return this.renderIntroPage();
+      case 'export':
+        return this.renderExportPage();
+      case 'platform':
+        return this.renderPlatformPage();
+      case 'icon':
+        return this.renderIconPage();
+      case 'publish':
+        return this.renderPublishPage();
+      case 'waiting':
+        return this.renderWaitingPage();
+      default:
+        throw new Error(`ExportAllowedDialog: Unexpected screen: ${screen}`);
+    }
+  }
+
+  renderIntroPage() {
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>
+            Code Studio can export your project as a mobile app for iOS or
+            Android
+          </p>
+        </div>
+        <div style={styles.section}>
+          <p style={styles.p}>
+            The first step is to install the Expo app on your mobile device so
+            you can test your project within the Expo app.
+          </p>
+          <button
+            type="button"
+            style={styles.iosAppStoreButton}
+            onClick={this.onInstallExpoIOS}
+          >
+            iOS Expo App
+          </button>
+          <button
+            type="button"
+            style={styles.androidGooglePlayButton}
+            onClick={this.onInstallExpoAndroid}
+          >
+            Android Expo App
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  renderExportPage() {
+    const {
+      exporting,
+      exportError,
+      expoUri,
+      expoSnackId,
+      iconUri,
+      splashImageUri
+    } = this.state;
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>Preview your project in the Expo app</p>
+        </div>
+        <div style={styles.section}>
+          <p style={styles.p}>TBD.</p>
+          <p style={styles.p}>{`exporting: ${exporting}`}</p>
+          <p style={styles.p}>{`exportError: ${exportError}`}</p>
+          <p style={styles.p}>{`expoUri: ${expoUri}`}</p>
+          <p style={styles.p}>{`expoSnackId: ${expoSnackId}`}</p>
+          <p style={styles.p}>{`iconUri: ${iconUri}`}</p>
+          <p style={styles.p}>{`splashImageUri: ${splashImageUri}`}</p>
+        </div>
+      </div>
+    );
+  }
+
+  renderPlatformPage() {
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>Choose your platform</p>
+        </div>
+        <div style={styles.section}>
+          <div>
+            <input
+              style={styles.radioInput}
+              type="radio"
+              id="radioAndroid"
+              readOnly
+              checked
+            />
+            <label htmlFor="radioAndroid" style={styles.radioLabel}>
+              I have an Android device
+            </label>
+          </div>
+          <div>
+            <input
+              style={styles.radioInput}
+              type="radio"
+              id="radioIOS"
+              disabled
+            />
+            <label htmlFor="radioIOS" style={styles.radioLabelDisabled}>
+              I have an iOS device (currently not supported)
+            </label>
+          </div>
+        </div>
+        <div style={styles.section}>
+          <p style={styles.p}>
+            <b>Note: </b>Exporting will take 10-15 minutes. Any changes made
+            during the export process will not be included.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  renderIconPage() {
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>Upload your App icon</p>
+        </div>
+        <div style={styles.section}>
+          <div style={styles.icon}>
+            <img style={styles.iconImage} src={exportExpoIconPng} />
+          </div>
+          <button
+            type="button"
+            style={styles.uploadIconButton}
+            onClick={this.onUploadIcon}
+          >
+            Upload another image
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  renderPublishPage() {
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>Create Android Package</p>
+        </div>
+        <div style={styles.section}>
+          <p style={styles.p}>
+            An Android Package (APK) is a package of code and other files that
+            can be installed as an app on an Android device.
+          </p>
+          <p style={styles.p}>
+            <b>Note: </b>After you click "Create", it will take about 10-15
+            minutes to create the package.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  renderWaitingPage() {
+    return (
+      <div>
+        <div style={styles.section}>
+          <p style={styles.title}>Creating Android Package...</p>
+        </div>
+        <div style={styles.section}>
+          <p style={styles.p}>
+            Please wait for about <b>15 minutes</b>.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  getActionButtonInfo() {
+    const {screen, exporting} = this.state;
+    const info = {
+      text: 'Next',
+      enabled: true
+    };
+    switch (screen) {
+      case 'waiting':
+        info.text = 'Finish';
+        break;
+      case 'export':
+        info.enabled = !exporting;
+        break;
+      case 'publish':
+        info.text = 'Create';
+        break;
+    }
+    return info;
+  }
 
   render() {
-    let image;
-    let modalClass = 'modal-content';
-    if (this.props.icon) {
-      image = <img className="modal-image" src={this.props.icon} />;
-    } else {
-      modalClass += ' no-modal-icon';
-    }
-
-    const hasThumbnail = !!this.props.thumbnailUrl;
-    const thumbnailUrl = hasThumbnail
-      ? this.props.thumbnailUrl
-      : '/blockly/media/projects/project_default.png';
-
+    const actionButtonInfo = this.getActionButtonInfo();
     const showShareWarning =
       !this.props.canShareSocial &&
       (this.props.appType === 'applab' || this.props.appType === 'gamelab');
@@ -219,10 +518,9 @@ class ExportAllowedDialog extends React.Component {
           )}
           {!this.sharingDisabled() && (
             <div>
-              {image}
               <div
                 id="project-export"
-                className={modalClass}
+                className="modal-content no-modal-icon"
                 style={{position: 'relative'}}
               >
                 <p className="dialog-title">Export your project</p>
@@ -242,44 +540,24 @@ class ExportAllowedDialog extends React.Component {
                     {this.props.i18n.t('project.share_u13_warning')}
                   </p>
                 )}
-                <div style={{clear: 'both'}}>
-                  <div style={styles.thumbnail}>
-                    <img style={styles.thumbnailImg} src={thumbnailUrl} />
-                  </div>
-                  <div>
-                    <p style={{fontSize: 20}}>
-                      {this.props.i18n.t('project.share_copy_link')}
-                    </p>
-                    <input
-                      type="text"
-                      id="sharing-input"
-                      onClick={select}
-                      readOnly="true"
-                      value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 500}}
-                    />
-                  </div>
-                </div>
-                <div className="social-buttons">
-                  <a
-                    id="sharing-phone"
-                    href=""
-                    onClick={wrapExportClick(
-                      this.showSendToPhone.bind(this),
-                      'send-to-phone'
-                    )}
+                {this.renderMainContent()}
+                <div style={styles.buttonRow}>
+                  <button
+                    type="button"
+                    style={styles.cancelButton}
+                    onClick={this.close}
                   >
-                    <i className="fa fa-mobile-phone" style={{fontSize: 36}} />
-                    <span>{i18n.sendToPhone()}</span>
-                  </a>
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    style={styles.actionButton}
+                    onClick={this.onActionButton}
+                    disabled={!actionButtonInfo.enabled}
+                  >
+                    {actionButtonInfo.text}
+                  </button>
                 </div>
-                {this.state.showSendToPhone && (
-                  <SendToPhone
-                    channelId={this.props.channelId}
-                    appType={this.props.appType}
-                    styles={{label: {marginTop: 15, marginBottom: 0}}}
-                  />
-                )}
               </div>
             </div>
           )}
@@ -295,7 +573,8 @@ export default connect(
   state => ({
     allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
-    isOpen: state.exportDialog.isOpen
+    isOpen: state.exportDialog.isOpen,
+    projectUpdatedAt: state.header.projectUpdatedAt
   }),
   dispatch => ({
     onClose: () => dispatch(hideExportDialog())
