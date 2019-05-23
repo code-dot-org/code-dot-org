@@ -843,6 +843,7 @@
   carousel_heading_beyond_languages: "Learn other programming languages"
   carousel_heading_apps_games: "Make your own apps or games"
   carousel_heading_university: "Online courses and schools"
+  carousel_heading_online_university: "University Courses Available Online"
   carousel_heading_webpages: "Learn to make web pages"
   carousel_heading_robots: "Learn to program with robots and devices"
   carousel_heading_ide: "Platforms popular among teachers"
@@ -1511,7 +1512,7 @@
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
+  header_report_bug: "Report a problem"
   header_tutorials: "Tutorials"
   app_lab_documentation: "App Lab Documentation"
   app_lab_tutorials: "App Lab Tutorials"

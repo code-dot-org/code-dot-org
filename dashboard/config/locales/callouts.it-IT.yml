@@ -591,10 +591,6 @@ it:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
           lezione.
-      courseA_collector_loops1_2018_callout:
-        courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
-          attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
-          lezione.
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -830,12 +826,18 @@ it:
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+        courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
+          essere gettati via.
       courseC_maze_programming3_2018_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+        courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
+          essere gettati via.
       courseC_maze_programming3_2019_callout:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+        courseC_maze_programming3_3: Questi blocchi sono pietrificati e non possono
+          essere gettati via.
       courseC_maze_programming7_callout:
         courseC_maze_programming7_2: Questi blocchi sono fatti di pietra e non possono
           essere gettati via.

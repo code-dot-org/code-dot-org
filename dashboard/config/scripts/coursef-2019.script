@@ -6,8 +6,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course F!", "link"=>"https://curriculum.code.org/csf-19/coursef", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursef'
 version_year '2019'
+curriculum_umbrella 'CSF'
 
 stage 'Functions in Minecraft', flex_category: 'ramp_up'
 level 'MC_HOC_2017_01_RETRY_2019', progression: 'Practice'
@@ -76,7 +78,7 @@ level 'courseD_bee_nestedLoops9_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2019', progression: 'Prediction'
 
 stage 'Envelope Variables', flex_category: 'csf_variables'
-level 'EnvelopeVariables_2019'
+level 'EnvelopeVariables-Unplugged'
 
 stage 'Variables as Constant in Artist', flex_category: 'csf_variables'
 level 'grade5_artist_variables_triangles1_2019', progression: 'Practice'
@@ -112,7 +114,7 @@ level 'simstarter', progression: 'Run a simulation'
 level 'simconfig', progression: 'Modify simulation variables'
 
 stage 'For Loop Fun', flex_category: 'csf_for_loops'
-level 'ForLoopFun_2019'
+level 'ForLoopFun-Unplugged'
 
 stage 'For Loops in Bee', flex_category: 'csf_for_loops'
 level 'courseF_bee_for1_2019', progression: 'Practice'
@@ -147,7 +149,7 @@ bonus 'courseF_artist_for_challenge1_2019'
 bonus 'courseF_artist_for_challenge2_2019'
 
 stage 'Internet', flex_category: 'csf_internet'
-level 'Internet_2019'
+level 'Internet-Unplugged'
 
 stage 'Editing Behaviors', flex_category: 'csf_sprites'
 level 'behaviors 1', progression: 'Prediction'
@@ -171,13 +173,13 @@ level 'Virtual Pet 7_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 8_2019', progression: 'Mini-Project: Virtual Pet'
 
 stage 'The Power of Words', flex_category: 'csf_digcit'
-level 'courseF_unplugged_powerOfWords_2019'
+level 'PowerOfWords-Unplugged'
 
 stage 'Crowdsourcing', flex_category: 'csf_digcit'
-level 'Crowdsourcing_2019'
+level 'Crowdsourcing-Unplugged'
 
 stage 'Digital Sharing', flex_category: 'csf_digcit'
-level 'courseE_unplugged_CnC_2019'
+level 'DigitalSharing-Unplugged'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseF_project_exemplars_2019', progression: 'Example Projects'

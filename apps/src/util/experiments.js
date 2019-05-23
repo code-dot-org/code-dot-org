@@ -23,6 +23,7 @@ experiments.COMMENT_BOX_TAB = 'commentBoxTab';
 experiments.DEV_COMMENT_BOX_TAB = 'devCommentBoxTab';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
+experiments.SCHOOL_INFO_CONFIRMATION_DIALOG = 'schoolInfoConfirmationDialog';
 
 // This is a per user experiment and is defined in experiments.rb
 // On the front end we are treating it as an experiment group.

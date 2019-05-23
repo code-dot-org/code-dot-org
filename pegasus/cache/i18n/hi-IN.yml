@@ -166,6 +166,7 @@ hi-IN:
   class_submission_level_high_school: उच्च विद्यालय
   class_submission_level_college: कॉलेज
   starwars_javascript_title: जावास्क्रिप्ट
+  starwars_blocks_title: ब्लाकों
   mc_longdescription: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
     को ले जाने के लिए कोड ब्लॉक का उपयोग करें
   mc_shortdescription: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
@@ -193,6 +194,7 @@ hi-IN:
   volunteer_engineer_submission_commitment_annually: 2 - 3 बार प्रति वर्ष
   volunteer_engineer_submission_commitment_monthly: एक दो घंटे प्रति माह
   volunteer_engineer_submission_commitment_weekly: एक दो घंटे प्रति सप्ताह
+  volunteer_engineer_submission_commitment_more: अधिक
   volunteer_engineer_submission_experience_software_professional: सॉफ्टवेयर इंजीनियर
   petition_age: आयु
   dashboard_announce_learn_more_button: अधिक जानें
@@ -218,6 +220,7 @@ hi-IN:
   learn_sign_up_button: साइन अप
   blockly_name: ब्लॉक्ली
   math_category_name: गणित
+  csf_category_name: CS बुनियादी बातें
   codeorg_gradelevel: उम्र 4-104
   codeintl_gradelevel: उम्र 4-104
   tynker_gradelevel: उम्र 5-13
@@ -279,6 +282,7 @@ hi-IN:
   sphero_beyond_gradelevel: उम्र 8 +
   flappy_shortcode: फ़ड़फ़ड़ाय
   header_courses: पाठ्यक्रम
+  user_header_signin: दाखिल करना
   user_header_dance: डांस पार्टी
   applab_tile_start_tutorial: शुरू करें
   account_sign_up_child_accept_terms: अगर मैं उंर के 13 साल से कम कर रहा हूं, मैं

@@ -594,6 +594,11 @@ es:
           en este rompecabezas.
       behaviors 1_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
+      behaviors 3a_callout:
+        behavior_callout: "¿Por qué este comportamiento no funciona para la estrella
+          del medio?"
+        star2_callout: Eliminar este bloque de disfraz y usar este bloque de "gráfico"
+          en su lugar.
       behaviors 4_callout:
         behaviors_edit: Hacer clic aquí para ver cómo funciona este comportamiento.
       behaviors 4a_callout:
@@ -665,9 +670,6 @@ es:
         courseA_artist_loops8_1: "¿Sabías que puedes dibujar por encima de una línea
           cuando lo necesites?"
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
-          No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
-      courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo usarlos más adelante en el escenario."
       courseA_collector_loops1_2019_callout:

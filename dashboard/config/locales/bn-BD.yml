@@ -370,22 +370,14 @@ bn:
     new: নতুন তৈরি করুন
     rename: পুনঃনামকরণ করুন
     save: সংরক্ষন করন
-    delete: বাদ দিন
     exit: কোর্সের কাছে ফিরে যান।
-    my_projects: আমার প্রকল্প
     project_gallery: প্রকল্প
     share: শেয়ার
-    close: বন্ধ
-    more: আরো
     name: নাম
     updated: আপডেট
     project_type: প্রকল্পের ধরন
-    really_delete: বাদ দিবেন কি?
-    delete_yes: '"হ্যাঁ"'
-    delete_no: না
     saved: গ্যালারিতে সংরক্ষিত!
     not_saved: সংরক্ষিত নয়
-    cancel: বাতিল করুন
     view_all: আমার প্রকল্প প্রদর্শন করুন
     remix: রিমিক্স
     edit_project: প্রকল্প সম্পাদন করুন

@@ -2,6 +2,7 @@ hi:
   data:
     script:
       category:
+        csf_category_name: CS बुनियादी बातें
         math_category_name: गणित
       name:
         course2:
@@ -204,6 +205,10 @@ hi:
             Dance Party:
               name: डांस पार्टी
         coursed-2019:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        express-2019:
           stages:
             Dance Party:
               name: डांस पार्टी

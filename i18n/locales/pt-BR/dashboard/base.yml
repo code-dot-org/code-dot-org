@@ -813,14 +813,12 @@ pt-BR:
     new: "Criar novo"
     rename: "Renomear"
     save: "Salvar"
-    delete: "Excluir"
     import: "Importar"
     share_link_import_bad_link_header: "link de compartilhamento não reconhecido"
     share_link_import_bad_link_body: "Não foi possível importar esse link de compartilhamento. Certifique-se de que você está usando um link de um Minecraft: quebra-cabeça do Agente e que você copiou o link completo."
     share_link_import_error_header: "Ocorreu um erro."
     share_link_import_error_body: "Houve um problema ao importar o link de compartilhamento. Tente novamente."
     exit: "Voltar ao curso"
-    my_projects: "Meus projetos"
     project_gallery: "Projetos"
     publish: "Publicar"
     unpublish: "Despublicar"
@@ -832,22 +830,14 @@ pt-BR:
     embed: "Incorporar"
     advanced_share: "Mostrar opções avançadas"
     no_projects: "Você não tem projetos atualmente. Para iniciar um projeto, clique em um dos botões acima."
-    close: "Fechar"
-    more: "Mais"
     name: "Nome"
     updated: "Atualizado"
     project_type: "Tipo de projeto"
     help_text: "Clique em <strong>Criar um app</strong> ou em <strong>Desenhar algo</strong> abaixo para iniciar um novo projeto!<br/>Você pode voltar e trabalhar em seus projetos a qualquer momento."
     need_help: "Conheça esses cursos que vão ajudar você a iniciar seu novo projeto"
     thumbnail_help: "Não está vendo a miniatura correta para seu projeto? Rode o seu app para criar uma miniatura nova. Observe que pode levar algumas horas para que a miniatura seja atualizada em todos os lugares."
-    really_delete: 'Excluir?'
-    delete_yes: 'Sim'
-    delete_no: 'Não'
     saved: "Salvo"
     not_saved: "Não salvo"
-    cancel: 'Cancelar'
-    delete_confirm_title: Tem certeza de que deseja excluir esse projeto?
-    delete_confirm_text: "Ao excluir seu projeto, vai removê-lo permanentemente da sua lista \"Meus projetos\". As pessoas com quem você compartilhou o link não vão mais poder visualizar seu projeto."
     view_all: 'Visualizar meus projetos'
     remix: 'Remix'
     click_to_remix: "Clique em \"Remix\" para fazer sua própria versão!"

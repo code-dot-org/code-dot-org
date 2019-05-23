@@ -141,10 +141,8 @@ ku:
     submit: بنێرە
   project:
     save: پاشه‌كه‌وت بكە
-    delete: بسڕەوە
     share: بڵاوكەوە
     name: ناو
-    really_delete: بسڕێتەوە؟
     abuse:
       report_abuse_form:
         abuse_type:

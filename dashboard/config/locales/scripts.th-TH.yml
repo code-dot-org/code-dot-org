@@ -1656,30 +1656,30 @@ th:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           stages:
+            Programming in Maze:
+              name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
-            Debugging in Maze:
-              name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
-              name: การเขียนโปรแกรมในเรื่องศิลปิน
+              name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
-            Loops in Artist:
-              name: ลูปกับศิลปิน
             Nested Loops in Bee:
-              name: ลูปซ้อนลูป ในเรื่องผึ้ง
+              name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
             While Loops in Farmer:
-              name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+              name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
             Conditionals with Cards:
               name: เงื่อนไข
+            Conditionals in Bee:
+              name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
             Conditionals & Loops in Harvester:
-              name: เงื่อนไขและลูปกับเรื่องเกษตรกร
+              name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
-              name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+              name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
@@ -1688,6 +1688,8 @@ th:
               name: ศิลปินศูนย์หนึ่ง
             Internet:
               name: อินเทอร์เน็ต
+            Dance Party:
+              name: งานเต้นรำ
         andrea-test:
           stages:
             'null':
@@ -1793,16 +1795,14 @@ th:
               name: ขยับหน่อยสิ ขยับหน่อย
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
-            Loops in Ice Age:
-              name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Loops in Collector:
-              name: ใช้ลูปกับนักสะสม
-            Loops in Artist:
-              name: ลูปกับศิลปิน
+              name: ลูปไปกับลอเรล
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
+            Programming in Harvester:
+              name: การเขียนโปรแกรมไปกับเกษตรกรผู้เก็บเกี่ยว
             Ocean Scene with Loops:
               name: ฉากมหาสมุทรกับลูป
         removed19:

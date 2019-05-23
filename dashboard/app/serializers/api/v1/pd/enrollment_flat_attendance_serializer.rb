@@ -9,6 +9,8 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializer < ActiveModel::Serializer
         data["session_#{i + 1}_date".to_sym] = session.formatted_date
         data["session_#{i + 1}_attendance".to_sym] = session.attendances.where(pd_enrollment_id: object.id).exists?
       end
+      data[:cdo_scholarship] = object.scholarship_status == Pd::ScholarshipInfoConstants::YES_CDO ? 'Yes' : ''
+      data[:other_scholarship] = object.scholarship_status == Pd::ScholarshipInfoConstants::YES_OTHER ? 'Yes' : ''
     end
   end
 end

@@ -613,9 +613,7 @@ ne:
     new: "Create New"
     rename: "Rename"
     save: "सङ्ग्रह गर्नुहोस्"
-    delete: "हटाउनुहोस्"
     exit: "Return to Course"
-    my_projects: "My Projects"
     project_gallery: "Projects"
     share: "आदान-प्रदान गर्नुहोस्"
     share_title: Share your project
@@ -624,21 +622,13 @@ ne:
     share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Embed"
     advanced_share: "Show advanced options"
-    close: "बन्द गर्नुहोस्"
-    more: "थप"
     name: "नाम"
     updated: "Updated"
     project_type: "Project Type"
     help_text: "Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to start a new project!<br/>You can come back and work on your projects at any time."
     need_help: "Try these courses to help you get started with your new project"
-    really_delete: 'Delete?'
-    delete_yes: 'हो'
-    delete_no: 'होइन'
     saved: "संग्रह गर्ने"
     not_saved: "Not saved"
-    cancel: 'रद्द गर्नुहोस्'
-    delete_confirm_title: Are you sure you want to delete this project?
-    delete_confirm_text: "Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project."
     view_all: 'View My Projects'
     remix: 'Remix'
     click_to_remix: "Click \"Remix\" to spin-off your own version!"

@@ -31,7 +31,7 @@ it:
             'Bee: Sequence':
               name: 'Ape: Sequenze'
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Getting Loopy:
               name: Diventare ripetitivi
             Going Places Safely:
@@ -779,7 +779,7 @@ it:
             Binary Bracelets:
               name: Braccialetti binari
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Getting Loopy:
               name: Diventare ripetitivi
             Graph Paper Programming:
@@ -1288,7 +1288,7 @@ it:
             Your Digital Footprint:
               name: La tua impronta digitale
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Debugging in Maze:
@@ -1841,7 +1841,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -1919,7 +1919,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2008,7 +2008,7 @@ it:
             'Functions: Songwriting with Parameters':
               name: 'Funzioni: Composizione di Canzoni con Parametri'
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Nested Loops:
               name: Cicli annidati
             Conditionals & Loops in Harvester:
@@ -2079,7 +2079,7 @@ it:
             'Programming: My Robotic Friends':
               name: 'I miei amici robotici'
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2159,7 +2159,7 @@ it:
             Artist Binary:
               name: 'Artista: Binario'
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee:
@@ -2208,7 +2208,7 @@ it:
             Present Your Project:
               name: Presenta il Tuo Progetto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Nested Loops:
@@ -2224,7 +2224,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2274,7 +2274,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2360,7 +2360,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2414,7 +2414,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2559,7 +2559,7 @@ it:
             Introduction:
               name: Introduzione
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging in Collector:
               name: Debugging con la Collezionista
             'Loops: My Loopy Robotic Friends':
@@ -2729,7 +2729,7 @@ it:
             Introduction:
               name: Introduzione
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging in Collector:
               name: Debugging con la Collezionista
             Events in Bounce:
@@ -2786,7 +2786,7 @@ it:
           description_audience: 'Da 6 a 10 anni'
           stages:
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
@@ -2832,7 +2832,7 @@ it:
             Sequence in Maze:
               name: Aggiungere Commenti nei Programmi
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -2919,7 +2919,7 @@ it:
             Sequence in Maze:
               name: Aggiungere Commenti nei Programmi
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -3165,7 +3165,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -3316,7 +3316,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -3403,7 +3403,7 @@ it:
             Relay Programming:
               name: Programmazione a Staffetta
             Debugging in Maze:
-              name: 'Labirinto: correzione di errori'
+              name: Debugging con Scrat
             Programming in Collector:
               name: Programmare la collezionista
             Programming in Artist:
@@ -3416,8 +3416,10 @@ it:
               name: Cicli con l'artista
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
+            'Concept Practice with Minecraft ':
+              name: Uno sguardo avanti con Minecraft
             Nested Loops in Bee:
-              name: Cicli Annidati con l'Ape
+              name: Cicli Annidati nel Labirinto
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             While Loops in Farmer:
@@ -3435,7 +3437,7 @@ it:
             Functions in Minecraft:
               name: Funzioni con Minecraft
             Functions in Harvester:
-              name: Funzioni con la Contadina
+              name: Funzioni con la contadina
             Functions in Artist:
               name: Funzioni con l'Artista
             Screen Out the Mean:
@@ -3450,10 +3452,22 @@ it:
               name: Cittadinanza digitale - Il potere delle parole
             Envelope Variables:
               name: Variabili e Buste
+            Variables as Constant in Artist:
+              name: Variabili con l'Artista
+            Variables that Change in Bee:
+              name: Modifica delle Variabili con l'Ape
+            Variables that Change in Artist:
+              name: Modifica delle Variabili con l'Artista
             For Loop Fun:
               name: Divertiti usando i Cicli con Contatore
+            For Loops in Bee:
+              name: Cicli con Contatore con l'Ape
+            For Loops in Artist:
+              name: Cicli con contatore con l'artista
+            Learning Sprites with Sprite Lab:
+              name: Introduzione al Laboratorio dei Personaggi
             Alien Dance Party with Sprite Lab:
-              name: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa degli alieni
             Explore Project Ideas:
               name: Idee di Progetto
             The Design Process:
@@ -3474,6 +3488,14 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza Collettiva
+            Concept Practice with Minecraft:
+              name: Uno sguardo avanti con Minecraft
+            Build A Project:
+              name: Progetto di Fine Corso
+            Dance Party:
+              name: Ballando col codice
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -3618,6 +3640,8 @@ it:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Perseveranza & Frustrazione: Stefi e il grande progetto'
             Move It, Move It:
               name: Muovilo, muovilo
             Sequencing with Scrat:
@@ -3633,11 +3657,11 @@ it:
             'Loops: My Loopy Robotic Friends':
               name: 'Cicli: I miei ciclici amici robotici'
             Loops in Ice Age:
-              name: Cicli con l'Era glaciale
+              name: Cicli con Scrat
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
-              name: Cicli con l'artista
+              name: Disegnare giardini con i cicli
             'Events: The Big Event':
               name: 'Eventi'
             Events in Play Lab:
@@ -3647,7 +3671,9 @@ it:
             Learn to Drag and Drop:
               name: Impara come Trascinare i Blocchi
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Scrat
+            Programming in Harvester:
+              name: Programmazione con la contadina
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
             Make a Game in Play Lab:
@@ -3658,6 +3684,8 @@ it:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Perseveranza & Frustrazione: Stefi e il grande progetto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
         csd2-2019:
@@ -3744,7 +3772,7 @@ it:
             Sequence in Maze:
               name: Sequenze di Istruzioni con il Labirinto
             Building a Foundation:
-              name: Costruire le Fondamenta
+              name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
@@ -3881,3 +3909,5 @@ it:
               name: Programmazione su carta a quadretti
             Programming in Maze:
               name: Programmazione nel labirinto
+            Loops with Rey and BB-8:
+              name: Cicli con Rey e BB-8
