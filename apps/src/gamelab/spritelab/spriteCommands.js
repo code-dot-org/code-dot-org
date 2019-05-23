@@ -16,39 +16,39 @@ export const commands = {
     return spriteId;
   },
 
-  displace(spriteIndex, targetSpriteIndex) {
-    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+  displace(spriteId, targetSpriteIndex) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
     let targetSprites = spriteUtils.singleOrGroup(targetSpriteIndex);
     sprites.forEach(sprite => {
       targetSprites.forEach(target => sprite.displace(target));
     });
   },
 
-  setAnimation(spriteIndex, animation) {
-    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+  setAnimation(spriteId, animation) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => {
       sprite.setAnimation(animation);
     });
   },
 
-  setTint(spriteIndex, color) {
-    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+  setTint(spriteId, color) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => {
       sprite.tint = color;
     });
   },
-  removeTint(spriteIndex) {
-    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+  removeTint(spriteId) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => {
       sprite.tint = null;
     });
   },
 
-  getProp(spriteIndex, prop) {
-    if (!spriteIndex) {
+  getProp(spriteId, prop) {
+    if (!spriteId) {
       return undefined;
     }
-    let sprite = spriteUtils.singleOrGroup(spriteIndex)[0];
+    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
     if (prop === 'scale') {
       return sprite.scale * 100;
     } else if (prop === 'costume') {
@@ -60,8 +60,8 @@ export const commands = {
     }
   },
 
-  destroy(spriteIndex) {
-    let sprites = spriteUtils.singleOrGroup(spriteIndex);
+  destroy(spriteId) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => {
       sprite.destroy();
       spriteUtils.deleteSprite(sprite.id);

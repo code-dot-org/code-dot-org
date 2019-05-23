@@ -7,11 +7,11 @@ export const commands = {
   locationMouse() {
     return {x: this.World.mouseX, y: this.World.mouseY};
   },
-  locationOf(spriteIndex) {
-    if (!spriteIndex) {
+  locationOf(spriteId) {
+    if (!spriteId) {
       return undefined;
     }
-    let sprite = spriteUtils.singleOrGroup(spriteIndex)[0];
+    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
     if (sprite) {
       return {x: sprite.x, y: sprite.y};
     }
@@ -21,14 +21,14 @@ export const commands = {
     let y = Math.floor(Math.random() * (380 - 20 + 1)) + 20;
     return {x: x, y: y};
   },
-  xLocationOf(spriteIndex) {
-    let sprite = spriteUtils.singleOrGroup(spriteIndex)[0];
+  xLocationOf(spriteId) {
+    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
     if (sprite) {
       return sprite.x;
     }
   },
-  yLocationOf(spriteIndex) {
-    let sprite = spriteUtils.singleOrGroup(spriteIndex)[0];
+  yLocationOf(spriteId) {
+    let sprite = spriteUtils.singleOrGroup(spriteId)[0];
     if (sprite) {
       return sprite.y;
     }

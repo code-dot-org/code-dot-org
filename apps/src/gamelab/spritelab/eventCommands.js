@@ -11,7 +11,7 @@ export const commands = {
   keyPressed(condition, key, callback) {
     spriteUtils.addEvent(condition + 'press', {key: key}, callback);
   },
-  spriteClicked(condition, spriteIndex, callback) {
-    spriteUtils.addEvent(condition + 'click', {sprite: spriteIndex}, callback);
+  spriteClicked(condition, spriteId, callback) {
+    spriteUtils.addEvent(condition + 'click', {sprite: spriteId}, callback);
   }
 };
