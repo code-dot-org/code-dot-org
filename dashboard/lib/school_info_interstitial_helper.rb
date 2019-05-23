@@ -24,6 +24,15 @@ module SchoolInfoInterstitialHelper
     return true
   end
 
+  # Determine if a user has seen the school info interstitial.
+  def self.check_last_seen_school_info_interstitial?(user)
+    return true if user.last_seen_school_info_interstitial.nil?
+
+    return true if user.last_seen_school_info_interstitial >= 7
+
+    return false
+  end
+
   # Show the school info confirmation dialog when a teacher has either completely
   # filled out the school info interstitial for a US public, private, or charter school
   # or confirmed current school over a year ago.
@@ -36,9 +45,9 @@ module SchoolInfoInterstitialHelper
 
     school_info = user_school_info.school_info
 
-    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && SchoolInfoInterstitialHelper.complete?(school_info)
+    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && complete?(school_info)
 
-    check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
+    check_last_confirmation_date = (DateTime.now - user_school_info.last_confirmation_date.to_datetime > 365) && check_last_seen_school_info_interstitial?
 
     check_last_confirmation_date && check_school_type
   end
