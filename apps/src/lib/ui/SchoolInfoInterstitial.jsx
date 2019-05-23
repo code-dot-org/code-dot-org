@@ -13,7 +13,8 @@ import firehoseClient from '../util/firehose';
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
+    fontSize: 15
   },
   heading: {
     fontSize: 16,
