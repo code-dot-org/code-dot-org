@@ -1626,4 +1626,8 @@ class Script < ActiveRecord::Base
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
   end
+
+  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
+    Script.all.select {|script| script.curriculum_umbrella == curriculum_umbrella}.pluck(:name)
+  end
 end
