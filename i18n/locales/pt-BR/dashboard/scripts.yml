@@ -1063,6 +1063,8 @@ pt-BR:
               name: DP on-line
             Pixelation:
               name: Pixelização
+            PlayLab:
+              name: PlayLab
             Public Key Cryptography:
               name: Criptografia de chave pública
             Rich long assessment:
@@ -1095,6 +1097,10 @@ pt-BR:
               name: Tapete de Dança
             Mini Rubric:
               name: Mini Rubrica
+            Pluralsight Test:
+              name: Teste Pluralsight
+            Externals Optionally Displayed as Unplugged:
+              name: Externos Opcionalmente Exibidos como Desconectados
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1879,6 +1885,7 @@ pt-BR:
             Sharing Student Work:
               name: Compartilhando o trabalho do estudante
         csp1-2017:
+          title: CSP Unidade 1 - A Internet ('17 -'18)
           stages:
             Binary Numbers:
               name: Números binários
@@ -1910,9 +1917,12 @@ pt-BR:
               name: Unidade 1 Capítulo 2 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp2-2017:
+          title: CSP Unidade 2 - Informação Digital ('17 -'18)
           stages:
             Bytes and File Sizes:
               name: Bytes e Tamanhos de Arquivos
@@ -1946,6 +1956,8 @@ pt-BR:
               name: Unidade 2 Capítulo 2 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp3-2017:
@@ -1971,11 +1983,16 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
+            CSP End-of-Semester Mid-course survey:
+              name: CSP pesquisa de final de semestre
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp4-2017:
+          title: CSP Unidade 4 do - Big Data e Privacidade ('17 -'18)
           description: "O mundo rico em dados em que vivemos introduz muitas questões complexas relacionadas a políticas públicas, leis, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão equilibrada e balanceada sobre os dados no mundo, incluindo os efeitos positivos e negativos da mesma, e entender os fundamentos de como e por que a criptografia moderna funciona.\n\\r\n\\r\nEsta unidade foi atualizada pela última vez em novembro de 2017. Leia mais sobre as atualizações do currículo em forum.code.org/c/csp/updates."
           stages:
             Alice and Bob and Asymmetric Keys:
@@ -1998,11 +2015,14 @@ pt-BR:
               name: Unidade 4 Capítulo 1 Avaliação
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Post-Course Survey:
               name: Pesquisa Pós-Curso
             Student Post-Course Survey:
               name: Pesquisa pós-curso do estudante
         csp5-2017:
+          title: CSP Unidade 5 - Construindo aplicações ('17 -'18)
           description_short: Continue aprendendo conceitos fundamentais de programação de computadores em JavaScript, fazendo aplicativos ricos e interativos.
           stages:
             Beyond Buttons Toward Apps:
@@ -2057,6 +2077,8 @@ pt-BR:
               name: Unidade 5 Avaliação 1
             Unit 5 Assessment 2:
               name: Unidade 5 Avaliação 2
+            "'If' Statements Unplugged":
+              name: "Laços 'If' desplugados"
             Getting started with If Statements:
               name: Começando a usar declarações If
             Unit 3 Chapter 1 Assessment 3:
@@ -2087,18 +2109,40 @@ pt-BR:
               name: 'Construindo um aplicativo: Rolagem de Imagem'
             'Building an App: Canvas Painter':
               name: 'Construindo um aplicativo: Pintor de Tela'
+            Unit 5 Assessment 5 - Practice AP questions:
+              name: Unidade 5 Avaliação 5 - Questões Práticas de AP
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Multi-Screen Apps:
               name: Aplicativos Multiplas Telas
+            '"if" Statements Unplugged':
+              name: 'Laços ''If'' desplugados'
             Boolean Expressions and "if" Statements:
               name: Expressões Booleanas e Declarações "if"
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp6:
           stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
         CSDU3-Draft:
           description_short: Programação
           stages:
@@ -2120,14 +2164,20 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             'Project: Interactive Card':
               name: 'Projeto: Cartão Interativo'
+            Sprite Movement Methods:
+              name: Métodos de Movimento Sprite
             Sprites and Images:
               name: Sprites e Imagens
             Sprites and Properties:
               name: Sprites e Propriedades
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Functions:
               name: funções
+            Platform Jumper:
+              name: Jumper plataforma
             Defender:
               name: Defensor
             'Project: Build a Game':
@@ -2185,6 +2235,12 @@ pt-BR:
               name: Currículo do ECS
             Welcome to Phase 1!:
               name: Bem-vindo a Fase 1!
+            Wrap Up:
+              name: Resumo
+            Classroom and workshop style:
+              name: Estilo de sala de aula e oficina
+            'Classroom and workshop style ':
+              name: 'Estilo de sala de aula e oficina '
         algebraFacilitator:
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
@@ -2262,6 +2318,8 @@ pt-BR:
               name: Estratégias para Redação de Alunos
             Supporting Peer Learning:
               name: Apoiando o Aprendizado entre Pares
+            'Tool Talk: Intro to Netsim':
+              name: 'Ferramenta de conversa: Introdução ao Netsim'
         test-teaching-ap-cs-unit-1:
           stages:
             test Unit 1 content module Alpha:
@@ -2270,6 +2328,8 @@ pt-BR:
               name: teste Módulo de conteúdo da unidade 1 Bravo
             test Unit 1 content module Charlie:
               name: teste módulo de conteúdo da Unidade 1 Charlie
+            test Unit 1 practice module Delta:
+              name: teste unidade 1prática do módulo Delta
         allthehiddenthings:
           stages:
             Contained Levels:
@@ -2679,6 +2739,8 @@ pt-BR:
               name: Sprites e Imagens
             Sprites and Properties:
               name: Sprites e Propriedades
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Velocity:
@@ -3258,6 +3320,8 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
             Draw Loop and Randomization:
               name: Laço de Desenho e Randomização
+            Variables Unplugged:
+              name: Variáveis Desconectadas
             Variables and Animation:
               name: Variáveis e Animação
             Sprites and Properties:
@@ -3360,10 +3424,15 @@ pt-BR:
               name: Desenhando no Laboratório de Jogos
         csppostsurvey:
           stages:
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+          title: Pesquisa pós-curso do estudante
         csp-post-survey:
           stages:
+            CSP Student Post-Course Survey:
+              name: Pesquisa pós-curso do estudante
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         csd2-old:
@@ -3559,8 +3628,44 @@ pt-BR:
               name: Bem-vindo
             Congrats:
               name: Parabéns
+            Wrap Up:
+              name: Resumo
+        csp-explore-task:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-task:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+        csp-ap-tech-setup:
+          stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
         csp-ap:
           stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         cspnovice:
@@ -3573,6 +3678,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
         express-2017:
           stages:
             Introduction:
@@ -3794,10 +3901,26 @@ pt-BR:
           description: O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código.
         csp-explore-2017:
           stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp-create-2017:
           stages:
+            Tech Setup - Your AP Digital Portfolio and Other Tools:
+              name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         course-e-2018:
@@ -4325,6 +4448,22 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Creating Functions with Parameters:
               name: Criação de funções com parâmetros
+        csp-explore-2018:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-2018:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
         csp4-2018:
           stages:
             What is Big Data?:
@@ -4448,6 +4587,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Friday:
               name: Sexta-Feira
             Monday:
@@ -4468,6 +4609,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Day 1:
               name: Dia 1
             Day 2:
@@ -4484,6 +4627,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Monday:
               name: Segunda-Feira
             Day 1:
@@ -4502,6 +4647,8 @@ pt-BR:
               name: Quarta-feira
             Thursday:
               name: Quinta-feira
+            Wrap Up:
+              name: Resumo
             Day 1:
               name: Dia 1
             Day 2:
@@ -5048,6 +5195,10 @@ pt-BR:
               name: Protótipo de Teste
             Improving and Iterating:
               name: Improvizando e Interagindo
+        csd5-2019:
+          stages:
+            Post-Project Test:
+              name: Teste pós-projeto
         csd6-2019:
           stages:
             Making Music:
@@ -5056,6 +5207,8 @@ pt-BR:
               name: Acelerômetro
             Functions with Parameters:
               name: Funções com Parâmetros
+            Post-Project Test:
+              name: Teste pós-projeto
         csp4-pilot:
           stages:
             Variables Explore:
@@ -5206,6 +5359,22 @@ pt-BR:
               name: 'Construindo um aplicativo: Pintor de Tela'
             Unit 5 Assessment 4:
               name: Unidade 5 Avaliação 4
+        csp-explore-2019:
+          stages:
+            Explore PT Prep - Reviewing the Task:
+              name: Explore preparação PT - Revendo a Tarefa
+            Explore PT - Making a Plan:
+              name: Explore PT - Fazendo um Plano
+            Explore PT - Complete the Task:
+              name: Explorar PT - Complete a Tarefa
+        csp-create-2019:
+          stages:
+            Create PT Prep - Reviewing the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT Prep - Making a Plan:
+              name: Criar preparação PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
         csppostap-2019:
           description: "No primeiro capítulo desta unidade, os alunos desenvolvem habilidades para interpretar dados visuais e usar ferramentas de planilha e visualização para criar seus próprios artefatos digitais. Por meio de um projeto em andamento - o \"rastreador de dados de classe\" - os alunos aprendem como coletar e limpar dados e a usar algumas ferramentas comuns para computar agregações e criar visualizações. \\ r\n\\ r\nO segundo capítulo explora a importância dos dados nos aplicativos. O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O segundo capítulo fornece uma visão geral de como essas ferramentas funcionam, uma amostra de projetos de exemplo que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final."
           description_short: Aprenda a coletar e usar dados em aplicativos do App Lab.
@@ -5520,3 +5689,15 @@ pt-BR:
               name: Programação em papel quadriculado
             Programming in Maze:
               name: Programação no labirinto
+        fit2019-novice:
+          stages:
+            Day 1:
+              name: Dia 1
+            Day 2:
+              name: Dia 2
+            Day 3:
+              name: Dia 3
+            Day 4:
+              name: Dia 4
+            Wrap Up:
+              name: Resumo
