@@ -498,7 +498,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <PublishLibraryDialog />
+        <PublishLibraryDialog channelId={this.props.channelId} />
       </div>
     );
   }
