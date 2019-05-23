@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS analysis.script_names CASCADE;
 CREATE TABLE analysis.script_names
 (
    versioned_script_id    integer,
-   versioned_script_name  varchar(16),
+   versioned_script_name  varchar(24),
    script_name_short      varchar(16),
    script_name_long       varchar(16)
 );
@@ -77,12 +77,17 @@ INSERT INTO analysis.script_names values
 (124	,	'csp3-2017'	,	'csp3'	,	'CSP Unit 3'),
 (318	,	'csp3-2018'	,	'csp3'	,	'CSP Unit 3'),
 (384	,	'csp3-2019'	,	'csp3'	,	'CSP Unit 3'),
+(266  ,	 'csp3-a'	  ,	'csp3'	,	'CSP Unit 3'),
+(262  ,	 'csp3-research-mxghyt'	,	'csp3'	,	'CSP Unit 3'),
 (125	,	'csp4-2017'	,	'csp4'	,	'CSP Unit 4'),
 (319	,	'csp4-2018'	,	'csp4'	,	'CSP Unit 4'),
 (385	,	'csp4-2019'	,	'csp4'	,	'CSP Unit 4'),
 (126	,	'csp5-2017'	,	'csp5'	,	'CSP Unit 5'),
 (320	,	'csp5-2018'	,	'csp5'	,	'CSP Unit 5'),
-(386	,	'csp5-2019'	,	'csp5'	,	'CSP Unit 5')
+(386	,	'csp5-2019'	,	'csp5'	,	'CSP Unit 5'),
+(210,	'csppostap-2017', 'csppostap', 'CSP Post-AP'),
+(321,	'csppostap-2018', 'csppostap', 'CSP Post-AP'),
+(387,	'csppostap-2019', 'csppostap', 'CSP Post-AP')
 ;
 
 GRANT SELECT ON analysis.script_names TO group reader;
