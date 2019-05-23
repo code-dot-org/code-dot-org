@@ -14,7 +14,7 @@ const styles = {
   container: {
     margin: 20,
     color: color.charcoal,
-    fontSize: 15
+    fontSize: 13
   },
   heading: {
     fontSize: 16,
