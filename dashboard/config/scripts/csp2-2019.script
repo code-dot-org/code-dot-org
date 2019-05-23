@@ -6,9 +6,11 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit2/{LESSON}'
 family_name 'csp2'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1_2018'
 level 'CSP U2L01 SFLP_2019', named: true

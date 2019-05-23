@@ -60,4 +60,22 @@ class TeacherFeedback < ApplicationRecord
   def self.latest
     find_by(id: maximum(:id))
   end
+
+  # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
+  def increment_visit_count
+    now = DateTime.now
+
+    if student_visit_count
+      self.student_visit_count += 1
+    else
+      self.student_visit_count = 1
+    end
+
+    unless student_first_visited_at
+      self.student_first_visited_at = now
+    end
+
+    self.student_last_visited_at = now
+    save
+  end
 end
