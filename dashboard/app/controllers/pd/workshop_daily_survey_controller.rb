@@ -225,19 +225,27 @@ module Pd
       render :new_general
     end
 
+    # Display CSF201 (Deep Dive) pre-workshop survey.
     # GET workshop_survey/csf/pre201
     def new_csf_pre201
+      # Find the closest CSF 201 workshop the current user enrolled in.
       workshop = Pd::Workshop.
         where(course: COURSE_CSF, subject: SUBJECT_CSF_201).
         enrolled_in_by(current_user).nearest
 
       return render :not_enrolled unless workshop
       return render :too_late unless workshop.state != STATE_ENDED
+
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF201 (Deep Dive) post-workshop survey.
+    # The JotForm survey, on submit, will redirect to the new_facilitator route for user
+    # to submit facilitator surveys.
     # GET workshop_survey/csf/post201(/:enrollment_code)
     def new_csf_post201
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF201 workshops the current user enrolled in.
       enrolled_workshops = nil
       if params[:enrollment_code].present?
         enrolled_workshops = Workshop.joins(:enrollments).
@@ -254,6 +262,7 @@ module Pd
 
       attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
       return render :no_attendance unless attended_workshop
+
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
     end
 
