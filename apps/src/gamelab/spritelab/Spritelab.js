@@ -52,13 +52,7 @@ var Spritelab = function() {
   window.p5.prototype.moveToward = function(spriteId, distance, target) {
     commands.moveToward.apply(this, [spriteId, distance, target]);
   };
-  window.p5.prototype.pointInDirection = function(spriteId, direction) {
-    commands.pointInDirection.apply(this, [spriteId, direction]);
-  };
   window.p5.prototype.setProp = function(spriteId, prop, val) {
-    commands.setProp.apply(this, [spriteId, prop, val]);
-  };
-  window.p5.prototype.setSizes = function(spriteId, prop, val) {
     commands.setProp.apply(this, [spriteId, prop, val]);
   };
   window.p5.prototype.turn = function(spriteId, n, direction) {
@@ -93,12 +87,6 @@ var Spritelab = function() {
   };
   window.p5.prototype.randomLocation = function() {
     return commands.randomLocation.apply(this, []);
-  };
-  window.p5.prototype.xLocationOf = function(spriteId) {
-    return commands.xLocationOf.apply(this, [spriteId]);
-  };
-  window.p5.prototype.yLocationOf = function(spriteId) {
-    return commands.yLocationOf.apply(this, [spriteId]);
   };
 
   // SPRITE commands

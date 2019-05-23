@@ -70,35 +70,15 @@ export const commands = {
       }
     });
   },
-  pointInDirection(spriteId, direction) {
-    let sprites = spriteUtils.singleOrGroup(spriteId);
-    let dirs = {
-      East: 90,
-      South: 180,
-      West: 270,
-      North: 360
-    };
-    if (!dirs[direction]) {
-      console.error('invalid direction ' + direction);
-      return;
-    }
-    sprites.forEach(sprite => {
-      sprite.rotation = dirs[direction];
-    });
-  },
   setProp(spriteId, prop, val) {
     if (!val) {
       return;
     }
     let sprites = spriteUtils.singleOrGroup(spriteId);
     let specialCases = {
-      height: sprite =>
-        (sprite.height = (sprite.animation.getHeight() * val) / 100),
       scale: sprite => (sprite.scale = val / 100),
       tint: sprite =>
         (sprite.tint = 'hsb(' + (Math.round(val) % 360) + ', 100%, 100%)'),
-      width: sprite =>
-        (sprite.width = (sprite.animation.getWidth() * val) / 100),
       y: sprite => (sprite.y = 400 - val)
     };
     sprites.forEach(sprite => {
