@@ -1,5 +1,6 @@
 hidden false
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'

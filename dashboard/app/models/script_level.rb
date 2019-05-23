@@ -372,6 +372,68 @@ class ScriptLevel < ActiveRecord::Base
     }.camelize_keys
   end
 
+  def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
+    # Just get the most recently stage extra they worked on
+    stage_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
+    if stage_extra_user_level
+      {
+        bonus: true,
+        user_id: student.id,
+        status: SharedConstants::LEVEL_STATUS.perfect,
+        passed: true
+      }.merge!(stage_extra_user_level.attributes)
+    else
+      {
+        bonus: true,
+        user_id: student.id,
+        passed: false,
+        status: SharedConstants::LEVEL_STATUS.not_tried
+      }
+    end
+  end
+
+  # Bring together all the information needed to show the teacher panel on a level
+  def summarize_for_teacher_panel(student)
+    contained_levels = levels.map(&:contained_levels).flatten
+    contained = contained_levels.any?
+    levels = contained ? contained_levels : [level]
+
+    user_level = student.last_attempt_for_any(levels)
+
+    status = activity_css_class(user_level)
+    passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+
+    if user_level
+      paired = user_level.paired?
+
+      driver_info = UserLevel.most_recent_driver(script, levels, student)
+      driver = driver_info[0] if driver_info
+
+      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
+      navigator = navigator_info[0] if navigator_info
+    end
+
+    teacher_panel_summary = {
+      contained: contained,
+      submitLevel: level.properties['submittable'] == 'true',
+      paired: paired,
+      driver: driver,
+      navigator: navigator,
+      isConceptLevel: level.concept_level?,
+      user_id: student.id,
+      passed: passed,
+      status: status,
+      levelNumber: position,
+      assessment: assessment,
+      bonus: bonus
+    }
+    if user_level
+      teacher_panel_summary.merge!(user_level.attributes)
+    end
+
+    teacher_panel_summary
+  end
+
   def self.cache_find(id)
     Script.cache_find_script_level(id)
   end
