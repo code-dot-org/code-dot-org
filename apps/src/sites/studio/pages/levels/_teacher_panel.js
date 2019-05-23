@@ -25,7 +25,10 @@ function initPage() {
   initViewAs(store);
   queryLockStatus(store, teacherPanelData.script_id);
   store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
-  renderTeacherContentToggle(store);
+  // Stage Extras fail to load with this
+  if (!teacherPanelData.stage_extra) {
+    renderTeacherContentToggle(store);
+  }
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
