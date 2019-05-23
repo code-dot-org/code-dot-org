@@ -9238,8 +9238,6 @@ zh-CN:
               name: 互联网
             Crowdsourcing:
               name: 众包
-            Concept Practice with Minecraft:
-              name: 与《我的世界》往前看
             Editing Behaviors:
               name: 编辑行为
             Virtual Pet with Sprite Lab:
@@ -9248,6 +9246,8 @@ zh-CN:
               name: 舞蹈派对
             'Conditionals in Minecraft: Voyage Aquatic':
               name: "《我的世界》的条件：水上航行"
+            Concept Practice with Minecraft:
+              name: 与《我的世界》往前看
         csd1-2019:
           title: CSD 第一单元——解决问题和计算('19-'20)
           description: " \r\n单元1是计算机科学领域的高度交互和协作的介绍，在更广泛的范围寻找解决问题的方案。在其中将会练习使用解决问题的流程来解决一系列的难题、挑战和真实世界的场景。接下来，会学到计算机是如何进行输入、输出、存储处理信息，从而帮助人类解决问题。最后是设计一个应用程序的项目，来解决选择的问题。\r\n"
@@ -9996,6 +9996,8 @@ zh-CN:
               description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后，
                 学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前，
                 学生们要相互进行审核，并对他们的项目做必要的修改。
+            Post-Project Test:
+              name: 项目后测试
         csd6-2019:
           title: CSD 6 单元- 物理计算 ('18-'19)
           description: 单元6探讨了硬件平台在计算中的作用, 以及不同的传感器如何能够提供比传统键盘、鼠标和显示器更有效的输入和输出。使用应用程序实验室和
@@ -10035,6 +10037,8 @@ zh-CN:
               name: 电路和物理原型
             'Project: Prototype an Innovation':
               name: 项目：创新原型
+            Post-Project Test:
+              name: 项目后测试
         csp4-pilot:
           stages:
             Variables Explore:
@@ -10802,3 +10806,21 @@ zh-CN:
             Traversals Explore:
               name: 遍历探索
           title: '单元 5: 列表、循环和遍历'
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: 新手反思概述
+            Day 1:
+              name: 第一天
+            Day 2:
+              name: 第二天
+            Day 3:
+              name: 第三天
+            Day 4:
+              name: 第四天
+            Wrap Up:
+              name: 总结
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: 什么是电脑？

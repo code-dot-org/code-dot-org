@@ -523,7 +523,7 @@ it:
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
         algebraPD3:
           stages:
             Computer Science Pedagogy:
@@ -825,7 +825,7 @@ it:
             Introduction to Arrays:
               name: Introduzione agli array
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
         gumball:
           title: Laboratorio con Gumball
           description: Crea una storia oppure fai un gioco con il Laboratorio con Gumball!
@@ -956,7 +956,7 @@ it:
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
             Post-Course Survey:
               name: Sondaggio Post-corso
         CSDU3-Draft:
@@ -1159,7 +1159,7 @@ it:
             Variables:
               name: Variabili
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -2014,7 +2014,7 @@ it:
             Conditionals & Loops in Harvester:
               name: Istruzioni condizionali & Cicli con la contadina
             Until Loops in Maze:
-              name: Cicli "Fino a Che" con il Labirinto 
+              name: Cicli "fino a che" con il Labirinto
           title: Corso rapido
           assignment_family_title: Corso Rapido
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
@@ -2603,7 +2603,7 @@ it:
             Conditionals in Bee:
               name: Istruzioni Condizionali con l'Ape
             Until Loops in Maze:
-              name: Cicli "Fino a Che" con il Labirinto 
+              name: Cicli "fino a che" con il Labirinto
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
@@ -2761,7 +2761,7 @@ it:
             Nested Loops in Frozen:
               name: Cicli Annidati con Frozen
             Until Loops in Maze:
-              name: Cicli "Fino a Che" con il Labirinto 
+              name: Cicli "fino a che" con il Labirinto
             Conditionals in Maze:
               name: Istruzioni Condizionali nel Labirinto
             Conditionals & Loops in Harvester:
@@ -3040,7 +3040,7 @@ it:
         csp5-2018:
           stages:
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
             Mid-Year Survey:
@@ -3288,7 +3288,7 @@ it:
             While Loops in Farmer:
               name: Cicli "mentre" con la contadina
             Until Loops in Maze:
-              name: Cicli "Fino a Che" con il Labirinto 
+              name: Cicli "fino a che" con il Labirinto
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Bee:
@@ -3425,7 +3425,7 @@ it:
             While Loops in Farmer:
               name: Cicli "mentre" con la contadina
             Until Loops in Maze:
-              name: Cicli "Fino a Che" con il Labirinto 
+              name: Cicli "fino a che" con il Labirinto
             Conditionals with Cards:
               name: Istruzioni condizionali con le Carte da Gioco
             Conditionals in Bee:
@@ -3488,14 +3488,14 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza Collettiva
-            Concept Practice with Minecraft:
-              name: Uno sguardo avanti con Minecraft
             Build A Project:
               name: Progetto di Fine Corso
             Dance Party:
               name: Ballando col codice
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
+            Concept Practice with Minecraft:
+              name: Uno sguardo avanti con Minecraft
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -3752,7 +3752,7 @@ it:
         csp5-2019:
           stages:
             While Loops:
-              name: Cicli "Mentre"
+              name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
             Mid-Year Survey:

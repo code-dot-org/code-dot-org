@@ -903,6 +903,7 @@ it:
     csf_variables: 'Variabili'
     csf_for_loops: 'Cicli con Contatore'
     csf_internet: 'Internet'
+    csf_warmup: 'Riscaldamento'
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'
     csd2_1: 'Capitolo 1: Contenuti Web e HTML'
