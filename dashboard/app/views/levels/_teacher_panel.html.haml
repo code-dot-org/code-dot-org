@@ -14,11 +14,10 @@
 
 - data[:level_examples] = level_example_links
 
-
 -if @section
   - data[:section_script_levels] = @section.students.order(:name).map do |student|
     - if @stage_extras
-      - {bonus: true, extras: student.user_levels.where(script: @stage.script, level: @bonus_level_ids), user_id: student.id}
+      - ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, student)
     -else
       - @script_level&.summarize_for_teacher_panel(student)
 
