@@ -75,6 +75,10 @@ const style = {
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
+// did not include undefined since we do not want to
+// return undefined when input is console.log("something")
+const FALSIES = new Set([false, null, 0, '', ``, NaN]);
+
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -168,9 +172,11 @@ export default connect(
                   ? `(${input})`
                   : input
               );
+
               result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
                 result
               );
+
               this.appendLog({
                 output: result
               });
@@ -248,15 +254,8 @@ export default connect(
             output = output.toJS();
           }
           if (output.input) {
-            return (
-              <div key={i}>
-                &gt;{' '}
-                <div style={style.myDiv}>
-                  <Inspector data={output.input} />
-                </div>
-              </div>
-            );
-          } else if (output.output) {
+            return <div key={i}>&gt; {output.input}</div>;
+          } else if (output.output || FALSIES.has(output.output)) {
             return (
               <div key={i}>
                 &lt;{' '}
@@ -265,50 +264,12 @@ export default connect(
                 </div>
               </div>
             );
-          } else if (output.interpreted) {
-            if (output.interpreted && output.output === undefined) {
-              return (
-                <div key={i}>
-                  <Inspector key={i} data={output.interpreted} />
-                  &lt;{' '}
-                  <div style={style.myDiv}>
-                    <Inspector data={output.output} />
-                  </div>
-                </div>
-              );
-            } else if (output.interpreted) {
-              return <Inspector key={i} data={output.interpreted} />;
-            }
+          } else if (output.interpreted || FALSIES.has(output.interpreted)) {
+            return <Inspector key={i} data={output.interpreted} />;
           }
         });
       }
     }
-
-    // displayOutputs() {
-    //   // logOutput is string
-    //   if (this.props.logOutput.length > 0) {
-    //     let logOutputs = this.props.logOutput.split('\n');
-    //     if (logOutputs.size % 3 === 0) {
-    //       return logOutputs.map((output, i) => {
-    //         if (i === 0) {
-    //           return <div key={i}>{output}</div>;
-    //         } else if (i + (1 % 2) === 0) {
-    //           return <div key={i}>&gt; {output}</div>;
-    //         } else if (i + (1 % 2) !== 0) {
-    //           return <div key={i}>&lt; {output}</div>;
-    //         }
-    //       });
-    //     } else {
-    //       return logOutputs.map((output, i) => {
-    //         if (i % 2 === 0) {
-    //           return <div key={i}>&gt; {output}</div>;
-    //         } else if (i % 2 !== 0) {
-    //           return <div key={i}>&lt; {output}</div>;
-    //         }
-    //       });
-    //     }
-    //   }
-    // }
 
     render() {
       let classes = 'debug-console';
