@@ -2,6 +2,7 @@
 - data[:script_name] = @script.name
 - data[:script_id] = @script.id
 - data[:section] = @section&.summarize
+- data[:stage_extra] = @stage_extras
 
 - if @level && @script_level
   - if @level.try(:examples).present? && current_user.authorized_teacher? # 'solutions' for applab-type levels
@@ -15,7 +16,10 @@
 
 -if @section
   - data[:section_script_levels] = @section.students.order(:name).map do |student|
-    - @script_level&.summarize_for_teacher_panel(student)
+    - if @stage_extras
+      - ScriptLevel.summarize_as_bonus_for_teacher_panel(@stage.script, @bonus_level_ids, student)
+    -else
+      - @script_level&.summarize_for_teacher_panel(student)
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
