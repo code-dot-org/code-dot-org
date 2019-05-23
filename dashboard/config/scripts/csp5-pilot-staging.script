@@ -1,4 +1,5 @@
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
