@@ -372,6 +372,26 @@ class ScriptLevel < ActiveRecord::Base
     }.camelize_keys
   end
 
+  def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
+    # Just get the most recently stage extra they worked on
+    stage_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
+    if stage_extra_user_level
+      {
+        bonus: true,
+        user_id: student.id,
+        status: SharedConstants::LEVEL_STATUS.perfect,
+        passed: true
+      }.merge!(stage_extra_user_level.attributes)
+    else
+      {
+        bonus: true,
+        user_id: student.id,
+        passed: false,
+        status: SharedConstants::LEVEL_STATUS.not_tried
+      }
+    end
+  end
+
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student)
     contained_levels = levels.map(&:contained_levels).flatten
@@ -404,7 +424,8 @@ class ScriptLevel < ActiveRecord::Base
       passed: passed,
       status: status,
       levelNumber: position,
-      assessment: assessment
+      assessment: assessment,
+      bonus: bonus
     }
     if user_level
       teacher_panel_summary.merge!(user_level.attributes)
