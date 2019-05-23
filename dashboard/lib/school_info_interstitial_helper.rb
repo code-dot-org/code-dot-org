@@ -24,11 +24,10 @@ module SchoolInfoInterstitialHelper
     return true
   end
 
-  # Helper method to determine if last seen school info interstitial is nil
+  # Determine if a user has seen the school info interstitial.
   def check_last_seen_school_info_interstitial?
-    # the user has never seen it
     return true if last_seen_school_info_interstitial.nil?
-    # the user has seen it, but it has been more than a week
+
     return true if user.last_seen_school_info_interstitial >= 7
 
     return false
