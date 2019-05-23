@@ -22,6 +22,7 @@ const levels = [
     paired: null,
     passed: false,
     status: LevelStatus.not_tried,
+    submitLevel: false,
     user_id: 1
   },
   {
@@ -34,6 +35,7 @@ const levels = [
     paired: null,
     passed: false,
     status: LevelStatus.not_tried,
+    submitLevel: false,
     user_id: 2
   }
 ];
