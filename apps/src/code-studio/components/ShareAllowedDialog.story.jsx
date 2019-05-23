@@ -4,6 +4,7 @@ import {action} from '@storybook/addon-actions';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
+import libraryShareDialog from '@cdo/apps/code-studio/components/libraryShareDialogRedux';
 
 const fakei18n = {
   t(s) {
@@ -11,7 +12,6 @@ const fakei18n = {
       {
         'project.share_title': 'Share your project',
         'project.share_copy_link': 'Copy the link:',
-        'project.close': 'Close',
         'project.advanced_share': 'Show advanced options',
         'project.embed': 'Embed',
         'project.share_embed_description':
@@ -28,7 +28,12 @@ const fakei18n = {
 export default storybook => {
   storybook
     .storiesOf('ShareAllowedDialog', module)
-    .withReduxStore({publishDialog, pageConstants, shareDialog})
+    .withReduxStore({
+      publishDialog,
+      pageConstants,
+      shareDialog,
+      libraryShareDialog
+    })
     .addStoryTable([
       {
         name: 'basic example',

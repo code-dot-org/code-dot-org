@@ -153,7 +153,10 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (getStore().getState().pageConstants.showAnimationMode) {
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
         buttons = [
           {
             text: 'Draw',

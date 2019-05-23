@@ -87,7 +87,7 @@
         - if exists
           - project = FeaturedProject.find_by storage_app_id: storage_app_id
           - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
-        - storage_apps = StorageApps.new(storage_id('user'))
+        - storage_apps = StorageApps.new(get_storage_id)
         - content_moderation_disabled = storage_apps.content_moderation_disabled?(params[:channel_id])
         %li
           S3 link:

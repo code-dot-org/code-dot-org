@@ -10,33 +10,18 @@ import logToCloud from '../../../logToCloud';
 function main(context) {
   Promise.all([
     checkJotFormFrameLoaded(context),
-    // Domains used by Jotform:
-    // cdn.jotfor.ms       https://cdn.jotfor.ms/images/calendar.png  817B
-    checkReachability('https://cdn.jotfor.ms/images/calendar.png'),
-    // www.jotform.com     https://www.jotform.com/favicon.ico        887B
-    checkReachability('https://www.jotform.com/favicon.ico')
-    // Not using these yet, they're likely to fall under the same policy as www.jotform.com
-    // events.jotform.com
-    // files.jotform.com
-    // form.jotform.com
-  ]).then(([jotFormFrameLoadedMs, cdnjotformsMs, wwwjotformcomMs]) => {
-    if (jotFormFrameLoadedMs === false) {
-      // Load failed if we specifically got 'false'
-      logToCloud.addPageAction(logToCloud.PageAction.JotFormLoadFailed, {
-        route: `GET ${context.location.pathname}`,
-        reachedCdnjotforms: false !== cdnjotformsMs,
-        reachedWwwjotformcom: false !== wwwjotformcomMs,
-        cdnjotformsMs,
-        wwwjotformcomMs
-      });
-    } else {
-      logToCloud.addPageAction(logToCloud.PageAction.JotFormFrameLoaded, {
-        route: `GET ${context.location.pathname}`,
-        jotFormFrameLoadedMs,
-        cdnjotformsMs,
-        wwwjotformcomMs
-      });
-    }
+    checkJotFormReachability()
+  ]).then(([jotFormFrameLoadedMs, jotformReachability]) => {
+    const pageAction =
+      jotFormFrameLoadedMs === false
+        ? logToCloud.PageAction.JotFormLoadFailed
+        : logToCloud.PageAction.JotFormFrameLoaded;
+    const eventData = {
+      route: `GET ${context.location.pathname}`,
+      jotFormFrameLoadedMs,
+      ...jotformReachability
+    };
+    logToCloud.addPageAction(pageAction, eventData);
   });
 }
 
@@ -62,6 +47,40 @@ function checkJotFormFrameLoaded(context) {
       resolve(false);
     }, 5000);
   });
+}
+
+/**
+ * Check a whole set of JotForm domains to see if they're reachable from this client.
+ * @returns {Promise<object>} Resolves to a results object when all reachability checks are done,
+ *   in the form:
+ *   {
+ *     wwwjotformcomReached: <boolean, whether reachable>,
+ *     wwwjotformcomMs: <(number|false), time to load in ms, or false if load failed>,
+ *     ...and so on for each domain
+ *   }
+ */
+function checkJotFormReachability() {
+  // Small (<2KB) files on domains used by JotForm:
+  const jotformUrls = [
+    'https://cdn.jotfor.ms/favicon.ico',
+    'https://www.jotform.com/favicon.ico',
+    'https://api.jotform.com/favicon.ico',
+    'https://submit.jotform.us/favicon.ico'
+    // Not using these yet, they're likely to fall under the same policy as www.jotform.com
+    // events.jotform.com
+    // files.jotform.com
+    // form.jotform.com
+  ];
+  const anchor = document.createElement('a'); // For URL manipulation
+  return Promise.all(jotformUrls.map(checkReachability)).then(loadTimes =>
+    loadTimes.reduce((result, timeMs, i) => {
+      anchor.src = jotformUrls[i];
+      const origin = anchor.hostname.toLowerCase();
+      result[`${origin}Reached`] = false !== timeMs;
+      result[`${origin}Ms`] = timeMs;
+      return result;
+    }, {})
+  );
 }
 
 /**
