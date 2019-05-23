@@ -10,6 +10,7 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}'
 family_name 'csp3'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1_2018'
 level 'CSP U3L01 SFLP_2019', named: true
