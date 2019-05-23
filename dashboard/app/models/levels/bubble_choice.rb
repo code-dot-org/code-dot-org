@@ -24,4 +24,13 @@
 #
 
 class BubbleChoice < DSLDefined
+  def dsl_default
+    <<ruby
+name 'unique level name here'
+
+sublevels
+level 'level1'
+level 'level2'
+ruby
+  end
 end
