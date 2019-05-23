@@ -588,6 +588,14 @@ class Level < ActiveRecord::Base
     false
   end
 
+  def get_level_url_key(script)
+    script_name = script.name
+    script_level = script_levels.find_by_script_id(script.id)
+    level_pos = script_level.levels.find_index {|l| l.id == id} + 1
+
+    "https://studio.code.org/s/#{script_name}/stage/#{script_level.chapter}/puzzle/#{level_pos}"
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).

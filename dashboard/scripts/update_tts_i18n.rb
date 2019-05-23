@@ -31,7 +31,7 @@ TextToSpeech::VOICES.keys.each do |lang|
 
       # Short Instructions
 
-      translated_text = TextToSpeech.sanitize(level.localized_short_instructions || "")
+      translated_text = TextToSpeech.sanitize(level.localized_short_instructions(script) || "")
       english_text = TextToSpeech.sanitize(level.short_instructions || "")
 
       if text_translated?(translated_text, english_text)
@@ -41,7 +41,7 @@ TextToSpeech::VOICES.keys.each do |lang|
       # Long Instructions
 
       unless script.csf_international? || script.twenty_hour?
-        translated_text = TextToSpeech.sanitize(level.localized_long_instructions || "")
+        translated_text = TextToSpeech.sanitize(level.localized_long_instructions(script) || "")
         english_text = TextToSpeech.sanitize(level.long_instructions || "")
 
         if text_translated?(translated_text, english_text)
@@ -52,7 +52,7 @@ TextToSpeech::VOICES.keys.each do |lang|
       # Authored Hints
 
       next unless level.localized_authored_hints
-      translated_hints = JSON.parse(level.localized_authored_hints)
+      translated_hints = JSON.parse(level.localized_authored_hints(script))
       english_hints = JSON.parse(level.authored_hints)
 
       translated_hints.zip(english_hints).each do |translated_hint, english_hint|

@@ -414,10 +414,12 @@ class Blockly < Level
   #   is unnecessary, so we are gradually removing the extra key. If this is
   #   true, keep the extra key in. If false, exclude it. TODO elijah: remove all
   #   instances of this extra key and then this property.
-  def get_localized_property(property_name, extra_identifier: true)
+  def get_localized_property(property_name, script, extra_identifier: true)
     if should_localize? && try(property_name)
-      key = name
-      key += "_#{property_name.singularize}" if extra_identifier
+      url_key = get_level_url_key(script)
+      name_key = name
+      name_key += "_#{property_name.singularize}" if extra_identifier
+      key = if I18n.exists?(url_key) then url_key else name_key end
       I18n.t(
         key,
         scope: [:data, property_name.pluralize],
@@ -427,19 +429,21 @@ class Blockly < Level
     end
   end
 
-  def localized_failure_message_override
-    get_localized_property("failure_message_overrides")
+  def localized_failure_message_override(script)
+    get_localized_property("failure_message_overrides", script)
   end
 
-  def localized_long_instructions
-    get_localized_property("long_instructions", extra_identifier: false)
+  def localized_long_instructions(script)
+    get_localized_property("long_instructions", script, extra_identifier: false)
   end
 
-  def localized_authored_hints
+  def localized_authored_hints(script)
     return unless authored_hints
 
     if should_localize?
-      scope = [:data, :authored_hints, "#{name}_authored_hint"]
+      url_key = get_level_url_key(script)
+      key = if I18n.exists?(url_key) then url_key else "#{name}_authored_hint" end
+      scope = [:data, :authored_hints, key]
 
       localized_hints = JSON.parse(authored_hints).map do |hint|
         # Skip empty hints, or hints with videos (these aren't translated).
@@ -470,7 +474,7 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions", extra_identifier: false)
+      loc_val = get_localized_property("short_instructions", script, extra_identifier: false)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
