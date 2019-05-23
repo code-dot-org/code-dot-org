@@ -41,6 +41,10 @@ class SchoolInfoConfirmationDialog extends Component {
     };
   }
 
+  closeModal = () => {
+    this.setState({isOpen: false});
+  };
+
   handleClickYes = () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
     fetch(
@@ -119,7 +123,7 @@ class SchoolInfoConfirmationDialog extends Component {
   render() {
     const {showSchoolInterstitial, isOpen} = this.state;
     return (
-      <Dialog isOpen={isOpen}>
+      <Dialog isOpen={isOpen} handleClose={this.closeModal}>
         {!showSchoolInterstitial
           ? this.renderInitialContent()
           : this.renderSchoolInformationForm()}
