@@ -99,7 +99,7 @@ class SchoolInfoConfirmationDialog extends Component {
           <p style={styles.intro}>
             {i18n.schoolInfoDialogDescription()}
             <span style={styles.schoolName}>
-              {i18n.schoolInfoDialogDescription_schoolName({schoolName})}
+              {i18n.schoolInfoDialogDescriptionSchoolName({schoolName})}
             </span>
           </p>
         </div>
