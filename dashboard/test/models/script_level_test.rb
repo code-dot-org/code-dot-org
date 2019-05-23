@@ -122,6 +122,48 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal true, summary2[:contained]
   end
 
+  test 'teacher panel summarize for paired level' do
+    student = create :student
+    student2 = create :student
+
+    sl = create :script_level
+    driver_ul = create(
+      :user_level,
+      user: student,
+      level: sl.level,
+      script: sl.script,
+      best_result: 100
+    )
+    navigator_ul = create(
+      :user_level,
+      user: student2,
+      level: sl.level,
+      script: sl.script,
+      best_result: 100
+    )
+    create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
+
+    summary1 = sl.summarize_for_teacher_panel(student)
+    summary2 = sl.summarize_for_teacher_panel(student2)
+    assert_equal true, summary1[:paired]
+    assert_equal true, summary2[:paired]
+    assert_equal student.name, summary2[:driver]
+    assert_equal student2.name, summary1[:navigator]
+  end
+
+  test 'teacher panel summarize for stage extra' do
+    student = create :student
+    script = create :script
+    stage1 = create :stage
+    script_level = create :script_level, stage: stage1, script: script, bonus: true
+
+    summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script, script_level.id, student)
+    assert_equal true, summary[:bonus]
+    assert_equal LEVEL_STATUS.not_tried, summary[:status]
+    assert_equal false, summary[:passed]
+    assert_equal student.id, summary[:user_id]
+  end
+
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
     last_20h_maze_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '2_19'}, script_id: 1)
     first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)

@@ -386,6 +386,7 @@ class ScriptLevel < ActiveRecord::Base
       {
         bonus: true,
         user_id: student.id,
+        passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
     end
@@ -394,13 +395,10 @@ class ScriptLevel < ActiveRecord::Base
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student)
     contained_levels = levels.map(&:contained_levels).flatten
-    if contained_levels.any?
-      user_level = student.last_attempt_for_any(contained_levels)
-      contained = true
-    else
-      user_level = student.last_attempt_for_any(levels)
-      contained = false
-    end
+    contained = contained_levels.any?
+    levels = contained ? contained_levels : [level]
+
+    user_level = student.last_attempt_for_any(levels)
 
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
@@ -408,18 +406,10 @@ class ScriptLevel < ActiveRecord::Base
     if user_level
       paired = user_level.paired?
 
-      driver_info = if contained
-                      UserLevel.most_recent_driver(script, contained_levels, student)
-                    else
-                      UserLevel.most_recent_driver(script, level, student)
-                    end
+      driver_info = UserLevel.most_recent_driver(script, levels, student)
       driver = driver_info[0] if driver_info
 
-      navigator_info = if contained
-                         UserLevel.most_recent_navigator(script, contained_levels, student)
-                       else
-                         UserLevel.most_recent_navigator(script, level, student)
-                       end
+      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
       navigator = navigator_info[0] if navigator_info
     end
 
