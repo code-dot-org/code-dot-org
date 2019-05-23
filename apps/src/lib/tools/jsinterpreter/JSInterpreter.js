@@ -242,6 +242,27 @@ export default class JSInterpreter {
   }
 
   /**
+   * Finds all functions within a section of code and returns on object
+   * representing them and their input parameters.
+   *
+   * @param {string} [code] - a string containing the code to be parsed for functions.
+   */
+  getFunctionsAndParams(code) {
+    this.parse({code: code});
+    var functionsWithParms = {};
+    var functions = this.interpreter.ast.body.filter(obj => {
+      return obj.type === 'FunctionDeclaration';
+    });
+    functions.map(obj => {
+      functionsWithParms[obj.id.name] = obj.params.map(param => {
+        return param.name;
+      });
+    });
+
+    return functionsWithParms;
+  }
+
+  /**
    * Init `this.codeInfo` with cumulative length info (used to locate breakpoints).
    * @param {!Object} options
    * @param {!string} options.code - Code to be executed by the interpreter.

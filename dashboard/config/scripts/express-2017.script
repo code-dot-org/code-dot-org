@@ -10,6 +10,7 @@ family_name 'express'
 version_year '2017'
 is_stable true
 supported_locales ["es-ES", "es-MX", "sk-SK"]
+curriculum_umbrella 'CSF'
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
