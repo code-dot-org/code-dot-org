@@ -24,6 +24,7 @@ var Spritelab = function() {
   };
   window.p5.prototype.executeDrawLoopAndCallbacks = function() {
     drawBackground.apply(this);
+    spriteUtils.runEvents.apply(this);
     this.drawSprites();
     updateTitle.apply(this);
   };
@@ -65,6 +66,17 @@ var Spritelab = function() {
   };
 
   // EVENT commands
+  window.p5.prototype.checkTouching = function(
+    condition,
+    sprite1,
+    sprite2,
+    callback
+  ) {
+    commands.checkTouching.apply(this, [condition, sprite1, sprite2, callback]);
+  };
+  window.p5.prototype.keyPressed = function(condition, key, callback) {
+    commands.keyPressed.apply(this, [condition, key, callback]);
+  };
   window.p5.prototype.spriteClicked = function(
     condition,
     spriteIndex,

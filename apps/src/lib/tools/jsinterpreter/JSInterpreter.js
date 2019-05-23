@@ -30,7 +30,6 @@ const INTERSTITIAL_NODES = {
  * of the core executeInterpeter() function (improves browser JS engine performance)
  */
 function safeStepInterpreter(jsi) {
-  console.log('step');
   try {
     jsi.interpreter.step();
   } catch (err) {
