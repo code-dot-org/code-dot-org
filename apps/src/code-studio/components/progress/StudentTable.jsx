@@ -32,6 +32,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center'
   },
+  meRow: {
+    padding: '1px 1px 1px 5px'
+  },
   nameInScript: {
     paddingLeft: 5
   },
@@ -80,9 +83,7 @@ class StudentTable extends React.Component {
             style={this.getRowStyle(selectedUserId, null)}
             onClick={() => onSelectUser(null)}
           >
-            <td style={{...styles.td, ...styles.nameInScript}}>
-              {i18n.studentTableTeacherDemo()}
-            </td>
+            <td style={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
           {students.map(student => (
             <tr
