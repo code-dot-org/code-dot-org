@@ -44,19 +44,16 @@ export function resetSpriteMap() {
 }
 
 export function addEvent(type, args, callback) {
-  console.log('before');
   inputEvents.push({type: type, args: args, callback: callback});
-  console.log('after');
-  return;
 }
 
 function checkEvent(inputEvent, p5Inst) {
   let shouldEventFire = false;
   let sprites;
   switch (inputEvent.type) {
-    case 'whenkey':
+    case 'whenpress':
       return p5Inst.keyWentDown(inputEvent.args.key);
-    case 'whilekey':
+    case 'whilepress':
       return p5Inst.keyDown(inputEvent.args.key);
     case 'whentouch':
       console.log(3);
