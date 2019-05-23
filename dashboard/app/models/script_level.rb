@@ -386,6 +386,7 @@ class ScriptLevel < ActiveRecord::Base
       {
         bonus: true,
         user_id: student.id,
+        passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
     end
