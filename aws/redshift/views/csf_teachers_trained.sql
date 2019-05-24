@@ -9,10 +9,12 @@ pd_workshop_based as
     min(pds.start)::date as trained_at, -- actual workshop date
     --pdw.ended_at as trained_at, -- workshop date used in accounting and reports from the online dashboard
     pdw.id as workshop_id,
-    pdw.section_id as section_id,
-    CASE WHEN pdw.subject IN ( 'Intro Workshop', 'Intro') OR pdw.subject IS NULL THEN 'Intro Workshop' 
-         ELSE subject -- just 'Deep Dive' becauase of where clause
-    END AS subject
+    pdw.section_id as section_id, 
+    CASE 
+      WHEN (pdw.subject IN ('Intro Workshop', 'Intro') OR pdw.subject IS NULL)
+          THEN 'Intro Workshop' 
+      ELSE pdw.subject 
+      END as subject
   FROM dashboard_production_pii.pd_enrollments pde
     JOIN dashboard_production_pii.pd_attendances pda ON pda.pd_enrollment_id = pde.id
     JOIN dashboard_production_pii.pd_workshops pdw ON pdw.id = pde.pd_workshop_id
@@ -41,7 +43,7 @@ pegasus_form_based as
     ) trained_at,
     null::int as workshop_id,
     se.id as section_id, 
-    'Intro Workshop'  AS subject
+    'Intro Workshop' as subject
   from pegasus_pii.forms
   join dashboard_production.sections se on se.id = nullif(json_extract_path_text(data_text, 'section_id_s'),'')::int
   join dashboard_production.followers f on f.section_id = se.id
@@ -57,7 +59,7 @@ section_based as
     date_trunc('day', se.created_at)::date trained_at,
     null::int as workshop_id,
     se.id as section_id, 
-    'Intro Workshop'  AS subject
+    'Intro Workshop' as subject
   FROM dashboard_production.followers f
     JOIN dashboard_production.sections se ON se.id = f.section_id
   WHERE se.section_type = 'csf_workshop'
