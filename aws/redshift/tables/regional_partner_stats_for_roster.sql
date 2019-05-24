@@ -19,7 +19,13 @@ FROM (SELECT DISTINCT studio_person_id,
 
 GROUP BY 1,
          2,
-         3)
+         3),
+         
+existing_deep_dive_teachers as
+(select user_id 
+from csf_teachers_trained 
+where subject = 'Deep Dive')
+
 -- CSP/D SELECT
 (SELECT regional_partner_id,
              regional_partner_name,
@@ -27,6 +33,7 @@ GROUP BY 1,
              first_name,
              last_name,
              studio_person_id,
+             3 as deep_dive_status, -- NA
              email,
              CASE
                WHEN course = 'CS Principles' THEN 'CSP'
@@ -53,7 +60,12 @@ UNION ALL
        first_name,
        last_name,
        rps.studio_person_id,
-       MAX(email),
+       MIN(case 
+          WHEN (days_to_start is not null) and (edd.user_id is null) then 0 -- definitely eligible
+          WHEN edd.user_id is not null THEN 1 -- already done deep dive
+          ELSE 2 -- unknown whether they have started
+          END) as deep_dive_status,
+       MAX(rps.email),
        MAX(CASE WHEN csf_courses.csf_scripts IS NULL THEN 'CSF' ELSE concat ('CSF ',csf_courses.csf_scripts) END) AS course,
        MAX(school_name),
        SUM(students_in_course),
@@ -69,6 +81,10 @@ FROM analysis_pii.regional_partner_stats_csf rps -- this table DOES include teac
   LEFT JOIN csf_courses
          ON csf_courses.school_year = rps.school_year_trained
         AND csf_courses.studio_person_id = rps.studio_person_id
+  JOIN users u 
+         ON u.studio_person_id = rps.studio_person_id
+  LEFT JOIN existing_deep_dive_teachers edd
+         ON edd.user_id = u.id
 WHERE (rps.school_year_taught = rps.school_year_trained OR rps.school_year_taught is null)
 AND trained_by_regional_partner = 1
 GROUP BY 1,

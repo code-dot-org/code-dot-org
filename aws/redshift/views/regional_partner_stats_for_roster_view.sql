@@ -14,7 +14,7 @@ FROM (SELECT DISTINCT studio_person_id,
              script_name
       FROM analysis_pii.regional_partner_stats_csf_view -- WARNING: this table includes teachers who were trained by facilitators prior to a RP taking over, but they are not included in query   
       WHERE school_year_trained = school_year_taught
-      AND   trained_by_regional_partner = 1 -- the roster will only show PII of teachers who are trained by the RP)
+      AND   trained_by_regional_partner = 1 -- the roster will only show PII of teachers who are trained by the RP
       AND   len(script_name) > 1)
 
 GROUP BY 1,
