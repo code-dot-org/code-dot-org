@@ -66,12 +66,18 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none'
+  },
+  inspector: {
+    display: 'inline-block'
   }
 };
 
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
+// did not include undefined since we do not want to
+// return undefined when input is console.log("something")
+const FALSIES = new Set([false, null, 0, '', ``, NaN]);
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -139,7 +145,9 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog('> ' + input);
+        experiments.isEnabled('react-inspector')
+          ? this.appendLog({input: input})
+          : this.appendLog('> ' + input);
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -150,18 +158,26 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            let result = this.props.evalInCurrentScope(
-              input[0] === '{' && input[input.length - 1] === '}'
-                ? `(${input})`
-                : input
-            );
-
-            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
-              result
-            );
-            this.appendLog(result);
+            if (experiments.isEnabled('react-inspector')) {
+              let result = this.props.evalInCurrentScope(
+                input[0] === '{' && input[input.length - 1] === '}'
+                  ? `(${input})`
+                  : input
+              );
+              result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
+              this.appendLog({
+                output: result
+              });
+            } else {
+              const result = this.props.evalInCurrentScope(input);
+              this.appendLog('< ' + String(result));
+            }
           } catch (err) {
-            this.appendLog('< ' + String(err));
+            experiments.isEnabled('react-inspector')
+              ? this.appendLog({output: String(err)})
+              : this.appendLog('< ' + String(err));
           }
         } else {
           this.appendLog('< (not running)');
@@ -224,7 +240,23 @@ export default connect(
           if (typeof output === 'object') {
             output = output.toJS();
           }
-          return <Inspector key={i} data={output} />;
+          if (output.input) {
+            return <div key={i}>&gt; {output.input}</div>;
+          } else if (output.output || FALSIES.has(output.output)) {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.inspector}>
+                  <Inspector data={output.output} />
+                </div>
+              </div>
+            );
+          } else if (
+            output.consoleLoggedOutput ||
+            FALSIES.has(output.consoleLoggedOutput)
+          ) {
+            return <Inspector key={i} data={output.consoleLoggedOutput} />;
+          }
         });
       }
     }
