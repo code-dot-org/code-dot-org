@@ -2662,16 +2662,16 @@ sk:
         courseC_PlayLab_events9_c: Blok `keď sa postava dotkne` môžeš na pracovnej ploche použiť viackrát naraz, takto ten prvý nemusíš odstrániť!
       courseC_PlayLab_eventsA_authored_hint:
         courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.
-        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť do pracovného priestoru konkétny blok `pri spustení`.
+        courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`.
       courseC_PlayLab_eventsA_2018_authored_hint:
         courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.
-        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť do pracovného priestoru konkétny blok `pri spustení`.
+        courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`.
       courseC_PlayLab_eventsA_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.
-        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť do pracovného priestoru konkétny blok `pri spustení`.
+        courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`.
       courseC_PlayLab_eventsA_embed_2019_authored_hint:
         courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie` a blok `nastav postavu na ___ rýchlosť`.
-        courseC_PlayLab_eventsA_b: Ny vyriešenie tejto úlohy, budeš potrebovať presunúť do pracovného priestoru konkétny blok `pri spustení`.
+        courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu presunúť blok `Pri spustení`.
       courseC_PlayLab_eventsFP_authored_hint:
         idea1: |-
           _Potrebuješ inšpiráciu?_
@@ -5265,6 +5265,76 @@ sk:
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
         courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok, alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
+      courseD_playLab_cond1_authored_hint:
+        courseD_playLab_cond1_a: Na vyriešenie úlohy pripoj blok `posuň postavu 1 hore` ku udalosti `keď šípka hore` a zopakuj to aj pre ostatné smery.
+        courseD_playLab_cond1_b: Použi šípočky na blokoch `keď šípka` and `posuň postavu`, aby si zmenil smer, ktorým pôjdu.
+        courseD_playLab_cond1_c: Po stlačení tlačidla "Spustiť" nezabudni posunúť Peglega ku obom vlajkám!
+      courseD_playLab_cond1_2018_authored_hint:
+        courseD_playLab_cond1_a: Na vyriešenie úlohy pripoj blok `posuň postavu 1 hore` ku udalosti `keď šípka hore` a zopakuj to aj pre ostatné smery.
+        courseD_playLab_cond1_b: Použi šípočky na blokoch `keď šípka` and `posuň postavu`, aby si zmenil smer, ktorým pôjdu.
+        courseD_playLab_cond1_c: Po stlačení tlačidla "Spustiť" nezabudni posunúť Peglega ku obom vlajkám!
+      courseD_playLab_cond1_2019_authored_hint:
+        courseD_playLab_cond1_a: Na vyriešenie úlohy pripoj blok `posuň postavu 1 hore` ku udalosti `keď šípka hore` a zopakuj to aj pre ostatné smery.
+        courseD_playLab_cond1_b: Použi šípočky na blokoch `keď šípka` and `posuň postavu`, aby si zmenil smer, ktorým pôjdu.
+        courseD_playLab_cond1_c: Po stlačení tlačidla "Spustiť" nezabudni posunúť Peglega ku obom vlajkám!
+      courseD_playLab_cond2_authored_hint:
+        courseD_playLab_cond2_a: Na vyriešenie tejto úlohy pripoj blok `pridaj bod` pod udalosť `keď postava 1 dotkne sa postavy 2`.
+      courseD_playLab_cond2_2018_authored_hint:
+        courseD_playLab_cond2_a: Na vyriešenie tejto úlohy pripoj blok `pridaj bod` pod udalosť `keď postava 1 dotkne sa postavy 2`.
+      courseD_playLab_cond2_2019_authored_hint:
+        courseD_playLab_cond2_a: Na vyriešenie tejto úlohy pripoj blok `pridaj bod` pod udalosť `keď postava 1 dotkne sa postavy 2`.
+      courseD_playLab_cond3_authored_hint:
+        courseD_playLab_cond3_a: Do cyklu `opakuj donekonečna` musíš vložiť dva bloky. Jeden zmení drakovu náladu na náhodnú a druhý počká 1 sekundu pred opätovným zbehnutím cyklu.
+      courseD_playLab_cond3_2018_authored_hint:
+        courseD_playLab_cond3_a: Do cyklu `opakuj donekonečna` musíš vložiť dva bloky. Jeden zmení drakovu náladu na náhodnú a druhý počká 1 sekundu pred opätovným zbehnutím cyklu.
+      courseD_playLab_cond3_2019_authored_hint:
+        courseD_playLab_cond3_a: Do cyklu `opakuj donekonečna` musíš vložiť dva bloky. Jeden zmení drakovu náladu na náhodnú a druhý počká 1 sekundu pred opätovným zbehnutím cyklu.
+      courseD_playLab_cond3a_authored_hint:
+        courseD_playLab_cond3_c: "-   `ak` má drak veselú náladu \n    -   `pridaj bod`\n    -   `pridaj bod`  \n\n-   `inak` `pridaj bod`"
+      courseD_playLab_cond3a_2018_authored_hint:
+        courseD_playLab_cond3_c: "-   `ak` má drak veselú náladu \n    -   `pridaj bod`\n    -   `pridaj bod`  \n\n-   `inak` `pridaj bod`"
+      courseD_playLab_cond3a_2019_authored_hint:
+        courseD_playLab_cond3_c: "-   `ak` má drak veselú náladu \n    -   `pridaj bod`\n    -   `pridaj bod`  \n\n-   `inak` `pridaj bod`"
+      courseD_playLab_cond4_authored_hint:
+        courseD_playLab_cond4_a: Potrebuješ použiť udalosť `pri spustení`.
+        courseD_playLab_cond4_b: Máme tu špeciálny blok `nastav každého maskovaného ninju, aby naháňal postavu`, vďaka ktorému bude ninja neustále behať za pirátom!
+        courseD_playLab_cond4_c: Pridaj blok `ukonči hru ako prehru` pod udalosť `keď sa postava 1 zrazí s maskovaným ninjom`.
+      courseD_playLab_cond4_2018_authored_hint:
+        courseD_playLab_cond4_a: Potrebuješ použiť udalosť `pri spustení`.
+        courseD_playLab_cond4_b: Máme tu špeciálny blok `nastav každého maskovaného ninju, aby naháňal postavu`, vďaka ktorému bude ninja neustále behať za pirátom!
+        courseD_playLab_cond4_c: Pridaj blok `ukonči hru ako prehru` pod udalosť `keď sa postava 1 zrazí s maskovaným ninjom`.
+      courseD_playLab_cond4_2019_authored_hint:
+        courseD_playLab_cond4_a: Potrebuješ použiť udalosť `pri spustení`.
+        courseD_playLab_cond4_b: Máme tu špeciálny blok `nastav každého maskovaného ninju, aby naháňal postavu`, vďaka ktorému bude ninja neustále behať za pirátom!
+        courseD_playLab_cond4_c: Pridaj blok `ukonči hru ako prehru` pod udalosť `keď sa postava 1 zrazí s maskovaným ninjom`.
+      courseD_playLab_cond5_authored_hint:
+        courseD_playLab_cond5_a: Použí podmienku `ak`, ktorá overí, či je `skóre` `>` `5`.
+        courseD_playLab_cond5_b: V hre môžeš cyklus `opakuj donekonečna` použiť aj viackrát.
+      courseD_playLab_cond5_2018_authored_hint:
+        courseD_playLab_cond5_a: Použí podmienku `ak`, ktorá overí, či je `skóre` `>` `5`.
+        courseD_playLab_cond5_b: V hre môžeš cyklus `opakuj donekonečna` použiť aj viackrát.
+      courseD_playLab_cond5_2019_authored_hint:
+        courseD_playLab_cond5_a: Použí podmienku `ak`, ktorá overí, či je `skóre` `>` `5`.
+        courseD_playLab_cond5_b: V hre môžeš cyklus `opakuj donekonečna` použiť aj viackrát.
+      courseD_playLab_cond6_authored_hint:
+        courseD_playLab_cond6_a: Na spomalenie ninju pridaj na začiatok programu blok `nastav každému maskovanému ninjovi rýchlosť`.
+        courseD_playLab_cond6_b: Potrebuješ blok `ak je postava 1 v pozícii > 255` vložiť dovnútra cyklu `opakuj donekonečna`, aby neustále kontroloval, či sa pirát nenachádza pod chobotnicami.
+      courseD_playLab_cond6_2018_authored_hint:
+        courseD_playLab_cond6_a: Na spomalenie ninju pridaj na začiatok programu blok `nastav každému maskovanému ninjovi rýchlosť`.
+        courseD_playLab_cond6_b: Potrebuješ blok `ak je postava 1 v pozícii > 255` vložiť dovnútra cyklu `opakuj donekonečna`, aby neustále kontroloval, či sa pirát nenachádza pod chobotnicami.
+      courseD_playLab_cond6_2019_authored_hint:
+        courseD_playLab_cond6_a: Na spomalenie ninju pridaj na začiatok programu blok `nastav každému maskovanému ninjovi rýchlosť`.
+        courseD_playLab_cond6_b: Potrebuješ blok `ak je postava 1 v pozícii > 255` vložiť dovnútra cyklu `opakuj donekonečna`, aby neustále kontroloval, či sa pirát nenachádza pod chobotnicami.
+      courseD_playLab_cond6a_authored_hint:
+        courseD_playLab_cond6_c: Na začiatok cyklu `opakuj donekonečna` kontrolujúceho pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`), aby sa mu body neodčítavali príliš rýchlo.
+      courseD_playLab_cond6a_2018_authored_hint:
+        courseD_playLab_cond6_c: Na začiatok cyklu `opakuj donekonečna` kontrolujúceho pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`), aby sa mu body neodčítavali príliš rýchlo.
+      courseD_playLab_cond6a_2019_authored_hint:
+        courseD_playLab_cond6_c: Na začiatok cyklu `opakuj donekonečna` kontrolujúceho pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`), aby sa mu body neodčítavali príliš rýchlo.
+      courseD_playLab_cond6cloneForTest_authored_hint:
+        courseD_playLab_cond6_a: Na spomalenie ninju pridaj na začiatok programu blok `nastav každému maskovanému ninjovi rýchlosť`.
+        courseD_playLab_cond6_b: Potrebuješ blok `ak je postava 1 v pozícii > 255` vložiť dovnútra cyklu `opakuj donekonečna`, aby neustále kontroloval, či sa pirát nenachádza pod chobotnicami.
+        courseD_playLab_cond6_c: Na začiatok cyklu `opakuj donekonečna` kontrolujúceho pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`), aby sa mu body neodčítavali príliš rýchlo.
       courseD_scrat_ramp1_authored_hint:
         courseC_maze_programming1_a: Ak sa Scrat neposúva k žaluďu, tak skontroluj, či sú bloky dobre pospájané a ešte raz stlač "Spustiť".
         courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
@@ -5345,13 +5415,13 @@ sk:
         courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotreuješ žiadne ďalšie bloky z panela nástrojov!
+        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotrebuješ žiadne ďalšie bloky z panela nástrojov!
       courseE_maze_ramp13_authored_hint:
         courseD_maze_ramp11_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť bludiskom krok po kroku a nájsť chyby.
         courseD_maze_ramp11_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok, alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
       courseE_maze_ramp1_2018_authored_hint:
         courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa, či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotreuješ žiadne ďalšie bloky z panela nástrojov!
+        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotrebuješ žiadne ďalšie bloky z panela nástrojov!
       courseE_maze_ramp2_authored_hint:
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu` sú spojené s blokom `pri spustení`.
       courseE_maze_ramp2_2018_authored_hint:
@@ -5404,6 +5474,15 @@ sk:
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseF_artist_for4_2019_authored_hint:
         courseF_artist_for4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
+      courseF_artist_variables10_authored_hint:
+        courseF_artist_variables10_a: Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.
+        courseF_artist_variables10_b: Môžeš vyskúšať viacero vecí a spustiť tvoj kód viac krát.
+      courseF_artist_variables10_2018_authored_hint:
+        courseF_artist_variables10_a: Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.
+        courseF_artist_variables10_b: Môžeš vyskúšať viacero vecí a spustiť tvoj kód viac krát.
+      courseF_artist_variables10_2019_authored_hint:
+        courseF_artist_variables10_a: Zabav sa v tomto leveli! Sleduj, čo dokážu spraviť malé zmeny v tvojom kóde.
+        courseF_artist_variables10_b: Môžeš vyskúšať viacero vecí a spustiť tvoj kód viac krát.
       courseF_artist_variables2_authored_hint:
         courseF_artist_variables2_a: Nezabudni sa pohnúť dopredu po nakreslení každého trojuholníka.
         courseF_artist_variables2_b: Tvoj nový cyklus bude obsahovať cyklus pre tvoj trojuholník a potom príkaz `posuň sa dopredu`.
@@ -5496,12 +5575,53 @@ sk:
           ![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)
       courseF_artist_variables7_authored_hint:
         courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
+        courseF_artist_variables7_b: Môžeš použiť cyklus `opakuj`, aby bol tvoj kód pre trojuholník jednoduchší.
+        courseF_artist_variables7_c: Chceš sa otočiť doľava o 120 stupňov, aby si spravil vrcholy trojuholníka.
       courseF_artist_variables7_2018_authored_hint:
         courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
+        courseF_artist_variables7_b: Môžeš použiť cyklus `opakuj`, aby bol tvoj kód pre trojuholník jednoduchší.
+        courseF_artist_variables7_c: Chceš sa otočiť doľava o 120 stupňov, aby si spravil vrcholy trojuholníka.
       courseF_artist_variables7_2019_authored_hint:
         courseF_artist_variables7_a: Tvoj kód začni pomocou bloku `nastav dĺžku (length)`. Nastav premennú dĺžka na 150.
+        courseF_artist_variables7_b: Môžeš použiť cyklus `opakuj`, aby bol tvoj kód pre trojuholník jednoduchší.
+        courseF_artist_variables7_c: Chceš sa otočiť doľava o 120 stupňov, aby si spravil vrcholy trojuholníka.
+      courseF_artist_variables8_authored_hint:
+        courseF_artist_variables8_b: Nezabudni začať tvoj kód pre trojuholník s blokom `nastav dĺžka` a začni s hodnotou 150 pixelov.
+        courseF_artist_variables8_c: Uisti sa, že používaš cyklus `opakuj` na nakreslenie tvojho trojuholníka.
+        courseF_artist_variables8_a: "Vyskúšaj použiť tieto bloky \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\n na konci tela tvojho cyklu."
+      courseF_artist_variables8_2018_authored_hint:
+        courseF_artist_variables8_b: Nezabudni začať tvoj kód pre trojuholník s blokom `nastav dĺžka` a začni s hodnotou 150 pixelov.
+        courseF_artist_variables8_c: Uisti sa, že používaš cyklus `opakuj` na nakreslenie tvojho trojuholníka.
+        courseF_artist_variables8_a: "Vyskúšaj použiť tieto bloky \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\n na konci tela tvojho cyklu."
+      courseF_artist_variables8_2019_authored_hint:
+        courseF_artist_variables8_b: Nezabudni začať tvoj kód pre trojuholník s blokom `nastav dĺžka` a začni s hodnotou 150 pixelov.
+        courseF_artist_variables8_c: Uisti sa, že používaš cyklus `opakuj` na nakreslenie tvojho trojuholníka.
+        courseF_artist_variables8_a: "Vyskúšaj použiť tieto bloky \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\n na konci tela tvojho cyklu."
+      courseF_artist_variables9_authored_hint:
+        courseF_artist_variables9_a: Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľko krát sa cyklus opakuje.
+        courseF_artist_variables9_b: Uisti sa, že bloky, ktoré zvyšujú `dĺžka`, sú v tvojom cykle, takže čiary sú vždy dlhšie a dlhšie.
+      courseF_artist_variables9_2018_authored_hint:
+        courseF_artist_variables9_a: Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľko krát sa cyklus opakuje.
+        courseF_artist_variables9_b: Uisti sa, že bloky, ktoré zvyšujú `dĺžka`, sú v tvojom cykle, takže čiary sú vždy dlhšie a dlhšie.
+      courseF_artist_variables9_2019_authored_hint:
+        courseF_artist_variables9_a: Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľko krát sa cyklus opakuje.
+        courseF_artist_variables9_b: Uisti sa, že bloky, ktoré zvyšujú `dĺžka`, sú v tvojom cykle, takže čiary sú vždy dlhšie a dlhšie.
+      courseF_artist_variablesFP_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          Skús jednu z týchto troch kresieb.
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
+      courseF_artist_variablesFP_2018_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          Skús jednu z týchto troch kresieb.
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
+      courseF_artist_variablesFP_2019_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          Skús jednu z týchto troch kresieb.
+          ![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Vďaka premenným, potrebuješ zmeniť iba jedno číslo navrchu, aby to fungovalo.
+      courseF_artist_variables_8_authored_hint:
+        courseF_artist_variables_8_a: Vyskúšaj použiť tieto bloky ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) na konci tela tvojho cyklu.
       courseF_bee_for5_authored_hint:
         courseF_bee_for5_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú celú úlohu.
       courseF_bee_for5_2018_authored_hint:

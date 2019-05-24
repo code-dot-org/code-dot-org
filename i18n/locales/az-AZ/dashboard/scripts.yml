@@ -830,3 +830,7 @@ az:
           stages:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Yekun
