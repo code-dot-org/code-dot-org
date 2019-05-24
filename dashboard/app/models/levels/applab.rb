@@ -38,6 +38,7 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    start_libraries
     submittable
     log_conditions
     data_tables
