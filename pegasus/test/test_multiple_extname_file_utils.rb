@@ -35,7 +35,6 @@ class MultipleExtnameFileUtilsTest < Minitest::Test
     assert_empty MultipleExtnameFileUtils.find_with_extnames(dir, "i18n/public/test_md", [".md"])
     refute_empty MultipleExtnameFileUtils.find_with_extnames(dir, "i18n/public/test_md.fr-FR", [".md"])
 
-    assert_empty MultipleExtnameFileUtils.find_with_extnames(dir, "public/test_view", [".md"])
-    refute_empty MultipleExtnameFileUtils.find_with_extnames(dir, "public/test_view", [".md", ".erb"])
+    refute_empty MultipleExtnameFileUtils.find_with_extnames(dir, "public/test_view", [".md"])
   end
 end
