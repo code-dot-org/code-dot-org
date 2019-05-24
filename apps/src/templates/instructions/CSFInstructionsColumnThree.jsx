@@ -42,24 +42,18 @@ class CSFInstructionsColumnThree extends React.Component {
   static propTypes = {
     shouldDisplayCollapserButton: PropTypes.func,
     handleClickCollapser: PropTypes.func,
-    instructions: PropTypes.func, //maybe rename
+    instructionsRef: PropTypes.func, //maybe rename
     collapser: PropTypes.func, //maybe rename
     scrollButtons: PropTypes.func, //maybe rename
     displayScrollButtons: PropTypes.bool,
     resizerHeight: PropTypes.number,
+    getScrollTarget: PropTypes.func,
 
     //redux
     isMinecraft: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     height: PropTypes.number.isRequired,
     collapsed: PropTypes.bool.isRequired
-  };
-
-  /**
-   * @return {Element} scrollTarget
-   */
-  getScrollTarget = () => {
-    return this.props.instructions.parentElement;
   };
 
   render() {
@@ -73,7 +67,7 @@ class CSFInstructionsColumnThree extends React.Component {
             !this.props.shouldDisplayCollapserButton() && commonStyles.hidden
           ]}
           collapsed={this.props.collapsed}
-          onClick={this.handleClickCollapser}
+          onClick={this.props.handleClickCollapser}
         />
         {!this.props.collapsed && (
           <ScrollButtons
@@ -85,7 +79,7 @@ class CSFInstructionsColumnThree extends React.Component {
                   : craftStyles.scrollButtons)
             ]}
             ref={this.props.scrollButtons}
-            getScrollTarget={this.getScrollTarget}
+            getScrollTarget={this.props.getScrollTarget}
             visible={this.props.displayScrollButtons}
             height={
               this.props.height -

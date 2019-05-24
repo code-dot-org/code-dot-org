@@ -95,6 +95,7 @@ class TopInstructions extends React.Component {
       })
     ).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
+    showNextHint: PropTypes.func.isRequired,
     hasContainedLevels: PropTypes.bool,
     isEmbedView: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
@@ -104,6 +105,7 @@ class TopInstructions extends React.Component {
     collapsed: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     longInstructions: PropTypes.string,
+    clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
@@ -370,6 +372,13 @@ class TopInstructions extends React.Component {
   };
 
   /**
+   * @return {Element} scrollTarget
+   */
+  getScrollTarget = () => {
+    return this.instructions.parentElement;
+  };
+
+  /**
    * Manually scroll instructions to bottom. When we have multiple
    * elements in instructions, "bottom" is defined as 10 pixels above
    * the top of the bottommost element. This is so we don't scroll past
@@ -407,17 +416,17 @@ class TopInstructions extends React.Component {
     }
   };
 
-  setPromptForHintFalse() {
+  setPromptForHintFalse = () => {
     this.setState({
       promptForHint: false
     });
-  }
+  };
 
-  shouldDisplayHintPrompt() {
+  shouldDisplayHintPrompt = () => {
     return this.state && this.state.promptForHint && !this.props.collapsed;
-  }
+  };
 
-  shouldDisplayCollapserButton() {
+  shouldDisplayCollapserButton = () => {
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (
@@ -431,9 +440,9 @@ class TopInstructions extends React.Component {
     // Otherwise, only show the button if we have two versions of
     // instruction we want to toggle between
     return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
-  }
+  };
 
-  shouldIgnoreShortInstructions() {
+  shouldIgnoreShortInstructions = () => {
     // If we have no short instructions, always ignore them.
     if (!this.props.shortInstructions) {
       return true;
@@ -456,15 +465,15 @@ class TopInstructions extends React.Component {
       this.props.shortInstructions
     );
     return dist <= 10;
-  }
+  };
 
-  getAvatar() {
+  getAvatar = () => {
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
     return this.props.feedback && this.props.feedback.isFailure
       ? this.props.failureAvatar
       : this.props.smallStaticAvatar;
-  }
+  };
 
   /**
    * this.state.rightColWidth contains three key/value pairs, reflecting the
@@ -486,32 +495,32 @@ class TopInstructions extends React.Component {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
   }
 
-  setContainedLevelRef(ref) {
+  setContainedLevelRef = ref => {
     this.containedLevel = ref;
-  }
+  };
 
-  setIconRef(ref) {
+  setIconRef = ref => {
     this.icon = ref;
-  }
+  };
 
-  setInstructionsRef(ref) {
+  setInstructionsRef = ref => {
     this.instructions = ref;
-  }
+  };
 
-  setCollapserRef(ref) {
+  setCollapserRef = ref => {
     this.collapser = ref;
-  }
+  };
 
-  setScrollButtonsRef(ref) {
+  setScrollButtonsRef = ref => {
     this.scrollButtons = ref;
-  }
+  };
 
-  shouldDisplayShortInstructions() {
+  shouldDisplayShortInstructions = () => {
     return (
       !this.shouldIgnoreShortInstructions() &&
       (this.props.collapsed || !this.props.longInstructions)
     );
-  }
+  };
 
   render() {
     const resizerHeight = this.props.collapsed ? 0 : RESIZER_HEIGHT;
@@ -526,6 +535,10 @@ class TopInstructions extends React.Component {
       this.props.noVisualization && styles.noViz,
       this.props.overlayVisible && styles.withOverlay
     ];
+
+    const markdown = this.shouldDisplayShortInstructions()
+      ? this.props.shortInstructions
+      : this.props.longInstructions;
 
     const ttsUrl = this.shouldDisplayShortInstructions()
       ? this.props.ttsShortInstructionsUrl
@@ -574,11 +587,14 @@ class TopInstructions extends React.Component {
             icon={this.setIconRef}
           />
           <CSFInstructionsColumnTwo
-            shouldIgnoreShortInstructions={this.shouldIgnoreShortInstructions}
+            markdown={markdown}
+            ttsUrl={ttsUrl}
             adjustMaxNeededHeight={this.adjustMaxNeededHeight}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
             instructions={this.setInstructionsRef}
             setPromptForHintFalse={this.setPromptForHintFalse}
+            showNextHint={this.props.showNextHint}
+            clearFeedback={this.props.clearFeedback}
           />
           <CSFInstructionsColumnThree
             shouldDisplayCollapserButton={this.shouldDisplayCollapserButton}
@@ -588,6 +604,7 @@ class TopInstructions extends React.Component {
             scrollButtons={this.setScrollButtonsRef}
             displayScrollButtons={this.state.displayScrollButtons}
             resizerHeight={resizerHeight}
+            getScrollTarget={this.getScrollTarget}
           />
         </ThreeColumns>
         {!this.props.collapsed && !this.props.isEmbedView && (
@@ -610,6 +627,7 @@ module.exports = connect(
       hasContainedLevels: state.pageConstants.hasContainedLevels,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
+      showNextHint: state.pageConstants.showNextHint,
       isEmbedView: state.pageConstants.isEmbedView,
       isMinecraft: !!state.pageConstants.isMinecraft,
       height: state.instructions.renderedHeight,
@@ -644,6 +662,9 @@ module.exports = connect(
       },
       setInstructionsMaxHeightNeeded(height) {
         dispatch(instructions.setInstructionsMaxHeightNeeded(height));
+      },
+      clearFeedback(height) {
+        dispatch(instructions.setFeedback(null));
       }
     };
   },

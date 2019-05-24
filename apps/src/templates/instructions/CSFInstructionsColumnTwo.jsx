@@ -11,8 +11,7 @@ import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
-
-var instructions = require('../../redux/instructions');
+import instructions from '../../redux/instructions';
 
 const styles = {
   instructions: {
@@ -30,11 +29,14 @@ const styles = {
 
 class CSFInstructionsColumnTwo extends React.Component {
   static propTypes = {
-    shouldIgnoreShortInstructions: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
     shouldDisplayHintPrompt: PropTypes.func,
     instructionsRef: PropTypes.func, //maybe rename
     setPromptForHintFalse: PropTypes.func,
+    markdown: PropTypes.string,
+    ttsUrl: PropTypes.string,
+    showNextHint: PropTypes.func,
+    clearFeedback: PropTypes.func.isRequired,
 
     //redux
     feedback: PropTypes.shape({
@@ -50,7 +52,6 @@ class CSFInstructionsColumnTwo extends React.Component {
         video: PropTypes.string
       })
     ),
-    clearFeedback: PropTypes.func.isRequired,
     hideOverlay: PropTypes.func.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     skinId: PropTypes.string,
@@ -58,20 +59,8 @@ class CSFInstructionsColumnTwo extends React.Component {
     aniGifURL: PropTypes.string,
     shortInstructions2: PropTypes.string,
     overlayVisible: PropTypes.bool,
-    showNextHint: PropTypes.func,
-    collapsed: PropTypes.bool,
-    shortInstructions: PropTypes.string,
-    longInstructions: PropTypes.string,
-    ttsShortInstructionsUrl: PropTypes.string,
-    ttsLongInstructionsUrl: PropTypes.string
+    collapsed: PropTypes.bool
   };
-
-  shouldDisplayShortInstructions() {
-    return (
-      !this.props.shouldIgnoreShortInstructions() &&
-      (this.props.collapsed || !this.props.longInstructions)
-    );
-  }
 
   showHint = () => {
     this.dismissHintPrompt();
@@ -84,15 +73,7 @@ class CSFInstructionsColumnTwo extends React.Component {
   };
 
   render() {
-    const {isRtl} = this.props;
-
-    const markdown = this.shouldDisplayShortInstructions()
-      ? this.props.shortInstructions
-      : this.props.longInstructions;
-
-    const ttsUrl = this.shouldDisplayShortInstructions()
-      ? this.props.ttsShortInstructionsUrl
-      : this.props.ttsLongInstructionsUrl;
+    const {isRtl, markdown, ttsUrl} = this.props;
 
     return (
       <div
@@ -172,12 +153,7 @@ export default connect(
       aniGifURL: state.pageConstants.aniGifURL,
       shortInstructions2: state.instructions.shortInstructions2,
       overlayVisible: state.instructions.overlayVisible,
-      showNextHint: state.pageConstants.showNextHint,
       collapsed: state.instructions.collapsed,
-      shortInstructions: state.instructions.shortInstructions,
-      longInstructions: state.instructions.longInstructions,
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
       hints: state.authoredHints.seenHints,
       feedback: state.instructions.feedback,
       isMinecraft: !!state.pageConstants.isMinecraft
@@ -186,9 +162,6 @@ export default connect(
       return {
         hideOverlay: function() {
           dispatch(instructions.hideOverlay());
-        },
-        clearFeedback(height) {
-          dispatch(instructions.setFeedback(null));
         }
       };
     }
