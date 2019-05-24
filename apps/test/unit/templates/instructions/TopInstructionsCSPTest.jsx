@@ -22,7 +22,8 @@ const DEFAULT_PROPS = {
   readOnlyWorkspace: false,
   serverLevelId: 123,
   user: 5,
-  teacherMarkdown: 'Some teacher only markdown'
+  teacherMarkdown: 'Some teacher only markdown',
+  noInstructionsWhenCollapsed: true
 };
 
 describe('TopInstructionsCSP', () => {
