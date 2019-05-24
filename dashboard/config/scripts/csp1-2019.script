@@ -4,11 +4,14 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit1/"], ["teacherForum", "https://forum.code.org/c/csp1"], ["vocabulary", "https://curriculum.code.org/csp-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit1/standards/"], ["professionalLearning", "https://studio.code.org/s/csp1-support"]]
+stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit1/{LESSON}'
 family_name 'csp1'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-pre-survey-2017-levelgroup_2018_2019', assessment: true

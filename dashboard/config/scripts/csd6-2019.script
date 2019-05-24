@@ -12,6 +12,7 @@ project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Innovations in Computing', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD_2019', named: true

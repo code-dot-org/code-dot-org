@@ -8674,6 +8674,8 @@ es-MX:
               name: Implementación de la encuesta final de CSP de 2019
             CSD post course survey 2019 staging:
               name: Implementación de la encuesta final de CSD de 2019
+            Place for testing crazy stuff:
+              name: Un lugar para probar cosas locas
           title: Todas las encuestas
           description_short: Un lugar para implementar y probar las encuestas de Code.org
         k1hoc2017:
@@ -9402,6 +9404,9 @@ es-MX:
             CS Discoveries End of Semester Survey:
               name: Encuesta de fin de semestre de Descubrimientos de Ciencias de
                 la Computación
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csd2-2018:
           title: CSD Unidad 2 - Desarrollo web ('18-'19)
           description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido
@@ -9639,6 +9644,9 @@ es-MX:
                 revisar la rúbrica y reflexionar sobre su proceso. Para cerrar la
                 unidad, compartirán sus proyectos y también un resumen del proceso
                 que siguieron para llegar a ese diseño final.\r\n"
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         coursea-2018:
           title: Curso A (2018)
           assignment_family_title: Curso A
@@ -10238,6 +10246,9 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         coursee-2018:
           title: Curso E (2018)
           assignment_family_title: Curso E
@@ -11232,6 +11243,9 @@ es-MX:
                 presentar su proceso de desarrollo de aplicaciones, incluido el problema
                 que se propusieron resolver; las formas en que han incorporado los
                 comentarios de las pruebas, y sus planes para el futuro.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csd5-2018:
           title: CSP Unidad 5 - Los datos y la sociedad ('18-'19)
           description: La Unidad 5 trata sobre la importancia de los datos a la hora
@@ -11551,6 +11565,9 @@ es-MX:
                 para hacer recomendaciones a algunos compañeros de clase. Los estudiantes
                 realizan una revisión en conjunto y hacen las mejoras necesarias en
                 sus proyectos antes de preparar una presentación para la clase.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
         csp2-2018:
           title: CSP Unidad 2 - Información digital ('18-'19)
           description: Esta unidad explora las formas en que se codifica, representa
@@ -11649,6 +11666,8 @@ es-MX:
               name: Creación de funciones con parámetros
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-explore-2018:
           title: Explorar - Preparación de AP Performance Task ('18-'19)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -11670,6 +11689,8 @@ es-MX:
               name: PT de exploración - Completar la tarea
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-create-2018:
           title: Crear - Preparación de AP Performance Task ('18-'19)
           description: Estas lecciones buscan ayudarte a comprender, preparar y realizar
@@ -11689,6 +11710,8 @@ es-MX:
               name: Preparación de PT de creación - Planificar
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2018:
           title: CSP Unidad 4 - Grandes datos y privacidad ('18-'19)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas
@@ -11731,6 +11754,8 @@ es-MX:
               name: Evaluación de la Unidad 4
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp5-2018:
           title: CSP Unidad 5 - Desarrollo de aplicaciones ('18-'19)
           description: Esta unidad continúa la presentación de los conceptos fundamentales
@@ -11794,6 +11819,8 @@ es-MX:
               name: "¡Participa en un estudio longitudinal!"
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csppostap-2018:
           title: Post AP - Herramientas de datos ('18-'19)
           description: "En el primer capítulo de esta unidad, los alumnos desarrollan
@@ -11852,6 +11879,8 @@ es-MX:
               name: Evaluación del Capítulo 2 de la Unidad 2
             Chapter 1 Assessment:
               name: Evaluación del Capítulo 1
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -13068,8 +13097,6 @@ es-MX:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
-            Concept Practice with Minecraft:
-              name: Mirando hacia el Futuro con Minecraft
             Editing Behaviors:
               name: Editar comportamientos
             Virtual Pet with Sprite Lab:
@@ -13078,6 +13105,8 @@ es-MX:
               name: Fiesta de baile
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Mirando hacia el Futuro con Minecraft
         csd1-2019:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación
@@ -14784,6 +14813,8 @@ es-MX:
                 para hacer recomendaciones a algunos compañeros de clase. Los estudiantes
                 realizan una revisión en conjunto y hacen las mejoras necesarias en
                 sus proyectos antes de preparar una presentación para la clase.
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csd6-2019:
           title: CSD Unidad 6 - Computación física ('19-'20)
           description: La Unidad 6 explora el papel de las plataformas de hardware
@@ -14829,6 +14860,8 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csp4-pilot:
           stages:
             Variables Explore:
@@ -15523,6 +15556,30 @@ es-MX:
               name: 'Práctica de bucles: bucles mientras'
             'Loops Practice: Simulations':
               name: 'Práctica de bucles: simulaciones'
+            Lists Make:
+              name: Crear listas
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
           title: 'Unidad 5: Listas, bucles y recorridos'
         csp6-pilot-staging:
           stages:
@@ -15749,6 +15806,14 @@ es-MX:
             Loops with Rey and BB-8:
               name: Bucles con Rey y BB-8
           title: CSF Express 2018 para Vietnam
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt
+            Nam.
+          description: "Khoa Học Máy Tính (Computer Science) là môn học cơ bản của
+            thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada,
+            Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa
+            Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng
+            trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động
+            cho phù hợp với học sinh Việt Nam.\r\n"
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
@@ -15786,6 +15851,8 @@ es-MX:
               name: Investigar listas
             Lists Practice:
               name: Práctica de listas
+            Lists Make:
+              name: Crear listas
             Loops Explore:
               name: Explorar bucles
             'Loops Practice: While Loops':
@@ -15794,4 +15861,62 @@ es-MX:
               name: 'Práctica de bucles: simulaciones'
             Traversals Explore:
               name: Explorar recorridos
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
           title: 'Unidad 5: Listas, bucles y recorridos'
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Resumen de las reflexiones de los novatos
+            Day 1:
+              name: Día 1
+            Day 2:
+              name: Día 2
+            Day 3:
+              name: Día 3
+            Day 4:
+              name: Día 4
+            Wrap Up:
+              name: Actividad de cierre
+          title: Reflexiones de novatos para el taller de verano 2019
+          description_audience: Facilitadores novatos de 6-12 en período de formación
+          description_short: 'Materiales de reflexión para facilitadores novatos de
+            2019 en período de formación '
+          description: Este es el conjunto de reflexiones para facilitadores novatos
+            de Code.org en período de formación durante el taller de verano de 5 días.
+            Aquí encontrarás indicaciones de reflexión para cada día de tu taller
+            presencial de verano de 5 días. Estas preguntas serán la base del trabajo
+            que hacemos en el Taller de Formación para Facilitadores.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital sin conexión WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital sin conexión WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital sin conexión WIAC L3
+            What is a Computer?:
+              name: "¿Qué es una computadora?"
+            Problem Solving Process:
+              name: Proceso de resolución de problemas
+          title: Widgets de prueba que guardan el estado

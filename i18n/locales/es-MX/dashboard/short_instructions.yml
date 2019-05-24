@@ -676,6 +676,7 @@ es-MX:
       CSDU6 arrays variable: Escribe un programa que muestre un color elegido aleatoriamente desde el arreglo. (Haz clic para ver las instrucciones completas)
       CSP Data Unit - Counting Multiple Things: "Si puedes contar una cosa, puedes contar varias cosas\n\nDescubre a cuántas personas les gustan cosas que no son perros y gatos \n\nContar perros\nContar gatos\nContar total\nHacer las cuentas\n\nen blanco/ total blanco\n\nTambién puede usar esto para encontrar los porcentajes de este\n\nx% son amantes de los perros"
       CSP Loops: Cambia la sentencia `si` a un bucle `mientras` para que el programa se ejecute hasta que lance un 6. (Haz clic para ver las instrucciones completas)
+      CSP Pilot U5 Mini PT Project: Diseña e implementa tu práctica Crear tarea de rendimiento. (Haz clic para ver las instrucciones completas)
       CSP U4 - JSON Object Intro - Bad Way: Activa el evento del teclado y del ratón, y examina los objetos de evento que se muestran en la consola. ¿Por qué un objeto puede ser la mejor manera de almacenar esta información? (Haz clic para ver las instrucciones completas)
       CSP U4 - JSON Object Intro - Good Way: Crea un objeto con, la menos, 5 valores que incluyan, al menos, una cadena y un número. (Haz clic para ver las instrucciones completas)
       CSP U4 - Objects - createObject: Crea un objeto con, la menos, 5 valores que incluyan, al menos, una cadena y un número. (Haz clic para ver las instrucciones completas)
@@ -3324,46 +3325,21 @@ es-MX:
       Virtual Pet 1 Predict_simple: "¿Qué crees que ocurrirá al hacer clic en el extraterrestre?"
       Virtual Pet 1 fix: ¿Qué crees que sucederá si presionas "Ejecutar" y luego haces clic en ella?
       Virtual Pet 1: ¿Qué crees que sucederá si presionas "Ejecutar" y luego haces clic en ella?
-      Virtual Pet 1_2019: Lee y ejecuta el código a continuación, luego observa lo que hace la mascota. Intenta cambiar parte del código para producir resultados diferentes. Cuando hayas terminado, haz clic en **Finalizar**.
       Virtual Pet 1_simple: ¿Qué crees que sucederá si presionas "Ejecutar" y luego haces clic en ella?
       Virtual Pet 2 - Validated (Ram): Crea un **evento** para que cuando Geraldine toca el charco, su color cambie a marrón.
       Virtual Pet 2 - Validated: Crea un **evento** para que cuando Geraldine toca el charco, su color cambie a marrón.
       Virtual Pet 2: Crea un **evento** para que cuando Geraldine toca el charco, su color cambie a marrón.
-      Virtual Pet 2_2019: "¡Crea tu propia mascota virtual! Haz clic en la pestaña **Disfraces** para crear o seleccionar un nuevo disfraz para tu mascota virtual. En el código a continuación, cambia el disfraz de la mascota sprite por el tuyo."
       Virtual Pet 2_simple: Crea un **evento** para que cuando Geraldine toca la tierra, su color cambie a marrón.
       Virtual Pet 2_simple_clone: Crea un **evento** para que cuando Geraldine toca la tierra, su color cambie a marrón.
       Virtual Pet 3: Añade un nuevo sprite de jabón a la pantalla. ¿Puedes hacerlo para que cuando la jirafa y el jabón se toquen, la jirafa vuelva a su color normal?
-      Virtual Pet 3_2019: Añade un nuevo sprite a la pantalla, luego dale un disfraz que parezca alimento que le gusta comer a tu mascota.
       Virtual Pet 3_simple: Añade un nuevo sprite de jabón a la pantalla. ¿Puedes hacerlo para que cuando la jirafa y el jabón se toquen, la jirafa vuelva a su color normal?
       Virtual Pet 4: Añade un comportamiento a tu jabón para que sea arrastrable, luego arrástralo para limpiar la jirafa.
       Virtual Pet 4_simple: Añade un comportamiento a tu jabón para que sea arrastrable, luego arrástralo para limpiar la jirafa.
       Virtual Pet 5 - Validated: Añade acciones a cada evento para que cuando la jirafa choque con cada sprite, se reduzca por 5.
       Virtual Pet 5: Añade acciones a cada evento para que cuando la jirafa choque con cada sprite, se reduzca por 5.
-      Virtual Pet 5_2019: Añade un sprite para comida que a tu mascota no le gusta comer. Haz un evento que haga que este alimento salte a una ubicación aleatoria cuando tu mascota lo toca.
       Virtual Pet 5_simple: Añade acciones a cada evento para que cuando la jirafa choque con cada sprite, se reduzca por 5.
       Virtual Pet 6: Añade una manzana que devuelve la jirafa al tamaño normal cuando se toquen.
-      Virtual Pet 6_2019: Establece la variable `felicidad` a 0 cuando el programa comienza. Cuando tu mascota come comida que le gusta, cambia `felicidad` por 1. Cuando tu mascota come comida no le gusta, cambia `felicidad` por -1.
       Virtual Pet 6_simple: Añade una manzana que devuelve la jirafa al tamaño normal cuando se toquen.
-      Virtual Pet 7_2019: |-
-        Imprime el nivel de felicidad de tu mascota cada vez que come alimento. Usa este bloque, que se encuentra en la categoría de caja de herramientas "Mundo":
-        <xml>
-        <block type="gamelab_printText" block-text="print text block">
-        <value name="TEXT">
-        <block type="text_join_simple" inputcount="2">
-        <value name="ADD0">
-        <block type="text">
-
-        <title name="TEXT">Mi nivel de felicidad: </title>
-        </block>
-        </value>
-        <value name="ADD1">
-        <block type="variables_get">
-        <title name="VAR">felicidad</title>
-        </block>
-        </value>
-        </block>
-        </value>
-        </block></xml>
       Virtual Pet 8_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga? ¡Prueba lo que quieras!"
       Virtual Pet Freeplay: 'Juego libre: ¿Qué más puedes lograr que tu jirafa haga? '
       Virtual Pet Freeplay_2019: "**Juego libre:**¿Qué más puedes lograr que tu mascota haga? ¡Prueba lo que quieras!"
@@ -5071,18 +5047,10 @@ es-MX:
       courseD_scrat_ramp7_2018: "¡Ayuda a Scrat a llegar hasta la bellota!"
       courseD_scrat_ramp8: "¡Usa lo que has aprendido para que Scrat llegue hasta la bellota!"
       courseD_scrat_ramp8_2018: "¡Usa lo que has aprendido para que Scrat llegue hasta la bellota!"
-      courseE_aboutme_1: Juega con el póster de Rikki y crea un poco de código; luego haz clic en **Finalizar**.
       courseE_aboutme_1_old: |-
         Rikki está usando Laboratorio de Sprite para crear un **póster interactivo** que puede compartir en la web. ¡Ella ha elegido este sprite para representarla!
 
         ¡Ejecuta el código a continuación y haz clic en el sprite de Rikki para ver lo que ha hecho hasta ahora!
-      courseE_aboutme_2: |-
-        ¡Rikki tiene tantas cosas interesantes que compartir! Además de su saludo, hagamos que comparta **Información Personal** cuando se hace clic en ella.
-
-        Siéntete libre de usar tu imaginación para ayudar a Rikki. Solo ten cuidado de que no comparta **Información Privada** accidentalmente.
-      courseE_aboutme_3: Cuando se haya hecho clic en tu personaje, comparte algo SEGURO sobre ti mismo mediante el uso del bloque <xml><block type="gamelab_printText" block-text="print"></block></xml> en la categoría de caja de herramientas `Mundo`.
-      courseE_aboutme_4: Agrega, al menos, dos nuevos sprites a tu póster. Estos sprites deberían representar algo sobre ti mismo. Asigna disfraces personalizados a estos sprites y luego haz una prueba.
-      courseE_aboutme_5: "¡Comparte información acerca de los sprites que acabas de agregar! Cuando se les haga clic, imprime un poco de información SEGURA sobre ellos."
       courseE_aboutme_6: |-
         El póster de Rikki se ve bien, ¡pero puede ser aún mejor!
 

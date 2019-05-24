@@ -10250,8 +10250,6 @@ en:
               description_teacher: ''
             'Concept Practice with Minecraft ':
               name: Looking Ahead with Minecraft
-              description_student: ''
-              description_teacher: ''
             Nested Loops in Bee:
               name: Nested Loops in Maze
               description_student: ''
@@ -10396,8 +10394,6 @@ en:
               name: Crowdsourcing
               description_student: ''
               description_teacher: ''
-            Concept Practice with Minecraft:
-              name: Looking Ahead with Minecraft
             Editing Behaviors:
               name: Behaviors in Sprite Lab
             Virtual Pet with Sprite Lab:
@@ -10408,6 +10404,8 @@ en:
               name: Dance Party
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Conditionals in Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Concept Practice with Minecraft
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -11129,6 +11127,8 @@ en:
               name: Project - Solve a Data Problem
               description_student: To conclude this unit the class designs ways to use data to make a recommendations or predictions to help solve a problem.  In the first several steps the class brainstorms problems, performs simple research, and defines a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+            Post-Project Test:
+              name: Post-Project Test
         csd6-2019:
           title: CSD Unit 6 - Physical Computing ('19-'20)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -11199,6 +11199,8 @@ en:
               name: 'Project: Prototype an Innovation'
               description_student: ''
               description_teacher: ''
+            Post-Project Test:
+              name: Post-Project Test
         csp4-pilot:
           stages:
             Variables Explore:
@@ -12045,6 +12047,24 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12335,7 +12355,59 @@ en:
               name: Traversals Investigate
             Traversals Practice:
               name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Student Survey (Traversals):
+              name: Student Survey (Traversals)
+            Unit 5 Mini Assessment:
+              name: Unit 5 Mini Assessment
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Teacher Survey (Traversals):
+              name: Teacher Survey (Traversals)
+            Student Survey (Mini PT):
+              name: Student Survey (Mini PT)
+            Loops Investigate and Practice:
+              name: Loops Investigate and Practice
           title: 'Unit 5: Lists, Loops, and Traversals'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Novice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+            Wrap Up:
+              name: Wrap Up
+          title: Novice Reflections for Summer Workshop 2019
+          description_audience: 6 - 12 Novice Facilitators in Training
+          description_short: 'Novice reflection materials for 2019 facilitators in training '
+          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Workshop.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital unplugged WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital unplugged WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital unplugged WIAC L3
+            What is a Computer?:
+              name: What is a Computer?
+            Problem Solving Process:
+              name: Problem Solving Process
+          title: Testing Widgets that save state
           description_audience: ''
           description_short: ''
           description: ''

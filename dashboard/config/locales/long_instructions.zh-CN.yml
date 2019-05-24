@@ -241,7 +241,7 @@ zh-CN:
         \ 如果你喜欢的 \"狗\" 按钮的风格, 你可以做一个副本。单击该按钮, 然后单击 \"复制\"。\\\r\n    \\\\t![](<https://images.code.org/171aa97d90014f66f999ecf929b672c0-image-1504289310310.08.10
         AM.png>)\\\r\n    \\\r\n    2.也可以从头开始，通过从 \"设计工具箱\" 中拖进新按钮来制作。\\\r\n    \\\r\n
         \   \\\\t![](<https://images.code.org/501c9ddd3e5b737df5b9cf053ae198a7-image-1504289359851.09.09
-        AM.png>) \\\r\n    \\\r\n2.  单击并拖动新按钮到你所需的位置. \\\r\n    \\\r\n3.  3\\.\n    一旦你有一个新的按钮，给它一个清楚的名称,
+        AM.png>) \\\r\n    \\\r\n2.  单击并拖动新按钮到你所需的位置. \\\r\n    \\\r\n3.  3.\n    一旦你有一个新的按钮，给它一个清楚的名称,
         \"猫按钮\"。您也可以将改为 \"猫\"!\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/87586b18b001fae0001d2243f6d09889-image-1504289448320.10.14
         AM.png>)\\\r\n    \\\r\n    4.还有很多其他的方法可以改变你的按钮的外观。使用完整的选项菜单进行试验. \n4.  一旦你做完了，运行你的应用程序来确保你的按钮出现。然后单击
         \"完成\" 并继续学习如何使您的按钮真正工作。"
@@ -264,9 +264,9 @@ zh-CN:
         png)\\\r\n    \\\r\n    一旦您添加了新的屏幕，点击 \"完成\"来了解如何将按钮添加到屏幕中。"
       AppLab Intro 1 - Add Sound: "# 开始-添加声音\\\r\n\n\\\r\n应用程序实验室也可以播放声音。您需要使用`playSound()`（播放声音）
         块来执行此操作。\\\r\n\\\r\n\n1.  将`playSound()`（播放声音）块拖到您的`onEvent`（当事件发生时）中。当用户单击按钮，会播放声音。然后单击菜单中的
-        \"选择...\"\\\r\n    \\\r\n    \\\\t![](<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41\n
+        \"选择...\"\\\r\n    \\\r\n    \\\\t\\!\\[](\\<<https://images.code.org/9c84293859317f7ae46391a28c5a51e7-image-1504291688560.47.41>\n
         \   AM.png>)\\\r\n    \\\r\n2.  通过 \"声音库\", 找到您想要的声音。有成千上万种!\\\r\n    \\\r\n
-        \   \\\\t![](<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52\n
+        \   \\\\t\\!\\[](\\<<https://images.code.org/5393762b4f31fa4f09040ca8b09ca91c-image-1504291692587.47.52>\n
         \   AM.png>)\\\r\n    \\\r\n3.  运行你的应用程序, 看看你的声音工作如何。"
       AppLab Intro 1 - Build Your Adventure: "# 构建您的冒险活动\\\r\n\n\\\r\n使用此空白项目来创建你的项目。为了让你开始,
         已经有一个主屏幕和一些按钮。如果你需要的话，可以用**快速复制屏幕** 来建立你的世界。你想创造什么？！\\\r\n\\\r完成后, 您可以通过电话或链接与朋友
@@ -307,15 +307,15 @@ zh-CN:
       AppLab Intro 2 - Try Cat Commander: "猫司令的代码看起来是这样的。花一分钟滚动代码, 看看你是否能理解它是如何工作的。和一个搭档谈谈你看到了什么模式？\\\r\n\\\r\n一旦你完成了,
         点击 \"运行\" 然后 \"完成\", 来学习建立自己的冒险。"
       AppLab Intro 2 - add Button: "现在你有两个屏幕, 但没有办法在两者之间作业。是时候添加按钮了！\\\r\n\\\r\n\n1.
-        \ 使用屏幕选择器返回到您的 \"开始屏幕\" ([显示在哪里](#triggercallout=selector))\\\r\n2.  2\\.\n
-        \   将一个按钮拖到屏幕上 ([显示在哪里](#triggercallout=dragButton))\\\r\n3.  3\\.\n    给你的按钮一个明确的
-        \"标识\", 描述它做什么 ([显示我在哪里](#triggercallout=changeButtonID))\\\r\n4.  4\\.\n
-        \   更改按钮的 \"文本\", 以描述它将把用户带到哪里。\n5.  个性化您按钮的其他属性, 如 \"文本颜色\" 或 \"背景颜色\"。\\\r\n
-        \   \\\r\n    单击 \"运行\" 然后 \"完成\" 以继续前进，开始编写将使您的按钮起作用的代码\\\r\n    \\\r\n    ![expandable](https://images.code.org/43f2678e4748a1fa09556f75cad65e97-image-1505766882756.gif)\n
+        \ 使用屏幕选择器返回到您的 \"开始屏幕\" ([显示在哪里](#triggercallout=selector))\\\r\n2.  2.\n
+        \   将一个按钮拖到屏幕上 ([显示在哪里](#triggercallout=dragButton))\\\r\n3.  3.\n    给你的按钮一个明确的
+        \"标识\", 描述它做什么 ([显示我在哪里](#triggercallout=changeButtonID))\\\r\n4.  4.\n    更改按钮的
+        \"文本\", 以描述它将把用户带到哪里。\n5.  个性化您按钮的其他属性, 如 \"文本颜色\" 或 \"背景颜色\"。\\\r\n    \\\r\n
+        \   单击 \"运行\" 然后 \"完成\" 以继续前进，开始编写将使您的按钮起作用的代码\\\r\n    \\\r\n    ![expandable](https://images.code.org/43f2678e4748a1fa09556f75cad65e97-image-1505766882756.gif)\n
         \   单击以查看所有步骤的动画"
       AppLab Intro 2 - add images: "你现在知道如何制作一个简单的《惊险岔路口》应用程序, 但你可以加更多的内容！如果你想添加图像到你的屏幕,
-        这是非常容易的!\\\r\n\\\r\n1\\.\n在浏览器中的另一个选项卡上联机, 查找要使用的图像\\\r\n2\\.\n右键单击图像并保存其地址
-        (通常为 \"复制链接地址\" 或 \"复制图片地址\") \\\r\n\n3.  回到应用程序实验室，并进入设计模式\\\r\n4.  将一个 \"图像\"
+        这是非常容易的!\\\r\n\\\r\n1.\n在浏览器中的另一个选项卡上联机, 查找要使用的图像\\\r\n2.\n右键单击图像并保存其地址 (通常为
+        \"复制链接地址\" 或 \"复制图片地址\") \\\r\n\n3.  回到应用程序实验室，并进入设计模式\\\r\n4.  将一个 \"图像\"
         元素拖到屏幕上\\\r\n5.  将您复制的 URL 粘贴到 \"图像\"属性\\\r\n    \\\r\n    \"运行\" 应用程序一次来测试它。然后点击
         \"完成\" ，并继续学习添加声音。\\\r\n    \\\r\n    ![expandable](https://images.code.org/5b977b1c127b3fcb1761aadcb74c79e8-image-1505772215256.gif)\n
         \   单击查看所有步骤的动画"
@@ -327,7 +327,7 @@ zh-CN:
         \   \\\r\n    ![expandable](https://images.code.org/33d1a6d2dcc81ed8ecd0966d2f0682ca-image-1505770427380.gif)\n
         \   单击查看所有步骤的动画"
       AppLab Intro 2 - add more buttons: "如果要做一个真正的《惊险岔路口》, 你需要添加更多的选择！从添加你的玩家的第二个选择开始。\\\r\n\\\r\n\n1.
-        \ 使用屏幕选择器添加新屏幕。给它一个明确的 \"标识\"。\\\r\n2.  2\\.\n    设置屏幕的 \"背景颜色\"\\\r\n3.  在屏幕上添加一个
+        \ 使用屏幕选择器添加新屏幕。给它一个明确的 \"标识\"。\\\r\n2.  2.\n    设置屏幕的 \"背景颜色\"\\\r\n3.  在屏幕上添加一个
         \"文本区域\", 描述会发生的事情。\\\r\n    \\\r\n    单击 \"运行\" 然后 \"完成\" 以继续。您需要添加另一个按钮，并写代码让它工作。\\\r\n
         \   \\\r\n    ![expandable](https://images.code.org/f1c83578a245d832c94c78aeba6ef317-image-1505768404048.gif)\n
         \   单击以查看所有步骤的动画"
@@ -1319,7 +1319,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 Debugging 4_2018: |-
         # 格式
@@ -1364,7 +1364,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 Debugging 4_2019: |-
         # 格式
@@ -1409,7 +1409,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 Debugging comments: "# 调试\\\r\n\n\\\r\n这个页面上有一些图片。图片让找到缺陷变得更棘手。你能调试这个页面吗？\\\r\n\\\r\n当你调试的时候，你可能会注意到这里有一些新的符号：\\\r\n\n<pre>\r\n&lt;!--
         这是一行注释 --&gt;\r\n</pre>\r\n\n\\\r\n这是一条**注释**。注释是计算机科学家们写给自己，或者其他可能要看这个HTML文件的人看的。注释解释了代码的不同部分，每部分应该创建什么。注释能帮你调试程序。\\\r\n\\\r\n\n#
@@ -2356,7 +2356,7 @@ zh-CN:
 
         你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。
 
-        一旦图片准备好后，点击 ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        一旦图片准备好后，点击 \!\[](\<<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49>
         PM.png>) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。
 
         # 这样做
@@ -2402,7 +2402,7 @@ zh-CN:
 
         你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。
 
-        一旦图片准备好后，点击 ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        一旦图片准备好后，点击 \!\[](\<<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49>
         PM.png>) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。
 
         # 这样做
@@ -2448,7 +2448,7 @@ zh-CN:
 
         你可能已经发现有些地方可以通过**添加图片**按钮来上传图片。区照一张你喜欢的，不同类型的宠物铺前，并将它下载到你的电脑里（通过右键的“另存为”）。
 
-        一旦图片准备好后，点击 ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        一旦图片准备好后，点击 \!\[](\<<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49>
         PM.png>) 并且将你的图片从计算机上传到你的项目中，需要用到它的位置。
 
         # 这样做
@@ -4431,7 +4431,7 @@ zh-CN:
         -   和你的伙伴讨论一下，这个代码是如何工作的。
         -   点击左边文件列表的recipe.html页面。在这个页面顶端加一个超链接回到index.html页面。
       CSD U2 link pages: "# 为你的网站创建一个新页面。\\\r\n\n\\\r\n这是你以前的项目。你需要添加另一个页面。你的页面可以是排行榜，配方，或者其它你想加的东西。\\\r\n\\\r\n\n#
-        这样做\\\r\n\n\\*\n通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
+        这样做\\\r\n\n\\*\n通过点击 \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
         \  通过右击它或者选择\"重命名\"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以\".html\"结尾**.\\\r\n-   在新页面中加入HTML。它应该包括：\\\r\n-
         \  一个列表\\\r\n-   一个标头\\\r\n    \\\r"
       CSD U2 lists intro: |-
@@ -4766,15 +4766,15 @@ zh-CN:
         -   将导航栏代码复制到列表页面的顶部。
         -   在预览区域点击它们来测试链接。
       CSD U2 new page: "# 为你的网站创建一个新页面。\\\r\n\n\\\r\n这是你以前的项目。你需要添加另一个页面。你的页面可以是排行榜，配方，或者其它你想加的东西。\\\r\n\\\r\n\n#
-        这样做\\\r\n\n\\*\n通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
+        这样做\\\r\n\n\\*\n通过点击 \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
         \  通过右击它或者选择\"重命名\"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以\".html\"结尾**.\\\r\n-   在新页面中加入HTML。它应该包括：\\\r\n-
         \  一个列表\\\r\n-   一个标头\\\r\n    \\\r"
       CSD U2 new page_2018: "# 为你的网站创建一个新页面。\\\r\n\n\\\r\n这是你以前的项目。你需要添加另一个页面。你的页面可以是排行榜，配方，或者其它你想加的东西。\\\r\n\\\r\n\n#
-        这样做\\\r\n\n\\*\n通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
+        这样做\\\r\n\n\\*\n通过点击 \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
         \  通过右击它或者选择\"重命名\"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以\".html\"结尾**.\\\r\n-   在新页面中加入HTML。它应该包括：\\\r\n-
         \  一个列表\\\r\n-   一个标头\\\r\n    \\\r"
       CSD U2 new page_2019: "# 为你的网站创建一个新页面。\\\r\n\n\\\r\n这是你以前的项目。你需要添加另一个页面。你的页面可以是排行榜，配方，或者其它你想加的东西。\\\r\n\\\r\n\n#
-        这样做\\\r\n\n\\*\n通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
+        这样做\\\r\n\n\\*\n通过点击 \\!\\[](\\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>\nPM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。\\\r\n\n-
         \  通过右击它或者选择\"重命名\"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以\".html\"结尾**.\\\r\n-   在新页面中加入HTML。它应该包括：\\\r\n-
         \  一个列表\\\r\n-   一个标头\\\r\n    \\\r"
       CSD U2 ordered list: "# 有序列表\n\n<div style=\"float:\nright; height: 250px; width:
@@ -4823,13 +4823,13 @@ zh-CN:
         这样做\\\r\n\n\\*\n检查一下，你是否愿意在你的网站上共享所有信息。\\\r\n\n-   检查是否所有图片的属性都正确，你是否有权利将它们放到你的网站上。\\\r\n-
         \  检查是否你的网站包括了所有rubric项目的内容。\\\r\n-   用注释和空白符增加网站的可读性。\\\r\n-   请你的伙伴来帮忙找找网站可能的问题。\\\r"
       CSD U2 project share: "# 分享你的项目\\\r\n\n\\\r\n到了把你的项目分享给全世界的时候了！\\\r\n\\\r\n\n#
-        这样做\\\r\n\n-   点击页面最上面的\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        这样做\\\r\n\n-   点击页面最上面的\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>)按钮\\\r\n-   复制获得的链接，并发给你想要分享的人。\\\r\n    \\\r"
       CSD U2 project share_2018: "# 分享你的项目\\\r\n\n\\\r\n到了把你的项目分享给全世界的时候了！\\\r\n\\\r\n\n#
-        这样做\\\r\n\n-   点击页面最上面的\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        这样做\\\r\n\n-   点击页面最上面的\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>)按钮\\\r\n-   复制获得的链接，并发给你想要分享的人。\\\r\n    \\\r"
       CSD U2 project share_2019: "# 分享你的项目\\\r\n\n\\\r\n到了把你的项目分享给全世界的时候了！\\\r\n\\\r\n\n#
-        这样做\\\r\n\n-   点击页面最上面的\n    ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27\n
+        这样做\\\r\n\n-   点击页面最上面的\n    \\!\\[](\\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>\n
         \   AM.png>)按钮\\\r\n-   复制获得的链接，并发给你想要分享的人。\\\r\n    \\\r"
       CSD U2 text style decoration_2018: "<div style=\"float:\nright; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**这些代码是如何起作用的？**\n\n</summary>\n这是让`h1`元素有下划线的代码：\n\n<pre>h1
@@ -5128,7 +5128,7 @@ zh-CN:
 
         -   用`<ul>`和`<li>`标签来结构化内容，并将内容放到像图片这样无序列表中。
 
-        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04
+        \!\[](\<<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04>
         PM.png>)
       CSD U2 unordered list_2018: "# 无序列表\n\n<div\nstyle=\"float: right; height: 250px;
         width: 40%; overflow-y: scroll; margin-left:\n20px; font-size:14px\" markdown=\"1\">\n<details>\n<summary>\n<strong>什么是列表的两种类型？</strong>\n</summary>\nHTML中有两种类型的列表，有序和无序的。\n</details>\n<details>\n<summary>\n<strong>什么是无序列表?</strong>\n</summary>\n无序列表只是一组无序符合项。\n<br
@@ -5223,7 +5223,7 @@ zh-CN:
         <br />
         </form>
 
-        一旦你找到了图片，点击![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49
+        一旦你找到了图片，点击\!\[](\<<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49>
         PM.png>)并将它从你的电脑上传到项目中。
 
         # 这样做
@@ -5246,17 +5246,17 @@ zh-CN:
         \   <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">课程 7 关卡 5</a>。\\\r\n
         \   \\\r"
       CSD U3 - Booleans Video: "# 布尔表达式视频"
-      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。 \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。 \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
       CSD U3 - Simple Counter Predict_2018: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
       CSD U3 - Simple Counter Predict_2019: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
@@ -5466,18 +5466,18 @@ zh-CN:
         \  记住，你可以用`setAnimation`来在动画标签页中给你的精灵分配动画。"
       CSD U3 AnimationsMulti mirror animation: "# 编辑多帧动画\\\r\n\n\\\r\n如果你的精灵能在移动的时候转身，看起来就真实多了。当用户按下不同的键时，你可以在转身之间切换。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。\\\r\n\\\r\n\n-   在动画标签页中，通过点击这个按钮：
-        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09\n
-        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03\n
+        \\!\\[](\\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>\n
+        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： \\!\\[](\\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>\n
         \   PM.png>) 两帧都翻转了。\\\r\n-   重命名新动画。\\\r\n-   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？"
       CSD U3 AnimationsMulti mirror animation_2018: "# 编辑多帧动画\\\r\n\n\\\r\n如果你的精灵能在移动的时候转身，看起来就真实多了。当用户按下不同的键时，你可以在转身之间切换。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。\\\r\n\\\r\n\n-   在动画标签页中，通过点击这个按钮：
-        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09\n
-        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03\n
+        \\!\\[](\\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>\n
+        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： \\!\\[](\\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>\n
         \   PM.png>) 两帧都翻转了。\\\r\n-   重命名新动画。\\\r\n-   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？"
       CSD U3 AnimationsMulti mirror animation_2019: "# 编辑多帧动画\\\r\n\n\\\r\n如果你的精灵能在移动的时候转身，看起来就真实多了。当用户按下不同的键时，你可以在转身之间切换。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。\\\r\n\\\r\n\n-   在动画标签页中，通过点击这个按钮：
-        ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09\n
-        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03\n
+        \\!\\[](\\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>\n
+        \   PM.png>) 来创建一个外星人动画的副本。\\\r\n-   使用工具来反转动画。确保用这个按钮： \\!\\[](\\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>\n
         \   PM.png>) 两帧都翻转了。\\\r\n-   重命名新动画。\\\r\n-   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？"
       CSD U3 AnimationsMulti play pause: "# 播放和暂停\\\r\n\n\\\r\n你可以用`sprite.play`（精灵.播放）和`sprite.pause`（精灵.暂停）命令来播放和暂停一个精灵的动画。如果动画正在播放，或者已经被暂停了，再用同样的命令也没有影响。唯一的例外是，**如果一个非循环的动画结束了，播放会重新开始播放它**。我们一起来看看这能创造的很酷的一些行为。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   在每条`setAnimation`命令后，用`sprite.play`命令。这会在当按下键时，重新播放走路的动画。"
@@ -5500,22 +5500,22 @@ zh-CN:
       CSD U3 Conditionals Apple_2018_2019: "# 布尔值的更多练习\\\r\n\n\\\r\n让我们再加一个布尔表达式来检查精灵的条件。你可以用`console.log`（控制台.日志）来检查是否它的尺寸还是2。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   添加一个`console.log`语句。\\\r\n-   在`console.log`中增加一个布尔表达式来检查是否`apple.scale`（苹果.尺寸）大于2。"
       CSD U3 Counters explaining counters contained 2: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
       CSD U3 Counters explaining counters contained 2_2018: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
       CSD U3 Counters explaining counters contained 2_2019: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
       CSD U3 Counters explaining counters: "# \n\n计数器模式\\\r\n\\\r\n这个模式是编程中最重要的模式之一。
-        \\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\\\r\n\\\r\n\\*\n**阅读程序**，并预测一下输出会是什么。\\\r\n\\*\n**运行程序**检查一下你的预测。\\\r\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？\\\r\n    \\\r"
@@ -5866,131 +5866,131 @@ zh-CN:
         \  当程序运行时，点击方向键，并观察屏幕的反应。\\\r\n-   写下，或者与邻近的同学分享你的发现。\\\r\n    \\\r\n    \\\\t\\*\n
         \   `keyDown()`（按下键时）, `keyWentDown()`（键被按下时），和\n    `keyWentUp()`（键被释放时）事件看上去有什么不同？\\\r\n
         \   -   你觉得第10行的(`!`)（叹号）的作用是什么？\\\r\n    -   你在游戏中会如何使用不同的按键相关的事件模块？"
-      CSD U3 L11 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L11 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L11 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L11 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L11 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L11 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L12 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L12 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L12 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L12 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L12 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L12 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L13 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L13 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L13 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L13 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L13 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L13 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L15 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L15 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L15 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L15 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L15 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L15 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L16 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L16 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L16 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L16 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L16 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L16 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L17 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L17 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L17 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L17 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L17 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L17 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L18 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L18 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L18 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L18 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L18 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L18 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L19 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L19 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L19 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L19 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L19 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L19 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L3 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L3 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L3 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L3 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L3 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L3 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L4 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L4 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L4 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L4 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L4 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L4 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L5 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L5 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L5 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L5 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L5 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L5 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L6 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L6 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L6 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L6 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L6 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L6 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L7 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L7 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L7 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L7 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L7 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L7 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L9 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L9 Freeplay: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L9 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L9 Freeplay_2018: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
-      CSD U3 L9 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43\nPM.png>)发送给朋友。或者点击
-        ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50\nPM.png>)
+      CSD U3 L9 Freeplay_2019: "# 自由发挥\\\r\n\n\\\r\n用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\\!\\[](\\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>\nPM.png>)发送给朋友。或者点击
+        \\!\\[](\\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>\nPM.png>)
         将它发送到你的作品集里。\\\r"
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\\\r\n\\\r\n\n#
         鼠标的X和Y\\\r\n\n\\\r\n最简单的输入方式之一，就是让一个精灵跟随用户的鼠标位置。\n**你能通过`World.mouseX`和`World.mouseY`来获得鼠标的x、y值。**这和你以前学的精灵的属性是一致的。`World`是目标对象的名字。`mouseX`和`mouseY`是属性的名字。\\\r\n\\\r\n\n#
@@ -6067,13 +6067,13 @@ zh-CN:
         这样做\\\r\n\n\\\r\n在画图循环中\\\r\n\\\r\n\n-   找到需要改动的精灵属性。\\\r\n-   用计数器模式来更新属性。\\\r\n
         \   \\\r\n    _提示：如果你的计数器模式不像你期待那样工作，添加监视器来帮助调试程序。_"
       CSD U3 Plotting Shapes Shape Lab Open: "# 绘制形状 \\\r\n\n\\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\\r\n\\\r\n确保点击
-        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab: "# 绘制形状 \\\r\n\n\\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\\r\n\\\r\n确保点击
-        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2018: "# 绘制形状 \\\r\n\n\\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\\r\n\\\r\n确保点击
-        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Plotting Shapes Shape Lab_2019: "# 绘制形状 \\\r\n\n\\\r\n探索使用此工具，它可以绘制不同的颜色形状。\\\r\n\\\r\n确保点击
-        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+        \"运行\" 并尝试打开网格来帮助精确地放置形状。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>\nPM.png>)"
       CSD U3 Random Add a Door: "<img src=\"https://images.code.org/fd746a708d8a94ad0aad863f3284a1ad-image-1490826372819.25.25\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# 这样做\\\r\n\n\\\r\n\n-   写代码来创造一个红色的矩形，要比图画中已有的要高。\\\r\n-
         \  不用担心确切的尺寸，新矩形只要更高就行。"
@@ -6118,13 +6118,13 @@ zh-CN:
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# 这样做\\\r\n\n\\\r\n\n-   写代码在绿色椭圆后面画一个橙色的椭圆。\\\r\n-
         \  别担心确切的尺寸，只要整个绿色椭圆在橙色里就行。"
       CSD U3 Random Number Map: "# 随机数字\\\r\n\n\\\r\n\n# 使用随机数字\\\r\n\n\\\r\n`randomNumber()`（随机数字）模块可以在程序里用来生成随机数字。
-        \n它可以在用单个数字的地方使用，这样每次你的程序都会运行有点不一样。 \\\r\n\\\r\n![](<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09\nPM.png>)\\\r\n\\\r\n<img
+        \n它可以在用单个数字的地方使用，这样每次你的程序都会运行有点不一样。 \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ef48e7f0312a567eca8641f349968c2a-image-1491521271912.27.09>\nPM.png>)\\\r\n\\\r\n<img
         src=\"https://images.code.org/246e7ac850015aa830d469b7eeb5f00e-image-1491523022253.50.04\nPM.png\"
         style=\"float:left;width:150px\">\\\r\n\\\r\n<img src=\"https://images.code.org/01b10dc034475fd5a90bd3c7bd0c51b8-image-1491523025607.50.17\nPM.png\"
         style=\"float:left;width:150px\">\\\r\n\\\r\n<img src=\"https://images.code.org/0f0c3cc4d42923dc4321809daf189053-image-1491523028093.50.49\nPM.png\"
         style=\"float:left;width:150px\">\\\r\n\\\r\n`randomNumber()`（随机数字）有两个参数，用来选择最大值和最小值。如果需要的话，也可以让这些数字是负数。\\\r\n\\\r\n\n#
         绘画和随机数字\\\r\n\n\\\r\n在该程序下面，你可以看到3个可能输出的结果示例。请注意虽然它是同一个程序，每次产生的图片都不一样。 \\\r\n\\\r\n你可以在你的程序里多次使用`randomNumber()`（随机数字）指令。每次它都使用一个新产生的随机数字。
-        \\\r\n\\\r\n![](<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33\nPM.png>)"
+        \\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2c562cef4ef69c163db2b183225ee954-image-1491522524705.48.33>\nPM.png>)"
       CSD U3 Random Taller Rectangle: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
         PM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\n\n#
         矩形尺寸\n\n这些“矩形”模块有两个以上的参数你可以用来控制大小。 请留意`noStroke()`（不要描边） 模块会让形状的描边（边框）消失。\\\r\n\n#
@@ -6707,7 +6707,7 @@ zh-CN:
         (<https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png>)"
       CSD U3 collisions egg2: "# 制造声音\\\r\n\n\\\r\n你也能用代码来播放一个搅拌的声音。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n当苹果碰到搅拌器时，从\"world\"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放\"<https://docs.code.org/sounds/blender.mp3\"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：>
-        ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57\nPM.png>)\\\r\n\\\r\n[//]\\:
+        \\!\\[](\\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\nPM.png>)\\\r\n\\\r\n[//]\\:
         #  (<https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png>)\\\r\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
@@ -6717,7 +6717,7 @@ zh-CN:
         (<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\n\nPM.png)"
       CSD U3 collisions egg2_2018: "# 制造声音\\\r\n\n\\\r\n你也能用代码来播放一个搅拌的声音。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n当苹果碰到搅拌器时，从\"world\"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放\"<https://docs.code.org/sounds/blender.mp3\"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：>
-        ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57\nPM.png>)\\\r\n\\\r\n[//]\\:
+        \\!\\[](\\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\nPM.png>)\\\r\n\\\r\n[//]\\:
         #  (<https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png>)\\\r\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
@@ -6727,7 +6727,7 @@ zh-CN:
         (<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\n\nPM.png)"
       CSD U3 collisions egg2_2019: "# 制造声音\\\r\n\n\\\r\n你也能用代码来播放一个搅拌的声音。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n当苹果碰到搅拌器时，从\"world\"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放\"<https://docs.code.org/sounds/blender.mp3\"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：>
-        ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57\nPM.png>)\\\r\n\\\r\n[//]\\:
+        \\!\\[](\\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\nPM.png>)\\\r\n\\\r\n[//]\\:
         #  (<https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png>)\\\r\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
         (<https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png>)\\\r\n\n\\\r\n[//]\\:\n\n#
@@ -7057,17 +7057,17 @@ zh-CN:
         \ 人类在两分钟内能够举起并扔出去的数量。(4比特)\\\r\n2.  鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\\\r\n    \\\r\n
         \   # 这样做\\\r\n3.  从二进制字符串中解码这两个数字。"
       CSD U5 binary 3: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它来找到三个编码在二进制字符串中的世界记录。这些答案在字符串中是有序的。\\\r\n\\\r\n\n1.
-        \ 一只鹦鹉在一分钟里打开的罐装饮料数量。\\\r\n2.  在一个圆锥体上保持平衡的冰淇淋勺的数量。\\\r\n3.  3\\.\n    在两分钟内举起并扔出去的人的数量。\\\r\n
+        \ 一只鹦鹉在一分钟里打开的罐装饮料数量。\\\r\n2.  在一个圆锥体上保持平衡的冰淇淋勺的数量。\\\r\n3.  3.\n    在两分钟内举起并扔出去的人的数量。\\\r\n
         \   \\\r\n    ![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\\\r\n
         \   \\\r\n    # \n    这样做\\\r\n4.  试着从二进制字符串中解码这三个数。\\\r\n5.  \\*\n    和你的伙伴讨论答案\\\r\n6.
         \ 这里有其它信息能够确定你的数字是否正确吗？"
-      CSD U5 binary 4-new: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 4-new: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 人类在两分钟内能够举起并扔出去的数量。(4比特)\\\r\n2.  鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\\\r\n    \\\r\n
         \   # 这样做\\\r\n3.  从二进制字符串中解码这两个数字。"
-      CSD U5 binary 4-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 4-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 人类在两分钟内能够举起并扔出去的数量。(4比特)\\\r\n2.  鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\\\r\n    \\\r\n
         \   # 这样做\\\r\n3.  从二进制字符串中解码这两个数字。"
-      CSD U5 binary 4-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 4-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 人类在两分钟内能够举起并扔出去的数量。(4比特)\\\r\n2.  鹦鹉在一分钟内能够打开的罐装饮料数量。(6比特)\\\r\n    \\\r\n
         \   # 这样做\\\r\n3.  从二进制字符串中解码这两个数字。"
       CSD U5 binary 4: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n<img
@@ -7082,45 +7082,45 @@ zh-CN:
         src=\"https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png\"\nstyle=\"height:
         30px;\">\\\r\n\\\r\n\n# 这样做\\\r\n\n\\\r\n\n-   用二进制小工具用8比特数字来解码字符串。\\\r\n-
         \  和你的伙伴检查答案，看看是否一致。"
-      CSD U5 binary 5-new: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 5-new: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最长的狗尾巴（英寸）（5比特）\\\r\n2.  在某人脸上能够保持平衡的最多的勺子数量（5比特）\\\r\n    \\\r\n    # 这样做\\\r\n3.
         \ 从一个二进制字符串中解码这两个数字。"
-      CSD U5 binary 5-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 5-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最长的狗尾巴（英寸）（5比特）\\\r\n2.  在某人脸上能够保持平衡的最多的勺子数量（5比特）\\\r\n    \\\r\n    # 这样做\\\r\n3.
         \ 从一个二进制字符串中解码这两个数字。"
-      CSD U5 binary 5-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 5-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这里有个工具能够计算最多8比特的数字。你能用它找到下面的两个世界记录。\\\r\n\\\r\n别忘了确保\"1\"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最长的狗尾巴（英寸）（5比特）\\\r\n2.  在某人脸上能够保持平衡的最多的勺子数量（5比特）\\\r\n    \\\r\n    # 这样做\\\r\n3.
         \ 从一个二进制字符串中解码这两个数字。"
-      CSD U5 binary 6-new: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 6-new: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最大的风铃的英寸尺寸（？比特）\\\r\n2.  用某人的脚（英尺）丈量的弓箭射出的最远距离。(？比特）\\\r\n    \\\r\n    #
         这样做\\\r\n3.  试一试从二进制字符串中解码这两个数字。\\\r\n4.  和你的伙伴讨论一下，为什么你不能确定自己的答案是否正确。"
-      CSD U5 binary 6-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 6-new_2018: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最大的风铃的英寸尺寸（？比特）\\\r\n2.  用某人的脚（英尺）丈量的弓箭射出的最远距离。(？比特）\\\r\n    \\\r\n    #
         这样做\\\r\n3.  试一试从二进制字符串中解码这两个数字。\\\r\n4.  和你的伙伴讨论一下，为什么你不能确定自己的答案是否正确。"
-      CSD U5 binary 6-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n\n1.
+      CSD U5 binary 6-new_2019: "# 解码多个数字\\\r\n\n\\\r\n这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n\n1.
         \ 最大的风铃的英寸尺寸（？比特）\\\r\n2.  用某人的脚（英尺）丈量的弓箭射出的最远距离。(？比特）\\\r\n    \\\r\n    #
         这样做\\\r\n3.  试一试从二进制字符串中解码这两个数字。\\\r\n4.  和你的伙伴讨论一下，为什么你不能确定自己的答案是否正确。"
-      CSD U5 binary 7-new: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+      CSD U5 binary 7-new: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   用二进制小工具用8比特数字来解码字符串。\\\r\n-   和你的伙伴检查答案，看看是否一致。"
-      CSD U5 binary 7-new_2018: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+      CSD U5 binary 7-new_2018: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   用二进制小工具用8比特数字来解码字符串。\\\r\n-   和你的伙伴检查答案，看看是否一致。"
-      CSD U5 binary 7-new_2019: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01\nPM.png>)
-        ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13\nPM.png>)
-        ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26\nPM.png>)\\\r\n\\\r\n\n#
+      CSD U5 binary 7-new_2019: "# 位长度\\\r\n\n\\\r\n如果你不知道每个数字有多少位，你没法解码一个数字字符串。\\\r\n\\\r\n例如，下面的二进制字符串有多种方法来解码。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>\nPM.png>)\\\r\n\\\r\n如果你将字符串这样分开，这个字符串读作：10，84。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>\nPM.png>)\\\r\n\\\r\n\\\r\n如果这样分开，这个字符串读作：42，20。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>\nPM.png>)
+        \\!\\[](\\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>\nPM.png>)\\\r\n\\\r\n为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>\nPM.png>)\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   用二进制小工具用8比特数字来解码字符串。\\\r\n-   和你的伙伴检查答案，看看是否一致。"
-      CSD U5 black white images pixelation 2: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 3: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
-      CSD U5 black white images pixelation 3_2018: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
-      CSD U5 black white images pixelation 3_2019: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17\nPM.png>)"
-      CSD U5 black white images pixelation 4: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
-      CSD U5 black white images pixelation 4_2018: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
-      CSD U5 black white images pixelation 4_2019: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 这样做\\\r\n\n\\\r\n用像素小工具来画一个笑脸。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 3: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+      CSD U5 black white images pixelation 3_2018: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+      CSD U5 black white images pixelation 3_2019: "# 这样做\\\r\n\n\\\r\n这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>\nPM.png>)"
+      CSD U5 black white images pixelation 4: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
+      CSD U5 black white images pixelation 4_2018: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
+      CSD U5 black white images pixelation 4_2019: "# 这样做\\\r\n\n\\\r\n在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>\nPM.png>)"
       CSD U5 black white images pixelation 5: "# 这样做\\\r\n\n\\\r\n现在该你了。在像素小工具里画任何你想画的东西。如果需要的话，请随意改动图片的宽高。"
       CSD U5 black white images pixelation 5_2018: "# 这样做\\\r\n\n\\\r\n现在该你了。在像素小工具里画任何你想画的东西。如果需要的话，请随意改动图片的宽高。"
       CSD U5 black white images pixelation 5_2019: "# 这样做\\\r\n\n\\\r\n现在该你了。在像素小工具里画任何你想画的东西。如果需要的话，请随意改动图片的宽高。"
@@ -7869,14 +7869,12 @@ zh-CN:
         height: 30px; width:30px\">&nbsp;</div> 斜度: 5 |转动：-25\r\n\r\n<div style=\"display:inline-block;
         background-color: thistle; height:\n30px; width:30px\">&nbsp;</div> 斜度:10
         |转动30 \r\n\r\n你应该往哪个方向倾斜才能得到一个正斜度？\r\n\r\n你应该往哪个方向倾斜才能得到一个负转动值？"
-      CSD U6 iter create notes: "# 音乐播放器\\\r\n\n  \n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐, 但它缺少函数定义。\\\r\n\\\r\n\n#
+      CSD U6 iter create notes: "# 音乐播放器\\\r\n\n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐, 但它缺少函数定义。\\\r\n\\\r\n\n#
         这样做\\\r\n\n-   创建一个`checkNotes()`（检查音符）函数, 它将在 \"音符\" 数组中的所有条目上调用 `checkNote(note)`。"
-      CSD U6 iter create notes_2018: "# 音乐播放器\\\r\n\n  \n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐,
-        但它缺少函数定义。\\\r\n\\\r\n\n# 这样做\\\r\n\n-   创建一个`checkNotes()`（检查音符）函数, 它将在 \"音符\"
-        数组中的所有条目上调用 `checkNote(note)`。"
-      CSD U6 iter create notes_2019: "# 音乐播放器\\\r\n\n  \n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐,
-        但它缺少函数定义。\\\r\n\\\r\n\n# 这样做\\\r\n\n-   创建一个`checkNotes()`（检查音符）函数, 它将在 \"音符\"
-        数组中的所有条目上调用 `checkNote(note)`。"
+      CSD U6 iter create notes_2018: "# 音乐播放器\\\r\n\n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐, 但它缺少函数定义。\\\r\n\\\r\n\n#
+        这样做\\\r\n\n-   创建一个`checkNotes()`（检查音符）函数, 它将在 \"音符\" 数组中的所有条目上调用 `checkNote(note)`。"
+      CSD U6 iter create notes_2019: "# 音乐播放器\\\r\n\n 这个程序让你在不同音符上挥舞指挥棒来演奏音乐, 但它缺少函数定义。\\\r\n\\\r\n\n#
+        这样做\\\r\n\n-   创建一个`checkNotes()`（检查音符）函数, 它将在 \"音符\" 数组中的所有条目上调用 `checkNote(note)`。"
       CSD U6 iter modify bugs: "# 虫子振动器\\\r\n\n\\\r\n这个程序在主板摇晃的时候振动虫子，但它只对一只虫子起作用。\\\r\n\\\r\n\n#
         这样做\\\r\n\n-   更改`moveBugs()`（移动虫子） 函数, 使其为每个颜色的虫子调用`moveBug(color)`. \\\r\n-
         \  （提示：查看`detectHits()`函数来获得一些提示。）"
@@ -10000,7 +9998,7 @@ zh-CN:
         \  在`onEvent`模块里增加`setPosition`（设置位置）模块，`setPosition`的输入为：\\\r\n    \\\\t\\*
         ID（标识）：图片\\\r\n    \\*\n    下面两个输入是x和y的值 - 测试一下数值从而使图片像右边的图片那样运动。"
       Room Escape Workshop - 3: "# 隐藏代码\\\r\n\n\\\r\n<img\nsrc=\"https://images.code.org/6fa80456a39d9b6417545f5f66ec83a5-image-1490368827625.png\"\nstyle=\"width:400px;float:right\">\\\r\n\\\r\n\n1.
-        \ 在设计模式里点击写着\"CODE\"（代码）的白色方块。让它显示你选择的密码\\\r\n2.  2\\.\n    往下拖动图片以覆盖密码\\\r\n
+        \ 在设计模式里点击写着\"CODE\"（代码）的白色方块。让它显示你选择的密码\\\r\n2.  2.\n    往下拖动图片以覆盖密码\\\r\n
         \   \\\r\n    ![](<>)"
       Room Escape Workshop - 4: "# 设置保险箱\\\r\n\n\\\r\n你已经生成了密码并使用户能够走到第二个房间。让我们给用户在点击保险箱时输入密码的能力。\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   增加一个`onEvent()`（当事件发生时）模块\\\r\n    \\\\t\\* 为保险箱挑选一个ID\\\r\n-
@@ -10086,7 +10084,7 @@ zh-CN:
       SG U3L03 Draw a T using turnAround: "# 这样做:\\\r\n\n多练习**调用**函数。使用`turnAround()`（转身）
         和你的老朋友`moveForward()`（向前移动） 函数创建一个如下所示，位于海龟第一个位置中间的加号标志。甚至虽然你刚刚写了这个函数, 我们已经为你**定义了**
         `turnAround()`函数。\n\\\r\n\\\r\n记住，将在函数定义的_上面_写调用函数的代码。函数定义写在函数调用之后，来支持**抽象
-        \\*\\*。如果你不需要知道函数里面是如何工作的，就不必去看它，可以直接调用它。\\\r\n\\\r\n\\*备注: 乌龟应该在它开始的地方结束，这也是如下所示在加号的中间。加号的四个部分都是一个`moveForward()`（向前移动）长。\\\r\n\\\r\n![](<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14\nAM.png>)\\\r\n\\\r\n\\\r\n你将使用三个子目标来解决这个问题：`//call
+        \\*\\*。如果你不需要知道函数里面是如何工作的，就不必去看它，可以直接调用它。\\\r\n\\\r\n\\*备注: 乌龟应该在它开始的地方结束，这也是如下所示在加号的中间。加号的四个部分都是一个`moveForward()`（向前移动）长。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/9d6c2d7d69c2f1c68c5b273bdbae65c7-image-1441296690812.11.14>\nAM.png>)\\\r\n\\\r\n\\\r\n你将使用三个子目标来解决这个问题：`//call
         function`（调用函数）,\n`//orient turtle`（乌龟定向）, 和`//move turtle`（移动乌龟）。函数定义已完成。我们已经为你把前几步的子目标放进去了。用子目标模块
         (在**目标\\*\\* 选项卡中) 规划其余代码, 以获得最有效的路径, 然后再用模块来填充它。"
       SG U3L03 Free Response Wrap Up: "用你自己的话至少说出一个原因，为什么计算机语言有函数。并用你这节课上的一个例子来说明。\\\r"
@@ -10104,13 +10102,13 @@ zh-CN:
         drawDiamond()\r\n* drawSide()\r\n*\ndrawStep()\r\n* right()\r\n\r\n这4个函数会像上下层级一样的起作用。最顶层的是`drawDiamond()`，它调用了`drawSide()`。而`drawSide()`又调用了`drawStep()`和`right()`。\r\n\r\n在你面对的大多数编程问题中，都不会被分解成这几关一样的碎片。你需要根据要重用多次的模式来组合出函数的层级。这是为什么在写代码前花点时间做计划会让你更高效。\n\r\n\r\n子目标能帮你做到这一点。一旦你意识到钻石能通过重复调用4次同样的函数来画出，你就可以记下一个子目标的注释，来提醒自己需要定义并调用叫做`drawSide()`的函数。然后，你能指出每条边能通过调用3次同一个函数以及其它几个步骤来画出，你就可以记下要定义并调用`drawStep()`。一旦你计划画了解决方案，就能填充模块来完成它了。"
       SG U3L04 - 3 by 3 with functions: "# 这样做：\\\r\n\n\\\r\n我们要重新看一下一个熟悉的问题。**用最有效的方法画一个3乘3的正方形**。唯一的不同是，这次你有能力来创建**层级的函数**来帮你设计更优美有效的方案。使用你学到的**将问题分解成层级的函数**，来改进前面的方案。想一想如何组合函数来使用尽可能少的模块。\\\r\n\\\r\n你需要4个子目标。想一想如何能`//Define
         function`（定义函数）并`//Call function`（调用函数）来画出大多数正方形，然后用`//Move turtle`和`//Orient
-        turtle`来填充剩下的。\\\r\n\\\r\n![](<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18\nPM.png>)"
+        turtle`来填充剩下的。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/121251ed82b4986848062abacdef6963-image-1441824892425.54.18>\nPM.png>)"
       SG U3L04 - snowflake: "# 这样做：\\\r\n\n\\\r\n你应该已经和伙伴一起将这个设计分解成了多层的函数了。现在，你有机会来为方案编程了。有几件事情要牢记：\\\r\n\\\r\n\n-
         \  找出可重用的模式，并将他们**做成独立的函数**。\\\r\n-   记住：你设计的这些函数**能调用其它函数**。这时你如何分层的抽象。\\\r\n-
         \  \\*\n    函数的名称应该是**描述性的，并有意义的**。\\\r\n-   \\*\n    你的程序会从对一个函数的单词调用开始，然后它会调用一系列的函数。\\\r\n
         \   \\\r\n    你会用到下面4个子目标：\n    `//Define function` （定义函数），`//Call function`（调用函数），`//Move
         turtle`（移动乌龟）和`//Orient\n    turtle`（定向乌龟）。如果你没找到别的方案，先用子目标来计划你的程序。\\\r\n
-        \   \\\r\n    \\\r\n    ![](<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33\n
+        \   \\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33>\n
         \   PM.png>)"
       SG U3L04 Assessment1: "思考下面的图形。用自上而下的思维来设计一个解决方案。在提供的空间里，写下**只有名字**的函数列表，这些函数是你用来画出这个图形的程序。（假设长线段是乌龟移动6次那么长）。\\\r\n\\\r\n![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\\\r"
       SG U3L04 Free Response Wrap Up: 在创建表演任务时，你会被要求找到程序的抽象，并解释它时如何帮助管理程序的复杂性。函数是抽象的一种形式。找一个你写的解决3乘3正方形问题的函数，并解释它是如何帮助管理程序的复杂性的。
@@ -10130,7 +10128,7 @@ zh-CN:
         250px\">\\\r\n\\\r\n**记住：** 如果你在某个特定的模块那里被难住了，可以通过**鼠标悬停在**`penColor()`\n和`penWidth()`上来读一读文档，这两个函数能让你设置乌龟用来画画的笔的颜色和尺寸。\\\r\n\\\r"
       SG U3L06 Challenge 3 fill pink: "# 用点画画\\\r\n\n\\\r\n我们已经添加了一个叫做`dot()`（点）的新命令。
         \\\r\n\\\r\n**阅读**`dot()`命令的文档。\\\r\n\\\r\n**做一个\"雪人\"**\\\r\n\\\r\n\n1.  设置笔的颜色为另一种新颜色（我们做的是粉色的）\\\r\n
-        \   \\\\t\\* 注意：即使你想用默认的点的颜色 - 黑色 - 也可以在这里显式的将颜色设置为黑色。\\\r\n    \\\r\n2.  2\\.\n
+        \   \\\\t\\* 注意：即使你想用默认的点的颜色 - 黑色 - 也可以在这里显式的将颜色设置为黑色。\\\r\n    \\\r\n2.  2.\n
         \   用这个颜色来画一个很大的点，让它充满整个屏幕。\\\r\n    \\\r\n3.  用另一个不同的颜色，在一列上画3个点，每个点都比下一个要小一点。（我们用白色的点，来让它看起来像雪人）\\\r\n
         \   \\\r\n    你可能会想看看`penColor()`的文档，来找找其它颜色。\\\r\n    \\\r\n    ![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)\\\r\n
         \   \\\r\n    在这里有两个子目标：`//Set pen properties`（设置笔的属性）和`//Move Turtle`（移动乌龟）。因为你需要在开始时不用移动乌龟就画出两个点，你震度需要在一列里做两次`//Set
@@ -10177,7 +10175,7 @@ zh-CN:
       SG U3L07 - allSeaGrass: "# 添加海草\\\r\n\n<img src=\"https://images.code.org/a67f893ea9187b253ec4f6abcb16b7cf-image-1443048301130.30.42\nPM.png\"
         style=\"width: 200px; float: right\">\\\r\n新版本的`drawSeagrass`（画海草）现在用随机高度画出了单条海草。现在让我们用循环在`drawAllSeagrass`（画所有的还早）里用它填满整个海底。\\\r\n\\\r\n\n#
         这样做：\\\r\n\n\\\r\n\\*\n**添加一个`计数循环`**到`drawAllSeagrass`里，用更新后的`drawSeagrass`函数，来画大约**50条海草**。"
-      SG U3L07 - createTriangleParam: "# 定义有参数的函数\\\r\n\n\\\r\n这次你需要写自己的有参数的函数来完成一幅图。两个`drawTriangle()`（画三角形）函数的调用已经放在程序的最上面了，但是函数本身还需要被定义。这个程序应该画这个：\\\r\n\\\r\n![](<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20\nPM.png>)\\\r\n\\\r\n\n#
+      SG U3L07 - createTriangleParam: "# 定义有参数的函数\\\r\n\n\\\r\n这次你需要写自己的有参数的函数来完成一幅图。两个`drawTriangle()`（画三角形）函数的调用已经放在程序的最上面了，但是函数本身还需要被定义。这个程序应该画这个：\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/4a96eff03ba79b881b98137048140953-image-1442523578705.59.20>\nPM.png>)\\\r\n\\\r\n\n#
         这样做：\\\r\n\n**完成**`drawTriangle(sideLength)`的函数定义。注意，你已经被给定了一个**有描述性，并有意义的参数名字**,
         `sideLength`（边长），但你如果愿意的话，也可以改变它。\\\r\n\\\r\n**提示：**\n你应该在`drawTriangle()`的定义中将笔抬起和放下\n\n-
         \  这能保证你调用drawTriangle时，肯定能实际画上。在函数的最后将笔抬起时很有用的，因为任何代码都不希望drawTriangle有任何副作用来把笔放下。\\\r\n
@@ -10217,7 +10215,7 @@ zh-CN:
         \       \\\r\n-   **第二：增加循环**到`drawAllSeaStars`.\\\r\n    \\\r\n    \\\\t\\*
         **将函数里的命令放到循环里。**这样，你的代码会在图像**底部的像素（y值在360到450之间）**之间**随机移动乌龟**。\\\r\n    \\\r\n-
         \  \\*\n    用`drawSeaStar`来**画5个海星**，它们的尺寸在随机的**10到30**之间。\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       SG U3L07 - sunBeams: "# 添加阳光\\\r\n\n<img src=\"https://images.code.org/9e08dae8486f66422d492b8d8a6777eb-image-1443048962131.55.54\nPM.png\"
         style=\"width: 200px; float: right\">\\\r\n最后，我们要用`drawAllSunbeams`加一些能看见的阳光。注意`turnTo`命令让乌龟在画每条阳光前，随机面向某个方向。\\\r\n\\\r\n\n#
@@ -10235,7 +10233,7 @@ zh-CN:
         \   \\\r\n-   \\*\n    然后在`drawTriangle(size, width)`中**写**代码，来让它像描述的那样工作。\\\r\n-
         \  如果难住了，就先制定一个自上而下的计划，并用子目标来创建画三角形的函数。\\\r\n-   \\*\n    试试看！**运行**代码，并试验创建一个和下面类似的图像。\\\r\n
         \   \\\r\n    记住完成子目标`//Define function`，需要给它一个名字，标识参数，并将其填满模块。\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38\n
+        \   \\!\\[](\\<<https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38>\n
         \   PM.png>)"
       SG U3L08 - drawSquareWithParam: "# 定义并使用有一个参数的函数\\\r\n\n在视频里，你学到了定义多个函数来画出不同尺寸的正方形，但这样会产生很多重复的函数。\n\n-
         \  除了一些数字，它们基本上是一样的 - 这样不太理想。\\\r\n    任何时候，当你需要复制粘贴一大段代码时，通常这是个有更好方法的信号。\\\r\n
@@ -10243,27 +10241,27 @@ zh-CN:
         \   \\\r\n    <img src=\"https://images.code.org/3eae30651dabc2f83a8bbbbbf8bea7ad-image-1442420537113.26.34\n
         \   AM.png\" style=\"width: 150px;\"> \\\r\n    \\\r\n    我们已经给你了视频中创建的`drawSquare(size)`函数，但还不太正确。**修好`drawSquare()`函数中的代码，让程序能够正确的画出图形。**\\\r\n
         \   \\\r\n    **提示：**\n    你只需要改变一行已有的代码。不需要增加或删除任何代码。记住：参数`size`实际上像一个值得占位符，它能被插入到每次调用`moveForward()`中。"
-      SG U3L08 - fish: "# 给函数_drawFish_（画鱼）添加参数：\\\r\n\n\\\r\n更新`drawFish()`函数来接受一个参数。当前`drawFish()`函数只能画尺寸为30的鱼。\\\r\n\\\r\n**加一个参数**到`drawFish()`的函数定义里，这能让你控制它的尺寸。（注意：笔的宽度在这里很重要。）确保你的参数有一个**描述性的而且有意义的**名字。\\\r\n\\\r\n**更新函数调用**来用新版本的`drawFish()`并改变图画里鱼的尺寸。\\\r\n\\\r\n![](<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55\nPM.png>)"
+      SG U3L08 - fish: "# 给函数_drawFish_（画鱼）添加参数：\\\r\n\n\\\r\n更新`drawFish()`函数来接受一个参数。当前`drawFish()`函数只能画尺寸为30的鱼。\\\r\n\\\r\n**加一个参数**到`drawFish()`的函数定义里，这能让你控制它的尺寸。（注意：笔的宽度在这里很重要。）确保你的参数有一个**描述性的而且有意义的**名字。\\\r\n\\\r\n**更新函数调用**来用新版本的`drawFish()`并改变图画里鱼的尺寸。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55>\nPM.png>)"
       SG U3L08 - introUnderTheSea - recovery: "# 在海里！\\\r\n\n\\\r\n在下面的几个挑战中，你会改进**一个程序**，来画海底场景。每次你完成一关，进入下一关，你的代码都会一起过去。你会得到新的指令来告诉你加什么。\\\r\n\\\r\n\n#
         这样做：\\\r\n\n\\\r\n\n-   **通读**提供给你的程序，来对要做什么有个基本的理解。\\\r\n-   **添加函数调用**到程序的最上面，来让**两条鱼，两条海星和两块海草**出现在场景的某个地方。在这个阶段，你不需要提供参数的值。\\\r\n-
         \  **提示：**你需要在画第二条鱼、海星或海草之前调用`moveTo`，否则，你不会看见第二个，因为它会完全盖住一样的第一个。 -- 这些函数画的东西都基于调用前乌龟的位置。\\\r\n-
         \  \\*\n    测试你的代码。如果有什么不像你想的那样工作，考虑是否能加什么东西到函数的定义里来，让它变得更好。\\\r\n-   \\*\n
-        \   **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        \   **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       SG U3L08 - introUnderTheSea: "# 在海里！\\\r\n\n\\\r\n在下面的几个挑战中，你会改进**一个程序**，来画海底场景。每次你完成一关，进入下一关，你的代码都会一起过去。你会得到新的指令来告诉你加什么。\\\r\n\\\r\n\n#
         这样做：\\\r\n\n\\\r\n\n-   **通读**提供给你的程序，来对要做什么有个基本的理解。\\\r\n-   **添加函数调用**到程序的最上面，来让**两条鱼，两条海星和两块海草**出现在场景的某个地方。在这个阶段，你不需要提供参数的值。\\\r\n-
         \  **提示：**你需要在画第二条鱼、海星或海草之前调用`moveTo`，否则，你不会看见第二个，因为它会完全盖住一样的第一个。 -- 这些函数画的东西都基于调用前乌龟的位置。\\\r\n-
         \  \\*\n    测试你的代码。如果有什么不像你想的那样工作，考虑是否能加什么东西到函数的定义里来，让它变得更好。\\\r\n-   \\*\n
-        \   **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        \   **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       SG U3L08 - multiParamFish: "# 多个参数\\\r\n\n\\\r\n让我们通过添加更多的颜色，来让画面更有意思。\\\r\n\\\r\n再**添加**三个参数，叫做`red`（红），`green`（绿），和`blue`（蓝）到你的`drawFish`函数定义里，这能让你在调用函数时设置鱼的颜色。记住将它们用逗号分割开来！\\\r\n\\\r\n**注意：**\n这意味着drawFish现在会有4个参数：size,
         red, green,\nand blue。记住分辨这些参数都在子目标`//Define function`中。\\\r\n\\\r\n**提示：**
-        在drawFish里只用将penRGB的值从数字替换为函数的参数。\\\r\n\\\r\n**改动**最上面函数的调用，来画出不同颜色的鱼。\\\r\n\\\r\n![](<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30\nPM.png>)"
+        在drawFish里只用将penRGB的值从数字替换为函数的参数。\\\r\n\\\r\n**改动**最上面函数的调用，来画出不同颜色的鱼。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/14b52d152c818903b0fc87061126f0f8-image-1442608501173.34.30>\nPM.png>)"
       SG U3L08 - paramsToStarfish: "# 向函数中添加参数: \\* 画海星\\*\\\r\\\r 我们希望添加一些变化来使我们的图片更有趣。目前,
         \"drawStarfish ()\"（画海星） 函数只能绘制大小为60的海星.\\\r\\\r在 \"drawStarfish ()\" （画海星）的函数定义中**添加一个参数
         \\*\\*, 它允许你控制其大小, 如 \"drawStarfish (大小)\"。请确保参数具有 \\*\\* 描述性和有意义的 \\*\\*
         名称。还要确保使用你选择的参数名来更改函数中的模块. \\\r\\\r** 更新函数调用 \\*\\* 来使用新版本的 ' drawStarfish
-        () '（画海星） 和更改海星的大小。\\\r\\\r\\!\\[] (<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12>
+        () '（画海星） 和更改海星的大小。\\\r\\\r!\\[] (<https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12>
         PM. png)"
       SG U3L08 - randomInput: "# 随机输入\\\r\n\n\\\r\n你有一个新的模块，它可以让你生成一个随机数。每次调用函数时,
         都可以用它而不必硬编码数值。\\\r\n\\\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\\\r\n\\\r\n**请阅读
@@ -10274,10 +10272,10 @@ zh-CN:
         \  drawSeagrass（画海草）\\\r\n-   drawFish（画鱼）\\\r\n    \\\r\n    这是一个很好的**测试**函数，同时又能得到一些**有趣的图像**的方法。每次运行程序时,
         你都可以得到和下面的稍微有点不同的画面。\\\r\n    \\\r\n    ![](https://images.code.org/d2031f555ed23bcfa4a6a6165074b559-image-1442852053630.png)"
       SG U3L08 - seaGrass: "# 将参数添加到函数：_drawSeagrass_（画海草）\\\r\n\n\\\r\n为了不断增加图像的多样性，让我们继续为函数添加参数。目前，`drawSeagrass()`（画海草）函数只能绘制一条半径为100的海草。\\\r\n\\\r\n在`drawSeagrass()`（画海草）的函数定义中**添加一个参数**，它可以让你控制其大小。（你只需要更改每个弧线的半径。）确保参数具有**描述性并有意义的**名称。\\\r\n\\\r\n\\*\\*更新函数调用
-        \\*\\*以使用新版本的`drawSeagrass()`（画海草），并更改图像中海草的大小。\\\r\n\\\r\n![](<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30\nPM.png>)"
+        \\*\\*以使用新版本的`drawSeagrass()`（画海草），并更改图像中海草的大小。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/0b7d1750101a4c81ef8d77d8668f94f2-image-1442606862829.07.30>\nPM.png>)"
       SG U3L08 - squareTwoParams: "# 调用具有多个参数的函数\\\r\n\n\\\r\n这是`drawSquare()` (画正方形）的新定义，它带有二个参数：`drawSquare(size,
-        borderWidth)`（画正方形（大小，边宽），注意 \\*\\*多个参数是用逗号分隔开的 \\*\\*。\\\r\n\\\r\n![](<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15\nPM.png>)\\\r\n\\\r\n\n#
-        这样做：\\\r\n\n添加代码，对 `drawSquare()`（画正方形）新的两个参数版本进行**两次调用**，来使图像与此类似。\\\r\n\\\r\n![](<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38\nPM.png>)\\\r\n\\\r\n就像子目标`//Define
+        borderWidth)`（画正方形（大小，边宽），注意 \\*\\*多个参数是用逗号分隔开的 \\*\\*。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/c9766f914d59531614c753e9147d29dd-image-1447801298794.01.15>\nPM.png>)\\\r\n\\\r\n\n#
+        这样做：\\\r\n\n添加代码，对 `drawSquare()`（画正方形）新的两个参数版本进行**两次调用**，来使图像与此类似。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/ddd85deb33ff82f3c257d25cdc9e6384-image-1442526350229.45.38>\nPM.png>)\\\r\n\\\r\n就像子目标`//Define
         function`（定义函数）一样, 子目标`//Call function`（调用函数）过去只涉及标识函数的名称。现在当你调用函数时, 需要标识函数的名称和函数的参数值。"
       SG U3L08 Assessment2: "\"抽象\" 通常用于专注于一般情况，而忽略问题的特定实例。\\\r\n\\\r\n基于这个词的含义, 参数和函数是如何作为抽象的例子？"
       SG U3L08 comments: "# 为自己和合作者对代码进行注释\\\r\n\n\\\r\n程序员在他们的代码里写入注释有两个主要原因：(1)
@@ -10320,9 +10318,9 @@ zh-CN:
       SG U3L2_Add-subgoals: "# 新挑战 \\<img src=\"<https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png>\"\n\nstyle=\"float:
         right\">\\\r\n\\\r\n在_右前_方，用最_高效_的代码画一个3x3的网格。\\\r\n\\\r\n\"高效\"意味着什么？\n在计算机科学里，根据不同的情况，它有不同的含义。在这个问题中，高效的意思是：**用尽可能少的乌龟命令**\\\r\n\\\r\n\n#
         做这些\\\r\n\n\\\r\n\n1.  这个问题出现了一些困难的挑战。在你开始创建程序前，你可能想在纸上快速的试试自己的想法。和你的伙伴一起讨论一下可能的方案或策略。多找几个。\\\r\n
-        \   \\\r\n2.  2\\.\n    一旦你有了解决方案，从找到子目标**开始**，并将它们从**目标**标签中拖到工作区里。\\\r\n
-        \   \\\r\n3.  然后开始用乌龟模块来填充它，并在过程中加一些命令就**测试**一下。然后不断的运行代码，再增加一些模块，再运行，不断的这样重复。\\\r\n
-        \   \\\r\n    当你认为完成时，点击`完成`并继续。\\\r"
+        \   \\\r\n2.  2.\n    一旦你有了解决方案，从找到子目标**开始**，并将它们从**目标**标签中拖到工作区里。\\\r\n    \\\r\n3.
+        \ 然后开始用乌龟模块来填充它，并在过程中加一些命令就**测试**一下。然后不断的运行代码，再增加一些模块，再运行，不断的这样重复。\\\r\n    \\\r\n
+        \   当你认为完成时，点击`完成`并继续。\\\r"
       SG U3L2_Turtle3by3Grid: "# 新挑战 \\<img src=\"<https://images.code.org/c15fee1f27c817a352a521c7ddcb5006-image-1436282127747.png>\"\n\nstyle=\"float:
         right\">\\\r\n\\\r\n尽可能_高效_的在乌龟的_右前方_画一个3x3的网格。\\\r\n\\\r\n\"高效\"意味着什么？\n在计算机科学里，根据不同的情况，它有不同的含义。在这个问题中，高效的意思是：**用尽可能少的乌龟指令**\\\r\n\\\r\n**备注：**从现在开始，在此视频里提到的4
         个乌龟指令会一直在工具箱里。现在在这个挑战里可能不需要`penUp()`（提起画笔）和`penDown()`（放下画笔），当将来你可能需要用到它们。([Show
@@ -10610,7 +10608,7 @@ zh-CN:
         \       \\\r\n-   **第二：增加循环**到`drawAllSeaStars`.\\\r\n    \\\r\n    \\\\t\\*
         **将函数里的命令放到循环里。**这样，你的代码会在图像**底部的像素（y值在360到450之间）**之间**随机移动乌龟**。\\\r\n    \\\r\n-
         \  \\*\n    用`drawSeaStar`来**画5个海星**，它们的尺寸在随机的**10到30**之间。\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 - seaStar_2018: "# 增加海星\\\r\n\n\\\r\n通过编写`drawAllSeaStars`（画所有海星），我们已经能在图片里画海星了。会议我们已经写过的循环，来画出更多复杂的海星。\\\r\n\\\r\n\n#
         这样做：\\\r\n\n\\\r\n\n-   **阅读**`drawSeaStar`函数，来明白它的原理，接受什么样的**参数**。\\\r\n
@@ -10619,7 +10617,7 @@ zh-CN:
         \       \\\r\n-   **第二：增加循环**到`drawAllSeaStars`.\\\r\n    \\\r\n    \\\\t\\*
         **将函数里的命令放到循环里。**这样，你的代码会在图像**底部的像素（y值在360到450之间）**之间**随机移动乌龟**。\\\r\n    \\\r\n-
         \  \\*\n    用`drawSeaStar`来**画5个海星**，它们的尺寸在随机的**10到30**之间。\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 - seaStar_2019: "# 增加海星\\\r\n\n\\\r\n通过编写`drawAllSeaStars`（画所有海星），我们已经能在图片里画海星了。会议我们已经写过的循环，来画出更多复杂的海星。\\\r\n\\\r\n\n#
         这样做：\\\r\n\n\\\r\n\n-   **阅读**`drawSeaStar`函数，来明白它的原理，接受什么样的**参数**。\\\r\n
@@ -10628,7 +10626,7 @@ zh-CN:
         \       \\\r\n-   **第二：增加循环**到`drawAllSeaStars`.\\\r\n    \\\r\n    \\\\t\\*
         **将函数里的命令放到循环里。**这样，你的代码会在图像**底部的像素（y值在360到450之间）**之间**随机移动乌龟**。\\\r\n    \\\r\n-
         \  \\*\n    用`drawSeaStar`来**画5个海星**，它们的尺寸在随机的**10到30**之间。\\\r\n    \\\r\n
-        \   ![](<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04\n
+        \   \\!\\[](\\<<https://images.code.org/1aadf83bcecaf5ca6c505e46d43e5f45-image-1443046811335.20.04>\n
         \   PM.png>)"
       U3L07 Free Response Reflection: "当分解问题时，你会经常遇到会在代码中重复使用的元素。有时，适合写一个新函数；有时适合写一个循环。\\\r\n\\\r\n没有一成不变的规则说哪种方法更好，但是你觉得该如何呢？什么样的情况下，你会写一个函数，又在什么情况下使用循环呢？\\\r\n\\\r"
       U3L07 Free Response Reflection_2018: "当分解问题时，你会经常遇到会在代码中重复使用的元素。有时，适合写一个新函数；有时适合写一个循环。\\\r\n\\\r\n没有一成不变的规则说哪种方法更好，但是你觉得该如何呢？什么样的情况下，你会写一个函数，又在什么情况下使用循环呢？\\\r\n\\\r"
@@ -10650,7 +10648,7 @@ zh-CN:
         这样做：\\\r\n\n\\\r\n\n-   **添加函数调用**到程序的最上面，来让**两条鱼，两条海星和两块海草**出现在场景的某个地方。在这个阶段，你不需要提供参数的值。\\\r\n
         \   \\\r\n-   **提示：**你需要在画第二条鱼、海星或海草之前调用`moveTo`，否则，你不会看见第二个，因为它会完全盖住一样的第一个。
         -- 这些函数画的东西都基于调用前乌龟的位置。\\\r\n    \\\r\n-   \\*\n    测试你的代码。如果有什么不像你想的那样工作，考虑是否能加什么东西到函数的定义里来，让它变得更好。\\\r\n
-        \   \\\r\n-   \\*\n    **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    ![](<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35\n
+        \   \\\r\n-   \\*\n    **继续**到下一关，**你的代码会在那里等你。**\\\r\n    \\\r\n    \\!\\[](\\<<https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35>\n
         \   PM.png>)"
       U3L08 - randomInput: "# 随机输入\\\r\n\n\\\r\n你有一个新的模块，它可以让你生成一个随机数。每次调用函数时, 都可以用它而不必硬编码数值。\\\r\n\\\r\n![](https://images.code.org/5ff13bfdf582692f009b787570d467d0-image-1470145136252.png)\\\r\n\\\r\n**请阅读
         randomNumber（随机数字） 模块的文档**。\\\r\n\\\r\n\n# 这样做\\\r\n\n-   使用 randomNumber
@@ -11550,8 +11548,8 @@ zh-CN:
       course1_maze_debugging_challenge1: 调试本关卡。去掉多余的模块并添加缺少的块。让鸟到达猪那里！
       course1_maze_debugging_challenge2: 调试本关卡。这些模块是正确的, 但他们的顺序错了!
       course1_maze_seq_challenge2: 在每个方向上最多只能移动四次。在你用完所有模块之前, 你能找到一条路吗？
-      course1_playlab_events_challenge1: "_\"我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！\"_\\\r\n\\\r\n点击奥丽芙会让罗宾出现！你能也写代码来显示剩下角色吗？\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
-      course1_playlab_events_challenge2: "_\"帮我组织一次派对！当你点击我的朋友时，让他们做点什么。\"_\\\r\n\\\r\n这个动物说什么了？还会发生什么？\\\r\n\\\r\n\\\r\n\\\r\n在这关中，别忘了点击提示！提示会让你尝试有趣的事情！\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+      course1_playlab_events_challenge1: "_\"我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！\"_\\\r\n\\\r\n点击奥丽芙会让罗宾出现！你能也写代码来显示剩下角色吗？\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+      course1_playlab_events_challenge2: "_\"帮我组织一次派对！当你点击我的朋友时，让他们做点什么。\"_\\\r\n\\\r\n这个动物说什么了？还会发生什么？\\\r\n\\\r\n\\\r\n\\\r\n在这关中，别忘了点击提示！提示会让你尝试有趣的事情！\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       course2_artist_nestedLoops_challenge1: "你能想出怎么做像这样的图吗？\\\r\n\\\r\n\n-   两个形状都有**50像素的边长。**\\\r\n-
         \  _八边形_要转向_45度_。\\\r\n-   _三角形_要_120度_的转向。"
       course2_artist_nestedLoops_challenge2: "你能想出如何画一幅这样的图吗？\\\r\n\\\r\n\n-   第一个内循环应该画一个八边形。\\\r\n-
@@ -11901,19 +11899,19 @@ zh-CN:
       courseA_playLab_events7_2018: _任意发挥:_ 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?
       courseA_playLab_events7_2019: _任意发挥:_ 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?
       courseA_playlab_events_challenge1: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2018: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge1_2019: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
-      courseA_playlab_events_challenge1a: "我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\\\r\n\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示！这些提示将帮助你逐步完成此项目!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+      courseA_playlab_events_challenge1a: "我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\\\r\n\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2: "当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2018: "当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseA_playlab_events_challenge2_2019: "当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？\\\r\n\\\r\n在这个关卡中,
-        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
-      courseA_playlab_events_challengeClone: "我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\\\r\n\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
+        请务必点击提示。这些提示会给你尝试一些有趣的事情!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+      courseA_playlab_events_challengeClone: "我的朋友藏在哪里？在这个游戏中，点击我，就会显示我的朋友奥丽芙猫！点击奥丽芙会让罗宾出现！你能也写代码来显示我的其他朋友吗？\\\r\n\\\r\n\\\r\n在这一关中，确保点击了提示！提示会帮你一步步完成这个项目！\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
       courseB_Scrat_ramp1_2018: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
         type="when_run"/></xml>模块的下面，然后点击"▶ 运行"！
       courseB_Scrat_ramp1_2019: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
@@ -13972,7 +13970,7 @@ zh-CN:
         \\\r\n> \\\r\n\n# 第2单元里的评估\\\r\n\n\\\r\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第2单元课程的理解。你的答复应该清楚的达到以下目标：
         \\\r\n\\\r\n\n1.  这个单元里有什么总结并正式的评估的机会？ \\\r\n    \\\\t\\* 这个单元里的项目是什么角色？ \\\r\n
         \   \\\\t\\* 这些项目是如何应用在这个单元中发展的内容和技能的？ \\\r\n    \\\\t\\* 这个单元中的长项目有什么特殊的考虑？\\\r\n2.
-        \ 2\\.\n    学完这单元后，学生们会获得什么样的技能和知识？\\\r\n3.  这个单元里K12框架里的2017CSTA核心里的标准或思路是什么？\\\r\n
+        \ 2.\n    学完这单元后，学生们会获得什么样的技能和知识？\\\r\n3.  这个单元里K12框架里的2017CSTA核心里的标准或思路是什么？\\\r\n
         \   \\\r\n    \\\r\n    \\\r\n    > ## 完成反思获得分数 \\\r\n    >\n    > \\\r\n
         \   >\n    > -   一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\\\r\n4.
         \ 为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。
@@ -14136,7 +14134,7 @@ zh-CN:
       csp-wednesday-unit2: "# 星期三单元反思第二部分r\n\n\\\r\n\n## 解释互联网模拟器\\\r\n\n\\\r\n你应该如何向一个有兴趣使用互联网模拟器的教师来介绍它？\\\r\n\\\r\n\\*\n在哪些方面，互联网模拟器是一个教育的，而不是专业的工具？\\\r\n\n-
         \  什么教育哲学看起来对互联网模拟器最有效？\\\r"
       csp1dlp-assessment: "<br><br>\n\n> **注意：在你开始这个反思之前，确保回顾了第1单元的课程，并对整个单元的角色评估有了很好的认识。如果你还没有回顾这些资料，可以现在做，稍后再回到这个反思部分。**\n\n#
-        第1单元的评估\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1\\.\n在这个单元里，练习表演任务的角色是什么？\n\n-
+        第1单元的评估\n\n在这个反思里，你要考虑下面的每个提示，写下一个回应来展示你对第1单元课程的理解。你的答复应该清楚的达到以下目标： \n\n1.\n在这个单元里，练习表演任务的角色是什么？\n\n-
         \  哪个表演任务正在被练习？\n-   表演任务练习如何建立在这个单元发展到的内容和技能上？ \n-   这个单元里有什么样的总结和正式的评估机会？
         \n\n> ## 完成反思获得分数\n>\n> -   一旦你提交了反思，对问题的答复会被匿名分享，并被同伴评论，你也会评论其他引导员的答复。评论者会寻找有思考的和深入的答案，这些答案显示你花了时间来思考问题。评论者也有机会给你的提交写反馈，你还能回应反馈并再次提交。\n\n-
         \  为了完成答复并获得分数，需要两个评论者来完全同意你的答复。如果评论者不能决定你提交的答复，他们可以提交到教练那里来评论。你随时有机会来回答他们的反馈，并重新提交反思！一旦评论者有了反馈，它们会显示在页面的最下方。"
@@ -14252,30 +14250,30 @@ zh-CN:
         right\">\\\r\n\\\r\n在这堂课里, 你编写了让乌龟绘制正方形的代码。简要描述一下绘制长方形的代码与绘制正方形的有什么不同。 （示例如右图长方形）"
       csp_U3_square_v_rect_FR_2019: "<img src=\"https://images.code.org/2f9b8b6a1c42b7c6c881f89867352907-image-1506460228029.png\"\nstyle=\"float:
         right\">\\\r\n\\\r\n在这堂课里, 你编写了让乌龟绘制正方形的代码。简要描述一下绘制长方形的代码与绘制正方形的有什么不同。 （示例如右图长方形）"
-      csp_affirmation_control: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_2: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_2_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_2_2019: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_3: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_3_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_4: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_4_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_5: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_control_5_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
-        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
-      csp_affirmation_intervention: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_control: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_2: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_2_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_2_2019: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_3: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_3_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_4: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_4_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_5: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_control_5_2018: "这个简短的活动能让你反思一下在这堂课中学到了什么。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n你也许对这堂课的一些主题感兴趣，但对另一些没兴趣。\\\r\n\\\r\n<strong>\\\r\n1\\.\n写下一到两个你最感兴趣的主题：\\\r\n\\\r\n</strong>\\\r\n\\\r\n<input\ntype=text><br>\\\r\n<input
+        type=text>\\\r\n<br><br>\\\r\n\\\r\n<strong>\\\r\n2\\.\n你会如何准备讨论这个测试？你感觉对有兴趣的主题准备得太多，还是太少了？\\\r\n</strong>\\\r\n\\\r\n_写下一些句子，集中在你的想法和感觉上，别担心写得好不好。_"
+      csp_affirmation_intervention: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14297,8 +14295,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_2: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_2: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14320,8 +14318,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14343,8 +14341,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_2_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_2_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14366,8 +14364,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_2_2019: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_2_2019: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14389,8 +14387,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_3: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_3: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14412,8 +14410,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_3_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_3_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14435,8 +14433,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_4: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_4: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14458,8 +14456,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_4_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_4_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14481,8 +14479,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_5: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_5: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14504,8 +14502,8 @@ zh-CN:
         \   <label><input type=\"checkbox\">\n顺其自然的享受生命的当下\r\n    </label></td>\r\n
         \   <td style=\"border:\n5px solid white\">\r\n    <label><input type=\"checkbox\">
         独立\r\n    </label></td>\r\n  </tr>\r\n</table>\r\n<br>\r\n<br>\r\n\r\n<strong>\r\n&#50;.\n为什么它们对你很重要？描述一个它们在你的生命中真的很重要的时刻。\r\n</strong>\r\n\r\n*写下一些句子。集中在你的思考和感想，别担心写得好不好。*"
-      csp_affirmation_intervention_5_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n1.
-        什么是对你最重要的？</strong>\n（选择一项或多项）\\\r\n\\\r\n\\\r\n\n<table bordercolor=\"#FFFFFF\"
+      csp_affirmation_intervention_5_2018: "这个简短的活动会让你反思一下，对于你来说，什么是最重要的。这是你的老师提供给你的，但是_你不会在这里被评分_。\\\r\n\\\r\n下面是价值和质量的列表。其中一些也许对你重要，另一些不重要。\\\r\n\\\r\n<strong>\\\r\n\n1.
+        \ 什么是对你最重要的？</strong>\n    （选择一项或多项）\\\r\n    \\\r\n    \\\r\n\n<table bordercolor=\"#FFFFFF\"
         width=75% cellpadding=5\ncellspacing=10 style=\"background-color: #d9eff7;
         border-width: 10px; border-color:\n#FFFFFF\">\r\n  <tr style=\"border: 5px
         solid white\">\r\n    <td width=25%\nstyle=\"border: 5px solid white;\">\r\n
@@ -14698,25 +14696,25 @@ zh-CN:
       cspu3_assess1_filltable: "用自上而下的设计策略来填下面的表格。第一行已经填好了。你可以用更多或更少的行。\\\r\n\\\r\n_主意：对表格里每个项目都用新行。每行的格式应该是\"函数名:
         描述\"_\\\r\n\\\r\n**自上而下的设计策略：**\\\r\n\\\r\n\n-   看看总体的情况…\\\r\n-   找到一个子任务…\\\r\n-
         \  将子任务分解成更小的子任务...\\\r\n-   继续下去，直到分解成了能够使用的命令。\\\r\n    \\\r\n    | 函数名
-        | 描述/理由\n    |\\\r\n    |-----------------|-----------------------------|\\\r\n
+        | 描述/理由\n    \\|\\\r\n    \\|-----------------\\|-----------------------------\\|\\\r\n
         \   | drawSnowflake()\n    | 画六个点的雪花 |\\\r\n    | (你的答案)   | (你的答案)               |\\\r\n
         \   \\\r\n    \\\r"
       cspu3_assess1_filltable_2018: "用自上而下的设计策略来填下面的表格。第一行已经填好了。你可以用更多或更少的行。\\\r\n\\\r\n_主意：对表格里每个项目都用新行。每行的格式应该是\"函数名:
         描述\"_\\\r\n\\\r\n**自上而下的设计策略：**\\\r\n\\\r\n\n-   看看总体的情况…\\\r\n-   找到一个子任务…\\\r\n-
         \  将子任务分解成更小的子任务...\\\r\n-   继续下去，直到分解成了能够使用的命令。\\\r\n    \\\r\n    | 函数名
-        | 描述/理由\n    |\\\r\n    |-----------------|-----------------------------|\\\r\n
+        | 描述/理由\n    \\|\\\r\n    \\|-----------------\\|-----------------------------\\|\\\r\n
         \   | drawSnowflake()\n    | 画六个点的雪花 |\\\r\n    | (你的答案)   | (你的答案)               |\\\r\n
         \   \\\r\n    \\\r"
       cspu3_assess1_filltable_2019: "用自上而下的设计策略来填下面的表格。第一行已经填好了。你可以用更多或更少的行。\\\r\n\\\r\n_主意：对表格里每个项目都用新行。每行的格式应该是\"函数名:
         描述\"_\\\r\n\\\r\n**自上而下的设计策略：**\\\r\n\\\r\n\n-   看看总体的情况…\\\r\n-   找到一个子任务…\\\r\n-
         \  将子任务分解成更小的子任务...\\\r\n-   继续下去，直到分解成了能够使用的命令。\\\r\n    \\\r\n    | 函数名
-        | 描述/理由\n    |\\\r\n    |-----------------|-----------------------------|\\\r\n
+        | 描述/理由\n    \\|\\\r\n    \\|-----------------\\|-----------------------------\\|\\\r\n
         \   | drawSnowflake()\n    | 画六个点的雪花 |\\\r\n    | (你的答案)   | (你的答案)               |\\\r\n
         \   \\\r\n    \\\r"
       cspu3_assess1_filltable_exam_prep: "用自上而下的设计策略来填下面的表格。第一行已经填好了。你可以用更多或更少的行。\\\r\n\\\r\n_主意：对表格里每个项目都用新行。每行的格式应该是\"函数名:
         描述\"_\\\r\n\\\r\n**自上而下的设计策略：**\\\r\n\\\r\n\n-   看看总体的情况…\\\r\n-   找到一个子任务…\\\r\n-
         \  将子任务分解成更小的子任务...\\\r\n-   继续下去，直到分解成了能够使用的命令。\\\r\n    \\\r\n    | 函数名
-        | 描述/理由\n    |\\\r\n    |-----------------|-----------------------------|\\\r\n
+        | 描述/理由\n    \\|\\\r\n    \\|-----------------\\|-----------------------------\\|\\\r\n
         \   | drawSnowflake()\n    | 画六个点的雪花 |\\\r\n    | (你的答案)   | (你的答案)               |\\\r\n
         \   \\\r\n    \\\r"
       cspu3_assess1_freeresponse: 解释抽象是如何帮助创造复杂性不断增加的系统的。在回答中要参考自上而下的设计策略。
@@ -15277,7 +15275,7 @@ zh-CN:
       harvey_snowflake_artist1: |-
         _是时候让雪花准备好3D打印了！_
 
-        ![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        \!\[](\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>
         PM.png>) 为了让图片能够正确打印，要遵循下面的规则：
 
         -   确保你的图片只有**一整块**！分开的部分会被分开打印。
@@ -15295,7 +15293,7 @@ zh-CN:
       harvey_snowflake_artist2: |-
         _是时候让雪花准备好3D打印了！_
 
-        ![](<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08
+        \!\[](\<<https://images.code.org/ba50acd509bd25e07e7d4622a86ba158-image-1503785370113.08.08>
         PM.png>) 为了让图片能够正确打印，要遵循下面的规则：
 
         -   确保你的图片只有**一整块**！分开的部分会被分开打印。
@@ -15341,7 +15339,7 @@ zh-CN:
       level 'grade3_Loops_5: "多美的花园啊！\\\r\n\\\r\n帮助蜜蜂访问每一朵。\\\r\n\\\r\n你能找到只用7个模块就实现的方法吗？"
       level 'grade3_Loops_6: "这个谜题中的循环应该进行多少次？\\\r\n\\\r\n循环是你的朋友！用一些循环来减少模块，并完成这道谜题。"
       level 'grade3_Loops_7: "这些花看上去很好吃！\\\r\n\\\r\n用尽可能少的模块，从每朵花里收集蜂蜜。"
-      loop pet test 2: "**挑战！** 当黛西得到胡萝卜时，会非常激动。你能让她跳一段派对舞蹈吗？在你拿开胡萝卜之前，她应该一直跳。\\\r\n\\\r\n你会需要用到所有这些模块：\\\r\n![](<https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06\nPM.png>)"
+      loop pet test 2: "**挑战！** 当黛西得到胡萝卜时，会非常激动。你能让她跳一段派对舞蹈吗？在你拿开胡萝卜之前，她应该一直跳。\\\r\n\\\r\n你会需要用到所有这些模块：\\\r\n\\!\\[](\\<<https://images.code.org/83c295bd00536dffed3c93a40bba75ae-image-1523562330282.41.06>\nPM.png>)"
       loop pet test 3: "**做出预测！** 在点击\"运行\"前，写下这些问题的答案。然后试试代码，看看会发生什么！\\\r\n\\\r\n\n-
         \  将胡萝卜拖到黛西狗那里后，她会做什么？\\\r\n-   当你按下上方向键后，黛西狗会做什么？\\\r"
       loop pet test 4: "**是时候做你自己的虚拟宠物了！**\n你能为自己的宠物改变任何代码。这是一些主意：\\\r\n\n-   你能在点击宠物时，让它开始一个新的事情吗？\\\r\n-
