@@ -23,7 +23,7 @@ module MultipleExtnameFileUtils
     # Returns true if and only if all of the extensions used by the given file
     # are in the given list of extension names
     file_extnames = all_extnames(filename)
-    (extnames & file_extnames) == file_extnames
+    (extnames & file_extnames).length == file_extnames.length
   end
 
   def self.find_with_extnames(dir, name, extnames)
