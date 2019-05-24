@@ -13,6 +13,8 @@ dashboard_enable_pegasus: true
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
 
+# Keeps from taking eyes snapshots when running feature files
+#disable_all_eyes_running: true
 
 # Whether rake:build should rebuild the apps package
 build_apps: true
