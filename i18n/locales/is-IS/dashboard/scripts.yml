@@ -4029,10 +4029,10 @@ is:
               name: Internet
             Crowdsourcing:
               name: Hópvistun
-            Concept Practice with Minecraft:
-              name: Horft fram á við
             Dance Party:
               name: Danspartý
+            Concept Practice with Minecraft:
+              name: Horft fram á við
         csd1-2019:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           stages:

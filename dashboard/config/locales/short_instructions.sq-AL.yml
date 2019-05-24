@@ -1195,7 +1195,7 @@ sq:
       Calc Circles of Eval .4: |-
         Këtu kemi mbivendosur një Bllok Mbledhjeje
         brenda një Blloku Shumëzimi. Përfundo këtë kod që të shumëzojë 3 me (4 +
-        1\)
+        1)
       Calc Circles of Eval 1 (copy 1): |-
         Ndrysho këtë formulim në \<some\_shape>
         vlerësimi.
@@ -1907,7 +1907,7 @@ sq:
       Course 4 Play Labs For Loops 8a: "Për të përfunduar lojën tonë, n'a nevojitet
         të\nkthejmë sërisht variablën e \"rritjes\"!  Le ta bashkangjisim me nivelin
         e lojës.\\\r\n\\\r\n\n1.  Mbaj shënim numrin e herëve të klikuara të Magjistarit.\\\r\n2.
-        \ 2\\)\n    Nëse Magjistari klikohet të paktën 10 herë para se Qeni të numërojë
+        \ 2)\n    Nëse Magjistari klikohet të paktën 10 herë para se Qeni të numërojë
         deri në 30, ngrej \"rritjen\" me 1 dhe fillo sërisht.\\\r\n3.  Nëse Magjistari
         nuk klikohet të paktën 10 herë, loja ka mbaruar."
       Course 4 Playlab For Loop Freeplay: |-

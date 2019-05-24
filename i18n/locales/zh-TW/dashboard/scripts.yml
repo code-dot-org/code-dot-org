@@ -4744,12 +4744,12 @@ zh-TW:
               name: 網際網路 Internet
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
-            Concept Practice with Minecraft:
-              name: 與 Minecraft 一起展望未來
             Editing Behaviors:
               name: 行為的修改
             Dance Party:
               name: 舞蹈派對
+            Concept Practice with Minecraft:
+              name: 與 Minecraft 一起展望未來
         csd1-2019:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -5250,3 +5250,21 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: 新手反思概覽
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
+            Wrap Up:
+              name: 總結
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: 電腦是什麼？
