@@ -368,12 +368,12 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        found = MultipleExtnameFileUtils.find_with_possible_extnames(content_dir(dir, subdir), uri, extnames)
+        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
         return found.first unless found.empty?
       end
 
       # Also look for shared items.
-      found = MultipleExtnameFileUtils.find_with_possible_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
+      found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
       return found.first unless found.empty?
     end
 
