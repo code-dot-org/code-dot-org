@@ -1,8 +1,11 @@
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -50,6 +53,19 @@ export default class ReportAbuseForm extends React.Component {
     return getChannelIdFromUrl(abuseUrl);
   }
 
+  writeCookie() {
+    //cookies.remove("reported_abuse")
+    console.log("cookies before: ", cookies.get())
+    if (cookies.get('reported_abuse')) {
+      var reportedProjectIds = JSON.parse(cookies.get("reported_abuse"))
+      reportedProjectIds.push(this.getChannelId())
+      cookies.set('reported_abuse', _.uniq(reportedProjectIds))
+    } else {
+      cookies.set('reported_abuse', [this.getChannelId()]);
+    }
+    console.log("cookies after: ", cookies.get())
+  }
+
   handleSubmit = event => {
     const i18n = this.props.i18n;
     if (this.refs.email.value === '') {
@@ -75,6 +91,7 @@ export default class ReportAbuseForm extends React.Component {
       event.preventDefault();
       return;
     }
+    this.writeCookie()
   };
 
   render() {

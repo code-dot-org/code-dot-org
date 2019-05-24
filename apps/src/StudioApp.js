@@ -8,6 +8,7 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
+import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -195,7 +196,6 @@ class StudioApp extends EventEmitter {
     this.libraries = {};
   }
 }
-
 /**
  * Configure StudioApp options
  */
@@ -825,9 +825,11 @@ export function makeFooterMenuItems() {
   }
 
   //Removes 'Report Abuse' if this user already reported this project
-  _.remove(footerMenuItems, function(menuItem) {
-    return menuItem.key === 'reportAbuse';
-  });
+  if (_.includes(JSON.parse(cookies.get('reported_abuse')), project.getCurrentId())) {
+    _.pull(footerMenuItems, function(menuItem) {
+     return menuItem.key === 'reportAbuse';
+   });
+  }
 
   return footerMenuItems;
 }
