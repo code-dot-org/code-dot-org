@@ -175,6 +175,7 @@ const styles = {
 
 class TopInstructions extends React.Component {
   static propTypes = {
+    handleClickCollapser: PropTypes.func,
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     hints: PropTypes.arrayOf(
@@ -241,8 +242,6 @@ class TopInstructions extends React.Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    window.addEventListener('resize', this.adjustMaxNeededHeight);
-
     // Might want to increase the size of our instructions after our icon image
     // has loaded, to make sure the image fits
     $(ReactDOM.findDOMNode(this.icon)).load(
@@ -253,12 +252,6 @@ class TopInstructions extends React.Component {
         }
       }.bind(this)
     );
-
-    const maxNeededHeight = this.adjustMaxNeededHeight();
-
-    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-    // adjusts max height.
-    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
   }
 
   /**
@@ -288,7 +281,7 @@ class TopInstructions extends React.Component {
         promptForHint: false
       });
       if (nextProps.collapsed) {
-        this.handleClickCollapser();
+        this.props.handleClickCollapser();
       }
     }
   }
@@ -449,24 +442,6 @@ class TopInstructions extends React.Component {
   };
 
   /**
-   * Handle a click to our collapser icon by changing our collapse state, and
-   * updating our rendered height.
-   */
-  handleClickCollapser = () => {
-    const nextCollapsed = !this.props.collapsed;
-    this.props.toggleInstructionsCollapsed();
-
-    // adjust rendered height based on next collapsed state
-    if (nextCollapsed) {
-      this.props.setInstructionsRenderedHeight(
-        this.getMinHeight(nextCollapsed)
-      );
-    } else {
-      this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
-    }
-  };
-
-  /**
    * @return {Element} scrollTarget
    */
   getScrollTarget = () => {
@@ -506,7 +481,7 @@ class TopInstructions extends React.Component {
         promptForHint: true
       });
       if (this.props.collapsed) {
-        this.handleClickCollapser();
+        this.props.handleClickCollapser();
       }
     }
   };
@@ -784,7 +759,7 @@ class TopInstructions extends React.Component {
                 !this.shouldDisplayCollapserButton() && commonStyles.hidden
               ]}
               collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}
+              onClick={this.props.handleClickCollapser}
             />
             {!this.props.collapsed && (
               <ScrollButtons
