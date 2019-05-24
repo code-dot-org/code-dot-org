@@ -24,6 +24,13 @@
 #
 
 class BubbleChoice < DSLDefined
+  include SerializedProperties
+
+  serialized_attrs %w(
+    title
+    description
+  )
+
   def dsl_default
     <<ruby
 name 'unique level name here'
