@@ -10,7 +10,7 @@ AS(
   SELECT DISTINCT 
     workshop_id, 
     section_id 
-  FROM analysis.csf_teachers_trained -- replace this with the csf_teachers_trained table after it is updated to include multiple entries
+  FROM analysis.csf_teachers_trained 
   ),
   
 manual -- manually entered states and zips for workshops that did not match previously 
