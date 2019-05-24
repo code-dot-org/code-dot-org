@@ -5710,19 +5710,19 @@ mk:
       CSD U3 Counters expressions: "# Expressions\\\r\n\n\\\r\nWe're\ngoing to start
         learning about **expressions** and how to use them in programs.\nHere are
         two expressions, a short one and a longer one.\\\r\n\\\r\n`1 + 2`\\\r\n\\\r\n\\`(1000\n\n-
-        \  400.    / (3 \\* 20)\\`\\\r\n                                    \\\r\n
-        \                                   These expressions have two important components:\\\r\n
-        \                                   \\\r\n-   \\*\n    **values:** numbers,
-        text, or information in your program \\\r\n-   **operators:**\n    commands
-        telling the computer to perform an action with those value `+`, `-`,\n    `*`,
-        `/`\\\r\n    \\\r\n    Don't worry if this is a lot of vocabulary all at once.
-        Try\n    using some expressions first to get a feel for how they work.\\\r\n
-        \   \\\r\n    # Do\n    This: \\\r\n    \\\r\n    This program draws a rectangle
-        using 4 separate expressions.\n    \\\r\n    \\\r\n-   **Run the program**
-        to see what happens\\\r\n-   **Change some of the\n    values and operators
-        in the 4 expressions**. How does it change the rectangle?\\\r\n-   \\*\n    Move
-        on once you've changed a few expressions. It's fine if your program\n    didn't
-        run properly."
+        \  400.    / (3 \\* 20)\\`\\\r\n                                            \\\r\n
+        \                                           These expressions have two important
+        components:\\\r\n                                            \\\r\n-   \\*\n
+        \   **values:** numbers, text, or information in your program \\\r\n-   **operators:**\n
+        \   commands telling the computer to perform an action with those value `+`,
+        `-`,\n    `*`, `/`\\\r\n    \\\r\n    Don't worry if this is a lot of vocabulary
+        all at once. Try\n    using some expressions first to get a feel for how they
+        work.\\\r\n    \\\r\n    # Do\n    This: \\\r\n    \\\r\n    This program
+        draws a rectangle using 4 separate expressions.\n    \\\r\n    \\\r\n-   **Run
+        the program** to see what happens\\\r\n-   **Change some of the\n    values
+        and operators in the 4 expressions**. How does it change the rectangle?\\\r\n-
+        \  \\*\n    Move on once you've changed a few expressions. It's fine if your
+        program\n    didn't run properly."
       CSD U3 Counters long expressions: "# Expressions Evaluate\n\nto a Single Value\\\r\n\\\r\nAs
         you probably just noticed expressions can be used\nin places where you might
         normally use a number. That's because your computer\ncan **evaluate or calculate
@@ -8358,13 +8358,13 @@ mk:
         fall down, but once it touches the ground it should stop.\nThe `if/else` block
         has already been provided for you.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\nLook\nat
         the `if/else` block that checks whether the horse's position is less than\n\n325.
-        \   [Show me where](#triggercallout=code_triggered1)\\\r\n                                \\\r\n326.
-        \   If the horse's\n                                y position is less than
-        325, use a counter pattern to change the horse's\n                                velocityY
+        \   [Show me where](#triggercallout=code_triggered1)\\\r\n                                        \\\r\n326.
+        \   If the horse's\n                                        y position is
+        less than 325, use a counter pattern to change the horse's\n                                        velocityY
         by 0.1 on each tick of the draw loop. \\\r\n327.    If the horse's y position\n
-        \                               is not less than 325, use the `velocityY`
-        to change its vertical velocity\n                                to zero.
-        [Show me where](#triggercallout=code_triggered2)\\\r\n                                \\\r"
+        \                                       is not less than 325, use the `velocityY`
+        to change its vertical velocity\n                                        to
+        zero. [Show me where](#triggercallout=code_triggered2)\\\r\n                                        \\\r"
       CSD U3 abstraction jump-2018: "# Jumping\\\r\n\n\\\r\nYou now\nhave all the
         blocks you need to make your sprite jump!  The sprite should\njump up if it's
         on the ground and the user presses the \"up\" key, then should\nstart moving

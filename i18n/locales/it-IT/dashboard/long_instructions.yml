@@ -594,7 +594,7 @@ it:
       Course 4 Artist For Loops 11a: Cerchiamo di mettere tutto insieme!  Usando le conoscenze che hai acquisito sui <i>cicli con contatore</i> e sulla variabile `counter` (<i>contatore</i>), prova a creare questo disegno in cui ogni figura ha due lati in più della precedente. Accertati che ogni lato sia 10 volte più lungo del numero di lati del poligono.
       Course 4 Artist For Loops 13: Hmmm, queste forme stanno diventando sempre più grandi! Non avevamo già risolto questo problema usando le variabili? Come possiamo usare la variabile "contatore" per rendere i lati più piccoli man mano che ce ne sono sempre di più? Invece di spostarti in avanti di una quantità sempre fissa, prova a spostarti di una quantità di pixel pari a  (100 / contatore).
       Course 4 Artist For Loops 14: Se ruoti un po' di più, o un po' di meno, di quanto fai di solito, puoi ottenere un effetto diverso. Per creare questa spirale quadrata avvitata, prova ad usare il codice del precedente esercizio ruotando di 89 gradi, invece di 90 gradi.
-      Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
+      Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100 con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\" target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento il codice del precedente esercizio. Il triangolo più piccolo ha i lati di 20 pixel, il triangolo più grande ha i lati di 200 pixel ed ogni triangolo, rispetto al precedente, ha il lato di 20 pixel più grande.
       Course 4 Artist For Loops 4: Come puoi modificare quello che hai imparato sui triangoli per disegnare questi quadrati? Il quadrato più piccolo ha i lati di 15 pixel, il quadrato più grande ha i lati di 300 pixel ed ogni quadrato, rispetto al precedente, ha il lato di 15 pixel più grande.
       Course 4 Artist For Loops 6: Spazio Libero! Prova ad usare un ciclo FOR per disegnare un modello di forma crescente a piacere.
@@ -680,7 +680,7 @@ it:
         <br>
         Modifica il codice della funzione in modo che l'ape giri nella direzione indicata dal parametro passato alla funzione.
       Course 4 Bee Params 5: Partiamo da zero! Riesci a creare una nuova funzione chiamata `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) che usa un nuovo parametro chiamato `direction` (<i>direzione </i>)?
-      Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n  \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
+      Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
         Una piccola sfida: ora c'è anche il miele di cui occuparsi!<br>
@@ -3667,19 +3667,19 @@ it:
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2018: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2019: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops8: |-
         Usa ciò che hai imparato nell'ultimo paio di esercizi per costruire dall'inizio quest'immagine.
 
@@ -3749,6 +3749,24 @@ it:
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Gli _ottagoni_ si realizzano con angoli di **45 gradi**.
         -   I _triangoli_ si realizzano con angoli di **120 gradi**.
+      courseD_artist_nestedLoops_challenge2: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
       courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma."_
@@ -4688,9 +4706,9 @@ it:
       courseD_maze_ramp5a: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2018: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
-      courseD_maze_ramp5b: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2018: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2019: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2018: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2019: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2019: Aiuta l'uccellino a raggiungere il maialino.

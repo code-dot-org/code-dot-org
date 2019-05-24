@@ -3825,9 +3825,6 @@ ro:
             Copyright and Creativity:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
-            'Concept Practice with Minecraft ':
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Nested Loops in Bee:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -4644,6 +4641,14 @@ ro:
               name: Programare pe Hârtie Milimetrică
           description_audience: '[șir gol]'
         csp5-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Încheiere
+        csd-test-saving-state:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

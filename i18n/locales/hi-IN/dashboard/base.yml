@@ -202,7 +202,11 @@ hi:
   nav:
     header:
       finished_hoc: "मैंने पूरा कर लिया!"
+      course_catalog: "कोर्स कैटलॉग"
+      project_gallery: "प्रोजेक्ट्स"
       help_support: "सहायता और समर्थन"
+      report_bug: "“समस्या की रिपोर्ट करें”"
+      about: "के बारे में"
     user:
       signin: 'दाखिल करना'
       signup: 'एक खाता बनाएँ'
@@ -238,6 +242,9 @@ hi:
   reference_area:
     title: 'मदद चाहिए?'
     subtitle: 'देखें ये वीडियो और संकेत'
+  video:
+    tab: 'वीडियो'
+    notes: 'कोई वीडियो नहीं? नोट्स दिखाएं'
   compatibility:
     upgrade:
       link: "अधिक जानें"
@@ -293,11 +300,13 @@ hi:
     submit: "सबमिट करें"
     decline: "बंद करें"
   project:
+    projects: "प्रोजेक्ट्स"
     create: "प्रोजेक्ट बनाएँ"
     new: "नया बनाएँ"
     rename: "नाम बदलें"
     save: "सहेजें"
     exit: "पाठ्यक्रम पर लौटें"
+    project_gallery: "प्रोजेक्ट्स"
     share: "शेयर करें"
     name: "नाम"
     saved: "सहेजा गया"
