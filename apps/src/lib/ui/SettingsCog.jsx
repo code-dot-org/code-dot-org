@@ -154,10 +154,12 @@ class SettingsCog extends Component {
           handleConfirm={this.confirmEnableMaker}
           handleCancel={this.hideConfirmation}
         />
-        <LibraryPicker
-          isOpen={this.state.libraryPickerOpen}
-          onClose={this.closeLibraryPicker}
-        />
+        {experiments.isEnabled('student-libraries') && (
+          <LibraryPicker
+            isOpen={this.state.libraryPickerOpen}
+            onClose={this.closeLibraryPicker}
+          />
+        )}
       </span>
     );
   }

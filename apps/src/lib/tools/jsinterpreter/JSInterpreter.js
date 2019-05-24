@@ -249,14 +249,16 @@ export default class JSInterpreter {
    */
   getFunctionsAndParams(code) {
     this.parse({code: code});
-    var functionsWithParms = {};
     var functions = this.interpreter.ast.body.filter(obj => {
       return obj.type === 'FunctionDeclaration';
     });
-    functions.map(obj => {
-      functionsWithParms[obj.id.name] = obj.params.map(param => {
+
+    var functionsWithParms = functions.map(obj => {
+      var name = obj.id.name;
+      var params = obj.params.map(param => {
         return param.name;
       });
+      return {name: name, params: params};
     });
 
     return functionsWithParms;

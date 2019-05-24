@@ -5041,10 +5041,10 @@ vi:
               name: Kết nối mạng
             Crowdsourcing:
               name: Đa nguồn
-            Concept Practice with Minecraft:
-              name: Nhìn về phía trước
             Dance Party:
               name: Bữa tiệc khiêu vũ
+            Concept Practice with Minecraft:
+              name: Nhìn về phía trước
         csd1-2019:
           stages:
             CS Discoveries Pre-survey:
@@ -5485,3 +5485,11 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Tổng kết
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Máy tính là gì?

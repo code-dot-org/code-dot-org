@@ -476,7 +476,7 @@ id:
         untuk memberitahukan cerita anda!\\\r\n\\\r\n\n1.  Gunakan layar pemilihan
         Untuk memilih layar yang baru saja anda buat\n    ([Tunjukkan di mana](#triggercallout=selector))\\\r\n2.
         \ baru tarik satu \"area teks\"\n    ke layar anda untuk menambahkannya. ([Tunjukkan
-        di mana](#triggercallout=textArea))\\\r\n3.  3\\.\n    Seret sudut kanan bawah
+        di mana](#triggercallout=textArea))\\\r\n3.  3.\n    Seret sudut kanan bawah
         dari area teks untuk mengubah ukurannya.\\\r\n4.  Perubahan\n    teks untuk
         memberitahu pengguna apa yang terjadi pada layar ini. Kemudian ubah[expandable]
         warna\n    teks anda jika anda inginkan!\\\r\n    \\\r\n    Klik \"Run\" dan
@@ -582,11 +582,11 @@ id:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 circuit predict multi: "# Membuat Prediksi\\\r\n\n\\\r\nSemua\nperangkat
         yang telah digunakan sejauh ini adalah benar-benar terhubung ke sirkuit untuk\nnomor
         pin! Mencari **#13** pada papan anda untuk melihat mana sirkuit terhubung\nuntuk
