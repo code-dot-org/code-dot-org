@@ -4,7 +4,7 @@ class CreatePdMiscSurveys < ActiveRecord::Migration[5.0]
       t.integer :form_id, limit: 8, index: true, null: false
       t.integer :submission_id, limit: 8, index: {unique: true}, null: false
       t.text :answers
-      t.references :user, null: false
+      t.references :user
 
       t.timestamps
     end

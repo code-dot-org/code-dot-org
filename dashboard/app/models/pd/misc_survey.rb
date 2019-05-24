@@ -6,7 +6,7 @@
 #  form_id       :integer          not null
 #  submission_id :integer          not null
 #  answers       :text(65535)
-#  user_id       :integer          not null
+#  user_id       :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
@@ -21,8 +21,18 @@ module Pd
   class MiscSurvey < ActiveRecord::Base
     include JotFormBackedForm
 
+    belongs_to :user
+
     def self.all_form_ids
-      [90_524_894_049_162]
+      # Facilitator summit surveys, 2019.
+      [
+        "90525022719150", # K-5 Facilitator Pre-Survey
+        "90525765349163", # K-5 Facilitator Post-Survey
+        "90524894049162", # 6-12 Facilitator Pre-Survey
+        "90525028928158", # 6-12 Facilitator Post-Survey
+        "90525686494166", # Regional Partner Pre-Survey
+        "91384165042151", # Regional Partner Post-Survey
+      ].map(&:to_i)
     end
 
     def self.skip_submission?(processed_answers)

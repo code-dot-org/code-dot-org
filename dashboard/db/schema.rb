@@ -688,7 +688,7 @@ ActiveRecord::Schema.define(version: 20190521215856) do
     t.bigint   "form_id",                     null: false
     t.bigint   "submission_id",               null: false
     t.text     "answers",       limit: 65535
-    t.integer  "user_id",                     null: false
+    t.integer  "user_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.index ["form_id"], name: "index_pd_misc_surveys_on_form_id", using: :btree
