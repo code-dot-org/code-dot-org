@@ -106,17 +106,15 @@ Each of these activities can either be used alone or with other computer science
 
 <table cellpadding="10">
   <colgroup>
-    <col width="15%" style="background-color:#999999;">
-    <col width="25%" style="border:1px solid #999999;">
-    <col width="30%" style="border:1px solid #999999;">
-    <col width="30%" style="border:1px solid #999999;">
+    <col width="20%" style="background-color:#999999;">
+    <col width="40%" style="border:1px solid #999999;">
+    <col width="40%" style="border:1px solid #999999;">
   </colgroup>
   <thead>
     <tr>
       <th style="text-align: center;">Concept</th>
       <th style="text-align: center;">Lesson</th>
-      <th style="text-align: center;">Curriculum Video</th>
-      <th style="text-align: center;">Additional Resources</th>
+      <th style="text-align: center;">Resources</th>
     </tr>
   </thead>
 
@@ -135,32 +133,30 @@ Each of these activities can either be used alone or with other computer science
 
   <tbody>
     <tr>
-      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center; font-size:22px;"><%= lesson[:mainConcept_s] %></td>
       <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>" target="_new"><%= lesson[:name_t] %></a></h3>
-      	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
-        <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a>
-        <%	if lesson[:teacherVid_t].present? %>
-		  | <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
-		<% end %>
-		 <%	if lesson[:answers_t].present? %>
-		   <%= lesson[:answers_t] %>
-		<% end %>
 
       </td>
       <td style="border:1px solid #999999;">
+      <a href="<%= lesson[:lessonPlan_t] %>" target="_new"><b>Lesson Plan</b></a><br/>
       <% if lesson[:lessonVid_t].present? %>
-      <%= youtube_embed(lesson[:lessonVid_t])%>
-   		<a href="<%= lesson[:lessonVid_t] %>"><%= lesson[:lessonVid_t] %></a>
+        <a href="<%= lesson[:lessonVid_t] %>" target="_new">Lesson Video</a><br/>
+      <% end %>
+      <%	if lesson[:sampleTeachingVid_t].present? %>
+          <a href="<%= lesson[:sampleTeachingVid_t] %>">See Lesson in Action</a><br/>
    		<% end %>
-
+      <%	if lesson[:teacherVid_t].present? %>
+          <a href="<%= lesson[:teacherVid_t] %>">Teacher Video</a><br/>
+      <% end %>
+      <%	if lesson[:answers_t].present? %>
+          <%= lesson[:answers_t] %>
+          <br/>
+      <% end %>
+      <% if lesson[:additional_t].present? %>
+        <%= lesson[:additional_t] %>
+      <% end %>
       </td>
-      <td style="border:1px solid #999999;">
-          <%	if lesson[:sampleTeachingVid_t].present? %>
-          <%= youtube_embed(lesson[:sampleTeachingVid_t])%>
-		  <a href="<%= lesson[:sampleTeachingVid_t] %>">See Lesson in Action</a>
-		<% end %>
-      <%= lesson[:additional_t] %></td>
     </tr>
     <% end %>
 </table>
