@@ -49,7 +49,7 @@ module Pd::SurveyPipeline
       assert_equal @survey_questions.length, res.dig(:survey_questions)&.length
     end
 
-    test 'can retrieve data using workshop Id filter' do
+    test 'can retrieve data using workshop id filter' do
       filter = {workshop_ids: @workshops.first.id}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
@@ -63,7 +63,7 @@ module Pd::SurveyPipeline
         res.dig(:survey_questions)&.length
     end
 
-    test 'can retrieve data using form Id filter' do
+    test 'can retrieve data using form id filter' do
       filter = {form_ids: @form_ids.first}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
@@ -75,7 +75,7 @@ module Pd::SurveyPipeline
       assert_equal 1, res.dig(:survey_questions)&.length
     end
 
-    test 'can retrieve data using both workshop Id and form Id filters' do
+    test 'can retrieve data using both workshop id and form id filters' do
       filter = {workshop_ids: @workshops.first.id, form_ids: @facilitator_form_ids.first}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
