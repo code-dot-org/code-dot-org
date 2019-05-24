@@ -81,7 +81,7 @@ FROM analysis_pii.regional_partner_stats_csf rps -- this table DOES include teac
   LEFT JOIN csf_courses
          ON csf_courses.school_year = rps.school_year_trained
         AND csf_courses.studio_person_id = rps.studio_person_id
-  JOIN users u 
+  JOIN dashboard_production.users u 
          ON u.studio_person_id = rps.studio_person_id
   LEFT JOIN existing_deep_dive_teachers edd
          ON edd.user_id = u.id
