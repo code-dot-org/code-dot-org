@@ -9,7 +9,8 @@ import {getStore} from '../redux';
 import {showShareDialog} from './components/shareDialogRedux';
 import {
   setLibraryFunctions,
-  setLibraryName
+  setLibraryName,
+  setLibrarySource
 } from './components/libraryShareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
@@ -36,6 +37,9 @@ export function shareProject(shareUrl) {
       var libraryName =
         projectName.charAt(0).toUpperCase() + projectName.slice(1);
       getStore().dispatch(setLibraryName(libraryName));
+      dashboard.project.getUpdatedSourceAndHtml_(response =>
+        getStore().dispatch(setLibrarySource(response.source))
+      );
     }
     var i18n = window.dashboard.i18n;
 

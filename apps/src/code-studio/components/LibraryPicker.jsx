@@ -2,6 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '../../templates/BaseDialog';
 import color from '../../util/color';
+import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
+import {addApplabLibrary} from './applabLibraryRedux';
+import {connect} from 'react-redux';
+import project from '../initApp/project';
 
 const styles = {
   root: {
@@ -28,10 +32,19 @@ const styles = {
   }
 };
 
-export default class LibraryPicker extends React.Component {
+class LibraryPicker extends React.Component {
   static propTypes = {
     onClose: PropTypes.func,
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool,
+    addLibrary: PropTypes.func
+  };
+
+  state = {
+    libraryId: ''
+  };
+
+  changeLibraryId = event => {
+    this.setState({libraryId: event.target.value});
   };
 
   select = event => event.target.select();
@@ -43,12 +56,23 @@ export default class LibraryPicker extends React.Component {
           Paste in the library link for a project to add its functions in your
           toolbox.
         </p>
-        <input type="text" onClick={this.select} style={styles.linkBox} />
+        <input
+          type="text"
+          onClick={this.select}
+          style={styles.linkBox}
+          value={this.state.libraryId}
+          onChange={this.changeLibraryId}
+        />
       </div>
     );
   }
 
   addLibrary = () => {
+    var libraryPilot = clientApi.create('/v3/librarypilot');
+    libraryPilot.fetch(this.state.libraryId + '/library.json', (foo, data) => {
+      this.props.addLibrary(data);
+      project.addLibrary(data);
+    });
     console.log('Added your library!');
     this.props.onClose();
   };
@@ -75,3 +99,12 @@ export default class LibraryPicker extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    addLibrary(data) {
+      dispatch(addApplabLibrary(data));
+    }
+  })
+)(LibraryPicker);
