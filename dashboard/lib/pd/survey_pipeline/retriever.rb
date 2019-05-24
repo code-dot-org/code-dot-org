@@ -1,6 +1,6 @@
 module Pd::SurveyPipeline
   class RetrieverBase
-    def retrive_data(*)
+    def retrieve_data(*)
       raise 'Must override in derived class'
     end
   end
@@ -16,9 +16,11 @@ module Pd::SurveyPipeline
       @form_ids = form_ids
     end
 
-    # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey and Pd::WorkshopDailySurvey.
-    # @return [Hash{survey_questions, workshop_surveys, facilitator_surveys}]
-    #   a hash contains questions and submissions
+    # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
+    # and Pd::WorkshopFacilitatorDailySurvey.
+    # @return [Hash{Symbol => Array}]
+    #   a hash with keys are symbols (:survey_questions, :workshop_submissions,
+    #   :facilitator_submissions) and values are arrays of questions and submissions
     def retrieve_data(logger: nil)
       logger&.info "RE: workshop_ids filter = #{workshop_ids}"
       logger&.info "RE: form_ids filter = #{form_ids}"
@@ -41,17 +43,16 @@ module Pd::SurveyPipeline
       form_ids_with_submissions =
         ws_submissions.pluck(:form_id).uniq | facilitator_submissions.pluck(:form_id).uniq
 
-      question_filter = {}
-      question_filter[:form_id] = form_ids_with_submissions if form_ids_with_submissions.present?
-      questions = Pd::SurveyQuestion.where(question_filter)
+      questions = form_ids_with_submissions.empty? ? []
+        : Pd::SurveyQuestion.where(form_id: form_ids_with_submissions)
 
       logger&.info "RE: questions.count = #{questions.count}"
       logger&.debug "RE: questions = #{questions&.inspect}"
 
       {
         survey_questions: questions,
-        workshop_surveys: ws_submissions,
-        facilitator_surveys: facilitator_submissions
+        workshop_submissions: ws_submissions,
+        facilitator_submissions: facilitator_submissions
       }
     end
   end
