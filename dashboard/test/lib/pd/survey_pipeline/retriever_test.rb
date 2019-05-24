@@ -34,9 +34,12 @@ module Pd::SurveyPipeline
       end
 
       # TODO: remove logger in test and real code
-      log_file = File.new("#{File.dirname(__FILE__)}/log_retriever.txt", 'w')
-      log_file.sync = true
-      @logger = Logger.new(log_file, level: Logger::DEBUG)
+      @logger = nil
+      if CDO.use_log_file_in_test
+        log_file = File.new("#{File.dirname(__FILE__)}/log_retriever.txt", 'w')
+        log_file.sync = true
+        @logger = Logger.new(log_file, level: Logger::DEBUG)
+      end
     end
 
     test 'can retrieve all data if no filter' do

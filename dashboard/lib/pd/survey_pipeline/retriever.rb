@@ -16,7 +16,8 @@ module Pd::SurveyPipeline
       @form_ids = form_ids
     end
 
-    # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey and Pd::WorkshopDailySurvey.
+    # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
+    # and Pd::WorkshopFacilitatorDailySurvey.
     # @return [Hash{survey_questions, workshop_surveys, facilitator_surveys}]
     #   a hash contains questions and submissions
     def retrieve_data(logger: nil)
