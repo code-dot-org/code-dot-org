@@ -470,16 +470,16 @@ class Documents < Sinatra::Base
 
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
-      # Now, apply the processing operations implied by each extension in order
-      # to the given file.
-      # IE, "foo.erb.md" will be processed as an ERB template, then the result
+      # Now, apply the processing operations implied by each extension to the
+      # given file, in an "outside-in" order
+      # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
       #
       # TODO elijah: Note that several extensions will perform ERB templating
       # in addition to their other operations. This functionality should be
       # removed, and the relevant templates should be renamed to "*.erb.*"
       result = body
-      extensions.each do |extension|
+      extensions.reverse.each do |extension|
         case extension
         when '.erb', '.html'
           result = erb result, options
