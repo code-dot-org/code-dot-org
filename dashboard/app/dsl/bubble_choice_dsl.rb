@@ -16,7 +16,7 @@ class BubbleChoiceDSL < BaseDSL
   def level(name)
     # Ensure level name hasn't already been used.
     if @hash[:sublevels].include?(name)
-      raise "Don't use the same level twice in a BubbleChoice (#{name})."
+      raise "Don't use the same level twice in a BubbleChoice: (#{name})."
     end
 
     # Ensure level exists.
