@@ -314,7 +314,15 @@ class TopInstructionsCSP extends Component {
 
     // adjust rendered height based on next collapsed state
     if (collapsed) {
-      this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
+      if (this.props.noInstructionsWhenCollapsed) {
+        this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
+      } else {
+        this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
+        //need to switch to this for CSF
+        //this.props.setInstructionsRenderedHeight(
+        //  this.getMinHeight(nextCollapsed)
+        //);
+      }
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
@@ -509,7 +517,9 @@ class TopInstructionsCSP extends Component {
                 )}
               {!this.props.noInstructionsWhenCollapsed &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
-                  <TopInstructionsCSF />
+                  <TopInstructionsCSF
+                    handleClickCollapser={this.handleClickCollapser}
+                  />
                 )}
               {!this.props.hasContainedLevels &&
                 this.props.noInstructionsWhenCollapsed &&
@@ -548,7 +558,7 @@ class TopInstructionsCSP extends Component {
                 token={this.state.token}
               />
             )}
-            {this.props.noInstructionsWhenCollapsed &&
+            {!this.props.noInstructionsWhenCollapsed &&
               this.props.viewAs === ViewType.Teacher &&
               this.props.teacherMarkdown &&
               this.state.tabSelected === TabType.TEACHER_ONLY && (
