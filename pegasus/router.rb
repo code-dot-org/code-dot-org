@@ -234,7 +234,7 @@ class Documents < Sinatra::Base
       transaction_name = transaction_name.sub(request.env[:splat_path_info], '') if request.env[:splat_path_info]
       NewRelic::Agent.set_transaction_name(transaction_name)
     end
-    not_found! if settings.not_found_extnames.include?(File.extname(path))
+    not_found! if MultipleExtnameFileUtils.file_has_any_extnames(path, settings.not_found_extnames)
     document path
   end
 
@@ -354,7 +354,7 @@ class Documents < Sinatra::Base
     end
 
     def resolve_static(subdir, uri)
-      return nil if settings.non_static_extnames.include?(File.extname(uri))
+      return nil if MultipleExtnameFileUtils.file_has_any_extnames(uri, settings.non_static_extnames)
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
@@ -396,7 +396,7 @@ class Documents < Sinatra::Base
           # Reduce file to URI.
           uri = file.
             sub(site_sub, '').
-            sub(/#{File.extname(file)}$/, '').
+            sub(/(#{MultipleExtnameFileUtils.all_extnames(file).join('|')})*$/, '').
             sub(/\/index$/, '')
 
           # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
