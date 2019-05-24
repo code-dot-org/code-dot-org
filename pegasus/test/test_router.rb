@@ -37,7 +37,7 @@ class RouterTest < Minitest::Test
       get('/erb_error_body')
     end
     file, line = err.backtrace.first.split(':')
-    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.erb.md')
+    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md')
     assert_equal 8, line.to_i
   end
 
