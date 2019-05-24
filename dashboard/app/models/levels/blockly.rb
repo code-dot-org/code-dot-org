@@ -45,7 +45,6 @@ class Blockly < Level
     ideal
     min_workspace_height
     step_speed
-    start_libraries
     slider_speed
     disable_param_editing
     disable_variable_editing
