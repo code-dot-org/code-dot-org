@@ -34,6 +34,33 @@ class Pd::WorkshopCertificateController < ApplicationController
   end
 
   def create_workshop_certificate_helper(workshop, facilitator_names)
+    course_name =
+      if workshop.csf?
+        [
+          {
+            string: workshop.course_name,
+            y: 780,
+            pointsize: 90,
+            height: 100,
+          },
+          {
+            string: workshop.friendly_subject,
+            y: 870,
+            pointsize: 80,
+            height: 90,
+          }
+        ]
+      else
+        [
+          {
+            string: workshop.course_name,
+            y: 800,
+            pointsize: 90,
+            height: 100,
+          }
+        ]
+      end
+
     facilitator_fields = facilitator_names.each_with_index.map do |name, i|
       {
         string: name,
@@ -57,12 +84,6 @@ class Pd::WorkshopCertificateController < ApplicationController
           y: 570,
         },
         {
-          string: workshop.course_name,
-          y: 800,
-          pointsize: 90,
-          height: 100,
-        },
-        {
           string: number_to_rounded(workshop.effective_num_hours, precision: 1, strip_insignificant_zeros: true),
           y: 975,
           x: 1065,
@@ -76,7 +97,7 @@ class Pd::WorkshopCertificateController < ApplicationController
           height: 50,
           pointsize: 45,
         }
-      ] + facilitator_fields
+      ] + course_name + facilitator_fields
     )
   end
 end
