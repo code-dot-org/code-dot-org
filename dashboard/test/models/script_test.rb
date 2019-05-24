@@ -1714,15 +1714,18 @@ endvariants
   end
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
-    assert Script.script_names_by_curriculum_umbrella('CSF').include?(@csf_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSF').include?(@csd_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSF').include?(@csp_script.name)
-    assert Script.script_names_by_curriculum_umbrella('CSD').include?(@csd_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSD').include?(@csf_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSD').include?(@csp_script.name)
-    assert Script.script_names_by_curriculum_umbrella('CSP').include?(@csp_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSP').include?(@csf_script.name)
-    refute Script.script_names_by_curriculum_umbrella('CSP').include?(@csd_script.name)
+    assert_equal(
+      [@csf_script.name],
+      Script.script_names_by_curriculum_umbrella('CSF')
+    )
+    assert_equal(
+      [@csd_script.name],
+      Script.script_names_by_curriculum_umbrella('CSD')
+    )
+    assert_equal(
+      [@csp_script.name],
+      Script.script_names_by_curriculum_umbrella('CSP')
+    )
   end
 
   private
