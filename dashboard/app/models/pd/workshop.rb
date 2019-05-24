@@ -587,10 +587,6 @@ class Pd::Workshop < ActiveRecord::Base
     course == COURSE_CSF
   end
 
-  def csf_201?
-    course == COURSE_CSF && subject == SUBJECT_CSF_201
-  end
-
   def funded_csf?
     course == COURSE_CSF && funded
   end
