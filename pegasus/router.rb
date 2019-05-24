@@ -102,7 +102,7 @@ class Documents < Sinatra::Base
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found', '.404']
     set :redirect_extnames, ['.redirect', '.moved', '.found', '.301', '.302']
-    set :template_extnames, ['.erb', '.haml', '.html', '.md', '.txt']
+    set :template_extnames, ['.erb', '.haml', '.html', '.md']
     set :non_static_extnames,
       settings.not_found_extnames +
       settings.redirect_extnames +
@@ -396,7 +396,7 @@ class Documents < Sinatra::Base
           # Reduce file to URI.
           uri = file.
             sub(site_sub, '').
-            sub(/(#{MultipleExtnameFileUtils.all_extnames(file).join('|')})*$/, '').
+            sub(/(#{settings.template_extnames.join('|')})*$/, '').
             sub(/\/index$/, '')
 
           # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
