@@ -3,6 +3,7 @@ require 'test_helper'
 class BubbleChoiceTest < ActiveSupport::TestCase
   setup_all do
     create :game, name: 'BubbleChoice'
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'create_from_level_builder creates level from DSL input' do
