@@ -388,7 +388,8 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: Applab.getLibraries()
     }));
   } else if (!config.channel) {
     throw new Error(
@@ -678,10 +679,19 @@ Applab.init = function(config) {
     });
   }
 
+  var librariesExist = level.libraries && level.libraries.length > 0;
+
+  // Temporarily, always use the levelbuilder-created libraries if they
+  // exist. Once 'Start Over' is implemented for libraries, allow
+  // student-created libraries. (Add check for !librariesExist)
+  if (level.startLibraries && level.startLibraries.length > 0) {
+    level.libraries = level.startLibraries;
+    librariesExist = true;
+  }
+
   // Libraries should be added to redux whether the experiment is enabled or
   // not. This prevents work from being lost if a levelbuilder toggles the
   // experiment flag.
-  var librariesExist = level.libraries && level.libraries.length > 0;
   if (librariesExist) {
     getStore().dispatch(setApplabLibraries(level.libraries));
   }
