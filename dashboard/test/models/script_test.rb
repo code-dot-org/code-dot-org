@@ -20,6 +20,10 @@ class ScriptTest < ActiveSupport::TestCase
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
 
+    @csf_script = create :csf_script, name: 'csf1'
+    @csd_script = create :csd_script, name: 'csd1'
+    @csp_script = create :csp_script, name: 'csp1'
+
     # ensure that we have freshly generated caches with this course/script
     Course.clear_cache
     Script.clear_cache
@@ -1707,6 +1711,21 @@ endvariants
     refute Script.has_any_pilot_access?(teacher)
     assert Script.has_any_pilot_access?(pilot_teacher)
     assert Script.has_any_pilot_access?(levelbuilder)
+  end
+
+  test "script_names_by_curriculum_umbrella returns the correct script names" do
+    assert_equal(
+      [@csf_script.name],
+      Script.script_names_by_curriculum_umbrella('CSF')
+    )
+    assert_equal(
+      [@csd_script.name],
+      Script.script_names_by_curriculum_umbrella('CSD')
+    )
+    assert_equal(
+      [@csp_script.name],
+      Script.script_names_by_curriculum_umbrella('CSP')
+    )
   end
 
   private
