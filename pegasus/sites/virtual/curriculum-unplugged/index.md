@@ -83,21 +83,25 @@ end
 Each of these activities can either be used alone or with other computer science lessons on related concepts.
 <br/>
 
+## 2019-20 CS Fundamentals Curriculum
+<a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview" target="_new">2019 Course A-F Curriculum Book</a>
 
+<a href="https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub" target="_new">Course A-F Supply List</a>
+
+<a href="https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA" target="_new">Course Amazon Lists</a>
+
+## Resources for older versions of CS Fundamentals
 <a href="https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf" target="_new">2018 Course A-F Curriculum Book</a>
 
 <a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">2017 Course A-F Curriculum Book (v2)</a>  
 
 <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a>
 
-<a href="https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub" target="_new">Course A-F Supply List</a>
-
-<a href="https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA" target="_new">Course Amazon Lists</a>
-
-
 <a href="https://code.org/curriculum/docs/k-5/flashCards.pdf" target="_new">CSF Flashcards</a>
 
 <!-- | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a> -->
+
+<br></br>
 
 
 <table cellpadding="10">
