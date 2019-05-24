@@ -457,6 +457,10 @@ module Pd::WorkshopSurveyResultsHelper
         histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
         histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
 
+        # Similar to above, clear the num_respondent entry that is alongside
+        # the answer entries.
+        histogram_for_all_my_workshops.except!("num_respondents") if histogram_for_all_my_workshops
+
         # Now that we have the histogram, the average is just the sum of option values
         # divided by the total number of responses for this particular question
         total_responses_for_this_workshop = histogram_for_this_workshop.values.reduce(:+) || 0

@@ -1,4 +1,5 @@
 has_lesson_plan true
+curriculum_umbrella 'CSF'
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation'
