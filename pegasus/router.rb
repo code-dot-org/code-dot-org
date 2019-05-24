@@ -417,21 +417,34 @@ class Documents < Sinatra::Base
     end
 
     def resolve_document(uri)
-      extnames = settings.non_static_extnames + [".#{request.locale}.md"]
+      # Find the template representing this URI using the following logic:
+      #
+      #   1. If a locale-specific template exists at the file indicated by the URI, return that
+      #   2. If a locale-specific template called "index" exists in the directory indicated by the URI, return that
+      #   3. If a default template exists at the file indicated by the URI, return that
+      #   4. If a default template called "index" exists in the directory indicated by the URI, return that
+      #   5. If a splat template exists anywhere in the directory structure indicated by the URI, return that
+      #   6. We could not find a template
 
-      path = resolve_template('public', extnames, uri, true)
-      return path if path
+      # Steps 1-4: Try to find the relevant template
+      paths = [
+        "#{uri}.#{request.locale}",
+        File.join(uri, "index.#{request.locale}"),
+        uri,
+        File.join(uri, "index")
+      ]
+      paths.each do |path|
+        template = resolve_template('public', settings.non_static_extnames, path, true)
+        return template if template
+      end
 
-      path = resolve_template('public', extnames, File.join(uri, 'index'), true)
-      return path if path
-
-      # Recursively resolve '/splat.[ext]' template from the given URI.
+      # Step 5: Recursively resolve '/splat.[ext]' template from the given URI.
       # env[:splat_path_info] contains the path_info following the splat template's folder.
       at = uri
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
         if path
           request.env[:splat_path_info] = uri[parent.length..-1]
           return path
@@ -440,6 +453,7 @@ class Documents < Sinatra::Base
         at = parent
       end
 
+      # Step 6: failure
       nil
     end
 
