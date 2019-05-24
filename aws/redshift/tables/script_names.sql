@@ -77,7 +77,6 @@ INSERT INTO analysis.script_names values
 (124	,	'csp3-2017'	,	'csp3'	,	'CSP Unit 3'),
 (318	,	'csp3-2018'	,	'csp3'	,	'CSP Unit 3'),
 (384	,	'csp3-2019'	,	'csp3'	,	'CSP Unit 3'),
-(266  ,	 'csp3-a'	  ,	'csp3'	,	'CSP Unit 3'),
 (262  ,	 'csp3-research-mxghyt'	,	'csp3'	,	'CSP Unit 3'),
 (125	,	'csp4-2017'	,	'csp4'	,	'CSP Unit 4'),
 (319	,	'csp4-2018'	,	'csp4'	,	'CSP Unit 4'),
