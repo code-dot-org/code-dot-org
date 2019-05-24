@@ -30,6 +30,25 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     end
   end
 
+  test 'Generates certificate for CSF 101 workshop' do
+    workshop = create :pd_workshop,
+      num_sessions: 1,
+      course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101
+    enrollment = create :pd_enrollment, workshop: workshop
+    mock_image = mock
+    @controller.expects(:create_workshop_certificate_helper).
+        with(workshop, []).
+        returns(mock_image)
+    mock_image.expects(:destroy!)
+    mock_image.expects(:to_blob)
+
+    get :generate_certificate, params: {
+      user: @user,
+      enrollment_code: enrollment.code
+    }
+  end
+
   test 'Generates certificate for regular CSD event' do
     enrollment = create :pd_enrollment, workshop: @workshop
     mock_image = mock
