@@ -1,9 +1,13 @@
 import React from 'react';
 import Radium from 'radium';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import * as color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
+import experiments from '@cdo/apps/util/experiments';
+import {hideShareDialog} from './shareDialogRedux';
+import {showLibraryShareDialog} from './libraryShareDialogRedux';
 
 const INSTRUCTIONS_LINK =
   'https://codeorg.zendesk.com/knowledge/articles/360004789872';
@@ -35,6 +39,12 @@ const style = {
     fontSize: 'inherit',
     lineHeight: 'inherit',
     color: 'inherit'
+  },
+  libraryName: {
+    fontSize: 'large',
+    lineHeight: 'inherit',
+    color: 'inherit',
+    fontWeight: 'bold'
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
@@ -90,6 +100,18 @@ const style = {
   },
   qrCode: {
     marginRight: 20
+  },
+  publishButton: {
+    marginLeft: 0,
+    backgroundColor: color.cyan,
+    color: color.white
+  },
+  closeButton: {
+    marginRight: 0,
+    backgroundColor: color.orange,
+    color: color.white,
+    position: 'absolute',
+    right: 0
   }
 };
 
@@ -105,7 +127,9 @@ class AdvancedShareOptions extends React.Component {
     embedOptions: PropTypes.shape({
       iframeHeight: PropTypes.number.isRequired,
       iframeWidth: PropTypes.number.isRequired
-    }).isRequired
+    }).isRequired,
+    openPublishLibraryDialog: PropTypes.func,
+    libraryName: PropTypes.string
   };
 
   constructor(props) {
@@ -255,6 +279,26 @@ class AdvancedShareOptions extends React.Component {
           />
           <span style={{marginLeft: 5}}>Hide ability to view code</span>
         </label>
+      </div>
+    );
+  }
+
+  renderLibraryTab() {
+    return (
+      <div>
+        <p style={style.p}>
+          Library links let you add libraries to other projects. You can add
+          libraries to your project by going to the Settings icon in your
+          Toolbox, and choosing "Manage Libraries."
+        </p>
+        <p style={style.libraryName}>Library name: {this.props.libraryName}</p>
+        <button
+          type="button"
+          onClick={this.props.openPublishLibraryDialog}
+          style={style.publishButton}
+        >
+          Publish
+        </button>
       </div>
     );
   }
@@ -491,6 +535,18 @@ class AdvancedShareOptions extends React.Component {
             {exportExpoTab}
             {exportTab}
             {embedTab}
+            {experiments.isEnabled('student-libraries') && (
+              <li
+                style={[
+                  style.nav.li,
+                  this.state.selectedOption === 'library' &&
+                    style.nav.selectedLi
+                ]}
+                onClick={() => this.setState({selectedOption: 'library'})}
+              >
+                Library
+              </li>
+            )}
           </ul>
         </div>
       );
@@ -503,6 +559,9 @@ class AdvancedShareOptions extends React.Component {
           break;
         case 'embed':
           selectedOption = this.renderEmbedTab();
+          break;
+        case 'library':
+          selectedOption = this.renderLibraryTab();
           break;
       }
     }
@@ -522,4 +581,15 @@ class AdvancedShareOptions extends React.Component {
   }
 }
 
-export default Radium(AdvancedShareOptions);
+export const UnconnectedAdvancedShareOptions = Radium(AdvancedShareOptions);
+export default connect(
+  state => ({
+    libraryName: state.libraryShareDialog.libraryName
+  }),
+  dispatch => ({
+    openPublishLibraryDialog() {
+      dispatch(showLibraryShareDialog());
+      dispatch(hideShareDialog());
+    }
+  })
+)(Radium(AdvancedShareOptions));

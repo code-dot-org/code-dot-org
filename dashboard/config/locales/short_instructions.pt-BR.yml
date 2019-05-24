@@ -1680,6 +1680,8 @@ pt-BR:
         x% são amantes de cão
       CSP Loops: Mude a condição "se" para uma repetição "enquanto" para que o programa
         execute até que role um 6. (Clique para ver as instruções completas)
+      CSP Pilot U5 Mini PT Project: Projete e implemente sua prática Criar tarefa
+        de desempenho. (Clique para ver instruções completas)
       CSP U4 - JSON Object Intro - Bad Way: Acione ambos os eventos do teclado e do
         mouse e examine os objetos de evento exibidos no console. Por que um objeto
         seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
@@ -6175,6 +6177,9 @@ pt-BR:
       Pixelation - AllTheThings 5: Este nível de pixelização demonstra o uso da opção
         "Deslize para Ocultar". Note que o comprimento e altura do controle de deslize
         não está disponível, e os campos de comprimento e altura não são editáveis.
+      Pixelation - Lesson 14 - Fix bit offset v.2: 'Algo aconteceu com os bits nesta
+        imagem! Encontre o erro e conserte-o! Dica: alguns bits extras foram adicionados.
+        Você só precisa remover alguns bits.'
       Pixelation - Lesson 14 - Fix bit offset: Um bit simples extra foi inserido na
         sequência de bits que criam o C da logo do Code.org. Este bit extra atrapalha
         todos os bits subsequentes que fazem a logo parecer bagunçada. Encontre o
@@ -6711,10 +6716,19 @@ pt-BR:
         adicione naves ao seu tabuleiro de papel para cada oponente. Ao jogar, toda
         a comunicação deve ser feita através da ferramenta, por isso nada de falar,
         mas divirta-se!
+      U2L3 NetSim Hub Mode: Use o simulador de Internet para testar o protocolo de
+        comunicação binário do seu grupo para encouraçado. Quão curto você pode fazer
+        a mensagem e resposta?
       U2L4 NetSim Routers Addresses: |-
         Para esta atividade, conecte-se a um roteador com os outros membros do seu grupo. Nota importante: O roteador só roteará corretamente as mensagens onde os 4 primeiros bits forem o endereço Para: e os 4 segundos bits forem o endereço De:.
 
         [TODO: O NetSim precisa suportar endereços hierárquicos. Por enquanto, o nível está configurado para 4 bits de endereços de e para]
+      U2L5 NetSim Classroom Internet: Para esta atividade, conecte-se a um roteador
+        com os outros membros do seu grupo. O Internet Simulator agora fornece um
+        local para você colocar os endereços Para e De, para que você não precise
+        digitar os bits manualmente.
+      U2L7 NetSim Need for Packets: Transfira seu favicon para um parceiro em uma
+        rede em que quanto maior o pacote, maior a probabilidade de ele ser descartado.
       U3 - Arrays - Demo App: Uso o app "Minhas coisas favoritas". Como pode este
         app estar fazendo uso de um vetor? (Clique para ver as instruções completas)
       U3 - Arrays - appendItem: Crie um vetor de números ímpares 1-11 usando appendItem.
@@ -6911,6 +6925,15 @@ pt-BR:
         as instruções completas)
       U3 - Keys - Multiple Keys: Toque um som diferente quando a seta para baixo for
         pressionada (Clique aqui para ver todas as instruções)
+      U3 - Keys - Practice Adding Images with URL: Adicione URLs de imagem ao seu
+        array de imagens. Teste o botão adicionar. Estilize seu scroller de imagem.
+        (Clique para ver instruções completas)
+      U3 - Keys - Words to Images: Adicione URLs de imagem ao seu array de imagens.
+        Teste o botão adicionar. Estilize seu scroller de imagem. (Clique para ver
+        instruções completas)
+      U3 - Loops -  9 Part 2: Altere a expressão booleana para o loop while para que
+        ele role até que ambos os dados sejam maiores que 3. (Clique para ver instruções
+        completas)
       U3 - Loops -  Complex Condition: Altere a expressão booleana para o laço while
         de forma que ele irá parar quando ambos dados forem maiores que ou iguais
         a 5. (Clique para ver as instruções completas)
@@ -6930,6 +6953,8 @@ pt-BR:
         completas)
       U3 - Loops - 15: Conte o número de vezes que a soma dos dados é 12. (Clique
         para ver as instruções completas)
+      U3 - Loops - 16: Descubra quantas vezes você tem que rolar para obter a soma
+        de 7 100 vezes (Clique para ver as instruções completas)
       U3 - Loops - 2: Tente criar um laço infinito usando !=, > e \<. (Clique para
         ver todas as instruções)
       U3 - Loops - 3: Mude a condição "se" para uma repetição "enquanto" para que
@@ -6948,6 +6973,8 @@ pt-BR:
         de gravação para exibir esse valor. (Clique para ver instruções completas)
       U3 - Loops - 9: " Modifique a condição para que ele continue rolando, desde
         que ambos sejam menores que 3. (Clique para ver as instruções completas)"
+      U3 - Loops - Continue: " Use os Comandos de Depuração para fazer uma lista de
+        todos os valores obtidos antes de um 6. (Clique para ver instruções completas)"
       U3 - Loops - Minus Minus: Altere o código para contar decrescentemente de 10
         para 1. (Clique para ver as instruções completas)
       U3 - Loops - Plus Plus: Altere o código para usar count++ em vez de count =
@@ -7032,6 +7059,12 @@ pt-BR:
         (Clique para ver todas as instruções)
       U3 - Read Record - 2: Mude o nome da tabela para que os registros sejam lidos
         da nova tabela. (Clique para ver todas as instruções)
+      U3 - Read Record - 3: Altere o nome da tabela em um comando readRecords para
+        ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U3 - Read Record - 4.1: Imprima cada retorno de registro da chamada readRecords
+        individualmente. (Clique para ver instruções completas)
+      U3 - Read Record - 4: Imprima cada retorno de registro da chamada readRecords
+        individualmente. (Clique para ver instruções completas)
       U3 - Read Record - 5 and half: Imprima o nome de cada filme nos registros retornados
         da chamada a readRecords. (Clique para ver todas as instruções)
       U3 - Read Record - 5: Imprima o nome de cada filme nos registros retornados
@@ -8024,6 +8057,14 @@ pt-BR:
         lerInformacoes. (Clique para ver instruções completas)
       U4 - Read Record - 1.2_2019: Coloque um comando console.log abaixo do comando
         lerInformacoes. (Clique para ver instruções completas)
+      U4 - Read Record - 3: Altere o nome da tabela em um comando readRecords para
+        ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 3_2018: Altere o nome da tabela em um comando readRecords
+        para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 3_2019: Altere o nome da tabela em um comando readRecords
+        para ler de uma tabela que não existe. (Clique para ver instruções completas)
+      U4 - Read Record - 4: Imprima cada retorno de registro da chamada readRecords
+        individualmente. (Clique para ver instruções completas)
       U4 - ReadRecords - Contacts App 2: Crie uma função chamada atualizaDadosLocais.
         (Clique para ver todas as instruções)
       U4 - ReadRecords - Contacts App 2_2018: Crie uma função chamada atualizaDadosLocais.
@@ -8116,34 +8157,8 @@ pt-BR:
         no alienígena?  '
       Virtual Pet 4: Adicione um comportamento ao seu sabonete para torná-lo arrastável
         e, em seguida, arraste-o para limpar a girafa!
-      Virtual Pet 4_2019: Adicione um comportamento ao seu sabonete para torná-lo
-        arrastável e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo
         arrastável e, em seguida, arraste-o para limpar a girafa!
-      Virtual Pet 6_2019: Defina a variável `felicidade` para 0 quando o programa
-        for iniciado. Quando o seu animal de estimação comer comida que gosta, altere
-        a `felicidade` em 1. Quando o seu animal de estimação comer comida que não
-        gosta, altere a `felicidade` em -1.
-      Virtual Pet 7_2019: |-
-        Imprima o nível de felicidade de seu animal cada vez que ele comer comida. Use este bloco, encontrado na categoria "World" da caixa de ferramentas:
-        <xml>
-        <block type="gamelab_printText" block-text="print text block">
-        <value name="TEXT">
-        <block type="text_join_simple" inputcount="2">
-        <value name="ADD0">
-        <block type="text">
-
-        <title name="TEXT">Meu nível de felicidade:</title>
-        </block>
-        </value>
-        <value name="ADD1">
-        <block type="variables_get">
-        <title name="VAR">felicidade</title>
-        </block>
-        </value>
-        </block>
-        </value>
-        </block></xml>
       Virtual Pet 8_2019: "**Jogo Livre:** O que mais você pode fazer seu animal de
         estimação fazer? Experimente o que quiser!"
       Virtual Pet Freeplay: 'Jogo livre: O que mais você pode fazer sua girafa fazer? '

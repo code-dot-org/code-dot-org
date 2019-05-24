@@ -567,10 +567,8 @@ bs:
     new: "Kreiraj novi"
     rename: "Preimenuj"
     save: "Snimi"
-    delete: "Izbriši"
     share_link_import_error_header: "Nešto je pošlo naopako."
     exit: "Povratak na Kurs"
-    my_projects: "Moji Projekti"
     project_gallery: "Projekti"
     publish: "Objavi"
     share: "Podijeli"
@@ -578,21 +576,13 @@ bs:
     share_copy_link: "Kopiraj link:"
     advanced_share: "Pokažite napredne opcije"
     no_projects: "Trenutno nemate projekata. Kliknite na jednu od tipki iznad da započnete projekat."
-    close: "Zatvori"
-    more: "Više"
     name: "Ime"
     updated: "Ažurirano"
     project_type: "Tip projekta"
     help_text: "Kliknite <strong>Napravi aplikaciju</strong> ili <strong>Nacrtaj nešto</strong> ispod da bi napravili novi Play Lab ili Artist projekat! <br/> Možete se vratiti i raditi na projektima u bilo koje vrijeme."
     need_help: "Treba vam pomoć kako započeti?"
-    really_delete: 'Izbrisati?'
-    delete_yes: 'Da'
-    delete_no: 'Ne'
     saved: "Spremljeno"
     not_saved: "Nije spremljeno"
-    cancel: 'Poništi'
-    delete_confirm_title: Jeste li sigurni da želite obrisati ovaj projekat?
-    delete_confirm_text: "Brisanje projekta trajno će ga ukloniti s popisa vaših projekata. Svako ko ima link na njega ga više neće moći vidjeti."
     view_all: 'Pregledaj Moje Projekte'
     remix: 'Remix'
     click_to_remix: "Klikni na \"Remix\" da bi otpočeo svoju verziju!"

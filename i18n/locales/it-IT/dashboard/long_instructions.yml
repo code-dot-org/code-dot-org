@@ -3667,19 +3667,19 @@ it:
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2018: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2019: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops8: |-
         Usa ciò che hai imparato nell'ultimo paio di esercizi per costruire dall'inizio quest'immagine.
 
@@ -3749,6 +3749,24 @@ it:
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Gli _ottagoni_ si realizzano con angoli di **45 gradi**.
         -   I _triangoli_ si realizzano con angoli di **120 gradi**.
+      courseD_artist_nestedLoops_challenge2: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
       courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti realizzare un poligono, come uno di questi:\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \n\nO anche una figura astratta, come una di queste:\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Ciao, sono Elsa di Arendelle. Aiutami a disegnare una forma."_
@@ -4688,9 +4706,9 @@ it:
       courseD_maze_ramp5a: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2018: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
       courseD_maze_ramp5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire come arrivare fino al maialino!
-      courseD_maze_ramp5b: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2018: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
-      courseD_maze_ramp5b_2019: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2018: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
+      courseD_maze_ramp5b_2019: "**Sfida:** Aiuta l'uccellino a trovare il maialino in questo labirinto!"
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2019: Aiuta l'uccellino a raggiungere il maialino.

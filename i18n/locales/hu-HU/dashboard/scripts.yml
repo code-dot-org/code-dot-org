@@ -1805,6 +1805,8 @@ hu:
               name: Internet
             Crowdsourcing:
               name: Csoportos megoldás
+            Dance Party:
+              name: Táncos buli
         csd1-2019:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
           stages:
@@ -1910,3 +1912,7 @@ hu:
           stages:
             Graph Paper Programming:
               name: Grafikus programozás
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Mi az a számítógép?

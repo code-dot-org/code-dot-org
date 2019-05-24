@@ -38,6 +38,7 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
+    start_libraries
     submittable
     log_conditions
     data_tables
@@ -49,7 +50,6 @@ class Applab < Blockly
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
-    teacher_markdown
     helper_libraries
   )
 

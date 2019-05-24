@@ -1477,6 +1477,11 @@ pt-BR:
             \tbackground(255,255,255);
             \tdrawSprites();
             }
+      CSD Problem Solving Process Video: |-
+        # Questões a considerar
+
+        -   Como você acompanhou o processo de solução de problemas na última aula?
+        -   Como você poderia usar este processo em um problema da sua vida cotidiana?
       CSD U1 - Image Filter Demo show Binary: |-
         # Oh Não
 
@@ -6989,6 +6994,25 @@ pt-BR:
         -   Dentro do `if` adicione duas declarações.
         -   Uma que define a propriedade `visible` para esconder a figura do balão.
         -   Uma que define a propriedade `visible` para mostrar a figura do estouro.
+      CSD U3 - conditionals - first conditional 2: |-
+        <img src = "https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" estilo = "largura: 200px; flutuação: direita">
+
+        # Visível
+
+        Agora que você tem condicionais e imagens, às vezes é útil ocultar a imagem por um tempo e, em seguida, mostrá-la novamente. Você pode fazer isso usando a propriedade `visible`. A propriedade visible é um pouco diferente de outras propriedades que você viu no passado: É um valor booleano, 'true' (o sprite é visível) ou 'false' (o sprite é **não** é visível). Por padrão, visible é definido como 'true'.
+
+        # Faça isso
+
+        Faça o balão estourar quando ele atinge a borda da área do jogo!
+
+        -   Adicione uma declaração `if` que verifica se o balão atingiu a borda.
+        -   Use um observador em 'balloon.scale\` para te ajudar.
+        -   Crie um sprite pop que use o visual "pop" na aba de animação.
+        -   Defina a propriedade `visible` do pop como`false` para iniciar.
+        -   Dentro do `if` adicione duas declarações.
+        -   Uma que define a propriedade `visible` para ocultar o sprite do balão.
+        -   Uma que define a propriedade `visible` para mostrar o sprite pop.
+             .
       CSD U3 - conditionals - first conditional 2_2018: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
 
@@ -7025,6 +7049,54 @@ pt-BR:
         -   Dentro do `if` adicione duas declarações.
         -   Uma que define a propriedade `visible` para esconder a figura do balão.
         -   Uma que define a propriedade `visible` para mostrar a figura do estouro.
+      CSD U3 - conditionals - first conditional: |-
+        <img src = "https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style = "flutuar: direito; largura: 100px">
+
+        # If Statement
+
+        As expressões booleanas que você usou anteriormente nos permitem fazer perguntas, mas para responder às perguntas, precisamos usar uma instrução if.
+
+        As instruções `if` normalmente entram no loop de desenho porque queremos verificá-las toda vez que o loop é executado.
+
+        # Faça isso
+
+        O programa de carros de corrida que você escreveu anteriormente é carregado aqui para você.
+
+        -   Adicione uma declaração `if` depois de atualizar a posição do carro de corrida.
+        -   Mova a expressão booleana da instrução console.log para a condição da instrução if.
+        -   Dentro da declaração `if` adicione uma instrução para desenhar texto na tela para dizer" Vencedor ".
+      CSD U3 - conditionals - first conditional_2018: |-
+        <img src = "https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style = "flutuar: direito; largura: 100px">
+
+        # If Statement
+
+        As expressões booleanas que você usou anteriormente nos permitem fazer perguntas, mas para responder às perguntas, precisamos usar uma instrução if.
+
+        As instruções `if` normalmente entram no loop de desenho porque queremos verificá-las toda vez que o loop é executado.
+
+        # Faça isso
+
+        O programa de carros de corrida que você escreveu anteriormente é carregado aqui para você.
+
+        -   Adicione uma declaração `if` depois de atualizar a posição do carro de corrida.
+        -   Mova a expressão booleana da instrução console.log para a condição da instrução if.
+        -   Dentro da declaração `if` adicione uma instrução para desenhar texto na tela para dizer" Vencedor ".
+      CSD U3 - conditionals - first conditional_2019: |-
+        <img src = "https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style = "flutuar: direito; largura: 100px">
+
+        # If Statement
+
+        As expressões booleanas que você usou anteriormente nos permitem fazer perguntas, mas para responder às perguntas, precisamos usar uma instrução if.
+
+        As instruções `if` normalmente entram no loop de desenho porque queremos verificá-las toda vez que o loop é executado.
+
+        # Faça isso
+
+        O programa de carros de corrida que você escreveu anteriormente é carregado aqui para você.
+
+        -   Adicione uma declaração `if` depois de atualizar a posição do carro de corrida.
+        -   Mova a expressão booleana da instrução console.log para a condição da instrução if.
+        -   Dentro da declaração `if` adicione uma instrução para desenhar texto na tela para dizer" Vencedor ".
       CSD U3 - conditionals - transition 2: |-
         # Mais prática com Booleanos
 
@@ -7117,6 +7189,25 @@ pt-BR:
 
         -   Adicionar uma chamada ao `setAnimation` para definir a animação para a imagem fornecida
         -   Corra para ver que o seu retângulo agora é uma imagem!
+      CSD U3 - images - first sprite with image: |-
+        # Imagens
+
+        Retângulos são ótimos, mas se você quiser fazer animações e jogos que fiquem realmente incríveis, você vai precisar de alguma forma para adicionar imagens interessantes às suas figuras.
+
+        Acima na **Aba de Animações** você vai ver três imagens que foram carregadas para você! Você pode acessar a aba de animações clicando no botão <img src="https://images.code.org/9471c62f11f3c6065c0d2da523f2ac89-image-1465515854142.43.49 PM.png" style="width:100px"> sobre a área de visualização.
+
+        <img src="https://images.code.org/f694a37bbadcf0533e7b19d8c0f5309b-image-1465580394090.35.11 PM.png" style="width:300px;float:right">
+
+        Uma vez que vc tenha criado a figura, você pode **usar o comando `setAnimation()` para alterar o formato de sua figura de um retângulo para uma imagem.** Os blocos tornam isto muito fácil de ser feito, já que os nomes de todas as imagens que você carregou na aba de animação são mostradas no menu suspenso do `setAnimation()`. O alien foi configurado para você como um exemplo.
+
+        # Faça Isto
+
+        Altere a figura de sua imagem favorita a partir da aba de animações.
+
+        -   Uma figura que está definida como uma imagem já foi criada para você.
+        -   Execute o código para ver como funciona.
+        -   Altere a entrada do comando `setAnimation` para mudar a aparência da figura.
+        -   Experimente com todas as imagens.
       CSD U3 - images - fish free play: |-
         # Peixe Jogue Livre
 
@@ -7213,6 +7304,24 @@ pt-BR:
         # Faça isso
 
         -   Redimensione seu kite usando `scale` para melhor encaixar na imagem.
+      CSD U3 - images - setAnimation: |-
+        # Carregue sua própria imagem
+
+        Você também pode usar a aba de Animação para carregar sua própria imagem.
+
+        # Faça Isto
+
+        Você vai criar uma pipa no ar. O primeiro passo é escolher uma pipa que você goste.
+
+        -   Encontre uma imagem de uma pipa que você queira usar. O ideal é que ela tenha um fundo claro.
+        -   Abra a aba de animação.
+        -   Clique <img src="https://images.code.org/346f6657dba57b0c3bd5deb534f76b69-image-1466194432449.13.05 PM.png" style="width:50px">
+        -   Clique <img src="https://images.code.org/60c0371b45b29f10a3c8530db9154428-image-1466194434329.13.16 PM.png" style="width:50px">
+        -   Selecione um arquivo do seu computador.
+        -   Renomeie sua imagem para que ela tenha um nome fácil de lembrar. Para renomeá-la clique o texto localizado abaixo da imagem. <img src="https://images.code.org/c7809f27743bcb4cd86e46a4493c5c7a-image-1466194516357.15.04 PM.png" style="width:60px">
+        -   Configure a figura da pipa para mostrar sua imagem.
+
+        Não se preocupe se sua imagem for muito grande! Você irá aprender como resolver isto no próximo nível.
       CSD U3 - images - switch the picture: |-
         # Troca de Imagens
 
@@ -7231,6 +7340,16 @@ pt-BR:
         # Faça isso
 
         -   Em resposta a algo, defina o sprite para visível e invisível.
+      CSD U3 - sprites - motiviation: |-
+        # Quantas Variáveis?
+
+        Na última sessão você aprendeu como usar o **padrão de contagem** (`x = x + 1`, `x = x - 0.5`, `x = x - 1`, etc.) para criar animações suaves. O uso deste padrão de diferentes maneiras sempre permite a você criar animações interessantes e complexas.
+
+        Veja esta animação. Com um parceiro, discuta:
+
+        -   Quantas variáveis de contagem você precisaria para criar esta animação? Para animar o que elas são usadas?
+        -   Que nomes você daria às suas variáveis?
+        -   Quais os desafios de usar variáveis de contagem em um cenário como este?
       CSD U3 AnimationsMulti Play Defender: |-
         # Defenda seu bolo!
 
@@ -7267,6 +7386,42 @@ pt-BR:
         -   Quantos sprites existem neste jogo. Quais são eles?
         -   Quais variáveis são necessárias para fazer este jogo? O que eles armazenam?
         -   Se você fosse dividir o código deste jogo em funções, o que você acha que elas seriam? Quais são os principais itens de comportamento que você precisa criar em seu código?
+      CSD U3 AnimationsMulti defender animate cake enemies: |-
+        # Iniciando: Definindo Animações
+
+        Você já deve ter revisado o guia de planejamento para este projeto. Grande parte do trabalho de tornar este guia de projeto em um jogo que funcione já começou. Com base no guia você irá fazer as atividades restantes.
+
+        # Faça Isto
+
+        Antes de começarmos você irá querer algumas animações melhores para cada uma das suas figuras.
+
+        -   Na Aba de Animação há animações para cada uma de suas figuras. Verifique quais são elas.
+        -   No seu código, defina para cada figura a animação apropriada. **Por enquanto utilize as animações fornecidas** mas adiante você poderá alterá-las.
+        -   Avance para [Level 4](/s/csd3/stage/20/puzzle/4) se você precisar de ajudar ao lembrar como se faz isto.
+      CSD U3 AnimationsMulti defender animate cake enemies_2018: |-
+        # Iniciando: Definindo Animações
+
+        Você já deve ter revisado o guia de planejamento para este projeto. Grande parte do trabalho de tornar este guia de projeto em um jogo que funcione já começou. Com base no guia você irá fazer as atividades restantes.
+
+        # Faça Isto
+
+        Antes de começarmos você irá querer algumas animações melhores para cada uma das suas figuras.
+
+        -   Na Aba de Animação há animações para cada uma de suas figuras. Verifique quais são elas.
+        -   No seu código, defina para cada figura a animação apropriada. **Por enquanto utilize as animações fornecidas** mas adiante você poderá alterá-las.
+        -   Avance para [Level 4](/s/csd3-2018/stage/20/puzzle/4) se você precisar de ajudar ao lembrar como se faz isto.
+      CSD U3 AnimationsMulti defender animate cake enemies_2019: |-
+        # Iniciando: Definindo Animações
+
+        Você já deve ter revisado o guia de planejamento para este projeto. Grande parte do trabalho de tornar este guia de projeto em um jogo que funcione já começou. Com base no guia você irá fazer as atividades restantes.
+
+        # Faça Isto
+
+        Antes de começarmos você irá querer algumas animações melhores para cada uma das suas figuras.
+
+        -   Na Aba de Animação há animações para cada uma de suas figuras. Verifique quais são elas.
+        -   No seu código, defina para cada figura a animação apropriada. **Por enquanto utilize as animações fornecidas** mas adiante você poderá alterá-las.
+        -   Avance para [Level 4](../../20/puzzle/4) se você precisar de ajudar ao lembrar como se faz isto.
       CSD U3 AnimationsMulti defender animate player: |-
         # Alterar animações do jogador
 
@@ -7300,6 +7455,351 @@ pt-BR:
         -   Inverta cada quadro da nova animação para que o sprite esteja voltado na direção oposta.
         -   Renomeie sua nova animação.
         -   Use o comando `definirAnimação` dentro da função`moverJogador` para que o jogador mude a direção que está voltada quando as setas "esquerda" e "direita" forem pressionadas.
+      CSD U3 AnimationsMulti defender create set enemies: |-
+        # Criando Funçôes
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Seu programa agora inclui código em dois locais para definir os inimigos no lado esquerdo da tela em posições y aleatórias. Você pode criar funções para reiniciar cada um dos seus dois inimigos, para remover as repetições do seu código. Isto irá facilitar a leitura do seu programa, permitir a você modificá-lo com mais facilidade, e permitir a você rapidamente reiniciar suas figuras em outros pontos no seu programa, se você precisar.
+
+        # Faça Isto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Ao final do seu programa crie duas novas funções: `setEnemy1` e `setEnemy2`.
+        -   Dentro de cada uma destas funções coloque o código que define os inimigos no lado esquerdo da tela, e fornece a eles uma posição aleatória y.
+        -   Em todos os lugares onde o código para `setEnemy1` e `setEnemy2` aparecer em seu programa, substitua-o por uma chamada às funções recêm criadas.
+      CSD U3 AnimationsMulti defender create set enemies_2018: |-
+        # Criando Funçôes
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Seu programa agora inclui código em dois locais para definir os inimigos no lado esquerdo da tela em posições y aleatórias. Você pode criar funções para reiniciar cada um dos seus dois inimigos, para remover as repetições do seu código. Isto irá facilitar a leitura do seu programa, permitir a você modificá-lo com mais facilidade, e permitir a você rapidamente reiniciar suas figuras em outros pontos no seu programa, se você precisar.
+
+        # Faça Isto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Ao final do seu programa crie duas novas funções: `setEnemy1` e `setEnemy2`.
+        -   Dentro de cada uma destas funções coloque o código que define os inimigos no lado esquerdo da tela, e fornece a eles uma posição aleatória y.
+        -   Em todos os lugares onde o código para `setEnemy1` e `setEnemy2` aparecer em seu programa, substitua-o por uma chamada às funções recêm criadas.
+      CSD U3 AnimationsMulti defender create set enemies_2019: |-
+        # Criando Funçôes
+
+        <img src="https://images.code.org/126982cbde9ae62e9a77ca1e53c92024-image-1476291567280.58.00 AM.png" style="float:right; height:90px">
+
+        Seu programa agora inclui código em dois locais para definir os inimigos no lado esquerdo da tela em posições y aleatórias. Você pode criar funções para reiniciar cada um dos seus dois inimigos, para remover as repetições do seu código. Isto irá facilitar a leitura do seu programa, permitir a você modificá-lo com mais facilidade, e permitir a você rapidamente reiniciar suas figuras em outros pontos no seu programa, se você precisar.
+
+        # Faça Isto
+
+        <img src="https://images.code.org/01a2f4d9725162482fda9f74734c992c-image-1476461412974.09.52 AM.png" style="
+        float:right; height:70px">
+
+        -   Ao final do seu programa crie duas novas funções: `setEnemy1` e `setEnemy2`.
+        -   Dentro de cada uma destas funções coloque o código que define os inimigos no lado esquerdo da tela, e fornece a eles uma posição aleatória y.
+        -   Em todos os lugares onde o código para `setEnemy1` e `setEnemy2` aparecer em seu programa, substitua-o por uma chamada às funções recêm criadas.
+      CSD U3 AnimationsMulti defender displace enemies: |-
+        # Desloque Inimigos
+
+        É hora de escrever código para mais algumas interações com figuras. A figura de seu jogador deve deslocar as figuras dos inimigos.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `displaceEnemies`.
+
+        -   Escreva código que faz o jogador deslocar as figuras dos dois inimigos.
+        -   Teste seu programa para ter certeza que seu jogador está deslocando inimigos, mas eles continuam a se mover para a direita quando o jogador se afasta.
+
+        _Dica: Você pode usar `sprite.debug` para ver os colisores de suas figuras se você precisar depurar seu programa._
+      CSD U3 AnimationsMulti defender displace enemies_2018: |-
+        # Desloque Inimigos
+
+        É hora de escrever código para mais algumas interações com figuras. A figura de seu jogador deve deslocar as figuras dos inimigos.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `displaceEnemies`.
+
+        -   Escreva código que faz o jogador deslocar as figuras dos dois inimigos.
+        -   Teste seu programa para ter certeza que seu jogador está deslocando inimigos, mas eles continuam a se mover para a direita quando o jogador se afasta.
+
+        _Dica: Você pode usar `sprite.debug` para ver os colisores de suas figuras se você precisar depurar seu programa._
+      CSD U3 AnimationsMulti defender displace enemies_2019: |-
+        # Desloque Inimigos
+
+        É hora de escrever código para mais algumas interações com figuras. A figura de seu jogador deve deslocar as figuras dos inimigos.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `displaceEnemies`.
+
+        -   Escreva código que faz o jogador deslocar as figuras dos dois inimigos.
+        -   Teste seu programa para ter certeza que seu jogador está deslocando inimigos, mas eles continuam a se mover para a direita quando o jogador se afasta.
+
+        _Dica: Você pode usar `sprite.debug` para ver os colisores de suas figuras se você precisar depurar seu programa._
+      CSD U3 AnimationsMulti defender enemies move: |-
+        # Movendo Os Inimigos
+
+        É hora de começar a escrever código que irá mover suas figuras. Para iniciar você irá precisar levar as figuras de seus inimigos a uma posição aleatória e movendo-se através da tela.
+
+        # Faça Isto
+
+        No início do seu programa, depois que você criou cada figura de um inimigo, escreva o código que irá movê-lo para a posição correta e dê-lhe a velocidade certa
+
+        -   Use `sprite.x` para definir a posição x para 0.
+        -   Use `sprite.y` para definir a posição y, que deve ser um número aleatório entre 150 e 250.
+        -   Use `sprite.velocityX` para definir a velocidade no eixo x para 2.
+
+        Teste seu programa.  As figuras de seus inimigos deverão agora estar se movendo sobre a ponte.
+      CSD U3 AnimationsMulti defender enemies move_2018: |-
+        # Movendo Os Inimigos
+
+        É hora de começar a escrever código que irá mover suas figuras. Para iniciar você irá precisar levar as figuras de seus inimigos a uma posição aleatória e movendo-se através da tela.
+
+        # Faça Isto
+
+        No início do seu programa, depois que você criou cada figura de um inimigo, escreva o código que irá movê-lo para a posição correta e dê-lhe a velocidade certa
+
+        -   Use `sprite.x` para definir a posição x para 0.
+        -   Use `sprite.y` para definir a posição y, que deve ser um número aleatório entre 150 e 250.
+        -   Use `sprite.velocityX` para definir a velocidade no eixo x para 2.
+
+        Teste seu programa.  As figuras de seus inimigos deverão agora estar se movendo sobre a ponte.
+      CSD U3 AnimationsMulti defender enemies move_2019: |-
+        # Movendo Os Inimigos
+
+        É hora de começar a escrever código que irá mover suas figuras. Para iniciar você irá precisar levar as figuras de seus inimigos a uma posição aleatória e movendo-se através da tela.
+
+        # Faça Isto
+
+        No início do seu programa, depois que você criou cada figura de um inimigo, escreva o código que irá movê-lo para a posição correta e dê-lhe a velocidade certa
+
+        -   Use `sprite.x` para definir a posição x para 0.
+        -   Use `sprite.y` para definir a posição y, que deve ser um número aleatório entre 150 e 250.
+        -   Use `sprite.velocityX` para definir a velocidade no eixo x para 2.
+
+        Teste seu programa.  As figuras de seus inimigos deverão agora estar se movendo sobre a ponte.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2: |-
+        # Tocando o Bolo: Segunda Joaninha
+
+        A figura de seu primeiro inimigo deve agora estar reiniciando quanto ela chega ao bolo. Agora você vai querer que a outra joaninha seja reiniciada também.
+
+        # Faça Isto
+
+        Dentro da função `enemiesTouchCake` você deve ter escrito código para reiniciar o `enemy1`.
+
+        -   Copie a declaração if completa que você escreveu no último nível (Ctrl-C)
+        -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
+        -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
+
+        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2_2018: |-
+        # Tocando o Bolo: Segunda Joaninha
+
+        A figura de seu primeiro inimigo deve agora estar reiniciando quanto ela chega ao bolo. Agora você vai querer que a outra joaninha seja reiniciada também.
+
+        # Faça Isto
+
+        Dentro da função `enemiesTouchCake` você deve ter escrito código para reiniciar o `enemy1`.
+
+        -   Copie a declaração if completa que você escreveu no último nível (Ctrl-C)
+        -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
+        -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
+
+        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+      CSD U3 AnimationsMulti defender enemies touch cake sprite2_2019: |-
+        # Tocando o Bolo: Segunda Joaninha
+
+        A figura de seu primeiro inimigo deve agora estar reiniciando quanto ela chega ao bolo. Agora você vai querer que a outra joaninha seja reiniciada também.
+
+        # Faça Isto
+
+        Dentro da função `enemiesTouchCake` você deve ter escrito código para reiniciar o `enemy1`.
+
+        -   Copie a declaração if completa que você escreveu no último nível (Ctrl-C)
+        -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
+        -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
+
+        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+      CSD U3 AnimationsMulti defender enemies touch cake: |-
+        # Tocando o Bolo
+
+        Se os inimigos atravessarem todo o caminho até o bolo, você deve levá-los de volta ao lado esquerdo da tela e diminuir a pontuação. Para começar você irá **escrever código para somente um dos seus inimigos**.
+
+        # Faça Isto
+
+        No interior da função `enemiesTouchCake` você terá que escrever código para verificar quando uma joaninha toca o bolo, reiniciar sua posição, e alterar a pontuação.
+
+        -   Use um `if` e `isTouching` para detectar se enemy1 encostou no bolo.
+        -   Dentro do seu bloco `if` coloque código que:
+        -   define a posição x do enemy1 de volta a 0.
+        -   define a posição y do enemy1 para um número aleatório entre 150 e 250.
+        -   usa um padrão de contagem para diminuir a pontuação em 2 unidades.
+
+        (_Dica: Você pode reutilizar algum código que você já escreveu antes_)
+
+        Teste seu código. Uma de suas joaninhas deverá agora reiniciar quanto atravessar em direção ao bolo, e a pontuação deverá diminuir em 2 pontos.
+      CSD U3 AnimationsMulti defender enemies touch cake_2018: |-
+        # Tocando o Bolo
+
+        Se os inimigos atravessarem todo o caminho até o bolo, você deve levá-los de volta ao lado esquerdo da tela e diminuir a pontuação. Para começar você irá **escrever código para somente um dos seus inimigos**.
+
+        # Faça Isto
+
+        No interior da função `enemiesTouchCake` você terá que escrever código para verificar quando uma joaninha toca o bolo, reiniciar sua posição, e alterar a pontuação.
+
+        -   Use um `if` e `isTouching` para detectar se enemy1 encostou no bolo.
+        -   Dentro do seu bloco `if` coloque código que:
+        -   define a posição x do enemy1 de volta a 0.
+        -   define a posição y do enemy1 para um número aleatório entre 150 e 250.
+        -   usa um padrão de contagem para diminuir a pontuação em 2 unidades.
+
+        (_Dica: Você pode reutilizar algum código que você já escreveu antes_)
+
+        Teste seu código. Uma de suas joaninhas deverá agora reiniciar quanto atravessar em direção ao bolo, e a pontuação deverá diminuir em 2 pontos.
+      CSD U3 AnimationsMulti defender enemies touch cake_2019: |-
+        # Tocando o Bolo
+
+        Se os inimigos atravessarem todo o caminho até o bolo, você deve levá-los de volta ao lado esquerdo da tela e diminuir a pontuação. Para começar você irá **escrever código para somente um dos seus inimigos**.
+
+        # Faça Isto
+
+        No interior da função `enemiesTouchCake` você terá que escrever código para verificar quando uma joaninha toca o bolo, reiniciar sua posição, e alterar a pontuação.
+
+        -   Use um `if` e `isTouching` para detectar se enemy1 encostou no bolo.
+        -   Dentro do seu bloco `if` coloque código que:
+        -   define a posição x do enemy1 de volta a 0.
+        -   define a posição y do enemy1 para um número aleatório entre 150 e 250.
+        -   usa um padrão de contagem para diminuir a pontuação em 2 unidades.
+
+        (_Dica: Você pode reutilizar algum código que você já escreveu antes_)
+
+        Teste seu código. Uma de suas joaninhas deverá agora reiniciar quanto atravessar em direção ao bolo, e a pontuação deverá diminuir em 2 pontos.
+      CSD U3 AnimationsMulti defender make it your own: |-
+        # Torne-o Seu
+
+        Você estudou um plano elaborado por outra pessoa para a criação de um jogo, então agora é hora de torná-lo seu. Quais funcionalidades ou desafios adicionais você gostaria de criar?
+
+        # Faça Isto
+
+        Escolha um dos desafios abaixo para adicionar ao jogo, ou invente algum desafio você mesmo.
+
+        -   Altere o visual do jogo para que seu jogador, inimigos, ou bolo, fiquem diferentes.
+        -   Termine o jogo quando os inimigos chegam ao bolo e mostre a pontuação. Para um desafio adicional termine o jogo somente quando 3 inimigos conseguirem atravessar.
+        -   Dê velocidades aleatórias para os inimigos.
+            \_ Crie um novo fundo que é exibido quando os jogadores atingem uma pontuação maior.
+      CSD U3 AnimationsMulti defender make it your own_2018: |-
+        # Torne-o Seu
+
+        Você estudou um plano elaborado por outra pessoa para a criação de um jogo, então agora é hora de torná-lo seu. Quais funcionalidades ou desafios adicionais você gostaria de criar?
+
+        # Faça Isto
+
+        Escolha um dos desafios abaixo para adicionar ao jogo, ou invente algum desafio você mesmo.
+
+        -   Altere o visual do jogo para que seu jogador, inimigos, ou bolo, fiquem diferentes.
+        -   Termine o jogo quando os inimigos chegam ao bolo e mostre a pontuação. Para um desafio adicional termine o jogo somente quando 3 inimigos conseguirem atravessar.
+        -   Dê velocidades aleatórias para os inimigos.
+            \_ Crie um novo fundo que é exibido quando os jogadores atingem uma pontuação maior.
+      CSD U3 AnimationsMulti defender make it your own_2019: |-
+        # Torne-o Seu
+
+        Você estudou um plano elaborado por outra pessoa para a criação de um jogo, então agora é hora de torná-lo seu. Quais funcionalidades ou desafios adicionais você gostaria de criar?
+
+        # Faça Isto
+
+        Escolha um dos desafios abaixo para adicionar ao jogo, ou invente algum desafio você mesmo.
+
+        -   Altere o visual do jogo para que seu jogador, inimigos, ou bolo, fiquem diferentes.
+        -   Termine o jogo quando os inimigos chegam ao bolo e mostre a pontuação. Para um desafio adicional termine o jogo somente quando 3 inimigos conseguirem atravessar.
+        -   Dê velocidades aleatórias para os inimigos.
+            \_ Crie um novo fundo que é exibido quando os jogadores atingem uma pontuação maior.
+      CSD U3 AnimationsMulti defender move player: |-
+        # Movendo à Esquerda e à Direita
+
+        Agora que as figuras de seu inimigo estão se movendo corretamente, é hora de escrever o código para movimentar seu jogador. Por enquanto você irá somente fazer seu personagem se mover à esquerda e à direita, trocando as animações.
+
+        # Faça Isto
+
+        Para este nível você irá escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quanto a seta à direita é pressionada.
+        -   Use `sprite.x` e o padrão de contagem para incrementar a posição x do jogador em 3 unidades.
+        -   Use um outro bloco `if` para mover o jogador à esquerda quando a seta à esquerda for pressionada. Desta vez você terá que decrementar a posição x do jogador.
+
+        Teste seu jogo. A figura de seu personagem deverá agora se mover à esquerda e à direita quando você pressionar as setas à esquerda e à direita.
+      CSD U3 AnimationsMulti defender move player_2018: |-
+        # Movendo à Esquerda e à Direita
+
+        Agora que as figuras de seu inimigo estão se movendo corretamente, é hora de escrever o código para movimentar seu jogador. Por enquanto você irá somente fazer seu personagem se mover à esquerda e à direita, trocando as animações.
+
+        # Faça Isto
+
+        Para este nível você irá escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quanto a seta à direita é pressionada.
+        -   Use `sprite.x` e o padrão de contagem para incrementar a posição x do jogador em 3 unidades.
+        -   Use um outro bloco `if` para mover o jogador à esquerda quando a seta à esquerda for pressionada. Desta vez você terá que decrementar a posição x do jogador.
+
+        Teste seu jogo. A figura de seu personagem deverá agora se mover à esquerda e à direita quando você pressionar as setas à esquerda e à direita.
+      CSD U3 AnimationsMulti defender move player_2019: |-
+        # Movendo à Esquerda e à Direita
+
+        Agora que as figuras de seu inimigo estão se movendo corretamente, é hora de escrever o código para movimentar seu jogador. Por enquanto você irá somente fazer seu personagem se mover à esquerda e à direita, trocando as animações.
+
+        # Faça Isto
+
+        Para este nível você irá escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quanto a seta à direita é pressionada.
+        -   Use `sprite.x` e o padrão de contagem para incrementar a posição x do jogador em 3 unidades.
+        -   Use um outro bloco `if` para mover o jogador à esquerda quando a seta à esquerda for pressionada. Desta vez você terá que decrementar a posição x do jogador.
+
+        Teste seu jogo. A figura de seu personagem deverá agora se mover à esquerda e à direita quando você pressionar as setas à esquerda e à direita.
+      CSD U3 AnimationsMulti defender move up down: |-
+        # Movendo para Cima e para Baixo
+
+        Você vai querer que a figura do seu jogador se mova para cima e para baixo também.
+
+        # Faça Isto
+
+        Neste nível você ainda vai escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quando a seta para cima estiver pressionada.
+        -   Use `sprite.y` para incrementar a posição y do jogador em 3 unidades usando o padrão de contagem.
+        -   Use um outro bloco `if` para mover o jogador para baixo quando a seta para baixo estiver pressionada.
+
+        Teste seu código. Seu personagem deverá agora se mover em todas as 4 direções.
+      CSD U3 AnimationsMulti defender move up down_2018: |-
+        # Movendo para Cima e para Baixo
+
+        Você vai querer que a figura do seu jogador também se mova para cima e para baixo.
+
+        # Faça Isto
+
+        Neste nível você ainda vai escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quando a seta para cima estiver pressionada.
+        -   Use `sprite.y` para incrementar a posição y do jogador em 3 unidades usando o padrão de contagem.
+        -   Use um outro bloco `if` para mover o jogador para baixo quando a seta para baixo estiver pressionada.
+
+        Teste seu código. Seu personagem deverá agora se mover em todas as 4 direções.
+      CSD U3 AnimationsMulti defender move up down_2019: |-
+        # Movendo para Cima e para Baixo
+
+        Você vai querer que a figura do seu jogador também se mova para cima e para baixo.
+
+        # Faça Isto
+
+        Neste nível você ainda vai escrever código dentro da função `movePlayer`.
+
+        -   Use um bloco `if` juntamente com `keyDown` para detectar quando a seta para cima estiver pressionada.
+        -   Use `sprite.y` para incrementar a posição y do jogador em 3 unidades usando o padrão de contagem.
+        -   Use um outro bloco `if` para mover o jogador para baixo quando a seta para baixo estiver pressionada.
+
+        Teste seu código. Seu personagem deverá agora se mover em todas as 4 direções.
       CSD U3 AnimationsMulti defender template: |-
         # Reproduzir e pausar
 
@@ -7324,6 +7824,57 @@ pt-BR:
         # Faça isso
 
         -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti defender touch water: |-
+        # Tocando a Água
+
+        A última parte do jogo que você vai precisar escrever é o código para reiniciar as figuras quando elas tocam na água. Por sorte você já deve ter escrito funções que reiniciam cada figura, então você somente irá precisar de uma boa maneira de saber quando cada figura deixa a ponte. Comece escrevendo o código para um único inimigo, e depois copie e cole e faça alterações pequenas para criar o código de seu segundo inimigo.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `enemiesTouchWater`.
+
+        -   Use uma declaração `if` para verificar se enemy1 já passou do topo da ponte, checando se seu valor y é inferior a 140. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar sua figura.
+        -   Acrescente 1 à pontuação.
+        -   Use uma declaração `if` para verificar se o enemy1 passou da parte inferior da ponte checando se seu valor y é maior que 260. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar a figura.
+        -   Acrescente 1 à pontuação.
+        -   Teste seu programa para a figura de seu primeiro inimigo. Tenha certeza que a figura está reiniciando e que a pontuação aumenta.
+        -   Quando estiver funcionando copie e cole o código que você escreveu para obter o mesmo comportamento para `enemy2`. Você terá que trocar o nome da figura e o nome das funções que você usa.
+      CSD U3 AnimationsMulti defender touch water_2018: |-
+        # Tocando a Água
+
+        A última parte do jogo que você vai precisar escrever é o código para reiniciar as figuras quando elas tocam na água. Por sorte você já deve ter escrito funções que reiniciam cada figura, então você somente irá precisar de uma boa maneira de saber quando cada figura deixa a ponte. Comece escrevendo o código para um único inimigo, e depois copie e cole e faça alterações pequenas para criar o código de seu segundo inimigo.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `enemiesTouchWater`.
+
+        -   Use uma declaração `if` para verificar se enemy1 já passou do topo da ponte, checando se seu valor y é inferior a 140. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar sua figura.
+        -   Acrescente 1 à pontuação.
+        -   Use uma declaração `if` para verificar se o enemy1 passou da parte inferior da ponte checando se seu valor y é maior que 260. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar a figura.
+        -   Acrescente 1 à pontuação.
+        -   Teste seu programa para a figura de seu primeiro inimigo. Tenha certeza que a figura está reiniciando e que a pontuação aumenta.
+        -   Quando estiver funcionando copie e cole o código que você escreveu para obter o mesmo comportamento para `enemy2`. Você terá que trocar o nome da figura e o nome das funções que você usa.
+      CSD U3 AnimationsMulti defender touch water_2019: |-
+        # Tocando a Água
+
+        A última parte do jogo que você vai precisar escrever é o código para reiniciar as figuras quando elas tocam na água. Por sorte você já deve ter escrito funções que reiniciam cada figura, então você somente irá precisar de uma boa maneira de saber quando cada figura deixa a ponte. Comece escrevendo o código para um único inimigo, e depois copie e cole e faça alterações pequenas para criar o código de seu segundo inimigo.
+
+        # Faça Isto
+
+        Neste nível você irá escrever código dentro da função `enemiesTouchWater`.
+
+        -   Use uma declaração `if` para verificar se enemy1 já passou do topo da ponte, checando se seu valor y é inferior a 140. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar sua figura.
+        -   Acrescente 1 à pontuação.
+        -   Use uma declaração `if` para verificar se o enemy1 passou da parte inferior da ponte checando se seu valor y é maior que 260. Dentro de sua declaração `if`:
+        -   Use sua função `setEnemy1` para reiniciar a figura.
+        -   Acrescente 1 à pontuação.
+        -   Teste seu programa para a figura de seu primeiro inimigo. Tenha certeza que a figura está reiniciando e que a pontuação aumenta.
+        -   Quando estiver funcionando copie e cole o código que você escreveu para obter o mesmo comportamento para `enemy2`. Você terá que trocar o nome da figura e o nome das funções que você usa.
       CSD U3 AnimationsMulti introducing multiframe template: |-
         # Usando animações em vários quadros
 
@@ -7354,6 +7905,57 @@ pt-BR:
         Este programa já inclui vários sprites, mas eles ainda não possuem animações.
 
         -   Vá para a aba Animação e confira as animações multi-frame já adicionadas ao seu projeto. Escolha um para cada um dos seus personagens.
+      CSD U3 AnimationsMulti introducing multiframe: "# Usando Animações de Quadros Múltiplos\n\nNo jogo de exemplo defender as próprias figuras eram animadas. Antes de começar a programar este jogo, dedique um minuto para se familiarizar com esta nova maneira de animar figuras.\n\n# Faça Isto\n\nEste programa já inclui várias figuras, mas elas ainda não possuem qualquer animação. \n\n-   Vá para a Aba de Animações e observe as animações de quadros múltiplos que já foram adicionadas ao seu projeto. Escolha uma para cada um dos seus personagens.\n-   Lembre-se que você pode usar `setAnimation` para dar às suas figuras as animações que foram criadas na Aba de Animações."
+      CSD U3 AnimationsMulti introducing multiframe_2018: "# Usando Animações de Quadros Múltiplos\n\nNo jogo de exemplo defender as próprias figuras eram animadas. Antes de começar a programar este jogo, dedique um minuto para se familiarizar com esta nova maneira de animar figuras.\n\n# Faça Isto\n\nEste programa já inclui várias figuras, mas elas ainda não possuem qualquer animação. \n\n-   Vá para a Aba de Animações e observe as animações de quadros múltiplos que já foram adicionadas ao seu projeto. Escolha uma para cada um dos seus personagens.\n-   Lembre-se que você pode usar `setAnimation` para dar às suas figuras as animações que foram criadas na Aba de Animações."
+      CSD U3 AnimationsMulti introducing multiframe_2019: "# Usando Animações de Quadros Múltiplos\n\nNo jogo de exemplo defender as próprias figuras eram animadas. Antes de começar a programar este jogo, dedique um minuto para se familiarizar com esta nova maneira de animar figuras.\n\n# Faça Isto\n\nEste programa já inclui várias figuras, mas elas ainda não possuem qualquer animação. \n\n-   Vá para a Aba de Animações e observe as animações de quadros múltiplos que já foram adicionadas ao seu projeto. Escolha uma para cada um dos seus personagens.\n-   Lembre-se que você pode usar `setAnimation` para dar às suas figuras as animações que foram criadas na Aba de Animações."
+      CSD U3 AnimationsMulti mirror animation: |-
+        # Editando Animações de Quadros Múltiplos
+
+        Suas figuras vão parecer muito mais reais se elas se viram enquanto estão se movendo. Você pode trocar animações quando o usuário pressiona teclas diferentes.
+
+        # Faça Isto
+
+        Leia este código e rode o programa. Tenha certeza que você entende como a figura responde às teclas de setas.
+
+        -   Na Aba de Animação, crie uma cópia da animação do alien, clicando este botão: ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09 PM.png>)
+        -   Use a ferramenta para espelhar sua animação. Tenha certeza que ambos os quadros foram espelhados usando este botão: ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03 PM.png>)
+        -   Renomeie sua nova animação.
+        -   Use sua nova animação e sua animação antiga, para que o alien se vire para a direção correta enquanto estiver ser movendo. Quando você acha que irá precisar definir a animação da figura no seu código?
+      CSD U3 AnimationsMulti mirror animation_2018: |-
+        # Editando Animações de Quadros Múltiplos
+
+        Suas figuras vão parecer muito mais reais se elas se viram enquanto estão se movendo. Você pode trocar animações quando o usuário pressiona teclas diferentes.
+
+        # Faça Isto
+
+        Leia este código e rode o programa. Tenha certeza que você entende como a figura responde às teclas de setas.
+
+        -   Na Aba de Animação, crie uma cópia da animação do alien, clicando este botão: ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09 PM.png>)
+        -   Use a ferramenta para espelhar sua animação. Tenha certeza que ambos os quadros foram espelhados usando este botão: ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03 PM.png>)
+        -   Renomeie sua nova animação.
+        -   Use sua nova animação e sua animação antiga, para que o alien se vire para a direção correta enquanto estiver ser movendo. Quando você acha que irá precisar definir a animação da figura no seu código?
+      CSD U3 AnimationsMulti mirror animation_2019: |-
+        # Editando Animações de Quadros Múltiplos
+
+        Suas figuras vão parecer muito mais reais se elas se viram enquanto estão se movendo. Você pode trocar animações quando o usuário pressiona teclas diferentes.
+
+        # Faça Isto
+
+        Leia este código e rode o programa. Tenha certeza que você entende como a figura responde às teclas de setas.
+
+        -   Na Aba de Animação, crie uma cópia da animação do alien, clicando este botão: ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09 PM.png>)
+        -   Use a ferramenta para espelhar sua animação. Tenha certeza que ambos os quadros foram espelhados usando este botão: ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03 PM.png>)
+        -   Renomeie sua nova animação.
+        -   Use sua nova animação e sua animação antiga, para que o alien se vire para a direção correta enquanto estiver ser movendo. Quando você acha que irá precisar definir a animação da figura no seu código?
+      CSD U3 AnimationsMulti no loop: |-
+        # Evitando Animações Contínuas
+
+        Por padrão suas animações são executadas em ciclos contínuos. Você pode fazer com que sua animação seja executada somente uma vez, clicando no botão localizado abaixo dela.
+
+        # Faça Isto
+
+        -   Defina ambas as animações do seu projeto para executarem uma única vez.
+        -   Rode o programa e confime que sua figura mostre apenas 1 passo quando ela muda de direção
       CSD U3 AnimationsMulti play pause: |-
         # Reproduzir e pausar
 
@@ -7362,6 +7964,29 @@ pt-BR:
         # Faça isso
 
         -   Use o comando `sprite.reproduzir` após cada um dos seus comandos`definirAnimação`. Isso reiniciará as animações de caminhada, desde que as teclas sejam pressionadas.
+      CSD U3 AnimationsMulti slow down: "# Desacelerando\n\nBom trabalho! Hora de aprender como controlar essas animações multiframe. \n\n# Para Fazer Isso\n\nSuas imagens devem ser animadas, mas elas devem mover muito devagar.\n\n-   Volte para a Aba de Animação. Ao invés de cada animação, você deve ver um slide.\n-   Use esses slides para desacelerar suas animações para que elas pareçam mais realistas."
+      CSD U3 AnimationsMulti slow down_2018: "# Desacelerando\n\nBom trabalho! Hora de aprender como controlar essas animações multiframe. \n\n# Para Fazer Isso\n\nSuas imagens devem ser animadas, mas elas devem mover muito devagar.\n\n-   Volte para a Aba de Animação. Ao invés de cada animação, você deve ver um slide.\n-   Use esses slides para desacelerar suas animações para que elas pareçam mais realistas."
+      CSD U3 AnimationsMulti slow down_2019: "# Desacelerando\n\nBom trabalho! Hora de aprender como controlar essas animações multiframe. \n\n# Para Fazer Isso\n\nSuas imagens devem ser animadas, mas elas devem mover muito devagar.\n\n-   Volte para a Aba de Animação. Ao invés de cada animação, você deve ver um slide.\n-   Use esses slides para desacelerar suas animações para que elas pareçam mais realistas."
+      CSD U3 Background Discuss: |-
+        <i class="fa fa-hand-paper-o" aria-hidden="true" style="color:red; float: right; font-size: 200px; font-weight: 800;"></i>
+
+        # Animação
+
+        Usando o ciclo de desenho abre a possibilidade para criação de animações maravilhosas, mas cria algumas complicações já que a cada vez que o ciclo é executado ele somente desenha por cima do desenho anterior. E se nós pudéssemos fazer este comportamento ficar parecido com uma animação de orelhas de cadernos?
+
+        # Faça Isto em Grupo
+
+        -   **Rode** o programa fornecido em grupo
+        -   **Crie hipóteses** de como funciona o ciclo de desenho
+        -   **Dê ideias** de como poderia ser feito para que somente o retângulo mais recente fosse visível?
+      CSD U3 Background Experiment: |-
+        # Pano de Fundo
+
+        Nós poderíamos desenhar um quadrado branco com 400 pixels a cada vez que é executado o ciclo `draw()`, mas na realidade existe um comando interno que funciona ainda melhor. O bloco `background()` requer somente uma entrada, que é a cor do fundo, e preenche toda a tela com esta cor. O interessante de usar `background()` ao invés de `rect()` é que ele vai preencher a área qualquer que seja seu tamanho, fazendo que seu código seja mais flexível e possa ser utilizado em mais cenários (tipo quando você ganhar um novo celular com uma tela maior).
+
+        # Faça Isto
+
+        Coloque o bloco `background()` dentro do ciclo `draw()` antes que quaisquer outras formas sejam desenhadas. Escolha uma cor de fundo de sua preferência, e depois teste seu código para ter certeza que somente um único retângulo é mostrado por vez.
       CSD U3 Complex Movement counter prediction: |-
         # Velocidade e o padrão de contador
 
@@ -7699,6 +8324,52 @@ pt-BR:
         # Faça isso
 
         Usando o manipulador de eventos fornecido, escreva um programa que acione a campainha e atualize "valor\_temporário" sempre que a leitura do sensor de temperatura mudar. Coloque o polegar sobre o sensor de temperatura para que ele mude e veja como o seu programa responde.
+      CSD-Arrays: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      'CSD: Animating Sprite Movement_2019': |-
+        ## Perguntas a considerar
+
+        -   Qual é o padrão do contador?
+        -   Como o padrão de contador move os sprites pela tela?
+      'CSD: Animation Tab_2019': |-
+        ## Perguntas a considerar
+
+        -   Quais são as etapas para adicionar uma imagem a um sprite?
+        -   Quais são as diferentes maneiras de obter uma imagem?
       'CSD: Boolean Expressions': "# Video de Expressões Booleanas"
       CSDU2 - First-Weblab: |-
         # Adicionando conteúdo
@@ -7779,6 +8450,50 @@ pt-BR:
         # Faça Isto
 
         -   Faça seu cabeçalho "Animais" se destacar usando o elemento cabeçalho `<h1>`.
+      CSDU2 - Link and Nav: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+
+        **O que são hyperlinks?**
+
+        </summary>
+        Os hiperlinks podem se conectar a páginas web locais ou a páginas web externas. Para adicionar navegação ao seu site, você precisará adicionar hiperlinks que conectem suas páginas da web individualmente. Você pode ** adicionar hiperlinks à sua página da web usando o elemento `<a>` **. O texto que você deseja exibir como o hiperlink fica entre as tags de hiperlink de abertura e fechamento. O elemento `<a>` tem um atributo `href`, que é onde o link para a página é adicionado. A localização de uma página local é apenas o caminho do arquivo para essa página. <br> <br>
+        Por exemplo, para criar um link para a página de casas exclusivas, você adicionaria o seguinte código dentro do seu elemento `<body>`. <br> <br>
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary>
+
+        **Como eu adiciono um hyperlink?**
+
+        </summary>
+
+        Você pode \*\* adicionar hiperlinks à sua página da web usando o elemento `<a>` \*\*. O texto que você deseja exibir como o hiperlink fica entre as tags de hiperlink de abertura e fechamento. O elemento `<a>` tem um atributo `href`, que é onde o link para a página é adicionado. A localização de uma página local é apenas o caminho do arquivo para essa página. <br> <br>
+
+        Por exemplo, para criar um link para a página de casas exclusivas, você adicionaria o seguinte código dentro do seu elemento `<body>`. <br> <br>
+
+        <pre>
+        &lt;a href=”houses.html”&gt; Casas Exclusivas &lt;/a&gt;
+        </pre>
+
+        </details>
+        </div>
+
+        # Elemento de Hiperlink
+
+        -   No arquivo index.html, encontre a linha de código que diz `<a href="houses.html"> Casas ímpares </a>`. Este é um link que o levará para a página Casas ímpares em `houses.html`.
+        -   Discuta com um parceiro como o código funciona.
+        -   Para onde vai o nome do arquivo?
+        -   Para onde vai o rótulo do link?
+        -   Abaixo do hyperlink para a página Casas Ímpares, adicione dois novos hyperlinks (`<a>`) para as seguintes páginas:
+        -   Página de Sinais Loucos
+        -   Livro Guinness da Página dos Recordes Mundiais
+        -   Teste para ver se o clique nos links leva você para as outras páginas do seu site.
       CSDU2 - Local Images: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -7840,6 +8555,10 @@ pt-BR:
         Copiando seus hiperlinks para todas as suas páginas permitiu que você chegasse à maioria das páginas em seu site de qualquer outra página. Um hiperlink está faltando - o único para levá-lo à sua página inicial (index.html).
 
         **Adicione um hiperlink à sua página inicial a partir de todas as páginas, até mesmo da sua página inicial.** Adicionando isto à sua página inicial manterá seu cabeçalho de navegação consistente em todas as páginas.
+      CSDU4 - Design Mode - 22: 'Um novo comando na caixa de ferramentas: `reproduzirsom`! Leia a documentação sobre como adicionar sons.'
+      CSDU4 - Design Mode - 7: |-
+        \*\* Erros Lógicos: \*\* Às vezes, você pode escrever um programa que não gera erros, mas não funciona como você gostaria. Este é o resultado de \*\* erros lógicos \*\* em seu código. Estes podem ser difíceis de entender sem saber o que seu programa deve fazer, e geralmente só são encontrados com testes cuidadosos da funcionalidade do seu aplicativo.
+        <img src="https://images.code.org/b5d00d8027dae463eebb7f1c079cb2e2-image-1444156708725.gif" style="float: right; width: 150px">
       CSDU6L06 - lists and colorLeds - set color: |-
         # Adicionando alguma cor
 
@@ -7892,6 +8611,16 @@ pt-BR:
         Excelente, vamos fazer mais um exemplo antes de escrever
         a função - qual deve ser a altura do foguete após 30 segundos?
       CoureE_HOC 2018 Level_7a: Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (<https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png>).
+      Course 4 Artist 1: |-
+        Me ajude a desenhar uma caixa.
+        (Cada linha tem 200 pixels de comprimento)
+
+        <br/> <br/>
+      Course 4 Artist 11: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nAgora, por um desafio!\n\nAqui está um design que usa apenas blocos que já foram mostrados a você. Você consegue descobrir como recriá-lo? Sinta-se à vontade para usar tentativa e erro. Não é esperado que você faça perfeitamente na primeira vez.\n\nA forma repetida é quase idêntica àquela do último quebra-cabeça, exceto que o comprimento usado no primeiro loop é um pouco menor. "
+      Course 4 Artist 12: |-
+        <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png" width="250px"/>
+
+        Inspiração para Atividade Livre: Agora você aprendeu tudo o que precisa saber para criar um padrão como esse! Se esta imagem te inspira, tente fazer algo parecido. Caso contrário, crie algo próprio.
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!
@@ -7969,6 +8698,8 @@ pt-BR:
       Course 4 Playlab For Loops 5b: |-
         Ajuste o intervalo nestes laços "para"
         para que os dois personagens terminem exatamente no mesmo lugar.
+      Course 4 SCF 1b: "\\*\\* Super Desafio das Funções: \\*\\* Você consegue descobrir como coletar todo esse mel com o menor número possível de blocos?"
+      Course 4 SCF 2: "\\*\\* Super Desafio das Funções: \\*\\* Use o que você aprendeu no nível anterior para desenhar uma imagem como essa.\n\n_Nota: O código se torna mais simples se você incorporar parâmetros._  "
       Course 4 SCFP 1: |-
         Crie uma função com parâmetros que permitem
         ao artista saltar para trás e para frente por x pixels, e também para cima e para baixo
@@ -7977,6 +8708,7 @@ pt-BR:
         Crie uma função com parâmetros que permitem
         ao artista saltar para trás e para frente por x pixels, e também para cima e para baixo
         por y pixels (usando números positivos e negativos).
+      Course 4 Variables Assessment: Você pode criar essa imagem usando uma variável para "lados"? Cada linha deve ter 50 pixels de comprimento.
       CourseD_Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -8053,6 +8785,12 @@ pt-BR:
       CourseE_HOC 2018 Level_7a: Você encontrou as ruínas subaquáticas. No arenito, procure um **baú** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contém tesouro de **prismarinho** (<https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png>).
       CourseE_HOC 2018 Level_8: Primeiro icebergs, e agora lava? Sobreviva nesta ilha vulcânica e encontre o **salmão** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) no recife de coral.
       CourseE_HOC 2018 Level_9b: Você conseguiu chegar ao recife de corais. Agora, procure o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png). Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png) do tesouro.
+      CourseF_PlayLab_vars1: |-
+        Para jogar este jogo, você não precisa escrever nenhum código, basta clicar em "Executar"!
+
+        <hr />
+        Aqui, você é o cachorro que está tentando coletar mais bandeiras do que o gato.
+        _ (Use a seta para baixo para mover.) _
       CourseF_PlayLab_vars2: |-
         A corrida do último desafio não foi
         muito justa! Altere a variável "velocidade\_cão" para garantir que você possa coletar mais
@@ -8233,6 +8971,18 @@ pt-BR:
         -   Adicionar outro grupo de dançarinos
         -   Mostrar e ocultar dançarinos usando as teclas de seta
         -   Ocultar todos os dançarinos e alternar para um efeito de fundo estimulante
+      ECSPD Online U1D1-2 Assessment 1: Você tomou café esta manhã? Se você fez, é provável que você tenha usado um computador. Se você mesmo fez o café, sua cafeteira provavelmente tinha um relógio digital ou um temporizador programável. Se você comprou, o barista provavelmente usou um leitor de cartão com uma caixa registradora eletrônica para receber seu pagamento. Pense no seu dia e se lembre de quantos computadores você usou antes de se sentar na frente de um desktop ou laptop (ou qualquer outro dispositivo que você esteja usando agora). Não se esqueça dos computadores do seu carro, sua geladeira, seu despertador...
+      ECSPD Online U1D11-14 Reflection: Você experimentou parte desta lição on-line e investigou outras ferramentas de design. O que você aprendeu que pode levar de volta à sua sala de aula? Como você vai enfrentar os desafios únicos desta lição? Use este espaço para registrar suas idéias para esta lição. Você terá a chance de compartilhar suas idéias e perguntas em um fórum no próximo nível.
+      ECSPD Online U1D17-19 Assessment: Reserve algum tempo para examinar a lição e a atividade offline. Pense na sua sala de aula e no espaço que você tem disponível para executar a Atividade de Teste de Turing. Como você planeja montar sua sala de aula para facilitar melhor a atividade de teste de Turing?
+      ECSPD Online U1D17-19 Reflection: Esta é a última lição da unidade. Como isso combina o que foi abordado anteriormente na unidade? Agora que você teve tempo para examinar esta lição, o que você aprendeu que pode levar de volta à sua sala de aula? Use este espaço para registrar suas idéias para esta lição. Você terá a chance de compartilhar suas idéias e perguntas em um fórum no próximo nível.
+      ECSPD Online U1D3-4 Reflection: 'Você experimentou parte desta lição on-line e estudou os componentes dos computadores. O que você aprendeu que pode levar de volta à sua sala de aula? Use este espaço para registrar suas idéias para esta lição. Você terá a chance de compartilhar suas idéias e perguntas em um fórum no próximo nível. '
+      ECSPD Online U1D5-7 Reflection: Você experimentou esta lição pessoalmente e examinou recursos adicionais on-line. O que você aprendeu que pode levar de volta à sua sala de aula? Use este espaço para registrar suas idéias para esta lição. Você terá a chance de compartilhar suas idéias e perguntas em um fórum no próximo nível.
+      ECSPD Online U1D8-9 Assessment: Relacione três pontos dos artigos ou do plano de aula que você gostaria de discutir com sua turma. Descreva uma estratégia que você planeja usar para facilitar a discussão.
+      ECSPD Online U1D8-9 Reflection: Você já experimentou parte desta lição on-line e leu alguns artigos sobre o impacto dos computadores e da Internet na comunicação. O que você aprendeu que pode levar de volta à sua sala de aula? Use este espaço para registrar suas idéias para esta lição. Você terá a chance de compartilhar suas idéias e perguntas em um fórum no próximo nível.
+      Eval Booleans 1: Operadores booleanos (como >, \<, =) nos permitem comparar valores diferentes, retornando _verdadeiro_ ou _falso_. Clique em "Executar" para ver como essa expressão é avaliada.
+      Eval Booleans 2: Você pode definir os valores para que essa expressão seja avaliada como _verdadeiro_?
+      Eval Booleans 3: A função `comprimento-string` retorna o número de caracteres em uma string (incluindo espaços!) - faz com que este código seja avaliado como _verdadeiro_.
+      Eval Booleans 4: Aqui temos um bloco chamado `e` - ele retorna _verdadeiro_ se ambos os parâmetros forem _verdadeiros_, caso contrário ele retorna _falso_. Edite a variável x para que esta expressão retorne _verdadeiro_.
       Eval Booleans Free Play: |-
         Atividade livre: experimente criar algo
         você mesmo usando booleanos.
@@ -8478,6 +9228,42 @@ pt-BR:
       MSM Defining Vars 2: Se quiséssemos fazer cinquenta triângulos verdes, seria horrível repetir esse bloco de código 50 vezes. Vamos criar uma variável chamada "minha-forma" e colocar o código para um triângulo verde sólido de 50 pixels dentro dela.
       MSM Defining Vars 3: Pegue sua variável "minha-forma" e use-a com este código fornecido para desenhar dois triângulos verdes idênticos que têm 50 pixels.
       MSM Defining Vars 4: Edite sua variável "minha-forma" para que ela desenhe estrelas vermelhas sólidas de 75 pixels.
+      Making Music: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Matt Test Level: 0 bits pesam menos do que 1 bit?
       Middle School Hackathon Pt 1: |-
         # MS Hackathon: Desenho Chique
@@ -8592,10 +9378,28 @@ pt-BR:
         Tenha cuidado para não coletar néctar de uma flor roxa se ela não tiver nenhum.
         Você deve primeiro verificar se o néctar é igual a 1 usando o bloco `se nectar`.
       PS fr prediction q1: 'O que _você_ acha que vai acontecer? '
+      Peer Review Level 1 - Tuesday Report: |-
+        Férias são muito divertidas. Por favor, documente uma história curta e divertida sobre umas férias recentes.
+
+        Algumas diretrizes
+
+        -   Fotos ou não aconteceu
+        -   Faça em 4 frases ou menos por favor
+        -   Trocadilhos são estritamente proibidos
+      Peer Review Level 2 - Wednesday Report: |-
+        Gatos são os melhores. Cães são bem legais também. De qual você gosta mais e por quê?
+
+        Algumas diretrizes
+
+        -   Gatos são incríveis
+        -   Gatos não se importam
+        -   Gatos são os melhores para fazer GIFs
+        -   As fotos são ótimas
       Pixel Filterator: |-
         # Jogo Livre
 
         Faça o que você quiser, faça algo incrível
+      Pixelation - Lesson 14 - Fix bit offset v.2: 'Algo aconteceu com os bits nesta imagem! Encontre o erro e conserte-o! Dica: alguns bits extras foram adicionados. Você só precisa remover alguns bits.'
       Pixelation - Lesson 15 - Color Shades 4x4: "# Pixelização: Tarefa 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Instruções:**\nVocê começa com a imagem 4x4 da Maddie criada no video.\n\nSua tarefa é completar uma grade 4x4 com cores usando _12-bits por pixel_. O resultado deve se assemelhar (mas não exatamente) com a imagem mostrada abaixo.  \n\nEstes são os requisitos:\n\n-   Linha 1 - complete com tons de vermelho.\n-   Linha 2 - tons de verde. \n-   Linha 3 - tons de azul. \n-   Linha 4 - tons de cinza."
       Pixelation - Lesson 15 - Color Shades 4x4_2018: "# Pixelização: Tarefa 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Instruções:**\nVocê começa com a imagem 4x4 da Maddie criada no video.\n\nSua tarefa é completar uma grade 4x4 com cores usando _12-bits por pixel_. O resultado deve se assemelhar (mas não exatamente) com a imagem mostrada abaixo.  \n\nEstes são os requisitos:\n\n-   Linha 1 - complete com tons de vermelho.\n-   Linha 2 - tons de verde. \n-   Linha 3 - tons de azul. \n-   Linha 4 - tons de cinza."
       Pixelation - Lesson 15 - Color Shades 4x4_2019: "# Pixelização: Tarefa 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right width=200 hspace=20>\n**Instruções:**\nVocê começa com a imagem 4x4 da Maddie criada no video.\n\nSua tarefa é completar uma grade 4x4 com cores usando _12-bits por pixel_. O resultado deve se assemelhar (mas não exatamente) com a imagem mostrada abaixo.  \n\nEstes são os requisitos:\n\n-   Linha 1 - complete com tons de vermelho.\n-   Linha 2 - tons de verde. \n-   Linha 3 - tons de azul. \n-   Linha 4 - tons de cinza."
@@ -8618,6 +9422,42 @@ pt-BR:
         # Faça isso:
 
         Desenhe um quadrado 1 x 1 na frente e na esquerda da tartaruga da forma mais eficiente possível. O programa deve parar quando a tartaruga estiver em sua posição inicial, de frente para sua direção inicial.
+      Revisiting the Counter Pattern: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Ryan_Demo: |-
         Faça esse alce entrar na dança!
 
@@ -8625,6 +9465,42 @@ pt-BR:
 
         Os **compassos** são usados para contar o tempo musical. Neste tutorial, cada compasso tem quatro batidas.
       Testing Quantum Farmer: "Uau, que demais! \\\\r\n\\\\r\nEu não sei de quantas\npás cheias de terra esse buraco precisa.  \\\\r\nVocê pode escrever um programa que\nfique usando o bloco \"preencha\" até que o solo fique nivelado?  "
+      The Accelerometer: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Total Artist Clone Me: 'Atividade livre: aqui estão as funções que você escreveu e mais algumas para você usar. Brinque com a largura da caneta para ver como seus desenhos ficam diferentes!'
       Trent Test Level: Mais questões!
       U2L16 Free response assessment 1: O que significa "computacionalmente difícil"?
@@ -8686,6 +9562,42 @@ pt-BR:
         1.  O que é uma _Expressão Booleana?_
         2.  Por que ela é chamada "Booleana"?
         3.  Esta é uma expressão legal? `10 > 25`?
+      Using Accelerometer Events: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \\ - xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \\ - xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Video. Introduction to Conditionals - Part 1: |-
         ### Pontos para prestar atenção:
 
@@ -8700,6 +9612,7 @@ pt-BR:
       course1_maze_debugging_challenge1: Depure esse nível. Remova blocos extras, e adicione blocos que estão faltando. Leve o pássaro até o porco!
       course1_maze_debugging_challenge2: Analise este nível. Estes são os blocos corretos, mas eles estão colocados na ordem errada!
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas as **10** peças do tesouro?
+      course3_artist_concept_challenge1: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nAgora, por um desafio!\n\nAqui está um design que usa apenas blocos que já foram mostrados a você. Você consegue descobrir como recriá-lo? Sinta-se à vontade para usar tentativa e erro. Não é esperado que você faça perfeitamente na primeira vez.\n\nA forma repetida é quase idêntica àquela do último quebra-cabeça, exceto que o comprimento usado no primeiro loop é um pouco menor. "
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados? Use o que você aprendeu até agora para coletar todo o tesouro!
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e substitua-o por algo totalmente diferente)
       courseA_artist_loops10: |-
@@ -9733,6 +10646,7 @@ pt-BR:
         \\r
         \\r
         Os quadrados estão separados por uma distância de 75 pixels.
+      grade4_artist_nestedLoops_challenge2: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nAgora, por um desafio!\n\nAqui está um design que usa apenas blocos que já foram mostrados a você. Você consegue descobrir como recriá-lo? Sinta-se à vontade para usar tentativa e erro. Não é esperado que você faça perfeitamente na primeira vez.\n\nA forma repetida é quase idêntica àquela do último quebra-cabeça, exceto que o comprimento usado no primeiro loop é um pouco menor. "
       grade4_artist_nested_loop_circles1: |-
         **Avaliação**: use um laço aninhado para
         completar o desenho.

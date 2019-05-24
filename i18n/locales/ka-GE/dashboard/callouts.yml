@@ -96,6 +96,12 @@ ka:
       CSD U3 sequence_2019_callout:
         CSD_U3_rect_c1: აქ კოდია
         CSD_U3_rect_c2: გადმოათრიეთ ბლოკი კოდირების გარემოში.
+      CSD U6 colorLeds intensity_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
+      CSD U6 colorLeds intensity_2018_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
+      CSD U6 colorLeds intensity_2019_callout:
+        CSDU6L10_rainbow: დაამატეთ თქვენი კოდი აქ
       Counting_callout:
         New Play Lab Project_callout1: დააწკაპუნეთ კატეგორიებს, რათა ნახოთ ბლოკები თქვენს ინსტრუმენტების პანელში! გადმოათრიეთ ბლოკები სამუშაო გარემოში, რათა დაამატოთ ისინი თქვენს პროგრამაში
         New Play Lab Project_callout2: დააჭირეთ "გაშვებას" თქვენი პროგრამის შესანახად და გასაშვებად
@@ -372,8 +378,6 @@ ka:
       courseA_artist_loops7_forVideo_callout:
         courseA_artist_loops7_1: ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის.
       courseA_collector_loops1_callout:
-        courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
-      courseA_collector_loops1_2018_callout:
         courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.
       courseA_collector_loops1_2019_callout:
         courseA_collector_loops1_1: ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი.

@@ -12,6 +12,10 @@ class ScriptsControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -158,6 +162,36 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
+  test "show: do not redirect to latest stable version if no_redirect query param is supplied" do
+    get :show, params: {id: @coursez_2017.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+
+    get :show, params: {id: @coursez_2017.name, no_redirect: "true"}
+    assert_response :ok
+
+    get :show, params: {id: @coursez_2017.name}
+    assert_response :ok
+  end
+
+  test "show: redirect to latest stable version in family for student" do
+    sign_in create(:student)
+    get :show, params: {id: @coursez_2017.name}
+    assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
+  end
+
+  test "show: do not redirect student to latest stable version in family if they can view the script version" do
+    Script.any_instance.stubs(:can_view_version?).returns(true)
+    sign_in create(:student)
+    get :show, params: {id: @coursez_2017.name}
+    assert_response :ok
+  end
+
+  test "show: do not redirect teacher to latest stable version in family" do
+    sign_in create(:teacher)
+    get :show, params: {id: @coursez_2017.name}
+    assert_response :ok
+  end
+
   test "should not get edit if not levelbuilder mode" do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
@@ -218,6 +252,7 @@ class ScriptsControllerTest < ActionController::TestCase
       hideable_stages true
       wrapup_video 'hoc_wrapup'
       project_sharing true
+      curriculum_umbrella 'CSP'
 
     TEXT
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -232,7 +267,8 @@ class ScriptsControllerTest < ActionController::TestCase
       login_required: true,
       hideable_stages: true,
       wrapup_video: 'hoc_wrapup',
-      project_sharing: 'on'
+      project_sharing: 'on',
+      curriculum_umbrella: 'CSP'
     }
     assert_redirected_to script_path id: 'test-script-create'
 
@@ -242,6 +278,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.login_required
     assert script.hideable_stages
     assert script.project_sharing
+    assert_equal "CSP", script.curriculum_umbrella
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -341,6 +378,31 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: ''
     }
     refute Script.find_by_name(script.name).project_sharing
+  end
+
+  test 'updates curriculum_umbrella' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    assert_nil Script.find_by_name(script.name).curriculum_umbrella
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_umbrella: 'CSF'
+    }
+    assert_equal Script.find_by_name(script.name).curriculum_umbrella, 'CSF'
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_umbrella: ''
+    }
+    refute Script.find_by_name(script.name).curriculum_umbrella
   end
 
   no_access_msg = "You don&#39;t have access to this unit."

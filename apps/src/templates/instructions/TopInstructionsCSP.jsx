@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
@@ -172,10 +173,15 @@ class TopInstructionsCSP extends Component {
           url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
           method: 'GET',
           contentType: 'application/json;charset=UTF-8'
-        }).done(data => {
+        }).done((data, _, request) => {
           // If student has feedback make their default tab the feedback tab instead of instructions
           if (data[0] && (data[0].comment || data[0].performance)) {
-            this.setState({feedbacks: data, tabSelected: TabType.COMMENTS});
+            this.setState({
+              feedbacks: data,
+              tabSelected: TabType.COMMENTS,
+              token: request.getResponseHeader('csrf-token')
+            });
+            this.incrementFeedbackVisitCount();
           }
         })
       );
@@ -324,11 +330,42 @@ class TopInstructionsCSP extends Component {
   };
 
   handleCommentTabClick = () => {
+    // Only increment visit count if user is switching from another tab to the
+    // comments tab.
+    if (this.state.tabSelected !== TabType.COMMENTS) {
+      this.incrementFeedbackVisitCount();
+    }
+
     this.setState(
       {tabSelected: TabType.COMMENTS},
       this.forceTabResizeToMaxHeight
     );
   };
+
+  /**
+   * If a student is viewing their own work (i.e., the user is not a teacher
+   * viewing one of their students' work), increment visit count for student
+   * viewing their latest feedback. Only allow this metric to be written to every
+   * 5000ms to avoid recording metrics from a user clicking back-and-forth between
+   * tabs too often.
+   */
+  incrementFeedbackVisitCount = _.debounce(
+    () => {
+      const latestFeedback = this.state.feedbacks[0];
+      if (!this.state.teacherViewingStudentWork && latestFeedback) {
+        $.ajax({
+          url: `/api/v1/teacher_feedbacks/${
+            latestFeedback.id
+          }/increment_visit_count`,
+          method: 'POST',
+          contentType: 'application/json;charset=UTF-8',
+          headers: {'X-CSRF-Token': this.state.token}
+        });
+      }
+    },
+    5000,
+    {leading: true}
+  );
 
   render() {
     const mainStyle = [

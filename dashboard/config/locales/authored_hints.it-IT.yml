@@ -4757,6 +4757,11 @@ it:
           -   disegna un triangolo
           -   salta in avanti di 50 pixel
           -   gira a destra di 90 gradi
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare,
+          l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista
+          deve girare di 90 gradi per 4 volte.
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto
           100. '
@@ -7692,26 +7697,26 @@ it:
           mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml>
           oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
           scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
           scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops1_2019_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
@@ -11573,6 +11578,21 @@ it:
           dovrai saltare avanti di 50 pixel prima di girare a destra di 90 gradi.
         courseD_artist_nestedLoops_challenge1_d: Per concludere, metti tutte le istruzioni
           all'interno di un ciclo `ripeti 4 volte`.
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare,
+          l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista
+          deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare,
+          l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista
+          deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare,
+          l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista
+          deve girare di 90 gradi per 4 volte.
       courseD_artist_project1_authored_hint:
         courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
@@ -13483,7 +13503,7 @@ it:
           `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while_challenge1_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
-          casella **prima** dalla fine del percorso.
+          casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
           contadina di rimuovere un mucchio o riempire una buca, anche se non c'è.
           Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio
@@ -13493,7 +13513,7 @@ it:
           quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2018_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
-          casella **prima** dalla fine del percorso.
+          casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
           contadina di rimuovere un mucchio o riempire una buca, anche se non c'è.
           Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio
@@ -13503,7 +13523,7 @@ it:
           quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2019_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
-          casella **prima** dalla fine del percorso.
+          casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla
           contadina di rimuovere un mucchio o riempire una buca, anche se non c'è.
           Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio
@@ -13513,13 +13533,13 @@ it:
           quattro cicli `mentre`.
       courseD_farmer_while_challenge2_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
-          casella **prima** dalla fine del percorso.
+          casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza
           usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare
           quattro cicli `mentre`.
       courseD_farmer_while_challenge2_2018_authored_hint:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
-          casella **prima** dalla fine del percorso.
+          casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza
           usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare
           quattro cicli `mentre`.
@@ -13545,26 +13565,26 @@ it:
         courseD_harvester_nested_loops_challenge1_c: Per risolvere questo esercizio,
           avrai bisogno di mettere un piccolo ciclo all'interno del ciclo principale!
       courseD_iceage_loops1_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
           scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a
           scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops1_2019_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà
           sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:

@@ -1785,6 +1785,8 @@ uk:
               name: Інтернет
             Crowdsourcing:
               name: Краудсорсинг
+            Dance Party:
+              name: Танцювальна вечірка
         andrea-test:
           stages:
             'null':
@@ -1824,8 +1826,6 @@ uk:
               name: Рухайся, рухайся
             Your Digital Footprint:
               name: Твій цифровий слід
-            Loops in Ice Age:
-              name: Петлі в Ice Age
             Spelling Bee:
               name: Грамотна Бджілка
         removed19:
