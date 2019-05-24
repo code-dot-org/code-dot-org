@@ -66,6 +66,10 @@ module Pd
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+      },
+      COURSE_CSF => {
+        SUBJECT_CSF_101 => {min_days: 1, max_days: 1, max_hours: 7},
+        SUBJECT_CSF_201 => {min_days: 1, max_days: 1, max_hours: 6}
       }
     }.freeze
 
