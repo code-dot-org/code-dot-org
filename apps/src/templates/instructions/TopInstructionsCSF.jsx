@@ -3,35 +3,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-var instructions = require('../../redux/instructions');
-var color = require('../../util/color');
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
-import ContainedLevel from '../ContainedLevel';
-
-var Instructions = require('./Instructions');
-var HeightResizer = require('./HeightResizer');
-import CollapserButton from './CollapserButton';
-import ScrollButtons from './ScrollButtons';
-import ThreeColumns from './ThreeColumns';
-import PromptIcon from './PromptIcon';
-import HintDisplayLightbulb from '../HintDisplayLightbulb';
-import HintPrompt from './HintPrompt';
-import InlineFeedback from './InlineFeedback';
-import InlineHint from './InlineHint';
-import ChatBubble from './ChatBubble';
-import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import msg from '@cdo/locale';
-
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
-
-import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
-
+import {getOuterHeight, scrollTo} from './utils';
 import {levenshtein} from '../../utils';
-import InlineAudio from './InlineAudio';
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import HeightResizer from './HeightResizer';
+import {CSFContainedLevelInstructions} from './CSFContainedLevelInstructions';
+import ThreeColumns from './ThreeColumns';
+import CSFInstructionsColumnOne from './CSFInstructionsColumnOne';
+import CSFInstructionsColumnTwo from './CSFInstructionsColumnTwo';
+import CSFInstructionsColumnThree from './CSFInstructionsColumnThree';
+
+var instructions = require('../../redux/instructions');
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -45,48 +30,6 @@ const craftStyles = {
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
-  },
-  collapserButton: {
-    padding: 5,
-    marginBottom: 0
-  },
-  scrollButtons: {
-    left: 38
-  },
-  scrollButtonsRtl: {
-    right: 38
-  }
-};
-
-const containedLevelStyles = {
-  background: {
-    backgroundColor: color.background_gray,
-    overflowY: 'scroll'
-  },
-  level: {
-    paddingTop: CONTAINED_LEVEL_PADDING,
-    paddingLeft: CONTAINED_LEVEL_PADDING,
-    paddingRight: CONTAINED_LEVEL_PADDING
-  },
-  heightResizer: {
-    backgroundColor: color.background_gray
-  }
-};
-
-const audioStyle = {
-  wrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    border: '2px solid ' + color.lighter_gray,
-    borderRadius: '4px'
-  },
-  button: {
-    height: '32px',
-    backgroundColor: '#FFFFFF'
-  },
-  buttonImg: {
-    lineHeight: '32px',
-    fontSize: 20
   }
 };
 
@@ -135,53 +78,14 @@ const styles = {
   embedView: {
     display: 'none'
   },
-  collapserButton: {
-    position: 'absolute',
-    right: 0,
-    marginTop: 5,
-    marginRight: 5
-  },
-  scrollButtons: {
-    position: 'relative',
-    top: 50,
-    left: 25
-  },
-  scrollButtonsRtl: {
-    position: 'relative',
-    top: 50,
-    right: 25
-  },
-  // bubble has pointer cursor by default. override that if no hints
-  noAuthoredHints: {
-    cursor: 'default',
-    marginBottom: 0
-  },
-  authoredHints: {
-    // raise by 20 so that the lightbulb "floats" without causing the original
-    // icon to move. This strangeness happens in part because prompt-icon-cell
-    // is managed outside of React
-    marginBottom: 0
-  },
-  instructions: {
-    padding: '5px 0'
-  },
-  instructionsWithTips: {
-    width: 'calc(100% - 20px)',
-    float: 'right'
-  },
-  instructionsWithTipsRtl: {
-    width: 'calc(100% - 20px)',
-    float: 'left'
-  },
-  audioControls: {
-    paddingTop: 10
+  heightResizer: {
+    backgroundColor: color.background_gray
   }
 };
 
 class TopInstructions extends React.Component {
   static propTypes = {
     overlayVisible: PropTypes.bool,
-    skinId: PropTypes.string,
     hints: PropTypes.arrayOf(
       PropTypes.shape({
         hintId: PropTypes.string.isRequired,
@@ -191,19 +95,15 @@ class TopInstructions extends React.Component {
       })
     ).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
-    showNextHint: PropTypes.func.isRequired,
     hasContainedLevels: PropTypes.bool,
     isEmbedView: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
-    aniGifURL: PropTypes.string,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
     collapsed: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
-    shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
-    clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
@@ -212,14 +112,12 @@ class TopInstructions extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     smallStaticAvatar: PropTypes.string,
     failureAvatar: PropTypes.string,
-    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
     textToSpeechEnabled: PropTypes.bool,
 
-    hideOverlay: PropTypes.func.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
     setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
@@ -472,13 +370,6 @@ class TopInstructions extends React.Component {
   };
 
   /**
-   * @return {Element} scrollTarget
-   */
-  getScrollTarget = () => {
-    return this.instructions.parentElement;
-  };
-
-  /**
    * Manually scroll instructions to bottom. When we have multiple
    * elements in instructions, "bottom" is defined as 10 pixels above
    * the top of the bottommost element. This is so we don't scroll past
@@ -516,17 +407,11 @@ class TopInstructions extends React.Component {
     }
   };
 
-  dismissHintPrompt = () => {
+  setPromptForHintFalse() {
     this.setState({
       promptForHint: false
     });
-  };
-
-  showHint = () => {
-    this.dismissHintPrompt();
-    this.props.showNextHint();
-    this.props.clearFeedback();
-  };
+  }
 
   shouldDisplayHintPrompt() {
     return this.state && this.state.promptForHint && !this.props.collapsed;
@@ -573,13 +458,6 @@ class TopInstructions extends React.Component {
     return dist <= 10;
   }
 
-  shouldDisplayShortInstructions() {
-    return (
-      !this.shouldIgnoreShortInstructions() &&
-      (this.props.collapsed || !this.props.longInstructions)
-    );
-  }
-
   getAvatar() {
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
@@ -608,6 +486,33 @@ class TopInstructions extends React.Component {
     return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
   }
 
+  setContainedLevelRef(ref) {
+    this.containedLevel = ref;
+  }
+
+  setIconRef(ref) {
+    this.icon = ref;
+  }
+
+  setInstructionsRef(ref) {
+    this.instructions = ref;
+  }
+
+  setCollapserRef(ref) {
+    this.collapser = ref;
+  }
+
+  setScrollButtonsRef(ref) {
+    this.scrollButtons = ref;
+  }
+
+  shouldDisplayShortInstructions() {
+    return (
+      !this.shouldIgnoreShortInstructions() &&
+      (this.props.collapsed || !this.props.longInstructions)
+    );
+  }
+
   render() {
     const resizerHeight = this.props.collapsed ? 0 : RESIZER_HEIGHT;
     const topInstructionsHeight = this.props.height - resizerHeight;
@@ -622,48 +527,23 @@ class TopInstructions extends React.Component {
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = this.shouldDisplayShortInstructions()
-      ? this.props.shortInstructions
-      : this.props.longInstructions;
-
     const ttsUrl = this.shouldDisplayShortInstructions()
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
 
-    const showAudioControls = this.props.textToSpeechEnabled && ttsUrl;
-
     if (this.props.hasContainedLevels) {
       return (
         <div style={mainStyle} className="editor-column">
-          <div
-            style={{
-              ...containedLevelStyles.background,
-              height: topInstructionsHeight,
-              display: 'flex',
-              justifyContent: 'space-around'
-            }}
-          >
-            <div style={containedLevelStyles.level} className="contained-level">
-              <ContainedLevel
-                ref={c => {
-                  this.containedLevel = c;
-                }}
-              />
-            </div>
-            {showAudioControls && (
-              <div style={styles.audioControls}>
-                <InlineAudio
-                  src={this.props.ttsLongInstructionsUrl}
-                  style={audioStyle}
-                />
-              </div>
-            )}
-          </div>
+          <CSFContainedLevelInstructions
+            showAudioControls={this.props.textToSpeechEnabled && ttsUrl}
+            topInstructionsHeight={topInstructionsHeight}
+            containedLevel={this.setContainedLevelRef}
+          />
           {!this.props.collapsed && !this.props.isEmbedView && (
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
-              style={containedLevelStyles.heightResizer}
+              style={styles.heightResizer}
             />
           )}
         </div>
@@ -688,138 +568,27 @@ class TopInstructions extends React.Component {
           rightColWidth={this.getRightColWidth() || 0}
           height={this.props.height - resizerHeight}
         >
-          <div
-            style={[
-              commonStyles.bubble,
-              this.props.hasAuthoredHints
-                ? styles.authoredHints
-                : styles.noAuthoredHints
-            ]}
-          >
-            <div
-              className={classNames({
-                'prompt-icon-cell': true,
-                authored_hints: this.props.hasAuthoredHints
-              })}
-              onClick={this.handleClickBubble}
-            >
-              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
-              {this.getAvatar() && (
-                <PromptIcon
-                  src={this.getAvatar()}
-                  ref={c => {
-                    this.icon = c;
-                  }}
-                />
-              )}
-            </div>
-          </div>
-          <div
-            ref={c => {
-              this.instructions = c;
-            }}
-            className="csf-top-instructions"
-            style={[
-              styles.instructions,
-              shouldDisplayChatTips(this.props.skinId) &&
-                (this.props.isRtl
-                  ? styles.instructionsWithTipsRtl
-                  : styles.instructionsWithTips)
-            ]}
-          >
-            <ChatBubble ttsUrl={ttsUrl}>
-              <Instructions
-                ref={c => {
-                  this.instructions = c;
-                }}
-                longInstructions={markdown}
-                onResize={this.adjustMaxNeededHeight}
-                inputOutputTable={
-                  this.props.collapsed ? undefined : this.props.inputOutputTable
-                }
-                imgURL={this.props.aniGifURL}
-                inTopPane
-              />
-              {this.props.shortInstructions2 && (
-                <div className="secondary-instructions">
-                  <UnsafeRenderedMarkdown
-                    markdown={this.props.shortInstructions2}
-                  />
-                </div>
-              )}
-              {this.props.overlayVisible && (
-                <div>
-                  <hr />
-                  <LegacyButton type="primary" onClick={this.props.hideOverlay}>
-                    {msg.dialogOK()}
-                  </LegacyButton>
-                </div>
-              )}
-            </ChatBubble>
-            {!this.props.collapsed &&
-              this.props.hints &&
-              this.props.hints.map(hint => (
-                <InlineHint
-                  key={hint.hintId}
-                  borderColor={color.yellow}
-                  markdown={hint.markdown}
-                  ttsUrl={hint.ttsUrl}
-                  ttsMessage={hint.ttsMessage}
-                  block={hint.block}
-                  video={hint.hintVideo}
-                />
-              ))}
-            {this.props.feedback && !this.props.collapsed && (
-              <InlineFeedback
-                borderColor={
-                  this.props.isMinecraft ? color.white : color.charcoal
-                }
-                message={this.props.feedback.message}
-              />
-            )}
-            {this.shouldDisplayHintPrompt() && (
-              <HintPrompt
-                borderColor={color.yellow}
-                onConfirm={this.showHint}
-                onDismiss={this.dismissHintPrompt}
-              />
-            )}
-          </div>
-          <div>
-            <CollapserButton
-              ref={c => {
-                this.collapser = c;
-              }}
-              style={[
-                styles.collapserButton,
-                this.props.isMinecraft && craftStyles.collapserButton,
-                !this.shouldDisplayCollapserButton() && commonStyles.hidden
-              ]}
-              collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}
-            />
-            {!this.props.collapsed && (
-              <ScrollButtons
-                style={[
-                  this.props.isRtl
-                    ? styles.scrollButtonsRtl
-                    : styles.scrollButtons,
-                  this.props.isMinecraft &&
-                    (this.props.isRtl
-                      ? craftStyles.scrollButtonsRtl
-                      : craftStyles.scrollButtons)
-                ]}
-                ref={c => {
-                  this.scrollButtons = c;
-                }}
-                getScrollTarget={this.getScrollTarget}
-                visible={this.state.displayScrollButtons}
-                height={
-                  this.props.height - styles.scrollButtons.top - resizerHeight
-                }
-              />
-            )}
-          </div>
+          <CSFInstructionsColumnOne
+            getAvatar={this.getAvatar()}
+            handleClickBubble={this.handleClickBubble}
+            icon={this.setIconRef}
+          />
+          <CSFInstructionsColumnTwo
+            shouldIgnoreShortInstructions={this.shouldIgnoreShortInstructions}
+            adjustMaxNeededHeight={this.adjustMaxNeededHeight}
+            shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
+            instructions={this.setInstructionsRef}
+            setPromptForHintFalse={this.setPromptForHintFalse}
+          />
+          <CSFInstructionsColumnThree
+            shouldDisplayCollapserButton={this.shouldDisplayCollapserButton}
+            handleClickCollapser={this.handleClickCollapser}
+            instructions={this.setInstructionsRef}
+            collapser={this.setCollapserRef}
+            scrollButtons={this.setScrollButtonsRef}
+            displayScrollButtons={this.state.displayScrollButtons}
+            resizerHeight={resizerHeight}
+          />
         </ThreeColumns>
         {!this.props.collapsed && !this.props.isEmbedView && (
           <HeightResizer
@@ -841,11 +610,8 @@ module.exports = connect(
       hasContainedLevels: state.pageConstants.hasContainedLevels,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
-      skinId: state.pageConstants.skinId,
-      showNextHint: state.pageConstants.showNextHint,
       isEmbedView: state.pageConstants.isEmbedView,
       isMinecraft: !!state.pageConstants.isMinecraft,
-      aniGifURL: state.pageConstants.aniGifURL,
       height: state.instructions.renderedHeight,
       expandedHeight: state.instructions.expandedHeight,
       maxHeight: Math.min(
@@ -854,14 +620,12 @@ module.exports = connect(
       ),
       collapsed: state.instructions.collapsed,
       shortInstructions: state.instructions.shortInstructions,
-      shortInstructions2: state.instructions.shortInstructions2,
       longInstructions: state.instructions.longInstructions,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
       feedback: state.instructions.feedback,
       isRtl: state.isRtl,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
-      inputOutputTable: state.pageConstants.inputOutputTable,
       noVisualization: state.pageConstants.noVisualization,
       textToSpeechEnabled:
         state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
@@ -869,9 +633,6 @@ module.exports = connect(
   },
   function propsFromDispatch(dispatch) {
     return {
-      hideOverlay: function() {
-        dispatch(instructions.hideOverlay());
-      },
       toggleInstructionsCollapsed: function() {
         dispatch(instructions.toggleInstructionsCollapsed());
       },
@@ -883,9 +644,6 @@ module.exports = connect(
       },
       setInstructionsMaxHeightNeeded(height) {
         dispatch(instructions.setInstructionsMaxHeightNeeded(height));
-      },
-      clearFeedback(height) {
-        dispatch(instructions.setFeedback(null));
       }
     };
   },
