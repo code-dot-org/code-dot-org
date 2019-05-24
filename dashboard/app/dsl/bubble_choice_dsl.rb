@@ -19,6 +19,11 @@ class BubbleChoiceDSL < BaseDSL
       raise "Don't use the same level twice in a BubbleChoice (#{name})."
     end
 
+    # Ensure level exists.
+    if Level.find_by(name: name).nil?
+      raise "Unable to locate level '#{name}'."
+    end
+
     @hash[:sublevels] << name
   end
 
