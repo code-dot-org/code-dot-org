@@ -1628,6 +1628,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
-    Script.all.select {|script| script.curriculum_umbrella == curriculum_umbrella}.pluck(:name)
+    Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 end
