@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
@@ -59,7 +60,7 @@ class EnrolledWorkshopsTable extends React.Component {
   };
 
   openCertificate = ({enrollment_code}) => {
-    window.open(`/pd/generate_workshop_certificate/${enrollment_code}`);
+    utils.windowOpen(`/pd/generate_workshop_certificate/${enrollment_code}`);
   };
 
   renderWorkshopActionButtons(workshop) {
