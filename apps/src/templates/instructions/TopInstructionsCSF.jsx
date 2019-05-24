@@ -10,7 +10,7 @@ import {levenshtein} from '../../utils';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
 import HeightResizer from './HeightResizer';
-import {CSFContainedLevelInstructions} from './CSFContainedLevelInstructions';
+import CSFContainedLevelInstructions from './CSFContainedLevelInstructions';
 import ThreeColumns from './ThreeColumns';
 import CSFInstructionsColumnOne from './CSFInstructionsColumnOne';
 import CSFInstructionsColumnTwo from './CSFInstructionsColumnTwo';

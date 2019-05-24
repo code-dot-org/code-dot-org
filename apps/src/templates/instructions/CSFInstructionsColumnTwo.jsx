@@ -33,7 +33,7 @@ class CSFInstructionsColumnTwo extends React.Component {
     shouldIgnoreShortInstructions: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
     shouldDisplayHintPrompt: PropTypes.func,
-    instructions: PropTypes.func, //maybe rename
+    instructionsRef: PropTypes.func, //maybe rename
     setPromptForHintFalse: PropTypes.func,
 
     //redux
@@ -96,9 +96,7 @@ class CSFInstructionsColumnTwo extends React.Component {
 
     return (
       <div
-        ref={c => {
-          this.props.instructions = c;
-        }}
+        ref={this.props.instructionsRef}
         className="csf-top-instructions"
         style={[
           styles.instructions,
@@ -110,7 +108,7 @@ class CSFInstructionsColumnTwo extends React.Component {
       >
         <ChatBubble ttsUrl={ttsUrl}>
           <Instructions
-            ref={this.props.instructions}
+            ref={this.props.instructionsRef}
             longInstructions={markdown}
             onResize={this.props.adjustMaxNeededHeight}
             inputOutputTable={
