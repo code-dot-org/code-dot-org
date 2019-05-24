@@ -26,16 +26,16 @@ module MultipleExtnameFileUtils
     (extnames & file_extnames) == file_extnames
   end
 
-  def self.find_with_possible_extnames(dir, name, extnames)
-    # Find all files of a given name in a given directory that use one or more
-    # of the given extnames
+  def self.find_with_extnames(dir, name, extnames)
+    # Find all files of a given name in a given directory that use only the
+    # given extnames
     #
     # Note that we only consider extension names not included in the given
     # name, so name="example.js", extnames=["erb"] will match files called
     # "example.js.erb", but not "example.erb"
     target_name = File.join(dir, name)
     Dir.glob(target_name + ".*").select do |filename|
-      file_has_any_extnames(filename.sub(target_name, 'name'), extnames)
+      file_has_all_extnames(filename.sub(target_name, 'name'), extnames)
     end
   end
 end
