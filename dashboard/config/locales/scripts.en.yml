@@ -11419,6 +11419,8 @@ en:
               name: Mid-Year Survey
               description_student: ''
               description_teacher: ''
+            CS Principles Post Course survey:
+              name: CS Principles Post Course survey
         csp4-2019:
           title: CSP Unit 4 - Big Data and Privacy ('19-'20)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -12167,6 +12169,10 @@ en:
               name: Parameters and Return Values Investigate
             Parameters and Return Values Practice:
               name: Parameters and Return Values Practice
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
           title: 'Unit 7: Functions and Libraries'
           description_audience: ''
           description_short: ''
@@ -12387,6 +12393,8 @@ en:
               name: Parameters and Return Values Investigate
             Parameters and Return Values Practice:
               name: Parameters and Return Values Practice
+            App Lab Experiments Dashboard:
+              name: App Lab Experiments Dashboard
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
