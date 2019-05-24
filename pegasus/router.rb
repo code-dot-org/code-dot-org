@@ -474,6 +474,10 @@ class Documents < Sinatra::Base
       # to the given file.
       # IE, "foo.erb.md" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
+      #
+      # TODO elijah: Note that several extensions will perform ERB templating
+      # in addition to their other operations. This functionality should be
+      # removed, and the relevant templates should be renamed to "*.erb.*"
       result = body
       extensions.each do |extension|
         case extension
@@ -482,26 +486,25 @@ class Documents < Sinatra::Base
         when '.haml'
           result = haml result, options
         when '.fetch'
+          url = erb(result, options)
+
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            IO.binwrite(cache_file, Net::HTTP.get(URI(result)))
+            IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
           end
           pass unless File.file?(cache_file)
 
           cache :static
           result = send_file(cache_file)
         when '.md'
-          preprocessed = preprocess_markdown result
+          preprocessed = erb result, options
+          preprocessed = preprocess_markdown preprocessed
           result = markdown preprocessed, options
         when '.redirect', '.moved', '.301'
-          result = redirect result, 301
+          result = redirect erb(result, options), 301
         when '.found', '.302'
-          result = redirect result, 302
-        else
-          # intentional no-op; expect to be used by things like .txt or
-          # .js.haml files
-          result
+          result = redirect erb(result, options), 302
         end
       end
 
