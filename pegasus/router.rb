@@ -498,8 +498,7 @@ class Documents < Sinatra::Base
           cache :static
           result = send_file(cache_file)
         when '.md'
-          preprocessed = erb result, options
-          preprocessed = preprocess_markdown preprocessed
+          preprocessed = preprocess_markdown result
           result = markdown preprocessed, options
         when '.redirect', '.moved', '.301'
           result = redirect erb(result, options), 301
