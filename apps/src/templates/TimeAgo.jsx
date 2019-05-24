@@ -26,10 +26,10 @@ class TimeAgo extends React.Component {
   }
 }
 
-// expose the "unconnected" version of the component as specifically
+// Expose the "unconnected" version of the component as specifically
 // "unlocalized", to support usage in places where we don't have access to the
 // redux store or the locale and to make it clear what we lose in that
-// situation
+// situation.
 export const UnlocalizedTimeAgo = TimeAgo;
 
 export default connect(state => ({
