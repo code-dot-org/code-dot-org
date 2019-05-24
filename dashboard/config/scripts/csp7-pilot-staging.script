@@ -28,3 +28,4 @@ level 'U7 L05 Exit Ticket', progression: 'Check Your Understanding', assessment:
 stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
 level 'U7 Libraries List Math Library', progression: 'Code Investigation'
+level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
