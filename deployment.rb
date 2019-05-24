@@ -116,6 +116,8 @@ def load_configuration
     'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
     'assets_s3_directory'         => rack_env == :production ? 'assets' : "assets_#{rack_env}",
+    'librarypilot_s3_bucket'      => 'cdo-v3-librarypilot',
+    'librarypilot_s3_directory'   => rack_env == :production ? 'librarypilot' : "librarypilot_#{rack_env}",
     'sources_s3_bucket'           => 'cdo-v3-sources',
     'sources_s3_directory'        => sources_s3_dir(rack_env, root_dir),
     'use_pusher'                  => false,

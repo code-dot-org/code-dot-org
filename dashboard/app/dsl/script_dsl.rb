@@ -32,6 +32,7 @@ class ScriptDSL < BaseDSL
     @supported_locales = []
     @pilot_experiment = nil
     @project_sharing = nil
+    @curriculum_umbrella = nil
   end
 
   integer :id
@@ -57,6 +58,7 @@ class ScriptDSL < BaseDSL
   string :version_year
   string :curriculum_path
   string :pilot_experiment
+  string :curriculum_umbrella
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -118,7 +120,8 @@ class ScriptDSL < BaseDSL
       is_stable: @is_stable,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
-      project_sharing: @project_sharing
+      project_sharing: @project_sharing,
+      curriculum_umbrella: @curriculum_umbrella
     }
   end
 
@@ -295,6 +298,7 @@ class ScriptDSL < BaseDSL
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
     s << 'project_sharing true' if script.project_sharing
+    s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
 
     s << '' unless s.empty?
     s << serialize_stages(script)

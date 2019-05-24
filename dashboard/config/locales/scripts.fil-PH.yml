@@ -13579,3 +13579,11 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Tapusin Na
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?

@@ -906,6 +906,7 @@ es-MX:
     csf_for_loops: 'Bucles Para'
     csf_internet: 'Internet'
     csf_impacts: 'Impactos de la computación'
+    csf_warmup: 'Actividad previa'
     csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
     csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
     csd2_1: 'Capítulo 1: Contenido web y HTML'

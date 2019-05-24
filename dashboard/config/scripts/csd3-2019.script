@@ -12,6 +12,7 @@ project_widget_types ["gamelab", "weblab"]
 family_name 'csd3'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_2019', named: true

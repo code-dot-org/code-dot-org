@@ -11,6 +11,7 @@ family_name 'csp1'
 version_year '2018'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
