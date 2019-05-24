@@ -50,17 +50,43 @@ export function addEvent(type, args, callback) {
 function checkEvent(inputEvent, p5Inst) {
   let shouldEventFire = false;
   let sprites;
+  let targets;
   switch (inputEvent.type) {
     case 'whenpress':
       return p5Inst.keyWentDown(inputEvent.args.key);
     case 'whilepress':
       return p5Inst.keyDown(inputEvent.args.key);
-    case 'whentouch':
-      console.log(3);
-      return;
+    case 'whentouch': {
+      sprites = singleOrGroup(inputEvent.args.sprite1);
+      targets = singleOrGroup(inputEvent.args.sprite2);
+      let anyOverlap = false;
+      sprites.forEach(sprite => {
+        targets.forEach(target => {
+          if (sprite.overlap(target)) {
+            anyOverlap = true;
+          }
+        });
+      });
+      if (anyOverlap && !inputEvent.firedOnce) {
+        shouldEventFire = true;
+        inputEvent.firedOnce = true;
+      }
+      if (!anyOverlap) {
+        inputEvent.firedOnce = false;
+      }
+      return shouldEventFire;
+    }
     case 'whiletouch':
-      console.log(4);
-      return;
+      sprites = singleOrGroup(inputEvent.args.sprite1);
+      targets = singleOrGroup(inputEvent.args.sprite2);
+      sprites.forEach(sprite => {
+        targets.forEach(target => {
+          if (sprite.overlap(target)) {
+            shouldEventFire = true;
+          }
+        });
+      });
+      return shouldEventFire;
     case 'whenclick':
       if (p5Inst.mouseWentDown('leftButton')) {
         sprites = singleOrGroup(inputEvent.args.sprite);
