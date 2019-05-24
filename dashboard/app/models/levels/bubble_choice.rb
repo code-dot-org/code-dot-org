@@ -33,4 +33,9 @@ level 'level1'
 level 'level2'
 ruby
   end
+
+  # Returns all of the sublevels for this BubbleChoice level in order.
+  def sublevels
+    Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
+  end
 end
