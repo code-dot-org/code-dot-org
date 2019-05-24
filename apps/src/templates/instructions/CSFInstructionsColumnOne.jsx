@@ -22,16 +22,21 @@ const styles = {
 
 class CSFInstructionsColumnOne extends React.Component {
   static propTypes = {
-    getAvatar: PropTypes.string,
+    getAvatar: PropTypes.func,
     handleClickBubble: PropTypes.func,
-    icon: PropTypes.func, // maybe rename
+    iconRef: PropTypes.func, // maybe rename
 
     //redux
     hasAuthoredHints: PropTypes.bool
   };
 
   render() {
-    const {getAvatar, hasAuthoredHints, handleClickBubble, icon} = this.props;
+    const {
+      getAvatar,
+      hasAuthoredHints,
+      handleClickBubble,
+      iconRef
+    } = this.props;
 
     return (
       <div
@@ -48,7 +53,7 @@ class CSFInstructionsColumnOne extends React.Component {
           onClick={handleClickBubble}
         >
           {hasAuthoredHints && <HintDisplayLightbulb />}
-          {getAvatar && <PromptIcon src={getAvatar} ref={icon} />}
+          {getAvatar() && <PromptIcon src={getAvatar()} ref={iconRef} />}
         </div>
       </div>
     );

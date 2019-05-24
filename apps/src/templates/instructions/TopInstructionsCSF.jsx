@@ -582,9 +582,9 @@ class TopInstructions extends React.Component {
           height={this.props.height - resizerHeight}
         >
           <CSFInstructionsColumnOne
-            getAvatar={this.getAvatar()}
+            getAvatar={this.getAvatar}
             handleClickBubble={this.handleClickBubble}
-            icon={this.setIconRef}
+            iconRef={this.setIconRef}
           />
           <CSFInstructionsColumnTwo
             markdown={markdown}
