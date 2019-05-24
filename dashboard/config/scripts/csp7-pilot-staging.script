@@ -21,6 +21,10 @@ level 'U7 Param Return Practice Part 5', progression: 'console.log Practice'
 level 'U7 Param Investigate Calculator App', progression: 'App Practice'
 level 'U7 Param Practice App 2', progression: 'App Practice'
 
-stage 'Libraries', flex_category: 'csp_libraries'
+stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'U7 L01 More with Functions', progression: 'Intro to Libraries'
 level 'U7 L05 Exit Ticket', progression: 'Check Your Understanding', assessment: true
+
+stage 'Libraries Investigate', flex_category: 'csp_libraries'
+level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
+level 'U7 Libraries List Math Library', progression: 'Code Investigation'
