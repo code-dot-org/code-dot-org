@@ -17,7 +17,7 @@ module Pd::SurveyPipeline
     end
 
     # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey and Pd::WorkshopDailySurvey.
-    # @return [Hash{survey_questions, workshop_daily_surveys, facilitator_daily_surveys}]
+    # @return [Hash{survey_questions, workshop_surveys, facilitator_surveys}]
     #   a hash contains questions and submissions
     def retrieve_data(logger: nil)
       logger&.info "RE: workshop_ids filter = #{workshop_ids}"
@@ -30,7 +30,7 @@ module Pd::SurveyPipeline
 
       # Collect submissions
       ws_submissions = Pd::WorkshopDailySurvey.where(submission_filter)
-      facilitator_submissions = Pd::WorkshopDailySurvey.where(submission_filter)
+      facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.where(submission_filter)
 
       logger&.info "RE: ws_submissions.count = #{ws_submissions.count}"
       logger&.debug "RE: ws_submissions = #{ws_submissions&.inspect}"
@@ -50,8 +50,8 @@ module Pd::SurveyPipeline
 
       {
         survey_questions: questions,
-        workshop_daily_surveys: ws_submissions,
-        facilitator_daily_surveys: facilitator_submissions
+        workshop_surveys: ws_submissions,
+        facilitator_surveys: facilitator_submissions
       }
     end
   end
