@@ -5,6 +5,8 @@
  *
  */
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -185,6 +187,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'reportAbuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -200,6 +203,19 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  //Removes 'Report Abuse' if this user already reported this project
+  if (
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    )
+  ) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'reportAbuse';
+    });
+  }
+
   return footerMenuItems;
 };
 

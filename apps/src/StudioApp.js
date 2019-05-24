@@ -825,10 +825,15 @@ export function makeFooterMenuItems() {
   }
 
   //Removes 'Report Abuse' if this user already reported this project
-  if (_.includes(JSON.parse(cookies.get('reported_abuse')), project.getCurrentId())) {
-    _.pull(footerMenuItems, function(menuItem) {
-     return menuItem.key === 'reportAbuse';
-   });
+  if (
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    )
+  ) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'reportAbuse';
+    });
   }
 
   return footerMenuItems;
