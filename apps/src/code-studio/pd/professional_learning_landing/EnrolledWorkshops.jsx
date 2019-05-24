@@ -58,14 +58,8 @@ class EnrolledWorkshopsTable extends React.Component {
     });
   };
 
-  openCertificate = workshop => {
-    if (workshop.course === 'CS Fundamentals') {
-      window.open(`/pd/generate_csf_certificate/${workshop.enrollment_code}`);
-    } else {
-      window.open(
-        `/pd/generate_workshop_certificate/${workshop.enrollment_code}`
-      );
-    }
+  openCertificate = ({enrollment_code}) => {
+    window.open(`/pd/generate_workshop_certificate/${enrollment_code}`);
   };
 
   renderWorkshopActionButtons(workshop) {
