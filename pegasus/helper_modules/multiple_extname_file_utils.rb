@@ -13,12 +13,29 @@ module MultipleExtnameFileUtils
     File.basename(filename).split(/(?=\.)/).drop(1)
   end
 
+  def self.file_has_any_extnames(filename, extnames)
+    # Returns true if any of the extensions used by the given file are in the
+    # given list of extension names
+    !(extnames & all_extnames(filename)).empty?
+  end
+
+  def self.file_has_all_extnames(filename, extnames)
+    # Returns true if and only if all of the extensions used by the given file
+    # are in the given list of extension names
+    file_extnames = all_extnames(filename)
+    (extnames & file_extnames) == file_extnames
+  end
+
   def self.find_with_possible_extnames(dir, name, extnames)
     # Find all files of a given name in a given directory that use one or more
     # of the given extnames
-    Dir.glob(File.join(dir, "#{name}.*")).select do |filename|
-      file_extnames = all_extnames(filename)
-      !(extnames & file_extnames).empty?
+    #
+    # Note that we only consider extension names not included in the given
+    # name, so name="example.js", extnames=["erb"] will match files called
+    # "example.js.erb", but not "example.erb"
+    target_name = File.join(dir, name)
+    Dir.glob(target_name + ".*").select do |filename|
+      file_has_any_extnames(filename.sub(target_name, 'name'), extnames)
     end
   end
 end
