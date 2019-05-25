@@ -84,13 +84,14 @@ def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
       @browser.navigate.to url
-      wait_until do
-        @browser.execute_script('return document.readyState;') == 'complete'
-      end
     end
     refute_bad_gateway_or_site_unreachable
   end
-  install_js_error_recorder
+  if @browser.browser == :Chrome
+    check_window_for_js_errors('after navigation')
+  else
+    install_js_error_recorder
+  end
 end
 
 Given /^I am on "([^"]*)"$/ do |url|

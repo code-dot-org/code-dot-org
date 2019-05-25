@@ -92,24 +92,26 @@ module BrowserHelpers
     puts "DEBUG: Unable to install js error recorder; #{err}"
   end
 
-  def check_window_for_js_errors(check_reason_description)
+  def check_window_for_js_errors(reason)
     unless @browser.nil?
-      with_read_timeout(10.seconds) do
-        js_errors = @browser.execute_script('return window.detectedJSErrors;')
-        if js_errors
-          puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
+      js_errors = with_read_timeout(10.seconds) do
+        if @browser.browser == :chrome
+          logs = @browser.manage.logs.get(:browser)
+          errors, other = logs.partition {|log| log.level == 'SEVERE'}
+          puts "DEBUG [#{reason}] Console log: #{other.join(' | ')}" if other.any? && ENV['VERY_VERBOSE']
+          errors
         else
-          puts "DEBUG: [#{check_reason_description}] No JS errors found on current page." if ENV['VERY_VERBOSE']
+          @browser.execute_script('return window.detectedJSErrors;')
         end
+      rescue => err
+        # We're getting intermittent timing errors that have to do with SauceLabs
+        # going away before we can check for JS errors.
+        # We don't want that to cause test runs to fail, so ignore exceptions for now.
+        puts "DEBUG: Unable to check window for JS errors; #{err}"
+        []
       end
+      raise "[#{reason}] JS errors: #{js_errors.join(' | ')}" if js_errors.any?
     end
-  rescue => err
-    # We're not currently failing any tests based on JS errors showing up, so
-    # this is just a debugging tool.
-    # We're getting intermittent timing errors that have to do with SauceLabs
-    # going away before we can check for JS errors.
-    # We don't want that to cause test runs to fail, so ignore exceptions for now.
-    puts "DEBUG: Unable to check window for JS errors; #{err}"
   end
 
   def wait
