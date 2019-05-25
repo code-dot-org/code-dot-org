@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
@@ -43,7 +45,8 @@ export default class SmallFooter extends React.Component {
     className: PropTypes.string,
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    channel: PropTypes.string
   };
 
   state = {
@@ -306,6 +309,17 @@ export default class SmallFooter extends React.Component {
   }
 
   renderMoreMenu(styles) {
+    const userAlreadyReportedAbuse = _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      this.props.channel
+    );
+
+    if (userAlreadyReportedAbuse) {
+      _.remove(this.props.menuItems, function(menuItem) {
+        return menuItem.key === 'report-abuse';
+      });
+    }
+
     const menuItemElements = this.props.menuItems.map(
       function(item, index) {
         return (

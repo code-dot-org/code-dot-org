@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
 
-
 /**
  * A component containing some text/links for projects that have had abuse
  * reported. This is used in our blocking AbuseBox, in the share dialog, and
@@ -54,16 +53,13 @@ export default class ReportAbuseForm extends React.Component {
   }
 
   writeCookie() {
-    //cookies.remove("reported_abuse")
-    console.log("cookies before: ", cookies.get())
     if (cookies.get('reported_abuse')) {
-      var reportedProjectIds = JSON.parse(cookies.get("reported_abuse"))
-      reportedProjectIds.push(this.getChannelId())
-      cookies.set('reported_abuse', _.uniq(reportedProjectIds))
+      const reportedProjectIds = JSON.parse(cookies.get('reported_abuse'));
+      reportedProjectIds.push(this.getChannelId());
+      cookies.set('reported_abuse', _.uniq(reportedProjectIds));
     } else {
       cookies.set('reported_abuse', [this.getChannelId()]);
     }
-    console.log("cookies after: ", cookies.get())
   }
 
   handleSubmit = event => {
@@ -91,7 +87,7 @@ export default class ReportAbuseForm extends React.Component {
       event.preventDefault();
       return;
     }
-    this.writeCookie()
+    this.writeCookie();
   };
 
   render() {
