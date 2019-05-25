@@ -204,13 +204,12 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
     }
   ].filter(item => item);
 
-  //Removes 'Report Abuse' if this user already reported this project
-  if (
-    _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      project.getCurrentId()
-    )
-  ) {
+  var userAlreadyReportedAbuse = _.includes(
+    JSON.parse(cookies.get('reported_abuse')),
+    project.getCurrentId()
+  );
+
+  if (userAlreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
       return menuItem.key === 'reportAbuse';
     });
