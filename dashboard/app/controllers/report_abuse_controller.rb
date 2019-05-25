@@ -85,7 +85,7 @@ class ReportAbuseController < ApplicationController
       )
     end
 
-    # redirect_to "https://support.code.org"
+    redirect_to "https://support.code.org"
   end
 
   def report_abuse_form
