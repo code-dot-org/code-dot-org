@@ -59,9 +59,11 @@ module Pd::SurveyPipeline
     def parse_submissions(survey_submissions)
       parsed_submissions = []
 
+      # submission is a record in Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey model.
+      # submission.answers is as hash of {qid => answer}.
+      # Answer for a matrix question is a hash of {sub_question => sub_answer}
+      # and will be parsed further to sub answer level.
       survey_submissions&.each do |submission|
-        # submission is a record in Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey
-        # submission.answers is as hash of {qid => answer}.
         JSON.parse(submission.answers).each_pair do |qid, ans|
           submission_key = {
             workshop_id: submission.pd_workshop_id,
@@ -69,8 +71,6 @@ module Pd::SurveyPipeline
             submission_id: submission.id,
           }
 
-          # Answer for a matrix question is a hash of {sub_question => sub_answer};
-          # break it further to sub answer level.
           if ans.is_a? Hash
             ans.each_pair do |sub_q, sub_answer|
               parsed_submissions << submission_key.merge(
@@ -99,16 +99,16 @@ module Pd::SurveyPipeline
     def parse_survey(survey_questions)
       parsed_questions = []
 
+      # sq is a record in Pd::SurveyQuestion model.
+      # sq.questions is an array of hashes, and each hash is content of a question.
+      # E.g. "[{'id': 1, 'type': 'number', 'name': 'overallRating', 'text': 'Overall Rating'}"]
+      # Matrix question is a collection of sub questions and answer options
+      # and will be parsed further into multiple sub questions.
       survey_questions&.each do |sq|
-        # sq is a record in Pd::SurveyQuestion model.
-        # sq.questions is an array of hashes, and each hash is content of a question.
-        # E.g. "[{'id': 1, 'type': 'number', 'name': 'overallRating', 'text': 'Overall Rating'}"]
         JSON.parse(sq.questions).each do |question|
           question.symbolize_keys!
           form_key = {form_id: sq.form_id}
 
-          # Matrix question is a collection of sub questions and answer options;
-          # break it into multiple sub questions.
           if question[:type] == TYPE_MATRIX
             parse_matrix_question(question).each do |sub_question|
               parsed_questions << form_key.merge(sub_question)
@@ -127,9 +127,11 @@ module Pd::SurveyPipeline
     # @return [Array<Hash>]
     def parse_matrix_question(question)
       results = []
+
+      # Replace :id, :name, :text, :type values of a sub question.
+      # Keep other keys from the original question, except for :sub_questions key.
+      # Add specific keys for a sub question
       question[:sub_questions].each do |sub_q|
-        # Replace :id, :name, :text, :type values of a sub question.
-        # Keep other keys from the original question, except for :sub_questions key.
         tmp = question.except(:id, :name, :text, :type, :sub_questions)
 
         tmp[:id] = compute_descendant_key(question[:id], sub_q)
@@ -137,7 +139,6 @@ module Pd::SurveyPipeline
         tmp[:text] = "#{question[:text]}->#{sub_q}"
         tmp[:type] = TYPE_RADIO
 
-        # Add specific keys for a sub question
         tmp[:max_value] = question[:options].length
         tmp[:parent] = question[:name]
 
