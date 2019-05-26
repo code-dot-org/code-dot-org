@@ -9,19 +9,19 @@ module Pd::SurveyPipeline
 
     setup_all do
       ws_form_id = 11_000_000_000_000
-      facilitator_form_id = 22_000_000_000_000
+      # facilitator_form_id = 22_000_000_000_000
 
       ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
       teacher = create :teacher
-      facilitator = create :facilitator
+      # facilitator = create :facilitator
       day = 0
 
       # TODO: add matrix question
       @ws_survey = create :pd_survey_question, form_id: ws_form_id,
-        questions: '[' +
-          '{"id": 1, "type": "number", "name": "overall", "text": "Overall rating"},' +
-          '{"id": 2, "type": "dropdown", "name": "theCs", "text": "Select a CS Principles lesson", "options": ["Lesson 1","Lesson 2","Lesson 3"]},'+
-          '{"id": 3, "type": "textarea", "name": "optionalPlease", "text": "Describe something"}' +
+        questions: '[' \
+          '{"id": 1, "type": "number", "name": "overall", "text": "Overall rating"},' \
+          '{"id": 2, "type": "dropdown", "name": "theCs", "text": "Select a CS Principles lesson", "options": ["Lesson 1","Lesson 2","Lesson 3"]},' \
+          '{"id": 3, "type": "textarea", "name": "optionalPlease", "text": "Describe something"}' \
           ']'
 
       @total_question_count = JSON.parse(@ws_survey.questions).size
@@ -40,7 +40,6 @@ module Pd::SurveyPipeline
       #   pd_session: ws.sessions[day], facilitator: facilitator,
       #   answers: "{}"
     end
-
 
     test 'can parse basic question and submission' do
       # TODO: create individual question parsing test & submission parsing test
@@ -67,11 +66,11 @@ module Pd::SurveyPipeline
           "I love teaching with this curriculum.",
           "I completely understand the objectives of, and intention behind, the curriculum.",
           "I completely understand the teaching strategies I am supposed to use in the curriculum."
-          ]
+        ]
       }
 
       results = DailySurveyParser.new.parse_matrix_question(q)
-      results.each { |res| p res.inspect }
+      # results.each { |res| p res.inspect }
 
       assert_equal q[:sub_questions].size, results.size
     end
