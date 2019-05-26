@@ -5,6 +5,8 @@ module Pd::SurveyPipeline
   class DailySurveyRetrieverTest < ActiveSupport::TestCase
     include Pd::WorkshopConstants
 
+    self.use_transactional_test_case = true
+
     setup_all do
       @workshop_form_ids = [11_000_000_000_000, 11_000_000_000_001]
       @facilitator_form_ids = [22_000_000_000_000, 22_000_000_000_001]
