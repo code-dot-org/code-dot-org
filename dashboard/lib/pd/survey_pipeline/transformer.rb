@@ -6,40 +6,10 @@ module Pd::SurveyPipeline
   end
 
   class DailySurveyParser < TransformerBase
-    def transform_data(survey_questions:, workshop_surveys:, facilitator_surveys:)
-      # parse question
-      # further parse matrix question
-      # add answer type to question
+    # TODO: don't create multiple record when parsing, simply just parse string to nested hashes
+    # save memory, don't duplicate shared data.
 
-      # parse workshop surveys
-      # further parse hash answer (matrix, refer to question data to make sure it's matrix type)
-
-      # parse facilitator surveys
-      # further parse hash answer (verify it's matrix type)
-
-      # return parsed questions & submissions
-    end
-
-    def parse_survey_question(survey_questions)
-      parsed_questions = []
-      survey_questions.each do |sq|
-        JSON.parse(sq.questions).each do |question|
-          parsed_question << question.symbolize_keys.
-            merge(form_id: sq.form_id, qid: question["id"].to_s).
-            merge(answer_type: ANSWER_TYPE_MAPPING[question["type"]])
-
-          # TODO: matrix question
-        end
-      end
-
-      parsed_questions
-    end
-  end
-
-  class DailySurveyJoinTransformer < TransformerBase
     include Pd::JotForm::Constants
-
-    attr_reader :survey_questions, :survey_submissions
 
     ANSWER_TYPE_MAPPING = {
       TYPE_NUMBER => ANSWER_TEXT,
@@ -49,143 +19,143 @@ module Pd::SurveyPipeline
       TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
       TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
       TYPE_MATRIX => ANSWER_MULTI_SELECT,
-      TYPE_SCALE => ANSWER_SCALE,
+      TYPE_SCALE => ANSWER_SCALE
     }.freeze
 
-    # @param data [Hash{WorkshopDailySurveys, SurveyQuestions}] the input data contains WorkshopDailySurvey and SurveyQuestion
-    # @return [Array<Hash{fields}>] array of results after join
-    # TODO: @see design doc
-    def initialize(survey_questions:, survey_submissions:)
-      @survey_questions = survey_questions
-      @survey_submissions = survey_submissions
-    end
-
-    # Split and join WorkshopDailySurvey and SurveyQuestion data.
-    def transform_data(logger: nil)
-      # Create question mapping: (form_id, qid) => q_content
-      questions = {}
-      data[:survey_questions].each do |sq|
-        question_array = JSON.parse(sq.questions)
-        logger&.info "TR: survey form_id #{sq.form_id} has #{question_array.count} questions"
-
-        question_array.each do |question|
-          question_key = {form_id: sq.form_id, qid: question["id"].to_s}
-          questions[question_key] = question.symbolize_keys
-        end
-      end
-
-      logger&.info "TR: questions.count = #{questions.count}"
-      logger&.debug "TR: questions = #{questions}"
-
-      # Split answers into rows and add question content for each row
-      res = []
-      data[:survey_submissions].each do |submission|
-        next unless submission.answers
-
-        ans_h = JSON.parse(submission.answers)
-        logger&.info "TR: submission id #{submission.id} has #{ans_h.count} answers"
-
-        ans_h.each do |qid, ans|
-          question_key = {form_id: submission.form_id, qid: qid.to_s}
-          raise "Question id #{qid} in form #{form_id} does not exist in SurveyQuestion data" unless questions.key?(question_key)
-          question_content = questions[question_key].except(:form_id, :id)
-
-          # TODO: how to decide what fields to take from sumission record? How to config it?
-          answer_type = ANSWER_TYPE_MAPPING[question_content[:type]] || 'unknown'
-          submission_content = {
-            # TODO: do not change column name?
-            workshop_id: submission.pd_workshop_id, form_id: submission.form_id,
-            submission_id: submission.id, answer: ans, answer_type: answer_type, qid: qid
-          }
-
-          res << submission_content.merge(question_content)
-        end
-      end
-
-      logger&.info "TR: answer count = #{res.count}"
-      logger&.debug "TR: first 10 answers = #{res[0..9]}"
-
-      res
-    end
-  end
-
-  class ComplexQuestionTransformer < TransformerBase
-    include Pd::JotForm::Constants
-
-    attr_reader :question_types
-
-    TRANSFORMABLE_QUESTION_TYPES = [TYPE_MATRIX].freeze
     STRING_DIGEST_LENGTH = 16
 
-    def initialize(question_types: [])
-      @question_types = question_types
-    end
+    # Parse input data into individual question and answer.
+    # @param survey_questions [Array<Pd::SurveyQuestion>]
+    # @param workshop_submissions [Array<Pd::WorkshopDailySurvey>]
+    # @param facilitator_submissions [Array<Pd::WorkshopFacilitatorDailySurvey>]
+    # @return [Hash{Symbol => Array}]
+    #   a hash which keys are symbols (:questions, :answers)
+    #   and values are arrays of individual questions and answers.
+    def transform_data(survey_questions:, workshop_submissions:, facilitator_submissions:, logger: nil)
+      # TODO: corner cases: input nil, empty array, big array?
 
-    # precondition: input[:answer] exists and is Hash{sub_question => ans}
-    # postcondition: even sub question with empty answer will be produced. Transformer does not attempt
-    # to filter data
-    def transform_matrix_question_with_answers(input)
-      return unless input
+      # Parse questions in surveys
+      questions = parse_survey(survey_questions)
+      logger&.info "TR: parsed questions count = #{questions.count}"
 
-      produced_outputs = []
-      shared_output = input.except(:name, :type, :text, :answer, :answer_type, :sub_questions)
-
-      # Create a new input for each answer
-      input[:answer].each do |sub_q, ans|
-        temp_output = {}
-
-        sub_q_digest = Digest::SHA256.base64digest(sub_q)[0, STRING_DIGEST_LENGTH - 1]
-        temp_output[:name] = "#{input[:name]}_#{sub_q_digest}"
-        temp_output[:text] = "#{input[:text]} #{sub_q}"
-        temp_output[:type] = TYPE_MATRIX_DERIVED
-        temp_output[:answer] = ans
-
-        # TODO: (Future) answer_type is default to ANSWER_SINGLE_SELECT for now.
-        # Once we have input[:inputType] for matrix question we can map it to correct answer type,
-        # e.g. "Radio Button" -> ANSWER_SINGLE_SELECT, "Check Box" -> ANSWER_MULTI_SELECT
-        temp_output[:answer_type] = ANSWER_SINGLE_SELECT
-
-        # Just to be consistent with what the old pipeline returns
-        temp_output[:max_value] = input[:options].length
-        temp_output[:parent] = input[:name]
-
-        produced_outputs << shared_output.merge(temp_output)
+      # Add inferred info into question (did not get directly from JotForm).
+      # And replace key
+      questions.each do |question|
+        question[:answer_type] = ANSWER_TYPE_MAPPING[question[:type]] || 'unknown'
+        question[:qid] = question[:id]
+        question.delete(:id)
       end
 
-      produced_outputs
+      # Parse workshop submissions
+      # TODO: filter empty answers and hidden questions in the JOIN component or mapper
+      submissions = parse_submissions(workshop_submissions)
+      submissions += parse_submissions(facilitator_submissions)
+
+      {questions: questions, answers: submissions}
     end
 
-    # Break complex questions into multiple smaller questions
-    # @param Array<Hash{}>
-    # @return Array<Hash{}>
-    def transform_data(data:, logger: nil)
-      return unless data
+    # @param survey_submissions [Array<Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey>]
+    # @return [Array<Hash>]
+    def parse_submissions(survey_submissions)
+      parsed_submissions = []
 
-      logger&.info "TR: input question_types = #{question_types}"
-      logger&.info "TR: transformable question types = #{TRANSFORMABLE_QUESTION_TYPES}"
+      survey_submissions&.each do |submission|
+        # submission is a record in Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey
+        # submission.answers is as hash of {qid => answer}.
+        JSON.parse(submission.answers).each_pair do |qid, ans|
+          submission_key = {
+            workshop_id: submission.pd_workshop_id,
+            form_id: submission.form_id,
+            submission_id: submission.id,
+          }
 
-      res = []
-      data.each do |row|
-        q_type = row[:type]
-
-        if question_types.include?(q_type) && TRANSFORMABLE_QUESTION_TYPES.include?(q_type)
-          logger&.debug "transforming #{q_type}"
-
-          # TODO: add if/else or use hash of function to map question types to transform functions
-          # Question type in TRANSFORMABLE_QUESTION_TYPES but don't have a transformation function
-          # will not be written out.
-          if q_type == TYPE_MATRIX
-            res += transform_matrix_question_with_answers(row)
+          # Answer for a matrix question is a hash of {sub_question => sub_answer};
+          # break it further to sub answer level.
+          if ans.is_a? Hash
+            ans.each_pair do |sub_q, sub_answer|
+              parsed_submissions << submission_key.merge(
+                {
+                  qid: compute_descendant_key(qid, sub_q),
+                  answer: sub_answer
+                }
+              )
+            end
           else
-            raise "There is not code to transform question type #{q_type} yet"
+            parsed_submissions << submission_key.merge(
+              {
+                qid: qid,
+                answer: ans
+              }
+            )
           end
-        else
-          logger&.debug "TR: cannot transform #{q_type}"
-          res << row
         end
       end
 
-      res
+      parsed_submissions
+    end
+
+    # @param survey_questions [Array<Pd::SurveyQuestion>]
+    # @return [Array<Hash>]
+    def parse_survey(survey_questions)
+      parsed_questions = []
+
+      survey_questions&.each do |sq|
+        # sq is a record in Pd::SurveyQuestion model.
+        # sq.questions is an array of hashes, and each hash is content of a question.
+        # E.g. "[{'id': 1, 'type': 'number', 'name': 'overallRating', 'text': 'Overall Rating'}"]
+        JSON.parse(sq.questions).each do |question|
+          question.symbolize_keys!
+          form_key = {form_id: sq.form_id}
+
+          # Matrix question is a collection of sub questions and answer options;
+          # break it into multiple sub questions.
+          if question[:type] == TYPE_MATRIX
+            parse_matrix_question(question).each do |sub_question|
+              parsed_questions << form_key.merge(sub_question)
+            end
+          else
+            parsed_questions << form_key.merge(question)
+          end
+        end
+      end
+
+      parsed_questions
+    end
+
+    # Parse a matrix question into array of sub questions
+    # @param question [Hash]
+    # @return [Array<Hash>]
+    def parse_matrix_question(question)
+      results = []
+      question[:sub_questions].each do |sub_q|
+        # Replace :id, :name, :text, :type values of a sub question.
+        # Keep other keys from the original question, except for :sub_questions key.
+        tmp = question.except(:id, :name, :text, :type, :sub_questions)
+
+        tmp[:id] = compute_descendant_key(question[:id], sub_q)
+        tmp[:name] = compute_descendant_key(question[:name], sub_q)
+        tmp[:text] = "#{question[:text]}->#{sub_q}"
+        tmp[:type] = TYPE_RADIO
+
+        # Add specific keys for a sub question
+        tmp[:max_value] = question[:options].length
+        tmp[:parent] = question[:name]
+
+        results << tmp
+      end
+
+      results
+    end
+
+    # Compute a descendant key based on original value and sub_value digest
+    def compute_descendant_key(value, sub_value)
+      "#{value}_#{compute_str_digest(sub_value)}"
+    end
+
+    # Compute message digest using SHA256 and cut it to a fixed length.
+    def compute_str_digest(str)
+      # SHA256 returns a 256-bit digest, which is 64-character string in hex
+      Digest::SHA256.hexdigest(str || '')[0, STRING_DIGEST_LENGTH - 1]
     end
   end
 end
