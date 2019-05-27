@@ -169,5 +169,3 @@ Each of these activities can either be used alone or with other computer science
 
 
 [/content]
-
-<link rel="stylesheet" type="text/css" href="../morestyle.css"/>
