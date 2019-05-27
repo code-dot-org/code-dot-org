@@ -309,10 +309,14 @@ export default class SmallFooter extends React.Component {
   }
 
   renderMoreMenu(styles) {
-    const userAlreadyReportedAbuse = _.includes(
-      JSON.parse(cookies.get('reported_abuse')),
-      this.props.channel
-    );
+
+    const userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') ?
+      null :
+      _.includes(
+        JSON.parse(cookies.get('reported_abuse')),
+        this.props.channel
+      );
 
     if (userAlreadyReportedAbuse) {
       _.remove(this.props.menuItems, function(menuItem) {
