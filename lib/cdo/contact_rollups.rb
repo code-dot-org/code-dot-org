@@ -4,6 +4,7 @@ require src_dir 'database'
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
 require 'json'
+require 'aws-sdk-rds'
 
 class ContactRollups
   # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
@@ -144,6 +145,11 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
+  DATABASE_CLUSTER_NAME = "production-aurora"
+  DATABASE_CLUSTER_ID = "#{DATABASE_CLUSTER_NAME}-cluster"
+  DATABASE_CLUSTER_CLONE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone-cluster"
+  DATABASE_CLUSTER_INSTANCE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone"
+
   def self.build_contact_rollups
     start = Time.now
 
@@ -187,6 +193,71 @@ class ContactRollups
 
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
+  end
+
+  # Delete database cluster clone if it exists.
+  def self.delete_database_clone
+    rds_client = Aws::RDS::Client.new
+    begin
+      existing_cluster_response = rds_client.describe_db_clusters({db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID})
+      log "Cluster clone exists and is in state - #{existing_cluster_response.db_clusters.first.status}.  Deleting cluster and its instances."
+      existing_cluster_response.db_clusters.first.db_cluster_members.each do |instance|
+        log "Deleting clone instance - #{instance.db_instance_identifier}"
+        rds_client.delete_db_instance(
+          {
+            db_instance_identifier: instance.db_instance_identifier,
+            skip_final_snapshot: true,
+          }
+        )
+        rds_client.wait_until(:db_instance_deleted, {db_instance_identifier: instance.db_instance_identifier}, {max_attempts: 20, delay: 60})
+      end
+      log "Deleting clone cluster - #{DATABASE_CLUSTER_CLONE_ID}"
+      rds_client.delete_db_cluster(
+        {
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+          skip_final_snapshot: true,
+        }
+      )
+      sleep 120 # TODO: Implement a waiter for deletion of the DBCluster.
+    rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+      log "Cluster #{DATABASE_CLUSTER_CLONE_ID} does not exist from previous execution of Contact Rollups. #{error.message}.  No need to delete it."
+    end
+  end
+
+  # Clone the production Aurora database cluster to use for the Contact Rollups batch aggregation queries.
+  def self.create_database_clone
+    rds_client = Aws::RDS::Client.new
+    begin
+      log "Creating clone of production database cluster - #{DATABASE_CLUSTER_CLONE_ID}"
+      rds_client.restore_db_cluster_to_point_in_time(
+        {
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+          restore_type: 'copy-on-write',
+          source_db_cluster_identifier: DATABASE_CLUSTER_ID,
+          use_latest_restorable_time: true,
+          db_subnet_group_name: 'vpc-dbsubnetgroup-16szux88i4hex',
+          vpc_security_group_ids: ['sg-1715936c'],
+          tags: [
+            {
+              key: 'environment',
+              value: 'production',
+            },
+          ]
+        }
+      )
+      rds_client.create_db_instance(
+        {
+          db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID,
+          db_instance_class: 'db.r4.2xlarge',
+          engine: 'aurora-mysql', # Aurora MySQL 5.7
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        }
+      )
+      rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID}, {max_attempts: 20, delay: 60})
+    rescue Aws::Waiters::Errors::WaiterFailed => error
+      log "Error waiting for cluster clone instance to become available. #{error.message}"
+    end
+    log "Done creating clone of production database cluster."
   end
 
   def self.sync_contact_rollups_to_main
