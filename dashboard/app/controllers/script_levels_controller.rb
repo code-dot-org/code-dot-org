@@ -182,9 +182,15 @@ class ScriptLevelsController < ApplicationController
       flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
     end
 
-    if current_user&.teacher? && params[:section_id]
-      @section = current_user.sections.find_by(id: params[:section_id])
-      @user = @section&.students&.find_by(id: params[:user_id])
+    if current_user&.teacher?
+      if params[:section_id]
+        @section = current_user.sections.find_by(id: params[:section_id])
+        @user = @section&.students&.find_by(id: params[:user_id])
+      # If we have no url param and only one section make sure that is the section we are using
+      elsif current_user.sections.length == 1
+        @section = current_user.sections[0]
+        @user = @section&.students&.find_by(id: params[:user_id])
+      end
     end
 
     if params[:id]
