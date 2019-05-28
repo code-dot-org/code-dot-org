@@ -120,7 +120,34 @@ export function runEvents() {
 
 export function addBehavior(sprite, behavior) {
   if (sprite && behavior) {
-    behaviors.push({sprite: sprite, func: behavior.func});
+    if (!behaviors.find(b => b.sprite === sprite && b.name === behavior.name)) {
+      behaviors.push({
+        name: behavior.name,
+        sprite: sprite,
+        func: behavior.func
+      });
+    }
+  }
+}
+
+export function removeAllBehaviors(sprite) {
+  let newBehaviors = [];
+  behaviors.forEach(behavior => {
+    if (behavior.sprite !== sprite) {
+      newBehaviors.push(behavior);
+    }
+  });
+  behaviors = newBehaviors;
+}
+
+export function removeBehavior(sprite, behavior) {
+  if (sprite && behavior) {
+    let index = behaviors.findIndex(
+      b => b.sprite === sprite && b.name === behavior.name
+    );
+    if (index !== -1) {
+      behaviors.splice(index, 1);
+    }
   }
 }
 
