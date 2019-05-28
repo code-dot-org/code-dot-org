@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
-import TopInstructionsCSF from '@cdo/apps/templates/instructions/TopInstructionsCSF';
 import TopInstructionsCSP from '@cdo/apps/templates/instructions/TopInstructionsCSP';
 
 const DEFAULT_PROPS = {
@@ -12,18 +11,9 @@ const DEFAULT_PROPS = {
 };
 
 describe('TopInstructions', () => {
-  it('is a TopInstructionsCSP if passed the "noInstructionsWhenCollapsed" property', () => {
-    const wrapper = shallow(
-      <TopInstructions {...DEFAULT_PROPS} noInstructionsWhenCollapsed={true} />
-    );
+  it('is a TopInstructionsCSP if instructions to display and not hidden', () => {
+    const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(<TopInstructionsCSP />);
-  });
-
-  it('is a TopInstructionsCSF if not passed the "noInstructionsWhenCollapsed" property', () => {
-    const wrapper = shallow(
-      <TopInstructions {...DEFAULT_PROPS} noInstructionsWhenCollapsed={false} />
-    );
-    expect(wrapper).to.containMatchingElement(<TopInstructionsCSF />);
   });
 
   it('is an empty div if passed the "hidden" property', () => {
