@@ -20,19 +20,19 @@ level 'CSDU6 Innovation_2018_2019', named: true
 
 stage 'Designing Screens with Code', flex_category: 'csd6_1'
 level 'CSD U6L02 TFMD_2019', named: true
-level 'CSD U6 setProperty Map_2019', named: true
 level 'CSD U6 setProperty predict app_2019', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text_2019', progression: 'Setting Properties'
-level 'CSD U6 setProperty xy_2019', progression: 'Setting Properties'
+level 'CSD U6 setProperty xy_2019', progression: 'Setting Properties', assessment: true
+level 'CSD U6 setProperty Map_2019', named: true
 level 'CSD U6 setProperty xy click_2019', progression: 'Events and Properties'
 level 'CSD U6 setProperty xy random_2019', progression: 'Events and Properties'
 level 'CSD U6 setProperty hidden_2019', progression: 'Events and Properties'
-level 'CSD U6 setProperty hidden 2_2019', progression: 'Events and Properties'
+level 'CSD U6 setProperty hidden 2_2019', progression: 'Events and Properties', assessment: true
 level 'CSD U6 emotion machine example_2019', named: true
 level 'CSD U6 emotion machine 1_2019', progression: 'Building an App'
 level 'CSD U6 emotion machine 2_2019', progression: 'Building an App'
 level 'CSD U6 emotion machine 3_2019', progression: 'Building an App'
-level 'CSD U6 emotion machine 4_2019', progression: 'Building an App'
+level 'CSD U6 emotion machine 4_2019', progression: 'Building an App', assessment: true
 
 stage 'The Circuit Playground', flex_category: 'csd6_1'
 level 'CSD U6L03 TFMD_2019', named: true
@@ -43,12 +43,12 @@ level 'CSD U6 test LED_2019', progression: 'Using the LED'
 level 'CSD U6 predict LED button_2019', progression: 'Using the LED'
 level 'CSD U6 add LED button_2019', progression: 'Using the LED'
 level 'CSD U6 LED toggle_2019', progression: 'Using the LED'
-level 'CSD U6 LED all_2019', progression: 'Using the LED'
+level 'CSD U6 LED all_2019', progression: 'Using the LED', assessment: true
 level 'CSD U6 LED create intro_2018_2019', progression: 'LED Apps'
 level 'CSD U6 light show_2019', progression: 'LED Apps'
 level 'CSD U6 Catch the Mouse_2019', progression: 'LED Apps'
 level 'CSD U6 create LED app_2019', progression: 'LED Apps'
-level 'CSD U6 create LED app 2_2019', progression: 'LED Apps'
+level 'CSD U6 create LED app 2_2019', progression: 'LED Apps', assessment: true
 
 stage 'Input Unplugged', flex_category: 'csd6_1'
 level 'CSD U6L04 TFMD_2019', named: true
@@ -57,18 +57,18 @@ level 'CSDU6 AppLab Input 1_2019', progression: 'Input Examples'
 
 stage 'Board Events', flex_category: 'csd6_1'
 level 'CSD U6L05 TFMD_2019', named: true
-level 'CSD onBoardEvent Map_2019', named: true
 level 'CSDU6 - button LED prediction_2019', progression: 'Board Events'
 level 'CSDU6 - LED buttonL_2019', progression: 'Board Events'
-level 'CSDU6 - LED toggle buttonL up_2019', progression: 'Board Events'
-level 'CSD Board Buttons Map_2019', named: true
+level 'CSDU6 - LED toggle buttonL up_2019', progression: 'Board Events', assessment: true
+level 'CSD onBoardEvent Map_2019', named: true
 level 'CSDU6 - lightswitch toggleswitch_2019', progression: 'Using the Switch'
 level 'CSDU6 - toggle state LED prediction_2019', progression: 'Using the Switch'
 level 'CSDU6 - toggleswitch state setProp_2019', progression: 'Using the Switch'
-level 'CSD Buzzer Map_2019', named: true
+level 'CSD Board Buttons Map_2019', named: true
 level 'CSDU6 - buzzer intro_2019', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration_2019', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2019', progression: 'The Buzzer'
+level 'CSD Buzzer Map_2019', named: true
 bonus 'CSDU6 - board event challenge_2019'
 
 stage 'Getting Properties', flex_category: 'csd6_1'
