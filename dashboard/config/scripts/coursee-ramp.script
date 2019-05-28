@@ -1,6 +1,5 @@
 stage 'Real Life Algorithms: Dice Race'
 level 'DiceRace'
-curriculum_umbrella 'CSF'
 
 stage 'Introduction'
 level 'courseE_video_ramp1'
