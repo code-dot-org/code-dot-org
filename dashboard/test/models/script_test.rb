@@ -318,6 +318,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal frozen, Script.get_from_cache(frozen_id)
   end
 
+  test 'get_from_cache raises if called with a family_name' do
+    error = assert_raises do
+      Script.get_from_cache('coursea')
+    end
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: coursea', error.message
+  end
+
   test 'get_family_from_cache uses script_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
     assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
