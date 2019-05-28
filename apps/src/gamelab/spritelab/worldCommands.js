@@ -1,4 +1,6 @@
 import * as spriteUtils from './spriteUtils.js';
+import {getStore} from '../../redux';
+import {addConsoleMessage} from '../textConsoleModule';
 
 export const commands = {
   hideTitleScreen() {
@@ -20,5 +22,8 @@ export const commands = {
   showTitleScreen(title, subtitle) {
     spriteUtils.title = title || '';
     spriteUtils.subtitle = subtitle || '';
+  },
+  printText(text) {
+    getStore().dispatch(addConsoleMessage({text: text}));
   }
 };

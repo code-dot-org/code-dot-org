@@ -155,6 +155,9 @@ var Spritelab = function() {
   this.commands.removeTint = function(spriteId) {
     commands.removeTint.apply(this, [spriteId]);
   };
+  this.commands.printText = function(text) {
+    commands.printText.apply(this, [text]);
+  };
 
   // OTHER
   this.commands.comment = function(text) {
