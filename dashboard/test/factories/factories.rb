@@ -642,6 +642,27 @@ FactoryGirl.define do
 
   factory :script do
     sequence(:name) {|n| "bogus-script-#{n}"}
+
+    factory :csf_script do
+      after(:create) do |csf_script|
+        csf_script.curriculum_umbrella = 'CSF'
+        csf_script.save
+      end
+    end
+
+    factory :csd_script do
+      after(:create) do |csd_script|
+        csd_script.curriculum_umbrella = 'CSD'
+        csd_script.save
+      end
+    end
+
+    factory :csp_script do
+      after(:create) do |csp_script|
+        csp_script.curriculum_umbrella = 'CSP'
+        csp_script.save
+      end
+    end
   end
 
   factory :featured_project do
