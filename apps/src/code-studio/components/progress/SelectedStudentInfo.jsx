@@ -108,6 +108,7 @@ export class SelectedStudentInfo extends React.Component {
               text={i18n.unsubmit()}
               color="blue"
               onClick={this.onUnsubmit}
+              id="unsubmit-button-uitest"
               disabled={level.status !== LevelStatus.submitted}
             />
           </div>

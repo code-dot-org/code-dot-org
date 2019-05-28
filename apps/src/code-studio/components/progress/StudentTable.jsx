@@ -70,7 +70,7 @@ class StudentTable extends React.Component {
     const selectedUserId = getSelectedUserId();
 
     return (
-      <table style={styles.table}>
+      <table style={styles.table} className="student-table">
         <tbody>
           <tr
             style={this.getRowStyle(selectedUserId, null)}

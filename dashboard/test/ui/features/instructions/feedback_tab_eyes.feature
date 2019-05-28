@@ -34,7 +34,8 @@ Feature: Feedback Tab Visibility
   #As teacher, reviewing work, submit feedback
     And I wait to see ".show-handle"
     Then I click selector ".show-handle .fa-chevron-left"
-    Then I click selector ".section-student .name a"
+    And I wait until element ".student-table" is visible
+    And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
     And I wait for the page to fully load
     Then I see no difference for "teacher giving feedback tab load"
 
