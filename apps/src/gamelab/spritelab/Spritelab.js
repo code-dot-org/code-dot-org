@@ -25,6 +25,7 @@ var Spritelab = function() {
   this.commands = {};
 
   this.commands.executeDrawLoopAndCallbacks = function() {
+    this.createEdgeSprites();
     drawBackground.apply(this);
     spriteUtils.runBehaviors.apply(this);
     spriteUtils.runEvents.apply(this);
@@ -39,6 +40,9 @@ var Spritelab = function() {
   this.commands.edgesDisplace = function(spriteId) {
     commands.edgesDisplace.apply(this, [spriteId]);
   };
+  this.commands.isTouchingEdges = function(spriteId) {
+    return commands.isTouchingEdges.apply(this, [spriteId]);
+  };
   this.commands.jumpTo = function(spriteId, location) {
     commands.jumpTo.apply(this, [spriteId, location]);
   };
@@ -47,6 +51,9 @@ var Spritelab = function() {
   };
   this.commands.moveInDirection = function(spriteId, distance, direction) {
     commands.moveInDirection.apply(this, [spriteId, distance, direction]);
+  };
+  this.commands.moveForward = function(spriteId, distance) {
+    commands.moveForward.apply(this, [spriteId, distance]);
   };
   this.commands.moveToward = function(spriteId, distance, target) {
     commands.moveToward.apply(this, [spriteId, distance, target]);

@@ -9,6 +9,7 @@ export const commands = {
       location = location();
     }
     var sprite = this.createSprite(location.x, location.y);
+    sprite.direction = 0;
     let spriteId = spriteUtils.addSprite(sprite);
     if (animation) {
       sprite.setAnimation(animation);

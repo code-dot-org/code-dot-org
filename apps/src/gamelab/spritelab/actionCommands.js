@@ -20,6 +20,16 @@ export const commands = {
     let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => this.edges.displace(sprite));
   },
+  isTouchingEdges(spriteId) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
+    let touching = false;
+    sprites.forEach(sprite => {
+      if (sprite.isTouching(this.edges)) {
+        touching = true;
+      }
+    });
+    return touching;
+  },
   jumpTo(spriteId, location) {
     if (!location) {
       return;
@@ -40,7 +50,16 @@ export const commands = {
       }
     });
   },
-  moveForward(sprite, distance) {},
+  moveForward(spriteId, distance) {
+    let sprites = spriteUtils.singleOrGroup(spriteId);
+    sprites.forEach(sprite => {
+      if (sprite.direction) {
+        let direction = sprite.direction % 360;
+        sprite.x += distance * Math.cos((direction * Math.PI) / 180);
+        sprite.y += distance * Math.sin((direction * Math.PI) / 180);
+      }
+    });
+  },
   moveInDirection(spriteId, distance, direction) {
     let sprites = spriteUtils.singleOrGroup(spriteId);
     let dirs = {
