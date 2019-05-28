@@ -29,8 +29,7 @@ class ScriptLevelsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def self.cachable_request?(request)
-    script_id = request.params[:script_id]
-    script = Script.get_from_cache(script_id) if script_id
+    script = ScriptLevelsController.get_script(request)
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
@@ -59,7 +58,8 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @script = ScriptLevelsController.get_script(request)
+
     if @script.redirect_to?
       redirect_to "/s/#{@script.redirect_to}/next"
       return
@@ -77,7 +77,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request, version_year: DEFAULT_VERSION_YEAR)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -182,9 +182,15 @@ class ScriptLevelsController < ApplicationController
       flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
     end
 
-    if current_user&.teacher? && params[:section_id]
-      @section = current_user.sections.find_by(id: params[:section_id])
-      @user = @section&.students&.find_by(id: params[:user_id])
+    if current_user&.teacher?
+      if params[:section_id]
+        @section = current_user.sections.find_by(id: params[:section_id])
+        @user = @section&.students&.find_by(id: params[:user_id])
+      # If we have no url param and only one section make sure that is the section we are using
+      elsif current_user.sections.length == 1
+        @section = current_user.sections[0]
+        @user = @section&.students&.find_by(id: params[:user_id])
+      end
     end
 
     if params[:id]
@@ -226,6 +232,16 @@ class ScriptLevelsController < ApplicationController
       end
 
     render json: stage.summary_for_lesson_plans
+  end
+
+  def self.get_script(request, version_year: nil)
+    script_id = request.params[:script_id]
+    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_from_cache(script_id, version_year: version_year)
+
+    raise ActiveRecord::RecordNotFound unless script
+    script
   end
 
   private
