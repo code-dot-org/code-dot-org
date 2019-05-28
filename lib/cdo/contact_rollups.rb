@@ -93,6 +93,12 @@ class ContactRollups
     course2
     course3
     course4
+    coursea-2017
+    courseb-2017
+    coursec-2017
+    coursed-2017
+    coursee-2017
+    coursef-2017
     coursea-2018
     courseb-2018
     coursec-2018
@@ -102,6 +108,8 @@ class ContactRollups
     20-hour
     express-2018
     pre-express-2018
+    express-2017
+    pre-express-2017
   ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
@@ -494,6 +502,8 @@ class ContactRollups
     add_role_from_script_sections_taught("CSF Teacher", CSF_SCRIPT_LIST)
     # CSD and CSP scripts are mapped to course - identify CSD/CSP teachers
     # that way
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2017")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2017")
     add_role_from_course_sections_taught("CSD Teacher", "csd-2018")
     add_role_from_course_sections_taught("CSP Teacher", "csp-2018")
     log_completion(start)
