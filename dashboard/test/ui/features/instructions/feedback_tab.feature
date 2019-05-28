@@ -58,7 +58,8 @@ Otherwise don't show feedback tab
   #As teacher, reviewing work, submit feedback
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see ".editor-column"
   And I wait to see "#ui-test-submit-feedback"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -92,7 +93,8 @@ Otherwise don't show feedback tab
   #As teacher, reviewing work, feedback tab is visible
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see ".uitest-feedback"
   And I wait until ".editor-column" contains text "Nice!"
   And element "#rubric-input-performanceLevel1" is not visible
