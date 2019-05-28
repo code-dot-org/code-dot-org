@@ -1,9 +1,13 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'aws-sdk-rds'
+
+# TODO: (suresh) Move database cluster name (environment-specific configuration setting) to Chef Secrets.
+DATABASE_CLUSTER_NAME = "production-aurora"
+DATABASE_CLUSTER_ID = "#{DATABASE_CLUSTER_NAME}-cluster"
+DATABASE_CLUSTER_CLONE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone-cluster"
+DATABASE_CLUSTER_INSTANCE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone"
 
 class ContactRollupsValidation
-  # Connection to read from Pegasus reporting database.
-  PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
-
   DATA_CHECKS = [
     {
       name: "Rollup total record count",
@@ -307,12 +311,13 @@ class ContactRollupsValidation
 
   def self.validate_contact_rollups
     overall_pass = true
+    initialize_connection_to_database_clone
 
     output = []
     # run each validation check
     DATA_CHECKS.each do |check|
       # run the validation query and get the returned count
-      count = PEGASUS_REPORTING_DB_READER[check[:query]].first.first[1]
+      count = @pegasus_clone_db_reader[check[:query]].first.first[1]
       # determine if the count is within validation bounds (inclusive)
       pass = count >= check[:min] && count <= check[:max]
 
@@ -343,5 +348,27 @@ class ContactRollupsValidation
   def self.log(s)
     # puts s unless Rails.env.test?
     CDO.log.info s
+  end
+
+  private
+
+  def initialize_connection_to_database_clone
+    rds_client = Aws::RDS::Client.new
+    clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
+      {
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
+        max_records: 1
+      }
+    ).first.endpoint
+
+    # Connection to read from Pegasus clone database.
+    pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
+    pegasus_clone_reader_uri.host = clone_db_endpoint
+    @pegasus_clone_db_reader = sequel_connect(
+      pegasus_clone_reader_uri.to_s,
+      pegasus_clone_reader_uri.to_s,
+      query_timeout: MAX_EXECUTION_TIME_SEC
+    )
   end
 end
