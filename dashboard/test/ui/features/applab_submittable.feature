@@ -41,12 +41,13 @@ Scenario: Submit anything, teacher is able to unsubmit
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see "#teacher-panel-container"
-  Then I wait until element "div:contains(Unsubmit)" is visible
-  And I click selector "div:contains(Unsubmit)" to load a new page
+  Then I wait until element "#unsubmit-button-uitest" is visible
+  And I press "#unsubmit-button-uitest" using jQuery
 
-  # Shouldn't be able to see unsubmit anymore
+  # Unsubmit should be disabled now
+  And I wait for the page to fully load
   And I wait to see ".show-handle"
   And I wait until element ".student-table" is visible
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And element "div:contains(Unsubmit)" is disabled
+  Then I wait until element "#unsubmit-button-uitest" is visible
+  And element "#unsubmit-button-uitest" is disabled
   Then I sign out
