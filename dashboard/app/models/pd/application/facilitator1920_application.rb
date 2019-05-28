@@ -98,10 +98,10 @@ module Pd::Application
     def self.fit_cohort(applications_query = all)
       applications_query.
         where(type: name).
+        where(course: [:csd, :csp]).
         where(status: [:accepted, :withdrawn]).
         where.not(locked_at: nil).
-        includes(:pd_fit_weekend1920_registration).
-        select(&:fit_workshop_id?)
+        includes(:pd_fit_weekend1920_registration)
     end
 
     # @override
