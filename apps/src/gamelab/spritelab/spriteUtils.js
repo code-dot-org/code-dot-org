@@ -1,6 +1,7 @@
 var spriteId = 0;
 var nativeSpriteMap = {};
 var inputEvents = [];
+var behaviors = [];
 export var background;
 export var title = '';
 export var subtitle = '';
@@ -41,6 +42,7 @@ export function resetSpriteMap() {
   nativeSpriteMap = {};
   spriteId = 0;
   inputEvents = [];
+  behaviors = [];
 }
 
 export function addEvent(type, args, callback) {
@@ -113,5 +115,17 @@ export function runEvents() {
     if (checkEvent(inputEvent, this)) {
       inputEvent.callback();
     }
+  });
+}
+
+export function addBehavior(sprite, behavior) {
+  if (sprite && behavior) {
+    behaviors.push({sprite: sprite, func: behavior.func});
+  }
+}
+
+export function runBehaviors() {
+  behaviors.forEach(behavior => {
+    behavior.func(behavior.sprite.id);
   });
 }

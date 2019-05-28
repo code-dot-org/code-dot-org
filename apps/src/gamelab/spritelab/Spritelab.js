@@ -26,6 +26,7 @@ var Spritelab = function() {
 
   this.commands.executeDrawLoopAndCallbacks = function() {
     drawBackground.apply(this);
+    spriteUtils.runBehaviors.apply(this);
     spriteUtils.runEvents.apply(this);
     this.drawSprites();
     updateTitle.apply(this);
@@ -55,6 +56,14 @@ var Spritelab = function() {
   };
   this.commands.turn = function(spriteId, n, direction) {
     commands.turn.apply(this, [spriteId, n, direction]);
+  };
+
+  // BEHAVIOR commands
+  this.commands.addBehaviorSimple = function(spriteId, behavior) {
+    commands.addBehavior.apply(this, [spriteId, behavior]);
+  };
+  this.commands.Behavior = function(callback, extraArgs) {
+    return commands.Behavior.apply(this, [callback, extraArgs]);
   };
 
   // EVENT commands

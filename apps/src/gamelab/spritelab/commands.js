@@ -1,4 +1,5 @@
 import {commands as actionCommands} from './actionCommands';
+import {commands as behaviorCommands} from './behaviorCommands';
 import {commands as eventCommands} from './eventCommands';
 import {commands as locationCommands} from './locationCommands';
 import {commands as spriteCommands} from './spriteCommands';
@@ -11,6 +12,7 @@ commands.comment = function(text) {
 };
 
 Object.assign(commands, actionCommands);
+Object.assign(commands, behaviorCommands);
 Object.assign(commands, eventCommands);
 Object.assign(commands, locationCommands);
 Object.assign(commands, spriteCommands);
