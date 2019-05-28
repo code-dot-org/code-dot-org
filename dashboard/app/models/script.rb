@@ -427,14 +427,7 @@ class Script < ActiveRecord::Base
     script = Script.with_associated_models.find_by(find_by => id_or_name)
     return script if script
 
-    unless is_id
-      # We didn't find a script matching id_or_name. Next, look for a script
-      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
-      return script_with_redirect if script_with_redirect
-    end
-
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name|family_name=#{id_or_name}")
+    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   # Returns the script with the specified id, or a script with the specified
@@ -450,6 +443,10 @@ class Script < ActiveRecord::Base
   # @param version_year [String] If specified, when looking for a script to redirect
   #   to within a script family, redirect to this version rather than the latest.
   def self.get_from_cache(id_or_name, version_year: nil)
+    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
+    end
+
     return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
     cache_key_suffix = version_year ? "/#{version_year}" : ''
     cache_key = "#{id_or_name}#{cache_key_suffix}"
