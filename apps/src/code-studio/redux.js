@@ -9,11 +9,13 @@ import shareDialog from './components/shareDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import libraryShareDialog from './components/libraryShareDialogRedux';
+import applabLibrary from './components/applabLibraryRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 
 registerReducers({
+  applabLibrary,
   header,
   progress,
   teacherSections,
