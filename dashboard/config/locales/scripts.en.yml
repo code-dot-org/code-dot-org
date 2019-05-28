@@ -12173,6 +12173,16 @@ en:
               name: Libraries Explore
             Libraries Investigate:
               name: Libraries Investigate
+            Libraries Mini PT:
+              name: Libraries Mini PT
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Student Survey (Libraries):
+              name: Student Survey (Libraries)
+            Teacher Survey (Libraries):
+              name: Teacher Survey (Libraries)
           title: 'Unit 7: Functions and Libraries'
           description_audience: ''
           description_short: ''
