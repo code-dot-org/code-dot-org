@@ -13,13 +13,6 @@ function processResponse(data)
 
 $(document).ready(function()
 {
-  $('#share-fb a').bind('click', function() {
-    $("#share-fb").hide(); $("#like-fb").css('display', 'inline-block');
-  });
-  $('#share-twitter a').bind('click', function() {
-    $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
-  });
-
   // placeholder text for non-HTML5 browsers
   $('input[type=text], textarea').placeholder();
   $('input[type=email], textarea').placeholder();
