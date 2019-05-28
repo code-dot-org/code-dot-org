@@ -229,8 +229,6 @@ it:
         2-3_Maze_Loops_20_a: Cerca di individuare un percorso a gradini per capire come puoi sfruttare un ciclo `ripeti ... volte`.
       2-3 Maze Loops 21_authored_hint:
         2-3_Maze_Loops_21_a: Se fai fatica ad individuare il percorso a gradini, prova a coprire con le dita i tratti bloccati dalle piante carnivore.
-      4-5 Artist 1_authored_hint:
-        4-5_Artist_1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       4-5 Artist 11_authored_hint:
         4-5_Artist_11_a: All'interno del ciclo, dopo ogni linea, ricordati di far tornare indietro l'artista e farlo saltare alla nuova posizione.
       4-5 Artist 3_authored_hint:
@@ -4133,6 +4131,9 @@ it:
           -   disegna un triangolo
           -   salta in avanti di 50 pixel
           -   gira a destra di 90 gradi
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto 100. '
       course2_bee_conditionals_challenge1_authored_hint:
@@ -6418,21 +6419,21 @@ it:
         courseB_collector_loops_challenge2a_b: Guarda questo possibile percorso. Riesci a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops1_2019_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
@@ -7442,7 +7443,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -7453,7 +7454,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -7464,7 +7465,7 @@ it:
           <xml>
           <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="VALUE">Hi there.</title>
+          <title name="VALUE">Ciao!</title>
           </block>
           </xml>
         courseC_PlayLab_events2_b: Usa il menù a discesa (▼) del secondo blocco `il personaggio ... dice` per specificare quale personaggio deve parlare.
@@ -8230,12 +8231,6 @@ it:
           <title name="SPRITE1">1</title>
           <title name="SPRITE2">0</title>
           </block></xml>
-      courseC_flappy_events1_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
-      courseC_flappy_events1_2018_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseC_flappy_events1_2019_authored_hint:
-        courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events2_authored_hint:
         courseC_flappy_events2_a: 'Il blocco che devi aggiungere si chiama `imposta una velocità ...`. '
         courseC_flappy_events2_b: Collega il blocco `imposta una velocità ...` al blocco `quando si clicca su "Esegui"` per risolvere questo esercizio.
@@ -8850,15 +8845,15 @@ it:
         courseC_starWars_loops1_b: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseC_starWars_loops1_c: Devi andare avanti cinque volte per risolvere questo esercizio.
       courseC_starWars_loops10_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2018_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops10_2019_authored_hint:
-        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti ? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
+        courseC_starWars_loops10_a: Questo schema non ricorda dei gradini giganti? Vedi se riesci a sfruttare ciò che hai imparato nei precedenti esercizi per fare le curve giuste.
         courseC_starWars_loops10_b: Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
         courseC_starWars_loops10_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio.
       courseC_starWars_loops1_2018_authored_hint:
@@ -8889,13 +8884,13 @@ it:
         courseC_starWars_loops4_b: 'Ogni ciclo `ripeti ... volte` avrà una sola istruzione al suo interno: `vai avanti`.'
       courseC_starWars_loops5_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`, una curva e infine un ciclo.
       courseC_starWars_loops5_2018_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`, una curva e infine un ciclo.
       courseC_starWars_loops5_2019_authored_hint:
         courseC_starWars_loops5_b: Per far muovere BB-8 verso il basso, devi farlo girare e poi farlo andare avanti.
-        courseC_starWars_loops5_a: La soluzione migliore usa una curva, un singolo `vai avanti`, un'altra curva e infine un ciclo.
+        courseC_starWars_loops5_a: La soluzione migliore usa un blocco `vai avanti`, una curva e infine un ciclo.
       courseC_starWars_loops6_authored_hint:
         courseC_starWars_loops6_a: Prova a scrivere tutte le mosse su un pezzo di carta e cerca una sequenza che si ripete.
         courseC_starWars_loops6_b: Se vuoi usare meno blocchi, puoi mettere un ciclo `ripeti ... volte` all'interno di un altro! Si chiama **ciclo annidato**.
@@ -9396,6 +9391,15 @@ it:
         courseD_artist_nestedLoops_challenge1_b: Aggiungi le istruzioni per cambiare il colore in verde e disegnare un triangolo con lati di 50 pixel e curve di 120 gradi a sinistra.
         courseD_artist_nestedLoops_challenge1_c: Dopo aver disegnato entrambe le forme, dovrai saltare avanti di 50 pixel prima di girare a destra di 90 gradi.
         courseD_artist_nestedLoops_challenge1_d: Per concludere, metti tutte le istruzioni all'interno di un ciclo `ripeti 4 volte`.
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
       courseD_artist_project1_authored_hint:
         courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
@@ -10809,22 +10813,22 @@ it:
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso, quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while_challenge1_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2018_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2019_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge2_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge2_2018_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_harvester_nested_loops_challenge1_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: 'Prova a seguire questo percorso per raggiungere tutte le pannocchie! '
@@ -10839,21 +10843,21 @@ it:
         courseD_harvester_nested_loops_challenge1_b: Per raccogliere più di una pannocchia, devi usare più volte il blocco `prendi pannocchia`.
         courseD_harvester_nested_loops_challenge1_c: Per risolvere questo esercizio, avrai bisogno di mettere un piccolo ciclo all'interno del ciclo principale!
       courseD_iceage_loops1_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops1_2019_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
@@ -11557,7 +11561,6 @@ it:
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati, l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare quella successiva.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019_authored_hint:
         courseD_artist_functions8_f: Ti basterà un unico blocco `vai avanti`, ma serviranno parecchi blocchi `salta in avanti` e `salta indietro`!
         courseD_artist_functions8_a: |-
@@ -11575,7 +11578,6 @@ it:
 
           ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_c: Alla fine di ogni fila traslata di quadrati, l'artista dovrà saltare in basso e indietro prima di iniziare a disegnare quella successiva.
-        courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8b_2018_authored_hint:
         courseD_artist_functions8_f: Hai solo bisogno di un blocco `vai avanti` se stai procedendo nel modo corretto!
         courseD_artist_functions8_a: Inizia creando una funzione che disegna un quadrato, poi prova a farne un'altra che disegna una fila di quadrati.
@@ -13487,14 +13489,12 @@ it:
       courseF_artist_fwp6_2018_authored_hint:
         courseF_artist_fwp6_a: Va benissimo sperimentare il comportamento della funzione per capire come si comporta al variare del valore dei parametri.
       courseF_artist_fwp_challenge2_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di ottagoni ognuno con i lati lunghi `counter` (<i>contatore</i>) pixel.
         courseF_artist_fwp_challenge1_c: La funzione che disegna l'ottagono è chiamata dall'interno di un ciclo `ripeti con counter` che conta all'indietro da 200 a 2 con passo 2.
         courseF_artist_fwp_challenge1_d: Ad ogni ripetizione del ciclo `ripeti con counter` devi girare di 22.5 gradi.
         courseF_artist_fwp_challenge1_e: Il valore di `counter` controlla sia la larghezza del pennello che il colore (diminuendo il "rosso" e aumentando sia il "verde" che il "blu").
         courseF_artist_fwp_challenge1_f: <b>Soluzione:</b> Se vuoi, <a href="https://studio.code.org/c/159877686">clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
       courseF_artist_fwp_challenge2_2018_authored_hint:
-        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseF_artist_fwp_challenge1_b: Il disegno è formato da una serie di ottagoni ognuno con i lati lunghi `counter` (<i>contatore</i>) pixel.
         courseF_artist_fwp_challenge1_c: La funzione che disegna l'ottagono è chiamata dall'interno di un ciclo `ripeti con counter` che conta all'indietro da 200 a 2 con passo 2.
         courseF_artist_fwp_challenge1_d: Ad ogni ripetizione del ciclo `ripeti con counter` devi girare di 22.5 gradi.
@@ -13546,14 +13546,12 @@ it:
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019_authored_hint:
         courseF_artist_variables4_a: Il codice non sarà molto diverso da quello dell'esercizio precedente, tranne per il fatto che dovrai girare l'artista per farlo saltare in basso, quindi girarlo di nuovo per farlo saltare in avanti ancora una volta.
         courseF_artist_variables4_c: |-
           Questo è lo schema che il tuo artista dovrà seguire:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
-        courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables5_authored_hint:
         courseF_artist_variables5_a: La seconda metà del programma dovrebbe apparire quasi uguale alla prima metà, tranne per il fatto che dovrai girare a _sinistra_, saltare e poi girare a _destra_.
         courseF_artist_variables5_b: La prima parte del programma dovrà disegnare tre triangoli e la seconda parte dovrà disegnare gli altri tre.
@@ -13644,8 +13642,6 @@ it:
       courseF_artist_variables9_2019_authored_hint:
         courseF_artist_variables9_a: Per questo esercizio, tutto quello che devi fare è modificare quante volte il ciclo si ripete.
         courseF_artist_variables9_b: Assicurati che i blocchi che incrementano la variabile `length` (_lunghezza_) siano all'interno del ciclo in modo che le linee continuino ad allungarsi.
-      courseF_artist_variables_4_authored_hint:
-        courseF_artist_variables_4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_6_authored_hint:
         courseF_artist_variables_6_a: Grazie all'uso della variabile, devi modificare solo un numero in alto per svolgere questo esercizio.
       courseF_artist_variables_6a_authored_hint:

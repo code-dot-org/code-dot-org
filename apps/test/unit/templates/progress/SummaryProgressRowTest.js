@@ -23,7 +23,7 @@ describe('SummaryProgressRow', () => {
     const wrapper = shallow(
       <SummaryProgressRow {...baseProps} lessonIsVisible={() => false} />
     );
-    assert.equal(wrapper.node, null);
+    assert.equal(wrapper.html(), null);
   });
 
   it('renders with dashed border when lessonIsVisible for teachers only', () => {

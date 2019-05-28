@@ -681,7 +681,13 @@ ar:
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': كهف
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': مدينة
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': صحراء
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبكة
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': قوس قزح
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت الماء
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
       gamelab_setPosition:
         text: انقل {THIS} إلى الموضع {POSITION}
         options:
@@ -715,6 +721,11 @@ ar:
       gamelab_setup:
         text: الإعداد
       gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
+      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': عندما
@@ -756,6 +767,11 @@ ar:
             "'down'": الأسفل
             "'left'": اليسار
             "'right'": اليمين
+      gamelab_whenTouchingSet:
+        options:
+          CONDITION:
+            '"when"': عندما
+            '"while"': التكرار طالما
       gamelab_whileKey:
         options:
           KEY:

@@ -575,6 +575,7 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
       get action, action: action
@@ -600,6 +601,12 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
+
+      patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
+
+      patch 'user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
+
+      patch 'user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
@@ -630,6 +637,9 @@ Dashboard::Application.routes.draw do
           get 'get_feedback_from_teacher'
           get 'get_feedbacks'
         end
+        member do
+          post 'increment_visit_count'
+        end
       end
     end
   end
@@ -654,4 +664,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
+
+  get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
 end

@@ -303,13 +303,6 @@ tr:
     header:
       finished_hoc: Kod Saati'ni tamamladım
       sign_in_to_save: İlerleme kaydetmek için oturum açın
-      free_play:
-        playlab: Oyun Laboratuvarında Uygulama oluşturun
-        artist: Bir şeyler çizin
-        calculate: Bir şey hesaplamak
-        applab: Uygulama oluşturun
-        gamelab: Bir Oyun Laboratuvarı projesi yap
-        weblab: Bir Web Lab (beta) projesi yap
       my_dashboard: Kontrol panelim
       course_catalog: Kurs Kataloğu
       project_gallery: Projeler
@@ -1033,7 +1026,6 @@ tr:
     new: Yeni oluştur
     rename: Yeniden adlandır
     save: Kaydet
-    delete: Sil
     import: İçeri Aktar
     share_link_import_bad_link_header: Paylaşım bağlantısı tanınmıyor
     share_link_import_bad_link_body: 'Bu paylaşım bağlantısını içeri aktaramadık.
@@ -1043,7 +1035,6 @@ tr:
     share_link_import_error_body: Paylaşım bağlantısını içeri aktarırken bir sorun
       oluştu. Lütfen tekrar dene.
     exit: Kursa dön
-    my_projects: Projelerim
     project_gallery: Projeler
     publish: Yayımla
     unpublish: Yayımdan Kaldır
@@ -1058,8 +1049,6 @@ tr:
     advanced_share: Gelişmiş seçenekleri göster
     no_projects: Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden
       birini tıklatın.
-    close: Kapat
-    more: Daha Fazla
     name: İsim
     updated: Güncellendi
     project_type: Proje türü
@@ -1069,15 +1058,8 @@ tr:
     thumbnail_help: Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim
       oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat
       sürebilir.
-    really_delete: Silinsin mi?
-    delete_yes: Evet
-    delete_no: Hayır
     saved: Kaydedildi
     not_saved: Kaydedilmedi
-    cancel: İptal
-    delete_confirm_title: Bu projeyi silmek istediğinizden emin misiniz?
-    delete_confirm_text: Projeyi silmek onu kalıcı olarak Projelerim listenizden kaldıracaktır.
-      Bağlantı olarak paylaştığınız kimseler artık projenizi göremeyecekler.
     view_all: Projelerimi görüntüle
     remix: 'karıştır.
 

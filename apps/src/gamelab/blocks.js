@@ -6,7 +6,6 @@ import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
-import experiments from '@cdo/apps/util/experiments';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
 
 function sprites() {
@@ -154,7 +153,10 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (experiments.isEnabled('sprite-costumes')) {
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
         buttons = [
           {
             text: 'Draw',
@@ -181,6 +183,16 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
+    }
+  },
+  spritePointer: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   spritePicker: {

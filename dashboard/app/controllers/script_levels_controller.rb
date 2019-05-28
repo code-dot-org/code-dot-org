@@ -7,6 +7,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include ScriptConstants
+  include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -18,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
     if ScriptLevelsController.cachable_request?(request)
@@ -27,8 +29,7 @@ class ScriptLevelsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def self.cachable_request?(request)
-    script_id = request.params[:script_id]
-    script = Script.get_from_cache(script_id) if script_id
+    script = ScriptLevelsController.get_script(request)
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
@@ -57,7 +58,8 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @script = ScriptLevelsController.get_script(request)
+
     if @script.redirect_to?
       redirect_to "/s/#{@script.redirect_to}/next"
       return
@@ -75,7 +77,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request, version_year: DEFAULT_VERSION_YEAR)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -111,11 +113,12 @@ class ScriptLevelsController < ApplicationController
     end
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
       @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
-    elsif redirect_script = redirect_script(@script_level&.script, request.locale)
+    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
       return
@@ -223,6 +226,16 @@ class ScriptLevelsController < ApplicationController
       end
 
     render json: stage.summary_for_lesson_plans
+  end
+
+  def self.get_script(request, version_year: nil)
+    script_id = request.params[:script_id]
+    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_from_cache(script_id, version_year: version_year)
+
+    raise ActiveRecord::RecordNotFound unless script
+    script
   end
 
   private
@@ -436,6 +449,12 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def set_redirect_override
+    if params[:script_id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+    end
   end
 
   def redirect_script(script, locale)

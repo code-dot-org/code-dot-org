@@ -811,6 +811,7 @@ es:
         csd_pair_programming: Programación de pares
         csd_gamelab_functions: Llamar y definir funciones
         csd_applab_parameters: Funciones con parámetros
+        csd_applab_loops: Bucles en el App Lab
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

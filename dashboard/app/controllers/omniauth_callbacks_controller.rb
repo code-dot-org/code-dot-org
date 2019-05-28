@@ -93,7 +93,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         oauth_refresh_token: auth_hash.credentials.refresh_token
       }.to_json
     end
-    email = auth_hash.info.email
+    email = auth_hash.info.email || ""
     hashed_email = nil
     hashed_email = User.hash_email(email) unless email.blank?
     auth_option = AuthenticationOption.new(

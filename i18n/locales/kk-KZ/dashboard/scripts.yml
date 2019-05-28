@@ -1426,6 +1426,8 @@ kk:
               name: Кроудсорсинг
         coursed-2019:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
             Conditionals with Cards:
@@ -1433,7 +1435,7 @@ kk:
             Digital Citizenship:
               name: Сандық Азаматтық
             'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
+              name: Екілік Суреттер
             Artist Binary:
               name: Кейіпкер Екілік жүйе
         coursee-2019:
@@ -1444,8 +1446,8 @@ kk:
               name: Кіріккен Циклдер
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
-            Conditionals:
-              name: Шарттар
+            'Functions: Songwriting':
+              name: Ән Жазу
             Internet:
               name: Ғаламтор
             Crowdsourcing:
@@ -1478,16 +1480,16 @@ kk:
               name: 'бос жиын'
         coursec-2019:
           stages:
-            Building a Foundation:
-              name: Ғимарат Салу
             'Real-life Algorithms: Paper Planes':
               name: 'Қолданыстағы Алгоритмдер: Қағаз Ұшақтар'
+            'Events: The Big Event':
+              name: Үлкен Оқиға
             Binary Bracelets:
               name: Екілік Білезіктер
         coursea-2019:
           stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+            'Programming: Happy Maps':
+              name: Көңілді Карталар
             Going Places Safely:
               name: Қауіпсіз Жерді Табу
         courseb-2019:
@@ -1496,6 +1498,8 @@ kk:
               name: Қозғал, Қозғал
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
+            'Loops: Getting Loopy':
+              name: Ілмектерді үйрену
         pre-express-2019:
           stages:
             Move It, Move It:
@@ -1546,3 +1550,7 @@ kk:
               name: Картаға қатысты шартты белгілер
             Building a Foundation:
               name: Ғимарат Салу
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Миллиметрлік Бағдарламалау
