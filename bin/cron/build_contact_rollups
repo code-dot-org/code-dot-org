@@ -6,11 +6,22 @@ require 'cdo/contact_rollups_validation'
 require 'cdo/pardot'
 require 'cdo/chat_client'
 require 'cdo/only_one'
+require 'aws-sdk-rds'
 
 CHAT_CHANNEL = "cron-daily".freeze
 
+# TODO: (suresh) Move database cluster name (environment-specific configuration setting) to Chef Secrets.
+DATABASE_CLUSTER_NAME = "production-aurora"
+DATABASE_CLUSTER_ID = "#{DATABASE_CLUSTER_NAME}-cluster"
+DATABASE_CLUSTER_CLONE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone-cluster"
+DATABASE_CLUSTER_INSTANCE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone"
+
 def main
   time_start = Time.now
+
+  # Delete clone database cluster if it was left behind by the last execution of Contact Rollups.
+  delete_database_clone
+  create_database_clone
 
   # Build new daily table of contact rollups
   ContactRollups.build_contact_rollups
@@ -40,6 +51,74 @@ def main
 
   # Any other failures along the way will be unrescued exceptions that
   # go to HoneyBadger
+ensure
+  delete_database_clone
+end
+
+# Delete database cluster clone if it exists.
+def delete_database_clone
+  rds_client = Aws::RDS::Client.new
+  begin
+    existing_cluster_response = rds_client.describe_db_clusters({db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID})
+    @ChatClient.message(CHAT_CHANNEL, "Cluster clone exists and is in state - #{existing_cluster_response.db_clusters.first.status}.  Deleting cluster and its instances.")
+    existing_cluster_response.db_clusters.first.db_cluster_members.each do |instance|
+      @ChatClient.message(CHAT_CHANNEL, "Deleting clone instance - #{instance.db_instance_identifier}")
+      rds_client.delete_db_instance(
+        {
+          db_instance_identifier: instance.db_instance_identifier,
+          skip_final_snapshot: true,
+        }
+      )
+      rds_client.wait_until(:db_instance_deleted, {db_instance_identifier: instance.db_instance_identifier}, {max_attempts: 20, delay: 60})
+    end
+    @ChatClient.message(CHAT_CHANNEL, "Deleting clone cluster - #{DATABASE_CLUSTER_CLONE_ID}")
+    rds_client.delete_db_cluster(
+      {
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        skip_final_snapshot: true,
+      }
+    )
+    sleep 120 # TODO: (suresh) Implement a waiter for deletion of the DBCluster.
+  rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+    @ChatClient.message(CHAT_CHANNEL, "Cluster #{DATABASE_CLUSTER_CLONE_ID} does not exist from previous execution of Contact Rollups. #{error.message}.  No need to delete it.")
+  end
+end
+
+# Clone the production Aurora database cluster to use for the Contact Rollups batch aggregation queries.
+def create_database_clone
+  rds_client = Aws::RDS::Client.new
+  begin
+    @ChatClient.message(CHAT_CHANNEL, "Creating clone of production database cluster - #{DATABASE_CLUSTER_CLONE_ID}")
+    # TODO: (suresh) Copy attributes from existing cluster.
+    rds_client.restore_db_cluster_to_point_in_time(
+      {
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        restore_type: 'copy-on-write',
+        source_db_cluster_identifier: DATABASE_CLUSTER_ID,
+        use_latest_restorable_time: true,
+        db_subnet_group_name: 'vpc-dbsubnetgroup-16szux88i4hex',
+        vpc_security_group_ids: ['sg-1715936c'],
+        tags: [
+          {
+            key: 'environment',
+            value: 'production',
+          },
+        ]
+      }
+    )
+    rds_client.create_db_instance(
+      {
+        db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID,
+        db_instance_class: 'db.r4.2xlarge',
+        engine: 'aurora-mysql', # Aurora MySQL 5.7
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+      }
+    )
+    rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID}, {max_attempts: 20, delay: 60})
+  rescue Aws::Waiters::Errors::WaiterFailed => error
+    @ChatClient.message(CHAT_CHANNEL, "Error waiting for cluster clone instance to become available. #{error.message}")
+  end
+  @ChatClient.message(CHAT_CHANNEL, "Done creating clone of production database cluster.")
 end
 
 main if only_one_running?(__FILE__)
