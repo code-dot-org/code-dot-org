@@ -28,7 +28,7 @@ module Pd::SurveyPipeline
 
       @ws_submission = create :pd_workshop_daily_survey,
         form_id: @ws_form_id, pd_workshop: ws, user: teacher, day: day,
-        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": '+
+        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": '\
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
