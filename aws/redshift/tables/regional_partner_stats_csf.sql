@@ -59,7 +59,8 @@ pd_enrollments_with_year as
     last_name, 
     email, 
     user_id, 
-    school_year
+    school_year,
+    json_extract_path_text(properties, 'role') as role
   from dashboard_production_pii.pd_enrollments pde
     join dashboard_production_pii.pd_workshops pw
         on pde.pd_workshop_id = pw.id
@@ -85,6 +86,7 @@ select
          FIRST_VALUE(pde.first_name) OVER (PARTITION BY d.user_id  ORDER BY (CASE WHEN  pde.first_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as first_name,
          FIRST_VALUE(pde.last_name) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.last_name IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as last_name,
          FIRST_VALUE(pde.email) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as email,
+         FIRST_VALUE(pde.role) OVER (PARTITION BY d.user_id ORDER BY (CASE WHEN  pde.email IS NULL THEN 1 ELSE 2 END), pde.pd_workshop_id DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING ) as role,         
          'CS Fundamentals'::varchar as course,
          sy.school_year as school_year_trained,
          month_trained,
