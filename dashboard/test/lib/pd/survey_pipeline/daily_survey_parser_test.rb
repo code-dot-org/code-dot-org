@@ -28,7 +28,8 @@ module Pd::SurveyPipeline
 
       @ws_submission = create :pd_workshop_daily_survey,
         form_id: @ws_form_id, pd_workshop: ws, user: teacher, day: day,
-        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it"}'
+        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": '+
+          '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 
     test 'can parse survey' do
@@ -67,7 +68,12 @@ module Pd::SurveyPipeline
             answers: {
               '1' => '5.0',
               '2' => 'Option 2',
-              '3' => 'Like it'
+              '3' => 'Like it',
+              '4' => [
+                {text: 'Sub question 1', answer: 'Option 1'},
+                {text: 'Sub question 2', answer: 'Option 2'},
+                {text: 'Sub question 3', answer: 'Option 3'}
+              ]
             }
           }
         }
