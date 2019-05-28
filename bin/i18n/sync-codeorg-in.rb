@@ -96,7 +96,7 @@ def localize_interim_level_content
           end
           # long_instructions
           if level.long_instructions
-            script_strings['long_instructions'][url] = level.short_instructions
+            script_strings['long_instructions'][url] = level.long_instructions
           end
 
           # failure_message_overrides
