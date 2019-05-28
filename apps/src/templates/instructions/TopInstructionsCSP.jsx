@@ -518,6 +518,7 @@ class TopInstructionsCSP extends Component {
               {!this.props.noInstructionsWhenCollapsed &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <TopInstructionsCSF
+                    ref="instructions"
                     handleClickCollapser={this.handleClickCollapser}
                   />
                 )}
