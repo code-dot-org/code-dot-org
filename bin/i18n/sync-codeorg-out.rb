@@ -21,8 +21,8 @@ def sync_out
   distribute_translations
   copy_untranslated_apps
   rebuild_blockly_js_files
-  #puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  #run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
+  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
@@ -125,7 +125,8 @@ def distribute_course_content(locale)
 
   Dir.glob("i18n/locales/#{locale}/course_content/**/*.yml") do |loc_file|
     translated_data = YAML.load_file(loc_file)
-    translated_data = translated_data[locale]
+    first_key = translated_data.keys.first
+    translated_data = translated_data[first_key]
     next unless translated_data
     translated_data['data'].each do |type, type_data|
       type_data.each do |level_url, level_data|
@@ -141,7 +142,6 @@ def distribute_course_content(locale)
     type_data[locale]["data"] = Hash.new
     type_data[locale]["data"][type] = Hash.new
     type_data[locale]["data"][type] = translations
-    puts type
     sanitize_data_and_write(type_data, "dashboard/config/locales/#{type}.#{locale}.yml")
   end
 end
