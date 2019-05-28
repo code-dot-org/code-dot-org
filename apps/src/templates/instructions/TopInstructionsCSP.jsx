@@ -185,15 +185,17 @@ class TopInstructionsCSP extends Component {
         })
       );
     }
-    promises.push(
-      $.ajax({
-        url: `/levels/${serverLevelId}/get_rubric/`,
-        method: 'GET',
-        contentType: 'application/json;charset=UTF-8'
-      }).done(data => {
-        this.setState({rubric: data});
-      })
-    );
+    if (serverLevelId) {
+      promises.push(
+        $.ajax({
+          url: `/levels/${serverLevelId}/get_rubric/`,
+          method: 'GET',
+          contentType: 'application/json;charset=UTF-8'
+        }).done(data => {
+          this.setState({rubric: data});
+        })
+      );
+    }
 
     if (this.state.teacherViewingStudentWork) {
       promises.push(
