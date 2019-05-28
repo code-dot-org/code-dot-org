@@ -126,7 +126,8 @@ module Pd
             response[:submissions].each do |submission|
               submission_id = submission[:submission_id]
               begin
-                success = process_submission(submission)
+                questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+                success = process_submission(submission, questions_details)
                 imported += 1 if success
               rescue => e
                 # Store message and first line of backtrace for context
@@ -169,10 +170,23 @@ module Pd
         imported
       end
 
-      def process_submission(submission)
+      def process_submission(submission, questions_details)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-          model.answers = submission[:answers].to_json
+          dest_answers = {}
+
+          source_answers = submission[:answers]
+          source_answers.each do |key, value|
+            # We have an answer ID, but can we get a name instead of the ID?
+            question_detail = questions_details && questions_details.find {|q| q["id"] == key}
+            if question_detail && question_name = question_detail["name"]
+              dest_answers[question_name] = value
+            else
+              dest_answers[key] = value
+            end
+          end
+
+          model.answers = dest_answers.to_json
           form_id = submission[:form_id]
           submission_id = submission[:submission_id]
 

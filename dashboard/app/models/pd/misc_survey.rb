@@ -49,5 +49,9 @@ module Pd
     def self.unique_attributes
       [:user_id]
     end
+
+    def self.use_names_for_question_ids?
+      true
+    end
   end
 end
