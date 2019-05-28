@@ -484,7 +484,7 @@ class TopInstructionsCSP extends Component {
                     teacherOnly={teacherOnly}
                   />
                 )}
-              {this.props.noInstructionsWhenCollapsed &&
+              {!this.props.noInstructionsWhenCollapsed &&
                 this.props.viewAs === ViewType.Teacher &&
                 this.props.teacherMarkdown && (
                   <InstructionsTab
@@ -496,13 +496,14 @@ class TopInstructionsCSP extends Component {
                   />
                 )}
             </div>
-            {!this.props.isEmbedView && (
-              <CollapserIcon
-                collapsed={this.props.collapsed}
-                onClick={this.handleClickCollapser}
-                teacherOnly={teacherOnly}
-              />
-            )}
+            {!this.props.isEmbedView &&
+              this.props.noInstructionsWhenCollapsed && (
+                <CollapserIcon
+                  collapsed={this.props.collapsed}
+                  onClick={this.handleClickCollapser}
+                  teacherOnly={teacherOnly}
+                />
+              )}
           </div>
         </PaneHeader>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
