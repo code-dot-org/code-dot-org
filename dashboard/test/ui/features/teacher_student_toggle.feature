@@ -7,7 +7,7 @@ Scenario: Toggle on Multi Level
   Then I sign in as "Teacher_Daenerys"
   Then I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/1"
   And I see no difference for "page load"
-  Then I click selector ".show-handle .fa-chevron-left" once I see it
+  And I wait to see ".submitButton"
   Then I click selector ".uitest-viewAsStudent"
   And I see no difference for "view as student"
   Then I click selector ".uitest-viewAsTeacher"
@@ -15,7 +15,7 @@ Scenario: Toggle on Multi Level
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
 
-  And I click selector ".section-student .name a" to load a new page
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see ".header_popup_link"
   Then I open the progress drop down of the current page
   And I wait until element ".user-stats-block:contains(Jigsaw)" is visible
