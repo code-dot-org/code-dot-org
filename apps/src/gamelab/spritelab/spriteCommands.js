@@ -13,6 +13,13 @@ export const commands = {
     let spriteId = spriteUtils.addSprite(sprite);
     if (animation) {
       sprite.setAnimation(animation);
+      sprite.scale =
+        100 /
+        Math.max(
+          100,
+          sprite.animation.getHeight(),
+          sprite.animation.getWidth()
+        );
     }
     return spriteId;
   },
@@ -29,6 +36,13 @@ export const commands = {
     let sprites = spriteUtils.singleOrGroup(spriteId);
     sprites.forEach(sprite => {
       sprite.setAnimation(animation);
+      sprite.scale =
+        100 /
+        Math.max(
+          100,
+          sprite.animation.getHeight(),
+          sprite.animation.getWidth()
+        );
     });
   },
 
