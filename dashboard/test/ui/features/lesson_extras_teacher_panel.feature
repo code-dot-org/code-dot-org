@@ -12,9 +12,8 @@ Feature: Lesson extras teacher panel
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "section_id="
     And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
-    And I wait until element "td:eq(1)" is visible
-    When element "td:eq(1)" contains text "Sally"
-    And I click selector "tr:eq(1)" once I see it to load a new page
+    And I wait until element ".student-table" is visible
+    And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
 
     # Lesson extras individual puzzle page
     And I click selector "button:contains(Try it):eq(0)" once I see it to load a new page
