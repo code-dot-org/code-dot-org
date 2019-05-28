@@ -1034,15 +1034,15 @@ sk:
       courseC_artist_loopsPre1a: |-
         Teraz vlož tento kód do opakovacieho bloku a nastav ho na **6** opakovaní.
 
-        -   Všimni si, že sme pridali 60 stupňové otočenie na koniec cyklu, aby sme spravili úplnú otočku.
+        -   Všimni si, že na koniec cyklu sme pridali otočenie o 60 stupňov, vďaka čomu  pri 6 opakovaniach urobíme kompletnú otočku.
       courseC_artist_loopsPre1a_2018: |-
         Teraz vlož tento kód do opakovacieho bloku a nastav ho na **6** opakovaní.
 
-        -   Všimni si, že sme pridali 60 stupňové otočenie na koniec cyklu, aby sme spravili úplnú otočku.
+        -   Všimni si, že na koniec cyklu sme pridali otočenie o 60 stupňov, vďaka čomu  pri 6 opakovaniach urobíme kompletnú otočku.
       courseC_artist_loopsPre1a_2019: |-
         Teraz vlož tento kód do opakovacieho bloku a nastav ho na **6** opakovaní.
 
-        -   Všimni si, že sme pridali 60 stupňové otočenie na koniec cyklu, aby sme spravili úplnú otočku.
+        -   Všimni si, že na koniec cyklu sme pridali otočenie o 60 stupňov, vďaka čomu  pri 6 opakovaniach urobíme kompletnú otočku.
       courseC_artist_loopsPrePre1a: "Použi blok <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> aby sa umelec dostal do stredu.  \nPotom nakresli 50 pixelovú čiaru s blokom <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
       courseC_artist_loopsPrePre1a_2018: "### Umelec je na zlom mieste!\n\nPouži blok <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> aby sa umelec dostal do stredu.  \nPotom nakresli 50 pixelovú čiaru s blokom <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
       courseC_artist_loopsPrePre1a_2019: "### Umelec je na zlom mieste!\n\nPouži blok <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> aby sa umelec dostal do stredu.  \nPotom nakresli 50 pixelovú čiaru s blokom <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
@@ -2205,6 +2205,95 @@ sk:
       courseD_maze_ramp5d: Dostaň vtáka k prasiatku.
       courseD_maze_ramp5d_2018: Dostaň vtáka k prasiatku.
       courseD_maze_ramp5d_2019: Dostaň vtáka k prasiatku.
+      courseD_playLab_cond1: "Aby sme sa mohli začať hrať, pirát Pegleg (postava 1) sa musí vedieť hýbať všetkými smermi. Pomôž Peglegovi tak, že pripojíš správne bloky ku jednotlivým udalostiam. \n\n* * *\n\nNa vyriešenie úlohy pomôž Peglegovi pozbierať všetky vlajky."
+      courseD_playLab_cond1_2018: "Aby sme sa mohli začať hrať, pirát Pegleg (postava 1) sa musí vedieť hýbať všetkými smermi. Pomôž Peglegovi tak, že pripojíš správne bloky ku jednotlivým udalostiam. \n\n* * *\n\nNa vyriešenie úlohy pomôž Peglegovi pozbierať všetky vlajky."
+      courseD_playLab_cond1_2019: "Aby sme sa mohli začať hrať, pirát Pegleg (postava 1) sa musí vedieť hýbať všetkými smermi. Pomôž Peglegovi tak, že pripojíš správne bloky ku jednotlivým udalostiam. \n\n* * *\n\nNa vyriešenie úlohy pomôž Peglegovi pozbierať všetky vlajky."
+      courseD_playLab_cond2: "Čas začať zbierať body!\n\nUprav program tak, aby Pegleg (postava 1) získal bod vždy, keď sa dotkne draka (postava 2). "
+      courseD_playLab_cond2_2018: "Čas začať zbierať body!\n\nUprav program tak, aby Pegleg (postava 1) získal bod vždy, keď sa dotkne draka (postava 2). "
+      courseD_playLab_cond2_2019: "Čas začať zbierať body!\n\nUprav program tak, aby Pegleg (postava 1) získal bod vždy, keď sa dotkne draka (postava 2). "
+      courseD_playLab_cond3: 'Použi cyklus `opakuj donekonečna` na to, aby drak (postava 2) každú sekundu náhodne zmenil náladu.  '
+      courseD_playLab_cond3_2018: 'Použi cyklus `opakuj donekonečna` na to, aby drak (postava 2) každú sekundu náhodne zmenil náladu.  '
+      courseD_playLab_cond3_2019: 'Použi cyklus `opakuj donekonečna` na to, aby drak (postava 2) každú sekundu náhodne zmenil náladu.  '
+      courseD_playLab_cond3a: "Je načase využiť to, čo sme sa naučili o podmienkach a spraviť túto hru trochu zábavnejšou. \n\nPridaj kód, vďaka ktorému Pegleg dostane 2 body _AK_ má drak veselú náladu. _INAK_ dostane len 1 bod."
+      courseD_playLab_cond3a_2018: "Je načase využiť to, čo sme sa naučili o podmienkach a spraviť túto hru trochu zábavnejšou. \n\nPridaj kód, vďaka ktorému Pegleg dostane 2 body _AK_ má drak veselú náladu. _INAK_ dostane len 1 bod."
+      courseD_playLab_cond3a_2019: "Je načase využiť to, čo sme sa naučili o podmienkach a spraviť túto hru trochu zábavnejšou. \n\nPridaj kód, vďaka ktorému Pegleg dostane 2 body _AK_ má drak veselú náladu. _INAK_ dostane len 1 bod."
+      courseD_playLab_cond4: |-
+        A teraz to začne byť zabavné!
+
+        Pridaj kód, vďaka ktorému ninja (postava 3) hneď od začiatku hry začne naháňať Peglega. Ukonči hru ako prehru, ak ho ninja chytí.
+      courseD_playLab_cond4_2018: |-
+        A teraz to začne byť zabavné!
+
+        Pridaj kód, vďaka ktorému ninja (postava 3) hneď od začiatku hry začne naháňať Peglega. Ukonči hru ako prehru, ak ho ninja chytí.
+      courseD_playLab_cond4_2019: |-
+        A teraz to začne byť zabavné!
+
+        Pridaj kód, vďaka ktorému ninja (postava 3) hneď od začiatku hry začne naháňať Peglega. Ukonči hru ako prehru, ak ho ninja chytí.
+      courseD_playLab_cond5: |-
+        A teraz potrebujeme pridať spôsob ako hru vyhrať.
+
+        Pridaj cyklus `opakuj donekonečna`, ktorý bude neustále kontrolovať skóre a **ak** je skóre väčšie ako 5, ukončí hru ako **výhru**.
+      courseD_playLab_cond5_2018: |-
+        A teraz potrebujeme pridať spôsob ako hru vyhrať.
+
+        Pridaj cyklus `opakuj donekonečna`, ktorý bude neustále kontrolovať skóre a **ak** je skóre väčšie ako 5, ukončí hru ako **výhru**.
+      courseD_playLab_cond5_2019: |-
+        A teraz potrebujeme pridať spôsob ako hru vyhrať.
+
+        Pridaj cyklus `opakuj donekonečna`, ktorý bude neustále kontrolovať skóre a **ak** je skóre väčšie ako 5, ukončí hru ako **výhru**.
+      courseD_playLab_cond6: |-
+        Hmmm, túto hru ale vyhráme naozaj ťažko!
+        Upravme ju tak, aby bola trochu zábavnejšia. Táto úloha má 2 časti:
+
+        * * *
+
+        1.  Spomaľ ninju (postava 3) ešte predtým, ako začne naháňať piráta (postava 1)
+
+        2.  Použi cyklus `opakuj donekonečna`, ktorý skontroluje, či sa pirát nachádza v "bezpečnej zóne", pod líniou chobotníc (t. j. viac ako 225 pixelov smerom dole). Ak áno, nastav ninju, aby **utekal** od piráta. Inak nastav ninju, aby **naháňal** piráta.
+      courseD_playLab_cond6_2018: "Hmmm, túto hru ale vyhráme naozaj ťažko!\nUpravme ju tak, aby bola trochu zábavnejšia. Táto úloha má 2 časti:\n\n* * *\n\n1.  Spomaľ ninju (postava 3) ešte predtým, ako začne naháňať piráta (postava 1)\n\n2.  Použi cyklus `opakuj donekonečna`, ktorý skontroluje, či sa pirát nachádza v \"bezpečnej zóne\", pod líniou chobotníc (t. j. viac ako 225 pixelov smerom dole). Ak áno, nastav ninju, aby **utekal** od piráta. Inak nastav ninju, aby **naháňal** piráta.  "
+      courseD_playLab_cond6_2019: |-
+        Hmmm, túto hru ale vyhráme naozaj ťažko!
+        Upravme ju tak, aby bola trochu zábavnejšia. Táto úloha má 2 časti:
+
+        * * *
+
+        1.  Spomaľ ninju (postava 3) ešte predtým, ako začne naháňať piráta (postava 1)
+
+        2.  Použi cyklus `opakuj donekonečna`, ktorý skontroluje, či sa pirát nachádza v "bezpečnej zóne", pod líniou chobotníc (t. j. viac ako 225 pixelov smerom dole). Ak áno, nastav ninju, aby **utekal** od piráta. Inak nastav ninju, aby **naháňal** piráta.
+      courseD_playLab_cond6a: |-
+        Nechceme, aby sa pirát zdržiaval v "bezpečnej zóne" príliš dlho!
+
+        Pridaj ku bloku `ak` taký kód, ktorý po príchode piráta (postava 1) do bezpečnej zóny počká 1 sekundu a potom mu bude po bode odčítavať po celý čas, čo sa nachádza pod chobotnicami.
+      courseD_playLab_cond6a_2018: |-
+        Nechceme, aby sa pirát zdržiaval v "bezpečnej zóne" príliš dlho!
+
+        Pridaj ku bloku `ak` taký kód, ktorý po príchode piráta (postava 1) do bezpečnej zóny počká 1 sekundu a potom mu bude po bode odčítavať po celý čas, čo sa nachádza pod chobotnicami.
+      courseD_playLab_cond6a_2019: |-
+        Nechceme, aby sa pirát zdržiaval v "bezpečnej zóne" príliš dlho!
+
+        Pridaj ku bloku `ak` taký kód, ktorý po príchode piráta (postava 1) do bezpečnej zóny počká 1 sekundu a potom mu bude po bode odčítavať po celý čas, čo sa nachádza pod chobotnicami.
+      courseD_playLab_condFP_2018: |-
+        A teraz si vytvor hru, ktorou sa pochváliš kamarátom!
+
+        * * *
+
+        Môžeš napríklad:
+
+        -   Nechať piráta a ninju spolupracovať, aby za chytenie draka dostávali body obaja
+        -   Nechať chobotnice naháňať piráta
+        -   Nechať každú postavu, ktorá sa zrazí s ninjom zmiznúť
+        -   Vymyslieť vlastnú hru!
+      courseD_playLab_condFP_2019: |-
+        A teraz si vytvor hru, ktorou sa pochváliš kamarátom!
+
+        * * *
+
+        Môžeš napríklad:
+
+        -   Nechať piráta a ninju spolupracovať, aby za chytenie draka dostávali body obaja
+        -   Nechať chobotnice naháňať piráta
+        -   Nechať každú postavu, ktorá sa zrazí s ninjom zmiznúť
+        -   Vymyslieť vlastnú hru!
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp1_2018: V tejto hre pospájaj všetky bloky dokopy, potom klikni na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených na blok `pri spustení`.
@@ -2392,6 +2481,9 @@ sk:
         _"Nasleduj cestu a priveď ma k prasiatku"_
 
         Vyhni sa TNT.
+      courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-   Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania 10?\n-   Čo spraví tvoj kód, ak sa otočíš o 119 stupňov?"
+      courseF_artist_variables10_2018: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-   Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania 10?\n-   Čo spraví tvoj kód, ak sa otočíš o 119 stupňov?"
+      courseF_artist_variables10_2019: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-   Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania 10?\n-   Čo spraví tvoj kód, ak sa otočíš o 119 stupňov?"
       courseF_artist_variables2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
 
@@ -2452,6 +2544,97 @@ sk:
         Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
 
         Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables8: |-
+        Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+
+        <xml>
+        <block type="variables_set" inline="false">
+        <title name="VAR">length</title>
+        <value name="VALUE">
+        <block type="math_arithmetic" inline="true">
+        <title name="OP">ADD</title>
+        <value name="A">
+        <block type="variables_get">
+        <title name="VAR">length</title>
+        </block>
+        </value>
+        <value name="B">
+        <block type="math_number">
+        <title name="NUM">10</title>
+        </block>
+        </value>
+        </block>
+        </value>
+        </block>
+        </xml>
+
+        Dĺžka prvej strany trojuholníka je 150 pixelov.
+      courseF_artist_variables8_2018: |-
+        Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+
+        <xml>
+        <block type="variables_set" inline="false">
+        <title name="VAR">length</title>
+        <value name="VALUE">
+        <block type="math_arithmetic" inline="true">
+        <title name="OP">ADD</title>
+        <value name="A">
+        <block type="variables_get">
+        <title name="VAR">length</title>
+        </block>
+        </value>
+        <value name="B">
+        <block type="math_number">
+        <title name="NUM">10</title>
+        </block>
+        </value>
+        </block>
+        </value>
+        </block>
+        </xml>
+
+        Dĺžka prvej strany trojuholníka je 150 pixelov.
+      courseF_artist_variables8_2019: |-
+        Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+
+        <xml>
+        <block type="variables_set" inline="false">
+        <title name="VAR">length</title>
+        <value name="VALUE">
+        <block type="math_arithmetic" inline="true">
+        <title name="OP">ADD</title>
+        <value name="A">
+        <block type="variables_get">
+        <title name="VAR">length</title>
+        </block>
+        </value>
+        <value name="B">
+        <block type="math_number">
+        <title name="NUM">10</title>
+        </block>
+        </value>
+        </block>
+        </value>
+        </block>
+        </xml>
+
+        Dĺžka prvej strany trojuholníka je 150 pixelov.
+      courseF_artist_variables9: "Čas na nejaké umenie! \n\nSleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy **30** krát namiesto 3!\n\nNeobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
+      courseF_artist_variables9_2018: "Čas na nejaké umenie! \n\nSleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy **30** krát namiesto 3!\n\nNeobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
+      courseF_artist_variables9_2019: "Čas na nejaké umenie! \n\nSleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy **30** krát namiesto 3!\n\nNeobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
+      courseF_artist_variablesFP: |-
+        **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
+
+        Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_artist_variablesFP_2018: |-
+        **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
+
+        Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_artist_variablesFP_2019: |-
+        **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
+
+        Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_artist_variables_10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-   Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania 10?\n-   Čo spraví tvoj kód, ak sa otočíš o 119 stupňov?"
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
 
@@ -2471,6 +2654,16 @@ sk:
         Začnime túto sekciu nakreslením trojuholníka so stranami dĺžky 150 pixelov.
 
         Uisti sa, že používaš premennú `dĺžka (length)` a cyklus opakuj.
+      courseF_artist_variables_8: |-
+        Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+
+        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)
+      courseF_artist_variables_9: "Čas na nejaké umenie! \nSleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3!\n\nNeobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
+      courseF_artist_variables_FP: |-
+        **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
+
+        Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_artistembed_variables9: "Čas na nejaké umenie! \n\nSleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy **30** krát namiesto 3!\n\nNeobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu."
       courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
       courseF_bee_for_challenge2_2019: Vyrieš túto úlohu použitím čo najmenšieho možného počtu blokov.
@@ -2572,13 +2765,11 @@ sk:
         _"Si majster v ľadovej tvorbe!"_
 
         Tu je všetko, čo potrebuješ, aby si si vytvoril vlastnú krajinu zimných zázrakov!
-      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
-      frozen line_test: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen line_b: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
+      frozen line_test: "_\"Ahoj! Som Elsa z Arendelle. Pomož mi spraviť čiaru\"_  \n\nPripoj blok <xml>\n  <block type=\"draw_move_by_constant_dropdown\" id=\"move_forward_qtip\">\n    <title name=\"DIR\">Posuň sa Dopredu</title>\n    <title name=\"VALUE\" config=\"50,100,150,200,300\">100</title>\n    </block></xml> k bloku <xml>\n    <block type=\"when_run\"/></xml> a pomôžeš Else nakresliť čiaru dlhú 100 pixelov."
       frozen perpendicular: Teraz skúsme vytvoriť dve čiary, ktoré sú na seba kolmé. Budeš musieť použiť blok "Otoč sa" spolu s blokom "Posuň sa".
       frozen perpendicular_b: |-
         _"Pokračuj a neprestávaj!"_
-
-         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -2593,8 +2784,6 @@ sk:
         </xml> a vytvoríš v ľade tento tvar.
       frozen perpendicular_test: |-
         _"Pokračuj a neprestávaj!"_
-
-         
 
         Pridaj blok <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
@@ -2628,8 +2817,8 @@ sk:
       frozen snowflower_b: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu \\*\\* 5 \\*\\* krát, pričom medzi každou sadou je \\*\\* 72 stupňov \\*\\*?"
       frozen snowflower_test: "Zložité snehové vzory môžu byť vytvorené pomocou veľmi jednoduchých tvarov!  \n\nVieš vyrobiť novú vločku opakovaním tohto kódu \\*\\* 5 \\*\\* krát, pričom medzi každou sadou je \\*\\* 72 stupňov \\*\\*?"
       frozen square iterative: Zdá sa, že sme na polceste k vytvoreniu štvorca. Dajme dohromady 4 čiary tak, aby vytvorili štvorec.
-      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\n \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
-      frozen square iterative_test: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\n \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square iterative_b: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
+      frozen square iterative_test: "_\"Už sme na polceste k vytvoreniu štvorca!\"_ \n\nNa dokončenie tvaru pridaj ďajšie štyri bloky."
       frozen square loop 3x: Vytvor tri štvorce tak, že sa po každom štvorci otočíš. Uisti sa, že sa pred každým novým štvorcom otočíš o 120 stupňov.
       frozen square loop 3x_b: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného opakovacieho cyklu?  \n\nPomôž Anne nakresliť tri štvorce a otoč sa po každom o \\*\\* 120 stupňov \\*\\*. "
       frozen square loop 3x_test: "Vedel si, že cyklus \"opakuj\" môžeš vložiť do iného opakovacieho cyklu?  \n\nPomôž Anne nakresliť tri štvorce a otoč sa po každom o \\*\\* 120 stupňov \\*\\*. "
