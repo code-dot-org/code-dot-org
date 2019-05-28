@@ -175,9 +175,7 @@ export default class JSInterpreter {
             }
           }
         };
-        if (intFunc.node && intFunc.node.id) {
-          retFunc.behaviorName = intFunc.node.id.name;
-        }
+        retFunc.intFunc = intFunc;
         return retFunc;
       };
     }
