@@ -481,7 +481,9 @@ class Script < ActiveRecord::Base
     # Only students should be redirected based on script progress and/or section assignments.
     if user&.student?
       assigned_script_ids = user.section_scripts.pluck(:id)
-      script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
+      progress_script_ids = user.user_levels.map(&:script_id)
+      script_ids = assigned_script_ids.concat(progress_script_ids).compact.uniq
+      script_name = family_scripts.select {|s| script_ids.include?(s.id)}&.first&.name
       return Script.new(redirect_to: script_name) if script_name
     end
 
