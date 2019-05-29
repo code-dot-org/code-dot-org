@@ -128,4 +128,38 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.return
   end
+
+  test 'intial, no previoius, complete, manual' do
+    Timecop.freeze
+
+    user = create :teacher
+    sign_in user
+
+    Timecop.travel 1.hour
+
+    assert_creates SchoolInfo do
+      patch "/api/v1/user_school_infos", params: {
+        user: {
+          school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'The School of Rock',
+            full_address: 'Seattle, Washington USA'}
+        }
+      }
+    end
+
+    user.reload
+
+    tenure = user.user_school_infos.last
+
+    assert_response :success, response.body
+    assert_equal user.user_school_infos.count, 1
+    refute_nil user.school_info
+    refute_nil user.school_info.school_name
+    refute_empty user.user_school_infos
+    assert_equal user.created_at, tenure.start_date
+    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
+    assert_nil tenure.end_date
+    assert_equal user.school_info.school.id, school.id
+
+    Timecop.return
+  end
 end
