@@ -45,7 +45,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 403
   end
 
-  test "end_date, last_confirmation_date and last_seen_school_info_interstitial are updated" do
+  test "end_date and last_confirmation_date and last_seen_school_info_interstitial are updated" do
     Timecop.freeze
 
     user_school_info = create :user_school_info
@@ -53,7 +53,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1
 
-    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_end_date"
+    patch "/api/v1/users/#{user_school_info.id}/update_school_info_id"
     updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
 
     assert_response :success
@@ -61,6 +61,67 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_equal user_school_info.end_date, updated_user_school_info.end_date
     refute_equal user_school_info.last_confirmation_date, updated_user_school_info.last_confirmation_date
     refute_equal user_school_info.user.last_seen_school_info_interstitial, updated_user_school_info.user.last_seen_school_info_interstitial
+
+    Timecop.return
+  end
+
+
+  # TEST CASES
+  # positive - complete info required to update db
+
+  # EDGE CASES
+  # test duplication - create a school and then check if the school already exists
+  # blank form submission
+  # partial form submission
+  # complete submission
+
+  # positive
+  test "end_date, last_confirmation_date and school_info id are updated when the interstitial is completely filled out" do
+    Timecop.freeze
+
+    user = create :user
+
+    school_info = create :school_info
+
+    user_school_info = create :user_school_info, user_id: user.id, school_info_id: school_info.id
+
+    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id"
+
+    assert_response :success
+
+    updated_last_confirmation_date = user_school_info.last_confirmation_date
+
+    updated_end_date = user_school_info.end_date
+
+
+    refute_equal updated.id, user_school_info.id
+    assert_equal new_user_school_info.school_info_id, user_school_info.school_info_id
+
+
+
+
+
+
+    # user = create :teacher
+    # sign_in user
+
+    # school_info = create :school_info
+
+    # user_school_info = create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    user_school_info = create :user_school_info
+    sign_in user_school_info.user
+
+    Timecop.travel 1
+
+    patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id"
+
+    # updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
+
+    assert_response :success
+
+    # refute_equal user_school_info.end_date, updated_user_school_info.end_date
+    # refute_equal user_school_info.last_confirmation_date, updated_user_school_info.last_confirmation_date
 
     Timecop.return
   end
