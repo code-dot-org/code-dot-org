@@ -443,7 +443,8 @@ class TopInstructionsCSP extends Component {
           <div style={styles.paneHeaderOverride}>
             {this.state.tabSelected === TabType.INSTRUCTIONS &&
               ttsUrl &&
-              this.props.noInstructionsWhenCollapsed && (
+              (this.props.hasContainedLevels ||
+                this.props.noInstructionsWhenCollapsed) && (
                 <InlineAudio src={ttsUrl} style={audioStyle} />
               )}
             {this.props.documentationUrl &&
@@ -509,14 +510,14 @@ class TopInstructionsCSP extends Component {
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
             <div ref="instructions">
-              {this.props.hasContainedLevels &&
-                this.props.noInstructionsWhenCollapsed && (
-                  <ContainedLevel
-                    ref="instructions"
-                    hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
-                  />
-                )}
-              {!this.props.noInstructionsWhenCollapsed &&
+              {this.props.hasContainedLevels && (
+                <ContainedLevel
+                  ref="instructions"
+                  hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
+                />
+              )}
+              {!this.props.hasContainedLevels &&
+                !this.props.noInstructionsWhenCollapsed &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <TopInstructionsCSF
                     ref="instructions"
