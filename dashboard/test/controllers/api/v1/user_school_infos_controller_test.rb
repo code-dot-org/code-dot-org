@@ -14,8 +14,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_last_confirmation_date"
 
-    puts "---> #{response.body}"
-
     user_school_info.reload
 
     assert_response :success
@@ -96,104 +94,38 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test "end_date and last_confirmation_date and last_seen_school_info_interstitial are updated" do
-  #   Timecop.freeze
+  test 'intial, no previoius, complete, drop down' do
+    Timecop.freeze
 
-  #   user_school_info = create :user_school_info
-  #   sign_in user_school_info.user
+    user = create :teacher
+    sign_in user
 
-  #   Timecop.travel 1
+    school = create :school
 
-  #   patch "/api/v1/users/#{user_school_info.id}/update_school_info_id"
-  #   updated_user_school_info = UserSchoolInfo.find(user_school_info.id)
+    Timecop.travel 1.hour
 
-  #   assert_response :success
+    assert_creates SchoolInfo do
+      patch "/api/v1/user_school_infos", params: {
+        user: {
+          school_info_attributes: {school_id: school.id}
+        }
+      }
+    end
 
-  #   refute_equal user_school_info.end_date, updated_user_school_info.end_date
-  #   refute_equal user_school_info.last_confirmation_date, updated_user_school_info.last_confirmation_date
-  #   refute_equal user_school_info.user.last_seen_school_info_interstitial, updated_user_school_info.user.last_seen_school_info_interstitial
+    user.reload
 
-  #   Timecop.return
-  # end
+    tenure = user.user_school_infos.last
 
+    assert_response :success, response.body
+    assert_equal user.user_school_infos.count, 1
+    refute_nil user.school_info
+    refute_nil user.school_info.school
+    refute_empty user.user_school_infos
+    assert_equal user.created_at, tenure.start_date
+    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
+    assert_nil tenure.end_date
+    assert_equal user.school_info.school.id, school.id
 
-
-  # test "end_date, last_confirmation_date and school_info id are updated when the interstitial is completely filled out" do
-  #   Timecop.freeze
-
-  #   user = create :user
-
-  #   school_info = create :school_info
-
-  #   user_school_info = create :user_school_info, user_id: user.id, school_info_id: school_info.id
-
-  #   patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id"
-
-  #   assert_response :success
-
-  #   updated_last_confirmation_date = user_school_info.last_confirmation_date
-
-  #   updated_end_date = user_school_info.end_date
-
-
-  #   refute_equal updated.id, user_school_info.id
-  #   assert_equal new_user_school_info.school_info_id, user_school_info.school_info_id
-
-  #   Timecop.return
-  # end
-
-  # test "end_date and last_seen_school_info_interstitial are not updated if given a school_info id not owned by the signed-in user." do
-  #   user_school_info3 = create :user_school_info
-  #   user_school_info4 = create :user_school_info
-  #   sign_in user_school_info4.user
-  #   patch "/api/v1/user_school_infos/#{user_school_info3.id}/update_end_date"
-
-  #   assert_response 403
-  # end
-
-  # test "school_info_id is updated" do
-  #   user_school_info = create :user_school_info
-  #   sign_in user_school_info.user
-
-  #   patch "/api/v1/user_school_infos/#{user_school_info.id}/update_school_info_id", params: {
-  #     school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii'},
-  #     school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
-  #   }
-
-  #   new_user_school_info = UserSchoolInfo.last
-
-  #   assert_response :success
-  #   refute_equal new_user_school_info.id, user_school_info.id
-  #   assert_equal new_user_school_info.school_info_id, user_school_info.school_info_id
-  # end
-
-  # test "school_info_id is not updated when an invalid school_info id is passed " do
-  #   user_school_info = create :user_school_info
-  #   sign_in user_school_info.user
-  #   patch "/api/v1/user_school_infos/-1/update_school_info_id", params: {
-  #     school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii'},
-  #     school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
-  #   }
-  #   assert_response 404
-  # end
-
-  # test "user is redirected to sign in" do
-  #   create :user_school_info
-  #   patch "/api/v1/user_school_infos/-1/update_school_info_id", params: {
-  #     school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii'},
-  #     school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
-  #   }
-  #   assert_response 302
-  # end
-
-  # test "logged in user cannot update another user's school info" do
-  #   user_school_info1 = create :user_school_info
-  #   user_school_info2 = create :user_school_info
-  #   sign_in user_school_info2.user
-  #   patch "/api/v1/user_school_infos/#{user_school_info1.id}/update_school_info_id", params: {
-  #     school: {name: 'C school', city: 'Hungtinton river', state: 'Caliii'},
-  #     school_info: {school_type: 'private', state: 'Jersey New', school_name: 'C school', country: 'US'}
-  #   }
-  #   assert_response 403
-  # end
+    Timecop.return
+  end
 end
