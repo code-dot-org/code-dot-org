@@ -237,9 +237,12 @@ export default connect(
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((output, i) => {
-          if (typeof output === 'object') {
+          try {
             output = output.toJS();
+          } catch (error) {
+            return <Inspector key={i} data={output} />;
           }
+
           if (output.input) {
             return <div key={i}>&gt; {output.input}</div>;
           } else if (output.output || FALSIES.has(output.output)) {
