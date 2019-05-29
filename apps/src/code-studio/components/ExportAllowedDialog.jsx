@@ -408,9 +408,10 @@ class ExportAllowedDialog extends React.Component {
         </div>
         <div style={styles.section}>
           <p style={styles.p}>
-            We will create a mobile app that reflects the current state of your
-            Code Studio creation. Then, you can install the app on your mobile
-            device.
+            Exporting will create a mobile app that you can install on your
+            phone. You can install that app on your phone and run it without
+            opening the Code.org website. If you make changes to your app after
+            you export, you will need to export it again.
           </p>
           {/*<p style={styles.p}>
             The first step is to install the Expo app on your mobile device so
@@ -497,8 +498,8 @@ class ExportAllowedDialog extends React.Component {
         </div>
         <div style={styles.section}>
           <p style={styles.p}>
-            <b>Note: </b>Exporting will take 10-15 minutes. Any changes made
-            during the export process will not be included.
+            <b>Note: </b>Exporting will take 10-15 minutes. If you change your
+            app after you start exporting, those changes will not be included.
           </p>
         </div>
       </div>

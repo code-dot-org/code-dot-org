@@ -20,7 +20,7 @@ class SmsController < ApplicationController
   end
 
   def send_download_url_to_phone
-    body = "Download this app created in Code Studio: #{params[:url]} (reply STOP to stop receiving this)"
+    body = "Install this app created in Code Studio on your Android device: #{params[:url]} (reply STOP to stop receiving this)"
     send_sms(body, params[:phone])
   end
 
