@@ -604,11 +604,7 @@ Dashboard::Application.routes.draw do
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
-      # patch 'user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
-
-      # patch 'user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
-
-      patch 'user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
+      patch 'user_school_infos', to: 'user_school_infos#update'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
