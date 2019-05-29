@@ -59,7 +59,7 @@ module Pd
       end
 
       def get_question_by_id_or_name(id_or_name)
-        if id_or_name.is_a? Integer
+        if id_or_name.to_i.to_s == id_or_name
           get_question_by_id id_or_name
         else
           get_question_by_name id_or_name
