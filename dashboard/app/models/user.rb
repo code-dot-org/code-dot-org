@@ -297,7 +297,7 @@ class User < ActiveRecord::Base
 
   def update_and_add_users_school_infos
     last_school = user_school_infos.find_by(end_date: nil)
-    current_time = Time.now.utc
+    current_time = DateTime.now
     if last_school
       last_school.end_date = current_time
       last_school.save!
@@ -306,7 +306,7 @@ class User < ActiveRecord::Base
       user: self,
       school_info: school_info,
       user_id: id,
-      start_date: current_time,
+      start_date: last_school ? current_time : created_at,
       school_info_id: school_info_id,
       last_confirmation_date: current_time
     )

@@ -14,6 +14,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     patch "/api/v1/user_school_infos/#{user_school_info.id}/update_last_confirmation_date"
 
+    puts "---> #{response.body}"
+
     user_school_info.reload
 
     assert_response :success
@@ -49,13 +51,49 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     user = create :teacher
     sign_in user
 
-    patch "/api/v1/user_school_infos"
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: '', school_type: ''
+        }
+      }
+    }
 
     user.reload
 
-    assert_response :success
+    assert_response :success, response.body
     assert_nil user.school_info
     assert_empty user.user_school_infos
+  end
+
+  test 'intial, no previoius, partial, manual' do
+    Timecop.freeze
+
+    user = create :teacher
+    sign_in user
+
+    Timecop.travel 1.hour
+
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
+      }
+    }
+
+    user.reload
+
+    new_user_school_info = user.user_school_infos.last
+
+    assert_response :success, response.body
+    assert_equal user.user_school_infos.count, 1
+    refute_nil user.school_info
+    assert user.school_info.school_name.nil?
+    refute_empty user.user_school_infos
+    assert_equal user.created_at, new_user_school_info.start_date
+    assert_in_delta Time.now.to_i, new_user_school_info.last_confirmation_date.to_i, 10
+    assert_nil new_user_school_info.end_date
+
+    Timecop.return
   end
 
   # test "end_date and last_confirmation_date and last_seen_school_info_interstitial are updated" do

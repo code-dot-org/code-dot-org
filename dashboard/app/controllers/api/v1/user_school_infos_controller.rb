@@ -1,5 +1,6 @@
 class Api::V1::UserSchoolInfosController < ApplicationController
   before_action :authenticate_user!
+  load_and_authorize_resource only: :update_last_confirmation_date
   skip_before_action :verify_authenticity_token
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
@@ -11,34 +12,28 @@ class Api::V1::UserSchoolInfosController < ApplicationController
 
   # PATCH /api/v1/users_school_infos/<id>/school_info
   def update
+    if school_info_params[:country].blank?
+      return head :no_content
+    end
 
+    new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+
+    # UserSchoolInfo.create!({start_date: current_user.created_at, end_date: DateTime.now,
+    #   last_confirmation_date: DateTime.now, school_info_id: new_school_info.id, user_id: current_user.id})
+
+
+
+    current_user.update!(school_info_id: new_school_info.id)
+
+    # if new_school_info.complete?
+  end
+
+  private
+
+  def school_info_params
+    params.require(:user).require(:school_info_attributes).permit(:school_type, :school_name, :full_address, :country)
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## ----------------------------------
 
@@ -121,16 +116,7 @@ end
 #     # end
 #   # end
 
-#   private
 
-#   def load_user_school_info
-#     @user_school_info = UserSchoolInfo.find(params[:id])
-#   end
-
-#   def school_info_params
-#     params.require(:school_info).permit(:school_type, :state, :school_name, :country)
-#   end
-# end
 
 
 ## form empty
