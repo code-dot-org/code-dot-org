@@ -12,6 +12,7 @@ project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Innovations in Computing', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD_2019', named: true
@@ -137,20 +138,20 @@ level 'csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019', progression: 'Refle
 
 stage 'Arrays and Color LEDs', flex_category: 'csd6_2'
 level 'CSD U6L10 TFMD_2019', named: true
-level 'CSD U6 arrays intro_2019', named: true
 level 'CSD U6 arrays video', named: true
 level 'CSD U6 arrays select predict_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select rainbow_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 array select days_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select random_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select variable_2019', progression: 'Introduction to Arrays'
-level 'CSD U6 array multi_2018_2019', named: true
-level 'CSD colorLed Map_2019', named: true
+level 'CSD U6 arrays intro_2019', named: true
+level 'CSD U6 array multi_2018_2019', named: true, assessment: true
 level 'CSD U6 colorLeds predict_2019', progression: 'Color LEDs'
 level 'CSD U6 colorLED on_2019', progression: 'Color LEDs'
 level 'CSD U6 LEDs color_2019', progression: 'Color LEDs'
 level 'CSD U6 colorLeds debug_2019', progression: 'Color LEDs'
 level 'CSD U6 colorLeds intensity_2019', progression: 'Color LEDs'
+level 'CSD colorLed Map_2019', named: true
 level 'CSD U6 colorLeds light pattern_2019', progression: 'Light Show'
 level 'CSD U6 light pattern off_2019', progression: 'Light Show'
 bonus 'CSD U6 light pattern challenge_2019', progression: 'Challenge Levels'
@@ -185,13 +186,6 @@ level 'CSD U6 for loop list.length_2019', progression: 'For Loops'
 level 'CSD U6 for loop images_2019', progression: 'For Loops'
 level 'CSD U6 for loop led on_2019', progression: 'For Loops and Color LEDs'
 level 'CSD U6 for loop led off_2019', progression: 'For Loops and Color LEDs'
-level 'CSD U6 functions paramters video_2019', progression: 'For Loops and Color LEDs'
-level 'CSD U6 for loop led function_2019', progression: 'For Loops and Color LEDs'
-level 'CSD U6 for loop led function call_2019', progression: 'For Loops and Color LEDs'
-level 'CSD U6 for loop led function finish_2019', progression: 'For Loops and Color LEDs'
-bonus 'CSD U6 for loop led bonus 1_2019'
-bonus 'CSD U6 for loop led bonus 2_2019'
-bonus 'CSD U6 for loop led bonus 3_2019'
 
 stage 'Accelerometer', flex_category: 'csd6_2'
 level 'CSD U6L13 TFMD_2019', named: true
@@ -211,6 +205,7 @@ level 'CSD U6 Driver pt 2_2019', progression: 'Accelerometer Events'
 stage 'Functions with Parameters', flex_category: 'csd6_2'
 level 'CSD U6L14 TFMD_2019', named: true
 level 'CSD U6 params predict_2019', progression: 'Functions with Parameters'
+level 'CSD U6 functions paramters video_2019', named: true
 level 'CSD U6 params modify clouds_2019', progression: 'Functions with Parameters'
 level 'CSD U6 params modify planes_2019', progression: 'Functions with Parameters'
 level 'CSD U6 params create colors_2019', progression: 'Functions with Parameters'

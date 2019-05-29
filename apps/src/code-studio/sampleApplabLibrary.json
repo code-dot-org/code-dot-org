@@ -1,0 +1,38 @@
+{
+  "libraries": [
+    {
+      "name": "mySampleLibrary",
+      "functionNames": ["publicMethod1", "myFunction", "coolFunc"],
+      "dropletConfig": [
+        {
+          "func": "mySampleLibrary.publicMethod1",
+          "category": "Functions"
+        },
+        {
+          "func": "mySampleLibrary.myFunction",
+          "category": "Functions",
+          "paletteParams": ["one", "two"],
+          "params": ["one", "two"]
+        },
+        {
+          "func": "mySampleLibrary.coolFunc",
+          "category": "Functions"
+        }
+      ],
+      "source": "console.log(\"message\");\nfunction myFunction(foo,bar) {\n  console.log(foo);\n  console.log(bar);\n}\n \nmyFunction(\"one\",\"two\")\n \nvar test = function(baz) {\n  console.log(baz); \n}\nmyFunction(\"three\")\n\nfunction coolFunc() {\n  console.log(\"cool\")\n}\n\n//If there is code that is outside a function definition inside the library, \n//it will still be run. So when this library is initialized, this\n//console log still gets executed once:\nconsole.log(\"this is not inside a function, it is just at the top-level of the library\");\n\n//even though this is not exported, methods inside RyansLibrary can access it\n//This can't be accessed outside RyansLibrary\nvar thisIsAPrivateVariable=100;\n\n//this method will run if the consuming program calls it\nfunction publicMethod1() {\n  console.log(\"this is a public method. The internal variable is: \"+thisIsAPrivateVariable);\n}\n  \n//this method was not exported, but can be accessed within RyansLibrary\nfunction privateHelper() {\n  console.log(\"this is private!\");\n}\nonEvent(\"button1\", \"click\", function( ) {\n  var text = getProperty(\"text_area1\", \"text\")\n  console.log(text);\nconsole.log(JSON.stringify(text));\n  \n});\n"
+    },
+    {
+      "name": "sample2",
+      "functionNames": ["myFunc2"],
+      "dropletConfig": [
+        {
+          "func": "sample2.myFunc2",
+          "category": "Functions",
+          "paletteParams": ["\"one\"", "\"two\""],
+          "params": ["\"one\"", "\"two\""]
+        }
+      ],
+      "source": "function myFunc2(foo,bar) {\n  console.log(foo);\n  console.log(bar);\n}"
+    }
+  ]
+}

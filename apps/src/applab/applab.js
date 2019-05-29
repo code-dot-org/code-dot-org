@@ -39,6 +39,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {actions, reducers} from './redux/applab';
 import {add as addWatcher} from '../redux/watchedExpressions';
+import {setApplabLibraries} from '../code-studio/components/applabLibraryRedux';
 import {changeScreen} from './redux/screens';
 import * as applabConstants from './constants';
 const {ApplabInterfaceMode} = applabConstants;
@@ -293,6 +294,11 @@ Applab.getHtml = function() {
   return Applab.levelHtml;
 };
 
+Applab.getLibraries = function() {
+  var libraries = getStore().getState().applabLibrary.libraries;
+  return libraries.length ? libraries : undefined;
+};
+
 /**
  * Sets Applab.levelHtml as well as #designModeViz contents.
  * designModeViz is the source of truth for the app's HTML.
@@ -371,6 +377,7 @@ Applab.init = function(config) {
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
+  config.getLibrary = getLibrary;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -381,7 +388,8 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: Applab.getLibraries()
     }));
   } else if (!config.channel) {
     throw new Error(
@@ -669,6 +677,35 @@ Applab.init = function(config) {
       config.dropletConfig.blocks.push(customFunctions[key]);
       level.codeFunctions[key] = null;
     });
+  }
+
+  var librariesExist = level.libraries && level.libraries.length > 0;
+
+  // Temporarily, always use the levelbuilder-created libraries if they
+  // exist. Once 'Start Over' is implemented for libraries, allow
+  // student-created libraries. (Add check for !librariesExist)
+  if (level.startLibraries && level.startLibraries.length > 0) {
+    level.libraries = level.startLibraries;
+    librariesExist = true;
+  }
+
+  // Libraries should be added to redux whether the experiment is enabled or
+  // not. This prevents work from being lost if a levelbuilder toggles the
+  // experiment flag.
+  if (librariesExist) {
+    getStore().dispatch(setApplabLibraries(level.libraries));
+  }
+
+  if (experiments.isEnabled('student-libraries') && librariesExist) {
+    let importedConfigs = level.libraries
+      .map(library => library.dropletConfig)
+      .reduce((a, b) => a.concat(b));
+    if (importedConfigs) {
+      Object.keys(importedConfigs).map(key => {
+        config.dropletConfig.blocks.push(importedConfigs[key]);
+        level.codeFunctions[importedConfigs[key].func] = null;
+      });
+    }
   }
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
@@ -1090,6 +1127,15 @@ Applab.onReportComplete = function(response) {
 };
 
 /**
+ * Generates a library from the functions in the project code
+ */
+function getLibrary() {
+  var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
+  temporaryInterpreter.parse({code: studioApp().getCode()});
+  return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
  * Execute the app
  */
 Applab.execute = function() {
@@ -1130,6 +1176,28 @@ Applab.execute = function() {
       jsInterpreterLogger.attachTo(Applab.JSInterpreter);
     }
     getStore().dispatch(jsDebugger.attach(Applab.JSInterpreter));
+
+    // Set up student-created libraries
+    if (experiments.isEnabled('student-libraries')) {
+      getStore()
+        .getState()
+        .applabLibrary.libraries.map(library => {
+          var functionNames = library.functionNames
+            .map(name => {
+              return name + ': ' + name;
+            })
+            .join(',');
+          var libraryClosure =
+            'var ' +
+            library.name +
+            ' = (function() {\n' +
+            library.source +
+            '\nreturn {' +
+            functionNames +
+            '};})();';
+          codeWhenRun = libraryClosure + codeWhenRun;
+        });
+    }
 
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({

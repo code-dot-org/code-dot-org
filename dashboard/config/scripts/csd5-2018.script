@@ -11,6 +11,7 @@ family_name 'csd5'
 version_year '2018'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD U5L01 autoSFLP_2018', named: true

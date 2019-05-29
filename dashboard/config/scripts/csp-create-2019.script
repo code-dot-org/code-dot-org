@@ -6,9 +6,11 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/csp-create/"], ["teacherForum", "https://forum.code.org/c/csp/ap-prep"], ["standardMappings", "https://curriculum.code.org/csp-19/csp-create/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/csp-create/{LESSON}'
 family_name 'csp-create'
 version_year '2019'
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL01 SFLP_2019', named: true
