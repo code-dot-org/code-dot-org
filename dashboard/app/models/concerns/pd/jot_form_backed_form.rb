@@ -177,7 +177,7 @@ module Pd
         imported
       end
 
-      def process_submission(submission, questions_details)
+      def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
           dest_answers = {}
@@ -232,6 +232,12 @@ module Pd
         # Only keep this environment. Skip others.
         return true if environment != Rails.env
 
+        false
+      end
+
+      # Override in included class to enable use of name instead of id for question identifier.
+      # @return [Boolean] true if name should be used when possible for question identifier.
+      def use_names_for_question_ids?
         false
       end
 
