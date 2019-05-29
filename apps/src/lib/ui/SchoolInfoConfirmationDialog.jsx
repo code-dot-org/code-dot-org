@@ -55,7 +55,17 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
+    const {authTokenName, authTokenValue} = this.props.scriptData;
     this.setState({isOpen: false});
+
+    fetch(
+      `/api/v1/users/${
+        this.props.scriptData.existingSchoolInfo.id
+      }/update_last_seen_school_interstitial`,
+      {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+    )
+      .then()
+      .catch(() => {});
   };
 
   handleClickYes = () => {
@@ -79,21 +89,35 @@ class SchoolInfoConfirmationDialog extends Component {
   handleClickSave = async () => {
     const {authTokenName, authTokenValue} = this.props.scriptData;
     fetch(
-      `/api/v1/user_school_infos/${
+      `/api/v1/users/${
         this.props.scriptData.existingSchoolInfo.id
-      }/update_end_date`,
+      }/update_school_info_id`,
       {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
     )
-      .then(() => {
-        fetch(
-          `/api/v1/users/${
-            this.props.scriptData.existingSchoolInfo.id
-          }/update_school_info_id`,
-          {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
-        ).then(() => this.props.onClose());
-      })
-      .catch(() => {});
+      .then(() => this.props.onClose())
+      .catch(error => {
+        this.setState({error});
+      });
   };
+
+  // handleClickSave = async () => {
+  //   const {authTokenName, authTokenValue} = this.props.scriptData;
+  //   fetch(
+  //     `/api/v1/user_school_infos/${
+  //       this.props.scriptData.existingSchoolInfo.id
+  //     }/update_end_date`,
+  //     {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+  //   )
+  //     .then(() => {
+  //       fetch(
+  //         `/api/v1/users/${
+  //           this.props.scriptData.existingSchoolInfo.id
+  //         }/update_school_info_id`,
+  //         {method: 'PATCH', headers: {[authTokenName]: authTokenValue}}
+  //       ).then(() => this.props.onClose());
+  //     })
+  //     .catch(() => {});
+  // };
 
   renderInitialContent = () => {
     const {schoolName} = this.state;
