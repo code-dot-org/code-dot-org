@@ -413,15 +413,35 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_family_redirect_for_user returns latest user assigned script in family if user' do
+  test 'get_script_family_redirect_for_user returns latest stable script assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+
+    # Assign student to csp1_2017.
     section = create :section, script: csp1_2017
     student = create :student
     section.students << student
 
     redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_script.redirect_to
+
+    # Student makes progress in csp1_2018.
+    create :user_level, user: student, script: csp1_2018
+    student.reload
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2018.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable script in family if teacher' do
+    teacher = create :teacher
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+    create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
+    create :section, user: teacher, script: csp1_2017
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: teacher)
+    assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
   test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
