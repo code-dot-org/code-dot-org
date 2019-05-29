@@ -894,7 +894,7 @@ DEPENDENCIES
   aws-sdk-dynamodb (~> 1)
   aws-sdk-ec2 (~> 1)
   aws-sdk-firehose (~> 1.6)
-  aws-sdk-rds (~> 1)
+  aws-sdk-rds (>= 1.38.1)
   aws-sdk-route53 (~> 1)
   aws-sdk-s3 (~> 1)
   aws-sdk-sqs (~> 1)
