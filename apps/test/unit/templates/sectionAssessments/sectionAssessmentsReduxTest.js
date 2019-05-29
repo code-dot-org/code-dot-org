@@ -1,5 +1,4 @@
 import {assert} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -36,7 +35,6 @@ import sectionAssessments, {
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -199,10 +197,8 @@ describe('sectionAssessmentsRedux', () => {
     });
   });
 
-  //TODO When turn off experiment come in and delete cases that are no longer needed
   describe('getCurrentScriptAssessmentList', () => {
-    it('gets a list of assessments - script is not csd or csp - experiment on', () => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
+    it('gets a list of assessments - script is not csd or csp', () => {
       const rootState = {
         scriptSelection: {
           scriptId: 123,
@@ -232,45 +228,9 @@ describe('sectionAssessmentsRedux', () => {
       assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
       assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
       assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
-      experiments.isEnabled.restore();
     });
 
-    it('gets a list of assessments - script is not csd or csp - experiment off', () => {
-      sinon.stub(experiments, 'isEnabled').returns(false);
-      const rootState = {
-        scriptSelection: {
-          scriptId: 123,
-          validScripts: [{id: 123, script_name: 'learn-cs'}]
-        },
-        sectionAssessments: {
-          ...initialState,
-          assessmentQuestionsByScript: {
-            123: {
-              7: {id: 7, name: 'Assessment 7'},
-              8: {id: 8, name: 'Assessment 8'}
-            },
-            456: {
-              4: {id: 4, name: 'Assessment 4'},
-              5: {id: 5, name: 'Assessment 5'}
-            }
-          },
-          surveysByScript: {
-            123: {
-              9: {stage_name: 'Survey 9'}
-            }
-          }
-        }
-      };
-      const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 3);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
-      experiments.isEnabled.restore();
-    });
-
-    it('gets a list of assessments - script is csd or csp - experiment on', () => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
+    it('gets a list of assessments - script is csd or csp', () => {
       const rootState = {
         scriptSelection: {
           scriptId: 123,
@@ -304,41 +264,6 @@ describe('sectionAssessmentsRedux', () => {
         id: 0,
         name: 'All teacher feedback in this unit'
       });
-      experiments.isEnabled.restore();
-    });
-
-    it('gets a list of assessments - script is csd or csp - experiment off', () => {
-      sinon.stub(experiments, 'isEnabled').returns(false);
-      const rootState = {
-        scriptSelection: {
-          scriptId: 123,
-          validScripts: [{id: 123, script_name: 'csp8-2011'}]
-        },
-        sectionAssessments: {
-          ...initialState,
-          assessmentQuestionsByScript: {
-            123: {
-              7: {id: 7, name: 'Assessment 7'},
-              8: {id: 8, name: 'Assessment 8'}
-            },
-            456: {
-              4: {id: 4, name: 'Assessment 4'},
-              5: {id: 5, name: 'Assessment 5'}
-            }
-          },
-          surveysByScript: {
-            123: {
-              9: {stage_name: 'Survey 9'}
-            }
-          }
-        }
-      };
-      const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 3);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
-      experiments.isEnabled.restore();
     });
   });
 
@@ -836,10 +761,8 @@ describe('sectionAssessmentsRedux', () => {
       });
     });
 
-    //TODO: Remove cases for experiment when remove experiment
     describe('doesCurrentCourseUseFeedback', () => {
-      it('returns true when the current script is CSD or CSP- experiment on', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
+      it('returns true when the current script is CSD or CSP', () => {
         const state = {
           ...rootState,
           scriptSelection: {
@@ -849,11 +772,9 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = doesCurrentCourseUseFeedback(state);
         assert.deepEqual(result, true);
-        experiments.isEnabled.restore();
       });
 
-      it('returns false when the current script is not CSD or CSP- experiment on', () => {
-        sinon.stub(experiments, 'isEnabled').returns(true);
+      it('returns false when the current script is not CSD or CSP', () => {
         const state = {
           ...rootState,
           scriptSelection: {
@@ -863,21 +784,6 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result = doesCurrentCourseUseFeedback(state);
         assert.deepEqual(result, false);
-        experiments.isEnabled.restore();
-      });
-
-      it('returns false when experiment off', () => {
-        sinon.stub(experiments, 'isEnabled').returns(false);
-        const state = {
-          ...rootState,
-          scriptSelection: {
-            scriptId: 2,
-            validScripts: [{id: 2, script_name: 'csp8-2011'}]
-          }
-        };
-        const result = doesCurrentCourseUseFeedback(state);
-        assert.deepEqual(result, false);
-        experiments.isEnabled.restore();
       });
     });
 

@@ -7,7 +7,7 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab has feedback download
     # Assign a script with a survey but no assessment
     When I sign in as "Teacher_Sally"
-    Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15?enableExperiments=2019-mini-rubric"
+    Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
     And I wait for the page to fully load
     Then I am on "http://studio.code.org/home"
     And I click selector ".ui-test-section-dropdown" once I see it
