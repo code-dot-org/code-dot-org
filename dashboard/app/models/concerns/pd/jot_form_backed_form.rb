@@ -107,6 +107,14 @@ module Pd
 
         form_ids.each do |form_id|
           questions = get_questions(form_id, force_sync: true)
+          questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+          if questions_details
+            # Make sure that there is a unique, non-nil name for each question.
+            if questions_details.pluck("name").compact.uniq.size != questions_details.size
+              raise "Not all questions for form #{form_id} have unique names."
+            end
+          end
+
           last_known_submission_id = questions.last_submission_id
 
           offset = 0
@@ -126,7 +134,6 @@ module Pd
             response[:submissions].each do |submission|
               submission_id = submission[:submission_id]
               begin
-                questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
                 success = process_submission(submission, questions_details)
                 imported += 1 if success
               rescue => e
