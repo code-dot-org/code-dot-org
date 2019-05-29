@@ -12069,6 +12069,14 @@ en:
               name: Student Survey (Mini PT)
             Loops Investigate and Practice:
               name: Loops Investigate and Practice
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
+            Student Survey (Libraries):
+              name: Student Survey (Libraries)
+            Teacher Survey (Libraries):
+              name: Teacher Survey (Libraries)
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
