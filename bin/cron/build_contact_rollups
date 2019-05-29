@@ -10,11 +10,8 @@ require 'aws-sdk-rds'
 
 CHAT_CHANNEL = "cron-daily".freeze
 
-# TODO: (suresh) Move database cluster name (environment-specific configuration setting) to Chef Secrets.
-DATABASE_CLUSTER_NAME = "production-aurora"
-DATABASE_CLUSTER_ID = "#{DATABASE_CLUSTER_NAME}-cluster"
-DATABASE_CLUSTER_CLONE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone-cluster"
-DATABASE_CLUSTER_INSTANCE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone"
+DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
+DATABASE_CLONE_INSTANCE_TYPE = 'db.r4.2xlarge'
 
 def main
   time_start = Time.now
@@ -89,19 +86,19 @@ def create_database_clone
   rds_client = Aws::RDS::Client.new
   begin
     @ChatClient.message(CHAT_CHANNEL, "Creating clone of production database cluster - #{DATABASE_CLUSTER_CLONE_ID}")
-    # TODO: (suresh) Copy attributes from existing cluster.
+    existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: CDO.db_cluster_id}).db_clusters.first
     rds_client.restore_db_cluster_to_point_in_time(
       {
         db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
         restore_type: 'copy-on-write',
-        source_db_cluster_identifier: DATABASE_CLUSTER_ID,
+        source_db_cluster_identifier: CDO.db_cluster_id,
         use_latest_restorable_time: true,
-        db_subnet_group_name: 'vpc-dbsubnetgroup-16szux88i4hex',
-        vpc_security_group_ids: ['sg-1715936c'],
+        db_subnet_group_name: existing_cluster.db_subnet_group,
+        vpc_security_group_ids: existing_cluster.vpc_security_groups.map(&:vpc_security_group_id),
         tags: [
           {
             key: 'environment',
-            value: 'production',
+            value: CDO.rack_env.to_s,
           },
         ]
       }
@@ -109,12 +106,13 @@ def create_database_clone
     rds_client.create_db_instance(
       {
         db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID,
-        db_instance_class: 'db.r4.2xlarge',
-        engine: 'aurora-mysql', # Aurora MySQL 5.7
+        db_instance_class: DATABASE_CLONE_INSTANCE_TYPE,
+        engine: existing_cluster.engine,
         db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
       }
     )
-    rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID}, {max_attempts: 20, delay: 60})
+    # Wait 30 minutes.  As of mid-2019, it takes about 15 minutes to provision a clone of the production cluster.
+    rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_INSTANCE_ID}, {max_attempts: 30, delay: 60})
   rescue Aws::Waiters::Errors::WaiterFailed => error
     @ChatClient.message(CHAT_CHANNEL, "Error waiting for cluster clone instance to become available. #{error.message}")
   end
