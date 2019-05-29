@@ -129,7 +129,7 @@ const styles = {
   }
 };
 
-class TopInstructions extends React.Component {
+class TopInstructionsCSF extends React.Component {
   static propTypes = {
     handleClickCollapser: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
@@ -156,7 +156,6 @@ class TopInstructions extends React.Component {
     hasAuthoredHints: PropTypes.bool.isRequired,
 
     collapsed: PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func.isRequired,
 
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
@@ -173,12 +172,9 @@ class TopInstructions extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
-    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
-    expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
   };
@@ -663,7 +659,6 @@ module.exports = connect(
       isMinecraft: !!state.pageConstants.isMinecraft,
       aniGifURL: state.pageConstants.aniGifURL,
       height: state.instructions.renderedHeight,
-      expandedHeight: state.instructions.expandedHeight,
       maxHeight: Math.min(
         state.instructions.maxAvailableHeight,
         state.instructions.maxNeededHeight
@@ -678,21 +673,13 @@ module.exports = connect(
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
       inputOutputTable: state.pageConstants.inputOutputTable,
-      noVisualization: state.pageConstants.noVisualization,
-      textToSpeechEnabled:
-        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
+      noVisualization: state.pageConstants.noVisualization
     };
   },
   function propsFromDispatch(dispatch) {
     return {
       hideOverlay: function() {
         dispatch(instructions.hideOverlay());
-      },
-      toggleInstructionsCollapsed: function() {
-        dispatch(instructions.toggleInstructionsCollapsed());
-      },
-      setInstructionsHeight: function(height) {
-        dispatch(instructions.setInstructionsHeight(height));
       },
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
@@ -707,4 +694,4 @@ module.exports = connect(
   },
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(TopInstructionsCSF));
