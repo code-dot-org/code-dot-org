@@ -10,6 +10,7 @@ import {hideExportDialog} from './exportDialogRedux';
 import i18n from '@cdo/locale';
 import firehoseClient from '../../lib/util/firehose';
 import exportExpoIconPng from '../../templates/export/expo/icon.png';
+import SendToPhone from './SendToPhone';
 
 function recordExport(type) {
   if (!window.dashboard) {
@@ -98,6 +99,11 @@ const styles = {
     backgroundColor: color.orange,
     color: color.white
   },
+  actionButtonDisabled: {
+    ...baseStyles.button,
+    backgroundColor: color.gray,
+    color: color.white
+  },
   p: {
     ...baseStyles.text
   },
@@ -145,6 +151,35 @@ const styles = {
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
+  },
+  spinner: {
+    fontSize: 24
+  },
+  expoInput: {
+    cursor: 'copy',
+    width: 'unset'
+  },
+  phoneLabel: {
+    marginTop: 15,
+    marginBottom: 0
+  },
+  apkUriContainer: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  sendToPhoneButton: {
+    ...baseStyles.button,
+    backgroundColor: color.purple,
+    color: color.white
+  },
+  sendToPhoneButtonBody: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  sendToPhoneIcon: {
+    fontSize: 32,
+    width: 30,
+    margin: '-8px 0'
   }
 };
 
@@ -197,17 +232,22 @@ class ExportAllowedDialog extends React.Component {
     this.setState({
       exporting: false,
       exportError: null,
-      expoUri: null,
-      expoSnackId: null,
-      iconUri: null,
-      splashImageUri: null
+      expoUri: undefined,
+      expoSnackId: undefined,
+      iconUri: undefined,
+      splashImageUri: undefined,
+      showSendToPhone: false,
+      apkUri: undefined,
+      generatingApk: false,
+      apkError: null
     });
   }
 
   close = () => {
     const {expoUri} = this.state;
     if (expoUri) {
-      this.setState({screen: 'intro'});
+      // If we are re-opened, start at the platform page:
+      this.setState({screen: 'platform'});
     } else {
       // If we don't haven't succesfully exported, then clear all export
       // state so we will start again fresh the next time:
@@ -215,6 +255,16 @@ class ExportAllowedDialog extends React.Component {
     }
     recordExport('close');
     this.props.onClose();
+  };
+
+  onInputSelect = ({target}) => {
+    target.select();
+  };
+
+  showSendToPhone = () => {
+    this.setState({
+      showSendToPhone: true
+    });
   };
 
   onInstallExpoIOS = () => {
@@ -234,6 +284,7 @@ class ExportAllowedDialog extends React.Component {
   async publishExpoExport() {
     const {expoUri} = this.state;
     if (expoUri) {
+      // We have already have exported to Expo
       return;
     }
     const {exportApp, projectUpdatedAt} = this.props;
@@ -265,22 +316,60 @@ class ExportAllowedDialog extends React.Component {
     }
   }
 
+  async publishAndGenerateApk() {
+    if (this.state.apkUri) {
+      // We have already have generated an APK
+      return;
+    }
+
+    await this.publishExpoExport();
+
+    const {exportApp} = this.props;
+    const {expoSnackId, iconUri, splashImageUri} = this.state;
+
+    if (!expoSnackId) {
+      // We failed to generate a snackId
+      return;
+    }
+
+    this.setState({generatingApk: true});
+    try {
+      const apkUri = await exportApp({
+        mode: 'expoGenerateApk',
+        expoSnackId,
+        iconUri,
+        splashImageUri
+      });
+      this.setState({
+        generatingApk: false,
+        apkError: null,
+        apkUri
+      });
+    } catch (e) {
+      this.setState({
+        generatingApk: false,
+        apkError: 'Failed to create Android app. Please try again later.'
+      });
+    }
+  }
+
   onActionButton = () => {
     const {screen} = this.state;
 
     switch (screen) {
       case 'intro':
-        this.publishExpoExport();
-        return this.setState({screen: 'export'});
-      case 'export':
         return this.setState({screen: 'platform'});
+      // case 'export':
+      //   return this.setState({screen: 'platform'});
       case 'platform':
-        return this.setState({screen: 'icon'});
-      case 'icon':
         return this.setState({screen: 'publish'});
+      // return this.setState({screen: 'icon'});
+      // case 'icon':
+      //   return this.setState({screen: 'publish'});
       case 'publish':
-        return this.setState({screen: 'waiting'});
-      case 'waiting':
+        this.publishAndGenerateApk();
+        return this.setState({screen: 'generating'});
+      case 'generating':
         return this.close();
       default:
         throw new Error(`ExportAllowedDialog: Unexpected screen: ${screen}`);
@@ -293,16 +382,16 @@ class ExportAllowedDialog extends React.Component {
     switch (screen) {
       case 'intro':
         return this.renderIntroPage();
-      case 'export':
-        return this.renderExportPage();
+      // case 'export':
+      //   return this.renderExportPage();
       case 'platform':
         return this.renderPlatformPage();
-      case 'icon':
-        return this.renderIconPage();
+      // case 'icon':
+      //   return this.renderIconPage();
       case 'publish':
         return this.renderPublishPage();
-      case 'waiting':
-        return this.renderWaitingPage();
+      case 'generating':
+        return this.renderGeneratingPage();
       default:
         throw new Error(`ExportAllowedDialog: Unexpected screen: ${screen}`);
     }
@@ -319,6 +408,11 @@ class ExportAllowedDialog extends React.Component {
         </div>
         <div style={styles.section}>
           <p style={styles.p}>
+            We will create a mobile app that reflects the current state of your
+            Code Studio creation. Then, you can install the app on your mobile
+            device.
+          </p>
+          {/*<p style={styles.p}>
             The first step is to install the Expo app on your mobile device so
             you can test your project within the Expo app.
           </p>
@@ -335,7 +429,7 @@ class ExportAllowedDialog extends React.Component {
             onClick={this.onInstallExpoAndroid}
           >
             Android Expo App
-          </button>
+          </button>*/}
         </div>
       </div>
     );
@@ -350,6 +444,8 @@ class ExportAllowedDialog extends React.Component {
       iconUri,
       splashImageUri
     } = this.state;
+    // TODO: This page should be updated as a transition page to snack.expo.io
+    // when iOS IPA export is ready to go
     return (
       <div>
         <div style={styles.section}>
@@ -451,30 +547,88 @@ class ExportAllowedDialog extends React.Component {
     );
   }
 
-  renderWaitingPage() {
+  renderGeneratingPage() {
+    const {
+      exporting,
+      generatingApk,
+      showSendToPhone,
+      exportError,
+      apkError,
+      apkUri = ''
+    } = this.state;
+    const waiting = exporting || generatingApk;
+    const error = exportError || apkError;
+    const {appType, channelId} = this.props;
+    const titleText = waiting
+      ? 'Creating Android Package...'
+      : error
+      ? 'Error creating Android Package'
+      : 'The Android Package was created successfully';
+    const headerText = waiting
+      ? 'Please wait for about <b>15 minutes</b>.'
+      : error || 'Send this link to your device to install the app.';
     return (
       <div>
         <div style={styles.section}>
-          <p style={styles.title}>Creating Android Package...</p>
+          <p style={styles.title}>{titleText}</p>
         </div>
         <div style={styles.section}>
-          <p style={styles.p}>
-            Please wait for about <b>15 minutes</b>.
-          </p>
+          <p style={styles.p} dangerouslySetInnerHTML={{__html: headerText}} />
+        </div>
+        <div style={styles.section}>
+          {waiting && (
+            <i style={styles.spinner} className="fa fa-spinner fa-spin" />
+          )}
+          {!waiting && !error && (
+            <div>
+              <div style={styles.apkUriContainer}>
+                <input
+                  type="text"
+                  onClick={this.onInputSelect}
+                  readOnly="true"
+                  value={apkUri}
+                  style={styles.expoInput}
+                />
+              </div>
+              <button
+                type="button"
+                style={styles.sendToPhoneButton}
+                onClick={this.showSendToPhone}
+              >
+                <div style={styles.sendToPhoneButtonBody}>
+                  <i
+                    className="fa fa-mobile-phone"
+                    style={styles.sendToPhoneIcon}
+                  />
+                  <span>{i18n.sendToPhone()}</span>
+                </div>
+              </button>
+              {showSendToPhone && (
+                <SendToPhone
+                  channelId={channelId}
+                  appType={appType}
+                  downloadUrl={apkUri}
+                  isLegacyShare={false}
+                  styles={{label: styles.phoneLabel}}
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
     );
   }
 
   getActionButtonInfo() {
-    const {screen, exporting} = this.state;
+    const {screen, exporting, generatingApk} = this.state;
     const info = {
       text: 'Next',
       enabled: true
     };
     switch (screen) {
-      case 'waiting':
+      case 'generating':
         info.text = 'Finish';
+        info.enabled = !exporting && !generatingApk;
         break;
       case 'export':
         info.enabled = !exporting;
@@ -487,7 +641,10 @@ class ExportAllowedDialog extends React.Component {
   }
 
   render() {
-    const actionButtonInfo = this.getActionButtonInfo();
+    const {
+      text: actionText,
+      enabled: actionEnabled
+    } = this.getActionButtonInfo();
     const showShareWarning =
       !this.props.canShareSocial &&
       (this.props.appType === 'applab' || this.props.appType === 'gamelab');
@@ -551,11 +708,15 @@ class ExportAllowedDialog extends React.Component {
                   </button>
                   <button
                     type="button"
-                    style={styles.actionButton}
+                    style={
+                      actionEnabled
+                        ? styles.actionButton
+                        : styles.actionButtonDisabled
+                    }
                     onClick={this.onActionButton}
-                    disabled={!actionButtonInfo.enabled}
+                    disabled={!actionEnabled}
                   >
-                    {actionButtonInfo.text}
+                    {actionText}
                   </button>
                 </div>
               </div>
