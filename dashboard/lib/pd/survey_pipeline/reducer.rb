@@ -16,9 +16,10 @@ module Pd::SurveyPipeline
 
     # @param values Array<string> array of numbers in string format
     # @return [float] average of the input values
+    # @raise string not convertible to float will raise ArgumentError
     def self.reduce(values)
-      return unless values.is_a? Enumerable
-      values.inject(0.0) {|sum, elem| sum + elem.to_f} / values.size
+      return unless values.is_a?(Enumerable) && values.present?
+      values.inject(0.0) {|sum, elem| sum + Float(elem)} / values.size
     end
   end
 
@@ -40,7 +41,7 @@ module Pd::SurveyPipeline
       'no_op'
     end
 
-    # Used to compile list of free-format answers.
+    # Do nothing. Used to compile list of free-format answers.
     # @param Array<string>
     # @return Array<string> the same input it receives.
     def self.reduce(values)
