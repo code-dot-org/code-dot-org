@@ -14,9 +14,8 @@ module Pd::SurveyPipeline
 
     # Retrieve data from Pd::SurveyQuestion, Pd::WorkshopDailySurvey
     # and Pd::WorkshopFacilitatorDailySurvey.
-    # @return [Hash{Symbol => Array}]
-    #   a hash with keys are symbols (:survey_questions, :workshop_submissions,
-    #   :facilitator_submissions) and values are arrays of questions and submissions
+    # @return [Hash{:survey_questions, :workshop_submissions, :facilitator_submissions => Array}]
+    #   contains arrays of questions and submissions.
     def retrieve_data
       # Build where clause from filter values
       submission_filter = {}
@@ -27,7 +26,7 @@ module Pd::SurveyPipeline
       ws_submissions = Pd::WorkshopDailySurvey.where(submission_filter)
       facilitator_submissions = Pd::WorkshopFacilitatorDailySurvey.where(submission_filter)
 
-      # Collect survey questions, ignore form that doesn't have submission.
+      # Collect survey questions; ignore forms that don't have submissions.
       form_ids_with_submissions =
         ws_submissions.pluck(:form_id).uniq | facilitator_submissions.pluck(:form_id).uniq
 
