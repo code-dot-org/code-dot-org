@@ -28,6 +28,7 @@ stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
 level 'U7 Libraries List Math Library', progression: 'Code Investigation'
 level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
+level 'U7 Libraries Investigate Quote Maker', progression: 'Code Investigation'
 
 stage 'Libraries Mini PT', flex_category: 'csp_project'
 level 'U7 Mini Create PT sample app', progression: 'Project Sample'
