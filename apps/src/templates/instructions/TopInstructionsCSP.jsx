@@ -507,7 +507,13 @@ class TopInstructionsCSP extends Component {
               )}
           </div>
         </PaneHeader>
-        <div style={[this.props.collapsed && commonStyles.hidden]}>
+        <div
+          style={[
+            this.props.collapsed &&
+              this.props.noInstructionsWhenCollapsed &&
+              commonStyles.hidden
+          ]}
+        >
           <div style={styles.body}>
             <div ref="instructions">
               {this.props.hasContainedLevels && (
