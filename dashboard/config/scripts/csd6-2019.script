@@ -143,7 +143,7 @@ level 'CSD U6 arrays select predict_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select rainbow_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 array select days_2019', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select random_2019', progression: 'Introduction to Arrays'
-level 'CSDU6 arrays select variable_2019', progression: 'Introduction to Arrays'
+level 'CSDU6 arrays select variable_2019', progression: 'Introduction to Arrays', assessment: true
 level 'CSD U6 arrays intro_2019', named: true
 level 'CSD U6 array multi_2018_2019', named: true, assessment: true
 level 'CSD U6 colorLeds predict_2019', progression: 'Color LEDs'
@@ -153,24 +153,24 @@ level 'CSD U6 colorLeds debug_2019', progression: 'Color LEDs'
 level 'CSD U6 colorLeds intensity_2019', progression: 'Color LEDs'
 level 'CSD colorLed Map_2019', named: true
 level 'CSD U6 colorLeds light pattern_2019', progression: 'Light Show'
-level 'CSD U6 light pattern off_2019', progression: 'Light Show'
+level 'CSD U6 light pattern off_2019', progression: 'Light Show', assessment: true
 bonus 'CSD U6 light pattern challenge_2019', progression: 'Challenge Levels'
 
 stage 'Making Music', flex_category: 'csd6_2'
 level 'CSD U6L11 TFMD_2019', named: true
-level 'CSDU6 circuit playground piano_2019', progression: 'Making Sounds'
-level 'CSDU6 frequency modification_2019', progression: 'Making Sounds'
-level 'CSDU6 frequency creation_2019', progression: 'Making Sounds'
+level 'CSDU6 circuit playground piano_2019', progression: 'Playing Notes'
+level 'CSDU6 frequency modification_2019', progression: 'Playing Notes'
+level 'CSDU6 frequency creation_2019', progression: 'Playing Notes'
+level 'CSDU6 piano with notes_2019', progression: 'Playing Notes'
 level 'Making Music_2019', named: true
-level 'CSDU6 piano with notes_2019', progression: 'Playing with Notes'
-level 'CSD-Arrays_2019', named: true
 level 'CSD U6 array piano_2019', progression: 'Musical Arrays'
 level 'CSD U6 random array notes_2019', progression: 'Musical Arrays'
-level 'CSDU6 making new arrays_2019', progression: 'Musical Arrays'
+level 'CSDU6 making new arrays_2019', progression: 'Musical Arrays', assessment: true
+level 'CSD-Arrays_2019', named: true
 level 'CSDU6 play predict code_2019', progression: 'Making Songs'
 level 'CSDU6 play songs_2019', progression: 'Making Songs'
 level 'CSDU6 play null notes_2019', progression: 'Making Songs'
-level 'CDU U6 Playground Sound Board_2019', progression: 'Making Songs'
+level 'CDU U6 Playground Sound Board_2019', progression: 'Making Songs', assessment: true
 bonus 'CSDU6 buzzer 2d arrays_2019'
 bonus 'CSDU6 buzzer.stop_2019'
 
@@ -200,7 +200,7 @@ level 'CSD U6 stillness game predict code_2019', progression: 'Accelerometer Eve
 level 'CSD U6 Pedometer_2019', progression: 'Accelerometer Events'
 level 'Using Accelerometer Events_2019', named: true
 level 'Revisiting the Counter Pattern_2019', named: true
-level 'CSD U6 goalie_2019', progression: 'Accelerometer Events'
+level 'CSD U6 goalie_2019', progression: 'Accelerometer Events', assessment: true
 level 'CSD U6 Driver pt1_2019', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt 2_2019', progression: 'Accelerometer Events'
 
@@ -232,13 +232,13 @@ level 'CSD U6 circuit pinMode_2019', progression: 'Simple Circuits'
 level 'CSD U6 circuit createLed_2019', progression: 'Simple Circuits'
 level 'CSD U6 circuit multi led_2019', progression: 'Simple Circuits'
 level 'CSD U6 circuit smart bike blinkers_2019', progression: 'Smart Bike - Blinkers'
-level 'CSD U6 circuit smart bike blinker buttons_2019', progression: 'Smart Bike - Blinkers'
+level 'CSD U6 circuit smart bike blinker buttons_2019', progression: 'Smart Bike - Blinkers', assessment: true
 level 'CSD U6 circuit smart bike blinker build_2018_2019', progression: 'Smart Bike - Blinkers'
 level 'CSD U6 circuit button map_2019', progression: 'Button Circuits'
 level 'CSD U6 circuit createButton_2019', progression: 'Button Circuits'
 level 'CSD U6 circuit smart bike buzzer_2019', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike light_2019', progression: 'Finish the Prototype'
-level 'CSD U6 circuit smart bike final_2019', progression: 'Finish the Prototype'
+level 'CSD U6 circuit smart bike final_2019', progression: 'Finish the Prototype', assessment: true
 
 stage 'Project: Prototype an Innovation', flex_category: 'csd6_2'
 level 'CSD U6L16 TFMD_2019', named: true
