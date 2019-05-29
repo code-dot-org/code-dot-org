@@ -478,7 +478,8 @@ class Script < ActiveRecord::Base
 
     family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    if user
+    # Only students should be redirected based on script progress and/or section assignments.
+    if user&.student?
       assigned_script_ids = user.section_scripts.pluck(:id)
       script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
       return Script.new(redirect_to: script_name) if script_name
