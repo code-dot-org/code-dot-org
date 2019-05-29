@@ -95,7 +95,7 @@ select tt17.*, u.studio_person_id
   LEFT JOIN analysis.school_stats ss_summer_pd 
          ON ss_summer_pd.school_id = d.school_id
   -- attendance
-  LEFT JOIN analysis.quarterly_workshop_attendance qwa 
+  LEFT JOIN analysis.quarterly_workshop_attendance_view qwa 
          ON qwa.studio_person_id = d.studio_person_id
         AND qwa.course = d.course 
         AND qwa.school_year = d.school_year
@@ -103,7 +103,7 @@ select tt17.*, u.studio_person_id
   LEFT JOIN dashboard_production_pii.regional_partners rp  
        ON d.regional_partner_id = rp.id 
 -- analysis tables
-  LEFT JOIN analysis.student_activity_csp_csd sa 
+  LEFT JOIN analysis.student_activity_csp_csd_view sa 
          ON sa.studio_person_id = d.studio_person_id 
          AND sa.school_year >= d.school_year 
   LEFT JOIN started s
@@ -114,7 +114,7 @@ select tt17.*, u.studio_person_id
          ON c.studio_person_id = d.studio_person_id
         AND c.course = d.course   
         AND c.school_year  = s.school_year  
-  LEFT JOIN analysis.teacher_most_progress_csp_csd tmp 
+  LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp 
          ON tmp.studio_person_id = d.studio_person_id
          AND tmp.school_year = sa.school_year
 WITH NO SCHEMA BINDING;
