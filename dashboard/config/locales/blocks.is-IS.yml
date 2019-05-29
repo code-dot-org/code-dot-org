@@ -860,7 +860,7 @@ is:
       gamelab_makeNewGroup:
         text: búa til nýjan hóp
       gamelab_makeNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -1440,9 +1440,9 @@ is:
       aalab_createNewSpriteAdvanced:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+        text: aalab búa til nýja {ANIMATION\_NAME} veru á stað {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           búa til nýjan hóp sem heitir {VAR}

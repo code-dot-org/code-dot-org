@@ -147,4 +147,16 @@ class StorageAppsTest < Minitest::Test
     storage_apps.set_content_moderation(new_project_channel_id, false)
     assert_equal false, storage_apps.content_moderation_disabled?(new_project_channel_id)
   end
+
+  def test_buffer_abuse_score
+    signedin_storage_id = @user_storage_ids_table.insert(user_id: 20)
+    storage_apps = StorageApps.new(signedin_storage_id)
+
+    # Create a new typeless project
+    # abuse_score should be 0 by default on project creation for projects of any type.
+    new_project_channel_id = storage_apps.create({}, ip: 123)
+    assert_equal 0, storage_apps.get_abuse(new_project_channel_id)
+    storage_apps.buffer_abuse_score(new_project_channel_id)
+    assert_equal (-50), storage_apps.get_abuse(new_project_channel_id)
+  end
 end

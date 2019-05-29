@@ -1680,6 +1680,8 @@ pt-BR:
         x% são amantes de cão
       CSP Loops: Mude a condição "se" para uma repetição "enquanto" para que o programa
         execute até que role um 6. (Clique para ver as instruções completas)
+      CSP Pilot U5 Mini PT Project: Projete e implemente sua prática Criar tarefa
+        de desempenho. (Clique para ver instruções completas)
       CSP U4 - JSON Object Intro - Bad Way: Acione ambos os eventos do teclado e do
         mouse e examine os objetos de evento exibidos no console. Por que um objeto
         seria a melhor maneira de armazenar esta informação? (Clique para ver as instruções
@@ -3417,12 +3419,12 @@ pt-BR:
         Esta é uma função de Adição que
         usa dois números e retorna sua soma. Use este bloco Adição para somar 3
 
-        -   6\.
+        -   6.
       Calc Circles of Eval .4: |-
         Temos aqui um bloco de adição aninhado
         dentro de um bloco de multiplicação. Complete esse código para que ele multiplique 3 por (4
 
-        -   1\)
+        -   1)
       Calc Circles of Eval 1 (copy 1): |-
         Converta essa instrução para \<alguma\_forma>
         de cálculo.
@@ -4397,7 +4399,7 @@ pt-BR:
         ^ 2) a cada vez.  Quem vai chegar\nprimeiro à bandeira?"
       Course 4 Play Labs For Loops 8a: "Para terminar nosso jogo, precisamos\ntrazer
         de volta a variável \"incremento\"!    Vamos relacioná-la ao nível do\njogo.\\\r\n\\\r\n\n1.
-        \ Guarde o número de vezes que o mago é clicado.\\\r\n2.  2\\)\n    Se o mago
+        \ Guarde o número de vezes que o mago é clicado.\\\r\n2.  2)\n    Se o mago
         for clicado pelo menos 10 vezes antes do cão contar até 30, aumente\n    \"incremento\"
         em 1 unidade e comece de novo.\\\r\n3.  Se o mago não for clicado\n    pelo
         menos 10 vezes, o jogo acaba."
@@ -6175,6 +6177,9 @@ pt-BR:
       Pixelation - AllTheThings 5: Este nível de pixelização demonstra o uso da opção
         "Deslize para Ocultar". Note que o comprimento e altura do controle de deslize
         não está disponível, e os campos de comprimento e altura não são editáveis.
+      Pixelation - Lesson 14 - Fix bit offset v.2: 'Algo aconteceu com os bits nesta
+        imagem! Encontre o erro e conserte-o! Dica: alguns bits extras foram adicionados.
+        Você só precisa remover alguns bits.'
       Pixelation - Lesson 14 - Fix bit offset: Um bit simples extra foi inserido na
         sequência de bits que criam o C da logo do Code.org. Este bit extra atrapalha
         todos os bits subsequentes que fazem a logo parecer bagunçada. Encontre o
@@ -8152,34 +8157,8 @@ pt-BR:
         no alienígena?  '
       Virtual Pet 4: Adicione um comportamento ao seu sabonete para torná-lo arrastável
         e, em seguida, arraste-o para limpar a girafa!
-      Virtual Pet 4_2019: Adicione um comportamento ao seu sabonete para torná-lo
-        arrastável e, em seguida, arraste-o para limpar a girafa!
       Virtual Pet 4_simple: Adicione um comportamento ao seu sabonete para torná-lo
         arrastável e, em seguida, arraste-o para limpar a girafa!
-      Virtual Pet 6_2019: Defina a variável `felicidade` para 0 quando o programa
-        for iniciado. Quando o seu animal de estimação comer comida que gosta, altere
-        a `felicidade` em 1. Quando o seu animal de estimação comer comida que não
-        gosta, altere a `felicidade` em -1.
-      Virtual Pet 7_2019: |-
-        Imprima o nível de felicidade de seu animal cada vez que ele comer comida. Use este bloco, encontrado na categoria "World" da caixa de ferramentas:
-        <xml>
-        <block type="gamelab_printText" block-text="print text block">
-        <value name="TEXT">
-        <block type="text_join_simple" inputcount="2">
-        <value name="ADD0">
-        <block type="text">
-
-        <title name="TEXT">Meu nível de felicidade:</title>
-        </block>
-        </value>
-        <value name="ADD1">
-        <block type="variables_get">
-        <title name="VAR">felicidade</title>
-        </block>
-        </value>
-        </block>
-        </value>
-        </block></xml>
       Virtual Pet 8_2019: "**Jogo Livre:** O que mais você pode fazer seu animal de
         estimação fazer? Experimente o que quiser!"
       Virtual Pet Freeplay: 'Jogo livre: O que mais você pode fazer sua girafa fazer? '
