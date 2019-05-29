@@ -33,21 +33,21 @@ module Pd::SurveyPipeline
       summaries = []
 
       # Apply reducers on each group
-      groups.each do |gkey, record_arr|
-        logger&.debug "MP: gkey = #{gkey}"
-        logger&.debug "MP: record_arr.count = #{record_arr.count}"
+      groups.each do |group_key, group_records|
+        logger&.debug "MP: group_key = #{group_key}"
+        logger&.debug "MP: group_records.count = #{group_records.count}"
 
         map_config.each do |condition:, field:, reducers:|
-          logger&.debug "Match condition = #{condition.call(gkey)}"
-          next unless condition.call(gkey)
-          logger&.debug "MP: reducers to apply = #{reducers.count}"
+          logger&.debug "Match condition = #{condition.call(group_key)}"
+          next unless condition.call(group_key)
 
+          logger&.debug "MP: reducers to apply = #{reducers.count}"
           reducers.each do |reducer|
-            reducer_result = reducer.reduce record_arr.pluck(field)
+            reducer_result = reducer.reduce group_records.pluck(field)
             logger&.debug "MP: reducer.name = #{reducer.name}, result = #{reducer_result}"
 
             next unless reducer_result.present?
-            summaries << gkey.merge({reducer: reducer.name, reducer_result: reducer_result})
+            summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
           end
         end
       end
