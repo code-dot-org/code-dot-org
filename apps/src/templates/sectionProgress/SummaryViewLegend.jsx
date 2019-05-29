@@ -34,12 +34,11 @@ const styles = {
 
 export default class SummaryViewLegend extends Component {
   static propTypes = {
-    showCSFProgressBox: PropTypes.bool,
-    inMiniRubricExperiment: PropTypes.bool
+    showCSFProgressBox: PropTypes.bool
   };
 
   render() {
-    const {showCSFProgressBox, inMiniRubricExperiment} = this.props;
+    const {showCSFProgressBox} = this.props;
     const headerColSpan = showCSFProgressBox ? 2 : 3;
 
     return (
@@ -109,17 +108,14 @@ export default class SummaryViewLegend extends Component {
                     perfect={20}
                     stageIsAllAssessment={false}
                   />
-                  {inMiniRubricExperiment && (
-                    <ProgressBox
-                      style={styles.boxStyle}
-                      started={true}
-                      incomplete={0}
-                      imperfect={0}
-                      perfect={20}
-                      stageIsAllAssessment={true}
-                      inMiniRubricExperiment={inMiniRubricExperiment}
-                    />
-                  )}
+                  <ProgressBox
+                    style={styles.boxStyle}
+                    started={true}
+                    incomplete={0}
+                    imperfect={0}
+                    perfect={20}
+                    stageIsAllAssessment={true}
+                  />
                 </div>
               </td>
               {showCSFProgressBox && (
