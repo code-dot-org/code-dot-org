@@ -124,11 +124,7 @@ class ContactRollups
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
 
-  # TODO: (suresh) Move database cluster name (environment-specific configuration setting) to Chef Secrets.
-  DATABASE_CLUSTER_NAME = "production-aurora"
-  DATABASE_CLUSTER_ID = "#{DATABASE_CLUSTER_NAME}-cluster"
-  DATABASE_CLUSTER_CLONE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone-cluster"
-  DATABASE_CLUSTER_INSTANCE_ID = "#{DATABASE_CLUSTER_NAME}-temporary-clone"
+  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
 
   def self.build_contact_rollups
     start = Time.now
