@@ -5,13 +5,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-var instructions = require('../../redux/instructions');
-var color = require('../../util/color');
-var styleConstants = require('../../styleConstants');
-var commonStyles = require('../../commonStyles');
-import ContainedLevel from '../ContainedLevel';
-
-var Instructions = require('./Instructions');
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
@@ -24,20 +17,20 @@ import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import msg from '@cdo/locale';
-
 import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
-
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
-
 import {levenshtein} from '../../utils';
-import InlineAudio from './InlineAudio';
+
+var instructions = require('../../redux/instructions');
+var color = require('../../util/color');
+var styleConstants = require('../../styleConstants');
+var commonStyles = require('../../commonStyles');
+var Instructions = require('./Instructions');
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-const CONTAINED_LEVEL_PADDING = 10;
-const MIN_CONTAINED_LEVEL_HEIGHT = 50;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -54,35 +47,6 @@ const craftStyles = {
   },
   scrollButtonsRtl: {
     right: 38
-  }
-};
-
-const containedLevelStyles = {
-  background: {
-    backgroundColor: color.background_gray,
-    overflowY: 'scroll'
-  },
-  level: {
-    paddingTop: CONTAINED_LEVEL_PADDING,
-    paddingLeft: CONTAINED_LEVEL_PADDING,
-    paddingRight: CONTAINED_LEVEL_PADDING
-  }
-};
-
-const audioStyle = {
-  wrapper: {
-    display: 'flex',
-    justifyContent: 'center',
-    border: '2px solid ' + color.lighter_gray,
-    borderRadius: '4px'
-  },
-  button: {
-    height: '32px',
-    backgroundColor: '#FFFFFF'
-  },
-  buttonImg: {
-    lineHeight: '32px',
-    fontSize: 20
   }
 };
 
@@ -167,9 +131,6 @@ const styles = {
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
     float: 'left'
-  },
-  audioControls: {
-    paddingTop: 10
   }
 };
 
@@ -188,7 +149,6 @@ class TopInstructions extends React.Component {
     ).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
     showNextHint: PropTypes.func.isRequired,
-    hasContainedLevels: PropTypes.bool,
     isEmbedView: PropTypes.bool,
     isMinecraft: PropTypes.bool.isRequired,
     aniGifURL: PropTypes.string,
@@ -223,7 +183,6 @@ class TopInstructions extends React.Component {
   };
 
   static defaultProps = {
-    hasContainedLevels: false,
     isEmbedView: false,
     noVisualization: false
   };
@@ -365,9 +324,6 @@ class TopInstructions extends React.Component {
    * collapsed
    */
   getMinHeight(collapsed = this.props.collapsed) {
-    if (this.containedLevel) {
-      return MIN_CONTAINED_LEVEL_HEIGHT;
-    }
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
       !collapsed && this.scrollButtons
@@ -406,16 +362,10 @@ class TopInstructions extends React.Component {
     const minHeight = this.getMinHeight();
     const currentHeight = this.props.height;
 
-    let newHeight = Math.max(minHeight, currentHeight + delta);
-    if (this.containedLevel) {
-      const maxContainedLevelHeight =
-        getOuterHeight(this.containedLevel, true) +
-        RESIZER_HEIGHT +
-        CONTAINED_LEVEL_PADDING;
-      newHeight = Math.min(newHeight, maxContainedLevelHeight);
-    } else {
-      newHeight = Math.min(newHeight, this.props.maxHeight);
-    }
+    let newHeight = Math.min(
+      Math.max(minHeight, currentHeight + delta),
+      this.props.maxHeight
+    );
 
     this.props.setInstructionsRenderedHeight(newHeight);
     return newHeight - currentHeight;
@@ -430,9 +380,7 @@ class TopInstructions extends React.Component {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.instructions;
     const maxNeededHeight =
-      (this.props.hasContainedLevels
-        ? getOuterHeight(this.containedLevel, true) + CONTAINED_LEVEL_PADDING
-        : getOuterHeight(instructionsContent, true)) +
+      getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(
@@ -458,10 +406,6 @@ class TopInstructions extends React.Component {
    */
   scrollInstructionsToBottom() {
     const instructions = this.instructions;
-    if (!instructions) {
-      // If we have a contained level instead of instructions, do nothing
-      return;
-    }
     const contentContainer = instructions.parentElement;
     if (instructions.children.length > 1) {
       const lastChild = instructions.children[instructions.children.length - 1];
@@ -599,39 +543,6 @@ class TopInstructions extends React.Component {
     const ttsUrl = this.shouldDisplayShortInstructions()
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
-
-    const showAudioControls = this.props.textToSpeechEnabled && ttsUrl;
-
-    if (this.props.hasContainedLevels) {
-      return (
-        <div style={mainStyle}>
-          <div
-            style={{
-              ...containedLevelStyles.background,
-              height: topInstructionsHeight,
-              display: 'flex',
-              justifyContent: 'space-around'
-            }}
-          >
-            <div style={containedLevelStyles.level} className="contained-level">
-              <ContainedLevel
-                ref={c => {
-                  this.containedLevel = c;
-                }}
-              />
-            </div>
-            {showAudioControls && (
-              <div style={styles.audioControls}>
-                <InlineAudio
-                  src={this.props.ttsLongInstructionsUrl}
-                  style={audioStyle}
-                />
-              </div>
-            )}
-          </div>
-        </div>
-      );
-    }
 
     const leftColWidth =
       (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
@@ -795,7 +706,6 @@ module.exports = connect(
       overlayVisible: state.instructions.overlayVisible,
       ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      hasContainedLevels: state.pageConstants.hasContainedLevels,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       skinId: state.pageConstants.skinId,
