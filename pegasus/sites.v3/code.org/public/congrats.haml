@@ -103,13 +103,6 @@ max_age: 60
   }
 
   $(document).ready(function() {
-    $('#share-fb a').bind('click', function() {
-      $("#share-fb").hide(); $("#like-fb").css('display', 'inline-block');
-    });
-    $('#share-twitter a').bind('click', function() {
-      $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
-    });
-
     // Only show the Frozen "Print your Ice Art" section if we came from a
     // page with "Frozen" in the URL
     // TODO: This is a _terrible_ way to check which certificate we want
