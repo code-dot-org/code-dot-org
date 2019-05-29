@@ -45,6 +45,14 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 403
   end
 
+  def assert_first_tenure(user)
+    tenure = user.user_school_infos.last
+    assert_equal user.user_school_infos.count, 1
+    assert_equal user.created_at, tenure.start_date
+    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
+    assert_nil tenure.end_date
+  end
+
   test 'intial, no previoius, blank, manual' do
     user = create :teacher
     sign_in user
@@ -80,16 +88,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     user.reload
 
-    new_user_school_info = user.user_school_infos.last
-
     assert_response :success, response.body
-    assert_equal user.user_school_infos.count, 1
     refute_nil user.school_info
     assert user.school_info.school_name.nil?
-    refute_empty user.user_school_infos
-    assert_equal user.created_at, new_user_school_info.start_date
-    assert_in_delta Time.now.to_i, new_user_school_info.last_confirmation_date.to_i, 10
-    assert_nil new_user_school_info.end_date
+    assert_first_tenure(user)
 
     Timecop.return
   end
@@ -114,17 +116,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     user.reload
 
-    tenure = user.user_school_infos.last
-
     assert_response :success, response.body
-    assert_equal user.user_school_infos.count, 1
+
     refute_nil user.school_info
     refute_nil user.school_info.school
     refute_empty user.user_school_infos
-    assert_equal user.created_at, tenure.start_date
-    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
-    assert_nil tenure.end_date
-    assert_equal user.school_info.school.id, school.id
+    assert_first_tenure(user)
 
     Timecop.return
   end
@@ -148,17 +145,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     user.reload
 
-    tenure = user.user_school_infos.last
-
     assert_response :success, response.body
-    assert_equal user.user_school_infos.count, 1
+
     refute_nil user.school_info
     refute_nil user.school_info.school_name
     refute_empty user.user_school_infos
-    assert_equal user.created_at, tenure.start_date
-    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
-    assert_nil tenure.end_date
-    assert_equal user.school_info.school.id, school.id
+    assert_first_tenure(user)
 
     Timecop.return
   end
