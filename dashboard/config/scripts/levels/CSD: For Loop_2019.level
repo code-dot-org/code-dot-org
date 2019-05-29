@@ -11,12 +11,12 @@
     "skip_sound": true,
     "parent_level_id": 12474,
     "name_suffix": "_2019",
-    "display_name": "For Loops",
+    "display_name": "Video: For Loops",
     "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-19 20:52:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-15 18:34:37 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-12-19 20:52:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-04-15 18:34:37 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 06:49:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
