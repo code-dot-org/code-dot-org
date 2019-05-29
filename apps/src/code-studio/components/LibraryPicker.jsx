@@ -26,7 +26,7 @@ const styles = {
   },
   linkBox: {
     cursor: 'auto',
-    width: '300px',
+    width: '450px',
     height: '32px',
     marginBottom: 0
   },
