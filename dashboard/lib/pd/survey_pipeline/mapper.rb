@@ -25,7 +25,8 @@ module Pd::SurveyPipeline
     # Summarize input data using groupping and mapping configurations.
     # @param data [Array<Hash{}>] an array of hashes,
     #   each contains submission, question, and answer info.
-    # @return [Array<Hash>] an array of summarization results.
+    # @return [Array<Hash>] an array of summarization results. Each hash contains
+    #   all fields in group_config, reducer name and reducer result.
     def map_reduce(data)
       return unless data.is_a? Enumerable
 
@@ -49,10 +50,10 @@ module Pd::SurveyPipeline
           next unless condition.call(group_key)
 
           reducers.each do |reducer|
-            reduced_result = reducer.reduce group_records.pluck(field)
-            next unless reduced_result.present?
+            reducer_result = reducer.reduce group_records.pluck(field)
+            next unless reducer_result.present?
 
-            summaries << group_key.merge({reducer: reducer.name, reducer_result: reduced_result})
+            summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
           end
         end
       end
