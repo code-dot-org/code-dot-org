@@ -143,3 +143,7 @@ level 'U6 - Sample Apps - Flashcards_2019'
 stage 'Final Project', flex_category: 'csp_postap_2'
 level 'U6 - Final Project - Student Introduction_2018_2019'
 level 'U6 - Final Project - Project Level_2019', assessment: true
+
+stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-post-survey-intro-2019'
+level 'csp-post-survey-levelgroup-2019.2', assessment: true
