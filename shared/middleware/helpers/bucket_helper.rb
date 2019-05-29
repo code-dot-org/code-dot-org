@@ -280,7 +280,7 @@ class BucketHelper
 
     key = s3_path owner_id, storage_app_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, storage_app_id, source_filename)
-    response = s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+    response = s3.copy_object(bucket: @bucket, key: key, copy_source: CGI.escape(copy_source))
 
     # TODO: (bbuchanan) Handle abuse_score metadata for animations.
     # When copying an object, should also copy its abuse_score metadata.
