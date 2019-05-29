@@ -101,6 +101,22 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
   end
 
+  test 'last_seen_school_info_interstitial is updated' do
+    user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
+
+    original_value = user.last_seen_school_info_interstitial
+
+    school_info = create :school_info
+
+    create :user_school_info, school_info_id: school_info.id, user_id: user.id, last_confirmation_date: 2.years.ago, start_date: user.created_at
+
+    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
+
+    updated_value = user.last_seen_school_info_interstitial
+
+    refute_equal original_value, updated_value
+  end
+
   test 'school info confirmation dialog is not shown when the US school type is not private, public or charter' do
     user = create :teacher, last_seen_school_info_interstitial: 7.days.ago
 
