@@ -16,18 +16,15 @@ import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
 import {levenshtein} from '../../utils';
 
 var instructions = require('../../redux/instructions');
 var color = require('../../util/color');
-var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 var Instructions = require('./Instructions');
-
-const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
@@ -75,8 +72,6 @@ const styles = {
   },
   body: {
     backgroundColor: '#ddd',
-    borderTopRightRadius: 5,
-    borderTopLeftRadius: 5,
     width: '100%'
   },
   leftCol: {
@@ -139,6 +134,14 @@ class TopInstructions extends React.Component {
     handleClickCollapser: PropTypes.func,
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
+    isMinecraft: PropTypes.bool.isRequired,
+    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+    noVisualization: PropTypes.bool,
+    hideOverlay: PropTypes.func.isRequired,
+    isEmbedView: PropTypes.bool,
+    aniGifURL: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+
     hints: PropTypes.arrayOf(
       PropTypes.shape({
         hintId: PropTypes.string.isRequired,
@@ -149,34 +152,31 @@ class TopInstructions extends React.Component {
     ).isRequired,
     hasUnseenHint: PropTypes.bool.isRequired,
     showNextHint: PropTypes.func.isRequired,
-    isEmbedView: PropTypes.bool,
-    isMinecraft: PropTypes.bool.isRequired,
-    aniGifURL: PropTypes.string,
-    height: PropTypes.number.isRequired,
-    expandedHeight: PropTypes.number.isRequired,
-    maxHeight: PropTypes.number.isRequired,
+    hasAuthoredHints: PropTypes.bool.isRequired,
+
     collapsed: PropTypes.bool.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
+
     clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
     }),
-    hasAuthoredHints: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
+
     smallStaticAvatar: PropTypes.string,
     failureAvatar: PropTypes.string,
-    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
-    noVisualization: PropTypes.bool,
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
     textToSpeechEnabled: PropTypes.bool,
 
-    hideOverlay: PropTypes.func.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    height: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number.isRequired,
     setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
@@ -272,17 +272,15 @@ class TopInstructions extends React.Component {
 
     this.adjustMaxNeededHeight();
 
-    if (this.instructions) {
-      const contentContainer = this.instructions.parentElement;
-      const canScroll =
-        contentContainer.scrollHeight > contentContainer.clientHeight;
-      if (canScroll !== this.state.displayScrollButtons) {
-        // see comment above
-        // eslint-disable-next-line react/no-did-update-set-state
-        this.setState({
-          displayScrollButtons: canScroll
-        });
-      }
+    const contentContainer = this.instructions.parentElement;
+    const canScroll =
+      contentContainer.scrollHeight > contentContainer.clientHeight;
+    if (canScroll !== this.state.displayScrollButtons) {
+      // see comment above
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({
+        displayScrollButtons: canScroll
+      });
     }
 
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
@@ -320,8 +318,7 @@ class TopInstructions extends React.Component {
    * caluclated as if the instructions are collapsed. Defaults to
    * current collapsed state.
    * @returns {number} The minimum height of the top instructions (which is just
-   * the height of the little icon and the height of the resizer if we're not
-   * collapsed
+   * the height of the little icon if we're not collapsed
    */
   getMinHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
@@ -342,14 +339,7 @@ class TopInstructions extends React.Component {
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
-    // Only include resizer height if resizer is available
-    const resizerHeight = collapsed ? 0 : RESIZER_HEIGHT;
-
-    return (
-      Math.max(leftColHeight, middleColHeight, rightColHeight) +
-      resizerHeight +
-      margins
-    );
+    return Math.max(leftColHeight, middleColHeight, rightColHeight) + margins;
   }
 
   /**
@@ -379,9 +369,7 @@ class TopInstructions extends React.Component {
   adjustMaxNeededHeight = () => {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.instructions;
-    const maxNeededHeight =
-      getOuterHeight(instructionsContent, true) +
-      (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+    const maxNeededHeight = getOuterHeight(instructionsContent, true);
 
     this.props.setInstructionsMaxHeightNeeded(
       Math.max(minHeight, maxNeededHeight)
@@ -523,8 +511,7 @@ class TopInstructions extends React.Component {
   }
 
   render() {
-    const resizerHeight = this.props.collapsed ? 0 : RESIZER_HEIGHT;
-    const topInstructionsHeight = this.props.height - resizerHeight;
+    const topInstructionsHeight = this.props.height;
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
@@ -560,7 +547,7 @@ class TopInstructions extends React.Component {
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.getRightColWidth() || 0}
-          height={this.props.height - resizerHeight}
+          height={this.props.height}
         >
           <div
             style={[
@@ -625,7 +612,7 @@ class TopInstructions extends React.Component {
                 <div>
                   <hr />
                   <LegacyButton type="primary" onClick={this.props.hideOverlay}>
-                    {msg.dialogOK()}
+                    {i18n.dialogOK()}
                   </LegacyButton>
                 </div>
               )}
@@ -688,9 +675,7 @@ class TopInstructions extends React.Component {
                 }}
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
-                height={
-                  this.props.height - styles.scrollButtons.top - resizerHeight
-                }
+                height={this.props.height - styles.scrollButtons.top}
               />
             )}
           </div>
