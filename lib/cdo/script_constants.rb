@@ -47,6 +47,16 @@ module ScriptConstants
       EXPRESS_2018_NAME = 'express-2018'.freeze,
       PRE_READER_EXPRESS_2018_NAME = 'pre-express-2018'.freeze,
     ],
+    csf_2019: [
+      COURSEA_2019_NAME = 'coursea-2019'.freeze,
+      COURSEB_2019_NAME = 'courseb-2019'.freeze,
+      COURSEC_2019_NAME = 'coursec-2019'.freeze,
+      COURSED_2019_NAME = 'coursed-2019'.freeze,
+      COURSEE_2019_NAME = 'coursee-2019'.freeze,
+      COURSEF_2019_NAME = 'coursef-2019'.freeze,
+      EXPRESS_2019_NAME = 'express-2019'.freeze,
+      PRE_READER_EXPRESS_2019_NAME = 'pre-express-2019'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -277,7 +287,8 @@ module ScriptConstants
     script == ACCELERATED_NAME ||
       ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script)
+      ScriptConstants.script_in_category?(:csf_2018, script) ||
+      ScriptConstants.script_in_category?(:csf_2019, script)
   end
 
   def self.i18n?(script)

@@ -1,5 +1,4 @@
 hideable_stages true
-curriculum_umbrella 'CSF'
 
 stage 'Introduction'
 level 'courseD_video_ramp1'

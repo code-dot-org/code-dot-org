@@ -898,72 +898,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_includes response.body, fake_last_attempt
   end
 
-  test 'shows submitted time if you are a teacher viewing your student and they have submitted the level' do
-    sign_in @teacher
-
-    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt),
-          submitted: true,
-          updated_at: DateTime.new(2017, 12, 15, 18, 5, 8)
-        )
-      )
-
-    user_storage_id = storage_id_for_user_id(@student.id)
-
-    level = create :applab
-    script_level = create :script_level, levels: [level]
-
-    create :channel_token, level: level, storage_id: user_storage_id
-
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage,
-      id: script_level.position,
-      user_id: @student.id,
-      section_id: @section.id
-    }
-
-    assert_includes response.body, "<div>Submitted on:</div>\n<div class='timestamp' data-timestamp='2017-12-15 18:05:08 UTC'></div>"
-  end
-
-  test 'shows last update time if you are a teacher viewing your student and they have a best result' do
-    sign_in @teacher
-
-    fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
-    User.any_instance.
-      expects(:user_level_for).
-      returns(
-        create(:user_level,
-          user: @student,
-          level_source: create(:level_source, data: fake_last_attempt),
-          best_result: 1,
-          updated_at: DateTime.new(2000, 1, 5, 8, 30, 45)
-        )
-      )
-
-    user_storage_id = storage_id_for_user_id(@student.id)
-
-    level = create :applab
-    script_level = create :script_level, levels: [level]
-
-    create :channel_token, level: level, storage_id: user_storage_id
-
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage,
-      id: script_level.position,
-      user_id: @student.id,
-      section_id: @section.id
-    }
-
-    assert_includes response.body, "<div>Last updated:</div>\n<div class='timestamp' data-timestamp='2000-01-05 08:30:45 UTC'></div>"
-  end
-
   test 'loads applab if you are a project validator viewing a student and they have a channel id' do
     sign_in @project_validator
 
@@ -1060,64 +994,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute_includes response.body, fake_last_attempt
   end
 
-  test 'shows expanded teacher panel when student is chosen' do
-    sign_in @teacher
-
-    last_attempt_data = 'test'
-    level = @custom_s1_l1.level
-    Activity.create!(level: level, user: @student, level_source: LevelSource.find_identical_or_create(level, last_attempt_data))
-
-    get :show, params: {
-      script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
-      id: @custom_s1_l1.position,
-      user_id: @student.id,
-      section_id: @section.id
-    }
-
-    assert_select '.teacher-panel'
-    assert_select '.teacher-panel.hidden', 0
-
-    assert_equal @section, assigns(:section)
-    assert_equal @student, assigns(:user)
-
-    assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options_map)[level.id][:skip_instructions_popup]
-    assert_equal [], assigns(:view_options)[:callouts]
-  end
-
-  test 'shows expanded teacher panel when section is chosen but student is not' do
-    sign_in @teacher
-
-    get :show, params: {
-      script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
-      id: @custom_s1_l1.position,
-      section_id: @section.id
-    }
-
-    assert_select '.teacher-panel'
-    assert_select '.teacher-panel.hidden', 0
-
-    assert_equal @section, assigns(:section)
-    assert_nil assigns(:user)
-  end
-
-  test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
-    sign_in @teacher
-
-    get :show, params: {
-      script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
-      id: @custom_s1_l1.position
-    }
-
-    assert_select '.teacher-panel.hidden'
-
-    assert_equal @section, assigns(:section)
-    assert_nil assigns(:user)
-  end
-
   test 'chooses section when teacher has multiple sections, but only one unhidden' do
     @section.update!(hidden: true)
     unhidden_section = create :section, user_id: @teacher.id
@@ -1132,77 +1008,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_equal unhidden_section, assigns(:section)
     assert_nil assigns(:user)
-  end
-
-  test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
-    create :section, user: @teacher
-
-    sign_in @teacher
-
-    get :show, params: {
-      script_id: @custom_script,
-      stage_position: @custom_stage_1.absolute_position,
-      id: @custom_s1_l1.position
-    }
-
-    assert_select '.teacher-panel.hidden'
-
-    assert_nil assigns(:section)
-    assert_nil assigns(:user)
-  end
-
-  test 'teacher tray is not visible for pd and plc scripts' do
-    sign_in @teacher
-
-    script = Script.find_by_name('ECSPD')
-    assert script.professional_learning_course?
-
-    get :show, params: {script_id: script, stage_position: 1, id: 1}
-    assert_select '.teacher-panel', 0
-
-    script = create(:script)
-    stage = create(:stage, script: script)
-    level = create(:maze)
-    create(:script_level, script: script, stage: stage, levels: [level])
-
-    script.update(professional_learning_course: 'Professional Learning Course')
-    assert script.professional_learning_course?
-
-    get :show, params: {script_id: script, stage_position: 1, id: 1}
-    assert_select '.teacher-panel', 0
-  end
-
-  test 'teacher can view solution to non plc script' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels:  Level.key_to_params('K-1 Artist1 1')
-    )
-
-    assert_routing(
-      {method: "get", path: build_script_level_path(sl)},
-      {controller: "script_levels", action: "show", script_id: 'allthethings', stage_position: sl.stage.absolute_position.to_s, id: sl.position.to_s, solution: true},
-      {},
-      {solution: true}
-    )
-
-    sign_in @teacher
-
-    get :show, params: {
-      script_id: sl.script,
-      stage_position: sl.stage,
-      id: sl,
-      solution: true
-    }
-
-    assert_response :success
-    assert assigns(:ideal_level_source)
-
-    assert_select '.teacher-panel' # showing teacher panel
-    assert_select '.teacher-panel.hidden', 0 # not hidden
-
-    assert_equal true, assigns(:view_options)[:readonly_workspace]
-    assert_equal true, assigns(:level_view_options_map)[sl.levels[0].id][:skip_instructions_popup]
-    assert_equal [], assigns(:view_options)[:callouts]
   end
 
   test 'teacher cannot view solution to plc script' do
@@ -1306,34 +1111,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
-
-  test "should not see examples if an unauthorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
-
-    sign_in create(:teacher)
-
-    level = create(:applab, examples: ['fakeexample'])
-    Level.any_instance.stubs(:examples).returns(['fakeexample'])
-
-    get_show_script_level_page(create(:script_level, levels: [level]))
-
-    assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
-  end
-
-  test "should see examples if an authorized teacher is signed in" do
-    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
-
-    authorized_teacher = create(:teacher)
-    authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert authorized_teacher.authorized_teacher?
-    sign_in authorized_teacher
-
-    level = create(:applab, examples: ['fakeexample'])
-
-    get_show_script_level_page(create(:script_level, levels: [level]))
-
-    assert_select 'button', I18n.t('teacher.panel.example')
-  end
 
   test "logged out can not view teacher markdown" do
     refute can_view_teacher_markdown?
@@ -1687,29 +1464,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017'
+    cats1 = create :script, name: 'cats1', family_name: 'coursea', version_year: '2017'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+      get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
     end
 
     cats1.update!(is_stable: true)
-    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
+    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
     assert_redirected_to "/s/cats1/stage/1/puzzle/1"
 
-    create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_stable: true
-    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats1/stage/1/puzzle/1"
+    create :script, name: 'cats2', family_name: 'coursea', version_year: '2018', is_stable: true
+    get :show, params: {script_id: 'coursea', stage_position: 1, id: 1}
+    assert_redirected_to "/s/cats2/stage/1/puzzle/1"
 
     # next redirects to latest version in a script family
-    get :next, params: {script_id: 'cats'}
+    get :next, params: {script_id: 'coursea'}
     assert_redirected_to "/s/cats2/next"
-
-    # do not redirect within script family if the requested script exists
-    cats = create :script, name: 'cats'
-    create :script_level, script: cats
-    get :show, params: {script_id: 'cats', stage_position: 1, id: 1}
-    assert_response :success
   end
 
   test "should indicate challenge levels as challenge levels" do

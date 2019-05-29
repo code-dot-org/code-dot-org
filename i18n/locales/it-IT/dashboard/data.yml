@@ -51,7 +51,7 @@ it:
         if_else: Blocco "se-altrimenti"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         function: Funzioni
         parameters: Funzioni con parametri
@@ -267,7 +267,7 @@ it:
         if_else: Blocco "se-altrimenti"
         if_else_scrat: Blocco "se-altrimenti"
         function: Funzioni
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         parameters: Funzioni con parametri
         hoc_wrapup: Conclusione dell'Ora del Codice
@@ -322,7 +322,7 @@ it:
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
         C3_artist_nested_loops: Cicli annidati
-        C3_farmer_while: Cicli "Mentre"
+        C3_farmer_while: Cicli "mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
         C3_bounce: Ping-Pong
@@ -488,7 +488,7 @@ it:
         CSF_harvester_loops_K1: Cicli con la contadina
         CSF_scrat_loops_K1: Cicli con l'Era glaciale
         CSF_scrat_loops_CF: Cicli con l'Era glaciale
-        CSF_if_allskins: Il Blocco Se
+        CSF_if_allskins: Il blocco "se"
         CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
         CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
         CSF_loops_AB: Ripetizioni
