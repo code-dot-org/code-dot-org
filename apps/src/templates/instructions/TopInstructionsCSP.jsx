@@ -528,6 +528,7 @@ class TopInstructionsCSP extends Component {
                   <TopInstructionsCSF
                     ref="instructions"
                     handleClickCollapser={this.handleClickCollapser}
+                    adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                   />
                 )}
               {!this.props.hasContainedLevels &&

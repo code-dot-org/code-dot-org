@@ -132,6 +132,7 @@ const styles = {
 class TopInstructions extends React.Component {
   static propTypes = {
     handleClickCollapser: PropTypes.func,
+    adjustMaxNeededHeight: PropTypes.func,
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
@@ -270,7 +271,7 @@ class TopInstructions extends React.Component {
       this.setState({rightColWidth});
     }
 
-    this.adjustMaxNeededHeight();
+    this.props.adjustMaxNeededHeight();
 
     const contentContainer = this.instructions.parentElement;
     const canScroll =
@@ -341,41 +342,6 @@ class TopInstructions extends React.Component {
 
     return Math.max(leftColHeight, middleColHeight, rightColHeight) + margins;
   }
-
-  /**
-   * Given a prospective delta, determines how much we can actually change the
-   * height (accounting for min/max) and changes height by that much.
-   * @param {number} delta
-   * @returns {number} How much we actually changed
-   */
-  handleHeightResize = (delta = 0) => {
-    const minHeight = this.getMinHeight();
-    const currentHeight = this.props.height;
-
-    let newHeight = Math.min(
-      Math.max(minHeight, currentHeight + delta),
-      this.props.maxHeight
-    );
-
-    this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
-  };
-
-  /**
-   * Calculate how much height it would take to show top instructions with our
-   * entire instructions visible and update store with this value.
-   * @returns {number}
-   */
-  adjustMaxNeededHeight = () => {
-    const minHeight = this.getMinHeight();
-    const instructionsContent = this.instructions;
-    const maxNeededHeight = getOuterHeight(instructionsContent, true);
-
-    this.props.setInstructionsMaxHeightNeeded(
-      Math.max(minHeight, maxNeededHeight)
-    );
-    return maxNeededHeight;
-  };
 
   /**
    * @return {Element} scrollTarget
@@ -511,12 +477,10 @@ class TopInstructions extends React.Component {
   }
 
   render() {
-    const topInstructionsHeight = this.props.height;
-
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
       {
-        height: topInstructionsHeight
+        height: this.props.height
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
@@ -594,7 +558,7 @@ class TopInstructions extends React.Component {
                   this.instructions = c;
                 }}
                 longInstructions={markdown}
-                onResize={this.adjustMaxNeededHeight}
+                onResize={this.props.adjustMaxNeededHeight}
                 inputOutputTable={
                   this.props.collapsed ? undefined : this.props.inputOutputTable
                 }
