@@ -17,7 +17,7 @@ module Pd::SurveyPipeline
     # @param values Array<string> array of numbers in string format
     # @return [float] average of the input values
     def self.reduce(values)
-      return unless values.is_a? Array
+      return unless values.is_a? Enumerable
       values.inject(0.0) {|sum, elem| sum + elem.to_f} / values.size
     end
   end
@@ -30,7 +30,7 @@ module Pd::SurveyPipeline
     # @param values Array<string> array of strings
     # @return [Hash{string => number}] count number of occurences of each string
     def self.reduce(values)
-      return unless values.is_a? Array
+      return unless values.is_a? Enumerable
       values.group_by {|v| v}.transform_values(&:size)
     end
   end
