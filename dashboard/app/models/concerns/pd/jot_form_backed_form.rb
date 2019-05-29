@@ -177,6 +177,11 @@ module Pd
         imported
       end
 
+      # Process a submission and saves the model.
+      # @param [submission] (optional) The submission received from JotForm.
+      # @param [questions_details] (optional) Details of the questions.  If provided, we can
+      #   attempt to use the name field from each question rather than its numerical ID when
+      #   storing answers.
       def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
@@ -186,7 +191,8 @@ module Pd
           source_answers.each do |key, value|
             # We have an answer ID, but can we get a name instead of the ID?
             question_detail = questions_details && questions_details.find {|q| q["id"] == key}
-            if question_detail && question_name = question_detail["name"]
+            # If we want to use names instead of IDs, and we got a name, then use it.
+            if use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
               dest_answers[question_name] = value
             else
               dest_answers[key] = value
