@@ -26,6 +26,8 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
+  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
+
   rds_client = Aws::RDS::Client.new
   CLONE_DB_ENDPOINT = rds_client.describe_db_cluster_endpoints(
     {
@@ -134,8 +136,6 @@ class ContactRollups
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
   CENSUS_FORM_NAME = "Census".freeze
-
-  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
 
   def self.build_contact_rollups
     start = Time.now
