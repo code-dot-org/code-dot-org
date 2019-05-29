@@ -26,14 +26,11 @@ module Pd::SurveyPipeline
     # @param data [Array<Hash{}>] an array of hashes,
     #   each contains submission, question, and answer info.
     # @return [Array<Hash>] an array of summarization results.
-    def map_reduce(data:, logger: nil)
+    def map_reduce(data)
       return unless data.is_a? Enumerable
 
-      groups = group_data(data)
-      logger&.info "MAP: groups.count = #{groups.count}"
-      logger&.debug "MAP: groups = #{groups}"
-
-      map_to_reducers(groups, logger)
+      groups = group_data data
+      map_to_reducers groups
     end
 
     # Break data into groups using groupping configuration.
@@ -42,30 +39,25 @@ module Pd::SurveyPipeline
     end
 
     # Map groups to reducers using mapping configuration.
-    def map_to_reducers(groups, logger = nil)
+    def map_to_reducers(groups)
       summaries = []
 
       groups.each do |group_key, group_records|
-        logger&.debug "MAP: group_key = #{group_key}"
-        logger&.debug "MAP: group_records.count = #{group_records.count}"
-
-        # Apply matched reducers on each group. Add only non-empty result to the final summary.
+        # Apply matched reducers on each group.
+        # Add only non-empty result to the final summary.
         map_config.each do |condition:, field:, reducers:|
-          logger&.debug "Match condition = #{condition.call(group_key)}"
           next unless condition.call(group_key)
 
-          logger&.debug "MAP: reducers to apply = #{reducers.count}"
           reducers.each do |reducer|
-            reducer_result = reducer.reduce group_records.pluck(field)
-            logger&.debug "MAP: reducer.name = #{reducer.name}, result = #{reducer_result}"
+            reduced_result = reducer.reduce group_records.pluck(field)
+            next unless reduced_result.present?
 
-            next unless reducer_result.present?
-            summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
+            summaries << group_key.merge({reducer: reducer.name, reducer_result: reduced_result})
           end
         end
       end
 
-      return summaries
+      summaries
     end
   end
 end
