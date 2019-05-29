@@ -272,15 +272,17 @@ class TopInstructions extends React.Component {
 
     this.adjustMaxNeededHeight();
 
-    const contentContainer = this.instructions.parentElement;
-    const canScroll =
-      contentContainer.scrollHeight > contentContainer.clientHeight;
-    if (canScroll !== this.state.displayScrollButtons) {
-      // see comment above
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({
-        displayScrollButtons: canScroll
-      });
+    if (this.instructions) {
+      const contentContainer = this.instructions.parentElement;
+      const canScroll =
+        contentContainer.scrollHeight > contentContainer.clientHeight;
+      if (canScroll !== this.state.displayScrollButtons) {
+        // see comment above
+        // eslint-disable-next-line react/no-did-update-set-state
+        this.setState({
+          displayScrollButtons: canScroll
+        });
+      }
     }
 
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;

@@ -75,6 +75,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       referenceLinks
     } = action;
     let collapsed = state.collapsed;
+    if (!longInstructions && !hasContainedLevels) {
+      // If we only have short instructions, we want to be in collapsed mode
+      collapsed = true;
+    }
     return Object.assign({}, state, {
       noInstructionsWhenCollapsed,
       shortInstructions,
