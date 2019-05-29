@@ -67,13 +67,11 @@ class ScriptTeacherPanel extends React.Component {
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentShape),
-    inMiniRubricExperiment: PropTypes.bool
+    students: PropTypes.arrayOf(studentShape)
   };
 
   render() {
     const {
-      inMiniRubricExperiment,
       sectionData,
       viewAs,
       hasSections,
@@ -111,7 +109,6 @@ class ScriptTeacherPanel extends React.Component {
             <SelectedStudentInfo
               selectedStudent={currentStudent}
               level={currentStudentScriptLevel}
-              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           )}
           {sectionData && sectionData.level_examples && (
@@ -182,7 +179,6 @@ class ScriptTeacherPanel extends React.Component {
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
-              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           )}
         </div>
