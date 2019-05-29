@@ -290,4 +290,22 @@ class SchoolInfo < ActiveRecord::Base
   def charter_school?
     school_type.eql? SCHOOL_TYPE_CHARTER
   end
+
+  # Decides whether the school info is complete enough to stop bugging the
+  # teacher for additional information every week.  Different from complete
+  # record validation.
+  def complete?
+    return true unless school_id.nil?
+    return false if country.nil?
+    return true unless usa?
+    return true if [
+      SchoolInfo::SCHOOL_TYPE_HOMESCHOOL,
+      SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL,
+      SchoolInfo::SCHOOL_TYPE_ORGANIZATION,
+      SchoolInfo::SCHOOL_TYPE_OTHER,
+    ].include?(school_type)
+
+    # Given we got past above cases, school name is sufficient
+    !!school_name
+  end
 end

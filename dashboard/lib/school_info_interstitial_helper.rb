@@ -58,17 +58,6 @@ module SchoolInfoInterstitialHelper
   # teacher for additional information every week.  Different from complete
   # record validation.
   def self.complete?(school_info)
-    return true unless school_info.school_id.nil?
-    return false if school_info.country.nil?
-    return true unless school_info.usa?
-    return true if [
-      SchoolInfo::SCHOOL_TYPE_HOMESCHOOL,
-      SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL,
-      SchoolInfo::SCHOOL_TYPE_ORGANIZATION,
-      SchoolInfo::SCHOOL_TYPE_OTHER,
-    ].include?(school_info.school_type)
-
-    # Given we got past above cases, school name is sufficient
-    !!school_info.school_name
+    school_info.complete?
   end
 end
