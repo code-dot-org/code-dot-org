@@ -20,11 +20,11 @@ import i18n from '@cdo/locale';
 import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
 import {levenshtein} from '../../utils';
+import color from '../../util/color';
+import commonStyles from '../../commonStyles';
+import Instructions from './Instructions';
 
 var instructions = require('../../redux/instructions');
-var color = require('../../util/color');
-var commonStyles = require('../../commonStyles');
-var Instructions = require('./Instructions');
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
