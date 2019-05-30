@@ -2231,6 +2231,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress_sync calls track_proficiency if new perfect csf score' do
     user = create :user
+    csf_script = create :csf_script
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).once
@@ -2301,11 +2302,16 @@ class UserTest < ActiveSupport::TestCase
 
   test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
     user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    csf_script_level = create :csf_script_level
+
+    puts "csf_script_level: "
+    puts csf_script_level.to_json
+    puts "csf_script: "
+    puts csf_script_level.script.to_json
     UserLevel.create!(
       user: user,
       level: csf_script_level.level,
-      script: Script.get_from_cache('20-hour'),
+      script: csf_script_level.script,
       best_result: ActivityConstants::MANUAL_PASS_RESULT
     )
 
@@ -2313,1742 +2319,1742 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
-    user = create :user
-    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
-    ul = UserLevel.create!(
-      user: user,
-      level: csf_script_level.level,
-      script: Script.get_from_cache('20-hour'),
-      best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
-    )
-
-    track_progress(user.id, csf_script_level, 10)
-    track_progress(user.id, csf_script_level, 20)
-    track_progress(user.id, csf_script_level, 30)
-
-    assert_equal 3, ul.reload.attempts
-
-    track_progress(user.id, csf_script_level, 31)
-
-    assert_equal 4, ul.reload.attempts
-
-    track_progress(user.id, csf_script_level, 31)
-    track_progress(user.id, csf_script_level, 31)
-    track_progress(user.id, csf_script_level, 100)
-    track_progress(user.id, csf_script_level, 101)
-
-    assert_equal 4, ul.reload.attempts
-  end
-
-  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
-    script_level = create :script_level
-    student = create :student
-    level_source = create :level_source, data: 'sample answer'
-
-    User.track_level_progress_sync(
-      user_id: student.id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id,
-      new_result: 30,
-      submitted: false,
-      level_source_id: level_source.id,
-      pairing_user_ids: nil
-    )
-
-    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
-    assert_equal 30, ul.best_result
-    assert_equal 'sample answer', ul.level_source.data
-
-    User.track_level_progress_sync(
-      user_id: create(:user).id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id,
-      new_result: 100,
-      submitted: false,
-      level_source_id: level_source.id,
-      pairing_user_ids: [student.id]
-    )
-
-    ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
-    assert_equal 100, ul.best_result
-    assert_equal 'sample answer', ul.level_source.data
-  end
-
-  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
-    script_level = create :script_level
-    user = create :user
-    level_source = create :level_source, data: 'sample answer'
-    create :user_level,
-      user_id: user.id,
-      script_id: script_level.script_id,
-      level_id: script_level.level_id,
-      level_source_id: level_source.id
-
-    User.track_level_progress_sync(
-      user_id: user.id,
-      script_id: script_level.script_id,
-      level_id: script_level.level_id,
-      level_source_id: nil,
-      new_result: 100,
-      submitted: false
-    )
-
-    assert_equal level_source.id, UserLevel.find_by(
-      user_id: user.id,
-      script_id: script_level.script_id,
-      level_id: script_level.level_id
-    ).level_source_id
-  end
-
-  test 'normalize_gender' do
-    assert_equal 'f', User.normalize_gender('f')
-    assert_equal 'm', User.normalize_gender('m')
-    assert_equal 'n', User.normalize_gender('n')
-    assert_equal 'o', User.normalize_gender('o')
-
-    assert_equal 'f', User.normalize_gender('F')
-    assert_equal 'm', User.normalize_gender('M')
-    assert_equal 'n', User.normalize_gender('N')
-    assert_equal 'o', User.normalize_gender('O')
-
-    assert_equal 'f', User.normalize_gender('Female')
-    assert_equal 'm', User.normalize_gender('Male')
-    assert_equal 'n', User.normalize_gender('NonBinary')
-    assert_equal 'o', User.normalize_gender('NotListed')
-
-    assert_equal 'f', User.normalize_gender('female')
-    assert_equal 'm', User.normalize_gender('male')
-    assert_equal 'n', User.normalize_gender('non-binary')
-    assert_equal 'o', User.normalize_gender('notlisted')
-
-    assert_nil User.normalize_gender('some nonsense')
-    assert_nil User.normalize_gender('')
-    assert_nil User.normalize_gender(nil)
-  end
-
-  test 'can create user with same name as deleted user' do
-    create(:user, :deleted, name: 'Same Name')
-    assert_creates(User) do
-      create(:user, name: 'Same Name')
-    end
-  end
-
-  test 'student and teacher relationships' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user_id: teacher.id
-
-    follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
-
-    teacher.reload
-    student.reload
-
-    assert_equal [follow], teacher.followers
-    assert_equal [follow], student.followeds
-
-    other_user = create :student
-
-    # student_of? method
-    refute student.student_of?(student)
-    refute student.student_of?(other_user)
-    assert student.student_of?(teacher)
-
-    refute teacher.student_of?(student)
-    refute teacher.student_of?(other_user)
-    refute teacher.student_of?(teacher)
-
-    refute other_user.student_of?(student)
-    refute other_user.student_of?(other_user)
-    refute other_user.student_of?(teacher)
-
-    # user associations
-    assert_equal [], other_user.teachers
-    assert_equal [], other_user.students
-
-    assert_equal [], teacher.teachers
-    assert_equal [student], teacher.students
-
-    assert_equal [teacher], student.teachers
-    assert_equal [], student.students
-
-    # section associations
-    assert_equal [section], student.sections_as_student
-    assert_equal [], teacher.sections_as_student
-    assert_equal [], other_user.sections_as_student
-
-    assert_equal [], student.sections
-    assert_equal [section], teacher.sections
-    assert_equal [], other_user.sections
-
-    # can_pair? method
-    assert_equal true, student.can_pair?
-    assert_equal false, teacher.can_pair?
-    assert_equal false, other_user.can_pair?
-
-    # can_pair_with? method
-    classmate = create :student
-    section.add_student classmate
-    assert classmate.can_pair_with?(student)
-    assert student.can_pair_with?(classmate)
-    refute student.can_pair_with?(other_user)
-    refute student.can_pair_with?(teacher)
-    refute teacher.can_pair_with?(student)
-    refute student.can_pair_with?(student)
-
-    # disable pair programming
-    section.update!(pairing_allowed: false)
-    student.reload
-    refute student.can_pair?
-  end
-
-  test "authorized teacher" do
-    # you can't just create your own authorized teacher account
-    assert @teacher.teacher?
-    refute @teacher.authorized_teacher?
-
-    # you have to be in a cohort
-    real_teacher = create(:teacher)
-    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    assert real_teacher.teacher?
-    assert real_teacher.authorized_teacher?
-
-    # or you have to be in a plc course
-    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
-    assert plc_teacher.teacher?
-    assert plc_teacher.authorized_teacher?
-
-    # admins should be authorized teachers too
-    assert @admin.teacher?
-    assert @admin.authorized_teacher?
-  end
-
-  test 'terms_of_service_version for teacher without version' do
-    assert_nil @teacher.terms_version
-  end
-
-  test 'terms_of_service_version for teacher with version' do
-    teacher = build :teacher, terms_of_service_version: 1
-    assert_equal 1, teacher.terms_version
-  end
-
-  test 'terms_of_service_version for student without teachers' do
-    assert_nil @student.terms_version
-  end
-
-  test 'terms_of_service_version for student with teachers without version' do
-    follower = create :follower
-    assert_nil follower.student_user.terms_version
-  end
-
-  test 'terms_of_service_version for student with teachers with version' do
-    follower = create :follower
-    follower.user.update(terms_of_service_version: 1)
-    another_teacher = create :teacher
-    create :follower, user: another_teacher, student_user: follower.student_user
-    assert_equal 1, follower.student_user.terms_version
-  end
-
-  test 'terms_of_service_version for students with deleted teachers' do
-    teacher = create :teacher, :deleted, terms_of_service_version: 1
-    follower = create :follower, user: teacher
-    assert_nil follower.student_user.terms_version
-  end
-
-  test 'assign_course_as_facilitator assigns course to facilitator' do
-    facilitator = create :facilitator
-    assert_creates Pd::CourseFacilitator do
-      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
-    end
-    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
-  end
-
-  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert_does_not_create(Pd::CourseFacilitator) do
-      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
-    end
-  end
-
-  test 'delete_course_as_facilitator removes facilitator course' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    assert_destroys(Pd::CourseFacilitator) do
-      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
-    end
-  end
-
-  test 'should_see_inline_answer? returns true in levelbuilder' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    assert @student.should_see_inline_answer?(nil)
-    assert @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns false for non teachers' do
-    assert_not @student.should_see_inline_answer?(create(:script_level))
-  end
-
-  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
-    user = create :teacher
-    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
-    assert user.should_see_inline_answer?((create :script_level))
-  end
-
-  test 'account_age_days should return days since account creation' do
-    student = create :student, created_at: DateTime.now - 10
-    assert student.account_age_days == 10
-  end
-
-  def mock_geocoder_result(result)
-    mock_us_object = OpenStruct.new(country_code: result)
-    Geocoder.stubs(:search).returns([mock_us_object])
-  end
-
-  test 'do not show race interstitial to teacher' do
-    mock_geocoder_result('US')
-    teacher = create :teacher, created_at: DateTime.now - 8
-    refute teacher.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts under 13' do
-    mock_geocoder_result('US')
-    student = User.create(@good_data_young)
-    student.created_at = DateTime.now - 8
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts less than one week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 3
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have already entered race information' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'white,black')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have closed the dialog already' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'closed_dialog')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial if IP address is nil' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    mock_ip = nil
-    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
-  end
-
-  test 'do not show race interstitial to non-US users' do
-    mock_geocoder_result('CA')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial to US users' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial for student over 13 with account more than 1 week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'new users must have valid email addresses' do
-    assert_creates User do
-      create :user, email: 'valid@example.net'
-    end
-
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :user, email: 'invalid@incomplete'
-    end
-    assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
-  end
-
-  test 'existing users with invalid email addresses are still allowed' do
-    user_with_invalid_email = build :user, email: 'invalid@incomplete'
-    user_with_invalid_email.save!(validate: false)
-
-    assert user_with_invalid_email.valid?
-
-    # Update another field
-    user_with_invalid_email.name = 'updated name'
-    assert user_with_invalid_email.valid?
-    assert user_with_invalid_email.save
-  end
-
-  test 'no personal email for under 13 users' do
-    user = create :young_student
-    assert user.no_personal_email?
-  end
-
-  test 'no personal email for users with parent-managed accounts' do
-    parent_managed_student = create(:parent_managed_student)
-    assert parent_managed_student.no_personal_email?
-  end
-
-  test 'no personal email is false for users with email' do
-    refute @student.no_personal_email?
-
-    refute @teacher.no_personal_email?
-  end
-
-  test 'parent_managed_account is true for users with parent email and no hashed email' do
-    parent_managed_student = create(:parent_managed_student)
-    assert parent_managed_student.parent_managed_account?
-  end
-
-  test 'parent_managed_account is false for teacher' do
-    refute @teacher.parent_managed_account?
-  end
-
-  test 'age is required for new users' do
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :user, birthday: nil
-    end
-    assert_equal 'Validation failed: Age is required', e.message
-  end
-
-  test 'age validation is bypassed for Google OAuth users with no birthday' do
-    # Users created this way will be asked for their age when they first sign in.
-    user = create :user, birthday: nil, provider: 'google_oauth2'
-    assert_nil user.age
-  end
-
-  test "age is nil for Google OAuth users under age 4" do
-    # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
-    assert_nil three_year_old.age
-  end
-
-  test "age is set exactly for Google OAuth users between ages 4 and 20" do
-    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
-    assert_equal 4, four_year_old.age
-
-    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
-    assert_equal 20, twenty_year_old.age
-  end
-
-  test "age is 21+ for Google OAuth users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
-    assert_equal '21+', twenty_something.age
-  end
-
-  test 'age validation is bypassed for Clever users with no birthday' do
-    # Users created this way will be asked for their age when they first sign in.
-    user = create :user, birthday: nil, provider: 'clever'
-    assert_nil user.age
-  end
-
-  test "age is nil for Clever users under age 4" do
-    # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
-    assert_nil three_year_old.age
-  end
-
-  test "age is set exactly for Clever users between ages 4 and 20" do
-    four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'clever'
-    assert_equal 4, four_year_old.age
-
-    twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'clever'
-    assert_equal 20, twenty_year_old.age
-  end
-
-  test "age is 21+ for Clever users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
-    assert_equal '21+', twenty_something.age
-  end
-
-  test 'updating email is a no-op for students' do
-    user = create :student
-
-    assert_empty user.email
-
-    user.update_primary_contact_info(new_email: 'student@example.com')
-    user.reload
-
-    assert_empty user.email
-  end
-
-  test 'users updating the email field must provide a valid email address' do
-    user = create :teacher
-
-    user.update_primary_contact_info(new_email: 'invalid@incomplete')
-    refute user.valid?
-    refute user.save
-  end
-
-  test 'find_or_create_teacher creates new teacher' do
-    params = {
-      email: 'email@example.net',
-      name: 'test user'
-    }
-
-    user = assert_creates(User) do
-      User.find_or_create_teacher params, @admin
-    end
-    assert user.teacher?
-    assert_equal @admin, user.invited_by
-  end
-
-  test 'find_or_create_teacher finds existing teacher' do
-    teacher = create :teacher
-
-    params = {
-      email: teacher.email,
-      name: teacher.name
-    }
-
-    found = assert_does_not_create(User) do
-      User.find_or_create_teacher params, @admin
-    end
-    assert_equal teacher, found
-  end
-
-  test 'find_or_create_teacher with an invalid email raises ArgumentError' do
-    params = {
-      email: 'invalid',
-      name: 'test user'
-    }
-
-    e = assert_raises ArgumentError do
-      User.find_or_create_teacher params, @admin
-    end
-    assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
-  end
-
-  test 'deleting user deletes dependent pd applications' do
-    teacher = create :teacher
-    application = create :pd_teacher1819_application, user: teacher
-    assert_equal application.id, teacher.pd_applications.first.id
-
-    teacher.destroy
-
-    assert teacher.reload.deleted?
-    refute Pd::Application::Teacher1819Application.exists?(application.id)
-  end
-
-  test 'deleting teacher deletes dependent sections and followers' do
-    follower = create :follower
-    teacher = follower.user
-    section = follower.section
-    student = follower.student_user
-
-    teacher.destroy
-
-    assert teacher.reload.deleted?
-    assert section.reload.deleted?
-    assert follower.reload.deleted?
-    refute student.reload.deleted?
-  end
-
-  test 'deleting student deletes dependent followers' do
-    follower = create :follower
-    teacher = follower.user
-    section = follower.section
-    student = follower.student_user
-
-    student.destroy
-
-    refute teacher.reload.deleted?
-    refute section.reload.deleted?
-    assert follower.reload.deleted?
-    assert student.reload.deleted?
-  end
-
-  test 'soft-deleting a user records a metric' do
-    student = create :student
-
-    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1))
-    result = student.destroy
-
-    assert_equal student, result
-  end
-
-  test 'soft-deleting a group of users records metrics' do
-    student_a = create :student
-    student_b = create :student
-
-    Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1)).twice
-    result = User.destroy [student_a.id, student_b.id]
-
-    assert_equal [student_a, student_b], result
-  end
-
-  test 'undestroy restores recent dependents only' do
-    teacher = create :teacher
-    old_section = create :section, teacher: teacher
-    Timecop.freeze 1.hour.ago do
-      old_section.destroy!
-    end
-    new_section = create :section
-    teacher.destroy!
-
-    teacher.undestroy
-
-    refute teacher.reload.deleted?
-    refute new_section.reload.deleted?
-    assert old_section.reload.deleted?
-  end
-
-  test 'undestroy restores recently soft-deleted projects' do
-    Timecop.freeze do
-      student = create :student
-      with_channel_for student do |channel_id_a|
-        with_channel_for student do |channel_id_b|
-          # Student deleted channel_id_a a day before they were deleted
-          # so we don't expect it to be restored when we undelete them.
-          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
-
-          Timecop.travel 1.day
-
-          # Soft-deleting the student also soft-deletes their projects
-          student.destroy
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
-
-          Timecop.travel 1.day
-
-          # Restoring the student only restores projects that were deleted along
-          # with the student
-          student.undestroy
-          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
-          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
-        end
-      end
-    end
-  end
-
-  test 'undestroy raises for a purged user' do
-    user = create :user
-    user.clear_user_and_mark_purged
-
-    assert_raises do
-      user.undestroy
-    end
-  end
-
-  test 'assign_script creates UserScript if necessary' do
-    assert_creates(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
-      refute_nil user_script.assigned_at
-    end
-  end
-
-  test 'assign_script reuses UserScript if available' do
-    Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first)
-    end
-    assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
-      refute_nil user_script.assigned_at
-    end
-  end
-
-  test 'assign_script does overwrite assigned_at if pre-existing' do
-    Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
-    end
-
-    Timecop.travel(2018, 3, 4, 12, 0, 0) do
-      assert_does_not_create(UserScript) do
-        user_script = @student.assign_script(Script.first)
-        assert_equal Script.first.id, user_script.script_id
-        assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
-      end
-    end
-  end
-
-  class AssignedCoursesAndScripts < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @course = create :course, name: 'course'
-    end
-
-    test "it returns assigned courses" do
-      teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
-
-      assigned_courses = @student.assigned_courses
-      assert_equal 1, assigned_courses.length
-
-      assert_equal 'course', assigned_courses[0][:name]
-    end
-
-    test "it checks for assigned scripts, no assigned scripts" do
-      refute @student.any_visible_assigned_scripts?
-    end
-
-    test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
-      @student.assign_script(hidden_script)
-      refute @student.any_visible_assigned_scripts?
-    end
-
-    test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
-      @student.assign_script(visible_script)
-      assert @student.any_visible_assigned_scripts?
-    end
-
-    test "it checks for assigned courses and scripts, no course, no script" do
-      refute @student.assigned_course_or_script?
-    end
-
-    test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', hidden: true
-      @student.assign_script(hidden_script)
-      refute @student.assigned_course_or_script?
-    end
-
-    test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script'
-      @student.assign_script(visible_script)
-      assert @student.assigned_course_or_script?
-    end
-
-    test "it checks for assigned courses and scripts, assigned course" do
-      teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
-      assert @student.assigned_course_or_script?
-    end
-
-    test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
-      teacher = create :teacher
-      section = create :section, user_id: teacher.id, course: @course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
-      visible_script = create :script, name: 'visible-script'
-      @student.assign_script(visible_script)
-      assert @student.assigned_course_or_script?
-    end
-  end
-
-  class RecentCoursesAndScripts < ActiveSupport::TestCase
-    setup do
-      test_locale = :"te-ST"
-      I18n.locale = test_locale
-      custom_i18n = {
-        'data' => {
-          'course' => {
-            'name' => {
-              'csd' => {
-                'title' => 'Computer Science Discoveries',
-                'description_short' => 'CSD short description',
-              }
-            }
-          },
-          'script' => {
-            'name' => {
-              'other' => {
-                'title': 'Script Other',
-                'description_short' => 'other-description'
-              }
-            }
-          }
-        }
-      }
-
-      I18n.backend.store_translations test_locale, custom_i18n
-
-      @student = create :student
-      teacher = create :teacher
-
-      course = create :course, name: 'csd'
-      create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
-
-      other_script = create :script, name: 'other'
-      @student.assign_script(other_script)
-
-      section = create :section, user_id: teacher.id, course: course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
-    end
-
-    test "it returns both courses and scripts" do
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
-      assert_equal 2, courses_and_scripts.length
-
-      assert_equal 'csd', courses_and_scripts[0][:name]
-      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:title]
-      assert_equal 'CSD short description', courses_and_scripts[0][:description]
-      assert_equal '/courses/csd', courses_and_scripts[0][:link]
-
-      assert_equal 'other', courses_and_scripts[1][:name]
-      assert_equal 'Script Other', courses_and_scripts[1][:title]
-      assert_equal 'other-description', courses_and_scripts[1][:description]
-      assert_equal '/s/other', courses_and_scripts[1][:link]
-    end
-
-    test "it does not return scripts that are in returned courses" do
-      script = Script.find_by_name('csd1')
-      @student.assign_script(script)
-
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
-      assert_equal 2, courses_and_scripts.length
-
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
-    end
-
-    test "it optionally does not return primary course in returned courses" do
-      student = create :student
-      teacher = create :teacher
-
-      course = create :course, name: 'testcourse'
-      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
-      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
-      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
-
-      other_script = create :script, name: 'otherscript'
-      create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
-
-      section = create :section, user_id: teacher.id, course: course
-      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
-
-      courses_and_scripts = student.recent_courses_and_scripts(true)
-
-      assert_equal 1, courses_and_scripts.length
-
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
-    end
-  end
-
-  class SectionCourses < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @grand_teacher = create :teacher
-      @course = create :course, name: 'csd'
-    end
-    test "it returns courses in which a teacher exists as a student" do
-      grand_section = create :section, user_id: @grand_teacher.id, course: @course
-      Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a teacher exists as a teacher" do
-      section = create :section, user_id: @teacher.id, course: @course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @teacher.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-
-    test "it returns courses in which a student exists as a student" do
-      section = create :section, user_id: @teacher.id, course: @course
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
-
-      courses = @student.section_courses
-      assert_equal 1, courses.length
-      assert_equal 'csd', courses[0].name
-    end
-  end
-
-  test "section_scripts returns an empty array if user has no sections" do
-    user = create :user
-    assert_empty user.section_scripts
-  end
-
-  test "section_scripts returns assigned scripts and default scripts in assigned courses" do
-    student = create :student
-    single_script = create :script
-    (create :section, script: single_script).students << student
-    course_script = create :script
-    course_with_script = create :course
-    create :course_script, course: course_with_script, script: course_script, position: 1
-    (create :section, course: course_with_script).students << student
-
-    assert_equal [single_script, course_script], student.section_scripts
-  end
-
-  test "last_joined_section returns the most recently joined section" do
-    student = create :student
-    teacher = create :teacher
-
-    section_1 = create :section, user_id: teacher.id
-    section_2 = create :section, user_id: teacher.id
-    section_3 = create :section, user_id: teacher.id
-
-    Timecop.freeze do
-      assert_nil student.last_joined_section
-      Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
-      assert_equal section_1, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
-      assert_equal section_3, student.last_joined_section
-      Timecop.travel 1
-      Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
-      assert_equal section_2, student.last_joined_section
-    end
-  end
-
-  test 'from_omniauth: creates new user if user with matching credentials does not exist' do
-    auth = OmniAuth::AuthHash.new(
-      provider: 'google_oauth2',
-      uid: '123456',
-      credentials: {
-        token: 'fake oauth token',
-        expires_at: Time.now.to_i + 3600,
-        refresh_token: 'fake refresh token',
-      },
-      info: {
-        name: {first: 'Some', last: 'User'},
-        user_type: 'student'
-      },
-    )
-    params = {}
-
-    assert_creates(User) do
-      user = User.from_omniauth(auth, params)
-      assert_equal 'migrated', user.provider
-      assert_equal 'Some User', user.name
-      assert_equal 'google_oauth2', user.primary_contact_info.credential_type
-      assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
-      assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
-      assert_equal User::TYPE_STUDENT, user.user_type
-    end
-  end
-
-  test 'from_omniauth: updates user oauth tokens if user with matching credentials exists' do
-    uid = '123456'
-    provider = 'google_oauth2'
-    create :user, uid: uid, provider: provider
-    auth = OmniAuth::AuthHash.new(
-      provider: provider,
-      uid: uid,
-      credentials: {
-        token: 'fake oauth token',
-        expires_at: Time.now.to_i + 3600,
-        refresh_token: 'fake refresh token',
-      },
-      info: {},
-    )
-    params = {}
-
-    assert_does_not_create(User) do
-      user = User.from_omniauth(auth, params)
-      assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
-      assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
-      assert_equal 'google_oauth2', user.primary_contact_info.credential_type
-    end
-  end
-
-  test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
-    uid = '654321'
-    user = create :user
-    google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
-    auth = OmniAuth::AuthHash.new(
-      provider: AuthenticationOption::GOOGLE,
-      uid: uid,
-      credentials: {
-        token: 'fake oauth token',
-        expires_at: Time.now.to_i + 3600,
-        refresh_token: 'fake refresh token',
-      },
-      info: {},
-    )
-    params = {}
-
-    assert_does_not_create(User) do
-      User.from_omniauth(auth, params)
-    end
-    google_auth_option.reload
-    assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
-    assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
-  end
-
-  test 'password_required? is false if user is not creating their own account' do
-    user = build :user
-    user.expects(:managing_own_credentials?).returns(false)
-    refute user.password_required?
-  end
-
-  test 'password_required? is true for new users with no encrypted password' do
-    user = build :user, encrypted_password: nil
-    user.expects(:managing_own_credentials?).returns(true)
-    assert user.encrypted_password.nil?
-    assert user.password_required?
-  end
-
-  test 'password_required? is true for user changing their password' do
-    user = create :user
-    user.password = "mypassword"
-    user.password_confirmation = "mypassword"
-    user.expects(:managing_own_credentials?).returns(true)
-    assert user.password_required?
-  end
-
-  test 'summarize' do
-    assert_equal(
-      {
-        id: @student.id,
-        name: @student.name,
-        username: @student.username,
-        email: @student.email,
-        hashed_email: @student.hashed_email,
-        user_type: @student.user_type,
-        gender: @student.gender,
-        birthday: @student.birthday,
-        total_lines: @student.total_lines,
-        secret_words: @student.secret_words,
-        secret_picture_name: @student.secret_picture.name,
-        secret_picture_path: @student.secret_picture.path,
-        location: "/v2/users/#{@student.id}",
-        age: @student.age,
-        sharing_disabled: false,
-        has_ever_signed_in: @student.has_ever_signed_in?
-      },
-      @student.summarize
-    )
-  end
-
-  test 'has_ever_signed_in? is false with no current_sign_in_at' do
-    student = create :student
-    assert_nil student.current_sign_in_at
-    refute student.has_ever_signed_in?
-  end
-
-  test 'has_ever_signed_in? is true with current_sign_in_at' do
-    student = create :student, current_sign_in_at: DateTime.now.utc
-    refute_nil student.current_sign_in_at
-    assert student.has_ever_signed_in?
-  end
-
-  test 'under 13 students have sharing off by default' do
-    student = create :user, age: 10
-    assert student.reload.sharing_disabled
-  end
-
-  test 'over 13 students have sharing on by default' do
-    student = create :user, age: 14
-    refute student.reload.sharing_disabled
-  end
-
-  test 'students share setting updates after turning 13 if they are in no sections' do
-    # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
-    student = create :user, birthday: birthday
-    assert student.reload.sharing_disabled
-
-    # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
-      # student signs in
-      student.sign_in_count = 2
-      student.save
-
-      # check new share setting
-      refute student.reload.sharing_disabled
-    end
-  end
-
-  test 'students share setting does not update after turning 13 if they are in sections' do
-    # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
-    student = create :user, birthday: birthday
-
-    teacher = create :teacher
-    section1 = create :section, user: teacher
-    section1.add_student(student)
-
-    assert student.reload.sharing_disabled
-
-    # go forward in time to a day past the student's 13th birthday
-    Timecop.travel (Date.today + 366) do
-      # student signs in
-      student.sign_in_count = 2
-      student.save
-
-      # check updated share setting is unchanged
-      assert student.reload.sharing_disabled
-    end
-  end
-
-  test 'stage_extras_enabled?' do
-    script = create :script, stage_extras_available: true
-    other_script = create :script, stage_extras_available: true
-    teacher = create :teacher
-    student = create :student
-
-    section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
-    section1.add_student(student)
-    section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
-    section2.add_student(student)
-    section3 = create :section, stage_extras: true, script_id: other_script.id
-    section3.add_student(teacher)
-
-    assert student.stage_extras_enabled?(script)
-    refute student.stage_extras_enabled?(other_script)
-
-    assert teacher.stage_extras_enabled?(script)
-    assert teacher.stage_extras_enabled?(other_script)
-
-    refute (create :student).stage_extras_enabled?(script)
-    assert (create :teacher).stage_extras_enabled?(script)
-  end
-
-  class HiddenIds < ActiveSupport::TestCase
-    setup_all do
-      @teacher = create :teacher
-
-      @script = create(:script, hideable_stages: true)
-      @stage1 = create(:stage, script: @script, absolute_position: 1, relative_position: '1')
-      @stage2 = create(:stage, script: @script, absolute_position: 2, relative_position: '2')
-      @stage3 = create(:stage, script: @script, absolute_position: 3, relative_position: '3')
-      @custom_s1_l1 = create(
-        :script_level,
-        script: @script,
-        stage: @stage1,
-        position: 1
-      )
-      @custom_s2_l1 = create(
-        :script_level,
-        script: @script,
-        stage: @stage2,
-        position: 1
-      )
-      @custom_s2_l2 = create(
-        :script_level,
-        script: @script,
-        stage: @stage2,
-        position: 2
-      )
-      create(:script_level, script: @script, stage: @stage3, position: 1)
-
-      # explicitly disable LB mode so that we don't create a .course file
-      Rails.application.config.stubs(:levelbuilder_mode).returns false
-      @course = create :course
-
-      @script2 = create :script
-      @script3 = create :script
-      create :course_script, position: 1, course: @course, script: @script
-      create :course_script, position: 2, course: @course, script: @script2
-      create :course_script, position: 2, course: @course, script: @script3
-    end
-
-    def put_student_in_section(student, teacher, script, course=nil)
-      section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
-      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
-      section
-    end
-
-    # Helper method that sets up some hidden stages for our two sections
-    def hide_stages_in_sections(section1, section2)
-      # stage 1 hidden in both sections
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
-
-      # stage 2 hidden in section 1
-      SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
-
-      # stage 3 hidden in section 2
-      SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
-    end
-
-    # Same thing as hide_stages_in_sections, but hides scripts instead of stages
-    def hide_scripts_in_sections(section1, section2)
-      # script hidden in both sections
-      SectionHiddenScript.create(section_id: section1.id, script_id: @script.id)
-      SectionHiddenScript.create(section_id: section2.id, script_id: @script.id)
-
-      # script 2 hidden in section 1
-      SectionHiddenScript.create(section_id: section1.id, script_id: @script2.id)
-
-      # script 3 hidden in section 2
-      SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
-    end
-
-    test "user in two sections, both attached to script" do
-      student = create :student
-
-      section1 = put_student_in_section(student, @teacher, @script)
-      section2 = put_student_in_section(student, @teacher, @script)
-
-      hide_stages_in_sections(section1, section2)
-
-      # when attached to script, we should hide only if hidden in every section
-      assert_equal [@stage1.id], student.get_hidden_stage_ids(@script.name)
-
-      # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
-    end
-
-    test "user in two sections, both attached to course" do
-      student = create :student
-
-      section1 = put_student_in_section(student, @teacher, @script, @course)
-      section2 = put_student_in_section(student, @teacher, @script, @course)
-
-      hide_scripts_in_sections(section1, section2)
-
-      # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
-
-      # ignore any archived sections
-      section2.hidden = true
-      section2.save!
-      student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
-      section1.hidden = true
-      section1.save!
-      student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
-    end
-
-    test "user in two sections, both attached to course but no script" do
-      student = create :student
-
-      section1 = put_student_in_section(student, @teacher, nil, @course)
-      section2 = put_student_in_section(student, @teacher, nil, @course)
-
-      hide_scripts_in_sections(section1, section2)
-
-      # when attached to course, we should hide only if hidden in every section
-      assert_equal [@script.id], student.get_hidden_script_ids(@course)
-
-      # ignore any archived sections
-      section2.hidden = true
-      section2.save!
-      student.reload
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
-      section1.hidden = true
-      section1.save!
-      student.reload
-      assert_equal [], student.get_hidden_script_ids(@course)
-    end
-
-    test "user in two sections, neither attached to script" do
-      student = create :student
-
-      unattached_script = create(:script)
-      section1 = put_student_in_section(student, @teacher, unattached_script)
-      section2 = put_student_in_section(student, @teacher, unattached_script)
-
-      hide_stages_in_sections(section1, section2)
-
-      # when not attached to script, we should hide when hidden in any section
-      assert_equal [@stage1.id, @stage2.id, @stage3.id], student.get_hidden_stage_ids(@script.name)
-
-      # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage3.script_levels.first)
-    end
-
-    test "user in two sections, neither attached to course" do
-      student = create :student
-
-      unattached_script = create(:script)
-      section1 = put_student_in_section(student, @teacher, unattached_script)
-      section2 = put_student_in_section(student, @teacher, unattached_script)
-
-      hide_scripts_in_sections(section1, section2)
-
-      # when not attached to course, we should hide when hidden in any section
-      assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@course)
-    end
-
-    test "user in two sections, one attached to script one not" do
-      student = create :student
-
-      attached_section = put_student_in_section(student, @teacher, @script)
-      unattached_section = put_student_in_section(student, @teacher, create(:script))
-
-      hide_stages_in_sections(attached_section, unattached_section)
-
-      # only the stages hidden in the attached section are considered hidden
-      assert_equal [@stage1.id, @stage2.id], student.get_hidden_stage_ids(@script.name)
-
-      # validate script_level_hidden? gives same result
-      assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
-      assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
-      assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
-    end
-
-    test "user in two sections, one attached to course one not" do
-      student = create :student
-
-      attached_section = put_student_in_section(student, @teacher, @script, @course)
-      unattached_section = put_student_in_section(student, @teacher, create(:script))
-
-      hide_scripts_in_sections(attached_section, unattached_section)
-
-      # only the scripts hidden in the attached section are considered hidden
-      assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
-    end
-
-    test "user in no sections" do
-      student = create :student
-
-      assert_equal [], student.get_hidden_stage_ids(@script.name)
-    end
-
-    test "teacher gets hidden stages for sections they own" do
-      teacher = create :teacher
-      teacher_teacher = create :teacher
-      student = create :student
-
-      teacher_owner_section = put_student_in_section(student, teacher, @script)
-      teacher_owner_section2 = put_student_in_section(student, teacher, @script)
-      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
-
-      # stage 1 is hidden in the first section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
-
-      # stage 1 and 2 are hidden in the second section owned by the teacher
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
-      SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
-
-      # stage 3 is hidden in the section in which the teacher is a member
-      SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
-
-      # only the stages hidden in the owned section are considered hidden
-      expected = {
-        teacher_owner_section.id => [@stage1.id],
-        teacher_owner_section2.id => [@stage1.id, @stage2.id]
-      }
-      assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
-    end
-
-    test "teacher gets hidden scripts for sections they own" do
-      teacher = create :teacher
-      teacher_teacher = create :teacher
-      student = create :student
-
-      teacher_owner_section = put_student_in_section(student, teacher, @script, @course)
-      teacher_owner_section2 = put_student_in_section(student, teacher, @script, @course)
-      teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @course)
-
-      # stage 1 is hidden in the first section owned by the teacher
-      SectionHiddenScript.create(section_id: teacher_owner_section.id, script_id: @script.id)
-
-      # stage 1 and 2 are hidden in the second section owned by the teacher
-      SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script.id)
-      SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script2.id)
-
-      # stage 3 is hidden in the section in which the teacher is a member
-      SectionHiddenScript.create(section_id: teacher_member_section.id, script_id: @script3.id)
-
-      # only the scripts hidden in the owned section are considered hidden
-      expected = {
-        teacher_owner_section.id => [@script.id],
-        teacher_owner_section2.id => [@script.id, @script2.id]
-      }
-      assert_equal expected, teacher.get_hidden_script_ids(@course)
-    end
-
-    test "script_hidden?" do
-      teacher = create :teacher
-      student = create :student
-      section = put_student_in_section(student, teacher, @script, @course)
-      SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
-
-      # returns true for student
-      assert_equal true, student.script_hidden?(@script)
-
-      # returns false for teacher
-      assert_equal false, teacher.script_hidden?(@script)
-    end
-  end
-
-  test 'generate_progress_from_storage_id' do
-    # construct our fake applab-intro script
-    script = create :script
-    stage = create :stage, script: script
-    regular_level = create :level
-    create :script_level, script: script, stage: stage, levels: [regular_level]
-
-    # two different levels, backed by the same template level
-    template_level = create :level
-    template_backed_level1 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, stage: stage, levels: [template_backed_level1]
-    template_backed_level2 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, stage: stage, levels: [template_backed_level2]
-
-    # Whether we have a channel for a regular level in the script, or a template
-    # level, we generate a UserScript
-    [regular_level, template_level].each do |level|
-      user = create :student
-      channel_token = create :channel_token, level: level, storage_user: user
-      user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
-
-      user_scripts = UserScript.where(user: user)
-      assert_equal 1, user_scripts.length
-      assert_equal script, user_scripts.first.script
-
-      if level == regular_level
-        # we should have exactly one user_level created
-        assert_equal 1, user.user_levels.length
-        assert_equal regular_level.id, user.user_levels[0].level_id
-      elsif level == template_level
-        # Template backed levels share a channel, so when we find a channel for the
-        # template, we create user_levels for every level that uses that template
-        assert_equal 2, user.user_levels.length
-        assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
-        assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
-      end
-    end
-
-    # No UserScript if we only have channel tokens elsewhere
-    user = create :student
-    channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
-    user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
-
-    user_scripts = UserScript.where(user: user)
-    assert_equal 0, user_scripts.length
-  end
-
-  test 'primary email for migrated user is readable from user model' do
-    user = create(:teacher)
-    user.provider = 'migrated'
-    user.primary_contact_info.update(email: 'eric@code.org')
-    assert_equal user.email, user.primary_contact_info.email
-    assert_equal user.email, user.primary_contact_info.email
-  end
-
-  test 'within_united_states? is false without UserGeo record' do
-    user = create :student
-    assert_empty user.user_geos
-    refute user.within_united_states?
-  end
-
-  test 'within_united_states? is false if latest UserGeo has incomplete data' do
-    # Based on behavior in trackable.rb where we push a UserGeo with just
-    # user_id and ip_address, no other geo information
-    user = create :student
-    Timecop.freeze do
-      create :user_geo, :seattle, user: user
-      Timecop.travel 1
-      create :user_geo, user: user
-    end
-    assert_equal 2, user.user_geos.count
-    refute user.within_united_states?
-  end
-
-  test 'within_united_states? is false if latest UserGeo from another country' do
-    user = create :student
-    Timecop.freeze do
-      create :user_geo, :seattle, user: user
-      Timecop.travel 1
-      create :user_geo, :sydney, user: user
-    end
-    assert_equal 2, user.user_geos.count
-    refute user.within_united_states?
-  end
-
-  test 'within_united_states? is true if latest UserGeo from the United States' do
-    user = create :student
-    Timecop.freeze do
-      create :user_geo, :sydney, user: user
-      Timecop.travel 1
-      create :user_geo, :seattle, user: user
-    end
-    assert_equal 2, user.user_geos.count
-    assert user.within_united_states?
-  end
-
-  test 'user_levels_by_user_by_level' do
-    users = (1..3).map {create :user}
-    script = Script.twenty_hour_script
-    script_levels = script.script_levels.first(2)
-    script_levels.each do |script_level|
-      users.first(2).each do |user|
-        create :user_level, user: user, level: script_level.level, script: script
-      end
-    end
-
-    result = nil
-    assert_queries(1) do
-      result = User.user_levels_by_user_by_level(users, script)
-    end
-
-    assert_equal(
-      {
-        users[0].id => {
-          script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script_levels[0].level),
-          script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script_levels[1].level)
-        },
-        users[1].id => {
-          script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script_levels[0].level),
-          script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script_levels[1].level)
-        },
-        users[2].id => {}
-      },
-      result
-    )
-  end
-
-  test 'find_by_email_or_hashed_email returns nil when no user is found' do
-    assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
-  end
-
-  test 'find_by_email_or_hashed_email returns nil when input is blank' do
-    create :student_in_picture_section
-    assert_nil User.find_by_email_or_hashed_email nil
-    assert_nil User.find_by_email_or_hashed_email ''
-  end
-
-  test 'find_by_email_or_hashed_email locates a single-auth user by email' do
-    user = create :teacher
-    assert_equal user, User.find_by_email_or_hashed_email(user.email)
-  end
-
-  test 'find_by_email_or_hashed_email locates a single-auth user by hashed email' do
-    email = 'student@example.org'
-    user = create :student, email: email
-    assert_equal user, User.find_by_email_or_hashed_email(email)
-  end
-
-  test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
-    user = create :teacher
-    assert_equal user, User.find_by_email_or_hashed_email(user.email)
-  end
-
-  test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
-    email = 'student@example.org'
-    user = create :student, email: email
-    assert_equal user, User.find_by_email_or_hashed_email(email)
-  end
-
-  test 'find_by_email returns nil when no user is found' do
-    assert_nil User.find_by_email 'fake_email'
-  end
-
-  test 'find_by_email returns nil when input is blank' do
-    create :student_in_picture_section
-    assert_nil User.find_by_email nil
-    assert_nil User.find_by_email ''
-  end
-
-  test 'find_by_email locates a single-auth teacher by email' do
-    teacher = create :teacher
-    assert_equal teacher, User.find_by_email(teacher.email)
-  end
-
-  test 'find_by_email does not locate a single-auth student by email' do
-    email = 'student@example.org'
-    create :student, email: email
-    assert_nil User.find_by_email email
-  end
-
-  test 'find_by_email locates a multi-auth teacher by email' do
-    teacher = create :teacher
-    assert_equal teacher, User.find_by_email(teacher.email)
-  end
-
-  test 'find_by_email locates a multi-auth teacher by non-primary email' do
-    teacher = create :teacher
-    second_option = create :authentication_option, user: teacher
-    assert_equal teacher, User.find_by_email(second_option.email)
-  end
-
-  test 'find_by_email does not locate a multi-auth student by email' do
-    email = 'student@example.org'
-    create :student, email: email
-    assert_nil User.find_by_email email
-  end
-
-  test 'find_by_hashed_email returns nil when no user is found' do
-    assert_nil User.find_by_hashed_email 'fake_hash'
-  end
-
-  test 'find_by_hashed_email returns nil when input is blank' do
-    create :student_in_picture_section
-    assert_nil User.find_by_hashed_email nil
-    assert_nil User.find_by_hashed_email ''
-  end
-
-  test 'find_by_hashed_email locates a single-auth user by email' do
-    user = create :teacher
-    assert_equal user, User.find_by_hashed_email(user.hashed_email)
-  end
-
-  test 'find_by_hashed_email locates a single-auth user by hashed email' do
-    email = 'student@example.org'
-    user = create :student, email: email
-    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
-  end
-
-  test 'find_by_hashed_email locates a multi-auth user by email' do
-    user = create :teacher
-    assert_equal user, User.find_by_hashed_email(user.hashed_email)
-  end
-
-  test 'find_by_hashed_email locates a multi-auth user by hashed email' do
-    email = 'student@example.org'
-    user = create :student, email: email
-    assert_equal user, User.find_by_hashed_email(User.hash_email(email))
-  end
-
-  test 'find_by_credential returns nil when no matching user is found' do
-    user = create :student, :clever_sso_provider
-
-    assert_nil User.find_by_credential(
-      type: AuthenticationOption::CLEVER,
-      id: 'mismatched_id_' + user.primary_contact_info.authentication_id
-    )
-  end
-
-  test 'find_by_credential locates migrated SSO user' do
-    original_uid = 'test-uid'
-    user = create :student, :clever_sso_provider, uid: original_uid
-
-    User.expects(:find_by).never
-    assert_equal user,
-      User.find_by_credential(
-        type: AuthenticationOption::CLEVER,
-        id: original_uid
-      )
-  end
-
-  test 'not depended_upon_for_login? for student' do
-    student = create :student
-    refute student.depended_upon_for_login?
-  end
-
-  test 'not depended_upon_for_login? for teacher with student with personal login' do
-    student = create :student, :in_email_section
-    teacher = student.sections_as_student.first.teacher
-    refute teacher.depended_upon_for_login?
-  end
-
-  test 'not depended_upon_for_login? for teacher with student that has other teachers' do
-    student = create :student, :in_picture_section
-    teacher = student.sections_as_student.first.teacher
-    student.sections_as_student << create(:section)
-
-    student.reload
-    assert_equal 2, student.sections_as_student.size
-    refute teacher.depended_upon_for_login?
-  end
-
-  test 'depended_upon_for_login? if teacher has a teacher-managed student with no other teachers' do
-    student = create :student_in_picture_section
-    teacher = student.sections_as_student.first.teacher
-    section = create :section, user: teacher
-    section.students << student
-
-    assert teacher.depended_upon_for_login?
-  end
-
-  test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
-    student = create :student, :google_sso_provider
-    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    section.students << student
-    another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
-    another_section.students << student
-
-    assert section.teacher.depended_upon_for_login?
-  end
-
-  test 'dependent_students for student: returns empty array' do
-    student = create :student
-    assert_empty student.dependent_students
-  end
-
-  test 'dependent_students for teacher: does not return other teachers' do
-    section = create :section
-    another_teacher = create :teacher
-    section.students << another_teacher
-
-    assert_empty section.teacher.dependent_students
-  end
-
-  test 'dependent_students for teacher: does not return students with personal logins' do
-    section = create :section
-    create(:follower, section: section)
-
-    assert_empty section.teacher.dependent_students
-  end
-
-  test 'dependent_students for teacher: does not return students without personal logins that have other teachers' do
-    student = create :student_in_word_section
-    teacher = student.teachers.first
-    another_section = create :section
-    another_section.students << student
-
-    assert_empty teacher.dependent_students
-  end
-
-  test 'dependent_students for teacher: returns students without personal logins that have no other teachers' do
-    student = create :student_in_word_section
-    teacher = student.teachers.first
-    another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
-    another_word_section.students << student
-
-    assert_equal [student.summarize], teacher.dependent_students
-  end
-
-  test 'dependent_students for teacher: returns students in rostered sections without passwords that have no other teachers' do
-    student = create :student, :google_sso_provider, encrypted_password: nil
-    section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-    section.students << student
-
-    assert_equal [student.summarize], section.teacher.dependent_students
-  end
-
-  test 'last section id' do
-    teacher = create :teacher
-    section1 = create :section, teacher: teacher
-    assert_equal section1.id, teacher.last_section_id
-
-    create :follower, section: section1
-    assert_nil section1.students.first.last_section_id
-
-    # selects the most recently created section
-    section2 = create :section, teacher: teacher
-    assert_equal section2.id, teacher.last_section_id
-
-    # ignores hidden sections
-    section2.hidden = true
-    section2.save!
-    assert_equal section1.id, teacher.last_section_id
-
-    # ignores deleted sections
-    section3 = create :section, teacher: teacher
-    assert_equal section3.id, teacher.last_section_id
-    section3.delete
-    assert_equal section1.id, teacher.last_section_id
-  end
-
-  test 'find_channel_owner finds channel owner' do
-    student = create :student
-    with_channel_for student do |storage_app_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
-      result = User.find_channel_owner encrypted_channel_id
-      assert_equal student, result
-    end
-  end
-
-  test 'find_channel_owner returns nil for channel with no owner' do
-    with_anonymous_channel do |storage_app_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
-      result = User.find_channel_owner encrypted_channel_id
-      assert_nil result
-    end
-  end
-
-  test 'find_channel_owner returns nil for a malformed channel id' do
-    assert_nil User.find_channel_owner 'not-a-channel-id'
-  end
+  # test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+  #   user = create :user
+  #   csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+  #   ul = UserLevel.create!(
+  #     user: user,
+  #     level: csf_script_level.level,
+  #     script: Script.get_from_cache('20-hour'),
+  #     best_result: ActivityConstants::MINIMUM_FINISHED_RESULT
+  #   )
+  #
+  #   track_progress(user.id, csf_script_level, 10)
+  #   track_progress(user.id, csf_script_level, 20)
+  #   track_progress(user.id, csf_script_level, 30)
+  #
+  #   assert_equal 3, ul.reload.attempts
+  #
+  #   track_progress(user.id, csf_script_level, 31)
+  #
+  #   assert_equal 4, ul.reload.attempts
+  #
+  #   track_progress(user.id, csf_script_level, 31)
+  #   track_progress(user.id, csf_script_level, 31)
+  #   track_progress(user.id, csf_script_level, 100)
+  #   track_progress(user.id, csf_script_level, 101)
+  #
+  #   assert_equal 4, ul.reload.attempts
+  # end
+  #
+  # test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+  #   script_level = create :script_level
+  #   student = create :student
+  #   level_source = create :level_source, data: 'sample answer'
+  #
+  #   User.track_level_progress_sync(
+  #     user_id: student.id,
+  #     level_id: script_level.level_id,
+  #     script_id: script_level.script_id,
+  #     new_result: 30,
+  #     submitted: false,
+  #     level_source_id: level_source.id,
+  #     pairing_user_ids: nil
+  #   )
+  #
+  #   ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+  #   assert_equal 30, ul.best_result
+  #   assert_equal 'sample answer', ul.level_source.data
+  #
+  #   User.track_level_progress_sync(
+  #     user_id: create(:user).id,
+  #     level_id: script_level.level_id,
+  #     script_id: script_level.script_id,
+  #     new_result: 100,
+  #     submitted: false,
+  #     level_source_id: level_source.id,
+  #     pairing_user_ids: [student.id]
+  #   )
+  #
+  #   ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
+  #   assert_equal 100, ul.best_result
+  #   assert_equal 'sample answer', ul.level_source.data
+  # end
+  #
+  # test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+  #   script_level = create :script_level
+  #   user = create :user
+  #   level_source = create :level_source, data: 'sample answer'
+  #   create :user_level,
+  #     user_id: user.id,
+  #     script_id: script_level.script_id,
+  #     level_id: script_level.level_id,
+  #     level_source_id: level_source.id
+  #
+  #   User.track_level_progress_sync(
+  #     user_id: user.id,
+  #     script_id: script_level.script_id,
+  #     level_id: script_level.level_id,
+  #     level_source_id: nil,
+  #     new_result: 100,
+  #     submitted: false
+  #   )
+  #
+  #   assert_equal level_source.id, UserLevel.find_by(
+  #     user_id: user.id,
+  #     script_id: script_level.script_id,
+  #     level_id: script_level.level_id
+  #   ).level_source_id
+  # end
+  #
+  # test 'normalize_gender' do
+  #   assert_equal 'f', User.normalize_gender('f')
+  #   assert_equal 'm', User.normalize_gender('m')
+  #   assert_equal 'n', User.normalize_gender('n')
+  #   assert_equal 'o', User.normalize_gender('o')
+  #
+  #   assert_equal 'f', User.normalize_gender('F')
+  #   assert_equal 'm', User.normalize_gender('M')
+  #   assert_equal 'n', User.normalize_gender('N')
+  #   assert_equal 'o', User.normalize_gender('O')
+  #
+  #   assert_equal 'f', User.normalize_gender('Female')
+  #   assert_equal 'm', User.normalize_gender('Male')
+  #   assert_equal 'n', User.normalize_gender('NonBinary')
+  #   assert_equal 'o', User.normalize_gender('NotListed')
+  #
+  #   assert_equal 'f', User.normalize_gender('female')
+  #   assert_equal 'm', User.normalize_gender('male')
+  #   assert_equal 'n', User.normalize_gender('non-binary')
+  #   assert_equal 'o', User.normalize_gender('notlisted')
+  #
+  #   assert_nil User.normalize_gender('some nonsense')
+  #   assert_nil User.normalize_gender('')
+  #   assert_nil User.normalize_gender(nil)
+  # end
+  #
+  # test 'can create user with same name as deleted user' do
+  #   create(:user, :deleted, name: 'Same Name')
+  #   assert_creates(User) do
+  #     create(:user, name: 'Same Name')
+  #   end
+  # end
+  #
+  # test 'student and teacher relationships' do
+  #   teacher = create :teacher
+  #   student = create :student
+  #   section = create :section, user_id: teacher.id
+  #
+  #   follow = Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+  #
+  #   teacher.reload
+  #   student.reload
+  #
+  #   assert_equal [follow], teacher.followers
+  #   assert_equal [follow], student.followeds
+  #
+  #   other_user = create :student
+  #
+  #   # student_of? method
+  #   refute student.student_of?(student)
+  #   refute student.student_of?(other_user)
+  #   assert student.student_of?(teacher)
+  #
+  #   refute teacher.student_of?(student)
+  #   refute teacher.student_of?(other_user)
+  #   refute teacher.student_of?(teacher)
+  #
+  #   refute other_user.student_of?(student)
+  #   refute other_user.student_of?(other_user)
+  #   refute other_user.student_of?(teacher)
+  #
+  #   # user associations
+  #   assert_equal [], other_user.teachers
+  #   assert_equal [], other_user.students
+  #
+  #   assert_equal [], teacher.teachers
+  #   assert_equal [student], teacher.students
+  #
+  #   assert_equal [teacher], student.teachers
+  #   assert_equal [], student.students
+  #
+  #   # section associations
+  #   assert_equal [section], student.sections_as_student
+  #   assert_equal [], teacher.sections_as_student
+  #   assert_equal [], other_user.sections_as_student
+  #
+  #   assert_equal [], student.sections
+  #   assert_equal [section], teacher.sections
+  #   assert_equal [], other_user.sections
+  #
+  #   # can_pair? method
+  #   assert_equal true, student.can_pair?
+  #   assert_equal false, teacher.can_pair?
+  #   assert_equal false, other_user.can_pair?
+  #
+  #   # can_pair_with? method
+  #   classmate = create :student
+  #   section.add_student classmate
+  #   assert classmate.can_pair_with?(student)
+  #   assert student.can_pair_with?(classmate)
+  #   refute student.can_pair_with?(other_user)
+  #   refute student.can_pair_with?(teacher)
+  #   refute teacher.can_pair_with?(student)
+  #   refute student.can_pair_with?(student)
+  #
+  #   # disable pair programming
+  #   section.update!(pairing_allowed: false)
+  #   student.reload
+  #   refute student.can_pair?
+  # end
+  #
+  # test "authorized teacher" do
+  #   # you can't just create your own authorized teacher account
+  #   assert @teacher.teacher?
+  #   refute @teacher.authorized_teacher?
+  #
+  #   # you have to be in a cohort
+  #   real_teacher = create(:teacher)
+  #   real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+  #   assert real_teacher.teacher?
+  #   assert real_teacher.authorized_teacher?
+  #
+  #   # or you have to be in a plc course
+  #   create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+  #   assert plc_teacher.teacher?
+  #   assert plc_teacher.authorized_teacher?
+  #
+  #   # admins should be authorized teachers too
+  #   assert @admin.teacher?
+  #   assert @admin.authorized_teacher?
+  # end
+  #
+  # test 'terms_of_service_version for teacher without version' do
+  #   assert_nil @teacher.terms_version
+  # end
+  #
+  # test 'terms_of_service_version for teacher with version' do
+  #   teacher = build :teacher, terms_of_service_version: 1
+  #   assert_equal 1, teacher.terms_version
+  # end
+  #
+  # test 'terms_of_service_version for student without teachers' do
+  #   assert_nil @student.terms_version
+  # end
+  #
+  # test 'terms_of_service_version for student with teachers without version' do
+  #   follower = create :follower
+  #   assert_nil follower.student_user.terms_version
+  # end
+  #
+  # test 'terms_of_service_version for student with teachers with version' do
+  #   follower = create :follower
+  #   follower.user.update(terms_of_service_version: 1)
+  #   another_teacher = create :teacher
+  #   create :follower, user: another_teacher, student_user: follower.student_user
+  #   assert_equal 1, follower.student_user.terms_version
+  # end
+  #
+  # test 'terms_of_service_version for students with deleted teachers' do
+  #   teacher = create :teacher, :deleted, terms_of_service_version: 1
+  #   follower = create :follower, user: teacher
+  #   assert_nil follower.student_user.terms_version
+  # end
+  #
+  # test 'assign_course_as_facilitator assigns course to facilitator' do
+  #   facilitator = create :facilitator
+  #   assert_creates Pd::CourseFacilitator do
+  #     facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+  #   end
+  #   assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
+  # end
+  #
+  # test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+  #   facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+  #   assert_does_not_create(Pd::CourseFacilitator) do
+  #     facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+  #   end
+  # end
+  #
+  # test 'delete_course_as_facilitator removes facilitator course' do
+  #   facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+  #   assert_destroys(Pd::CourseFacilitator) do
+  #     facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+  #   end
+  # end
+  #
+  # test 'should_see_inline_answer? returns true in levelbuilder' do
+  #   Rails.application.config.stubs(:levelbuilder_mode).returns true
+  #
+  #   assert @student.should_see_inline_answer?(nil)
+  #   assert @student.should_see_inline_answer?(create(:script_level))
+  # end
+  #
+  # test 'should_see_inline_answer? returns false for non teachers' do
+  #   assert_not @student.should_see_inline_answer?(create(:script_level))
+  # end
+  #
+  # test 'should_see_inline_answer? returns true for authorized teachers in csp' do
+  #   user = create :teacher
+  #   create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+  #   assert user.should_see_inline_answer?((create :script_level))
+  # end
+  #
+  # test 'account_age_days should return days since account creation' do
+  #   student = create :student, created_at: DateTime.now - 10
+  #   assert student.account_age_days == 10
+  # end
+  #
+  # def mock_geocoder_result(result)
+  #   mock_us_object = OpenStruct.new(country_code: result)
+  #   Geocoder.stubs(:search).returns([mock_us_object])
+  # end
+  #
+  # test 'do not show race interstitial to teacher' do
+  #   mock_geocoder_result('US')
+  #   teacher = create :teacher, created_at: DateTime.now - 8
+  #   refute teacher.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'do not show race interstitial to user accounts under 13' do
+  #   mock_geocoder_result('US')
+  #   student = User.create(@good_data_young)
+  #   student.created_at = DateTime.now - 8
+  #   refute student.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'do not show race interstitial to user accounts less than one week old' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 3
+  #   refute student.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'do not show race interstitial to user accounts that have already entered race information' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   student.update_columns(races: 'white,black')
+  #   refute student.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'do not show race interstitial to user accounts that have closed the dialog already' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   student.update_columns(races: 'closed_dialog')
+  #   refute student.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'do not show race interstitial if IP address is nil' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   mock_ip = nil
+  #   refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
+  # end
+  #
+  # test 'do not show race interstitial to non-US users' do
+  #   mock_geocoder_result('CA')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   unused_ip = 'ignored'
+  #   refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  # end
+  #
+  # test 'show race interstitial to US users' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   unused_ip = 'ignored'
+  #   assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  # end
+  #
+  # test 'show race interstitial for student over 13 with account more than 1 week old' do
+  #   mock_geocoder_result('US')
+  #   student = create :student, created_at: DateTime.now - 8
+  #   assert student.show_race_interstitial?('ignored_ip')
+  # end
+  #
+  # test 'new users must have valid email addresses' do
+  #   assert_creates User do
+  #     create :user, email: 'valid@example.net'
+  #   end
+  #
+  #   e = assert_raises ActiveRecord::RecordInvalid do
+  #     create :user, email: 'invalid@incomplete'
+  #   end
+  #   assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
+  # end
+  #
+  # test 'existing users with invalid email addresses are still allowed' do
+  #   user_with_invalid_email = build :user, email: 'invalid@incomplete'
+  #   user_with_invalid_email.save!(validate: false)
+  #
+  #   assert user_with_invalid_email.valid?
+  #
+  #   # Update another field
+  #   user_with_invalid_email.name = 'updated name'
+  #   assert user_with_invalid_email.valid?
+  #   assert user_with_invalid_email.save
+  # end
+  #
+  # test 'no personal email for under 13 users' do
+  #   user = create :young_student
+  #   assert user.no_personal_email?
+  # end
+  #
+  # test 'no personal email for users with parent-managed accounts' do
+  #   parent_managed_student = create(:parent_managed_student)
+  #   assert parent_managed_student.no_personal_email?
+  # end
+  #
+  # test 'no personal email is false for users with email' do
+  #   refute @student.no_personal_email?
+  #
+  #   refute @teacher.no_personal_email?
+  # end
+  #
+  # test 'parent_managed_account is true for users with parent email and no hashed email' do
+  #   parent_managed_student = create(:parent_managed_student)
+  #   assert parent_managed_student.parent_managed_account?
+  # end
+  #
+  # test 'parent_managed_account is false for teacher' do
+  #   refute @teacher.parent_managed_account?
+  # end
+  #
+  # test 'age is required for new users' do
+  #   e = assert_raises ActiveRecord::RecordInvalid do
+  #     create :user, birthday: nil
+  #   end
+  #   assert_equal 'Validation failed: Age is required', e.message
+  # end
+  #
+  # test 'age validation is bypassed for Google OAuth users with no birthday' do
+  #   # Users created this way will be asked for their age when they first sign in.
+  #   user = create :user, birthday: nil, provider: 'google_oauth2'
+  #   assert_nil user.age
+  # end
+  #
+  # test "age is nil for Google OAuth users under age 4" do
+  #   # Users created this way will be asked for their age when they first sign in.
+  #   three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
+  #   assert_nil three_year_old.age
+  # end
+  #
+  # test "age is set exactly for Google OAuth users between ages 4 and 20" do
+  #   four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+  #   assert_equal 4, four_year_old.age
+  #
+  #   twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+  #   assert_equal 20, twenty_year_old.age
+  # end
+  #
+  # test "age is 21+ for Google OAuth users over the age of 20" do
+  #   twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
+  #   assert_equal '21+', twenty_something.age
+  # end
+  #
+  # test 'age validation is bypassed for Clever users with no birthday' do
+  #   # Users created this way will be asked for their age when they first sign in.
+  #   user = create :user, birthday: nil, provider: 'clever'
+  #   assert_nil user.age
+  # end
+  #
+  # test "age is nil for Clever users under age 4" do
+  #   # Users created this way will be asked for their age when they first sign in.
+  #   three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
+  #   assert_nil three_year_old.age
+  # end
+  #
+  # test "age is set exactly for Clever users between ages 4 and 20" do
+  #   four_year_old = create :user, birthday: (Date.today - 4.years), provider: 'clever'
+  #   assert_equal 4, four_year_old.age
+  #
+  #   twenty_year_old = create :user, birthday: (Date.today - 20.years), provider: 'clever'
+  #   assert_equal 20, twenty_year_old.age
+  # end
+  #
+  # test "age is 21+ for Clever users over the age of 20" do
+  #   twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
+  #   assert_equal '21+', twenty_something.age
+  # end
+  #
+  # test 'updating email is a no-op for students' do
+  #   user = create :student
+  #
+  #   assert_empty user.email
+  #
+  #   user.update_primary_contact_info(new_email: 'student@example.com')
+  #   user.reload
+  #
+  #   assert_empty user.email
+  # end
+  #
+  # test 'users updating the email field must provide a valid email address' do
+  #   user = create :teacher
+  #
+  #   user.update_primary_contact_info(new_email: 'invalid@incomplete')
+  #   refute user.valid?
+  #   refute user.save
+  # end
+  #
+  # test 'find_or_create_teacher creates new teacher' do
+  #   params = {
+  #     email: 'email@example.net',
+  #     name: 'test user'
+  #   }
+  #
+  #   user = assert_creates(User) do
+  #     User.find_or_create_teacher params, @admin
+  #   end
+  #   assert user.teacher?
+  #   assert_equal @admin, user.invited_by
+  # end
+  #
+  # test 'find_or_create_teacher finds existing teacher' do
+  #   teacher = create :teacher
+  #
+  #   params = {
+  #     email: teacher.email,
+  #     name: teacher.name
+  #   }
+  #
+  #   found = assert_does_not_create(User) do
+  #     User.find_or_create_teacher params, @admin
+  #   end
+  #   assert_equal teacher, found
+  # end
+  #
+  # test 'find_or_create_teacher with an invalid email raises ArgumentError' do
+  #   params = {
+  #     email: 'invalid',
+  #     name: 'test user'
+  #   }
+  #
+  #   e = assert_raises ArgumentError do
+  #     User.find_or_create_teacher params, @admin
+  #   end
+  #   assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
+  # end
+  #
+  # test 'deleting user deletes dependent pd applications' do
+  #   teacher = create :teacher
+  #   application = create :pd_teacher1819_application, user: teacher
+  #   assert_equal application.id, teacher.pd_applications.first.id
+  #
+  #   teacher.destroy
+  #
+  #   assert teacher.reload.deleted?
+  #   refute Pd::Application::Teacher1819Application.exists?(application.id)
+  # end
+  #
+  # test 'deleting teacher deletes dependent sections and followers' do
+  #   follower = create :follower
+  #   teacher = follower.user
+  #   section = follower.section
+  #   student = follower.student_user
+  #
+  #   teacher.destroy
+  #
+  #   assert teacher.reload.deleted?
+  #   assert section.reload.deleted?
+  #   assert follower.reload.deleted?
+  #   refute student.reload.deleted?
+  # end
+  #
+  # test 'deleting student deletes dependent followers' do
+  #   follower = create :follower
+  #   teacher = follower.user
+  #   section = follower.section
+  #   student = follower.student_user
+  #
+  #   student.destroy
+  #
+  #   refute teacher.reload.deleted?
+  #   refute section.reload.deleted?
+  #   assert follower.reload.deleted?
+  #   assert student.reload.deleted?
+  # end
+  #
+  # test 'soft-deleting a user records a metric' do
+  #   student = create :student
+  #
+  #   Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1))
+  #   result = student.destroy
+  #
+  #   assert_equal student, result
+  # end
+  #
+  # test 'soft-deleting a group of users records metrics' do
+  #   student_a = create :student
+  #   student_b = create :student
+  #
+  #   Cdo::Metrics.expects(:push).with('User', includes_metrics(SoftDelete: 1)).twice
+  #   result = User.destroy [student_a.id, student_b.id]
+  #
+  #   assert_equal [student_a, student_b], result
+  # end
+  #
+  # test 'undestroy restores recent dependents only' do
+  #   teacher = create :teacher
+  #   old_section = create :section, teacher: teacher
+  #   Timecop.freeze 1.hour.ago do
+  #     old_section.destroy!
+  #   end
+  #   new_section = create :section
+  #   teacher.destroy!
+  #
+  #   teacher.undestroy
+  #
+  #   refute teacher.reload.deleted?
+  #   refute new_section.reload.deleted?
+  #   assert old_section.reload.deleted?
+  # end
+  #
+  # test 'undestroy restores recently soft-deleted projects' do
+  #   Timecop.freeze do
+  #     student = create :student
+  #     with_channel_for student do |channel_id_a|
+  #       with_channel_for student do |channel_id_b|
+  #         # Student deleted channel_id_a a day before they were deleted
+  #         # so we don't expect it to be restored when we undelete them.
+  #         storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+  #         assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+  #         assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+  #
+  #         Timecop.travel 1.day
+  #
+  #         # Soft-deleting the student also soft-deletes their projects
+  #         student.destroy
+  #         assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+  #         assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
+  #
+  #         Timecop.travel 1.day
+  #
+  #         # Restoring the student only restores projects that were deleted along
+  #         # with the student
+  #         student.undestroy
+  #         assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+  #         assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
+  #       end
+  #     end
+  #   end
+  # end
+  #
+  # test 'undestroy raises for a purged user' do
+  #   user = create :user
+  #   user.clear_user_and_mark_purged
+  #
+  #   assert_raises do
+  #     user.undestroy
+  #   end
+  # end
+  #
+  # test 'assign_script creates UserScript if necessary' do
+  #   assert_creates(UserScript) do
+  #     user_script = @student.assign_script(Script.first)
+  #     assert_equal Script.first.id, user_script.script_id
+  #     refute_nil user_script.assigned_at
+  #   end
+  # end
+  #
+  # test 'assign_script reuses UserScript if available' do
+  #   Timecop.travel(2017, 1, 2, 12, 0, 0) do
+  #     UserScript.create!(user: @student, script: Script.first)
+  #   end
+  #   assert_does_not_create(UserScript) do
+  #     user_script = @student.assign_script(Script.first)
+  #     assert_equal Script.first.id, user_script.script_id
+  #     refute_nil user_script.assigned_at
+  #   end
+  # end
+  #
+  # test 'assign_script does overwrite assigned_at if pre-existing' do
+  #   Timecop.travel(2017, 1, 2, 12, 0, 0) do
+  #     UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+  #   end
+  #
+  #   Timecop.travel(2018, 3, 4, 12, 0, 0) do
+  #     assert_does_not_create(UserScript) do
+  #       user_script = @student.assign_script(Script.first)
+  #       assert_equal Script.first.id, user_script.script_id
+  #       assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
+  #     end
+  #   end
+  # end
+  #
+  # class AssignedCoursesAndScripts < ActiveSupport::TestCase
+  #   setup do
+  #     @student = create :student
+  #     @course = create :course, name: 'course'
+  #   end
+  #
+  #   test "it returns assigned courses" do
+  #     teacher = create :teacher
+  #     section = create :section, user_id: teacher.id, course: @course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+  #
+  #     assigned_courses = @student.assigned_courses
+  #     assert_equal 1, assigned_courses.length
+  #
+  #     assert_equal 'course', assigned_courses[0][:name]
+  #   end
+  #
+  #   test "it checks for assigned scripts, no assigned scripts" do
+  #     refute @student.any_visible_assigned_scripts?
+  #   end
+  #
+  #   test "it checks for assigned scripts, assigned hidden script" do
+  #     hidden_script = create :script, name: 'hidden-script', hidden: true
+  #     @student.assign_script(hidden_script)
+  #     refute @student.any_visible_assigned_scripts?
+  #   end
+  #
+  #   test "it checks for assigned scripts, assigned visible script" do
+  #     visible_script = create :script, name: 'visible-script'
+  #     @student.assign_script(visible_script)
+  #     assert @student.any_visible_assigned_scripts?
+  #   end
+  #
+  #   test "it checks for assigned courses and scripts, no course, no script" do
+  #     refute @student.assigned_course_or_script?
+  #   end
+  #
+  #   test "it checks for assigned courses and scripts, assigned hidden script" do
+  #     hidden_script = create :script, name: 'hidden-script', hidden: true
+  #     @student.assign_script(hidden_script)
+  #     refute @student.assigned_course_or_script?
+  #   end
+  #
+  #   test "it checks for assigned courses and scripts, assigned visible script" do
+  #     visible_script = create :script, name: 'visible-script'
+  #     @student.assign_script(visible_script)
+  #     assert @student.assigned_course_or_script?
+  #   end
+  #
+  #   test "it checks for assigned courses and scripts, assigned course" do
+  #     teacher = create :teacher
+  #     section = create :section, user_id: teacher.id, course: @course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+  #     assert @student.assigned_course_or_script?
+  #   end
+  #
+  #   test "it checks for assigned courses and scripts, assigned course and assigned visible script" do
+  #     teacher = create :teacher
+  #     section = create :section, user_id: teacher.id, course: @course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+  #     visible_script = create :script, name: 'visible-script'
+  #     @student.assign_script(visible_script)
+  #     assert @student.assigned_course_or_script?
+  #   end
+  # end
+  #
+  # class RecentCoursesAndScripts < ActiveSupport::TestCase
+  #   setup do
+  #     test_locale = :"te-ST"
+  #     I18n.locale = test_locale
+  #     custom_i18n = {
+  #       'data' => {
+  #         'course' => {
+  #           'name' => {
+  #             'csd' => {
+  #               'title' => 'Computer Science Discoveries',
+  #               'description_short' => 'CSD short description',
+  #             }
+  #           }
+  #         },
+  #         'script' => {
+  #           'name' => {
+  #             'other' => {
+  #               'title': 'Script Other',
+  #               'description_short' => 'other-description'
+  #             }
+  #           }
+  #         }
+  #       }
+  #     }
+  #
+  #     I18n.backend.store_translations test_locale, custom_i18n
+  #
+  #     @student = create :student
+  #     teacher = create :teacher
+  #
+  #     course = create :course, name: 'csd'
+  #     create :course_script, course: course, script: (create :script, name: 'csd1'), position: 1
+  #     create :course_script, course: course, script: (create :script, name: 'csd2'), position: 2
+  #
+  #     other_script = create :script, name: 'other'
+  #     @student.assign_script(other_script)
+  #
+  #     section = create :section, user_id: teacher.id, course: course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+  #   end
+  #
+  #   test "it returns both courses and scripts" do
+  #     courses_and_scripts = @student.recent_courses_and_scripts(false)
+  #     assert_equal 2, courses_and_scripts.length
+  #
+  #     assert_equal 'csd', courses_and_scripts[0][:name]
+  #     assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:title]
+  #     assert_equal 'CSD short description', courses_and_scripts[0][:description]
+  #     assert_equal '/courses/csd', courses_and_scripts[0][:link]
+  #
+  #     assert_equal 'other', courses_and_scripts[1][:name]
+  #     assert_equal 'Script Other', courses_and_scripts[1][:title]
+  #     assert_equal 'other-description', courses_and_scripts[1][:description]
+  #     assert_equal '/s/other', courses_and_scripts[1][:link]
+  #   end
+  #
+  #   test "it does not return scripts that are in returned courses" do
+  #     script = Script.find_by_name('csd1')
+  #     @student.assign_script(script)
+  #
+  #     courses_and_scripts = @student.recent_courses_and_scripts(false)
+  #     assert_equal 2, courses_and_scripts.length
+  #
+  #     assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+  #   end
+  #
+  #   test "it optionally does not return primary course in returned courses" do
+  #     student = create :student
+  #     teacher = create :teacher
+  #
+  #     course = create :course, name: 'testcourse'
+  #     course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
+  #     create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
+  #     create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+  #
+  #     other_script = create :script, name: 'otherscript'
+  #     create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
+  #
+  #     section = create :section, user_id: teacher.id, course: course
+  #     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+  #
+  #     courses_and_scripts = student.recent_courses_and_scripts(true)
+  #
+  #     assert_equal 1, courses_and_scripts.length
+  #
+  #     assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+  #   end
+  # end
+  #
+  # class SectionCourses < ActiveSupport::TestCase
+  #   setup do
+  #     @student = create :student
+  #     @teacher = create :teacher
+  #     @grand_teacher = create :teacher
+  #     @course = create :course, name: 'csd'
+  #   end
+  #   test "it returns courses in which a teacher exists as a student" do
+  #     grand_section = create :section, user_id: @grand_teacher.id, course: @course
+  #     Follower.create!(section_id: grand_section.id, student_user_id: @teacher.id, user: @grand_teacher)
+  #
+  #     courses = @teacher.section_courses
+  #     assert_equal 1, courses.length
+  #     assert_equal 'csd', courses[0].name
+  #   end
+  #
+  #   test "it returns courses in which a teacher exists as a teacher" do
+  #     section = create :section, user_id: @teacher.id, course: @course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
+  #
+  #     courses = @teacher.section_courses
+  #     assert_equal 1, courses.length
+  #     assert_equal 'csd', courses[0].name
+  #   end
+  #
+  #   test "it returns courses in which a student exists as a student" do
+  #     section = create :section, user_id: @teacher.id, course: @course
+  #     Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
+  #
+  #     courses = @student.section_courses
+  #     assert_equal 1, courses.length
+  #     assert_equal 'csd', courses[0].name
+  #   end
+  # end
+  #
+  # test "section_scripts returns an empty array if user has no sections" do
+  #   user = create :user
+  #   assert_empty user.section_scripts
+  # end
+  #
+  # test "section_scripts returns assigned scripts and default scripts in assigned courses" do
+  #   student = create :student
+  #   single_script = create :script
+  #   (create :section, script: single_script).students << student
+  #   course_script = create :script
+  #   course_with_script = create :course
+  #   create :course_script, course: course_with_script, script: course_script, position: 1
+  #   (create :section, course: course_with_script).students << student
+  #
+  #   assert_equal [single_script, course_script], student.section_scripts
+  # end
+
+  # test "last_joined_section returns the most recently joined section" do
+  #   student = create :student
+  #   teacher = create :teacher
+  #
+  #   section_1 = create :section, user_id: teacher.id
+  #   section_2 = create :section, user_id: teacher.id
+  #   section_3 = create :section, user_id: teacher.id
+  #
+  #   Timecop.freeze do
+  #     assert_nil student.last_joined_section
+  #     Follower.create!(section_id: section_1.id, student_user_id: student.id, user: teacher)
+  #     assert_equal section_1, student.last_joined_section
+  #     Timecop.travel 1
+  #     Follower.create!(section_id: section_3.id, student_user_id: student.id, user: teacher)
+  #     assert_equal section_3, student.last_joined_section
+  #     Timecop.travel 1
+  #     Follower.create!(section_id: section_2.id, student_user_id: student.id, user: teacher)
+  #     assert_equal section_2, student.last_joined_section
+  #   end
+  # end
+  #
+  # test 'from_omniauth: creates new user if user with matching credentials does not exist' do
+  #   auth = OmniAuth::AuthHash.new(
+  #     provider: 'google_oauth2',
+  #     uid: '123456',
+  #     credentials: {
+  #       token: 'fake oauth token',
+  #       expires_at: Time.now.to_i + 3600,
+  #       refresh_token: 'fake refresh token',
+  #     },
+  #     info: {
+  #       name: {first: 'Some', last: 'User'},
+  #       user_type: 'student'
+  #     },
+  #   )
+  #   params = {}
+  #
+  #   assert_creates(User) do
+  #     user = User.from_omniauth(auth, params)
+  #     assert_equal 'migrated', user.provider
+  #     assert_equal 'Some User', user.name
+  #     assert_equal 'google_oauth2', user.primary_contact_info.credential_type
+  #     assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
+  #     assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
+  #     assert_equal User::TYPE_STUDENT, user.user_type
+  #   end
+  # end
+  #
+  # test 'from_omniauth: updates user oauth tokens if user with matching credentials exists' do
+  #   uid = '123456'
+  #   provider = 'google_oauth2'
+  #   create :user, uid: uid, provider: provider
+  #   auth = OmniAuth::AuthHash.new(
+  #     provider: provider,
+  #     uid: uid,
+  #     credentials: {
+  #       token: 'fake oauth token',
+  #       expires_at: Time.now.to_i + 3600,
+  #       refresh_token: 'fake refresh token',
+  #     },
+  #     info: {},
+  #   )
+  #   params = {}
+  #
+  #   assert_does_not_create(User) do
+  #     user = User.from_omniauth(auth, params)
+  #     assert_equal 'fake oauth token', user.primary_contact_info.data_hash[:oauth_token]
+  #     assert_equal 'fake refresh token', user.primary_contact_info.data_hash[:oauth_refresh_token]
+  #     assert_equal 'google_oauth2', user.primary_contact_info.credential_type
+  #   end
+  # end
+  #
+  # test 'from_omniauth: updates migrated user oauth tokens if authentication option with matching credentials exists' do
+  #   uid = '654321'
+  #   user = create :user
+  #   google_auth_option = create :authentication_option, credential_type: AuthenticationOption::GOOGLE, authentication_id: uid, user: user
+  #   auth = OmniAuth::AuthHash.new(
+  #     provider: AuthenticationOption::GOOGLE,
+  #     uid: uid,
+  #     credentials: {
+  #       token: 'fake oauth token',
+  #       expires_at: Time.now.to_i + 3600,
+  #       refresh_token: 'fake refresh token',
+  #     },
+  #     info: {},
+  #   )
+  #   params = {}
+  #
+  #   assert_does_not_create(User) do
+  #     User.from_omniauth(auth, params)
+  #   end
+  #   google_auth_option.reload
+  #   assert_equal 'fake oauth token', google_auth_option.data_hash[:oauth_token]
+  #   assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
+  # end
+  #
+  # test 'password_required? is false if user is not creating their own account' do
+  #   user = build :user
+  #   user.expects(:managing_own_credentials?).returns(false)
+  #   refute user.password_required?
+  # end
+  #
+  # test 'password_required? is true for new users with no encrypted password' do
+  #   user = build :user, encrypted_password: nil
+  #   user.expects(:managing_own_credentials?).returns(true)
+  #   assert user.encrypted_password.nil?
+  #   assert user.password_required?
+  # end
+  #
+  # test 'password_required? is true for user changing their password' do
+  #   user = create :user
+  #   user.password = "mypassword"
+  #   user.password_confirmation = "mypassword"
+  #   user.expects(:managing_own_credentials?).returns(true)
+  #   assert user.password_required?
+  # end
+  #
+  # test 'summarize' do
+  #   assert_equal(
+  #     {
+  #       id: @student.id,
+  #       name: @student.name,
+  #       username: @student.username,
+  #       email: @student.email,
+  #       hashed_email: @student.hashed_email,
+  #       user_type: @student.user_type,
+  #       gender: @student.gender,
+  #       birthday: @student.birthday,
+  #       total_lines: @student.total_lines,
+  #       secret_words: @student.secret_words,
+  #       secret_picture_name: @student.secret_picture.name,
+  #       secret_picture_path: @student.secret_picture.path,
+  #       location: "/v2/users/#{@student.id}",
+  #       age: @student.age,
+  #       sharing_disabled: false,
+  #       has_ever_signed_in: @student.has_ever_signed_in?
+  #     },
+  #     @student.summarize
+  #   )
+  # end
+  #
+  # test 'has_ever_signed_in? is false with no current_sign_in_at' do
+  #   student = create :student
+  #   assert_nil student.current_sign_in_at
+  #   refute student.has_ever_signed_in?
+  # end
+  #
+  # test 'has_ever_signed_in? is true with current_sign_in_at' do
+  #   student = create :student, current_sign_in_at: DateTime.now.utc
+  #   refute_nil student.current_sign_in_at
+  #   assert student.has_ever_signed_in?
+  # end
+  #
+  # test 'under 13 students have sharing off by default' do
+  #   student = create :user, age: 10
+  #   assert student.reload.sharing_disabled
+  # end
+  #
+  # test 'over 13 students have sharing on by default' do
+  #   student = create :user, age: 14
+  #   refute student.reload.sharing_disabled
+  # end
+  #
+  # test 'students share setting updates after turning 13 if they are in no sections' do
+  #   # create a birthday 12 years ago
+  #   birthday = Date.today - (12 * 365)
+  #   student = create :user, birthday: birthday
+  #   assert student.reload.sharing_disabled
+  #
+  #   # go forward in time to a day past the student's 13th birthday
+  #   Timecop.travel (Date.today + 366) do
+  #     # student signs in
+  #     student.sign_in_count = 2
+  #     student.save
+  #
+  #     # check new share setting
+  #     refute student.reload.sharing_disabled
+  #   end
+  # end
+  #
+  # test 'students share setting does not update after turning 13 if they are in sections' do
+  #   # create a birthday 12 years ago
+  #   birthday = Date.today - (12 * 365)
+  #   student = create :user, birthday: birthday
+  #
+  #   teacher = create :teacher
+  #   section1 = create :section, user: teacher
+  #   section1.add_student(student)
+  #
+  #   assert student.reload.sharing_disabled
+  #
+  #   # go forward in time to a day past the student's 13th birthday
+  #   Timecop.travel (Date.today + 366) do
+  #     # student signs in
+  #     student.sign_in_count = 2
+  #     student.save
+  #
+  #     # check updated share setting is unchanged
+  #     assert student.reload.sharing_disabled
+  #   end
+  # end
+  #
+  # test 'stage_extras_enabled?' do
+  #   script = create :script, stage_extras_available: true
+  #   other_script = create :script, stage_extras_available: true
+  #   teacher = create :teacher
+  #   student = create :student
+  #
+  #   section1 = create :section, stage_extras: true, script_id: script.id, user: teacher
+  #   section1.add_student(student)
+  #   section2 = create :section, stage_extras: true, script_id: script.id, user: teacher
+  #   section2.add_student(student)
+  #   section3 = create :section, stage_extras: true, script_id: other_script.id
+  #   section3.add_student(teacher)
+  #
+  #   assert student.stage_extras_enabled?(script)
+  #   refute student.stage_extras_enabled?(other_script)
+  #
+  #   assert teacher.stage_extras_enabled?(script)
+  #   assert teacher.stage_extras_enabled?(other_script)
+  #
+  #   refute (create :student).stage_extras_enabled?(script)
+  #   assert (create :teacher).stage_extras_enabled?(script)
+  # end
+  #
+  # class HiddenIds < ActiveSupport::TestCase
+  #   setup_all do
+  #     @teacher = create :teacher
+  #
+  #     @script = create(:script, hideable_stages: true)
+  #     @stage1 = create(:stage, script: @script, absolute_position: 1, relative_position: '1')
+  #     @stage2 = create(:stage, script: @script, absolute_position: 2, relative_position: '2')
+  #     @stage3 = create(:stage, script: @script, absolute_position: 3, relative_position: '3')
+  #     @custom_s1_l1 = create(
+  #       :script_level,
+  #       script: @script,
+  #       stage: @stage1,
+  #       position: 1
+  #     )
+  #     @custom_s2_l1 = create(
+  #       :script_level,
+  #       script: @script,
+  #       stage: @stage2,
+  #       position: 1
+  #     )
+  #     @custom_s2_l2 = create(
+  #       :script_level,
+  #       script: @script,
+  #       stage: @stage2,
+  #       position: 2
+  #     )
+  #     create(:script_level, script: @script, stage: @stage3, position: 1)
+  #
+  #     # explicitly disable LB mode so that we don't create a .course file
+  #     Rails.application.config.stubs(:levelbuilder_mode).returns false
+  #     @course = create :course
+  #
+  #     @script2 = create :script
+  #     @script3 = create :script
+  #     create :course_script, position: 1, course: @course, script: @script
+  #     create :course_script, position: 2, course: @course, script: @script2
+  #     create :course_script, position: 2, course: @course, script: @script3
+  #   end
+  #
+  #   def put_student_in_section(student, teacher, script, course=nil)
+  #     section = create :section, user_id: teacher.id, script_id: script.try(:id), course_id: course.try(:id)
+  #     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+  #     section
+  #   end
+  #
+  #   # Helper method that sets up some hidden stages for our two sections
+  #   def hide_stages_in_sections(section1, section2)
+  #     # stage 1 hidden in both sections
+  #     SectionHiddenStage.create(section_id: section1.id, stage_id: @stage1.id)
+  #     SectionHiddenStage.create(section_id: section2.id, stage_id: @stage1.id)
+  #
+  #     # stage 2 hidden in section 1
+  #     SectionHiddenStage.create(section_id: section1.id, stage_id: @stage2.id)
+  #
+  #     # stage 3 hidden in section 2
+  #     SectionHiddenStage.create(section_id: section2.id, stage_id: @stage3.id)
+  #   end
+  #
+  #   # Same thing as hide_stages_in_sections, but hides scripts instead of stages
+  #   def hide_scripts_in_sections(section1, section2)
+  #     # script hidden in both sections
+  #     SectionHiddenScript.create(section_id: section1.id, script_id: @script.id)
+  #     SectionHiddenScript.create(section_id: section2.id, script_id: @script.id)
+  #
+  #     # script 2 hidden in section 1
+  #     SectionHiddenScript.create(section_id: section1.id, script_id: @script2.id)
+  #
+  #     # script 3 hidden in section 2
+  #     SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
+  #   end
+  #
+  #   test "user in two sections, both attached to script" do
+  #     student = create :student
+  #
+  #     section1 = put_student_in_section(student, @teacher, @script)
+  #     section2 = put_student_in_section(student, @teacher, @script)
+  #
+  #     hide_stages_in_sections(section1, section2)
+  #
+  #     # when attached to script, we should hide only if hidden in every section
+  #     assert_equal [@stage1.id], student.get_hidden_stage_ids(@script.name)
+  #
+  #     # validate script_level_hidden? gives same result
+  #     assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+  #     assert_equal false, student.script_level_hidden?(@stage2.script_levels.first)
+  #     assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+  #   end
+  #
+  #   test "user in two sections, both attached to course" do
+  #     student = create :student
+  #
+  #     section1 = put_student_in_section(student, @teacher, @script, @course)
+  #     section2 = put_student_in_section(student, @teacher, @script, @course)
+  #
+  #     hide_scripts_in_sections(section1, section2)
+  #
+  #     # when attached to course, we should hide only if hidden in every section
+  #     assert_equal [@script.id], student.get_hidden_script_ids(@course)
+  #
+  #     # ignore any archived sections
+  #     section2.hidden = true
+  #     section2.save!
+  #     student.reload
+  #     assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+  #     section1.hidden = true
+  #     section1.save!
+  #     student.reload
+  #     assert_equal [], student.get_hidden_script_ids(@course)
+  #   end
+  #
+  #   test "user in two sections, both attached to course but no script" do
+  #     student = create :student
+  #
+  #     section1 = put_student_in_section(student, @teacher, nil, @course)
+  #     section2 = put_student_in_section(student, @teacher, nil, @course)
+  #
+  #     hide_scripts_in_sections(section1, section2)
+  #
+  #     # when attached to course, we should hide only if hidden in every section
+  #     assert_equal [@script.id], student.get_hidden_script_ids(@course)
+  #
+  #     # ignore any archived sections
+  #     section2.hidden = true
+  #     section2.save!
+  #     student.reload
+  #     assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+  #     section1.hidden = true
+  #     section1.save!
+  #     student.reload
+  #     assert_equal [], student.get_hidden_script_ids(@course)
+  #   end
+  #
+  #   test "user in two sections, neither attached to script" do
+  #     student = create :student
+  #
+  #     unattached_script = create(:script)
+  #     section1 = put_student_in_section(student, @teacher, unattached_script)
+  #     section2 = put_student_in_section(student, @teacher, unattached_script)
+  #
+  #     hide_stages_in_sections(section1, section2)
+  #
+  #     # when not attached to script, we should hide when hidden in any section
+  #     assert_equal [@stage1.id, @stage2.id, @stage3.id], student.get_hidden_stage_ids(@script.name)
+  #
+  #     # validate script_level_hidden? gives same result
+  #     assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+  #     assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
+  #     assert_equal true, student.script_level_hidden?(@stage3.script_levels.first)
+  #   end
+  #
+  #   test "user in two sections, neither attached to course" do
+  #     student = create :student
+  #
+  #     unattached_script = create(:script)
+  #     section1 = put_student_in_section(student, @teacher, unattached_script)
+  #     section2 = put_student_in_section(student, @teacher, unattached_script)
+  #
+  #     hide_scripts_in_sections(section1, section2)
+  #
+  #     # when not attached to course, we should hide when hidden in any section
+  #     assert_equal [@script.id, @script2.id, @script3.id], student.get_hidden_script_ids(@course)
+  #   end
+  #
+  #   test "user in two sections, one attached to script one not" do
+  #     student = create :student
+  #
+  #     attached_section = put_student_in_section(student, @teacher, @script)
+  #     unattached_section = put_student_in_section(student, @teacher, create(:script))
+  #
+  #     hide_stages_in_sections(attached_section, unattached_section)
+  #
+  #     # only the stages hidden in the attached section are considered hidden
+  #     assert_equal [@stage1.id, @stage2.id], student.get_hidden_stage_ids(@script.name)
+  #
+  #     # validate script_level_hidden? gives same result
+  #     assert_equal true, student.script_level_hidden?(@stage1.script_levels.first)
+  #     assert_equal true, student.script_level_hidden?(@stage2.script_levels.first)
+  #     assert_equal false, student.script_level_hidden?(@stage3.script_levels.first)
+  #   end
+  #
+  #   test "user in two sections, one attached to course one not" do
+  #     student = create :student
+  #
+  #     attached_section = put_student_in_section(student, @teacher, @script, @course)
+  #     unattached_section = put_student_in_section(student, @teacher, create(:script))
+  #
+  #     hide_scripts_in_sections(attached_section, unattached_section)
+  #
+  #     # only the scripts hidden in the attached section are considered hidden
+  #     assert_equal [@script.id, @script2.id], student.get_hidden_script_ids(@course)
+  #   end
+  #
+  #   test "user in no sections" do
+  #     student = create :student
+  #
+  #     assert_equal [], student.get_hidden_stage_ids(@script.name)
+  #   end
+  #
+  #   test "teacher gets hidden stages for sections they own" do
+  #     teacher = create :teacher
+  #     teacher_teacher = create :teacher
+  #     student = create :student
+  #
+  #     teacher_owner_section = put_student_in_section(student, teacher, @script)
+  #     teacher_owner_section2 = put_student_in_section(student, teacher, @script)
+  #     teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script)
+  #
+  #     # stage 1 is hidden in the first section owned by the teacher
+  #     SectionHiddenStage.create(section_id: teacher_owner_section.id, stage_id: @stage1.id)
+  #
+  #     # stage 1 and 2 are hidden in the second section owned by the teacher
+  #     SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage1.id)
+  #     SectionHiddenStage.create(section_id: teacher_owner_section2.id, stage_id: @stage2.id)
+  #
+  #     # stage 3 is hidden in the section in which the teacher is a member
+  #     SectionHiddenStage.create(section_id: teacher_member_section.id, stage_id: @stage3.id)
+  #
+  #     # only the stages hidden in the owned section are considered hidden
+  #     expected = {
+  #       teacher_owner_section.id => [@stage1.id],
+  #       teacher_owner_section2.id => [@stage1.id, @stage2.id]
+  #     }
+  #     assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
+  #   end
+  #
+  #   test "teacher gets hidden scripts for sections they own" do
+  #     teacher = create :teacher
+  #     teacher_teacher = create :teacher
+  #     student = create :student
+  #
+  #     teacher_owner_section = put_student_in_section(student, teacher, @script, @course)
+  #     teacher_owner_section2 = put_student_in_section(student, teacher, @script, @course)
+  #     teacher_member_section = put_student_in_section(teacher, teacher_teacher, @script, @course)
+  #
+  #     # stage 1 is hidden in the first section owned by the teacher
+  #     SectionHiddenScript.create(section_id: teacher_owner_section.id, script_id: @script.id)
+  #
+  #     # stage 1 and 2 are hidden in the second section owned by the teacher
+  #     SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script.id)
+  #     SectionHiddenScript.create(section_id: teacher_owner_section2.id, script_id: @script2.id)
+  #
+  #     # stage 3 is hidden in the section in which the teacher is a member
+  #     SectionHiddenScript.create(section_id: teacher_member_section.id, script_id: @script3.id)
+  #
+  #     # only the scripts hidden in the owned section are considered hidden
+  #     expected = {
+  #       teacher_owner_section.id => [@script.id],
+  #       teacher_owner_section2.id => [@script.id, @script2.id]
+  #     }
+  #     assert_equal expected, teacher.get_hidden_script_ids(@course)
+  #   end
+  #
+  #   test "script_hidden?" do
+  #     teacher = create :teacher
+  #     student = create :student
+  #     section = put_student_in_section(student, teacher, @script, @course)
+  #     SectionHiddenScript.create(section_id: section.id, script_id: @script.id)
+  #
+  #     # returns true for student
+  #     assert_equal true, student.script_hidden?(@script)
+  #
+  #     # returns false for teacher
+  #     assert_equal false, teacher.script_hidden?(@script)
+  #   end
+  # end
+  #
+  # test 'generate_progress_from_storage_id' do
+  #   # construct our fake applab-intro script
+  #   script = create :script
+  #   stage = create :stage, script: script
+  #   regular_level = create :level
+  #   create :script_level, script: script, stage: stage, levels: [regular_level]
+  #
+  #   # two different levels, backed by the same template level
+  #   template_level = create :level
+  #   template_backed_level1 = create :level, project_template_level_name: template_level.name
+  #   create :script_level, script: script, stage: stage, levels: [template_backed_level1]
+  #   template_backed_level2 = create :level, project_template_level_name: template_level.name
+  #   create :script_level, script: script, stage: stage, levels: [template_backed_level2]
+  #
+  #   # Whether we have a channel for a regular level in the script, or a template
+  #   # level, we generate a UserScript
+  #   [regular_level, template_level].each do |level|
+  #     user = create :student
+  #     channel_token = create :channel_token, level: level, storage_user: user
+  #     user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+  #
+  #     user_scripts = UserScript.where(user: user)
+  #     assert_equal 1, user_scripts.length
+  #     assert_equal script, user_scripts.first.script
+  #
+  #     if level == regular_level
+  #       # we should have exactly one user_level created
+  #       assert_equal 1, user.user_levels.length
+  #       assert_equal regular_level.id, user.user_levels[0].level_id
+  #     elsif level == template_level
+  #       # Template backed levels share a channel, so when we find a channel for the
+  #       # template, we create user_levels for every level that uses that template
+  #       assert_equal 2, user.user_levels.length
+  #       assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
+  #       assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
+  #     end
+  #   end
+  #
+  #   # No UserScript if we only have channel tokens elsewhere
+  #   user = create :student
+  #   channel_token = create :channel_token, level: Script.twenty_hour_script.levels.first, storage_user: user
+  #   user.generate_progress_from_storage_id(channel_token.storage_id, script.name)
+  #
+  #   user_scripts = UserScript.where(user: user)
+  #   assert_equal 0, user_scripts.length
+  # end
+  #
+  # test 'primary email for migrated user is readable from user model' do
+  #   user = create(:teacher)
+  #   user.provider = 'migrated'
+  #   user.primary_contact_info.update(email: 'eric@code.org')
+  #   assert_equal user.email, user.primary_contact_info.email
+  #   assert_equal user.email, user.primary_contact_info.email
+  # end
+  #
+  # test 'within_united_states? is false without UserGeo record' do
+  #   user = create :student
+  #   assert_empty user.user_geos
+  #   refute user.within_united_states?
+  # end
+  #
+  # test 'within_united_states? is false if latest UserGeo has incomplete data' do
+  #   # Based on behavior in trackable.rb where we push a UserGeo with just
+  #   # user_id and ip_address, no other geo information
+  #   user = create :student
+  #   Timecop.freeze do
+  #     create :user_geo, :seattle, user: user
+  #     Timecop.travel 1
+  #     create :user_geo, user: user
+  #   end
+  #   assert_equal 2, user.user_geos.count
+  #   refute user.within_united_states?
+  # end
+  #
+  # test 'within_united_states? is false if latest UserGeo from another country' do
+  #   user = create :student
+  #   Timecop.freeze do
+  #     create :user_geo, :seattle, user: user
+  #     Timecop.travel 1
+  #     create :user_geo, :sydney, user: user
+  #   end
+  #   assert_equal 2, user.user_geos.count
+  #   refute user.within_united_states?
+  # end
+  #
+  # test 'within_united_states? is true if latest UserGeo from the United States' do
+  #   user = create :student
+  #   Timecop.freeze do
+  #     create :user_geo, :sydney, user: user
+  #     Timecop.travel 1
+  #     create :user_geo, :seattle, user: user
+  #   end
+  #   assert_equal 2, user.user_geos.count
+  #   assert user.within_united_states?
+  # end
+  #
+  # test 'user_levels_by_user_by_level' do
+  #   users = (1..3).map {create :user}
+  #   script = Script.twenty_hour_script
+  #   script_levels = script.script_levels.first(2)
+  #   script_levels.each do |script_level|
+  #     users.first(2).each do |user|
+  #       create :user_level, user: user, level: script_level.level, script: script
+  #     end
+  #   end
+  #
+  #   result = nil
+  #   assert_queries(1) do
+  #     result = User.user_levels_by_user_by_level(users, script)
+  #   end
+  #
+  #   assert_equal(
+  #     {
+  #       users[0].id => {
+  #         script_levels[0].level_id => UserLevel.find_by(user: users[0], level: script_levels[0].level),
+  #         script_levels[1].level_id => UserLevel.find_by(user: users[0], level: script_levels[1].level)
+  #       },
+  #       users[1].id => {
+  #         script_levels[0].level_id => UserLevel.find_by(user: users[1], level: script_levels[0].level),
+  #         script_levels[1].level_id => UserLevel.find_by(user: users[1], level: script_levels[1].level)
+  #       },
+  #       users[2].id => {}
+  #     },
+  #     result
+  #   )
+  # end
+  #
+  # test 'find_by_email_or_hashed_email returns nil when no user is found' do
+  #   assert_nil User.find_by_email_or_hashed_email 'nonexistent@example.org'
+  # end
+  #
+  # test 'find_by_email_or_hashed_email returns nil when input is blank' do
+  #   create :student_in_picture_section
+  #   assert_nil User.find_by_email_or_hashed_email nil
+  #   assert_nil User.find_by_email_or_hashed_email ''
+  # end
+  #
+  # test 'find_by_email_or_hashed_email locates a single-auth user by email' do
+  #   user = create :teacher
+  #   assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  # end
+  #
+  # test 'find_by_email_or_hashed_email locates a single-auth user by hashed email' do
+  #   email = 'student@example.org'
+  #   user = create :student, email: email
+  #   assert_equal user, User.find_by_email_or_hashed_email(email)
+  # end
+  #
+  # test 'find_by_email_or_hashed_email locates a multi-auth user by email' do
+  #   user = create :teacher
+  #   assert_equal user, User.find_by_email_or_hashed_email(user.email)
+  # end
+  #
+  # test 'find_by_email_or_hashed_email locates a multi-auth user by hashed email' do
+  #   email = 'student@example.org'
+  #   user = create :student, email: email
+  #   assert_equal user, User.find_by_email_or_hashed_email(email)
+  # end
+  #
+  # test 'find_by_email returns nil when no user is found' do
+  #   assert_nil User.find_by_email 'fake_email'
+  # end
+  #
+  # test 'find_by_email returns nil when input is blank' do
+  #   create :student_in_picture_section
+  #   assert_nil User.find_by_email nil
+  #   assert_nil User.find_by_email ''
+  # end
+  #
+  # test 'find_by_email locates a single-auth teacher by email' do
+  #   teacher = create :teacher
+  #   assert_equal teacher, User.find_by_email(teacher.email)
+  # end
+  #
+  # test 'find_by_email does not locate a single-auth student by email' do
+  #   email = 'student@example.org'
+  #   create :student, email: email
+  #   assert_nil User.find_by_email email
+  # end
+  #
+  # test 'find_by_email locates a multi-auth teacher by email' do
+  #   teacher = create :teacher
+  #   assert_equal teacher, User.find_by_email(teacher.email)
+  # end
+  #
+  # test 'find_by_email locates a multi-auth teacher by non-primary email' do
+  #   teacher = create :teacher
+  #   second_option = create :authentication_option, user: teacher
+  #   assert_equal teacher, User.find_by_email(second_option.email)
+  # end
+  #
+  # test 'find_by_email does not locate a multi-auth student by email' do
+  #   email = 'student@example.org'
+  #   create :student, email: email
+  #   assert_nil User.find_by_email email
+  # end
+  #
+  # test 'find_by_hashed_email returns nil when no user is found' do
+  #   assert_nil User.find_by_hashed_email 'fake_hash'
+  # end
+  #
+  # test 'find_by_hashed_email returns nil when input is blank' do
+  #   create :student_in_picture_section
+  #   assert_nil User.find_by_hashed_email nil
+  #   assert_nil User.find_by_hashed_email ''
+  # end
+  #
+  # test 'find_by_hashed_email locates a single-auth user by email' do
+  #   user = create :teacher
+  #   assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  # end
+  #
+  # test 'find_by_hashed_email locates a single-auth user by hashed email' do
+  #   email = 'student@example.org'
+  #   user = create :student, email: email
+  #   assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  # end
+  #
+  # test 'find_by_hashed_email locates a multi-auth user by email' do
+  #   user = create :teacher
+  #   assert_equal user, User.find_by_hashed_email(user.hashed_email)
+  # end
+  #
+  # test 'find_by_hashed_email locates a multi-auth user by hashed email' do
+  #   email = 'student@example.org'
+  #   user = create :student, email: email
+  #   assert_equal user, User.find_by_hashed_email(User.hash_email(email))
+  # end
+  #
+  # test 'find_by_credential returns nil when no matching user is found' do
+  #   user = create :student, :clever_sso_provider
+  #
+  #   assert_nil User.find_by_credential(
+  #     type: AuthenticationOption::CLEVER,
+  #     id: 'mismatched_id_' + user.primary_contact_info.authentication_id
+  #   )
+  # end
+  #
+  # test 'find_by_credential locates migrated SSO user' do
+  #   original_uid = 'test-uid'
+  #   user = create :student, :clever_sso_provider, uid: original_uid
+  #
+  #   User.expects(:find_by).never
+  #   assert_equal user,
+  #     User.find_by_credential(
+  #       type: AuthenticationOption::CLEVER,
+  #       id: original_uid
+  #     )
+  # end
+  #
+  # test 'not depended_upon_for_login? for student' do
+  #   student = create :student
+  #   refute student.depended_upon_for_login?
+  # end
+  #
+  # test 'not depended_upon_for_login? for teacher with student with personal login' do
+  #   student = create :student, :in_email_section
+  #   teacher = student.sections_as_student.first.teacher
+  #   refute teacher.depended_upon_for_login?
+  # end
+  #
+  # test 'not depended_upon_for_login? for teacher with student that has other teachers' do
+  #   student = create :student, :in_picture_section
+  #   teacher = student.sections_as_student.first.teacher
+  #   student.sections_as_student << create(:section)
+  #
+  #   student.reload
+  #   assert_equal 2, student.sections_as_student.size
+  #   refute teacher.depended_upon_for_login?
+  # end
+  #
+  # test 'depended_upon_for_login? if teacher has a teacher-managed student with no other teachers' do
+  #   student = create :student_in_picture_section
+  #   teacher = student.sections_as_student.first.teacher
+  #   section = create :section, user: teacher
+  #   section.students << student
+  #
+  #   assert teacher.depended_upon_for_login?
+  # end
+  #
+  # test 'depended_upon_for_login? if teacher has a roster-managed student with no other teachers' do
+  #   student = create :student, :google_sso_provider
+  #   section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+  #   section.students << student
+  #   another_section = create :section, user: section.teacher, login_type: Section::LOGIN_TYPE_EMAIL
+  #   another_section.students << student
+  #
+  #   assert section.teacher.depended_upon_for_login?
+  # end
+  #
+  # test 'dependent_students for student: returns empty array' do
+  #   student = create :student
+  #   assert_empty student.dependent_students
+  # end
+  #
+  # test 'dependent_students for teacher: does not return other teachers' do
+  #   section = create :section
+  #   another_teacher = create :teacher
+  #   section.students << another_teacher
+  #
+  #   assert_empty section.teacher.dependent_students
+  # end
+  #
+  # test 'dependent_students for teacher: does not return students with personal logins' do
+  #   section = create :section
+  #   create(:follower, section: section)
+  #
+  #   assert_empty section.teacher.dependent_students
+  # end
+  #
+  # test 'dependent_students for teacher: does not return students without personal logins that have other teachers' do
+  #   student = create :student_in_word_section
+  #   teacher = student.teachers.first
+  #   another_section = create :section
+  #   another_section.students << student
+  #
+  #   assert_empty teacher.dependent_students
+  # end
+  #
+  # test 'dependent_students for teacher: returns students without personal logins that have no other teachers' do
+  #   student = create :student_in_word_section
+  #   teacher = student.teachers.first
+  #   another_word_section = create :section, user: teacher, login_type: Section::LOGIN_TYPE_WORD
+  #   another_word_section.students << student
+  #
+  #   assert_equal [student.summarize], teacher.dependent_students
+  # end
+  #
+  # test 'dependent_students for teacher: returns students in rostered sections without passwords that have no other teachers' do
+  #   student = create :student, :google_sso_provider, encrypted_password: nil
+  #   section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+  #   section.students << student
+  #
+  #   assert_equal [student.summarize], section.teacher.dependent_students
+  # end
+  #
+  # test 'last section id' do
+  #   teacher = create :teacher
+  #   section1 = create :section, teacher: teacher
+  #   assert_equal section1.id, teacher.last_section_id
+  #
+  #   create :follower, section: section1
+  #   assert_nil section1.students.first.last_section_id
+  #
+  #   # selects the most recently created section
+  #   section2 = create :section, teacher: teacher
+  #   assert_equal section2.id, teacher.last_section_id
+  #
+  #   # ignores hidden sections
+  #   section2.hidden = true
+  #   section2.save!
+  #   assert_equal section1.id, teacher.last_section_id
+  #
+  #   # ignores deleted sections
+  #   section3 = create :section, teacher: teacher
+  #   assert_equal section3.id, teacher.last_section_id
+  #   section3.delete
+  #   assert_equal section1.id, teacher.last_section_id
+  # end
+  #
+  # test 'find_channel_owner finds channel owner' do
+  #   student = create :student
+  #   with_channel_for student do |storage_app_id, storage_id|
+  #     encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+  #     result = User.find_channel_owner encrypted_channel_id
+  #     assert_equal student, result
+  #   end
+  # end
+  #
+  # test 'find_channel_owner returns nil for channel with no owner' do
+  #   with_anonymous_channel do |storage_app_id, storage_id|
+  #     encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
+  #     result = User.find_channel_owner encrypted_channel_id
+  #     assert_nil result
+  #   end
+  # end
+  #
+  # test 'find_channel_owner returns nil for a malformed channel id' do
+  #   assert_nil User.find_channel_owner 'not-a-channel-id'
+  # end
 end
