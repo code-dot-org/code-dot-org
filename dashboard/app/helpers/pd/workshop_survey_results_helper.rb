@@ -49,11 +49,17 @@ module Pd::WorkshopSurveyResultsHelper
       {primary_id: 'facilitator_qualities_5'},
     ],
     TEACHER_ENGAGEMENT: [
-      {primary_id: 'teacher_engagement'}
+      {primary_id: 'teacher_engagement_0'},
+      {primary_id: 'teacher_engagement_1'},
+      {primary_id: 'teacher_engagement_2'},
+      {primary_id: 'teacher_engagement_3'}
     ],
     OVERALL_SUCCESS: [
-      {primary_id: 'overall_success'},
-      # {primary_id: 'regardingThe_2', all_ids: ['regardingThe_2', 'pleaseRate_1']},
+      {primary_id: 'overall_success_0'},
+      {primary_id: 'overall_success_1'},
+      {primary_id: 'overall_success_2'},
+      {primary_id: 'overall_success_3'},
+      {primary_id: 'overall_success_4'},
     ]
   }
 

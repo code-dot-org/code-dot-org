@@ -20,13 +20,18 @@ const questionOrder = {
     'facilitator_qualities_4',
     'facilitator_qualities_5'
   ],
-  teacher_engagement: ['pleaseRate120_0', 'pleaseRate120_1', 'pleaseRate120_2'],
+  teacher_engagement: [
+    'teacher_engagement_0',
+    'teacher_engagement_1',
+    'teacher_engagement_2',
+    'teacher_engagement_3'
+  ],
   overall_success: [
-    'iFeel133',
-    'regardingThe_2',
-    'pleaseRate_2',
-    'iWould',
-    'pleaseRate_3'
+    'overall_success_0',
+    'overall_success_1',
+    'overall_success_2',
+    'overall_success_3',
+    'overall_success_4'
   ]
 };
 
