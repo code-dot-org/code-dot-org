@@ -15,8 +15,7 @@ import HelpTabContents from './HelpTabContents';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
-  setInstructionsRenderedHeight,
-  setInstructionsHeight
+  setInstructionsRenderedHeight
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -115,7 +114,6 @@ class TopInstructionsCSP extends Component {
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
-    setInstructionsHeight: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -617,9 +615,6 @@ export default connect(
   dispatch => ({
     toggleInstructionsCollapsed() {
       dispatch(toggleInstructionsCollapsed());
-    },
-    setInstructionsHeight(height) {
-      dispatch(setInstructionsHeight(height));
     },
     setInstructionsRenderedHeight(height) {
       dispatch(setInstructionsRenderedHeight(height));
