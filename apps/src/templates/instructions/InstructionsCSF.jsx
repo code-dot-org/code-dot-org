@@ -547,7 +547,7 @@ class InstructionsCSF extends React.Component {
           }}
           leftColWidth={leftColWidth}
           rightColWidth={this.getRightColWidth() || 0}
-          height={this.props.height}
+          height={this.props.height - HEADER_HEIGHT - RESIZER_HEIGHT}
         >
           <div
             style={[
