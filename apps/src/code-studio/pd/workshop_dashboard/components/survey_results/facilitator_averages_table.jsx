@@ -13,13 +13,12 @@ import {
 
 const questionOrder = {
   facilitator_effectiveness: [
-    'overallHow',
-    'duringYour',
-    'forThis54',
-    'howInteresting55',
-    'howOften56',
-    'howComfortable',
-    'howOften'
+    'facilitator_qualities_0',
+    'facilitator_qualities_1',
+    'facilitator_qualities_2',
+    'facilitator_qualities_3',
+    'facilitator_qualities_4',
+    'facilitator_qualities_5'
   ],
   teacher_engagement: ['pleaseRate120_0', 'pleaseRate120_1', 'pleaseRate120_2'],
   overall_success: [
