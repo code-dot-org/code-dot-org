@@ -1,3 +1,10 @@
+#
+# This controller is deprecated as of May 2019.  All certificates should be served through
+# WorkshopCertificateController now.
+# We're not immediately removing this because teachers may have bookmarked their certificate link
+# and would expect to get the same certificate, here. (Could update routing though).
+# Brad
+#
 class Pd::CsfCertificateController < ApplicationController
   before_action :authenticate_user!
   load_resource :enrollment, class: 'Pd::Enrollment', find_by: :code, id_param: :enrollment_code
