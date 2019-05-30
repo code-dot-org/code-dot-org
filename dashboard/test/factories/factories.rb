@@ -716,6 +716,13 @@ FactoryGirl.define do
       end
       props
     end
+
+    factory :csf_script_level do
+      after(:create) do |csf_script_level|
+        csf_script_level.script.curriculum_umbrella = 'CSF'
+        csf_script_level.save
+      end
+    end
   end
 
   factory :stage do
