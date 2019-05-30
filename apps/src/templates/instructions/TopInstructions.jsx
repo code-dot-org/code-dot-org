@@ -26,7 +26,7 @@ import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
-import TopInstructionsCSF from './TopInstructionsCSF';
+import InstructionsCSF from './InstructionsCSF';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -537,7 +537,7 @@ class TopInstructions extends Component {
               {!this.props.hasContainedLevels &&
                 !this.props.noInstructionsWhenCollapsed &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
-                  <TopInstructionsCSF
+                  <InstructionsCSF
                     ref="instructions"
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}

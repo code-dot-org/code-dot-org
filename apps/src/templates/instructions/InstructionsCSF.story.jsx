@@ -12,7 +12,7 @@ import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
-import TopInstructionsCSF from './TopInstructionsCSF';
+import InstructionsCSF from './InstructionsCSF';
 
 /**
  * Initialize a Redux store for displaying instructions, including all required
@@ -183,14 +183,14 @@ const STORIES = {
 };
 
 export default storybook => {
-  const stories = storybook.storiesOf('TopInstructionsCSF', module);
+  const stories = storybook.storiesOf('InstructionsCSF', module);
 
   Object.entries(STORIES).forEach(([name, options]) => {
     stories.add(name, () => {
       const store = createCommonStore(options);
       return (
         <Provider store={store}>
-          <TopInstructionsCSF />
+          <InstructionsCSF />
         </Provider>
       );
     });
