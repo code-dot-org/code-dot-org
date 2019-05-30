@@ -190,7 +190,10 @@ export default storybook => {
       const store = createCommonStore(options);
       return (
         <Provider store={store}>
-          <InstructionsCSF />
+          <InstructionsCSF
+            handleClickCollapser={() => {}}
+            adjustMaxNeededHeight={() => {}}
+          />
         </Provider>
       );
     });
