@@ -697,6 +697,7 @@ Applab.init = function(config) {
   }
 
   if (experiments.isEnabled('student-libraries') && librariesExist) {
+    config.dropletConfig.additionalPredefValues.push(level.libraries[0].name);
     let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
