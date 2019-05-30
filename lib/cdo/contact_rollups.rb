@@ -28,19 +28,10 @@ class ContactRollups
 
   DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
 
-  rds_client = Aws::RDS::Client.new
-  CLONE_DB_ENDPOINT = rds_client.describe_db_cluster_endpoints(
-    {
-      db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-      filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
-      max_records: 1
-    }
-  ).first.endpoint
-
   def self.mysql_multi_connection
     # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
     pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
-    pegasus_clone_writer_uri.host = CLONE_DB_ENDPOINT
+    pegasus_clone_writer_uri.host = @@clone_db_endpoint
     sequel_connect(
       pegasus_clone_writer_uri.to_s,
       pegasus_clone_writer_uri.to_s,
@@ -952,9 +943,18 @@ class ContactRollups
   private
 
   def initialize_connections_to_database_clone
+    rds_client = Aws::RDS::Client.new
+    @@clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
+      {
+        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
+        max_records: 1
+      }
+    ).first.endpoint
+
     # Connection to write to Pegasus clone database.
     pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
-    pegasus_clone_writer_uri.host = CLONE_DB_ENDPOINT
+    pegasus_clone_writer_uri.host = @@clone_db_endpoint
     @@pegasus_clone_db_writer = sequel_connect(
       pegasus_clone_writer_uri.to_s,
       pegasus_clone_writer_uri.to_s,
@@ -963,7 +963,7 @@ class ContactRollups
 
     # Connection to read from Pegasus clone database.
     pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
-    pegasus_clone_reader_uri.host = CLONE_DB_ENDPOINT
+    pegasus_clone_reader_uri.host = @@clone_db_endpoint
     @@pegasus_clone_db_reader = sequel_connect(
       pegasus_clone_reader_uri.to_s,
       pegasus_clone_reader_uri.to_s,
@@ -972,7 +972,7 @@ class ContactRollups
 
     # Connection to read from Dashboard clone database.
     dashboard_clone_reader_uri = URI(CDO.dashboard_reporting_db_reader)
-    dashboard_clone_reader_uri.host = CLONE_DB_ENDPOINT
+    dashboard_clone_reader_uri.host = @@clone_db_endpoint
     @@dashboard_clone_db_reader = sequel_connect(
       dashboard_clone_reader_uri.to_s,
       dashboard_clone_reader_uri.to_s,
