@@ -679,16 +679,29 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:csf_international, name)
   end
 
+  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
+    Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
+  end
+
+  def under_curriculum_umbrella?(specific_curriculum_umbrella)
+    curriculum_umbrella == specific_curriculum_umbrella
+  end
+
   def k5_course?
-    (
-      Script::CATEGORIES[:csf_international] +
-      Script::CATEGORIES[:csf] +
-      Script::CATEGORIES[:csf_2018]
-    ).include? name
+    return false if twenty_hour?
+    csf?
   end
 
   def csf?
-    k5_course? || twenty_hour?
+    under_curriculum_umbrella?('CSF')
+  end
+
+  def csd?
+    under_curriculum_umbrella?('CSD')
+  end
+
+  def csp?
+    under_curriculum_umbrella?('CSP')
   end
 
   def cs_in_a?
@@ -829,9 +842,10 @@ class Script < ActiveRecord::Base
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
+    return true if csf_international?
+    return false if csf?
 
-    k5_course? || [
+    [
       Script::CSP17_UNIT1_NAME,
       Script::CSP17_UNIT2_NAME,
       Script::CSP17_UNIT3_NAME,
@@ -1625,9 +1639,5 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
-  end
-
-  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
-    Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 end
