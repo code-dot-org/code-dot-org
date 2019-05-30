@@ -824,10 +824,12 @@ export function makeFooterMenuItems() {
     footerMenuItems.shift();
   }
 
-  var userAlreadyReportedAbuse = _.includes(
-    JSON.parse(cookies.get('reported_abuse')),
-    project.getCurrentId()
-  );
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
 
   if (userAlreadyReportedAbuse) {
     _.remove(footerMenuItems, function(menuItem) {
