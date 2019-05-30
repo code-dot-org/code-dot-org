@@ -175,8 +175,7 @@ class TopInstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired,
-    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -649,31 +648,31 @@ module.exports = connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      hints: state.authoredHints.seenHints,
-      hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       skinId: state.pageConstants.skinId,
-      showNextHint: state.pageConstants.showNextHint,
       isEmbedView: state.pageConstants.isEmbedView,
       isMinecraft: !!state.pageConstants.isMinecraft,
       aniGifURL: state.pageConstants.aniGifURL,
+      inputOutputTable: state.pageConstants.inputOutputTable,
+      isRtl: state.isRtl,
+      noVisualization: state.pageConstants.noVisualization,
+      feedback: state.instructions.feedback,
+      collapsed: state.instructions.collapsed,
+      hints: state.authoredHints.seenHints,
+      hasUnseenHint: state.authoredHints.unseenHints.length > 0,
+      hasAuthoredHints: state.instructions.hasAuthoredHints,
+      showNextHint: state.pageConstants.showNextHint,
       height: state.instructions.renderedHeight,
       maxHeight: Math.min(
         state.instructions.maxAvailableHeight,
         state.instructions.maxNeededHeight
       ),
-      collapsed: state.instructions.collapsed,
+      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
+      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
       longInstructions: state.instructions.longInstructions,
-      hasAuthoredHints: state.instructions.hasAuthoredHints,
-      feedback: state.instructions.feedback,
-      isRtl: state.isRtl,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-      failureAvatar: state.pageConstants.failureAvatar,
-      inputOutputTable: state.pageConstants.inputOutputTable,
-      noVisualization: state.pageConstants.noVisualization
+      failureAvatar: state.pageConstants.failureAvatar
     };
   },
   function propsFromDispatch(dispatch) {
@@ -683,9 +682,6 @@ module.exports = connect(
       },
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
-      },
-      setInstructionsMaxHeightNeeded(height) {
-        dispatch(instructions.setInstructionsMaxHeightNeeded(height));
       },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
