@@ -227,6 +227,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in user
 
     refute user.school_info.country.nil?
+    assert user.school_info.school_name.nil?
 
     Timecop.travel 1.hour
     patch "/api/v1/user_school_infos", params: {
@@ -243,6 +244,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal user.school_info.id, school_info.id
     assert_equal user.school_info, school_info
     assert_first_tenure(user)
+    refute_nil user.school_info.school_name
     refute_nil user.school_info.country
 
     Timecop.return
