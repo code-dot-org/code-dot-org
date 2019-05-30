@@ -172,6 +172,10 @@ def create_down_out_pr
   puts "\r\rremember to update blockly\r\r"
 end
 
+def checkout_staging
+  `git checkout staging`
+end
+
 def main
   options = parse_options
 
@@ -183,6 +187,7 @@ def main
     sync_out if should_i "sync out"
     create_down_out_pr if options[:with_pull_request]
     upload_i18n_stats if should_i "upload translation stats"
+    checkout_staging if should_i "return to the staging branch"
   elsif options[:command]
     case options[:command]
     when 'in'
