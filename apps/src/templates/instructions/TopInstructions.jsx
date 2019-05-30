@@ -56,7 +56,6 @@ const styles = {
   },
   body: {
     backgroundColor: 'white',
-    overflowY: 'scroll',
     paddingLeft: 10,
     paddingRight: 10,
     position: 'absolute',
@@ -504,7 +503,7 @@ class TopInstructions extends Component {
                     className="uitest-teacherOnlyTab"
                     onClick={this.handleTeacherOnlyTabClick}
                     selected={this.state.tabSelected === TabType.TEACHER_ONLY}
-                    text={i18n.teacherInstructions()}
+                    text={i18n.teacherOnly()}
                     teacherOnly={teacherOnly}
                   />
                 )}
@@ -526,7 +525,15 @@ class TopInstructions extends Component {
               commonStyles.hidden
           ]}
         >
-          <div style={styles.body}>
+          <div
+            style={[
+              styles.body,
+              !this.props.noInstructionsWhenCollapsed &&
+              this.state.tabSelected === TabType.INSTRUCTIONS
+                ? {overflow: 'hidden'}
+                : {overflowY: 'scroll'}
+            ]}
+          >
             <div ref="instructions">
               {this.props.hasContainedLevels && (
                 <ContainedLevel
