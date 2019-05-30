@@ -13,10 +13,10 @@ import {
 } from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-import Inspector from 'react-inspector';
+// import Inspector from 'react-inspector';
 
 describe('The DebugConsole component', () => {
-  let root, debugConsole;
+  let root;
 
   beforeEach(() => {
     stubRedux();
@@ -27,8 +27,6 @@ describe('The DebugConsole component', () => {
         <DebugConsole />
       </Provider>
     );
-
-    debugConsole = root.find('DebugConsole').get(0);
   });
 
   afterEach(() => {
@@ -240,22 +238,18 @@ describe('The DebugConsole component', () => {
   });
 });
 
-describe.only('when react-inspector flag is on', () => {
-  let root, debugConsole;
+describe('when react-inspector flag is on', () => {
+  let root;
 
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
-    getStore().dispatch(actions.appendLog(['test']));
-    // getStore().dispatch(actions.initialize(sinon.spy()));
 
     root = mount(
       <Provider store={getStore()}>
         <DebugConsole showReactInspector={true} />
       </Provider>
     );
-
-    debugConsole = root.find('DebugConsole').get(0);
   });
 
   afterEach(() => {
@@ -263,65 +257,36 @@ describe.only('when react-inspector flag is on', () => {
   });
 
   const debugOutput = () => root.find('#debug-output');
-  const debugInput = () => root.find('#debug-input');
-  function typeKey(keyCode) {
-    debugInput().simulate('keydown', {
-      target: debugInput().get(0),
-      keyCode: keyCode
+
+  describe('inputs from code workspace returns', () => {
+    it('an array input outputs an array', () => {
+      getStore().dispatch(actions.appendLog(['test']));
+      expect(debugOutput().text()).to.equal('▶["test"]');
     });
-  }
-  function type(text) {
-    for (let i = 0; i < text.length; i++) {
-      debugInput().get(0).value += text[i];
-      typeKey(text[i]);
-    }
-  }
 
-  function submit(text) {
-    type(text);
-    typeKey(KeyCodes.ENTER);
-  }
+    it('a string input outputs a string', () => {
+      getStore().dispatch(actions.appendLog('hello world'));
+      expect(debugOutput().text()).to.equal('"hello world"');
+    });
 
-  it('an array input outputs an array', () => {
-    //   let interpreter = new JSInterpreter({
-    //     shouldRunAtMaxSpeed: () => true,
-    //     studioApp: {hideSource: true}
-    //   });
-    //   const code = `["foo", "bar"]`;
-    //   // interpreter.calculateCodeInfo({code});
-    //
-    //   interpreter.calculateCodeInfo({code});
-    //   interpreter.parse({code});
-    //   expect(interpreter.initialized()).to.equal(true);
-    //   // interpreter.paused = false;
-    //   // interpreter.nextStep = JSInterpreter.StepType.IN;
-    //   interpreter.executeInterpreter(true);
-    //   // debugConsole.setProps({showReactInspector: true});
-    //   getStore().dispatch(actions.attach(interpreter));
-    //   // submit(`["foo", "bar"]`);
-    //   getStore().dispatch(actions.appendLogL(2));
-    expect(debugOutput().text()).to.equal('["test"]');
-    //   // expect(debugConsole.contains(<Inspector data={2} />)).to.equal(fal);
+    it('an integer or mathematical operation input outputs an integer', () => {
+      getStore().dispatch(actions.appendLog(1 + 1));
+      expect(debugOutput().text()).to.equal('2');
+    });
+
+    it('an object input outputs an object', () => {
+      getStore().dispatch(actions.appendLog({foo: 'bar'}));
+      expect(debugOutput().text()).to.deep.equal('▶Object {foo: "bar"}');
+    });
   });
-  //
-  // it('a string input outputs a string', () => {
-  //   expect(root.contains(<Inspector data={'hello world'} />)).to.equal(true);
-  //   expect(root.text()).to.equal('"hello world"');
-  // });
-  //
-  // it('an integer or mathematical operation input outputs an integer', () => {
-  //   expect(root.contains(<Inspector data={1 + 1} />)).to.equal(true);
-  //   expect(root.text()).to.equal('2');
-  // });
-  //
-  // it('an object input outputs an object', () => {
-  //   expect(root.contains(<Inspector data={{foo: 'bar'}} />)).to.equal(true);
-  //   expect(root.text()).to.equal('▶Object {foo:"bar"}');
-  // });
 });
 
+// The tests below were written for simply checking
+// what the expected behavior of the inspector component is.
+// The root was simply the Inspector tag when the test below was written which is no longer the case.
+
 // describe.only('react-inspector component returns', () => {
-//   it('an array input outputs an array', () => {});
+//   // it('an array input outputs an array', () => {});
 //
 //   it('a string input outputs a string', () => {
 //     expect(root.contains(<Inspector data={'hello world'} />)).to.equal(true);

@@ -139,7 +139,10 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog('> ' + input);
+        this.props.showReactInspector
+          ? this.appendLog(input)
+          : this.appendLog('> ' + input);
+
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
