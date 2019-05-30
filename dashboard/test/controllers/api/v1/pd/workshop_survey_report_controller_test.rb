@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Api::V1::Pd
   class WorkshopSurveyReportControllerTest < ::ActionController::TestCase
+    include Pd::WorkshopConstants
+
     self.use_transactional_test_case = true
     setup_all do
       @facilitator = create :facilitator
@@ -191,7 +193,7 @@ module Api::V1::Pd
       sign_in @facilitator
 
       @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
       assert_response :success
     end
 
@@ -200,7 +202,7 @@ module Api::V1::Pd
       sign_in @facilitator
 
       @controller.expects(:generate_workshop_daily_session_summary)
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
       assert_response :success
     end
 
@@ -208,10 +210,11 @@ module Api::V1::Pd
       workshop = create :pd_workshop, facilitators: [@facilitator]
       sign_in @facilitator
 
-      get :local_workshop_daily_survey_report, params: {workshop_id: workshop.id}
+      get :generic_survey_report, params: {workshop_id: workshop.id}
       assert_response :bad_request
       assert_equal(
-        {'error' => 'Only call this route for new academic year workshops, 5 day summer workshops, local or TeacherCon'},
+        {'error' => "Do not know how to process survey results for this workshop"\
+          " #{workshop.course} #{workshop.subject}"},
         JSON.parse(@response.body)
       )
     end
@@ -242,6 +245,27 @@ module Api::V1::Pd
         user: @program_manager,
         expected_facilitator_name_filter: nil
       )
+    end
+
+    test 'generic_survey_report: return empty result for CSF201 workshop without responds' do
+      admin = create :workshop_admin
+      ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 2
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+        "all_my_workshops" => {},
+        "facilitators" => {},
+        "facilitator_averages" => {},
+        "facilitator_response_counts" => {}
+      }
+
+      sign_in admin
+      get :generic_survey_report, params: {workshop_id: ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
     end
 
     private

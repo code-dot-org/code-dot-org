@@ -44,7 +44,8 @@ export class WorkshopManagement extends React.Component {
           new Date(this.props.date).getFullYear() >= 2018) ||
         (['CS Discoveries', 'CS Principles'].includes(props.course) &&
           props.subject !== 'Code.org Facilitator Weekend' &&
-          new Date(this.props.date) >= new Date('2018-08-01'))
+          new Date(this.props.date) >= new Date('2018-08-01')) ||
+        props.subject === 'Deep Dive'
       ) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
