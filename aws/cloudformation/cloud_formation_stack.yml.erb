@@ -528,6 +528,16 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
+<% if CDO.db_cluster_id -%>
+              # Create, Describe, Delete Database Clusters for Contact Rollups
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBClusters'
+                  - 'rds:RestoreDBClusterToPointInTime'
+                  - 'rds:DeleteDBCluster'
+                  - 'rds:DescribeDBClusterEndpoints'
+                Resource: Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+<% end -%>
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
                 Action:
