@@ -536,7 +536,7 @@ Resources:
                   - 'rds:RestoreDBClusterToPointInTime'
                   - 'rds:DeleteDBCluster'
                   - 'rds:DescribeDBClusterEndpoints'
-                Resource: Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
 <% end -%>
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
