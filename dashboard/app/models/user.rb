@@ -1771,7 +1771,9 @@ class User < ActiveRecord::Base
   def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
-
+    puts ""
+    puts "we're in track_level_progress"
+    puts ""
     user_level = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
@@ -1783,6 +1785,10 @@ class User < ActiveRecord::Base
       end
 
       script = Script.get_from_cache(script_id)
+      puts ""
+      puts "script in track_level_progress: "
+      puts ""
+      puts script.to_json
       script_valid = script.csf? && script.name != Script::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
         new_result >= ActivityConstants::BEST_PASS_RESULT &&
