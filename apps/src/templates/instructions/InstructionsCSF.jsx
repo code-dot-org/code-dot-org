@@ -133,7 +133,7 @@ const styles = {
   }
 };
 
-class TopInstructionsCSF extends React.Component {
+class InstructionsCSF extends React.Component {
   static propTypes = {
     handleClickCollapser: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
@@ -699,4 +699,4 @@ module.exports = connect(
   },
   null,
   {withRef: true}
-)(Radium(TopInstructionsCSF));
+)(Radium(InstructionsCSF));
