@@ -126,7 +126,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  test 'intial, no previoius, complete, manual' do
+  test 'intial, no previous, complete, manual' do
     Timecop.freeze
 
     user = create :teacher
@@ -151,6 +151,37 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info.school_name
     refute_empty user.user_school_infos
     assert_first_tenure(user)
+
+    Timecop.return
+  end
+
+  test 'intial, partial previous, blank, manual' do
+    Timecop.freeze
+
+    school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    refute user.school_info.country.nil?
+
+    Timecop.travel 1.hour
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: '', school_type: ''
+        }
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+
+    assert_equal user.school_info.id, school_info.id
+    assert_equal user.school_info, school_info
+    assert_first_tenure(user)
+    assert_nil user.school_info.country
 
     Timecop.return
   end
