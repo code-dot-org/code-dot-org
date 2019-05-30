@@ -24,6 +24,7 @@ import color from '../../util/color';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import styleConstants from '../../styleConstants';
+import {setInstructionsMaxHeightNeeded} from '../../redux/instructions';
 
 var instructions = require('../../redux/instructions');
 
@@ -179,7 +180,8 @@ class InstructionsCSF extends React.Component {
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
+    setInstructionsMaxHeightNeeded: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -270,8 +272,6 @@ class InstructionsCSF extends React.Component {
       this.setState({rightColWidth});
     }
 
-    this.props.adjustMaxNeededHeight();
-
     const contentContainer = this.instructions.parentElement;
     const canScroll =
       contentContainer.scrollHeight > contentContainer.clientHeight;
@@ -299,7 +299,7 @@ class InstructionsCSF extends React.Component {
 
     if (!this.props.collapsed && !prevProps.collapsed) {
       const minHeight = this.getMinHeight();
-      const maxHeight = this.props.maxHeight;
+      const maxHeight = this.getMaxHeight();
       const heightOutOfBounds =
         this.props.height < minHeight || this.props.height > maxHeight;
 
@@ -309,8 +309,11 @@ class InstructionsCSF extends React.Component {
           minHeight
         );
         this.props.setInstructionsRenderedHeight(newHeight);
+        this.props.setInstructionsMaxHeightNeeded(maxHeight);
       }
     }
+
+    this.props.adjustMaxNeededHeight();
   }
 
   /**
@@ -338,7 +341,36 @@ class InstructionsCSF extends React.Component {
     const leftColHeight = minIconHeight;
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
+    return (
+      Math.max(leftColHeight, middleColHeight, rightColHeight) +
+      margins +
+      HEADER_HEIGHT +
+      RESIZER_HEIGHT
+    );
+  }
 
+  /**
+   * @param {boolean} collapsed whether or not the height should be
+   * calculated as if the instructions are collapsed. Defaults to
+   * current collapsed state.
+   * @returns {number} The max height of the top instructions
+   */
+  getMaxHeight(collapsed = this.props.collapsed) {
+    const collapseButtonHeight = getOuterHeight(this.collapser, true);
+    const scrollButtonsHeight =
+      !collapsed && this.scrollButtons
+        ? this.scrollButtons.getWrappedInstance().getMinHeight()
+        : 0;
+
+    const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
+    const instructionsHeight = getOuterHeight(this.instructions, true);
+
+    const domNode = $(ReactDOM.findDOMNode(this));
+    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
+
+    const leftColHeight = minIconHeight;
+    const middleColHeight = instructionsHeight;
+    const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
     return (
       Math.max(leftColHeight, middleColHeight, rightColHeight) +
       margins +
@@ -694,6 +726,9 @@ module.exports = connect(
       },
       clearFeedback(height) {
         dispatch(instructions.setFeedback(null));
+      },
+      setInstructionsMaxHeightNeeded(height) {
+        dispatch(setInstructionsMaxHeightNeeded(height));
       }
     };
   },
