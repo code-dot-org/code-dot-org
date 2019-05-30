@@ -295,6 +295,7 @@ module ScriptConstants
     ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:twenty_hour, script)
+      ScriptConstants.script_in_category?(:twenty_hour, script) ||
+      ScriptConstants.script_in_category?(:csf_2019, script)
   end
 end
