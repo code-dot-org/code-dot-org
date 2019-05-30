@@ -81,13 +81,13 @@ const styles = {
   },
   leftCol: {
     position: 'absolute',
-    bottom: 0,
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
     left: 0,
     marginLeft: 0
   },
   leftColRtl: {
     position: 'absolute',
-    bottom: 0,
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
     right: 0,
     marginRight: 0
   },
@@ -675,7 +675,12 @@ class InstructionsCSF extends React.Component {
                 }}
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
-                height={this.props.height - styles.scrollButtons.top}
+                height={
+                  this.props.height -
+                  HEADER_HEIGHT -
+                  RESIZER_HEIGHT -
+                  styles.scrollButtons.top
+                }
               />
             )}
           </div>
