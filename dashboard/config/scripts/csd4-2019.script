@@ -8,6 +8,7 @@ has_verified_resources true
 has_lesson_plan true
 family_name 'csd4'
 version_year '2019'
+is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
