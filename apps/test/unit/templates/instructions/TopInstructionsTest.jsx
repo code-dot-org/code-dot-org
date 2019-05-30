@@ -6,8 +6,6 @@ import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates
 const DEFAULT_PROPS = {
   isEmbedView: false,
   hasContainedLevels: false,
-  puzzleNumber: 2,
-  stageTotal: 0,
   height: 200,
   expandedHeight: 300,
   maxHeight: 300,
