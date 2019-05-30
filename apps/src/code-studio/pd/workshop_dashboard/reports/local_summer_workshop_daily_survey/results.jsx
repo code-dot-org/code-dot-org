@@ -68,6 +68,15 @@ export default class Results extends React.Component {
             />
           );
         }
+
+        // TODO: remove
+        return (
+          <div key={i}>
+            question = {JSON.stringify(question)}
+            <br />
+            answer = {JSON.stringify(answers[questionId])}
+          </div>
+        );
       })
     );
   }

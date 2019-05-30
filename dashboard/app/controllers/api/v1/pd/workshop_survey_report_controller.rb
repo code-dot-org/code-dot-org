@@ -1,3 +1,9 @@
+require 'pd/survey_pipeline/daily_survey_retriever.rb'
+require 'pd/survey_pipeline/daily_survey_parser.rb'
+require 'pd/survey_pipeline/daily_survey_joiner.rb'
+require 'pd/survey_pipeline/mapper.rb'
+require 'pd/survey_pipeline/daily_survey_decorator.rb'
+
 module Api::V1::Pd
   class WorkshopSurveyReportController < ReportControllerBase
     include WorkshopScoreSummarizer
@@ -104,6 +110,7 @@ module Api::V1::Pd
       end
     end
 
+    # TODO: this action is to be deprecated
     # GET /api/v1/pd/workshops/:id/local_workshop_daily_survey_report
     def local_workshop_daily_survey_report
       unless @workshop.local_summer? || @workshop.teachercon? ||
@@ -122,7 +129,77 @@ module Api::V1::Pd
       end
     end
 
+    # GET /api/v1/pd/workshops/:id/generic_survey_report
+    def generic_survey_report
+      return local_workshop_daily_survey_report if @workshop.local_summer? || @workshop.teachercon? ||
+        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
+        @workshop.workshop_starting_date > Date.new(2018, 8, 1))
+
+      return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
+
+      render status: :bad_request, json: {
+        error: "Do not know how to process survey results for this workshop #{@workshop.course} #{@workshop.subject}"
+      }
+    end
+
     private
+
+    def create_csf_survey_report
+      # Retriever
+      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new workshop_ids: [@workshop.id]
+
+      # Transformers
+      parser = Pd::SurveyPipeline::DailySurveyParser
+      joiner = Pd::SurveyPipeline::DailySurveyJoiner
+
+      # Mapper + Reducers
+      group_config = [:workshop_id, :form_id, :name, :type, :answer_type]
+
+      is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
+      is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
+      is_number_question = lambda {|hash| hash[:type] == 'number'}
+      map_config = [
+        {condition: is_single_select_answer, field: :answer,
+        reducers: [Pd::SurveyPipeline::HistogramReducer]},
+        {condition: is_free_format_question, field: :answer,
+        reducers: [Pd::SurveyPipeline::NoOpReducer]},
+        {condition: is_number_question, field: :answer,
+        reducers: [Pd::SurveyPipeline::AvgReducer]},
+      ]
+
+      mapper = Pd::SurveyPipeline::GenericMapper.new(
+        group_config: group_config, map_config: map_config
+      )
+
+      # Decorator
+      decorator = Pd::SurveyPipeline::DailySurveyDecorator
+
+      create_generic_survey_report(
+        retriever: retriever,
+        parser: parser,
+        joiner: joiner,
+        mappers: [mapper],
+        decorator: decorator
+      )
+    end
+
+    def create_generic_survey_report(retriever:, parser:, joiner:, mappers:, decorator:)
+      retrieved_data = retriever.retrieve_data
+
+      parsed_data = parser.transform_data retrieved_data
+
+      joined_data = joiner.transform_data parsed_data
+
+      summary_data = []
+      mappers.each do |mapper|
+        summary_data += mapper.map_reduce joined_data
+      end
+
+      decorated_result = decorator.decorate summary_data: summary_data, parsed_data: parsed_data
+
+      # TODO: remove created_time
+      render json: decorated_result.merge({created_time: Time.now})
+    end
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.
