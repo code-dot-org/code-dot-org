@@ -185,4 +185,34 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.return
   end
+
+  test 'intial, partial previous, unchanged, manual' do
+    Timecop.freeze
+
+    school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    refute user.school_info.country.nil?
+
+    Timecop.travel 1.hour
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
+          full_address: school_info.full_address}
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+
+    assert_equal user.school_info.id, school_info.id
+    assert_equal user.school_info, school_info
+    assert_first_tenure(user)
+    refute_nil user.school_info.country
+
+    Timecop.return
+  end
 end
