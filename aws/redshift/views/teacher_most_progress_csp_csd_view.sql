@@ -1,7 +1,7 @@
 CREATE OR REPLACE view analysis.teacher_most_progress_csp_csd_view AS
 SELECT studio_person_id,
        school_year,
-       name script_most_progress,
+       name script_most_progress, 
        students AS students_script_most_progress
 FROM (
 -- Rank which unit has most students in it by teacher
@@ -28,7 +28,7 @@ FROM (
                 JOIN dashboard_production.user_scripts us 
                   ON us.user_id = f.student_user_id AND us.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd', 'csp')) 
                 JOIN analysis.script_names sn 
-                  ON sn.script_id = us.script_id                
+                  ON sn.versioned_script_id = us.script_id                
                 JOIN dashboard_production_pii.users u_students
                   ON u_students.id = us.user_id AND u_students.user_type = 'student'
                 JOIN dashboard_production.scripts sc 
