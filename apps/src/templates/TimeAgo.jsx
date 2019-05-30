@@ -1,7 +1,7 @@
+import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import moment from 'moment';
 
 class TimeAgo extends React.Component {
   static propTypes = {
@@ -14,14 +14,14 @@ class TimeAgo extends React.Component {
   };
 
   render() {
-    if (this.props.locale) {
-      moment.locale(this.props.locale);
-    }
-
     return (
-      <time style={this.props.style || {}} dateTime={this.props.dateString}>
-        {moment(this.props.dateString).fromNow()}
-      </time>
+      <Moment
+        fromNow
+        locale={this.props.locale || 'en'}
+        style={this.props.style || {}}
+      >
+        {this.props.dateString}
+      </Moment>
     );
   }
 }
