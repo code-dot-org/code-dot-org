@@ -215,4 +215,75 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.return
   end
+
+  # Thursday
+
+  test 'intial, partial previous, submit, partial, manual' do
+    Timecop.freeze
+
+    school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    refute user.school_info.country.nil?
+
+    Timecop.travel 1.hour
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: 'Acme Inc',
+          full_address: ''}
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+
+    assert_equal user.school_info.id, school_info.id
+    assert_equal user.school_info, school_info
+    assert_first_tenure(user)
+    refute_nil user.school_info.country
+
+    Timecop.return
+  end
+
+  # test 'intial, partial previous, submit, complete, drop down' do
+  # end
+
+  # test 'intial, partial previous, submit, complete, manual' do
+  # end
+
+  # test 'confirmation, complete previous, submit, blank, manual' do
+  # end
+
+  # test 'confirmation, complete previous, submit, unchanged, dropdown' do
+  # end
+
+  # test 'confirmation, complete previous, submit, unchanged, manual' do
+  # end
+
+  # test 'confirmation, complete previous, submit, partial, manual' do
+  # end
+
+  # test 'confirmation, complete previous, submit, complete, dropdown' do
+  # end
+
+  # test 'confirmation, complete previous, submit, complete, manual' do
+  # end
+
+  # test 'confirmation, partial previous, blank, manual' do
+  # end
+
+  # test 'confirmation, partial previous, unchanged, manual' do
+  # end
+
+  # test 'confirmation, partial previous, partial, manual' do
+  # end
+
+  # test 'confirmation, partial previous, complete, dropdown' do
+  # end
+
+  # test 'confirmation, partial previous, complete, manual' do
+  # end
 end
