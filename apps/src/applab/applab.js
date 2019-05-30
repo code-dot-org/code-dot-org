@@ -682,9 +682,6 @@ Applab.init = function(config) {
 
   var librariesExist = level.libraries && level.libraries.length > 0;
 
-  // Temporarily, always use the levelbuilder-created libraries if they
-  // exist. Once 'Start Over' is implemented for libraries, allow
-  // student-created libraries. (Add check for !librariesExist)
   if (
     !librariesExist &&
     level.startLibraries &&
