@@ -1737,11 +1737,11 @@ endvariants
   end
 
   test "under_curriculum_umbrella and helpers" do
-    assert @csf_script.under_curriculum_umbrella('CSF')
+    assert @csf_script.under_curriculum_umbrella?('CSF')
     assert @csf_script.csf?
-    assert @csd_script.under_curriculum_umbrella('CSD')
+    assert @csd_script.under_curriculum_umbrella?('CSD')
     assert @csd_script.csd?
-    assert @csp_script.under_curriculum_umbrella('CSP')
+    assert @csp_script.under_curriculum_umbrella?('CSP')
     assert @csp_script.csp?
   end
 
