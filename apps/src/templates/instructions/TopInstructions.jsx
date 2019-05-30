@@ -103,8 +103,6 @@ class TopInstructions extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
-    puzzleNumber: PropTypes.number.isRequired,
-    stageTotal: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -610,8 +608,6 @@ export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
-    puzzleNumber: state.pageConstants.puzzleNumber,
-    stageTotal: state.pageConstants.stageTotal,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(
