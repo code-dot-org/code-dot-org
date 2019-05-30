@@ -293,21 +293,18 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test 'initial, partial previous, submit, complete, manual' do
     Timecop.freeze
 
-    school_info = create :school_info, school_id: nil, school_name: 'Acme Inc', full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create :school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     user = create :teacher, school_info: school_info
     sign_in user
 
     Timecop.travel 1.hour
-
-    assert_creates SchoolInfo do
-      patch "/api/v1/user_school_infos", params: {
-        user: {
-          school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
-            full_address: 'Seattle, Washington USA'}
-        }
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
+          full_address: 'Seattle, Washington'}
       }
-    end
+    }
 
     user.reload
 
@@ -316,7 +313,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info
     refute_nil user.school_info.school_name
     refute_empty user.user_school_infos
-    assert_first_tenure_partial(user)
+    assert_first_tenure(user)
 
     Timecop.return
   end
