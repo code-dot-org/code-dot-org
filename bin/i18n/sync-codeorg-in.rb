@@ -100,9 +100,9 @@ def localize_level_content
           end
 
           # failure_message_overrides
-          #if level.failure_message_override
-          #  script_strings['failure_message_overrides'][url] = level.failure_message_override
-          #end
+          if level.class <= Blockly && level.failure_message_override
+            script_strings['failure_message_overrides'][url] = level.failure_message_override
+          end
 
           # authored_hints
           if level.authored_hints
