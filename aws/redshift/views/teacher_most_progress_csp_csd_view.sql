@@ -19,7 +19,7 @@ FROM (
        FROM (
          -- Rank units by most recently updated for each student
          SELECT u.studio_person_id,
-                sc.name,
+                coalesce(script_name_long, sc.name) as name,
                 school_year,
                 ROW_NUMBER() OVER (PARTITION BY us.user_id, school_year ORDER BY us.updated_at DESC) update_rank 
          FROM dashboard_production.sections se 
@@ -27,11 +27,14 @@ FROM (
                   ON f.section_id = se.id 
                 JOIN dashboard_production.user_scripts us 
                   ON us.user_id = f.student_user_id AND us.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd', 'csp')) 
+                JOIN analysis.script_names sn 
+                  ON sn.script_id = us.script_id                
                 JOIN dashboard_production_pii.users u_students
                   ON u_students.id = us.user_id AND u_students.user_type = 'student'
                 JOIN dashboard_production.scripts sc 
                   ON sc.id = us.script_id
                 JOIN dashboard_production_pii.users u on u.id = se.user_id
+                
                 JOIN analysis.school_years sy on  us.started_at between sy.started_at and sy.ended_at
        ) 
        WHERE update_rank = 1 
@@ -44,4 +47,3 @@ WITH NO SCHEMA BINDING;
 
 GRANT ALL PRIVILEGES ON analysis.teacher_most_progress_view TO GROUP admin;
 GRANT SELECT ON analysis.teacher_most_progress_view TO GROUP reader, GROUP reader_pii;
-
