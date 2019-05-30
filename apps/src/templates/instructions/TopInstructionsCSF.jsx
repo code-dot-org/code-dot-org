@@ -23,8 +23,12 @@ import {levenshtein} from '../../utils';
 import color from '../../util/color';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
+import styleConstants from '../../styleConstants';
 
 var instructions = require('../../redux/instructions');
+
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
@@ -335,7 +339,12 @@ class TopInstructionsCSF extends React.Component {
     const middleColHeight = minInstructionsHeight;
     const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
 
-    return Math.max(leftColHeight, middleColHeight, rightColHeight) + margins;
+    return (
+      Math.max(leftColHeight, middleColHeight, rightColHeight) +
+      margins +
+      HEADER_HEIGHT +
+      RESIZER_HEIGHT
+    );
   }
 
   /**

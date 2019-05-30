@@ -428,7 +428,9 @@ class TopInstructions extends Component {
       ((this.props.viewAs === ViewType.Student && !studentHasFeedback) ||
         (this.props.viewAs === ViewType.Teacher &&
           !this.state.teacherViewingStudentWork));
-    const feedbackTabText = displayKeyConcept ? 'Key Concept' : i18n.feedback();
+    const feedbackTabText = displayKeyConcept
+      ? i18n.keyConcept()
+      : i18n.feedback();
 
     const displayFeedback =
       displayKeyConcept ||
