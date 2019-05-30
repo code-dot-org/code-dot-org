@@ -258,37 +258,33 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'initial, partial previous, submit, complete, drop down' do
-  #   Timecop.freeze
+  test 'initial, partial previous, submit, complete, drop down' do
+    Timecop.freeze
 
-  #   existing_school = create :school,
+    user = create :teacher
+    sign_in user
 
-  #   user = create :teacher
-  #   sign_in user
+    new_school = create :school
 
-  #   new_school = create :school
+    Timecop.travel 1.hour
 
-  #   Timecop.travel 1.hour
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {school_id: new_school.id}
+      }
+    }
 
-  #   patch "/api/v1/user_school_infos", params: {
-  #     user: {
-  #       school_info_attributes: {school_id: new_school.id}
-  #     }
-  #   }
+    user.reload
 
-  #   user.reload
+    assert_response :success, response.body
 
-  #   assert_response :success, response.body
+    refute_nil user.school_info
+    refute_nil user.school_info.school
+    refute_empty user.user_school_infos
+    assert_first_tenure(user)
 
-  #   refute_nil user.school_info
-  #   refute_nil user.school_info.school
-  #   refute_empty user.user_school_infos
-  #   # assert_first_tenure(user)
-  #   assert existing_school.name.nil?
-  #   refute_equal existing_school, new_school
-
-  #   Timecop.return
-  # end
+    Timecop.return
+  end
 
   test 'initial, partial previous, submit, complete, manual' do
     Timecop.freeze
