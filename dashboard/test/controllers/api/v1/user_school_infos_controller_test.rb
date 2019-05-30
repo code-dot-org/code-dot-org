@@ -53,7 +53,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_nil tenure.end_date
   end
 
-  test 'intial, no previoius, blank, manual' do
+  test 'initial, no previoius, blank, manual' do
     user = create :teacher
     sign_in user
 
@@ -72,7 +72,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_empty user.user_school_infos
   end
 
-  test 'intial, no previoius, partial, manual' do
+  test 'initial, no previoius, partial, manual' do
     Timecop.freeze
 
     user = create :teacher
@@ -96,7 +96,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  test 'intial, no previoius, complete, drop down' do
+  test 'initial, no previoius, complete, drop down' do
     Timecop.freeze
 
     user = create :teacher
@@ -126,7 +126,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  test 'intial, no previous, complete, manual' do
+  test 'initial, no previous, complete, manual' do
     Timecop.freeze
 
     user = create :teacher
@@ -155,7 +155,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  test 'intial, partial previous, blank, manual' do
+  test 'initial, partial previous, blank, manual' do
     Timecop.freeze
 
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
@@ -186,7 +186,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  test 'intial, partial previous, unchanged, manual' do
+  test 'initial, partial previous, unchanged, manual' do
     Timecop.freeze
 
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
@@ -218,7 +218,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   # Thursday
 
-  test 'intial, partial previous, submit, partial, manual' do
+  test 'initial, partial previous, submit, partial, manual' do
     Timecop.freeze
 
     school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
@@ -250,10 +250,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'intial, partial previous, submit, complete, drop down' do
-  # end
+  test 'initial, partial previous, submit, complete, drop down' do
+  end
 
-  # test 'intial, partial previous, submit, complete, manual' do
+  # test 'initial, partial previous, submit, complete, manual' do
   # end
 
   # test 'confirmation, complete previous, submit, blank, manual' do
