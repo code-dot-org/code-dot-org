@@ -46,9 +46,9 @@ export class FacilitatorAveragesTable extends React.Component {
     super(props);
 
     this.questionDenominator = {
-      facilitator_effectiveness: 5,
-      teacher_engagement: props.courseName === COURSE_CSF ? 5 : 6,
-      overall_success: 6
+      facilitator_effectiveness: 7,
+      teacher_engagement: props.courseName === COURSE_CSF ? 5 : 7,
+      overall_success: 7
     };
   }
 
