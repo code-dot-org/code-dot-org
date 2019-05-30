@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'pd/survey_pipeline/retriever.rb'
+require 'pd/survey_pipeline/daily_survey_retriever.rb'
 
 module Pd::SurveyPipeline
   class DailySurveyRetrieverTest < ActiveSupport::TestCase
@@ -34,20 +34,12 @@ module Pd::SurveyPipeline
       @survey_questions = (@workshop_form_ids + @facilitator_form_ids).each do |form|
         create :pd_survey_question, form_id: form
       end
-
-      # TODO: remove logger in test and real code
-      @logger = nil
-      if CDO.use_log_file_in_test
-        log_file = File.new("#{File.dirname(__FILE__)}/log_retriever.txt", 'w')
-        log_file.sync = true
-        @logger = Logger.new(log_file, level: Logger::DEBUG)
-      end
     end
 
     test 'can retrieve all data if no filter' do
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal @workshop_submissions.length, result[:workshop_submissions]&.length
       assert_equal @facilitator_submissions.length, result[:facilitator_submissions]&.length
@@ -58,7 +50,7 @@ module Pd::SurveyPipeline
       filter = {workshop_ids: @workshops.first.id}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal @workshop_submissions.length / @workshops.length,
         result[:workshop_submissions]&.length
@@ -72,7 +64,7 @@ module Pd::SurveyPipeline
       filter = {form_ids: @workshop_form_ids.first}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal @workshop_submissions.length / @workshop_form_ids.length,
         result[:workshop_submissions]&.length
@@ -84,7 +76,7 @@ module Pd::SurveyPipeline
       filter = {workshop_ids: @workshops.first.id, form_ids: @facilitator_form_ids.first}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal 0, result[:workshop_submissions]&.length
       assert_equal @facilitator_submissions.size / (@workshops.length * @facilitator_form_ids.size),
@@ -97,7 +89,7 @@ module Pd::SurveyPipeline
       filter = {workshop_ids: @workshops.pluck(:id).max + 1}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal 0, result[:workshop_submissions]&.length
       assert_equal 0, result[:facilitator_submissions]&.length
@@ -109,7 +101,7 @@ module Pd::SurveyPipeline
       filter = {form_ids: @workshop_form_ids.max + 1}
       retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
 
-      result = retriever.retrieve_data logger: @logger
+      result = retriever.retrieve_data
 
       assert_equal 0, result[:workshop_submissions]&.length
       assert_equal 0, result[:facilitator_submissions]&.length
