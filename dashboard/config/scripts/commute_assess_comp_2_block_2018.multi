@@ -3,7 +3,7 @@ question 'The procedure <span style="font-family: monospace">op4</span> takes in
 right 'Returns the largest of the three numbers'
 wrong 'Set all three inputs to a temporary value'
 wrong 'Return the smallest of the three numbers '
-wrong 'Randomly returns on of the three numbers'
+wrong 'Randomly returns one of the three numbers'
 wrong 'This code will cause an error'
 
 markdown <<MARKDOWN

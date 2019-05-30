@@ -1,0 +1,9 @@
+name 'CSD U4 wireframe test multi'
+type 'multi2'
+question 'Given the opportunity to test this wireframe with users, which TWO things would be most important to look for?'
+
+wrong 'The user likes the color scheme'
+wrong 'The user thinks the app is a good idea'
+right 'The user understands how to log in'
+wrong 'The user\’s phone brand'
+right 'The user can navigate to all of the screens'
