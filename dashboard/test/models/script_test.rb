@@ -645,6 +645,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
     assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
+    assert_nil Script.find_by_name('csf1').banner_image
   end
 
   test 'professional_learning_course?' do
@@ -1109,8 +1110,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 
-  test 'text_to_speech_enabled? when script k1? is true' do
-    assert Script.find_by_name('course1').text_to_speech_enabled?
+  test 'text_to_speech_enabled? for k5_course' do
+    assert Script.find_by_name('csf1').text_to_speech_enabled?
   end
 
   test '!text_to_speech_enabled? by default' do
@@ -1753,6 +1754,15 @@ endvariants
       [@csp_script.name],
       Script.script_names_by_curriculum_umbrella('CSP')
     )
+  end
+
+  test "under_curriculum_umbrella and helpers" do
+    assert @csf_script.under_curriculum_umbrella?('CSF')
+    assert @csf_script.csf?
+    assert @csd_script.under_curriculum_umbrella?('CSD')
+    assert @csd_script.csd?
+    assert @csp_script.under_curriculum_umbrella?('CSP')
+    assert @csp_script.csp?
   end
 
   private
