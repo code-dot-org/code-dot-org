@@ -680,7 +680,7 @@ class Script < ActiveRecord::Base
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def under_curriculum_umbrella(specific_curriculum_umbrella)
+  def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
 
@@ -690,15 +690,15 @@ class Script < ActiveRecord::Base
   end
 
   def csf?
-    under_curriculum_umbrella('CSF')
+    under_curriculum_umbrella?('CSF')
   end
 
   def csd?
-    under_curriculum_umbrella('CSD')
+    under_curriculum_umbrella?('CSD')
   end
 
   def csp?
-    under_curriculum_umbrella('CSP')
+    under_curriculum_umbrella?('CSP')
   end
 
   def cs_in_a?
