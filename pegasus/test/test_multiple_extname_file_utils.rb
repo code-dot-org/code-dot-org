@@ -25,9 +25,11 @@ class MultipleExtnameFileUtilsTest < Minitest::Test
     assert MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".js", ".erb"])
     assert MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".erb", ".js"])
     assert MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".js", ".erb", ".haml"])
+    assert MultipleExtnameFileUtils.file_has_all_extnames("foo.js.js", [".js", ".erb", ".haml"])
 
     refute MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".erb"])
     refute MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".js"])
+    refute MultipleExtnameFileUtils.file_has_all_extnames("foo.js.erb", [".js", ".js", ".haml"])
   end
 
   def test_find_with_extnames
