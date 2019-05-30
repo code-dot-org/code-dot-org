@@ -41,25 +41,19 @@ module Pd::WorkshopSurveyResultsHelper
 
   QUESTIONS_FOR_FACILITATOR_AVERAGES = {
     FACILITATOR_EFFECTIVENESS: [
-      {primary_id: 'overallHow'},
-      {primary_id: 'duringYour'},
-      {primary_id: 'forThis54'},
-      {primary_id: 'howInteresting55'},
-      {primary_id: 'howOften56'},
-      {primary_id: 'howComfortable', all_ids: %w(howComfortable howComfortable57)},
-      {primary_id: 'howOften'}
+      {primary_id: 'facilitator_qualities_0'},
+      {primary_id: 'facilitator_qualities_1'},
+      {primary_id: 'facilitator_qualities_2'},
+      {primary_id: 'facilitator_qualities_3'},
+      {primary_id: 'facilitator_qualities_4'},
+      {primary_id: 'facilitator_qualities_5'},
     ],
     TEACHER_ENGAGEMENT: [
-      {primary_id: 'pleaseRate120_0'},
-      {primary_id: 'pleaseRate120_1'},
-      {primary_id: 'pleaseRate120_2'}
+      {primary_id: 'teacher_engagement'}
     ],
     OVERALL_SUCCESS: [
-      {primary_id: 'iFeel133', all_ids: ['iFeel133', 'pleaseRate_0', 'iFeel45']},
-      {primary_id: 'regardingThe_2', all_ids: ['regardingThe_2', 'pleaseRate_1']},
-      {primary_id: 'pleaseRate_2', all_ids: ['pleaseRate_2', 'regardingThe_3']},
-      {primary_id: 'iWould', all_ids: ['iWould', 'pleaseRate_4']},
-      {primary_id: 'pleaseRate_3'}
+      {primary_id: 'overall_success'},
+      # {primary_id: 'regardingThe_2', all_ids: ['regardingThe_2', 'pleaseRate_1']},
     ]
   }
 
@@ -385,7 +379,9 @@ module Pd::WorkshopSurveyResultsHelper
         ),
         facilitator: get_summary_for_form(
           Pd::WorkshopFacilitatorDailySurvey.form_id(workshop.subject),
-          workshop
+          workshop,
+          # the facilitator effectiveness questions are on the day 5 survey and hidden otherwise
+          show_hidden_questions: day == 5
         )
       }
     end
@@ -427,9 +423,9 @@ module Pd::WorkshopSurveyResultsHelper
     facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
     facilitator_averages[:questions] = {}
 
-    # In some cases, the same question has different IDs in different forms. To get around
+    # In some cases, the same question has different question names in different forms. To get around
     # this, the QUESTIONS_FOR_FACILITATOR_AVERAGES contains a primary_id (what we use
-    # here) and optional all_ids (what is used in multiple forms)
+    # here) and optional all_ids (names used in multiple forms)
     QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
       question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids]&.map {|x| flattened_questions[x]}&.compact&.first
 
@@ -567,9 +563,9 @@ module Pd::WorkshopSurveyResultsHelper
 
   private
 
-  def get_summary_for_form(form_id, workshop)
+  def get_summary_for_form(form_id, workshop, show_hidden_questions: false)
     survey = Pd::SurveyQuestion.find_by(form_id: form_id)
-    summary = survey&.summarize || {}
+    summary = survey&.summarize(show_hidden_questions: show_hidden_questions) || {}
 
     summary.each do |_, question|
       if question[:text].match? '{.*}'
