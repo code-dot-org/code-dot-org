@@ -204,6 +204,18 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    if params[:level_name]
+      @level = Level.find_by_name params[:level_name]
+      @script = Script.get_from_cache(params[:script_id])
+      @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
+      @script_level = @level.script_levels.find_by_script_id(@script.id)
+      if @script_level
+        @game = @level.game
+        present_level
+        return
+      end
+    end
+
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
