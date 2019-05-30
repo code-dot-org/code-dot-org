@@ -1,4 +1,3 @@
-import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
@@ -6,6 +5,8 @@ import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+
+import {UnlocalizedTimeAgo} from '../TimeAgo';
 
 const styles = {
   card: {
@@ -147,17 +148,19 @@ export default class ProjectCard extends React.Component {
           {shouldShowPublishedAt && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
-              <Moment fromNow style={styles.bold}>
-                {projectData.publishedAt}
-              </Moment>
+              <UnlocalizedTimeAgo
+                style={styles.bold}
+                dateString={projectData.publishedAt}
+              />
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (
             <div style={styles.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
-              <Moment fromNow style={styles.bold}>
-                {projectData.updatedAt}
-              </Moment>
+              <UnlocalizedTimeAgo
+                style={styles.bold}
+                dateString={projectData.updatedAt}
+              />
             </div>
           )}
         </div>
