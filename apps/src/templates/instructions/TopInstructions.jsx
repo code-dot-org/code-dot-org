@@ -507,7 +507,8 @@ class TopInstructions extends Component {
                 )}
             </div>
             {!this.props.isEmbedView &&
-              this.props.noInstructionsWhenCollapsed && (
+              (this.props.noInstructionsWhenCollapsed ||
+                this.props.hasContainedLevels) && (
                 <CollapserIcon
                   collapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
@@ -527,6 +528,7 @@ class TopInstructions extends Component {
             style={[
               styles.body,
               !this.props.noInstructionsWhenCollapsed &&
+              !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
                 ? {overflow: 'hidden'}
                 : {overflowY: 'scroll'}
