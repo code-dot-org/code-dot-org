@@ -537,6 +537,15 @@ Resources:
                   - 'rds:DeleteDBCluster'
                   - 'rds:DescribeDBClusterEndpoints'
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+              - Effect: Allow
+                Action:
+                  - 'rds:CreateDBInstance'
+                  - 'rds:DeleteDBInstance'
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                Resource: '*'
 <% end -%>
               # SQS queues for Asynchronous batch processing by the `process_queues` service.
               - Effect: Allow
