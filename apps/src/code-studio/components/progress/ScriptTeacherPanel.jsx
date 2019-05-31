@@ -56,6 +56,7 @@ class ScriptTeacherPanel extends React.Component {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
+    scriptName: PropTypes.string,
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -79,7 +80,8 @@ class ScriptTeacherPanel extends React.Component {
       selectedSection,
       scriptHasLockableStages,
       unlockedStageNames,
-      students
+      students,
+      scriptName
     } = this.props;
 
     let currentSectionScriptLevels = null;
@@ -99,6 +101,8 @@ class ScriptTeacherPanel extends React.Component {
         );
       }
     }
+
+    const sectionId = selectedSection && selectedSection.id;
 
     return (
       <TeacherPanel>
@@ -179,6 +183,8 @@ class ScriptTeacherPanel extends React.Component {
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
+              sectionId={sectionId}
+              scriptName={scriptName}
             />
           )}
         </div>
