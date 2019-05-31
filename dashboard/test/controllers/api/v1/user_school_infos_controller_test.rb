@@ -390,29 +390,32 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'confirmation, complete previous, submit, partial, manual' do
-  #   Timecop.freeze
+  test 'confirmation, complete previous, submit, partial, manual' do
+    Timecop.freeze
 
-  #   school_info = SchoolInfo.create({school_id: '0988766', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    school_info = SchoolInfo.create({country: 'United States', school_name: 'Philly High Harmony', school_type: 'public', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
-  #   user = create :teacher, school_info: school_info
-  #   sign_in user
+    user = create :teacher, school_info: school_info
+    sign_in user
 
-  #   Timecop.travel 1.hour
-  #   patch "/api/v1/user_school_infos", params: {
-  #     user: {
-  #       school_info_attributes: {country: 'United States', school_type: '', school_name: '', full_address: school_info.full_address}
-  #     }
-  #   }
+    Timecop.travel 1.year
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: '', school_name: '', full_address: school_info.full_address}
+      }
+    }
 
-  #   user.reload
+    user.reload
 
-  #   assert_response :success, response.body
-  #   refute_nil user.school_info
-  #   assert_first_tenure(user)
+    assert_response :success, response.body
+    refute_nil user.school_info
+    assert_equal user.user_school_infos.count, 2
+    assert_nil user.user_school_infos.last.end_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
 
-  #   Timecop.return
-  # end
+    Timecop.return
+  end
 
   # test 'confirmation, complete previous, submit, complete, dropdown' do
   # end
