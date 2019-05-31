@@ -53,8 +53,7 @@ class StudentTable extends React.Component {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    levels: PropTypes.array,
-    inMiniRubricExperiment: PropTypes.bool
+    levels: PropTypes.array
   };
 
   getRowStyle = (selectedUserId, id) => {
@@ -67,17 +66,11 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {
-      students,
-      onSelectUser,
-      getSelectedUserId,
-      levels,
-      inMiniRubricExperiment
-    } = this.props;
+    const {students, onSelectUser, getSelectedUserId, levels} = this.props;
     const selectedUserId = getSelectedUserId();
 
     return (
-      <table style={styles.table}>
+      <table style={styles.table} className="student-table">
         <tbody>
           <tr
             style={this.getRowStyle(selectedUserId, null)}
@@ -96,7 +89,6 @@ class StudentTable extends React.Component {
                   {levels && (
                     <TeacherPanelProgressBubble
                       level={levels.find(level => student.id === level.user_id)}
-                      inMiniRubricExperiment={inMiniRubricExperiment}
                     />
                   )}
                   <span

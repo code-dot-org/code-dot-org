@@ -20,7 +20,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-18/"
+      replace_key_prefix_with: "csp-19/"
     }
   },
   {
@@ -38,7 +38,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-18/"
+      replace_key_prefix_with: "csd-19/"
     }
   },
   {
@@ -56,7 +56,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-18/"
+      replace_key_prefix_with: "csf-19/"
     }
   },
   {

@@ -8,7 +8,6 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import experiments from '@cdo/apps/util/experiments';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -29,15 +28,6 @@ const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
-
-const inMiniRubricExperiment = experiments.isEnabled(
-  experiments.MINI_RUBRIC_2019
-);
-
-// for testing
-export function getInMiniRubricExperiment() {
-  return inMiniRubricExperiment;
-}
 
 const PEER_REVIEW_ID = -1;
 
@@ -575,17 +565,15 @@ export function statusForLevel(level, levelProgress) {
   // If complete a level that is marked as assessment
   // then mark as completed assessment
   if (
-    getInMiniRubricExperiment() &&
-    (level.kind === LevelKind.assessment &&
-      [
-        LevelStatus.free_play_complete,
-        LevelStatus.perfect,
-        LevelStatus.passed
-      ].includes(status))
+    level.kind === LevelKind.assessment &&
+    [
+      LevelStatus.free_play_complete,
+      LevelStatus.perfect,
+      LevelStatus.passed
+    ].includes(status)
   ) {
     return LevelStatus.completed_assessment;
   }
-
   return status;
 }
 

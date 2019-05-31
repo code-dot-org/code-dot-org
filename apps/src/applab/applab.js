@@ -521,6 +521,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -681,10 +682,11 @@ Applab.init = function(config) {
 
   var librariesExist = level.libraries && level.libraries.length > 0;
 
-  // Temporarily, always use the levelbuilder-created libraries if they
-  // exist. Once 'Start Over' is implemented for libraries, allow
-  // student-created libraries. (Add check for !librariesExist)
-  if (level.startLibraries && level.startLibraries.length > 0) {
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
     level.libraries = level.startLibraries;
     librariesExist = true;
   }
