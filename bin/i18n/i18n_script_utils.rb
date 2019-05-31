@@ -90,7 +90,14 @@ def redact(source, dest, *plugins)
   FileUtils.mkdir_p File.dirname(dest)
 
   plugins = plugins_to_arg(plugins)
-  data = YAML.load_file(source)
+  data =
+    if File.extname(source) == '.json'
+      f = File.open(source, 'r')
+      JSON.load(f)
+    else
+      YAML.load_file(source)
+    end
+
   args = ['bin/i18n/node_modules/.bin/redact',
           '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
   args.push('-p ' + plugins) unless plugins.empty?
@@ -101,23 +108,29 @@ def redact(source, dest, *plugins)
   )
   data = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
-    file.write(to_crowdin_yaml(data))
+    if File.extname(dest) == '.json'
+      file.write(JSON.pretty_generate(data))
+    else
+      file.write(to_crowdin_yaml(data))
+    end
   end
 end
 
 def restore(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
-
+  is_json = File.extname(source) == '.json'
   source_data =
-    if File.extname(source) == 'json'
-      JSON.load(source)
+    if is_json
+      f = File.open(source, 'r')
+      JSON.load(f)
     else
       YAML.load_file(source)
     end
   redacted_data =
-    if File.extname(redacted) == 'json'
-      JSON.load(redacted)
+    if is_json
+      f = File.open(redacted, 'r')
+      JSON.load(f)
     else
       YAML.load_file(redacted)
     end
@@ -128,8 +141,13 @@ def restore(source, redacted, dest, *plugins)
   source_json = Tempfile.new(['source', '.json'])
   redacted_json = Tempfile.new(['redacted', '.json'])
 
-  source_json.write(JSON.generate(source_data.values.first))
-  redacted_json.write(JSON.generate(redacted_data.values.first))
+  if is_json
+    source_json.write(JSON.generate(source_data))
+    redacted_json.write(JSON.generate(redacted_data))
+  else
+    source_json.write(JSON.generate(source_data.values.first))
+    redacted_json.write(JSON.generate(redacted_data.values.first))
+  end
 
   source_json.flush
   redacted_json.flush
@@ -146,9 +164,14 @@ def restore(source, redacted, dest, *plugins)
   )
   redacted_key = redacted_data.keys.first
   restored_data = {}
-  restored_data[redacted_key] = JSON.parse(stdout)
   File.open(dest, "w+") do |file|
-    file.write(to_crowdin_yaml(restored_data))
+    if File.extname(dest) == '.json'
+      restored_data = JSON.parse(stdout)
+      file.write(JSON.pretty_generate(restored_data))
+    else
+      restored_data[redacted_key] = JSON.parse(stdout)
+      file.write(to_crowdin_yaml(restored_data))
+    end
   end
 
   source_json.close

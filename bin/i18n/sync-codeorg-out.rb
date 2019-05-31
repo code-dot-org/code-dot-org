@@ -47,7 +47,6 @@ def restore_redacted_files
 
     Dir.glob("i18n/locales/original/**/*.*").each do |original_path|
       translated_path = original_path.sub("original", locale)
-
       plugin = nil
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
@@ -124,13 +123,11 @@ def distribute_course_content(locale)
   }
 
   Dir.glob("i18n/locales/#{locale}/course_content/**/*.json") do |loc_file|
-    file = File.open loc_file
+    file = File.open(loc_file, 'r')
     translated_data = JSON.load(file)
     file.close
-    first_key = translated_data.keys.first
-    translated_data = translated_data[first_key]
     next unless translated_data
-    translated_data['data'].each do |type, type_data|
+    translated_data.each do |type, type_data|
       type_data.each do |level_url, level_data|
         level = get_level_from_url(level_url)
         translated_strings[type][level.name] = level_data
