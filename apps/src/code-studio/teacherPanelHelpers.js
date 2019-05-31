@@ -20,6 +20,7 @@ export function renderTeacherPanel(
   store,
   scriptId,
   section,
+  scriptName,
   sectionData = null
 ) {
   const div = document.createElement('div');
@@ -46,6 +47,7 @@ export function renderTeacherPanel(
       <ScriptTeacherPanel
         sectionData={sectionData}
         onSelectUser={onSelectUser}
+        scriptName={scriptName}
         getSelectedUserId={getSelectedUserId}
       />
     </Provider>,
