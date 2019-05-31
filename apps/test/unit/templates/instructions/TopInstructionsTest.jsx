@@ -23,13 +23,16 @@ const DEFAULT_PROPS = {
   teacherMarkdown: 'Some teacher only markdown',
   noInstructionsWhenCollapsed: true,
   shortInstructions: '',
-  hidden: false
+  hidden: false,
+  isMinecraft: false
 };
 
 describe('TopInstructions', () => {
   it('is an empty div if passed the "hidden" property', () => {
-    const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} hidden />);
-    expect(wrapper).to.containMatchingElement(<div />);
+    const wrapper = shallow(
+      <TopInstructions {...DEFAULT_PROPS} hidden={true} />
+    );
+    expect(wrapper.find('div')).to.have.lengthOf(1);
   });
 
   it('is an empty div if there are no instructions to display', () => {
@@ -41,7 +44,7 @@ describe('TopInstructions', () => {
         hasContainedLevels={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(<div />);
+    expect(wrapper.find('div')).to.have.lengthOf(1);
   });
 
   describe('viewing the Feedback Tab', () => {
