@@ -40,6 +40,18 @@ const TabType = {
   TEACHER_ONLY: 'teacher-only'
 };
 
+// Minecraft-specific styles
+const craftStyles = {
+  instructionsBody: {
+    // $below-header-background from craft/style.scss
+    backgroundColor: '#646464'
+  },
+  headerBar: {
+    color: color.white,
+    backgroundColor: '#3b3b3b'
+  }
+};
+
 const styles = {
   main: {
     position: 'absolute',
@@ -124,7 +136,8 @@ class TopInstructions extends Component {
     noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     teacherMarkdown: PropTypes.string,
     hidden: PropTypes.bool.isRequired,
-    shortInstructions: PropTypes.string
+    shortInstructions: PropTypes.string,
+    isMinecraft: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -453,7 +466,11 @@ class TopInstructions extends Component {
 
     return (
       <div style={mainStyle} className="editor-column">
-        <PaneHeader hasFocus={false} teacherOnly={teacherOnly}>
+        <PaneHeader
+          hasFocus={false}
+          teacherOnly={teacherOnly}
+          isMinecraft={this.props.isMinecraft}
+        >
           <div style={styles.paneHeaderOverride}>
             {this.state.tabSelected === TabType.INSTRUCTIONS &&
               ttsUrl &&
@@ -469,6 +486,7 @@ class TopInstructions extends Component {
                   isRtl={false}
                   headerHasFocus={false}
                   onClick={this.handleDocumentationClick}
+                  isMinecraft={this.props.isMinecraft}
                 />
               )}
             <div style={styles.helpTabs}>
@@ -478,6 +496,7 @@ class TopInstructions extends Component {
                 selected={this.state.tabSelected === TabType.INSTRUCTIONS}
                 text={i18n.instructions()}
                 teacherOnly={teacherOnly}
+                isMinecraft={this.props.isMinecraft}
               />
               {this.props.noInstructionsWhenCollapsed && displayHelpTab && (
                 <InstructionsTab
@@ -486,6 +505,7 @@ class TopInstructions extends Component {
                   selected={this.state.tabSelected === TabType.RESOURCES}
                   text={i18n.helpTips()}
                   teacherOnly={teacherOnly}
+                  isMinecraft={this.props.isMinecraft}
                 />
               )}
               {this.props.noInstructionsWhenCollapsed &&
@@ -497,6 +517,7 @@ class TopInstructions extends Component {
                     selected={this.state.tabSelected === TabType.COMMENTS}
                     text={feedbackTabText}
                     teacherOnly={teacherOnly}
+                    isMinecraft={this.props.isMinecraft}
                   />
                 )}
               {!this.props.noInstructionsWhenCollapsed &&
@@ -508,6 +529,7 @@ class TopInstructions extends Component {
                     selected={this.state.tabSelected === TabType.TEACHER_ONLY}
                     text={i18n.teacherOnly()}
                     teacherOnly={teacherOnly}
+                    isMinecraft={this.props.isMinecraft}
                   />
                 )}
             </div>
@@ -536,7 +558,8 @@ class TopInstructions extends Component {
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
                 ? {overflow: 'hidden'}
-                : {overflowY: 'scroll'}
+                : {overflowY: 'scroll'},
+              this.props.isMinecraft && craftStyles.instructionsBody
             ]}
           >
             <div ref="instructions">
@@ -615,6 +638,7 @@ export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
+    isMinecraft: !!state.pageConstants.isMinecraft,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(
