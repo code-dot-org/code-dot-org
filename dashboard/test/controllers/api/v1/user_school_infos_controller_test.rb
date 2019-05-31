@@ -134,11 +134,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 1.hour
 
     assert_creates SchoolInfo do
-      patch "/api/v1/user_school_infos", params: {
-        user: {
-          school_info_attributes: {school_id: school.id}
-        }
-      }
+      submit_complete_school_info_from_dropdown(school)
     end
 
     @teacher.reload
@@ -255,11 +251,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    submit_complete_school_info_from_dropdown(new_school)
 
     @teacher.reload
 
@@ -321,11 +313,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: school_info.school.id}
-      }
-    }
+
+    submit_complete_school_info_from_dropdown(school_info.school)
 
     @teacher.reload
 
@@ -384,11 +373,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.year
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    submit_complete_school_info_from_dropdown(new_school)
 
     @teacher.reload
 
@@ -501,11 +486,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 7.days
 
     sign_in @teacher
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    submit_complete_school_info_from_dropdown(new_school)
 
     assert_equal @teacher.user_school_infos.count, 2
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
@@ -560,6 +541,14 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
+      }
+    }
+  end
+
+  private def submit_complete_school_info_from_dropdown(school)
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {school_id: school.id}
       }
     }
   end
