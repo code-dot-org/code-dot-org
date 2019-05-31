@@ -472,6 +472,10 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
+    get 'misc_survey/thanks', to: 'misc_survey#thanks'
+    get 'misc_survey/:form_id', to: 'misc_survey#new'
+    post 'misc_survey/submit', to: 'misc_survey#submit'
+
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'

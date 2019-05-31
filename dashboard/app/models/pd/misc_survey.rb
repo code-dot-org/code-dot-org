@@ -32,6 +32,7 @@ module Pd
         "90525028928158", # 6-12 Facilitator Post-Survey
         "90525686494166", # Regional Partner Pre-Survey
         "91384165042151", # Regional Partner Post-Survey
+        "91477280965166", # Unofficial Workshop Attendance
       ].map(&:to_i)
     end
 

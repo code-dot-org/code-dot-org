@@ -11,7 +11,8 @@ module Pd
         TextQuestion,
         SelectQuestion,
         ScaleQuestion,
-        MatrixQuestion
+        MatrixQuestion,
+        DatetimeQuestion,
       ].freeze
 
       # @param [Integer] form_id
