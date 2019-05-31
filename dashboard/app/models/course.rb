@@ -38,6 +38,7 @@ class Course < ApplicationRecord
     family_name
     version_year
     is_stable
+    full_course
   )
 
   def to_param
