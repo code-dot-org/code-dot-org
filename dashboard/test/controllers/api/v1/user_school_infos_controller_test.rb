@@ -448,8 +448,34 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'confirmation, complete previous, submit, complete, manual' do
-  # end
+  test 'confirmation, complete previous, submit, complete, manual' do
+    Timecop.freeze
+
+    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    Timecop.travel 1.year
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: 'private', school_name: 'School of Rock',
+        full_address: 'Nashville, TN'}
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+    refute_nil user.school_info
+    assert_equal user.user_school_infos.count, 2
+    assert_nil user.user_school_infos.last.end_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
+    refute_equal user.user_school_infos.last.school_info.school_name, user.user_school_infos.first.school_info.school_name
+
+    Timecop.return
+  end
 
   # test 'confirmation, partial previous, blank, manual' do
   # end
