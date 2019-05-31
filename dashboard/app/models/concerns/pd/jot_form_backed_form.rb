@@ -178,26 +178,14 @@ module Pd
       end
 
       # Process a submission and saves the model.
-      # @param [submission] (optional) The submission received from JotForm.
+      # @param [submission] The submission received from JotForm.
       # @param [questions_details] (optional) Details of the questions.  If provided, we can
       #   attempt to use the name field from each question rather than its numerical ID when
       #   storing answers.
       def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-          dest_answers = {}
-
-          source_answers = submission[:answers]
-          source_answers.each do |key, value|
-            # We have an answer ID, but can we get a name instead of the ID?
-            question_detail = questions_details && questions_details.find {|q| q["id"] == key}
-            # If we want to use names instead of IDs, and we got a name, then use it.
-            if use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
-              dest_answers[question_name] = value
-            else
-              dest_answers[key] = value
-            end
-          end
+          dest_answers = model.process_answers_from_submission(submission[:answers], questions_details)
 
           model.answers = dest_answers.to_json
           form_id = submission[:form_id]
@@ -343,13 +331,38 @@ module Pd
       new_record? && self.class.exists?(slice(*self.class.unique_attributes_with_form_id))
     end
 
+    # Given answers and questions, returns the correct form of answers.
+    # In the case of a submission where we have the questions, and the survey
+    # model returns true for use_names_for_question_ids?, then the answers have
+    # keys as question names rather than question ID integers where possible.
+    # @param source_answers [Hash] The submitted answers with keys as ID integers.
+    # @param questions [Hash] The questions for this survey.
+    def process_answers_from_submission(source_answers, questions)
+      dest_answers = {}
+
+      source_answers.each do |key, value|
+        # We have an answer ID, but can we get a name instead of the ID?
+        question_detail = questions&.find {|q| q["id"] == key}
+
+        # If we want to use names instead of IDs, and we got a name, then use it.
+        if self.class.use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
+          dest_answers[question_name] = value
+        else
+          dest_answers[key] = value
+        end
+      end
+
+      dest_answers
+    end
+
     # Update answers for this submission from the JotForm API
     # Useful for filling in placeholder response entries (submission id but no answers)
     def sync_from_jotform
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
-      update!(answers: submission[:answers].to_json)
+      dest_answers = process_answers_from_submission(submission[:answers], JSON.parse(questions.questions))
+      update!(answers: dest_answers.to_json)
     end
 
     # Supplies values for important model attributes from the JotForm-downloaded form answers.
