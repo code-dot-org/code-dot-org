@@ -75,9 +75,9 @@ const style = {
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
-// did not include undefined since we do not want to
-// return undefined when input is console.log("something")
-const FALSIES = new Set([false, null, 0, '', ``, NaN]);
+// The JS console, by default, prints 'undefined' when there is no return value.
+// We don't want that functionality and therefore don't include 'undefined' in this list.
+const FALSY_VALUES = new Set([false, null, 0, '', NaN]);
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -159,6 +159,8 @@ export default connect(
         } else if (this.props.isAttached) {
           try {
             if (experiments.isEnabled('react-inspector')) {
+              // wrapping input with parens for objects before the evalInCurrestScope
+              // ensures objects are returned correctly consistently
               let result = this.props.evalInCurrentScope(
                 input[0] === '{' && input[input.length - 1] === '}'
                   ? `(${input})`
@@ -168,7 +170,7 @@ export default connect(
                 result
               );
               this.appendLog({
-                output: result
+                output: {value: result, fromConsoleLog: false}
               });
             } else {
               const result = this.props.evalInCurrentScope(input);
@@ -176,11 +178,17 @@ export default connect(
             }
           } catch (err) {
             experiments.isEnabled('react-inspector')
-              ? this.appendLog({output: String(err)})
+              ? this.appendLog({
+                  output: {value: String(err), fromConsoleLog: false}
+                })
               : this.appendLog('< ' + String(err));
           }
         } else {
-          this.appendLog('< (not running)');
+          experiments.isEnabled('react-inspector')
+            ? this.appendLog({
+                output: {value: '(not running)', fromConsoleLog: false}
+              })
+            : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -236,26 +244,32 @@ export default connect(
 
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((output, i) => {
-          if (typeof output === 'object') {
-            output = output.toJS();
+        return this.props.logOutput.map((row, i) => {
+          try {
+            row = row.toJS();
+          } catch (error) {
+            return <Inspector key={i} data={row} />;
           }
-          if (output.input) {
-            return <div key={i}>&gt; {output.input}</div>;
-          } else if (output.output || FALSIES.has(output.output)) {
-            return (
-              <div key={i}>
-                &lt;{' '}
-                <div style={style.inspector}>
-                  <Inspector data={output.output} />
-                </div>
-              </div>
-            );
+          if (row.input) {
+            return <div key={i}>&gt; {row.input}</div>;
           } else if (
-            output.consoleLoggedOutput ||
-            FALSIES.has(output.consoleLoggedOutput)
+            row.output.value ||
+            FALSY_VALUES.has(row.output.value) ||
+            (row.output.value === undefined && row.output.fromConsoleLog) ||
+            (row.output.value === undefined && !row.output.fromConsoleLog)
           ) {
-            return <Inspector key={i} data={output.consoleLoggedOutput} />;
+            if (row.output.fromConsoleLog) {
+              return <Inspector key={i} data={row.output.value} />;
+            } else {
+              return (
+                <div key={i}>
+                  &lt;{' '}
+                  <div style={style.inspector}>
+                    <Inspector data={row.output.value} />
+                  </div>
+                </div>
+              );
+            }
           }
         });
       }

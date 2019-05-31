@@ -100,7 +100,7 @@ Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
     jsInterpreterLogger.log(
       experiments.isEnabled('react-inspector')
-        ? {consoleLoggedOutput: object}
+        ? {output: {value: object, fromConsoleLog: true}}
         : object
     );
   }
@@ -108,7 +108,7 @@ Applab.log = function(object, logLevel) {
   getStore().dispatch(
     jsDebugger.appendLog(
       experiments.isEnabled('react-inspector')
-        ? {consoleLoggedOutput: object}
+        ? {output: {value: object, fromConsoleLog: true}}
         : object,
       logLevel
     )
