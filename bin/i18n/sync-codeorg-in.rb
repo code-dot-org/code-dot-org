@@ -143,7 +143,7 @@ def localize_level_content
         end
       end
 
-      script_strings.delete_if {|_key, value| value.nil? || value.try(:empty)}
+      script_strings.delete_if {|_key, value| value.nil? || value.empty?}
 
       script_i18n_directory = "../i18n/locales/source/course_content"
       script_i18n_directory =
@@ -157,7 +157,7 @@ def localize_level_content
       FileUtils.mkdir_p script_i18n_directory unless Dir.exist? script_i18n_directory
       script_i18n_filename = "#{script_i18n_directory}/#{script.name}.json"
       File.open(script_i18n_filename, 'w') do |file|
-        file.write(JSON.pretty_generate({"en" => {"data" => script_strings}}))
+        file.write(JSON.pretty_generate(script_strings))
       end
     end
   end
@@ -196,7 +196,7 @@ def localize_block_content
 end
 
 def redact_level_content
-  Dir.glob("i18n/locales/source/course_content/**/*.yml").each do |source|
+  Dir.glob("i18n/locales/source/course_content/**/*.json").each do |source|
     backup = source.sub("source", "original")
     FileUtils.mkdir_p(File.dirname(backup))
     FileUtils.cp(source, backup)
