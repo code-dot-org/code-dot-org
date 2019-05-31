@@ -9965,8 +9965,8 @@ en:
           description: ''
         coursed-2019:
           title: Course D (2019)
-          description: Students develop their understanding of nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
-          description_short: Learn about conditional statements and create your own art, story or game.
+          description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
@@ -11363,6 +11363,8 @@ en:
               name: Unit 2 Assessment
               description_student: ''
               description_teacher: ''
+            CS Principles Post Course survey:
+              name: CS Principles Post Course survey
         csp3-2019:
           title: CSP Unit 3 - Intro to Programming ('19-'20)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -11417,6 +11419,8 @@ en:
               name: Mid-Year Survey
               description_student: ''
               description_teacher: ''
+            CS Principles Post Course survey:
+              name: CS Principles Post Course survey
         csp4-2019:
           title: CSP Unit 4 - Big Data and Privacy ('19-'20)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -12159,6 +12163,26 @@ en:
               name: Functions with Parameters and Return Explore
             Libraries:
               name: Libraries
+            Parameters and Return Values Explore:
+              name: Parameters and Return Values Explore
+            Parameters and Return Values Investigate:
+              name: Parameters and Return Values Investigate
+            Parameters and Return Values Practice:
+              name: Parameters and Return Values Practice
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
+            Libraries Mini PT:
+              name: Libraries Mini PT
+            Student Survey (Lists):
+              name: Student Survey (Lists)
+            Teacher Survey (Lists):
+              name: Teacher Survey (Lists)
+            Student Survey (Libraries):
+              name: Student Survey (Libraries)
+            Teacher Survey (Libraries):
+              name: Teacher Survey (Libraries)
           title: 'Unit 7: Functions and Libraries'
           description_audience: ''
           description_short: ''
@@ -12373,6 +12397,14 @@ en:
               name: Student Survey (Mini PT)
             Loops Investigate and Practice:
               name: Loops Investigate and Practice
+            Parameters and Return Values Explore:
+              name: Parameters and Return Values Explore
+            Parameters and Return Values Investigate:
+              name: Parameters and Return Values Investigate
+            Parameters and Return Values Practice:
+              name: Parameters and Return Values Practice
+            App Lab Experiments Dashboard:
+              name: App Lab Experiments Dashboard
           title: 'Unit 5: Lists, Loops, and Traversals'
           description_audience: ''
           description_short: ''
@@ -12394,7 +12426,7 @@ en:
           title: Novice Reflections for Summer Workshop 2019
           description_audience: 6 - 12 Novice Facilitators in Training
           description_short: 'Novice reflection materials for 2019 facilitators in training '
-          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Workshop.
+          description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop.
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -12411,3 +12443,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: Apprentice Reflection Overview
+            Day 1:
+              name: Day 1
+            Day 2:
+              name: Day 2
+            Day 3:
+              name: Day 3
+            Day 4:
+              name: Day 4
+            Wrap Up:
+              name: Wrap Up
+          title: Apprentice Reflections for Summer Workshop 2019
+          description_audience: 6 - 12 Apprentice Facilitators in Training
+          description_short: 'Apprentice reflection materials for 2019 facilitators in training '
+          description: This is the set of apprentice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop
