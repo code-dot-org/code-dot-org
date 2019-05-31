@@ -10,9 +10,9 @@ Feature: Feedback Tab Visibility
     And I wait to see "#finishButton"
     And I press "finishButton"
 
-  Scenario: As student with dev experiment on, 'Feedback' tab is the 'Key Concept' tab if no feedback
+  Scenario: As student 'Feedback' tab is the 'Key Concept' tab if no feedback
     When I open my eyes to test "student with no feedback"
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
     And I wait for the page to fully load
     Then I see no difference for "student with no feedback tab"
     Then I sign out
@@ -21,20 +21,21 @@ Feature: Feedback Tab Visibility
 # Disabling IE due to bug where text changes in the feedback text input are not registered
 # so submit button remains disabled
   Scenario: As teacher, when viewing a level with student work,
-  feedback can be submitted and displayed. If in experiment and there is a mini rubric, teacher can give feedback on rubric.
-  If a teacher in experiment on a level with mini rubric can see the rubric without viewing student work.
+  feedback can be submitted and displayed. If there is a mini rubric, teacher can give feedback on rubric.
+  If a teacher on a level with mini rubric can see the rubric without viewing student work.
   Otherwise don't show feedback tab
     When I open my eyes to test "teacher giving student feedback"
     And I sign in as "Teacher_Lillian"
 
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
     And I wait for the page to fully load
     Then I see no difference for "teacher rubric feedback tab"
 
   #As teacher, reviewing work, submit feedback
     And I wait to see ".show-handle"
     Then I click selector ".show-handle .fa-chevron-left"
-    Then I click selector ".section-student .name a"
+    And I wait until element ".student-table" is visible
+    And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
     And I wait for the page to fully load
     Then I see no difference for "teacher giving feedback tab load"
 
@@ -57,7 +58,7 @@ Feature: Feedback Tab Visibility
   #As student, latest feedback from teacher is displayed
     Then I sign out
     And I sign in as "Lillian"
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
     And I wait to see ".uitest-feedback"
     Then I press the first ".uitest-feedback" element
     And I wait to see "#ui-test-feedback-time"

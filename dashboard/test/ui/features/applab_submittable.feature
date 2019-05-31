@@ -38,12 +38,16 @@ Scenario: Submit anything, teacher is able to unsubmit
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
-  And I wait to see "#unsubmit"
-  Then I press "unsubmit" to load a new page
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I wait to see "#teacher-panel-container"
+  Then I wait until element "#unsubmit-button-uitest" is visible
+  And I press "#unsubmit-button-uitest" using jQuery
 
-  # Shouldn't be able to see unsubmit anymore
+  # Unsubmit should be disabled now
+  And I wait for the page to fully load
   And I wait to see ".show-handle"
-  Then I click selector ".show-handle .fa-chevron-left"
-  And I wait until I don't see selector "#unsubmit"
+  And I wait until element ".student-table" is visible
+  Then I wait until element "#unsubmit-button-uitest" is visible
+  And element "#unsubmit-button-uitest" is disabled
   Then I sign out
