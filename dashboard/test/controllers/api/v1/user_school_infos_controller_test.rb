@@ -196,12 +196,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute @teacher.school_info.country.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
-          full_address: school_info.full_address}
-      }
-    }
+    submit_unchanged_school_info(school_info)
 
     @teacher.reload
 
@@ -320,12 +315,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
-          full_address: school_info.full_address}
-      }
-    }
+    submit_unchanged_school_info school_info
 
     @teacher.reload
 
@@ -427,11 +417,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 7.days
 
     sign_in @teacher
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: '', full_address: 'Seattle, Washington'}
-      }
-    }
+    submit_unchanged_school_info partial_school_info
 
     assert_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal @teacher.user_school_infos.count, 2
@@ -523,7 +509,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   private def submit_partial_school_info
     patch "/api/v1/user_school_infos", params: {
       user: {
-        school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'private',
+          school_name: '',
+          full_address: ''
+        }
       }
     }
   end
@@ -539,8 +530,25 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   private def submit_complete_school_info_manual
     patch "/api/v1/user_school_infos", params: {
       user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
-          full_address: 'Seattle, Washington'}
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'public',
+          school_name: 'Acme Inc',
+          full_address: 'Seattle, Washington'
+        }
+      }
+    }
+  end
+
+  private def submit_unchanged_school_info(school_info)
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: school_info.country,
+          school_type: school_info.school_type,
+          school_name: school_info.school_name,
+          full_address: school_info.full_address
+        }
       }
     }
   end
