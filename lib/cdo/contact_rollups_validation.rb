@@ -352,7 +352,6 @@ class ContactRollupsValidation
       {
         db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
         filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
-        max_records: 1
       }
     ).db_cluster_endpoints.first.endpoint
 
