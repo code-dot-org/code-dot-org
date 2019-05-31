@@ -6341,6 +6341,8 @@ es-MX:
               name: Implementación de la encuesta final de CSP de 2019
             CSD post course survey 2019 staging:
               name: Implementación de la encuesta final de CSD de 2019
+            Place for testing crazy stuff:
+              name: Un lugar para probar cosas locas
           title: Todas las encuestas
           description_short: Un lugar para implementar y probar las encuestas de Code.org
         k1hoc2017:
@@ -6773,6 +6775,8 @@ es-MX:
               description_teacher: Los estudiantes planificarán y desarrollarán sus propios juegos con la guía de proyectos de las dos lecciones anteriores para orientar su proyecto. Ya sea individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que quieren crear, inspirándose en un conjunto de juegos de muestra. Luego, completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y analizarán las variables, los sprites y las funciones que necesitarán crear. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A lo largo del proceso, los estudiantes compartirán sus proyectos para que los revisen sus compañeros e incorporarán los comentarios cuando finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completos con sus compañeros de clase. Este proyecto puede abarcar de 3 a 5 períodos de clase.
             CS Discoveries End of Semester Survey:
               name: Encuesta de fin de semestre de Descubrimientos de Ciencias de la Computación
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         csd2-2018:
           title: CSD Unidad 2 - Desarrollo web ('18-'19)
           description: " En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet."
@@ -6834,6 +6838,8 @@ es-MX:
               name: Proyecto - Sitio web de portfolio personal
               description_student: En los últimos días de la unidad, la clase finaliza sus sitios web personales. Para ello, trabaja con sus compañeros para obtener comentarios, revisar la rúbrica y dar los toques finales al sitio. Para cerrar la unidad, todos comparten sus proyectos y la forma en que se desarrollaron.
               description_teacher: "Los estudiantes han trabajado mucho tiempo en su sitio web personal a lo largo de la unidad. En el último par de días, los estudiantes finalizan sus sitios web. Trabajan con compañeros para obtener comentarios, dar los toques finales a los sitios web, revisar la rúbrica y reflexionar sobre su proceso. Para cerrar la unidad, compartirán sus proyectos y también un resumen del proceso que siguieron para llegar a ese diseño final.\\r\n"
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         coursea-2018:
           title: Curso A (2018)
           assignment_family_title: Curso A
@@ -7343,6 +7349,8 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         coursee-2018:
           title: Curso E (2018)
           assignment_family_title: Curso E
@@ -7731,6 +7739,8 @@ es-MX:
               name: Proyecto - Presentación de la aplicación
               description_student: Cada equipo prepara una presentación para "lanzar" la aplicación que han desarrollado. Este es el momento de compartir conflictos, triunfos y planes para el futuro.
               description_teacher: En este punto, los equipos han investigado un tema de importancia personal y social, han desarrollado y probado tanto un prototipo de papel como un prototipo digital, y han trabajado sobre la aplicación inicial para incorporar nuevas funciones y corregir errores. Ahora es el momento de que revisen lo que han hecho y creen una presentación coherente sobre su proceso de creación. Mediante la plantilla de presentación provista, los equipos se preparan para presentar su proceso de desarrollo de aplicaciones, incluido el problema que se propusieron resolver; las formas en que han incorporado los comentarios de las pruebas, y sus planes para el futuro.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         csd5-2018:
           title: CSP Unidad 5 - Los datos y la sociedad ('18-'19)
           description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
@@ -7796,6 +7806,8 @@ es-MX:
               name: Proyecto - Solucionar un problema de datos
               description_student: Para concluir esta unidad, la clase diseña formas de usar datos para hacer recomendaciones o predicciones que ayuden a resolver un problema. En los primeros pasos, la clase crea problemas, realiza una investigación simple y define un problema de su elección. Luego, decide qué tipo de datos se deben recopilar, y cómo podrían recopilarse y utilizarse, antes de intercambiar comentarios y hacer una presentación final.
               description_teacher: Para concluir esta unidad, los estudiantes diseñan un motor de recomendación basado en los datos de sus compañeros de clase que recopilaron y analizaron. Después de ver un ejemplo de una aplicación de recomendación, los estudiantes siguen una guía de proyecto para completar esta actividad de varios días. En los primeros pasos, los estudiantes eligen qué opción quieren ayudar al usuario a elegir y qué datos necesitan para dar una recomendación, crear una encuesta y recopilar información sobre las elecciones de sus compañeros de clase. Luego, interpretan los datos y utilizan lo que han aprendido para crear el algoritmo de recomendación. Por último, usan sus algoritmos para hacer recomendaciones a algunos compañeros de clase. Los estudiantes realizan una revisión en conjunto y hacen las mejoras necesarias en sus proyectos antes de preparar una presentación para la clase.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
         csp2-2018:
           title: CSP Unidad 2 - Información digital ('18-'19)
           description: Esta unidad explora las formas en que se codifica, representa y manipula la información digital. La capacidad de manipular digitalmente los datos, visualizarlos e identificar patrones, tendencias y posibles significados, es una habilidad práctica importante que los especialistas en computación realizan todos los días. Las principales habilidades que se abordan en la unidad tienen que ver con comprender de dónde provienen los datos, tener intuiciones sobre lo que se podría aprender o extraer de ellos, y poder usar herramientas informáticas para manipular los datos y comunicar sobre ellos.
@@ -7876,6 +7888,8 @@ es-MX:
               name: Creación de funciones con parámetros
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-explore-2018:
           title: Explorar - Preparación de AP Performance Task ('18-'19)
           description: 'Estas lecciones buscan ayudarte a comprender, preparar y realizar la tarea AP Explore Performance Task. Cada "lección" contiene enlaces a documentos útiles que puedes recorrer con el docente. Ten en cuenta que el segundo elemento en la primera lección no está relacionado con la PT de exploración directamente, pero cubre la configuración técnica general y las herramientas que necesitas para crear diversos elementos de las tareas de exploración y creación.'
@@ -7889,6 +7903,8 @@ es-MX:
               name: PT de exploración - Completar la tarea
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp-create-2018:
           title: Crear - Preparación de AP Performance Task ('18-'19)
           description: 'Estas lecciones buscan ayudarte a comprender, preparar y realizar la tarea AP Create Performance Task. Cada "lección" contiene enlaces a documentos útiles que puedes recorrer con el docente. Ten en cuenta que el primer elemento en la primera lección no está relacionado con la PT de creación directamente, pero cubre la configuración técnica general y las herramientas que necesitas para crear diversos elementos de las tareas de exploración y creación.'
@@ -7900,6 +7916,8 @@ es-MX:
               name: Preparación de PT de creación - Planificar
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2018:
           title: CSP Unidad 4 - Grandes datos y privacidad ('18-'19)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas preguntas complejas relacionadas con la política pública, la ley, la ética y el impacto social. Los objetivos de esta unidad son desarrollar una visión integral y equilibrada sobre los datos en el mundo, que incluya sus efectos positivos y negativos, y entender los fundamentos de cómo y por qué funciona el cifrado moderno.
@@ -7935,6 +7953,8 @@ es-MX:
               name: Evaluación de la Unidad 4
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp5-2018:
           title: CSP Unidad 5 - Desarrollo de aplicaciones ('18-'19)
           description: Esta unidad continúa la presentación de los conceptos fundamentales de la programación informática, que amplía la capacidad de crear aplicaciones completas e interactivas. Este curso utiliza JavaScript como lenguaje de programación y el Laboratorio de aplicaciones como ambiente de programación para crear aplicaciones, pero los conceptos aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.
@@ -7990,6 +8010,8 @@ es-MX:
               name: '¡Participa en un estudio longitudinal!'
             Mid-Year Survey:
               name: Encuesta de mitad de año
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csppostap-2018:
           title: Post AP - Herramientas de datos ('18-'19)
           description: "En el primer capítulo de esta unidad, los alumnos desarrollan habilidades para interpretar datos visuales y utilizar herramientas de visualización y hojas de cálculo para crear sus propios artefactos digitales. A través de un proyecto en curso, el \"rastreador de datos de clase\", los estudiantes aprenden a recopilar y limpiar datos, y utilizar algunas herramientas comunes para calcular agregaciones y crear visualizaciones. \\r\n\\r\nEl segundo capítulo explora la importancia de los datos dentro de las aplicaciones. El Laboratorio de aplicaciones tiene una serie de herramientas que te permiten recopilar y utilizar datos en tus aplicaciones. Este capítulo proporciona una descripción general de cómo funcionan estas herramientas, una muestra de ejemplos de proyectos que se pueden crear con estas herramientas y un espacio en el que se puede crear y enviar un proyecto final."
@@ -8035,6 +8057,8 @@ es-MX:
               name: Evaluación del Capítulo 2 de la Unidad 2
             Chapter 1 Assessment:
               name: Evaluación del Capítulo 1
+            CS Principles Post-Course Survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -8915,8 +8939,6 @@ es-MX:
               name: Internet
             Crowdsourcing:
               name: Colaboración abierta
-            Concept Practice with Minecraft:
-              name: Mirando hacia el Futuro con Minecraft
             Editing Behaviors:
               name: Editar comportamientos
             Virtual Pet with Sprite Lab:
@@ -8925,6 +8947,8 @@ es-MX:
               name: Fiesta de baile
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Concept Practice with Minecraft:
+              name: Mirando hacia el Futuro con Minecraft
         csd1-2019:
           title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
           description: "La unidad sobre la resolución de problemas y la computación es una introducción muy interactiva y colaborativa al campo de las ciencias de la computación, enmarcada dentro de una búsqueda más amplia orientada a resolver problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de desafíos y escenarios del mundo real. A continuación, aprenderás cómo las computadoras toman, generan, almacenan y procesan información para ayudar a las personas a resolver problemas. La unidad concluye con un proyecto en el que diseñas una aplicación que ayuda a resolver un problema de tu elección.\\r\n"
@@ -9525,6 +9549,8 @@ es-MX:
               name: Proyecto - Solucionar un problema de datos
               description_student: Para concluir esta unidad, la clase diseña formas de usar datos para hacer recomendaciones o predicciones que ayuden a resolver un problema. En los primeros pasos, la clase crea problemas, realiza una investigación simple y define un problema de su elección. Luego, decide qué tipo de datos se deben recopilar, y cómo podrían recopilarse y utilizarse, antes de intercambiar comentarios y hacer una presentación final.
               description_teacher: Para concluir esta unidad, los estudiantes diseñan un motor de recomendación basado en los datos de sus compañeros de clase que recopilaron y analizaron. Después de ver un ejemplo de una aplicación de recomendación, los estudiantes siguen una guía de proyecto para completar esta actividad de varios días. En los primeros pasos, los estudiantes eligen qué opción quieren ayudar al usuario a elegir y qué datos necesitan para dar una recomendación, crear una encuesta y recopilar información sobre las elecciones de sus compañeros de clase. Luego, interpretan los datos y utilizan lo que han aprendido para crear el algoritmo de recomendación. Por último, usan sus algoritmos para hacer recomendaciones a algunos compañeros de clase. Los estudiantes realizan una revisión en conjunto y hacen las mejoras necesarias en sus proyectos antes de preparar una presentación para la clase.
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csd6-2019:
           title: CSD Unidad 6 - Computación física ('19-'20)
           description: La Unidad 6 explora el papel de las plataformas de hardware en la computación y cómo diferentes sensores pueden proporcionar entradas y salidas más efectivas que las del teclado, el ratón y el monitor tradicionales. Al usar el Laboratorio de aplicaciones y el Circuit Playground de Adafruit, podrás desarrollar programas que utilizan las mismas entradas y salidas de hardware que ves en los dispositivos inteligentes y observarás cómo un prototipo simple puede conducir a un producto terminado. La unidad concluye con un desafío de diseño en el que se utilizará Circuit Playground como base para innovar en tu propio diseño.
@@ -9562,6 +9588,8 @@ es-MX:
               name: Circuitos y prototipos físicos
             'Project: Prototype an Innovation':
               name: 'Proyecto: crear el prototipo de una innovación'
+            Post-Project Test:
+              name: Prueba posterior al proyecto
         csp4-pilot:
           stages:
             Variables Explore:
@@ -10178,6 +10206,30 @@ es-MX:
               name: 'Práctica de bucles: bucles mientras'
             'Loops Practice: Simulations':
               name: 'Práctica de bucles: simulaciones'
+            Lists Make:
+              name: Crear listas
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
           title: 'Unidad 5: Listas, bucles y recorridos'
         csp6-pilot-staging:
           stages:
@@ -10404,6 +10456,8 @@ es-MX:
             Loops with Rey and BB-8:
               name: Bucles con Rey y BB-8
           title: CSF Express 2018 para Vietnam
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt Nam.
+          description: "Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động cho phù hợp với học sinh Việt Nam.\\r\n"
         csd-post-survey-2018:
           stages:
             CSD post-course survey:
@@ -10430,6 +10484,8 @@ es-MX:
               name: Investigar listas
             Lists Practice:
               name: Práctica de listas
+            Lists Make:
+              name: Crear listas
             Loops Explore:
               name: Explorar bucles
             'Loops Practice: While Loops':
@@ -10438,4 +10494,57 @@ es-MX:
               name: 'Práctica de bucles: simulaciones'
             Traversals Explore:
               name: Explorar recorridos
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Student Survey (Lists):
+              name: Encuesta de estudiantes (listas)
+            Student Survey (Traversals):
+              name: Encuesta de estudiantes (recorridos)
+            Unit 5 Mini Assessment:
+              name: Mini evaluación de la Unidad 5
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Encuestas de docentes (listas)
+            Teacher Survey (Traversals):
+              name: Encuestas de docentes (recorridos)
+            Student Survey (Mini PT):
+              name: Encuesta de estudiantes (mini PT)
+            Loops Investigate and Practice:
+              name: Bucles de investigar y practicar
           title: 'Unidad 5: Listas, bucles y recorridos'
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: Resumen de las reflexiones de los novatos
+            Day 1:
+              name: Día 1
+            Day 2:
+              name: Día 2
+            Day 3:
+              name: Día 3
+            Day 4:
+              name: Día 4
+            Wrap Up:
+              name: Actividad de cierre
+          title: Reflexiones de novatos para el taller de verano 2019
+          description_audience: Facilitadores novatos de 6-12 en período de formación
+          description_short: 'Materiales de reflexión para facilitadores novatos de 2019 en período de formación '
+          description: Este es el conjunto de reflexiones para facilitadores novatos de Code.org en período de formación durante el taller de verano de 5 días. Aquí encontrarás indicaciones de reflexión para cada día de tu taller presencial de verano de 5 días. Estas preguntas serán la base del trabajo que hacemos en el Taller de Formación para Facilitadores.
+        csd-test-saving-state:
+          stages:
+            csd digital unplugged WIAC L1:
+              name: csd digital sin conexión WIAC L1
+            csd digital unplugged WIAC L2:
+              name: csd digital sin conexión WIAC L2
+            csd digital unplugged WIAC L3:
+              name: csd digital sin conexión WIAC L3
+            What is a Computer?:
+              name: '¿Qué es una computadora?'
+            Problem Solving Process:
+              name: Proceso de resolución de problemas
+          title: Widgets de prueba que guardan el estado

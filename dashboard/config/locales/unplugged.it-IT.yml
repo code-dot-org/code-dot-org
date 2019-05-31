@@ -134,8 +134,10 @@ it:
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       GoingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
@@ -154,9 +156,11 @@ it:
           essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       ComputationalThinking:
         title: Pensiero computazionale
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione,
@@ -279,20 +283,24 @@ it:
           amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       courseD_unplugged_digitalCitizenship:
         title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseE_unplugged_privateInformation:
         title: 'Cittadinanza digitale: Dati personali '
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -305,8 +313,10 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseABC_unplugged_bigEvent:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
@@ -315,9 +325,11 @@ it:
           di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       courseC_unplugged_buildingAFoundation:
         title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile.
@@ -428,8 +440,10 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -446,12 +460,15 @@ it:
           nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
         title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       Conditionals_2018:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -459,9 +476,11 @@ it:
           e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       BinaryImages_2018:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente
@@ -531,7 +550,9 @@ it:
           un programma un''istruzione alla volta.'
       courseD_unplugged_digitalCitizenship_2019:
         title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       BinaryImages_2019:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente
@@ -557,9 +578,10 @@ it:
           una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       BigEvent_2019:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
@@ -589,8 +611,10 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2019:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -598,9 +622,11 @@ it:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       courseB_unplugged_CnC_2019:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di

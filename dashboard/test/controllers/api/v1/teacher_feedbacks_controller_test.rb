@@ -212,6 +212,24 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Test Name', parsed_response[0]['teacher_name']
   end
 
+  test 'increment_visit_count returns no_content on successful save' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(true)
+    feedback = create :teacher_feedback
+
+    sign_in feedback.student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :no_content
+  end
+
+  test 'increment_visit_count returns unprocessable_entity on failed save' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(false)
+    feedback = create :teacher_feedback
+
+    sign_in feedback.student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :unprocessable_entity
+  end
+
   private
 
   def parsed_response

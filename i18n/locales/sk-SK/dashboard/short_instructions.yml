@@ -1098,9 +1098,9 @@ sk:
       courseC_PlayLab_events6: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
       courseC_PlayLab_events6_2018: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
       courseC_PlayLab_events6_2019: Napíš program na pohyb tučniaka Waddles použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
-      courseC_PlayLab_events7: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
-      courseC_PlayLab_events7_2018: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
-      courseC_PlayLab_events7_2019: Blok "Opakujte navždy" umožňuje spustiť kód znova a znova až kým to nezastavíš. Použi tento blok aby sa Dino (postava 2) neustále pohyboval hore a dole 400 pixelov.
+      courseC_PlayLab_events7: Blok `opakuj donekonečna` umožňuje spustiť kód znova a znova, až do konca hry. Použi tento blok na to, aby sa Dino (postava 2) neustále pohyboval hore a dole o 400 pixelov.
+      courseC_PlayLab_events7_2018: Blok `opakuj donekonečna` umožňuje spustiť kód znova a znova, až do konca hry. Použi tento blok na to, aby sa Dino (postava 2) neustále pohyboval hore a dole o 400 pixelov.
+      courseC_PlayLab_events7_2019: Blok `opakuj donekonečna` umožňuje spustiť kód znova a znova, až do konca hry. Použi tento blok na to, aby sa Dino (postava 2) neustále pohyboval hore a dole o 400 pixelov.
       courseC_PlayLab_events8: |-
         Tučniak Waddles (postava 1) musí prehrať zvuk "úderu" a povedať "Au!" keď narazí do Chompa (postava 2).
         Keď to nastavíš, hraj hru tak, aby sa to stalo.
@@ -1991,6 +1991,9 @@ sk:
       courseF_artist_for_challenge2_2019: Viete zistiť, ako znova nakresliť túto kresbu s jedinou slučkou?
       courseF_artist_ramp8: Teraz s pomocu Umelca nakresli štvorec!
       courseF_artist_ramp8_2018: Teraz s pomocu Umelca nakresli štvorec!
+      courseF_artist_variables10: 'Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi.  '
+      courseF_artist_variables10_2018: 'Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi.  '
+      courseF_artist_variables10_2019: 'Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi.  '
       courseF_artist_variables3: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
       courseF_artist_variables3_2018: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
       courseF_artist_variables3_2019: Presuň dĺžku 50 do premennej, takže ju budeme môcť využívať v zopár ďalších úlohách.
@@ -2009,6 +2012,16 @@ sk:
       courseF_artist_variables7: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
       courseF_artist_variables7_2018: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
       courseF_artist_variables7_2019: 'Nakresli trojuholník so stranami dĺžky 150 pixelov. '
+      courseF_artist_variables8: Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+      courseF_artist_variables8_2018: Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+      courseF_artist_variables8_2019: Prerob trojuholníkový kód z predošlej úlohy, ale tentokrát použi blok `nastav dĺžka (length) na`, aby si zmenil premennú `dĺžka` na `dĺžka`+10 na konci každej iterácie cyklu.
+      courseF_artist_variables9: Sleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3! Neobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu.
+      courseF_artist_variables9_2018: Sleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3! Neobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu.
+      courseF_artist_variables9_2019: Sleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3! Neobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu.
+      courseF_artist_variablesFP: "**Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu. "
+      courseF_artist_variablesFP_2018: "**Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu. "
+      courseF_artist_variablesFP_2019: "**Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu. "
+      courseF_artist_variables_10: 'Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú rôznymi spôsobmi.  '
       courseF_artist_variables_2: |-
         Teraz pouźi ďalší cyklus a nakresli tri také isté trojuholníky za sebou.
         Môžeš doň vložiť kód z predošlej úlohy.
@@ -2017,6 +2030,15 @@ sk:
         **EJHA!** My vlastne potrebujeme trojuholníky široké 60 pixelov, spolu so skokmi o 60 pixelov.
         Nie si rád, že používaš premennú?
       courseF_artist_variables_6a: Vytvor tento návrh, kde sú štvorce široké 80 pixelov a umelec preskočí o 80 pixelov dole medzi každými dvomi.
+      courseF_artist_variables_9: |-
+        Sleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3!
+
+        Neobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu.
+      courseF_artist_variables_FP: |-
+        **Voľná hra:** Použi, čo si sa naučil, a vytvor svoju vlastnú kresbu.
+
+        Ako môžeš použiť premenné so štvorcami, päťuholníkmi alebo šesťuholníkmi?
+      courseF_artistembed_variables9: Sleduj, čo sa stane, ak zopakuješ kód z predošlej úlohy 30 krát namiesto 3! Neobmedzuj sa, sprav tvoje čiary hocijakou farbou alebo vzorom len tak pre zábavu.
       courseF_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseF_bee_conditionals1_predict1: Skontroluj, či je pod oblakom kvet. Ak tam je kvet, pozbieraj nektár.

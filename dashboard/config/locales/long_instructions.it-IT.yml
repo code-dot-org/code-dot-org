@@ -797,8 +797,8 @@ it:
         di 89 gradi, invece di 90 gradi.
       Course 4 Artist For Loops 2: "In questo esercizio il codice per disegnare un
         triangolo è stato inserito in un ciclo con contatore che conta da 50 a 100
-        con _passo_ di 10.  \n  \n  \n**Attenzione**: assicurati di aver guardato
-        bene il codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
+        con _passo_ di 10.  \n\n**Attenzione**: assicurati di aver guardato bene il
+        codice _prima_ di cliccare su \"Esegui\".\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-10#VIDEO\"
         target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Artist For Loops 3: Per disegnare questa figura usa come riferimento
         il codice del precedente esercizio. Il triangolo più piccolo ha i lati di
@@ -920,12 +920,11 @@ it:
         parametro chiamato `direction` (<i>direzione </i>)?
       Course 4 Bee Params 6: "In questo esercizio, sui fiori si trovano quantità differenti
         di nettare e il codice che trovi già pronto non risolve l'esercizio. Non sarebbe
-        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n
-        \ \n  \nModifica la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>)
-        aggiungendo un nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>),
-        che specifica la quantità di nettare da raccogliere.\n\nProbabilmente sarà
-        meglio cambiare anche nome alla funzione e, se vuoi, puoi cambiare il nome
-        anche ai parametri."
+        bello se potessimo raccogliere tutto il nettare con una sola funzione?  \n\nModifica
+        la funzione `get 5 nectar` (<i>prendi 5 dosi di nettare</i>) aggiungendo un
+        nuovo parametro, chiamato `nectar units` (<i>dosi di nettare</i>), che specifica
+        la quantità di nettare da raccogliere.\n\nProbabilmente sarà meglio cambiare
+        anche nome alla funzione e, se vuoi, puoi cambiare il nome anche ai parametri."
       Course 4 Bee Params 7: Usa la nuova funzione `get many nectar` (<i>prendi molte
         dosi di nettare</i>) per raccogliere tutto il nettare.
       Course 4 Bee Params 8: |-
@@ -4637,19 +4636,19 @@ it:
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2018: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops7_2019: |-
         Usa ciò che hai imparato per fare questo disegno.
 
         -   Ogni quadrato ha **lati di 100 pixel** e **angoli di 90 gradi**.
         -   Dovrai girare di **60 gradi tra un quadrato e l'altro**. Perché? Perché per fare un giro completo servono 360 gradi e se devi distribuire 6 quadrati in un giro completo, devi dividere i 360 gradi in 6 parti, quindi 360:6=60.
-        -   Assicurati di saltare \*\* 50 pixel per raggiungere il quadrato successivo\*\*.
+        -   Assicurati di saltare **50 pixel per raggiungere il quadrato successivo**.
       courseD_artist_nestedLoops8: |-
         Usa ciò che hai imparato nell'ultimo paio di esercizi per costruire dall'inizio quest'immagine.
 
@@ -4719,6 +4718,24 @@ it:
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Gli _ottagoni_ si realizzano con angoli di **45 gradi**.
         -   I _triangoli_ si realizzano con angoli di **120 gradi**.
+      courseD_artist_nestedLoops_challenge2: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Questo programma non è corretto! Riesci a correggerlo per fare in modo che disegni l'immagine che vedi nell'area di lavoro?
+
+        -   Il primo ciclo interno dovrebbe disegnare un ottagono.
+        -   Il secondo ciclo interno dovrebbe disegnare un esagono.
+        -   Il terzo ciclo interno dovrebbe disegnare un quadrato.
       courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Ciao,
         sono Elsa di Arendelle. Aiutami a disegnare una forma.\"_\n\nDisegna una piccola
         figura, larga tra **20 e 50 pixel**.  Può avere la forma che preferisci.\n\n<hr/>\n\nPotresti
@@ -5845,12 +5862,12 @@ it:
         come arrivare fino al maialino!
       courseD_maze_ramp5a_2019: Fai attenzione alla sequenza e vedi se riesci a capire
         come arrivare fino al maialino!
-      courseD_maze_ramp5b: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il maialino
+      courseD_maze_ramp5b: "**Sfida:** Aiuta l'uccellino a trovare il maialino in
+        questo labirinto!"
+      courseD_maze_ramp5b_2018: "**Sfida:** Aiuta l'uccellino a trovare il maialino
         in questo labirinto!"
-      courseD_maze_ramp5b_2018: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il
-        maialino in questo labirinto!"
-      courseD_maze_ramp5b_2019: "\\*\\*Sfida: \\*\\* Aiuta l'uccellino a trovare il
-        maialino in questo labirinto!"
+      courseD_maze_ramp5b_2019: "**Sfida:** Aiuta l'uccellino a trovare il maialino
+        in questo labirinto!"
       courseD_maze_ramp5c: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2018: Aiuta l'uccellino a raggiungere il maialino.
       courseD_maze_ramp5c_2019: Aiuta l'uccellino a raggiungere il maialino.
