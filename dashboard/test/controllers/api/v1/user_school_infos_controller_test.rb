@@ -2,9 +2,15 @@ require 'test_helper'
 require 'timecop'
 
 class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
-  test "last confirmation date in user school infos table is updated" do
+  setup do
     Timecop.freeze
+  end
 
+  teardown do
+    Timecop.return
+  end
+
+  test "last confirmation date in user school infos table is updated" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     original_confirmation_date = user_school_info.last_confirmation_date
@@ -21,8 +27,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     refute_equal original_user_school_info_created_at, user_school_info[:updated_at]
     refute_equal original_confirmation_date.to_datetime, user_school_info.last_confirmation_date.to_datetime
-
-    Timecop.return
   end
 
   test "will redirect user to sign in" do
@@ -126,8 +130,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, no previoius, partial, manual' do
-    Timecop.freeze
-
     user = create :teacher
     sign_in user
 
@@ -145,13 +147,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info
     assert user.school_info.school_name.nil?
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'initial, no previoius, complete, drop down' do
-    Timecop.freeze
-
     user = create :teacher
     sign_in user
 
@@ -175,13 +173,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info.school
     refute_empty user.user_school_infos
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'initial, no previous, complete, manual' do
-    Timecop.freeze
-
     user = create :teacher
     sign_in user
 
@@ -204,13 +198,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info.school_name
     refute_empty user.user_school_infos
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'initial, partial previous, blank, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     user = create :teacher, school_info: school_info
@@ -235,13 +225,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal user.school_info, school_info
     assert_first_tenure(user)
     assert_nil user.school_info.country
-
-    Timecop.return
   end
 
   test 'initial, partial previous, unchanged, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     user = create :teacher, school_info: school_info
@@ -265,13 +251,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal user.school_info, school_info
     assert_first_tenure(user)
     refute_nil user.school_info.country
-
-    Timecop.return
   end
 
   test 'initial, partial previous, submit, partial, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
 
     user = create :teacher, school_info: school_info
@@ -297,13 +279,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(user)
     assert_nil user.school_info.school_name
     refute_nil user.school_info.country
-
-    Timecop.return
   end
 
   test 'initial, partial previous, submit, complete, drop down' do
-    Timecop.freeze
-
     user = create :teacher
     sign_in user
 
@@ -325,13 +303,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info.school
     refute_empty user.user_school_infos
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'initial, partial previous, submit, complete, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     user = create :teacher, school_info: school_info
@@ -353,13 +327,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_nil user.school_info.school_name
     refute_empty user.user_school_infos
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, blank, manual' do
-    Timecop.freeze
-
     school_info = create :school_info
 
     user = create :teacher, school_info: school_info
@@ -380,13 +350,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute_empty user.user_school_infos
     assert_equal user.user_school_infos.count, 1
     assert_in_delta 1.hour.ago.to_i, user.user_school_infos.last.last_confirmation_date.to_i, 10
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, unchanged, dropdown' do
-    Timecop.freeze
-
     school_info = create :school_info
 
     user = create :teacher, school_info: school_info
@@ -404,13 +370,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success, response.body
     refute_nil user.school_info
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, unchanged, manual' do
-    Timecop.freeze
-
     school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
     user = create :teacher, school_info: school_info
@@ -429,13 +391,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success, response.body
     refute_nil user.school_info
     assert_first_tenure(user)
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, partial, manual' do
-    Timecop.freeze
-
     school_info = SchoolInfo.create({country: 'United States', school_name: 'Philly High Harmony', school_type: 'public', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
     user = create :teacher, school_info: school_info
@@ -456,13 +414,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_nil user.user_school_infos.last.end_date
     assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
     assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, complete, dropdown' do
-    Timecop.freeze
-
     school_info = create :school_info
 
     user = create :teacher, school_info: school_info
@@ -487,13 +441,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_nil user.user_school_infos.last.end_date
     assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
     assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
-
-    Timecop.return
   end
 
   test 'confirmation, complete previous, submit, complete, manual' do
-    Timecop.freeze
-
     school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
     user = create :teacher, school_info: school_info
@@ -516,13 +466,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
     assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
     refute_equal user.user_school_infos.last.school_info.school_name, user.user_school_infos.first.school_info.school_name
-
-    Timecop.return
   end
 
   test 'confirmation, partial previous, blank, manual' do
-    Timecop.freeze
-
     user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     user.update(school_info: complete_school_info)
@@ -546,8 +492,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, unchanged, manual' do
-    Timecop.freeze
-
     user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     user.update(school_info: complete_school_info)
@@ -572,8 +516,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, partial, manual' do
-    Timecop.freeze
-
     user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     user.update(school_info: complete_school_info)
@@ -599,8 +541,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, complete, dropdown' do
-    Timecop.freeze
-
     new_school = create :school
 
     user = create :teacher
@@ -627,8 +567,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, complete, manual' do
-    Timecop.freeze
-
     user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
     user.update(school_info: complete_school_info)
