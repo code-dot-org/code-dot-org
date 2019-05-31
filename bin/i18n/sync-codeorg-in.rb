@@ -155,9 +155,9 @@ def localize_level_content
           "#{script_i18n_directory}/other"
         end
       FileUtils.mkdir_p script_i18n_directory unless Dir.exist? script_i18n_directory
-      script_i18n_filename = "#{script_i18n_directory}/#{script.name}.yml"
+      script_i18n_filename = "#{script_i18n_directory}/#{script.name}.json"
       File.open(script_i18n_filename, 'w') do |file|
-        file.write(to_crowdin_yaml({"en" => {"data" => script_strings}}))
+        file.write(JSON.pretty_generate({"en" => {"data" => script_strings}}))
       end
     end
   end

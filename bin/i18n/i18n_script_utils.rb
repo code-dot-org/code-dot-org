@@ -109,8 +109,18 @@ def restore(source, redacted, dest, *plugins)
   return unless File.exist?(source)
   return unless File.exist?(redacted)
 
-  source_data = YAML.load_file(source)
-  redacted_data = YAML.load_file(redacted)
+  source_data =
+    if File.extname(source) == 'json'
+      JSON.load(source)
+    else
+      YAML.load_file(source)
+    end
+  redacted_data =
+    if File.extname(redacted) == 'json'
+      JSON.load(redacted)
+    else
+      YAML.load_file(redacted)
+    end
 
   return unless source_data&.values&.first&.length
   return unless redacted_data&.values&.first&.length
@@ -156,7 +166,7 @@ def get_level_url_key(script, level)
 end
 
 def get_level_from_url(url)
-  url_regex = %r{https://studio.code.org/s/(?<script_name>[a-z0-9\s-]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
+  url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
   matches = url.match(url_regex)
   if matches[:level_info].starts_with?("extras")
     level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
