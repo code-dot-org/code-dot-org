@@ -40,6 +40,10 @@ const style = {
     lineHeight: 'inherit',
     color: 'inherit'
   },
+  errorMessage: {
+    color: color.red,
+    margin: 7
+  },
   libraryName: {
     fontSize: 'large',
     lineHeight: 'inherit',
@@ -101,11 +105,6 @@ const style = {
   qrCode: {
     marginRight: 20
   },
-  publishButton: {
-    marginLeft: 0,
-    backgroundColor: color.cyan,
-    color: color.white
-  },
   closeButton: {
     marginRight: 0,
     backgroundColor: color.orange,
@@ -129,7 +128,8 @@ class AdvancedShareOptions extends React.Component {
       iframeWidth: PropTypes.number.isRequired
     }).isRequired,
     openPublishLibraryDialog: PropTypes.func,
-    libraryName: PropTypes.string
+    libraryName: PropTypes.string,
+    containsError: PropTypes.bool
   };
 
   constructor(props) {
@@ -283,6 +283,22 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
+  clickedPublishLibrary = () => {
+    if (!this.props.containsError) {
+      this.props.openPublishLibraryDialog();
+    }
+  };
+
+  publishButtonStyle = () => {
+    return {
+      marginLeft: 0,
+      color: color.white,
+      backgroundColor: this.props.containsError
+        ? color.background_gray
+        : color.cyan
+    };
+  };
+
   renderLibraryTab() {
     return (
       <div>
@@ -292,13 +308,21 @@ class AdvancedShareOptions extends React.Component {
           Toolbox, and choosing "Manage Libraries."
         </p>
         <p style={style.libraryName}>Library name: {this.props.libraryName}</p>
-        <button
-          type="button"
-          onClick={this.props.openPublishLibraryDialog}
-          style={style.publishButton}
-        >
-          Publish
-        </button>
+        <div style={{display: 'flex'}}>
+          <button
+            type="button"
+            onClick={this.clickedPublishLibrary}
+            style={this.publishButtonStyle()}
+          >
+            Publish
+          </button>
+          {this.props.containsError && (
+            <p style={{...style.p, ...style.errorMessage}}>
+              We can’t publish your library because there is an error in the
+              code. Go look for the red error indicator and fix the bugs.
+            </p>
+          )}
+        </div>
       </div>
     );
   }
@@ -584,7 +608,8 @@ class AdvancedShareOptions extends React.Component {
 export const UnconnectedAdvancedShareOptions = Radium(AdvancedShareOptions);
 export default connect(
   state => ({
-    libraryName: state.libraryShareDialog.libraryName
+    libraryName: state.libraryShareDialog.libraryName,
+    containsError: state.libraryShareDialog.containsError
   }),
   dispatch => ({
     openPublishLibraryDialog() {
