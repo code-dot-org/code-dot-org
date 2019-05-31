@@ -541,11 +541,16 @@ Resources:
                   - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
               - Effect: Allow
                 Action:
+                  - 'rds:DeleteDBCluster'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>-temporary-clone"
+              - Effect: Allow
+                Action:
                   - 'rds:CreateDBInstance'
                   - 'rds:DeleteDBInstance'
                 Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>-temporary-clone"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>-temporary-clone"
               - Effect: Allow
                 Action:
                   - 'rds:DescribeDBInstances'
