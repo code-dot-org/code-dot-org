@@ -123,8 +123,10 @@ def distribute_course_content(locale)
     "function_names" => {}
   }
 
-  Dir.glob("i18n/locales/#{locale}/course_content/**/*.yml") do |loc_file|
-    translated_data = YAML.load_file(loc_file)
+  Dir.glob("i18n/locales/#{locale}/course_content/**/*.json") do |loc_file|
+    file = File.open loc_file
+    translated_data = JSON.load(file)
+    file.close
     first_key = translated_data.keys.first
     translated_data = translated_data[first_key]
     next unless translated_data
