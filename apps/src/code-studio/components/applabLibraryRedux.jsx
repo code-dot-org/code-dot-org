@@ -6,7 +6,7 @@ export default function reducer(state, action) {
   switch (action.type) {
     case SET_LIBRARIES:
       return {
-        libraries: action.libraries
+        libraries: action.libraries || []
       };
     case ADD_LIBRARY:
       // For now (during the pilot), you can only import one library at a time.

@@ -8,8 +8,7 @@ const MINIMUM_PROPS = {
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
   onSelectUser: () => {},
   getSelectedUserId: () => {},
-  levels: null,
-  inMiniRubricExperiment: false
+  levels: null
 };
 
 const levels = [

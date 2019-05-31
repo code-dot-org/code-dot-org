@@ -26,6 +26,6 @@ class ScriptConfig
   end
 
   def self.csf_scripts
-    ScriptConstants::CATEGORIES.fetch_values(:csf, :csf_2018, :csf_international, :twenty_hour).flatten.uniq
+    Script.script_names_by_curriculum_umbrella('CSF')
   end
 end

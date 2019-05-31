@@ -21,6 +21,23 @@ level 'U7 Param Return Practice Part 5', progression: 'console.log Practice'
 level 'U7 Param Investigate Calculator App', progression: 'App Practice'
 level 'U7 Param Practice App 2', progression: 'App Practice'
 
-stage 'Libraries', flex_category: 'csp_libraries'
-level 'U7 L01 More with Functions', progression: 'Intro to Libraries'
-level 'U7 L05 Exit Ticket', progression: 'Check Your Understanding', assessment: true
+stage 'Libraries Explore', flex_category: 'csp_libraries'
+level 'U7 L04 Exit Ticket', progression: 'Check Your Understanding', assessment: true
+
+stage 'Libraries Investigate', flex_category: 'csp_libraries'
+level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
+level 'U7 Libraries List Math Library', progression: 'Code Investigation'
+level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
+
+stage 'Libraries Project', flex_category: 'csp_libraries'
+level 'U7 Libraries Explanation', progression: 'Video: Libraries'
+level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
+level 'CSP Pilot U7 Libraries Make Pt 4', progression: 'Libraries Playground'
+
+stage 'Student Survey (Libraries)', lockable: true
+level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true
+
+stage 'Teacher Survey (Libraries)', lockable: true
+level 'Teacher Late Spring Pilot Survey Libraries', progression: 'Teacher Survey (Libraries)', assessment: true
