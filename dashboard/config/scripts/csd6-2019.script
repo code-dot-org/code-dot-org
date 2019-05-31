@@ -7,6 +7,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit6/"],
 stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/csd-19/unit6/{LESSON}'
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 family_name 'csd6'
