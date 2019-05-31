@@ -53,7 +53,21 @@ class StudentTable extends React.Component {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    levels: PropTypes.array
+    levels: PropTypes.array,
+    sectionId: PropTypes.number,
+    scriptName: PropTypes.string
+  };
+
+  getRowLink = studentId => {
+    return this.props.levels
+      ? `${
+          this.props.levels[0].bonus
+            ? 'extras'
+            : this.props.levels[0].levelNumber
+        }?section_id=${this.props.sectionId}&user_id=${studentId}`
+      : `${this.props.scriptName}?section_id=${
+          this.props.sectionId
+        }&user_id=${studentId}`;
   };
 
   getRowStyle = (selectedUserId, id) => {
@@ -85,18 +99,24 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                <div style={styles.studentTableRow}>
-                  {levels && (
-                    <TeacherPanelProgressBubble
-                      level={levels.find(level => student.id === level.user_id)}
-                    />
-                  )}
-                  <span
-                    style={levels ? styles.nameWithBubble : styles.nameInScript}
-                  >
-                    {student.name}
-                  </span>
-                </div>
+                <a href={this.getRowLink(student.id)} style={{width: '100%'}}>
+                  <div style={styles.studentTableRow}>
+                    {levels && (
+                      <TeacherPanelProgressBubble
+                        level={levels.find(
+                          level => student.id === level.user_id
+                        )}
+                      />
+                    )}
+                    <span
+                      style={
+                        levels ? styles.nameWithBubble : styles.nameInScript
+                      }
+                    >
+                      {student.name}
+                    </span>
+                  </div>
+                </a>
               </td>
             </tr>
           ))}
