@@ -346,9 +346,7 @@ class ContactRollupsValidation
     CDO.log.info s
   end
 
-  private
-
-  def initialize_connection_to_database_clone
+  def self.initialize_connection_to_database_clone
     rds_client = Aws::RDS::Client.new
     clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
       {
@@ -356,7 +354,7 @@ class ContactRollupsValidation
         filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
         max_records: 1
       }
-    ).first.endpoint
+    ).db_cluster_endpoints.first.endpoint
 
     # Connection to read from Pegasus clone database.
     pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
