@@ -1,5 +1,5 @@
 module SurveyResultsHelper
-  DIVERSITY_SURVEY_ENABLED = true
+  DIVERSITY_SURVEY_ENABLED = false
   NPS_SURVEY_ENABLED = false
 
   def show_diversity_survey?(kind)
