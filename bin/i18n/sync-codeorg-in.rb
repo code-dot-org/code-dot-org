@@ -65,7 +65,6 @@ def localize_level_content
   Dir.chdir(Rails.root) do
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
-
       script_strings = {
         "display_name" => {},
         "short_instructions" => {},
@@ -147,9 +146,14 @@ def localize_level_content
       script_strings.delete_if {|_key, value| value.nil? || value.try(:empty)}
 
       script_i18n_directory = "../i18n/locales/source/course_content"
-      if script.version_year
-        script_i18n_directory = "#{script_i18n_directory}/#{script.version_year}"
-      end
+      script_i18n_directory =
+        if script.version_year
+          "#{script_i18n_directory}/#{script.version_year}"
+        elsif ScriptConstants.script_in_category?(:hoc, script.name)
+          "#{script_i18n_directory}/Hour of Code"
+        else
+          "#{script_i18n_directory}/other"
+        end
       FileUtils.mkdir_p script_i18n_directory unless Dir.exist? script_i18n_directory
       script_i18n_filename = "#{script_i18n_directory}/#{script.name}.yml"
       File.open(script_i18n_filename, 'w') do |file|
