@@ -949,7 +949,7 @@ class ContactRollups
         db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
         filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
       }
-    ).first.endpoint
+    ).db_cluster_endpoints.first.endpoint
 
     # Connection to write to Pegasus clone database.
     pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
