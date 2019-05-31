@@ -30,8 +30,6 @@ class ContactRollups
     query_timeout: MAX_EXECUTION_TIME_SEC
   )
 
-  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
-
   def self.mysql_multi_connection
     # return a connection with the MULTI_STATEMENTS flag set that allows multiple statements in one DB call
     pegasus_clone_writer_uri = URI(CDO.pegasus_reporting_db_writer)
