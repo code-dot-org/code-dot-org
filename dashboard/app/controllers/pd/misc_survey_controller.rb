@@ -16,9 +16,9 @@ module Pd
     def new
       @form_id = params[:form_id]
 
-      return render '/pd/application/teacher_application/logged_out' unless current_user
-      return render '/pd/application/teacher_application/not_teacher' unless current_user.teacher?
-      return render '/pd/application/teacher_application/no_teacher_email' unless current_user.email.present?
+      return render :logged_out unless current_user
+      return render :not_teacher unless current_user.teacher?
+      return render :no_teacher_email unless current_user.email.present?
 
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
