@@ -169,25 +169,19 @@ export default connect(
               result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
                 result
               );
-              this.appendLog({
-                output: {value: result, fromConsoleLog: false}
-              });
+              this.appendLog({output: result, fromConsoleLog: false});
             } else {
               const result = this.props.evalInCurrentScope(input);
               this.appendLog('< ' + String(result));
             }
           } catch (err) {
             experiments.isEnabled('react-inspector')
-              ? this.appendLog({
-                  output: {value: String(err), fromConsoleLog: false}
-                })
+              ? this.appendLog({output: String(err), fromConsoleLog: false})
               : this.appendLog('< ' + String(err));
           }
         } else {
           experiments.isEnabled('react-inspector')
-            ? this.appendLog({
-                output: {value: '(not running)', fromConsoleLog: false}
-              })
+            ? this.appendLog({output: '(not running)', fromConsoleLog: false})
             : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
@@ -244,28 +238,28 @@ export default connect(
 
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((row, i) => {
+        return this.props.logOutput.map((rowValue, i) => {
           try {
-            row = row.toJS();
+            rowValue = rowValue.toJS();
           } catch (error) {
-            return <Inspector key={i} data={row} />;
+            return <Inspector key={i} data={rowValue} />;
           }
-          if (row.input) {
-            return <div key={i}>&gt; {row.input}</div>;
+          if (rowValue.input) {
+            return <div key={i}>&gt; {rowValue.input}</div>;
           } else if (
-            row.output.value ||
-            FALSY_VALUES.has(row.output.value) ||
-            (row.output.value === undefined && row.output.fromConsoleLog) ||
-            (row.output.value === undefined && !row.output.fromConsoleLog)
+            rowValue.output ||
+            FALSY_VALUES.has(rowValue.output) ||
+            (rowValue.output === undefined && rowValue.fromConsoleLog) ||
+            (rowValue.output === undefined && !rowValue.fromConsoleLog)
           ) {
-            if (row.output.fromConsoleLog) {
-              return <Inspector key={i} data={row.output.value} />;
+            if (rowValue.fromConsoleLog) {
+              return <Inspector key={i} data={rowValue.output} />;
             } else {
               return (
                 <div key={i}>
                   &lt;{' '}
                   <div style={style.inspector}>
-                    <Inspector data={row.output.value} />
+                    <Inspector data={rowValue.output} />
                   </div>
                 </div>
               );
