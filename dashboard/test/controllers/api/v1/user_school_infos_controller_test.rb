@@ -153,12 +153,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 1.hour
 
     assert_creates SchoolInfo do
-      patch "/api/v1/user_school_infos", params: {
-        user: {
-          school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'The School of Rock',
-            full_address: 'Seattle, Washington USA'}
-        }
-      }
+      submit_complete_school_info_manual
     end
 
     @teacher.reload
@@ -270,12 +265,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
-          full_address: 'Seattle, Washington'}
-      }
-    }
+    submit_complete_school_info_manual
 
     @teacher.reload
 
@@ -393,12 +383,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     Timecop.travel 1.year
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'private', school_name: 'School of Rock',
-          full_address: 'Nashville, TN'}
-      }
-    }
+
+    submit_complete_school_info_manual
 
     @teacher.reload
 
@@ -505,13 +491,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 7.days
 
     sign_in @teacher
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Pleasantville High', full_address: 'Dallas, TX'}
-      }
-    }
+    submit_complete_school_info_manual
 
-    assert_equal @teacher.user_school_infos.last.school_info.school_name, 'Pleasantville High'
+    refute_equal @teacher.user_school_infos.last.school_info.school_name, 'Philly High Harmony'
+    refute_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal @teacher.user_school_infos.count, 2
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
   end
@@ -549,6 +532,15 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {school_id: school.id}
+      }
+    }
+  end
+
+  private def submit_complete_school_info_manual
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
+          full_address: 'Seattle, Washington'}
       }
     }
   end
