@@ -417,8 +417,36 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'confirmation, complete previous, submit, complete, dropdown' do
-  # end
+  test 'confirmation, complete previous, submit, complete, dropdown' do
+    Timecop.freeze
+
+    school_info = create :school_info
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    new_school = create :school
+
+    Timecop.travel 1.year
+
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {school_id: new_school.id}
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+
+    refute_nil user.school_info
+    assert_equal user.user_school_infos.count, 2
+    assert_nil user.user_school_infos.last.end_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
+    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
+
+    Timecop.return
+  end
 
   # test 'confirmation, complete previous, submit, complete, manual' do
   # end
