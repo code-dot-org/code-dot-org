@@ -536,7 +536,9 @@ Resources:
                   - 'rds:RestoreDBClusterToPointInTime'
                   - 'rds:DeleteDBCluster'
                   - 'rds:DescribeDBClusterEndpoints'
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
               - Effect: Allow
                 Action:
                   - 'rds:CreateDBInstance'
