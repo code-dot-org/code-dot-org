@@ -120,6 +120,7 @@ def create_database_clone
   ChatClient.message(CHAT_CHANNEL, "Done creating clone of database cluster.")
 end
 
+# The AWS SDK does not currently provide waiters for DBCluster operations.
 def wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
   rds_client = Aws::RDS::Client.new
   attempts = 0
