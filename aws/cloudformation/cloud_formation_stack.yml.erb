@@ -543,7 +543,9 @@ Resources:
                 Action:
                   - 'rds:CreateDBInstance'
                   - 'rds:DeleteDBInstance'
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>*"
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:<%=CDO.db_cluster_id%>*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:<%=CDO.db_cluster_id%>*"
               - Effect: Allow
                 Action:
                   - 'rds:DescribeDBInstances'
