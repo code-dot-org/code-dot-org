@@ -78,7 +78,7 @@ module Pd::SurveyPipeline
       results
     end
 
-    # Compute a descendant key based on original value and sub_value digest
+    # Compute a descendant key based on original value and sub_value digest.
     def self.compute_descendant_key(value, sub_value)
       # Use XXhash, non-cryptographic fast hashing algorithm
       "#{value}_#{XXhash.xxh64(sub_value || '')}"
