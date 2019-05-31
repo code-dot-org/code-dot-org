@@ -101,10 +101,8 @@ class ScriptTeacherPanel extends React.Component {
         );
       }
     }
-    let sectionId = null;
-    if (selectedSection) {
-      sectionId = selectedSection.id;
-    }
+
+    const sectionId = selectedSection && selectedSection.id;
 
     return (
       <TeacherPanel>

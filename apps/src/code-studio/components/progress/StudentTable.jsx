@@ -59,15 +59,18 @@ class StudentTable extends React.Component {
   };
 
   getRowLink = studentId => {
-    return this.props.levels
-      ? `${
-          this.props.levels[0].bonus
-            ? 'extras'
-            : this.props.levels[0].levelNumber
-        }?section_id=${this.props.sectionId}&user_id=${studentId}`
-      : `${this.props.scriptName}?section_id=${
-          this.props.sectionId
-        }&user_id=${studentId}`;
+    let url;
+    const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
+
+    if (this.props.levels) {
+      url = this.props.levels[0].bonus
+        ? 'extras'
+        : this.props.levels[0].levelNumber;
+    } else {
+      url = this.props.scriptName;
+    }
+
+    return url + queryStr;
   };
 
   getRowStyle = (selectedUserId, id) => {
