@@ -2,9 +2,16 @@ require 'test_helper'
 require 'timecop'
 
 class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
-  test "last confirmation date in user school infos table is updated" do
+  setup do
     Timecop.freeze
+    @teacher = create :teacher
+  end
 
+  teardown do
+    Timecop.return
+  end
+
+  test "last confirmation date in user school infos table is updated" do
     user_school_info = create :user_school_info
     sign_in user_school_info.user
     original_confirmation_date = user_school_info.last_confirmation_date
@@ -21,8 +28,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     refute_equal original_user_school_info_created_at, user_school_info[:updated_at]
     refute_equal original_confirmation_date.to_datetime, user_school_info.last_confirmation_date.to_datetime
-
-    Timecop.return
   end
 
   test "will redirect user to sign in" do
@@ -45,6 +50,49 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 403
   end
 
+  # The next set of tests checks all of the (known) valid call patterns for the
+  # PATCH /api/v1/user_school_infos route.
+  #
+  # We identified the parameters that affect the expected behavior of this route:
+  #
+  # PREVIOUS STATE VARIATIONS
+  #   *  Iniital flow / Confirmation flow
+  #      Initial flow is when the teacher has never given us complete school
+  #      info before (~7 days after sign-up). Confirmation flow is when we
+  #      ask them to confirm/change their school info, a year later.
+  #
+  #   *  No previous entry / partial previous entry / complete previous entry
+  #      It's possible for a teacher to save partial school info, in which case
+  #      we record it and use it when we ask them to complete that info at the
+  #      earliest opportunity.
+  #
+  #   Together, these produce four relevant previous states:
+  #   1. Initial flow, no previous entry
+  #      The very first time we ask a teacher for this information
+  #   2. Initial flow, partial previous entry
+  #      Teacher has given us partial entry but never a complete entry
+  #   3. Confirmation flow, complete previous entry
+  #      Our first time re-prompting the teacher a year after the last complete entry
+  #   4. Confirmation flow, partial previous entry
+  #      The teacher has a complete previous entry (because it's the confirmation flow)
+  #      _and_ a partial previous entry, we want them to complete the partial entry.
+  #
+  # CALL PARAMETERS
+  #   *.  Blank / Unchanged / Partial / Complete
+  #   *.  Found school in Dropdown / Not in dropdown, manually entered
+  #
+  #   Together, these produce six relevant call parameter patterns:
+  #   1. Blank submission
+  #   2. Unchanged from previous, school is in dropdown
+  #   3. Unchanged from previous, school is manually entered
+  #   4. Partial entry, school is manually entered
+  #   5. Complete entry, school is in dropdown
+  #   6. Complete entry, school is manually entered
+  #
+  # All together, we have less than 24 cases because not every previous state and
+  # call pattern combination makes sense - for example, you can't make an
+  # "Unchanged / Dropdown" call when the previous entry is partial.
+
   def assert_first_tenure(user)
     tenure = user.user_school_infos.last
     assert_equal user.user_school_infos.count, 1
@@ -53,559 +101,465 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_nil tenure.end_date
   end
 
-  def assert_first_tenure_partial(user)
-    tenure = user.user_school_infos.last
-    assert_equal user.user_school_infos.count, 2
-    refute_equal user.created_at, tenure.start_date
-    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
-    assert_nil tenure.end_date
-    refute_nil user.school_info.school_name
-    refute_nil user.school_info.country
-  end
-
   test 'initial, no previoius, blank, manual' do
-    user = create :teacher
-    sign_in user
+    sign_in @teacher
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {
-          country: '', school_type: ''
-        }
-      }
-    }
-
-    user.reload
-
+    submit_blank_school_info
     assert_response :success, response.body
-    assert_nil user.school_info
-    assert_empty user.user_school_infos
+
+    @teacher.reload
+    assert_nil @teacher.school_info
+    assert_empty @teacher.user_school_infos
   end
 
   test 'initial, no previoius, partial, manual' do
-    Timecop.freeze
-
-    user = create :teacher
-    sign_in user
+    sign_in @teacher
 
     Timecop.travel 1.hour
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
-      }
-    }
-
-    user.reload
-
+    submit_partial_school_info
     assert_response :success, response.body
-    refute_nil user.school_info
-    assert user.school_info.school_name.nil?
-    assert_first_tenure(user)
 
-    Timecop.return
+    @teacher.reload
+    refute_nil @teacher.school_info
+    assert @teacher.school_info.school_name.nil?
+    assert_first_tenure(@teacher)
   end
 
   test 'initial, no previoius, complete, drop down' do
-    Timecop.freeze
-
-    user = create :teacher
-    sign_in user
+    sign_in @teacher
 
     school = create :school
 
     Timecop.travel 1.hour
 
     assert_creates SchoolInfo do
-      patch "/api/v1/user_school_infos", params: {
-        user: {
-          school_info_attributes: {school_id: school.id}
-        }
-      }
+      submit_complete_school_info_from_dropdown(school)
     end
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    refute_nil user.school_info.school
-    refute_empty user.user_school_infos
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    refute_nil @teacher.school_info.school
+    refute_empty @teacher.user_school_infos
+    assert_first_tenure(@teacher)
   end
 
   test 'initial, no previous, complete, manual' do
-    Timecop.freeze
-
-    user = create :teacher
-    sign_in user
+    sign_in @teacher
 
     Timecop.travel 1.hour
 
     assert_creates SchoolInfo do
-      patch "/api/v1/user_school_infos", params: {
-        user: {
-          school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'The School of Rock',
-            full_address: 'Seattle, Washington USA'}
-        }
-      }
+      submit_complete_school_info_manual
     end
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    refute_nil user.school_info.school_name
-    refute_empty user.user_school_infos
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    refute_nil @teacher.school_info.school_name
+    refute_empty @teacher.user_school_infos
+    assert_first_tenure(@teacher)
   end
 
   test 'initial, partial previous, blank, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
-    refute user.school_info.country.nil?
+    refute @teacher.school_info.country.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {
-          country: '', school_type: ''
-        }
-      }
-    }
+    submit_blank_school_info
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    assert_equal user.school_info.id, school_info.id
-    assert_equal user.school_info, school_info
-    assert_first_tenure(user)
-    assert_nil user.school_info.country
-
-    Timecop.return
+    assert_equal @teacher.school_info.id, school_info.id
+    assert_equal @teacher.school_info, school_info
+    assert_first_tenure(@teacher)
+    assert_nil @teacher.school_info.country
   end
 
   test 'initial, partial previous, unchanged, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
-    refute user.school_info.country.nil?
+    refute @teacher.school_info.country.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
-          full_address: school_info.full_address}
-      }
-    }
+    submit_unchanged_school_info(school_info)
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    assert_equal user.school_info.id, school_info.id
-    assert_equal user.school_info, school_info
-    assert_first_tenure(user)
-    refute_nil user.school_info.country
-
-    Timecop.return
+    assert_equal @teacher.school_info.id, school_info.id
+    assert_equal @teacher.school_info, school_info
+    assert_first_tenure(@teacher)
+    refute_nil @teacher.school_info.country
   end
 
   test 'initial, partial previous, submit, partial, manual' do
-    Timecop.freeze
+    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
-    school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
-    user = create :teacher, school_info: school_info
-    sign_in user
-
-    refute user.school_info.country.nil?
-    assert user.school_info.school_name.nil?
+    refute @teacher.school_info.country.nil?
+    assert @teacher.school_info.school_name.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: '',
-          full_address: 'seattle, Washington'}
-      }
-    }
+    submit_partial_school_info
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    assert_equal user.school_info.id, school_info.id
-    assert_equal user.school_info, school_info
-    assert_first_tenure(user)
-    assert_nil user.school_info.school_name
-    refute_nil user.school_info.country
-
-    Timecop.return
+    assert_equal @teacher.school_info.id, school_info.id
+    assert_equal @teacher.school_info, school_info
+    assert_first_tenure(@teacher)
+    assert_nil @teacher.school_info.school_name
+    refute_nil @teacher.school_info.country
   end
 
   test 'initial, partial previous, submit, complete, drop down' do
-    Timecop.freeze
+    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
-    user = create :teacher
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     new_school = create :school
 
     Timecop.travel 1.hour
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    submit_complete_school_info_from_dropdown(new_school)
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    refute_nil user.school_info.school
-    refute_empty user.user_school_infos
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    refute_nil @teacher.school_info.school
+    refute_empty @teacher.user_school_infos
+    assert_first_tenure(@teacher)
   end
 
   test 'initial, partial previous, submit, complete, manual' do
-    Timecop.freeze
-
     school_info = create :school_info, school_id: nil, school_name: nil, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Acme Inc',
-          full_address: 'Seattle, Washington'}
-      }
-    }
+    submit_complete_school_info_manual
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    refute_nil user.school_info.school_name
-    refute_empty user.user_school_infos
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    refute_nil @teacher.school_info.school_name
+    refute_empty @teacher.user_school_infos
+    assert_first_tenure(@teacher)
   end
 
   test 'confirmation, complete previous, submit, blank, manual' do
-    Timecop.freeze
-
     school_info = create :school_info
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: '', school_type: ''}
-      }
-    }
+    submit_blank_school_info
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    refute_empty user.user_school_infos
-    assert_equal user.user_school_infos.count, 1
-    assert_in_delta 1.hour.ago.to_i, user.user_school_infos.last.last_confirmation_date.to_i, 10
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    refute_empty @teacher.user_school_infos
+    assert_equal @teacher.user_school_infos.count, 1
+    assert_in_delta 1.hour.ago.to_i, @teacher.user_school_infos.last.last_confirmation_date.to_i, 10
   end
 
   test 'confirmation, complete previous, submit, unchanged, dropdown' do
-    Timecop.freeze
-
     school_info = create :school_info
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: school_info.school.id}
-      }
-    }
 
-    user.reload
+    submit_complete_school_info_from_dropdown(school_info.school)
+
+    @teacher.reload
 
     assert_response :success, response.body
-    refute_nil user.school_info
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    assert_first_tenure(@teacher)
   end
 
   test 'confirmation, complete previous, submit, unchanged, manual' do
-    Timecop.freeze
+    school_info = partial_manual_school_info
 
-    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
-        full_address: school_info.full_address}
-      }
-    }
+    submit_unchanged_school_info school_info
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
-    refute_nil user.school_info
-    assert_first_tenure(user)
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    assert_first_tenure(@teacher)
   end
 
   test 'confirmation, complete previous, submit, partial, manual' do
-    Timecop.freeze
+    school_info = partial_manual_school_info
 
-    school_info = SchoolInfo.create({country: 'United States', school_name: 'Philly High Harmony', school_type: 'public', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.year
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: '', school_name: '', full_address: school_info.full_address}
-      }
-    }
+    submit_partial_school_info
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
-    refute_nil user.school_info
-    assert_equal user.user_school_infos.count, 2
-    assert_nil user.user_school_infos.last.end_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    assert_equal @teacher.user_school_infos.count, 2
+    assert_nil @teacher.user_school_infos.last.end_date
+    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.start_date.to_date
+    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
   test 'confirmation, complete previous, submit, complete, dropdown' do
-    Timecop.freeze
-
     school_info = create :school_info
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     new_school = create :school
 
     Timecop.travel 1.year
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    submit_complete_school_info_from_dropdown(new_school)
 
-    user.reload
+    @teacher.reload
 
     assert_response :success, response.body
 
-    refute_nil user.school_info
-    assert_equal user.user_school_infos.count, 2
-    assert_nil user.user_school_infos.last.end_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
-
-    Timecop.return
+    refute_nil @teacher.school_info
+    assert_equal @teacher.user_school_infos.count, 2
+    assert_nil @teacher.user_school_infos.last.end_date
+    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.start_date.to_date
+    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
   test 'confirmation, complete previous, submit, complete, manual' do
-    Timecop.freeze
-
     school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
 
-    user = create :teacher, school_info: school_info
-    sign_in user
+    @teacher.update school_info: school_info
+    sign_in @teacher
 
     Timecop.travel 1.year
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'private', school_name: 'School of Rock',
-        full_address: 'Nashville, TN'}
-      }
-    }
 
-    user.reload
-
+    submit_complete_school_info_manual
     assert_response :success, response.body
-    refute_nil user.school_info
-    assert_equal user.user_school_infos.count, 2
-    assert_nil user.user_school_infos.last.end_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.start_date.to_date
-    assert_equal Time.now.utc.to_date, user.user_school_infos.first.end_date.to_date
-    refute_equal user.user_school_infos.last.school_info.school_name, user.user_school_infos.first.school_info.school_name
 
-    Timecop.return
+    @teacher.reload
+    assert_equal @teacher.user_school_infos.count, 2
+    old_tenure = @teacher.user_school_infos.first
+    new_tenure = @teacher.user_school_infos.last
+    assert_same_date Time.now, old_tenure.end_date
+    assert_same_date Time.now, new_tenure.start_date
+    assert_nil new_tenure.end_date
+    refute_equal new_tenure.school_info.school_name, old_tenure.school_info.school_name
+  end
+
+  private def assert_same_date(expected, actual)
+    assert_equal expected.utc.to_date, actual.utc.to_date
   end
 
   test 'confirmation, partial previous, blank, manual' do
-    Timecop.freeze
-
-    user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: complete_school_info)
+    @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: partial_school_info)
+    @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
-    sign_in user
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: '', school_type: ''}
-      }
-    }
+    sign_in @teacher
+    submit_blank_school_info
 
-    assert_nil user.user_school_infos.last.school_info.school_name
-    assert_equal user.user_school_infos.count, 2
+    assert_nil @teacher.user_school_infos.last.school_info.school_name
+    assert_equal @teacher.user_school_infos.count, 2
   end
 
   test 'confirmation, partial previous, unchanged, manual' do
-    Timecop.freeze
-
-    user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: complete_school_info)
+    @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: partial_school_info)
+    @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
-    sign_in user
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: '', full_address: 'Seattle, Washington'}
-      }
-    }
+    sign_in @teacher
+    submit_unchanged_school_info partial_school_info
+    assert_response :success, response.body
 
-    assert_nil user.user_school_infos.last.school_info.school_name
-    assert_equal user.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.last_confirmation_date.to_date
+    @teacher.reload
+    assert_equal @teacher.user_school_infos.count, 2
+    new_tenure = @teacher.user_school_infos.last
+    assert_nil new_tenure.school_info.school_name
+    assert_same_date Time.now, new_tenure.last_confirmation_date
   end
 
   test 'confirmation, partial previous, partial, manual' do
-    Timecop.freeze
-
-    user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: complete_school_info)
+    @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: partial_school_info)
+    @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
-    sign_in user
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: '', full_address: 'Dallas, TX'}
-      }
-    }
+    sign_in @teacher
+    submit_partial_school_info
 
-    assert_nil user.user_school_infos.last.school_info.school_name
-    assert_equal user.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.last_confirmation_date.to_date
-    assert_equal user.user_school_infos.last.school_info.full_address, 'Dallas, TX'
+    new_tenure = @teacher.user_school_infos.last
+    assert_nil @teacher.user_school_infos.last.school_info.school_name
+    assert_equal @teacher.user_school_infos.count, 2
+    assert_same_date Time.now, new_tenure.last_confirmation_date
+    refute_equal @teacher.user_school_infos.last.school_info.full_address, 'Seattle, Washington'
   end
 
   test 'confirmation, partial previous, complete, dropdown' do
-    Timecop.freeze
-
     new_school = create :school
 
-    user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: complete_school_info)
+    @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: partial_school_info)
+    @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
-    sign_in user
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {school_id: new_school.id}
-      }
-    }
+    sign_in @teacher
+    submit_complete_school_info_from_dropdown(new_school)
 
-    assert_equal user.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.last_confirmation_date.to_date
-    assert_equal user.user_school_infos.last.school_info.school, new_school
+    new_tenure = @teacher.user_school_infos.last
+    assert_equal @teacher.user_school_infos.count, 2
+    assert_same_date Time.now, new_tenure.last_confirmation_date
+    assert_equal new_tenure.school_info.school, new_school
   end
 
   test 'confirmation, partial previous, complete, manual' do
-    Timecop.freeze
-
-    user = create :teacher
     complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: complete_school_info)
+    @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
     partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    user.update(school_info: partial_school_info)
+    @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
-    sign_in user
+    sign_in @teacher
+    submit_complete_school_info_manual
+
+    assert_equal @teacher.user_school_infos.count, 2
+    new_tenure = @teacher.user_school_infos.last
+    refute_equal new_tenure.school_info.school_name, 'Philly High Harmony'
+    refute_nil new_tenure.school_info.school_name
+    assert_same_date Time.now.utc, new_tenure.last_confirmation_date
+  end
+
+  private def partial_manual_school_info
+    SchoolInfo.create(
+      country: 'United States',
+      school_type: 'public',
+      school_name: 'Philly High Harmony',
+      full_address: 'Seattle, Washington',
+      validation_type: SchoolInfo::VALIDATION_NONE
+    )
+  end
+
+  private def submit_blank_school_info
     patch "/api/v1/user_school_infos", params: {
       user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: 'Pleasantville High', full_address: 'Dallas, TX'}
+        school_info_attributes: {
+          country: '',
+          school_type: ''
+        }
       }
     }
+  end
 
-    assert_equal user.user_school_infos.last.school_info.school_name, 'Pleasantville High'
-    assert_equal user.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, user.user_school_infos.last.last_confirmation_date.to_date
+  private def submit_partial_school_info
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'private',
+          school_name: '',
+          full_address: ''
+        }
+      }
+    }
+  end
+
+  private def submit_complete_school_info_from_dropdown(school)
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {school_id: school.id}
+      }
+    }
+  end
+
+  private def submit_complete_school_info_manual
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'public',
+          school_name: 'Acme Inc',
+          full_address: 'Seattle, Washington'
+        }
+      }
+    }
+  end
+
+  private def submit_unchanged_school_info(school_info)
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: school_info.country,
+          school_type: school_info.school_type,
+          school_name: school_info.school_name,
+          full_address: school_info.full_address
+        }
+      }
+    }
   end
 end
