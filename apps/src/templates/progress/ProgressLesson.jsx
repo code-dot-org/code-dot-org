@@ -80,8 +80,7 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string,
-    inMiniRubricExperiment: PropTypes.bool
+    selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
@@ -120,8 +119,7 @@ class ProgressLesson extends React.Component {
       showLockIcon,
       lessonIsVisible,
       lessonLockedForSection,
-      selectedSectionId,
-      inMiniRubricExperiment
+      selectedSectionId
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -204,7 +202,6 @@ class ProgressLesson extends React.Component {
               levels={levels}
               disabled={locked && viewAs !== ViewType.Teacher}
               selectedSectionId={selectedSectionId}
-              inMiniRubricExperiment={inMiniRubricExperiment}
             />
           )}
         </div>
