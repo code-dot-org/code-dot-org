@@ -12,6 +12,10 @@ class ContactRollups
   MAX_EXECUTION_TIME = 1_200_000
   MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 
+  DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
+  DATABASE_CLUSTER_CLONE_INSTANCE_ID = "#{DATABASE_CLUSTER_CLONE_ID}-instance"
+  DATABASE_CLONE_INSTANCE_TYPE = 'db.r4.2xlarge'
+
   # Connection to read from Pegasus production database.
   PEGASUS_DB_READER = sequel_connect(
     CDO.pegasus_db_reader,
@@ -946,7 +950,6 @@ class ContactRollups
       {
         db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
         filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
-        max_records: 1
       }
     ).first.endpoint
 
@@ -976,5 +979,87 @@ class ContactRollups
       dashboard_clone_reader_uri.to_s,
       query_timeout: MAX_EXECUTION_TIME_SEC
     )
+  end
+
+  # Delete database cluster clone if it exists.
+  def self.delete_database_clone
+    rds_client = Aws::RDS::Client.new
+    begin
+      existing_cluster_response = rds_client.describe_db_clusters({db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID})
+      log("Cluster clone exists and is in state - #{existing_cluster_response.db_clusters.first.status}.  Deleting cluster and its instances.")
+      existing_cluster_response.db_clusters.first.db_cluster_members.each do |instance|
+        log("Deleting clone instance - #{instance.db_instance_identifier}")
+        rds_client.delete_db_instance(
+          {
+            db_instance_identifier: instance.db_instance_identifier,
+            skip_final_snapshot: true,
+          }
+        )
+        rds_client.wait_until(:db_instance_deleted, {db_instance_identifier: instance.db_instance_identifier}, {max_attempts: 20, delay: 60})
+      end
+      log("Deleting clone cluster - #{DATABASE_CLUSTER_CLONE_ID}")
+      rds_client.delete_db_cluster(
+        {
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+          skip_final_snapshot: true,
+        }
+      )
+      wait_until_db_cluster_deleted(DATABASE_CLUSTER_CLONE_ID, 10, 60)
+    rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+      log("Cluster #{DATABASE_CLUSTER_CLONE_ID} does not exist from previous execution of Contact Rollups. #{error.message}.  No need to delete it.")
+    end
+  end
+
+  # Clone the Aurora database cluster to use for the Contact Rollups batch aggregation queries.
+  def self.create_database_clone
+    rds_client = Aws::RDS::Client.new
+    begin
+      log("Creating clone of database cluster - #{DATABASE_CLUSTER_CLONE_ID}")
+      existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: CDO.db_cluster_id}).db_clusters.first
+      rds_client.restore_db_cluster_to_point_in_time(
+        {
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+          restore_type: 'copy-on-write',
+          source_db_cluster_identifier: CDO.db_cluster_id,
+          use_latest_restorable_time: true,
+          db_subnet_group_name: existing_cluster.db_subnet_group,
+          vpc_security_group_ids: existing_cluster.vpc_security_groups.map(&:vpc_security_group_id),
+          tags: [
+            {
+              key: 'environment',
+              value: CDO.rack_env.to_s,
+            },
+          ]
+        }
+      )
+      rds_client.create_db_instance(
+        {
+          db_instance_identifier: DATABASE_CLUSTER_CLONE_INSTANCE_ID,
+          db_instance_class: DATABASE_CLONE_INSTANCE_TYPE,
+          engine: existing_cluster.engine,
+          db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
+        }
+      )
+      # Wait 30 minutes.  As of mid-2019, it takes about 15 minutes to provision a clone of the production cluster.
+      rds_client.wait_until(:db_instance_available, {db_instance_identifier: DATABASE_CLUSTER_CLONE_INSTANCE_ID}, {max_attempts: 30, delay: 60})
+    rescue Aws::Waiters::Errors::WaiterFailed => error
+      log("Error waiting for cluster clone instance to become available. #{error.message}")
+    end
+    log("Done creating clone of database cluster.")
+  end
+
+  # The AWS SDK does not currently provide waiters for DBCluster operations.
+  def self.wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
+    rds_client = Aws::RDS::Client.new
+    attempts = 0
+    while attempts <= max_attempts
+      # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
+      rds_client.describe_db_clusters({db_cluster_identifier: db_cluster_id})
+      attempts += 1
+      sleep delay
+    end
+    raise Error("Timeout after waiting #{max_attempts * delay} seconds for cluster #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.")
+  rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+    log("Database Cluster #{db_cluster_id} has been deleted. #{error.message}")
   end
 end
