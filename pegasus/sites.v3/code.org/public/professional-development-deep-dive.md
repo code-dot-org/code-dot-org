@@ -3,13 +3,42 @@ title: Professional Development Deep Dive
 video_player: false
 theme: responsive
 ---
-# CS Fundamentals: Deep Dive
 
+<style>
+  details summary {
+    cursor: pointer;
+  }
+</style>
+
+<%=view :solid_block_header, :title=>"CS Fundamentals Deep Dive" %>
+
+<br>
+<div class="col-50">
+<p>
 Schools and teachers have asked us to expand our most popular professional learning program. Over 85,000 educators have attended Intro workshops for our <a href="https://code.org/educate/curriculum/elementary-school" target="blank">CS Fundamentals</a> curriculum, rating it 4.8 out of 5 stars, and we want to help you go further.
+</p>
 
+<p>
 We know that implementing new computer science courses with fidelity and equity takes time, collaboration, planning and support - which is where Deep Dive workshops come in! Through this workshop, educators will explore course materials, teaching practices, and strategies for continuing to teach CS Fundamentals.
+</p>
 
-[Register](#register) for a public workshop or [set up](#setup) a private workshop for your school today!
+<p>
+<a href="https://code.org/professional-development-deep-dive#register">Register</a> for a public workshop or <a href="https://code.org/professional-development-deep-dive#setup">set up</a> a private workshop for your school today!
+</p>
+
+</div>
+<div class="col-50" style='padding-top: 10px'>
+<center>
+	<img class="quote-image" src="/images/testimonials/fit-150/csf-facilitator.jpg">
+	<p class="quote-title">“It was great to put myself in the situations that my students might face. Talking with others about our lessons was super helpful because we could bounce ideas off of one another.”
+-Daphne Wright, music teacher
+</p>
+</center>
+</div>
+
+
+<div style="clear: both;"></div>
+<%= view :three_circles, circles: [] %>
 
 <a name="questions"></a>
 ## Learn More
