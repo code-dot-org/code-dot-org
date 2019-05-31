@@ -60,7 +60,6 @@ sl:
   of: "od"
   more: "VEČ"
   less: "MANJ"
-  beta: "beta"
   try_hoc: "Poskusi Ura programiranja, klikni tu >> "
   try_k8intro: "Poizkusi naš K-8 tečaj Uvod v računalništvo (15-25 ur)"
   k8intro: "Uvod v računalništvo (15-25 ur) za osnovno šolo (ZDA)"
@@ -581,11 +580,8 @@ sl:
     create: "Ustvari projekt"
     create_a_project: 'Ustvari nov projekt:'
     new: "Ustvari novo"
-    rename: "Preimenuj"
-    save: "Shrani"
     exit: "Vrni se na tečaj"
     project_gallery: "Projekti"
-    share: "Deli"
     share_title: Deli svoj projekt
     share_copy_link: "Kopiraj povezavo:"
     advanced_share: "Prikaz dodatnih možnosti"
@@ -597,7 +593,6 @@ sl:
     saved: "Shranjeno"
     not_saved: "Ni shranjeno"
     view_all: 'Poglej si Moji projekti'
-    remix: 'Remiks'
     edit_project: 'Uredi projekt'
     abuse:
       tos: "Ta projekt so prijavili, da je kršil <a href='http://code.org/tos'>Pogoje storitve</a> spletne strani Code.org in zato ga ni mogoče deliti z drugimi."
