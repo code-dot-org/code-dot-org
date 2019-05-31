@@ -105,9 +105,9 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     submit_blank_school_info
-    @teacher.reload
-
     assert_response :success, response.body
+
+    @teacher.reload
     assert_nil @teacher.school_info
     assert_empty @teacher.user_school_infos
   end
@@ -117,15 +117,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
-      }
-    }
+    submit_partial_school_info
+    assert_response :success, response.body
 
     @teacher.reload
-
-    assert_response :success, response.body
     refute_nil @teacher.school_info
     assert @teacher.school_info.school_name.nil?
     assert_first_tenure(@teacher)
@@ -228,7 +223,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, submit, partial, manual' do
-    school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -237,12 +232,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert @teacher.school_info.school_name.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: '',
-          full_address: 'seattle, Washington'}
-      }
-    }
+    submit_partial_school_info
 
     @teacher.reload
 
@@ -256,7 +246,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'initial, partial previous, submit, complete, drop down' do
-    school_info = create :school_info, school_id: nil, school_name: nil,  validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = create :school_info, school_id: nil, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -345,7 +335,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, complete previous, submit, unchanged, manual' do
-    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    school_info = partial_manual_school_info
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -354,7 +344,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
-        full_address: school_info.full_address}
+          full_address: school_info.full_address}
       }
     }
 
@@ -366,17 +356,13 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, complete previous, submit, partial, manual' do
-    school_info = SchoolInfo.create({country: 'United States', school_name: 'Philly High Harmony', school_type: 'public', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    school_info = partial_manual_school_info
 
     @teacher.update school_info: school_info
     sign_in @teacher
 
     Timecop.travel 1.year
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: '', school_name: '', full_address: school_info.full_address}
-      }
-    }
+    submit_partial_school_info
 
     @teacher.reload
 
@@ -425,7 +411,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     patch "/api/v1/user_school_infos", params: {
       user: {
         school_info_attributes: {country: 'United States', school_type: 'private', school_name: 'School of Rock',
-        full_address: 'Nashville, TN'}
+          full_address: 'Nashville, TN'}
       }
     }
 
@@ -493,16 +479,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 7.days
 
     sign_in @teacher
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: 'United States', school_type: 'public', school_name: '', full_address: 'Dallas, TX'}
-      }
-    }
+    submit_partial_school_info
 
     assert_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal @teacher.user_school_infos.count, 2
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
-    assert_equal @teacher.user_school_infos.last.school_info.full_address, 'Dallas, TX'
+    refute_equal @teacher.user_school_infos.last.school_info.full_address, 'Seattle, Washington'
   end
 
   test 'confirmation, partial previous, complete, dropdown' do
@@ -553,6 +535,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
   end
 
+  private def partial_manual_school_info
+    SchoolInfo.create(
+      country: 'United States',
+      school_type: 'public',
+      school_name: 'Philly High Harmony',
+      full_address: 'Seattle, Washington',
+      validation_type: SchoolInfo::VALIDATION_NONE
+    )
+  end
+
   private def submit_blank_school_info
     patch "/api/v1/user_school_infos", params: {
       user: {
@@ -560,6 +552,14 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
           country: '',
           school_type: ''
         }
+      }
+    }
+  end
+
+  private def submit_partial_school_info
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: 'United States', school_type: 'private', school_name: '', full_address: ''}
       }
     }
   end
