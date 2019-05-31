@@ -26,7 +26,9 @@ class TimeAgo extends React.Component {
   }
 
   startTimer = () => {
-    // Update the display string once a minute.
+    // Check for display updates every ten seconds. The smallest time delta
+    // that actually makes a difference for display is 1 minute, so this is
+    // quite generous.
     //
     // Note this component could be much more clever; if the given date is
     // within a few minutes of now, update this quickly, but if it's a couple
@@ -34,7 +36,7 @@ class TimeAgo extends React.Component {
     // maybe don't bother updating at all.
     //
     // For now, that seems like a unnecessary optimization.
-    const timeout = setTimeout(this.startTimer, 60 * 1000);
+    const timeout = setTimeout(this.startTimer, 10 * 1000);
     this.setState({timeout});
   };
 
