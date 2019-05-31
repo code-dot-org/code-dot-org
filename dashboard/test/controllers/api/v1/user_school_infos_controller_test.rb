@@ -45,6 +45,49 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response 403
   end
 
+  # The next set of tests checks all of the (known) valid call patterns for the
+  # PATCH /api/v1/user_school_infos route.
+  #
+  # We identified the parameters that affect the expected behavior of this route:
+  #
+  # PREVIOUS STATE VARIATIONS
+  #   *  Iniital flow / Confirmation flow
+  #      Initial flow is when the teacher has never given us complete school
+  #      info before (~7 days after sign-up). Confirmation flow is when we
+  #      ask them to confirm/change their school info, a year later.
+  #
+  #   *  No previous entry / partial previous entry / complete previous entry
+  #      It's possible for a teacher to save partial school info, in which case
+  #      we record it and use it when we ask them to complete that info at the
+  #      earliest opportunity.
+  #
+  #   Together, these produce four relevant previous states:
+  #   1. Initial flow, no previous entry
+  #      The very first time we ask a teacher for this information
+  #   2. Initial flow, partial previous entry
+  #      Teacher has given us partial entry but never a complete entry
+  #   3. Confirmation flow, complete previous entry
+  #      Our first time re-prompting the teacher a year after the last complete entry
+  #   4. Confirmation flow, partial previous entry
+  #      The teacher has a complete previous entry (because it's the confirmation flow)
+  #      _and_ a partial previous entry, we want them to complete the partial entry.
+  #
+  # CALL PARAMETERS
+  #   *.  Blank / Unchanged / Partial / Complete
+  #   *.  Found school in Dropdown / Not in dropdown, manually entered
+  #
+  #   Together, these produce six relevant call parameter patterns:
+  #   1. Blank submission
+  #   2. Unchanged from previous, school is in dropdown
+  #   3. Unchanged from previous, school is manually entered
+  #   4. Partial entry, school is manually entered
+  #   5. Complete entry, school is in dropdown
+  #   6. Complete entry, school is manually entered
+  #
+  # All together, we have less than 24 cases because not every previous state and
+  # call pattern combination makes sense - for example, you can't make an
+  # "Unchanged / Dropdown" call when the previous entry is partial.
+
   def assert_first_tenure(user)
     tenure = user.user_school_infos.last
     assert_equal user.user_school_infos.count, 1
