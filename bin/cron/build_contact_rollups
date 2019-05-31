@@ -126,7 +126,7 @@ def wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
   attempts = 0
   while attempts <= max_attempts
     # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
-    rds_client.describe_db_cluster(db_cluster_id: db_cluster_id)
+    rds_client.describe_db_clusters({db_cluster_identifier: db_cluster_id})
     attempts += 1
     sleep delay
   end
