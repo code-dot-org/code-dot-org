@@ -148,7 +148,7 @@ class PublishLibraryDialog extends React.Component {
       return !this.state.functionComments[selectedFunction.name];
     });
     if (withoutComments.length > 0) {
-      this.setState({showWarningMessage: true});
+      this.setState({showWarningMessage: true, showShareLink: false});
       return;
     }
     this.setState({showWarningMessage: false});
