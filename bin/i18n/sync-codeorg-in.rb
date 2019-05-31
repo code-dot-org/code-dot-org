@@ -150,7 +150,7 @@ def localize_level_content
       if script.version_year
         script_i18n_directory = "#{script_i18n_directory}/#{script.version_year}"
       end
-      Dir.mkdir script_i18n_directory unless Dir.exist? script_i18n_directory
+      FileUtils.mkdir_p script_i18n_directory unless Dir.exist? script_i18n_directory
       script_i18n_filename = "#{script_i18n_directory}/#{script.name}.yml"
       File.open(script_i18n_filename, 'w') do |file|
         file.write(to_crowdin_yaml({"en" => {"data" => script_strings}}))
