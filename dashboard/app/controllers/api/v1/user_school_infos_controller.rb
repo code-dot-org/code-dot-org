@@ -13,11 +13,17 @@ class Api::V1::UserSchoolInfosController < ApplicationController
   # PATCH /api/v1/users_school_infos/<id>/school_info
   def update
     if school_info_params[:school_id].present?
-      new_school = SchoolInfo.find_or_create_by(school_info_params)
-      if current_user.school_info == new_school
-        current_user.user_school_infos.where(school_info: new_school).update(last_confirmation_date: DateTime.now)
+      existing_school_info = current_user.school_info
+      if existing_school_info && !existing_school_info.complete?
+        existing_school_info.update!(school_info_params)
+        current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
       else
-        current_user.update!(school_info_id: new_school.id)
+        new_school = SchoolInfo.find_or_create_by(school_info_params)
+        if current_user.school_info == new_school
+          current_user.user_school_infos.where(school_info: new_school).update(last_confirmation_date: DateTime.now)
+        else
+          current_user.update!(school_info_id: new_school.id)
+        end
       end
     else
       # partial school info entered, so update it
