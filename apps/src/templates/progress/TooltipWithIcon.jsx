@@ -27,21 +27,14 @@ export default class TooltipWithIcon extends Component {
     tooltipId: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    includeAssessmentIcon: PropTypes.bool,
-    inMiniRubricExperiment: PropTypes.bool
+    includeAssessmentIcon: PropTypes.bool
   };
   render() {
-    const {
-      tooltipId,
-      icon,
-      text,
-      includeAssessmentIcon,
-      inMiniRubricExperiment
-    } = this.props;
+    const {tooltipId, icon, text, includeAssessmentIcon} = this.props;
     return (
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
-          {inMiniRubricExperiment && includeAssessmentIcon && (
+          {includeAssessmentIcon && (
             <FontAwesome
               icon="check-circle"
               style={styles.tooltipAssessmentIcon}

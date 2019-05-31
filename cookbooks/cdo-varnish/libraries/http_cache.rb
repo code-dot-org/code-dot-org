@@ -162,6 +162,7 @@ class HttpCache
               /v3/assets/*
               /v3/animations/*
               /v3/files/*
+              /v3/librarypilot/*
             ),
             headers: WHITELISTED_HEADERS,
             cookies: whitelisted_cookies

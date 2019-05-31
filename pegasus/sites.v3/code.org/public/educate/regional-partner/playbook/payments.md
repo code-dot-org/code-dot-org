@@ -48,7 +48,7 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 **How you'll be paid**
 
 - All CS Fundamentals, CS Discoveries, CS Principles, and Admin/Counselor workshop payments are now made via ACH direct deposit (unless otherwise agreed with a partner).
-- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Submit your invoice to invoices@code.org with receipts and attendance list (if required) to initiate the payment process.
+- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Complete the form at bit.ly/codeinvoices with your invoice, receipts and attendance list (if required) to initiate the payment process.
 
 **When you'll be paid**
 
@@ -184,11 +184,10 @@ See more information about the CS Fair and reimbursable expenses on the [Communi
 ________________
 <a id="LSW"></a>
 
-## Local Summer Workshop Community Building Event
-Code.org reimburses up to $45 per person for attendees including teachers in the CS Discoveries and CS Principles cohorts, Regional Partner staff, and Code.org staff. To receive reimbursement for costs associated with the event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+## Group 4 Local Summer Workshop Community Building Event
+Code.org will reimburse **Group 4 Partners** up to $45 per person for attendees including teachers in the CS Discoveries and CS Principles cohorts, Regional Partner staff, and Code.org staff. To receive reimbursement for costs associated with the event, submit an official invoice, receipts, and an attendance list at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
-See more info in the [Community Building tile](http://code.org/educate/regional-partner/playbook/community).
 
 [**Back to the top**](#top)
 ________________

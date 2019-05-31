@@ -2866,20 +2866,13 @@ it:
         Geraldine tocca la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 2: Crea un **evento** in modo che quando la giraffa Geraldine tocca
         la pozzanghera, il suo colore diventi marrone.
-      Virtual Pet 2_2019: Crea un **evento** in modo che quando la giraffa Geraldine
-        tocca la pozzanghera, il suo colore diventi marrone.
       Virtual Pet 3: Aggiungi sullo schermo un nuovo personaggio Sapone. Puoi crearlo
         in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al
         suo colore normale?
-      Virtual Pet 3_2019: Aggiungi sullo schermo un nuovo personaggio Sapone. Puoi
-        crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni
-        al suo colore normale?
       Virtual Pet 3_simple: Aggiungi sullo schermo un nuovo personaggio Sapone. Puoi
         crearlo in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni
         al suo colore normale?
       Virtual Pet 4: Aggiungi un comportamento al tuo Sapone per renderlo trascinabile,
-        quindi trascinalo sopra la giraffa per pulirla!
-      Virtual Pet 4_2019: Aggiungi un comportamento al tuo Sapone per renderlo trascinabile,
         quindi trascinalo sopra la giraffa per pulirla!
       Virtual Pet 4_simple: Aggiungi un comportamento al tuo Sapone per renderlo trascinabile,
         quindi trascinalo sopra la giraffa per pulirla!
@@ -2887,13 +2880,9 @@ it:
         la giraffa si restringa di 5 ogni volta che si scontra con un altro personaggio.
       Virtual Pet 5: Aggiungi delle azioni ad ogni evento in modo che la giraffa si
         restringa di 5 ogni volta che si scontra con un altro personaggio.
-      Virtual Pet 5_2019: Aggiungi delle azioni ad ogni evento in modo che la giraffa
-        si restringa di 5 ogni volta che si scontra con un altro personaggio.
       Virtual Pet 5_simple: Aggiungi delle azioni ad ogni evento in modo che la giraffa
         si restringa di 5 ogni volta che si scontra con un altro personaggio.
       Virtual Pet 6: Aggiungi una mela che riporti la giraffa alla sua dimensione
-        originale quando si toccano.
-      Virtual Pet 6_2019: Aggiungi una mela che riporti la giraffa alla sua dimensione
         originale quando si toccano.
       Virtual Pet 6_simple: Aggiungi una mela che riporti la giraffa alla sua dimensione
         originale quando si toccano.
@@ -2903,9 +2892,6 @@ it:
         tua giraffa? '
       Virtual Pet Freeplay_simple: 'Tempo di giocare: Cos''altro puoi far fare alla
         tua giraffa? '
-      Virtual Pet Template_2019: "Nell'angolo c'è una pozzanghera fangosa.  \n\nCrea
-        un **evento** in modo che quando la giraffa Geraldine tocca la pozzanghera,
-        il suo colore diventi marrone."
       aE7: |-
         Che cosa succede se aggiungi un ciclo uguale a quello che trovi già pronto, ma fai girare l'artista a sinistra invece che a destra?<br>
         Riesci a disegnare quest'onda ripetendo il tutto?
@@ -4837,6 +4823,12 @@ it:
         un'immagine come questa?
       courseD_artist_nestedLoops_challenge1_2019: Riesci a scoprire come realizzare
         un'immagine come questa?
+      courseD_artist_nestedLoops_challenge2: Correggi il programma per fare in modo
+        che disegni questa immagine!
+      courseD_artist_nestedLoops_challenge2_2018: Correggi il programma per fare in
+        modo che disegni questa immagine!
+      courseD_artist_nestedLoops_challenge2_2019: Correggi il programma per fare in
+        modo che disegni questa immagine!
       courseD_artist_project1: Disegna una piccola figura, larga tra **20 e 50** pixel.
         Può avere la forma che preferisci.
       courseD_artist_project1_2018: Disegna una piccola figura, larga tra **20 e 50**

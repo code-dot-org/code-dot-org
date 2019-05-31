@@ -497,9 +497,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -551,9 +551,9 @@ es-MX:
         aventura."
       AppLab Intro 2 - add images: "Ahora lo sabes todo\nnecesitas hacer una simple
         selección elige tu propia aplicación de aventura, pero puedes agregarla y\n¡mucho
-        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1\\.\nEn
+        más! ¡Si quieres agregar imágenes a tu pantalla, es fácil!\\\r\n\\\r\n1.\nEn
         otra pestaña de tu navegador, ve en línea y encuentra una imagen que quieras
-        usar.\\\r\n2\\.\nHaga clic con el botón derecho en la imagen y guarde su URL
+        usar.\\\r\n2.\nHaga clic con el botón derecho en la imagen y guarde su URL
         (generalmente \"Copiar la dirección del enlace\" o \"Copiar\"\nimagen URL
         \") \\\r\n\n3.  De vuelta en App Lab, vaya a Modo de diseño \\\r\n4.  Arrastra
         una \"imagen\"\n    o elemento a su pantalla \\\r\n5.  Pegue la URL que copió
@@ -2305,9 +2305,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2322,9 +2322,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -2339,9 +2339,9 @@ es-MX:
         verde.\n-   El \"desbloqueo\" verde está _oculto_ al principio.\n\n## Haga
         esto:\n\n**Añadir una instrucción if para el controlador de eventos para comprobar
         la contraseña y mostrar el \"desbloqueo\" sólo si la contraseña es correcta**
-        \n\n*Puede utilizar '==' para comparar el texto que obtiene del cuadro de
-        texto de \\*introducción_de_contraseña* y una cadena que desea utilizar como
-        contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
+        \n\n_Puede utilizar '==' para comparar el texto que obtiene del cuadro de
+        texto de \\\\_introducción_de_contraseña\\* y una cadena que desea utilizar
+        como contraseña. La expresión booleana que debe usar debe tener este aspecto:\n\n![](https://images.code.org/9124274f38ed19bdae6cfc4b492162b6-image-1479828796051.png)\n\n\\*Si
         el usuario introduce la contraseña correcta entonces **muestra** el \"desbloqueo\"
         verde y **oculta** el bloqueo roja.\n\\\\t\\* Hemos proporcionado el código
         para ocultar y mostrar las imágenes. Basta con añadir la instrucción if.\n\\*En
@@ -6132,20 +6132,26 @@ es-MX:
         ¡Cuidado con la puerta!\\\r\n\\\r\n\n-   Las ventanas de la parte superior
         están a 50 pixeles de distancia la una de la otra.  \\\r\n-   Las ventanas
         de la parte inferior están a 100 pixeles debajo del grupo de arriba."
-      courseE_artist_functions7_2018: "¡Dibujar todas estas ventanas en forma individual
-        sería un dolor de cabeza! \\\r\n\\\r\nIntenta resolver este desafíos creando
-        'dibujar ventana' y llamándola cinco veces. ¡Cuidado con la puerta!\\\r\n\\\r\n\\---
-        \ \\\r\n\n-   Cada ventana está hecha de cuatro cuadrados de **25** pixeles.\\\r\n-
-        \  Las ventanas superiores están a un salto de **100** pixeles la una d ela
-        otra.  \\\r\n-   Las ventanas inferiores están a un salto de **150** pixeles
-        del grupo superior."
-      courseE_artist_functions7_2019: "¡Dibujar todas estas ventanas en forma individual
-        sería un dolor de cabeza! \\\r\n\\\r\nIntenta resolver este desafíos creando
-        'dibujar ventana' y llamándola cinco veces. ¡Cuidado con la puerta!\\\r\n\\\r\n\\---
-        \ \\\r\n\n-   Cada ventana está hecha de cuatro cuadrados de **25** pixeles.\\\r\n-
-        \  Las ventanas superiores están a un salto de **100** pixeles la una d ela
-        otra.  \\\r\n-   Las ventanas inferiores están a un salto de **150** pixeles
-        del grupo superior."
+      courseE_artist_functions7_2018: |-
+        ¡Dibujar todas estas ventanas en forma individual sería muy molesto!
+
+        Crea una función `dibujar una ventana` y llámala cinco veces para intentar resolver este desafío. ¡Cuidado con la puerta!
+
+        * * *
+
+        -   Cada ventana está hecha de cuatro cuadrados de **25** pixeles.
+        -   Las ventanas superiores están a un salto de **100** pixeles de distancia entre sí.
+        -   Las ventanas inferiores están a un salto de **150** pixeles por debajo de las ventanas superiores.
+      courseE_artist_functions7_2019: |-
+        ¡Dibujar todas estas ventanas en forma individual sería muy molesto!
+
+        Crea una función `dibujar una ventana` y llámala cinco veces para intentar resolver este desafío. ¡Cuidado con la puerta!
+
+        * * *
+
+        -   Cada ventana está hecha de cuatro cuadrados de **25** pixeles.
+        -   Las ventanas superiores están a un salto de **100** pixeles de distancia entre sí.
+        -   Las ventanas inferiores están a un salto de **150** pixeles por debajo de las ventanas superiores.
       courseE_artist_functions8: "**Desafío:** ¡¿Sabías que puedes llamar otras funciones
         _dentro_ de otras funciones?!\\\r\n\\\r\nCrea tantas funciones como creas
         que necesitas para hacer estos dibujos de cuadrados de 50 pixeles."
@@ -7720,13 +7726,9 @@ es-MX:
       frozen perpendicular_b: |-
         _"¡Continuemos!"_
 
-         
-
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa"><title name="DIR">girar derecha</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml> y otro bloque <xml><block type="draw_move_by_constant_dropdown"><title name="DIR">avanzar</title><title name="VALUE" config="50,100,150,200,300">100</title></block></xml> para hacer una forma de hielo.
       frozen perpendicular_test: |-
         _"¡Continuemos!"_
-
-         
 
         Agrega un bloque <xml><block type="draw_turn_by_constant_dropdown" id="turn_elsa">
 
