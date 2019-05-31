@@ -52,6 +52,3 @@ Ours is a grassroots revolution that’s fueled by the passion and support of te
 * Computer science should be a peer of biology or chemistry, and students should have a chance to learn all these things. (we’re not competing with other fields like math or science)
 * We want schools to teach foundational computer science concepts that will stand the test of time. (we’re not about any one coding language or platform)
 * We’re lucky to have the generous support of tech companies, but **[we make our own decisions](/about/donation-policy)**. (we’re not run by the tech industry, or by any of our donors)
-
-See [this blog post](http://blog.code.org/post/73963049605/the-secret-agenda-of-codeorg) from January 2014 addressing some of these misconceptions in detail.
-

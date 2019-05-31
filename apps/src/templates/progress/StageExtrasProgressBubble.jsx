@@ -56,7 +56,6 @@ class StageExtrasProgressBubble extends Component {
           // Currently a stage extra can not also be an assessment so this should always be false
           // TODO (dmcavoy) : When we change the way we mark levels as assessment refactor
           includeAssessmentIcon={false}
-          inMiniRubricExperiment={false}
         />
       </a>
     );
