@@ -375,16 +375,20 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 1.year
 
     submit_complete_school_info_manual
+    assert_response :success, response.body
 
     @teacher.reload
-
-    assert_response :success, response.body
-    refute_nil @teacher.school_info
     assert_equal @teacher.user_school_infos.count, 2
-    assert_nil @teacher.user_school_infos.last.end_date
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.start_date.to_date
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
-    refute_equal @teacher.user_school_infos.last.school_info.school_name, @teacher.user_school_infos.first.school_info.school_name
+    old_tenure = @teacher.user_school_infos.first
+    new_tenure = @teacher.user_school_infos.last
+    assert_same_date Time.now, old_tenure.end_date
+    assert_same_date Time.now, new_tenure.start_date
+    assert_nil new_tenure.end_date
+    refute_equal new_tenure.school_info.school_name, old_tenure.school_info.school_name
+  end
+
+  private def assert_same_date(expected, actual)
+    assert_equal expected.utc.to_date, actual.utc.to_date
   end
 
   test 'confirmation, partial previous, blank, manual' do
@@ -418,10 +422,13 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     sign_in @teacher
     submit_unchanged_school_info partial_school_info
+    assert_response :success, response.body
 
-    assert_nil @teacher.user_school_infos.last.school_info.school_name
+    @teacher.reload
     assert_equal @teacher.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
+    new_tenure = @teacher.user_school_infos.last
+    assert_nil new_tenure.school_info.school_name
+    assert_same_date Time.now, new_tenure.last_confirmation_date
   end
 
   test 'confirmation, partial previous, partial, manual' do
@@ -438,9 +445,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_partial_school_info
 
+    new_tenure = @teacher.user_school_infos.last
     assert_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal @teacher.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
+    assert_same_date Time.now, new_tenure.last_confirmation_date
     refute_equal @teacher.user_school_infos.last.school_info.full_address, 'Seattle, Washington'
   end
 
@@ -460,9 +468,10 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_complete_school_info_from_dropdown(new_school)
 
+    new_tenure = @teacher.user_school_infos.last
     assert_equal @teacher.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
-    assert_equal @teacher.user_school_infos.last.school_info.school, new_school
+    assert_same_date Time.now, new_tenure.last_confirmation_date
+    assert_equal new_tenure.school_info.school, new_school
   end
 
   test 'confirmation, partial previous, complete, manual' do
@@ -479,10 +488,11 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_complete_school_info_manual
 
-    refute_equal @teacher.user_school_infos.last.school_info.school_name, 'Philly High Harmony'
-    refute_nil @teacher.user_school_infos.last.school_info.school_name
     assert_equal @teacher.user_school_infos.count, 2
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.last_confirmation_date.to_date
+    new_tenure = @teacher.user_school_infos.last
+    refute_equal new_tenure.school_info.school_name, 'Philly High Harmony'
+    refute_nil new_tenure.school_info.school_name
+    assert_same_date Time.now.utc, new_tenure.last_confirmation_date
   end
 
   private def partial_manual_school_info
