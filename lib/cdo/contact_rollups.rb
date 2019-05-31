@@ -940,9 +940,7 @@ class ContactRollups
     log "Error iterating over stream #{s} - #{error}"
   end
 
-  private
-
-  def initialize_connections_to_database_clone
+  def self.initialize_connections_to_database_clone
     rds_client = Aws::RDS::Client.new
     @@clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
       {
