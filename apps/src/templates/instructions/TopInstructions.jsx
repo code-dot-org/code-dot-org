@@ -167,7 +167,7 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (this.props.viewAs === ViewType.Student) {
+    if (this.props.viewAs === ViewType.Student && user && serverLevelId) {
       promises.push(
         $.ajax({
           url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${user}&level_id=${serverLevelId}`,
@@ -198,7 +198,12 @@ class TopInstructions extends Component {
       );
     }
 
-    if (this.state.teacherViewingStudentWork) {
+    if (
+      this.state.teacherViewingStudentWork &&
+      user &&
+      serverLevelId &&
+      studentId
+    ) {
       promises.push(
         $.ajax({
           url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${serverLevelId}&teacher_id=${user}`,
