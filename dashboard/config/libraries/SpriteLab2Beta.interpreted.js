@@ -161,6 +161,14 @@ function spriteClicked(condition, sprite, event) {
   }
 }
 
+function spriteClickedSet(condition, sprite, clicked, event) {
+  if (condition === "when") {
+    inputEvents.push({type: whenSpriteClicked, event: event, param: sprite});
+  } else {
+    inputEvents.push({type: mousePressedOver, event: event, param: sprite});
+  }
+}
+
 function whenSpriteClicked(sprite) {
   return mouseWentDown("leftButton") && mouseIsOver(sprite);
 }
