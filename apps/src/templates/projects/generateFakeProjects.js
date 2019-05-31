@@ -6,7 +6,7 @@ import _ from 'lodash';
 export function generateFakePersonalProjects(n) {
   return _.range(n).map(i => ({
     name: 'Personal ' + i,
-    updatedAt: 'a day ago',
+    updatedAt: new Date().toISOString(),
     projectType: 'gamelab',
     id: 'abcd'
   }));

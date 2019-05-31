@@ -8,9 +8,11 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedStageMapping} from '../../stageLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
-import commonMsg from '@cdo/locale';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {SelectedStudentInfo} from './SelectedStudentInfo';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 const styles = {
   scrollable: {
@@ -35,6 +37,17 @@ const styles = {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis'
+  },
+  exampleSolutions: {
+    textAlign: 'center',
+    margin: 5
+  },
+  sectionInfo: {
+    textAlign: 'center',
+    padding: '5px 0px'
+  },
+  teacherDashboardLink: {
+    fontSize: 11
   }
 };
 
@@ -42,6 +55,7 @@ class ScriptTeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
+    sectionData: PropTypes.object,
 
     // Provided by redux.
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -52,48 +66,91 @@ class ScriptTeacherPanel extends React.Component {
       name: PropTypes.string.isRequired
     }),
     scriptHasLockableStages: PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
   };
 
   render() {
     const {
+      sectionData,
       viewAs,
       hasSections,
       sectionsAreLoaded,
       selectedSection,
       scriptHasLockableStages,
-      scriptAllowsHiddenStages,
       unlockedStageNames,
       students
     } = this.props;
 
+    let currentSectionScriptLevels = null;
+    let currentStudent = null;
+    let currentStudentScriptLevel = null;
+
+    if (sectionData) {
+      currentSectionScriptLevels = sectionData.section_script_levels;
+      if (sectionData.section && sectionData.section.students) {
+        currentStudent = sectionData.section.students.find(
+          student => this.props.getSelectedUserId() === student.id
+        );
+      }
+      if (currentSectionScriptLevels && currentStudent) {
+        currentStudentScriptLevel = currentSectionScriptLevels.find(
+          level => this.props.getSelectedUserId() === level.user_id
+        );
+      }
+    }
+
     return (
       <TeacherPanel>
-        <h3>{commonMsg.teacherPanel()}</h3>
+        <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle />
-          {selectedSection && (
-            <h4 style={styles.sectionHeader}>
-              {`${commonMsg.section()} `}
-              <a href={teacherDashboardUrl(selectedSection.id)}>
-                {selectedSection.name}
-              </a>
-            </h4>
+          {currentStudent && (
+            <SelectedStudentInfo
+              selectedStudent={currentStudent}
+              level={currentStudentScriptLevel}
+            />
+          )}
+          {sectionData && sectionData.level_examples && (
+            <div style={styles.exampleSolutions}>
+              {sectionData.level_examples.map((example, index) => (
+                <Button
+                  key={index}
+                  text={i18n.exampleSolution({number: index + 1})}
+                  color="blue"
+                  href={example}
+                  target="_blank"
+                />
+              ))}
+            </div>
           )}
           {!sectionsAreLoaded && (
-            <div style={styles.text}>{commonMsg.loading()}</div>
+            <div style={styles.text}>{i18n.loading()}</div>
           )}
-          {(scriptAllowsHiddenStages || scriptHasLockableStages) && (
-            <SectionSelector style={{margin: 10}} reloadOnChange={true} />
+          {sectionsAreLoaded && hasSections && (
+            <div style={styles.sectionInfo}>
+              <div>{i18n.viewingSection()}</div>
+              <SectionSelector
+                style={{margin: '0px 10px'}}
+                reloadOnChange={true}
+              />
+              {selectedSection && (
+                <a
+                  href={teacherDashboardUrl(selectedSection.id)}
+                  target="_blank"
+                  style={styles.teacherDashboardLink}
+                >
+                  {i18n.teacherDashboard()}
+                </a>
+              )}
+            </div>
           )}
           {hasSections &&
             scriptHasLockableStages &&
             viewAs === ViewType.Teacher && (
               <div>
                 <div style={styles.text}>
-                  {commonMsg.selectSectionInstructions()}
+                  {i18n.selectSectionInstructions()}
                 </div>
                 {unlockedStageNames.length > 0 && (
                   <div>
@@ -102,12 +159,10 @@ class ScriptTeacherPanel extends React.Component {
                         icon="exclamation-triangle"
                         style={styles.exclamation}
                       />
-                      <div style={styles.dontForget}>
-                        {commonMsg.dontForget()}
-                      </div>
+                      <div style={styles.dontForget}>{i18n.dontForget()}</div>
                     </div>
                     <div style={styles.text}>
-                      {commonMsg.lockFollowing()}
+                      {i18n.lockFollowing()}
                       <ul>
                         {unlockedStageNames.map((name, index) => (
                           <li key={index}>{name}</li>
@@ -120,6 +175,7 @@ class ScriptTeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
+              levels={currentSectionScriptLevels}
               students={students}
               onSelectUser={this.props.onSelectUser}
               getSelectedUserId={this.props.getSelectedUserId}
@@ -132,7 +188,7 @@ class ScriptTeacherPanel extends React.Component {
 }
 
 export const UnconnectedScriptTeacherPanel = ScriptTeacherPanel;
-export default connect((state, ownProps) => {
+export default connect(state => {
   const {stagesBySectionId, lockableAuthorized} = state.stageLock;
   const {
     selectedSectionId,
@@ -163,7 +219,6 @@ export default connect((state, ownProps) => {
     sectionsAreLoaded,
     scriptHasLockableStages,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
     students: state.teacherSections.selectedStudents
   };
