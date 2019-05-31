@@ -55,7 +55,7 @@ module Pd
       self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
 
-    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id, :submission_id],
       message: 'already has a submission for this workshop, day, and form'
 
     validates_presence_of(
@@ -105,12 +105,13 @@ module Pd
     end
 
     def self.unique_attributes
-      [:user_id, :pd_workshop_id, :day]
+      [:user_id, :pd_workshop_id, :day, :submission_id]
     end
 
     private
 
     def day_for_subject
+      return true unless day
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
         errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
       end

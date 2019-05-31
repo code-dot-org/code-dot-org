@@ -61,7 +61,7 @@ module Pd::SurveyPipeline
         # Pd::WorkshopFacilitatorDailySurvey is Hash{qid_string => answer_string}.
         # answer_string in multi-select questions such as matrix is actually
         # a Hash{sub_question_text => sub_answer}
-        JSON.parse(submission.answers).each_pair do |qid, ans|
+        JSON.parse(submission.answers || '{}').each_pair do |qid, ans|
           if ans.is_a? Hash
             submission_content[:answers][qid] = []
 

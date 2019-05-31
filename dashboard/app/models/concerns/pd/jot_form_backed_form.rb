@@ -178,10 +178,10 @@ module Pd
 
           # Note, form_data_hash processes the answers and will raise an error if they don't match the questions.
           # Include hidden questions for full validation and so skip_submission? can inspect them.
-          if skip_submission?(model.form_data_hash(show_hidden_questions: true))
-            CDO.log.info "Skipping #{submission_id}"
-            return nil
-          end
+          # if skip_submission?(model.form_data_hash(show_hidden_questions: true))
+          #   CDO.log.info "Skipping #{submission_id}"
+          #   return nil
+          # end
 
           # Make sure we have all attributes then see if this is a duplicate
           model.map_answers_to_attributes
