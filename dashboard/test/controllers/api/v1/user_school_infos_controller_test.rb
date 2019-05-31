@@ -100,16 +100,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_nil tenure.end_date
   end
 
-  def assert_first_tenure_partial(user)
-    tenure = user.user_school_infos.last
-    assert_equal user.user_school_infos.count, 2
-    refute_equal user.created_at, tenure.start_date
-    assert_in_delta Time.now.to_i, tenure.last_confirmation_date.to_i, 10
-    assert_nil tenure.end_date
-    refute_nil user.school_info.school_name
-    refute_nil user.school_info.country
-  end
-
   test 'initial, no previoius, blank, manual' do
     user = create :teacher
     sign_in user
