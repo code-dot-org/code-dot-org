@@ -61,7 +61,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    course = create(:course, name: 'my-course', is_stable: true)
+    course = create(:course, name: 'my-course', is_stable: true, full_course: true)
     create(:course_script, course: course, position: 1, script: create(:script, name: "script1"))
     create(:course_script, course: course, position: 2, script: create(:script, name: "script2"))
     create(:course_script, course: course, position: 3, script: create(:script, name: "script3"))
@@ -72,6 +72,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal 'my-course', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
     assert obj['properties']['is_stable']
+    assert obj['properties']['full_course']
   end
 
   test "stable?: true if course has plc_course" do
