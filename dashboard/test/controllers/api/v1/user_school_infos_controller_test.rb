@@ -104,14 +104,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     user = create :teacher
     sign_in user
 
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {
-          country: '', school_type: ''
-        }
-      }
-    }
-
+    submit_blank_school_info
     user.reload
 
     assert_response :success, response.body
@@ -199,13 +192,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     refute user.school_info.country.nil?
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {
-          country: '', school_type: ''
-        }
-      }
-    }
+    submit_blank_school_info
 
     user.reload
 
@@ -326,11 +313,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in user
 
     Timecop.travel 1.hour
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: '', school_type: ''}
-      }
-    }
+    submit_blank_school_info
 
     user.reload
 
@@ -471,11 +454,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 7.days
 
     sign_in user
-    patch "/api/v1/user_school_infos", params: {
-      user: {
-        school_info_attributes: {country: '', school_type: ''}
-      }
-    }
+    submit_blank_school_info
 
     assert_nil user.user_school_infos.last.school_info.school_name
     assert_equal user.user_school_infos.count, 2
@@ -578,5 +557,16 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_equal user.user_school_infos.last.school_info.school_name, 'Pleasantville High'
     assert_equal user.user_school_infos.count, 2
     assert_equal Time.now.utc.to_date, user.user_school_infos.last.last_confirmation_date.to_date
+  end
+
+  private def submit_blank_school_info
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: '',
+          school_type: ''
+        }
+      }
+    }
   end
 end
