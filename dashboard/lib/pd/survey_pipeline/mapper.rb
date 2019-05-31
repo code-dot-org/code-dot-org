@@ -23,8 +23,10 @@ module Pd::SurveyPipeline
     end
 
     # Summarize input data using groupping and mapping configurations.
+    #
     # @param data [Array<Hash{}>] an array of hashes,
     #   each contains submission, question, and answer info.
+    #
     # @return [Array<Hash>] an array of summarization results. Each hash contains
     #   all fields in group_config, reducer name and reducer result.
     def map_reduce(data)
