@@ -66,12 +66,18 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none'
+  },
+  inspector: {
+    display: 'inline-block'
   }
 };
 
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
+// The JS console, by default, prints 'undefined' when there is no return value.
+// We don't want that functionality and therefore don't include 'undefined' in this list.
+const FALSY_VALUES = new Set([false, null, 0, '', NaN]);
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -125,6 +131,7 @@ export default connect(
       removeWatchExpression: PropTypes.func.isRequired,
       evalInCurrentScope: PropTypes.func.isRequired,
       appendLog: PropTypes.func.isRequired,
+      jsInterpreter: PropTypes.object,
 
       // passed from above
       debugButtons: PropTypes.bool,
@@ -138,7 +145,9 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog('> ' + input);
+        experiments.isEnabled('react-inspector')
+          ? this.appendLog({input: input})
+          : this.appendLog('> ' + input);
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -149,13 +158,31 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            const result = this.props.evalInCurrentScope(input);
-            this.appendLog('< ' + String(result));
+            if (experiments.isEnabled('react-inspector')) {
+              // wrapping input with parens for objects before the evalInCurrestScope
+              // ensures objects are returned correctly consistently
+              let result = this.props.evalInCurrentScope(
+                input[0] === '{' && input[input.length - 1] === '}'
+                  ? `(${input})`
+                  : input
+              );
+              result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+                result
+              );
+              this.appendLog({output: result, fromConsoleLog: false});
+            } else {
+              const result = this.props.evalInCurrentScope(input);
+              this.appendLog('< ' + String(result));
+            }
           } catch (err) {
-            this.appendLog('< ' + String(err));
+            experiments.isEnabled('react-inspector')
+              ? this.appendLog({output: String(err), fromConsoleLog: false})
+              : this.appendLog('< ' + String(err));
           }
         } else {
-          this.appendLog('< (not running)');
+          experiments.isEnabled('react-inspector')
+            ? this.appendLog({output: '(not running)', fromConsoleLog: false})
+            : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -211,11 +238,33 @@ export default connect(
 
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((output, i) => {
-          if (typeof output === 'object') {
-            output = output.toJS();
+        return this.props.logOutput.map((rowValue, i) => {
+          try {
+            rowValue = rowValue.toJS();
+          } catch (error) {
+            return <Inspector key={i} data={rowValue} />;
           }
-          return <Inspector key={i} data={output} />;
+          if (rowValue.input) {
+            return <div key={i}>&gt; {rowValue.input}</div>;
+          } else if (
+            rowValue.output ||
+            FALSY_VALUES.has(rowValue.output) ||
+            (rowValue.output === undefined && rowValue.fromConsoleLog) ||
+            (rowValue.output === undefined && !rowValue.fromConsoleLog)
+          ) {
+            if (rowValue.fromConsoleLog) {
+              return <Inspector key={i} data={rowValue.output} />;
+            } else {
+              return (
+                <div key={i}>
+                  &lt;{' '}
+                  <div style={style.inspector}>
+                    <Inspector data={rowValue.output} />
+                  </div>
+                </div>
+              );
+            }
+          }
         });
       }
     }
