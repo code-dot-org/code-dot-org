@@ -378,6 +378,7 @@ Applab.init = function(config) {
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
   config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -1136,6 +1137,17 @@ function getLibrary() {
   var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
   temporaryInterpreter.parse({code: studioApp().getCode()});
   return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
 }
 
 /**
