@@ -26,8 +26,18 @@ class Api::V1::UserSchoolInfosController < ApplicationController
         existing_school_info.update!(school_info_params)
         current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
       elsif school_info_params[:country].present?
-        new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
-        current_user.update!(school_info_id: new_school_info.id)
+        if existing_school_info
+          existing_school_info.assign_attributes(school_info_params)
+          if existing_school_info.changed?
+            new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+            current_user.update!(school_info_id: new_school_info.id)
+          else
+            current_user.user_school_infos.where(school_info: existing_school_info).update(last_confirmation_date: DateTime.now)
+          end
+        else
+          new_school_info = SchoolInfo.create!(school_info_params.merge(validation_type: SchoolInfo::VALIDATION_NONE))
+          current_user.update!(school_info_id: new_school_info.id)
+        end
       end
     end
   end

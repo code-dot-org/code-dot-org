@@ -365,10 +365,53 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
-  # test 'confirmation, complete previous, submit, unchanged, manual' do
-  # end
+  test 'confirmation, complete previous, submit, unchanged, manual' do
+    Timecop.freeze
+
+    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+
+    user = create :teacher, school_info: school_info
+    sign_in user
+
+    Timecop.travel 1.hour
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {country: school_info.country, school_type: school_info.school_type, school_name: school_info.school_name,
+        full_address: school_info.full_address}
+      }
+    }
+
+    user.reload
+
+    assert_response :success, response.body
+    refute_nil user.school_info
+    assert_first_tenure(user)
+
+    Timecop.return
+  end
 
   # test 'confirmation, complete previous, submit, partial, manual' do
+  #   Timecop.freeze
+
+  #   school_info = SchoolInfo.create({school_id: '0988766', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+
+  #   user = create :teacher, school_info: school_info
+  #   sign_in user
+
+  #   Timecop.travel 1.hour
+  #   patch "/api/v1/user_school_infos", params: {
+  #     user: {
+  #       school_info_attributes: {country: 'United States', school_type: '', school_name: '', full_address: school_info.full_address}
+  #     }
+  #   }
+
+  #   user.reload
+
+  #   assert_response :success, response.body
+  #   refute_nil user.school_info
+  #   assert_first_tenure(user)
+
+  #   Timecop.return
   # end
 
   # test 'confirmation, complete previous, submit, complete, dropdown' do
