@@ -852,9 +852,9 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.4.6":
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.6.tgz#cb501b02171169d78bbfa24271f70cc0fe40f8e5"
+"@code-dot-org/blockly@3.4.7":
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.7.tgz#c5fb674664dc0031416b42a094f7b51cc0bbcf61"
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"

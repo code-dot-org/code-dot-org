@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
@@ -29,11 +28,6 @@ const FAKE_VERSION_LIST_RESPONSE = {
 
 describe('VersionHistory', () => {
   let wrapper;
-
-  before(() => {
-    // Stub jQuery timeago plugin
-    $.fn.timeago = () => {};
-  });
 
   beforeEach(() => {
     sinon.stub(utils, 'reload');

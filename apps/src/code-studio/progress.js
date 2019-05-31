@@ -277,7 +277,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
       store.dispatch(showTeacherInfo());
 
-      renderTeacherPanel(store, scriptData.id, scriptData.section);
+      renderTeacherPanel(
+        store,
+        scriptData.id,
+        scriptData.section,
+        scriptData.name
+      );
     }
 
     if (data.focusAreaStageIds) {

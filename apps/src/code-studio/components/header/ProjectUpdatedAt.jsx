@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import msg from '@cdo/locale';
 
+import TimeAgo from '@cdo/apps/templates/TimeAgo';
+
 import {projectUpdatedStatuses as statuses} from '../../headerRedux';
 
 const styles = {
@@ -17,12 +19,6 @@ class ProjectUpdatedAt extends React.Component {
     status: PropTypes.oneOf(Object.values(statuses)),
     updatedAt: PropTypes.string
   };
-
-  componentDidUpdate() {
-    if (this.props.updatedAt) {
-      $('.project_updated_at span.timestamp').timeago();
-    }
-  }
 
   renderText() {
     if (this.props.status === statuses.error) {
@@ -46,7 +42,7 @@ class ProjectUpdatedAt extends React.Component {
         <div>
           {msg.savedToGallery()}{' '}
           {this.props.updatedAt && (
-            <span className="timestamp" title={this.props.updatedAt} />
+            <TimeAgo dateString={this.props.updatedAt} />
           )}
         </div>
       );
