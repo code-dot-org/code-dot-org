@@ -6,9 +6,12 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csp2"], ["vocabulary", "https://curriculum.code.org/csp-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit2/standards/"], ["professionalLearning", "https://studio.code.org/s/csp2-support"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit2/{LESSON}'
 family_name 'csp2'
 version_year '2019'
+is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1_2018'
 level 'CSP U2L01 SFLP_2019', named: true
@@ -57,3 +60,7 @@ level 'CSP U2L06 SFLP_2019', named: true
 
 stage 'Unit 2 Assessment', lockable: true, flex_category: 'cspAssessment'
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018_2019', assessment: true
+
+stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-post-survey-intro-2019'
+level 'csp-post-survey-levelgroup-2019.2', assessment: true

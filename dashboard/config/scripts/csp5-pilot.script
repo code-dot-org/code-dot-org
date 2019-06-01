@@ -2,11 +2,13 @@ login_required true
 hideable_stages true
 has_verified_resources true
 pilot_experiment 'csp-piloters'
+curriculum_umbrella 'CSP'
 
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'csp-20-21-u5-assess-lists', progression: 'Check Your Understanding', assessment: true
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2018', progression: 'Introduction to Lists'
+level 'Late Fall Pilot Experiments Dashboard', progression: 'App Lab Experiments Dashboard'
 
 stage 'Lists Investigate', flex_category: 'csp_lists'
 level 'U5 Lists Investigate Outfitly App', progression: 'App Investigation'
@@ -110,5 +112,46 @@ level 'CSP Pilot U5 Mini PT Project', progression: 'Mini PT', assessment: true
 stage 'Student Survey (Mini PT)', lockable: true, flex_category: 'csp_project'
 level 'Student Late Spring Pilot Survey Mini PT', progression: 'Student Survey (Mini PT)', assessment: true
 
-stage 'Unit 5 Mini Assessment', lockable: true
+stage 'Unit 5 Mini Assessment', lockable: true, flex_category: 'csp_project'
 level 'CSP 20-21 Unit 5 Pilot Mini Assessment', assessment: true
+
+stage 'Parameters and Return Values Explore', flex_category: 'csp_parameters_return_values'
+level 'U7 L01 More with Functions', progression: 'More with Functions'
+
+stage 'Parameters and Return Values Investigate', flex_category: 'csp_parameters_return_values'
+level 'U7 Param Return Investigate Thermostat Embed', progression: 'App Investigation'
+level 'U7 Param Return Investigate Rock Embed', progression: 'App Investigation'
+level 'U7 Param Return Investigate Weather Embed', progression: 'App Investigation'
+level 'U7 Param Return Investigate Thermostat', progression: 'Code Investigation'
+level 'U7 Param Return Investigate Rock', progression: 'Code Investigation'
+level 'U7 Param Return Investigate Weather', progression: 'Code Investigation'
+
+stage 'Parameters and Return Values Practice', flex_category: 'csp_parameters_return_values'
+level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 4', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 3', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 5', progression: 'console.log Practice'
+level 'U7 Param Investigate Calculator App', progression: 'App Practice'
+level 'U7 Param Practice App 2', progression: 'App Practice'
+
+stage 'Libraries Explore', flex_category: 'csp_libraries'
+level 'U7 L04 Exit Ticket', progression: 'Check Your Understanding', assessment: true
+
+stage 'Libraries Investigate', flex_category: 'csp_libraries'
+level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
+level 'U7 Libraries List Math Library', progression: 'Code Investigation'
+level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
+
+stage 'Libraries Project', flex_category: 'csp_libraries'
+level 'U7 Libraries Explanation', progression: 'Video: Libraries'
+level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
+level 'CSP Pilot U7 Libraries Make Pt 4', progression: 'Libraries Playground'
+
+stage 'Student Survey (Libraries)', lockable: true, flex_category: 'csp_libraries'
+level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true
+
+stage 'Teacher Survey (Libraries)', lockable: true, flex_category: 'csp_libraries'
+level 'Teacher Late Spring Pilot Survey Libraries', progression: 'Teacher Survey (Libraries)', assessment: true

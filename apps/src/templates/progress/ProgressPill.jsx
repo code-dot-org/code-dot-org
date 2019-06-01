@@ -55,8 +55,7 @@ class ProgressPill extends React.Component {
     fontSize: PropTypes.number,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
-    inMiniRubricExperiment: PropTypes.bool
+    selectedSectionId: PropTypes.string
   };
 
   render() {
@@ -67,8 +66,7 @@ class ProgressPill extends React.Component {
       fontSize,
       tooltip,
       disabled,
-      selectedSectionId,
-      inMiniRubricExperiment
+      selectedSectionId
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -116,9 +114,7 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
-          {inMiniRubricExperiment && levelIsAssessment && (
-            <SmallAssessmentIcon />
-          )}
+          {levelIsAssessment && <SmallAssessmentIcon />}
         </div>
       </a>
     );

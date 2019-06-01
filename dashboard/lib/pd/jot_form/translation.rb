@@ -162,14 +162,16 @@ module Pd
         }
       end
 
-      # Strip leading and trailing whitespace from each answer
+      # Strip leading and trailing whitespace from each answer.
+      # For each hash, remove "\\" pairs as well, which are appearing in strings
+      # such as "I\\'m a teacher."
       def strip_answer(answer)
         if answer.is_a? String
           answer.strip
         elsif answer.is_a? Array
           answer.map(&:strip)
         elsif answer.is_a? Hash
-          answer.transform_values(&:strip)
+          answer.transform_values {|value| value.strip.delete("\\")}
         end
       end
     end

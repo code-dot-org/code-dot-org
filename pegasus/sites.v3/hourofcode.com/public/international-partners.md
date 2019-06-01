@@ -120,7 +120,7 @@ You, too, can play a leading role to get more people in your country involved! I
 | Thailand                              | Aksorn Education PLC                                              |                                      | www.aksorn.com                                                                                     |
 | Thailand                              | Siamentis Ltd.                                                    | Chet Chetsandtikhun                  | chet@siamentis.com                                                                                 |
 | Turkey                                | RobinCode                                                         | Gözde Erbaz                          | www.robincode.org <br> gozde@robincode.org                                                         |
-| UK                                    | Computing At School (CAS)                                         | Abi Edwards                          | http://www.computingatschool.org.uk <br> noe@bcs.uk                                                |
+| UK                                    | Computing At School (CAS)                                         | Abi Edwards                          | http://www.computingatschool.org.uk <br> compatsch@bcs.uk                                          |
 | Vietnam                               | Microsoft Vietnam                                                 | Nhi Le                               | https://www.microsoft.com/vi-vn <br> nhile@microsoft.com                                           |
 
 <%= view :signup_button %>

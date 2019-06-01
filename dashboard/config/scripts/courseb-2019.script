@@ -6,9 +6,11 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/courseb/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
-script_announcements [{"notice"=>"Our 2019 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview", "type"=>"bullhorn"}]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course B!", "link"=>"https://curriculum.code.org/csf-19/courseb", "type"=>"information"}]
 family_name 'courseb'
 version_year '2019'
+is_stable true
+curriculum_umbrella 'CSF'
 
 stage 'Your Digital Footprint', flex_category: 'csf_digcit'
 level 'DigitalFootprint-Unplugged'
