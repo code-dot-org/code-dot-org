@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('The DebugConsole component', () => {
   let root;
@@ -233,6 +234,122 @@ describe('The DebugConsole component', () => {
       expect(debugOutput().get(0).style.backgroundColor).to.equal(
         'rgb(255, 204, 204)'
       );
+    });
+  });
+});
+
+describe('The DebugConsole component with the react-inspector flag on', () => {
+  let root;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(reducers);
+    sinon.stub(experiments, 'isEnabled').returns(true);
+    expect(experiments.isEnabled('react-inspector')).to.equal(true);
+
+    root = mount(
+      <Provider store={getStore()}>
+        <DebugConsole showReactInspector={true} />
+      </Provider>
+    );
+  });
+
+  afterEach(() => {
+    experiments.isEnabled.restore(); // don't forget this!
+    restoreRedux();
+  });
+
+  const debugOutput = () => root.find('#debug-output');
+
+  describe('when input is coming from code workspace returns', () => {
+    it('an array input outputs an array without an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: ['test'],
+          fromConsoleLog: true,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('▶["test"]');
+    });
+
+    it('a string input outputs a string without an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: 'hello world',
+          fromConsoleLog: true,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('"hello world"');
+    });
+
+    it('an integer or mathematical operation input outputs an integer without an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: 1 + 1,
+          fromConsoleLog: true,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('2');
+    });
+
+    it('an object input outputs an object without an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: {foo: 'bar'},
+          fromConsoleLog: true,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
+    });
+  });
+
+  describe('when input is coming from input form tag of debug console in app lab and game lab returns', () => {
+    it('an array input outputs an array with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: ['test'],
+          fromConsoleLog: false,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('< ▶["test"]');
+    });
+
+    it('a string input outputs a string with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: 'hello world',
+          fromConsoleLog: false,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('< "hello world"');
+    });
+
+    it('an integer or mathematical operation input outputs an integer with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: 1 + 1,
+          fromConsoleLog: false,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('< 2');
+    });
+
+    it('an object input outputs an object with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          output: {foo: 'bar'},
+          fromConsoleLog: false,
+          undefinedInput: false
+        })
+      );
+      expect(debugOutput().text()).to.equal('< ▶Object {foo: "bar"}');
     });
   });
 });
