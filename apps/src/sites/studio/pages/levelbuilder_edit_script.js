@@ -48,6 +48,7 @@ export default function initPage(scriptEditorData) {
         supportedLocales={scriptData.supported_locales}
         locales={locales}
         projectSharing={scriptData.project_sharing}
+        curriculumUmbrella={scriptData.curriculum_umbrella}
       />
     </Provider>,
     document.querySelector('.edit_container')

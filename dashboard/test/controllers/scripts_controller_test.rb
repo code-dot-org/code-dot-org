@@ -252,6 +252,7 @@ class ScriptsControllerTest < ActionController::TestCase
       hideable_stages true
       wrapup_video 'hoc_wrapup'
       project_sharing true
+      curriculum_umbrella 'CSP'
 
     TEXT
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -266,7 +267,8 @@ class ScriptsControllerTest < ActionController::TestCase
       login_required: true,
       hideable_stages: true,
       wrapup_video: 'hoc_wrapup',
-      project_sharing: 'on'
+      project_sharing: 'on',
+      curriculum_umbrella: 'CSP'
     }
     assert_redirected_to script_path id: 'test-script-create'
 
@@ -276,6 +278,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert script.login_required
     assert script.hideable_stages
     assert script.project_sharing
+    assert_equal "CSP", script.curriculum_umbrella
   end
 
   test 'destroy raises exception for evil filenames' do
@@ -377,6 +380,31 @@ class ScriptsControllerTest < ActionController::TestCase
     refute Script.find_by_name(script.name).project_sharing
   end
 
+  test 'updates curriculum_umbrella' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    assert_nil Script.find_by_name(script.name).curriculum_umbrella
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_umbrella: 'CSF'
+    }
+    assert_equal Script.find_by_name(script.name).curriculum_umbrella, 'CSF'
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_umbrella: ''
+    }
+    refute Script.find_by_name(script.name).curriculum_umbrella
+  end
+
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
@@ -455,27 +483,22 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to latest stable version in script family' do
-    dogs1 = create :script, name: 'dogs1', family_name: 'dogs', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'coursea', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'dogs'}
+      get :show, params: {id: 'coursea'}
     end
 
     dogs1.update!(is_stable: true)
-    get :show, params: {id: 'dogs'}
+    get :show, params: {id: 'coursea'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'dogs', version_year: '1902', is_stable: true
-    get :show, params: {id: 'dogs'}
+    create :script, name: 'dogs2', family_name: 'coursea', version_year: '1902', is_stable: true
+    get :show, params: {id: 'coursea'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'dogs', version_year: '1899', is_stable: true
-    get :show, params: {id: 'dogs'}
+    create :script, name: 'dogs3', family_name: 'coursea', version_year: '1899', is_stable: true
+    get :show, params: {id: 'coursea'}
     assert_redirected_to "/s/dogs2"
-
-    # do not redirect within script family if the requested script exists
-    create :script, name: 'dogs'
-    get :show, params: {id: 'dogs'}
-    assert_response :success
   end
 end

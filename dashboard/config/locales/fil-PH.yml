@@ -75,7 +75,6 @@ fil:
   of: ng
   more: MARAMI
   less: KAUNTI
-  beta: beta
   try_hoc: Subukan ang Hour of Code, i-click dito >> 
   try_k8intro: Subukan ang pang K-8 na Kursong Introduksyon sa Computer Science (15-25
     oras)
@@ -1084,21 +1083,10 @@ fil:
     create: Gumawa ng Proyekto
     create_a_project: 'Gumawa ng bagong proyekto:'
     new: Gumawa ng Bago
-    rename: Baguhin ang Pangalan
-    save: I-save
-    import: Mag-Import
-    share_link_import_bad_link_header: Ang Share na Link ay hindi kinikilala
-    share_link_import_bad_link_body: 'Hindi namin ma-import ang share na link na iyan.
-      Siguraduhing ikaw ay gumagamit ng link mula sa Minecraft: Agent puzzle, at nakopya
-      mo ang buong link.'
-    share_link_import_error_header: May nangyaring mali.
-    share_link_import_error_body: May problema sa pag-import ng share na link na iyan.
-      Pakisubukan ulit.
     exit: Bumalik sa Kurso
     project_gallery: Mga Proyekto
     publish: Ilathala
     unpublish: Di-nailathala
-    share: Ibahagi
     share_title: Ibahagi ang iyong proyekto
     share_copy_link: 'Kopyahin ang link:'
     share_embed_description: Maaring mong idikit ang embed na code sa iyong HTML na
@@ -1123,8 +1111,6 @@ fil:
     saved: Na-save sa gallery!
     not_saved: Hindi na-save
     view_all: Tingnan ang Aking mga Proyekto
-    remix: Remix
-    click_to_remix: I-click ang "Remix" para makalikha ng iyong sariling bersyon!
     edit_project: I-edit ang Proyekto
     sharing_disabled: Paumanhin, ang proyektong ito ay hindi magagamit para sa pagbabahagi.
       Kung ito ay iyong proyekto o proyekto ng isa sa iyong mga estudyante, <a href='https://studio.code.org/users/sign_in'>mag-sign

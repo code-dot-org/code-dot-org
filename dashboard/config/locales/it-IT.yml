@@ -82,7 +82,6 @@ it:
   of: di
   more: DI PIÙ
   less: DI MENO
-  beta: versione provvisoria
   try_hoc: 'Prova l''Ora del Codice, clicca qui >> '
   try_k8intro: Prova il nostro corso introduttivo di informatica per scuole elementari
     e medie inferiori (in 20 lezioni)
@@ -1114,21 +1113,10 @@ it:
     create: Crea progetto
     create_a_project: 'Crea un nuovo progetto:'
     new: Nuovo
-    rename: Rinomina
-    save: Salva
-    import: Importa
-    share_link_import_bad_link_header: Collegamento di condivisione non riconosciuto
-    share_link_import_bad_link_body: 'Non siamo riusciti a importare il collegamento
-      di condivisione. Assicurati di usare un collegamento creato da un rompicapo
-      di Minecraft: Agent e di aver copiato il collegamento completo.'
-    share_link_import_error_header: Si è verificato un errore.
-    share_link_import_error_body: Si è verificato un errore durante l'importazione
-      del collegamento di condivisione. Riprova.
     exit: Ritorna al corso
     project_gallery: Progetti
     publish: Pubblica
     unpublish: Annulla Pubblicazione
-    share: Condividi
     share_title: Condividi il tuo progetto
     share_copy_link: 'Copia il link:'
     share_embed_description: È possibile incollare il codice da incorporare in una
@@ -1153,9 +1141,6 @@ it:
     saved: Salvato
     not_saved: Non salvato
     view_all: Guarda la Collezione Privata
-    remix: Rimescola
-    click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a
-      piacere!
     edit_project: Modifica progetto
     sharing_disabled: Siamo spiacenti, questo progetto non è disponibile per la condivisione.
       Se questo è il tuo progetto o il progetto di uno dei tuoi studenti, ti preghiamo
@@ -1224,7 +1209,7 @@ it:
     csf_f_1: Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi
       precedenti)
     csf_f_2: Contenuti del Corso F
-    csf_digcit: Cittadinanza Digitale
+    csf_digcit: Cittadinanza digitale
     csf_jigsaw: Puzzle
     csf_loops: Ripetizioni
     csf_events: Eventi
@@ -1237,6 +1222,7 @@ it:
     csf_variables: Variabili
     csf_for_loops: Cicli con Contatore
     csf_internet: Internet
+    csf_warmup: Riscaldamento
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'
     csd2_1: 'Capitolo 1: Contenuti Web e HTML'

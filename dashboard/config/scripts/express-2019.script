@@ -8,6 +8,8 @@ project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2019'
+is_stable true
+curriculum_umbrella 'CSF'
 
 stage 'Dance Party', flex_category: 'csf_warmup'
 level 'CourseD_Dance_Party_01'

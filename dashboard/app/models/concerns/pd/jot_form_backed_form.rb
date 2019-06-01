@@ -107,6 +107,14 @@ module Pd
 
         form_ids.each do |form_id|
           questions = get_questions(form_id, force_sync: true)
+          questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
+          if questions_details
+            # Make sure that there is a unique, non-nil name for each question.
+            if questions_details.pluck("name").compact.uniq.size != questions_details.size
+              raise "Not all questions for form #{form_id} have unique names."
+            end
+          end
+
           last_known_submission_id = questions.last_submission_id
 
           offset = 0
@@ -126,7 +134,7 @@ module Pd
             response[:submissions].each do |submission|
               submission_id = submission[:submission_id]
               begin
-                success = process_submission(submission)
+                success = process_submission(submission, questions_details)
                 imported += 1 if success
               rescue => e
                 # Store message and first line of backtrace for context
@@ -169,10 +177,29 @@ module Pd
         imported
       end
 
-      def process_submission(submission)
+      # Process a submission and saves the model.
+      # @param [submission] (optional) The submission received from JotForm.
+      # @param [questions_details] (optional) Details of the questions.  If provided, we can
+      #   attempt to use the name field from each question rather than its numerical ID when
+      #   storing answers.
+      def process_submission(submission, questions_details=nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
-          model.answers = submission[:answers].to_json
+          dest_answers = {}
+
+          source_answers = submission[:answers]
+          source_answers.each do |key, value|
+            # We have an answer ID, but can we get a name instead of the ID?
+            question_detail = questions_details && questions_details.find {|q| q["id"] == key}
+            # If we want to use names instead of IDs, and we got a name, then use it.
+            if use_names_for_question_ids? && question_detail && question_name = question_detail["name"]
+              dest_answers[question_name] = value
+            else
+              dest_answers[key] = value
+            end
+          end
+
+          model.answers = dest_answers.to_json
           form_id = submission[:form_id]
           submission_id = submission[:submission_id]
 
@@ -211,6 +238,12 @@ module Pd
         # Only keep this environment. Skip others.
         return true if environment != Rails.env
 
+        false
+      end
+
+      # Override in included class to enable use of name instead of id for question identifier.
+      # @return [Boolean] true if name should be used when possible for question identifier.
+      def use_names_for_question_ids?
         false
       end
 

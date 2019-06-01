@@ -3143,7 +3143,7 @@ it:
         Course_4_Play_Lab_Vars_2_a: Assicurati di impostare un valore di `dog_speed` (<i>velocità del cane</i>) che sia maggiore di `cat_speed` (<i>velocità del gatto</i>).
       D_Frozen_nested3_authored_hint:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
-        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e inseriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       D_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |-
           Ecco un fiocco di neve di pentagoni seguito da uno di triangoli dopo uno sfasamento di 36 gradi:
@@ -3586,10 +3586,10 @@ it:
           Puoi eseguire il tuo codice anche se non è corretto.  Esegui e modifica il codice diverse volte finché non hai capito dov'è l'errore.
         MC_HOC_2017_04_Cole_b: Quando l'Agente raggiunge la pedana a pressione, la porta si apre.
       MC_HOC_2017_05_Cole_authored_hint:
-        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere un'asse di quercia .
+        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere un asse di quercia.
         MC_HOC_2017_05_Cole_b: Porta l'Agente al di là del fiume mentre costruisce un ponte.
       MC_HOC_2017_05_Cole_2019_authored_hint:
-        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere un'asse di quercia .
+        MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere un asse di quercia.
         MC_HOC_2017_05_Cole_b: Porta l'Agente al di là del fiume mentre costruisce un ponte.
       MC_HOC_2017_05_Josh_authored_hint:
         MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più pezzi di codice in un ciclo?  Prova a posizionare un'asse **e** andare avanti in una "ripetizione" per completare questo rompicapo.
@@ -4131,6 +4131,9 @@ it:
           -   disegna un triangolo
           -   salta in avanti di 50 pixel
           -   gira a destra di 90 gradi
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
       course2_artist_prog_challenge1_authored_hint:
         courseC_artist_prog_challenge1_a: 'Il rettangolo è largo 200 pixel e alto 100. '
       course2_bee_conditionals_challenge1_authored_hint:
@@ -6416,21 +6419,21 @@ it:
         courseB_collector_loops_challenge2a_b: Guarda questo possibile percorso. Riesci a notare uno schema da ripetere?
         courseB_collector_loops_challenge2a_c: Per raccogliere tutti i diamanti, devi mettere nel ciclo principale due blocchi <xml> <block type="collector_collect"/></xml> oppure mettere quel blocco all'interno di un ciclo `ripeti`.
       courseB_iceage_loops1_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveEast"/></xml>
       courseB_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseB_iceage_loops1_2019_authored_hint:
-        courseB_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
@@ -8956,7 +8959,7 @@ it:
         courseD_artist_project2_b: Dopo aver disegnato ed essere andato avanti la prima volta, puoi ripetere il codice aggiungendo un ciclo all'esterno.
       courseD_Frozen_nested3_authored_hint:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
-        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e inseriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_Frozen_nested4_authored_hint:
         courseD_artist_project4_a: |-
           Ecco un fiocco di neve di pentagoni seguito da uno di triangoli dopo uno sfasamento di 36 gradi:
@@ -9388,6 +9391,15 @@ it:
         courseD_artist_nestedLoops_challenge1_b: Aggiungi le istruzioni per cambiare il colore in verde e disegnare un triangolo con lati di 50 pixel e curve di 120 gradi a sinistra.
         courseD_artist_nestedLoops_challenge1_c: Dopo aver disegnato entrambe le forme, dovrai saltare avanti di 50 pixel prima di girare a destra di 90 gradi.
         courseD_artist_nestedLoops_challenge1_d: Per concludere, metti tutte le istruzioni all'interno di un ciclo `ripeti 4 volte`.
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2018_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
+      courseD_artist_nestedLoops_challenge2_2019_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Per disegnare un ottagono regolare, l'artista deve girare di 45 gradi per 8 volte.
+        courseD_artist_nestedLoops_challenge2_b: Per disegnare un quadrato, l'artista deve girare di 90 gradi per 4 volte.
       courseD_artist_project1_authored_hint:
         courseD_artist_project1_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
         courseD_artist_project1_b: Ricordati che il blocco `vai avanti` disegna una linea, mentre quello `salta in avanti` fa muovere senza lasciare traccia.
@@ -9441,13 +9453,13 @@ it:
           <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
       courseD_artist_project3_authored_hint:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
-        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e inseriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3_2018_authored_hint:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
-        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e inseriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3_2019_authored_hint:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...` per scegliere l'angolo che ti serve!
-        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e ineriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
+        courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai creato per disegnare una figura e inseriscilo all'interno di un altro ciclo. In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-   Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
       courseD_artist_project3a_authored_hint:
         courseD_artist_project3a_a: Puoi scegliere diversi modi di ruotare la tua forma! Cosa ne dici di 18 volte con angoli di 20 gradi tra una riga e l'altra?
       courseD_artist_project3a_2018_authored_hint:
@@ -9551,24 +9563,24 @@ it:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare un blocco `se`.
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
-        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2018_authored_hint:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare un blocco `se`.
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
-        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2019_authored_hint:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare un blocco `se`.
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
-        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se vuoi che il tuo programma funzioni in entrambi i casi, assicurati di usare un blocco `se`.
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
-        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+        courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi: per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda il video-suggerimento!
         courseD_bee_conditionals3_a: Assicurati di usare un'istruzione condizionale `se` per verificare in ogni casella se c'è un fiore.
@@ -10801,22 +10813,22 @@ it:
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso, quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza `mentre c'è strada in avanti` + `quando c'è una buca`.
       courseD_farmer_while_challenge1_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2018_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge1_2019_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_while_challenge1_b: Usando un ciclo `mentre`, puoi dire alla contadina di rimuovere un mucchio o riempire una buca, anche se non c'è. Ciò significa che è possibile programmarla per rimuovere qualsiasi mucchio o riempire qualsiasi buca, dovunque lei sia.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge2_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_farmer_while_challenge2_2018_authored_hint:
-        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** dalla fine del percorso.
+        courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una casella **prima** della fine del percorso.
         courseD_farmer_conditionals8_c: È possibile risolvere questo esercizio senza usare alcun blocco `ripeti ... volte`. Per farlo, avrai bisogno di usare quattro cicli `mentre`.
       courseD_harvester_nested_loops_challenge1_authored_hint:
         courseD_harvester_nested_loops_challenge1_a: 'Prova a seguire questo percorso per raggiungere tutte le pannocchie! '
@@ -10831,21 +10843,21 @@ it:
         courseD_harvester_nested_loops_challenge1_b: Per raccogliere più di una pannocchia, devi usare più volte il blocco `prendi pannocchia`.
         courseD_harvester_nested_loops_challenge1_c: Per risolvere questo esercizio, avrai bisogno di mettere un piccolo ciclo all'interno del ciclo principale!
       courseD_iceage_loops1_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
           <xml><block type="maze_moveForward"/></xml>
       courseD_iceage_loops10_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops10_2019_authored_hint:
-        courseB_iceage_loops10_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseB_iceage_loops10_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseB_iceage_loops10_b: Prova a pronunciare i passaggi ad alta voce o a scriverli su un foglio di carta. Noti degli schemi che si ripetono?
         courseB_iceage_loops10_c: Questa volta il percorso è lungo! Segui questa traccia.
       courseD_iceage_loops1_2019_authored_hint:
-        courseD_iceage_loops1_a: Stai attendo al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
+        courseD_iceage_loops1_a: Stai attento al ghiaccio rotto! Se Scrat ci andrà sopra, cadrà in acqua!
         courseD_iceage_loops1_b: |-
           Dovrai usare questo blocco:
 
