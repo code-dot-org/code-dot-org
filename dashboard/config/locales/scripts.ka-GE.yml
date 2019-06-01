@@ -5891,3 +5891,7 @@ ka:
           stages:
             What is a Computer?:
               name: რა არის კომპიუტერი?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: შეჯამება

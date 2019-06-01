@@ -64,7 +64,6 @@ ga:
   of: "as"
   more: "NÍOS MÓ"
   less: "NÍOS LÚ"
-  beta: "béite"
   try_hoc: "Bain triail as an Uair Chódála; cliceáil anseo >> "
   try_k8intro: "Bain triail as ár gCúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
   k8intro: "Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna (15-25 uair an chloig)"
@@ -763,18 +762,10 @@ ga:
     create: "Cruthaigh Togra"
     create_a_project: 'Cruthaigh togra nua:'
     new: "Cruthaigh Togra Nua"
-    rename: "Athainmnigh"
-    save: "Sábháil"
-    import: "Iompórtáil"
-    share_link_import_bad_link_header: "Nasc comhroinnte neamhaitheanta"
-    share_link_import_bad_link_body: "Níorbh fhéidir linn an nasc comhroinnte sin a iompórtáil. Deimhnigh gur tháinig an nasc ó dhúshlán Minecraft: Gníomhaire, agus gur chóipeáil tú an nasc iomlán."
-    share_link_import_error_header: "Tharla earráid."
-    share_link_import_error_body: "Tharla earráid agus an nasc comhroinnte sin á iompórtáil. Bain triail eile as."
     exit: "Fill ar an gCúrsa"
     project_gallery: "Tograí"
     publish: "Foilsigh"
     unpublish: "Dífhoilsigh"
-    share: "Comhroinn"
     share_title: Comhroinn do thogra
     share_copy_link: "Cóipeáil an nasc:"
     share_embed_description: "Is féidir an cód leabaithe a ghreamú isteach i leathanach HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin."
@@ -791,8 +782,6 @@ ga:
     saved: "Sábháilte"
     not_saved: "Gan sábháil"
     view_all: 'Mo Chuid Tograí'
-    remix: 'Athmheascadh'
-    click_to_remix: "Cliceáil \"Athmheascadh\" le do leagan féin a dhéanamh!"
     edit_project: 'Cuir an Togra in Eagar'
     sharing_disabled: "Ár leithscéal, ach níl an togra seo ar fáil le foilsiú. Más leatsa nó le dalta de do chuid é, <a href='https://studio.code.org/users/sign_in'>logáil isteach</a> i do chuntas le breathnú air."
     abuse:

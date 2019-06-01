@@ -61,7 +61,6 @@ de:
   of: "von"
   more: "MEHR"
   less: "WENIGER"
-  beta: "Beta"
   try_hoc: "Probiere \"The Hour of Code\" aus, klicke hier >>\_ "
   try_k8intro: "Probiere unseren Einführungskurs in die Informatik (15-25 Stunden)"
   k8intro: "Einführung in die Informatik (15-25 Stunden)"
@@ -730,16 +729,8 @@ de:
     create: "Projekt erstellen"
     create_a_project: 'Neues Projekt erstellen:'
     new: "Neu erstellen"
-    rename: "Umbenennen"
-    save: "Speichern"
-    import: "Importieren"
-    share_link_import_bad_link_header: "Freigabelink nicht erkannt"
-    share_link_import_bad_link_body: "Wir konnten den Freigabelink nicht importieren. Prüfe, ob du einen Link aus einem Minecraft: Agent-Rätsel verwendest. Kopiere den kompletten Link."
-    share_link_import_error_header: "Etwas ist schiefgelaufen."
-    share_link_import_error_body: "Es gab ein Problem beim Import des Freigabelinks. Versuche es erneut."
     exit: "Zurück zum Kurs"
     project_gallery: "Projekte"
-    share: "Teilen"
     share_title: Teile Dein Projekt
     share_copy_link: "Kopiere den Link:"
     share_embed_description: "Sie können den embed code in eine HTML Seite einfügen, um das Projekt auf einer anderen Webseite darzustellen."
@@ -754,8 +745,6 @@ de:
     saved: "Gespeichert"
     not_saved: "Nicht gespeichert"
     view_all: 'Meine Projekte ansehen'
-    remix: 'Remix'
-    click_to_remix: "Klicke auf \"Remix\", um Deine eigene Version zu erstellen!"
     edit_project: 'Projekt bearbeiten'
     abuse:
       tos: "Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'> Nutzungsbedingungen </a> von Code.org gemeldet und kann nicht mit anderen geteilt werden."
