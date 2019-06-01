@@ -1066,7 +1066,7 @@ class ContactRollups
       attempts += 1
       sleep delay
     end
-    raise Error("Timeout after waiting #{max_attempts * delay} seconds for cluster #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.")
+    raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.")
   rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
     log("Database Cluster #{db_cluster_id} has been deleted. #{error.message}")
   end
