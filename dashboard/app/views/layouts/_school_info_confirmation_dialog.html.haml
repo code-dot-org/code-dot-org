@@ -16,6 +16,7 @@
 - script_data[:existingSchoolInfo] = {}
 - if current_user_school_info
   - script_data[:existingSchoolInfo] = current_user_school_info.slice(:id, :country, :school_type, :school_id, :school_name, :full_address)
+- script_data[:existingSchoolInfo][:user_school_info_id] = current_user.user_school_infos.last&.id
 - script_data[:existingSchoolInfo][:country] ||= 'United States' if us_ip
 - script_data[:existingSchoolInfo][:school_name] ||= current_user_school_info&.school&.name
 
