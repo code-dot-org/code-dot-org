@@ -9,7 +9,7 @@ module SchoolInfoInterstitialHelper
     # Interstitial should pop up the first time for the teacher if it has been at least 30 days since the teacher signed
     # up for an account AND the teacher hasn’t previously filled out all the fields already (e.g. as part
     # of workshop registration).
-    return false if school_info && complete?(school_info)
+    return false if school_info && school_info.complete?
 
     if user.last_seen_school_info_interstitial
       days_since_interstitial_seen = (DateTime.now - user.last_seen_school_info_interstitial.to_datetime).to_i
@@ -36,7 +36,7 @@ module SchoolInfoInterstitialHelper
 
     school_info = user_school_info.school_info
 
-    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && complete?(school_info) && school_info.usa?
+    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && school_info.complete? && school_info.usa?
 
     check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
 
@@ -52,12 +52,5 @@ module SchoolInfoInterstitialHelper
     end
 
     show_dialog
-  end
-
-  # Decides whether the school info is complete enough to stop bugging the
-  # teacher for additional information every week.  Different from complete
-  # record validation.
-  def self.complete?(school_info)
-    school_info.complete?
   end
 end
