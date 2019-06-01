@@ -14,7 +14,10 @@ module Pd
     #
     # The JotForm survey will redirect to thanks.
     def new
-      @form_id = params[:form_id]
+      form_data = Pd::MiscSurvey.find_form_data(params[:form_id])
+      return render_404 unless form_data && form_data[:allow_embed]
+
+      @form_id = form_data[:form_id]
 
       return render :logged_out unless current_user
       return render :not_teacher unless current_user.teacher?
