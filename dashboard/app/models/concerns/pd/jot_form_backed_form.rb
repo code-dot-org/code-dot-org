@@ -361,7 +361,8 @@ module Pd
       raise 'Missing submission id' unless submission_id.present?
 
       submission = JotForm::Translation.new(form_id).get_submission(submission_id)
-      dest_answers = process_answers_from_submission(submission[:answers], JSON.parse(questions.questions))
+      questions_details = self.class.use_names_for_question_ids? ? questions.questions : nil
+      dest_answers = process_answers_from_submission(submission[:answers], questions_details)
       update!(answers: dest_answers.to_json)
     end
 
