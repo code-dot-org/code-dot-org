@@ -26,7 +26,7 @@ it:
         title: Astrazione
         desc: Questa lezione combina le attività quotidiane dei tuoi studenti con un gioco con le parole chiamato "Mad-Libs" (che consiste nel riempire con parole a scelta degli spazi vuoti di frasi pre-determinate) per aiutarli a comprendere l'efficacia dell'astrazione.
       Unplug9:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Questa lezione riutilizza l'idea di una precedente lezione (n.4 - Programmazione su carta a quadretti) ed usa le abilità apprese in quella lezione per sottolineare l'importanza di costruire programmi che operano in sequenza e di controllare spesso se nel programma ci sono errori (detti "bug").
       Unplug10:
         title: Internet
@@ -50,7 +50,7 @@ it:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo (istruzione di ripetizione) attraverso una danza. Gli studenti imparano una semplice coreografia da ripetere più volte.
       RelayProgramming:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.
       Conditionals:
         title: Istruzioni condizionali
@@ -89,10 +89,10 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       DigitalCitizenship:
-        title: Cittadinanza Digitale
+        title: Cittadinanza digitale
         desc: Gli studenti esplorano la differenza tra informazioni private e informazioni personali, per distinguere cosa si può condividere su Internet in modo sicuro e cosa no.
       TangramAlgorithms:
         title: Algoritmi per il Tangram
@@ -104,7 +104,7 @@ it:
         title: Mad G-Libs
         desc: L'astrazione è una delle abilità più importanti che un informatico deve possedere.  In questa attività i tuoi studenti analizzano storie per capirne le differenze, così che possano astrarre gli elementi comuni. Gli schemi di storia così ottenuti diventano dei modelli per divertirsi ad inventare nuove storie.
       ForLoopFun:
-        title: Divertiti usando i Cicli con Contatore
+        title: Divertiti usando i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
         title: Composizione di Canzoni - Parametri
@@ -146,7 +146,7 @@ it:
         title: Attività Tradizionale
         desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseE_unplugged_privateInformation:
-        title: 'Cittadinanza digitale: Dati personali '
+        title: 'Cittadinanza digitale - Dati personali '
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività Tradizionale
@@ -182,10 +182,10 @@ it:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       courseD_unplugged_relayProgramming:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione su carta a quadretti". Possono scrivere una sola istruzione alla volta, e se trovano un errore in qualche punto, devono cancellare tutto fino a quel punto.
       courseD_unplugged_conditionalsCards:
-        title: Istruzioni condizionali con le Carte da Gioco
+        title: Istruzioni condizionali con le carte da gioco
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".
       courseD_unplugged_binaryImages:
         title: Immagini binarie
@@ -200,7 +200,7 @@ it:
         title: Internet
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>), una tecnica per la risoluzione di problemi usata in informatica, per completare insieme un'attività in modo più efficiente rispetto a uno studente che ci prova da solo.
       courseE_unplugged_songwriting:
         title: Composizione di canzoni
@@ -212,7 +212,7 @@ it:
         title: Variabili e Buste
         desc: Le variabili consentono molta libertà nell'informatica.  Questa lezione aiuta a spiegare quali sono le variabili e come possiamo utilizzarle in diversi modi. Svolgi questa attività prima di (o in concomitanza con) la lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
-        title: Divertiti usando i Cicli con Contatore
+        title: Divertiti usando i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte, ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
         title: Composizione di Canzoni - Parametri
@@ -268,10 +268,10 @@ it:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
       courseE_unplugged_CnC_2018:
-        title: Condivisione Digitale
+        title: Condivisione digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       RelayProgramming_2018:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
       courseB_unplugged_MRF_2019:
         title: I miei amici robotici
@@ -285,7 +285,7 @@ it:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando un insieme di comandi predefiniti per guidare i loro compagni di classe nel riprodurre il disegno.
       RelayProgramming_2018_2019:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
       courseD_unplugged_digitalCitizenship_2019:
         title: Attività Tradizionale
@@ -296,7 +296,7 @@ it:
       courseE_unplugged_privateInformation_2019:
         title: Cittadinanza digitale - Dati personali
       courseE_unplugged_CnC_2019:
-        title: Condivisione Digitale
+        title: Condivisione digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       GettingLoopy_2019:
         title: Diventare ripetitivi
@@ -334,7 +334,7 @@ it:
         title: È fantastico creare e comportarsi lealmente
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a capire il processo di condivisione e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità di essere corretti con coloro che danno vita ai contenuti creativi.
       timeforcs_demo_crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
       timeforcs_demo_conditionals:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto" e "SE estraggo una carta nera tu ottieni un punto".

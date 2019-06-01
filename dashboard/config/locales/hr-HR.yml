@@ -52,7 +52,6 @@ hr:
   of: od
   more: VIŠE
   less: MANJE
-  beta: beta
   try_hoc: 'Isprobaj Sat programiranja, klikni ovdje >> '
   try_k8intro: Isprobaj naš informatički tečaj za manju djecu 4-8 godina (15-25 sati)
   k8intro: Uvod u informatiku za manju djecu, 4-8 godina (15-25 sati)
@@ -566,11 +565,8 @@ hr:
     create: Stvaranje projekta
     create_a_project: 'Stvaranje novog projekta:'
     new: Kreiraj novi
-    rename: Preimenuj
-    save: Spremi
     exit: Povratak na tečaj
     project_gallery: Projekti
-    share: Podijeli
     share_title: Podijelite svoj projekt
     share_copy_link: 'Kopirajte link:'
     name: Ime
@@ -583,8 +579,6 @@ hr:
     saved: Spremljeno
     not_saved: Nije spremljeno
     view_all: Moji projekti
-    remix: Remiks
-    click_to_remix: Kliknite na "Remiks" da pokrenete svoju verziju!
     edit_project: Uređivanje projekta
     abuse:
       tos: Ovaj projekat je prijavljen da krši <a href='http://code.org/tos'>Uvjete
