@@ -255,7 +255,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
   });
 
   afterEach(() => {
-    experiments.isEnabled.restore(); // don't forget this!
+    experiments.isEnabled.restore();
     restoreRedux();
   });
 
@@ -266,8 +266,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       getStore().dispatch(
         actions.appendLog({
           output: ['test'],
-          fromConsoleLog: true,
-          undefinedInput: false
+          fromConsoleLog: true
         })
       );
       expect(debugOutput().text()).to.equal('▶["test"]');
@@ -277,8 +276,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       getStore().dispatch(
         actions.appendLog({
           output: 'hello world',
-          fromConsoleLog: true,
-          undefinedInput: false
+          fromConsoleLog: true
         })
       );
       expect(debugOutput().text()).to.equal('"hello world"');
@@ -288,8 +286,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       getStore().dispatch(
         actions.appendLog({
           output: 1 + 1,
-          fromConsoleLog: true,
-          undefinedInput: false
+          fromConsoleLog: true
         })
       );
       expect(debugOutput().text()).to.equal('2');
@@ -299,8 +296,7 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
       getStore().dispatch(
         actions.appendLog({
           output: {foo: 'bar'},
-          fromConsoleLog: true,
-          undefinedInput: false
+          fromConsoleLog: true
         })
       );
       expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
@@ -311,15 +307,25 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
     it('an array input outputs an array with an arrow', () => {
       getStore().dispatch(
         actions.appendLog({
+          input: '["test"]'
+        })
+      );
+      getStore().dispatch(
+        actions.appendLog({
           output: ['test'],
           fromConsoleLog: false,
           undefinedInput: false
         })
       );
-      expect(debugOutput().text()).to.equal('< ▶["test"]');
+      expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
     });
 
     it('a string input outputs a string with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          input: 'hello world'
+        })
+      );
       getStore().dispatch(
         actions.appendLog({
           output: 'hello world',
@@ -327,10 +333,15 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
           undefinedInput: false
         })
       );
-      expect(debugOutput().text()).to.equal('< "hello world"');
+      expect(debugOutput().text()).to.equal('> hello world< "hello world"');
     });
 
     it('an integer or mathematical operation input outputs an integer with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          input: '1 + 1'
+        })
+      );
       getStore().dispatch(
         actions.appendLog({
           output: 1 + 1,
@@ -338,10 +349,15 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
           undefinedInput: false
         })
       );
-      expect(debugOutput().text()).to.equal('< 2');
+      expect(debugOutput().text()).to.equal('> 1 + 1< 2');
     });
 
     it('an object input outputs an object with an arrow', () => {
+      getStore().dispatch(
+        actions.appendLog({
+          input: "{foo: 'bar'}"
+        })
+      );
       getStore().dispatch(
         actions.appendLog({
           output: {foo: 'bar'},
@@ -349,7 +365,9 @@ describe('The DebugConsole component with the react-inspector flag on', () => {
           undefinedInput: false
         })
       );
-      expect(debugOutput().text()).to.equal('< ▶Object {foo: "bar"}');
+      expect(debugOutput().text()).to.equal(
+        '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
+      );
     });
   });
 });
