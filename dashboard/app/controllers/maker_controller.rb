@@ -20,31 +20,8 @@ class MakerController < ApplicationController
   end
 
   def self.maker_script(for_user)
-    csd6_17 = Script.get_from_cache(Script::CSD6_NAME)
-    csd6_18 = Script.get_from_cache(Script::CSD6_2018_NAME)
-    csd6_19 = Script.get_from_cache(Script::CSD6_2019_NAME)
-
-    # Assigned course or script should take precedence.
-    assigned = for_user.section_courses + for_user.section_scripts
-    if assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2019)) || assigned.include?(csd6_19)
-      return csd6_19
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2018)) || assigned.include?(csd6_18)
-      return csd6_18
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2017)) || assigned.include?(csd6_17)
-      return csd6_17
-    end
-
-    # Otherwise, show the version with progress (defaulting to most recent).
-    progress = UserScript.lookup_hash(for_user, [Script::CSD6_NAME, Script::CSD6_2018_NAME, Script::CSD6_2019_NAME])
-    if progress[Script::CSD6_2019_NAME]
-      csd6_19
-    elsif progress[Script::CSD6_2018_NAME]
-      csd6_18
-    elsif progress[Script::CSD6_NAME]
-      csd6_17
-    else
-      csd6_19
-    end
+    script_name = Script.get_script_family_version_for_user('csd', user: for_user)
+    Script.get_from_cache(script_name || Script::CSD6_2019_NAME)
   end
 
   def setup

@@ -473,7 +473,7 @@ class Script < ActiveRecord::Base
     end
   end
 
-  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+  def self.get_script_family_version_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
     family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
@@ -502,7 +502,11 @@ class Script < ActiveRecord::Base
       end
     end
 
-    script_name = latest_version&.name
+    latest_version&.name
+  end
+
+  def self.get_script_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
+    script_name = Script.get_script_family_version_for_user
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
