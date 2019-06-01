@@ -26,7 +26,7 @@ import {
 } from '../../../redux/watchedExpressions';
 import DebugConsole from './DebugConsole';
 import DebugButtons from './DebugButtons';
-// import experiments from '../../../util/experiments';
+import experiments from '../../../util/experiments';
 
 import {
   // actions
@@ -610,6 +610,9 @@ class JsDebugger extends React.Component {
             debugButtons={this.props.debugButtons}
             debugWatch={showWatchPane}
             ref={debugConsole => (this._debugConsole = debugConsole)}
+            showReactInspector={
+              experiments.isEnabled('react-inspector') ? true : false
+            }
           />
         )}
         <div style={{display: showWatchPane ? 'initial' : 'none'}}>
