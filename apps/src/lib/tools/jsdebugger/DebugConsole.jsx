@@ -16,7 +16,7 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
-import experiments from '../../../util/experiments';
+// import experiments from '../../../util/experiments';
 import Inspector from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
@@ -122,9 +122,7 @@ export default connect(
     static propTypes = {
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
-      logOutput: experiments.isEnabled('react-inspector')
-        ? PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
-        : PropTypes.string.isRequired,
+      logOutput: PropTypes.any.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -136,7 +134,8 @@ export default connect(
       // passed from above
       debugButtons: PropTypes.bool,
       debugWatch: PropTypes.bool,
-      style: PropTypes.object
+      style: PropTypes.object,
+      showReactInspector: PropTypes.bool
     };
 
     onInputKeyDown = e => {
@@ -145,7 +144,7 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        experiments.isEnabled('react-inspector')
+        this.props.showReactInspector
           ? this.appendLog({input: input})
           : this.appendLog('> ' + input);
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
@@ -158,9 +157,8 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            if (experiments.isEnabled('react-inspector')) {
-              // wrapping input with parens for objects before the evalInCurrestScope
-              // ensures objects are returned correctly consistently
+            if (this.props.showReactInspector) {
+              // parentheses prevent the object from being interpreted as a block rather than as an object
               let result = this.props.evalInCurrentScope(
                 input[0] === '{' && input[input.length - 1] === '}'
                   ? `(${input})`
@@ -171,7 +169,6 @@ export default connect(
               );
               this.appendLog({
                 output: result,
-                fromConsoleLog: false,
                 undefinedInput: input === 'undefined' ? true : false
               });
             } else {
@@ -179,13 +176,13 @@ export default connect(
               this.appendLog('< ' + String(result));
             }
           } catch (err) {
-            experiments.isEnabled('react-inspector')
-              ? this.appendLog({output: String(err), fromConsoleLog: false})
+            this.props.showReactInspector
+              ? this.appendLog({output: String(err)})
               : this.appendLog('< ' + String(err));
           }
         } else {
-          experiments.isEnabled('react-inspector')
-            ? this.appendLog({output: '(not running)', fromConsoleLog: false})
+          this.props.showReactInspector
+            ? this.appendLog({output: '(not running)'})
             : this.appendLog('< (not running)');
         }
       } else if (e.keyCode === KeyCodes.UP) {
@@ -253,10 +250,8 @@ export default connect(
           } else if (
             rowValue.output ||
             FALSY_VALUES.has(rowValue.output) ||
-            (rowValue.output === undefined && rowValue.fromConsoleLog) ||
             (rowValue.output === undefined &&
-              !rowValue.fromConsoleLog &&
-              rowValue.undefinedInput)
+              (rowValue.fromConsoleLog || rowValue.undefinedInput))
           ) {
             if (rowValue.fromConsoleLog) {
               return <Inspector key={i} data={rowValue.output} />;
@@ -312,7 +307,7 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            {experiments.isEnabled('react-inspector')
+            {this.props.showReactInspector
               ? this.displayOutputToConsole()
               : this.props.logOutput}
           </div>
