@@ -187,8 +187,7 @@ class ExportDialog extends React.Component {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired
     }).isRequired,
-    allowExportExpo: PropTypes.bool.isRequired,
-    exportApp: PropTypes.func,
+    exportApp: PropTypes.func.isRequired,
     projectUpdatedAt: PropTypes.string,
     isAbusive: PropTypes.bool.isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -755,7 +754,6 @@ export const UnconnectedExportDialog = ExportDialog;
 
 export default connect(
   state => ({
-    allowExportExpo: state.pageConstants.allowExportExpo || false,
     exportApp: state.pageConstants.exportApp,
     isOpen: state.exportDialog.isOpen,
     projectUpdatedAt: state.header.projectUpdatedAt,
