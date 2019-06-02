@@ -1,5 +1,4 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require 'aws-sdk-rds'
 
 class ContactRollupsValidation
   DATA_CHECKS = [
