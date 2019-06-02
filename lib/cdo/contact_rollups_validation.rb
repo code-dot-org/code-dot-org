@@ -1,8 +1,6 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'aws-sdk-rds'
 
-DATABASE_CLUSTER_CLONE_ID = "#{CDO.db_cluster_id}-temporary-clone"
-
 class ContactRollupsValidation
   DATA_CHECKS = [
     {
@@ -307,13 +305,13 @@ class ContactRollupsValidation
 
   def self.validate_contact_rollups
     overall_pass = true
-    initialize_connection_to_database_clone
+    pegasus_clone_db_reader = ContactRollups.pegasus_clone_db_reader
 
     output = []
     # run each validation check
     DATA_CHECKS.each do |check|
       # run the validation query and get the returned count
-      count = @pegasus_clone_db_reader[check[:query]].first.first[1]
+      count = pegasus_clone_db_reader[check[:query]].first.first[1]
       # determine if the count is within validation bounds (inclusive)
       pass = count >= check[:min] && count <= check[:max]
 
@@ -344,24 +342,5 @@ class ContactRollupsValidation
   def self.log(s)
     # puts s unless Rails.env.test?
     CDO.log.info s
-  end
-
-  def self.initialize_connection_to_database_clone
-    rds_client = Aws::RDS::Client.new
-    clone_db_endpoint = rds_client.describe_db_cluster_endpoints(
-      {
-        db_cluster_identifier: DATABASE_CLUSTER_CLONE_ID,
-        filters: [{name: 'db-cluster-endpoint-type', values: ['writer']}],
-      }
-    ).db_cluster_endpoints.first.endpoint
-
-    # Connection to read from Pegasus clone database.
-    pegasus_clone_reader_uri = URI(CDO.pegasus_reporting_db_reader)
-    pegasus_clone_reader_uri.host = clone_db_endpoint
-    @pegasus_clone_db_reader = sequel_connect(
-      pegasus_clone_reader_uri.to_s,
-      pegasus_clone_reader_uri.to_s,
-      query_timeout: MAX_EXECUTION_TIME_SEC
-    )
   end
 end

@@ -989,6 +989,11 @@ class ContactRollups
     )
   end
 
+  # Enable ContactRollupsValidation to get a read-only connection to the clone server's Pegasus database.
+  def self.pegasus_clone_db_reader
+    @@pegasus_clone_db_reader
+  end
+
   # Delete database cluster clone if it exists.
   def self.delete_database_clone
     rds_client = Aws::RDS::Client.new
