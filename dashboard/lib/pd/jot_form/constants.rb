@@ -28,7 +28,6 @@ module Pd
         ANSWER_SCALE = 'scale'.freeze,
         ANSWER_SINGLE_SELECT = 'singleSelect'.freeze,
         ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
-        ANSWER_DATETIME = 'datetime'.freeze,
         # No answer, just question metadata, e.g. matrix heading
         ANSWER_NONE = 'none'.freeze,
         # Don't know answer type of a question
@@ -39,6 +38,7 @@ module Pd
         TYPE_TEXTBOX => ANSWER_TEXT,
         TYPE_TEXTAREA => ANSWER_TEXT,
         TYPE_NUMBER => ANSWER_TEXT,
+        TYPE_DATETIME => ANSWER_TEXT,
         TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
         TYPE_RADIO => ANSWER_SINGLE_SELECT,
         TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
@@ -50,7 +50,6 @@ module Pd
         TYPE_SCALE,
         TYPE_TEXTAREA,
         TYPE_MATRIX,
-        TYPE_DATETIME
       ]
     end
   end
