@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import _ from 'lodash';
+import debounce from 'lodash/debounce';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import TeacherFeedback from './TeacherFeedback';
 import InlineAudio from './InlineAudio';
@@ -271,7 +271,7 @@ class TopInstructionsCSP extends Component {
    * @returns {number}
    */
 
-  adjustMaxNeededHeight = () => {
+  adjustMaxNeededHeight = debounce(() => {
     let element;
     switch (this.state.tabSelected) {
       case TabType.RESOURCES:
@@ -291,7 +291,7 @@ class TopInstructionsCSP extends Component {
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
     return maxNeededHeight;
-  };
+  }, 100);
 
   /**
    * Handle a click of our collapser button by changing our collapse state, and
@@ -345,7 +345,7 @@ class TopInstructionsCSP extends Component {
    * 5000ms to avoid recording metrics from a user clicking back-and-forth between
    * tabs too often.
    */
-  incrementFeedbackVisitCount = _.debounce(
+  incrementFeedbackVisitCount = debounce(
     () => {
       const latestFeedback = this.state.feedbacks[0];
       if (!this.state.teacherViewingStudentWork && latestFeedback) {

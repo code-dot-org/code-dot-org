@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
+import debounce from 'lodash/debounce';
 var instructions = require('../../redux/instructions');
 var color = require('../../util/color');
 var styleConstants = require('../../styleConstants');
@@ -438,7 +439,7 @@ class TopInstructions extends React.Component {
    * entire instructions visible and update store with this value.
    * @returns {number}
    */
-  adjustMaxNeededHeight = () => {
+  adjustMaxNeededHeight = debounce(() => {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.instructions;
     const maxNeededHeight =
@@ -451,7 +452,7 @@ class TopInstructions extends React.Component {
       Math.max(minHeight, maxNeededHeight)
     );
     return maxNeededHeight;
-  };
+  }, 100);
 
   /**
    * Handle a click to our collapser icon by changing our collapse state, and
