@@ -2,28 +2,24 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import _ from 'lodash';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
 import {currentLocation} from '../../utils';
+import FontAwesome from '../FontAwesome';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   main: {
-    backgroundImage: `url('${assetUrl(
-      'media/common_images/flag_inactive.png'
-    )}')`,
+    color: color.white,
     width: 21,
     height: 24
   },
   focused: {
-    backgroundImage: `url('${assetUrl('media/common_images/flag_active.png')}')`
+    color: '#32CD32'
   },
   hoverOverlay: {
-    backgroundImage: `url('${assetUrl('media/common_images/flag_hover.png')}')`,
-    opacity: 0,
-    transition: 'opacity .2s ease-out',
     ':hover': {
-      opacity: 1
+      color: color.orange
     }
   }
 };
@@ -41,14 +37,21 @@ class StageExtrasProgressBubble extends Component {
       <a
         href={stageExtrasUrl + currentLocation().search}
         style={{
-          ...styles.main,
-          ...(onStageExtras && styles.focused)
+          ...styles.main
         }}
         data-tip
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        <div style={{...styles.main, ...styles.hoverOverlay}} />
+        <div
+          style={{
+            ...styles.main,
+            ...styles.hoverOverlay,
+            ...(onStageExtras && styles.focused)
+          }}
+        >
+          <FontAwesome icon="flag-checkered" />
+        </div>
         <TooltipWithIcon
           tooltipId={tooltipId}
           icon={'flag-checkered'}
