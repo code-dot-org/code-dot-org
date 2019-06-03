@@ -355,6 +355,7 @@ Dashboard::Application.routes.draw do
   get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+  post '/sms/send_download', to: 'sms#send_download_url_to_phone', as: 'send_download_url_to_phone'
 
   # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
@@ -471,6 +472,10 @@ Dashboard::Application.routes.draw do
     post 'teacher_application/manage/:teacher_application_id/upgrade_to_teacher', to: 'teacher_application#upgrade_to_teacher'
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
+
+    get 'misc_survey/thanks', to: 'misc_survey#thanks'
+    get 'misc_survey/:form_tag', to: 'misc_survey#new'
+    post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
