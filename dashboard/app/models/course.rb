@@ -232,7 +232,7 @@ class Course < ApplicationRecord
   # any alternate scripts based on any experiments the user belongs to.
   def self.valid_courses_without_cache(user: nil)
     course_infos = Course.
-      where(name: ScriptConstants::CATEGORIES[:full_course]).
+      where("properties -> '$.family_name' is not null").
       map {|course| course.assignable_info(user)}
 
     # Only return stable course versions.
