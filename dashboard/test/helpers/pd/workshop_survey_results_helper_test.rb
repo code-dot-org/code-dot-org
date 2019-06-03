@@ -187,6 +187,36 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       }
     }
 
+    # day 5 includes hidden questions
+    expected_day_5_questions = {
+      general: {
+        'sampleDailyScale' => {
+          text: 'How was your day?',
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: ['1 - Poor', '2', '3', '4', '5 - Excellent']
+        },
+      },
+      facilitator: {
+        'sampleFacilitatorText' => {
+          text: 'How was the facilitator?',
+          answer_type: ANSWER_TEXT
+        },
+        'sampleFacilitatorScale' => {
+          text: 'How do you rate the facilitators skills?',
+          answer_type: ANSWER_SCALE,
+          min_value: 1,
+          max_value: 5,
+          options: ['1 - Weak', '2', '3', '4', '5 - Amazing']
+        },
+        'facilitatorId' => {
+          text: 'facilitatorId',
+          answer_type: 'text'
+        }
+      }
+    }
+
     @expected_questions = {
       'Pre Workshop' => {
         general: {
@@ -221,7 +251,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
       'Day 2' => expected_daily_questions,
       'Day 3' => expected_daily_questions,
       'Day 4' => expected_daily_questions,
-      'Day 5' => expected_daily_questions
+      'Day 5' => expected_day_5_questions
     }
 
     @expected_academic_year_questions = {
