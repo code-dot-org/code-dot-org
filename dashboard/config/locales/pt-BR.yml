@@ -82,7 +82,6 @@ pt-BR:
   of: de
   more: MAIS
   less: MENOS
-  beta: beta
   try_hoc: 'Experimente a Hora do Código, clique aqui >> '
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
@@ -1109,21 +1108,10 @@ pt-BR:
     create: Criar projeto
     create_a_project: 'Crie um novo projeto:'
     new: Criar novo
-    rename: Renomear
-    save: Salvar
-    import: Importar
-    share_link_import_bad_link_header: link de compartilhamento não reconhecido
-    share_link_import_bad_link_body: 'Não foi possível importar esse link de compartilhamento.
-      Certifique-se de que você está usando um link de um Minecraft: quebra-cabeça
-      do Agente e que você copiou o link completo.'
-    share_link_import_error_header: Ocorreu um erro.
-    share_link_import_error_body: Houve um problema ao importar o link de compartilhamento.
-      Tente novamente.
     exit: Voltar ao curso
     project_gallery: Projetos
     publish: Publicar
     unpublish: Despublicar
-    share: Compartilhar
     share_title: Compartilhar seu projeto
     share_copy_link: 'Copie o link:'
     share_embed_description: Você pode colar o código incorporado em uma página HTML
@@ -1147,8 +1135,6 @@ pt-BR:
     saved: Salvo
     not_saved: Não salvo
     view_all: Visualizar meus projetos
-    remix: Remix
-    click_to_remix: Clique em "Remix" para fazer sua própria versão!
     edit_project: Editar projeto
     sharing_disabled: Desculpe, este projeto não está disponível para compartilhamento.
       Se este é o seu projeto ou o projeto de um de seus alunos, por favor <a href='https://studio.code.org/users/sign_in'>faça

@@ -295,6 +295,7 @@ class Game < ActiveRecord::Base
     Scratch:scratch
     Dance:dance
     Spritelab:gamelab
+    BubbleChoice:bubble_choice
   )
 
   def self.setup

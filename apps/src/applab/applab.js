@@ -378,6 +378,7 @@ Applab.init = function(config) {
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
   config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -388,7 +389,8 @@ Applab.init = function(config) {
   if (config.level.editBlocks) {
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: Applab.getLibraries()
     }));
   } else if (!config.channel) {
     throw new Error(
@@ -520,6 +522,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -678,15 +681,28 @@ Applab.init = function(config) {
     });
   }
 
+  var librariesExist = level.libraries && level.libraries.length > 0;
+
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
+    level.libraries = level.startLibraries;
+    librariesExist = true;
+  }
+
   // Libraries should be added to redux whether the experiment is enabled or
   // not. This prevents work from being lost if a levelbuilder toggles the
   // experiment flag.
-  var librariesExist = level.libraries && level.libraries.length > 0;
   if (librariesExist) {
     getStore().dispatch(setApplabLibraries(level.libraries));
   }
 
   if (experiments.isEnabled('student-libraries') && librariesExist) {
+    level.libraries.forEach(library => {
+      config.dropletConfig.additionalPredefValues.push(library.name);
+    });
     let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
@@ -1123,6 +1139,17 @@ function getLibrary() {
   var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
   temporaryInterpreter.parse({code: studioApp().getCode()});
   return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
 }
 
 /**

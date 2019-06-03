@@ -12,8 +12,8 @@ const styles = {
   },
   checkbox: {
     margin: '4px',
-    width: 24,
-    height: 24
+    width: 28,
+    height: 28
   },
   publishButton: {
     marginLeft: 0,
@@ -25,7 +25,13 @@ const styles = {
   },
   functionName: {
     fontSize: '16px',
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
+    marginTop: 10,
+    color: color.charcoal
+  },
+  comment: {
+    margin: 4,
+    flex: 1
   }
 };
 
@@ -42,6 +48,7 @@ class PublishLibraryDialog extends React.Component {
   state = {
     showShareLink: false,
     selectedFunctions: {},
+    functionComments: {},
     shareLink: ''
   };
 
@@ -65,6 +72,14 @@ class PublishLibraryDialog extends React.Component {
     });
   };
 
+  commentAdded(name, event) {
+    var value = event.target.value;
+    this.setState(state => {
+      state.functionComments[name] = value;
+      return state;
+    });
+  }
+
   displayFunctions() {
     if (this.props.libraryFunctions.length === 0) {
       return (
@@ -75,11 +90,11 @@ class PublishLibraryDialog extends React.Component {
       );
     }
 
-    return this.props.libraryFunctions.map(libraryFunction => {
+    var functions = this.props.libraryFunctions.map(libraryFunction => {
       var name = libraryFunction.name;
       var params = '(' + libraryFunction.params.join(', ') + ')';
       return (
-        <div key={name}>
+        <div key={name} style={{display: 'flex'}}>
           <input
             type="checkbox"
             name={name}
@@ -91,9 +106,26 @@ class PublishLibraryDialog extends React.Component {
             {name}
             {params}
           </span>
+          {this.state.selectedFunctions[name] && (
+            <textarea
+              name={name}
+              value={this.state.functionComments[name] || ''}
+              onChange={this.commentAdded.bind(this, name)}
+              style={styles.comment}
+            />
+          )}
         </div>
       );
     });
+
+    return (
+      <div>
+        <div style={{margin: 4}}>
+          Use the text boxes to add comments to your functions before sharing.
+        </div>
+        {functions}
+      </div>
+    );
   }
 
   displayShareLink = () => {
@@ -108,6 +140,7 @@ class PublishLibraryDialog extends React.Component {
     var dropletConfig = selectedFunctions.map(selectedFunction => {
       var config = {
         func: this.props.libraryName + '.' + selectedFunction.name,
+        description: this.state.functionComments[selectedFunction.name],
         category: 'Functions'
       };
 

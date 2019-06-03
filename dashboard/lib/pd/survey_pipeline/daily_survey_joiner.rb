@@ -1,15 +1,16 @@
 require_relative 'transformer.rb'
+require 'xxhash'
 
 module Pd::SurveyPipeline
   class DailySurveyJoiner < TransformerBase
     include Pd::JotForm::Constants
 
-    STRING_DIGEST_LENGTH = 16
-
     # Join questions and submissions data, modify and flatten the results
     # so they can be summarized later.
+    #
     # @param questions [Hash{form_id => {question_id => question_content}}]
     # @param answers [Hash{form_id => {submission_id => submission_content}}]
+    #
     # @return [Array<Hash>]
     #   Hash has following keys: form_id, submission_id,
     #   user_id, pd_session_id, pd_workshop_id, day, facilitator_id, answer,
@@ -17,6 +18,7 @@ module Pd::SurveyPipeline
     #
     # @note This method could change input data such as adding sub questions into
     # question list.
+    #
     # @see DailySurveyParser class, parse_survey and parse_submissions functions
     # for detailed structures of input params.
     def self.transform_data(questions:, submissions:)
@@ -25,20 +27,22 @@ module Pd::SurveyPipeline
       results = []
 
       submissions.each_pair do |form_id, form_submissions|
+        # Bad data, couldn't find this form_id. Ignore instead of raising exception.
+        next unless questions[form_id]
+
         form_submissions.each_pair do |submission_id, submission_content|
           shared_submission_info = submission_content.
             merge(form_id: form_id, submission_id: submission_id).
             except(:answers)
 
           submission_content[:answers]&.each do |qid, ans|
-            # Ignore empty answer and hidden question
-            next if ans.blank?
-
             question = questions[form_id][qid]
-            # We got bad data, couldn't find this (form_id, qid) combination in questions list.
-            # Skip it instead of raising exception.
+            # Bad data, couldn't find this (form_id, qid) combination in questions list.
+            # Ignore instead of raising exception.
             next unless question
-            next if question[:hidden]
+
+            # Ignore empty answer and hidden question
+            next if ans.blank? || question[:hidden]
 
             if question[:type] == TYPE_MATRIX && ans.is_a?(Array)
               ans.each do |sub_ans|
@@ -74,15 +78,10 @@ module Pd::SurveyPipeline
       results
     end
 
-    # Compute a descendant key based on original value and sub_value digest
+    # Compute a descendant key based on original value and sub_value digest.
     def self.compute_descendant_key(value, sub_value)
-      "#{value}_#{compute_str_digest(sub_value)}"
-    end
-
-    # Compute message digest using SHA256 and cut it to a fixed length.
-    def self.compute_str_digest(str)
-      # SHA256 returns a 256-bit digest, which is 64-character string in hex
-      Digest::SHA256.hexdigest(str || '')[0, STRING_DIGEST_LENGTH - 1]
+      # Use XXhash, non-cryptographic fast hashing algorithm
+      "#{value}_#{XXhash.xxh64(sub_value || '')}"
     end
   end
 end

@@ -10,9 +10,9 @@ Background:
   And I wait to see "#finishButton"
   And I press "finishButton"
 
-Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no feedback
+Scenario: As student 'Feedback' tab is not visible if no feedback
   #As student, with no feedback, can see Key Concept tab on rubric level
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
   And I wait to see ".uitest-feedback"
   And element ".editor-column" contains text "Key Concept"
   Then I click selector ".uitest-feedback"
@@ -28,13 +28,13 @@ Scenario: As student with dev experiment on, 'Feedback' tab is not visible if no
 # Disabling IE due to bug where text changes in the feedback text input are not registered
 # so submit button remains disabled
 Scenario: As teacher, when viewing a level with student work,
-feedback can be submitted and displayed. If in experiment and there is a mini rubric, teacher can give feedback on rubric.
-If a teacher in experiment on a level with mini rubric can see the rubric without viewing student work.
+feedback can be submitted and displayed. If there is a mini rubric, teacher can give feedback on rubric.
+If a teacher on a level with mini rubric can see the rubric without viewing student work.
 Otherwise don't show feedback tab
   Then I sign in as "Teacher_Lillian"
 
   #Not automatically visible on contained levels with no mini rubric
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15?enableExperiments=2019-mini-rubric"
+  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
   And I wait for the page to fully load
   And element ".uitest-feedback" is not visible
 
@@ -58,7 +58,8 @@ Otherwise don't show feedback tab
   #As teacher, reviewing work, submit feedback
   And I wait to see ".show-handle"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
+  And I wait until element ".student-table" is visible
+  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait to see ".editor-column"
   And I wait to see "#ui-test-submit-feedback"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -83,27 +84,11 @@ Otherwise don't show feedback tab
   And element "#rubric-input-performanceLevel1" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"
   And element "#ui-test-submit-feedback" contains text "Update"
-
-  #Tab not visible unless viewing student work
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?disableExperiments=2019-mini-rubric"
-  And I wait for the page to fully load
-  And element ".uitest-feedback" is not visible
-
-  #As teacher, reviewing work, feedback tab is visible
-  And I wait to see ".show-handle"
-  Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".section-student .name a"
-  And I wait to see ".uitest-feedback"
-  And I wait until ".editor-column" contains text "Nice!"
-  And element "#rubric-input-performanceLevel1" is not visible
-  And I wait to see "#ui-test-submit-feedback"
-  And element "#ui-test-submit-feedback" contains text "Update"
-  And element ".editor-column" contains text matching "Last updated .* ago"
-
+  
   #As student, latest feedback from teacher is displayed
   Then I sign out
   And I sign in as "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?enableExperiments=2019-mini-rubric"
+  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
   And I wait to see ".uitest-feedback"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"

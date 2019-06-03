@@ -4,22 +4,12 @@ module Pd::SurveyPipeline
   class DailySurveyParser < TransformerBase
     include Pd::JotForm::Constants
 
-    # Map question type to answer type
-    ANSWER_TYPE_MAPPING = {
-      TYPE_NUMBER => ANSWER_TEXT,
-      TYPE_TEXTBOX => ANSWER_TEXT,
-      TYPE_TEXTAREA => ANSWER_TEXT,
-      TYPE_RADIO => ANSWER_SINGLE_SELECT,
-      TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
-      TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
-      TYPE_MATRIX => ANSWER_MULTI_SELECT,
-      TYPE_SCALE => ANSWER_SCALE
-    }.freeze
-
     # Parse input records into hashes.
+    #
     # @param survey_questions [Array<Pd::SurveyQuestion>]
     # @param workshop_submissions [Array<Pd::WorkshopDailySurvey>]
     # @param facilitator_submissions [Array<Pd::WorkshopFacilitatorDailySurvey>]
+    #
     # @return [Hash{:questions, :submissions => Hash}]
     #   @see output of parse_survey and parse_submissions for the structures of those hash values.
     def self.transform_data(survey_questions:, workshop_submissions:, facilitator_submissions:)
@@ -29,14 +19,17 @@ module Pd::SurveyPipeline
       # Parse questions in surveys
       questions = parse_survey(survey_questions)
 
-      # Parse workshop submissions
+      # Parse submissions
       workshop_submissions = parse_submissions(workshop_submissions)
       facilitator_submissions = parse_submissions(facilitator_submissions)
 
       {questions: questions, submissions: workshop_submissions.merge(facilitator_submissions)}
     end
 
+    # Parse an array of submissions into hashes.
+    #
     # @param survey_submissions [Array<Pd::WorkshopDailySurvey or Pd::WorkshopFacilitatorDailySurvey>]
+    #
     # @return [Hash{form_id => {submission_id => submission_content}}]
     #   submission_content is Hash{:user_id, :pd_session_id, :pd_workshop_id, :day, :answers =>
     #     String, Hash}
@@ -60,8 +53,8 @@ module Pd::SurveyPipeline
         # answers field in submission from Pd::WorkshopDailySurvey or
         # Pd::WorkshopFacilitatorDailySurvey is Hash{qid_string => answer_string}.
         # answer_string in multi-select questions such as matrix is actually
-        # a Hash{sub_question_text => sub_answer}
-        JSON.parse(submission.answers).each_pair do |qid, ans|
+        # a Hash{sub_question_text => sub_answer}.
+        JSON.parse(submission.answers || '{}').each_pair do |qid, ans|
           if ans.is_a? Hash
             submission_content[:answers][qid] = []
 
@@ -86,7 +79,10 @@ module Pd::SurveyPipeline
       parsed_submissions
     end
 
+    # Parse an array of form questions into hashes.
+    #
     # @param survey_questions [Array<Pd::SurveyQuestion>]
+    #
     # @return [Hash{form_id => {question_id => question_content}}]
     #   question_content is Hash{:type, :name, :text, :order, :hidden}.
     #   It could also have question-specific keys such as :options, :sub_questions etc.
@@ -109,7 +105,7 @@ module Pd::SurveyPipeline
               to_h
           end
 
-          question[:answer_type] = ANSWER_TYPE_MAPPING[question[:type]] || 'unknown'
+          question[:answer_type] = QUESTION_TO_ANSWER_TYPES[question[:type]] || ANSWER_UNKNOWN
 
           # Create mapping form_id => question_id => question_content.
           # Convert question[:id] to string to match with question id in submission.
