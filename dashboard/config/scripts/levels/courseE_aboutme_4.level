@@ -48,7 +48,7 @@
       "downButton",
       "upButton"
     ],
-    "validation_code": "// Simply check if there are three unique costumes present.\r\nif(World.frameCount > 50) {\r\n  if(Object.keys(animationGroups).length < 3) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
+    "validation_code": "// Simply check if there are three unique costumes present.\r\nif(World.frameCount > 50) {\r\n  if(getAnimationsInUse().length < 3) {\r\n    levelSuccess(3);\r\n  } else {\r\n    levelSuccess(0);\r\n  }\r\n}",
     "auto_run_setup": "DRAW_LOOP",
     "preload_asset_list": null
   },
