@@ -294,6 +294,8 @@ module ScriptConstants
     }
   end
 
+  # @param course [Course] A row object from our course dashboard db table.
+  # @return {AssignableInfo} without strings translated
   def self.assignable_course_info(course)
     {
       id: course[:id],
