@@ -335,15 +335,7 @@ class TopInstructionsCSP extends Component {
 
     // adjust rendered height based on next collapsed state
     if (collapsed) {
-      if (this.props.noInstructionsWhenCollapsed) {
-        this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
-      } else {
-        this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
-        //need to switch to this for CSF
-        //this.props.setInstructionsRenderedHeight(
-        //  this.getMinHeight(nextCollapsed)
-        //);
-      }
+      this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
     }
