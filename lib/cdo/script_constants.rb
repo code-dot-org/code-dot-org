@@ -18,6 +18,8 @@ module ScriptConstants
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
   # order of the categories will be their order in the dropdown.
+  # Note: This is only for scripts. Courses that have a family_name will always come first.
+  # See ScriptConstants#category_priority for more details on prioritization.
   CATEGORIES = {
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
@@ -245,11 +247,13 @@ module ScriptConstants
     CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
   end
 
-  def self.category_priority(category)
-    if category == OTHER_CATEGORY_NAME
-      CATEGORIES.keys.length # 'other' goes at the end
+  def self.category_priority(category, full_course: false)
+    if full_course
+      0 # full courses (i.e., CSD and CSP) always come first
+    elsif category == OTHER_CATEGORY_NAME
+      CATEGORIES.keys.length + 1 # 'other' goes at the end
     else
-      CATEGORIES.keys.find_index(category.to_sym)
+      CATEGORIES.keys.find_index(category.to_sym) + 1
     end
   end
 
@@ -287,6 +291,16 @@ module ScriptConstants
       category: first_category,
       position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
       category_priority: ScriptConstants.category_priority(first_category),
+    }
+  end
+
+  def self.assignable_course_info(course)
+    {
+      id: course[:id],
+      name: ScriptConstants.teacher_dashboard_name(course[:name]),
+      # Would better be called something like assignable_name
+      script_name: course[:name],
+      category_priority: ScriptConstants.category_priority(nil, full_course: course.full_course?),
     }
   end
 

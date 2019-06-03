@@ -74,6 +74,14 @@ class CourseTest < ActiveSupport::TestCase
     assert obj['properties']['is_stable']
   end
 
+  test "full_course?: true if course has family_name" do
+    assert build(:course, family_name: 'my-fam').full_course?
+  end
+
+  test "full_course?: false if course family_name is nil" do
+    refute build(:course).full_course?
+  end
+
   test "stable?: true if course has plc_course" do
     course = Course.new(family_name: 'plc')
     course.plc_course = Plc::Course.new(course: course)
@@ -477,13 +485,12 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "valid_courses" do
-    # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp-2017')
+    csp = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
-    csd = create(:course, name: 'csd-2017')
+    csd = create(:course, name: 'csd-2017', family_name: 'csd')
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
@@ -499,7 +506,7 @@ class CourseTest < ActiveSupport::TestCase
 
     courses = Course.valid_courses
 
-    # one entry for each 2017 course that is in ScriptConstants
+    # one entry for each 2017 course that is a full_course
     assert_equal 2, courses.length
     assert_equal csd.id, courses[0][:id]
     assert_equal csp.id, courses[1][:id]
@@ -509,7 +516,6 @@ class CourseTest < ActiveSupport::TestCase
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
     assert_equal 'csp-2017', csp_assign_info[:script_name]
-    assert_equal 0, csp_assign_info[:position]
     assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category
@@ -538,14 +544,14 @@ class CourseTest < ActiveSupport::TestCase
 
   test "valid_courses all versions" do
     # The data here must be in sync with the data in ScriptConstants.rb
-    csp = create(:course, name: 'csp-2017')
+    csp = create(:course, name: 'csp-2017', family_name: 'csp')
     csp1 = create(:script, name: 'csp1')
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
-    csp18 = create(:course, name: 'csp-2018')
-    csd = create(:course, name: 'csd-2017')
-    csd18 = create(:course, name: 'csd-2018')
+    csp18 = create(:course, name: 'csp-2018', family_name: 'csp')
+    csd = create(:course, name: 'csd-2017', family_name: 'csd')
+    csd18 = create(:course, name: 'csd-2018', family_name: 'csd')
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
@@ -561,7 +567,7 @@ class CourseTest < ActiveSupport::TestCase
 
     courses = Course.valid_courses
 
-    # one entry for each 2017 and 2018 course in ScriptConstants
+    # one entry for each 2017 and 2018 course that is a full_course
     assert_equal 4, courses.length
     assert_equal csd.id, courses[0][:id]
     assert_equal csd18.id, courses[1][:id]
@@ -573,7 +579,6 @@ class CourseTest < ActiveSupport::TestCase
     # has fields from ScriptConstants::Assignable_Info
     assert_equal csp.id, csp_assign_info[:id]
     assert_equal 'csp-2017', csp_assign_info[:script_name]
-    assert_equal 0, csp_assign_info[:position]
     assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category

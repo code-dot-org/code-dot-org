@@ -117,6 +117,12 @@ class Course < ApplicationRecord
     end
   end
 
+  # A course is considered a "full course" if it belongs to a family of courses
+  # (i.e., CSD and CSP).
+  def full_course?
+    family_name?
+  end
+
   # This method updates both our localizeable strings related to this course, and
   # the set of scripts that are in the course, then writes out our serialization
   # @param scripts [Array<String>] - Updated list of names of scripts in this course
@@ -189,7 +195,7 @@ class Course < ApplicationRecord
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
   def assignable_info(user = nil)
-    info = ScriptConstants.assignable_info(self)
+    info = ScriptConstants.assignable_course_info(self)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title
