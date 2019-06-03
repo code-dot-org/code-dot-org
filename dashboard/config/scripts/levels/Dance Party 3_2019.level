@@ -56,7 +56,7 @@
     "name_suffix": "_2019",
     "mini_rubric": "false",
     "encrypted": "false",
-    "validation_code": "// In this level, kids are supposed to create a new pink alien sprite and make it begin a behavior. \r\n// To succeed, kids need to click the pink alien after they create it, or they'll fail the level.\r\n// This is because clicking the alien is what actually adds the behavior to the sprite object, not simply having the // code block in the workspace.\r\nif(World.frameCount > 180) {\r\n  if(animationGroups.hasOwnProperty(\"pink alien\")) {\r\n    if(animationGroups[\"pink alien\"][0].behaviors.length > 0) {\r\n      levelSuccess(0);\r\n    } else {\r\n      levelSuccess(3);\r\n    }\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
+    "validation_code": "// In this level, kids are supposed to create a new pink alien sprite and make it begin a behavior. \r\n// To succeed, kids need to click the pink alien after they create it, or they'll fail the level.\r\n// This is because clicking the alien is what actually adds the behavior to the sprite object, not simply having the // code block in the workspace.\r\nif(World.frameCount > 180) {\r\n  if (getBehaviorsForAnimation(\"pink alien\") > 0) {\r\n    levelSuccess(0);\r\n  } else {\r\n    levelSuccess(3);\r\n  }\r\n}",
     "soft_buttons": [
       "leftButton",
       "rightButton",
