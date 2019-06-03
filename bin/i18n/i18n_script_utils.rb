@@ -34,6 +34,7 @@ def to_crowdin_yaml(data)
       node.plain = false
       node.quoted = true
     end
+    node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED if node.style == Psych::Nodes::Scalar::LITERAL
   end
 
   return ast.yaml(nil, {line_width: -1})
