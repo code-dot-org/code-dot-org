@@ -200,12 +200,12 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
+  newButton.style.fontSize = defaultFontSizeStyle;
+  newButton.style.fontFamily = fontFamilyStyles[0];
   if (experiments.isEnabled('applabThemes')) {
     newButton.style.borderStyle = 'solid';
     elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
   } else {
-    newButton.style.fontSize = defaultFontSizeStyle;
-    newButton.style.fontFamily = fontFamilyStyles[0];
     newButton.style.color = color.white;
     newButton.style.backgroundColor = color.applab_button_teal;
     elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
@@ -910,14 +910,14 @@ applabCommands.textInput = function(opts) {
   newInput.value = opts.text;
   newInput.id = opts.elementId;
   newInput.style.position = 'relative';
+  newInput.style.fontSize = defaultFontSizeStyle;
+  newInput.style.fontFamily = fontFamilyStyles[0];
   newInput.style.height = '30px';
   newInput.style.width = '200px';
   if (experiments.isEnabled('applabThemes')) {
     newInput.style.borderStyle = 'solid';
     elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
   } else {
-    newInput.style.fontSize = defaultFontSizeStyle;
-    newInput.style.fontFamily = fontFamilyStyles[0];
     elementUtils.setDefaultBorderStyles(newInput, {
       forceDefaults: true,
       textInput: true
@@ -939,14 +939,12 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
+  newLabel.style.fontSize = defaultFontSizeStyle;
+  newLabel.style.fontFamily = fontFamilyStyles[0];
   if (experiments.isEnabled('applabThemes')) {
     newLabel.style.borderStyle = 'solid';
     elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
   } else {
-    newLabel.style.fontSize = defaultFontSizeStyle;
-    newLabel.style.fontFamily = fontFamilyStyles[0];
-    newLabel.style.backgroundColor =
-      color.applab_classic_label_background_color;
     elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
   }
   var forElement = document.getElementById(opts.forId);
@@ -1011,12 +1009,12 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
+  newSelect.style.fontSize = defaultFontSizeStyle;
+  newSelect.style.fontFamily = fontFamilyStyles[0];
   if (experiments.isEnabled('applabThemes')) {
     newSelect.style.borderStyle = 'solid';
     elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
   } else {
-    newSelect.style.fontSize = defaultFontSizeStyle;
-    newSelect.style.fontFamily = fontFamilyStyles[0];
     newSelect.style.color = color.white;
     elementLibrary.typeSpecificPropertyChange(
       newSelect,

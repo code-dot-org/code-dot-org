@@ -195,50 +195,23 @@ export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
   themeValues: {
-    backgroundColor: {
-      type: 'color',
-      default: color.applab_default_label_background_color,
-      classic: color.applab_classic_label_background_color,
-      orange: color.applab_orange_text_background_color,
-      citrus: color.applab_citrus_text_background_color
-    },
     borderRadius: {
-      default: 0,
       classic: 0,
-      orange: 0,
-      citrus: 2
+      dark: 10
     },
     borderWidth: {
-      default: 0,
       classic: 0,
-      orange: 0,
-      citrus: 0
+      dark: 0
     },
     borderColor: {
       type: 'color',
-      default: color.text_input_default_border_color,
       classic: color.text_input_default_border_color,
-      orange: color.applab_orange_text_input_border_color,
-      citrus: color.applab_citrus_text_input_border_color
+      dark: color.applab_dark_border
     },
     textColor: {
       type: 'color',
-      default: color.applab_default_text_color,
       classic: color.default_text,
-      orange: color.applab_orange_text_color,
-      citrus: color.applab_citrus_label_text_color
-    },
-    fontFamily: {
-      default: 'Arial Black',
-      classic: 'Arial',
-      orange: 'Arial',
-      citrus: 'Georgia'
-    },
-    fontSize: {
-      default: 15,
-      classic: 14,
-      orange: 15,
-      citrus: 15
+      dark: color.white
     }
   },
 
@@ -247,18 +220,17 @@ export default {
     element.style.margin = '0px';
     element.style.padding = '2px';
     element.style.lineHeight = '1';
+    element.style.fontFamily = applabConstants.fontFamilyStyles[0];
+    element.style.fontSize = applabConstants.defaultFontSizeStyle;
     element.style.overflow = 'hidden';
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
+    element.style.backgroundColor = '';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
     if (experiments.isEnabled('applabThemes')) {
       element.style.borderStyle = 'solid';
       elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
     } else {
-      element.style.backgroundColor =
-        color.applab_classic_label_background_color;
-      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-      element.style.fontSize = applabConstants.defaultFontSizeStyle;
       element.style.color = '#333333';
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     }
@@ -268,11 +240,6 @@ export default {
   },
 
   onDeserialize: function(element) {
-    // Set background color style for older projects that didn't set them on create:
-    if (!element.style.backgroundColor) {
-      element.style.backgroundColor =
-        color.applab_classic_label_background_color;
-    }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:

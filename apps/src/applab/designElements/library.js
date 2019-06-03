@@ -2,7 +2,7 @@ import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
+import {themeOptions} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -169,14 +169,10 @@ export default {
     return themeValues;
   },
 
-  getCurrentTheme: function(parentScreen) {
-    return parentScreen
-      ? parentScreen.getAttribute('data-theme')
-      : themeOptions[DEFAULT_THEME_INDEX];
-  },
-
   applyCurrentTheme: function(element, parentScreen) {
-    const currentTheme = this.getCurrentTheme(parentScreen);
+    const currentTheme = parentScreen
+      ? parentScreen.getAttribute('data-theme')
+      : themeOptions[0];
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {
       const propTheme = themeValues[propName];

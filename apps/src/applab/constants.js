@@ -18,12 +18,9 @@ export const CAPTURE_TICK_COUNT = 300;
 
 export const defaultFontSizeStyle = '14px';
 
-export const DEFAULT_THEME_INDEX = 0;
-export const CLASSIC_THEME_INDEX = 1;
+export const themeOptions = ['classic', 'dark'];
 
-export const themeOptions = ['default', 'classic', 'orange', 'citrus'];
-
-export const themeDisplayNames = ['Default', 'Classic', 'Orange', 'Citrus'];
+export const themeDisplayNames = ['Classic', 'Dark'];
 
 if (themeOptions.length !== themeDisplayNames.length) {
   throw new Error('themeOptions length must equal themeDisplayNames length');
