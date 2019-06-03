@@ -16,7 +16,6 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
-// import experiments from '../../../util/experiments';
 import Inspector from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
@@ -122,7 +121,11 @@ export default connect(
     static propTypes = {
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
-      logOutput: PropTypes.any.isRequired,
+      logOutput: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+        PropTypes.string
+      ]).isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
