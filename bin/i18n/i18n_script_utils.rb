@@ -12,6 +12,8 @@ HOUROFCODE_IDENTITY_FILE = File.join(File.dirname(__FILE__), "hourofcode_credent
 CODEORG_MARKDOWN_CONFIG_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml")
 CODEORG_MARKDOWN_IDENTITY_FILE = File.join(File.dirname(__FILE__), "codeorg_markdown_credentials.yml")
 
+KEYS_TO_REDACT = ['authored_hints', 'long_instructions', 'short_instructions']
+
 # Output the given data to YAML that will be consumed by Crowdin. Includes a
 # couple changes to the default `data.to_yaml` serialization:
 #
@@ -83,6 +85,37 @@ end
 
 def plugins_to_arg(plugins)
   plugins.map {|name| "bin/i18n/plugins/#{name}.js" if name}.join(',')
+end
+
+def redact_course_content(source, dest, original, *plugins)
+  return unless File.exist? source
+  FileUtils.mkdir_p File.dirname(dest)
+  FileUtils.mkdir_p File.dirname(original)
+  plugins = plugins_to_arg(plugins)
+  source_file = File.open(source, 'r')
+  source_data = JSON.load(source_file)
+  data = source_data.select {|key, _value| KEYS_TO_REDACT.include? key}
+
+  File.open(original, "w+") do |file|
+    file.write(JSON.pretty_generate(data))
+  end
+
+  args = ['bin/i18n/node_modules/.bin/redact',
+          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  args.push('-p ' + plugins) unless plugins.empty?
+
+  stdout, _status = Open3.capture2(
+    args.join(" "),
+    stdin_data: JSON.generate(data)
+  )
+  redacted_data = JSON.parse(stdout)
+  KEYS_TO_REDACT.each do |k|
+    source_data[k] = redacted_data[k]
+  end
+
+  File.open(dest, "w+") do |file|
+    file.write(JSON.pretty_generate(source_data))
+  end
 end
 
 def redact(source, dest, *plugins)
@@ -172,6 +205,50 @@ def restore(source, redacted, dest, *plugins)
       restored_data[redacted_key] = JSON.parse(stdout)
       file.write(to_crowdin_yaml(restored_data))
     end
+  end
+
+  source_json.close
+  redacted_json.close
+end
+
+def restore_course_content(source, redacted, dest, *plugins)
+  return unless File.exist?(source)
+  return unless File.exist?(redacted)
+  source_file = File.open(source, 'r')
+  redacted_file = File.open(redacted, 'r')
+  source_data = JSON.load(source_file)
+  translated_data = JSON.load(redacted_file)
+  redacted_data = translated_data.select {|key, _value| KEYS_TO_REDACT.include? key}
+
+  return unless source_data&.values&.first&.length
+  return unless redacted_data&.values&.first&.length
+
+  source_json = Tempfile.new(['source', '.json'])
+  redacted_json = Tempfile.new(['redacted', '.json'])
+
+  source_json.write(JSON.generate(source_data))
+  redacted_json.write(JSON.generate(redacted_data))
+
+  source_json.flush
+  redacted_json.flush
+
+  args = ['bin/i18n/node_modules/.bin/restore',
+          '-c bin/i18n/plugins/nonCommonmarkLinebreak.js']
+  plugins = plugins_to_arg(plugins)
+  args.push('-p ' + plugins) unless plugins.empty?
+
+  args.push("-s #{source_json.path}")
+  args.push("-r #{redacted_json.path}")
+  stdout, _status = Open3.capture2(
+    args.join(" ")
+  )
+  restored_data = {}
+  restored_data = JSON.parse(stdout)
+  KEYS_TO_REDACT.each do |k|
+    translated_data[k] = restored_data[k]
+  end
+  File.open(dest, "w+") do |file|
+    file.write(JSON.pretty_generate(translated_data))
   end
 
   source_json.close
