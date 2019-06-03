@@ -195,7 +195,7 @@ class Course < ApplicationRecord
   # Get the assignable info for this course, then update translations
   # @return AssignableInfo
   def assignable_info(user = nil)
-    info = ScriptConstants.assignable_course_info(self)
+    info = ScriptConstants.assignable_info(self, full_course: full_course?)
     # ScriptConstants gives us untranslated versions of our course name, and the
     # category it's in. Set translated strings here
     info[:name] = localized_title

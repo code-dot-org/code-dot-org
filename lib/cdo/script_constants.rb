@@ -271,35 +271,26 @@ module ScriptConstants
 
   # Sections can be assigned to both courses and scripts. We want to make sure
   # we give teacher dashboard the same information for both sets of assignables.
-  # @param script [Script] A row object from our script dashboard db table.
+  # @param script [Course|Script] A row object from our course or script dashboard db table.
   # @return {AssignableInfo} without strings translated
-  def self.assignable_script_info(script)
-    name = ScriptConstants.teacher_dashboard_name(script[:name])
-    first_category = ScriptConstants.categories(script[:name])[0] ||
-        OTHER_CATEGORY_NAME
-    {
-      id: script[:id],
-      name: name,
+  def self.assignable_info(course_or_script, full_course: false)
+    info = {
+      id: course_or_script[:id],
+      name: ScriptConstants.teacher_dashboard_name(course_or_script[:name]),
       # Would better be called something like assignable_name
-      script_name: script[:name],
-      category: first_category,
-      position: ScriptConstants.position_in_category(script[:name], first_category),
-      category_priority: ScriptConstants.category_priority(first_category),
+      script_name: course_or_script[:name]
     }
-  end
 
-  # Sections can be assigned to both courses and scripts. We want to make sure
-  # we give teacher dashboard the same information for both sets of assignables.
-  # @param course [Course] A row object from our course dashboard db table.
-  # @return {AssignableInfo} without strings translated
-  def self.assignable_course_info(course)
-    {
-      id: course[:id],
-      name: ScriptConstants.teacher_dashboard_name(course[:name]),
-      # Would better be called something like assignable_name
-      script_name: course[:name],
-      category_priority: ScriptConstants.category_priority(nil, full_course: course.full_course?),
-    }
+    if full_course
+      info[:category_priority] = ScriptConstants.category_priority(nil, full_course: full_course)
+    else
+      first_category = ScriptConstants.categories(course_or_script[:name])[0] || OTHER_CATEGORY_NAME
+      info[:category] = first_category
+      info[:position] = ScriptConstants.position_in_category(course_or_script[:name], first_category)
+      info[:category_priority] = ScriptConstants.category_priority(first_category)
+    end
+
+    info
   end
 
   def self.has_congrats_page?(script)
