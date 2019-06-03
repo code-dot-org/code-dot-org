@@ -30,9 +30,7 @@
     border-radius: 0;
     padding: 0 30px 0 10px;
     color: #fff;
-    background-position: right 10px center;
-    background-repeat: no-repeat;
-    background-size: auto 50%;
+    background: url("/blockly/media/applab/dropdown.png") no-repeat center right;
 
     // IE9 cant get rid of the native dropdown, so dont show our custom image and
     // get rid of our right padding so that the arrow is properly aligned
@@ -44,7 +42,7 @@
     }
 
     &:hover {
-      filter: opacity(0.8)
+      background: url("/blockly/media/applab/dropdown.png") no-repeat center right, url("/blockly/media/applab/brighter.png");
     }
   }
 
