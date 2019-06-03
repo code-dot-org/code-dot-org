@@ -686,61 +686,61 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal(
       {
         'Facilitator Person 1' => {
-          'overallHow' => {
-            this_workshop: 4.64,
-            all_my_workshops: 3.47
+          'facilitator_qualities_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'howOften56' => {
-            this_workshop: 4.75,
-            all_my_workshops: 4.21
+          'teacher_engagement_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'iFeel133' => {
-            this_workshop: 4.63,
-            all_my_workshops: 4.56,
+          'overall_success_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0,
           },
           facilitator_effectiveness: {
-            this_workshop: 1.34,
-            all_my_workshops: 1.1
+            this_workshop: 0.67,
+            all_my_workshops: 0.67
           },
           teacher_engagement: {
-            this_workshop: 0,
-            all_my_workshops: 0,
+            this_workshop: 1.0,
+            all_my_workshops: 1.0,
           },
           overall_success: {
-            this_workshop: 0.93,
-            all_my_workshops: 0.91
+            this_workshop: 0.8,
+            all_my_workshops: 0.8
           }
         },
         'Facilitator Person 2' => {
-          'overallHow' => {
-            this_workshop: 4.64,
-            all_my_workshops: 3.47
+          'facilitator_qualities_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'howOften56' => {
-            this_workshop: 2.07,
-            all_my_workshops: 1.99
+          'teacher_engagement_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0
           },
-          'iFeel133' => {
-            this_workshop: 4.63,
-            all_my_workshops: 4.56,
+          'overall_success_0' => {
+            this_workshop: 4.0,
+            all_my_workshops: 4.0,
           },
           facilitator_effectiveness: {
-            this_workshop: 0.96,
-            all_my_workshops: 0.78
+            this_workshop: 0.67,
+            all_my_workshops: 0.67
           },
           teacher_engagement: {
-            this_workshop: 0,
-            all_my_workshops: 0,
+            this_workshop: 1.0,
+            all_my_workshops: 1.0,
           },
           overall_success: {
-            this_workshop: 0.93,
-            all_my_workshops: 0.91
+            this_workshop: 0.8,
+            all_my_workshops: 0.8
           }
         },
         questions: {
-          'overallHow' => "Overall how much did you learn from this course?",
-          'howOften56' => "How often did your facilitator help you?",
-          'iFeel133' => "Overall, how do you feel about computer science?"
+          "facilitator_qualities_0" => "During my workshop, {facilitatorName} did the following: Demonstrated knowledge of the curriculum.",
+          "teacher_engagement_0" => "How much do you agree or disagree with the following statements about your level of engagement in the workshop? I found the activities we did in this workshop interesting and engaging.",
+          "overall_success_0" => "How much do you agree or disagree with the following statements about the workshop overall? I feel more prepared to teach the material covered in this workshop than before I came."
         }
       },
 
