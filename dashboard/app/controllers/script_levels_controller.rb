@@ -193,13 +193,19 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
+    @script = Script.get_from_cache(params[:script_id])
+    @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
+
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
-      @script = Script.get_from_cache(params[:script_id])
-      @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
-      @game = @level.game
+    elsif params[:level_name]
+      @level = Level.find_by_name params[:level_name]
+      @script_level = @level.script_levels.find_by_script_id(@script.id)
+    end
 
+    if @level
+      @game = @level.game
       present_level
       return
     end
