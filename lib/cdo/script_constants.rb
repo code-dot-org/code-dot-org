@@ -274,7 +274,6 @@ module ScriptConstants
   # we could have two different translations).
   # @param course_or_script [Course|Script] A row object from either our courses
   #   or scripts dashboard db tables.
-  # @param hidden [Boolean] True if the passed in item is hidden
   # @return {AssignableInfo} without strings translated
   def self.assignable_info(course_or_script)
     name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
