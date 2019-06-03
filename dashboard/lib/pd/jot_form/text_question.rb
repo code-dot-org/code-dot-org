@@ -7,7 +7,10 @@ module Pd
           TYPE_TEXTAREA,
 
           # Number is a textbox with extra validation
-          TYPE_NUMBER
+          TYPE_NUMBER,
+
+          # Datetime is stored as text
+          TYPE_DATETIME
         ]
       end
 
