@@ -965,7 +965,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     refute_includes response.body, fake_last_attempt
   end
 
-  test 'does not load applab if you are a teacher viewing your student and they do not have a channel id' do
+  test 'loads applab if you are a teacher viewing your student and they do not have a channel id' do
     sign_in @teacher
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
@@ -989,9 +989,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       section_id: @section.id
     }
 
-    assert_select '#notStarted'
-    assert_select '#codeApp', 0
-    refute_includes response.body, fake_last_attempt
+    assert_select '#codeApp'
+    assert_select '#notStarted', 0
+    assert_includes response.body, fake_last_attempt
   end
 
   test 'chooses section when teacher has multiple sections, but only one unhidden' do
