@@ -68,7 +68,6 @@ da:
   of: "af"
   more: "MERE"
   less: "MINDRE"
-  beta: "beta"
   try_hoc: "Prøv Hour of Code, klik her >> "
   try_k8intro: "Prøv vores grundskole introduktionskursus i programmering (15-25 timer)"
   k8intro: "Grundskole introduktion til datalogi kursus (15-25 timer)"
@@ -650,16 +649,8 @@ da:
     create: "Opret projekt"
     create_a_project: 'Opret et nyt projekt:'
     new: "Opret nyt"
-    rename: "Omdøb"
-    save: "Gem"
-    import: "Importér"
-    share_link_import_bad_link_header: "Ukendt delingslink"
-    share_link_import_bad_link_body: "Vi kunne ikke importere delingslinket. Sørg for, at du bruger et link fra en Minecraft: Agent-opgave, og at du har kopieret hele linket."
-    share_link_import_error_header: "Der gik noget galt"
-    share_link_import_error_body: "Vi kunne ikke importere delingslinket. Prøv igen."
     exit: "Vend tilbage til kursus"
     project_gallery: "Projekter"
-    share: "Del"
     share_title: Del dit projekt
     share_copy_link: "Kopiér linket:"
     name: "Navn"
@@ -670,8 +661,6 @@ da:
     saved: "Gemt"
     not_saved: "Ikke gemt"
     view_all: 'Se Mine Projekter'
-    remix: 'Bland igen'
-    click_to_remix: "Klik 'Bland igen' oprette et spin-off i din egen version!"
     edit_project: 'Rediger projekt'
     abuse:
       tos: "Dette projekt er blevet rapporteret til at overtræde Code.org med <a href='http://code.org/tos'> Terms of Service</a> og kan ikke deles med andre."
