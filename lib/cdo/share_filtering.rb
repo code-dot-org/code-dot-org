@@ -1,6 +1,6 @@
 require 'cdo/regexp'
 require 'cdo/geocoder'
-require 'cdo/web_purify'
+require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
 USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
@@ -41,7 +41,7 @@ module ShareFiltering
     phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
     return ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
 
-    expletive = WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
+    expletive = ProfanityFilter.find_potential_profanity(program_tags_removed, locale)
     return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     nil
