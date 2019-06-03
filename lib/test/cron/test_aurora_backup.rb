@@ -5,7 +5,6 @@ require 'pry'
 require 'timecop'
 
 class AuroraBackupTest < Minitest::Test
-  include AuroraBackup
 
   def test_find_latest_snapshot
     rds_resource = Aws::RDS::Resource.new(stub_responses: true)
@@ -32,14 +31,14 @@ class AuroraBackupTest < Minitest::Test
           snapshot_create_time: Time.new(2)
         },
         {
-            db_cluster_snapshot_identifier: "#{TEMP_SNAPSHOT_PREFIX}-123",
+            db_cluster_snapshot_identifier: "#{AuroraBackup::TEMP_SNAPSHOT_PREFIX}-123",
             status: 'available',
             snapshot_create_time: Time.new(3)
         }
       ]
     })
 
-    result = find_latest_snapshot(rds_resource, 'my-cluster')
+    result = AuroraBackup.find_latest_snapshot(rds_resource, 'my-cluster')
     assert_equal result.db_cluster_snapshot_identifier, 'latest-valid-snapshot'
   end
 
@@ -55,7 +54,7 @@ class AuroraBackupTest < Minitest::Test
     })
 
     err = assert_raises AuroraBackup::AuroraBackupError do
-      find_latest_snapshot(rds_resource, 'my-cluster')
+      AuroraBackup.find_latest_snapshot(rds_resource, 'my-cluster')
     end
     assert_match /No available automated snapshots/, err.message
   end
@@ -81,7 +80,7 @@ class AuroraBackupTest < Minitest::Test
         values_to_add: [backup_account_id]
     }]
 
-    result = share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
+    result = AuroraBackup.share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     assert_equal result.snapshot_id, temp_snapshot_name
   end
 
@@ -106,7 +105,7 @@ class AuroraBackupTest < Minitest::Test
         ]
     })
 
-    result = find_shared_snapshot_on_backup(rds_client, temp_snapshot_name)
+    result = AuroraBackup.find_shared_snapshot_on_backup(rds_client, temp_snapshot_name)
     assert_equal result.snapshot_id, temp_snapshot_name
   end
 
@@ -124,7 +123,7 @@ class AuroraBackupTest < Minitest::Test
     shared_snapshot = Aws::RDS::DBClusterSnapshot.new(cluster_id: 'my-cluster', snapshot_id: 'shared-snapshot',
                                                       client: snapshot_client)
 
-    result = copy_shared_snapshot(shared_snapshot, copied_snapshot_name)
+    result = AuroraBackup.copy_shared_snapshot(shared_snapshot, copied_snapshot_name)
     assert_equal result.snapshot_id, copied_snapshot_name
   end
 end

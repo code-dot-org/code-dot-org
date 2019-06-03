@@ -4,6 +4,7 @@ Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk-rds'
 require 'cdo/chat_client'
+require 'cron/aurora_backup'
 
 # This script pushes backup snapshots of our production database into a
 # write-only backup account, with the following steps:

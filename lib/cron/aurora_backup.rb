@@ -12,7 +12,7 @@ module AuroraBackup
 
   # Wait for an RDS snapshot to be in the 'available' state
   # @param snapshot [DBClusterSnapshot] the snapshot to wait for
-  def wait_for_snapshot(snapshot)
+  def self.wait_for_snapshot(snapshot)
     # Wait up to 300 * 60 seconds = 300 minutes for snapshot to become available.
     snapshot.wait_until(max_attempts: 300, delay: 60) do |snap|
       snap.status == 'available'
@@ -26,7 +26,7 @@ module AuroraBackup
   # @param temp_snapshot_name [String] The name of the snapshot to look for. Note that
   # this is a suffix lookup, and assumes that the prefix will be 'arn:aws:rds:' for a
   # shared snapshot
-  def find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
+  def self.find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
     shared_snapshots = []
     attempts = 0
     max_attempts = 60
@@ -57,7 +57,7 @@ module AuroraBackup
   # @param latest_snapshot [DBSnapshot] snapshot to copy and share
   # @return Array(DBSnapshot, String) the temporary copied snapshot, and the name of the
   # temporary snapshot
-  def share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
+  def self.share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     # Copy the automated backup into a shareable manual one
     copied_snapshot = latest_snapshot.copy(
         target_db_cluster_snapshot_identifier: temp_snapshot_name,
@@ -76,7 +76,7 @@ module AuroraBackup
     return copied_snapshot
   end
 
-  def find_latest_snapshot(rds_resource, cluster_id)
+  def self.find_latest_snapshot(rds_resource, cluster_id)
     production_cluster = rds_resource.db_clusters.find {|i| i.id == cluster_id}
 
     # Find the latest automated backup
@@ -91,7 +91,7 @@ module AuroraBackup
     sorted_snapshots.last
   end
 
-  def copy_shared_snapshot(shared_snapshot, new_snapshot_id)
+  def self.copy_shared_snapshot(shared_snapshot, new_snapshot_id)
     backed_up_snapshot = shared_snapshot.copy({
        target_db_cluster_snapshot_identifier: new_snapshot_id,
        kms_key_id: 'alias/aws/rds' # Use default master key
@@ -110,7 +110,7 @@ module AuroraBackup
   #
   # Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
   # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
-  def backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
+  def self.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
     rds_resource = Aws::RDS::Resource.new(client: rds_client)
     temp_snapshot_name = "#{TEMP_SNAPSHOT_PREFIX}-#{Time.now.to_i}"
 
