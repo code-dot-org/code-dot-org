@@ -23,6 +23,9 @@ module ShareFiltering
   #
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
+  #
+  # @param [String] program the student's program text
+  # @param [String] locale a two-character ISO 639-1 language code
   def self.find_share_failure(program, locale)
     return nil unless should_filter_program(program)
 

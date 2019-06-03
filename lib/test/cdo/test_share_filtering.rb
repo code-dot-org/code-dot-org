@@ -66,6 +66,33 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
+  def test_find_share_failure_with_custom_profanity
+    # "fu" is a past-tense "to be" in Italian, but should be blocked
+    # as profanity in English.  WebPurify doesn't support this, so we
+    # have custom filtering that takes locale into account for this word.
+    program = generate_program('My Custom Profanity', 'fu')
+
+    # Stub WebPurify because we expect our custom blocking to handle this case.
+    WebPurify.stubs(:find_potential_profanity).returns(nil)
+
+    # Block program in English
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      ShareFiltering.find_share_failure(program, 'en')
+    )
+
+    # Block program in Spanish
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      ShareFiltering.find_share_failure(program, 'es')
+    )
+
+    # Allow program in Italian
+    assert_nil(
+      ShareFiltering.find_share_failure(program, 'it')
+    )
+  end
+
   def test_find_share_failure_for_non_playlab
     program = '<xml><block type=\"controls_repeat\">'\
       '<title name=\"TIMES\">4</title><statement name=\"DO\">'\
