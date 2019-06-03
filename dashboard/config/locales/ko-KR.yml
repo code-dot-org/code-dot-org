@@ -72,7 +72,6 @@ ko:
   of: 중
   more: 전체단계
   less: 현재단계
-  beta: 베타
   try_hoc: 'Hour of Code 해보기! >> '
   try_k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 과정(15-25시간) 해보기
   k8intro: 유치원~중2(K-8) 학생들을 위한 컴퓨터과학(CS, 정보과학) 코스
@@ -841,19 +840,10 @@ ko:
     create: 프로젝트 만들기
     create_a_project: '새 프로젝트 만들기:'
     new: 새로 만들기
-    rename: 이름 바꾸기
-    save: 저장
-    import: 가져오기
-    share_link_import_bad_link_header: 공유 링크를 인식할 수 없습니다
-    share_link_import_bad_link_body: '공유 링크를 가져올 수 없습니다. Minecraft: Agent 퍼즐에서 제공되는
-      링크 전체를 복사했는지 확인해주세요.'
-    share_link_import_error_header: 오류가 발생했습니다.
-    share_link_import_error_body: 공유 링크를 가져오는 중 문제가 발생했습니다. 다시 시도해주세요.
     exit: 코스로 돌아가기
     project_gallery: 프로젝트
     publish: 발행하기
     unpublish: 발행취소하기
-    share: 공유하기
     share_title: 프로젝트 공유
     share_copy_link: 링크 복사
     share_embed_description: 웹 페이지에서 프로젝트를 보여주기 위해 HTML 페이지에 소스 코드를 붙여넣을 수 있습니다.
@@ -871,8 +861,6 @@ ko:
     saved: 저장됨
     not_saved: 저장 안됨
     view_all: 내 프로젝트 보기
-    remix: 리믹스
-    click_to_remix: 자신만의 버전을 만들고 싶으시면 "Remix"를 클릭하세요!
     edit_project: 프로젝트 편집
     abuse:
       tos: 이 프로젝트는 Code.org의 <a href='http://code.org/tos'>이용 약관</a>을 위반하였습니다. 이 프로젝트는
