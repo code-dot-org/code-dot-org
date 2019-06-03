@@ -74,7 +74,17 @@ const styles = {
     top: HEADER_HEIGHT,
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
+    overflow: 'scroll'
+  },
+  CSFbody: {
+    backgroundColor: '#ddd',
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflow: 'hidden'
   },
   embedView: {
     height: undefined,
@@ -111,7 +121,7 @@ const audioStyle = {
   }
 };
 
-class TopInstructions extends Component {
+class TopInstructionsCSP extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
@@ -553,12 +563,11 @@ class TopInstructions extends Component {
         >
           <div
             style={[
-              styles.body,
               !this.props.noInstructionsWhenCollapsed &&
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
-                ? {overflow: 'hidden'}
-                : {overflowY: 'scroll'},
+                ? styles.CSFbody
+                : styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
           >
@@ -633,7 +642,7 @@ class TopInstructions extends Component {
     );
   }
 }
-export const UnconnectedTopInstructions = TopInstructions;
+export const UnconnectedTopInstructionsCSP = TopInstructionsCSP;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -675,4 +684,4 @@ export default connect(
   }),
   null,
   {withRef: true}
-)(Radium(TopInstructions));
+)(Radium(TopInstructionsCSP));

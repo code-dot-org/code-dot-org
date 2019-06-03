@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import {UnconnectedTopInstructionsCSP as TopInstructionsCSP} from '@cdo/apps/templates/instructions/TopInstructionsCSP';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -27,17 +27,17 @@ const DEFAULT_PROPS = {
   isMinecraft: false
 };
 
-describe('TopInstructions', () => {
+describe('TopInstructionsCSP', () => {
   it('is an empty div if passed the "hidden" property', () => {
     const wrapper = shallow(
-      <TopInstructions {...DEFAULT_PROPS} hidden={true} />
+      <TopInstructionsCSP {...DEFAULT_PROPS} hidden={true} />
     );
     expect(wrapper.find('div')).to.have.lengthOf(1);
   });
 
   it('is an empty div if there are no instructions to display', () => {
     const wrapper = shallow(
-      <TopInstructions
+      <TopInstructionsCSP
         {...DEFAULT_PROPS}
         shortInstructions={null}
         longInstructions={null}
@@ -50,7 +50,7 @@ describe('TopInstructions', () => {
   describe('viewing the Feedback Tab', () => {
     describe('as a teacher', () => {
       it('does not show the feedback tab on a level with no rubric where the teacher is not giving feedback', () => {
-        const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
+        const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
@@ -66,7 +66,7 @@ describe('TopInstructions', () => {
       });
 
       it('shows the feedback tab on a level with a rubric where the teacher is not giving feedback', () => {
-        const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
+        const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
@@ -91,7 +91,7 @@ describe('TopInstructions', () => {
     describe('as a student', () => {
       it('shows the feedback tab on a level where the teacher has given feedback', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructionsCSP {...DEFAULT_PROPS} viewAs={'Student'} />
         );
 
         wrapper.setState({
@@ -125,7 +125,7 @@ describe('TopInstructions', () => {
 
       it('does not show the feedback tab on a level where the teacher has not given feedback and there is no rubric', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructionsCSP {...DEFAULT_PROPS} viewAs={'Student'} />
         );
 
         wrapper.setState({
@@ -146,7 +146,7 @@ describe('TopInstructions', () => {
     describe('as a teacher', () => {
       it('does not show the Teacher Instructions tab on a level with no markdown', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} teacherMarkdown={null} />
+          <TopInstructionsCSP {...DEFAULT_PROPS} teacherMarkdown={null} />
         );
 
         wrapper.setState({
@@ -164,7 +164,7 @@ describe('TopInstructions', () => {
 
       it('shows the Teacher Instructions on a level with markdown for CSF', () => {
         const wrapper = shallow(
-          <TopInstructions
+          <TopInstructionsCSP
             {...DEFAULT_PROPS}
             noInstructionsWhenCollapsed={false}
           />
@@ -184,7 +184,7 @@ describe('TopInstructions', () => {
       });
 
       it('does not show the Teacher Instructions on a level with markdown for CSP and CSD', () => {
-        const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
+        const wrapper = shallow(<TopInstructionsCSP {...DEFAULT_PROPS} />);
 
         wrapper.setState({
           tabSelected: 'instructions',
@@ -203,7 +203,7 @@ describe('TopInstructions', () => {
     describe('as a student', () => {
       it('does not show the Teacher Instructions tab', () => {
         const wrapper = shallow(
-          <TopInstructions
+          <TopInstructionsCSP
             {...DEFAULT_PROPS}
             viewAs={'Student'}
             teacherMarkdown={null}
