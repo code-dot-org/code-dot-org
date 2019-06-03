@@ -1030,6 +1030,13 @@ var projects = (module.exports = {
   },
 
   /**
+   * Asks the sourceHandler whether the code contains an error (red gutter warning)
+   */
+  containsError() {
+    return this.sourceHandler.codeContainsError();
+  },
+
+  /**
    * Ask the configured sourceHandler for the latest project save data and
    * pass it to the provided callback.
    * @param {function} callback
