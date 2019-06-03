@@ -43,7 +43,6 @@ uz:
   of: ni
   more: Ko`p
   less: Oz
-  beta: beta
   already_started: 'Allaqachon boshlaganmisiz? Bu yerda davom eting >> '
   demos: 'Admin: Barcha demonstratsiyalar'
   continue: Davom etish
@@ -162,7 +161,6 @@ uz:
       other: Boshqa
     submit: Taqdim qilmoq
   project:
-    save: Saqlash
     name: Ismi
     abuse:
       report_abuse_form:
