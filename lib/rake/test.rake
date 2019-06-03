@@ -252,6 +252,7 @@ namespace :test do
         'dashboard',
         [
           'Gemfile',
+          'Gemfile.lock',
           'deployment.rb',
           'dashboard/**/*',
           'lib/**/*',
@@ -269,6 +270,7 @@ namespace :test do
         'pegasus',
         [
           'Gemfile',
+          'Gemfile.lock',
           'deployment.rb',
           'pegasus/**/*',
           'lib/**/*',
@@ -282,14 +284,14 @@ namespace :test do
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['Gemfile', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
+      run_tests_if_changed('shared', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
         TestRunUtils.run_shared_tests
       end
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
     task :lib do
-      run_tests_if_changed('lib', ['Gemfile', 'deployment.rb', 'lib/**/*']) do
+      run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
         TestRunUtils.run_lib_tests
       end
     end

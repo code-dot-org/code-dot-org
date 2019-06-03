@@ -68,7 +68,6 @@ fr:
   of: "de"
   more: "PLUS"
   less: "MOINS"
-  beta: "beta"
   try_hoc: "Essaie l'Heure de Code, en cliquant ici >> "
   try_k8intro: "Essaie notre cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
   k8intro: "Cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
@@ -814,18 +813,10 @@ fr:
     create: "Crée un projet"
     create_a_project: 'Crée un nouveau projet :'
     new: "Créer un nouveau projet"
-    rename: "Renommer"
-    save: "Sauvegarder"
-    import: "Importer"
-    share_link_import_bad_link_header: "Lien de partage non reconnu"
-    share_link_import_bad_link_body: "Nous n'avons pas pu importer ce lien de partage. Assurez-vous d'utiliser un lien issu du casse-tête Minecraft: Agent et de copier le lien complet."
-    share_link_import_error_header: "Une erreur est survenue."
-    share_link_import_error_body: "Un problème est survenu lors de l'importation de ce lien de partage. Veuillez réessayer."
     exit: "Retourner au cours"
     project_gallery: "Projets"
     publish: "Publier"
     unpublish: "Dépublier"
-    share: "Partager"
     share_title: Partage ton projet
     share_copy_link: "Copie le lien :"
     share_embed_description: "Vous pouvez copier le code intégré dans une page HTML pour afficher le projet sur une page web."
@@ -842,8 +833,6 @@ fr:
     saved: "Enregistré"
     not_saved: "Non enregistré"
     view_all: 'Afficher « Mes projets »'
-    remix: 'Remix'
-    click_to_remix: "Clique sur «Remix» pour créer ta propre version!"
     edit_project: 'Modifier le projet'
     sharing_disabled: "Désolé, ce projet ne peut pas être partagé. Si c'est votre projet ou celui de vos élèves, veuillez vous <a href='https://studio.code.org/users/sign_in'>connecter</a> à votre compte pour voir ce projet."
     abuse:

@@ -229,14 +229,20 @@
     "encrypted_examples": "hrh/IWoidgqvd8PNQ+LZRpNPZyUiHv32jc84LY3wd4/bV24uaP72lpnU0ffo\nDyJ7pyTTC4NYGCSE5GdIUjH0PA==\n",
     "parent_level_id": 12535,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "map_reference": "/docs/concepts/maker-toolkit/circuits-and-leds/",
-    "mini_rubric": "false",
-    "text_mode_at_start": "false"
+    "mini_rubric": "true",
+    "text_mode_at_start": "false",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "rubric_key_concept": "Connect, troubleshoot, and debug external devices and integrated computing systems.",
+    "rubric_performance_level_1": "The program works as described, with the left external LED blinking when the left button is pressed and the right external LED blinking when the right button is pressed.",
+    "rubric_performance_level_2": "An external LED responds when a button is pressed on the circuit playground, but may not work exactly as described.",
+    "rubric_performance_level_3": "The external LED is physically connected to the circuit playground, and there is code to control the LED from the program, but errors prevent it from responding properly to the board.",
+    "rubric_performance_level_4": "There is no external LED connected to the board or there is no code that would allow the program to control the LED."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:31:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:56:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 23:12:21 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 20:24:53 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:27:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:34:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-15 22:53:57 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:31:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-19 17:56:29 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-15 23:12:21 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-16 20:24:53 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 21:27:36 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 08:34:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 21:12:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
