@@ -76,7 +76,6 @@ nl:
   of: van
   more: MEER
   less: MINDER
-  beta: beta
   try_hoc: 'Probeer the Hour of Code, klik hier >> '
   try_k8intro: Probeer onze informatica-introductiecursus voor basisschoolleerlingen
     (15-25 uur)
@@ -825,21 +824,10 @@ nl:
     create: Project aanmaken
     create_a_project: 'Maak een nieuw project aan:'
     new: Nieuwe maken
-    rename: Hernoemen
-    save: Opslaan
-    import: Importeren
-    share_link_import_bad_link_header: Deelbare koppeling niet herkend
-    share_link_import_bad_link_body: 'We kunnen die deelbare koppeling niet importeren.
-      Zorg ervoor dat je een koppeling van een Minecraft: Agent-puzzel gebruikt en
-      je de volledige koppeling kopieert.'
-    share_link_import_error_header: Er is iets misgegaan.
-    share_link_import_error_body: Er is iets misgegaan met het importeren van die
-      deelbare koppeling. Probeer het opnieuw.
     exit: Terug naar de Cursus
     project_gallery: Projecten overzicht
     publish: Publiceren
     unpublish: Depubliceren
-    share: Delen
     share_title: Deel je project
     share_copy_link: 'Kopieer de link:'
     share_embed_description: Om het project op een webpagina te laten zien, kunt u
@@ -860,8 +848,6 @@ nl:
     saved: Opgeslagen
     not_saved: Niet opgeslagen
     view_all: Mijn Projecten Bekijken
-    remix: Remix
-    click_to_remix: Klik op 'Remix' om een spin-off voor je eigen versie te maken!
     edit_project: Edit Project
     abuse:
       tos: Van dit project is gemeld dat het Code.org's <a href='http://code.org/tos'>voorwaarden</a>

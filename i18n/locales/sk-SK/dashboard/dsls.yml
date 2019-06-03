@@ -121,7 +121,7 @@ sk:
       4-5 Algorithms Multi 1:
         Baking cookies: Pečenie koláčov
         Banana: Banán
-        Brushing your teeth: Čistenie si Vašich zubov
+        Brushing your teeth: Čistenie zubov
         Multiple Choice: Vyber správnu odpoveď
         Shopping from a grocery list: Nakupovanie podľa nákupného zoznamu
         Which one of these items is hardest to describe an algorithm for?: Pre ktorý z týchto predmetov je najťažšie definovať algoritmus?
@@ -684,9 +684,17 @@ sk:
         The bee will try to get nectar from both flowers and honeycomb.: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
       courseF_multi_bee_for3_predict1:
         Correct!: Správne!
+        Read the code below.  What will happen when you click "Run"?: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem jedného.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+        'The bee will move forward and collect one nectar from each flower. ': 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
       courseF_multi_bee_for3_predict1_2018:
         Correct!: Správne!
         'I don''t know. ': 'Neviem. '
+        Read the code below.  What will happen when you click "Run"?: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
+        The bee will move forward and collect all of the nectar from every flower, except for one.: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem jedného.
+        'The bee will move forward and collect all of the nectar from every flower. ': 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+        'The bee will move forward and collect one nectar from each flower. ': 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
       courseF_multi_bee_fwp9_predict1:
         0: '? Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'
         1: ': Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter.'

@@ -496,7 +496,7 @@ zh-CN:
         I don't know.: 我不知道.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        0: 仔细查看下面的代码，您点击“运行”后会发生什么？记住：每朵云后面只会有一个蜂窝或者一个花朵。
+        0: 仔细查看下面的代码，您点击“运行”后会发生什么？记住：每朵云后面只会有一个蜂窝或者一个花朵
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will get nectar at each flower and honey at each honeycomb.: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         The bee will try to get honey from both flowers and honeycomb.: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
@@ -547,9 +547,9 @@ zh-CN:
         I don't know.: 我不知道.
         Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure.: 错误。这个答案部分正确,
           循环没有运行足够多次数来获得所有的宝贝。
-        0: ': ''Look closely at the code below.  Why won''''t Laurel collect all of
-          the treasure when you click "Run"? Warning: This is a tricky question, make
-          sure you read all of the options before answering!'''
+        0: 'Look closely at the code below.  Why won''t Laurel collect all of the
+          treasure when you click "Run"? Warning: This is a tricky question, make
+          sure you read all of the options before answering!'
       courseD_multi_farmer_condLoops9_predict1:
         I don't know.: 我不知道.
         0: 错误。这段代码将使收割者将会反复沿着台阶状路径移动，同时收割经过的所有玉米和莴苣，但是她不会收割南瓜。
