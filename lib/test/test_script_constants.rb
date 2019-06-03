@@ -66,13 +66,13 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal 7, ScriptConstants.category_priority(:research_studies)
   end
 
-  def test_assignable_info
-    assert_equal 1, ScriptConstants.assignable_info({name: 'dance'})[:position]
-    assert_equal 2, ScriptConstants.assignable_info({name: 'dance-extras'})[:position]
-    assert_equal 3, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
-    assert_equal 4, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal 5, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal 6, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
+  def test_assignable_script_info
+    assert_equal 1, ScriptConstants.assignable_script_info({name: 'dance'})[:position]
+    assert_equal 2, ScriptConstants.assignable_script_info({name: 'dance-extras'})[:position]
+    assert_equal 3, ScriptConstants.assignable_script_info({name: 'aquatic'})[:position]
+    assert_equal 4, ScriptConstants.assignable_script_info({name: 'hero'})[:position]
+    assert_equal 5, ScriptConstants.assignable_script_info({name: 'mc'})[:position]
+    assert_equal 6, ScriptConstants.assignable_script_info({name: 'minecraft'})[:position]
   end
 
   describe 'ScriptConstants::script_in_any_category?' do
