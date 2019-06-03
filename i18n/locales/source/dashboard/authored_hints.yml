@@ -170,6 +170,7 @@ en:
           [][0]
 
           1.  Gather nectar 3 times
+
               -   Move forward 5 times
               -   Check to see if nectar, if so: get it
               -   Turn left
@@ -7458,14 +7459,17 @@ en:
           The loops should do this:
 
           -   Loop 1
+
               -   Right
               -   Down
 
           -   Loop 2
+
               -   Right
               -   Up
 
           -   Loop 3
+
               -   Left
               -   Up
 
@@ -7482,14 +7486,17 @@ en:
           The loops should do this:
 
           -   Loop 1
+
               -   Right
               -   Down
 
           -   Loop 2
+
               -   Right
               -   Up
 
           -   Loop 3
+
               -   Left
               -   Up
 
@@ -7506,14 +7513,17 @@ en:
           The loops should do this:
 
           -   Loop 1
+
               -   Right
               -   Down
 
           -   Loop 2
+
               -   Right
               -   Up
 
           -   Loop 3
+
               -   Left
               -   Up
 
@@ -13377,9 +13387,9 @@ en:
       courseD_playLab_cond3_2019_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
       courseD_playLab_cond3a_authored_hint:
-        courseD_playLab_cond3_c: "-   `If` the dragon is happy \n    -   `score point`\n    -   `score point`  \n\n-   `Else` `score point`"
+        courseD_playLab_cond3_c: "-   `If` the dragon is happy \n\n    -   `score point`\n    -   `score point`  \n\n\n-   `Else` `score point`"
       courseD_playLab_cond3a_2018_authored_hint:
-        courseD_playLab_cond3_c: "-   `If` the dragon is happy \n    -   `score point`\n    -   `score point`  \n\n-   `Else` `score point`"
+        courseD_playLab_cond3_c: "-   `If` the dragon is happy \n\n    -   `score point`\n    -   `score point`  \n\n\n-   `Else` `score point`"
       courseD_playLab_cond3a_2019_authored_hint:
         courseD_playLab_cond3_c: "-   `If` the dragon is happy \n    -   `score point`\n    -   `score point`\n-   `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
@@ -18983,14 +18993,17 @@ en:
           The loops should do this:
 
           -   Loop 1
+
               -   Right
               -   Down
 
           -   Loop 2
+
               -   Right
               -   Up
 
           -   Loop 3
+
               -   Left
               -   Up
 
@@ -19008,14 +19021,17 @@ en:
           The loops should do this:
 
           -   Loop 1
+
               -   Right
               -   Down
 
           -   Loop 2
+
               -   Right
               -   Up
 
           -   Loop 3
+
               -   Left
               -   Up
 
@@ -19174,7 +19190,7 @@ en:
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: Having a hard time figuring out how to get the blocks down?  Try treating the red flower exactly the same as a purple flower!
         2-3_Bee_Conditionals_14_b: If the red flower were purple, could you figure out how to use an extra `repeat` loop to cut down on code?
-        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n[][0]\n\n1.  Gather nectar 3 times\n\n2.  Move forward 5 times\n\n3.  Check to see if nectar, if so: get it\n\n4.  Turn left\n\n5.  Make honey \n\n6.  Move forward one time\n\n7.  Make two honey"
+        2-3_Bee_Conditionals_14_c: "Try breaking this up into two separate chunks:  \n\n[][0]\n\n1.  Gather nectar 3 times\n2.  Move forward 5 times\n3.  Check to see if nectar, if so: get it\n4.  Turn left\n\n5.  Make honey \n6.  Move forward one time\n7.  Make two honey"
       grade3_Conditionals_12_authored_hint:
         2-3_Bee_Conditionals_15_a: 'Remember: Purple flowers only have either 0 or 1 nectar and they can change each time you run the program.'
       grade3_Conditionals_2_authored_hint:
