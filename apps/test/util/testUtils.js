@@ -110,6 +110,29 @@ export function dragToVisualization(type, left, top) {
   });
   $(document).trigger(drag);
 
+  //
+  // Apply border-box styling that would normally come from applab css files
+  // on the element types: input, div.textArea, button, select, img, label
+  //
+  switch (type) {
+    case 'BUTTON':
+    case 'TEXT_INPUT':
+    case 'TEXT_AREA':
+    case 'RADIO_BUTTON':
+    case 'LABEL':
+    case 'SLIDER':
+    case 'CHECKBOX':
+    case 'DROPDOWN':
+      $('.draggingParent')
+        .first()
+        .children()
+        .first()
+        .css('box-sizing', 'border-box');
+      break;
+    default:
+      break;
+  }
+
   // when we start our drag, it positions the dragged element to be centered
   // on our cursor. adjust the target drop location accordingly
   var halfWidth = $('.draggingParent').width() / 2;
