@@ -68,7 +68,6 @@ pt:
   of: "de"
   more: "MAIS"
   less: "MENOS"
-  beta: "beta"
   try_hoc: "Experimenta a Hora de Código >> "
   try_k8intro: "Experimenta o nosso curso de introdução à Ciência da Computação para o Ensino Básico (15 a 25 horas)"
   k8intro: "Curso de Introdução às Ciências da Computação para Ensino Básico (15-25 horas)"
@@ -632,17 +631,9 @@ pt:
     create: "Criar projeto"
     create_a_project: 'Cria um projeto novo:'
     new: "Criar novo"
-    rename: "Renomear"
-    save: "Guardar"
-    import: "Importar"
-    share_link_import_bad_link_header: "Ligação de partilha não reconhecida"
-    share_link_import_bad_link_body: "Não foi possível importar a ligação de partilha. Certifica-te de que estás a utilizar uma ligação do quebra-cabeças Minecraft: Agent e de que copiaste a ligação completa."
-    share_link_import_error_header: "Algo correu mal."
-    share_link_import_error_body: "Ocorreu um problema ao importar a ligação de partilha. Tenta de novo."
     exit: "Voltar ao curso"
     project_gallery: "Projetos"
     publish: "Publicar"
-    share: "Partilhar"
     share_title: Partilha o teu projeto
     share_copy_link: "Copia a ligação:"
     embed: "Incorporar"
@@ -654,8 +645,6 @@ pt:
     saved: "Guardado"
     not_saved: "Por guardar"
     view_all: 'Ver os meus projetos'
-    remix: 'Criar variação'
-    click_to_remix: "Clica em \"Criar variação\" para criares a tua própria versão!"
     edit_project: 'Editar Projeto'
     abuse:
       tos: "Este projeto foi reportado por violar os <a href='http://code.org/tos'>Termos de Serviço</a> do Code.org e não pode ser partilhado."
