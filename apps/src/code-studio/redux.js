@@ -6,6 +6,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import stageLock from './stageLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
+import exportDialog from './components/exportDialogRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import libraryShareDialog from './components/libraryShareDialogRedux';
@@ -22,6 +23,7 @@ registerReducers({
   stageLock,
   viewAs,
   shareDialog,
+  exportDialog,
   hiddenStage,
   isRtl,
   libraryShareDialog,
