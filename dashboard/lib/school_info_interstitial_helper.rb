@@ -36,11 +36,22 @@ module SchoolInfoInterstitialHelper
 
     school_info = user_school_info.school_info
 
-    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && SchoolInfoInterstitialHelper.complete?(school_info)
+    check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) && complete?(school_info) && school_info.usa?
 
     check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
 
-    check_last_confirmation_date && check_school_type
+    check_last_seen_school_info_interstitial = user.last_seen_school_info_interstitial&.to_datetime.nil? ||
+      user.last_seen_school_info_interstitial.to_datetime < 7.days.ago
+
+    show_dialog = check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
+
+    if show_dialog
+      # Check to ensure last seen school info interstitial is saved.
+      user.last_seen_school_info_interstitial = DateTime.now
+      user.save(validate: false)
+    end
+
+    show_dialog
   end
 
   # Decides whether the school info is complete enough to stop bugging the
