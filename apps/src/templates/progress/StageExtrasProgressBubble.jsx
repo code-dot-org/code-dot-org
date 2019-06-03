@@ -5,14 +5,18 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
 import {currentLocation} from '../../utils';
-import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 
 const styles = {
   main: {
-    color: color.white,
     width: 21,
     height: 24
+  },
+  flagNormal: {
+    color: color.white
+  },
+  checkFlagNormal: {
+    color: color.lighter_gray
   },
   focused: {
     color: '#32CD32'
@@ -21,6 +25,11 @@ const styles = {
     ':hover': {
       color: color.orange
     }
+  },
+  smallStack: {
+    width: '1em',
+    height: '1em',
+    lineHeight: '1em'
   }
 };
 
@@ -45,12 +54,20 @@ class StageExtrasProgressBubble extends Component {
       >
         <div
           style={{
-            ...styles.main,
-            ...styles.hoverOverlay,
-            ...(onStageExtras && styles.focused)
+            ...styles.main
           }}
         >
-          <FontAwesome icon="flag-checkered" />
+          <span className="fa-stack fa-1x" style={styles.smallStack}>
+            <i className="fa fa-flag fa-stack-1x" style={styles.flagNormal} />
+            <i
+              className="fa fa-flag-checkered fa-stack-1x"
+              style={{
+                ...styles.checkFlagNormal,
+                ...styles.hoverOverlay,
+                ...(onStageExtras && styles.focused)
+              }}
+            />
+          </span>
         </div>
         <TooltipWithIcon
           tooltipId={tooltipId}
