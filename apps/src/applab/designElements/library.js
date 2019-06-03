@@ -2,12 +2,7 @@ import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import experiments from '../../util/experiments';
-import {
-  themeOptions,
-  DEFAULT_THEME_INDEX,
-  CLASSIC_THEME_INDEX
-} from '../constants';
+import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -175,21 +170,12 @@ export default {
   },
 
   getCurrentTheme: function(parentScreen) {
-    const defaultThemeIndex = experiments.isEnabled('applabThemes')
-      ? DEFAULT_THEME_INDEX
-      : CLASSIC_THEME_INDEX;
-    return (
-      (parentScreen && parentScreen.getAttribute('data-theme')) ||
-      themeOptions[defaultThemeIndex]
-    );
+    return parentScreen
+      ? parentScreen.getAttribute('data-theme')
+      : themeOptions[DEFAULT_THEME_INDEX];
   },
 
-  /**
-   * Sets all properties on the element to reflect the current theme
-   * of the parent screen. This function ignores any student customization
-   * on those properties and overwrites all theme properties.
-   */
-  setAllPropertiesToCurrentTheme: function(element, parentScreen) {
+  applyCurrentTheme: function(element, parentScreen) {
     const currentTheme = this.getCurrentTheme(parentScreen);
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {

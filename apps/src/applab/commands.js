@@ -2,12 +2,14 @@ import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
+import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
+import themeColor from './themeColor';
 import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
@@ -30,7 +32,11 @@ import $ from 'jquery';
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-import {ICON_PREFIX_REGEX} from './constants';
+import {
+  ICON_PREFIX_REGEX,
+  defaultFontSizeStyle,
+  fontFamilyStyles
+} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -194,11 +200,16 @@ applabCommands.button = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newButton.id = opts.elementId;
   newButton.style.position = 'relative';
-  newButton.style.borderStyle = 'solid';
-  elementLibrary.setAllPropertiesToCurrentTheme(
-    newButton,
-    Applab.activeScreen()
-  );
+  if (experiments.isEnabled('applabThemes')) {
+    newButton.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newButton, Applab.activeScreen());
+  } else {
+    newButton.style.fontSize = defaultFontSizeStyle;
+    newButton.style.fontFamily = fontFamilyStyles[0];
+    newButton.style.color = themeColor.buttonText.classic;
+    newButton.style.backgroundColor = themeColor.buttonBackground.classic;
+    elementUtils.setDefaultBorderStyles(newButton, {forceDefaults: true});
+  }
 
   return Boolean(
     newButton.appendChild(textNode) &&
@@ -901,11 +912,17 @@ applabCommands.textInput = function(opts) {
   newInput.style.position = 'relative';
   newInput.style.height = '30px';
   newInput.style.width = '200px';
-  newInput.style.borderStyle = 'solid';
-  elementLibrary.setAllPropertiesToCurrentTheme(
-    newInput,
-    Applab.activeScreen()
-  );
+  if (experiments.isEnabled('applabThemes')) {
+    newInput.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newInput, Applab.activeScreen());
+  } else {
+    newInput.style.fontSize = defaultFontSizeStyle;
+    newInput.style.fontFamily = fontFamilyStyles[0];
+    elementUtils.setDefaultBorderStyles(newInput, {
+      forceDefaults: true,
+      textInput: true
+    });
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
@@ -922,11 +939,15 @@ applabCommands.textLabel = function(opts) {
   var textNode = document.createTextNode(opts.text);
   newLabel.id = opts.elementId;
   newLabel.style.position = 'relative';
-  newLabel.style.borderStyle = 'solid';
-  elementLibrary.setAllPropertiesToCurrentTheme(
-    newLabel,
-    Applab.activeScreen()
-  );
+  if (experiments.isEnabled('applabThemes')) {
+    newLabel.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newLabel, Applab.activeScreen());
+  } else {
+    newLabel.style.fontSize = defaultFontSizeStyle;
+    newLabel.style.fontFamily = fontFamilyStyles[0];
+    newLabel.style.backgroundColor = themeColor.labelBackground.classic;
+    elementUtils.setDefaultBorderStyles(newLabel, {forceDefaults: true});
+  }
   var forElement = document.getElementById(opts.forId);
   if (forElement && Applab.activeScreen().contains(forElement)) {
     newLabel.setAttribute('for', opts.forId);
@@ -989,11 +1010,21 @@ applabCommands.dropdown = function(opts) {
   }
   newSelect.id = opts.elementId;
   newSelect.style.position = 'relative';
-  newSelect.style.borderStyle = 'solid';
-  elementLibrary.setAllPropertiesToCurrentTheme(
-    newSelect,
-    Applab.activeScreen()
-  );
+  if (experiments.isEnabled('applabThemes')) {
+    newSelect.style.borderStyle = 'solid';
+    elementLibrary.applyCurrentTheme(newSelect, Applab.activeScreen());
+  } else {
+    newSelect.style.fontSize = defaultFontSizeStyle;
+    newSelect.style.fontFamily = fontFamilyStyles[0];
+    newSelect.style.color = themeColor.dropdownText.classic;
+    elementLibrary.typeSpecificPropertyChange(
+      newSelect,
+      'textColor',
+      newSelect.style.color
+    );
+    newSelect.style.backgroundColor = themeColor.dropdownBackground.classic;
+    elementUtils.setDefaultBorderStyles(newSelect, {forceDefaults: true});
+  }
 
   return Boolean(Applab.activeScreen().appendChild(newSelect));
 };
