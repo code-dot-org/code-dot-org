@@ -336,8 +336,8 @@ module Pd
     # model returns true for use_names_for_question_ids?, then the answers have
     # keys as question names rather than question ID integers where possible.
     # @param source_answers [Hash] The submitted answers with keys as ID integers.
-    # @param questions [Hash] The questions for this survey.
-    def process_answers_from_submission(source_answers, questions)
+    # @param questions [Hash] (optional) The questions for this survey.
+    def process_answers_from_submission(source_answers, questions = nil)
       dest_answers = {}
 
       source_answers.each do |key, value|
