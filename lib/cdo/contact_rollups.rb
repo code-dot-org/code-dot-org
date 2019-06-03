@@ -1017,6 +1017,7 @@ class ContactRollups
           skip_final_snapshot: true,
         }
       )
+      # Wait 20 minutes.  As of mid-2019, it takes about 10 minutes to delete a clone of the production cluster.
       wait_until_db_cluster_deleted(DATABASE_CLUSTER_CLONE_ID, 10, 60)
     rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
       log("Cluster #{DATABASE_CLUSTER_CLONE_ID} does not exist from previous execution of Contact Rollups. #{error.message}.  No need to delete it.")
@@ -1065,14 +1066,25 @@ class ContactRollups
   def self.wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
     rds_client = Aws::RDS::Client.new
     attempts = 0
-    while attempts <= max_attempts
-      # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
-      rds_client.describe_db_clusters({db_cluster_identifier: db_cluster_id})
+    cluster_state = nil
+    while attempts <= max_attempts && cluster_state != 'deleted'
+      begin
+        # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
+        cluster_state = rds_client.
+          describe_db_clusters({db_cluster_identifier: db_cluster_id}).
+          cluster_response.
+          db_clusters.
+          first.
+          status
+      rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+        cluster_state = 'deleted'
+        log("Database Cluster #{db_cluster_id} has been deleted. #{error.message}")
+      end
       attempts += 1
       sleep delay
     end
-    raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.")
-  rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
-    log("Database Cluster #{db_cluster_id} has been deleted. #{error.message}")
+    raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
+      " #{DATABASE_CLUSTER_CLONE_ID} deletion to complete.  Current cluster status - #{cluster_state}"
+    )
   end
 end
