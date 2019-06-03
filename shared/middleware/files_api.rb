@@ -224,10 +224,12 @@ class FilesApi < Sinatra::Base
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
-
+    # abuse_threshold here should match ABUSE_THRESHOLD in project.js to keep
+    # our abuse score threshold consistent for projects and their assets.
+    abuse_threshold = 15
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if abuse_score >= abuse_threshold && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
