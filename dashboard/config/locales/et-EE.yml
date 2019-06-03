@@ -71,7 +71,6 @@ et:
   of: kohta
   more: NÄITA ROHKEM
   less: NÄITA VÄHEM
-  beta: beeta
   try_hoc: 'Proovi Koodi Tundi, kliki siia >> '
   try_k8intro: Proovige meie K-8 Sissejuhatus arvutiteadusesse kursust (15-25 tundi)
   k8intro: K-8 Sissejuhatus Arvutiteadusesse kursusele (15-25 tundi)
@@ -788,18 +787,8 @@ et:
     create: Loo projekt
     create_a_project: 'Uue projekti loomine:'
     new: Loo uus
-    rename: Nimeta ümber
-    save: Salvesta
-    import: Impordi
-    share_link_import_bad_link_header: Jagamise linki ei tuvastatud
-    share_link_import_bad_link_body: 'Me ei saanud importida jagamise linki. Veenduge,
-      et kasutate Minecrafti linki: Agent puzzle ja et olete kopeerinud terve lingi.'
-    share_link_import_error_header: Midagi läks valesti.
-    share_link_import_error_body: Ilmnes probleem lingi importimisel. Palun proovige
-      uuesti.
     exit: Tagasi kursuse juurde
     project_gallery: Projektid
-    share: Jaga
     share_title: Jaga oma projekti
     share_copy_link: 'Kopeeri link:'
     share_embed_description: Kleepi vistustatud kood HTML leheküljele, et oma projekti
@@ -817,8 +806,6 @@ et:
     saved: Salvestatud
     not_saved: Ei ole salvestatud
     view_all: Vaata minu projekte
-    remix: Remix
-    click_to_remix: Vajuta "Remix" et liigendada oma versioon!
     edit_project: Muuda projekti
     abuse:
       tos: Selle projekti kohta on teada antud, et see rikub code.org <a href='http://code.org/tos'>

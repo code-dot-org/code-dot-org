@@ -80,7 +80,6 @@ is:
   of: af
   more: MEIRA
   less: MINNA
-  beta: beta
   try_hoc: 'Prófaðu Klukkustund kóðunar, smelltu hér >> '
   try_k8intro: Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)
   k8intro: Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)
@@ -1070,21 +1069,10 @@ is:
     create: Stofna verkefni
     create_a_project: 'Byrja með nýtt verkefni:'
     new: Stofna nýtt
-    rename: Endurnefna
-    save: Vista
-    import: Flytja inn
-    share_link_import_bad_link_header: Óþekktur tengill fyrir deilingu
-    share_link_import_bad_link_body: 'Við gátum ekki flutt inn þennan tengil til að
-      deila. Gættu þess að þú sért að nota tengil úr Minecraft: Umba þraut og að þú
-      hafir afritað allan tengilinn.'
-    share_link_import_error_header: Eitthvað fór úrskeiðis.
-    share_link_import_error_body: Það kom upp vandamál við að flytja inn þennan tengil
-      fyrir deilingu. Reyndu aftur.
     exit: Til baka í námskeið
     project_gallery: Verkefni
     publish: Birta
     unpublish: Taka úr birtingu
-    share: Deila leik
     share_title: Deila verkefninu
     share_copy_link: 'Afrita tengilinn:'
     share_embed_description: Þú getur límt innfellingarkóðann í HTML síðu til að sýna
@@ -1108,8 +1096,6 @@ is:
     saved: Vistað
     not_saved: Ekki vistað
     view_all: Sýna verkefnin mín
-    remix: Endurblanda
-    click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
     edit_project: Breyta verkefni
     sharing_disabled: Því miður er ekki mögulegt að deila þessu verkefni. Ef þetta
       er þitt verkefni eða nemanda þíns, vinsamlegast <a href='https://studio.code.org/users/sign_in'>skráðu

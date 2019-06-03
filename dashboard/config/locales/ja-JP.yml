@@ -69,7 +69,6 @@ ja:
   of: の
   more: くわしく
   less: かくす
-  beta: ベータ版
   try_hoc: ここをクリックしてHour of Codeを試す >>
   try_k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
   k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
@@ -850,18 +849,10 @@ ja:
     create: プロジェクトを作る
     create_a_project: 新しいプロジェクトを作る
     new: 新しく作る
-    rename: 名前をかえる
-    save: 保存
-    import: インポート
-    share_link_import_bad_link_header: 共有リンクが認識されません
-    share_link_import_bad_link_body: '共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。'
-    share_link_import_error_header: 問題が発生しました。
-    share_link_import_error_body: 共有リンクのインポート時に問題が発生しました。もう一度やり直してください。
     exit: コースに戻る
     project_gallery: プロジェクト
     publish: みんなに見せる
     unpublish: 見られなくする
-    share: シェアする
     share_title: プロジェクトを共有
     share_copy_link: 'リンクをコピー:'
     share_embed_description: Web ページにプロジェクトを表示するため、HTML ページに埋め込みコードを貼り付けることができます。
@@ -879,8 +870,6 @@ ja:
     saved: 保存されました
     not_saved: 保存されていません
     view_all: マイプロジェクトを見る
-    remix: リミックス
-    click_to_remix: '"Remix" をクリックしてあなただけのバージョンを作成しましょう'
     edit_project: プロジェクトを編集します
     abuse:
       tos: このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。

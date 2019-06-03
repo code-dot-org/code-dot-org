@@ -80,7 +80,6 @@ ca:
   of: de
   more: MÉS
   less: MENYS
-  beta: beta
   try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
   try_k8intro: O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25
     hores)
@@ -673,11 +672,8 @@ ca:
     create: Crear un projecte
     create_a_project: 'Crear un nou projecte:'
     new: Crea nou
-    rename: Canviar el nom
-    save: Desa
     exit: Tornar al curs
     project_gallery: Projectes
-    share: Comparteix
     share_title: Compartir el teu projecte
     share_copy_link: 'Copia l''enllaç:'
     name: Nom
@@ -690,8 +686,6 @@ ca:
     saved: Desat
     not_saved: No desat
     view_all: Mostra els meus projectes
-    remix: Remescla
-    click_to_remix: Feu clic a "Remix" per iniciar la teva pròpia versió!
     edit_project: Edita el projecte
     abuse:
       go_to_code_studio: Anar al Code Studio
