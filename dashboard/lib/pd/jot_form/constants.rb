@@ -10,6 +10,7 @@ module Pd
         TYPE_CHECKBOX = 'checkbox'.freeze,
         TYPE_SCALE = 'scale'.freeze,
         TYPE_MATRIX = 'matrix'.freeze,
+        TYPE_DATETIME = 'datetime'.freeze,
       ].freeze
 
       IGNORED_QUESTION_TYPES = [
@@ -19,7 +20,7 @@ module Pd
         TYPE_TEXT = 'text'.freeze,
         TYPE_PAGEBREAK = 'pagebreak'.freeze,
         TYPE_HEAD = 'head'.freeze,
-        TYPE_WIDGET = 'widget'.freeze
+        TYPE_WIDGET = 'widget'.freeze,
       ].freeze
 
       ANSWER_TYPES = [
@@ -37,6 +38,7 @@ module Pd
         TYPE_TEXTBOX => ANSWER_TEXT,
         TYPE_TEXTAREA => ANSWER_TEXT,
         TYPE_NUMBER => ANSWER_TEXT,
+        TYPE_DATETIME => ANSWER_TEXT,
         TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
         TYPE_RADIO => ANSWER_SINGLE_SELECT,
         TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
@@ -47,7 +49,7 @@ module Pd
       SURVEY_REPORT_TYPES = [
         TYPE_SCALE,
         TYPE_TEXTAREA,
-        TYPE_MATRIX
+        TYPE_MATRIX,
       ]
     end
   end
