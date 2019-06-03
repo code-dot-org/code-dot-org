@@ -378,6 +378,7 @@ Applab.init = function(config) {
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
   config.getLibrary = getLibrary;
+  config.codeContainsError = codeContainsError;
 
   config.runButtonClickWrapper = runButtonClickWrapper;
 
@@ -521,6 +522,7 @@ Applab.init = function(config) {
   config.afterClearPuzzle = function() {
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
+    getStore().dispatch(setApplabLibraries(config.level.startLibraries));
     Applab.storage.populateTable(level.dataTables, true, () => {}, outputError); // overwrite = true
     Applab.storage.populateKeyValue(
       level.dataProperties,
@@ -681,10 +683,11 @@ Applab.init = function(config) {
 
   var librariesExist = level.libraries && level.libraries.length > 0;
 
-  // Temporarily, always use the levelbuilder-created libraries if they
-  // exist. Once 'Start Over' is implemented for libraries, allow
-  // student-created libraries. (Add check for !librariesExist)
-  if (level.startLibraries && level.startLibraries.length > 0) {
+  if (
+    !librariesExist &&
+    level.startLibraries &&
+    level.startLibraries.length > 0
+  ) {
     level.libraries = level.startLibraries;
     librariesExist = true;
   }
@@ -697,6 +700,9 @@ Applab.init = function(config) {
   }
 
   if (experiments.isEnabled('student-libraries') && librariesExist) {
+    level.libraries.forEach(library => {
+      config.dropletConfig.additionalPredefValues.push(library.name);
+    });
     let importedConfigs = level.libraries
       .map(library => library.dropletConfig)
       .reduce((a, b) => a.concat(b));
@@ -1133,6 +1139,17 @@ function getLibrary() {
   var temporaryInterpreter = new JSInterpreter({studioApp: studioApp()});
   temporaryInterpreter.parse({code: studioApp().getCode()});
   return temporaryInterpreter.getFunctionsAndParams(studioApp().getCode());
+}
+
+/**
+ * Returns true if a lint error (red gutter warning) exists in the code
+ */
+function codeContainsError() {
+  var errors = annotationList.getJSLintAnnotations().filter(annotation => {
+    return annotation.type === 'error';
+  });
+
+  return errors.length > 0;
 }
 
 /**

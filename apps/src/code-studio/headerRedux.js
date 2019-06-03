@@ -30,14 +30,16 @@ const initialState = {
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
   getLevelBuilderChanges: undefined,
-  projectName: ''
+  projectName: '',
+  includeExportInProjectHeader: false
 };
 
 export default (state = initialState, action) => {
   if (action.type === SHOW_PROJECT_HEADER) {
     return {
       ...state,
-      currentHeader: possibleHeaders.project
+      currentHeader: possibleHeaders.project,
+      includeExportInProjectHeader: action.showExport
     };
   } else if (action.type === SHOW_MINIMAL_PROJECT_HEADER) {
     return {
@@ -47,7 +49,8 @@ export default (state = initialState, action) => {
   } else if (action.type === SHOW_PROJECT_BACKED_HEADER) {
     return {
       ...state,
-      currentHeader: possibleHeaders.projectBacked
+      currentHeader: possibleHeaders.projectBacked,
+      includeExportInProjectHeader: action.showExport
     };
   } else if (
     action.type === ENABLE_LEVEL_BUILDER_SAVE_BUTTON &&
@@ -92,16 +95,18 @@ export default (state = initialState, action) => {
   return state;
 };
 
-export const showProjectHeader = () => ({
-  type: SHOW_PROJECT_HEADER
+export const showProjectHeader = showExport => ({
+  type: SHOW_PROJECT_HEADER,
+  showExport
 });
 
 export const showMinimalProjectHeader = () => ({
   type: SHOW_MINIMAL_PROJECT_HEADER
 });
 
-export const showProjectBackedHeader = () => ({
-  type: SHOW_PROJECT_BACKED_HEADER
+export const showProjectBackedHeader = showExport => ({
+  type: SHOW_PROJECT_BACKED_HEADER,
+  showExport
 });
 
 export const showLevelBuilderSaveButton = getChanges => ({
