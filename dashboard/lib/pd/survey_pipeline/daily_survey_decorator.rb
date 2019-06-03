@@ -9,8 +9,7 @@ module Pd::SurveyPipeline
     #
     # TODO:
     # - Create a form table to look up form name.
-    # - Remove logger
-    def self.decorate(summary_data:, parsed_data:, logger: nil)
+    def self.decorate(summary_data:, parsed_data:)
       return unless summary_data && parsed_data
 
       result = {
@@ -35,8 +34,6 @@ module Pd::SurveyPipeline
         end
       end
 
-      logger&.debug "DECO: result[:questions] = #{result[:questions]}"
-
       # Populate results for result[:this_workshop]
       summary_data.each do |summary|
         # Process only summarization for specific workshops and forms
@@ -53,9 +50,6 @@ module Pd::SurveyPipeline
 
         result[:this_workshop][form_name][:general][summary[:name]] = summary[:reducer_result]
       end
-
-      logger&.debug "DECO: result[:course_name] = #{result[:course_name]}"
-      logger&.debug "DECO: result[:this_workshop] = #{result[:this_workshop]}"
 
       result
     end

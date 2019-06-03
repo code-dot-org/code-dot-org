@@ -2,6 +2,9 @@
   %script{src: minifiable_asset_path('js/levelbuilder_applab.js')}
 
 .field
+  = f.label :start_libraries,'Applab Start Library'
+  = f.text_area :start_libraries, value: @level.start_libraries ? JSON.pretty_generate(@level.start_libraries) : ''
+.field
   = f.label :slider_speed, 'Slider speed'
   %p Number from 0.0 to 1.0 for how fast Applab runs by default while in the IDE. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
