@@ -29,9 +29,12 @@ level 'U7 Libraries Investigate Painting', progression: 'Code Investigation'
 level 'U7 Libraries List Math Library', progression: 'Code Investigation'
 level 'U7 Libraries Investigate Pig Latin', progression: 'Code Investigation'
 
-stage 'Libraries Mini PT', flex_category: 'csp_project'
-level 'U7 Mini Create PT sample app', progression: 'Project Sample'
-level 'CSP Pilot U7 Mini PT Project 2', progression: 'Mini PT'
+stage 'Libraries Project', flex_category: 'csp_libraries'
+level 'U7 Libraries Explanation', progression: 'Video: Libraries'
+level 'CSP Pilot U7 Libraries Make Pt 1', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 2', progression: 'One Function Library'
+level 'CSP Pilot U7 Libraries Make Pt 3', progression: 'Libraries Playground'
+level 'CSP Pilot U7 Libraries Make Pt 4', progression: 'Libraries Playground'
 
 stage 'Student Survey (Libraries)', lockable: true
 level 'Student Late Spring Pilot Survey Libraries', progression: 'Student Survey (Libraries)', assessment: true

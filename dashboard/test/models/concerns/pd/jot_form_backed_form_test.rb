@@ -368,7 +368,7 @@ module Pd
           mock_questions.expects(:update!).with(last_submission_id: submission_id)
           mock do |mock_submission|
             expects(:[]).with(:submission_id).returns(submission_id)
-            DummyForm.expects(:process_submission).with(mock_submission).returns(true)
+            DummyForm.expects(:process_submission).with(mock_submission, nil).returns(true)
           end
         end
         mock do |_mock_translation|
@@ -399,10 +399,10 @@ module Pd
           expects(:[]).with(:submission_id).returns(submission_id)
 
           if error.present?
-            DummyForm.expects(:process_submission).with(mock_submission).raises(error)
+            DummyForm.expects(:process_submission).with(mock_submission, nil).raises(error)
           else
             # process_submission returns nil for skipped submissions
-            DummyForm.expects(:process_submission).with(mock_submission).returns(imported ? true : nil)
+            DummyForm.expects(:process_submission).with(mock_submission, nil).returns(imported ? true : nil)
           end
         end
       end
@@ -450,7 +450,7 @@ module Pd
         submission_id = get_submission_id
         mock do |mock_submission|
           expects(:[]).with(:submission_id).returns(submission_id)
-          DummyForm.expects(:process_submission).with(mock_submission).raises("Process error #{i}")
+          DummyForm.expects(:process_submission).with(mock_submission, nil).raises("Process error #{i}")
         end
       end
 

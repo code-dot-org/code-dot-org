@@ -63,15 +63,15 @@ class CoursesControllerTest < ActionController::TestCase
   # This test ensures that hard-coded logic is not removed without being replaced
   # by the appropriate db-driven redirection logic.
   test "show: redirect to latest stable version in course family" do
-    create :course, name: 'csp-2017', family_name: 'csp', version_year: '2017'
     create :course, name: 'csp-2018', family_name: 'csp', version_year: '2018'
+    create :course, name: 'csp-2019', family_name: 'csp', version_year: '2019'
     get :show, params: {course_name: 'csp'}
-    assert_redirected_to '/courses/csp-2018'
+    assert_redirected_to '/courses/csp-2019'
 
-    create :course, name: 'csd-2017', family_name: 'csd', version_year: '2017'
     create :course, name: 'csd-2018', family_name: 'csd', version_year: '2018'
+    create :course, name: 'csd-2019', family_name: 'csd', version_year: '2019'
     get :show, params: {course_name: 'csd'}
-    assert_redirected_to '/courses/csd-2018'
+    assert_redirected_to '/courses/csd-2019'
   end
 
   test "show: redirect to latest stable version in course family for logged out user" do
