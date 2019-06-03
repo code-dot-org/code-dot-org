@@ -11,7 +11,7 @@ module Pd
         TextQuestion,
         SelectQuestion,
         ScaleQuestion,
-        MatrixQuestion
+        MatrixQuestion,
       ].freeze
 
       # @param [Integer] form_id
@@ -163,15 +163,20 @@ module Pd
       end
 
       # Strip leading and trailing whitespace from each answer.
-      # For each hash, remove "\\" pairs as well, which are appearing in strings
-      # such as "I\\'m a teacher."
+      # For each datetime hash, turn it into a "mm/dd/yyyy" string.
+      # For each non-datetime hash, also remove "\\" pairs from each string as
+      # well, which are appearing in strings such as "I\\'m a teacher."
       def strip_answer(answer)
         if answer.is_a? String
           answer.strip
         elsif answer.is_a? Array
           answer.map(&:strip)
         elsif answer.is_a? Hash
-          answer.transform_values {|value| value.strip.delete("\\")}
+          if ["month", "day", "year"].all? {|k| answer.key?(k)}
+            answer = answer.values_at("month", "day", "year").join("/")
+          else
+            answer.transform_values {|value| value.strip.delete("\\")}
+          end
         end
       end
     end
