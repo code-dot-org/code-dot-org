@@ -14,7 +14,7 @@ import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
 import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
-import themeColor from '../themeColor';
+import color from '../../util/color';
 import elementLibrary from './library';
 import experiments from '../../util/experiments';
 
@@ -198,79 +198,48 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      ...themeColor.textAreaBackground
+      default: color.applab_default_text_input_background_color,
+      classic: color.white,
+      orange: color.applab_orange_text_background_color,
+      citrus: color.applab_citrus_text_input_background_color
     },
     borderRadius: {
       default: 2,
+      classic: 0,
       orange: 2,
-      citrus: 4,
-      ketchupAndMustard: 5,
-      lemonade: 6,
-      forest: 8,
-      watermelon: 20,
-      area51: 20,
-      polar: 8,
-      glowInTheDark: 0,
-      bubblegum: 8,
-      millennial: 8,
-      robot: 0,
-      classic: 0
+      citrus: 4
     },
     borderWidth: {
       default: 1,
+      classic: 1,
       orange: 0,
-      citrus: 0,
-      ketchupAndMustard: 2,
-      lemonade: 0,
-      forest: 0,
-      watermelon: 0,
-      area51: 0,
-      polar: 2,
-      glowInTheDark: 0,
-      bubblegum: 0,
-      millennial: 0,
-      robot: 1,
-      classic: 1
+      citrus: 0
     },
     borderColor: {
       type: 'color',
-      ...themeColor.textAreaBorder
+      default: color.applab_default_text_area_border_color,
+      classic: color.text_input_default_border_color,
+      orange: color.applab_orange_text_input_border_color,
+      citrus: color.applab_citrus_text_input_border_color
     },
     textColor: {
       type: 'color',
-      ...themeColor.textArea
+      default: color.applab_default_text_color,
+      classic: color.black,
+      orange: color.applab_orange_text_color,
+      citrus: color.applab_citrus_text_color
     },
     fontFamily: {
       default: 'Arial',
+      classic: 'Arial',
       orange: 'Arial',
-      citrus: 'Palatino',
-      ketchupAndMustard: 'Tahoma',
-      lemonade: 'Arial',
-      forest: 'Arial',
-      watermelon: 'Georgia',
-      area51: 'Trebuchet',
-      polar: 'Arial',
-      glowInTheDark: 'Tahoma',
-      bubblegum: 'Trebuchet',
-      millennial: 'Arial',
-      robot: 'Tahoma',
-      classic: 'Arial'
+      citrus: 'Palatino'
     },
     fontSize: {
       default: 15,
+      classic: 14,
       orange: 15,
-      citrus: 15,
-      ketchupAndMustard: 15,
-      lemonade: 15,
-      forest: 15,
-      watermelon: 15,
-      area51: 15,
-      polar: 15,
-      glowInTheDark: 15,
-      bubblegum: 15,
-      millennial: 15,
-      robot: 15,
-      classic: 14
+      citrus: 15
     }
   },
 
@@ -285,8 +254,8 @@ export default {
     } else {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textArea.classic;
-      element.style.backgroundColor = themeColor.textAreaBackground.classic;
+      element.style.color = '#000000';
+      element.style.backgroundColor = '#ffffff';
       elementUtils.setDefaultBorderStyles(element, {
         forceDefaults: true,
         textInput: true

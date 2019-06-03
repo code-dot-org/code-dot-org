@@ -11,7 +11,7 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
-import themeColor from '../themeColor';
+import color from '../../util/color';
 import {
   ICON_PREFIX_REGEX,
   defaultFontSizeStyle,
@@ -209,79 +209,48 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      ...themeColor.buttonBackground
+      default: color.applab_default_button_background_color,
+      classic: color.applab_button_teal,
+      orange: color.applab_orange_button_background_color,
+      citrus: color.applab_citrus_button_background_color
     },
     borderRadius: {
       default: 4,
+      classic: 0,
       orange: 0,
-      citrus: 2,
-      ketchupAndMustard: 5,
-      lemonade: 6,
-      forest: 6,
-      watermelon: 10,
-      area51: 10,
-      polar: 100,
-      glowInTheDark: 10,
-      bubblegum: 100,
-      millennial: 100,
-      robot: 0,
-      classic: 0
+      citrus: 2
     },
     borderWidth: {
       default: 1,
+      classic: 0,
       orange: 2,
-      citrus: 2,
-      ketchupAndMustard: 0,
-      lemonade: 0,
-      forest: 2,
-      watermelon: 4,
-      area51: 2,
-      polar: 2,
-      glowInTheDark: 2,
-      bubblegum: 2,
-      millennial: 0,
-      robot: 2,
-      classic: 0
+      citrus: 2
     },
     borderColor: {
       type: 'color',
-      ...themeColor.buttonBorder
+      default: color.applab_default_button_border_color,
+      classic: color.black,
+      orange: color.applab_orange_button_border_color,
+      citrus: color.applab_citrus_button_border_color
     },
     textColor: {
       type: 'color',
-      ...themeColor.buttonText
+      default: color.applab_default_button_text_color,
+      classic: color.white,
+      orange: color.applab_orange_text_color,
+      citrus: color.applab_citrus_text_color
     },
     fontFamily: {
       default: 'Arial Black',
+      classic: 'Arial',
       orange: 'Verdana',
-      citrus: 'Georgia',
-      ketchupAndMustard: 'Georgia',
-      lemonade: 'Arial',
-      forest: 'Verdana',
-      watermelon: 'Georgia',
-      area51: 'Arial Black',
-      polar: 'Verdana',
-      glowInTheDark: 'Tahoma',
-      bubblegum: 'Georgia',
-      millennial: 'Verdana',
-      robot: 'Arial Black',
-      classic: 'Arial'
+      citrus: 'Georgia'
     },
     fontSize: {
       default: 18,
+      classic: 14,
       orange: 18,
-      citrus: 18,
-      ketchupAndMustard: 18,
-      lemonade: 18,
-      forest: 18,
-      watermelon: 18,
-      area51: 18,
-      polar: 18,
-      glowInTheDark: 18,
-      bubblegum: 18,
-      millennial: 18,
-      robot: 18,
-      classic: 14
+      citrus: 18
     }
   },
   create: function() {
@@ -305,8 +274,8 @@ export default {
       element.style.fontFamily = fontFamilyStyles[0];
       element.style.fontSize = defaultFontSizeStyle;
       elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-      element.style.color = themeColor.buttonText.classic;
-      element.style.backgroundColor = themeColor.buttonBackground.classic;
+      element.style.color = color.white;
+      element.style.backgroundColor = color.applab_button_teal;
     }
 
     return element;

@@ -11,7 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import themeColor from '../themeColor';
+import color from '../../util/color';
 import experiments from '../../util/experiments';
 
 class ScreenProperties extends React.Component {
@@ -156,7 +156,10 @@ export default {
   themeValues: {
     backgroundColor: {
       type: 'color',
-      ...themeColor.background
+      default: color.white,
+      classic: color.white,
+      orange: color.applab_orange_background_color,
+      citrus: color.applab_citrus_background_color
     }
   },
 
