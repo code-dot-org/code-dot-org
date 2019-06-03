@@ -10,11 +10,11 @@ module Pd
     end
 
     # General misc survey.
-    # GET '/pd/misc/:form_id'
+    # GET '/pd/misc_survey/:form_tag'
     #
     # The JotForm survey will redirect to thanks.
     def new
-      form_data = Pd::MiscSurvey.find_form_data(params[:form_id])
+      form_data = Pd::MiscSurvey.find_form_data(params[:form_tag])
       return render_404 unless form_data && form_data[:allow_embed]
 
       @form_id = form_data[:form_id]

@@ -173,7 +173,7 @@ module Pd
           answer.map(&:strip)
         elsif answer.is_a? Hash
           if ["month", "day", "year"].all? {|k| answer.key?(k)}
-            answer = ["month", "day", "year"].map {|field| answer[field]}.join("/")
+            answer = answer.values_at("month", "day", "year").join("/")
           else
             answer.transform_values {|value| value.strip.delete("\\")}
           end
