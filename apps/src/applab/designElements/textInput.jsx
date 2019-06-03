@@ -206,9 +206,6 @@ class TextInputEvents extends React.Component {
   }
 }
 
-const CLASSIC_TEXT_INPUT_PADDING = '5px';
-const NEW_THEME_TEXT_INPUT_PADDING = '5px 15px';
-
 export default {
   PropertyTab: TextInputProperties,
   EventTab: TextInputEvents,
@@ -288,22 +285,6 @@ export default {
       millennial: 13,
       robot: 13,
       classic: 14
-    },
-    padding: {
-      default: NEW_THEME_TEXT_INPUT_PADDING,
-      orange: NEW_THEME_TEXT_INPUT_PADDING,
-      citrus: NEW_THEME_TEXT_INPUT_PADDING,
-      ketchupAndMustard: NEW_THEME_TEXT_INPUT_PADDING,
-      lemonade: NEW_THEME_TEXT_INPUT_PADDING,
-      forest: NEW_THEME_TEXT_INPUT_PADDING,
-      watermelon: NEW_THEME_TEXT_INPUT_PADDING,
-      area51: NEW_THEME_TEXT_INPUT_PADDING,
-      polar: NEW_THEME_TEXT_INPUT_PADDING,
-      glowInTheDark: NEW_THEME_TEXT_INPUT_PADDING,
-      bubblegum: NEW_THEME_TEXT_INPUT_PADDING,
-      millennial: NEW_THEME_TEXT_INPUT_PADDING,
-      robot: NEW_THEME_TEXT_INPUT_PADDING,
-      classic: CLASSIC_TEXT_INPUT_PADDING
     }
   },
 
@@ -335,10 +316,6 @@ export default {
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
     if (experiments.isEnabled('applabThemes')) {
-      // Set the padding for older projects that didn't set it on create:
-      if (element.style.padding === '') {
-        element.style.padding = CLASSIC_TEXT_INPUT_PADDING;
-      }
       // Set the background color for older projects that didn't set it on create:
       if (element.style.backgroundColor === '') {
         element.style.backgroundColor = this.themeValues.backgroundColor[

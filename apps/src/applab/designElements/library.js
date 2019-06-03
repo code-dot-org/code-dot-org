@@ -200,14 +200,10 @@ export default {
    * Gets data from an element before it is changed, should it be necessary to do so. This data will be passed to the
    * typeSpecificPropertyChange method below.
    */
-  getPreChangeData: function(element, name, batchChangeId) {
+  getPreChangeData: function(element, name) {
     var elementType = this.getElementType(element);
     if (elements[elementType].beforePropertyChange) {
-      return elements[elementType].beforePropertyChange(
-        element,
-        name,
-        batchChangeId
-      );
+      return elements[elementType].beforePropertyChange(element, name);
     }
     return null;
   },
