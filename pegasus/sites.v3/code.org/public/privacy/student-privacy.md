@@ -2,6 +2,7 @@
 title: Student Privacy policy
 layout: page_print
 ---
+<%=view :share_privacy %>
 
 # Code Studio courses in Computer Science
 
