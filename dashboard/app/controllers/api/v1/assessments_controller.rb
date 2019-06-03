@@ -118,7 +118,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           if level.is_a? Multi
             multi_count += 1
           elsif level.is_a? Match
-            match_count += level.questions.length
+            match_count += 1
           end
 
           level_response = response_parsed[level.id.to_s]
@@ -163,15 +163,19 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               end
               level_result[:student_result] = student_result
               option_status = []
+              number_correct = 0
               student_result.each_with_index do |answer, index|
                 if answer.nil?
                   option_status[index] = "unsubmitted"
                 else
                   option_status[index] = "submitted"
                   if answer == index
-                    match_count_correct += 1
+                    number_correct += 1
                   end
                 end
+              end
+              if number_correct == student_result.length
+                match_count_correct += 1
               end
               level_result[:status] = option_status
             end
