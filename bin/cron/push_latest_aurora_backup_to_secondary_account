@@ -5,86 +5,6 @@ require_relative '../../dashboard/config/environment'
 require 'aws-sdk-rds'
 require 'cdo/chat_client'
 
-# Wait for an RDS snapshot to be in the 'available' state
-# @param snapshot [DBSnapshot] the snapshot to wait for
-def wait_for_snapshot_copy(snapshot)
-  # Wait up to 300 * 60 seconds = 300 minutes for snapshot to become available.
-  snapshot.wait_until(max_attempts: 300, delay: 60) do |snap|
-    snap.status == 'available'
-  end
-rescue Aws::Waiters::Errors::WaiterFailed
-  ChatClient.message(
-    'server operations',
-    "Timed out waiting for RDS snapshot #{snapshot.snapshot_id} to be "\
-      "available, aborting snapshot backup"
-  )
-  exit(1)
-end
-
-# Raised when a snapshot that we expected to show up in the backup account
-# is not found within the timeout period (60 seconds)
-class SnapshotNotSharedError < StandardError
-end
-
-# Find a shared snapshot by name
-# @param rds_backup [Aws::RDS::Resource] the RDS resource
-# @param temp_snapshot_name [String] The name of the snapshot to look for. Note that
-# this is a suffix lookup, and assumes that the prefix will be 'arn:aws:rds:' for a
-# shared snapshot
-def find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
-  shared_snapshots = []
-  attempts = 0
-  max_attempts = 60
-  until shared_snapshots.count > 0
-    sleep(1)
-    attempts += 1
-    if attempts > max_attempts
-      raise SnapshotNotSharedError, 'Could not find shared snapshot after 60 seconds'
-    end
-
-    # Aws::RDS::Resource does not support listing cluster snapshots, so we must use Aws::RDS::Client API calls
-    resp = rds_client_backup.describe_db_cluster_snapshots(max_records: 100, include_shared: true)
-    shared_snapshots = resp.db_cluster_snapshots.select do |snap|
-      snap.db_cluster_snapshot_identifier == temp_snapshot_name
-    end
-  end
-
-  # Convert from data structure returned by Client API into Resource-style object
-  Aws::RDS::DBClusterSnapshot.new(cluster_id: shared_snapshots.first.db_cluster_identifier,
-                                  snapshot_id: shared_snapshots.first.db_cluster_snapshot_identifier,
-                                  options: {client: rds_client_backup})
-end
-
-# Share an automated RDS snapshot with the account specified by the passed credentials.
-# This method will copy the automate snapshot to a manual one, and it should be deleted
-# later, outside this method.
-# @param backup_account_id [String] backup account ID
-# @param latest_snapshot [DBSnapshot] snapshot to copy and share
-# @param key_id [String] KMS Key ID to use for encrypting the snapshot copy
-# @return Array(DBSnapshot, String) the temporary copied snapshot, and the name of the
-# temporary snapshot
-def share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, key_id)
-  # Copy the automated backup into a shareable manual one
-  temp_snapshot_name = "temp-snapshot-#{Time.now.to_i}"
-  copied_snapshot = latest_snapshot.copy(
-      target_db_cluster_snapshot_identifier: temp_snapshot_name,
-      kms_key_id: key_id
-  )
-
-  wait_for_snapshot_copy(copied_snapshot)
-
-  rds_client.modify_db_cluster_snapshot_attribute(
-      attribute_name: 'restore',
-      db_cluster_snapshot_identifier: copied_snapshot.db_cluster_snapshot_identifier,
-      values_to_add: [
-          backup_account_id
-      ]
-  )
-
-  # Share the new snapshot with the backup account
-  return copied_snapshot, temp_snapshot_name
-end
-
 # This script pushes backup snapshots of our production database into a
 # write-only backup account, with the following steps:
 #
@@ -96,55 +16,19 @@ end
 # Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
 # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
-  ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
-  rds_client = Aws::RDS::Client.new
-  rds_resource = Aws::RDS::Resource.new(client: rds_client)
-
-  credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
-  rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
-  backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
-
-  production_cluster = rds_resource.db_clusters.find {|i| i.id == 'production-aurora-cluster'}
-  key_id = 'alias/snapshot-DATA-production'
-
-  # Find the latest automated backup
-  sorted_snapshots = production_cluster.snapshots.
-      select {|snap| snap.status == 'available' && !snap.db_cluster_snapshot_identifier.start_with?('temp-snapshot-')}.
-      sort_by(&:snapshot_create_time)
-  latest_snapshot = sorted_snapshots.last
-
   begin
-    copied_snapshot, temp_snapshot_name = share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, key_id)
-    shared_snapshot = find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
+    ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
+    rds_client = Aws::RDS::Client.new
+    credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
+    rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
+    backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
 
-    # On the backup account, copy the shared snapshot
-    begin
-      backed_up_snapshot = shared_snapshot.copy(
-        {
-          target_db_cluster_snapshot_identifier: latest_snapshot.db_cluster_snapshot_identifier.sub('rds:', ''),
-          kms_key_id: 'alias/aws/rds' # Use default master key
-        }
-      )
-      wait_for_snapshot_copy(backed_up_snapshot)
-      ChatClient.message(
-        'cron-daily',
-        "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
-      )
-    rescue Aws::RDS::Errors::DBClusterSnapshotAlreadyExists
-      ChatClient.message(
-        'server operations',
-        "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
-      )
-    end
+    copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
+
+    ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
   rescue => e
-    ChatClient.message('cron-daily', e.message, color: 'red')
+    ChatClient.message'cron-daily', e.message, color: 'red'
     raise e
-  ensure
-    if copied_snapshot
-      copied_snapshot.delete
-    else
-      ChatClient.message 'cron-daily', 'copied_snapshot was nil'
-    end
   end
 end
 
