@@ -1556,7 +1556,7 @@ en:
       aalab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       aalab_changePropByFlexible:
-        text: change {SPRITE} {PROPERTY} by {VAL}
+        text: aalab change {SPRITE} {PROPERTY} by {VAL}
         options:
           PROPERTY:
             '"scale"': size
