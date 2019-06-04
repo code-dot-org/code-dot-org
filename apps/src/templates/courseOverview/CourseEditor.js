@@ -25,6 +25,8 @@ export default class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string,
     descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
@@ -38,6 +40,8 @@ export default class CourseEditor extends Component {
     const {
       name,
       title,
+      familyName,
+      versionYear,
       descriptionShort,
       descriptionStudent,
       descriptionTeacher,
@@ -54,6 +58,24 @@ export default class CourseEditor extends Component {
             type="text"
             name="title"
             defaultValue={title}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Family Name
+          <input
+            type="text"
+            name="family_name"
+            defaultValue={familyName}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Version Year
+          <input
+            type="text"
+            name="version_year"
+            defaultValue={versionYear}
             style={styles.input}
           />
         </label>
