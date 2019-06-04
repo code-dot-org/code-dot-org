@@ -51,7 +51,11 @@ def restore_redacted_files
       if original_path == 'i18n/locales/original/dashboard/blocks.yml'
         plugin = 'blockfield'
       end
-      restore(original_path, translated_path, translated_path, plugin)
+      if original_path.include? "course_content"
+        restore_course_content(original_path, translated_path, translated_path, plugin)
+      else
+        restore(original_path, translated_path, translated_path, plugin)
+      end
     end
   end
 end
