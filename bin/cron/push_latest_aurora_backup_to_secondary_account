@@ -14,8 +14,8 @@ require 'cron/aurora_backup'
 # 3) On the backup account, copy the shared snapshot to a manual one
 # 4) Wait until ready, and finally go back to the main account and delete the temp snapshot
 #
-# Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
-# which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
+# IAM user credentials for backup account must be present in aws config with profile name 'backup',
+# which requires setting appropriate secrets in our Chef config.
 def main
   begin
     ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
@@ -23,7 +23,6 @@ def main
     credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
     rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
     backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
-
     copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
 
     ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
