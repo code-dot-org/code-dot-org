@@ -1072,7 +1072,6 @@ class ContactRollups
         # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
         cluster_state = rds_client.
           describe_db_clusters({db_cluster_identifier: db_cluster_id}).
-          cluster_response.
           db_clusters.
           first.
           status
