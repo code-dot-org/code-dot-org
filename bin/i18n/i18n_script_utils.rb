@@ -110,7 +110,9 @@ def redact_course_content(source, dest, original, *plugins)
   )
   redacted_data = JSON.parse(stdout)
   KEYS_TO_REDACT.each do |k|
-    source_data[k] = redacted_data[k]
+    if redacted_data[k]
+      source_data[k] = redacted_data[k]
+    end
   end
 
   File.open(dest, "w+") do |file|
@@ -245,7 +247,9 @@ def restore_course_content(source, redacted, dest, *plugins)
   restored_data = {}
   restored_data = JSON.parse(stdout)
   KEYS_TO_REDACT.each do |k|
-    translated_data[k] = restored_data[k]
+    if restored_data[k]
+      translated_data[k] = restored_data[k]
+    end
   end
   File.open(dest, "w+") do |file|
     file.write(JSON.pretty_generate(translated_data))
