@@ -239,6 +239,28 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal "Computer Science Principles ('17-'18)", Course.find_by_name!('csp-2017').summarize[:title]
   end
 
+  test "update: persists changes to course_params" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :course, name: 'csp-2019'
+
+    assert_nil course.version_year
+    assert_nil course.family_name
+    refute course.has_verified_resources
+
+    post :update, params: {
+      course_name: course.name,
+      version_year: '2019',
+      family_name: 'csp',
+      has_verified_resources: 'on'
+    }
+    course.reload
+
+    assert_equal '2019', course.version_year
+    assert_equal 'csp', course.family_name
+    assert course.has_verified_resources
+  end
+
   # tests for edit
 
   test "edit: does not work for plc_course" do
