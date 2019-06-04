@@ -34,9 +34,16 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
-  def test_copy_object_percent
+  def test_copy_object_escaped
     delete_all_manifest_versions
+
+    # %fi cannot be url-decoded, but %fa, %7E and %80 can.
     assert_copy_object('old%file.html', 'new%file.html')
+    assert_copy_object('old%facts.html', 'new%facts.html')
+    assert_copy_object('tilde%7E-filename.html', 'backtick%80-filename.html')
+
+    assert_copy_object('plus+one.html', 'plus+two.html')
+    assert_copy_object('space one.html', 'space two.html')
     delete_all_manifest_versions
   end
 
@@ -49,6 +56,9 @@ class FilesTest < FilesApiTestBase
       new_filename, CGI.escape(new_filename)
     )
     post_file_data @api, old_filename, file_data, 'text/html'
+
+    @api.get_object(CGI.escape(old_filename))
+    assert successful?
 
     @api.copy_object old_filename, new_filename
 
@@ -240,9 +250,9 @@ class FilesTest < FilesApiTestBase
 
   def test_escaping_insensitivity
     filename = @api.randomize_filename('has space.html')
-    escaped_filename = URI.escape(filename)
+    escaped_filename = CGI.escape(filename)
     filename2 = @api.randomize_filename('another has spaces.html')
-    escaped_filename2 = URI.escape(filename2)
+    escaped_filename2 = CGI.escape(filename2)
     delete_all_file_versions(filename, escaped_filename, filename2, escaped_filename2)
     delete_all_manifest_versions
 
@@ -255,7 +265,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename)
     assert successful?
 
-    post_file_data(@api, escaped_filename2, 'stub-contents-2', 'test/html')
+    post_file_data(@api, filename2, 'stub-contents-2', 'test/html')
     assert successful?
 
     @api.get_object(escaped_filename2)
@@ -499,9 +509,9 @@ class FilesTest < FilesApiTestBase
 
   def test_rename_mixed_case
     filename = @api.randomize_filename('Mixed Case With Spaces.html')
-    escaped_filename = URI.escape(filename)
+    escaped_filename = CGI.escape(filename)
     filename2 = @api.randomize_filename('Another Mixed Case Spaces Name.html')
-    escaped_filename2 = URI.escape(filename2)
+    escaped_filename2 = CGI.escape(filename2)
     delete_all_file_versions(filename, filename2)
     delete_all_manifest_versions
 

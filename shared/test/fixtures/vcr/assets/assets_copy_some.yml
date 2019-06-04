@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:15 GMT
+      - Tue, 04 Jun 2019 21:35:30 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -28,9 +28,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2016-06-20T19:29:29.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2016-06-20T19:29:30.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-04T21:35:26.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:14 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:29 GMT
 - request:
     method: post
     uri: https://cdo-v3-assets.s3.amazonaws.com/?delete
@@ -38,9 +38,6 @@ http_interactions:
       encoding: UTF-8
       string: |
         <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-          <Object>
-            <Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key>
-          </Object>
           <Object>
             <Key>assets_test/1/1/çatac0a7f8c2faac49775a6.jpg</Key>
           </Object>
@@ -50,16 +47,84 @@ http_interactions:
       Expect:
       - 100-continue
       Content-Md5:
-      - Z7cxj6CJu0XbBxoa0/Ahgw==
+      - MDSrHuILqULIotSdKpFOwg==
       Content-Length:
-      - '255'
+      - '172'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:16 GMT
+      - Tue, 04 Jun 2019 21:35:31 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 21:35:30 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 21:35:31 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/2</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/2/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-04T21:35:27.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 04 Jun 2019 21:35:30 GMT
+- request:
+    method: post
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?delete
+    body:
+      encoding: UTF-8
+      string: |
+        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+          <Object>
+            <Key>assets_test/1/2/çatac0a7f8c2faac49775a6.jpg</Key>
+          </Object>
+          <Quiet>true</Quiet>
+        </Delete>
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - WW6M3n8/OvW/9MQPJf9m5A==
+      Content-Length:
+      - '172'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jun 2019 21:35:31 GMT
       Connection:
       - close
       Content-Type:
@@ -74,43 +139,12 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:15 GMT
-- request:
-    method: get
-    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/2
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Content-Length:
-      - '0'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 20 Jun 2016 19:54:16 GMT
-      X-Amz-Bucket-Region:
-      - us-east-1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Server:
-      - AmazonS3
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/2</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:15 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:30 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -121,7 +155,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:17 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -136,7 +170,7 @@ http_interactions:
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:16 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:31 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg
@@ -158,7 +192,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:17 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
+      X-Amz-Version-Id:
+      - oK4ppZGCQjldLw0zTdLDn.tuJVigehEk
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
       Content-Length:
@@ -169,12 +205,12 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:16 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:31 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -185,7 +221,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:18 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -198,9 +234,9 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2016-06-20T19:54:17.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-04T21:35:32.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:17 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:31 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/woofc0cc21d843b34e9afb52.mp3
@@ -222,7 +258,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:18 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
+      X-Amz-Version-Id:
+      - Xkk3ZK2qYu1wXT9I4e4wF6qA0NOPTC8K
       Etag:
       - '"f1a31c5ccd5bc6f0aa6912e3cadeb91c"'
       Content-Length:
@@ -233,12 +271,12 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:17 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:32 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -249,7 +287,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:19 GMT
+      - Tue, 04 Jun 2019 21:35:33 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -262,14 +300,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2016-06-20T19:54:18.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2016-06-20T19:54:17.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2019-06-04T21:35:32.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-04T21:35:32.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:18 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:32 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/woofc0cc21d843b34e9afb52.mp3
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -280,13 +318,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:19 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '0'
+      - Tue, 04 Jun 2019 21:35:33 GMT
       Last-Modified:
-      - Mon, 20 Jun 2016 19:54:18 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
       Etag:
       - '"f1a31c5ccd5bc6f0aa6912e3cadeb91c"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - Xkk3ZK2qYu1wXT9I4e4wF6qA0NOPTC8K
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -299,12 +339,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-sound-contents
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:18 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:32 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/woofc0cc21d843b34e9afb52.mp3
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       X-Amz-Copy-Source:
@@ -321,7 +361,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:20 GMT
+      - Tue, 04 Jun 2019 21:35:34 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - Xkk3ZK2qYu1wXT9I4e4wF6qA0NOPTC8K
+      X-Amz-Version-Id:
+      - _SsJ0RcE8UtDZlyXaK6PvxDMZh61Ryf1
       Content-Type:
       - application/xml
       Content-Length:
@@ -332,14 +376,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2016-06-20T19:54:20.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag></CopyObjectResult>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T21:35:34.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag></CopyObjectResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:19 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:33 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -350,13 +394,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:20 GMT
-      X-Amz-Meta-Abuse-Score:
-      - '0'
+      - Tue, 04 Jun 2019 21:35:34 GMT
       Last-Modified:
-      - Mon, 20 Jun 2016 19:54:17 GMT
+      - Tue, 04 Jun 2019 21:35:32 GMT
       Etag:
       - '"593f84d5c5f5f6b80161676517701886"'
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      X-Amz-Version-Id:
+      - oK4ppZGCQjldLw0zTdLDn.tuJVigehEk
       Accept-Ranges:
       - bytes
       Content-Type:
@@ -369,12 +415,12 @@ http_interactions:
       encoding: UTF-8
       string: stub-image-contents
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:19 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:33 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       X-Amz-Copy-Source:
@@ -391,7 +437,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:20 GMT
+      - Tue, 04 Jun 2019 21:35:34 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - oK4ppZGCQjldLw0zTdLDn.tuJVigehEk
+      X-Amz-Version-Id:
+      - UwBLN.YD8ee97sMgVV7qjGZYh9xzMxGC
       Content-Type:
       - application/xml
       Content-Length:
@@ -402,14 +452,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2016-06-20T19:54:20.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag></CopyObjectResult>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T21:35:34.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag></CopyObjectResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:20 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:33 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -420,7 +470,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:21 GMT
+      - Tue, 04 Jun 2019 21:35:35 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -433,14 +483,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2016-06-20T19:54:20.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2016-06-20T19:54:20.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/1/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2019-06-04T21:35:34.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg</Key><LastModified>2019-06-04T21:35:34.000Z</LastModified><ETag>&quot;593f84d5c5f5f6b80161676517701886&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:20 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:34 GMT
 - request:
     method: put
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/2/woofc0cc21d843b34e9afb52.mp3
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       X-Amz-Copy-Source:
@@ -455,7 +505,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:21 GMT
+      - Tue, 04 Jun 2019 21:35:35 GMT
+      X-Amz-Copy-Source-Version-Id:
+      - _SsJ0RcE8UtDZlyXaK6PvxDMZh61Ryf1
+      X-Amz-Version-Id:
+      - TD7oR7xFaWoZOf6cUvryoORHVmeI8oS9
       Content-Type:
       - application/xml
       Content-Length:
@@ -466,14 +520,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2016-06-20T19:54:21.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag></CopyObjectResult>
+        <CopyObjectResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><LastModified>2019-06-04T21:35:35.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag></CopyObjectResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:20 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:34 GMT
 - request:
     method: get
     uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/2/
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -484,7 +538,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:22 GMT
+      - Tue, 04 Jun 2019 21:35:35 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -497,14 +551,14 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/2/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/2/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2016-06-20T19:54:21.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/2/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>assets_test/1/2/woofc0cc21d843b34e9afb52.mp3</Key><LastModified>2019-06-04T21:35:35.000Z</LastModified><ETag>&quot;f1a31c5ccd5bc6f0aa6912e3cadeb91c&quot;</ETag><Size>19</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:21 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:34 GMT
 - request:
     method: delete
-    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/%C3%A7atac0a7f8c2faac49775a6.jpg
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/%25C3%25A7atac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -515,19 +569,23 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:22 GMT
+      - Tue, 04 Jun 2019 21:35:36 GMT
+      X-Amz-Version-Id:
+      - g3pD2GPCct.aRFf6JPG__g2ePNQTK1KZ
+      X-Amz-Delete-Marker:
+      - 'true'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:21 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:35 GMT
 - request:
     method: delete
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/woofc0cc21d843b34e9afb52.mp3
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -538,19 +596,23 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:23 GMT
+      - Tue, 04 Jun 2019 21:35:36 GMT
+      X-Amz-Version-Id:
+      - F4cz9DpZ8rudy9RGdhyetFrBCD5sMNV3
+      X-Amz-Delete-Marker:
+      - 'true'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:22 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:35 GMT
 - request:
     method: delete
-    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/2/%C3%A7atac0a7f8c2faac49775a6.jpg
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/2/%25C3%25A7atac0a7f8c2faac49775a6.jpg
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -561,19 +623,23 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:24 GMT
+      - Tue, 04 Jun 2019 21:35:36 GMT
+      X-Amz-Version-Id:
+      - lE.J.rpqw.MN8Gl6lWXVs2f.4mFjsJMH
+      X-Amz-Delete-Marker:
+      - 'true'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:23 GMT
+  recorded_at: Tue, 04 Jun 2019 21:35:35 GMT
 - request:
     method: delete
     uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/2/woofc0cc21d843b34e9afb52.mp3
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Length:
@@ -584,12 +650,16 @@ http_interactions:
       message: No Content
     headers:
       Date:
-      - Mon, 20 Jun 2016 19:54:24 GMT
+      - Tue, 04 Jun 2019 21:35:37 GMT
+      X-Amz-Version-Id:
+      - b93bw2pB9eS4tOwPGO4h0l1ZYhCjfHA8
+      X-Amz-Delete-Marker:
+      - 'true'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 20 Jun 2016 19:54:23 GMT
-recorded_with: VCR 3.0.0
+  recorded_at: Tue, 04 Jun 2019 21:35:36 GMT
+recorded_with: VCR 3.0.3

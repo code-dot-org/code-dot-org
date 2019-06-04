@@ -494,7 +494,7 @@ class BucketHelper
   end
 
   def s3_path(owner_id, storage_app_id, filename = nil)
-    "#{@base_dir}/#{owner_id}/#{storage_app_id}/#{Addressable::URI.unencode(filename)}"
+    "#{@base_dir}/#{owner_id}/#{storage_app_id}/#{filename}"
   end
 
   # Extracted so we can override with special behavior in AnimationBucket.
