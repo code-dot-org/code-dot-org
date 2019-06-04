@@ -1,7 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setFeedback,
@@ -11,7 +10,7 @@ import {
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-
+import {action} from '@storybook/addon-actions';
 import InstructionsCSF from './InstructionsCSF';
 
 /**
@@ -191,8 +190,8 @@ export default storybook => {
       return (
         <Provider store={store}>
           <InstructionsCSF
-            handleClickCollapser={() => {}}
-            adjustMaxNeededHeight={() => {}}
+            handleClickCollapser={action('handleClickCollapser')}
+            adjustMaxNeededHeight={action('adjustMaxNeededHeight')}
           />
         </Provider>
       );
