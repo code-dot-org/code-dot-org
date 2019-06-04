@@ -536,6 +536,9 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
+    @api.get_object(escaped_filename2)
+    assert not_found?
+
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
