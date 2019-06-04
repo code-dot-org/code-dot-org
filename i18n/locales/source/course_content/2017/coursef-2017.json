@@ -2006,8 +2006,8 @@
       "draw spiral circle": "draw spiral circle"
     },
     "https://studio.code.org/s/coursef-2017/stage/25/puzzle/3": {
-      "level_up": "level\\_up",
-      "score_points": "score\\_points"
+      "level_up": "level_up",
+      "score_points": "score_points"
     },
     "https://studio.code.org/s/coursef-2017/stage/25/puzzle/4": {
       "check guess": "check guess"

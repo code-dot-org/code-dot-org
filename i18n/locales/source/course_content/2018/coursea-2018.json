@@ -120,7 +120,7 @@
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/6": "Try it yourself! Can you pick the corn at the end too?",
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/7": "Look at all this corn? Can you pick it all by yourself?",
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/8": "Can you change your code to make the harvester pick all the corn?",
-    "https://studio.code.org/s/coursea-2018/stage/10/puzzle/9": "You will need **one**\n\n<xml><block type=\"maze_moveWest\" block-text=\"move west\"></block></xml>\n\nblock and **one** <xml><block type=\"maze_moveNorth\" block-text=\"move north\"></block></xml> block to finish this puzzle!!!!",
+    "https://studio.code.org/s/coursea-2018/stage/10/puzzle/9": "You will need **one** <xml><block type=\"maze_moveWest\" block-text=\"move west\"></block></xml> block and **one** <xml><block type=\"maze_moveNorth\" block-text=\"move north\"></block></xml> block to finish this puzzle!",
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/10": "Try it on your own! ",
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/11": "Can you figure out how to pick _all_ this corn?",
     "https://studio.code.org/s/coursea-2018/stage/10/puzzle/12": "Help the harvester pick all five ears of corn!",

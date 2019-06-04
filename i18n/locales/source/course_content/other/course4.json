@@ -1338,11 +1338,11 @@
       "patrol": "patrol"
     },
     "https://studio.code.org/s/course4/stage/15/puzzle/9": {
-      "score_points": "score\\_points"
+      "score_points": "score_points"
     },
     "https://studio.code.org/s/course4/stage/15/puzzle/10": {
-      "level_up": "level\\_up",
-      "score_points": "score\\_points"
+      "level_up": "level_up",
+      "score_points": "score_points"
     },
     "https://studio.code.org/s/course4/stage/15/puzzle/11": {
       "jump": "jump",

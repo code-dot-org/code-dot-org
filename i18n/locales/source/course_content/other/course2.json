@@ -201,7 +201,7 @@
     "https://studio.code.org/s/course2/stage/11/puzzle/11": "**Assessment:** \nWhy does this square end up being 75 pixels too small on each side?  \n\nWhere does the code go wrong?",
     "https://studio.code.org/s/course2/stage/13/puzzle/1": "I'm a hungry bee! \n\nHelp me collect all of the nectar from the flowers using the fewest number of blocks.",
     "https://studio.code.org/s/course2/stage/13/puzzle/2": "Look at all of that nectar!\n\nHelp me collect the nectar and make the honey using as few blocks as you can.  ",
-    "https://studio.code.org/s/course2/stage/13/puzzle/3": "# Sanitized Markdown\n\n## XML:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveForward\"/>\n        </statement>\n        <next>\n          <block type=\"bee_ifNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">==</title>\n            <title name=\"ARG2\">1</title>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n## Raw HTML:\n\ncan combine **markdown** syntax with <strong>raw html</strong>\n\n## Style tags:\n\n<style>\np {\ncolor: red;\n}\n</style>\n\nAre not parsed\n\n## Tables:\n\n| Are    | Supported |\n| ------ | --------- |\n| github | style     |\n| yo     |           |\n\n## Details Tags\n\n<details>\n<summary>\n\n**ARE SUPPORTED**\n\n</summary>\n\n-   Do\n-   Support\n-   Markdown\n\n</details>\n\n## Malicious Stuff\n\nIs sanitized:\n\n<div onmouseover=\"alert(&#x22;alpha&#x22;)\"><a href=\"jAva script:alert(&#x22;bravo&#x22;)\" onclick=\"alert(&#x22;charlie&#x22;)\">delta</a>\n<script>alert(\"charlie\")</script>\n<img src=\"x\" onerror=\"alert(&#x22;delta&#x22;)\">\n<iframe src=\"javascript:alert(&#x22;echo&#x22;)\"></iframe>\n<math><mi xlink:href=\"data:x,<script>alert(&#x22;foxtrot&#x22;)</script>\"></mi></math></div>",
+    "https://studio.code.org/s/course2/stage/13/puzzle/3": "These magic purple flowers change!\n\nEach time you try the puzzle, purple flowers can have either 1 nectar or none at all...but you won't know the number until you run the code! \n\nBe careful not to collect nectar from a purple flower if it doesn't have any. \nYou must first check if the nectar is equal to 1 using the `if nectar` block.",
     "https://studio.code.org/s/course2/stage/13/puzzle/8": "I wonder what's out there!\n\nHelp me fly around the yard and collect nectar only from the flowers that have some. ",
     "https://studio.code.org/s/course2/stage/13/puzzle/10": "There's a lot happening here!\n\nUse what you've learned to collect all of the nectar and then make the honey.",
     "https://studio.code.org/s/course2/stage/13/puzzle/11": "Let's put everything together!\n\nUse what you've learned to help me collect nectar only from flowers that have it, using as few blocks as possible.\n\nDon't forget to make honey at the end.",
@@ -468,7 +468,7 @@
       "draw a car": "draw a car"
     },
     "https://studio.code.org/s/course2/stage/4/puzzle/8": {
-      "draw_rect": "draw\\_rect"
+      "draw_rect": "draw_rect"
     },
     "https://studio.code.org/s/course2/stage/7/puzzle/5": {
       "x": "x"
