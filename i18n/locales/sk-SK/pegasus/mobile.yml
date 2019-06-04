@@ -344,7 +344,7 @@
   homepage_slot_text_link_local: "Nájdi triedu v tvojej lokalite"
   homepage_slot_text_link_othercourses: "Iné online kurzy"
   homepage_slot_text_title_educators: "Učitelia"
-  homepage_slot_text_blurb_educators: "Naučte Vašich študentov"
+  homepage_slot_text_blurb_educators: "Naučte vašich študentov"
   homepage_slot_text_link_elementary: "Základná škola"
   homepage_slot_text_link_middle: "2. stupeň ZŠ"
   homepage_slot_text_link_high: "Stredná škola"
@@ -444,7 +444,7 @@
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Stiahnite si</a> stručnú príručku pre organizátora a prezentáciu v Powerpointe pre mladších a starších študentov."
   minecraft_join_online_training: "Ste pripravení zorganizovať vlastnú Hodinu Kódu s Minecraftom, ale neviete, kde začať? Pozrite si náš <a href='%{minecraft_webinar_url}', target='_blank'>webinár na požiadanie</a>. Naučíte sa overené postupy, získate prístup k hotovým materiálom pre organizátorov a prejdete si novú vzorovú lekciu Cesta Hrdinu od Minecraft tímu. Získajte už dopredu čas na rozmyslenie a prípravu pre zorganizovanie Hodiny Kódu pre mládež počas Týždňa výuky informatiky (4.-10. december) alebo inokedy."
   minecraft_continue_learning: 'Informatika pre každého: Nad rámec Hodiny Kódu v Microsoft Obchode'
-  minecraft_continue_learning_description: "Nepotrebujete žiadne skúsenosti s informatikou! Pomôžte nám sprostredkovať informatiku všetkým mladým. Pridajte sa k nám v Microsoft Obchode a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas ktorých zažijete kódovanie v bezstresovom prostredí plnom zábavy, osvojíte si základné koncepty informatiky a pripravíte sa na vedenie Hodiny Kódu vo Vašej triede alebo komunite. Máte to vo Vašich rukách! <a href='%{minecraft_continue_learning_url}', target='_blank'>Prihláste sa dnes</a>."
+  minecraft_continue_learning_description: "Nepotrebujete žiadne skúsenosti s informatikou! Pomôžte nám sprostredkovať informatiku všetkým mladým. Pridajte sa k nám v predajniach Microsoft a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas ktorých zažijete kódovanie v bezstresovom prostredí plnom zábavy, osvojíte si základné koncepty informatiky a pripravíte sa na vedenie Hodiny kódu vo vašej triede alebo komunite. Máte to vo vašich rukách! <a href='%{minecraft_continue_learning_url}', target='_blank'>Prihláste sa dnes</a>."
   minecraft_future: "Pomôžte mládeži pripraviť sa na budúcnosť"
   minecraft_future_description: "Zistite, ako ostatné školy a neziskové organizácie prinášajú digitálne zručnosti - od digitálnej gramotnosti až po výuku informatiky - do ich komunít. Vyberte si z rôznych modelov, získajte tipy a triky a <a href='%{minecraft_future_url}', target='_blank'>získajte prístup k zdrojom</a>, ktoré ostatní považujú za najhodnotnejšie."
   minecraft_og_designer: "Minecraft je späť s novou aktivitou pre Hodinu Kódu. Naprogramuj zvieratá a iné postavy z Minecraftu v tvojej vlastnej verzii Minecraftu."
@@ -594,7 +594,7 @@
   dashboard_landing_view_progress: "Zobraziť pokrok pre %{biggest_section}"
   dashboard_landing_print_progress: "Vytlačiť pokrok"
   dashboard_landing_available_title: "Dostupné kurzy"
-  dashboard_landing_available_courses: "Tu sú aktuálne dostupné kurzy pre Vás a Vašich študentov."
+  dashboard_landing_available_courses: "Tu sú aktuálne dostupné kurzy pre vás a vašich študentov."
   dashboard_landing_more_tutorials: "Chcete vidieť dalšie kurzy?"
   dashboard_landing_more_tutorials_desc: "<a href=\"/learn/beyond\">Naši partneri vám ponúkajú</a> ďalšie kurzy. Naučte sa programovať s robotmi, vyrábajte webstránky, urobte si vlastnú appku či objavujte ďalšie jazyky – C++, Ruby alebo Python!"
   dashboard_landing_inspire: "Inšpirujte študentov s týmito plagátmi, videami a i."
@@ -1446,7 +1446,7 @@
   joining_section_instruct_button: "Po stlačení tlačidla \"Go\" by mali byť pridaní do vašej triedy."
   signing_in_single_instruct: "Vaši študenti sa môže prihlásiť do svojich účtov cez stránku Code.org na https://code.org/ a kliknutím na \"Prihlásiť\" tlačidlo v pravom hornom rohu."
   reset_student_password_email: "Ak si vaši študenti vytvorili Code.org účet prostredníctvom e-mailu a hesla (namiesto prihlásenia pomocou Google, Facebook, Microsoft, alebo Clever účtu), viete obnoviť ich heslo tak, že na záložke \"Správa študentov\" danej triedy kliknete na tlačidlo “Obnoviť heslo” v stĺpci \"Heslo\"."
-  syncing_students: "Synchronizujeme Vašich študentov"
+  syncing_students: "Synchronizujeme vašich študentov"
   syncing_students_instructions: 'Ak zoznam študentov vo vašej Code.org triede nie je aktuálny oproti vašej Google Classroom, kliknite na tlačidlo "Sunchronizovať študentov z Google Classroom" na záložke "Správa študentov":'
   google_sign_in_instruct: 'Odtiaľto by si mali vybrať možnosť "Prihlásiť sa Google kontom":'
   hero_name: 'Minecraft: Cesta Hrdinu'
@@ -1497,7 +1497,7 @@
   hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition obsahuje kompletné učebné osnovy pre vyučovanie programovania v Minecrafte.'
   hoc2018_mc_educators_box1_button: "Začať"
   hoc2018_mc_educators_box2_title: "Stiahnuť príručku"
-  hoc2018_mc_educators_box2_desc: "Tieto materiály vám pomôžu efektívne viesť Hodinu Kódu a zaujať Vašich študentov informatikou."
+  hoc2018_mc_educators_box2_desc: "Tieto materiály vám pomôžu efektívne viesť Hodinu kódu a zaujať Vašich študentov informatikou."
   hoc2018_mc_educators_box2_button: "Stiahnuť"
   hoc2018_mc_educators_box3_title: "Zúčastniť sa workshopu pre študentov"
   hoc2018_mc_educators_box3_desc: "Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte workshop pre Hodinu Kódu. Pre účastníkov od 6 rokov."

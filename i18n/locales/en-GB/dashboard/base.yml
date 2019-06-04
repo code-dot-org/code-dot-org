@@ -54,9 +54,6 @@ en-GB:
   race_interstitial:
     submit: "Submit"
   project:
-    share_link_import_bad_link_header: "Share link not recognised"
-    share_link_import_bad_link_body: "We couldn't import that share link. Make sure that you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
-    share: "Share"
     name: "Name"
     saved: "Saved"
   flex_category:

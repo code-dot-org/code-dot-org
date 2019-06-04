@@ -48,7 +48,7 @@ Code.org pays Regional Partners for program expenses related to hosting workshop
 **How you'll be paid**
 
 - All CS Fundamentals, CS Discoveries, CS Principles, and Admin/Counselor workshop payments are now made via ACH direct deposit (unless otherwise agreed with a partner).
-- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Submit your invoice to invoices@code.org with receipts and attendance list (if required) to initiate the payment process.
+- Payments for CS Fairs, Community Events, workshop supplies payments, and other reimbursements will still be paid via check. Complete the form at bit.ly/codeinvoices with your invoice, receipts and attendance list (if required) to initiate the payment process.
 
 **When you'll be paid**
 

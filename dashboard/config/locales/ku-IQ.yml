@@ -36,7 +36,6 @@ ku:
   stage_number: قۆناغی %{number}
   more: زیاتر
   less: کەمتر
-  beta: تاقیکاری
   continue: بەردەوام بە
   more_info: زانیاری زیاتر
   auth:
@@ -140,8 +139,6 @@ ku:
       other: هی تر
     submit: بنێرە
   project:
-    save: پاشه‌كه‌وت بكە
-    share: بڵاوكەوە
     name: ناو
     abuse:
       report_abuse_form:

@@ -427,7 +427,7 @@ sk-SK:
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
   homepage_slot_text_link_othercourses: Iné online kurzy
   homepage_slot_text_title_educators: Učitelia
-  homepage_slot_text_blurb_educators: Naučte Vašich študentov
+  homepage_slot_text_blurb_educators: Naučte vašich študentov
   homepage_slot_text_link_elementary: Základná škola
   homepage_slot_text_link_middle: 2. stupeň ZŠ
   homepage_slot_text_link_high: Stredná škola
@@ -553,11 +553,11 @@ sk-SK:
   minecraft_continue_learning: 'Informatika pre každého: Nad rámec Hodiny Kódu v Microsoft
     Obchode'
   minecraft_continue_learning_description: Nepotrebujete žiadne skúsenosti s informatikou!
-    Pomôžte nám sprostredkovať informatiku všetkým mladým. Pridajte sa k nám v Microsoft
-    Obchode a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas
+    Pomôžte nám sprostredkovať informatiku všetkým mladým. Pridajte sa k nám v predajniach
+    Microsoft a zúčastnite sa bezplatnej série troch jednohodinových seminárov, počas
     ktorých zažijete kódovanie v bezstresovom prostredí plnom zábavy, osvojíte si
-    základné koncepty informatiky a pripravíte sa na vedenie Hodiny Kódu vo Vašej
-    triede alebo komunite. Máte to vo Vašich rukách! <a href='%{minecraft_continue_learning_url}',
+    základné koncepty informatiky a pripravíte sa na vedenie Hodiny kódu vo vašej
+    triede alebo komunite. Máte to vo vašich rukách! <a href='%{minecraft_continue_learning_url}',
     target='_blank'>Prihláste sa dnes</a>.
   minecraft_future: Pomôžte mládeži pripraviť sa na budúcnosť
   minecraft_future_description: Zistite, ako ostatné školy a neziskové organizácie
@@ -780,7 +780,7 @@ sk-SK:
   dashboard_landing_view_progress: Zobraziť pokrok pre %{biggest_section}
   dashboard_landing_print_progress: Vytlačiť pokrok
   dashboard_landing_available_title: Dostupné kurzy
-  dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre Vás a Vašich
+  dashboard_landing_available_courses: Tu sú aktuálne dostupné kurzy pre vás a vašich
     študentov.
   dashboard_landing_more_tutorials: Chcete vidieť dalšie kurzy?
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">Naši partneri vám
@@ -1957,7 +1957,7 @@ sk-SK:
     e-mailu a hesla (namiesto prihlásenia pomocou Google, Facebook, Microsoft, alebo
     Clever účtu), viete obnoviť ich heslo tak, že na záložke "Správa študentov" danej
     triedy kliknete na tlačidlo “Obnoviť heslo” v stĺpci "Heslo".
-  syncing_students: Synchronizujeme Vašich študentov
+  syncing_students: Synchronizujeme vašich študentov
   syncing_students_instructions: 'Ak zoznam študentov vo vašej Code.org triede nie
     je aktuálny oproti vašej Google Classroom, kliknite na tlačidlo "Sunchronizovať
     študentov z Google Classroom" na záložke "Správa študentov":'
@@ -2036,7 +2036,7 @@ sk-SK:
   hoc2018_mc_educators_box1_button: Začať
   hoc2018_mc_educators_box2_title: Stiahnuť príručku
   hoc2018_mc_educators_box2_desc: Tieto materiály vám pomôžu efektívne viesť Hodinu
-    Kódu a zaujať Vašich študentov informatikou.
+    kódu a zaujať Vašich študentov informatikou.
   hoc2018_mc_educators_box2_button: Stiahnuť
   hoc2018_mc_educators_box3_title: Zúčastniť sa workshopu pre študentov
   hoc2018_mc_educators_box3_desc: Navštívte Microsoft obchod vo Vašej oblasti a vyhľadajte
