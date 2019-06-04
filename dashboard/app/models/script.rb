@@ -427,14 +427,7 @@ class Script < ActiveRecord::Base
     script = Script.with_associated_models.find_by(find_by => id_or_name)
     return script if script
 
-    unless is_id
-      # We didn't find a script matching id_or_name. Next, look for a script
-      # in the id_or_name script family to redirect to, e.g. csp1 --> csp1-2017.
-      script_with_redirect = Script.get_script_family_redirect(id_or_name, version_year: version_year)
-      return script_with_redirect if script_with_redirect
-    end
-
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name|family_name=#{id_or_name}")
+    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   # Returns the script with the specified id, or a script with the specified
@@ -450,6 +443,10 @@ class Script < ActiveRecord::Base
   # @param version_year [String] If specified, when looking for a script to redirect
   #   to within a script family, redirect to this version rather than the latest.
   def self.get_from_cache(id_or_name, version_year: nil)
+    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
+    end
+
     return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
     cache_key_suffix = version_year ? "/#{version_year}" : ''
     cache_key = "#{id_or_name}#{cache_key_suffix}"
@@ -481,9 +478,12 @@ class Script < ActiveRecord::Base
 
     family_scripts = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    if user
+    # Only students should be redirected based on script progress and/or section assignments.
+    if user&.student?
       assigned_script_ids = user.section_scripts.pluck(:id)
-      script_name = family_scripts.select {|s| assigned_script_ids.include?(s.id)}&.first&.name
+      progress_script_ids = user.user_levels.map(&:script_id)
+      script_ids = assigned_script_ids.concat(progress_script_ids).compact.uniq
+      script_name = family_scripts.select {|s| script_ids.include?(s.id)}&.first&.name
       return Script.new(redirect_to: script_name) if script_name
     end
 
@@ -679,16 +679,29 @@ class Script < ActiveRecord::Base
     ScriptConstants.script_in_category?(:csf_international, name)
   end
 
+  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
+    Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
+  end
+
+  def under_curriculum_umbrella?(specific_curriculum_umbrella)
+    curriculum_umbrella == specific_curriculum_umbrella
+  end
+
   def k5_course?
-    (
-      Script::CATEGORIES[:csf_international] +
-      Script::CATEGORIES[:csf] +
-      Script::CATEGORIES[:csf_2018]
-    ).include? name
+    return false if twenty_hour?
+    csf?
   end
 
   def csf?
-    k5_course? || twenty_hour?
+    under_curriculum_umbrella?('CSF')
+  end
+
+  def csd?
+    under_curriculum_umbrella?('CSD')
+  end
+
+  def csp?
+    under_curriculum_umbrella?('CSP')
   end
 
   def cs_in_a?
@@ -829,9 +842,10 @@ class Script < ActiveRecord::Base
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return false if ScriptConstants.script_in_category?(:csf, name) || ScriptConstants.script_in_category?(:csf_2018, name)
+    return true if csf_international?
+    return false if csf?
 
-    k5_course? || [
+    [
       Script::CSP17_UNIT1_NAME,
       Script::CSP17_UNIT2_NAME,
       Script::CSP17_UNIT3_NAME,
@@ -1625,9 +1639,5 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
-  end
-
-  def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
-    Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 end

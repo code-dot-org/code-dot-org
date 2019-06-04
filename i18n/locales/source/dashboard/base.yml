@@ -91,7 +91,6 @@ en:
   of: "of"
   more: "MORE"
   less: "LESS"
-  beta: "beta"
   try_hoc: "Try the Hour of Code, click here >> "
   try_k8intro: "Try our K-8 Intro to Computer Science Course (15-25 hours)"
   k8intro: "K-8 Intro to Computer Science Course (15-25 hours)"
@@ -304,7 +303,7 @@ en:
       project_gallery: "Projects"
       sections: "Sections"
       help_support: "Help and support"
-      report_bug: "Report bug"
+      report_bug: "Report a problem"
       teacher_community: "Teacher community"
       professional_learning: "Professional Learning"
       documentation: "Documentation"
@@ -846,18 +845,10 @@ en:
     create: "Create Project"
     create_a_project: 'Create a new project:'
     new: "Create New"
-    rename: "Rename"
-    save: "Save"
-    import: "Import"
-    share_link_import_bad_link_header: "Share link not recognized"
-    share_link_import_bad_link_body: "We couldn't import that share link. Make sure you are using a link from a Minecraft: Agent puzzle, and that you have copied the full link."
-    share_link_import_error_header: "Something went wrong."
-    share_link_import_error_body: "There was a problem importing that share link. Please try again."
     exit: "Return to Course"
     project_gallery: "Projects"
     publish: "Publish"
     unpublish: "Unpublish"
-    share: "Share"
     share_title: Share your project
     share_copy_link: "Copy the link:"
     share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
@@ -874,8 +865,6 @@ en:
     saved: "Saved"
     not_saved: "Not saved"
     view_all: 'View My Projects'
-    remix: 'Remix'
-    click_to_remix: "Click \"Remix\" to spin-off your own version!"
     edit_project: 'Edit Project'
     sharing_disabled: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please <a href='https://studio.code.org/users/sign_in'>sign in</a> to your account to view the project."
     abuse:
@@ -992,6 +981,7 @@ en:
     csp_loops: 'Loops'
     csp_traversals: 'Traversals'
     csp_libraries: 'Libraries'
+    csp_parameters_return_values: 'Parameters and Return Values'
     dlp: 'Reflection Prompts'
     time4cs_c1: 'Everglades and Its Ecosystems'
     time4cs_c2: 'Food Chains in the Everglades'
