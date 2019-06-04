@@ -59,7 +59,9 @@ export default class ScriptEditor extends React.Component {
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     projectSharing: PropTypes.bool,
-    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS)
+    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -161,6 +163,22 @@ export default class ScriptEditor extends React.Component {
             By selecting one of the above, this script will have a property,
             curriculum_umbrella, specific to that course regardless of version.
           </p>
+        </label>
+        <label>
+          Family Name
+          <input
+            name="family_name"
+            defaultValue={this.props.familyName}
+            style={styles.input}
+          />
+        </label>
+        <label>
+          Version Year
+          <input
+            name="version_year"
+            defaultValue={this.props.versionYear}
+            style={styles.input}
+          />
         </label>
         <label>
           Visible in Teacher Dashboard
