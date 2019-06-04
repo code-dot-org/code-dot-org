@@ -22,6 +22,7 @@ export class ResultsLoader extends React.Component {
       this.props.params['workshopId']
     }/generic_survey_report`;
 
+    // TODO: Handle server failure gracefully; right now it just shows a infinite spinning wheel.
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
