@@ -1,5 +1,4 @@
-// Disable scratch test
-/*import sinon from 'sinon';
+import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
 import {assert} from '../util/configuredChai';
 import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
@@ -297,4 +296,4 @@ describe('scratch', function() {
       }
     });
   });
-});*/
+});
