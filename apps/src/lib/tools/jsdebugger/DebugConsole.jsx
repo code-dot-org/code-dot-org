@@ -212,7 +212,7 @@ export default connect(
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((output, i) => {
-          if (typeof output === 'object') {
+          if ('function' === typeof output.toJS) {
             output = output.toJS();
           }
           return <Inspector key={i} data={output} />;
