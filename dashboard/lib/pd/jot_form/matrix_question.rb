@@ -50,7 +50,6 @@ module Pd
 
         # Matrix answer is a Hash of sub_question => string_answer.
         # Validate each answer and convert each key to sub_question_index.
-        # We .compact at the end
         result = answer.reject {|_, v| v.blank?}.map do |sub_question, sub_answer|
           sub_question_index = sub_questions.index(sub_question)
 
