@@ -5,6 +5,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   setup do
     Timecop.freeze
     @teacher = create :teacher
+    @second_teacher = create :teacher
   end
 
   teardown do
@@ -52,20 +53,20 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
   # The next set of tests checks all of the (known) valid call patterns for the
   # PATCH /api/v1/user_school_infos route.
-  #
+
   # We identified the parameters that affect the expected behavior of this route:
-  #
+
   # PREVIOUS STATE VARIATIONS
   #   *  Iniital flow / Confirmation flow
   #      Initial flow is when the teacher has never given us complete school
   #      info before (~7 days after sign-up). Confirmation flow is when we
   #      ask them to confirm/change their school info, a year later.
-  #
+
   #   *  No previous entry / partial previous entry / complete previous entry
   #      It's possible for a teacher to save partial school info, in which case
   #      we record it and use it when we ask them to complete that info at the
   #      earliest opportunity.
-  #
+
   #   Together, these produce four relevant previous states:
   #   1. Initial flow, no previous entry
   #      The very first time we ask a teacher for this information
@@ -76,11 +77,11 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   #   4. Confirmation flow, partial previous entry
   #      The teacher has a complete previous entry (because it's the confirmation flow)
   #      _and_ a partial previous entry, we want them to complete the partial entry.
-  #
+
   # CALL PARAMETERS
   #   *.  Blank / Unchanged / Partial / Complete
   #   *.  Found school in Dropdown / Not in dropdown, manually entered
-  #
+
   #   Together, these produce six relevant call parameter patterns:
   #   1. Blank submission
   #   2. Unchanged from previous, school is in dropdown
@@ -88,7 +89,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   #   4. Partial entry, school is manually entered
   #   5. Complete entry, school is in dropdown
   #   6. Complete entry, school is manually entered
-  #
+
   # All together, we have less than 24 cases because not every previous state and
   # call pattern combination makes sense - for example, you can't make an
   # "Unchanged / Dropdown" call when the previous entry is partial.
@@ -126,16 +127,14 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_first_tenure(@teacher)
   end
 
-  test 'initial, no previoius, complete, drop down' do
+  test 'initial, no previous, complete, drop down' do
     sign_in @teacher
 
     school = create :school
 
     Timecop.travel 1.hour
 
-    assert_creates SchoolInfo do
-      submit_complete_school_info_from_dropdown(school)
-    end
+    submit_complete_school_info_from_dropdown(school)
 
     @teacher.reload
 
@@ -468,6 +467,8 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_complete_school_info_from_dropdown(new_school)
 
+    @teacher.reload
+
     new_tenure = @teacher.user_school_infos.last
     assert_equal @teacher.user_school_infos.count, 2
     assert_same_date Time.now, new_tenure.last_confirmation_date
@@ -488,11 +489,42 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
     submit_complete_school_info_manual
 
-    assert_equal @teacher.user_school_infos.count, 2
+    assert_equal 2, @teacher.user_school_infos.count
     new_tenure = @teacher.user_school_infos.last
     refute_equal new_tenure.school_info.school_name, 'Philly High Harmony'
     refute_nil new_tenure.school_info.school_name
     assert_same_date Time.now.utc, new_tenure.last_confirmation_date
+  end
+
+  test 'confirmation, partial previous, complete, dropdown, two users with the same school info, update only one user' do
+    new_school = create :school
+
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    @teacher.update(school_info: complete_school_info)
+
+    puts "first teacher initial completed form --> #{@teacher.school_info.inspect}\n\n"
+
+    second_teacher_complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'School of Rock', full_address: 'Harrisburg, PA', validation_type: SchoolInfo::VALIDATION_NONE})
+    @second_teacher.update(school_info: second_teacher_complete_school_info)
+
+    puts "second teacher initial completed form --> #{@second_teacher.school_info.inspect}\n\n"
+
+    Timecop.travel 1.year
+
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    @teacher.update(school_info: partial_school_info)
+    @second_teacher.update(school_info: partial_school_info)
+
+    Timecop.travel 7.days
+
+    sign_in @teacher
+    submit_complete_school_info_from_dropdown(new_school)
+
+    new_tenure = @teacher.user_school_infos.last
+    assert_equal @teacher.user_school_infos.count, 2
+    assert_same_date Time.now, new_tenure.last_confirmation_date
+    assert_equal new_tenure.school_info.school, new_school
+    assert_nil @second_teacher.user_school_infos.last.school_info.school_name
   end
 
   private def partial_manual_school_info
