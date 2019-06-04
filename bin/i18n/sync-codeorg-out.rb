@@ -132,6 +132,7 @@ def distribute_course_content(locale)
     file.close
     next unless translated_data
     translated_data.each do |type, type_data|
+      next if type_data.blank?
       type_data.each do |level_url, level_data|
         level = get_level_from_url(level_url)
         translated_strings[type][level.name] = level_data
@@ -140,6 +141,7 @@ def distribute_course_content(locale)
   end
 
   translated_strings.each do |type, translations|
+    translations = translations.sort.to_h
     type_data = {}
     type_data[locale] = Hash.new
     type_data[locale]["data"] = Hash.new
