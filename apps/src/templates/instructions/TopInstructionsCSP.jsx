@@ -90,6 +90,9 @@ const styles = {
     height: undefined,
     bottom: 0
   },
+  csfEmbedView: {
+    display: 'none'
+  },
   paneHeaderOverride: {
     color: color.default_text
   },
@@ -413,7 +416,10 @@ class TopInstructionsCSP extends Component {
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && styles.embedView
+      this.props.isEmbedView && styles.embedView,
+      this.props.isEmbedView &&
+        !this.props.noInstructionsWhenCollapsed &&
+        styles.csfEmbedView
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
