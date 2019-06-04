@@ -138,6 +138,8 @@ class ScriptsController < ApplicationController
     h = params.permit(
       :visible_to_teachers,
       :curriculum_umbrella,
+      :family_name,
+      :version_year,
       :project_sharing,
       :login_required,
       :hideable_stages,
