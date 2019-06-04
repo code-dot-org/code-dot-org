@@ -57,7 +57,7 @@ end
 def parse_raw(raw)
   if raw.is_a?(OpenStruct)
     raw.marshal_dump
-  elsif raw.is_a?(Hash) || raw.is_a?(Array) || raw.is_a?(Integer)
+  elsif raw.is_a?(Hash) || raw.is_a?(Array)
     raw
   elsif raw.is_a?(String)
     JSON.parse(raw)
