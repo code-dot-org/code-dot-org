@@ -20,6 +20,12 @@ module.exports.createSprite = function(x, y, width, height) {
     s.debug = true;
   }
 
+  // Now that sprite lab is running natively, we need a collision function that
+  // does not peek at the JS interpreter state.
+  // For now, we are only doing single sprite overlap detection, so this just wraps
+  // _collideWithOne and exposes it for spritelab.
+  s.nativeOverlap = nativeOverlap;
+
   // Define these native properties that may be called by the Sprite class
   // (ensures hasOwnProperty() will return true, signalling to CustomMarshaler
   // that we need this to be stored on the "native" object)
@@ -104,6 +110,10 @@ function bounce(target, callback) {
 
 function bounceOff(target, callback) {
   return this.createGroupState('bounceOff', target, callback);
+}
+
+function nativeOverlap(p5Inst, target) {
+  return this._collideWithOne('overlap', target);
 }
 
 /* eslint-disable */
