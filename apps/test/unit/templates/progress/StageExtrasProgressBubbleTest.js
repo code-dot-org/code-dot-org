@@ -55,7 +55,7 @@ describe('StageExtrasProgressBubble', () => {
         .find('i')
         .at(1)
         .props().style.color,
-      '#32CD32'
+      color.level_perfect
     );
   });
 });
