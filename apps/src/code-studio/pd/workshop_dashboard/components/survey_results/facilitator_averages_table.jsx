@@ -142,10 +142,11 @@ export class FacilitatorAveragesTable extends React.Component {
               questionOrder[category].map((question, i) => (
                 <tr key={i}>
                   <td style={{paddingLeft: '30px'}}>
-                    {this.props.questions[question].replace(
-                      '{facilitatorName}',
-                      this.props.facilitatorName
-                    )}
+                    {this.props.questions[question] &&
+                      this.props.questions[question].replace(
+                        '{facilitatorName}',
+                        this.props.facilitatorName
+                      )}
                   </td>
                   <td>
                     {this.renderAverage(
