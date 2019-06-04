@@ -23,6 +23,10 @@ ________________
 <br/>
 ## Virtual Trainings
 
+May 2019
+
+- May 22 Scheduling Academic Year Workshops Webinar ([Recording](https://code.zoom.us/recording/share/bbZsr-nLbIF44hXnJqUkp943EOeupoWwxphZksUwh7qwIumekTziMw))
+
 January 2019
 
 - January 9 Facilitator Application Tools Webinar ([Recording](https://code.zoom.us/recording/play/2n-IjhW8o7xCjYAGXY2BpMOx38v0SCA3bsd7tIc1AgLuvc1uNSr4nGNiZbitNcTI?startTime=1547064114000), [Slides](https://docs.google.com/presentation/d/1Bpsx8s3gP-ZUPi_DX-POoYRqT0V0tm8FAb772TJ7bTg/edit#slide=id.g14d6c3396a_0_0))
