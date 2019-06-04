@@ -5,11 +5,11 @@ module Pd::SurveyPipeline
     FORM_IDS_TO_NAMES = {
       90_066_184_161_150 => {
         full_name: 'CS Fundamentals Deep Dive Pre-survey',
-        short_name: 'Pre-workshop'
+        short_name: 'Pre Workshop'
       },
       90_065_524_560_150 => {
         full_name: 'CS Fundamentals Deep Dive Post-survey',
-        short_name: 'Post-workshop'
+        short_name: 'Post Workshop'
       },
       91_405_279_991_164 => {
         full_name: 'Facilitator Feedback Survey',
