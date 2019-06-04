@@ -240,22 +240,29 @@ export default connect(
       }
     }
 
+    isValidOutput(rowValue) {
+      if (rowValue.output) {
+        return true;
+      } else if (FALSY_VALUES.has(rowValue.output)) {
+        return true;
+      } else if (
+        rowValue.output === undefined &&
+        (rowValue.fromConsoleLog || rowValue.undefinedInput)
+      ) {
+        return true;
+      }
+      return false;
+    }
+
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
         return this.props.logOutput.map((rowValue, i) => {
-          try {
+          if ('function' === typeof rowValue.toJS) {
             rowValue = rowValue.toJS();
-          } catch (error) {
-            return <Inspector key={i} data={rowValue} />;
           }
           if (rowValue.input) {
             return <div key={i}>&gt; {rowValue.input}</div>;
-          } else if (
-            rowValue.output ||
-            FALSY_VALUES.has(rowValue.output) ||
-            (rowValue.output === undefined &&
-              (rowValue.fromConsoleLog || rowValue.undefinedInput))
-          ) {
+          } else if (this.isValidOutput(rowValue)) {
             if (rowValue.fromConsoleLog) {
               return <Inspector key={i} data={rowValue.output} />;
             } else {
