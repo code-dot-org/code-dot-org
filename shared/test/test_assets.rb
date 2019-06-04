@@ -222,7 +222,7 @@ class AssetsTest < FilesApiTestBase
     end
 
     # set abuse
-    @api.patch_abuse(10)
+    @api.patch_abuse(15)
 
     # owner can view
     @api.get_object(asset_name)
