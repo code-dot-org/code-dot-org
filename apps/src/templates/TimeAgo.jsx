@@ -13,6 +13,40 @@ class TimeAgo extends React.Component {
     style: PropTypes.object
   };
 
+  state = {
+    timeout: undefined
+  };
+
+  componentDidMount() {
+    this.startTimer();
+  }
+
+  componentWillUnmount() {
+    this.clearTimer();
+  }
+
+  startTimer = () => {
+    // Check for display updates every ten seconds. The smallest time delta
+    // that actually makes a difference for display is 1 minute, so this is
+    // quite generous.
+    //
+    // Note this component could be much more clever; if the given date is
+    // within a few minutes of now, update this quickly, but if it's a couple
+    // hours ago update much less frequently and if it's even longer ago then
+    // maybe don't bother updating at all.
+    //
+    // For now, that seems like a unnecessary optimization.
+    const timeout = setTimeout(this.startTimer, 10 * 1000);
+    this.setState({timeout});
+  };
+
+  clearTimer = () => {
+    clearTimeout(this.state.timeout);
+    this.setState({
+      timeout: undefined
+    });
+  };
+
   render() {
     if (this.props.locale) {
       moment.locale(this.props.locale);
