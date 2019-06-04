@@ -80,7 +80,7 @@ module Pd
         # It appears to be harmless, but to keep things tidy we will filter it
         # out before returning results.
 
-        result.delete_if {|k| k.nil?}
+        result.reject {|k, _| k.nil?}
       end
 
       def summarize
