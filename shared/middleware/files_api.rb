@@ -742,7 +742,8 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
-    bad_request if filename.downcase == FileBucket::MANIFEST_FILENAME
+    filename = CGI.unescape(filename).downcase
+    bad_request if filename == FileBucket::MANIFEST_FILENAME
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
@@ -753,15 +754,14 @@ class FilesApi < Sinatra::Base
     manifest = JSON.load manifest_result[:body]
 
     # remove the file from the manifest
-    manifest_delete_comparison_filename = CGI.unescape(filename).downcase
-    reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
+    reject_result = manifest.reject! {|e| e['filename'].downcase == filename}
     not_found if reject_result.nil?
 
     # write the manifest
     response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'])
 
     # delete the file
-    bucket.delete(encrypted_channel_id, filename.downcase)
+    bucket.delete(encrypted_channel_id, filename)
 
     {filesVersionId: response.version_id}.to_json
   end
