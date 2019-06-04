@@ -17,19 +17,17 @@ require 'cron/aurora_backup'
 # IAM user credentials for backup account must be present in aws config with profile name 'backup',
 # which requires setting appropriate secrets in our Chef config.
 def main
-  begin
-    ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
-    rds_client = Aws::RDS::Client.new
-    credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
-    rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
-    backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
-    copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
+  ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
+  rds_client = Aws::RDS::Client.new
+  credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
+  rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
+  backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
+  copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
 
-    ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
-  rescue => e
-    ChatClient.message'cron-daily', e.message, color: 'red'
-    raise e
-  end
+  ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
+rescue => e
+  ChatClient.message'cron-daily', e.message, color: 'red'
+  raise e
 end
 
 main

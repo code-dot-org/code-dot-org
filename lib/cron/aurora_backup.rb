@@ -45,7 +45,8 @@ module AuroraBackup
     # Convert from data structure returned by Client API into Resource-style object
     Aws::RDS::DBClusterSnapshot.new(cluster_id: shared_snapshots.first.db_cluster_identifier,
                                     snapshot_id: shared_snapshots.first.db_cluster_snapshot_identifier,
-                                    client: rds_client_backup)
+                                    client: rds_client_backup
+    )
   end
 
   # Share an automated RDS snapshot with the account specified by the passed credentials.
@@ -59,16 +60,16 @@ module AuroraBackup
   def self.share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     # Copy the automated backup into a shareable manual one
     copied_snapshot = latest_snapshot.copy(
-        target_db_cluster_snapshot_identifier: temp_snapshot_name,
-        kms_key_id: SHARED_KMS_KEY
+      target_db_cluster_snapshot_identifier: temp_snapshot_name,
+      kms_key_id: SHARED_KMS_KEY
     )
     wait_for_snapshot(copied_snapshot)
 
     # Aws::RDS::DBClusterSnapshot does not appear to support this operation, so we must use Aws::RDS::Client
     rds_client.modify_db_cluster_snapshot_attribute(
-        attribute_name: 'restore',
-        db_cluster_snapshot_identifier: copied_snapshot.db_cluster_snapshot_identifier,
-        values_to_add: [backup_account_id]
+      attribute_name: 'restore',
+      db_cluster_snapshot_identifier: copied_snapshot.db_cluster_snapshot_identifier,
+      values_to_add: [backup_account_id]
     )
 
     # Share the new snapshot with the backup account
@@ -87,7 +88,7 @@ module AuroraBackup
         select {|snap| snap.status == 'available' && !snap.db_cluster_snapshot_identifier.start_with?(TEMP_SNAPSHOT_PREFIX)}.
         sort_by(&:snapshot_create_time)
 
-    if not sorted_snapshots.any?
+    unless sorted_snapshots.any?
       raise AuroraBackupError, "No available automated snapshots found for #{cluster_id}"
     end
 
@@ -100,10 +101,12 @@ module AuroraBackup
   # @param new_snapshot_id [String] the snapshot id to use for the new snapshot
   # @return [Aws::RDS::DBClusterSnapshot] the copied snapshot
   def self.copy_shared_snapshot(shared_snapshot, new_snapshot_id)
-    backed_up_snapshot = shared_snapshot.copy({
-       target_db_cluster_snapshot_identifier: new_snapshot_id,
-       kms_key_id: 'alias/aws/rds' # Use default master key
-    })
+    backed_up_snapshot = shared_snapshot.copy(
+      {
+        target_db_cluster_snapshot_identifier: new_snapshot_id,
+        kms_key_id: 'alias/aws/rds' # Use default master key
+      }
+    )
     wait_for_snapshot(backed_up_snapshot)
     backed_up_snapshot
   end
