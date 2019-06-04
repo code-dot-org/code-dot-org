@@ -19,7 +19,7 @@ const styles = {
     color: color.lighter_gray
   },
   focused: {
-    color: '#32CD32'
+    color: color.level_perfect
   },
   hoverOverlay: {
     ':hover': {
@@ -45,18 +45,12 @@ class StageExtrasProgressBubble extends Component {
     return (
       <a
         href={stageExtrasUrl + currentLocation().search}
-        style={{
-          ...styles.main
-        }}
+        style={styles.main}
         data-tip
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        <div
-          style={{
-            ...styles.main
-          }}
-        >
+        <div style={styles.main}>
           <span className="fa-stack fa-1x" style={styles.smallStack}>
             <i className="fa fa-flag fa-stack-1x" style={styles.flagNormal} />
             <i
