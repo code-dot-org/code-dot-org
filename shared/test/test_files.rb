@@ -25,41 +25,29 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_copy_object
-    file_data = 'fake-file-data'
-    old_filename = @api.randomize_filename 'old_file.html'
-    new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
     delete_all_manifest_versions
-    post_file_data @api, old_filename, file_data, 'text/html'
-
-    @api.copy_object old_filename, new_filename
-
-    assert successful?
-    @api.get_object(new_filename)
-    assert successful?
-    assert_equal file_data, last_response.body
-    @api.get_object(old_filename)
-    assert successful?
-    assert_equal file_data, last_response.body
-
+    assert_copy_object('old_file.html', 'new_file.html')
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
-
     delete_all_manifest_versions
   end
 
   def test_copy_object_percent
+    delete_all_manifest_versions
+    assert_copy_object('old%file.html', 'new%file.html')
+    delete_all_manifest_versions
+  end
+
+  def assert_copy_object(src, dest)
     file_data = 'fake-file-data'
-    old_filename = @api.randomize_filename 'old%file.html'
-    new_filename = @api.randomize_filename 'new%file.html'
+    old_filename = @api.randomize_filename src
+    new_filename = @api.randomize_filename dest
     delete_all_file_versions(
       old_filename, CGI.escape(old_filename),
       new_filename, CGI.escape(new_filename)
     )
-    delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'text/html'
 
     @api.copy_object old_filename, new_filename
@@ -76,8 +64,6 @@ class FilesTest < FilesApiTestBase
       old_filename, CGI.escape(old_filename),
       new_filename, CGI.escape(new_filename)
     )
-
-    delete_all_manifest_versions
   end
 
   def test_rename_object
