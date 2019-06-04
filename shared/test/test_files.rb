@@ -44,6 +44,7 @@ class FilesTest < FilesApiTestBase
 
     assert_copy_object('plus+one.html', 'plus+two.html')
     assert_copy_object('space one.html', 'space two.html')
+    assert_copy_object('question?mark.html', 'question mark?.html')
     delete_all_manifest_versions
   end
 
