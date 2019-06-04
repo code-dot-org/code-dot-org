@@ -16,7 +16,6 @@ import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
 import themeColor from '../themeColor';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -300,17 +299,11 @@ export default {
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.padding = CLASSIC_LABEL_PADDING;
-      element.style.backgroundColor = themeColor.labelBackground.classic;
-      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-      element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = themeColor.labelText.classic;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     this.resizeToFitText(element);
     return element;
@@ -422,10 +415,19 @@ export default {
     element.style.height = size.height + 'px';
   },
 
+  /**
+   * Cache whether or not this label previously fit exactly, so the result can be re-used
+   * across multiple property changes in the same batch.
+   *
+   * This object stores a batchId property (number) and a previouslyFitsExactly property (boolean)
+   */
   _lastFitsExactly: {},
 
   /**
    * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
+   *
+   * If several property changes happen together, they will share the same unique batchChangeId
+   * parameter. Batched property changes occur as a result of theme changes.
    */
   beforePropertyChange: function(element, name, batchChangeId) {
     switch (name) {
@@ -433,6 +435,7 @@ export default {
       case 'text':
       case 'fontFamily':
       case 'fontSize': {
+        // Check _lastFitsExactly for a cache hit
         const {
           batchId = -1,
           previouslyFitExactly: batchPreviouslyFitExactly
@@ -446,6 +449,8 @@ export default {
         const previouslyFitExactly =
           Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
           Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
+        // Cache this result in the _lastFitsExactly object in case we need it again for
+        // another property change in the same batch
         this._lastFitsExactly = batchChangeId
           ? {
               batchId: batchChangeId,
