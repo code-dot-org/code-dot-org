@@ -732,7 +732,7 @@ en:
       gamelab_clickedOn:
         text: when {SPRITE} clicked
       gamelab_clickedSpritePointer:
-        text: clicked sprite
+        text: clicked {SPRITE}
       gamelab_comment:
         text: 'comment: {COMMENT}'
       gamelab_console.log:

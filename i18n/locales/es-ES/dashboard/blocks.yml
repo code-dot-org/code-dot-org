@@ -16,7 +16,7 @@ es:
             '"saturation"': saturación
             '"brightness"': brillo
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} hacer {MOVE} {DIR} siempre"
+        text: "{GROUP} hace {MOVE} {DIR} para siempre"
         options:
           GROUP:
             sprites: todo
@@ -50,7 +50,7 @@ es:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} hacer {MOVE} {DIR} siempre"
+        text: "{SPRITE} hace {MOVE} {DIR} para siempre"
         options:
           MOVE:
             '"next"': "(Siguiente)"
@@ -81,7 +81,7 @@ es:
             '"x"': posición horizontal
             '"y"': posición vertical
       Dancelab_doMoveEachLR:
-        text: "{GROUP} hacer {MOVE} {DIR} una vez"
+        text: "{GROUP} hace {MOVE} {DIR} una vez"
         options:
           GROUP:
             sprites: todo
@@ -125,7 +125,7 @@ es:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
-        text: "{SPRITE} hacer {MOVE} {DIR} una vez"
+        text: "{SPRITE} hace {MOVE} {DIR} una vez"
         options:
           MOVE:
             '"rand"': "(Aleatorio)"

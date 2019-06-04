@@ -577,11 +577,15 @@ tr:
       CSD U3 L5 Freeplay: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 L5 Freeplay_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 L5 Freeplay_2019: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
+      CSD U3 Mouse Input Bee 2: Bunu yap
+      CSD U3 Mouse Input Bee 2_2018: Bunu yap
+      CSD U3 Mouse Input Bee 2_2019: Bunu yap
       CSD U3 Simple Drawing - Personal Animation: Bunu yap
       CSD U3 Sprites intro sprites: Bunu yap
       CSD U3 Sprites intro sprites_2018 - Validation Test: Bunu yap
       CSD U3 Sprites intro sprites_2018: Bunu yap
       CSD U3 Sprites intro sprites_2019: Bunu yap
+      CSD U3 Variables Intro: 'Kendi değişkenini oluştur '
       CSD U3 Variables TEMPLATE square: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables change circle size: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       CSD U3 Variables change circle size_2018: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
@@ -1483,7 +1487,11 @@ tr:
       U3 - Canvas - freePlay: Etkilerden birinin fonksiyonelliğini arttırın, veya kendiniz tamamen yeni bir tane yapın. (Tam talimatları görmek için tıklayın)
       U3 - Design Mode 1: Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)
       U3 - Keys - Final Image Scroller: Butonlara ve tuşlara yanıt vermesi için resim kaydırıcısını güncelleyin. (Tam talimatları görmek için tıklayın)
+      U3 - Simple Drawing - Comments: Bunu yap
+      U3 - Simple Drawing - Ellipse and No Fill: Bunu yap
       U3 - Simple Drawing - Fill: Bunu yap
+      U3 - Simple Drawing - No Fill: Bunu yap
+      U3 - Simple Drawing - Order of Blocks: Bunu yap
       U3 - Simple Drawing - Oval: Bunu yap
       U3 - Simple Drawing - Personal Drawing: Bunu yap
       U3 - Simple Drawing - Rectangle Width and Height: Bunu yap
@@ -1491,15 +1499,21 @@ tr:
       U3 - Simple Drawing - Road Ellipse: Bunu yap
       U3 - Simple Drawing - Road Rects and Color: Bunu yap
       U3 - Simple Drawing - Simple Shape Drawing: Bunu yap
+      U3 - Simple Drawing - Stroke and Stroke Weight: Bunu yap
       U3 - Simple Drawing - X and Y values: Bunu yap
+      U3 - Simple Drawing - regular polygon: Bunu yap
       U3 - Simple Drawing - text: Bunu yap
       U3 - Sprites - Intro Sprites: Bunu yap
       U3 - Sprites and Mod - Create  and Draw Sprite: Bunu yap
+      U3 - Sprites and Mod - Mouse Width and Height: Bunu yap
+      U3 - Sprites and Mod - Mouse X and Y: Bunu yap
+      U3 - Sprites and Mod - Rand Around Mouse: Bunu yap
       U3 - Sprites and Mod - Rand Shape Color: Bunu yap
       U3 - Sprites and Mod - Shape Color: Bunu yap
       U3 - Sprites and Mod - Wrap Many Squares: Bunu yap
       U3 - Sprites and Mod - X and Y Prop: Bunu yap
       U3 - Sprites and Mod - two sprites: Bunu yap
+      U3 - images - bee free play: Bunu yap
       U3 Variables flower example: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       U3 Variables gray square: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?
       U3 Variables randomize your square: PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?

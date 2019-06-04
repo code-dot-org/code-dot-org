@@ -11933,3 +11933,7 @@ tr:
           stages:
             What is a Computer?:
               name: Bilgisayar nedir?
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Özet

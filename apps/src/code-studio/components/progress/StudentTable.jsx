@@ -54,7 +54,23 @@ class StudentTable extends React.Component {
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
     levels: PropTypes.array,
-    inMiniRubricExperiment: PropTypes.bool
+    sectionId: PropTypes.number,
+    scriptName: PropTypes.string
+  };
+
+  getRowLink = studentId => {
+    let url;
+    const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
+
+    if (this.props.levels) {
+      url = this.props.levels[0].bonus
+        ? 'extras'
+        : this.props.levels[0].levelNumber;
+    } else {
+      url = this.props.scriptName;
+    }
+
+    return url + queryStr;
   };
 
   getRowStyle = (selectedUserId, id) => {
@@ -67,13 +83,7 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {
-      students,
-      onSelectUser,
-      getSelectedUserId,
-      levels,
-      inMiniRubricExperiment
-    } = this.props;
+    const {students, onSelectUser, getSelectedUserId, levels} = this.props;
     const selectedUserId = getSelectedUserId();
 
     return (
@@ -92,19 +102,24 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                <div style={styles.studentTableRow}>
-                  {levels && (
-                    <TeacherPanelProgressBubble
-                      level={levels.find(level => student.id === level.user_id)}
-                      inMiniRubricExperiment={inMiniRubricExperiment}
-                    />
-                  )}
-                  <span
-                    style={levels ? styles.nameWithBubble : styles.nameInScript}
-                  >
-                    {student.name}
-                  </span>
-                </div>
+                <a href={this.getRowLink(student.id)} style={{width: '100%'}}>
+                  <div style={styles.studentTableRow}>
+                    {levels && (
+                      <TeacherPanelProgressBubble
+                        level={levels.find(
+                          level => student.id === level.user_id
+                        )}
+                      />
+                    )}
+                    <span
+                      style={
+                        levels ? styles.nameWithBubble : styles.nameInScript
+                      }
+                    >
+                      {student.name}
+                    </span>
+                  </div>
+                </a>
               </td>
             </tr>
           ))}

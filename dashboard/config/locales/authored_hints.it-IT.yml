@@ -3466,7 +3466,7 @@ it:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
-          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          creato per disegnare una figura e inseriscilo all'interno di un altro ciclo.
           In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
           girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
           \  Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
@@ -3978,14 +3978,14 @@ it:
         MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno
           di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno
           di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere
-          un'asse di quercia .
+          un asse di quercia.
         MC_HOC_2017_05_Cole_b: Porta l'Agente al di là del fiume mentre costruisce
           un ponte.
       MC_HOC_2017_05_Cole_2019_authored_hint:
         MC_HOC_2017_05_Cole_a: Sapevi che puoi mettere più blocchi di codice all'interno
           di un ciclo?  Per completare questo esercizio, prova ad inserire all'interno
           di un ciclo `ripeti ... volte` il codice per andare avanti **e** mettere
-          un'asse di quercia .
+          un asse di quercia.
         MC_HOC_2017_05_Cole_b: Porta l'Agente al di là del fiume mentre costruisce
           un ponte.
       MC_HOC_2017_05_Josh_authored_hint:
@@ -10945,7 +10945,7 @@ it:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
-          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          creato per disegnare una figura e inseriscilo all'interno di un altro ciclo.
           In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
           girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
           \  Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
@@ -11663,7 +11663,7 @@ it:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
-          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          creato per disegnare una figura e inseriscilo all'interno di un altro ciclo.
           In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
           girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
           \  Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
@@ -11671,7 +11671,7 @@ it:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
-          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          creato per disegnare una figura e inseriscilo all'interno di un altro ciclo.
           In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
           girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
           \  Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
@@ -11679,7 +11679,7 @@ it:
         courseD_artist_project3_a: Usa il menù a discesa (▼) del blocco `gira a ...`
           per scegliere l'angolo che ti serve!
         courseD_artist_project3_b: "Prova i cicli annidati!\n\nUsa il codice che hai
-          creato per disegnare una figura e ineriscilo all'interno di un altro ciclo.
+          creato per disegnare una figura e inseriscilo all'interno di un altro ciclo.
           In fondo, prima che il ciclo esterno termini, aggiungi un blocco che faccia
           girare Elsa. \n\n-   Prova con 72 gradi, ripetendo il ciclo esterno 5 volte.\n-
           \  Prova con 60 gradi, ripetendo il ciclo esterno 6 volte."
@@ -11822,7 +11822,7 @@ it:
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
           `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
-          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+          per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2018_authored_hint:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
@@ -11833,7 +11833,7 @@ it:
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
           `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
-          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+          per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_2019_authored_hint:
         courseD_bee_conditionals2_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
@@ -11844,7 +11844,7 @@ it:
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
           `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
-          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+          per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
         courseD_bee_conditionals2_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals2_test_authored_hint:
         courseD_bee_conditionals2_a: Qualche volta c'è un fiore, altre volte no. Se
@@ -11853,7 +11853,7 @@ it:
         courseD_bee_conditionals2_b: Puoi usare un ciclo `ripeti ... volte` o un ciclo
           `mentre c'è strada in avanti` per muoverti attraverso questo labirinto.
         courseD_bee_conditionals2_c: 'Non hai bisogno di controllare se ci sono favi:
-          per ora, ci possono essere solo fiori o caselle vuote sotto le nuvole.'
+          per ora, sotto le nuvole ci possono essere solo fiori o caselle vuote.'
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
           il video-suggerimento!
