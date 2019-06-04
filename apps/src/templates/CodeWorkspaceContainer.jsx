@@ -10,6 +10,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as utils from '../utils';
 import commonStyles from '../commonStyles';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
@@ -17,11 +18,20 @@ class CodeWorkspaceContainer extends React.Component {
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
+    readOnlyWorkspace: PropTypes.bool,
 
     // not in redux
     topMargin: PropTypes.number.isRequired,
     children: PropTypes.node
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      studentLevelWithNoWork: this.props.readOnlyWorkspace
+    };
+  }
 
   /**
    * Called externally
@@ -36,6 +46,10 @@ class CodeWorkspaceContainer extends React.Component {
       utils.fireResizeEvent();
     }
   }
+
+  handleCloseStudentWorkNotification = () => {
+    this.setState({studentLevelWithNoWork: !this.state.studentLevelWithNoWork});
+  };
 
   render() {
     const {hidden, isRtl, noVisualization, topMargin, children} = this.props;
@@ -53,6 +67,13 @@ class CodeWorkspaceContainer extends React.Component {
         <div id="codeWorkspace" style={styles.codeWorkspace}>
           {children}
         </div>
+        <BaseDialog
+          isOpen={this.state.studentLevelWithNoWork}
+          handleClose={this.handleCloseStudentWorkNotification}
+          handleKeyDown={this.handleCloseStudentWorkNotification}
+        >
+          <div>The student has not started this level.</div>
+        </BaseDialog>
       </div>
     );
   }
@@ -65,7 +86,8 @@ export default connect(
       state.pageConstants.hideSource &&
       !state.pageConstants.visualizationInWorkspace,
     isRtl: state.isRtl,
-    noVisualization: state.pageConstants.noVisualization
+    noVisualization: state.pageConstants.noVisualization,
+    readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
   undefined,
   null,
