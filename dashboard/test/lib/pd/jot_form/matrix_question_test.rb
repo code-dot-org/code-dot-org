@@ -56,11 +56,6 @@ module Pd
         )
 
         e = assert_raises do
-          question.get_value({'Nonexistent Question' => 'Agree'})
-        end
-        assert_equal "Unable to find sub-question 'Nonexistent Question' in matrix question 1", e.message
-
-        e = assert_raises do
           question.get_value('Question 1' => 'Nonexistent Answer')
         end
         assert_equal "Unable to find 'Nonexistent Answer' in the options for matrix question 1", e.message
