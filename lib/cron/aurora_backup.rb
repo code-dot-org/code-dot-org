@@ -1,12 +1,9 @@
 require 'aws-sdk-rds'
-require 'pry'
 
 module AuroraBackup
   TEMP_SNAPSHOT_PREFIX = 'temp-snapshot'
   SHARED_KMS_KEY = 'alias/snapshot-DATA-production'
 
-  # Raised when a snapshot that we expected to show up in the backup account
-  # is not found within the timeout period (60 seconds)
   class AuroraBackupError < StandardError
   end
 
@@ -22,7 +19,7 @@ module AuroraBackup
   end
 
   # Find a shared snapshot by name
-  # @param rds_backup [Aws::RDS::Resource] the RDS resource
+  # @param rds_client_backup [Aws::RDS::Resource] the RDS resource for the backup account
   # @param temp_snapshot_name [String] The name of the snapshot to look for. Note that
   # this is a suffix lookup, and assumes that the prefix will be 'arn:aws:rds:' for a
   # shared snapshot
@@ -40,7 +37,8 @@ module AuroraBackup
       # Aws::RDS::Resource does not support listing cluster snapshots, so we must use Aws::RDS::Client API calls
       resp = rds_client_backup.describe_db_cluster_snapshots(max_records: 100, include_shared: true)
       shared_snapshots = resp.db_cluster_snapshots.select do |snap|
-        snap.db_cluster_snapshot_identifier == temp_snapshot_name
+        snap.db_cluster_snapshot_identifier.start_with?('arn:aws:rds:') &&
+            snap.db_cluster_snapshot_identifier.end_with?(temp_snapshot_name)
       end
     end
 
@@ -53,10 +51,11 @@ module AuroraBackup
   # Share an automated RDS snapshot with the account specified by the passed credentials.
   # This method will copy the automate snapshot to a manual one, and it should be deleted
   # later, outside this method.
+  # @param rds_client [Aws::RDS:Client] RDS client associated with original account
   # @param backup_account_id [String] backup account ID
   # @param latest_snapshot [DBSnapshot] snapshot to copy and share
-  # @return Array(DBSnapshot, String) the temporary copied snapshot, and the name of the
-  # temporary snapshot
+  # @param temp_snapshot_name [String] Snapshot name to use to create shareable copy
+  # @return [Aws::RDS::DBClusterSnapshot] the temporary copied snapshot
   def self.share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
     # Copy the automated backup into a shareable manual one
     copied_snapshot = latest_snapshot.copy(
@@ -76,6 +75,10 @@ module AuroraBackup
     return copied_snapshot
   end
 
+  # Find the most recent automated snapshot for the given cluster ID.
+  # @param rds_resource [Aws::RDS::Resource] the RDS resource-style client for the primary account
+  # @param cluster_id [String] the cluster ID to find the latest snapshot for
+  # @return [Aws::RDS::DBClusterSnapshot] the latest snapshot for the cluster
   def self.find_latest_snapshot(rds_resource, cluster_id)
     production_cluster = rds_resource.db_clusters.find {|i| i.id == cluster_id}
 
@@ -91,6 +94,11 @@ module AuroraBackup
     sorted_snapshots.last
   end
 
+  # Copy the given snapshot using the default KMS key, and wait until available. Used to copy
+  # the shared snapshot in the backup account.
+  # @param shared_snapshot [Aws::RDS::DBClusterSnapshot] the RDS resource-style client for the primary account
+  # @param new_snapshot_id [String] the snapshot id to use for the new snapshot
+  # @return [Aws::RDS::DBClusterSnapshot] the copied snapshot
   def self.copy_shared_snapshot(shared_snapshot, new_snapshot_id)
     backed_up_snapshot = shared_snapshot.copy({
        target_db_cluster_snapshot_identifier: new_snapshot_id,
@@ -100,7 +108,7 @@ module AuroraBackup
     backed_up_snapshot
   end
 
-  # This script pushes backup snapshots of our production database into a
+  # Pushes backup snapshots of our production database into a
   # write-only backup account, with the following steps:
   #
   # 1) Copy the latest automated snapshot to a temporary manual one
@@ -108,16 +116,17 @@ module AuroraBackup
   # 3) On the backup account, copy the shared snapshot to a manual one
   # 4) Wait until ready, and finally go back to the main account and delete the temp snapshot
   #
-  # Credential sets must be set up with the names 'default' and 'backup' in the aws config directory,
-  # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
+  # @param rds_client [Aws::RDS::Client] RDS Client for primary account
+  # @param rds_client_backup [Aws::RDS::Client] RDS client for backup account
+  # @param backup_account_id [String] account ID for backup account
   def self.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id)
     rds_resource = Aws::RDS::Resource.new(client: rds_client)
     temp_snapshot_name = "#{TEMP_SNAPSHOT_PREFIX}-#{Time.now.to_i}"
 
     latest_snapshot = find_latest_snapshot(rds_resource, 'production-aurora-cluster')
     copied_snapshot = share_snapshot_with_account(rds_client, backup_account_id, latest_snapshot, temp_snapshot_name)
-    copied_snapshot_backup = find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
-    copy_shared_snapshot(copied_snapshot_backup, latest_snapshot.db_cluster_snapshot_identifier.sub('rds:', ''))
+    shared_snapshot_backup = find_shared_snapshot_on_backup(rds_client_backup, temp_snapshot_name)
+    copy_shared_snapshot(shared_snapshot_backup, latest_snapshot.db_cluster_snapshot_identifier.sub('rds:', ''))
   ensure
     if copied_snapshot
       copied_snapshot.delete

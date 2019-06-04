@@ -86,6 +86,7 @@ class AuroraBackupTest < Minitest::Test
 
   def test_find_shared_snapshot_on_backup
     temp_snapshot_name = 'my-temp-snapshot'
+    shared_snapshot_id = "arn:aws:rds:us-east-1:1234567890:cluster-snapshot:rds:#{temp_snapshot_name}"
 
     rds_client = Aws::RDS::Client.new(stub_responses: true)
     rds_client.stub_responses(:describe_db_cluster_snapshots, {
@@ -97,7 +98,7 @@ class AuroraBackupTest < Minitest::Test
                 snapshot_create_time: Time.new(0)
             },
             {
-                db_cluster_snapshot_identifier: temp_snapshot_name,
+                db_cluster_snapshot_identifier: shared_snapshot_id,
                 db_cluster_identifier: 'my-cluster',
                 status: 'available',
                 snapshot_create_time: Time.new(1)
@@ -106,7 +107,7 @@ class AuroraBackupTest < Minitest::Test
     })
 
     result = AuroraBackup.find_shared_snapshot_on_backup(rds_client, temp_snapshot_name)
-    assert_equal result.snapshot_id, temp_snapshot_name
+    assert_equal result.snapshot_id, shared_snapshot_id
   end
 
   def test_copy_shared_snapshot
