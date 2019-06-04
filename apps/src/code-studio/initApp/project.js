@@ -6,6 +6,7 @@ import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -449,7 +450,9 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader();
+      header.showProjectHeader({
+        showExport: this.shouldShowExport()
+      });
     }
   },
 
@@ -469,10 +472,23 @@ var projects = (module.exports = {
     );
   },
 
+  // Currently, only applab when the experiment is enabled. Hide if
+  // hideShareAndRemix is set on the level.
+  shouldShowExport() {
+    const {level = {}, app} = appOptions;
+    const {hideShareAndRemix} = level;
+    return (
+      !hideShareAndRemix &&
+      app === 'applab' &&
+      experiments.isEnabled('exportExpo')
+    );
+  },
+
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix()
+        showShareAndRemix: !this.shouldHideShareAndRemix(),
+        showExport: this.shouldShowExport()
       });
     }
   },
