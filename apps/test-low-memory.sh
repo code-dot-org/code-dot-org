@@ -48,7 +48,7 @@ ${PARALLEL} <<SCRIPT
 npm run lint
 (PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit) ${LOG} log/unitTest.log
 (PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook) ${LOG} log/storybookTest.log
-(PORT=9878 $GRUNT_CMD scratchTest && ${CODECOV} -cF scratch) ${LOG} log/scratchTest.log
+# (PORT=9878 $GRUNT_CMD scratchTest && ${CODECOV} -cF scratch) ${LOG} log/scratchTest.log
 (PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && \
   ${CODECOV} -cF integration) ${LOG} log/turtleTest.log
 (PORT=9880 LEVEL_TYPE='maze|bounce|calc|eval|flappy|studio' $GRUNT_CMD karma:integration && \
