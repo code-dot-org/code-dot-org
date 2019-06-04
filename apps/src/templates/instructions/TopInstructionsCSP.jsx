@@ -77,7 +77,7 @@ const styles = {
     right: 0,
     overflow: 'scroll'
   },
-  CSFbody: {
+  csfBody: {
     backgroundColor: '#ddd',
     position: 'absolute',
     top: HEADER_HEIGHT,
@@ -410,6 +410,9 @@ class TopInstructionsCSP extends Component {
       hasContainedLevels
     } = this.props;
 
+    const isCSF = !this.props.noInstructionsWhenCollapsed;
+    const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
+
     const mainStyle = [
       styles.main,
       {
@@ -417,9 +420,7 @@ class TopInstructionsCSP extends Component {
       },
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
-      this.props.isEmbedView &&
-        !this.props.noInstructionsWhenCollapsed &&
-        styles.csfEmbedView
+      this.props.isEmbedView && isCSF && styles.csfEmbedView
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -480,10 +481,10 @@ class TopInstructionsCSP extends Component {
           isMinecraft={this.props.isMinecraft}
         >
           <div style={styles.paneHeaderOverride}>
+            {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
             {this.state.tabSelected === TabType.INSTRUCTIONS &&
               ttsUrl &&
-              (this.props.hasContainedLevels ||
-                this.props.noInstructionsWhenCollapsed) && (
+              (this.props.hasContainedLevels || isCSDorCSP) && (
                 <InlineAudio src={ttsUrl} style={audioStyle} />
               )}
             {this.props.documentationUrl &&
@@ -506,7 +507,7 @@ class TopInstructionsCSP extends Component {
                 teacherOnly={teacherOnly}
                 isMinecraft={this.props.isMinecraft}
               />
-              {this.props.noInstructionsWhenCollapsed && displayHelpTab && (
+              {isCSDorCSP && displayHelpTab && (
                 <InstructionsTab
                   className="uitest-helpTab"
                   onClick={this.handleHelpTabClick}
@@ -516,7 +517,7 @@ class TopInstructionsCSP extends Component {
                   isMinecraft={this.props.isMinecraft}
                 />
               )}
-              {this.props.noInstructionsWhenCollapsed &&
+              {isCSDorCSP &&
                 displayFeedback &&
                 (!this.state.fetchingData || teacherOnly) && (
                   <InstructionsTab
@@ -528,7 +529,7 @@ class TopInstructionsCSP extends Component {
                     isMinecraft={this.props.isMinecraft}
                   />
                 )}
-              {!this.props.noInstructionsWhenCollapsed &&
+              {isCSF &&
                 this.props.viewAs === ViewType.Teacher &&
                 this.props.teacherMarkdown && (
                   <InstructionsTab
@@ -541,9 +542,9 @@ class TopInstructionsCSP extends Component {
                   />
                 )}
             </div>
+            {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
             {!this.props.isEmbedView &&
-              (this.props.noInstructionsWhenCollapsed ||
-                this.props.hasContainedLevels) && (
+              (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
                   collapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
@@ -553,18 +554,14 @@ class TopInstructionsCSP extends Component {
           </div>
         </PaneHeader>
         <div
-          style={[
-            this.props.collapsed &&
-              this.props.noInstructionsWhenCollapsed &&
-              commonStyles.hidden
-          ]}
+          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
         >
           <div
             style={[
-              !this.props.noInstructionsWhenCollapsed &&
+              isCSF &&
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
-                ? styles.CSFbody
+                ? styles.csfBody
                 : styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
@@ -577,7 +574,7 @@ class TopInstructionsCSP extends Component {
                 />
               )}
               {!this.props.hasContainedLevels &&
-                !this.props.noInstructionsWhenCollapsed &&
+                isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
                     ref="instructions"
@@ -586,7 +583,7 @@ class TopInstructionsCSP extends Component {
                   />
                 )}
               {!this.props.hasContainedLevels &&
-                this.props.noInstructionsWhenCollapsed &&
+                isCSDorCSP &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
                     <Instructions
@@ -622,7 +619,7 @@ class TopInstructionsCSP extends Component {
                 token={this.state.token}
               />
             )}
-            {!this.props.noInstructionsWhenCollapsed &&
+            {isCSF &&
               this.props.viewAs === ViewType.Teacher &&
               this.props.teacherMarkdown &&
               this.state.tabSelected === TabType.TEACHER_ONLY && (
