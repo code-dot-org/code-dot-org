@@ -273,23 +273,19 @@ module ScriptConstants
   # @param script [Course|Script] A row object from our course or script dashboard db table.
   # @return {AssignableInfo} without strings translated
   def self.assignable_info(course_or_script, full_course: false)
-    info = {
+    category = full_course ?
+      nil :
+      (ScriptConstants.categories(course_or_script[:name])[0] || OTHER_CATEGORY_NAME)
+
+    {
       id: course_or_script[:id],
       name: ScriptConstants.teacher_dashboard_name(course_or_script[:name]),
       # Would better be called something like assignable_name
-      script_name: course_or_script[:name]
+      script_name: course_or_script[:name],
+      category: category,
+      position: ScriptConstants.position_in_category(course_or_script[:name], category),
+      category_priority: ScriptConstants.category_priority(category, full_course: full_course)
     }
-
-    if full_course
-      info[:category_priority] = ScriptConstants.category_priority(nil, full_course: full_course)
-    else
-      first_category = ScriptConstants.categories(course_or_script[:name])[0] || OTHER_CATEGORY_NAME
-      info[:category] = first_category
-      info[:position] = ScriptConstants.position_in_category(course_or_script[:name], first_category)
-      info[:category_priority] = ScriptConstants.category_priority(first_category)
-    end
-
-    info
   end
 
   def self.has_congrats_page?(script)
